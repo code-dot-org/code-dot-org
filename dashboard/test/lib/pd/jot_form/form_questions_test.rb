@@ -113,7 +113,7 @@ module Pd
           'matrix_2' => 3
         }
 
-        assert_equal expected_processed_answers, @form_questions.process_answers(jotform_answers)
+        assert_equal expected_form_data, @form_questions.process_answers(jotform_answers)
       end
 
       test 'serialize' do

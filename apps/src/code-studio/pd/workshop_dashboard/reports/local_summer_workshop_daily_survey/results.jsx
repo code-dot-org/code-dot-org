@@ -1,9 +1,11 @@
 import React, {PropTypes} from 'react';
 import {Tab, Tabs} from 'react-bootstrap';
+import _ from 'lodash';
 
 const styles = {
   table: {
-    width: 'auto'
+    width: 'auto',
+    maxWidth: '50%'
   },
   facilitatorResponseList: {
     listStyle: 'circle'
@@ -34,14 +36,14 @@ export default class Results extends React.Component {
         <tbody>
           {
             Object.entries(this.props.questions[session]['general']).map(([question_key, question_data], i) => {
-              if (!question_data['free_response']) {
+              if (question_data['answer_type'] === 'selectValue' || question_data['answer_type'] === 'none') {
                 return (
                   <tr key={i}>
+                    <td
+                      dangerouslySetInnerHTML={{__html: question_data['text']}}// eslint-disable-line react/no-danger
+                    />
                     <td>
-                      {question_data['text']}
-                    </td>
-                    <td>
-                      {this.props.thisWorkshop[session]['general'][question_key]}
+                      {this.answerObjectToAverage(this.props.thisWorkshop[session]['general'][question_key])}
                     </td>
                   </tr>
                 );
@@ -58,7 +60,7 @@ export default class Results extends React.Component {
       <div>
         {
           Object.entries(this.props.questions[session]['general']).map(([question_key, question_data], i) => {
-            if (question_data['free_response']) {
+            if (question_data['answer_type'] === 'text') {
               return (
                 <div key={i} className="well">
                   {question_data['text']}
@@ -176,6 +178,25 @@ export default class Results extends React.Component {
         }
       </Tab>
     ));
+  }
+
+  answerObjectToAverage(answerHash) {
+    let sum = 0;
+    Object.keys(answerHash).map((key) => {
+      if (Number(key) > 0) {
+        sum += key * answerHash[key];
+      }
+    });
+
+    if (sum === 0) {
+      return '-';
+    } else {
+      let average = sum / Object.values(answerHash).reduce((sum, x) => {
+        return sum + x;
+      });
+
+      return _.round(average, 2);
+    }
   }
 
   render() {

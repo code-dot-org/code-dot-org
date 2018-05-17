@@ -73,8 +73,7 @@ module Pd
 
       # Constructs form_data for answer_data (translated from a JotForm submission),
       #   based on these questions.
-      # @param answers_data [Hash] {question_id => answer_data (format depends on the question type)}
-      # @return [Hash] {question_name => answer_data}, sorted by appearance order in the form
+      # @return [Hash] {question_id => answer_data (format depends on the question type)}
       # @see Question#process_answers
       def process_answers(answers_data)
         questions_with_form_data = answers_data.map do |question_id, answer_data|
