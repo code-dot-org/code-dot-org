@@ -15,7 +15,7 @@
 class Block < ApplicationRecord
   def block_options
     {
-      block: config,
+      block: JSON.parse(config),
       helperCode: helper_code,
     }
   end
