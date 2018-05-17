@@ -89,10 +89,18 @@ class StudentAssessmentOverviewTable extends Component {
       cell = answerSelection;
     });
 
+    let answerCell = '';
+    rowData.answers.forEach ((answer) => {
+      if (answer.isCorrectAnswer) {
+        answerCell = answer.multipleChoiceOption;
+      }
+    });
+
     return (
       <MultipleChoiceAnswerCell
         id={rowData.id}
         answerCell={cell}
+        isCorrectAnswer={(cell === answerCell)}
       />
     );
   };
