@@ -29,8 +29,8 @@ class ManageStudentsLoginInfo extends Component {
             </p>
             <p>
               {i18n.joinSectionExplination()}
-              <a target="_blank" href="http://localhost.code.org:3000/join">
-                http://localhost.code.org:3000/join
+              <a target="_blank" href={`${window.location.origin}/join`}>
+                {`${window.location.origin}/join`}
               </a>
             </p>
             <p>
@@ -50,7 +50,7 @@ class ManageStudentsLoginInfo extends Component {
           <div>
             <p>
               {i18n.joinSectionAsk()}
-              <a target="_blank" href={`http://localhost-studio.code.org:3000/join/${sectionCode}`}>
+              <a target="_blank" href={`${window.location.origin}/join/${sectionCode}`}>
                 {`http://localhost-studio.code.org:3000/join/${sectionCode}`}
               </a>
             </p>
