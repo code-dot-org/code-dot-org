@@ -11,6 +11,9 @@ class RegistrationsController < Devise::RegistrationsController
     super
   end
 
+  #
+  # PUT /users
+  #
   def update
     return head(:bad_request) if params[:user].nil?
     current_user.reload # Needed to make tests pass for reasons noted in registrations_controller_test.rb
@@ -152,43 +155,48 @@ class RegistrationsController < Devise::RegistrationsController
   #
   def set_user_type
     return head(:bad_request) if params[:user].nil?
-    current_user.reload # Needed to make tests pass for reasons noted in registrations_controller_test.rb
+    return head(:bad_request) if params[:user][:user_type].nil?
+
+    permitted = params.
+      require(:user).
+      permit(
+        :user_type,
+        :email,
+        :hashed_email,
+        :email_opt_in,
+      )
 
     # Details required to perform email opt-in
-    email_opt_in = params[:user].delete(:email_opt_in)
-    account_type_changed = params[:user][:user_type] &&
-      params[:user][:user_type] != current_user.user_type
+    email_opt_in = permitted.delete(:email_opt_in)
 
     successfully_updated =
       if forbidden_change?(current_user, params)
         false
       elsif needs_password?(current_user, params)
-        current_user.update_with_password(update_params(params))
+        # Guaranteed to fail, but sets appropriate user errors for response
+        current_user.update_with_password(permitted)
       else
-        # remove the virtual current_password attribute update_without_password
-        # doesn't know how to ignore it
-        params[:user].delete(:current_password)
-        current_user.update_without_password(update_params(params))
+        current_user.update_without_password(permitted)
       end
 
     # Opt-in the user
-    if successfully_updated && !current_user.email.blank? && !email_opt_in.nil?
-      source =
-        if account_type_changed
-          EmailPreference::ACCOUNT_TYPE_CHANGE
-        else
-          nil
-        end
+    if email_opt_in && successfully_updated && !current_user.email.blank?
       EmailPreference.upsert!(
         email: current_user.email,
         opt_in: email_opt_in == 'yes',
         ip_address: request.env['REMOTE_ADDR'],
-        source: source,
+        source: EmailPreference::ACCOUNT_TYPE_CHANGE,
         form_kind: "0"
       )
     end
 
-    respond_to_account_update(successfully_updated)
+    if successfully_updated
+      head :no_content
+    else
+      render status: :unprocessable_entity,
+             json: current_user.errors.as_json(full_messages: true),
+             content_type: 'application/json'
+    end
   end
 
   private
