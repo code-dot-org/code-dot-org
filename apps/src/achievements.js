@@ -4,7 +4,7 @@ import authoredHintUtils from './authoredHintUtils';
 export default function getAchievements(state) {
   return POSSIBLE_ACHIEVEMENTS.map(
     possibleAchievement => possibleAchievement(state)
-  ).filter(achievement => achievement).sort((achievementA, achievementB) => {
+  ).filter(achievement => achievement.isAchieved).sort((achievementA, achievementB) => {
     if (achievementA.isAchieved && !achievementB.isAchieved) {
       return -1;
     } else if (!achievementA.isAchieved && achievementB.isAchieved) {
