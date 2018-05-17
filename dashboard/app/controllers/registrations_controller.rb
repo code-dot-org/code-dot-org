@@ -159,7 +159,13 @@ class RegistrationsController < Devise::RegistrationsController
       )
     end
 
-    respond_to_account_update(successfully_updated)
+    if successfully_updated
+      head :no_content
+    else
+      render status: :unprocessable_entity,
+             json: current_user.errors.as_json(full_messages: true),
+             content_type: 'application/json'
+    end
   end
 
   private
