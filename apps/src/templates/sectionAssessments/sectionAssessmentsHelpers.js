@@ -4,7 +4,18 @@ export const studentData = [
   {
     id: '012896',
     name: 'Caley',
-    answers: [{question: 1, answer: ['']}, {question: 2, answer: ['D']}, {question: 3, answer: ['A']}, {question: 4, answer: ['C']}],
+    studentAnswers: [{question: 1, answer: ['']},
+     {question: 2, answer: ['D']},
+     {question: 3, answer: ['C']},
+      {question: 4, answer: ['C']}],
+  },
+  {
+    id: '012896',
+    name: 'Caley',
+    studentAnswers: [{question: 1, answer: ['']},
+     {question: 2, answer: ['D']},
+     {question: 3, answer: ['A']},
+      {question: 4, answer: ['C']}],
   },
 ];
 
