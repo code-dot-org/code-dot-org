@@ -15,8 +15,10 @@ class RegistrationsController < Devise::RegistrationsController
 
     # Details required to perform email opt-in
     email_opt_in = params[:user].delete(:email_opt_in)
-    email_changed = params[:user][:email] != current_user.email
-    account_type_changed = params[:user][:user_type] != current_user.user_type
+    email_changed = params[:user][:email] &&
+      params[:user][:email] != current_user.email
+    account_type_changed = params[:user][:user_type] &&
+      params[:user][:user_type] != current_user.user_type
 
     successfully_updated =
       if forbidden_change?(current_user, params)
