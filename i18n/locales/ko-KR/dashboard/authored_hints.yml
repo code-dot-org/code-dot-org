@@ -2485,7 +2485,7 @@ ko:
       Course 4 SCV 1_authored_hint:
         Course_4_SCV_1_a: '변수는 반복문을 통해 매번 추가 할 수 있기 때문에 유용합니다. '
         Course_4_SCV_1_b: 이 퍼즐은 다각형을 생성하는 하나의 반복문을 가지며, 한 번에 다각형을 '변' 갯수만큼 반복 한 다음 다른 반복문은 '변'에 5를 더한 후에 모든 것을 다시 수행합니다.
-        Course_4_SCV_1_c: Using a variable for `sides` and one for `length` makes the code cleaner because you can loop the same code multiple times, instead of creating a new copy for each set of numbers.
+        Course_4_SCV_1_c: '''sides''변수와 ''length''변수를 사용하면 번호를 설정하기 위해 매번 같은 코드만드는 대신 동일한 코드를 여러번 반복 할 수 있기 때문에 코드가 보다 명확 해집니다.'
         Course_4_SCV_1_d: |-
           **예제 답안:**
           
@@ -2637,10 +2637,10 @@ ko:
           </block>
           </xml>
       Course 4 SCV 2_authored_hint:
-        Course_4_SCV_2_a: "The completed image is made up of 10 of these \"flowers\":  \n![](https://images.code.org/bac2a606dfa59c00409294499540267d-image-1469641972385.png)\n        \n...which are made up of 10 of these decagons:  \n![](https://images.code.org/1e15f278c9c1606f90a2490ec3a94eb4-image-1469642051512.png)"
-        Course_4_SCV_2_b: 'This design uses nested loops (three deep). All loops run `sides` times. '
-        Course_4_SCV_2_c: The artist turns to the left when creating each decagon, but turns to the right in both of the other loops.
-        Course_4_SCV_2_d: To prevent all of your 10 petal "flowers" from getting drawn in the same place, make sure to jump forward by `length`/`sides` before you turn 360/`sides` degrees as part of your outermost loop.
+        Course_4_SCV_2_a: "완성 된 이미지는 다음의 10 가지 \"꽃\"으로 구성됩니다.\n! [] (https://images.code.org/bac2a606dfa59c00409294499540267d-image-1469641972385.png)\n        \n...그것들은 10각형으로 구성되어 있습니다 :\n! [] (https://images.code.org/1e15f278c9c1606f90a2490ec3a94eb4-image-1469642051512.png)"
+        Course_4_SCV_2_b: '이 디자인은 중첩 루프 (3 개의 깊이) 를 사용합니다. 모든 반복문은 ''변''의 갯수를 실행합니다. '
+        Course_4_SCV_2_c: 작가는 각 십각형을 만들 때 왼쪽으로 돌지만 다른 반복문들은 오른쪽으로 돌게 됩니다.
+        Course_4_SCV_2_d: 꽃잎 10 장 모두를 같은 장소에 그려 넣지 않으려면, 가장 바깥 쪽 반복문의 일부로 360도 / 'sides' 도를 돌리기 전에 'length'/ 'sides'으로 앞으로 뛰어야 합니다.
         Course_4_SCV_2_e: |-
           **예제 답안:**
           
@@ -2814,8 +2814,8 @@ ko:
           </block>
           </xml>
       Course 4 SCV 3_authored_hint:
-        Course_4_SCV_3_a: 'Use your math block to add and subtract points to the `points` variable when sprites collide. '
-        Course_4_SCV_3_b: You can change the parameter for how far you move your sprite each time one of the arrow keys is pressed.
+        Course_4_SCV_3_a: '강아지가 부딪힐때 수학 블록을 사용하여 점수를 ''points'' 변수에 더하거나 뺍니다. '
+        Course_4_SCV_3_b: 화살표 키 중 하나를 누를 때마다 강아지를 얼마나 멀리 움직 였는지 매개 변수를 변경할 수 있습니다.
         Course_4_SCV_3_c: |-
           **예제 답안:**
           
@@ -2846,8 +2846,8 @@ ko:
           </block>
           </xml>
       Course 4 SCV 4_authored_hint:
-        Course_4_SCV_4_a: Three variables will help you out here.  One for units of nectar, one for units of honey, and one for how far the bee should move each iteration.
-        Course_4_SCV_4_b: 'It will be very helpful to use three loops inside of your main loop.  One for moving forward, one for collecting nectar and one for making honey. '
+        Course_4_SCV_4_a: 3 가지 변수가 도움이 될 것입니다. 하나는 꿀꽃 단위, 하나는 꿀 단위, 하나는 꿀벌이 각 반복문에서 얼마나 멀리 움직여야 하는지 입니다.
+        Course_4_SCV_4_b: '메인 반복문에 3 개의 반복문을 사용하면 매우 도움이 될 것입니다. 하나는 앞으로 나아가고, 하나는 꿀꽃을 수집하고 다른 하나는 꿀을 만들기위한 것입니다. '
         Course_4_SCV_4_c: "이동을 위해 이 옵션을 보세요:\n\n![](https://images.code.org/78f8fb83da67c5b80126555a362b8b20-image-1469641782259.png)"
         Course_4_SCV_4_d: |-
           **예제 답안:**
@@ -4719,7 +4719,7 @@ ko:
       course4_artist_variables_challenge2_authored_hint:
         courseF_artist_variables_challenge2_a: '변수는 반복문을 통해 매번 추가 할 수 있기 때문에 유용합니다. '
         courseF_artist_variables_challenge2_b: 이 퍼즐은 다각형을 생성하는 하나의 반복문을 가지며, 한 번에 다각형을 '변' 갯수만큼 반복 한 다음 다른 반복문은 '변'에 5를 더한 후에 모든 것을 다시 수행합니다.
-        courseF_artist_variables_challenge2_c: Using a variable for `sides` and one for `length` makes the code cleaner because you can loop the same code multiple times, instead of creating a new copy for each set of numbers.
+        courseF_artist_variables_challenge2_c: '''sides''변수와 ''length''변수를 사용하면 번호를 설정하기 위해 매번 같은 코드만드는 대신 동일한 코드를 여러번 반복 할 수 있기 때문에 코드가 보다 명확 해집니다.'
         courseF_artist_variables_challenge2_d: |-
           **예제 답안:**
           
@@ -12269,7 +12269,7 @@ ko:
       courseF_artist_variables_challenge1a_authored_hint:
         courseF_artist_variables_challenge1_a: '변수는 반복문을 통해 매번 추가 할 수 있기 때문에 유용합니다. '
         courseF_artist_variables_challenge1_b: 이 퍼즐은 다각형을 생성하는 하나의 반복문을 가지며, 한 번에 다각형을 '변' 갯수만큼 반복 한 다음 다른 반복문은 '변'에 5를 더한 후에 모든 것을 다시 수행합니다.
-        courseF_artist_variables_challenge1_c: Using a variable for `sides` and one for `length` makes the code cleaner because you can loop the same code multiple times, instead of creating a new copy for each set of numbers.
+        courseF_artist_variables_challenge1_c: '''sides''변수와 ''length''변수를 사용하면 번호를 설정하기 위해 매번 같은 코드만드는 대신 동일한 코드를 여러번 반복 할 수 있기 때문에 코드가 보다 명확 해집니다.'
         courseF_artist_variables_challenge1_d: |-
           **예제 답안:**
           

@@ -88,6 +88,10 @@ function findBehavior(sprite, behavior) {
 }
 
 function behaviorsEqual(behavior1, behavior2) {
+  if (behavior1.func.name && behavior2.func.name) {
+    // These are legacy behaviors, check for equality based only on the name.
+    return behavior1.func.name === behavior2.func.name;
+  }
   if (behavior1.func !== behavior2.func) {
     return false;
   }
