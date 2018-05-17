@@ -62,6 +62,13 @@ describe('ChangeEmailController', () => {
       expect(ReactDOM.render).to.have.been.calledOnce;
     });
 
+    it('show is idempotent', () => {
+      expect(ReactDOM.render).not.to.have.been.called;
+      controller.showChangeEmailModal();
+      controller.showChangeEmailModal();
+      expect(ReactDOM.render).to.have.been.calledOnce;
+    });
+
     it('shows when the #edit-email-link is clicked', () => {
       expect(ReactDOM.render).not.to.have.been.called;
       link.click();
@@ -71,6 +78,14 @@ describe('ChangeEmailController', () => {
     it('hides on hideChangeEmailModal', () => {
       controller.showChangeEmailModal();
       expect(ReactDOM.unmountComponentAtNode).not.to.have.been.called;
+      controller.hideChangeEmailModal();
+      expect(ReactDOM.unmountComponentAtNode).to.have.been.calledOnce;
+    });
+
+    it('hide is idempotent', () => {
+      controller.showChangeEmailModal();
+      expect(ReactDOM.unmountComponentAtNode).not.to.have.been.called;
+      controller.hideChangeEmailModal();
       controller.hideChangeEmailModal();
       expect(ReactDOM.unmountComponentAtNode).to.have.been.calledOnce;
     });
