@@ -621,7 +621,7 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_select '#user_name', 1
   end
 
-  test "converting student to teacher" do
+  test "converting student to teacher without password succeeds when email hasn't changed" do
     test_email = 'me@example.com'
     student = create :student, email: test_email
     original_hashed_email = student.hashed_email
@@ -644,10 +644,11 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_equal original_hashed_email, student.hashed_email
   end
 
-  test "converting student to teacher fails when email doesn't match" do
+  test "converting student to teacher without password fails when email doesn't match" do
     test_email = 'me@example.com'
     student = create :student, email: test_email
     original_hashed_email = student.hashed_email
+    assert_empty student.email
     sign_in student
 
     request.headers['HTTP_ACCEPT'] = "application/json"
