@@ -21,17 +21,15 @@ Elementary School
 
 </div>
 
-[col-60]
-
 Our Computer Science Fundamentals courses have about 15 lessons that may be implemented as one unit or over the course of a semester. Students create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. They will study programming concepts, computational thinking, digital citizenship, and develop interactive games or stories they can share.
 
 If you like teaching CS Fundamentals, invite other teachers by [sharing this handout](/files/csf-one-pager.pdf).
 
 Our curriculum aligns to the [2017 Computer Science Teachers Association (CSTA) standards](https://www.csteachers.org/page/standards), as well as relevant national <a href="http://www.corestandards.org/Math/" target="_blank">Math</a>, <a href="http://www.corestandards.org/ELA-Literacy/" target="_blank">English Language Arts</a>, and <a href="http://www.nextgenscience.org/next-generation-science-standards" target="_blank">Science</a> standards. [View the full standards alignment document](https://curriculum.code.org/csf/standards/) for CS Fundamentals Courses A-F.
 
-Our courses are available at [no cost](/commitment) for anyone, anywhere to teach. For more information about our goals and approach to our courses, please see our [curriculum values](/educate/curriculum/values) and our [professional learning values](/educate/professional-learning/values).
+Our elementary school curriculum can also help students succeed in other subjects as well; a recent [research study by Outlier Research & Evaluation](https://medium.com/@codeorg/code-org-resourceful-teachers-higher-student-achievement-8be1efdec06e) found that 3rd–5th-grade Code.org classrooms with resourceful teachers see higher scores on English, math, and science standardized tests.
 
-[/col-60]
+Our courses are available at [no cost](/commitment) for anyone, anywhere to teach. For more information about our goals and approach to our courses, please see our [curriculum values](/educate/curriculum/values) and our [professional learning values](/educate/professional-learning/values).
 
 <div style="clear:both"></div>
 

@@ -86,7 +86,8 @@ export const TestResults = {
 
   // The level was solved in an optimal way.
   FREE_PLAY: 30,   // The user is in free-play mode.
-  PASS_WITH_EXTRA_TOP_BLOCKS: 31, // There was more than one top-level block.
+  PASS_WITH_EXTRA_TOP_BLOCKS: 31,  // There was more than one top-level block.
+  APP_SPECIFIC_IMPERFECT_PASS: 32, // The level was passed in some optimal but not necessarily perfect way
   EDIT_BLOCKS: 70, // The user is creating/editing a new level.
   MANUAL_PASS: 90, // The level was manually set as perfected internally.
 

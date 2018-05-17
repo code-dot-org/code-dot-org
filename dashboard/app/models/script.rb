@@ -1066,6 +1066,10 @@ class Script < ActiveRecord::Base
     path
   end
 
+  def course_title
+    course.try(:localized_title)
+  end
+
   # If there is an alternate version of this script which the user should be on
   # due to existing progress or a course experiment, return that script. Otherwise,
   # return nil.

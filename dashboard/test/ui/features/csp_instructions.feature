@@ -69,3 +69,10 @@ Scenario: 'Feedback' tab is not visible if user is a teacher but flag is off
   Given I am a teacher
   And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/20"
   And element ".uitest-feedback" is not visible
+
+Scenario: Resources tab is clickable and displays correct text for contained levels
+  Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/15"
+  When I click selector ".uitest-helpTab" once I see it
+  And I wait until ".editor-column" contains text "Welcome to the Circuit Playground"
+  And I click selector ".uitest-instructionsTab"
+  And I wait until ".editor-column" does not contain text "Welcome to the Circuit Playground"

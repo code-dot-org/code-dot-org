@@ -108,6 +108,6 @@ When /^ace editor code is equal to "([^"]+)"$/ do |expected_code|
 end
 
 def get_ace_editor_code
-  script = 'return __TestInterface.getDroplet().aceEditor.getValue();'
+  script = 'return __TestInterface.getDroplet().aceEditor.getValue().trim();'
   @browser.execute_script(script)
 end

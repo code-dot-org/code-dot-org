@@ -10,7 +10,7 @@ const studentData = [
   {id: 0, name: 'studenta'}
 ];
 
-describe('MoveStudents', () => {
+describe('SectionProgress', () => {
   let DEFAULT_PROPS;
 
   beforeEach(() => {
@@ -35,7 +35,8 @@ describe('MoveStudents', () => {
               {id: 789}
             ],
           }
-        ]
+        ],
+        excludeCsfColumnInLegend: true,
       },
       isLoadingProgress: false,
     };
