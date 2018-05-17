@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import xml from './xml';
 
 const ATTRIBUTES_TO_CLEAN = [
@@ -31,8 +32,7 @@ exports.appendBlocksByCategory = function (toolboxXml, blocksByCategory) {
   const toolboxDom = parser.parseFromString(toolboxXml, 'text/xml');
   if (!toolboxDom.querySelector('category')) {
     // Uncategorized toolbox, just add blocks to the end
-    const allBlocks = Object.values(blocksByCategory)
-      .reduce((blocks, moreBlocks) => blocks.concat(moreBlocks), []);
+    const allBlocks = _.flatten(Object.values(blocksByCategory));
     return appendBlocks(toolboxDom, allBlocks);
   }
   Object.keys(blocksByCategory).forEach(categoryName => {
