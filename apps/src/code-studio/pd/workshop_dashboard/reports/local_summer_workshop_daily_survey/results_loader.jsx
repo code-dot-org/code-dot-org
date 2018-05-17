@@ -28,8 +28,8 @@ export class ResultsLoader extends React.Component {
         loading: false,
         questions: data['questions'],
         thisWorkshop: data['this_workshop'],
-        allMyWorkshops: data['all_my_workshops'],
-        sessions: Object.keys(data['this_workshop'])
+        sessions: Object.keys(data['this_workshop']),
+        facilitators: data['facilitators']
       });
     });
   }

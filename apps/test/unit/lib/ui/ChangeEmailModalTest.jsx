@@ -99,7 +99,7 @@ describe('ChangeEmailModal', () => {
         }
       });
 
-      expect(wrapper.text()).to.include(i18n.changeEmailmodal_newEmail_mustBeDifferent());
+      expect(wrapper.text()).to.include(i18n.changeEmailModal_newEmail_mustBeDifferent());
     });
 
     it('reports email server errors', () => {
