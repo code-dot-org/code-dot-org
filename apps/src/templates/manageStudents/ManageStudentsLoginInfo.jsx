@@ -15,10 +15,13 @@ class ManageStudentsLoginInfo extends Component {
     sectionId: PropTypes.number,
     sectionCode: PropTypes.string,
     loginType: PropTypes.string,
+    // The prefix for the code studio url in the current environment,
+    // e.g. '//studio.code.org' or '//localhost-studio.code.org:3000'.
+    studioUrlPrefix: PropTypes.string,
   };
 
   render() {
-    const {loginType, sectionId, sectionCode} = this.props;
+    const {loginType, sectionId, sectionCode, studioUrlPrefix} = this.props;
     return (
       <div style={styles.explination}>
         <h2>Login information</h2>
@@ -35,8 +38,8 @@ class ManageStudentsLoginInfo extends Component {
             </p>
             <p>
               {i18n.sectionSignInInfo()}
-              <a target="_blank" href={`http://studio.code.org/sections/${sectionCode}`}>
-                {`http://studio.code.org/sections/${sectionCode}`}
+              <a target="_blank" href={`http:${studioUrlPrefix}/sections/${sectionCode}`}>
+                {`http:${studioUrlPrefix}/sections/${sectionCode}`}
               </a>
             </p>
             <p>
@@ -50,8 +53,8 @@ class ManageStudentsLoginInfo extends Component {
           <div>
             <p>
               {i18n.joinSectionAsk()}
-              <a target="_blank" href={`http://studio.code.org/join/${sectionCode}`}>
-                {`http://studio.code.org/join/${sectionCode}`}
+              <a target="_blank" href={`http:${studioUrlPrefix}/join/${sectionCode}`}>
+                {`http:${studioUrlPrefix}/join/${sectionCode}`}
               </a>
             </p>
           </div>
