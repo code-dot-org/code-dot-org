@@ -88,6 +88,9 @@ Dashboard::Application.routes.draw do
         post 'update_sharing_disabled'
         get 'student_script_ids'
       end
+      collection do
+        get 'membership'
+      end
     end
   end
 
