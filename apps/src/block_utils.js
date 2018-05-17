@@ -16,7 +16,7 @@ exports.createToolbox = function (blocks) {
 };
 
 const appendBlocks = function (toolboxDom, blockTypes) {
-  const root = toolboxDom.getRootNode().firstChild;
+  const root = toolboxDom.firstChild;
   blockTypes.forEach(blockName => {
     const block = toolboxDom.createElement('block');
     block.setAttribute('type', blockName);
@@ -26,21 +26,33 @@ const appendBlocks = function (toolboxDom, blockTypes) {
 };
 exports.appendBlocks = appendBlocks;
 
-exports.appendCategory = function (toolboxXml, blockTypes, categoryName) {
+exports.appendBlocksByCategory = function (toolboxXml, blocksByCategory) {
   const parser = new DOMParser();
   const toolboxDom = parser.parseFromString(toolboxXml, 'text/xml');
   if (!toolboxDom.querySelector('category')) {
     // Uncategorized toolbox, just add blocks to the end
-    return appendBlocks(toolboxDom, blockTypes);
+    const allBlocks = Object.values(blocksByCategory)
+      .reduce((blocks, moreBlocks) => blocks.concat(moreBlocks), []);
+    return appendBlocks(toolboxDom, allBlocks);
   }
-  const customCategory = toolboxDom.createElement('category');
-  customCategory.setAttribute('name', categoryName);
-  blockTypes.forEach(blockName => {
-    const block = toolboxDom.createElement('block');
-    block.setAttribute('type', blockName);
-    customCategory.appendChild(block);
+  Object.keys(blocksByCategory).forEach(categoryName => {
+    let category =
+        toolboxDom.querySelector(`category[name="${categoryName}"]`);
+    let existingCategory = true;
+    if (!category) {
+      category = toolboxDom.createElement('category');
+      existingCategory = false;
+    }
+    category.setAttribute('name', categoryName);
+    blocksByCategory[categoryName].forEach(blockName => {
+      const block = toolboxDom.createElement('block');
+      block.setAttribute('type', blockName);
+      category.appendChild(block);
+    });
+    if (!existingCategory) {
+      toolboxDom.firstChild.appendChild(category);
+    }
   });
-  toolboxDom.getRootNode().firstChild.appendChild(customCategory);
   return xml.serialize(toolboxDom);
 };
 
