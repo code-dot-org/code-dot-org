@@ -103,7 +103,7 @@ named_level 'CSD Set Scale Map_2018'
 level 'CSD U6 analog rbg 1_2018', progression: 'Sensors to Colors'
 level 'CSD U6 analog rbg 2_2018', progression: 'Sensors to Colors'
 level 'CSD U6 analog rgb 3_2018', progression: 'Sensors to Colors'
-named_level 'CSD U6 analog challenge_2018'
+bonus 'CSD U6 analog challenge_2018'
 
 stage 'The Program Design Process', flex_category: 'csd6_1'
 named_level 'CSD U6L08 TFMD_2018'
