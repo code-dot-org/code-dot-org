@@ -667,6 +667,62 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_equal original_hashed_email, student.hashed_email
   end
 
+  test "converting student to teacher with positive email opt-in succeeds" do
+    test_email = 'me@example.com'
+    student = create :student, email: test_email
+    sign_in student
+
+    request.headers['HTTP_ACCEPT'] = "application/json"
+    post :update, params: {
+      user: {
+        user_type: 'teacher',
+        email: test_email,
+        hashed_email: student.hashed_email,
+        email_opt_in: 'yes'
+      }
+    }
+    assert_response :success
+
+    student.reload
+    assert_equal 'teacher', student.user_type
+    assert_equal test_email, student.email
+
+    preference = EmailPreference.find_by_email(test_email)
+    refute_nil preference
+    assert_equal true, preference.opt_in
+    assert_equal request.env['REMOTE_ADDR'], preference.ip_address
+    assert_equal EmailPreference::ACCOUNT_TYPE_CHANGE, preference.source
+    assert_equal "0", preference.form_kind
+  end
+
+  test "converting student to teacher with negative email opt-in succeeds" do
+    test_email = 'me@example.com'
+    student = create :student, email: test_email
+    sign_in student
+
+    request.headers['HTTP_ACCEPT'] = "application/json"
+    post :update, params: {
+      user: {
+        user_type: 'teacher',
+        email: test_email,
+        hashed_email: student.hashed_email,
+        email_opt_in: 'no'
+      }
+    }
+    assert_response :success
+
+    student.reload
+    assert_equal 'teacher', student.user_type
+    assert_equal test_email, student.email
+
+    preference = EmailPreference.find_by_email(test_email)
+    refute_nil preference
+    assert_equal false, preference.opt_in
+    assert_equal request.env['REMOTE_ADDR'], preference.ip_address
+    assert_equal EmailPreference::ACCOUNT_TYPE_CHANGE, preference.source
+    assert_equal "0", preference.form_kind
+  end
+
   test "converting teacher to student without password succeeds" do
     test_email = 'me@example.com'
     teacher = create :teacher, email: test_email
