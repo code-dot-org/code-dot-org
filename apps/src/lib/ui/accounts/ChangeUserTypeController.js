@@ -63,11 +63,14 @@ export default class ChangeUserTypeController {
     if (needEmailConfirmation) {
       this.showChangeUserTypeModal();
     } else {
+      // Must submit before disabling fields or they'll be omitted from the form.
       const promise = this.submitUserTypeChange({});
       this.dropdown.prop('disabled', true);
       this.button.prop('disabled', true);
       this.status.text(i18n.saving());
-      promise.then(() => utils.reload())
+      // Note: this.submitPromise is exposed as a property for testing.
+      this.submitPromise = promise
+        .then(utils.reload)
         .catch(err => {
           this.dropdown.prop('disabled', false);
           this.button.prop('disabled', false);

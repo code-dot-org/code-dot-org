@@ -103,7 +103,7 @@ describe('ChangeUserTypeController', () => {
       expect(button.prop('disabled')).to.be.true;
     });
 
-    it('clicking button submits form, reloads page on success', (done) => {
+    it('clicking button submits form, reloads page on success', async () => {
       dropdown.val(OTHER_USER_TYPE);
       dropdown.change();
       button.click();
@@ -113,11 +113,13 @@ describe('ChangeUserTypeController', () => {
       expect(button.prop('disabled')).to.be.true;
       expect(status.text()).to.equal(i18n.saving());
 
-      utils.reload.callsFake(() => done());
       form.trigger('ajax:success');
+      await controller.submitPromise;
+
+      expect(utils.reload).to.have.been.calledOnce;
     });
 
-    it('re-enables controls on failure and displays error', (done) => {
+    it('re-enables controls on failure and displays error', async () => {
       dropdown.val(OTHER_USER_TYPE);
       dropdown.change();
       button.click();
@@ -128,13 +130,11 @@ describe('ChangeUserTypeController', () => {
       expect(status.text()).to.equal(i18n.saving());
 
       form.trigger('ajax:error', [{}]);
-      // Hidden promise needs time to resolve...
-      setTimeout(() => {
-        expect(dropdown.prop('disabled')).to.be.false;
-        expect(button.prop('disabled')).to.be.false;
-        expect(status.text()).to.equal(i18n.changeUserTypeModal_unexpectedError());
-        done();
-      }, 2);
+      await controller.submitPromise;
+
+      expect(dropdown.prop('disabled')).to.be.false;
+      expect(button.prop('disabled')).to.be.false;
+      expect(status.text()).to.equal(i18n.changeUserTypeModal_unexpectedError());
     });
   });
 
