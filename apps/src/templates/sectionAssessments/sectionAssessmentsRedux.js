@@ -1,12 +1,7 @@
-import {PropTypes} from 'react';
 import {SET_SECTION} from '@cdo/apps/redux/sectionDataRedux';
 
-// Shape for an individual assessment
-export const assessmentPropType = PropTypes.shape({
-});
-
- // Initial state of textResponsesRedux
- // responseDataByScript - object - key is scriptId, value is array of textResponsePropType
+ // Initial state of sectionAssessmentsRedux
+ // TODO(caleybrock): define a shape for sectionAssessment data that gets stored in redux.
 const initialState = {
   assessmentsByScript: {},
   isLoadingAssessments: false
@@ -79,19 +74,18 @@ export default function sectionAssessments(state=initialState, action) {
 }
 
 // Selector functions
+
 export const getAssessmentsForCurrentScript = (state) => {
   return state.sectionAssessments.assessmentsByScript[state.scriptSelection.scriptId] || [];
 };
 
 // Make a request to the server for assessment data
-// scriptId is not required; endpoint will use the default script if no scriptId is supplied
 const loadAssessmentsFromServer = (sectionId, scriptId, onComplete) => {
   let payload = {};
   if (scriptId) {
     payload.script_id = scriptId;
   }
-
-  // also fetch section_surveys
+  // TODO(caleybrock): also fetch /dashboardapi/section_surveys
   $.ajax({
     url: `/dashboardapi/section_assessments/${sectionId}`,
     method: 'GET',
