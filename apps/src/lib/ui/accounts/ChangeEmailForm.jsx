@@ -14,6 +14,7 @@ export default class ChangeEmailForm extends React.Component {
       currentPassword: PropTypes.string,
       emailOptIn: PropTypes.string,
     }).isRequired,
+    userType: PropTypes.oneOf(['teacher', 'student']).isRequired,
     disabled: PropTypes.bool,
     onChange: PropTypes.func.isRequired,
     onSubmit: PropTypes.func.isRequired,
@@ -54,7 +55,7 @@ export default class ChangeEmailForm extends React.Component {
   };
 
   render() {
-    const {values, validationErrors, disabled} = this.props;
+    const {values, validationErrors, disabled, userType} = this.props;
     return (
       <div>
         <Field
@@ -90,30 +91,32 @@ export default class ChangeEmailForm extends React.Component {
             ref={el => this.currentPasswordInput = el}
           />
         </Field>
-        <Field
-          label={i18n.changeEmailModal_emailOptIn_description()}
-          error={validationErrors.emailOptIn}
-          style={{display: 'none'}}
-        >
-          <select
-            value={values.emailOptIn}
-            onKeyDown={this.onKeyDown}
-            onChange={this.onEmailOptInChange}
-            disabled={disabled}
-            style={{
-              ...styles.input,
-              width: 100,
-            }}
+        {userType === 'teacher' &&
+          <Field
+            label={i18n.changeEmailModal_emailOptIn_description()}
+            error={validationErrors.emailOptIn}
           >
-            <option value=""/>
-            <option value="yes">
-              {i18n.yes()}
-            </option>
-            <option value="no">
-              {i18n.no()}
-            </option>
-          </select>
-        </Field>
+            <select
+              value={values.emailOptIn}
+              disabled={disabled}
+              onKeyDown={this.onKeyDown}
+              onChange={this.onEmailOptInChange}
+              style={{
+                ...styles.input,
+                width: 100,
+              }}
+              ref={el => this.emailOptInSelect = el}
+            >
+              <option value=""/>
+              <option value="yes">
+                {i18n.yes()}
+              </option>
+              <option value="no">
+                {i18n.no()}
+              </option>
+            </select>
+          </Field>
+        }
       </div>
     );
   }

@@ -12,9 +12,32 @@ describe('ChangeEmailForm', () => {
   const DEFAULT_PROPS = {
     values: {},
     validationErrors: {},
+    userType: 'student',
     onChange: () => {},
     onSubmit: () => {}
   };
+
+  describe('the emailOptIn field', () => {
+    it('is rendered for teachers', () => {
+      const wrapper = mount(
+        <ChangeEmailForm
+          {...DEFAULT_PROPS}
+          userType="teacher"
+        />
+      );
+      expect(wrapper.find(OPT_IN_SELECTOR)).to.exist;
+    });
+
+    it('is not rendered for students', () => {
+      const wrapper = mount(
+        <ChangeEmailForm
+          {...DEFAULT_PROPS}
+          userType="student"
+        />
+      );
+      expect(wrapper.find(OPT_IN_SELECTOR)).not.to.exist;
+    });
+  });
 
   describe('calls onChange', () => {
     let onChange, wrapper;
@@ -63,6 +86,7 @@ describe('ChangeEmailForm', () => {
     });
 
     it('when the email opt-in field changes', () => {
+      wrapper.setProps({userType: 'teacher'});
       expect(onChange).not.to.have.been.called;
 
       const changedOptIn = 'no';
@@ -108,6 +132,7 @@ describe('ChangeEmailForm', () => {
     });
 
     it('when the enter key is pressed on the opt-in field', () => {
+      wrapper.setProps({userType: 'teacher'});
       expect(onSubmit).not.to.have.been.called;
 
       wrapper.find(OPT_IN_SELECTOR).simulate('keydown', {key: 'Enter'});
@@ -127,6 +152,7 @@ describe('ChangeEmailForm', () => {
     });
 
     it('and not when the form is disabled', () => {
+      wrapper.setProps({userType: 'teacher'});
       wrapper.setProps({disabled: true});
       expect(onSubmit).not.to.have.been.called;
 
@@ -159,6 +185,7 @@ describe('ChangeEmailForm', () => {
     });
 
     it('the opt-in field is disabled', () => {
+      wrapper.setProps({userType: 'teacher'});
       expect(wrapper.find(OPT_IN_SELECTOR)).to.have.attr('disabled');
     });
   });
@@ -168,7 +195,10 @@ describe('ChangeEmailForm', () => {
 
     beforeEach(() => {
       wrapper = mount(
-        <ChangeEmailForm{...DEFAULT_PROPS}/>
+        <ChangeEmailForm
+          {...DEFAULT_PROPS}
+          userType="teacher"
+        />
       );
       emailSpy = sinon.stub(wrapper.find(EMAIL_SELECTOR).getDOMNode(), 'focus');
       passwordSpy = sinon.stub(wrapper.find(PASSWORD_SELECTOR).getDOMNode(), 'focus');
