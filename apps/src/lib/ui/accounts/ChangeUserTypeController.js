@@ -79,6 +79,10 @@ export default class ChangeUserTypeController {
   };
 
   showChangeUserTypeModal() {
+    if (this.mountPoint) {
+      return; // Idempotent show
+    }
+
     const userHashedEmail= this.form.find('#change-user-type_user_hashed_email').val();
     const handleSubmit = (values) => (
       this.submitUserTypeChange(values)
