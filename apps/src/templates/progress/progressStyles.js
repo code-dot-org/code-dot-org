@@ -21,6 +21,10 @@ const statusStyle = {
     backgroundColor: color.level_perfect,
     color: color.white,
   },
+  [LevelStatus.free_play_complete]: {
+    backgroundColor: color.level_perfect,
+    color: color.white,
+  },
   [LevelStatus.passed]: {
     backgroundColor: color.level_passed,
   },
