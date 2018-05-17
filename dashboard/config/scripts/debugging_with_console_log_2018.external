@@ -1,0 +1,84 @@
+name 'Debugging with Console.log_2018'
+title 'title'
+css 'unplugged'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Printing to the console
+
+<blockquote style="width: 640px; display: block; margin: auto">
+	<em>The most effective debugging tool is still careful thought, coupled with judiciously placed print statements.</em>
+	<br><br>
+    <span style="float:right">-- Brian Kernighan, <em>Unix for Beginners</em> (1979)</span>
+    <br><br>
+</blockquote>
+<br>
+
+<div style="float: right; width: 400px; text-align: center; padding: 10px">
+<img src="https://images.code.org/7bb2754f7960f51399b19fc44e977325-image-1477339460071.png"><br>
+<em>How to print to the console in various programming languages.</em>
+</div>
+The quote at the top of the the page is from one of the authors of the first books about the C programming language. It is still relevant and largely true today.
+
+When you use `console.log` we say that you are **"printing to the console"**.
+
+*Almost all programming languages have some form of a "print" command* -- an easy way to see text output from your code (as opposed to printing on paper).  A sampling is shown to the right.
+
+In the future you might see a task that asks you to do something like, "Write a loop that prints all the values to the console".  That means write a loop with a console.log statement in it.
+
+<div style="clear: both;">&nbsp;</div>
+
+## Gaining control: Display messages to yourself
+<div style="float: right; width: 400px; text-align: center; padding: 10px">
+<img src="https://images.code.org/baf244a881a988e7ca9375500c517df0-image-1477340527847.png" style="float: right">
+<em>Example output from a programmer who used a lot of console.log statements to track what was happening in her program.</em>
+</div>
+Printing messages to the console is just about the **fastest and easiest** way to immediately see output from a running program.  
+
+Many professionals **get started building programs** with very simple inputs and outputs, using the console initially to just display a plain-text transcript of activity.  It helps you see what's happening early on.  You can update graphical displays and remove print statements later on.
+
+As you program more and more you realize that it's nice to **get immediate feedback from the computer** that your program is doing *something*.
+
+Over time this gives you an increasing **sense of control** over the process of writing programs.
+
+## Debugging with console.log
+
+One of the oldest, but still best, ways to debug programs is to put `console.log` statements into the code to display messages to yourself about the state of program execution at any given point in time.
+
+Using `console.log` is a way to get the computer to tell you what's happening and when.  
+
+This doesn't mean you can be lazy! You still have to think about where and how to insert those statements but you can take advantage of the fact that the computer *has* to execute them, and will do so in the order it encounters them.
+
+**Using well-placed `console.log` statements is very useful technique for figuring out things like:**
+
+* The order in which things are happening
+* A value or state of something at various points in the program during execution
+* Whether an event is firing or not, and when.
+
+Over the next few levels we'll practice with `console.log` and use it to investigate bugs and and other mysteries of the system.
+
+## Note: Debug Console automatically expands when necessary
+
+You may notice that the Debug Console area is usually collapsed by default in order to save screen space.  However, it will automatically pop up whenever:
+
+* You print something to the console
+* An error message is displayed
+
+So you don't need to worry about missing anything, it will open when necessary.  This animation shows the action.
+
+![](https://images.code.org/df0ec58089a056ccadf1cb2d599c2110-image-1489696821090.gif)
+
+You can expand and collapse the Debug Console yourself by clicking on the little arrow in purple header.
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+### Teaching Tips
+
+This is a level that might be worth pausing on.  There are a few things that are important to reinforce:
+
+* Every programming language has some way of display simple plaintext output
+* Printing to the console is a very common technique not only for debugging but also as an aid in program construction and development.
+* In other words, you can use console.log to send messages to yourself to verify the program is doing what you think it's doing which helps *prevent* errors down the line.
+
+
+MARKDOWN

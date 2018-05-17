@@ -12,7 +12,9 @@ class VideosControllerTest < ActionController::TestCase
 
     Video.stubs(:merge_and_write_i18n)
     Video.stubs(:merge_and_write_attributes)
+    Video.stubs(:s3_metadata).returns({})
     Video.any_instance.stubs(:fetch_thumbnail)
+    VideosController.any_instance.stubs(:upload_to_s3).returns('_fake_s3_url_')
   end
 
   test "should get index" do

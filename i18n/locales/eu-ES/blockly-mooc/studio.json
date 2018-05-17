@@ -318,6 +318,7 @@
   "moveSpriteN": "mugitu {spriteIndex}. aktorea",
   "moveDroid": "move droid",
   "moveDroidN": "move droid {spriteIndex}",
+  "to": "-ra",
   "toXY": "x,y ra",
   "moveDown": "mugiru behera",
   "moveDownTooltip": "Mugitu aktore bat behera.",

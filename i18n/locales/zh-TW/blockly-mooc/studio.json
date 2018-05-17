@@ -318,6 +318,7 @@
   "moveSpriteN": "角色 {spriteIndex} 移動",
   "moveDroid": "move droid",
   "moveDroidN": "move droid {spriteIndex}",
+  "to": "執行",
   "toXY": "到 x,y",
   "moveDown": "移動-向下",
   "moveDownTooltip": "讓角色向下移動。",

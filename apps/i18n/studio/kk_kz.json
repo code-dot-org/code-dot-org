@@ -318,6 +318,7 @@
   "moveSpriteN": "ойыншыны жылжыт {spriteIndex}",
   "moveDroid": "move droid",
   "moveDroidN": "move droid {spriteIndex}",
+  "to": "дейін",
   "toXY": "x,y - қа",
   "moveDown": "төмен жүру",
   "moveDownTooltip": "Ойыншыны төмен жылжыт.",

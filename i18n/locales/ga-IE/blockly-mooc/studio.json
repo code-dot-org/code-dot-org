@@ -318,6 +318,7 @@
   "moveSpriteN": "aistrigh aisteoir {spriteIndex}",
   "moveDroid": "aistrigh an dróideach",
   "moveDroidN": "aistrigh dróideach {spriteIndex}",
+  "to": "le",
   "toXY": "go x,y",
   "moveDown": "téigh síos",
   "moveDownTooltip": "Aistríonn seo aisteoir síos.",

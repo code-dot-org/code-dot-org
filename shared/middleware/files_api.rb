@@ -4,6 +4,7 @@ require 'cdo/rack/request'
 require 'sinatra/base'
 require 'cdo/sinatra'
 require 'cdo/image_moderation'
+require 'nokogiri'
 
 class FilesApi < Sinatra::Base
   set :mustermann_opts, check_anchors: false
@@ -176,6 +177,9 @@ class FilesApi < Sinatra::Base
     get_file('files', encrypted_channel_id, 'index.html', true)
   end
 
+  #
+  # @return [IO] requested file body as an IO stream
+  #
   def get_file(endpoint, encrypted_channel_id, filename, code_projects_domain_root_route = false)
     # We occasionally serve HTML files through theses APIs - we don't want NewRelic JS inserted...
     NewRelic::Agent.ignore_enduser rescue nil
@@ -216,7 +220,54 @@ class FilesApi < Sinatra::Base
       return "<head>\n<script>\nvar encrypted_channel_id='#{encrypted_channel_id}';\n</script>\n<script async src='/scripts/hosted.js'></script>\n<link rel='stylesheet' href='/style.css'></head>\n" << result[:body].string
     end
 
+    if endpoint == 'sources' && should_sanitize_for_under_13?(encrypted_channel_id)
+      return StringIO.new sanitize_for_under_13 result[:body].string
+    end
+
     result[:body]
+  end
+
+  # We should sanitize all sources created by under-13 users unless it is the
+  # user themselves requesting to view the source
+  def should_sanitize_for_under_13?(encrypted_channel_id)
+    return false if owns_channel?(encrypted_channel_id)
+
+    owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+    owner_id = user_id_for_storage_id(owner_storage_id)
+    under_13?(owner_id)
+  end
+
+  # Perform sanitization for sources created by under-13 users.
+  # Currently, all this does is remove any "comment" blocks, but it could easily
+  # be expanded to provide more privacy options
+  def sanitize_for_under_13(body_string)
+    begin
+      parsed_json = JSON.parse(body_string)
+    rescue JSON::ParserError
+      return body_string
+    end
+
+    return body_string unless parsed_json.key?('source')
+    blockly_xml = Nokogiri::XML(parsed_json['source'])
+    return body_string unless blockly_xml.errors.empty?
+
+    # first, remove all comment blocks by replacing them with the next block in
+    # the hierarchy
+    blockly_xml.xpath("//block[@type='comment']").each do |comment_block|
+      next_block = (comment_block > "next") > "block"
+      comment_block.replace(next_block)
+    end
+
+    # then, remove all empty "next" blocks
+    blockly_xml.xpath("//next").each do |next_block|
+      next_block.remove if next_block.children.empty?
+    end
+
+    # finally, write the modified xml back out to json
+    new_source = blockly_xml.serialize({save_with: Nokogiri::XML::Node::SaveOptions::NO_DECLARATION}).strip
+    parsed_json['source'] = new_source
+
+    parsed_json.to_json
   end
 
   # A list of some file types that are safe to view in the browser without

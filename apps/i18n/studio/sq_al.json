@@ -318,6 +318,7 @@
   "moveSpriteN": "lëviz pjesmarrësin {spriteIndex}",
   "moveDroid": "move droid",
   "moveDroidN": "move droid {spriteIndex}",
+  "to": "ne",
   "toXY": "tek x,y",
   "moveDown": "lëviz poshtë",
   "moveDownTooltip": "Lëviz një pjesmarrës poshtë.",

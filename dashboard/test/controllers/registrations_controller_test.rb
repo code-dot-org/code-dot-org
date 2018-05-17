@@ -134,7 +134,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "create as teacher requires age" do
-    teacher_params = @default_params.update(user_type: 'teacher', age: '')
+    teacher_params = @default_params.update(user_type: 'teacher', age: '', email_preference_opt_in: 'yes')
 
     assert_does_not_create(User) do
       post :create, params: {user: teacher_params}
@@ -144,7 +144,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "create new teacher with us ip sends email with us content" do
-    teacher_params = @default_params.update(user_type: 'teacher')
+    teacher_params = @default_params.update(user_type: 'teacher', email_preference_opt_in: 'yes')
     Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'US')])
     assert_creates(User) do
       post :create, params: {user: teacher_params}
@@ -157,7 +157,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "create new teacher with non-us ip sends email without us content" do
-    teacher_params = @default_params.update(user_type: 'teacher')
+    teacher_params = @default_params.update(user_type: 'teacher', email_preference_opt_in: 'yes')
     Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'CA')])
     assert_creates(User) do
       post :create, params: {user: teacher_params}
@@ -167,6 +167,36 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_equal 'Welcome to Code.org!', mail.subject
     assert mail.body.to_s =~ /Hadi Partovi/
     refute mail.body.to_s =~ /New to teaching computer science/
+  end
+
+  test "create new teacher with opt-in option as yes writes email preference as yes" do
+    teacher_params = @default_params.update(user_type: 'teacher', email_preference_opt_in: 'yes')
+    Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'CA')])
+    assert_creates(User) do
+      assert_creates(EmailPreference) do
+        post :create, params: {user: teacher_params}
+      end
+    end
+
+    email_preference = EmailPreference.last
+    assert_equal "an@email.address", email_preference[:email]
+    assert email_preference[:opt_in]
+    assert_equal EmailPreference::ACCOUNT_SIGN_UP, email_preference[:source]
+  end
+
+  test "create new teacher with opt-in option as no writes email preference as no" do
+    teacher_params = @default_params.update(user_type: 'teacher', email_preference_opt_in: 'no')
+    Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'CA')])
+    assert_creates(User) do
+      assert_creates(EmailPreference) do
+        post :create, params: {user: teacher_params}
+      end
+    end
+
+    email_preference = EmailPreference.last
+    assert_equal "an@email.address", email_preference[:email]
+    refute email_preference[:opt_in]
+    assert_equal EmailPreference::ACCOUNT_SIGN_UP, email_preference[:source]
   end
 
   test "create new student does not send email" do
@@ -213,7 +243,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "create causes SignIn creation" do
-    frozen_time = '1985-10-26 01:20:00'
+    frozen_time = Date.parse('1985-10-26 01:20:00')
     DateTime.stubs(:now).returns(frozen_time)
     assert_creates(SignIn) do
       post :create, params: {user: @default_params}
@@ -221,7 +251,7 @@ class RegistrationsControllerTest < ActionController::TestCase
     sign_in = SignIn.last
     assert sign_in
     assert_equal 1, sign_in.sign_in_count
-    assert_equal frozen_time + ' UTC', sign_in.sign_in_at.to_s
+    assert_equal frozen_time, sign_in.sign_in_at
   end
 
   test "update student without user param returns 400 BAD REQUEST" do
@@ -589,6 +619,74 @@ class RegistrationsControllerTest < ActionController::TestCase
     get :edit
     assert_response :success
     assert_select '#user_name', 1
+  end
+
+  test "converting student to teacher without password succeeds when email hasn't changed" do
+    test_email = 'me@example.com'
+    student = create :student, email: test_email
+    original_hashed_email = student.hashed_email
+    assert_empty student.email
+    sign_in student
+
+    request.headers['HTTP_ACCEPT'] = "application/json"
+    post :update, params: {
+      user: {
+        user_type: 'teacher',
+        email: test_email,
+        hashed_email: student.hashed_email
+      }
+    }
+    assert_response :success
+
+    student.reload
+    assert_equal 'teacher', student.user_type
+    assert_equal test_email, student.email
+    assert_equal original_hashed_email, student.hashed_email
+  end
+
+  test "converting student to teacher without password fails when email doesn't match" do
+    test_email = 'me@example.com'
+    student = create :student, email: test_email
+    original_hashed_email = student.hashed_email
+    assert_empty student.email
+    sign_in student
+
+    request.headers['HTTP_ACCEPT'] = "application/json"
+    post :update, params: {
+      user: {
+        user_type: 'teacher',
+        email: 'wrong_email@example.com',
+        hashed_email: student.hashed_email
+      }
+    }
+    assert_response :unprocessable_entity
+
+    student.reload
+    assert_equal 'student', student.user_type
+    assert_empty student.email
+    assert_equal original_hashed_email, student.hashed_email
+  end
+
+  test "converting teacher to student without password succeeds" do
+    test_email = 'me@example.com'
+    teacher = create :teacher, email: test_email
+    original_hashed_email = teacher.hashed_email
+    sign_in teacher
+
+    request.headers['HTTP_ACCEPT'] = "application/json"
+    post :update, params: {
+      user: {
+        user_type: 'student',
+        email: '',
+        hashed_email: teacher.hashed_email
+      }
+    }
+    assert_response :success
+
+    teacher.reload
+    assert_equal 'student', teacher.user_type
+    assert_empty teacher.email
+    assert_equal original_hashed_email, teacher.hashed_email
   end
 
   def can_edit_password_without_password(user)

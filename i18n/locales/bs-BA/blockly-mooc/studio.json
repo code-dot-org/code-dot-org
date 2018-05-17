@@ -318,6 +318,7 @@
   "moveSpriteN": "pomakni lik {spriteIndex}",
   "moveDroid": "move droid",
   "moveDroidN": "move droid {spriteIndex}",
+  "to": " ",
   "toXY": "na x,y",
   "moveDown": "pomakni dolje",
   "moveDownTooltip": "Pomakni lik prema dolje.",

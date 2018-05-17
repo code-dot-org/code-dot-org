@@ -84,9 +84,8 @@
       WhileAdventure_failure_message_override: Gratulacje! Zebrałeś X monet!
       courseE_playLab_scaffold3_failure_message_override: Należy dodać dwie lub więcej
         nowych postaci do gry i zaprogramować je tak, żeby się poruszały.
-      courseE_playLab_scaffold3_2018_failure_message_override: |-
-        You must add two
-        or more new actors to your game and program them to move.
+      courseE_playLab_scaffold3_2018_failure_message_override: Należy dodać dwie lub
+        więcej nowych postaci do gry i zaprogramować je tak, żeby się poruszały.
       grade4_scaffolded_project3_failure_message_override: "Musisz dodać co najmniej
         dwie \nnowe postacie, które przyłączą się do Twojej gry."
       kikiTesta_failure_message_override: Gratulacje! Zebrałeś X monet!

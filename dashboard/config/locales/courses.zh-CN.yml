@@ -17,3 +17,8 @@
           description_short: 这是allthethings的课程
           description_student: 这是allthethings的课程，给学生看的更长的描述。
           description_teacher: 这是allthethings的课程，给老师看的更长的描述。
+        csd-2018:
+          title: 计算机科学探索 2018
+          description_short: ''
+          description_student: ''
+          description_teacher: ''

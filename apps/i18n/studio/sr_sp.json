@@ -318,6 +318,7 @@
   "moveSpriteN": "помери учесника {spriteIndex}",
   "moveDroid": "move droid",
   "moveDroidN": "move droid {spriteIndex}",
+  "to": "до",
   "toXY": "на x,y",
   "moveDown": "помери доле",
   "moveDownTooltip": "Помери га на доле.",

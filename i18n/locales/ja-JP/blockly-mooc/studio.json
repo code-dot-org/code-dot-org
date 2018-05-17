@@ -318,6 +318,7 @@
   "moveSpriteN": "うごかす キャラ {spriteIndex}",
   "moveDroid": "move droid",
   "moveDroidN": "うごかす ドロイド {spriteIndex}",
+  "to": "は",
   "toXY": "の x,y を",
   "moveDown": "下に うごかす",
   "moveDownTooltip": "キャラを下にうごかす。",

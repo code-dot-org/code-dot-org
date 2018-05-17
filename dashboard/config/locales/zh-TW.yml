@@ -378,6 +378,7 @@
     enter_new_login_info: 輸入你新的登入資訊
     confirm_secret_words: 為了確認是你本人請輸入目前的通關密語
     enter_parent_email: 輸入你的家長或監護人的電子郵件位址 (用於密碼恢復)
+    update: Update Account
   user_level:
     completed: 已完成
     tried: 已體驗

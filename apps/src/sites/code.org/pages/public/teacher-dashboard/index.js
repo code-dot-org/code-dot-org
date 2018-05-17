@@ -19,10 +19,13 @@ import {
   renderLoginTypeControls,
   unmountLoginTypeControls,
   renderSectionTable,
-  renderStatsTable
+  renderStatsTable,
+  renderTextResponsesTable
 } from '@cdo/apps/templates/teacherDashboard/sections';
 import logToCloud from '@cdo/apps/logToCloud';
-import sectionProgress, {setSection, setValidScripts} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import scriptSelection, { loadValidScripts } from '@cdo/apps/redux/scriptSelectionRedux';
+import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import sectionData, { setSection } from '@cdo/apps/redux/sectionDataRedux';
 
 const script = document.querySelector('script[data-teacherdashboard]');
 const scriptData = JSON.parse(script.dataset.teacherdashboard);
@@ -51,11 +54,13 @@ function renderSectionProjects(sectionId) {
 }
 
 function renderSectionProgress(section, validScripts) {
-  registerReducers({sectionProgress});
+  registerReducers({sectionProgress, scriptSelection, sectionData});
   const store = getStore();
   store.dispatch(setSection(section));
-  store.dispatch(setValidScripts(validScripts));
+  store.dispatch(loadValidScripts(section, validScripts)).then(() => renderSectionProgressReact(store));
+}
 
+function renderSectionProgressReact(store) {
   ReactDOM.render(
     <Provider store={store}>
       <SectionProgress />
@@ -411,7 +416,7 @@ function main() {
       });
 
       $scope.$on('student-table-react-rendered', () => {
-        $scope.section.$promise.then(section => renderSectionTable(section.id, section.login_type, section.course_name));
+        $scope.section.$promise.then(section => renderSectionTable(section));
         firehoseClient.putRecord(
           {
             study: 'teacher-dashboard',
@@ -530,10 +535,6 @@ function main() {
       $scope.section.students.unshift({editing: true});
     };
 
-    $scope.showMoveStudentsModal = function () {
-      $('#move-students').modal('show');
-    };
-
     $scope.clear_bulk_import = function () {
       $scope.bulk_import.editing = false;
       $scope.bulk_import.students = '';
@@ -579,101 +580,6 @@ function main() {
       $window.print();
     };
 
-  }]);
-
-  app.controller('MovingStudentsController', ['$route', '$scope', '$routeParams', '$q', '$window', '$http', 'sectionsService', function ($route, $scope, $routeParams, $q, $window, $http, sectionsService) {
-    firehoseClient.putRecord(
-      {
-        study: 'teacher-dashboard-tabbing',
-        event: 'MovingStudentsController'
-      }
-    );
-
-    var self = this;
-
-    // 'Other Section' selected
-    $scope.otherTeacher = 'Other Teacher';
-    $scope.stayEnrolledInCurrentSection = 'true';
-
-    // Query
-    $scope.currentSection = sectionsService.get({id: $routeParams.id});
-    $scope.sections = sectionsService.query();
-    $scope.students = sectionsService.allStudents({id: $routeParams.id});
-
-    $scope.moveStudents = function () {
-      function isOwnSection(sectionCode) {
-        return $scope.sections.some(function (section) {return section.code === sectionCode;});
-      }
-
-      function displayError(errorMessage) {
-        $('.move-students-error').text(errorMessage);
-      }
-
-      var params = {};
-      params['new_section_code'] = $scope.getNewSectionCode();
-      params['current_section_code'] = $scope.getCurrentSectionCode();
-      params['student_ids'] = $scope.getSelectedStudentIds().join(',');
-      params['stay_enrolled_in_current_section'] = $scope.getStayEnrolledInCurrentSection();
-
-      if (!params['student_ids']) {
-        displayError(error_string_none_selected);
-      } else if (isOwnSection($scope.manuallySelectedSectionCode)) {
-        displayError(error_string_other_section);
-      } else {
-        sectionsService.moveStudents(params, {}).$promise.then(
-          function success(response) {
-            $('#move-students').modal('hide');
-            $route.reload();
-          },
-          function error(response) {
-            $('.move-students-error').text(response.data["error"]);
-          });
-      }
-    };
-
-    $scope.showModal = function () {
-      $q.all([$scope.currentSection.$promise, $scope.students.$promise]).then(function () {
-        $('#move-students').modal('show');
-      });
-    };
-
-    $scope.checkAll = function () {
-      $scope.selectedAll = !$scope.selectedAll;
-      angular.forEach($scope.students, function (student) {
-        student.selected = $scope.selectedAll;
-      });
-    };
-
-    $scope.getCurrentSectionCode = function () {
-      return $scope.section.code;
-    };
-
-    $scope.getSelectedStudentIds = function () {
-      var student_ids = [];
-      angular.forEach($scope.students, function (student) {
-        if (student.selected) {
-          student_ids.push(student.id);
-        }
-      });
-
-      return student_ids;
-    };
-
-    $scope.getNewSectionCode = function () {
-      if ($scope.selectedSectionCode !== $scope.otherTeacher) {
-        return $scope.selectedSectionCode;
-      } else {
-        return $scope.manuallySelectedSectionCode;
-      }
-    };
-
-    $scope.getStayEnrolledInCurrentSection = function () {
-      if ($scope.selectedSectionCode == $scope.otherTeacher) {
-        return $scope.stayEnrolledInCurrentSection;
-      } else {
-        return false;
-      }
-    };
   }]);
 
   app.controller('SectionSigninCardsController', ['$scope', '$routeParams', '$window', '$q', 'sectionsService',
@@ -828,7 +734,7 @@ function main() {
       );
     };
 
-    if (experiments.isEnabled('sectionProgressRedesign')) {
+    if (experiments.isEnabled(experiments.PROGRESS_TAB)) {
       $scope.react_progress = true;
       $scope.$on('section-progress-rendered', () => {
         $scope.section.$promise.then(script =>
@@ -838,7 +744,7 @@ function main() {
       return;
     }
 
-    // The below is not run if our sectionProgressRedesign experiment is not enabled
+    // The below is not run if our experiments.PROGRESS_TAB experiment is not enabled
 
     const paginatedPromise = paginatedSectionProgressService.get($routeParams.id)
       .then(result => {
@@ -978,6 +884,14 @@ function main() {
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
     $scope.tab = 'responses';
+
+    if (experiments.isEnabled(experiments.TEXT_RESPONSES_TAB)) {
+      $scope.react_text_responses = true;
+      $scope.$on('text-responses-table-rendered', () => {
+        $scope.section.$promise.then(section => renderTextResponsesTable(section, valid_scripts));
+      });
+      return;
+    }
 
     $scope.responses = sectionsService.responses({id: $routeParams.id});
     // error handling

@@ -318,6 +318,7 @@
   "moveSpriteN": "mozgasd a {spriteIndex}. szereplőt",
   "moveDroid": "move droid",
   "moveDroidN": "move droid {spriteIndex}",
+  "to": "ehhez:",
   "toXY": "x,y-ig",
   "moveDown": "lejjebb",
   "moveDownTooltip": "Mozgass egy szereplőt lefele.",

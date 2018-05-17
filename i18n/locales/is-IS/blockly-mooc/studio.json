@@ -318,6 +318,7 @@
   "moveSpriteN": "færa leikmann {spriteIndex}",
   "moveDroid": "færa vélmenni",
   "moveDroidN": "færa vélmenni {spriteIndex}",
+  "to": "til að",
   "toXY": "til x,y",
   "moveDown": "færa niður",
   "moveDownTooltip": "Færa leikmann niður.",

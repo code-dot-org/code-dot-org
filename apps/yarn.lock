@@ -9,9 +9,9 @@
   version "0.0.1"
   resolved "https://codeload.github.com/code-dot-org/artist/tar.gz/9c3ad003522aeab9d652fb1d8703a95d7ebde393"
 
-"@code-dot-org/blockly@1.9.2":
-  version "1.9.2"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.9.2.tgz#785cda013630d601ec658a0aaa2a0029c505bc30"
+"@code-dot-org/blockly@2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-2.0.1.tgz#1c9f8c2282842727041324d764186ddf4eb26112"
 
 "@code-dot-org/bramble@0.1.26":
   version "0.1.26"
@@ -92,6 +92,10 @@
 "@code-dot-org/js-numbers@0.1.0-cdo.0":
   version "0.1.0-cdo.0"
   resolved "https://registry.yarnpkg.com/@code-dot-org/js-numbers/-/js-numbers-0.1.0-cdo.0.tgz#810092a993c3c75441f2e5a3282f1257d9670715"
+
+"@code-dot-org/maze@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/maze/-/maze-1.0.1.tgz#1b85b8ab73a072d86ed58d86dd90fad459015e5c"
 
 "@code-dot-org/p5.play@1.2.2-cdo":
   version "1.2.2-cdo"
@@ -9061,6 +9065,10 @@ pend@~1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/pend/-/pend-1.2.0.tgz#7a57eb550a6783f9115331fcf4663d5c8e007a50"
 
+pepjs@^0.4.3:
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/pepjs/-/pepjs-0.4.3.tgz#16080e970aae779913756c2daef88eaa7486df41"
+
 performance-now@^0.2.0, performance-now@~0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-0.2.0.tgz#33ef30c5c77d4ea21c5a53869d91b56d8f2555e5"
@@ -9849,6 +9857,10 @@ react-color@^2.11.7:
     reactcss "^1.2.0"
     tinycolor2 "^1.1.2"
 
+react-csv@^1.0.14:
+  version "1.0.14"
+  resolved "https://registry.yarnpkg.com/react-csv/-/react-csv-1.0.14.tgz#7c9e444fc4c3ca1e1cf73a81129b1ec032838a71"
+
 react-datepicker@0.37.0:
   version "0.37.0"
   resolved "https://registry.yarnpkg.com/react-datepicker/-/react-datepicker-0.37.0.tgz#94eef12ae508d733c74fbf9e0f996609a9dd9b89"
@@ -10015,6 +10027,10 @@ react-overlays@^0.6.6:
     dom-helpers "^2.4.0"
     react-prop-types "^0.4.0"
     warning "^3.0.0"
+
+react-pointable@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/react-pointable/-/react-pointable-1.1.1.tgz#4f9b1ca397dfb5f506923d3b470421b0b30d16c2"
 
 react-portal:
   version "3.0.0"

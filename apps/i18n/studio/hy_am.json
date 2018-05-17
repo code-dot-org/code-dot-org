@@ -318,6 +318,7 @@
   "moveSpriteN": "քայլը դերասան {spriteIndex}",
   "moveDroid": "move droid",
   "moveDroidN": "move droid {spriteIndex}",
+  "to": "դեպի",
   "toXY": "Ինչպես x, y",
   "moveDown": "գնալ ներքեւ",
   "moveDownTooltip": "Տեղափոխել է դերասան ներքեւ.",

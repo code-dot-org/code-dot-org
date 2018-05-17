@@ -123,6 +123,9 @@ si:
     field_is_required: "අවශ්‍යයි"
     accept_terms: "ගිණුමක් නිර්මාණය කිරීමට ඔබ එකඟ විය යුතුය"
     error: "An error occurred."
+    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_yes: "ඔව්"
+    email_preference_no: "නැහැ"
   school_info:
     title: 'School Information (optional)'
     school_country: 'School Country'
@@ -368,6 +371,7 @@ si:
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
+    update: "Update Account"
   user_level:
     completed: 'සම්පූර්ණයි'
     tried: 'උත්සාහ කරනලදී'
@@ -723,21 +727,21 @@ si:
     message: "ඔබේ ජාතිය සඳහන් කරන්න (අදාළ වන සියල්ල ලකුණු කරන්න)"
     races:
       - 
-        white: සුදු ජාතික
+        white: "සුදු ජාතික"
       - 
-        black: අප්‍රිකානු ඇමෙරිකානු සම්භවයක් සහිත
+        black: "අප්‍රිකානු ඇමෙරිකානු සම්භවයක් සහිත"
       - 
-        hispanic: ලතින් ඇමරිකානු
+        hispanic: "ලතින් ඇමරිකානු"
       - 
-        asian: ආසියානු
+        asian: "ආසියානු"
       - 
-        hawaiian: හවායි ජාතික හෝ වෙනත් පැසිෆික් වාසී
+        hawaiian: "හවායි ජාතික හෝ වෙනත් පැසිෆික් වාසී"
       - 
-        american_indian: ඉන්දු ඇමෙරිකානු/ ඇලස්කා ජාතික
+        american_indian: "ඉන්දු ඇමෙරිකානු/ ඇලස්කා ජාතික"
       - 
-        other: වෙනත්
+        other: "වෙනත්"
       - 
-        opt_out: පිළිතුරු දීමට අකැමතියි
+        opt_out: "පිළිතුරු දීමට අකැමතියි"
     submit: "යොමු කරන්න"
     decline: "වසන්න"
   zendesk_too_young_message: 'සමාවෙන්න,උපකාරක වෙබ් අඩවියට වයසින් බාල සිසුන් සඳහා sign in වියනොහක.සොයන්න <a href="http://support.code.org">support.code.org</a> signing in නොවී හෝ ඔබ වෙනුවෙන් දෙමාපියන් හෝ ගුරුවන් සම්බන්ද කරන්න.'
@@ -881,6 +885,11 @@ si:
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: '2වන ඒකකය: අංකිත තොරතුරු'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: 'Reflection Prompts'
   external_links:
     disclaimer: වියාචනය
@@ -985,3 +994,7 @@ si:
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: 'Full Courses'
+  cookie_banner:
+    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+    more_information: "See Code.org's Privacy Policy."
+    accept: 'මම එකඟයි'

@@ -318,6 +318,7 @@
   "moveSpriteN": "অভিনেতা স্থানান্তর করান {spriteIndex}",
   "moveDroid": "move droid",
   "moveDroidN": "move droid {spriteIndex}",
+  "to": "থেকে",
   "toXY": "জন্য x, y",
   "moveDown": "নিচে নামুন",
   "moveDownTooltip": "Move an actor down.",

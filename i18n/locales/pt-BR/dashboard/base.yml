@@ -123,6 +123,9 @@ pt-BR:
     field_is_required: "é obrigatório"
     accept_terms: "Você precisa aceitar criar uma conta"
     error: "Ocorreu um erro."
+    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_yes: "Sim"
+    email_preference_no: "Não"
   school_info:
     title: 'Informações da escola (opcional)'
     school_country: 'País da Escola'
@@ -368,6 +371,7 @@ pt-BR:
     enter_new_login_info: 'Digite sua nova conta individual'
     confirm_secret_words: 'Confirme que é você ao digitar suas palavras secretas atuais'
     enter_parent_email: "Insira o E-Mail dos pais ou responsável legal (para recuperação de senha)"
+    update: "Update Account"
   user_level:
     completed: 'Concluído'
     tried: 'Provado'
@@ -723,21 +727,21 @@ pt-BR:
     message: "Diga-nos qual é sua raça (marque todas as opções aplicáveis)"
     races:
       - 
-        white: Branco
+        white: "Branco"
       - 
-        black: Negro ou Afro-americano
+        black: "Negro ou Afro-americano"
       - 
-        hispanic: Hispânico ou Latino
+        hispanic: "Hispânico ou Latino"
       - 
-        asian: Asiático
+        asian: "Asiático"
       - 
-        hawaiian: Nativo do Havaí ou de outra ilha do Pacífico
+        hawaiian: "Nativo do Havaí ou de outra ilha do Pacífico"
       - 
-        american_indian: Índio Americano/Nativo do Alaska
+        american_indian: "Índio Americano/Nativo do Alaska"
       - 
-        other: Outros
+        other: "Outros"
       - 
-        opt_out: Prefiro não responder
+        opt_out: "Prefiro não responder"
     submit: "Enviar"
     decline: "Fechar"
   zendesk_too_young_message: 'Desculpe, usuários mais jovens não podem se inscrever em nosso site. Você pode acessar <a href="http://support.code.org">support.code.org</a> sem se inscrever, ou pedir aos seus pais ou a um professor para que entrem em contato conosco.'
@@ -881,6 +885,11 @@ pt-BR:
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Unidade 2: Informação Digital'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: 'Prompts de reflexão'
   external_links:
     disclaimer: Aviso
@@ -985,3 +994,7 @@ pt-BR:
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: 'Cursos Completos'
+  cookie_banner:
+    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+    more_information: "See Code.org's Privacy Policy."
+    accept: 'Aceito'

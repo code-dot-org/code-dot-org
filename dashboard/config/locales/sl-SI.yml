@@ -417,6 +417,7 @@
     confirm_secret_words: Confirm that it is you by entering your current secret words
     enter_parent_email: Enter your parent or guardian's email address (for password
       recovery)
+    update: Update Account
   user_level:
     completed: Zaključeno
     tried: Poskus
@@ -690,7 +691,7 @@
   not_started: The student has not attempted this level.
   share_code:
     title: Klikni 'Zaženi', da vidiš svoj program v akciji
-    bounce_og_title: Oglejte si moje Bounce igre
+    bounce_og_title: Oglejte si moje igro Skokica
     flappy_og_title: Oglejte si mojo Flappy igro
     studio_og_title: Oglejte si moj Play Lab App
     check_out_what_i_made: Poglej, kaj sem naredil

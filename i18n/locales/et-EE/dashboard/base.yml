@@ -123,6 +123,9 @@ et:
     field_is_required: "on nõutud"
     accept_terms: "Pead konto loomiseks nõustuma"
     error: "An error occurred."
+    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_yes: "Jah"
+    email_preference_no: "Ei"
   school_info:
     title: 'School Information (optional)'
     school_country: 'School Country'
@@ -362,6 +365,7 @@ et:
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
+    update: "Update Account"
   user_level:
     completed: 'Tehtud'
     tried: 'Proovisin'
@@ -717,21 +721,21 @@ et:
     message: "Palun ütle meile, millisesse rassi kuulud (märgi kõik, millega end identifitseerid)"
     races:
       - 
-        white: Valge
+        white: "Valge"
       - 
-        black: Mustanahaline või afroameeriklane
+        black: "Mustanahaline või afroameeriklane"
       - 
-        hispanic: Hispaania või ladina päritolu
+        hispanic: "Hispaania või ladina päritolu"
       - 
-        asian: aasialane
+        asian: "aasialane"
       - 
-        hawaiian: Havai põlisrahvusest või pärit vaikse ookeani saartelt
+        hawaiian: "Havai põlisrahvusest või pärit vaikse ookeani saartelt"
       - 
-        american_indian: põlisameeriklane või Alaska põliselanik
+        american_indian: "põlisameeriklane või Alaska põliselanik"
       - 
-        other: Muu
+        other: "Muu"
       - 
-        opt_out: Ei soovi vastata
+        opt_out: "Ei soovi vastata"
     submit: "Esita"
     decline: "Sulge"
   zendesk_too_young_message: 'Vabandame, nooremad kasutajad ei saa meie kasutajatoe lehele sisse logida. Võid sirvida <a href="http://support.code.org"> support.code.org</a> ilma sisse logimata või paluda oma emal ja isal või õpetajal meiega ühendust võtta.'
@@ -875,6 +879,11 @@ et:
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Unit 2: Digital Information'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: 'Reflection Prompts'
   external_links:
     disclaimer: Lahtiütlemine
@@ -979,3 +988,7 @@ et:
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: 'Full Courses'
+  cookie_banner:
+    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+    more_information: "See Code.org's Privacy Policy."
+    accept: 'Olen nõus'

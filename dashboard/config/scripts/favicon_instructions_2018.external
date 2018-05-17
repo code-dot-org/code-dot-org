@@ -1,4 +1,5 @@
 name 'Favicon Instructions_2018'
+display_name 'Favicon Instructions'
 css 'unplugged'
 markdown <<MARKDOWN
 # Project: Personal Favicon

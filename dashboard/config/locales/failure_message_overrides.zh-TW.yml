@@ -39,9 +39,7 @@
       Valentine_playlab_01_failure_message_override: Almost!  Try again.
       WhileAdventure_failure_message_override: 恭喜！你收集了 X 枚硬幣！
       courseE_playLab_scaffold3_failure_message_override: 你必須添加 2 個以上的新角色到遊戲，然後編程讓他們產生動作。
-      courseE_playLab_scaffold3_2018_failure_message_override: |-
-        You must add two
-        or more new actors to your game and program them to move.
+      courseE_playLab_scaffold3_2018_failure_message_override: 你必須添加 2 個以上的新角色到遊戲，然後編程讓他們產生動作。
       grade4_scaffolded_project3_failure_message_override: 你必須添加 2 個以上的新角色到你的遊戲中。
       kikiTesta_failure_message_override: 恭喜！你收集了 X 枚硬幣！
       sample1_failure_message_override: 恭喜！你收集了 X 枚硬幣！

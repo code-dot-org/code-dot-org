@@ -101,6 +101,10 @@ class Section < ActiveRecord::Base
     Pd::Workshop::SECTION_TYPES.include? section_type
   end
 
+  def externally_rostered?
+    [LOGIN_TYPE_EMAIL, LOGIN_TYPE_PICTURE, LOGIN_TYPE_WORD].exclude? login_type
+  end
+
   validates_presence_of :user, unless: -> {deleted?}
   def user_must_be_teacher
     errors.add(:user_id, 'must be a teacher') unless user.try(:teacher?)
@@ -320,6 +324,14 @@ class Section < ActiveRecord::Base
       return true if num_students_with_sufficient_progress >= 10
     end
     false
+  end
+
+  # Returns the ids of all scripts which any student in this section has ever
+  # been assigned to or made progress on.
+  def student_script_ids
+    # This performs two queries, but could be optimized to perform only one by
+    # doing additional joins.
+    Script.joins(:user_scripts).where(user_scripts: {user_id: students.pluck(:id)}).distinct.pluck(:id)
   end
 
   private

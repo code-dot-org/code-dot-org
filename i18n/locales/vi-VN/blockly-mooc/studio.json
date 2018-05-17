@@ -318,6 +318,7 @@
   "moveSpriteN": "di chuyển diễn viên {spriteIndex}",
   "moveDroid": "move droid",
   "moveDroidN": "move droid {spriteIndex}",
+  "to": "ở cuối",
   "toXY": "đến x,y",
   "moveDown": "di chuyển xuống",
   "moveDownTooltip": "Di chuyển một diễn viên xuống.",

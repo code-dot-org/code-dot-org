@@ -405,39 +405,45 @@
           kavramalarına yardımcı olacaktır.  '
       swipeRightPassThrough:
         title: İşe Alma Senaryoları Toplantısı
-        desc: |-
-          # Öğrenci Alım Senaryoları Oturumu\r
-          \r
-          ## Bilgisayar Bilimi için Sağa Kaydır\r
-          Bu oturumda, MIT'deki ortaklarımız tarafından geliştirilmiş olan "Bilgisayar Bilimi için Sağa Kaydır" adında bir araç kullanacağız. Bilgisayar Bilimi için Sağa Kaydır'da, birkaç öğrenci profili okuyacaksınız ve öğrencinin sizin Bilgisayar Bilimi İlkeleri kursunuza kaydolması için öğrenciyi ikna etmede kullanılabilecek özel ifadeleri düşüneceksiniz.\r
-          \r
-          ### Nasıl Çalışır\r
-          Bilgisayar Bilimi için Sağa Kaydır oynarken, öğrenciye söyleyebileceğiniz bir dizi alıntı göreceksiniz. Öğrenciyi kursa kaydolmaya ikna etmek için etkili olacağını düşündüğünüz alıntıları sağa kaydıracaksınız ve etkili olmayacağını düşündüğünüz ifadeleri sola kaydıracaksınız. Oturum sırasında grup olarak, bir öğrenciyi Bilgisayar Bilimlerine kaydolmasını sağlayacak en etkili ifade türleri üzerine sizin düşüncelerinizi tartışacağız ve atölyenizdeki diğer insanların her argümanı hangi yöne kaydırdıklarını görme şansınız olacak.\r
-          \r
-          \r
-          Aşağıda devama tıkladığınızda, size oyunu göndereceğiz ve oturum açtığınız Code.org eposta adresinizi ileteceğiz.
+        desc: "# Öğrenci Alım Senaryoları Oturumu\r\n\r\n## Bilgisayar Bilimi için
+          Sağa Kaydır\r\nBu oturumda, MIT'deki ortaklarımız tarafından geliştirilmiş
+          olan \"Bilgisayar Bilimi için Sağa Kaydır\" adında bir araç kullanacağız.
+          Bilgisayar Bilimi için Sağa Kaydır'da, birkaç öğrenci profili okuyacaksınız
+          ve öğrencinin sizin Bilgisayar Bilimi İlkeleri kursunuza kaydolması için
+          öğrenciyi ikna etmede kullanılabilecek özel ifadeleri düşüneceksiniz.\r\n\r\n###
+          Nasıl Çalışır\r\nBilgisayar Bilimi için Sağa Kaydır oynarken, öğrenciye
+          söyleyebileceğiniz bir dizi alıntı göreceksiniz. Öğrenciyi kursa kaydolmaya
+          ikna etmek için etkili olacağını düşündüğünüz alıntıları sağa kaydıracaksınız
+          ve etkili olmayacağını düşündüğünüz ifadeleri sola kaydıracaksınız. Oturum
+          sırasında grup olarak, bir öğrenciyi Bilgisayar Bilimlerine kaydolmasını
+          sağlayacak en etkili ifade türleri üzerine sizin düşüncelerinizi tartışacağız
+          ve atölyenizdeki diğer insanların her argümanı hangi yöne kaydırdıklarını
+          görme şansınız olacak.\r\n\r\n\r\nAşağıda devama tıkladığınızda, size oyunu
+          göndereceğiz ve oturum açtığınız Code.org eposta adresinizi ileteceğiz."
       swipeRightPassThrough-test123:
         title: İşe Alma Senaryoları Toplantısı
-        desc: |-
-          # Öğrenci Alım Senaryoları Oturumu\r
-          \r
-          ## Bilgisayar Bilimi için Sağa Kaydır\r
-          Bu oturumda, MIT'deki ortaklarımız tarafından geliştirilmiş olan "Bilgisayar Bilimi için Sağa Kaydır" adında bir araç kullanacağız. Bilgisayar Bilimi için Sağa Kaydır'da, birkaç öğrenci profili okuyacaksınız ve öğrencinin sizin Bilgisayar Bilimi İlkeleri kursunuza kaydolması için öğrenciyi ikna etmede kullanılabilecek özel ifadeleri düşüneceksiniz.\r
-          \r
-          ### Nasıl Çalışır\r
-          Bilgisayar Bilimi için Sağa Kaydır oynarken, öğrenciye söyleyebileceğiniz bir dizi alıntı göreceksiniz. Öğrenciyi kursa kaydolmaya ikna etmek için etkili olacağını düşündüğünüz alıntıları sağa kaydıracaksınız ve etkili olmayacağını düşündüğünüz ifadeleri sola kaydıracaksınız. Oturum sırasında grup olarak, bir öğrenciyi Bilgisayar Bilimlerine kaydolmasını sağlayacak en etkili ifade türleri üzerine sizin düşüncelerinizi tartışacağız ve atölyenizdeki diğer insanların her argümanı hangi yöne kaydırdıklarını görme şansınız olacak.\r
-          \r
-          \r
-          Aşağıda devama tıkladığınızda, size oyunu göndereceğiz ve oturum açtığınız Code.org eposta adresinizi ileteceğiz.
+        desc: "# Öğrenci Alım Senaryoları Oturumu\r\n\r\n## Bilgisayar Bilimi için
+          Sağa Kaydır\r\nBu oturumda, MIT'deki ortaklarımız tarafından geliştirilmiş
+          olan \"Bilgisayar Bilimi için Sağa Kaydır\" adında bir araç kullanacağız.
+          Bilgisayar Bilimi için Sağa Kaydır'da, birkaç öğrenci profili okuyacaksınız
+          ve öğrencinin sizin Bilgisayar Bilimi İlkeleri kursunuza kaydolması için
+          öğrenciyi ikna etmede kullanılabilecek özel ifadeleri düşüneceksiniz.\r\n\r\n###
+          Nasıl Çalışır\r\nBilgisayar Bilimi için Sağa Kaydır oynarken, öğrenciye
+          söyleyebileceğiniz bir dizi alıntı göreceksiniz. Öğrenciyi kursa kaydolmaya
+          ikna etmek için etkili olacağını düşündüğünüz alıntıları sağa kaydıracaksınız
+          ve etkili olmayacağını düşündüğünüz ifadeleri sola kaydıracaksınız. Oturum
+          sırasında grup olarak, bir öğrenciyi Bilgisayar Bilimlerine kaydolmasını
+          sağlayacak en etkili ifade türleri üzerine sizin düşüncelerinizi tartışacağız
+          ve atölyenizdeki diğer insanların her argümanı hangi yöne kaydırdıklarını
+          görme şansınız olacak.\r\n\r\n\r\nAşağıda devama tıkladığınızda, size oyunu
+          göndereceğiz ve oturum açtığınız Code.org eposta adresinizi ileteceğiz."
       brad-repro-bug-000:
         title: Brad Repro Bug 000
-        desc: |-
-          # Brad Repro Bug 000\r
-          ## Attempt to recreate a bug Brooke reported\r
-          process as follows:\r
-          1. started with an `unplugged` level. populated with info. hit save and publish.\r
-          2. “destroyed” the level\r
-          3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush
+        desc: "# Brad Repro Bug 000\r\n## Attempt to recreate a bug Brooke reported\r\nprocess
+          as follows:\r\n1. started with an `unplugged` level. populated with info.
+          hit save and publish.\r\n2. “destroyed” the level\r\n3. made a `markdown`
+          level with the same content and same name. checked to box to encrypt it.
+          hit save and plush"
       courseB_unplugged_MRF_2018:
         title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
         desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'

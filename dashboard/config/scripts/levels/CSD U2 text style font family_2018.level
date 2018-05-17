@@ -11,10 +11,23 @@
     "encrypted_examples": "I0sbvPHG+lEuNH/bE9fnSeQPuJVWtDmT6ldUCBLJAO+TPnQ0uM5RBKeZJgd6\n70bSKImy4nfjRoeG+p36Nc6cig==\n",
     "hide_share_and_remix": "false",
     "parent_level_id": 7610,
-    "name_suffix": "_2018"
+    "name_suffix": "_2018",
+    "reference_links": [
+      "/docs/csd-1718/style_sheets/index.html",
+      "/docs/csd-1718/html_tags/index.html",
+      "/docs/csd-1718/headers/index.html",
+      "/docs/csd-1718/lists/index.html",
+      "/docs/csd-1718/images-in-html/index.html",
+      "/docs/csd-1718/cc_search/index.html"
+    ],
+    "map_reference": "/docs/csd-1718/text_properties/index.html",
+    "video_key": "csd_weblab_css_1",
+    "submittable": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-05-11 04:39:24 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-05-11 04:39:24 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-05-09 18:03:15 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-09 18:04:48 +0000\",\"changed\":[\"encrypted_examples\",\"video_key\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </Weblab>

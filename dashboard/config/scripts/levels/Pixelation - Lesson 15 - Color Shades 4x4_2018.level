@@ -21,6 +21,8 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-30 13:18:48 +0000\",\"changed\":[\"notes\",\"published\",\"markdown_instructions\",\"hex\",\"data\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-30 13:18:48 +0000\",\"changed\":[\"notes\",\"published\",\"markdown_instructions\",\"hex\",\"data\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2018-05-05 00:46:50 +0000\",\"changed\":[],\"changed_by_id\":18,\"changed_by_email\":\"dave@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </Pixelation>

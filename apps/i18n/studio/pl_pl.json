@@ -318,6 +318,7 @@
   "moveSpriteN": "przenieś postać {spriteIndex}",
   "moveDroid": "move droid",
   "moveDroidN": "przesuń droida {spriteIndex}",
+  "to": "o wartości",
   "toXY": "do x,y",
   "moveDown": "idź w dół",
   "moveDownTooltip": "Przesuń postać w dół.",

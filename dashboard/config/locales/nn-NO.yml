@@ -421,6 +421,7 @@
       ord
     enter_parent_email: Skriv inn epostadressa til ein av dine føresette (for å gjenopprette
       passord)
+    update: Update Account
   user_level:
     completed: Fullført
     tried: Forsøkt

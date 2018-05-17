@@ -9,9 +9,14 @@
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 6068,
-    "name_suffix": "_2018"
+    "name_suffix": "_2018",
+    "instructions_important": "false",
+    "display_name": "Text Compression"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-05-10 17:40:41 +0000\",\"changed\":[],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </StandaloneVideo>

@@ -123,6 +123,9 @@ sk:
     field_is_required: "sa vyžaduje"
     accept_terms: "Musíte súhlasiť s vytvorením účtu"
     error: "An error occurred."
+    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_yes: "Áno"
+    email_preference_no: "Nie"
   school_info:
     title: 'School Information (optional)'
     school_country: 'School Country'
@@ -368,6 +371,7 @@ sk:
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
+    update: "Update Account"
   user_level:
     completed: 'Dokončené'
     tried: 'Vyskúšaný'
@@ -723,21 +727,21 @@ sk:
     message: "Prosím zvoľte vašu rasu (označte všetky ktoré platia)"
     races:
       - 
-        white: Biela
+        white: "Biela"
       - 
-        black: Africká alebo Afroamerická
+        black: "Africká alebo Afroamerická"
       - 
-        hispanic: Hispánska alebo Latinoamerická
+        hispanic: "Hispánska alebo Latinoamerická"
       - 
-        asian: Ázijská
+        asian: "Ázijská"
       - 
-        hawaiian: Pôvodná havajská alebo iná tichomorská
+        hawaiian: "Pôvodná havajská alebo iná tichomorská"
       - 
-        american_indian: Pôvodná americká alebo alijašská
+        american_indian: "Pôvodná americká alebo alijašská"
       - 
-        other: Ostatné
+        other: "Ostatné"
       - 
-        opt_out: Preferujem neodpovedať
+        opt_out: "Preferujem neodpovedať"
     submit: "Odoslať"
     decline: "Zatvoriť"
   zendesk_too_young_message: 'Prepáč, mladší užívatelia sa nemôžu prihlásiť na našu stránku podpory. Môžeš si prezerať <a href="http://support.code.org">support.code.org</a> bez prihlásenia, prípadne požiadať tvojich rodičov alebo učiteľov, aby nás za teba kontaktovali.'
@@ -881,6 +885,11 @@ sk:
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Unit 2: Digital Information'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: 'Reflection Prompts'
   external_links:
     disclaimer: Upozornenie
@@ -985,3 +994,7 @@ sk:
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: 'Full Courses'
+  cookie_banner:
+    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+    more_information: "See Code.org's Privacy Policy."
+    accept: 'súhlasím'

@@ -318,6 +318,7 @@
   "moveSpriteN": "චරිතය චලනය කරන්න {spriteIndex}",
   "moveDroid": "move droid",
   "moveDroidN": "move droid {spriteIndex}",
+  "to": "වෙත",
   "toXY": "x,y වෙත",
   "moveDown": "පහළට චලනය කරන්න",
   "moveDownTooltip": "චිත්‍ර ශිලිපියෙකු පහලට ගමන් කරවන්න.",

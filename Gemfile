@@ -203,7 +203,7 @@ gem 'marked-rails' # js-based md renderer used for levelbuilder md preview
 
 gem 'twilio-ruby' # SMS API for send-to-phone feature
 
-gem 'font-awesome-rails', '~> 4.6.3'
+gem 'font-awesome-rails', '~> 4.6.3' # NOTE: apps/src/applab/Exporter.js depends on the font file names from this version!
 gem 'sequel', '~> 4.30'
 gem 'user_agent_parser'
 

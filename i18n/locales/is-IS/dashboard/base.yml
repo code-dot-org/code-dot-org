@@ -123,6 +123,9 @@ is:
     field_is_required: "er nauðsynlegt"
     accept_terms: "Þú verður að samþykkja að stofna aðgang"
     error: "Villa kom upp."
+    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_yes: "Já"
+    email_preference_no: "Nei"
   school_info:
     title: 'Upplýsingar skóla (val)'
     school_country: 'Land skóla'
@@ -368,6 +371,7 @@ is:
     enter_new_login_info: 'Færðu inn nýju innskráningarupplýsingarnar þínar'
     confirm_secret_words: 'Staðfestu að þetta sért þú með því að slá inn núverandi leyniorð'
     enter_parent_email: "Skráðu netfang foreldris eða forráðamanns (ef leyniorð skyldi gleymast)"
+    update: "Update Account"
   user_level:
     completed: 'Lokið'
     tried: 'Reynt'
@@ -723,21 +727,21 @@ is:
     message: "Segðu okkur frá kynþætti þínum (merktu við allt sem á við)"
     races:
       - 
-        white: Hvít/ur
+        white: "Hvít/ur"
       - 
-        black: Svartur/svört eða afrísk-amerísk/ur
+        black: "Svartur/svört eða afrísk-amerísk/ur"
       - 
-        hispanic: Latnesk-amerísk/ur
+        hispanic: "Latnesk-amerísk/ur"
       - 
-        asian: Asísk/ur
+        asian: "Asísk/ur"
       - 
-        hawaiian: Hawaii frumbyggi eða af annarri Kyrrahafsþjóð
+        hawaiian: "Hawaii frumbyggi eða af annarri Kyrrahafsþjóð"
       - 
-        american_indian: Amerískur indíáni / Alaska frumbyggi
+        american_indian: "Amerískur indíáni / Alaska frumbyggi"
       - 
-        other: Annað
+        other: "Annað"
       - 
-        opt_out: Vil ekki gefa upp
+        opt_out: "Vil ekki gefa upp"
     submit: "Senda inn"
     decline: "Loka"
   zendesk_too_young_message: 'Því miður mega yngri notendur ekki skrá sig á hjálparvefinn. Þú getur skoðað <a href="http://support.code.org">support.code.org</a> án þess að skrá þig inn eða beðið foreldri eða kennara að hafa samband við okkur fyrir þig.'
@@ -881,6 +885,11 @@ is:
     csp_ap_1: 'Kafli 1: AP - Tækniumhverfið'
     csp_ap_2: 'Kafli 2: AP - Skilningsverkefni'
     csp_ap_3: 'Kafli 3: AP - Sköpunarverkefni'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Kafli 2 - Stafrænar upplýsingar'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: 'Kvaðningar um íhugun'
   external_links:
     disclaimer: Afsal ábyrgðar
@@ -985,3 +994,7 @@ is:
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: 'Heil námskeið'
+  cookie_banner:
+    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+    more_information: "See Code.org's Privacy Policy."
+    accept: 'Sammála'

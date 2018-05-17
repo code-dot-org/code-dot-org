@@ -141,7 +141,8 @@ class CourseTest < ActiveSupport::TestCase
 
     summary = course.summarize
 
-    assert_equal [:name, :id, :title, :description_short, :description_student,
+    assert_equal [:name, :id, :title, :assignment_family_title,
+                  :description_short, :description_student,
                   :description_teacher, :scripts, :teacher_resources,
                   :has_verified_resources, :versions], summary.keys
     assert_equal 'my-course', summary[:name]
@@ -208,11 +209,12 @@ class CourseTest < ActiveSupport::TestCase
     end
 
     test 'select alternate course script for teacher with experiment' do
-      create :single_user_experiment, min_user_id: @other_teacher.id, name: 'my-experiment'
+      experiment = create :single_user_experiment, min_user_id: @other_teacher.id, name: 'my-experiment'
       assert_equal(
         @alternate_course_script,
         @course.select_course_script(@other_teacher, @default_course_script)
       )
+      experiment.destroy
     end
 
     test 'select default course script for student by default' do
@@ -224,20 +226,22 @@ class CourseTest < ActiveSupport::TestCase
 
     test 'select alternate course script for student when course teacher has experiment' do
       create :follower, section: @course_section, student_user: @student
-      create :single_user_experiment, min_user_id: @course_teacher.id, name: 'my-experiment'
+      experiment = create :single_user_experiment, min_user_id: @course_teacher.id, name: 'my-experiment'
       assert_equal(
         @alternate_course_script,
         @course.select_course_script(@student, @default_course_script)
       )
+      experiment.destroy
     end
 
     test 'select default course script for student when other teacher has experiment' do
       create :follower, section: @other_section, student_user: @student
-      create :single_user_experiment, min_user_id: @other_teacher.id, name: 'my-experiment'
+      experiment = create :single_user_experiment, min_user_id: @other_teacher.id, name: 'my-experiment'
       assert_equal(
         @default_course_script,
         @course.select_course_script(@student, @default_course_script)
       )
+      experiment.destroy
     end
 
     test 'select alternate course script for student with progress' do
@@ -295,7 +299,7 @@ class CourseTest < ActiveSupport::TestCase
     assert_equal(0, csp_assign_info[:category_priority])
 
     # has localized name, category
-    assert_equal 'Computer Science Principles', csp_assign_info[:name]
+    assert_equal "Computer Science Principles ('17-'18)", csp_assign_info[:name]
     assert_equal 'Full Courses', csp_assign_info[:category]
 
     # has script_ids
@@ -310,11 +314,12 @@ class CourseTest < ActiveSupport::TestCase
 
     # teacher with experiment has alternate script_ids
     teacher_with_experiment = create(:teacher)
-    create(:single_user_experiment, name: 'csp2-alt-experiment', min_user_id: teacher_with_experiment.id)
+    experiment = create(:single_user_experiment, name: 'csp2-alt-experiment', min_user_id: teacher_with_experiment.id)
     courses = Course.valid_courses(teacher_with_experiment)
     assert_equal csp.id, courses[0][:id]
     csp_assign_info = courses[0]
     assert_equal [csp1.id, csp2_alt.id, csp3.id], csp_assign_info[:script_ids]
+    experiment.destroy
   end
 
   test "update_teacher_resources" do

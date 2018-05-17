@@ -318,6 +318,7 @@
   "moveSpriteN": "liikuta hahmoa {spriteIndex}",
   "moveDroid": "move droid",
   "moveDroidN": "siirrä droidia {spriteIndex}",
+  "to": "suorittaaksesi",
   "toXY": "x,y pisteisiin",
   "moveDown": "siirrä alas",
   "moveDownTooltip": "Liikuta hahmoa alas.",

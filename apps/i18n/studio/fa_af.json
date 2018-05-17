@@ -318,6 +318,7 @@
   "moveSpriteN": "بازیگر را حرکت بده{spriteIndex} ",
   "moveDroid": "move droid",
   "moveDroidN": "move droid {spriteIndex}",
+  "to": "to",
   "toXY": "به x,y",
   "moveDown": "برو پایین",
   "moveDownTooltip": "یک بازیگر رو پایین ببر .",
