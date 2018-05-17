@@ -76,23 +76,25 @@ export default function (app, levels, options) {
     blocksCommon.install(Blockly, blockInstallOptions);
     options.blocksModule.install(Blockly, blockInstallOptions);
 
-    const levelCustomBlocksConfig = level.customBlocks ?
-      JSON.parse(level.customBlocks) : [];
-    const sharedBlocksConfig = level.sharedBlocks ?
-      JSON.parse(level.sharedBlocks).map(blockOptions => blockOptions.block) :
-      [];
-    const customBlocksConfig = [
-      ...levelCustomBlocksConfig,
-      ...sharedBlocksConfig,
-    ];
-    if (options.blocksModule.installCustomBlocks && customBlocksConfig.length > 0) {
-      options.blocksModule.installCustomBlocks(
-        Blockly,
-        blockInstallOptions,
-        customBlocksConfig,
-        options.level,
-        level.hideCustomBlocks,
-      );
+    if (level) {
+      const levelCustomBlocksConfig = level.customBlocks ?
+        JSON.parse(level.customBlocks) : [];
+      const sharedBlocksConfig = level.sharedBlocks ?
+        JSON.parse(level.sharedBlocks).map(blockOptions => blockOptions.block) :
+        [];
+      const customBlocksConfig = [
+        ...levelCustomBlocksConfig,
+        ...sharedBlocksConfig,
+      ];
+      if (options.blocksModule.installCustomBlocks && customBlocksConfig.length > 0) {
+        options.blocksModule.installCustomBlocks(
+          Blockly,
+          blockInstallOptions,
+          customBlocksConfig,
+          options.level,
+          level.hideCustomBlocks,
+        );
+      }
     }
   }
 
