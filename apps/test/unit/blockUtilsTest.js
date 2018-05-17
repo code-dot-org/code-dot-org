@@ -138,7 +138,7 @@ describe('block utils', () => {
     });
 
     it('adds labels before and after value input', () => {
-      interpolateInputs(fakeBlockly, fakeBlock, [
+      interpolateInputs(fakeBlockly, fakeBlock, groupInputsByRow([
         {
           mode: 'value',
           name: 'VALUE',
@@ -148,7 +148,7 @@ describe('block utils', () => {
           mode: 'dummy',
           label: 'suffix',
         }
-      ]);
+      ]));
 
       expect(appendValueInput).to.have.been.calledWith('VALUE');
       expect(appendTitle).to.have.been.calledWith('prefix');
