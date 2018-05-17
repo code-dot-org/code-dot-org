@@ -4,9 +4,8 @@ import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
 import commonMsg from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
-import { studentData, multipleChoiceData } from './sectionAssessmentsHelpers';
+// import { studentData, multipleChoiceData } from './sectionAssessmentsHelpers';
 import MultipleChoiceAnswerCell from './MultipleChoiceAnswerCell';
-import { row } from 'reactabular-select/dist';
 
 export const COLUMNS = {
   QUESTION: 0,
@@ -67,20 +66,19 @@ class StudentAssessmentOverviewTable extends Component {
   };
 
   correctAnswerColumnFormatter = (answers, {rowData, columnIndex, rowIndex, property}) => {
-    debugger;
     const cell = rowData.answers;
 
-    let studentQuestion = '';
-      cell.forEach ((secItem) => {
-        if (secItem.isCorrectAnswer) {
-          studentQuestion = secItem.multipleChoiceOption;
+    let answerCell = '';
+      cell.forEach((answer) => {
+        if (answer.isCorrectAnswer) {
+          answerCell = answer.multipleChoiceOption;
         }
       });
 
     return (
         <MultipleChoiceAnswerCell
           id={rowData.id}
-          studentQuestion={studentQuestion}
+          answerCell={answerCell}
         />
     );
   };
