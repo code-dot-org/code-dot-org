@@ -2,7 +2,10 @@
 require 'test_helper'
 
 #
-# Tests over /users/set_email
+# Tests over /users/email
+#
+# This route is handled by RegistrationsController but is complex enough to
+# merit its own test file.
 #
 class SetEmailTest < ActionController::TestCase
   setup do
