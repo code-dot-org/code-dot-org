@@ -150,9 +150,9 @@
 - if resource.can_edit_email?
   = form_for(resource,
       as: resource_name,
-      url: registration_path(resource_name),
+      url: '/users/email',
       remote: true,
-      html: { id: 'change-email-modal-form', method: :put },
+      html: { id: 'change-email-modal-form' },
       namespace: 'change-email-modal',
     ) do |f|
     = f.hidden_field :email
