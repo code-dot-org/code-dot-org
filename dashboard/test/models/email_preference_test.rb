@@ -1,13 +1,15 @@
 require 'test_helper'
 
 class EmailPreferenceTest < ActiveSupport::TestCase
+  self.use_transactional_test_case = true
+
   test "create email preference with valid attributes creates email preference" do
     assert_creates EmailPreference do
       create :email_preference,
         email: 'test_valid@example.net',
         opt_in: true,
         ip_address: '1.1.1.1',
-        source: :ACCOUNT_SIGN_UP,
+        source: EmailPreference::ACCOUNT_SIGN_UP,
         form_kind: nil
     end
   end
@@ -29,13 +31,13 @@ class EmailPreferenceTest < ActiveSupport::TestCase
       email: email_preference.email,
       opt_in: true,
       ip_address: '192.168.1.1',
-      source: :FORM_HOUR_OF_CODE,
+      source: EmailPreference::FORM_HOUR_OF_CODE,
       form_kind: 'form text version 2.71828'
     )
     email_preference.reload
     assert email_preference.opt_in
     assert_equal '192.168.1.1', email_preference.ip_address
-    assert_equal :FORM_HOUR_OF_CODE, email_preference.source.to_sym
+    assert_equal EmailPreference::FORM_HOUR_OF_CODE, email_preference.source
     assert_equal 'form text version 2.71828', email_preference.form_kind
   end
 
@@ -45,7 +47,7 @@ class EmailPreferenceTest < ActiveSupport::TestCase
       email: email_preference.email,
       opt_in: false,
       ip_address: '172.16.6.1',
-      source: :ACCOUNT_SIGN_UP,
+      source: EmailPreference::ACCOUNT_SIGN_UP,
       form_kind: 'form text version 3.14159'
     )
     email_preference.reload
