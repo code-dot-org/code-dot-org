@@ -7,7 +7,7 @@ export default storybook => {
     .storiesOf('SectionAssessments/StudentAssessmentOverviewTable', module)
     .addStoryTable([
       {
-        name: 'Student Overview.',
+        name: 'Student Overview',
         description: 'Ability to see assessment overview for a single student',
         story: () => (
           <StudentAssessmentOverviewTable
