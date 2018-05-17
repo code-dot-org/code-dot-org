@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180502182615) do
+ActiveRecord::Schema.define(version: 20180517082249) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -746,12 +746,10 @@ ActiveRecord::Schema.define(version: 20180502182615) do
 
   create_table "pd_survey_questions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "form_id"
-    t.string   "question_id"
-    t.string   "question_text"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.text     "questions",  limit: 65535, null: false, comment: "JSON Question data for this JotForm form."
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
     t.index ["form_id"], name: "index_pd_survey_questions_on_form_id", using: :btree
-    t.index ["question_id"], name: "index_pd_survey_questions_on_question_id", using: :btree
   end
 
   create_table "pd_teacher_applications", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -789,18 +787,39 @@ ActiveRecord::Schema.define(version: 20180502182615) do
   end
 
   create_table "pd_workshop_daily_surveys", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer "form_id",                      null: false
-    t.integer "submission_id",                null: false
+    t.bigint  "form_id",                      null: false
+    t.bigint  "submission_id",                null: false
     t.integer "user_id",                      null: false
     t.integer "pd_session_id"
     t.integer "pd_workshop_id",               null: false
     t.text    "form_data",      limit: 65535
-    t.index ["form_id", "user_id", "pd_session_id"], name: "index_pd_workshop_daily_surveys_on_user_form_day", unique: true, using: :btree
+    t.integer "day",                          null: false, comment: "Day of the workshop (1-based), or zero for the pre-workshop survey"
+    t.index ["form_id", "user_id", "day"], name: "index_pd_workshop_daily_surveys_on_user_form_day", unique: true, using: :btree
     t.index ["form_id"], name: "index_pd_workshop_daily_surveys_on_form_id", using: :btree
     t.index ["pd_session_id"], name: "index_pd_workshop_daily_surveys_on_pd_session_id", using: :btree
     t.index ["pd_workshop_id"], name: "index_pd_workshop_daily_surveys_on_pd_workshop_id", using: :btree
     t.index ["submission_id"], name: "index_pd_workshop_daily_surveys_on_submission_id", unique: true, using: :btree
     t.index ["user_id"], name: "index_pd_workshop_daily_surveys_on_user_id", using: :btree
+  end
+
+  create_table "pd_workshop_facilitator_daily_surveys", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.bigint  "form_id",                      null: false
+    t.bigint  "submission_id",                null: false
+    t.integer "user_id",                      null: false
+    t.integer "pd_session_id"
+    t.integer "pd_workshop_id",               null: false
+    t.integer "facilitator_id",               null: false
+    t.text    "form_data",      limit: 65535
+    t.integer "day",                          null: false, comment: "Day of the workshop (1-based)"
+    t.integer "integer",                      null: false, comment: "Day of the workshop (1-based)"
+    t.index ["day"], name: "index_pd_workshop_facilitator_daily_surveys_on_day", using: :btree
+    t.index ["form_id", "user_id", "pd_session_id", "facilitator_id"], name: "index_pd_workshop_facilitator_daily_surveys_unique", unique: true, using: :btree
+    t.index ["form_id"], name: "index_pd_workshop_facilitator_daily_surveys_on_form_id", using: :btree
+    t.index ["integer"], name: "index_pd_workshop_facilitator_daily_surveys_on_integer", using: :btree
+    t.index ["pd_session_id"], name: "index_pd_workshop_facilitator_daily_surveys_on_pd_session_id", using: :btree
+    t.index ["pd_workshop_id"], name: "index_pd_workshop_facilitator_daily_surveys_on_pd_workshop_id", using: :btree
+    t.index ["submission_id"], name: "index_pd_workshop_facilitator_daily_surveys_on_submission_id", unique: true, using: :btree
+    t.index ["user_id"], name: "index_pd_workshop_facilitator_daily_surveys_on_user_id", using: :btree
   end
 
   create_table "pd_workshop_material_orders", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
