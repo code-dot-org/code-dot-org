@@ -115,7 +115,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     if current_user.any_experiments_enabled?
       scripts.map {|script| script.alternate_script(current_user)}
     end
-    render json: scripts, each_serializer: Api::V1::ScriptSerializer
+    render json: scripts, each_serializer: Api::V1::ScriptNameAndIdSerializer
   end
 
   private
