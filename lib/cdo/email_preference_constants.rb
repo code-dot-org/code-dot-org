@@ -9,5 +9,6 @@ module EmailPreferenceConstants
     FORM_ACCESS_REPORT = 'FORM_ACCESS_REPORT'.freeze,
     FORM_REGIONAL_PARTNER = 'FORM_REGIONAL_PARTNER'.freeze,
     FORM_CLASS_SUBMIT = 'FORM_CLASS_SUBMIT'.freeze,
+    FORM_PETITION = 'FORM_PETITION'.freeze,
   ].freeze
 end

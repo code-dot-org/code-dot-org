@@ -607,7 +607,10 @@ var projects = module.exports = {
       case 'applab':
         return 'applab';
       case 'gamelab':
-        return 'gamelab';
+        if (appOptions.droplet) {
+          return 'gamelab';
+        }
+        return 'spritelab';
       case 'turtle':
         if (appOptions.skinId === 'elsa' || appOptions.skinId === 'anna') {
           return 'frozen';
