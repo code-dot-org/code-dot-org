@@ -5,31 +5,16 @@ import commonMsg from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import MultipleChoiceAnswerCell from './MultipleChoiceAnswerCell';
+import {
+  studentAnswerDataPropType,
+  questionDataPropType
+} from './assessmentDataShapes';
 
 export const COLUMNS = {
   QUESTION: 0,
   STUDENT_ANSWER: 1,
   CORRECT_ANSWER: 2,
 };
-
-const studentAnswerDataPropType = PropTypes.shape({
-  id:  PropTypes.string,
-  name: PropTypes.string,
-  studentAnswers: PropTypes.array,
-});
-
-const answerDataPropType = PropTypes.shape({
-  multipleChoiceOption: PropTypes.string,
-  percentAnswered: PropTypes.number,
-  isCorrectAnswer: PropTypes.bool,
-});
-
-const questionDataPropType = PropTypes.shape({
-  id: PropTypes.number.isRequired,
-  question: PropTypes.string.isRequired,
-  answers: PropTypes.arrayOf(answerDataPropType),
-  notAnswered: PropTypes.number.isRequired,
-});
 
 class StudentAssessmentOverviewTable extends Component {
   static propTypes= {
