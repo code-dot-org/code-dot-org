@@ -1076,7 +1076,7 @@ GameLab.prototype.initInterpreter = function (attachDebugger=true) {
       .join("\n") + '\n';
   }
   if (this.level.sharedBlocks) {
-    code += JSON.parse(this.level.sharedBlocks)
+    code += this.level.sharedBlocks
       .map(blockOptions => blockOptions.helperCode)
       .filter(helperCode => helperCode)
       .join("\n") + '\n';

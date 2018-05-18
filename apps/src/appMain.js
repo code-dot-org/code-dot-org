@@ -80,8 +80,7 @@ export default function (app, levels, options) {
       const levelCustomBlocksConfig = !level.customBlocks ? [] :
         JSON.parse(level.customBlocks).map(blockConfig =>
           ({ config: blockConfig, category: 'Custom' }));
-      const sharedBlocksConfig = level.sharedBlocks ?
-        JSON.parse(level.sharedBlocks) : [];
+      const sharedBlocksConfig = level.sharedBlocks || [];
       const customBlocksConfig = [
         ...levelCustomBlocksConfig,
         ...sharedBlocksConfig,
