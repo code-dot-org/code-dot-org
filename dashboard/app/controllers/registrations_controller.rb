@@ -246,34 +246,38 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def set_email_params
-    if params[:user][:email_preference_opt_in].present?
-      params[:user][:email_preference_request_ip] = request.env['REMOTE_ADDR']
-      params[:user][:email_preference_source] = EmailPreference::ACCOUNT_EMAIL_CHANGE
-      params[:user][:email_preference_form_kind] = "0"
-    end
-    params.require(:user).
+    params.
+      require(:user).
       permit(
         :email,
         :hashed_email,
         :current_password,
-        :email_preference_opt_in,
-        :email_preference_request_ip,
-        :email_preference_source,
-        :email_preference_form_kind,
-      )
+      ).
+      merge(email_preference_params(EmailPreference::ACCOUNT_EMAIL_CHANGE, "0"))
   end
 
   def set_user_type_params
-    if params[:user][:email_preference_opt_in].present?
-      params[:user][:email_preference_request_ip] = request.env['REMOTE_ADDR']
-      params[:user][:email_preference_source] = EmailPreference::ACCOUNT_TYPE_CHANGE
-      params[:user][:email_preference_form_kind] = "0"
-    end
-    params.require(:user).
+    params.
+      require(:user).
       permit(
         :user_type,
         :email,
         :hashed_email,
+      ).
+      merge(email_preference_params(EmailPreference::ACCOUNT_TYPE_CHANGE, "0"))
+  end
+
+  def email_preference_params(source, form_kind)
+    params.
+      require(:user).
+      tap do |user|
+        if user[:email_preference_opt_in].present?
+          user[:email_preference_request_ip] = request.env['REMOTE_ADDR']
+          user[:email_preference_source] = source
+          user[:email_preference_form_kind] = form_kind
+        end
+      end.
+      permit(
         :email_preference_opt_in,
         :email_preference_request_ip,
         :email_preference_source,
