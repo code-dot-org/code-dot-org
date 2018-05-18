@@ -155,6 +155,7 @@
   "changeUserTypeModal_currentEmail_isRequired": "An email address is required.",
   "changeUserTypeModal_currentEmail_label": "Email address",
   "changeUserTypeModal_currentEmail_labelDetails": "(This must match an email address associated with your account.)",
+  "changeUserTypeModal_emailOptIn_description": "Would you like to be added to our mailing list so that we can tell you about updates to our courses, local learning opportunities, or other computer science news? This will not impact your subscription preferences for your old email address.",
   "changeUserTypeModal_currentEmail_mustMatch": "Email must match an existing email associated with your account.",
   "changeUserTypeModal_description_toTeacher": "You must provide the following information before we can convert your account into a teacher account.",
   "changeUserTypeModal_save_teacher": "Update to teacher account",
