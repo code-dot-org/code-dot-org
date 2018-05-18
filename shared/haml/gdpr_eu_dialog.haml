@@ -1,9 +1,23 @@
 %link{rel:'stylesheet', type:'text/css', href:'/shared/css/gdpr-eu-dialog.css'}
 
+-# dashboard will passed as a parameter when the dashboard is rendering this dialog.
+- dashboard ||= false
+- if dashboard
+  - heading = I18n.t('gdpr_dialog.heading')
+  - message = I18n.t('gdpr_dialog.message')
+  - link_intro = I18n.t('gdpr_dialog.link_intro')
+  - privacy_policy = I18n.t('gdpr_dialog.privacy_policy')
+  - logout = I18n.t('gdpr_dialog.logout')
+  - yes = I18n.t('gdpr_dialog.yes')
+- else
+-# ERIN _ next step: loc the strings for pegasus, then figure out how the dashboard variable is set!
+  - message = hoc_s(:cookie_banner_message)
+  - more_information = hoc_s(:cookie_banner_more_information)
+  - accept = hoc_s(:cookie_banner_accept)
+
 #gdpr-eu-dialog
   .text
-    .heading
-      Do you agree to using a web site based in the United States?
+    .heading=heading
     %br
     .message
       Data from your use of this site may be sent to and stored or processed in the United States.
