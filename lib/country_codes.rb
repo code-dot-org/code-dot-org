@@ -284,6 +284,14 @@ EU_COUNTRY_CODES = %w(
   SK
 ).freeze
 
+# EEA = EU + Iceland, Liechtenstein and Norway.
+EEA_COUNTRY_CODES = EU_COUNTRY_CODES +
+  %w(
+    IS
+    LI
+    NO
+  )
+
 # Returns the name of the country whose two character country code is code.
 # If code is not a valid two character country code, returns code.
 def country_name_from_code(code)
@@ -303,5 +311,5 @@ end
 # member state of the European Union covered by the GDPR.
 def gdpr_country_code?(code)
   return false if code.nil?
-  EU_COUNTRY_CODES.include?(code.to_s.strip.upcase)
+  EEA_COUNTRY_CODES.include?(code.to_s.strip.upcase)
 end
