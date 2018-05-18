@@ -11,6 +11,7 @@ import { Provider } from 'react-redux';
 import { registerReducers, getStore } from '@cdo/apps/redux';
 import SectionProjectsList from '@cdo/apps/templates/projects/SectionProjectsList';
 import SectionProgress from '@cdo/apps/templates/sectionProgress/SectionProgress';
+import SectionAssessments from '@cdo/apps/templates/sectionAssessments/SectionAssessments';
 import experiments from '@cdo/apps/util/experiments';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {
@@ -50,6 +51,20 @@ function renderSectionProjects(sectionId) {
         showProjectThumbnails={true}
       />,
       element);
+  });
+}
+
+function renderSectionAssessments(section, validScripts) {
+  registerReducers({scriptSelection, sectionData});
+  const store = getStore();
+  store.dispatch(setSection(section));
+  store.dispatch(loadValidScripts(section, validScripts)).then(() => {
+    ReactDOM.render(
+      <Provider store={store}>
+        <SectionAssessments section={section} />
+      </Provider>,
+      document.getElementById('section-assessments-react')
+    );
   });
 }
 
@@ -998,6 +1013,16 @@ function main() {
     $scope.surveysLoaded = false;
     $scope.surveyStages = [];
     $scope.surveys = sectionsService.surveys({id: $routeParams.id});
+
+    if (experiments.isEnabled(experiments.ASSESSMENTS_TAB)) {
+      $scope.react_assessments = true;
+      $scope.$on('section-assessments-rendered', () => {
+        $scope.section.$promise.then(script =>
+          renderSectionAssessments(script, valid_scripts)
+        );
+      });
+      return;
+    }
 
     // Error handling.
     $scope.genericError = function (result) {
