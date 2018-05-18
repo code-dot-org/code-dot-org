@@ -7,22 +7,12 @@ require 'test_helper'
 # This route is handled by RegistrationsController but is complex enough to
 # merit its own test file.
 #
-class SetEmailTest < ActionController::TestCase
-  setup do
-    @controller = RegistrationsController.new
-
-    # stub properties so we don't try to hit pegasus db
-    Properties.stubs(:get).returns nil
-
-    # This is an AJAX-first route
-    request.headers['HTTP_ACCEPT'] = "application/json"
-  end
-
+class SetEmailTest < ActionDispatch::IntegrationTest
   test "set email without user param returns 400 BAD REQUEST" do
     student = create :student
     sign_in student
     assert_does_not_create(User) do
-      post :set_email, params: {}
+      patch '/users/email', as: :json, params: {}
     end
     assert_response :bad_request
   end
@@ -35,7 +25,7 @@ class SetEmailTest < ActionController::TestCase
     User.expects(:find_by_email_or_hashed_email).never
 
     assert_does_not_create(User) do
-      post :set_email, params: {
+      patch '/users/email', as: :json, params: {
         user: {email: "#{panda_panda}@panda.xx", current_password: '00secret'}
       }
     end
@@ -49,7 +39,7 @@ class SetEmailTest < ActionController::TestCase
     student = create :student, birthday: '1981/03/24', password: 'whatev'
     sign_in student
 
-    post :set_email, params: {
+    patch '/users/email', as: :json, params: {
       user: {
         email: '',
         hashed_email: User.hash_email('hidden@email.com'),
@@ -66,7 +56,7 @@ class SetEmailTest < ActionController::TestCase
     student = create :student, birthday: '1981/03/24', password: 'whatev'
     sign_in student
 
-    post :set_email, params: {
+    patch '/users/email', as: :json, params: {
       user: {
         email: 'hashed@email.com',
         current_password: 'whatev' # need this to change email
@@ -81,21 +71,16 @@ class SetEmailTest < ActionController::TestCase
   test 'update rejects unwanted parameters' do
     user = create :user, name: 'non-admin'
     sign_in user
-    post :set_email, params: {user: {admin: true}}
+    patch '/users/email', as: :json, params: {user: {admin: true}}
     assert_response :success
 
     user.reload
     refute user.admin
   end
 
-  # The next several tests explore profile changes for users with or without
+  # The next several tests explore email changes for users with or without
   # passwords.  Examples of users without passwords are users that authenticate
   # via oauth (a third-party account), or students with a picture password.
-
-  # Tech debt note:
-  # These tests make multiple controller calls per-test, which is not fully supported as per http://api.rubyonrails.org/v4.2/classes/ActionController/TestCase.html
-  # Currently this is worked around by calling current_user.reload in registrations_controller.rb, but ideally
-  # these tests should be fixed up to avoid this issue.
 
   test "editing email of student-without-password is not allowed" do
     student_without_password = create :student
@@ -170,7 +155,7 @@ class SetEmailTest < ActionController::TestCase
     new_email = 'new_email@example.com'
     teacher = create :teacher, password: 'password'
     sign_in teacher
-    post :set_email, params: {
+    patch '/users/email', as: :json, params: {
       user: {
         email: new_email,
         current_password: 'password',
@@ -191,7 +176,7 @@ class SetEmailTest < ActionController::TestCase
     new_email = 'new_email@example.com'
     teacher = create :teacher, password: 'password'
     sign_in teacher
-    post :set_email, params: {
+    patch '/users/email', as: :json, params: {
       user: {
         email: new_email,
         current_password: 'password',
@@ -212,7 +197,7 @@ class SetEmailTest < ActionController::TestCase
     new_email = 'new_email@example.com'
     teacher = create :teacher
     sign_in teacher
-    post :set_email, params: {
+    patch '/users/email', as: :json, params: {
       user: {
         email: new_email,
         email_opt_in: 'yes'
@@ -227,7 +212,7 @@ class SetEmailTest < ActionController::TestCase
     new_email = 'new_email@example.com'
     student = create :student
     sign_in student
-    post :set_email, params: {
+    patch '/users/email', as: :json, params: {
       user: {
         email: new_email,
         email_opt_in: 'yes'
@@ -244,7 +229,7 @@ class SetEmailTest < ActionController::TestCase
     new_password = 'newpassword'
 
     sign_in user
-    post :set_email, params: {
+    patch '/users/email', as: :json, params: {
       user: {
         password: new_password,
         password_confirmation: new_password,
@@ -260,7 +245,7 @@ class SetEmailTest < ActionController::TestCase
     new_email = 'new@example.com'
 
     sign_in user
-    post :set_email, params: {user: {email: new_email}}
+    patch '/users/email', as: :json, params: {user: {email: new_email}}
 
     user = user.reload
     user.email == new_email || user.hashed_email == User.hash_email(new_email)
@@ -270,7 +255,7 @@ class SetEmailTest < ActionController::TestCase
     new_email = 'new@example.com'
 
     sign_in user
-    post :set_email, params: {
+    patch '/users/email', as: :json, params: {
       user: {email: new_email, current_password: current_password}
     }
 
@@ -282,7 +267,7 @@ class SetEmailTest < ActionController::TestCase
     new_hashed_email = '729980b94e1439aeed40122476b0f695'
 
     sign_in user
-    post :set_email, params: {user: {hashed_email: new_hashed_email}}
+    patch '/users/email', as: :json, params: {user: {hashed_email: new_hashed_email}}
 
     user = user.reload
     user.hashed_email == new_hashed_email
@@ -292,7 +277,7 @@ class SetEmailTest < ActionController::TestCase
     new_hashed_email = '729980b94e1439aeed40122476b0f695'
 
     sign_in user
-    post :set_email, params: {
+    patch '/users/email', as: :json, params: {
       user: {hashed_email: new_hashed_email, current_password: current_password}
     }
 
