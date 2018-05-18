@@ -53,11 +53,10 @@
     "disable_if_else_editing": "false",
     "tts_markdown_instructions_override": "Now, get Jorge to move right when the right arrow button is clicked.",
     "disable_procedure_autopopulate": "false",
-    "contained_level_names": null,
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
     "remove_items_when_actor_collides": "false",
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
