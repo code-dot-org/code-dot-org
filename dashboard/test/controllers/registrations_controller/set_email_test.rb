@@ -173,8 +173,8 @@ class SetEmailTest < ActionController::TestCase
     post :set_email, params: {
       user: {
         email: new_email,
-        email_opt_in: 'yes',
-        current_password: 'password'
+        current_password: 'password',
+        email_preference_opt_in: 'yes',
       }
     }
     assert_response :success
@@ -194,8 +194,8 @@ class SetEmailTest < ActionController::TestCase
     post :set_email, params: {
       user: {
         email: new_email,
-        email_opt_in: 'no',
-        current_password: 'password'
+        current_password: 'password',
+        email_preference_opt_in: 'no',
       }
     }
     assert_response :success

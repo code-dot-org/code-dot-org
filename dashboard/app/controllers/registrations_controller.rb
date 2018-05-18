@@ -107,38 +107,15 @@ class RegistrationsController < Devise::RegistrationsController
     return head(:bad_request) if params[:user].nil?
     current_user.reload # Needed to make tests pass for reasons noted in set_email_test.rb
 
-    permitted = params.
-        require(:user).
-        permit(
-          :email,
-          :hashed_email,
-          :email_opt_in,
-          :current_password
-        )
-
-    # Details required to perform email opt-in
-    email_opt_in = permitted.delete(:email_opt_in)
-
     successfully_updated =
       if forbidden_change?(current_user, params)
         false
       elsif needs_password?(current_user, params)
-        current_user.update_with_password(permitted)
+        current_user.update_with_password(set_email_params)
       else
-        permitted.delete(:current_password)
-        current_user.update_without_password(permitted)
+        params[:user].delete(:current_password)
+        current_user.update_without_password(set_email_params)
       end
-
-    # Add the user opt-in preferences
-    if email_opt_in && successfully_updated && !current_user.email.blank?
-      EmailPreference.upsert!(
-        email: current_user.email,
-        opt_in: email_opt_in == 'yes',
-        ip_address: request.env['REMOTE_ADDR'],
-        source: EmailPreference::ACCOUNT_EMAIL_CHANGE,
-        form_kind: "0"
-      )
-    end
 
     if successfully_updated
       head :no_content
@@ -268,6 +245,24 @@ class RegistrationsController < Devise::RegistrationsController
       ],
       races: []
     )
+  end
+
+  def set_email_params
+    if params[:user][:email_preference_opt_in].present?
+      params[:user][:email_preference_request_ip] = request.env['REMOTE_ADDR']
+      params[:user][:email_preference_source] = EmailPreference::ACCOUNT_EMAIL_CHANGE
+      params[:user][:email_preference_form_kind] = "0"
+    end
+    params.require(:user).
+      permit(
+        :email,
+        :hashed_email,
+        :current_password,
+        :email_preference_opt_in,
+        :email_preference_request_ip,
+        :email_preference_source,
+        :email_preference_form_kind,
+      )
   end
 
   def set_user_type_params
