@@ -60,6 +60,14 @@ class Course < ApplicationRecord
   def self.load_from_path(path)
     serialization = File.read(path)
     hash = JSON.parse(serialization)
+
+    # Allow renaming between csp and csp-2017 during seed. This allows the csp
+    # --> csp-2017 rename in the next PR, as well as allowing for that PR to be
+    # reverted. This code should be removed once the course has been renamed.
+    if ['csp', 'csp-2017'].include?(hash['name'])
+      Course.where(name: ['csp', 'csp-2017']).first.try(:update!, {name: hash['name']})
+    end
+
     course = Course.find_or_create_by!(name: hash['name'])
     course.update_scripts(hash['script_names'], hash['alternate_scripts'])
     course.properties = hash['properties']
