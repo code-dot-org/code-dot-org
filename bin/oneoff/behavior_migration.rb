@@ -1,4 +1,10 @@
 #!/usr/bin/env ruby
+
+# This script was used to update custom block configs across all spritelab
+# levels. In particular, a bunch of blocks returned type 'Function' when they
+# really returned a 'Behavior', or had an arg named 'BEHAVIOR' that wasn't
+# correctly typed.
+
 require_relative '../../dashboard/config/environment'
 
 GamelabJr.all.each do |level|
