@@ -228,7 +228,6 @@ class RegistrationsController < Devise::RegistrationsController
       :full_address,
       :terms_of_service_version,
       :provider,
-      :email_opt_in,
       school_info_attributes: [
         :country,
         :school_type,
