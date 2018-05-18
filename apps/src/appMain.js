@@ -77,11 +77,11 @@ export default function (app, levels, options) {
     options.blocksModule.install(Blockly, blockInstallOptions);
 
     if (level) {
-      const levelCustomBlocksConfig = level.customBlocks ?
-        JSON.parse(level.customBlocks) : [];
+      const levelCustomBlocksConfig = !level.customBlocks ? [] :
+        JSON.parse(level.customBlocks).map(blockConfig =>
+          ({ config: blockConfig, category: 'Custom' }));
       const sharedBlocksConfig = level.sharedBlocks ?
-        JSON.parse(level.sharedBlocks).map(blockOptions => blockOptions.block) :
-        [];
+        JSON.parse(level.sharedBlocks) : [];
       const customBlocksConfig = [
         ...levelCustomBlocksConfig,
         ...sharedBlocksConfig,
