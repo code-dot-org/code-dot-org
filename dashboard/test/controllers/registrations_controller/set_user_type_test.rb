@@ -7,22 +7,12 @@ require 'test_helper'
 # This route is handled by RegistrationsController but is complex enough to
 # merit its own test file.
 #
-class SetUserTypeTest < ActionController::TestCase
-  setup do
-    @controller = RegistrationsController.new
-
-    # stub properties so we don't try to hit pegasus db
-    Properties.stubs(:get).returns nil
-
-    # This is an AJAX-first route
-    request.headers['HTTP_ACCEPT'] = "application/json"
-  end
-
+class SetUserTypeTest < ActionDispatch::IntegrationTest
   test "update user type without user param returns 400 BAD REQUEST" do
     student = create :student
     sign_in student
     assert_does_not_create(User) do
-      post :set_user_type, params: {}
+      patch '/users/user_type', as: :json, params: {}
     end
     assert_response :bad_request
   end
@@ -31,7 +21,7 @@ class SetUserTypeTest < ActionController::TestCase
     student = create :student
     sign_in student
     assert_does_not_create(User) do
-      post :set_user_type, params: {user: {}}
+      patch '/users/user_type', as: :json, params: {user: {}}
     end
     assert_response :bad_request
   end
@@ -39,7 +29,7 @@ class SetUserTypeTest < ActionController::TestCase
   test 'update rejects unwanted parameters' do
     user = create :teacher, name: 'non-admin'
     sign_in user
-    post :set_user_type, params: {user: {user_type: 'student', admin: true}}
+    patch '/users/user_type', as: :json, params: {user: {user_type: 'student', admin: true}}
     assert_response :success
 
     user.reload
@@ -54,7 +44,7 @@ class SetUserTypeTest < ActionController::TestCase
     assert_empty student.email
     sign_in student
 
-    post :set_user_type, params: {
+    patch '/users/user_type', as: :json, params: {
       user: {
         user_type: 'teacher',
         email: test_email,
@@ -76,8 +66,7 @@ class SetUserTypeTest < ActionController::TestCase
     student = create :student, email: test_email
     sign_in student
 
-    request.headers['HTTP_ACCEPT'] = "application/json"
-    post :set_user_type, params: {
+    patch '/users/user_type', as: :json, params: {
       user: {
         user_type: 'teacher',
         email: test_email,
@@ -85,7 +74,6 @@ class SetUserTypeTest < ActionController::TestCase
         email_preference_opt_in: 'yes'
       }
     }
-    puts @response.body
     assert_response :success
 
     preference = EmailPreference.find_by_email(test_email)
@@ -101,8 +89,7 @@ class SetUserTypeTest < ActionController::TestCase
     student = create :student, email: test_email
     sign_in student
 
-    request.headers['HTTP_ACCEPT'] = "application/json"
-    post :set_user_type, params: {
+    patch '/users/user_type', as: :json, params: {
       user: {
         user_type: 'teacher',
         email: test_email,
@@ -130,8 +117,7 @@ class SetUserTypeTest < ActionController::TestCase
     original_hashed_email = student.hashed_email
     sign_in student
 
-    request.headers['HTTP_ACCEPT'] = "application/json"
-    post :set_user_type, params: {
+    patch '/users/user_type', as: :json, params: {
       user: {
         user_type: 'teacher',
         email: 'wrong_email@example.com',
@@ -153,8 +139,7 @@ class SetUserTypeTest < ActionController::TestCase
     student = create :student, email: test_email
     sign_in student
 
-    request.headers['HTTP_ACCEPT'] = "application/json"
-    post :set_user_type, params: {
+    patch '/users/user_type', as: :json, params: {
       user: {
         user_type: 'teacher',
         email: 'wrong_email@example.com',
@@ -173,8 +158,7 @@ class SetUserTypeTest < ActionController::TestCase
     original_hashed_email = teacher.hashed_email
     sign_in teacher
 
-    request.headers['HTTP_ACCEPT'] = "application/json"
-    post :set_user_type, params: {
+    patch '/users/user_type', as: :json, params: {
       user: {
         user_type: 'student',
         email: '',
@@ -196,8 +180,7 @@ class SetUserTypeTest < ActionController::TestCase
     teacher = create :teacher, email: test_email
     sign_in teacher
 
-    request.headers['HTTP_ACCEPT'] = "application/json"
-    post :set_user_type, params: {
+    patch '/users/user_type', as: :json, params: {
       user: {
         user_type: 'student',
         email: '',
