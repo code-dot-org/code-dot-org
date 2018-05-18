@@ -6,9 +6,11 @@ export default class ChangeUserTypeForm extends React.Component {
   static propTypes = {
     values: PropTypes.shape({
       currentEmail: PropTypes.string,
+      emailOptIn: PropTypes.string,
     }).isRequired,
     validationErrors: PropTypes.shape({
       currentEmail: PropTypes.string,
+      emailOptIn: PropTypes.string,
     }).isRequired,
     disabled: PropTypes.bool,
     onChange: PropTypes.func.isRequired,
@@ -32,6 +34,11 @@ export default class ChangeUserTypeForm extends React.Component {
   onCurrentEmailChange = (event) => this.props.onChange({
     ...this.props.values,
     currentEmail: event.target.value,
+  });
+
+  onEmailOptInChange = (event) => this.props.onChange({
+    ...this.props.values,
+    emailOptIn: event.target.value,
   });
 
   onKeyDown = (event) => {
@@ -64,6 +71,30 @@ export default class ChangeUserTypeForm extends React.Component {
             style={styles.input}
             ref={el => this.currentEmailInput = el}
           />
+        </Field>
+        <Field
+          label={i18n.changeUserTypeModal_emailOptIn_description()}
+          error={validationErrors.emailOptIn}
+        >
+          <select
+            value={values.emailOptIn}
+            disabled={disabled}
+            onKeyDown={this.onKeyDown}
+            onChange={this.onEmailOptInChange}
+            style={{
+              ...styles.input,
+              width: 100,
+            }}
+            ref={el => this.emailOptInSelect = el}
+          >
+            <option value=""/>
+            <option value="yes">
+              {i18n.yes()}
+            </option>
+            <option value="no">
+              {i18n.no()}
+            </option>
+          </select>
         </Field>
       </div>
     );
