@@ -400,15 +400,15 @@ class Course < ApplicationRecord
   end
 
   def self.get_without_cache(id_or_name)
-    # When the caller requests csp-2017, make sure we serve the CSP 2017 course,
+    # When the caller requests csp or csp-2017, make sure we serve the CSP 2017 course,
     # regardless of whether it has been renamed from csp to csp-2017 yet.
-    if id_or_name == 'csp-2017'
+    if ['csp', 'csp-2017'].include?(id_or_name)
       return Course.where(name: ['csp', 'csp-2017']).first
     end
 
-    # When the caller requests csd-2017, make sure we serve the CSD 2017 course,
+    # When the caller requests csd or csd-2017, make sure we serve the CSD 2017 course,
     # regardless of whether it has been renamed from csd to csd-2017 yet.
-    if id_or_name == 'csd-2017'
+    if ['csd', 'csd-2017'].include?(id_or_name)
       return Course.where(name: ['csd', 'csd-2017']).first
     end
 
