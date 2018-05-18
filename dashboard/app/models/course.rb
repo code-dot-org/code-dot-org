@@ -393,6 +393,12 @@ class Course < ApplicationRecord
       return Course.where(name: ['csp', 'csp-2017']).first
     end
 
+    # When the caller requests csd-2017, make sure we serve the CSD 2017 course,
+    # regardless of whether it has been renamed from csd to csd-2017 yet.
+    if id_or_name == 'csd-2017'
+      return Course.where(name: ['csd', 'csd-2017']).first
+    end
+
     # a bit of trickery so we support both ids which are numbers and
     # names which are strings that may contain numbers (eg. 2-3)
     find_by = (id_or_name.to_i.to_s == id_or_name.to_s) ? :id : :name
