@@ -216,7 +216,7 @@ StudioApp.prototype.configure = function (options) {
   this.minVisualizationWidth = options.minVisualizationWidth || MIN_VISUALIZATION_WIDTH;
 
   // Set default speed
-  if (options.level.sliderSpeed) {
+  if (options.level && options.level.sliderSpeed) {
     setStepSpeed(options.level.sliderSpeed);
   }
 };
