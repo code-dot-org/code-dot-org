@@ -11,7 +11,7 @@ class HocSignup2017 < HocSignup2014
     result
   end
 
-  def self.process(data, created_ip = nil)
+  def self.process_with_ip(data, created_ip)
     if data['email_preference_opt_in_s'] && created_ip && data['email_s']
       EmailPreferenceHelper.upsert!(
         email: data['email_s'],

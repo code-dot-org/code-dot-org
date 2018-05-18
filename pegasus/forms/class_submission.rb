@@ -133,7 +133,7 @@ class ClassSubmission < Form
     )
   end
 
-  def self.process_with_ip(data, created_ip)
+  def self.process_with_ip(data)
     if data['email_preference_optin_s'] && created_ip && data['email_s']
       EmailPreferenceHelper.upsert!(
         email: data['email_s'],
