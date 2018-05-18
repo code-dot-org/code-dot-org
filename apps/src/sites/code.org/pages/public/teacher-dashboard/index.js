@@ -11,6 +11,7 @@ import { Provider } from 'react-redux';
 import { registerReducers, getStore } from '@cdo/apps/redux';
 import SectionProjectsList from '@cdo/apps/templates/projects/SectionProjectsList';
 import SectionProgress from '@cdo/apps/templates/sectionProgress/SectionProgress';
+import SectionAssessments from '@cdo/apps/templates/sectionAssessments/SectionAssessments';
 import experiments from '@cdo/apps/util/experiments';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {
@@ -26,6 +27,8 @@ import logToCloud from '@cdo/apps/logToCloud';
 import scriptSelection, { loadValidScripts } from '@cdo/apps/redux/scriptSelectionRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import sectionData, { setSection } from '@cdo/apps/redux/sectionDataRedux';
+import sectionAssessments,
+  { asyncLoadAssessments } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 
 const script = document.querySelector('script[data-teacherdashboard]');
 const scriptData = JSON.parse(script.dataset.teacherdashboard);
@@ -50,6 +53,24 @@ function renderSectionProjects(sectionId) {
         showProjectThumbnails={true}
       />,
       element);
+  });
+}
+
+function renderSectionAssessments(section, validScripts) {
+  registerReducers({scriptSelection, sectionData, sectionAssessments});
+  const store = getStore();
+  store.dispatch(setSection(section));
+
+  const scriptId = store.getState().scriptSelection.scriptId;
+  store.dispatch(asyncLoadAssessments(section.id, scriptId, ()=>{}));
+
+  store.dispatch(loadValidScripts(section, validScripts)).then(() => {
+    ReactDOM.render(
+      <Provider store={store}>
+        <SectionAssessments />
+      </Provider>,
+      document.getElementById('section-assessments-react')
+    );
   });
 }
 
@@ -998,6 +1019,16 @@ function main() {
     $scope.surveysLoaded = false;
     $scope.surveyStages = [];
     $scope.surveys = sectionsService.surveys({id: $routeParams.id});
+
+    if (experiments.isEnabled(experiments.ASSESSMENTS_TAB)) {
+      $scope.react_assessments = true;
+      $scope.$on('section-assessments-rendered', () => {
+        $scope.section.$promise.then(script =>
+          renderSectionAssessments(script, valid_scripts)
+        );
+      });
+      return;
+    }
 
     // Error handling.
     $scope.genericError = function (result) {
