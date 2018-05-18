@@ -437,10 +437,9 @@ export function clearTimeoutsBetweenTests() {
   });
 
   after(() => {
-    console.log(
-      '\nLeftover timeouts/intervals: ' + leftover.length +
-      '\n' + leftover.map(s => '    ' + s).join('\n')
-    );
+    console.log('Leftover timeouts/intervals: ' + leftover.length);
+    // Uncomment if you want to see the whole list of leftover timeouts
+    // console.log(leftover.map(s => '    ' + s).join('\n'));
   });
 }
 
