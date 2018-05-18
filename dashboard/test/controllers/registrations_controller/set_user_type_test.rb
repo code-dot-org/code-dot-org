@@ -18,7 +18,7 @@ class SetUserTypeTest < ActionController::TestCase
     request.headers['HTTP_ACCEPT'] = "application/json"
   end
 
-  test "update student without user param returns 400 BAD REQUEST" do
+  test "update user type without user param returns 400 BAD REQUEST" do
     student = create :student
     sign_in student
     assert_does_not_create(User) do
@@ -27,13 +27,24 @@ class SetUserTypeTest < ActionController::TestCase
     assert_response :bad_request
   end
 
+  test "update user type without user_type param returns 400 BAD REQUEST" do
+    student = create :student
+    sign_in student
+    assert_does_not_create(User) do
+      post :set_user_type, params: {user: {}}
+    end
+    assert_response :bad_request
+  end
+
   test 'update rejects unwanted parameters' do
-    user = create :user, name: 'non-admin'
+    user = create :teacher, name: 'non-admin'
     sign_in user
-    post :set_user_type, params: {user: {admin: true}}
+    post :set_user_type, params: {user: {user_type: 'student', admin: true}}
+    assert_response :success
 
     user.reload
-    refute user.admin
+    assert user.student?
+    refute user.admin?
   end
 
   test "converting student to teacher" do
@@ -43,7 +54,6 @@ class SetUserTypeTest < ActionController::TestCase
     assert_empty student.email
     sign_in student
 
-    request.headers['HTTP_ACCEPT'] = "application/json"
     post :set_user_type, params: {
       user: {
         user_type: 'teacher',
@@ -72,9 +82,10 @@ class SetUserTypeTest < ActionController::TestCase
         user_type: 'teacher',
         email: test_email,
         hashed_email: student.hashed_email,
-        email_opt_in: 'yes'
+        email_preference_opt_in: 'yes'
       }
     }
+    puts @response.body
     assert_response :success
 
     preference = EmailPreference.find_by_email(test_email)
@@ -96,7 +107,7 @@ class SetUserTypeTest < ActionController::TestCase
         user_type: 'teacher',
         email: test_email,
         hashed_email: student.hashed_email,
-        email_opt_in: 'no'
+        email_preference_opt_in: 'no'
       }
     }
     assert_response :success
