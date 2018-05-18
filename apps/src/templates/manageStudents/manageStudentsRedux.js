@@ -269,7 +269,7 @@ export const transferStudents = (onComplete) => {
   return (dispatch, getState) => {
     const state = getState();
     // Get section code for current section from teacherSectionsRedux
-    const currentSectionCode = sectionCode(state, state.sectionData.id);
+    const currentSectionCode = sectionCode(state, state.sectionData.section.id);
     const {studentIds, sectionId: newSectionId, otherTeacher, otherTeacherSection, copyStudents} = state.manageStudents.transferData;
     let newSectionCode;
 
@@ -282,7 +282,7 @@ export const transferStudents = (onComplete) => {
     transferStudentsOnServer(studentIds, currentSectionCode, newSectionCode, copyStudents, (error, data) => {
       if (error) {
         console.error(error);
-        dispatch(transferStudentsFailure(data.error));
+        dispatch(transferStudentsFailure((data && data.error) || error));
       } else {
         if (!copyStudents || !otherTeacher) {
           studentIds.forEach(id => {
