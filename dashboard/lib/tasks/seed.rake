@@ -144,6 +144,10 @@ namespace :seed do
     LevelLoader.load_custom_levels
   end
 
+  task import_blocks: :environment do
+    Block.load_blocks
+  end
+
   # Generate the database entry from the custom levels json file
   task custom_levels: :environment do
     LevelLoader.load_custom_levels
