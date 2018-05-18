@@ -105,7 +105,6 @@ class RegistrationsController < Devise::RegistrationsController
   #
   def set_email
     return head(:bad_request) if params[:user].nil?
-    current_user.reload # Needed to make tests pass for reasons noted in set_email_test.rb
 
     successfully_updated =
       if forbidden_change?(current_user, params)
