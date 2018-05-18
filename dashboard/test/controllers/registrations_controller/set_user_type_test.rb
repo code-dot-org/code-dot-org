@@ -144,7 +144,7 @@ class SetUserTypeTest < ActionDispatch::IntegrationTest
         user_type: 'teacher',
         email: 'wrong_email@example.com',
         hashed_email: student.hashed_email,
-        email_opt_in: 'yes'
+        email_preference_opt_in: 'yes'
       }
     }
     assert_response :unprocessable_entity
@@ -185,7 +185,7 @@ class SetUserTypeTest < ActionDispatch::IntegrationTest
         user_type: 'student',
         email: '',
         hashed_email: teacher.hashed_email,
-        email_opt_in: 'yes'
+        email_preference_opt_in: 'yes'
       }
     }
     assert_response :success
