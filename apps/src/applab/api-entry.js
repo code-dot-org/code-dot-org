@@ -28,14 +28,14 @@ studioApp().highlight = noop;
 Applab.render = noop;
 
 // window.APP_OPTIONS gets generated on the fly by the exporter and appended to this file.
-setAppOptions(Object.assign(window.APP_OPTIONS, {isExported: true}));
+const exportOptions = Object.assign({isExported: true}, window.EXPORT_OPTIONS);
+setAppOptions(Object.assign(window.APP_OPTIONS, exportOptions));
 setupApp(window.APP_OPTIONS);
 loadApplab(getAppOptions());
 // reset applab turtle manually (normally called when execution begins)
 // before the student's code is run.
 Applab.resetTurtle();
 getStore().dispatch(setIsRunning(true));
-
 
 // Expose api functions globally, unless they already exist
 // in which case they are probably browser apis that we should
@@ -48,24 +48,6 @@ for (let key in globalApi) {
   if (!window[key] || whitelist[key]) {
     window[key] = globalApi[key];
   }
-}
-
-const STORAGE_COMMANDS = [
-  'createRecord',
-  'readRecords',
-  'updateRecord',
-  'deleteRecord',
-  'onRecordEvent',
-  'getKeyValue',
-  'setKeyValue',
-  'getKeyValueSync',
-  'setKeyValueSync',
-];
-
-for (let key in STORAGE_COMMANDS) {
-  STORAGE_COMMANDS[key] = function () {
-    console.error("Data APIs are not available outside of code studio.");
-  };
 }
 
 // Set up an error handler for student errors and warnings.

@@ -230,14 +230,23 @@ function extractCSSFromHTML(el) {
 const fontAwesomeWOFFRelativeSourcePath = '/assets/fontawesome-webfont.woff2';
 const fontAwesomeWOFFPath = 'applab/fontawesome-webfont.woff2';
 
+function getExportConfigPath(baseHref) {
+  const curHref = window.location.href;
+  const curHrefWithoutEdit = curHref.slice(0, curHref.lastIndexOf('/') + 1);
+  baseHref = baseHref || curHrefWithoutEdit;
+  return `${baseHref}export_config?script_call=setExportConfig`;
+}
+
 export default {
   exportAppToZip(appName, code, levelHtml, expoMode) {
     const { css, outerHTML } = transformLevelHtml(levelHtml);
 
+    const exportConfigPath = getExportConfigPath();
     const jQueryBaseName = 'jquery-1.12.1.min';
     var html;
     if (expoMode) {
       html = exportExpoIndexEjs({
+        exportConfigPath,
         htmlBody: outerHTML,
         applabApiPath: "applab-api.j",
         jQueryPath: jQueryBaseName + ".j",
@@ -250,6 +259,7 @@ export default {
       });
     } else {
       html = exportProjectEjs({
+        exportConfigPath,
         htmlBody: outerHTML,
         fontPath: fontAwesomeWOFFPath,
       });
@@ -456,7 +466,10 @@ export default {
     const appOptionsJs = getAppOptionsFile();
     const { css, outerHTML } = transformLevelHtml(levelHtml);
     const fontAwesomeCSS = exportFontAwesomeCssEjs({fontPath: fontAwesomeWOFFPath});
+    const exportBaseHref = `https://studio.code.org/projects/applab/${project.getCurrentId()}/`;
+    const exportConfigPath = getExportConfigPath(exportBaseHref);
     const html = exportExpoIndexEjs({
+      exportConfigPath,
       htmlBody: outerHTML,
       commonLocalePath: "https://studio.code.org/blockly/js/en_us/common_locale.js",
       applabLocalePath: "https://studio.code.org/blockly/js/en_us/applab_locale.js",
