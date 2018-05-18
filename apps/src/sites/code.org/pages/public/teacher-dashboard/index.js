@@ -415,7 +415,7 @@ function main() {
         firehoseClient.putRecord(
           {
             study: 'teacher-dashboard',
-            study_group: 'control',
+            study_group: 'react',
             event: 'stats'
           }
         );
@@ -441,7 +441,7 @@ function main() {
         firehoseClient.putRecord(
           {
             study: 'teacher-dashboard',
-            study_group: 'control',
+            study_group: 'react',
             event: 'manage'
           }
         );
@@ -656,7 +656,7 @@ function main() {
     firehoseClient.putRecord(
       {
         study: 'teacher-dashboard',
-        study_group: 'control',
+        study_group: 'react',
         event: 'projects'
       }
     );
@@ -700,7 +700,7 @@ function main() {
     firehoseClient.putRecord(
       {
         study: 'teacher-dashboard',
-        study_group: 'control',
+        study_group: experiments.isEnabled(experiments.TEACHER_EXP_2018) ? 'react' : 'angular',
         event: 'progress-summary'
       }
     );
@@ -737,7 +737,7 @@ function main() {
       firehoseClient.putRecord(
         {
           study: 'teacher-dashboard',
-          study_group: 'control',
+          study_group: 'angular',
           event: 'progress-detailed'
         }
       );
@@ -749,7 +749,7 @@ function main() {
       firehoseClient.putRecord(
         {
           study: 'teacher-dashboard',
-          study_group: 'control',
+          study_group: 'angular',
           event: 'progress-summary'
         }
       );
@@ -897,7 +897,7 @@ function main() {
     firehoseClient.putRecord(
       {
         study: 'teacher-dashboard',
-        study_group: 'control',
+        study_group: experiments.isEnabled(experiments.TEACHER_EXP_2018) ? 'react' : 'angular',
         event: 'text-responses'
       }
     );
@@ -987,7 +987,7 @@ function main() {
     firehoseClient.putRecord(
       {
         study: 'teacher-dashboard',
-        study_group: 'control',
+        study_group: experiments.isEnabled(experiments.TEACHER_EXP_2018) ? 'react' : 'angular',
         event: 'assessments'
       }
     );
