@@ -7845,6 +7845,8 @@ en:
               name: Graph Paper Programming
             Relay Programming:
               name: Relay Programming
+            Introduction to Online Puzzles:
+              name: Introduction to Online Puzzles
         jr-test:
           stages:
             Programming with Behaviors:
