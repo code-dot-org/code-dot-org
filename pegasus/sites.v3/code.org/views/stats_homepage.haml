@@ -31,7 +31,10 @@
     },
   ]
 
-.make-difference We're making a difference
+  showing_below_hero_announcement = Homepage.get_below_hero_announcement[:showing]
+
+- if !showing_below_hero_announcement
+  .make-difference We're making a difference
 
 .statistics
   %a.nounderscorehover.col-20.stats-box.linktag{href: CDO.studio_url('/courses'), id: "stats-0"}
