@@ -17,6 +17,23 @@ class SectionTest < ActiveSupport::TestCase
     end
   end
 
+  test "scope with_student returns sections where user is follower" do
+    section = create(:section, user: @teacher)
+    student = create(:follower, section: section).student_user
+
+    sections_with_student = Section.with_student(student)
+    assert_equal 1, sections_with_student.length
+    assert_equal section, sections_with_student.first
+  end
+
+  test "scope with_student returns an empty array if user follows no sections" do
+    create(:section, user: @teacher)
+    user = create(:user)
+
+    sections_with_student = Section.with_student(user)
+    assert_equal 0, sections_with_student.length
+  end
+
   test "destroying section destroys appropriate followers" do
     delete_time = Time.now - 1.day
     already_deleted_follower = create :follower, section: @section
