@@ -41,7 +41,6 @@
     "debugger_disabled": "false",
     "project_template_level_name": "U3 - Canvas - Template",
     "encrypted_examples": "s9JYWmvWSS0dUchqiYaNKefWyulAMirW0vyO9Kht/nZ1VEz5jaVxdXSSTgON\nf0gn\n",
-    "contained_level_names": null,
     "instructions_important": "false",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
@@ -51,7 +50,8 @@
     "show_debug_watch": "false",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
-    "makerlab_enabled": "false"
+    "makerlab_enabled": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
