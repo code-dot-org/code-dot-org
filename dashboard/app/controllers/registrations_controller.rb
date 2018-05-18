@@ -51,6 +51,8 @@ class RegistrationsController < Devise::RegistrationsController
       if params[:user_type] == "teacher"
         params[:email_preference_opt_in_required] = true
         params[:email_preference_request_ip] = request.env['REMOTE_ADDR']
+        params[:email_preference_source] = :ACCOUNT_SIGN_UP
+        params[:email_preference_form_kind] = "0"
       end
     end
   end
