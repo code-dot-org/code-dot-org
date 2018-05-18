@@ -66,17 +66,17 @@ class StudentAssessmentOverviewTable extends Component {
   correctAnswerColumnFormatter = (answers, {rowData, columnIndex}) => {
     const cell = rowData.answers;
 
-    let answerCell = '';
+    let textAnswered = '';
       cell.forEach((answer) => {
         if (answer.isCorrectAnswer) {
-          answerCell = answer.multipleChoiceOption;
+          textAnswered = answer.multipleChoiceOption;
         }
       });
 
     return (
       <MultipleChoiceAnswerCell
         id={rowData.id}
-        answerCell={answerCell}
+        textAnswered={textAnswered}
       />
     );
   };
@@ -88,18 +88,18 @@ class StudentAssessmentOverviewTable extends Component {
       cell = answerSelection;
     });
 
-    let answerCell = '';
+    let textAnswered = '';
     rowData.answers.forEach ((answer) => {
       if (answer.isCorrectAnswer) {
-        answerCell = answer.multipleChoiceOption;
+        textAnswered = answer.multipleChoiceOption;
       }
     });
 
     return (
       <MultipleChoiceAnswerCell
         id={rowData.id}
-        answerCell={cell}
-        isCorrectAnswer={(cell === answerCell)}
+        textAnswered={cell}
+        isCorrectAnswer={(cell === textAnswered)}
       />
     );
   };
