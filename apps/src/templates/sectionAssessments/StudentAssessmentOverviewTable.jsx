@@ -49,12 +49,14 @@ class StudentAssessmentOverviewTable extends Component {
   };
 
   correctAnswerColumnFormatter = (answers, {rowData, columnIndex}) => {
-    const cell = rowData.answers;
+    const questionAnswers = rowData.answers;
 
+    let allPossibleAnswers = [];
     let textAnswered = '';
-      cell.forEach((answer) => {
+      questionAnswers.forEach((answer) => {
         if (answer.isCorrectAnswer) {
-          textAnswered = answer.multipleChoiceOption;
+          allPossibleAnswers.push(answer.multipleChoiceOption);
+          textAnswered = allPossibleAnswers.join(', ');
         }
       });
 
@@ -67,24 +69,28 @@ class StudentAssessmentOverviewTable extends Component {
   };
 
   studentAnswerColumnFormatter = (studentAnswers, {rowData, rowIndex}) => {
-    let cell = '';
+    let studentAnswerArr = [];
+    let studentResponse = '';
     const selectStudentAnswers = this.props.studentAnswerData[0].studentAnswers[rowIndex];
     selectStudentAnswers.answer.forEach((answerSelection) => {
-      cell = answerSelection;
+      studentAnswerArr.push(answerSelection);
+      studentResponse = studentAnswerArr.join(', ');
     });
 
+    let allPossibleAnswers = [];
     let textAnswered = '';
-    rowData.answers.forEach ((answer) => {
-      if (answer.isCorrectAnswer) {
-        textAnswered = answer.multipleChoiceOption;
-      }
-    });
+      rowData.answers.forEach((answer) => {
+        if (answer.isCorrectAnswer) {
+          allPossibleAnswers.push(answer.multipleChoiceOption);
+          textAnswered = allPossibleAnswers.join(', ');
+        }
+      });
 
     return (
       <MultipleChoiceAnswerCell
         id={rowData.id}
-        textAnswered={cell}
-        isCorrectAnswer={(cell === textAnswered)}
+        textAnswered={studentResponse}
+        isCorrectAnswer={(studentResponse === textAnswered)}
       />
     );
   };
