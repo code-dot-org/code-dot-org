@@ -68,6 +68,11 @@ class Course < ApplicationRecord
       Course.where(name: ['csp', 'csp-2017']).first.try(:update!, {name: hash['name']})
     end
 
+    # Allow renaming between csd and csd-2017 during seed.
+    if ['csd', 'csd-2017'].include?(hash['name'])
+      Course.where(name: ['csd', 'csd-2017']).first.try(:update!, {name: hash['name']})
+    end
+
     course = Course.find_or_create_by!(name: hash['name'])
     course.update_scripts(hash['script_names'], hash['alternate_scripts'])
     course.properties = hash['properties']
