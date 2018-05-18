@@ -30,12 +30,13 @@ class CoursesController < ApplicationController
     # For now, Hard-code the redirection logic because there are only two course
     # families to worry about. In the future we will want to make this redirect
     # happen based on the data in the DB so it can be configured via levelbuilder.
+    redirect_query_string = params[:section_id] ? "?section_id=#{params[:section_id]}" : ''
     case params[:course_name]
     when 'csd'
-      redirect_to "/courses/csd-2017"
+      redirect_to "/courses/csd-2017#{redirect_query_string}"
       return
     when 'csp'
-      redirect_to "/courses/csp-2017"
+      redirect_to "/courses/csp-2017#{redirect_query_string}"
       return
     end
 
