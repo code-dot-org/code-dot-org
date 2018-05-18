@@ -282,7 +282,7 @@ export const transferStudents = (onComplete) => {
     transferStudentsOnServer(studentIds, currentSectionCode, newSectionCode, copyStudents, (error, data) => {
       if (error) {
         console.error(error);
-        dispatch(transferStudentsFailure(error));
+        dispatch(transferStudentsFailure((data && data.error) || error));
       } else {
         if (!copyStudents || !otherTeacher) {
           studentIds.forEach(id => {
