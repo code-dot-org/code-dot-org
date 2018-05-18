@@ -129,7 +129,8 @@ class TopInstructions extends Component {
   };
 
   state = {
-    tabSelected: TabType.INSTRUCTIONS,
+    tabSelected: this.props.viewAs === ViewType.Teacher && experiments.isEnabled(experiments.DEV_COMMENT_BOX_TAB) ?
+      TabType.COMMENTS : TabType.INSTRUCTIONS,
   };
 
   /**
@@ -340,6 +341,7 @@ class TopInstructions extends Component {
             {this.state.tabSelected === TabType.COMMENTS &&
               <TeacherFeedback
                 ref="commentTab"
+                internalFlag={experiments.isEnabled(experiments.DEV_COMMENT_BOX_TAB)}
               />
             }
           </div>
