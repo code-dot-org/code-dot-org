@@ -109,6 +109,15 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     render json: @sections, each_serializer: Api::V1::SectionNameAndIdSerializer
   end
 
+  # GET /api/v1/sections/valid_scripts
+  def valid_scripts
+    scripts = Script.valid_scripts(current_user)
+    if current_user.any_experiments_enabled?
+      scripts.map {|script| script.alternate_script(current_user)}
+    end
+    render json: scripts, each_serializer: Api::V1::ScriptSerializer
+  end
+
   private
 
   def find_follower
