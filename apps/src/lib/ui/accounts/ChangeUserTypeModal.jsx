@@ -7,19 +7,6 @@ import {isEmail} from '../../../util/formatValidation';
 import {Header, ConfirmCancelFooter} from '../SystemDialog/SystemDialog';
 import ChangeUserTypeForm from './ChangeUserTypeForm';
 
-/*
-
-Note: This feature is in active development, so there are still some rough edges.
-(Brad Buchanan, 2018-05-10)
-
-Spec:
-https://docs.google.com/document/d/1eKDnrgorG9koHQF3OdY6nxiO4PIfJ-JCNHGGQu0-G9Y/edit
-
-Task list:
-Send the email opt-in to the server and handle it correctly
-
- */
-
 const STATE_INITIAL = 'initial';
 const STATE_SAVING = 'saving';
 const STATE_UNKNOWN_ERROR = 'unknown-error';
@@ -41,9 +28,11 @@ export default class ChangeUserTypeModal extends React.Component {
     saveState: STATE_INITIAL,
     values: {
       currentEmail: '',
+      emailOptIn: '',
     },
     serverErrors: {
-      currentEmail: '',
+      currentEmail: undefined,
+      emailOptIn: undefined,
     },
   };
 
@@ -81,6 +70,7 @@ export default class ChangeUserTypeModal extends React.Component {
     const {serverErrors} = this.state;
     return {
       currentEmail: serverErrors.currentEmail || this.getCurrentEmailValidationError(),
+      emailOptIn: serverErrors.emailOptIn,
     };
   }
 
@@ -102,9 +92,11 @@ export default class ChangeUserTypeModal extends React.Component {
   onFormChange = (newValues) => {
     const {values: oldValues, serverErrors} = this.state;
     const newServerErrors = {...serverErrors};
-    if (newValues.currentEmail !== oldValues.currentEmail) {
-      newServerErrors.currentEmail = undefined;
-    }
+    ['currentEmail', 'emailOptIn'].forEach((fieldName) => {
+      if (newValues[fieldName] !== oldValues[fieldName]) {
+        newServerErrors[fieldName] = undefined;
+      }
+    });
     this.setState({
       values: newValues,
       serverErrors: newServerErrors
