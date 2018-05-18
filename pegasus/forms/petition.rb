@@ -28,7 +28,13 @@ class Petition < Form
 
   def self.process(data, created_ip = nil)
     if created_ip && data['email_s'] && data['age_i'] >= 16
-      puts "Set email preference - yes - #{created_ip} - #{data['email_s']}"
+      EmailPreferenceHelper.upsert!(
+        email: data['email_s'],
+        opt_in: true,
+        ip_address: created_ip,
+        source: EmailPreferenceHelper::FORM_PETITION,
+        form_kind: '0'
+      )
     end
 
     result = {}
