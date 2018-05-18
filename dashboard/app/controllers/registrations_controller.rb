@@ -248,22 +248,14 @@ class RegistrationsController < Devise::RegistrationsController
   def set_email_params
     params.
       require(:user).
-      permit(
-        :email,
-        :hashed_email,
-        :current_password,
-      ).
+      permit(:email, :hashed_email, :current_password).
       merge(email_preference_params(EmailPreference::ACCOUNT_EMAIL_CHANGE, "0"))
   end
 
   def set_user_type_params
     params.
       require(:user).
-      permit(
-        :user_type,
-        :email,
-        :hashed_email,
-      ).
+      permit(:user_type, :email, :hashed_email).
       merge(email_preference_params(EmailPreference::ACCOUNT_TYPE_CHANGE, "0"))
   end
 
