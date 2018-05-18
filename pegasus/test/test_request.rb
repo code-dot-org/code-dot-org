@@ -28,4 +28,17 @@ class RequestTest < Minitest::Test
     req = Rack::Request.new({'HTTP_X_FORWARDED_FOR' => 'unknown'})
     assert_nil req.location
   end
+
+  def test_gdpr
+    assert Rack::Request.new('HTTP_CLOUDFRONT_VIEWER_COUNTRY' => 'gb').gdpr?
+    refute Rack::Request.new('HTTP_CLOUDFRONT_VIEWER_COUNTRY' => 'us').gdpr?
+
+    # If the CloudFront-Viewer-Country header is not set, IP-based geolocation is used as a fallback.
+    user_ip = '89.151.64.0' # Great Britain IP address range
+    # The geocoder gem resolves the IP using freegeoip, this mocks the underlying HTTP requests.
+    stub_request(:get, "#{CDO.freegeoip_host || 'freegeoip.io'}/json/#{user_ip}").to_return(
+      body: {ip: user_ip, country_code: 'GB'}.to_json
+    )
+    assert Rack::Request.new('REMOTE_ADDR' => user_ip).gdpr?
+  end
 end
