@@ -168,7 +168,3 @@ class StudentAssessmentOverviewTable extends Component {
 }
 
 export default StudentAssessmentOverviewTable;
-
-
-
-
