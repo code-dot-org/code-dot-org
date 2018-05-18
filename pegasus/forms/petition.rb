@@ -26,7 +26,7 @@ class Petition < Form
     result
   end
 
-  def self.process(data, created_ip = nil)
+  def self.process_with_ip(data, created_ip)
     if created_ip && data['email_s'] && data['age_i'] >= 16
       EmailPreferenceHelper.upsert!(
         email: data['email_s'],
