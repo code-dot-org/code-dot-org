@@ -387,6 +387,12 @@ class Course < ApplicationRecord
   end
 
   def self.get_without_cache(id_or_name)
+    # When the caller requests csp-2017, make sure we serve the CSP 2017 course,
+    # regardless of whether it has been renamed from csp to csp-2017 yet.
+    if id_or_name == 'csp-2017'
+      return Course.where(name: ['csp', 'csp-2017']).first
+    end
+
     # a bit of trickery so we support both ids which are numbers and
     # names which are strings that may contain numbers (eg. 2-3)
     find_by = (id_or_name.to_i.to_s == id_or_name.to_s) ? :id : :name
