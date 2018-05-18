@@ -20,9 +20,9 @@ module ScriptConstants
   # order of the categories will be their order in the dropdown.
   CATEGORIES = {
     full_course: [
-      CSP_2017 = 'csp'.freeze,
+      CSP_2017 = 'csp-2017'.freeze,
       CSP_2018 = 'csp-2018'.freeze,
-      CSD_2017 = 'csd'.freeze,
+      CSD_2017 = 'csd-2017'.freeze,
       CSD_2018 = 'csd-2018'.freeze,
     ],
     csf: [
