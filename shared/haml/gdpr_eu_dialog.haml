@@ -1,0 +1,19 @@
+%link{rel:'stylesheet', type:'text/css', href:'/shared/css/gdpr-eu-dialog.css'}
+
+#gdpr-eu-dialog
+  .text
+    .heading
+      Do you agree to using a web site based in the United States?
+    %br
+    .message
+      Data from your use of this site may be sent to and stored or processed in the United States.
+    %br
+    .link-to-privacy-policy
+      For details see our
+      %a{href: CDO.code_org_url('/privacy'), target: '_blank'} privacy policy
+  %hr
+  .buttons
+    %button#logout
+      Logout
+    %button#accept
+      Yes
