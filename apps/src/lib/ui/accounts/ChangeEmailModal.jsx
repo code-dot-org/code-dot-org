@@ -7,19 +7,6 @@ import {isEmail} from '../../../util/formatValidation';
 import {Header, ConfirmCancelFooter} from '../SystemDialog/SystemDialog';
 import ChangeEmailForm from './ChangeEmailForm';
 
-/*
-
-Note: This feature is in active development, so there are still some rough edges.
-(Brad Buchanan, 2018-05-10)
-
-Spec:
-https://docs.google.com/document/d/1eKDnrgorG9koHQF3OdY6nxiO4PIfJ-JCNHGGQu0-G9Y/edit
-
-Task list:
-Send the email opt-in to the server and handle it correctly
-
- */
-
 const STATE_INITIAL = 'initial';
 const STATE_SAVING = 'saving';
 const STATE_UNKNOWN_ERROR = 'unknown-error';
@@ -34,6 +21,7 @@ export default class ChangeEmailModal extends React.Component {
      * @type {function()}
      */
     handleCancel: PropTypes.func.isRequired,
+    userType: PropTypes.oneOf(['student', 'teacher']).isRequired,
     currentHashedEmail: PropTypes.string,
   };
 
@@ -42,10 +30,12 @@ export default class ChangeEmailModal extends React.Component {
     values: {
       newEmail: '',
       currentPassword: '',
+      emailOptIn: '',
     },
     serverErrors: {
       newEmail: '',
-      currentPassword: ''
+      currentPassword: '',
+      emailOptIn: '',
     },
   };
 
@@ -84,6 +74,7 @@ export default class ChangeEmailModal extends React.Component {
     return {
       newEmail: serverErrors.newEmail || this.getNewEmailValidationError(),
       currentPassword: serverErrors.currentPassword || this.getCurrentPasswordValidationError(),
+      emailOptIn: serverErrors.emailOptIn,
     };
   }
 
@@ -113,12 +104,11 @@ export default class ChangeEmailModal extends React.Component {
   onFormChange = (newValues) => {
     const {values: oldValues, serverErrors} = this.state;
     const newServerErrors = {...serverErrors};
-    if (newValues.newEmail !== oldValues.newEmail) {
-      newServerErrors.newEmail = undefined;
-    }
-    if (newValues.currentPassword !== oldValues.currentPassword) {
-      newServerErrors.currentPassword = undefined;
-    }
+    ['newEmail', 'currentPassword', 'emailOptIn'].forEach((fieldName) => {
+      if (newValues[fieldName] !== oldValues[fieldName]) {
+        newServerErrors[fieldName] = undefined;
+      }
+    });
     this.setState({
       values: newValues,
       serverErrors: newServerErrors
@@ -126,6 +116,7 @@ export default class ChangeEmailModal extends React.Component {
   };
 
   render = () => {
+    const {userType} = this.props;
     const {saveState, values} = this.state;
     const validationErrors = this.getValidationErrors();
     const isFormValid = this.isFormValid(validationErrors);
@@ -143,6 +134,7 @@ export default class ChangeEmailModal extends React.Component {
             values={values}
             validationErrors={validationErrors}
             disabled={STATE_SAVING === saveState}
+            userType={userType}
             onChange={this.onFormChange}
             onSubmit={this.save}
           />
