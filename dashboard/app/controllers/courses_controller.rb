@@ -23,6 +23,22 @@ class CoursesController < ApplicationController
   end
 
   def show
+    # csp and csd are each "course families", each containing two "course versions",
+    # one with version year 2017 and one with version year 2018. When the url
+    # of a course family is requested, redirect to a specific course version.
+    #
+    # For now, Hard-code the redirection logic because there are only two course
+    # families to worry about. In the future we will want to make this redirect
+    # happen based on the data in the DB so it can be configured via levelbuilder.
+    case params[:course_name]
+    when 'csd'
+      redirect_to "/courses/csd-2017"
+      return
+    when 'csp'
+      redirect_to "/courses/csp-2017"
+      return
+    end
+
     course = Course.get_from_cache(params[:course_name])
     unless course
       # PLC courses have different ways of getting to name. ideally this goes
