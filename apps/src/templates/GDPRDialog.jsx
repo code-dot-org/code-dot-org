@@ -18,6 +18,7 @@ const styles = {
 export default class GDPRDialog extends Component {
   static propTypes = {
     isDialogOpen: PropTypes.bool,
+    currentUserId: PropTypes.number,
   };
 
   state = {
@@ -29,7 +30,7 @@ export default class GDPRDialog extends Component {
       <div>
         <BaseDialog
           useUpdatedStyles
-          isOpen
+          isOpen={this.state.isDialogOpen}
           style={styles.dialog}
           uncloseable
         >

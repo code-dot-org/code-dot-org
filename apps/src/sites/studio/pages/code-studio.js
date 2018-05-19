@@ -15,6 +15,7 @@ import initSigninState from '@cdo/apps/code-studio/initSigninState';
 import initResponsive from '@cdo/apps/code-studio/responsive';
 import hashEmail from '@cdo/apps/code-studio/hashEmail';
 import GDPRDialog from '@cdo/apps/templates/GDPRDialog';
+import getScriptData from '@cdo/apps/util/getScriptData';
 
 const store = getStore();
 store.dispatch(setRtlFromDOM());
@@ -104,8 +105,12 @@ setTimeout(function () {
 }, 10000);
 
 $(document).ready(function () {
+  const gdprData = getScriptData('gdpr');
   ReactDOM.render(
-    <GDPRDialog/>,
+    <GDPRDialog
+      isDialogOpen={gdprData.show_gdpr_dialog}
+      currentUserId={gdprData.current_user_id}
+    />,
     document.getElementById('gdpr-dialog')
   );
 });
