@@ -1,5 +1,8 @@
 import { SVG_NS } from '../constants';
-import { appendCategory, createJsWrapperBlockCreator } from '../block_utils';
+import {
+  appendBlocksByCategory,
+  createJsWrapperBlockCreator
+} from '../block_utils';
 import { getStore } from '../redux';
 import { getLocation } from './locationPickerModule';
 import { GAME_HEIGHT } from './constants';
@@ -694,7 +697,8 @@ export default {
     ));
 
     if (!hideCustomBlocks) {
-      level.toolbox = appendCategory(level.toolbox, blockNames, 'Custom');
+      level.toolbox =
+        appendBlocksByCategory(level.toolbox, { Custom: blockNames });
     }
   },
 };
