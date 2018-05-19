@@ -39,9 +39,8 @@ export default class GDPRDialog extends Component {
             {i18n.gdprDialogDetails()}
           </div>
           <div style={styles.instructions}>
-            {i18n.gdprDialogLinkIntro() + " "}
             <a href="privacy-policy">
-              {i18n.gdprDialogPrivacyPolicy()}.
+              {i18n.gdprDialogSeePrivacyPolicy()}.
             </a>
           </div>
           <DialogFooter>
