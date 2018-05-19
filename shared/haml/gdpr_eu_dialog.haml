@@ -5,15 +5,13 @@
 - if dashboard
   - heading = I18n.t('gdpr_dialog.heading')
   - message = I18n.t('gdpr_dialog.message')
-  - link_intro = I18n.t('gdpr_dialog.link_intro')
-  - privacy_policy = I18n.t('gdpr_dialog.privacy_policy')
+  - see_privacy_policy = I18n.t('gdpr_dialog.see_privacy_policy', url: CDO.code_org_url('/privacy'))
   - logout = I18n.t('gdpr_dialog.logout')
   - yes = I18n.t('gdpr_dialog.yes')
 - else
   - heading = hoc_s(:gdpr_dialog_heading)
   - message = hoc_s(:gdpr_dialog_message)
-  - link_intro = hoc_s(:gdpr_dialog_link_intro)
-  - privacy_policy = hoc_s(:gdpr_dialog_privacy_policy)
+  - see_privacy_policy = hoc_s(:gdpr_dialog_see_privacy_policy).gsub(/%{url}/, CDO.code_org_url('/privacy'))
   - logout = hoc_s(:gdpr_dialog_logout)
   - yes = hoc_s(:gdpr_dialog_yes)
 
@@ -26,8 +24,7 @@
       = message
     %br
     .link-to-privacy-policy
-      = link_intro
-      %a{href: CDO.code_org_url('/privacy'), target: '_blank'}= privacy_policy
+      = see_privacy_policy
   %hr
   .buttons
     %button#logout
