@@ -977,6 +977,7 @@ And(/^I create a student named "([^"]*)"$/) do |name|
     And I type "#{password}" into "#user_password"
     And I type "#{password}" into "#user_password_confirmation"
     And I select the "16" option in dropdown "user_user_age"
+    And I click selector "#user_terms_of_service_version"
     And I click selector "#signup-button"
     And I wait until I am on "http://studio.code.org/home"
   }
@@ -994,6 +995,7 @@ And(/^I create a young student named "([^"]*)"$/) do |name|
     And I type "#{password}" into "#user_password"
     And I type "#{password}" into "#user_password_confirmation"
     And I select the "10" option in dropdown "user_user_age"
+    And I click selector "#user_terms_of_service_version"
     And I click selector "#signup-button"
     And I wait until I am on "http://studio.code.org/home"
   }
