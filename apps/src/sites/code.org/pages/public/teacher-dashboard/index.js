@@ -93,10 +93,12 @@ function renderSectionProgressReact(store) {
 
 $(document).ready(function () {
   const gdprData = scriptData.gdpr;
+  const studioUrlPrefix = scriptData.studiourlprefix;
   ReactDOM.render(
     <GDPRDialog
       isDialogOpen={gdprData.show_gdpr_dialog}
       currentUserId={gdprData.current_user_id}
+      studioUrlPrefix={studioUrlPrefix}
     />,
     document.getElementById('gdpr-dialog')
   );

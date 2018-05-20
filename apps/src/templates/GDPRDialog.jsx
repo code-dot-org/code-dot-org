@@ -3,6 +3,7 @@ import Button from './Button';
 import i18n from "@cdo/locale";
 import BaseDialog from './BaseDialog';
 import DialogFooter from "./teacherDashboard/DialogFooter";
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 const styles = {
   dialog: {
@@ -17,15 +18,26 @@ const styles = {
 
 export default class GDPRDialog extends Component {
   static propTypes = {
-    isDialogOpen: PropTypes.bool,
-    currentUserId: PropTypes.number,
+    isDialogOpen: PropTypes.bool.isRequired,
+    currentUserId: PropTypes.number.isRequired,
+    // If we're coming from pegasus, studioUrlPrefix is passed in as a prop and used to construct the logout url.
+    studioUrlPrefix: PropTypes.string
   };
 
   state = {
     isDialogOpen: this.props.isDialogOpen,
   };
 
+  handleYesClick = () => {
+    this.setState({isDialogOpen: false});
+    // TODO update the user's property setting
+  };
+
   render() {
+    const {studioUrlPrefix} = this.props;
+    const logOutUrl = studioUrlPrefix ?
+      `http:${studioUrlPrefix}/users/sign_out` : "/users/sign_out";
+
     return (
       <div>
         <BaseDialog
@@ -40,19 +52,19 @@ export default class GDPRDialog extends Component {
           </div>
           <div style={styles.instructions}>
             {i18n.gdprDialogLinkIntro() + " "}
-            <a href="privacy-policy">
+            <a href={pegasus('/privacy')}>
               {i18n.gdprDialogPrivacyPolicy()}.
             </a>
           </div>
           <DialogFooter>
             <Button
               text={i18n.gdprDialogLogout()}
-              onClick={()=> console.log("clicked")}
+              href={logOutUrl}
               color={Button.ButtonColor.gray}
             />
             <Button
               text={i18n.gdprDialogYes()}
-              onClick={()=> console.log("clicked")}
+              onClick={this.handleYesClick}
               color={Button.ButtonColor.orange}
             />
           </DialogFooter>
