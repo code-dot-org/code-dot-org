@@ -54,6 +54,13 @@ class RegistrationsController < Devise::RegistrationsController
         params[:email_preference_source] = EmailPreference::ACCOUNT_SIGN_UP
         params[:email_preference_form_kind] = "0"
       end
+
+      if params[:data_transfer_agreement_required] && params[:data_transfer_agreement] == "1"
+        params[:data_transfer_agreement] = true
+        params[:data_transfer_agreement_request_ip] = request.env['REMOTE_ADDR']
+        params[:data_transfer_agreement_source] = User::ACCOUNT_SIGN_UP
+        params[:data_transfer_agreement_kind] = "0"
+      end
     end
   end
 
