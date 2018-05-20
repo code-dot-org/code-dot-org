@@ -122,6 +122,7 @@ class User < ActiveRecord::Base
     oauth_token_expiration
     sharing_disabled
     next_census_display
+    data_transfer_agreement
   )
 
   # Include default devise modules. Others available are:
@@ -432,6 +433,8 @@ class User < ActiveRecord::Base
   attr_accessor :email_preference_source
   attr_accessor :email_preference_form_kind
 
+  attr_accessor :data_transfer_agreement_required
+
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
 
   has_many :user_levels, -> {order 'id desc'}, inverse_of: :user
@@ -489,6 +492,8 @@ class User < ActiveRecord::Base
   validates_presence_of :email_preference_request_ip, if: -> {email_preference_opt_in.present?}
   validates_presence_of :email_preference_source, if: -> {email_preference_opt_in.present?}
   validates_presence_of :email_preference_form_kind, if: -> {email_preference_opt_in.present?}
+
+  validates :data_transfer_agreement, acceptance: true, if: -> {data_transfer_agreement_required == "1"}
 
   def email_matches_for_oauth_upgrade
     if user_type == User::TYPE_TEACHER
