@@ -9,6 +9,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { registerReducers, getStore } from '@cdo/apps/redux';
+import GDPRDialog from '@cdo/apps/templates/GDPRDialog';
 import SectionProjectsList from '@cdo/apps/templates/projects/SectionProjectsList';
 import SectionProgress from '@cdo/apps/templates/sectionProgress/SectionProgress';
 import SectionAssessments from '@cdo/apps/templates/sectionAssessments/SectionAssessments';
@@ -89,6 +90,17 @@ function renderSectionProgressReact(store) {
     document.getElementById('section-progress-react')
   );
 }
+
+$(document).ready(function () {
+  const gdprData = scriptData.gdpr;
+  ReactDOM.render(
+    <GDPRDialog
+      isDialogOpen={gdprData.show_gdpr_dialog}
+      currentUserId={gdprData.current_user_id}
+    />,
+    document.getElementById('gdpr-dialog')
+  );
+});
 
 //  Everything below was copied wholesale from index.haml, where we had no linting.
 // TODO (bjvanminnen): Fix remaining lint errors and re-enable rules.

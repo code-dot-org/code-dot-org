@@ -61,14 +61,3 @@ export default class GDPRDialog extends Component {
     );
   }
 }
-//
-// export const UnconnectedControlProjectSharingDialog = ControlProjectSharingDialog;
-//
-// export default connect(state => ({}), dispatch => ({
-//   toggleSharingColumn() {
-//     dispatch(toggleSharingColumn());
-//   },
-//   editAll() {
-//     dispatch(editAll());
-//   },
-// }))(ControlProjectSharingDialog);
