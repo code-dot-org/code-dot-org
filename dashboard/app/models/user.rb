@@ -126,6 +126,7 @@ class User < ActiveRecord::Base
     data_transfer_agreement_request_ip
     data_transfer_agreement_source
     data_transfer_agreement_kind
+    data_transfer_agreement_at
   )
 
   # Include default devise modules. Others available are:
