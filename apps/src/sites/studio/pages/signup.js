@@ -167,9 +167,8 @@ window.SignupManager = function (options) {
     $(".student-options").fadeIn();
     $(".teacher-options").hide();
 
-    // Force students to explicitly accept terms of service and data transfer agreement.
+    // Force students to explicitly accept terms of service.
     $("#user_terms_of_service_version").prop('checked', false);
-    $("#user_data_transfer_agreement").prop('checked', false);
   }
 
   function onCountryChange(_, event) {
@@ -265,9 +264,8 @@ window.SignupManager = function (options) {
     $(".student-options").hide();
     $(".teacher-options").fadeIn();
 
-    // Force teachers to explicitly accept terms of service and data transfer agreement.
+    // Force teachers to explicitly accept terms of service.
     $("#user_terms_of_service_version").prop('checked', false);
-    $("#user_data_transfer_agreement").prop('checked', false);
 
     updateAutocompleteSchoolFields(schoolData);
   }

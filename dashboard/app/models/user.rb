@@ -123,6 +123,9 @@ class User < ActiveRecord::Base
     sharing_disabled
     next_census_display
     data_transfer_agreement
+    data_transfer_agreement_request_ip
+    data_transfer_agreement_source
+    data_transfer_agreement_kind
   )
 
   # Include default devise modules. Others available are:
@@ -426,6 +429,10 @@ class User < ActiveRecord::Base
     ['gender.none', '-']
   ].freeze
 
+  DATA_TRANSFER_AGREEMENT_SOURCE_TYPES = [
+    ACCOUNT_SIGN_UP = 'ACCOUNT_SIGN_UP'.freeze
+  ].freeze
+
   attr_accessor :login
   attr_accessor :email_preference_opt_in_required
   attr_accessor :email_preference_opt_in
@@ -493,7 +500,7 @@ class User < ActiveRecord::Base
   validates_presence_of :email_preference_source, if: -> {email_preference_opt_in.present?}
   validates_presence_of :email_preference_form_kind, if: -> {email_preference_opt_in.present?}
 
-  validates :data_transfer_agreement, acceptance: true, if: -> {data_transfer_agreement_required == "1"}
+  validates :data_transfer_agreement, acceptance: true, if: :data_transfer_agreement_required
 
   def email_matches_for_oauth_upgrade
     if user_type == User::TYPE_TEACHER
