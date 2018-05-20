@@ -39,8 +39,8 @@
     #gdpr-dialog
     - gdpr_data = {}
     - if current_user
-      - already_dismissed = current_user.properties["dismissed_gdpr_dialog"]
-      - gdpr_data[:show_gdpr_dialog] = request.gdpr? && !already_dismissed
+      - already_accepted = current_user.properties["accepted_data_transfer_agreement"]
+      - gdpr_data[:show_gdpr_dialog] = request.gdpr? && !already_accepted
       - gdpr_data[:current_user_id] = current_user.id
     %script{src: minifiable_asset_path('js/code-studio.js'), data: {gdpr: gdpr_data.to_json}}
 

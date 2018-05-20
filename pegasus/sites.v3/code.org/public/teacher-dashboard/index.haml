@@ -59,8 +59,8 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 - data[:disabled_scripts] = DashboardSection::progress_disabled_scripts(request.user_id)
 
 - gdpr_data = {}
-- already_dismissed = dashboard_user[:properties]["dismissed_gdpr_dialog"]
-- gdpr_data[:show_gdpr_dialog] = request.gdpr? && !already_dismissed
+- already_accepted = dashboard_user[:properties]["accepted_data_transfer_agreement"]
+- gdpr_data[:show_gdpr_dialog] = request.gdpr? && !already_accepted
 - gdpr_data[:current_user_id] = request.user_id
 - data[:gdpr] = gdpr_data
 
