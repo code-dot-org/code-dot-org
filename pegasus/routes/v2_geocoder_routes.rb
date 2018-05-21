@@ -21,3 +21,12 @@ get '/v2/client-location' do
   content_type :json
   JSON.pretty_generate(location)
 end
+
+get '/v2/country' do
+  dont_cache
+  content_type :json
+  JSON.pretty_generate(
+    country: request.country,
+    gdpr: request.gdpr?
+  )
+end

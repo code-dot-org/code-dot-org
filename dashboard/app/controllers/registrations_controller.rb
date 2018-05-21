@@ -1,6 +1,8 @@
 class RegistrationsController < Devise::RegistrationsController
   respond_to :json
-  prepend_before_action :authenticate_scope!, only: [:edit, :update, :destroy, :upgrade]
+  prepend_before_action :authenticate_scope!, only: [
+    :edit, :update, :destroy, :upgrade, :set_email, :set_user_type
+  ]
   skip_before_action :verify_authenticity_token, only: [:set_age]
 
   def new
@@ -9,6 +11,9 @@ class RegistrationsController < Devise::RegistrationsController
     super
   end
 
+  #
+  # PUT /users
+  #
   def update
     return head(:bad_request) if params[:user].nil?
     current_user.reload # Needed to make tests pass for reasons noted in registrations_controller_test.rb
@@ -46,6 +51,8 @@ class RegistrationsController < Devise::RegistrationsController
       if params[:user_type] == "teacher"
         params[:email_preference_opt_in_required] = true
         params[:email_preference_request_ip] = request.env['REMOTE_ADDR']
+        params[:email_preference_source] = EmailPreference::ACCOUNT_SIGN_UP
+        params[:email_preference_form_kind] = "0"
       end
     end
   end
@@ -91,6 +98,62 @@ class RegistrationsController < Devise::RegistrationsController
     respond_to_account_update(successfully_updated, success_message_kind)
   end
 
+  #
+  # PATCH /users/email
+  #
+  # Route allowing user to update their primary email address.
+  #
+  def set_email
+    return head(:bad_request) if params[:user].nil?
+
+    successfully_updated =
+      if forbidden_change?(current_user, params)
+        false
+      elsif needs_password?(current_user, params)
+        current_user.update_with_password(set_email_params)
+      else
+        params[:user].delete(:current_password)
+        current_user.update_without_password(set_email_params)
+      end
+
+    if successfully_updated
+      head :no_content
+    else
+      render status: :unprocessable_entity,
+             json: current_user.errors.as_json(full_messages: true),
+             content_type: 'application/json'
+    end
+  end
+
+  #
+  # PATCH /users/user_type
+  #
+  # Route allowing user to change from a student to a teacher, or from a
+  # teacher to a student.
+  #
+  def set_user_type
+    return head(:bad_request) if params[:user].nil?
+    return head(:bad_request) if params[:user][:user_type].nil?
+
+    successfully_updated =
+      if forbidden_change?(current_user, params)
+        false
+      elsif needs_password?(current_user, params)
+        # Guaranteed to fail, but sets appropriate user errors for response
+        current_user.update_with_password(set_user_type_params)
+      else
+        current_user.update_without_password(set_user_type_params)
+      end
+
+    if successfully_updated
+      head :no_content
+    else
+      render status: :unprocessable_entity,
+             json: current_user.errors.as_json(full_messages: true),
+             content_type: 'application/json'
+    end
+  end
+
   private
 
   def respond_to_account_update(successfully_updated, flash_message_kind = :updated)
@@ -133,9 +196,15 @@ class RegistrationsController < Devise::RegistrationsController
   # ie if password or email was changed
   # extend this as needed
   def needs_password?(user, params)
-    params[:user][:email].present? && user.email != params[:user][:email] ||
-        params[:user][:hashed_email].present? && user.hashed_email != params[:user][:hashed_email] ||
-        params[:user][:password].present?
+    email_is_changing = params[:user][:email].present? &&
+      user.email != params[:user][:email]
+    hashed_email_is_changing = params[:user][:hashed_email].present? &&
+      user.hashed_email != params[:user][:hashed_email]
+    new_email_matches_hashed_email = email_is_changing &&
+      User.hash_email(params[:user][:email]) == user.hashed_email
+    (email_is_changing && !new_email_matches_hashed_email) ||
+      hashed_email_is_changing ||
+      params[:user][:password].present?
   end
 
   # Accept only whitelisted params for update.
@@ -174,5 +243,37 @@ class RegistrationsController < Devise::RegistrationsController
       ],
       races: []
     )
+  end
+
+  def set_email_params
+    params.
+      require(:user).
+      permit(:email, :hashed_email, :current_password).
+      merge(email_preference_params(EmailPreference::ACCOUNT_EMAIL_CHANGE, "0"))
+  end
+
+  def set_user_type_params
+    params.
+      require(:user).
+      permit(:user_type, :email, :hashed_email).
+      merge(email_preference_params(EmailPreference::ACCOUNT_TYPE_CHANGE, "0"))
+  end
+
+  def email_preference_params(source, form_kind)
+    params.
+      require(:user).
+      tap do |user|
+        if user[:email_preference_opt_in].present?
+          user[:email_preference_request_ip] = request.env['REMOTE_ADDR']
+          user[:email_preference_source] = source
+          user[:email_preference_form_kind] = form_kind
+        end
+      end.
+      permit(
+        :email_preference_opt_in,
+        :email_preference_request_ip,
+        :email_preference_source,
+        :email_preference_form_kind,
+      )
   end
 end

@@ -25,10 +25,8 @@
   learn_now: همین حالا یاد بگیرید
   petition_message: هر دانش آموز در هر مدرسه باید فرصت یادگیری علم کامپیوتر را داشته
     باشد
-  petition_sign_message: 'اگر شما موافق هستید، نام خود را ثبت کنید.  # به دیگران به
-    پیوندید.'
-  petition_sign_message_support: 'اگر از ما حمایت می کنید، اسمتان را ثبت کنید. به
-    #دیگران بپیوندید.'
+  petition_sign_message: 'If you agree, sign your name.  Join # others.'
+  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
   petition_join_others: 'به #دیگران ملحق شوید'
   name: نام
   email: ایمیل
@@ -2169,3 +2167,11 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
+  homepage_below_hero_announcement_text: We care about your privacy and are making
+    some updates to our privacy policy, effective May 25.
+  homepage_below_hero_announcement_link_text: Learn more
+  volunteer_engineer_submission_field_email_preference: Can we email you about updates
+    to our courses, volunteer opportunities, or other computer science news?
+  volunteer_engineer_submission_field_email_preference_yes: 'Yes'
+  volunteer_engineer_submission_field_email_preference_no: 'No'
+  csp-post-survey_name: Student Post-Course Survey
