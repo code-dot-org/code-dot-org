@@ -162,7 +162,6 @@
     = f.hidden_field :current_password
 
 :ruby
-  current_user.reload
   script_data = {
     edit: {
       userAge: current_user.age,
