@@ -2,12 +2,14 @@ import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import {spy, stub} from 'sinon';
 import {expect} from '../../../../util/configuredChai';
-import ChangeEmailController, {ENCRYPTED_EMAIL_PLACEHOLDER} from '@cdo/apps/lib/ui/accounts/ChangeEmailController';
+import ChangeEmailController from '@cdo/apps/lib/ui/accounts/ChangeEmailController';
 import {hashEmail} from '@cdo/apps/code-studio/hashEmail';
 import color from '@cdo/apps/util/color';
 
+export const ENCRYPTED_EMAIL_PLACEHOLDER = '***encrypted***';
+
 describe('ChangeEmailController', () => {
-  let controller, form, link, displayedUserEmail, userAge, emailChangedCallback;
+  let controller, form, link, displayedUserEmail, emailChangedCallback;
 
   const TEST_EMAIL = 'batman@bat.cave';
   const TEST_PASSWORD = 'test-password';
@@ -15,9 +17,10 @@ describe('ChangeEmailController', () => {
   beforeEach(() => {
     form = $(`
       <form>
-        <input type="hidden" id="change-email-modal_user_email"/>      
-        <input type="hidden" id="change-email-modal_user_hashed_email"/>      
-        <input type="hidden" id="change-email-modal_user_current_password"/>      
+        <input type="hidden" id="change-email-modal_user_email"/>
+        <input type="hidden" id="change-email-modal_user_hashed_email"/>
+        <input type="hidden" id="change-email-modal_user_email_preference_opt_in"/>
+        <input type="hidden" id="change-email-modal_user_current_password"/>
       </form>
     `);
 
@@ -26,26 +29,23 @@ describe('ChangeEmailController', () => {
     displayedUserEmail = $('<span/>');
     displayedUserEmail.effect = spy();
 
-    userAge = $(`
-      <select>
-        <option value="12">12</option>
-        <option value="13">13</option>
-      </select>
-    `);
-
     emailChangedCallback = spy();
+  });
 
-    controller = new ChangeEmailController({
+  function newController(userAge, userType) {
+    return new ChangeEmailController({
       form,
       link,
       displayedUserEmail,
       userAge,
+      userType,
       emailChangedCallback
     });
-  });
+  }
 
   describe('controls ChangeEmailModal', () => {
     beforeEach(() => {
+      controller = newController(12, 'student');
       spy(ReactDOM, 'render');
       spy(ReactDOM, 'unmountComponentAtNode');
     });
@@ -92,13 +92,13 @@ describe('ChangeEmailController', () => {
   });
 
   describe('submitEmailChange', () => {
-
     beforeEach(() => {
+      controller = newController(21, 'teacher');
       stub(form, 'submit').callsFake(() => form.trigger('ajax:success'));
     });
 
     it('sets email field if user is 13 or older', async () => {
-      userAge.val('13');
+      controller = newController(13, 'student');
       await controller.submitEmailChange({
         newEmail: TEST_EMAIL,
         currentPassword: TEST_PASSWORD,
@@ -107,7 +107,7 @@ describe('ChangeEmailController', () => {
     });
 
     it('clears email field if user is under 13', async () => {
-      userAge.val('12');
+      controller = newController(12, 'student');
       await controller.submitEmailChange({
         newEmail: TEST_EMAIL,
         currentPassword: TEST_PASSWORD,
@@ -122,6 +122,36 @@ describe('ChangeEmailController', () => {
       });
       expect(form.find('#change-email-modal_user_hashed_email').val())
         .to.equal(hashEmail(TEST_EMAIL));
+    });
+
+    it('sets email_preference_opt_in if "yes"', async () => {
+      await controller.submitEmailChange({
+        newEmail: TEST_EMAIL,
+        currentPassword: TEST_PASSWORD,
+        emailOptIn: 'yes',
+      });
+      expect(form.find('#change-email-modal_user_email_preference_opt_in').val())
+        .to.equal('yes');
+    });
+
+    it('sets email_preference_opt_in if "no"', async () => {
+      await controller.submitEmailChange({
+        newEmail: TEST_EMAIL,
+        currentPassword: TEST_PASSWORD,
+        emailOptIn: 'no',
+      });
+      expect(form.find('#change-email-modal_user_email_preference_opt_in').val())
+        .to.equal('no');
+    });
+
+    it('does not set email_preference_opt_in otherwise', async () => {
+      await controller.submitEmailChange({
+        newEmail: TEST_EMAIL,
+        currentPassword: TEST_PASSWORD,
+        emailOptIn: undefined,
+      });
+      expect(form.find('#change-email-modal_user_email_preference_opt_in').val())
+        .to.equal('');
     });
 
     it('sets current password field', async () => {
@@ -171,18 +201,21 @@ describe('ChangeEmailController', () => {
   });
 
   describe('onEmailChanged', () => {
-    it('updates the displayed user email if it was not hidden', () => {
+    it('updates the displayed user email for a teacher', () => {
+      controller = newController(21, 'teacher');
       controller.onEmailChanged(TEST_EMAIL);
       expect(displayedUserEmail.text()).to.equal(TEST_EMAIL);
     });
 
-    it('does not update the displayed user email if it was hidden', () => {
+    it('does not update the displayed user email for a student', () => {
+      controller = newController(21, 'student');
       displayedUserEmail.text(ENCRYPTED_EMAIL_PLACEHOLDER);
       controller.onEmailChanged(TEST_EMAIL);
       expect(displayedUserEmail.text()).to.equal(ENCRYPTED_EMAIL_PLACEHOLDER);
     });
 
     it('causes a highlight effect on the displayed user email', () => {
+      controller = newController(21, 'student');
       expect(displayedUserEmail.effect).not.to.have.been.called;
       controller.onEmailChanged(TEST_EMAIL);
       expect(displayedUserEmail.effect).to.have.been.calledWith(
@@ -195,6 +228,7 @@ describe('ChangeEmailController', () => {
     });
 
     it('calls the emailChangeCallback with new email and hashed email', () => {
+      controller = newController(21, 'student');
       expect(emailChangedCallback).not.to.have.been.called;
       controller.onEmailChanged(TEST_EMAIL);
       expect(emailChangedCallback).to.have.been.calledWith(
