@@ -68,7 +68,11 @@ export default class ApplicationDashboard extends React.Component {
     let regionalPartnerFilter = JSON.parse(sessionStorage.getItem("regionalPartnerFilter"));
 
     if (!regionalPartnerFilter) {
-      regionalPartnerFilter = this.props.isWorkshopAdmin ? UNMATCHED_PARTNER_OPTION : ALL_PARTNERS_OPTION;
+      if (this.props.isWorkshopAdmin) {
+        regionalPartnerFilter = UNMATCHED_PARTNER_OPTION;
+      } else {
+        regionalPartnerFilter = this.props.regionalPartners.length === 1 ? this.props.regionalPartners[0] : ALL_PARTNERS_OPTION;
+      }
     }
 
     return regionalPartnerFilter;
