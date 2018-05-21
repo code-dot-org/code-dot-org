@@ -19,7 +19,6 @@ export const COLUMNS = {
 
 const ANSWER_COLUMN_WIDTH = 80;
 const PADDING = 20;
-const NUM_ANSWER_COLUMNS = 3;
 
 const styles = {
   answerColumnHeader: {
@@ -122,7 +121,7 @@ class StudentAssessmentOverviewTable extends Component {
             style: {
               ...tableLayoutStyles.cell,
               ...styles.questionCell,
-              maxWidth: styleConstants['content-width'] - (NUM_ANSWER_COLUMNS * (ANSWER_COLUMN_WIDTH + PADDING)),
+              maxWidth: styleConstants['content-width'] - (5 * (ANSWER_COLUMN_WIDTH + PADDING)),
             }
           },
         }
