@@ -133,10 +133,10 @@
     "show_debug_watch": "false",
     "expand_debugger": "false",
     "teacher_markdown": "* Students will need some time to work on the 3x3 grid problem; it is more challenging than it appears at first. * Students will ask you if you know the least possible number of lines of code needed to draw the 3x3 grid.  Rather than giving an answer, ask student pairs to compare their solutions with other pairs. If they agree on a solution, see if you get a class consensus. \r\n\r\n* You can also ask: Can you do it with fewer commands?  If not, can you prove that it’s impossible to do with fewer?\r\n\r\n* Questions like these are the kinds that programmers ask each other all the time.  And programmers usually work with each other to reach a solution. \r\n\r\n* An example of a solution is given in the teacher tab for the problem in Code Studio, but it is just an example; there are millions of ways to do the 3x3 grid.",
-    "contained_level_names": null,
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

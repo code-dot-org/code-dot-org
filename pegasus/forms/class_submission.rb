@@ -27,6 +27,7 @@ class ClassSubmission < Form
     result[:contact_phone_s] = nil_if_empty data[:contact_phone_s]
 
     result[:email_s] = required email_address data[:email_s]
+    result[:email_preference_optin_s] = required enum(data[:email_preference_optin_s].to_s.strip.downcase, ['yes', 'no'])
 
     result
   end
@@ -132,7 +133,17 @@ class ClassSubmission < Form
     )
   end
 
-  def self.process(data)
+  def self.process_with_ip(data, created_ip)
+    if data['email_preference_optin_s'] && created_ip && data['email_s']
+      EmailPreferenceHelper.upsert!(
+        email: data['email_s'],
+        opt_in: data['email_preference_opt_in_s'] == 'yes',
+        ip_address: created_ip,
+        source: EmailPreferenceHelper::FORM_CLASS_SUBMIT,
+        form_kind: '0'
+      )
+    end
+
     {}.tap do |results|
       location = search_for_address(data['school_address_s'])
       results.merge! location.to_solr if location

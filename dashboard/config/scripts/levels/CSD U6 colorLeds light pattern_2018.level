@@ -127,8 +127,8 @@
     "encrypted_examples": "LYv/4kAfSpf2YkoRvnAaExl20MIIgQKhTyBeNWVH8E/P47Ue730OtxlyBDBi\neoxOX8RP6pmAXa2DudILlB8Q1g==\n",
     "parent_level_id": 10609,
     "name_suffix": "_2018",
-    "contained_level_names": null,
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
