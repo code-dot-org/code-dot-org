@@ -31,8 +31,8 @@ class MultipleChoiceAnswerCell extends Component {
     const {percentValue, isCorrectAnswer, textAnswered} = this.props;
     if (textAnswered) {
       return (
-        <div>
-          <div>
+        <div style={styles.main}>
+          <div style={styles.text}>
             {textAnswered}
           </div>
           <div style={styles.icon}>
