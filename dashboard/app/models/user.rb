@@ -143,6 +143,7 @@ class User < ActiveRecord::Base
     the_school_project
     twitter
     windowslive
+    powerschool
   ).freeze
 
   SYSTEM_DELETED_USERNAME = 'sys_deleted'
