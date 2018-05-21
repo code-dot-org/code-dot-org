@@ -1,11 +1,10 @@
 import React, {PropTypes} from 'react';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import i18n from '@cdo/locale';
-import color from '@cdo/apps/util/color';
-import {hashEmail} from '../../code-studio/hashEmail';
-import {isEmail} from '../../util/formatValidation';
-import $ from 'jquery';
-import {Header, ConfirmCancelFooter} from './SystemDialog/SystemDialog';
+import {hashEmail} from '../../../code-studio/hashEmail';
+import BaseDialog from '../../../templates/BaseDialog';
+import color from '../../../util/color';
+import {isEmail} from '../../../util/formatValidation';
+import {Header, ConfirmCancelFooter} from '../SystemDialog/SystemDialog';
 import ChangeEmailForm from './ChangeEmailForm';
 
 /*
@@ -25,31 +24,16 @@ const STATE_INITIAL = 'initial';
 const STATE_SAVING = 'saving';
 const STATE_UNKNOWN_ERROR = 'unknown-error';
 
-//
-// Note: This dialog submits account changes to dashboard using a
-// hidden Rails-generated form.  It expects that form to already exist in the
-// DOM when the component mounts and to have a particular data attribute.
-//
-// When the user clicks the "update" button, this dialog loads the relevant
-// information into the hidden Rails form and calls submit(). Rails injects
-// all the JavaScript needed for the form to submit via AJAX with all the
-// appropriate validation tokens, etc.  The dialog subscribes to events
-// emitted by the Rails helper JavaScript to detect success or errors.
-//
-// If the dialog can't find the Rails form anywhere it will emit a warning
-// and be unable to submit anything (useful for tests and storybook).
-//
-// Read more:
-// http://guides.rubyonrails.org/working_with_javascript_in_rails.html#rails-ujs-event-handlers
-// https://github.com/rails/jquery-ujs
-//
 export default class ChangeEmailModal extends React.Component {
   static propTypes = {
-    isOpen: PropTypes.bool.isRequired,
+    /**
+     * @type {function({newEmail: string, currentPassword: string}):Promise}
+     */
     handleSubmit: PropTypes.func.isRequired,
+    /**
+     * @type {function()}
+     */
     handleCancel: PropTypes.func.isRequired,
-    railsForm: PropTypes.object.isRequired,
-    userAge: PropTypes.number.isRequired,
     currentHashedEmail: PropTypes.string,
   };
 
@@ -65,18 +49,6 @@ export default class ChangeEmailModal extends React.Component {
     },
   };
 
-  componentDidMount() {
-    this._form = $(this.props.railsForm);
-    this._form.on('ajax:success', this.onSubmitSuccess);
-    this._form.on('ajax:error', this.onSubmitFailure);
-  }
-
-  componentWillUnmount() {
-    this._form.off('ajax:success', this.onSubmitSuccess);
-    this._form.off('ajax:error', this.onSubmitFailure);
-    delete this._form;
-  }
-
   save = () => {
     // No-op if we know the form is invalid, client-side.
     // This blocks return-key submission when the form is invalid.
@@ -84,28 +56,19 @@ export default class ChangeEmailModal extends React.Component {
       return;
     }
 
-    const {newEmail, currentPassword} = this.state.values;
-    this.setState({saveState: STATE_SAVING}, () => {
-      this._form.find('#change-email-modal_user_email').val(this.props.userAge < 13 ? '' : newEmail);
-      this._form.find('#change-email-modal_user_hashed_email').val(hashEmail(newEmail));
-      this._form.find('#change-email-modal_user_current_password').val(currentPassword);
-      this._form.submit();
-    });
+    const {values} = this.state;
+    this.setState({saveState: STATE_SAVING});
+    this.props.handleSubmit(values)
+      .catch(this.onSubmitFailure);
   };
 
   cancel = () => this.props.handleCancel();
 
-  onSubmitSuccess = () => this.props.handleSubmit(this.state.values.newEmail);
-
-  onSubmitFailure = (_, xhr) => {
-    const validationErrors = xhr.responseJSON;
-    if (validationErrors) {
+  onSubmitFailure = (error) => {
+    if (error && error.hasOwnProperty('serverErrors')) {
       this.setState({
         saveState: STATE_INITIAL,
-        serverErrors: {
-          newEmail: validationErrors.email && validationErrors.email[0],
-          currentPassword: validationErrors.current_password && validationErrors.current_password[0],
-        }
+        serverErrors: error.serverErrors
       }, () => this.changeEmailForm.focusOnAnError());
     } else {
       this.setState({saveState: STATE_UNKNOWN_ERROR});
@@ -134,7 +97,7 @@ export default class ChangeEmailModal extends React.Component {
       return i18n.changeEmailModal_newEmail_invalid();
     }
     if (currentHashedEmail === hashEmail(newEmail)) {
-      return i18n.changeEmailmodal_newEmail_mustBeDifferent();
+      return i18n.changeEmailModal_newEmail_mustBeDifferent();
     }
     return null;
   };
@@ -169,7 +132,7 @@ export default class ChangeEmailModal extends React.Component {
     return (
       <BaseDialog
         useUpdatedStyles
-        isOpen={this.props.isOpen}
+        isOpen
         handleClose={this.cancel}
         uncloseable={STATE_SAVING === saveState}
       >

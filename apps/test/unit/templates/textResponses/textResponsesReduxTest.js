@@ -1,39 +1,28 @@
 import {assert} from '../../../util/configuredChai';
 import textResponses, {
-  setSectionId,
   setTextResponses,
   startLoadingResponses,
   finishLoadingResponses,
   convertTextResponseServerData
 } from '@cdo/apps/templates/textResponses/textResponsesRedux';
+import {setSection} from '@cdo/apps/redux/sectionDataRedux';
 
 describe('textResponsesRedux', () => {
   const initialState = textResponses(undefined, {});
 
-  describe('setSectionId', () => {
-    it('sets sectionId', () => {
-      const action = setSectionId(3);
-      const nextState = textResponses(initialState, action);
-      assert.equal(nextState.sectionId, 3);
-    });
-
+  describe('setSection', () => {
     it('resets all other state to initialState', () => {
       const currentState = {
-        sectionId: 1,
         isLoadingResponses: true,
         responseDataByScript: {
           1: {question: 'Question 1', response: 'Response 1'},
           2: {question: 'Question 2', response: 'Response 2'}
         }
       };
-      const newSectionId = 2;
-      const expectedNextState = {
-        ...initialState,
-        sectionId: newSectionId
-      };
-      const action = setSectionId(newSectionId);
+      const newSection = {id: 2, students: []};
+      const action = setSection(newSection);
       const nextState = textResponses(currentState, action);
-      assert.deepEqual(nextState, expectedNextState);
+      assert.deepEqual(nextState, initialState);
     });
   });
 
