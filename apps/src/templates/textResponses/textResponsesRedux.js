@@ -1,4 +1,5 @@
 import {PropTypes} from 'react';
+import {SET_SECTION} from '@cdo/apps/redux/sectionDataRedux';
 
 // Shape for an individual text response
 export const textResponsePropType = PropTypes.shape({
@@ -14,18 +15,15 @@ export const textResponsePropType = PropTypes.shape({
  // Initial state of textResponsesRedux
  // responseDataByScript - object - key is scriptId, value is array of textResponsePropType
 const initialState = {
-  sectionId: null,
   responseDataByScript: {},
   isLoadingResponses: false
 };
 
-const SET_SECTION_ID = 'textResponses/SET_SECTION_ID';
 const SET_TEXT_RESPONSES = 'textResponses/SET_TEXT_RESPONSES';
 const START_LOADING_TEXT_RESPONSES = 'textResponses/START_LOADING_TEXT_RESPONSES';
 const FINISH_LOADING_TEXT_RESPONSES = 'textResponses/FINISH_LOADING_TEXT_RESPONSES';
 
 // Action creators
-export const setSectionId = sectionId => ({ type: SET_SECTION_ID, sectionId });
 export const setTextResponses = (scriptId, responseData) => ({ type: SET_TEXT_RESPONSES, scriptId, responseData});
 export const startLoadingResponses = () => ({ type: START_LOADING_TEXT_RESPONSES });
 export const finishLoadingResponses = () => ({ type: FINISH_LOADING_TEXT_RESPONSES });
@@ -54,13 +52,12 @@ export const asyncLoadTextResponses = (sectionId, scriptId, onComplete) => {
 };
 
 export default function textResponses(state=initialState, action) {
-  if (action.type === SET_SECTION_ID) {
-    // Setting the sectionId is the first action to be called when switching
+  if (action.type === SET_SECTION) {
+    // Setting the section is the first action to be called when switching
     // sections, which requires us to reset our state. This might need to change
     // once switching sections is in react/redux.
     return {
-      ...initialState,
-      sectionId: action.sectionId
+      ...initialState
     };
   }
   if (action.type === SET_TEXT_RESPONSES) {

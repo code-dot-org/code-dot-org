@@ -1,5 +1,16 @@
 drop table if exists analysis_pii.regional_partner_stats;
 create table analysis_pii.regional_partner_stats AS
+with completed as
+(
+  select 
+    studio_person_id,
+    case when cc.course_name = 'csp' then 'CS Principles'
+         when cc.course_name in ('csd','csd_half') then 'CS Discoveries'
+    end as course
+  from csp_csd_completed_teachers cc
+  join users u on u.id = cc.user_id
+  where cc.school_year = '2017-18'
+) 
   SELECT d.course,
          d.location,
          d.first_name,
@@ -20,6 +31,7 @@ create table analysis_pii.regional_partner_stats AS
          qwa.q3,
          qwa.q4,
          case when (q1 + q2 + q3 + q4) >= 3 then 1 else 0 end as retained,
+         case when c.studio_person_id is not null then 1 else 0 end as completed,
          tmp.script_most_progress,
          tmp.students_script_most_progress,
          sa.sections,
@@ -47,7 +59,10 @@ create table analysis_pii.regional_partner_stats AS
   LEFT JOIN analysis.teacher_most_progress tmp 
          ON tmp.studio_person_id = u.studio_person_id
   LEFT JOIN analysis.student_activity sa 
-         ON sa.studio_person_id = u.studio_person_id;
+         ON sa.studio_person_id = u.studio_person_id
+  LEFT JOIN completed c
+         ON c.studio_person_id = u.studio_person_id
+        AND c.course = d.course;
 
 GRANT ALL PRIVILEGES ON analysis_pii.regional_partner_stats TO GROUP admin;
 GRANT SELECT ON analysis_pii.regional_partner_stats TO GROUP reader_pii;

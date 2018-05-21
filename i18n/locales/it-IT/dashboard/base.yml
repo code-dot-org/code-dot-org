@@ -123,6 +123,9 @@ it:
     field_is_required: "è un dato obbligatorio"
     accept_terms: "Devi accettare le condizioni per creare un account"
     error: "Si è verificato un errore."
+    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_yes: "Sì"
+    email_preference_no: "No"
   school_info:
     title: 'Informazioni sulla scuola (opzionale)'
     school_country: 'Paese della Scuola'
@@ -882,6 +885,11 @@ it:
     csp_ap_1: 'Capitolo 1: Installazione di AP Tech'
     csp_ap_2: 'Capitolo 2: AP analizzare il Task Performance'
     csp_ap_3: 'Capitolo 3: AP creare il Task Performance'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Unità 2: Informazioni digitali'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: 'Punti di riflessione'
   external_links:
     disclaimer: Limiti di responsabilità
@@ -986,3 +994,7 @@ it:
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: 'Corsi Avanzati'
+  cookie_banner:
+    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+    more_information: "See Code.org's Privacy Policy."
+    accept: 'Firmo'

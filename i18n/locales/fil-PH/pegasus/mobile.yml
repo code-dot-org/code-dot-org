@@ -952,6 +952,20 @@
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Yunit 5: Mga Datos at Lipunan'
   csd6_name: 'Yunit 6: Pisikal na Computing'
+  csd1-2018_name: 'Unit 1: Problem Solving'
+  csd2-2018_name: 'Unit 2: Web Development'
+  csd3-2018_name: 'Unit 3: Animation and Games'
+  csd4-2018_name: 'Unit 4: The Design Process'
+  csd5-2018_name: 'Yunit 5: Mga Datos at Lipunan'
+  csd6-2018_name: 'Yunit 6: Pisikal na Computing'
+  csp1-2018_name: 'Yunit 1: Ang Internet'
+  csp2-2018_name: 'Yunit 2: Digital na Impormasyon'
+  csp3-2018_name: 'Unit 3: Algorithms and Programming'
+  csp4-2018_name: 'Unit 4: Big Data and Privacy'
+  csp5-2018_name: 'Unit 5: Building Apps'
+  csp-explore-2018_name: 'AP: Tuklasin ang PT Prep'
+  csp-create-2018_name: 'AP: Maglikha ng PT Prep'
+  csppostap-2018_name: 'Pagkatapos ng AP: Mga Database sa mga Apps'
   csp1_name: 'Yunit 1: Ang Internet'
   csp2_name: 'Yunit 2: Digital na Impormasyon'
   csp3_name: 'Unit 3: Algorithms and Programming'
@@ -987,9 +1001,11 @@
   csf_category_name: "CS Fundamentals"
   csf_international_category_name: "Internasyonal na CS Fundamentals"
   csf2_draft_category_name: 'Kasalukuyang Ginagawa: Mga Kursong A - F'
-  csd_category_name: "CS Discoveries"
+  csd_category_name: "CS Discoveries ('17-'18)"
+  csd_2018_category_name: "CS Discoveries ('18-'19)"
   csp_category_name: "'15-'16 na mga Prinsipyo ng CS"
   csp17_category_name: "Mga Prinsipyo ng CS"
+  csp_2018_category_name: "CS Principles ('18-'19)"
   cspexams_category_name: "Pag-ensayo na Pagsubok sa mga Prinsipyo ng CS"
   research_studies_category_name: "Research Studies"
   applab_name: "App na Lab"
@@ -1448,6 +1464,7 @@
   header_documentation: "Dokumentasyon"
   csp_name: "Mga Prinsipyo ng CS"
   csd_name: "CS Discoveries"
+  csd_2018_name: "CS Discoveries"
   full_course_category_name: "Buong mga Kurso"
   user_header_label: "Mabuhay %{username}"
   user_header_settings: "Account Ko"

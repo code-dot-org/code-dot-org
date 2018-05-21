@@ -209,7 +209,7 @@ class User < ActiveRecord::Base
 
   after_create :associate_with_potential_pd_enrollments
 
-  after_create :save_email_preference, if: -> {!email_preference_opt_in.nil?}
+  after_save :save_email_preference, if: -> {email_preference_opt_in.present?}
 
   def save_email_preference
     if teacher?
@@ -217,8 +217,8 @@ class User < ActiveRecord::Base
         email: email,
         opt_in: email_preference_opt_in.downcase == "yes",
         ip_address: email_preference_request_ip,
-        source: EmailPreference::ACCOUNT_SIGN_UP,
-        form_kind: "0"
+        source: email_preference_source,
+        form_kind: email_preference_form_kind,
       )
     end
   end
@@ -427,8 +427,11 @@ class User < ActiveRecord::Base
   ].freeze
 
   attr_accessor :login
-  attr_accessor :email_preference_opt_in_required, :email_preference_opt_in
+  attr_accessor :email_preference_opt_in_required
+  attr_accessor :email_preference_opt_in
   attr_accessor :email_preference_request_ip
+  attr_accessor :email_preference_source
+  attr_accessor :email_preference_form_kind
 
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
 
@@ -484,6 +487,9 @@ class User < ActiveRecord::Base
   validate :email_matches_for_oauth_upgrade, if: 'oauth? && user_type_changed?', on: :update
 
   validates_presence_of :email_preference_opt_in, if: :email_preference_opt_in_required
+  validates_presence_of :email_preference_request_ip, if: -> {email_preference_opt_in.present?}
+  validates_presence_of :email_preference_source, if: -> {email_preference_opt_in.present?}
+  validates_presence_of :email_preference_form_kind, if: -> {email_preference_opt_in.present?}
 
   def email_matches_for_oauth_upgrade
     if user_type == User::TYPE_TEACHER
@@ -1604,6 +1610,17 @@ class User < ActiveRecord::Base
   # picture, or some other unusual method
   def can_edit_password?
     encrypted_password.present?
+  end
+
+  # Whether the current user has permission to change their own account type
+  # from the account edit page.
+  def can_change_own_user_type?
+    # Don't allow editing user type unless we can also edit email, because
+    # changing from a student (encrypted email) to a teacher (plaintext email)
+    # requires entering an email address.
+    # Don't allow editing user type for teachers with sections, as our validations
+    # require sections to be owned by teachers.
+    can_edit_email? && (student? || sections.empty?)
   end
 
   # Whether the current user has permission to delete their own account from

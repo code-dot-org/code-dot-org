@@ -125,6 +125,41 @@ GameLabP5.prototype.init = function (options) {
     return false;
   };
 
+  // Modify p5 to ignore out-of-bounds positions before setting touchIsDown
+  window.p5.prototype._ontouchstart = function (e) {
+    if (!this._curElement) {
+      return;
+    }
+    var validTouch;
+    for (var i = 0; i < e.touches.length; i++) {
+      validTouch = getTouchInfo(this._curElement.elt, e, i);
+      if (validTouch) {
+        break;
+      }
+    }
+    if (!validTouch) {
+      // No in-bounds (valid) touches, return and ignore:
+      return;
+    }
+    var context = this._isGlobal ? window : this;
+    var executeDefault;
+    this._updateNextTouchCoords(e);
+    this._updateNextMouseCoords(e);
+    this._setProperty('touchIsDown', true);
+    if (typeof context.touchStarted === 'function') {
+      executeDefault = context.touchStarted(e);
+      if (executeDefault === false) {
+        e.preventDefault();
+      }
+    } else if (typeof context.mousePressed === 'function') {
+      executeDefault = context.mousePressed(e);
+      if (executeDefault === false) {
+        e.preventDefault();
+      }
+      //this._setMouseButton(e);
+    }
+  };
+
   // Modify p5 to handle CSS transforms (scale) and ignore out-of-bounds
   // positions before reporting touch coordinates
   //
@@ -184,6 +219,36 @@ GameLabP5.prototype.init = function (options) {
       };
     }
   }
+
+  // Modify p5 to ignore out-of-bounds positions before setting mouseIsPressed
+  // and isMousePressed
+  window.p5.prototype._onmousedown = function (e) {
+    if (!this._curElement) {
+      return;
+    }
+    if (!getMousePos(this._curElement.elt, e)) {
+      // Not in-bounds, return and ignore:
+      return;
+    }
+    var context = this._isGlobal ? window : this;
+    var executeDefault;
+    this._setProperty('isMousePressed', true);
+    this._setProperty('mouseIsPressed', true);
+    this._setMouseButton(e);
+    this._updateNextMouseCoords(e);
+    this._updateNextTouchCoords(e);
+    if (typeof context.mousePressed === 'function') {
+      executeDefault = context.mousePressed(e);
+      if (executeDefault === false) {
+        e.preventDefault();
+      }
+    } else if (typeof context.touchStarted === 'function') {
+      executeDefault = context.touchStarted(e);
+      if (executeDefault === false) {
+        e.preventDefault();
+      }
+    }
+  };
 
   // Modify p5 to handle CSS transforms (scale) and ignore out-of-bounds
   // positions before reporting mouse coordinates

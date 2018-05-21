@@ -123,6 +123,9 @@ fil:
     field_is_required: "ay kailangan"
     accept_terms: "Kailangan mong sumang-ayon para gumawa ng account"
     error: "May problemang naganap."
+    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_yes: "Oo"
+    email_preference_no: "Hindi"
   school_info:
     title: 'Impormasyon ng Paaralan (opsyonal)'
     school_country: 'Bansa ng Paaralan'
@@ -882,6 +885,11 @@ fil:
     csp_ap_1: 'Kabanata 1: AP Tech na Setup'
     csp_ap_2: 'Kabanata 2: AP Explore na Performance Task'
     csp_ap_3: 'Kabanata 3: AP Maglikha ng Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Yunit 2: Digital na Impormasyon'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: 'Pagmunimuni na mga Prompt'
   external_links:
     disclaimer: Disclaimer
@@ -986,3 +994,7 @@ fil:
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: 'Buong mga Kurso'
+  cookie_banner:
+    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+    more_information: "See Code.org's Privacy Policy."
+    accept: 'Ako ay sumasang-ayon'
