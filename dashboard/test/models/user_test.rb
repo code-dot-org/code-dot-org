@@ -84,15 +84,6 @@ class UserTest < ActiveSupport::TestCase
     experiment.destroy
   end
 
-  test 'any_experiments_enabled? returns true if user experiment is enabled' do
-    create :single_user_experiment, min_user_id: @user.id
-    assert @user.any_experiments_enabled?
-  end
-
-  test 'any_experiments_enabled? returns false if no user experiments are enabled' do
-    refute @user.any_experiments_enabled?
-  end
-
   test 'normalize_email' do
     teacher = create :teacher, email: 'CAPS@EXAMPLE.COM'
     assert_equal 'caps@example.com', teacher.email

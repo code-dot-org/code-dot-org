@@ -1213,11 +1213,6 @@ class User < ActiveRecord::Base
     Experiment.get_all_enabled(user: self).pluck(:name)
   end
 
-  # Returns whether any experiments are enabled for the specified user
-  def any_experiments_enabled?
-    Experiment.get_all_enabled(user: self).present?
-  end
-
   def suppress_ui_tips_for_new_users
     # New teachers don't need to see the UI tips for their home and course pages,
     # so set them as already dismissed.
