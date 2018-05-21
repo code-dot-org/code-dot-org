@@ -52,12 +52,19 @@ Scenario: Instructions do not show a resizer on embedded levels
   And I wait for the page to fully load
   And element "#ui-test-resizer" is not visible
 
-Scenario: 'Feedback' tab is visible if user is a teacher and flag is on and displays 'Coming soon'
+Scenario: 'Feedback' tab is visible if user is a teacher and the teacher experience flag is on and displays 'Coming soon'
   Given I am a teacher
   And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/20?enableExperiments=commentBoxTab"
   And I click selector ".uitest-feedback" once I see it
   And I wait until ".editor-column" contains text "Coming soon"
   And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/20?disableExperiments=commentBoxTab"
+
+Scenario: 'Feedback' tab is visible if user is a teacher and the comment box dev flag is on, defaults to feedback, and displays 'Please enter feedback'
+  Given I am a teacher
+  And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/20?enableExperiments=devCommentBoxTab"
+  And I wait until element "textarea" is visible
+  And I wait until ".editor-column" does not contain text "Coming soon"
+  And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/20?disableExperiments=devCommentBoxTab"
 
 Scenario: 'Feedback' tab is not visible if user is a student
   Given I am a student
@@ -65,7 +72,13 @@ Scenario: 'Feedback' tab is not visible if user is a student
   And element ".uitest-feedback" is not visible
   And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/20?disableExperiments=commentBoxTab"
 
-Scenario: 'Feedback' tab is not visible if user is a teacher but flag is off
+Scenario: 'Feedback' tab is not visible if user is a student (dev flag)
+  Given I am a student
+  And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/20?enableExperiments=devCommentBoxTab"
+  And element ".uitest-feedback" is not visible
+  And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/20?disableExperiments=devCommentBoxTab"
+
+Scenario: 'Feedback' tab is not visible if user is a teacher but all flags are off
   Given I am a teacher
   And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/20"
   And element ".uitest-feedback" is not visible
