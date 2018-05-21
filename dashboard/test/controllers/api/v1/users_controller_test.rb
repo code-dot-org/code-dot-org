@@ -46,6 +46,22 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     assert_response 403
   end
 
+  test 'a post request to accept_data_transfer_agreement updates data transfer related user properties' do
+    sign_in(@user)
+    @user.data_transfer_agreement_accepted = false
+    refute @user.data_transfer_agreement_accepted
+    Timecop.freeze(DateTime.now) do
+      post :accept_data_transfer_agreement, params: {user_id: 'me'}
+      assert_response :success
+      @user.reload
+      assert @user.data_transfer_agreement_accepted
+      assert_equal @user.data_transfer_agreement_accepted_at, DateTime.now.iso8601(3)
+      assert @user.data_transfer_agreement_request_ip
+      assert_equal @user.data_transfer_agreement_source, "ACCEPT_DATA_TRANSFER_DIALOG"
+      assert_equal @user.data_transfer_agreement_kind, 0
+    end
+  end
+
   test 'a post request to post_ui_tip_dismissed updates ui_tip_dismissed_homepage_header' do
     sign_in(@user)
     @user.ui_tip_dismissed_homepage_header = false
