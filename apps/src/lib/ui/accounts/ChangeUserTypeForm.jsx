@@ -1,5 +1,6 @@
 import React, {PropTypes} from 'react';
 import i18n from '@cdo/locale';
+import {pegasus} from '../../../lib/util/urlHelpers';
 import {Field} from '../SystemDialog/SystemDialog';
 
 export default class ChangeUserTypeForm extends React.Component {
@@ -47,6 +48,18 @@ export default class ChangeUserTypeForm extends React.Component {
     }
   };
 
+  emailOptInLabelDetails() {
+    return (
+      <span>
+        {i18n.changeUserTypeModal_emailOptIn_description()}
+        {' '}
+        <a href={pegasus('/privacy')} tabIndex="3">
+          {i18n.changeUserTypeModal_emailOptIn_privacyPolicy()}
+        </a>
+      </span>
+    );
+  }
+
   render() {
     const {values, validationErrors, disabled} = this.props;
     return (
@@ -63,6 +76,7 @@ export default class ChangeUserTypeForm extends React.Component {
             type="email"
             value={values.currentEmail}
             disabled={disabled}
+            tabIndex="1"
             onKeyDown={this.onKeyDown}
             onChange={this.onCurrentEmailChange}
             autoComplete="off"
@@ -73,12 +87,13 @@ export default class ChangeUserTypeForm extends React.Component {
           />
         </Field>
         <Field
-          label={i18n.changeUserTypeModal_emailOptIn_description()}
+          labelDetails={this.emailOptInLabelDetails()}
           error={validationErrors.emailOptIn}
         >
           <select
             value={values.emailOptIn}
             disabled={disabled}
+            tabIndex="1"
             onKeyDown={this.onKeyDown}
             onChange={this.onEmailOptInChange}
             style={{
