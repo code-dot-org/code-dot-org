@@ -70,7 +70,7 @@ export default class ChangeUserTypeModal extends React.Component {
     const {serverErrors} = this.state;
     return {
       currentEmail: serverErrors.currentEmail || this.getCurrentEmailValidationError(),
-      emailOptIn: serverErrors.emailOptIn,
+      emailOptIn: serverErrors.emailOptIn || this.getEmailOptInValidationError(),
     };
   }
 
@@ -85,6 +85,14 @@ export default class ChangeUserTypeModal extends React.Component {
     }
     if (currentHashedEmail !== hashEmail(currentEmail)) {
       return i18n.changeUserTypeModal_currentEmail_mustMatch();
+    }
+    return null;
+  };
+
+  getEmailOptInValidationError = () => {
+    const {emailOptIn} = this.state.values;
+    if (emailOptIn.length === 0) {
+      return i18n.changeUserTypeModal_emailOptIn_isRequired();
     }
     return null;
   };
