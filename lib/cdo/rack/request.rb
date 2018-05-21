@@ -1,6 +1,7 @@
 require 'rack/request'
 require 'ipaddr'
 require 'json'
+require 'country_codes'
 
 module Cdo
   module RequestExtension
@@ -100,6 +101,15 @@ module Cdo
       warden.first.first
     rescue
       return nil
+    end
+
+    def country
+      env['HTTP_CLOUDFRONT_VIEWER_COUNTRY'] ||
+        location&.country_code
+    end
+
+    def gdpr?
+      gdpr_country_code?(country)
     end
   end
 end
