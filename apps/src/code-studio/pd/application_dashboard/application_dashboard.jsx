@@ -70,8 +70,10 @@ export default class ApplicationDashboard extends React.Component {
     if (!regionalPartnerFilter) {
       if (this.props.isWorkshopAdmin) {
         regionalPartnerFilter = UNMATCHED_PARTNER_OPTION;
+      } else if (this.props.regionalPartners.length === 1) {
+        regionalPartnerFilter = {label: this.props.regionalPartners[0].name, value: this.props.regionalPartners[0].id};
       } else {
-        regionalPartnerFilter = this.props.regionalPartners.length === 1 ? this.props.regionalPartners[0] : ALL_PARTNERS_OPTION;
+        regionalPartnerFilter = ALL_PARTNERS_OPTION;
       }
     }
 
