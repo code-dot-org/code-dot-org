@@ -199,7 +199,7 @@ class Script < ActiveRecord::Base
   # @param [User] user
   # @return [Script[]]
   def self.valid_scripts(user)
-    user_experiments_enabled = user.any_experiments_enabled?
+    user_experiments_enabled = Course.has_any_course_experiments?(user)
     with_hidden = !user_experiments_enabled && user.hidden_script_access?
     cache_key = "valid_scripts/#{with_hidden ? 'all' : 'valid'}"
     scripts = Rails.cache.fetch(cache_key) do
