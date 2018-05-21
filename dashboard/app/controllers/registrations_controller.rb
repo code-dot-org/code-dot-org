@@ -56,8 +56,8 @@ class RegistrationsController < Devise::RegistrationsController
       end
 
       if params[:data_transfer_agreement_required] && params[:data_transfer_agreement] == "1"
-        params[:data_transfer_agreement] = true
-        params[:data_transfer_agreement_request_ip] = request.env['REMOTE_ADDR']
+        params[:data_transfer_agreement_accepted] = true
+        params[:data_transfer_agreement_request_ip] = request.ip
         params[:data_transfer_agreement_source] = User::ACCOUNT_SIGN_UP
         params[:data_transfer_agreement_kind] = "0"
         params[:data_transfer_agreement_at] = DateTime.now
