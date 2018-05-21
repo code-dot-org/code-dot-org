@@ -939,7 +939,7 @@ endvariants
   end
 
   def has_hidden_script?(response)
-    response.find(&:hidden).present?
+    response.any?(&:hidden)
   end
 
   test "self.valid_scripts: does not return hidden scripts when user is a student" do
