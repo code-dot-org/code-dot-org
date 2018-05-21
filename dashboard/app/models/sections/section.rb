@@ -64,8 +64,6 @@ class Section < ActiveRecord::Base
   has_many :section_hidden_stages
   has_many :section_hidden_scripts
 
-  scope :with_student, ->(student) {joins(:followers).where(followers: {student_user_id: student.id})}
-
   SYSTEM_DELETED_NAME = 'system_deleted'.freeze
 
   # This list is duplicated as SECTION_LOGIN_TYPE in shared_constants.rb and should be kept in sync.
