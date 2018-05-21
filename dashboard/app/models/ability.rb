@@ -69,7 +69,7 @@ class Ability
       can :read, Pd::Session
       can :manage, Pd::Enrollment, user_id: user.id
       can :workshops_user_enrolled_in, Pd::Workshop
-      can [:index, :valid_scripts], Section, user_id: user.id
+      can :index, Section, user_id: user.id
       can :membership, Section, Section.with_student(user) do |section|
         user.sections_as_student.include?(section)
       end
