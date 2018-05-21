@@ -2,7 +2,7 @@
 require 'test_helper'
 
 #
-# Tests over /users/user_type
+# Tests over PATCH /users/user_type
 #
 # This route is handled by RegistrationsController but is complex enough to
 # merit its own test file.

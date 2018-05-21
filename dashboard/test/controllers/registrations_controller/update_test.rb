@@ -2,52 +2,98 @@
 require 'test_helper'
 
 #
-# Tests over PATCH /users/email
+# Tests over PUT /users
 #
 # This route is handled by RegistrationsController but is complex enough to
 # merit its own test file.
 #
-class SetEmailTest < ActionDispatch::IntegrationTest
-  test "set email without user param returns 400 BAD REQUEST" do
+class UpdateTest < ActionDispatch::IntegrationTest
+  test "update student without user param returns 400 BAD REQUEST" do
     student = create :student
     sign_in student
     assert_does_not_create(User) do
-      patch '/users/email', as: :json, params: {}
+      put '/users', params: {}
     end
     assert_response :bad_request
   end
 
-  test "set email with utf8mb4 in email fails" do
+  test "update student with utf8mb4 in name fails" do
     student = create :student
+
+    sign_in student
+
+    assert_does_not_create(User) do
+      put '/users', params: {user: {name: panda_panda}}
+    end
+    assert_response :success # which actually means an error...
+    assert_equal ['Display Name is invalid'], assigns(:user).errors.full_messages
+    assert_select 'div#error_explanation', /Display Name is invalid/ # ... is rendered on the page
+  end
+
+  test "update student with utf8mb4 in email fails" do
+    student = create :student
+
     sign_in student
 
     # don't ask the db for existing panda emails
     User.expects(:find_by_email_or_hashed_email).never
 
     assert_does_not_create(User) do
-      patch '/users/email', as: :json, params: {
+      put '/users', params: {
         user: {email: "#{panda_panda}@panda.xx", current_password: '00secret'}
       }
     end
 
-    assert_response :unprocessable_entity
+    assert_response :success # which actually means an error...
     assert_equal ['Email is invalid'], assigns(:user).errors.full_messages
-    assert_equal response.body, {email: ['Email is invalid']}.to_json
+    assert_select 'div#error_explanation', /Email is invalid/ # ... is rendered on the page
+  end
+
+  test "update student with age" do
+    Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
+      student = create :student, birthday: '1981/03/24'
+
+      sign_in student
+
+      put '/users', params: {format: :js, user: {age: 9}}
+      assert_response :no_content
+
+      assert_equal Date.today - 9.years, assigns(:user).birthday
+    end
+  end
+
+  test "update student with age with weird params" do
+    # we are getting input that looks like this:
+    # "user" => {"age" => {"Pr" => ""}}
+    # https://www.honeybadger.io/projects/3240/faults/9963470
+    Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
+      student = create :student, birthday: '1981/03/24'
+
+      sign_in student
+
+      put '/users', params: {format: :js, user: {age: {"Pr" => nil}}}
+      assert_response :no_content
+
+      # did not change
+      assert_equal '1981-03-24', assigns(:user).birthday.to_s
+    end
   end
 
   test "update student with client side hashed email" do
     student = create :student, birthday: '1981/03/24', password: 'whatev'
     sign_in student
 
-    patch '/users/email', as: :json, params: {
+    put '/users', params: {
       user: {
+        age: '9',
         email: '',
         hashed_email: User.hash_email('hidden@email.com'),
         current_password: 'whatev' # need this to change email
       }
     }
 
-    assert_response :success
+    assert_redirected_to '/'
+
     assert_equal '', assigns(:user).email
     assert_equal User.hash_email('hidden@email.com'), assigns(:user).hashed_email
   end
@@ -56,14 +102,16 @@ class SetEmailTest < ActionDispatch::IntegrationTest
     student = create :student, birthday: '1981/03/24', password: 'whatev'
     sign_in student
 
-    patch '/users/email', as: :json, params: {
+    put '/users', params: {
       user: {
+        age: '19',
         email: 'hashed@email.com',
         current_password: 'whatev' # need this to change email
       }
     }
 
-    assert_response :success
+    assert_redirected_to '/'
+
     assert_equal '', assigns(:user).email
     assert_equal User.hash_email('hashed@email.com'), assigns(:user).hashed_email
   end
@@ -71,16 +119,115 @@ class SetEmailTest < ActionDispatch::IntegrationTest
   test 'update rejects unwanted parameters' do
     user = create :user, name: 'non-admin'
     sign_in user
-    patch '/users/email', as: :json, params: {user: {admin: true}}
-    assert_response :success
+    put '/users', params: {user: {name: 'admin', admin: true}}
 
     user.reload
+    assert_equal 'admin', user.name
     refute user.admin
   end
 
-  # The next several tests explore email changes for users with or without
+  test "converting student to teacher without password succeeds when email hasn't changed" do
+    test_email = 'me@example.com'
+    student = create :student, email: test_email
+    original_hashed_email = student.hashed_email
+    assert_empty student.email
+    sign_in student
+
+    put '/users', as: :json, params: {
+      user: {
+        user_type: 'teacher',
+        email: test_email,
+        hashed_email: student.hashed_email
+      }
+    }
+    assert_response :success
+
+    student.reload
+    assert_equal 'teacher', student.user_type
+    assert_equal test_email, student.email
+    assert_equal original_hashed_email, student.hashed_email
+  end
+
+  test "converting student to teacher without password fails when email doesn't match" do
+    test_email = 'me@example.com'
+    student = create :student, email: test_email
+    original_hashed_email = student.hashed_email
+    assert_empty student.email
+    sign_in student
+
+    put '/users', as: :json, params: {
+      user: {
+        user_type: 'teacher',
+        email: 'wrong_email@example.com',
+        hashed_email: student.hashed_email
+      }
+    }
+    assert_response :unprocessable_entity
+
+    student.reload
+    assert_equal 'student', student.user_type
+    assert_empty student.email
+    assert_equal original_hashed_email, student.hashed_email
+  end
+
+  test "converting teacher to student without password succeeds" do
+    test_email = 'me@example.com'
+    teacher = create :teacher, email: test_email
+    original_hashed_email = teacher.hashed_email
+    sign_in teacher
+
+    put '/users', as: :json, params: {
+      user: {
+        user_type: 'student',
+        email: '',
+        hashed_email: teacher.hashed_email
+      }
+    }
+    assert_response :success
+
+    teacher.reload
+    assert_equal 'student', teacher.user_type
+    assert_empty teacher.email
+    assert_equal original_hashed_email, teacher.hashed_email
+  end
+
+  # The next several tests explore profile changes for users with or without
   # passwords.  Examples of users without passwords are users that authenticate
   # via oauth (a third-party account), or students with a picture password.
+
+  test "editing password of student-without-password is not allowed" do
+    student_without_password = create :student
+    student_without_password.update_attribute(:encrypted_password, '')
+    assert student_without_password.encrypted_password.blank?
+
+    refute can_edit_password_without_password student_without_password
+    refute can_edit_password_with_password student_without_password, 'wrongpassword'
+    refute can_edit_password_with_password student_without_password, ''
+  end
+
+  test "editing password of student-with-password requires current password" do
+    student_with_password = create :student, password: 'oldpassword'
+    refute can_edit_password_without_password student_with_password
+    refute can_edit_password_with_password student_with_password, 'wrongpassword'
+    assert can_edit_password_with_password student_with_password, 'oldpassword'
+  end
+
+  test "editing password of teacher-without-password is not allowed" do
+    teacher_without_password = create :teacher
+    teacher_without_password.update_attribute(:encrypted_password, '')
+    assert teacher_without_password.encrypted_password.blank?
+
+    refute can_edit_password_without_password teacher_without_password
+    refute can_edit_password_with_password teacher_without_password, 'wrongpassword'
+    refute can_edit_password_with_password teacher_without_password, ''
+  end
+
+  test "editing password of teacher-with-password requires current password" do
+    teacher_with_password = create :teacher, password: 'oldpassword'
+    refute can_edit_password_without_password teacher_with_password
+    refute can_edit_password_with_password teacher_with_password, 'wrongpassword'
+    assert can_edit_password_with_password teacher_with_password, 'oldpassword'
+  end
 
   test "editing email of student-without-password is not allowed" do
     student_without_password = create :student
@@ -151,85 +298,28 @@ class SetEmailTest < ActionDispatch::IntegrationTest
     refute can_edit_hashed_email_with_password teacher_with_password, 'oldpassword'
   end
 
-  test "updating teacher email with positive email opt-in" do
-    new_email = 'new_email@example.com'
-    teacher = create :teacher, password: 'password'
-    sign_in teacher
-    patch '/users/email', as: :json, params: {
-      user: {
-        email: new_email,
-        current_password: 'password',
-        email_preference_opt_in: 'yes',
-      }
-    }
-    assert_response :success
-
-    preference = EmailPreference.find_by_email(new_email)
-    refute_nil preference
-    assert_equal true, preference.opt_in
-    assert_equal request.env['REMOTE_ADDR'], preference.ip_address
-    assert_equal EmailPreference::ACCOUNT_EMAIL_CHANGE, preference.source
-    assert_equal "0", preference.form_kind
-  end
-
-  test "updating teacher email with negative email opt-in" do
-    new_email = 'new_email@example.com'
-    teacher = create :teacher, password: 'password'
-    sign_in teacher
-    patch '/users/email', as: :json, params: {
-      user: {
-        email: new_email,
-        current_password: 'password',
-        email_preference_opt_in: 'no',
-      }
-    }
-    assert_response :success
-
-    preference = EmailPreference.find_by_email(new_email)
-    refute_nil preference
-    assert_equal false, preference.opt_in
-    assert_equal request.env['REMOTE_ADDR'], preference.ip_address
-    assert_equal EmailPreference::ACCOUNT_EMAIL_CHANGE, preference.source
-    assert_equal "0", preference.form_kind
-  end
-
-  test "updating teacher email skips email opt-in when update fails" do
-    new_email = 'new_email@example.com'
-    teacher = create :teacher
-    sign_in teacher
-    patch '/users/email', as: :json, params: {
-      user: {
-        email: new_email,
-        email_preference_opt_in: 'yes'
-      }
-    }
-    assert_response :unprocessable_entity
-
-    refute EmailPreference.find_by_email(new_email)
-  end
-
-  test "updating student email ignores email opt-in" do
-    new_email = 'new_email@example.com'
-    student = create :student
-    sign_in student
-    patch '/users/email', as: :json, params: {
-      user: {
-        email: new_email,
-        email_preference_opt_in: 'yes'
-      }
-    }
-    assert_response :unprocessable_entity
-
-    refute EmailPreference.find_by_email(new_email)
-  end
-
   private
+
+  def can_edit_password_without_password(user)
+    new_password = 'newpassword'
+
+    sign_in user
+    put '/users', params: {
+      user: {
+        password: new_password,
+        password_confirmation: new_password
+      }
+    }
+
+    user = user.reload
+    user.valid_password? new_password
+  end
 
   def can_edit_password_with_password(user, current_password)
     new_password = 'newpassword'
 
     sign_in user
-    patch '/users/email', as: :json, params: {
+    put '/users', params: {
       user: {
         password: new_password,
         password_confirmation: new_password,
@@ -245,7 +335,7 @@ class SetEmailTest < ActionDispatch::IntegrationTest
     new_email = 'new@example.com'
 
     sign_in user
-    patch '/users/email', as: :json, params: {user: {email: new_email}}
+    put '/users', params: {user: {email: new_email}}
 
     user = user.reload
     user.email == new_email || user.hashed_email == User.hash_email(new_email)
@@ -255,7 +345,7 @@ class SetEmailTest < ActionDispatch::IntegrationTest
     new_email = 'new@example.com'
 
     sign_in user
-    patch '/users/email', as: :json, params: {
+    put '/users', params: {
       user: {email: new_email, current_password: current_password}
     }
 
@@ -267,7 +357,7 @@ class SetEmailTest < ActionDispatch::IntegrationTest
     new_hashed_email = '729980b94e1439aeed40122476b0f695'
 
     sign_in user
-    patch '/users/email', as: :json, params: {user: {hashed_email: new_hashed_email}}
+    put '/users', params: {user: {hashed_email: new_hashed_email}}
 
     user = user.reload
     user.hashed_email == new_hashed_email
@@ -277,7 +367,7 @@ class SetEmailTest < ActionDispatch::IntegrationTest
     new_hashed_email = '729980b94e1439aeed40122476b0f695'
 
     sign_in user
-    patch '/users/email', as: :json, params: {
+    put '/users', params: {
       user: {hashed_email: new_hashed_email, current_password: current_password}
     }
 
