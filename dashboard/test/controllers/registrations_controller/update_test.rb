@@ -198,16 +198,16 @@ module RegistrationsControllerTests
       student_without_password.update_attribute(:encrypted_password, '')
       assert student_without_password.encrypted_password.blank?
 
-      refute can_edit_password_without_password student_without_password
-      refute can_edit_password_with_password student_without_password, 'wrongpassword'
-      refute can_edit_password_with_password student_without_password, ''
+      refute can_edit_password_without_password? student_without_password
+      refute can_edit_password_with_password? student_without_password, 'wrongpassword'
+      refute can_edit_password_with_password? student_without_password, ''
     end
 
     test "editing password of student-with-password requires current password" do
       student_with_password = create :student, password: 'oldpassword'
-      refute can_edit_password_without_password student_with_password
-      refute can_edit_password_with_password student_with_password, 'wrongpassword'
-      assert can_edit_password_with_password student_with_password, 'oldpassword'
+      refute can_edit_password_without_password? student_with_password
+      refute can_edit_password_with_password? student_with_password, 'wrongpassword'
+      assert can_edit_password_with_password? student_with_password, 'oldpassword'
     end
 
     test "editing password of teacher-without-password is not allowed" do
@@ -215,16 +215,16 @@ module RegistrationsControllerTests
       teacher_without_password.update_attribute(:encrypted_password, '')
       assert teacher_without_password.encrypted_password.blank?
 
-      refute can_edit_password_without_password teacher_without_password
-      refute can_edit_password_with_password teacher_without_password, 'wrongpassword'
-      refute can_edit_password_with_password teacher_without_password, ''
+      refute can_edit_password_without_password? teacher_without_password
+      refute can_edit_password_with_password? teacher_without_password, 'wrongpassword'
+      refute can_edit_password_with_password? teacher_without_password, ''
     end
 
     test "editing password of teacher-with-password requires current password" do
       teacher_with_password = create :teacher, password: 'oldpassword'
-      refute can_edit_password_without_password teacher_with_password
-      refute can_edit_password_with_password teacher_with_password, 'wrongpassword'
-      assert can_edit_password_with_password teacher_with_password, 'oldpassword'
+      refute can_edit_password_without_password? teacher_with_password
+      refute can_edit_password_with_password? teacher_with_password, 'wrongpassword'
+      assert can_edit_password_with_password? teacher_with_password, 'oldpassword'
     end
 
     test "editing email of student-without-password is not allowed" do
@@ -232,16 +232,16 @@ module RegistrationsControllerTests
       student_without_password.update_attribute(:encrypted_password, '')
       assert student_without_password.encrypted_password.blank?
 
-      refute can_edit_email_without_password student_without_password
-      refute can_edit_email_with_password student_without_password, 'wrongpassword'
-      refute can_edit_email_with_password student_without_password, ''
+      refute can_edit_email_without_password? student_without_password
+      refute can_edit_email_with_password? student_without_password, 'wrongpassword'
+      refute can_edit_email_with_password? student_without_password, ''
     end
 
     test "editing email of student-with-password requires current password" do
       student_with_password = create :student, password: 'oldpassword'
-      refute can_edit_email_without_password student_with_password
-      refute can_edit_email_with_password student_with_password, 'wrongpassword'
-      assert can_edit_email_with_password student_with_password, 'oldpassword'
+      refute can_edit_email_without_password? student_with_password
+      refute can_edit_email_with_password? student_with_password, 'wrongpassword'
+      assert can_edit_email_with_password? student_with_password, 'oldpassword'
     end
 
     test "editing email of teacher-without-password is not allowed" do
@@ -249,16 +249,16 @@ module RegistrationsControllerTests
       teacher_without_password.update_attribute(:encrypted_password, '')
       assert teacher_without_password.encrypted_password.blank?
 
-      refute can_edit_email_without_password teacher_without_password
-      refute can_edit_email_with_password teacher_without_password, 'wrongpassword'
-      refute can_edit_email_with_password teacher_without_password, ''
+      refute can_edit_email_without_password? teacher_without_password
+      refute can_edit_email_with_password? teacher_without_password, 'wrongpassword'
+      refute can_edit_email_with_password? teacher_without_password, ''
     end
 
     test "editing email of teacher-with-password requires current password" do
       teacher_with_password = create :teacher, password: 'oldpassword'
-      refute can_edit_email_without_password teacher_with_password
-      refute can_edit_email_with_password teacher_with_password, 'wrongpassword'
-      assert can_edit_email_with_password teacher_with_password, 'oldpassword'
+      refute can_edit_email_without_password? teacher_with_password
+      refute can_edit_email_with_password? teacher_with_password, 'wrongpassword'
+      assert can_edit_email_with_password? teacher_with_password, 'oldpassword'
     end
 
     test "editing hashed_email of student-without-password is not allowed" do
@@ -266,16 +266,16 @@ module RegistrationsControllerTests
       student_without_password.update_attribute(:encrypted_password, '')
       assert student_without_password.encrypted_password.blank?
 
-      refute can_edit_hashed_email_without_password student_without_password
-      refute can_edit_hashed_email_with_password student_without_password, 'wrongpassword'
-      refute can_edit_hashed_email_with_password student_without_password, ''
+      refute can_edit_hashed_email_without_password? student_without_password
+      refute can_edit_hashed_email_with_password? student_without_password, 'wrongpassword'
+      refute can_edit_hashed_email_with_password? student_without_password, ''
     end
 
     test "editing hashed_email of student-with-password requires current password" do
       student_with_password = create :student, password: 'oldpassword'
-      refute can_edit_hashed_email_without_password student_with_password
-      refute can_edit_hashed_email_with_password student_with_password, 'wrongpassword'
-      assert can_edit_hashed_email_with_password student_with_password, 'oldpassword'
+      refute can_edit_hashed_email_without_password? student_with_password
+      refute can_edit_hashed_email_with_password? student_with_password, 'wrongpassword'
+      assert can_edit_hashed_email_with_password? student_with_password, 'oldpassword'
     end
 
     test "editing hashed_email of teacher-without-password is not allowed" do
@@ -283,22 +283,22 @@ module RegistrationsControllerTests
       teacher_without_password.update_attribute(:encrypted_password, '')
       assert teacher_without_password.encrypted_password.blank?
 
-      refute can_edit_hashed_email_without_password teacher_without_password
-      refute can_edit_hashed_email_with_password teacher_without_password, 'wrongpassword'
-      refute can_edit_hashed_email_with_password teacher_without_password, ''
+      refute can_edit_hashed_email_without_password? teacher_without_password
+      refute can_edit_hashed_email_with_password? teacher_without_password, 'wrongpassword'
+      refute can_edit_hashed_email_with_password? teacher_without_password, ''
     end
 
     test "editing hashed_email of teacher-with-password requires current password" do
       teacher_with_password = create :teacher, password: 'oldpassword'
-      refute can_edit_hashed_email_without_password teacher_with_password
-      refute can_edit_hashed_email_with_password teacher_with_password, 'wrongpassword'
+      refute can_edit_hashed_email_without_password? teacher_with_password
+      refute can_edit_hashed_email_with_password? teacher_with_password, 'wrongpassword'
       # Can't even do this, because cleartext email is required for teachers
-      refute can_edit_hashed_email_with_password teacher_with_password, 'oldpassword'
+      refute can_edit_hashed_email_with_password? teacher_with_password, 'oldpassword'
     end
 
     private
 
-    def can_edit_password_without_password(user)
+    def can_edit_password_without_password?(user)
       new_password = 'newpassword'
 
       sign_in user
@@ -313,7 +313,7 @@ module RegistrationsControllerTests
       user.valid_password? new_password
     end
 
-    def can_edit_password_with_password(user, current_password)
+    def can_edit_password_with_password?(user, current_password)
       new_password = 'newpassword'
 
       sign_in user
@@ -329,7 +329,7 @@ module RegistrationsControllerTests
       user.valid_password? new_password
     end
 
-    def can_edit_email_without_password(user)
+    def can_edit_email_without_password?(user)
       new_email = 'new@example.com'
 
       sign_in user
@@ -339,7 +339,7 @@ module RegistrationsControllerTests
       user.email == new_email || user.hashed_email == User.hash_email(new_email)
     end
 
-    def can_edit_email_with_password(user, current_password)
+    def can_edit_email_with_password?(user, current_password)
       new_email = 'new@example.com'
 
       sign_in user
@@ -351,7 +351,7 @@ module RegistrationsControllerTests
       user.email == new_email || user.hashed_email == User.hash_email(new_email)
     end
 
-    def can_edit_hashed_email_without_password(user)
+    def can_edit_hashed_email_without_password?(user)
       new_hashed_email = '729980b94e1439aeed40122476b0f695'
 
       sign_in user
@@ -361,7 +361,7 @@ module RegistrationsControllerTests
       user.hashed_email == new_hashed_email
     end
 
-    def can_edit_hashed_email_with_password(user, current_password)
+    def can_edit_hashed_email_with_password?(user, current_password)
       new_hashed_email = '729980b94e1439aeed40122476b0f695'
 
       sign_in user
