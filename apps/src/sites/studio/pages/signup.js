@@ -114,7 +114,7 @@ window.SignupManager = function (options) {
           if (field === "terms_of_service_version") {
             errorField.text(self.options.acceptTermsString);
           } else if (field === 'data_transfer_agreement') {
-            errorField.text(self.options.acceptDataTransferAgreementString);
+            errorField.text(self.options.acceptTermsString);
           } else if (field === 'email_preference_opt_in') {
             errorField.text(self.options.emailPreferenceOptInString);
           }  else if (field === "school_info.zip") {
