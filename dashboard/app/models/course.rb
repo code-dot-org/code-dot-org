@@ -215,7 +215,9 @@ class Course < ApplicationRecord
   def self.valid_courses(user: nil, include_unstable: false)
     # Do not cache if the user might have a course experiment enabled which puts them
     # on an alternate script.
-    return Course.courses_for_user_with_experiments(user) if user && has_any_course_experiments?(user)
+    if user && has_any_course_experiments?(user)
+      return Course.valid_courses_without_cache(user, include_unstable: include_unstable)
+    end
     cache_key_suffix = include_unstable ? 'all' : 'stable'
     Rails.cache.fetch("valid_courses_#{cache_key_suffix}/#{I18n.locale}") do
       course_infos = Course.
@@ -254,12 +256,15 @@ class Course < ApplicationRecord
 
   # Get the set of valid courses for the dropdown in our sections table, using
   # any alternate scripts based on any experiments the user belongs to.
-  def self.courses_for_user_with_experiments(user)
-    Course.
+  def self.valid_courses_without_cache(user, include_unstable: false)
+    course_infos = Course.
       all.
       select {|course| ScriptConstants.script_in_category?(:full_course, course[:name])}.
-      map {|course| course.assignable_info(user)}.
-      filter {|info| info[:version_year] == ScriptConstants.DEFAULT_VERSION_YEAR}
+      map {|course| course.assignable_info(user)}
+
+    include_unstable ?
+      course_infos.sort {|info| [info[:assignment_family], info[:version_year]]} :
+      course_infos.filter {|info| info[:version_year] == ScriptConstants.DEFAULT_VERSION_YEAR}
   end
 
   # Returns whether the course id is valid, even if it is not "stable" yet.
