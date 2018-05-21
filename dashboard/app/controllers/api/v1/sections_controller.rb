@@ -114,7 +114,8 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     return head :forbidden unless current_user
 
     scripts = Script.valid_scripts(current_user)
-    render json: scripts, each_serializer: Api::V1::ScriptNameAndIdSerializer
+    scripts.map {|script| ScriptConstants.assignable_info(script)}
+    render json: scripts.as_json
   end
 
   private
