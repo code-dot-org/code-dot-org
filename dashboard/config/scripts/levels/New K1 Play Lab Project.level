@@ -50,11 +50,13 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "remove_items_when_actor_collides": "false",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-19 00:22:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-10-30 18:03:44 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-10-30 18:10:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"projectile_collisions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-10-30 18:11:50 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-07-19 00:22:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-10-30 18:03:44 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-10-30 18:10:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"projectile_collisions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-10-30 18:11:50 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-17 18:27:32 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-17 18:27:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -87,24 +89,36 @@
           <title name="SPRITE">0</title>
           <title name="DIR">1</title>
         </block>
-        <block type="studio_changeScore"/>
-        <block type="studio_playSound">
-          <title name="SOUND">slap</title>
-        </block>
-        <block type="studio_setSpriteSpeed">
-          <title name="SPRITE">0</title>
-          <title name="VALUE">Studio.SpriteSpeed.NORMAL</title>
-        </block>
         <block type="studio_saySpriteChoices">
           <title name="SPRITE">0</title>
           <title name="VALUE">Hi there.</title>
+        </block>
+        <block type="studio_saySprite">
+          <title name="SPRITE">0</title>
+          <title name="TEXT">type here</title>
         </block>
         <block type="studio_setSpriteEmotion">
           <title name="SPRITE">0</title>
           <title name="VALUE">0</title>
         </block>
+        <block type="studio_setSpriteSpeed">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Studio.SpriteSpeed.NORMAL</title>
+        </block>
+        <block type="studio_throw">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">"airplane"</title>
+          <title name="DIR">1</title>
+        </block>
         <block type="studio_vanish">
           <title name="SPRITE">1</title>
+        </block>
+        <block type="studio_playSound">
+          <title name="SOUND">slap</title>
+        </block>
+        <block type="studio_changeScore"/>
+        <block type="studio_wait">
+          <title name="VALUE">1000</title>
         </block>
         <block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="3-10">3</title>

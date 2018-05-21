@@ -1,3 +1,5 @@
+require 'honeybadger'
+
 # Get the set of sections owned by the current user
 # DEPRECATED: Use GET /dashboardapi/sections instead
 get '/v2/sections' do
