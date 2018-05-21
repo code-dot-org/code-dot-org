@@ -666,6 +666,13 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal(expected_response, json_response)
   end
 
+  test "membership: returns empty array for student sections if user is a teacher" do
+    sign_in @teacher
+    get :membership
+    assert_response :success
+    assert_equal([], json_response)
+  end
+
   test "membership: returns empty array for student sections if none exist" do
     student = create(:student)
     sign_in student
