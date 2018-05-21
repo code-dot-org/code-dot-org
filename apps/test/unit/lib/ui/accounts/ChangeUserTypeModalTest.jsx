@@ -61,7 +61,7 @@ describe('ChangeUserTypeModal', () => {
       wrapper.setState({
         values: {
           currentEmail: '',
-          emailOptIn: '',
+          emailOptIn: 'yes',
         }
       });
 
@@ -72,7 +72,7 @@ describe('ChangeUserTypeModal', () => {
       wrapper.setState({
         values: {
           currentEmail: 'invalidEmail@nowhere',
-          emailOptIn: '',
+          emailOptIn: 'yes',
         }
       });
 
@@ -86,7 +86,7 @@ describe('ChangeUserTypeModal', () => {
       wrapper.setState({
         values: {
           currentEmail: 'differentEmail@example.com',
-          emailOptIn: '',
+          emailOptIn: 'yes',
         }
       });
 
@@ -98,7 +98,7 @@ describe('ChangeUserTypeModal', () => {
       wrapper.setState({
         values: {
           currentEmail: '',
-          emailOptIn: '',
+          emailOptIn: 'yes',
         },
         serverErrors: {
           currentEmail: serverError,
@@ -108,11 +108,28 @@ describe('ChangeUserTypeModal', () => {
       expect(wrapper.text()).to.include(serverError);
     });
 
+    it('checks that email opt-in is present', () => {
+      const email = 'validEmail@example.com';
+      const hashedEmail = hashEmail(email);
+      wrapper.setProps({currentHashedEmail: hashedEmail});
+      wrapper.setState({
+        values: {
+          currentEmail: email,
+          emailOptIn: '',
+        }
+      });
+
+      expect(wrapper.text()).to.include(i18n.changeUserTypeModal_emailOptIn_isRequired());
+    });
+
     it('reports email opt-in server errors', () => {
+      const email = 'validEmail@example.com';
+      const hashedEmail = hashEmail(email);
+      wrapper.setProps({currentHashedEmail: hashedEmail});
       const serverError = 'test-email-opt-in-server-error';
       wrapper.setState({
         values: {
-          currentEmail: '',
+          currentEmail: email,
           emailOptIn: '',
         },
         serverErrors: {
@@ -142,7 +159,7 @@ describe('ChangeUserTypeModal', () => {
       wrapper.setState({
         values: {
           currentEmail: email,
-          emailOptIn: '',
+          emailOptIn: 'yes',
         }
       });
 
