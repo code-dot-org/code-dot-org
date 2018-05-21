@@ -23670,9 +23670,8 @@
         width=\"250px\"/>\r\n\r\nFree Play Inspiration: You've now learned everything
         you need to know to make a pattern like this! If this picture inspires you,
         try to make something similar. Otherwise, create something all your own. \r\n\r\n<br/>"
-      Course 4 Artist 13_markdown_instruction: |-
-        Still playing?  Here is a blank canvas
-        where you can design anything you want!
+      Course 4 Artist 13_markdown_instruction: Tens encara ganes de jugar? Aquí hi
+        ha un llenç en blanc perquè hi dissenyis el que prefereixis!
       Course 4 Artist 2_markdown_instruction: "Can you use a loop to draw the greyed
         out square?  \r\n(Each side is 300px long)"
       Course 4 Artist 20_markdown_instruction: "Still playing?  \r\n\r\nHere is a
@@ -23686,17 +23685,14 @@
         so it's symmetrical. \r\nThe triangles are equilateral and are 50 pixels long.
         \ \r\n\r\nYou may have to run the code several times to figure out all of
         the blocks that need to be added."
-      Course 4 Artist 6_markdown_instruction: |-
-        Complete the code to draw these three,
-        equilateral triangles.
+      Course 4 Artist 6_markdown_instruction: Acaba el programa per dibuixar aquests
+        tres triangles equilàters.
       Course 4 Artist 7_markdown_instruction: "Now nest this loop inside another\nloop
         to draw 10 triangles. "
-      Course 4 Artist 8_markdown_instruction: |-
-        Draw this sun by looping this whole
-        block of code multiple times.
-      Course 4 Artist 8a_markdown_instruction: |-
-        Remember this shape?  Now we're
-        going to let you build it without giving you any blocks to start!
+      Course 4 Artist 8_markdown_instruction: Dibuixa el sol repetint diverses vegades
+        tot el bloc.
+      Course 4 Artist 8a_markdown_instruction: Recordes aquesta forma? Ara et deixarem
+        que la facis tu sense donar-te cap bloc per començar!
       Course 4 Artist 9_markdown_instruction: "Loop this design 10 times and make\nsure
         to turn between each shape that's drawn. "
       Course 4 Artist Binary 1_markdown_instruction: "Here's a function that takes

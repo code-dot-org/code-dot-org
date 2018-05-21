@@ -3,7 +3,7 @@
     callouts:
       2-3 Artist 1 new_callout: {}
       2-3 Artist Debugging 1_callout:
-        2-3_Artist_Debugging_1_a: Negli esercizi dell'Artista non c'è il pulsante
+        2-3_Artist_Debugging_1_a: Negli esercizi dell'artista non c'è il pulsante
           "Fai un passo", ma puoi spostare questo cursore per scegliere la velocità
           di esecuzione del programma.
       2-3 Bee Conditionals 5_callout:
@@ -1180,11 +1180,11 @@
       courseB_Scrat_ramp4a_2018_callout: {}
       courseB_Scrat_ramp5a_2018_callout: {}
       courseB_artist_loops3_callout:
-        courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How
-          will you use it?
+        courseB_artist_loops3_1: C'è solo uno di questi blocchi nella cassetta degli
+          attrezzi. Come lo userai?
       courseB_artist_loops3_2018_callout:
-        courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How
-          will you use it?
+        courseB_artist_loops3_1: C'è solo uno di questi blocchi nella cassetta degli
+          attrezzi. Come lo userai?
       courseB_artist_loops5_callout:
         courseB_artist_loops5_1: Questo numero significa che non c'è nessun blocco
           come questo rimasto nella sezione degli strumenti.
@@ -1218,11 +1218,9 @@
       courseB_maze_seq7_callout: {}
       courseB_maze_seq7_2018_callout: {}
       courseB_playlab_events6_callout:
-        courseB_playlab_events6_a: Usa la freccia verde a tendina per cambiare le
-          direzioni.
+        courseB_playlab_events6_a: Usa la freccia verde per cambiare la direzione.
       courseB_playlab_events6_2018_callout:
-        courseB_playlab_events6_a: Usa la freccia verde a tendina per cambiare le
-          direzioni.
+        courseB_playlab_events6_a: Usa la freccia verde per cambiare la direzione.
       courseC_PlayLab_events8_callout:
         courseC_PlayLab_events8_callout1: Use this block for when Waddles and Chomp
           touch!
@@ -2055,8 +2053,8 @@
         replace_questions: Clicca sull'elenco a discesa per sostituire "???" con un
           numero
       grade1_artist_loops2_callout:
-        grade1_artist_loops2_1: There is only one of these blocks in the toolbox.  How
-          will you use it?
+        grade1_artist_loops2_1: C'è solo uno di questi blocchi nella cassetta degli
+          attrezzi. Come lo userai?
       grade1_maze_sequence6_callout:
         grade1_maze_sequence6_1: Questi blocchi grigi sono fatti di pietra! Questo
           significa che non possono essere cestinati.
