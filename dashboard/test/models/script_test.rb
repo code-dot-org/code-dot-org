@@ -938,10 +938,6 @@ endvariants
     assert_match Regexp.new(new_dsl_regex), ScriptDSL.serialize_to_string(script_copy)
   end
 
-  def has_hidden_script?(response)
-    response.any?(&:hidden)
-  end
-
   test "self.valid_scripts: does not return hidden scripts when user is a student" do
     student = create(:student)
 
@@ -969,5 +965,11 @@ endvariants
 
     scripts = Script.valid_scripts(teacher)
     assert has_hidden_script?(scripts)
+  end
+
+  private
+
+  def has_hidden_script?(scripts)
+    scripts.any?(&:hidden)
   end
 end
