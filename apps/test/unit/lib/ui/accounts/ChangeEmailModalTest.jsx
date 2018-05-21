@@ -1,23 +1,21 @@
 import React from 'react';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
-import {expect} from '../../../util/configuredChai';
-import ChangeEmailModal from '@cdo/apps/lib/ui/ChangeEmailModal';
+import {expect} from '../../../../util/configuredChai';
+import ChangeEmailModal from '@cdo/apps/lib/ui/accounts/ChangeEmailModal';
 import {hashEmail} from '@cdo/apps/code-studio/hashEmail';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 
 describe('ChangeEmailModal', () => {
-  let wrapper, form, defaultProps;
+  let wrapper;
 
   const EMAIL_SELECTOR = 'input[type="email"]';
   const PASSWORD_SELECTOR = 'input[type="password"]';
 
-  const STATIC_DEFAULT_PROPS = {
-    isOpen: true,
+  const DEFAULT_PROPS = {
     handleSubmit: () => {},
     handleCancel: () => {},
-    userAge: 21,
   };
 
   // Helpers for selecting particular elements/components
@@ -29,14 +27,7 @@ describe('ChangeEmailModal', () => {
     .filterWhere(n => n.prop('text') === i18n.cancel());
 
   beforeEach(() => {
-    form = document.createElement('form');
-    defaultProps = {
-      ...STATIC_DEFAULT_PROPS,
-      railsForm: form,
-    };
-    wrapper = mount(
-      <ChangeEmailModal {...defaultProps}/>
-    );
+    wrapper = mount(<ChangeEmailModal {...DEFAULT_PROPS}/>);
   });
 
   afterEach(() => {
@@ -99,7 +90,7 @@ describe('ChangeEmailModal', () => {
         }
       });
 
-      expect(wrapper.text()).to.include(i18n.changeEmailmodal_newEmail_mustBeDifferent());
+      expect(wrapper.text()).to.include(i18n.changeEmailModal_newEmail_mustBeDifferent());
     });
 
     it('reports email server errors', () => {
@@ -190,26 +181,8 @@ describe('ChangeEmailModal', () => {
     });
   });
 
-  describe('onSubmitSuccess', () => {
-    it('calls handleSubmit with the new email', () => {
-      const testEmail = 'me@example.com';
-      const handleSubmit = sinon.spy();
-      wrapper.setProps({handleSubmit});
-      wrapper.setState({
-        values: {
-          newEmail: testEmail,
-          currentPassword: '',
-        }
-      });
-
-      expect(handleSubmit).not.to.have.been.called;
-      wrapper.instance().onSubmitSuccess();
-      expect(handleSubmit).to.have.been.calledOnce.and.calledWith(testEmail);
-    });
-  });
-
   describe('onSubmitFailure', () => {
-    it('puts the dialog in UNKNOWN ERROR state if response has no JSON', () => {
+    it('puts the dialog in UNKNOWN ERROR state if response has no server errors', () => {
       expect(wrapper.state().saveState).to.equal('initial');
       wrapper.instance().onSubmitFailure(null, {});
       expect(wrapper.state().saveState).to.equal('unknown-error');
@@ -221,10 +194,10 @@ describe('ChangeEmailModal', () => {
         newEmail: '',
         currentPassword: '',
       });
-      wrapper.instance().onSubmitFailure(null, {
-        responseJSON: {
-          email: ['test-email-server-error'],
-          current_password: ['test-password-server-error']
+      wrapper.instance().onSubmitFailure({
+        serverErrors: {
+          newEmail: 'test-email-server-error',
+          currentPassword: 'test-password-server-error'
         }
       });
       expect(wrapper.state().saveState).to.equal('initial');

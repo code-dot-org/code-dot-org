@@ -48,17 +48,18 @@ class StudentAssessmentOverviewTable extends Component {
     });
   };
 
-  correctAnswerColumnFormatter = (answers, {rowData, columnIndex}) => {
-    const questionAnswers = rowData.answers;
+  getCorrectAnswer = (multipleChoiceAnswers) => {
+    return multipleChoiceAnswers.filter(answerObj => {
+      return answerObj.isCorrectAnswer;
+    }).map(answerObj => {
+      return answerObj.multipleChoiceOption;
+    }).join(', ');
+  };
 
-    let allPossibleAnswers = [];
-    let textAnswered = '';
-      questionAnswers.forEach((answer) => {
-        if (answer.isCorrectAnswer) {
-          allPossibleAnswers.push(answer.multipleChoiceOption);
-          textAnswered = allPossibleAnswers.join(', ');
-        }
-      });
+  correctAnswerColumnFormatter = (answers, {rowData, columnIndex}) => {
+    const multipleChoiceAnswers = rowData.answers;
+
+    let textAnswered = this.getCorrectAnswer(multipleChoiceAnswers);
 
     return (
       <MultipleChoiceAnswerCell
@@ -69,22 +70,14 @@ class StudentAssessmentOverviewTable extends Component {
   };
 
   studentAnswerColumnFormatter = (studentAnswers, {rowData, rowIndex}) => {
-    let studentAnswerArr = [];
-    let studentResponse = '';
     const selectStudentAnswers = this.props.studentAnswerData[0].studentAnswers[rowIndex];
-    selectStudentAnswers.answer.forEach((answerSelection) => {
-      studentAnswerArr.push(answerSelection);
-      studentResponse = studentAnswerArr.join(', ');
-    });
+    const multipleChoiceAnswers = rowData.answers;
 
-    let allPossibleAnswers = [];
-    let textAnswered = '';
-      rowData.answers.forEach((answer) => {
-        if (answer.isCorrectAnswer) {
-          allPossibleAnswers.push(answer.multipleChoiceOption);
-          textAnswered = allPossibleAnswers.join(', ');
-        }
-      });
+    let studentResponse = selectStudentAnswers.answer.map(answerSelection => {
+      return answerSelection;
+    }).join(', ');
+
+    let textAnswered = this.getCorrectAnswer(multipleChoiceAnswers);
 
     return (
       <MultipleChoiceAnswerCell

@@ -56,14 +56,13 @@ class MultipleChoiceAnswerCell extends Component {
         </div>
         <div style={styles.icon}>
           {isCorrectAnswer &&
-             <FontAwesome icon="check-circle" style={styles.icon}/>
+              <FontAwesome icon="check-circle" style={styles.icon}/>
           }
         </div>
       </div>
     );
   }
 }
-
 
 MultipleChoiceAnswerCell.defaultProps = {
   percentValue: -1
