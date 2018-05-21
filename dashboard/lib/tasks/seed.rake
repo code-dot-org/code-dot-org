@@ -144,7 +144,7 @@ namespace :seed do
     LevelLoader.load_custom_levels
   end
 
-  task import_blocks: :environment do
+  task blocks: :environment do
     Block.load_blocks
   end
 
