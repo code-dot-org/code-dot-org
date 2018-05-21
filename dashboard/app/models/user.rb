@@ -1215,7 +1215,6 @@ class User < ActiveRecord::Base
 
   # Returns whether any experiments are enabled for the specified user
   def any_experiments_enabled?
-    # TODO: refactor to not get all experiments
     Experiment.get_all_enabled(user: self).present?
   end
 
