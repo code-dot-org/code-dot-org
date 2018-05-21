@@ -15,8 +15,8 @@ class CoursesController < ApplicationController
       end
       format.json do
         courses = params['allVersions'] ?
-          Course.valid_courses_all_versions :
-          Course.valid_courses(current_user)
+          Course.valid_courses(include_unstable: true) :
+          Course.valid_courses(user: current_user)
         render json: courses
       end
     end
