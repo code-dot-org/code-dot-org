@@ -74,7 +74,7 @@ export default class ChangeEmailModal extends React.Component {
     return {
       newEmail: serverErrors.newEmail || this.getNewEmailValidationError(),
       currentPassword: serverErrors.currentPassword || this.getCurrentPasswordValidationError(),
-      emailOptIn: serverErrors.emailOptIn,
+      emailOptIn: serverErrors.emailOptIn || this.getEmailOptInValidationError(),
     };
   }
 
@@ -97,6 +97,15 @@ export default class ChangeEmailModal extends React.Component {
     const {currentPassword} = this.state.values;
     if (currentPassword.length === 0) {
       return i18n.changeEmailModal_currentPassword_isRequired();
+    }
+    return null;
+  };
+
+  getEmailOptInValidationError = () => {
+    const {userType} = this.props;
+    const {emailOptIn} = this.state.values;
+    if (userType === 'teacher' && emailOptIn.length === 0) {
+      return i18n.changeEmailModal_emailOptIn_isRequired();
     }
     return null;
   };
