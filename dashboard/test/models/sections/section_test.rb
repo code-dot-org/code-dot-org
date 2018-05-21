@@ -22,8 +22,7 @@ class SectionTest < ActiveSupport::TestCase
     student = create(:follower, section: section).student_user
 
     sections_with_student = Section.with_student(student)
-    assert_equal 1, sections_with_student.length
-    assert_equal section, sections_with_student.first
+    assert_equal [section], sections_with_student
   end
 
   test "scope with_student returns an empty array if user follows no sections" do
@@ -31,7 +30,7 @@ class SectionTest < ActiveSupport::TestCase
     user = create(:user)
 
     sections_with_student = Section.with_student(user)
-    assert_equal 0, sections_with_student.length
+    assert_empty sections_with_student
   end
 
   test "destroying section destroys appropriate followers" do
