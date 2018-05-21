@@ -98,7 +98,6 @@ $(document).ready(function () {
     <GDPRDialog
       isDialogOpen={gdprData.show_gdpr_dialog}
       currentUserId={gdprData.current_user_id}
-      requestIp={gdprData.request_ip}
       studioUrlPrefix={studioUrlPrefix}
     />,
     document.getElementById('gdpr-dialog')

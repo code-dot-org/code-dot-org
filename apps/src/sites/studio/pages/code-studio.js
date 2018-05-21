@@ -108,9 +108,8 @@ $(document).ready(function () {
   const gdprData = getScriptData('gdpr');
   ReactDOM.render(
     <GDPRDialog
-      isDialogOpen={gdprData.show_gdpr_dialog}
+      isDialogOpen={true}
       currentUserId={gdprData.current_user_id}
-      requestIp={gdprData.request_ip}
     />,
     document.getElementById('gdpr-dialog')
   );
