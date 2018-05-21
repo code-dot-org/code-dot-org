@@ -216,22 +216,11 @@ class Course < ApplicationRecord
     # Do not cache if the user might have a course experiment enabled which puts them
     # on an alternate script.
     if user && has_any_course_experiments?(user)
-      return Course.valid_courses_without_cache(user, include_unstable: include_unstable)
+      return Course.valid_courses_without_cache(user: user, include_unstable: include_unstable)
     end
     cache_key_suffix = include_unstable ? 'all' : 'stable'
     Rails.cache.fetch("valid_courses_#{cache_key_suffix}/#{I18n.locale}") do
-      course_infos = Course.
-        all.
-        select {|course| ScriptConstants.script_in_category?(:full_course, course[:name])}.
-        map(&:assignable_info)
-
-      # For now, infer whether the course is stable from its version year.
-      # * Currently, only 2017 versions are stable.
-      # * With the 2018-teacher-experience experiment, all course versions are stable.
-      # * In the future, stability will be set as a property by the levelbuilder.
-      include_unstable ?
-        course_infos.sort {|info| [info[:assignment_family], info[:version_year]]} :
-        course_infos.filter {|info| info[:version_year] == ScriptConstants.DEFAULT_VERSION_YEAR}
+      Course.valid_courses_without_cache(include_unstable: include_unstable)
     end
   end
 
@@ -256,12 +245,16 @@ class Course < ApplicationRecord
 
   # Get the set of valid courses for the dropdown in our sections table, using
   # any alternate scripts based on any experiments the user belongs to.
-  def self.valid_courses_without_cache(user, include_unstable: false)
+  def self.valid_courses_without_cache(user: nil, include_unstable: false)
     course_infos = Course.
       all.
       select {|course| ScriptConstants.script_in_category?(:full_course, course[:name])}.
       map {|course| course.assignable_info(user)}
 
+    # For now, infer whether the course is stable from its version year.
+    # * Currently, only 2017 versions are stable.
+    # * With the 2018-teacher-experience experiment, all course versions are stable.
+    # * In the future, stability will be set as a property by the levelbuilder.
     include_unstable ?
       course_infos.sort {|info| [info[:assignment_family], info[:version_year]]} :
       course_infos.filter {|info| info[:version_year] == ScriptConstants.DEFAULT_VERSION_YEAR}
