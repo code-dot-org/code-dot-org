@@ -141,8 +141,9 @@ describe('ChangeUserTypeController', () => {
   function setupWithInitialUserType(userType) {
     form = $(`
       <form>
-        <input type="hidden" id="change-user-type_user_email"/>      
-        <input type="hidden" id="change-user-type_user_hashed_email"/>      
+        <input type="hidden" id="change-user-type_user_email"/>
+        <input type="hidden" id="change-user-type_user_hashed_email"/>
+        <input type="hidden" id="change-user-type_user_email_preference_opt_in"/>
         <select id="change-user-type_user_user_type">
           <option value="student">Student</option>
           <option value="teacher">Teacher</option>
