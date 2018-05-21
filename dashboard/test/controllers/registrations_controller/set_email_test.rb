@@ -167,7 +167,7 @@ class SetEmailTest < ActionDispatch::IntegrationTest
     preference = EmailPreference.find_by_email(new_email)
     refute_nil preference
     assert_equal true, preference.opt_in
-    assert_equal request.env['REMOTE_ADDR'], preference.ip_address
+    assert_equal request.ip, preference.ip_address
     assert_equal EmailPreference::ACCOUNT_EMAIL_CHANGE, preference.source
     assert_equal "0", preference.form_kind
   end
@@ -188,7 +188,7 @@ class SetEmailTest < ActionDispatch::IntegrationTest
     preference = EmailPreference.find_by_email(new_email)
     refute_nil preference
     assert_equal false, preference.opt_in
-    assert_equal request.env['REMOTE_ADDR'], preference.ip_address
+    assert_equal request.ip, preference.ip_address
     assert_equal EmailPreference::ACCOUNT_EMAIL_CHANGE, preference.source
     assert_equal "0", preference.form_kind
   end

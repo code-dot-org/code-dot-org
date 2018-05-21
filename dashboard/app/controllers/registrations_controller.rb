@@ -50,7 +50,7 @@ class RegistrationsController < Devise::RegistrationsController
     super.tap do |params|
       if params[:user_type] == "teacher"
         params[:email_preference_opt_in_required] = true
-        params[:email_preference_request_ip] = request.env['REMOTE_ADDR']
+        params[:email_preference_request_ip] = request.ip
         params[:email_preference_source] = EmailPreference::ACCOUNT_SIGN_UP
         params[:email_preference_form_kind] = "0"
       end
@@ -264,7 +264,7 @@ class RegistrationsController < Devise::RegistrationsController
       require(:user).
       tap do |user|
         if user[:email_preference_opt_in].present?
-          user[:email_preference_request_ip] = request.env['REMOTE_ADDR']
+          user[:email_preference_request_ip] = request.ip
           user[:email_preference_source] = source
           user[:email_preference_form_kind] = form_kind
         end
