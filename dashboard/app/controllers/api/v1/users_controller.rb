@@ -34,6 +34,17 @@ class Api::V1::UsersController < Api::V1::JsonApiController
     render status: 200, json: {set: property_name}
   end
 
+  # POST /api/v1/users/<user_id>/accept_data_transfer_agreement
+  def accept_data_transfer_agreement
+    @user.properties[:data_transfer_agreement_accepted] = true
+    @user.properties[:data_transfer_agreement_accepted_at] = DateTime.now
+    @user.properties[:data_transfer_agreement_request_ip] = params[:data_transfer_agreement_request_ip]
+    @user.properties[:data_transfer_agreement_source] = params[:data_transfer_agreement_source]
+    @user.save
+
+    render status: 200, json: {updated_user_properties: @user.properties}
+  end
+
   # POST /api/v1/users/<user_id>/postpone_census_banner
   def postpone_census_banner
     today = Date.today
