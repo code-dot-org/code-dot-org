@@ -27,20 +27,26 @@ class Block < ApplicationRecord
   def write_block_files
     FileUtils.mkdir_p "config/blocks/#{level_type}"
     block_path = Rails.root.join "config/blocks/#{level_type}/#{name}.json"
-    File.write block_path, to_json
+    File.write block_path, to_pretty_json
 
     return unless helper_code
     js_path = Rails.root.join "config/blocks/#{level_type}/#{name}.js"
     File.write js_path, helper_code
   end
 
-  def to_json
-    {
+  def to_pretty_json
+    to_json(true)
+  end
+
+  def to_json(pretty=false)
+    hash = {
       name: name,
       level_type: level_type,
       category: category,
       config: JSON.parse(config),
-    }.to_json
+    }
+    return JSON.pretty_generate hash if pretty
+    hash.to_json
   end
 
   def self.load_blocks
