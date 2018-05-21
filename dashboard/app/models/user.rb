@@ -122,7 +122,7 @@ class User < ActiveRecord::Base
     oauth_token_expiration
     sharing_disabled
     next_census_display
-    data_transfer_agreement
+    data_transfer_agreement_accepted
     data_transfer_agreement_request_ip
     data_transfer_agreement_source
     data_transfer_agreement_kind
@@ -501,7 +501,11 @@ class User < ActiveRecord::Base
   validates_presence_of :email_preference_source, if: -> {email_preference_opt_in.present?}
   validates_presence_of :email_preference_form_kind, if: -> {email_preference_opt_in.present?}
 
-  validates :data_transfer_agreement, acceptance: true, if: :data_transfer_agreement_required
+  validates :data_transfer_agreement_accepted, acceptance: true, if: :data_transfer_agreement_required
+  validates_presence_of :data_transfer_agreement_request_ip, if: -> {data_transfer_agreement_accepted.present?}
+  validates_inclusion_of :data_transfer_agreement_source, in: DATA_TRANSFER_AGREEMENT_SOURCE_TYPES, if: -> {data_transfer_agreement.present?}
+  validates_presence_of :data_transfer_agreement_kind, if: -> {data_transfer_agreement_accepted.present?}
+  validates_presence_of :data_transfer_agreement_at, if: -> {data_transfer_agreement_accepted.present?}
 
   def email_matches_for_oauth_upgrade
     if user_type == User::TYPE_TEACHER
