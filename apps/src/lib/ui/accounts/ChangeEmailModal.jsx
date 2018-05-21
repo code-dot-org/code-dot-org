@@ -153,6 +153,7 @@ export default class ChangeEmailModal extends React.Component {
             onCancel={this.cancel}
             disableConfirm={STATE_SAVING === saveState || !isFormValid}
             disableCancel={STATE_SAVING === saveState}
+            tabIndex="2"
           >
             {(STATE_SAVING === saveState) &&
               <em>{i18n.saving()}</em>}
