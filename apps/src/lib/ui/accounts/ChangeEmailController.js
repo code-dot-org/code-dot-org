@@ -4,8 +4,6 @@ import color from '../../../util/color';
 import ChangeEmailModal from './ChangeEmailModal';
 import {hashEmail} from '../../../code-studio/hashEmail';
 
-export const ENCRYPTED_EMAIL_PLACEHOLDER = '***encrypted***';
-
 /**
  * This controller submits email changes to dashboard using a hidden
  * Rails-generated form.  It expects a jQuery wrapper for that form to be
@@ -26,13 +24,16 @@ export default class ChangeEmailController {
    * @param {jQuery} form
    * @param {jQuery} link
    * @param {jQuery} displayedUserEmail
-   * @param {jQuery} userAge
-   * @param {function(newEmail:string, newHashedEmail:string)} emailChangedCallback
+   * @param {number} userAge
+   * @param {string} userType
+   * @param {function(newEmail:string, newHashedEmail:string, emailOptIn:string)} emailChangedCallback
    */
-  constructor({form, link, displayedUserEmail, userAge, emailChangedCallback}) {
+  constructor({form, link, displayedUserEmail, userAge, userType,
+    emailChangedCallback}) {
     this.form = form;
     this.displayedUserEmail = displayedUserEmail;
     this.userAge = userAge;
+    this.userType = userType;
     this.emailChangedCallback = emailChangedCallback;
     link.click(this.showChangeEmailModal);
   }
@@ -54,6 +55,7 @@ export default class ChangeEmailController {
       <ChangeEmailModal
         handleSubmit={handleSubmit}
         handleCancel={this.hideChangeEmailModal}
+        userType={this.userType}
         currentHashedEmail={userHashedEmail}
       />,
       this.mountPoint
@@ -69,7 +71,7 @@ export default class ChangeEmailController {
   };
 
   onEmailChanged = (newEmail) => {
-    if (ENCRYPTED_EMAIL_PLACEHOLDER !== this.displayedUserEmail.text()) {
+    if ('teacher' === this.userType) {
       this.displayedUserEmail.text(newEmail);
     }
     this.hideChangeEmailModal();
@@ -80,9 +82,8 @@ export default class ChangeEmailController {
     this.emailChangedCallback(newEmail, hashEmail(newEmail));
   };
 
-  submitEmailChange({newEmail, currentPassword}) {
+  submitEmailChange({newEmail, currentPassword, emailOptIn}) {
     const newHashedEmail = hashEmail(newEmail);
-    const userAge = parseInt(this.userAge.val(), 10);
     return new Promise((resolve, reject) => {
       const onSuccess = () => {
         detachHandlers();
@@ -114,8 +115,9 @@ export default class ChangeEmailController {
       };
       this.form.on('ajax:success', onSuccess);
       this.form.on('ajax:error', onFailure);
-      this.form.find('#change-email-modal_user_email').val(userAge < 13 ? '' : newEmail);
+      this.form.find('#change-email-modal_user_email').val(this.userAge < 13 ? '' : newEmail);
       this.form.find('#change-email-modal_user_hashed_email').val(newHashedEmail);
+      this.form.find('#change-email-modal_user_email_preference_opt_in').val(emailOptIn);
       this.form.find('#change-email-modal_user_current_password').val(currentPassword);
       this.form.submit();
     });
