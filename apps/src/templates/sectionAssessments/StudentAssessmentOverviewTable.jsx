@@ -1,9 +1,10 @@
 import React, {Component, PropTypes} from 'react';
 import {Table, sort} from 'reactabular';
 import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
-import commonMsg from '@cdo/locale';
+import i18n from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
+import styleConstants from "@cdo/apps/styleConstants";
 import MultipleChoiceAnswerCell from './MultipleChoiceAnswerCell';
 import {
   studentAnswerDataPropType,
@@ -14,6 +15,25 @@ export const COLUMNS = {
   QUESTION: 0,
   STUDENT_ANSWER: 1,
   CORRECT_ANSWER: 2,
+};
+
+const ANSWER_COLUMN_WIDTH = 80;
+const PADDING = 20;
+const NUM_ANSWER_COLUMNS = 3;
+
+const styles = {
+  answerColumnHeader: {
+    width: ANSWER_COLUMN_WIDTH,
+    textAlign: 'center',
+  },
+  answerColumnCell: {
+    width: ANSWER_COLUMN_WIDTH,
+  },
+  questionCell: {
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+  }
 };
 
 class StudentAssessmentOverviewTable extends Component {
@@ -93,34 +113,60 @@ class StudentAssessmentOverviewTable extends Component {
       {
         property: 'question',
         header: {
-          label: commonMsg.question(),
+          label: i18n.question(),
           props: {style: tableLayoutStyles.headerCell},
           transforms: [sortable],
         },
         cell: {
-          props: {style: tableLayoutStyles.cell},
+          props: {
+            style: {
+              ...tableLayoutStyles.cell,
+              ...styles.questionCell,
+              maxWidth: styleConstants['content-width'] - (NUM_ANSWER_COLUMNS * (ANSWER_COLUMN_WIDTH + PADDING)),
+            }
+          },
         }
       },
       {
         property: 'studentAnswer',
         header: {
-          label: commonMsg.studentAnswer(),
-          props: {style: tableLayoutStyles.headerCell},
+          label: i18n.studentAnswer(),
+          props: {
+            style: {
+              ...tableLayoutStyles.headerCell,
+              ...styles.answerColumnHeader,
+            }
+          },
         },
         cell: {
           format: this.studentAnswerColumnFormatter,
-          props: {style: tableLayoutStyles.cell},
+          props: {
+            style: {
+              ...tableLayoutStyles.cell,
+              ...styles.answerColumnCell,
+            }
+          },
         }
       },
       {
         property: 'correctAnswer',
         header: {
-          label: commonMsg.checkCorrectAnswer(),
-          props: {style: tableLayoutStyles.headerCell},
+          label: i18n.checkCorrectAnswer(),
+          props: {
+            style: {
+              ...tableLayoutStyles.headerCell,
+              ...styles.answerColumnHeader,
+            }
+          },
         },
         cell: {
           format: this.correctAnswerColumnFormatter,
-          props: {style: tableLayoutStyles.cell},
+          props: {
+            style: {
+              ...tableLayoutStyles.cell,
+              ...styles.answerColumnCell,
+            }
+          },
         }
       },
     ];
