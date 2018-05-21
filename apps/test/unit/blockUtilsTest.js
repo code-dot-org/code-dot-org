@@ -1,4 +1,5 @@
 import {
+  appendBlocksByCategory,
   cleanBlocks,
   determineInputs,
   interpolateInputs,
@@ -42,6 +43,134 @@ describe('block utils', () => {
       cleanBlocks(blocksDom);
 
       expect(serialize(blocksDom)).to.equal(serialize(cleanDom));
+    });
+  });
+
+  describe('appendBlocksByCategory', () => {
+    it('adds a custom category', () => {
+      const oldToolbox = `
+        <xml>
+          <category name="Start">
+            <block type="when_run"/>
+          </category>
+        </xml>
+      `;
+
+      const newToolbox = appendBlocksByCategory(
+        oldToolbox,
+        {
+          Custom: ['do_cool_stuff', 'even_cooler_stuff'],
+        }
+      );
+
+      expect(newToolbox).xml.to.equal(`
+        <xml>
+          <category name="Start">
+            <block type="when_run"/>
+          </category>
+          <category name="Custom">
+            <block type="do_cool_stuff" />
+            <block type="even_cooler_stuff" />
+          </category>
+        </xml>
+      `);
+    });
+
+    it ('adds blocks to an existing category', () => {
+      const oldToolbox = `
+        <xml>
+          <category name="Start">
+            <block type="when_run"/>
+          </category>
+        </xml>
+      `;
+
+      const newToolbox = appendBlocksByCategory(
+        oldToolbox,
+        {
+          Start: ['do_cool_stuff', 'even_cooler_stuff'],
+        }
+      );
+
+      expect(newToolbox).xml.to.equal(`
+        <xml>
+          <category name="Start">
+            <block type="when_run"/>
+            <block type="do_cool_stuff" />
+            <block type="even_cooler_stuff" />
+          </category>
+        </xml>
+      `);
+    });
+
+    it ('adds all blocks to an uncategorized toolbox', () => {
+      const oldToolbox = `
+        <xml>
+          <block type="when_run"/>
+        </xml>
+      `;
+
+      const newToolbox = appendBlocksByCategory(
+        oldToolbox,
+        {
+          Custom: ['do_cool_stuff', 'even_cooler_stuff'],
+        }
+      );
+
+      expect(newToolbox).xml.to.equal(`
+        <xml>
+          <block type="when_run"/>
+          <block type="do_cool_stuff" />
+          <block type="even_cooler_stuff" />
+        </xml>
+      `);
+    });
+
+    it ('adds blocks to multiple existing/new categories', () => {
+      const oldToolbox = `
+        <xml>
+          <category name="Start">
+            <block type="when_run"/>
+          </category>
+          <category name="Sprites" custom="Sprite">
+            <block type="gamelab_moveUp"/>
+            <block type="gamelab_moveDown"/>
+          </category>
+        </xml>
+      `;
+
+      const newToolbox = appendBlocksByCategory(
+        oldToolbox,
+        {
+          Start: ['do_cool_stuff', 'even_cooler_stuff'],
+          Sprites: ['gamelab_moveLeft', 'gamelab_moveRight'],
+          Events: ['gamelab_whenUpArrow', 'gamelab_whenDownArrow'],
+          Custom: ['gamelab_consoleLog'],
+        }
+      );
+
+      expect(newToolbox).xml.to.equal(`
+        <xml>
+          <category name="Start">
+            <block type="when_run"/>
+            <block type="do_cool_stuff" />
+            <block type="even_cooler_stuff" />
+          </category>
+          <category name="Sprites" custom="Sprite">
+            <block type="gamelab_moveUp"/>
+            <block type="gamelab_moveDown"/>
+            <block type="gamelab_moveLeft"/>
+            <block type="gamelab_moveRight"/>
+          </category>
+          <category name="Events">
+            <block type="gamelab_whenUpArrow"/>
+            <block type="gamelab_whenDownArrow"/>
+          </category>
+          <category name="Custom">
+            <block type="gamelab_consoleLog"/>
+          </category>
+        </xml>
+      `);
     });
   });
 
