@@ -8,6 +8,9 @@ require 'json'
 class ContactRollups
   # Connection to read from Pegasus production database.
   PEGASUS_DB_READER = sequel_connect(CDO.pegasus_db_reader, CDO.pegasus_db_reader)
+  # Production database has a global max query execution timeout setting.  This 20 minute setting can be used
+  # to override the timeout for a specific session or query.
+  MAX_EXECUTION_TIME = 1_200_000
 
   # Connection to write to Pegasus production database.
   PEGASUS_DB_WRITER = sequel_connect(CDO.pegasus_db_writer, CDO.pegasus_db_reader)
@@ -164,7 +167,8 @@ class ContactRollups
     # Query all of the contacts in the latest daily contact rollup table (contact_rollups_daily) sorted by email.
     contact_rollups_src = PEGASUS_REPORTING_DB_READER['SELECT * FROM contact_rollups_daily FORCE INDEX(contact_rollups_email_index) ORDER BY email']
     # Query all of the contacts in the master contact rollup table (contact_rollups_daily) sorted by email.
-    contact_rollups_dest = PEGASUS_DB_READER['SELECT * FROM contact_rollups FORCE INDEX(contact_rollups_email_index) ORDER BY email']
+    # Use MYSQL 5.7 MAX_EXECUTION_TIME optimizer hint to override the production database global query timeout.
+    contact_rollups_dest = PEGASUS_DB_READER["SELECT /*+ MAX_EXECUTION_TIME(#{MAX_EXECUTION_TIME}) */ * FROM contact_rollups FORCE INDEX(contact_rollups_email_index) ORDER BY email"]
 
     # Create iterators for both queries using the #stream method so we stream the results back rather than
     # trying to load everything in memory

@@ -563,6 +563,7 @@ class LevelsHelperTest < ActionView::TestCase
     sign_in student
 
     assert_includes app_options[:experiments], experiment.name
+    experiment.destroy
   end
 
   test 'video data available for levels with associated videos' do

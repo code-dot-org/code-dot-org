@@ -26,13 +26,13 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 %script{src: "/shared/js/angular-sanitize/angular-sanitize.min.js"}
 %script{src: "/shared/js/ng-csv/ng-csv.min.js"}
 
-%link(rel='stylesheet' type='text/css' href='/css/learn_tabs.css')
-%link(rel='stylesheet' type='text/css' href='/style.css')
-%link(rel='stylesheet' type='text/css' href='/css/page.css')
-%link(rel='stylesheet' type='text/css' href='/shared/css/course-blocks.css')
-%link(rel='stylesheet' type='text/css' href='/shared/css/teacher-announcement.css')
-%link(rel='stylesheet' type='text/css' href='/shared/css/teacher-dashboard.css')
-%link(rel='stylesheet' type='text/css' href='/shared/css/user-progress.css')
+%link{rel: 'stylesheet', type: 'text/css', href: '/css/learn_tabs.css'}
+%link{rel: 'stylesheet', type: 'text/css', href: '/style.css'}
+%link{rel: 'stylesheet', type: 'text/css', href: '/css/page.css'}
+%link{rel: 'stylesheet', type: 'text/css', href: '/shared/css/course-blocks.css'}
+%link{rel: 'stylesheet', type: 'text/css', href: '/shared/css/teacher-announcement.css'}
+%link{rel: 'stylesheet', type: 'text/css', href: '/shared/css/teacher-dashboard.css'}
+%link{rel: 'stylesheet', type: 'text/css', href: '/shared/css/user-progress.css'}
 
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
 %script{src: asset_path("js/#{js_locale}/common_locale.js")}

@@ -64,6 +64,8 @@ class Section < ActiveRecord::Base
   has_many :section_hidden_stages
   has_many :section_hidden_scripts
 
+  scope :with_student, ->(student) {joins(:followers).where(followers: {student_user_id: student.id})}
+
   SYSTEM_DELETED_NAME = 'system_deleted'.freeze
 
   # This list is duplicated as SECTION_LOGIN_TYPE in shared_constants.rb and should be kept in sync.
@@ -99,6 +101,10 @@ class Section < ActiveRecord::Base
 
   def workshop_section?
     Pd::Workshop::SECTION_TYPES.include? section_type
+  end
+
+  def externally_rostered?
+    [LOGIN_TYPE_EMAIL, LOGIN_TYPE_PICTURE, LOGIN_TYPE_WORD].exclude? login_type
   end
 
   validates_presence_of :user, unless: -> {deleted?}

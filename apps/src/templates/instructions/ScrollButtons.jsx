@@ -167,7 +167,7 @@ class ScrollButtons extends React.Component {
       <button
         className="arrow"
         ref={(c) => { this.scrollDown = c; }}
-        key="scrollUp"
+        key="scrollDown"
         onMouseDown={this.scrollStartDown}
         style={[
           styles.all,

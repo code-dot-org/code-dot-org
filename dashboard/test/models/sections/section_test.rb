@@ -17,6 +17,22 @@ class SectionTest < ActiveSupport::TestCase
     end
   end
 
+  test "scope with_student returns sections where user is follower" do
+    section = create(:section, user: @teacher)
+    student = create(:follower, section: section).student_user
+
+    sections_with_student = Section.with_student(student)
+    assert_equal [section], sections_with_student
+  end
+
+  test "scope with_student returns an empty array if user follows no sections" do
+    create(:section, user: @teacher)
+    user = create(:user)
+
+    sections_with_student = Section.with_student(user)
+    assert_empty sections_with_student
+  end
+
   test "destroying section destroys appropriate followers" do
     delete_time = Time.now - 1.day
     already_deleted_follower = create :follower, section: @section
@@ -285,6 +301,14 @@ class SectionTest < ActiveSupport::TestCase
 
     refute Section.new.workshop_section?
     refute Section.new(section_type: 'not_a_workshop').workshop_section?
+  end
+
+  test 'externally_rostered?' do
+    [Section::LOGIN_TYPE_GOOGLE_CLASSROOM, Section::LOGIN_TYPE_CLEVER].each do |type|
+      assert Section.new(login_type: type).externally_rostered?
+    end
+
+    refute Section.new.externally_rostered?
   end
 
   test 'name safe students' do

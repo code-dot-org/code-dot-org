@@ -180,7 +180,7 @@ class RegistrationsControllerTest < ActionController::TestCase
 
     email_preference = EmailPreference.last
     assert_equal "an@email.address", email_preference[:email]
-    assert_equal true, email_preference[:opt_in]
+    assert email_preference[:opt_in]
     assert_equal EmailPreference::ACCOUNT_SIGN_UP, email_preference[:source]
   end
 
@@ -195,7 +195,7 @@ class RegistrationsControllerTest < ActionController::TestCase
 
     email_preference = EmailPreference.last
     assert_equal "an@email.address", email_preference[:email]
-    assert_equal false, email_preference[:opt_in]
+    refute email_preference[:opt_in]
     assert_equal EmailPreference::ACCOUNT_SIGN_UP, email_preference[:source]
   end
 
@@ -619,6 +619,74 @@ class RegistrationsControllerTest < ActionController::TestCase
     get :edit
     assert_response :success
     assert_select '#user_name', 1
+  end
+
+  test "converting student to teacher without password succeeds when email hasn't changed" do
+    test_email = 'me@example.com'
+    student = create :student, email: test_email
+    original_hashed_email = student.hashed_email
+    assert_empty student.email
+    sign_in student
+
+    request.headers['HTTP_ACCEPT'] = "application/json"
+    post :update, params: {
+      user: {
+        user_type: 'teacher',
+        email: test_email,
+        hashed_email: student.hashed_email
+      }
+    }
+    assert_response :success
+
+    student.reload
+    assert_equal 'teacher', student.user_type
+    assert_equal test_email, student.email
+    assert_equal original_hashed_email, student.hashed_email
+  end
+
+  test "converting student to teacher without password fails when email doesn't match" do
+    test_email = 'me@example.com'
+    student = create :student, email: test_email
+    original_hashed_email = student.hashed_email
+    assert_empty student.email
+    sign_in student
+
+    request.headers['HTTP_ACCEPT'] = "application/json"
+    post :update, params: {
+      user: {
+        user_type: 'teacher',
+        email: 'wrong_email@example.com',
+        hashed_email: student.hashed_email
+      }
+    }
+    assert_response :unprocessable_entity
+
+    student.reload
+    assert_equal 'student', student.user_type
+    assert_empty student.email
+    assert_equal original_hashed_email, student.hashed_email
+  end
+
+  test "converting teacher to student without password succeeds" do
+    test_email = 'me@example.com'
+    teacher = create :teacher, email: test_email
+    original_hashed_email = teacher.hashed_email
+    sign_in teacher
+
+    request.headers['HTTP_ACCEPT'] = "application/json"
+    post :update, params: {
+      user: {
+        user_type: 'student',
+        email: '',
+        hashed_email: teacher.hashed_email
+      }
+    }
+    assert_response :success
+
+    teacher.reload
+    assert_equal 'student', teacher.user_type
+    assert_empty teacher.email
+    assert_equal original_hashed_email, teacher.hashed_email
   end
 
   def can_edit_password_without_password(user)

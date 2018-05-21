@@ -88,6 +88,9 @@ Dashboard::Application.routes.draw do
         post 'update_sharing_disabled'
         get 'student_script_ids'
       end
+      collection do
+        get 'membership'
+      end
     end
   end
 
@@ -125,6 +128,8 @@ Dashboard::Application.routes.draw do
     patch '/dashboardapi/users', to: 'registrations#update'
     patch '/users/upgrade', to: 'registrations#upgrade'
     patch '/users/set_age', to: 'registrations#set_age'
+    patch '/users/email', to: 'registrations#set_email'
+    patch '/users/user_type', to: 'registrations#set_user_type'
     get '/users/clever_takeover', to: 'sessions#clever_takeover'
     get '/users/clever_modal_dismissed', to: 'sessions#clever_modal_dismissed'
   end

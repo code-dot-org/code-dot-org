@@ -177,6 +177,9 @@ class FilesApi < Sinatra::Base
     get_file('files', encrypted_channel_id, 'index.html', true)
   end
 
+  #
+  # @return [IO] requested file body as an IO stream
+  #
   def get_file(endpoint, encrypted_channel_id, filename, code_projects_domain_root_route = false)
     # We occasionally serve HTML files through theses APIs - we don't want NewRelic JS inserted...
     NewRelic::Agent.ignore_enduser rescue nil
@@ -217,8 +220,8 @@ class FilesApi < Sinatra::Base
       return "<head>\n<script>\nvar encrypted_channel_id='#{encrypted_channel_id}';\n</script>\n<script async src='/scripts/hosted.js'></script>\n<link rel='stylesheet' href='/style.css'></head>\n" << result[:body].string
     end
 
-    if should_sanitize_for_under_13?(encrypted_channel_id)
-      return sanitize_for_under_13 result[:body].string
+    if endpoint == 'sources' && should_sanitize_for_under_13?(encrypted_channel_id)
+      return StringIO.new sanitize_for_under_13 result[:body].string
     end
 
     result[:body]

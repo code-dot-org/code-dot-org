@@ -11,7 +11,8 @@ DEFAULT_DATA = {
   organization_name_s: 'fake_org',
   event_type_s: 'in_school',
   hoc_country_s: 'us',
-  event_location_s: 'fake_location'
+  event_location_s: 'fake_location',
+  email_preference_opt_in_s: 'yes'
 }.freeze
 
 class FormHelpersTest < SequelTestCase

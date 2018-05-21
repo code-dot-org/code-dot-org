@@ -85,6 +85,7 @@ module.exports = function (config) {
     },
     mochaReporter: {
       output: envConstants.CDO_VERBOSE_TEST_OUTPUT ? 'full' : 'minimal',
+      showDiff: true,
     },
 
 
