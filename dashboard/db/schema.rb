@@ -88,6 +88,16 @@ ActiveRecord::Schema.define(version: 20180518054641) do
     t.index ["user_id", "script_id", "level_id", "hint_id"], name: "index_authored_hint_view_requests_on_all_related_ids", using: :btree
   end
 
+  create_table "blocks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "name"
+    t.string   "level_type"
+    t.text     "category",    limit: 65535
+    t.text     "config",      limit: 65535
+    t.text     "helper_code", limit: 65535
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
   create_table "callouts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.string   "element_id",       limit: 1024,  null: false
     t.string   "localization_key", limit: 1024,  null: false
