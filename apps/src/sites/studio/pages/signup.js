@@ -101,7 +101,7 @@ window.SignupManager = function (options) {
       "terms_of_service_version",
       "school_info.zip",
       "email_preference_opt_in",
-      "data_transfer_agreement"
+      "data_transfer_agreement_accepted"
     ];
 
     var fieldsWithErrors = 0;
@@ -113,7 +113,7 @@ window.SignupManager = function (options) {
           // We have a custom inline message for user_type errors already set in the DOM.
           if (field === "terms_of_service_version") {
             errorField.text(self.options.acceptTermsString);
-          } else if (field === 'data_transfer_agreement') {
+          } else if (field === 'data_transfer_agreement_accepted') {
             errorField.text(self.options.acceptTermsString);
           } else if (field === 'email_preference_opt_in') {
             errorField.text(self.options.emailPreferenceOptInString);

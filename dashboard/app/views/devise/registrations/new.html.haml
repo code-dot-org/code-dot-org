@@ -139,14 +139,14 @@
               != t('signup_form.agree_tos_privacy')
               != t('signup_form.under_13_consent')
 
-        -# If in GDPR, show an additional checkbox.
-        #data_transfer_agreement-block.itemblock
+        -# If GDPR applies, show an additional checkbox.
+        #data_transfer_agreement_accepted-block.itemblock
           - if request.gdpr? || request.params['force_in_eu']
             .error_in_field.checkbox-error
             = f.hidden_field :data_transfer_agreement_required, value: "1"
             %br/
-            = f.label :data_transfer_agreement, id: "gdpr_agreement" do
-              = f.check_box :data_transfer_agreement, {class: 'terms-checkbox'}
+            = f.label :data_transfer_agreement_accepted, id: "gdpr_agreement" do
+              = f.check_box :data_transfer_agreement_accepted, {class: 'terms-checkbox'}
               %span
                 != t('signup_form.agree_us_website')
                 != t('signup_form.my_data_to_us')

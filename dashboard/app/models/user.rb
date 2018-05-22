@@ -107,6 +107,14 @@ class User < ActiveRecord::Base
     closed_dialog
     nonsense
   ).freeze
+
+  # Notes:
+  #   data_transfer_agreement_source: Indicates the source of the data transfer
+  #     agreement.
+  #   data_transfer_agreement_kind: "0", "1", etc.  Indicates which version
+  #     of the data transfer agreement string the user to agreed to, for a given
+  #     data_transfer_agreement_source.  This value should be bumped each time
+  #     the corresponding user-facing string is updated.
   serialized_attrs %w(
     ops_first_name
     ops_last_name
@@ -503,7 +511,7 @@ class User < ActiveRecord::Base
 
   validates :data_transfer_agreement_accepted, acceptance: true, if: :data_transfer_agreement_required
   validates_presence_of :data_transfer_agreement_request_ip, if: -> {data_transfer_agreement_accepted.present?}
-  validates_inclusion_of :data_transfer_agreement_source, in: DATA_TRANSFER_AGREEMENT_SOURCE_TYPES, if: -> {data_transfer_agreement.present?}
+  validates_inclusion_of :data_transfer_agreement_source, in: DATA_TRANSFER_AGREEMENT_SOURCE_TYPES, if: -> {data_transfer_agreement_accepted.present?}
   validates_presence_of :data_transfer_agreement_kind, if: -> {data_transfer_agreement_accepted.present?}
   validates_presence_of :data_transfer_agreement_at, if: -> {data_transfer_agreement_accepted.present?}
 
