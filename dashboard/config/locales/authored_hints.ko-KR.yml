@@ -3059,10 +3059,8 @@
           이동을 위해 이 옵션은 보세요.
 
           ![](https://images.code.org/7f6f09c55cf9552a91fc1d33f44a7315-image-1469641639330.png)
-        Course_4_SCV_5_b: Each time through the loop, the flowers have two less nectar
-          and the bee needs to make one more honey.
-        Course_4_SCV_5_c: Notice that at the beginning of the outside loop, the bee
-          moves as many times as there is nectar in the next flower.
+        Course_4_SCV_5_b: 반복문을 돌 때마다 꽃에는 꽃꿀이 2 개 적고 꿀벌은 벌꿀을 한 번 더 만들어야 합니다.
+        Course_4_SCV_5_c: 바깥 반복문의 시작 부분에서 벌이 다음 꽃에 꿀이 있을 때만큼 움직입니다.
         Course_4_SCV_5_d: |-
           **예제 답안:**
 
@@ -3189,20 +3187,18 @@
           </xml>
       Course 4 SCV 6_authored_hint:
         Course_4_SCV_6_a: |-
-          Take a look at what a single completed shape looks like
+          하나의 완성 된 모양이 어떻게 생겼는지 살펴 보십시오.
 
-          ![](https://images.code.org/9e30d3a87186cefe730984feee195806-image-1469642178866.png)
-        Course_4_SCV_6_b: 'You will benefit from creating 8 variables: red1, green1,
-          blue1, red2, green2, blue2, length, and sides.'
-        Course_4_SCV_6_c: Each of the shape's 5 sides is broken up into pieces of
-          `length`/`sides` where the zig is teal (rgb = 0,175,200) and the zag is
-          purple (rgb = 100, 50, 150).
-        Course_4_SCV_6_d: 'To zig, turn left by `360`/`sides`.  To zag, turn right
-          by `360`/`sides`. '
-        Course_4_SCV_6_e: 'The rest of the program is very standard for making a full
-          360 degree rotation from a shape, except that we are overlapping the shapes
-          by half, so we have to turn right by `180`/`sides`, which means that we
-          need twice as many of them as usual (`sides`*`2` repetitions). '
+          ! [] (https://images.code.org/9e30d3a87186cefe730984feee195806-image-1469642178866.png)
+        Course_4_SCV_6_b: '다음과 같은 8가지 변수를 만드는 것이 좋습니다: 빨간색 1, 녹색 1, 파란색 1, 빨간색 2,
+          녹색 2, 파란색 2, 길이 및면.'
+        Course_4_SCV_6_c: 모양의 5면 각각은 한쪽 방향으로 움직일때 청록 (rgb = 0,175,200) 색이고 다른 한쪽 방향으로
+          움직일때는 자주색 (rgb = 100, 50, 150) 인 '길이'/ '면'의 조각으로 나뉩니다.
+        Course_4_SCV_6_d: '한쪽으로 꺽기 위해 돌려면 ''360` /`sides ''로 좌회전 하십시오. 다른 한쪽으로 돌려면
+          ''360` /`sides ''만큼 우회전 하십시오. '
+        Course_4_SCV_6_e: '프로그램의 나머지 부분은 모양에서 전체 360도 회전을 만들기위한 표준입니다. 단, 모양을 절반 겹치기
+          때문에 ''180''/ ''sides''로 오른쪽으로 돌아야 합니다. 즉, 이런 과정이 두번 (`sides` *`2`만큼 반복)
+          이 필요 합니다. '
         Course_4_SCV_6_f: |-
           **예제 답안:**
 
@@ -3551,31 +3547,29 @@
           <img src="https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png" width="200px" />
       Farmer for Authored Hint testing_authored_hint:
         first_hint: |-
-          This is the first hint.
+          이것은 첫 번째 힌트입니다.
 
-          It has *some* **basic** `markup`
+          그것은 * some * **basic**`markup`
         second_hint: |-
-          This is the second hint. It has an image.
+          두번째 힌트 입니다.
 
           ![](https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)
-        last_hint: This is the third and final hint. It doesn't have anything special.
+        last_hint: 이것이 세 번째이자 마지막 힌트입니다. 특별한 것은 없습니다.
       Farmer for TTS testing_authored_hint:
         first_hint: |-
-          This is the first hint.
+          이것은 첫 번째 힌트입니다.
 
-          It has *some* **basic** `markup`
+          그것은 * some * **basic**`markup`
         second_hint: |-
-          This is the second hint. It has an image.
+          두번째 힌트 입니다.
 
           ![](https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)
-        last_hint: This is the third and final hint. It doesn't have anything special.
+        last_hint: 이것이 세 번째이자 마지막 힌트입니다. 특별한 것은 없습니다.
       Function intro Ryan_authored_hint:
-        Function_intro_Ryan_b: If you call the functions correctly, this is the path
-          you will travel...
+        Function_intro_Ryan_b: 함수를 올바르게 호출할 경우 이동 경로입니다.
         Function_intro_Ryan_a: 프로그램 내에서 같은 함수를 여러 번 호출할 수 있습니다. 함수를 두 번 호출해 퍼즐을 해결해보세요.
       Harvesting_authored_hint:
-        pointer_harvester_test: What kind of block can I use to check something and
-          make a decision?
+        pointer_harvester_test: 무엇인가를 확인하고 결정을 내리기 위해서는 어떤 종류의 블록을 사용할 수 있습니까?
       Inspirational Artwork_authored_hint:
         brush_width: 붓의 두께를 1로 설정 한 다음 색상을 파란색으로 먼저 설정 했습니다.
         double_loop: "'카운트'문 안에 'for loop'를 사용해보세요."
@@ -3647,8 +3641,7 @@
         MC_HOC_2017_02_Cole_b: "'실행'을 누르세요. \n코드가 정확하지 않아도 실행할 수 있으니 필요한 만큼 코드를 실행하고
           초기화하면서 잘못된 부분을 찾아 보세요."
         MC_HOC_2017_02_Cole_c: Agent가 문을 열면 방향키를 사용해 플레이어를 지도로 움직이세요!
-        MC_HOC_2017_02_Cole_d: Make sure the Agent is following the path outlined
-          on the map!
+        MC_HOC_2017_02_Cole_d: Agent가 지도에 표시된 경로를 따르고 있는지 확인하십시오!
       MC_HOC_2017_02_Will_authored_hint:
         MC_HOC_2017_02_Cole_a: Agent를 두 칸 앞에 있는 감압판 위로 움직이면 문이 열리고 플레이어가 들어갈 수 있습니다.
         MC_HOC_2017_02_Cole_b: "'Agent 실행'을 누르세요. \n코드가 정확하지 않아도 실행할 수 있으니 필요한 만큼
@@ -3671,20 +3664,17 @@
       MC_HOC_2017_05_Cole_authored_hint:
         MC_HOC_2017_05_Cole_a: 루프 안에는 코드를 한 가지 이상 넣을 수 있답니다.  '반복' 안에 판자 설치와 앞으로 이동하기를
           **모두** 넣어 퍼즐을 완성해보세요.
-        MC_HOC_2017_05_Cole_b: Get the Agent across the river, building a bridge as
-          you go.
+        MC_HOC_2017_05_Cole_b: Agent강을 건너는 다리를 짓게 하세요.
       MC_HOC_2017_05_Josh_authored_hint:
         MC_HOC_2017_05_Cole_a: 루프 안에는 코드를 한 가지 이상 넣을 수 있답니다.  '반복' 안에 판자 설치와 앞으로 이동하기를
           **모두** 넣어 퍼즐을 완성해보세요.
       MC_HOC_2017_06_Cole_authored_hint:
         MC_HOC_2017_06_Cole_a: 루프를 사용하면 얼만큼 반복할 수 있을까요?  몇 번 반복하는 것이 *정답*일까요?
-        MC_HOC_2017_06_Cole_b: 'Help the Agent build a bridge all the way across the
-          water! '
+        MC_HOC_2017_06_Cole_b: 'Agent를 물 건너편에 다리를 세우도록 도와주세요! '
       MC_HOC_2017_06_Josh_authored_hint:
         MC_HOC_2017_06_Cole_a: "'반복' 루프 안에 지시문을 한 개 이상 넣어 보세요!"
       MC_HOC_2017_07_Cole_authored_hint:
-        MC_HOC_2017_07_Cole_c: All you need to have the Agent do is clear the path
-          to the Minecart.
+        MC_HOC_2017_07_Cole_c: Agent에게 필요한 것은 Minecart로 가는 바른 길입니다.
         MC_HOC_2017_07_Cole_a: 이 퍼즐을 해결하려면 '경로 확보하기' 함수로 무슨 일을 할 수 있는지 알아보고 필요한 만큼
           반복해야 합니다. 툴 박스에 '경로 확보하기'라고 표시된 작은 녹색 블록을 사용하세요.
         MC_HOC_2017_07_Cole_b: 함수 블록을 툴 박스에 있는 다른 블록과 조합하면서 퍼즐을 해결하는 방법을 찾아보세요.
@@ -3699,8 +3689,7 @@
       MC_HOC_2017_10_Cole_authored_hint:
         MC_HOC_2017_10_Cole_a: 함수를 사용하면 퍼즐을 좀 더 쉽게 해결할 수 있답니다!
       MC_HOC_2017_10_RETRY_authored_hint:
-        MC_HOC_2017_10_Cole_b: Don't know where to go?  See if you can find the dotted
-          line!
+        MC_HOC_2017_10_Cole_b: 어디를 가야할지 모르십니까? 점선이 있는지 확인 하십시오!
         MC_HOC_2017_10_Cole_a: 함수를 사용하면 퍼즐을 좀 더 쉽게 해결할 수 있답니다!
       MC_HOC_2017_13_Cole_authored_hint:
         MC_HOC_2017_13_Cole_a: Agent를 통해 필요한 곳에 다리를 지어 알렉스나 스티브가 이동할 수 있게 해주세요.
@@ -3710,8 +3699,7 @@
         MC_HOC_2017_08_RY_a: "'실행'을 누르세요. \n코드가 정확하지 않아도 실행할 수 있으니 필요한 만큼 코드를 실행하고
           초기화하면서 잘못된 부분을 찾아 보세요."
         MC_HOC_2017_08_RY_b: 이 퍼즐을 해결하는 방법은 아주 다양해요.  여러 방식을 시도해보세요!
-        MC_HOC_2017_08_RY_c: Try following the dotted line for a simple path through
-          the lava.
+        MC_HOC_2017_08_RY_c: 용암을 통과하는 간단한 경로를 위해 점선을 따라 가보십시오.
       MC_HOC_2017_FP10x10_authored_hint: {}
       MC_HOC_2017_FP10x10_RE_authored_hint: {}
       MC_HOC_2017_FP20x20_authored_hint:
@@ -3723,21 +3711,17 @@
       MikeStarNested_authored_hint:
         hint1: Don't give up!
       NEW Course 4 Artist Functions 13_authored_hint:
-        NEW_Course_4_Artist_Functions_13_a: Edit the `draw a line of squares` function
-          so that you don't have to call it twice.
-        NEW_Course_4_Artist_Functions_13_c: What code would you need if you were going
-          to try to make a star with regular lines?
+        NEW_Course_4_Artist_Functions_13_a: "`정사각형의 선 그리기 '기능을 수정하면 두 번 호출하지 않아도 됩니다."
+        NEW_Course_4_Artist_Functions_13_c: 상자 대신 일반 줄을 사용하여 별을 만들려고한다면 어떤 코드가 필요합니까?
       NEW Course 4 Artist Functions 4_authored_hint:
-        NEW_Course_4_Artist_Functions_4_a: You will have to use a `turn right by 120
-          degrees` block after each square.
+        NEW_Course_4_Artist_Functions_4_a: 각 사각형 그린 후에`120도 오른쪽 회전 '블록을 사용해야 합니다.
       NEW Course 4 Artist Functions 9_authored_hint:
-        NEW_Course_4_Artist_Functions_9_a: Try running the code before you add any
-          blocks.   What makes the drawing look a little off?
-        NEW_Course_4_Artist_Functions_9_b: If you can't quite put your finger on what's
-          going wrong, try slowing down the artist's by moving the slider to the left.
+        NEW_Course_4_Artist_Functions_9_a: 블록을 추가하기 전에 코드를 실행 해보십시오. 그림이 약간 어둡게 보이게하는
+          이유는 무엇입니까?
+        NEW_Course_4_Artist_Functions_9_b: 잘 못 되고 있는 것에 대해 원인을 못 찾을 경우는 속도 슬라이더를 왼쪽으로
+          움직여서 아티스트의 속도를 줄이십시오.
       NEW Course 4 Artist Params 11_authored_hint:
-        NEW_Course_4_Artist_Params_11_a: There is more than one number that needs
-          to be replaced by a variable inside the function.
+        NEW_Course_4_Artist_Params_11_a: 함수 내에서 변수로 대체해야하는 숫자가 두 개 이상 있습니다.
       NEW Course 4 Artist Params 13_authored_hint:
         NEW_Course_4_Artist_Params_13_a: 'You will need to divide the *perimeter*
           by the number of sides in order to keep the shapes the same size overall. '

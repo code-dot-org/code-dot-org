@@ -26390,9 +26390,8 @@
         **Freeplay:** Here are
         the functions you've written, and some more for you to play with. Play with
         the pen width to see how different your drawings look!
-      NEW Course 4 Artist Params 2_markdown_instruction: |-
-        Create a `draw triangle`
-        function from scratch that makes a triangle with  50 pixel sides.
+      NEW Course 4 Artist Params 2_markdown_instruction: Жактарынын узундугу 50 пиксел
+        болгон "үч бурчтук тарт" функциясын жаңыдан түзгүлө.
       NEW Course 4 Artist Params 3_markdown_instruction: "Now let's use the function
         to draw 5 triangles in a row. \r\n\r\nEach triangle is 30 pixels apart."
       NEW Course 4 Artist Params 4_markdown_instruction: |-
@@ -43707,9 +43706,8 @@
       courseB_iceage_loops1_markdown_instruction: |-
         Help Scrat across the slippery
         ice to get to the acorn!
-      courseB_iceage_loops10_markdown_instruction: |-
-        Help Scrat get all the way over
-        to the acorn!
+      courseB_iceage_loops10_markdown_instruction: Скрат бүт жолду өтүп, жаңгакка
+        жеткенге жардам бергиле!
       courseB_iceage_loops11_markdown_instruction: Help Scrat get to the acorn!
       courseB_iceage_loops12_markdown_instruction: |-
         Get to the acorn any way you
@@ -45368,9 +45366,8 @@
       courseD_iceage_loops1_markdown_instruction: |-
         Help Scrat across the slippery
         ice to get to the acorn!
-      courseD_iceage_loops10_markdown_instruction: |-
-        Help Scrat get all the way over
-        to the acorn!
+      courseD_iceage_loops10_markdown_instruction: Скрат бүт жолду өтүп, жаңгакка
+        жеткенге жардам бергиле!
       courseD_iceage_loops11_markdown_instruction: Help Scrat get to the acorn!
       courseD_iceage_loops12_markdown_instruction: |-
         Get to the acorn any way you
