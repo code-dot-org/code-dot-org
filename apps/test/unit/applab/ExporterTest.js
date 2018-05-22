@@ -81,7 +81,7 @@ describe('The Exporter,', function () {
       PNG_ASSET_CONTENT
     );
     server.respondWith(
-      /\/assets\/fontawesome-webfont\.woff2\?__cb__=\d+/,
+      /\/fonts\/fontawesome-webfont\.woff2\?__cb__=\d+/,
       FONTAWESOME_CONTENT
     );
     server.respondWith(

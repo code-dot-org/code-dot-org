@@ -1,98 +1,40 @@
 import $ from 'jquery';
-import React from 'react';
-import ReactDOM from 'react-dom';
-import ConfirmEmailModal from '@cdo/apps/code-studio/ConfirmEmailModal';
-import ChangeEmailModal from '@cdo/apps/lib/ui/ChangeEmailModal';
+import ChangeEmailController from '@cdo/apps/lib/ui/accounts/ChangeEmailController';
+import ChangeUserTypeController from '@cdo/apps/lib/ui/accounts/ChangeUserTypeController';
 import getScriptData from '@cdo/apps/util/getScriptData';
-import color from '@cdo/apps/util/color';
 
+// Values loaded from scriptData are always initial values, not the latest
+// (possibly unsaved) user-edited values on the form.
 const scriptData = getScriptData('edit');
-const initialUserType = scriptData.userType;
-const isOauth = scriptData.isOauth;
-let emailModalConfirmed = false;
-
-const confirmEmailDiv = $('<div>');
-function showConfirmEmailModal(cancel, submit) {
-  $(document.body).append(confirmEmailDiv);
-
-  ReactDOM.render(
-    <ConfirmEmailModal
-      isOpen={true}
-      handleCancel={cancel}
-      handleSubmit={submit}
-    />,
-    confirmEmailDiv[0]
-  );
-}
-
-function closeConfirmEmailModal() {
-  ReactDOM.unmountComponentAtNode(confirmEmailDiv[0]);
-}
-
-function onCancelModal() {
-  $("#user_user_type").val("student");
-  closeConfirmEmailModal();
-}
-
-function onSubmitModal(e) {
-  return email => {
-    $("#user_email").val(email);
-    // Retrigger the submit with a flag marking the modal as completed
-    emailModalConfirmed = true;
-    $(e.currentTarget).trigger('click');
-    closeConfirmEmailModal();
-  };
-}
-
-const changeEmailMountPoint = document.createElement('div');
-function showChangeEmailModal() {
-  document.body.appendChild(changeEmailMountPoint);
-  const form = document.getElementById('change-email-modal-form');
-  const userAge = parseInt(document.getElementById('user_age').value, 10);
-  const userHashedEmail = document.getElementById('change-email-modal_user_hashed_email').value;
-  ReactDOM.render(
-    <ChangeEmailModal
-      isOpen
-      handleSubmit={onEmailChanged}
-      handleCancel={hideChangeEmailModal}
-      railsForm={form}
-      userAge={userAge}
-      currentHashedEmail={userHashedEmail}
-    />,
-    changeEmailMountPoint
-  );
-}
-
-function onEmailChanged(newEmail) {
-  const displayedUserEmail = $('#displayed-user-email');
-  if ('***encrypted***' !== displayedUserEmail.text()) {
-    displayedUserEmail.text(newEmail);
-  }
-  hideChangeEmailModal();
-  $(displayedUserEmail).effect('highlight', {
-    duration: 1500,
-    color: color.orange,
-  });
-}
-
-function hideChangeEmailModal() {
-  ReactDOM.unmountComponentAtNode(changeEmailMountPoint);
-  document.body.removeChild(changeEmailMountPoint);
-}
+const {userAge, userType} = scriptData;
 
 $(document).ready(() => {
-  $( "#submit-update").find("input").on("click", function (e) {
-    const userType = $('#user_user_type')[0].value;
-    let needToConfirmEmail = !emailModalConfirmed
-      && isOauth
-      && userType !== initialUserType
-      && userType === "teacher"
-    ;
-    if (needToConfirmEmail) {
-      e.preventDefault();
-      showConfirmEmailModal(onCancelModal, onSubmitModal(e));
-    }
+  new ChangeEmailController({
+    form: $('#change-email-modal-form'),
+    link: $('#edit-email-link'),
+    displayedUserEmail: $('#displayed-user-email'),
+    userAge,
+    userType,
+    emailChangedCallback: onEmailChanged,
   });
+
+  new ChangeUserTypeController(
+    $('#change-user-type-modal-form'),
+    userType,
+  );
+
+  initializeCreatePersonalAccountControls();
+});
+
+function onEmailChanged(newEmail, newHashedEmail) {
+  $('#user_hashed_email').val(newHashedEmail);
+  $('#change-user-type_user_email').val(newEmail);
+  $('#change-user-type_user_hashed_email').val(newHashedEmail);
+  $('#change-email-modal_user_email').val(newEmail);
+  $('#change-email-modal_user_hashed_email').val(newHashedEmail);
+}
+
+function initializeCreatePersonalAccountControls() {
   $( "#edit_user_create_personal_account" ).on("submit", function (e) {
     if ($('#create_personal_user_email').length) {
       window.dashboard.hashEmail({
@@ -102,6 +44,4 @@ $(document).ready(() => {
       });
     }
   });
-
-  $('#edit-email-link').click(showChangeEmailModal);
-});
+}

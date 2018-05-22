@@ -48,7 +48,7 @@ FactoryGirl.define do
   end
 
   factory :user do
-    birthday Date.new(1991, 3, 14)
+    birthday Time.zone.today - 21.years
     email {("#{user_type}_#{(User.maximum(:id) || 0) + 1}@code.org")}
     password "00secret"
     locale 'en-US'
@@ -154,6 +154,7 @@ FactoryGirl.define do
 
     factory :student do
       user_type User::TYPE_STUDENT
+      birthday Time.zone.today - 17.years
 
       factory :young_student do
         birthday Time.zone.today - 10.years
@@ -926,7 +927,7 @@ FactoryGirl.define do
     email 'test@example.net'
     opt_in false
     ip_address '10.0.0.1'
-    source EmailPreference::ACCOUNT_SIGN_UP
+    source :ACCOUNT_SIGN_UP
   end
 
   factory :user_geo do

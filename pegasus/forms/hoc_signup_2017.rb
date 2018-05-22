@@ -6,11 +6,22 @@ class HocSignup2017 < HocSignup2014
     result[:nces_school_s] = data[:nces_school_s]
     result[:school_name_s] = data[:school_name_s]
     result[:hoc_event_country_s] = data[:hoc_event_country_s]
+    result[:email_preference_opt_in_s] = required enum(data[:email_preference_opt_in_s].to_s.strip.downcase, ['yes', 'no'])
 
     result
   end
 
-  def self.process(data)
+  def self.process_with_ip(data, created_ip)
+    if data['email_preference_opt_in_s'] && created_ip && data['email_s']
+      EmailPreferenceHelper.upsert!(
+        email: data['email_s'],
+        opt_in: data['email_preference_opt_in_s'] == 'yes',
+        ip_address: created_ip,
+        source: EmailPreferenceHelper::FORM_HOC_SIGN_UP,
+        form_kind: '0'
+      )
+    end
+
     # If there is an nces school id then we need to load that school's address and use it as the event location.
     # A school id of "-1" indicates that the school was not found in the school dropdown so we treat that the
     # same as no school id.

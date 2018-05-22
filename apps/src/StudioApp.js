@@ -52,7 +52,7 @@ import {getValidatedResult, initializeContainedLevel} from './containedLevels';
 import {lockContainedLevelAnswers} from './code-studio/levels/codeStudioLevels';
 import {parseElement as parseXmlElement} from './xml';
 import {resetAniGif} from '@cdo/apps/utils';
-import {setIsRunning} from './redux/runState';
+import {setIsRunning, setStepSpeed} from './redux/runState';
 import {setPageConstants} from './redux/pageConstants';
 import {setVisualizationScale} from './redux/layout';
 import {mergeProgress} from './code-studio/progressRedux';
@@ -214,6 +214,11 @@ StudioApp.prototype.configure = function (options) {
 
   this.maxVisualizationWidth = options.maxVisualizationWidth || MAX_VISUALIZATION_WIDTH;
   this.minVisualizationWidth = options.minVisualizationWidth || MIN_VISUALIZATION_WIDTH;
+
+  // Set default speed
+  if (options.level && options.level.sliderSpeed) {
+    setStepSpeed(options.level.sliderSpeed);
+  }
 };
 
 /**

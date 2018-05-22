@@ -137,3 +137,6 @@ stage 'Project - Personal Portfolio Website', flex_category: 'csd2_2'
 named_level 'Unit 2 Lesson 16 Overview'
 named_level 'Final Personal Website'
 assessment 'csd-pulse-check-survey-1-levelgroup U2Ch2', progression: 'Reflection'
+
+stage 'CSD Post-Course Survey', lockable: true, flex_category: 'csd_survey'
+assessment 'csd-post-survey-2018-markdown-with-link-to-survey'
