@@ -11,6 +11,7 @@ describe('ChangeUserTypeModal', () => {
   let wrapper;
 
   const EMAIL_SELECTOR = 'input[type="email"]';
+  const EMAIL_OPT_IN_SELECTOR = 'select';
 
   const DEFAULT_PROPS = {
     handleSubmit: () => {},
@@ -19,6 +20,7 @@ describe('ChangeUserTypeModal', () => {
 
   // Helpers for selecting particular elements/components
   const emailInput = wrapper => wrapper.find(EMAIL_SELECTOR);
+  const emailOptInSelect = wrapper => wrapper.find(EMAIL_OPT_IN_SELECTOR);
   const submitButton = wrapper => wrapper.find(Button)
     .filterWhere(n => n.prop('text') === i18n.changeUserTypeModal_save_teacher());
   const cancelButton = wrapper => wrapper.find(Button)
@@ -35,6 +37,7 @@ describe('ChangeUserTypeModal', () => {
   it('disables everything and shows save text when saving', () => {
     wrapper.setState({saveState: 'saving'});
     expect(emailInput(wrapper)).to.have.attr('disabled');
+    expect(emailOptInSelect(wrapper)).to.have.attr('disabled');
     expect(submitButton(wrapper)).to.have.attr('disabled');
     expect(cancelButton(wrapper)).to.have.attr('disabled');
     expect(wrapper.text()).to.include(i18n.saving());
@@ -58,6 +61,7 @@ describe('ChangeUserTypeModal', () => {
       wrapper.setState({
         values: {
           currentEmail: '',
+          emailOptIn: 'yes',
         }
       });
 
@@ -68,6 +72,7 @@ describe('ChangeUserTypeModal', () => {
       wrapper.setState({
         values: {
           currentEmail: 'invalidEmail@nowhere',
+          emailOptIn: 'yes',
         }
       });
 
@@ -81,6 +86,7 @@ describe('ChangeUserTypeModal', () => {
       wrapper.setState({
         values: {
           currentEmail: 'differentEmail@example.com',
+          emailOptIn: 'yes',
         }
       });
 
@@ -92,9 +98,42 @@ describe('ChangeUserTypeModal', () => {
       wrapper.setState({
         values: {
           currentEmail: '',
+          emailOptIn: 'yes',
         },
         serverErrors: {
           currentEmail: serverError,
+        }
+      });
+
+      expect(wrapper.text()).to.include(serverError);
+    });
+
+    it('checks that email opt-in is present', () => {
+      const email = 'validEmail@example.com';
+      const hashedEmail = hashEmail(email);
+      wrapper.setProps({currentHashedEmail: hashedEmail});
+      wrapper.setState({
+        values: {
+          currentEmail: email,
+          emailOptIn: '',
+        }
+      });
+
+      expect(wrapper.text()).to.include(i18n.changeUserTypeModal_emailOptIn_isRequired());
+    });
+
+    it('reports email opt-in server errors', () => {
+      const email = 'validEmail@example.com';
+      const hashedEmail = hashEmail(email);
+      wrapper.setProps({currentHashedEmail: hashedEmail});
+      const serverError = 'test-email-opt-in-server-error';
+      wrapper.setState({
+        values: {
+          currentEmail: email,
+          emailOptIn: '',
+        },
+        serverErrors: {
+          emailOptIn: serverError,
         }
       });
 
@@ -105,6 +144,7 @@ describe('ChangeUserTypeModal', () => {
       wrapper.setState({
         values: {
           currentEmail: '',
+          emailOptIn: '',
         }
       });
 
@@ -119,6 +159,7 @@ describe('ChangeUserTypeModal', () => {
       wrapper.setState({
         values: {
           currentEmail: email,
+          emailOptIn: 'yes',
         }
       });
 
@@ -137,6 +178,17 @@ describe('ChangeUserTypeModal', () => {
       emailInput(wrapper).simulate('change', {target:{value:'me@example.com'}});
       expect(wrapper.state().serverErrors.currentEmail).to.be.undefined;
     });
+
+    it('on email opt-in', () => {
+      wrapper.setState({
+        serverErrors: {
+          emailOptIn: 'test-server-error',
+        }
+      });
+      expect(wrapper.state().serverErrors.emailOptIn).to.equal('test-server-error');
+      emailOptInSelect(wrapper).simulate('change', {target:{value:'yes'}});
+      expect(wrapper.state().serverErrors.emailOptIn).to.be.undefined;
+    });
   });
 
   describe('onSubmitFailure', () => {
@@ -149,16 +201,19 @@ describe('ChangeUserTypeModal', () => {
     it('loads returned validation errors into dialog state', () => {
       expect(wrapper.state().saveState).to.equal('initial');
       expect(wrapper.state().serverErrors).to.deep.equal({
-        currentEmail: '',
+        currentEmail: undefined,
+        emailOptIn: undefined,
       });
       wrapper.instance().onSubmitFailure({
         serverErrors: {
           currentEmail: 'test-email-server-error',
+          emailOptIn: 'test-opt-in-server-error',
         }
       });
       expect(wrapper.state().saveState).to.equal('initial');
       expect(wrapper.state().serverErrors).to.deep.equal({
         currentEmail: 'test-email-server-error',
+        emailOptIn: 'test-opt-in-server-error',
       });
     });
   });
