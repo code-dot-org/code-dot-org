@@ -77,12 +77,12 @@ class StudentAssessmentOverviewTable extends Component {
   correctAnswerColumnFormatter = (answers, {rowData, columnIndex}) => {
     const multipleChoiceAnswers = rowData.answers;
 
-    const textAnswered = this.getCorrectAnswer(multipleChoiceAnswers);
+    let displayAnswer = this.getCorrectAnswer(multipleChoiceAnswers);
 
     return (
       <MultipleChoiceAnswerCell
         id={rowData.id}
-        textAnswered={textAnswered}
+        displayAnswer={displayAnswer}
       />
     );
   };
@@ -92,14 +92,13 @@ class StudentAssessmentOverviewTable extends Component {
     const multipleChoiceAnswers = rowData.answers;
 
     let studentResponse = studentAnswersForRow.answers.join(', ');
-
-    const textAnswered = this.getCorrectAnswer(multipleChoiceAnswers);
+    let displayAnswer = this.getCorrectAnswer(multipleChoiceAnswers);
 
     return (
       <MultipleChoiceAnswerCell
         id={rowData.id}
-        textAnswered={studentResponse}
-        isCorrectAnswer={(studentResponse === textAnswered)}
+        displayAnswer={studentResponse}
+        isCorrectAnswer={(studentResponse === displayAnswer)}
       />
     );
   };
