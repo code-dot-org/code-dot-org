@@ -4,6 +4,7 @@ import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
 import i18n from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
+import MultipleChoiceAnswerCell from './MultipleChoiceAnswerCell';
 
 export const COLUMNS = {
   STUDENT: 0,
@@ -60,7 +61,46 @@ class FreeResponsesAssessments extends Component {
     });
   };
 
-  getColumns = (sortable) => {
+  studentResponseColumnFormatter = (studentAnswers, {rowData, rowIndex}) => {
+
+    let studentResponse = '';
+    if(this.props.studentAnswerData[rowIndex]) {
+      studentResponse = this.props.studentAnswerData[rowIndex]
+      .studentAnswers.filter(( item ) => {
+          if(item.question == rowData.id) {
+            return true;
+          }
+      })[0].response;
+    }
+
+    console.log('selectStudents -->', studentResponse);
+    console.log('ha', rowIndex);
+
+    return (
+      <MultipleChoiceAnswerCell
+        id={rowData.id}
+        displayContent={studentResponse}
+      />
+    );
+  };
+
+  studentNameColumnFormatter = (studentAnswers, {rowData, rowIndex}) => {
+    let studentName = '';
+    if(this.props.studentAnswerData[rowIndex]) {
+     studentName = this.props.studentAnswerData[rowIndex].name;
+    }
+    console.log('ha again', rowIndex);
+    console.log('selectStudents--->', studentName);
+
+    return (
+      <MultipleChoiceAnswerCell
+        id={rowData.id}
+        displayContent={studentName}
+      />
+    );
+  };
+
+  getColumns = (sortable, index) => {
     let dataColumns = [
       {
         property: 'studentName',
@@ -70,6 +110,7 @@ class FreeResponsesAssessments extends Component {
           transforms: [sortable],
         },
         cell: {
+          format: this.studentNameColumnFormatter,
           props: {style:tableLayoutStyles.cell},
         }
       },
@@ -80,7 +121,7 @@ class FreeResponsesAssessments extends Component {
           props: {style: tableLayoutStyles.headerCell},
         },
         cell: {
-          // format: this.studentAnswerColumnFormatter,
+          format: this.studentResponseColumnFormatter,
           props: {style:tableLayoutStyles.cell},
         }
       },
@@ -90,24 +131,38 @@ class FreeResponsesAssessments extends Component {
 
   render() {
     // Define a sorting transform that can be applied to each column
-    const sortable = wrappedSortable(this.getSortingColumns, this.onSort, sortableOptions);
-    const columns = this.getColumns(sortable);
-    const sortingColumns = this.getSortingColumns();
 
-    const sortedRows = sort.sorter({
-      columns,
-      sortingColumns,
-      sort: orderBy,
-    })(this.props.questionAnswerData);
 
     return (
-        <Table.Provider
-          columns={columns}
-          style={tableLayoutStyles.table}
-        >
-          <Table.Header />
-          <Table.Body rows={sortedRows} rowKey="id" />
-        </Table.Provider>
+      <div>
+        {
+         this.props.questionAnswerData.map((
+          item, index
+        ) => {
+          const sortable = wrappedSortable(this.getSortingColumns, this.onSort, sortableOptions);
+          const columns = this.getColumns(sortable, index);
+          const sortingColumns = this.getSortingColumns();
+
+          const sortedRows = sort.sorter({
+            columns,
+            sortingColumns,
+            sort: orderBy,
+          })([item]);
+
+
+          return (
+            <Table.Provider
+            columns={columns}
+            style={tableLayoutStyles.table}
+          >
+            <Table.Header />
+            <Table.Body rows={sortedRows} rowKey="id" />
+          </Table.Provider>
+          )
+        })
+      }
+      </div>
+
     );
   }
 }
