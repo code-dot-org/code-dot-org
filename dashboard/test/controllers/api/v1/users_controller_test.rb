@@ -62,6 +62,17 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     end
   end
 
+  test 'accept_data_transfer_agreement will 403 if given a user id other than the person logged in' do
+    sign_in(@user)
+    post :accept_data_transfer_agreement, params: {user_id: '12345'}
+    assert_response 403
+  end
+
+  test 'accept_data_transfer_agreement will 403 if no user id' do
+    post :accept_data_transfer_agreement
+    assert_response 403
+  end
+
   test 'a post request to post_ui_tip_dismissed updates ui_tip_dismissed_homepage_header' do
     sign_in(@user)
     @user.ui_tip_dismissed_homepage_header = false
