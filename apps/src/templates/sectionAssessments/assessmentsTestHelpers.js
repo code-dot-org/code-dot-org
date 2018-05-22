@@ -5,12 +5,12 @@ export const studentData = [
     id: '012896',
     name: 'Caley',
     studentAnswers: [
-      {question: 1, answer: ['']},
-      {question: 2, answer: ['B', 'D']},
-      {question: 3, answer: ['E']},
-      {question: 4, answer: ['C']},
-      {question: 5, answer: ['A']},
-      {question: 6, answer: ['']},
+      {question: 1, answers: ['']},
+      {question: 2, answers: ['B', 'D']},
+      {question: 3, answers: ['E']},
+      {question: 4, answers: ['C']},
+      {question: 5, answers: ['A']},
+      {question: 6, answers: ['']},
     ],
   },
 ];

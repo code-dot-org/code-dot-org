@@ -4,7 +4,6 @@ import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
 import i18n from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
-import styleConstants from "@cdo/apps/styleConstants";
 import MultipleChoiceAnswerCell from './MultipleChoiceAnswerCell';
 import {
   studentAnswerDataPropType,
@@ -18,8 +17,6 @@ export const COLUMNS = {
 };
 
 const ANSWER_COLUMN_WIDTH = 80;
-const PADDING = 20;
-const MAX_WIDTH = styleConstants['content-width'] - (5 * (ANSWER_COLUMN_WIDTH + PADDING));
 
 const styles = {
   answerColumnHeader: {
@@ -33,6 +30,7 @@ const styles = {
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap',
+    maxWidth: 470,
   }
 };
 
@@ -79,7 +77,7 @@ class StudentAssessmentOverviewTable extends Component {
   correctAnswerColumnFormatter = (answers, {rowData, columnIndex}) => {
     const multipleChoiceAnswers = rowData.answers;
 
-    let textAnswered = this.getCorrectAnswer(multipleChoiceAnswers);
+    const textAnswered = this.getCorrectAnswer(multipleChoiceAnswers);
 
     return (
       <MultipleChoiceAnswerCell
@@ -90,14 +88,12 @@ class StudentAssessmentOverviewTable extends Component {
   };
 
   studentAnswerColumnFormatter = (studentAnswers, {rowData, rowIndex}) => {
-    const selectStudentAnswers = this.props.studentAnswerData[0].studentAnswers[rowIndex];
+    const studentAnswersForRow = this.props.studentAnswerData[0].studentAnswers[rowIndex];
     const multipleChoiceAnswers = rowData.answers;
 
-    let studentResponse = selectStudentAnswers.answer.map(answerSelection => {
-      return answerSelection;
-    }).join(', ');
+    let studentResponse = studentAnswersForRow.answers.join(', ');
 
-    let textAnswered = this.getCorrectAnswer(multipleChoiceAnswers);
+    const textAnswered = this.getCorrectAnswer(multipleChoiceAnswers);
 
     return (
       <MultipleChoiceAnswerCell
@@ -122,7 +118,6 @@ class StudentAssessmentOverviewTable extends Component {
             style: {
               ...tableLayoutStyles.cell,
               ...styles.questionCell,
-              MAX_WIDTH,
             }
           },
         }
