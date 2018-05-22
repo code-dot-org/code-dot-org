@@ -67,6 +67,7 @@ class FreeResponsesAssessments extends Component {
     if(this.props.studentAnswerData[rowIndex]) {
       studentResponse = this.props.studentAnswerData[rowIndex]
       .studentAnswers.filter(( item ) => {
+        console.log('studentResponse--->', studentResponse);
           if(item.question == rowData.id) {
             return true;
           }
@@ -85,12 +86,14 @@ class FreeResponsesAssessments extends Component {
   };
 
   studentNameColumnFormatter = (studentAnswers, {rowData, rowIndex}) => {
-    let studentName = '';
-    if(this.props.studentAnswerData[rowIndex]) {
-     studentName = this.props.studentAnswerData[rowIndex].name;
-    }
-    console.log('ha again', rowIndex);
-    console.log('selectStudents--->', studentName);
+    // let studentName = '';
+    // if(this.props.studentAnswerData[rowIndex]) {
+    //  studentName = this.props.studentAnswerData[rowIndex].name;
+    // }
+    // console.log('ha again', rowIndex);
+    // console.log('selectStudents--->', studentName);
+
+    const studentName = this.props.studentAnswerData[rowIndex].name
 
     return (
       <MultipleChoiceAnswerCell
@@ -107,7 +110,6 @@ class FreeResponsesAssessments extends Component {
         header: {
           label: i18n.studentName(),
           props: {style: tableLayoutStyles.headerCell},
-          transforms: [sortable],
         },
         cell: {
           format: this.studentNameColumnFormatter,
@@ -131,38 +133,24 @@ class FreeResponsesAssessments extends Component {
 
   render() {
     // Define a sorting transform that can be applied to each column
+    const sortable = wrappedSortable(this.getSortingColumns, this.onSort, sortableOptions);
+    const columns = this.getColumns(sortable);
+    const sortingColumns = this.getSortingColumns();
 
+    const sortedRows = sort.sorter({
+      columns,
+      sortingColumns,
+      sort: orderBy,
+    })(this.props.questionAnswerData);
 
     return (
-      <div>
-        {
-         this.props.questionAnswerData.map((
-          item, index
-        ) => {
-          const sortable = wrappedSortable(this.getSortingColumns, this.onSort, sortableOptions);
-          const columns = this.getColumns(sortable, index);
-          const sortingColumns = this.getSortingColumns();
-
-          const sortedRows = sort.sorter({
-            columns,
-            sortingColumns,
-            sort: orderBy,
-          })([item]);
-
-
-          return (
-            <Table.Provider
-            columns={columns}
-            style={tableLayoutStyles.table}
-          >
-            <Table.Header />
-            <Table.Body rows={sortedRows} rowKey="id" />
-          </Table.Provider>
-          )
-        })
-      }
-      </div>
-
+        <Table.Provider
+          columns={columns}
+          style={tableLayoutStyles.table}
+        >
+          <Table.Header />
+          <Table.Body rows={sortedRows} rowKey="id" />
+        </Table.Provider>
     );
   }
 }

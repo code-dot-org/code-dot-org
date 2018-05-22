@@ -9,7 +9,6 @@ const studentData = [
     studentAnswers: [
       {question: 1, response:''},
       {question: 2, response: 'You want your tree to have some character. Make it special. Now we will take the almighty fan brush. Learn when to stop. Poor old tree.'},
-      {question: 3, response: ''}
     ],
   },
   {
@@ -18,9 +17,24 @@ const studentData = [
     studentAnswers: [
       {question: 1, response: 'In painting, you have unlimited power. You have the ability to move mountains. You can bend rivers. But when I get home, the only thing I have power over is the garbage. Maybe there is a happy little waterfall happening over here. See. We take the corner of the brush and let it play back-and-forth.'},
       {question: 2, response: 'You want your tree to have some character. Make it special. Now we will take the almighty fan brush. Learn when to stop. Poor old tree.'},
-      {question: 3, response: 'There is not a thing in the world wrong with washing your brush.'}
     ],
-  }
+  },
+  {
+    id: '212',
+    name: 'Erin',
+    studentAnswers: [
+      {question: 1, response: 'In painting, you have unlimited power. You have the ability to move mountains. You can bend rivers. But when I get home, the only thing I have power over is the garbage. Maybe there is a happy little waterfall happening over here. See. We take the corner of the brush and let it play back-and-forth.'},
+      {question: 2, response: 'You want your tree to have some character. Make it special. Now we will take the almighty fan brush. Learn when to stop. Poor old tree.'},
+    ],
+  },
+  {
+    id: '213',
+    name: 'Brendan',
+    studentAnswers: [
+      {question: 1, response: 'In painting, you have unlimited power. You have the ability to move mountains. You can bend rivers. But when I get home, the only thing I have power over is the garbage. Maybe there is a happy little waterfall happening over here. See. We take the corner of the brush and let it play back-and-forth.'},
+      {question: 2, response: 'You want your tree to have some character. Make it special. Now we will take the almighty fan brush. Learn when to stop. Poor old tree.'},
+    ],
+  },
 ];
 
 const multipleChoiceData = [
