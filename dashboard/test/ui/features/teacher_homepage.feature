@@ -39,6 +39,7 @@ Feature: Using the teacher homepage sections feature
     When I click selector ".uitest-owned-sections a:contains('Computer Science Principles')" to load a new page
     And I wait to see ".uitest-CourseScript"
     Then the url contains the section id
+    And check that the URL contains "/courses/csp-2017"
 
     When I click selector ".uitest-CourseScript:contains(CSP Unit 2) .uitest-go-to-unit-button" to load a new page
     And I wait to see ".uitest-script-next-banner"

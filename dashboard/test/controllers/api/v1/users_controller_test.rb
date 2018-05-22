@@ -55,7 +55,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
       assert_response :success
       @user.reload
       assert @user.data_transfer_agreement_accepted
-      assert_equal @user.data_transfer_agreement_accepted_at, DateTime.now.iso8601(3)
+      assert_equal @user.data_transfer_agreement_at, DateTime.now.iso8601(3)
       assert @user.data_transfer_agreement_request_ip
       assert_equal @user.data_transfer_agreement_source, "ACCEPT_DATA_TRANSFER_DIALOG"
       assert_equal @user.data_transfer_agreement_kind, "0"
@@ -69,13 +69,13 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
       post :accept_data_transfer_agreement, params: {user_id: 'me'}
       assert_response :success
       @user.reload
-      assert_equal @user.data_transfer_agreement_accepted_at, DateTime.now.iso8601(3)
+      assert_equal @user.data_transfer_agreement_at, DateTime.now.iso8601(3)
     end
-    orignal_time = @user.data_transfer_agreement_accepted_at
+    orignal_time = @user.data_transfer_agreement_at
     post :accept_data_transfer_agreement, params: {user_id: 'me'}
     assert_response :success
     @user.reload
-    assert_equal @user.data_transfer_agreement_accepted_at, orignal_time
+    assert_equal @user.data_transfer_agreement_at, orignal_time
   end
 
   test 'accept_data_transfer_agreement will 403 if given a user id other than the person logged in' do
