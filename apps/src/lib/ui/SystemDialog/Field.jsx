@@ -14,7 +14,7 @@ import {createUuid} from "../../../utils";
 export default class Field extends React.Component {
   static propTypes = {
     label: PropTypes.string,
-    labelDetails: PropTypes.string,
+    labelDetails: PropTypes.node,
     error: PropTypes.any,
     children: PropTypes.element.isRequired,
     style: PropTypes.object,
