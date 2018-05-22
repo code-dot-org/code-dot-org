@@ -937,4 +937,48 @@ endvariants
 
     assert_match Regexp.new(new_dsl_regex), ScriptDSL.serialize_to_string(script_copy)
   end
+
+  test "assignable_info: returns assignable info for a script" do
+    script = create(:script, name: 'fake-script', hidden: true)
+    assignable_info = script.assignable_info
+
+    assert_equal("fake-script *", assignable_info[:name])
+    assert_equal("fake-script", assignable_info[:script_name])
+    assert_equal("other", assignable_info[:category])
+  end
+
+  test "self.valid_scripts: does not return hidden scripts when user is a student" do
+    student = create(:student)
+
+    scripts = Script.valid_scripts(student)
+    refute has_hidden_script?(scripts)
+  end
+
+  test "self.valid_scripts: does not return hidden scripts when user is a teacher" do
+    teacher = create(:teacher)
+
+    scripts = Script.valid_scripts(teacher)
+    refute has_hidden_script?(scripts)
+  end
+
+  test "self.valid_scripts: returns hidden scripts when user is an admin" do
+    admin = create(:admin)
+
+    scripts = Script.valid_scripts(admin)
+    assert has_hidden_script?(scripts)
+  end
+
+  test "self.valid_scripts: returns hidden scripts when user has hidden script access" do
+    teacher = create(:teacher)
+    teacher.update(permission: UserPermission::HIDDEN_SCRIPT_ACCESS)
+
+    scripts = Script.valid_scripts(teacher)
+    assert has_hidden_script?(scripts)
+  end
+
+  private
+
+  def has_hidden_script?(scripts)
+    scripts.any?(&:hidden)
+  end
 end

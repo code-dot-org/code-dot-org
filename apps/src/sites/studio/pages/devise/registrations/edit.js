@@ -3,21 +3,24 @@ import ChangeEmailController from '@cdo/apps/lib/ui/accounts/ChangeEmailControll
 import ChangeUserTypeController from '@cdo/apps/lib/ui/accounts/ChangeUserTypeController';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
+// Values loaded from scriptData are always initial values, not the latest
+// (possibly unsaved) user-edited values on the form.
 const scriptData = getScriptData('edit');
-const initialUserType = scriptData.userType;
+const {userAge, userType} = scriptData;
 
 $(document).ready(() => {
   new ChangeEmailController({
     form: $('#change-email-modal-form'),
     link: $('#edit-email-link'),
     displayedUserEmail: $('#displayed-user-email'),
-    userAge: $('#user_age'),
+    userAge,
+    userType,
     emailChangedCallback: onEmailChanged,
   });
 
   new ChangeUserTypeController(
     $('#change-user-type-modal-form'),
-    initialUserType,
+    userType,
   );
 
   initializeCreatePersonalAccountControls();

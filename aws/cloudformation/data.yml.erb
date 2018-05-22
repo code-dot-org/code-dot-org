@@ -87,12 +87,14 @@ Resources:
       # maxFileSize - Specifies the maximum size (in KB) of any CSV file used to transfer data to Amazon Redshift.
       # Default value: 32768 KB (32 MB)
       # Valid values: 1 - 1048576
-      # NOTE: documentation is incorrect; this attribute is specified in _bytes_.
       #
       # fileTransferUploadStreams - Specifies the number of threads used to upload a single file.
       # Default value: 10
       # Valid values: 1 - 64
-      ExtraConnectionAttributes: maxFileSize=<%=100.megabytes%>;fileTransferUploadStreams=20
+      ExtraConnectionAttributes: <%={
+         maxFileSize: 100.megabytes / 1.kilobyte,
+         fileTransferUploadStreams: 20
+      }.map{|x|x.join('=')}.join(';')%>
 <% Cdo::DMS.tasks(aws_dir('dms/tasks.yml')).each do |task_name, table_mappings| -%>
   DMS<%=task_name.underscore.camelize%>:
     Type: AWS::DMS::ReplicationTask
@@ -168,3 +170,45 @@ Resources:
         # Ref: https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MySQL.html#CHAP_Source.MySQL.AmazonManaged
         binlog_format: ROW
         binlog_checksum: NONE
+<%
+  # Add CloudWatch Logs Metric Filters for RDS Enhanced Monitoring metrics.
+  # Ref: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html#w2ab1c20c23c17b7b5
+  %w(
+    diskIO.writeKbPS
+    diskIO.readIOsPS
+    diskIO.await
+    diskIO.readKbPS
+    diskIO.rrqmPS
+    diskIO.util
+    diskIO.avgQueueLen
+    diskIO.tps
+    diskIO.readKb
+    diskIO.writeKb
+    diskIO.avgReqSz
+    diskIO.wrqmPS
+    diskIO.writeIOsPS
+    cpuUtilization.total
+    cpuUtilization.guest
+    cpuUtilization.irq
+    cpuUtilization.system
+    cpuUtilization.wait
+    cpuUtilization.idle
+    cpuUtilization.user
+    cpuUtilization.total
+    cpuUtilization.steal
+    cpuUtilization.nice
+    tasks.total
+    tasks.running
+    tasks.blocked
+  ).each do |metric|
+-%>
+  <%=metric.gsub('.', '_').underscore.camelize%>:
+    Type: AWS::Logs::MetricFilter
+    Properties:
+      LogGroupName: RDSOSMetrics
+      FilterPattern: "{ $.instanceID = production }"
+      MetricTransformations:
+        - MetricValue: "$.<%=metric.sub('diskIO', 'diskIO[0]')%>"
+          MetricNamespace: "MySQL"
+          MetricName: <%=metric.capitalize%>
+<% end -%>

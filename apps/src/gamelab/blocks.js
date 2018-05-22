@@ -1,5 +1,8 @@
 import { SVG_NS } from '../constants';
-import { appendCategory, createJsWrapperBlockCreator } from '../block_utils';
+import {
+  appendBlocksByCategory,
+  createJsWrapperBlockCreator
+} from '../block_utils';
 import { getStore } from '../redux';
 import { getLocation } from './locationPickerModule';
 import { GAME_HEIGHT } from './constants';
@@ -679,8 +682,7 @@ export default {
   },
 
   installCustomBlocks(blockly, blockInstallOptions, customBlocks, level, hideCustomBlocks) {
-    const SPRITE_TYPE = blockly.BlockValueType.SPRITE;
-    const blockNames = customBlocks.map(createJsWrapperBlockCreator(
+    const createJsWrapperBlock = createJsWrapperBlockCreator(
       blockly,
       'gamelab',
       [
@@ -689,12 +691,24 @@ export default {
         blockly.BlockValueType.BEHAVIOR,
         blockly.BlockValueType.LOCATION,
       ],
-      SPRITE_TYPE,
+      blockly.BlockValueType.SPRITE_TYPE,
       customInputTypes,
-    ));
+    );
+
+    const blocksByCategory = {};
+    customBlocks.forEach(({name, category, config}) => {
+      const blockName = createJsWrapperBlock(config);
+      if (!blocksByCategory[category]) {
+        blocksByCategory[category] = [];
+      }
+      blocksByCategory[category].push(blockName);
+      if (name && blockName !== name) {
+        console.error(`Block config ${name} generated a block named ${blockName}`);
+      }
+    });
 
     if (!hideCustomBlocks) {
-      level.toolbox = appendCategory(level.toolbox, blockNames, 'Custom');
+      level.toolbox = appendBlocksByCategory(level.toolbox, blocksByCategory);
     }
   },
 };

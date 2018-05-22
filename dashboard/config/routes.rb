@@ -90,6 +90,7 @@ Dashboard::Application.routes.draw do
       end
       collection do
         get 'membership'
+        get 'valid_scripts'
       end
     end
   end
@@ -128,6 +129,8 @@ Dashboard::Application.routes.draw do
     patch '/dashboardapi/users', to: 'registrations#update'
     patch '/users/upgrade', to: 'registrations#upgrade'
     patch '/users/set_age', to: 'registrations#set_age'
+    patch '/users/email', to: 'registrations#set_email'
+    patch '/users/user_type', to: 'registrations#set_user_type'
     get '/users/clever_takeover', to: 'sessions#clever_takeover'
     get '/users/clever_modal_dismissed', to: 'sessions#clever_modal_dismissed'
   end

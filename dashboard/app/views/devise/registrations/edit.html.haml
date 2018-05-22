@@ -118,13 +118,14 @@
 - if resource.can_change_own_user_type?
   = form_for(resource,
       as: resource_name,
-      url: registration_path(resource_name),
+      url: '/users/user_type',
       remote: true,
-      html: { id: 'change-user-type-modal-form', method: :put },
+      html: { id: 'change-user-type-modal-form' },
       namespace: 'change-user-type',
     ) do |f|
     = f.hidden_field :email
     = f.hidden_field :hashed_email
+    = f.hidden_field :email_preference_opt_in
     %hr.account-page-section-break
     %h2= t('signup_form.user_type_label')
     .field
@@ -150,20 +151,21 @@
 - if resource.can_edit_email?
   = form_for(resource,
       as: resource_name,
-      url: registration_path(resource_name),
+      url: '/users/email',
       remote: true,
-      html: { id: 'change-email-modal-form', method: :put },
+      html: { id: 'change-email-modal-form' },
       namespace: 'change-email-modal',
     ) do |f|
     = f.hidden_field :email
     = f.hidden_field :hashed_email
-    -# = f.hidden_field :email_opt_in
+    = f.hidden_field :email_preference_opt_in
     = f.hidden_field :current_password
 
 :ruby
   script_data = {
     edit: {
-      userType: current_user.reload.user_type,
+      userAge: current_user.age,
+      userType: current_user.user_type,
       isOauth: current_user.oauth?
     }.to_json
   }
