@@ -3,7 +3,7 @@ import { PropTypes } from 'react';
 export const studentAnswerDataPropType = PropTypes.shape({
   id:  PropTypes.string,
   name: PropTypes.string,
-  studentAnswers: PropTypes.array,
+  studentAnswers: PropTypes.array.isRequired,
 });
 
 export const answerDataPropType = PropTypes.shape({

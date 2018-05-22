@@ -10,7 +10,7 @@
 #
 # Indexes
 #
-#  index_pd_survey_questions_on_form_id  (form_id)
+#  index_pd_survey_questions_on_form_id  (form_id) UNIQUE
 #
 
 class Pd::SurveyQuestion < ApplicationRecord
