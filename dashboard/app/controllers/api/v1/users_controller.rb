@@ -27,12 +27,14 @@ class Api::V1::UsersController < Api::V1::JsonApiController
 
   # POST /api/v1/users/accept_data_transfer_agreement
   def accept_data_transfer_agreement
-    @user.data_transfer_agreement_accepted = true
-    @user.data_transfer_agreement_accepted_at = DateTime.now
-    @user.data_transfer_agreement_request_ip = request.ip
-    @user.data_transfer_agreement_source = "ACCEPT_DATA_TRANSFER_DIALOG"
-    @user.data_transfer_agreement_kind = "0"
-    @user.save
+    unless @user.data_transfer_agreement_accepted
+      @user.data_transfer_agreement_accepted = true
+      @user.data_transfer_agreement_accepted_at = DateTime.now
+      @user.data_transfer_agreement_request_ip = request.ip
+      @user.data_transfer_agreement_source = "ACCEPT_DATA_TRANSFER_DIALOG"
+      @user.data_transfer_agreement_kind = "0"
+      @user.save
+    end
 
     head :no_content
   end
