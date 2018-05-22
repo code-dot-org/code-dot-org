@@ -1083,4 +1083,15 @@ class Script < ActiveRecord::Base
     end
     nil
   end
+
+  # @return {AssignableInfo} with strings translated
+  def assignable_info
+    info = ScriptConstants.assignable_info(self)
+    info[:name] = I18n.t("#{info[:name]}_name", default: info[:name])
+    info[:name] += " *" if hidden
+
+    info[:category] = I18n.t("#{info[:category]}_category_name", default: info[:category])
+
+    info
+  end
 end
