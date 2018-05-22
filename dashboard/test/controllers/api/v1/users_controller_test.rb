@@ -58,7 +58,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
       assert_equal @user.data_transfer_agreement_accepted_at, DateTime.now.iso8601(3)
       assert @user.data_transfer_agreement_request_ip
       assert_equal @user.data_transfer_agreement_source, "ACCEPT_DATA_TRANSFER_DIALOG"
-      assert_equal @user.data_transfer_agreement_kind, 0
+      assert_equal @user.data_transfer_agreement_kind, "0"
     end
   end
 
