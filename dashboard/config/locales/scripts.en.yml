@@ -7549,6 +7549,8 @@ en:
               name: Loops in Harvester
             Sequencing in Maze:
               name: Sequencing in Maze
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: 'Persistence & Frustration: Stevie and the Big Project'
         express-2018:
           title: Express Course
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
@@ -9211,3 +9213,75 @@ en:
           description_audience: CSD Students
           description_short: CSD Student Post-Course Survey
           description: Welcome to the Code.org CS Discoveries Post-Course Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
+        csd-novice-18:
+          stages:
+            Novice Reflections Overview:
+              name: Novice Reflections Overview
+            Welcome:
+              name: Welcome
+            Tuesday:
+              name: Tuesday
+            Wednesday:
+              name: Wednesday
+            Thursday:
+              name: Thursday
+            Wrap Up:
+              name: Wrap Up
+            Friday:
+              name: Friday
+            Novice Reflection Overview:
+              name: Novice Reflection Overview
+            Monday:
+              name: Monday
+          title: CS Discoveries Novice Reflections 2018-2019
+          description_audience: CS Discoveries Facilitators in Training 2018-2019
+          description_short: 'Novice reflection materials for CS Discoveries facilitators in training '
+          description: This is the set of novice reflections for Code.org CS Discoveries facilitators in training during their 5-day summer workshop. Here you will find reflection prompts for each day of your in-person 5-day summer workshop. This questions will be the foundation of work we do at the Facilitator Training Weekend.
+        csd-apprentice-18:
+          stages:
+            Novice Reflection Overview:
+              name: Novice Reflection Overview
+            Tuesday:
+              name: Tuesday
+            Wednesday:
+              name: Wednesday
+            Thursday:
+              name: Thursday
+            Wrap Up:
+              name: Wrap Up
+          title: CS Discoveries Apprentice Reflections 2018-2019
+          description_audience: CS Discoveries Facilitators in Training 2018-2019
+          description_short: 'Apprentice reflection materials for CS Discoveries facilitators in training '
+          description: This is the set of apprentice reflections for Code.org CS Discoveries facilitators in training during their 5-day summer workshop. Here you will find reflection prompts for each day of your in-person 5-day summer workshop. This questions will be the foundation of work we do at the Facilitator Training Weekend.
+        csp-novice-18:
+          stages:
+            Novice Reflection Overview:
+              name: Novice Reflection Overview
+            Tuesday:
+              name: Tuesday
+            Wednesday:
+              name: Wednesday
+            Thursday:
+              name: Thursday
+            Wrap Up:
+              name: Wrap Up
+          title: CS Principles Novice Reflections 2018-2019
+          description_audience: CS Principles Facilitators in Training 2018-2019
+          description_short: 'Novice reflection materials for CS Principles facilitators in training '
+          description: This is the set of novice reflections for Code.org CS Principles facilitators in training during their 5-day summer workshop. Here you will find reflection prompts for each day of your in-person 5-day summer workshop. This questions will be the foundation of work we do at the Facilitator Training Weekend.
+        csp-apprentice-18:
+          stages:
+            Novice Reflection Overview:
+              name: Novice Reflection Overview
+            Tuesday:
+              name: Tuesday
+            Wednesday:
+              name: Wednesday
+            Thursday:
+              name: Thursday
+            Wrap Up:
+              name: Wrap Up
+          title: CS Principles Novice Reflections 2018-2019
+          description_audience: CS Principles Facilitators in Training 2018-2019
+          description_short: 'Novice reflection materials for CS Principles facilitators in training '
+          description: This is the set of apprentice reflections for Code.org CS Principles facilitators in training during their 5-day summer workshop. Here you will find reflection prompts for each day of your in-person 5-day summer workshop. This questions will be the foundation of work we do at the Facilitator Training Weekend.
