@@ -8,11 +8,11 @@ import {
 } from '@cdo/apps/code-studio/pd/application_dashboard/constants';
 
 describe("ApplicationDashboard", () => {
-  const getReduxStateFor = (props) => {
+  const getReduxStateFor = ({regionalPartners, isWorkshopAdmin}) => {
     const applicationDashboard = mount(
       <ApplicationDashboard
-        regionalPartners={props.regionalPartners}
-        isWorkshopAdmin={props.isWorkshopAdmin}
+        regionalPartners={regionalPartners}
+        isWorkshopAdmin={isWorkshopAdmin}
         canLockApplications={false}
       />
     );
