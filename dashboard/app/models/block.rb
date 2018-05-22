@@ -61,17 +61,19 @@ class Block < ApplicationRecord
     if File.exist? js_path
       helper_code = File.read js_path
     end
-    key_props = {
-      name: block_name,
-      level_type: level_type,
-    }
-    block_props = {
-      category: block_config['category'],
-      config: block_config['config'].to_json,
-    }
-    block_props[:helper_code] = helper_code if helper_code
-    block = Block.find_by key_props
-    block ||= Block.new key_props
-    block.update_attributes block_props
+    Block.find_or_initialize_by(
+      {
+        name: block_name,
+        level_type: level_type,
+      }
+    ).tap do |block|
+      block.update(
+        {
+          category: block_config['category'],
+          config: block_config['config'].to_json,
+        }
+      )
+      block.update(helper_code: helper_code) if helper_code
+    end
   end
 end
