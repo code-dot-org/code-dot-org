@@ -15,8 +15,6 @@ import ManageStudentsSharingCell from './ManageStudentsSharingCell';
 import ManageStudentsActionsCell from './ManageStudentsActionsCell';
 import ManageStudentsActionsHeaderCell from './ManageStudentsActionsHeaderCell';
 import SharingControlActionsHeaderCell from './SharingControlActionsHeaderCell';
-import ManageStudentsLoginInfo from './ManageStudentsLoginInfo';
-import {sectionCode} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {
   convertStudentDataToArray,
   AddStatus,
@@ -47,7 +45,7 @@ const styles = {
   },
   buttonWithMargin: {
     marginRight: 5
-  },
+  }
 };
 
 const LOGIN_TYPES_WITH_PASSWORD_COLUMN = [
@@ -143,10 +141,7 @@ export const sortRows = (data, columnIndexList, orderList) => {
 
 class ManageStudentsTable extends Component {
   static propTypes = {
-    studioUrlPrefix: PropTypes.string,
     // Provided by redux
-    sectionId: PropTypes.number,
-    sectionCode: PropTypes.string,
     studentData: PropTypes.arrayOf(studentSectionDataPropType),
     loginType: PropTypes.string,
     editingData: PropTypes.object,
@@ -502,7 +497,8 @@ class ManageStudentsTable extends Component {
       sort: sortRows,
     })(this.props.studentData);
 
-    const {addStatus, loginType, transferStatus, transferData, sectionId} = this.props;
+    const {addStatus, loginType, transferStatus, transferData} = this.props;
+
     return (
       <div>
         {addStatus.status === AddStatus.SUCCESS &&
@@ -543,12 +539,6 @@ class ManageStudentsTable extends Component {
           <Table.Header />
           <Table.Body rows={sortedRows} rowKey="id" />
         </Table.Provider>
-        <ManageStudentsLoginInfo
-          sectionId={sectionId}
-          loginType={loginType}
-          sectionCode={this.props.sectionCode}
-          studioUrlPrefix={this.props.studioUrlPrefix}
-        />
       </div>
     );
   }
@@ -557,8 +547,6 @@ class ManageStudentsTable extends Component {
 export const UnconnectedManageStudentsTable = ManageStudentsTable;
 
 export default connect(state => ({
-  sectionId: state.sectionData.section.id,
-  sectionCode: sectionCode(state, state.sectionData.section.id),
   loginType: state.manageStudents.loginType,
   studentData: convertStudentDataToArray(state.manageStudents.studentData),
   editingData: state.manageStudents.editingData,
