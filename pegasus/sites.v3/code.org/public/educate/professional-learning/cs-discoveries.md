@@ -94,7 +94,6 @@ South Dakota<br>
 Texas<br>
 Vermont<br>
 Virginia<br>
-Washington<br>
 Wisconsin<br>
 Wyoming<br>
 
