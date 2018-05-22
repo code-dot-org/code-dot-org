@@ -285,12 +285,12 @@ class CourseTest < ActiveSupport::TestCase
 
     courses = Course.valid_courses
 
-    # one entry for each course that is in ScriptConstants
+    # one entry for each 2017 course that is in ScriptConstants
     assert_equal 2, courses.length
-    assert_equal csp.id, courses[0][:id]
-    assert_equal csd.id, courses[1][:id]
+    assert_equal csd.id, courses[0][:id]
+    assert_equal csp.id, courses[1][:id]
 
-    csp_assign_info = courses[0]
+    csp_assign_info = courses[1]
 
     # has fields from ScriptConstants::Assignable_Info
     assert_equal csp.id, csp_assign_info[:id]
@@ -307,17 +307,17 @@ class CourseTest < ActiveSupport::TestCase
 
     # teacher without experiment has default script_ids
     teacher = create(:teacher)
-    courses = Course.valid_courses(teacher)
-    assert_equal csp.id, courses[0][:id]
-    csp_assign_info = courses[0]
+    courses = Course.valid_courses(user: teacher)
+    assert_equal csp.id, courses[1][:id]
+    csp_assign_info = courses[1]
     assert_equal [csp1.id, csp2.id, csp3.id], csp_assign_info[:script_ids]
 
     # teacher with experiment has alternate script_ids
     teacher_with_experiment = create(:teacher)
     experiment = create(:single_user_experiment, name: 'csp2-alt-experiment', min_user_id: teacher_with_experiment.id)
-    courses = Course.valid_courses(teacher_with_experiment)
-    assert_equal csp.id, courses[0][:id]
-    csp_assign_info = courses[0]
+    courses = Course.valid_courses(user: teacher_with_experiment)
+    assert_equal csp.id, courses[1][:id]
+    csp_assign_info = courses[1]
     assert_equal [csp1.id, csp2_alt.id, csp3.id], csp_assign_info[:script_ids]
     experiment.destroy
   end
