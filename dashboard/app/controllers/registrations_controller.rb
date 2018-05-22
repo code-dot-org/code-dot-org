@@ -55,7 +55,7 @@ class RegistrationsController < Devise::RegistrationsController
         params[:email_preference_form_kind] = "0"
       end
 
-      if params[:data_transfer_agreement_required] && params[:data_transfer_agreement] == "1"
+      if params[:data_transfer_agreement_required] && params[:data_transfer_agreement_accepted] == "1"
         params[:data_transfer_agreement_accepted] = true
         params[:data_transfer_agreement_request_ip] = request.ip
         params[:data_transfer_agreement_source] = User::ACCOUNT_SIGN_UP

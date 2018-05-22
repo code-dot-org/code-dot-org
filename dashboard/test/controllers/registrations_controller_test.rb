@@ -199,23 +199,20 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_equal EmailPreference::ACCOUNT_SIGN_UP, email_preference[:source]
   end
 
-  test "create new student in eu fails when missing required fields" do
-    eu_student_params = @default_params.update(data_transfer_agreement_accepted: true)
+  test "create new student in eu fails when missing value" do
+    eu_student_params = @default_params.update(
+      data_transfer_agreement_required: "1"
+    )
 
     assert_does_not_create(User) do
       post :create, params: {user: eu_student_params}
     end
   end
 
-  test "create new student in eu succeeds with required fields" do
-    eu_student_params = @default_params.merge(
-      {
-        data_transfer_agreement_accepted: true,
-        data_transfer_agreement_request_ip: "127.0.0.1",
-        data_transfer_agreement_source: User::DATA_TRANSFER_AGREEMENT_SOURCE_TYPES,
-        data_transfer_agreement_kind: "0",
-        data_transfer_agreement_at: DateTime.now
-      }
+  test "create new student in eu succeeds with value" do
+    eu_student_params = @default_params.update(
+      data_transfer_agreement_required: "1",
+      data_transfer_agreement_accepted: "1",
     )
 
     assert_creates(User) do
