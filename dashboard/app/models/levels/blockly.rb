@@ -266,6 +266,7 @@ class Blockly < Level
           toolbox_blocks ||
           default_toolbox_blocks
         level_prop['codeFunctions'] = try(:project_template_level).try(:code_functions) || code_functions
+        level_prop['sharedBlocks'] = shared_blocks
       end
 
       if is_a? Applab
@@ -416,5 +417,11 @@ class Blockly < Level
     level = super(name)
     level.update!(is_project_level: false)
     level
+  end
+
+  def shared_blocks
+    Rails.cache.fetch("blocks/#{type}", force: !Script.should_cache?) do
+      Block.where(level_type: type).map(&:block_options)
+    end
   end
 end
