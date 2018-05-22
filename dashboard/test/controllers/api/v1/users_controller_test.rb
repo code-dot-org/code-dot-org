@@ -62,6 +62,22 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     end
   end
 
+  test 'if accept_data_transfer_agreement is already set, it should not update data_transfer_agreement_accepted_at' do
+    sign_in(@user)
+    @user.data_transfer_agreement_accepted = false
+    Timecop.freeze(DateTime.now) do
+      post :accept_data_transfer_agreement, params: {user_id: 'me'}
+      assert_response :success
+      @user.reload
+      assert_equal @user.data_transfer_agreement_accepted_at, DateTime.now.iso8601(3)
+    end
+    orignal_time = @user.data_transfer_agreement_accepted_at
+    post :accept_data_transfer_agreement, params: {user_id: 'me'}
+    assert_response :success
+    @user.reload
+    assert_equal @user.data_transfer_agreement_accepted_at, orignal_time
+  end
+
   test 'accept_data_transfer_agreement will 403 if given a user id other than the person logged in' do
     sign_in(@user)
     post :accept_data_transfer_agreement, params: {user_id: '12345'}
