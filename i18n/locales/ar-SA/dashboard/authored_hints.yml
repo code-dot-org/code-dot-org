@@ -129,9 +129,9 @@ ar:
           </xml>
         2-3_Artist_Loops_New_11_b: Your new turn should go at the **end** of the code inside the loop.
       2-3 Artist Loops New 12_authored_hint:
-        2-3_Artist Loops_New_12_a: Before starting the diamond, the artist needs to turn left by 60 degrees to get on the right path.
-        2-3_Artist Loops_New_12_b: After the artist goes forward 100 pixels, he will need to turn right 120 degrees to make the sharp corner.
-        2-3_Artist Loops_New_12_c: The artist will need to turn right only 60 degrees to create a wide corner.
+        2-3_Artist Loops_New_12_a: قبل البدء الألماس, الفنان يحتاج للالتفاف بستين درجة للوصول الطريق الصحيح.
+        2-3_Artist Loops_New_12_b: بعد تحرك الفنان مئة بيكسل للأمام, سوف يحتاج للالتفاف مئة وعشرين درجة لليمين لصنع زاوية حادة.
+        2-3_Artist Loops_New_12_c: الفنان سوف يحتاج للالتفاف ستون درجة لليمين لصنع زاوية اعرض.
       2-3 Artist Loops New 13_authored_hint:
         2-3_Artist_Loops_New_13_a: "At the end of each diamond, the artist is already facing the right direction to start the next one.  \n\nBecause of this, we don't need to add an extra `turn left by` block before we start again."
         2-3_Artist_Loops_New_13_b: "To make each diamond, the artist needs to:   \n- move\n- turn right 120 degrees\n- move\n- turn right 60 degrees  \n\nThen do it all again!"
@@ -165,9 +165,9 @@ ar:
       2-3 Bee Conditionals 6_authored_hint:
         2-3_Bee_Conditionals_6_a: 'Remember: Purple flowers change between 0 and 1 nectar when you run your program!'
       2-3 Bee Debugging 1_authored_hint:
-        2-3_Bee_Debugging_1_a: Once you find and fix the incorrect block, do you see any patterns that could be made more simple using a `repeat` loop?
+        2-3_Bee_Debugging_1_a: عندما تجد القطعة الخاطئة وتصلحها, هل ترى النمط الذي يمكن أن يكون أبسط باستخدام `repeat`و loop ?
       2-3 Bee Debugging 2_authored_hint:
-        2-3_Bee_Debugging_2_a: Once you find and fix the incorrect block, do you see any patterns that could be made more simple using a `repeat` loop?
+        2-3_Bee_Debugging_2_a: عندما تجد القطعة الخاطئة وتصلحها, هل ترى النمط الذي يمكن أن يكون أبسط باستخدام `repeat`و loop ?
       2-3 Bee Debugging 4_authored_hint:
         2-3_Bee_Debugging_4_a: Is there any place where the bee does something that doesn't make sense? What happens when you change that block?
       2-3 Bee Functions 4_authored_hint:
@@ -9600,8 +9600,8 @@ ar:
         courseD_farmer_condLoops5_a: 'There is a new loop: `repeat until at pumpkin`. Can you see how to use it in this puzzle?'
         courseD_farmer_condLoops5_b: There could be more than one corn or lettuce plant in each spot. Use a `while` loop to gather all of them!
       courseD_farmer_condLoops6_authored_hint:
-        courseD_farmer_condLoops6_a: Use a `while path ahead` loop to move the farmer down each piece of the spiral.
-        courseD_farmer_condLoops6_b: You only need to check for corn during most of the harvest.  Just pick one pumpkin at the very end of your program.
+        courseD_farmer_condLoops6_a: Use a `while there is corn` loop to make sure you get all of the corn along the way. This block won't do anything if there's no corn to pick.
+        courseD_farmer_condLoops6_b: Make sure to check `if` there's a path ahead before you take your next step!
       courseD_farmer_condLoops6_2018_authored_hint:
         courseD_farmer_condLoops6_a: Use a `while path ahead` loop to move the farmer down each piece of the spiral.
         courseD_farmer_condLoops6_b: You only need to check for corn during most of the harvest.  Just pick one pumpkin at the very end of your program.
@@ -14588,7 +14588,7 @@ ar:
       grade3_Conditionals_TeacherIDo_authored_hint:
         2-3_Bee_Conditionals_6_a: 'Remember: Purple flowers change between 0 and 1 nectar when you run your program!'
       grade3_Debugging_1_authored_hint:
-        2-3_Bee_Debugging_1_a: Once you find and fix the incorrect block, do you see any patterns that could be made more simple using a `repeat` loop?
+        2-3_Bee_Debugging_1_a: عندما تجد القطعة الخاطئة وتصلحها, هل ترى النمط الذي يمكن أن يكون أبسط باستخدام `repeat`و loop ?
       grade3_Debugging_10_authored_hint:
         grade3_Debugging_10_a: |-
           Start by looking at just the first loop.
