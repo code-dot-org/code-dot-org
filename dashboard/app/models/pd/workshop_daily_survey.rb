@@ -8,7 +8,7 @@
 #  user_id        :integer          not null
 #  pd_session_id  :integer
 #  pd_workshop_id :integer          not null
-#  form_data      :text(65535)
+#  answers        :text(65535)
 #  day            :integer          not null
 #
 # Indexes

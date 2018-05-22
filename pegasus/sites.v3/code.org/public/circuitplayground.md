@@ -52,7 +52,7 @@ The **Maker App** is a standalone app that allows the Circuit Playground to comm
 
 <div class="col-66">
 
-Code.org has partnered with Adafruit to create a <a href="//www.adafruit.com/product/3399">classroom kit</a> of Circuit Playground boards and accessories necessary for implementing CS Discoveries Unit 6, Physical Computing. The kit contains 15 Circuit Playground boards,
+Code.org has partnered with Adafruit to create a <a href="//www.adafruit.com/product/3399", target="_blank">classroom kit</a> of Circuit Playground boards and accessories necessary for implementing CS Discoveries Unit 6, Physical Computing. The kit contains 15 Circuit Playground boards,
  15 Micro USB cables to connect the board to a computer, and a few other accessories. The curriculum is designed for a 2:1 student to board ratio, so a single classroom kit supports a classroom of 30 students.
  
  </div>
@@ -61,16 +61,26 @@ Code.org has partnered with Adafruit to create a <a href="//www.adafruit.com/pro
  <img src="/images/cp_class_pack.jpg" style="max-width: 90%; margin: 0 0 20px 20px;">
  </div>
  
-### For teachers in Code.org's 2017-2018 CS Discoveries Professional Learning Program
-For teachers participating in the 2017-18 CS Discoveries Professional Learning Program and implementing the full-year version of the course, we're happy to announce that we 
+### <a name="subsidy"></a> For teachers in Code.org's 2017-2018 CS Discoveries Professional Learning Program
+For teachers participating in the 2018-19 CS Discoveries Professional Learning Program and implementing the full-year version of the course, we're happy to announce that we 
 will be subsidizing the cost of a single classroom kit for each teacher. 
 
-* For teachers at schools with **50% or greater free/reduced price meals**, the classroom kit will be **100% subsidized**, resulting in no cost to the teacher, including shipping.
-* For teachers at schools with less than **50% free/reduced price meals**, the classroom kit will be **partially subsidized**, bringing the cost of the kit to $100 including shipping.
+To receive a fully subsidized circuit playground, teachers must meet **all** of the following requirements:
 
-Eligible teachers in our Professional Learning Program should have been sent details on how to receive a coupon code that can be applied directly on the Adafruit website. If you believe that you should have received a discount coupon but did not, please email us at support@code.org
+* Be a "qualified teacher" in the 2018-19 Code.org Profesional Learning Program for CS Discoveries. Qualified teachers must have either: attended a 5-day summer workshop for CS Discoveries in 2018 as a participant, OR are participating in the 2018-19 Facilitator Development Program as a new CS Discoveries facilitator.
+* Completed the first semester of the CS Discoveries curriculum with students. Qualified teachers mus have at least one section of CS Discoveries on Code.org with at least 10 students who have made measureable progress in Units 2 **and** 3. (Note: content learned in Unit 3 is a prerequisite for Unit 6)
+* Will teach Unit 6 by the end of the 2019-20 school year.
+
+If you meet **all** of the eligibility requirements, you will qualify for a subsidy based on the free and reduced price meal rates at your school (based on data from the <a href="https://nces.ed.gov/", target="_blank">National Center for Education Statistics</a>):
+
+* **For teachers in schools with 40% or greater free/reduced price meals,** the classroom kit will be 100% subsidized, resulting in no cost to the teacher/school, including shipping.
+* **For teachers at schools with less than 40% free/reduced price meals,** the classroom kit will not be subsidized. Teachers will be expected to pay for the full cost of the kit (approx. $350), though this price will be reduced by a 10% discount for educators to an approximate total of $315. To get the educator discount, teachers must apply the code ADAEDU at checkout.
+
+If a teacher has a smaller class size and does not qualify for or need a full 15 board kit (which supports 30 students), we are working with Adafruit on a Code.org Circuit Playground Individual Kit, so that a teacher may purchase only the supplies they need for their classroom. The Individual Kit will also be eligible for the 10% educator discount. Check back for more details.
+
+**In January 2019,** teachers will receive an email from us with more information about how to request a subsidy for the Adafruit Circuit Playground classroom kit on our website. In the meantime, qualified teachers should make sure they're on track in the 2018-19 school year to complete the first semester of CS Discoveries (Units 1-3) with their students.
 
 ### For teachers independently using the CS Discoveries curriculum
 
-While teachers not in the 2017-18 CS Discoveries Professional Learning Program are not eligible for the subsidized cost of the kit, the classroom kit can still be purchased directly on [Adafruit's website](https://www.adafruit.com/product/3399). 
+While teachers not in the 2018-19 CS Discoveries Professional Learning Program are not eligible for the subsidized cost of the kit, the classroom kit can still be purchased directly on <a href="https://www.adafruit.com/product/3399", target="_blank">Adafruit's website</a>. 
 
