@@ -17,6 +17,8 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {
   renderSyncOauthSectionControl,
   unmountSyncOauthSectionControl,
+  renderLoginTypeControls,
+  unmountLoginTypeControls,
   renderSectionTable,
   renderStatsTable,
   renderTextResponsesTable
@@ -430,8 +432,12 @@ function main() {
         );
       });
 
+      $scope.$on('login-type-react-rendered', () => {
+        $scope.section.$promise.then(section => renderLoginTypeControls(section.id));
+      });
+
       $scope.$on('student-table-react-rendered', () => {
-        $scope.section.$promise.then(section => renderSectionTable(section, scriptData.studiourlprefix));
+        $scope.section.$promise.then(section => renderSectionTable(section));
         firehoseClient.putRecord(
           {
             study: 'teacher-dashboard',
@@ -443,6 +449,7 @@ function main() {
 
       $scope.$on('$destroy', () => {
         unmountSyncOauthSectionControl();
+        unmountLoginTypeControls();
       });
     }
 
@@ -492,6 +499,17 @@ function main() {
           $.each(resultStudents, function (index, student) {
             $scope.section.students.unshift(student);
           });
+        }).$promise.then(() => {
+          // If we started with zero students, we need to rerender login type
+          // controls so the correct options are available.
+          // Because 'temporary' students are included in $scope.section.students
+          // before we reach this save() action, if _all_ students are new
+          // students then we had zero saved students to begin with.
+          // TODO: Once everything is React this should become unnecessary.
+          if (newStudents.length === $scope.section.students.length) {
+            unmountLoginTypeControls();
+            renderLoginTypeControls($scope.section.id);
+          }
         }).catch($scope.genericError);
       }
 
@@ -515,7 +533,15 @@ function main() {
         function () {
           $scope.section.students.splice($scope.section.students.indexOf(student), 1); // remove from array
         }
-      ).catch($scope.genericError);
+      ).then(() => {
+        // If we removed the last student, rerender login type controls so
+        // the correct options are available.
+        // TODO: Once everything is React this should become unnecessary.
+        if ($scope.section.students.length <= 0) {
+          unmountLoginTypeControls();
+          renderLoginTypeControls($scope.section.id);
+        }
+      }).catch($scope.genericError);
     };
 
     $scope.cancel = function (student) {
