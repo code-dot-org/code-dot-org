@@ -2137,6 +2137,8 @@ zh-CN:
               name: 参与纵向研究!
             CSP Student Post-Course Survey:
               name: 计算机科学原理学生课程后调查
+            Post-Course Survey:
+              name: Post-Course Survey
         csp2:
           title: CSP Unit 2 - Digital Information
           description: This unit further explores the ways that digital information is encoded, represented and manipulated. Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.
@@ -2185,6 +2187,8 @@ zh-CN:
               name: 计算机科学原理学生课程后调查
             Practice PT - Encode an Experience:
               name: 练习表演任务 - 编码和经验
+            Post-Course Survey:
+              name: Post-Course Survey
         csp3:
           title: CSP Unit 3 - Intro to Programming
           description: "这个单元介绍了计算机编程的基本概念，开启了制作丰富、有交互的应用程序的能力。这个课程使用JavaScript作为编程语言，应用实验室作为编程环境来创建应用，但这个课程中学到的概念能够扩展到所有的语言和工具中。\\r\n\\r\n这个课程最后更新于2017年10月30日。请于forum.code.org/c/csp/updates阅读更多的教案更新。"
@@ -2229,6 +2233,8 @@ zh-CN:
               name: 计算机科学原理中级课程调查
             Please complete the CSP Mid-course survey!:
               name: 请完成 计算机科学原理中期课程调查!
+            Post-Course Survey:
+              name: Post-Course Survey
         csp4:
           title: CSP Unit 4 - Big Data and Privacy
           description: "The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.\\r\n\\r\nThis unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
@@ -2269,6 +2275,10 @@ zh-CN:
               name: 参与纵向研究!
             CSP Student Post-Course Survey:
               name: 计算机科学原理学生课程后调查
+            Post-Course Survey:
+              name: Post-Course Survey
+            Student Post-Course Survey:
+              name: Student Post-Course Survey
         csp5:
           title: CSP Unit 5 - Building Apps
           description: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
@@ -2379,6 +2389,8 @@ zh-CN:
               name: '线下 "如果" 语句'
             Boolean Expressions and "if" Statements:
               name: 布尔表达式和 "如果" 语句
+            Post-Course Survey:
+              name: Post-Course Survey
         csp6:
           title: CSP Unit 6 - AP Performance Tasks
           description: This unit covers the preparation and completion of the Create and Explore Performance Tasks.
@@ -3382,6 +3394,8 @@ zh-CN:
               name: 形状和随机化
             CS Discoveries End of Semester Survey:
               name: 计算机科学发现期末调查
+            CSD Post-Course Survey:
+              name: CSD Post-Course Survey
         grade2:
           title: Grade 2
           description: Planning Script for CSF 2.0
@@ -3807,6 +3821,8 @@ zh-CN:
               name: 标题
               description_student: 本课将继续介绍 HTML 标记, 这一次使用标题。 该课程练习使用标题标记来创建页面和节标题, 并了解在默认情况下如何显示不同的标题元素。 接下来, 该课程计划如何在将在整个单元中构建的个人 网页上组织其内容, 并开始该项目的第一页。
               description_teacher: 在本课中, 学生们继续使用 HTML 在网页上构建文本，这次使用标题。学生学习如何在默认情况下显示不同的标题元素, 并练习使用它们来创建页面和段落标题。 然后, 学生开始决定他们将如何在自己的个人网页上组织内容。 在最后一级, 学生开始他们将继续在整个单位工作的项目。
+            CSD Post-Course Survey:
+              name: CSD Post-Course Survey
         csp2-support:
           title: Unit 2 Online Professional Learning Course
           description_audience: ''
@@ -3937,6 +3953,8 @@ zh-CN:
               name: 项目 - 应用程序演示
               description_student: 每个团队准备一个演讲来 "推销" 他们开发的应用程序。这是分享奋斗、胜利和计划未来的时候了。
               description_teacher: 在这一点上, 小组已经研究了一个个人和社会重要性的主题, 开发和测试了一个纸面原型和一个数字原型, 并对最初的应用程序进行迭代, 合并新功能和 bug 修复。现在是他们回顾他们所做的事情的时候了, 并把一个连贯的演示汇集在一起, 来展示他们的创造过程。使用提供的演示模板, 团队准备介绍他们的应用程序开发过程, 包括他们所解决的问题、他们从测试中获得反馈的方法, 以及他们对未来的计划。
+            CSD Post-Course Survey:
+              name: CSD Post-Course Survey
         minecraft:
           title: 我的世界 编码时间设计师
           description_audience: ''
@@ -4502,6 +4520,8 @@ zh-CN:
               name: 示例应用程序
             Final Project:
               name: 最终项目
+            Post-Course Survey:
+              name: Post-Course Survey
         unit6-csd-draft:
           title: ''
           description_audience: ''
@@ -4914,6 +4934,8 @@ zh-CN:
               name: 数组和彩色LED灯
               description_student: 学习如果使用列表来存储单一变量名称的多个数值。
               description_teacher: 数组是一个有序的项目的集合，通常是相同类型的项目。在这节课中，学生们学习如何从列表中，用索引来存储某一个或者随机的值。ta'men他们然后会学习到如何存取colorLEDs来控制电路游戏板上的彩色LED等。学生们需要控制每个LED灯的颜色和强度，然后用学到的程序来画一个光线图案，从而在电路游戏板上展示一场灯光秀。
+            CSD Post-Course Survey:
+              name: CSD Post-Course Survey
         csd3-draft:
           title: 'CSD单元 3 - 编程： 动画和游戏'
           description_audience: ''
@@ -5048,6 +5070,8 @@ zh-CN:
               name: 数据保密
               description_student: 学生们将讨论他们各自想要的不同级别的数据安全性。一旦全班对隐私权的重要性有了一定的共识后，他们将通过对相互伙伴间的信息进行加密和解密来学习加密信息的过程。最后学生们要讨论实体和数字安全的重要性。
               description_teacher: 学生们将讨论他们各自想要的不同级别的数据安全性。一旦全班对隐私权的重要性有了一定的共识后，他们将通过对相互伙伴间的信息进行加密和解密来学习加密信息的过程。最后学生们要讨论实体和数字安全的重要性。
+            CSD Post-Course Survey:
+              name: CSD Post-Course Survey
         csd3-old:
           title: CSD单元3（已弃用）
           description_audience: ''
@@ -5294,10 +5318,14 @@ zh-CN:
               name: 参与纵向研究!
             CSP Post-Course Survey:
               name: 计算机科学原理课后问卷
+            CSP post survey 2018 staging:
+              name: 计算机科学原理2018 后期调查阶段
+            CSP post-course survey:
+              name: CSP post-course survey
           title: 计算机科学原理学生课程后调查
           description_audience: 计算机科学原理学生
           description_short: 计算机科学原理学生课后调查
-          description: '欢迎来到Code.org的计算机科学原理课后问卷。这个调查需要10分钟来完成。你的答案会被保密，并是匿名的。  '
+          description: 欢迎来到Code.org的计算机科学原理课后问卷。这个调查需要10分钟来完成。你的答案会被保密，并是匿名的。  
         public-key-cryptography:
           stages:
             Public Key Crypto Widgets:
@@ -6892,6 +6920,8 @@ zh-CN:
               name: 计算机科学原理中后期调查阶段2017
             CSP post survey 2018 staging:
               name: 计算机科学原理2018 后期调查阶段
+            CSD post survey 2018 staging:
+              name: CSD post survey 2018 staging
           title: 所有调查
           description_audience: ''
           description_short: 极端和测试code.org调查的地方
@@ -6950,6 +6980,8 @@ zh-CN:
               name: 技术设置 - 您的 AP 数字组合和其他工具
             'Setup: Digital Portfolio and Other Tools':
               name: '设置：数字文件和其它工具'
+            Post-Course Survey:
+              name: Post-Course Survey
           title: 探索 - AP表演任务准备
           description_audience: ''
           description_short: 课程和资源会帮助学生们准备和完成AP探索的表演任务。
@@ -6964,6 +6996,8 @@ zh-CN:
               name: 创建 表演任务 准备 - 制定计划
             Create PT - Complete the Task:
               name: 创建 表演任务- 完成任务
+            Post-Course Survey:
+              name: Post-Course Survey
           title: 创建 - AP表演任务准备
           description_audience: ''
           description_short: 课程和资源会帮助学生们准备和完成创建AP表演任务。
@@ -7501,6 +7535,8 @@ zh-CN:
               name: 收割者中的循环
             Sequencing in Maze:
               name: 迷宫中的序列
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: 'Persistence & Frustration: Stevie and the Big Project'
         express-2018:
           title: 快速课程
           description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
@@ -7803,6 +7839,12 @@ zh-CN:
               name: 迷宫里的条件
             Conditionals & Loops in Harvester:
               name: 收割者里的条件和循环
+            Graph Paper Programming:
+              name: 图纸上编程
+            Relay Programming:
+              name: 编程接力
+            Introduction to Online Puzzles:
+              name: 在线拼图简介
         jr-test:
           stages:
             Programming with Behaviors:
@@ -7821,6 +7863,8 @@ zh-CN:
               name: 虚拟宠物 - 永远
             Alien Dance Party - Input:
               name: Alien Dance Party - Input
+            Virtual Pet - Interactions:
+              name: Virtual Pet - Interactions
           title: ''
           description_audience: ''
           description_short: ''
@@ -8338,6 +8382,8 @@ zh-CN:
               name: 精灵实验室中的宠物长颈鹿
             Functions in Minecraft:
               name: '《我的世界》中的函数'
+            Conditionals in Farmer:
+              name: 农夫的条件
         csp1-2018:
           title: CSP Unit 1 - The Internet
           description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. The unit then explores the structure and design of the internet and the implications of those design decisions.
@@ -8996,16 +9042,230 @@ zh-CN:
             Alien Dance Party - Input:
               name: Alien Dance Party - Input
           title: Introduction to Sprite Lab (PILOT)
-          description_audience: ''
-          description_short: ''
-          description: ''
+          description_audience: Course E/F Students
+          description_short: This is a pilot course for Code.org's new Sprite Lab tool for Courses E and F
+          description: This is a pilot course for Code.org's new Sprite Lab tool for Courses E and F
         csd1-dlp-18:
           stages:
             Deeper Learning Overview:
               name: 更深的学习概览
             Complete Unit 1 Deeper Learning Reflections:
               name: 完成单元1深入学习的反思
+            Complete Unit 2 Deeper Learning Reflections:
+              name: 完成单元2深入学习的反思
+            Complete Unit 3 Deeper Learning Reflections:
+              name: 完成单元3深入学习的反思
           title: CS Discoveries Unit 1 Deeper Learning 2018-2019
           description_audience: CS Discoveries Facilitators in Training 2018-2019
           description_short: '计算机科学发现引导员培训的深入学习材料 '
           description: 'This is Unit 1 of the Deeper Learning Plan for Code.org CS Discoveries facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 1 of the Code.org CS Discoveries Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+        csd2-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: 更深的学习概览
+            Complete Unit 2 Deeper Learning Reflections:
+              name: 完成单元2深入学习的反思
+          title: CS Discoveries Unit 2 Deeper Learning 2018-2019
+          description_audience: CS Discoveries Facilitators in Training 2018-2019
+          description_short: '计算机科学发现引导员培训的深入学习材料 '
+          description: 'This is Unit 1 of the Deeper Learning Plan for Code.org CS Discoveries facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 1 of the Code.org CS Discoveries Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+        csd3-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: 更深的学习概览
+            Complete Unit 3 Deeper Learning Reflections:
+              name: 完成单元3深入学习的反思
+          title: CS Discoveries Unit 3 Deeper Learning 2018-2019
+          description_audience: CS Discoveries Facilitators in Training 2018-2019
+          description_short: '计算机科学发现引导员培训的深入学习材料 '
+          description: 'This is Unit 3 of the Deeper Learning Plan for Code.org CS Discoveries facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 3 of the Code.org CS Discoveries Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+        csd4-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: 更深的学习概览
+            Complete Unit 2 Deeper Learning Reflections:
+              name: 完成单元2深入学习的反思
+            Complete Unit 4 Deeper Learning Reflections:
+              name: 完成单元4深入学习的反思
+          title: CS Discoveries Unit 4 Deeper Learning 2018-2019
+          description_audience: CS Discoveries Facilitators in Training 2018-2019
+          description_short: '计算机科学发现引导员培训的深入学习材料 '
+          description: 'This is Unit 4 of the Deeper Learning Plan for Code.org CS Discoveries facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 4 of the Code.org CS Discoveries Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+        csd5-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: 更深的学习概览
+            Complete Unit 5 Deeper Learning Reflections:
+              name: 完成单元5深入学习的反思
+          title: CS Discoveries Unit 5 Deeper Learning 2018-2019
+          description_audience: CS Discoveries Facilitators in Training 2018-2019
+          description_short: '计算机科学发现引导员培训的深入学习材料 '
+          description: 'This is Unit 5 of the Deeper Learning Plan for Code.org CS Discoveries facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 5 of the Code.org CS Discoveries Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+        csd6-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: 更深的学习概览
+            Complete Unit 5 Deeper Learning Reflections:
+              name: 完成单元5深入学习的反思
+            Complete Unit 6 Deeper Learning Reflections:
+              name: 完成单元6深入学习的反思
+          title: CS Discoveries Unit 6 Deeper Learning 2018-2019
+          description_audience: CS Discoveries Facilitators in Training 2018-2019
+          description_short: '计算机科学发现引导员培训的深入学习材料 '
+          description: 'This is Unit 6 of the Deeper Learning Plan for Code.org CS Discoveries facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 6 of the Code.org CS Discoveries Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+        csp1-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: 更深的学习概览
+            Complete Unit 1 Deeper Learning Reflections:
+              name: 完成单元1深入学习的反思
+          title: CS Principles Unit 1 Deeper Learning 2018-2019
+          description_audience: CS Principles Facilitators in Training 2018-2019
+          description_short: 'Deeper Learning materials for CS Principles facilitators in training '
+          description: 'This is Unit 1 of the Deeper Learning Plan for Code.org CS Principles facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 1 of the Code.org CS Principles Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+        csp2-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: 更深的学习概览
+            Complete Unit 2 Deeper Learning Reflections:
+              name: 完成单元2深入学习的反思
+          title: CS Principles Unit 2 Deeper Learning 2018-2019
+          description_audience: CS Principles Facilitators in Training 2018-2019
+          description_short: 'Deeper Learning materials for CS Principles facilitators in training '
+          description: 'This is Unit 2 of the Deeper Learning Plan for Code.org CS Principles facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 2 of the Code.org CS Principles Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+        csp3-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: 更深的学习概览
+            Complete Unit 3 Deeper Learning Reflections:
+              name: 完成单元3深入学习的反思
+          title: CS Principles Unit 3 Deeper Learning 2018-2019
+          description_audience: CS Principles Facilitators in Training 2018-2019
+          description_short: 'Deeper Learning materials for CS Principles facilitators in training '
+          description: 'This is Unit 3 of the Deeper Learning Plan for Code.org CS Principles facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 3 of the Code.org CS Principles Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+        csp4-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: 更深的学习概览
+            Complete Unit 3 Deeper Learning Reflections:
+              name: 完成单元3深入学习的反思
+            Complete Unit 4 Deeper Learning Reflections:
+              name: 完成单元4深入学习的反思
+          title: CS Principles Unit 4 Deeper Learning 2018-2019
+          description_audience: CS Principles Facilitators in Training 2018-2019
+          description_short: 'Deeper Learning materials for CS Principles facilitators in training '
+          description: 'This is Unit 4 of the Deeper Learning Plan for Code.org CS Principles facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 4 of the Code.org CS Principles Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+        csp5-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: 更深的学习概览
+            Complete Unit 5 Deeper Learning Reflections:
+              name: 完成单元5深入学习的反思
+          title: CS Principles Unit 5 Deeper Learning 2018-2019
+          description_audience: CS Principles Facilitators in Training 2018-2019
+          description_short: 'Deeper Learning materials for CS Principles facilitators in training '
+          description: 'This is Unit 5 of the Deeper Learning Plan for Code.org CS Principles facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 5 of the Code.org CS Principles Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+        csp-explore-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: 更深的学习概览
+            Complete Unit 6 Deeper Learning Reflections:
+              name: 完成单元6深入学习的反思
+            Complete Explore AP Unit Deeper Learning Reflections:
+              name: Complete Explore AP Unit Deeper Learning Reflections
+            Complete Explore Deeper Learning Reflections:
+              name: Complete Explore Deeper Learning Reflections
+          title: CS Principles Explore Deeper Learning 2018-2019
+          description_audience: CS Principles Facilitators in Training 2018-2019
+          description_short: 'Deeper Learning materials for CS Principles facilitators in training '
+          description: 'This is the Explore AP Unit of the Deeper Learning Plan for Code.org CS Principles facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of the Explore AP Unit of the Code.org CS Principles Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+        csp-create-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: 更深的学习概览
+            Complete Create Deeper Learning Reflections:
+              name: Complete Create Deeper Learning Reflections
+          title: CS Principles Create Deeper Learning 2018-2019
+          description_audience: CS Principles Facilitators in Training 2018-2019
+          description_short: 'Deeper Learning materials for CS Principles facilitators in training '
+          description: 'This is the Create AP Unit of the Deeper Learning Plan for Code.org CS Principles facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of the Create AP Unit of the Code.org CS Principles Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+        csd-post-survey:
+          stages:
+            CSD post-course survey:
+              name: CSD post-course survey
+          title: CSD Student Post-Course Survey
+          description_audience: CSD Students
+          description_short: CSD Student Post-Course Survey
+          description: Welcome to the Code.org CS Discoveries Post-Course Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
+        csd-novice-18:
+          stages:
+            Novice Reflections Overview:
+              name: Novice Reflections Overview
+            Welcome:
+              name: 欢迎
+            Tuesday:
+              name: 星期二
+            Wednesday:
+              name: 星期三
+            Thursday:
+              name: 星期四
+            Wrap Up:
+              name: 总结
+            Friday:
+              name: Friday
+            Novice Reflection Overview:
+              name: Novice Reflection Overview
+            Monday:
+              name: Monday
+          title: CS Discoveries Novice Reflections 2018-2019
+          description_audience: CS Discoveries Facilitators in Training 2018-2019
+          description_short: 'Novice reflection materials for CS Discoveries facilitators in training '
+          description: This is the set of novice reflections for Code.org CS Discoveries facilitators in training during their 5-day summer workshop. Here you will find reflection prompts for each day of your in-person 5-day summer workshop. This questions will be the foundation of work we do at the Facilitator Training Weekend.
+        csd-apprentice-18:
+          stages:
+            Novice Reflection Overview:
+              name: Novice Reflection Overview
+            Tuesday:
+              name: 星期二
+            Wednesday:
+              name: 星期三
+            Thursday:
+              name: 星期四
+            Wrap Up:
+              name: 总结
+          title: CS Discoveries Apprentice Reflections 2018-2019
+          description_audience: CS Discoveries Facilitators in Training 2018-2019
+          description_short: 'Apprentice reflection materials for CS Discoveries facilitators in training '
+          description: This is the set of apprentice reflections for Code.org CS Discoveries facilitators in training during their 5-day summer workshop. Here you will find reflection prompts for each day of your in-person 5-day summer workshop. This questions will be the foundation of work we do at the Facilitator Training Weekend.
+        csp-novice-18:
+          stages:
+            Novice Reflection Overview:
+              name: Novice Reflection Overview
+            Tuesday:
+              name: 星期二
+            Wednesday:
+              name: 星期三
+            Thursday:
+              name: 星期四
+            Wrap Up:
+              name: 总结
+          title: CS Principles Novice Reflections 2018-2019
+          description_audience: CS Principles Facilitators in Training 2018-2019
+          description_short: 'Novice reflection materials for CS Principles facilitators in training '
+          description: This is the set of novice reflections for Code.org CS Principles facilitators in training during their 5-day summer workshop. Here you will find reflection prompts for each day of your in-person 5-day summer workshop. This questions will be the foundation of work we do at the Facilitator Training Weekend.
+        csp-apprentice-18:
+          stages:
+            Novice Reflection Overview:
+              name: Novice Reflection Overview
+            Tuesday:
+              name: 星期二
+            Wednesday:
+              name: 星期三
+            Thursday:
+              name: 星期四
+            Wrap Up:
+              name: 总结
+          title: CS Principles Novice Reflections 2018-2019
+          description_audience: CS Principles Facilitators in Training 2018-2019
+          description_short: 'Novice reflection materials for CS Principles facilitators in training '
+          description: This is the set of apprentice reflections for Code.org CS Principles facilitators in training during their 5-day summer workshop. Here you will find reflection prompts for each day of your in-person 5-day summer workshop. This questions will be the foundation of work we do at the Facilitator Training Weekend.

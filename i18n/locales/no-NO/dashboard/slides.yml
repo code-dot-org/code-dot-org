@@ -2102,31 +2102,31 @@
         text: "All informasjon som går inn eller ut av en datamaskin kan representeres som nuller og enere, eller som elektriske signaler som er av eller på."
       3:
         image: 'notes/csd_concept_circuits_logic_3.png'
-        text: "In order to process the information that comes in as input, and to make the information that is output, a computer needs to modify and combine the input signals. To do this, a computer uses millions of teeny electronic components, which come together to form circuits."
+        text: "For å behandle informasjon som kommer inn, og lage det som skal ut, må datamaskinen forandre og kombinere signalene som kom inn. Til det bruker datamaskinen millioner av ørsmå elektroniske deler, satt sammen til elektroniske kretser."
       4:
         image: 'notes/csd_concept_circuits_logic_4.png'
-        text: "Let's take a closer look at how circuits can modify and process information that's represented in ones and zeros. This is an incredibly simple circuit. It takes an electrical signal, on or off, and it flips it. So if the signal you give it is a 1, the circuit gives you a 0, and if you give the circuit a 0, it gives you a 1. The signal that goes in is not the same as the signal that comes out, and so we call this circuit NOT."
+        text: "La oss se nærmere på hvordan elektronikk kan behandle informasjon representert som nuller og enere. Dette er en kjempeenkel elektrisk kobling. Den tar et elektrisk signal, av eller på, og bytter til det motsatte. Så hvis du gir den 1 får du ut 0, og hvis du gir den 0 får du ut 1. Signalet som kommer ut er ikke det signalet som kom inn, så vi kaller dette en IKKE-kobling."
       5:
         image: 'notes/csd_concept_circuits_logic_5.png'
-        text: "More complicated circuits can take multiple signals and combine them, and give you a different result. In this example, a circuit will take two electrical signals, now each one might be a 1 or a 0. If either of the signals coming in is a 0, then the result is also a 0. This circuit will only give you a 1, if the first signal and the second signal are both a 1, and so we call the circuit AND."
+        text: "Mer kompliserte koblinger kan ta flere signaler og kombinere dem, og gi deg forskjellige resultater. I denne koblingen kommer det inn to signaler som hver kan være 0 eller 1. Hvis ett av signalene er 0, uansett hvilket, blir resultatet også 0. Denne koblingen gir ut 1 bare hvis det første innsignalet er 1 og det andre innsignalet er 1. Vi kaller dette en OG-funksjon."
       6:
         image: 'notes/csd_concept_circuits_logic_6.png'
-        text: "There are many small circuits like this that perform simple logical calculations. By connecting these circuits together, we can make more complex circuits that perform more complex calculations."
+        text: "Det finnes mange sånne små koblinger som gjør enkle logiske beregninger. Ved å koble sånne koblinger sammen kan vi lage mer kompleks elektronikk som gjør mer avanserte beregninger."
       7:
         image: 'notes/csd_concept_circuits_logic_7.png'
-        text: "For example, you can make a circuit that adds 2 bits together called an adder. This circuit takes in 2 individual bits, each one a 1 or a 0, and adds them together to calculate the sum. The sum can be 0 plus 0 equals 0, 0 plus 1 equals 1, or 1 plus 1 equals 2. You need two wires coming out because it can take up to two binary digits to represent the sum. Once you have a single adder for adding two bits of information, you can put together multiples of these adder circuits side-by-side to add together much larger numbers."
+        text: "For eksempel kan du lage en kobling som plusser sammen to bits, som vi kaller en adderer. Denne koblingen tar inn to bits, som hver kan være 0 eller 1, ob regner ut summen av dem. Det kan være 0 pluss 0 er lik 0, 0 pluss 1 er lik 1, eller 1 pluss 1 er lik 2. Du trenger to ledninger ut, fordi det kan være opp til to siffer i summen. Og når du har en adderer for to bits kan du sette sammen flere slike for å addere mye større tall."
       8:
         image: 'notes/csd_concept_circuits_logic_8.png'
-        text: "For example, here's how an 8-bit adder adds the numbers 25 and 50. Each number is represented using 8 bits, resulting in 16 different electrical signals that go into the circuit. The circuit for an 8-bit adder has lots of little adders inside of it, which together, calculate the sum."
+        text: "Her kan du for eksempel se hvordan en 8-bits adderer legger sammen 25 og 50. Hvert tall er representert med 8 bits, slik at det totalt kommer inn 16 signaler. En slik 8-bits adderer er satt sammen av mange små adderere som sammen beregner summen."
       9:
         image: 'notes/csd_concept_circuits_logic_9.png'
-        text: "Different electrical circuits can perform other simple calculations like subtraction or multiplication. In fact, all the information processing your computer does is just lots and lots of small simple operations put together. Each individual operation done by a computer is so, so simple it could be done by a human, but these circuits inside computers are way way faster."
+        text: "Elektriske koblinger kan gjøre andre enkle beregninger, for eksempel subtraksjon eller multiplikasjon. Faktisk gjør datamaskinen din ikke annet enn mange sånne små operasjoner. Hver enkelt operasjon er så enkel at et menneske lett kan gjøre det, men elektronikken i datamaskinen gjør det mye raskere."
       10:
         image: 'notes/csd_concept_circuits_logic_10.png'
-        text: "Back in the day, these circuits were big and clunky, and an 8-bit adder could be as big as a fridge, and it would take minutes for them to perform a simple calculation. Today, computer circuits are microscopic in size, and way way faster. Why are smaller computers also faster? Well, because the smaller the circuit is, the less distance the electrical signal has to go. Electricity moves at just about the speed of light, which is why modern circuits can perform billions of calculations per second."
+        text: "For lenge siden var elektronikk for datamaskiner noen store greier. En 8-bits adderer kunne være på størrelse med et kjøleskap, og kunne bruke minutter på å gjøre en beregning. I dag er elektronikken krympet til mikroskopisk størrelse, og er mye raskere. Hvorfor går det raskere? Det er fordi jo mindre en kobling er, jo kortere avstand må signalene gå. Elektriske signaler går omtrent med lysets hastighet, og det er derfor moderne datamaskiner kan gjøre milliarder av beregninger per sekund."
       11:
         image: 'notes/csd_concept_circuits_logic_11.png'
-        text: "So whether you're playing a game, recording a video, or exploring the cosmos, everything you could possibly do with technology requires lots of information to be processed extremely quickly. Underneath all this complexity is just lots of teeny little circuits that turn binary signals into websites, videos, music, and games. These circuits can even help us decode DNA to diagnose and cure disease. So what would you like to do with all these circuits?"
+        text: "Så enten du spiller dataspill, tar opp en video, eller undersøker verdensrommet, så trenger du å behandle masse informasjon kjemperaskt. Slik komplisert informasjonsbehandling blir gjort av massevis av ørsmå elektroniske koblinger som gjør om tall til nettsteder, video, musikk og spill. Elektronikken kan til og med hjelpe oss å dekode arvestoffet eller kurere sykdommer. Hva vil du gjøre med all denne elektronikken?"
     csd_concept_memory_cpu_input_output:
       1:
         image: 'notes/csd_concept_memory_cpu_input_output_1.png'
