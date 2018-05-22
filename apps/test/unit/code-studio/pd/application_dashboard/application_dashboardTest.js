@@ -23,31 +23,26 @@ describe("ApplicationDashboard", () => {
   };
 
   describe("heading/title initially", () => {
+    afterEach(() => {
+      sessionStorage.removeItem('regionalPartnerFilter');
+    });
+
     it("displays 'unmatched' for admins", () => {
       const applicationDashboard = mountApplicationDashboard([{id: 1, name: 'A+ College Ready', group: 1}], true);
       const store = applicationDashboard.find('Provider').prop('store');
       expect(store.getState().regionalPartnerFilter.label).to.eql(UNMATCHED_PARTNER_LABEL);
-
-      // clean up saved filter for future tests
-      sessionStorage.removeItem('regionalPartnerFilter');
     });
 
     it("displays 'all' for non-admins with multiple partners", () => {
       const applicationDashboard = mountApplicationDashboard([{id: 1, name: 'A+ College Ready', group: 1}, {id: 2, name: 'WNY Stem Hub', group: 1}], false);
       const store = applicationDashboard.find('Provider').prop('store');
       expect(store.getState().regionalPartnerFilter.label).to.eql(ALL_PARTNERS_LABEL);
-
-      // clean up saved filter for future tests
-      sessionStorage.removeItem('regionalPartnerFilter');
     });
 
     it("displays partner name for non-admins with one partner", () => {
       const applicationDashboard = mountApplicationDashboard([{id: 1, name: 'A+ College Ready', group: 1}], false);
       const store = applicationDashboard.find('Provider').prop('store');
       expect(store.getState().regionalPartnerFilter.label).to.eql('A+ College Ready');
-
-      // clean up saved filter for future tests
-      sessionStorage.removeItem('regionalPartnerFilter');
     });
   });
 });
