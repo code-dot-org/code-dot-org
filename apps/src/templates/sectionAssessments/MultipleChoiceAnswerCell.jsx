@@ -24,16 +24,16 @@ class MultipleChoiceAnswerCell extends Component {
   static propTypes = {
     percentValue: PropTypes.number.isRequired,
     isCorrectAnswer: PropTypes.bool,
-    textAnswered: PropTypes.string,
+    displayAnswer: PropTypes.string,
   };
 
   render() {
-    const {percentValue, isCorrectAnswer, textAnswered} = this.props;
-    if (textAnswered) {
+    const {percentValue, isCorrectAnswer, displayAnswer} = this.props;
+    if (displayAnswer) {
       return (
         <div>
           <div>
-            {textAnswered}
+            {displayAnswer}
           </div>
           <div style={styles.icon}>
           {isCorrectAnswer &&
@@ -56,7 +56,7 @@ class MultipleChoiceAnswerCell extends Component {
         </div>
         <div style={styles.icon}>
           {isCorrectAnswer &&
-              <FontAwesome icon="check-circle" style={styles.icon}/>
+            <FontAwesome icon="check-circle" style={styles.icon}/>
           }
         </div>
       </div>
