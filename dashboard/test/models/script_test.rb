@@ -942,10 +942,9 @@ endvariants
     script = create(:script, name: 'fake-script', hidden: true)
     assignable_info = script.assignable_info
 
-    assert_equal(assignable_info[:name], "fake-script *")
-    assert_equal(assignable_info[:script_name], "fake-script")
-    assert_equal(assignable_info[:category], "other")
-    assert_equal(assignable_info[:category_priority], 15)
+    assert_equal("fake-script *", assignable_info[:name])
+    assert_equal("fake-script", assignable_info[:script_name])
+    assert_equal("other", assignable_info[:category])
   end
 
   test "self.valid_scripts: does not return hidden scripts when user is a student" do
