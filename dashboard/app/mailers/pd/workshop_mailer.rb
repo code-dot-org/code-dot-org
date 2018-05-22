@@ -86,16 +86,17 @@ class Pd::WorkshopMailer < ActionMailer::Base
   def teacher_enrollment_reminder(enrollment, days_before: nil)
     @enrollment = enrollment
     @workshop = enrollment.workshop
+    @organizer = @workshop.organizer
     @cancel_url = url_for controller: 'pd/workshop_enrollment', action: :cancel, code: enrollment.code
     @is_reminder = true
-    @pre_survey_url = pd_new_pre_workshop_survey_url(enrollment_code: @enrollment.code)
+    @pre_survey_url = @workshop.local_summer? ? '/pd/workshop_survey/day/0' : pd_new_pre_workshop_survey_url(enrollment_code: @enrollment.code)
     @is_first_pre_survey_email = days_before == INITIAL_PRE_SURVEY_DAYS_BEFORE
 
     return if @workshop.suppress_reminders?
 
     mail content_type: 'text/html',
       from: from_teacher,
-      subject: teacher_enrollment_subject(@workshop, use_pre_survey_subject: @is_first_pre_survey_email),
+      subject: teacher_enrollment_subject(@workshop),
       to: email_address(@enrollment.full_name, @enrollment.email),
       reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
@@ -229,11 +230,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
     nil
   end
 
-  def teacher_enrollment_subject(workshop, use_pre_survey_subject: false)
-    if use_pre_survey_subject && workshop.pre_survey?
-      return 'Upcoming Workshop: Complete your workshop pre-survey'
-    end
-
+  def teacher_enrollment_subject(workshop)
     if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
       "Your upcoming #{workshop.course_name} workshop"
     elsif workshop.local_summer?

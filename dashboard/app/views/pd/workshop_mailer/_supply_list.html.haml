@@ -7,7 +7,8 @@
 
 %ul
   %li Curriculum Guide (aka Teal Book)
-  %li Course and Exam Description (aka Purple Book)
+  - if @workshop.course == Pd::Workshop::COURSE_CSP
+    %li Course and Exam Description (aka Purple Book)
   %li Your journal
   %li Laptop
   %li Laptop Charger
