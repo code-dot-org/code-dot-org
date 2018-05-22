@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import xml from './xml';
 
 const ATTRIBUTES_TO_CLEAN = [
@@ -16,7 +17,7 @@ exports.createToolbox = function (blocks) {
 };
 
 const appendBlocks = function (toolboxDom, blockTypes) {
-  const root = toolboxDom.getRootNode().firstChild;
+  const root = toolboxDom.firstChild;
   blockTypes.forEach(blockName => {
     const block = toolboxDom.createElement('block');
     block.setAttribute('type', blockName);
@@ -26,21 +27,32 @@ const appendBlocks = function (toolboxDom, blockTypes) {
 };
 exports.appendBlocks = appendBlocks;
 
-exports.appendCategory = function (toolboxXml, blockTypes, categoryName) {
+exports.appendBlocksByCategory = function (toolboxXml, blocksByCategory) {
   const parser = new DOMParser();
   const toolboxDom = parser.parseFromString(toolboxXml, 'text/xml');
   if (!toolboxDom.querySelector('category')) {
     // Uncategorized toolbox, just add blocks to the end
-    return appendBlocks(toolboxDom, blockTypes);
+    const allBlocks = _.flatten(Object.values(blocksByCategory));
+    return appendBlocks(toolboxDom, allBlocks);
   }
-  const customCategory = toolboxDom.createElement('category');
-  customCategory.setAttribute('name', categoryName);
-  blockTypes.forEach(blockName => {
-    const block = toolboxDom.createElement('block');
-    block.setAttribute('type', blockName);
-    customCategory.appendChild(block);
+  Object.keys(blocksByCategory).forEach(categoryName => {
+    let category =
+        toolboxDom.querySelector(`category[name="${categoryName}"]`);
+    let existingCategory = true;
+    if (!category) {
+      category = toolboxDom.createElement('category');
+      existingCategory = false;
+    }
+    category.setAttribute('name', categoryName);
+    blocksByCategory[categoryName].forEach(blockName => {
+      const block = toolboxDom.createElement('block');
+      block.setAttribute('type', blockName);
+      category.appendChild(block);
+    });
+    if (!existingCategory) {
+      toolboxDom.firstChild.appendChild(category);
+    }
   });
-  toolboxDom.getRootNode().firstChild.appendChild(customCategory);
   return xml.serialize(toolboxDom);
 };
 
@@ -595,12 +607,14 @@ exports.groupInputsByRow = groupInputsByRow;
  * Adds the specified inputs to the block
  * @param {Blockly} blockly The Blockly object provided to install()
  * @param {Block} block The block to add the inputs to
- * @param {LabeledInputConfig[]} inputs The list of inputs to interpolate.
- * @param {Object.<string, InputType>} inputTypes A map of input type names to their definitions,
+ * @param {LabeledInputConfig[][]} inputs The list of inputs to interpolate,
+ *   grouped by row.
+ * @param {Object.<string, InputType>} inputTypes A map of input type names to
+ *   their definitions,
  * @param {boolean} inline Whether inputs are being rendered inline
  */
-const interpolateInputs = function (blockly, block, inputs, inputTypes=STANDARD_INPUT_TYPES, inline) {
-  groupInputsByRow(inputs, inputTypes).forEach(inputRow => {
+const interpolateInputs = function (blockly, block, inputRows, inputTypes=STANDARD_INPUT_TYPES, inline) {
+  inputRows.forEach(inputRow => {
     // Create the last input in the row first
     const lastInputConfig = inputRow[inputRow.length - 1];
     const lastInput = inputTypes[lastInputConfig.mode]
@@ -628,8 +642,8 @@ exports.interpolateInputs = interpolateInputs;
  *   with strict type checking.
  * @params {string} defaultObjectType Default type used for the 'THIS' input in
  *   method call blocks.
- * @param {object} customInputTypes customType input definitions, see
- *   interpolateInputs()
+ * @param {Object.<string,InputType>} customInputTypes customType input
+ *   definitions.
  * @returns {function} A function that takes a bunch of block properties and
  *   adds a block to the blockly.Blocks object. See param documentation below.
  */
@@ -747,6 +761,10 @@ exports.createJsWrapperBlockCreator = function (
       });
     }
     const inputConfigs = determineInputs(blockText, inputs, strictTypes);
+    const inputRows = groupInputsByRow(inputConfigs, inputTypes);
+    if (inputRows.length === 1) {
+      inline = false;
+    }
 
     blockly.Blocks[blockName] = {
       helpUrl: '',
@@ -756,7 +774,7 @@ exports.createJsWrapperBlockCreator = function (
         interpolateInputs(
           blockly,
           this,
-          inputConfigs,
+          inputRows,
           inputTypes,
           inline,
         );

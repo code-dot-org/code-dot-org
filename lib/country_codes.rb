@@ -250,6 +250,48 @@ COUNTRY_CODE_TO_COUNTRY_NAME = {
   "ZW" => "Zimbabwe",
 }.freeze
 
+# ISO 3166 alpha-2 country codes for Member States of the European Union.
+# Source: http://publications.europa.eu/code/pdf/370000en.htm
+# ISO codes for Greece (GR) and United Kingdom (GB) are listed instead of their recommended abbreviations (EL and UK).
+EU_COUNTRY_CODES = %w(
+  AT
+  BE
+  BG
+  CY
+  CZ
+  DE
+  DK
+  EE
+  ES
+  FI
+  FR
+  GB
+  GR
+  HR
+  HU
+  IE
+  IT
+  LT
+  LU
+  LV
+  MT
+  NL
+  PL
+  PT
+  RO
+  SE
+  SI
+  SK
+).freeze
+
+# EEA = EU + Iceland, Liechtenstein and Norway.
+EEA_COUNTRY_CODES = EU_COUNTRY_CODES +
+  %w(
+    IS
+    LI
+    NO
+  )
+
 # Returns the name of the country whose two character country code is code.
 # If code is not a valid two character country code, returns code.
 def country_name_from_code(code)
@@ -263,4 +305,11 @@ end
 
 def valid_country_code?(code)
   return COUNTRY_CODE_TO_COUNTRY_NAME[code.to_s.strip.upcase].present?
+end
+
+# @return true if the provided alpha-2 country code represents a
+# member state of the European Union covered by the GDPR.
+def gdpr_country_code?(code)
+  return false if code.nil?
+  EEA_COUNTRY_CODES.include?(code.to_s.strip.upcase)
 end

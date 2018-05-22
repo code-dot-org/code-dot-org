@@ -87,12 +87,10 @@ North Carolina<br>
 North Dakota<br>
 Oklahoma<br>
 Pennsylvania<br>
-South Carolina<br>
 South Dakota<br>
 Texas<br>
 Vermont<br>
 Virginia<br>
-Washington<br>
 Wisconsin<br>
 Wyoming<br>
 
