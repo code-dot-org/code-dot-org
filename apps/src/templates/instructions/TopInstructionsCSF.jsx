@@ -440,9 +440,9 @@ class TopInstructions extends React.Component {
   /**
    * @return {Element} scrollTarget
    */
-  getScrollTarget() {
+  getScrollTarget = () => {
     return this.instructions.parentElement;
-  }
+  };
 
   /**
    * Manually scroll instructions to bottom. When we have multiple

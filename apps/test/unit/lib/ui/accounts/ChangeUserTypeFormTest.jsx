@@ -6,6 +6,7 @@ import ChangeUserTypeForm from '@cdo/apps/lib/ui/accounts/ChangeUserTypeForm';
 
 describe('ChangeUserTypeForm', () => {
   const EMAIL_SELECTOR = 'input[type="email"]';
+  const OPT_IN_SELECTOR = 'select';
 
   const DEFAULT_PROPS = {
     values: {},
@@ -19,6 +20,7 @@ describe('ChangeUserTypeForm', () => {
 
     const initialValues= {
       currentEmail: 'initialEmail@example.com',
+      emailOptIn: 'no',
     };
 
     beforeEach(() => {
@@ -42,6 +44,19 @@ describe('ChangeUserTypeForm', () => {
       expect(onChange.firstCall.args[0]).to.deep.equal({
         ...initialValues,
         currentEmail: changedEmail
+      });
+    });
+
+    it('when the email opt-in field changes', () => {
+      expect(onChange).not.to.have.been.called;
+
+      const newOptIn = 'yes';
+      wrapper.find(OPT_IN_SELECTOR).simulate('change', {target:{value: newOptIn}});
+
+      expect(onChange).to.have.been.calledOnce;
+      expect(onChange.firstCall.args[0]).to.deep.equal({
+        ...initialValues,
+        emailOptIn: newOptIn
       });
     });
   });
@@ -68,6 +83,15 @@ describe('ChangeUserTypeForm', () => {
       expect(onSubmit.firstCall.args).to.be.empty;
     });
 
+    it('when the enter key is pressed in email opt-in field', () => {
+      expect(onSubmit).not.to.have.been.called;
+
+      wrapper.find(OPT_IN_SELECTOR).simulate('keydown', {key: 'Enter'});
+
+      expect(onSubmit).to.have.been.calledOnce;
+      expect(onSubmit.firstCall.args).to.be.empty;
+    });
+
     it('but not when other keys are pressed', () => {
       expect(onSubmit).not.to.have.been.called;
 
@@ -83,6 +107,7 @@ describe('ChangeUserTypeForm', () => {
       expect(onSubmit).not.to.have.been.called;
 
       wrapper.find(EMAIL_SELECTOR).simulate('keydown', {key: 'Enter'});
+      wrapper.find(OPT_IN_SELECTOR).simulate('keydown', {key: 'Enter'});
 
       expect(onSubmit).not.to.have.been.called;
     });
@@ -102,6 +127,10 @@ describe('ChangeUserTypeForm', () => {
 
     it('the email field is disabled', () => {
       expect(wrapper.find(EMAIL_SELECTOR)).to.have.attr('disabled');
+    });
+
+    it('the email opt-in field is disabled', () => {
+      expect(wrapper.find(OPT_IN_SELECTOR)).to.have.attr('disabled');
     });
   });
 

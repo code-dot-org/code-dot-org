@@ -17,6 +17,7 @@ export default class ConfirmCancelFooter extends React.Component {
     cancelText: PropTypes.string.isRequired,
     disableConfirm: PropTypes.bool,
     disableCancel: PropTypes.bool,
+    tabIndex: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     children: PropTypes.any,
   };
 
@@ -26,23 +27,27 @@ export default class ConfirmCancelFooter extends React.Component {
   };
 
   render() {
+    const {onConfirm, onCancel, confirmText, cancelText, disableConfirm,
+      disableCancel, tabIndex, children} = this.props;
     return (
       <div style={style}>
         <Button
-          onClick={this.props.onConfirm}
-          text={this.props.confirmText}
+          onClick={onConfirm}
+          text={confirmText}
           color={Button.ButtonColor.orange}
-          disabled={this.props.disableConfirm}
+          disabled={disableConfirm}
+          tabIndex={tabIndex}
           style={buttonStyle}
         />
         <span style={messageStyle}>
-          {this.props.children}
+          {children}
         </span>
         <Button
-          onClick={this.props.onCancel}
-          text={this.props.cancelText}
+          onClick={onCancel}
+          text={cancelText}
           color={Button.ButtonColor.gray}
-          disabled={this.props.disableCancel}
+          disabled={disableCancel}
+          tabIndex={tabIndex}
           style={buttonStyle}
         />
       </div>
