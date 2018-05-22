@@ -90,6 +90,7 @@ Dashboard::Application.routes.draw do
       end
       collection do
         get 'membership'
+        get 'valid_scripts'
       end
     end
   end
