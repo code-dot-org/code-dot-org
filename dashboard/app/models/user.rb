@@ -122,6 +122,11 @@ class User < ActiveRecord::Base
     oauth_token_expiration
     sharing_disabled
     next_census_display
+    data_transfer_agreement_accepted
+    data_transfer_agreement_accepted_at
+    data_transfer_agreement_request_ip
+    data_transfer_agreement_source
+    data_transfer_agreement_kind
   )
 
   # Include default devise modules. Others available are:

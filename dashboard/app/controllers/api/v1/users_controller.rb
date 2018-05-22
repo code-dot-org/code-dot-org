@@ -34,6 +34,18 @@ class Api::V1::UsersController < Api::V1::JsonApiController
     render status: 200, json: {set: property_name}
   end
 
+  # POST /api/v1/users/accept_data_transfer_agreement
+  def accept_data_transfer_agreement
+    @user.data_transfer_agreement_accepted = true
+    @user.data_transfer_agreement_accepted_at = DateTime.now
+    @user.data_transfer_agreement_request_ip = request.env['REMOTE_ADDR']
+    @user.data_transfer_agreement_source = "ACCEPT_DATA_TRANSFER_DIALOG"
+    @user.data_transfer_agreement_kind = 0
+    @user.save
+
+    head :no_content
+  end
+
   # POST /api/v1/users/<user_id>/postpone_census_banner
   def postpone_census_banner
     today = Date.today
