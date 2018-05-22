@@ -28,26 +28,20 @@ class Block < ApplicationRecord
   def write_block_files
     FileUtils.mkdir_p "config/blocks/#{level_type}"
     block_path = Rails.root.join "config/blocks/#{level_type}/#{name}.json"
-    File.write block_path, to_pretty_json
+    File.write block_path, file_json
 
     return unless helper_code
     js_path = Rails.root.join "config/blocks/#{level_type}/#{name}.js"
     File.write js_path, helper_code
   end
 
-  def to_pretty_json
-    to_json(true)
-  end
-
-  def to_json(pretty=false)
-    hash = {
-      name: name,
-      level_type: level_type,
-      category: category,
-      config: JSON.parse(config),
-    }
-    return JSON.pretty_generate hash if pretty
-    hash.to_json
+  def file_json
+    JSON.pretty_generate(
+      {
+        category: category,
+        config: JSON.parse(config),
+      }
+    )
   end
 
   def self.load_blocks
@@ -61,8 +55,6 @@ class Block < ApplicationRecord
 
     block_name = File.basename(json_path, '.json')
     level_type = File.basename(File.dirname(json_path))
-    raise "#{block_name}.json has the wrong block name" unless block_name == block_config['name']
-    raise "#{level_type}/#{block_name}.json is in the wrong folder" unless level_type == block_config['level_type']
 
     helper_code = nil
     js_path = Rails.root.join("config/blocks/#{level_type}/#{block_name}.js")
@@ -70,8 +62,8 @@ class Block < ApplicationRecord
       helper_code = File.read js_path
     end
     key_props = {
-      name: block_config['name'],
-      level_type: block_config['level_type'],
+      name: block_name,
+      level_type: level_type,
     }
     block_props = {
       category: block_config['category'],
