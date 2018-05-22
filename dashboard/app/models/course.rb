@@ -257,10 +257,10 @@ class Course < ApplicationRecord
     #
     # Group courses by family when showing multiple versions of each course.
     include_unstable ?
-      course_infos.sort {|info| [info[:assignment_family], info[:version_year]]} :
+      course_infos.sort_by {|info| [info[:assignment_family_name], info[:version_year]]} :
       course_infos.
-        filter {|info| info[:version_year] == ScriptConstants.DEFAULT_VERSION_YEAR}.
-        sort {|info| info[:assignment_family]}
+        select {|info| info[:version_year] == ScriptConstants::DEFAULT_VERSION_YEAR}.
+        sort_by {|info| info[:assignment_family_name]}
   end
 
   # Returns whether the course id is valid, even if it is not "stable" yet.
