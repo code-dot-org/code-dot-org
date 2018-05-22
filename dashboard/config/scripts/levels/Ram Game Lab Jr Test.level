@@ -52,10 +52,7 @@
     "hide_custom_blocks": "false",
     "use_default_sprites": "false",
     "auto_run_setup": "DRAW_LOOP",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

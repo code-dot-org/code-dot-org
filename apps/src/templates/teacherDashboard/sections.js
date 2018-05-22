@@ -15,6 +15,7 @@ import manageStudents, {
 import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import textResponses, {asyncLoadTextResponses} from '@cdo/apps/templates/textResponses/textResponsesRedux';
 import SyncOmniAuthSectionControl from '@cdo/apps/lib/ui/SyncOmniAuthSectionControl';
+import LoginTypeParagraph from '@cdo/apps/templates/teacherDashboard/LoginTypeParagraph';
 import ManageStudentsTable from '@cdo/apps/templates/manageStudents/ManageStudentsTable';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import StatsTable from '@cdo/apps/templates/teacherDashboard/StatsTable';
@@ -48,6 +49,28 @@ export function unmountSyncOauthSectionControl() {
 
 function syncOauthSectionMountPoint() {
   return document.getElementById('react-sync-oauth-section');
+}
+
+/**
+ * Render the login type details and controls for changing login type
+ * at the bottom of the manage students tab.
+ * @param {number} sectionId
+ */
+export function renderLoginTypeControls(sectionId) {
+  registerReducers({teacherSections});
+  const store = getStore();
+
+  store.dispatch(asyncLoadSectionData(sectionId));
+
+  ReactDOM.render(
+    <Provider store={store}>
+      <LoginTypeParagraph
+        sectionId={sectionId}
+        onLoginTypeChanged={() => window.location.reload()}
+      />
+    </Provider>,
+    loginTypeControlsMountPoint()
+  );
 }
 
 export function renderTextResponsesTable(section, validScripts) {
@@ -88,16 +111,16 @@ export function renderStatsTable(section) {
   });
 }
 
-export function renderSectionTable(section, studioUrlPrefix,) {
-  registerReducers({teacherSections, manageStudents, isRtl, sectionData});
+export function renderSectionTable(section) {
+  registerReducers({manageStudents, isRtl, sectionData});
   const store = getStore();
 
   store.dispatch(setLoginType(section.login_type));
-  store.dispatch(asyncLoadSectionData(section.id));
   store.dispatch(setSection(section));
 
-  // Show share column by default for CSD and CSP courses
-  const coursesToShowShareSetting = ['csd', 'csp'];
+  // Show share column by default for CSD and CSP courses.
+  // TODO(dave): remove 'csd' and 'csp' once they have been renamed to their 2017 versions.
+  const coursesToShowShareSetting = ['csd', 'csd-2017', 'csd-2018', 'csp', 'csp-2017', 'csp-2018'];
   if (coursesToShowShareSetting.includes(section.course_name)) {
     store.dispatch(toggleSharingColumn());
   }
@@ -115,10 +138,16 @@ export function renderSectionTable(section, studioUrlPrefix,) {
     );
     ReactDOM.render(
       <Provider store={store}>
-        <ManageStudentsTable
-          studioUrlPrefix={studioUrlPrefix}
-        />
+        <ManageStudentsTable />
       </Provider>,
       element);
   });
+}
+
+export function unmountLoginTypeControls() {
+  ReactDOM.unmountComponentAtNode(loginTypeControlsMountPoint());
+}
+
+function loginTypeControlsMountPoint() {
+  return document.getElementById('login-type-react');
 }
