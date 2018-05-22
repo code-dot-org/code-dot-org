@@ -227,7 +227,7 @@ function extractCSSFromHTML(el) {
   return css.join('\n');
 }
 
-const fontAwesomeWOFFRelativeSourcePath = '/assets/fontawesome-webfont.woff2';
+const fontAwesomeWOFFRelativeSourcePath = '/fonts/fontawesome-webfont.woff2';
 const fontAwesomeWOFFPath = 'applab/fontawesome-webfont.woff2';
 
 export default {
