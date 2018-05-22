@@ -96,7 +96,7 @@ $(document).ready(function () {
   const studioUrlPrefix = scriptData.studiourlprefix;
   ReactDOM.render(
     <GDPRDialog
-      isDialogOpen={true}
+      isDialogOpen={gdprData.show_gdpr_dialog}
       currentUserId={gdprData.current_user_id}
       studioUrlPrefix={studioUrlPrefix}
     />,
