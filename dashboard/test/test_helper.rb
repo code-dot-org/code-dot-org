@@ -134,6 +134,7 @@ class ActiveSupport::TestCase
       yield
     end
   end
+  alias refute_creates assert_does_not_create
 
   def assert_destroys(*args)
     assert_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}, -1) do
