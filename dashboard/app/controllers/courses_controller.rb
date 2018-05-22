@@ -14,9 +14,7 @@ class CoursesController < ApplicationController
         @header_banner_image_filename = !@is_teacher ? "courses-hero-student" : "courses-hero-teacher"
       end
       format.json do
-        courses = params['allVersions'] ?
-          Course.valid_courses_all_versions :
-          Course.valid_courses(current_user)
+        courses = Course.valid_courses(user: current_user, include_unstable: !!params['allVersions'])
         render json: courses
       end
     end
