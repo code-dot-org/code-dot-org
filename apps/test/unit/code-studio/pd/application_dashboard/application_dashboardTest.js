@@ -8,18 +8,15 @@ import {
 } from '@cdo/apps/code-studio/pd/application_dashboard/constants';
 
 describe("ApplicationDashboard", () => {
-  const mountApplicationDashboard = (regionalPartners, isWorkshopAdmin) => {
-    const props = {
-      isWorkshopAdmin: isWorkshopAdmin,
-      regionalPartners: regionalPartners,
-      canLockApplications: false
-    };
-
-    return mount(
+  const getReduxStateFor = (props) => {
+    const applicationDashboard = mount(
       <ApplicationDashboard
-        {...props}
+        regionalPartners={props.regionalPartners}
+        isWorkshopAdmin={props.isWorkshopAdmin}
+        canLockApplications={false}
       />
     );
+    return applicationDashboard.find('Provider').prop('store').getState();
   };
 
   describe("heading/title initially", () => {
@@ -28,21 +25,27 @@ describe("ApplicationDashboard", () => {
     });
 
     it("displays 'unmatched' for admins", () => {
-      const applicationDashboard = mountApplicationDashboard([{id: 1, name: 'A+ College Ready', group: 1}], true);
-      const store = applicationDashboard.find('Provider').prop('store');
-      expect(store.getState().regionalPartnerFilter.label).to.eql(UNMATCHED_PARTNER_LABEL);
+      const state = getReduxStateFor({
+        regionalPartners: [{id: 1, name: 'A+ College Ready', group: 1}],
+        isWorkshopAdmin: true
+      });
+      expect(state.regionalPartnerFilter.label).to.eql(UNMATCHED_PARTNER_LABEL);
     });
 
     it("displays 'all' for non-admins with multiple partners", () => {
-      const applicationDashboard = mountApplicationDashboard([{id: 1, name: 'A+ College Ready', group: 1}, {id: 2, name: 'WNY Stem Hub', group: 1}], false);
-      const store = applicationDashboard.find('Provider').prop('store');
-      expect(store.getState().regionalPartnerFilter.label).to.eql(ALL_PARTNERS_LABEL);
+      const state = getReduxStateFor({
+        regionalPartners: [{id: 1, name: 'A+ College Ready', group: 1}, {id: 2, name: 'WNY Stem Hub', group: 1}],
+        isWorkshopAdmin: false
+      });
+      expect(state.regionalPartnerFilter.label).to.eql(ALL_PARTNERS_LABEL);
     });
 
     it("displays partner name for non-admins with one partner", () => {
-      const applicationDashboard = mountApplicationDashboard([{id: 1, name: 'A+ College Ready', group: 1}], false);
-      const store = applicationDashboard.find('Provider').prop('store');
-      expect(store.getState().regionalPartnerFilter.label).to.eql('A+ College Ready');
+      const state = getReduxStateFor({
+        regionalPartners: [{id: 1, name: 'A+ College Ready', group: 1}],
+        isWorkshopAdmin: false
+      });
+      expect(state.regionalPartnerFilter.label).to.eql('A+ College Ready');
     });
   });
 });
