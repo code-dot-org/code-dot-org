@@ -6,6 +6,10 @@ module RegistrationsControllerTests
   # Tests over PUT /users
   #
   class UpdateTest < ActionDispatch::IntegrationTest
+    setup do
+      Honeybadger.expects(:notify).never
+    end
+
     test "update student without user param returns 400 BAD REQUEST" do
       student = create :student
       sign_in student
@@ -29,6 +33,11 @@ module RegistrationsControllerTests
     end
 
     test "update student with utf8mb4 in email fails" do
+      Honeybadger.expects(:notify).once.with(
+        error_class: 'RegistrationsControllerWarning',
+        error_message: 'Email updated via deprecated route',
+      )
+
       student = create :student
 
       sign_in student
@@ -78,6 +87,11 @@ module RegistrationsControllerTests
     end
 
     test "update student with client side hashed email" do
+      Honeybadger.expects(:notify).once.with(
+        error_class: 'RegistrationsControllerWarning',
+        error_message: 'Email updated via deprecated route',
+      )
+
       student = create :student, birthday: '1981/03/24', password: 'whatev'
       sign_in student
 
@@ -97,6 +111,11 @@ module RegistrationsControllerTests
     end
 
     test "update over 13 student with plaintext email" do
+      Honeybadger.expects(:notify).once.with(
+        error_class: 'RegistrationsControllerWarning',
+        error_message: 'Email updated via deprecated route',
+      )
+
       student = create :student, birthday: '1981/03/24', password: 'whatev'
       sign_in student
 
@@ -125,6 +144,11 @@ module RegistrationsControllerTests
     end
 
     test "converting student to teacher without password succeeds when email hasn't changed" do
+      Honeybadger.expects(:notify).once.with(
+        error_class: 'RegistrationsControllerWarning',
+        error_message: 'User type updated via deprecated route',
+      )
+
       test_email = 'me@example.com'
       student = create :student, email: test_email
       original_hashed_email = student.hashed_email
@@ -147,6 +171,11 @@ module RegistrationsControllerTests
     end
 
     test "converting student to teacher without password fails when email doesn't match" do
+      Honeybadger.expects(:notify).once.with(
+        error_class: 'RegistrationsControllerWarning',
+        error_message: 'User type updated via deprecated route',
+      )
+
       test_email = 'me@example.com'
       student = create :student, email: test_email
       original_hashed_email = student.hashed_email
@@ -169,6 +198,11 @@ module RegistrationsControllerTests
     end
 
     test "converting teacher to student without password succeeds" do
+      Honeybadger.expects(:notify).once.with(
+        error_class: 'RegistrationsControllerWarning',
+        error_message: 'User type updated via deprecated route',
+      )
+
       test_email = 'me@example.com'
       teacher = create :teacher, email: test_email
       original_hashed_email = teacher.hashed_email
@@ -330,6 +364,11 @@ module RegistrationsControllerTests
     end
 
     def can_edit_email_without_password?(user)
+      Honeybadger.expects(:notify).once.with(
+        error_class: 'RegistrationsControllerWarning',
+        error_message: 'Email updated via deprecated route',
+      )
+
       new_email = 'new@example.com'
 
       sign_in user
@@ -340,6 +379,11 @@ module RegistrationsControllerTests
     end
 
     def can_edit_email_with_password?(user, current_password)
+      Honeybadger.expects(:notify).once.with(
+        error_class: 'RegistrationsControllerWarning',
+        error_message: 'Email updated via deprecated route',
+      )
+
       new_email = 'new@example.com'
 
       sign_in user
@@ -352,6 +396,11 @@ module RegistrationsControllerTests
     end
 
     def can_edit_hashed_email_without_password?(user)
+      Honeybadger.expects(:notify).once.with(
+        error_class: 'RegistrationsControllerWarning',
+        error_message: 'Email updated via deprecated route',
+      )
+
       new_hashed_email = '729980b94e1439aeed40122476b0f695'
 
       sign_in user
@@ -362,6 +411,11 @@ module RegistrationsControllerTests
     end
 
     def can_edit_hashed_email_with_password?(user, current_password)
+      Honeybadger.expects(:notify).once.with(
+        error_class: 'RegistrationsControllerWarning',
+        error_message: 'Email updated via deprecated route',
+      )
+
       new_hashed_email = '729980b94e1439aeed40122476b0f695'
 
       sign_in user
