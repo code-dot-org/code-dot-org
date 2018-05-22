@@ -4,10 +4,12 @@ import {action} from '@storybook/addon-actions';
 
 const DEFAULT_PROPS = {
   values: {
-    newEmail: '',
+    currentEmail: '',
+    emailOptIn: '',
   },
   validationErrors: {
-    newEmail: undefined,
+    currentEmail: undefined,
+    emailOptIn: undefined,
   },
   disabled: false,
   onChange: action('onChange'),
@@ -24,6 +26,7 @@ export default storybook => storybook
           {...DEFAULT_PROPS}
           values={{
             currentEmail: 'batman@bat.cave',
+            emailOptIn: 'yes',
           }}
         />
       )
@@ -35,9 +38,11 @@ export default storybook => storybook
           {...DEFAULT_PROPS}
           values={{
             currentEmail: 'robin@bat.cave',
+            emailOptIn: 'no',
           }}
           validationErrors={{
             currentEmail: "Robin, get out of here!",
+            emailOptIn: 'No email for you.',
           }}
         />
       )
@@ -49,6 +54,7 @@ export default storybook => storybook
           {...DEFAULT_PROPS}
           values={{
             currentEmail: 'currently-saving@bat.cave',
+            emailOptIn: 'yes',
           }}
           disabled={true}
         />
