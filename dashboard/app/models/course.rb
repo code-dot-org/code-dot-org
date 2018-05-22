@@ -252,7 +252,6 @@ class Course < ApplicationRecord
 
     # For now, infer whether the course is stable from its version year.
     # * Currently, only 2017 versions are stable.
-    # * With the 2018-teacher-experience experiment, all course versions are stable.
     # * In the future, stability will be set as a property by the levelbuilder.
     #
     # Group courses by family when showing multiple versions of each course.
