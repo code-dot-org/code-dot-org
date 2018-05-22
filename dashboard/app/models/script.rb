@@ -199,13 +199,16 @@ class Script < ActiveRecord::Base
   # @param [User] user
   # @return [Script[]]
   def self.valid_scripts(user)
-    with_hidden = user.permission?(UserPermission::HIDDEN_SCRIPT_ACCESS)
+    user_experiments_enabled = Course.has_any_course_experiments?(user)
+    with_hidden = !user_experiments_enabled && user.hidden_script_access?
     cache_key = "valid_scripts/#{with_hidden ? 'all' : 'valid'}"
-    Rails.cache.fetch(cache_key) do
+    scripts = Rails.cache.fetch(cache_key) do
       Script.
           all.
           select {|script| with_hidden || !script.hidden}
     end
+    scripts = scripts.map {|script| script.alternate_script(user)} if user_experiments_enabled
+    scripts
   end
 
   # @param [User] user
@@ -1079,5 +1082,16 @@ class Script < ActiveRecord::Base
       return alternate_cs.script if cs != alternate_cs
     end
     nil
+  end
+
+  # @return {AssignableInfo} with strings translated
+  def assignable_info
+    info = ScriptConstants.assignable_info(self)
+    info[:name] = I18n.t("#{info[:name]}_name", default: info[:name])
+    info[:name] += " *" if hidden
+
+    info[:category] = I18n.t("#{info[:category]}_category_name", default: info[:category])
+
+    info
   end
 end
