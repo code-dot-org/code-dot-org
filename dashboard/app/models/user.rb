@@ -509,7 +509,8 @@ class User < ActiveRecord::Base
   validates_presence_of :email_preference_source, if: -> {email_preference_opt_in.present?}
   validates_presence_of :email_preference_form_kind, if: -> {email_preference_opt_in.present?}
 
-  validates :data_transfer_agreement_accepted, acceptance: true, if: :data_transfer_agreement_required
+  #validates :data_transfer_agreement_accepted, acceptance: true, if: :data_transfer_agreement_required
+  validates_presence_of :data_transfer_agreement_accepted, if: :data_transfer_agreement_required
   validates_presence_of :data_transfer_agreement_request_ip, if: -> {data_transfer_agreement_accepted.present?}
   validates_inclusion_of :data_transfer_agreement_source, in: DATA_TRANSFER_AGREEMENT_SOURCE_TYPES, if: -> {data_transfer_agreement_accepted.present?}
   validates_presence_of :data_transfer_agreement_kind, if: -> {data_transfer_agreement_accepted.present?}
