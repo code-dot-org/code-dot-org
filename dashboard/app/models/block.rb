@@ -45,7 +45,7 @@ class Block < ApplicationRecord
   end
 
   def self.load_blocks
-    Dir.glob(Rails.root.join('config/blocks/**/*.json')).sort.each do |json_path|
+    LevelLoader.for_each_file('config/blocks/**/*.json') do |json_path|
       load_block json_path
     end
   end
