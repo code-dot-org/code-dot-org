@@ -938,6 +938,16 @@ endvariants
     assert_match Regexp.new(new_dsl_regex), ScriptDSL.serialize_to_string(script_copy)
   end
 
+  test "assignable_info: returns assignable info for a script" do
+    script = create(:script, name: 'fake-script', hidden: true)
+    assignable_info = script.assignable_info
+
+    assert_equal(assignable_info[:name], "fake-script *")
+    assert_equal(assignable_info[:script_name], "fake-script")
+    assert_equal(assignable_info[:category], "other")
+    assert_equal(assignable_info[:category_priority], 15)
+  end
+
   test "self.valid_scripts: does not return hidden scripts when user is a student" do
     student = create(:student)
 
