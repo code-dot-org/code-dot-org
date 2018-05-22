@@ -367,6 +367,8 @@
   homepage_header_donors: "Code.org dėkoja savo rėmėjams"
   homepage_donors_seall: "Žr. viską"
   homepage_donors_donate: "Paremkite"
+  homepage_below_hero_announcement_text: "We care about your privacy and are making some updates to our privacy policy, effective May 25."
+  homepage_below_hero_announcement_link_text: "Sužinok daugiau"
   contact_form_topic_student: "Aš esu mokinys"
   contact_form_topic_parent: "Aš esu tėvas"
   contact_form_topic_teacher: "Aš esu pedagogas"
@@ -537,6 +539,9 @@
   volunteer_engineer_submission_field_email: "El. pašto adresas"
   volunteer_engineer_submission_field_email_desc: "Your email address will never be shared, but we'll send you requests from teachers."
   volunteer_engineer_submission_field_email_placeholder: "El. pašto adresas"
+  volunteer_engineer_submission_field_email_preference: "Can we email you about updates to our courses, volunteer opportunities, or other computer science news?"
+  volunteer_engineer_submission_field_email_preference_yes: 'Taip'
+  volunteer_engineer_submission_field_email_preference_no: 'Ne'
   volunteer_engineer_submission_final_paragraph: "You will be listed on a map for local teachers to contact you for the Hour of Code or other volunteer opportunities. Your email and exact address will NEVER be shared by us. But the other information (including approximate location) will be publicly viewable by local teachers."
   volunteer_engineer_submission_checkbox_contact: 'I agree that teachers can contact me for volunteer opportunities (Note: your email address won''t be shared)'
   volunteer_engineer_submission_checkbox_age_18_plus: "I certify that I am at least 18 years old."
@@ -966,6 +971,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: "Full Test - 50 questions"
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'
