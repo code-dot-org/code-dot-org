@@ -2127,6 +2127,8 @@
   homepage_below_hero_announcement_link_text: Learn more
   volunteer_engineer_submission_field_email_preference: Can we email you about updates
     to our courses, volunteer opportunities, or other computer science news?
+  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
+    policy)"
   volunteer_engineer_submission_field_email_preference_yes: 'Yes'
   volunteer_engineer_submission_field_email_preference_no: 'No'
   csp-post-survey_name: Student Post-Course Survey
