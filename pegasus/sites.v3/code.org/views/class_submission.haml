@@ -151,7 +151,10 @@
         %input#email.form-control{name: "email_s", placeholder: "Private contact email", type: "text", required: "", value: email_s}/
 
     .form-group
-      %label.control-label{for: "email-preference"} Can we email you about updates to our courses, local learning opportunities, or other computer science news?
+      %label.control-label{for: "email-preference"}
+        Can we email you about updates to our courses, local opportunities, or other computer science news?
+        %a{href: '/privacy', target: '_blank'}
+          (See our privacy policy)
       %span.form-required-field *
       %div
         %select#email-preference.form-control{name: "email_preference_optin_s", type: "select", required: true}

@@ -37,16 +37,17 @@ module Pd
         question = MatrixQuestion.new(
           id: 1,
           options: %w(Agree Neutral Disagree),
-          sub_questions: ['Question 1', 'Question 2']
+          sub_questions: ['Question 1', 'Question 2', 'Question 3']
         )
 
         answer = {
           'Question 1' => 'Neutral',
-          'Question 2' => 'Agree'
+          'Question 2' => '', # blank answer should be ignored
+          'Question 3' => 'Agree'
         }
 
         assert_equal(
-          {0 => 2, 1 => 1},
+          {0 => 2, 2 => 1},
           question.get_value(answer)
         )
       end
@@ -69,7 +70,7 @@ module Pd
         assert_equal "Unable to find 'Nonexistent Answer' in the options for matrix question 1", e.message
       end
 
-      test 'to_summary' do
+      test 'summarize' do
         question = MatrixQuestion.new(
           id: 1,
           name: 'sampleMatrix',
@@ -97,10 +98,10 @@ module Pd
           }
         }
 
-        assert_equal expected_summary, question.to_summary
+        assert_equal expected_summary, question.summarize
       end
 
-      test 'to_form_data' do
+      test 'process_answer' do
         question = MatrixQuestion.new(
           id: 1,
           name: 'sampleMatrix',
@@ -121,7 +122,7 @@ module Pd
             'sampleMatrix_0' => 3,
             'sampleMatrix_1' => 2
           },
-          question.to_form_data(answer)
+          question.process_answer(answer)
         )
       end
 

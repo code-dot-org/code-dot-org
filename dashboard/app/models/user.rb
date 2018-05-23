@@ -437,11 +437,14 @@ class User < ActiveRecord::Base
     [nil, ''],
     ['gender.male', 'm'],
     ['gender.female', 'f'],
-    ['gender.none', '-']
+    ['gender.non_binary', 'n'],
+    ['gender.not_listed', 'o'],
+    ['gender.none', '-'],
   ].freeze
 
   DATA_TRANSFER_AGREEMENT_SOURCE_TYPES = [
-    ACCOUNT_SIGN_UP = 'ACCOUNT_SIGN_UP'.freeze
+    ACCOUNT_SIGN_UP = 'ACCOUNT_SIGN_UP'.freeze,
+    ACCEPT_DATA_TRANSFER_DIALOG = 'ACCEPT_DATA_TRANSFER_DIALOG'.freeze
   ].freeze
 
   attr_accessor :login
@@ -684,6 +687,10 @@ class User < ActiveRecord::Base
       'f'
     when 'm', 'male'
       'm'
+    when 'o', 'notlisted'
+      'o'
+    when 'n', 'nonbinary', 'non-binary'
+      'n'
     else
       nil
     end
