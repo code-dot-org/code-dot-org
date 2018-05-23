@@ -269,6 +269,11 @@ class StorageApps
   # This can require several queries, so be careful exposing this in the UI
   # for external users - right now this is designed as a utility for internal
   # use only.
+  #
+  # Note: It should be possible to reduce the number of queries by joining the
+  #   table against itself.  Worth investigating if we wanted to expose this
+  #   to users.
+  #
   # @param [String] channel_id the child project channel id where we start
   #   our search.
   # @param [Integer] depth (optional) how many ancestors to retrieve.  Default
