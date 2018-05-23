@@ -264,6 +264,38 @@ class StorageApps
     project_type_from_merged_row(get(channel_id))
   end
 
+  #
+  # Looks up the set of ancestors in the remix history for a particular project.
+  # This can require several queries, so be careful exposing this in the UI
+  # for external users - right now this is designed as a utility for internal
+  # use only.
+  #
+  # Note: It should be possible to reduce the number of queries by joining the
+  #   table against itself.  Worth investigating if we wanted to expose this
+  #   to users.
+  #
+  # @param [String] channel_id the child project channel id where we start
+  #   our search.
+  # @param [Integer] depth (optional) how many ancestors to retrieve.  Default
+  #   to just one - this could get expensive if a project has a very deep
+  #   remix ancestry.
+  # @return [Array<String>] list of channel IDs of ancestor projects in reverse
+  #   chronological order, up to the provided limit.
+  #
+  def self.remix_ancestry(channel_id, depth: 1)
+    [].tap do |ancestors|
+      _, id = storage_decrypt_channel_id(channel_id)
+      next_row = PEGASUS_DB[:storage_apps].where(id: id).first
+      while next_row&.[](:remix_parent_id)
+        next_row = PEGASUS_DB[:storage_apps].where(id: next_row[:remix_parent_id]).first
+        ancestors.push storage_encrypt_channel_id(next_row[:storage_id], next_row[:id]) if next_row
+        break if ancestors.size >= depth
+      end
+    end
+  rescue
+    []
+  end
+
   private
 
   #
