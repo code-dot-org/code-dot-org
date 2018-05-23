@@ -7,12 +7,15 @@
  * so when moving things preserve the include order as much as possible.
  */
 import $ from 'jquery';
-
+import React from 'react';
+import ReactDOM from 'react-dom';
 import { getStore } from '@cdo/apps/code-studio/redux';
 import { setRtlFromDOM } from '@cdo/apps/code-studio/isRtlRedux';
 import initSigninState from '@cdo/apps/code-studio/initSigninState';
 import initResponsive from '@cdo/apps/code-studio/responsive';
 import hashEmail from '@cdo/apps/code-studio/hashEmail';
+import GDPRDialog from '@cdo/apps/templates/GDPRDialog';
+import getScriptData from '@cdo/apps/util/getScriptData';
 
 const store = getStore();
 store.dispatch(setRtlFromDOM());
@@ -100,6 +103,17 @@ $(document).keydown(function (e) {
 setTimeout(function () {
   $('#codeApp .slow_load').show();
 }, 10000);
+
+$(document).ready(function () {
+  const gdprData = getScriptData('gdpr');
+  ReactDOM.render(
+    <GDPRDialog
+      isDialogOpen={gdprData.show_gdpr_dialog}
+      currentUserId={gdprData.current_user_id}
+    />,
+    document.getElementById('gdpr-dialog')
+  );
+});
 
 activateReferenceAreaOnLoad();
 
