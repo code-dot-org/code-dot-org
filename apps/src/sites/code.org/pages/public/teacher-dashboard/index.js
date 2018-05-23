@@ -12,6 +12,7 @@ import { registerReducers, getStore } from '@cdo/apps/redux';
 import SectionProjectsList from '@cdo/apps/templates/projects/SectionProjectsList';
 import SectionProgress from '@cdo/apps/templates/sectionProgress/SectionProgress';
 import SectionAssessments from '@cdo/apps/templates/sectionAssessments/SectionAssessments';
+import GDPRDialog from '@cdo/apps/templates/GDPRDialog';
 import experiments from '@cdo/apps/util/experiments';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {
@@ -88,6 +89,18 @@ function renderSectionProgressReact(store) {
   );
 }
 
+$(document).ready(function () {
+  const gdprData = scriptData.gdpr;
+  const studioUrlPrefix = scriptData.studiourlprefix;
+  ReactDOM.render(
+    <GDPRDialog
+      isDialogOpen={gdprData.show_gdpr_dialog}
+      currentUserId={gdprData.current_user_id}
+      studioUrlPrefix={studioUrlPrefix}
+    />,
+    document.getElementById('gdpr-dialog')
+  );
+});
 //  Everything below was copied wholesale from index.haml, where we had no linting.
 // TODO (bjvanminnen): Fix remaining lint errors and re-enable rules.
 /* eslint-disable eqeqeq, no-unused-vars */
