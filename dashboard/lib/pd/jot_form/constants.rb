@@ -2,20 +2,22 @@ module Pd
   module JotForm
     module Constants
       QUESTION_TYPES = [
-        TYPE_HEADING = 'head'.freeze,
         TYPE_TEXTBOX = 'textbox'.freeze,
         TYPE_TEXTAREA = 'textarea'.freeze,
+        TYPE_NUMBER = 'number'.freeze,
         TYPE_DROPDOWN = 'dropdown'.freeze,
         TYPE_RADIO = 'radio'.freeze,
         TYPE_CHECKBOX = 'checkbox'.freeze,
         TYPE_SCALE = 'scale'.freeze,
         TYPE_MATRIX = 'matrix'.freeze,
-        TYPE_BUTTON = 'button'.freeze
       ].freeze
 
-      IGNORED_TYPES = [
-        TYPE_HEADING,
-        TYPE_BUTTON
+      IGNORED_QUESTION_TYPES = [
+        TYPE_HEADING = 'head'.freeze,
+        TYPE_BUTTON = 'button'.freeze,
+        TYPE_TEXT = 'text'.freeze,
+        TYPE_PAGEBREAK = 'pagebreak'.freeze,
+        TYPE_DIVIDER = 'divider'.freeze
       ].freeze
 
       ANSWER_TYPES = [
