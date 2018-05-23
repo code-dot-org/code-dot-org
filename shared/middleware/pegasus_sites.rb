@@ -24,6 +24,12 @@ class PegasusSites
       env['HTTP_HOST'] = canonical_hostname('studio.code.org') + (CDO.https_development ? '' : ":#{CDO.dashboard_port}")
     end
 
+    # This is a quick hotfix workaround for a live-site issue.  Remove this
+    # once we've changed the client to make this request of dashboardapi.
+    if request.path =~ /^#{'/api/v1/users/accept_data_transfer_agreement'}/
+      env['HTTP_HOST'] = canonical_hostname('studio.code.org') + (CDO.https_development ? '' : ":#{CDO.dashboard_port}")
+    end
+
     # /v2 at either host goes to pegasus
     if request.path =~ /^\/v2\//
       env['HTTP_HOST'] = canonical_hostname('code.org') + (CDO.https_development ? '' : ":#{CDO.pegasus_port}")
