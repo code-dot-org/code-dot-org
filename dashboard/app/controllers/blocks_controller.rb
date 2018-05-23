@@ -1,6 +1,14 @@
 class BlocksController < ApplicationController
   load_and_authorize_resource find_by: :name
 
+  def new
+    render 'edit'
+  end
+
+  def create
+    update
+  end
+
   def update
     old_name = @block.name
     old_level_type = @block.level_type
@@ -18,6 +26,10 @@ class BlocksController < ApplicationController
       fallback_location: @block.name ? edit_block_path(id: @block.name) : new_block_path,
       alert: "Error saving block: #{e}",
     )
+  end
+
+  def create_params
+    update_params
   end
 
   def update_params
