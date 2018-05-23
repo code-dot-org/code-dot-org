@@ -3,6 +3,9 @@ title: Privacy Policy
 theme: responsive
 ---
 
+We have been working to update our privacy policy, effective May 25. [View upcoming privacy policy](https://code.org/privacy-may2018).
+- - - 
+
 # Privacy Policy
 
 Date of Last Revision: April 2, 2018

@@ -1,7 +1,11 @@
 import { SVG_NS } from '../constants';
-import { appendCategory, createJsWrapperBlockCreator } from '../block_utils';
+import {
+  appendBlocksByCategory,
+  createJsWrapperBlockCreator
+} from '../block_utils';
 import { getStore } from '../redux';
 import { getLocation } from './locationPickerModule';
+import { GAME_HEIGHT } from './constants';
 
 const SPRITE_COLOR = [184, 1.00, 0.74];
 const EVENT_COLOR = [140, 1.00, 0.74];
@@ -44,7 +48,7 @@ const customInputTypes = {
           if (value) {
             try {
               const loc = JSON.parse(value);
-              label.setText(`${inputConfig.label}(${loc.x}, ${loc.y})`);
+              label.setText(`${inputConfig.label}(${loc.x}, ${GAME_HEIGHT - loc.y})`);
             } catch (e) {
               // Just ignore bad values
             }
@@ -103,7 +107,12 @@ export default {
     const createJsWrapperBlock = createJsWrapperBlockCreator(
       blockly,
       'gamelab',
-      [SPRITE_TYPE],
+      [
+        // Strict Types
+        blockly.BlockValueType.SPRITE,
+        blockly.BlockValueType.BEHAVIOR,
+        blockly.BlockValueType.LOCATION,
+      ],
       SPRITE_TYPE,
       customInputTypes,
     );
@@ -480,6 +489,19 @@ export default {
     // Legacy style block definitions :(
     const generator = blockly.Generator.get('JavaScript');
 
+    const behaviorEditor = new Blockly.FunctionEditor(
+      {
+        FUNCTION_HEADER: 'Behavior',
+        FUNCTION_NAME_LABEL: 'Name your behavior:',
+        FUNCTION_DESCRIPTION_LABEL: 'What is your behavior supposed to do?',
+      },
+      'behavior_definition',
+      {
+        [Blockly.BlockValueType.SPRITE]: 'sprite_parameter_get',
+      },
+      true /* disableParamEditing */,
+    );
+
     Blockly.Blocks.sprite_variables_get = {
       // Variable getter.
       init: function () {
@@ -516,6 +538,30 @@ export default {
     Blockly.Variables.registerGetter(Blockly.BlockValueType.SPRITE,
       'sprite_variables_get');
 
+    Blockly.Blocks.sprite_parameter_get = {
+      init() {
+        var fieldLabel = new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);
+        // Must be marked EDITABLE so that cloned blocks share the same var name
+        fieldLabel.EDITABLE = true;
+        this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
+        this.setHSV(7, 0.80, 0.95);
+        this.appendDummyInput()
+            .appendTitle(Blockly.Msg.VARIABLES_GET_TITLE)
+            .appendTitle(fieldLabel , 'VAR')
+            .appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);
+        this.setStrictOutput(true, Blockly.BlockValueType.SPRITE);
+        this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
+      },
+      renameVar(oldName, newName) {
+        if (behaviorEditor.isOpen()) {
+          behaviorEditor.renameParameter(oldName, newName);
+          behaviorEditor.refreshParamsEverywhere();
+        }
+      },
+      removeVar: Blockly.Blocks.variables_get.removeVar,
+    };
+    generator.sprite_parameter_get = generator.variables_get;
+
     Blockly.Blocks.sprite_variables_set = {
       // Variable setter.
       init: function () {
@@ -550,20 +596,119 @@ export default {
     generator.sprite_variables_set = generator.variables_set;
     Blockly.Variables.registerSetter(Blockly.BlockValueType.SPRITE,
       'sprite_variables_set');
+
+    Blockly.Blocks.gamelab_behavior_get = {
+      init() {
+        var fieldLabel = new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);
+        // Must be marked EDITABLE so that cloned blocks share the same var name
+        fieldLabel.EDITABLE = true;
+        this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
+        this.setHSV(136, 0.84, 0.80);
+        const mainTitle = this.appendDummyInput()
+            .appendTitle(fieldLabel, 'VAR')
+            .appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);
+
+        if (Blockly.useModalFunctionEditor) {
+          var editLabel = new Blockly.FieldIcon(Blockly.Msg.FUNCTION_EDIT);
+          Blockly.bindEvent_(editLabel.fieldGroup_, 'mousedown', this, this.openEditor);
+          mainTitle.appendTitle(editLabel);
+        }
+
+        this.setStrictOutput(true, Blockly.BlockValueType.BEHAVIOR);
+        this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
+      },
+
+      openEditor(e) {
+        e.stopPropagation();
+        behaviorEditor.openEditorForFunction(this, this.getTitleValue('VAR'));
+      },
+
+      getVars() {
+        return Blockly.Variables.getVars.bind(this)(Blockly.BlockValueType.BEHAVIOR);
+      },
+
+      renameVar(oldName, newName) {
+        if (Blockly.Names.equals(oldName, this.getTitleValue('VAR'))) {
+          this.setTitleValue(newName, 'VAR');
+        }
+      },
+
+      renameProcedure(oldName, newName) {
+        if (Blockly.Names.equals(oldName, this.getTitleValue('VAR'))) {
+          this.setTitleValue(newName, 'VAR');
+        }
+      },
+    };
+
+    generator.gamelab_behavior_get = function () {
+      return [
+        Blockly.JavaScript.variableDB_.getName(
+            this.getTitleValue('VAR'),
+            Blockly.Procedures.NAME_TYPE),
+        Blockly.JavaScript.ORDER_ATOMIC
+      ];
+    };
+
+    Blockly.Blocks.behavior_definition = Blockly.Block.createProcedureDefinitionBlock({
+      initPostScript(block) {
+        block.setHSV(136, 0.84, 0.80);
+        block.parameterNames_ = ['this sprite'];
+        block.parameterTypes_ = [Blockly.BlockValueType.SPRITE];
+      },
+      overrides: {
+        getVars(category) {
+          return {
+            Behavior: [this.getTitleValue('NAME')],
+          };
+        },
+        callType_: 'gamelab_behavior_get',
+      }
+    });
+
+    generator.behavior_definition = generator.procedures_defnoreturn;
+
+    Blockly.Procedures.DEFINITION_BLOCK_TYPES.push('behavior_definition');
+    Blockly.Variables.registerGetter(Blockly.BlockValueType.BEHAVIOR,
+      'gamelab_behavior_get');
+    Blockly.Flyout.configure(Blockly.BlockValueType.BEHAVIOR, {
+      initialize(flyout, cursor) {
+        if (behaviorEditor && !behaviorEditor.isOpen()) {
+          flyout.addButtonToFlyout_(cursor, 'Create a Behavior',
+            behaviorEditor.openWithNewFunction.bind(behaviorEditor));
+        }
+      },
+      addDefaultVar: false,
+    });
   },
 
   installCustomBlocks(blockly, blockInstallOptions, customBlocks, level, hideCustomBlocks) {
-    const SPRITE_TYPE = blockly.BlockValueType.SPRITE;
-    const blockNames = customBlocks.map(createJsWrapperBlockCreator(
+    const createJsWrapperBlock = createJsWrapperBlockCreator(
       blockly,
       'gamelab',
-      [SPRITE_TYPE],
-      SPRITE_TYPE,
+      [
+        // Strict Types
+        blockly.BlockValueType.SPRITE,
+        blockly.BlockValueType.BEHAVIOR,
+        blockly.BlockValueType.LOCATION,
+      ],
+      blockly.BlockValueType.SPRITE_TYPE,
       customInputTypes,
-    ));
+    );
+
+    const blocksByCategory = {};
+    customBlocks.forEach(({name, category, config}) => {
+      const blockName = createJsWrapperBlock(config);
+      if (!blocksByCategory[category]) {
+        blocksByCategory[category] = [];
+      }
+      blocksByCategory[category].push(blockName);
+      if (name && blockName !== name) {
+        console.error(`Block config ${name} generated a block named ${blockName}`);
+      }
+    });
 
     if (!hideCustomBlocks) {
-      level.toolbox = appendCategory(level.toolbox, blockNames, 'Custom');
+      level.toolbox = appendBlocksByCategory(level.toolbox, blocksByCategory);
     }
   },
 };

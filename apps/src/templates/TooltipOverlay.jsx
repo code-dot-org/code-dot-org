@@ -146,6 +146,9 @@ export function textProvider(label) {
  * Simple provider that formats and renders the mouse coordinates.
  * @returns {function(): string}
  */
-export function coordinatesProvider() {
-  return (props) => `x: ${Math.floor(props.mouseX)}, y: ${Math.floor(props.mouseY)}`;
+export function coordinatesProvider(flip) {
+  return (props) => {
+    const y = flip ? props.height - props.mouseY : props.mouseY;
+    return `x: ${Math.floor(props.mouseX)}, y: ${Math.floor(y)}`;
+  };
 }

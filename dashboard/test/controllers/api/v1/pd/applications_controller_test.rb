@@ -599,6 +599,7 @@ module Api::V1::Pd
     end
 
     test 'cohort view returns expected columns for a teacher with teachercon' do
+      Pd::Application::Teacher1819Application.any_instance.stubs(:enroll_user)
       time = Date.new(2017, 3, 15)
 
       Timecop.freeze(time) do

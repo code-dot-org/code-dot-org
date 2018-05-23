@@ -1,4 +1,5 @@
 import {
+  appendBlocksByCategory,
   cleanBlocks,
   determineInputs,
   interpolateInputs,
@@ -45,6 +46,134 @@ describe('block utils', () => {
     });
   });
 
+  describe('appendBlocksByCategory', () => {
+    it('adds a custom category', () => {
+      const oldToolbox = `
+        <xml>
+          <category name="Start">
+            <block type="when_run"/>
+          </category>
+        </xml>
+      `;
+
+      const newToolbox = appendBlocksByCategory(
+        oldToolbox,
+        {
+          Custom: ['do_cool_stuff', 'even_cooler_stuff'],
+        }
+      );
+
+      expect(newToolbox).xml.to.equal(`
+        <xml>
+          <category name="Start">
+            <block type="when_run"/>
+          </category>
+          <category name="Custom">
+            <block type="do_cool_stuff" />
+            <block type="even_cooler_stuff" />
+          </category>
+        </xml>
+      `);
+    });
+
+    it ('adds blocks to an existing category', () => {
+      const oldToolbox = `
+        <xml>
+          <category name="Start">
+            <block type="when_run"/>
+          </category>
+        </xml>
+      `;
+
+      const newToolbox = appendBlocksByCategory(
+        oldToolbox,
+        {
+          Start: ['do_cool_stuff', 'even_cooler_stuff'],
+        }
+      );
+
+      expect(newToolbox).xml.to.equal(`
+        <xml>
+          <category name="Start">
+            <block type="when_run"/>
+            <block type="do_cool_stuff" />
+            <block type="even_cooler_stuff" />
+          </category>
+        </xml>
+      `);
+    });
+
+    it ('adds all blocks to an uncategorized toolbox', () => {
+      const oldToolbox = `
+        <xml>
+          <block type="when_run"/>
+        </xml>
+      `;
+
+      const newToolbox = appendBlocksByCategory(
+        oldToolbox,
+        {
+          Custom: ['do_cool_stuff', 'even_cooler_stuff'],
+        }
+      );
+
+      expect(newToolbox).xml.to.equal(`
+        <xml>
+          <block type="when_run"/>
+          <block type="do_cool_stuff" />
+          <block type="even_cooler_stuff" />
+        </xml>
+      `);
+    });
+
+    it ('adds blocks to multiple existing/new categories', () => {
+      const oldToolbox = `
+        <xml>
+          <category name="Start">
+            <block type="when_run"/>
+          </category>
+          <category name="Sprites" custom="Sprite">
+            <block type="gamelab_moveUp"/>
+            <block type="gamelab_moveDown"/>
+          </category>
+        </xml>
+      `;
+
+      const newToolbox = appendBlocksByCategory(
+        oldToolbox,
+        {
+          Start: ['do_cool_stuff', 'even_cooler_stuff'],
+          Sprites: ['gamelab_moveLeft', 'gamelab_moveRight'],
+          Events: ['gamelab_whenUpArrow', 'gamelab_whenDownArrow'],
+          Custom: ['gamelab_consoleLog'],
+        }
+      );
+
+      expect(newToolbox).xml.to.equal(`
+        <xml>
+          <category name="Start">
+            <block type="when_run"/>
+            <block type="do_cool_stuff" />
+            <block type="even_cooler_stuff" />
+          </category>
+          <category name="Sprites" custom="Sprite">
+            <block type="gamelab_moveUp"/>
+            <block type="gamelab_moveDown"/>
+            <block type="gamelab_moveLeft"/>
+            <block type="gamelab_moveRight"/>
+          </category>
+          <category name="Events">
+            <block type="gamelab_whenUpArrow"/>
+            <block type="gamelab_whenDownArrow"/>
+          </category>
+          <category name="Custom">
+            <block type="gamelab_consoleLog"/>
+          </category>
+        </xml>
+      `);
+    });
+  });
+
   const TEST_SPRITES = [
     ['dog', '"dog"'],
     ['cat', '"cat"'],
@@ -75,12 +204,12 @@ describe('block utils', () => {
     });
 
     it('adds a dropdown input', () => {
-      interpolateInputs(fakeBlockly, fakeBlock, [{
+      interpolateInputs(fakeBlockly, fakeBlock, groupInputsByRow([{
         mode: 'dropdown',
         name: 'ANIMATION',
         label: 'create sprite ',
         options: TEST_SPRITES,
-      }]);
+      }]));
 
       expect(fakeBlockly.FieldDropdown).to.have.been.calledOnce;
       const dropdownArg = fakeBlockly.FieldDropdown.firstCall.args[0];
@@ -90,12 +219,12 @@ describe('block utils', () => {
     });
 
     it('adds a value input', () => {
-      interpolateInputs(fakeBlockly, fakeBlock, [{
+      interpolateInputs(fakeBlockly, fakeBlock, groupInputsByRow([{
         mode: 'value',
         name: 'DISTANCE',
         type: Blockly.BlockValueType.NUMBER,
         label: 'block title',
-      }]);
+      }]));
 
       expect(appendValueInput).to.have.been.calledWith('DISTANCE');
       expect(setCheck).to.have.been.calledWith(Blockly.BlockValueType.NUMBER);
@@ -103,17 +232,17 @@ describe('block utils', () => {
     });
 
     it('adds a dummy input', () => {
-      interpolateInputs(fakeBlockly, fakeBlock, [{
+      interpolateInputs(fakeBlockly, fakeBlock, groupInputsByRow([{
         mode: 'dummy',
         label: 'block title',
-      }]);
+      }]));
 
       expect(appendDummyInput).to.have.been.calledOnce;
       expect(appendTitle).to.have.been.calledWith('block title');
     });
 
     it('adds all three', () => {
-      interpolateInputs(fakeBlockly, fakeBlock, [
+      interpolateInputs(fakeBlockly, fakeBlock, groupInputsByRow([
         {
           mode: 'dropdown',
           name: 'ANIMATION',
@@ -130,7 +259,7 @@ describe('block utils', () => {
           mode: 'dummy',
           label: 'dummy label',
         },
-      ]);
+      ]));
 
       expect(appendTitle).to.have.been.calledWith(sinon.match.any, 'ANIMATION');
       expect(appendTitle).to.have.been.calledWith('value label');
@@ -138,7 +267,7 @@ describe('block utils', () => {
     });
 
     it('adds labels before and after value input', () => {
-      interpolateInputs(fakeBlockly, fakeBlock, [
+      interpolateInputs(fakeBlockly, fakeBlock, groupInputsByRow([
         {
           mode: 'value',
           name: 'VALUE',
@@ -148,7 +277,7 @@ describe('block utils', () => {
           mode: 'dummy',
           label: 'suffix',
         }
-      ]);
+      ]));
 
       expect(appendValueInput).to.have.been.calledWith('VALUE');
       expect(appendTitle).to.have.been.calledWith('prefix');
