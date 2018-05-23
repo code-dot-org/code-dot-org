@@ -217,7 +217,7 @@ StudioApp.prototype.configure = function (options) {
 
   // Set default speed
   if (options.level && options.level.sliderSpeed) {
-    setStepSpeed(options.level.sliderSpeed);
+    getStore().dispatch(setStepSpeed(options.level.sliderSpeed));
   }
 };
 

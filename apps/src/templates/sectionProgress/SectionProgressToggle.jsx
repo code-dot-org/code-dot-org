@@ -45,7 +45,7 @@ class SectionProgressToggle extends React.Component {
         {
           study: 'teacher-dashboard',
           study_group: 'react',
-          event: 'progress-detail'
+          event: 'progress-detailed'
         }
       );
       this.setState({selectedToggle: ViewType.DETAIL}, () => {
