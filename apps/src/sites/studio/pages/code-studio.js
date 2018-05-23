@@ -105,8 +105,8 @@ setTimeout(function () {
 }, 10000);
 
 $(document).ready(function () {
-  if (document.querySelector(`script[data-gdpr]`).length > 0) {
-    const gdprData = getScriptData('gdpr');
+  const gdprData = getScriptData('gdpr');
+  if (gdprData.show_gdpr_dialog && gdprData.current_user_id) {
     ReactDOM.render(
       <GDPRDialog
         isDialogOpen={gdprData.show_gdpr_dialog}
