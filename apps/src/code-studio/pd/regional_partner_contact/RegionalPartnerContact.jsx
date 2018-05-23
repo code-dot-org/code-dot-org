@@ -124,7 +124,18 @@ class RegionalPartnerContactComponent extends FormComponent {
         {
           this.buildButtonsFromOptions({
             name: 'optIn',
-            label: 'Can we email you about updates to our courses, local learning opportunities, or other computer science news?',
+            label: (
+              <div style={{display: 'inline-block'}}>
+                Can we email you about updates to Code.org courses, local opportunities, or other computer science news?
+                &nbsp;
+                <a
+                  href={`${window.dashboard.CODE_ORG_URL}/privacy`}
+                  target="_blank"
+                >
+                  (See our privacy policy)
+                </a>
+              </div>
+            ),
             type: 'radio',
             required: true
           })
