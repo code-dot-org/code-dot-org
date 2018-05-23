@@ -61,21 +61,38 @@ class FreeResponsesAssessments extends Component {
     });
   };
 
-  studentResponseColumnFormatter = (studentAnswers, {rowData, rowIndex}) => {
+  studentResponseColumnFormatter = (studentAnswers, {rowData, rowIndex, columnIndex}) => {
 
-    let studentResponse = '';
-    if(this.props.studentAnswerData[rowIndex]) {
-      studentResponse = this.props.studentAnswerData[rowIndex]
-      .studentAnswers.filter(( item ) => {
-        console.log('studentResponse--->', studentResponse);
-          if(item.question == rowData.id) {
-            return true;
-          }
-      })[0].response;
-    }
+    // let studentResponse = '';
+    // if(this.props.studentAnswerData[rowIndex]) {
+    //   studentResponse = this.props.studentAnswerData[rowIndex]
+    //   .studentAnswers.filter(( item ) => {
+    //     console.log('studentResponse--->', studentResponse);
+    //       if(item.question == rowData.id) {
+    //         return true;
+    //       }
+    //   }).response;
+    // }
 
-    console.log('selectStudents -->', studentResponse);
-    console.log('ha', rowIndex);
+    const info = this.props.questionAnswerData
+    console.log('ha', info);
+    const find = info.map(item => {
+      return item.id
+     })
+     console.log('find', find);
+
+    const data = this.props.studentAnswerData[rowIndex].studentAnswers;
+    const studentResponse = data.map((item, index) => {
+      if (item.question === find[index]) {
+      //   console.log('what is rowid-->', rowData.id);
+        console.log('item ', item.question)
+        console.log('find question', find[index]);
+       return item.response;
+      }
+    });
+
+    console.log('studentResponse-->', studentResponse);
+
 
     return (
       <MultipleChoiceAnswerCell
@@ -86,14 +103,7 @@ class FreeResponsesAssessments extends Component {
   };
 
   studentNameColumnFormatter = (studentAnswers, {rowData, rowIndex}) => {
-    // let studentName = '';
-    // if(this.props.studentAnswerData[rowIndex]) {
-    //  studentName = this.props.studentAnswerData[rowIndex].name;
-    // }
-    // console.log('ha again', rowIndex);
-    // console.log('selectStudents--->', studentName);
-
-    const studentName = this.props.studentAnswerData[rowIndex].name
+    const studentName = this.props.studentAnswerData[rowIndex].name;
 
     return (
       <MultipleChoiceAnswerCell
@@ -141,7 +151,7 @@ class FreeResponsesAssessments extends Component {
       columns,
       sortingColumns,
       sort: orderBy,
-    })(this.props.questionAnswerData);
+    })(this.props.studentAnswerData);
 
     return (
         <Table.Provider
