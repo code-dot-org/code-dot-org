@@ -27,6 +27,9 @@ class Block < ApplicationRecord
   end
 
   def write_block_files
+    if name_changed? || level_type_changed?
+      delete_old_files(level_type_was, name_was)
+    end
     FileUtils.mkdir_p "config/blocks/#{level_type}"
     block_path = Rails.root.join "config/blocks/#{level_type}/#{name}.json"
     File.write block_path, file_json
