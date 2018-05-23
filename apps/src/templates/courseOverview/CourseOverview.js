@@ -7,6 +7,7 @@ import { resourceShape } from './resourceType';
 import styleConstants from '@cdo/apps/styleConstants';
 import VerifiedResourcesNotification from './VerifiedResourcesNotification';
 import * as utils from '../../utils';
+import { queryParams } from '../../code-studio/utils';
 
 const styles = {
   main: {
@@ -56,7 +57,9 @@ export default class CourseOverview extends Component {
   onChangeVersion = event => {
     const courseName = event.target.value;
     if (courseName !== this.props.name) {
-      utils.navigateToHref(`/courses/${courseName}`);
+      const sectionId = queryParams('section_id');
+      const queryString = sectionId ? `?section_id=${sectionId}` : '';
+      utils.navigateToHref(`/courses/${courseName}${queryString}`);
     }
   };
 
@@ -98,7 +101,7 @@ export default class CourseOverview extends Component {
               onChange={this.onChangeVersion}
               value={name}
               style={styles.versionDropdown}
-              className="version-selector"
+              id="version-selector"
             >
               {versions.map(version => (
                 <option key={version.name} value={version.name}>

@@ -24,7 +24,10 @@
   }
 
   ga('set', dimensions);
+  ga('set', 'anonymizeIp', true);
+
   ga('send', 'pageview');
+
   function trackEvent(category, action, label, value) {
     ga('send', 'event', category, action, label, value);
   }
