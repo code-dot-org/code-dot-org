@@ -19,7 +19,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     @section_with_script = create(:section, user: @teacher, script: Script.flappy_script)
     @student_with_script = create(:follower, section: @section_with_script).student_user
 
-    @csp_course = create(:course, name: 'csp')
+    @csp_course = create(:course, name: 'csp-2017')
     @csp_script = create(:script, name: 'csp1')
     create(:course_script, course: @csp_course, script: @csp_script, position: 1)
   end

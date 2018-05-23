@@ -469,6 +469,10 @@ Dashboard::Application.routes.draw do
     get 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#construct_email'
     post 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#send_email'
 
+    get 'workshop_survey/day/:day', to: 'workshop_daily_survey#new_general'
+    get 'workshop_survey/facilitators/:session_id(/:facilitator_index)', to: 'workshop_daily_survey#new_facilitator'
+    get 'workshop_survey/thanks', to: 'workshop_daily_survey#thanks'
+
     namespace :application do
       get 'facilitator', to: 'facilitator_application#new'
       get 'teacher', to: 'teacher_application#new'
@@ -573,6 +577,8 @@ Dashboard::Application.routes.draw do
       get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
 
       post 'users/:user_id/post_ui_tip_dismissed', to: 'users#post_ui_tip_dismissed'
+
+      post 'users/accept_data_transfer_agreement', to: 'users#accept_data_transfer_agreement'
 
       post 'users/:user_id/postpone_census_banner', to: 'users#postpone_census_banner'
       post 'users/:user_id/dismiss_census_banner', to: 'users#dismiss_census_banner'

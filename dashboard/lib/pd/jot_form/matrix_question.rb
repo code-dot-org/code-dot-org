@@ -47,7 +47,7 @@ module Pd
 
       def get_value(answer)
         # Matrix answer is a Hash of sub_question => string_answer
-        answer.map do |sub_question, sub_answer|
+        answer.reject {|_, v| v.blank?}.map do |sub_question, sub_answer|
           sub_question_index = sub_questions.index(sub_question)
           raise "Unable to find sub-question '#{sub_question}' in matrix question #{id}" unless sub_question_index
 
@@ -59,7 +59,7 @@ module Pd
         end.to_h
       end
 
-      def to_summary
+      def summarize
         heading_hash = {name => {text: text, answer_type: ANSWER_NONE}}
         sub_questions_hash = sub_questions.each_with_index.map do |sub_question, i|
           [
@@ -75,7 +75,7 @@ module Pd
         heading_hash.merge(sub_questions_hash)
       end
 
-      def to_form_data(answer)
+      def process_answer(answer)
         # Prefix the matrix name to each sub question key
         get_value(answer).transform_keys {|sub_question_index| generate_sub_question_key(sub_question_index)}
       end

@@ -1563,15 +1563,23 @@ class UserTest < ActiveSupport::TestCase
   test 'normalize_gender' do
     assert_equal 'f', User.normalize_gender('f')
     assert_equal 'm', User.normalize_gender('m')
+    assert_equal 'n', User.normalize_gender('n')
+    assert_equal 'o', User.normalize_gender('o')
 
     assert_equal 'f', User.normalize_gender('F')
     assert_equal 'm', User.normalize_gender('M')
+    assert_equal 'n', User.normalize_gender('N')
+    assert_equal 'o', User.normalize_gender('O')
 
     assert_equal 'f', User.normalize_gender('Female')
     assert_equal 'm', User.normalize_gender('Male')
+    assert_equal 'n', User.normalize_gender('NonBinary')
+    assert_equal 'o', User.normalize_gender('NotListed')
 
     assert_equal 'f', User.normalize_gender('female')
     assert_equal 'm', User.normalize_gender('male')
+    assert_equal 'n', User.normalize_gender('non-binary')
+    assert_equal 'o', User.normalize_gender('notlisted')
 
     assert_nil User.normalize_gender('some nonsense')
     assert_nil User.normalize_gender('')
