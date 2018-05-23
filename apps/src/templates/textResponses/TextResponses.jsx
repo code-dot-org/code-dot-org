@@ -137,12 +137,13 @@ class TextResponses extends Component {
     const filteredResponses = this.getFilteredResponses();
 
     return (
-      <div>
+      <div id="uitest-responses-tab">
         <div>
           <div style={{...h3Style, ...styles.header}}>
             {i18n.selectACourse()}
           </div>
           <ScriptSelector
+            id="uitest-course-dropdown"
             validScripts={validScripts}
             scriptId={scriptId}
             onChange={this.onChangeScript}
