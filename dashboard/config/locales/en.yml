@@ -491,6 +491,8 @@ en:
   gender:
     male: 'Male'
     female: 'Female'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: 'Prefer not to answer'
   user_type:
     student: 'Student'
