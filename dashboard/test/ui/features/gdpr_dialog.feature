@@ -10,6 +10,15 @@ Feature: GDPR Dialog - data transfer agreement
     Then check that I am on "http://code.org/"
     Then element ".ui-test-gdpr-dialog" is not visible
 
+  Scenario: EU user sees the GDPR Dialog on pegasus, opt out
+    Given I am on "http://code.org/"
+    And I am a teacher
+    And I am on "http://code.org/teacher-dashboard?no_home_redirect=1&force_in_eu=1"
+    Then I wait to see ".ui-test-gdpr-dialog"
+    Then I click selector ".ui-test-gdpr-dialog-logout"
+    Then check that I am on "http://code.org/"
+    Then element ".ui-test-gdpr-dialog" is not visible
+
   Scenario: EU user sees the GDPR Dialog on dashboard, opt in, don't show again
     Given I create a teacher named "Madame Maxime"
     Given I am on "http://studio.code.org/home?force_in_eu=1"
@@ -19,8 +28,8 @@ Feature: GDPR Dialog - data transfer agreement
     Given I sign in as "Madame Maxime"
     Then element ".ui-test-gdpr-dialog" is not visible
 
-  Scenario: EU user sees the GDPR Dialog on dashboard, opt in
-    Given I am a teacher
+  Scenario: EU user sees the GDPR Dialog on pegasus, opt in, don't show again
+    Given I create a teacher named "Madame Maxime"
     Given I am on "http://studio.code.org/home?force_in_eu=1"
     Then element ".ui-test-gdpr-dialog" is visible
     Then I click selector ".ui-test-gdpr-dialog-accept"
@@ -31,7 +40,7 @@ Feature: GDPR Dialog - data transfer agreement
     Given I am on "http://studio.code.org/home"
     Then element ".ui-test-gdpr-dialog" is not visible
 
-  Scenario: GDPR Dialog privacy link works
+  Scenario: GDPR Dialog privacy link works from dashboard
     Given I am a teacher
     Given I am on "http://studio.code.org/home?force_in_eu=1"
     Then element ".ui-test-gdpr-dialog" is visible
