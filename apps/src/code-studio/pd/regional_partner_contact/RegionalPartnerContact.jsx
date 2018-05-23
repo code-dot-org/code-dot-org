@@ -126,7 +126,7 @@ class RegionalPartnerContactComponent extends FormComponent {
             name: 'optIn',
             label: (
               <div style={{display: 'inline-block'}}>
-                Can we email you about updates to our courses, local opportunities, or other computer science news?
+                Can we email you about updates to Code.org courses, local opportunities, or other computer science news?
                 &nbsp;
                 <a
                   href={`${window.dashboard.CODE_ORG_URL}/privacy`}
