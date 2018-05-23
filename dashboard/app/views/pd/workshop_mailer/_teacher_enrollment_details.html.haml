@@ -18,9 +18,10 @@
 
 - if @workshop.local_summer?
   %p
-    Check with your workshop organizer to see if breakfast or lunch is provided
-    and if you have any food allergies, please bring your own meal or eat
-    responsibly.
+    Check with your workshop organizer to see if breakfast or lunch is provided. If you
+    have any food allergies please let us know as soon as possible by emailing
+    = mail_to @workshop.organizer.email, "#{@workshop.organizer.email},"
+    and be sure to eat responsibly.
 - else
   %p
     If your workshop organizer plans to provide lunch and you have any food allergies,
@@ -47,7 +48,7 @@
     Final reminders
   %p
     Be sure to check out your
-    = link_to "online professional learning page", professional_learning_landing_url
+    = link_to "online professional learning page", professional_learning_landing_url, target: "_blank"
     and complete the following pre-work, if you have not done so already:
 
   - if @workshop.course == Pd::Workshop::COURSE_CSD
@@ -61,5 +62,5 @@
 
 %p
   P.S. Connect with other computer science teachers on Twitter
-  = link_to '@TeachCode', 'https://twitter.com/teachcode'
+  = link_to '@TeachCode', 'https://twitter.com/teachcode', target: "_blank"
   for inspiration and great tips on bringing computer science to every school.
