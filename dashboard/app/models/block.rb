@@ -35,6 +35,18 @@ class Block < ApplicationRecord
     File.write js_path, helper_code
   end
 
+  def delete_old_files(old_level_type=level_type, old_name=name)
+    base_path = Rails.root.join("config/blocks/#{old_level_type}/#{old_name}")
+    json_path = "#{base_path}.json"
+    js_path = "#{base_path}.js"
+    if File.exist? json_path
+      File.delete json_path
+    end
+    if File.exist? js_path
+      File.delete js_path
+    end
+  end
+
   def file_json
     JSON.pretty_generate(
       {
