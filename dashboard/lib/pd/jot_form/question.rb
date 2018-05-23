@@ -68,15 +68,16 @@ module Pd
 
       # Generate question summary
       # @return [Hash] {question_name => {text:, answer_type:}}
-      def to_summary
+      def summarize
         {name => {text: text, answer_type: answer_type}}
       end
 
       # Generate form_data for an answer to this question.
       # When merged with the other questions in a form, it will form the entire form_data.
       # @see FormQuestions
+      # @param answer [Hash] {question_id => answer}
       # @return [Hash] {question_name => answer}
-      def to_form_data(answer)
+      def process_answer(answer)
         {name => get_value(answer)}
       end
     end

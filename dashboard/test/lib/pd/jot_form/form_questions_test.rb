@@ -69,7 +69,7 @@ module Pd
         @form_questions = FormQuestions.new(@form_id, @questions)
       end
 
-      test 'to_summary' do
+      test 'summarize' do
         expected_summary = {
           'text' => {text: 'text label', answer_type: ANSWER_TEXT},
           'singleSelect' => {text: 'single select label', answer_type: ANSWER_SELECT_VALUE},
@@ -83,10 +83,10 @@ module Pd
           'matrix_2' => {text: 'I enjoyed it', answer_type: ANSWER_SELECT_VALUE, parent: 'matrix'}
         }
 
-        assert_equal expected_summary, @form_questions.to_summary
+        assert_equal expected_summary, @form_questions.summarize
       end
 
-      test 'to_form_data' do
+      test 'process_answers' do
         jotform_answers = {
           '1' => 'this is my text answer',
           '2' => 'Two',
@@ -101,7 +101,7 @@ module Pd
           }
         }
 
-        expected_form_data = {
+        expected_processed_answers = {
           'text' => 'this is my text answer',
           'singleSelect' => 2,
           'singleSelectWithOther' => 'my other reason',
@@ -113,7 +113,7 @@ module Pd
           'matrix_2' => 3
         }
 
-        assert_equal expected_form_data, @form_questions.to_form_data(jotform_answers)
+        assert_equal expected_processed_answers, @form_questions.process_answers(jotform_answers)
       end
 
       test 'serialize' do
