@@ -246,11 +246,18 @@ function validateFields() {
     }
   }
 
+  if (!$("#email-preference").val()) {
+    $('#email-preference-error').show();
+    return false;
+  } else {
+    $('#email-preference-error').hide();
+  }
+
   return true;
 }
 
 function signupFormError(data) {
-  if (data.responseJSON.email_s[0] === "invalid") {
+  if (data.responseJSON.email_s && data.responseJSON.email_s[0] === "invalid") {
     $('#email-invalid-error').show();
   }
   $('#error_message').html("<p>" + signupErrorMessage + "</p>").show();

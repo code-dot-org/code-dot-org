@@ -20,8 +20,10 @@ module ScriptConstants
   # order of the categories will be their order in the dropdown.
   CATEGORIES = {
     full_course: [
-      CSP = 'csp'.freeze,
-      CSD = 'csd'.freeze,
+      CSP_2017 = 'csp'.freeze,
+      CSP_2018 = 'csp-2018'.freeze,
+      CSD_2017 = 'csd'.freeze,
+      CSD_2018 = 'csd-2018'.freeze,
     ],
     csf: [
       COURSEA_NAME = 'coursea'.freeze,
@@ -127,6 +129,7 @@ module ScriptConstants
       CSP17_EXPLORE_NAME = 'csp-explore'.freeze,
       CSP17_CREATE_NAME = 'csp-create'.freeze,
       CSP17_POSTAP_NAME = 'csppostap'.freeze,
+      CSP17_SURVEY_NAME = 'csp-post-survey'.freeze,
     ],
     cspexams: [
       CSP_ASSESSMENT_NAME = 'cspassessment'.freeze,

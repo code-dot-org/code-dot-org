@@ -85,6 +85,7 @@ class BucketHelper
   end
 
   def get(encrypted_channel_id, filename, if_modified_since = nil, version = nil)
+    if_modified_since = nil if if_modified_since == ''
     begin
       owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     rescue ArgumentError, OpenSSL::Cipher::CipherError

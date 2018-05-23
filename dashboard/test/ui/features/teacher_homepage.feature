@@ -18,6 +18,7 @@ Feature: Using the teacher homepage sections feature
     Given I enable the "subgoals-group-a" course experiment
     And I wait for the pegasus and dashboard experiment caches to expire
     And I reload the page
+    And I wait to see ".uitest-newsection"
     And check that the URL contains "/home"
     And I create a new section with course "Computer Science Principles" and unit "Unit 3: Intro Programming (version A)"
     Then the section table should have 1 row
@@ -36,9 +37,12 @@ Feature: Using the teacher homepage sections feature
     And the href of selector ".uitest-owned-sections a:contains('Unit 1')" contains the section id
 
     When I click selector ".uitest-owned-sections a:contains('Computer Science Principles')" to load a new page
+    And I wait to see ".uitest-CourseScript"
     Then the url contains the section id
+    And check that the URL contains "/courses/csp-2017"
 
     When I click selector ".uitest-CourseScript:contains(CSP Unit 2) .uitest-go-to-unit-button" to load a new page
+    And I wait to see ".uitest-script-next-banner"
     Then the url contains the section id
 
     And the href of selector ".uitest-script-next-banner" contains the section id
@@ -48,6 +52,7 @@ Feature: Using the teacher homepage sections feature
 
     # navigate to a script level
     When I click selector ".uitest-script-next-banner" to load a new page
+    And I wait to see ".header_popup_link"
     Then the url contains the section id
 
     # open the More menu in the progress bar

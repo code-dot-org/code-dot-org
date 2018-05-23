@@ -45,6 +45,7 @@ class GamelabJr < Gamelab
           ],
           use_default_sprites: true,
           hide_animation_mode: true,
+          show_type_hints: true,
         }
       )
     )
@@ -172,6 +173,7 @@ class GamelabJr < Gamelab
   <block type="text_join_simple" inputcount="2" />
   <block type="text" />
 </category>
+<category name="Behaviors" custom="Behavior" />
     XML
   end
 

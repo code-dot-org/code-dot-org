@@ -155,12 +155,16 @@ module GitHub
   # Octokit Documentation: http://octokit.github.io/octokit.rb/Octokit/Client/Commits.html#compare-instance_method
   # @param base [String] The base branch to compare against.
   # @param compare [String] The comparison branch to compare.
-  # @raise [Exception] From calling Octokit.compare.
   # @return [Boolean] Whether compare is behind base, i.e., whether compare is missing
   #   commits in base.
   def self.behind?(base:, compare:)
     response = Octokit.compare(REPO, base, compare)
     response.behind_by > 0
+  rescue Octokit::InternalServerError
+    # This can happen for comparisons with extremely large diffs. See https://developer.github.com/v3/repos/commits/#compare-two-commits
+    # In this case, we can safely assume that we are indeed behind, since there
+    # otherwise would not be a diff to break on
+    true
   end
 
   # Octokit Documentation: http://octokit.github.io/octokit.rb/Octokit/Client/Repositories.html#branch-instance_method

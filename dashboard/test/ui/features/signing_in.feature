@@ -35,6 +35,22 @@ Scenario: Student sign in from studio.code.org
   Then I wait to see ".user_menu"
   Then element ".user_menu span:first" has text "Hi Alice"
 
+Scenario: Student sign in from studio.code.org in the eu
+  Given I am on "http://studio.code.org/"
+  And I set the language cookie
+  And I create a student in the eu named "Alice"
+  And I sign out
+  Given I am on "http://studio.code.org/"
+  And I reload the page
+  Then I wait to see ".header_user"
+  Then I click selector "#signin_button"
+  And I wait to see ".new_user"
+  And I fill in username and password for "Alice"
+  And I click selector "#signin-button"
+  Then I wait until I am on "http://studio.code.org/home"
+  Then I wait to see ".user_menu"
+  Then element ".user_menu span:first" has text "Hi Alice"
+
 Scenario: Teacher sign in from studio.code.org
   Given I am on "http://studio.code.org/"
   And I set the language cookie
