@@ -136,14 +136,25 @@ module Pd
       end
     end
 
+    def sanitize_form_data_hash
+      @sanitized_form_data_hash ||=
+        form_data_hash.transform_keys {|key| key.underscore.to_sym}
+    end
+
     def answers=(value)
-      @form_data_hash = nil
       write_attribute :answers, value
+      clear_memoized_values
     end
 
     def reload
+      super.tap do
+        clear_memoized_values
+      end
+    end
+
+    def clear_memoized_values
       @form_data_hash = nil
-      super
+      @sanitized_form_data_hash = nil
     end
   end
 end

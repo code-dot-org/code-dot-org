@@ -13,7 +13,7 @@ module Pd
     # The JotForm survey, on submit, will redirect to the new_faciliator route (see below)
     # for the relevant session id.
     # The pre-workshop survey, which has no session id, will redirect to thanks.
-    def new
+    def new_general
       workshop = Workshop.where(subject: SUBJECT_SUMMER_WORKSHOP).enrolled_in_by(current_user).nearest
       return render :not_enrolled unless workshop
 
@@ -24,8 +24,7 @@ module Pd
         return render_404 unless session
         return render :too_late unless session.open_for_attendance?
 
-        attendance = session.attendances.find_by(teacher: current_user)
-        return render :no_attendance unless attendance
+        return render :no_attendence unless session.attendances.exists?(teacher: current_user)
       end
 
       @form_id = WorkshopDailySurvey.get_form_id_for_day day
