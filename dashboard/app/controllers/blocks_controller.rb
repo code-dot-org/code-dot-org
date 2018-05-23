@@ -28,6 +28,11 @@ class BlocksController < ApplicationController
     )
   end
 
+  def destroy
+    @block.destroy
+    redirect_to(blocks_path, notice: "Block Deleted")
+  end
+
   def create_params
     update_params
   end
