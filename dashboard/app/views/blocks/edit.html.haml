@@ -1,0 +1,17 @@
+%h1= "Editing block #{@block.name}"
+= form_for(@block,
+  url: block_path(id: @block.name),
+  html: {id: 'edit-block-form', method: 'patch'},
+) do |f|
+  = f.label 'Level Type'
+  = f.select :level_type, ['GamelabJr']
+  = f.label 'Category'
+  = f.text_field :category
+  = f.label 'Name'
+  = f.text_field :name
+  = f.label 'Config'
+  = f.text_area :config
+  = f.label 'Helper Code'
+  = f.text_area :helper_code
+  %div
+    = f.submit class: 'btn'
