@@ -67,11 +67,15 @@ class StudentAssessmentOverviewTable extends Component {
   };
 
   getCorrectAnswer = (multipleChoiceAnswers) => {
-    return multipleChoiceAnswers.filter(answerObj => {
+    const answersArr = multipleChoiceAnswers.filter(answerObj => {
       return answerObj.isCorrectAnswer;
-    }).map(answerObj => {
+    });
+
+    const getCorrectAnswers = answersArr.map(answerObj => {
       return answerObj.multipleChoiceOption;
-    }).join(', ');
+    });
+
+    return getCorrectAnswers.join(', ');
   };
 
   correctAnswerColumnFormatter = (answers, {rowData, columnIndex}) => {
