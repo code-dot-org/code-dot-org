@@ -228,19 +228,6 @@ function main() {
       $httpProvider.defaults.cache = true;
     }]);
 
-  services.factory('studentsService', ['$resource',
-    function ($resource) {
-      return $resource('/v2/students/:id', {}, {
-      // default methods: see https://code.angularjs.org/1.2.21/docs/api/ngResource/service/$resource
-      //  'get':    {method:'GET'},
-      //  'save':   {method:'POST'},
-      //  'query':  {method:'GET', isArray:true},
-      //  'remove': {method:'DELETE'},
-      //  'delete': {method:'DELETE'}
-         update: {method:'POST', url: 'v2/students/:id/update'},
-      });
-    }]);
-
   // For large sections, we're having requests time out before we hear back from
   // the server. Instead, lets ask for progress for only N students at a time,
   // and populate our table once we have all data. This is a quick and dirty approach
@@ -357,8 +344,8 @@ function main() {
     };
   }]);
 
-  app.controller('SectionDetailController', ['$scope', '$routeParams', '$window', '$q', '$location', 'sectionsService', 'studentsService',
-                                             function ($scope, $routeParams, $window, $q, $location, sectionsService, studentsService) {
+  app.controller('SectionDetailController', ['$scope', '$routeParams', '$window', '$q', '$location', 'sectionsService',
+                                             function ($scope, $routeParams, $window, $q, $location, sectionsService) {
     firehoseClient.putRecord(
       {
         study: 'teacher-dashboard-tabbing',
@@ -540,8 +527,8 @@ function main() {
     );
   }]);
 
-  app.controller('SectionProgressController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', 'sectionsService', 'studentsService', 'paginatedSectionProgressService',
-                                             function ($scope, $routeParams, $window, $q, $timeout, $interval, sectionsService, studentsService, paginatedSectionProgressService) {
+  app.controller('SectionProgressController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', 'sectionsService', 'paginatedSectionProgressService',
+                                             function ($scope, $routeParams, $window, $q, $timeout, $interval, sectionsService, paginatedSectionProgressService) {
     firehoseClient.putRecord(
       {
         study: 'teacher-dashboard-tabbing',
@@ -737,8 +724,8 @@ function main() {
     };
   }]);
 
-  app.controller('SectionResponsesController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', '$sanitize', 'sectionsService', 'studentsService',
-                                             function ($scope, $routeParams, $window, $q, $timeout, $interval, $sanitize, sectionsService, studentsService) {
+  app.controller('SectionResponsesController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', '$sanitize', 'sectionsService',
+                                             function ($scope, $routeParams, $window, $q, $timeout, $interval, $sanitize, sectionsService) {
     firehoseClient.putRecord(
       {
         study: 'teacher-dashboard-tabbing',
@@ -827,8 +814,8 @@ function main() {
   }]);
 
 
-  app.controller('SectionAssessmentsController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', '$sanitize', 'sectionsService', 'studentsService',
-                                             function ($scope, $routeParams, $window, $q, $timeout, $interval, $sanitize, sectionsService, studentsService) {
+  app.controller('SectionAssessmentsController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', '$sanitize', 'sectionsService',
+                                             function ($scope, $routeParams, $window, $q, $timeout, $interval, $sanitize, sectionsService) {
     firehoseClient.putRecord(
       {
         study: 'teacher-dashboard-tabbing',
