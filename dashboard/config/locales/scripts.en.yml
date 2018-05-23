@@ -9233,6 +9233,14 @@ en:
               name: Novice Reflection Overview
             Monday:
               name: Monday
+            Day 1:
+              name: Day 1
+            Day 2:
+              name: Day 2
+            Day 3:
+              name: Day 3
+            Day 4:
+              name: Day 4
           title: CS Discoveries Novice Reflections 2018-2019
           description_audience: CS Discoveries Facilitators in Training 2018-2019
           description_short: 'Novice reflection materials for CS Discoveries facilitators in training '
@@ -9265,6 +9273,16 @@ en:
               name: Thursday
             Wrap Up:
               name: Wrap Up
+            Monday:
+              name: Monday
+            Day 1:
+              name: Day 1
+            Day 2:
+              name: Day 2
+            Day 3:
+              name: Day 3
+            Day 4:
+              name: Day 4
           title: CS Principles Novice Reflections 2018-2019
           description_audience: CS Principles Facilitators in Training 2018-2019
           description_short: 'Novice reflection materials for CS Principles facilitators in training '
