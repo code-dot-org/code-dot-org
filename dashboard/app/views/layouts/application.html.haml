@@ -35,13 +35,14 @@
     - if current_user && current_user.age.nil?
       = render partial: 'layouts/age_interstitial'
 
-    #gdpr-dialog
     - gdpr_data = {}
     - if current_user
       - already_accepted = current_user.data_transfer_agreement_accepted == true
       - force_eu = request.params['force_in_eu'].present?
       - gdpr_data[:show_gdpr_dialog] = (request.gdpr? || force_eu) && !already_accepted
       - gdpr_data[:current_user_id] = current_user.id
+
+    #gdpr-dialog
 
     %script{src: minifiable_asset_path('js/code-studio.js'), data: {gdpr: gdpr_data.to_json}}
 
