@@ -437,8 +437,8 @@ class User < ActiveRecord::Base
     [nil, ''],
     ['gender.male', 'm'],
     ['gender.female', 'f'],
-    ['gender.nonBinary', 'n'],
-    ['gender.notListed', 'o'],
+    ['gender.non_binary', 'n'],
+    ['gender.not_listed', 'o'],
     ['gender.none', '-'],
   ].freeze
 
