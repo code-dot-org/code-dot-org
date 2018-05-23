@@ -774,8 +774,16 @@ class CensusForm extends Component {
                </div>
             )}
             <span style={styles.share}>
-              Can we email you about updates to our courses, local learning opportunities, or other computer science news?
+              Can we email you about updates to our courses, local opportunities, or other computer science news?
+              &nbsp;
+              <a
+                href="/privacy"
+                target="_blank"
+              >
+                (See our privacy policy)
+              </a>
             </span>
+
             <select
               name="opt_in"
               value={this.state.submission.optIn}
