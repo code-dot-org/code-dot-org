@@ -114,8 +114,11 @@
         %span.form-required-field *
 
   .form-group
-    %label.control-label{for: "volunteer-email-preference"}= I18n.t(:volunteer_engineer_submission_field_email_preference)
-    %span.form-required-field *
+    %label.control-label{for: "volunteer-email-preference"}
+      = I18n.t(:volunteer_engineer_submission_field_email_preference)
+      %a{href: '/privacy', target: '_blank'}
+        = I18n.t(:volunteer_engineer_submission_field_email_preference_privacy)
+      %span.form-required-field *
     %div
       %select#volunteer-email-preference.form-control{name: "email_preference_opt_in_s", type: "select", required: true}
         %option{value: "", selected: true, disabled: true}
