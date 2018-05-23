@@ -351,9 +351,11 @@ When /^I press the SVG text "([^"]*)"$/ do |name|
   @browser.execute_script("$('" + name_selector + "').simulate('drag', function(){});")
 end
 
-When /^I select the "([^"]*)" option in dropdown "([^"]*)"$/ do |option_text, element_id|
-  select = Selenium::WebDriver::Support::Select.new(@browser.find_element(:id, element_id))
-  select.select_by(:text, option_text)
+When /^I select the "([^"]*)" option in dropdown "([^"]*)"( to load a new page)?$/ do |option_text, element_id, load|
+  page_load(load) do
+    select = Selenium::WebDriver::Support::Select.new(@browser.find_element(:id, element_id))
+    select.select_by(:text, option_text)
+  end
 end
 
 When /^I open the topmost blockly category "([^"]*)"$/ do |name|

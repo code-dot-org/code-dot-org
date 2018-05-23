@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import color from "../util/color";
 import i18n from '@cdo/locale';
 import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
+import Button from '@cdo/apps/templates/Button';
 
 const styles = {
   container: {
@@ -22,12 +23,23 @@ const styles = {
   },
   content: {
     padding: 10
+  },
+  textInput: {
+    margin: 10,
+    display: 'block',
+    width: '100%',
+  },
+  button: {
+    margin: 10,
+    fontWeight: 'bold'
   }
 };
 
 class TeacherFeedback extends Component {
   static propTypes = {
-    viewAs: PropTypes.oneOf(['Teacher', 'Student'])
+    viewAs: PropTypes.oneOf(['Teacher', 'Student']),
+    //temp prop for which version to display (stable, released 2018-teacher-experience, or internal, developer version)
+    withUnreleasedFeatures: PropTypes.bool
   };
 
   render() {
@@ -39,7 +51,22 @@ class TeacherFeedback extends Component {
     return (
       <div style={styles.container}>
         <div style={styles.header}>{i18n.forTeachersOnly()}</div>
-        <div style={styles.content}>Coming soon: You’ll be able to use this tab to give feedback to your students about their work</div>
+        {!this.props.withUnreleasedFeatures &&
+          <div style={styles.content}>
+            Coming soon: You’ll be able to use this tab to give feedback to your students about their work.
+          </div>
+        }
+        {this.props.withUnreleasedFeatures &&
+          <div>
+            <textarea style={styles.textInput} type="text" placeholder={i18n.feedbackPlaceholder()}></textarea>
+            <Button
+              text={i18n.saveAndShare()}
+              onClick={()=>{}}
+              color={Button.ButtonColor.blue}
+              style={styles.button}
+            />
+          </div>
+        }
       </div>
     );
   }
