@@ -41,7 +41,6 @@
     "instructions": "Add code to your contacts app so that newly-added contacts are saved in a table. (Click to see full instructions)",
     "slider_speed": "1.0",
     "encrypted_examples": "J9hSKfnGyuJls1JRff9vByQVIDau0ayangXhOYfW6sqpUkFhiog2mIw9NS41\nYQs1\n",
-    "contained_level_names": null,
     "instructions_important": "false",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
@@ -51,7 +50,8 @@
     "show_debug_watch": "false",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
-    "makerlab_enabled": "false"
+    "makerlab_enabled": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

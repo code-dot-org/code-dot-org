@@ -1,0 +1,8 @@
+name 'welcome-novice-18'
+display_name 'Welcome Novices Facilitators!'
+markdown <<MARKDOWN
+# Welcome Novice Facilitators!
+
+Update
+
+MARKDOWN

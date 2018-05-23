@@ -4,26 +4,19 @@ exclude_csf_column_in_legend true
 student_detail_progress_view true
 
 stage 'Novice Reflection Overview', flex_category: 'required'
-named_level 'welcome-csd-novice'
+named_level 'welcome-novice-18'
+
+stage 'Monday'
+level 'novice-monday-1'
 
 stage 'Tuesday'
-level 'csd-tuesday-unit', progression: 'Unit Reflection'
-level 'csd-tuesday-unit2', progression: 'Unit Reflection'
-named_level 'csd-tuesday-pedagogy'
-named_level 'csd-tuesday-facilitation'
+level 'novice-tuesday-1'
 
 stage 'Wednesday'
-level 'csd-wednesday-unit', progression: 'Unit Reflection'
-level 'csd-wednesday-unit2', progression: 'Unit Reflection'
-named_level 'csd-wednesday-pedagogy'
-named_level 'csd-wednesday-facilitation'
+level 'novice-wednesday-1'
 
 stage 'Thursday'
-level 'csd-thursday-unit', progression: 'Unit Reflection'
-level 'csd-thursday-unit2', progression: 'Unit Reflection'
-level 'csd-thursday-pedagogy', progression: 'Pedagogy Reflection'
-level 'csd-thursday-pedagogy2', progression: 'Pedagogy Reflection'
-named_level 'csd-thursday-facilitation'
+level 'novice-thursday-1'
 
 stage 'Wrap Up'
-named_level 'csd-novice-congrats'
+named_level 'novice-congrats'

@@ -1,4 +1,4 @@
-name 'csd-novice-congrats'
+name 'novice-congrats'
 display_name 'Congrats on completing the novice program!'
 markdown <<MARKDOWN
 # Congrats on completing the novice program!
