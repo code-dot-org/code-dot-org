@@ -214,11 +214,6 @@ function main() {
       //  'query':  {method:'GET', isArray:true},
       //  'remove': {method:'DELETE'},
       //  'delete': {method:'DELETE'}
-         update: {method:'POST', url: 'v2/sections/:id/update'}, // unused
-         allStudents: {method:'GET', url:'v2/sections/:id/students', isArray: true}, // unused
-         addStudents: {method:'POST', url:'/v2/sections/:id/students', isArray: true}, // unused
-         moveStudents: {method:'POST', url:'/dashboardapi/sections/transfers'},
-         removeStudent: {method:'DELETE', url:'/v2/sections/:id/students/:studentId'},
          progress: {method:'GET', url:'/dashboardapi/section_progress/:id'},
          studentProgress: {method:'GET', url:'/dashboardapi/student_progress/:id/:studentId'},
          responses: {method:'GET', url:'/dashboardapi/section_text_responses/:id', isArray: true},
