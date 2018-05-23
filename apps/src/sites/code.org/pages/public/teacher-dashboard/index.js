@@ -903,6 +903,7 @@ function main() {
     );
 
     $scope.section = sectionsService.get({id: $routeParams.id});
+    $scope.sections = sectionsService.query();
     $scope.tab = 'responses';
 
     $scope.$on('text-responses-table-rendered', () => {
