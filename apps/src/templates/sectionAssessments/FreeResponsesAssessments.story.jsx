@@ -15,7 +15,7 @@ const studentData = [
     id: '211',
     name: 'Maddie',
     studentAnswers: [
-      {question: 1, response: 'In painting, you have unlimited power. You have the ability to move mountains. You can bend rivers. But when I get home, the only thing I have power over is the garbage. Maybe there is a happy little waterfall happening over here. See. We take the corner of the brush and let it play back-and-forth.'},
+      {question: 1, response: 'In painting, you have unlimited power. You have the ability to move mountains. You can bend rivers.'},
       {question: 2, response: 'You want your tree to have some character. Make it special. Now we will take the almighty fan brush. Learn when to stop. Poor old tree.'},
     ],
   },
@@ -23,7 +23,7 @@ const studentData = [
     id: '212',
     name: 'Erin',
     studentAnswers: [
-      {question: 1, response: 'In painting, you have unlimited power. You have the ability to move mountains. You can bend rivers. But when I get home, the only thing I have power over is the garbage. Maybe there is a happy little waterfall happening over here. See. We take the corner of the brush and let it play back-and-forth.'},
+      {question: 1, response: ''},
       {question: 2, response: 'You want your tree to have some character. Make it special. Now we will take the almighty fan brush. Learn when to stop. Poor old tree.'},
     ],
   },
@@ -31,7 +31,7 @@ const studentData = [
     id: '213',
     name: 'Brendan',
     studentAnswers: [
-      {question: 1, response: 'In painting, you have unlimited power. You have the ability to move mountains. You can bend rivers. But when I get home, the only thing I have power over is the garbage. Maybe there is a happy little waterfall happening over here. See. We take the corner of the brush and let it play back-and-forth.'},
+      {question: 1, response: 'In painting, you have unlimited power. You have the ability to move mountains. You can bend rivers.'},
       {question: 2, response: 'You want your tree to have some character. Make it special. Now we will take the almighty fan brush. Learn when to stop. Poor old tree.'},
     ],
   },
