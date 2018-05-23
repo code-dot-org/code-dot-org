@@ -1,6 +1,6 @@
 import React, {PropTypes, Component} from 'react';
 import { connect } from 'react-redux';
-import color from "../util/color";
+import color from "../../util/color";
 import i18n from '@cdo/locale';
 import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 import Button from '@cdo/apps/templates/Button';

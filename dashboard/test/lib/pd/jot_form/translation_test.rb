@@ -18,6 +18,7 @@ module Pd
 
         assert_equal TextQuestion, Translation.get_question_class_for(TYPE_TEXTBOX)
         assert_equal TextQuestion, Translation.get_question_class_for(TYPE_TEXTAREA)
+        assert_equal TextQuestion, Translation.get_question_class_for(TYPE_NUMBER)
 
         assert_equal SelectQuestion, Translation.get_question_class_for(TYPE_DROPDOWN)
         assert_equal SelectQuestion, Translation.get_question_class_for(TYPE_RADIO)
@@ -25,6 +26,10 @@ module Pd
 
         assert_equal ScaleQuestion, Translation.get_question_class_for(TYPE_SCALE)
         assert_equal MatrixQuestion, Translation.get_question_class_for(TYPE_MATRIX)
+
+        IGNORED_QUESTION_TYPES.each do |ignored_type|
+          assert_nil Translation.get_question_class_for(ignored_type)
+        end
       end
 
       test 'unexpected question type error' do
@@ -41,17 +46,22 @@ module Pd
           id = i + 1
           content[id] = {
             qid: id,
-            type: type,
+            type: "control_#{type}",
           }.stringify_keys
 
-          klass = Translation.get_question_class_for(type)
-          next unless klass
-
-          # More specific parsing logic validation can be found in the question type tests
-          klass.expects(:from_jotform_question).
+          mock_class = mock
+          mock_class.expects(:from_jotform_question).
             with(id: id, type: type, jotform_question: content[id]).
             returns(mock)
+
+          Translation.expects(:get_question_class_for).with(type).returns(mock_class)
         end
+
+        Translation.expects(:get_question_class_for).with('ignored').returns(nil)
+        content[100] = {
+          qid: 100,
+          type: 'control_ignored'
+        }.stringify_keys
 
         JotFormRestClient.any_instance.expects(:get_questions).with(@form_id).returns(
           {
@@ -61,9 +71,8 @@ module Pd
 
         questions = Translation.new(@form_id).get_questions
 
-        # Heading and Button are ignored
-        assert_equal 9, QUESTION_TYPES.length
-        assert_equal 7, questions.length
+        assert_equal 8, QUESTION_TYPES.length
+        assert_equal 8, questions.length
       end
 
       test 'get_submission queries the client and transforms the submission data' do
@@ -116,6 +125,11 @@ module Pd
                   text: 'label2',
                   type: 'control_radio',
                   answer: 'answer2.1'
+                },
+                '3' => {
+                  name: 'text1',
+                  text: 'this text field should be ignored',
+                  type: 'control_text'
                 }
               }
             },
