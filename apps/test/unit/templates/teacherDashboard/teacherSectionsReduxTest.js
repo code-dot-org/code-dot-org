@@ -104,7 +104,7 @@ const validCourses = [
   {
     id: 29,
     name: "CS Discoveries 2017",
-    script_name: "csd",
+    script_name: "csd-2017",
     category: "Full Courses",
     position: 1,
     category_priority: 0,
@@ -115,7 +115,7 @@ const validCourses = [
   {
     id: 30,
     name: "CS Principles 2017",
-    script_name: "csp",
+    script_name: "csp-2017",
     category: "Full Courses",
     position: 0,
     category_priority: 0,
@@ -259,7 +259,7 @@ describe('teacherSectionsRedux', () => {
     it('adds path to courses', () => {
       const assignId = assignmentId(validCourses[0].id, null);
       assert.strictEqual(nextState.validAssignments[assignId].path,
-        '/courses/csd');
+        '/courses/csd-2017');
     });
 
     it('adds path to scripts', () => {
@@ -1036,12 +1036,12 @@ describe('teacherSectionsRedux', () => {
 
     it('assignmentPaths returns the path if the section is assigned a course/script', () => {
       const paths = assignmentPaths(stateWithUnassignedSection.validAssignments, assignedSection);
-      assert.deepEqual(paths, ['/courses/csd']);
+      assert.deepEqual(paths, ['/courses/csd-2017']);
     });
 
     it('assignmentPaths returns the paths of course and script if assigned both', () => {
       const paths = assignmentPaths(stateWithUnassignedSection.validAssignments, assignedSectionWithUnit);
-      assert.deepEqual(paths, ['/courses/csd', '/s/csp1']);
+      assert.deepEqual(paths, ['/courses/csd-2017', '/s/csp1']);
     });
 
     it('assignmentPaths returns empty array if unassigned', () => {
@@ -1466,7 +1466,7 @@ describe('teacherSectionsRedux', () => {
         providerManaged: false,
         hidden: false,
         assignmentNames: ['CS Discoveries 2017'],
-        assignmentPaths: ['/courses/csd']
+        assignmentPaths: ['/courses/csd-2017']
       }, {
         id: 12,
         name: 'My Other Section',
