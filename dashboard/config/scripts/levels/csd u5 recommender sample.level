@@ -186,10 +186,6 @@
       "toggleSwitch.isOpen": null,
       "onBoardEvent": null
     },
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "embed": "true",
     "markdown_instructions": "# Sample App\r\n\r\nHere is an example of an app that uses data to help the user solve a problem.  With a partner, play through the app a few times to see how it works.\r\n\r\nDiscuss the following questions with your partner:\r\n\r\n* What choice does the app help the user to make? \r\n* What data does it use to make that recommendation?\r\n* How do you think the creators of the app decided on the algorithm that they use to make the choice?",
     "instructions_important": "false",
@@ -232,7 +228,8 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "teacher_markdown": "Students can see and remix the code to this app at the following URL:\r\n\r\n[https://studio.code.org/projects/applab/Xb03UxRLDJ8BnVIMEhb3iTL1MG1HErh1Xy5Fl5IyqdA/view](https://studio.code.org/projects/applab/Xb03UxRLDJ8BnVIMEhb3iTL1MG1HErh1Xy5Fl5IyqdA/view)\r\n"
+    "teacher_markdown": "Students can see and remix the code to this app at the following URL:\r\n\r\n[https://studio.code.org/projects/applab/Xb03UxRLDJ8BnVIMEhb3iTL1MG1HErh1Xy5Fl5IyqdA/view](https://studio.code.org/projects/applab/Xb03UxRLDJ8BnVIMEhb3iTL1MG1HErh1Xy5Fl5IyqdA/view)\r\n",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

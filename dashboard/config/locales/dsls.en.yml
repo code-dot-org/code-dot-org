@@ -3358,6 +3358,9 @@ en:
         title: title
       csd-pulse-check-survey-preamble: {}
       csd-pulse-check-survey-preamble_2018: {}
+      csd-pushDL-unit1: {}
+      csd-pushDL-unit2: {}
+      csd-pushDL-unit3: {}
       csp deeper learning timeline:
         Deeper Learning Submissions Deadlines: Deeper Learning Submissions Deadlines
         description here: description here
@@ -3428,6 +3431,9 @@ en:
       csp-pulse-check-survey-preamble: {}
       csp-pulse-check-survey-preamble_2018: {}
       csp-pulse-check-survey-preamble_2018_2018: {}
+      csp-pushDL-unit1: {}
+      csp-pushDL-unit2: {}
+      csp-pushDL-unit3: {}
       csp3_subgoal_mc_levelgroup_preamble: {}
       csp3_subgoal_mc_levelgroup_preamble_2018: {}
       csp_ap_intro: {}
@@ -3582,6 +3588,7 @@ en:
       newCSFsample:
         Intro: Intro
         description here: description here
+      novice-congrats: {}
       onlineNeighbors:
         Your Online Neighborhood: Your Online Neighborhood
       peer review recommendations: {}
@@ -4141,6 +4148,7 @@ en:
         Cracking the Code: Cracking the Code
       welcome-csd-novice: {}
       welcome-csp-novice: {}
+      welcome-novice-18: {}
       wn scratchjr 1:
         Scratch Jr: Scratch Jr
     level_group:
