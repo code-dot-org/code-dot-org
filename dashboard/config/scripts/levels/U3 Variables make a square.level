@@ -30,7 +30,6 @@
       "assign_x": null,
       "declareAssign_str_hello_world": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "instructions": "Change the value of size multiple times. How does it change your drawing?",

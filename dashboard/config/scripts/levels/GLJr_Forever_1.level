@@ -37,7 +37,6 @@
     "free_play": "false",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
-    "show_d_pad": "false",
     "hide_view_data_button": "false",
     "expand_debugger": "false",
     "debugger_disabled": "false",

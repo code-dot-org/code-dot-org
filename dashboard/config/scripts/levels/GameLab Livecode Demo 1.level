@@ -21,7 +21,6 @@
       "randomNumber_min_max": null,
       "console.log": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Animating Sprites\r\n\r\nTo start this demo, we'll do the following:\r\n\r\n1. Create a new sprite with the `createSprite()` block\r\n2. Click on the Animation tab and select an image for the sprite\r\n3. Set the animation using the `sprite.setAnimation()` block\r\n4. Move the sprite by incrementing (slowly increasing) its x and y value using the draw loop\r\n",

@@ -12,7 +12,6 @@
       "rect": null,
       "background": null
     },
-    "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Background\r\n\r\nSometimes you'll want to fill the entire screen with a color.  For that, you can use `background`.  It covers everything on the screen with the color you choose.\r\n\r\n# Do This\r\n\r\n* Run the code to see `background` work.\r\n* Change the background from yellow to orange.\r\n\r\n*Challenge: There is a purple square that is covered up by the background.  Can you change the order of the code so you can see both the purple and blue squares?*",
