@@ -14,6 +14,7 @@
 
 class Block < ApplicationRecord
   after_save :write_block_files
+  after_destroy :delete_old_files
   validates_uniqueness_of :name, scope: [:level_type]
 
   def block_options
