@@ -429,6 +429,17 @@ const DUMMY_INPUT = 'dummy';
 const STATEMENT_INPUT = 'statement';
 const FIELD_INPUT = 'field';
 
+const LABELED_INPUTS_REGEX = /.*?({[^}]*}|\\n|$)/g;
+const LABELED_INPUT_PARTS_REGEX = /(.*?)({[^}]*}|\\n|$)/;
+
+const findInputConfig = (args, inputName) => {
+  const argIndex = args.findIndex(arg => arg.name === inputName);
+  if (argIndex !== -1) {
+    return args.splice(argIndex, 1)[0];
+  }
+  throw new Error(`${inputName} not found in args`);
+};
+
 /**
  * Given block text with input names specified in curly braces, returns a list
  * of labeled inputs that should be added to the block.
@@ -442,17 +453,16 @@ const FIELD_INPUT = 'field';
  * @returns {LabeledInputConfig[]} a list of labeled inputs
  */
 const determineInputs = function (text, args, strictTypes=[]) {
-  const tokens = text.split(/[{}]/);
-  if (tokens[tokens.length - 1] === '') {
+  const tokens = text.match(LABELED_INPUTS_REGEX);
+  if (tokens.length && tokens[tokens.length - 1] === '') {
     tokens.pop();
   }
-  const inputs = [];
-  for (let i = 0; i < tokens.length; i += 2) {
-    const label = tokens[i];
-    const input = tokens[i + 1];
-    if (input) {
-      const argIndex = args.findIndex(arg => arg.name === input);
-      const [arg] = args.splice(argIndex, 1);
+  const inputs = tokens.map(token => {
+    const parts = token.match(LABELED_INPUT_PARTS_REGEX);
+    const label = parts[1];
+    const inputName = parts[3];
+    if (inputName) {
+      const arg = findInputConfig(args, inputName);
       const strict = arg.strict || strictTypes.includes(arg.type);
       let mode;
       if (arg.options) {
@@ -482,14 +492,14 @@ const determineInputs = function (text, args, strictTypes=[]) {
           delete labeledInput[key];
         }
       });
-      inputs.push(labeledInput);
+      return labeledInput;
     } else {
-      inputs.push({
+      return {
         mode: DUMMY_INPUT,
         label,
-      });
+      };
     }
-  }
+  });
   const statementInputs = args
     .filter(arg => arg.statement)
     .map(arg => ({
