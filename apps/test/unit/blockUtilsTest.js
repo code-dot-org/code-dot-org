@@ -4,6 +4,7 @@ import {
   determineInputs,
   interpolateInputs,
   groupInputsByRow,
+  createJsWrapperBlockCreator,
 } from '@cdo/apps/block_utils';
 import { parseElement, serialize } from '@cdo/apps/xml.js';
 import { expect } from '../util/configuredChai';
@@ -434,6 +435,38 @@ describe('block utils', () => {
 
         },
       ]);
+    });
+  });
+
+  describe('custom generators', () => {
+    describe('assignment', () => {
+      let createBlock, generator;
+      before(() => {
+        createBlock = createJsWrapperBlockCreator(
+          Blockly,
+          'test',
+          [],
+          Blockly.BlockValueType.SPRITE,
+          [],
+        );
+        generator = Blockly.Generator.get('JavaScript');
+      });
+      it ('generates code for a single assignment', () => {
+        createBlock({
+          func: 'foo',
+          blockText: 'set {NAME} to foo()',
+          args: [{
+            name: 'NAME',
+            assignment: true,
+            field: true,
+          }],
+        });
+        const fakeBlock = {
+          getTitleValue: sinon.stub().returns('someVar'),
+        };
+        const code = generator['test_foo'].bind(fakeBlock)();
+        expect(code).to.equal('someVar = foo();\n');
+      });
     });
   });
 });
