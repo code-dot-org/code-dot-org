@@ -15,7 +15,7 @@ const initialState = {
   },
   sectionData: {
     section: {
-      id: 1,
+      id: 53,
     },
   }
 };
@@ -240,11 +240,11 @@ export default storybook => {
             <UnconnectedManageStudentsTable
               studentData={passwordAccountData}
               editingData={{}}
-              id={53}
               loginType={SectionLoginType.email}
               addStatus={{}}
               transferData={blankStudentTransfer}
               transferStatus={{}}
+              sectionId={53}
             />
           </Provider>
         )
@@ -257,11 +257,11 @@ export default storybook => {
             <UnconnectedManageStudentsTable
               studentData={wordAccountData}
               editingData={{}}
-              id={53}
               loginType={SectionLoginType.word}
               addStatus={{}}
               transferData={blankStudentTransfer}
               transferStatus={{}}
+              sectionId={53}
             />
           </Provider>
         )
@@ -274,11 +274,11 @@ export default storybook => {
             <UnconnectedManageStudentsTable
               studentData={pictureAccountData}
               editingData={{}}
-              id={53}
               loginType={SectionLoginType.picture}
               addStatus={{}}
               transferData={blankStudentTransfer}
               transferStatus={{}}
+              sectionId={53}
             />
           </Provider>
         )
@@ -291,11 +291,11 @@ export default storybook => {
             <UnconnectedManageStudentsTable
               studentData={googleData}
               editingData={{}}
-              id={53}
               loginType={SectionLoginType.google_classroom}
               addStatus={{}}
               transferData={blankStudentTransfer}
               transferStatus={{}}
+              sectionId={53}
             />
           </Provider>
         )
@@ -308,11 +308,11 @@ export default storybook => {
             <UnconnectedManageStudentsTable
               studentData={cleverData}
               editingData={{}}
-              id={53}
               loginType={SectionLoginType.clever}
               addStatus={{}}
               transferData={blankStudentTransfer}
               transferStatus={{}}
+              sectionId={53}
             />
           </Provider>
         )
