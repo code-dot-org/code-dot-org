@@ -2,7 +2,11 @@ import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {changeInterfaceMode, viewAnimationJson} from './actions';
+import {
+  changeInterfaceMode,
+  viewAnimationJson,
+  setMobileControlsConfig,
+} from './actions';
 import {startInAnimationTab} from './stateQueries';
 import {GameLabInterfaceMode, GAME_WIDTH} from './constants';
 import experiments from '../util/experiments';
@@ -174,7 +178,6 @@ GameLab.prototype.init = function (config) {
   this.skin.winAvatar = null;
   this.skin.failureAvatar = null;
   this.level = config.level;
-  this.showDPad = config.level.showDPad && config.share && dom.isMobile();
 
   this.shouldAutoRunSetup = config.level.autoRunSetup &&
     !this.level.edit_blocks;
@@ -468,10 +471,8 @@ GameLab.prototype.afterInject_ = function (config) {
     dom.addMouseDownTouchEvent(document.getElementById(ArrowIds[btn]),
         this.onArrowButtonDown.bind(this, ArrowIds[btn]));
   }
-  if (this.showDPad) {
-    dom.addMouseDownTouchEvent(document.getElementById('studio-dpad-button'),
-        this.onDPadButtonDown.bind(this));
-  }
+  dom.addMouseDownTouchEvent(document.getElementById('studio-dpad-button'),
+      this.onDPadButtonDown.bind(this));
   // Can't use dom.addMouseUpTouchEvent() because it will preventDefault on
   // all touchend events on the page, breaking click events...
   document.addEventListener('mouseup', this.onMouseUp.bind(this), false);
@@ -593,6 +594,7 @@ GameLab.prototype.reset = function () {
   this.executionError = null;
 
   // Soft buttons
+  this.mobileControlsConfig = reducers.defaultMobileControlsConfigState;
   var softButtonCount = 0;
   for (var i = 0; i < this.level.softButtons.length; i++) {
     document.getElementById(this.level.softButtons[i]).style.display = 'inline';
@@ -602,10 +604,7 @@ GameLab.prototype.reset = function () {
     $('#soft-buttons').removeClass('soft-buttons-none').addClass('soft-buttons-' + softButtonCount);
   }
 
-  if (this.showDPad) {
-    $('#studio-dpad').removeClass('studio-dpad-none');
-    this.resetDPad();
-  }
+  this.resetDPad();
 };
 
 GameLab.prototype.rerunSetupCode = function () {
@@ -939,7 +938,7 @@ GameLab.prototype.onDPadMouseMove = function (e) {
     clientY = e.touches[0].clientY;
   }
 
-  if (experiments.isEnabled('fourWayDPad')) {
+  if (this.mobileControlsConfig.dpadFourWay) {
     this.notifyKeysFourWayDPad(clientX, clientY);
   } else {
     this.notifyKeyEightWayDPad(window.p5.prototype.LEFT_ARROW, 'left', clientX, clientY);
@@ -996,6 +995,16 @@ GameLab.prototype.onMouseUp = function (e) {
   this.resetDPad();
 };
 
+Object.defineProperty(GameLab.prototype, 'mobileControlsConfig', {
+  enumerable: true,
+  get: function () {
+    return getStore().getState().mobileControlsConfig;
+  },
+  set: function (val) {
+    getStore().dispatch(setMobileControlsConfig(val));
+  },
+});
+
 /**
  * Execute the user's code.  Heaven help us...
  */
@@ -1017,7 +1026,7 @@ GameLab.prototype.execute = function (keepTicking = true) {
     return;
   }
 
-  this.gameLabP5.startExecution();
+  this.gameLabP5.startExecution(this);
   this.gameLabP5.setLoop(keepTicking);
 
   if (!this.JSInterpreter ||
