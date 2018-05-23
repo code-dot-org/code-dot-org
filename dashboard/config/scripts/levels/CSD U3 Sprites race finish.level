@@ -32,7 +32,6 @@
       "addOperator": null,
       "subtractOperator": null
     },
-    "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Make It Your Own\r\n\r\nKeep adding to this project and make it your own. Do you want to add a finish line? Do you want to make one racer a little bit faster than the others? Maybe you could add some text and give your race a name. There's a ton of ways you can make this animation a lot more interesting and exciting!\r\n\r\n<img src = \"https://images.code.org/387aec833f243632735c97b56ae6e64e-image-1466022313176.gif\" style=\"float:right; width:200px\">\r\n# Do This\r\n\r\n* **Keep adding your own touches to your race** using what you already know about drawing, sprites, and animation.",

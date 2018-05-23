@@ -32,7 +32,6 @@
     "debugger_disabled": "true",
     "markdown_instructions": "# Changing Fruit\r\n\r\nNow that we know how to use _if_ statements, you can do more than just check if the apple has reached a scale of 2. You turn it into a pear once it happens.\r\n\r\n# Do This\r\n\r\nUse a conditional in the draw loop to check whether `fruit.scale` is greater than 2.  If it is, change the fruit's animation to \"pear\".\r\n\r\n_Challenge: Can you also make the fruit stop growing once it turns into a pear?_",
     "callout_json": "[]",
-    "show_d_pad": "false",
     "project_template_level_name": "CSD U3 apple template-2018",
     "instructions_important": "false",
     "hide_animation_mode": "false",

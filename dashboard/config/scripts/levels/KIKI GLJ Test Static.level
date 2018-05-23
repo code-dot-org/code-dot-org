@@ -6,7 +6,6 @@
   "user_id": 9,
   "properties": {
     "skin": "gamelab",
-    "show_d_pad": "true",
     "show_debug_watch": "true",
     "embed": "false",
     "instructions_important": "false",
