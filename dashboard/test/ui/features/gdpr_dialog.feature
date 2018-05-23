@@ -34,3 +34,10 @@ Feature: GDPR Dialog - data transfer agreement
     Given I sign in as "Madame Maxime"
     # Confirm dialog closed and I can do something on this page
     And I create a new section
+
+  Scenario: EU student who accepted on sign up doesn't see the GDPR Dialog
+    Given I create a student in the eu named "Viktor Krum"
+    Given I am on "http://studio.code.org/home"
+    # Confirm dialog closed and I can do something on this page
+    Then I click selector "#header-student-projects"
+    Then check that I am on "http://studio.code.org/projects#/"
