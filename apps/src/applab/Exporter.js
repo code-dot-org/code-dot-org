@@ -230,11 +230,9 @@ function extractCSSFromHTML(el) {
 const fontAwesomeWOFFRelativeSourcePath = '/assets/fontawesome-webfont.woff2';
 const fontAwesomeWOFFPath = 'applab/fontawesome-webfont.woff2';
 
-function getExportConfigPath(baseHref) {
-  const curHref = window.location.href;
-  const curHrefWithoutEdit = curHref.slice(0, curHref.lastIndexOf('/') + 1);
-  baseHref = baseHref || curHrefWithoutEdit;
-  return `${baseHref}export_config?script_call=setExportConfig`;
+function getExportConfigPath() {
+  const baseHref = project.getShareUrl();
+  return `${baseHref}/export_config?script_call=setExportConfig`;
 }
 
 export default {
@@ -466,19 +464,22 @@ export default {
     const appOptionsJs = getAppOptionsFile();
     const { css, outerHTML } = transformLevelHtml(levelHtml);
     const fontAwesomeCSS = exportFontAwesomeCssEjs({fontPath: fontAwesomeWOFFPath});
-    const exportBaseHref = `https://studio.code.org/projects/applab/${project.getCurrentId()}/`;
-    const exportConfigPath = getExportConfigPath(exportBaseHref);
+    const exportConfigPath = getExportConfigPath();
+    const { origin } = window.location;
+    const applabApiPath = getEnvironmentPrefix() === 'cdo-development' ?
+        `${origin}/blockly/js/applab-api.js` :
+        `${origin}/blockly/js/applab-api.min.js`;
     const html = exportExpoIndexEjs({
       exportConfigPath,
       htmlBody: outerHTML,
-      commonLocalePath: "https://studio.code.org/blockly/js/en_us/common_locale.js",
-      applabLocalePath: "https://studio.code.org/blockly/js/en_us/applab_locale.js",
+      commonLocalePath: `${origin}/blockly/js/en_us/common_locale.js`,
+      applabLocalePath: `${origin}/blockly/js/en_us/applab_locale.js`,
       appOptionsPath: "appOptions.j",
       fontPath: fontAwesomeWOFFPath,
-      applabApiPath: "https://studio.code.org/blockly/js/applab-api.min.js",
+      applabApiPath,
       jQueryPath: "https://code.jquery.com/jquery-1.12.1.min.js",
-      commonCssPath: "https://studio.code.org/blockly/css/common.css",
-      applabCssPath: "https://studio.code.org/blockly/css/applab.css",
+      commonCssPath: `${origin}/blockly/css/common.css`,
+      applabCssPath: `${origin}/blockly/css/applab.css`,
     });
 
     const appAssets = generateAppAssets({ html, code });
@@ -617,7 +618,7 @@ function transformLevelHtml(levelHtml) {
 }
 
 function getEnvironmentPrefix() {
-  const hostname = window.location.hostname;
+  const { hostname } = window.location;
   if (hostname.includes("adhoc")) {
     // As adhoc hostnames may include other keywords, check it first.
     return "cdo-adhoc";
