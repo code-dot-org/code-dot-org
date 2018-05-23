@@ -15,7 +15,8 @@ from '@cdo/apps/code-studio/pd/workshop_dashboard/permission';
 const defaultProps = {
   permission: new Permission(),
   workshopId: 123,
-  viewUrl: "viewUrl"
+  viewUrl: "viewUrl",
+  date: new Date().toISOString()
 };
 
 describe("WorkshopManagement", () => {
