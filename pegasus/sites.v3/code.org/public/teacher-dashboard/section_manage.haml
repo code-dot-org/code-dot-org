@@ -6,15 +6,6 @@ content-type: text/ng-template
 
 #uitest-manage-tab
 
-  #bulk_import.panel.panel-default{"ng-show" => "bulk_import.editing"}
-    .panel-heading
-      = I18n.t('dashboard_students_add_multiple')
-    .panel-body
-      %textarea{"ng-model" => "bulk_import.students"}
-      %br/
-      %button.btn.btn-primary{"ng-click" => "add_bulk_import()"}= I18n.t('dashboard_action_done')
-      %button.btn.btn-white{"ng-click" => "clear_bulk_import()"}= I18n.t('dashboard_action_cancel')
-
   #react-sync-oauth-section{'ng-init' => '$emit("react-sync-oauth-section-rendered");'}
 
   %div.jumbotron{'ng-show' => "section.id && section.students.length <= 0 && section.login_type === 'google_classroom'", style: "line-height: 36px;"}
