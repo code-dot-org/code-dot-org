@@ -16,7 +16,8 @@ module Pd
         TYPE_HEADING = 'head'.freeze,
         TYPE_BUTTON = 'button'.freeze,
         TYPE_TEXT = 'text'.freeze,
-        TYPE_PAGEBREAK = 'pagebreak'.freeze
+        TYPE_PAGEBREAK = 'pagebreak'.freeze,
+        TYPE_DIVIDER = 'divider'.freeze
       ].freeze
 
       ANSWER_TYPES = [
