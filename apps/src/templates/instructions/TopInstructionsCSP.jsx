@@ -125,7 +125,7 @@ class TopInstructions extends Component {
     levelVideos: PropTypes.array,
     mapReference: PropTypes.string,
     referenceLinks: PropTypes.array,
-    viewAs: PropTypes.oneOf(['Teacher', 'Student']),
+    viewAs: PropTypes.oneOf(Object.keys(ViewType)),
     readOnlyWorkspace: PropTypes.bool
   };
 
@@ -345,7 +345,7 @@ class TopInstructions extends Component {
             {this.state.tabSelected === TabType.COMMENTS &&
               <TeacherFeedback
                 ref="commentTab"
-                internalFlag={displayFeedbackDev}
+                withUnreleasedFeatures={displayFeedbackDev}
               />
             }
           </div>

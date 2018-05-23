@@ -39,7 +39,7 @@ class TeacherFeedback extends Component {
   static propTypes = {
     viewAs: PropTypes.oneOf(['Teacher', 'Student']),
     //temp prop for which version to display (stable, released 2018-teacher-experience, or internal, developer version)
-    internalFlag: PropTypes.bool
+    withUnreleasedFeatures: PropTypes.bool
   };
 
   render() {
@@ -51,12 +51,12 @@ class TeacherFeedback extends Component {
     return (
       <div style={styles.container}>
         <div style={styles.header}>{i18n.forTeachersOnly()}</div>
-        {!this.props.internalFlag &&
-          <div style={styles.content}>Coming soon: You’ll be able to use this tab to give feedback to your students about
-            their work
+        {!this.props.withUnreleasedFeatures &&
+          <div style={styles.content}>
+            Coming soon: You’ll be able to use this tab to give feedback to your students about their work.
           </div>
         }
-        {this.props.internalFlag &&
+        {this.props.withUnreleasedFeatures &&
           <div>
             <textarea style={styles.textInput} type="text" placeholder={i18n.feedbackPlaceholder()}></textarea>
             <Button

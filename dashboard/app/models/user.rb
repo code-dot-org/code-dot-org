@@ -441,7 +441,8 @@ class User < ActiveRecord::Base
   ].freeze
 
   DATA_TRANSFER_AGREEMENT_SOURCE_TYPES = [
-    ACCOUNT_SIGN_UP = 'ACCOUNT_SIGN_UP'.freeze
+    ACCOUNT_SIGN_UP = 'ACCOUNT_SIGN_UP'.freeze,
+    ACCEPT_DATA_TRANSFER_DIALOG = 'ACCEPT_DATA_TRANSFER_DIALOG'.freeze
   ].freeze
 
   attr_accessor :login
