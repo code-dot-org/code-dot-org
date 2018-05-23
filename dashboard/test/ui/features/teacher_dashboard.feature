@@ -16,7 +16,7 @@ Feature: Using the teacher dashboard
     Given I am on "http://code.org/"
     And I am a teacher
     And I am on "http://code.org/teacher-dashboard?no_home_redirect=1&force_in_eu=1"
-    Then I wait to see "#ui-test-gdpr-dialog"
+    Then I wait to see ".ui-test-gdpr-dialog"
 
   Scenario: Loading student progress
     Given I create a teacher-associated student named "Sally"
