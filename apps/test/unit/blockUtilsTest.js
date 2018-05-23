@@ -465,7 +465,7 @@ describe('block utils', () => {
           getTitleValue: sinon.stub().returns('someVar'),
         };
         const code = generator['test_foo'].bind(fakeBlock)();
-        expect(code).to.equal('someVar = foo();\n');
+        expect(code).to.equal('someVar = foo(someVar);\n');
       });
     });
   });

@@ -792,7 +792,6 @@ exports.createJsWrapperBlockCreator = function (
         const inputCode = inputTypes[inputConfig.mode].generateCode(this, inputConfig);
         if (inputConfig.assignment) {
           prefix += `${inputCode} = `;
-          return null;
         }
         return inputCode;
       }).filter(value => value !== null).map(value => {
