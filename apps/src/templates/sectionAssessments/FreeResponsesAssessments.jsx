@@ -87,7 +87,10 @@ class FreeResponsesAssessments extends Component {
       //   console.log('what is rowid-->', rowData.id);
         console.log('item ', item.question)
         console.log('find question', find[index]);
+        console.log('response', item.response);
+        console
        return item.response;
+
       }
     });
 
