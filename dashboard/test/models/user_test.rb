@@ -978,6 +978,26 @@ class UserTest < ActiveSupport::TestCase
     assert old_password != student.encrypted_password
   end
 
+  test 'validates format of parent email on create' do
+    refute_creates User do
+      assert_raises Exception do
+        create :young_student, parent_email: 'bad_email_format@nowhere'
+      end
+    end
+  end
+
+  test 'validates format of parent email on update' do
+    student = create :young_student
+    assert student.valid?
+
+    student.parent_email = 'bad_email_format@nowhere'
+    refute student.valid?
+
+    refute student.save
+    assert_equal({parent_email: ['is invalid']}, student.errors.messages)
+    assert_equal({parent_email: [{error: :invalid}]}, student.errors.details)
+  end
+
   test 'send reset password for student without age' do
     email = 'email@email.xx'
     student = create :student, age: 10, email: email

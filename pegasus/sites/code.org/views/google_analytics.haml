@@ -4,7 +4,7 @@
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
   ga('create', 'UA-37745279-1', 'code.org');
-  
+
   var currentLocale = readCookie("language_");
   if (currentLocale && currentLocale != "")
   {
@@ -14,6 +14,8 @@
       ga('set', 'dimension1', currentLanguage);
     }
   }
+
+  ga('set', 'anonymizeIp', true);
 
   ga('send', 'pageview');
 

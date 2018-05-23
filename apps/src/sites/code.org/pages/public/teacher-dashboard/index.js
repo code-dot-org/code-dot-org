@@ -12,13 +12,12 @@ import { registerReducers, getStore } from '@cdo/apps/redux';
 import SectionProjectsList from '@cdo/apps/templates/projects/SectionProjectsList';
 import SectionProgress from '@cdo/apps/templates/sectionProgress/SectionProgress';
 import SectionAssessments from '@cdo/apps/templates/sectionAssessments/SectionAssessments';
+import GDPRDialog from '@cdo/apps/templates/GDPRDialog';
 import experiments from '@cdo/apps/util/experiments';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {
   renderSyncOauthSectionControl,
   unmountSyncOauthSectionControl,
-  renderLoginTypeControls,
-  unmountLoginTypeControls,
   renderSectionTable,
   renderStatsTable,
   renderTextResponsesTable
@@ -90,6 +89,18 @@ function renderSectionProgressReact(store) {
   );
 }
 
+$(document).ready(function () {
+  const gdprData = scriptData.gdpr;
+  const studioUrlPrefix = scriptData.studiourlprefix;
+  ReactDOM.render(
+    <GDPRDialog
+      isDialogOpen={gdprData.show_gdpr_dialog}
+      currentUserId={gdprData.current_user_id}
+      studioUrlPrefix={studioUrlPrefix}
+    />,
+    document.getElementById('gdpr-dialog')
+  );
+});
 //  Everything below was copied wholesale from index.haml, where we had no linting.
 // TODO (bjvanminnen): Fix remaining lint errors and re-enable rules.
 /* eslint-disable eqeqeq, no-unused-vars */
@@ -432,12 +443,8 @@ function main() {
         );
       });
 
-      $scope.$on('login-type-react-rendered', () => {
-        $scope.section.$promise.then(section => renderLoginTypeControls(section.id));
-      });
-
       $scope.$on('student-table-react-rendered', () => {
-        $scope.section.$promise.then(section => renderSectionTable(section));
+        $scope.section.$promise.then(section => renderSectionTable(section, scriptData.studiourlprefix));
         firehoseClient.putRecord(
           {
             study: 'teacher-dashboard',
@@ -449,7 +456,6 @@ function main() {
 
       $scope.$on('$destroy', () => {
         unmountSyncOauthSectionControl();
-        unmountLoginTypeControls();
       });
     }
 
@@ -499,17 +505,6 @@ function main() {
           $.each(resultStudents, function (index, student) {
             $scope.section.students.unshift(student);
           });
-        }).$promise.then(() => {
-          // If we started with zero students, we need to rerender login type
-          // controls so the correct options are available.
-          // Because 'temporary' students are included in $scope.section.students
-          // before we reach this save() action, if _all_ students are new
-          // students then we had zero saved students to begin with.
-          // TODO: Once everything is React this should become unnecessary.
-          if (newStudents.length === $scope.section.students.length) {
-            unmountLoginTypeControls();
-            renderLoginTypeControls($scope.section.id);
-          }
         }).catch($scope.genericError);
       }
 
@@ -533,15 +528,7 @@ function main() {
         function () {
           $scope.section.students.splice($scope.section.students.indexOf(student), 1); // remove from array
         }
-      ).then(() => {
-        // If we removed the last student, rerender login type controls so
-        // the correct options are available.
-        // TODO: Once everything is React this should become unnecessary.
-        if ($scope.section.students.length <= 0) {
-          unmountLoginTypeControls();
-          renderLoginTypeControls($scope.section.id);
-        }
-      }).catch($scope.genericError);
+      ).catch($scope.genericError);
     };
 
     $scope.cancel = function (student) {
