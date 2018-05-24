@@ -11,5 +11,8 @@ module EmailPreferenceConstants
     FORM_HOC_SIGN_UP = 'FORM_HOC_SIGN_UP'.freeze,
     FORM_CLASS_SUBMIT = 'FORM_CLASS_SUBMIT'.freeze,
     FORM_PETITION = 'FORM_PETITION'.freeze,
+    # A one-time automated script sets all Petition submissions younger than 16 and older than 13 to opted out to comply
+    # with GDPR.
+    AUTOMATED_OPT_OUT_UNDER_16 = 'AUTOMATED_OPT_OUT_UNDER_16'.freeze
   ].freeze
 end
