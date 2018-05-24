@@ -31,7 +31,7 @@ export default class GDPRDialog extends Component {
   handleYesClick = () => {
     this.setState({isDialogOpen: false});
     $.post(
-      `/api/v1/users/accept_data_transfer_agreement`, {user_id: this.props.currentUserId}
+      `/dashboardapi/v1/users/accept_data_transfer_agreement`, {user_id: this.props.currentUserId}
     );
   };
 
