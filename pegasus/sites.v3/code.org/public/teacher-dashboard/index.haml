@@ -63,7 +63,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
   user_properties = JSON.parse(dashboard_user[:properties])
   already_accepted = !user_properties["data_transfer_agreement_accepted"].nil?
   force_eu = !request.params['force_in_eu'].nil?
-  gdpr_data[:show_gdpr_dialog] = false
+  gdpr_data[:show_gdpr_dialog] = (request.gdpr? || force_eu) && !already_accepted
   gdpr_data[:current_user_id] = request.user_id
   data[:gdpr] = gdpr_data
 
