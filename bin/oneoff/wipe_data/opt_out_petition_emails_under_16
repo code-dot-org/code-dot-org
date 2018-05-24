@@ -27,7 +27,7 @@ def main
         email: petition[:email],
         opt_in: false,
         source: EmailPreferenceHelper::AUTOMATED_OPT_OUT_UNDER_16,
-        ip_address: '127.0.0.1',
+        ip_address: EmailPreferenceHelper::CODE_DOT_ORG,
         form_kind: '0'
       )
     end

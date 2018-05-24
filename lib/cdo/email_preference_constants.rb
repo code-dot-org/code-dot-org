@@ -1,4 +1,8 @@
 module EmailPreferenceConstants
+  # Use the loopback IP address when designating that an Opt In/Out preference was recorded by our systems on behalf
+  # of somebody (typically through an automated process).
+  CODE_DOT_ORG = '127.0.0.1'.freeze
+
   SOURCE_TYPES = [
     ACCOUNT_SIGN_UP = 'ACCOUNT_SIGN_UP'.freeze,
     ACCOUNT_TYPE_CHANGE = 'ACCOUNT_TYPE_CHANGE'.freeze,
