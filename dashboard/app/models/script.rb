@@ -596,6 +596,8 @@ class Script < ActiveRecord::Base
           hidden: script_data[:hidden].nil? ? true : script_data[:hidden], # default true
           login_required: script_data[:login_required].nil? ? false : script_data[:login_required], # default false
           wrapup_video: script_data[:wrapup_video],
+          new_name: script_data[:new_name],
+          family_name: script_data[:family_name],
           properties: Script.build_property_hash(script_data)
         }, stages]
       end
