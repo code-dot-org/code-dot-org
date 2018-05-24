@@ -139,6 +139,10 @@
     valid_password: "¡Contraseña válida!"
     invalid_password: La Contraseña debe tener al menos 6 caracteres
     mismatch_password: Las dos contraseñas que introdujo no coinciden
+    under_13_consent: Si soy menor de 13 años de edad, confirmo que tengo autorización de mi padres o de mi
+      tutor legal para utilizar los servicios de Code.org.
+    agree_us_website: Acepto usar un sitio web con sede en Estados Unidos.
+    my_data_to_us: Acepto que se envíen y almacenen datos de mi utilización de este sitio web en Estados Unidos.
     student_terms: Estoy de acuerdo a regirme por los <a href='http://code.org/tos'>términos
       de servicio</a> de Code.org. Si tengo menos de 13 años, confirmo al enviar este
       formulario que tengo el permiso de mi padre o tutor legal para usar los servicios
@@ -158,8 +162,9 @@
     field_is_required: es requerido
     accept_terms: Debes estar de acuerdo para crear una cuenta
     error: Ocurrió un error.
-    email_preference_question: Can we email you about updates to our courses, local
-      learning opportunities, or other computer science news?
+    email_preference_question: ¿Podemos enviarle por correo electrónico actualizaciones de nuestros cursos,
+      oportunidades en su zona u otras noticias sobre informática?
+    email_preference_privacy: (Consulte nuestra política de privacidad)
     email_preference_yes: Sí
     email_preference_no: 'No'
   school_info:

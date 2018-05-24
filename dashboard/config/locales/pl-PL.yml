@@ -137,6 +137,12 @@
     valid_password: Prawidłowe hasło!
     invalid_password: Hasło musi zawierać przynajmniej 6 znaków
     mismatch_password: Dwa hasła, które podałeś, nie są zgodne
+    under_13_consent: Jeżeli mam mniej niż 13 lat, potwierdzam, że mój rodzic lub opiekun
+      prawny wyraża zgodę na korzystanie przeze mnie ze strony Code.org services.
+    agree_us_website: Zgadzam się na korzystanie ze strony, której siedziba znajduje się w
+      Stanach Zjednoczonych.
+    my_data_to_us: Dane gromadzone podczas korzystania przeze mnie z tej witryny mogą być
+      wysyłane i przechowywane lub przetwarzane w Stanach Zjednoczonych.
     student_terms: Zgadzam się na ograniczenia wynikające <a href='http://code.org/tos'>
       z warunków korzystania z usług </a> oferowanych przez Code.org. Jeśli mam mniej
       niż 13 lat, to potwierdzam przesyłając ten formularz, że mam zgodę moich rodziców
@@ -155,6 +161,10 @@
     field_is_required: jest wymagane
     accept_terms: Musisz wyrazić zgodę, aby utworzyć konto
     error: Wystąpił błąd.
+    email_preference_question: Czy wyrażasz zgodę na otrzymywanie od nas wiadomości e-mail z
+      najnowszymi informacjami o naszych kursach, lokalnymi ofertami oraz innymi nowościami
+      informatycznymi?
+    email_preference_privacy: (Zobacz naszą Politykę prywatności)
   school_info:
     title: Informacja o Szkole (opcjonalne)
     school_country: Kraj

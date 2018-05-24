@@ -140,6 +140,11 @@
     valid_password: Parolă validă!
     invalid_password: Parola trebuie să conţină cel puțin 6 caractere
     mismatch_password: Cele două parole introduse nu se potrivesc
+    under_13_consent: Dacă am vârsta sub 13 ani, confirm că am permisiunea părintelui sau
+      tutorelui meu legal de a utiliza serviciile Code.org.
+    agree_us_website: Sunt de acord să folosesc un site web din Statele Unite.
+    my_data_to_us: Datele obținute în urma utilizării de către mine a acestui site pot fi
+      trimise și stocate sau prelucrate în Statele Unite.
     student_terms: Sunt de acord să respect Code.org <a href='http://code.org/tos'>
       termenii de serviciu</a>. Dacă am sub vârsta de 13 ani, confirm prin trimiterea
       acestui formular că am părinte sau tutore legal și permisiunea de a utiliza
@@ -158,6 +163,9 @@
     field_is_required: este necesar
     accept_terms: Trebuie să fii de acord pentru a crea un cont
     error: S-a produs o eroare.
+    email_preference_question: Sunteți de acord să vă trimitem prin e-mail actualizări cu privire
+      la cursurile noastre, oportunitățile locale sau alte știri din domeniul informaticii?
+    email_preference_privacy: (Vedeți politica noastră de confidențialitate)
   school_info:
     title: Informații școală (opțional)
     school_country: Țara școlii

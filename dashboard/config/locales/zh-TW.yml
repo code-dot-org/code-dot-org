@@ -118,6 +118,9 @@
     valid_password: 密碼有效！
     invalid_password: 密碼必須要 6 個字元以上
     mismatch_password: 你輸入的兩次密碼不一致
+    under_13_consent: 如果我未滿 13 歲，我確認已獲得我的父母或法定監護人的同意來使用 Code.org 服務。
+    agree_us_website: 我同意使用位於美國境內的網站。
+    my_data_to_us: 我在使用此網站時產生的數據資料可能會被系統傳送至並儲存在美國境內，或在美國境內進行處理。
     student_terms: 我同意接受Code.org<a href='http://code.org/tos'>服務條款</a>的約束。如果我未滿13歲，我透過這份文件，保證我有取得我的父母或是法律監護人的同意使用Code.org。<br/><br/>Code.org不會利用電子郵件主動與學生聯繫接觸，除了忘記密碼的時候。更多的詳細資訊，請見<a
       href='http://code.org/privacy'>隱私權政策</a>。
     teacher_terms: 我同意 Code.org 的服務條款約束。有關隱私的詳細資訊，請參閱我們的 <a href='Http://code.org/privacy'>
@@ -129,6 +132,8 @@
     field_is_required: 必填
     accept_terms: 你必須同意以建立一個帳戶
     error: 發生錯誤。
+    email_preference_question: 我們是否可以透過電子郵件向您發送有關我們課程、當地機會或其它計算機科學資訊的一些更新？
+    email_preference_privacy: （查看我們的隱私權政策）
   school_info:
     title: 學校資訊（非必填）
     school_country: 學校所屬國家

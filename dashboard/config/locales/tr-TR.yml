@@ -140,6 +140,12 @@
     valid_password: Geçerli parola!
     invalid_password: Parola en az 6 karakter olmalıdır
     mismatch_password: Girdiğiniz iki parola aynı değil
+    under_13_consent: "Eğer 13 yaşından küçüksem, Code.org hizmetlerini kullanmam için
+      ebeveynlerimin veya yasal vasimin izni olduğunu onaylıyorum."
+    agree_us_website: Amerika Birleşik Devletleri merkezli bir web sitesi kullanmayı
+      kabul ediyorum.
+    my_data_to_us: Bu siteyi kullanımıma ilişkin veriler Amerika Birleşik Devletleri’ne
+      gönderilebilir ve Amerika Birleşik Devletleri’nde depolanabilir veya işlenebilir.
     student_terms: Code.org <a href='http://code.org/tos'> hizmet şartlarına</a> bağlı
       olmayı kabul edersiniz. Eğer ben 13 yaşını altında isem, ebeveyn veya yasal
       velimin Code.org Hizmetlerini kullanma izni verdiğini bu formu göndererek onaylıyorum.
@@ -158,6 +164,9 @@
     field_is_required: gerekli
     accept_terms: Hesap oluşturmak için kabul etmelisiniz
     error: Bir hata oluştu.
+    email_preference_question: Size kurslarımızdaki yenilikler, yerel fırsatlar veya
+      diğer bilgisayar bilimi haberleriyle ilgili e-posta gönderebilir miyiz?
+    email_preference_privacy: (Gizlilik politikamıza bakın)
   school_info:
     title: Okul bilgileri (isteğe bağlı)
     school_country: Okulun bulunduğu ülke

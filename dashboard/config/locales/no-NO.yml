@@ -139,6 +139,9 @@
     valid_password: Gyldig passord!
     invalid_password: Passordet må bestå av minimum seks tegn
     mismatch_password: De to passordene du skrev inn samsvarer ikke
+    under_13_consent: Jeg er under 13 år og bekrefter jeg at har tillatelse fra mine foreldre eller verge til å bruke tjenestene til Code.org.
+    agree_us_website: Jeg aksepterer å bruke et nettsted som er basert i USA.
+    my_data_to_us: "Mine data fra bruken av dette nettstedet kan sendes til, lagres eller behandles i USA."
     student_terms: Jeg aksepterer <a href='http://code.org/tos'>brukerbetingelsene</a>  til
       Code.org. Hvis jeg er under 13 år, bekrefter jeg ved å sende inn dette skjemaet
       at jeg har tillatelse fra mine foreldre eller verge til å bruke tjenestene til
@@ -156,6 +159,8 @@
     field_is_required: må fylles ut
     accept_terms: Du må gå med på å opprette en konto
     error: En feil har oppstått.
+    email_preference_question: Kan vi sende deg nyheter om kursene våre, lokale jobbmuligheter eller andre IT-relaterte nyheter?
+    email_preference_privacy: (Se våre vilkår for personvern)
   school_info:
     title: Informasjon til skolen (valgfritt)
     school_country: Landet til skolen
