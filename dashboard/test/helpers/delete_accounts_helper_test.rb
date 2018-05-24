@@ -229,6 +229,23 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert user.valid?
   end
 
+  #
+  # Table: dashboard.activities
+  #
+
+  test "clears activities.level_source_id for all of user's activity" do
+    activity = create :activity
+    user = activity.user
+
+    assert Activity.where(user: user).any?(&:level_source),
+      'Expected an activity record that references a level_source to exist for this user'
+
+    purge_user user
+
+    refute Activity.where(user: user).any?(&:level_source),
+      'Expected no activity record that references a level source to exist for this user'
+  end
+
   private
 
   #
