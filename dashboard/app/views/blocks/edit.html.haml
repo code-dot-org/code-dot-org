@@ -1,7 +1,12 @@
+- content_for(:head) do
+  %script{src: minifiable_asset_path('js/blocks/edit.js')}
+
 %h1= @block.new_record? ? "New Block" : "Editing block #{@block.name}"
+#editor
 = form_for(@block,
   url: @block.new_record? ? blocks_path : block_path(id: @block.name),
   html: {id: 'edit-block-form', method: @block.new_record? ? 'post' : 'patch'},
+  remote: true,
 ) do |f|
   = f.label 'Level Type'
   = f.select :level_type, ['GamelabJr']
