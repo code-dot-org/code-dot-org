@@ -12,27 +12,21 @@ export const COLUMNS = {
 };
 
 const studentAnswerDataPropType = PropTypes.shape({
-  id:  PropTypes.string,
+  id:  PropTypes.number,
+  studentId: PropTypes.string,
   name: PropTypes.string,
   studentAnswers: PropTypes.array,
 });
 
-const answerDataPropType = PropTypes.shape({
-  multipleChoiceOption: PropTypes.string,
-  percentAnswered: PropTypes.number,
-  isCorrectAnswer: PropTypes.bool,
-});
-
 const questionDataPropType = PropTypes.shape({
-  id: PropTypes.number.isRequired,
-  question: PropTypes.string.isRequired,
-  answers: PropTypes.arrayOf(answerDataPropType),
-  notAnswered: PropTypes.number.isRequired,
+  id: PropTypes.number,
+  question: PropTypes.number.isRequired,
+  questionText: PropTypes.string.isRequired,
 });
 
 class FreeResponsesAssessments extends Component {
   static propTypes= {
-    questionAnswerData: PropTypes.arrayOf(questionDataPropType),
+    questionData: PropTypes.arrayOf(questionDataPropType),
     studentAnswerData: PropTypes.arrayOf(studentAnswerDataPropType)
   };
 
@@ -63,6 +57,30 @@ class FreeResponsesAssessments extends Component {
 
   studentResponseColumnFormatter = (studentAnswers, {rowData, rowIndex, columnIndex}) => {
 
+    // const questionObj = this.props.questionData.map(questionArr => {
+    //   return questionArr.question
+    // });
+
+    const questionObj = this.props.questionData;
+    const questionInfo = questionObj.map(quest => {
+        return quest.question
+    })
+
+    console.log('what is questionObj', questionInfo);
+
+    const studentData = this.props.studentAnswerData[rowIndex].studentAnswers;
+    const studentResponse = studentData.map((student, index) => {
+      if (student.question === questionInfo) {
+        console.log('studentquestion', student.question);
+        console.log('questionInfo', questionInfo)
+        console.log('studentResponse', student.response);
+        return student.response
+      }
+    });
+
+    console.log('student response,', studentResponse);
+
+
     // let studentResponse = '';
     // if(this.props.studentAnswerData[rowIndex]) {
     //   studentResponse = this.props.studentAnswerData[rowIndex]
@@ -73,28 +91,30 @@ class FreeResponsesAssessments extends Component {
     //       }
     //   }).response;
     // }
+    // console.log('rowData', rowData);
+    // const info = this.props.questionAnswerData
+    // console.log('ha', info);
+    // const find = info.map(item => {
+    //   return item.id
+    //  })
+    //  console.log('find', find);
 
-    const info = this.props.questionAnswerData
-    console.log('ha', info);
-    const find = info.map(item => {
-      return item.id
-     })
-     console.log('find', find);
+    // const studentData = this.props.studentAnswerData[rowIndex].studentAnswers;
+    // console.log('data is-->', studentData);
+    // const studentResponse = studentData.map((student, index) => {
+    //   if (student.question === find[index]) {
+    //   //   console.log('what is rowid-->', rowData.id);
+    //   console.log('need answer', find[index]);
+    //     console.log('item ', student.question)
+    //     console.log('find question', find[index]);
+    //     console.log('response', student.response);
 
-    const data = this.props.studentAnswerData[rowIndex].studentAnswers;
-    const studentResponse = data.map((item, index) => {
-      if (item.question === find[index]) {
-      //   console.log('what is rowid-->', rowData.id);
-        console.log('item ', item.question)
-        console.log('find question', find[index]);
-        console.log('response', item.response);
-        console
-       return item.response;
+    //    return student.response;
 
-      }
-    });
+    //   }
+    // });
 
-    console.log('studentResponse-->', studentResponse);
+    // console.log('studentResponse-->', studentResponse);
 
 
     return (
@@ -107,7 +127,7 @@ class FreeResponsesAssessments extends Component {
 
   studentNameColumnFormatter = (studentAnswers, {rowData, rowIndex}) => {
     const studentName = this.props.studentAnswerData[rowIndex].name;
-
+    console.log('what is the result', rowData.id );
     return (
       <MultipleChoiceAnswerCell
         id={rowData.id}
