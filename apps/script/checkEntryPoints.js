@@ -11,7 +11,7 @@
  * | |  error messages about your new entry point not conforming to naming        |-|
  * |-|  conventions.                                                              | |
  * | |                                                                            |-|
- * |-|  But what are the conventions you may ask?                                | |
+ * |-|  But what are the conventions you may ask?                                 | |
  * | |                                                                            |-|
  * |-|  1) Entry points should be in the src/sites/<site-name>/pages directory!   | |
  * | |  2) Entry points should only be referenced by one template file!           |-|
