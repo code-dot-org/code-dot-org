@@ -264,12 +264,12 @@ class CourseTest < ActiveSupport::TestCase
 
   test "valid_courses" do
     # The data here must be in sync with the data in ScriptConstants.rb
-    csp = create(:course, name: 'csp')
+    csp = create(:course, name: 'csp-2017')
     csp1 = create(:script, name: 'csp1')
     csp2 = create(:script, name: 'csp2')
     csp2_alt = create(:script, name: 'csp2-alt', hidden: true)
     csp3 = create(:script, name: 'csp3')
-    csd = create(:course, name: 'csd')
+    csd = create(:course, name: 'csd-2017')
     create(:course, name: 'madeup')
 
     create(:course_script, position: 1, course: csp, script: csp1)
@@ -294,7 +294,7 @@ class CourseTest < ActiveSupport::TestCase
 
     # has fields from ScriptConstants::Assignable_Info
     assert_equal csp.id, csp_assign_info[:id]
-    assert_equal 'csp', csp_assign_info[:script_name]
+    assert_equal 'csp-2017', csp_assign_info[:script_name]
     assert_equal 0, csp_assign_info[:position]
     assert_equal(0, csp_assign_info[:category_priority])
 
@@ -324,13 +324,13 @@ class CourseTest < ActiveSupport::TestCase
 
   test "valid_courses all versions" do
     # The data here must be in sync with the data in ScriptConstants.rb
-    csp = create(:course, name: 'csp')
+    csp = create(:course, name: 'csp-2017')
     csp1 = create(:script, name: 'csp1')
     csp2 = create(:script, name: 'csp2')
     csp2_alt = create(:script, name: 'csp2-alt', hidden: true)
     csp3 = create(:script, name: 'csp3')
     csp18 = create(:course, name: 'csp-2018')
-    csd = create(:course, name: 'csd')
+    csd = create(:course, name: 'csd-2017')
     csd18 = create(:course, name: 'csd-2018')
     create(:course, name: 'madeup')
 
@@ -358,7 +358,7 @@ class CourseTest < ActiveSupport::TestCase
 
     # has fields from ScriptConstants::Assignable_Info
     assert_equal csp.id, csp_assign_info[:id]
-    assert_equal 'csp', csp_assign_info[:script_name]
+    assert_equal 'csp-2017', csp_assign_info[:script_name]
     assert_equal 0, csp_assign_info[:position]
     assert_equal(0, csp_assign_info[:category_priority])
 

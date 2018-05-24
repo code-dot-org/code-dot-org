@@ -7483,7 +7483,7 @@
 
         <img src="https://images.code.org/1a997d78fcd88efeb9e6dc5a02aa88e8-image-1464706463138.53.58.png" width="125px" style="float:right">
 
-        Sometimes we want to tell our program what to do if a condition is `true`, but also what to do if it's `false`. Pressing the plus button at the bottom of your conditional block will give you another section called `else`. This `else` section is a fallback - it will get called whenever the condition in the `if` before it is `false`.
+        Sometimes we want to tell our program what to do if a condition is `true`, but also what to do if it's `false`. Pressing the plus button at the bottom of your conditional block will give you another section called `else`. This `else` section will be run whenever the condition in the `if` before it is `false`.
 
         # Do This
         The gears are back again. The last time you worked with them, you made them spin when the space bar is pressed. Instead of the gears only spinning when the space key is pressed, we want them to spin one way when the space key is pressed and spin the other way when it's not pressed.
@@ -13262,6 +13262,7 @@
 
         # Do This
         * Decode the two numbers from a the binary string.
+          * _Hint: You'll need to read the numbers in order, with the first answer using the first five bits, and the second answer using the five bits after that._
       CSD U5 binary 6-new_markdown_instruction: |-
         # Decoding multiple numbers
 
@@ -15642,7 +15643,7 @@
 
         <div markdown="1" style="float:right">
 
-        ![expandable](https://images.code.org/e5c325d8105a0cf7cf681d6eab898595-image-1507319516043.png)
+        ![expandable](https://images.code.org/3a67642609071cf6766c296b8ca5a68e-image-1526944857178.png)
 
         </div>
 
@@ -15658,7 +15659,7 @@
 
         <div markdown="1" style="float:right">
 
-        ![expandable](https://images.code.org/e5c325d8105a0cf7cf681d6eab898595-image-1507319516043.png)
+        ![expandable](https://images.code.org/3a67642609071cf6766c296b8ca5a68e-image-1526944857178.png)
 
         </div>
 
@@ -22110,7 +22111,7 @@
       CSPU5_U3 - Canvas - movementFunction fix Orig_markdown_instruction: |-
         # Fix the "Original" Button
 
-        Our "Original" button is now slightly broken because the effect it renders doesn't match our new free-form drawing which takes the movement of the mouse into account - it just draws fixed-size cricles.
+        Our "Original" button is now slightly broken because the effect it renders doesn't match our new free-form drawing which takes the movement of the mouse into account - it just draws fixed-size circles.
 
         Let's fix the "Original" button.
 
@@ -44034,7 +44035,7 @@
 
         **The contacts app you created in the previous lesson** is provided.
 
-         * Drag the `createRecord` block into the event handler code for the "createContactButton" and add it as the last lines of the function.
+         * Drag the `createRecord` block into the event handler code for the "saveContactButton" and add it as the last lines of the function.
          * Set the **first parameter** to be a descriptive table name like "myContacts."
          * Set the **second parameter** to object you created for the new contact (in the example the variable is called `newContact`.
          * Run the app and **add a new contact**.
@@ -47682,6 +47683,29 @@
         times, and then Play\n\nYou should see the original text emerge.  \n![](https://images.code.org/dc89d6c19c17adb23b6b5ff9a62c4583-image-1443574425182.gif)\n\n\nHow
         hard would it be to crack a message encrypted with this cipher? Does the length
         of the key make a difference?\n"
+      Virtual Pet 1_markdown_instruction: This is Geraldine, your new pet giraffe.
+        What do you think will happen if you press run and then click on her?
+      Virtual Pet 2_markdown_instruction: There's a mud puddle over in the corner.
+        Create an **event** so that when Geraldine touches the puddle, her color changes
+        to brown.
+      Virtual Pet 3_markdown_instruction: |-
+        We can’t have a dirty giraffe wandering around!  Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?
+
+        To reset the color, set it to white using this block:
+
+        ![](https://images.code.org/e98c7949116888b4229d4794f6cd2a82-image-1526512133821.06.05 PM.png)
+      Virtual Pet 4_markdown_instruction: We don't want to wait for the giraffe to
+        clean itself every time. Add a behavior to your soap to make it draggable,
+        then drag it over to clean the giraffe!
+      Virtual Pet 5_markdown_instruction: All of this play takes energy!  Add actions
+        to each event so that when the giraffe collides with each sprite, it gets
+        a little smaller (shrinks by 5).
+      Virtual Pet 6_markdown_instruction: A balanced diet is important! We have to
+        feed the giraffe to get its strength back. Add an apple that returns the giraffe
+        back to regular size when they touch.
+      Virtual Pet Freeplay_markdown_instruction: 'Freeplay: Can you add more special
+        items for your virtual pet? Can you give her some friends? What more can you
+        make your giraffe do? '
       Visual Accessibility_markdown_instruction: |-
         # Visual Accessibility: Color Contrast
 
@@ -48794,10 +48818,10 @@
           </block></xml> event block that is already in the workspace.
 
         Get Jorge to the flag to finish this level!
-      courseA_playLab_events4_markdown_instruction: Now, get Jorge to move right when
-        the right arrow button is clicked.
-      courseA_playLab_events4_2018_markdown_instruction: Now, get Jorge to move right
-        when the right arrow button is clicked.
+      courseA_playLab_events4_markdown_instruction: Now, add more blocks to get Jorge
+        to move right when the right arrow button is clicked.
+      courseA_playLab_events4_2018_markdown_instruction: Now, add another event block
+        to get Jorge to move right when the right arrow button is clicked.
       courseA_playLab_events5_markdown_instruction: Add events to have Jorge move
         up and down when the up arrow and down arrow buttons are pressed.
       courseA_playLab_events5_2018_markdown_instruction: Add events to have Jorge
@@ -48929,6 +48953,8 @@
       courseB_iceage_loops10_markdown_instruction: Help Scrat get all the way over
         to the acorn!
       courseB_iceage_loops11_markdown_instruction: Help Scrat get to the acorn!
+      courseB_iceage_loops11_forVideo_markdown_instruction: Help Scrat get to the
+        acorn!
       courseB_iceage_loops12_markdown_instruction: Get to the acorn any way you can!
       courseB_iceage_loops2_markdown_instruction: Use both <xml><block type="maze_moveWest"/></xml>
         and <xml><block type="maze_moveSouth"/></xml> blocks to get to the acorn!
@@ -52521,8 +52547,46 @@
       coursef_maze_ramp3_2018_markdown_instruction: "*\"This pig is ruffling my feathers.\"*\n\nThere
         is one extra block that is going to cause the bird to crash.  \nThrow it away
         by dragging it back to the toolbox."
+      cp1dlp-q1_markdown_instruction: "<br><br>\n\n# Unit 1 - Question 1\n**NOTE:**
+        Before you start this reflection, make sure you’ve reviewed the lessons in
+        this unit and have a good sense of the connections between lessons. If you
+        haven’t already reviewed the materials, do that now and come back to this
+        reflection later.\n\nFor this reflection, you’re going to consider the prompt
+        below and craft a written response that demonstrates your understanding of
+        the lessons as well as how to address teacher concerns about the unit . We
+        suggest you write your response in another text editor and copy it in here
+        once you are ready to submit.\n\n> **Prompt:**How would you respond to a teacher
+        who says, “I’m thinking about skipping Lesson 4? Some of my kids already know
+        binary and I don’t want them to be bored”\n\n## Getting Credit for Completing
+        this Reflection \n\n- Once you submit your reflection, your response to the
+        prompt above will be shared anonymously and read by your peers, and you will
+        read the work done by other facilitators. This give facilitators a chance
+        to learn from each other.\n- Your submission will also be given to an expert
+        reviewer. Expert reviewers will be looking for thoughtful and thorough answers
+        that demonstrate that you have spent time considering the reflection questions
+        listed above. Reviewers will have an opportunity to give feedback on your
+        submission, and you can respond to that feedback and resubmit.\n- In order
+        to get credit for completing this prompt, your expert review needs to say
+        \"Yes\" responded to the prompts fully. If reviewers don’t feel comfortable
+        making a decision about your task submission, they can elevate to an instructor
+        for review. You will always have a chance to address feedback from your reviewers
+        and resubmit your reflections! Reviewer feedback will show up at the bottom
+        of this page, once it’s available."
+      csd u5 recommender sample_markdown_instruction: "# Sample App\n\nHere is an
+        example of an app that uses data to help the user solve a problem.  With a
+        partner, play through the app a few times to see how it works.\n\nDiscuss
+        the following questions with your partner:\n\n* What choice does the app help
+        the user to make? \n* What data does it use to make that recommendation?\n*
+        How do you think the creators of the app decided on the algorithm that they
+        use to make the choice?"
       csd-post-survey-2017-FR_markdown_instruction: Anything else you'd like to say
         about your experience in the course?
+      csd-post-survey-2017-FR_2018_markdown_instruction: Please provide any other
+        feedback you have about your experience in the course.
+      csd-post-survey-2018-topics-liked-FR_markdown_instruction: Please provide any
+        other feedback you have about the units of this course.
+      csd-post-survey-2018-topics-want-FR_markdown_instruction: What other topics
+        are you interested in learning about in the future?
       csd-pulse-check-survey-1-free-response U1Ch2_markdown_instruction: Anything
         else you’d like your teacher to know?
       csd-pulse-check-survey-1-free-response U1Ch2_2018_markdown_instruction: Anything
@@ -52743,9 +52807,9 @@
         an expert reviewer. Expert reviewers will be looking for thoughtful and thorough
         answers that demonstrate that you have spent time considering the reflection
         questions listed above. Reviewers will have an opportunity to give feedback
-        on your submission, and you can respond to that feedback and resubmit.>- In
-        order to get credit for completing this prompt, your expert review needs to
-        say \"Yes\" responded to the prompts fully. If reviewers don’t feel comfortable
+        on your submission, and you can respond to that feedback and resubmit.\n-
+        In order to get credit for completing this prompt, your expert review needs
+        to say \"Yes\" responded to the prompts fully. If reviewers don’t feel comfortable
         making a decision about your task submission, they can elevate to an instructor
         for review. You will always have a chance to address feedback from your reviewers
         and resubmit your reflections! Reviewer feedback will show up at the bottom
@@ -52767,9 +52831,9 @@
         an expert reviewer. Expert reviewers will be looking for thoughtful and thorough
         answers that demonstrate that you have spent time considering the reflection
         questions listed above. Reviewers will have an opportunity to give feedback
-        on your submission, and you can respond to that feedback and resubmit.>- In
-        order to get credit for completing this prompt, your expert review needs to
-        say \"Yes\" responded to the prompts fully. If reviewers don’t feel comfortable
+        on your submission, and you can respond to that feedback and resubmit.\n-
+        In order to get credit for completing this prompt, your expert review needs
+        to say \"Yes\" responded to the prompts fully. If reviewers don’t feel comfortable
         making a decision about your task submission, they can elevate to an instructor
         for review. You will always have a chance to address feedback from your reviewers
         and resubmit your reflections! Reviewer feedback will show up at the bottom
@@ -52849,6 +52913,80 @@
         to address feedback from your reviewers and resubmit your reflections! Reviewer
         feedback will show up at the bottom of this page, once it’s available. \n
         \n\n\n"
+      csd2dlp-q1_markdown_instruction: "<br><br>\n\n# Unit 2 - Question 1\n**NOTE:**
+        Before you start this reflection, make sure you’ve reviewed the lessons in
+        this unit and have a good sense of the connections between lessons. If you
+        haven’t already reviewed the materials, do that now and come back to this
+        reflection later.\n\nFor this reflection, you’re going to consider the prompt
+        below and craft a written response that demonstrates your understanding of
+        the lessons as well as how to address teacher concerns about the unit . We
+        suggest you write your response in another text editor and copy it in here
+        once you are ready to submit.\n\n> **Prompt:** How would you respond to a
+        teacher who says, “I’m just going to put students on the computer and let
+        them go at their own pace?”\n\n## Getting Credit for Completing this Reflection
+        \n\n- Once you submit your reflection, your response to the prompt above will
+        be shared anonymously and read by your peers, and you will read the work done
+        by other facilitators. This give facilitators a chance to learn from each
+        other.\n- Your submission will also be given to an expert reviewer. Expert
+        reviewers will be looking for thoughtful and thorough answers that demonstrate
+        that you have spent time considering the reflection questions listed above.
+        Reviewers will have an opportunity to give feedback on your submission, and
+        you can respond to that feedback and resubmit.\n- In order to get credit for
+        completing this prompt, your expert review needs to say \"Yes\" responded
+        to the prompts fully. If reviewers don’t feel comfortable making a decision
+        about your task submission, they can elevate to an instructor for review.
+        You will always have a chance to address feedback from your reviewers and
+        resubmit your reflections! Reviewer feedback will show up at the bottom of
+        this page, once it’s available."
+      csd2dlp-q2_markdown_instruction: "<br><br>\n\n# Unit 2 - Question 2\n**NOTE:**
+        Before you start this reflection, make sure you’ve reviewed the lessons in
+        this unit and have a good sense of the connections between lessons. If you
+        haven’t already reviewed the materials, do that now and come back to this
+        reflection later.\n\nFor this reflection, you’re going to consider the prompt
+        below and craft a written response that demonstrates your understanding of
+        the lessons as well as how to address teacher concerns about the unit . We
+        suggest you write your response in another text editor and copy it in here
+        once you are ready to submit.\n\n> **Prompt:** How would you respond to a
+        teacher who says, “What are the benefits of using Web Lab instead of some
+        other web development editor?”\n\n## Getting Credit for Completing this Reflection
+        \n\n- Once you submit your reflection, your response to the prompt above will
+        be shared anonymously and read by your peers, and you will read the work done
+        by other facilitators. This give facilitators a chance to learn from each
+        other.\n- Your submission will also be given to an expert reviewer. Expert
+        reviewers will be looking for thoughtful and thorough answers that demonstrate
+        that you have spent time considering the reflection questions listed above.
+        Reviewers will have an opportunity to give feedback on your submission, and
+        you can respond to that feedback and resubmit.\n- In order to get credit for
+        completing this prompt, your expert review needs to say \"Yes\" responded
+        to the prompts fully. If reviewers don’t feel comfortable making a decision
+        about your task submission, they can elevate to an instructor for review.
+        You will always have a chance to address feedback from your reviewers and
+        resubmit your reflections! Reviewer feedback will show up at the bottom of
+        this page, once it’s available."
+      csd2dlp-q3_markdown_instruction: "<br><br>\n\n# Unit 2 - Question 3\n**NOTE:**
+        Before you start this reflection, make sure you’ve reviewed the lessons in
+        this unit and have a good sense of the connections between lessons. If you
+        haven’t already reviewed the materials, do that now and come back to this
+        reflection later.\n\nFor this reflection, you’re going to consider the prompt
+        below and craft a written response that demonstrates your understanding of
+        the lessons as well as how to address teacher concerns about the unit . We
+        suggest you write your response in another text editor and copy it in here
+        once you are ready to submit.\n\n> **Prompt:** How would you respond to a
+        teacher who says, “How should I assess my students’ learning in this unit?”\n\n##
+        Getting Credit for Completing this Reflection \n\n- Once you submit your reflection,
+        your response to the prompt above will be shared anonymously and read by your
+        peers, and you will read the work done by other facilitators. This give facilitators
+        a chance to learn from each other.\n- Your submission will also be given to
+        an expert reviewer. Expert reviewers will be looking for thoughtful and thorough
+        answers that demonstrate that you have spent time considering the reflection
+        questions listed above. Reviewers will have an opportunity to give feedback
+        on your submission, and you can respond to that feedback and resubmit.\n-
+        In order to get credit for completing this prompt, your expert review needs
+        to say \"Yes\" responded to the prompts fully. If reviewers don’t feel comfortable
+        making a decision about your task submission, they can elevate to an instructor
+        for review. You will always have a chance to address feedback from your reviewers
+        and resubmit your reflections! Reviewer feedback will show up at the bottom
+        of this page, once it’s available."
       csd2dlp-tools_markdown_instruction: "\n\n<br><br>\n\n> **NOTE: before you start
         this reflection, make sure you’ve reviewed the lesson in Unit 2, and have
         a good sense of the the role of tools in the lessons. If you haven’t already
@@ -52930,6 +53068,80 @@
         You will always have a chance to address feedback from your reviewers and
         resubmit your reflections! Reviewer feedback will show up at the bottom of
         this page, once it’s available. \n \n\n\n"
+      csd3dlp-q1_markdown_instruction: "<br><br>\n\n# Unit 3 - Question 1\n**NOTE:**
+        Before you start this reflection, make sure you’ve reviewed the lessons in
+        this unit and have a good sense of the connections between lessons. If you
+        haven’t already reviewed the materials, do that now and come back to this
+        reflection later.\n\nFor this reflection, you’re going to consider the prompt
+        below and craft a written response that demonstrates your understanding of
+        the lessons as well as how to address teacher concerns about the unit . We
+        suggest you write your response in another text editor and copy it in here
+        once you are ready to submit.\n\n> **Prompt:** How would you respond to a
+        teacher who says, “This unit is really long. What should I skip in order to
+        get through all the material?”\n\n\n## Getting Credit for Completing this
+        Reflection \n\n- Once you submit your reflection, your response to the prompt
+        above will be shared anonymously and read by your peers, and you will read
+        the work done by other facilitators. This give facilitators a chance to learn
+        from each other.\n- Your submission will also be given to an expert reviewer.
+        Expert reviewers will be looking for thoughtful and thorough answers that
+        demonstrate that you have spent time considering the reflection questions
+        listed above. Reviewers will have an opportunity to give feedback on your
+        submission, and you can respond to that feedback and resubmit.\n- In order
+        to get credit for completing this prompt, your expert review needs to say
+        \"Yes\" responded to the prompts fully. If reviewers don’t feel comfortable
+        making a decision about your task submission, they can elevate to an instructor
+        for review. You will always have a chance to address feedback from your reviewers
+        and resubmit your reflections! Reviewer feedback will show up at the bottom
+        of this page, once it’s available."
+      csd3dlp-q2_markdown_instruction: "<br><br>\n\n# Unit 3 - Question 2\n**NOTE:**
+        Before you start this reflection, make sure you’ve reviewed the lessons in
+        this unit and have a good sense of the connections between lessons. If you
+        haven’t already reviewed the materials, do that now and come back to this
+        reflection later.\n\nFor this reflection, you’re going to consider the prompt
+        below and craft a written response that demonstrates your understanding of
+        the lessons as well as how to address teacher concerns about the unit . We
+        suggest you write your response in another text editor and copy it in here
+        once you are ready to submit.\n\n> **Prompt:** How would you respond to a
+        teacher who says, “I have students with a wide range of backgrounds with programming.
+        How do I differentiate for those needs? What supports are in the curriculum?”\n\n##
+        Getting Credit for Completing this Reflection \n\n- Once you submit your reflection,
+        your response to the prompt above will be shared anonymously and read by your
+        peers, and you will read the work done by other facilitators. This give facilitators
+        a chance to learn from each other.\n- Your submission will also be given to
+        an expert reviewer. Expert reviewers will be looking for thoughtful and thorough
+        answers that demonstrate that you have spent time considering the reflection
+        questions listed above. Reviewers will have an opportunity to give feedback
+        on your submission, and you can respond to that feedback and resubmit.\n-
+        In order to get credit for completing this prompt, your expert review needs
+        to say \"Yes\" responded to the prompts fully. If reviewers don’t feel comfortable
+        making a decision about your task submission, they can elevate to an instructor
+        for review. You will always have a chance to address feedback from your reviewers
+        and resubmit your reflections! Reviewer feedback will show up at the bottom
+        of this page, once it’s available."
+      csd3dlp-q3_markdown_instruction: "<br><br>\n\n# Unit 3 - Question 3\n**NOTE:**
+        Before you start this reflection, make sure you’ve reviewed the lessons in
+        this unit and have a good sense of the connections between lessons. If you
+        haven’t already reviewed the materials, do that now and come back to this
+        reflection later.\n\nFor this reflection, you’re going to consider the prompt
+        below and craft a written response that demonstrates your understanding of
+        the lessons as well as how to address teacher concerns about the unit . We
+        suggest you write your response in another text editor and copy it in here
+        once you are ready to submit.\n\n> **Prompt:** How would you respond to a
+        teacher who says, “What are the benefits of using Game Lab instead of some
+        other tool?”\n\n## Getting Credit for Completing this Reflection \n\n- Once
+        you submit your reflection, your response to the prompt above will be shared
+        anonymously and read by your peers, and you will read the work done by other
+        facilitators. This give facilitators a chance to learn from each other.\n-
+        Your submission will also be given to an expert reviewer. Expert reviewers
+        will be looking for thoughtful and thorough answers that demonstrate that
+        you have spent time considering the reflection questions listed above. Reviewers
+        will have an opportunity to give feedback on your submission, and you can
+        respond to that feedback and resubmit.\n- In order to get credit for completing
+        this prompt, your expert review needs to say \"Yes\" responded to the prompts
+        fully. If reviewers don’t feel comfortable making a decision about your task
+        submission, they can elevate to an instructor for review. You will always
+        have a chance to address feedback from your reviewers and resubmit your reflections!
+        Reviewer feedback will show up at the bottom of this page, once it’s available."
       csd3dlp-tools_markdown_instruction: "\n\n<br><br>\n\n> **NOTE: before you start
         this reflection, make sure you’ve reviewed the lesson in Unit 3, and have
         a good sense of the the role of tools in the lessons. If you haven’t already
@@ -53012,6 +53224,82 @@
         for review. You will always have a chance to address feedback from your reviewers
         and resubmit your reflections! Reviewer feedback will show up at the bottom
         of this page, once it’s available. \n \n\n"
+      csd4dlp-q1_markdown_instruction: "<br><br>\n\n# Unit 4 - Question 1\n**NOTE:**
+        Before you start this reflection, make sure you’ve reviewed the lessons in
+        this unit and have a good sense of the connections between lessons. If you
+        haven’t already reviewed the materials, do that now and come back to this
+        reflection later.\n\nFor this reflection, you’re going to consider the prompt
+        below and craft a written response that demonstrates your understanding of
+        the lessons as well as how to address teacher concerns about the unit . We
+        suggest you write your response in another text editor and copy it in here
+        once you are ready to submit.\n\n> **Prompt:** How would you respond to a
+        teacher who says, “Why do my students spend so much time unplugged in this
+        unit - won't they want to keep programming after unit 3?”\n\n## Getting Credit
+        for Completing this Reflection \n\n- Once you submit your reflection, your
+        response to the prompt above will be shared anonymously and read by your peers,
+        and you will read the work done by other facilitators. This give facilitators
+        a chance to learn from each other.\n- Your submission will also be given to
+        an expert reviewer. Expert reviewers will be looking for thoughtful and thorough
+        answers that demonstrate that you have spent time considering the reflection
+        questions listed above. Reviewers will have an opportunity to give feedback
+        on your submission, and you can respond to that feedback and resubmit.\n-
+        In order to get credit for completing this prompt, your expert review needs
+        to say \"Yes\" responded to the prompts fully. If reviewers don’t feel comfortable
+        making a decision about your task submission, they can elevate to an instructor
+        for review. You will always have a chance to address feedback from your reviewers
+        and resubmit your reflections! Reviewer feedback will show up at the bottom
+        of this page, once it’s available."
+      csd4dlp-q2_markdown_instruction: "<br><br>\n\n# Unit 4 - Question 2\n**NOTE:**
+        Before you start this reflection, make sure you’ve reviewed the lessons in
+        this unit and have a good sense of the connections between lessons. If you
+        haven’t already reviewed the materials, do that now and come back to this
+        reflection later.\n\nFor this reflection, you’re going to consider the prompt
+        below and craft a written response that demonstrates your understanding of
+        the lessons as well as how to address teacher concerns about the unit . We
+        suggest you write your response in another text editor and copy it in here
+        once you are ready to submit.\n\n> **Prompt:** How would you respond to a
+        teacher who says, “I read that this unit is supposed to expose students to
+        roles in the software industry besides the well-known job of programmer. How
+        do I learn more about those job opportunities so I can help my students better
+        understand them?”\n\n## Getting Credit for Completing this Reflection \n\n-
+        Once you submit your reflection, your response to the prompt above will be
+        shared anonymously and read by your peers, and you will read the work done
+        by other facilitators. This give facilitators a chance to learn from each
+        other.\n- Your submission will also be given to an expert reviewer. Expert
+        reviewers will be looking for thoughtful and thorough answers that demonstrate
+        that you have spent time considering the reflection questions listed above.
+        Reviewers will have an opportunity to give feedback on your submission, and
+        you can respond to that feedback and resubmit.\n- In order to get credit for
+        completing this prompt, your expert review needs to say \"Yes\" responded
+        to the prompts fully. If reviewers don’t feel comfortable making a decision
+        about your task submission, they can elevate to an instructor for review.
+        You will always have a chance to address feedback from your reviewers and
+        resubmit your reflections! Reviewer feedback will show up at the bottom of
+        this page, once it’s available."
+      csd4dlp-q3_markdown_instruction: "<br><br>\n\n# Unit 4 - Question 3\n**NOTE:**
+        Before you start this reflection, make sure you’ve reviewed the lessons in
+        this unit and have a good sense of the connections between lessons. If you
+        haven’t already reviewed the materials, do that now and come back to this
+        reflection later.\n\nFor this reflection, you’re going to consider the prompt
+        below and craft a written response that demonstrates your understanding of
+        the lessons as well as how to address teacher concerns about the unit . We
+        suggest you write your response in another text editor and copy it in here
+        once you are ready to submit.\n\n> **Prompt:** How would you respond to a
+        teacher who says, “Do I need to use App Lab to achieve the goals of this unit?”\n\n##
+        Getting Credit for Completing this Reflection \n\n- Once you submit your reflection,
+        your response to the prompt above will be shared anonymously and read by your
+        peers, and you will read the work done by other facilitators. This give facilitators
+        a chance to learn from each other.\n- Your submission will also be given to
+        an expert reviewer. Expert reviewers will be looking for thoughtful and thorough
+        answers that demonstrate that you have spent time considering the reflection
+        questions listed above. Reviewers will have an opportunity to give feedback
+        on your submission, and you can respond to that feedback and resubmit.\n-
+        In order to get credit for completing this prompt, your expert review needs
+        to say \"Yes\" responded to the prompts fully. If reviewers don’t feel comfortable
+        making a decision about your task submission, they can elevate to an instructor
+        for review. You will always have a chance to address feedback from your reviewers
+        and resubmit your reflections! Reviewer feedback will show up at the bottom
+        of this page, once it’s available."
       csd4dlp-tools_markdown_instruction: "\n\n<br><br>\n\n> **NOTE: before you start
         this reflection, make sure you’ve reviewed the lesson in Unit 4, and have
         a good sense of the the role of tools in the lessons. If you haven’t already
@@ -53089,6 +53377,81 @@
         to address feedback from your reviewers and resubmit your reflections! Reviewer
         feedback will show up at the bottom of this page, once it’s available. \n
         \n\n"
+      csd5dlp-q1_markdown_instruction: "<br><br>\n\n# Unit 5 - Question 1\n**NOTE:**
+        Before you start this reflection, make sure you’ve reviewed the lessons in
+        this unit and have a good sense of the connections between lessons. If you
+        haven’t already reviewed the materials, do that now and come back to this
+        reflection later.\n\nFor this reflection, you’re going to consider the prompt
+        below and craft a written response that demonstrates your understanding of
+        the lessons as well as how to address teacher concerns about the unit . We
+        suggest you write your response in another text editor and copy it in here
+        once you are ready to submit.\n\n> **Prompt:** How would you respond to a
+        teacher who says, “What is the connection between the first chapter of the
+        unit and the second chapter of the unit?”\n\n## Getting Credit for Completing
+        this Reflection \n\n- Once you submit your reflection, your response to the
+        prompt above will be shared anonymously and read by your peers, and you will
+        read the work done by other facilitators. This give facilitators a chance
+        to learn from each other.\n- Your submission will also be given to an expert
+        reviewer. Expert reviewers will be looking for thoughtful and thorough answers
+        that demonstrate that you have spent time considering the reflection questions
+        listed above. Reviewers will have an opportunity to give feedback on your
+        submission, and you can respond to that feedback and resubmit.\n- In order
+        to get credit for completing this prompt, your expert review needs to say
+        \"Yes\" responded to the prompts fully. If reviewers don’t feel comfortable
+        making a decision about your task submission, they can elevate to an instructor
+        for review. You will always have a chance to address feedback from your reviewers
+        and resubmit your reflections! Reviewer feedback will show up at the bottom
+        of this page, once it’s available."
+      csd5dlp-q2_markdown_instruction: "<br><br>\n\n# Unit 5 - Question 2\n**NOTE:**
+        Before you start this reflection, make sure you’ve reviewed the lessons in
+        this unit and have a good sense of the connections between lessons. If you
+        haven’t already reviewed the materials, do that now and come back to this
+        reflection later.\n\nFor this reflection, you’re going to consider the prompt
+        below and craft a written response that demonstrates your understanding of
+        the lessons as well as how to address teacher concerns about the unit . We
+        suggest you write your response in another text editor and copy it in here
+        once you are ready to submit.\n\n> **Prompt:** This unit makes the use of
+        an optional tool (teachers can use a spreadsheet tool if they want). If a
+        teacher asked about whether to use a tool or not, what kind of things would
+        you say or ask in response to support them?\n\n## Getting Credit for Completing
+        this Reflection \n\n- Once you submit your reflection, your response to the
+        prompt above will be shared anonymously and read by your peers, and you will
+        read the work done by other facilitators. This give facilitators a chance
+        to learn from each other.\n- Your submission will also be given to an expert
+        reviewer. Expert reviewers will be looking for thoughtful and thorough answers
+        that demonstrate that you have spent time considering the reflection questions
+        listed above. Reviewers will have an opportunity to give feedback on your
+        submission, and you can respond to that feedback and resubmit.\n- In order
+        to get credit for completing this prompt, your expert review needs to say
+        \"Yes\" responded to the prompts fully. If reviewers don’t feel comfortable
+        making a decision about your task submission, they can elevate to an instructor
+        for review. You will always have a chance to address feedback from your reviewers
+        and resubmit your reflections! Reviewer feedback will show up at the bottom
+        of this page, once it’s available."
+      csd5dlp-q3_markdown_instruction: "<br><br>\n\n# Unit 5 - Question 3\n**NOTE:**
+        Before you start this reflection, make sure you’ve reviewed the lessons in
+        this unit and have a good sense of the connections between lessons. If you
+        haven’t already reviewed the materials, do that now and come back to this
+        reflection later.\n\nFor this reflection, you’re going to consider the prompt
+        below and craft a written response that demonstrates your understanding of
+        the lessons as well as how to address teacher concerns about the unit . We
+        suggest you write your response in another text editor and copy it in here
+        once you are ready to submit.\n\n> **Prompt:** How would you respond to a
+        teacher who says, “What are my students supposed to take away at the end of
+        this unit?”\n\n## Getting Credit for Completing this Reflection \n\n- Once
+        you submit your reflection, your response to the prompt above will be shared
+        anonymously and read by your peers, and you will read the work done by other
+        facilitators. This give facilitators a chance to learn from each other.\n-
+        Your submission will also be given to an expert reviewer. Expert reviewers
+        will be looking for thoughtful and thorough answers that demonstrate that
+        you have spent time considering the reflection questions listed above. Reviewers
+        will have an opportunity to give feedback on your submission, and you can
+        respond to that feedback and resubmit.\n- In order to get credit for completing
+        this prompt, your expert review needs to say \"Yes\" responded to the prompts
+        fully. If reviewers don’t feel comfortable making a decision about your task
+        submission, they can elevate to an instructor for review. You will always
+        have a chance to address feedback from your reviewers and resubmit your reflections!
+        Reviewer feedback will show up at the bottom of this page, once it’s available."
       csd5dlp-tools_markdown_instruction: "\n\n<br><br>\n\n> **NOTE: before you start
         this reflection, make sure you’ve reviewed the lesson in Unit 5, and have
         a good sense of the the role of tools in the lessons. If you haven’t already
@@ -53166,6 +53529,81 @@
         for review. You will always have a chance to address feedback from your reviewers
         and resubmit your reflections! Reviewer feedback will show up at the bottom
         of this page, once it’s available. \n \n\n"
+      csd6dlp-q1_markdown_instruction: "<br><br>\n\n# Unit 6 - Question 1\n**NOTE:**
+        Before you start this reflection, make sure you’ve reviewed the lessons in
+        this unit and have a good sense of the connections between lessons. If you
+        haven’t already reviewed the materials, do that now and come back to this
+        reflection later.\n\nFor this reflection, you’re going to consider the prompt
+        below and craft a written response that demonstrates your understanding of
+        the lessons as well as how to address teacher concerns about the unit . We
+        suggest you write your response in another text editor and copy it in here
+        once you are ready to submit.\n\n> **Prompt:** How would you respond to a
+        teacher who says, “Do I need to do Unit 3 before I teach students Unit 6?
+        Why?”\n\n## Getting Credit for Completing this Reflection \n\n- Once you submit
+        your reflection, your response to the prompt above will be shared anonymously
+        and read by your peers, and you will read the work done by other facilitators.
+        This give facilitators a chance to learn from each other.\n- Your submission
+        will also be given to an expert reviewer. Expert reviewers will be looking
+        for thoughtful and thorough answers that demonstrate that you have spent time
+        considering the reflection questions listed above. Reviewers will have an
+        opportunity to give feedback on your submission, and you can respond to that
+        feedback and resubmit.\n- In order to get credit for completing this prompt,
+        your expert review needs to say \"Yes\" responded to the prompts fully. If
+        reviewers don’t feel comfortable making a decision about your task submission,
+        they can elevate to an instructor for review. You will always have a chance
+        to address feedback from your reviewers and resubmit your reflections! Reviewer
+        feedback will show up at the bottom of this page, once it’s available."
+      csd6dlp-q2_markdown_instruction: "<br><br>\n\n# Unit 6 - Question 2\n**NOTE:**
+        Before you start this reflection, make sure you’ve reviewed the lessons in
+        this unit and have a good sense of the connections between lessons. If you
+        haven’t already reviewed the materials, do that now and come back to this
+        reflection later.\n\nFor this reflection, you’re going to consider the prompt
+        below and craft a written response that demonstrates your understanding of
+        the lessons as well as how to address teacher concerns about the unit . We
+        suggest you write your response in another text editor and copy it in here
+        once you are ready to submit.\n\n> **Prompt:** How would you respond to a
+        teacher who says, “I don’t know much about physical computing. What do I need
+        to do to be successful teaching this unit?”\n\n## Getting Credit for Completing
+        this Reflection \n\n- Once you submit your reflection, your response to the
+        prompt above will be shared anonymously and read by your peers, and you will
+        read the work done by other facilitators. This give facilitators a chance
+        to learn from each other.\n- Your submission will also be given to an expert
+        reviewer. Expert reviewers will be looking for thoughtful and thorough answers
+        that demonstrate that you have spent time considering the reflection questions
+        listed above. Reviewers will have an opportunity to give feedback on your
+        submission, and you can respond to that feedback and resubmit.\n- In order
+        to get credit for completing this prompt, your expert review needs to say
+        \"Yes\" responded to the prompts fully. If reviewers don’t feel comfortable
+        making a decision about your task submission, they can elevate to an instructor
+        for review. You will always have a chance to address feedback from your reviewers
+        and resubmit your reflections! Reviewer feedback will show up at the bottom
+        of this page, once it’s available."
+      csd6dlp-q3_markdown_instruction: "<br><br>\n\n# Unit 6 - Question 3\n**NOTE:**
+        Before you start this reflection, make sure you’ve reviewed the lessons in
+        this unit and have a good sense of the connections between lessons. If you
+        haven’t already reviewed the materials, do that now and come back to this
+        reflection later.\n\nFor this reflection, you’re going to consider the prompt
+        below and craft a written response that demonstrates your understanding of
+        the lessons as well as how to address teacher concerns about the unit . We
+        suggest you write your response in another text editor and copy it in here
+        once you are ready to submit.\n\n> **Prompt:** How would you respond to a
+        teacher who says, “How is programming in App Lab different than programming
+        in Game Lab? If my students want to work on projects outside of the ones in
+        the curriculum how do I know which tool I should use when?”\n\n## Getting
+        Credit for Completing this Reflection \n\n- Once you submit your reflection,
+        your response to the prompt above will be shared anonymously and read by your
+        peers, and you will read the work done by other facilitators. This give facilitators
+        a chance to learn from each other.\n- Your submission will also be given to
+        an expert reviewer. Expert reviewers will be looking for thoughtful and thorough
+        answers that demonstrate that you have spent time considering the reflection
+        questions listed above. Reviewers will have an opportunity to give feedback
+        on your submission, and you can respond to that feedback and resubmit.\n-
+        In order to get credit for completing this prompt, your expert review needs
+        to say \"Yes\" responded to the prompts fully. If reviewers don’t feel comfortable
+        making a decision about your task submission, they can elevate to an instructor
+        for review. You will always have a chance to address feedback from your reviewers
+        and resubmit your reflections! Reviewer feedback will show up at the bottom
+        of this page, once it’s available."
       csd6dlp-tools_markdown_instruction: "\n\n<br><br>\n\n> **NOTE: before you start
         this reflection, make sure you’ve reviewed the lesson in Unit 6, and have
         a good sense of the the role of tools in the lessons. If you haven’t already
@@ -53190,14 +53628,163 @@
         for review. You will always have a chance to address feedback from your reviewers
         and resubmit your reflections! Reviewer feedback will show up at the bottom
         of this page, once it’s available. \n \n\n"
+      csp-create-dlp-q1_markdown_instruction: "<br><br>\n\n# Create - Question 1\n**NOTE:**
+        Before you start this reflection, make sure you’ve reviewed the lessons in
+        this unit and have a good sense of the connections between lessons. If you
+        haven’t already reviewed the materials, do that now and come back to this
+        reflection later.\n\nFor this reflection, you’re going to consider the prompt
+        below and craft a written response that demonstrates your understanding of
+        the lessons as well as how to address teacher concerns about the unit . We
+        suggest you write your response in another text editor and copy it in here
+        once you are ready to submit.\n\n> **Prompt:** How would you respond to a
+        teacher who says, “What supports exist in the curriculum to help my students
+        prepare for the Create Task?”\n\n## Getting Credit for Completing this Reflection
+        \n\n- Once you submit your reflection, your response to the prompt above will
+        be shared anonymously and read by your peers, and you will read the work done
+        by other facilitators. This give facilitators a chance to learn from each
+        other.\n- Your submission will also be given to an expert reviewer. Expert
+        reviewers will be looking for thoughtful and thorough answers that demonstrate
+        that you have spent time considering the reflection questions listed above.
+        Reviewers will have an opportunity to give feedback on your submission, and
+        you can respond to that feedback and resubmit.\n- In order to get credit for
+        completing this prompt, your expert review needs to say \"Yes\" responded
+        to the prompts fully. If reviewers don’t feel comfortable making a decision
+        about your task submission, they can elevate to an instructor for review.
+        You will always have a chance to address feedback from your reviewers and
+        resubmit your reflections! Reviewer feedback will show up at the bottom of
+        this page, once it’s available."
+      csp-create-dlp-q2_markdown_instruction: "<br><br>\n\n# Create - Question 2\n**NOTE:**
+        Before you start this reflection, make sure you’ve reviewed the lessons in
+        this unit and have a good sense of the connections between lessons. If you
+        haven’t already reviewed the materials, do that now and come back to this
+        reflection later.\n\nFor this reflection, you’re going to consider the prompt
+        below and craft a written response that demonstrates your understanding of
+        the lessons as well as how to address teacher concerns about the unit . We
+        suggest you write your response in another text editor and copy it in here
+        once you are ready to submit.\n\n> **Prompt:** How would you respond to a
+        teacher who says, “Do students have to use App Lab for the Create Task?”\n\n##
+        Getting Credit for Completing this Reflection \n\n- Once you submit your reflection,
+        your response to the prompt above will be shared anonymously and read by your
+        peers, and you will read the work done by other facilitators. This give facilitators
+        a chance to learn from each other.\n- Your submission will also be given to
+        an expert reviewer. Expert reviewers will be looking for thoughtful and thorough
+        answers that demonstrate that you have spent time considering the reflection
+        questions listed above. Reviewers will have an opportunity to give feedback
+        on your submission, and you can respond to that feedback and resubmit.\n-
+        In order to get credit for completing this prompt, your expert review needs
+        to say \"Yes\" responded to the prompts fully. If reviewers don’t feel comfortable
+        making a decision about your task submission, they can elevate to an instructor
+        for review. You will always have a chance to address feedback from your reviewers
+        and resubmit your reflections! Reviewer feedback will show up at the bottom
+        of this page, once it’s available."
+      csp-create-dlp-q3_markdown_instruction: "<br><br>\n\n# Create - Question 3\n**NOTE:**
+        Before you start this reflection, make sure you’ve reviewed the lessons in
+        this unit and have a good sense of the connections between lessons. If you
+        haven’t already reviewed the materials, do that now and come back to this
+        reflection later.\n\nFor this reflection, you’re going to consider the prompt
+        below and craft a written response that demonstrates your understanding of
+        the lessons as well as how to address teacher concerns about the unit . We
+        suggest you write your response in another text editor and copy it in here
+        once you are ready to submit.\n\n> **Prompt:** How would you respond to a
+        teacher who says, “How do I have my students complete the Create Task? How
+        much can I help them?”\n\n## Getting Credit for Completing this Reflection
+        \n\n- Once you submit your reflection, your response to the prompt above will
+        be shared anonymously and read by your peers, and you will read the work done
+        by other facilitators. This give facilitators a chance to learn from each
+        other.\n- Your submission will also be given to an expert reviewer. Expert
+        reviewers will be looking for thoughtful and thorough answers that demonstrate
+        that you have spent time considering the reflection questions listed above.
+        Reviewers will have an opportunity to give feedback on your submission, and
+        you can respond to that feedback and resubmit.\n- In order to get credit for
+        completing this prompt, your expert review needs to say \"Yes\" responded
+        to the prompts fully. If reviewers don’t feel comfortable making a decision
+        about your task submission, they can elevate to an instructor for review.
+        You will always have a chance to address feedback from your reviewers and
+        resubmit your reflections! Reviewer feedback will show up at the bottom of
+        this page, once it’s available."
+      csp-explore-dlp-q1_markdown_instruction: "<br><br>\n\n# Explore - Question 1\n**NOTE:**
+        Before you start this reflection, make sure you’ve reviewed the lessons in
+        this unit and have a good sense of the connections between lessons. If you
+        haven’t already reviewed the materials, do that now and come back to this
+        reflection later.\n\nFor this reflection, you’re going to consider the prompt
+        below and craft a written response that demonstrates your understanding of
+        the lessons as well as how to address teacher concerns about the unit . We
+        suggest you write your response in another text editor and copy it in here
+        once you are ready to submit.\n\n> **Prompt:** How would you respond to a
+        teacher who says, “What supports exist in the curriculum to help my students
+        prepare for the Explore Task?”\n\n## Getting Credit for Completing this Reflection
+        \n\n- Once you submit your reflection, your response to the prompt above will
+        be shared anonymously and read by your peers, and you will read the work done
+        by other facilitators. This give facilitators a chance to learn from each
+        other.\n- Your submission will also be given to an expert reviewer. Expert
+        reviewers will be looking for thoughtful and thorough answers that demonstrate
+        that you have spent time considering the reflection questions listed above.
+        Reviewers will have an opportunity to give feedback on your submission, and
+        you can respond to that feedback and resubmit.\n- In order to get credit for
+        completing this prompt, your expert review needs to say \"Yes\" responded
+        to the prompts fully. If reviewers don’t feel comfortable making a decision
+        about your task submission, they can elevate to an instructor for review.
+        You will always have a chance to address feedback from your reviewers and
+        resubmit your reflections! Reviewer feedback will show up at the bottom of
+        this page, once it’s available."
+      csp-explore-dlp-q2_markdown_instruction: "<br><br>\n\n# Explore - Question 2\n**NOTE:**
+        Before you start this reflection, make sure you’ve reviewed the lessons in
+        this unit and have a good sense of the connections between lessons. If you
+        haven’t already reviewed the materials, do that now and come back to this
+        reflection later.\n\nFor this reflection, you’re going to consider the prompt
+        below and craft a written response that demonstrates your understanding of
+        the lessons as well as how to address teacher concerns about the unit . We
+        suggest you write your response in another text editor and copy it in here
+        once you are ready to submit.\n\n> **Prompt:** How would you respond to a
+        teacher who says, “What tools will students need access to in order to complete
+        the Explore Task?”\n\n## Getting Credit for Completing this Reflection \n\n-
+        Once you submit your reflection, your response to the prompt above will be
+        shared anonymously and read by your peers, and you will read the work done
+        by other facilitators. This give facilitators a chance to learn from each
+        other.\n- Your submission will also be given to an expert reviewer. Expert
+        reviewers will be looking for thoughtful and thorough answers that demonstrate
+        that you have spent time considering the reflection questions listed above.
+        Reviewers will have an opportunity to give feedback on your submission, and
+        you can respond to that feedback and resubmit.\n- In order to get credit for
+        completing this prompt, your expert review needs to say \"Yes\" responded
+        to the prompts fully. If reviewers don’t feel comfortable making a decision
+        about your task submission, they can elevate to an instructor for review.
+        You will always have a chance to address feedback from your reviewers and
+        resubmit your reflections! Reviewer feedback will show up at the bottom of
+        this page, once it’s available."
+      csp-explore-dlp-q3_markdown_instruction: "<br><br>\n\n# Explore - Question 3\n**NOTE:**
+        Before you start this reflection, make sure you’ve reviewed the lessons in
+        this unit and have a good sense of the connections between lessons. If you
+        haven’t already reviewed the materials, do that now and come back to this
+        reflection later.\n\nFor this reflection, you’re going to consider the prompt
+        below and craft a written response that demonstrates your understanding of
+        the lessons as well as how to address teacher concerns about the unit . We
+        suggest you write your response in another text editor and copy it in here
+        once you are ready to submit.\n\n> **Prompt:** How would you respond to a
+        teacher who says, “How do I have my students complete the Explore Task? How
+        much can I help them?”\n\n## Getting Credit for Completing this Reflection
+        \n\n- Once you submit your reflection, your response to the prompt above will
+        be shared anonymously and read by your peers, and you will read the work done
+        by other facilitators. This give facilitators a chance to learn from each
+        other.\n- Your submission will also be given to an expert reviewer. Expert
+        reviewers will be looking for thoughtful and thorough answers that demonstrate
+        that you have spent time considering the reflection questions listed above.
+        Reviewers will have an opportunity to give feedback on your submission, and
+        you can respond to that feedback and resubmit.\n- In order to get credit for
+        completing this prompt, your expert review needs to say \"Yes\" responded
+        to the prompts fully. If reviewers don’t feel comfortable making a decision
+        about your task submission, they can elevate to an instructor for review.
+        You will always have a chance to address feedback from your reviewers and
+        resubmit your reflections! Reviewer feedback will show up at the bottom of
+        this page, once it’s available."
       csp-post-survey-2017-FR_markdown_instruction: Anything else you'd like to say
         about your experience in the course?
       csp-post-survey-2017-FR_2018_markdown_instruction: Final thoughts about the
         course or your experience.
       csp-post-survey-2017-q36-e_markdown_instruction: 'I worry because of another
         reason:'
-      csp-post-survey-2017-q36-e_2018_markdown_instruction: 'I worried because of
-        another reason:'
+      csp-post-survey-2017-q36-e_2018_markdown_instruction: 'I worry because of another
+        reason:'
       csp-post-survey-2018-PT-feedback-FR_markdown_instruction: Any other feedback
         about the AP Exam or Performance Tasks?
       csp-post-survey-2018-topics-liked-FR_markdown_instruction: Please provide any
@@ -53343,6 +53930,84 @@
         Simulator to a new teacher who is interested in using it?\n\n* In what ways
         is Internet Simulator an educational rather than professional tool? \n* What
         teaching philosophy seems most effective with the Internet Simulator? \n"
+      csp1-dlp-q1_markdown_instruction: "<br><br>\n\n# Unit 1 - Question 1\n**NOTE:**
+        Before you start this reflection, make sure you’ve reviewed the lessons in
+        this unit and have a good sense of the connections between lessons. If you
+        haven’t already reviewed the materials, do that now and come back to this
+        reflection later.\n\nFor this reflection, you’re going to consider the prompt
+        below and craft a written response that demonstrates your understanding of
+        the lessons as well as how to address teacher concerns about the unit . We
+        suggest you write your response in another text editor and copy it in here
+        once you are ready to submit.\n\n> **Prompt:** How would you respond to a
+        teacher who says, “I’m thinking about skipping Lesson 4? Some of my kids already
+        know binary and I don’t want them to be bored”\n\n## Getting Credit for Completing
+        this Reflection \n\n- Once you submit your reflection, your response to the
+        prompt above will be shared anonymously and read by your peers, and you will
+        read the work done by other facilitators. This give facilitators a chance
+        to learn from each other.\n- Your submission will also be given to an expert
+        reviewer. Expert reviewers will be looking for thoughtful and thorough answers
+        that demonstrate that you have spent time considering the reflection questions
+        listed above. Reviewers will have an opportunity to give feedback on your
+        submission, and you can respond to that feedback and resubmit.\n- In order
+        to get credit for completing this prompt, your expert review needs to say
+        \"Yes\" responded to the prompts fully. If reviewers don’t feel comfortable
+        making a decision about your task submission, they can elevate to an instructor
+        for review. You will always have a chance to address feedback from your reviewers
+        and resubmit your reflections! Reviewer feedback will show up at the bottom
+        of this page, once it’s available."
+      csp1-dlp-q2_markdown_instruction: "<br><br>\n\n# Unit 1 - Question 2\n**NOTE:**
+        Before you start this reflection, make sure you’ve reviewed the lessons in
+        this unit and have a good sense of the connections between lessons. If you
+        haven’t already reviewed the materials, do that now and come back to this
+        reflection later.\n\nFor this reflection, you’re going to consider the prompt
+        below and craft a written response that demonstrates your understanding of
+        the lessons as well as how to address teacher concerns about the unit . We
+        suggest you write your response in another text editor and copy it in here
+        once you are ready to submit.\n\n> **Prompt:** How would you respond to a
+        teacher who says,  “I always struggle to get access to computers at the beginning
+        of the year. How should I approach the first unit, and especially the plugged
+        lessons if my students don’t have access to computers yet?”\n\n## Getting
+        Credit for Completing this Reflection \n\n- Once you submit your reflection,
+        your response to the prompt above will be shared anonymously and read by your
+        peers, and you will read the work done by other facilitators. This give facilitators
+        a chance to learn from each other.\n- Your submission will also be given to
+        an expert reviewer. Expert reviewers will be looking for thoughtful and thorough
+        answers that demonstrate that you have spent time considering the reflection
+        questions listed above. Reviewers will have an opportunity to give feedback
+        on your submission, and you can respond to that feedback and resubmit.\n-
+        In order to get credit for completing this prompt, your expert review needs
+        to say \"Yes\" responded to the prompts fully. If reviewers don’t feel comfortable
+        making a decision about your task submission, they can elevate to an instructor
+        for review. You will always have a chance to address feedback from your reviewers
+        and resubmit your reflections! Reviewer feedback will show up at the bottom
+        of this page, once it’s available."
+      csp1-dlp-q3_markdown_instruction: "<br><br>\n\n# Unit 1 - Question 3\n**NOTE:**
+        Before you start this reflection, make sure you’ve reviewed the lessons in
+        this unit and have a good sense of the connections between lessons. If you
+        haven’t already reviewed the materials, do that now and come back to this
+        reflection later.\n\nFor this reflection, you’re going to consider the prompt
+        below and craft a written response that demonstrates your understanding of
+        the lessons as well as how to address teacher concerns about the unit . We
+        suggest you write your response in another text editor and copy it in here
+        once you are ready to submit.\n\n> **Prompt:** How would you respond to a
+        teacher who says, “My students seem to be having a lot of fun doing the lessons
+        and using the internet simulator but it’s taking me forever to get through
+        the material. How do I know when students have learned the content in a lesson
+        so I can stop and move on to the next lesson?”\n\n## Getting Credit for Completing
+        this Reflection \n\n- Once you submit your reflection, your response to the
+        prompt above will be shared anonymously and read by your peers, and you will
+        read the work done by other facilitators. This give facilitators a chance
+        to learn from each other.\n- Your submission will also be given to an expert
+        reviewer. Expert reviewers will be looking for thoughtful and thorough answers
+        that demonstrate that you have spent time considering the reflection questions
+        listed above. Reviewers will have an opportunity to give feedback on your
+        submission, and you can respond to that feedback and resubmit.\n- In order
+        to get credit for completing this prompt, your expert review needs to say
+        \"Yes\" responded to the prompts fully. If reviewers don’t feel comfortable
+        making a decision about your task submission, they can elevate to an instructor
+        for review. You will always have a chance to address feedback from your reviewers
+        and resubmit your reflections! Reviewer feedback will show up at the bottom
+        of this page, once it’s available."
       csp1dlp-assessment_markdown_instruction: "\n\n<br><br>\n\n> **NOTE: before you
         start this reflection, make sure you’ve reviewed the lesson in Unit 1, and
         have a good sense of the the role of assessment across the unit. If you haven’t
@@ -53424,6 +54089,82 @@
         have a chance to address feedback from your reviewers and resubmit your reflections!
         Reviewer feedback will show up at the bottom of this page, once it’s available.
         \n \n\n\n"
+      csp2-dlp-q1_markdown_instruction: "<br><br>\n\n# Unit 2 - Question 1\n**NOTE:**
+        Before you start this reflection, make sure you’ve reviewed the lessons in
+        this unit and have a good sense of the connections between lessons. If you
+        haven’t already reviewed the materials, do that now and come back to this
+        reflection later.\n\nFor this reflection, you’re going to consider the prompt
+        below and craft a written response that demonstrates your understanding of
+        the lessons as well as how to address teacher concerns about the unit . We
+        suggest you write your response in another text editor and copy it in here
+        once you are ready to submit.\n\n> **Prompt:** How would you respond to a
+        teacher who says “I feel like my students have fun using the widgets in this
+        unit but sometimes I’m worried this isn’t really connected to the AP test.
+        How can I be sure students are actually learning what they need to know?”\n\n##
+        Getting Credit for Completing this Reflection \n\n- Once you submit your reflection,
+        your response to the prompt above will be shared anonymously and read by your
+        peers, and you will read the work done by other facilitators. This give facilitators
+        a chance to learn from each other.\n- Your submission will also be given to
+        an expert reviewer. Expert reviewers will be looking for thoughtful and thorough
+        answers that demonstrate that you have spent time considering the reflection
+        questions listed above. Reviewers will have an opportunity to give feedback
+        on your submission, and you can respond to that feedback and resubmit.\n-
+        In order to get credit for completing this prompt, your expert review needs
+        to say \"Yes\" responded to the prompts fully. If reviewers don’t feel comfortable
+        making a decision about your task submission, they can elevate to an instructor
+        for review. You will always have a chance to address feedback from your reviewers
+        and resubmit your reflections! Reviewer feedback will show up at the bottom
+        of this page, once it’s available."
+      csp2-dlp-q2_markdown_instruction: "<br><br>\n\n# Unit 2 - Question 2\n**NOTE:**
+        Before you start this reflection, make sure you’ve reviewed the lessons in
+        this unit and have a good sense of the connections between lessons. If you
+        haven’t already reviewed the materials, do that now and come back to this
+        reflection later.\n\nFor this reflection, you’re going to consider the prompt
+        below and craft a written response that demonstrates your understanding of
+        the lessons as well as how to address teacher concerns about the unit . We
+        suggest you write your response in another text editor and copy it in here
+        once you are ready to submit.\n\n> **Prompt:** How would you respond to a
+        teacher who asks “My students struggled with some of the research tasks in
+        Lessons 5 and 6 of this unit. What do you recommend I do to help them prepare
+        for AP exam?”\n\n## Getting Credit for Completing this Reflection \n\n- Once
+        you submit your reflection, your response to the prompt above will be shared
+        anonymously and read by your peers, and you will read the work done by other
+        facilitators. This give facilitators a chance to learn from each other.\n-
+        Your submission will also be given to an expert reviewer. Expert reviewers
+        will be looking for thoughtful and thorough answers that demonstrate that
+        you have spent time considering the reflection questions listed above. Reviewers
+        will have an opportunity to give feedback on your submission, and you can
+        respond to that feedback and resubmit.\n- In order to get credit for completing
+        this prompt, your expert review needs to say \"Yes\" responded to the prompts
+        fully. If reviewers don’t feel comfortable making a decision about your task
+        submission, they can elevate to an instructor for review. You will always
+        have a chance to address feedback from your reviewers and resubmit your reflections!
+        Reviewer feedback will show up at the bottom of this page, once it’s available."
+      csp2-dlp-q3_markdown_instruction: "<br><br>\n\n# Unit 2 - Question 3\n**NOTE:**
+        Before you start this reflection, make sure you’ve reviewed the lessons in
+        this unit and have a good sense of the connections between lessons. If you
+        haven’t already reviewed the materials, do that now and come back to this
+        reflection later.\n\nFor this reflection, you’re going to consider the prompt
+        below and craft a written response that demonstrates your understanding of
+        the lessons as well as how to address teacher concerns about the unit . We
+        suggest you write your response in another text editor and copy it in here
+        once you are ready to submit.\n\n> **Prompt:** How would you respond to a
+        teacher who says, “I don’t plan to have my students take the AP exam. Should
+        they still do the projects that are practice PTs?”\n\n## Getting Credit for
+        Completing this Reflection \n\n- Once you submit your reflection, your response
+        to the prompt above will be shared anonymously and read by your peers, and
+        you will read the work done by other facilitators. This give facilitators
+        a chance to learn from each other.\n- Your submission will also be given to
+        an expert reviewer. Expert reviewers will be looking for thoughtful and thorough
+        answers that demonstrate that you have spent time considering the reflection
+        questions listed above. Reviewers will have an opportunity to give feedback
+        on your submission, and you can respond to that feedback and resubmit.\n-
+        In order to get credit for completing this prompt, your expert review needs
+        to say \"Yes\" responded to the prompts fully. If reviewers don’t feel comfortable
+        making a decision about your task submission, they can elevate to an instructor
+        for review. You will always have a chance to address feedback from your reviewers
+        and resubmit your reflections! Reviewer feedback will show up at the bottom
+        of this page, once it’s available."
       csp2dlp-assessment_markdown_instruction: "\n\n<br><br>\n\n> **NOTE: before you
         start this reflection, make sure you’ve reviewed the lesson in Unit 2, and
         have a good sense of the the role of assessment across the unit. If you haven’t
@@ -53504,6 +54245,81 @@
         to address feedback from your reviewers and resubmit your reflections! Reviewer
         feedback will show up at the bottom of this page, once it’s available. \n
         \n"
+      csp3-dlp-q1_markdown_instruction: "<br><br>\n\n# Unit 3 - Question 1\n**NOTE:**
+        Before you start this reflection, make sure you’ve reviewed the lessons in
+        this unit and have a good sense of the connections between lessons. If you
+        haven’t already reviewed the materials, do that now and come back to this
+        reflection later.\n\nFor this reflection, you’re going to consider the prompt
+        below and craft a written response that demonstrates your understanding of
+        the lessons as well as how to address teacher concerns about the unit . We
+        suggest you write your response in another text editor and copy it in here
+        once you are ready to submit.\n\n> **Prompt:** How would you respond to a
+        teacher who says, “I really just want to get my kids on the computer and doing
+        real programming is it ok to just skip lesson 1-3 and jump right into App
+        Lab?\n\n## Getting Credit for Completing this Reflection \n\n- Once you submit
+        your reflection, your response to the prompt above will be shared anonymously
+        and read by your peers, and you will read the work done by other facilitators.
+        This give facilitators a chance to learn from each other.\n- Your submission
+        will also be given to an expert reviewer. Expert reviewers will be looking
+        for thoughtful and thorough answers that demonstrate that you have spent time
+        considering the reflection questions listed above. Reviewers will have an
+        opportunity to give feedback on your submission, and you can respond to that
+        feedback and resubmit.\n- In order to get credit for completing this prompt,
+        your expert review needs to say \"Yes\" responded to the prompts fully. If
+        reviewers don’t feel comfortable making a decision about your task submission,
+        they can elevate to an instructor for review. You will always have a chance
+        to address feedback from your reviewers and resubmit your reflections! Reviewer
+        feedback will show up at the bottom of this page, once it’s available."
+      csp3-dlp-q2_markdown_instruction: "<br><br>\n\n# Unit 3 - Question 2\n**NOTE:**
+        Before you start this reflection, make sure you’ve reviewed the lessons in
+        this unit and have a good sense of the connections between lessons. If you
+        haven’t already reviewed the materials, do that now and come back to this
+        reflection later.\n\nFor this reflection, you’re going to consider the prompt
+        below and craft a written response that demonstrates your understanding of
+        the lessons as well as how to address teacher concerns about the unit . We
+        suggest you write your response in another text editor and copy it in here
+        once you are ready to submit.\n\n> **Prompt:** How would you respond to a
+        teacher who says, “I have students with a wide range of backgrounds with programming.
+        How do I differentiate for those needs? What supports are in the curriculum?”\n\n##
+        Getting Credit for Completing this Reflection \n\n- Once you submit your reflection,
+        your response to the prompt above will be shared anonymously and read by your
+        peers, and you will read the work done by other facilitators. This give facilitators
+        a chance to learn from each other.\n- Your submission will also be given to
+        an expert reviewer. Expert reviewers will be looking for thoughtful and thorough
+        answers that demonstrate that you have spent time considering the reflection
+        questions listed above. Reviewers will have an opportunity to give feedback
+        on your submission, and you can respond to that feedback and resubmit.\n-
+        In order to get credit for completing this prompt, your expert review needs
+        to say \"Yes\" responded to the prompts fully. If reviewers don’t feel comfortable
+        making a decision about your task submission, they can elevate to an instructor
+        for review. You will always have a chance to address feedback from your reviewers
+        and resubmit your reflections! Reviewer feedback will show up at the bottom
+        of this page, once it’s available."
+      csp3-dlp-q3_markdown_instruction: "<br><br>\n\n# Unit 3 - Question 3\n**NOTE:**
+        Before you start this reflection, make sure you’ve reviewed the lessons in
+        this unit and have a good sense of the connections between lessons. If you
+        haven’t already reviewed the materials, do that now and come back to this
+        reflection later.\n\nFor this reflection, you’re going to consider the prompt
+        below and craft a written response that demonstrates your understanding of
+        the lessons as well as how to address teacher concerns about the unit . We
+        suggest you write your response in another text editor and copy it in here
+        once you are ready to submit.\n\n> **Prompt:** How would you respond to a
+        teacher who says, “I’m not sure what my role as the teacher is during plugged
+        lessons. I feel like I just put them on the computer and wait for a question.”\n\n##
+        Getting Credit for Completing this Reflection \n\n- Once you submit your reflection,
+        your response to the prompt above will be shared anonymously and read by your
+        peers, and you will read the work done by other facilitators. This give facilitators
+        a chance to learn from each other.\n- Your submission will also be given to
+        an expert reviewer. Expert reviewers will be looking for thoughtful and thorough
+        answers that demonstrate that you have spent time considering the reflection
+        questions listed above. Reviewers will have an opportunity to give feedback
+        on your submission, and you can respond to that feedback and resubmit.\n-
+        In order to get credit for completing this prompt, your expert review needs
+        to say \"Yes\" responded to the prompts fully. If reviewers don’t feel comfortable
+        making a decision about your task submission, they can elevate to an instructor
+        for review. You will always have a chance to address feedback from your reviewers
+        and resubmit your reflections! Reviewer feedback will show up at the bottom
+        of this page, once it’s available."
       csp3dlp-assessment_markdown_instruction: "\n\n<br><br>\n\n> **NOTE: before you
         start this reflection, make sure you’ve reviewed the lesson in Unit 3, and
         have a good sense of the the role of assessment across the unit. If you haven’t
@@ -53586,6 +54402,82 @@
         have a chance to address feedback from your reviewers and resubmit your reflections!
         Reviewer feedback will show up at the bottom of this page, once it’s available.
         \n \n"
+      csp4-dlp-q1_markdown_instruction: "<br><br>\n\n# Unit 4 - Question 1\n**NOTE:**
+        Before you start this reflection, make sure you’ve reviewed the lessons in
+        this unit and have a good sense of the connections between lessons. If you
+        haven’t already reviewed the materials, do that now and come back to this
+        reflection later.\n\nFor this reflection, you’re going to consider the prompt
+        below and craft a written response that demonstrates your understanding of
+        the lessons as well as how to address teacher concerns about the unit . We
+        suggest you write your response in another text editor and copy it in here
+        once you are ready to submit.\n\n> **Prompt:** How would you respond to a
+        teacher who says, “What recommendations do you have about the optional lessons
+        in this unit?”\n\n## Getting Credit for Completing this Reflection \n\n- Once
+        you submit your reflection, your response to the prompt above will be shared
+        anonymously and read by your peers, and you will read the work done by other
+        facilitators. This give facilitators a chance to learn from each other.\n-
+        Your submission will also be given to an expert reviewer. Expert reviewers
+        will be looking for thoughtful and thorough answers that demonstrate that
+        you have spent time considering the reflection questions listed above. Reviewers
+        will have an opportunity to give feedback on your submission, and you can
+        respond to that feedback and resubmit.\n- In order to get credit for completing
+        this prompt, your expert review needs to say \"Yes\" responded to the prompts
+        fully. If reviewers don’t feel comfortable making a decision about your task
+        submission, they can elevate to an instructor for review. You will always
+        have a chance to address feedback from your reviewers and resubmit your reflections!
+        Reviewer feedback will show up at the bottom of this page, once it’s available."
+      csp4-dlp-q2_markdown_instruction: "<br><br>\n\n# Unit 4 - Question 2\n**NOTE:**
+        Before you start this reflection, make sure you’ve reviewed the lessons in
+        this unit and have a good sense of the connections between lessons. If you
+        haven’t already reviewed the materials, do that now and come back to this
+        reflection later.\n\nFor this reflection, you’re going to consider the prompt
+        below and craft a written response that demonstrates your understanding of
+        the lessons as well as how to address teacher concerns about the unit . We
+        suggest you write your response in another text editor and copy it in here
+        once you are ready to submit.\n\n> **Prompt:** How would you respond to a
+        teacher who asks “Is this unit mostly about the Explore PT? After looking
+        at the Explore PT Prep unit I think I could just skip right to that and they’d
+        be able to complete the Explore PT without doing Unit 4.”\n\n## Getting Credit
+        for Completing this Reflection \n\n- Once you submit your reflection, your
+        response to the prompt above will be shared anonymously and read by your peers,
+        and you will read the work done by other facilitators. This give facilitators
+        a chance to learn from each other.\n- Your submission will also be given to
+        an expert reviewer. Expert reviewers will be looking for thoughtful and thorough
+        answers that demonstrate that you have spent time considering the reflection
+        questions listed above. Reviewers will have an opportunity to give feedback
+        on your submission, and you can respond to that feedback and resubmit.\n-
+        In order to get credit for completing this prompt, your expert review needs
+        to say \"Yes\" responded to the prompts fully. If reviewers don’t feel comfortable
+        making a decision about your task submission, they can elevate to an instructor
+        for review. You will always have a chance to address feedback from your reviewers
+        and resubmit your reflections! Reviewer feedback will show up at the bottom
+        of this page, once it’s available."
+      csp4-dlp-q3_markdown_instruction: "<br><br>\n\n# Unit 4 - Question 3\n**NOTE:**
+        Before you start this reflection, make sure you’ve reviewed the lessons in
+        this unit and have a good sense of the connections between lessons. If you
+        haven’t already reviewed the materials, do that now and come back to this
+        reflection later.\n\nFor this reflection, you’re going to consider the prompt
+        below and craft a written response that demonstrates your understanding of
+        the lessons as well as how to address teacher concerns about the unit . We
+        suggest you write your response in another text editor and copy it in here
+        once you are ready to submit.\n\n> **Prompt:** How would you respond to a
+        teacher who says, “I am thinking about doing Unit 4 before during Unit 3 so
+        my course would go Unit 1, Unit 2, Unit 4, Explore Task, Unit 3, Unit 5, Create
+        Task. Would that be alright?”\n\n## Getting Credit for Completing this Reflection
+        \n\n- Once you submit your reflection, your response to the prompt above will
+        be shared anonymously and read by your peers, and you will read the work done
+        by other facilitators. This give facilitators a chance to learn from each
+        other.\n- Your submission will also be given to an expert reviewer. Expert
+        reviewers will be looking for thoughtful and thorough answers that demonstrate
+        that you have spent time considering the reflection questions listed above.
+        Reviewers will have an opportunity to give feedback on your submission, and
+        you can respond to that feedback and resubmit.\n- In order to get credit for
+        completing this prompt, your expert review needs to say \"Yes\" responded
+        to the prompts fully. If reviewers don’t feel comfortable making a decision
+        about your task submission, they can elevate to an instructor for review.
+        You will always have a chance to address feedback from your reviewers and
+        resubmit your reflections! Reviewer feedback will show up at the bottom of
+        this page, once it’s available."
       csp4dlp-assessment_markdown_instruction: "<br><br>\n\n> **NOTE: before you start
         this reflection, make sure you’ve reviewed the lesson in Unit 4, and have
         a good sense of the the role of assessment across the unit. If you haven’t
@@ -53658,6 +54550,83 @@
         to an instructor for review. You will always have a chance to address feedback
         from your reviewers and resubmit your reflections! Reviewer feedback will
         show up at the bottom of this page, once it’s available. \n "
+      csp5-dlp-q1_markdown_instruction: "<br><br>\n\n# Unit 5 - Question 1\n**NOTE:**
+        Before you start this reflection, make sure you’ve reviewed the lessons in
+        this unit and have a good sense of the connections between lessons. If you
+        haven’t already reviewed the materials, do that now and come back to this
+        reflection later.\n\nFor this reflection, you’re going to consider the prompt
+        below and craft a written response that demonstrates your understanding of
+        the lessons as well as how to address teacher concerns about the unit . We
+        suggest you write your response in another text editor and copy it in here
+        once you are ready to submit.\n\n> **Prompt:** How would you respond to a
+        teacher who says, “Turtle programming seems different from the apps stuff
+        they are going to do in this unit. What is different? What are some common
+        challenges students might face?”\n\n## Getting Credit for Completing this
+        Reflection \n\n- Once you submit your reflection, your response to the prompt
+        above will be shared anonymously and read by your peers, and you will read
+        the work done by other facilitators. This give facilitators a chance to learn
+        from each other.\n- Your submission will also be given to an expert reviewer.
+        Expert reviewers will be looking for thoughtful and thorough answers that
+        demonstrate that you have spent time considering the reflection questions
+        listed above. Reviewers will have an opportunity to give feedback on your
+        submission, and you can respond to that feedback and resubmit.\n- In order
+        to get credit for completing this prompt, your expert review needs to say
+        \"Yes\" responded to the prompts fully. If reviewers don’t feel comfortable
+        making a decision about your task submission, they can elevate to an instructor
+        for review. You will always have a chance to address feedback from your reviewers
+        and resubmit your reflections! Reviewer feedback will show up at the bottom
+        of this page, once it’s available."
+      csp5-dlp-q2_markdown_instruction: "<br><br>\n\n# Unit 5 - Question 2\n**NOTE:**
+        Before you start this reflection, make sure you’ve reviewed the lessons in
+        this unit and have a good sense of the connections between lessons. If you
+        haven’t already reviewed the materials, do that now and come back to this
+        reflection later.\n\nFor this reflection, you’re going to consider the prompt
+        below and craft a written response that demonstrates your understanding of
+        the lessons as well as how to address teacher concerns about the unit . We
+        suggest you write your response in another text editor and copy it in here
+        once you are ready to submit.\n\n> **Prompt:** How would you respond to a
+        teacher who says, “What are the benefits of using App Lab instead of some
+        other app development tool?”\n\n## Getting Credit for Completing this Reflection
+        \n\n- Once you submit your reflection, your response to the prompt above will
+        be shared anonymously and read by your peers, and you will read the work done
+        by other facilitators. This give facilitators a chance to learn from each
+        other.\n- Your submission will also be given to an expert reviewer. Expert
+        reviewers will be looking for thoughtful and thorough answers that demonstrate
+        that you have spent time considering the reflection questions listed above.
+        Reviewers will have an opportunity to give feedback on your submission, and
+        you can respond to that feedback and resubmit.\n- In order to get credit for
+        completing this prompt, your expert review needs to say \"Yes\" responded
+        to the prompts fully. If reviewers don’t feel comfortable making a decision
+        about your task submission, they can elevate to an instructor for review.
+        You will always have a chance to address feedback from your reviewers and
+        resubmit your reflections! Reviewer feedback will show up at the bottom of
+        this page, once it’s available."
+      csp5-dlp-q3_markdown_instruction: "<br><br>\n\n# Unit 5 - Question 3\n**NOTE:**
+        Before you start this reflection, make sure you’ve reviewed the lessons in
+        this unit and have a good sense of the connections between lessons. If you
+        haven’t already reviewed the materials, do that now and come back to this
+        reflection later.\n\nFor this reflection, you’re going to consider the prompt
+        below and craft a written response that demonstrates your understanding of
+        the lessons as well as how to address teacher concerns about the unit . We
+        suggest you write your response in another text editor and copy it in here
+        once you are ready to submit.\n\n> **Prompt:** How would you respond to a
+        teacher who says, “I’m running short on time to get through all the material
+        before the Performance Tasks are due. What do students need to know for the
+        Create Task? What is just on the multiple choice test?”\n\n## Getting Credit
+        for Completing this Reflection \n\n- Once you submit your reflection, your
+        response to the prompt above will be shared anonymously and read by your peers,
+        and you will read the work done by other facilitators. This give facilitators
+        a chance to learn from each other.\n- Your submission will also be given to
+        an expert reviewer. Expert reviewers will be looking for thoughtful and thorough
+        answers that demonstrate that you have spent time considering the reflection
+        questions listed above. Reviewers will have an opportunity to give feedback
+        on your submission, and you can respond to that feedback and resubmit.\n-
+        In order to get credit for completing this prompt, your expert review needs
+        to say \"Yes\" responded to the prompts fully. If reviewers don’t feel comfortable
+        making a decision about your task submission, they can elevate to an instructor
+        for review. You will always have a chance to address feedback from your reviewers
+        and resubmit your reflections! Reviewer feedback will show up at the bottom
+        of this page, once it’s available."
       csp5dlp-assessment_markdown_instruction: "<br><br>\n\n> **NOTE: before you start
         this reflection, make sure you’ve reviewed the lesson in Unit 5, and have
         a good sense of the the role of assessment across the unit. If you haven’t

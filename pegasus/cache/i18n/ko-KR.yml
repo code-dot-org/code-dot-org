@@ -429,6 +429,9 @@
   homepage_header_donors: Code.org는 후원자 여러분에게 감사의 인사를 드립니다.
   homepage_donors_seall: 모두 보기
   homepage_donors_donate: 기부하기
+  homepage_below_hero_announcement_text: We care about your privacy and are making
+    some updates to our privacy policy, effective May 25.
+  homepage_below_hero_announcement_link_text: 더 알아보기
   contact_form_topic_student: 학생입니다.
   contact_form_topic_parent: 부모입니다.
   contact_form_topic_teacher: 교사/교육자입니다.
@@ -643,6 +646,10 @@
   volunteer_engineer_submission_field_email_desc: 여러분의 이메일 주소는 절대 공유되지 않을 것입니다. 그러나
     우리는 선생님들의 요청을 여러분들께 전달할 것입니다.
   volunteer_engineer_submission_field_email_placeholder: 이메일
+  volunteer_engineer_submission_field_email_preference: Can we email you about updates
+    to our courses, volunteer opportunities, or other computer science news?
+  volunteer_engineer_submission_field_email_preference_yes: 예
+  volunteer_engineer_submission_field_email_preference_no: 아니요
   volunteer_engineer_submission_final_paragraph: 여러분은 지역 선생님들의 Hour of Code 활동 등이
     가능한 자원봉사자 명단에 들어갈 것입니다. 여러분의 이메일과 주소는 절대로 공개되지 않습니다만 아래의 정보들(정확한 위치를 포함한 정보들)
     은 지역 선생님들에게 안내가 될 것입니다.
@@ -1131,6 +1138,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: 앱 안의 데이터베이스'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: 전체 테스트 - 50 문항
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'
@@ -1836,11 +1844,5 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  homepage_below_hero_announcement_text: We care about your privacy and are making
-    some updates to our privacy policy, effective May 25.
-  homepage_below_hero_announcement_link_text: Learn more
-  volunteer_engineer_submission_field_email_preference: Can we email you about updates
-    to our courses, volunteer opportunities, or other computer science news?
-  volunteer_engineer_submission_field_email_preference_yes: 'Yes'
-  volunteer_engineer_submission_field_email_preference_no: 'No'
-  csp-post-survey_name: Student Post-Course Survey
+  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
+    policy)"
