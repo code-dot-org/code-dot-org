@@ -260,12 +260,13 @@ module Api::V1::Pd
     end
 
     def get_optional_columns(regional_partner_value)
-      is_teachercon_partner = ![REGIONAL_PARTNERS_ALL, REGIONAL_PARTNERS_NONE].include?(regional_partner_value) && get_matching_teachercon(RegionalPartner.find(regional_partner_value))
+      show_all_columns = !regional_partner_value || [REGIONAL_PARTNERS_ALL, REGIONAL_PARTNERS_NONE].include?(regional_partner_value)
+      is_teachercon_partner = !show_all_columns && get_matching_teachercon(RegionalPartner.find(regional_partner_value))
       columns = {accepted_teachercon: false, registered_workshop: false}
-      if [REGIONAL_PARTNERS_ALL, REGIONAL_PARTNERS_NONE].include?(regional_partner_value) || is_teachercon_partner
+      if show_all_columns || is_teachercon_partner
         columns[:accepted_teachercon] = true
       end
-      if [REGIONAL_PARTNERS_ALL, REGIONAL_PARTNERS_NONE].include?(regional_partner_value) || !is_teachercon_partner
+      if show_all_columns || !is_teachercon_partner
         columns[:registered_workshop] = true
       end
       columns

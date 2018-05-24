@@ -491,9 +491,25 @@ module Pd::Application
     end
 
     # @override
-    def self.cohort_csv_header
+    def self.cohort_csv_header(optional_columns)
+      columns = [
+        'Date Accepted',
+        'Name',
+        'School District',
+        'School Name',
+        'Email',
+        'Status',
+        'Assigned Workshop'
+      ]
+      if optional_columns[:registered_workshop]
+        columns.push 'Registered Workshop'
+      end
+      if optional_columns[:accepted_teachercon]
+        columns.push 'Accepted Teachercon'
+      end
+
       CSV.generate do |csv|
-        csv << ['Date Accepted', 'Name', 'School District', 'School Name', 'Email', 'Status']
+        csv << columns
       end
     end
 
@@ -509,15 +525,32 @@ module Pd::Application
 
     # @override
     def to_cohort_csv_row
+      columns = [
+        date_accepted,
+        applicant_name,
+        district_name,
+        school_name,
+        user.email,
+        status,
+        fit_workshop_date_and_location
+      ]
+      if optional_columns[:registered_workshop]
+        if workshop.try(:local_summer?)
+          columns.push(registered_workshop? ? 'Yes' : 'No')
+        else
+          columns.push nil
+        end
+      end
+      if optional_columns[:accepted_teachercon]
+        if workshop.try(:teachercon?)
+          columns.push(pd_teachercon1819_registration ? 'Yes' : 'No')
+        else
+          columns.push nil
+        end
+      end
+
       CSV.generate do |csv|
-        csv << [
-          date_accepted,
-          applicant_name,
-          district_name,
-          school_name,
-          user.email,
-          status
-        ]
+        csv << columns
       end
     end
 
