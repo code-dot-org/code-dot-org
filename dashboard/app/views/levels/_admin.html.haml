@@ -87,6 +87,16 @@
           %li
             S3 link:
             = link_to 'sources', sources_link, target: '_blank'
+          - remix_ancestry = StorageApps.remix_ancestry(params[:channel_id], depth: 5)
+          - if remix_ancestry.empty?
+            %li Not a remix.
+          - else
+            %li
+              Remix ancestry:
+              %ul
+                - remix_ancestry.each do |channel|
+                  %li
+                    %tt= link_to channel[0,7], "/projects/#{params[:key]}/#{channel}"
 
         #feature_project{'style' => ('display: none;' unless !exists || !currently_featured)}
           %button{id: "feature", class: "btn btn-default btn-sm"}

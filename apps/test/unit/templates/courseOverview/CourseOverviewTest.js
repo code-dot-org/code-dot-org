@@ -136,7 +136,7 @@ describe('CourseOverview', () => {
       // Enzyme makes it intentionally difficult to test the actual html/dom
       // contents that gets rendered, so just test that the dropdown exists.
       // https://github.com/airbnb/enzyme/issues/634
-      const select = wrapper.find('select.version-selector');
+      const select = wrapper.find('select#version-selector');
       expect(select.length).to.equal(1);
       expect(utils.navigateToHref).not.to.have.been.called;
       select.simulate('change', {target: {value: 'csp-2018'}});
@@ -154,7 +154,7 @@ describe('CourseOverview', () => {
           isTeacher={true}
         />
       );
-      expect(wrapper.find('select.version-selector').length).to.equal(0);
+      expect(wrapper.find('select#version-selector').length).to.equal(0);
       expect(utils.navigateToHref).not.to.have.been.called;
     });
 
@@ -165,7 +165,7 @@ describe('CourseOverview', () => {
           isTeacher={true}
         />
       );
-      expect(wrapper.find('select.version-selector').length).to.equal(0);
+      expect(wrapper.find('select#version-selector').length).to.equal(0);
       expect(utils.navigateToHref).not.to.have.been.called;
     });
   });

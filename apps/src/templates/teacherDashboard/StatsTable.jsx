@@ -80,7 +80,8 @@ class StatsTable extends Component {
             style: {
               ...tableLayoutStyles.headerCell,
               ...styles.rightAlignText
-          }}
+          }},
+          transforms: [sortable]
         },
         cell: {
           props: {
@@ -98,7 +99,8 @@ class StatsTable extends Component {
             style: {
               ...tableLayoutStyles.headerCell,
               ...styles.rightAlignText
-          }}
+          }},
+          transforms: [sortable]
         },
         cell: {
           props: {

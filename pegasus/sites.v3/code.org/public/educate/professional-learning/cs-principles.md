@@ -62,28 +62,27 @@ Illinois<br>
 Indiana<br>
 Iowa<br>
 Kansas<br>
-Kentucky<br>
 
 [/col-33]
 
 [col-33]
 
+Kentucky<br>
 Maine<br>
 Massachusetts<br>
-Michigan<br>
-Minnesota<br>
 Mississippi<br>
 Missouri<br>
 Montana<br>
 New Hampshire<br>
+New Jersey<br>
 New Mexico<br>
 Southeastern New York<br>
-North Carolina<br>
 
 [/col-33]
 
 [col-33]
 
+North Carolina<br>
 North Dakota<br>
 Oklahoma<br>
 Pennsylvania<br>

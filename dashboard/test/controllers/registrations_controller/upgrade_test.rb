@@ -87,5 +87,31 @@ module RegistrationsControllerTests
       assert_equal 'Login information for Code.org', mail.subject
       assert mail.body.to_s =~ /Your child/
     end
+
+    test 'upgrade student to password account with malformed parent email fails and does not send email' do
+      student_without_password = create(:student_in_picture_section)
+      sign_in student_without_password
+
+      assert student_without_password.teacher_managed_account?
+      refute student_without_password.provider.nil?
+
+      user_params = {
+        parent_email: 'malformed@code',
+        username: 'upgrade_username',
+        password: '1234567',
+        password_confirmation: '1234567',
+      }
+      patch '/users/upgrade', params: {
+        user: user_params
+      }
+
+      # Verify nothing changed
+      student_without_password.reload
+      assert student_without_password.teacher_managed_account?
+      refute student_without_password.provider.nil?
+
+      # No email was sent
+      assert_nil ActionMailer::Base.deliveries.first
+    end
   end
 end

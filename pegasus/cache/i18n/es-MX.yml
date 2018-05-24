@@ -445,8 +445,8 @@
   homepage_banner_congress: Líderes de Estados Unidos están pidiendo al Congreso financiar
     la informática K-12.
   homepage_banner_congress_link: Añadir su apoyo
-  homepage_banner_emailprivacy: Estamos haciendo un cambio importante en la manera
-    en que apoyamos la privacidad de los alumnos.
+  homepage_banner_emailprivacy: Estamos haciendo un cambio importante en la forma
+    en que apoyamos la privacidad de los estudiantes.
   homepage_banner_emailprivacy_link: Leer más
   homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
   homepage_banner_40k_teachers_link: Aprende más
@@ -483,6 +483,9 @@
   homepage_header_donors: Code.org agradece a sus colaboradores
   homepage_donors_seall: Ver todo
   homepage_donors_donate: Dona
+  homepage_below_hero_announcement_text: We care about your privacy and are making
+    some updates to our privacy policy, effective May 25.
+  homepage_below_hero_announcement_link_text: Aprende más
   contact_form_topic_student: Soy un estudiante
   contact_form_topic_parent: Soy un padre
   contact_form_topic_teacher: Soy un profesor/educador
@@ -659,7 +662,7 @@
   video_title_schools_dont_teach: "¿Qué no se aprende en colegios e institutos? (5min)"
   video_title_obama: El presidente Obama sobre las Ciencias de la Computación
   video_title_hoc_is_here: La Hora del Código ha llegado - Todo el mundo puede aprender
-  video_title_anybody_can_learn: Todo el mundo puede aprender
+  video_title_anybody_can_learn: Cualquiera puede aprender
   video_title_steph_curry: Hour of Code with Steph Curry
   video_title_draymond_green: Hora de código con Draymond Green
   video_title_russell_okung: Hora de código con Russell Okung
@@ -667,10 +670,10 @@
   video_title_marco_belinelli: Hora de código con Marco Belinelli
   video_title_chris_bosh: Chris Bosh sobre Ciencias de la computación
   video_title_my_name_is_aracely: My Name is Aracely
-  video_1min: 1 min
-  video_2min: 2 min
-  video_3min: 3 min
-  video_5min: 5 min
+  video_1min: 1 minuto
+  video_2min: 2 minutos
+  video_3min: 3 minutos
+  video_5min: 5 minutos
   speak_another_language: "¿Hablas otro idioma?"
   help_translate: Ayúdanos a traducir.
   no_internet: "¿No tienes Internet?"
@@ -741,6 +744,10 @@
   volunteer_engineer_submission_field_email_desc: Su dirección de correo electrónico
     nunca será compartida, pero le enviaremos solicitudes enviadas por docentes.
   volunteer_engineer_submission_field_email_placeholder: Dirección de correo electrónico
+  volunteer_engineer_submission_field_email_preference: Can we email you about updates
+    to our courses, volunteer opportunities, or other computer science news?
+  volunteer_engineer_submission_field_email_preference_yes: Sí
+  volunteer_engineer_submission_field_email_preference_no: 'No'
   volunteer_engineer_submission_final_paragraph: Se mostrará su ubicación en el mapa
     local de docentes para que puedan contactarlo para oportunidades de voluntariado
     en la Hora del Código. Su dirección exacta y correo electrónico NUNCA serán compartidos.
@@ -1313,6 +1320,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Bases de datos en Apps'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: Prueba completa - 50 preguntas
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'
@@ -2200,11 +2208,5 @@
     cuenta de Google":'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: Introducción al Laboratorio de Aplicaciones
-  homepage_below_hero_announcement_text: We care about your privacy and are making
-    some updates to our privacy policy, effective May 25.
-  homepage_below_hero_announcement_link_text: Learn more
-  volunteer_engineer_submission_field_email_preference: Can we email you about updates
-    to our courses, volunteer opportunities, or other computer science news?
-  volunteer_engineer_submission_field_email_preference_yes: 'Yes'
-  volunteer_engineer_submission_field_email_preference_no: 'No'
-  csp-post-survey_name: Student Post-Course Survey
+  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
+    policy)"

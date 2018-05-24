@@ -603,7 +603,8 @@ module Api::V1::Pd
       time = Date.new(2017, 3, 15)
 
       Timecop.freeze(time) do
-        workshop = create :pd_workshop, :teachercon, location_address: 'Some place in Phoenix, AZ', num_sessions: 5, sessions_from: Time.new(2017, 1, 1)
+        Pd::Workshop.any_instance.stubs(:process_location)
+        workshop = create :pd_workshop, :teachercon, num_sessions: 5, sessions_from: Time.new(2017, 1, 1)
         create :pd_enrollment, workshop: workshop, user: @serializing_teacher
 
         application = create(
@@ -631,7 +632,7 @@ module Api::V1::Pd
             district_name: 'A School District',
             school_name: 'A Seattle Public School',
             email: 'minerva@hogwarts.edu',
-            assigned_workshop: 'January 1-5, 2017, Phoenix Arizona TeacherCon',
+            assigned_workshop: 'January 1-5, 2017, Location TBA TeacherCon',
             registered_workshop: nil,
             accepted_teachercon: 'No',
             status: 'accepted'
