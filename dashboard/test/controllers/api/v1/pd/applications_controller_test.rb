@@ -724,7 +724,18 @@ module Api::V1::Pd
       assert_response :success
       response_csv = CSV.parse @response.body
 
-      assert_equal ['Date Accepted', 'Applicant Name', 'District Name', 'School Name', 'Email', 'Assigned Workshop', 'Registered Workshop', 'Status'], response_csv.first
+      expected_columns = [
+        'Date Accepted',
+        'Applicant Name',
+        'District Name',
+        'School Name',
+        'Email',
+        'Status',
+        'Assigned Workshop',
+        'Registered Workshop',
+        'Accepted Teachercon'
+      ]
+      assert_equal expected_columns, response_csv.first
     end
 
     test 'cohort csv download returns expected columns for facilitators' do
@@ -733,7 +744,18 @@ module Api::V1::Pd
       assert_response :success
       response_csv = CSV.parse @response.body
 
-      assert_equal ['Date Accepted', 'Name', 'School District', 'School Name', 'Email', 'Status'], response_csv.first
+      expected_columns = [
+        'Date Accepted',
+        'Name',
+        'School District',
+        'School Name',
+        'Email',
+        'Status',
+        'Assigned Workshop',
+        'Registered Workshop',
+        'Accepted Teachercon'
+      ]
+      assert_equal expected_columns, response_csv.first
     end
 
     test 'search finds applications by email for workshop admins' do
