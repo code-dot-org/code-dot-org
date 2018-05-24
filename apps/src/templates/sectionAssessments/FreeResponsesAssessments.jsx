@@ -54,7 +54,7 @@ class FreeResponsesAssessments extends Component {
     return (
       <MultipleChoiceAnswerCell
         id={rowData.id}
-        displayContent={studentResponse}
+        displayAnswer={studentResponse}
       />
     );
   };
@@ -65,7 +65,7 @@ class FreeResponsesAssessments extends Component {
     return (
       <MultipleChoiceAnswerCell
         id={rowData.id}
-        displayContent={studentName}
+        displayAnswer={studentName}
       />
     );
   };

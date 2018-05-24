@@ -55,7 +55,6 @@ export default storybook => {
         description: 'Show assessment if at least one student completes assessment',
         story: () => (
           <FreeResponsesAssessments
-            // questionAnswerData={multipleChoiceData}
             freeResponses={questionTwo}
           />
         )
@@ -65,7 +64,6 @@ export default storybook => {
         description: 'No Student responses',
         story: () => (
             <FreeResponsesAssessments
-              // questionAnswerData={multipleChoiceData}
               freeResponses={[]}
             />
         )
