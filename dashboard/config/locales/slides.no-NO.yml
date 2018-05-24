@@ -2552,14 +2552,14 @@
           cannot understand the code and won't be able to move.
       6:
         image: notes/starwars_typing_6.JPG
-        text: When you make an error on the line, the editor highlights it for you
-          so that you can try changing your text to fix it.
+        text: Når det blir en feil på en linje vil feilen bli fremhevet slik at du
+          kan endre teksten for å fikse feilen.
       7:
         image: notes/starwars_typing_7.JPG
-        text: If you get stuck, you can always start over with the start over button
-          and you can switch back to block mode at any time by clicking in the top-right
-          corner. Ok, let's give typing a try! And if you make mistakes, don't get
-          frustrated. It takes everybody a few tries to get it right.
+        text: Hvis du står fast kan du alltid starte på nytt med knappen start på
+          nytt og du kan bytte tilbake til blokk-modus når som helst ved å trykke
+          på knappen øverst til høyre. Ok, la oss prøve å skrive! Ikke bli frustrert
+          hvis du gjør noe feil. Det tar noen forsøk for å få det riktig.
     starwars_events:
       1:
         image: notes/starwars_events_1.JPG
@@ -2614,9 +2614,9 @@
     starwars_congrats:
       1:
         image: notes/starwars_congrats_1.JPG
-        text: Hi, my name is Alice and I run the project and engineering teams here
-          at Code.org and I worked on this tutorial that you're playing through right
-          now.
+        text: Hei, mitt navn er Alice og jeg styrer produkt- og ingeniør-teamene her
+          i Code.org. Jeg har jobbet med denne veiledningen som du spiller akkurat
+          nå.
       2:
         image: notes/starwars_congrats_2.JPG
         text: Du har nettopp gjort det til det siste nivået. Gratulerer! Du lærte
@@ -2741,9 +2741,9 @@
     starwars_blocks_congrats:
       1:
         image: notes/starwars_blocks_congrats_1.JPG
-        text: Hi, my name is Alice and I run the project and engineering teams here
-          at Code.org and I worked on this tutorial that you're playing through right
-          now.
+        text: Hei, mitt navn er Alice og jeg styrer produkt- og ingeniør-teamene her
+          i Code.org. Jeg har jobbet med denne veiledningen som du spiller akkurat
+          nå.
       2:
         image: notes/starwars_blocks_congrats_2.JPG
         text: Du har nettopp gjort det til det siste nivået. Gratulerer! Du lærte
@@ -3129,20 +3129,18 @@
           we'll build our program.
       6:
         image: notes/mc_2016_intro_6.jpg
-        text: If you forget what to do, the instructions for each level are at the
-          top.
+        text: Hvis du glemmer hva du skal gjøre finner du instruksjoner øverst.
       7:
         image: notes/mc_2016_intro_7.jpg
-        text: To start off, we're going to program a chicken. Let's drag the "move
-          forward" command to the workspace. When I hit "Run" the chicken moves forward
-          one step. To go further, I'll drag another "move forward" block underneath
-          the first "move forward" block until the highlight appears. Then I'll drop
-          it and the two blocks snap together. If I hit "Run" again, the chicken walks
-          two steps.
+        text: Først skal vi lage program for en kylling. Dra inn "flytt fram"-blokk.
+          Når jeg klikker "kjør" går kyllingen ett skritt fram. For å komme videre
+          drar jeg inn enda en "flytt fram"-blokk og fester den under den første.
+          Blokkene fester seg sammen når de kommer nær nok. Når jeg klikker "kjør"
+          igjen vil kyllingen gå to skritt.
       8:
         image: notes/mc_2016_intro_8.jpg
-        text: If you ever want to delete a block, just remove it from the stack and
-          drag it back to the toolbox.
+        text: Hvis du ønsker å slette en blokk, er det bare å dra den tilbake til
+          verktøykassen.
       9:
         image: notes/mc_2016_intro_9.jpg
         text: Etter du har trykket på "Kjør" kan du alltid trykke på "Nullstill"-knappen
@@ -3497,8 +3495,7 @@
           rails, it places it underneath itself.
       11:
         image: notes/mc_2017_agent_intro_11.png
-        text: If you forget what to do, the instructions for each level are at the
-          top.
+        text: Hvis du glemmer hva du skal gjøre finner du instruksjoner øverst.
       12:
         image: notes/mc_2017_agent_intro_12.png
         text: If you want to try again, you can hit the blue reset button to reset
@@ -3710,9 +3707,8 @@
     csd_concept_binary_data:
       1:
         image: notes/csd_concept_binary_data_1.png
-        text: Hi! My name is Limor Fried, and I'm an engineer here at Adafruit Industries.
-          And this is where I do engineering and design, and I design circuits for
-          fashion and music and technology.
+        text: Hei! Jeg heter Limor Fried og jobber som ingeniør her hos Adafruit Industries.
+          Her konstruerer jeg elektronikk for bruk i både teknologi og musikk og moteklær.
       2:
         image: notes/csd_concept_binary_data_2.png
         text: My name is Federico Gomez Suarez, and I'm a software developer with
@@ -3720,161 +3716,153 @@
           some of the big social problems of our times.
       3:
         image: notes/csd_concept_binary_data_3.png
-        text: You may have heard that computers work on ones and zeros. But almost
-          nobody today actually deals directly with these ones and zeros. But ones
-          and zeroes do play a big role in how computers work on the inside.
+        text: Du har kanskje hørt at datamaskiner arbeider med nuller og enere. I
+          dag er det nesten ingen folk som jobber med nuller og enere direkte, men
+          inni datamaskinen er fortsatt nuller og enere det viktige.
       4:
         image: notes/csd_concept_binary_data_4.png
-        text: Inside a computer are electric wires and circuits that carry all the
-          information in a computer. How do you store or represent information using
-          electricity?
+        text: Inne i datamaskinen er det ledninger og elektronikk som bærer informasjonen.
+          Hvordan kan man lagre og uttrykke informasjon med elektrisitet?
       5:
         image: notes/csd_concept_binary_data_5.png
-        text: Well, if you have a single wire with electricity flowing through it,
-          the signal could either be on or off. That's not a lot of choices, but it's
-          a really important start. With one wire, we can represent a yes or no, true
-          or false, a one or zero, or anything else with only two options. This on/off
-          state of a single wire is called a bit, and it's the smallest piece of information
-          a computer can store.
+        text: Vel, hvis du har en ledning så kan strømmen i den være av eller på.
+          Det er bare to muligheter, men det er en viktig begynnelse. Med en ledning
+          kan vi representere ja eller nei, riktig eller galt, en eller null, eller
+          hva som helst annet som bare har to tilstander. En slik av-eller-på tilstand
+          i en ledning kalles en bit, og er det minste elementet av informasjon som
+          en datamaskin kan lagre.
       6:
         image: notes/csd_concept_binary_data_6.png
-        text: 'If you use more wires you get more bits: more ones and zeros. With
-          more bits you can represent more complex information. But to understand
-          that, we need to learn about something called the binary number system.'
+        text: Med flere ledninger får du flere bits, flere enere og nuller. Med flere
+          bits kan du representere mer kompleks informasjon. Det blir lettere å forstå
+          hvis du lærer deg totallsystemet.
       7:
         image: notes/csd_concept_binary_data_7.png
-        text: 'In the decimal number system, we have ten digits from zero to nine,
-          and that''s how we''ve all learned to count. In the binary number system,
-          we only have two digits: zero and one. With these two digits, we can count
-          up to any number.'
+        text: 'I det vanlige titallsystemet har vi ti forskjellige siffer, fra null
+          til ni, sånn som vi alle har lært å telle. I totallsystemet har vi bare
+          to siffer: null og en. Med dise to sifrene kan vi telle så langt vi vil.'
       8:
         image: notes/csd_concept_binary_data_8.png
-        text: Here's how this works. In a decimal number system we're all used to,
-          each position in a number has a different value. There's a 1 position, the
-          10 position, the 100 position, and so on. For example, a 9 in the 100 position
-          is a 900. In binary, each position also carries a value. But instead of
-          multiplying by 10 each time, we multiply by 2. So there's the 1 position,
-          the 2 position, the 4 position, the 8 position, and so on. For example,
-          the number 9 in binary is 1001. To calculate the value, we add 1 times 8,
-          plus 0 times 4, plus 0 times 2, plus 1 times 1. Almost nobody does this
-          math because computers do it for us. What's important is that any number
-          can be represented with only ones and zeros, or by a bunch of wires that
-          are on or off. The more wires you use, the larger the numbers you can store.
-          With 8 wires, you can store numbers between 0 and 255. That's 8 ones. With
-          just 32 wires, you can store all the way from 0 to over 4 billion. Using
-          the binary number system, you can represent any number you like.
+        text: 'Det fungerer sånn: I titallsystemet, som vi er vant til, har hver plass
+          en bestemt verdi. Det er en plass for enere, en plass fir tiere, en plass
+          for hundrere og så videre. For eksempel vil sifferet 9 på plassen for hundrere
+          bety 900. I totallsystemet har hver plass også en bestemt verdi. Men i stedet
+          for å gange med 10 hver gang så ganger vi med 2. Dermed har vi en plass
+          for enere, neste plass er toere, så kommer åttere og så videre. For eksempel
+          blir tallet 9 i totallsystemet 1001. For å regne det ut tar vi 1 ganger
+          8 pluss 0 ganger 4 pluss 0 ganger 2 pluss 1 ganger 1, som blir 9. Det er
+          nesten ingen som behøver å regne på denne måten, fordi datamaskinen gjør
+          det for oss. Det som er viktig her er at alle tall kan representeres med
+          bare nuller og enere, eller altså med noen ledninger der strømmen er av
+          eller på. Jo flere ledninger, jo større tall kan du lagre. Med 8 ledninger
+          kan du lagre tall fra 0 til 255. Med bare 32 ledninger kan du lagre tall
+          helt til 4 milliarder. Med totallsystemet kan du representere hvilket som
+          helst tall.'
       9:
         image: notes/csd_concept_binary_data_9.png
-        text: But what about other types of information? Like text, images, or sound?
-          It turns out that all these things can also be represented with numbers.
-          Think of all the letters in the alphabet. You could assign a number to each
-          letter. A could be 1, B could be 2, and so on. You can then represent any
-          word or paragraph as a sequence of numbers. And as we saw, these numbers
-          can be stored as on or off electrical signals. Every word you see on every
-          webpage or your phone is represented using a system like this.
+        text: Men hva med andre typer informasjon? Hva med tekst, bilder eller lyd?
+          Det viser seg at allt dette kan representeres med tall. Ta bokstavene i
+          alfabetet, for eksempel. Du kan gi et tall til hver bokstav. A kunne være
+          1, B kunne være 2, og så videre. Da kan vi lagre tekst som en rekkefølge
+          av tall. Og vi har allerede sett at tallene kan lagres som elektriske signaler
+          som er av eller på. Hvert ord du ser på en nettside, eller på telefonen
+          din, er representert på denne måten.
       10:
         image: notes/csd_concept_binary_data_10.png
-        text: Now, let's consider photos, videos, and all the graphics you see on
-          a screen.
+        text: Tenk på bilder, videoer og all grafikk du ser på skjermen.
       11:
         image: notes/csd_concept_binary_data_11.png
-        text: All of these images are made out of teeny dots called pixels, and each
-          pixel has a color. Each of the colors can be represented with numbers. When
-          you consider the typical image has millions of these pixels, and the typical
-          video shows 30 images per second now we're talking about a lot of data here.
+        text: Alle bilder i datamaskinen er satt sammen av bittesmå prikker som kalles
+          piksler, og hver piksel har en farge. Fargene kan representeres med tall.
+          Hvis du tenker på at et bilde kan ha millioner av piksler, og at en video
+          viser 30 bilder per sekund, så forstår du at vi snakker om mye data her.
       12:
         image: notes/csd_concept_binary_data_12.png
-        text: Every sound is basically a series of vibrations in the air. Vibrations
-          can be represented graphically as a waveform. Any point on this waveform
-          can be represented by a number. And this way, any sound can be broken down
-          into a series of numbers. If you want higher quality sound, you will pick
-          32-bit audio or an 8-bit audio. More bits means a higher range of numbers.
+        text: Lyd er egentlig en rekke av vibrasjoner i lufta. Vibrasjoner kan representeres
+          som en kurveform. Hvert punkt på kurven kan representeres med et tall. På
+          denne måten kan lyd gjøres om til en rekke av tall. Avhengig av hvilken
+          lydkvalitet kan du bruke 32-bits tall eller 8-bits tall. Med flere bits
+          kan man representere kurveformen mer nøyaktig.
       13:
         image: notes/csd_concept_binary_data_13.png
-        text: When you use a computer to write code or make your own app, you're not
-          dealing directly with these ones and zeros. But you will be dealing with
-          images or sound or video. So if you want to understand how computers work
-          on the inside, it all comes down these simple ones and zeros and the electrical
-          signals in the circuits behind them.
+        text: Når du bruker en datamaskin til å skrive kode behøver du ikke å tenke
+          på nuller og enere. Men du kommer til å støte på bilder og lyd og video.
+          Så hvis du vil vite hvordan datamaskiner virker så handler det egentlig
+          om nuller og enere og elektronikken som lager dem.
     csd_concept_circuits_logic:
       1:
         image: notes/csd_concept_circuits_logic_1.png
-        text: One of the coolest things I've discovered about circuits is circuitry
-          can be an art form like if I have a creative idea, I can get that creative
-          idea out using circuits. So if you have ideas, you can use technology to
-          make those ideas come to life.
+        text: Noe av det morsomste jeg har lært om elektronikk er at det kan være
+          en kunsform. Hvis jeg har en kreativ idé, kan den bli til virkelighet med
+          elektronikk. Hvis du får en idé kan du bruke teknologi for å lage det du
+          vil, du også.
       2:
         image: notes/csd_concept_circuits_logic_2.png
-        text: Every input or output of a computer is effectively a type of information,
-          which can be represented by on or off electrical signals or ones and zeros.
+        text: All informasjon som går inn eller ut av en datamaskin kan representeres
+          som nuller og enere, eller som elektriske signaler som er av eller på.
       3:
         image: notes/csd_concept_circuits_logic_3.png
-        text: In order to process the information that comes in as input, and to make
-          the information that is output, a computer needs to modify and combine the
-          input signals. To do this, a computer uses millions of teeny electronic
-          components, which come together to form circuits.
+        text: For å behandle informasjon som kommer inn, og lage det som skal ut,
+          må datamaskinen forandre og kombinere signalene som kom inn. Til det bruker
+          datamaskinen millioner av ørsmå elektroniske deler, satt sammen til elektroniske
+          kretser.
       4:
         image: notes/csd_concept_circuits_logic_4.png
-        text: Let's take a closer look at how circuits can modify and process information
-          that's represented in ones and zeros. This is an incredibly simple circuit.
-          It takes an electrical signal, on or off, and it flips it. So if the signal
-          you give it is a 1, the circuit gives you a 0, and if you give the circuit
-          a 0, it gives you a 1. The signal that goes in is not the same as the signal
-          that comes out, and so we call this circuit NOT.
+        text: La oss se nærmere på hvordan elektronikk kan behandle informasjon representert
+          som nuller og enere. Dette er en kjempeenkel elektrisk kobling. Den tar
+          et elektrisk signal, av eller på, og bytter til det motsatte. Så hvis du
+          gir den 1 får du ut 0, og hvis du gir den 0 får du ut 1. Signalet som kommer
+          ut er ikke det signalet som kom inn, så vi kaller dette en IKKE-kobling.
       5:
         image: notes/csd_concept_circuits_logic_5.png
-        text: More complicated circuits can take multiple signals and combine them,
-          and give you a different result. In this example, a circuit will take two
-          electrical signals, now each one might be a 1 or a 0. If either of the signals
-          coming in is a 0, then the result is also a 0. This circuit will only give
-          you a 1, if the first signal and the second signal are both a 1, and so
-          we call the circuit AND.
+        text: Mer kompliserte koblinger kan ta flere signaler og kombinere dem, og
+          gi deg forskjellige resultater. I denne koblingen kommer det inn to signaler
+          som hver kan være 0 eller 1. Hvis ett av signalene er 0, uansett hvilket,
+          blir resultatet også 0. Denne koblingen gir ut 1 bare hvis det første innsignalet
+          er 1 og det andre innsignalet er 1. Vi kaller dette en OG-funksjon.
       6:
         image: notes/csd_concept_circuits_logic_6.png
-        text: There are many small circuits like this that perform simple logical
-          calculations. By connecting these circuits together, we can make more complex
-          circuits that perform more complex calculations.
+        text: Det finnes mange sånne små koblinger som gjør enkle logiske beregninger.
+          Ved å koble sånne koblinger sammen kan vi lage mer kompleks elektronikk
+          som gjør mer avanserte beregninger.
       7:
         image: notes/csd_concept_circuits_logic_7.png
-        text: For example, you can make a circuit that adds 2 bits together called
-          an adder. This circuit takes in 2 individual bits, each one a 1 or a 0,
-          and adds them together to calculate the sum. The sum can be 0 plus 0 equals
-          0, 0 plus 1 equals 1, or 1 plus 1 equals 2. You need two wires coming out
-          because it can take up to two binary digits to represent the sum. Once you
-          have a single adder for adding two bits of information, you can put together
-          multiples of these adder circuits side-by-side to add together much larger
-          numbers.
+        text: For eksempel kan du lage en kobling som plusser sammen to bits, som
+          vi kaller en adderer. Denne koblingen tar inn to bits, som hver kan være
+          0 eller 1, ob regner ut summen av dem. Det kan være 0 pluss 0 er lik 0,
+          0 pluss 1 er lik 1, eller 1 pluss 1 er lik 2. Du trenger to ledninger ut,
+          fordi det kan være opp til to siffer i summen. Og når du har en adderer
+          for to bits kan du sette sammen flere slike for å addere mye større tall.
       8:
         image: notes/csd_concept_circuits_logic_8.png
-        text: For example, here's how an 8-bit adder adds the numbers 25 and 50. Each
-          number is represented using 8 bits, resulting in 16 different electrical
-          signals that go into the circuit. The circuit for an 8-bit adder has lots
-          of little adders inside of it, which together, calculate the sum.
+        text: Her kan du for eksempel se hvordan en 8-bits adderer legger sammen 25
+          og 50. Hvert tall er representert med 8 bits, slik at det totalt kommer
+          inn 16 signaler. En slik 8-bits adderer er satt sammen av mange små adderere
+          som sammen beregner summen.
       9:
         image: notes/csd_concept_circuits_logic_9.png
-        text: Different electrical circuits can perform other simple calculations
-          like subtraction or multiplication. In fact, all the information processing
-          your computer does is just lots and lots of small simple operations put
-          together. Each individual operation done by a computer is so, so simple
-          it could be done by a human, but these circuits inside computers are way
-          way faster.
+        text: Elektriske koblinger kan gjøre andre enkle beregninger, for eksempel
+          subtraksjon eller multiplikasjon. Faktisk gjør datamaskinen din ikke annet
+          enn mange sånne små operasjoner. Hver enkelt operasjon er så enkel at et
+          menneske lett kan gjøre det, men elektronikken i datamaskinen gjør det mye
+          raskere.
       10:
         image: notes/csd_concept_circuits_logic_10.png
-        text: Back in the day, these circuits were big and clunky, and an 8-bit adder
-          could be as big as a fridge, and it would take minutes for them to perform
-          a simple calculation. Today, computer circuits are microscopic in size,
-          and way way faster. Why are smaller computers also faster? Well, because
-          the smaller the circuit is, the less distance the electrical signal has
-          to go. Electricity moves at just about the speed of light, which is why
-          modern circuits can perform billions of calculations per second.
+        text: For lenge siden var elektronikk for datamaskiner noen store greier.
+          En 8-bits adderer kunne være på størrelse med et kjøleskap, og kunne bruke
+          minutter på å gjøre en beregning. I dag er elektronikken krympet til mikroskopisk
+          størrelse, og er mye raskere. Hvorfor går det raskere? Det er fordi jo mindre
+          en kobling er, jo kortere avstand må signalene gå. Elektriske signaler går
+          omtrent med lysets hastighet, og det er derfor moderne datamaskiner kan
+          gjøre milliarder av beregninger per sekund.
       11:
         image: notes/csd_concept_circuits_logic_11.png
-        text: So whether you're playing a game, recording a video, or exploring the
-          cosmos, everything you could possibly do with technology requires lots of
-          information to be processed extremely quickly. Underneath all this complexity
-          is just lots of teeny little circuits that turn binary signals into websites,
-          videos, music, and games. These circuits can even help us decode DNA to
-          diagnose and cure disease. So what would you like to do with all these circuits?
+        text: Så enten du spiller dataspill, tar opp en video, eller undersøker verdensrommet,
+          så trenger du å behandle masse informasjon kjemperaskt. Slik komplisert
+          informasjonsbehandling blir gjort av massevis av ørsmå elektroniske koblinger
+          som gjør om tall til nettsteder, video, musikk og spill. Elektronikken kan
+          til og med hjelpe oss å dekode arvestoffet eller kurere sykdommer. Hva vil
+          du gjøre med all denne elektronikken?
     csd_concept_memory_cpu_input_output:
       1:
         image: notes/csd_concept_memory_cpu_input_output_1.png

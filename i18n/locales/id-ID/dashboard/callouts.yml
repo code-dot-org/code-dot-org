@@ -128,6 +128,7 @@ id:
       CSD U3 Direction Arrows_2018_callout: { }
       CSD U3 Draw Loop Plugged update your scene_callout: { }
       CSD U3 Draw Loop Plugged update your scene_2018_callout: { }
+      CSD U3 Draw Loop Plugged wiggle sprite y_2018_callout: { }
       CSD U3 Drawing Squares to Corners_callout: { }
       CSD U3 Drawing Squares to Corners_2018_callout: { }
       CSD U3 Else_callout: { }
@@ -1193,6 +1194,8 @@ id:
       courseD_playLab_condFP_2018_callout:
         courseD_playLab_condFP_1: kami sudah mengatur blok-blok kedalam kategori untuk memberikan kamu lebih banyak kode untuk dimainkan! Kilk disini untuk melihat kemana semua pergi.
       courseD_playLab_condFP_a_callout:
+        courseD_playLab_condFP_1: kami sudah mengatur blok-blok kedalam kategori untuk memberikan kamu lebih banyak kode untuk dimainkan! Kilk disini untuk melihat kemana semua pergi.
+      courseD_playLab_condForVideo_callout:
         courseD_playLab_condFP_1: kami sudah mengatur blok-blok kedalam kategori untuk memberikan kamu lebih banyak kode untuk dimainkan! Kilk disini untuk melihat kemana semua pergi.
       courseD_scrat_predict1_callout: { }
       courseD_scrat_predict1_2018_callout: { }

@@ -9535,8 +9535,8 @@ ka:
         courseD_farmer_condLoops5_a: 'ეს ახალი ციკლია: `გამეორება, სანამ გოგრაა`. შეგიძლიათ მიხვდეთ, თუ როგორ უნდა გამოიყენოთ ეს თავსატეხში?'
         courseD_farmer_condLoops5_b: ყოველ ადგილას შეიძლება იყოს ერთზე მეტი სიმინდი ან სალათი. გამოიყენეთ `სანამ` ციკლი, რათა შეაგროვოთ ყველა მათგანი!
       courseD_farmer_condLoops6_authored_hint:
-        courseD_farmer_condLoops6_a: Use a `while path ahead` loop to move the farmer down each piece of the spiral.
-        courseD_farmer_condLoops6_b: You only need to check for corn during most of the harvest.  Just pick one pumpkin at the very end of your program.
+        courseD_farmer_condLoops6_a: Use a `while there is corn` loop to make sure you get all of the corn along the way. This block won't do anything if there's no corn to pick.
+        courseD_farmer_condLoops6_b: Make sure to check `if` there's a path ahead before you take your next step!
       courseD_farmer_condLoops6_2018_authored_hint:
         courseD_farmer_condLoops6_a: Use a `while path ahead` loop to move the farmer down each piece of the spiral.
         courseD_farmer_condLoops6_b: You only need to check for corn during most of the harvest.  Just pick one pumpkin at the very end of your program.

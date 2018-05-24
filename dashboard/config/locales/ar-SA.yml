@@ -136,6 +136,8 @@
     valid_password: كلمة المرور متاحة!
     invalid_password: كلمة المرور يجب ان تكون على الاقل 6 احرف
     mismatch_password: كلمة المرور التي ادخلتها غير متطابقة
+    agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
+      and <a href='http://code.org/privacy'>Privacy Policy</a>.
     under_13_consent: إذا كان عمري أقل من 13 عامًا، أؤكد أنني قد حصلت على إذن من والدي أو الوصي
       القانوني باستخدام خدمات Code.org.
     agree_us_website: أوافق على استخدام موقع على شبكة الإنترنت مقره في الولايات المتحدة.
@@ -149,6 +151,7 @@
     teacher_terms: أوافق على الالتزام بشروط الخدمة Code.org. لمزيد من المعلومات حول
       الخصوصية، راجع لدينا <a href='http://code.org/privacy'> سياسة الخصوصية</a>.
     additional_information: نحتاج للمزيد من المعلومات لمواصلة تسجيلك في الموقع.
+    user_type_button: Update Account Type
     user_type_label: نوع الحساب
     user_type_teacher: المدرس
     user_type_student: طالب
@@ -160,6 +163,7 @@
     email_preference_privacy: (انظر سياسة الخصوصية الخاصة بنا)
     email_preference_yes: نعم
     email_preference_no: لا
+    email_preference_required: You must specify an email preference.
   school_info:
     title: School Information (optional)
     school_country: School Country
@@ -599,6 +603,8 @@
       الوقت الحالي.
     already_enrolled_in_new_section: لا يمكنك نقل هؤلاء الطلاب لأن هذا المدرّس قد
       حصل عليهم في قسم أخر.
+    third_party_login: You cannot move students to a section that is synced with a
+      third party tool.
   share:
     title: تعلّم على كود استوديو
     description: أي شخص يمكن تعلّم علوم الكمبيوتر. اصنع الألعاب والتطبيقات والفن مع
@@ -1118,6 +1124,7 @@
     csd5_2: 'Chapter 2: Solving Data Problems'
     csd6_1: 'Chapter 1: Hardware Output'
     csd6_2: 'Chapter 2: Hardware Input'
+    csd_survey: Post-Course Survey
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -1283,3 +1290,11 @@
       the storing of cookies on your computer or device.
     more_information: See Code.org's Privacy Policy.
     accept: أوافق
+  gdpr_dialog:
+    heading: Do you agree to using a web site based in the United States?
+    message: Data from your use of this site may be sent to and stored or processed
+      in the United States.
+    link_intro: For details see our
+    privacy_policy: privacy policy
+    logout: Logout
+    true: نعم

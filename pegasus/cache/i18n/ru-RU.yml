@@ -26,8 +26,8 @@
     информатики
   petition_sign_message: 'Если вы согласны, укажите свое имя. Присоединяйтесь к #
     остальным.'
-  petition_sign_message_support: 'Если вы поддерживаете нас, укажите свое имя. Присоединяйтесь
-    к # остальным.'
+  petition_sign_message_support: 'Если вы поддерживаете нас, подпишите свое имя.  Присоединяйтесь
+    к #остальным.'
   petition_join_others: 'Присоединяйтесь к #остальным'
   name: Имя
   email: Электронная почта
@@ -483,6 +483,10 @@
   homepage_header_donors: Code.org благодарит своих помощников
   homepage_donors_seall: Просмотреть всё
   homepage_donors_donate: Пожертвовать
+  homepage_below_hero_announcement_text: Мы соблюдаем вашу конфиденциальность и
+    вносим некоторые обновления в нашу политику конфиденциальности, которые вступают
+    в силу с 25 мая.
+  homepage_below_hero_announcement_link_text: Подробнее
   contact_form_topic_student: Я ученик
   contact_form_topic_parent: Я родитель
   contact_form_topic_teacher: Я преподаватель/воспитатель
@@ -728,6 +732,13 @@
   volunteer_engineer_submission_field_email_desc: Ваш адрес электронной почты никогда
     не будет передан, но мы отправим вам запросы от учителей.
   volunteer_engineer_submission_field_email_placeholder: Адрес электронной почты
+  volunteer_engineer_submission_field_email_preference: Согласны ли вы получать по электронной
+    почте новости о наших курсах, информацию о региональных возможностях или другие новости в
+    области информатики?
+  volunteer_engineer_submission_field_email_preference_privacy: (Для получения более подробной
+    информации см. нашу политику конфиденциальности)
+  volunteer_engineer_submission_field_email_preference_yes: Да
+  volunteer_engineer_submission_field_email_preference_no: Нет
   volunteer_engineer_submission_final_paragraph: Вы будете указаны на карте, чтобы
     учителя из вашего региона могли связаться с вами для проведения часа кода или
     для другой волонтерской деятельности. НИ ПРИ КАКИХ ОБСТОЯТЕЛЬСТВАХ мы не раскроем
@@ -1297,6 +1308,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Пост AP: База данных в Приложениях'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: Полный тест - 50 вопросов
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'
@@ -2184,14 +2196,3 @@
     Account” option:'
   hero_name: 'Майнкрафт: Путешествие Героя'
   applab-intro_name: App Lab Intro
-  homepage_below_hero_announcement_text: Мы соблюдаем вашу конфиденциальность и
-    вносим некоторые обновления в нашу политику конфиденциальности, которые вступают
-    в силу с 25 мая.
-  homepage_below_hero_announcement_link_text: Подробнее
-  volunteer_engineer_submission_field_email_preference: Can we email you about updates
-    to our courses, volunteer opportunities, or other computer science news?
-  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
-    policy)"
-  volunteer_engineer_submission_field_email_preference_yes: 'Yes'
-  volunteer_engineer_submission_field_email_preference_no: 'No'
-  csp-post-survey_name: Student Post-Course Survey

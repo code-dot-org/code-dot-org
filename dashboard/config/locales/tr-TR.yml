@@ -140,6 +140,8 @@
     valid_password: Geçerli parola!
     invalid_password: Parola en az 6 karakter olmalıdır
     mismatch_password: Girdiğiniz iki parola aynı değil
+    agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
+      and <a href='http://code.org/privacy'>Privacy Policy</a>.
     under_13_consent: "Eğer 13 yaşından küçüksem, Code.org hizmetlerini kullanmam için
       ebeveynlerimin veya yasal vasimin izni olduğunu onaylıyorum."
     agree_us_website: Amerika Birleşik Devletleri merkezli bir web sitesi kullanmayı
@@ -158,6 +160,7 @@
       politikamıza göz atın</a>.
     additional_information: Giriş işleminize devam edebilmek için ek bilgilere ihtiyaç
       duymaktayız.
+    user_type_button: Update Account Type
     user_type_label: Hesap Türü
     user_type_teacher: Öğretmen
     user_type_student: öğrenci
@@ -167,6 +170,9 @@
     email_preference_question: Size kurslarımızdaki yenilikler, yerel fırsatlar veya
       diğer bilgisayar bilimi haberleriyle ilgili e-posta gönderebilir miyiz?
     email_preference_privacy: (Gizlilik politikamıza bakın)
+    email_preference_yes: Evet
+    email_preference_no: Hayır
+    email_preference_required: You must specify an email preference.
   school_info:
     title: Okul bilgileri (isteğe bağlı)
     school_country: Okulun bulunduğu ülke
@@ -604,6 +610,8 @@
       olmalıdır.
     already_enrolled_in_new_section: Öğrenciler zaten başka bir bölümde bulunduğundan
       onları başka yere taşıyamazsınız.
+    third_party_login: You cannot move students to a section that is synced with a
+      third party tool.
   share:
     title: Code Studio'da Öğrenin
     description: Herkes bilgisayar bilimi öğrenebilir. Kod kullanarak oyunlar, uygulamalar
@@ -1133,6 +1141,7 @@
     csd5_2: 'Bölüm 2: Veri problemlerini çözme'
     csd6_1: 'Bölüm 1: Donanım çıktısı'
     csd6_2: 'Bölüm 1: Donanım girdisi'
+    csd_survey: Post-Course Survey
     csp1_1: 'Bölüm 1: Bilgiyi Sunma ve Aktarma'
     csp1_2: Interneti icat etme
     csp2_1: Karmaşık bilgileri kodlama ve sıkıştırma
@@ -1146,6 +1155,11 @@
     csp_ap_1: 'Bölüm 1: AP teknik kurulum'
     csp_ap_2: 'Bölüm 2: AP performans görevini keşfet'
     csp_ap_3: 'Bölüm 2: AP performans görevini yarat'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Ünite 2: Sayısal bilgi'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: Yansıma İstemleri
   external_links:
     disclaimer: Yasal uyarı
@@ -1286,3 +1300,16 @@
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
   courses_category: Tüm Kurslar
+  cookie_banner:
+    message: By continuing to browse our site or clicking "I agree," you agree to
+      the storing of cookies on your computer or device.
+    more_information: See Code.org's Privacy Policy.
+    accept: Kabul ediyorum
+  gdpr_dialog:
+    heading: Do you agree to using a web site based in the United States?
+    message: Data from your use of this site may be sent to and stored or processed
+      in the United States.
+    link_intro: For details see our
+    privacy_policy: privacy policy
+    logout: Logout
+    true: Evet

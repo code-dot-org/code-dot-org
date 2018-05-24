@@ -509,6 +509,9 @@
   homepage_header_donors: Code.org dankt zijn aanhangers
   homepage_donors_seall: Alles weergeven
   homepage_donors_donate: Doneren
+  homepage_below_hero_announcement_text: We nemen uw privacy serieus en met ingang
+    van 25 mei zullen delen van ons privacybeleid geüpdatet worden.
+  homepage_below_hero_announcement_link_text: Leer meer
   contact_form_topic_student: Ik ben een leerling
   contact_form_topic_parent: Ik ben een ouder
   contact_form_topic_teacher: Ik ben een leraar
@@ -752,6 +755,12 @@
   volunteer_engineer_submission_field_email_desc: Je emailadres wordt nooit gedeeld,
     maar we zullen je aanvragen van leerkrachten doorsturen.
   volunteer_engineer_submission_field_email_placeholder: Email-adres
+  volunteer_engineer_submission_field_email_preference: Mogen wij u e-mailen met updates over
+    onze cursussen, lokale aanbiedingen of ander nieuws op het gebied van informatica?
+  volunteer_engineer_submission_field_email_preference_privacy: (Zie ons privacybeleid voor
+    details)
+  volunteer_engineer_submission_field_email_preference_yes: Ja
+  volunteer_engineer_submission_field_email_preference_no: Nee
   volunteer_engineer_submission_final_paragraph: Je wordt vermeld op een kaart voor
     docenten in de buurt, zodat die contact met jou kunnen opnemen voor Uur Code of
     ander vrijwilligerswerk. Je e-mailadres en woonadres worden niet door ons gedeeld.
@@ -1300,6 +1309,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: Full Test - 50 questions
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'
@@ -2169,13 +2179,3 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  homepage_below_hero_announcement_text: We nemen uw privacy serieus en met ingang
-    van 25 mei zullen delen van ons privacybeleid geüpdatet worden.
-  homepage_below_hero_announcement_link_text: Meer informatie
-  volunteer_engineer_submission_field_email_preference: Can we email you about updates
-    to our courses, volunteer opportunities, or other computer science news?
-  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
-    policy)"
-  volunteer_engineer_submission_field_email_preference_yes: 'Yes'
-  volunteer_engineer_submission_field_email_preference_no: 'No'
-  csp-post-survey_name: Student Post-Course Survey

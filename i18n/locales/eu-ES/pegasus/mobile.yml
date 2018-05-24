@@ -16,7 +16,7 @@
   anybody_can_learn: "Edozeinek ikasi dezake."
   learn_now: "Ikasi orain"
   petition_message: "Edozein eskoletako edozein ikaslek konputazio zientziak ikasteko aukera izan beharko luke"
-  petition_sign_message: 'Ados bazaude, idatzi zure izena. Elkartu beste # hauekin.'
+  petition_sign_message: 'Ados bazaude, idatzi zure izena. Batu beste # hauek.'
   petition_sign_message_support: 'Babesten bagaituzu, izena eman. Elkartu beste # gehiagorekin.'
   petition_join_others: 'Elkartu # gehiagorekin'
   name: "Izena"
@@ -370,6 +370,8 @@
   homepage_header_donors: "Code.org-eko laguntzaileei eskerrak"
   homepage_donors_seall: "Guztia ikusi"
   homepage_donors_donate: "Diruz lagundu"
+  homepage_below_hero_announcement_text: "We care about your privacy and are making some updates to our privacy policy, effective May 25."
+  homepage_below_hero_announcement_link_text: "Ikasi gehiago"
   contact_form_topic_student: "Ikaslea naiz"
   contact_form_topic_parent: "Gurasoa naiz"
   contact_form_topic_teacher: "Irakasle edo hezitzailea naiz"
@@ -540,6 +542,9 @@
   volunteer_engineer_submission_field_email: "Email helbidea"
   volunteer_engineer_submission_field_email_desc: "Zure eposta helbidea ez da inoiz partekatuko, baina irakasleen eskakizunak bidaliko dizkizugu."
   volunteer_engineer_submission_field_email_placeholder: "Email helbidea"
+  volunteer_engineer_submission_field_email_preference: "Can we email you about updates to our courses, volunteer opportunities, or other computer science news?"
+  volunteer_engineer_submission_field_email_preference_yes: 'Bai'
+  volunteer_engineer_submission_field_email_preference_no: 'Ez'
   volunteer_engineer_submission_final_paragraph: "Beste irakasleekin batera mapa batean listaratuta egongo zara, zurekin kontaktatzeko Kodetzeko Ordua eta horrelakoetaz jakiteko. Zure posta helbidea eta helbidea ez dira behin ere partekatuak izango. Baino beste informazioa (gutxigorabeherako helbidea) publikoki atzigarria izango da."
   volunteer_engineer_submission_checkbox_contact: 'Irakasleek kontaktatu nazakete boluntario aukerentzako (Oharra: zure korreo helbidea ez da partekatua izango)'
   volunteer_engineer_submission_checkbox_age_18_plus: "I certify that I am at least 18 years old."
@@ -969,6 +974,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: "Full Test - 50 questions"
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'
