@@ -318,7 +318,6 @@ Devise.setup do |config|
     name: :powerschool,
     scope: [:profile, :email, :school],
     response_type: :code,
-    issuer: 'https://nctraining9.powerschool.com/oid',
     discovery: true,
     client_options: {
       port: 443,
