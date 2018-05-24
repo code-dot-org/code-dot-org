@@ -2086,9 +2086,9 @@
   google_sign_in_instruct: 'Derfra bør de velge alternativet "Logg på med Google-kontoen":'
   hero_name: 'Minecraft: Heltens reise'
   applab-intro_name: Lab-intro til appen
-  homepage_below_hero_announcement_text: We care about your privacy and are making
-    some updates to our privacy policy, effective May 25.
-  homepage_below_hero_announcement_link_text: Learn more
+  homepage_below_hero_announcement_text: Vi ønsker å verne om ditt privatliv og oppdaterer
+    våre vilkår for personvern. Disse trer i kraft fra 25. mai.
+  homepage_below_hero_announcement_link_text: Les mer
   volunteer_engineer_submission_field_email_preference: Can we email you about updates
     to our courses, volunteer opportunities, or other computer science news?
   volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
