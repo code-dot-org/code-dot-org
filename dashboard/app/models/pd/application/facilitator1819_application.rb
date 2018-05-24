@@ -524,7 +524,7 @@ module Pd::Application
     end
 
     # @override
-    def to_cohort_csv_row
+    def to_cohort_csv_row(optional_columns)
       columns = [
         date_accepted,
         applicant_name,
