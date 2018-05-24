@@ -471,6 +471,9 @@
   homepage_header_donors: Code.org takker sine støttespillere
   homepage_donors_seall: Se alt
   homepage_donors_donate: Gi bidrag
+  homepage_below_hero_announcement_text: Vi ønsker å verne om ditt privatliv og oppdaterer
+    våre vilkår for personvern. Disse trer i kraft fra 25. mai.
+  homepage_below_hero_announcement_link_text: Lær mer
   contact_form_topic_student: Jeg er en elev
   contact_form_topic_parent: Jeg er en forelder
   contact_form_topic_teacher: Jeg er en lærer
@@ -709,6 +712,12 @@
   volunteer_engineer_submission_field_email_desc: Din epostadresse vil ikke bli delt,
     men vi vil sende deg forespørsler fra lærere.
   volunteer_engineer_submission_field_email_placeholder: E-postadresse
+  volunteer_engineer_submission_field_email_preference: Kan vi sende deg nyheter om kursene våre,
+    lokale jobbmuligheter eller andre IT-relaterte nyheter?
+  volunteer_engineer_submission_field_email_preference_privacy: (For mer informasjon, se våre
+    vilkår for personvern)
+  volunteer_engineer_submission_field_email_preference_yes: Ja
+  volunteer_engineer_submission_field_email_preference_no: Nei
   volunteer_engineer_submission_final_paragraph: Du vil vises på et kart slik at lokale
     lærere kan kontakte deg for å få hjelp til Kodetimen eller andre frivillighetstilbud.
     Din epostadresse og nøyaktige posisjon vil ikke bli delt, men andre opplysninger
@@ -1250,6 +1259,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP ytelsesaktiviteter
   csppostap_name: 'Post AP: Databaser i appen'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: Full Test - 50 spørsmål
   csp-explore_name: Utforsk PT forberedelse
   csp-create_name: Lag en PT forberedelse
@@ -2086,13 +2096,3 @@
   google_sign_in_instruct: 'Derfra bør de velge alternativet "Logg på med Google-kontoen":'
   hero_name: 'Minecraft: Heltens reise'
   applab-intro_name: Lab-intro til appen
-  homepage_below_hero_announcement_text: Vi ønsker å verne om ditt privatliv og oppdaterer
-    våre vilkår for personvern. Disse trer i kraft fra 25. mai.
-  homepage_below_hero_announcement_link_text: Les mer
-  volunteer_engineer_submission_field_email_preference: Can we email you about updates
-    to our courses, volunteer opportunities, or other computer science news?
-  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
-    policy)"
-  volunteer_engineer_submission_field_email_preference_yes: 'Yes'
-  volunteer_engineer_submission_field_email_preference_no: 'No'
-  csp-post-survey_name: Student Post-Course Survey
