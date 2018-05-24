@@ -180,6 +180,13 @@ class DeleteAccountsHelper
     end
   end
 
+  # Removes name and email address from CensusSubmission records associated
+  # with this email address.
+  # @param [String] email An email address
+  def remove_census_submissions(email)
+    Census::CensusSubmission.where(submitter_email_address: email).each(&:destroy)
+  end
+
   # Purges (deletes and cleans) various pieces of information owned by the user in our system.
   # Noops if the user is already marked as purged.
   # @param [User] user The user to purge.
@@ -196,6 +203,7 @@ class DeleteAccountsHelper
     # NOTE: We do not gate any deletion logic on `user.user_type` as its current state may not be
     # reflective of past state.
     user.destroy
+    remove_census_submissions(user.email) if user.email
     clean_level_source_backed_progress(user.id)
     clean_survey_responses(user.id)
     delete_project_backed_progress(user.id)
