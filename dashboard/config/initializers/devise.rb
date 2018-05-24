@@ -313,6 +313,22 @@ Devise.setup do |config|
     }
   }
 
+  # Powerschool OpenID setup
+  config.omniauth :openid_connect, {
+    name: :powerschool,
+    scope: [:profile, :email, :school],
+    response_type: :code,
+    discovery: true,
+    client_options: {
+      port: 443,
+      scheme: 'https',
+      host: CDO.dashboard_hostname,
+      identifier: CDO.dashboard_powerschool_key,
+      secret: CDO.dashboard_powerschool_secret,
+      redirect_uri: CDO.studio_url('/users/auth/powerschool/callback', 'https:')
+    }
+  }
+
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.
