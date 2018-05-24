@@ -246,6 +246,31 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       'Expected no activity record that references a level source to exist for this user'
   end
 
+  #
+  # Table: dashboard.authentication_options
+  # Note: acts_as_paranoid
+  #
+
+  test "removes all of user's authentication option rows" do
+    user = create :user,
+      :with_clever_authentication_option,
+      :with_google_authentication_option,
+      :with_email_authentication_option
+    ids = user.authentication_options.map(&:id)
+
+    assert_equal 3, user.authentication_options.with_deleted.count,
+      'Expected user to have three authentication options'
+    assert_equal 3, AuthenticationOption.with_deleted.where(id: ids).count,
+      'Expected authentication_option rows to be found by id'
+
+    purge_user user
+
+    assert_equal 0, user.authentication_options.with_deleted.count,
+      'Expected user to have no authentication options'
+    assert_equal 0, AuthenticationOption.with_deleted.where(id: ids).count,
+      'Expected authentication_options rows to be deleted'
+  end
+
   private
 
   #
