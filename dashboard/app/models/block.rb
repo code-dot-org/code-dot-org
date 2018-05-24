@@ -14,7 +14,7 @@
 
 class Block < ApplicationRecord
   after_save :write_block_files
-  validates_uniqueness_of :name, scope: [:level_type]
+  validates_uniqueness_of :name
 
   def block_options
     {
