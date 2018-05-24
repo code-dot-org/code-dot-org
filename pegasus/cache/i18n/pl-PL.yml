@@ -478,8 +478,8 @@
   homepage_header_donors: Code.org dziękuje za wsparcie
   homepage_donors_seall: Zobacz wszystkich
   homepage_donors_donate: Podaruj
-  homepage_below_hero_announcement_text: We care about your privacy and are making
-    some updates to our privacy policy, effective May 25.
+  homepage_below_hero_announcement_text: Dbamy o Twoją prywatność i dokonujemy kilku
+    aktualizacji naszej Polityki prywatności, które wejdą w życie 25 maja.
   homepage_below_hero_announcement_link_text: Dowiedz się więcej
   contact_form_topic_student: Jestem uczniem
   contact_form_topic_parent: Jestem rodzicem
@@ -724,8 +724,11 @@
   volunteer_engineer_submission_field_email_desc: Twój adres e-mail nigdy nie będzie
     udostępniany, ale prześlemy Ci prośby od nauczycieli.
   volunteer_engineer_submission_field_email_placeholder: Adres e-mail
-  volunteer_engineer_submission_field_email_preference: Can we email you about updates
-    to our courses, volunteer opportunities, or other computer science news?
+  volunteer_engineer_submission_field_email_preference: Czy wyrażasz zgodę na otrzymywanie od
+    nas wiadomości e-mail z najnowszymi informacjami o naszych kursach, lokalnymi ofertami oraz
+    innymi nowościami informatycznymi?
+  volunteer_engineer_submission_field_email_preference_privacy: (Aby poznać szczegóły, sprawdź
+    naszą Politykę prywatności)
   volunteer_engineer_submission_field_email_preference_yes: Tak
   volunteer_engineer_submission_field_email_preference_no: Nie
   volunteer_engineer_submission_final_paragraph: Będziesz wymieniona/y na mapie, by
@@ -2180,5 +2183,3 @@
     się używając konta Google&rdquo;:'
   hero_name: 'Minecraft: Podróż Bohatera'
   applab-intro_name: App Lab Intro
-  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
-    policy)"

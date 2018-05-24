@@ -144,11 +144,11 @@
     mismatch_password: Le due password che hai inserito non corrispondono
     agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
       and <a href='http://code.org/privacy'>Privacy Policy</a>.
-    under_13_consent: If I am under 13 years of age, I confirm that I have my parent
-      or legal guardian's permission to use the Code.org services.
-    agree_us_website: I agree to using a website based in the United States.
-    my_data_to_us: Data from my use of this site may be sent to and stored or processed
-      in the United States.
+    under_13_consent: Se ho meno di 13 anni, confermo di avere l’autorizzazione dei miei genitori o
+      del mio tutore legale all’utilizzo dei servizi di Code.org.
+    agree_us_website: Accetto di utilizzare un sito Web con sede negli Stati Uniti.
+    my_data_to_us: I dati relativi al mio utilizzo di questo sito Web possono essere inviati e archiviati
+      o elaborati negli Stati Uniti.
     student_terms: Accetto di essere legato ai <a href='http://code.org/tos'> Termini
       di Servizio </a> di Code.org. Se ho meno di 13 anni, confermo, sottoscrivendo
       a questo modulo che ho il permesso da parte di un genitore o di un tutore legale
@@ -168,8 +168,9 @@
     field_is_required: è un dato obbligatorio
     accept_terms: Devi accettare le condizioni per creare un account
     error: Si è verificato un errore.
-    email_preference_question: Possiamo inviarti email sulle novità dei nostri corsi
-      o su altre notizie legate all'informatica?
+    email_preference_question: Consenti l’invio di aggiornamenti sui nostri corsi,
+      opportunità a livello locale o altre notizie informatiche?
+    email_preference_privacy: (Vedi la nostra Privacy policy)
     email_preference_yes: Sì
     email_preference_no: 'No'
     email_preference_required: You must specify an email preference.
