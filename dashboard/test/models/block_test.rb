@@ -34,4 +34,15 @@ class BlockTest < ActiveSupport::TestCase
     seeded_block.destroy
     Dir.rmdir "config/blocks/fakeLevelType"
   end
+
+  test 'Block deletes files after being destroyed' do
+    block = create :block
+    assert File.exist? "config/blocks/#{block.level_type}/#{block.name}.json"
+    assert File.exist? "config/blocks/#{block.level_type}/#{block.name}.js"
+    block.destroy
+    refute File.exist? "config/blocks/#{block.level_type}/#{block.name}.json"
+    refute File.exist? "config/blocks/#{block.level_type}/#{block.name}.js"
+
+    Dir.rmdir "config/blocks/fakeLevelType"
+  end
 end
