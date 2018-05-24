@@ -2,44 +2,71 @@ import React from 'react';
 import FreeResponsesAssessments from './FreeResponsesAssessments';
 import i18n from '@cdo/locale';
 
-// const studentData = [
+// const questionOne = [
 //   {
 //     id: 1,
 //     studentId: '210',
 //     name: 'Caley',
 //     studentAnswers: [
-//       {question: 1, response:''},
-//       {question: 2, response: 'You want your tree to have some character. Make it special. Now we will take the almighty fan brush. Learn when to stop. Poor old tree.'},
-//     ],
+//       {question: 1, response:''}, {question: 2, response: 'You want your tree.'},],
 //   },
 //   {
 //     id: 2,
 //     studentId: '211',
 //     name: 'Maddie',
 //     studentAnswers: [
-//       {question: 1, response: 'In painting, you have unlimited power. You have the ability to move mountains. You can bend rivers.'},
-//       {question: 2, response: 'You want your tree to have some character. Make it special. Now we will take the almighty fan brush. Learn when to stop. Poor old tree.'},
-//     ],
+//       {question: 1, response: 'testA.'}, {question: 2, response: ''},],
 //   },
 //   {
 //     id: 3,
 //     studentId: '212',
 //     name: 'Erin',
-//     studentAnswers: [
-//       {question: 1, response: ''},
-//       {question: 2, response: 'You want your tree to have some character. Make it special. Now we will take the almighty fan brush. Learn when to stop. Poor old tree.'},
-//     ],
+//     studentAnswers: [{question: 1, response: 'test B'}, {question: 2, response: ''},],
 //   },
 //   {
 //     id: 4,
 //     studentId: '213',
 //     name: 'Brendan',
-//     studentAnswers: [
-//       {question: 1, response: 'In painting, you have unlimited power. You have the ability to move mountains. You can bend rivers.'},
-//       {question: 2, response: 'You want your tree to have some character. Make it special. Now we will take the almighty fan brush. Learn when to stop. Poor old tree.'},
-//     ],
+//     studentAnswers: [{question: 1, response: 'testC.'}, {question: 2, response: ''},],
 //   },
 // ];
+
+const questionOne = [
+  {
+    id: 1,
+    studentId: '210',
+    name: 'Caley',
+    response: '',
+  },
+  {
+    id: 2,
+    studentId: '211',
+    name: 'Maddie',
+    response: 'testA.',
+  },
+  {
+    id: 3,
+    studentId: '212',
+    name: 'Erin',
+    response: 'test B',
+  },
+  {
+    id: 4,
+    studentId: '213',
+    name: 'Brendan',
+    response: 'testC.',
+  },
+];
+
+const questionTwo = [
+  {
+    id: 1,
+    studentId: '210',
+    name: 'Caley',
+    response: 'testA',
+  },
+];
+
 
 // const questionData = [
 //   {
@@ -55,80 +82,39 @@ import i18n from '@cdo/locale';
 // ];
 
 
-// export default storybook => {
-//   return storybook
-//     .storiesOf('SectionAssessments/FreeResponsesAssessments', module)
-//     .addStoryTable([
-//       {
-//         name: 'Free responses for question 1',
-//         description: 'Student free reponse answers',
-//         story: () => (
-//           <FreeResponsesAssessments
-//             questionData={questionData}
-//             studentAnswerData={studentData}
-//           />
-//         )
-//       },
-//       // {
-//       //   name: 'Free response for question 2',
-//       //   description: 'No Student response',
-//       //   story: () => (
-//       //     <FreeResponsesAssessments
-//       //       questionAnswerData={multipleChoiceData}
-//       //       studentAnswerData={studentData}
-//       //     />
-//       //   )
-//       // },
-//       // {
-//       //   name: 'Long question',
-//       //   description: 'Link to see full question',
-//       //   story: () => (
-//       //       <FreeResponsesAssessments
-//       //         questionAnswerData={multipleChoiceData}
-//       //         studentAnswerData={studentData}
-//       //       />
-//       //   )
-//       // },
-//       // {
-//       //   name: 'Free responses for question 3',
-//       //   description: 'No Student response',
-//       //   story: () => (
-//       //       <FreeResponsesAssessments
-//       //         questionData={questionData}
-//       //         studentAnswerData={studentData}
-//       //       />
-//       //   )
-//       // },
-//     ]);
+export default storybook => {
+  return storybook
+    .storiesOf('SectionAssessments/FreeResponsesAssessments', module)
+    .addStoryTable([
+      {
+        name: 'Free responses for question 1',
+        description: 'Student free reponse answers',
+        story: () => (
+          <FreeResponsesAssessments
+            freeResponses={questionOne}
+          />
+        )
+      },
+      {
+        name: 'Free response for question 2',
+        description: 'Show assessment if at least one student completes assessment',
+        story: () => (
+          <FreeResponsesAssessments
+            // questionAnswerData={multipleChoiceData}
+            freeResponses={questionTwo}
+          />
+        )
+      },
+      {
+        name: 'Free response for assessments',
+        description: 'No Student responses',
+        story: () => (
+            <FreeResponsesAssessments
+              // questionAnswerData={multipleChoiceData}
+              freeResponses={[]}
+            />
+        )
+      },
+    ]);
 
-// };
-
-const responses = [
-  {
-    puzzle: 2,
-    question: "Check Your Understanding",
-    response: "Lorem ipsum dolor sit amet, postea pericula",
-    stage: "Lesson 1",
-    studentId: 1,
-    studentName: "Student A",
-    url: "http://fake.url"
-  },
-  {
-    puzzle: 3,
-    question: "Free Response",
-    response: "Lorem ipsum dolor sit amet, postea pericula",
-    stage: "Lesson 2",
-    studentId: 3,
-    studentName: "Student C",
-    url: "http://fake.url"
-  },
-  {
-    puzzle: 1,
-    question: "Free Response",
-    response: "Lorem ipsum dolor sit amet, postea pericula. Lorem ipsum dolor sit amet, postea pericula. Lorem ipsum dolor sit amet, postea pericula",
-    stage: "Lesson 1",
-    studentId: 2,
-    studentName: "Student B",
-    url: "http://fake.url"
-  },
-];
+};
