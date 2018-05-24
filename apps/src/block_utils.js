@@ -438,13 +438,13 @@ const BUILTIN_ARGS = {
 
 const findInputConfig = (args, inputName) => {
   const argIndex = args.findIndex(arg => arg.name === inputName);
-  if (argIndex === -1) {
-    if (BUILTIN_ARGS[inputName] !== undefined) {
-      return BUILTIN_ARGS[inputName];
-    }
-    throw new Error(`${inputName} not found in args or BUILTIN_ARGS`);
+  if (argIndex !== -1) {
+    return args.splice(argIndex, 1)[0];
   }
-  return args.splice(argIndex, 1)[0];
+  if (BUILTIN_ARGS[inputName] !== undefined) {
+    return BUILTIN_ARGS[inputName];
+  }
+  throw new Error(`${inputName} not found in args or BUILTIN_ARGS`);
 };
 
 /**
