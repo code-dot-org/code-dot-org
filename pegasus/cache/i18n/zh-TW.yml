@@ -1638,9 +1638,9 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  homepage_below_hero_announcement_text: We care about your privacy and are making
-    some updates to our privacy policy, effective May 25.
-  homepage_below_hero_announcement_link_text: Learn more
+  homepage_below_hero_announcement_text: 我們尊重您的隱私權，並且正在對我們的隱私權政策做一些更新
+    更新後的政策將於 5 月 25 日生效。
+  homepage_below_hero_announcement_link_text: 瞭解更多資訊
   volunteer_engineer_submission_field_email_preference: Can we email you about updates
     to our courses, volunteer opportunities, or other computer science news?
   volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy

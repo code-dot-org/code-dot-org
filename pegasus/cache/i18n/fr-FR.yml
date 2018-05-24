@@ -2256,9 +2256,10 @@
     avec mon compte Google »:'
   hero_name: 'Minecraft: Le voyage du héros'
   applab-intro_name: Introduction pour App Lab
-  homepage_below_hero_announcement_text: We care about your privacy and are making
-    some updates to our privacy policy, effective May 25.
-  homepage_below_hero_announcement_link_text: Learn more
+  homepage_below_hero_announcement_text: La protection de votre vie privée est
+    importante pour nous et nous faisons quelques mises à jour dans notre politique de
+    confidentialité, qui entreront en vigueur le 25 mai.
+  homepage_below_hero_announcement_link_text: En savoir plus
   volunteer_engineer_submission_field_email_preference: Can we email you about updates
     to our courses, volunteer opportunities, or other computer science news?
   volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy

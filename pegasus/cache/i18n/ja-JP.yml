@@ -1670,9 +1670,9 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  homepage_below_hero_announcement_text: We care about your privacy and are making
-    some updates to our privacy policy, effective May 25.
-  homepage_below_hero_announcement_link_text: Learn more
+  homepage_below_hero_announcement_text: Code.orgは、プライバシー保護に努めております。現在
+    5月25日付で有効となる、Code.orgのプライバシーポリシーの一部改定を進めています。
+  homepage_below_hero_announcement_link_text: もっと詳しく知る
   volunteer_engineer_submission_field_email_preference: Can we email you about updates
     to our courses, volunteer opportunities, or other computer science news?
   volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy

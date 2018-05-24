@@ -1598,9 +1598,8 @@
   google_sign_in_instruct: '从那里, 他们应该选择 "使用谷歌帐户登录" 选项:'
   hero_name: "《我的世界》: 英雄之旅"
   applab-intro_name: 应用程序实验室简介
-  homepage_below_hero_announcement_text: We care about your privacy and are making
-    some updates to our privacy policy, effective May 25.
-  homepage_below_hero_announcement_link_text: Learn more
+  homepage_below_hero_announcement_text: 我们尊重您的隐私，为此我们对隐私政策进行了一些更新，并将从 5 月 25 日起生效。
+  homepage_below_hero_announcement_link_text: 了解详情
   volunteer_engineer_submission_field_email_preference: Can we email you about updates
     to our courses, volunteer opportunities, or other computer science news?
   volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
