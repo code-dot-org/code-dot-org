@@ -2,6 +2,7 @@
 
 Feature: GDPR Dialog - data transfer agreement
 
+  @skip
   Scenario: EU user sees the GDPR Dialog on dashboard, opt out
     Given I am a teacher
     Given I am on "http://studio.code.org/home?force_in_eu=1"
@@ -11,6 +12,7 @@ Feature: GDPR Dialog - data transfer agreement
     Then I wait to see ".header_user"
     Then element ".ui-test-gdpr-dialog" is not visible
 
+  @skip
   Scenario: EU user sees the GDPR Dialog on pegasus, opt out
     Given I am on "http://code.org/"
     And I am a teacher
@@ -22,6 +24,7 @@ Feature: GDPR Dialog - data transfer agreement
     Then I wait to see ".header_user"
     Then element ".ui-test-gdpr-dialog" is not visible
 
+  @skip
   Scenario: EU user sees the GDPR Dialog on dashboard, opt in, don't show again
     Given I create a teacher named "Madame Maxime"
     Given I am on "http://studio.code.org/home?force_in_eu=1"
@@ -36,6 +39,7 @@ Feature: GDPR Dialog - data transfer agreement
     Then I wait to see ".header_user"
     Then element ".ui-test-gdpr-dialog" is not visible
 
+  @skip
   Scenario: EU user sees the GDPR Dialog on pegasus, opt in, don't show again
     Given I create a teacher named "Madame Maxime"
     Given I am on "http://studio.code.org/home?force_in_eu=1"
@@ -51,11 +55,13 @@ Feature: GDPR Dialog - data transfer agreement
     Then I wait to see ".header_user"
     Then element ".ui-test-gdpr-dialog" is not visible
 
+  @skip
   Scenario: EU student who accepted on sign up doesn't see the GDPR Dialog
     Given I create a student in the eu named "Viktor Krum"
     Given I am on "http://studio.code.org/home?force_in_eu=1"
     Then element ".ui-test-gdpr-dialog" is not visible
 
+  @skip
   Scenario: GDPR Dialog privacy link works from dashboard
     Given I am a teacher
     Given I am on "http://studio.code.org/home?force_in_eu=1"
