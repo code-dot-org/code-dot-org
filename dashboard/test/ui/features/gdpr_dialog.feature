@@ -27,10 +27,9 @@ Feature: GDPR Dialog - data transfer agreement
     Given I am on "http://studio.code.org/home?force_in_eu=1"
     Then element ".ui-test-gdpr-dialog" is visible
     Then I click selector ".ui-test-gdpr-dialog-accept"
-    And I wait until element ".ui-test-gdpr-dialog" is not visible
+    Then element ".ui-test-gdpr-dialog" is not visible
     Given I am on "http://code.org/teacher-dashboard?no_home_redirect=1&force_in_eu=1"
     Then I wait to see ".header_user"
-    Then I wait for 10 seconds
     Then element ".ui-test-gdpr-dialog" is not visible
     Given I am on "http://studio.code.org/home?force_in_eu=1"
     Then I wait to see ".header_user"
@@ -42,14 +41,13 @@ Feature: GDPR Dialog - data transfer agreement
     Then element ".ui-test-gdpr-dialog" is visible
     Then I click selector ".ui-test-gdpr-dialog-accept"
     Then element ".ui-test-gdpr-dialog" is not visible
-    Then I sign out
-    Given I sign in as "Madame Maxime"
-    Given I am on "http://studio.code.org/home"
-    Then I wait to see ".header_user"
-    Then element ".ui-test-gdpr-dialog" is not visible
     Given I am on "http://code.org/teacher-dashboard?no_home_redirect=1&force_in_eu=1"
     Then I wait to see ".header_user"
     Then element ".ui-test-gdpr-dialog" is not visible
+    Given I am on "http://studio.code.org/home?force_in_eu=1"
+    Then I wait to see ".header_user"
+    Then element ".ui-test-gdpr-dialog" is not visible
+
 
   Scenario: EU student who accepted on sign up doesn't see the GDPR Dialog
     Given I create a student in the eu named "Viktor Krum"
@@ -63,3 +61,18 @@ Feature: GDPR Dialog - data transfer agreement
     Then I click selector ".ui-test-gdpr-dialog-privacy-link"
     Then I go to the newly opened tab
     Then check that I am on "http://code.org/privacy"
+
+  Scenario: Accept, sign out, sign in again, no dialog
+    Given I create a teacher named "Madame Maxime"
+    Given I am on "http://studio.code.org/home?force_in_eu=1"
+    Then element ".ui-test-gdpr-dialog" is visible
+    Then I click selector ".ui-test-gdpr-dialog-accept"
+    Then element ".ui-test-gdpr-dialog" is not visible
+    Then I sign out
+    Given I sign in as "Madame Maxime"
+    Given I am on "http://studio.code.org/home"
+    Then I wait to see ".header_user"
+    Then element ".ui-test-gdpr-dialog" is not visible
+    Given I am on "http://code.org/teacher-dashboard?no_home_redirect=1&force_in_eu=1"
+    Then I wait to see ".header_user"
+    Then element ".ui-test-gdpr-dialog" is not visible
