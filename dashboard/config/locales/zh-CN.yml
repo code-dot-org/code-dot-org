@@ -119,11 +119,9 @@
     mismatch_password: 您输入的两个密码不匹配
     agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
       and <a href='http://code.org/privacy'>Privacy Policy</a>.
-    under_13_consent: If I am under 13 years of age, I confirm that I have my parent
-      or legal guardian's permission to use the Code.org services.
-    agree_us_website: I agree to using a website based in the United States.
-    my_data_to_us: Data from my use of this site may be sent to and stored or processed
-      in the United States.
+    under_13_consent: 如果我未满 13 岁，我确认在使用 Code.org 服务时已征得父母或法定监护人的同意。
+    agree_us_website: 我同意使用美国的网站。
+    my_data_to_us: 我使用本网站产生的数据可能会被传输至美国并在美国存储或处理。
     student_terms: 我同意 Code.org 的<a href='http://code.org/tos'> 服务条款</a> 的约束.如果我未满13岁，我确认提交这份表格，有我的父母或法定监护人的许可使用
       Code.org 服务。<1><br/>对于13岁以下的用户, 电子邮件地址不会存储在用于联络的表单中。学生不会收到除密码重置的邮件外的任何邮件。查看我们的<a
       href='http://code.org/privacy'>隐私政策</a>来获取更多信息。
@@ -137,8 +135,8 @@
     field_is_required: 必填
     accept_terms: 您必须同意创建一个帐户
     error: 发生错误。
-    email_preference_question: Can we email you about updates to our courses, local
-      learning opportunities, or other computer science news?
+    email_preference_question: 我们能否向您发送有关课程更新、本地机会或其他计算机科学新闻的电子邮件？
+    email_preference_privacy: （查看我们的隐私政策）
     email_preference_yes: 是
     email_preference_no: 不
     email_preference_required: You must specify an email preference.

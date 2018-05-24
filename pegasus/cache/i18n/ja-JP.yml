@@ -405,8 +405,8 @@
   homepage_header_donors: Code.orgは支援者の皆様に感謝します。
   homepage_donors_seall: すべてを見る
   homepage_donors_donate: 寄付する
-  homepage_below_hero_announcement_text: We care about your privacy and are making
-    some updates to our privacy policy, effective May 25.
+  homepage_below_hero_announcement_text: Code.orgは、プライバシー保護に努めております。現在
+    5月25日付で有効となる、Code.orgのプライバシーポリシーの一部改定を進めています。
   homepage_below_hero_announcement_link_text: もっと詳しく知る
   contact_form_topic_student: 私は学生です
   contact_form_topic_parent: 私は親です
@@ -610,8 +610,8 @@
   volunteer_engineer_submission_field_email: Eメールアドレス
   volunteer_engineer_submission_field_email_desc: あなたのメール アドレスは公開されません、私たちが教師からのリクエストを転送します。
   volunteer_engineer_submission_field_email_placeholder: Eメールアドレス
-  volunteer_engineer_submission_field_email_preference: Can we email you about updates
-    to our courses, volunteer opportunities, or other computer science news?
+  volunteer_engineer_submission_field_email_preference: 当社のコースについての最新情報、各地域における機会、コンピュータサイエンスに関するニュースなどを電子メールを介して送付してもよろしいですか？
+  volunteer_engineer_submission_field_email_preference_privacy: （詳細については、Code.orgのプライバシーポリシーをご覧ください）
   volunteer_engineer_submission_field_email_preference_yes: はい
   volunteer_engineer_submission_field_email_preference_no: いいえ
   volunteer_engineer_submission_final_paragraph: 地域の教師が Hour of Code やその他のボランティアのために連絡できるよう、あなたは地図上に表示されます。あなたのメール
@@ -1678,5 +1678,3 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
-    policy)"
