@@ -11,23 +11,31 @@ export const COLUMNS = {
   RESPONSE: 1,
 };
 
-const studentAnswerDataPropType = PropTypes.shape({
+// const studentAnswerDataPropType = PropTypes.shape({
+//   id:  PropTypes.number,
+//   studentId: PropTypes.string,
+//   name: PropTypes.string,
+//   studentAnswers: PropTypes.array,
+// });
+
+// const questionDataPropType = PropTypes.shape({
+//   id: PropTypes.number,
+//   question: PropTypes.number.isRequired,
+//   questionText: PropTypes.string.isRequired,
+// });
+
+const freeResponsesDataPropType = PropTypes.shape({
   id:  PropTypes.number,
   studentId: PropTypes.string,
   name: PropTypes.string,
-  studentAnswers: PropTypes.array,
-});
-
-const questionDataPropType = PropTypes.shape({
-  id: PropTypes.number,
-  question: PropTypes.number.isRequired,
-  questionText: PropTypes.string.isRequired,
-});
+  response: PropTypes.string,
+})
 
 class FreeResponsesAssessments extends Component {
   static propTypes= {
-    questionData: PropTypes.arrayOf(questionDataPropType),
-    studentAnswerData: PropTypes.arrayOf(studentAnswerDataPropType)
+    // questionData: PropTypes.arrayOf(questionDataPropType),
+    // studentAnswerData: PropTypes.arrayOf(studentAnswerDataPropType)
+    freeResponses:PropTypes.arrayOf(freeResponsesDataPropType),
   };
 
   state = {
@@ -61,22 +69,17 @@ class FreeResponsesAssessments extends Component {
     //   return questionArr.question
     // });
 
-    const questionObj = this.props.questionData;
-    const questionInfo = questionObj.map(quest => {
-        return quest.question
-    })
+    // const questionObj = this.props.questionData;
+    // const questionInfo = questionObj.map(quest => {
+    //     return quest.question
+    // })
 
-    console.log('what is questionObj', questionInfo);
+    // const studentData = this.props.studentAnswerData[rowIndex].studentAnswers;
+    // const studentResponse = studentData.map((student, index) => {
+    //     return student.response
+    // });
 
-    const studentData = this.props.studentAnswerData[rowIndex].studentAnswers;
-    const studentResponse = studentData.map((student, index) => {
-      if (student.question === questionInfo) {
-        console.log('studentquestion', student.question);
-        console.log('questionInfo', questionInfo)
-        console.log('studentResponse', student.response);
-        return student.response
-      }
-    });
+    const studentResponse = this.props.freeResponses[rowIndex].response;
 
     console.log('student response,', studentResponse);
 
@@ -126,8 +129,9 @@ class FreeResponsesAssessments extends Component {
   };
 
   studentNameColumnFormatter = (studentAnswers, {rowData, rowIndex}) => {
-    const studentName = this.props.studentAnswerData[rowIndex].name;
+    const studentName = this.props.freeResponses[rowIndex].name;
     console.log('what is the result', rowData.id );
+    console.log('ha', studentName)
     return (
       <MultipleChoiceAnswerCell
         id={rowData.id}
@@ -174,7 +178,7 @@ class FreeResponsesAssessments extends Component {
       columns,
       sortingColumns,
       sort: orderBy,
-    })(this.props.studentAnswerData);
+    })(this.props.freeResponses);
 
     return (
         <Table.Provider
