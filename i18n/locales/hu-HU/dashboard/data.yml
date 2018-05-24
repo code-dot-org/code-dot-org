@@ -133,7 +133,7 @@ hu:
         turtle_3_2: Használd a "rajzoljon egy négyzetet" függvényt példaképp, hogy elkészítsd a "rajzolj egy háromszöget" függvényt, majd alkalmazd.
         turtle_3_3: 'Rajzolj háromszög alakú kerítést a macskák körül, és négyzet alakú kerítést a tehenek körül! Tipp: teszteld a programot, ahogy előre haladsz.'
         turtle_3_4: Lássuk, tudod-e használni a "rajzoljon egy négyzetet" és a "rajzolj egy háromszöget" (és pár másik blokkot), hogy egy házat rajzolj az oroszlán körül.
-        turtle_3_5: 'Most készíts egy új "rajzoljon házat" függvényt, majd használd, hogy otthont adj két macskának.  Tipp: használd a "csinálj valamit" blokkot, és írj bele a mezőbe, hogy elnevezd.'
+        turtle_3_5: 'Most készíts egy új "rajzoljon egy házat" függvényt, majd használd, hogy otthont adj két macskának.  Tipp: használd a "csinálj valamit" blokkot, és írj bele a mezőbe, hogy elnevezd.'
         turtle_3_6: 'Figyeld meg a "rajzoljon egy négyzetet" példáját, és a "rajzolj háromszöget" függvényhez adj hozzá egy "hossza" bemenetet. Majd rajzolj különböző méretű háromszögeket! (Tipp: kattints a csillagra, hogy hozzáadj egy bemenetet a függvényhez)'
         turtle_3_7: A "rajzoljon egy házat" függvényhez adj hozzá egy "hossza" bemenetet, és építs egy nagy házat az elefántnak (150 képpont hosszúságú falakkal)
         turtle_3_8: Változtasd meg a "rajzolj egy házat" eljárást úgy, hogy egy húj ház rajzolását annak jobb felső sarkában fejezzem be. Használd a módosított függvényt három ház megrajzolására.

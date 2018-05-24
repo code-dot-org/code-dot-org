@@ -114,9 +114,14 @@ sk:
     valid_password: "Platné heslo!"
     invalid_password: "Heslo musí obsahovať aspoň 6 znakov"
     mismatch_password: "Zadané dve heslá sa nezhodujú"
+    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
+    under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
+    agree_us_website: "I agree to using a website based in the United States."
+    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
     student_terms: "Súhlasím, že budem dodržiavať <a href='http://code.org/tos'>Podmienky Služieb</a>. Ak som mladší ako 13 rokov, dám si potvrdiť predložený formulár môjmu zákonnému zástupcovi, aby som mohol využívať služby Code.org.<br/><br/>Emailové adresy nie sú uložené a nekontaktujú študentov. Študenti nebudú dostávať emaily od Code.org okrem obnovenia hesla. Pre viac informácií <a href='http://code.org/privacy'> Zásady ochrany osobných údajov</a>."
     teacher_terms: "Súhlasím, že budem dodržiavať Podmienky služieb. Pre viac informácií o súkromí, nájdete na <a href='http://code.org/privacy'> Zásady ochrany osobných údajov</a>."
     additional_information: "Potrebujeme niektoré ďalšie informácie pre pokračovanie vášho prihlásenia/registrácie."
+    user_type_button: "Update Account Type"
     user_type_label: "Typ účtu"
     user_type_teacher: "Učiteľ"
     user_type_student: "Študent"
@@ -126,6 +131,7 @@ sk:
     email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
     email_preference_yes: "Áno"
     email_preference_no: "Nie"
+    email_preference_required: "You must specify an email preference."
   school_info:
     title: 'School Information (optional)'
     school_country: 'School Country'
@@ -453,6 +459,7 @@ sk:
     student_not_found: "Jeden alebo viac študentov nemožno nájsť."
     all_students_must_be_in_current_section: "Všetci študenti musia byť v súčasnosti zapísaní v sekcii."
     already_enrolled_in_new_section: "Títo študenti sa nesmú premiestniť, pretože tento učiteľ ich už má v inej sekcii."
+    third_party_login: "You cannot move students to a section that is synced with a third party tool."
   share:
     title: "Informácie o Code štúdiu"
     description: "Ktokoľvek sa môže naučiť informatiku. Programujte hry a aplikácie s Code štúdiom."
@@ -872,6 +879,7 @@ sk:
     csd5_2: 'Chapter 2: Solving Data Problems'
     csd6_1: 'Chapter 1: Programming with Hardware'
     csd6_2: 'Chapter 2: Building Physical Prototypes'
+    csd_survey: 'Post-Course Survey'
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -998,3 +1006,10 @@ sk:
     message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
     more_information: "See Code.org's Privacy Policy."
     accept: 'súhlasím'
+  gdpr_dialog:
+    heading: 'Do you agree to using a web site based in the United States?'
+    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+    link_intro: 'For details see our'
+    privacy_policy: 'privacy policy'
+    logout: 'Logout'
+    yes: 'Áno'
