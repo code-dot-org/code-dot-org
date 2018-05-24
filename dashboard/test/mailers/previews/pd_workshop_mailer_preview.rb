@@ -54,12 +54,24 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
     mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSF
   end
 
-  def teacher_enrollment_reminder__csd_summer_workshop
-    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP
+  def teacher_enrollment_reminder__csd_summer_workshop_10_day
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP,
+      options: {days_before: 10}
   end
 
-  def teacher_enrollment_reminder__csp_summer_workshop
-    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
+  def teacher_enrollment_reminder__csd_summer_workshop_3_day
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP,
+      options: {days_before: 3}
+  end
+
+  def teacher_enrollment_reminder__csp_summer_workshop_10_day
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP,
+      options: {days_before: 10}
+  end
+
+  def teacher_enrollment_reminder__csp_summer_workshop_3_day
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP,
+      options: {days_before: 3}
   end
 
   def teacher_enrollment_reminder__csp_1_10_day
