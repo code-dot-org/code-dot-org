@@ -22,7 +22,7 @@ const defaultProps = {
     '29_null': {
       id: 29,
       name: "CS Discoveries 2017",
-      script_name: "csd",
+      script_name: "csd-2017",
       category: "Full Courses",
       position: 1,
       category_priority: 0,

@@ -31,7 +31,7 @@ export default class GDPRDialog extends Component {
   handleYesClick = () => {
     this.setState({isDialogOpen: false});
     $.post(
-      `/api/v1/users/accept_data_transfer_agreement`, {user_id: this.props.currentUserId}
+      `/dashboardapi/v1/users/accept_data_transfer_agreement`, {user_id: this.props.currentUserId}
     );
   };
 
@@ -53,7 +53,11 @@ export default class GDPRDialog extends Component {
             {i18n.gdprDialogDetails()}
           </div>
           <div style={styles.instructions}>
-            <a href={pegasus('/privacy')}>
+            <a
+              href={pegasus('/privacy')}
+              className="ui-test-gdpr-dialog-privacy-link"
+              target="_blank"
+            >
               {i18n.gdprDialogSeePrivacyPolicy()}.
             </a>
           </div>
@@ -62,11 +66,13 @@ export default class GDPRDialog extends Component {
               text={i18n.gdprDialogLogout()}
               href={logOutUrl}
               color={Button.ButtonColor.gray}
+              className="ui-test-gdpr-dialog-logout"
             />
             <Button
               text={i18n.gdprDialogYes()}
               onClick={this.handleYesClick}
               color={Button.ButtonColor.orange}
+              className="ui-test-gdpr-dialog-accept"
             />
           </DialogFooter>
         </BaseDialog>

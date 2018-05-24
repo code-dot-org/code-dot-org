@@ -4,7 +4,7 @@ exclude_csf_column_in_legend true
 student_detail_progress_view true
 
 stage 'Novice Reflection Overview', flex_category: 'required'
-named_level 'welcome-csd-novice'
+named_level 'welcome-novice-18'
 
 stage 'Tuesday'
 level 'csd-tuesday-unit', progression: 'Unit Reflection'
