@@ -4,7 +4,8 @@ import i18n from '@cdo/locale';
 
 const studentData = [
   {
-    id: '210',
+    id: 1,
+    studentId: '210',
     name: 'Caley',
     studentAnswers: [
       {question: 1, response:''},
@@ -12,7 +13,8 @@ const studentData = [
     ],
   },
   {
-    id: '211',
+    id: 2,
+    studentId: '211',
     name: 'Maddie',
     studentAnswers: [
       {question: 1, response: 'In painting, you have unlimited power. You have the ability to move mountains. You can bend rivers.'},
@@ -20,7 +22,8 @@ const studentData = [
     ],
   },
   {
-    id: '212',
+    id: 3,
+    studentId: '212',
     name: 'Erin',
     studentAnswers: [
       {question: 1, response: ''},
@@ -28,7 +31,8 @@ const studentData = [
     ],
   },
   {
-    id: '213',
+    id: 4,
+    studentId: '213',
     name: 'Brendan',
     studentAnswers: [
       {question: 1, response: 'In painting, you have unlimited power. You have the ability to move mountains. You can bend rivers.'},
@@ -37,30 +41,19 @@ const studentData = [
   },
 ];
 
-const multipleChoiceData = [
+const questionData = [
   {
     id: 1,
-    question: '1. What is a variable?',
-    answers:  [{multipleChoiceOption: i18n.answerOptionA(), percentAnswered: 40, isCorrectAnswer: true},
-               {multipleChoiceOption: i18n.answerOptionB(), percentAnswered: 20, isCorrectAnswer: false},
-               {multipleChoiceOption: i18n.answerOptionC(), percentAnswered: 20, isCorrectAnswer: false},
-               {multipleChoiceOption: i18n.answerOptionD(), percentAnswered: 20, isCorrectAnswer: false},
-    ],
-    notAnswered: 10,
+    question: 1,
+    questionText: 'Sound of Music',
   },
   {
     id: 2,
-    question: '2. What is a 4-bit number for the decimal number Ten(10)?',
-    answers:  [{multipleChoiceOption: i18n.answerOptionA(), percentAnswered: 30, isCorrectAnswer: false},
-               {multipleChoiceOption: i18n.answerOptionB(), percentAnswered: 10, isCorrectAnswer: true},
-               {multipleChoiceOption: i18n.answerOptionC(), percentAnswered: 10, isCorrectAnswer: false},
-               {multipleChoiceOption: i18n.answerOptionD(), percentAnswered: 10, isCorrectAnswer: false},
-               {multipleChoiceOption: i18n.answerOptionE(), percentAnswered: 20, isCorrectAnswer: false},
-               {multipleChoiceOption: i18n.answerOptionF(), percentAnswered: 10, isCorrectAnswer: false},
-    ],
-    notAnswered: 30,
+    question: 2,
+    questionText: 'My Fair Lady',
   },
 ];
+
 
 export default storybook => {
   return storybook
@@ -70,42 +63,42 @@ export default storybook => {
         name: 'Free responses for question 1',
         description: 'Student free reponse answers',
         story: () => (
-            <FreeResponsesAssessments
-              questionAnswerData={multipleChoiceData}
-              studentAnswerData={studentData}
-            />
+          <FreeResponsesAssessments
+            questionData={questionData}
+            studentAnswerData={studentData}
+          />
         )
       },
-      {
-        name: 'Free response for question 2',
-        description: 'No Student response',
-        story: () => (
-            <FreeResponsesAssessments
-              questionAnswerData={multipleChoiceData}
-              studentAnswerData={studentData}
-            />
-        )
-      },
-      {
-        name: 'Long question',
-        description: 'Link to see full question',
-        story: () => (
-            <FreeResponsesAssessments
-              questionAnswerData={multipleChoiceData}
-              studentAnswerData={studentData}
-            />
-        )
-      },
-      {
-        name: 'Free responses for question 3',
-        description: 'No Student response',
-        story: () => (
-            <FreeResponsesAssessments
-              questionAnswerData={multipleChoiceData}
-              studentAnswerData={studentData}
-            />
-        )
-      },
+      // {
+      //   name: 'Free response for question 2',
+      //   description: 'No Student response',
+      //   story: () => (
+      //     <FreeResponsesAssessments
+      //       questionAnswerData={multipleChoiceData}
+      //       studentAnswerData={studentData}
+      //     />
+      //   )
+      // },
+      // {
+      //   name: 'Long question',
+      //   description: 'Link to see full question',
+      //   story: () => (
+      //       <FreeResponsesAssessments
+      //         questionAnswerData={multipleChoiceData}
+      //         studentAnswerData={studentData}
+      //       />
+      //   )
+      // },
+      // {
+      //   name: 'Free responses for question 3',
+      //   description: 'No Student response',
+      //   story: () => (
+      //       <FreeResponsesAssessments
+      //         questionData={questionData}
+      //         studentAnswerData={studentData}
+      //       />
+      //   )
+      // },
     ]);
 
 };
