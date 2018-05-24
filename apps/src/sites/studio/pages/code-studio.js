@@ -105,15 +105,17 @@ setTimeout(function () {
 }, 10000);
 
 $(document).ready(function () {
-  const gdprData = getScriptData('gdpr');
-  if (gdprData.show_gdpr_dialog && gdprData.current_user_id) {
-    ReactDOM.render(
-      <GDPRDialog
-        isDialogOpen={gdprData.show_gdpr_dialog}
-        currentUserId={gdprData.current_user_id}
-      />,
-      document.getElementById('gdpr-dialog')
-    );
+  if (document.querySelector(`script[data-gdpr]`)) {
+    const gdprData = getScriptData('gdpr');
+    if (gdprData.show_gdpr_dialog && gdprData.current_user_id) {
+      ReactDOM.render(
+        <GDPRDialog
+          isDialogOpen={gdprData.show_gdpr_dialog}
+          currentUserId={gdprData.current_user_id}
+        />,
+        document.getElementById('gdpr-dialog')
+      );
+    }
   }
 });
 
