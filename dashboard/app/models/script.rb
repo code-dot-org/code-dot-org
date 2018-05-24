@@ -809,9 +809,10 @@ class Script < ActiveRecord::Base
   def self.fetch_script(options)
     options.symbolize_keys!
     options[:wrapup_video] = options[:wrapup_video].blank? ? nil : Video.find_by!(key: options[:wrapup_video])
-    name = {name: options.delete(:name)}
-    script_key = ((id = options.delete(:id)) && {id: id}) || name
-    script = Script.includes(:levels, :script_levels, stages: :script_levels).create_with(name).find_or_create_by(script_key)
+    id = options.delete(:id)
+    name = options.delete(:name)
+    script_key = id ? {id: id} : {name: name}
+    script = Script.includes(:levels, :script_levels, stages: :script_levels).create_with({name: name}).find_or_create_by(script_key)
     script.update!(options.merge(skip_name_format_validation: true))
     script
   end
