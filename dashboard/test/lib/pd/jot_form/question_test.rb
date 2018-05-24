@@ -13,7 +13,7 @@ module Pd
         assert_equal 'Invalid type unsupported for Pd::JotForm::Question', e.message
       end
 
-      test 'to_summary' do
+      test 'summarize' do
         question = Question.new(
           name: 'sampleQuestion',
           text: 'This is a sample label'
@@ -22,11 +22,11 @@ module Pd
 
         assert_equal(
           {'sampleQuestion' => {text: 'This is a sample label', answer_type: 'text'}},
-          question.to_summary
+          question.summarize
         )
       end
 
-      test 'to_form_data' do
+      test 'process_answer' do
         question = Question.new(name: 'sampleQuestion')
         mock_answer = mock
         mock_value = mock
@@ -34,7 +34,7 @@ module Pd
 
         assert_equal(
           {'sampleQuestion' => mock_value},
-          question.to_form_data(mock_answer)
+          question.process_answer(mock_answer)
         )
       end
     end

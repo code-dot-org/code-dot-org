@@ -459,6 +459,9 @@
   homepage_header_donors: موقع code.org  يشكر الداعمين له
   homepage_donors_seall: عرض الكل
   homepage_donors_donate: تبرع
+  homepage_below_hero_announcement_text: We care about your privacy and are making
+    some updates to our privacy policy, effective May 25.
+  homepage_below_hero_announcement_link_text: اعرف المزيد
   contact_form_topic_student: أنا طالب
   contact_form_topic_parent: أنا والد/والدة
   contact_form_topic_teacher: أنا مدرس/ معلم
@@ -697,6 +700,10 @@
   volunteer_engineer_submission_field_email_desc: لن يقع مشاركة بريدكم الالكتروني،
     و لكن سنرسل لكم الطلبات من المعلمين.
   volunteer_engineer_submission_field_email_placeholder: البريد الإلكتروني
+  volunteer_engineer_submission_field_email_preference: Can we email you about updates
+    to our courses, volunteer opportunities, or other computer science news?
+  volunteer_engineer_submission_field_email_preference_yes: نعم
+  volunteer_engineer_submission_field_email_preference_no: لا
   volunteer_engineer_submission_final_paragraph: سيقع إدراجكم بالخريطة لتمكين المعلمين
     المحليين من الإتصال بكم لحدث ساعة البرمجة أو اي فرصة للتطوع. بريدكم الإلكتروني
     و عنوانكم لن يقع مشاركتها. ولكن بقية المعلومات، بما فيها عنوانكم التقريبي، ستكون
@@ -1235,6 +1242,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: Full Test - 50 questions
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'
@@ -2034,11 +2042,5 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  homepage_below_hero_announcement_text: We care about your privacy and are making
-    some updates to our privacy policy, effective May 25.
-  homepage_below_hero_announcement_link_text: Learn more
-  volunteer_engineer_submission_field_email_preference: Can we email you about updates
-    to our courses, volunteer opportunities, or other computer science news?
-  volunteer_engineer_submission_field_email_preference_yes: 'Yes'
-  volunteer_engineer_submission_field_email_preference_no: 'No'
-  csp-post-survey_name: Student Post-Course Survey
+  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
+    policy)"

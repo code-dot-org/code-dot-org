@@ -36,6 +36,7 @@ class XhrProxyController < ApplicationController
     api.openweathermap.org
     api.pegelalarm.at
     api.randomuser.me
+    api.rebrandly.com
     api.spotify.com
     api.themoviedb.org
     api.zippopotam.us
@@ -60,6 +61,7 @@ class XhrProxyController < ApplicationController
     nuevaschool.ngrok.io
     nuevaschool2.ngrok.io
     nuevaschool3.ngrok.io
+    numbersapi.com
     rhcloud.com
     sheets.googleapis.com
     spreadsheets.google.com

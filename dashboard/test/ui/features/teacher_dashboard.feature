@@ -12,6 +12,12 @@ Feature: Using the teacher dashboard
     Then I click selector "div.title:contains('Student Accounts and Progress')"
     Then I wait until I am on "http://studio.code.org/home"
 
+  Scenario: Loading the teacher dashboard in the EU
+    Given I am on "http://code.org/"
+    And I am a teacher
+    And I am on "http://code.org/teacher-dashboard?no_home_redirect=1&force_in_eu=1"
+    Then I wait to see ".ui-test-gdpr-dialog"
+
   Scenario: Loading student progress
     Given I create a teacher-associated student named "Sally"
     And I give user "Teacher_Sally" hidden script access
@@ -44,7 +50,8 @@ Feature: Using the teacher dashboard
 
     When I click selector "#learn-tabs a:contains('Manage Students')" once I see it
     And I wait until element "#uitest-manage-tab" is visible
-    And element "#privacy_link" contains text "privacy document"
+    And I wait until element "#uitest-privacy-link" is visible
+    And element "#uitest-privacy-link" contains text "privacy document"
 
     When I click selector "#learn-tabs a:contains('Assessments/Surveys')" once I see it
     And I wait until element "#uitest-course-dropdown" is visible
