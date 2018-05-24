@@ -98,8 +98,9 @@
 
           #optin2-container{style: "display: none"}
             .email-preference.itemblock{style: "display: none"}
-              .labelblock-wide= t('signup_form.email_preference_question').html_safe
-              = link_to t('signup_form.email_preference_privacy'), CDO.code_org_url('/privacy'), target: '_blank'
+              .labelblock-wide
+                = t('signup_form.email_preference_question').html_safe
+                = link_to t('signup_form.email_preference_privacy'), CDO.code_org_url('/privacy'), target: '_blank'
               #optin2-yes-container
                 %input{type: "radio", id: "optin2-yes", name: "user[email_preference_opt_in]", value: "yes"}
                 %label{for: "optin2-yes"}= t('signup_form.email_preference_yes').html_safe
