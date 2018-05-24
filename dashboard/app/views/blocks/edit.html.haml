@@ -1,5 +1,6 @@
 - content_for(:head) do
   %script{src: minifiable_asset_path('js/blocks/edit.js')}
+  = stylesheet_link_tag 'css/levelbuilder', media: 'all'
 
 %h1= @block.new_record? ? "New Block" : "Editing block #{@block.name}"
 #editor
