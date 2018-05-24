@@ -23,8 +23,8 @@
   learn_now: Învaţă Acum
   petition_message: Fiecare elev din fiecare şcoală ar trebui să aibă posibilitatea
     de a învăța informatică
-  petition_sign_message: 'Dacă ești de acord, semnează-ți numele. Alătură-te altora
-    #.'
+  petition_sign_message: 'Dacă ești de acord, semnează-te cu numele. Alătură-te #
+    celorlalți.'
   petition_sign_message_support: 'Dacă ne sprijini, completează-ți numele. Alătură-te
     # celorlalți.'
   petition_join_others: 'Alătură-te altor #'
@@ -486,6 +486,9 @@
   homepage_header_donors: Code.org mulţumește suporterilor săi
   homepage_donors_seall: Vizualizați toate
   homepage_donors_donate: Donează
+  homepage_below_hero_announcement_text: We care about your privacy and are making
+    some updates to our privacy policy, effective May 25.
+  homepage_below_hero_announcement_link_text: Află mai mult
   contact_form_topic_student: Sunt student
   contact_form_topic_parent: Sunt părinte
   contact_form_topic_teacher: Sunt profesor/educator
@@ -740,6 +743,10 @@
   volunteer_engineer_submission_field_email_desc: Adresa ta de e-mail nu va fi niciodata
     distribuita, dar iti vom trimite solicitari din partea profesorilor.
   volunteer_engineer_submission_field_email_placeholder: Adresă de email
+  volunteer_engineer_submission_field_email_preference: Can we email you about updates
+    to our courses, volunteer opportunities, or other computer science news?
+  volunteer_engineer_submission_field_email_preference_yes: Da
+  volunteer_engineer_submission_field_email_preference_no: Nu
   volunteer_engineer_submission_final_paragraph: Vei aparea pe o hartă pentru ca profesorii
     locali sa te contacteze pentru Ora de Cod sau alte oportunitati de voluntariat.
     Adresa ta de e-mail si adresa exactă nu vor fi distribuite, dar alte informatii
@@ -1312,6 +1319,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: Sarcini de performanţă AP
   csppostap_name: 'Post-AP: Baze de date în aplicaţii'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: Testul complet - 50 întrebări
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'
@@ -2200,13 +2208,5 @@
     contul Google":'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  homepage_below_hero_announcement_text: We care about your privacy and are making
-    some updates to our privacy policy, effective May 25.
-  homepage_below_hero_announcement_link_text: Learn more
-  volunteer_engineer_submission_field_email_preference: Can we email you about updates
-    to our courses, volunteer opportunities, or other computer science news?
   volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
     policy)"
-  volunteer_engineer_submission_field_email_preference_yes: 'Yes'
-  volunteer_engineer_submission_field_email_preference_no: 'No'
-  csp-post-survey_name: Student Post-Course Survey

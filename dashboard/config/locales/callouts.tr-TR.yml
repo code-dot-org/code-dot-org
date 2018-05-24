@@ -146,6 +146,7 @@
       CSD U3 Direction Arrows_2018_callout: {}
       CSD U3 Draw Loop Plugged update your scene_callout: {}
       CSD U3 Draw Loop Plugged update your scene_2018_callout: {}
+      CSD U3 Draw Loop Plugged wiggle sprite y_2018_callout: {}
       CSD U3 Drawing Squares to Corners_callout: {}
       CSD U3 Drawing Squares to Corners_2018_callout: {}
       CSD U3 Else_callout: {}
@@ -1412,6 +1413,10 @@
           için blokları kategorilere ayrılacak şekilde organize ettik. Herşeyin nereye
           gittiğini görmek için buraya tıkla.
       courseD_playLab_condFP_a_callout:
+        courseD_playLab_condFP_1: sana oynayabileceğin şekilde daha fazla kod vermek
+          için blokları kategorilere ayrılacak şekilde organize ettik. Herşeyin nereye
+          gittiğini görmek için buraya tıkla.
+      courseD_playLab_condForVideo_callout:
         courseD_playLab_condFP_1: sana oynayabileceğin şekilde daha fazla kod vermek
           için blokları kategorilere ayrılacak şekilde organize ettik. Herşeyin nereye
           gittiğini görmek için buraya tıkla.

@@ -365,6 +365,8 @@
   homepage_header_donors: "Code.org তার সমর্থকদের ধন্যবাদ দেয়"
   homepage_donors_seall: "সব দেখুন"
   homepage_donors_donate: "স্বেচ্ছায় অর্থায়ন করুন"
+  homepage_below_hero_announcement_text: "We care about your privacy and are making some updates to our privacy policy, effective May 25."
+  homepage_below_hero_announcement_link_text: "আরও জানুন"
   contact_form_topic_student: "আমি একজন ছাত্র"
   contact_form_topic_parent: "আমি ছাত্রের বাবা/মা"
   contact_form_topic_teacher: "আমি একজন শিক্ষক/শিক্ষাবিদ"
@@ -535,6 +537,9 @@
   volunteer_engineer_submission_field_email: "ইমেইল ঠিকানা"
   volunteer_engineer_submission_field_email_desc: "আপনার ই-মেইল ঠিকানা শেয়ার করা হবে না, তবে আমরা আপনাকে শিক্ষকদের অনুরোধ প্রেরণ করবো।"
   volunteer_engineer_submission_field_email_placeholder: "ইমেইল ঠিকানা"
+  volunteer_engineer_submission_field_email_preference: "Can we email you about updates to our courses, volunteer opportunities, or other computer science news?"
+  volunteer_engineer_submission_field_email_preference_yes: '"হ্যাঁ"'
+  volunteer_engineer_submission_field_email_preference_no: 'না'
   volunteer_engineer_submission_final_paragraph: "এক ঘন্টার কোডে বা অন্য কোন স্বেচ্ছাসেবার সুযোগে শিক্ষকদের আপনার সাথে যোগাযোগ করা জন্য আপনাকে একটি মানচিত্রে তালিকাভুক্ত করা হবে । আপনার ইমেল ও আসল ঠিকানা কখন আমরা শেয়ার করব না। কিন্তু অন্যান্য তথ্য (আপনার আনুমানিক অবস্থান) স্থানীয় শিক্ষক দ্বারা প্রকাশ্যে দর্শনযোগ্য হবে।."
   volunteer_engineer_submission_checkbox_contact: 'আমি একমত যে শিক্ষক আমাকে স্বেচ্ছাসেবক সুযোগ দেবার জন্য যোগাযোগ করতে পারেন।  (দ্রষ্টব্য: আপনার ইমেইল ঠিকানা শেয়ার করবেন না)'
   volunteer_engineer_submission_checkbox_age_18_plus: "I certify that I am at least 18 years old."
@@ -964,6 +969,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: "Full Test - 50 questions"
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'
