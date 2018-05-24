@@ -75,7 +75,7 @@ class StudentAssessmentOverviewTable extends Component {
       return answerObj.multipleChoiceOption;
     });
 
-    return getCorrectAnswers.join(', ');
+    return getCorrectAnswers.join(',');
   };
 
   correctAnswerColumnFormatter = (answers, {rowData, columnIndex}) => {
@@ -92,10 +92,14 @@ class StudentAssessmentOverviewTable extends Component {
   };
 
   studentAnswerColumnFormatter = (studentAnswers, {rowData, rowIndex}) => {
-    const studentAnswersForRow = this.props.studentAnswerData[0].studentAnswers[rowIndex];
+    const studentAnswersArr = this.props.studentAnswerData.map(studentObj => {
+      return studentObj.studentAnswers[rowIndex].answers;
+    });
+
+    const studentResponse = studentAnswersArr.join(',');
+
     const multipleChoiceAnswers = rowData.answers;
 
-    let studentResponse = studentAnswersForRow.answers.join(', ');
     let displayAnswer = this.getCorrectAnswer(multipleChoiceAnswers);
 
     return (
