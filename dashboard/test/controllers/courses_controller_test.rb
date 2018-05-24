@@ -153,10 +153,10 @@ class CoursesControllerTest < ActionController::TestCase
   test "update: persists changes localizeable strings" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    create :course, name: 'csp'
+    create :course, name: 'csp-2017'
 
-    post :update, params: {course_name: 'csp', scripts: [], title: 'Computer Science Principles'}
-    assert_equal "Computer Science Principles ('17-'18)", Course.find_by_name!('csp').summarize[:title]
+    post :update, params: {course_name: 'csp-2017', scripts: [], title: 'Computer Science Principles'}
+    assert_equal "Computer Science Principles ('17-'18)", Course.find_by_name!('csp-2017').summarize[:title]
   end
 
   # tests for edit

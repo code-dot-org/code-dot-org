@@ -117,18 +117,29 @@
     valid_password: 有效的密码 ！
     invalid_password: 密码必须至少为 6 个字符
     mismatch_password: 您输入的两个密码不匹配
+    agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
+      and <a href='http://code.org/privacy'>Privacy Policy</a>.
+    under_13_consent: 如果我未满 13 岁，我确认在使用 Code.org 服务时已征得父母或法定监护人的同意。
+    agree_us_website: 我同意使用美国的网站。
+    my_data_to_us: 我使用本网站产生的数据可能会被传输至美国并在美国存储或处理。
     student_terms: 我同意 Code.org 的<a href='http://code.org/tos'> 服务条款</a> 的约束.如果我未满13岁，我确认提交这份表格，有我的父母或法定监护人的许可使用
       Code.org 服务。<1><br/>对于13岁以下的用户, 电子邮件地址不会存储在用于联络的表单中。学生不会收到除密码重置的邮件外的任何邮件。查看我们的<a
       href='http://code.org/privacy'>隐私政策</a>来获取更多信息。
     teacher_terms: 我同意 Code.org 的服务条款。有关隐私的详细信息，请参阅我们的 <a href='http://code.org/privacy'>
       隐私政策</a>。
     additional_information: 我们需要一些额外的信息来继续为你注册.
+    user_type_button: Update Account Type
     user_type_label: 帐户类型
     user_type_teacher: 老师
     user_type_student: 学生
     field_is_required: 必填
     accept_terms: 您必须同意创建一个帐户
     error: 发生错误。
+    email_preference_question: 我们能否向您发送有关课程更新、本地机会或其他计算机科学新闻的电子邮件？
+    email_preference_privacy: （查看我们的隐私政策）
+    email_preference_yes: 是
+    email_preference_no: 不
+    email_preference_required: You must specify an email preference.
   school_info:
     title: 学校信息（选填）
     school_country: 学校所在国家
@@ -469,6 +480,8 @@
     student_not_found: 无法找到这一个或多个学生。
     all_students_must_be_in_current_section: 所有的学生都必须注册到您的章节中。
     already_enrolled_in_new_section: 您无法移动这些学生，因为他们已经在这个新的小组里了。
+    third_party_login: You cannot move students to a section that is synced with a
+      third party tool.
   share:
     title: 在代码工作室学习
     description: 任何人都可以学习计算机科学。用代码制作游戏、 应用程序和艺术作品。
@@ -900,6 +913,7 @@
     csd5_2: 第 2 章︰ 解决数据问题
     csd6_1: 第 1 章︰ 用硬件编程
     csd6_2: 第 2 章︰ 创建物理原型
+    csd_survey: Post-Course Survey
     csp1_1: 第一章：表达和传输信息
     csp1_2: 第二章：发明互联网
     csp2_1: 第一章：编码和压缩复杂信息
@@ -913,6 +927,11 @@
     csp_ap_1: 第一章：安装
     csp_ap_2: 第二章：浏览成绩工具
     csp_ap_3: 第三章：创建性能工具
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 第2单元︰ 数字信息
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: 反思提示
   external_links:
     disclaimer: 免责声明
@@ -1042,3 +1061,16 @@
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
   courses_category: 完整课程
+  cookie_banner:
+    message: By continuing to browse our site or clicking "I agree," you agree to
+      the storing of cookies on your computer or device.
+    more_information: See Code.org's Privacy Policy.
+    accept: 我同意
+  gdpr_dialog:
+    heading: Do you agree to using a web site based in the United States?
+    message: Data from your use of this site may be sent to and stored or processed
+      in the United States.
+    link_intro: For details see our
+    privacy_policy: privacy policy
+    logout: Logout
+    true: 是

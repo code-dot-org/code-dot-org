@@ -554,45 +554,34 @@
         Can you help me to catch the naughty pig?
         Stack a couple of "move forward" blocks together and press "Run" to help
         me get there.
-      20hr_maze_stage2_10_instruction: |-
-        Ok, try the new "repeat until" block -
-        it will repeat until I reach the annoying pig.
-      20hr_maze_stage2_11_instruction: |-
-        Ok, one last time for practice - can you
-        solve this one using only 4 blocks?
+      20hr_maze_stage2_10_instruction: Ок, жаңы "болгуча кайтала" блогун көргүлө -
+        ал тажаткыр торопойго жетмейинче кайталайт.
+      20hr_maze_stage2_11_instruction: Ок, дагы бир машыгуу - муну 4 эле блок колдонуп
+        чече аласыңарбы?
       20hr_maze_stage2_12_instruction: |-
         Dear person. Me zombie. Me hungry. Must...
         get... to sunflower... Can you get me there with only 5 blocks?
-      20hr_maze_stage2_13_instruction: |-
-        Ok, this is similar, but slightly different.
-        Can you do it in only 5 blocks?
-      20hr_maze_stage2_14_instruction: |-
-        Use the new "if" block to let me decide
-        when to turn. Hint: you only need one more block, but learn how we set it
-        up so you can do it on your own next time.
-      20hr_maze_stage2_15_instruction: |-
-        Ok, this is just like the last puzzle, but
-        you need to remember how you used the "if" block and the "repeat" block
-        together.
-      20hr_maze_stage2_16_instruction: |-
-        Me want sunflower! Use an "if" block to
-        get me there with the fewest number of blocks.
-      20hr_maze_stage2_17_instruction: |-
-        Ok, let's do that again for practice - this
-        isn't very different, but watch out for the chompers!
-      20hr_maze_stage2_18_instruction: |-
-        The "If-else" blocks checks a condition,
-        and then does one thing OR another. To get me to the sunflower try to use
-        this new block.
-      20hr_maze_stage2_19_instruction: |-
-        One more practice of the "if-else" block,
-        can you get it right on your first try?
+      20hr_maze_stage2_13_instruction: Ок, окшош эле, бирок кичине башкача. Муну 5
+        блок менен аткара аласыңарбы?
+      20hr_maze_stage2_14_instruction: 'Жаңы if (эгер) блогун пайдаланып, качан бурулууну
+        өзүм чечкенге жол бергиле. Кеңеш: дагы бир эле блок керек болот. Кандай орнотулганын
+        көрүп, эмкиде өзүңөр кылгыдай болгула.'
+      20hr_maze_stage2_15_instruction: Ок, бул акыркы башкатырма окшойт, бирок "эгер"
+        жана "кайталоо" блокторун бирге кантип колдонгонуңарды эстеп калгыла.
+      20hr_maze_stage2_16_instruction: Бизге күн карама керек! "Эгер" блогун колдонуп,
+        мени эң аз блок менен ага жеткизгиле.
+      20hr_maze_stage2_17_instruction: Ок, көнүгүү үчүн дагы бир кайталайлы - айырмасы
+        аз, бирок чомперлерден сактангыла!
+      20hr_maze_stage2_18_instruction: '"If-else" (эгер дагы) блогу шартты текшерет,
+        андан кийин бир нерсени же башкасын кылат. Бул жаңы блокту колдонуп мени күн
+        карамага жеткир.'
+      20hr_maze_stage2_19_instruction: '"If-else" (эгер дагы) блогу менен дагы көнүгүү.
+        Биринчи жолкусунан туура кыла аласыңбы?'
       20hr_maze_stage2_2_instruction: Бул торопой жиниме тийип жатат. Ага жеткенге
         жардам бер!
-      20hr_maze_stage2_20_instruction: |-
-        Can you add just 3 blocks to help me solve
-        a more complex maze? If you do it right, I can walk any curvy path no matter
-        the length.
+      20hr_maze_stage2_20_instruction: Болгону 3 блок кошуп, татаалыраак лабиринттен
+        өткөзө аласыңбы? Туура кылсаң, узунуна карабастан ийри жолдордун баарын өтө
+        алам.
       20hr_maze_stage2_3_instruction: Жол көрсөтүп, тентек торопойго жеткиз. Жардыргычтан
         алыс бол же жарылып кетесиң!
       20hr_maze_stage2_4_instruction: Мени жашыл мокочого жеткиз! (Жардыргычтан алыс
@@ -604,11 +593,11 @@
       20hr_maze_stage2_7_instruction: Үч эле блок колдонуп мени жашыл шүмшүккө жеткирип
         көр.
       20hr_maze_stage2_8_instruction: Болушунча аз блок менен шум торопойду кубалаганга
-        жардам кыл. Бирден ашык "жолу кайтала" блогун колдонгонго аракет кылгыла.
-      20hr_maze_stage2_9_instruction: |-
-        When a block is grey, that means you can't
-        delete it. Solve this puzzle using the "repeat" block that repeats 3 times.
-        Try putting these 3 blocks inside the grey "repeat" block: move, move, turn.
+        жардам кыл. "Жолу кайтала" блогун бирден ашык колдонгонго аракет кылгыла.
+      20hr_maze_stage2_9_instruction: 'Блок жашыл болсо, аны жок кыла аласыңыр дегенди
+        түшүндүрөт. Бул башкатырманы 3 жолу кайталанган "кайталоо" блогун колдонуп
+        чечкиле. Бул 3 блокту боз "кайталоо" блогунун ичине салганга аракеттенгиле:
+        жыл, жыл, бурул.'
       4-5 Artist 1_instruction: "Help me finish drawing my box. (Each line is 300\npixels
         long) "
       4-5 Artist 10_instruction: |-
@@ -4071,12 +4060,10 @@
       Course 4 SCFL 1_instruction: |-
         Solve this puzzle using the fewest number of
         blocks possible.
-      Course 4 SCFL 1a_instruction: |-
-        Can you get Scrat to his acorn using as few
-        blocks as possible?
-      Course 4 SCFL 1b_instruction: |-
-        Can you get Scrat to his acorn using as few
-        blocks as possible?
+      Course 4 SCFL 1a_instruction: Болушунча аз блок колдонуп Скратты жаңгагына жеткизе
+        аласыңбы?
+      Course 4 SCFL 1b_instruction: Болушунча аз блок колдонуп Скратты жаңгагына жеткизе
+        аласыңбы?
       Course 4 SCFL 2_instruction: |-
         Solve this puzzle using the fewest number of
         blocks possible.
@@ -5210,9 +5197,8 @@
         Freeplay: Here are the functions
         you've written, and some more for you to play with. Draw something awesome!
         Play with the pen width to see how different your drawings look!
-      NEW Course 4 Artist Params 2_instruction: |-
-        Create a `draw triangle` function
-        from scratch that makes a triangle with  50 pixel sides.
+      NEW Course 4 Artist Params 2_instruction: Жактарынын узундугу 50 пиксел болгон
+        "үч бурчтук тарт" функциясын жаңыдан түзгүлө.
       NEW Course 4 Artist Params 3_instruction: "Now let's use the function to draw
         5 triangles in a row. Each triangle is 30 pixels apart.\r\n"
       NEW Course 4 Artist Params 4_instruction: |-
@@ -9442,13 +9428,12 @@
       courseB_collector_prog3_instruction: |-
         How can Laurel collect all five piles
         of gold using only one `E -->` block?
-      courseB_iceage_loops1_instruction: |-
-        Help Scrat across the ice to get to the
-        acorn!
-      courseB_iceage_loops10_instruction: |-
-        Help Scrat get all the way over to the
-        acorn!
+      courseB_iceage_loops1_instruction: Скратка муздан өтүп жаңгакка жеткенге жардам
+        бергиле!
+      courseB_iceage_loops10_instruction: Скрат бүт жолду өтүп, жаңгакка жеткенге
+        жардам бергиле!
       courseB_iceage_loops11_instruction: Help Scrat get to the acorn!
+      courseB_iceage_loops11_forVideo_instruction: Help Scrat get to the acorn!
       courseB_iceage_loops12_instruction: Get to the acorn any way you can!
       courseB_iceage_loops2_instruction: |-
         Use two different move blocks to get to
@@ -11168,12 +11153,10 @@
         "I need some
         help on the farm! Help me harvest this corn using only the blocks in your
         toolbox."
-      courseD_iceage_loops1_instruction: |-
-        Help Scrat across the ice to get to the
-        acorn!
-      courseD_iceage_loops10_instruction: |-
-        Help Scrat get all the way over to the
-        acorn!
+      courseD_iceage_loops1_instruction: Скратка муздан өтүп жаңгакка жеткенге жардам
+        бергиле!
+      courseD_iceage_loops10_instruction: Скрат бүт жолду өтүп, жаңгакка жеткенге
+        жардам бергиле!
       courseD_iceage_loops11_instruction: Help Scrat get to the acorn!
       courseD_iceage_loops12_instruction: Get to the acorn any way you can!
       courseD_iceage_loops2_instruction: Use a `turn left` block to get to the acorn!
@@ -11379,6 +11362,8 @@
         off to your friends!
       courseD_playLab_condFP_a_instruction: Now, build your own game to show off to
         your friends!
+      courseD_playLab_condForVideo_instruction: Now, build your own game to show off
+        to your friends!
       courseD_playLab_embedded_instruction: "Move Pegleg the Pirate with the arrow
         keys. Get to the dragon to score points, but avoid the ninja! Standing below
         the line of octopuses will make the ninja stop chasing you, but beware! The
@@ -14809,12 +14794,10 @@
       scrat 18_instruction: |-
         The "If-else" blocks checks a condition, and then
         does one thing OR another. To get me to the acorn try to use this new block.
-      scrat 19 (copy 1)_instruction: |-
-        One more practice of the "if-else" block,
-        can you get it right on your first try?
-      scrat 19_instruction: |-
-        One more practice of the "if-else" block, can you
-        get it right on your first try?
+      scrat 19 (copy 1)_instruction: '"If-else" (эгер дагы) блогу менен дагы көнүгүү.
+        Биринчи жолкусунан туура кыла аласыңбы?'
+      scrat 19_instruction: '"If-else" (эгер дагы) блогу менен дагы көнүгүү. Биринчи
+        жолкусунан туура кыла аласыңбы?'
       scrat 20_instruction: |-
         Can you add just 3 blocks to help me solve a more complex
         maze? If you do it right, I can walk any curvy path no matter the length.

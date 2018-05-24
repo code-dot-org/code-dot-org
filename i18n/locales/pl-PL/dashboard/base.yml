@@ -114,9 +114,14 @@ pl:
     valid_password: "Prawidłowe hasło!"
     invalid_password: "Hasło musi zawierać przynajmniej 6 znaków"
     mismatch_password: "Dwa hasła, które podałeś, nie są zgodne"
+    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
+    under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
+    agree_us_website: "I agree to using a website based in the United States."
+    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
     student_terms: "Zgadzam się na ograniczenia wynikające <a href='http://code.org/tos'> z warunków korzystania z usług </a> oferowanych przez Code.org. Jeśli mam mniej niż 13 lat, to potwierdzam przesyłając ten formularz, że mam zgodę moich rodziców lub prawnego opiekuna na korzystanie z usług Code.org. <br/> <br/> Adresy mailowe nie są przechowywane w postaci, która umożliwiałaby kontakt z uczniami. Uczniowie nie otrzymają maili z Code.org, z wyjątkiem służących do odzyskania hasła. Zobacz nasze <a href='http://code.org/privacy'> zasady ochrony prywatności</a>, aby uzyskać więcej informacji."
     teacher_terms: "Zgadzam się na ograniczenia wynikające z warunków korzystania z usług oferowanych przez Code.org. Aby uzyskać więcej informacji na temat prywatności, zobacz naszą <a href='http://code.org/privacy'> politykę prywatności</a>."
     additional_information: "Potrzebujemy dodatkowych informacji, aby móc Ciebie zarejestrować."
+    user_type_button: "Update Account Type"
     user_type_label: "Typ konta"
     user_type_teacher: "Nauczyciel"
     user_type_student: "Uczeń"
@@ -126,6 +131,7 @@ pl:
     email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
     email_preference_yes: "Tak"
     email_preference_no: "Nie"
+    email_preference_required: "You must specify an email preference."
   school_info:
     title: 'Informacja o Szkole (opcjonalne)'
     school_country: 'Kraj'
@@ -453,6 +459,7 @@ pl:
     student_not_found: "Nie można odnaleźć jednego lub więcej uczniów."
     all_students_must_be_in_current_section: "Wszyscy uczniowie muszą obecnie być włączeni do sekcji."
     already_enrolled_in_new_section: "Nie można przenieść tych uczniów, ponieważ ten nauczyciel ma ich już w innej sekcji."
+    third_party_login: "You cannot move students to a section that is synced with a third party tool."
   share:
     title: "Ucz się z Code Studio"
     description: "Każdy może nauczyć się informatyki. Zakoduj gry, aplikacje i sztukę."
@@ -872,6 +879,7 @@ pl:
     csd5_2: 'Rozdział 2: Rozwiązywanie Problemów z Danymi'
     csd6_1: 'Rozdział 1: Wyjście Sprzętowe'
     csd6_2: 'Rozdział 2: Wejście Sprzętowe'
+    csd_survey: 'Post-Course Survey'
     csp1_1: 'Rozdział 1: Reprezentowanie i Przekazywanie Informacji'
     csp1_2: 'Rozdział 2: Wynalezienie Internetu'
     csp2_1: 'Rozdział 1: Kodowanie i Kompresja Złożonych Danych'
@@ -998,3 +1006,10 @@ pl:
     message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
     more_information: "See Code.org's Privacy Policy."
     accept: 'Zgadzam się'
+  gdpr_dialog:
+    heading: 'Do you agree to using a web site based in the United States?'
+    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+    link_intro: 'For details see our'
+    privacy_policy: 'privacy policy'
+    logout: 'Logout'
+    yes: 'Tak'
