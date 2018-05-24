@@ -159,7 +159,7 @@ class Homepage
           color1: "0, 148, 202",
           color2: "89, 185, 220",
           url: "/educate",
-          image: "/images/homepage/ap-feature-2017.jpg",
+          image: "/images/fit-400/homepage/ap-feature-2017.jpg",
           links:
             [
               {
@@ -249,7 +249,7 @@ class Homepage
           color1: "0, 148, 202",
           color2: "89, 185, 220",
           url: CDO.studio_url("/courses?view=teacher"),
-          image: "/images/homepage/ap-feature-2017.jpg"
+          image: "/images/fit-400/homepage/ap-feature-2017.jpg"
         },
         {
           id: "hoc-nonen",
