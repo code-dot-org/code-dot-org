@@ -429,6 +429,24 @@ const DUMMY_INPUT = 'dummy';
 const STATEMENT_INPUT = 'statement';
 const FIELD_INPUT = 'field';
 
+const BUILTIN_ARGS = {
+  NEWLINE: {
+    name: 'NEWLINE',
+    empty: true,
+  },
+};
+
+const findInputConfig = (args, inputName) => {
+  const argIndex = args.findIndex(arg => arg.name === inputName);
+  if (argIndex !== -1) {
+    return args.splice(argIndex, 1)[0];
+  }
+  if (BUILTIN_ARGS[inputName] !== undefined) {
+    return BUILTIN_ARGS[inputName];
+  }
+  throw new Error(`${inputName} not found in args or BUILTIN_ARGS`);
+};
+
 /**
  * Given block text with input names specified in curly braces, returns a list
  * of labeled inputs that should be added to the block.
@@ -442,6 +460,7 @@ const FIELD_INPUT = 'field';
  * @returns {LabeledInputConfig[]} a list of labeled inputs
  */
 const determineInputs = function (text, args, strictTypes=[]) {
+  text = text.replace(/\n/g, '{NEWLINE}');
   const tokens = text.split(/[{}]/);
   if (tokens[tokens.length - 1] === '') {
     tokens.pop();
@@ -451,8 +470,7 @@ const determineInputs = function (text, args, strictTypes=[]) {
     const label = tokens[i];
     const input = tokens[i + 1];
     if (input) {
-      const argIndex = args.findIndex(arg => arg.name === input);
-      const [arg] = args.splice(argIndex, 1);
+      const arg = findInputConfig(args, input);
       const strict = arg.strict || strictTypes.includes(arg.type);
       let mode;
       if (arg.options) {
