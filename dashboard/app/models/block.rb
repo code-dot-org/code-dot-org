@@ -61,19 +61,13 @@ class Block < ApplicationRecord
     if File.exist? js_path
       helper_code = File.read js_path
     end
-    Block.find_or_initialize_by(
-      {
-        name: block_name,
-        level_type: level_type,
-      }
-    ).tap do |block|
-      block.update(
-        {
-          category: block_config['category'],
-          config: block_config['config'].to_json,
-        }
-      )
-      block.update(helper_code: helper_code) if helper_code
-    end
+    block = Block.find_or_initialize_by(
+      name: block_name,
+      level_type: level_type,
+    )
+    block.category = block_config['category']
+    block.config = block_config['config'].to_json
+    block.helper_code = helper_code
+    block.save!
   end
 end
