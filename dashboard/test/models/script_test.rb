@@ -947,6 +947,16 @@ endvariants
     assert_equal("other", assignable_info[:category])
   end
 
+  test "assignable_info: correctly translates script info" do
+    test_locale = :"te-ST"
+    I18n.locale = test_locale
+    script = build(:script, name: 'csp1')
+    assignable_info = script.assignable_info
+
+    assert_equal("CSP Unit 1 - The Internet", assignable_info[:name])
+    assert_equal("CS Principles ('17-'18)", assignable_info[:category])
+  end
+
   test "self.valid_scripts: does not return hidden scripts when user is a student" do
     student = create(:student)
 
