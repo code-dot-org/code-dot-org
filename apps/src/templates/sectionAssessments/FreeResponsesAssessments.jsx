@@ -4,7 +4,6 @@ import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
 import i18n from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
-import MultipleChoiceAnswerCell from './MultipleChoiceAnswerCell';
 
 export const COLUMNS = {
   STUDENT: 0,
@@ -12,15 +11,16 @@ export const COLUMNS = {
 };
 
 const freeResponsesDataPropType = PropTypes.shape({
-  id:  PropTypes.number,
-  studentId: PropTypes.string,
-  name: PropTypes.string,
-  response: PropTypes.string,
+  id:  PropTypes.number.isRequired,
+  studentId: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  response: PropTypes.string.isRequired,
 });
 
 class FreeResponsesAssessments extends Component {
   static propTypes= {
-    freeResponses:PropTypes.arrayOf(freeResponsesDataPropType),
+    freeResponses: PropTypes.arrayOf(freeResponsesDataPropType),
+    // responses: PropTypes.arrayOf(textResponsePropType),
   };
 
   state = {
@@ -48,25 +48,23 @@ class FreeResponsesAssessments extends Component {
     });
   };
 
-  studentResponseColumnFormatter = (studentAnswers, {rowData, rowIndex, columnIndex}) => {
-    const studentResponse = this.props.freeResponses[rowIndex].response;
+  studentResponseColumnFormatter = (response, {rowIndex}) => {
+   const studentResponse = this.props.freeResponses[rowIndex].response;
 
     return (
-      <MultipleChoiceAnswerCell
-        id={rowData.id}
-        displayAnswer={studentResponse}
-      />
+      <div>
+        {studentResponse}
+      </div>
     );
   };
 
-  studentNameColumnFormatter = (studentAnswers, {rowData, rowIndex}) => {
+  studentNameColumnFormatter = (name, {rowIndex}) => {
     const studentName = this.props.freeResponses[rowIndex].name;
 
     return (
-      <MultipleChoiceAnswerCell
-        id={rowData.id}
-        displayAnswer={studentName}
-      />
+      <div>
+      {studentName}
+      </div>
     );
   };
 
