@@ -719,12 +719,13 @@ module Api::V1::Pd
     end
 
     test 'cohort csv download returns expected columns for teachers' do
+      create :pd_teacher1819_application, :locked, course: 'csd'
       sign_in @workshop_admin
       get :cohort_view, format: 'csv', params: {role: 'csd_teachers'}
       assert_response :success
       response_csv = CSV.parse @response.body
 
-      expected_columns = [
+      expected_headers = [
         'Date Accepted',
         'Applicant Name',
         'District Name',
@@ -735,16 +736,18 @@ module Api::V1::Pd
         'Registered Workshop',
         'Accepted Teachercon'
       ]
-      assert_equal expected_columns, response_csv.first
+      assert_equal expected_headers, response_csv.first
+      assert_equal expected_headers.length, response_csv.second.length
     end
 
     test 'cohort csv download returns expected columns for facilitators' do
+      create :pd_facilitator1819_application, :locked, course: 'csf'
       sign_in @workshop_admin
       get :cohort_view, format: 'csv', params: {role: 'csf_facilitators'}
       assert_response :success
       response_csv = CSV.parse @response.body
 
-      expected_columns = [
+      expected_headers = [
         'Date Accepted',
         'Name',
         'School District',
@@ -755,7 +758,8 @@ module Api::V1::Pd
         'Registered Workshop',
         'Accepted Teachercon'
       ]
-      assert_equal expected_columns, response_csv.first
+      assert_equal expected_headers, response_csv.first
+      assert_equal expected_headers.length, response_csv.second.length
     end
 
     test 'search finds applications by email for workshop admins' do
