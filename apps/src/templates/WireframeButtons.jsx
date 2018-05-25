@@ -106,11 +106,7 @@ let WireframeButtons = React.createClass({
   },
 
   renderNewProjectButton: function () {
-    // Unfortunately, isLegacyShare currently has the wrong value (is true for non-legacy artist
-    // and playlab). So instead, we check the first letter (after the /) in the path name of the
-    // url, as legacy shares all start with /c
-    // var isLegacyShare = this.props.isLegacyShare;
-    var isLegacyShare = window.location.pathname[1] === 'c';
+    const { isLegacyShare } = this.props;
     var appTypeAndLegacy = this.props.appType + (isLegacyShare ? '_legacy' : '');
     var url = APP_TYPE_TO_NEW_PROJECT_URL[appTypeAndLegacy];
     if (url) {
