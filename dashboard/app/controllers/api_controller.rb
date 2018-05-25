@@ -504,6 +504,80 @@ class ApiController < ApplicationController
     render json: data
   end
 
+  # For each assessment in a script, return an object of question IDs to question data.
+  # Question data includes the question text, all possible answers, and the correct answers.
+  def assessments_structure
+    section = load_section
+    script = load_script(section)
+    puts script.id
+
+    # must validate we are a verified teacher because this will provide locked
+    # question and answer data
+
+    level_group_script_levels = script.script_levels.includes(:levels).where('levels.type' => 'LevelGroup')
+
+    assessments = {}
+
+    level_group_script_levels.map do |script_level|
+      next unless script_level.long_assessment?
+
+      # Don't allow somebody to peek inside an anonymous survey using this API.
+      next if script_level.anonymous?
+
+      # The actual level group that corresponds to the script_level
+      level_group = script_level.levels[0]
+
+      # A structure to store the individual level structure in the level_group
+      questions = {}
+
+      # For each level in the multi group (ignore pages for assessments tab)
+      level_group.levels.each do |level|
+        # A single level corresponds to a single question
+        question = {}
+
+        case level
+        when FreeResponse
+          puts level.properties
+          question = {
+            type: level.type,
+            question_text: level.properties['markdown_instructions']
+
+          }
+        when Multi
+          # Multiple choice question, includes question text, answer text, and which
+          # ones are right / wrong
+
+          # Some questions are in markdown and some are in a text questions array.
+          question_text = ''
+          unless level.properties['questions'].nil?
+            question_text = level.properties['questions'][0]['text']
+          end
+          unless level.properties['markdown'].nil?
+            question_text = level.properties['markdown']
+          end
+
+          question = {
+            type: level.type,
+            question_text: question_text,
+            answers: level.properties['answers'],
+          }
+        end
+
+        # Add this level info to the map
+        questions[level.id] = question
+      end
+
+      # Add question and answers text to data structure
+      assessments[level_group.id] = {
+        id: level_group.id,
+        questions: questions,
+        name: level_group.name,
+      }
+    end
+
+    render json: assessments
+  end
+
   # Return results for surveys, which are long-assessment LevelGroup levels with the anonymous property.
   # At least five students in the section must have submitted answers.  The answers for each contained
   # sublevel are shuffled randomly.
