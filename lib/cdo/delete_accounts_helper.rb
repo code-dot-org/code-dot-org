@@ -186,6 +186,12 @@ class DeleteAccountsHelper
     Census::CensusSubmission.where(submitter_email_address: email).each(&:destroy)
   end
 
+  # Removes EmailPreference records associated with this email address.
+  # @param [String] email An email address
+  def remove_email_preferences(email)
+    EmailPreference.where(email: email).each(&:destroy)
+  end
+
   # Removes signature and school_id from applications for this user
   # @param [User] user
   def anonymize_circuit_playground_discount_application(user)
@@ -209,6 +215,7 @@ class DeleteAccountsHelper
     # reflective of past state.
     user.destroy
     remove_census_submissions(user.email) if user.email
+    remove_email_preferences(user.email) if user.email
     anonymize_circuit_playground_discount_application(user)
     clean_level_source_backed_progress(user.id)
     clean_survey_responses(user.id)
