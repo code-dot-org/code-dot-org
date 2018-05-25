@@ -436,6 +436,52 @@ describe('block utils', () => {
         },
       ]);
     });
+
+    it('adds a dummy input for newlines', () => {
+      const inputs = determineInputs('this block has \\n two lines', []);
+      expect(inputs).to.deep.equal([
+        {
+          mode: 'dummy',
+          label: 'this block has ',
+        },
+        {
+          mode: 'dummy',
+          label: ' two lines',
+        },
+      ]);
+    });
+
+    it('adds a dummy input for multiple newlines', () => {
+      const inputs = determineInputs(
+        'this block has \\n three lines {WITH}\\n a field input',
+        [
+          {
+            name: 'WITH',
+            field: true,
+          }
+        ]
+      );
+      expect(inputs).to.deep.equal([
+        {
+          mode: 'dummy',
+          label: 'this block has ',
+        },
+        {
+          name: 'WITH',
+          mode: 'field',
+          label: ' three lines ',
+          strict: false,
+        },
+        {
+          mode: 'dummy',
+          label: '',
+        },
+        {
+          mode: 'dummy',
+          label: ' a field input',
+        },
+      ]);
+    });
   });
 
   describe('custom generators', () => {
