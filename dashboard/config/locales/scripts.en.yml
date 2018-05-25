@@ -9257,6 +9257,16 @@ en:
               name: Thursday
             Wrap Up:
               name: Wrap Up
+            Apprentice Reflection Overview:
+              name: Apprentice Reflection Overview
+            Day 1:
+              name: Day 1
+            Day 2:
+              name: Day 2
+            Day 3:
+              name: Day 3
+            Day 4:
+              name: Day 4
           title: CS Discoveries Apprentice Reflections 2018-2019
           description_audience: CS Discoveries Facilitators in Training 2018-2019
           description_short: 'Apprentice reflection materials for CS Discoveries facilitators in training '
@@ -9299,7 +9309,17 @@ en:
               name: Thursday
             Wrap Up:
               name: Wrap Up
-          title: CS Principles Novice Reflections 2018-2019
+            Apprentice Reflection Overview:
+              name: Apprentice Reflection Overview
+            Day 1:
+              name: Day 1
+            Day 2:
+              name: Day 2
+            Day 3:
+              name: Day 3
+            Day 4:
+              name: Day 4
+          title: CS Principles Apprentice Reflections 2018-2019
           description_audience: CS Principles Facilitators in Training 2018-2019
-          description_short: 'Novice reflection materials for CS Principles facilitators in training '
+          description_short: 'Apprentice reflection materials for CS Principles facilitators in training '
           description: This is the set of apprentice reflections for Code.org CS Principles facilitators in training during their 5-day summer workshop. Here you will find reflection prompts for each day of your in-person 5-day summer workshop. This questions will be the foundation of work we do at the Facilitator Training Weekend.
