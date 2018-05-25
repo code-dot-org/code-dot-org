@@ -221,6 +221,7 @@ class Ability
     # permissions.
     if user.persisted? && user.permission?(UserPermission::LEVELBUILDER)
       can :manage, [
+        Block,
         Game,
         Level,
         Course,
