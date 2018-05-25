@@ -271,6 +271,20 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       'Expected authentication_options rows to be deleted'
   end
 
+  test "even removes soft-deleted authentication option rows" do
+    user = create :user, :with_email_authentication_option
+    ids = user.authentication_options.map(&:id)
+    user.authentication_options.first.destroy
+
+    assert_empty AuthenticationOption.where(id: ids)
+    refute_empty AuthenticationOption.with_deleted.where(id: ids)
+
+    purge_user user
+
+    assert_empty AuthenticationOption.where(id: ids)
+    assert_empty AuthenticationOption.with_deleted.where(id: ids)
+  end
+
   private
 
   #
