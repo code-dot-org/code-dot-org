@@ -366,6 +366,46 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       "Expected no SchoolInfos referring back to this CensusSubmission"
   end
 
+  #
+  # Table: dashboard.circuit_playground_discount_applications
+  #
+
+  test 'anonymizes signature on circuit_playground_discount_application' do
+    application = create :circuit_playground_discount_application, signature: 'Will Halloway'
+    user = application.user
+
+    assert_equal 'Will Halloway', application.signature
+
+    purge_user user
+    application.reload
+
+    assert_equal '(anonymized signature)', application.signature
+  end
+
+  test 'leaves blank signature blank on circuit_playground_discount_application' do
+    application = create :circuit_playground_discount_application
+    user = application.user
+
+    assert_nil application.signature
+
+    purge_user user
+    application.reload
+
+    assert_nil application.signature
+  end
+
+  test 'removes school id from circuit_playground_discount_application' do
+    application = create :circuit_playground_discount_application, school_id: create(:school).id
+    user = application.user
+
+    refute_nil application.school_id
+
+    purge_user user
+    application.reload
+
+    assert_nil application.school_id
+  end
+
   private
 
   #
