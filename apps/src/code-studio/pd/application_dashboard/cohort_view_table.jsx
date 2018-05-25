@@ -72,7 +72,7 @@ export class CohortViewTable extends React.Component {
 
   constructColumns() {
     if ([UNMATCHED_PARTNER_VALUE, ALL_PARTNERS_VALUE].includes(this.props.regionalPartnerFilter.value)) {
-      this.workshopType = WorkshopTypes.both;
+      this.workshopType = WorkshopTypes["both"];
     } else {
       this.workshopType = this.props.regionalPartners.find(
         partner => partner.id === this.props.regionalPartnerFilter.value

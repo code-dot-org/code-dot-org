@@ -327,7 +327,7 @@ Artist.prototype.init = function (config) {
   this.studioApp_.setPageConstants(config, appSpecificConstants);
 
   var iconPath = '/blockly/media/turtle/' +
-    (config.isLegacyShare && config.hideSource ? 'icons_white.png' : 'icons.png');
+    (config.legacyShareStyle && config.hideSource ? 'icons_white.png' : 'icons.png');
   var visualizationColumn = (
     <ArtistVisualizationColumn
       showFinishButton={!!config.level.freePlay && !config.level.isProjectLevel}
