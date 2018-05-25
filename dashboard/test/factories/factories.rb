@@ -940,6 +940,7 @@ FactoryGirl.define do
   end
 
   factory :circuit_playground_discount_application do
+    user {create :teacher}
   end
 
   factory :seeded_s3_object do
