@@ -38,7 +38,7 @@
   "drawUpperWave": "teikn den øvste bølgja",
   "drawLowerWave": "teikn den nedste bølgja",
   "drawSticker": "teikn klistremerke",
-  "drawStickerWithSize": "draw sticker with size",
+  "drawStickerWithSize": "tegn klistremerke med storleik",
   "heightParameter": "høgd",
   "hideTurtle": "skjul artist",
   "jump": "hopp",
@@ -74,7 +74,7 @@
   "penDown": "blyant ned",
   "penTooltip": "Løfter eller senkjer blyanten, for å starte eller slutte å teikne.",
   "penUp": "blyant opp",
-  "pointTo": "point to",
+  "pointTo": "pek på",
   "pixels": "pikslar",
   "reinfFeedbackMsg": "Her er teikninga di! Fortset å arbeide med ho eller gå til neste oppgåve.",
   "setAlpha": "angje gjennomsiktigheit",
@@ -94,6 +94,6 @@
   "turnTooltip": "Snur artisten mot venstre eller høgre med gitt vinkel.",
   "turtleVisibilityTooltip": "Gjør artisten synleg eller usynleg.",
   "widthTooltip": "Endrer breidda på blyanten.",
-  "withSize": "with size",
+  "withSize": "med storleik",
   "wrongColour": "Bildet er feil farge.  I denne oppgåva må det vere %1."
 }

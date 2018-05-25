@@ -432,7 +432,7 @@
   "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block.",
   "enable": "Enable",
-  "enableLessonExtras": "Enable Lesson Extras",
+  "enableLessonExtras": "Enable Lesson Extras (CS Fundamentals Only)",
   "enableMaker": "Enable Maker Toolkit (BETA)",
   "enableMakerDialogTitle": "Enable Maker Toolkit?",
   "enableMakerDialogWarning": "Warning: Your app will NOT work unless you have an Adafruit Circuit Playground board.",

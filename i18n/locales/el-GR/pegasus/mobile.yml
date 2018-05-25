@@ -365,6 +365,8 @@
   homepage_header_donors: "Το Code.org ευχαριστεί τους υποστηρικτές του"
   homepage_donors_seall: "Εμφάνιση όλων"
   homepage_donors_donate: "Κάντε μια δωρεά"
+  homepage_below_hero_announcement_text: "We care about your privacy and are making some updates to our privacy policy, effective May 25."
+  homepage_below_hero_announcement_link_text: "Μάθετε περισσότερα"
   contact_form_topic_student: "Είμαι μαθητής"
   contact_form_topic_parent: "Είμαι γονέας"
   contact_form_topic_teacher: "Είμαι δάσκαλος/εκπαιδευτικός"
@@ -535,6 +537,9 @@
   volunteer_engineer_submission_field_email: "Διεύθυνση email"
   volunteer_engineer_submission_field_email_desc: "Η διεύθυνση email σας δεν πρόκειται ποτέ να κοινοποιηθεί, αλλά θα σας στέλνουμε αιτήσεις από τους εκπαιδευτικούς."
   volunteer_engineer_submission_field_email_placeholder: "Διεύθυνση email"
+  volunteer_engineer_submission_field_email_preference: "Can we email you about updates to our courses, volunteer opportunities, or other computer science news?"
+  volunteer_engineer_submission_field_email_preference_yes: 'Ναι'
+  volunteer_engineer_submission_field_email_preference_no: 'Όχι'
   volunteer_engineer_submission_final_paragraph: "Θα εμφανιστείτε στο χάρτη για τοπικούς δασκάλους ώστε να επικοινωνήσουμε μαζί σας για την Ώρα του Κώδικα ή άλλες δυνατότητες εθελοντισμού. Το email σας και η ακριβή σας διεύθυνση δεν θα κοινοποιηθούν ποτέ από εμάς. Αλλά οι άλλες πληροφορίες (συμπεριλαμβανομένης της κατά προσέγγιση τοποθεσίας) θα είναι δημόσια ορατοί από τοπικούς εκπαιδευτικούς."
   volunteer_engineer_submission_checkbox_contact: 'Συμφωνώ ότι εκπαιδευτικοί μπορούν να επικοινωνήσουν μαζί μου για δυνατότητες εθελοντισμού (Σημείωση: η διεύθυνση email σας δεν θα γίνει κοινόχρηστη)'
   volunteer_engineer_submission_checkbox_age_18_plus: "I certify that I am at least 18 years old."
@@ -964,6 +969,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: "Πλήρης εξέταση - 50 ερωτήσεις"
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'

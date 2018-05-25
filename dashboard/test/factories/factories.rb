@@ -461,6 +461,22 @@ FactoryGirl.define do
     game {Game.curriculum_reference}
   end
 
+  factory :block do
+    transient do
+      sequence(:index)
+    end
+    name {"gamelab_block#{index}"}
+    category 'custom'
+    level_type 'fakeLevelType'
+    config do
+      {
+        func: "block#{index}",
+        args: [{name: 'ARG'}],
+      }.to_json
+    end
+    helper_code {"function block#{index}() {}"}
+  end
+
   factory :level_source do
     level
     data '<xml/>'
