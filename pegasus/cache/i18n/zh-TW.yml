@@ -19,7 +19,7 @@
   anybody_can_learn: 任何人都可以學習。
   learn_now: 現在就開始學習
   petition_message: 每個在學校的學生都應該有機會學習計算機科學
-  petition_sign_message: '如果您同意，請簽署您的名字。目前已有 # 人簽署。'
+  petition_sign_message: '如果您同意，簽署您的名字。 加入 # 其他人。'
   petition_sign_message_support: '如果您支持我們的理想，請在此簽署您的名字。目前已有 # 人簽署。'
   petition_join_others: '目前已有 # 人簽署。'
   name: 你的名字
@@ -391,6 +391,9 @@
   homepage_header_donors: Code.org 感謝所有支持者
   homepage_donors_seall: 檢視全部
   homepage_donors_donate: 贊助
+  homepage_below_hero_announcement_text: 我們尊重您的隱私權，並且正在對我們的隱私權政策做一些更新
+    更新後的政策將於 5 月 25 日生效。
+  homepage_below_hero_announcement_link_text: 瞭解更多資訊
   contact_form_topic_student: 我是學生
   contact_form_topic_parent: 我是家長
   contact_form_topic_teacher: 我是老師
@@ -589,6 +592,10 @@
   volunteer_engineer_submission_field_email: 電子信箱
   volunteer_engineer_submission_field_email_desc: 你的電子信箱絕不會公開，但如果你的老師有任何通知時，我們會轉發到這個信箱。
   volunteer_engineer_submission_field_email_placeholder: 電子信箱
+  volunteer_engineer_submission_field_email_preference: 我們是否可以透過電子郵件向您發送有關我們課程、當地機會或其它計算機科學資訊的一些更新？
+  volunteer_engineer_submission_field_email_preference_privacy: （查看我們的隱私權政策以瞭解詳情）
+  volunteer_engineer_submission_field_email_preference_yes: 是
+  volunteer_engineer_submission_field_email_preference_no: 否
   volunteer_engineer_submission_final_paragraph: 你會被標示在地圖上，這樣當地的老師就能在辦理一小時玩程式活動時有機會與你或其他志工聯絡。我們絕對不會洩漏你的電子信箱和聯絡地址，但其他資訊（包括你的大略位置）會公開讓當地老師看到。
   volunteer_engineer_submission_checkbox_contact: 我同意老師可以在需要志工時聯繫我（註：你的信箱不會被洩漏）
   volunteer_engineer_submission_checkbox_age_18_plus: 我很確定我滿 18 歲。
@@ -1039,6 +1046,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP Performance Tasks
   csppostap_name: Post AP：App 的數據庫
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: 完整測驗 - 共 50 題
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'
@@ -1638,11 +1646,3 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  homepage_below_hero_announcement_text: We care about your privacy and are making
-    some updates to our privacy policy, effective May 25.
-  homepage_below_hero_announcement_link_text: Learn more
-  volunteer_engineer_submission_field_email_preference: Can we email you about updates
-    to our courses, volunteer opportunities, or other computer science news?
-  volunteer_engineer_submission_field_email_preference_yes: 'Yes'
-  volunteer_engineer_submission_field_email_preference_no: 'No'
-  csp-post-survey_name: Student Post-Course Survey

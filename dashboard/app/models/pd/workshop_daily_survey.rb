@@ -21,5 +21,42 @@
 #  index_pd_workshop_daily_surveys_on_user_workshop_day_form  (user_id,pd_workshop_id,day,form_id) UNIQUE
 #
 
-class Pd::WorkshopDailySurvey < ActiveRecord::Base
+module Pd
+  class WorkshopDailySurvey < ActiveRecord::Base
+    include JotFormBackedForm
+
+    belongs_to :user
+    belongs_to :pd_session, class_name: 'Pd::Session'
+    belongs_to :pd_workshop, class_name: 'Pd::Workshop'
+
+    # @override
+    def self.attribute_mapping
+      {
+        user_id: 'userId',
+        pd_session_id: 'sessionId',
+        pd_workshop_id: 'workshopId',
+        day: 'day'
+      }
+    end
+
+    validates_presence_of(
+      :user_id,
+      :pd_workshop_id,
+      :day
+    )
+
+    VALID_DAYS = (0..5).freeze
+
+    validates_inclusion_of :day, in: VALID_DAYS
+
+    def self.get_form_id_for_day(day)
+      get_form_id 'local', "day_#{day}"
+    end
+
+    def self.all_form_ids
+      VALID_DAYS.map do |day|
+        get_form_id_for_day day
+      end
+    end
+  end
 end

@@ -7,7 +7,7 @@ import {connect} from 'react-redux';
 import processMarkdown from 'marked';
 import renderer from "../../util/StylelessRenderer";
 import TeacherOnlyMarkdown from './TeacherOnlyMarkdown';
-import TeacherFeedback from "../TeacherFeedback";
+import TeacherFeedback from "./TeacherFeedback";
 import InlineAudio from './InlineAudio';
 import ContainedLevel from '../ContainedLevel';
 import PaneHeader, { PaneButton } from '../../templates/PaneHeader';
@@ -125,11 +125,13 @@ class TopInstructions extends Component {
     levelVideos: PropTypes.array,
     mapReference: PropTypes.string,
     referenceLinks: PropTypes.array,
-    viewAs: PropTypes.oneOf(['Teacher', 'Student'])
+    viewAs: PropTypes.oneOf(Object.keys(ViewType)),
+    readOnlyWorkspace: PropTypes.bool
   };
 
   state = {
-    tabSelected: TabType.INSTRUCTIONS,
+    tabSelected: this.props.viewAs === ViewType.Teacher && this.props.readOnlyWorkspace &&
+      experiments.isEnabled(experiments.DEV_COMMENT_BOX_TAB) ? TabType.COMMENTS : TabType.INSTRUCTIONS,
   };
 
   /**
@@ -258,8 +260,12 @@ class TopInstructions extends Component {
 
     const displayHelpTab = videosAvailable || levelResourcesAvailable;
 
-    const displayFeedback = experiments.isEnabled(experiments.COMMENT_BOX_TAB) &&
-      this.props.viewAs === ViewType.Teacher;
+    const displayFeedbackStable = experiments.isEnabled(experiments.COMMENT_BOX_TAB) && this.props.viewAs === ViewType.Teacher;
+
+    const displayFeedbackDev = experiments.isEnabled(experiments.DEV_COMMENT_BOX_TAB) &&
+      this.props.viewAs === ViewType.Teacher && this.props.readOnlyWorkspace;
+
+    const displayFeedback = displayFeedbackDev || displayFeedbackStable;
     return (
       <div style={mainStyle} className="editor-column">
         <PaneHeader hasFocus={false}>
@@ -339,6 +345,7 @@ class TopInstructions extends Component {
             {this.state.tabSelected === TabType.COMMENTS &&
               <TeacherFeedback
                 ref="commentTab"
+                withUnreleasedFeatures={displayFeedbackDev}
               />
             }
           </div>
@@ -370,7 +377,8 @@ export default connect(state => ({
   levelVideos: state.instructions.levelVideos,
   mapReference: state.instructions.mapReference,
   referenceLinks: state.instructions.referenceLinks,
-  viewAs: state.viewAs
+  viewAs: state.viewAs,
+  readOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace
 }), dispatch => ({
     toggleInstructionsCollapsed() {
       dispatch(toggleInstructionsCollapsed());

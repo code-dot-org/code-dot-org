@@ -62,3 +62,28 @@ Feature: Using the teacher homepage sections feature
     And the href of selector "a:contains(View Unit Overview)" contains the section id
     And I wait until element ".header_popup_body .uitest-ProgressBubble:first" is visible
     And the href of selector ".header_popup_body .uitest-ProgressBubble:first" contains the section id
+
+  Scenario: Navigate to course pages with course versions enabled
+    Given I am on "http://studio.code.org/home?enableExperiments=courseVersions"
+    When I see the section set up box
+    # By default, the '18-'19 version should be selected.
+    And I create a new section with course "Computer Science Principles" and unit "Unit 1: The Internet"
+    Then the section table should have 1 rows
+
+    # save the older section id, from the last row of the table
+    And I save the section id from row 0 of the section table
+
+    And the href of selector ".uitest-owned-sections a:contains('Computer Science Principles')" contains the section id
+    And the href of selector ".uitest-owned-sections a:contains('Unit 1')" contains the section id
+
+    When I click selector ".uitest-owned-sections a:contains('Computer Science Principles')" to load a new page
+    And I wait to see ".uitest-CourseScript"
+    Then the url contains the section id
+    And check that the URL contains "/courses/csp-2018"
+
+    When I select the "'17-'18" option in dropdown "version-selector" to load a new page
+    And I wait to see ".uitest-CourseScript"
+    Then the url contains the section id
+    And check that the URL contains "/courses/csp-2017"
+
+    And the href of selector ".uitest-CourseScript:contains(CSP Unit 2) .uitest-go-to-unit-button" contains the section id

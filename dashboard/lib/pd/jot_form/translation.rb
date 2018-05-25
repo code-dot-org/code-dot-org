@@ -1,8 +1,3 @@
-# Require all files in this directory to ensure all Question.descendants are pre-loaded
-Dir["#{File.dirname(__FILE__)}/*.rb"].each do |file|
-  require_dependency file
-end
-
 # Wrapper for JotForm API client, to query questions and submissions,
 # parse the data, and translate to our format.
 #
@@ -12,7 +7,14 @@ module Pd
     class Translation
       include Constants
 
-      # @param [Integer] form id
+      QUESTION_CLASSES = [
+        TextQuestion,
+        SelectQuestion,
+        ScaleQuestion,
+        MatrixQuestion
+      ].freeze
+
+      # @param [Integer] form_id
       def initialize(form_id)
         @form_id = form_id
         @client = JotFormRestClient.new
@@ -43,8 +45,8 @@ module Pd
       # @return [Class, nil] sub-class of Question, or nil for ignored types (button, heading)
       # @raise for unrecognized types
       def self.get_question_class_for(type)
-        Question.descendants.find {|q| q.supported_types.include?(type)}.tap do |klass|
-          raise "Unexpected question type: #{type}" unless klass || IGNORED_TYPES.include?(type)
+        QUESTION_CLASSES.find {|q| q.supported_types.include?(type)}.tap do |klass|
+          raise "Unexpected question type: #{type}" unless klass || IGNORED_QUESTION_TYPES.include?(type)
         end
       end
 
@@ -63,10 +65,16 @@ module Pd
       def parse_jotform_submission(jotform_submission)
         id = jotform_submission['id'].to_i
 
+        # For some reason, text fields are included in the answers even though there is never an answer.
+        # Skip all the ignored types.
+        included_answers = jotform_submission['answers'].reject do |_, answer_data|
+          IGNORED_QUESTION_TYPES.include? answer_data['type'].delete_prefix('control_')
+        end
+
         # Answer json is in the form:
         #   question_id => {name, text, type, answer, ...}
         #   All we care about here is the answer.
-        answers = jotform_submission['answers'].map do |question_id, answer_data|
+        answers = included_answers.map do |question_id, answer_data|
           [
             question_id.to_i,
             answer_data['answer']

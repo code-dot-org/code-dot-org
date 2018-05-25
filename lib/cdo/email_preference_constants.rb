@@ -1,4 +1,8 @@
 module EmailPreferenceConstants
+  # Use the loopback IP address when designating that an Opt In/Out preference was recorded by our systems on behalf
+  # of somebody (typically through an automated process).
+  CODE_DOT_ORG = '127.0.0.1'.freeze
+
   SOURCE_TYPES = [
     ACCOUNT_SIGN_UP = 'ACCOUNT_SIGN_UP'.freeze,
     ACCOUNT_TYPE_CHANGE = 'ACCOUNT_TYPE_CHANGE'.freeze,
@@ -11,5 +15,8 @@ module EmailPreferenceConstants
     FORM_HOC_SIGN_UP = 'FORM_HOC_SIGN_UP'.freeze,
     FORM_CLASS_SUBMIT = 'FORM_CLASS_SUBMIT'.freeze,
     FORM_PETITION = 'FORM_PETITION'.freeze,
+    # A one-time automated script sets all Petition submissions younger than 16 and older than 13 to opted out to comply
+    # with GDPR.
+    AUTOMATED_OPT_OUT_UNDER_16 = 'AUTOMATED_OPT_OUT_UNDER_16'.freeze
   ].freeze
 end
