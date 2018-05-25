@@ -4,9 +4,15 @@ import {Table, sort} from 'reactabular';
 import color from '@cdo/apps/util/color';
 import {Button} from 'react-bootstrap';
 import _, {orderBy} from 'lodash';
-import { StatusColors } from './constants';
 import moment from 'moment';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
+import { WorkshopTypes } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import {
+  StatusColors,
+  UNMATCHED_PARTNER_VALUE,
+  ALL_PARTNERS_VALUE,
+  RegionalPartnerPropType,
+} from './constants';
 
 const styles = {
   table: {
@@ -24,7 +30,12 @@ export class CohortViewTable extends React.Component {
     path: PropTypes.string.isRequired,
     viewType: PropTypes.oneOf(['facilitator', 'teacher']).isRequired,
     regionalPartnerGroup: PropTypes.number,
-    isWorkshopAdmin: PropTypes.bool
+    isWorkshopAdmin: PropTypes.bool,
+    regionalPartnerFilter: RegionalPartnerPropType,
+    regionalPartners: PropTypes.arrayOf(PropTypes.shape({
+      id: PropTypes.number,
+      workshop_type: PropTypes.string
+    })),
   };
 
   static contextTypes = {
@@ -49,6 +60,10 @@ export class CohortViewTable extends React.Component {
     };
   }
 
+  componentWillUpdate() {
+    this.constructColumns();
+  }
+
   showLocked = () => (
     this.props.isWorkshopAdmin
     || this.props.viewType === 'facilitator'
@@ -56,6 +71,14 @@ export class CohortViewTable extends React.Component {
   );
 
   constructColumns() {
+    if ([UNMATCHED_PARTNER_VALUE, ALL_PARTNERS_VALUE].includes(this.props.regionalPartnerFilter.value)) {
+      this.workshopType = WorkshopTypes.both;
+    } else {
+      this.workshopType = this.props.regionalPartners.find(
+        partner => partner.id === this.props.regionalPartnerFilter.value
+      ).workshop_type;
+    }
+
     const sortable = wrappedSortable(
       this.getSortingColumns,
       this.onSort,
@@ -153,13 +176,29 @@ export class CohortViewTable extends React.Component {
         label: 'Assigned Workshop',
         transforms: [sortable]
       }
-    }, {
-      property: 'registered_workshop',
-      header: {
-        label: 'Registered Workshop',
-        transforms: [sortable]
-      }
-    }, {
+    });
+
+    if ([WorkshopTypes["teachercon"], WorkshopTypes["both"]].includes(this.workshopType)) {
+      columns.push({
+        property: 'accepted_teachercon',
+        header: {
+          label: 'Accepted Teachercon',
+          transforms: [sortable]
+        }
+      });
+    }
+
+    if ([WorkshopTypes["local_summer"], WorkshopTypes["both"]].includes(this.workshopType)) {
+      columns.push({
+        property: 'registered_workshop',
+        header: {
+          label: 'Registered Workshop',
+          transforms: [sortable]
+        }
+      });
+    }
+
+    columns.push({
       property: 'id',
       header: {
         label: 'View Application'
@@ -233,5 +272,7 @@ export class CohortViewTable extends React.Component {
 
 export default connect(state => ({
   regionalPartnerGroup: state.regionalPartnerGroup,
-  isWorkshopAdmin: state.permissions.workshopAdmin
+  isWorkshopAdmin: state.permissions.workshopAdmin,
+  regionalPartnerFilter: state.regionalPartnerFilter,
+  regionalPartners: state.regionalPartners
 }))(CohortViewTable);
