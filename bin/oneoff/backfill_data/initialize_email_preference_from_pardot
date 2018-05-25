@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+
+require_relative('../../../dashboard/config/environment')
+require 'cdo/only_one'
+
+BATCH_SIZE = 100
+
+def main
+  CSV.foreach("testPardotExport.OptOut.csv", headers: true).each_slice(BATCH_SIZE) do |rows|
+    puts "Next Slice!"
+    rows.each do |row|
+      puts row.to_s
+    end
+  end
+end
+
+main if only_one_running?(__FILE__)
