@@ -6,7 +6,6 @@
   "user_id": 155,
   "properties": {
     "skin": "gamelab",
-    "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
     "start_blocks": "// Create kite sprite and set animation\r\nvar kite = createSprite(300, 50);\r\n\r\nfunction draw() {\r\n  // Draw background\r\n  background(\"skyblue\");\r\n\r\n  // Draw grass\r\n  fill(\"green\");\r\n  noStroke();\r\n  rect(0, 300, 400, 100);\r\n\r\n  // Draw string\r\n  stroke(\"black\");\r\n  strokeWeight(5);\r\n  line(150, 300, 300, 50);\r\n\r\n  // Draw sprite\r\n  drawSprites();\r\n}",

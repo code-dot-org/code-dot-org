@@ -12,7 +12,6 @@
       "rect": null,
       "comment_Drawing": null
     },
-    "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "<img src=\"https://images.code.org/02871e5c5d041ea1724e4a02d3697941-image-1492721665345.54.10 PM.png\" style=\"float:right;height:150px; border: 1px solid #CCC\">\r\n# Rectangle Size\r\n\r\nThese `rect` blocks have two more parameters that you can use to control the size. Notice that the `noStroke()` block turns off the stroke (border) for shapes.\r\n\r\n# Do This\r\n\r\n* Look at the code and try to figure out how the last two inputs in `rect` work.\r\n* Change the numbers in the second `rect` to make red rectangle longer than the blue one.\r\n",
