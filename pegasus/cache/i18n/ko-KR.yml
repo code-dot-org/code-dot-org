@@ -429,8 +429,8 @@
   homepage_header_donors: Code.org는 후원자 여러분에게 감사의 인사를 드립니다.
   homepage_donors_seall: 모두 보기
   homepage_donors_donate: 기부하기
-  homepage_below_hero_announcement_text: We care about your privacy and are making
-    some updates to our privacy policy, effective May 25.
+  homepage_below_hero_announcement_text: 당사는 귀하의 개인 정보를 관리하며 당사의 업데이트된 개인
+    정보 보호 정책은 5월 25일에 발효됩니다.
   homepage_below_hero_announcement_link_text: 더 알아보기
   contact_form_topic_student: 학생입니다.
   contact_form_topic_parent: 부모입니다.
@@ -646,8 +646,9 @@
   volunteer_engineer_submission_field_email_desc: 여러분의 이메일 주소는 절대 공유되지 않을 것입니다. 그러나
     우리는 선생님들의 요청을 여러분들께 전달할 것입니다.
   volunteer_engineer_submission_field_email_placeholder: 이메일
-  volunteer_engineer_submission_field_email_preference: Can we email you about updates
-    to our courses, volunteer opportunities, or other computer science news?
+  volunteer_engineer_submission_field_email_preference: 당사의 코스, 현지 기회, 또는 다른 컴퓨터 과학 뉴스
+    업데이트에 관한 이메일을 귀하께 보내드려도 되겠습니까?
+  volunteer_engineer_submission_field_email_preference_privacy: (상세한 내용은 당사의 개인 정보 보호 정책을 참조하십시오.)
   volunteer_engineer_submission_field_email_preference_yes: 예
   volunteer_engineer_submission_field_email_preference_no: 아니요
   volunteer_engineer_submission_final_paragraph: 여러분은 지역 선생님들의 Hour of Code 활동 등이
@@ -1844,5 +1845,3 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
-    policy)"

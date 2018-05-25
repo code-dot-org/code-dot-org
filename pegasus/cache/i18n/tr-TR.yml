@@ -484,9 +484,9 @@
   homepage_header_donors: Code.org destekleyenlere teşekkürler
   homepage_donors_seall: Tümünü göster
   homepage_donors_donate: Bağış Yap
-  homepage_below_hero_announcement_text: We care about your privacy and are making
-    some updates to our privacy policy, effective May 25.
-  homepage_below_hero_announcement_link_text: Daha fazlasını öğren
+  homepage_below_hero_announcement_text: Gizliliğinize önem veriyoruz ve gizlilik
+    politikamızda 25 Mayıs’ta yürürlüğe girecek bazı güncellemeler yapıyoruz.
+  homepage_below_hero_announcement_link_text: Daha fazla bilgi edinin
   contact_form_topic_student: Ben öğrenciyim
   contact_form_topic_parent: Bir ebeveynim
   contact_form_topic_teacher: Bir öğretmen/eğitimciyim
@@ -730,8 +730,10 @@
   volunteer_engineer_submission_field_email_desc: E-posta adresiniz asla paylaşılmaz,
     ancak öğretmenlerden size istekler göndereceğiz.
   volunteer_engineer_submission_field_email_placeholder: E-posta adresi
-  volunteer_engineer_submission_field_email_preference: Can we email you about updates
-    to our courses, volunteer opportunities, or other computer science news?
+  volunteer_engineer_submission_field_email_preference: Size kurslarımızdaki yenilikler, yerel
+    fırsatlar veya diğer bilgisayar bilimi haberleriyle ilgili e-posta gönderebilir miyiz?
+  volunteer_engineer_submission_field_email_preference_privacy: (Ayrıntılar için gizlilik
+    politikamıza bakın)
   volunteer_engineer_submission_field_email_preference_yes: Evet
   volunteer_engineer_submission_field_email_preference_no: Hayır
   volunteer_engineer_submission_final_paragraph: Kod Saati ve diğer gönüllü fırsatlarında
@@ -2102,5 +2104,3 @@
   google_sign_in_instruct: 'Oradan, "Google Hesabı ile Oturum Aç" seçeneğini seçmeliler:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: Uygulama Laboratuvarı Giriş
-  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
-    policy)"
