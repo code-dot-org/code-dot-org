@@ -205,17 +205,18 @@ describe('progressHelpers', () => {
     });
 
     it('summarizes a mix of levels', () => {
-      const levels = fakeLevels(6);
+      const levels = fakeLevels(7);
       levels[0].status = LevelStatus.submitted;
       levels[1].status = LevelStatus.perfect;
       levels[2].status = LevelStatus.attempted;
       levels[3].status = LevelStatus.passed;
-      levels[4].status = 'other';
+      levels[4].status = LevelStatus.free_play_complete;
+      levels[5].status = 'other';
 
       const summarizedStage = summarizeProgressInStage(levels);
-      assert.equal(summarizedStage.total, 6);
+      assert.equal(summarizedStage.total, 7);
       assert.equal(summarizedStage.incomplete, 3);
-      assert.equal(summarizedStage.completed, 2);
+      assert.equal(summarizedStage.completed, 3);
       assert.equal(summarizedStage.imperfect, 1);
       assert.equal(summarizedStage.attempted, 1);
     });
