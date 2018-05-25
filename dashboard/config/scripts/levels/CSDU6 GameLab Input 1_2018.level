@@ -6,7 +6,6 @@
   "user_id": 1,
   "properties": {
     "skin": "gamelab",
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Input in Game Lab\r\n\r\n_You don't need to make any changes to the code here_\r\n\r\nTake a minute to read through the code and run the program. Discuss with a partner:\r\n\r\n1. What is the source of input?\r\n2. Where and how does the program check for input?\r\n3. What does the program do when it gets the correct input?\r\n3. What is the program doing when there is no input?",

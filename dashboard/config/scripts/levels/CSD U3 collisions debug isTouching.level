@@ -27,7 +27,6 @@
       "console.log": null,
       "comment_Variables": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Debugging Collisions\r\n\r\nThe balloon is popping before the tack touches it.  When sprites aren't doing what you expect, you can use the `debug` block to get more information about why the sprites are behaving that way.  Can you find out what's wrong in the code below?\r\n\r\n# Do This\r\n* Run the code and use the arrow keys to move the tack to pop the balloon.\r\n* In the code below, change `balloon.debug = false` to `balloon.debug = true`.\r\n* Add a new `debug` block to the code and set the tack sprite's debug property to `true`.\r\n* Run the code again, then discuss with your partner why the balloon is popping early.\r\n\r\n*Challenge: Can you use the animations tab to resize the balloon picture so it pops at the correct time?*\r\n\r\n[//]: # (https://images.code.org/7afe11fccea99cd7f31497710cce5ac3-image-1471190004988.png)\r\n\r\n[//]: # (https://images.code.org/0b6e98b829379d88b9952ee013cf70bd-image-1471190009596.png)\r\n\r\n[//]: # (https://images.code.org/49c7a3b6fe2eff7e51d3f40581b1dcbb-image-1471190256258.png)\r\n\r\n[//]: # (https://images.code.org/2892e65635d7a43d0664bb8ff58eb698-image-1471200175665.png)\r\n\r\n[//]: # (https://images.code.org/9ffeb3f543033353d073794071316860-image-1471200179449.png)",
