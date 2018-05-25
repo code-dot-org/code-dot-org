@@ -180,8 +180,7 @@ class DeleteAccountsHelper
     end
   end
 
-  # Removes name and email address from CensusSubmission records associated
-  # with this email address.
+  # Removes CensusSubmission records associated with this email address.
   # @param [String] email An email address
   def remove_census_submissions(email)
     Census::CensusSubmission.where(submitter_email_address: email).each(&:destroy)
