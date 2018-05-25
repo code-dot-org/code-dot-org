@@ -6,7 +6,6 @@
   "user_id": 155,
   "properties": {
     "skin": "gamelab",
-    "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
     "start_blocks": "background(\"lightyellow\");\r\ntext(\"Change me and add another text block!\", 50, 200);",
