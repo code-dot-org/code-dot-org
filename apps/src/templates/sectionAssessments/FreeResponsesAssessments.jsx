@@ -46,7 +46,7 @@ class FreeResponsesAssessments extends Component {
   };
 
   state = {
-    [COLUMNS.NAME]: {
+    [COLUMNS.STUDENT]: {
       direction: 'desc',
       position: 0
     }
@@ -111,7 +111,6 @@ class FreeResponsesAssessments extends Component {
               ...styles.studentNameColumnCell,
             }
           },
-
         }
       },
       {
@@ -133,7 +132,6 @@ class FreeResponsesAssessments extends Component {
               ...styles.responseColumnCell,
             }
           },
-
         }
       },
     ];
@@ -153,13 +151,13 @@ class FreeResponsesAssessments extends Component {
     })(this.props.freeResponses);
 
     return (
-        <Table.Provider
-          columns={columns}
-          style={tableLayoutStyles.table}
-        >
-          <Table.Header />
-          <Table.Body rows={sortedRows} rowKey="id" />
-        </Table.Provider>
+      <Table.Provider
+        columns={columns}
+        style={tableLayoutStyles.table}
+      >
+        <Table.Header />
+        <Table.Body rows={sortedRows} rowKey="id" />
+      </Table.Provider>
     );
   }
 }
