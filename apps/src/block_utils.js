@@ -432,18 +432,18 @@ const FIELD_INPUT = 'field';
 /**
  * Splits a blockText into labelled inputs, each match will a label followed by
  * an input. The label is an arbitrary (possibly empty) string. The input is
- * either a real named input like '{VALUE}', a newline '\n', or if it matched a
+ * either a real named input like '{VALUE}', a newline, or if it matched a
  * trailing label, nothing.
  */
-const LABELED_INPUTS_REGEX = /.*?({[^}]*}|\\n|$)/g;
+const LABELED_INPUTS_REGEX = /.*?({[^}]*}|\n|$)/gm;
 
 /**
  * Splits a labeled input into its parts. The resulting groups are:
  * 1: the label
- * 2: the input (a named input like '{VALUE}', a newline '\n', or nothing)
+ * 2: the input (a named input like '{VALUE}', a newline, or nothing)
  * 3: the input's name (e.g. 'VALUE')
  */
-const LABELED_INPUT_PARTS_REGEX = /(.*?)({([^}]*)}|\\n|$)/;
+const LABELED_INPUT_PARTS_REGEX = /(.*?)({([^}]*)}|\n|$)/m;
 
 const findInputConfig = (args, inputName) => {
   const argIndex = args.findIndex(arg => arg.name === inputName);
