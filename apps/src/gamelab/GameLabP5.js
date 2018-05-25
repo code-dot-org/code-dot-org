@@ -564,26 +564,12 @@ GameLabP5.prototype.drawDebugSpriteColliders = function () {
 /**
  * Instantiate a new p5 and start execution
  */
-GameLabP5.prototype.startExecution = function (gamelab) {
+GameLabP5.prototype.startExecution = function () {
   new window.p5(function (p5obj) {
       this.p5 = p5obj;
       this.p5.useQuadTree(false);
       this.setP5FrameRate();
       this.gameLabWorld = new GameLabWorld(p5obj);
-
-      p5obj.showMobileControls = function (
-          spaceButtonVisible,
-          dpadVisible,
-          dpadFourWay,
-          mobileOnly
-      ) {
-        gamelab.mobileControlsConfig = {
-          spaceButtonVisible,
-          dpadVisible,
-          dpadFourWay,
-          mobileOnly,
-        };
-      };
 
       p5obj.registerPreloadMethod('gamelabPreload', window.p5.prototype);
 

@@ -135,6 +135,17 @@ var GameLab = function () {
       getStore().dispatch(viewAnimationJson(JSON.stringify(list, null, 2)));
     });
   };
+
+  this.showMobileControls =
+      (spaceButtonVisible, dpadVisible, dpadFourWay, mobileOnly) => {
+
+    this.mobileControlsConfig = {
+      spaceButtonVisible,
+      dpadVisible,
+      dpadFourWay,
+      mobileOnly,
+    };
+  };
 };
 
 module.exports = GameLab;
@@ -1026,7 +1037,7 @@ GameLab.prototype.execute = function (keepTicking = true) {
     return;
   }
 
-  this.gameLabP5.startExecution(this);
+  this.gameLabP5.startExecution();
   this.gameLabP5.setLoop(keepTicking);
 
   if (!this.JSInterpreter ||
@@ -1047,19 +1058,24 @@ GameLab.prototype.execute = function (keepTicking = true) {
 
 GameLab.prototype.initInterpreter = function (attachDebugger=true) {
 
-  var self = this;
-  function injectGamelabGlobals() {
-    var propList = self.gameLabP5.getGlobalPropertyList();
-    for (var prop in propList) {
+  const injectGamelabGlobals = () => {
+    const propList = this.gameLabP5.getGlobalPropertyList();
+    for (const prop in propList) {
       // Each entry in the propList is an array with 2 elements:
       // propListItem[0] - a native property value
       // propListItem[1] - the property's parent object
-      self.JSInterpreter.createGlobalProperty(
+      this.JSInterpreter.createGlobalProperty(
           prop,
           propList[prop][0],
           propList[prop][1]);
     }
-  }
+
+    this.JSInterpreter.createGlobalProperty(
+          'showMobileControls',
+          this.showMobileControls,
+          null
+    );
+  };
 
   this.JSInterpreter = new JSInterpreter({
     studioApp: this.studioApp_,
