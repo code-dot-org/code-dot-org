@@ -1002,6 +1002,32 @@ endvariants
     assert has_hidden_script?(scripts)
   end
 
+  test "self.valid_scripts: returns alternate script if user has a course experiment with an alternate script" do
+    user = create(:user)
+    script = create(:script)
+    alternate_script = build(:script)
+
+    Course.stubs(:has_any_course_experiments?).returns(true)
+    Rails.cache.stubs(:fetch).returns([script])
+    script.stubs(:alternate_script).returns(alternate_script)
+
+    scripts = Script.valid_scripts(user)
+    assert scripts.include?(alternate_script)
+    refute scripts.include?(script)
+  end
+
+  test "self.valid_scripts: returns original script if user has a course experiment with no alternate script" do
+    user = create(:user)
+    script = create(:script)
+
+    Course.stubs(:has_any_course_experiments?).returns(true)
+    Rails.cache.stubs(:fetch).returns([script])
+    script.stubs(:alternate_script).returns(nil)
+
+    scripts = Script.valid_scripts(user)
+    assert scripts.include?(script)
+  end
+
   private
 
   def has_hidden_script?(scripts)
