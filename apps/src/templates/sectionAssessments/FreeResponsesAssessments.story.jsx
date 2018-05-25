@@ -14,13 +14,13 @@ const questionOne = [
     name: 'Maddie',
     response: `As trees get older they lose their chlorophyll. In painting, you have unlimited power.
         You have the ability to move mountains. You can bend rivers. But when I get home, the only thing
-        I have power over is the garbage..,`
+        I have power over is the garbage.,`
   },
   {
     id: 3,
     studentId: '212',
     name: 'Erin',
-    response: 'Go out on a limb - that is where the fruit is',
+    response: 'Go out on a limb - that is where the fruit is.',
   },
   {
     id: 4,

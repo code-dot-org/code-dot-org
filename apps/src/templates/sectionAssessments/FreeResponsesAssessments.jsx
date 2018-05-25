@@ -5,6 +5,29 @@ import i18n from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 
+const TABLE_WIDTH = tableLayoutStyles.table.width;
+const NAME_COLUMN_WIDTH = 120;
+const PADDING = 15;
+const PADDING_LEFT = 25;
+
+const styles = {
+  studentNameColumnHeader: {
+    width: NAME_COLUMN_WIDTH,
+    textAlign: 'center',
+  },
+  studentNameColumnCell : {
+    width: NAME_COLUMN_WIDTH,
+    paddingLeft: PADDING_LEFT,
+  },
+  responseColumnHeader: {
+    padding: PADDING,
+  },
+  responseColumnCell: {
+    padding: PADDING,
+    maxwidth: TABLE_WIDTH - NAME_COLUMN_WIDTH - PADDING_LEFT,
+  }
+};
+
 export const COLUMNS = {
   STUDENT: 0,
   RESPONSE: 1,
@@ -20,7 +43,6 @@ const freeResponsesDataPropType = PropTypes.shape({
 class FreeResponsesAssessments extends Component {
   static propTypes= {
     freeResponses: PropTypes.arrayOf(freeResponsesDataPropType),
-    // responses: PropTypes.arrayOf(textResponsePropType),
   };
 
   state = {
@@ -74,22 +96,44 @@ class FreeResponsesAssessments extends Component {
         property: 'studentName',
         header: {
           label: i18n.studentName(),
-          props: {style: tableLayoutStyles.headerCell},
+          props: {
+            style: {
+              ...tableLayoutStyles.headerCell,
+              ...styles.studentNameColumnHeader,
+            }
+          },
         },
         cell: {
           format: this.studentNameColumnFormatter,
-          props: {style:tableLayoutStyles.cell},
+          props: {
+            style: {
+              ...tableLayoutStyles.cell,
+              ...styles.studentNameColumnCell,
+            }
+          },
+
         }
       },
       {
         property: 'studentResponse',
         header: {
           label: i18n.response(),
-          props: {style: tableLayoutStyles.headerCell},
+          props: {
+            style: {
+              ...tableLayoutStyles.headerCell,
+              ...styles.responseHeaderCell,
+            }
+          },
         },
         cell: {
           format: this.studentResponseColumnFormatter,
-          props: {style:tableLayoutStyles.cell},
+          props: {
+            style: {
+              ...tableLayoutStyles.cell,
+              ...styles.responseColumnCell,
+            }
+          },
+
         }
       },
     ];
