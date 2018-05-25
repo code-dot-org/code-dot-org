@@ -27,13 +27,21 @@ module Pd
         ].compact.max
       end
 
+      # Add jotform_last_submission_id_overrides to locals.yml to manually set minimum submission ids for sync.
+      # The format is a hash, form_id => last_known_submission_id
+      # This is useful to ignore older test submissions before we go live.
       def last_known_submission_id_override(form_id)
-        # Add jotform_last_submission_id_overrides to locals.yml to manually set minimum submission ids for sync.
-        # The format is a hash, form_id => last_known_submission_id
-        #
-        # This is useful to ignore older test submissions before we go live.
         CDO.jotform_last_submission_id_overrides.try do |override_hash|
           override_hash[form_id]
+        end
+      end
+
+      # Add jotform_min_dates to locals.yml to manually set minimum submission dates for sync.
+      # The format is a hash, form_id => date, e.g. {12345 => '2018-05-23'}
+      # This is useful to ignore older test submissions before we go live.
+      def get_min_date(form_id)
+        CDO.jotform_min_dates.try do |min_date_hash|
+          min_date_hash[form_id]
         end
       end
 
@@ -66,15 +74,23 @@ module Pd
         sync_questions_from_jotform(form_id)
 
         JotForm::Translation.new(form_id).get_submissions(
-          last_known_submission_id: get_last_known_submission_id(form_id)
+          last_known_submission_id: get_last_known_submission_id(form_id),
+          min_date: get_min_date(form_id)
         ).map do |submission|
           # TODO(Andrew): don't stop the whole set when one fails
+
+          answers = submission[:answers]
+
+          # Process answers here as a validation. An error will be raised if they don't match the questions.
+          questions_for_form(form_id).process_answers(answers)
 
           # When we pass the last_known_submission_id filter, there should be no duplicates,
           # But just in case handle them gracefully as an upsert.
           find_or_initialize_by(submission.slice(:form_id, :submission_id)).tap do |model|
-            model.update! answers: submission[:answers].to_json
+            model.update! answers: answers.to_json
           end
+        rescue => e
+          raise e, "Error processing submission #{submission[:submission_id]} for form #{form_id}: #{e.message}", e.backtrace
         end
       end
 
@@ -131,8 +147,8 @@ module Pd
     def form_data_hash
       @form_data_hash ||= begin
         questions.process_answers(answers_hash)
-      rescue StandardError => e
-        raise "Error processing answers for submission id #{submission_id}: #{e.message}"
+      rescue => e
+        raise e, "Error processing answers for submission id #{submission_id}, form #{form_id}: #{e}", e.backtrace
       end
     end
 
