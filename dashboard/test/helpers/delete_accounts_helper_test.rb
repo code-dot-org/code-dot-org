@@ -452,6 +452,23 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_nil district.contact
   end
 
+  #
+  # Table: dashboard.email_preferences
+  # Associated through the user's email
+  #
+
+  test "removes email preference rows for the purged user's email address" do
+    user = create :teacher
+    email = user.email
+    create :email_preference, email: email
+
+    refute_empty EmailPreference.where(email: email)
+
+    purge_user user
+
+    assert_empty EmailPreference.where(email: email)
+  end
+
   private
 
   #
