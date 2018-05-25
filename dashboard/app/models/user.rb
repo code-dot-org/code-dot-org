@@ -1759,6 +1759,8 @@ class User < ActiveRecord::Base
   def clear_user_and_mark_purged
     random_suffix = (('0'..'9').to_a + ('a'..'z').to_a).sample(8).join
 
+    authentication_options.with_deleted.each(&:really_destroy!)
+
     self.studio_person_id = nil
     self.name = nil
     self.username = "#{SYSTEM_DELETED_USERNAME}_#{random_suffix}"
