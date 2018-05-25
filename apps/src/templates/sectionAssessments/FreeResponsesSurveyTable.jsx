@@ -22,7 +22,7 @@ class FreeResponsesSurveyTable extends Component {
   };
 
   state = {
-    [COLUMNS.NAME]: {
+    [COLUMNS.RESPONSE]: {
       direction: 'desc',
       position: 0
     }
@@ -56,7 +56,7 @@ class FreeResponsesSurveyTable extends Component {
     );
   };
 
-  getColumns = (sortable, index) => {
+  getColumns = (sortable) => {
     let dataColumns = [
       {
         property: 'studentResponse',
