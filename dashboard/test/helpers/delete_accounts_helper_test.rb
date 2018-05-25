@@ -285,6 +285,49 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_empty AuthenticationOption.with_deleted.where(id: ids)
   end
 
+  #
+  # Table: dashboard.authored_hint_view_requests
+  #
+
+  test "clears prev_level_source_id from authored_hint_view_requests" do
+    user = create :user
+    create :authored_hint_view_request, user: user
+
+    assert AuthoredHintViewRequest.where(user: user).any?(&:prev_level_source_id),
+      "Expected at least one of user's AuthoredHintViewRequests to have a prev_level_source_id"
+
+    purge_user user
+
+    refute AuthoredHintViewRequest.where(user: user).any?(&:prev_level_source_id),
+      "Expected none of user's AuthoredHintViewRequests to have a prev_level_source_id"
+  end
+
+  test "clears next_level_source_id from authored_hint_view_requests" do
+    user = create :user
+    create :authored_hint_view_request, user: user
+
+    assert AuthoredHintViewRequest.where(user: user).any?(&:next_level_source_id),
+      "Expected at least one of user's AuthoredHintViewRequests to have a next_level_source_id"
+
+    purge_user user
+
+    refute AuthoredHintViewRequest.where(user: user).any?(&:next_level_source_id),
+      "Expected none of user's AuthoredHintViewRequests to have a next_level_source_id"
+  end
+
+  test "clears final_level_source_id from authored_hint_view_requests" do
+    user = create :user
+    create :authored_hint_view_request, user: user
+
+    assert AuthoredHintViewRequest.where(user: user).any?(&:final_level_source_id),
+      "Expected at least one of user's AuthoredHintViewRequests to have a final_level_source_id"
+
+    purge_user user
+
+    refute AuthoredHintViewRequest.where(user: user).any?(&:final_level_source_id),
+      "Expected none of user's AuthoredHintViewRequests to have a final_level_source_id"
+  end
+
   private
 
   #
