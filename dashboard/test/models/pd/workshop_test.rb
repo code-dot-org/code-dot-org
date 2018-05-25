@@ -997,6 +997,42 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     end
   end
 
+  test 'nearest' do
+    target = create :pd_workshop, num_sessions: 1, sessions_from: Date.today + 1.week
+
+    create :pd_workshop, num_sessions: 1, sessions_from: Date.today + 2.weeks
+    create :pd_workshop, num_sessions: 1, sessions_from: Date.today - 2.weeks
+
+    assert_equal target, Pd::Workshop.nearest
+  end
+
+  test 'nearest with no matches returns nil' do
+    assert_nil Pd::Workshop.none.nearest
+  end
+
+  test 'nearest combined with subject and enrollment' do
+    user = create :teacher
+    target = create :pd_workshop, num_sessions: 1, sessions_from: Date.today + 1.day,
+      course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
+
+    create :pd_enrollment, :from_user, user: user, workshop: target
+
+    same_subject_farther = create :pd_workshop, num_sessions: 1, sessions_from: Date.today + 1.week,
+      course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
+    create :pd_enrollment, :from_user, user: user, workshop: same_subject_farther
+
+    different_subject_closer = create :pd_workshop, num_sessions: 1, sessions_from: Date.today,
+      course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_TEACHER_CON
+    create :pd_enrollment, :from_user, user: user, workshop: different_subject_closer
+
+    # closer, not enrolled
+    create :pd_workshop, num_sessions: 1, sessions_from: Date.today,
+      course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
+
+    found = Pd::Workshop.where(subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP).enrolled_in_by(user).nearest
+    assert_equal target, found
+  end
+
   private
 
   def session_on_day(day_offset)

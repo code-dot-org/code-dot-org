@@ -217,7 +217,7 @@ StudioApp.prototype.configure = function (options) {
 
   // Set default speed
   if (options.level && options.level.sliderSpeed) {
-    setStepSpeed(options.level.sliderSpeed);
+    getStore().dispatch(setStepSpeed(options.level.sliderSpeed));
   }
 };
 
@@ -260,7 +260,7 @@ StudioApp.prototype.init = function (config) {
   config.getCode = this.getCode.bind(this);
   copyrightStrings = config.copyrightStrings;
 
-  if (config.isLegacyShare && config.hideSource) {
+  if (config.legacyShareStyle && config.hideSource) {
     $("body").addClass("legacy-share-view");
     if (dom.isMobile()) {
       $("body").addClass("legacy-share-view-mobile");
@@ -310,6 +310,7 @@ StudioApp.prototype.init = function (config) {
       level: config.level,
       noHowItWorks: config.noHowItWorks,
       isLegacyShare: config.isLegacyShare,
+      legacyShareStyle: config.legacyShareStyle,
       wireframeShare: config.wireframeShare,
     });
   }
@@ -467,7 +468,7 @@ StudioApp.prototype.init = function (config) {
     }.bind(this));
   }
 
-  if (config.isLegacyShare && config.hideSource) {
+  if (config.legacyShareStyle && config.hideSource) {
     this.setupLegacyShareView();
   }
 
@@ -1917,7 +1918,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
 
   // Chrome-less share page.
   if (this.share) {
-    if (options.isLegacyShare || options.wireframeShare) {
+    if (options.legacyShareStyle || options.wireframeShare) {
       document.body.style.backgroundColor = '#202B34';
       if (options.level.iframeEmbed) {
         // so help me god.
@@ -1927,7 +1928,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
 
       $('.header-wrapper').hide();
       var vizColumn = document.getElementById('visualizationColumn');
-      if (dom.isMobile() && (options.isLegacyShare || !dom.isIPad())) {
+      if (dom.isMobile() && (options.legacyShareStyle || !dom.isIPad())) {
         $(vizColumn).addClass('chromelessShare');
       } else {
         $(vizColumn).addClass('wireframeShare');
@@ -1955,7 +1956,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
           ReactDOM.render(React.createElement(WireframeButtons, {
             channelId: project.getCurrentId(),
             appType: project.getStandaloneApp(),
-            isLegacyShare: options.isLegacyShare,
+            isLegacyShare: !!options.isLegacyShare,
           }), div);
         }
       }

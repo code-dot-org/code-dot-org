@@ -305,7 +305,7 @@ authoredHintUtils.generateAuthoredHints = function (levelBuilderAuthoredHints) {
       hintClass: hint.hint_class,
       hintType: hint.hint_type,
       hintPath: JSON.parse(hint.hint_path || '[]'),
-      hintVideo: hint.hint_video,
+      hintVideo: hint.hint_video || undefined,
       ttsUrl: hint.tts_url,
       alreadySeen: false
     };

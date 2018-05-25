@@ -203,10 +203,9 @@ export const asyncLoadSectionData = (id) => (dispatch) => {
   let apis = [
     '/dashboardapi/sections',
 
-    // Because there is no notion of hidden courses, the server by default looks
-    // up only our specified list of courses (csp and csd). When the
-    // courseVersions experiment is enabled, we also ask the server for other
-    // versions (e.g. csd-2018) of those courses.
+    // The server by default only returns stable courses (version year 2017).
+    // When the courseVersions experiment is enabled, we also ask the
+    // server for other version years (e.g. 2018) of those courses.
     `/dashboardapi/courses${courseVersions ? '?allVersions=1' : ''}`,
 
     '/v2/sections/valid_scripts'

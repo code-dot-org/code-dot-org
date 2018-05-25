@@ -393,7 +393,7 @@ class DashboardSection
       select(:id, :name).
       all.
       # Only return courses we've whitelisted in ScriptConstants
-      select {|course| ScriptConstants.script_in_category?(:full_course, course_assignment_family(course))}.
+      select {|course| ScriptConstants.script_in_category?(:full_course, course[:name])}.
       map {|course| assignable_info(course)}
     @@course_cache[course_cache_key] = courses unless rack_env?(:levelbuilder)
     courses
