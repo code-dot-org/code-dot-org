@@ -207,7 +207,14 @@ class Script < ActiveRecord::Base
           all.
           select {|script| with_hidden || !script.hidden}
     end
-    scripts = scripts.map {|script| script.alternate_script(user)} if user_experiments_enabled
+
+    if user_experiments_enabled
+      scripts = scripts.map do |script|
+        alternate_script = script.alternate_script(user)
+        alternate_script.present? ? alternate_script : script
+      end
+    end
+
     scripts
   end
 
