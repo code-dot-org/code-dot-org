@@ -486,9 +486,10 @@
   homepage_header_donors: Code.org mulţumește suporterilor săi
   homepage_donors_seall: Vizualizați toate
   homepage_donors_donate: Donează
-  homepage_below_hero_announcement_text: We care about your privacy and are making
-    some updates to our privacy policy, effective May 25.
-  homepage_below_hero_announcement_link_text: Află mai mult
+  homepage_below_hero_announcement_text: Pentru noi este importantă confidențialitatea
+    dumneavoastră și facem unele actualizări la politica noastră de confidențialitate,
+    care vor intra în vigoare începând cu 25 mai.
+  homepage_below_hero_announcement_link_text: Aflați mai multe
   contact_form_topic_student: Sunt student
   contact_form_topic_parent: Sunt părinte
   contact_form_topic_teacher: Sunt profesor/educator
@@ -743,8 +744,11 @@
   volunteer_engineer_submission_field_email_desc: Adresa ta de e-mail nu va fi niciodata
     distribuita, dar iti vom trimite solicitari din partea profesorilor.
   volunteer_engineer_submission_field_email_placeholder: Adresă de email
-  volunteer_engineer_submission_field_email_preference: Can we email you about updates
-    to our courses, volunteer opportunities, or other computer science news?
+  volunteer_engineer_submission_field_email_preference: Sunteți de acord să vă trimitem prin
+    e-mail actualizări cu privire la cursurile noastre, oportunitățile locale sau alte știri din
+    domeniul informaticii?
+  volunteer_engineer_submission_field_email_preference_privacy: (Pentru detalii, vedeți politica
+    noastră de confidențialitate)
   volunteer_engineer_submission_field_email_preference_yes: Da
   volunteer_engineer_submission_field_email_preference_no: Nu
   volunteer_engineer_submission_final_paragraph: Vei aparea pe o hartă pentru ca profesorii
@@ -2208,5 +2212,3 @@
     contul Google":'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
-    policy)"

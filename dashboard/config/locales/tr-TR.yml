@@ -142,11 +142,12 @@
     mismatch_password: Girdiğiniz iki parola aynı değil
     agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
       and <a href='http://code.org/privacy'>Privacy Policy</a>.
-    under_13_consent: If I am under 13 years of age, I confirm that I have my parent
-      or legal guardian's permission to use the Code.org services.
-    agree_us_website: I agree to using a website based in the United States.
-    my_data_to_us: Data from my use of this site may be sent to and stored or processed
-      in the United States.
+    under_13_consent: "Eğer 13 yaşından küçüksem, Code.org hizmetlerini kullanmam için
+      ebeveynlerimin veya yasal vasimin izni olduğunu onaylıyorum."
+    agree_us_website: Amerika Birleşik Devletleri merkezli bir web sitesi kullanmayı
+      kabul ediyorum.
+    my_data_to_us: Bu siteyi kullanımıma ilişkin veriler Amerika Birleşik Devletleri’ne
+      gönderilebilir ve Amerika Birleşik Devletleri’nde depolanabilir veya işlenebilir.
     student_terms: Code.org <a href='http://code.org/tos'> hizmet şartlarına</a> bağlı
       olmayı kabul edersiniz. Eğer ben 13 yaşını altında isem, ebeveyn veya yasal
       velimin Code.org Hizmetlerini kullanma izni verdiğini bu formu göndererek onaylıyorum.
@@ -166,8 +167,9 @@
     field_is_required: gerekli
     accept_terms: Hesap oluşturmak için kabul etmelisiniz
     error: Bir hata oluştu.
-    email_preference_question: Can we email you about updates to our courses, local
-      learning opportunities, or other computer science news?
+    email_preference_question: Size kurslarımızdaki yenilikler, yerel fırsatlar veya
+      diğer bilgisayar bilimi haberleriyle ilgili e-posta gönderebilir miyiz?
+    email_preference_privacy: (Gizlilik politikamıza bakın)
     email_preference_yes: Evet
     email_preference_no: Hayır
     email_preference_required: You must specify an email preference.

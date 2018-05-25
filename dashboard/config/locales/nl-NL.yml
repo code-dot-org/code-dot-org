@@ -141,11 +141,13 @@
     mismatch_password: De twee wachtwoorden komen niet overeen
     agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
       and <a href='http://code.org/privacy'>Privacy Policy</a>.
-    under_13_consent: If I am under 13 years of age, I confirm that I have my parent
-      or legal guardian's permission to use the Code.org services.
-    agree_us_website: I agree to using a website based in the United States.
-    my_data_to_us: Data from my use of this site may be sent to and stored or processed
-      in the United States.
+    under_13_consent: Indien ik jonger dan 13 jaar ben, bevestig ik dat ik toestemming
+      heb van mijn ouders of wettelijke voogd om gebruik te maken van de diensten van
+      Code.org.
+    agree_us_website: Ik ga akkoord met het gebruik van een website die in de Verenigde
+      Staten gevestigd is.
+    my_data_to_us: Gegevens over mijn gebruik van deze site mogen worden verzonden naar
+      en opgeslagen of verwerkt worden in de Verenigde Staten.
     student_terms: Ik zal me houden aan de Code.org <a href='http://code.org/tos'>
       gebruikersvoorwaarden</a>. Als ik jonger dan 13 jaar ben, bevestig ik dit door
       het indienen van dit formulier waarvoor ik door mijn ouders of wettelijke voogd
@@ -163,8 +165,9 @@
     field_is_required: is vereist
     accept_terms: Je moet akkoord gaan om een account aan te maken
     error: Er is een fout opgetreden.
-    email_preference_question: Can we email you about updates to our courses, local
-      learning opportunities, or other computer science news?
+    email_preference_question: Mogen wij u e-mailen met updates over onze cursussen,
+      lokale aanbiedingen of ander nieuws op het gebied van informatica?
+    email_preference_privacy: (Zie ons privacybeleid)
     email_preference_yes: Ja
     email_preference_no: Nee
     email_preference_required: You must specify an email preference.
