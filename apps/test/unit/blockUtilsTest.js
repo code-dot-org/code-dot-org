@@ -438,7 +438,7 @@ describe('block utils', () => {
     });
 
     it('adds a dummy input for newlines', () => {
-      const inputs = determineInputs('this block has \\n two lines', []);
+      const inputs = determineInputs('this block has \n two lines', []);
       expect(inputs).to.deep.equal([
         {
           mode: 'dummy',
@@ -453,7 +453,7 @@ describe('block utils', () => {
 
     it('adds a dummy input for multiple newlines', () => {
       const inputs = determineInputs(
-        'this block has \\n three lines {WITH}\\n a field input',
+        'this block has \n three lines {WITH}\n a field input',
         [
           {
             name: 'WITH',
