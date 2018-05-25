@@ -43,6 +43,7 @@ class XhrProxyController < ApplicationController
     atlas.media.mit.edu
     bible-api.com
     code.org
+    compete.hsctf.com
     data.cityofchicago.org
     data.gv.at
     data.nasa.gov
