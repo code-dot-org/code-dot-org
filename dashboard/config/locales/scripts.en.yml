@@ -3,6 +3,20 @@
 en:
   data:
     script:
+      category:
+        csd_category_name: "CS Discoveries ('17-'18)"
+        csd_2018_category_name: "CS Discoveries ('18-'19)"
+        csf_category_name: "CS Fundamentals"
+        csf_international_category_name: "CS Fundamentals International"
+        csf2_draft_category_name: "Under Development: Courses A - F"
+        csp_category_name: "'15-'16 CS Principles"
+        csp_2018_category_name: "CS Principles ('18-'19)"
+        cspexams_category_name: "CS Principles Practice Test"
+        csp17_category_name: "CS Principles ('17-'18)"
+        full_course_category_name: "Full Courses"
+        hoc_category_name: "Hour of Code"
+        math_category_name: "Math"
+        research_studies_category_name: "Research Studies"
       name:
         course1:
           title: Course 1
@@ -9257,6 +9271,16 @@ en:
               name: Thursday
             Wrap Up:
               name: Wrap Up
+            Apprentice Reflection Overview:
+              name: Apprentice Reflection Overview
+            Day 1:
+              name: Day 1
+            Day 2:
+              name: Day 2
+            Day 3:
+              name: Day 3
+            Day 4:
+              name: Day 4
           title: CS Discoveries Apprentice Reflections 2018-2019
           description_audience: CS Discoveries Facilitators in Training 2018-2019
           description_short: 'Apprentice reflection materials for CS Discoveries facilitators in training '
@@ -9299,7 +9323,17 @@ en:
               name: Thursday
             Wrap Up:
               name: Wrap Up
-          title: CS Principles Novice Reflections 2018-2019
+            Apprentice Reflection Overview:
+              name: Apprentice Reflection Overview
+            Day 1:
+              name: Day 1
+            Day 2:
+              name: Day 2
+            Day 3:
+              name: Day 3
+            Day 4:
+              name: Day 4
+          title: CS Principles Apprentice Reflections 2018-2019
           description_audience: CS Principles Facilitators in Training 2018-2019
-          description_short: 'Novice reflection materials for CS Principles facilitators in training '
+          description_short: 'Apprentice reflection materials for CS Principles facilitators in training '
           description: This is the set of apprentice reflections for Code.org CS Principles facilitators in training during their 5-day summer workshop. Here you will find reflection prompts for each day of your in-person 5-day summer workshop. This questions will be the foundation of work we do at the Facilitator Training Weekend.

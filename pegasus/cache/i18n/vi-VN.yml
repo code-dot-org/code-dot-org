@@ -504,6 +504,10 @@
   homepage_header_donors: Code.org cảm ơn những người hỗ trợ
   homepage_donors_seall: Xem tất cả
   homepage_donors_donate: Quyên góp hỗ trợ
+  homepage_below_hero_announcement_text: Chúng tôi quan tâm đến việc giữ bảo mật
+    thông tin của bạn và đang cập nhật chính sách bảo mật, có hiệu lực từ ngày 25
+    tháng 5.
+  homepage_below_hero_announcement_link_text: Tìm hiểu thêm
   contact_form_topic_student: Tôi là sinh viên
   contact_form_topic_parent: Tôi là một phụ huynh
   contact_form_topic_teacher: Tôi là một giáo viên/giáo dục
@@ -751,6 +755,13 @@
   volunteer_engineer_submission_field_email_desc: Địa chỉ email của bạn sẽ không bao
     giờ được chia sẻ, nhưng chúng tôi sẽ gửi cho bạn yêu cầu từ giáo viên.
   volunteer_engineer_submission_field_email_placeholder: Địa chỉ Email
+  volunteer_engineer_submission_field_email_preference: Chúng tôi có thể gửi email cho bạn
+    thông tin cập nhật về các khóa học của chúng tôi, các cơ hội ở địa phương hay tin tức về
+    khoa học máy tính khác không?
+  volunteer_engineer_submission_field_email_preference_privacy: (Để biết chi tiết, hãy xem
+    chính sách bảo mật của chúng tôi)
+  volunteer_engineer_submission_field_email_preference_yes: Đồng ý
+  volunteer_engineer_submission_field_email_preference_no: Không
   volunteer_engineer_submission_final_paragraph: Bạn sẽ được liệt kê trên một bản
     đồ cho các giáo viên địa phương liên hệ với bạn cho chương trình Hour of Code
     hoặc cơ hội tình nguyện viên khác. Email và địa chỉ chính xác của bạn sẽ không
@@ -1303,6 +1314,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: Full Test - 50 questions
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'
@@ -2145,13 +2157,3 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  homepage_below_hero_announcement_text: We care about your privacy and are making
-    some updates to our privacy policy, effective May 25.
-  homepage_below_hero_announcement_link_text: Learn more
-  volunteer_engineer_submission_field_email_preference: Can we email you about updates
-    to our courses, volunteer opportunities, or other computer science news?
-  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
-    policy)"
-  volunteer_engineer_submission_field_email_preference_yes: 'Yes'
-  volunteer_engineer_submission_field_email_preference_no: 'No'
-  csp-post-survey_name: Student Post-Course Survey

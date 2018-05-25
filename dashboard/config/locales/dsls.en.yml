@@ -3148,6 +3148,7 @@ en:
       aEstory1:
         Artist Exemplar First Story: Artist Exemplar First Story
         Why are they doing this stage?: Why are they doing this stage?
+      apprentice-congrats: {}
       boolean logic and expressions overview: {}
       brad-repro-bug-000:
         Brad Repro Bug 000: Brad Repro Bug 000
@@ -4146,6 +4147,7 @@ en:
         title: title
       v2 U4L06 Student Lesson Introduction Encryption Vigenere:
         Cracking the Code: Cracking the Code
+      welcome-apprentice-18: {}
       welcome-csd-novice: {}
       welcome-csp-novice: {}
       welcome-novice-18: {}
@@ -15915,7 +15917,17 @@ en:
       post-assessment survey q24-a:
         Agree: Agree
         Disagree: Disagree
+        ? QUESTION REMOVED AND REPLACED BECAUSE OF INCORRECT ANSWER ORDER I am interested in studying computer science after I graduate high school.
+        : QUESTION REMOVED AND REPLACED BECAUSE OF INCORRECT ANSWER ORDER I am interested in studying computer science after I graduate high school.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q24-a-2017b:
+        Agree: Agree
+        Disagree: Disagree
         I am interested in studying computer science after I graduate high school.: I am interested in studying computer science after I graduate high school.
+        Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
@@ -15987,7 +15999,17 @@ en:
       post-assessment survey q31-a:
         Agree: Agree
         Disagree: Disagree
+        ? QUESTION REMOVED AND REPLACED BECAUSE OF INCORRECT ANSWER ORDER I would recommend this computer science class to another student.
+        : QUESTION REMOVED AND REPLACED BECAUSE OF INCORRECT ANSWER ORDER I would recommend this computer science class to another student.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q31-a-2017b:
+        Agree: Agree
+        Disagree: Disagree
         I would recommend this computer science class to another student.: I would recommend this computer science class to another student.
+        Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree

@@ -1,7 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import {Table, sort} from 'reactabular';
 import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
-import commonMsg from '@cdo/locale';
+import i18n from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import MultipleChoiceAnswerCell from './MultipleChoiceAnswerCell';
@@ -99,7 +99,7 @@ class MultipleChoiceOverviewTable extends Component {
     {
       property: NOT_ANSWERED,
       header: {
-        label: commonMsg.notAnswered(),
+        label: i18n.notAnswered(),
         props: {
           style: {
             ...tableLayoutStyles.headerCell,
@@ -142,7 +142,7 @@ class MultipleChoiceOverviewTable extends Component {
     {
       property: 'question',
       header: {
-        label: commonMsg.question(),
+        label: i18n.question(),
         props: {style: tableLayoutStyles.headerCell},
         transforms: [sortable],
       },
