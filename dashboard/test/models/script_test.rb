@@ -1012,8 +1012,7 @@ endvariants
     script.stubs(:alternate_script).returns(alternate_script)
 
     scripts = Script.valid_scripts(user)
-    assert scripts.include?(alternate_script)
-    refute scripts.include?(script)
+    assert_equal [alternate_script], scripts
   end
 
   test "self.valid_scripts: returns original script if user has a course experiment with no alternate script" do
@@ -1025,7 +1024,7 @@ endvariants
     script.stubs(:alternate_script).returns(nil)
 
     scripts = Script.valid_scripts(user)
-    assert scripts.include?(script)
+    assert_equal [script], scripts
   end
 
   private
