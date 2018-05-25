@@ -124,7 +124,7 @@ class DeleteAccountsHelper
     end
   end
 
-  # Anonymizes the user by deleting various pieces of PII and PPII from the User and UserGeo models.
+  # Anonymizes the user by deleting various pieces of PII and PPII
   # @param [User] user to be anonymized.
   def anonymize_user(user)
     UserGeo.where(user_id: user.id).each(&:clear_user_geo)
