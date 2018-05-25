@@ -13,7 +13,6 @@
       "declareAssign_x": null,
       "ellipse": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "\r\n\r\n# Debug: Using Variables\r\n\r\nThis program uses the variable `circleSize` to control the width and height of a circle.  If you make the circle big enough, it will fill up the entire screen, as in the picture on the right.\r\n\r\n# Do This\r\n\r\n* Change the value assigned to `circleSize` so that the circle takes up the entire screen.",
