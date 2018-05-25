@@ -812,9 +812,13 @@ class Script < ActiveRecord::Base
     id = options.delete(:id)
     name = options.delete(:name)
     script_key = id ? {id: id} : {name: name}
-    script = Script.includes(:levels, :script_levels, stages: :script_levels).create_with({name: name}).find_or_create_by(script_key)
+    script = Script.with_default_fields.create_with({name: name}).find_or_create_by(script_key)
     script.update!(options.merge(skip_name_format_validation: true))
     script
+  end
+
+  def self.with_default_fields
+    Script.includes(:levels, :script_levels, stages: :script_levels)
   end
 
   # Update strings and serialize changes to .script file
