@@ -47,7 +47,6 @@ class FreeResponsesAssessments extends Component {
     });
   };
 
-
   getColumns = (sortable, index) => {
     let dataColumns = [
       {
@@ -87,13 +86,13 @@ class FreeResponsesAssessments extends Component {
     })(this.props.freeResponses);
 
     return (
-        <Table.Provider
-          columns={columns}
-          style={tableLayoutStyles.table}
-        >
-          <Table.Header />
-          <Table.Body rows={sortedRows} rowKey="id" />
-        </Table.Provider>
+      <Table.Provider
+        columns={columns}
+        style={tableLayoutStyles.table}
+      >
+        <Table.Header />
+        <Table.Body rows={sortedRows} rowKey="id" />
+      </Table.Provider>
     );
   }
 }
