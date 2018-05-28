@@ -57,8 +57,8 @@
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Under the “Input” section, use the `ask` block to get input from users.\",\"hint_id\":\"courseF_playlab_variables6c_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5bf2580441c6c21c9817c8664e1ef5b3/courseF_playlab_variables6c.mp3\"}]",
     "remove_items_when_actor_collides": "false",
     "top_level_procedure_autopopulate": "false",
-    "contained_level_names": null,
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
