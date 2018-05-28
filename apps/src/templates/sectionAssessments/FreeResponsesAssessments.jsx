@@ -20,7 +20,6 @@ const freeResponsesDataPropType = PropTypes.shape({
 class FreeResponsesAssessments extends Component {
   static propTypes= {
     freeResponses: PropTypes.arrayOf(freeResponsesDataPropType),
-    // responses: PropTypes.arrayOf(textResponsePropType),
   };
 
   state = {
@@ -48,47 +47,26 @@ class FreeResponsesAssessments extends Component {
     });
   };
 
-  studentResponseColumnFormatter = (response, {rowIndex}) => {
-   const studentResponse = this.props.freeResponses[rowIndex].response;
-
-    return (
-      <div>
-        {studentResponse}
-      </div>
-    );
-  };
-
-  studentNameColumnFormatter = (name, {rowIndex}) => {
-    const studentName = this.props.freeResponses[rowIndex].name;
-
-    return (
-      <div>
-      {studentName}
-      </div>
-    );
-  };
 
   getColumns = (sortable, index) => {
     let dataColumns = [
       {
-        property: 'studentName',
+        property: 'name',
         header: {
           label: i18n.studentName(),
           props: {style: tableLayoutStyles.headerCell},
         },
         cell: {
-          format: this.studentNameColumnFormatter,
           props: {style:tableLayoutStyles.cell},
         }
       },
       {
-        property: 'studentResponse',
+        property: 'response',
         header: {
           label: i18n.response(),
           props: {style: tableLayoutStyles.headerCell},
         },
         cell: {
-          format: this.studentResponseColumnFormatter,
           props: {style:tableLayoutStyles.cell},
         }
       },
