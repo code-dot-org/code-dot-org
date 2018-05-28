@@ -69,12 +69,12 @@
     "makerlab_enabled": "false",
     "teacher_markdown": "**Validation Note:** This level checks only for the presence of:\r\n* an event handler - supposed to be for the dropdown menu on \"change\"\r\n* a call to `getText` - presumably to get the text out of the dropdown menu they are supposed to add\r\n* a call to `setText` - presumably to display the appropriate message in the label with id: *msg_label*\r\n\r\n**Teaching Tips:**\r\n\r\n* Students may discover the `if-else-if` construct here because it's easy to find by simply clicking on the `+` next to the else clause.\r\n\r\n* However, the `if-else-if` structure is what you're learning next and this challenge is meant to motivate the need for it.  Up to you whether you want to force students to use nested `if` statements here or not.\r\n\r\n* One reason to use nested statement is that that's what you'll see on the AP exam.  The AP pseduocode has no concept of the `if-else-if` shorthand.  So it's good practice for that.",
     "hide_share_and_remix": "false",
-    "contained_level_names": null,
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "disable_if_else_editing": "false",
     "show_type_hints": "false",
-    "expand_debugger": "false"
+    "expand_debugger": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

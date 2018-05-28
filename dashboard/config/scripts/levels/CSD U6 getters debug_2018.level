@@ -69,11 +69,8 @@
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 10447,
     "name_suffix": "_2018",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

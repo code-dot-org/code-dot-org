@@ -49,8 +49,8 @@
     "encrypted_examples": "LXKPeJRDLrHiH0OVZAdj/7ixTiUUi5Yz4XLPKl03NJauLjfxMRpmc0lhU2io\nWnSz6JjzEzA7PI2cEKL6HQV50Q==\n",
     "parent_level_id": 10604,
     "name_suffix": "_2018",
-    "contained_level_names": null,
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
