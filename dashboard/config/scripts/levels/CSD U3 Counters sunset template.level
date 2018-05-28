@@ -38,7 +38,6 @@
       "multiplyOperator": null,
       "divideOperator": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Animate a Sunset\r\n\r\nYou now know a little bit about how **expressions can be used to create variables that count** and you've used these in some simple programs. Try using counter variables to animate a more complex scene.\r\n\r\n# Do This\r\n\r\nThis program is designed to **animate a sunset**. Some starter code is provided but you'll need to fill in the rest.\r\n\r\n* **Run the program to see how it works**\r\n* **Add code** that will:\r\n\t* Make the sun go down\r\n    * Make the cloud go across the screen\r\n    * Change the color of the sky from blue to red\r\n    \r\n<details><Summary>Want a hint?</Summary>\r\n<ul>\r\n<li>For help animating the sun go check out level [[blah]]</li>\r\n<li>For help animating the cloud go check out level [[blah]]</li>\r\n<li>For help animating the sky go check out level [[blah]]</li>\r\n</ul>\r\n\r\n</details>\r\n\r\n![](https://images.code.org/d0a1386297fae9f21fc046da62b13248-image-1462997082538.gif)",
