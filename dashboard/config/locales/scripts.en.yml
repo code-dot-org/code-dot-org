@@ -8554,6 +8554,8 @@ en:
               name: Unit 1 Chapter 2 Assessment
               description_student: ''
               description_teacher: ''
+            Sending Text:
+              name: Sending Text
         csd1-2018:
           title: CSD Unit 1 - Problem Solving
           description: " \r\nUnit 1 is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r\n"
