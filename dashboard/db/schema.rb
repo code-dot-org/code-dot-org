@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180518054641) do
+ActiveRecord::Schema.define(version: 20180524174518) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -1157,7 +1157,11 @@ ActiveRecord::Schema.define(version: 20180518054641) do
     t.integer  "user_id"
     t.boolean  "login_required",                default: false, null: false
     t.text     "properties",      limit: 65535
+    t.string   "new_name"
+    t.string   "family_name"
+    t.index ["family_name"], name: "index_scripts_on_family_name", using: :btree
     t.index ["name"], name: "index_scripts_on_name", unique: true, using: :btree
+    t.index ["new_name"], name: "index_scripts_on_new_name", unique: true, using: :btree
     t.index ["wrapup_video_id"], name: "index_scripts_on_wrapup_video_id", using: :btree
   end
 
