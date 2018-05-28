@@ -6,25 +6,25 @@ import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 
 const TABLE_WIDTH = tableLayoutStyles.table.width;
-const NAME_COLUMN_WIDTH = 120;
+const MAX_NAME_COLUMN_WIDTH = 200;
 const PADDING = 15;
-const PADDING_LEFT = 25;
 
 const styles = {
   studentNameColumnHeader: {
-    width: NAME_COLUMN_WIDTH,
     textAlign: 'center',
   },
   studentNameColumnCell : {
-    width: NAME_COLUMN_WIDTH,
-    paddingLeft: PADDING_LEFT,
+    maxWidth: 200,
+    padding: PADDING,
+    verticalAlign: 'top',
   },
   responseColumnHeader: {
     padding: PADDING,
   },
   responseColumnCell: {
+    verticalAlign: 'top',
     padding: PADDING,
-    maxwidth: TABLE_WIDTH - NAME_COLUMN_WIDTH - PADDING_LEFT,
+    maxWidth: TABLE_WIDTH - MAX_NAME_COLUMN_WIDTH,
   }
 };
 
@@ -70,30 +70,10 @@ class FreeResponsesAssessments extends Component {
     });
   };
 
-  studentResponseColumnFormatter = (response, {rowIndex}) => {
-   const studentResponse = this.props.freeResponses[rowIndex].response;
-
-    return (
-      <div>
-        {studentResponse}
-      </div>
-    );
-  };
-
-  studentNameColumnFormatter = (name, {rowIndex}) => {
-    const studentName = this.props.freeResponses[rowIndex].name;
-
-    return (
-      <div>
-      {studentName}
-      </div>
-    );
-  };
-
   getColumns = (sortable, index) => {
     let dataColumns = [
       {
-        property: 'studentName',
+        property: 'name',
         header: {
           label: i18n.studentName(),
           props: {
@@ -114,7 +94,7 @@ class FreeResponsesAssessments extends Component {
         }
       },
       {
-        property: 'studentResponse',
+        property: 'response',
         header: {
           label: i18n.response(),
           props: {
