@@ -22,6 +22,8 @@ class DslTest < ActiveSupport::TestCase
     project_widget_visible: false,
     project_widget_types: [],
     script_announcements: nil,
+    new_name: nil,
+    family_name: nil,
   }
 
   test 'test Script DSL' do
