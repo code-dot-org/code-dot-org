@@ -34,7 +34,14 @@ $(document).ready(function () {
 
   // Leniently validate and fix up custom block JSON using jsonic
   if (document.getElementById('level_custom_blocks')) {
-    initializeCodeMirrorForJson('level_custom_blocks', 'custom-blocks-validation');
+    initializeCodeMirrorForJson('level_custom_blocks', {
+      validationDiv: 'custom-blocks-validation',
+      onBlur(blocks) {
+        if (!Array.isArray(blocks)) {
+          return [blocks];
+        }
+      }
+    });
   }
   if (document.getElementById('level_custom_helper_library')) {
     initializeCodeMirror('level_custom_helper_library', 'javascript');

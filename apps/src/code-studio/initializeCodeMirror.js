@@ -115,7 +115,8 @@ function initializeCodeMirror(target, mode, callback, attachments) {
 }
 module.exports = initializeCodeMirror;
 
-module.exports.initializeCodeMirrorForJson = function (textAreaId, validationDivId) {
+module.exports.initializeCodeMirrorForJson = function (
+  textAreaId, {validationDivId, onBlur, onChange}) {
   // Leniently validate and fix up custom block JSON using jsonic
   const textAreaEl = document.getElementById(textAreaId);
   if (textAreaEl) {
@@ -129,8 +130,8 @@ module.exports.initializeCodeMirrorForJson = function (textAreaId, validationDiv
       try {
         if (jsonEditor.getValue().trim()) {
           let blocks = jsonic(jsonEditor.getValue().trim());
-          if (!Array.isArray(blocks)) {
-            blocks = [blocks];
+          if (onBlur) {
+            blocks = onBlur(blocks);
           }
           jsonEditor.setValue(JSON.stringify(blocks, null, 2));
         } else {
@@ -145,8 +146,9 @@ module.exports.initializeCodeMirrorForJson = function (textAreaId, validationDiv
     };
 
     const jsonEditor =
-      initializeCodeMirror(textAreaId, 'application/json');
+      initializeCodeMirror(textAreaId, 'application/json', onChange);
     jsonEditor.on('blur', fixupJson);
     fixupJson();
+    return jsonEditor;
   }
 };
