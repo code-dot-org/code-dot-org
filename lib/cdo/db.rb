@@ -55,5 +55,8 @@ Sequel::Database.extension :auto_literal_strings
 
 PEGASUS_DB = sequel_connect CDO.pegasus_db_writer, CDO.pegasus_db_reader
 POSTE_DB = PEGASUS_DB
+# Use Pegasus as the default database for Sequel Models.
+Sequel::Model.db = PEGASUS_DB
+
 DASHBOARD_DB = sequel_connect CDO.dashboard_db_writer, CDO.dashboard_db_reader
 DASHBOARD_REPORTING_DB_READER = sequel_connect CDO.dashboard_reporting_db_reader, CDO.dashboard_reporting_db_reader

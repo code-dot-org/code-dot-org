@@ -26,7 +26,7 @@ class FormHelpersTest < SequelTestCase
         {
           kind: DEFAULT_KIND,
           secret: DEFAULT_SECRET,
-          data: {name: 'fake_name', email: 'fake@example.com'},
+          data: {name: 'fake_name', email: 'fake@example.com'}.to_json,
           email: 'fake@example.com',
           created_at: DateTime.now,
           updated_at: DateTime.now,
