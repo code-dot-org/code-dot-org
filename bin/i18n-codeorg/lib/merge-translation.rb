@@ -37,47 +37,44 @@ def merge_translation_tree(en_translation, new_translation, prev_translation)
   new_translation
 end
 
-file_type = ARGV[0]
-en_translation_path = ARGV[1]
-new_translation_path = ARGV[2]
-prev_translation_path = ARGV[3]
-
-# is this a new file being translated?
-if File.exist?(en_translation_path) && File.exist?(new_translation_path) && !File.exist?(prev_translation_path)
-  FileUtils.copy(new_translation_path, prev_translation_path)
-end
-
-# Translation begins
-if file_type == "yml"
-  en_translation = YAML.load_file(en_translation_path)
-  new_translation = YAML.load_file(new_translation_path)
-  prev_translation = YAML.load_file(prev_translation_path)
-
-  # Get new translation
-  new_translation[new_translation.keys[0]] = merge_translation_tree(
-    en_translation.values[0],
-    new_translation.values[0],
-    prev_translation.values[0]
-  )
-
-  File.open(prev_translation_path, 'w+') do |f|
-    f.write(new_translation.to_yaml)
+def merge_translation(file_type, en_translation_path, new_translation_path, prev_translation_path)
+  # is this a new file being translated?
+  if File.exist?(en_translation_path) && File.exist?(new_translation_path) && !File.exist?(prev_translation_path)
+    FileUtils.copy(new_translation_path, prev_translation_path)
   end
-else
-  en_translation = JSON.parse(File.read(en_translation_path))
-  new_translation = JSON.parse(File.read(new_translation_path))
-  prev_translation = JSON.parse(File.read(prev_translation_path))
 
-  # Get new translation
-  new_translation = merge_translation_tree(
-    en_translation,
-    new_translation,
-    prev_translation
-  )
+  # Translation begins
+  if file_type == "yml"
+    en_translation = YAML.load_file(en_translation_path)
+    new_translation = YAML.load_file(new_translation_path)
+    prev_translation = YAML.load_file(prev_translation_path)
 
-  File.open(prev_translation_path, 'w+') do |f|
-    f.write(JSON.pretty_generate(new_translation))
+    # Get new translation
+    new_translation[new_translation.keys[0]] = merge_translation_tree(
+      en_translation.values[0],
+      new_translation.values[0],
+      prev_translation.values[0]
+    )
+
+    File.open(prev_translation_path, 'w+') do |f|
+      f.write(new_translation.to_yaml)
+    end
+  else
+    en_translation = JSON.parse(File.read(en_translation_path))
+    new_translation = JSON.parse(File.read(new_translation_path))
+    prev_translation = JSON.parse(File.read(prev_translation_path))
+
+    # Get new translation
+    new_translation = merge_translation_tree(
+      en_translation,
+      new_translation,
+      prev_translation
+    )
+
+    File.open(prev_translation_path, 'w+') do |f|
+      f.write(JSON.pretty_generate(new_translation))
+    end
   end
 end
 
-puts "#{new_translation_path} + #{en_translation_path} => #{prev_translation_path}"
+merge_translation(*ARGV) if __FILE__ == $0
