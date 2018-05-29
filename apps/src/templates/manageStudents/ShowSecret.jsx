@@ -17,11 +17,11 @@ const styles = {
 class ShowSecret extends Component {
   static propTypes = {
     initialIsShowing: PropTypes.bool,
-    sectionId: PropTypes.number.isRequired,
     student: PropTypes.shape({
       secretWords: PropTypes.string,
-      secretPicture: PropTypes.string,
-      loginType: PropTypes.string.isRequired
+      secretPicturePath: PropTypes.string,
+      loginType: PropTypes.string.isRequired,
+      sectionId: PropTypes.number.isRequired,
     }).isRequired,
     // Provided in redux
     setSecretImage: PropTypes.func.isRequired,
@@ -45,14 +45,14 @@ class ShowSecret extends Component {
   };
 
   reset = () => {
-    const {sectionId, student, setSecretImage, setSecretWords} = this.props;
+    const {student, setSecretImage, setSecretWords} = this.props;
     const dataToUpdate = {
       secrets: "reset_secrets",
       student
     };
 
     $.ajax({
-      url: `/dashboardapi/sections/${sectionId}/students/${student.id}`,
+      url: `/dashboardapi/sections/${student.sectionId}/students/${student.id}`,
       method: 'PATCH',
       contentType: 'application/json;charset=UTF-8',
       data: JSON.stringify(dataToUpdate),
