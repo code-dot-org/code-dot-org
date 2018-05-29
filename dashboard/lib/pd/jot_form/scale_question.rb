@@ -9,7 +9,7 @@ module Pd
 
       attr_accessor :values
 
-      def self.from_jotform_question(id:, type:, jotform_question:)
+      def self.from_jotform_question(jotform_question)
         super.tap do |scale_question|
           from = jotform_question['scaleFrom'].to_i
           to = jotform_question['scaleAmount'].to_i

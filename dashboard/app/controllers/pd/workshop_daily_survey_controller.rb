@@ -38,7 +38,8 @@ module Pd
         workshop_course: workshop.course,
         workshop_subject: workshop.subject,
         regional_partner_name: workshop.regional_partner&.name,
-        session_id: session&.id
+        session_id: session&.id,
+        day: day
       }
     end
 
