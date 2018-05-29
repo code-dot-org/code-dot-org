@@ -9,11 +9,15 @@ const TABLE_WIDTH = tableLayoutStyles.table.width;
 const MAX_NAME_COLUMN_WIDTH = 200;
 const PADDING = 15;
 
+
 const styles = {
   studentNameColumnHeader: {
     textAlign: 'center',
   },
   studentNameColumnCell : {
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
     maxWidth: 200,
     padding: PADDING,
     verticalAlign: 'top',
