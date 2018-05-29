@@ -91,6 +91,59 @@ class ScriptTest < ActiveSupport::TestCase
     assert_not_equal script_level_id, script.script_levels[4].id
   end
 
+  test 'cannot rename a script without a new_name' do
+    l = create :level
+    dsl = <<-SCRIPT
+      stage 'Stage1'
+      level '#{l.name}'
+    SCRIPT
+    old_script = Script.add_script(
+      {name: 'old script name'},
+      ScriptDSL.parse(dsl, 'a filename')[0][:stages]
+    )
+    assert_equal 'old script name', old_script.name
+
+    new_script = Script.add_script(
+      {name: 'new script name'},
+      ScriptDSL.parse(dsl, 'a filename')[0][:stages]
+    )
+    assert_equal 'new script name', new_script.name
+
+    # a new script was created
+    refute_equal old_script.id, new_script.id
+  end
+
+  test 'can rename a script between original name and new_name' do
+    l = create :level
+    dsl = <<-SCRIPT
+      stage 'Stage1'
+      level '#{l.name}'
+    SCRIPT
+    old_script = Script.add_script(
+      {name: 'old script name', new_name: 'new script name'},
+      ScriptDSL.parse(dsl, 'a filename')[0][:stages]
+    )
+    assert_equal 'old script name', old_script.name
+
+    new_script = Script.add_script(
+      {name: 'new script name', new_name: 'new script name'},
+      ScriptDSL.parse(dsl, 'a filename')[0][:stages]
+    )
+    assert_equal 'new script name', new_script.name
+
+    # the old script was renamed
+    assert_equal old_script.id, new_script.id
+
+    old_script = Script.add_script(
+      {name: 'old script name', new_name: 'new script name'},
+      ScriptDSL.parse(dsl, 'a filename')[0][:stages]
+    )
+    assert_equal 'old script name', old_script.name
+
+    # the script was renamed back to the old name
+    assert_equal old_script.id, new_script.id
+  end
+
   test 'should remove empty stages' do
     scripts, _ = Script.setup([@script_file])
     assert_equal 2, scripts[0].stages.count
