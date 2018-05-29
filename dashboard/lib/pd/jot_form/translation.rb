@@ -125,11 +125,6 @@ module Pd
         #   question_id => {name, text, type, answer, ...}
         #   All we care about here is the answer.
         answers = included_answers.map do |question_id, answer_data|
-          # # Make sure each answer has a type
-          # unless answer_data.key? 'type'
-          #   raise "Missing type for JotForm answer #{question_id} in submission #{submission_id}: #{answer_data}"
-          # end
-
           [
             question_id.to_i,
             answer_data['answer']
