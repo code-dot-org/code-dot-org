@@ -160,6 +160,8 @@ class User < ActiveRecord::Base
 
   SYSTEM_DELETED_USERNAME = 'sys_deleted'
 
+  RESET_SECRETS = 'reset_secrets'.freeze
+
   # :user_type is locked. Use the :permissions property for more granular user permissions.
   USER_TYPE_OPTIONS = [
     TYPE_STUDENT = 'student'.freeze,

@@ -86,7 +86,7 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
     @student.reload
     old_secret_picture_path = @student.secret_picture.path
     old_secret_words = @student.secret_words
-    params = {section_id: @section.id, id: @student.id, student: {name: 'testname'}, secrets: 'reset'}
+    params = {section_id: @section.id, id: @student.id, student: {name: 'testname'}, secrets: User::RESET_SECRETS}
 
     put :update, params: params
     response = JSON.parse(@response.body)
