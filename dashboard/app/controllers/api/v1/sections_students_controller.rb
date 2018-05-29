@@ -21,8 +21,6 @@ class Api::V1::SectionsStudentsController < Api::V1::JsonApiController
 
   # PATCH /sections/<section_id>/students/<id>
   def update
-    return render_404 unless @student
-
     @student.reset_secrets if params[:secrets] == User::RESET_SECRETS
 
     if @student.update(student_params)
