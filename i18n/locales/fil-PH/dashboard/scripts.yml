@@ -2143,6 +2143,8 @@ fil:
               name: Lumahok sa isang longhitudinal na pag-aaral!
             CSP Student Post-Course Survey:
               name: Surbey Pagkatapos ng Kurso sa Estudyante ng CSP
+            Post-Course Survey:
+              name: Post-Course Survey
         csp2:
           title: CSP Unit 2 - Digital Information
           description: This unit further explores the ways that digital information is encoded, represented and manipulated. Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.
@@ -2191,6 +2193,8 @@ fil:
               name: Surbey Pagkatapos ng Kurso sa Estudyante ng CSP
             Practice PT - Encode an Experience:
               name: Pagsasanay PT - Pag-encode ng Karanasan
+            Post-Course Survey:
+              name: Post-Course Survey
         csp3:
           title: CSP Unit 3 - Intro to Programming
           description: "Ang yunit na ito ay nagpapakilala sa mga pundasyonal na mga konsepto sa pag-program sa kompyuter, kung saan nagbigay diin ito sa abilidad na makagawa ng mayaman, at inter-aktib na mga apps. Ang kursong ito ay gumagamit ng JavaScript bilang wika ng pang-program, at App Lab bilang kapaligiran sa pag-program para makabuo ng mga apps, ngunit ang mga konsepto na matutunan sa mga araling ito ay lumakip sa lahat ng mga wika ng pang-program at mga kagamitan.\\r\n\\r\nAng yunit na ito ay huling binago noong ika-30 ng Oktubre, 2017. Magbasa pa tungkol sa mga pagbabago sa kurikulum sa forum.code.org/c/csp/updates."
@@ -2235,6 +2239,8 @@ fil:
               name: Kalagitnaang Kurso ng CSP na Surbey
             Please complete the CSP Mid-course survey!:
               name: Mangyaring kumpletohin ang surbey ng kalagitnaang kurso ng CSP!
+            Post-Course Survey:
+              name: Post-Course Survey
         csp4:
           title: CSP Unit 4 - Big Data and Privacy
           description: "The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.\\r\n\\r\nThis unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
@@ -2275,6 +2281,10 @@ fil:
               name: Lumahok sa isang longhitudinal na pag-aaral!
             CSP Student Post-Course Survey:
               name: Surbey Pagkatapos ng Kurso sa Estudyante ng CSP
+            Post-Course Survey:
+              name: Post-Course Survey
+            Student Post-Course Survey:
+              name: Student Post-Course Survey
         csp5:
           title: CSP Unit 5 - Building Apps
           description: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
@@ -2385,6 +2395,8 @@ fil:
               name: '"if" na mga Pahayag Unplugged'
             Boolean Expressions and "if" Statements:
               name: Boolean na mga Ekspresyon at ang "if" na mga Pahayag
+            Post-Course Survey:
+              name: Post-Course Survey
         csp6:
           title: CSP Unit 6 - AP Performance Tasks
           description: This unit covers the preparation and completion of the Create and Explore Performance Tasks.
@@ -3390,6 +3402,8 @@ fil:
               name: Mga Hugis at Randomisasyon
             CS Discoveries End of Semester Survey:
               name: Pangkatapusan ng Semestre na Pagsisiyasat sa Mga Natuklasan sa CS
+            CSD Post-Course Survey:
+              name: CSD Post-Course Survey
         grade2:
           title: Grade 2
           description: Planning Script for CSF 2.0
@@ -3815,6 +3829,8 @@ fil:
               name: Mga Heading
               description_student: Ang araling ito ay nagpapatuloy sa introduksyon sa mga HTML na tag, ngayon ay tungkol sa mga header. Ang klase ay magsasanay sa paggamit ng mga header na tag para lumikha ng pahina at mga pamagat ng seksiyon at matututo kung paano ang iba't ibang mga elemento ng header ay naka-display ayon sa default. Sa sunod, ang klase ay magpaplano kung paano mag-organisa sa kanilang nilalaman sa personal na mga pahina sa web na gagawin sa loob ng yunit at nagsisimula sa unang pahina ng proyekto.
               description_teacher: Sa araling ito, ang mga estudyante ay patuloy na gagamit sa HTML para gumawa ng istraktura ng teksto sa mga web na pahina, ngayon ay may mga headings na. Ang mga estudyante ay matututo kung paano ang iba't ibang mga heading na elemento ay naka-display nang default at magsasanay sa paggamit ng mga ito para maglikha ng pahina at seksyon na mga pamagat. Ang mga estudyante ay pipili na din kung paano nila i-organisa ang kanilang nilalaman sa kanilang sariling personal na mga web na pahina. Sa huling antas, ang mga estudyante ay magsisimula sa proyekto na patuloy nilang gagawin sa buong yunit.
+            CSD Post-Course Survey:
+              name: CSD Post-Course Survey
         csp2-support:
           title: Unit 2 Online Professional Learning Course
           description_audience: ''
@@ -3945,6 +3961,8 @@ fil:
               name: Proyekto - Pagpapakita ng App
               description_student: Bawat koponan ay maghahanda ng isang pagtatanghal para "ipakita" ang app na nagawa nila. Ito ang panahon para ibahagi nilang ang kanilang mga paghihirap, tagumpay, at mga plano para sa hinaharap.
               description_teacher: Sa puntong ito ang mga koponan ay nakakapanaliksik na ng isang paksa na may personal at sosyal na kahalagahan, na ginawa at sinubukan pareho sa isang papel na prototype at sa isang digital ng prototype, at nai-iterate sa inisyal na app para maidagdag ang mga bagong katangian at pag-aayos sa mga bug. Ngayon ang oras para magbalik-aral sa kung ano ang nagawa nila at sama-samang buoin ang isang pagtatanghal para ipakita ang proseso ng paglikha. Gamit ang nabigay na pagtatanghal na template, ang mga koponan ay maghahandang ipakita ang tungkol sa kanilang proseso sa paggawa ng app, kalakip ang mga problema na itinakda nilang lutasin, ang mga pamamaraan kung saan nila inilakip ang mga feedback mula sa pagsubok, at ang kanilang mga plano para sa hinaharap.
+            CSD Post-Course Survey:
+              name: CSD Post-Course Survey
         minecraft:
           title: Minecraft Hour of Code na Taga-disenyo
           description_audience: ''
@@ -4510,6 +4528,8 @@ fil:
               name: Sample na mga App
             Final Project:
               name: Huling Proyekto
+            Post-Course Survey:
+              name: Post-Course Survey
         unit6-csd-draft:
           title: ''
           description_audience: ''
@@ -4922,6 +4942,8 @@ fil:
               name: Mga Array at mga LED na mga kulay
               description_student: Alamin kung paano ang mga listahan maaaring magamit para maglakip ng maraming mga halaga sa isang pangalan ng variable.
               description_teacher: Ang isang array ay isang naayos na mga koleksyon ng mga aytem, karaniwan ay magkapareho ang tipo. Sa araling ito, ang mga estudyante ay matututo sa mga pamamaraan para magamit ang alinman sa tiyak o nagkataon na halaga mula sa isang listahan gamit ang index nito. Pagkatapos sila ay matututo kung paano mag-access sa array na colorLEDS na kumukontrol sa pag-uugali ng mga kulay ng LED na nasa Circuit Playground. Ang mga estudyante ay magkokontrol sa kulay at sa lakas ng bawat LED, pagkatapos ay gagamit sa kung ano ang natutunan nila para magprogram ng mga pattern ng ilaw para makalikha ng ilaw na pagtatanghal sa kanilang Circuit Playground.
+            CSD Post-Course Survey:
+              name: CSD Post-Course Survey
         csd3-draft:
           title: 'CSD Yunit 3 - Pag-program: Mga Animasyon at mga Laro'
           description_audience: ''
@@ -5056,6 +5078,8 @@ fil:
               name: Pagiging Sekreto ng mga Datos
               description_student: Ang mga estudyante ay magkakaroon ng talakayan sa iba't ibang mga antas ng seguridad na gusto nila para sa kanilang mga personal na mga datos. Kapag ang klase ay nagkabuo ng pag-uunawa sa kahalagahan ng privacy, pagkatapos ay matutunan nila ang tungkol sa proseso ng pag-encrypt ng mga impormasyon sa pamamagitan ng pag-encipher ng nota para sa isang kasamahan at pag-decipher sa nota ng kasaman. Ang klase ay magtatapos sa isang diskusyon tungkol sa kahalagahan ng parehong pisikal at diginal na seguridad.
               description_teacher: Ang mga estudyante ay magkakaroon ng talakayan sa iba't ibang mga antas ng seguridad na gusto nila para sa kanilang mga personal na mga datos. Kapag ang klase ay nagkabuo ng pag-uunawa sa kahalagahan ng privacy, pagkatapos ay matutunan nila ang tungkol sa proseso ng pag-encrypt ng mga impormasyon sa pamamagitan ng pag-encipher ng nota para sa isang kasamahan at pag-decipher sa nota ng kasaman. Ang klase ay magtatapos sa isang diskusyon tungkol sa kahalagahan ng parehong pisikal at diginal na seguridad.
+            CSD Post-Course Survey:
+              name: CSD Post-Course Survey
         csd3-old:
           title: CSD Yunit 3 (LUMA NA)
           description_audience: ''
@@ -5302,10 +5326,14 @@ fil:
               name: Lumahok sa isang longhitudinal na pag-aaral!
             CSP Post-Course Survey:
               name: Surbey Pagkatapos ng Kursong CSP
+            CSP post survey 2018 staging:
+              name: CSP post survey 2018 staging
+            CSP post-course survey:
+              name: CSP post-course survey
           title: Surbey Pagkatapos ng Kurso sa Estudyante ng CSP
           description_audience: CSP na mga Estudyante
           description_short: Surbey Pagkatapos ng Kurso para sa mga Estudyante ng CSP
-          description: 'Maligawang pagdating sa Code.org na Surbey Pagkatapos ng Kurso na mga Prinsipyo ng CS. Ang surbey na ito ay tatagal ng mga 10 minuto para makumpleto. Ang mga sagot mo ay pribado at hindi pinakilala.  '
+          description: Maligawang pagdating sa Code.org na Surbey Pagkatapos ng Kurso na mga Prinsipyo ng CS. Ang surbey na ito ay tatagal ng mga 10 minuto para makumpleto. Ang mga sagot mo ay pribado at hindi pinakilala.  
         public-key-cryptography:
           stages:
             Public Key Crypto Widgets:
@@ -6902,6 +6930,8 @@ fil:
               name: Staging sa kalagitnaan at pagkatapos ng surbey ng CSP 2017
             CSP post survey 2018 staging:
               name: CSP post survey 2018 staging
+            CSD post survey 2018 staging:
+              name: CSD post survey 2018 staging
           title: Lahat ng mga surbey
           description_audience: ''
           description_short: Lugar para i-stage at subukan ang mga surbey ng Code.org
@@ -6960,6 +6990,8 @@ fil:
               name: Tech na Setup - Iyong AP Digital na Portfolio at Ibang mga Kagamitan
             'Setup: Digital Portfolio and Other Tools':
               name: 'Setup: Digital na Portfolio at Ibang mga Kagamitan'
+            Post-Course Survey:
+              name: Post-Course Survey
           title: Tuklasin - Paghahanda sa AP Performance Task
           description_audience: ''
           description_short: Mga aralin at mapagkukunan ng kaalaman para makayulong sa mga estudyante na maghanda at para makumpleto ang AP Pagtuklas sa Performance na mga Gawain.
@@ -6974,6 +7006,8 @@ fil:
               name: Lumikha ng PT Prep - Paggawa ng Plano
             Create PT - Complete the Task:
               name: Lumkiha ng PT - Kompletuhin ang Gawain
+            Post-Course Survey:
+              name: Post-Course Survey
           title: Paglikha - Paghahanda sa AP Performance Task
           description_audience: ''
           description_short: Mga aralin at mapagkukunan ng kaalaman para makatulong sa mga estudyante na maghanda at makumpleto ang AP na Paglikha ng mga Performance Task.
@@ -7511,6 +7545,8 @@ fil:
               name: Mga Loops sa Harvester
             Sequencing in Maze:
               name: Sequencing in Maze
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: 'Persistence & Frustration: Stevie and the Big Project'
         express-2018:
           title: Mabilis na Kurso
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
@@ -7813,6 +7849,12 @@ fil:
               name: Conditionals in Maze
             Conditionals & Loops in Harvester:
               name: Mga Kondisyonal & Mga Loop sa Harvester
+            Graph Paper Programming:
+              name: Graph Paper Programming
+            Relay Programming:
+              name: Relay Programming
+            Introduction to Online Puzzles:
+              name: Pambungad sa mga Online na mga Palaisipan
         jr-test:
           stages:
             Programming with Behaviors:
@@ -7831,6 +7873,8 @@ fil:
               name: Virtual Pet - Forever
             Alien Dance Party - Input:
               name: Alien Dance Party - Input
+            Virtual Pet - Interactions:
+              name: Virtual Pet - Interactions
           title: ''
           description_audience: ''
           description_short: ''
@@ -8348,6 +8392,8 @@ fil:
               name: Pet Giraffe with Sprite Lab
             Functions in Minecraft:
               name: Functions in Minecraft
+            Conditionals in Farmer:
+              name: Mga Kondisyonal sa Farmer
         csp1-2018:
           title: CSP Unit 1 - The Internet
           description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. The unit then explores the structure and design of the internet and the implications of those design decisions.
@@ -9006,16 +9052,230 @@ fil:
             Alien Dance Party - Input:
               name: Alien Dance Party - Input
           title: Introduction to Sprite Lab (PILOT)
-          description_audience: ''
-          description_short: ''
-          description: ''
+          description_audience: Course E/F Students
+          description_short: This is a pilot course for Code.org's new Sprite Lab tool for Courses E and F
+          description: This is a pilot course for Code.org's new Sprite Lab tool for Courses E and F
         csd1-dlp-18:
           stages:
             Deeper Learning Overview:
               name: Buod ng Mas Malalim na Pag-aaral
             Complete Unit 1 Deeper Learning Reflections:
               name: Kumpletong Yunit 1 Mga Repleksyon sa Mas Malalim na Pag-aaral
+            Complete Unit 2 Deeper Learning Reflections:
+              name: Kumpletong Yunit 2 Mga Repleksyon sa Mas Malalim na Pag-aaral
+            Complete Unit 3 Deeper Learning Reflections:
+              name: Kompletong Yunit 3 Mga Repleksyon sa Mas Malalim na Pag-aaral
           title: CS Discoveries Unit 1 Deeper Learning 2018-2019
           description_audience: CS Discoveries Facilitators in Training 2018-2019
           description_short: 'Mga materyales para sa Mas Malalim na Pag-aaral sa mga nagsasanay na mga tagapangasiwa ng CS Discoveries '
           description: 'This is Unit 1 of the Deeper Learning Plan for Code.org CS Discoveries facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 1 of the Code.org CS Discoveries Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+        csd2-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: Buod ng Mas Malalim na Pag-aaral
+            Complete Unit 2 Deeper Learning Reflections:
+              name: Kumpletong Yunit 2 Mga Repleksyon sa Mas Malalim na Pag-aaral
+          title: CS Discoveries Unit 2 Deeper Learning 2018-2019
+          description_audience: CS Discoveries Facilitators in Training 2018-2019
+          description_short: 'Mga materyales para sa Mas Malalim na Pag-aaral sa mga nagsasanay na mga tagapangasiwa ng CS Discoveries '
+          description: 'This is Unit 1 of the Deeper Learning Plan for Code.org CS Discoveries facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 1 of the Code.org CS Discoveries Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+        csd3-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: Buod ng Mas Malalim na Pag-aaral
+            Complete Unit 3 Deeper Learning Reflections:
+              name: Kompletong Yunit 3 Mga Repleksyon sa Mas Malalim na Pag-aaral
+          title: CS Discoveries Unit 3 Deeper Learning 2018-2019
+          description_audience: CS Discoveries Facilitators in Training 2018-2019
+          description_short: 'Mga materyales para sa Mas Malalim na Pag-aaral sa mga nagsasanay na mga tagapangasiwa ng CS Discoveries '
+          description: 'This is Unit 3 of the Deeper Learning Plan for Code.org CS Discoveries facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 3 of the Code.org CS Discoveries Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+        csd4-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: Buod ng Mas Malalim na Pag-aaral
+            Complete Unit 2 Deeper Learning Reflections:
+              name: Kumpletong Yunit 2 Mga Repleksyon sa Mas Malalim na Pag-aaral
+            Complete Unit 4 Deeper Learning Reflections:
+              name: Kompletong Yunit 3 Mga Repleksyon sa Mas Malalim na Pag-aaral
+          title: CS Discoveries Unit 4 Deeper Learning 2018-2019
+          description_audience: CS Discoveries Facilitators in Training 2018-2019
+          description_short: 'Mga materyales para sa Mas Malalim na Pag-aaral sa mga nagsasanay na mga tagapangasiwa ng CS Discoveries '
+          description: 'This is Unit 4 of the Deeper Learning Plan for Code.org CS Discoveries facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 4 of the Code.org CS Discoveries Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+        csd5-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: Buod ng Mas Malalim na Pag-aaral
+            Complete Unit 5 Deeper Learning Reflections:
+              name: Kompletong Yunit 5 Mga Repleksyon sa Mas Malalim na Pag-aaral
+          title: CS Discoveries Unit 5 Deeper Learning 2018-2019
+          description_audience: CS Discoveries Facilitators in Training 2018-2019
+          description_short: 'Mga materyales para sa Mas Malalim na Pag-aaral sa mga nagsasanay na mga tagapangasiwa ng CS Discoveries '
+          description: 'This is Unit 5 of the Deeper Learning Plan for Code.org CS Discoveries facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 5 of the Code.org CS Discoveries Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+        csd6-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: Buod ng Mas Malalim na Pag-aaral
+            Complete Unit 5 Deeper Learning Reflections:
+              name: Kompletong Yunit 5 Mga Repleksyon sa Mas Malalim na Pag-aaral
+            Complete Unit 6 Deeper Learning Reflections:
+              name: Kompletong Yunit 6 Mga Repleksyon sa Mas Malalim na Pag-aaral
+          title: CS Discoveries Unit 6 Deeper Learning 2018-2019
+          description_audience: CS Discoveries Facilitators in Training 2018-2019
+          description_short: 'Mga materyales para sa Mas Malalim na Pag-aaral sa mga nagsasanay na mga tagapangasiwa ng CS Discoveries '
+          description: 'This is Unit 6 of the Deeper Learning Plan for Code.org CS Discoveries facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 6 of the Code.org CS Discoveries Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+        csp1-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: Buod ng Mas Malalim na Pag-aaral
+            Complete Unit 1 Deeper Learning Reflections:
+              name: Kumpletong Yunit 1 Mga Repleksyon sa Mas Malalim na Pag-aaral
+          title: CS Principles Unit 1 Deeper Learning 2018-2019
+          description_audience: CS Principles Facilitators in Training 2018-2019
+          description_short: 'Deeper Learning materials for CS Principles facilitators in training '
+          description: 'This is Unit 1 of the Deeper Learning Plan for Code.org CS Principles facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 1 of the Code.org CS Principles Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+        csp2-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: Buod ng Mas Malalim na Pag-aaral
+            Complete Unit 2 Deeper Learning Reflections:
+              name: Kumpletong Yunit 2 Mga Repleksyon sa Mas Malalim na Pag-aaral
+          title: CS Principles Unit 2 Deeper Learning 2018-2019
+          description_audience: CS Principles Facilitators in Training 2018-2019
+          description_short: 'Deeper Learning materials for CS Principles facilitators in training '
+          description: 'This is Unit 2 of the Deeper Learning Plan for Code.org CS Principles facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 2 of the Code.org CS Principles Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+        csp3-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: Buod ng Mas Malalim na Pag-aaral
+            Complete Unit 3 Deeper Learning Reflections:
+              name: Kompletong Yunit 3 Mga Repleksyon sa Mas Malalim na Pag-aaral
+          title: CS Principles Unit 3 Deeper Learning 2018-2019
+          description_audience: CS Principles Facilitators in Training 2018-2019
+          description_short: 'Deeper Learning materials for CS Principles facilitators in training '
+          description: 'This is Unit 3 of the Deeper Learning Plan for Code.org CS Principles facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 3 of the Code.org CS Principles Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+        csp4-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: Buod ng Mas Malalim na Pag-aaral
+            Complete Unit 3 Deeper Learning Reflections:
+              name: Kompletong Yunit 3 Mga Repleksyon sa Mas Malalim na Pag-aaral
+            Complete Unit 4 Deeper Learning Reflections:
+              name: Kompletong Yunit 3 Mga Repleksyon sa Mas Malalim na Pag-aaral
+          title: CS Principles Unit 4 Deeper Learning 2018-2019
+          description_audience: CS Principles Facilitators in Training 2018-2019
+          description_short: 'Deeper Learning materials for CS Principles facilitators in training '
+          description: 'This is Unit 4 of the Deeper Learning Plan for Code.org CS Principles facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 4 of the Code.org CS Principles Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+        csp5-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: Buod ng Mas Malalim na Pag-aaral
+            Complete Unit 5 Deeper Learning Reflections:
+              name: Kompletong Yunit 5 Mga Repleksyon sa Mas Malalim na Pag-aaral
+          title: CS Principles Unit 5 Deeper Learning 2018-2019
+          description_audience: CS Principles Facilitators in Training 2018-2019
+          description_short: 'Deeper Learning materials for CS Principles facilitators in training '
+          description: 'This is Unit 5 of the Deeper Learning Plan for Code.org CS Principles facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 5 of the Code.org CS Principles Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+        csp-explore-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: Buod ng Mas Malalim na Pag-aaral
+            Complete Unit 6 Deeper Learning Reflections:
+              name: Kompletong Yunit 6 Mga Repleksyon sa Mas Malalim na Pag-aaral
+            Complete Explore AP Unit Deeper Learning Reflections:
+              name: Complete Explore AP Unit Deeper Learning Reflections
+            Complete Explore Deeper Learning Reflections:
+              name: Complete Explore Deeper Learning Reflections
+          title: CS Principles Explore Deeper Learning 2018-2019
+          description_audience: CS Principles Facilitators in Training 2018-2019
+          description_short: 'Deeper Learning materials for CS Principles facilitators in training '
+          description: 'This is the Explore AP Unit of the Deeper Learning Plan for Code.org CS Principles facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of the Explore AP Unit of the Code.org CS Principles Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+        csp-create-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: Buod ng Mas Malalim na Pag-aaral
+            Complete Create Deeper Learning Reflections:
+              name: Complete Create Deeper Learning Reflections
+          title: CS Principles Create Deeper Learning 2018-2019
+          description_audience: CS Principles Facilitators in Training 2018-2019
+          description_short: 'Deeper Learning materials for CS Principles facilitators in training '
+          description: 'This is the Create AP Unit of the Deeper Learning Plan for Code.org CS Principles facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of the Create AP Unit of the Code.org CS Principles Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+        csd-post-survey:
+          stages:
+            CSD post-course survey:
+              name: CSD post-course survey
+          title: CSD Student Post-Course Survey
+          description_audience: CSD Students
+          description_short: CSD Student Post-Course Survey
+          description: Welcome to the Code.org CS Discoveries Post-Course Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
+        csd-novice-18:
+          stages:
+            Novice Reflections Overview:
+              name: Novice Reflections Overview
+            Welcome:
+              name: Maligayang Pagdating
+            Tuesday:
+              name: Martes
+            Wednesday:
+              name: Miyerkules
+            Thursday:
+              name: Huwebes
+            Wrap Up:
+              name: Tapusin Na
+            Friday:
+              name: Friday
+            Novice Reflection Overview:
+              name: Novice Reflection Overview
+            Monday:
+              name: Monday
+          title: CS Discoveries Novice Reflections 2018-2019
+          description_audience: CS Discoveries Facilitators in Training 2018-2019
+          description_short: 'Novice reflection materials for CS Discoveries facilitators in training '
+          description: This is the set of novice reflections for Code.org CS Discoveries facilitators in training during their 5-day summer workshop. Here you will find reflection prompts for each day of your in-person 5-day summer workshop. This questions will be the foundation of work we do at the Facilitator Training Weekend.
+        csd-apprentice-18:
+          stages:
+            Novice Reflection Overview:
+              name: Novice Reflection Overview
+            Tuesday:
+              name: Martes
+            Wednesday:
+              name: Miyerkules
+            Thursday:
+              name: Huwebes
+            Wrap Up:
+              name: Tapusin Na
+          title: CS Discoveries Apprentice Reflections 2018-2019
+          description_audience: CS Discoveries Facilitators in Training 2018-2019
+          description_short: 'Apprentice reflection materials for CS Discoveries facilitators in training '
+          description: This is the set of apprentice reflections for Code.org CS Discoveries facilitators in training during their 5-day summer workshop. Here you will find reflection prompts for each day of your in-person 5-day summer workshop. This questions will be the foundation of work we do at the Facilitator Training Weekend.
+        csp-novice-18:
+          stages:
+            Novice Reflection Overview:
+              name: Novice Reflection Overview
+            Tuesday:
+              name: Martes
+            Wednesday:
+              name: Miyerkules
+            Thursday:
+              name: Huwebes
+            Wrap Up:
+              name: Tapusin Na
+          title: CS Principles Novice Reflections 2018-2019
+          description_audience: CS Principles Facilitators in Training 2018-2019
+          description_short: 'Novice reflection materials for CS Principles facilitators in training '
+          description: This is the set of novice reflections for Code.org CS Principles facilitators in training during their 5-day summer workshop. Here you will find reflection prompts for each day of your in-person 5-day summer workshop. This questions will be the foundation of work we do at the Facilitator Training Weekend.
+        csp-apprentice-18:
+          stages:
+            Novice Reflection Overview:
+              name: Novice Reflection Overview
+            Tuesday:
+              name: Martes
+            Wednesday:
+              name: Miyerkules
+            Thursday:
+              name: Huwebes
+            Wrap Up:
+              name: Tapusin Na
+          title: CS Principles Novice Reflections 2018-2019
+          description_audience: CS Principles Facilitators in Training 2018-2019
+          description_short: 'Novice reflection materials for CS Principles facilitators in training '
+          description: This is the set of apprentice reflections for Code.org CS Principles facilitators in training during their 5-day summer workshop. Here you will find reflection prompts for each day of your in-person 5-day summer workshop. This questions will be the foundation of work we do at the Facilitator Training Weekend.

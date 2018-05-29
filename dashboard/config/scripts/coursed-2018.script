@@ -1,7 +1,7 @@
 stage 'Algorithms: Graph Paper Programming'
 level 'GraphPaperProgramming_2018'
 
-stage 'Introduction'
+stage 'Introduction to Online Puzzles'
 level 'courseD_video_ramp1_2018'
 level 'courseD_maze_ramp1_2018'
 level 'courseD_maze_ramp2_2018'
@@ -130,9 +130,6 @@ level 'courseD_artist_4_2018'
 level 'courseD_artist_5_2018'
 level 'courseD_artist_6_2018'
 
-stage 'Conditionals with Cards'
-level 'Conditionals_2018'
-
 stage 'While Loops in Farmer'
 level 'courseD_farmer_while1_2018'
 level 'courseD_farmer_while2_2018'
@@ -161,6 +158,9 @@ level 'courseD_maze_until7_2018'
 level 'courseD_maze_until9_2018', challenge: true
 level 'courseD_maze_until10_2018'
 assessment 'courseD_maze_until10_predict2_2018'
+
+stage 'Conditionals with Cards'
+level 'Conditionals_2018'
 
 stage 'Conditionals in Bee'
 level 'courseD_bee_conditionalsVid1_2018'

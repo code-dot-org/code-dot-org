@@ -144,6 +144,13 @@
     valid_password: Mot de passe correct !
     invalid_password: Le mot de passe doit comporter au moins 6 caractères.
     mismatch_password: Les deux mots de passe ne sont pas identiques.
+    agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
+      and <a href='http://code.org/privacy'>Privacy Policy</a>.
+    under_13_consent: Si j’ai moins de 13 ans, je confirme que j’ai l’autorisation de mes parents ou
+      de mon tuteur légal pour utiliser les services de Code.org.
+    agree_us_website: J’accepte d’utiliser un site Web basé aux États-Unis.
+    my_data_to_us: Des informations sur mon utilisation de ce site peuvent être envoyées et
+      enregistrées ou traitées aux États-Unis.
     student_terms: J'accepte d'être lié aux <a href='http://code.org/tos'>conditions
       d'utilisation</a> de Code.org. Si je suis âgé de moins de 13 ans, je confirme
       en soumettant ce formulaire que j'ai la permission de mes parents ou de mon
@@ -157,16 +164,19 @@
       de confidentialité</a>.
     additional_information: Nous avons besoin de quelques informations supplémentaires
       pour continuer l’inscription.
+    user_type_button: Update Account Type
     user_type_label: Type de compte
     user_type_teacher: Enseignant
     user_type_student: Élève
     field_is_required: est obligatoire
     accept_terms: Vous devez accepter les conditions d'utilisation pour créer un compte
     error: Une erreur est apparue.
-    email_preference_question: Can we email you about updates to our courses, local
-      learning opportunities, or other computer science news?
+    email_preference_question: Pouvons-nous vous envoyer des e-mails d’information sur nos formations,
+      des opportunités près de chez vous ou d’autres brèves dans le domaine informatique\_?
+    email_preference_privacy: (Consultez notre politique de confidentialité)
     email_preference_yes: Oui
     email_preference_no: Non
+    email_preference_required: You must specify an email preference.
   school_info:
     title: Informations de l’école (facultatif)
     school_country: Pays de l’école
@@ -636,6 +646,8 @@
       dans votre section.
     already_enrolled_in_new_section: Vous ne pouvez pas déplacer ces élèves car ce
       professeur les a déjà dans une autre section.
+    third_party_login: You cannot move students to a section that is synced with a
+      third party tool.
   share:
     title: Apprends avec Code Studio
     description: N'importe qui peut apprendre l’informatique. Crée des jeux, des applications
@@ -1194,6 +1206,7 @@
     csd5_2: 'Chapitre 2 : Résoudre des problèmes avec des données'
     csd6_1: 'Chapitre 1 : Matériel pour la sortie des données'
     csd6_2: 'Chapitre 2 : Matériel pour l''entrée des données'
+    csd_survey: Post-Course Survey
     csp1_1: 'Chapitre 1: Représentation et transmission de l''information'
     csp1_2: 'Chapitre 2: Créer l''Internet'
     csp2_1: 'Chapitre 1: Représentation et compression de données complexes'
@@ -1362,3 +1375,11 @@
       the storing of cookies on your computer or device.
     more_information: See Code.org's Privacy Policy.
     accept: J'accepte
+  gdpr_dialog:
+    heading: Do you agree to using a web site based in the United States?
+    message: Data from your use of this site may be sent to and stored or processed
+      in the United States.
+    link_intro: For details see our
+    privacy_policy: privacy policy
+    logout: Logout
+    true: Oui

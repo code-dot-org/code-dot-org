@@ -19,7 +19,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     @section_with_script = create(:section, user: @teacher, script: Script.flappy_script)
     @student_with_script = create(:follower, section: @section_with_script).student_user
 
-    @csp_course = create(:course, name: 'csp')
+    @csp_course = create(:course, name: 'csp-2017')
     @csp_script = create(:script, name: 'csp1')
     create(:course_script, course: @csp_course, script: @csp_script, position: 1)
   end
@@ -651,5 +651,57 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @student_with_script
     get :student_script_ids, params: {id: @section_with_script.id}
     assert_response :forbidden
+  end
+
+  test "membership: returns status 403 'Forbidden' when not signed in" do
+    get :membership
+    assert_response :forbidden
+  end
+
+  test "membership: returns section names and ids for student" do
+    sign_in @student_with_script
+    get :membership
+    assert_response :success
+    expected_response = [{id: @section_with_script.id, name: @section_with_script.name}].as_json
+    assert_equal(expected_response, json_response)
+  end
+
+  test "membership: returns section names and ids for teacher" do
+    new_section = create(:section, user: @teacher, login_type: 'word')
+    new_teacher = create :teacher
+    new_section.students << new_teacher
+
+    sign_in new_teacher
+    get :membership
+    assert_response :success
+    expected_response = [{id: new_section.id, name: new_section.name}].as_json
+    assert_equal(expected_response, json_response)
+  end
+
+  test "membership: returns empty array for student sections if none exist for student" do
+    student = create(:student)
+    sign_in student
+    get :membership
+    assert_response :success
+    assert_equal([], json_response)
+  end
+
+  test "membership: returns empty array for student sections if none exist for teacher" do
+    sign_in @teacher
+    get :membership
+    assert_response :success
+    assert_equal([], json_response)
+  end
+
+  test "valid_scripts: returns 403 'Forbidden' when not signed in" do
+    get :valid_scripts
+    assert_response :forbidden
+  end
+
+  test "valid_scripts: returns scripts for any signed in user" do
+    user = create(:user)
+    sign_in user
+    get :valid_scripts
+    assert_response :success
   end
 end

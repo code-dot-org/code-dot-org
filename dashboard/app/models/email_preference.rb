@@ -16,24 +16,22 @@
 #  index_email_preferences_on_email  (email) UNIQUE
 #
 
+# Notes:
+#   source: Indicates the source of the opt-in choice.
+#   form_kind: "0", "1", etc.  Indicates which version of the opt-in string the
+#     user agreed to, for a given source.  This value should be bumped each
+#     time the corresponding user-facing string is updated.
+require_dependency 'cdo/email_preference_constants'
+
 class EmailPreference < ApplicationRecord
+  include EmailPreferenceConstants
+
   validates_presence_of :email, :ip_address, :source
   validates_inclusion_of :opt_in, {in: [true, false]}
   validates_uniqueness_of :email
   validates_email_format_of :email
 
-  SOURCE_TYPES = [
-    ACCOUNT_SIGN_UP = 'Teacher account sign up',
-    ACCOUNT_TYPE_CHANGE = 'Student account change to teacher',
-    ACCOUNT_EMAIL_ADD = 'Add email to teacher account',
-    ACCOUNT_EMAIL_CHANGE = 'Update teacher account email',
-    FORM_HOUR_OF_CODE = 'Host Hour of Code form',
-    FORM_VOLUNTEER = 'Volunteer form',
-    FORM_REGIONAL_PARTNER = 'Regional partner contact',
-    FORM_CENSUS = 'Census form'
-  ].freeze
-
-  validates_inclusion_of :source, in: SOURCE_TYPES
+  validates_inclusion_of :source, in: EmailPreference::SOURCE_TYPES
 
   def email=(value)
     super(value&.strip&.downcase)

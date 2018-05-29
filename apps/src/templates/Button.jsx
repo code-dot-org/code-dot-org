@@ -133,11 +133,21 @@ class Button extends React.Component {
     disabled: PropTypes.bool,
     onClick: PropTypes.func,
     id: PropTypes.string,
+    tabIndex: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  };
+
+  onKeyDown = (event) => {
+    const {href, disabled, onClick} = this.props;
+    if (event.key === 'Enter' && !disabled && !href) {
+      event.preventDefault();
+      event.stopPropagation();
+      onClick();
+    }
   };
 
   render() {
     const { className, href, text, icon, iconClassName, iconStyle, target,
-      style, onClick, disabled, id } = this.props;
+      style, onClick, disabled, id, tabIndex } = this.props;
 
     const color = this.props.color || ButtonColor.orange;
     const size = this.props.size || ButtonSize.default;
@@ -156,6 +166,8 @@ class Button extends React.Component {
         target={target}
         disabled={disabled}
         onClick={disabled ? null : onClick}
+        onKeyDown={this.onKeyDown}
+        tabIndex={tabIndex}
         id={id}
       >
         <div>

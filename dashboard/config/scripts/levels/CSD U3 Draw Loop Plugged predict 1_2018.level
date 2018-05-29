@@ -14,7 +14,6 @@
       "fill": null,
       "randomNumber_min_max": null
     },
-    "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
     "instructions_important": "false",
@@ -52,15 +51,12 @@
     "markdown_instructions": "# Draw Loop\r\n\r\nHere's an example of the draw loop at work.\r\n\r\n# Do this\r\n* Run the code and see how it works.\r\n* Discuss with your partner whether this looks like the flip book you saw in the video.  Why or why not?",
     "parent_level_id": 8850,
     "name_suffix": "_2018",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "map_reference": "/docs/csd-1718/draw_loop/index.html",
     "video_key": "csd_gamelab_drawloop",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

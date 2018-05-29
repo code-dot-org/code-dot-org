@@ -81,6 +81,7 @@ class UserTest < ActiveSupport::TestCase
   test 'single user experiment is enabled' do
     experiment = create(:single_user_experiment, min_user_id: @user.id)
     assert_equal [experiment[:name]], @user.get_active_experiment_names
+    experiment.destroy
   end
 
   test 'normalize_email' do
@@ -977,6 +978,26 @@ class UserTest < ActiveSupport::TestCase
     assert old_password != student.encrypted_password
   end
 
+  test 'validates format of parent email on create' do
+    refute_creates User do
+      assert_raises Exception do
+        create :young_student, parent_email: 'bad_email_format@nowhere'
+      end
+    end
+  end
+
+  test 'validates format of parent email on update' do
+    student = create :young_student
+    assert student.valid?
+
+    student.parent_email = 'bad_email_format@nowhere'
+    refute student.valid?
+
+    refute student.save
+    assert_equal({parent_email: ['is invalid']}, student.errors.messages)
+    assert_equal({parent_email: [{error: :invalid}]}, student.errors.details)
+  end
+
   test 'send reset password for student without age' do
     email = 'email@email.xx'
     student = create :student, age: 10, email: email
@@ -1138,25 +1159,15 @@ class UserTest < ActiveSupport::TestCase
     assert @student.can_edit_email?
   end
 
-  # Temporary constraint: Student accounts cannot be upgraded to teacher
-  # accounts without manual intervention.  This is because an intermediate
-  # state in our account page changes breaks the ability to confirm your
-  # email address as a student upgrading to a teacher.
-  # Captured in tests below, will be removed in the next few days.
-  # (Brad Buchanan, 2018-05-14.)
   test 'can change own user type as a student with a password' do
     student = create :student
     refute_empty student.encrypted_password
-    # Temporary: Students can't upgrade
-    #assert student.can_change_own_user_type?
-    refute student.can_change_own_user_type?
+    assert student.can_change_own_user_type?
   end
 
   test 'can change own user type as an oauth student' do
     student = create :google_oauth2_student
-    # Temporary: Students can't upgrade
-    # assert student.can_change_own_user_type?
-    refute student.can_change_own_user_type?
+    assert student.can_change_own_user_type?
   end
 
   test 'can change own user type as a teacher with a password' do
@@ -1552,15 +1563,23 @@ class UserTest < ActiveSupport::TestCase
   test 'normalize_gender' do
     assert_equal 'f', User.normalize_gender('f')
     assert_equal 'm', User.normalize_gender('m')
+    assert_equal 'n', User.normalize_gender('n')
+    assert_equal 'o', User.normalize_gender('o')
 
     assert_equal 'f', User.normalize_gender('F')
     assert_equal 'm', User.normalize_gender('M')
+    assert_equal 'n', User.normalize_gender('N')
+    assert_equal 'o', User.normalize_gender('O')
 
     assert_equal 'f', User.normalize_gender('Female')
     assert_equal 'm', User.normalize_gender('Male')
+    assert_equal 'n', User.normalize_gender('NonBinary')
+    assert_equal 'o', User.normalize_gender('NotListed')
 
     assert_equal 'f', User.normalize_gender('female')
     assert_equal 'm', User.normalize_gender('male')
+    assert_equal 'n', User.normalize_gender('non-binary')
+    assert_equal 'o', User.normalize_gender('notlisted')
 
     assert_nil User.normalize_gender('some nonsense')
     assert_nil User.normalize_gender('')
@@ -2835,5 +2854,21 @@ class UserTest < ActiveSupport::TestCase
     end
     assert_equal 2, user.user_geos.count
     assert user.within_united_states?
+  end
+
+  test 'hidden_script_access? is false if user is not admin and does not have permission' do
+    user = create :student
+    refute user.hidden_script_access?
+  end
+
+  test 'hidden_script_access? is true if user is admin' do
+    user = create :admin
+    assert user.hidden_script_access?
+  end
+
+  test 'hidden_script_access? is true if user has permission' do
+    user = create :teacher
+    user.update(permission: UserPermission::HIDDEN_SCRIPT_ACCESS)
+    assert user.hidden_script_access?
   end
 end

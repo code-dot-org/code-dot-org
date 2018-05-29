@@ -114,9 +114,14 @@ uk:
     valid_password: "Вірний пароль!"
     invalid_password: "Пароль має складатися хоча б із %d символів"
     mismatch_password: "Введені вами паролі не збігаються"
+    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
+    under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
+    agree_us_website: "I agree to using a website based in the United States."
+    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
     student_terms: "Я погоджуюсь із <a href='http://code.org/tos'>умовами користування</a> Code.org. Якщо мені менше 13 років, надсиланням цієї форми я підтверджую, що мої батьки чи законні опікуни надали дозвіл користуватися послугами Code.org. <br/><br/>Електронні адреси не зберігаються у формі, яка дозволяла би нам зв'язуватися з учнями. Учні ніколи не отримуватимуть листів від Code.org, за винятком відновлення паролю. Перегляньте нашу <a href='http://code.org/privacy'>політику конфіденційності</a> для отримання додаткової інформації."
     teacher_terms: "Я погоджуюсь з умовами надання послуг Code.org. Для ознайомлення із докладнішою інформацією про приватність, перегляньте нашу <a href='http://code.org/privacy'>політику конфіденційності</a>."
     additional_information: "Нам потрібна додаткова інформація, щоб продовжити реєстрацію."
+    user_type_button: "Update Account Type"
     user_type_label: "Тип облікового запису"
     user_type_teacher: "Вчитель"
     user_type_student: "учень"
@@ -126,6 +131,7 @@ uk:
     email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
     email_preference_yes: "Так"
     email_preference_no: "Ні"
+    email_preference_required: "You must specify an email preference."
   school_info:
     title: 'School Information (optional)'
     school_country: 'School Country'
@@ -453,6 +459,7 @@ uk:
     student_not_found: "Одного чи більше учнів не знайдено."
     all_students_must_be_in_current_section: "Всі учні повинні бути зараховані у ваші групи."
     already_enrolled_in_new_section: "Ви не можете перемістити цих учнів, бо вчитель зарахував їх в іншу групу."
+    third_party_login: "You cannot move students to a section that is synced with a third party tool."
   share:
     title: "Навчання у Студії коду"
     description: "Кожен може вивчати інформатику. Створюй ігри, програмки та твори з кодом."
@@ -872,6 +879,7 @@ uk:
     csd5_2: 'Глава 2: Вирішення проблем із даними'
     csd6_1: 'Глава 1: Програмування з обладнанням'
     csd6_2: 'Глава 2: Побудова фізичних прототипів'
+    csd_survey: 'Post-Course Survey'
     csp1_1: 'Глава 1: Представлення та передача інформації'
     csp1_2: 'Глава 2: Винайти інтернет'
     csp2_1: 'Глава 1: Кодування та стиснення складної інформації'
@@ -998,3 +1006,10 @@ uk:
     message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
     more_information: "See Code.org's Privacy Policy."
     accept: 'Погоджуюся'
+  gdpr_dialog:
+    heading: 'Do you agree to using a web site based in the United States?'
+    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+    link_intro: 'For details see our'
+    privacy_policy: 'privacy policy'
+    logout: 'Logout'
+    yes: 'Так'

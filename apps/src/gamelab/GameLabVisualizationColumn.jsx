@@ -1,4 +1,5 @@
 import React, {PropTypes} from 'react';
+import Pointable from 'react-pointable';
 import {connect} from 'react-redux';
 import GameButtons from '../templates/GameButtons';
 import ArrowButtons from '../templates/ArrowButtons';
@@ -18,6 +19,8 @@ import {
   updateLocation,
   isPickingLocation
 } from './locationPickerModule';
+import { calculateOffsetCoordinates } from '../utils';
+import dom from '../dom';
 
 const GAME_WIDTH = gameLabConstants.GAME_WIDTH;
 const GAME_HEIGHT = gameLabConstants.GAME_HEIGHT;
@@ -32,6 +35,7 @@ const styles = {
 class GameLabVisualizationColumn extends React.Component {
   static propTypes = {
     finishButton: PropTypes.bool.isRequired,
+    isResponsive: PropTypes.bool.isRequired,
     isShareView: PropTypes.bool.isRequired,
     spriteLab: PropTypes.bool.isRequired,
     awaitingContainedResponse: PropTypes.bool.isRequired,
@@ -41,6 +45,7 @@ class GameLabVisualizationColumn extends React.Component {
     cancelPicker: PropTypes.func.isRequired,
     selectPicker: PropTypes.func.isRequired,
     updatePicker: PropTypes.func.isRequired,
+    mobileControlsConfig: PropTypes.object.isRequired,
   };
 
   // Cache app-space mouse coordinates, which we get from the
@@ -50,24 +55,25 @@ class GameLabVisualizationColumn extends React.Component {
     mouseY: -1
   };
 
-  pickerMouseMove = e => {
+  pickerPointerMove = e => {
     if (this.props.pickingLocation) {
-      this.props.updatePicker({
-        x: e.nativeEvent.offsetX,
-        y: e.nativeEvent.offsetY,
-      });
+      this.props.updatePicker(calculateOffsetCoordinates(
+        this.divGameLab,
+        e.clientX,
+        e.clientY,
+      ));
     }
   };
 
-  pickerMouseUp = e => {
+  pickerPointerUp = e => {
     if (this.props.pickingLocation) {
-      this.props.selectPicker({
-        x: e.nativeEvent.offsetX,
-        y: e.nativeEvent.offsetY,
-      });
+      this.props.selectPicker(calculateOffsetCoordinates(
+        this.divGameLab,
+        e.clientX,
+        e.clientY,
+      ));
     }
   };
-
 
   componentWillReceiveProps(nextProps) {
     // Use jQuery to turn on and off the grid since it lives in a protected div
@@ -83,9 +89,8 @@ class GameLabVisualizationColumn extends React.Component {
     // Also manually raise/lower the zIndex of the playspace when selecting a
     // location because of the protected div
     const zIndex = nextProps.pickingLocation ? MODAL_Z_INDEX : 0;
-    const divGameLab = document.getElementById('divGameLab');
     const visualizationOverlay = document.getElementById('visualizationOverlay');
-    divGameLab.style.zIndex = zIndex;
+    this.divGameLab.style.zIndex = zIndex;
     visualizationOverlay.style.zIndex = zIndex;
   }
 
@@ -123,7 +128,17 @@ class GameLabVisualizationColumn extends React.Component {
   }
 
   render() {
+    const { isResponsive, isShareView, mobileControlsConfig } = this.props;
+    const { dpadVisible, spaceButtonVisible, mobileOnly } = mobileControlsConfig;
+    const mobileControlsOk = (dom.isMobile() && isShareView) ? true : !mobileOnly;
+    const dpadStyle = {
+      display: (dpadVisible && mobileControlsOk) ? 'inline' : 'none',
+    };
+    const spaceButtonStyle = {
+      display: (spaceButtonVisible && mobileControlsOk) ? 'inline' : 'none',
+    };
     const divGameLabStyle = {
+      touchAction: 'none',
       width: GAME_WIDTH,
       height: GAME_HEIGHT
     };
@@ -134,14 +149,14 @@ class GameLabVisualizationColumn extends React.Component {
     return (
       <span>
         <ProtectedVisualizationDiv>
-          <div
+          <Pointable
             id="divGameLab"
             style={divGameLabStyle}
             tabIndex="1"
-            onMouseUp={this.pickerMouseUp}
-            onMouseMove={this.pickerMouseMove}
-          >
-          </div>
+            onPointerMove={this.pickerPointerMove}
+            onPointerUp={this.pickerPointerUp}
+            elementRef={el => this.divGameLab = el}
+          />
           <VisualizationOverlay
             width={GAME_WIDTH}
             height={GAME_HEIGHT}
@@ -153,12 +168,6 @@ class GameLabVisualizationColumn extends React.Component {
           </VisualizationOverlay>
         </ProtectedVisualizationDiv>
         <GameButtons>
-          <div id="studio-dpad" className="studio-dpad-none">
-            <div id="studio-dpad-rim" />
-            <div id="studio-dpad-cone" />
-            <button id="studio-dpad-button" />
-            <button id="studio-space-button" />
-          </div>
 
           <ArrowButtons/>
 
@@ -167,6 +176,14 @@ class GameLabVisualizationColumn extends React.Component {
           {!spriteLab && !this.props.isShareView && this.renderGridCheckbox()}
         </GameButtons>
         {!spriteLab && this.renderAppSpaceCoordinates()}
+        <div id="studio-dpad-container" className={isResponsive ? "responsive" : undefined}>
+          <div id="studio-dpad">
+            <div id="studio-dpad-rim" style={dpadStyle} />
+            <div id="studio-dpad-cone" style={dpadStyle} />
+            <button id="studio-dpad-button" style={dpadStyle} />
+            <button id="studio-space-button" style={spaceButtonStyle}/>
+          </div>
+        </div>
         {this.props.awaitingContainedResponse && (
           <div style={styles.containedInstructions}>
             {i18n.predictionInstructions()}
@@ -181,9 +198,11 @@ class GameLabVisualizationColumn extends React.Component {
 }
 
 export default connect(state => ({
+  isResponsive: state.pageConstants.isResponsive,
   isShareView: state.pageConstants.isShareView,
   spriteLab: state.pageConstants.isBlockly,
   awaitingContainedResponse: state.runState.awaitingContainedResponse,
+  mobileControlsConfig: state.mobileControlsConfig,
   showGrid: state.gridOverlay,
   pickingLocation: isPickingLocation(state.locationPicker),
 }), dispatch => ({

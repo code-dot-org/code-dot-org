@@ -458,6 +458,9 @@
   homepage_header_donors: Code.org សូមថ្លែងអំណរគុណដល់អ្នកគាំទ្រ
   homepage_donors_seall: មើលទាំងអស់
   homepage_donors_donate: បរិចាក
+  homepage_below_hero_announcement_text: We care about your privacy and are making
+    some updates to our privacy policy, effective May 25.
+  homepage_below_hero_announcement_link_text: សិក្សាបន្ថែម
   contact_form_topic_student: ខ្ញុំគឺជាសិស្ស
   contact_form_topic_parent: ខ្ញុំគឺជាឪពុកម្តាយ
   contact_form_topic_teacher: ខ្ញុំគឺជាគ្រូបង្រៀន/ស្ថាប័នអប់រំ
@@ -684,6 +687,10 @@
   volunteer_engineer_submission_field_email: អាសយដ្ឋាន​អ៊ីមែល
   volunteer_engineer_submission_field_email_desc: អាសយដ្ឋានអ៊ីមែលរបស់អ្នកនឹងមិនត្រូវបានចែករំលែកទេប៉ុន្តែយើងនឹងផ្ញើសំណើពីគ្រូទៅកាន់អ្នក។
   volunteer_engineer_submission_field_email_placeholder: អាសយដ្ឋាន​អ៊ីមែល
+  volunteer_engineer_submission_field_email_preference: Can we email you about updates
+    to our courses, volunteer opportunities, or other computer science news?
+  volunteer_engineer_submission_field_email_preference_yes: យល់ព្រម
+  volunteer_engineer_submission_field_email_preference_no: ទេ
   volunteer_engineer_submission_final_paragraph: អ្នកនឹងត្រូវបានចុះបញ្ជីនៅលើផែនទីសម្រាប់គ្រូបង្រៀនក្នុងតំបន់ដើម្បីទាក់ទងអ្នកសម្រាប់កម្មវិធី
     Hour of Code ឬឱកាសការងារស្ម័គ្រចិត្តផ្សេងទៀត។ អ៊ីម៉ែលនិងអាសយដ្ឋានពិតប្រាកដរបស់អ្នកនឹងមិនត្រូវបានចែករំលែកដោយពួកយើងទេ។
     ប៉ុន្តែព័ត៌មានផ្សេងទៀត (រួមទាំងទីតាំងប្រហាក់ប្រហែល) នឹងត្រូវបានមើលឃើញជាសាធារណៈដោយគ្រូក្នុងតំបន់។
@@ -1207,6 +1214,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: Full Test - 50 questions
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'
@@ -2042,3 +2050,5 @@
     Account” option:'
   hero_name: 'Minecraft: ដំណើរផ្សងព្រេងរបស់វារៈបុរស'
   applab-intro_name: App Lab Intro
+  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
+    policy)"

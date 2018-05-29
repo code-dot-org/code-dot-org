@@ -503,6 +503,10 @@
   homepage_header_donors: A Code.org agradece a seus colaboradores
   homepage_donors_seall: Ver todos
   homepage_donors_donate: Faça uma doação
+  homepage_below_hero_announcement_text: Sua privacidade é importante para nós e
+    estamos fazendo algumas atualizações em nossa política de privacidade, que
+    entrará em vigor em 25 de maio.
+  homepage_below_hero_announcement_link_text: Saiba mais
   contact_form_topic_student: Sou um estudante
   contact_form_topic_parent: Sou um pai
   contact_form_topic_teacher: Sou um professor/educador
@@ -749,6 +753,13 @@
   volunteer_engineer_submission_field_email_desc: Seu endereço de e-mail nunca será
     compartilhado, mas enviaremos solicitações dos professores.
   volunteer_engineer_submission_field_email_placeholder: Endereço de e-mail
+  volunteer_engineer_submission_field_email_preference: Podemos lhe enviar e-mails sobre
+    atualizações de nossos cursos, oportunidades locais ou outras novidades referentes à
+    informática?
+  volunteer_engineer_submission_field_email_preference_privacy: (Para obter detalhes, consulte
+    nossa política de privacidade)
+  volunteer_engineer_submission_field_email_preference_yes: Sim
+  volunteer_engineer_submission_field_email_preference_no: Não
   volunteer_engineer_submission_final_paragraph: Você será listado em um mapa para
     que professores da região entrem em contato com você para a Hora do Código ou
     para outras oportunidades de voluntariado. Seu e-mail e endereço exatos NUNCA
@@ -1298,6 +1309,20 @@
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Unidade 5: Dados e Sociedade'
   csd6_name: 'Unit 6: Physical Computing'
+  csd1-2018_name: 'Unit 1: Problem Solving'
+  csd2-2018_name: 'Unit 2: Web Development'
+  csd3-2018_name: 'Unit 3: Animation and Games'
+  csd4-2018_name: 'Unit 4: The Design Process'
+  csd5-2018_name: 'Unidade 5: Dados e Sociedade'
+  csd6-2018_name: 'Unit 6: Physical Computing'
+  csp1-2018_name: 'Unidade 1: A Internet'
+  csp2-2018_name: 'Unidade 2: Informação Digital'
+  csp3-2018_name: 'Unit 3: Algorithms and Programming'
+  csp4-2018_name: 'Unit 4: Big Data and Privacy'
+  csp5-2018_name: 'Unit 5: Building Apps'
+  csp-explore-2018_name: 'AP: Explore PT Prep'
+  csp-create-2018_name: 'AP: Create PT Prep'
+  csppostap-2018_name: 'Post AP: Databases in Apps'
   csp1_name: 'Unidade 1: A Internet'
   csp2_name: 'Unidade 2: Informação Digital'
   csp3_name: 'Unit 3: Algorithms and Programming'
@@ -1308,6 +1333,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: Teste completo - 50 questões
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'
@@ -1339,8 +1365,10 @@
   csf_international_category_name: CS Fundamentals International
   csf2_draft_category_name: 'Under Development: Courses A - F'
   csd_category_name: 'Under Development: CS Discoveries'
+  csd_2018_category_name: CS Discoveries ('18-'19)
   csp_category_name: Princípios da CC - 15-16
   csp17_category_name: Princípios da CC - 16-17
+  csp_2018_category_name: CS Principles ('18-'19)
   cspexams_category_name: Teste prático dos princípios da CC
   research_studies_category_name: Research Studies
   applab_name: Laboratório de Aplicativo
@@ -2137,6 +2165,7 @@
   header_documentation: Documentação
   csp_name: Princípios da CC - 16-17
   csd_name: CS Discoveries
+  csd_2018_name: CS Discoveries
   full_course_category_name: Cursos Completos
   user_header_label: Oi, %{username}
   user_header_settings: Minha conta

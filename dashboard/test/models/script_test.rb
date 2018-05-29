@@ -937,4 +937,99 @@ endvariants
 
     assert_match Regexp.new(new_dsl_regex), ScriptDSL.serialize_to_string(script_copy)
   end
+
+  test "assignable_info: returns assignable info for a script" do
+    script = create(:script, name: 'fake-script', hidden: true)
+    assignable_info = script.assignable_info
+
+    assert_equal("fake-script *", assignable_info[:name])
+    assert_equal("fake-script", assignable_info[:script_name])
+    assert_equal("other", assignable_info[:category])
+  end
+
+  test "assignable_info: correctly translates script info" do
+    test_locale = :"te-ST"
+    I18n.locale = test_locale
+    custom_i18n = {
+      'data' => {
+        'script' => {
+          'category' => {
+            'csp17_category_name' => 'CSP Test'
+          },
+          'name' => {
+            'csp1' => {
+              'title' => 'CSP Unit 1 Test'
+            }
+          }
+        }
+      }
+    }
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    script = build(:script, name: 'csp1')
+    assignable_info = script.assignable_info
+
+    assert_equal('CSP Unit 1 Test', assignable_info[:name])
+    assert_equal('CSP Test', assignable_info[:category])
+  end
+
+  test "self.valid_scripts: does not return hidden scripts when user is a student" do
+    student = create(:student)
+
+    scripts = Script.valid_scripts(student)
+    refute has_hidden_script?(scripts)
+  end
+
+  test "self.valid_scripts: does not return hidden scripts when user is a teacher" do
+    teacher = create(:teacher)
+
+    scripts = Script.valid_scripts(teacher)
+    refute has_hidden_script?(scripts)
+  end
+
+  test "self.valid_scripts: returns hidden scripts when user is an admin" do
+    admin = create(:admin)
+
+    scripts = Script.valid_scripts(admin)
+    assert has_hidden_script?(scripts)
+  end
+
+  test "self.valid_scripts: returns hidden scripts when user has hidden script access" do
+    teacher = create(:teacher)
+    teacher.update(permission: UserPermission::HIDDEN_SCRIPT_ACCESS)
+
+    scripts = Script.valid_scripts(teacher)
+    assert has_hidden_script?(scripts)
+  end
+
+  test "self.valid_scripts: returns alternate script if user has a course experiment with an alternate script" do
+    user = create(:user)
+    script = create(:script)
+    alternate_script = build(:script)
+
+    Course.stubs(:has_any_course_experiments?).returns(true)
+    Rails.cache.stubs(:fetch).returns([script])
+    script.stubs(:alternate_script).returns(alternate_script)
+
+    scripts = Script.valid_scripts(user)
+    assert_equal [alternate_script], scripts
+  end
+
+  test "self.valid_scripts: returns original script if user has a course experiment with no alternate script" do
+    user = create(:user)
+    script = create(:script)
+
+    Course.stubs(:has_any_course_experiments?).returns(true)
+    Rails.cache.stubs(:fetch).returns([script])
+    script.stubs(:alternate_script).returns(nil)
+
+    scripts = Script.valid_scripts(user)
+    assert_equal [script], scripts
+  end
+
+  private
+
+  def has_hidden_script?(scripts)
+    scripts.any?(&:hidden)
+  end
 end

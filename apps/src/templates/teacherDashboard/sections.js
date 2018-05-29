@@ -8,19 +8,18 @@ import teacherSections, {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import manageStudents, {
   setLoginType,
-  setSectionId,
   setStudents,
   convertStudentServerData,
   toggleSharingColumn,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
-import sectionProgress, {setSection, setValidScripts} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import textResponses, {asyncLoadTextResponses, setSectionId as textResponsesSetSectionId} from '@cdo/apps/templates/textResponses/textResponsesRedux';
+import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
+import textResponses, {asyncLoadTextResponses} from '@cdo/apps/templates/textResponses/textResponsesRedux';
 import SyncOmniAuthSectionControl from '@cdo/apps/lib/ui/SyncOmniAuthSectionControl';
-import LoginTypeParagraph from '@cdo/apps/templates/teacherDashboard/LoginTypeParagraph';
 import ManageStudentsTable from '@cdo/apps/templates/manageStudents/ManageStudentsTable';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import StatsTable from '@cdo/apps/templates/teacherDashboard/StatsTable';
 import TextResponses from '@cdo/apps/templates/textResponses/TextResponses';
+import scriptSelection, { loadValidScripts } from '@cdo/apps/redux/scriptSelectionRedux';
 
 /**
  * On the manage students tab of an oauth section, use React to render a button
@@ -51,65 +50,23 @@ function syncOauthSectionMountPoint() {
   return document.getElementById('react-sync-oauth-section');
 }
 
-/**
- * Render the login type details and controls for changing login type
- * at the bottom of the manage students tab.
- * @param {number} sectionId
- */
-export function renderLoginTypeControls(sectionId) {
-  registerReducers({teacherSections});
-  const store = getStore();
-
-  store.dispatch(asyncLoadSectionData(sectionId));
-
-  ReactDOM.render(
-    <Provider store={store}>
-      <LoginTypeParagraph
-        sectionId={sectionId}
-        onLoginTypeChanged={() => window.location.reload()}
-      />
-    </Provider>,
-    loginTypeControlsMountPoint()
-  );
-}
-
 export function renderTextResponsesTable(section, validScripts) {
   const element = document.getElementById('text-responses-table-react');
 
-  registerReducers({sectionProgress, textResponses});
+  registerReducers({textResponses, scriptSelection, sectionData});
   const store = getStore();
-  // data from setSection and setValidScripts (line 100) required on multiple tabs
-  // TODO (madelynkasula): refactor multi-tab data into common reducer
   store.dispatch(setSection(section));
-  store.dispatch(textResponsesSetSectionId(section.id));
+  store.dispatch(loadValidScripts(section, validScripts));
 
-  const promises = [
-    $.ajax({
-      method: 'GET',
-      url: `/dashboardapi/sections/${section.id}/student_script_ids`,
-      dataType: 'json'
-    }),
-    $.ajax({
-      method: 'GET',
-      url: `/dashboardapi/courses?allVersions=1`,
-      dataType: 'json'
-    })
-  ];
-
-  Promise.all(promises).then(data => {
-    let [studentScriptsData, validCourses] = data;
-    store.dispatch(setValidScripts(validScripts, studentScriptsData.studentScriptIds, validCourses));
-    const scriptId = store.getState().sectionProgress.scriptId;
-
-    store.dispatch(asyncLoadTextResponses(section.id, scriptId, () => {
-      ReactDOM.render(
-        <Provider store={store}>
-          <TextResponses sectionId={section.id}/>
-        </Provider>,
-        element
-      );
-    }));
-  });
+  const scriptId = store.getState().scriptSelection.scriptId;
+  store.dispatch(asyncLoadTextResponses(section.id, scriptId, () => {
+    ReactDOM.render(
+      <Provider store={store}>
+        <TextResponses sectionId={section.id}/>
+      </Provider>,
+      element
+    );
+  }));
 }
 
 export function renderStatsTable(section) {
@@ -131,20 +88,22 @@ export function renderStatsTable(section) {
   });
 }
 
-export function renderSectionTable(sectionId, loginType, courseName) {
-  registerReducers({manageStudents, isRtl});
+export function renderSectionTable(section, studioUrlPrefix,) {
+  registerReducers({teacherSections, manageStudents, isRtl, sectionData});
   const store = getStore();
 
-  store.dispatch(setLoginType(loginType));
-  store.dispatch(setSectionId(sectionId));
+  store.dispatch(setLoginType(section.login_type));
+  store.dispatch(asyncLoadSectionData(section.id));
+  store.dispatch(setSection(section));
 
-  // Show share column by default for CSD and CSP courses
-  const coursesToShowShareSetting = ['csd', 'csp'];
-  if (coursesToShowShareSetting.includes(courseName)) {
+  // Show share column by default for CSD and CSP courses.
+  // TODO(dave): remove 'csd' and 'csp' once they have been renamed to their 2017 versions.
+  const coursesToShowShareSetting = ['csd', 'csd-2017', 'csd-2018', 'csp', 'csp-2017', 'csp-2018'];
+  if (coursesToShowShareSetting.includes(section.course_name)) {
     store.dispatch(toggleSharingColumn());
   }
 
-  const dataUrl = `/dashboardapi/sections/${sectionId}/students`;
+  const dataUrl = `/dashboardapi/sections/${section.id}/students`;
   const element = document.getElementById('student-table-react');
 
   $.ajax({
@@ -153,20 +112,14 @@ export function renderSectionTable(sectionId, loginType, courseName) {
     dataType: 'json'
   }).done(studentData => {
     store.dispatch(
-      setStudents(convertStudentServerData(studentData, loginType, sectionId))
+      setStudents(convertStudentServerData(studentData, section.login_type, section.id))
     );
     ReactDOM.render(
       <Provider store={store}>
-        <ManageStudentsTable />
+        <ManageStudentsTable
+          studioUrlPrefix={studioUrlPrefix}
+        />
       </Provider>,
       element);
   });
-}
-
-export function unmountLoginTypeControls() {
-  ReactDOM.unmountComponentAtNode(loginTypeControlsMountPoint());
-}
-
-function loginTypeControlsMountPoint() {
-  return document.getElementById('login-type-react');
 }

@@ -16,7 +16,7 @@
   anybody_can_learn: "Tout le monde peut apprendre."
   learn_now: "Apprenez maintenant"
   petition_message: "Chaque élève de chaque école devrait avoir la possibilité d'apprendre l'informatique."
-  petition_sign_message: 'Si vous êtes d''accord, ajoutez votre nom. Rejoignez # les autres.'
+  petition_sign_message: 'Si tu es d''accord, indique ton nom. Rejoins les # autres participants.'
   petition_sign_message_support: 'Si vous nous soutenez, ajoutez votre nom. Rejoignez # les autres.'
   petition_join_others: 'Rejoignez # les autres'
   name: "Nom"
@@ -365,6 +365,8 @@
   homepage_header_donors: "Code.org remercie tout ceux qui l'ont soutenu"
   homepage_donors_seall: "Tout afficher"
   homepage_donors_donate: "Faire un don"
+  homepage_below_hero_announcement_text: "We care about your privacy and are making some updates to our privacy policy, effective May 25."
+  homepage_below_hero_announcement_link_text: "Pour en savoir plus"
   contact_form_topic_student: "Je suis un élève"
   contact_form_topic_parent: "Je suis un parent"
   contact_form_topic_teacher: "Je suis enseignant/éducateur"
@@ -535,6 +537,9 @@
   volunteer_engineer_submission_field_email: "Adresse email"
   volunteer_engineer_submission_field_email_desc: "Votre adresse e-mail ne sera jamais partagée, mais nous vous ferons parvenir les demandes de la part des enseignants."
   volunteer_engineer_submission_field_email_placeholder: "Adresse email"
+  volunteer_engineer_submission_field_email_preference: "Can we email you about updates to our courses, volunteer opportunities, or other computer science news?"
+  volunteer_engineer_submission_field_email_preference_yes: 'Oui'
+  volunteer_engineer_submission_field_email_preference_no: 'Non'
   volunteer_engineer_submission_final_paragraph: "Vous figurerez sur une carte pour que les enseignants locaux vous contactent pour l’Heure de Code, ou d'autres occasions de bénévolat. Nous ne partagerons JAMAIS votre e-mail et votre adresse exacte. Mais les autres informations (y compris la localisation approximative) seront publiquement visibles par les enseignants locaux."
   volunteer_engineer_submission_checkbox_contact: 'Je suis d''accord pour que les enseignants me contactent pour faire du bénévolat (Note : votre adresse e-mail ne sera pas partagée).'
   volunteer_engineer_submission_checkbox_age_18_plus: "Je certifie que j'ai au moins 18 ans."
@@ -964,6 +969,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Bases de données dans les applications'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: "Test complet - 50 questions"
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'

@@ -12,7 +12,7 @@
 import {assert} from '../util/configuredChai';
 import sinon from 'sinon';
 import {stubRedux, restoreRedux, registerReducers} from '@cdo/apps/redux';
-let $ = window.$ = window.jQuery = require('jquery');
+import jQuery from 'jquery';
 var tickWrapper = require('./util/tickWrapper');
 import stageLock from '@cdo/apps/code-studio/stageLockRedux';
 import runState from '@cdo/apps/redux/runState';
@@ -22,11 +22,14 @@ import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import progress from '@cdo/apps/code-studio/progressRedux';
 import FirebaseStorage from '@cdo/apps/storage/firebaseStorage';
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
+import loadSource from "./util/loadSource";
 
 var wrappedEventListener = require('./util/wrappedEventListener');
 var testCollectionUtils = require('./util/testCollectionUtils');
 
 window.appOptions = {};
+window.jQuery = jQuery;
+window.$ = jQuery;
 
 var testUtils = require('../util/testUtils');
 import {setupBlocklyFrame} from './util/testBlockly';
@@ -78,15 +81,6 @@ var example = {
     }
   ]
 };
-
-// One day this might be the sort of thing we share with initApp.js
-function loadSource(src) {
-  var deferred = new $.Deferred();
-  document.body.appendChild($('<script>', { src: src }).on('load', function () {
-    deferred.resolve();
-  })[0]);
-  return deferred;
-}
 
 describe('Level tests', function () {
   var originalRender;

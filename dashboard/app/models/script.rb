@@ -11,10 +11,14 @@
 #  user_id         :integer
 #  login_required  :boolean          default(FALSE), not null
 #  properties      :text(65535)
+#  new_name        :string(255)
+#  family_name     :string(255)
 #
 # Indexes
 #
+#  index_scripts_on_family_name      (family_name)
 #  index_scripts_on_name             (name) UNIQUE
+#  index_scripts_on_new_name         (new_name) UNIQUE
 #  index_scripts_on_wrapup_video_id  (wrapup_video_id)
 #
 
@@ -199,13 +203,23 @@ class Script < ActiveRecord::Base
   # @param [User] user
   # @return [Script[]]
   def self.valid_scripts(user)
-    with_hidden = user.permission?(UserPermission::HIDDEN_SCRIPT_ACCESS)
+    user_experiments_enabled = Course.has_any_course_experiments?(user)
+    with_hidden = !user_experiments_enabled && user.hidden_script_access?
     cache_key = "valid_scripts/#{with_hidden ? 'all' : 'valid'}"
-    Rails.cache.fetch(cache_key) do
+    scripts = Rails.cache.fetch(cache_key) do
       Script.
           all.
           select {|script| with_hidden || !script.hidden}
     end
+
+    if user_experiments_enabled
+      scripts = scripts.map do |script|
+        alternate_script = script.alternate_script(user)
+        alternate_script.present? ? alternate_script : script
+      end
+    end
+
+    scripts
   end
 
   # @param [User] user
@@ -1079,5 +1093,16 @@ class Script < ActiveRecord::Base
       return alternate_cs.script if cs != alternate_cs
     end
     nil
+  end
+
+  # @return {AssignableInfo} with strings translated
+  def assignable_info
+    info = ScriptConstants.assignable_info(self)
+    info[:name] = I18n.t("data.script.name.#{info[:name]}.title", default: info[:name])
+    info[:name] += " *" if hidden
+
+    info[:category] = I18n.t("data.script.category.#{info[:category]}_category_name", default: info[:category])
+
+    info
   end
 end

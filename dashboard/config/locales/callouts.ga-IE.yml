@@ -146,6 +146,7 @@
       CSD U3 Direction Arrows_2018_callout: {}
       CSD U3 Draw Loop Plugged update your scene_callout: {}
       CSD U3 Draw Loop Plugged update your scene_2018_callout: {}
+      CSD U3 Draw Loop Plugged wiggle sprite y_2018_callout: {}
       CSD U3 Drawing Squares to Corners_callout: {}
       CSD U3 Drawing Squares to Corners_2018_callout: {}
       CSD U3 Else_callout: {}
@@ -1481,6 +1482,10 @@
           chun tuilleadh spáis a thabhairt don chód! Cliceáil anseo le féachaint cá
           bhfuil na blocanna go léir anois.
       courseD_playLab_condFP_a_callout:
+        courseD_playLab_condFP_1: táimid tar éis na blocanna a leagan amach ina gcatagóirí
+          chun tuilleadh spáis a thabhairt don chód! Cliceáil anseo le féachaint cá
+          bhfuil na blocanna go léir anois.
+      courseD_playLab_condForVideo_callout:
         courseD_playLab_condFP_1: táimid tar éis na blocanna a leagan amach ina gcatagóirí
           chun tuilleadh spáis a thabhairt don chód! Cliceáil anseo le féachaint cá
           bhfuil na blocanna go léir anois.

@@ -8322,6 +8322,7 @@
       courseB_iceage_loops10_instruction: Hjálpaðu Scrat að komast alla leið yfir
         til akarnsins!
       courseB_iceage_loops11_instruction: Hjálpaðu Skrat að komast til akarnsins!
+      courseB_iceage_loops11_forVideo_instruction: Hjálpaðu Skrat að komast til akarnsins!
       courseB_iceage_loops12_instruction: Get to the acorn any way you can!
       courseB_iceage_loops2_instruction: |-
         Use two different move blocks to get to
@@ -10010,6 +10011,8 @@
         off to your friends!
       courseD_playLab_condFP_a_instruction: Now, build your own game to show off to
         your friends!
+      courseD_playLab_condForVideo_instruction: Now, build your own game to show off
+        to your friends!
       courseD_playLab_embedded_instruction: "Færðu Peleg sjóræningja með örvarlyklunum.
         Náðu til drekans til að skora stig en forðastu ninjuna! Ef þú stendur fyrir
         neðan kolkrabbana hættir ninjan að elta þig en varaðu þig! Því lengur sem

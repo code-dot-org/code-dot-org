@@ -186,7 +186,6 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "true",
     "instructions": "Check out this example randomized drawing.",
-    "show_d_pad": "false",
     "show_debug_watch": "true",
     "contained_level_names": null
   },

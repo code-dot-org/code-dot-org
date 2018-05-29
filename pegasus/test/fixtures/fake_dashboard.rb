@@ -60,7 +60,7 @@ module FakeDashboard
   COURSES = [
     COURSE_CSP = {
       id: 15,
-      name: 'csp',
+      name: 'csp-2017',
       created_at: '2016-01-01 00:01:02',
       updated_at: '2016-01-01 00:01:02'
     }

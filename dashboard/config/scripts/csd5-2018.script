@@ -76,4 +76,5 @@ named_level 'CSD U5L14 autoSFLP_2018'
 
 stage 'Project - Solve a Data Problem', flex_category: 'csd5_2'
 named_level 'CSD U5L15 autoSFLP_2018'
+named_level 'csd u5 recommender sample'
 assessment 'csd-pulse-check-survey-1-levelgroup U5Ch2_2018', progression: 'Reflection'
