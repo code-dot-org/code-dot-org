@@ -184,7 +184,6 @@ class ManageStudentsTable extends Component {
             {(rowData.loginType === SectionLoginType.word || rowData.loginType === SectionLoginType.picture) &&
               <ShowSecret
                 initialIsShowing={false}
-                sectionId={sectionId}
                 student={rowData}
               />
             }
