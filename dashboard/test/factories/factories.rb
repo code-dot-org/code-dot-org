@@ -702,6 +702,15 @@ FactoryGirl.define do
     level {create :level}
   end
 
+  factory :authored_hint_view_request do
+    user {create :student}
+    script {create :script}
+    level {create :level}
+    prev_level_source_id {create(:level_source).id}
+    next_level_source_id {create(:level_source).id}
+    final_level_source_id {create(:level_source).id}
+  end
+
   factory :level_concept_difficulty do
     level {create :level}
     repeat_loops 2
@@ -931,6 +940,7 @@ FactoryGirl.define do
   end
 
   factory :circuit_playground_discount_application do
+    user {create :teacher}
   end
 
   factory :seeded_s3_object do

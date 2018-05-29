@@ -33,6 +33,11 @@ describe('setParamAtIndex', () => {
     parser = editor.session.mode;
 
     // Initialize object trees with test text
+
+    // NOTE: in these tests, setProperty is not a known block, so the function
+    // name itself is a socket, which means index 0 is actually the function
+    // name and index 1 is the first parameter within the function call
+
     plainTree = parser.parse("setProperty(obj, 'height', 100);");
     arrayTree = parser.parse("setProperty(arr[i], 'height', 100);");
   });
@@ -50,5 +55,24 @@ describe('setParamAtIndex', () => {
   it('sets the second parameter when the first parameter is an array lookup', () => {
     dropletUtils.setParamAtIndex(2, 'updated', arrayTree);
     expect(arrayTree.stringify()).to.equal("setProperty(arr[i], updated, 100);");
+  });
+
+  it('does not modify sockets beyond the parameter requested when starting in a socket', () => {
+    // A special object tree to avoid regressing a bug fix
+    // See: https://github.com/code-dot-org/code-dot-org/pull/22693
+    const beforeCode = `onEvent("id", "click", function(event) {
+                          setProperty("id", "width", 0);
+                        });
+                        onEvent("id", "click", function(event) {
+                        });`;
+    const codeTree = parser.parse(beforeCode);
+    const block = codeTree.getBlockOnLine(1);
+    dropletUtils.setParamAtIndex(3, '100', block);
+    const afterCode = `onEvent("id", "click", function(event) {
+                          setProperty("id", "width", 100);
+                        });
+                        onEvent("id", "click", function(event) {
+                        });`;
+    expect(codeTree.stringify()).to.equal(afterCode);
   });
 });

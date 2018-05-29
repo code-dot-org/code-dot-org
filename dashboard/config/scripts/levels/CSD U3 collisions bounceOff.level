@@ -175,7 +175,6 @@
       "comment": null,
       "stopSound": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Mouse\r\n\r\nThe mouse should be running back and forth between the two walls.  Can you use the `bounceOff` block to make it move in the right way?\r\n\r\n# Do This\r\n\r\nUse the `bounceOff` block to make the mouse sprite bounce off the wall sprites.\r\n\r\n[//]: # (https://images.code.org/e542bc5decf5f57d3184a8d5449776d2-image-1470413949810.png)\r\n\r\n[//]: # (https://images.code.org/fcd40235d2a4285723eecec1df041edc-image-1470413965009.png)\r\n\r\n[//]: # (https://images.code.org/c3f6298b05a9eb51772c8c03a06abe54-image-1470414415864.png)\r\n\r\n[//]: # (https://images.code.org/e89b80c63658eb3607478fe91aceda47-image-1470414741858.png)",
