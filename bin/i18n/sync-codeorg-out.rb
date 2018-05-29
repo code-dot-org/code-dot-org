@@ -10,9 +10,12 @@ require 'tempfile'
 
 require_relative 'i18n_script_utils'
 
+require_relative '../i18n-codeorg/lib/merge-translation'
+require_relative '../i18n-codeorg/lib/export-without-merge'
+
 def sync_out
   rename_from_crowdin_name_to_locale
-  run_bash_script "bin/i18n-codeorg/out.sh"
+  distribute_translations
   copy_untranslated_apps
   rebuild_blockly_js_files
   check_for_mismatching_links_or_images
@@ -29,6 +32,91 @@ def rename_from_crowdin_name_to_locale
       FileUtils.rm_r "i18n/locales/#{prop[:crowdin_name_s]}"
     end
   end
+end
+
+# Distribute downloaded translations from i18n/locales
+# back to blockly, apps, pegasus, and dashboard.
+def distribute_translations
+  total_locales = Languages.get_locale.count
+  Languages.get_locale.each_with_index do |prop, i|
+    locale = prop[:locale_s]
+    print "Distributing #{locale} (#{i}/#{total_locales})\r"
+    $stdout.flush
+    next if locale == 'en-US'
+    next unless File.directory?("i18n/locales/#{locale}/")
+
+    ### Dashboard
+
+    orig_dir = "dashboard/config/locales"
+    loc_dir = "i18n/locales/#{locale}/dashboard"
+    en_dir = "i18n/locales/source/dashboard"
+
+    # Special case the un-prefixed Yaml file.
+    if locale == 'hy-AM' # Armenian accepts English translations, does not need fallback
+      export_without_merge "yml", "#{loc_dir}/base.yml", "#{orig_dir}/#{locale}.yml"
+    else
+      merge_translation "yml", "#{en_dir}/base.yml", "#{loc_dir}/base.yml", "#{orig_dir}/#{locale}.yml"
+    end
+
+    # Merge in all the other Yaml files.
+    Dir.glob("#{loc_dir}/*.yml") do |loc_file|
+      relname = File.basename(loc_file, '.yml')
+      next if relname == "base"
+
+      if locale == 'hy-AM' # Armenian accepts English translations, does not need fallback
+        export_without_merge "yml", loc_file, "#{orig_dir}/#{relname}.#{locale}.yml"
+      else
+        merge_translation "yml", "#{en_dir}/#{relname}.yml", loc_file, "#{orig_dir}/#{relname}.#{locale}.yml"
+      end
+    end
+
+    ### Apps
+
+    orig_dir = "apps/i18n"
+    loc_dir = "i18n/locales/#{locale}/blockly-mooc"
+    en_dir = "i18n/locales/source/blockly-mooc"
+    js_locale = locale.tr('-', '_').downcase
+
+    # Copy JSON files.
+    Dir.glob("#{loc_dir}/*.json") do |loc_file|
+      relname = File.basename(loc_file, '.json')
+      if locale == 'hy-AM' # Armenian accepts English translations, does not need fallback
+        export_without_merge "json", loc_file, "#{orig_dir}/#{relname}/#{js_locale}.json"
+      else
+        merge_translation "json", "#{en_dir}/#{relname}.json", loc_file, "#{orig_dir}/#{relname}/#{js_locale}.json"
+      end
+    end
+
+    ### Blockly Core
+    orig_dir = "apps/node_modules/@code-dot-org/blockly/i18n/locales/#{locale}"
+    loc_dir = "i18n/locales/#{locale}/blockly-core"
+    en_dir = "i18n/locales/source/blockly-core"
+    FileUtils.mkdir_p orig_dir
+
+    # Copy JSON files.
+    Dir.glob("#{loc_dir}/*.json") do |loc_file|
+      relname = File.basename(loc_file)
+      if locale == 'hy-AM' # Armenian accepts English translations, does not need fallback
+        export_without_merge "json", loc_file, "#{orig_dir}/#{relname}"
+      else
+        merge_translation "json", "#{en_dir}/#{relname}", loc_file, "#{orig_dir}/#{relname}"
+      end
+    end
+
+    ### Pegasus
+    orig_dir = "pegasus/cache/i18n"
+    loc_dir = "i18n/locales/#{locale}/pegasus"
+    en_dir = "i18n/locales/source/pegasus"
+
+    # Merge YML file.
+    if locale == 'hy-AM' # Armenian accepts English translations, does not need fallback
+      export_without_merge "yml", "#{loc_dir}/mobile.yml", "#{orig_dir}/#{locale}.yml"
+    else
+      merge_translation "yml", "#{en_dir}/mobile.yml", "#{loc_dir}/mobile.yml", "#{orig_dir}/#{locale}.yml"
+    end
+  end
+
+  puts "Distribution finished!      "
 end
 
 # For untranslated apps, copy English file for all locales
