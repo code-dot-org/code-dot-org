@@ -67,9 +67,9 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
     assert_equal expected_level_count, @response.body
   end
 
-  test 'teacher can update gender, name and age info for their student' do
+  test 'teacher can update gender, name, age, and password info for their student' do
     sign_in @teacher
-    put :update, params: {section_id: @section.id, id: @student.id, student: {gender: 'f', age: 9, name: 'testname'}}
+    put :update, params: {section_id: @section.id, id: @student.id, student: {gender: 'f', age: 9, name: 'testname', password: 'testpassword'}}
     assert_response :success
     assert_equal 'f', JSON.parse(@response.body)['gender']
     assert_equal 9, JSON.parse(@response.body)['age']
@@ -78,6 +78,7 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
     assert_equal 'testname', @student.reload.name
     assert_equal 9, @student.age
     assert_equal 'f', @student.gender
+    assert @student.valid_password?('testpassword')
   end
 
   test 'teacher can not update username info for their student' do
