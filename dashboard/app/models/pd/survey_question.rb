@@ -35,5 +35,6 @@ module Pd
 
     delegate :summarize, to: :form_questions
     delegate :process_answers, to: :form_questions
+    delegate :[], to: :form_questions
   end
 end
