@@ -1,6 +1,7 @@
 import {assert} from '../../../util/configuredChai';
 import sectionAssessments, {
   setAssessments,
+  setAssessmentsStructure,
   startLoadingAssessments,
   finishLoadingAssessments,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
@@ -31,6 +32,22 @@ describe('sectionAssessmentsRedux', () => {
       const action = setAssessments(scriptId, assessmentData);
       const nextState = sectionAssessments(initialState, action);
       const actualAssessmentData = nextState.assessmentsByScript[scriptId];
+      assert.deepEqual(actualAssessmentData, assessmentData);
+    });
+  });
+
+  describe('setAssessmentsStructure', () => {
+    it('associates the assessment structure data to the correct script', () => {
+      const scriptId = 2;
+      const assessmentData = {139:
+        {
+          id: 139,
+          name: "Assessment for Chapter 1",
+          questions: {123: {type: "Multi", question_text: "A question", answers: [{text: "answer 1", correct: true}] }}
+      }};
+      const action = setAssessmentsStructure(scriptId, assessmentData);
+      const nextState = sectionAssessments(initialState, action);
+      const actualAssessmentData = nextState.assessmentsStructureByScript[scriptId];
       assert.deepEqual(actualAssessmentData, assessmentData);
     });
   });
