@@ -41,6 +41,10 @@ Scenario: Top Instructions
 
   Then I press "lightbulb"
   And I press ".csf-top-instructions button:contains('Yes')" using jQuery
+  And I see no difference for "farmer with markdown hint"
+
+  Then I press "lightbulb"
+  And I press ".csf-top-instructions button:contains('Yes')" using jQuery
   And I see no difference for "farmer with video hint"
 
   Then I am on "http://studio.code.org/s/course4/stage/19/puzzle/3?noautoplay=true"

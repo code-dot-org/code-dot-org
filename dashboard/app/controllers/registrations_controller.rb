@@ -16,8 +16,11 @@ class RegistrationsController < Devise::RegistrationsController
   #
   def update
     return head(:bad_request) if params[:user].nil?
-
-    record_deprecation_warnings
+    # Use set_user_type instead
+    return head(:bad_request) if params[:user][:user_type].present?
+    # Use set_email instead
+    return head(:bad_request) if params[:user][:email].present?
+    return head(:bad_request) if params[:user][:hashed_email].present?
 
     successfully_updated =
       if forbidden_change?(current_user, params)
@@ -217,47 +220,10 @@ class RegistrationsController < Devise::RegistrationsController
       params[:user][:password].present?
   end
 
-  # Monitoring usage of deprecated behaviors on the :update route
-  # (Started 2018-05-22, Brad)
-  # Changing user email and user type have moved to the :set_email and
-  # :set_user_type routes respectively, and should not be happening
-  # via the :update route anymore.   That said, my confidence level that
-  # it's unused is low, and I'd like to monitor for a week before actually
-  # removing support for those actions from this route.
-  def record_deprecation_warnings
-    updating_user_type = params[:user][:user_type].present? &&
-      params[:user][:user_type] != current_user.user_type
-    if updating_user_type
-      Honeybadger.notify(
-        error_class: "#{self.class.name}Warning",
-        error_message: 'User type updated via deprecated route',
-      )
-    end
-
-    updating_email = !updating_user_type && (
-      (
-        params[:user][:email].present? &&
-        params[:user][:email] != current_user.email
-      ) ||
-      (
-        params[:user][:hashed_email].present? &&
-        params[:user][:hashed_email] != current_user.hashed_email
-      )
-    )
-    if updating_email
-      Honeybadger.notify(
-        error_class: "#{self.class.name}Warning",
-        error_message: 'Email updated via deprecated route',
-      )
-    end
-  end
-
   # Accept only whitelisted params for update.
   def update_params(params)
     params.require(:user).permit(
-      :email,
       :parent_email,
-      :hashed_email,
       :username,
       :password,
       :encrypted_password,
@@ -268,7 +234,6 @@ class RegistrationsController < Devise::RegistrationsController
       :locale,
       :age,
       :birthday,
-      :user_type,
       :school,
       :full_address,
       :terms_of_service_version,
