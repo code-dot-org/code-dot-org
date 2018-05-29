@@ -114,9 +114,14 @@ sv:
     valid_password: "Giltigt lösenord!"
     invalid_password: "Lösenordet måste vara minst 6 tecken långt"
     mismatch_password: "De två lösenord du skrev matchar inte varandra"
+    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
+    under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
+    agree_us_website: "I agree to using a website based in the United States."
+    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
     student_terms: "Jag har läst och godkänner Code.org <a href='http://code.org/tos'>användarvillkor</a>. Om jag är under 13 år gammal, så bekräftar jag, genom att skicka in det här formuläret, att jag har min vårdnadshavares godkännande för att använda mig utav siten code.org. <br/><br/> Mejladresser sparas inte på ett sådant sätt att vi kan kontakta elever. Elever kommer aldrig att få mejl utav oss, om det inte gäller lösenordsåterställande. Se vår <a href='http://code.org/privacy'>sekretesspolicy</a> för mer information."
     teacher_terms: "Jag godkänner Code.orgs användarvillkor. För mer information, se vår <a href='http://code.org/privacy'>sekretesspolicy</a>."
     additional_information: "Vi behöver  ytterligare information att fortsätta registrera dig."
+    user_type_button: "Update Account Type"
     user_type_label: "Kontotyp"
     user_type_teacher: "Lärare"
     user_type_student: "Student"
@@ -126,6 +131,7 @@ sv:
     email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
     email_preference_yes: "Ja"
     email_preference_no: "Nej"
+    email_preference_required: "You must specify an email preference."
   school_info:
     title: 'School Information (optional)'
     school_country: 'Skolans land'
@@ -453,6 +459,7 @@ sv:
     student_not_found: "En eller flera elever kunde inte hittas."
     all_students_must_be_in_current_section: "Alla elever måste vara inskrivna i din grupp."
     already_enrolled_in_new_section: "Du kan inte flytta dessa studenter eftersom deras lärare redan har placerat dem i en annat grupp."
+    third_party_login: "You cannot move students to a section that is synced with a third party tool."
   share:
     title: "Lär med Code Studio"
     description: "Alla kan lära sig datavetenskap. Gör spel, apps och konst med kod."
@@ -872,6 +879,7 @@ sv:
     csd5_2: 'Chapter 2: Solving Data Problems'
     csd6_1: 'Chapter 1: Programming with Hardware'
     csd6_2: 'Chapter 2: Building Physical Prototypes'
+    csd_survey: 'Post-Course Survey'
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -998,3 +1006,10 @@ sv:
     message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
     more_information: "See Code.org's Privacy Policy."
     accept: 'Jag håller med'
+  gdpr_dialog:
+    heading: 'Do you agree to using a web site based in the United States?'
+    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+    link_intro: 'For details see our'
+    privacy_policy: 'privacy policy'
+    logout: 'Logout'
+    yes: 'Ja'

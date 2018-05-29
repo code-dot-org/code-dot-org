@@ -50,7 +50,11 @@
       "tempSensor.F": null,
       "lightSensor.threshold": null,
       "tempSensor.C": null,
-      "callMyFunction_n": null
+      "callMyFunction_n": null,
+      "greaterThanOperator": null,
+      "lessThanOperator": null,
+      "equalityOperator": null,
+      "inequalityOperator": null
     },
     "edit_code": true,
     "embed": "false",
@@ -90,11 +94,12 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
+    "show_type_hints": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-01-17 18:18:04 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-17 18:18:31 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\",\"makerlab_enabled\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-02-01 09:36:48 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-01-17 18:18:04 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-17 18:18:31 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\",\"makerlab_enabled\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-02-01 09:36:48 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-24 18:02:46 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -229,6 +229,204 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert user.valid?
   end
 
+  #
+  # Table: dashboard.activities
+  #
+
+  test "clears activities.level_source_id for all of user's activity" do
+    activity = create :activity
+    user = activity.user
+
+    assert Activity.where(user: user).any?(&:level_source),
+      'Expected an activity record that references a level_source to exist for this user'
+
+    purge_user user
+
+    refute Activity.where(user: user).any?(&:level_source),
+      'Expected no activity record that references a level source to exist for this user'
+  end
+
+  #
+  # Table: dashboard.authentication_options
+  # Note: acts_as_paranoid
+  #
+
+  test "removes all of user's authentication option rows" do
+    user = create :user,
+      :with_clever_authentication_option,
+      :with_google_authentication_option,
+      :with_email_authentication_option
+    ids = user.authentication_options.map(&:id)
+
+    assert_equal 3, user.authentication_options.with_deleted.count,
+      'Expected user to have three authentication options'
+    assert_equal 3, AuthenticationOption.with_deleted.where(id: ids).count,
+      'Expected authentication_option rows to be found by id'
+
+    purge_user user
+
+    assert_equal 0, user.authentication_options.with_deleted.count,
+      'Expected user to have no authentication options'
+    assert_equal 0, AuthenticationOption.with_deleted.where(id: ids).count,
+      'Expected authentication_options rows to be deleted'
+  end
+
+  test "even removes soft-deleted authentication option rows" do
+    user = create :user, :with_email_authentication_option
+    ids = user.authentication_options.map(&:id)
+    user.authentication_options.first.destroy
+
+    assert_empty AuthenticationOption.where(id: ids)
+    refute_empty AuthenticationOption.with_deleted.where(id: ids)
+
+    purge_user user
+
+    assert_empty AuthenticationOption.where(id: ids)
+    assert_empty AuthenticationOption.with_deleted.where(id: ids)
+  end
+
+  #
+  # Table: dashboard.authored_hint_view_requests
+  #
+
+  test "clears prev_level_source_id from authored_hint_view_requests" do
+    user = create :user
+    create :authored_hint_view_request, user: user
+
+    assert AuthoredHintViewRequest.where(user: user).any?(&:prev_level_source_id),
+      "Expected at least one of user's AuthoredHintViewRequests to have a prev_level_source_id"
+
+    purge_user user
+
+    refute AuthoredHintViewRequest.where(user: user).any?(&:prev_level_source_id),
+      "Expected none of user's AuthoredHintViewRequests to have a prev_level_source_id"
+  end
+
+  test "clears next_level_source_id from authored_hint_view_requests" do
+    user = create :user
+    create :authored_hint_view_request, user: user
+
+    assert AuthoredHintViewRequest.where(user: user).any?(&:next_level_source_id),
+      "Expected at least one of user's AuthoredHintViewRequests to have a next_level_source_id"
+
+    purge_user user
+
+    refute AuthoredHintViewRequest.where(user: user).any?(&:next_level_source_id),
+      "Expected none of user's AuthoredHintViewRequests to have a next_level_source_id"
+  end
+
+  test "clears final_level_source_id from authored_hint_view_requests" do
+    user = create :user
+    create :authored_hint_view_request, user: user
+
+    assert AuthoredHintViewRequest.where(user: user).any?(&:final_level_source_id),
+      "Expected at least one of user's AuthoredHintViewRequests to have a final_level_source_id"
+
+    purge_user user
+
+    refute AuthoredHintViewRequest.where(user: user).any?(&:final_level_source_id),
+      "Expected none of user's AuthoredHintViewRequests to have a final_level_source_id"
+  end
+
+  #
+  # Table: dashboard.census_submissions
+  # These aren't tied directly to the user model.  Instead, we look them up
+  # by email address.
+  #
+
+  test "deletes census_submissions associated with user email" do
+    user = create :teacher
+    email = user.email
+    submission = create :census_your_school2017v0, submitter_email_address: email
+    id = submission.id
+
+    refute_empty Census::CensusSubmission.where(submitter_email_address: email),
+      "Expected at least one CensusSubmission under this email"
+
+    purge_user user
+
+    assert_empty Census::CensusSubmission.where(submitter_email_address: email),
+      "Expected no CensusSubmissions under this email"
+    assert_empty Census::CensusSubmission.where(id: id),
+      "Rows are actually gone, not just anonymized"
+  end
+
+  test "leaves no SchoolInfos referring to the deleted CensusSubmissions" do
+    user = create :teacher
+    email = user.email
+    submission = create :census_your_school2017v0, submitter_email_address: email
+    ids = submission.school_infos.map(&:id)
+
+    refute_empty SchoolInfo.where(id: ids).map(&:census_submissions).flatten,
+      "Expected at least one SchoolInfo referring back to this CensusSubmission"
+
+    purge_user user
+
+    assert_empty SchoolInfo.where(id: ids).map(&:census_submissions).flatten,
+      "Expected no SchoolInfos referring back to this CensusSubmission"
+  end
+
+  #
+  # Table: dashboard.circuit_playground_discount_applications
+  #
+
+  test 'anonymizes signature on circuit_playground_discount_application' do
+    application = create :circuit_playground_discount_application, signature: 'Will Halloway'
+    user = application.user
+
+    assert_equal 'Will Halloway', application.signature
+
+    purge_user user
+    application.reload
+
+    assert_equal '(anonymized signature)', application.signature
+  end
+
+  test 'leaves blank signature blank on circuit_playground_discount_application' do
+    application = create :circuit_playground_discount_application
+    user = application.user
+
+    assert_nil application.signature
+
+    purge_user user
+    application.reload
+
+    assert_nil application.signature
+  end
+
+  test 'removes school id from circuit_playground_discount_application' do
+    application = create :circuit_playground_discount_application, school_id: create(:school).id
+    user = application.user
+
+    refute_nil application.school_id
+
+    purge_user user
+    application.reload
+
+    assert_nil application.school_id
+  end
+
+  #
+  # Table: dashboard.cohorts_users
+  # Table: dashboard.cohorts_deleted_users
+  #
+
+  test 'removes relationship between user and any cohorts' do
+    user = create :teacher
+    cohort = create :cohort
+    cohort.teachers << user
+    cohort.teachers << create(:teacher) # a second teacher
+
+    assert_equal 2, cohort.teachers.size
+    assert_equal 0, cohort.deleted_teachers.size
+
+    purge_user user
+    cohort.reload
+
+    assert_equal 1, cohort.teachers.size
+    assert_equal 0, cohort.deleted_teachers.size
+  end
+
   private
 
   #

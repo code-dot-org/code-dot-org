@@ -372,6 +372,8 @@
   homepage_header_donors: "Code.org takkar støttespelarane sine"
   homepage_donors_seall: "Sjå alt"
   homepage_donors_donate: "Gi bidrag"
+  homepage_below_hero_announcement_text: "We care about your privacy and are making some updates to our privacy policy, effective May 25."
+  homepage_below_hero_announcement_link_text: "Lær meir"
   contact_form_topic_student: "Eg er ein elev"
   contact_form_topic_parent: "Eg er ein forelder"
   contact_form_topic_teacher: "Eg er ein lærar"
@@ -542,6 +544,9 @@
   volunteer_engineer_submission_field_email: "E-postadresse"
   volunteer_engineer_submission_field_email_desc: "Di epostadresse vil ikkje bli delt, men me vil senda deg førespurnader frå lærarar."
   volunteer_engineer_submission_field_email_placeholder: "E-postadresse"
+  volunteer_engineer_submission_field_email_preference: "Can we email you about updates to our courses, volunteer opportunities, or other computer science news?"
+  volunteer_engineer_submission_field_email_preference_yes: 'Ja'
+  volunteer_engineer_submission_field_email_preference_no: 'Nei'
   volunteer_engineer_submission_final_paragraph: "Du vil bli vist på eit kart slik at lokale lærarar kan kontakta deg for å få hjelp til Kodetimen eller andre frivillig-oppgåver. Di epostadresse og din nøyaktige posisjon vil ikkje bli delt, men andre opplysningar (inkludert omtrentleg plassering) vil vera synleg for lokale lærarar."
   volunteer_engineer_submission_checkbox_contact: 'Eg godtar at lærarar kan kontakta meg for å hjelpa til med Kodetimen (Obs: di epostadresse vil ikkje bli delt)'
   volunteer_engineer_submission_checkbox_age_18_plus: "Eg stadfestar at eg er minst 18 år."
@@ -971,6 +976,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP-ytelseaktivitetar
   csppostap_name: 'Post-AP: Databasar i appar'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: "Full test - 50 spørsmål"
   csp-explore_name: 'Utforsk PT forberedelse'
   csp-create_name: 'Lag en PT forberedelse'
