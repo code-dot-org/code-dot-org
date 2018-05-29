@@ -536,7 +536,6 @@ class ApiController < ApplicationController
 
         case level
         when FreeResponse
-          puts level.properties
           question = {
             type: level.type,
             question_text: level.properties['markdown_instructions']
