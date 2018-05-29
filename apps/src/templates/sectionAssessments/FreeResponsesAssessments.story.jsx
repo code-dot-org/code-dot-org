@@ -8,7 +8,7 @@ export default storybook => {
     .addStoryTable([
       {
         name: 'Free responses for question 1',
-        description: 'Display responses of all students',
+        description: 'Student free reponse answers',
         story: () => (
           <FreeResponsesAssessments
             freeResponses={questionOne}
