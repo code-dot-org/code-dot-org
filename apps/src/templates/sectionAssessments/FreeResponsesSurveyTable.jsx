@@ -46,20 +46,18 @@ class FreeResponsesSurveyTable extends Component {
     });
   };
 
-  studentResponseColumnFormatter = (studentAnswers, {rowData, rowIndex, columnIndex}) => {
-    const studentResponse = this.props.freeResponses[rowIndex].response;
+  studentResponseColumnFormatter = (response, {rowIndex}) => {
+    const numStudentResponses = this.props.freeResponses.length;
 
-    return (
-      <div>
-        {studentResponse}
-      </div>
-    );
+    if (numStudentResponses >= 5) {
+      return response;
+    }
   };
 
   getColumns = (sortable) => {
     let dataColumns = [
       {
-        property: 'studentResponse',
+        property: 'response',
         header: {
           label: i18n.response(),
           props: {style: tableLayoutStyles.headerCell},
