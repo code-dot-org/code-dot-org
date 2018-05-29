@@ -11,19 +11,15 @@ module Pd
           name = "sample#{type.camelize}"
           text = "This is a #{type} label"
 
-          data = {
-            id: id,
+          jotform_question = {
+            qid: id,
             type: type,
             name: name,
             text: text,
             order: '1'
           }.stringify_keys
 
-          question = TextQuestion.from_jotform_question(
-            id: id,
-            type: type,
-            jotform_question: data
-          )
+          question = TextQuestion.from_jotform_question jotform_question
           assert question.is_a? TextQuestion
           assert_equal id, question.id
           assert_equal type, question.type
