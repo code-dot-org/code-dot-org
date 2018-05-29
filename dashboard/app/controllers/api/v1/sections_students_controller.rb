@@ -1,8 +1,8 @@
 class Api::V1::SectionsStudentsController < Api::V1::JsonApiController
   load_and_authorize_resource :section
-  load_resource :student, class: 'User', through: :section, parent: false, only: [:update, :reset_secrets, :remove]
+  load_resource :student, class: 'User', through: :section, parent: false, only: [:update, :remove]
 
-  skip_before_action :verify_authenticity_token, only: [:update, :reset_secrets, :bulk_add, :remove]
+  skip_before_action :verify_authenticity_token, only: [:update, :bulk_add, :remove]
 
   # GET /sections/<section_id>/students
   def index
