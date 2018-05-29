@@ -24,8 +24,9 @@
   learn_now: Aprende Ahora
   petition_message: Cada alumno de cada escuela debería tener la oportunidad de aprender
     Ciencias de la Computación
-  petition_sign_message: 'Si estás de acuerdo, firma con tu nombre. Únete a # otros.'
-  petition_sign_message_support: 'Si nos apoyas, firma con tu nombre. Invita a # otros.'
+  petition_sign_message: 'Si estás de acuerdo, firma con tu nombre.  Unete a # otros.'
+  petition_sign_message_support: 'Si usted nos apoya, firme su nombre.  Invite a #
+    otros.'
   petition_join_others: 'Únete a # otros'
   name: Nombre
   email: Correo electrónico
@@ -477,6 +478,10 @@
   homepage_header_donors: Code.org agradece a sus colaboradores
   homepage_donors_seall: Ver todo
   homepage_donors_donate: Dona
+  homepage_below_hero_announcement_text: Nos preocupamos por su privacidad y estamos
+    haciendo algunas actualizaciones a nuestra política de privacidad, a partir del 25 de
+    mayo.
+  homepage_below_hero_announcement_link_text: Aprende más
   contact_form_topic_student: Soy un estudiante
   contact_form_topic_parent: Soy un padre
   contact_form_topic_teacher: Soy un profesor/educador
@@ -731,6 +736,12 @@
   volunteer_engineer_submission_field_email_desc: Tu dirección de correo electrónico
     nunca será compartida, pero te enviaremos solicitudes enviadas por docentes.
   volunteer_engineer_submission_field_email_placeholder: Dirección de correo electrónico
+  volunteer_engineer_submission_field_email_preference: ¿Podemos enviarle por correo electrónico
+    las actualizaciones a nuestros cursos, oportunidades locales u otras noticias de informática?
+  volunteer_engineer_submission_field_email_preference_privacy: (Para obtener más detalles,
+    consulte nuestra política de privacidad)
+  volunteer_engineer_submission_field_email_preference_yes: Sí
+  volunteer_engineer_submission_field_email_preference_no: 'No'
   volunteer_engineer_submission_final_paragraph: Se mostrará tu ubicación en el mapa
     local de docentes para que puedan contactarlo para oportunidades de voluntariado
     en la Hora de Code. Tu dirección exacta y correo electrónico NUNCA serán compartidos.
@@ -1301,6 +1312,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Bases de datos en Apps'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: Prueba completa - 50 preguntas
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'
@@ -2186,13 +2198,3 @@
     cuenta de Google":'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  homepage_below_hero_announcement_text: We care about your privacy and are making
-    some updates to our privacy policy, effective May 25.
-  homepage_below_hero_announcement_link_text: Learn more
-  volunteer_engineer_submission_field_email_preference: Can we email you about updates
-    to our courses, volunteer opportunities, or other computer science news?
-  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
-    policy)"
-  volunteer_engineer_submission_field_email_preference_yes: 'Yes'
-  volunteer_engineer_submission_field_email_preference_no: 'No'
-  csp-post-survey_name: Student Post-Course Survey

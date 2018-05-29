@@ -164,7 +164,6 @@
       "return": null,
       "stopSound": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "instructions": "Add the numbers 1 through 10. Multiply the numbers 1 through 10. Check your answers with a neighbor.",

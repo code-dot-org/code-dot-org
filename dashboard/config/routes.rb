@@ -193,6 +193,8 @@ Dashboard::Application.routes.draw do
   get '/lang/:locale', to: 'home#set_locale', user_return_to: '/'
   get '*i18npath/lang/:locale', to: 'home#set_locale'
 
+  resources :blocks, constraints: {id: /[^\/]+/}
+
   resources :levels do
     get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'
     get 'embed_level', to: 'levels#embed_level', as: 'embed_level'

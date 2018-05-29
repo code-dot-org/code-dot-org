@@ -68,7 +68,6 @@
       "comment": null,
       "console.log": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Sprites Review\r\n\r\nYou have learned a lot about sprites already and conditionals. Can you use those skills to create a square that moves in all 4 directions in response to the arrow keys?\r\n\r\n# Do This\r\n\r\n* Create a sprite\r\n* Make the sprite move up, down, left, and right in response to the arrow keys",

@@ -39,6 +39,10 @@ Scenario: Top Instructions
   And I wait to see ".block-space"
   And I see no difference for "farmer with block hint"
 
+  Then I press "lightbulb"
+  And I press ".csf-top-instructions button:contains('Yes')" using jQuery
+  And I see no difference for "farmer with video hint"
+
   Then I am on "http://studio.code.org/s/course4/stage/19/puzzle/3?noautoplay=true"
   And I wait for the page to fully load
   And I see no difference for "Bee with starting hints"
