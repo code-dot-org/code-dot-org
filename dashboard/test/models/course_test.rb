@@ -262,6 +262,64 @@ class CourseTest < ActiveSupport::TestCase
     end
   end
 
+  class WrongVersionWarningTests < ActiveSupport::TestCase
+    setup do
+      @csp_2017 = create(:course, name: 'csp-2017')
+      @csp1_2017 = create(:script, name: 'csp1-2017')
+      @csp2_2017 = create(:script, name: 'csp2-2017')
+      create :course_script, course: @csp_2017, script: @csp1_2017, position: 1
+      create :course_script, course: @csp_2017, script: @csp2_2017, position: 1
+
+      @csp_2018 = create(:course, name: 'csp-2018')
+      @csp1_2018 = create(:script, name: 'csp1-2018')
+      @csp2_2018 = create(:script, name: 'csp2-2018')
+      create :course_script, course: @csp_2018, script: @csp1_2018, position: 1
+      create :course_script, course: @csp_2018, script: @csp2_2018, position: 1
+
+      @csd = create(:course, name: 'csd')
+      @csd1 = create(:script, name: 'csd1')
+      create :course_script, course: @csd, script: @csd1, position: 1
+
+      @student = create :student
+    end
+
+    test 'validate test data' do
+      assert_equal 'csp', @csp_2017.assignment_family_name
+      assert_equal 'csp', @csp_2018.assignment_family_name
+
+      assert_equal 2, @csp_2017.default_scripts.count
+      assert_equal 2, @csp_2018.default_scripts.count
+      assert_equal 1, @csd.default_scripts.count
+    end
+
+    test 'student with no progress does not get warning' do
+      refute @csp_2017.wrong_version?(@student)
+      refute @csp_2018.wrong_version?(@student)
+    end
+
+    test 'student with progress in other course in same famly gets warning' do
+      create :user_script, user: @student, script: @csp1_2017
+
+      refute @csp_2017.wrong_version?(@student)
+      assert @csp_2018.wrong_version?(@student)
+    end
+
+    test 'student with progress in both courses does not get warning' do
+      create :user_script, user: @student, script: @csp1_2017
+      create :user_script, user: @student, script: @csp2_2018
+
+      refute @csp_2017.wrong_version?(@student)
+      refute @csp_2018.wrong_version?(@student)
+    end
+
+    test 'student with progress in non-family course does not get warning' do
+      create :user_script, user: @student, script: @csd1
+
+      refute @csp_2017.wrong_version?(@student)
+      refute @csp_2018.wrong_version?(@student)
+    end
+  end
+
   test "valid_courses" do
     # The data here must be in sync with the data in ScriptConstants.rb
     csp = create(:course, name: 'csp-2017')
