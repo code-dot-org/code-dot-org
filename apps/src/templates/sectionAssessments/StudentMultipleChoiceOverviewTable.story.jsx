@@ -24,7 +24,7 @@ const studentOverviewData = [
     numMultipleChoiceCorrect: 8,
     numMultipleChoice: 10,
     percentCorrect: '80%',
-    submissionTimeStamp: '2/16/18 - 7:41 AM',
+    submissionTimeStamp: '5/29/18 - 7:41 AM',
   },
   {
     id: 4,
@@ -32,7 +32,7 @@ const studentOverviewData = [
     numMultipleChoiceCorrect: 10,
     numMultipleChoice: 10,
     percentCorrect: '100%',
-    submissionTimeStamp: '2/16/18 - 8:00 AM',
+    submissionTimeStamp: '5/29/18 - 8:00 AM',
   },
   {
     id: 5,
@@ -41,6 +41,14 @@ const studentOverviewData = [
     numMultipleChoice: 10,
     percentCorrect: '',
     submissionTimeStamp: 'Not Started',
+  },
+  {
+    id: 6,
+    name: 'Mike',
+    numMultipleChoiceCorrect: 0,
+    numMultipleChoice: 10,
+    percentCorrect: '0%',
+    submissionTimeStamp: '5/29/18 - 8:05 AM',
   },
 ];
 
