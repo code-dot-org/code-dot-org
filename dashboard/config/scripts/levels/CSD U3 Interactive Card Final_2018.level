@@ -173,7 +173,6 @@
       "comment": null,
       "stopSound": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Finishing Touches\r\nNow's your chance to put some finishing touches on your card. We've included some new blocks that you haven't seen before, so take some time to look around and try out some new blocks.\r\n\r\n# Do This\r\nConsider adding any of the following to finish up your card:\r\n\r\n* Text\r\n* Additional images for your sprites\r\n* Subtle animation in the background\r\n* Sound effects  (Can you figure out now to do this?)\r\n* More ways for a user to interact with your card",

@@ -37,7 +37,6 @@
     "debugger_disabled": "true",
     "markdown_instructions": "# Simple Drawing\r\n\r\n<img src=\"https://images.code.org/47dce1fc1ac728bcc523909573812099-image-1461787179482.59.14 PM.png\" style=\"width:200px; float:right\">\r\n\r\nThis is a mess! Can you help debug this program? All the necessary lines of code are here, but they are not in the correct order to draw the picture on the right.\r\n\r\n# Do This\r\n\r\n* Re-order the code to produce the picture\r\n\r\n*Note: You don't need to add any new lines of code*\r\n\r\n",
     "instructions": "Do This",
-    "show_d_pad": "false",
     "start_blocks": "fill(\"yellow\");\r\nrect(0, 0, 200, 200);\r\nellipse(300, 100, 200, 200);\r\nrect(200, 0, 200, 200);\r\nellipse(100, 100, 200, 200);\r\nrect(0, 200, 200, 200);\r\nfill(\"blue\");\r\nfill(\"red\");\r\nellipse(100, 300, 200, 200);\r\nellipse(300, 300, 200, 200);\r\nrect(200, 200, 200, 200);\r\nfill(\"green\");",
     "hide_animation_mode": "true",
     "pause_animations_by_default": "false",

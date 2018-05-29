@@ -69,7 +69,6 @@
       "comment_Drawing": null,
       "console.log": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# What If My Condition Isn't True?\r\n\r\n<img src=\"https://images.code.org/1a997d78fcd88efeb9e6dc5a02aa88e8-image-1464706463138.53.58.png\" width=\"125px\" style=\"float:right\">\r\n\r\nSometimes we want to tell our program what to do if a condition is `true`, but also what to do if it's `false`. Pressing the plus button at the bottom of your conditional block will give you another section called `else`. This `else` section will be run whenever the condition in the `if` before it is `false`.\r\n\r\n# Do This\r\nThe gears are back again. The last time you worked with them, you made them spin when the space bar is pressed. Instead of the gears only spinning when the space key is pressed, we want them to spin one way when the space key is pressed and spin the other way when it's not pressed.\r\n<img src=\"https://images.code.org/b074d47ca8dfa5ab3bfd08344b4f4e42-image-1464706389475.gif\" style=\"float:right\">\r\n\r\n* Click the _plus_ button at the bottom of the if block to add an else.\r\n* Add commands to make the gears spin opposite of the direction that they do when the space bar is pressed.",

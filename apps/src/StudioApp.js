@@ -1330,7 +1330,12 @@ StudioApp.prototype.resizeVisualization = function (width) {
   var scale = (newVizWidth / this.nativeVizWidth);
   getStore().dispatch(setVisualizationScale(scale));
 
-  applyTransformScaleToChildren(visualization, 'scale(' + scale + ')');
+  const cssScale = `scale(${scale})`;
+  applyTransformScaleToChildren(visualization, cssScale);
+  const dpadContainer = document.getElementById('studio-dpad-container');
+  if (dpadContainer) {
+    applyTransformScaleToChildren(dpadContainer, cssScale);
+  }
 
   if (oldVizWidth < 230 && newVizWidth >= 230) {
     $('#soft-buttons').removeClass('soft-buttons-compact');

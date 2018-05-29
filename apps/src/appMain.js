@@ -6,6 +6,7 @@ import {generateAuthoredHints} from './authoredHintUtils';
 import {addReadyListener} from './dom';
 import * as blocksCommon from './blocksCommon';
 import * as commonReducers from './redux/commonReducers';
+import codegen from './lib/tools/jsinterpreter/codegen';
 
 window.__TestInterface = {
   loadBlocks: (...args) => studioApp().loadBlocks(...args),
@@ -95,6 +96,8 @@ export default function (app, levels, options) {
         );
       }
     }
+
+    Blockly.JavaScript.INFINITE_LOOP_TRAP = codegen.loopTrap();
   }
 
   function onReady() {
