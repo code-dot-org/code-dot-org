@@ -32,7 +32,6 @@
       "console.log": null,
       "comment_Variables": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# setCollider\r\n\r\nSprites interact based on the size and shape of their collider, not the images that are assigned to them. You can only see the collider when debug mode is turned on.  You can change the shape of the collider using the `sprite.setCollider()` block, which lets you pick between a \"rectangle\" or a \"circle\".  By default all colliders are \"rectangle\".\r\n\r\n# Do This\r\n\r\n* Find the `sprite.setCollider()` block for the gold coin, and change it from \"rectangle\" to \"circle\".\r\n* Add a new `sprite.setCollider()` block for the silver coin, and choose \"circle\" for the shape of the collider.\r\n* Run the code again to see how the sprites bounce.\r\n\r\n\r\n[//]: #  (https://images.code.org/8b7730146eaa9d439e6af34c0a21e802-image-1470321391887.png)\r\n\r\n[//]: #  (https://images.code.org/eca470a686b01c19981152fdab808804-image-1470321391888.png)",

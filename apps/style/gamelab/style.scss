@@ -26,11 +26,6 @@ $root: '/blockly/media/gamelab/'; //TODO: Parameterize for asset pipeline
   #runButton, #resetButton {
     display:none !important;
   }
-  #studio-dpad {
-    width: 100%;
-    margin-left: -10px;
-    margin-top: -2px;
-  }
 }
 
 #visualizationOverlay {
