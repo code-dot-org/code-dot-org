@@ -406,6 +406,27 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_nil application.school_id
   end
 
+  #
+  # Table: dashboard.cohorts_users
+  # Table: dashboard.cohorts_deleted_users
+  #
+
+  test 'removes relationship between user and any cohorts' do
+    user = create :teacher
+    cohort = create :cohort
+    cohort.teachers << user
+    cohort.teachers << create(:teacher) # a second teacher
+
+    assert_equal 2, cohort.teachers.size
+    assert_equal 0, cohort.deleted_teachers.size
+
+    purge_user user
+    cohort.reload
+
+    assert_equal 1, cohort.teachers.size
+    assert_equal 0, cohort.deleted_teachers.size
+  end
+
   private
 
   #
