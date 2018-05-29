@@ -504,15 +504,13 @@ class ApiController < ApplicationController
     render json: data
   end
 
-  # For each assessment in a script, return an object of question IDs to question data.
+  # For each assessment in a script, return an object of script_level IDs to question data.
   # Question data includes the question text, all possible answers, and the correct answers.
   def assessments_structure
-    section = load_section
-    script = load_script(section)
-    puts script.id
+    script = load_script
 
-    # must validate we are a verified teacher because this will provide locked
-    # question and answer data
+    # Only authorized teachers have access to locked question and answer data.
+    render status: :forbidden unless current_user.authorized_teacher?
 
     level_group_script_levels = script.script_levels.includes(:levels).where('levels.type' => 'LevelGroup')
 
@@ -530,7 +528,7 @@ class ApiController < ApplicationController
       # A structure to store the individual level structure in the level_group
       questions = {}
 
-      # For each level in the multi group (ignore pages for assessments tab)
+      # For each level in the multi group (ignore pages structure information)
       level_group.levels.each do |level|
         # A single level corresponds to a single question
         question = {}
@@ -541,33 +539,18 @@ class ApiController < ApplicationController
           question = {
             type: level.type,
             question_text: level.properties['markdown_instructions']
-
           }
         when Multi
-          # Multiple choice question, includes question text, answer text, and which
-          # ones are right / wrong
-
-          # Some questions are in markdown and some are in a text questions array.
-          question_text = ''
-          unless level.properties['questions'].nil?
-            question_text = level.properties['questions'][0]['text']
-          end
-          unless level.properties['markdown'].nil?
-            question_text = level.properties['markdown']
-          end
-
           question = {
             type: level.type,
-            question_text: question_text,
+            question_text: level.get_question_text,
             answers: level.properties['answers'],
           }
         end
 
-        # Add this level info to the map
         questions[level.id] = question
       end
 
-      # Add question and answers text to data structure
       assessments[level_group.id] = {
         id: level_group.id,
         questions: questions,
