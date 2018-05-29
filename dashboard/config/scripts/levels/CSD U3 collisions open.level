@@ -87,7 +87,6 @@
       "comment_Variables": null,
       "stopSound": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Your Choice\r\n\r\nYou've seen sprites do many things when they collide with each other: rotate, disappear, change animation, or even make a new sprite appear on the screen.  Now it's your turn to choose what the sprites can do.  Decide what two animations you want to use for your sprite, and what you want to happen when they touch each other, then code your choice.  You may also choose to change the position, speed, and direction of your sprites.\r\n\r\n# Do This\r\n* Decide what your sprites should look like, and use `setAnimation` to give them that image\r\n* Change the starting position of your sprites in the `createSprite` block\r\n* Use `setSpeedAndDirection` or `velocityX` and `velocityY` to make your sprites move how you want\r\n* Use the `if` block, with `isTouching` and `rotate`, `visible`, `setAnimation` or any other block to make your sprites react when they collide.",

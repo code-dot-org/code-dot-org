@@ -745,7 +745,7 @@ en:
     tos: "Terms of Service"
     privacy: "Privacy Policy"
     privacy_notice: "Privacy Notice"
-    accept_label: 'I agree to the updated <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>'
+    accept_label: 'I agree to the <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.'
     accept: "Accept"
     print: "Print"
     reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'

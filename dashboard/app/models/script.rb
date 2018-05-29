@@ -11,10 +11,14 @@
 #  user_id         :integer
 #  login_required  :boolean          default(FALSE), not null
 #  properties      :text(65535)
+#  new_name        :string(255)
+#  family_name     :string(255)
 #
 # Indexes
 #
+#  index_scripts_on_family_name      (family_name)
 #  index_scripts_on_name             (name) UNIQUE
+#  index_scripts_on_new_name         (new_name) UNIQUE
 #  index_scripts_on_wrapup_video_id  (wrapup_video_id)
 #
 
@@ -207,7 +211,14 @@ class Script < ActiveRecord::Base
           all.
           select {|script| with_hidden || !script.hidden}
     end
-    scripts = scripts.map {|script| script.alternate_script(user)} if user_experiments_enabled
+
+    if user_experiments_enabled
+      scripts = scripts.map do |script|
+        alternate_script = script.alternate_script(user)
+        alternate_script.present? ? alternate_script : script
+      end
+    end
+
     scripts
   end
 
@@ -1087,10 +1098,10 @@ class Script < ActiveRecord::Base
   # @return {AssignableInfo} with strings translated
   def assignable_info
     info = ScriptConstants.assignable_info(self)
-    info[:name] = I18n.t("#{info[:name]}_name", default: info[:name])
+    info[:name] = I18n.t("data.script.name.#{info[:name]}.title", default: info[:name])
     info[:name] += " *" if hidden
 
-    info[:category] = I18n.t("#{info[:category]}_category_name", default: info[:category])
+    info[:category] = I18n.t("data.script.category.#{info[:category]}_category_name", default: info[:category])
 
     info
   end

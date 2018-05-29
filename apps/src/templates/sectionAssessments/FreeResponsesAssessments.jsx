@@ -84,13 +84,7 @@ class FreeResponsesAssessments extends Component {
           },
         },
         cell: {
-          format: this.studentNameColumnFormatter,
-          props: {
-            style: {
-              ...tableLayoutStyles.cell,
-              ...styles.studentNameColumnCell,
-            }
-          },
+          props: {style:tableLayoutStyles.cell},
         }
       },
       {
@@ -105,13 +99,7 @@ class FreeResponsesAssessments extends Component {
           },
         },
         cell: {
-          format: this.studentResponseColumnFormatter,
-          props: {
-            style: {
-              ...tableLayoutStyles.cell,
-              ...styles.responseColumnCell,
-            }
-          },
+          props: {style:tableLayoutStyles.cell},
         }
       },
     ];

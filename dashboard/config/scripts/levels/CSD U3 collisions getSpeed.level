@@ -59,7 +59,6 @@
       "console.log": null,
       "comment_Variables": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Dashboard\r\n\r\nHere's a car that can be controlled with the arrow keys.  The dashboard at the bottom should show the car's speed and direction, even when it is off the screen.\r\n\r\n# Do This\r\n\r\n* Use the `getDirection()` block to turn the compass needle to the car's current direction. [Show me where](#triggercallout=code_triggered1)\r\n* Use the `getSpeed()` block to display the car's current speed on the dashboard, instead of 0. [Show me where](#triggercallout=code_triggered2)\r\n\r\n*Challenge: Can you also show the car's current location on the dashboard?*\r\n\r\n[//]: #(https://images.code.org/b87e51b8ed026ca239cbf629c9a58b26-image-1472571454000.png)\r\n\r\n[//]: #(https://images.code.org/669fd48b2a28602220c2d07b717c1ace-image-1472571454002.png)\r\n\r\n[//]: #(https://images.code.org/e3013d8428f54f7fbde63d0a4a8eaafb-image-1472571782304.png)",

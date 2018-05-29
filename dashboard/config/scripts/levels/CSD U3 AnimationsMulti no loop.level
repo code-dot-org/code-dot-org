@@ -32,7 +32,6 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "true",
     "hide_animation_mode": "false",
-    "show_d_pad": "false",
     "pause_animations_by_default": "false",
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"3ec2fdba-154c-495f-99dc-0857897e0c90\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"3ec2fdba-154c-495f-99dc-0857897e0c90\": {\r\n      \"name\": \"alienPink_walk_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/qupSZdgRvDnbdfIp322aMaPlFZyi0Cwr/alienPink_walk.png\",\r\n      \"frameSize\": {\r\n        \"x\": 130,\r\n        \"y\": 258\r\n      },\r\n      \"frameCount\": 2,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"qupSZdgRvDnbdfIp322aMaPlFZyi0Cwr\"\r\n    }\r\n  }\r\n}",
     "all_animations_single_frame": "false",

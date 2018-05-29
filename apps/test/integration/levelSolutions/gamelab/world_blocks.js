@@ -1,6 +1,7 @@
 import tickWrapper from '../../util/tickWrapper';
 import {TestResults} from '@cdo/apps/constants';
 import {gamelabLevelDefinition} from '../../gamelabLevelDefinition';
+import {testAsyncProgramGameLab} from '../../util/levelTestHelpers';
 /* global Gamelab */
 
 module.exports = {
@@ -110,5 +111,101 @@ module.exports = {
         testResult: TestResults.FREE_PLAY
       }
     },
+    testAsyncProgramGameLab(
+      "showMobileControls() with default params doesn't show on desktop",
+      `
+        showMobileControls(true, true, true, true);
+        console.log("done");
+      `,
+      function isProgramDone(assert) {
+        var debugOutput = document.getElementById('debug-output').textContent;
+        const done = debugOutput.includes('done');
+        if (done) {
+          assert.equal($('#studio-space-button').is(':visible'), false);
+          assert.equal($('#studio-dpad-button').is(':visible'), false);
+          assert.equal($('#studio-dpad-rim').is(':visible'), false);
+          assert.equal($('#studio-dpad-cone').is(':visible'), false);
+        }
+        return done;
+      },
+      function validateResult(assert) {
+        assert.equal($('#studio-space-button').is(':visible'), false);
+        assert.equal($('#studio-dpad-button').is(':visible'), false);
+        assert.equal($('#studio-dpad-rim').is(':visible'), false);
+        assert.equal($('#studio-dpad-cone').is(':visible'), false);
+      },
+    ),
+    testAsyncProgramGameLab(
+      "showMobileControls() with mobileOnly false shows d-pad and space button while running",
+      `
+        showMobileControls(true, true, true, false);
+        console.log("done");
+      `,
+      function isProgramDone(assert) {
+        var debugOutput = document.getElementById('debug-output').textContent;
+        const done = debugOutput.includes('done');
+        if (done) {
+          assert.equal($('#studio-space-button').is(':visible'), true);
+          assert.equal($('#studio-dpad-button').is(':visible'), true);
+          assert.equal($('#studio-dpad-rim').is(':visible'), true);
+          assert.equal($('#studio-dpad-cone').is(':visible'), true);
+        }
+        return done;
+      },
+      function validateResult(assert) {
+        assert.equal($('#studio-space-button').is(':visible'), false);
+        assert.equal($('#studio-dpad-button').is(':visible'), false);
+        assert.equal($('#studio-dpad-rim').is(':visible'), false);
+        assert.equal($('#studio-dpad-cone').is(':visible'), false);
+      },
+    ),
+    testAsyncProgramGameLab(
+      "showMobileControls() can hide space button while running",
+      `
+        showMobileControls(false, true, true, false);
+        console.log("done");
+      `,
+      function isProgramDone(assert) {
+        var debugOutput = document.getElementById('debug-output').textContent;
+        const done = debugOutput.includes('done');
+        if (done) {
+          assert.equal($('#studio-space-button').is(':visible'), false);
+          assert.equal($('#studio-dpad-button').is(':visible'), true);
+          assert.equal($('#studio-dpad-rim').is(':visible'), true);
+          assert.equal($('#studio-dpad-cone').is(':visible'), true);
+        }
+        return done;
+      },
+      function validateResult(assert) {
+        assert.equal($('#studio-space-button').is(':visible'), false);
+        assert.equal($('#studio-dpad-button').is(':visible'), false);
+        assert.equal($('#studio-dpad-rim').is(':visible'), false);
+        assert.equal($('#studio-dpad-cone').is(':visible'), false);
+      },
+    ),
+    testAsyncProgramGameLab(
+      "showMobileControls() can hide d-pad while running",
+      `
+        showMobileControls(true, false, true, false);
+        console.log("done");
+      `,
+      function isProgramDone(assert) {
+        var debugOutput = document.getElementById('debug-output').textContent;
+        const done = debugOutput.includes('done');
+        if (done) {
+          assert.equal($('#studio-space-button').is(':visible'), true);
+          assert.equal($('#studio-dpad-button').is(':visible'), false);
+          assert.equal($('#studio-dpad-rim').is(':visible'), false);
+          assert.equal($('#studio-dpad-cone').is(':visible'), false);
+        }
+        return done;
+      },
+      function validateResult(assert) {
+        assert.equal($('#studio-space-button').is(':visible'), false);
+        assert.equal($('#studio-dpad-button').is(':visible'), false);
+        assert.equal($('#studio-dpad-rim').is(':visible'), false);
+        assert.equal($('#studio-dpad-cone').is(':visible'), false);
+      },
+    ),
   ]
 };

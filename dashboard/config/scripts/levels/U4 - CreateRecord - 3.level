@@ -58,10 +58,6 @@
     "debugger_disabled": "false",
     "start_blocks": "var song = {};\r\nsong.title = \"Happy Birthday To You\";\r\nsong.seconds = 15;",
     "slider_speed": "1.0",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "instructions_important": "false",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
@@ -71,7 +67,8 @@
     "show_debug_watch": "false",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
-    "makerlab_enabled": "false"
+    "makerlab_enabled": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
