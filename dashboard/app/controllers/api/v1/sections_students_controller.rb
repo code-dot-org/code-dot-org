@@ -1,8 +1,8 @@
 class Api::V1::SectionsStudentsController < Api::V1::JsonApiController
   load_and_authorize_resource :section
-  load_resource :student, class: 'User', through: :section, parent: false, only: [:update, :remove]
+  load_resource :student, class: 'User', through: :section, parent: false, only: [:update, :reset_secrets, :remove]
 
-  skip_before_action :verify_authenticity_token, only: [:update, :bulk_add, :remove]
+  skip_before_action :verify_authenticity_token, only: [:update, :reset_secrets, :bulk_add, :remove]
 
   # GET /sections/<section_id>/students
   def index
@@ -19,9 +19,11 @@ class Api::V1::SectionsStudentsController < Api::V1::JsonApiController
     render json: completed_levels_count_per_student
   end
 
-  # PATCH /sections/<section_id>/student/<id>/update
+  # PATCH /sections/<section_id>/students/<id>
   def update
     return render_404 unless @student
+
+    @student.reset_secrets if params[:secrets] == 'reset'
 
     if @student.update(student_params)
       render json: @student.summarize
@@ -88,6 +90,8 @@ class Api::V1::SectionsStudentsController < Api::V1::JsonApiController
       :name,
       :sharing_disabled,
       :password,
+      :secret_picture,
+      :secret_words,
     )
   end
 end

@@ -1234,6 +1234,13 @@ class User < ActiveRecord::Base
     return nil
   end
 
+  def reset_secrets
+    generate_secret_picture
+    generate_secret_words
+
+    self
+  end
+
   def generate_secret_picture
     self.secret_picture = SecretPicture.random
   end
