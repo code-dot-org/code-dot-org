@@ -1239,8 +1239,6 @@ class User < ActiveRecord::Base
   def reset_secrets
     generate_secret_picture
     generate_secret_words
-
-    self
   end
 
   def generate_secret_picture
