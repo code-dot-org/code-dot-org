@@ -1,7 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import {Table, sort} from 'reactabular';
 import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
-import commonMsg from '@cdo/locale';
+import i18n from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import MultipleChoiceAnswerCell from './MultipleChoiceAnswerCell';
@@ -14,6 +14,24 @@ export const COLUMNS = {
   QUESTION: 0,
   STUDENT_ANSWER: 1,
   CORRECT_ANSWER: 2,
+};
+
+const ANSWER_COLUMN_WIDTH = 80;
+
+const styles = {
+  answerColumnHeader: {
+    width: ANSWER_COLUMN_WIDTH,
+    textAlign: 'center',
+  },
+  answerColumnCell: {
+    width: ANSWER_COLUMN_WIDTH,
+  },
+  questionCell: {
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+    maxWidth: 470,
+  }
 };
 
 class StudentAssessmentOverviewTable extends Component {
@@ -49,11 +67,15 @@ class StudentAssessmentOverviewTable extends Component {
   };
 
   getCorrectAnswer = (multipleChoiceAnswers) => {
-    return multipleChoiceAnswers.filter(answerObj => {
+    const answersArr = multipleChoiceAnswers.filter(answerObj => {
       return answerObj.isCorrectAnswer;
-    }).map(answerObj => {
+    });
+
+    const getCorrectAnswers = answersArr.map(answerObj => {
       return answerObj.multipleChoiceOption;
-    }).join(', ');
+    });
+
+    return getCorrectAnswers.join(',');
   };
 
   correctAnswerColumnFormatter = (answers, {rowData, columnIndex}) => {
@@ -70,12 +92,13 @@ class StudentAssessmentOverviewTable extends Component {
   };
 
   studentAnswerColumnFormatter = (studentAnswers, {rowData, rowIndex}) => {
-    const selectStudentAnswers = this.props.studentAnswerData[0].studentAnswers[rowIndex];
-    const multipleChoiceAnswers = rowData.answers;
+    const studentAnswersArr = this.props.studentAnswerData.map(studentObj => {
+      return studentObj.studentAnswers[rowIndex].answers;
+    });
 
-    let studentResponse = selectStudentAnswers.answer.map(answerSelection => {
-      return answerSelection;
-    }).join(', ');
+    const studentResponse = studentAnswersArr.join(',');
+
+    const multipleChoiceAnswers = rowData.answers;
 
     let displayAnswer = this.getCorrectAnswer(multipleChoiceAnswers);
 
@@ -93,34 +116,59 @@ class StudentAssessmentOverviewTable extends Component {
       {
         property: 'question',
         header: {
-          label: commonMsg.question(),
+          label: i18n.question(),
           props: {style: tableLayoutStyles.headerCell},
           transforms: [sortable],
         },
         cell: {
-          props: {style: tableLayoutStyles.cell},
+          props: {
+            style: {
+              ...tableLayoutStyles.cell,
+              ...styles.questionCell,
+            }
+          },
         }
       },
       {
         property: 'studentAnswer',
         header: {
-          label: commonMsg.studentAnswer(),
-          props: {style: tableLayoutStyles.headerCell},
+          label: i18n.studentAnswer(),
+          props: {
+            style: {
+              ...tableLayoutStyles.headerCell,
+              ...styles.answerColumnHeader,
+            }
+          },
         },
         cell: {
           format: this.studentAnswerColumnFormatter,
-          props: {style: tableLayoutStyles.cell},
+          props: {
+            style: {
+              ...tableLayoutStyles.cell,
+              ...styles.answerColumnCell,
+            }
+          },
         }
       },
       {
         property: 'correctAnswer',
         header: {
-          label: commonMsg.checkCorrectAnswer(),
-          props: {style: tableLayoutStyles.headerCell},
+          label: i18n.checkCorrectAnswer(),
+          props: {
+            style: {
+              ...tableLayoutStyles.headerCell,
+              ...styles.answerColumnHeader,
+            }
+          },
         },
         cell: {
           format: this.correctAnswerColumnFormatter,
-          props: {style: tableLayoutStyles.cell},
+          props: {
+            style: {
+              ...tableLayoutStyles.cell,
+              ...styles.answerColumnCell,
+            }
+          },
         }
       },
     ];

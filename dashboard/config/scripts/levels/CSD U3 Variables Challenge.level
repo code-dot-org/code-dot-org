@@ -23,7 +23,6 @@
       "stroke": null,
       "comment_Variables": null
     },
-    "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Challenge: Updating Variables\r\n\r\n_Check with your teacher before tackling this challenge level._\r\n\r\nSo far we've only ever assigned a value to a variable once, but did you know you can update a variable during a program?  Read through the example program we've provided, run it a few times to understand how it works, and then attempt to modify the program to draw one of the following images.\r\n\r\n\r\n<img src=\"https://images.code.org/29f4d46d5aa041fb7d27aa2e3c77652e-image-1493161823337.png\" style=\"width:150px; border: 1px solid grey; margin:20px;\">\r\n<img src=\"https://images.code.org/629819fe91016ee1b8275c81e41770b5-image-1493161823334.png\" style=\"width:150px; border: 1px solid grey; margin:20px;\">\r\n<img src=\"https://images.code.org/acf7b8223b3a87594e20348306464de7-image-1493161823305.png\" style=\"width:150px; border: 1px solid grey; margin:20px;\">\r\n",
