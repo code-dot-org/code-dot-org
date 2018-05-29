@@ -1,9 +1,57 @@
+import * as codegen from '@cdo/apps/lib/tools/jsinterpreter/codegen';
 import $ from 'jquery';
+import assetUrl from '@cdo/apps/code-studio/assetUrl';
 import initializeCodeMirror, {
   initializeCodeMirrorForJson,
 } from '@cdo/apps/code-studio/initializeCodeMirror';
+import jsonic from 'jsonic';
+import { parseElement } from '@cdo/apps/xml';
+import { installCustomBlocks } from '@cdo/apps/gamelab/blocks';
 
+let nameField;
 $(document).ready(() => {
-  initializeCodeMirrorForJson('block_config');
+  nameField = document.getElementById('block_name');
+  Blockly.inject(document.getElementById('blockly-container'), {});
+
+  initializeCodeMirrorForJson('block_config', { onChange });
   initializeCodeMirror('block_helper_code', 'javascript');
 });
+
+let oldConfig;
+function onChange(editor) {
+  let config;
+  if (editor.getValue() === oldConfig) {
+    return;
+  } else {
+    try {
+      config = jsonic(editor.getValue());
+    } catch (e) {
+      return;
+    }
+    oldConfig = editor.getValue();
+  }
+
+  const blocksInstalled = installCustomBlocks(
+    Blockly,
+    { assetUrl },
+    [{
+      name: nameField.value,
+      category: 'Custom',
+      config,
+    }],
+    {},
+    true,
+  );
+  const blockName = Object.values(blocksInstalled)[0][0];
+  nameField.value = blockName;
+  const blocksDom = parseElement(`<block type="${blockName}" />`);
+  Blockly.mainBlockSpace.clear();
+  Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, blocksDom);
+  Blockly.mainBlockSpace.getCanvas().addEventListener('blocklyBlockSpaceChange',
+    onBlockSpaceChange);
+}
+
+function onBlockSpaceChange() {
+  document.getElementById('code-preview').innerText =
+    codegen.workspaceCode(Blockly);
+}
