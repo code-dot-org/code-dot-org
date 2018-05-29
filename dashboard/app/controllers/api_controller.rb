@@ -506,6 +506,7 @@ class ApiController < ApplicationController
 
   # For each assessment in a script, return an object of script_level IDs to question data.
   # Question data includes the question text, all possible answers, and the correct answers.
+  # TODO(caleybrock): currently only used in internal experiment, must add controller tests.
   def assessments_structure
     script = load_script
 
