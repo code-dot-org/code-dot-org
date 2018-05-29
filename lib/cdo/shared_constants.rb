@@ -349,6 +349,7 @@ module SharedConstants
       "mouseWentDown": null,
       "mouseWentUp": null,
       "mousePressedOver": null,
+      "showMobileControls": null,
       "World.mouseX": null,
       "World.mouseY": null,
       "World.frameRate": null,

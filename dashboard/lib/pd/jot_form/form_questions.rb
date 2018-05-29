@@ -50,6 +50,14 @@ module Pd
         question
       end
 
+      def [](id_or_name)
+        if id_or_name.is_a? Integer
+          get_question_by_id id_or_name
+        else
+          get_question_by_name id_or_name
+        end
+      end
+
       # Constructs a form-question summary, a hash of
       #   {question_name => {text:, answer_type:}}
       # Note: matrix questions are expanded into their sub-questions,
@@ -71,11 +79,17 @@ module Pd
       def process_answers(answers_data)
         questions_with_form_data = answers_data.map do |question_id, answer_data|
           question = get_question_by_id(question_id)
-          raise "Unrecognized question id #{question_id} in #{form_id}.#{submission_id}" unless question
+          raise "Unrecognized question id #{question_id}" unless question
+
+          form_data = begin
+            question.process_answer(answer_data)
+          rescue => e
+            raise e, "Error processing answer #{question_id}: #{e.message}", e.backtrace
+          end
 
           {
             question: question,
-            form_data: question.process_answer(answer_data)
+            form_data: form_data
           }
         end
 

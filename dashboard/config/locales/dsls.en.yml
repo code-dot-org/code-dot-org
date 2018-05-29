@@ -3148,6 +3148,7 @@ en:
       aEstory1:
         Artist Exemplar First Story: Artist Exemplar First Story
         Why are they doing this stage?: Why are they doing this stage?
+      apprentice-congrats: {}
       boolean logic and expressions overview: {}
       brad-repro-bug-000:
         Brad Repro Bug 000: Brad Repro Bug 000
@@ -4146,6 +4147,7 @@ en:
         title: title
       v2 U4L06 Student Lesson Introduction Encryption Vigenere:
         Cracking the Code: Cracking the Code
+      welcome-apprentice-18: {}
       welcome-csd-novice: {}
       welcome-csp-novice: {}
       welcome-novice-18: {}
@@ -6050,8 +6052,8 @@ en:
         What is the best explanation for why digital data is represented in computers in binary?: What is the best explanation for why digital data is represented in computers in binary?
         What's Binary?: What's Binary?
       CSP Unit 1 Ch 1 MC binary def_2018:
-        ? 'As a consequence of history: early pioneers of computing were making secret codes in binary, and this simply evolved into modern computing.'
-        : 'As a consequence of history: early pioneers of computing were making secret codes in binary, and this simply evolved into modern computing.'
+        ? 'It typically takes fewer digits to represent a number in binary when compared to other number systems (for example, the decimal number system) '
+        : 'It typically takes fewer digits to represent a number in binary when compared to other number systems (for example, the decimal number system) '
         It's easier, cheaper, and more reliable to build machines and devices that only have to distinguish between binary states.: It's easier, cheaper, and more reliable to build machines and devices that only have to distinguish between binary states.
         It's impossible to build a computing machine that uses anything but binary to represent numbers: It's impossible to build a computing machine that uses anything but binary to represent numbers
         The binary number system is the only system flexible enough to allow for representing data other than numbers.: The binary number system is the only system flexible enough to allow for representing data other than numbers.
@@ -6611,10 +6613,11 @@ en:
         The code will display the smallest of the three values: The code will display the smallest of the three values
         The code will not display anything due to an error: The code will not display anything due to an error
       CSPFinal_Question_2_2018:
-        High bandwidth, high latency: High bandwidth, high latency
-        High bandwidth, low latency: High bandwidth, low latency
-        Low bandwidth, high latency: Low bandwidth, high latency
-        Low bandwidth, low latency: Low bandwidth, low latency
+        Bit-rate (bandwidth) is the time elapsed between the transmission and receipt of a piece of digital data.: Bit-rate (bandwidth) is the time elapsed between the transmission and receipt of a piece of digital data.
+        ? Digital data can only be transmitted between two devices when they are physically connected to one another (for example by a copper wire)
+        : Digital data can only be transmitted between two devices when they are physically connected to one another (for example by a copper wire)
+        Latency is the amount of data (measured in bits) that can be sent in a fixed amount of time.: Latency is the amount of data (measured in bits) that can be sent in a fixed amount of time.
+        Two devices must communicate using the same bit-rate to successfully send and receive digital data.: Two devices must communicate using the same bit-rate to successfully send and receive digital data.
       CSPFinal_Question_2_exam_prep:
         High bandwidth, high latency: High bandwidth, high latency
         High bandwidth, low latency: High bandwidth, low latency
@@ -6795,11 +6798,9 @@ en:
       CSPFinal_Question_9update_2018:
         ? At one of the lowest levels of abstraction, all digital data can be represented in binary using only combinations of the digits zero and one.
         : At one of the lowest levels of abstraction, all digital data can be represented in binary using only combinations of the digits zero and one.
-        ? Binary can be used to represent more complex, higher level abstractions, including but not limited to numbers, characters, and colors.
-        : Binary can be used to represent more complex, higher level abstractions, including but not limited to numbers, characters, and colors.
-        The number system you use to view data has no effect on the underlying digital data.: The number system you use to view data has no effect on the underlying digital data.
-        ? When data is large enough computers switch to using decimal representation instead of binary, because you can represent larger numbers with fewer digits.
-        : When data is large enough computers switch to using decimal representation instead of binary, because you can represent larger numbers with fewer digits.
+        Groups of bits can be used to represent abstractions, including but not limited to numbers and characters.: Groups of bits can be used to represent abstractions, including but not limited to numbers and characters.
+        Some large numbers cannot be represented in binary and can only be represented in decimal.: Some large numbers cannot be represented in binary and can only be represented in decimal.
+        The same value (number) can have a different representation depending on the number system used to represent it.: The same value (number) can have a different representation depending on the number system used to represent it.
       CSPFinal_Question_9update_exam_prep:
         ? At one of the lowest levels of abstraction, all digital data can be represented in binary using only combinations of the digits zero and one.
         : At one of the lowest levels of abstraction, all digital data can be represented in binary using only combinations of the digits zero and one.
@@ -15915,7 +15916,17 @@ en:
       post-assessment survey q24-a:
         Agree: Agree
         Disagree: Disagree
+        ? QUESTION REMOVED AND REPLACED BECAUSE OF INCORRECT ANSWER ORDER I am interested in studying computer science after I graduate high school.
+        : QUESTION REMOVED AND REPLACED BECAUSE OF INCORRECT ANSWER ORDER I am interested in studying computer science after I graduate high school.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q24-a-2017b:
+        Agree: Agree
+        Disagree: Disagree
         I am interested in studying computer science after I graduate high school.: I am interested in studying computer science after I graduate high school.
+        Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
@@ -15987,7 +15998,17 @@ en:
       post-assessment survey q31-a:
         Agree: Agree
         Disagree: Disagree
+        ? QUESTION REMOVED AND REPLACED BECAUSE OF INCORRECT ANSWER ORDER I would recommend this computer science class to another student.
+        : QUESTION REMOVED AND REPLACED BECAUSE OF INCORRECT ANSWER ORDER I would recommend this computer science class to another student.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q31-a-2017b:
+        Agree: Agree
+        Disagree: Disagree
         I would recommend this computer science class to another student.: I would recommend this computer science class to another student.
+        Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
