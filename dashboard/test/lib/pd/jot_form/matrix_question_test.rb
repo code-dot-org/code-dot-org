@@ -7,8 +7,8 @@ module Pd
       include Constants
 
       test 'parse jotform question data for matrix' do
-        data = {
-          id: '1',
+        jotform_question = {
+          qid: '1',
           type: TYPE_MATRIX,
           name: 'sampleMatrix',
           text: 'This is a matrix label',
@@ -17,11 +17,7 @@ module Pd
           mrows: 'Question 1|Question 2'
         }.stringify_keys
 
-        question = MatrixQuestion.from_jotform_question(
-          id: '1',
-          type: TYPE_MATRIX,
-          jotform_question: data
-        )
+        question = MatrixQuestion.from_jotform_question jotform_question
         assert question.is_a? MatrixQuestion
         assert_equal 1, question.id
         assert_equal TYPE_MATRIX, question.type
