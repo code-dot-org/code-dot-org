@@ -46,73 +46,62 @@ def distribute_translations
     next unless File.directory?("i18n/locales/#{locale}/")
 
     ### Dashboard
-
-    orig_dir = "dashboard/config/locales"
-    loc_dir = "i18n/locales/#{locale}/dashboard"
-    en_dir = "i18n/locales/source/dashboard"
-
-    # Special case the un-prefixed Yaml file.
-    if locale == 'hy-AM' # Armenian accepts English translations, does not need fallback
-      export_without_merge "yml", "#{loc_dir}/base.yml", "#{orig_dir}/#{locale}.yml"
-    else
-      merge_translation "yml", "#{en_dir}/base.yml", "#{loc_dir}/base.yml", "#{orig_dir}/#{locale}.yml"
-    end
-
-    # Merge in all the other Yaml files.
-    Dir.glob("#{loc_dir}/*.yml") do |loc_file|
+    Dir.glob("i18n/locales/#{locale}/dashboard/*.yml") do |loc_file|
       relname = File.basename(loc_file, '.yml')
-      next if relname == "base"
+      source = "i18n/locales/source/dashboard/#{relname}.yml"
+
+      # Special case the un-prefixed Yaml file.
+      destination = (relname == "base") ?
+        "dashboard/config/locales/#{locale}.yml" :
+        "dashboard/config/locales/#{relname}.#{locale}.yml"
 
       if locale == 'hy-AM' # Armenian accepts English translations, does not need fallback
-        export_without_merge "yml", loc_file, "#{orig_dir}/#{relname}.#{locale}.yml"
+        export_without_merge "yml", loc_file, destination
       else
-        merge_translation "yml", "#{en_dir}/#{relname}.yml", loc_file, "#{orig_dir}/#{relname}.#{locale}.yml"
+        merge_translation "yml", source, loc_file, destination
       end
     end
 
     ### Apps
-
-    orig_dir = "apps/i18n"
-    loc_dir = "i18n/locales/#{locale}/blockly-mooc"
-    en_dir = "i18n/locales/source/blockly-mooc"
     js_locale = locale.tr('-', '_').downcase
-
-    # Copy JSON files.
-    Dir.glob("#{loc_dir}/*.json") do |loc_file|
+    Dir.glob("i18n/locales/#{locale}/blockly-mooc/*.json") do |loc_file|
       relname = File.basename(loc_file, '.json')
+      source = "i18n/locales/source/blockly-mooc/#{relname}.json"
+      destination = "apps/i18n/#{relname}/#{js_locale}.json"
+
       if locale == 'hy-AM' # Armenian accepts English translations, does not need fallback
-        export_without_merge "json", loc_file, "#{orig_dir}/#{relname}/#{js_locale}.json"
+        export_without_merge "json", loc_file, destination
       else
-        merge_translation "json", "#{en_dir}/#{relname}.json", loc_file, "#{orig_dir}/#{relname}/#{js_locale}.json"
+        merge_translation "json", source, loc_file, destination
       end
     end
 
     ### Blockly Core
-    orig_dir = "apps/node_modules/@code-dot-org/blockly/i18n/locales/#{locale}"
-    loc_dir = "i18n/locales/#{locale}/blockly-core"
-    en_dir = "i18n/locales/source/blockly-core"
-    FileUtils.mkdir_p orig_dir
 
     # Copy JSON files.
-    Dir.glob("#{loc_dir}/*.json") do |loc_file|
+    Dir.glob("i18n/locales/#{locale}/blockly-core/*.json") do |loc_file|
       relname = File.basename(loc_file)
+      source = "i18n/locales/source/blockly-core/#{relname}"
+      destination = "apps/node_modules/@code-dot-org/blockly/i18n/locales/#{locale}/#{relname}"
+      FileUtils.mkdir_p(File.dirname(destination))
+
       if locale == 'hy-AM' # Armenian accepts English translations, does not need fallback
-        export_without_merge "json", loc_file, "#{orig_dir}/#{relname}"
+        export_without_merge "json", loc_file, destination
       else
-        merge_translation "json", "#{en_dir}/#{relname}", loc_file, "#{orig_dir}/#{relname}"
+        merge_translation "json", source, loc_file, destination
       end
     end
 
     ### Pegasus
-    orig_dir = "pegasus/cache/i18n"
-    loc_dir = "i18n/locales/#{locale}/pegasus"
-    en_dir = "i18n/locales/source/pegasus"
+    loc_file = "i18n/locales/#{locale}/pegasus/mobile.yml"
+    source = "i18n/locales/source/pegasus/mobile.yml"
+    destination = "pegasus/cache/i18n/#{locale}.yml"
 
     # Merge YML file.
     if locale == 'hy-AM' # Armenian accepts English translations, does not need fallback
-      export_without_merge "yml", "#{loc_dir}/mobile.yml", "#{orig_dir}/#{locale}.yml"
+      export_without_merge "yml", loc_file, destination
     else
-      merge_translation "yml", "#{en_dir}/mobile.yml", "#{loc_dir}/mobile.yml", "#{orig_dir}/#{locale}.yml"
+      merge_translation "yml", source, loc_file, destination
     end
   end
 
