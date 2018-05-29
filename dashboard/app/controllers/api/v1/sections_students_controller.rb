@@ -90,8 +90,6 @@ class Api::V1::SectionsStudentsController < Api::V1::JsonApiController
       :name,
       :sharing_disabled,
       :password,
-      :secret_picture,
-      :secret_words,
     )
   end
 end
