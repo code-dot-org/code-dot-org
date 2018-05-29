@@ -126,3 +126,25 @@ table.checkboxes {
     width: 0;
   }
 }
+
+.block-editor-container {
+  display: flex;
+
+  .editor {
+    flex: 1;
+    padding: 5px;
+  }
+
+  .block-preview {
+    flex: 1;
+    padding: 5px;
+
+    #blockly-container {
+      height: 300px;
+    }
+
+    code {
+      padding: 3px;
+    }
+  }
+}
