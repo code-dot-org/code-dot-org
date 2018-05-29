@@ -54,18 +54,6 @@ class StudentAssessmentOverviewTable extends Component {
     });
   };
 
-  getCorrectAnswer = (multipleChoiceAnswers) => {
-    const answersArr = multipleChoiceAnswers.filter(answerObj => {
-      return answerObj.isCorrectAnswer;
-    });
-
-    const getCorrectAnswers = answersArr.map(answerObj => {
-      return answerObj.multipleChoiceOption;
-    });
-
-    return getCorrectAnswers.join(',');
-  };
-
   getColumns = (sortable) => {
     let dataColumns = [
       {
