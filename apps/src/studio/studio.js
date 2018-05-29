@@ -477,16 +477,6 @@ var drawMap = function () {
     backgroundLayer.appendChild(tile);
   }
 
-  if (skin.grid) {
-    const tile = document.createElementNS(SVG_NS, 'image');
-    tile.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', studioApp().assetUrl('media/skins/studio/grid.svg'));
-    tile.setAttribute('height', Studio.MAZE_HEIGHT);
-    tile.setAttribute('width', Studio.MAZE_WIDTH);
-    tile.setAttribute('x', 0);
-    tile.setAttribute('y', 0);
-    backgroundLayer.appendChild(tile);
-  }
-
   if (level.coordinateGridBackground) {
     studioApp().createCoordinateGridBackground({
       svg: 'backgroundLayer',
