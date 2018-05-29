@@ -24,6 +24,8 @@ class ScriptDSL < BaseDSL
     @project_widget_types = []
     @wrapup_video = nil
     @script_announcements = nil
+    @new_name = nil
+    @family_name = nil
   end
 
   integer :id
@@ -42,6 +44,8 @@ class ScriptDSL < BaseDSL
 
   string :wrapup_video
   string :script_announcements
+  string :new_name
+  string :family_name
 
   def teacher_resources(resources)
     @teacher_resources = resources
@@ -88,6 +92,8 @@ class ScriptDSL < BaseDSL
       project_widget_visible: @project_widget_visible,
       project_widget_types: @project_widget_types,
       script_announcements: @script_announcements,
+      new_name: @new_name,
+      family_name: @family_name,
     }
   end
 
