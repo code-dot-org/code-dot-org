@@ -582,4 +582,32 @@ DSL
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     assert_equal expected, output
   end
+
+  test 'Script DSL with new_name and family_name' do
+    input_dsl = <<DSL
+new_name 'new name'
+family_name 'family name'
+stage 'Stage1'
+level 'Level 1'
+level 'Level 2'
+DSL
+    expected = DEFAULT_PROPS.merge(
+      {
+        new_name: "new name",
+        family_name: "family name",
+        stages: [
+          {
+            stage: "Stage1",
+            scriptlevels: [
+              {stage: "Stage1", levels: [{name: "Level 1"}]},
+              {stage: "Stage1", levels: [{name: "Level 2"}]},
+            ]
+          }
+        ]
+      }
+    )
+
+    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    assert_equal expected, output
+  end
 end
