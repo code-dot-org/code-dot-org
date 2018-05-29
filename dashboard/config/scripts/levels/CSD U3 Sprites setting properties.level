@@ -20,7 +20,6 @@
       "y": null,
       "background": null
     },
-    "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Properties\r\n\r\n<img src=\"https://images.code.org/9567c9df55163104ff91df0920457ad3-image-1466047307713.21.28 PM.png\" style=\"float:right\">\r\n\r\n**Properties:** When you create a sprite it will automatically be given many special variables called properties. Properties keep track of information about the sprite, which is used when you draw it on the screen. For example, these two properties keep track of a sprite's x and y position on the screen.\r\n\r\n**Changing Properties:** Properties are just variables, so you can change their values using `=` just like any other variable. Here's an example of how you might change the `x` property of a sprite called `myFavoriteSprite`.\r\n\r\n![](https://images.code.org/6976d707cba95e92369831729cdb7435-image-1466085767357.02.35 AM.png)\r\n\r\n<img src=\"https://images.code.org/2743e55cef5da23bf61db1556c88f174-image-1466049906667.04.41 PM.png\" style=\"float:right;width:150px\">\r\n\r\n# Do This\r\n\r\nThis program creates a new sprite, gives it a label, and then sets its `x` and `y` properties.\r\n\r\n* **Read the code**. Notice that the label given to the sprite is used in the sprite's property.\r\n* **Change the values given to the `x` and `y` properties** to move the sprite to the bottom right corner of the screen.",

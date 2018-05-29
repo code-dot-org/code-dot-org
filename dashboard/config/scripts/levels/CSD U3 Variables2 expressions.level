@@ -16,7 +16,6 @@
       "assign_x": null,
       "console.log": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "instructions": "Use console.log to display the results of each expression. Then create your own.",
