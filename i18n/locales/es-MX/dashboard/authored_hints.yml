@@ -268,7 +268,7 @@ es-MX:
         2-3_Maze_1_a: Para usar un bloque `avanzar`, arrástralo desde el área de la barra de herramientas al espacio de trabajo y conéctelo al bloque`al ejecutar`.
       Course 4 Artist 11_authored_hint:
         Course_4_Artist_11_a: 'El semi-hexágono tiene una ** longitud de 30 ** y gira a la derecha por ** 60 grados **.  '
-        Course_4_Artist_11_b: 'El triángulo 2/3 tiene una ** longitud de 80 ** y gira a la derecha por ** 120 grados **. '
+        Course_4_Artist_11_b: 'El triángulo 2/3 tiene una **longitud de 80** y gira a la derecha por **120 grados**. '
       Course 4 Artist 12_authored_hint:
         Course_4_Artist_12_a: 'Cada forma repetida es la combinación de ** la mitad de un hexágono **, seguida de ** 2/3 de un triángulo **. '
         Course_4_Artist_12_b: 'La forma de la unidad es casi la misma que en el último acertijo, excepto que el medio hexágono es un poco más grande. '
@@ -3888,7 +3888,7 @@ es-MX:
       course1_artist_loops_challenge2_authored_hint:
         harvey_tictactoe: Puedes usar bloques `saltar` para moverte a otros espacios.
       course1_artist_loops_challenge3_authored_hint:
-        courseA_artist_loops_challenge2_a: 'Bloques como este: <xml>  <block type="simple_move_up_left"/></xml> ¡ permitirá que tu artista se mueva de forma inclinada!'
+        courseA_artist_loops_challenge2_a: 'Bloques como este: <xml> <block type="simple_move_up_left"/></xml> ¡permitirá que tu artista se mueva de forma inclinada!'
         courseA_artist_loops_challenge2_b: Cuando termines una casa de pájaros, ¡salta a la siguiente!
         courseA_artist_loops_challenge2_c: Necesitará MUCHOS bloques dentro del ciclo para este desafío.
       course1_artist_loops_challenge4_authored_hint:
@@ -4185,7 +4185,7 @@ es-MX:
         courseB_maze_seq_challenge1_b: Intenta moverte al oeste para comenzar.
       course3_artist_concept_challenge1_authored_hint:
         courseE_artist_concept_challenge1_a: 'El semi-hexágono tiene una ** longitud de 30 ** y gira a la derecha por ** 60 grados **.  '
-        courseE_artist_concept_challenge1_b: 'El triángulo 2/3 tiene una ** longitud de 80 ** y gira a la derecha por ** 120 grados **. '
+        courseE_artist_concept_challenge1_b: 'El triángulo 2/3 tiene una **longitud de 80** y gira a la derecha por **120 grados**. '
       course3_artist_functions_challenge1_authored_hint:
         courseE_artist_functions_challenge1_a: Si llama a la función una vez más, puede crear el mismo diseño en la esquina final. ¡También puedes "saltar a" otras posiciones o cambiar todo como quieras!
       course3_artist_functions_challenge2_authored_hint:
@@ -9535,12 +9535,12 @@ es-MX:
         courseE_artist_concept4_c: Después de dibujar una línea de cuadrados, puedes dar la vuelta y dibujar otra línea de cuadrados hacia la izquierda, o puedes saltar hacia el lado izquierdo de la figura para dibujar otra línea de cuadrados hacia la derecha. ¿Cual prefieres?
       courseE_artist_concept_challenge1_authored_hint:
         courseE_artist_concept_challenge1_a: 'El semi-hexágono tiene una ** longitud de 30 ** y gira a la derecha por ** 60 grados **.  '
-        courseE_artist_concept_challenge1_b: 'El triángulo 2/3 tiene una ** longitud de 80 ** y gira a la derecha por ** 120 grados **. '
+        courseE_artist_concept_challenge1_b: 'El triángulo 2/3 tiene una **longitud de 80** y gira a la derecha por **120 grados**. '
         courseE_artist_concept_challenge1_c: |-
           Este es el diseño que desea repetir para obtener la forma completa:! [] (Https://images.code.org/d6b2afd39119da33d085dcce6077ada8-image-1501705780826.28.43 PM.png)
       courseE_artist_concept_challenge1_2018_authored_hint:
         courseE_artist_concept_challenge1_a: 'El semi-hexágono tiene una ** longitud de 30 ** y gira a la derecha por ** 60 grados **.  '
-        courseE_artist_concept_challenge1_b: 'El triángulo 2/3 tiene una ** longitud de 80 ** y gira a la derecha por ** 120 grados **. '
+        courseE_artist_concept_challenge1_b: 'El triángulo 2/3 tiene una **longitud de 80** y gira a la derecha por **120 grados**. '
         courseE_artist_concept_challenge1_c: |-
           Este es el diseño que desea repetir para obtener la forma completa:! [] (Https://images.code.org/d6b2afd39119da33d085dcce6077ada8-image-1501705780826.28.43 PM.png)
       courseE_artist_concept_challenge2_authored_hint:
@@ -14122,7 +14122,7 @@ es-MX:
         grade4_artist_functions_windows2_b: No debería necesitar agregar ningún ciclo de repetición adicional. Simplemente salta al artista 100 píxeles hacia adelante para cada ventana superior, y 150 píxeles hacia abajo para obtener las ventanas inferiores.
       grade4_artist_nestedLoops_challenge2_authored_hint:
         Course_4_Artist_11_a: 'El semi-hexágono tiene una ** longitud de 30 ** y gira a la derecha por ** 60 grados **.  '
-        Course_4_Artist_11_b: 'El triángulo 2/3 tiene una ** longitud de 80 ** y gira a la derecha por ** 120 grados **. '
+        Course_4_Artist_11_b: 'El triángulo 2/3 tiene una **longitud de 80** y gira a la derecha por **120 grados**. '
       grade4_artist_nested_loop_polygons1_authored_hint:
         4-5_Nested_Loops_7_a: |-
           Este diseño se repetirá 10 veces terminando en 360 grados. ** 360/10 =? **

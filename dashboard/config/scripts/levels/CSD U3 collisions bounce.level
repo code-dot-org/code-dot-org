@@ -30,7 +30,6 @@
       "console.log": null,
       "comment_Variables": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Billiards\r\n\r\nChanging your sprites' velocities will change the ways that they bounce when they touch each other.  Read the code and run it with a partner, then try out different intial velocities for your sprites.  After each change, discuss with your partner what you think will happen before you run the code.\r\n\r\n# Do This\r\nDiscuss with your partner what you think will happen when you run the code, then try it again with the following changes:\r\n* set the purple ball's velocity to 0\r\n* set the purple ball's velocity to 4\r\n* switch the purple and red balls so it says `red_ball.bounce(purple_ball)`\r\n\r\n\r\n[//]: #  (https://images.code.org/8b7730146eaa9d439e6af34c0a21e802-image-1470321391887.png)\r\n\r\n[//]: #  (https://images.code.org/eca470a686b01c19981152fdab808804-image-1470321391888.png)",

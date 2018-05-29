@@ -25,7 +25,7 @@
   petition_message: Всеки ученик в училище трябва да има възможност да учи компютърни
     науки
   petition_sign_message: 'Ако сте съгласни, подпишете се с името си. Присъединете
-    се към # всички останали.'
+    се към # други.'
   petition_sign_message_support: 'Ако ни подкрепяте, запишете се.  Присъединете се
     # към другите.'
   petition_join_others: 'Присъединете се към # другите'
@@ -476,6 +476,9 @@
   homepage_header_donors: Code.org благодари на своите привърженици
   homepage_donors_seall: Вижте всички
   homepage_donors_donate: Дарения
+  homepage_below_hero_announcement_text: We care about your privacy and are making
+    some updates to our privacy policy, effective May 25.
+  homepage_below_hero_announcement_link_text: Научете повече
   contact_form_topic_student: Аз съм ученик
   contact_form_topic_parent: Аз съм родител
   contact_form_topic_teacher: Аз съм учител/обучител
@@ -721,6 +724,10 @@
   volunteer_engineer_submission_field_email_desc: Вашият имейл адрес няма да бъде
     споделен, но ние ще Ви изпратим заявки от учителите.
   volunteer_engineer_submission_field_email_placeholder: Имейл адрес
+  volunteer_engineer_submission_field_email_preference: Can we email you about updates
+    to our courses, volunteer opportunities, or other computer science news?
+  volunteer_engineer_submission_field_email_preference_yes: Да
+  volunteer_engineer_submission_field_email_preference_no: Не
   volunteer_engineer_submission_final_paragraph: Вие ще бъдете отбелязан на картата
     в помощ на местните учители, за да се свържем с Вас за Часът на кода или други
     възможности за доброволчество. Вашата електронна поща и точния адрес няма да бъдат
@@ -1277,6 +1284,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: Пълен тест - 50 въпроса
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'
@@ -2131,13 +2139,5 @@
     Account” option:'
   hero_name: 'Minecraft: Пътуването на героя'
   applab-intro_name: App Lab Intro
-  homepage_below_hero_announcement_text: We care about your privacy and are making
-    some updates to our privacy policy, effective May 25.
-  homepage_below_hero_announcement_link_text: Learn more
-  volunteer_engineer_submission_field_email_preference: Can we email you about updates
-    to our courses, volunteer opportunities, or other computer science news?
   volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
     policy)"
-  volunteer_engineer_submission_field_email_preference_yes: 'Yes'
-  volunteer_engineer_submission_field_email_preference_no: 'No'
-  csp-post-survey_name: Student Post-Course Survey

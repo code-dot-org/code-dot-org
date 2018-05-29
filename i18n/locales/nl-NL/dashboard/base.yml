@@ -114,9 +114,14 @@ nl:
     valid_password: "Geldig wachtwoord!"
     invalid_password: "Wachtwoord moet ten minste 6 tekens lang zijn"
     mismatch_password: "De twee wachtwoorden komen niet overeen"
-    student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/><br/>Email addresses are not stored in a form that allows us to contact students. Students will never recieve emails from Code.org except for password recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more information."
+    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
+    under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
+    agree_us_website: "I agree to using a website based in the United States."
+    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
+    student_terms: "Email addresses are not stored in a form that allows us to contact students. Students will never recieve emails from Code.org except for password recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more information."
     teacher_terms: "I agree to be bound by the Code.org terms of service. For more information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>."
     additional_information: "We hebben aanvullende informatie nodig om door te kunnen gaan met uw registratie."
+    user_type_button: "Update Account Type"
     user_type_label: "Account type"
     user_type_teacher: "Leerkracht"
     user_type_student: "Leerling"
@@ -126,6 +131,7 @@ nl:
     email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
     email_preference_yes: "Ja"
     email_preference_no: "Nee"
+    email_preference_required: "You must specify an email preference."
   school_info:
     title: 'School informatie (optioneel)'
     school_country: 'Land van de school'
@@ -453,6 +459,7 @@ nl:
     student_not_found: "Een of meerdere leerlingen kunnen niet worden gevonden."
     all_students_must_be_in_current_section: "Alle studenten moeten momenteel worden ingeschreven in uw groep."
     already_enrolled_in_new_section: "U kunt deze studenten niet verplaatsen, omdat deze leraar ze in een andere groep heeft."
+    third_party_login: "You cannot move students to a section that is synced with a third party tool."
   share:
     title: "Leer meer op Code Studio"
     description: "Iedereen kan informatica leren. Maak games, apps en kunst met code."
@@ -872,6 +879,7 @@ nl:
     csd5_2: 'Chapter 2: Solving Data Problems'
     csd6_1: 'Hoofdstuk 1: Hardware uitgang'
     csd6_2: 'Hoofdstuk 2: Hardware Input'
+    csd_survey: 'Post-Course Survey'
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Hoofdstuk 2: Uitvinden van het Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -998,3 +1006,10 @@ nl:
     message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
     more_information: "See Code.org's Privacy Policy."
     accept: 'Ik ga akkoord'
+  gdpr_dialog:
+    heading: 'Do you agree to using a web site based in the United States?'
+    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+    link_intro: 'For details see our'
+    privacy_policy: 'privacy policy'
+    logout: 'Logout'
+    yes: 'Ja'

@@ -383,6 +383,8 @@
   homepage_header_donors: "Code.org thanks its supporters"
   homepage_donors_seall: "See all"
   homepage_donors_donate: "दान करे"
+  homepage_below_hero_announcement_text: "We care about your privacy and are making some updates to our privacy policy, effective May 25."
+  homepage_below_hero_announcement_link_text: "अधिक जानें"
   contact_form_topic_student: "मै एक विद्यार्थी हूँ"
   contact_form_topic_parent: "I'm a parent"
   contact_form_topic_teacher: "मैं एक अध्यापक/शिक्षक हूँ"
@@ -553,6 +555,9 @@
   volunteer_engineer_submission_field_email: "ईमेल पता"
   volunteer_engineer_submission_field_email_desc: "Your email address will never be shared, but we'll send you requests from teachers."
   volunteer_engineer_submission_field_email_placeholder: "ईमेल पता"
+  volunteer_engineer_submission_field_email_preference: "Can we email you about updates to our courses, volunteer opportunities, or other computer science news?"
+  volunteer_engineer_submission_field_email_preference_yes: 'हाँ'
+  volunteer_engineer_submission_field_email_preference_no: 'नहीं'
   volunteer_engineer_submission_final_paragraph: "You will be listed on a map for local teachers to contact you for the Hour of Code or other volunteer opportunities. Your email and exact address will NEVER be shared by us. But the other information (including approximate location) will be publicly viewable by local teachers."
   volunteer_engineer_submission_checkbox_contact: 'I agree that teachers can contact me for volunteer opportunities (Note: your email address won''t be shared)'
   volunteer_engineer_submission_checkbox_age_18_plus: "I certify that I am at least 18 years old."
@@ -982,6 +987,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: "Full Test - 50 questions"
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'

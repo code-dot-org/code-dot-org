@@ -62,13 +62,14 @@ Illinois<br>
 Indiana<br>
 Iowa<br>
 Kansas<br>
+Kentucky<br>
 
 [/col-33]
 
 [col-33]
 
-Kentucky<br>
 Maine<br>
+Maryland<br>
 Massachusetts<br>
 Mississippi<br>
 Missouri<br>

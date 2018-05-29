@@ -40,7 +40,6 @@
     "debugger_disabled": "false",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
-    "show_d_pad": "false",
     "pause_animations_by_default": "false",
     "hide_custom_blocks": "false",
     "contained_level_names": null

@@ -62,5 +62,11 @@ module Pd
         SUBJECT_CSF_FIT = SUBJECT_FIT
       ]
     }.freeze
+
+    WORKSHOP_TYPES = {
+      teachercon: SUBJECT_TEACHER_CON,
+      local_summer: SUBJECT_SUMMER_WORKSHOP,
+      both: 'both'
+    }.freeze
   end
 end

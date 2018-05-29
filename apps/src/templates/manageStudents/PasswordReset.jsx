@@ -14,7 +14,8 @@ const styles = {
 class PasswordReset extends Component {
   static propTypes = {
     initialIsResetting: PropTypes.bool,
-    id: PropTypes.number,
+    sectionId: PropTypes.number,
+    studentId: PropTypes.number,
   };
 
   state = {
@@ -36,14 +37,18 @@ class PasswordReset extends Component {
   };
 
   save = () => {
+    const {sectionId, studentId} = this.props;
+    const dataToUpdate = {
+      student: {
+        password: this.state.input
+      }
+    };
+
     $.ajax({
-      url: `/v2/students/${this.props.id}/update`,
-      method: 'POST',
+      url: `/dashboardapi/sections/${sectionId}/students/${studentId}`,
+      method: 'PATCH',
       contentType: 'application/json;charset=UTF-8',
-      data: JSON.stringify({
-        password: this.state.input,
-        editing_password: true,
-      }),
+      data: JSON.stringify(dataToUpdate),
     }).done((data) => {
       this.setState({
         isResetting: false,

@@ -30,7 +30,6 @@
       "console.log": null,
       "comment_Variables": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# bounce()\r\n\r\nYou can also make sprites bounce when they touch each other, as in the code below. Read the code and run it with a partner.  Can you change the code so that the green bird pushes the yellow bird off the wire?\r\n\r\n# Do This\r\n\r\nUse the `bounce` block to make the green bird sprite bounce against the yellow bird sprite.\r\n",

@@ -75,6 +75,7 @@ module.exports.blocks = [
   {func: 'mouseWheel', block: 'function mouseWheel() {}', expansion: 'function mouseWheel() {\n  __;\n}', category: 'World', noAutocomplete: true },
   {func: 'mouseIsOver', paletteParams: ['sprite'], params: ["sprite"], category: 'World', type: 'value' },
   {func: 'mousePressedOver', paletteParams: ['sprite'], params: ["sprite"], category: 'World', type: 'value' },
+  {func: 'showMobileControls', paletteParams: ['spaceButtonVisible', 'dpadVisible', 'dpadFourWay', 'mobileOnly'], params: ["true", "true", "true", "true"], category: 'World' },
   {func: 'allSprites', category: 'World', type: 'readonlyproperty', noAutocomplete: true },
   {func: 'World.allSprites', category: 'World', type: 'readonlyproperty' },
   {func: 'World.width', category: 'World', type: 'readonlyproperty' },
