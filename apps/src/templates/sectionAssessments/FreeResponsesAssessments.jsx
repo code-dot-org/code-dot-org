@@ -29,7 +29,7 @@ const styles = {
 };
 
 export const COLUMNS = {
-  STUDENT: 0,
+  NAME: 0,
   RESPONSE: 1,
 };
 
@@ -46,7 +46,7 @@ class FreeResponsesAssessments extends Component {
   };
 
   state = {
-    [COLUMNS.STUDENT]: {
+    [COLUMNS.NAME]: {
       direction: 'desc',
       position: 0
     }
