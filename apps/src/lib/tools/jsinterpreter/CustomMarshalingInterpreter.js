@@ -3,6 +3,18 @@
 const Interpreter = require('@code-dot-org/js-interpreter');
 const CustomMarshaler = require('./CustomMarshaler');
 
+const DEFAULT_MAX_STEPS = 5e5;
+
+const defaultExecutionInfo = {
+  ticks: DEFAULT_MAX_STEPS,
+  checkTimeout: function () {
+    if (this.ticks-- < 0) {
+      throw 'Infinity';
+    }
+  },
+  isTerminated: () => false,
+};
+
 /**
  * Property access wrapped in try/catch. This is in an indepedendent function
  * so the JIT compiler can optimize the calling function.
@@ -388,16 +400,20 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
    * Generate code for each of the given events, and evaluate it using the
    * provided APIs as context. Note that this does not currently support custom marshaling.
    *
-   * @param {Object} apis - Context to be set as globals in the interpreted runtime.
+   * @param {Object} scope - Context to be set as globals in the interpreted runtime.
    * @param {Object} events - Mapping of hook names to the corresponding handler code.
    *     The handler code is of the form {code: string|Array<string>, args: ?Array<string>}
    * @param {string} [evalCode] - Optional extra code to evaluate.
    * @return {{hooks: Array<{name: string, func: Function}>, interpreter: CustomMarshalingInterpreter}} Mapping of
    *     hook names to the corresponding event handler, and the interpreter that was created to evaluate the code.
    */
-  static evalWithEvents(apis, events, evalCode = '') {
+  static evalWithEvents(scope, events, evalCode = '') {
     let interpreter, currentCallback, lastReturnValue;
     const hooks = [];
+    const apis = {
+      executionInfo: defaultExecutionInfo,
+      ...scope,
+    };
 
     Object.keys(events).forEach(event => {
       let {code, args} = events[event];
@@ -563,14 +579,19 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
    * Note that this does not currently support custom marshaling.
    *
    * @param code {string} - the code to evaluation
-   * @param globals {Object} - An object of globals to be added to the scope of code being executed
+   * @param scope {Object} - An object of globals to be added to the scope of code being executed
    * @param {Object} opts - Additional options to control behavior
    * @param {Array} opts.asyncFunctionList - list of functions to treat asynchronously
    * @param {boolean} opts.legacy - If true, code will be run natively via an eval-like method,
    *     otherwise it will use the js interpreter.
    * @returns the interpreter instance unless legacy=true, in which case, it returns whatever the given code returns.
    */
-  static evalWith(code, globals, {asyncFunctionList, legacy}={}) {
+  static evalWith(code, scope, {asyncFunctionList, legacy}={}) {
+    const globals = {
+      executionInfo: defaultExecutionInfo,
+      ...scope,
+    };
+
     if (legacy) {
       // execute JS code "natively"
       var params = [];
