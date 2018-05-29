@@ -39,12 +39,13 @@ describe('sectionAssessmentsRedux', () => {
   describe('setAssessmentsStructure', () => {
     it('associates the assessment structure data to the correct script', () => {
       const scriptId = 2;
-      const assessmentData = {139:
-        {
+      const assessmentData = {
+        139: {
           id: 139,
           name: "Assessment for Chapter 1",
           questions: {123: {type: "Multi", question_text: "A question", answers: [{text: "answer 1", correct: true}] }}
-      }};
+        }
+      };
       const action = setAssessmentsStructure(scriptId, assessmentData);
       const nextState = sectionAssessments(initialState, action);
       const actualAssessmentData = nextState.assessmentsStructureByScript[scriptId];
