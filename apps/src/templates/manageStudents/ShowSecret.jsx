@@ -18,10 +18,11 @@ class ShowSecret extends Component {
   static propTypes = {
     initialIsShowing: PropTypes.bool,
     student: PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      sectionId: PropTypes.number.isRequired,
       secretWords: PropTypes.string,
       secretPicturePath: PropTypes.string,
       loginType: PropTypes.string.isRequired,
-      sectionId: PropTypes.number.isRequired,
     }).isRequired,
     // Provided in redux
     setSecretImage: PropTypes.func.isRequired,
