@@ -5,14 +5,11 @@ import i18n from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 
-const TABLE_WIDTH = tableLayoutStyles.table.width;
-const MAX_NAME_COLUMN_WIDTH = 200;
 const PADDING = 15;
-
 
 const styles = {
   studentNameColumnHeader: {
-    textAlign: 'center',
+    padding: PADDING,
   },
   studentNameColumnCell : {
     textOverflow: 'ellipsis',
@@ -25,11 +22,6 @@ const styles = {
   responseColumnHeader: {
     padding: PADDING,
   },
-  responseColumnCell: {
-    verticalAlign: 'top',
-    padding: PADDING,
-    maxWidth: TABLE_WIDTH - MAX_NAME_COLUMN_WIDTH,
-  }
 };
 
 export const COLUMNS = {
@@ -88,7 +80,12 @@ class FreeResponsesAssessments extends Component {
           },
         },
         cell: {
-          props: {style:tableLayoutStyles.cell},
+          props: {
+            style: {
+              ...tableLayoutStyles.cell,
+              ...styles.studentNameColumnCell,
+            }
+          },
         }
       },
       {
