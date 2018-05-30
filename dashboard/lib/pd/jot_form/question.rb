@@ -12,9 +12,13 @@ module Pd
         :name, # "unique" (not actually enforced by JotForm) name per form
         :text, # label
         :order, # 1-based order the question appears in the form
+        :hidden,
       )
 
+      alias_method :hidden?, :hidden
+
       def type=(value)
+        value = self.class.sanitize_type(value)
         raise "Invalid type #{value} for #{self.class}" unless self.class.supported_types.include? value
         @type = value
       end
@@ -35,7 +39,8 @@ module Pd
           type: jotform_question['type'],
           name: jotform_question['name'],
           text: jotform_question['text'],
-          order: jotform_question['order'].to_i
+          order: jotform_question['order'].to_i,
+          hidden: jotform_question['hidden'] == 'Yes'
         )
       end
 
@@ -47,7 +52,14 @@ module Pd
           name: name,
           text: text,
           order: order
-        }
+        }.tap do |hash|
+          hash[:hidden] = true if hidden
+        end
+      end
+
+      # Remove the JotForm "control_" prefix from type names, if present.
+      def self.sanitize_type(type)
+        type.delete_prefix('control_')
       end
 
       # Override in derived classes to designate types they represent.
