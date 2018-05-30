@@ -653,6 +653,26 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
   # TODO: Can I test against the reporting db here?
 
+  #
+  # Table: pegasus.forms
+  #
+
+  #
+  # Table: pegasus.form_geos
+  #
+
+  #
+  # Table: pegasus.poste_deliveries
+  #
+
+  #
+  # Table: pegasus.poste_opens
+  #
+
+  #
+  # Table: pegasus.storage_apps
+  #
+
   private
 
   #
