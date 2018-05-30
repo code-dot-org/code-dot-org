@@ -10,6 +10,8 @@ import { announcementShape } from '@cdo/apps/code-studio/scriptAnnouncementsRedu
 import Notification, { NotificationType } from '@cdo/apps/templates/Notification';
 import i18n from '@cdo/locale';
 
+const SCRIPT_OVERVIEW_WIDTH = 1100;
+
 /**
  * This component takes some of the HAML generated content on the script overview
  * page, and moves it under our React root. This is done so that we can have React
@@ -68,6 +70,7 @@ class ScriptOverviewHeader extends Component {
         {viewAs === ViewType.Teacher && isSignedIn &&
           <ScriptAnnouncements
             announcements={verifiedResourcesAnnounce.concat(announcements)}
+            width={SCRIPT_OVERVIEW_WIDTH}
           />
         }
         {showVersionWarning &&
@@ -76,7 +79,7 @@ class ScriptOverviewHeader extends Component {
             notice={i18n.wrongCourseVersionWarningNotice()}
             details={i18n.wrongUnitVersionWarningDetails()}
             dismissible={true}
-            width={1100}
+            width={SCRIPT_OVERVIEW_WIDTH}
           />
         }
         <ProtectedStatefulDiv
