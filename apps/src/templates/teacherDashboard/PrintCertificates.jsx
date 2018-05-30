@@ -38,7 +38,7 @@ class PrintCertificates extends Component {
   };
 
   onClickPrintCerts = () => {
-    $.ajax(`/v2/sections/${this.props.sectionId}/students`).done(result => {
+    $.ajax(`/dashboardapi/sections/${this.props.sectionId}/students`).done(result => {
       const names = result.map(student => student.name);
       this.setState({names}, this.submitForm);
     });
