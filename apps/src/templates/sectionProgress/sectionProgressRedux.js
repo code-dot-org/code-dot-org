@@ -1,4 +1,4 @@
-import { getLevelResult, levelsByLesson } from '@cdo/apps/code-studio/progressRedux';
+import { levelsByLesson } from '@cdo/apps/code-studio/progressRedux';
 import { processedLevel } from '@cdo/apps/templates/progress/progressHelpers';
 import { PropTypes } from 'react';
 import {
@@ -298,14 +298,7 @@ export const loadScript = (scriptId) => {
       return fetch(url, { credentials: 'include' })
         .then(response => response.json())
         .then((data) => {
-          console.log("data from API call to section_level_progress", data);
-          // ERIN - you need to rework what this function returns so that it includes whether the students paired on this level or not.
-          const dataByStudent = data.students;
-          let studentLevelProgress = {};
-          Object.keys(dataByStudent).forEach((studentId) => {
-            studentLevelProgress[studentId] = _.mapValues(dataByStudent[studentId], getLevelResult);
-          });
-          dispatch(addStudentLevelProgress(scriptId, studentLevelProgress));
+          dispatch(addStudentLevelProgress(scriptId, data.students));
         });
     });
 

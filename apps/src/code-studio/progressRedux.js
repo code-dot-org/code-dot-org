@@ -409,6 +409,7 @@ const levelWithStatus = ({levelProgress, currentLevelId}, level) => {
   return {
     ...processedLevel(level),
     status: statusForLevel(level, levelProgress),
+    paired: pairingForLevel(level, levelProgress),
     isCurrentLevel: isCurrentLevel(currentLevelId, level),
   };
 };
@@ -453,6 +454,11 @@ export const getPercentPerfect = levels => {
   return perfected / puzzleLevels.length;
 };
 
+export function pairingForLevel(level, levelProgress) {
+  if (levelProgress[level.activeId]) {
+    return levelProgress[level.activeId].paired;
+  }
+}
 /**
  * Given a level and levelProgress (both from our redux store state), determine
  * the status for that level.
