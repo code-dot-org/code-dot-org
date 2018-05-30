@@ -36,14 +36,14 @@ export default class Results extends React.Component {
         <tbody>
           {
             Object.entries(this.props.questions[session]['general']).map(([question_key, question_data], i) => {
-              if (question_data['answer_type'] === 'selectValue' || question_data['answer_type'] === 'none') {
+              if (['selectValue', 'none'].includes(question_data['answer_type'])) {
                 return (
                   <tr key={i}>
                     <td
                       dangerouslySetInnerHTML={{__html: question_data['text']}}// eslint-disable-line react/no-danger
                     />
                     <td>
-                      {this.answerObjectToAverage(this.props.thisWorkshop[session]['general'][question_key])}
+                      {this.computeAverageFromAnswerObject(this.props.thisWorkshop[session]['general'][question_key])}
                     </td>
                   </tr>
                 );
@@ -180,7 +180,7 @@ export default class Results extends React.Component {
     ));
   }
 
-  answerObjectToAverage(answerHash) {
+  computeAverageFromAnswerObject(answerHash) {
     let sum = 0;
     Object.keys(answerHash).map((key) => {
       if (Number(key) > 0) {

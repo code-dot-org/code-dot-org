@@ -4,46 +4,39 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
   include Pd::WorkshopSurveyResultsHelper
   include Pd::JotForm::Constants
 
+  PRE_SURVEY_STUBBED_FORM_ID = 1
+
   setup_all do
     @workshop = create :pd_workshop, :local_summer_workshop, course: Pd::SharedWorkshopConstants::COURSE_CSP, num_facilitators: 2
 
+    @questions = [
+      Pd::JotForm::MatrixQuestion.new(
+        id: 1,
+        name: 'sampleMatrix',
+        type: TYPE_MATRIX,
+        text: 'How do you feel about these statements?',
+        options: %w(Strongly\ Agree Agree Neutral Disagree Strongly\ Disagree),
+        sub_questions: ['I am excited for {workshopCourse}', 'I am prepared for {workshopCourse}']
+      ),
+      Pd::JotForm::ScaleQuestion.new(
+        id: 2,
+        name: 'sampleScale',
+        text: 'Do you like {workshopCourse}?',
+        options: %w(Strongly\ Agree Strongly\ Disagree),
+        values: (1..5).to_a,
+        type: TYPE_SCALE
+      ),
+      Pd::JotForm::TextQuestion.new(
+        id: 3,
+        name: 'sampleText',
+        text: 'Write some thoughts here',
+        type: TYPE_TEXTBOX
+      )
+    ]
+
     Pd::SurveyQuestion.create(
-      form_id: CDO.jotform_forms['local']['day_0'],
-      questions: [
-        Pd::JotForm::MatrixQuestion.from_jotform_question(
-          {
-            qid: '1',
-            type: TYPE_MATRIX,
-            name: 'sampleMatrix',
-            text: 'How do you feel about these statements?',
-            order: '1',
-            mcolumns: 'Strongly Agree|Agree|Neutral|Disagree|Strongly Disagree',
-            mrows: 'I am excited for {workshopCourse}|I am prepared for {workshopCourse}'
-          }.stringify_keys
-        ),
-        Pd::JotForm::ScaleQuestion.from_jotform_question(
-          {
-            qid: '2',
-            type: TYPE_SCALE,
-            name: 'sampleScale',
-            text: 'Do you like {workshopCourse}?',
-            order: '1',
-            scaleFrom: '1',
-            scaleAmount: '5',
-            fromText: 'Strongly Agree',
-            toText: 'Strongly Disagree'
-          }.stringify_keys
-        ),
-        Pd::JotForm::TextQuestion.from_jotform_question(
-          {
-            qid: '3',
-            type: TYPE_TEXTBOX,
-            name: 'sampleText',
-            text: 'Write some thoughts here',
-            order: '4'
-          }.stringify_keys
-        )
-      ].to_json
+      form_id: PRE_SURVEY_STUBBED_FORM_ID,
+      questions: Pd::JotForm::FormQuestions.new(PRE_SURVEY_STUBBED_FORM_ID, @questions).serialize.to_json
     )
 
     @expected_questions = {
@@ -218,11 +211,14 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
   end
 
   test 'daily survey get_question_for_forms gets workshop questions and substitutes question texts' do
-    assert_equal(@expected_questions, get_questions_for_forms(@workshop)
-    )
+    CDO.stubs(:jotform_forms).returns({'local' => {'day_0' => PRE_SURVEY_STUBBED_FORM_ID}})
+
+    assert_equal(@expected_questions, get_questions_for_forms(@workshop))
   end
 
   test 'generate workshop survey summary works as expected' do
+    CDO.stubs(:jotform_forms).returns({'local' => {'day_0' => PRE_SURVEY_STUBBED_FORM_ID}})
+
     common_survey_hash = {
       form_id: CDO.jotform_forms['local']['day_0'],
       pd_workshop: @workshop,

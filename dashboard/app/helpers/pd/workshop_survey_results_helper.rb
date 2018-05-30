@@ -184,6 +184,8 @@ module Pd::WorkshopSurveyResultsHelper
 
     workshop_summary = {}
 
+    # Each session will have at least one response section - general. Some may have a
+    # second one - facilitator
     questions.each do |session, response_sections|
       surveys_for_session = surveys[session]
 
@@ -233,7 +235,9 @@ module Pd::WorkshopSurveyResultsHelper
               end
               session_summary[:facilitator][q_key] = facilitator_response_averages
             else
-              # For non facilitator specific responses, just return a histogram with nulls removed
+              # For non facilitator specific responses, just return a frequency map with
+              # nulls removed
+              # [1, 1, 2, 2, 3, 5, 7, 7, 7, 7, 7, nil, nil] => {1: 2, 2: 2, 3: 1, 5: 1, 7: 5}
               summary = Hash[*surveys_for_session[response_section].map {|survey| survey[q_key]}.group_by {|v| v}.flat_map {|k, v| [k, v.size]}]
 
               session_summary[response_section][q_key] = summary.reject {|k, _| k.nil?}
