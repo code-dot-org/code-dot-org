@@ -1,6 +1,6 @@
 import React from 'react';
 import FreeResponsesSurveyTable from './FreeResponsesSurveyTable';
-import { surveyOne, surveyTwo } from './assessmentsTestHelpers';
+import {surveyOne, surveyTwo} from './assessmentsTestHelpers';
 
 export default storybook => {
   return storybook
