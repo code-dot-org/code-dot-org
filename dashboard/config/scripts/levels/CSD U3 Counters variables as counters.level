@@ -38,7 +38,6 @@
       "multiplyOperator": null,
       "divideOperator": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# x = x + 1\r\n\r\nThe following line of code **is the most important one to understand in this lesson**.\r\n\r\n`x = x + 1;`\r\n\r\nTry it out in a program first, then move on to **learn more about what this command is doing**.\r\n\r\n# Do This:\r\n\r\n* **Read the program to get a sense of how it should run**\r\n* **Run the program** and observe how it works\r\n* **Discuss with a neighbor** what you observe and why you think it is happening. Once you've talked, move on.",

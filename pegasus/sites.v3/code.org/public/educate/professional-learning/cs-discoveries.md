@@ -62,9 +62,7 @@ Georgia<br>
 Hawaii<br>
 Idaho<br>
 Illinois<br>
-Indiana<br>
 Iowa<br>
-Kansas<br>
 Kentucky<br>
 
 [/col-33]
@@ -72,11 +70,9 @@ Kentucky<br>
 [col-33]
 
 Maine<br>
+Maryland<br>
 Massachusetts<br>
-Michigan<br>
-Minnesota<br>
 Mississippi<br>
-Missouri<br>
 Montana<br>
 New Hampshire<br>
 New Jersey<br>

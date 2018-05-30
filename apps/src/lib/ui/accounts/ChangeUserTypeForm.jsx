@@ -53,7 +53,7 @@ export default class ChangeUserTypeForm extends React.Component {
       <span>
         {i18n.changeUserTypeModal_emailOptIn_description()}
         {' '}
-        <a href={pegasus('/privacy')} tabIndex="3">
+        <a href={pegasus('/privacy')} tabIndex="3" target="_blank">
           {i18n.changeUserTypeModal_emailOptIn_privacyPolicy()}
         </a>
       </span>

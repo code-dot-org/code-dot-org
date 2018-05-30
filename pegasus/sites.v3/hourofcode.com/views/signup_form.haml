@@ -109,6 +109,8 @@
       .form-group
         %label.control-label{for: "hoc-email-preference-opt-in"}
           = hoc_s(:signup_email_preference_opt_in)
+          %a{href: codeorg_url('/privacy'), target: '_blank'}
+            = hoc_s(:signup_email_preference_privacy)
           %span.required*
         %div
           %select#email-preference.form-control{name: "email_preference_opt_in_s", type: "select"}

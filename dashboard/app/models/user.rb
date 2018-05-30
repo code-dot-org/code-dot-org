@@ -156,9 +156,12 @@ class User < ActiveRecord::Base
     the_school_project
     twitter
     windowslive
+    powerschool
   ).freeze
 
   SYSTEM_DELETED_USERNAME = 'sys_deleted'
+
+  RESET_SECRETS = 'reset_secrets'.freeze
 
   # :user_type is locked. Use the :permissions property for more granular user permissions.
   USER_TYPE_OPTIONS = [
@@ -437,11 +440,14 @@ class User < ActiveRecord::Base
     [nil, ''],
     ['gender.male', 'm'],
     ['gender.female', 'f'],
-    ['gender.none', '-']
+    ['gender.non_binary', 'n'],
+    ['gender.not_listed', 'o'],
+    ['gender.none', '-'],
   ].freeze
 
   DATA_TRANSFER_AGREEMENT_SOURCE_TYPES = [
-    ACCOUNT_SIGN_UP = 'ACCOUNT_SIGN_UP'.freeze
+    ACCOUNT_SIGN_UP = 'ACCOUNT_SIGN_UP'.freeze,
+    ACCEPT_DATA_TRANSFER_DIALOG = 'ACCEPT_DATA_TRANSFER_DIALOG'.freeze
   ].freeze
 
   attr_accessor :login
@@ -684,6 +690,10 @@ class User < ActiveRecord::Base
       'f'
     when 'm', 'male'
       'm'
+    when 'o', 'notlisted'
+      'o'
+    when 'n', 'nonbinary', 'non-binary'
+      'n'
     else
       nil
     end
@@ -1227,6 +1237,11 @@ class User < ActiveRecord::Base
     return nil
   end
 
+  def reset_secrets
+    generate_secret_picture
+    generate_secret_words
+  end
+
   def generate_secret_picture
     self.secret_picture = SecretPicture.random
   end
@@ -1751,6 +1766,11 @@ class User < ActiveRecord::Base
   # WARNING: This does not purge the user, only marks them as such.
   def clear_user_and_mark_purged
     random_suffix = (('0'..'9').to_a + ('a'..'z').to_a).sample(8).join
+
+    authentication_options.with_deleted.each(&:really_destroy!)
+
+    districts.clear
+    self.district_as_contact = nil
 
     self.studio_person_id = nil
     self.name = nil

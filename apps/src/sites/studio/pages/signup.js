@@ -72,7 +72,7 @@ window.SignupManager = function (options) {
     showTeacher();
   }
 
-  function formSuccess(success) {
+  this.formSuccess = function (success) {
     var url;
     if (self.options.returnToUrl !== "") {
       url = self.options.returnToUrl;
@@ -83,9 +83,9 @@ window.SignupManager = function (options) {
     }
 
     window.location.href = url;
-  }
+  };
 
-  function formError(err) {
+  this.formError = function (err) {
     // re-enable "Sign up" button upon error
     $('#signup-button').prop('disabled', false);
 
@@ -135,7 +135,7 @@ window.SignupManager = function (options) {
       $('#signup-error').show();
     }
 
-  }
+  };
 
   $("#user_user_type").change(function () {
     var value = $(this).val();
@@ -331,7 +331,7 @@ window.SignupManager = function (options) {
       type: "post",
       dataType: "json",
       data: formData
-    }).done(formSuccess).fail(formError);
+    }).done(self.formSuccess).fail(self.formError);
 
     return false;
   });

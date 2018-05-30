@@ -894,6 +894,14 @@ class UserTest < ActiveSupport::TestCase
     assert user.under_13?
   end
 
+  test "reset_secrets calls generate_secret_picture and generate_secret_words" do
+    user = create :user
+
+    user.expects(:generate_secret_picture).once
+    user.expects(:generate_secret_words).once
+    user.reset_secrets
+  end
+
   test "no send reset password for blank email" do
     error_user = User.send_reset_password_instructions(email: '')
     assert error_user.errors[:email]
@@ -1563,15 +1571,23 @@ class UserTest < ActiveSupport::TestCase
   test 'normalize_gender' do
     assert_equal 'f', User.normalize_gender('f')
     assert_equal 'm', User.normalize_gender('m')
+    assert_equal 'n', User.normalize_gender('n')
+    assert_equal 'o', User.normalize_gender('o')
 
     assert_equal 'f', User.normalize_gender('F')
     assert_equal 'm', User.normalize_gender('M')
+    assert_equal 'n', User.normalize_gender('N')
+    assert_equal 'o', User.normalize_gender('O')
 
     assert_equal 'f', User.normalize_gender('Female')
     assert_equal 'm', User.normalize_gender('Male')
+    assert_equal 'n', User.normalize_gender('NonBinary')
+    assert_equal 'o', User.normalize_gender('NotListed')
 
     assert_equal 'f', User.normalize_gender('female')
     assert_equal 'm', User.normalize_gender('male')
+    assert_equal 'n', User.normalize_gender('non-binary')
+    assert_equal 'o', User.normalize_gender('notlisted')
 
     assert_nil User.normalize_gender('some nonsense')
     assert_nil User.normalize_gender('')
