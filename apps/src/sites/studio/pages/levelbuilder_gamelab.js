@@ -40,6 +40,7 @@ $(document).ready(function () {
         if (!Array.isArray(blocks)) {
           return [blocks];
         }
+        return blocks;
       }
     });
   }
