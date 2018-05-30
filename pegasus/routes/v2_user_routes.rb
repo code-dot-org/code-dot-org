@@ -1,3 +1,5 @@
+require 'honeybadger'
+
 get '/v2/user' do
   only_for 'code.org'
   dont_cache
