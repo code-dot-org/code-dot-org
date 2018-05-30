@@ -17,6 +17,8 @@ module EmailPreferenceConstants
     FORM_PETITION = 'FORM_PETITION'.freeze,
     # A one-time automated script sets all Petition submissions younger than 16 and older than 13 to opted out to comply
     # with GDPR.
-    AUTOMATED_OPT_OUT_UNDER_16 = 'AUTOMATED_OPT_OUT_UNDER_16'.freeze
+    AUTOMATED_OPT_OUT_UNDER_16 = 'AUTOMATED_OPT_OUT_UNDER_16'.freeze,
+    # Used by bin/oneoff/backfill_data/initialize_email_preference_from_pardot to bulk load entries.
+    AUTOMATED_INITIALIZE_FROM_PARDOT = 'AUTOMATED_INITIALIZE_FROM_PARDOT'.freeze
   ].freeze
 end

@@ -3,13 +3,24 @@
 require_relative('../../../dashboard/config/environment')
 require 'cdo/only_one'
 
-BATCH_SIZE = 100
+BATCH_SIZE = 10
 
 def main
-  CSV.foreach("testPardotExport.OptOut.csv", headers: true).each_slice(BATCH_SIZE) do |rows|
-    puts "Next Slice!"
-    rows.each do |row|
-      puts row.to_s
+  AWS::S3.process_file('cdo-temp', 'pardot-exports/testPardotExport.OptOut.csv') do |filename|
+    CSV.foreach(filename, headers: true).each_slice(BATCH_SIZE) do |slice|
+      slice.each do |row|
+        begin
+          EmailPreference.upsert!(
+            email: row.field('Email'),
+            opt_in: row.field('db_Opt_In') == 'Yes',
+            ip_address: row.field('Country') || EmailPreference::CODE_DOT_ORG,
+            source: EmailPreference::AUTOMATED_INITIALIZE_FROM_PARDOT,
+            form_kind: nil
+          )
+        rescue StandardError => error
+          puts "Error loading email - #{row.field('Email')} - #{error}"
+        end
+      end
     end
   end
 end
