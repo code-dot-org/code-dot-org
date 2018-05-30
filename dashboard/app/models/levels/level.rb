@@ -483,14 +483,22 @@ class Level < ActiveRecord::Base
     summary
   end
 
+  # Overriden by some child classes
+  def get_question_text
+    properties['markdown_instructions']
+  end
+
   # Used for individual levels in assessments
-  # Overriden by some children
   def question_summary
     summary = summarize
+
     %w(title answers).each do |key|
       value = properties[key] || try(key)
       summary[key] = value if value
     end
+
+    summary[:question_text] = get_question_text
+
     summary
   end
 
