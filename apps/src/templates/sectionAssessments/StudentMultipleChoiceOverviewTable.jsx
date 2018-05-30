@@ -20,9 +20,9 @@ const studentOverviewDataPropType = PropTypes.shape({
   numMultipleChoiceCorrect: PropTypes.number.isRequired,
   numMultipleChoice: PropTypes.number.isRequired,
   percentCorrect: PropTypes.string.isRequired,
-  submissionTimestamp: PropTypes.string.isRequired,
-  submissionStatus: PropTypes.string.isRequired,
-  isSubmitted: PropTypes.bool.isRequired,
+  submissionTimestamp: PropTypes.string,
+  submissionStatus: PropTypes.string,
+  isSubmitted: PropTypes.bool,
 });
 
 class StudentAssessmentOverviewTable extends Component {
