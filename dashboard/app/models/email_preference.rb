@@ -41,7 +41,7 @@ class EmailPreference < ApplicationRecord
     email_preference = EmailPreference.find_or_initialize_by(email: email)
     # Don't change opt_in to false if a preference with opt_in = true exists already.
     # We currently only enable a user to opt out via the Pardot unsubscribe link.
-    unless !email_preference.new_record? && !opt_in && email_preference.opt_in
+    if email_preference.new_record? || opt_in || !email_preference.opt_in
       email_preference.update!(
         email: email,
         opt_in: opt_in,

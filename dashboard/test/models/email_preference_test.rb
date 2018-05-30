@@ -43,17 +43,18 @@ class EmailPreferenceTest < ActiveSupport::TestCase
 
   test "upsert email preference that is already opted in does not opt out" do
     existing_email_preference = create :email_preference, opt_in: true
+    email = existing_email_preference.email
     EmailPreference.upsert!(
-      email: existing_email_preference.email,
+      email: email,
       opt_in: false,
       ip_address: '172.16.6.1',
       source: EmailPreference::ACCOUNT_SIGN_UP,
       form_kind: 'form text version 3.14159'
     )
-    updated_email_preference = EmailPreference.find_by(email: existing_email_preference.email)
+    updated_email_preference = EmailPreference.find_by(email: email)
     # opt_in is still true.
     assert updated_email_preference.opt_in
-    # All the attributes of the email preference are the same (no updated carried out).
+    # All the attributes of the email preference are the same (no update carried out).
     assert existing_email_preference == updated_email_preference
   end
 end
