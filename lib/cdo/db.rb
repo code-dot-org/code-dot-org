@@ -19,13 +19,15 @@ def sequel_connect(writer, reader, validation_frequency: nil)
         encoding: 'utf8mb4',
         default_group: 'cdo',
         reconnect: true,
-        connect_timeout: 2
+        connect_timeout: 2,
+        test: false # Disable connection test for backwards compatibility.
     else
       Sequel.connect writer,
         encoding: 'utf8mb4',
         default_group: 'cdo',
         reconnect: true,
-        connect_timeout: 2
+        connect_timeout: 2,
+        test: false # Disable connection test for backwards compatibility.
     end
 
   db.extension :server_block
@@ -41,8 +43,14 @@ def sequel_connect(writer, reader, validation_frequency: nil)
   # using bin/pegasus-server.
   #db.loggers << $log if rack_env?(:development) && $log
 
-  db
+  # Enable deprecated Dataset#and method for backwards compatibility.
+  db.extension(:sequel_4_dataset_methods)
+  # Enable string literals in dataset filtering methods for backwards compatibility.
+  db.extension :auto_literal_strings
 end
+
+# Enable symbol splitting of qualified identifiers for backwards compatibility.
+Sequel.split_symbols = true
 
 PEGASUS_DB = sequel_connect CDO.pegasus_db_writer, CDO.pegasus_db_reader
 POSTE_DB = PEGASUS_DB
