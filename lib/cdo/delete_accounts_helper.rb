@@ -58,11 +58,6 @@ class DeleteAccountsHelper
   # Removes the link between the user's level-backed progress and the progress itself.
   # @param [Integer] user_id The user to clean the LevelSource-backed progress of.
   def clean_level_source_backed_progress(user_id)
-    GalleryActivity.where(user_id: user_id).each do |gallery_activity|
-      gallery_activity.level_source.try(:clear_data_and_image)
-    end
-    GalleryActivity.where(user_id: user_id).destroy_all
-
     UserLevel.where(user_id: user_id).find_each do |user_level|
       user_level.update!(level_source_id: nil)
     end
@@ -76,6 +71,10 @@ class DeleteAccountsHelper
       OverflowActivity.where(user_id: user_id).find_each do |activity|
         activity.update!(level_source_id: nil)
       end
+    end
+
+    GalleryActivity.where(user_id: user_id).each do |gallery_activity|
+      gallery_activity.update!(level_source_id: nil)
     end
 
     AuthoredHintViewRequest.where(user_id: user_id).each(&:clear_level_source_associations)
