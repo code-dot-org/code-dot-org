@@ -950,7 +950,7 @@ class Script < ActiveRecord::Base
     nil
   end
 
-  def summarize(include_stages=true)
+  def summarize(include_stages = true, user = nil)
     if has_peer_reviews?
       levels = []
       peer_reviews_to_complete.times do |x|
@@ -996,6 +996,7 @@ class Script < ActiveRecord::Base
       has_lesson_plan: has_lesson_plan?,
       script_announcements: script_announcements,
       age_13_required: logged_out_age_13_required?,
+      show_version_warning: course.try(:wrong_version?, user),
     }
 
     summary[:stages] = stages.map(&:summarize) if include_stages
