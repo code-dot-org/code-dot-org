@@ -17,13 +17,11 @@ const styles = {
 class ShowSecret extends Component {
   static propTypes = {
     initialIsShowing: PropTypes.bool,
-    student: PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      sectionId: PropTypes.number.isRequired,
-      secretWords: PropTypes.string,
-      secretPicturePath: PropTypes.string,
-      loginType: PropTypes.string.isRequired,
-    }).isRequired,
+    secretWord: PropTypes.string,
+    secretPicture: PropTypes.string,
+    loginType: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
+    sectionId: PropTypes.number.isRequired,
     // Provided in redux
     setSecretImage: PropTypes.func.isRequired,
     setSecretWords: PropTypes.func.isRequired,
@@ -46,22 +44,21 @@ class ShowSecret extends Component {
   };
 
   reset = () => {
-    const {student, setSecretImage, setSecretWords} = this.props;
     const dataToUpdate = {
       secrets: "reset_secrets",
-      student
+      student: {id: this.props.id}
     };
 
     $.ajax({
-      url: `/dashboardapi/sections/${student.sectionId}/students/${student.id}`,
+      url: `/dashboardapi/sections/${this.props.sectionId}/students/${this.props.id}`,
       method: 'PATCH',
       contentType: 'application/json;charset=UTF-8',
       data: JSON.stringify(dataToUpdate),
     }).done((data) => {
-      if (student.loginType === SectionLoginType.picture) {
-        setSecretImage(student.id, data.secret_picture_path);
-      } else if (student.loginType === SectionLoginType.word) {
-        setSecretWords(student.id, data.secret_words);
+      if (this.props.loginType === SectionLoginType.picture) {
+        this.props.setSecretImage(this.props.id, data.secret_picture_path);
+      } else if (this.props.loginType === SectionLoginType.word) {
+        this.props.setSecretWords(this.props.id, data.secret_words);
       }
     }).fail((jqXhr, status) => {
       // We may want to handle this more cleanly in the future, but for now this
@@ -72,7 +69,6 @@ class ShowSecret extends Component {
   };
 
   render() {
-    const {student} = this.props;
     return (
       <div>
         {!this.state.isShowing &&
@@ -80,11 +76,11 @@ class ShowSecret extends Component {
         }
         {this.state.isShowing &&
           <div>
-            {student.loginType === SectionLoginType.word &&
-              <p>{student.secretWords}</p>
+            {this.props.loginType === SectionLoginType.word &&
+              <p>{this.props.secretWord}</p>
             }
-            {student.loginType === SectionLoginType.picture &&
-              <img src={'/images/' + student.secretPicturePath} style={styles.image} />
+            {this.props.loginType === SectionLoginType.picture &&
+              <img src={'/images/' + this.props.secretPicture} style={styles.image} />
             }
             <Button onClick={this.reset} color={Button.ButtonColor.blue} text={i18n.reset()} style={styles.reset} />
             <Button onClick={this.hide} color={Button.ButtonColor.white} text={i18n.hideSecret()} />

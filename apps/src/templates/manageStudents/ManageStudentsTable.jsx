@@ -184,7 +184,11 @@ class ManageStudentsTable extends Component {
             {(rowData.loginType === SectionLoginType.word || rowData.loginType === SectionLoginType.picture) &&
               <ShowSecret
                 initialIsShowing={false}
-                student={rowData}
+                secretWord={rowData.secretWords}
+                secretPicture={rowData.secretPicturePath}
+                loginType={rowData.loginType}
+                id={rowData.id}
+                sectionId={sectionId}
               />
             }
           </div>
