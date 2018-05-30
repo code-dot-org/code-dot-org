@@ -274,6 +274,21 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # Table: dashboard.user_levels
+  #
+
+  test "Disconnects user_levels from level_sources" do
+    user_level = create :user_level, level_source: create(:level_source)
+
+    refute_nil user_level.level_source_id
+
+    purge_user user_level.user
+    user_level.reload
+
+    assert_nil user_level.level_source_id
+  end
+
+  #
   # Table: dashboard.authentication_options
   # Note: acts_as_paranoid
   #
