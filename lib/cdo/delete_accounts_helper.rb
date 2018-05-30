@@ -231,4 +231,16 @@ class DeleteAccountsHelper
     user.purged_at = Time.zone.now
     user.save(validate: false)
   end
+
+  # Given an email address, locates all accounts (including soft-deleted accounts)
+  # associated with that email address and purges each of them in turn.
+  # @param [String] email an email address.
+  def purge_all_accounts_with_email(email)
+    # Note: Not yet taking into account parent_email or users with multiple
+    # email addresses tied to their account - we'll have to do that later.
+    (
+      User.with_deleted.where(email: email) +
+      User.with_deleted.where(hashed_email: User.hash_email(email))
+    ).each {|u| purge_user u}
+  end
 end
