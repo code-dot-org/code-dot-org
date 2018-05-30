@@ -894,6 +894,14 @@ class UserTest < ActiveSupport::TestCase
     assert user.under_13?
   end
 
+  test "reset_secrets calls generate_secret_picture and generate_secret_words" do
+    user = create :user
+
+    user.expects(:generate_secret_picture).once
+    user.expects(:generate_secret_words).once
+    user.reset_secrets
+  end
+
   test "no send reset password for blank email" do
     error_user = User.send_reset_password_instructions(email: '')
     assert error_user.errors[:email]
