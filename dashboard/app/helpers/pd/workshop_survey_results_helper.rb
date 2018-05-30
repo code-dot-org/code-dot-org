@@ -258,24 +258,63 @@ module Pd::WorkshopSurveyResultsHelper
     {
       'Pre Workshop' => {
         general: pre_workshop_submissions.map(&:form_data_hash)
-      }
+      },
+      'Day 1' => {
+        general: []
+      },
+      'Day 2' => {
+        general: []
+      },
+      'Day 3' => {
+        general: []
+      },
+      'Day 4' => {
+        general: []
+      },
     }
   end
 
   def get_questions_for_forms(workshop)
-    pre_workshop_general = Pd::SurveyQuestion.find_by(form_id: CDO.jotform_forms['local']['day_0'])
-    pre_workshop_general_summary = pre_workshop_general.summarize
+    # pre_workshop_general = Pd::SurveyQuestion.find_by(form_id: CDO.jotform_forms['local']['day_0'])
+    # pre_workshop_general_summary = pre_workshop_general.summarize
+    #
+    # pre_workshop_general_summary.each do |_, question|
+    #   if question[:text].match? '{.*}'
+    #     question[:text] = question[:text].gsub '{workshopCourse}', workshop.course
+    #   end
+    # end
 
-    pre_workshop_general_summary.each do |_, question|
+    {
+      'Pre Workshop' => {
+        general: get_summary_for_form(CDO.jotform_forms['local']['day_0'], workshop)
+      },
+      'Day 1' => {
+        general: get_summary_for_form(CDO.jotform_forms['local']['day_1'], workshop)
+      },
+      'Day 2' => {
+        general: get_summary_for_form(CDO.jotform_forms['local']['day_2'], workshop)
+      },
+      'Day 3' => {
+        general: get_summary_for_form(CDO.jotform_forms['local']['day_3'], workshop)
+      },
+      'Day 4' => {
+        general: get_summary_for_form(CDO.jotform_forms['local']['day_4'], workshop)
+      }
+    }
+  end
+
+  private
+
+  def get_summary_for_form(form_id, workshop)
+    survey = Pd::SurveyQuestion.find_by(form_id: form_id)
+    summary = survey.summarize
+
+    summary.each do |_, question|
       if question[:text].match? '{.*}'
         question[:text] = question[:text].gsub '{workshopCourse}', workshop.course
       end
     end
 
-    {
-      'Pre Workshop' => {
-        general: pre_workshop_general_summary
-      }
-    }
+    summary
   end
 end

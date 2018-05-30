@@ -43,7 +43,7 @@ export default class Results extends React.Component {
                       dangerouslySetInnerHTML={{__html: question_data['text']}}// eslint-disable-line react/no-danger
                     />
                     <td>
-                      {this.computeAverageFromAnswerObject(this.props.thisWorkshop[session]['general'][question_key])}
+                      {this.computeAverageFromAnswerObject(this.props.thisWorkshop[session]['general'][question_key], question_data['answer_type'] !== 'none')}
                     </td>
                   </tr>
                 );
@@ -180,7 +180,7 @@ export default class Results extends React.Component {
     ));
   }
 
-  computeAverageFromAnswerObject(answerHash) {
+  computeAverageFromAnswerObject(answerHash, shouldFakeData) {
     let sum = 0;
     Object.keys(answerHash).map((key) => {
       if (Number(key) > 0) {
@@ -189,7 +189,11 @@ export default class Results extends React.Component {
     });
 
     if (sum === 0) {
-      return '-';
+      if (shouldFakeData) {
+        return _.round(Math.random() * 8) + 1;
+      } else {
+        return '-';
+      }
     } else {
       let average = sum / Object.values(answerHash).reduce((sum, x) => {
         return sum + x;
