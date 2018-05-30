@@ -455,13 +455,17 @@ class Level < ActiveRecord::Base
     end
   end
 
-  def summary_for_lesson_plans
-    summary = {
+  def summarize
+    {
       level_id: id,
       type: self.class.to_s,
       name: name,
       display_name: display_name
     }
+  end
+
+  def summary_for_lesson_plans
+    summary = summarize
 
     %w(title questions answers instructions markdown_instructions markdown teacher_markdown pages reference).each do |key|
       value = properties[key] || try(key)
@@ -476,6 +480,17 @@ class Level < ActiveRecord::Base
       summary[:contained_levels] = contained_levels.map(&:summary_for_lesson_plans)
     end
 
+    summary
+  end
+
+  # Used for individual levels in assessments
+  # Overriden by some children
+  def question_summary
+    summary = summarize
+    %w(title answers).each do |key|
+      value = properties[key] || try(key)
+      summary[key] = value if value
+    end
     summary
   end
 

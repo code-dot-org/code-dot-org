@@ -59,4 +59,10 @@ ruby
     end
     return question_text
   end
+
+  def question_summary
+    summary = super
+    summary['question_text'] = get_question_text
+    summary
+  end
 end
