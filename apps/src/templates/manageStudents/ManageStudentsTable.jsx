@@ -188,6 +188,7 @@ class ManageStudentsTable extends Component {
                 secretPicture={rowData.secretPicturePath}
                 loginType={rowData.loginType}
                 id={rowData.id}
+                sectionId={sectionId}
               />
             }
           </div>
