@@ -52,4 +52,10 @@ class FreeResponse < Level
   def icon
     'fa-check-square-o'
   end
+
+  def question_summary
+    summary = super
+    summary['question_text'] = properties['markdown_instructions']
+    summary
+  end
 end
