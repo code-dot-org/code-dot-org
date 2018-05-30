@@ -88,7 +88,7 @@ export default function sectionAssessments(state=initialState, action) {
 // Selector functions
 
 export const getAssessmentsForCurrentScript = (state) => {
-  return state.sectionAssessments.assessmentsByScript[state.scriptSelection.scriptId] || [];
+  return state.sectionAssessments.assessmentsByScript[state.scriptSelection.scriptId] || {};
 };
 
 // Make a request to the server for assessment data
