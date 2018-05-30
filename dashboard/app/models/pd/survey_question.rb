@@ -15,13 +15,18 @@
 
 module Pd
   class SurveyQuestion < ApplicationRecord
+    # Sync question data for the specified form_id, upsert the DB row, and return the latest model instance
+    # @param form_id [Integer]
+    # @return [SurveyQuestion]
     def self.sync_from_jotform(form_id)
       questions = JotForm::Translation.new(form_id).get_questions
       serialized_questions = JotForm::FormQuestions.new(form_id, questions).serialize.to_json
 
-      find_or_initialize_by(form_id: form_id).update!(
-        questions: serialized_questions
-      )
+      find_or_initialize_by(form_id: form_id).tap do |model|
+        model.update!(
+          questions: serialized_questions
+        )
+      end
     end
 
     def form_questions
