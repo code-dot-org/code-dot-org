@@ -14,7 +14,6 @@ FactoryGirl.define do
     trait :local_summer_workshop do
       course Pd::Workshop::COURSE_CSP
       subject Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
-      num_sessions 5
     end
     trait :fit do
       course Pd::Workshop::COURSE_CSP
