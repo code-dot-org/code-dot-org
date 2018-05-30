@@ -546,6 +546,106 @@ class ApiController < ApplicationController
     render json: assessments
   end
 
+  # Return a hash by student_id for all students in a section. The value is a hash by
+  # script_level_id, with information on the student responses for that assessment.
+  def assessments_responses
+    section = load_section
+    script = load_script(section)
+
+    level_group_script_levels = script.script_levels.includes(:levels).where('levels.type' => 'LevelGroup')
+
+    data = section.students.map do |student|
+      student_hash = {id: student.id, name: student.name}
+
+      level_group_script_levels.map do |script_level|
+        next unless script_level.long_assessment?
+
+        # Don't allow somebody to peek inside an anonymous survey using this API.
+        next if script_level.anonymous?
+
+        # Get the UserLevel for the last attempt.  This approach does not check
+        # for the script and so it'll find the student's attempt at this level for
+        # any script in which they have encountered that level.
+        last_attempt = student.last_attempt_for_any(script_level.levels)
+
+        # Get the LevelGroup itself.
+        level_group = last_attempt.try(:level) || script_level.oldest_active_level
+
+        # Get the response which will be stringified JSON.
+        response = last_attempt.try(:level_source).try(:data)
+
+        next unless response
+
+        # Parse the response string into an object.
+        response_parsed = JSON.parse(response)
+
+        # Summarize some key data.
+        multi_count = 0
+        multi_count_correct = 0
+
+        # And construct a listing of all the individual levels and their results.
+        level_results = []
+
+        level_group.levels.each do |level|
+          if level.is_a? Multi
+            multi_count += 1
+          end
+
+          level_response = response_parsed[level.id.to_s]
+
+          level_result = {}
+
+          if level_response
+            case level
+            when TextMatch, FreeResponse
+              student_result = level_response["result"]
+              level_result[:student_result] = student_result
+              level_result[:correct] = "free_response"
+            when Multi
+              answer_indexes = Multi.find_by_id(level.id).correct_answer_indexes
+              student_result = level_response["result"].split(",").sort.join(",")
+
+              # Convert "0,1,3" to "A, B, D" for teacher-friendly viewing
+              level_result[:student_result] = student_result.split(',').map {|k| Multi.value_to_letter(k.to_i)}.join(', ')
+
+              if student_result == "-1"
+                level_result[:student_result] = ""
+                level_result[:correct] = "unsubmitted"
+              elsif student_result == answer_indexes
+                multi_count_correct += 1
+                level_result[:correct] = "correct"
+              else
+                level_result[:correct] = "incorrect"
+              end
+            end
+          else
+            level_result[:correct] = "unsubmitted"
+          end
+
+          level_results << level_result
+        end
+
+        submitted = last_attempt[:submitted]
+        timestamp = last_attempt[:updated_at].to_formatted_s
+
+        {
+          student: student_hash,
+          stage: script_level.stage.localized_title,
+          puzzle: script_level.position,
+          question: level_group.properties["title"],
+          url: build_script_level_url(script_level, section_id: section.id, user_id: student.id),
+          multi_correct: multi_count_correct,
+          multi_count: multi_count,
+          submitted: submitted,
+          timestamp: timestamp,
+          level_results: level_results
+        }
+      end.compact
+    end.flatten
+
+    render json: data
+  end
+
   # Return results for surveys, which are long-assessment LevelGroup levels with the anonymous property.
   # At least five students in the section must have submitted answers.  The answers for each contained
   # sublevel are shuffled randomly.

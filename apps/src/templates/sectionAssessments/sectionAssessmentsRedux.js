@@ -99,7 +99,7 @@ const loadAssessmentsFromServer = (sectionId, scriptId) => {
   }
   // TODO(caleybrock): also fetch /dashboardapi/section_surveys
   return $.ajax({
-    url: `/dashboardapi/section_assessments/${sectionId}`,
+    url: `/dashboardapi/section_assessments_responses/${sectionId}`,
     method: 'GET',
     contentType: 'application/json;charset=UTF-8',
     data: payload
