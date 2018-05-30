@@ -17,18 +17,18 @@ $(document).ready(() => {
   initializeCodeMirror('block_helper_code', 'javascript');
 });
 
-let oldConfig;
+let config;
 function onChange(editor) {
-  let config;
-  if (editor.getValue() === oldConfig) {
+  if (editor.getValue() === config) {
     return;
-  } else {
-    try {
-      config = jsonic(editor.getValue());
-    } catch (e) {
-      return;
-    }
-    oldConfig = editor.getValue();
+  }
+  config = editor.getValue();
+
+  let parsedConfig;
+  try {
+    parsedConfig = jsonic(config);
+  } catch (e) {
+    return;
   }
 
   const blocksInstalled = installCustomBlocks(
@@ -37,7 +37,7 @@ function onChange(editor) {
     [{
       name: nameField.value,
       category: 'Custom',
-      config,
+      config: parsedConfig,
     }],
     {},
     true,
