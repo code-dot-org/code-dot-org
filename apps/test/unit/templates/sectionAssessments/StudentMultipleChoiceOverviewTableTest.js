@@ -29,21 +29,22 @@ describe('StudentMultipleChoiceOverviewTable', () => {
     expect(tableRows).to.have.length(7);
   });
 
-  it('displays a check mark icon if specified', () => {
+  it('renders with an icon if specified', () => {
     const wrapper = mount(
       <StudentMultipleChoiceOverviewTable
         studentOverviewData={studentOverviewData}
+        icon="check-circle"
       />
-    );
+  );
 
-    expect(wrapper.find('#checkmark').exists()).to.be.true;
+    const icon = wrapper.find('FontAwesome');
+    assert(icon);
   });
 
   it('renders a checkmark when an assessment is submitted', () => {
     const wrapper = mount(
       <StudentMultipleChoiceOverviewTable
         studentOverviewData={studentOverviewData}
-        isSubmitted={true}
       />
     );
 
