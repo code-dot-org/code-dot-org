@@ -1170,6 +1170,7 @@
   "workspaceProjectTemplateLevel": "This icon means that this level is part of a larger project. Changes will be saved across these levels.",
   "wrongCourseVersionWarningNotice": "Are you using the right version of the course?",
   "wrongCourseVersionWarningDetails": "We detected progress in a different version of this course. You can use the version dropdown to select the version of the course you want.",
+  "wrongUnitVersionWarningDetails": "We detected progress in a different version of this course. You can go back to the course page to select the version of the course you want.",
   "yes": "Yes",
   "yesNo": "Yes / No",
   "youCannotUndoThisAction": "You cannot undo this action.",
