@@ -161,6 +161,8 @@ class User < ActiveRecord::Base
 
   SYSTEM_DELETED_USERNAME = 'sys_deleted'
 
+  RESET_SECRETS = 'reset_secrets'.freeze
+
   # :user_type is locked. Use the :permissions property for more granular user permissions.
   USER_TYPE_OPTIONS = [
     TYPE_STUDENT = 'student'.freeze,
@@ -1235,6 +1237,11 @@ class User < ActiveRecord::Base
     return nil
   end
 
+  def reset_secrets
+    generate_secret_picture
+    generate_secret_words
+  end
+
   def generate_secret_picture
     self.secret_picture = SecretPicture.random
   end
@@ -1761,6 +1768,9 @@ class User < ActiveRecord::Base
     random_suffix = (('0'..'9').to_a + ('a'..'z').to_a).sample(8).join
 
     authentication_options.with_deleted.each(&:really_destroy!)
+
+    districts.clear
+    self.district_as_contact = nil
 
     self.studio_person_id = nil
     self.name = nil
