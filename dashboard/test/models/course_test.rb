@@ -262,7 +262,7 @@ class CourseTest < ActiveSupport::TestCase
     end
   end
 
-  class WrongVersionWarningTests < ActiveSupport::TestCase
+  class OtherVersionProgressTests < ActiveSupport::TestCase
     setup do
       @csp_2017 = create(:course, name: 'csp-2017')
       @csp1_2017 = create(:script, name: 'csp1-2017')
@@ -292,31 +292,31 @@ class CourseTest < ActiveSupport::TestCase
       assert_equal 1, @csd.default_scripts.count
     end
 
-    test 'student with no progress does not get warning' do
-      refute @csp_2017.wrong_version?(@student)
-      refute @csp_2018.wrong_version?(@student)
+    test 'student with no progress does not have other version progress' do
+      refute @csp_2017.has_other_version_progress?(@student)
+      refute @csp_2018.has_other_version_progress?(@student)
     end
 
-    test 'student with progress in other course in same famly gets warning' do
+    test 'student with progress in other course version has other version progress' do
       create :user_script, user: @student, script: @csp1_2017
 
-      refute @csp_2017.wrong_version?(@student)
-      assert @csp_2018.wrong_version?(@student)
+      refute @csp_2017.has_other_version_progress?(@student)
+      assert @csp_2018.has_other_version_progress?(@student)
     end
 
-    test 'student with progress in both courses does not get warning' do
+    test 'student with progress in both course versions has other version progress' do
       create :user_script, user: @student, script: @csp1_2017
       create :user_script, user: @student, script: @csp2_2018
 
-      refute @csp_2017.wrong_version?(@student)
-      refute @csp_2018.wrong_version?(@student)
+      assert @csp_2017.has_other_version_progress?(@student)
+      assert @csp_2018.has_other_version_progress?(@student)
     end
 
-    test 'student with progress in non-family course does not get warning' do
+    test 'student with progress in other course family does not have other version progress' do
       create :user_script, user: @student, script: @csd1
 
-      refute @csp_2017.wrong_version?(@student)
-      refute @csp_2018.wrong_version?(@student)
+      refute @csp_2017.has_other_version_progress?(@student)
+      refute @csp_2018.has_other_version_progress?(@student)
     end
   end
 

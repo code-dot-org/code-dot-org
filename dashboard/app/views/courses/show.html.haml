@@ -6,7 +6,7 @@
 - data[:is_teacher] = @current_user.try(:teacher?) || false
 - data[:is_verified_teacher] = @current_user.try(:authorized_teacher?) || false
 - data[:hidden_scripts] = @current_user.try(:get_hidden_script_ids, course)
-- data[:show_version_warning] = course.wrong_version?(@current_user)
+- data[:show_version_warning] = course.has_other_version_progress?(@current_user)
 
 - content_for(:head) do
   %script{ src: minifiable_asset_path('js/courses/show.js'), data: {courses_show: data.to_json}}
