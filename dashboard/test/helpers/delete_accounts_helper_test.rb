@@ -631,6 +631,23 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     refute_empty StudioPerson.where(id: studio_person_id)
   end
 
+  #
+  # Table: pegasus.contacts
+  #
+  test "removes contacts rows for email" do
+    user = create :teacher
+    email = user.email
+    Poste2.create_recipient(user.email, name: user.name, ip_address: '127.0.0.1')
+
+    refute_empty PEGASUS_DB[:contacts].where(email: email)
+    contact_ids = PEGASUS_DB[:contacts].where(email: email).map {|s| s[:id]}
+
+    purge_user user
+
+    assert_empty PEGASUS_DB[:contacts].where(email: email)
+    assert_empty PEGASUS_DB[:contacts].where(id: contact_ids)
+  end
+
   private
 
   #

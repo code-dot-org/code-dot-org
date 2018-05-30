@@ -143,6 +143,10 @@ class DeleteAccountsHelper
     Follower.with_deleted.where(student_user: user).each(&:really_destroy!)
   end
 
+  def remove_contacts(email)
+    PEGASUS_DB[:contacts].where(email: email).delete
+  end
+
   # Removes all information about the user pertaining to Pardot. This encompasses Pardot itself, the
   # contact_rollups pegasus table (master and reporting), and the contact_rollups_daily pegasus table
   # (reporting only).
@@ -228,6 +232,7 @@ class DeleteAccountsHelper
     clean_and_destroy_pd_content(user.id)
     remove_user_sections(user.id)
     remove_user_from_sections_as_student(user)
+    remove_contacts(user.email) if user.email
     remove_from_pardot(user.id)
     remove_from_solr(user.id)
     purge_unshared_studio_person(user)
