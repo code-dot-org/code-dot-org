@@ -5,6 +5,31 @@ import i18n from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import color from "@cdo/apps/util/color";
+
+const styles = {
+  main: {
+    border: 'none',
+    display: 'flex',
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  icon: {
+    color: color.purple,
+  },
+  text: {
+    marginRight: 5,
+  },
+  headerLabels: {
+    color: color.charcoal,
+    fontFamily: '"Gotham 5r", sans-serif',
+  },
+  studentNameColumn: {
+    color: color.teal,
+    fontFamily: '"Gotham 5r", sans-serif',
+  }
+};
 
 export const COLUMNS = {
   NAME: 0,
@@ -62,11 +87,11 @@ class StudentAssessmentOverviewTable extends Component {
 
     if (isSubmitted) {
       return (
-        <div>
-          <div>
+        <div style={styles.main}>
+          <div style={styles.text}>
             {submissionTimeStamp}
           </div>
-          <div>
+          <div style={styles.icon}>
             <FontAwesome id="checkmark" icon="check-circle"/>
           </div>
         </div>
@@ -86,7 +111,12 @@ class StudentAssessmentOverviewTable extends Component {
           transforms: [sortable],
         },
         cell: {
-          props: {style:tableLayoutStyles.cell},
+          props: {
+            style: {
+              ...tableLayoutStyles.cell,
+              ...styles.studentNameColumn,
+            },
+          }
         }
       },
       {
