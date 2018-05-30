@@ -258,6 +258,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   #
   # Table: dashboard.activities
+  # Table: dashboard.overflow_activities
   # Table: dashboard.gallery_activities
   #
 
@@ -273,6 +274,9 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     refute Activity.where(user: user).any?(&:level_source),
       'Expected no activity record that references a level source to exist for this user'
   end
+
+  # Note: table overflow_activities only exists on production, which makes it
+  # difficult to test.
 
   test 'disconnects gallery activities from level sources' do
     user = create :student
