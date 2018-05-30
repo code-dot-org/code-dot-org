@@ -28,7 +28,7 @@ patch '/v2/students/:id' do |id|
   # Notify Honeybadger to determine if this endpoint is still used anywhere
   Honeybadger.notify(
     error_class: "DeprecatedEndpointWarning",
-    error_message: 'Deprecated endpoint /v2/sections/membership called unexpectedly',
+    error_message: 'Deprecated endpoint PATCH /v2/students/:id called unexpectedly',
   )
 
   only_for 'code.org'
