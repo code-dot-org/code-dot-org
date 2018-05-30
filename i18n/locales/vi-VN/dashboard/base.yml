@@ -114,9 +114,14 @@ vi:
     valid_password: "Mật khẩu hợp lệ!"
     invalid_password: "Mật khẩu phải có ít nhất 6 ký tự"
     mismatch_password: "Hai mật khẩu bạn nhập không khớp"
+    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
+    under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
+    agree_us_website: "I agree to using a website based in the United States."
+    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
     student_terms: "Tôi đồng ý tuân theo <a href='http://code.org/tos'>các điều khoản dịch vụ</a> của Code.org. Nếu tôi dưới 13 tuổi, tôi xác nhận bằng cách nộp bản đơn này với sự đồng ý cho phép sử dụng dịch vụ của Code.org của phụ huynh hoặc người giám hộ.<br/><br/>Chúng tôi sẽ không lưu giữ các địa chỉ email dưới bất kì hình thức nào để nhằm vào việc liên lạc các học viên. Các học viên sẽ không bao giờ nhận được email từ Code.org trừ việc khôi phục lại mật khẩu. Hãy xem <a href='http://code.org/privacy'>quyền riêng tư</a> để biết thêm các chi tiết."
     teacher_terms: "Tôi đồng ý tuân theo các điều khoản dịch vụ của Code.org. Mọi chi tiết về quyền riêng tư, xin vui lòng xem <a href='http://code.org/privacy'>quyền riêng tư</a>."
     additional_information: "Chúng tôi cần một số thông tin bổ sung để tiếp tục đăng ký cho bạn."
+    user_type_button: "Update Account Type"
     user_type_label: "Loại tài khoản"
     user_type_teacher: "Giáo viên"
     user_type_student: "học sinh"
@@ -126,6 +131,7 @@ vi:
     email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
     email_preference_yes: "Đồng ý"
     email_preference_no: "Không"
+    email_preference_required: "You must specify an email preference."
   school_info:
     title: 'Thông tin trường học (không bắt buộc)'
     school_country: 'Quốc gia'
@@ -453,6 +459,7 @@ vi:
     student_not_found: "Không thể tìm thấy một hoặc vài sinh viên."
     all_students_must_be_in_current_section: "All the students must currently be enrolled in your section."
     already_enrolled_in_new_section: "You cannot move these students because they are already in the new section."
+    third_party_login: "You cannot move students to a section that is synced with a third party tool."
   share:
     title: "Học về Xưởng Code"
     description: "Ai cũng có thẻ học khoa học máy tính. Làm trò chơi, ứng dụng và nghệ thuật với mã lệnh."
@@ -872,6 +879,7 @@ vi:
     csd5_2: 'Chapter 2: Solving Data Problems'
     csd6_1: 'Chapter 1: Programming with Hardware'
     csd6_2: 'Chapter 2: Building Physical Prototypes'
+    csd_survey: 'Post-Course Survey'
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -998,3 +1006,10 @@ vi:
     message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
     more_information: "See Code.org's Privacy Policy."
     accept: 'Tôi đồng ý'
+  gdpr_dialog:
+    heading: 'Do you agree to using a web site based in the United States?'
+    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+    link_intro: 'For details see our'
+    privacy_policy: 'privacy policy'
+    logout: 'Logout'
+    yes: 'Đồng ý'

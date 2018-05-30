@@ -13,11 +13,9 @@ module Pd
       end
 
       test 'question classes by type' do
-        assert_nil Translation.get_question_class_for(TYPE_HEADING)
-        assert_nil Translation.get_question_class_for(TYPE_BUTTON)
-
         assert_equal TextQuestion, Translation.get_question_class_for(TYPE_TEXTBOX)
         assert_equal TextQuestion, Translation.get_question_class_for(TYPE_TEXTAREA)
+        assert_equal TextQuestion, Translation.get_question_class_for(TYPE_NUMBER)
 
         assert_equal SelectQuestion, Translation.get_question_class_for(TYPE_DROPDOWN)
         assert_equal SelectQuestion, Translation.get_question_class_for(TYPE_RADIO)
@@ -25,6 +23,13 @@ module Pd
 
         assert_equal ScaleQuestion, Translation.get_question_class_for(TYPE_SCALE)
         assert_equal MatrixQuestion, Translation.get_question_class_for(TYPE_MATRIX)
+
+        IGNORED_QUESTION_TYPES.each do |ignored_type|
+          e = assert_raises do
+            Translation.get_question_class_for(ignored_type)
+          end
+          assert_equal "Unexpected question type: #{ignored_type}", e.message
+        end
       end
 
       test 'unexpected question type error' do
@@ -41,17 +46,24 @@ module Pd
           id = i + 1
           content[id] = {
             qid: id,
-            type: type,
+            type: "control_#{type}",
+            name: "testQuestion#{i}",
+            text: "test #{type} question"
           }.stringify_keys
+          sanitized_content = content[id].merge('type' => type)
 
-          klass = Translation.get_question_class_for(type)
-          next unless klass
-
-          # More specific parsing logic validation can be found in the question type tests
-          klass.expects(:from_jotform_question).
-            with(id: id, type: type, jotform_question: content[id]).
-            returns(mock)
+          mock_class = mock
+          mock_class.expects(:from_jotform_question).with(sanitized_content).returns(mock)
+          Translation.expects(:get_question_class_for).with(type).returns(mock_class)
         end
+
+        content[100] = {
+          qid: 100,
+          type: 'control_button',
+          name: 'ignored',
+          text: 'this should be ignored'
+        }.stringify_keys
+        Translation.expects(:get_question_class_for).with('button').never
 
         JotFormRestClient.any_instance.expects(:get_questions).with(@form_id).returns(
           {
@@ -61,9 +73,43 @@ module Pd
 
         questions = Translation.new(@form_id).get_questions
 
-        # Heading and Button are ignored
-        assert_equal 9, QUESTION_TYPES.length
-        assert_equal 7, questions.length
+        assert_equal 8, QUESTION_TYPES.length
+        assert_equal 8, questions.length
+      end
+
+      test 'get_questions replaces -summary text' do
+        JotFormRestClient.any_instance.expects(:get_questions).with(@form_id).returns(
+          {
+            content: {
+              1 => {
+                qid: 1,
+                type: 'control_text',
+                name: 'formattedLabel1',
+                text: 'This is formatted text displayed in the form to describe the following question',
+                order: 1
+              },
+              2 => {
+                qid: 2,
+                type: 'control_scale',
+                name: 'scale1',
+                text: 'to be overwritten',
+                order: 2
+              },
+              3 => {
+                qid: 3,
+                type: 'control_text',
+                name: 'scale1-summary',
+                text: 'This is the summary for scale1'
+              }
+            }
+          }.deep_stringify_keys
+        )
+
+        questions = Translation.new(@form_id).get_questions
+        assert_equal 1, questions.length
+        assert_equal 2, questions.first.id
+        assert_equal 'scale1', questions.first.name
+        assert_equal 'This is the summary for scale1', questions.first.text
       end
 
       test 'get_submission queries the client and transforms the submission data' do
@@ -71,7 +117,7 @@ module Pd
 
         JotFormRestClient.any_instance.
           expects(:get_submissions).
-          with(@form_id, last_known_submission_id: last_known_submission_id).
+          with(@form_id, last_known_submission_id: last_known_submission_id, min_date: nil).
           returns(get_submissions_result)
 
         result = Translation.new(@form_id).get_submissions(last_known_submission_id: last_known_submission_id)
@@ -116,7 +162,18 @@ module Pd
                   text: 'label2',
                   type: 'control_radio',
                   answer: 'answer2.1'
-                }
+                },
+                '3' => {
+                  name: 'text1',
+                  text: 'this text field should be ignored',
+                  type: 'control_text'
+                },
+                '4' => {
+                  name: 'unexplainedFalseAnswer',
+                  text: 'this should also be ignored',
+                  type: 'control_matrix',
+                  answer: false
+                },
               }
             },
             {

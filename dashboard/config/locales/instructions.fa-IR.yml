@@ -9327,6 +9327,7 @@
         Help Scrat get all the way over to the
         acorn!
       courseB_iceage_loops11_instruction: Help Scrat get to the acorn!
+      courseB_iceage_loops11_forVideo_instruction: Help Scrat get to the acorn!
       courseB_iceage_loops12_instruction: Get to the acorn any way you can!
       courseB_iceage_loops2_instruction: |-
         Use two different move blocks to get to
@@ -11245,6 +11246,8 @@
         off to your friends!
       courseD_playLab_condFP_a_instruction: Now, build your own game to show off to
         your friends!
+      courseD_playLab_condForVideo_instruction: Now, build your own game to show off
+        to your friends!
       courseD_playLab_embedded_instruction: "Move Pegleg the Pirate with the arrow
         keys. Get to the dragon to score points, but avoid the ninja! Standing below
         the line of octopuses will make the ninja stop chasing you, but beware! The

@@ -32,7 +32,6 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "true",
     "hide_animation_mode": "false",
-    "show_d_pad": "false",
     "pause_animations_by_default": "false",
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"81ebaa85-e30c-4586-ac54-70af53ed0244\",\r\n    \"3fa83709-7269-4999-ac04-614e7d733fec\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"81ebaa85-e30c-4586-ac54-70af53ed0244\": {\r\n      \"name\": \"alienPink_walk_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/qupSZdgRvDnbdfIp322aMaPlFZyi0Cwr/alienPink_walk.png\",\r\n      \"frameSize\": {\r\n        \"x\": 130,\r\n        \"y\": 258\r\n      },\r\n      \"frameCount\": 2,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"qupSZdgRvDnbdfIp322aMaPlFZyi0Cwr\"\r\n    },\r\n    \"3fa83709-7269-4999-ac04-614e7d733fec\": {\r\n      \"name\": \"ladybug_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/sXPIhCI4SB8cJGwBOGdHXpZOBTXWpj_E/ladybug.png\",\r\n      \"frameSize\": {\r\n        \"x\": 63,\r\n        \"y\": 36\r\n      },\r\n      \"frameCount\": 2,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"sXPIhCI4SB8cJGwBOGdHXpZOBTXWpj_E\"\r\n    }\r\n  }\r\n}",
     "instructions_important": "false",

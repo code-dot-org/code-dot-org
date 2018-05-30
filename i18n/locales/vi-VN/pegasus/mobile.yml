@@ -369,6 +369,8 @@
   homepage_header_donors: "Code.org cảm ơn những người hỗ trợ"
   homepage_donors_seall: "Xem tất cả"
   homepage_donors_donate: "Quyên góp hỗ trợ"
+  homepage_below_hero_announcement_text: "We care about your privacy and are making some updates to our privacy policy, effective May 25."
+  homepage_below_hero_announcement_link_text: "Tìm hiểu thêm"
   contact_form_topic_student: "Tôi là sinh viên"
   contact_form_topic_parent: "Tôi là một phụ huynh"
   contact_form_topic_teacher: "Tôi là một giáo viên/giáo dục"
@@ -539,6 +541,9 @@
   volunteer_engineer_submission_field_email: "Địa chỉ Email"
   volunteer_engineer_submission_field_email_desc: "Địa chỉ email của bạn sẽ không bao giờ được chia sẻ, nhưng chúng tôi sẽ gửi cho bạn yêu cầu từ giáo viên."
   volunteer_engineer_submission_field_email_placeholder: "Địa chỉ Email"
+  volunteer_engineer_submission_field_email_preference: "Can we email you about updates to our courses, volunteer opportunities, or other computer science news?"
+  volunteer_engineer_submission_field_email_preference_yes: 'Đồng ý'
+  volunteer_engineer_submission_field_email_preference_no: 'Không'
   volunteer_engineer_submission_final_paragraph: "Bạn sẽ được liệt kê trên một bản đồ cho các giáo viên địa phương liên hệ với bạn cho chương trình Hour of Code hoặc cơ hội tình nguyện viên khác. Email và địa chỉ chính xác của bạn sẽ không bao giờ được chia sẻ của chúng tôi. Tuy nhiên, thông tin khác (bao gồm cả vị trí gần đúng) sẽ được công khai có thể xem được bởi giáo viên địa phương."
   volunteer_engineer_submission_checkbox_contact: 'Tôi đồng ý rằng giáo viên có thể liên hệ với tôi để cơ hội tình nguyện viên (lưu ý: địa chỉ email sẽ không được chia sẻ)'
   volunteer_engineer_submission_checkbox_age_18_plus: "I certify that I am at least 18 years old."
@@ -968,6 +973,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: "Full Test - 50 questions"
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'

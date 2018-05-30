@@ -405,6 +405,9 @@
   homepage_header_donors: Code.orgは支援者の皆様に感謝します。
   homepage_donors_seall: すべてを見る
   homepage_donors_donate: 寄付する
+  homepage_below_hero_announcement_text: Code.orgは、プライバシー保護に努めております。現在
+    5月25日付で有効となる、Code.orgのプライバシーポリシーの一部改定を進めています。
+  homepage_below_hero_announcement_link_text: もっと詳しく知る
   contact_form_topic_student: 私は学生です
   contact_form_topic_parent: 私は親です
   contact_form_topic_teacher: 私は、教師/教育者です
@@ -607,6 +610,10 @@
   volunteer_engineer_submission_field_email: Eメールアドレス
   volunteer_engineer_submission_field_email_desc: あなたのメール アドレスは公開されません、私たちが教師からのリクエストを転送します。
   volunteer_engineer_submission_field_email_placeholder: Eメールアドレス
+  volunteer_engineer_submission_field_email_preference: 当社のコースについての最新情報、各地域における機会、コンピュータサイエンスに関するニュースなどを電子メールを介して送付してもよろしいですか？
+  volunteer_engineer_submission_field_email_preference_privacy: （詳細については、Code.orgのプライバシーポリシーをご覧ください）
+  volunteer_engineer_submission_field_email_preference_yes: はい
+  volunteer_engineer_submission_field_email_preference_no: いいえ
   volunteer_engineer_submission_final_paragraph: 地域の教師が Hour of Code やその他のボランティアのために連絡できるよう、あなたは地図上に表示されます。あなたのメール
     アドレスと詳細な住所は決して公開される事はありません。しかし、その他の情報(おおよその所在地など) は地域の教師に公開されます。
   volunteer_engineer_submission_checkbox_contact: '私は、教師がボランティアについて私に連絡することに同意します
@@ -1071,6 +1078,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP パフォーマンス タスク
   csppostap_name: 'ポストAP: アプリ内でのデータベース'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: 完全なテスト - 50 の質問
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'
@@ -1670,13 +1678,3 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  homepage_below_hero_announcement_text: We care about your privacy and are making
-    some updates to our privacy policy, effective May 25.
-  homepage_below_hero_announcement_link_text: Learn more
-  volunteer_engineer_submission_field_email_preference: Can we email you about updates
-    to our courses, volunteer opportunities, or other computer science news?
-  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
-    policy)"
-  volunteer_engineer_submission_field_email_preference_yes: 'Yes'
-  volunteer_engineer_submission_field_email_preference_no: 'No'
-  csp-post-survey_name: Student Post-Course Survey

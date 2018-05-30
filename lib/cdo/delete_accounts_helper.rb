@@ -124,11 +124,12 @@ class DeleteAccountsHelper
     end
   end
 
-  # Anonymizes the user by deleting various pieces of PII and PPII from the User and UserGeo models.
+  # Anonymizes the user by deleting various pieces of PII and PPII
   # @param [User] user to be anonymized.
   def anonymize_user(user)
     UserGeo.where(user_id: user.id).each(&:clear_user_geo)
     SignIn.where(user_id: user.id).destroy_all
+    AuthoredHintViewRequest.where(user: user).each(&:clear_level_source_associations)
     user.clear_user_and_mark_purged
   end
 
@@ -179,6 +180,24 @@ class DeleteAccountsHelper
     end
   end
 
+  # Removes CensusSubmission records associated with this email address.
+  # @param [String] email An email address
+  def remove_census_submissions(email)
+    Census::CensusSubmission.where(submitter_email_address: email).each(&:destroy)
+  end
+
+  # Removes EmailPreference records associated with this email address.
+  # @param [String] email An email address
+  def remove_email_preferences(email)
+    EmailPreference.where(email: email).each(&:destroy)
+  end
+
+  # Removes signature and school_id from applications for this user
+  # @param [User] user
+  def anonymize_circuit_playground_discount_application(user)
+    user.circuit_playground_discount_application&.anonymize
+  end
+
   # Purges (deletes and cleans) various pieces of information owned by the user in our system.
   # Noops if the user is already marked as purged.
   # @param [User] user The user to purge.
@@ -195,6 +214,9 @@ class DeleteAccountsHelper
     # NOTE: We do not gate any deletion logic on `user.user_type` as its current state may not be
     # reflective of past state.
     user.destroy
+    remove_census_submissions(user.email) if user.email
+    remove_email_preferences(user.email) if user.email
+    anonymize_circuit_playground_discount_application(user)
     clean_level_source_backed_progress(user.id)
     clean_survey_responses(user.id)
     delete_project_backed_progress(user.id)

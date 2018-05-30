@@ -27,10 +27,12 @@ module Pd
       end
 
       # Parse jotform question data
-      def self.from_jotform_question(id:, type:, jotform_question:)
+      # @param jotform_question [Hash] JSON.parsed jotform question data
+      # @return [Question]
+      def self.from_jotform_question(jotform_question)
         new(
-          id: id.to_i,
-          type: type,
+          id: jotform_question['qid'].to_i,
+          type: jotform_question['type'],
           name: jotform_question['name'],
           text: jotform_question['text'],
           order: jotform_question['order'].to_i
@@ -68,15 +70,16 @@ module Pd
 
       # Generate question summary
       # @return [Hash] {question_name => {text:, answer_type:}}
-      def to_summary
+      def summarize
         {name => {text: text, answer_type: answer_type}}
       end
 
       # Generate form_data for an answer to this question.
       # When merged with the other questions in a form, it will form the entire form_data.
       # @see FormQuestions
+      # @param answer [Hash] {question_id => answer}
       # @return [Hash] {question_name => answer}
-      def to_form_data(answer)
+      def process_answer(answer)
         {name => get_value(answer)}
       end
     end
