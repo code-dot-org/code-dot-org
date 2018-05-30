@@ -648,6 +648,11 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_empty PEGASUS_DB[:contacts].where(id: contact_ids)
   end
 
+  #
+  # Table: pegasus.contact_rollups
+  #
+  # TODO: Can I test against the reporting db here?
+
   private
 
   #
