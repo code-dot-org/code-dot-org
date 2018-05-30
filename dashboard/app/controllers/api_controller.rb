@@ -647,8 +647,12 @@ class ApiController < ApplicationController
           level_results: level_results
         }
       end
-      student_hash[:responses] = responses_by_level_group
-      responses_by_student[student.id] = student_hash
+
+      # If a student has made responses, add them to the hash
+      if responses_by_level_group.keys.count > 0
+        student_hash[:responses] = responses_by_level_group
+        responses_by_student[student.id] = student_hash
+      end
     end
 
     render json: responses_by_student
