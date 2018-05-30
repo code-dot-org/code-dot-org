@@ -57,16 +57,17 @@ class StudentAssessmentOverviewTable extends Component {
   };
 
   submissionTimestampColumnFormatter = (submissionTimeStamp, {rowData}) => {
+    const isSubmitted = rowData.isSubmitted;
     const submissionStatus = rowData.submissionStatus;
 
-    if (submissionStatus === 'Completed') {
+    if (isSubmitted) {
       return (
         <div>
           <div>
             {submissionTimeStamp}
           </div>
           <div>
-            <FontAwesome icon="check-circle"/>
+            <FontAwesome id="checkmark" icon="check-circle"/>
           </div>
         </div>
       );
