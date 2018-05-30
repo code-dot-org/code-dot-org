@@ -1,0 +1,15 @@
+{
+  "category": "Sprites",
+  "config": {
+    "color": [
+      312,
+      0.32,
+      0.62
+    ],
+    "expression": "arguments[0]",
+    "orderPrecedence": 1,
+    "name": "firstTouched",
+    "blockText": "first touched sprite",
+    "returnType": "Sprite"
+  }
+}

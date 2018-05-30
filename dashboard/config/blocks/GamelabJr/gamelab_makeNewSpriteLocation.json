@@ -1,0 +1,23 @@
+{
+  "category": "Sprites",
+  "config": {
+    "color": [
+      184,
+      1,
+      0.74
+    ],
+    "func": "makeNewSpriteLocation",
+    "blockText": "make a new {ANIMATION} sprite at {LOCATION}",
+    "args": [
+      {
+        "name": "ANIMATION",
+        "customInput": "costumePicker"
+      },
+      {
+        "name": "LOCATION",
+        "type": "Location"
+      }
+    ],
+    "returnType": "Sprite"
+  }
+}

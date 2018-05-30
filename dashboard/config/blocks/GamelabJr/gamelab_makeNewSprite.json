@@ -1,0 +1,27 @@
+{
+  "category": "Sprites",
+  "config": {
+    "color": [
+      184,
+      1,
+      0.74
+    ],
+    "func": "makeNewSprite",
+    "blockText": "make a new {ANIMATION} sprite at {X} {Y}",
+    "args": [
+      {
+        "name": "ANIMATION",
+        "customInput": "costumePicker"
+      },
+      {
+        "name": "X",
+        "type": "Number"
+      },
+      {
+        "name": "Y",
+        "type": "Number"
+      }
+    ],
+    "returnType": "Sprite"
+  }
+}
