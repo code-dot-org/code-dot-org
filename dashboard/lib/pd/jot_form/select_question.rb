@@ -19,9 +19,9 @@ module Pd
         :preserve_text
       )
 
-      def self.from_jotform_question(id:, type:, jotform_question:)
+      def self.from_jotform_question(jotform_question)
         super.tap do |select_question|
-          select_question.options = jotform_question['options']&.split('|')
+          select_question.options = jotform_question['options']&.split('|')&.map(&:strip)
           raise KeyError, "Missing options in #{jotform_question}" unless select_question.options
 
           select_question.allow_other = jotform_question['allowOther'] == 'Yes'
