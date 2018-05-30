@@ -5,44 +5,24 @@ import i18n from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 
-const PADDING = 15;
-
-const styles = {
-  studentNameColumnHeader: {
-    padding: PADDING,
-  },
-  studentNameColumnCell : {
-    textOverflow: 'ellipsis',
-    whiteSpace: 'nowrap',
-    overflow: 'hidden',
-    maxWidth: 200,
-    padding: PADDING,
-    verticalAlign: 'top',
-  },
-  responseColumnHeader: {
-    padding: PADDING,
-  },
-};
-
 export const COLUMNS = {
-  NAME: 0,
-  RESPONSE: 1,
+  RESPONSE: 0,
 };
 
 const freeResponsesDataPropType = PropTypes.shape({
-  id:  PropTypes.number.isRequired,
-  studentId: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  response: PropTypes.string.isRequired,
+  id:  PropTypes.number,
+  studentId: PropTypes.string,
+  name: PropTypes.string,
+  response: PropTypes.string,
 });
 
-class FreeResponsesAssessments extends Component {
+class FreeResponsesSurveyTable extends Component {
   static propTypes= {
-    freeResponses: PropTypes.arrayOf(freeResponsesDataPropType),
+    freeResponses:PropTypes.arrayOf(freeResponsesDataPropType),
   };
 
   state = {
-    [COLUMNS.NAME]: {
+    [COLUMNS.RESPONSE]: {
       direction: 'desc',
       position: 0
     }
@@ -66,40 +46,25 @@ class FreeResponsesAssessments extends Component {
     });
   };
 
-  getColumns = (sortable, index) => {
+  studentResponseColumnFormatter = (response, {rowIndex}) => {
+    const numStudentResponses = this.props.freeResponses.length;
+
+    if (numStudentResponses >= 5) {
+      return response;
+    }
+  };
+
+  getColumns = (sortable) => {
     let dataColumns = [
-      {
-        property: 'name',
-        header: {
-          label: i18n.studentName(),
-          props: {
-            style: {
-              ...tableLayoutStyles.headerCell,
-              ...styles.studentNameColumnHeader,
-            }
-          },
-        },
-        cell: {
-          props: {
-            style: {
-              ...tableLayoutStyles.cell,
-              ...styles.studentNameColumnCell,
-            }
-          },
-        }
-      },
       {
         property: 'response',
         header: {
           label: i18n.response(),
-          props: {
-            style: {
-              ...tableLayoutStyles.headerCell,
-              ...styles.responseHeaderCell,
-            }
-          },
+          props: {style: tableLayoutStyles.headerCell},
+          transforms: [sortable],
         },
         cell: {
+          format: this.studentResponseColumnFormatter,
           props: {style:tableLayoutStyles.cell},
         }
       },
@@ -131,4 +96,4 @@ class FreeResponsesAssessments extends Component {
   }
 }
 
-export default FreeResponsesAssessments;
+export default FreeResponsesSurveyTable;
