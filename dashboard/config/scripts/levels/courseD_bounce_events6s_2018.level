@@ -39,11 +39,11 @@
     "authored_hints": "[{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Do you have an event that looks like this?\\n<xml><block type=\\\"bounce_whenWallCollided\\\" deletable=\\\"false\\\"><next><block type=\\\"bounce_bounceBall\\\"></block></next></block></block></xml>\",\"hint_id\":\"courseD_bounce_events6s_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9b670ad6025fa6944dc1bc30cd0a897e/courseD_bounce_events6s.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you've written the code correctly, you don't have to move the hand to win.\",\"hint_id\":\"courseD_bounce_events6s_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b13d30455eadb7baf66c93c5631af694/courseD_bounce_events6s.mp3\"}]",
     "parent_level_id": 9666,
     "name_suffix": "_2018",
-    "contained_level_names": null,
     "embed": "false",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
-    "free_play": "false"
+    "free_play": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

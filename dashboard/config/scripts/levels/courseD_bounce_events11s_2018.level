@@ -44,11 +44,11 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You will need to throw a ball when the game starts, when you hit the basket, and when the hand misses the ball.\",\"hint_id\":\"courseD_bounce_events11s_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/09d36d26057b6c821c0b25aed129d6b9/courseD_bounce_events11s.mp3\"}]",
     "parent_level_id": 9669,
     "name_suffix": "_2018",
-    "contained_level_names": null,
     "embed": "false",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
-    "free_play": "false"
+    "free_play": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
