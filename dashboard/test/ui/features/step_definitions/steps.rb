@@ -351,9 +351,11 @@ When /^I press the SVG text "([^"]*)"$/ do |name|
   @browser.execute_script("$('" + name_selector + "').simulate('drag', function(){});")
 end
 
-When /^I select the "([^"]*)" option in dropdown "([^"]*)"$/ do |option_text, element_id|
-  select = Selenium::WebDriver::Support::Select.new(@browser.find_element(:id, element_id))
-  select.select_by(:text, option_text)
+When /^I select the "([^"]*)" option in dropdown "([^"]*)"( to load a new page)?$/ do |option_text, element_id, load|
+  page_load(load) do
+    select = Selenium::WebDriver::Support::Select.new(@browser.find_element(:id, element_id))
+    select.select_by(:text, option_text)
+  end
 end
 
 When /^I open the topmost blockly category "([^"]*)"$/ do |name|
@@ -977,6 +979,26 @@ And(/^I create a student named "([^"]*)"$/) do |name|
     And I type "#{password}" into "#user_password"
     And I type "#{password}" into "#user_password_confirmation"
     And I select the "16" option in dropdown "user_user_age"
+    And I click selector "#user_terms_of_service_version"
+    And I click selector "#signup-button"
+    And I wait until I am on "http://studio.code.org/home"
+  }
+end
+
+And(/^I create a student in the eu named "([^"]*)"$/) do |name|
+  email, password = generate_user(name)
+
+  steps %Q{
+    Given I am on "http://studio.code.org/users/sign_up?force_in_eu=1"
+    And I wait to see "#user_name"
+    And I select the "Student" option in dropdown "user_user_type"
+    And I type "#{name}" into "#user_name"
+    And I type "#{email}" into "#user_email"
+    And I type "#{password}" into "#user_password"
+    And I type "#{password}" into "#user_password_confirmation"
+    And I select the "16" option in dropdown "user_user_age"
+    And I click selector "#user_terms_of_service_version"
+    And I click selector "#user_data_transfer_agreement_accepted"
     And I click selector "#signup-button"
     And I wait until I am on "http://studio.code.org/home"
   }
@@ -994,6 +1016,7 @@ And(/^I create a young student named "([^"]*)"$/) do |name|
     And I type "#{password}" into "#user_password"
     And I type "#{password}" into "#user_password_confirmation"
     And I select the "10" option in dropdown "user_user_age"
+    And I click selector "#user_terms_of_service_version"
     And I click selector "#signup-button"
     And I wait until I am on "http://studio.code.org/home"
   }

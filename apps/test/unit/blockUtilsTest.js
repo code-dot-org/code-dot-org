@@ -4,6 +4,7 @@ import {
   determineInputs,
   interpolateInputs,
   groupInputsByRow,
+  createJsWrapperBlockCreator,
 } from '@cdo/apps/block_utils';
 import { parseElement, serialize } from '@cdo/apps/xml.js';
 import { expect } from '../util/configuredChai';
@@ -434,6 +435,110 @@ describe('block utils', () => {
 
         },
       ]);
+    });
+
+    it('adds a dummy input for newlines', () => {
+      const inputs = determineInputs('this block has \n two lines', []);
+      expect(inputs).to.deep.equal([
+        {
+          mode: 'dummy',
+          label: 'this block has ',
+        },
+        {
+          mode: 'dummy',
+          label: ' two lines',
+        },
+      ]);
+    });
+
+    it('adds a dummy input for multiple newlines', () => {
+      const inputs = determineInputs(
+        'this block has \n three lines {WITH}\n a field input',
+        [
+          {
+            name: 'WITH',
+            field: true,
+          }
+        ]
+      );
+      expect(inputs).to.deep.equal([
+        {
+          mode: 'dummy',
+          label: 'this block has ',
+        },
+        {
+          name: 'WITH',
+          mode: 'field',
+          label: ' three lines ',
+          strict: false,
+        },
+        {
+          mode: 'dummy',
+          label: '',
+        },
+        {
+          mode: 'dummy',
+          label: ' a field input',
+        },
+      ]);
+    });
+  });
+
+  describe('custom generators', () => {
+    describe('assignment', () => {
+      let createBlock, generator;
+      before(() => {
+        createBlock = createJsWrapperBlockCreator(
+          Blockly,
+          'test',
+          [],
+          Blockly.BlockValueType.SPRITE,
+          [],
+        );
+        generator = Blockly.Generator.get('JavaScript');
+      });
+      it ('generates code for a single assignment', () => {
+        createBlock({
+          func: 'foo',
+          blockText: 'set {NAME} to foo()',
+          args: [{
+            name: 'NAME',
+            assignment: true,
+            field: true,
+          }],
+        });
+        const fakeBlock = {
+          getTitleValue: sinon.stub().returns('someVar'),
+        };
+        const code = generator['test_foo'].bind(fakeBlock)();
+        expect(code).to.equal('someVar = foo(someVar);\n');
+      });
+      it ('generates code for a double assignment', () => {
+        createBlock({
+          func: 'foo',
+          blockText: 'set {NAME1} and {NAME2} to foo()',
+          args: [
+            {
+              name: 'NAME1',
+              assignment: true,
+              field: true,
+            },
+            {
+              name: 'NAME2',
+              assignment: true,
+              field: true,
+            },
+          ],
+        });
+        const fakeBlock = {
+          getTitleValue: title => ({
+            NAME1: 'a',
+            NAME2: 'b',
+          }[title]),
+        };
+        const code = generator['test_foo'].bind(fakeBlock)();
+        expect(code).to.equal('a = b = foo(a, b);\n');
+      });
     });
   });
 });

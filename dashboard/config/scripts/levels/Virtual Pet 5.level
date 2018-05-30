@@ -6,7 +6,6 @@
   "user_id": 9,
   "properties": {
     "skin": "gamelab",
-    "show_d_pad": "true",
     "show_debug_watch": "true",
     "embed": "false",
     "instructions_important": "false",
@@ -53,11 +52,8 @@
     "parent_level_id": 14163,
     "markdown_instructions": "All of this play takes energy!  Add actions to each event so that when the giraffe collides with each sprite, it gets a little smaller (shrinks by 5).",
     "show_type_hints": "true",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "project_template_level_name": "Virtual Pet 2"
+    "project_template_level_name": "Virtual Pet 2",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -6,7 +6,6 @@
   "user_id": 9,
   "properties": {
     "skin": "gamelab",
-    "show_d_pad": "true",
     "show_debug_watch": "true",
     "embed": "false",
     "instructions_important": "false",
@@ -53,11 +52,8 @@
     "parent_level_id": 14099,
     "markdown_instructions": "Freeplay: Can you add more special items for your virtual pet? Can you give her some friends? What more can you make your giraffe do? ",
     "show_type_hints": "true",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "project_template_level_name": "Virtual Pet 2"
+    "project_template_level_name": "Virtual Pet 2",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

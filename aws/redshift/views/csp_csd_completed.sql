@@ -8,15 +8,16 @@ from
   select user_id, course_name, school_year, started_at, row_number() over(partition by user_id order by started_at asc) script_order
   from
   (
-    select us.user_id, c.name course_name, school_year, sc.name script_name, us.stage_id, us.started_at, row_number() over(partition by us.user_id, sc.name order by us.started_at asc) stage_order
+    select us.user_id, cn.course_name_short course_name, school_year, sc.name script_name, us.stage_id, us.started_at, row_number() over(partition by us.user_id, sc.name order by us.started_at asc) stage_order
     from analysis.user_stages us
     join dashboard_production.scripts sc on sc.id = us.script_id
     join dashboard_production.course_scripts cs on cs.script_id = us.script_id
     join dashboard_production.courses c on c.id = cs.course_id
+    join analysis.course_names cn on cn.versioned_course_id = c.id
     join analysis.school_years sy on us.started_at between sy.started_at and sy.ended_at
     join dashboard_production.users u on u.id = us.user_id and u.user_type = 'student'
-    where c.name = 'csd'
-      and sc.name in ('csd2','csd3')
+    where cn.course_name_long = 'CS Discoveries'
+      and left(sc.name, 4) in ('csd2','csd3')
   )
   where stage_order = 5 
 )
@@ -32,15 +33,16 @@ from
   select user_id, course_name, school_year, started_at, row_number() over(partition by user_id order by started_at asc) script_order
   from
   (
-    select us.user_id, c.name course_name, school_year, sc.name script_name, us.stage_id, us.started_at, row_number() over(partition by us.user_id, sc.name order by us.started_at asc) stage_order
+    select us.user_id, cn.course_name_short course_name, school_year, sc.name script_name, us.stage_id, us.started_at, row_number() over(partition by us.user_id, sc.name order by us.started_at asc) stage_order
     from analysis.user_stages us
     join dashboard_production.scripts sc on sc.id = us.script_id
     join dashboard_production.course_scripts cs on cs.script_id = us.script_id
     join dashboard_production.courses c on c.id = cs.course_id
+    join analysis.course_names cn on cn.versioned_course_id = c.id
     join analysis.school_years sy on us.started_at between sy.started_at and sy.ended_at
     join dashboard_production.users u on u.id = us.user_id and u.user_type = 'student'
-    where c.name = 'csd'
-      and sc.name in ('csd4','csd5')
+    where cn.course_name_long = 'CS Discoveries'
+      and left(sc.name, 4) in ('csd4','csd5')
   )
   where stage_order = 2
 )
@@ -56,15 +58,16 @@ from
   select user_id, course_name, school_year, started_at, row_number() over(partition by user_id order by started_at asc) script_order
   from
   (
-    select us.user_id, c.name course_name, school_year, sc.name script_name, us.stage_id, us.started_at, row_number() over(partition by us.user_id, sc.name order by us.started_at asc) stage_order
+    select us.user_id, cn.course_name_short course_name, school_year, sc.name script_name, us.stage_id, us.started_at, row_number() over(partition by us.user_id, sc.name order by us.started_at asc) stage_order
     from analysis.user_stages us
     join dashboard_production.scripts sc on sc.id = us.script_id
     join dashboard_production.course_scripts cs on cs.script_id = us.script_id
     join dashboard_production.courses c on c.id = cs.course_id
+    join analysis.course_names cn on cn.versioned_course_id = c.id
     join analysis.school_years sy on us.started_at between sy.started_at and sy.ended_at
     join dashboard_production.users u on u.id = us.user_id and u.user_type = 'student'
-    where c.name = 'csd'
-      and sc.name ='csd6'
+    where cn.course_name_long = 'CS Discoveries'
+      and left(sc.name, 4) = 'csd6'
   )
   where stage_order = 5
 )
@@ -94,13 +97,14 @@ from
   select user_id, course_name, school_year, started_at, row_number() over(partition by user_id order by started_at asc) script_order
   from
   (
-    select user_id, c.name course_name, school_year, us.script_id, us.stage_id, us.started_at, row_number() over(partition by us.user_id, us.script_id order by us.started_at asc) stage_order
+    select user_id, cn.course_name_short course_name, school_year, us.script_id, us.stage_id, us.started_at, row_number() over(partition by us.user_id, us.script_id order by us.started_at asc) stage_order
     from analysis.user_stages us
     join dashboard_production.course_scripts cs on cs.script_id = us.script_id
     join dashboard_production.courses c on c.id = cs.course_id
+    join analysis.course_names cn on cn.versioned_course_id = c.id
     join analysis.school_years sy on us.started_at between sy.started_at and sy.ended_at
     join dashboard_production.users u on u.id = us.user_id and u.user_type = 'student'
-    where c.name = 'csp'
+    where cn.course_name_long = 'CS Principles'
   )
   where stage_order = 5
 )

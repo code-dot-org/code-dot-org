@@ -47,6 +47,7 @@ const styles = {
     height: 60,
     width: '100%',
     backgroundColor: color.lightest_gray,
+    textAlign: 'center'
   },
   boxContainer: {
     padding: '15px 50px',
@@ -68,7 +69,7 @@ export default class SummaryViewLegend extends Component {
     return (
       <div style={styles.legendBox}>
         <div>
-          <div style={headingStyle}>{i18n.levelStatus()}</div>
+          <div style={headingStyle}>{i18n.lessonStatus()}</div>
           {showCSFProgressBox &&
             <div style={headingStyle}>{i18n.completionStatus()}</div>
           }

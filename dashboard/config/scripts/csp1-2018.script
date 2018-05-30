@@ -51,7 +51,7 @@ named_level 'Internet Simulator: Sending Numbers_2018', progression: 'Internet S
 assessment 'U1L8 Free Response Reflection_2018', progression: 'Check Your Understanding'
 assessment 'U1L8 Multiple Choice_2018', progression: 'Check Your Understanding'
 
-stage 'Encoding and Sending Formatted Text', flex_category: 'csp1_1'
+stage 'Sending Text', flex_category: 'csp1_1'
 named_level 'CSP U1L07 SFLP'
 named_level 'Internet Simulator: Sending Text_2018', progression: 'Internet Simulator: Sending Text'
 assessment 'U1L10 Assessment 1_2018', progression: 'Check Your Understanding'

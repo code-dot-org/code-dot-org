@@ -1,0 +1,43 @@
+{
+  "name": "csp-2017",
+  "script_names": [
+    "csp1",
+    "csp2",
+    "csp3",
+    "csp4",
+    "csp5",
+    "csp-explore",
+    "csp-create",
+    "csppostap",
+    "csp-post-survey"
+  ],
+  "alternate_scripts": [
+    {
+      "experiment_name": "subgoals-group-a",
+      "alternate_script": "csp3-a",
+      "default_script": "csp3"
+    },
+    {
+      "experiment_name": "subgoals",
+      "alternate_script": "csp3-research-mxghyt",
+      "default_script": "csp3"
+    }
+  ],
+  "properties": {
+    "teacher_resources": [
+      [
+        "curriculum",
+        "https://curriculum.code.org/csp/"
+      ],
+      [
+        "teacherForum",
+        "http://forum.code.org/c/csp"
+      ],
+      [
+        "professionalLearning",
+        "https://studio.code.org/courses/csp-support"
+      ]
+    ],
+    "has_verified_resources": true
+  }
+}

@@ -125,6 +125,7 @@
     ) do |f|
     = f.hidden_field :email
     = f.hidden_field :hashed_email
+    = f.hidden_field :email_preference_opt_in
     %hr.account-page-section-break
     %h2= t('signup_form.user_type_label')
     .field
@@ -157,13 +158,14 @@
     ) do |f|
     = f.hidden_field :email
     = f.hidden_field :hashed_email
-    -# = f.hidden_field :email_opt_in
+    = f.hidden_field :email_preference_opt_in
     = f.hidden_field :current_password
 
 :ruby
   script_data = {
     edit: {
-      userType: current_user.reload.user_type,
+      userAge: current_user.age,
+      userType: current_user.user_type,
       isOauth: current_user.oauth?
     }.to_json
   }

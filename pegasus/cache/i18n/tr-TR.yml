@@ -24,9 +24,9 @@
   learn_now: Şimdi Öğren
   petition_message: Her okuldaki her öğrencinin bilgisayar bilimlerini öğrenmek için
     fırsatı olmalıdır
-  petition_sign_message: 'Kabul ediyorsanız, adınızı girin. Diğerlerine # katılın.'
-  petition_sign_message_support: 'Bize destek olmak isterseniz kullanıcı adınızı girin.
-    # kişinin arasına katılın.'
+  petition_sign_message: 'Kabul ederseniz , adınızı girin ve diğerlerine # katılın.'
+  petition_sign_message_support: 'Bize destek olmak isterseniz kullanıcı adınızı girerek
+    # ile bize katılabilirsiniz.'
   petition_join_others: "# kişinin arasına katılın"
   name: İsim
   email: e-posta
@@ -484,6 +484,9 @@
   homepage_header_donors: Code.org destekleyenlere teşekkürler
   homepage_donors_seall: Tümünü göster
   homepage_donors_donate: Bağış Yap
+  homepage_below_hero_announcement_text: Gizliliğinize önem veriyoruz ve gizlilik
+    politikamızda 25 Mayıs’ta yürürlüğe girecek bazı güncellemeler yapıyoruz.
+  homepage_below_hero_announcement_link_text: Daha fazla bilgi edinin
   contact_form_topic_student: Ben öğrenciyim
   contact_form_topic_parent: Bir ebeveynim
   contact_form_topic_teacher: Bir öğretmen/eğitimciyim
@@ -727,6 +730,12 @@
   volunteer_engineer_submission_field_email_desc: E-posta adresiniz asla paylaşılmaz,
     ancak öğretmenlerden size istekler göndereceğiz.
   volunteer_engineer_submission_field_email_placeholder: E-posta adresi
+  volunteer_engineer_submission_field_email_preference: Size kurslarımızdaki yenilikler, yerel
+    fırsatlar veya diğer bilgisayar bilimi haberleriyle ilgili e-posta gönderebilir miyiz?
+  volunteer_engineer_submission_field_email_preference_privacy: (Ayrıntılar için gizlilik
+    politikamıza bakın)
+  volunteer_engineer_submission_field_email_preference_yes: Evet
+  volunteer_engineer_submission_field_email_preference_no: Hayır
   volunteer_engineer_submission_final_paragraph: Kod Saati ve diğer gönüllü fırsatlarında
     sizinle temasa geçilebilmesi için, yerel öğretmenler için olan bir haritada kayıt
     edileceksiniz. Tam adresiniz ve e-postanız bizim tarafımızdan ASLA paylaşılmayacaktır.
@@ -1266,6 +1275,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP (Advanced Placement-İleri Düzey Yerleştirme) Performans Görevleri
   csppostap_name: 'Post-AP: Uygulamalardaki veritabanları'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: Tam test - 50 soru
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'
@@ -2094,11 +2104,3 @@
   google_sign_in_instruct: 'Oradan, "Google Hesabı ile Oturum Aç" seçeneğini seçmeliler:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: Uygulama Laboratuvarı Giriş
-  homepage_below_hero_announcement_text: We care about your privacy and are making
-    some updates to our privacy policy, effective May 25.
-  homepage_below_hero_announcement_link_text: Learn more
-  volunteer_engineer_submission_field_email_preference: Can we email you about updates
-    to our courses, volunteer opportunities, or other computer science news?
-  volunteer_engineer_submission_field_email_preference_yes: 'Yes'
-  volunteer_engineer_submission_field_email_preference_no: 'No'
-  csp-post-survey_name: Student Post-Course Survey

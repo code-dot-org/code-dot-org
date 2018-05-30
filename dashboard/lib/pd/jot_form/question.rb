@@ -12,9 +12,13 @@ module Pd
         :name, # "unique" (not actually enforced by JotForm) name per form
         :text, # label
         :order, # 1-based order the question appears in the form
+        :hidden,
       )
 
+      alias_method :hidden?, :hidden
+
       def type=(value)
+        value = self.class.sanitize_type(value)
         raise "Invalid type #{value} for #{self.class}" unless self.class.supported_types.include? value
         @type = value
       end
@@ -27,13 +31,16 @@ module Pd
       end
 
       # Parse jotform question data
-      def self.from_jotform_question(id:, type:, jotform_question:)
+      # @param jotform_question [Hash] JSON.parsed jotform question data
+      # @return [Question]
+      def self.from_jotform_question(jotform_question)
         new(
-          id: id.to_i,
-          type: type,
+          id: jotform_question['qid'].to_i,
+          type: jotform_question['type'],
           name: jotform_question['name'],
           text: jotform_question['text'],
-          order: jotform_question['order'].to_i
+          order: jotform_question['order'].to_i,
+          hidden: jotform_question['hidden'] == 'Yes'
         )
       end
 
@@ -45,7 +52,14 @@ module Pd
           name: name,
           text: text,
           order: order
-        }
+        }.tap do |hash|
+          hash[:hidden] = true if hidden
+        end
+      end
+
+      # Remove the JotForm "control_" prefix from type names, if present.
+      def self.sanitize_type(type)
+        type.delete_prefix('control_')
       end
 
       # Override in derived classes to designate types they represent.
@@ -68,15 +82,16 @@ module Pd
 
       # Generate question summary
       # @return [Hash] {question_name => {text:, answer_type:}}
-      def to_summary
+      def summarize
         {name => {text: text, answer_type: answer_type}}
       end
 
       # Generate form_data for an answer to this question.
       # When merged with the other questions in a form, it will form the entire form_data.
       # @see FormQuestions
+      # @param answer [Hash] {question_id => answer}
       # @return [Hash] {question_name => answer}
-      def to_form_data(answer)
+      def process_answer(answer)
         {name => get_value(answer)}
       end
     end

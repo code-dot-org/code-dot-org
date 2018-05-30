@@ -16,7 +16,11 @@ class RegistrationsController < Devise::RegistrationsController
   #
   def update
     return head(:bad_request) if params[:user].nil?
-    current_user.reload # Needed to make tests pass for reasons noted in registrations_controller_test.rb
+    # Use set_user_type instead
+    return head(:bad_request) if params[:user][:user_type].present?
+    # Use set_email instead
+    return head(:bad_request) if params[:user][:email].present?
+    return head(:bad_request) if params[:user][:hashed_email].present?
 
     successfully_updated =
       if forbidden_change?(current_user, params)
@@ -50,9 +54,18 @@ class RegistrationsController < Devise::RegistrationsController
     super.tap do |params|
       if params[:user_type] == "teacher"
         params[:email_preference_opt_in_required] = true
-        params[:email_preference_request_ip] = request.env['REMOTE_ADDR']
+        params[:email_preference_request_ip] = request.ip
         params[:email_preference_source] = EmailPreference::ACCOUNT_SIGN_UP
         params[:email_preference_form_kind] = "0"
+      end
+
+      params[:data_transfer_agreement_accepted] = params[:data_transfer_agreement_accepted] == "1"
+      if params[:data_transfer_agreement_required] && params[:data_transfer_agreement_accepted]
+        params[:data_transfer_agreement_accepted] = true
+        params[:data_transfer_agreement_request_ip] = request.ip
+        params[:data_transfer_agreement_source] = User::ACCOUNT_SIGN_UP
+        params[:data_transfer_agreement_kind] = "0"
+        params[:data_transfer_agreement_at] = DateTime.now
       end
     end
   end
@@ -210,9 +223,7 @@ class RegistrationsController < Devise::RegistrationsController
   # Accept only whitelisted params for update.
   def update_params(params)
     params.require(:user).permit(
-      :email,
       :parent_email,
-      :hashed_email,
       :username,
       :password,
       :encrypted_password,
@@ -223,7 +234,6 @@ class RegistrationsController < Devise::RegistrationsController
       :locale,
       :age,
       :birthday,
-      :user_type,
       :school,
       :full_address,
       :terms_of_service_version,
@@ -264,7 +274,7 @@ class RegistrationsController < Devise::RegistrationsController
       require(:user).
       tap do |user|
         if user[:email_preference_opt_in].present?
-          user[:email_preference_request_ip] = request.env['REMOTE_ADDR']
+          user[:email_preference_request_ip] = request.ip
           user[:email_preference_source] = source
           user[:email_preference_form_kind] = form_kind
         end

@@ -26,7 +26,6 @@
       "console.log": null,
       "comment_Variables": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# collide()\r\n\r\nThe `collide` block is similar to `displace`, but it makes the sprite that uses it stop when it is touching the other sprite.  Can you use this to make the cherry stop when it gets to the top of the ice cream sundae?\r\n\r\n# Do This\r\n\r\nUse the `collide` block to make the cherry sprite stop when it runs into the ice cream sprite.\r\n\r\n[//]: # (https://images.code.org/491fb8bff907a183bd1cf0061689d193-image-1470419927625.png)\r\n\r\n[//]: # (https://images.code.org/ea2066d640e74284b8c48e382f56bf1b-image-1470419927627.png)",

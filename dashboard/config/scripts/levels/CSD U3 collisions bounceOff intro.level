@@ -23,7 +23,6 @@
       "console.log": null,
       "comment_Variables": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Basketball\r\n\r\nRun the code below and see what happens.  You want the basketball to bounce, but the floor should not move!  See if you can find a different block that you can use to make the basketball bounce off the floor.\r\n\r\n# Do This\r\n\r\nReplace `bounce` with a different block so that the floor sprite does not move, and the basketball sprite bounces off it.\r\n\r\n[//]: # (https://images.code.org/24355fc6377cfafdce3ce2b3568a33c3-image-1470343728940.png)\r\n\r\n[//]: # (https://images.code.org/87e4306e0371c7975b8fb2583657ee4a-image-1470343728942.png)",
