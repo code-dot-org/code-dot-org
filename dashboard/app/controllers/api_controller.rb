@@ -406,6 +406,7 @@ class ApiController < ApplicationController
   # Each such array contains an array of individual level results, matching the order of the LevelGroup's
   # levels.  For each level, the student's answer content is in :student_result, and its correctness
   # is in :correct.
+  # TODO(caleybrock): remove once the assessments tab is in react
   def section_assessments
     section = load_section
     script = load_script(section)
@@ -548,6 +549,8 @@ class ApiController < ApplicationController
 
   # Return a hash by student_id for all students in a section. The value is a hash by
   # script_level_id, with information on the student responses for that assessment.
+  # Currently, very similar logic to section_assessments, but will change as we refactor. The format
+  # of the results is different enough that I'm duplicating some code it for now.
   # TODO(caleybrock): currently only used in internal experiment, must add controller tests.
   def assessments_responses
     section = load_section
@@ -607,7 +610,7 @@ class ApiController < ApplicationController
             when TextMatch, FreeResponse
               student_result = level_response["result"]
               level_result[:student_result] = student_result
-              level_result[:correct] = "free_response"
+              level_result[:status] = "free_response"
             when Multi
               answer_indexes = Multi.find_by_id(level.id).correct_answer_indexes
               student_result = level_response["result"].split(",").sort.join(",")
@@ -617,16 +620,16 @@ class ApiController < ApplicationController
 
               if student_result == "-1"
                 level_result[:student_result] = ""
-                level_result[:correct] = "unsubmitted"
+                level_result[:status] = "unsubmitted"
               elsif student_result == answer_indexes
                 multi_count_correct += 1
-                level_result[:correct] = "correct"
+                level_result[:status] = "correct"
               else
-                level_result[:correct] = "incorrect"
+                level_result[:status] = "incorrect"
               end
             end
           else
-            level_result[:correct] = "unsubmitted"
+            level_result[:status] = "unsubmitted"
           end
 
           level_results << level_result
@@ -650,7 +653,7 @@ class ApiController < ApplicationController
 
       # If a student has made responses, add them to the hash
       if responses_by_level_group.keys.count > 0
-        student_hash[:responses] = responses_by_level_group
+        student_hash[:responses_by_assessment] = responses_by_level_group
         responses_by_student[student.id] = student_hash
       end
     end
