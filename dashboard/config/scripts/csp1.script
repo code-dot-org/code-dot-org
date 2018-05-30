@@ -7,6 +7,8 @@ teacher_resources [["lessonPlans", "https://curriculum.code.org/csp/unit1/"], ["
 has_verified_resources true
 has_lesson_plan true
 script_announcements [{"notice"=>"Have your students take the Post-Course Survey!", "details"=>"We want to make CSP even better! Please have your students complete the Post-Course survey now at the bottom of this unit. You'll be able to see anonymized results as well.", "link"=>"", "type"=>"bullhorn"}]
+new_name 'csp1-2017'
+family_name 'csp1'
 
 stage 'CS Principles Pre-survey', lockable: true, flex_category: 'cspSurvey'
 assessment 'csp-pre-survey-2017-levelgroup'
