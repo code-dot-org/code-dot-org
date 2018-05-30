@@ -471,8 +471,8 @@ Dashboard::Application.routes.draw do
     get 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#construct_email'
     post 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#send_email'
 
-    get 'workshop_survey/day/:day', to: 'workshop_daily_survey#new'
-    get 'workshop_survey/facilitators/(:session_id)(/:facilitator_index)', to: 'workshop_daily_survey#new_facilitator'
+    get 'workshop_survey/day/:day', to: 'workshop_daily_survey#new_general'
+    get 'workshop_survey/facilitators/:session_id(/:facilitator_index)', to: 'workshop_daily_survey#new_facilitator'
     get 'workshop_survey/thanks', to: 'workshop_daily_survey#thanks'
 
     namespace :application do
