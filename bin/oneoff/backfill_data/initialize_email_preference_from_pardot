@@ -5,14 +5,38 @@ require 'cdo/only_one'
 
 BATCH_SIZE = 10
 
+def print_usage
+  puts 'Usage: initialize_email_preference_from_pardot s3_object_key [default Opt In value - true|false]'
+end
+
 def main
-  AWS::S3.process_file('cdo-temp', 'pardot-exports/testPardotExport.OptOut.csv') do |filename|
+  if ARGV.empty?
+    print_usage
+    return
+  end
+
+  s3_object_key = ARGV[0]
+
+  # Default EmailPreference.opt_in to this value (true or false) if the db_Opt_In column in the Pardot export file is
+  # empty, because sometimes we want to assume Opt In is true for a large batch of emails exported (such as
+  # non-EEA emails) and sometimes we want to assume Opt In is false (EEA emails that did not response to re-permission).
+  default_opt_in_value = ARGV[1] || false
+
+  AWS::S3.process_file('cdo-temp', s3_object_key) do |filename|
     CSV.foreach(filename, headers: true).each_slice(BATCH_SIZE) do |slice|
       slice.each do |row|
+        input_opt_in = case row.field('db_Opt_In')
+                       when 'Yes'
+                         true
+                       when 'No'
+                         false
+                       else
+                         default_opt_in_value
+                       end
         begin
           EmailPreference.upsert!(
             email: row.field('Email'),
-            opt_in: row.field('db_Opt_In') == 'Yes',
+            opt_in: input_opt_in,
             ip_address: row.field('Country') || EmailPreference::CODE_DOT_ORG,
             source: EmailPreference::AUTOMATED_INITIALIZE_FROM_PARDOT,
             form_kind: nil
