@@ -64,8 +64,6 @@ class Section < ActiveRecord::Base
   has_many :section_hidden_stages
   has_many :section_hidden_scripts
 
-  SYSTEM_DELETED_NAME = 'system_deleted'.freeze
-
   # This list is duplicated as SECTION_LOGIN_TYPE in shared_constants.rb and should be kept in sync.
   LOGIN_TYPES = [
     LOGIN_TYPE_EMAIL = 'email'.freeze,
@@ -209,11 +207,6 @@ class Section < ActiveRecord::Base
     end
   end
 
-  # Clears all personal data from the section object.
-  def clean_data
-    update(name: SYSTEM_DELETED_NAME, code: system_deleted_section_code)
-  end
-
   # Figures out the default script for this section. If the section is assigned to
   # a course rather than a script, it returns the first script in that course.
   # @return [Script, nil]
@@ -338,10 +331,5 @@ class Section < ActiveRecord::Base
 
   def unused_random_code
     CodeGeneration.random_unique_code length: 6, model: Section
-  end
-
-  SYSTEM_DELETED_CODE_PREFIX = 'system_deleted_'.freeze
-  def system_deleted_section_code
-    SYSTEM_DELETED_CODE_PREFIX + id.to_s
   end
 end

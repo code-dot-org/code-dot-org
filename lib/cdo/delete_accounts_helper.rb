@@ -135,8 +135,12 @@ class DeleteAccountsHelper
 
   # Cleans all sections owned by the user.
   # @param [Integer] The ID of the user to anonymize the sections of.
-  def anonymize_user_sections(user_id)
-    Section.with_deleted.where(user_id: user_id).each(&:clean_data)
+  def remove_user_sections(user_id)
+    Section.with_deleted.where(user_id: user_id).each(&:really_destroy!)
+  end
+
+  def remove_user_from_sections_as_student(user)
+    Follower.with_deleted.where(student_user: user).each(&:really_destroy!)
   end
 
   # Removes all information about the user pertaining to Pardot. This encompasses Pardot itself, the
@@ -222,7 +226,8 @@ class DeleteAccountsHelper
     delete_project_backed_progress(user.id)
     purge_orphaned_students(user.id)
     clean_and_destroy_pd_content(user.id)
-    anonymize_user_sections(user.id)
+    remove_user_sections(user.id)
+    remove_user_from_sections_as_student(user)
     remove_from_pardot(user.id)
     remove_from_solr(user.id)
     purge_unshared_studio_person(user)
