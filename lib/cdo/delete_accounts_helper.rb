@@ -186,6 +186,12 @@ class DeleteAccountsHelper
     Census::CensusSubmission.where(submitter_email_address: email).each(&:destroy)
   end
 
+  # Removes EmailPreference records associated with this email address.
+  # @param [String] email An email address
+  def remove_email_preferences(email)
+    EmailPreference.where(email: email).each(&:destroy)
+  end
+
   # Removes signature and school_id from applications for this user
   # @param [User] user
   def anonymize_circuit_playground_discount_application(user)
@@ -209,6 +215,7 @@ class DeleteAccountsHelper
     # reflective of past state.
     user.destroy
     remove_census_submissions(user.email) if user.email
+    remove_email_preferences(user.email) if user.email
     anonymize_circuit_playground_discount_application(user)
     clean_level_source_backed_progress(user.id)
     clean_survey_responses(user.id)
@@ -223,5 +230,17 @@ class DeleteAccountsHelper
 
     user.purged_at = Time.zone.now
     user.save(validate: false)
+  end
+
+  # Given an email address, locates all accounts (including soft-deleted accounts)
+  # associated with that email address and purges each of them in turn.
+  # @param [String] email an email address.
+  def purge_all_accounts_with_email(email)
+    # Note: Not yet taking into account parent_email or users with multiple
+    # email addresses tied to their account - we'll have to do that later.
+    (
+      User.with_deleted.where(email: email) +
+      User.with_deleted.where(hashed_email: User.hash_email(email))
+    ).each {|u| purge_user u}
   end
 end

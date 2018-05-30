@@ -626,6 +626,7 @@
   "lessonName": "Lesson Name",
   "lessonNumbered": "Lesson {lessonNumber}: {lessonName}",
   "lessonPlans": "Lesson Plans",
+  "lessonStatus": "Lesson Status",
   "levelDetails": "Level Details",
   "levelIncompleteError": "Keep coding! Something's not quite right yet.",
   "levelN": "LEVEL {levelNumber}",

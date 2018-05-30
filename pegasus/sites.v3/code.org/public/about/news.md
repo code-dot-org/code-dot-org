@@ -52,6 +52,7 @@ For all press and media inquiries:
 
 Download hi-res photo of Code.org founder [Hadi Partovi](https://code.org/images/HadiPartoviHeadshot.jpg)
 
+Please [view our brand assets usage policy](/about/brand-usage) for more information on how you may use the Code.org logo and trademark.
 
 ## Partnership Logo
 
