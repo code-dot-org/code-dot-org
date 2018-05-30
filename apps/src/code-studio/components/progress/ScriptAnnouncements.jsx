@@ -3,7 +3,7 @@ import { announcementShape } from '@cdo/apps/code-studio/scriptAnnouncementsRedu
 import Notification from '@cdo/apps/templates/Notification';
 import i18n from '@cdo/locale';
 
-export default function ScriptAnnouncements({announcements}) {
+export default function ScriptAnnouncements({announcements, width}) {
   return (
     <div>
       {announcements.map((announcement, index) => (
@@ -15,7 +15,7 @@ export default function ScriptAnnouncements({announcements}) {
           buttonText={i18n.learnMore()}
           buttonLink={announcement.link}
           dismissible={true}
-          width={1100}
+          width={width}
         />
       ))}
     </div>
@@ -24,4 +24,5 @@ export default function ScriptAnnouncements({announcements}) {
 
 ScriptAnnouncements.propTypes = {
   announcements: PropTypes.arrayOf(announcementShape).isRequired,
+  width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 };
