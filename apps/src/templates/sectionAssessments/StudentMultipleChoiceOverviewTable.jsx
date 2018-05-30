@@ -4,14 +4,14 @@ import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
 import i18n from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 export const COLUMNS = {
-  QUESTION: 0,
-  STUDENT_NAME: 1,
-  NUM_MULTIPLE_CHOICE_CORRECT: 2,
-  NUM_MULTIPLE_CHOICE: 3,
-  PERCENT_CORRECT: 4,
-  SUBMISSION_TIMESTAMP: 5,
+  NAME: 0,
+  NUM_MULTIPLE_CHOICE_CORRECT: 1,
+  NUM_MULTIPLE_CHOICE: 2,
+  PERCENT_CORRECT: 3,
+  SUBMISSION_TIMESTAMP: 4,
 };
 
 const studentOverviewDataPropType = PropTypes.shape({
@@ -21,6 +21,8 @@ const studentOverviewDataPropType = PropTypes.shape({
   numMultipleChoice: PropTypes.number.isRequired,
   percentCorrect: PropTypes.string.isRequired,
   submissionTimestamp: PropTypes.string,
+  submissionStatus: PropTypes.string,
+  isSubmitted: PropTypes.bool,
 });
 
 class StudentAssessmentOverviewTable extends Component {
@@ -52,6 +54,25 @@ class StudentAssessmentOverviewTable extends Component {
         selectedColumn
       })
     });
+  };
+
+  submissionTimestampColumnFormatter = (submissionTimeStamp, {rowData}) => {
+    const submissionStatus = rowData.submissionStatus;
+
+    if (submissionStatus === 'Completed') {
+      return (
+        <div>
+          <div>
+            {submissionTimeStamp}
+          </div>
+          <div>
+            <FontAwesome icon="check-circle"/>
+          </div>
+        </div>
+      );
+    } else {
+      return submissionStatus;
+    }
   };
 
   getColumns = (sortable) => {
@@ -104,6 +125,7 @@ class StudentAssessmentOverviewTable extends Component {
           props: {style: tableLayoutStyles.headerCell},
         },
         cell: {
+          format: this.submissionTimestampColumnFormatter,
           props: {style:tableLayoutStyles.cell},
         }
       },
