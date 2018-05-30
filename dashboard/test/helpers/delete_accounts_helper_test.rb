@@ -260,41 +260,56 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   # Table: dashboard.sections
   #
 
-  test "soft-deletes all of a user's owned sections" do
+  test "hard-deletes all of a user's owned sections" do
     user = create :teacher
-    create :section, user: user
-    create :section, user: user
-    create :section, user: user
+    create_list :section, 3, user: user
+    user.sections.first.destroy
+    section_ids = user.sections.with_deleted.map(&:id)
 
-    refute_empty Section.where(user: user)
-    refute_empty Section.with_deleted.where(user: user)
+    assert_equal 2, Section.where(id: section_ids).count
+    assert_equal 3, Section.with_deleted.where(id: section_ids).count
 
     purge_user user
 
-    assert_empty Section.where(user: user)
-    refute_empty Section.with_deleted.where(user: user)
+    assert_empty Section.where(id: section_ids)
+    assert_empty Section.with_deleted.where(id: section_ids)
   end
 
-  test "clears all section names" do
+  #
+  # Table: dashboard.followers
+  #
+
+  test "hard-deletes all of a hard-deleted student's follower rows" do
+    user = create :student
     section = create :section
+    section.students << user
 
-    refute_equal Section::SYSTEM_DELETED_NAME, section.name
+    assert_includes user.sections_as_student, section
+    assert_includes section.students, user
+    refute_empty Follower.where(student_user: user)
 
-    purge_user section.user
+    purge_user user
     section.reload
 
-    assert_equal Section::SYSTEM_DELETED_NAME, section.name
+    assert_empty user.sections_as_student
+    refute_includes section.students, user
+    assert_empty Follower.with_deleted.where(student_user: user)
   end
 
-  test "anonymizes all section codes" do
-    section = create :section
+  test "hard-deletes all followers of a hard-deleted teacher's sections" do
+    user = create :teacher
+    section_1 = create :section, teacher: user
+    section_1.students << create_list(:student, 3)
+    section_2 = create :section, teacher: user
+    section_2.students << create_list(:student, 3)
 
-    assert_match /[A-Z]{6}/, section.code
+    section_ids = user.sections.map(&:id)
 
-    purge_user section.user
-    section.reload
+    assert_equal 6, Follower.with_deleted.where(section_id: section_ids).count
 
-    assert_match /#{Section::SYSTEM_DELETED_CODE_PREFIX}#{section.id}/, section.code
+    purge_user user
+
+    assert_empty Follower.with_deleted.where(section_id: section_ids)
   end
 
   #
