@@ -63,10 +63,31 @@ module Pd
               'It was a good use of time',
               'I enjoyed it'
             ]
+          ),
+          TextQuestion.new(
+            id: 8,
+            name: 'hidden_text',
+            text: 'This should be hidden',
+            hidden: true
           )
         ]
 
         @form_questions = FormQuestions.new(@form_id, @questions)
+
+        @jotform_answers = {
+          '1' => 'this is my text answer',
+          '2' => 'Two',
+          '3' => {'other' => 'my other reason'},
+          '4' => %w(Two Three),
+          '5' => {'0' => 'Two', 'other' => 'my other reason'},
+          '6' => '2',
+          '7' => {
+            'I learned something' => 'Agree',
+            'It was a good use of time' => 'Neutral',
+            'I enjoyed it' => 'Agree'
+          },
+          '8' => 'hidden answer'
+        }
       end
 
       test 'summarize' do
@@ -87,20 +108,6 @@ module Pd
       end
 
       test 'process_answers' do
-        jotform_answers = {
-          '1' => 'this is my text answer',
-          '2' => 'Two',
-          '3' => {'other' => 'my other reason'},
-          '4' => %w(Two Three),
-          '5' => {'0' => 'Two', 'other' => 'my other reason'},
-          '6' => '2',
-          '7' => {
-            'I learned something' => 'Agree',
-            'It was a good use of time' => 'Neutral',
-            'I enjoyed it' => 'Agree'
-          }
-        }
-
         expected_processed_answers = {
           'text' => 'this is my text answer',
           'singleSelect' => 2,
@@ -113,7 +120,15 @@ module Pd
           'matrix_2' => 3
         }
 
-        assert_equal expected_processed_answers, @form_questions.process_answers(jotform_answers)
+        assert_equal expected_processed_answers, @form_questions.process_answers(@jotform_answers)
+      end
+
+      test 'show hidden questions' do
+        answers_with_hidden = @form_questions.process_answers(@jotform_answers, show_hidden_questions: true)
+        assert answers_with_hidden.key? 'hidden_text'
+
+        summary_with_hidden = @form_questions.summarize(show_hidden_questions: true)
+        assert summary_with_hidden.key? 'hidden_text'
       end
 
       test 'serialize' do
