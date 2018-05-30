@@ -45,6 +45,9 @@ exports.appendBlocksByCategory = function (toolboxXml, blocksByCategory) {
     }
     category.setAttribute('name', categoryName);
     blocksByCategory[categoryName].forEach(blockName => {
+      if (category.querySelector(`block[type="${blockName}"]`)) {
+        return;
+      }
       const block = toolboxDom.createElement('block');
       block.setAttribute('type', blockName);
       category.appendChild(block);
