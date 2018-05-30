@@ -427,6 +427,62 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_equal 0, cohort.deleted_teachers.size
   end
 
+  #
+  # Table: dashboard.districts
+  # Table: dashboard.districts_users
+  #
+
+  test 'removes purged user from any districts' do
+    district1 = create :district
+    district2 = create :district
+    user = create :user
+    user.districts << district1
+    user.districts << district2
+
+    assert_equal 2, user.districts.count
+    assert_includes district1.users, user
+    assert_includes district2.users, user
+
+    purge_user user
+    district1.reload
+    district2.reload
+
+    assert_empty user.districts
+    refute_includes district1.users.with_deleted, user
+    refute_includes district2.users.with_deleted, user
+  end
+
+  test 'removes purged district contact from district' do
+    district = create :district
+    user = create :user, district_as_contact: district
+
+    assert_equal district, user.district_as_contact
+    assert_equal user, district.contact
+
+    purge_user user
+    district.reload
+
+    assert_nil user.district_as_contact
+    assert_nil district.contact
+  end
+
+  #
+  # Table: dashboard.email_preferences
+  # Associated through the user's email
+  #
+
+  test "removes email preference rows for the purged user's email address" do
+    user = create :teacher
+    email = user.email
+    create :email_preference, email: email
+
+    refute_empty EmailPreference.where(email: email)
+
+    purge_user user
+
+    assert_empty EmailPreference.where(email: email)
+  end
+
   private
 
   #
