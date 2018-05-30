@@ -445,7 +445,13 @@ const LABELED_INPUTS_REGEX = /.*?({[^}]*}|\n|$)/gm;
  */
 const LABELED_INPUT_PARTS_REGEX = /(.*?)({([^}]*)}|\n|$)/m;
 
-const findInputConfig = (args, inputName) => {
+/**
+ * Finds the input config for the given input name, and removes it from args.
+ * @param {InputConfig[]} args List of configs to search through
+ * @param {string} inputName name of input to find and remove
+ * @returns InputConfig the input config with name `inputName`
+ */
+const findAndRemoveInputConfig = (args, inputName) => {
   const argIndex = args.findIndex(arg => arg.name === inputName);
   if (argIndex !== -1) {
     return args.splice(argIndex, 1)[0];
@@ -475,7 +481,7 @@ const determineInputs = function (text, args, strictTypes=[]) {
     const label = parts[1];
     const inputName = parts[3];
     if (inputName) {
-      const arg = findInputConfig(args, inputName);
+      const arg = findAndRemoveInputConfig(args, inputName);
       const strict = arg.strict || strictTypes.includes(arg.type);
       let mode;
       if (arg.options) {
