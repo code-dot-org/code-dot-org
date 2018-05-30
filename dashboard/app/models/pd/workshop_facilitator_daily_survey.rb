@@ -44,24 +44,22 @@ module Pd
     end
 
     validates_presence_of(
-      :form_id,
-      :submission_id,
       :user_id,
       :pd_workshop_id,
       :facilitator_id,
-      :answers,
       :day
     )
 
-    # TODO: expand to 0..5
-    VALID_DAYS = (1..1).freeze
+    VALID_DAYS = (1..5).freeze
 
     validates_inclusion_of :day, in: VALID_DAYS
 
-    def self.form_ids
-      VALID_DAYS.map do |day|
-        get_form_id 'local', "facilitator_day_#{day}"
-      end
+    def self.form_id
+      get_form_id 'local', 'facilitator'
+    end
+
+    def self.all_form_ids
+      [form_id]
     end
   end
 end
