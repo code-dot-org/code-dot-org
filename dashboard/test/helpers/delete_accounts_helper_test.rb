@@ -258,6 +258,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   #
   # Table: dashboard.activities
+  # Table: dashboard.gallery_activities
   #
 
   test "clears activities.level_source_id for all of user's activity" do
@@ -271,6 +272,18 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     refute Activity.where(user: user).any?(&:level_source),
       'Expected no activity record that references a level source to exist for this user'
+  end
+
+  test 'disconnects gallery activities from level sources' do
+    user = create :student
+    gallery_activity = create :gallery_activity, user: user
+
+    refute_nil gallery_activity.level_source_id
+
+    purge_user user
+    gallery_activity.reload
+
+    assert_nil gallery_activity.level_source_id
   end
 
   #
