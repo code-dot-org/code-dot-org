@@ -411,6 +411,8 @@ exports.cleanBlocks = function (blocksDom) {
  * @property {boolean} empty Indicates that an input should not render a
  *   connection or generate any code. Mostly just useful as a line break for
  *   non-inlined blocks.
+ * @property {boolean} assignment Indicates that this block should generate
+ *   an assignment statement, with this input yielding the variable name.
  */
 
 /**
@@ -452,50 +454,35 @@ const determineInputs = function (text, args, strictTypes=[]) {
       const argIndex = args.findIndex(arg => arg.name === input);
       const [arg] = args.splice(argIndex, 1);
       const strict = arg.strict || strictTypes.includes(arg.type);
+      let mode;
       if (arg.options) {
-        inputs.push({
-          mode: DROPDOWN_INPUT,
-          name: arg.name,
-          options: arg.options,
-          label,
-          strict,
-        });
+        mode = DROPDOWN_INPUT;
       } else if (arg.field) {
-        inputs.push({
-          mode: FIELD_INPUT,
-          name: arg.name,
-          type: arg.type,
-          label,
-        });
+        mode = FIELD_INPUT;
       } else if (arg.customInput) {
-        inputs.push({
-          mode: arg.customInput,
-          name: arg.name,
-          type: arg.type,
-          label,
-          strict,
-        });
+        mode = arg.customInput;
       } else if (arg.statement) {
-        inputs.push({
-          mode: STATEMENT_INPUT,
-          name: arg.name,
-          label,
-        });
+        mode = STATEMENT_INPUT;
       } else if (arg.empty) {
-        inputs.push({
-          mode: DUMMY_INPUT,
-          name: arg.name,
-          label,
-        });
+        mode = DUMMY_INPUT;
       } else {
-        inputs.push({
-          mode: VALUE_INPUT,
-          name: arg.name,
-          type: arg.type,
-          label,
-          strict,
-        });
+        mode = VALUE_INPUT;
       }
+      const labeledInput = {
+        name: arg.name,
+        mode,
+        label,
+        strict,
+        type: arg.type,
+        options: arg.options,
+        assignment: arg.assignment,
+      };
+      Object.keys(labeledInput).forEach(key => {
+        if (labeledInput[key] === undefined) {
+          delete labeledInput[key];
+        }
+      });
+      inputs.push(labeledInput);
     } else {
       inputs.push({
         mode: DUMMY_INPUT,
@@ -799,9 +786,14 @@ exports.createJsWrapperBlockCreator = function (
     };
 
     generator[blockName] = function () {
+      let prefix = '';
       const values = args.map(arg => {
         const inputConfig = inputConfigs.find(input => input.name === arg.name);
-        return inputTypes[inputConfig.mode].generateCode(this, inputConfig);
+        const inputCode = inputTypes[inputConfig.mode].generateCode(this, inputConfig);
+        if (inputConfig.assignment) {
+          prefix += `${inputCode} = `;
+        }
+        return inputCode;
       }).filter(value => value !== null).map(value => {
         if (value === "") {
           // Missing inputs should be passed into func as undefined
@@ -817,11 +809,10 @@ exports.createJsWrapperBlockCreator = function (
         ];
       }
 
-      let prefix = '';
       if (methodCall) {
         const object =
           Blockly.JavaScript.valueToCode(this, 'THIS', ORDER_MEMBER);
-        prefix = `${object}.`;
+        prefix += `${object}.`;
       }
 
       if (eventBlock) {

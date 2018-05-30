@@ -4,15 +4,19 @@ import {SET_SECTION} from '@cdo/apps/redux/sectionDataRedux';
  // TODO(caleybrock): define a shape for sectionAssessment data that gets stored in redux.
 const initialState = {
   assessmentsByScript: {},
+  assessmentsStructureByScript: {},
   isLoadingAssessments: false
 };
 
 const SET_ASSESSMENTS = 'sectionAssessments/SET_ASSESSMENTS';
+const SET_ASSESSMENTS_STRUCTURE = 'sectionAssessments/SET_ASSESSMENTS_STRUCTURE';
 const START_LOADING_ASSESSMENTS = 'sectionAssessments/START_LOADING_ASSESSMENTS';
 const FINISH_LOADING_ASSESSMENTS = 'sectionAssessments/FINISH_LOADING_ASSESSMENTS';
 
 // Action creators
 export const setAssessments = (scriptId, assessments) => ({ type: SET_ASSESSMENTS, scriptId, assessments});
+export const setAssessmentsStructure = (scriptId, assessments) =>
+  ({ type: SET_ASSESSMENTS_STRUCTURE, scriptId, assessments});
 export const startLoadingAssessments = () => ({ type: START_LOADING_ASSESSMENTS });
 export const finishLoadingAssessments = () => ({ type: FINISH_LOADING_ASSESSMENTS });
 
@@ -36,6 +40,15 @@ export const asyncLoadAssessments = (sectionId, scriptId, onComplete) => {
       }
       dispatch(finishLoadingAssessments());
     });
+
+    loadAssessmentsStructureFromServer(scriptId, (error, data) => {
+      if (error) {
+        console.error(error);
+      } else {
+        dispatch(setAssessmentsStructure(scriptId, data));
+        onComplete();
+      }
+    });
   };
 };
 
@@ -53,6 +66,15 @@ export default function sectionAssessments(state=initialState, action) {
       ...state,
       assessmentsByScript: {
         ...state.assessmentsByScript,
+        [action.scriptId]: action.assessments
+      }
+    };
+  }
+  if (action.type === SET_ASSESSMENTS_STRUCTURE) {
+    return {
+      ...state,
+      assessmentsStructureByScript: {
+        ...state.assessmentsStructureByScript,
         [action.scriptId]: action.assessments
       }
     };
@@ -91,6 +113,18 @@ const loadAssessmentsFromServer = (sectionId, scriptId, onComplete) => {
     method: 'GET',
     contentType: 'application/json;charset=UTF-8',
     data: payload
+  }).done(assessmentsData => {
+    onComplete(null, assessmentsData);
+  }).fail((jqXhr, status) => {
+    onComplete(status, jqXhr.responseJSON);
+  });
+};
+
+const loadAssessmentsStructureFromServer = (scriptId, onComplete) => {
+  $.ajax({
+    url: `/dashboardapi/assessments_structure/${scriptId}`,
+    method: 'GET',
+    contentType: 'application/json;charset=UTF-8',
   }).done(assessmentsData => {
     onComplete(null, assessmentsData);
   }).fail((jqXhr, status) => {
