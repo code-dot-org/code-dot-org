@@ -21,7 +21,6 @@ experiments.COMMENT_BOX_TAB = 'commentBoxTab';
 experiments.DEV_COMMENT_BOX_TAB = 'devCommentBoxTab';
 experiments.COURSE_VERSIONS = 'courseVersions';
 experiments.PROGRESS_TAB = 'sectionProgressRedesign';
-experiments.TEXT_RESPONSES_TAB = 'textResponsesRedesign';
 experiments.ASSESSMENTS_TAB = 'assessmentsTab';
 experiments.SCHOOL_AUTOCOMPLETE_DROPDOWN_NEW_SEARCH = 'schoolAutocompleteDropdownNewSearch';
 
