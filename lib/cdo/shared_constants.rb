@@ -33,7 +33,8 @@ module SharedConstants
       attempted: "attempted",
       review_accepted: "review_accepted",
       review_rejected: "review_rejected",
-      dots_disabled: "dots_disabled"
+      dots_disabled: "dots_disabled",
+      free_play_complete: "free_play_complete",
     }
   ).freeze
 

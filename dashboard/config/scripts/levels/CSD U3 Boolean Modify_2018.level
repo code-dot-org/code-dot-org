@@ -91,14 +91,11 @@
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"8cf12b56-3091-4817-8c73-a9f2a12eb3b0\",\r\n    \"08c988f7-21e8-4256-8930-215311a62e37\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"8cf12b56-3091-4817-8c73-a9f2a12eb3b0\": {\r\n      \"name\": \"apple\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/_C2x10SnwauWvJRCQq.u2jEtcmNrPifb/category_food/apple.png\",\r\n      \"frameSize\": {\r\n        \"x\": 128,\r\n        \"y\": 128\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"_C2x10SnwauWvJRCQq.u2jEtcmNrPifb\"\r\n    },\r\n    \"08c988f7-21e8-4256-8930-215311a62e37\": {\r\n      \"name\": \"carrot\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/fCiFCbsTDOoiLsbStivUZ249XH0TOxIY/category_food/carrot.png\",\r\n      \"frameSize\": {\r\n        \"x\": 78,\r\n        \"y\": 70\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"fCiFCbsTDOoiLsbStivUZ249XH0TOxIY\"\r\n    }\r\n  }\r\n}",
     "parent_level_id": 4690,
     "name_suffix": "_2018",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "map_reference": "/docs/csd-1718/booleans/index.html",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

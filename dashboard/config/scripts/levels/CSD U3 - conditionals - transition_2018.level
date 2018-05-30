@@ -91,7 +91,6 @@
     "expand_debugger": "true",
     "parent_level_id": 5049,
     "name_suffix": "_2018",
-    "contained_level_names": null,
     "reference_links": [
       "/docs/csd-1718/sprite_properties/index.html",
       "/docs/csd-1718/sprites/index.html"
@@ -99,7 +98,8 @@
     "map_reference": "/docs/csd-1718/booleans/index.html",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

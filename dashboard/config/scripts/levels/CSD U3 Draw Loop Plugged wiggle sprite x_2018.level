@@ -57,7 +57,6 @@
     "encrypted_examples": "i6RPkcmdsc7W33hTbyb7h5xxNBhvPRsgcUatV/vp0vcBuckza6SCKEI4ZLtx\nhQxUc8xGLyWms8mpHeHzVEBf9A==\n",
     "parent_level_id": 8870,
     "name_suffix": "_2018",
-    "contained_level_names": null,
     "reference_links": [
       "/docs/csd-1718/draw_loop/index.html",
       "/docs/csd-1718/sprites/index.html"
@@ -66,7 +65,8 @@
     "video_key": "csd_gamelab_drawloop",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

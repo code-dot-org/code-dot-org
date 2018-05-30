@@ -58,7 +58,6 @@
     "encrypted_examples": "tzdsLy8qz7r5qBFyFIsmJ3vdZB0dl2UwoPRgHVcbeSM52Fcw9Q0DqkLBLc3g\npIMcJ02yVl88tBGrkfYUNohGYQ==\n",
     "parent_level_id": 8874,
     "name_suffix": "_2018",
-    "contained_level_names": null,
     "reference_links": [
       "/docs/csd-1718/draw_loop/index.html",
       "/docs/csd-1718/sprites/index.html"
@@ -68,7 +67,8 @@
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"\",\r\n  \"callout_text\": \"\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": null,\r\n    \"at\": null,\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

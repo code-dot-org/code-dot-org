@@ -8,6 +8,8 @@ has_verified_resources true
 has_lesson_plan true
 project_widget_types ["applab"]
 script_announcements [{"notice"=>"Know a teacher interested in teaching computer science?", "details"=>"Applications for the 2018 middle and high school Professional Learning program are now open!  No computer science experience is necessary.", "link"=>"https://code.org/educate/professional-learning-2018", "type"=>"bullhorn"}, {"notice"=>"This Unit has been Updated!", "details"=>"In response to feedback from our pilot last year, we've recently published significant updates to this unit. To learn more about these updates, click the \"Learn more\" button.", "link"=>"http://forum.code.org/t/updated-unit-6-released/", "type"=>"information"}]
+new_name "csd6-2017"
+family_name "csd6"
 
 stage 'Innovations in Computing_', flex_category: 'csd6_1'
 named_level 'CSD U6L01 TFMD'
@@ -238,3 +240,6 @@ level 'CSDU6 - final project 5', progression: 'Board Input and Output'
 level 'CSDU6 - final project 4', progression: 'Finishing Touches'
 level 'CSDU6 - final project 6', progression: 'Finishing Touches'
 assessment 'csd-pulse-check-survey-1-levelgroup U6Ch2', progression: 'Reflection'
+
+stage 'CSD Post-Course Survey', lockable: true, flex_category: 'csd_survey'
+assessment 'csd-post-survey-2018-markdown-with-link-to-survey'

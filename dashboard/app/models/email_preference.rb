@@ -15,7 +15,12 @@
 #
 #  index_email_preferences_on_email  (email) UNIQUE
 #
-#
+
+# Notes:
+#   source: Indicates the source of the opt-in choice.
+#   form_kind: "0", "1", etc.  Indicates which version of the opt-in string the
+#     user agreed to, for a given source.  This value should be bumped each
+#     time the corresponding user-facing string is updated.
 require_dependency 'cdo/email_preference_constants'
 
 class EmailPreference < ApplicationRecord

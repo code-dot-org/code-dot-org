@@ -42,6 +42,14 @@ namespace :seed do
     'csp-create',
     'csp-post-survey',
     'csppostap',
+    'csp1-2018',
+    'csp2-2018',
+    'csp3-2018',
+    'csp4-2018',
+    'csp5-2018',
+    'csp-explore-2018',
+    'csp-create-2018',
+    'csppostap-2018',
     'events',
     'flappy',
     'frozen',
@@ -104,7 +112,7 @@ namespace :seed do
 
   task courses_ui_tests: :environment do
     # seed those courses that are needed for UI tests
-    %w(allthethingscourse csp).each do |course_name|
+    %w(allthethingscourse csp-2017 csp-2018).each do |course_name|
       Course.load_from_path("config/courses/#{course_name}.course")
     end
   end
@@ -142,6 +150,10 @@ namespace :seed do
 
   task import_custom_levels: :environment do
     LevelLoader.load_custom_levels
+  end
+
+  task blocks: :environment do
+    Block.load_blocks
   end
 
   # Generate the database entry from the custom levels json file

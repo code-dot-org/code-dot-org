@@ -7,6 +7,8 @@ teacher_resources [["lessonPlans", "https://curriculum.code.org/csd/unit4/"], ["
 has_verified_resources true
 has_lesson_plan true
 script_announcements [{"notice"=>"Know a teacher interested in teaching computer science?", "details"=>"Applications for the 2018 middle and high school Professional Learning program are now open!  No computer science experience is necessary.", "link"=>"https://code.org/educate/professional-learning-2018", "type"=>"bullhorn"}]
+new_name "csd4-2017"
+family_name "csd4"
 
 stage 'Analysis of Design', flex_category: 'csd4_1'
 named_level 'CSD U4L01 SFLP'
@@ -88,3 +90,6 @@ named_level 'CSDU4 Project Bug Feature'
 stage 'Project - App Presentation', flex_category: 'csd4_2'
 named_level 'CSD U4L17 SFLP'
 assessment 'csd-pulse-check-survey-1-levelgroup U4Ch2', progression: 'Reflection'
+
+stage 'CSD Post-Course Survey', lockable: true, flex_category: 'csd_survey'
+assessment 'csd-post-survey-2018-markdown-with-link-to-survey'

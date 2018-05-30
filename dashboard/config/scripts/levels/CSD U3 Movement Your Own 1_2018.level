@@ -75,10 +75,6 @@
     "project_template_level_name": "CSD U3 Movement Your Own_2018",
     "parent_level_id": 8878,
     "name_suffix": "_2018",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "reference_links": [
       "/docs/csd-1718/animation_tab/index.html",
       "/docs/csd-1718/sprites/index.html",
@@ -88,7 +84,8 @@
     ],
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

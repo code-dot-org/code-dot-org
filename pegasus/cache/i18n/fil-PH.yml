@@ -532,6 +532,9 @@
   homepage_header_donors: Pinasasalamatan ng Code.org ang mag tagasuporta nito
   homepage_donors_seall: Tingnan lahat
   homepage_donors_donate: Mag-donate
+  homepage_below_hero_announcement_text: We care about your privacy and are making
+    some updates to our privacy policy, effective May 25.
+  homepage_below_hero_announcement_link_text: Matuto nang higit pa
   contact_form_topic_student: Ako ay estudyante
   contact_form_topic_parent: Ako ay magulang
   contact_form_topic_teacher: Ako ay guro/tagapagturo
@@ -789,6 +792,10 @@
     ibabahagi kailan man, ngunit kami ay magpapadala sa iyo ng mga kahilingan mula
     sa mga guro.
   volunteer_engineer_submission_field_email_placeholder: Email address
+  volunteer_engineer_submission_field_email_preference: Can we email you about updates
+    to our courses, volunteer opportunities, or other computer science news?
+  volunteer_engineer_submission_field_email_preference_yes: Oo
+  volunteer_engineer_submission_field_email_preference_no: Hindi
   volunteer_engineer_submission_final_paragraph: Ikaw ay ililista sa isang mapa para
     sa mga lokal na mga guro na makipag-ugnayan sa iyo para sa Hour of Code o ibang
     mga oportunidad sa pagboluntaryo. Ang iyong email at eksaktong address ay HINDI
@@ -1377,6 +1384,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP na Performance Tasks
   csppostap_name: 'Pagkatapos ng AP: Mga Database sa mga Apps'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: Buong Pagsusulit - 50 na mga tanong
   csp-explore_name: 'AP: Tuklasin ang PT Prep'
   csp-create_name: 'AP: Maglikha ng PT Prep'
@@ -2341,3 +2349,5 @@
     Account" na opsyon:'
   hero_name: 'Minecraft: Ang Paglalakbay ng Bayani'
   applab-intro_name: Panimula ng App Lab
+  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
+    policy)"

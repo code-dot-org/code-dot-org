@@ -271,7 +271,7 @@
   share_on_twitter: Condividi su Twitter
   beyond_an_hour: Dopo l'Ora del Codice
   get_started: Inizia
-  i_agree: Firmo
+  i_agree: Accetto
   participant_select: "- Seleziona -"
   participant_student: Studente
   participant_parent: Genitore
@@ -436,12 +436,12 @@
   homepage_hero_text_teacher2: |-
     &ldquo;Questo programma ha fatto sì che il 100% dei miei studenti fosse impegnato, coinvolto e partecipe.&rdquo;
     Adam, insegnante
-  homepage_hero_text_stat_loc: 2,5 milioni di ragazze si sono iscritte per imparare
-    con Code Studio
-  homepage_hero_text_stat_students: "#student_count account di studenti in Code Studio"
+  homepage_hero_text_stat_loc: 8,5 milioni di ragazze si sono iscritte per imparare
+    su Code.org
+  homepage_hero_text_stat_students: "#student_count account di studenti su Code.org"
   homepage_hero_text_stat_served: 'L''Ora del Codice: ne hanno già fatte #served'
   homepage_hero_hoc_is_coming: L'Ora del Codice è in arrivo
-  homepage_hero_hoc_is_here: L'ora del codice è qui
+  homepage_hero_hoc_is_here: L'Ora del Codice è qui
   homepage_slot_text_hoc: L'Ora del Codice
   homepage_slot_text_frozen: Frozen con Anna ed Elsa
   homepage_slot_text_teacher: Cruscotto dell'Insegnante
@@ -513,10 +513,14 @@
   homepage_slot_text_link_donate: Fai una donazione
   homepage_slot_text_link_shop: T-shirts, cappellini & altro
   homepage_slot_text_link_administrators: Porta l'informatica nella tua scuola
-  homepage_header_codestudio: Creazioni degli studenti di Code Studio
+  homepage_header_codestudio: Creazioni degli studenti di Code.org
   homepage_header_donors: Code.org ringrazia i suoi sostenitori
   homepage_donors_seall: Mostra tutto
   homepage_donors_donate: Sostienici
+  homepage_below_hero_announcement_text: Rispettiamo la tua privacy e stiamo
+    apportando alcuni aggiornamenti alla Privacy policy che entreranno in vigore il
+    25 maggio.
+  homepage_below_hero_announcement_link_text: Ulteriori informazioni
   contact_form_topic_student: Io sono uno studente
   contact_form_topic_parent: Io sono un genitore
   contact_form_topic_teacher: Io sono un insegnante
@@ -766,6 +770,12 @@
   volunteer_engineer_submission_field_email_desc: Il tuo indirizzo di posta elettronica
     non sarà mai condiviso. Ti invieremo le richieste da parte degli insegnanti.
   volunteer_engineer_submission_field_email_placeholder: Indirizzo di posta elettronica
+  volunteer_engineer_submission_field_email_preference: Consenti l’invio di aggiornamenti sui
+    nostri corsi, opportunità a livello locale o altre notizie informatiche?
+  volunteer_engineer_submission_field_email_preference_privacy: (Per dettagli, vedi la nostra
+    Privacy policy)
+  volunteer_engineer_submission_field_email_preference_yes: Sì
+  volunteer_engineer_submission_field_email_preference_no: 'No'
   volunteer_engineer_submission_final_paragraph: Sarai segnalato su una mappa così
     da poter essere contattato dagli insegnanti locali per l'Ora di Codice o altre
     opportunità di volontariato. Non comunicheremo MAI il tuo indirizzo di posta elettronica
@@ -1355,6 +1365,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Messaggio AP: Database in Apps'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: Test completo - 50 domande
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'
@@ -1602,7 +1613,8 @@
   coursea_shortdescription_congrats: Un'introduzione all'informatica per bambini che
     non leggono ancora.
   courseb_shortdescription_congrats: ''
-  coursec_shortdescription_congrats: ''
+  coursec_shortdescription_congrats: Impara le basi dell'informatica e dai vita a
+    creazioni artistiche, storie animate o giochi interattivi.
   coursed_shortdescription_congrats: ''
   coursee_shortdescription_congrats: ''
   coursef_shortdescription_congrats: ''

@@ -486,6 +486,9 @@
   homepage_header_donors: Code.org děkuje svým příznivcům
   homepage_donors_seall: Podívejte se na všechny
   homepage_donors_donate: Přispějte
+  homepage_below_hero_announcement_text: We care about your privacy and are making
+    some updates to our privacy policy, effective May 25.
+  homepage_below_hero_announcement_link_text: Zjisti více
   contact_form_topic_student: Jsem student
   contact_form_topic_parent: Jsem rodič
   contact_form_topic_teacher: Jsem učitel
@@ -724,6 +727,10 @@
   volunteer_engineer_submission_field_email_desc: Vaše e-mailová adresa nebude nikdy
     sdílená, ale zašleme vám požadavky učitelů.
   volunteer_engineer_submission_field_email_placeholder: E-mailová adresa
+  volunteer_engineer_submission_field_email_preference: Can we email you about updates
+    to our courses, volunteer opportunities, or other computer science news?
+  volunteer_engineer_submission_field_email_preference_yes: Ano
+  volunteer_engineer_submission_field_email_preference_no: Ne
   volunteer_engineer_submission_final_paragraph: Budete zalistovaní na mapě pro místní
     učitelé, aby vás kontaktovali o Hodině kódu nebo jiné příležitosti pro dobrovolníky.
     Váš email a přesnou adresu se nikdy nesdílíme. Ale ostatní informace (včetně přibližného
@@ -1276,6 +1283,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Po testu: Databáze v aplikacích'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: Úplný test - 50 otázek
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'
@@ -2108,3 +2116,5 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
+  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
+    policy)"

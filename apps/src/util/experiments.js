@@ -18,6 +18,7 @@ const EXPERIMENT_LIFESPAN_HOURS = 12;
 
 // specific experiment names
 experiments.COMMENT_BOX_TAB = 'commentBoxTab';
+experiments.DEV_COMMENT_BOX_TAB = 'devCommentBoxTab';
 experiments.COURSE_VERSIONS = 'courseVersions';
 experiments.PROGRESS_TAB = 'sectionProgressRedesign';
 experiments.TEXT_RESPONSES_TAB = 'textResponsesRedesign';
@@ -29,7 +30,7 @@ experiments.SCHOOL_AUTOCOMPLETE_DROPDOWN_NEW_SEARCH = 'schoolAutocompleteDropdow
 // COURSE_VERSIONS and PROGRESS_TAB.
 experiments.TEACHER_EXP_2018 = '2018-teacher-experience';
 experiments.TEACHER_EXP_2018_LIST = [experiments.COURSE_VERSIONS, experiments.PROGRESS_TAB,
-  experiments.COMMENT_BOX_TAB];
+  experiments.COMMENT_BOX_TAB, experiments.TEXT_RESPONSES_TAB];
 
 /**
  * Get our query string. Provided as a method so that tests can mock this.

@@ -1,14 +1,17 @@
 import React, {PropTypes} from 'react';
 import i18n from '@cdo/locale';
+import {pegasus} from '../../../lib/util/urlHelpers';
 import {Field} from '../SystemDialog/SystemDialog';
 
 export default class ChangeUserTypeForm extends React.Component {
   static propTypes = {
     values: PropTypes.shape({
       currentEmail: PropTypes.string,
+      emailOptIn: PropTypes.string,
     }).isRequired,
     validationErrors: PropTypes.shape({
       currentEmail: PropTypes.string,
+      emailOptIn: PropTypes.string,
     }).isRequired,
     disabled: PropTypes.bool,
     onChange: PropTypes.func.isRequired,
@@ -34,11 +37,28 @@ export default class ChangeUserTypeForm extends React.Component {
     currentEmail: event.target.value,
   });
 
+  onEmailOptInChange = (event) => this.props.onChange({
+    ...this.props.values,
+    emailOptIn: event.target.value,
+  });
+
   onKeyDown = (event) => {
     if (event.key === 'Enter' && !this.props.disabled) {
       this.props.onSubmit();
     }
   };
+
+  emailOptInLabelDetails() {
+    return (
+      <span>
+        {i18n.changeUserTypeModal_emailOptIn_description()}
+        {' '}
+        <a href={pegasus('/privacy')} tabIndex="3" target="_blank">
+          {i18n.changeUserTypeModal_emailOptIn_privacyPolicy()}
+        </a>
+      </span>
+    );
+  }
 
   render() {
     const {values, validationErrors, disabled} = this.props;
@@ -56,6 +76,7 @@ export default class ChangeUserTypeForm extends React.Component {
             type="email"
             value={values.currentEmail}
             disabled={disabled}
+            tabIndex="1"
             onKeyDown={this.onKeyDown}
             onChange={this.onCurrentEmailChange}
             autoComplete="off"
@@ -64,6 +85,31 @@ export default class ChangeUserTypeForm extends React.Component {
             style={styles.input}
             ref={el => this.currentEmailInput = el}
           />
+        </Field>
+        <Field
+          labelDetails={this.emailOptInLabelDetails()}
+          error={validationErrors.emailOptIn}
+        >
+          <select
+            value={values.emailOptIn}
+            disabled={disabled}
+            tabIndex="1"
+            onKeyDown={this.onKeyDown}
+            onChange={this.onEmailOptInChange}
+            style={{
+              ...styles.input,
+              width: 100,
+            }}
+            ref={el => this.emailOptInSelect = el}
+          >
+            <option value=""/>
+            <option value="yes">
+              {i18n.yes()}
+            </option>
+            <option value="no">
+              {i18n.no()}
+            </option>
+          </select>
         </Field>
       </div>
     );

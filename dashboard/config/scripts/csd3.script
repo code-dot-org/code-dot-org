@@ -7,6 +7,8 @@ teacher_resources [["lessonPlans", "https://curriculum.code.org/csd/unit3/"], ["
 has_verified_resources true
 has_lesson_plan true
 script_announcements [{"notice"=>"Know a teacher interested in teaching computer science?", "details"=>"Applications for the 2018 middle and high school Professional Learning program are now open!  No computer science experience is necessary.", "link"=>"https://code.org/educate/professional-learning-2018", "type"=>"bullhorn"}]
+new_name "csd3-2017"
+family_name "csd3"
 
 stage 'Programming for Entertainment', flex_category: 'csd3_1'
 named_level 'CSD U3 Lesson Overview 1'
@@ -321,3 +323,6 @@ assessment 'csd-pulse-check-survey-1-levelgroup U3Ch2', progression: 'Reflection
 
 stage 'CS Discoveries End of Semester Survey', lockable: true, flex_category: 'cspSurvey'
 assessment 'csd-post-survey-2017-levelgroup'
+
+stage 'CSD Post-Course Survey', lockable: true, flex_category: 'csd_survey'
+assessment 'csd-post-survey-2018-markdown-with-link-to-survey'

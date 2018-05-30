@@ -3148,6 +3148,7 @@ en:
       aEstory1:
         Artist Exemplar First Story: Artist Exemplar First Story
         Why are they doing this stage?: Why are they doing this stage?
+      apprentice-congrats: {}
       boolean logic and expressions overview: {}
       brad-repro-bug-000:
         Brad Repro Bug 000: Brad Repro Bug 000
@@ -3337,8 +3338,30 @@ en:
       csd-post-survey-2017 preamble 1: {}
       csd-post-survey-2017-implementation-student: {}
       csd-post-survey-2017-implementation-teacher: {}
+      csd-post-survey-2018-markdown-with-link-to-survey: {}
+      csd-post-survey-unit1-preamble:
+        description here: description here
+        title: title
+      csd-post-survey-unit2-preamble:
+        description here: description here
+        title: title
+      csd-post-survey-unit3-preamble:
+        description here: description here
+        title: title
+      csd-post-survey-unit4-preamble:
+        description here: description here
+        title: title
+      csd-post-survey-unit5-preamble:
+        description here: description here
+        title: title
+      csd-post-survey-unit6-preamble:
+        description here: description here
+        title: title
       csd-pulse-check-survey-preamble: {}
       csd-pulse-check-survey-preamble_2018: {}
+      csd-pushDL-unit1: {}
+      csd-pushDL-unit2: {}
+      csd-pushDL-unit3: {}
       csp deeper learning timeline:
         Deeper Learning Submissions Deadlines: Deeper Learning Submissions Deadlines
         description here: description here
@@ -3409,6 +3432,9 @@ en:
       csp-pulse-check-survey-preamble: {}
       csp-pulse-check-survey-preamble_2018: {}
       csp-pulse-check-survey-preamble_2018_2018: {}
+      csp-pushDL-unit1: {}
+      csp-pushDL-unit2: {}
+      csp-pushDL-unit3: {}
       csp3_subgoal_mc_levelgroup_preamble: {}
       csp3_subgoal_mc_levelgroup_preamble_2018: {}
       csp_ap_intro: {}
@@ -3563,6 +3589,7 @@ en:
       newCSFsample:
         Intro: Intro
         description here: description here
+      novice-congrats: {}
       onlineNeighbors:
         Your Online Neighborhood: Your Online Neighborhood
       peer review recommendations: {}
@@ -4120,8 +4147,10 @@ en:
         title: title
       v2 U4L06 Student Lesson Introduction Encryption Vigenere:
         Cracking the Code: Cracking the Code
+      welcome-apprentice-18: {}
       welcome-csd-novice: {}
       welcome-csp-novice: {}
+      welcome-novice-18: {}
       wn scratchjr 1:
         Scratch Jr: Scratch Jr
     level_group:
@@ -6023,8 +6052,8 @@ en:
         What is the best explanation for why digital data is represented in computers in binary?: What is the best explanation for why digital data is represented in computers in binary?
         What's Binary?: What's Binary?
       CSP Unit 1 Ch 1 MC binary def_2018:
-        ? 'As a consequence of history: early pioneers of computing were making secret codes in binary, and this simply evolved into modern computing.'
-        : 'As a consequence of history: early pioneers of computing were making secret codes in binary, and this simply evolved into modern computing.'
+        ? 'It typically takes fewer digits to represent a number in binary when compared to other number systems (for example, the decimal number system) '
+        : 'It typically takes fewer digits to represent a number in binary when compared to other number systems (for example, the decimal number system) '
         It's easier, cheaper, and more reliable to build machines and devices that only have to distinguish between binary states.: It's easier, cheaper, and more reliable to build machines and devices that only have to distinguish between binary states.
         It's impossible to build a computing machine that uses anything but binary to represent numbers: It's impossible to build a computing machine that uses anything but binary to represent numbers
         The binary number system is the only system flexible enough to allow for representing data other than numbers.: The binary number system is the only system flexible enough to allow for representing data other than numbers.
@@ -6584,10 +6613,11 @@ en:
         The code will display the smallest of the three values: The code will display the smallest of the three values
         The code will not display anything due to an error: The code will not display anything due to an error
       CSPFinal_Question_2_2018:
-        High bandwidth, high latency: High bandwidth, high latency
-        High bandwidth, low latency: High bandwidth, low latency
-        Low bandwidth, high latency: Low bandwidth, high latency
-        Low bandwidth, low latency: Low bandwidth, low latency
+        Bit-rate (bandwidth) is the time elapsed between the transmission and receipt of a piece of digital data.: Bit-rate (bandwidth) is the time elapsed between the transmission and receipt of a piece of digital data.
+        ? Digital data can only be transmitted between two devices when they are physically connected to one another (for example by a copper wire)
+        : Digital data can only be transmitted between two devices when they are physically connected to one another (for example by a copper wire)
+        Latency is the amount of data (measured in bits) that can be sent in a fixed amount of time.: Latency is the amount of data (measured in bits) that can be sent in a fixed amount of time.
+        Two devices must communicate using the same bit-rate to successfully send and receive digital data.: Two devices must communicate using the same bit-rate to successfully send and receive digital data.
       CSPFinal_Question_2_exam_prep:
         High bandwidth, high latency: High bandwidth, high latency
         High bandwidth, low latency: High bandwidth, low latency
@@ -6768,11 +6798,9 @@ en:
       CSPFinal_Question_9update_2018:
         ? At one of the lowest levels of abstraction, all digital data can be represented in binary using only combinations of the digits zero and one.
         : At one of the lowest levels of abstraction, all digital data can be represented in binary using only combinations of the digits zero and one.
-        ? Binary can be used to represent more complex, higher level abstractions, including but not limited to numbers, characters, and colors.
-        : Binary can be used to represent more complex, higher level abstractions, including but not limited to numbers, characters, and colors.
-        The number system you use to view data has no effect on the underlying digital data.: The number system you use to view data has no effect on the underlying digital data.
-        ? When data is large enough computers switch to using decimal representation instead of binary, because you can represent larger numbers with fewer digits.
-        : When data is large enough computers switch to using decimal representation instead of binary, because you can represent larger numbers with fewer digits.
+        Groups of bits can be used to represent abstractions, including but not limited to numbers and characters.: Groups of bits can be used to represent abstractions, including but not limited to numbers and characters.
+        Some large numbers cannot be represented in binary and can only be represented in decimal.: Some large numbers cannot be represented in binary and can only be represented in decimal.
+        The same value (number) can have a different representation depending on the number system used to represent it.: The same value (number) can have a different representation depending on the number system used to represent it.
       CSPFinal_Question_9update_exam_prep:
         ? At one of the lowest levels of abstraction, all digital data can be represented in binary using only combinations of the digits zero and one.
         : At one of the lowest levels of abstraction, all digital data can be represented in binary using only combinations of the digits zero and one.
@@ -10555,6 +10583,341 @@ en:
         The artist will draw only one line of squares.: The artist will draw only one line of squares.
         The artist will solve the puzzle correctly.: The artist will solve the puzzle correctly.
         What will happen when you press the "Run" button?: What will happen when you press the "Run" button?
+      csd-post-survey-2017-q11_2018:
+        Agree: Agree
+        Disagree: Disagree
+        'I think computer science is interesting. ': 'I think computer science is interesting. '
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-post-survey-2017-q13_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I am better at computer science than other kids at my school.: I am better at computer science than other kids at my school.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-post-survey-2017-q14_2018:
+        Agree: Agree
+        Disagree: Disagree
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+        When I encounter a computer science problem without an obvious answer, I am always able to figure out some way to solve it.: When I encounter a computer science problem without an obvious answer, I am always able to figure out some way to solve it.
+      csd-post-survey-2017-q16_2018:
+        Agree: Agree
+        Disagree: Disagree
+        It is important to me to be good at computer science.: It is important to me to be good at computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-post-survey-2017-q17_2018:
+        Agree: Agree
+        Disagree: Disagree
+        Neither: Neither
+        People like me do computer science.: People like me do computer science.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-post-survey-2017-q18_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I think I could become a computer scientist one day.: I think I could become a computer scientist one day.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-post-survey-2017-q1_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I am very good at school.: I am very good at school.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-post-survey-2017-q22_2018:
+        Agree: Agree
+        Disagree: Disagree
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Sometimes I felt unsure whether I belonged in this class.: Sometimes I felt unsure whether I belonged in this class.
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-post-survey-2017-q23_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I was treated with as much respect as other students in this computer science class.: I was treated with as much respect as other students in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-post-survey-2017-q24_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I felt like I could be myself in this computer science class.: I felt like I could be myself in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-post-survey-2017-q26_2018:
+        Agree: Agree
+        Disagree: Disagree
+        It has been hard for people like me to to be accepted in this computer science class.: It has been hard for people like me to to be accepted in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-post-survey-2017-q28_2018:
+        Agree: Agree
+        Disagree: Disagree
+        Learning computer science has helped me in my other school subjects.: Learning computer science has helped me in my other school subjects.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-post-survey-2017-q29_2018:
+        Agree: Agree
+        Computer science is important for my future.: Computer science is important for my future.
+        Disagree: Disagree
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-post-survey-2017-q2_2018:
+        Agree: Agree
+        Disagree: Disagree
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+        When I encounter a problem without an obvious answer, I am always able to figure out some way to solve it.: When I encounter a problem without an obvious answer, I am always able to figure out some way to solve it.
+      csd-post-survey-2017-q30_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I expect that I will use computer science in my job.: I expect that I will use computer science in my job.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-post-survey-2017-q3_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I think my schoolwork is interesting.: I think my schoolwork is interesting.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-post-survey-2017-q4_2018:
+        Agree: Agree
+        Disagree: Disagree
+        It is important for me to be good at my schoolwork.: It is important for me to be good at my schoolwork.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-post-survey-2017-q6_2018:
+        Agree: Agree
+        Disagree: Disagree
+        It is hard for people like me to be accepted at my school.: It is hard for people like me to be accepted at my school.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-post-survey-2017-q8_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I am treated with as much respect as other students at my school.: I am treated with as much respect as other students at my school.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-post-survey-2017-q9_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I can really be myself at school.: I can really be myself at school.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csd-post-survey-2018-U1-I-learned:
+        How challenging were the lessons and topics in this unit for you?  I think this unit was...: How challenging were the lessons and topics in this unit for you?  I think this unit was...
+        a little too difficult.: a little too difficult.
+        a little too easy.: a little too easy.
+        just about right.: just about right.
+        way too difficult.: way too difficult.
+        way too easy.: way too easy.
+      csd-post-survey-2018-U1-I-liked:
+        A little bit: A little bit
+        A lot: A lot
+        How did you like the lessons and topics covered in this unit?: How did you like the lessons and topics covered in this unit?
+        Not at all: Not at all
+        Somewhat: Somewhat
+        This was my favorite unit!: This was my favorite unit!
+        We didn't do this unit or I don't remember it: We didn't do this unit or I don't remember it
+      csd-post-survey-2018-U2-I-learned:
+        How challenging were the lessons and topics in this unit for you?  I think this unit was...: How challenging were the lessons and topics in this unit for you?  I think this unit was...
+        a little too difficult.: a little too difficult.
+        a little too easy.: a little too easy.
+        just about right.: just about right.
+        way too difficult.: way too difficult.
+        way too easy.: way too easy.
+      csd-post-survey-2018-U2-I-liked:
+        A little bit: A little bit
+        A lot: A lot
+        How did you like the lessons and topics covered in this unit?: How did you like the lessons and topics covered in this unit?
+        Not at all: Not at all
+        Somewhat: Somewhat
+        This was my favorite unit!: This was my favorite unit!
+        We didn't do this unit or I don't remember it: We didn't do this unit or I don't remember it
+      csd-post-survey-2018-U3-I-learned:
+        How challenging were the lessons and topics in this unit for you?  I think this unit was...: How challenging were the lessons and topics in this unit for you?  I think this unit was...
+        a little too difficult.: a little too difficult.
+        a little too easy.: a little too easy.
+        just about right.: just about right.
+        way too difficult.: way too difficult.
+        way too easy.: way too easy.
+      csd-post-survey-2018-U3-I-liked:
+        A little bit: A little bit
+        A lot: A lot
+        How did you like the lessons and topics covered in this unit?: How did you like the lessons and topics covered in this unit?
+        Not at all: Not at all
+        Somewhat: Somewhat
+        This was my favorite unit!: This was my favorite unit!
+        We didn't do this unit or I don't remember it: We didn't do this unit or I don't remember it
+      csd-post-survey-2018-U4-I-learned:
+        How challenging were the lessons and topics in this unit for you?  I think this unit was...: How challenging were the lessons and topics in this unit for you?  I think this unit was...
+        a little too difficult.: a little too difficult.
+        a little too easy.: a little too easy.
+        just about right.: just about right.
+        way too difficult.: way too difficult.
+        way too easy.: way too easy.
+      csd-post-survey-2018-U4-I-liked:
+        A little bit: A little bit
+        A lot: A lot
+        How did you like the lessons and topics covered in this unit?: How did you like the lessons and topics covered in this unit?
+        Not at all: Not at all
+        Somewhat: Somewhat
+        This was my favorite unit!: This was my favorite unit!
+        We didn't do this unit or I don't remember it: We didn't do this unit or I don't remember it
+      csd-post-survey-2018-U5-I-learned:
+        How challenging were the lessons and topics in this unit for you?  I think this unit was...: How challenging were the lessons and topics in this unit for you?  I think this unit was...
+        a little too difficult.: a little too difficult.
+        a little too easy.: a little too easy.
+        just about right.: just about right.
+        way too difficult.: way too difficult.
+        way too easy.: way too easy.
+      csd-post-survey-2018-U5-I-liked:
+        A little bit: A little bit
+        A lot: A lot
+        How did you like the lessons and topics covered in this unit?: How did you like the lessons and topics covered in this unit?
+        Not at all: Not at all
+        Somewhat: Somewhat
+        This was my favorite unit!: This was my favorite unit!
+        We didn't do this unit or I don't remember it: We didn't do this unit or I don't remember it
+      csd-post-survey-2018-U6-I-learned:
+        How challenging were the lessons and topics in this unit for you?  I think this unit was...: How challenging were the lessons and topics in this unit for you?  I think this unit was...
+        a little too difficult.: a little too difficult.
+        a little too easy.: a little too easy.
+        just about right.: just about right.
+        way too difficult.: way too difficult.
+        way too easy.: way too easy.
+      csd-post-survey-2018-U6-I-liked:
+        A little bit: A little bit
+        A lot: A lot
+        How did you like the lessons and topics covered in this unit?: How did you like the lessons and topics covered in this unit?
+        Not at all: Not at all
+        Somewhat: Somewhat
+        This was my favorite unit!: This was my favorite unit!
+        We didn't do this unit or I don't remember it: We didn't do this unit or I don't remember it
+      csd-post-survey-2018-topic-ai:
+        Artificial Intelligence and Machine Learning: Artificial Intelligence and Machine Learning
+        'No': 'No'
+        Not sure what this is: Not sure what this is
+        'Yes': 'Yes'
+      csd-post-survey-2018-topic-cryptocurrency:
+        Cryptocurrency: Cryptocurrency
+        'No': 'No'
+        Not sure what this is: Not sure what this is
+        'Yes': 'Yes'
+      csd-post-survey-2018-topic-cybersecurity:
+        Cybersecurity: Cybersecurity
+        'No': 'No'
+        Not sure what this is: Not sure what this is
+        'Yes': 'Yes'
+      csd-post-survey-2018-topic-databases:
+        Databases: Databases
+        'No': 'No'
+        Not sure what this is: Not sure what this is
+        'Yes': 'Yes'
+      csd-post-survey-2018-topic-datascience:
+        Data Science: Data Science
+        'No': 'No'
+        Not sure what this is: Not sure what this is
+        'Yes': 'Yes'
+      csd-post-survey-2018-topic-gamedev:
+        Game Development: Game Development
+        'No': 'No'
+        Not sure what this is: Not sure what this is
+        'Yes': 'Yes'
+      csd-post-survey-2018-topic-hardware:
+        Hardware: Hardware
+        'No': 'No'
+        Not sure what this is: Not sure what this is
+        'Yes': 'Yes'
+      csd-post-survey-2018-topic-internet:
+        Networking and the Internet: Networking and the Internet
+        'No': 'No'
+        Not sure what this is: Not sure what this is
+        'Yes': 'Yes'
+      csd-post-survey-2018-topic-mobile:
+        Mobile App Design: Mobile App Design
+        'No': 'No'
+        Not sure what this is: Not sure what this is
+        'Yes': 'Yes'
+      csd-post-survey-2018-topic-parallel:
+        'No': 'No'
+        Not sure what this is: Not sure what this is
+        Parallel and Distributed Computing: Parallel and Distributed Computing
+        'Yes': 'Yes'
+      csd-post-survey-2018-topic-programming:
+        Computer Programming: Computer Programming
+        'No': 'No'
+        Not sure what this is: Not sure what this is
+        'Yes': 'Yes'
+      csd-post-survey-2018-topic-robotics:
+        'No': 'No'
+        Not sure what this is: Not sure what this is
+        Robotics: Robotics
+        'Yes': 'Yes'
+      csd-post-survey-2018-topic-web:
+        'No': 'No'
+        Not sure what this is: Not sure what this is
+        Web Development: Web Development
+        'Yes': 'Yes'
       csd-post-survey-q26:
         A few classes: A few classes
         About half the class sessions: About half the class sessions
@@ -15553,7 +15916,17 @@ en:
       post-assessment survey q24-a:
         Agree: Agree
         Disagree: Disagree
+        ? QUESTION REMOVED AND REPLACED BECAUSE OF INCORRECT ANSWER ORDER I am interested in studying computer science after I graduate high school.
+        : QUESTION REMOVED AND REPLACED BECAUSE OF INCORRECT ANSWER ORDER I am interested in studying computer science after I graduate high school.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q24-a-2017b:
+        Agree: Agree
+        Disagree: Disagree
         I am interested in studying computer science after I graduate high school.: I am interested in studying computer science after I graduate high school.
+        Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
@@ -15625,7 +15998,17 @@ en:
       post-assessment survey q31-a:
         Agree: Agree
         Disagree: Disagree
+        ? QUESTION REMOVED AND REPLACED BECAUSE OF INCORRECT ANSWER ORDER I would recommend this computer science class to another student.
+        : QUESTION REMOVED AND REPLACED BECAUSE OF INCORRECT ANSWER ORDER I would recommend this computer science class to another student.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      post-assessment survey q31-a-2017b:
+        Agree: Agree
+        Disagree: Disagree
         I would recommend this computer science class to another student.: I would recommend this computer science class to another student.
+        Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
