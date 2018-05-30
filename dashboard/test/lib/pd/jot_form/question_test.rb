@@ -13,6 +13,17 @@ module Pd
         assert_equal 'Invalid type unsupported for Pd::JotForm::Question', e.message
       end
 
+      test 'supported type' do
+        Question.expects(:supported_types).returns('test_type')
+        Question.new(type: 'test_type')
+      end
+
+      test 'type prefix is removed when present' do
+        Question.expects(:supported_types).returns('test_type').twice
+        assert_equal 'test_type', Question.new(type: 'control_test_type').type
+        assert_equal 'test_type', Question.new(type: 'test_type').type
+      end
+
       test 'summarize' do
         question = Question.new(
           name: 'sampleQuestion',
