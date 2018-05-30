@@ -1,6 +1,5 @@
 import React, {PropTypes} from 'react';
 import {Tab, Tabs} from 'react-bootstrap';
-import _ from 'lodash';
 
 const styles = {
   table: {
@@ -190,16 +189,15 @@ export default class Results extends React.Component {
 
     if (sum === 0) {
       if (shouldFakeData) {
-        return _.round(Math.random() * 8) + 1;
+        return ((Math.random() * 8) + 1).toFixed(2);
       } else {
-        return '-';
+        return '';
       }
     } else {
       let average = sum / Object.values(answerHash).reduce((sum, x) => {
         return sum + x;
       });
-
-      return _.round(average, 2);
+      return average.toFixed(2);
     }
   }
 
