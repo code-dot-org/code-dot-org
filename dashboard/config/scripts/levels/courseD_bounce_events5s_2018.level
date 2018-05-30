@@ -39,11 +39,11 @@
     "project_template_level_name": "courseD_bounce_events_template_2018",
     "parent_level_id": 9665,
     "name_suffix": "_2018",
-    "contained_level_names": null,
     "embed": "false",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
-    "free_play": "false"
+    "free_play": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
