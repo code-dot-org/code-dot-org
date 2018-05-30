@@ -60,6 +60,19 @@ class Course < ApplicationRecord
   def self.load_from_path(path)
     serialization = File.read(path)
     hash = JSON.parse(serialization)
+
+    # Allow renaming between csp and csp-2017 during seed. This allows the csp
+    # --> csp-2017 rename in the next PR, as well as allowing for that PR to be
+    # reverted. This code should be removed once the course has been renamed.
+    if ['csp', 'csp-2017'].include?(hash['name'])
+      Course.where(name: ['csp', 'csp-2017']).first.try(:update!, {name: hash['name']})
+    end
+
+    # Allow renaming between csd and csd-2017 during seed.
+    if ['csd', 'csd-2017'].include?(hash['name'])
+      Course.where(name: ['csd', 'csd-2017']).first.try(:update!, {name: hash['name']})
+    end
+
     course = Course.find_or_create_by!(name: hash['name'])
     course.update_scripts(hash['script_names'], hash['alternate_scripts'])
     course.properties = hash['properties']
@@ -192,31 +205,22 @@ class Course < ApplicationRecord
     info
   end
 
-  def self.valid_courses_all_versions
-    Rails.cache.fetch("valid_courses_all_versions/#{I18n.locale}") do
-      ScriptConstants::CATEGORIES[:full_course].map do |assignment_family_name|
-        # Matches any course whose name is the assignment_family_name, with an optional
-        # suffix like '-2018'.
-        Course.
-          where('name regexp ?', "^#{assignment_family_name}(-[0-9]{4})?$").
-          map(&:assignable_info).
-          sort_by {|info| info[:version_year]}
-      end.flatten
-    end
-  end
-
   # Get the set of valid courses for the dropdown in our sections table. This
-  # should be static data for users without experiments enabled, but contains
-  # localized strings so we can only cache on a per locale basis.
-  def self.valid_courses(user = nil)
-    # Do not cache if the user might have an experiment enabled which puts them
+  # should be static data for users without any course experiments enabled, but
+  # contains localized strings so we can only cache on a per locale basis.
+  #
+  # @param [User] user Whose experiments to check for possible script substitutions.
+  # @param [Boolean] include_unstable Whether to show all course versions, rather
+  #   than just the stable ones. Default: false.
+  def self.valid_courses(user: nil, include_unstable: false)
+    # Do not cache if the user might have a course experiment enabled which puts them
     # on an alternate script.
-    return Course.courses_for_user_with_experiments(user) if user && has_any_course_experiments?(user)
-    Rails.cache.fetch("valid_courses/#{I18n.locale}") do
-      Course.
-        all.
-        select {|course| ScriptConstants.script_in_category?(:full_course, course[:name])}.
-        map(&:assignable_info)
+    if user && has_any_course_experiments?(user)
+      return Course.valid_courses_without_cache(user: user, include_unstable: include_unstable)
+    end
+    cache_key_suffix = include_unstable ? 'all' : 'stable'
+    Rails.cache.fetch("valid_courses_#{cache_key_suffix}/#{I18n.locale}") do
+      Course.valid_courses_without_cache(include_unstable: include_unstable)
     end
   end
 
@@ -241,17 +245,28 @@ class Course < ApplicationRecord
 
   # Get the set of valid courses for the dropdown in our sections table, using
   # any alternate scripts based on any experiments the user belongs to.
-  def self.courses_for_user_with_experiments(user)
-    Course.
-      all.
-      select {|course| ScriptConstants.script_in_category?(:full_course, course[:name])}.
+  def self.valid_courses_without_cache(user: nil, include_unstable: false)
+    course_infos = Course.
+      where(name: ScriptConstants::CATEGORIES[:full_course]).
       map {|course| course.assignable_info(user)}
+
+    # For now, infer whether the course is stable from its version year.
+    # * Currently, only 2017 versions are stable.
+    # * In the future, stability will be set as a property by the levelbuilder.
+    #
+    # Group courses by family when showing multiple versions of each course.
+    include_unstable ?
+      course_infos.sort_by {|info| [info[:assignment_family_name], info[:version_year]]} :
+      course_infos.
+        select {|info| info[:version_year] == ScriptConstants::DEFAULT_VERSION_YEAR}.
+        sort_by {|info| info[:assignment_family_name]}
   end
 
+  # Returns whether the course id is valid, even if it is not "stable" yet.
   # @param course_id [String] id of the course we're checking the validity of
   # @return [Boolean] Whether this is a valid course ID
   def self.valid_course_id?(course_id)
-    valid_courses.any? {|course| course[:id] == course_id.to_i}
+    valid_courses(include_unstable: true).any? {|course| course[:id] == course_id.to_i}
   end
 
   def summarize(user = nil)
@@ -347,6 +362,23 @@ class Course < ApplicationRecord
     default_course_script
   end
 
+  # @param user [User]
+  # @return [Boolean] Whether the user has progress on another version of this course.
+  def has_other_version_progress?(user)
+    return nil unless user
+    user_script_ids = user.user_scripts.pluck(:script_id)
+
+    Course.
+      joins(:default_course_scripts).
+      # select only courses in the same course family.
+      where('name regexp ?', "^#{assignment_family_name}(-[0-9]{4})?$").
+      # exclude the current course.
+      where.not(id: id).
+      # select only courses with scripts which the user has progress in.
+      where('course_scripts.script_id' => user_script_ids).
+      count > 0
+  end
+
   @@course_cache = nil
   COURSE_CACHE_KEY = 'course-cache'.freeze
 
@@ -387,6 +419,18 @@ class Course < ApplicationRecord
   end
 
   def self.get_without_cache(id_or_name)
+    # When the caller requests csp or csp-2017, make sure we serve the CSP 2017 course,
+    # regardless of whether it has been renamed from csp to csp-2017 yet.
+    if ['csp', 'csp-2017'].include?(id_or_name)
+      return Course.where(name: ['csp', 'csp-2017']).first
+    end
+
+    # When the caller requests csd or csd-2017, make sure we serve the CSD 2017 course,
+    # regardless of whether it has been renamed from csd to csd-2017 yet.
+    if ['csd', 'csd-2017'].include?(id_or_name)
+      return Course.where(name: ['csd', 'csd-2017']).first
+    end
+
     # a bit of trickery so we support both ids which are numbers and
     # names which are strings that may contain numbers (eg. 2-3)
     find_by = (id_or_name.to_i.to_s == id_or_name.to_s) ? :id : :name

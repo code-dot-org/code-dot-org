@@ -4,7 +4,10 @@ module Pd
       def self.supported_types
         [
           TYPE_TEXTBOX,
-          TYPE_TEXTAREA
+          TYPE_TEXTAREA,
+
+          # Number is a textbox with extra validation
+          TYPE_NUMBER
         ]
       end
 

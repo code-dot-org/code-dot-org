@@ -30,7 +30,6 @@
       "console.log": null,
       "comment_Variables": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Debugging Sprite Interactions\r\n\r\nSprite interactions just run some code when they're called. The interactions are not \"remembered\" by the game. If you want one sprite to bounce or collide with another then it needs to be a part of the draw loop. If you forget then this can lead to unexpected behavior.\r\n\r\n# Do This\r\n\r\nThe turtle can be moved with the arrow keys. It's not supposed to be able to walk through the tree, but something is wrong in the code. Can you find and correct the bug in the code?\r\n\r\n* Run the code and try to make the turtle collide with the tree.\r\n* Look through the code and discuss with your partner what the problem is.\r\n* Correct the code, then run it again to make sure it works.",

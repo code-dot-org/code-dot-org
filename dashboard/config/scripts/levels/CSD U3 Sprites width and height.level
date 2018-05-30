@@ -15,7 +15,6 @@
       "background": null,
       "comment": null
     },
-    "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Setting Properties\r\n\r\nYou are going to start programming with **sprites**. A sprite is made up of many pieces of information called **properties**. The ![](https://images.code.org/82a18afda6463323529acaa3dc326d55-image-1466004008638.19.16 AM.png) command can be called whenever you like. It uses the properties of your sprites to draw them all at once.\r\n\r\nSprites have **lots and lots of properties** but to get started let's just look at three.\r\n\r\n![](https://images.code.org/4d0f35bc60aa9d1c80e6dda4db16abc4-image-1466004005360.19.30 AM.png)\r\n\r\n<img src=\"https://images.code.org/cb14a5f6add86bf3c0bcf12901366794-image-1466004148640.22.16 AM.png\" style=\"float:right; width:200px\">\r\n# Do This\r\n\r\nThis program creates a sprite and gives it the label `mySprite`. Then it sets the properties `shapeColor`, `x`, and `y` of the sprite. When `drawSprites` is called, this information is used to draw the sprite in the correct location and color.\r\n\r\n* **Change the values given to each property** so that:\r\n\t* The sprite is now in the bottom right corner of the screen\r\n    * The sprite is \"orange\" rather than \"red\"",

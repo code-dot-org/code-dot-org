@@ -63,13 +63,34 @@ module Pd
               'It was a good use of time',
               'I enjoyed it'
             ]
+          ),
+          TextQuestion.new(
+            id: 8,
+            name: 'hidden_text',
+            text: 'This should be hidden',
+            hidden: true
           )
         ]
 
         @form_questions = FormQuestions.new(@form_id, @questions)
+
+        @jotform_answers = {
+          '1' => 'this is my text answer',
+          '2' => 'Two',
+          '3' => {'other' => 'my other reason'},
+          '4' => %w(Two Three),
+          '5' => {'0' => 'Two', 'other' => 'my other reason'},
+          '6' => '2',
+          '7' => {
+            'I learned something' => 'Agree',
+            'It was a good use of time' => 'Neutral',
+            'I enjoyed it' => 'Agree'
+          },
+          '8' => 'hidden answer'
+        }
       end
 
-      test 'to_summary' do
+      test 'summarize' do
         expected_summary = {
           'text' => {text: 'text label', answer_type: ANSWER_TEXT},
           'singleSelect' => {text: 'single select label', answer_type: ANSWER_SELECT_VALUE},
@@ -83,25 +104,11 @@ module Pd
           'matrix_2' => {text: 'I enjoyed it', answer_type: ANSWER_SELECT_VALUE, parent: 'matrix'}
         }
 
-        assert_equal expected_summary, @form_questions.to_summary
+        assert_equal expected_summary, @form_questions.summarize
       end
 
-      test 'to_form_data' do
-        jotform_answers = {
-          '1' => 'this is my text answer',
-          '2' => 'Two',
-          '3' => {'other' => 'my other reason'},
-          '4' => %w(Two Three),
-          '5' => {'0' => 'Two', 'other' => 'my other reason'},
-          '6' => '2',
-          '7' => {
-            'I learned something' => 'Agree',
-            'It was a good use of time' => 'Neutral',
-            'I enjoyed it' => 'Agree'
-          }
-        }
-
-        expected_form_data = {
+      test 'process_answers' do
+        expected_processed_answers = {
           'text' => 'this is my text answer',
           'singleSelect' => 2,
           'singleSelectWithOther' => 'my other reason',
@@ -113,7 +120,15 @@ module Pd
           'matrix_2' => 3
         }
 
-        assert_equal expected_form_data, @form_questions.to_form_data(jotform_answers)
+        assert_equal expected_processed_answers, @form_questions.process_answers(@jotform_answers)
+      end
+
+      test 'show hidden questions' do
+        answers_with_hidden = @form_questions.process_answers(@jotform_answers, show_hidden_questions: true)
+        assert answers_with_hidden.key? 'hidden_text'
+
+        summary_with_hidden = @form_questions.summarize(show_hidden_questions: true)
+        assert summary_with_hidden.key? 'hidden_text'
       end
 
       test 'serialize' do

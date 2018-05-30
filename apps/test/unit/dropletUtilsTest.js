@@ -83,6 +83,11 @@ const BASE_DROPLET_CONFIG = Object.freeze({
       "value": true,
       "color": "#FFB74D",
       "title": "Math.min"
+    },
+    "Math.pow": {
+      "value": true,
+      "color": "#FFB74D",
+      "title": "Math.pow"
     }
   },
   "categories": {

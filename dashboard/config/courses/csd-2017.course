@@ -1,0 +1,24 @@
+{
+  "name": "csd-2017",
+  "script_names": [
+    "csd1",
+    "csd2",
+    "csd3",
+    "csd4",
+    "csd5",
+    "csd6"
+  ],
+  "properties": {
+    "teacher_resources": [
+      [
+        "curriculum",
+        "https://curriculum.code.org/csd/"
+      ],
+      [
+        "teacherForum",
+        "https://forum.code.org/c/csd"
+      ]
+    ],
+    "has_verified_resources": true
+  }
+}

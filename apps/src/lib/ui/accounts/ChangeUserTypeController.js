@@ -37,7 +37,6 @@ export default class ChangeUserTypeController {
     this.button = form.find('#change-user-type-button');
     this.status = form.find('#change-user-type-status');
 
-
     // Attach handlers
     this.dropdown.change(e => this.onUserTypeDropdownChange(e.target.value));
     this.button.click(this.onChangeUserTypeButtonClick);
@@ -114,11 +113,12 @@ export default class ChangeUserTypeController {
 
   /**
    * Submit a user type change using the Rails-generated async form.
-   * @param {{currentEmail: string}} values
+   * @param {string} currentEmail
+   * @param {''|'yes'|'no'} emailOptIn
    * @return {Promise} which may reject with an error or object containing
    *   serverErrors.
    */
-  submitUserTypeChange(values) {
+  submitUserTypeChange({currentEmail, emailOptIn}) {
     return new Promise((resolve, reject) => {
       const onSuccess = () => {
         detachHandlers();
@@ -151,7 +151,8 @@ export default class ChangeUserTypeController {
       };
       this.form.on('ajax:success', onSuccess);
       this.form.on('ajax:error', onFailure);
-      this.form.find('#change-user-type_user_email').val(values.currentEmail);
+      this.form.find('#change-user-type_user_email').val(currentEmail);
+      this.form.find('#change-user-type_user_email_preference_opt_in').val(emailOptIn);
       this.form.submit();
     });
   }

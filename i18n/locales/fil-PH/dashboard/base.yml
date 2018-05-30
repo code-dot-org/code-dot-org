@@ -114,9 +114,14 @@ fil:
     valid_password: "Mali ang na-type na password!"
     invalid_password: "Ang Password ay dapat may at least 6 characters"
     mismatch_password: "Ang passwords na iyong inenter ay hindi tugma sa isa't isa"
+    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
+    under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
+    agree_us_website: "I agree to using a website based in the United States."
+    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
     student_terms: "Ako ay sumang-ayon na mapailalim sa Code.org na <a href='http://code.org/tos'>mga palatuntunin</a>. Kung ako ay mas bata pa 13 taong gulang, kinokompirma ko ito sa pamamagitan ng pagpasa ng form na ito na nagpapakita na mayroon akong pahintulot mula sa aking mga magulang o legal na tagapangalaga na gumamit sa mga serbisyo ng Code.org.<br/><br/>Ang mga email address ay hindi naka-store sa isang form na magbibigay paraan sa amin na makipag-ugnayan sa mga estudyante. Ang mga estudyante ay hindi makakatanggap ng mga email mula sa Code.org maliban sa password na recovery. Tingnan ang aming <a href='http://code.org/privacy'>patakaran sa privacy</a> para sa karagdagang impormasyon."
     teacher_terms: "Ako ay sumang-ayon na mapailalim sa Code.org na mga palatuntunin. Para sa karagdagang impormasyon tungkol sa privacy, tingnan ang aming <a href='http://code.org/privacy'>patakaran sa privacy</a>."
     additional_information: "Kailangan namin ng karagdagang impormasyon para maituloy ang pag-sign up sa iyo."
+    user_type_button: "Update Account Type"
     user_type_label: "Uri ng Account"
     user_type_teacher: "Teacher"
     user_type_student: "Estudyante"
@@ -126,6 +131,7 @@ fil:
     email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
     email_preference_yes: "Oo"
     email_preference_no: "Hindi"
+    email_preference_required: "You must specify an email preference."
   school_info:
     title: 'Impormasyon ng Paaralan (opsyonal)'
     school_country: 'Bansa ng Paaralan'
@@ -453,6 +459,7 @@ fil:
     student_not_found: "Isa o higit pang mga estudyante ang hindi matagpuan."
     all_students_must_be_in_current_section: "Lahat ng mga estudyante ay dapat kasalukuyang naka-enrol sa iyong seksiyon."
     already_enrolled_in_new_section: "Hindi mo maaring ilipat ang mga estudyanteng ito dahil nasa bagong seksiyon na sila."
+    third_party_login: "You cannot move students to a section that is synced with a third party tool."
   share:
     title: "Mag-aral sa Code Studio"
     description: "Kahit sino man ay maaring matuto ng computer science. Gumawa ng mga laro, mga apps at mga sining gamit ang code."
@@ -872,6 +879,7 @@ fil:
     csd5_2: 'Kabanata 2: Paglutas ng mga Problema sa Datos'
     csd6_1: 'Kabanata 1: Output ng Hardware'
     csd6_2: 'Kabanata 2: Input ng Hardware'
+    csd_survey: 'Post-Course Survey'
     csp1_1: 'Kabanata 1: Pag-representa at Pagpasa ng Impormasyon'
     csp1_2: 'Kabanata 2: Pag-imbento ng Internet'
     csp2_1: 'Kabanata 1: Pag-encode at Pag-compress ng Komplikadong Impormasyon'
@@ -998,3 +1006,10 @@ fil:
     message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
     more_information: "See Code.org's Privacy Policy."
     accept: 'Ako ay sumasang-ayon'
+  gdpr_dialog:
+    heading: 'Do you agree to using a web site based in the United States?'
+    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+    link_intro: 'For details see our'
+    privacy_policy: 'privacy policy'
+    logout: 'Logout'
+    yes: 'Oo'

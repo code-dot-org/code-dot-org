@@ -137,6 +137,13 @@
     valid_password: Gilt lykilorð!
     invalid_password: Lykilorð verður að vera að minnsta kosti 6 stafir
     mismatch_password: Lykilorðin tvö sem þú slóst inn eru ekki eins
+    agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
+      and <a href='http://code.org/privacy'>Privacy Policy</a>.
+    under_13_consent: If I am under 13 years of age, I confirm that I have my parent
+      or legal guardian's permission to use the Code.org services.
+    agree_us_website: I agree to using a website based in the United States.
+    my_data_to_us: Data from my use of this site may be sent to and stored or processed
+      in the United States.
     student_terms: Ég samþykki að hlíta <a href='http://code.org/tos'>þjónustuskilmálum</a>
       Code.org. Ef ég er yngri en 13 ára, staðfesti ég með því að senda inn þetta
       form að ég hef leyfi foreldra eða löglegs forráðamanns til að nota þjónustu
@@ -149,6 +156,7 @@
       okkar.
     additional_information: Við þurfum viðbótarupplýsingar til að geta haldið áfram
       að skrá þig.
+    user_type_button: Update Account Type
     user_type_label: Tegund aðgangs
     user_type_teacher: Kennari
     user_type_student: nemandi
@@ -159,6 +167,7 @@
       learning opportunities, or other computer science news?
     email_preference_yes: Já
     email_preference_no: Nei
+    email_preference_required: You must specify an email preference.
   school_info:
     title: Upplýsingar skóla (val)
     school_country: Land skóla
@@ -610,6 +619,8 @@
       í hópinn þinn.
     already_enrolled_in_new_section: Þú getur ekki fært þessa nemendur vegna þess
       að þessi kennari er þegar með þá í öðrum hópi.
+    third_party_login: You cannot move students to a section that is synced with a
+      third party tool.
   share:
     title: Lærðu í Kóðastúdíóinu
     description: Allir geta lært tölvunarfræði. Búðu til leiki, öpp og list með kóða.
@@ -1142,6 +1153,7 @@
     csd5_2: 'Kafli 2: Lausn vandamála með gögn'
     csd6_1: 'Kafli 1: Úttak vélbúnaðar'
     csd6_2: 'Kafli 2: Inntak vélbúnaðar'
+    csd_survey: Post-Course Survey
     csp1_1: 'Kafli 1: Framsetning og flutningur upplýsinga'
     csp1_2: 'Kafli 2: Að finna upp internetið'
     csp2_1: 'Kafli 1: Að umkóða og þjappa margbrotnar upplýsingar'
@@ -1307,3 +1319,11 @@
       the storing of cookies on your computer or device.
     more_information: See Code.org's Privacy Policy.
     accept: Sammála
+  gdpr_dialog:
+    heading: Do you agree to using a web site based in the United States?
+    message: Data from your use of this site may be sent to and stored or processed
+      in the United States.
+    link_intro: For details see our
+    privacy_policy: privacy policy
+    logout: Logout
+    true: Já

@@ -374,6 +374,8 @@
   homepage_header_donors: "Code.org dziękuje za wsparcie"
   homepage_donors_seall: "Zobacz wszystkich"
   homepage_donors_donate: "Podaruj"
+  homepage_below_hero_announcement_text: "We care about your privacy and are making some updates to our privacy policy, effective May 25."
+  homepage_below_hero_announcement_link_text: "Dowiedz się więcej"
   contact_form_topic_student: "Jestem uczniem"
   contact_form_topic_parent: "Jestem rodzicem"
   contact_form_topic_teacher: "Jestem nauczycielem/edukatorem"
@@ -544,6 +546,9 @@
   volunteer_engineer_submission_field_email: "Adres e-mail"
   volunteer_engineer_submission_field_email_desc: "Twój adres e-mail nigdy nie będzie udostępniany, ale prześlemy Ci prośby od nauczycieli."
   volunteer_engineer_submission_field_email_placeholder: "Adres e-mail"
+  volunteer_engineer_submission_field_email_preference: "Can we email you about updates to our courses, volunteer opportunities, or other computer science news?"
+  volunteer_engineer_submission_field_email_preference_yes: 'Tak'
+  volunteer_engineer_submission_field_email_preference_no: 'Nie'
   volunteer_engineer_submission_final_paragraph: "Będziesz wymieniona/y na mapie, by nauczyciele z okolicy mogli skontaktować się z Tobą w sprawie Godziny Kodowania lub w celu innych możliwości wsparcia. NIGDY nie udostępnimy Twojego maila i dokładnego adresu. Ale pozostałe informacje (w tym przybliżona lokalizacja) będą widoczne dla nauczycieli z okolicy."
   volunteer_engineer_submission_checkbox_contact: 'Zgadzam się, by nauczyciele kontaktowali się ze mną z prośbą o wsparcie (Uwaga: Twój adres e-mail nie będzie udostępniony)'
   volunteer_engineer_submission_checkbox_age_18_plus: "Oświadczam, że mam co najmniej 18 lat."
@@ -973,6 +978,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: Zadania Wydajnościowe AP
   csppostap_name: 'Post-AP: Bazy Danych w Aplikacjach'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: "Pełen test - 50 pytań"
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'

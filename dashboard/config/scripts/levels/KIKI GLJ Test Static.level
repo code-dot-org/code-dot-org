@@ -6,13 +6,11 @@
   "user_id": 9,
   "properties": {
     "skin": "gamelab",
-    "show_d_pad": "true",
     "show_debug_watch": "true",
     "embed": "false",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",
-    "is_project_level": true,
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",

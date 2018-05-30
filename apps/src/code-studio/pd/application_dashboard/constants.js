@@ -85,7 +85,7 @@ export const UNMATCHED_PARTNER_OPTION = {label: UNMATCHED_PARTNER_LABEL, value: 
 
 export const RegionalPartnerValuePropType = PropTypes.oneOfType([
   PropTypes.number, // regional partner id
-  PropTypes.oneOf([ALL_PARTNERS_VALUE, UNMATCHED_PARTNER_VALUE])
+  PropTypes.oneOf([ALL_PARTNERS_VALUE, UNMATCHED_PARTNER_VALUE]),
 ]);
 
 export const RegionalPartnerPropType = PropTypes.shape({
