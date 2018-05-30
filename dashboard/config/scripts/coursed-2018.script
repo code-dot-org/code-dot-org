@@ -28,38 +28,14 @@ level 'courseD_collector_debugging8a_2018'
 level 'courseD_collector_debugging9a_2018'
 
 stage 'Events in Bounce'
-variants
-  level 'courseD_bounce_events1s_2018'
-  level 'bounce_1_2018'
-endvariants
-variants
-  level 'courseD_bounce_events2s_2018'
-  level 'bounce_2_2018'
-endvariants
-variants
-  level 'courseD_bounce_events5s_2018'
-  level 'bounce_5_2018'
-endvariants
-variants
-  level 'courseD_bounce_events6s_2018'
-  level 'bounce_6_2018'
-endvariants
-variants
-  level 'courseD_bounce_events7s_2018'
-  level 'bounce_7_2018'
-endvariants
-variants
-  level 'courseD_bounce_events10s_2018'
-  level 'bounce_10_2018'
-endvariants
-variants
-  level 'courseD_bounce_events11s_2018'
-  level 'bounce_11_2018'
-endvariants
-variants
-  level 'courseD_bounce_events12s_2018'
-  level 'bounce_12_2018'
-endvariants
+level 'courseD_bounce_events1s_2018'
+level 'courseD_bounce_events2s_2018'
+level 'courseD_bounce_events5s_2018'
+level 'courseD_bounce_events6s_2018'
+level 'courseD_bounce_events7s_2018'
+level 'courseD_bounce_events10s_2018'
+level 'courseD_bounce_events11s_2018'
+level 'courseD_bounce_events12s_2018'
 
 stage 'Loops in Ice Age'
 level 'courseD_iceage_loops1'
