@@ -211,7 +211,7 @@ class Section < ActiveRecord::Base
 
   # Clears all personal data from the section object.
   def clean_data
-    update(name: SYSTEM_DELETED_NAME)
+    update(name: SYSTEM_DELETED_NAME, code: system_deleted_section_code)
   end
 
   # Figures out the default script for this section. If the section is assigned to
@@ -338,5 +338,10 @@ class Section < ActiveRecord::Base
 
   def unused_random_code
     CodeGeneration.random_unique_code length: 6, model: Section
+  end
+
+  SYSTEM_DELETED_CODE_PREFIX = 'system_deleted_'.freeze
+  def system_deleted_section_code
+    SYSTEM_DELETED_CODE_PREFIX + id.to_s
   end
 end

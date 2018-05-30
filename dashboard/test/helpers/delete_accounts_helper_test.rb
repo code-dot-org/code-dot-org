@@ -257,6 +257,47 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # Table: dashboard.sections
+  #
+
+  test "soft-deletes all of a user's owned sections" do
+    user = create :teacher
+    create :section, user: user
+    create :section, user: user
+    create :section, user: user
+
+    refute_empty Section.where(user: user)
+    refute_empty Section.with_deleted.where(user: user)
+
+    purge_user user
+
+    assert_empty Section.where(user: user)
+    refute_empty Section.with_deleted.where(user: user)
+  end
+
+  test "clears all section names" do
+    section = create :section
+
+    refute_equal Section::SYSTEM_DELETED_NAME, section.name
+
+    purge_user section.user
+    section.reload
+
+    assert_equal Section::SYSTEM_DELETED_NAME, section.name
+  end
+
+  test "anonymizes all section codes" do
+    section = create :section
+
+    assert_match /[A-Z]{6}/, section.code
+
+    purge_user section.user
+    section.reload
+
+    assert_match /#{Section::SYSTEM_DELETED_CODE_PREFIX}#{section.id}/, section.code
+  end
+
+  #
   # Table: dashboard.activities
   # Table: dashboard.overflow_activities
   # Table: dashboard.gallery_activities
