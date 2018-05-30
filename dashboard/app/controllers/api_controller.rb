@@ -548,6 +548,7 @@ class ApiController < ApplicationController
 
   # Return a hash by student_id for all students in a section. The value is a hash by
   # script_level_id, with information on the student responses for that assessment.
+  # TODO(caleybrock): currently only used in internal experiment, must add controller tests.
   def assessments_responses
     section = load_section
     script = load_script(section)
