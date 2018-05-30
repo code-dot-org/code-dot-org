@@ -510,6 +510,39 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_empty EmailPreference.where(email: email)
   end
 
+  #
+  # Table: dashboard.studio_people
+  #
+
+  test "removes StudioPerson if it only belongs to this one account" do
+    user = create :teacher
+    studio_person_id = user.studio_person_id
+
+    refute_nil user.studio_person_id
+    refute_empty StudioPerson.where(id: studio_person_id)
+
+    purge_user user
+
+    assert_nil user.studio_person_id
+    assert_empty StudioPerson.where(id: studio_person_id)
+  end
+
+  test "leaves StudioPerson if it is linked to more than one account" do
+    user = create :teacher
+    user2 = create :teacher, studio_person: user.studio_person
+    studio_person_id = user.studio_person_id
+
+    refute_nil user.studio_person_id
+    refute_nil user2.studio_person_id
+    refute_empty StudioPerson.where(id: studio_person_id)
+
+    purge_user user
+
+    assert_nil user.studio_person_id
+    refute_nil user2.studio_person_id
+    refute_empty StudioPerson.where(id: studio_person_id)
+  end
+
   private
 
   #
