@@ -82,7 +82,8 @@ module Pd
           answers = submission[:answers]
 
           # Process answers here as a validation. An error will be raised if they don't match the questions.
-          questions_for_form(form_id).process_answers(answers)
+          processed_answers = questions_for_form(form_id).process_answers(answers)
+          next if skip_submission?(processed_answers)
 
           # When we pass the last_known_submission_id filter, there should be no duplicates,
           # But just in case handle them gracefully as an upsert.
@@ -91,7 +92,16 @@ module Pd
           end
         rescue => e
           raise e, "Error processing submission #{submission[:submission_id]} for form #{form_id}: #{e.message}", e.backtrace
-        end
+        end.compact
+      end
+
+      # Override in included class to provide filtering rules
+      # TODO(Andrew): Filter in the API query if possible, once we hear back from JotForm API support.
+      # See https://www.jotform.com/answers/1482175-API-Integration-Matrix-answer-returning-false-in-the-API#2
+      # @param processed_answers [Hash]
+      # @return [Boolean] true if this submission should be skipped
+      def skip_submission?(processed_answers)
+        false
       end
 
       # Get a form id from the configuration

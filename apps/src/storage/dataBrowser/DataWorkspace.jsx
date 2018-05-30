@@ -22,7 +22,8 @@ const styles = {
     boxSizing: 'border-box',
     borderLeft: '1px solid gray',
     borderRight: '1px solid gray',
-    borderBottom: '1px solid gray'
+    borderBottom: '1px solid gray',
+    overflowY: 'scroll',
   }
 };
 
