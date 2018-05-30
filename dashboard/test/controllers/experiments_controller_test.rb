@@ -116,4 +116,17 @@ class ExperimentsControllerTest < ActionController::TestCase
     assert_includes flash[:notice], "You have successfully disabled the experiment"
     assert_nil Experiment.first
   end
+
+  test 'user can not join an experiment user is already in' do
+    sign_in(@teacher)
+    experiment = SingleUserExperiment.create(min_user_id: @teacher.id, name: '2018-teacher-experience')
+
+    get :set_single_user_experiment, params: {experiment_name: '2018-teacher-experience'}
+    assert_response :redirect
+    assert_nil flash[:notice]
+    assert_includes flash[:alert], "Already enabled in experiment"
+    assert_equal 1, SingleUserExperiment.where(name: "2018-teacher-experience", min_user_id: @teacher.id).count
+
+    experiment.destroy
+  end
 end
