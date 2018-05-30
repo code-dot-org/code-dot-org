@@ -234,8 +234,9 @@ module Pd::WorkshopSurveyResultsHelper
               session_summary[:facilitator][q_key] = facilitator_response_averages
             else
               # For non facilitator specific responses, just return a histogram with nulls removed
-              session_summary[response_section][q_key] =
-                Hash[*surveys_for_session[response_section].map {|survey| survey[q_key]}.group_by {|v| v}.flat_map {|k, v| [k, v.size]}].reject(&:nil?)
+              summary = Hash[*surveys_for_session[response_section].map {|survey| survey[q_key]}.group_by {|v| v}.flat_map {|k, v| [k, v.size]}]
+
+              session_summary[response_section][q_key] = summary.reject {|k, _| k.nil?}
             end
           end
         end
