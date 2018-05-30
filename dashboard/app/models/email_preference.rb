@@ -15,6 +15,7 @@
 #
 #  index_email_preferences_on_email  (email) UNIQUE
 #
+
 # Notes:
 #   source: Indicates the source of the opt-in choice.
 #   form_kind: "0", "1", etc.  Indicates which version of the opt-in string the

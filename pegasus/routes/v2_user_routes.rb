@@ -1,3 +1,5 @@
+require 'honeybadger'
+
 get '/v2/user' do
   only_for 'code.org'
   dont_cache
@@ -21,7 +23,14 @@ get '/v2/students/:id' do |id|
   JSON.pretty_generate(student.to_hash)
 end
 
+# DEPRECATED: Use PATCH /dashboardapi/sections/<id>/students/<student_id>
 patch '/v2/students/:id' do |id|
+  # Notify Honeybadger to determine if this endpoint is still used anywhere
+  Honeybadger.notify(
+    error_class: "DeprecatedEndpointWarning",
+    error_message: 'Deprecated endpoint PATCH /v2/students/:id called unexpectedly',
+  )
+
   only_for 'code.org'
   dont_cache
   unsupported_media_type! unless payload = request.json_body
