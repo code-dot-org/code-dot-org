@@ -385,10 +385,14 @@ WebLab.prototype.onInspectorChanged = function (inspectorOn) {
 WebLab.prototype.setBrambleHost = function (obj) {
   this.brambleHost = obj;
   this.brambleHost.onBrambleReady(() => {
+    this.brambleReady = true;
     // Enable the Finish/Submit/Unsubmit button if it is present:
     let shareCell = document.getElementById('share-cell');
     if (shareCell) {
       shareCell.className = 'share-cell-enabled';
+    }
+    if (this.syncBrambleWhenReady) {
+      this.brambleHost.syncFiles(() => {});
     }
   });
   this.brambleHost.onProjectChanged(this.onProjectChanged.bind(this));
@@ -444,8 +448,10 @@ WebLab.prototype.loadFileEntries = function () {
       // current version (until the browser page reloads)
       project.filesVersionId = result.filesVersionId;
     }
-    if (this.brambleHost) {
+    if (this.brambleHost && this.brambleReady) {
       this.brambleHost.syncFiles(() => {});
+    } else {
+      this.syncBrambleWhenReady = true;
     }
   }, xhr => {
     console.error('files API failed, status: ' +  xhr.status);
