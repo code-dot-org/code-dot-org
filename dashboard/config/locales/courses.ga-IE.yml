@@ -3,7 +3,7 @@
     course:
       name:
         csp:
-          assignment_family_title: Computer Science Principles
+          assignment_family_title: Foras Feasa ar an Ríomheolaíocht
           title: Foras Feasa ar an Ríomheolaíocht
           version_title: "'17-'18"
           description_student: In fall 2016, the College Board launched its newest
@@ -24,7 +24,7 @@
             opportunities.
           description_short: Learn foundational computer science concepts.
         csd:
-          assignment_family_title: Computer Science Discoveries
+          assignment_family_title: Fionnachtana sa Ríomheolaíocht
           title: Fionnachtana sa Ríomheolaíocht
           version_title: "'17-'18"
           description_student: Computer Science Discoveries (CS Discoveries) is an
@@ -45,15 +45,15 @@
           description_teacher: Seo é cúrsa ina bhfuil chuile rud agus a bhfuil cur
             síos níos faide air do na múinteoirí
         csd-2018:
-          assignment_family_title: Computer Science Discoveries
-          title: Fionnachtana sa Ríomheolaíocht 2018
+          assignment_family_title: Fionnachtana sa Ríomheolaíocht
+          title: Fionnachtana sa Ríomheolaíocht ('18-'19)
           version_title: "'18-'19"
-          description_short: ''
+          description_short: Leagan 2018-2019 den chúrsa Fionnachtana sa Ríomheolaíocht.
           description_student: ''
           description_teacher: ''
         csp-2018:
-          assignment_family_title: Computer Science Principles
-          title: Computer Science Principles ('18-'19)
+          assignment_family_title: Foras Feasa ar an Ríomheolaíocht
+          title: Foras Feasa ar an Ríomheolaíocht ('18-'19)
           version_title: "'18-'19"
           description_short: Learn foundational computer science concepts.
           description_student: In fall 2016, the College Board launched its newest

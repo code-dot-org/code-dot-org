@@ -71,14 +71,14 @@
     "top_level_procedure_autopopulate": "false",
     "start_blocks": "var sprite = createSprite(200, 200);\r\nsprite.setAnimation(\"giraffe\");\r\n\r\nfunction draw() {\r\n  background(\"white\");\r\n  if(keyDown(\"h\")) {\r\n     sprite.setAnimation(\"hippo\");\r\n  }\r\n  if(keyDown(\"p\")) {\r\n     sprite.setAnimation(\"pig\");\r\n  }\r\n  if(keyDown(\"r\")) {\r\n    \r\n  }\r\n  drawSprites();\r\n}\r\n",
     "parent_level_id": 8992,
-    "contained_level_names": null,
     "reference_links": [
       "/docs/gamelab/keyDown/index.html",
       "/docs/csd-1718/if_statements/index.html",
       "/docs/csd-1718/booleans/index.html",
       "/docs/gamelab/setAnimation/index.html"
     ],
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

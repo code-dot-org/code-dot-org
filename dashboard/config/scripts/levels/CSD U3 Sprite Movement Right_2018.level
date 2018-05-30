@@ -60,12 +60,12 @@
     "encrypted_examples": "A8OYhFdw5WysTrjOvpGVBeK4Pf9s8DoP6C4lZnwGXGnu4N+wZ1WbOnMyKWq9\ngR+D1tiah4YqOPIOQ32FmqfbIw==\n",
     "parent_level_id": 8800,
     "name_suffix": "_2018",
-    "contained_level_names": null,
     "map_reference": "/docs/csd-1718/counter_pattern/index.html",
     "video_key": "csd_gamelab_sprites_2",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

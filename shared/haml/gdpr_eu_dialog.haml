@@ -1,19 +1,36 @@
 %link{rel:'stylesheet', type:'text/css', href:'/shared/css/gdpr-eu-dialog.css'}
 
+-# dashboard will be passed as a parameter when the dashboard is rendering this dialog.
+- dashboard ||= false
+- if dashboard
+  - heading = I18n.t('gdpr_dialog.heading')
+  - message = I18n.t('gdpr_dialog.message')
+  - link_intro = I18n.t('gdpr_dialog.link_intro')
+  - privacy_policy = I18n.t('gdpr_dialog.privacy_policy')
+  - logout = I18n.t('gdpr_dialog.logout')
+  - yes = I18n.t('gdpr_dialog.yes')
+- else
+  - heading = hoc_s(:gdpr_dialog_heading)
+  - message = hoc_s(:gdpr_dialog_message)
+  - link_intro = hoc_s(:gdpr_dialog_link_intro)
+  - privacy_policy = hoc_s(:gdpr_dialog_privacy_policy)
+  - logout = hoc_s(:gdpr_dialog_logout)
+  - yes = hoc_s(:gdpr_dialog_yes)
+
 #gdpr-eu-dialog
   .text
     .heading
-      Do you agree to using a web site based in the United States?
+      = heading
     %br
     .message
-      Data from your use of this site may be sent to and stored or processed in the United States.
+      = message
     %br
     .link-to-privacy-policy
-      For details see our
-      %a{href: CDO.code_org_url('/privacy'), target: '_blank'} privacy policy
+      = link_intro
+      %a{href: CDO.code_org_url('/privacy'), target: '_blank'}= privacy_policy
   %hr
   .buttons
     %button#logout
-      Logout
+      = logout
     %button#accept
-      Yes
+      = yes

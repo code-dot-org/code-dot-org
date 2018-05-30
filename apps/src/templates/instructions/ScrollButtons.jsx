@@ -197,6 +197,7 @@ class ScrollButtons extends React.Component {
   }
 }
 
+export const UnconnectedScrollButtons = Radium(ScrollButtons);
 export default connect(function propsFromStore(state) {
   return {
     isMinecraft: !!state.pageConstants.isMinecraft,

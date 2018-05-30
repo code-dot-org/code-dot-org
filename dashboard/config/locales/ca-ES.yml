@@ -141,6 +141,13 @@
     valid_password: Contrasenya vàlida!
     invalid_password: La contrasenya ha de tenir almenys 6 caràcters
     mismatch_password: Les dues contrasenyes que has introduït no coincideixen
+    agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
+      and <a href='http://code.org/privacy'>Privacy Policy</a>.
+    under_13_consent: If I am under 13 years of age, I confirm that I have my parent
+      or legal guardian's permission to use the Code.org services.
+    agree_us_website: I agree to using a website based in the United States.
+    my_data_to_us: Data from my use of this site may be sent to and stored or processed
+      in the United States.
     student_terms: Estic d'acord i accepto les <a href='http://code.org/tos'>condicions
       del servei</a> de Code.org. Si sóc menor de 13 anys, confirmo mitjançant l'enviament
       d'aquest formulari que tinc l'autorització dels meus pares o del tutor legal
@@ -151,6 +158,7 @@
       del servei</a> de Code.org.
     additional_information: Necessitem alguna informació addicional per continuar
       amb la vostra inscripció.
+    user_type_button: Update Account Type
     user_type_label: Account Type
     user_type_teacher: Mestre
     user_type_student: estudiant
@@ -161,6 +169,7 @@
       learning opportunities, or other computer science news?
     email_preference_yes: Sí
     email_preference_no: 'No'
+    email_preference_required: You must specify an email preference.
   school_info:
     title: School Information (optional)
     school_country: School Country
@@ -611,6 +620,8 @@
       in your section.
     already_enrolled_in_new_section: You cannot move these students because this teacher
       already has them in another section.
+    third_party_login: You cannot move students to a section that is synced with a
+      third party tool.
   share:
     title: Aprendre sobre Code Studio
     description: Tothom pot aprendre programació. Crea jocs, apps i art amb codi.
@@ -1143,6 +1154,7 @@
     csd5_2: 'Chapter 2: Solving Data Problems'
     csd6_1: 'Chapter 1: Hardware Output'
     csd6_2: 'Chapter 2: Hardware Input'
+    csd_survey: Post-Course Survey
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -1308,3 +1320,11 @@
       the storing of cookies on your computer or device.
     more_information: See Code.org's Privacy Policy.
     accept: Accepto
+  gdpr_dialog:
+    heading: Do you agree to using a web site based in the United States?
+    message: Data from your use of this site may be sent to and stored or processed
+      in the United States.
+    link_intro: For details see our
+    privacy_policy: privacy policy
+    logout: Logout
+    true: Sí

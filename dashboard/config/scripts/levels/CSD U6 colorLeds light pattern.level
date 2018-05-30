@@ -125,8 +125,8 @@
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "encrypted_examples": "LYv/4kAfSpf2YkoRvnAaExl20MIIgQKhTyBeNWVH8E/P47Ue730OtxlyBDBi\neoxOX8RP6pmAXa2DudILlB8Q1g==\n",
-    "contained_level_names": null,
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

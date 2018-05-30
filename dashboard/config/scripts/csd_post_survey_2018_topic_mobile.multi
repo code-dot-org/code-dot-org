@@ -1,0 +1,6 @@
+name 'csd-post-survey-2018-topic-mobile'
+question 'Mobile App Design'
+layout 'wrap'
+right 'Yes'
+right 'No'
+right 'Not sure what this is'

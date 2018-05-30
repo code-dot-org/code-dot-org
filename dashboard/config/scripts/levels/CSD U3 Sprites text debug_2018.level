@@ -69,7 +69,6 @@
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"7e757d2a-85ee-48a4-a766-35ec0be60782\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"7e757d2a-85ee-48a4-a766-35ec0be60782\": {\r\n      \"name\": \"snake\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/cqSKJcNy226Aisl3Jt3nFansw25H8kmK/category_animals/snake.png\",\r\n      \"frameSize\": {\r\n        \"x\": 256,\r\n        \"y\": 291\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"cqSKJcNy226Aisl3Jt3nFansw25H8kmK\"\r\n    }\r\n  }\r\n}",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "contained_level_names": null,
     "reference_links": [
       "/docs/gamelab/text/index.html",
       "/docs/gamelab/textSize/index.html",
@@ -81,7 +80,8 @@
       "/docs/csd-1718/sprites/index.html",
       "/docs/csd-1718/animation_tab/index.html"
     ],
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -42,7 +42,7 @@
     "debugger_disabled": "false",
     "pause_animations_by_default": "false",
     "hide_custom_blocks": "true",
-    "custom_blocks": "[\r\n  {\r\n    \"func\": \"forever\",\r\n    \"color\": [\r\n      322,\r\n      0.9,\r\n      0.95\r\n    ],\r\n    \"blockText\": \"repeat forever\",\r\n    \"args\": [],\r\n    \"eventLoopBlock\": true\r\n  }\r\n]",
+    "custom_blocks": "[\n  {\n    \"func\": \"forever\",\n    \"color\": [\n      322,\n      0.9,\n      0.95\n    ],\n    \"blockText\": \"repeat forever\",\n    \"args\": [],\n    \"eventLoopBlock\": true\n  }\n]\n",
     "instructions": "On your worksheet, write what you think the dog will do when you click \"Run.\"",
     "contained_level_names": null
   },

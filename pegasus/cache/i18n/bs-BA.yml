@@ -486,6 +486,9 @@
   homepage_header_donors: Code.org zahvaljuje svojim pristalicama
   homepage_donors_seall: Pogledaj sve
   homepage_donors_donate: Doniraj
+  homepage_below_hero_announcement_text: We care about your privacy and are making
+    some updates to our privacy policy, effective May 25.
+  homepage_below_hero_announcement_link_text: Nauči više
   contact_form_topic_student: Ja sam učenik
   contact_form_topic_parent: Ja sam roditelj
   contact_form_topic_teacher: Ja sam učitelj/edukator
@@ -726,6 +729,10 @@
   volunteer_engineer_submission_field_email_desc: Tvoja e-mail adresa nikada neće
     biti podijeljena, ali ćemo ti slati zahtjeve od nastavnika.
   volunteer_engineer_submission_field_email_placeholder: E-mail adresa
+  volunteer_engineer_submission_field_email_preference: Can we email you about updates
+    to our courses, volunteer opportunities, or other computer science news?
+  volunteer_engineer_submission_field_email_preference_yes: Da
+  volunteer_engineer_submission_field_email_preference_no: Ne
   volunteer_engineer_submission_final_paragraph: Biti ćeš dodat/a na mapu da bi lokalni
     nastavnici mogli da te kontaktiraju za Sat Kodiranja ili druge volonterske mogućnosti.
     Tvoj e-mail i adresa NIKADA neće biti podijeljeni od naše strane. Ali ostale informacije
@@ -1270,6 +1277,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: Full Test - 50 questions
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'
@@ -2118,3 +2126,5 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
+  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
+    policy)"

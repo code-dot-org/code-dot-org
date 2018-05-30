@@ -3142,50 +3142,41 @@
         all objects are flowers, so check to gather nectar only at flowers.
       Course 4 Artist 1_instruction: 'Ajuda''m a acabar de dibuixar la capsa. (Cada
         línia fa 200 píxels de llarg) '
-      Course 4 Artist 10_instruction: "Click here to see the full instructions again!\r\n\r\nHere
-        is the code for an interesting shape.  What happens when you repeat it multiple
-        times, turning between each iteration?   Notice that the turns in this shape
-        add up to 420 degrees, which means that when your artist is done drawing,
-        it will be facing a different direction than when you started.  That new direction
-        is exactly 60 degrees to the right of where you began."
-      Course 4 Artist 11_instruction: |-
-        Now for a challenge!  Feel free to use trial
-        and error. You are not expected to get the image perfect the first time.   Want
-        to see more hints?  Click here!
+      Course 4 Artist 10_instruction: |-
+        Clica aquí per veure altre cop les instruccions completes!
+
+        Aquí hi ha el programa per a una forma interessant. Què passa quan ho repeteixes diverses vegadas, girant després de cada iteració? Adona-te'n que el girs en aquesta forma sumen 420 graus, cosa que vol dir que quan el teu artista hagi acabat, estarà mirant a una direcció diferent de quan ha començat. La nova direcció és exactament 60 graus a la dreta des d'on ha començat.
+      Course 4 Artist 11_instruction: Ara un repte! Si vols fes assaig i error. No
+        cal que facis la imatge perfecte a la primera. Vols veure més pistes? Clica
+        aquí!
       Course 4 Artist 12_instruction: "Want a second peek at the inspiration design
         or the hints?  Click here!\r\n\r\nOtherwise, make a design all your own!"
-      Course 4 Artist 13_instruction: |-
-        Still playing?  Here is a blank canvas where
-        you can design anything you want!
-      Course 4 Artist 2_instruction: |-
-        Can you use a loop to draw the greyed out square?  (Each
-        side is 300px long)
-      Course 4 Artist 20_instruction: |-
-        Still playing?  Here is a blank canvas where
-        you can create whatever you want!
-      Course 4 Artist 3_instruction: |-
-        Try to figure out what happens if you run this
-        code (or press "Run" to test it). Then, repeat it enough times to complete
-        the drawing.
-      Course 4 Artist 4_instruction: |-
-        How many degrees are in a circle?  Fill in
-        the repeat block with that number to create a circle of colors.
+      Course 4 Artist 13_instruction: Tens encara ganes de jugar? Aquí hi ha un llenç
+        en blanc perquè hi dissenyis el que prefereixis!
+      Course 4 Artist 2_instruction: Pots usar un bucle per dibuixar el quadrat descolorit?
+        (Cada costat fa 300 píxels de llarg)
+      Course 4 Artist 20_instruction: Tens encara ganes de jugar? Aquí hi ha un llenç
+        en blanc perquè hi dissenyis el que prefereixis!
+      Course 4 Artist 3_instruction: Mira d'esbrinar què passa si executes aquest
+        program (o prem "executa" per veure-ho). Després, repeteix-ho prou vegades
+        per acabar el dibuix.
+      Course 4 Artist 4_instruction: Quants graus fa un cercle? Omple el bloc "repeteix"
+        amb un nombre que creï un cercle de colors.
       Course 4 Artist 5_instruction: Dibuixa l'altra meitat de manera que el disseny
         sigui simètric. Els triangles són equilàters i fan 50 píxels de llarg.
-      Course 4 Artist 6_instruction: |-
-        Complete the code to draw these three, equilateral
-        triangles.
-      Course 4 Artist 7_instruction: "Now nest this loop inside another loop to draw\n10
-        triangles. This is called a nested loop. Hint: All 10 triangles complete\na
-        360 degree rotation.  "
-      Course 4 Artist 8_instruction: |-
-        Draw this sun by looping this whole block of
-        code multiple times.
-      Course 4 Artist 8a_instruction: |-
-        Remember this shape?  Now we're going to
-        let you build it without giving you any blocks to start!
-      Course 4 Artist 9_instruction: "Loop this design 10 times and make sure to turn
-        between each shape that's drawn. \r\n"
+      Course 4 Artist 6_instruction: Acaba el programa per dibuixar aquests tres triangles
+        equilàters.
+      Course 4 Artist 7_instruction: 'Ara posa aquest bucle dins d''un altre per dibuixar
+        10 triangles. D''això se''n diu un bucle enniuat. Pista: Els 10 triangles
+        fan una volta de 360 graus.  '
+      Course 4 Artist 8_instruction: Dibuixa el sol repetint diverses vegades tot
+        el bloc.
+      Course 4 Artist 8a_instruction: Recordes aquesta forma? Ara et deixarem que
+        la facis tu sense donar-te cap bloc per començar!
+      Course 4 Artist 9_instruction: 'Repeteix el disseny 10 vegades i assegura''t
+        de girar després de cada figura que es dibuixa.
+
+'
       Course 4 Artist Binary 1_instruction: "Here's a function that takes a binary
         string of 1's and 0's and instructs the artist to follow them from left to
         right, top to bottom.  The artist will fill-in the squares when it sees a
@@ -3212,7 +3203,7 @@
       Course 4 Artist Binary 6_instruction: |-
         What is the shortest binary string that
         you can repeat to draw this image?
-      Course 4 Artist Binary 7_instruction: Finish this drawing.
+      Course 4 Artist Binary 7_instruction: Acaba aquest dibuix.
       Course 4 Artist Binary Free Play 2_instruction: |-
         Free Play: Here's a blank
         canvas for you to draw on.  Have fun!
@@ -3454,8 +3445,8 @@
         Here's the algorithm to draw a triangle,
         modify it so it uses the "sides" variable instead. Replace the number 3
         with the "sides" variable. Hint: remember to use the "set sides to" block.
-      Course 4 Artist Vars 1_instruction: "Let's draw an equilateral triangle. \r\n\r\nIt
-        has to be exactly 100 pixels long on each side."
+      Course 4 Artist Vars 1_instruction: "Dibuixarem un triangle equilàter. \nCada
+        costat ha de fer 100 pixels de llarg."
       Course 4 Artist Vars 10_instruction: |-
         Here's an algorithm that draws a triangle
         out of smaller triangles. Can you modify it so that it uses the "sides"
@@ -3482,10 +3473,9 @@
         is nested within one more loop. Experiment with changing the values of your
         two variables to draw cool patterns.\r\n\r\nFor even more effect, try playing
         with color!  Use random colors inside loops to see how it changes your design."
-      Course 4 Artist Vars 2_instruction: |-
-        Instead of using "move forward by 150,"
-        the "move" block is now referencing a variable called "length." Can you
-        set "length" to 150 to draw this new triangle?
+      Course 4 Artist Vars 2_instruction: En lloc de fer "avança 150", el bloc "mou"
+        ara fa referencia a una variable anomenada "llargada". Pots posar 150 a "llargada"
+        per dibuixar el nou triangle?
       Course 4 Artist Vars 3_instruction: "Here's a loop that draws a square, but\nsomething's
         missing. Can you fix it so that it uses the variable \"length\"\nto figure
         out how long each side should be? "
@@ -3514,17 +3504,15 @@
         Modify this algorithm so it uses the "sides"
         variable instead of a fixed number to draw a triangle. Don't forget to use
         the "set sides to" block.
-      Course 4 Bee 1_instruction: "The bee can't tell what's under the cloud! \r\n\r\nUse
-        the `if` block to check whether there is a flower under the cloud. \r\n\r\nGet
-        nectar one time, ONLY if there is a flower."
-      Course 4 Bee 2_instruction: |-
-        Use the "if/else" block to check each object
-        to see if it's a flower or a honeycomb . If it's a flower, collect one nectar...otherwise,
-        make one honey!
-      Course 4 Bee 3_instruction: |-
-        The unknown object is either a flower or a honeycomb.
-        This time, use the if/else block to collect one nectar if it is a flower,
-        else make one honey (because then it would be a honeycomb).
+      Course 4 Bee 1_instruction: "L'abella no sap què hi ha sota del núvol! \nUsa
+        el bloc \"si\" per comprovar si hi ha una flor sota del núvol. \nFes nèctar
+        un cop, NOMÉS si hi ha una flor."
+      Course 4 Bee 2_instruction: Usa el bloc "si/en cas contrari" per comprovar cada
+        objecte i veure si és una flor o un rusc. Si és una flor, recol·lecta un nèctar...
+        altrament, fes una mel!
+      Course 4 Bee 3_instruction: L'objecte desconegut és una flor o un rusc. Aquest
+        cop usar el bloc "si/en cas contrari" per recollir un nèctar si és una flor,
+        si no, fes una mel (perquè si no serà un rusc).
       Course 4 Bee 4_instruction: |-
         This purple flower may have either 3, 2, or 1
         nectar. Here an if/else block is combined with another if/else block to create
@@ -3580,14 +3568,12 @@
         called the "increment,"  and each time the loop is run the counter variable
         changes by the increment. Try collecting these flowers using an increment
         of 2.
-      Course 4 Bee Loops 5 NEW_instruction: |-
-        Here are three flowers. Can you find
-        the pattern of instructions that you need to repeat 3 times to collect the
-        nectar with the fewest number of blocks?
-      Course 4 Bee Loops 5a NEW_instruction: |-
-        Now, use loops to help the bee collect
-        all the nectar on its way to the honeycomb with as few blocks as possible.  When
-        you get there, don't forget to make honey!
+      Course 4 Bee Loops 5 NEW_instruction: Hi ha tres flors. Pots trobar el patró
+        d'instruccions necessari per repetir tres cops la recollida de nèctar amb
+        el menor nombre de blocs?
+      Course 4 Bee Loops 5a NEW_instruction: Ara, usa bucles per ajudar l'abella a
+        recollir tot el nèctar de camí cap al rusc amb el menor nombre de blocs possible.
+        Quan hi arribis, no t'oblidis de fer la mel!
       Course 4 Bee Params 1_instruction: |-
         Write a sequence to collect all of the
         nectar using `get 3 nectar` which turns, moves to collect the nectar, and
@@ -3702,8 +3688,8 @@
         Extreme Challenge: No rules. No clues. Just the
         challenge!
       Course 4 Maze 1_instruction: Get the angry bird to the pig!
-      Course 4 Maze 2_instruction: Avoid the TNT!
-      Course 4 Maze 3_instruction: 'Program the angry bird to get to the pig. '
+      Course 4 Maze 2_instruction: Esquiva el TNT!
+      Course 4 Maze 3_instruction: 'Programa l''"angry bird" per arribar al porc. '
       Course 4 Maze 4_instruction: Prova amb el bloc "repetir" per usar menys blocs...
       Course 4 Maze 5_instruction: Pots resoldre aquest trencaclosques usant el menor
         nombre de blocs possible?
@@ -9233,6 +9219,7 @@
         Help Scrat get all the way over to the
         acorn!
       courseB_iceage_loops11_instruction: Help Scrat get to the acorn!
+      courseB_iceage_loops11_forVideo_instruction: Help Scrat get to the acorn!
       courseB_iceage_loops12_instruction: Get to the acorn any way you can!
       courseB_iceage_loops2_instruction: |-
         Use two different move blocks to get to
@@ -11143,6 +11130,8 @@
         off to your friends!
       courseD_playLab_condFP_a_instruction: Now, build your own game to show off to
         your friends!
+      courseD_playLab_condForVideo_instruction: Now, build your own game to show off
+        to your friends!
       courseD_playLab_embedded_instruction: "Move Pegleg the Pirate with the arrow
         keys. Get to the dragon to score points, but avoid the ninja! Standing below
         the line of octopuses will make the ninja stop chasing you, but beware! The
@@ -13338,17 +13327,13 @@
         `draw a window` and calling it five times. Watch out for the door!\r\n\r\n-
         The top windows are 50 pixels away from each other.  \r\n- The bottom windows
         are 100 pixels below the top set."
-      grade4_artist_nestedLoops_challenge_instruction: "Click here to see the full
-        instructions again!\r\n\r\nHere is the code for an interesting shape.  What
-        happens when you repeat it multiple times, turning between each iteration?
-        \  Notice that the turns in this shape add up to 420 degrees, which means
-        that when your artist is done drawing, it will be facing a different direction
-        than when you started.  That new direction is exactly 60 degrees to the right
-        of where you began."
-      grade4_artist_nestedLoops_challenge2_instruction: |-
-        Now for a challenge!  Feel
-        free to use trial and error. You are not expected to get the image perfect
-        the first time.   Want to see more hints?  Click here!
+      grade4_artist_nestedLoops_challenge_instruction: |-
+        Clica aquí per veure altre cop les instruccions completes!
+
+        Aquí hi ha el programa per a una forma interessant. Què passa quan ho repeteixes diverses vegadas, girant després de cada iteració? Adona-te'n que el girs en aquesta forma sumen 420 graus, cosa que vol dir que quan el teu artista hagi acabat, estarà mirant a una direcció diferent de quan ha començat. La nova direcció és exactament 60 graus a la dreta des d'on ha començat.
+      grade4_artist_nestedLoops_challenge2_instruction: Ara un repte! Si vols fes
+        assaig i error. No cal que facis la imatge perfecte a la primera. Vols veure
+        més pistes? Clica aquí!
       grade4_artist_nested_loop_circles1_instruction: |-
         Assessment: Use a nested loop
         to complete the design.
@@ -13670,7 +13655,7 @@
       grade5_artist_binary7_instruction: |-
         What is the shortest binary string that
         you can repeat to draw this image?
-      grade5_artist_binary8_instruction: Finish this drawing.
+      grade5_artist_binary8_instruction: Acaba aquest dibuix.
       grade5_artist_binary9_instruction: "Here's a higher resolution canvas to draw
         on - 16 pixels by 16 pixels!\r\n\r\nSee what happens when we start to get
         creative with the bits?"
@@ -13828,9 +13813,8 @@
       grade5_artist_variables_freeplay15_instruction: "Want a second peek at the inspiration
         design or the hints?  Click here!\r\n\r\nOtherwise, make a design all your
         own!"
-      grade5_artist_variables_freeplay16_instruction: |-
-        Still playing?  Here is a
-        blank canvas where you can create whatever you want!
+      grade5_artist_variables_freeplay16_instruction: Tens encara ganes de jugar?
+        Aquí hi ha un llenç en blanc perquè hi dissenyis el que prefereixis!
       grade5_artist_variables_hexagons1_instruction: "Let's try it again! \r\n\r\nCan
         you set the `length` variable to 60 to make this cool design with hexagons?"
       grade5_artist_variables_letterT11_instruction: |-
@@ -13873,10 +13857,9 @@
         Can you use the sides variable (along with the math block) to turn the right
         amount regardless of how many sides there are in the polygon?\r\n\r\nClick
         here to go back to the hint!"
-      grade5_artist_variables_triangles2_instruction: |-
-        Instead of using "move forward
-        by 150," the "move" block is now referencing a variable called "length."
-        Can you set "length" to 150 to draw this new triangle?
+      grade5_artist_variables_triangles2_instruction: En lloc de fer "avança 150",
+        el bloc "mou" ara fa referencia a una variable anomenada "llargada". Pots
+        posar 150 a "llargada" per dibuixar el nou triangle?
       grade5_artist_variables_triangles3_instruction: "Drag a number block to both\nthe
         `set length` block and the `repeat _ times` block to draw a set of 50\npixel
         triangles. "

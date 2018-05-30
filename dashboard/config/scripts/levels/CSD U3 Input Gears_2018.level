@@ -99,7 +99,6 @@
     "start_animations": "{\r\n    \"orderedKeys\": [\r\n        \"blue_gear\",\r\n        \"green_gear\",\r\n        \"red_gear\"\r\n    ],\r\n    \"propsByKey\": {\r\n        \"blue_gear\": {\r\n            \"name\": \"blue_gear\",\r\n            \"sourceUrl\": \"https://curriculum.code.org/images/sprites/blue_gear.png\",\r\n            \"sourceSize\": {\r\n                \"x\": 123,\r\n                \"y\": 124\r\n            },\r\n            \"frameSize\": {\r\n                \"x\": 123,\r\n                \"y\": 124\r\n            },\r\n            \"frameCount\": 1,\r\n            \"frameDelay\": 2,\r\n            \"looping\": true\r\n        },\r\n        \"green_gear\": {\r\n            \"name\": \"green_gear\",\r\n            \"sourceUrl\": \"https://curriculum.code.org/images/sprites/green_gear.png\",\r\n            \"sourceSize\": {\r\n                \"x\": 122,\r\n                \"y\": 122\r\n            },\r\n            \"frameSize\": {\r\n                \"x\": 122,\r\n                \"y\": 122\r\n            },\r\n            \"frameCount\": 1,\r\n            \"frameDelay\": 2,\r\n            \"looping\": true\r\n        },\r\n        \"red_gear\": {\r\n            \"name\": \"red_gear\",\r\n            \"sourceUrl\": \"https://curriculum.code.org/images/sprites/red_gear.png\",\r\n            \"sourceSize\": {\r\n                \"x\": 122,\r\n                \"y\": 121\r\n            },\r\n            \"frameSize\": {\r\n                \"x\": 122,\r\n                \"y\": 121\r\n            },\r\n            \"frameCount\": 1,\r\n            \"frameDelay\": 2,\r\n            \"looping\": true\r\n        }\r\n    }\r\n}",
     "parent_level_id": 8887,
     "name_suffix": "_2018",
-    "contained_level_names": null,
     "reference_links": [
       "/docs/gamelab/keyDown/index.html",
       "/docs/csd-1718/if_statements/index.html",
@@ -110,7 +109,8 @@
     ],
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

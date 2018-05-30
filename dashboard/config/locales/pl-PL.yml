@@ -137,6 +137,14 @@
     valid_password: Prawidłowe hasło!
     invalid_password: Hasło musi zawierać przynajmniej 6 znaków
     mismatch_password: Dwa hasła, które podałeś, nie są zgodne
+    agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
+      and <a href='http://code.org/privacy'>Privacy Policy</a>.
+    under_13_consent: Jeżeli mam mniej niż 13 lat, potwierdzam, że mój rodzic lub opiekun
+      prawny wyraża zgodę na korzystanie przeze mnie ze strony Code.org services.
+    agree_us_website: Zgadzam się na korzystanie ze strony, której siedziba znajduje się w
+      Stanach Zjednoczonych.
+    my_data_to_us: Dane gromadzone podczas korzystania przeze mnie z tej witryny mogą być
+      wysyłane i przechowywane lub przetwarzane w Stanach Zjednoczonych.
     student_terms: Zgadzam się na ograniczenia wynikające <a href='http://code.org/tos'>
       z warunków korzystania z usług </a> oferowanych przez Code.org. Jeśli mam mniej
       niż 13 lat, to potwierdzam przesyłając ten formularz, że mam zgodę moich rodziców
@@ -149,12 +157,20 @@
       usług oferowanych przez Code.org. Aby uzyskać więcej informacji na temat prywatności,
       zobacz naszą <a href='http://code.org/privacy'> politykę prywatności</a>.
     additional_information: Potrzebujemy dodatkowych informacji, aby móc Ciebie zarejestrować.
+    user_type_button: Update Account Type
     user_type_label: Typ konta
     user_type_teacher: Nauczyciel
     user_type_student: Uczeń
     field_is_required: jest wymagane
     accept_terms: Musisz wyrazić zgodę, aby utworzyć konto
     error: Wystąpił błąd.
+    email_preference_question: Czy wyrażasz zgodę na otrzymywanie od nas wiadomości e-mail z
+      najnowszymi informacjami o naszych kursach, lokalnymi ofertami oraz innymi nowościami
+      informatycznymi?
+    email_preference_privacy: (Zobacz naszą Politykę prywatności)
+    email_preference_yes: Tak
+    email_preference_no: Nie
+    email_preference_required: You must specify an email preference.
   school_info:
     title: Informacja o Szkole (opcjonalne)
     school_country: Kraj
@@ -618,6 +634,8 @@
       do sekcji.
     already_enrolled_in_new_section: Nie można przenieść tych uczniów, ponieważ ten
       nauczyciel ma ich już w innej sekcji.
+    third_party_login: You cannot move students to a section that is synced with a
+      third party tool.
   share:
     title: Ucz się z Code Studio
     description: Każdy może nauczyć się informatyki. Zakoduj gry, aplikacje i sztukę.
@@ -1159,6 +1177,7 @@
     csd5_2: 'Rozdział 2: Rozwiązywanie Problemów z Danymi'
     csd6_1: 'Rozdział 1: Wyjście Sprzętowe'
     csd6_2: 'Rozdział 2: Wejście Sprzętowe'
+    csd_survey: Post-Course Survey
     csp1_1: 'Rozdział 1: Reprezentowanie i Przekazywanie Informacji'
     csp1_2: 'Rozdział 2: Wynalezienie Internetu'
     csp2_1: 'Rozdział 1: Kodowanie i Kompresja Złożonych Danych'
@@ -1172,6 +1191,11 @@
     csp_ap_1: 'Rozdział 1: AP Konfiguracja Techniczna'
     csp_ap_2: 'Rozdział 2: AP Zbadaj Wydajność'
     csp_ap_3: 'Rozdział 3: AP Utwórz Zadanie Wydajnościowe'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Unit 2: Cyfrowe informacje'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: Wskazówki
   external_links:
     disclaimer: Uwaga
@@ -1316,3 +1340,16 @@
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
   courses_category: Pełne Kursy
+  cookie_banner:
+    message: By continuing to browse our site or clicking "I agree," you agree to
+      the storing of cookies on your computer or device.
+    more_information: See Code.org's Privacy Policy.
+    accept: Zgadzam się
+  gdpr_dialog:
+    heading: Do you agree to using a web site based in the United States?
+    message: Data from your use of this site may be sent to and stored or processed
+      in the United States.
+    link_intro: For details see our
+    privacy_policy: privacy policy
+    logout: Logout
+    true: Tak

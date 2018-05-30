@@ -4,6 +4,7 @@ import color from "@cdo/apps/util/color";
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import { connect } from 'react-redux';
 import {setCurrentView, ViewType} from './sectionProgressRedux';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const styles = {
   toggleButton: {
@@ -40,12 +41,26 @@ class SectionProgressToggle extends React.Component {
     // Timeouts forces a render of the local state before dispatching
     // the action.
     if (this.state.selectedToggle === ViewType.SUMMARY) {
+      firehoseClient.putRecord(
+        {
+          study: 'teacher-dashboard',
+          study_group: 'react',
+          event: 'progress-detailed'
+        }
+      );
       this.setState({selectedToggle: ViewType.DETAIL}, () => {
         setTimeout(() => {
           this.props.setCurrentView(ViewType.DETAIL);
         }, 0);
       });
     } else {
+      firehoseClient.putRecord(
+        {
+          study: 'teacher-dashboard',
+          study_group: 'react',
+          event: 'progress-summary'
+        }
+      );
       this.setState({selectedToggle: ViewType.SUMMARY}, () => {
         setTimeout(() => {
           this.props.setCurrentView(ViewType.SUMMARY);

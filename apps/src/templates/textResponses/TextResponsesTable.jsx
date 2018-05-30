@@ -178,8 +178,6 @@ class TextResponsesTable extends Component {
     });
   };
 
-  getRowKey = ({rowData}) => `${rowData.studentId}-${rowData.puzzle}`;
-
   render() {
     const {responses, isLoading} = this.props;
 
@@ -202,10 +200,17 @@ class TextResponsesTable extends Component {
       sort: orderBy,
     })(responses);
 
+    /**
+      * Note: using rowIndex as rowKey as a last resort
+      * See more info: https://reactjs.org/docs/lists-and-keys.html#keys
+      * If this causes performance issues in the future, we can use something like:
+      * `${rowData.studentId}-${rowData.puzzle}-${hashedResponse}`
+      * where hashedResponse is a hash of rowData.response
+      */
     return (
       <Table.Provider columns={columns}>
         <Table.Header />
-        <Table.Body rows={sortedRows} rowKey={this.getRowKey} />
+        <Table.Body rows={sortedRows} rowKey={({rowIndex}) => rowIndex} />
       </Table.Provider>
     );
   }

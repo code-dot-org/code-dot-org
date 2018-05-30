@@ -108,7 +108,6 @@
     "expand_debugger": "false",
     "parent_level_id": 8894,
     "name_suffix": "_2018",
-    "contained_level_names": null,
     "reference_links": [
       "/docs/gamelab/World.mouseX/index.html",
       "/docs/gamelab/World.mouseY/index.html",
@@ -118,7 +117,8 @@
     ],
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

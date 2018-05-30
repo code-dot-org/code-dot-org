@@ -476,6 +476,9 @@
   homepage_header_donors: Code.org þakkar stuðningsaðilum
   homepage_donors_seall: Sjá allt
   homepage_donors_donate: Styrkja
+  homepage_below_hero_announcement_text: We care about your privacy and are making
+    some updates to our privacy policy, effective May 25.
+  homepage_below_hero_announcement_link_text: Læra meira
   contact_form_topic_student: Ég er nemandi
   contact_form_topic_parent: Ég er foreldri
   contact_form_topic_teacher: Ég er kennari/fræðari
@@ -714,6 +717,10 @@
   volunteer_engineer_submission_field_email_desc: Netfangi þínu verður aldrei deilt,
     en við munum senda þér beiðnir frá kennurum.
   volunteer_engineer_submission_field_email_placeholder: Netfang
+  volunteer_engineer_submission_field_email_preference: Can we email you about updates
+    to our courses, volunteer opportunities, or other computer science news?
+  volunteer_engineer_submission_field_email_preference_yes: Já
+  volunteer_engineer_submission_field_email_preference_no: Nei
   volunteer_engineer_submission_final_paragraph: Þú verður sýndur á korti fyrir kennara
     á svæðinu að hafa samband í tengslum við Klukkustund kóðunar eða önnur tækifæri
     til sjálfboðaliðastarfa. Netfangi þínu og nákvæmu heimilisfangi verður ALDREI
@@ -1270,6 +1277,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP verkefni
   csppostap_name: 'Framhald: Gagnagrunnar í öppum'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: Fullt próf - 50 spurningar
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'
@@ -2112,3 +2120,5 @@
     aðgangi":'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
+  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
+    policy)"

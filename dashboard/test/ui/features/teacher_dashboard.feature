@@ -44,7 +44,8 @@ Feature: Using the teacher dashboard
 
     When I click selector "#learn-tabs a:contains('Manage Students')" once I see it
     And I wait until element "#uitest-manage-tab" is visible
-    And element "#privacy_link" contains text "privacy document"
+    And I wait until element "#uitest-privacy-link" is visible
+    And element "#uitest-privacy-link" contains text "privacy document"
 
     When I click selector "#learn-tabs a:contains('Assessments/Surveys')" once I see it
     And I wait until element "#uitest-course-dropdown" is visible
