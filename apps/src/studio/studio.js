@@ -477,7 +477,7 @@ var drawMap = function () {
     backgroundLayer.appendChild(tile);
   }
 
-  if (skin.grid) {
+  if (skin.showGrid) {
     const tile = document.createElementNS(SVG_NS, 'image');
     tile.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', studioApp().assetUrl('media/skins/studio/grid.svg'));
     tile.setAttribute('height', Studio.MAZE_HEIGHT);
