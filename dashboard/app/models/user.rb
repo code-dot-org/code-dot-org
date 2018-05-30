@@ -161,6 +161,8 @@ class User < ActiveRecord::Base
 
   SYSTEM_DELETED_USERNAME = 'sys_deleted'
 
+  RESET_SECRETS = 'reset_secrets'.freeze
+
   # :user_type is locked. Use the :permissions property for more granular user permissions.
   USER_TYPE_OPTIONS = [
     TYPE_STUDENT = 'student'.freeze,
@@ -1233,6 +1235,11 @@ class User < ActiveRecord::Base
   rescue ArgumentError
     errors.add :base, I18n.t('password.reset_errors.invalid_email')
     return nil
+  end
+
+  def reset_secrets
+    generate_secret_picture
+    generate_secret_words
   end
 
   def generate_secret_picture
