@@ -362,28 +362,21 @@ class Course < ApplicationRecord
     default_course_script
   end
 
-  # If the user does not have progress on any script in the current course, but
-  # has progress on a script in another course in the same course family, then
-  # they are on the wrong version of the course.
   # @param user [User]
-  # @return [Boolean] Whether the user is on the wrong version of the course.
-  def wrong_version?(user)
+  # @return [Boolean] Whether the user has progress on another version of this course.
+  def has_other_version_progress?(user)
     return nil unless user
     user_script_ids = user.user_scripts.pluck(:script_id)
 
-    # A map from course ids in this course family to the non-zero number of
-    # scripts in each of those courses which the current user has progress in.
-    course_progress_map =
-      Course.
-        joins(:default_course_scripts).
-        # select only courses in the same course family.
-        where('name regexp ?', "^#{assignment_family_name}(-[0-9]{4})?$").
-        # select only courses with scripts which the user has progress in.
-        where('course_scripts.script_id' => user_script_ids).
-        group(:id).
-        count
-
-    !course_progress_map[id] && !course_progress_map.keys.empty?
+    Course.
+      joins(:default_course_scripts).
+      # select only courses in the same course family.
+      where('name regexp ?', "^#{assignment_family_name}(-[0-9]{4})?$").
+      # exclude the current course.
+      where.not(id: id).
+      # select only courses with scripts which the user has progress in.
+      where('course_scripts.script_id' => user_script_ids).
+      count > 0
   end
 
   @@course_cache = nil

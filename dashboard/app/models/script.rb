@@ -996,7 +996,7 @@ class Script < ActiveRecord::Base
       has_lesson_plan: has_lesson_plan?,
       script_announcements: script_announcements,
       age_13_required: logged_out_age_13_required?,
-      show_version_warning: course.try(:wrong_version?, user),
+      show_version_warning: course.try(:has_other_version_progress?, user),
     }
 
     summary[:stages] = stages.map(&:summarize) if include_stages
