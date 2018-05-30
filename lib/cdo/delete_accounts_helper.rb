@@ -77,6 +77,8 @@ class DeleteAccountsHelper
         activity.update!(level_source_id: nil)
       end
     end
+
+    AuthoredHintViewRequest.where(user_id: user_id).each(&:clear_level_source_associations)
   end
 
   # Cleans the responses for all surveys associated with the user.
@@ -129,7 +131,6 @@ class DeleteAccountsHelper
   def anonymize_user(user)
     UserGeo.where(user_id: user.id).each(&:clear_user_geo)
     SignIn.where(user_id: user.id).destroy_all
-    AuthoredHintViewRequest.where(user: user).each(&:clear_level_source_associations)
     user.clear_user_and_mark_purged
   end
 
