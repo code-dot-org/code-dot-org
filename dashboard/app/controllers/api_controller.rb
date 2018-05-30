@@ -552,12 +552,18 @@ class ApiController < ApplicationController
     section = load_section
     script = load_script(section)
 
+    responses_by_student = {}
+
     level_group_script_levels = script.script_levels.includes(:levels).where('levels.type' => 'LevelGroup')
 
-    data = section.students.map do |student|
-      student_hash = {id: student.id, name: student.name}
+    section.students.each do |student|
+      # Initialize student hash
+      student_hash = {
+        student: {id: student.id, name: student.name}
+      }
+      responses_by_level_group = {}
 
-      level_group_script_levels.map do |script_level|
+      level_group_script_levels.each do |script_level|
         next unless script_level.long_assessment?
 
         # Don't allow somebody to peek inside an anonymous survey using this API.
@@ -628,8 +634,7 @@ class ApiController < ApplicationController
         submitted = last_attempt[:submitted]
         timestamp = last_attempt[:updated_at].to_formatted_s
 
-        {
-          student: student_hash,
+        responses_by_level_group[script_level.id] = {
           stage: script_level.stage.localized_title,
           puzzle: script_level.position,
           question: level_group.properties["title"],
@@ -640,10 +645,12 @@ class ApiController < ApplicationController
           timestamp: timestamp,
           level_results: level_results
         }
-      end.compact
-    end.flatten
+      end
+      student_hash[:responses] = responses_by_level_group
+      responses_by_student[student.id] = student_hash
+    end
 
-    render json: data
+    render json: responses_by_student
   end
 
   # Return results for surveys, which are long-assessment LevelGroup levels with the anonymous property.
