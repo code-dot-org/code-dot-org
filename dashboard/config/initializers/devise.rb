@@ -313,6 +313,12 @@ Devise.setup do |config|
     }
   }
 
+  # Powerschool OpenID config
+  config.omniauth :openid, {
+    name: :powerschool,
+    identifier_param: 'openid_identifier'
+  }
+
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.
