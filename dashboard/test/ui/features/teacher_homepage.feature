@@ -64,7 +64,7 @@ Feature: Using the teacher homepage sections feature
     And the href of selector ".header_popup_body .uitest-ProgressBubble:first" contains the section id
 
   Scenario: Navigate to course pages with course versions enabled
-    Given I am on "http://studio.code.org/home?enableExperiments=courseVersions"
+    Given I am on "http://studio.code.org/home"
     When I see the section set up box
     # By default, the '18-'19 version should be selected.
     And I create a new section with course "Computer Science Principles" and unit "Unit 1: The Internet"
