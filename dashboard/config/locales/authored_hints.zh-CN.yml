@@ -6370,6 +6370,51 @@
           </next>
           </block>
           </xml>
+      courseB_collector_loops_challenge2_2018_authored_hint:
+        courseB_collector_loops_challenge2_a: 如果出了差错, 不要害怕重新开始。不要放弃!
+        courseB_collector_loops_challenge2_b: "如果你重复这个模式, 劳雷尔不会撞到洞穴底部的墙上! \n\n<xml><block
+          type=\"maze_moveEast\">\n<next>\n<block type=\"collector_collect\">\n<next>\n<block
+          type=\"maze_moveWest\">\n<next>\n<block type=\"maze_moveWest\">\n<next>\n<block
+          type=\"maze_moveSouth\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block></xml>"
+        courseB_collector_loops_challenge2_c: 尝试使用 "重复" 块收集最后一堆的宝藏!
+        courseB_collector_loops_challenge2_d: |-
+          尝试此解决方案：
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="3-10">4</title>
+          <statement name="DO">
+          <block type="maze_moveEast">
+          <next>
+          <block type="collector_collect">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="3-10">6</title>
+          <statement name="DO">
+          <block type="collector_collect"/>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_collector_loops_challenge2a_authored_hint:
         courseB_collector_loops_challenge2a_a: 如果出了问题，请试着调试它。不要放弃！
         courseB_collector_loops_challenge2a_b: 请看看此选项以通过迷宫。您是否看到了您可以重复的模式？
@@ -9661,11 +9706,11 @@
         courseD_farmer_condLoops5_a: '有一个新的循环: '' 重复直到在南瓜上 ''。你能看到它如何在这个关卡使用？'
         courseD_farmer_condLoops5_b: 每个地方可能有不止一个玉米或生菜厂。使用`当`循环来收集所有这些!
       courseD_farmer_condLoops6_authored_hint:
-        courseD_farmer_condLoops6_a: 使用`当前面有路时`循环让农民沿着每片螺旋向下移动。
-        courseD_farmer_condLoops6_b: 您只需要在大多收成时查找玉米。在程序的最后只采载一个南瓜。
+        courseD_farmer_condLoops6_a: 使用`当有玉米时`循环让农民能够采摘沿路所有的玉米。如果这个模块没有玉米，则不会做任何事情。
+        courseD_farmer_condLoops6_b: 在进行下一步前，确保检查了`如果`前面有路！
       courseD_farmer_condLoops6_2018_authored_hint:
         courseD_farmer_condLoops6_a: 使用`当前面有路时`循环让农民沿着每片螺旋向下移动。
-        courseD_farmer_condLoops6_b: 您只需要在大多收成时查找玉米。在程序的最后只采载一个南瓜。
+        courseD_farmer_condLoops6_b: 您只需要在大多收成时查找玉米。在程序的最后只采摘一个南瓜。
       courseD_farmer_condLoops7_authored_hint:
         courseD_farmer_condLoops7_a: |-
           请注意, 获取所有农作物的最简单途径仍然是螺旋形。
@@ -14292,6 +14337,8 @@
           看看这条路...
 
           ![](https://images.code.org/e1d29901495eea9504c194b09efaa88e-image-1503437474226.29.32.png)
+      courseF_playlab_brokenText_authored_hint:
+        courseF_playlab_variables6c_a: 在 "输入"章节, 使用 "询问"模块获取用户回馈。
       courseF_playlab_variables1a_authored_hint:
         courseF_playlab_variables1a_a: 你将要用"目标！"来取代绿色模块中的"我应该喊叫什么？"的文字。
       courseF_playlab_variables1a_2018_authored_hint:
@@ -14865,7 +14912,7 @@
           the farmer can pick.  Try using two `if/else` statements and one  `if` block.
       grade3_RunningFarm_6_authored_hint:
         grade3_RunningFarm_6_a: 使用`当前面有路时`循环让农民沿着每片螺旋向下移动。
-        grade3_RunningFarm_6_b: 您只需要在大多收成时查找玉米。在程序的最后只采载一个南瓜。
+        grade3_RunningFarm_6_b: 您只需要在大多收成时查找玉米。在程序的最后只采摘一个南瓜。
       grade3_RunningFarm_7_authored_hint:
         grade3_RunningFarm_7_a: |-
           请注意, 获取所有农作物的最简单途径仍然是螺旋形。
