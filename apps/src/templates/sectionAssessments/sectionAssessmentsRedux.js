@@ -4,38 +4,41 @@ import {SET_SECTION} from '@cdo/apps/redux/sectionDataRedux';
  // TODO(caleybrock): define a shape for sectionAssessment data that gets stored in redux.
 const initialState = {
   assessmentsByScript: {},
+  assessmentsStructureByScript: {},
   isLoadingAssessments: false
 };
 
 const SET_ASSESSMENTS = 'sectionAssessments/SET_ASSESSMENTS';
+const SET_ASSESSMENTS_STRUCTURE = 'sectionAssessments/SET_ASSESSMENTS_STRUCTURE';
 const START_LOADING_ASSESSMENTS = 'sectionAssessments/START_LOADING_ASSESSMENTS';
 const FINISH_LOADING_ASSESSMENTS = 'sectionAssessments/FINISH_LOADING_ASSESSMENTS';
 
 // Action creators
 export const setAssessments = (scriptId, assessments) => ({ type: SET_ASSESSMENTS, scriptId, assessments});
+export const setAssessmentsStructure = (scriptId, assessments) =>
+  ({ type: SET_ASSESSMENTS_STRUCTURE, scriptId, assessments});
 export const startLoadingAssessments = () => ({ type: START_LOADING_ASSESSMENTS });
 export const finishLoadingAssessments = () => ({ type: FINISH_LOADING_ASSESSMENTS });
 
-export const asyncLoadAssessments = (sectionId, scriptId, onComplete) => {
-  return (dispatch, getState) => {
+export const asyncLoadAssessments = (sectionId, scriptId) => {
+  return async (dispatch, getState) => {
     const state = getState().sectionAssessments;
 
     // Don't load data if it's already stored in redux.
     if (state.assessmentsByScript[scriptId]) {
-      onComplete();
       return;
     }
 
     dispatch(startLoadingAssessments());
-    loadAssessmentsFromServer(sectionId, scriptId, (error, data) => {
-      if (error) {
-        console.error(error);
-      } else {
-        dispatch(setAssessments(scriptId, data));
-        onComplete();
-      }
-      dispatch(finishLoadingAssessments());
-    });
+
+    const loadResponses = loadAssessmentsFromServer(sectionId, scriptId);
+    const loadStructure = loadAssessmentsStructureFromServer(scriptId);
+    const [responses, structure] = await Promise.all([loadResponses, loadStructure]);
+
+    dispatch(setAssessments(scriptId, responses));
+    dispatch(setAssessmentsStructure(scriptId, structure));
+
+    dispatch(finishLoadingAssessments(responses, structure));
   };
 };
 
@@ -53,6 +56,15 @@ export default function sectionAssessments(state=initialState, action) {
       ...state,
       assessmentsByScript: {
         ...state.assessmentsByScript,
+        [action.scriptId]: action.assessments
+      }
+    };
+  }
+  if (action.type === SET_ASSESSMENTS_STRUCTURE) {
+    return {
+      ...state,
+      assessmentsStructureByScript: {
+        ...state.assessmentsStructureByScript,
         [action.scriptId]: action.assessments
       }
     };
@@ -80,20 +92,24 @@ export const getAssessmentsForCurrentScript = (state) => {
 };
 
 // Make a request to the server for assessment data
-const loadAssessmentsFromServer = (sectionId, scriptId, onComplete) => {
+const loadAssessmentsFromServer = (sectionId, scriptId) => {
   let payload = {};
   if (scriptId) {
     payload.script_id = scriptId;
   }
   // TODO(caleybrock): also fetch /dashboardapi/section_surveys
-  $.ajax({
+  return $.ajax({
     url: `/dashboardapi/section_assessments/${sectionId}`,
     method: 'GET',
     contentType: 'application/json;charset=UTF-8',
     data: payload
-  }).done(assessmentsData => {
-    onComplete(null, assessmentsData);
-  }).fail((jqXhr, status) => {
-    onComplete(status, jqXhr.responseJSON);
+  });
+};
+
+const loadAssessmentsStructureFromServer = (scriptId) => {
+  return $.ajax({
+    url: `/dashboardapi/assessments_structure/${scriptId}`,
+    method: 'GET',
+    contentType: 'application/json;charset=UTF-8',
   });
 };

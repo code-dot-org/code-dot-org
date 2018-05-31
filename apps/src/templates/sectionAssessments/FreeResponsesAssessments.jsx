@@ -5,8 +5,27 @@ import i18n from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 
+const PADDING = 15;
+
+const styles = {
+  studentNameColumnHeader: {
+    padding: PADDING,
+  },
+  studentNameColumnCell : {
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    maxWidth: 200,
+    padding: PADDING,
+    verticalAlign: 'top',
+  },
+  responseColumnHeader: {
+    padding: PADDING,
+  },
+};
+
 export const COLUMNS = {
-  STUDENT: 0,
+  NAME: 0,
   RESPONSE: 1,
 };
 
@@ -53,17 +72,32 @@ class FreeResponsesAssessments extends Component {
         property: 'name',
         header: {
           label: i18n.studentName(),
-          props: {style: tableLayoutStyles.headerCell},
+          props: {
+            style: {
+              ...tableLayoutStyles.headerCell,
+              ...styles.studentNameColumnHeader,
+            }
+          },
         },
         cell: {
-          props: {style:tableLayoutStyles.cell},
+          props: {
+            style: {
+              ...tableLayoutStyles.cell,
+              ...styles.studentNameColumnCell,
+            }
+          },
         }
       },
       {
         property: 'response',
         header: {
           label: i18n.response(),
-          props: {style: tableLayoutStyles.headerCell},
+          props: {
+            style: {
+              ...tableLayoutStyles.headerCell,
+              ...styles.responseHeaderCell,
+            }
+          },
         },
         cell: {
           props: {style:tableLayoutStyles.cell},
