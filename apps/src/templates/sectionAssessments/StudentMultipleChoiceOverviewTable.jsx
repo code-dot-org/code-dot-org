@@ -114,7 +114,7 @@ class StudentAssessmentOverviewTable extends Component {
       {
         property: 'name',
         header: {
-          label: i18n.studentName(),
+          label: i18n.showStudentName(),
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
