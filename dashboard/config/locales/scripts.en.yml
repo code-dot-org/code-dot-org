@@ -8823,6 +8823,8 @@ en:
               name: Rapid Research - Format Showdown
             Lossy vs Lossless Compression:
               name: Lossy vs Lossless Compression
+            Unit 2 Assessment:
+              name: Unit 2 Assessment
         csp3-2018:
           title: CSP Unit 3 - Intro to Programming
           description: "This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.\r\n\r\nThis unit was last updated October 30th, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
@@ -8877,6 +8879,8 @@ en:
               name: Please complete the CSP Mid-course survey!
               description_student: ''
               description_teacher: ''
+            Creating Functions with Parameters:
+              name: Creating Functions with Parameters
         csp-explore-2018:
           title: Explore - AP Performance Task Prep
           description: "These lessons are here to help you understand, prepare for, and do the AP Explore Performance Task.  Each \"lesson\" contains links to helpful documents that your teacher can help walk you through. NOTE: the second item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.\r\n\r\nThis unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
@@ -8967,6 +8971,8 @@ en:
               name: Finding Trends with Visualizations
             Check Your Assumptions:
               name: Check Your Assumptions
+            Unit 4 Assessment:
+              name: Unit 4 Assessment
         csp5-2018:
           title: CSP Unit 5 - Building Apps
           description: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
@@ -9141,6 +9147,8 @@ en:
               name: Fish Tank - Creating Sprites
             Alien Dance Party - Input:
               name: Alien Dance Party - Input
+            Virtual Pet - Interactions:
+              name: Virtual Pet - Interactions
           title: Introduction to Sprite Lab (PILOT)
           description_audience: Course E/F Students
           description_short: This is a pilot course for Code.org's new Sprite Lab tool for Courses E and F
@@ -9407,3 +9415,81 @@ en:
           description_audience: CS Principles Facilitators in Training 2018-2019
           description_short: 'Apprentice reflection materials for CS Principles facilitators in training '
           description: This is the set of apprentice reflections for Code.org CS Principles facilitators in training during their 5-day summer workshop. Here you will find reflection prompts for each day of your in-person 5-day summer workshop. This questions will be the foundation of work we do at the Facilitator Training Weekend.
+        pre-express-2018:
+          title: Pre-reader Express
+          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description_short: 'An introduction to computer science for pre-readers: combines the best of our kindergarten and first grade courses.'
+          description_audience: 'Ages: 4-8'
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Debugging: Unspotted Bugs'
+              description_student: ''
+              description_teacher: ''
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: 'Persistence & Frustration: Stevie and the Marbles'
+              description_student: ''
+              description_teacher: ''
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Real-life Algorithms: Plant a Seed'
+              description_student: ''
+              description_teacher: ''
+            Learn to Drag and Drop:
+              name: Learn to Drag and Drop
+              description_student: ''
+              description_teacher: ''
+            'Online Safety: Your Digital Footprint':
+              name: 'Online Safety: Your Digital Footprint'
+              description_student: ''
+              description_teacher: ''
+            'Programming: My Robotic Friends':
+              name: 'Programming: My Robotic Friends'
+              description_student: ''
+              description_teacher: ''
+            Programming in Maze:
+              name: Programming in Maze
+              description_student: ''
+              description_teacher: ''
+            'Programming: Star Wars':
+              name: 'Programming: Star Wars'
+              description_student: ''
+              description_teacher: ''
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+              description_student: ''
+              description_teacher: ''
+            Loops in Collector:
+              name: Loops in Collector
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+              description_student: ''
+              description_teacher: ''
+            Events in Play Lab:
+              name: Events in Play Lab
+              description_student: ''
+              description_teacher: ''
+            Spelling Bee:
+              name: Spelling Bee
+              description_student: ''
+              description_teacher: ''
+            Move It, Move It:
+              name: Move It, Move It
+            Sequencing with Scrat:
+              name: Sequencing with Scrat
+            Your Digital Footprint:
+              name: Your Digital Footprint
+            Programming in Ice Age:
+              name: Programming in Ice Age
+            Copyright and Creativity:
+              name: Copyright and Creativity
+            Programming with Rey and BB-8:
+              name: Programming with Rey and BB-8
+            Loops in Ice Age:
+              name: Loops in Ice Age
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: 'Persistence & Frustration: Stevie and the Big Project'

@@ -55,7 +55,7 @@ class SectionActionDropdown extends Component {
       const {removeSection } = this.props;
       const section = this.props.sectionData;
       $.ajax({
-          url: `/v2/sections/${section.id}`,
+          url: `/dashboardapi/sections/${section.id}`,
           method: 'DELETE',
       }).done(() => {
           removeSection(section.id);
