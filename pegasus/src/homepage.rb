@@ -124,7 +124,7 @@ class Homepage
 
   def self.get_blocks(request)
     if request.language == "en"
-      [
+      @en_blocks_entries || @en_blocks_entries = [
         {
           id: "students-en",
           type: "block",
@@ -228,9 +228,9 @@ class Homepage
               }
             ]
         }
-      ]
+      ].each {|entry| entry[:image].gsub!("/images/", "/images/fit-400/")}
     else
-      [
+      @non_en_blocks_entries || @non_en_blocks_entries = [
         {
           id: "students-nonen",
           type: "blockshort",
@@ -271,7 +271,7 @@ class Homepage
           url: CDO.studio_url("/s/flappy/reset"),
           image: "/shared/images/courses/logo_tall_flappy.jpg"
         }
-      ]
+      ].each {|entry| entry[:image].gsub!("/images/", "/images/fit-400/")}
     end
   end
 
