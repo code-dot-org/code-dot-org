@@ -274,6 +274,21 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # Table: dashboard.user_levels
+  #
+
+  test "Disconnects user_levels from level_sources" do
+    user_level = create :user_level, level_source: create(:level_source)
+
+    refute_nil user_level.level_source_id
+
+    purge_user user_level.user
+    user_level.reload
+
+    assert_nil user_level.level_source_id
+  end
+
+  #
   # Table: dashboard.authentication_options
   # Note: acts_as_paranoid
   #
@@ -508,6 +523,39 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     purge_user user
 
     assert_empty EmailPreference.where(email: email)
+  end
+
+  #
+  # Table: dashboard.studio_people
+  #
+
+  test "removes StudioPerson if it only belongs to this one account" do
+    user = create :teacher
+    studio_person_id = user.studio_person_id
+
+    refute_nil user.studio_person_id
+    refute_empty StudioPerson.where(id: studio_person_id)
+
+    purge_user user
+
+    assert_nil user.studio_person_id
+    assert_empty StudioPerson.where(id: studio_person_id)
+  end
+
+  test "leaves StudioPerson if it is linked to more than one account" do
+    user = create :teacher
+    user2 = create :teacher, studio_person: user.studio_person
+    studio_person_id = user.studio_person_id
+
+    refute_nil user.studio_person_id
+    refute_nil user2.studio_person_id
+    refute_empty StudioPerson.where(id: studio_person_id)
+
+    purge_user user
+
+    assert_nil user.studio_person_id
+    refute_nil user2.studio_person_id
+    refute_empty StudioPerson.where(id: studio_person_id)
   end
 
   private
