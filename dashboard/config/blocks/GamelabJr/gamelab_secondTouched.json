@@ -1,11 +1,6 @@
 {
   "category": "Sprites",
   "config": {
-    "color": [
-      312,
-      0.32,
-      0.62
-    ],
     "expression": "arguments[1]",
     "orderPrecedence": 1,
     "name": "secondTouched",
