@@ -68,6 +68,7 @@ function showCourseOverview() {
         isVerifiedTeacher={!!scriptData.is_verified_teacher}
         hasVerifiedResources={!!courseSummary.has_verified_resources}
         versions={versions}
+        showVersionWarning={!!scriptData.show_version_warning && versions.length > 1}
       />
     </Provider>,
   document.getElementById('course_overview'));

@@ -24,7 +24,7 @@ theme: responsive
 %form{:method=>"post", :action=>'/printcertificates'}
   -if script
     %input{:type=>"hidden", :name=>'script', :value=>script}
-  %textarea{:name=>'names', :rows=>"10", :cols=>"40"}
+  %textarea{:name=>'names', :rows=>"10", :cols=>"40", :id=>"uitest-cert-names"}
     -if request.params['names']
       - request.params['names'].each do |name|
         =CGI::unescape(name)

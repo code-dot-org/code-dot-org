@@ -208,7 +208,7 @@ export const asyncLoadSectionData = (id) => (dispatch) => {
     // server for other version years (e.g. 2018) of those courses.
     `/dashboardapi/courses${courseVersions ? '?allVersions=1' : ''}`,
 
-    '/v2/sections/valid_scripts'
+    '/dashboardapi/sections/valid_scripts'
   ];
   if (id) {
     apis.push('/dashboardapi/sections/' + id + '/students');

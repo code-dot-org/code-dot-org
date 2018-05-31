@@ -115,6 +115,25 @@ module Pd
         question = SelectQuestion.new(hash)
         assert_equal hash, question.to_h
       end
+
+      test 'summarize' do
+        question = SelectQuestion.new(
+          id: 1,
+          type: TYPE_RADIO,
+          name: 'sampleSelect',
+          text: 'a label',
+          options: %w(One Two Three)
+        )
+
+        expected_summary = {
+          'sampleSelect' => {
+            text: 'a label',
+            answer_type: ANSWER_SELECT_VALUE,
+            max_value: 3
+          }
+        }
+        assert_equal expected_summary, question.summarize
+      end
     end
   end
 end
