@@ -563,7 +563,7 @@ class ApiController < ApplicationController
     section.students.each do |student|
       # Initialize student hash
       student_hash = {
-        student: {id: student.id, name: student.name}
+        student_name: student.name
       }
       responses_by_level_group = {}
 
