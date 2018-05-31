@@ -359,10 +359,19 @@ class Script < ActiveRecord::Base
 
     # a bit of trickery so we support both ids which are numbers and
     # names which are strings that may contain numbers (eg. 2-3)
-    find_by = (id_or_name.to_i.to_s == id_or_name.to_s) ? :id : :name
-    Script.find_by(find_by => id_or_name).tap do |s|
-      raise ActiveRecord::RecordNotFound.new("Couldn't find Script with id|name=#{id_or_name}") unless s
+    is_id = id_or_name.to_i.to_s == id_or_name.to_s
+    find_by = is_id ? :id : :name
+    script = Script.find_by(find_by => id_or_name)
+    return script if script
+
+    unless is_id
+      # We didn't find a script matching id_or_name. Next, look for a script
+      # in the id_or_name script family to redirect to, e.g. csp1 --> csp1-2017.
+      script_with_redirect = Script.get_script_family_redirect(id_or_name)
+      return script_with_redirect if script_with_redirect
     end
+
+    raise ActiveRecord::RecordNotFound.new("Couldn't find Script with id|name=#{id_or_name}")
   end
 
   def self.get_from_cache(id_or_name)
@@ -372,6 +381,20 @@ class Script < ActiveRecord::Base
       # Populate cache on miss.
       script_cache[id_or_name.to_s] = get_without_cache(id_or_name)
     end
+  end
+
+  # Given a script family name, return a dummy Script with redirect_to field
+  # pointing toward the latest stable script in that family. For now, we assume:
+  #   1. the 2017 version is the latest stable version
+  #   2. the 2017 version's name is the family_name with the '-2017' suffix
+  # @param family_name [String] The name of the script family to search in.
+  # @return [Script|nil] A dummy script object, not persisted to the database,
+  #   with only the redirect_to field set.
+  def self.get_script_family_redirect(family_name)
+    script_version_name = "#{family_name}-#{2017}"
+    Script.find_by(name: script_version_name) ?
+      Script.new(redirect_to: script_version_name) :
+      nil
   end
 
   def text_response_levels
@@ -950,7 +973,7 @@ class Script < ActiveRecord::Base
     nil
   end
 
-  def summarize(include_stages=true)
+  def summarize(include_stages = true, user = nil)
     if has_peer_reviews?
       levels = []
       peer_reviews_to_complete.times do |x|
@@ -996,6 +1019,7 @@ class Script < ActiveRecord::Base
       has_lesson_plan: has_lesson_plan?,
       script_announcements: script_announcements,
       age_13_required: logged_out_age_13_required?,
+      show_version_warning: course.try(:has_other_version_progress?, user),
     }
 
     summary[:stages] = stages.map(&:summarize) if include_stages
