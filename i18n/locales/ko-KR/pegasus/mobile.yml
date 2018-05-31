@@ -538,6 +538,7 @@
   volunteer_engineer_submission_field_email_desc: "여러분의 이메일 주소는 절대 공유되지 않을 것입니다. 그러나 우리는 선생님들의 요청을 여러분들께 전달할 것입니다."
   volunteer_engineer_submission_field_email_placeholder: "이메일"
   volunteer_engineer_submission_field_email_preference: "Can we email you about updates to our courses, volunteer opportunities, or other computer science news?"
+  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy policy)"
   volunteer_engineer_submission_field_email_preference_yes: '예'
   volunteer_engineer_submission_field_email_preference_no: '아니요'
   volunteer_engineer_submission_final_paragraph: "여러분은 지역 선생님들의 Hour of Code 활동 등이 가능한 자원봉사자 명단에 들어갈 것입니다. 여러분의 이메일과 주소는 절대로 공개되지 않습니다만 아래의 정보들(정확한 위치를 포함한 정보들) 은 지역 선생님들에게 안내가 될 것입니다."
@@ -945,12 +946,26 @@
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: '5단원: 데이터와 사회'
   csd6_name: '6단원: 피지컬 컴퓨팅'
+  csd1-2017_name: 'Unit 1: Problem Solving'
+  csd2-2017_name: 'Unit 2: Web Development'
+  csd3-2017_name: 'Unit 3: Animation and Games'
+  csd4-2017_name: 'Unit 4: The Design Process'
+  csd5-2017_name: '5단원: 데이터와 사회'
+  csd6-2017_name: '6단원: 피지컬 컴퓨팅'
   csd1-2018_name: 'Unit 1: Problem Solving'
   csd2-2018_name: 'Unit 2: Web Development'
   csd3-2018_name: 'Unit 3: Animation and Games'
   csd4-2018_name: 'Unit 4: The Design Process'
   csd5-2018_name: '5단원: 데이터와 사회'
   csd6-2018_name: '6단원: 피지컬 컴퓨팅'
+  csp1-2017_name: '유닛 1: 인터넷'
+  csp2-2017_name: '유닛 2: 디지털 정보'
+  csp3-2017_name: 'Unit 3: Algorithms and Programming'
+  csp4-2017_name: 'Unit 4: Big Data and Privacy'
+  csp5-2017_name: 'Unit 5: Building Apps'
+  csp-explore-2017_name: 'AP: Explore PT Prep'
+  csp-create-2017_name: 'AP: Create PT Prep'
+  csppostap-2017_name: 'Post AP: 앱 안의 데이터베이스'
   csp1-2018_name: '유닛 1: 인터넷'
   csp2-2018_name: '유닛 2: 디지털 정보'
   csp3-2018_name: 'Unit 3: Algorithms and Programming'

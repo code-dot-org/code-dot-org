@@ -538,6 +538,7 @@
   volunteer_engineer_submission_field_email_desc: "Votre adresse e-mail ne sera jamais partagée, mais nous vous ferons parvenir les demandes de la part des enseignants."
   volunteer_engineer_submission_field_email_placeholder: "Adresse email"
   volunteer_engineer_submission_field_email_preference: "Can we email you about updates to our courses, volunteer opportunities, or other computer science news?"
+  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy policy)"
   volunteer_engineer_submission_field_email_preference_yes: 'Oui'
   volunteer_engineer_submission_field_email_preference_no: 'Non'
   volunteer_engineer_submission_final_paragraph: "Vous figurerez sur une carte pour que les enseignants locaux vous contactent pour l’Heure de Code, ou d'autres occasions de bénévolat. Nous ne partagerons JAMAIS votre e-mail et votre adresse exacte. Mais les autres informations (y compris la localisation approximative) seront publiquement visibles par les enseignants locaux."
@@ -945,12 +946,26 @@
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Unité 5 : Information et société'
   csd6_name: 'Unité 6 : Contrôle de système physiques'
+  csd1-2017_name: 'Unit 1: Problem Solving'
+  csd2-2017_name: 'Unit 2: Web Development'
+  csd3-2017_name: 'Unit 3: Animation and Games'
+  csd4-2017_name: 'Unit 4: The Design Process'
+  csd5-2017_name: 'Unité 5 : Information et société'
+  csd6-2017_name: 'Unité 6 : Contrôle de système physiques'
   csd1-2018_name: 'Unit 1: Problem Solving'
   csd2-2018_name: 'Unit 2: Web Development'
   csd3-2018_name: 'Unit 3: Animation and Games'
   csd4-2018_name: 'Unit 4: The Design Process'
   csd5-2018_name: 'Unité 5 : Information et société'
   csd6-2018_name: 'Unité 6 : Contrôle de système physiques'
+  csp1-2017_name: 'Unité 1: Internet'
+  csp2-2017_name: 'Unité 2: L’Information numérique'
+  csp3-2017_name: 'Unit 3: Algorithms and Programming'
+  csp4-2017_name: 'Unit 4: Big Data and Privacy'
+  csp5-2017_name: 'Unit 5: Building Apps'
+  csp-explore-2017_name: 'AP: Explore PT Prep'
+  csp-create-2017_name: 'AP: Create PT Prep'
+  csppostap-2017_name: 'Post AP: Bases de données dans les applications'
   csp1-2018_name: 'Unité 1: Internet'
   csp2-2018_name: 'Unité 2: L’Information numérique'
   csp3-2018_name: 'Unit 3: Algorithms and Programming'

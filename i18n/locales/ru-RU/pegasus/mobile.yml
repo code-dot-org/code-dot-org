@@ -538,6 +538,7 @@
   volunteer_engineer_submission_field_email_desc: "Ваш адрес электронной почты никогда не будет передан, но мы отправим вам запросы от учителей."
   volunteer_engineer_submission_field_email_placeholder: "Адрес электронной почты"
   volunteer_engineer_submission_field_email_preference: "Can we email you about updates to our courses, volunteer opportunities, or other computer science news?"
+  volunteer_engineer_submission_field_email_preference_privacy: "(См. нашу политику конфиденциальности)"
   volunteer_engineer_submission_field_email_preference_yes: 'Да'
   volunteer_engineer_submission_field_email_preference_no: 'Нет'
   volunteer_engineer_submission_final_paragraph: "Вы будете указаны на карте, чтобы учителя из вашего региона могли связаться с вами для проведения часа кода или для другой волонтерской деятельности. НИ ПРИ КАКИХ ОБСТОЯТЕЛЬСТВАХ мы не раскроем вашу электронную почту и точный адрес. Но остальная информация (включая примерное местоположение) будет размещена в открытом доступе для учителей вашего региона."
@@ -945,12 +946,26 @@
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Модуль 5: Данные и общество'
   csd6_name: 'Модуль 6: Физические вычислительния'
+  csd1-2017_name: 'Unit 1: Problem Solving'
+  csd2-2017_name: 'Unit 2: Web Development'
+  csd3-2017_name: 'Unit 3: Animation and Games'
+  csd4-2017_name: 'Unit 4: The Design Process'
+  csd5-2017_name: 'Модуль 5: Данные и общество'
+  csd6-2017_name: 'Модуль 6: Физические вычислительния'
   csd1-2018_name: 'Unit 1: Problem Solving'
   csd2-2018_name: 'Unit 2: Web Development'
   csd3-2018_name: 'Unit 3: Animation and Games'
   csd4-2018_name: 'Unit 4: The Design Process'
   csd5-2018_name: 'Модуль 5: Данные и общество'
   csd6-2018_name: 'Модуль 6: Физические вычислительния'
+  csp1-2017_name: 'Урок 1: Интернет'
+  csp2-2017_name: 'Урок 2: Цифровая информация'
+  csp3-2017_name: 'Unit 3: Algorithms and Programming'
+  csp4-2017_name: 'Unit 4: Big Data and Privacy'
+  csp5-2017_name: 'Unit 5: Building Apps'
+  csp-explore-2017_name: 'AP: Explore PT Prep'
+  csp-create-2017_name: 'AP: Create PT Prep'
+  csppostap-2017_name: 'Пост AP: База данных в Приложениях'
   csp1-2018_name: 'Урок 1: Интернет'
   csp2-2018_name: 'Урок 2: Цифровая информация'
   csp3-2018_name: 'Unit 3: Algorithms and Programming'
