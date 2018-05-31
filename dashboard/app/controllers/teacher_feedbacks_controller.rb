@@ -4,6 +4,10 @@ class TeacherFeedbacksController < ApplicationController
     @teacher_feedback = TeacherFeedback.new
   end
 
+  def show
+    @teacher_feedback = TeacherFeedback.find(params[:id])
+  end
+
   # POST /teacher_feedbacks
   # POST /teacher_feedbacks.json
   def create
@@ -18,6 +22,6 @@ class TeacherFeedbacksController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def teacher_feedback_params
-    params.permit(:comment, :student_id, :level_id, :section_id)
+    params.require(:teacher_feedback).permit(:student_id, :level_id, :section_id, :comment)
   end
 end
