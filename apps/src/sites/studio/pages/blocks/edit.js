@@ -13,7 +13,7 @@ let nameField;
 $(document).ready(() => {
   nameField = document.getElementById('block_name');
   Blockly.inject(document.getElementById('blockly-container'), {
-    valueTypeTabShapeMap
+    valueTypeTabShapeMap: valueTypeTabShapeMap(Blockly),
   });
 
   initializeCodeMirrorForJson('block_config', { onChange });
