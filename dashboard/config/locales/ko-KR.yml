@@ -127,7 +127,8 @@
     mismatch_password: 입력한 비밀번호가 일치하지 않습니다.
     agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
       and <a href='http://code.org/privacy'>Privacy Policy</a>.
-    under_13_consent: 본인이 13세 미만일 경우, 본인은 본인의 부모 또는 법적 보호자로부터 Code.org 서비스 사용을 허락받았음을 확인합니다.
+    under_13_consent: 본인이 13세 미만일 경우, 본인은 본인의 부모 또는 법적 보호자로부터 Code.org 서비스 사용을 허락받았음을
+      확인합니다.
     agree_us_website: 본인은 미국에 기반을 두고 있는 웹사이트 사용에 동의합니다.
     my_data_to_us: 본인의 본 사이트 사용에 따른 데이터는 미국으로 전송되어 보관 또는 처리될 수 있습니다.
     student_terms: 나는 Code.org <a href='http://code.org/tos'>서비스 약관</a>을 준수하는 것에 동의합니다.
@@ -144,8 +145,9 @@
     field_is_required: 이(가) 필요합니다.
     accept_terms: 회원가입에 동의해야 합니다.
     error: An error occurred.
-    email_preference_question: 당사의 코스, 현지 기회, 또는 다른 컴퓨터 과학 뉴스 업데이트에 관한 이메일을 귀하께 보내드려도 되겠습니까?
-    email_preference_privacy: (개인 정보 보호 정책을 참조하십시오.)
+    email_preference_question: 당사의 코스, 현지 기회, 또는 다른 컴퓨터 과학 뉴스 업데이트에 관한 이메일을 귀하께 보내드려도
+      되겠습니까?
+    email_preference_privacy: "(개인 정보 보호 정책을 참조하십시오.)"
     email_preference_yes: 예
     email_preference_no: 아니요
     email_preference_required: You must specify an email preference.
@@ -573,6 +575,8 @@
   gender:
     male: 남
     female: 여
+    non_binary: Non-binary
+    not_listed: Preferred term not listed
     none: 응답 안 함
   user_type:
     student: student
