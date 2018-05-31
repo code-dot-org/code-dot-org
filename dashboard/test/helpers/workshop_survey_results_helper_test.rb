@@ -49,7 +49,8 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
           'sampleMatrix_0' => {
             text: 'I am excited for CS Principles',
             answer_type: ANSWER_SELECT_VALUE,
-            parent: 'sampleMatrix'
+            parent: 'sampleMatrix',
+            max_value: 5
           },
           'sampleMatrix_1' => {
             text: 'I am prepared for CS Principles',
@@ -58,7 +59,9 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
           },
           'sampleScale' => {
             text: 'Do you like CS Principles?',
-            answer_type: ANSWER_SELECT_VALUE
+            answer_type: ANSWER_SELECT_VALUE,
+            parent: 'sampleMatrix',
+            max_value: 5
           },
           'sampleText' => {
             text: 'Write some thoughts here',
@@ -211,7 +214,7 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
   end
 
   test 'daily survey get_question_for_forms gets workshop questions and substitutes question texts' do
-    CDO.stubs(:jotform_forms).returns({'local' => {'day_0' => PRE_SURVEY_STUBBED_FORM_ID}})
+    CDO.expects(:jotform_forms).returns({'local' => {'day_0' => PRE_SURVEY_STUBBED_FORM_ID}})
 
     assert_equal(@expected_questions, get_questions_for_forms(@workshop))
   end

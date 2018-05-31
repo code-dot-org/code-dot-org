@@ -33,6 +33,11 @@ class ExperimentsController < ApplicationController
       return
     end
 
+    if Experiment.enabled?(experiment_name: experiment_name, user: current_user)
+      redirect_to '/', flash: {alert: "Already enabled in experiment '#{params[:experiment_name]}'."}
+      return
+    end
+
     # Default to being active for 100 days
     now = DateTime.now
     SingleUserExperiment.find_or_create_by!(
