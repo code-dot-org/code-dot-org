@@ -13,9 +13,9 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
   #   ..other assessment ids
   # }
   #
-  # GET '/dashboardapi/v1/assessments/structure/:script_id'
+  # GET '/dashboardapi/assessments'
   # TODO(caleybrock): currently only used in internal experiment, must add controller tests.
-  def assessments_structure
+  def index
     script = load_script
 
     # Only authorized teachers have access to locked question and answer data.
@@ -70,7 +70,7 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
   #   ..student ids
   # }
   #
-  # GET '/dashboardapi/v1/assessments/section/:section_id'
+  # GET '/dashboardapi/assessments/section_responses'
   # TODO(caleybrock): currently only used in internal experiment, must add controller tests.
   def section_responses
     section = load_section
