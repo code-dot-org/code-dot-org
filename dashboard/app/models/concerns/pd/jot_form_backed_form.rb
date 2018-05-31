@@ -81,14 +81,15 @@ module Pd
 
           answers = submission[:answers]
 
-          # Process answers here as a validation. An error will be raised if they don't match the questions.
-          processed_answers = questions_for_form(form_id).process_answers(answers)
-          next if skip_submission?(processed_answers)
-
           # When we pass the last_known_submission_id filter, there should be no duplicates,
           # But just in case handle them gracefully as an upsert.
           find_or_initialize_by(submission.slice(:form_id, :submission_id)).tap do |model|
-            model.update! answers: answers.to_json
+            model.answers = answers.to_json
+
+            # Note, form_data_hash processes the answers and will raise an error if they don't match the questions.
+            # Include hidden questions for full validation and so skip_submission? can inspect them.
+            next if skip_submission?(model.form_data_hash(show_hidden_questions: true))
+            model.save!
           end
         rescue => e
           raise e, "Error processing submission #{submission[:submission_id]} for form #{form_id}: #{e.message}", e.backtrace
@@ -132,8 +133,9 @@ module Pd
     # Override attribute_mapping in included models to designate attributes to map.
     # @see attribute_mapping
     def map_answers_to_attributes
+      hash = form_data_hash(show_hidden_questions: true)
       self.class.attribute_mapping.each do |attribute, question_name|
-        write_attribute attribute, form_data_hash[question_name.to_s]
+        write_attribute attribute, hash[question_name.to_s]
       end
     end
 
@@ -154,9 +156,11 @@ module Pd
 
     # Form data hash: answers data processed by up to date form questions
     # @see FormQuestions.process_answers
-    def form_data_hash
-      @form_data_hash ||= begin
-        questions.process_answers(answers_hash)
+    def form_data_hash(show_hidden_questions: false)
+      # memoize per show_hidden_questions value
+      @form_data_hash ||= {}
+      @form_data_hash[show_hidden_questions ? 'all' : 'visible'] ||= begin
+        questions.process_answers(answers_hash, show_hidden_questions: show_hidden_questions)
       rescue => e
         raise e, "Error processing answers for submission id #{submission_id}, form #{form_id}: #{e}", e.backtrace
       end
