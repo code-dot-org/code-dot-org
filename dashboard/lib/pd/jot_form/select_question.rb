@@ -72,6 +72,11 @@ module Pd
         # Return a 1-based value
         index + 1
       end
+
+      # @override
+      def type_specific_summary
+        answer_type == ANSWER_SELECT_VALUE ? {max_value: options.length} : {}
+      end
     end
   end
 end
