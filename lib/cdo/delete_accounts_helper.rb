@@ -144,7 +144,7 @@ class DeleteAccountsHelper
   end
 
   def remove_contacts(email)
-    PEGASUS_DB[:contacts].where(email: email).delete
+    @pegasus_db[:contacts].where(email: email).delete
   end
 
   # Removes all information about the user pertaining to Pardot. This encompasses Pardot itself, the
@@ -227,6 +227,7 @@ class DeleteAccountsHelper
     anonymize_circuit_playground_discount_application(user)
     clean_level_source_backed_progress(user.id)
     clean_survey_responses(user.id)
+    clean_pegasus_forms_for_user(user)
     delete_project_backed_progress(user.id)
     purge_orphaned_students(user.id)
     clean_and_destroy_pd_content(user.id)
@@ -244,13 +245,51 @@ class DeleteAccountsHelper
 
   # Given an email address, locates all accounts (including soft-deleted accounts)
   # associated with that email address and purges each of them in turn.
-  # @param [String] email an email address.
-  def purge_all_accounts_with_email(email)
+  # @param [String] raw_email an email address.
+  def purge_all_accounts_with_email(raw_email)
+    email = raw_email.to_s.strip.downcase
+
     # Note: Not yet taking into account parent_email or users with multiple
     # email addresses tied to their account - we'll have to do that later.
     (
       User.with_deleted.where(email: email) +
       User.with_deleted.where(hashed_email: User.hash_email(email))
     ).each {|u| purge_user u}
+
+    clean_pegasus_forms_for_email(email)
+  end
+
+  private
+
+  def clean_pegasus_forms_for_user(user)
+    clean_pegasus_forms(@pegasus_db[:forms].where(user_id: user.id))
+  end
+
+  def clean_pegasus_forms_for_email(email)
+    clean_pegasus_forms(@pegasus_db[:forms].where(email: email))
+  end
+
+  def clean_pegasus_forms(forms_recordset)
+    form_ids = forms_recordset.map {|f| f[:id]}
+    @pegasus_db[:form_geos].
+      where(form_id: form_ids).
+      update(
+        ip_address: nil,
+        city: nil,
+        state: nil,
+        postal_code: nil,
+        latitude: nil,
+        longitude: nil,
+      )
+    forms_recordset.
+      update(
+        email: nil,
+        name: nil,
+        data: nil,
+        created_ip: nil,
+        updated_ip: nil,
+        processed_data: nil,
+        hashed_email: nil,
+      )
   end
 end
