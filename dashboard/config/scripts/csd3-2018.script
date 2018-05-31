@@ -323,6 +323,3 @@ level 'CSD U3 game user controls_2018', progression: 'Project - Sprites and Inte
 level 'CSD U3 game interactions_2018', progression: 'Project - Sprites and Interactions'
 named_level 'CSD U3 finishing touches_2018'
 assessment 'csd-pulse-check-survey-1-levelgroup U3Ch2_2018', progression: 'Reflection'
-
-stage 'CS Discoveries End of Semester Survey', lockable: true, flex_category: 'cspSurvey'
-assessment 'csd-post-survey-2017-levelgroup_2018'

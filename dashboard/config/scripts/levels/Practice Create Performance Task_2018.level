@@ -137,7 +137,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "Design and implement your practice Create Performance Task. (Click to see full instructions)",
-    "markdown_instructions": "# Practice Create Performance Task\r\n\r\nYou've finally made it to the end of the Building Apps Unit! We will continue some programming in the next unit, but for now we are going to use all the new concepts you have learn to create something of your own design! \r\n\r\n# Do This:\r\n\r\n* **Read the Project Overview** to understand the entire project.\r\n* **Follow the Project Planning Guide**.\r\n* **Implement your final program in this level**.",
+    "markdown_instructions": "# Create Performance Task\r\n\r\nIt's time to complete the Create Performance Task. Complete it here.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -177,10 +177,16 @@
     "expand_debugger": "false",
     "parent_level_id": 6965,
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-05-31 16:45:46 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>
