@@ -64,6 +64,8 @@ Dashboard::Application.routes.draw do
   get 'docs/*path', to: 'curriculum_proxy#get_doc'
   get 'curriculum/*path', to: 'curriculum_proxy#get_curriculum'
 
+  post 'teacherFeedback/create', to: 'teacher_feedbacks#create'
+
   # User-facing section routes
   resources :sections, only: [:show, :update] do
     member do
