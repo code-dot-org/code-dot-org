@@ -7,16 +7,13 @@ import initializeCodeMirror, {
 import jsonic from 'jsonic';
 import { parseElement } from '@cdo/apps/xml';
 import { installCustomBlocks } from '@cdo/apps/gamelab/blocks';
+import { valueTypeTabShapeMap } from '@cdo/apps/gamelab/GameLab';
 
 let nameField;
 $(document).ready(() => {
   nameField = document.getElementById('block_name');
   Blockly.inject(document.getElementById('blockly-container'), {
-    valueTypeTabShapeMap: {
-      Sprite: 'angle',
-      Behavior: 'rounded',
-      Location: 'square',
-    }
+    valueTypeTabShapeMap
   });
 
   initializeCodeMirrorForJson('block_config', { onChange });
