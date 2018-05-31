@@ -238,7 +238,7 @@ module Pd::WorkshopSurveyResultsHelper
               # For non facilitator specific responses, just return a frequency map with
               # nulls removed
               # [1, 1, 2, 2, 3, 5, 7, 7, 7, 7, 7, nil, nil] => {1: 2, 2: 2, 3: 1, 5: 1, 7: 5}
-              summary = Hash[*surveys_for_session[response_section].map {|survey| survey[q_key]}.group_by {|v| v}.flat_map {|k, v| [k, v.size]}]
+              summary = surveys_for_session[response_section].map {|survey| survey[q_key]}.group_by {|v| v}.transform_values(&:size)
 
               session_summary[response_section][q_key] = summary.reject {|k, _| k.nil?}
             end
