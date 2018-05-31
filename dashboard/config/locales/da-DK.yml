@@ -163,7 +163,7 @@
     error: Der opstod en fejl.
     email_preference_question: Kan vi e-maile dig om opdateringer til vores kurser,
       lokale muligheder eller andre nyheder om computervidenskab?
-    email_preference_privacy: (Se vores privatlivspolitik)
+    email_preference_privacy: "(Se vores privatlivspolitik)"
     email_preference_yes: Ja
     email_preference_no: Nej
     email_preference_required: You must specify an email preference.
@@ -622,6 +622,8 @@
   gender:
     male: Mand
     female: Kvinde
+    non_binary: Non-binary
+    not_listed: Preferred term not listed
     none: Foretrækker ikke at svare
   user_type:
     student: studerende
