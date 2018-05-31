@@ -285,7 +285,7 @@ GameLab.prototype.init = function (config) {
 
     if (this.studioApp_.isUsingBlockly()) {
       // Custom blockly config options for game lab jr
-      config.valueTypeTabShapeMap = GameLab.valueTypeTabShapeMap;
+      config.valueTypeTabShapeMap = GameLab.valueTypeTabShapeMap(Blockly);
 
       this.studioApp_.displayAlert('#belowVisualization', {type: 'warning', sideMargin: 0},
         <div>
@@ -1519,8 +1519,10 @@ GameLab.prototype.getAppReducers = function () {
   return reducers;
 };
 
-GameLab.valueTypeTabShapeMap = {
-  [Blockly.BlockValueType.SPRITE]: 'angle',
-  [Blockly.BlockValueType.BEHAVIOR]: 'rounded',
-  [Blockly.BlockValueType.LOCATION]: 'square',
+GameLab.valueTypeTabShapeMap = function (blockly) {
+  return {
+    [blockly.BlockValueType.SPRITE]: 'angle',
+    [blockly.BlockValueType.BEHAVIOR]: 'rounded',
+    [blockly.BlockValueType.LOCATION]: 'square',
+  };
 };
