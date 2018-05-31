@@ -211,7 +211,7 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
   end
 
   test 'daily survey get_question_for_forms gets workshop questions and substitutes question texts' do
-    CDO.stubs(:jotform_forms).returns({'local' => {'day_0' => PRE_SURVEY_STUBBED_FORM_ID}})
+    CDO.expects(:jotform_forms).returns({'local' => {'day_0' => PRE_SURVEY_STUBBED_FORM_ID}})
 
     assert_equal(@expected_questions, get_questions_for_forms(@workshop))
   end
