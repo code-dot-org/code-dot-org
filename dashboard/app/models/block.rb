@@ -32,7 +32,7 @@ class Block < ApplicationRecord
     block_path = Rails.root.join "config/blocks/#{level_type}/#{name}.json"
     File.write block_path, file_json
 
-    return unless helper_code
+    return unless helper_code && !helper_code.empty?
     js_path = Rails.root.join "config/blocks/#{level_type}/#{name}.js"
     File.write js_path, helper_code
   end
