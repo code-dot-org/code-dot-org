@@ -188,7 +188,7 @@ export default class Results extends React.Component {
     });
 
     if (sum === 0) {
-      if (shouldFakeData) {
+      if (false) {
         return ((Math.random() * 8) + 1).toFixed(2);
       } else {
         return '';
