@@ -1,26 +1,38 @@
-%h1= @block.new_record? ? "New Block" : "Editing block #{@block.name}"
-= form_for(@block,
-  url: @block.new_record? ? blocks_path : block_path(id: @block.name),
-  html: {id: 'edit-block-form', method: @block.new_record? ? 'post' : 'patch'},
-) do |f|
-  = f.label 'Level Type'
-  = f.select :level_type, ['GamelabJr']
-  = f.label 'Category'
-  = f.text_field :category
-  = f.label 'Name'
-  = f.text_field :name
-  = f.label 'Config'
-  = f.text_area :config
-  = f.label 'Helper Code'
-  = f.text_area :helper_code
-  %div
-    = f.submit class: 'btn'
+- content_for(:head) do
+  %script{src: minifiable_asset_path('js/blockly.js')}
+  %script{src: minifiable_asset_path('js/blocks/edit.js')}
+  = stylesheet_link_tag 'css/levelbuilder', media: 'all'
 
-- unless @block.new_record?
-  = form_for(@block,
-    url: block_path(id: @block.name),
-    html: {id: 'delete-block-form', method: 'delete'},
-  ) do |f|
-    = f.submit 'Delete Block',
-        data: {confirm: 'Are you sure you want to delete this block?'},
-        class: 'btn btn-danger'
+%h1= @block.new_record? ? "New Block" : "Editing block #{@block.name}"
+.block-editor-container
+  .editor
+    = form_for(@block,
+      url: @block.new_record? ? blocks_path : block_path(id: @block.name),
+      html: {id: 'edit-block-form', method: @block.new_record? ? 'post' : 'patch'},
+    ) do |f|
+      = f.label 'Level Type'
+      = f.select :level_type, ['GamelabJr']
+      = f.label 'Category'
+      = f.text_field :category
+      = f.label 'Name'
+      = f.text_field :name
+      = f.label 'Config'
+      = f.text_area :config
+      = f.label 'Helper Code'
+      = f.text_area :helper_code
+      %div
+        = f.submit class: 'btn'
+
+    - unless @block.new_record?
+      = form_for(@block,
+        url: block_path(id: @block.name),
+        html: {id: 'delete-block-form', method: 'delete'},
+      ) do |f|
+        = f.submit 'Delete Block',
+            data: {confirm: 'Are you sure you want to delete this block?'},
+            class: 'btn btn-danger'
+  .block-preview
+    %h3 Block Preview
+    #blockly-container
+    %h3 Generated Code
+    %code#code-preview

@@ -890,7 +890,7 @@ Artist.prototype.finishExecution_ = function () {
   captureThumbnailFromCanvas(this.getThumbnailCanvas_());
 
   if (this.level.freePlay) {
-    window.dispatchEvent(new Event('artistDrawingComplete'));
+    window.dispatchEvent(utils.createEvent('artistDrawingComplete'));
   } else {
     this.checkAnswer();
   }

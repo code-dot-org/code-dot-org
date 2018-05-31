@@ -61,7 +61,7 @@ function renderSectionAssessments(section, validScripts) {
   store.dispatch(setSection(section));
 
   const scriptId = store.getState().scriptSelection.scriptId;
-  store.dispatch(asyncLoadAssessments(section.id, scriptId, ()=>{}));
+  store.dispatch(asyncLoadAssessments(section.id, scriptId));
 
   store.dispatch(loadValidScripts(section, validScripts)).then(() => {
     ReactDOM.render(
