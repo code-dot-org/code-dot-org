@@ -26,6 +26,7 @@ const styles = {
   },
   icon: {
     color: color.purple,
+    fontSize: 16,
   },
   text: {
     marginRight: 5,
@@ -38,7 +39,6 @@ const styles = {
     color: color.teal,
     fontFamily: '"Gotham 5r", sans-serif',
   }
-
 };
 
 export const COLUMNS = {
