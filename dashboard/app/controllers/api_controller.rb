@@ -526,29 +526,14 @@ class ApiController < ApplicationController
       # The actual level group that corresponds to the script_level
       level_group = script_level.levels[0]
 
-      # A structure to store the individual level structure in the level_group
-      questions = {}
+      # An array to store the individual level structure in the level_group
+      # Order matters for the questions
+      questions = []
 
       # For each level in the multi group (ignore pages structure information)
       level_group.levels.each do |level|
         # A single level corresponds to a single question
-        question = {}
-
-        case level
-        when FreeResponse
-          question = {
-            type: level.type,
-            question_text: level.properties['markdown_instructions']
-          }
-        when Multi
-          question = {
-            type: level.type,
-            question_text: level.get_question_text,
-            answers: level.properties['answers'],
-          }
-        end
-
-        questions[level.id] = question
+        questions.push(level.question_summary)
       end
 
       assessments[level_group.id] = {
