@@ -3,6 +3,17 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
 
   # For each assessment in a script, return an object of script_level IDs to question data.
   # Question data includes the question text, all possible answers, and the correct answers.
+  # Example output:
+  # {
+  #   2345: {   #a level id associated with an assessment
+  #     id: 2345,
+  #     name: "Assessment for Chapter 1",
+  #     questions: {123: {type: "Multi", question_text: "A question", answers: [{text: "answer1", correct: true}] }}
+  #   }
+  #   ..other assessment ids
+  # }
+  #
+  # GET '/dashboardapi/v1/assessments/structure/:script_id'
   # TODO(caleybrock): currently only used in internal experiment, must add controller tests.
   def assessments_structure
     script = load_script
@@ -47,6 +58,19 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
   # script_level_id, with information on the student responses for that assessment.
   # Currently, very similar logic to section_assessments, but will change as we refactor. The format
   # of the results is different enough that I'm duplicating some code it for now.
+  # Example output:
+  # {
+  #   12: {   <--- a student id
+  #     student_name: "caley",
+  #     responses: {
+  #      4593: <---- a script id referring to an assessment
+  #        {level_results: [{status: "correct", answer: "A"}], multi_correct: 5, multi_count: 10.......}
+  #     ...other assessments
+  #   }
+  #   ..student ids
+  # }
+  #
+  # GET '/dashboardapi/v1/assessments/section/:section_id'
   # TODO(caleybrock): currently only used in internal experiment, must add controller tests.
   def section_responses
     section = load_section
