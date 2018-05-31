@@ -57,7 +57,6 @@ const studentOverviewDataPropType = PropTypes.shape({
   percentCorrect: PropTypes.string.isRequired,
   submissionTimestamp: PropTypes.string,
   submissionStatus: PropTypes.string,
-  isSubmitted: PropTypes.bool,
 });
 
 class StudentAssessmentOverviewTable extends Component {
@@ -92,10 +91,9 @@ class StudentAssessmentOverviewTable extends Component {
   };
 
   submissionTimestampColumnFormatter = (submissionTimeStamp, {rowData}) => {
-    const isSubmitted = rowData.isSubmitted;
     const submissionStatus = rowData.submissionStatus;
 
-    if (isSubmitted) {
+    if (submissionStatus === 'Completed') {
       return (
         <div style={styles.main}>
           <div style={styles.text}>
