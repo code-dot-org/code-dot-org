@@ -1243,11 +1243,25 @@ class User < ActiveRecord::Base
   end
 
   def generate_secret_picture
-    self.secret_picture = SecretPicture.random
+    new_secret_picture = SecretPicture.random
+
+    # regenerate if random picture is same as user's current secret picture
+    if new_secret_picture == secret_picture
+      generate_secret_picture
+    else
+      self.secret_picture = new_secret_picture
+    end
   end
 
   def generate_secret_words
-    self.secret_words = [SecretWord.random.word, SecretWord.random.word].join(" ")
+    new_secret_words = [SecretWord.random.word, SecretWord.random.word].join(" ")
+
+    # regenerate if random words are same as user's current secret words
+    if new_secret_words == secret_words
+      generate_secret_words
+    else
+      self.secret_words = new_secret_words
+    end
   end
 
   # Returns an array of experiment name strings
