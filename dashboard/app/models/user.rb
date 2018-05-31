@@ -1769,6 +1769,9 @@ class User < ActiveRecord::Base
 
     authentication_options.with_deleted.each(&:really_destroy!)
 
+    districts.clear
+    self.district_as_contact = nil
+
     self.studio_person_id = nil
     self.name = nil
     self.username = "#{SYSTEM_DELETED_USERNAME}_#{random_suffix}"

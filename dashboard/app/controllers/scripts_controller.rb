@@ -13,7 +13,10 @@ class ScriptsController < ApplicationController
     end
 
     if request.path != (canonical_path = script_path(@script))
-      redirect_to canonical_path, status: :moved_permanently
+      # return a temporary redirect rather than a permanent one, to avoid ever
+      # serving a permanent redirect from a script's new location to its old
+      # location during the script renaming process.
+      redirect_to canonical_path
       return
     end
   end
