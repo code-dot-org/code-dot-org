@@ -55,6 +55,24 @@ module Pd
         question = ScaleQuestion.new(hash)
         assert_equal hash, question.to_h
       end
+
+      test 'summarize' do
+        question = ScaleQuestion.new(
+          id: 1,
+          name: 'sampleScale',
+          text: 'a label',
+          values: (1..5).to_a
+        )
+
+        expected_summary = {
+          'sampleScale' => {
+            text: 'a label',
+            answer_type: ANSWER_SELECT_VALUE,
+            max_value: 5
+          }
+        }
+        assert_equal expected_summary, question.summarize
+      end
     end
   end
 end
