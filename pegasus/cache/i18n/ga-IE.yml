@@ -495,6 +495,9 @@
   homepage_header_donors: Tá Code.org fíorbhuíoch dá thacadóirí
   homepage_donors_seall: Féach uile
   homepage_donors_donate: Bronn
+  homepage_below_hero_announcement_text: We care about your privacy and are making
+    some updates to our privacy policy, effective May 25.
+  homepage_below_hero_announcement_link_text: Tuilleadh eolais
   contact_form_topic_student: Is dalta mé
   contact_form_topic_parent: Is tuismitheoir mé
   contact_form_topic_teacher: Is múinteoir mé
@@ -744,6 +747,10 @@
   volunteer_engineer_submission_field_email_desc: Ní fhoilseoimid do sheoladh ríomhphoist
     riamh, ach seolfaimid iarratais ó mhúinteoirí chugat.
   volunteer_engineer_submission_field_email_placeholder: Seoladh ríomhphoist
+  volunteer_engineer_submission_field_email_preference: Can we email you about updates
+    to our courses, volunteer opportunities, or other computer science news?
+  volunteer_engineer_submission_field_email_preference_yes: Tá
+  volunteer_engineer_submission_field_email_preference_no: Níl
   volunteer_engineer_submission_final_paragraph: Cuirfimid ar léarscáil thú atá dírithe
     ar mhúinteoirí atá ag lorg saorálaithe don Uair Chódála nó d'obair dheonach eile.
     Ní fhoilseoimid do sheoladh ríomhphoist ná do sheoladh baile RIAMH. Ach beidh
@@ -1321,6 +1328,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: Tascanna Gníomhaíochta AP
   csppostap_name: 'Iar-AP: Bunachair Sonraí in Aipeanna'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: An Scrúdú Iomlán - 50 ceist
   csp-explore_name: 'AP: Ullmhú don Tasc Taiscéalaíoch'
   csp-create_name: 'AP: Ullmhú don Tasc Cruthaitheach'
@@ -2220,13 +2228,5 @@
     Account”:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: Fáilte go dtí an tSaotharlann Aipeanna
-  homepage_below_hero_announcement_text: We care about your privacy and are making
-    some updates to our privacy policy, effective May 25.
-  homepage_below_hero_announcement_link_text: Learn more
-  volunteer_engineer_submission_field_email_preference: Can we email you about updates
-    to our courses, volunteer opportunities, or other computer science news?
   volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
     policy)"
-  volunteer_engineer_submission_field_email_preference_yes: 'Yes'
-  volunteer_engineer_submission_field_email_preference_no: 'No'
-  csp-post-survey_name: Student Post-Course Survey

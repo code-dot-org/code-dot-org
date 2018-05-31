@@ -15,8 +15,6 @@
 
 - user_return_to_url = get_and_clear_session_user_return_to
 
-%script{src: "https://cdn.optimizely.com/js/400912536.js"}
-
 #signup
   .row
     .span9
@@ -98,8 +96,9 @@
 
           #optin2-container{style: "display: none"}
             .email-preference.itemblock{style: "display: none"}
-              .labelblock-wide= t('signup_form.email_preference_question').html_safe
-              = link_to t('signup_form.email_preference_privacy'), CDO.code_org_url('/privacy'), target: '_blank'
+              .labelblock-wide
+                = t('signup_form.email_preference_question').html_safe
+                = link_to t('signup_form.email_preference_privacy'), CDO.code_org_url('/privacy'), target: '_blank'
               #optin2-yes-container
                 %input{type: "radio", id: "optin2-yes", name: "user[email_preference_opt_in]", value: "yes"}
                 %label{for: "optin2-yes"}= t('signup_form.email_preference_yes').html_safe
@@ -136,10 +135,10 @@
             = f.check_box :terms_of_service_version, {class: 'terms-checkbox'}, User::TERMS_OF_SERVICE_VERSIONS.last
             -# Teacher text.
             %span.teacher-options{style: 'display: none'}
-              = t('signup_form.agree_tos_privacy', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy')).html_safe
+              = t('terms_interstitial.accept_label', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy')).html_safe
             -# Student text.
             %span.student-options
-              != t('signup_form.agree_tos_privacy')
+              = t('terms_interstitial.accept_label', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy')).html_safe
               != t('signup_form.under_13_consent')
 
         -# If GDPR applies, show an additional checkbox.

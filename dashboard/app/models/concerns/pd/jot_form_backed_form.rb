@@ -27,13 +27,21 @@ module Pd
         ].compact.max
       end
 
+      # Add jotform_last_submission_id_overrides to locals.yml to manually set minimum submission ids for sync.
+      # The format is a hash, form_id => last_known_submission_id
+      # This is useful to ignore older test submissions before we go live.
       def last_known_submission_id_override(form_id)
-        # Add jotform_last_submission_id_overrides to locals.yml to manually set minimum submission ids for sync.
-        # The format is a hash, form_id => last_known_submission_id
-        #
-        # This is useful to ignore older test submissions before we go live.
         CDO.jotform_last_submission_id_overrides.try do |override_hash|
           override_hash[form_id]
+        end
+      end
+
+      # Add jotform_min_dates to locals.yml to manually set minimum submission dates for sync.
+      # The format is a hash, form_id => date, e.g. {12345 => '2018-05-23'}
+      # This is useful to ignore older test submissions before we go live.
+      def get_min_date(form_id)
+        CDO.jotform_min_dates.try do |min_date_hash|
+          min_date_hash[form_id]
         end
       end
 
@@ -66,16 +74,35 @@ module Pd
         sync_questions_from_jotform(form_id)
 
         JotForm::Translation.new(form_id).get_submissions(
-          last_known_submission_id: get_last_known_submission_id(form_id)
+          last_known_submission_id: get_last_known_submission_id(form_id),
+          min_date: get_min_date(form_id)
         ).map do |submission|
           # TODO(Andrew): don't stop the whole set when one fails
+
+          answers = submission[:answers]
 
           # When we pass the last_known_submission_id filter, there should be no duplicates,
           # But just in case handle them gracefully as an upsert.
           find_or_initialize_by(submission.slice(:form_id, :submission_id)).tap do |model|
-            model.update! answers: submission[:answers].to_json
+            model.answers = answers.to_json
+
+            # Note, form_data_hash processes the answers and will raise an error if they don't match the questions.
+            # Include hidden questions for full validation and so skip_submission? can inspect them.
+            next if skip_submission?(model.form_data_hash(show_hidden_questions: true))
+            model.save!
           end
-        end
+        rescue => e
+          raise e, "Error processing submission #{submission[:submission_id]} for form #{form_id}: #{e.message}", e.backtrace
+        end.compact
+      end
+
+      # Override in included class to provide filtering rules
+      # TODO(Andrew): Filter in the API query if possible, once we hear back from JotForm API support.
+      # See https://www.jotform.com/answers/1482175-API-Integration-Matrix-answer-returning-false-in-the-API#2
+      # @param processed_answers [Hash]
+      # @return [Boolean] true if this submission should be skipped
+      def skip_submission?(processed_answers)
+        false
       end
 
       # Get a form id from the configuration
@@ -106,8 +133,9 @@ module Pd
     # Override attribute_mapping in included models to designate attributes to map.
     # @see attribute_mapping
     def map_answers_to_attributes
+      hash = form_data_hash(show_hidden_questions: true)
       self.class.attribute_mapping.each do |attribute, question_name|
-        write_attribute attribute, form_data_hash[question_name.to_s]
+        write_attribute attribute, hash[question_name.to_s]
       end
     end
 
@@ -128,11 +156,13 @@ module Pd
 
     # Form data hash: answers data processed by up to date form questions
     # @see FormQuestions.process_answers
-    def form_data_hash
-      @form_data_hash ||= begin
-        questions.process_answers(answers_hash)
-      rescue StandardError => e
-        raise "Error processing answers for submission id #{submission_id}: #{e.message}"
+    def form_data_hash(show_hidden_questions: false)
+      # memoize per show_hidden_questions value
+      @form_data_hash ||= {}
+      @form_data_hash[show_hidden_questions ? 'all' : 'visible'] ||= begin
+        questions.process_answers(answers_hash, show_hidden_questions: show_hidden_questions)
+      rescue => e
+        raise e, "Error processing answers for submission id #{submission_id}, form #{form_id}: #{e}", e.backtrace
       end
     end
 

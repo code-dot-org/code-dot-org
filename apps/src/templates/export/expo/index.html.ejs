@@ -30,9 +30,7 @@
       if (!document['fonts']) {
         __start();
       } else {
-        document.fonts.load("100px FontAwesome").finally(function () {
-          __start();
-        });
+        document.fonts.load("100px FontAwesome").then(__start).catch(__start);
       }
     </script>
   </head>

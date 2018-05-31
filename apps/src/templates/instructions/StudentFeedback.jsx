@@ -14,7 +14,7 @@ const styles = {
 
 class StudentFeedback extends Component {
   static propTypes = {
-    viewAs: PropTypes.oneOf(['Teacher', 'Student']),
+    viewAs: PropTypes.oneOf(Object.keys(ViewType)),
   };
 
   render() {

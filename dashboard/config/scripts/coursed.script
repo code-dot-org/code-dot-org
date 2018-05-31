@@ -5,6 +5,8 @@ has_lesson_plan true
 project_widget_visible true
 project_widget_types ["playlab", "artist"]
 script_announcements [{"notice"=>"Relevant Common Core and NGSS standards are now listed in Courses A-F!", "details"=>"Check out the full standards alignment document ", "link"=>"https://curriculum.code.org/csf-1718/coursed/standards/", "type"=>"bullhorn"}]
+new_name 'coursed-2017'
+family_name 'coursed'
 
 stage 'Algorithms: Graph Paper Programming'
 level 'GraphPaperProgramming'

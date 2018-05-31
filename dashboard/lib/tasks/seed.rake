@@ -91,7 +91,7 @@ namespace :seed do
     end
   end
 
-  SCRIPTS_DEPENDENCIES = [:environment, :games, :custom_levels, :dsls].freeze
+  SCRIPTS_DEPENDENCIES = [:environment, :games, :custom_levels, :dsls, :blocks].freeze
   task scripts: SCRIPTS_DEPENDENCIES do
     update_scripts(incremental: false)
   end
@@ -112,7 +112,7 @@ namespace :seed do
 
   task courses_ui_tests: :environment do
     # seed those courses that are needed for UI tests
-    %w(allthethingscourse csp csp-2018).each do |course_name|
+    %w(allthethingscourse csp-2017 csp-2018).each do |course_name|
       Course.load_from_path("config/courses/#{course_name}.course")
     end
   end
@@ -150,6 +150,10 @@ namespace :seed do
 
   task import_custom_levels: :environment do
     LevelLoader.load_custom_levels
+  end
+
+  task blocks: :environment do
+    Block.load_blocks
   end
 
   # Generate the database entry from the custom levels json file

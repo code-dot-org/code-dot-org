@@ -54,7 +54,6 @@
       "comment_Sprites": null,
       "console.log": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Fish Free Play\r\n\r\nHere are the swimming fish you have been working on. Continue to improve the animation!\r\n\r\n# Do This\r\n\r\n* Add another sea creature to the scene.\r\n* Make the sea creature move.\r\n* Make one of the fish follow the mouse.\r\n* Add more ideas of your own!",

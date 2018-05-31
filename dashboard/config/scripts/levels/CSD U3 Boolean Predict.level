@@ -33,7 +33,6 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"\",\r\n  \"callout_text\": \"This program will print out a result here\",\r\n  \"element_id\": \"#debug-console\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom center\",\r\n    \"at\": \"top center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": -25\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
-    "show_d_pad": "false",
     "instructions_important": "false",
     "hide_animation_mode": "false",
     "start_in_animation_tab": "false",
