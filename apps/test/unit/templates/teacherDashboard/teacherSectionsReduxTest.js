@@ -843,7 +843,7 @@ describe('teacherSectionsRedux', () => {
       expect(server.requests).to.have.length(4);
       server.respondWith('GET', '/dashboardapi/sections', successResponse());
       server.respondWith('GET', '/dashboardapi/courses', successResponse());
-      server.respondWith('GET', '/v2/sections/valid_scripts', successResponse());
+      server.respondWith('GET', '/dashboardapi/sections/valid_scripts', successResponse());
       server.respondWith('GET', '/dashboardapi/sections/id/students', successResponse());
       server.respond();
 
@@ -880,7 +880,7 @@ describe('teacherSectionsRedux', () => {
       expect(server.requests).to.have.length(3);
       server.respondWith('GET', '/dashboardapi/sections', successResponse(sections));
       server.respondWith('GET', '/dashboardapi/courses', successResponse());
-      server.respondWith('GET', '/v2/sections/valid_scripts', successResponse());
+      server.respondWith('GET', '/dashboardapi/sections/valid_scripts', successResponse());
       server.respond();
 
       return promise.then(() => {
@@ -895,7 +895,7 @@ describe('teacherSectionsRedux', () => {
       expect(server.requests).to.have.length(3);
       server.respondWith('GET', '/dashboardapi/sections', successResponse());
       server.respondWith('GET', '/dashboardapi/courses', successResponse(validCourses));
-      server.respondWith('GET', '/v2/sections/valid_scripts', successResponse(validScripts));
+      server.respondWith('GET', '/dashboardapi/sections/valid_scripts', successResponse(validScripts));
       server.respond();
 
       return promise.then(() => {
@@ -912,7 +912,7 @@ describe('teacherSectionsRedux', () => {
       expect(server.requests).to.have.length(4);
       server.respondWith('GET', '/dashboardapi/sections', successResponse());
       server.respondWith('GET', '/dashboardapi/courses', successResponse());
-      server.respondWith('GET', '/v2/sections/valid_scripts', successResponse());
+      server.respondWith('GET', '/dashboardapi/sections/valid_scripts', successResponse());
       server.respondWith('GET', '/dashboardapi/sections/id/students', successResponse(students));
       server.respond();
 
@@ -1253,7 +1253,7 @@ describe('teacherSectionsRedux', () => {
       server.respondWith('GET', `/dashboardapi/import_clever_classroom?courseId=${TEST_COURSE_ID}&courseName=${TEST_COURSE_NAME}`, successResponse({}));
       server.respondWith('GET', '/dashboardapi/sections', successResponse([]));
       server.respondWith('GET', '/dashboardapi/courses', successResponse([]));
-      server.respondWith('GET', '/v2/sections/valid_scripts', successResponse([]));
+      server.respondWith('GET', '/dashboardapi/sections/valid_scripts', successResponse([]));
     });
     afterEach(() => server.restore());
 
@@ -1330,7 +1330,7 @@ describe('teacherSectionsRedux', () => {
         expect(server.requests[2].method).to.equal('GET');
         expect(server.requests[2].url).to.equal('/dashboardapi/courses');
         expect(server.requests[3].method).to.equal('GET');
-        expect(server.requests[3].url).to.equal('/v2/sections/valid_scripts');
+        expect(server.requests[3].url).to.equal('/dashboardapi/sections/valid_scripts');
         expect(Object.keys(getState().teacherSections.sections))
           .to.have.length(sections.length);
       });
