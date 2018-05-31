@@ -133,7 +133,7 @@ class Homepage
           color1: "118, 101, 160",
           color2: "166, 155, 193",
           url: CDO.studio_url("/courses"),
-          image: "/shared/images/fit-400/courses/logo_tall_elementary.jpg",
+          image: "/shared/images/courses/logo_tall_elementary.jpg",
           links:
             [
               {
@@ -159,7 +159,7 @@ class Homepage
           color1: "0, 148, 202",
           color2: "89, 185, 220",
           url: "/educate",
-          image: "/images/fit-400/homepage/ap-feature-2017.jpg",
+          image: "/images/homepage/ap-feature-2017.jpg",
           links:
             [
               {
@@ -185,7 +185,7 @@ class Homepage
           color1: "0, 173, 188",
           color2: "89, 202, 211",
           url: "/learn",
-          image: "/images/fit-400/mc/2016_homepage_hocblock.jpg",
+          image: "/images/mc/2016_homepage_hocblock.jpg",
           links:
             [
               {
@@ -211,7 +211,7 @@ class Homepage
           color1: "185, 191, 21",
           color2: "209, 213, 103",
           url: "/help",
-          image: "/shared/images/fit-400/courses/logo_tall_map.jpg",
+          image: "/shared/images/courses/logo_tall_map.jpg",
           links:
             [
               {
@@ -239,7 +239,7 @@ class Homepage
           color1: "118, 101, 160",
           color2: "166, 155, 193",
           url: CDO.studio_url("/courses"),
-          image: "/shared/images/fit-400/courses/logo_tall_elementary.jpg"
+          image: "/shared/images/courses/logo_tall_elementary.jpg"
         },
         {
           id: "educators-nonen",
@@ -249,7 +249,7 @@ class Homepage
           color1: "0, 148, 202",
           color2: "89, 185, 220",
           url: CDO.studio_url("/courses?view=teacher"),
-          image: "/images/fit-400/homepage/ap-feature-2017.jpg"
+          image: "/images/homepage/ap-feature-2017.jpg"
         },
         {
           id: "hoc-nonen",
@@ -259,7 +259,7 @@ class Homepage
           color1: "0, 173, 188",
           color2: "89, 202, 211",
           url: "/learn",
-          image: "/images/fit-400/mc/2016_homepage_hocblock.jpg"
+          image: "/images/mc/2016_homepage_hocblock.jpg"
         },
         {
           id: "flappy-nonen",
@@ -269,7 +269,7 @@ class Homepage
           color1: "185, 191, 21",
           color2: "209, 213, 103",
           url: CDO.studio_url("/s/flappy/reset"),
-          image: "/shared/images/fit-400/courses/logo_tall_flappy.jpg"
+          image: "/shared/images/courses/logo_tall_flappy.jpg"
         }
       ].each {|entry| entry[:image].gsub!("/images/", "/images/fit-400/")}
     end
