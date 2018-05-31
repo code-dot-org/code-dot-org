@@ -64,8 +64,6 @@ class Section < ActiveRecord::Base
   has_many :section_hidden_stages
   has_many :section_hidden_scripts
 
-  SYSTEM_DELETED_NAME = 'system_deleted'.freeze
-
   # This list is duplicated as SECTION_LOGIN_TYPE in shared_constants.rb and should be kept in sync.
   LOGIN_TYPES = [
     LOGIN_TYPE_EMAIL = 'email'.freeze,
@@ -207,11 +205,6 @@ class Section < ActiveRecord::Base
         FollowerMailer.student_disassociated_notify_teacher(teacher, student).deliver_now
       end
     end
-  end
-
-  # Clears all personal data from the section object.
-  def clean_data
-    update(name: SYSTEM_DELETED_NAME)
   end
 
   # Figures out the default script for this section. If the section is assigned to

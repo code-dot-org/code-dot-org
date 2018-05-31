@@ -242,9 +242,9 @@
       2-3 Bee Conditionals 1_instruction: |-
         Hi! I'm a bee. Help me get nectar from
         the flower.
-      2-3 Bee Conditionals 10_instruction: "Purple flowers may have either 1 or 0
-        nectar. Be careful not to collect nectar from a purple flower if it doesn't
-        have any.\r\n"
+      2-3 Bee Conditionals 10_instruction: 'Purple flowers may have either 1 or 0
+        nectar. Be careful not to collect nectar from a purple flower if it doesn''t
+        have any.  '
       2-3 Bee Conditionals 11_instruction: "I wonder what's out there!\r\n\r\nHelp
         me fly around the yard and collect nectar only from the flowers that have
         some. "
@@ -1100,8 +1100,8 @@
       Artist - Nested Loops 2_instruction: "Now nest this loop inside another loop\nto
         draw 10 triangles.  This is called a nested loop.  Hint: All 10 triangles\ncomplete
         a 360 degree rotation.  "
-      Artist - Nested Loops 3_instruction: "Create a sun by nesting the starter code
-        in another loop. This is called a nested loop.\r\n"
+      Artist - Nested Loops 3_instruction: 'Create a sun by nesting the starter code
+        in another loop. This is called a nested loop.  '
       Artist - Nested Loops 5_instruction: Loop the given code to create a windmill.
       Artist - Nested Loops 6_instruction: |-
         Can you draw a hexagon by looping the
@@ -1555,20 +1555,26 @@
         typing 0s and 1s
       CSD U5 black white images pixelation_2018_instruction: Complete the X shape
         by typing 0s and 1s
-      CSD U6 params modify clouds_instruction: "# Clouds\r\n\r\nThis program makes
-        the clouds move when you blow on the sound sensor, but it's not finished.\r\n\r\n#
-        Do This\r\n* Create a new function `moveCloud(name)` that will move any cloud.\r\n
-        \ * (Hint: you will use almost all the same code as the `moveCloud0` function)\r\n*
-        Call your new `moveCloud(name)` function inside the event block, once for
-        each cloud name.\r\n * (Hint: this is similar to how the `loopCloud(name)`
-        function is called many times."
-      CSD U6 params modify clouds_2018_instruction: "# Clouds\r\n\r\nThis program
-        makes the clouds move when you blow on the sound sensor, but it's not finished.\r\n\r\n#
-        Do This\r\n* Create a new function `moveCloud(name)` that will move any cloud.\r\n
-        \ * (Hint: you will use almost all the same code as the `moveCloud0` function)\r\n*
-        Call your new `moveCloud(name)` function inside the event block, once for
-        each cloud name.\r\n * (Hint: this is similar to how the `loopCloud(name)`
-        function is called many times."
+      CSD U6 params modify clouds_instruction: |-
+        # Clouds
+
+        This program makes the clouds move when you blow on the sound sensor, but it's not finished.
+
+        # Do This
+        * Create a new function `moveCloud(name)` that will move any cloud.
+        * (Hint: you will use almost all the same code as the `moveCloud0` function)
+        * Call your new `moveCloud(name)` function inside the event block, once for each cloud name.
+        * (Hint: this is similar to how the `loopCloud(name)` function is called many times.
+      CSD U6 params modify clouds_2018_instruction: |-
+        # Clouds
+
+        This program makes the clouds move when you blow on the sound sensor, but it's not finished.
+
+        # Do This
+        * Create a new function `moveCloud(name)` that will move any cloud.
+        * (Hint: you will use almost all the same code as the `moveCloud0` function)
+        * Call your new `moveCloud(name)` function inside the event block, once for each cloud name.
+        * (Hint: this is similar to how the `loopCloud(name)` function is called many times.
       CSD U6 params modify planes_instruction: "# Multi-plane Controller\r\n\r\nThis
         program moves the three planes using the board accelerometer and the on-screen
         check boxes.  Right now, only the red plane works.\r\n\r\n# Do This\r\n* Create
@@ -2188,9 +2194,9 @@
       CSPU5_U3 - High Low - Else if_2018_instruction: Add an else-if statement in
         order to tell the user if their guess is high or low instead of just wrong.
         (Click to see full instructions)
-      CSPU5_U3 - High Low - Else_instruction: "Add an else statement so that the program
+      CSPU5_U3 - High Low - Else_instruction: 'Add an else statement so that the program
         will tell the user when they are right and when they are wrong. (Click to
-        see full instructions)\r\n"
+        see full instructions)  '
       CSPU5_U3 - High Low - If_instruction: |-
         Add code to the if statement that indicates
         the user guessed the secret number. (Click to see full instructions)
@@ -2510,10 +2516,10 @@
       CSPU5_U3 - Simulation - 2_2018_instruction: Keep track of how many heads (1's)
         your program generates and print the results to the screen. (Click to see
         full instructions)
-      CSPU5_U3 - Simulation - 3_instruction: "Add functionality that counts how many
-        heads in a row are flipped. (Click to see full instructions)\r\n"
-      CSPU5_U3 - Simulation - 3_2018_instruction: "Add functionality that counts how
-        many heads in a row are flipped. (Click to see full instructions)\r\n"
+      CSPU5_U3 - Simulation - 3_instruction: 'Add functionality that counts how many
+        heads in a row are flipped. (Click to see full instructions)  '
+      CSPU5_U3 - Simulation - 3_2018_instruction: 'Add functionality that counts how
+        many heads in a row are flipped. (Click to see full instructions)  '
       CSPU5_U3 - Simulation - 4_instruction: |-
         Update your while loop's condition
         so the the coin flips until there are three heads in a row. (Click to see
@@ -3508,8 +3514,8 @@
       Course 4 Artist Functions 2_instruction: |-
         Can you draw 3 squares 20 pixels
         apart from one another? Hint: each square is 100 pixels in size
-      Course 4 Artist Functions 3_instruction: "Using the \"draw a square\" function
-        block, can you draw this picture? Hint: each square is 120 pixels apart.\r\n"
+      Course 4 Artist Functions 3_instruction: 'Using the "draw a square" function
+        block, can you draw this picture? Hint: each square is 120 pixels apart.  '
       Course 4 Artist Functions 4_instruction: |-
         Are you ready to create your own
         "Function Block"? Click on the "Functions" block in the tool box, name
@@ -3520,8 +3526,8 @@
       Course 4 Artist Functions 5 OLD_instruction: |-
         Let's try to use our two functions
         to draw a house - what needs to be fixed in this code to draw the house properly?
-      Course 4 Artist Functions 5_instruction: "Using the \"draw a square\" function
-        block, can you draw this picture? Hint: each square is 120 pixels apart.\r\n"
+      Course 4 Artist Functions 5_instruction: 'Using the "draw a square" function
+        block, can you draw this picture? Hint: each square is 120 pixels apart.  '
       Course 4 Artist Functions 6_instruction: |-
         Which block do you need to add to
         get the triangle to sit on top of the square?
@@ -3771,9 +3777,8 @@
       Course 4 Bee Params 4_instruction: |-
         Try using your new function to collect
         nectar from all of the flowers. Remember to use the left and right variables.
-      Course 4 Bee Params 5_instruction: |-
-        Let's start from scratch - can you create
-        a new function called "get 5 nectar" with a direction parameter?
+      Course 4 Bee Params 5_instruction: Башынан баштайлы - "5 шире ал" аталган багыттык
+        параметрлери бар жаңы функция түзө аласыңбы?
       Course 4 Bee Params 6 (copy 1)_instruction: |-
         Try using your new function to
         collect all of this nectar.
@@ -4256,10 +4261,10 @@
         other shapes if you like. You can choose the size of each shape. Don’t forget
         to add an “else” clause!\r\nOne example - and part of the definition -  has
         already been done for you!\r\n"
-      Eval Cond 8_instruction: "Free Play: Suppose you want to own a car at 21, or
+      Eval Cond 8_instruction: 'Free Play: Suppose you want to own a car at 21, or
         have your own business by 30. Write a function called life-goals, which takes
         in an age and produces a string that describes your life goals by then. Don’t
-        forget to add an “else” clause!\r\n"
+        forget to add an “else” clause!  '
       Eval Contracts 1_instruction: |-
         Use the "star" function to produce a red star
         with a 60 pixel radius
@@ -4569,18 +4574,18 @@
       InspirationalArtwork_2018_instruction: |-
         If this picture inspires you, try to
         make something similar. Otherwise, create something all your own.
-      'Internet Simulator: Broadcast Mode_instruction': "Now use the Internet Simulator
+      'Internet Simulator: Broadcast Mode_instruction': 'Now use the Internet Simulator
         to send the battleship moves. For setup, join a Room with your group, and
         add ships to your paper board for each opponent. When playing, all communication
-        must be done through the tool, so no talking, but have fun!\r\n"
-      'Internet Simulator: Broadcast_instruction': "Now use the Internet Simulator
+        must be done through the tool, so no talking, but have fun!  '
+      'Internet Simulator: Broadcast_instruction': 'Now use the Internet Simulator
         to send the battleship moves. For setup, join a Room with your group, and
         add ships to your paper board for each opponent. When playing, all communication
-        must be done through the tool, so no talking, but have fun!\r\n"
-      'Internet Simulator: Broadcast_2018_instruction': "Now use the Internet Simulator
+        must be done through the tool, so no talking, but have fun!  '
+      'Internet Simulator: Broadcast_2018_instruction': 'Now use the Internet Simulator
         to send the battleship moves. For setup, join a Room with your group, and
         add ships to your paper board for each opponent. When playing, all communication
-        must be done through the tool, so no talking, but have fun!\r\n"
+        must be done through the tool, so no talking, but have fun!  '
       'Internet Simulator: DNS Mode_instruction': |-
         In this version of the Internet
         Simulator, a Domain Name System (DNS) is provided for you and knows the IP
@@ -4851,8 +4856,8 @@
       K2.0 sequence pre_instruction: |-
         Play with these blocks to see if you can get
         me to the pig!
-      KIKI GLJ Test Response_instruction: "Look carefully at the code below.  What
-        do you think the plane will do when you click \"Run\"?\r\n"
+      KIKI GLJ Test Response_instruction: 'Look carefully at the code below.  What
+        do you think the plane will do when you click "Run"?  '
       KTest1_instruction: Can you make me move South once more to get to the pig?
       KTest2_instruction: Жол көрсөтүп, тентек торопойго жеткиз. Жардыргычтан алыс
         бол же жарылып кетесиң!
@@ -4900,12 +4905,11 @@
       MC HOC 2016 Level 10_instruction: |-
         It's time to make your own Minecraft! Spawn
         creatures and then make them do whatever you want. Have fun!
-      MC HOC 2016 Level 2-2_instruction: |-
-        The chicken is frozen. Place `move` and
-        `turn` blocks in the `when spawned` slot to get it to move.
-      MC HOC 2016 Level 3_instruction: "Great, the chicken moved! But then she stopped.
+      MC HOC 2016 Level 2-2_instruction: Тоок тоңуп калды. Аны жылдырыш үчүн "жыл"
+        жана "бурул" блокторун "жумурткалаганда" блогунун ичине салгыла.
+      MC HOC 2016 Level 3_instruction: 'Great, the chicken moved! But then she stopped.
         In games, chickens walk forever. Use a `forever do` loop to keep these chickens
-        moving.\r\n"
+        moving.  '
       MC HOC 2016 Level 4_instruction: |-
         Now the chickens look weird moving the same
         way. Games use random moves to make things look real. Make the chickens `turn
@@ -5155,8 +5159,8 @@
         function block. The blocks in the function editor are the definition that
         make up "draw a square." When you're done looking around, click "Save
         and Close" and then "Run."
-      NEW Course 4 Artist Functions 6_instruction: "Using the \"draw a square\" function
-        block, can you draw this picture? Hint: each square is 20 pixels apart.\r\n"
+      NEW Course 4 Artist Functions 6_instruction: 'Using the "draw a square" function
+        block, can you draw this picture? Hint: each square is 20 pixels apart.  '
       NEW Course 4 Artist Functions 7_instruction: "Are you getting the hang of how\nto
         use function blocks? Let's modify this square so that it is 200 pixels\nin
         size. Click on \"edit\" to enter the `draw a square` function editor. Remember\nto
@@ -5199,8 +5203,8 @@
         Play with the pen width to see how different your drawings look!
       NEW Course 4 Artist Params 2_instruction: Жактарынын узундугу 50 пиксел болгон
         "үч бурчтук тарт" функциясын жаңыдан түзгүлө.
-      NEW Course 4 Artist Params 3_instruction: "Now let's use the function to draw
-        5 triangles in a row. Each triangle is 30 pixels apart.\r\n"
+      NEW Course 4 Artist Params 3_instruction: 'Now let''s use the function to draw
+        5 triangles in a row. Each triangle is 30 pixels apart.  '
       NEW Course 4 Artist Params 4_instruction: |-
         Do you notice anything different
         about these function blocks? Click “Run” to see what happens.
@@ -5326,10 +5330,10 @@
         Simulator, a Domain Name System (DNS) is provided for you and knows the IP
         addresses of all connected computers. Send a message in the form GET [hostname]
         to the DNS service at address <yourRouterNumber>.15 to get a student's address.
-      NetSim Standalone Broadcast_instruction: "In this version of the Internet Simulator,
+      NetSim Standalone Broadcast_instruction: 'In this version of the Internet Simulator,
         you can connect to up to 5 other people in a room. When you send messages
         in the room, everyone receives them. What are some of the challenges of this
-        system, and how might you solve them?\r\n"
+        system, and how might you solve them?  '
       NetSim Standalone Classroom Routers_instruction: |-
         In this version of the Internet
         Simulator, everyone connects to a router and has a specific address. To send
@@ -5450,8 +5454,8 @@
       October15 JoL 1_instruction: |-
         Program the artist to design a face for your
         jack-o-lantern!
-      October15 bat_instruction: "Freeplay: Here are some functions to play with.
-        \ Can you draw a bat?\r\n"
+      October15 bat_instruction: 'Freeplay: Here are some functions to play with.  Can
+        you draw a bat?  '
       October15 ghost 1_instruction: |-
         Give the ghost eyes, using the "draw a circle"
         function.
@@ -6130,15 +6134,17 @@
         Each side should be 100 pixels long.
       StepIntro_instruction: Here's how to use the "Step" button.
       Test Play Lab_instruction: This is a test play lab level.
-      Test embedded Blockly in instructions_instruction: "As a block element, we should
-        be able to include XML representing a valid Blockly block or blocks.\r\n\r\n<xml>\r\n
-        \ <block type=\"draw_move_by_constant\">\r\n    <title name=\"DIR\">moveForward</title>\r\n
-        \   <title name=\"VALUE\">100</title>\r\n  </block>\r\n</xml>\r\n\r\nWe also
-        support Blockly XML as an inline element like so: <xml><block type=\"draw_move_by_constant\"><title
-        name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>.
-        The difference in input format being that this one is embedded within a paragraph,
-        whereas the previous one is in a text block of its own. The difference in
-        output is comparable."
+      Test embedded Blockly in instructions_instruction: |-
+        As a block element, we should be able to include XML representing a valid Blockly block or blocks.
+
+        <xml>
+        <block type="draw_move_by_constant">
+        <title name="DIR">moveForward</title>
+        <title name="VALUE">100</title>
+        </block>
+        </xml>
+
+        We also support Blockly XML as an inline element like so: <xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">100</title></block></xml>. The difference in input format being that this one is embedded within a paragraph, whereas the previous one is in a text block of its own. The difference in output is comparable.
       Test embedded K1 Blockly in instructions_instruction: |-
         Use three `move west`
         blocks and one `pick corn` block to solve this puzzle.
@@ -6201,10 +6207,10 @@
         can't see the other students' addresses.  Instead, one of you must act as
         a name service, to help share addresses with each other.
       U2L14 frequency random_instruction: Test
-      U2L2 NetSim Hub Mode_instruction: "Now use the Internet Simulator to send the
+      U2L2 NetSim Hub Mode_instruction: 'Now use the Internet Simulator to send the
         battleship moves. For setup, join a Room with your group, and add ships to
         your paper board for each opponent. When playing, all communication must be
-        done through the tool, so no talking, but have fun!\r\n"
+        done through the tool, so no talking, but have fun!  '
       U2L3 NetSim Hub Mode_instruction: |-
         Use the Internet Simulator to test out your
         group's binary communication protocol for battleship. How short can you make
@@ -6457,9 +6463,9 @@
         Add an else-if statement in order to
         tell the user if their guess is high or low instead of just wrong. (Click
         to see full instructions)
-      U3 - High Low - Else_instruction: "Add an else statement so that the program
+      U3 - High Low - Else_instruction: 'Add an else statement so that the program
         will tell the user when they are right and when they are wrong. (Click to
-        see full instructions)\r\n"
+        see full instructions)  '
       U3 - High Low - If_instruction: |-
         Add code to the if statement that indicates
         the user guessed the secret number. (Click to see full instructions)
@@ -6663,26 +6669,26 @@
       U3 - Practice Create Performance Task_instruction: |-
         Design and implement your
         practice Create Performance Task. (Click to see full instructions)
-      U3 - Read Record - 1.2_instruction: "Console.log the records returned by a call
-        to readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 1.5_instruction: "Console.log the records returned by a call
-        to readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 1.6_instruction: "Console.log the records returned by a call
-        to readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 1_instruction: "Console.log the records returned by a call
-        to readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 2_instruction: "Change the table name so that the records
-        are read from the new table.(Click to see full instructions)\r\n"
-      U3 - Read Record - 3_instruction: "Change the name of the table in a readRecords
-        command to read from a table that does not exist. (Click to see full instructions)\r\n"
-      U3 - Read Record - 4.1_instruction: "Print out each record return from the readRecords
-        call individually. (Click to see full instructions)\r\n"
-      U3 - Read Record - 4_instruction: "Print out each record return from the readRecords
-        call individually. (Click to see full instructions)\r\n"
-      U3 - Read Record - 5 and half_instruction: "Print out the name of each movie
-        in the records return from the readRecords call. (Click to see full instructions)\r\n"
-      U3 - Read Record - 5_instruction: "Print out the name of each movie in the records
-        return from the readRecords call. (Click to see full instructions)\r\n"
+      U3 - Read Record - 1.2_instruction: 'Console.log the records returned by a call
+        to readRecords. (Click to see full instructions)  '
+      U3 - Read Record - 1.5_instruction: 'Console.log the records returned by a call
+        to readRecords. (Click to see full instructions)  '
+      U3 - Read Record - 1.6_instruction: 'Console.log the records returned by a call
+        to readRecords. (Click to see full instructions)  '
+      U3 - Read Record - 1_instruction: 'Console.log the records returned by a call
+        to readRecords. (Click to see full instructions)  '
+      U3 - Read Record - 2_instruction: 'Change the table name so that the records
+        are read from the new table.(Click to see full instructions)  '
+      U3 - Read Record - 3_instruction: 'Change the name of the table in a readRecords
+        command to read from a table that does not exist. (Click to see full instructions)  '
+      U3 - Read Record - 4.1_instruction: 'Print out each record return from the readRecords
+        call individually. (Click to see full instructions)  '
+      U3 - Read Record - 4_instruction: 'Print out each record return from the readRecords
+        call individually. (Click to see full instructions)  '
+      U3 - Read Record - 5 and half_instruction: 'Print out the name of each movie
+        in the records return from the readRecords call. (Click to see full instructions)  '
+      U3 - Read Record - 5_instruction: 'Print out the name of each movie in the records
+        return from the readRecords call. (Click to see full instructions)  '
       U3 - Return Values - constrainTurtle_instruction: |-
         Use constrain in this simple
         app to keep the turtle from driving off the screen.  (Click to see full instructions)
@@ -6718,18 +6724,18 @@
         Write the function maxVal and
         then use it within the console.log statement to calculate the maximum of two
         values.  (Click to see full instructions)
-      U3 - Search Terms - 1_instruction: "Create an array of all the movies made in
-        2008 and print it out. (Click to see full instructions)\r\n"
-      U3 - Search Terms - 2_instruction: "Print out all the movies with year 2008
-        using the readRecords search terms. (Click to see full instructions)\r\n"
-      U3 - Search Terms - 3_instruction: "Print whether or not there are movies matching
-        the search criteria (Click to see full instructions)\r\n"
-      U3 - Search Terms - 4_instruction: "Print whether or not there are movies matching
-        the search criteria (Click to see full instructions)\r\n"
-      U3 - Search Terms - 5_instruction: "Print out the cities that are in California
-        or have a population of 2,000,000. (Click to see full instructions)\r\n"
-      U3 - Search Terms - 6_instruction: "Print out the cities that are in California
-        or have a population of 2,000,000. (Click to see full instructions)\r\n"
+      U3 - Search Terms - 1_instruction: 'Create an array of all the movies made in
+        2008 and print it out. (Click to see full instructions)  '
+      U3 - Search Terms - 2_instruction: 'Print out all the movies with year 2008
+        using the readRecords search terms. (Click to see full instructions)  '
+      U3 - Search Terms - 3_instruction: 'Print whether or not there are movies matching
+        the search criteria (Click to see full instructions)  '
+      U3 - Search Terms - 4_instruction: 'Print whether or not there are movies matching
+        the search criteria (Click to see full instructions)  '
+      U3 - Search Terms - 5_instruction: 'Print out the cities that are in California
+        or have a population of 2,000,000. (Click to see full instructions)  '
+      U3 - Search Terms - 6_instruction: 'Print out the cities that are in California
+        or have a population of 2,000,000. (Click to see full instructions)  '
       U3 - Simple Drawing - Comments_instruction: Do this
       U3 - Simple Drawing - Ellipse and No Fill_instruction: Do this
       U3 - Simple Drawing - Fill_instruction: Do This
@@ -6759,8 +6765,8 @@
         Keep track of how many heads (1's) your
         program generates and print the results to the screen. (Click to see full
         instructions)
-      U3 - Simulation - 3_instruction: "Add functionality that counts how many heads
-        in a row are flipped. (Click to see full instructions)\r\n"
+      U3 - Simulation - 3_instruction: 'Add functionality that counts how many heads
+        in a row are flipped. (Click to see full instructions)  '
       U3 - Simulation - 4_instruction: |-
         Update your while loop's condition so the
         the coin flips until there are three heads in a row. (Click to see full instructions)
@@ -7795,18 +7801,14 @@
         print each record to the console. (Click to see full instructions)
       U4 - Charts - Import Data 2_2018_instruction: Call readRecords on “mytable”
         and print each record to the console. (Click to see full instructions)
-      U4 - Charts - Line Chart 1_instruction: |-
-        Create a line chart showing the change
-        in popularity of “#tbt” over time. (Click to see full instructions)
+      U4 - Charts - Line Chart 1_instruction: Create a line chart showing the change
+        in popularity of “
       U4 - Charts - Line Chart 1_2018_instruction: Create a line chart showing the
-        change in popularity of “#tbt” over time. (Click to see full instructions)
-      U4 - Charts - Line Chart 2_instruction: |-
-        Add a second line to your chart to
-        show the change in popularity of both “#tbt” and “#nofilter” at the same time.
-        (Click to see full instructions)
+        change in popularity of “
+      U4 - Charts - Line Chart 2_instruction: Add a second line to your chart to show
+        the change in popularity of both “
       U4 - Charts - Line Chart 2_2018_instruction: Add a second line to your chart
-        to show the change in popularity of both “#tbt” and “#nofilter” at the same
-        time. (Click to see full instructions)
+        to show the change in popularity of both “
       U4 - Charts - Line Chart Template_instruction: This is a template.
       U4 - Charts - Remixing Apps with Data_instruction: |-
         Run this app and see what
@@ -8005,52 +8007,38 @@
       U4 - Objects - writeWrap_instruction: |-
         Use the wrap function to prevent currentIndex
         from leaving the bounds of your array. (Click to see full instructions)
-      U4 - Read Record - 1.2_instruction: "Place a console.log command below the readRecords
-        command. (Click to see full instructions)\r\n"
+      U4 - Read Record - 1.2_instruction: 'Place a console.log command below the readRecords
+        command. (Click to see full instructions)  '
       U4 - Read Record - 1.2_2018_instruction: 'Place a console.log command below
-        the readRecords command. (Click to see full instructions)
-
-'
-      U4 - Read Record - 1.3_instruction: "Add a console.log command inside the callback
-        function. (Click to see full instructions)\r\n"
+        the readRecords command. (Click to see full instructions)  '
+      U4 - Read Record - 1.3_instruction: 'Add a console.log command inside the callback
+        function. (Click to see full instructions)  '
       U4 - Read Record - 1.3_2018_instruction: 'Add a console.log command inside the
-        callback function. (Click to see full instructions)
-
-'
-      U4 - Read Record - 1_instruction: "Use console.log to display the records returned
-        by a call to readRecords. (Click to see full instructions)\r\n"
+        callback function. (Click to see full instructions)  '
+      U4 - Read Record - 1_instruction: 'Use console.log to display the records returned
+        by a call to readRecords. (Click to see full instructions)  '
       U4 - Read Record - 1_2018_instruction: 'Use console.log to display the records
-        returned by a call to readRecords. (Click to see full instructions)
-
-'
-      U4 - Read Record - 2_instruction: "Change the table name so that the records
-        are read from the new table. (Click to see full instructions)\r\n"
+        returned by a call to readRecords. (Click to see full instructions)  '
+      U4 - Read Record - 2_instruction: 'Change the table name so that the records
+        are read from the new table. (Click to see full instructions)  '
       U4 - Read Record - 2_2018_instruction: 'Change the table name so that the records
-        are read from the new table. (Click to see full instructions)
-
-'
-      U4 - Read Record - 3_instruction: "Change the name of the table in a readRecords
-        command to read from a table that does not exist. (Click to see full instructions)\r\n"
+        are read from the new table. (Click to see full instructions)  '
+      U4 - Read Record - 3_instruction: 'Change the name of the table in a readRecords
+        command to read from a table that does not exist. (Click to see full instructions)  '
       U4 - Read Record - 3_2018_instruction: 'Change the name of the table in a readRecords
-        command to read from a table that does not exist. (Click to see full instructions)
-
-'
-      U4 - Read Record - 4.1_instruction: "Use indexes and dot notation to reference
-        values in the response from the database. (Click to see full instructions)\r\n"
+        command to read from a table that does not exist. (Click to see full instructions)  '
+      U4 - Read Record - 4.1_instruction: 'Use indexes and dot notation to reference
+        values in the response from the database. (Click to see full instructions)  '
       U4 - Read Record - 4.1_2018_instruction: 'Use indexes and dot notation to reference
-        values in the response from the database. (Click to see full instructions)
-
-'
-      U4 - Read Record - 4_instruction: "Print out each record return from the readRecords
-        call individually. (Click to see full instructions)\r\n"
-      U4 - Read Record - 5_instruction: "Using a for loop, display the title of each
-        movie in your database. (Click to see full instructions)\r\n"
+        values in the response from the database. (Click to see full instructions)  '
+      U4 - Read Record - 4_instruction: 'Print out each record return from the readRecords
+        call individually. (Click to see full instructions)  '
+      U4 - Read Record - 5_instruction: 'Using a for loop, display the title of each
+        movie in your database. (Click to see full instructions)  '
       U4 - Read Record - 5_2018_instruction: 'Using a for loop, display the title
-        of each movie in your database. (Click to see full instructions)
-
-'
-      U4 - Read Record - part 1 - template_instruction: "Use console.log to display
-        the records returned by a call to readRecords. (Click to see full instructions)\r\n"
+        of each movie in your database. (Click to see full instructions)  '
+      U4 - Read Record - part 1 - template_instruction: 'Use console.log to display
+        the records returned by a call to readRecords. (Click to see full instructions)  '
       U4 - ReadRecords - Contacts App 1_instruction: |-
         Use readRecords to copy the
         data in your database into your "contacts" global variable and call showCurrentContact.
@@ -8297,7 +8285,8 @@
         or phrases) in the text. Enter the patterns you see into the dictionary on
         the right. As you type entries into the dictionary, the symbol for the entry
         is inserted into the text in place of the pattern.
-      XML Scratchpad_instruction: Using this test level to grab xml for unit tests
+      XML Scratchpad_instruction: Бул тест деңгээлин модулдук тестке xml түзүү үчүн
+        колдонгула
       aE1_instruction: "You chose to make a square napkin! \r\n\r\nTo finish, draw
         a square with 20 pixel sides. "
       aE2_instruction: |-
@@ -8660,8 +8649,8 @@
       course2_harvester_loops_challenge2_instruction: |-
         Collect all of the lettuce.
         Avoid the trees and fields!
-      course2_maze_loops_challenge1_instruction: "Now Scrat wants to try using loops\nto
-        find his acorn! "
+      course2_maze_loops_challenge1_instruction: 'Азыр Скрат циклдарды колдонуп жаңгагын
+        тапкысы келет! '
       course2_maze_programming_challenge1_instruction: |-
         *"The pig is hiding! Can
         you help me find a way around?"*
@@ -9263,19 +9252,15 @@
         is inside over and over again!
       courseA_video_events_instruction: Need a better playlab/events combo
       courseA_video_events_2018_instruction: Need a better playlab/events combo
-      courseB_Scrat_ramp1_2018_instruction: |-
-        For this puzzle, snap the blocks together
-        and click "Run"!
-      courseB_Scrat_ramp2_2018_instruction: |-
-        Snap all blocks together to finish your
-        code, then click "Run".
-      courseB_Scrat_ramp3a_2018_instruction: |-
-        Add a `North` block to the bottom of
-        the other blocks to finish this code, then click "Run".
-      courseB_Scrat_ramp4a_2018_instruction: |-
-        Can you figure out which block you
-        need to add to the bottom of the other blocks to finish this code?
-      courseB_Scrat_ramp5a_2018_instruction: Get the bird to the pig!
+      courseB_Scrat_ramp1_2018_instruction: Бул башкатырмада блокторду бириктиргиле
+        дагы "Аткарууну" баскыла!
+      courseB_Scrat_ramp2_2018_instruction: "Кодуңарды аякташ үчүн бардык блокторду
+        бириктиргиле, \n анан \"Аткарууну\" баскыла."
+      courseB_Scrat_ramp3a_2018_instruction: Бул кодду аякташ үчүн "Түндүк" блогун
+        башка блоктун алдына койгула, анан "Аткарууну" баскыла.
+      courseB_Scrat_ramp4a_2018_instruction: Кодду аякташ үчүн кайсы блокту башка
+        блоктун алдына кошушуңар керегин таба аласыңарбы?
+      courseB_Scrat_ramp5a_2018_instruction: Кушту торопойго жеткиз!
       courseB_artist_loops1_instruction: |-
         This is a new type of puzzle called "Artist".
         Play with the level and draw something fun.
@@ -9432,8 +9417,8 @@
         бергиле!
       courseB_iceage_loops10_instruction: Скрат бүт жолду өтүп, жаңгакка жеткенге
         жардам бергиле!
-      courseB_iceage_loops11_instruction: Help Scrat get to the acorn!
-      courseB_iceage_loops11_forVideo_instruction: Help Scrat get to the acorn!
+      courseB_iceage_loops11_instruction: Скратты жаңгакка жеткиргиле!
+      courseB_iceage_loops11_forVideo_instruction: Скратты жаңгакка жеткиргиле!
       courseB_iceage_loops12_instruction: Get to the acorn any way you can!
       courseB_iceage_loops2_instruction: |-
         Use two different move blocks to get to
@@ -9441,62 +9426,54 @@
       courseB_iceage_loops3_instruction: |-
         Can you get to the acorn with just one
         `W` block?
-      courseB_iceage_loops4_instruction: |-
-        Add one more block to get Scrat all the
-        way to the acorn!
+      courseB_iceage_loops4_instruction: Бир же көп блок кошуп, Скратты жаңгакка жеткиргиле!
       courseB_iceage_loops5_instruction: |-
         Can you add one more loop to get to the
         acorn?
       courseB_iceage_loops6_instruction: Can you add a loop to get to the acorn?
-      courseB_iceage_loops7_instruction: 'Scrat really wants that acorn! '
+      courseB_iceage_loops7_instruction: 'Скрат тигил жаңгакты каалап турат! '
       courseB_iceage_loops8_instruction: 'Can you fix this code? '
-      courseB_iceage_loops9_instruction: |-
-        The acorn is so far away! Can you use loops
-        to help Scrat get there?
+      courseB_iceage_loops9_instruction: Жаңгакка чейин алыс! Циклдарды колдонуп Скратты
+        ага жеткизе аласыңбы?
       courseB_maze_seq1_instruction: "Play with these blocks to see what they make
         the bird do! \r\n\r\nGet the bird to the pig to complete the level."
       courseB_maze_seq10_instruction: Fix the bugs to get the bird to the pig.
-      courseB_maze_seq10_2018_instruction: Fix the bugs to get the bird to the pig.
+      courseB_maze_seq10_2018_instruction: Багдарды оңдоп Скратты жаңгакка жеткиргиле.
       courseB_maze_seq11_instruction: It's all you!  Get the bird to the pig.
-      courseB_maze_seq11_2018_instruction: It's all you!  Get the bird to the pig.
+      courseB_maze_seq11_2018_instruction: Баары сенден! Скратты жаңгакка жеткир.
       courseB_maze_seq12_instruction: Now get that pig any way you can!
       courseB_maze_seq12_2018_instruction: Now get that pig any way you can!
-      courseB_maze_seq1_2018_instruction: "Play with these blocks to see what they
-        make Scrat do! \r\n\r\nGet Scrat to the acorn to complete the level."
+      courseB_maze_seq1_2018_instruction: |-
+        Блоктор менен ойноп, алар Скратка эмне кылдырарын көргүлө!
+
+        Скратты жаңгакка жеткизип, деңгээлден өткүлө.
       courseB_maze_seq2_instruction: '*"A bug! Fix the code to get me to the pig."*'
-      courseB_maze_seq2_2018_instruction: |-
-        A bug! Fix the code to get Scrat to the
-        acorn!
+      courseB_maze_seq2_2018_instruction: Баг! Кодду оңдоп, Скратты жаңгакка жеткиргиле!
       courseB_maze_seq4_instruction: Add 2 blocks to get the bird to the pig.
-      courseB_maze_seq4_2018_instruction: |-
-        Use **2** movement blocks to get the Scrat
-        to the acorn.
+      courseB_maze_seq4_2018_instruction: Эки **2** жылуу блогун кошуп, Скратты жаңгакка
+        жеткиргиле.
       courseB_maze_seq5_instruction: Now try this puzzle from the start!
       courseB_maze_seq5_2018_instruction: Now try this puzzle from the start!
       courseB_maze_seq6_instruction: |-
         Move one way, then another to get the bird
         to the pig!
-      courseB_maze_seq6_2018_instruction: |-
-        Move one way, then another to get Scrat
-        to the acorn!
+      courseB_maze_seq6_2018_instruction: Биринчи анан экинчи жолго салып, Скратты
+        жаңгакка жеткиргиле!
       courseB_maze_seq7_instruction: |-
         Figure out what is missing and then add blocks
         to get the bird to the pig!
-      courseB_maze_seq7_2018_instruction: |-
-        Figure out what is missing and then add
-        blocks to get Scrat to the acorn!
+      courseB_maze_seq7_2018_instruction: Эмне жетпей жатканын таап, блокторду кошкула,
+        Скратты жаңгакка жеткиргиле!
       courseB_maze_seq8_instruction: |-
         Your turn!  What do you need to do to get the
         bird to the pig?
-      courseB_maze_seq8_2018_instruction: |-
-        Your turn!  What do you need to do to
-        get Scrat to the acorn?
+      courseB_maze_seq8_2018_instruction: Сенин кезегиң! Скратты жаңгакка жеткириш
+        үчүн сага эмне керек?
       courseB_maze_seq9_instruction: |-
         Challenge: Move around the TNT to get the bird
         to the pig.
-      courseB_maze_seq9_2018_instruction: |-
-        Challenge: Move around the broken ice
-        to get Scrat to the acorn.
+      courseB_maze_seq9_2018_instruction: 'Мелдеш: Жарылган музду аралап өтүп, Скратты
+        жаңгакка жеткиргиле.'
       courseB_maze_seq9_challenge1_instruction: "*Where's that pig hiding now?*"
       courseB_maze_seqCold_instruction: |-
         Challenge: Debug this level by adding blocks
@@ -9591,7 +9568,7 @@
         Let's make the
         animals disappear when you click on them! You can also add sounds and score
         points to create a fun game of Animal Tag!
-      courseB_scrat_forVideo_instruction: Get the acorn!
+      courseB_scrat_forVideo_instruction: Жаңгакка жет!
       courseB_starWars_prog1_instruction: Help BB-8 get the scrap metal!
       courseB_starWars_prog10_instruction: Help BB-8 gather the glowing scrap metal
       courseB_starWars_prog10_2018_instruction: |-
@@ -10041,25 +10018,18 @@
       courseC_harvester_loops_forVid_instruction: |-
         Collect all of the corn, all of
         the lettuce, and all of the pumpkins.
-      courseC_maze_debugging1_instruction: |-
-        Fix the code to help get Scrat get to
-        the acorn.
+      courseC_maze_debugging1_instruction: Кодду оңдоп, Скратты жаңгакка жеткиргиле.
       courseC_maze_debugging10_instruction: |-
         Debug this level by rearranging and
         changing blocks to get me to the pig!
-      courseC_maze_debugging1_2018_instruction: |-
-        Fix the code to help get Scrat get
-        to the acorn.
-      courseC_maze_debugging2_instruction: |-
-        Use your debugging skills to get Scrat
-        to the acorn.
-      courseC_maze_debugging2_2018_instruction: |-
-        Use your debugging skills to get
-        Scrat to the acorn.
-      courseC_maze_debugging3_instruction: Remove blocks to get Scrat to the acorn!
-      courseC_maze_debugging3_2018_instruction: |-
-        Remove blocks to get Scrat to the
-        acorn!
+      courseC_maze_debugging1_2018_instruction: Кодду оңдоп, Скратты жаңгакка жеткиргиле.
+      courseC_maze_debugging2_instruction: Дебаггиң кылгыла, Скратты жаңгакка жеткиргиле.
+      courseC_maze_debugging2_2018_instruction: Дебаггиң кылгыла, Скратты жаңгакка
+        жеткиргиле.
+      courseC_maze_debugging3_instruction: Блокторду алып таштагыла, Скратты жаңгакка
+        жеткиргиле!
+      courseC_maze_debugging3_2018_instruction: Блокторду алып ташта, Скратты жаңгакка
+        жеткир!
       courseC_maze_debugging4_instruction: |-
         Someone has their directions mixed up!
         Can you help?
@@ -10072,39 +10042,28 @@
       courseC_maze_debugging5_2018_instruction: |-
         Debug this level by rearranging
         and changing blocks.
-      courseC_maze_debugging6_instruction: |-
-        Figure out what is wrong and get Scrat
-        to the acorn.
-      courseC_maze_debugging6_2018_instruction: |-
-        Figure out what is wrong and get
-        Scrat to the acorn.
+      courseC_maze_debugging6_instruction: Катаны тапкыла, Скратты жаңгакка жеткиргиле.
+      courseC_maze_debugging6_2018_instruction: Катаны тапкыла, Скратты жаңгакка жеткиргиле.
       courseC_maze_debugging7_instruction: |-
         **Challenge:** Debug this level by rearranging,
         adding, and deleting blocks.
       courseC_maze_debugging7_2018_instruction: |-
         **Challenge:** Debug this level
         by rearranging, adding, and deleting blocks.
-      courseC_maze_debugging8_instruction: |-
-        Debug this level to get Scrat to the
-        acorn.
-      courseC_maze_debugging9_instruction: |-
-        Debug this level to get Scrat to the
-        acorn.
-      courseC_maze_debugging9_2018_instruction: |-
-        Debug this level to get Scrat to
-        the acorn.
-      courseC_maze_debugging_challenge1_instruction: |-
-        Help Scrat decide which way
-        to turn to get to the acorn.
-      courseC_maze_debugging_challenge1_2018_instruction: |-
-        Help Scrat decide which
-        way to turn to get to the acorn.
-      courseC_maze_debugging_challenge2_instruction: |-
-        Help Scrat reach the acorn
-        with only four `turn` commands.
-      courseC_maze_debugging_challenge2_2018_instruction: |-
-        Help Scrat reach the acorn
-        with only four `turn` commands.
+      courseC_maze_debugging8_instruction: Деңгээлди дебаггиң кыл, Скратты жаңгакка
+        жеткир.
+      courseC_maze_debugging9_instruction: Бул деңгээлдин багын оңдо, Скратты жаңгакка
+        жеткир.
+      courseC_maze_debugging9_2018_instruction: Бул деңгээлдин багын оңдо, Скратты
+        жаңгакка жеткир.
+      courseC_maze_debugging_challenge1_instruction: Скрат кайсы жолго салса жаңгакка
+        жетээрин чечкенге жардам бергиле.
+      courseC_maze_debugging_challenge1_2018_instruction: Скрат кайсы жолго салса
+        жаңгакка жетээрин чечкенге жардам бергиле.
+      courseC_maze_debugging_challenge2_instruction: Скрат төрт эле "бурул" буйругу
+        менен жаңгакка жеткидей кылгыла.
+      courseC_maze_debugging_challenge2_2018_instruction: Скрат төрт эле "бурул" буйругу
+        менен жаңгакка жеткидей кылгыла.
       courseC_maze_loops1_instruction: Can you get the bird to the pig?
       courseC_maze_loops10_instruction: You are doing great! Keep it up!
       courseC_maze_loops11_instruction: |-
@@ -10126,12 +10085,12 @@
         Challenge: Combine ideas from the last few
         puzzles to complete this level.
       courseC_maze_loops9_instruction: You are doing great! Keep it up!
-      courseC_maze_loops_challenge1_instruction: "Now Scrat wants to try using loops\nto
-        find his acorn! "
-      courseC_maze_loops_challenge1a_instruction: "Now Scrat wants to try using loops\nto
-        find his acorn! "
-      courseC_maze_loops_challenge1a_2018_instruction: "Now Scrat wants to try using\nloops
-        to find his acorn! "
+      courseC_maze_loops_challenge1_instruction: 'Азыр Скрат циклдарды колдонуп жаңгакты
+        тапкысы келет! '
+      courseC_maze_loops_challenge1a_instruction: 'Азыр Скрат циклдарды колдонуп жаңгакты
+        тапкысы келет! '
+      courseC_maze_loops_challenge1a_2018_instruction: 'Азыр Скрат циклдарды колдонуп
+        жаңгакты тапкысы келет! '
       courseC_maze_loops_challenge2_instruction: |-
         Let's hunt for treasure - using
         loops! Help the collector by debugging this code. Get all of the treasure!
@@ -10307,15 +10266,15 @@
         of one another?"
       courseD_artist_1_2018_instruction: "Draw a small square with **30** pixel long
         sides.  \r\n"
-      courseD_artist_2_2018_instruction: "Now, turn right by **60** degrees, then
+      courseD_artist_2_2018_instruction: 'Now, turn right by **60** degrees, then
         draw a straight line **150** pixels long and jump back to the center of the
-        play area.\r\n"
+        play area.  '
       courseD_artist_3_2018_instruction: "Nest all of the code inside of another\n`repeat`
         loop and run it a total of **6** times. "
       courseD_artist_4_2018_instruction: Add a tiny shape to the end of your line!
       courseD_artist_5_2018_instruction: Play with the snowflakes!
-      courseD_artist_6_2018_instruction: "Try changing your long 150 pixel line into
-        6 short lines of **25** pixels, with little turns at the end.\r\n"
+      courseD_artist_6_2018_instruction: 'Try changing your long 150 pixel line into
+        6 short lines of **25** pixels, with little turns at the end.  '
       courseD_artist_7_2018_instruction: |-
         Now, turn around 180 degrees and draw the
         stair pattern again!
@@ -10405,8 +10364,10 @@
       courseD_artist_binary_challenge3_instruction: |-
         Are you persistent enough to
         restore this logo back to normal?
-      courseD_artist_embed_frozen_instruction: Press Run to see a snowflake design!
-      courseD_artist_embed_frozen2_instruction: Press Run to see a snowflake design.
+      courseD_artist_embed_frozen_instruction: Күн караманын дизайнын көрүү үчүн Аткарууну
+        баскыла!
+      courseD_artist_embed_frozen2_instruction: Күн караманын дизайнын көрүү үчүн
+        Аткарууну баскыла.
       courseD_artist_functions10_instruction: |-
         This time, use lines of 8 hexagons
         with 25 pixel sides.
@@ -11157,21 +11118,18 @@
         бергиле!
       courseD_iceage_loops10_instruction: Скрат бүт жолду өтүп, жаңгакка жеткенге
         жардам бергиле!
-      courseD_iceage_loops11_instruction: Help Scrat get to the acorn!
+      courseD_iceage_loops11_instruction: Скратты жаңгакка жеткиргиле!
       courseD_iceage_loops12_instruction: Get to the acorn any way you can!
       courseD_iceage_loops2_instruction: Use a `turn left` block to get to the acorn!
       courseD_iceage_loops3_instruction: |-
         Can you get to the acorn with just one
         `move forward` block?
-      courseD_iceage_loops4_instruction: |-
-        Add one more block to get Scrat all the
-        way to the acorn!
+      courseD_iceage_loops4_instruction: Бир же көп блок кошуп, Скратты жаңгакка жеткиргиле!
       courseD_iceage_loops6_instruction: Can you add a loop to get to the acorn?
-      courseD_iceage_loops7_instruction: 'Scrat really wants that acorn! '
+      courseD_iceage_loops7_instruction: 'Скрат тигил жаңгакты каалап турат! '
       courseD_iceage_loops8_instruction: 'Can you fix this code? '
-      courseD_iceage_loops9_instruction: |-
-        The acorn is so far away! Can you use loops
-        to help Scrat get there?
+      courseD_iceage_loops9_instruction: Жаңгакка чейин алыс! Циклдарды колдонуп Скратты
+        ага жеткизе аласыңбы?
       courseD_maze_loops_challenge1_instruction: |-
         Let's hunt for treasure - using
         loops! Help the collector reach at least two piles of treasure using only
@@ -11368,42 +11326,30 @@
         keys. Get to the dragon to score points, but avoid the ninja! Standing below
         the line of octopuses will make the ninja stop chasing you, but beware! The
         longer you stay there, the more points you lose. \r\n\r\nGet 5 points to win!"
-      courseD_scrat_ramp1_instruction: |-
-        For this puzzle, snap all of the blocks together
-        and click "Run" to watch it go!
-      courseD_scrat_ramp1_2018_instruction: |-
-        For this puzzle, snap all of the blocks
-        together and click "Run" to watch it go!
-      courseD_scrat_ramp2_instruction: |-
-        Drag an extra `move forward` block out of
-        the toolbox, then attach all blocks to `when run` to finish your code.
-      courseD_scrat_ramp2_2018_instruction: |-
-        Drag an extra `move forward` block out
-        of the toolbox, then attach all blocks to `when run` to finish your code.
-      courseD_scrat_ramp3_instruction: |-
-        There is one extra block that is going to
-        cause Scrat to crash. Throw it away by dragging it back to the toolbox.
-      courseD_scrat_ramp3_2018_instruction: |-
-        There is one extra block that is going
-        to cause Scrat to crash. Throw it away by dragging it back to the toolbox.
-      courseD_scrat_ramp4_instruction: Avoid the cracked ice to keep Scrat safe!
-      courseD_scrat_ramp4_2018_instruction: |-
-        Avoid the cracked ice to keep Scrat
-        safe!
-      courseD_scrat_ramp5_instruction: Avoid the cracked ice.
-      courseD_scrat_ramp5_2018_instruction: Avoid the cracked ice.
-      courseD_scrat_ramp6_instruction: Help Scrat get to the acorn using a loop!
-      courseD_scrat_ramp6_2018_instruction: |-
-        Help Scrat get to the acorn using a
-        loop!
-      courseD_scrat_ramp7_instruction: Help Scrat get to the acorn!
-      courseD_scrat_ramp7_2018_instruction: Help Scrat get to the acorn!
-      courseD_scrat_ramp8_instruction: |-
-        Use what you've learned to get Scrat to
-        the acorn!
-      courseD_scrat_ramp8_2018_instruction: |-
-        Use what you've learned to get Scrat
-        to the acorn!
+      courseD_scrat_ramp1_instruction: Бул башкатырмада анын басканын көрүш үчүн блокторду
+        бириктиргиле дагы "Аткарууну" баскыла!
+      courseD_scrat_ramp1_2018_instruction: Бул башкатырмада анын басканын көрүш үчүн
+        блокторду бириктиргиле дагы "Аткарууну" баскыла!
+      courseD_scrat_ramp2_instruction: Кодуңарды аякташ үчүн куралтактадан жаңы "алдыга
+        жыл" блогун алгыла, анан бардык блокторду "аткарганда" блогунун алдына кошкула.
+      courseD_scrat_ramp2_2018_instruction: Кодуңарды аякташ үчүн куралтактадан жаңы
+        "алдыга жыл" блогун алгыла, анан бардык блокторду "аткарганда" блогунун алдына
+        кошкула.
+      courseD_scrat_ramp3_instruction: Бул жерде Скратты жыдыта турган бир ашык блок
+        бар. Аны кайра куралтактага сүйрөп, бул жерден алып таштагыла.
+      courseD_scrat_ramp3_2018_instruction: Бул жерде Скратты жыдыта турган ашык бир
+        блок бар. Аны кайра куралтактага сүйрөп, бул жерден алып таштагыла.
+      courseD_scrat_ramp4_instruction: Жарылган музду баспагыла, Скратты сактагыла!
+      courseD_scrat_ramp4_2018_instruction: Жарылган музду баспагыла, Скратты сактагыла!
+      courseD_scrat_ramp5_instruction: Жарылган музду баспагыла.
+      courseD_scrat_ramp5_2018_instruction: Жарылган музду баспагыла.
+      courseD_scrat_ramp6_instruction: Циклдар менен Скратты жаңгакка жеткиргиле!
+      courseD_scrat_ramp6_2018_instruction: Циклдар менен Скратты жаңгакка жеткиргиле!
+      courseD_scrat_ramp7_instruction: Скратты жаңгакка жеткиргиле!
+      courseD_scrat_ramp7_2018_instruction: Скратты жаңгакка жеткиргиле!
+      courseD_scrat_ramp8_instruction: Үйрөнгөнүңөрдү колдонуп Скратты жаңгакка жеткиргиле!
+      courseD_scrat_ramp8_2018_instruction: Үйрөнгөнүңдү колдонуп Скратты жаңгакка
+        жеткир!
       courseE_artist_concept1_instruction: 'Recreate this image. '
       courseE_artist_concept1_2018_instruction: 'Recreate this image. '
       courseE_artist_concept4_instruction: |-
@@ -12002,9 +11948,8 @@
       courseF_IceAge_2_instruction: |-
         Help Manny and Sid greet each other by using
         the the `actor ___ say` block twice.
-      courseF_IceAge_3_instruction: |-
-        Scrat is looking for his acorn! Can you help
-        him move the last 200 pixels?
+      courseF_IceAge_3_instruction: Скрат жаңгагын издөөдө! Ал акыркы 200 пикселди
+        өткөнгө жардам бере аласыңбы?
       courseF_IceAge_4_instruction: |-
         Connect a block to the `when actor touches`
         event to play a sound when Diego finds Manny.
@@ -12013,18 +11958,16 @@
         and right repeatedly.
       courseF_IceAge_6_instruction: "Can you help Sid call for his friends when you\nclick
         on him? "
-      courseF_IceAge_7_instruction: |-
-        Write the code to help Scrat get all of the
-        acorns!
+      courseF_IceAge_7_instruction: Скрат жаңгактардын баарына жеткидей кылып код
+        жазгыла!
       courseF_IceAge_8_instruction: |
         Can you finish this program to make it so that
         you both **play a sound** and **score a point** when Sid and Granny collide?
       courseF_IceAge_9_instruction: |-
         Change the scene to an icy background and set
         Sid’s (actor 1) speed to fast.
-      courseF_IceAge_template_instruction: |-
-        Write the code to help Scrat get all
-        of the acorns!
+      courseF_IceAge_template_instruction: Скрат жаңгактардын баарына жеткидей кылып
+        код жазгыла!
       courseF_artist_embed_for7_instruction: |-
         Press Run to see a program in action!
         This one uses for loops.
@@ -12804,9 +12747,8 @@
       flappy_9_2018_instruction: |-
         To mix things up, when hitting an obstacle, instead
         of ending the game try setting the score back to 0.
-      frozen circle function in circle_instruction: |-
-        Now let's create 20 overlapping
-        circles, turning 18 degrees between each circle.
+      frozen circle function in circle_instruction: Азыр кесилишкен 20 тегерек түзгүлө,
+        ар тегеректен кийин 18 градуска бургула.
       frozen circle function with parameter_instruction: |-
         Here's a ”Create circle”
         block that can make circles of different sizes. Can you use this to create
@@ -12975,8 +12917,8 @@
       grade1_playlab_events2a_instruction: |-
         Edit the code so that when the second
         bird is clicked, your program plays a sound!
-      grade1_playlab_events3_instruction: "This program makes Robin fly.  Can you
-        make the robot jump when you press the up button?\r\n"
+      grade1_playlab_events3_instruction: 'This program makes Robin fly.  Can you
+        make the robot jump when you press the up button?  '
       grade1_playlab_events3a_instruction: |-
         When the third bird is clicked, the background
         should change to a city. Can you add code to make this happen?
@@ -13187,8 +13129,10 @@
       grade2_puppy_loops2_instruction: |-
         Can you get to the pig by creating a loop
         that uses only one `move forward` block inside of a `repeat`?
-      grade2_puppy_loops3_instruction: "\"Get me to the pig!\"\r\n\r\n Solve this
-        puzzle by creating a loop!"
+      grade2_puppy_loops3_instruction: |-
+        "Get me to the pig!"
+
+        Solve this puzzle by creating a loop!
       grade2_puppy_loops4_instruction: |-
         In this puzzle, two `repeat` loops will help
         you get to the pig with the fewest number of blocks!
@@ -13853,9 +13797,8 @@
       grade4_frozen_functions1a_instruction: |-
         Use the new “Create a circle” block
         to create 10 overlapping circles. Don't forget to jump forward between circles.
-      grade4_frozen_functions2_instruction: |-
-        Now let's create 20 overlapping circles,
-        turning 18 degrees between each circle.
+      grade4_frozen_functions2_instruction: Азыр кесилишкен 20 тегерек түзгүлө, ар
+        тегеректен кийин 18 градуска бургула.
       grade4_frozen_functions3_instruction: |-
         Here's a ”Create circle” block that
         can make circles of different sizes. Can you use this to create a small circle
@@ -14507,24 +14450,20 @@
       iceage_hello2_2018_instruction: |-
         Help Manny and Sid greet each other by using
         the the `actor ___ say` block twice.
-      iceage_move_events_instruction: |-
-        Write the code to help Scrat get all of the
-        acorns!
-      iceage_move_events_2018_instruction: |-
-        Write the code to help Scrat get all
-        of the acorns!
+      iceage_move_events_instruction: Скрат жаңгактардын баарына жеткидей кылып код
+        жазгыла!
+      iceage_move_events_2018_instruction: Скрат жаңгактардын баарына жеткидей кылып
+        код жазгыла!
       iceage_move_to_actor_instruction: |-
         Connect a block to the `when actor touches`
         event to play a sound when Diego finds Manny.
       iceage_move_to_actor_2018_instruction: |-
         Connect a block to the `when actor
         touches` event to play a sound when Diego finds Manny.
-      iceage_move_to_flag_instruction: |-
-        Scrat is looking for his acorn! Can you help
-        him move the last 200 pixels?
-      iceage_move_to_flag_2018_instruction: |-
-        Scrat is looking for his acorn! Can
-        you help him move the last 200 pixels?
+      iceage_move_to_flag_instruction: Скрат жаңгагын издөөдө! Ал акыркы 200 пикселди
+        өткөнгө жардам бере аласыңбы?
+      iceage_move_to_flag_2018_instruction: Скрат жаңгагын издөөдө! Ал акыркы 200
+        пикселди өткөнгө жардам бере аласыңбы?
       iceage_repeat_instruction: |-
         Help Granny get some exercise by moving left and
         right repeatedly.
@@ -14617,8 +14556,8 @@
       loops_forvideo_harvester_cf_instruction: |-
         Use loops to help the harvester pick
         her crops!
-      loops_forvideo_iceage_ab_instruction: Use loops to get Scrat to the acorn!
-      loops_forvideo_iceage_cf_instruction: Use loops to get Scrat to the acorn!
+      loops_forvideo_iceage_ab_instruction: Скратты циклдар менен жаңгакка жеткир!
+      loops_forvideo_iceage_cf_instruction: Скратты циклдар менен жаңгакка жеткир!
       love_spring_1_instruction: |-
         Let's celebrate Spring!  We have put some seeds
         in the ground to prepare for the season's flowers.  Can you cover them up
@@ -14681,9 +14620,8 @@
         This game is called "Play Lab".  See if you can
         figure out what each block does.
       playEventsK2_instruction: "Jorge wants to say \"Hi there.\"\r\n\r\nCan you help?"
-      playEventsK3_instruction: |-
-        Jorge wants to be scratched behind the ears!  Can
-        you make it so that when you click Jorge he is happy?
+      playEventsK3_instruction: Жорж кулагынын артын тырмагысы келет! Сен басканда
+        Жорж бактылуу болгудай кыла аласыңбы?
       playEventsK4_instruction: |-
         Can you make it so that Jorge the dog chases Robin
         the bird when you click the up arrow?
@@ -14775,34 +14713,27 @@
       sample9a_instruction: |-
         The wizard has found his potions!  Use everything you
         have learned to help him collect them.
-      scrat 16 (copy 1)_instruction: |-
-        Acorn! Acorn! Acorn! Use an "if" block to
-        get me there with the fewest number of blocks.
-      scrat 16_instruction: |-
-        Acorn! Acorn! Acorn! Use an "if" block to get me there
-        with the fewest number of blocks.
-      scrat 17 (copy 1)_instruction: |-
-        Ok, let's do that again for practice - this
-        isn't very different, but watch out for the <insert obstacle name for Scrat>!
-      scrat 17_instruction: |-
-        Ok, let's do that again for practice - this isn't
-        very different, but watch out for the wall!
-      scrat 18 (copy 1)_instruction: |-
-        The "If-else" blocks checks a condition,
-        and then does one thing OR another. To get me to the acorn try to use this
-        new block.
-      scrat 18_instruction: |-
-        The "If-else" blocks checks a condition, and then
-        does one thing OR another. To get me to the acorn try to use this new block.
+      scrat 16 (copy 1)_instruction: Жаңгак! Жаңгак! Жаңгак! "Эгер" блогун колдонуп,
+        мени эң аз блок менен ага жеткизгиле.
+      scrat 16_instruction: Жаңгак! Жаңгак! Жаңгак! "Эгер" блогун колдонуп, мени эң
+        аз блок менен ага жеткизгиле.
+      scrat 17 (copy 1)_instruction: Ок, көнүгүү үчүн дагы бир кайталайлы - айырмасы
+        аз, бирок <insert obstacle name for Scrat> сактангыла!
+      scrat 17_instruction: Ок, машыгуу үчүн аны дагы бир кайталайлы - көп айырмасы
+        жок, бирок дубалдарды этияттагыла!
+      scrat 18 (copy 1)_instruction: '"If-else" (эгер дагы) блогу шартты текшерет,
+        андан кийин бир нерсени же башкасын кылат. Бул жаңы блокту колдонуп мени жаңгакка
+        жеткир.'
+      scrat 18_instruction: '"If-else" (эгер дагы) блогу шартты текшерет, андан кийин
+        бир нерсени же башкасын кылат. Бул жаңы блокту колдонуп мени жаңгакка жеткир.'
       scrat 19 (copy 1)_instruction: '"If-else" (эгер дагы) блогу менен дагы көнүгүү.
         Биринчи жолкусунан туура кыла аласыңбы?'
       scrat 19_instruction: '"If-else" (эгер дагы) блогу менен дагы көнүгүү. Биринчи
         жолкусунан туура кыла аласыңбы?'
-      scrat 20_instruction: |-
-        Can you add just 3 blocks to help me solve a more complex
-        maze? If you do it right, I can walk any curvy path no matter the length.
-        Hurry! The ice is melting!
-      skratDebugVideo1_instruction: Get Scrat to the Acorn.
+      scrat 20_instruction: 3 эле блок кошуп татаал лабиринттен өткөнгө жардам бере
+        аласыңбы? Туура кылсаң, узундугуна карабай бардык ийри-буйру жолдорду өтө
+        алам. Шашыл! Муз эрип жатат!
+      skratDebugVideo1_instruction: Скратты жаңгакка жеткир.
       subgoal U3 L4 introducing subgoal labels_instruction: |-
         Introduce orient turtle
         and move turtle

@@ -21,6 +21,7 @@ class Census::StateCsOffering < ApplicationRecord
   validates :school_year, presence: true, numericality: {greater_than_or_equal_to: 2015, less_than_or_equal_to: 2030}
 
   SUPPORTED_STATES = %w(
+    AL
     AR
     CA
     CT
@@ -52,6 +53,8 @@ class Census::StateCsOffering < ApplicationRecord
 
   def self.construct_state_school_id(state_code, row_hash)
     case state_code
+    when 'AL'
+      row_hash['State School ID']
     when 'AR'
       School.construct_state_school_id('AR', row_hash['District LEA'], row_hash['Location ID'])
     when 'CA'
@@ -99,6 +102,25 @@ class Census::StateCsOffering < ApplicationRecord
   end
 
   UNSPECIFIED_COURSE = 'unspecified'
+
+  AL_COURSE_CODES = %w(
+    520006
+    520007
+    560024
+    520045
+    520046
+    560032
+    520018
+    220098
+    520043
+    925611
+    560025
+    560026
+    450012
+    520014
+    520044
+    520015
+  )
 
   AR_COURSE_CODES = %w(
     565320
@@ -266,6 +288,8 @@ class Census::StateCsOffering < ApplicationRecord
 
   def self.get_courses(state_code, row_hash)
     case state_code
+    when 'AL'
+      AL_COURSE_CODES.select {|course| course == row_hash['Course Code']}
     when 'AR'
       AR_COURSE_CODES.select {|course| course == row_hash['Course ID']}
     when 'CA'
