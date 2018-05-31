@@ -655,11 +655,86 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   #
   # Table: pegasus.forms
-  #
-
-  #
   # Table: pegasus.form_geos
   #
+
+  test "cleans forms matched by email if purging by email" do
+    email = 'test@example.com'
+    create_form(email: email)
+    form_ids = PEGASUS_DB[:forms].where(email: email).map {|f| f[:id]}
+
+    refute_empty PEGASUS_DB[:forms].where(id: form_ids)
+    assert PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?}
+
+    purge_all_accounts_with_email email
+
+    refute PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?}
+  end
+
+  test "cleans forms matched by user_id" do
+    user = create :teacher
+    create_form(user: user)
+    form_ids = PEGASUS_DB[:forms].where(user_id: user.id).map {|f| f[:id]}
+
+    refute_empty PEGASUS_DB[:forms].where(id: form_ids)
+    assert PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?}
+
+    purge_user user
+
+    refute PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?}
+  end
+
+  test "removes email from forms" do
+    assert_removes_field_from_forms :email, expect: :empty
+  end
+
+  test "removes name from forms" do
+    assert_removes_field_from_forms :name
+  end
+
+  test "removes data from forms" do
+    assert_removes_field_from_forms :data, expect: :empty
+  end
+
+  test "removes created_ip from forms" do
+    assert_removes_field_from_forms :created_ip, expect: :empty
+  end
+
+  test "removes updated_ip from forms" do
+    assert_removes_field_from_forms :updated_ip, expect: :empty
+  end
+
+  test "removes processed_data from forms" do
+    assert_removes_field_from_forms :processed_data
+  end
+
+  test "removes hashed_email from forms" do
+    assert_removes_field_from_forms :hashed_email
+  end
+
+  test "removes ip_address from form_geos" do
+    assert_removes_field_from_form_geos :ip_address
+  end
+
+  test "removes city from form_geos" do
+    assert_removes_field_from_form_geos :city
+  end
+
+  test "removes state from form_geos" do
+    assert_removes_field_from_form_geos :state
+  end
+
+  test "removes postal_code from form_geos" do
+    assert_removes_field_from_form_geos :postal_code
+  end
+
+  test "removes latitude from form_geos" do
+    assert_removes_field_from_form_geos :latitude
+  end
+
+  test "removes longitude from form_geos" do
+    assert_removes_field_from_form_geos :longitude
+  end
 
   #
   # Table: pegasus.poste_deliveries
@@ -687,7 +762,111 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   def purge_all_accounts_with_email(email)
-    SolrHelper.stubs(:delete_document).at_least_once
+    SolrHelper.stubs(:delete_document).at_least(0)
     DeleteAccountsHelper.new(solr: {}).purge_all_accounts_with_email(email)
+  end
+
+  def assert_removes_field_from_forms(field, expect: :nil)
+    user = create :teacher
+    create_form(user: user)
+
+    initial_value = PEGASUS_DB[:forms].where(user_id: user.id).first[field]
+    initial_expectation_msg = "Expected initial #{field} not to be #{expect}"
+    case expect
+    when :empty
+      refute_empty initial_value, initial_expectation_msg
+    when :nil
+      refute_nil initial_value, initial_expectation_msg
+    else
+      refute_equal expect, initial_value, initial_expectation_msg
+    end
+
+    purge_user user
+
+    cleared_value = PEGASUS_DB[:forms].where(user_id: user.id).first[field]
+    result_expectation_msg = "Expected cleared #{field} to be #{expect} but was #{cleared_value.inspect}"
+    case expect
+    when :empty
+      assert_empty cleared_value, result_expectation_msg
+    when :nil
+      assert_nil cleared_value, result_expectation_msg
+    else
+      assert_equal expected_result, cleared_value, result_expectation_msg
+    end
+  end
+
+  def assert_removes_field_from_form_geos(field)
+    user = create :teacher
+    form_id = create_form(user: user)
+    create_form_geo(form_id)
+
+    initial_value = PEGASUS_DB[:form_geos].join(:forms, id: :form_id).where(user_id: user.id).first[field]
+    refute_nil initial_value,
+      "Expected initial #{field} not to be nil"
+
+    purge_user user
+
+    cleared_value = PEGASUS_DB[:form_geos].join(:forms, id: :form_id).where(user_id: user.id).first[field]
+    assert_nil cleared_value,
+      "Expected cleared #{field} to be nil but was #{cleared_value.inspect}"
+  end
+
+  #
+  # Adds a test row to pegasus.forms.
+  # Should provide either user or email as a param.
+  # @param [User] user - A user to be treated as the form submitter.  If provided,
+  #   email will be derived from user.
+  # @param [String] email - An email for the form submitter.
+  # @return [Integer] id of the inserted row.
+  #
+  def create_form(user: nil, email: nil)
+    use_name = user&.name || 'Fake Name'
+    use_email = user ? user.email : email
+    PEGASUS_DB[:forms].insert(
+      {
+        kind: 'DeleteAccountsHelperTestForm',
+        secret: SecureRandom.hex,
+        data: {
+          name: use_name,
+          email: use_email
+        },
+        name: use_name,
+        email: use_email,
+        hashed_email: Digest::MD5.hexdigest(use_email),
+        created_at: DateTime.now,
+        updated_at: DateTime.now,
+        created_ip: '1.2.3.4',
+        updated_ip: '1.2.3.4',
+        user_id: user&.id,
+        processed_data: {
+          name: use_name
+        },
+        processed_at: DateTime.now,
+      }
+    )
+  end
+
+  #
+  # Adds a test row to pegasus.form_geos.
+  # Must provide an existing form_id as a param.
+  # @param [Integer] form_id for a forms row.
+  # @return [Integer] id of the inserted row.
+  #
+  def create_form_geo(form_id)
+    DB[:form_geos].insert(
+      {
+        form_id: form_id,
+        created_at: DateTime.now,
+        updated_at: DateTime.now,
+        ip_address: '1.2.3.4',
+        # World's largest ball of twine!
+        city: 'Cawker City',
+        state: 'Kansas',
+        country: 'USA',
+        postal_code: '67430',
+        latitude: 39.509222,
+        longitude: -98.433800,
+      }
+    )
   end
 end
