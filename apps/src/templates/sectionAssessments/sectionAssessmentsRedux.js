@@ -20,35 +20,25 @@ export const setAssessmentsStructure = (scriptId, assessments) =>
 export const startLoadingAssessments = () => ({ type: START_LOADING_ASSESSMENTS });
 export const finishLoadingAssessments = () => ({ type: FINISH_LOADING_ASSESSMENTS });
 
-export const asyncLoadAssessments = (sectionId, scriptId, onComplete) => {
-  return (dispatch, getState) => {
+export const asyncLoadAssessments = (sectionId, scriptId) => {
+  return async (dispatch, getState) => {
     const state = getState().sectionAssessments;
 
     // Don't load data if it's already stored in redux.
     if (state.assessmentsByScript[scriptId]) {
-      onComplete();
       return;
     }
 
     dispatch(startLoadingAssessments());
-    loadAssessmentsFromServer(sectionId, scriptId, (error, data) => {
-      if (error) {
-        console.error(error);
-      } else {
-        dispatch(setAssessments(scriptId, data));
-        onComplete();
-      }
-      dispatch(finishLoadingAssessments());
-    });
 
-    loadAssessmentsStructureFromServer(scriptId, (error, data) => {
-      if (error) {
-        console.error(error);
-      } else {
-        dispatch(setAssessmentsStructure(scriptId, data));
-        onComplete();
-      }
-    });
+    const loadResponses = loadAssessmentsFromServer(sectionId, scriptId);
+    const loadStructure = loadAssessmentsStructureFromServer(scriptId);
+    const [responses, structure] = await Promise.all([loadResponses, loadStructure]);
+
+    dispatch(setAssessments(scriptId, responses));
+    dispatch(setAssessmentsStructure(scriptId, structure));
+
+    dispatch(finishLoadingAssessments(responses, structure));
   };
 };
 
@@ -102,32 +92,24 @@ export const getAssessmentsForCurrentScript = (state) => {
 };
 
 // Make a request to the server for assessment data
-const loadAssessmentsFromServer = (sectionId, scriptId, onComplete) => {
+const loadAssessmentsFromServer = (sectionId, scriptId) => {
   let payload = {};
   if (scriptId) {
     payload.script_id = scriptId;
   }
   // TODO(caleybrock): also fetch /dashboardapi/section_surveys
-  $.ajax({
+  return $.ajax({
     url: `/dashboardapi/section_assessments/${sectionId}`,
     method: 'GET',
     contentType: 'application/json;charset=UTF-8',
     data: payload
-  }).done(assessmentsData => {
-    onComplete(null, assessmentsData);
-  }).fail((jqXhr, status) => {
-    onComplete(status, jqXhr.responseJSON);
   });
 };
 
-const loadAssessmentsStructureFromServer = (scriptId, onComplete) => {
-  $.ajax({
+const loadAssessmentsStructureFromServer = (scriptId) => {
+  return $.ajax({
     url: `/dashboardapi/assessments_structure/${scriptId}`,
     method: 'GET',
     contentType: 'application/json;charset=UTF-8',
-  }).done(assessmentsData => {
-    onComplete(null, assessmentsData);
-  }).fail((jqXhr, status) => {
-    onComplete(status, jqXhr.responseJSON);
   });
 };

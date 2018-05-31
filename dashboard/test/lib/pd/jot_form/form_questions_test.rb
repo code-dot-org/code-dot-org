@@ -63,31 +63,18 @@ module Pd
               'It was a good use of time',
               'I enjoyed it'
             ]
+          ),
+          TextQuestion.new(
+            id: 8,
+            name: 'hidden_text',
+            text: 'This should be hidden',
+            hidden: true
           )
         ]
 
         @form_questions = FormQuestions.new(@form_id, @questions)
-      end
 
-      test 'summarize' do
-        expected_summary = {
-          'text' => {text: 'text label', answer_type: ANSWER_TEXT},
-          'singleSelect' => {text: 'single select label', answer_type: ANSWER_SELECT_VALUE},
-          'singleSelectWithOther' => {text: 'single select with other label', answer_type: ANSWER_SELECT_TEXT},
-          'multiSelect' => {text: 'multi select label', answer_type: ANSWER_MULTI_SELECT},
-          'multiSelectWithOther' => {text: 'multi select with other label', answer_type: ANSWER_MULTI_SELECT},
-          'scale' => {text: 'scale label', answer_type: ANSWER_SELECT_VALUE},
-          'matrix' => {text: 'How much do you agree or disagree with the following statements about this workshop?', answer_type: ANSWER_NONE},
-          'matrix_0' => {text: 'I learned something', answer_type: ANSWER_SELECT_VALUE, parent: 'matrix'},
-          'matrix_1' => {text: 'It was a good use of time', answer_type: ANSWER_SELECT_VALUE, parent: 'matrix'},
-          'matrix_2' => {text: 'I enjoyed it', answer_type: ANSWER_SELECT_VALUE, parent: 'matrix'}
-        }
-
-        assert_equal expected_summary, @form_questions.summarize
-      end
-
-      test 'process_answers' do
-        jotform_answers = {
+        @jotform_answers = {
           '1' => 'this is my text answer',
           '2' => 'Two',
           '3' => {'other' => 'my other reason'},
@@ -98,9 +85,67 @@ module Pd
             'I learned something' => 'Agree',
             'It was a good use of time' => 'Neutral',
             'I enjoyed it' => 'Agree'
+          },
+          '8' => 'hidden answer'
+        }
+      end
+
+      test 'summarize' do
+        expected_summary = {
+          'text' => {
+            text: 'text label',
+            answer_type: ANSWER_TEXT
+          },
+          'singleSelect' => {
+            text: 'single select label',
+            answer_type: ANSWER_SELECT_VALUE,
+            max_value: 3
+          },
+          'singleSelectWithOther' => {
+            text: 'single select with other label',
+            answer_type: ANSWER_SELECT_TEXT
+          },
+          'multiSelect' => {
+            text: 'multi select label',
+            answer_type: ANSWER_MULTI_SELECT
+          },
+          'multiSelectWithOther' => {
+            text: 'multi select with other label',
+            answer_type: ANSWER_MULTI_SELECT
+          },
+          'scale' => {
+            text: 'scale label',
+            answer_type: ANSWER_SELECT_VALUE,
+            max_value: 3
+          },
+          'matrix' => {
+            text: 'How much do you agree or disagree with the following statements about this workshop?',
+            answer_type: ANSWER_NONE
+          },
+          'matrix_0' => {
+            text: 'I learned something',
+            answer_type: ANSWER_SELECT_VALUE,
+            parent: 'matrix',
+            max_value: 3
+          },
+          'matrix_1' => {
+            text: 'It was a good use of time',
+            answer_type: ANSWER_SELECT_VALUE,
+            parent: 'matrix',
+            max_value: 3
+          },
+          'matrix_2' => {
+            text: 'I enjoyed it',
+            answer_type: ANSWER_SELECT_VALUE,
+            parent: 'matrix',
+            max_value: 3
           }
         }
 
+        assert_equal expected_summary, @form_questions.summarize
+      end
+
+      test 'process_answers' do
         expected_processed_answers = {
           'text' => 'this is my text answer',
           'singleSelect' => 2,
@@ -113,7 +158,15 @@ module Pd
           'matrix_2' => 3
         }
 
-        assert_equal expected_processed_answers, @form_questions.process_answers(jotform_answers)
+        assert_equal expected_processed_answers, @form_questions.process_answers(@jotform_answers)
+      end
+
+      test 'show hidden questions' do
+        answers_with_hidden = @form_questions.process_answers(@jotform_answers, show_hidden_questions: true)
+        assert answers_with_hidden.key? 'hidden_text'
+
+        summary_with_hidden = @form_questions.summarize(show_hidden_questions: true)
+        assert summary_with_hidden.key? 'hidden_text'
       end
 
       test 'serialize' do
