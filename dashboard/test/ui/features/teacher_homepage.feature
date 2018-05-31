@@ -66,7 +66,7 @@ Feature: Using the teacher homepage sections feature
   Scenario: Navigate to course pages with course versions enabled
     Given I am on "http://studio.code.org/home"
     When I see the section set up box
-    And I create a new section with course "Computer Science Principles", version "'18-'19" and unit "Unit 1: The Internet"
+    And I create a new section with course "Computer Science Principles", version "'18-'19 (Recommended)" and unit "Unit 1: The Internet"
     Then the section table should have 1 rows
 
     # save the older section id, from the last row of the table
