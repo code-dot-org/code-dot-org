@@ -10,7 +10,7 @@ class BlocksController < ApplicationController
   end
 
   def update
-    @block.update update_params
+    @block.update! update_params
     redirect_to(
       edit_block_path(id: @block.name),
       notice: 'Block saved',
