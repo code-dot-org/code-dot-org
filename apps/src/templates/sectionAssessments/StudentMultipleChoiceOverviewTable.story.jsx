@@ -8,7 +8,9 @@ export default storybook => {
     .addStoryTable([
       {
         name: 'Student overview',
-        description: 'Display assessment summary for each student',
+        description: `Ability to see detailed student overview for multiple choice questions.
+            The table shows how many questions each student answered correctly and a
+            time stamp for when an assessment is submitted.`,
         story: () => (
           <StudentMultipleChoiceOverviewTable
             studentOverviewData={studentOverviewData}
