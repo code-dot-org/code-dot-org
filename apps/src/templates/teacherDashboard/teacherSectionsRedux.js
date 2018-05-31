@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import $ from 'jquery';
 import { OAuthSectionTypes } from './shapes';
-import experiments, { COURSE_VERSIONS } from '../../util/experiments';
 
 /**
  * @const {string[]} The only properties that can be updated by the user
@@ -197,7 +196,7 @@ export const editSectionLoginType = (sectionId, loginType) => dispatch => {
 export const asyncLoadSectionData = (id) => (dispatch) => {
   dispatch({type: ASYNC_LOAD_BEGIN});
   // If section id is provided, load students for the current section.
-  const courseVersions = experiments.isEnabled(COURSE_VERSIONS);
+  const courseVersions = true;
 
   dispatch({type: ASYNC_LOAD_BEGIN});
   let apis = [

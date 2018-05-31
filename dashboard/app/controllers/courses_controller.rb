@@ -31,10 +31,10 @@ class CoursesController < ApplicationController
     redirect_query_string = params[:section_id] ? "?section_id=#{params[:section_id]}" : ''
     case params[:course_name]
     when 'csd'
-      redirect_to "/courses/csd-2017#{redirect_query_string}"
+      redirect_to "/courses/csd-2018#{redirect_query_string}"
       return
     when 'csp'
-      redirect_to "/courses/csp-2017#{redirect_query_string}"
+      redirect_to "/courses/csp-2018#{redirect_query_string}"
       return
     end
 
