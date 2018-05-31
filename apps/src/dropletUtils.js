@@ -830,9 +830,13 @@ export function setParamAtIndex(index, value, block) {
       editor.populateSocket(socket, value);
       editor.redrawPalette();
       editor.redrawMain();
+      break;
     }
     if (token.type === 'socketEnd') {
       socketDepth--;
+      if (socketDepth < 0) {
+        break;
+      }
     }
     token = token.next;
   } while (token);

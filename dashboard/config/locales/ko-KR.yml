@@ -125,6 +125,11 @@
     valid_password: 사용 가능한 비밀번호!
     invalid_password: 비밀번호는 최소 6 문자 이상이어야 합니다
     mismatch_password: 입력한 비밀번호가 일치하지 않습니다.
+    agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
+      and <a href='http://code.org/privacy'>Privacy Policy</a>.
+    under_13_consent: 본인이 13세 미만일 경우, 본인은 본인의 부모 또는 법적 보호자로부터 Code.org 서비스 사용을 허락받았음을 확인합니다.
+    agree_us_website: 본인은 미국에 기반을 두고 있는 웹사이트 사용에 동의합니다.
+    my_data_to_us: 본인의 본 사이트 사용에 따른 데이터는 미국으로 전송되어 보관 또는 처리될 수 있습니다.
     student_terms: 나는 Code.org <a href='http://code.org/tos'>서비스 약관</a>을 준수하는 것에 동의합니다.
       13세 미만일 경우 Code.org 서비스를 이용하기 위해 부모님이나 법적 보호자의 허락을 받은 양식을 제출하여 확인합니다.<br/><br/>학생들과
       연락하기 위해 허용된 양식에 이메일은 저장되지 않습니다. 학생들은 비밀번호 복구를 제외한 어떠한 이메일도 Code.org로 부터 받지 않습니다.
@@ -132,16 +137,18 @@
     teacher_terms: Code.org 서비스 약관을 준수할 것을 동의합니다. 개인정보보호에 대한 자세한 내용은 <a href='http://code.org/privacy'>개인정보
       보호정책</a>을 참조하세요.
     additional_information: 가입하기 위해서는 추가적인 정보가 필요합니다.
+    user_type_button: Update Account Type
     user_type_label: 계정 유형
     user_type_teacher: 선생님
     user_type_student: student
     field_is_required: 이(가) 필요합니다.
     accept_terms: 회원가입에 동의해야 합니다.
     error: An error occurred.
-    email_preference_question: Can we email you about updates to our courses, local
-      learning opportunities, or other computer science news?
+    email_preference_question: 당사의 코스, 현지 기회, 또는 다른 컴퓨터 과학 뉴스 업데이트에 관한 이메일을 귀하께 보내드려도 되겠습니까?
+    email_preference_privacy: (개인 정보 보호 정책을 참조하십시오.)
     email_preference_yes: 예
     email_preference_no: 아니요
+    email_preference_required: You must specify an email preference.
   school_info:
     title: 학교 정보(선택사항)
     school_country: 학교 국가정보
@@ -557,6 +564,8 @@
     student_not_found: 한 명 이상의 학생을 찾을 수 없습니다.
     all_students_must_be_in_current_section: 모든 학생들은 당신의 섹션에 등록되어야 합니다.
     already_enrolled_in_new_section: 이 학생들은 다른 섹션에 등록하였기 때문에 이동이 불가능합니다.
+    third_party_login: You cannot move students to a section that is synced with a
+      third party tool.
   share:
     title: Code Studio 배우기
     description: 누구든지 컴퓨터 과학을 배우고, 코드를 이용해서 게임, 앱, 예술을 만들 수 있습니다.
@@ -1033,6 +1042,7 @@
     csd5_2: '2 장: 데이터 문제 해결하기'
     csd6_1: '1 장: 하드웨어 출력'
     csd6_2: '2 장: 하드웨어 입력'
+    csd_survey: Post-Course Survey
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -1190,3 +1200,11 @@
       the storing of cookies on your computer or device.
     more_information: See Code.org's Privacy Policy.
     accept: 동의합니다
+  gdpr_dialog:
+    heading: Do you agree to using a web site based in the United States?
+    message: Data from your use of this site may be sent to and stored or processed
+      in the United States.
+    link_intro: For details see our
+    privacy_policy: privacy policy
+    logout: Logout
+    true: 예

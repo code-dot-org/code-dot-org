@@ -138,6 +138,13 @@
     valid_password: Ispravna lozinka!
     invalid_password: Lozinka mora biti duga najmanje 6 znakova
     mismatch_password: Dvije lozinke koje ste unijeli se ne podudaraju
+    agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
+      and <a href='http://code.org/privacy'>Privacy Policy</a>.
+    under_13_consent: If I am under 13 years of age, I confirm that I have my parent
+      or legal guardian's permission to use the Code.org services.
+    agree_us_website: I agree to using a website based in the United States.
+    my_data_to_us: Data from my use of this site may be sent to and stored or processed
+      in the United States.
     student_terms: Slažem se da ću poštovati <a href='http://code.org/tos'>uvjete
       korištenja</a> Code.org. Ako imam manje od 13 godina, potvrđujem slanjem ovog
       obrasca da moj roditelj ili zakonski staratelj daje dozvolu za korištenje usluga
@@ -147,6 +154,7 @@
       Code.org.
     additional_information: Trebamo dodatne informacije kako bismo nastavili vašu
       prijavu.
+    user_type_button: Update Account Type
     user_type_label: Tip računa
     user_type_teacher: Učitelj
     user_type_student: Učenik
@@ -157,6 +165,7 @@
       learning opportunities, or other computer science news?
     email_preference_yes: Da
     email_preference_no: Ne
+    email_preference_required: You must specify an email preference.
   school_info:
     title: Informacije o školi (nije obavezno)
     school_country: School Country
@@ -599,6 +608,8 @@
       u vaše odjeljenje.
     already_enrolled_in_new_section: Ne možete premjestiti ove učenike zato što su
       oni već u novom odjeljenju.
+    third_party_login: You cannot move students to a section that is synced with a
+      third party tool.
   share:
     title: Naučite o Code Studiu
     description: Svako može naučiti računarske znanosti, te pisati kod za igre, aplikacije
@@ -1119,6 +1130,7 @@
     csd5_2: 'Poglavlje 2: Rješavanje problema podataka'
     csd6_1: 'Chapter 1: Hardware Output'
     csd6_2: 'Chapter 2: Hardware Input'
+    csd_survey: Post-Course Survey
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -1284,3 +1296,11 @@
       the storing of cookies on your computer or device.
     more_information: See Code.org's Privacy Policy.
     accept: Slažem se
+  gdpr_dialog:
+    heading: Do you agree to using a web site based in the United States?
+    message: Data from your use of this site may be sent to and stored or processed
+      in the United States.
+    link_intro: For details see our
+    privacy_policy: privacy policy
+    logout: Logout
+    true: Da

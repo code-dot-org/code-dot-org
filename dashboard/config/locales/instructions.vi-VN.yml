@@ -48,8 +48,8 @@
         Gợi ý: Mỗi bộ râu dài 75 pixels. Sửa mã này để vẽ bộ râu.'
       2-3 Artist Debugging 3_instruction: 'Thuyền của tôi có một lỗ! Bạn có thể sửa
         chữa nó bằng cách thay đổi góc của dòng? Gợi ý: góc cuối cùng là 15 độ.'
-      2-3 Artist Debugging 4_instruction: 'Hình ảnh mà chúng tôi đang cố gắng để vẽ
-        là gì? Nối các dấu chấm còn lại, sử dụng dòng và góc thích hợp. '
+      2-3 Artist Debugging 4_instruction: Hình ảnh mà chúng tôi đang cố gắng để vẽ
+        là gì? Nối các dấu chấm còn lại, sử dụng dòng và góc thích hợp.
       2-3 Artist Debugging 5_instruction: 'Mã cho chân và bàn chân mà bạn nhìn thấy
         là sai. Gợi ý: Chân quá dài, chúng ta cần phải xóa một bước (ý định chơi chữ)'
       2-3 Artist Debugging 6_instruction: Có vẻ như tôi đang ngồi trên một cái ghế
@@ -204,7 +204,7 @@
       2-3 Bee Conditionals 12_instruction: |-
         Sử dụng một vòng lặp để kiểm tra và thu thập mật hoa
         từ tất cả các bông hoa.
-      2-3 Bee Conditionals 13_instruction: |-
+      2-3 Bee Conditionals 13_instruction: |
         Hút mật hoa để làm mật ong.
         Gợi ý: điều gì sẽ xảy ra nếu sử dụng hàm "if" để hút mật ở bông hoa đỏ?
                    bạn có thể dùng vòng lặp để hoàn thành không?
@@ -1020,8 +1020,8 @@
       Artist - Nested Loops 2_instruction: "Now nest this loop inside another loop\nto
         draw 10 triangles.  This is called a nested loop.  Hint: All 10 triangles\ncomplete
         a 360 degree rotation.  "
-      Artist - Nested Loops 3_instruction: "Create a sun by nesting the starter code
-        in another loop. This is called a nested loop.\r\n"
+      Artist - Nested Loops 3_instruction: 'Create a sun by nesting the starter code
+        in another loop. This is called a nested loop.  '
       Artist - Nested Loops 5_instruction: Loop the given code to create a windmill.
       Artist - Nested Loops 6_instruction: |-
         Can you draw a hexagon by looping the
@@ -1478,20 +1478,26 @@
         typing 0s and 1s
       CSD U5 black white images pixelation_2018_instruction: Complete the X shape
         by typing 0s and 1s
-      CSD U6 params modify clouds_instruction: "# Clouds\r\n\r\nThis program makes
-        the clouds move when you blow on the sound sensor, but it's not finished.\r\n\r\n#
-        Do This\r\n* Create a new function `moveCloud(name)` that will move any cloud.\r\n
-        \ * (Hint: you will use almost all the same code as the `moveCloud0` function)\r\n*
-        Call your new `moveCloud(name)` function inside the event block, once for
-        each cloud name.\r\n * (Hint: this is similar to how the `loopCloud(name)`
-        function is called many times."
-      CSD U6 params modify clouds_2018_instruction: "# Clouds\r\n\r\nThis program
-        makes the clouds move when you blow on the sound sensor, but it's not finished.\r\n\r\n#
-        Do This\r\n* Create a new function `moveCloud(name)` that will move any cloud.\r\n
-        \ * (Hint: you will use almost all the same code as the `moveCloud0` function)\r\n*
-        Call your new `moveCloud(name)` function inside the event block, once for
-        each cloud name.\r\n * (Hint: this is similar to how the `loopCloud(name)`
-        function is called many times."
+      CSD U6 params modify clouds_instruction: |-
+        # Clouds
+
+        This program makes the clouds move when you blow on the sound sensor, but it's not finished.
+
+        # Do This
+        * Create a new function `moveCloud(name)` that will move any cloud.
+        * (Hint: you will use almost all the same code as the `moveCloud0` function)
+        * Call your new `moveCloud(name)` function inside the event block, once for each cloud name.
+        * (Hint: this is similar to how the `loopCloud(name)` function is called many times.
+      CSD U6 params modify clouds_2018_instruction: |-
+        # Clouds
+
+        This program makes the clouds move when you blow on the sound sensor, but it's not finished.
+
+        # Do This
+        * Create a new function `moveCloud(name)` that will move any cloud.
+        * (Hint: you will use almost all the same code as the `moveCloud0` function)
+        * Call your new `moveCloud(name)` function inside the event block, once for each cloud name.
+        * (Hint: this is similar to how the `loopCloud(name)` function is called many times.
       CSD U6 params modify planes_instruction: "# Multi-plane Controller\r\n\r\nThis
         program moves the three planes using the board accelerometer and the on-screen
         check boxes.  Right now, only the red plane works.\r\n\r\n# Do This\r\n* Create
@@ -2111,9 +2117,9 @@
       CSPU5_U3 - High Low - Else if_2018_instruction: Add an else-if statement in
         order to tell the user if their guess is high or low instead of just wrong.
         (Click to see full instructions)
-      CSPU5_U3 - High Low - Else_instruction: "Add an else statement so that the program
+      CSPU5_U3 - High Low - Else_instruction: 'Add an else statement so that the program
         will tell the user when they are right and when they are wrong. (Click to
-        see full instructions)\r\n"
+        see full instructions)  '
       CSPU5_U3 - High Low - If_instruction: |-
         Add code to the if statement that indicates
         the user guessed the secret number. (Click to see full instructions)
@@ -2433,10 +2439,10 @@
       CSPU5_U3 - Simulation - 2_2018_instruction: Keep track of how many heads (1's)
         your program generates and print the results to the screen. (Click to see
         full instructions)
-      CSPU5_U3 - Simulation - 3_instruction: "Add functionality that counts how many
-        heads in a row are flipped. (Click to see full instructions)\r\n"
-      CSPU5_U3 - Simulation - 3_2018_instruction: "Add functionality that counts how
-        many heads in a row are flipped. (Click to see full instructions)\r\n"
+      CSPU5_U3 - Simulation - 3_instruction: 'Add functionality that counts how many
+        heads in a row are flipped. (Click to see full instructions)  '
+      CSPU5_U3 - Simulation - 3_2018_instruction: 'Add functionality that counts how
+        many heads in a row are flipped. (Click to see full instructions)  '
       CSPU5_U3 - Simulation - 4_instruction: |-
         Update your while loop's condition
         so the the coin flips until there are three heads in a row. (Click to see
@@ -4190,10 +4196,10 @@
         other shapes if you like. You can choose the size of each shape. Don’t forget
         to add an “else” clause!\r\nOne example - and part of the definition -  has
         already been done for you!\r\n"
-      Eval Cond 8_instruction: "Free Play: Suppose you want to own a car at 21, or
+      Eval Cond 8_instruction: 'Free Play: Suppose you want to own a car at 21, or
         have your own business by 30. Write a function called life-goals, which takes
         in an age and produces a string that describes your life goals by then. Don’t
-        forget to add an “else” clause!\r\n"
+        forget to add an “else” clause!  '
       Eval Contracts 1_instruction: |-
         Use the "star" function to produce a red star
         with a 60 pixel radius
@@ -4495,18 +4501,18 @@
       InspirationalArtwork_2018_instruction: |-
         If this picture inspires you, try to
         make something similar. Otherwise, create something all your own.
-      'Internet Simulator: Broadcast Mode_instruction': "Now use the Internet Simulator
+      'Internet Simulator: Broadcast Mode_instruction': 'Now use the Internet Simulator
         to send the battleship moves. For setup, join a Room with your group, and
         add ships to your paper board for each opponent. When playing, all communication
-        must be done through the tool, so no talking, but have fun!\r\n"
-      'Internet Simulator: Broadcast_instruction': "Now use the Internet Simulator
+        must be done through the tool, so no talking, but have fun!  '
+      'Internet Simulator: Broadcast_instruction': 'Now use the Internet Simulator
         to send the battleship moves. For setup, join a Room with your group, and
         add ships to your paper board for each opponent. When playing, all communication
-        must be done through the tool, so no talking, but have fun!\r\n"
-      'Internet Simulator: Broadcast_2018_instruction': "Now use the Internet Simulator
+        must be done through the tool, so no talking, but have fun!  '
+      'Internet Simulator: Broadcast_2018_instruction': 'Now use the Internet Simulator
         to send the battleship moves. For setup, join a Room with your group, and
         add ships to your paper board for each opponent. When playing, all communication
-        must be done through the tool, so no talking, but have fun!\r\n"
+        must be done through the tool, so no talking, but have fun!  '
       'Internet Simulator: DNS Mode_instruction': |-
         In this version of the Internet
         Simulator, a Domain Name System (DNS) is provided for you and knows the IP
@@ -4771,8 +4777,8 @@
       K2.0 sequence pre_instruction: |-
         Play with these blocks to see if you can get
         me to the pig!
-      KIKI GLJ Test Response_instruction: "Look carefully at the code below.  What
-        do you think the plane will do when you click \"Run\"?\r\n"
+      KIKI GLJ Test Response_instruction: 'Look carefully at the code below.  What
+        do you think the plane will do when you click "Run"?  '
       KTest1_instruction: Can you make me move South once more to get to the pig?
       KTest2_instruction: Lần theo con đường và dẫn tôi tới chú heo ngốc. Nhớ tránh
         TNT không thì bay mất xác!
@@ -5044,8 +5050,8 @@
         function block. The blocks in the function editor are the definition that
         make up "draw a square." When you're done looking around, click "Save
         and Close" and then "Run."
-      NEW Course 4 Artist Functions 6_instruction: "Using the \"draw a square\" function
-        block, can you draw this picture? Hint: each square is 20 pixels apart.\r\n"
+      NEW Course 4 Artist Functions 6_instruction: 'Using the "draw a square" function
+        block, can you draw this picture? Hint: each square is 20 pixels apart.  '
       NEW Course 4 Artist Functions 7_instruction: "Are you getting the hang of how\nto
         use function blocks? Let's modify this square so that it is 200 pixels\nin
         size. Click on \"edit\" to enter the `draw a square` function editor. Remember\nto
@@ -5089,8 +5095,8 @@
       NEW Course 4 Artist Params 2_instruction: |-
         Create a `draw triangle` function
         from scratch that makes a triangle with  50 pixel sides.
-      NEW Course 4 Artist Params 3_instruction: "Now let's use the function to draw
-        5 triangles in a row. Each triangle is 30 pixels apart.\r\n"
+      NEW Course 4 Artist Params 3_instruction: 'Now let''s use the function to draw
+        5 triangles in a row. Each triangle is 30 pixels apart.  '
       NEW Course 4 Artist Params 4_instruction: |-
         Do you notice anything different
         about these function blocks? Click “Run” to see what happens.
@@ -5160,8 +5166,8 @@
       NEW Course 4 Bee For Loops 3_instruction: "Ah, the \"for loop\" makes this\nmuch
         easier! All the code you need is here, take a look at how it is put together\nthen
         click \"Run\" to see how it works. "
-      NEW Course 4 Bee For Loops 4 4_instruction: 'Bạn có thể giúp chú ong tìm kiếm
-        phần còn lại của mật ong bằng cách sử dụng vòng lặp không? '
+      NEW Course 4 Bee For Loops 4 4_instruction: Bạn có thể giúp chú ong tìm kiếm
+        phần còn lại của mật ong bằng cách sử dụng vòng lặp không?
       NEW Course 4 Bee For Loops 4_instruction: "Replace the ??? in the \"for loop\"\nwith
         the largest amount of nectar the bee has to collect. "
       NEW Course 4 Bee For Loops 5 5_instruction: |-
@@ -5213,10 +5219,10 @@
         Simulator, a Domain Name System (DNS) is provided for you and knows the IP
         addresses of all connected computers. Send a message in the form GET [hostname]
         to the DNS service at address <yourRouterNumber>.15 to get a student's address.
-      NetSim Standalone Broadcast_instruction: "In this version of the Internet Simulator,
+      NetSim Standalone Broadcast_instruction: 'In this version of the Internet Simulator,
         you can connect to up to 5 other people in a room. When you send messages
         in the room, everyone receives them. What are some of the challenges of this
-        system, and how might you solve them?\r\n"
+        system, and how might you solve them?  '
       NetSim Standalone Classroom Routers_instruction: |-
         In this version of the Internet
         Simulator, everyone connects to a router and has a specific address. To send
@@ -5339,8 +5345,8 @@
       October15 JoL 1_instruction: |-
         Program the artist to design a face for your
         jack-o-lantern!
-      October15 bat_instruction: "Freeplay: Here are some functions to play with.
-        \ Can you draw a bat?\r\n"
+      October15 bat_instruction: 'Freeplay: Here are some functions to play with.  Can
+        you draw a bat?  '
       October15 ghost 1_instruction: |-
         Give the ghost eyes, using the "draw a circle"
         function.
@@ -5996,15 +6002,17 @@
         Each side should be 100 pixels long.
       StepIntro_instruction: Here's how to use the "Step" button.
       Test Play Lab_instruction: This is a test play lab level.
-      Test embedded Blockly in instructions_instruction: "As a block element, we should
-        be able to include XML representing a valid Blockly block or blocks.\r\n\r\n<xml>\r\n
-        \ <block type=\"draw_move_by_constant\">\r\n    <title name=\"DIR\">moveForward</title>\r\n
-        \   <title name=\"VALUE\">100</title>\r\n  </block>\r\n</xml>\r\n\r\nWe also
-        support Blockly XML as an inline element like so: <xml><block type=\"draw_move_by_constant\"><title
-        name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>.
-        The difference in input format being that this one is embedded within a paragraph,
-        whereas the previous one is in a text block of its own. The difference in
-        output is comparable."
+      Test embedded Blockly in instructions_instruction: |-
+        As a block element, we should be able to include XML representing a valid Blockly block or blocks.
+
+        <xml>
+        <block type="draw_move_by_constant">
+        <title name="DIR">moveForward</title>
+        <title name="VALUE">100</title>
+        </block>
+        </xml>
+
+        We also support Blockly XML as an inline element like so: <xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">100</title></block></xml>. The difference in input format being that this one is embedded within a paragraph, whereas the previous one is in a text block of its own. The difference in output is comparable.
       Test embedded K1 Blockly in instructions_instruction: |-
         Use three `move west`
         blocks and one `pick corn` block to solve this puzzle.
@@ -6067,10 +6075,10 @@
         can't see the other students' addresses.  Instead, one of you must act as
         a name service, to help share addresses with each other.
       U2L14 frequency random_instruction: Test
-      U2L2 NetSim Hub Mode_instruction: "Now use the Internet Simulator to send the
+      U2L2 NetSim Hub Mode_instruction: 'Now use the Internet Simulator to send the
         battleship moves. For setup, join a Room with your group, and add ships to
         your paper board for each opponent. When playing, all communication must be
-        done through the tool, so no talking, but have fun!\r\n"
+        done through the tool, so no talking, but have fun!  '
       U2L3 NetSim Hub Mode_instruction: |-
         Use the Internet Simulator to test out your
         group's binary communication protocol for battleship. How short can you make
@@ -6323,9 +6331,9 @@
         Add an else-if statement in order to
         tell the user if their guess is high or low instead of just wrong. (Click
         to see full instructions)
-      U3 - High Low - Else_instruction: "Add an else statement so that the program
+      U3 - High Low - Else_instruction: 'Add an else statement so that the program
         will tell the user when they are right and when they are wrong. (Click to
-        see full instructions)\r\n"
+        see full instructions)  '
       U3 - High Low - If_instruction: |-
         Add code to the if statement that indicates
         the user guessed the secret number. (Click to see full instructions)
@@ -6529,26 +6537,26 @@
       U3 - Practice Create Performance Task_instruction: |-
         Design and implement your
         practice Create Performance Task. (Click to see full instructions)
-      U3 - Read Record - 1.2_instruction: "Console.log the records returned by a call
-        to readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 1.5_instruction: "Console.log the records returned by a call
-        to readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 1.6_instruction: "Console.log the records returned by a call
-        to readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 1_instruction: "Console.log the records returned by a call
-        to readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 2_instruction: "Change the table name so that the records
-        are read from the new table.(Click to see full instructions)\r\n"
-      U3 - Read Record - 3_instruction: "Change the name of the table in a readRecords
-        command to read from a table that does not exist. (Click to see full instructions)\r\n"
-      U3 - Read Record - 4.1_instruction: "Print out each record return from the readRecords
-        call individually. (Click to see full instructions)\r\n"
-      U3 - Read Record - 4_instruction: "Print out each record return from the readRecords
-        call individually. (Click to see full instructions)\r\n"
-      U3 - Read Record - 5 and half_instruction: "Print out the name of each movie
-        in the records return from the readRecords call. (Click to see full instructions)\r\n"
-      U3 - Read Record - 5_instruction: "Print out the name of each movie in the records
-        return from the readRecords call. (Click to see full instructions)\r\n"
+      U3 - Read Record - 1.2_instruction: 'Console.log the records returned by a call
+        to readRecords. (Click to see full instructions)  '
+      U3 - Read Record - 1.5_instruction: 'Console.log the records returned by a call
+        to readRecords. (Click to see full instructions)  '
+      U3 - Read Record - 1.6_instruction: 'Console.log the records returned by a call
+        to readRecords. (Click to see full instructions)  '
+      U3 - Read Record - 1_instruction: 'Console.log the records returned by a call
+        to readRecords. (Click to see full instructions)  '
+      U3 - Read Record - 2_instruction: 'Change the table name so that the records
+        are read from the new table.(Click to see full instructions)  '
+      U3 - Read Record - 3_instruction: 'Change the name of the table in a readRecords
+        command to read from a table that does not exist. (Click to see full instructions)  '
+      U3 - Read Record - 4.1_instruction: 'Print out each record return from the readRecords
+        call individually. (Click to see full instructions)  '
+      U3 - Read Record - 4_instruction: 'Print out each record return from the readRecords
+        call individually. (Click to see full instructions)  '
+      U3 - Read Record - 5 and half_instruction: 'Print out the name of each movie
+        in the records return from the readRecords call. (Click to see full instructions)  '
+      U3 - Read Record - 5_instruction: 'Print out the name of each movie in the records
+        return from the readRecords call. (Click to see full instructions)  '
       U3 - Return Values - constrainTurtle_instruction: |-
         Use constrain in this simple
         app to keep the turtle from driving off the screen.  (Click to see full instructions)
@@ -6584,18 +6592,18 @@
         Write the function maxVal and
         then use it within the console.log statement to calculate the maximum of two
         values.  (Click to see full instructions)
-      U3 - Search Terms - 1_instruction: "Create an array of all the movies made in
-        2008 and print it out. (Click to see full instructions)\r\n"
-      U3 - Search Terms - 2_instruction: "Print out all the movies with year 2008
-        using the readRecords search terms. (Click to see full instructions)\r\n"
-      U3 - Search Terms - 3_instruction: "Print whether or not there are movies matching
-        the search criteria (Click to see full instructions)\r\n"
-      U3 - Search Terms - 4_instruction: "Print whether or not there are movies matching
-        the search criteria (Click to see full instructions)\r\n"
-      U3 - Search Terms - 5_instruction: "Print out the cities that are in California
-        or have a population of 2,000,000. (Click to see full instructions)\r\n"
-      U3 - Search Terms - 6_instruction: "Print out the cities that are in California
-        or have a population of 2,000,000. (Click to see full instructions)\r\n"
+      U3 - Search Terms - 1_instruction: 'Create an array of all the movies made in
+        2008 and print it out. (Click to see full instructions)  '
+      U3 - Search Terms - 2_instruction: 'Print out all the movies with year 2008
+        using the readRecords search terms. (Click to see full instructions)  '
+      U3 - Search Terms - 3_instruction: 'Print whether or not there are movies matching
+        the search criteria (Click to see full instructions)  '
+      U3 - Search Terms - 4_instruction: 'Print whether or not there are movies matching
+        the search criteria (Click to see full instructions)  '
+      U3 - Search Terms - 5_instruction: 'Print out the cities that are in California
+        or have a population of 2,000,000. (Click to see full instructions)  '
+      U3 - Search Terms - 6_instruction: 'Print out the cities that are in California
+        or have a population of 2,000,000. (Click to see full instructions)  '
       U3 - Simple Drawing - Comments_instruction: Do this
       U3 - Simple Drawing - Ellipse and No Fill_instruction: Do this
       U3 - Simple Drawing - Fill_instruction: Do This
@@ -6625,8 +6633,8 @@
         Keep track of how many heads (1's) your
         program generates and print the results to the screen. (Click to see full
         instructions)
-      U3 - Simulation - 3_instruction: "Add functionality that counts how many heads
-        in a row are flipped. (Click to see full instructions)\r\n"
+      U3 - Simulation - 3_instruction: 'Add functionality that counts how many heads
+        in a row are flipped. (Click to see full instructions)  '
       U3 - Simulation - 4_instruction: |-
         Update your while loop's condition so the
         the coin flips until there are three heads in a row. (Click to see full instructions)
@@ -7640,43 +7648,68 @@
       U4 - Add Row By Hand_instruction: |-
         Add a new record to your table in the Data
         Viewer. (Click to see full instructions)
+      U4 - Add Row By Hand_2018_instruction: Add a new record to your table in the
+        Data Viewer. (Click to see full instructions)
       U4 - Charts - Export Data_instruction: |-
         Export the data from the “ages” table
         as a CSV file, then remix this app and import the CSV file. (Click to see
         full instructions)
+      U4 - Charts - Export Data_2018_instruction: Export the data from the “ages”
+        table as a CSV file, then remix this app and import the CSV file. (Click to
+        see full instructions)
       U4 - Charts - Import Data 1_instruction: |-
         Download the CSV file we’ve provided,
+        and then use the data viewer to import the data from the file into the “mytable”
+        table. (Click to see full instructions)
+      U4 - Charts - Import Data 1_2018_instruction: Download the CSV file we’ve provided,
         and then use the data viewer to import the data from the file into the “mytable”
         table. (Click to see full instructions)
       U4 - Charts - Import Data 2_instruction: |-
         Call readRecords on “mytable” and
         print each record to the console. (Click to see full instructions)
-      U4 - Charts - Line Chart 1_instruction: |-
-        Create a line chart showing the change
-        in popularity of “#tbt” over time. (Click to see full instructions)
-      U4 - Charts - Line Chart 2_instruction: |-
-        Add a second line to your chart to
-        show the change in popularity of both “#tbt” and “#nofilter” at the same time.
-        (Click to see full instructions)
+      U4 - Charts - Import Data 2_2018_instruction: Call readRecords on “mytable”
+        and print each record to the console. (Click to see full instructions)
+      U4 - Charts - Line Chart 1_instruction: Create a line chart showing the change
+        in popularity of “
+      U4 - Charts - Line Chart 1_2018_instruction: Create a line chart showing the
+        change in popularity of “
+      U4 - Charts - Line Chart 2_instruction: Add a second line to your chart to show
+        the change in popularity of both “
+      U4 - Charts - Line Chart 2_2018_instruction: Add a second line to your chart
+        to show the change in popularity of both “
       U4 - Charts - Line Chart Template_instruction: This is a template.
       U4 - Charts - Remixing Apps with Data_instruction: |-
         Run this app and see what
         it prints to the console. Then remix the app and run the remixed version to
         see what happened to the data. (Click to see full instructions)
+      U4 - Charts - Remixing Apps with Data_2018_instruction: Run this app and see
+        what it prints to the console. Then remix the app and run the remixed version
+        to see what happened to the data. (Click to see full instructions)
       U4 - Charts - Scatter Chart_instruction: |-
         Create a scatter plot of the “rottenTomatoes”
         table, using the new table and column names. (Click to see full instructions)
+      U4 - Charts - Scatter Chart_2018_instruction: Create a scatter plot of the “rottenTomatoes”
+        table, using the new table and column names. (Click to see full instructions)
       U4 - Charts - drawChartFromRecords 1_instruction: |-
         Use the drawChartFromRecords
+        block to create a scatter plot from the table in the database. (Click to see
+        full instructions)
+      U4 - Charts - drawChartFromRecords 1_2018_instruction: Use the drawChartFromRecords
         block to create a scatter plot from the table in the database. (Click to see
         full instructions)
       U4 - Charts - drawChartFromRecords Options 1_instruction: |-
         Add a title to your
         chart and change the colors of your lines using the options parameter of drawChartFromRecords.
         (Click to see full instructions)
+      U4 - Charts - drawChartFromRecords Options 1_2018_instruction: Add a title to
+        your chart and change the colors of your lines using the options parameter
+        of drawChartFromRecords. (Click to see full instructions)
       U4 - Charts - drawChartFromRecords Options 2_instruction: |-
         Look through the
         drawChartFromRecords API and choose some more options to customize. (Click
+        to see full instructions)
+      U4 - Charts - drawChartFromRecords Options 2_2018_instruction: Look through
+        the drawChartFromRecords API and choose some more options to customize. (Click
         to see full instructions)
       U4 - Charts - drawChartsFromRecords 1_instruction: |-
         Add screen element, pull
@@ -7684,45 +7717,76 @@
       U4 - CreateRecord - 1_instruction: |-
         Add a createRecord command and run the
         program. (Click to see full instructions)
+      U4 - CreateRecord - 1_2018_instruction: Add a createRecord command and run the
+        program. (Click to see full instructions)
       U4 - CreateRecord - 2.5_instruction: |-
         Change the table name in createRecord
+        then check the Data Viewer to see the new table. (Click to see  full instructions)
+      U4 - CreateRecord - 2.5_2018_instruction: Change the table name in createRecord
         then check the Data Viewer to see the new table. (Click to see  full instructions)
       U4 - CreateRecord - 2_instruction: |-
         Change the name from "Alice" to something
         else in the createRecord command.  Run the program and use the Data Viewer
         to see the changes to your table. (Click to see full instructions)
+      U4 - CreateRecord - 2_2018_instruction: Change the name from "Alice" to something
+        else in the createRecord command.  Run the program and use the Data Viewer
+        to see the changes to your table. (Click to see full instructions)
       U4 - CreateRecord - 3_instruction: |-
         Use createRecord to add the song object
         as a record to a table. (Click to see full instructions)
+      U4 - CreateRecord - 3_2018_instruction: Use createRecord to add the song object
+        as a record to a table. (Click to see full instructions)
       U4 - CreateRecord - 4_instruction: |-
         Run the program. Verify the song object
+        was added to the database. Note the callback function now displays the copy
+        of the record sent back back by the database. (Click to see full instructions)
+      U4 - CreateRecord - 4_2018_instruction: Run the program. Verify the song object
         was added to the database. Note the callback function now displays the copy
         of the record sent back back by the database. (Click to see full instructions)
       U4 - CreateRecord - 5_instruction: |-
         Add a property to the JavaScript object,
         then run the program.  View the data table and see how changing the object
         affects the data table. (Click to see full instructions)
+      U4 - CreateRecord - 5_2018_instruction: Add a property to the JavaScript object,
+        then run the program.  View the data table and see how changing the object
+        affects the data table. (Click to see full instructions)
       U4 - Edit Data Table by Hand_instruction: |-
         View the data table and click edit
         next to each row.  Add the artists names for each song by hand. (Click to
         see full instructions)
+      U4 - Edit Data Table by Hand_2018_instruction: View the data table and click
+        edit next to each row.  Add the artists names for each song by hand. (Click
+        to see full instructions)
       U4 - Exploring Data Tools - Template_instruction: |-
         Use createRecord to add
+        the song object as a record to a table. (Click to see full instructions)
+      U4 - Exploring Data Tools - Template_2018_instruction: Use createRecord to add
         the song object as a record to a table. (Click to see full instructions)
       U4 - Objects - accessingPropertiesInArray_instruction: |-
         Access the properties
         of the objects stored in an array. (Click to see full instructions)
+      U4 - Objects - accessingPropertiesInArray_2018_instruction: Access the properties
+        of the objects stored in an array. (Click to see full instructions)
       U4 - Objects - arraysOfObjects_instruction: |-
         Create an array called "students"
+        and add all 5 student objects to the array. (Click to see full instructions)
+      U4 - Objects - arraysOfObjects_2018_instruction: Create an array called "students"
         and add all 5 student objects to the array. (Click to see full instructions)
       U4 - Objects - createContactObject_instruction: |-
         Construct a new object from
         the user inputs, and append it to your array. (Click to see full instructions)
+      U4 - Objects - createContactObject_2018_instruction: Construct a new object
+        from the user inputs, and append it to your array. (Click to see full instructions)
       U4 - Objects - createContactsData_instruction: |-
         Add values to the three contact
         objects provided in the starter code. (Click to see full instructions)
+      U4 - Objects - createContactsData_2018_instruction: Add values to the three
+        contact objects provided in the starter code. (Click to see full instructions)
       U4 - Objects - createDotNotation_instruction: |-
         Create a student Object yourself.
+        Add properties to your object one at a time using dot notation. (Click to
+        see full instructions)
+      U4 - Objects - createDotNotation_2018_instruction: Create a student Object yourself.
         Add properties to your object one at a time using dot notation. (Click to
         see full instructions)
       U4 - Objects - createObject_instruction: |
@@ -7730,6 +7794,8 @@
         properties and display it in the Debug Console. (Click to see full instructions)
       U4 - Objects - dotNotation_instruction: |-
         Use dot notation to display individual
+        properties of the object. (Click to see full instructions)
+      U4 - Objects - dotNotation_2018_instruction: Use dot notation to display individual
         properties of the object. (Click to see full instructions)
       U4 - Objects - eventHandlersToSwitchScreen_instruction: |-
         Attach event handlers
@@ -7739,9 +7805,14 @@
         Trigger both the keyboard and mouse
         event and examine the event objects displayed in the console. Why might an
         object be the best way to store this information? (Click to see full instructions)
+      U4 - Objects - eventParameter_2018_instruction: Trigger both the keyboard and
+        mouse event and examine the event objects displayed in the console. Why might
+        an object be the best way to store this information? (Click to see full instructions)
       U4 - Objects - exemplarContactsApp_instruction: |-
         Use the Contacts app and then
         add a contact of your own. (Click to see full instructions)
+      U4 - Objects - exemplarContactsApp_2018_instruction: Use the Contacts app and
+        then add a contact of your own. (Click to see full instructions)
       U4 - Objects - loopingArray_instruction: |-
         Loop over your array of students
         and print the name of every students. (Click to see full instructions)
@@ -7760,11 +7831,20 @@
         Create an event handler for the "Save
         Contact" button that displays the contents of the 4 text input fields in
         the console. (Click to see full instructions)
+      U4 - Objects - pullValues_2018_instruction: Create an event handler for the
+        "Save Contact" button that displays the contents of the 4 text input fields
+        in the console. (Click to see full instructions)
       U4 - Objects - readStarterCode_instruction: |-
         Familiarize yourself with the
         starter code and UI elements provided. (Click to see full instructions)
+      U4 - Objects - readStarterCode_2018_instruction: Familiarize yourself with the
+        starter code and UI elements provided. (Click to see full instructions)
       U4 - Objects - resetIndexAndShow_instruction: |-
         Add code to your event handler
+        for the "Save Contact" button so that when a new contact is added, the inputs
+        are cleared, the screen is switched, and the correct contact is shown. (Click
+        to see full instructions)
+      U4 - Objects - resetIndexAndShow_2018_instruction: Add code to your event handler
         for the "Save Contact" button so that when a new contact is added, the inputs
         are cleared, the screen is switched, and the correct contact is shown. (Click
         to see full instructions)
@@ -7772,73 +7852,123 @@
         Add code to the showCurrentContact
         function to show the name of the contact stored at the currentIndex of your
         array. (Click to see full instructions)
+      U4 - Objects - showContact1_2018_instruction: Add code to the showCurrentContact
+        function to show the name of the contact stored at the currentIndex of your
+        array. (Click to see full instructions)
       U4 - Objects - showContact2_instruction: |-
         Add the phone number and birthday
+        text to your text area. (Click to see full instructions)
+      U4 - Objects - showContact2_2018_instruction: Add the phone number and birthday
         text to your text area. (Click to see full instructions)
       U4 - Objects - showContact3_instruction: |-
         Display the image information for
         each contact. (Click to see full instructions)
+      U4 - Objects - showContact3_2018_instruction: Display the image information
+        for each contact. (Click to see full instructions)
       U4 - Objects - showSampleImage_instruction: |-
         Attach an event handler to the
         image URL text input so that the user can confirm their image will work as
         expected. (Click to see full instructions)
+      U4 - Objects - showSampleImage_2018_instruction: Attach an event handler to
+        the image URL text input so that the user can confirm their image will work
+        as expected. (Click to see full instructions)
       U4 - Objects - writeWrap_instruction: |-
         Use the wrap function to prevent currentIndex
         from leaving the bounds of your array. (Click to see full instructions)
-      U4 - Read Record - 1.2_instruction: "Place a console.log command below the readRecords
-        command. (Click to see full instructions)\r\n"
-      U4 - Read Record - 1.3_instruction: "Add a console.log command inside the callback
-        function. (Click to see full instructions)\r\n"
-      U4 - Read Record - 1_instruction: "Use console.log to display the records returned
-        by a call to readRecords. (Click to see full instructions)\r\n"
-      U4 - Read Record - 2_instruction: "Change the table name so that the records
-        are read from the new table. (Click to see full instructions)\r\n"
-      U4 - Read Record - 3_instruction: "Change the name of the table in a readRecords
-        command to read from a table that does not exist. (Click to see full instructions)\r\n"
-      U4 - Read Record - 4.1_instruction: "Use indexes and dot notation to reference
-        values in the response from the database. (Click to see full instructions)\r\n"
-      U4 - Read Record - 4_instruction: "Print out each record return from the readRecords
-        call individually. (Click to see full instructions)\r\n"
-      U4 - Read Record - 5_instruction: "Using a for loop, display the title of each
-        movie in your database. (Click to see full instructions)\r\n"
-      U4 - Read Record - part 1 - template_instruction: "Use console.log to display
-        the records returned by a call to readRecords. (Click to see full instructions)\r\n"
+      U4 - Read Record - 1.2_instruction: 'Place a console.log command below the readRecords
+        command. (Click to see full instructions)  '
+      U4 - Read Record - 1.2_2018_instruction: 'Place a console.log command below
+        the readRecords command. (Click to see full instructions)  '
+      U4 - Read Record - 1.3_instruction: 'Add a console.log command inside the callback
+        function. (Click to see full instructions)  '
+      U4 - Read Record - 1.3_2018_instruction: 'Add a console.log command inside the
+        callback function. (Click to see full instructions)  '
+      U4 - Read Record - 1_instruction: 'Use console.log to display the records returned
+        by a call to readRecords. (Click to see full instructions)  '
+      U4 - Read Record - 1_2018_instruction: 'Use console.log to display the records
+        returned by a call to readRecords. (Click to see full instructions)  '
+      U4 - Read Record - 2_instruction: 'Change the table name so that the records
+        are read from the new table. (Click to see full instructions)  '
+      U4 - Read Record - 2_2018_instruction: 'Change the table name so that the records
+        are read from the new table. (Click to see full instructions)  '
+      U4 - Read Record - 3_instruction: 'Change the name of the table in a readRecords
+        command to read from a table that does not exist. (Click to see full instructions)  '
+      U4 - Read Record - 3_2018_instruction: 'Change the name of the table in a readRecords
+        command to read from a table that does not exist. (Click to see full instructions)  '
+      U4 - Read Record - 4.1_instruction: 'Use indexes and dot notation to reference
+        values in the response from the database. (Click to see full instructions)  '
+      U4 - Read Record - 4.1_2018_instruction: 'Use indexes and dot notation to reference
+        values in the response from the database. (Click to see full instructions)  '
+      U4 - Read Record - 4_instruction: 'Print out each record return from the readRecords
+        call individually. (Click to see full instructions)  '
+      U4 - Read Record - 5_instruction: 'Using a for loop, display the title of each
+        movie in your database. (Click to see full instructions)  '
+      U4 - Read Record - 5_2018_instruction: 'Using a for loop, display the title
+        of each movie in your database. (Click to see full instructions)  '
+      U4 - Read Record - part 1 - template_instruction: 'Use console.log to display
+        the records returned by a call to readRecords. (Click to see full instructions)  '
       U4 - ReadRecords - Contacts App 1_instruction: |-
         Use readRecords to copy the
         data in your database into your "contacts" global variable and call showCurrentContact.
         (Click to see full instructions)
+      U4 - ReadRecords - Contacts App 1_2018_instruction: Use readRecords to copy
+        the data in your database into your "contacts" global variable and call showCurrentContact.
+        (Click to see full instructions)
       U4 - ReadRecords - Contacts App 2_instruction: |-
         Create a function called refreshLocalData.
         (Click to see full instructions)
+      U4 - ReadRecords - Contacts App 2_2018_instruction: Create a function called
+        refreshLocalData. (Click to see full instructions)
       U4 - ReadRecords - Contacts App 3_instruction: |-
         Add a call to "refreshLocalData"
+        to the callback function of the createRecord you use to add a new contact
+        to your database. (Click to see full instructions)
+      U4 - ReadRecords - Contacts App 3_2018_instruction: Add a call to "refreshLocalData"
         to the callback function of the createRecord you use to add a new contact
         to your database. (Click to see full instructions)
       U4 - ReadRecords - Contacts App 4_instruction: |-
         Create a "Delete" button.
         (Click to see full instructions)
+      U4 - ReadRecords - Contacts App 4_2018_instruction: Create a "Delete" button.
+        (Click to see full instructions)
       U4 - ReadRecords - Contacts App 5 make delete work_instruction: |-
         Create an
         event handler for the "Delete" button you created. (Click to see full instructions)
+      U4 - ReadRecords - Contacts App 5 make delete work_2018_instruction: Create
+        an event handler for the "Delete" button you created. (Click to see full instructions)
       U4 - add createRecord to contacts App_instruction: |-
         Add code to your contacts
+        app so that newly-added contacts are saved in a table. (Click to see full
+        instructions)
+      U4 - add createRecord to contacts App_2018_instruction: Add code to your contacts
         app so that newly-added contacts are saved in a table. (Click to see full
         instructions)
       U4 - debug column names are case sensitive_instruction: |-
         Change song.title
         to song.Title (capital T).  And run the program.  Check the data table  (Click
         to see full instructions)
+      U4 - debug column names are case sensitive_2018_instruction: Change song.title
+        to song.Title (capital T).  And run the program.  Check the data table  (Click
+        to see full instructions)
       U4 - deleteRecords 0_instruction: |-
         Use the deleteRecord command with default
         values. Verify the record was deleted. (Click for full instructions).
+      U4 - deleteRecords 0_2018_instruction: Use the deleteRecord command with default
+        values. Verify the record was deleted. (Click for full instructions).
       U4 - deleteRecords 1_instruction: |-
         Find the id of "Little Bunny Foo Foo"
+        in the data table "mySongs".  Use the deleteRecord command to delete it.  See
+        what happens when you try to delete an ID a second time. (Click for full Instructions).
+      U4 - deleteRecords 1_2018_instruction: Find the id of "Little Bunny Foo Foo"
         in the data table "mySongs".  Use the deleteRecord command to delete it.  See
         what happens when you try to delete an ID a second time. (Click for full Instructions).
       U4 - deleteRecords 2 delete object_instruction: |-
         Use the song object to delete
         multiple objects in the database by changing only the "id" property. (Click
         for full Instructions).
+      U4 - deleteRecords 2 delete object_2018_instruction: Use the song object to
+        delete multiple objects in the database by changing only the "id" property.
+        (Click for full Instructions).
       U4 - deleteRecords 2_instruction: |-
         Using the data viewer, find the id of a
         a record you want to delete. Use the deleteRecord command to delete it. (Click
@@ -7847,8 +7977,15 @@
         Use the data viewer to
         add rows to the data table.  Add the original hard-coded contacts from your
         app to the database. (Click to see full instructions)
+      U4 - fix contacts by hand in data table_2018_instruction: Use the data viewer
+        to add rows to the data table.  Add the original hard-coded contacts from
+        your app to the database. (Click to see full instructions)
       U4 - last stage test adding contcts_instruction: |-
         Confirm that new contacts
+        you add are saved to the database.  Verify that after restarting your app,
+        the contacts you added no longer show in the app, but still exist in the database.
+        (Click to see full instructions)
+      U4 - last stage test adding contcts_2018_instruction: Confirm that new contacts
         you add are saved to the database.  Verify that after restarting your app,
         the contacts you added no longer show in the app, but still exist in the database.
         (Click to see full instructions)
@@ -7917,23 +8054,37 @@
       U6 - Final Project - Project Level_instruction: |-
         Build your final project here.
         (Click to see full instructions)
+      U6 - Final Project - Project Level_2018_instruction: Build your final project
+        here. (Click to see full instructions)
       U6 - updateRecord - Callback Success Parameter_instruction: |-
         Add an if-else
+        block inside the callback function for updateRecord. (Click to see full instructions)
+      U6 - updateRecord - Callback Success Parameter_2018_instruction: Add an if-else
         block inside the callback function for updateRecord. (Click to see full instructions)
       U6 - updateRecord - Contacts - Edit UI_instruction: |-
         Set up the UI elements
         needed to edit contacts. (Click to see full instructions)
+      U6 - updateRecord - Contacts - Edit UI_2018_instruction: Set up the UI elements
+        needed to edit contacts. (Click to see full instructions)
       U6 - updateRecord - Contacts - Edit event handler_instruction: |-
         Write event
+        handlers for the Edit Contacts UI elements. (Click to see full instructions)
+      U6 - updateRecord - Contacts - Edit event handler_2018_instruction: Write event
         handlers for the Edit Contacts UI elements. (Click to see full instructions)
       U6 - updateRecord - Contacts - Save edited contact_instruction: |-
         Use updateRecord
         to store the user's edits in the database. (Click to see full instructions)
+      U6 - updateRecord - Contacts - Save edited contact_2018_instruction: Use updateRecord
+        to store the user's edits in the database. (Click to see full instructions)
       U6 - updateRecord - Default Block_instruction: |-
         Use updateRecord to change
         the record for "Eye of the Tiger." (Click to see full instructions)
+      U6 - updateRecord - Default Block_2018_instruction: Use updateRecord to change
+        the record for "Eye of the Tiger." (Click to see full instructions)
       U6 - updateRecord - Update Nonexistent Record_instruction: |-
         Force updateRecord
+        to fail by changing the ID of songToUpdate. (Click to see full instructions)
+      U6 - updateRecord - Update Nonexistent Record_2018_instruction: Force updateRecord
         to fail by changing the ID of songToUpdate. (Click to see full instructions)
       Underground Avoiding Lava_instruction: Dung nham đang ẩn bên dưới một số khối
         đá này, bạn cần phải lấp đi trước khi di chuyển về phía trước. Cần phải sử
@@ -9114,6 +9265,7 @@
         Help Scrat get all the way over to the
         acorn!
       courseB_iceage_loops11_instruction: Help Scrat get to the acorn!
+      courseB_iceage_loops11_forVideo_instruction: Help Scrat get to the acorn!
       courseB_iceage_loops12_instruction: Get to the acorn any way you can!
       courseB_iceage_loops2_instruction: |-
         Use two different move blocks to get to
@@ -9987,15 +10139,15 @@
         of one another?"
       courseD_artist_1_2018_instruction: "Draw a small square with **30** pixel long
         sides.  \r\n"
-      courseD_artist_2_2018_instruction: "Now, turn right by **60** degrees, then
+      courseD_artist_2_2018_instruction: 'Now, turn right by **60** degrees, then
         draw a straight line **150** pixels long and jump back to the center of the
-        play area.\r\n"
+        play area.  '
       courseD_artist_3_2018_instruction: "Nest all of the code inside of another\n`repeat`
         loop and run it a total of **6** times. "
       courseD_artist_4_2018_instruction: Add a tiny shape to the end of your line!
       courseD_artist_5_2018_instruction: Play with the snowflakes!
-      courseD_artist_6_2018_instruction: "Try changing your long 150 pixel line into
-        6 short lines of **25** pixels, with little turns at the end.\r\n"
+      courseD_artist_6_2018_instruction: 'Try changing your long 150 pixel line into
+        6 short lines of **25** pixels, with little turns at the end.  '
       courseD_artist_7_2018_instruction: |-
         Now, turn around 180 degrees and draw the
         stair pattern again!
@@ -11033,6 +11185,8 @@
         off to your friends!
       courseD_playLab_condFP_a_instruction: Now, build your own game to show off to
         your friends!
+      courseD_playLab_condForVideo_instruction: Now, build your own game to show off
+        to your friends!
       courseD_playLab_embedded_instruction: "Move Pegleg the Pirate with the arrow
         keys. Get to the dragon to score points, but avoid the ninja! Standing below
         the line of octopuses will make the ninja stop chasing you, but beware! The
@@ -12493,8 +12647,8 @@
         kích thước 5 và 5 vòng tròn kích thước 10 không?
       frozen square iterative_instruction: Dường như chúng ta đang nửa chừng làm một
         hình vuông. Hãy đặt 4 đường vào nhau để tạo 1 hình vuông.
-      frozen square loop 3x_instruction: 'Hãy tạo ra 3 hình vuông, chuyển sau mỗi
-        hình. Hãy chắc chắn xoay 120 độ trước mỗi hình vuông mới. '
+      frozen square loop 3x_instruction: Hãy tạo ra 3 hình vuông, chuyển sau mỗi hình.
+        Hãy chắc chắn xoay 120 độ trước mỗi hình vuông mới.
       frozen square loop_instruction: Xin chào, tôi là Anna ở xứ Arendelle! Hãy làm
         một hình vuông với khối "Lặp lại", để dùng ít khối hơn. Bao nhiêu lần (???)
         khối "Lặp lại" lặp các khối bên trong để làm một hình vuông?
@@ -12605,8 +12759,8 @@
       grade1_playlab_events2a_instruction: |-
         Edit the code so that when the second
         bird is clicked, your program plays a sound!
-      grade1_playlab_events3_instruction: "This program makes Robin fly.  Can you
-        make the robot jump when you press the up button?\r\n"
+      grade1_playlab_events3_instruction: 'This program makes Robin fly.  Can you
+        make the robot jump when you press the up button?  '
       grade1_playlab_events3a_instruction: |-
         When the third bird is clicked, the background
         should change to a city. Can you add code to make this happen?
@@ -12810,8 +12964,10 @@
       grade2_puppy_loops2_instruction: |-
         Can you get to the pig by creating a loop
         that uses only one `move forward` block inside of a `repeat`?
-      grade2_puppy_loops3_instruction: "\"Get me to the pig!\"\r\n\r\n Solve this
-        puzzle by creating a loop!"
+      grade2_puppy_loops3_instruction: |-
+        "Get me to the pig!"
+
+        Solve this puzzle by creating a loop!
       grade2_puppy_loops4_instruction: |-
         In this puzzle, two `repeat` loops will help
         you get to the pig with the fewest number of blocks!
@@ -12882,7 +13038,7 @@
       grade3_Conditionals_10 BAD_instruction: |-
         Gather nectar from the rows of flowers!
         Use a nested loop.
-      grade3_Conditionals_10_instruction: |-
+      grade3_Conditionals_10_instruction: |
         Hút mật hoa để làm mật ong.
         Gợi ý: điều gì sẽ xảy ra nếu sử dụng hàm "if" để hút mật ở bông hoa đỏ?
                    bạn có thể dùng vòng lặp để hoàn thành không?
@@ -13485,8 +13641,8 @@
       grade4_frozen_square_loop1_instruction: Xin chào, tôi là Anna ở xứ Arendelle!
         Hãy làm một hình vuông với khối "Lặp lại", để dùng ít khối hơn. Bao nhiêu
         lần (???) khối "Lặp lại" lặp các khối bên trong để làm một hình vuông?
-      grade4_frozen_square_loop2_instruction: 'Hãy tạo ra 3 hình vuông, chuyển sau
-        mỗi hình. Hãy chắc chắn xoay 120 độ trước mỗi hình vuông mới. '
+      grade4_frozen_square_loop2_instruction: Hãy tạo ra 3 hình vuông, chuyển sau
+        mỗi hình. Hãy chắc chắn xoay 120 độ trước mỗi hình vuông mới.
       grade4_frozen_square_loop3_instruction: Bạn có thể tạo một bông tuyết sử dụng
         khối "Lặp lại" để làm một hình vuông 10 lần, và khối "Xoay" để xoay 36 độ
         giữa mỗi hình?

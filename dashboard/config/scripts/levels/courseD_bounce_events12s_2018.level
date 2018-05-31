@@ -14,7 +14,7 @@
       "rightButton"
     ],
     "min_workspace_height": "800",
-    "free_play": true,
+    "free_play": "true",
     "instructions": "Make this game your own. You can change all the visuals and the rules. When you're done, click \"Finish\" to let friends try your game on their phones.",
     "maze": "[[1,1,1,2,2,1,1,1],[1,0,0,0,0,0,0,1],[1,0,0,0,0,0,0,1],[1,0,0,0,0,0,0,1],[1,0,0,0,0,0,0,1],[1,0,0,0,0,0,0,1],[1,0,0,0,0,0,0,1],[1,0,16,0,0,0,0,1]]",
     "instructions_important": "false",
@@ -42,11 +42,16 @@
     "project_template_level_name": "courseD_bounce_events_template_2018",
     "parent_level_id": 9670,
     "name_suffix": "_2018",
+    "embed": "false",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-08-04 01:11:50 +0000\",\"changed\":[\"notes\",\"start_blocks\",\"toolbox_blocks\",\"min_workspace_height\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 17:24:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"skin\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 21:30:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 21:35:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 21:46:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 21:49:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-05 01:42:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions\",\"contained_level_names\",\"authored_hints\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-08-04 01:11:50 +0000\",\"changed\":[\"notes\",\"start_blocks\",\"toolbox_blocks\",\"min_workspace_height\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 17:24:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"skin\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 21:30:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 21:35:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 21:46:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 21:49:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-05 01:42:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions\",\"contained_level_names\",\"authored_hints\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-29 20:56:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"free_play\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>
@@ -78,6 +83,9 @@
           <title name="SOUND">bounce</title>
         </block>
         <block type="bounce_launchBall"/>
+        <block type="comment">
+          <title name="TEXT"/>
+        </block>
         <block type="bounce_moveLeft"/>
         <block type="bounce_moveRight"/>
         <block type="bounce_bounceBall"/>

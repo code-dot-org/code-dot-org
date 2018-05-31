@@ -17,7 +17,8 @@ module Pd
         TYPE_BUTTON = 'button'.freeze,
         TYPE_TEXT = 'text'.freeze,
         TYPE_PAGEBREAK = 'pagebreak'.freeze,
-        TYPE_DIVIDER = 'divider'.freeze
+        TYPE_DIVIDER = 'divider'.freeze,
+        TYPE_WIDGET = 'widget'.freeze
       ].freeze
 
       ANSWER_TYPES = [

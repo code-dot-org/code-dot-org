@@ -228,9 +228,9 @@
         álainn le lúba neadaithe.
       2-3 Bee Conditionals 1_instruction: Dia dhuit! Is beach mé. Cabhraigh liom neachtar
         a fháil ón mbláth.
-      2-3 Bee Conditionals 10_instruction: "Purple flowers may have either 1 or 0
-        nectar. Be careful not to collect nectar from a purple flower if it doesn't
-        have any.\r\n"
+      2-3 Bee Conditionals 10_instruction: 'Purple flowers may have either 1 or 0
+        nectar. Be careful not to collect nectar from a purple flower if it doesn''t
+        have any.  '
       2-3 Bee Conditionals 11_instruction: 'Ní mé in áit an dhá neachtar nó áit an
         trí neachtar atá mé! Cabhraigh liom eitilt timpeall an ghoirt agus neachtar
         a bhailiú ó na bláthanna ina bhfuil sé. '
@@ -1007,8 +1007,8 @@
       Artist - Nested Loops 2_instruction: "Now nest this loop inside another loop\nto
         draw 10 triangles.  This is called a nested loop.  Hint: All 10 triangles\ncomplete
         a 360 degree rotation.  "
-      Artist - Nested Loops 3_instruction: "Create a sun by nesting the starter code
-        in another loop. This is called a nested loop.\r\n"
+      Artist - Nested Loops 3_instruction: 'Create a sun by nesting the starter code
+        in another loop. This is called a nested loop.  '
       Artist - Nested Loops 5_instruction: Cuir an cód atá ann isteach i lúb chun
         muileann gaoithe a dhéanamh.
       Artist - Nested Loops 6_instruction: |-
@@ -1457,20 +1457,26 @@
         0-anna agus 1-anna a chlóscríobh
       CSD U5 black white images pixelation_2018_instruction: Críochnaigh an cruth
         X trí 0-anna agus 1-anna a chlóscríobh
-      CSD U6 params modify clouds_instruction: "# Clouds\r\n\r\nThis program makes
-        the clouds move when you blow on the sound sensor, but it's not finished.\r\n\r\n#
-        Do This\r\n* Create a new function `moveCloud(name)` that will move any cloud.\r\n
-        \ * (Hint: you will use almost all the same code as the `moveCloud0` function)\r\n*
-        Call your new `moveCloud(name)` function inside the event block, once for
-        each cloud name.\r\n * (Hint: this is similar to how the `loopCloud(name)`
-        function is called many times."
-      CSD U6 params modify clouds_2018_instruction: "# Clouds\r\n\r\nThis program
-        makes the clouds move when you blow on the sound sensor, but it's not finished.\r\n\r\n#
-        Do This\r\n* Create a new function `moveCloud(name)` that will move any cloud.\r\n
-        \ * (Hint: you will use almost all the same code as the `moveCloud0` function)\r\n*
-        Call your new `moveCloud(name)` function inside the event block, once for
-        each cloud name.\r\n * (Hint: this is similar to how the `loopCloud(name)`
-        function is called many times."
+      CSD U6 params modify clouds_instruction: |-
+        # Clouds
+
+        This program makes the clouds move when you blow on the sound sensor, but it's not finished.
+
+        # Do This
+        * Create a new function `moveCloud(name)` that will move any cloud.
+        * (Hint: you will use almost all the same code as the `moveCloud0` function)
+        * Call your new `moveCloud(name)` function inside the event block, once for each cloud name.
+        * (Hint: this is similar to how the `loopCloud(name)` function is called many times.
+      CSD U6 params modify clouds_2018_instruction: |-
+        # Clouds
+
+        This program makes the clouds move when you blow on the sound sensor, but it's not finished.
+
+        # Do This
+        * Create a new function `moveCloud(name)` that will move any cloud.
+        * (Hint: you will use almost all the same code as the `moveCloud0` function)
+        * Call your new `moveCloud(name)` function inside the event block, once for each cloud name.
+        * (Hint: this is similar to how the `loopCloud(name)` function is called many times.
       CSD U6 params modify planes_instruction: "# Multi-plane Controller\r\n\r\nThis
         program moves the three planes using the board accelerometer and the on-screen
         check boxes.  Right now, only the red plane works.\r\n\r\n# Do This\r\n* Create
@@ -2090,9 +2096,9 @@
       CSPU5_U3 - High Low - Else if_2018_instruction: Add an else-if statement in
         order to tell the user if their guess is high or low instead of just wrong.
         (Click to see full instructions)
-      CSPU5_U3 - High Low - Else_instruction: "Add an else statement so that the program
+      CSPU5_U3 - High Low - Else_instruction: 'Add an else statement so that the program
         will tell the user when they are right and when they are wrong. (Click to
-        see full instructions)\r\n"
+        see full instructions)  '
       CSPU5_U3 - High Low - If_instruction: |-
         Add code to the if statement that indicates
         the user guessed the secret number. (Click to see full instructions)
@@ -2413,10 +2419,10 @@
       CSPU5_U3 - Simulation - 2_2018_instruction: Keep track of how many heads (1's)
         your program generates and print the results to the screen. (Click to see
         full instructions)
-      CSPU5_U3 - Simulation - 3_instruction: "Add functionality that counts how many
-        heads in a row are flipped. (Click to see full instructions)\r\n"
-      CSPU5_U3 - Simulation - 3_2018_instruction: "Add functionality that counts how
-        many heads in a row are flipped. (Click to see full instructions)\r\n"
+      CSPU5_U3 - Simulation - 3_instruction: 'Add functionality that counts how many
+        heads in a row are flipped. (Click to see full instructions)  '
+      CSPU5_U3 - Simulation - 3_2018_instruction: 'Add functionality that counts how
+        many heads in a row are flipped. (Click to see full instructions)  '
       CSPU5_U3 - Simulation - 4_instruction: |-
         Update your while loop's condition
         so the the coin flips until there are three heads in a row. (Click to see
@@ -3392,8 +3398,8 @@
         luck! Hint: you may have to turn 144 degrees
       Course 4 Artist Functions 2_instruction: 'An féidir leat trí chearnóg a tharraingt,
         20 picteilín ó chéile? Leid: tá gach cearnóg 100 picteilín ar fad'
-      Course 4 Artist Functions 3_instruction: "Using the \"draw a square\" function
-        block, can you draw this picture? Hint: each square is 120 pixels apart.\r\n"
+      Course 4 Artist Functions 3_instruction: 'Using the "draw a square" function
+        block, can you draw this picture? Hint: each square is 120 pixels apart.  '
       Course 4 Artist Functions 4_instruction: |-
         Are you ready to create your own
         "Function Block"? Click on the "Functions" block in the tool box, name
@@ -3404,8 +3410,8 @@
       Course 4 Artist Functions 5 OLD_instruction: |-
         Let's try to use our two functions
         to draw a house - what needs to be fixed in this code to draw the house properly?
-      Course 4 Artist Functions 5_instruction: "Using the \"draw a square\" function
-        block, can you draw this picture? Hint: each square is 120 pixels apart.\r\n"
+      Course 4 Artist Functions 5_instruction: 'Using the "draw a square" function
+        block, can you draw this picture? Hint: each square is 120 pixels apart.  '
       Course 4 Artist Functions 6_instruction: |-
         Which block do you need to add to
         get the triangle to sit on top of the square?
@@ -4094,10 +4100,10 @@
         other shapes if you like. You can choose the size of each shape. Don’t forget
         to add an “else” clause!\r\nOne example - and part of the definition -  has
         already been done for you!\r\n"
-      Eval Cond 8_instruction: "Free Play: Suppose you want to own a car at 21, or
+      Eval Cond 8_instruction: 'Free Play: Suppose you want to own a car at 21, or
         have your own business by 30. Write a function called life-goals, which takes
         in an age and produces a string that describes your life goals by then. Don’t
-        forget to add an “else” clause!\r\n"
+        forget to add an “else” clause!  '
       Eval Contracts 1_instruction: |-
         Use the "star" function to produce a red star
         with a 60 pixel radius
@@ -4400,18 +4406,18 @@
       InspirationalArtwork_2018_instruction: Má spreagann an pictiúr seo thú, déan
         iarracht rud éigin cosúil leis a tharraingt. Nó, cruthaigh rud éigin go hiomlán
         as an nua.
-      'Internet Simulator: Broadcast Mode_instruction': "Now use the Internet Simulator
+      'Internet Simulator: Broadcast Mode_instruction': 'Now use the Internet Simulator
         to send the battleship moves. For setup, join a Room with your group, and
         add ships to your paper board for each opponent. When playing, all communication
-        must be done through the tool, so no talking, but have fun!\r\n"
-      'Internet Simulator: Broadcast_instruction': "Now use the Internet Simulator
+        must be done through the tool, so no talking, but have fun!  '
+      'Internet Simulator: Broadcast_instruction': 'Now use the Internet Simulator
         to send the battleship moves. For setup, join a Room with your group, and
         add ships to your paper board for each opponent. When playing, all communication
-        must be done through the tool, so no talking, but have fun!\r\n"
-      'Internet Simulator: Broadcast_2018_instruction': "Now use the Internet Simulator
+        must be done through the tool, so no talking, but have fun!  '
+      'Internet Simulator: Broadcast_2018_instruction': 'Now use the Internet Simulator
         to send the battleship moves. For setup, join a Room with your group, and
         add ships to your paper board for each opponent. When playing, all communication
-        must be done through the tool, so no talking, but have fun!\r\n"
+        must be done through the tool, so no talking, but have fun!  '
       'Internet Simulator: DNS Mode_instruction': |-
         In this version of the Internet
         Simulator, a Domain Name System (DNS) is provided for you and knows the IP
@@ -4944,8 +4950,8 @@
         function block. The blocks in the function editor are the definition that
         make up "draw a square." When you're done looking around, click "Save
         and Close" and then "Run."
-      NEW Course 4 Artist Functions 6_instruction: "Using the \"draw a square\" function
-        block, can you draw this picture? Hint: each square is 20 pixels apart.\r\n"
+      NEW Course 4 Artist Functions 6_instruction: 'Using the "draw a square" function
+        block, can you draw this picture? Hint: each square is 20 pixels apart.  '
       NEW Course 4 Artist Functions 7_instruction: 'An bhfuil tú ag dul i dtaithí
         ar bhlocanna feidhme? Athraigh méid na cearnóige seo go 200 picteilín. Cliceáil
         "eagar" chun an t-eagarthóir feidhme a oscailt. Cliceáil "Dún" chun an t-eagarthóir
@@ -5100,10 +5106,10 @@
         Simulator, a Domain Name System (DNS) is provided for you and knows the IP
         addresses of all connected computers. Send a message in the form GET [hostname]
         to the DNS service at address <yourRouterNumber>.15 to get a student's address.
-      NetSim Standalone Broadcast_instruction: "In this version of the Internet Simulator,
+      NetSim Standalone Broadcast_instruction: 'In this version of the Internet Simulator,
         you can connect to up to 5 other people in a room. When you send messages
         in the room, everyone receives them. What are some of the challenges of this
-        system, and how might you solve them?\r\n"
+        system, and how might you solve them?  '
       NetSim Standalone Classroom Routers_instruction: |-
         In this version of the Internet
         Simulator, everyone connects to a router and has a specific address. To send
@@ -5222,8 +5228,8 @@
       October15 JoL 1_instruction: |-
         Program the artist to design a face for your
         jack-o-lantern!
-      October15 bat_instruction: "Freeplay: Here are some functions to play with.
-        \ Can you draw a bat?\r\n"
+      October15 bat_instruction: 'Freeplay: Here are some functions to play with.  Can
+        you draw a bat?  '
       October15 ghost 1_instruction: |-
         Give the ghost eyes, using the "draw a circle"
         function.
@@ -5388,14 +5394,14 @@
       Pattern Bee 1_instruction: |-
         What a strange field of goodies! I wonder if there's
         a pattern here...
-      Pixelation - AllTheThings 4_instruction: |-
-        This pixelation level demonstrates
-        the use of the `hide_encoding_controls` option.  Notice that the level displays
-        the image data in hexadecimal and does not let you change it back to binary.
-      Pixelation - AllTheThings 5_instruction: |-
-        This pixelation level demonstrates
-        the use of the "Hide sliders" option.  Notice that the width and height
-        sliders are not available, and the width and height fields are not editable.
+      Pixelation - AllTheThings 4_instruction: Léiríonn an leibhéal picteilínithe
+        an tslí a n-úsáidtear an rogha `hide_encoding_controls`. Tabhair faoi deara
+        go dtaispeánann an leibhéal sonraí na híomhá mar uimhreacha heicsidheachúlacha,
+        agus ní féidir leat filleadh ar uimhreacha dénártha.
+      Pixelation - AllTheThings 5_instruction: Léiríonn an leibhéal picteilínithe
+        an tslí a n-úsáidtear an rogha "Folaigh na sleamhnáin". Tabhair faoi deara
+        nach bhfuil na sleamhnáin airde agus leithead ar fáil, agus ní féidir leat
+        na réimsí airde agus leithead a chur in eagar.
       Pixelation - Lesson 14 - Fix bit offset v.2_instruction: |-
         Something happened
         to the bits in this image! Find the error and fix it! Hint: a few extra bits
@@ -5873,15 +5879,17 @@
         picteilín ar gach taobh.
       StepIntro_instruction: Here's how to use the "Step" button.
       Test Play Lab_instruction: This is a test play lab level.
-      Test embedded Blockly in instructions_instruction: "As a block element, we should
-        be able to include XML representing a valid Blockly block or blocks.\r\n\r\n<xml>\r\n
-        \ <block type=\"draw_move_by_constant\">\r\n    <title name=\"DIR\">moveForward</title>\r\n
-        \   <title name=\"VALUE\">100</title>\r\n  </block>\r\n</xml>\r\n\r\nWe also
-        support Blockly XML as an inline element like so: <xml><block type=\"draw_move_by_constant\"><title
-        name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>.
-        The difference in input format being that this one is embedded within a paragraph,
-        whereas the previous one is in a text block of its own. The difference in
-        output is comparable."
+      Test embedded Blockly in instructions_instruction: |-
+        As a block element, we should be able to include XML representing a valid Blockly block or blocks.
+
+        <xml>
+        <block type="draw_move_by_constant">
+        <title name="DIR">moveForward</title>
+        <title name="VALUE">100</title>
+        </block>
+        </xml>
+
+        We also support Blockly XML as an inline element like so: <xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">100</title></block></xml>. The difference in input format being that this one is embedded within a paragraph, whereas the previous one is in a text block of its own. The difference in output is comparable.
       Test embedded K1 Blockly in instructions_instruction: |-
         Use three `move west`
         blocks and one `pick corn` block to solve this puzzle.
@@ -5944,10 +5952,10 @@
         can't see the other students' addresses.  Instead, one of you must act as
         a name service, to help share addresses with each other.
       U2L14 frequency random_instruction: Test
-      U2L2 NetSim Hub Mode_instruction: "Now use the Internet Simulator to send the
+      U2L2 NetSim Hub Mode_instruction: 'Now use the Internet Simulator to send the
         battleship moves. For setup, join a Room with your group, and add ships to
         your paper board for each opponent. When playing, all communication must be
-        done through the tool, so no talking, but have fun!\r\n"
+        done through the tool, so no talking, but have fun!  '
       U2L3 NetSim Hub Mode_instruction: |-
         Use the Internet Simulator to test out your
         group's binary communication protocol for battleship. How short can you make
@@ -6200,9 +6208,9 @@
         Add an else-if statement in order to
         tell the user if their guess is high or low instead of just wrong. (Click
         to see full instructions)
-      U3 - High Low - Else_instruction: "Add an else statement so that the program
+      U3 - High Low - Else_instruction: 'Add an else statement so that the program
         will tell the user when they are right and when they are wrong. (Click to
-        see full instructions)\r\n"
+        see full instructions)  '
       U3 - High Low - If_instruction: |-
         Add code to the if statement that indicates
         the user guessed the secret number. (Click to see full instructions)
@@ -6406,26 +6414,26 @@
       U3 - Practice Create Performance Task_instruction: |-
         Design and implement your
         practice Create Performance Task. (Click to see full instructions)
-      U3 - Read Record - 1.2_instruction: "Console.log the records returned by a call
-        to readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 1.5_instruction: "Console.log the records returned by a call
-        to readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 1.6_instruction: "Console.log the records returned by a call
-        to readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 1_instruction: "Console.log the records returned by a call
-        to readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 2_instruction: "Change the table name so that the records
-        are read from the new table.(Click to see full instructions)\r\n"
-      U3 - Read Record - 3_instruction: "Change the name of the table in a readRecords
-        command to read from a table that does not exist. (Click to see full instructions)\r\n"
-      U3 - Read Record - 4.1_instruction: "Print out each record return from the readRecords
-        call individually. (Click to see full instructions)\r\n"
-      U3 - Read Record - 4_instruction: "Print out each record return from the readRecords
-        call individually. (Click to see full instructions)\r\n"
-      U3 - Read Record - 5 and half_instruction: "Print out the name of each movie
-        in the records return from the readRecords call. (Click to see full instructions)\r\n"
-      U3 - Read Record - 5_instruction: "Print out the name of each movie in the records
-        return from the readRecords call. (Click to see full instructions)\r\n"
+      U3 - Read Record - 1.2_instruction: 'Console.log the records returned by a call
+        to readRecords. (Click to see full instructions)  '
+      U3 - Read Record - 1.5_instruction: 'Console.log the records returned by a call
+        to readRecords. (Click to see full instructions)  '
+      U3 - Read Record - 1.6_instruction: 'Console.log the records returned by a call
+        to readRecords. (Click to see full instructions)  '
+      U3 - Read Record - 1_instruction: 'Console.log the records returned by a call
+        to readRecords. (Click to see full instructions)  '
+      U3 - Read Record - 2_instruction: 'Change the table name so that the records
+        are read from the new table.(Click to see full instructions)  '
+      U3 - Read Record - 3_instruction: 'Change the name of the table in a readRecords
+        command to read from a table that does not exist. (Click to see full instructions)  '
+      U3 - Read Record - 4.1_instruction: 'Print out each record return from the readRecords
+        call individually. (Click to see full instructions)  '
+      U3 - Read Record - 4_instruction: 'Print out each record return from the readRecords
+        call individually. (Click to see full instructions)  '
+      U3 - Read Record - 5 and half_instruction: 'Print out the name of each movie
+        in the records return from the readRecords call. (Click to see full instructions)  '
+      U3 - Read Record - 5_instruction: 'Print out the name of each movie in the records
+        return from the readRecords call. (Click to see full instructions)  '
       U3 - Return Values - constrainTurtle_instruction: |-
         Use constrain in this simple
         app to keep the turtle from driving off the screen.  (Click to see full instructions)
@@ -6461,18 +6469,18 @@
         Write the function maxVal and
         then use it within the console.log statement to calculate the maximum of two
         values.  (Click to see full instructions)
-      U3 - Search Terms - 1_instruction: "Create an array of all the movies made in
-        2008 and print it out. (Click to see full instructions)\r\n"
-      U3 - Search Terms - 2_instruction: "Print out all the movies with year 2008
-        using the readRecords search terms. (Click to see full instructions)\r\n"
-      U3 - Search Terms - 3_instruction: "Print whether or not there are movies matching
-        the search criteria (Click to see full instructions)\r\n"
-      U3 - Search Terms - 4_instruction: "Print whether or not there are movies matching
-        the search criteria (Click to see full instructions)\r\n"
-      U3 - Search Terms - 5_instruction: "Print out the cities that are in California
-        or have a population of 2,000,000. (Click to see full instructions)\r\n"
-      U3 - Search Terms - 6_instruction: "Print out the cities that are in California
-        or have a population of 2,000,000. (Click to see full instructions)\r\n"
+      U3 - Search Terms - 1_instruction: 'Create an array of all the movies made in
+        2008 and print it out. (Click to see full instructions)  '
+      U3 - Search Terms - 2_instruction: 'Print out all the movies with year 2008
+        using the readRecords search terms. (Click to see full instructions)  '
+      U3 - Search Terms - 3_instruction: 'Print whether or not there are movies matching
+        the search criteria (Click to see full instructions)  '
+      U3 - Search Terms - 4_instruction: 'Print whether or not there are movies matching
+        the search criteria (Click to see full instructions)  '
+      U3 - Search Terms - 5_instruction: 'Print out the cities that are in California
+        or have a population of 2,000,000. (Click to see full instructions)  '
+      U3 - Search Terms - 6_instruction: 'Print out the cities that are in California
+        or have a population of 2,000,000. (Click to see full instructions)  '
       U3 - Simple Drawing - Comments_instruction: Do this
       U3 - Simple Drawing - Ellipse and No Fill_instruction: Do this
       U3 - Simple Drawing - Fill_instruction: Do This
@@ -6502,8 +6510,8 @@
         Keep track of how many heads (1's) your
         program generates and print the results to the screen. (Click to see full
         instructions)
-      U3 - Simulation - 3_instruction: "Add functionality that counts how many heads
-        in a row are flipped. (Click to see full instructions)\r\n"
+      U3 - Simulation - 3_instruction: 'Add functionality that counts how many heads
+        in a row are flipped. (Click to see full instructions)  '
       U3 - Simulation - 4_instruction: |-
         Update your while loop's condition so the
         the coin flips until there are three heads in a row. (Click to see full instructions)
@@ -7538,18 +7546,14 @@
         print each record to the console. (Click to see full instructions)
       U4 - Charts - Import Data 2_2018_instruction: Call readRecords on “mytable”
         and print each record to the console. (Click to see full instructions)
-      U4 - Charts - Line Chart 1_instruction: |-
-        Create a line chart showing the change
-        in popularity of “#tbt” over time. (Click to see full instructions)
+      U4 - Charts - Line Chart 1_instruction: Create a line chart showing the change
+        in popularity of “
       U4 - Charts - Line Chart 1_2018_instruction: Create a line chart showing the
-        change in popularity of “#tbt” over time. (Click to see full instructions)
-      U4 - Charts - Line Chart 2_instruction: |-
-        Add a second line to your chart to
-        show the change in popularity of both “#tbt” and “#nofilter” at the same time.
-        (Click to see full instructions)
+        change in popularity of “
+      U4 - Charts - Line Chart 2_instruction: Add a second line to your chart to show
+        the change in popularity of both “
       U4 - Charts - Line Chart 2_2018_instruction: Add a second line to your chart
-        to show the change in popularity of both “#tbt” and “#nofilter” at the same
-        time. (Click to see full instructions)
+        to show the change in popularity of both “
       U4 - Charts - Line Chart Template_instruction: This is a template.
       U4 - Charts - Remixing Apps with Data_instruction: |-
         Run this app and see what
@@ -7748,52 +7752,38 @@
       U4 - Objects - writeWrap_instruction: |-
         Use the wrap function to prevent currentIndex
         from leaving the bounds of your array. (Click to see full instructions)
-      U4 - Read Record - 1.2_instruction: "Place a console.log command below the readRecords
-        command. (Click to see full instructions)\r\n"
+      U4 - Read Record - 1.2_instruction: 'Place a console.log command below the readRecords
+        command. (Click to see full instructions)  '
       U4 - Read Record - 1.2_2018_instruction: 'Place a console.log command below
-        the readRecords command. (Click to see full instructions)
-
-'
-      U4 - Read Record - 1.3_instruction: "Add a console.log command inside the callback
-        function. (Click to see full instructions)\r\n"
+        the readRecords command. (Click to see full instructions)  '
+      U4 - Read Record - 1.3_instruction: 'Add a console.log command inside the callback
+        function. (Click to see full instructions)  '
       U4 - Read Record - 1.3_2018_instruction: 'Add a console.log command inside the
-        callback function. (Click to see full instructions)
-
-'
-      U4 - Read Record - 1_instruction: "Use console.log to display the records returned
-        by a call to readRecords. (Click to see full instructions)\r\n"
+        callback function. (Click to see full instructions)  '
+      U4 - Read Record - 1_instruction: 'Use console.log to display the records returned
+        by a call to readRecords. (Click to see full instructions)  '
       U4 - Read Record - 1_2018_instruction: 'Use console.log to display the records
-        returned by a call to readRecords. (Click to see full instructions)
-
-'
-      U4 - Read Record - 2_instruction: "Change the table name so that the records
-        are read from the new table. (Click to see full instructions)\r\n"
+        returned by a call to readRecords. (Click to see full instructions)  '
+      U4 - Read Record - 2_instruction: 'Change the table name so that the records
+        are read from the new table. (Click to see full instructions)  '
       U4 - Read Record - 2_2018_instruction: 'Change the table name so that the records
-        are read from the new table. (Click to see full instructions)
-
-'
-      U4 - Read Record - 3_instruction: "Change the name of the table in a readRecords
-        command to read from a table that does not exist. (Click to see full instructions)\r\n"
+        are read from the new table. (Click to see full instructions)  '
+      U4 - Read Record - 3_instruction: 'Change the name of the table in a readRecords
+        command to read from a table that does not exist. (Click to see full instructions)  '
       U4 - Read Record - 3_2018_instruction: 'Change the name of the table in a readRecords
-        command to read from a table that does not exist. (Click to see full instructions)
-
-'
-      U4 - Read Record - 4.1_instruction: "Use indexes and dot notation to reference
-        values in the response from the database. (Click to see full instructions)\r\n"
+        command to read from a table that does not exist. (Click to see full instructions)  '
+      U4 - Read Record - 4.1_instruction: 'Use indexes and dot notation to reference
+        values in the response from the database. (Click to see full instructions)  '
       U4 - Read Record - 4.1_2018_instruction: 'Use indexes and dot notation to reference
-        values in the response from the database. (Click to see full instructions)
-
-'
-      U4 - Read Record - 4_instruction: "Print out each record return from the readRecords
-        call individually. (Click to see full instructions)\r\n"
-      U4 - Read Record - 5_instruction: "Using a for loop, display the title of each
-        movie in your database. (Click to see full instructions)\r\n"
+        values in the response from the database. (Click to see full instructions)  '
+      U4 - Read Record - 4_instruction: 'Print out each record return from the readRecords
+        call individually. (Click to see full instructions)  '
+      U4 - Read Record - 5_instruction: 'Using a for loop, display the title of each
+        movie in your database. (Click to see full instructions)  '
       U4 - Read Record - 5_2018_instruction: 'Using a for loop, display the title
-        of each movie in your database. (Click to see full instructions)
-
-'
-      U4 - Read Record - part 1 - template_instruction: "Use console.log to display
-        the records returned by a call to readRecords. (Click to see full instructions)\r\n"
+        of each movie in your database. (Click to see full instructions)  '
+      U4 - Read Record - part 1 - template_instruction: 'Use console.log to display
+        the records returned by a call to readRecords. (Click to see full instructions)  '
       U4 - ReadRecords - Contacts App 1_instruction: |-
         Use readRecords to copy the
         data in your database into your "contacts" global variable and call showCurrentContact.
@@ -8356,12 +8346,10 @@
       course1_playlab_events_challenge2_instruction: |-
         "Let's have a party! Give
         my friends something to do when you click or tap them."
-      course2_artist_nestedLoops_challenge1_instruction: |-
-        Can you figure out how
-        to make a picture like this?
-      course2_artist_nestedLoops_challenge2_instruction: |-
-        Can you figure out how
-        to make a picture like this?
+      course2_artist_nestedLoops_challenge1_instruction: An féidir leat pictiúr den
+        sórt seo a dhéanamh?
+      course2_artist_nestedLoops_challenge2_instruction: An féidir leat pictiúr den
+        sórt seo a dhéanamh?
       course2_artist_prog_challenge1_instruction: |-
         Draw rooms for each of the animals.
         There are many different ways to solve this puzzle, so have some fun. The
@@ -8452,9 +8440,8 @@
       course3_bee_functions_challenge4_instruction: |-
         Use everything you have learned
         to complete this puzzle!
-      course3_collector_debugging_challenge2_instruction: |-
-        Are you an expert of nested
-        loops? Use what you have learned so far to collect all of the treasure!
+      course3_collector_debugging_challenge2_instruction: An bhfuil tú i do shaineolaí
+        ar lúba neadaithe? Úsáid ar fhoghlaim tú go dtí seo chun an taisce a bhailiú!
       course3_farmer_condLoops_challenge1_instruction: |-
         Turn right at the pumpkins.
         Collect everything to complete the level. Each hidden crop has only one corn
@@ -9064,6 +9051,7 @@
         chun an dearcán a fháil!
       courseB_iceage_loops10_instruction: Cabhraigh le Scrat an dearcán a fháil!
       courseB_iceage_loops11_instruction: Help Scrat get to the acorn!
+      courseB_iceage_loops11_forVideo_instruction: Help Scrat get to the acorn!
       courseB_iceage_loops12_instruction: Faigh an dearcán cibé slí is féidir leat!
       courseB_iceage_loops2_instruction: |-
         Use two different move blocks to get to
@@ -9489,16 +9477,14 @@
         Here's an example of a game that
         you're about to create yourself! Play through it one or two times to get
         an idea of what you are about to make.
-      courseC_flappy_events1_instruction: |-
-        Attach the `flap normal amount` block
-        to the `when click` event, then press "Run".    Click or tap on the play
-        space to move Flappy to the target.
+      courseC_flappy_events1_instruction: Ceangail an bloc `gread mar is gnáth` leis
+        an teagmhas `nuair a chliceáiltear`, ansin brúigh "Rith". Cliceáil nó tapáil
+        an spás imeartha chun Flappy a threorú go dtí an sprioc.
       courseC_flappy_events10_instruction: 'Cruthaigh do chluiche Flappy féin! '
       courseC_flappy_events10_2018_instruction: 'Cruthaigh do chluiche Flappy féin! '
-      courseC_flappy_events1_2018_instruction: |-
-        Attach the `flap normal amount` block
-        to the `when click` event, then press "Run".    Click or tap on the play
-        space to move Flappy to the target.
+      courseC_flappy_events1_2018_instruction: Ceangail an bloc `gread mar is gnáth`
+        leis an teagmhas `nuair a chliceáiltear`, ansin brúigh "Rith". Cliceáil nó
+        tapáil an spás imeartha chun Flappy a threorú go dtí an sprioc.
       courseC_flappy_events2_instruction: |-
         Try adding a block that sets the level
         speed when the "Run" button is pressed.  Play the game and flap to the target
@@ -9507,14 +9493,12 @@
         Try adding a block that sets the
         level speed when the "Run" button is pressed.  Play the game and flap to
         the target to continue.
-      courseC_flappy_events3_instruction: |-
-        Attach the `end game` block to the `when
-        hit the ground` event.   Play the game and crash the bird into the ground
-        to continue.
-      courseC_flappy_events3_2018_instruction: |-
-        Attach the `end game` block to the
-        `when hit the ground` event.   Play the game and crash the bird into the ground
-        to continue.
+      courseC_flappy_events3_instruction: Ceangail an bloc `cuir deireadh leis an
+        gcluiche` leis an teagmhas `nuair a bhuailtear leis an talamh`. Imir an cluiche
+        agus tuairteáil an t-éan in aghaidh an talaimh le dul ar aghaidh.
+      courseC_flappy_events3_2018_instruction: Ceangail an bloc `cuir deireadh leis
+        an gcluiche` leis an teagmhas `nuair a bhuailtear leis an talamh`. Imir an
+        cluiche agus tuairteáil an t-éan in aghaidh an talaimh le dul ar aghaidh.
       courseC_flappy_events4_instruction: |-
         Attach a block to the `when hit an obstacle`
         event so that the game ends when Flappy crashes into the first set of pipes.
@@ -9690,9 +9674,9 @@
         blocks together and click "Run" to watch it go!
       courseC_maze_programming2_instruction: Tarraing bloc "téigh ar aghaidh" breise
         as an mbosca uirlisí chun an cód a chur i gcrích.
-      courseC_maze_programming2_2018_instruction: 'An féidir leat cabhrú liom greim
+      courseC_maze_programming2_2018_instruction: An féidir leat cabhrú liom greim
         a fháil ar an muc dhána sin? Ceangail cúpla bloc "téigh ar aghaidh" leis an
-        mbloc "nuair a ritear é" agus cliceáil "Rith". '
+        mbloc "nuair a ritear é" agus cliceáil "Rith".
       courseC_maze_programming3_instruction: |-
         There is one extra block that is going
         to cause the bird to crash. Throw it away by dragging it back to the toolbox.
@@ -9708,12 +9692,10 @@
         mhuc dhána a aimsiú. Nó b''fhéidir go dtiocfaidh fearg orm!"'
       courseC_maze_programming6_2018_instruction: Tóg go bog é agus cabhraigh liom
         an mhuc dhána a aimsiú. Nó b'fhéidir go dtiocfaidh fearg orm!
-      courseC_maze_programming7_instruction: |-
-        **Challenge:** This code has a lot
-        of bugs. You'll need to remove some blocks and add others.
-      courseC_maze_programming7_2018_instruction: |-
-        **Challenge:** This code has a
-        lot of bugs. You'll need to remove some blocks and add others.
+      courseC_maze_programming7_instruction: "**Dúshlán:** Tá go leor fabhtanna sa
+        chód seo. Caithfidh tú roinnt blocanna a bhaint agus cinn eile a chur leis."
+      courseC_maze_programming7_2018_instruction: "**Dúshlán:** Tá go leor fabhtanna
+        sa chód seo. Caithfidh tú roinnt blocanna a bhaint agus cinn eile a chur leis."
       courseC_maze_programming8_instruction: '*"Tóg go bog é agus cabhraigh liom an
         mhuc dhána a aimsiú."*'
       courseC_maze_programming8_2018_instruction: '*"Tóg go bog é agus cabhraigh liom
@@ -9722,12 +9704,10 @@
         liom an mhuc dhána a aimsiú."*'
       courseC_maze_programming8_predict1_2018_instruction: '*"Tóg go bog é agus cabhraigh
         liom an mhuc dhána a aimsiú."*'
-      courseC_maze_programming9_instruction: |-
-        *"Now, help me sneak up on the pig
-        any way you want to!"*
-      courseC_maze_programming9_2018_instruction: |-
-        *"Now, help me sneak up on the
-        pig any way you want to!"*
+      courseC_maze_programming9_instruction: '*"Anois, cabhraigh liom teacht aniar
+        aduaidh ar an muc ar do rogha bealach!"*'
+      courseC_maze_programming9_2018_instruction: '*"Anois, cabhraigh liom teacht
+        aniar aduaidh ar an muc ar do rogha bealach!"*'
       courseC_maze_programming_challenge1_instruction: 'Chuaigh an mhuc i bhfolach,
         agus caithfidh tú é a aimsiú. '
       courseC_maze_programming_challenge1_2018_instruction: 'Chuaigh an mhuc i bhfolach,
@@ -9744,9 +9724,8 @@
         use your arrow keys to get the penguin to run into the octopus.\r\n\r\nOnce
         you are done, you will learn how to make this game!"
       courseC_puppy_loops10_instruction: Tá tú ag déanamh go seoigh! Lean ort!
-      courseC_puppy_loops11_instruction: |-
-        You are almost there! This time, choose
-        any path you like!
+      courseC_puppy_loops11_instruction: Tá tú beagnach ann! An uair seo, roghnaigh
+        aon chosán a thaitníonn leat!
       courseC_puppy_loops8_instruction: 'Dúshlán: Úsáid smaointe ón chúpla puzal is
         déanaí chun an leibhéal seo a chríochnú.'
       courseC_puppy_loops8courseC_maze_loops8_instruction: 'Dúshlán: Úsáid smaointe
@@ -9765,9 +9744,8 @@
         Lean ort!
       courseC_starWars_loops11_instruction: Tá tú beagnach ann! An uair seo, roghnaigh
         aon chosán a thaitníonn leat!
-      courseC_starWars_loops11_2018_instruction: |-
-        You are almost there! This time,
-        choose any path you like!
+      courseC_starWars_loops11_2018_instruction: Tá tú beagnach ann! An uair seo,
+        roghnaigh aon chosán a thaitníonn leat!
       courseC_starWars_loops1_2018_instruction: |-
         BB-8 will pick up any metal scraps
         along the path where he moves. Use 5 of the same block to get BB-8 to pick
@@ -9780,12 +9758,10 @@
         BB-8 will pick up any metal
         scraps along the path where he moves. Use 5 of the same block to get BB-8
         to pick up all of the scrap metal in the play area.
-      courseC_starWars_loops2_instruction: |-
-        To get all the scrap metal, try creating
-        a loop that uses only one block inside of a `repeat` block.
-      courseC_starWars_loops2_2018_instruction: |-
-        To get all the scrap metal, try
-        creating a loop that uses only one block inside of a `repeat` block.
+      courseC_starWars_loops2_instruction: Chun an dramh-mhiotal go léir a bhailiú,
+        bain triail as lúb a úsáideann bloc amháin laistigh de bhloc `athdhéan`.
+      courseC_starWars_loops2_2018_instruction: Chun an dramh-mhiotal go léir a bhailiú,
+        bain triail as lúb a úsáideann bloc amháin laistigh de bhloc `athdhéan`.
       courseC_starWars_loops4_instruction: Sa dúshlán seo, is féidir leat dhá bhloc
         "athdhéan" a úsáid chun BB-8 a threorú go dtí an dramh-mhiotal go léir leis
         an líon is lú blocanna agus is féidir!
@@ -9840,15 +9816,15 @@
         picteilín ar fad.
 
 '
-      courseD_artist_2_2018_instruction: "Now, turn right by **60** degrees, then
+      courseD_artist_2_2018_instruction: 'Now, turn right by **60** degrees, then
         draw a straight line **150** pixels long and jump back to the center of the
-        play area.\r\n"
+        play area.  '
       courseD_artist_3_2018_instruction: "Nest all of the code inside of another\n`repeat`
         loop and run it a total of **6** times. "
-      courseD_artist_4_2018_instruction: Add a tiny shape to the end of your line!
+      courseD_artist_4_2018_instruction: Cuir cruth an-bheag ag deireadh na líne!
       courseD_artist_5_2018_instruction: Imir leis na calóga sneachta!
-      courseD_artist_6_2018_instruction: "Try changing your long 150 pixel line into
-        6 short lines of **25** pixels, with little turns at the end.\r\n"
+      courseD_artist_6_2018_instruction: 'Try changing your long 150 pixel line into
+        6 short lines of **25** pixels, with little turns at the end.  '
       courseD_artist_7_2018_instruction: |-
         Now, turn around 180 degrees and draw the
         stair pattern again!
@@ -9944,9 +9920,8 @@
       courseD_artist_functions4_instruction: |-
         Now that you can draw a star, try drawing
         four stars!
-      courseD_artist_functions5_instruction: |-
-        Draw only those three stars to finish
-        this puzzle.
+      courseD_artist_functions5_instruction: Tarraing na trí réalta sin amháin chun
+        an dúshlán seo a réiteach.
       courseD_artist_functions6_instruction: |-
         Make this window by drawing a square,
         then turning 90 degrees before drawing another, and so on.
@@ -9984,21 +9959,16 @@
       courseD_artist_nestedLoops3_2018_instruction: "Use your new skills to quickly
         draw the last row of windows for this building.\r\n\r\nThe windows are 20
         pixel squares, each 20 pixels apart."
-      courseD_artist_nestedLoops4_instruction: |-
-        Great!  Do the same thing with these
-        circles.
-      courseD_artist_nestedLoops4_2018_instruction: |-
-        Great!  Do the same thing with
-        these circles.
-      courseD_artist_nestedLoops5_instruction: |-
-        What happens if you also turn 90
-        degrees between circles?
-      courseD_artist_nestedLoops5_2018_instruction: |-
-        What happens if you also turn
-        90 degrees between circles?
-      courseD_artist_nestedLoops6_instruction: |-
-        Edit blocks within your existing
-        code to make this image.
+      courseD_artist_nestedLoops4_instruction: Iontach! Déan an rud céanna leis na
+        ciorcail seo.
+      courseD_artist_nestedLoops4_2018_instruction: Iontach! Déan an rud céanna leis
+        na ciorcail seo.
+      courseD_artist_nestedLoops5_instruction: Cad a tharlóidh má chasann tú 90 céim
+        idir na ciorcail freisin?
+      courseD_artist_nestedLoops5_2018_instruction: Cad a tharlóidh má chasann tú
+        90 céim idir na ciorcail freisin?
+      courseD_artist_nestedLoops6_instruction: Cuir na blocanna sa gcód atá ann in
+        eagar chun an pictiúr a dhéanamh.
       courseD_artist_nestedLoops7_instruction: Úsáid ar fhoghlaim tú go dtí seo chun
         an pictiúr seo a dhéanamh.
       courseD_artist_nestedLoops7_2018_instruction: Úsáid ar fhoghlaim tú go dtí seo
@@ -10007,18 +9977,14 @@
         is déanaí chun an pictiúr seo a dhéanamh as an nua.
       courseD_artist_nestedLoops8_2018_instruction: Úsáid ar fhoghlaim tú sa chúpla
         dúshlán is déanaí chun an pictiúr seo a dhéanamh as an nua.
-      courseD_artist_nestedLoops9_instruction: |-
-        **Challenge:** Can you figure out
-        how to make a picture like this?
-      courseD_artist_nestedLoops9_2018_instruction: |-
-        **Challenge:** Can you figure
-        out how to make a picture like this?
-      courseD_artist_nestedLoops9_predict1_instruction: |-
-        **Challenge:** Can you figure
-        out how to make a picture like this?
-      courseD_artist_nestedLoops9_predict1_2018_instruction: |-
-        **Challenge:** Can
-        you figure out how to make a picture like this?
+      courseD_artist_nestedLoops9_instruction: "**Dúshlán:** An féidir leat pictiúr
+        den sórt seo a dhéanamh?"
+      courseD_artist_nestedLoops9_2018_instruction: "**Dúshlán:** An féidir leat pictiúr
+        den sórt seo a dhéanamh?"
+      courseD_artist_nestedLoops9_predict1_instruction: "**Dúshlán:** An féidir leat
+        pictiúr den sórt seo a dhéanamh?"
+      courseD_artist_nestedLoops9_predict1_2018_instruction: "**Dúshlán:** An féidir
+        leat pictiúr den sórt seo a dhéanamh?"
       courseD_artist_nestedLoopsFP_instruction: |-
         Now it's your turn.  Take the skills
         you have learned and make something that you love!
@@ -10028,12 +9994,10 @@
       courseD_artist_nestedLoopsPre1_instruction: |-
         Create a triangle to kickstart
         this stage.
-      courseD_artist_nestedLoops_challenge1_instruction: |-
-        Can you figure out how
-        to make a picture like this?
-      courseD_artist_nestedLoops_challenge1_2018_instruction: |-
-        Can you figure out
-        how to make a picture like this?
+      courseD_artist_nestedLoops_challenge1_instruction: An féidir leat pictiúr den
+        sórt seo a dhéanamh?
+      courseD_artist_nestedLoops_challenge1_2018_instruction: An féidir leat pictiúr
+        den sórt seo a dhéanamh?
       courseD_artist_nestedLoops_challenge2_instruction: Deisigh an cód chun an pictiúr
         seo a dhéanamh!
       courseD_artist_nestedLoops_challenge2_2018_instruction: Deisigh an cód chun
@@ -10174,9 +10138,8 @@
         Challenge: All of the commands that you
         need are already here...now use your debugging skills to figure out how to
         solve this puzzle.
-      courseD_bee_debugging6_instruction: |-
-        Challenge:  Fix the errors to collect
-        all of the nectar and make all of the honey.
+      courseD_bee_debugging6_instruction: 'Dúshlán: Ceartaigh na botúin chun an neachtar
+        go léir a bhailiú agus an mhil a dhéanamh.'
       courseD_bee_debugging9_instruction: Cabhraigh leis an mbeach an cód a dheisiú
         chun an neachtar go léir a bhailiú.
       courseD_bee_debugging_challenge1_instruction: |-
@@ -10195,12 +10158,12 @@
         nectar. Can you use the same kind of pattern to help the bee make all of honey?
       courseD_bee_nestedLoops1_instruction: Cabhraigh leis an mbeach an neachtar go
         léir a bhailiú.
-      courseD_bee_nestedLoops1_2018_instruction: 'Cuir an líon is mó neachtar a bhaileoidh
-        an beach in áit ??? sa lúb "do gach". '
+      courseD_bee_nestedLoops1_2018_instruction: Cuir an líon is mó neachtar a bhaileoidh
+        an beach in áit ??? sa lúb "do gach".
       courseD_bee_nestedLoops1a_instruction: Cabhraigh leis an mbeach an neachtar
         go léir a bhailiú.
-      courseD_bee_nestedLoops1a_2018_instruction: 'Cuir an líon is mó neachtar a bhaileoidh
-        an beach in áit ??? sa lúb "do gach". '
+      courseD_bee_nestedLoops1a_2018_instruction: Cuir an líon is mó neachtar a bhaileoidh
+        an beach in áit ??? sa lúb "do gach".
       courseD_bee_nestedLoops2_instruction: An uair seo, cabhraigh leis an mbeach
         an neachtar go léir a bhailiú leis an líon is lú blocanna agus is féidir.
       courseD_bee_nestedLoops2_2018_instruction: An uair seo, cabhraigh leis an mbeach
@@ -10210,8 +10173,8 @@
       courseD_bee_nestedLoops2_predict1_2018_instruction: An uair seo, cabhraigh leis
         an mbeach an neachtar go léir a bhailiú leis an líon is lú blocanna agus is
         féidir.
-      courseD_bee_nestedLoops3_instruction: 'Bailigh an neachtar go léir ó gach bláth.
-        Úsáid lúb neadaithe. '
+      courseD_bee_nestedLoops3_instruction: Bailigh an neachtar go léir ó gach bláth.
+        Úsáid lúb neadaithe.
       courseD_bee_nestedLoops5_instruction: 'Bailigh an neachtar go léir ó gach bláth
         agus déan mil ag an gcíor mheala. Úsáid lúb neadaithe. '
       courseD_bee_nestedLoops6_instruction: Déan an neachtar go léir.
@@ -10230,14 +10193,12 @@
       courseD_bee_nestedLoops9_2018_instruction: Déan an mhil go léir.
       courseD_bee_nestedLoops9_predict2_instruction: Déan an mhil go léir.
       courseD_bee_nestedLoops9_predict2_2018_instruction: Déan an mhil go léir.
-      courseD_bee_nested_loops_challenge1_instruction: |-
-        Let's hunt for treasure
-        - using loops! Help the collector reach at least two piles of treasure using
-        only the blocks in your toolbox.
-      courseD_bee_nested_loops_challenge2_instruction: |-
-        Let's hunt for treasure
-        - using loops! Help the collector reach at least two piles of treasure using
-        only the blocks in your toolbox.
+      courseD_bee_nested_loops_challenge1_instruction: Téimis ag tóraíocht taisce
+        - le lúba! Cabhraigh leis an mbailitheoir ar a laghad dhá charn maoine a shroicheadh
+        gan ach na blocanna sa mbosca uirlisí a úsáid.
+      courseD_bee_nested_loops_challenge2_instruction: Téimis ag tóraíocht taisce
+        - le lúba! Cabhraigh leis an mbailitheoir ar a laghad dhá charn maoine a shroicheadh
+        gan ach na blocanna sa mbosca uirlisí a úsáid.
       courseD_bounce_embed_endgame_instruction: |-
         Use the left and right arrows to
         move the paddle. See how many points you can get before your opponent scores
@@ -10251,21 +10212,23 @@
         leis na blocanna "nuair a théann liathróid i mbáire" agus "nuair a théann
         liathróid thar slacán" chun cluiche a chruthú. Cé mhéad pointe an féidir leatsa
         a fháil sula bhfaighidh do chéile comhraic dhá phointe?
-      courseD_bounce_events10s_instruction: "Attach the `score point` block to the\n`when
-        ball in goal` event and the `score opponent point` block to the `when\nball
-        misses hand` event to make a game. "
-      courseD_bounce_events10s_2018_instruction: "Attach the `score point` block\nto
-        the `when ball in goal` event and the `score opponent point` block to the\n`when
-        ball misses hand` event to make a game. "
+      courseD_bounce_events10s_instruction: 'Ceangail an bloc `tabhair pointe don
+        imreoir` leis an teagmhas `nuair a théann liathróid i mbáire` agus an bloc
+        `tabhair pointe don chéile comhraic` leis an teagmhas `nuair a théann liathróid
+        thar lámh` chun cluiche a dhéanamh. '
+      courseD_bounce_events10s_2018_instruction: 'Ceangail an bloc `tabhair pointe
+        don imreoir` leis an teagmhas `nuair a théann liathróid i mbáire` agus an
+        bloc `tabhair pointe don chéile comhraic` leis an teagmhas `nuair a théann
+        liathróid thar lámh` chun cluiche a dhéanamh. '
       courseD_bounce_events11_instruction: Anois is féidir leat blocanna a cheangal
         leis an mbloc "nuair a ritear é". Caithfidh tú an bloc nua "tosaigh liathróid
         nua" a cheangal i níos mó ná áit amháin. Athraigh an radharc nó luas an tslacáin
         freisin, agus féach cé mhéad pointe is féidir leat a fháil sula bhfaighidh
         do chéile comhraic dhá phointe.
-      courseD_bounce_events11s_instruction: "Attach the `throw new ball` block in\nall
-        of the places where the game needs a new ball. "
-      courseD_bounce_events11s_2018_instruction: "Attach the `throw new ball` block\nin
-        all of the places where the game needs a new ball. "
+      courseD_bounce_events11s_instruction: 'Ceangail an bloc `caith liathróid nua`
+        aon áit a bhfuil liathróid nua ag teastáil. '
+      courseD_bounce_events11s_2018_instruction: 'Ceangail an bloc `caith liathróid
+        nua` aon áit a bhfuil liathróid nua ag teastáil. '
       courseD_bounce_events12_instruction: Cruthaigh do chluiche liathróide féin.
         Is féidir leat an leagan amach agus na rialacha go léir a athrú. Nuair a bheidh
         tú críochnaithe, cliceáil "Críochnaigh" agus lig do chairde an cluiche a imirt
@@ -10363,22 +10326,18 @@
         go léir a bhailiú.
       courseD_collector_debugging4a_2018_instruction: Réitigh na fadhbanna chun na
         seoda go léir a bhailiú.
-      courseD_collector_debugging5_instruction: |-
-        All of the commands that you need
-        are already here...now use your debugging skills to figure out how to solve
-        this puzzle.
-      courseD_collector_debugging5_2018_instruction: |-
-        All of the commands that you
-        need are already here...now use your debugging skills to figure out how to
-        solve this puzzle.
-      courseD_collector_debugging5a_instruction: |-
-        All of the commands that you need
-        are already here...now use your debugging skills to figure out how to solve
-        this puzzle.
-      courseD_collector_debugging5a_2018_instruction: |-
-        All of the commands that you
-        need are already here...now use your debugging skills to figure out how to
-        solve this puzzle.
+      courseD_collector_debugging5_instruction: Tá gach ordú a theastaíonn uait anseo
+        cheana féin... anois úsáid na scileanna dífhabhtaithe atá agat chun an dúshlán
+        seo a réiteach.
+      courseD_collector_debugging5_2018_instruction: Tá gach ordú a theastaíonn uait
+        anseo cheana féin... anois úsáid na scileanna dífhabhtaithe atá agat chun
+        an dúshlán seo a réiteach.
+      courseD_collector_debugging5a_instruction: Tá gach ordú a theastaíonn uait anseo
+        cheana féin... anois úsáid na scileanna dífhabhtaithe atá agat chun an dúshlán
+        seo a réiteach.
+      courseD_collector_debugging5a_2018_instruction: Tá gach ordú a theastaíonn uait
+        anseo cheana féin... anois úsáid na scileanna dífhabhtaithe atá agat chun
+        an dúshlán seo a réiteach.
       courseD_collector_debugging6_instruction: 'Dúshlán: Úsáid do chuid scileanna
         dífhabhtaithe chun na fadhbanna a réiteach agus na seoda go léir a bhailiú.'
       courseD_collector_debugging6_2018_instruction: 'Dúshlán: Úsáid do chuid scileanna
@@ -10393,12 +10352,10 @@
         Challenge: All of the commands that
         you need are already here...now use your debugging skills to figure out how
         to solve this puzzle.
-      courseD_collector_debugging_challenge2_instruction: |-
-        Are you an expert at nested
-        loops? Use what you have learned so far to collect all the treasure!
-      courseD_collector_debugging_challenge2_2018_instruction: |-
-        Are you an expert
-        at nested loops? Use what you have learned so far to collect all the treasure!
+      courseD_collector_debugging_challenge2_instruction: An bhfuil tú i do shaineolaí
+        ar lúba neadaithe? Úsáid ar fhoghlaim tú go dtí seo chun an taisce a bhailiú!
+      courseD_collector_debugging_challenge2_2018_instruction: An bhfuil tú i do shaineolaí
+        ar lúba neadaithe? Úsáid ar fhoghlaim tú go dtí seo chun an taisce a bhailiú!
       courseD_collector_nested_loops_challenge2_instruction: |-
         Help the collector
         reach at least two piles of treasure using only the blocks in your toolbox.
@@ -10416,9 +10373,8 @@
         bhailiú.
       courseD_collector_ramp9_instruction: Cabhraigh le Laurel na seoda go léir a
         bhailiú.
-      courseD_collector_until_challenge1_instruction: |-
-        Are you an expert of nested
-        loops? Use what you have learned so far to collect all of the treasure!
+      courseD_collector_until_challenge1_instruction: An bhfuil tú i do shaineolaí
+        ar lúba neadaithe? Úsáid ar fhoghlaim tú go dtí seo chun an taisce a bhailiú!
       courseD_debugging_1_instruction: Réitigh na fadhbanna chun an neachtar go léir
         a bhailiú.
       courseD_debugging_2_instruction: Réitigh na fadhbanna chun an neachtar go léir
@@ -10507,9 +10463,8 @@
         chun cabhrú leis an bhfeirmeoir an carn iomlán a bhaint.
       courseD_farmer_conditionals5_instruction: 'Cabhraigh liom an ithir seo go léir
         a bhaint. '
-      courseD_farmer_conditionals6_instruction: |-
-        Use the `while` loop to easily fill
-        all of the holes.
+      courseD_farmer_conditionals6_instruction: Úsáid an lúb `chomh fada is` chun
+        na poill a líonadh gan mórán stró.
       courseD_farmer_conditionals7_instruction: |-
         Fill in the hole at the end of each
         of these paths.
@@ -10558,12 +10513,10 @@
         entire pile using a `while` loop.
       courseD_farmer_while5_instruction: 'Cabhraigh liom an ithir seo go léir a bhaint. '
       courseD_farmer_while5_2018_instruction: 'Help me remove all of this dirt. '
-      courseD_farmer_while6_instruction: |-
-        Use the `while` loop to easily fill all
-        of the holes.
-      courseD_farmer_while6_2018_instruction: |-
-        Use the `while` loop to easily fill
-        all of the holes.
+      courseD_farmer_while6_instruction: Úsáid an lúb `chomh fada is` chun na poill
+        a líonadh gan mórán stró.
+      courseD_farmer_while6_2018_instruction: Úsáid an lúb `chomh fada is` chun na
+        poill a líonadh gan mórán stró.
       courseD_farmer_while7_instruction: |-
         Fill in the hole at the end of each of
         these paths.
@@ -10606,7 +10559,8 @@
       courseD_iceage_loops10_instruction: Cabhraigh le Scrat an dearcán a fháil!
       courseD_iceage_loops11_instruction: Help Scrat get to the acorn!
       courseD_iceage_loops12_instruction: Faigh an dearcán cibé slí is féidir leat!
-      courseD_iceage_loops2_instruction: Use a `turn left` block to get to the acorn!
+      courseD_iceage_loops2_instruction: Úsáid bloc `cas ar chlé` chun an dearcán
+        a fháil!
       courseD_iceage_loops3_instruction: An féidir leat an dearcán a bhaint amach
         gan ach bloc amháin "téigh ar aghaidh" a úsáid?
       courseD_iceage_loops4_instruction: |-
@@ -10679,59 +10633,61 @@
         find the pig!
       courseD_maze_ramp5c_instruction: Cabhraigh leis an éan an mhuc a bhaint amach.
       courseD_maze_ramp5c_2018_instruction: Help the bird get to the pig.
-      courseD_maze_ramp5d_instruction: Get the bird to the pig.
-      courseD_maze_ramp5d_2018_instruction: Get the bird to the pig.
+      courseD_maze_ramp5d_instruction: Cabhraigh leis an éan an mhuc a bhaint amach.
+      courseD_maze_ramp5d_2018_instruction: Cabhraigh leis an éan an mhuc a bhaint
+        amach.
       courseD_maze_ramp6_instruction: '"Tóg go bog é agus cabhraigh liom an mhuc dhána
         a aimsiú. Nó b''fhéidir go dtiocfaidh fearg orm!"'
       courseD_maze_ramp6a_instruction: '"Tóg go bog é agus cabhraigh liom an mhuc
         dhána a aimsiú. Nó b''fhéidir go dtiocfaidh fearg orm!"'
       courseD_maze_ramp7_instruction: Cabhraigh leis an éan an mhuc a bhaint amach!
-      courseD_maze_until1_instruction: Get the angry bird to the pig.
-      courseD_maze_until10_instruction: Help the zombie get to the sunflower.
-      courseD_maze_until10_2018_instruction: Help the zombie get to the sunflower.
-      courseD_maze_until10_predict2_instruction: Help the zombie get to the sunflower.
-      courseD_maze_until10_predict2_2018_instruction: |-
-        Help the zombie get to the
-        sunflower.
-      courseD_maze_until1_2018_instruction: Get the angry bird to the pig.
+      courseD_maze_until1_instruction: Treoraigh an t-éan feargach go dtí an mhuc.
+      courseD_maze_until10_instruction: Cabhraigh leis an zombaí an lus gréine a fháil.
+      courseD_maze_until10_2018_instruction: Cabhraigh leis an zombaí an lus gréine
+        a fháil.
+      courseD_maze_until10_predict2_instruction: Cabhraigh leis an zombaí an lus gréine
+        a fháil.
+      courseD_maze_until10_predict2_2018_instruction: Cabhraigh leis an zombaí an
+        lus gréine a fháil.
+      courseD_maze_until1_2018_instruction: Treoraigh an t-éan feargach go dtí an
+        mhuc.
       courseD_maze_until2_instruction: |-
         Now, use the `repeat until` loop to do the
         same thing without specifying how many times to move forward and turn.
-      courseD_maze_until3_instruction: Get the bird to the pig.
-      courseD_maze_until3_2018_instruction: Get the bird to the pig.
-      courseD_maze_until4_instruction: |-
-        Can you get the zombie to the sunflower using
-        only the blocks that are available?
-      courseD_maze_until4_2018_instruction: |-
-        Can you get the zombie to the sunflower
-        using only the blocks that are available?
+      courseD_maze_until3_instruction: Cabhraigh leis an éan an mhuc a bhaint amach.
+      courseD_maze_until3_2018_instruction: Cabhraigh leis an éan an mhuc a bhaint
+        amach.
+      courseD_maze_until4_instruction: An féidir leat an zombaí a threorú go dtí an
+        lus gréine gan ach na blocanna atá ar fáil a úsáid?
+      courseD_maze_until4_2018_instruction: An féidir leat an zombaí a threorú go
+        dtí an lus gréine gan ach na blocanna atá ar fáil a úsáid?
       courseD_maze_until5_instruction: |-
         Use the `if` block to help the zombie decide
         when to turn, then get the zombie to the sunflower.
       courseD_maze_until5_2018_instruction: |-
         Use the `if` block to help the zombie
         decide when to turn, then get the zombie to the sunflower.
-      courseD_maze_until6_instruction: Help the zombie get to the sunflower.
-      courseD_maze_until6_2018_instruction: Help the zombie get to the sunflower.
-      courseD_maze_until7_instruction: Help the zombie get to the sunflower.
-      courseD_maze_until7_2018_instruction: Help the zombie get to the sunflower.
-      courseD_maze_until8_instruction: Help the zombie get to the sunflower.
-      courseD_maze_until8_2018_instruction: Help the zombie get to the sunflower.
-      courseD_maze_until9_instruction: |-
-        **Challenge:** Avoid the chompers and help
-        the zombie get to the sunflower.
-      courseD_maze_until9_2018_instruction: |-
-        **Challenge:** Avoid the chompers and
-        help the zombie get to the sunflower.
+      courseD_maze_until6_instruction: Cabhraigh leis an zombaí an lus gréine a fháil.
+      courseD_maze_until6_2018_instruction: Cabhraigh leis an zombaí an lus gréine
+        a fháil.
+      courseD_maze_until7_instruction: Cabhraigh leis an zombaí an lus gréine a fháil.
+      courseD_maze_until7_2018_instruction: Cabhraigh leis an zombaí an lus gréine
+        a fháil.
+      courseD_maze_until8_instruction: Cabhraigh leis an zombaí an lus gréine a fháil.
+      courseD_maze_until8_2018_instruction: Cabhraigh leis an zombaí an lus gréine
+        a fháil.
+      courseD_maze_until9_instruction: "**Dúshlán:** Seachain na fiacla agus cabhraigh
+        leis an zombaí an lus gréine a fháil."
+      courseD_maze_until9_2018_instruction: "**Dúshlán:** Seachain na fiacla agus
+        cabhraigh leis an zombaí an lus gréine a fháil."
       courseD_maze_until_challenge_instruction: |-
         No hints, just challenge. Get the
         zombie to the sunflower.
       courseD_maze_until_challenge1-delete-this-copy_instruction: |-
         No hints, just
         challenge. Get the zombie to the sunflower.
-      courseD_maze_until_challenge1_instruction: |-
-        No hints, just challenge. Get the
-        zombie to the sunflower.
+      courseD_maze_until_challenge1_instruction: Gan leideanna, dúshlán amháin. Treoraigh
+        an zombaí go dtí an lus gréine.
       courseD_maze_until_challenge1_2018_instruction: |-
         No hints, just challenge.
         Get the zombie to the sunflower.
@@ -10802,6 +10758,8 @@
         off to your friends!
       courseD_playLab_condFP_a_instruction: Now, build your own game to show off to
         your friends!
+      courseD_playLab_condForVideo_instruction: Now, build your own game to show off
+        to your friends!
       courseD_playLab_embedded_instruction: "Move Pegleg the Pirate with the arrow
         keys. Get to the dragon to score points, but avoid the ninja! Standing below
         the line of octopuses will make the ninja stop chasing you, but beware! The
@@ -10960,10 +10918,10 @@
         an triantán seo a dhéanamh.
       courseE_artist_ramp9_2_2018_instruction: Úsáid ar fhoghlaim tú go dtí seo chun
         an triantán seo a dhéanamh.
-      courseE_bee_concept1_instruction: 'Bailigh an neachtar go léir ó gach bláth.
-        Úsáid lúb neadaithe. '
-      courseE_bee_concept1_2018_instruction: 'Bailigh an neachtar go léir ó gach bláth.
-        Úsáid lúb neadaithe. '
+      courseE_bee_concept1_instruction: Bailigh an neachtar go léir ó gach bláth.
+        Úsáid lúb neadaithe.
+      courseE_bee_concept1_2018_instruction: Bailigh an neachtar go léir ó gach bláth.
+        Úsáid lúb neadaithe.
       courseE_bee_concept2_instruction: 'Cabhraigh leis an mbeach an mhil go léir
         a dhéanamh. '
       courseE_bee_concept2_2018_instruction: 'Cabhraigh leis an mbeach an mhil go
@@ -11152,20 +11110,15 @@
         by pulling the blocks from the code and dropping them into the **function
         definition**.
       courseE_farmer_functions3c1_2018_instruction: This function calls other functions!
-      courseE_farmer_functions3c_2018_instruction: |-
-        Now, fill-in the function yourself
-        by pulling the blocks from the code and dropping them into the **function
-        definition**.
+      courseE_farmer_functions3c_2018_instruction: Bain triail as ar chosán níos faide.
       courseE_farmer_functions4_instruction: "Great!  Now you have code that will
         work to get pumpkins from any size path.\r\n\r\nLet's drag that code into
         a function so we can use it in lots of ways...but first use it to solve this
         puzzle again."
-      courseE_farmer_functions4b_instruction: |-
-        Use your new function to solve this
-        puzzle.
-      courseE_farmer_functions4b_2018_instruction: |-
-        Use your new function to solve
-        this puzzle.
+      courseE_farmer_functions4b_instruction: Bain úsáid as an bhfeidhm nua seo chun
+        an dúshlán seo a réiteach.
+      courseE_farmer_functions4b_2018_instruction: Bain úsáid as an bhfeidhm nua seo
+        chun an dúshlán seo a réiteach.
       courseE_farmer_functions5_instruction: |-
         How can you change your program to
         get this function to work for each of these paths?
@@ -11203,32 +11156,26 @@
         right at the lettuce.
       courseE_farmer_functions8_instruction: "**Dúshlán:** Réitigh an puzal seo leis
         an líon is lú blocanna agus is féidir."
-      courseE_farmer_functions8a1_2018_instruction: Is your function still helpful?
+      courseE_farmer_functions8a1_2018_instruction: An bhfuil d'fheidhm fós úsáideach?
       courseE_farmer_functions8b_instruction: "**Dúshlán:** Úsáid an fheidhm ón dúshlán
         is déanaí chun na puimcíní go léir a bhailiú. "
       courseE_farmer_functions8b_2018_instruction: "**Dúshlán:** Úsáid an fheidhm
         ón dúshlán is déanaí chun na puimcíní go léir a bhailiú. "
       courseE_farmer_functions9_instruction: Úsáid ráitis choinníollacha le do chód
         a shimpliú.
-      courseE_farmer_functions9a1_2018_instruction: Is your function still helpful?
-      courseE_farmer_functions9b_instruction: |-
-        Can you figure out the pattern that
-        you need to solve this puzzle?
-      courseE_farmer_functions9b_2018_instruction: |-
-        Can you figure out the pattern
-        that you need to solve this puzzle?
-      courseE_farmer_functions9b_clone_instruction: |-
-        Can you figure out the pattern
-        that you need to solve this puzzle?
-      courseE_farmer_predict1_instruction: |-
-        Pick all of the lettuce (only while there
-        is some to pick.)
-      courseE_farmer_predict1_2018_instruction: |-
-        Pick all of the lettuce (only while
-        there is some to pick.)
-      courseE_farmer_ramp11_instruction: |-
-        This puzzle also uses nested loops.  Can
-        you figure out how?
+      courseE_farmer_functions9a1_2018_instruction: An bhfuil d'fheidhm fós úsáideach?
+      courseE_farmer_functions9b_instruction: An féidir leat patrún a dhéanamh amach
+        a chabhróidh leat an dúshlán seo a réiteach?
+      courseE_farmer_functions9b_2018_instruction: An féidir leat patrún a dhéanamh
+        amach a chabhróidh leat an dúshlán seo a réiteach?
+      courseE_farmer_functions9b_clone_instruction: An féidir leat patrún a dhéanamh
+        amach a chabhróidh leat an dúshlán seo a réiteach?
+      courseE_farmer_predict1_instruction: Bailigh an leitís go léir (má tá leitís
+        le bailiú ann.)
+      courseE_farmer_predict1_2018_instruction: Bailigh an leitís go léir (má tá leitís
+        le bailiú ann.)
+      courseE_farmer_ramp11_instruction: Úsáideann an dúshlán seo lúba neadaithe freisin.
+        An féidir leat déanamh amach cén chaoi?
       courseE_farmer_ramp11a_instruction: Má tá carn ann, bain an ithir.
       courseE_farmer_ramp11a_2018_instruction: Má tá carn ann, bain an ithir.
       courseE_farmer_ramp11b_instruction: Má tá carn ann, bain an ithir.
@@ -11262,20 +11209,18 @@
         an leitís, ansin úsáid lúb "chomh fada is" chun an leitís go léir a bhaint.
       courseE_farmer_ramp12e_2018_instruction: Téigh ar aghaidh go dtí go sroichfidh
         tú an leitís, ansin úsáid lúb "chomh fada is" chun an leitís go léir a bhaint.
-      courseE_farmer_ramp12f_instruction: |-
-        Move forward until you reach the lettuce,
-        then turn left **if** there is a path to the left.  Otherwise, turn right.
-      courseE_farmer_ramp12f_2018_instruction: |-
-        Move forward until you reach the
-        lettuce, then turn left **if** there is a path to the left.  Otherwise, turn
-        right.
-      courseE_farmer_ramp12g_instruction: |-
-        Move forward until you reach the lettuce,
-        then turn left **if** there is a path to the left.  Otherwise, turn right.
-      courseE_farmer_ramp12g_2018_instruction: |-
-        Move forward until you reach the
-        lettuce, then turn left **if** there is a path to the left.  Otherwise, turn
-        right.
+      courseE_farmer_ramp12f_instruction: Téigh ar aghaidh go dtí go sroichfidh tú
+        an leitís, ansin cas ar chlé **má** tá cosán ann ar chlé. Mura bhfuil, cas
+        ar dheis.
+      courseE_farmer_ramp12f_2018_instruction: Téigh ar aghaidh go dtí go sroichfidh
+        tú an leitís, ansin cas ar chlé **má** tá cosán ann ar chlé. Mura bhfuil,
+        cas ar dheis.
+      courseE_farmer_ramp12g_instruction: Téigh ar aghaidh go dtí go sroichfidh tú
+        an leitís, ansin cas ar chlé **má** tá cosán ann ar chlé. Mura bhfuil, cas
+        ar dheis.
+      courseE_farmer_ramp12g_2018_instruction: Téigh ar aghaidh go dtí go sroichfidh
+        tú an leitís, ansin cas ar chlé **má** tá cosán ann ar chlé. Mura bhfuil,
+        cas ar dheis.
       courseE_farmer_ramp13_instruction: Bain arbhar má tá arbhar ann, agus bain leitís
         chomh fada is atá leitís ann.
       courseE_farmer_ramp13_2018_instruction: Bain arbhar má tá arbhar ann, agus bain
@@ -11390,18 +11335,14 @@
       courseE_playlab_variables_challenge2_instruction: |-
         Can you figure out how this
         "Fortune Teller" app works? Click `MORE` to see your challenges.
-      courseE_video_createFunctions_instruction: |-
-        We don't have a video for creating
-        functions, yet. This is a placeholder.
-      courseE_video_createFunctions2_instruction: |-
-        We don't have a video for creating
-        functions, yet. This is a placeholder.
-      courseE_video_createFunctions2_2018_instruction: |-
-        We don't have a video for
-        creating functions, yet. This is a placeholder.
-      courseE_video_createFunctions_2018_instruction: |-
-        We don't have a video for
-        creating functions, yet. This is a placeholder.
+      courseE_video_createFunctions_instruction: Níl físeán againn fós a mhíníonn
+        conas a dhéantar feidhmeanna. Ionadchoinneálaí é seo.
+      courseE_video_createFunctions2_instruction: Níl físeán againn fós a mhíníonn
+        conas a dhéantar feidhmeanna. Ionadchoinneálaí é seo.
+      courseE_video_createFunctions2_2018_instruction: Níl físeán againn fós a mhíníonn
+        conas a dhéantar feidhmeanna. Ionadchoinneálaí é seo.
+      courseE_video_createFunctions_2018_instruction: Níl físeán againn fós a mhíníonn
+        conas a dhéantar feidhmeanna. Ionadchoinneálaí é seo.
       courseF_IceAge_1_instruction: |-
         Help Sid say "Hello!" by dragging the `actor
         1 say` block out and connecting it to the bottom of the `when run` event.
@@ -11439,9 +11380,8 @@
       courseF_artist_embed_for7_instruction: |-
         Press Run to see a program in action!
         This one uses for loops.
-      courseF_artist_embed_variables9_instruction: |-
-        Press Run to see this program
-        in action!
+      courseF_artist_embed_variables9_instruction: Brúigh "Rith" chun an ríomhchlár
+        seo a chur ar siúl!
       courseF_artist_for1_instruction: |-
         Experiment with the `for` loop and play with
         the `counter` variable.
@@ -11759,8 +11699,8 @@
         `counter` variable to see how much shorter your code becomes.
       courseF_bee_for4_instruction: Cabhraigh leis an mbeach an neachtar go léir a
         bhailiú.
-      courseF_bee_for4_2018_instruction: 'Cuir an líon is mó neachtar a bhaileoidh
-        an beach in áit ??? sa lúb "do gach". '
+      courseF_bee_for4_2018_instruction: Cuir an líon is mó neachtar a bhaileoidh
+        an beach in áit ??? sa lúb "do gach".
       courseF_bee_for5_instruction: |-
         Use the `counter` variable twice to solve this
         puzzle.
@@ -11902,12 +11842,10 @@
         bhís seo a dhéanamh.
       courseF_bee_fwp9_instruction: Bain úsáid as an bhfeidhm nua seo chun an dúshlán
         seo a réiteach.
-      courseF_bee_fwp9_predict1_instruction: |-
-        Use your new function to solve this
-        puzzle.
-      courseF_bee_fwp9_predict1_2018_instruction: |-
-        Use your new function to solve
-        this puzzle.
+      courseF_bee_fwp9_predict1_instruction: Bain úsáid as an bhfeidhm nua seo chun
+        an dúshlán seo a réiteach.
+      courseF_bee_fwp9_predict1_2018_instruction: Bain úsáid as an bhfeidhm nua seo
+        chun an dúshlán seo a réiteach.
       courseF_bee_fwp_challenge1_instruction: |-
         Use one `for loop` in a function with
         a `length` parameter to collect all of the corn.
@@ -11935,9 +11873,8 @@
         beach ón bhláth seo?
       courseF_farmer_ramp11_instruction: Úsáideann an dúshlán seo lúba neadaithe freisin.
         An féidir leat déanamh amach cén chaoi?
-      courseF_farmer_ramp11_2018_instruction: |-
-        This puzzle also uses nested loops.  Can
-        you figure out how?
+      courseF_farmer_ramp11_2018_instruction: Úsáideann an dúshlán seo lúba neadaithe
+        freisin. An féidir leat déanamh amach cén chaoi?
       courseF_maze_predict1_instruction: |-
         This code includes a new block. What do
         you think would happen if you press the "Run" block?
@@ -12069,12 +12006,10 @@
       courseF_playlab_variables_challenge3_instruction: |-
         Can you figure out how this
         "Fortune Teller" app works? Click `MORE` to see your challenges.
-      courseF_video_createFunctions_instruction: |-
-        We don't have a video for creating
-        functions, yet. This is a placeholder.
-      courseF_video_createFunctions_2018_instruction: |-
-        We don't have a video for
-        creating functions, yet. This is a placeholder.
+      courseF_video_createFunctions_instruction: Níl físeán againn fós a mhíníonn
+        conas a dhéantar feidhmeanna. Ionadchoinneálaí é seo.
+      courseF_video_createFunctions_2018_instruction: Níl físeán againn fós a mhíníonn
+        conas a dhéantar feidhmeanna. Ionadchoinneálaí é seo.
       course_playlab_variables1_instruction: |-
         This is Pirate Pegleg.  He's awfully
         hard to understand these days!
@@ -12322,8 +12257,8 @@
       grade1_playlab_events2a_instruction: |-
         Edit the code so that when the second
         bird is clicked, your program plays a sound!
-      grade1_playlab_events3_instruction: "This program makes Robin fly.  Can you
-        make the robot jump when you press the up button?\r\n"
+      grade1_playlab_events3_instruction: 'This program makes Robin fly.  Can you
+        make the robot jump when you press the up button?  '
       grade1_playlab_events3a_instruction: |-
         When the third bird is clicked, the background
         should change to a city. Can you add code to make this happen?
@@ -12366,9 +12301,9 @@
       grade2_CaringForNewPet_0_instruction: |-
         For this puzzle, drag all of the blocks
         together and click "Run" to watch it go!
-      grade2_CaringForNewPet_1_instruction: 'An féidir leat cabhrú liom greim a fháil
+      grade2_CaringForNewPet_1_instruction: An féidir leat cabhrú liom greim a fháil
         ar an muc dhána sin? Ceangail cúpla bloc "téigh ar aghaidh" leis an mbloc
-        "nuair a ritear é" agus cliceáil "Rith". '
+        "nuair a ritear é" agus cliceáil "Rith".
       grade2_CaringForNewPet_10_instruction: Treoraigh chuig an muc mé!
       grade2_CaringForNewPet_11_instruction: |-
         "Keep calm and help me find the bad
@@ -12525,8 +12460,10 @@
         done, click "Finish" to share with friends.
       grade2_puppy_loops2_instruction: An féidir leat mé a threorú go dtí an mhuc
         trí lúb a dhéanamh gan ach bloc amháin `téigh ar aghaidh` inti?
-      grade2_puppy_loops3_instruction: "\"Get me to the pig!\"\r\n\r\n Solve this
-        puzzle by creating a loop!"
+      grade2_puppy_loops3_instruction: |-
+        "Get me to the pig!"
+
+        Solve this puzzle by creating a loop!
       grade2_puppy_loops4_instruction: Sa dúshlán seo, is féidir leat dhá bhloc `athdhéan`
         a úsáid chun cabhrú leat an mhuc a shroicheadh leis an líon is lú blocanna
         agus is féidir!
@@ -13119,8 +13056,8 @@
         the nectar from each flower.
       grade4_bee_nestedLoops0_instruction: Bain úsáid as lúb chun an neachtar go léir
         a bhailiú.
-      grade4_bee_nestedLoops1_instruction: 'Bailigh an neachtar go léir ó gach bláth.
-        Úsáid lúb neadaithe. '
+      grade4_bee_nestedLoops1_instruction: Bailigh an neachtar go léir ó gach bláth.
+        Úsáid lúb neadaithe.
       grade4_bee_nestedLoops2_instruction: |-
         **Challenge:** Figure out how to get
         all of the nectar using only the blocks available.
@@ -13509,11 +13446,11 @@
       grade5_bee_for_loops2_instruction: Cuir blocanna leis an gcód chun deimhniú
         go mbaileoidh an beach an neachtar go léir. Féach ar an méid cóid atá de dhith
         ort! (Feicfimid réiteach níos simplí sa chéad dúshlán eile.)
-      grade5_bee_for_loops3_instruction: 'Á, tá an ceann seo i bhfad níos éasca le
+      grade5_bee_for_loops3_instruction: Á, tá an ceann seo i bhfad níos éasca le
         lúb "do gach"! Tá an cód go léir a theastaíonn uait anseo. Féach ar struchtúr
-        an chóid ansin cliceáil "Rith" chun an chaoi a n-oibríonn sé a fheiceáil. '
-      grade5_bee_for_loops4_instruction: 'Cuir an líon is mó neachtar a bhaileoidh
-        an beach in áit ??? sa lúb "do gach". '
+        an chóid ansin cliceáil "Rith" chun an chaoi a n-oibríonn sé a fheiceáil.
+      grade5_bee_for_loops4_instruction: Cuir an líon is mó neachtar a bhaileoidh
+        an beach in áit ??? sa lúb "do gach".
       grade5_bee_for_loops6_instruction: Is féidir leat comhaireamh síos freisin le
         lúb "do gach". Déan iarracht an neachtar seo a bhailiú trí chomhaireamh síos
         ó 5 go 1.

@@ -72,7 +72,6 @@
       "console.log": null,
       "scale": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Responding to a Single Click\r\n\r\nEarlier we learned that `keyWentDown` and `keyWentUp` can be used to respond to a keypress a single time. The blocks `mouseWentUp` and `mouseWentDown` allow you to do that for the mouse!\r\n\r\n# Do This\r\n\r\nLet's make a simple game that counts how many times you've clicked. We've already provided a variable `clicks` that you can use to track how many times the user has clicked.\r\n\r\n* Add a conditional that checks if the mouse went down.\r\n* Inside your conditional, add to the `clicks` variable.\r\n\r\n_Challenge: Can you add a sprite that responds to `mouseWentDown` as well? Add an image of your choice and increase the sprite's size each time the mouse is clicked._",

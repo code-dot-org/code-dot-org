@@ -2,7 +2,11 @@ import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {changeInterfaceMode, viewAnimationJson} from './actions';
+import {
+  changeInterfaceMode,
+  viewAnimationJson,
+  setMobileControlsConfig,
+} from './actions';
 import {startInAnimationTab} from './stateQueries';
 import {GameLabInterfaceMode, GAME_WIDTH} from './constants';
 import experiments from '../util/experiments';
@@ -131,6 +135,17 @@ var GameLab = function () {
       getStore().dispatch(viewAnimationJson(JSON.stringify(list, null, 2)));
     });
   };
+
+  this.showMobileControls =
+      (spaceButtonVisible, dpadVisible, dpadFourWay, mobileOnly) => {
+
+    this.mobileControlsConfig = {
+      spaceButtonVisible,
+      dpadVisible,
+      dpadFourWay,
+      mobileOnly,
+    };
+  };
 };
 
 module.exports = GameLab;
@@ -174,7 +189,6 @@ GameLab.prototype.init = function (config) {
   this.skin.winAvatar = null;
   this.skin.failureAvatar = null;
   this.level = config.level;
-  this.showDPad = config.level.showDPad && config.share && dom.isMobile();
 
   this.shouldAutoRunSetup = config.level.autoRunSetup &&
     !this.level.edit_blocks;
@@ -468,10 +482,8 @@ GameLab.prototype.afterInject_ = function (config) {
     dom.addMouseDownTouchEvent(document.getElementById(ArrowIds[btn]),
         this.onArrowButtonDown.bind(this, ArrowIds[btn]));
   }
-  if (this.showDPad) {
-    dom.addMouseDownTouchEvent(document.getElementById('studio-dpad-button'),
-        this.onDPadButtonDown.bind(this));
-  }
+  dom.addMouseDownTouchEvent(document.getElementById('studio-dpad-button'),
+      this.onDPadButtonDown.bind(this));
   // Can't use dom.addMouseUpTouchEvent() because it will preventDefault on
   // all touchend events on the page, breaking click events...
   document.addEventListener('mouseup', this.onMouseUp.bind(this), false);
@@ -491,6 +503,9 @@ GameLab.prototype.afterInject_ = function (config) {
       'levelSuccess',
       'levelFailure',
     ].join(','));
+
+    // Don't add infinite loop protection
+    Blockly.JavaScript.INFINITE_LOOP_TRAP = '';
   }
 
   // Update gameLabP5's scale and keep it updated with future resizes:
@@ -593,6 +608,7 @@ GameLab.prototype.reset = function () {
   this.executionError = null;
 
   // Soft buttons
+  this.mobileControlsConfig = reducers.defaultMobileControlsConfigState;
   var softButtonCount = 0;
   for (var i = 0; i < this.level.softButtons.length; i++) {
     document.getElementById(this.level.softButtons[i]).style.display = 'inline';
@@ -602,10 +618,7 @@ GameLab.prototype.reset = function () {
     $('#soft-buttons').removeClass('soft-buttons-none').addClass('soft-buttons-' + softButtonCount);
   }
 
-  if (this.showDPad) {
-    $('#studio-dpad').removeClass('studio-dpad-none');
-    this.resetDPad();
-  }
+  this.resetDPad();
 };
 
 GameLab.prototype.rerunSetupCode = function () {
@@ -939,7 +952,7 @@ GameLab.prototype.onDPadMouseMove = function (e) {
     clientY = e.touches[0].clientY;
   }
 
-  if (experiments.isEnabled('fourWayDPad')) {
+  if (this.mobileControlsConfig.dpadFourWay) {
     this.notifyKeysFourWayDPad(clientX, clientY);
   } else {
     this.notifyKeyEightWayDPad(window.p5.prototype.LEFT_ARROW, 'left', clientX, clientY);
@@ -996,6 +1009,16 @@ GameLab.prototype.onMouseUp = function (e) {
   this.resetDPad();
 };
 
+Object.defineProperty(GameLab.prototype, 'mobileControlsConfig', {
+  enumerable: true,
+  get: function () {
+    return getStore().getState().mobileControlsConfig;
+  },
+  set: function (val) {
+    getStore().dispatch(setMobileControlsConfig(val));
+  },
+});
+
 /**
  * Execute the user's code.  Heaven help us...
  */
@@ -1038,19 +1061,24 @@ GameLab.prototype.execute = function (keepTicking = true) {
 
 GameLab.prototype.initInterpreter = function (attachDebugger=true) {
 
-  var self = this;
-  function injectGamelabGlobals() {
-    var propList = self.gameLabP5.getGlobalPropertyList();
-    for (var prop in propList) {
+  const injectGamelabGlobals = () => {
+    const propList = this.gameLabP5.getGlobalPropertyList();
+    for (const prop in propList) {
       // Each entry in the propList is an array with 2 elements:
       // propListItem[0] - a native property value
       // propListItem[1] - the property's parent object
-      self.JSInterpreter.createGlobalProperty(
+      this.JSInterpreter.createGlobalProperty(
           prop,
           propList[prop][0],
           propList[prop][1]);
     }
-  }
+
+    this.JSInterpreter.createGlobalProperty(
+          'showMobileControls',
+          this.showMobileControls,
+          null
+    );
+  };
 
   this.JSInterpreter = new JSInterpreter({
     studioApp: this.studioApp_,

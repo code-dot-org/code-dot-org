@@ -463,8 +463,8 @@ class ContactRollups
     add_role_from_script_sections_taught("CSF Teacher", CSF_SCRIPT_LIST)
     # CSD and CSP scripts are mapped to course - identify CSD/CSP teachers
     # that way
-    add_role_from_course_sections_taught("CSD Teacher", "csd")
-    add_role_from_course_sections_taught("CSP Teacher", "csp")
+    add_role_from_course_sections_taught("CSD Teacher", "csd-2017")
+    add_role_from_course_sections_taught("CSP Teacher", "csp-2017")
     log_completion(start)
   end
 

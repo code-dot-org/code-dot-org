@@ -479,12 +479,13 @@
         Course_4_Artist_For_Loops_3_a: To have the `for` loop drive your movement,
           make sure that you're using `counter` as your distance.
       Course 4 Artist For Loops 4_authored_hint:
-        Course_4_Artist_For_Loops_4_a: "**What is the smallest number you will need?
-          \ \nWhat is the largest number?  \nHow big is the increase each time?**\n\nThose
-          are the questions you need to ask to fill in the blanks of the `for` loop."
+        Course_4_Artist_For_Loops_4_a: "** Какое наименьшее число вам понадобиться?
+          \  \nКакое наибольшее число?   \nНасколько большим является увеличение каждый
+          раз?** \n\nТакие вопросы вам нужно спрашивать чтобы заполнить пробелы цикла
+          «для»."
       Course 4 Artist For Loops Challenge_authored_hint:
-        Course_4_Artist_For_Loops_Challenge_a: The largest shape has 19 sides. The
-          smallest has just two.
+        Course_4_Artist_For_Loops_Challenge_a: Крупнейшая фигура имеет 19 Сторон.
+          Самая маленькая имеет только две стороны.
         Course_4_Artist_For_Loops_Challenge_b: The `for` loop counts up by two each
           time through.
       Course 4 Artist For Loops Challenge_a_authored_hint:
@@ -13809,18 +13810,18 @@
           and running the code to see what will happen, even if you haven't solved
           the puzzle yet.
       courseF_artist_for4_authored_hint:
-        courseF_artist_for4_a: "**What is the smallest number you will need?  \nWhat
-          is the largest number?  \nHow big is the increase each time?**\n\nThose
-          are the questions you need to ask to fill in the blanks of the `for` loop."
+        courseF_artist_for4_a: "** Какое наименьшее число вам понадобиться?   \nКакое
+          наибольшее число?   \nНасколько большим является увеличение каждый раз?**
+          \n\nТакие вопросы вам нужно спрашивать чтобы заполнить пробелы цикла «для»."
         courseF_artist_for4_b: Your code will be very similar to what you wrote in
           the last puzzle, but remember to draw a square this time!
         courseF_artist_for4_c: Don't be afraid to make a mistake! Try adding blocks
           and running the code to see what will happen, even if you haven't solved
           the puzzle yet.
       courseF_artist_for4_2018_authored_hint:
-        courseF_artist_for4_a: "**What is the smallest number you will need?  \nWhat
-          is the largest number?  \nHow big is the increase each time?**\n\nThose
-          are the questions you need to ask to fill in the blanks of the `for` loop."
+        courseF_artist_for4_a: "** Какое наименьшее число вам понадобиться?   \nКакое
+          наибольшее число?   \nНасколько большим является увеличение каждый раз?**
+          \n\nТакие вопросы вам нужно спрашивать чтобы заполнить пробелы цикла «для»."
         courseF_artist_for4_b: Your code will be very similar to what you wrote in
           the last puzzle, but remember to draw a square this time!
         courseF_artist_for4_c: Don't be afraid to make a mistake! Try adding blocks
@@ -18264,9 +18265,10 @@
 
           ![](https://images.code.org/15e87fc7fe408cbf1b63e0e8e69b7ffe-image-1475908502078.31.26.png)
       grade5_artist_for_loops4_authored_hint:
-        Course_4_Artist_For_Loops_4_a: "**What is the smallest number you will need?
-          \ \nWhat is the largest number?  \nHow big is the increase each time?**\n\nThose
-          are the questions you need to ask to fill in the blanks of the `for` loop."
+        Course_4_Artist_For_Loops_4_a: "** Какое наименьшее число вам понадобиться?
+          \  \nКакое наибольшее число?   \nНасколько большим является увеличение каждый
+          раз?** \n\nТакие вопросы вам нужно спрашивать чтобы заполнить пробелы цикла
+          «для»."
       grade5_artist_for_loops5_authored_hint:
         grade5_artist_for_loops5_a: You don't need the traditional repeat loop when
           making this spiral!

@@ -1,5 +1,8 @@
+drop view if exists analysis.course_structure;
 create view analysis.course_structure as
 select 
+  cn.course_name_short,
+  cn.course_name_long,
   c.id course_id, 
   c.name course_name, 
   sl.script_id, 
@@ -17,6 +20,7 @@ from dashboard_production.levels_script_levels lsl
   join dashboard_production.scripts sc on sc.id = sl.script_id
   left join dashboard_production.course_scripts cs on cs.script_id = sc.id
   left join dashboard_production.courses c on c.id = cs.course_id
+  left join analysis.course_names cn on cn.versioned_course_id = c.id
 order by script_id, stage_number, level_number
 with no schema binding;
 
