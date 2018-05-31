@@ -58,6 +58,12 @@ end
 
 # DEPRECATED: Use DELETE /dashboardapi/sections/<id> instead
 delete '/v2/sections/:id' do |id|
+  # Notify Honeybadger to determine if this endpoint is still used anywhere
+  Honeybadger.notify(
+    error_class: "DeprecatedEndpointWarning",
+    error_message: 'Deprecated endpoint DELETE /v2/sections/:id called unexpectedly',
+  )
+
   only_for 'code.org'
   dont_cache
   forbidden! unless DashboardSection.delete_if_owner(id, dashboard_user_id)
