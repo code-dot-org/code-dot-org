@@ -61,7 +61,11 @@ class PrintCertificates extends Component {
           <input key={index} type="hidden" name="names[]" value={name}/>
         ))}
         <div style={styles.outerStyle}>
-          <div style={styles.actionText} onClick={this.onClickPrintCerts}>
+          <div
+            className="uitest-certs-link"
+            style={styles.actionText}
+            onClick={this.onClickPrintCerts}
+          >
             {i18n.printCertificates()}
           </div>
         </div>

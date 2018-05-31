@@ -87,3 +87,14 @@ Feature: Using the teacher homepage sections feature
     And check that the URL contains "/courses/csp-2017"
 
     And the href of selector ".uitest-CourseScript:contains(CSP Unit 2) .uitest-go-to-unit-button" contains the section id
+
+  Scenario: Loading the print certificates page for a section
+    Given I create a teacher-associated student named "Sally"
+    And I sign in as "Teacher_Sally"
+    And I click selector ".ui-test-section-dropdown" once I see it
+
+    And I click selector ".uitest-certs-link" once I see it
+    And I wait to see "#uitest-cert-names"
+
+    And check that the URL contains "/certificates"
+    Then element "#uitest-cert-names" contains text "Sally"
