@@ -173,7 +173,6 @@
       "comment": null,
       "stopSound": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "start_blocks": "var sprite = createSprite(200, 200, 30, 30);\r\nsprite.setAnimation(\"asterisk_circle\");\r\nsprite.velocityX = 1;\r\n\r\nfunction draw() {\r\n  background(\"white\");\r\n  drawSprites();\r\n  update();\r\n}\r\n\r\nfunction update() {\r\n  // Bounce vertically\r\n  sprite.velocityY += 0.1;\r\n  if (sprite.y > World.height) {\r\n    sprite.velocityY *= -1;\r\n  }\r\n  \r\n  // Move back and forth\r\n  if (sprite.x < 0 || sprite.x > World.width) {\r\n    sprite.velocityX *= -1;\r\n  }\r\n}\r\n",

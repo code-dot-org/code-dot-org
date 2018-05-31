@@ -257,13 +257,10 @@ $dpad-cone-inactive: #9C9C9C;
 $dpad-rim: #FFFFFF;
 
 #studio-dpad {
-  display: inline-block;
+  width: 390px;
   vertical-align: top;
-  margin-left: -5px;
+  margin-left: 10px;
   -webkit-touch-callout: none;
-  &.studio-dpad-none {
-    display: none;
-  }
 }
 
 #studio-dpad-rim {
@@ -547,6 +544,18 @@ html[dir='rtl'] div#visualizationResizeBar {
   }
 }
 
+#studio-dpad-container.responsive > * {
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+
+  html[dir="RTL"] & {
+    -webkit-transform-origin: 100% 0;
+    -ms-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+  }
+}
+
 /* Make buttons, videos, etc. clickable. Otherwise, the scaled svg/canvas
  * obscures clicks on its original, unscaled position.  */
 #belowVisualization {
@@ -558,6 +567,15 @@ html[dir='rtl'] div#visualizationResizeBar {
   @include visualization-width-height-original($width, $width, 400px);
 }
 
+@mixin studio-dpad-container-width($width) {
+  $scale: $width / 400px;
+  #studio-dpad-container.responsive > * {
+    -webkit-transform: scale($scale);
+    -ms-transform: scale($scale);
+    transform: scale($scale);
+  }
+}
+
 @mixin karel-counter($font-size, $stroke-width) {
   .karel-counter-text {
     font-size: $font-size;
@@ -567,21 +585,25 @@ html[dir='rtl'] div#visualizationResizeBar {
 
 @media screen and (min-width: 1101px) and (max-width: 1150px) {
   @include visualization-width(350px);
+  @include studio-dpad-container-width(350px);
   @include karel-counter(20px, 1.2px);
 }
 
 @media screen and (min-width: 1051px) and (max-width: 1100px) {
   @include visualization-width(300px);
+  @include studio-dpad-container-width(300px);
   @include karel-counter(24px, 1.4px);
 }
 
 @media screen and (min-width: 1001px) and (max-width: 1050px) {
   @include visualization-width(250px);
+  @include studio-dpad-container-width(250px);
   @include karel-counter(28px, 1.6px);
 }
 
 @media screen and (max-width: 1000px) {
   @include visualization-width(200px);
+  @include studio-dpad-container-width(200px);
   @include karel-counter(32px, 2px);
 
   #soft-buttons {
@@ -1746,7 +1768,7 @@ a.WireframeButtons_active, div.WireframeButtons_active {
 
   #gameButtons {
     width: auto;
-    padding: 1% 5%;
+    padding: 4px 5%;
     #right-button-cell {
       display: none; /* don't show Finish button in share view */
     }
@@ -1759,6 +1781,10 @@ a.WireframeButtons_active, div.WireframeButtons_active {
     left: 0;
     right: 0;
     width: auto !important;
+  }
+
+  #studio-dpad-container {
+    margin-top: -24px;
   }
 
   #more-menu, #copyright-flyout {

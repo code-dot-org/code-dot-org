@@ -33,7 +33,6 @@
       "declareNoAssign_x": null,
       "assign_x": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "instructions": "Change the value of petalSize multiple times. How does it change your drawing?",

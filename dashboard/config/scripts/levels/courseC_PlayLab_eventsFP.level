@@ -54,7 +54,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-02-06 19:29:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"projectile_collisions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-02-06 19:29:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"projectile_collisions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-29 19:41:56 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 1,
     "repeat_until_while": 1,
@@ -64,7 +64,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run"/>
+        <block type="when_run" deletable="false" movable="false" editable="false"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>

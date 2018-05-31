@@ -38,7 +38,6 @@
       "comment": null,
       "console.log": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# How Many Variables?\r\n\r\nIn the last lesson you learned how to use the **counter pattern** (`x = x + 1`, `x = x - 0.5`, `x = x - 1`, etc.) to create smooth animations. Using this pattern in many different ways allows you to create interesting and complex animations.\r\n\r\nWatch the animation here. With a partner discuss: \r\n\r\n* How many counter variables would you need to create to make this animation? What are they used to animate?\r\n* What would you name your variables?\r\n* What are the challenges of using counter variables in a scene like this?",
