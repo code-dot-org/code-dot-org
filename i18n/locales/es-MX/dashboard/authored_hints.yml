@@ -3382,8 +3382,7 @@ es-MX:
       Farmer for Authored Hint testing_authored_hint:
         first_hint: |-
           Esta es la primera pista. Tiene * algo de * ** basic ** `margen
-        second_hint: |-
-          Esta es la segunda pista . Tiene una imagen . ! [] (https://images.code.org/cab43107265a683a6216e18faab2353f- image -1452027548372.png)
+        second_hint: Esta es la segunda pista . Tiene una imagen . ! [] (https://images.code.org/cab43107265a683a6216e18faab2353f- image -1452027548372.png)
         last_hint: Esta es la tercera y última pista. No tiene nada especial.
       Farmer for TTS testing_authored_hint:
         first_hint: |-
@@ -6171,6 +6170,66 @@ es-MX:
           </block>
           </xml>
       courseB_collector_loops_challenge2_authored_hint:
+        courseB_collector_loops_challenge2_a: Si algo sale mal, no tengas miedo de comenzar de nuevo. No te rindas!
+        courseB_collector_loops_challenge2_b: |-
+          Si repites este patrón, ¡Laurel no golpeará la pared en el fondo de la cueva!
+          <xml><block type="maze_moveEast">
+          <next>
+          <block type="collector_collect">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block></xml>
+        courseB_collector_loops_challenge2_c: Intenta usar un bloque de repetición para recolectar la pila final de tesoros!
+        courseB_collector_loops_challenge2_d: |-
+          Pruebe esta solución:
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="3-10">4</title>
+          <statement name="DO">
+          <block type="maze_moveEast">
+          <next>
+          <block type="collector_collect">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="3-10">6</title>
+          <statement name="DO">
+          <block type="collector_collect"/>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_collector_loops_challenge2_2018_authored_hint:
         courseB_collector_loops_challenge2_a: Si algo sale mal, no tengas miedo de comenzar de nuevo. No te rindas!
         courseB_collector_loops_challenge2_b: |-
           Si repites este patrón, ¡Laurel no golpeará la pared en el fondo de la cueva!
@@ -13337,6 +13396,8 @@ es-MX:
           Mira este camino...
           
           ! [] (https://images.code.org/e1d29901495eea9504c194b09efaa88e-image-1503437474226.29.32.png)
+      courseF_playlab_brokenText_authored_hint:
+        courseF_playlab_variables6c_a: Debajo de la sección "Entrada", usa el bloque `preguntar` para obtener la entrada de los usuarios.
       courseF_playlab_variables1a_authored_hint:
         courseF_playlab_variables1a_a: Tienes que sustituir las palabras "¿Qué debo gritar?" en el bloque verde con "¡Gol!"
       courseF_playlab_variables1a_2018_authored_hint:
