@@ -1,6 +1,20 @@
 "it":
   data:
     script:
+      category:
+        csd_category_name: CS Discoveries ('17-'18)
+        csd_2018_category_name: CS Discoveries ('18-'19)
+        csf_category_name: Corsi base
+        csf_international_category_name: Fondamenti di Informatica (in Italiano)
+        csf2_draft_category_name: 'Corsi A - F: In fase di sviluppo'
+        csp_category_name: Princìpi dell'Informatica (versione 2015-16)
+        csp_2018_category_name: CS Principles ('18-'19)
+        cspexams_category_name: Prova pratica di principi d'informatica
+        csp17_category_name: "'16-'17 principi d'informatica"
+        full_course_category_name: Corsi Avanzati
+        hoc_category_name: L'Ora del Codice
+        math_category_name: Matematica
+        research_studies_category_name: Research Studies
       name:
         course1:
           title: Corso 1
@@ -7200,16 +7214,16 @@
               description_student: ''
               description_teacher: Basandosi sul concetto di istruzioni ripetute appreso
                 in "Cicli Felici", in questa lezione gli studenti utilizzeranno i
-                cicli per raccogliere il tesoro in modo più efficiente su Code.org.
+                cicli per raccogliere dei diamanti in modo più efficiente su Code.org.
             Loops in Artist:
               name: Cicli con l'Artista
               description_student: ''
               description_teacher: Tornando ai cicli, gli studenti imparano a disegnare
                 immagini ripetendo semplici sequenze di istruzioni. Nella precedente
                 lezione, i cicli sono stati utilizzati per attraversare un labirinto
-                e raccogliere il tesoro. Qui, i cicli stanno creano dei modelli. Alla
-                fine di questa lezione, gli studenti avranno l'opportunità di creare
-                le proprie immagini utilizzando i cicli.
+                e raccogliere i diamanti. Qui, i cicli stanno creano dei modelli.
+                Alla fine di questa lezione, gli studenti avranno l'opportunità di
+                creare le proprie immagini utilizzando i cicli.
             'Events: The Big Event':
               name: Eventi
               description_student: ''
@@ -7262,8 +7276,10 @@
             Programming with Rey and BB-8:
               name: Programmare con Rey e BB-8
           title: Corso B
-          description_audience: ''
-          description_short: An introduction to computer science for early readers.
+          description_audience: Da 5 a 8 anni
+          description_short: Introduzione all'informatica per alunni che devono imparare
+            a leggere. (Simile al Corso A, ma con maggior varietà per bambini leggermente
+            più grandi.)
           description: Impara le basi dell'informatica e della sicurezza su Internet.
             Alla fine del corso, crea il tuo gioco o la tua storia che puoi condividere.
         coursec:
@@ -10168,16 +10184,16 @@
               description_student: ''
               description_teacher: Basandosi sul concetto di istruzioni ripetute appreso
                 in "Cicli Felici", in questa lezione gli studenti utilizzeranno i
-                cicli per raccogliere il tesoro in modo più efficiente su Code.org.
+                cicli per raccogliere dei diamanti in modo più efficiente su Code.org.
             Loops in Artist:
               name: Cicli con l'Artista
               description_student: ''
               description_teacher: Tornando ai cicli, gli studenti imparano a disegnare
                 immagini ripetendo semplici sequenze di istruzioni. Nella precedente
                 lezione, i cicli sono stati utilizzati per attraversare un labirinto
-                e raccogliere il tesoro. Qui, i cicli stanno creano dei modelli. Alla
-                fine di questa lezione, gli studenti avranno l'opportunità di creare
-                le proprie immagini utilizzando i cicli.
+                e raccogliere i diamanti. Qui, i cicli stanno creano dei modelli.
+                Alla fine di questa lezione, gli studenti avranno l'opportunità di
+                creare le proprie immagini utilizzando i cicli.
             'Events: The Big Event':
               name: Eventi
               description_student: ''
@@ -10355,13 +10371,82 @@
               name: Conditionals in Bee
             Until Loops in Maze:
               name: Until Loops in Maze
+            Programming in Maze:
+              name: Programmazione nel Labirinto
+            Debugging in Maze:
+              name: 'Labirinto: Correzione di Errori'
+            Programming in Collector:
+              name: Programmare la Collezionista
+            Programming in Artist:
+              name: Programmare l'Artista
+            'Loops: Getting Loopy':
+              name: 'Cicli: Diventare Ripetitivi'
+            Loops with Rey and BB-8:
+              name: Cicli con Rey e BB-8
+            Copyright and Creativity:
+              name: Copyright and Creativity
+            'Concept Practice with Minecraft ':
+              name: 'Concept Practice with Minecraft '
+            Nested Loops in Bee:
+              name: Nested Loops in Bee
+            Nested Loops in Frozen:
+              name: Nested Loops in Frozen
+            Conditionals with Cards:
+              name: Istruzioni condizionali con le Carte da Gioco
+            Conditionals & Loops in Harvester:
+              name: Conditionals & Loops in Harvester
+            'Functions: Songwriting':
+              name: 'Functions: Songwriting'
+            Functions in Minecraft:
+              name: Functions in Minecraft
+            Functions in Harvester:
+              name: Functions in Harvester
+            Functions in Artist:
+              name: Functions in Artist
+            Screen Out the Mean:
+              name: Cittadinanza Digitale - Caccia Via le Cattiverie dallo Schermo
+            Determine the Concept:
+              name: Determine the Concept
+            Build a Flappy Game:
+              name: Realizzare un gioco Flappy
+            The Power of Words:
+              name: Cittadinanza Digitale - Il Potere delle Parole
+            Envelope Variables:
+              name: Variabili e Buste
+            Variables as Constant in Artist:
+              name: Variables as Constant in Artist
+            Variables that Change in Bee:
+              name: Variables that Change in Bee
+            Variables that Change in Artist:
+              name: Variables that Change in Artist
+            For Loop Fun:
+              name: Divertiti usando i Cicli con Contatore
+            Learning Sprites with Sprite Lab:
+              name: Learning Sprites with Sprite Lab
+            Alien Dance Party with Sprite Lab:
+              name: Alien Dance Party with Sprite Lab
+            Pet Giraffe with Sprite Lab:
+              name: Pet Giraffe with Sprite Lab
+            Binary Bracelets:
+              name: Braccialetti Binari
+            'Unplugged: Binary':
+              name: Binario
+            Artist Binary:
+              name: 'Artista: Binario'
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Intelligenza Collettiva
+            Relay Programming:
+              name: Programmazione a Staffetta
         courseb-2018:
           title: Corso B
           description: Impara le basi dell'informatica e della sicurezza su Internet.
             Alla fine del corso, crea il tuo gioco o la tua storia che puoi condividere.
-          description_short: An introduction to computer science for pre-readers.
-            (Similar to Course A, but with more variety for older students.)
-          description_audience: 'Ages: 5-8'
+          description_short: Introduzione all'informatica per alunni che devono imparare
+            a leggere. (Simile al Corso A, ma con maggior varietà per bambini leggermente
+            più grandi.)
+          description_audience: Da 5 a 8 anni
           stages:
             'Debugging: Unspotted Bugs':
               name: Correzione Errori (Debugging)
@@ -11373,6 +11458,8 @@
               name: Unit 1 Chapter 2 Assessment
               description_student: ''
               description_teacher: ''
+            Sending Text:
+              name: Sending Text
         csd1-2018:
           title: CSD Unit 1 - Problem Solving
           description: " \r\nUnit 1 is a highly interactive and collaborative introduction
@@ -12799,6 +12886,14 @@
               name: Novice Reflection Overview
             Monday:
               name: Monday
+            Day 1:
+              name: Day 1
+            Day 2:
+              name: Day 2
+            Day 3:
+              name: Day 3
+            Day 4:
+              name: Day 4
           title: CS Discoveries Novice Reflections 2018-2019
           description_audience: CS Discoveries Facilitators in Training 2018-2019
           description_short: 'Novice reflection materials for CS Discoveries facilitators
@@ -12820,6 +12915,16 @@
               name: Thursday
             Wrap Up:
               name: Wrap Up
+            Apprentice Reflection Overview:
+              name: Apprentice Reflection Overview
+            Day 1:
+              name: Day 1
+            Day 2:
+              name: Day 2
+            Day 3:
+              name: Day 3
+            Day 4:
+              name: Day 4
           title: CS Discoveries Apprentice Reflections 2018-2019
           description_audience: CS Discoveries Facilitators in Training 2018-2019
           description_short: 'Apprentice reflection materials for CS Discoveries facilitators
@@ -12841,6 +12946,16 @@
               name: Thursday
             Wrap Up:
               name: Wrap Up
+            Monday:
+              name: Monday
+            Day 1:
+              name: Day 1
+            Day 2:
+              name: Day 2
+            Day 3:
+              name: Day 3
+            Day 4:
+              name: Day 4
           title: CS Principles Novice Reflections 2018-2019
           description_audience: CS Principles Facilitators in Training 2018-2019
           description_short: 'Novice reflection materials for CS Principles facilitators
@@ -12862,6 +12977,16 @@
               name: Thursday
             Wrap Up:
               name: Wrap Up
+            Apprentice Reflection Overview:
+              name: Apprentice Reflection Overview
+            Day 1:
+              name: Day 1
+            Day 2:
+              name: Day 2
+            Day 3:
+              name: Day 3
+            Day 4:
+              name: Day 4
           title: CS Principles Novice Reflections 2018-2019
           description_audience: CS Principles Facilitators in Training 2018-2019
           description_short: 'Novice reflection materials for CS Principles facilitators
@@ -12871,3 +12996,83 @@
             will find reflection prompts for each day of your in-person 5-day summer
             workshop. This questions will be the foundation of work we do at the Facilitator
             Training Weekend.
+        pre-express-2018:
+          title: Pre-reader Express
+          description: Impara le basi dell'informatica e della sicurezza su Internet.
+            Alla fine del corso, crea il tuo gioco o la tua storia che puoi condividere.
+          description_short: 'An introduction to computer science for pre-readers:
+            combines the best of our kindergarten and first grade courses.'
+          description_audience: 'Ages: 4-8'
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: Correzione Errori (Debugging)
+              description_student: ''
+              description_teacher: ''
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: 'Perseveranza & Frustrazione: Stevie e le Biglie'
+              description_student: ''
+              description_teacher: ''
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmi della Vita Reale: Piantare un Seme'
+              description_student: ''
+              description_teacher: ''
+            Learn to Drag and Drop:
+              name: Impara come Trascinare i Blocchi
+              description_student: ''
+              description_teacher: ''
+            'Online Safety: Your Digital Footprint':
+              name: 'Online Safety: Your Digital Footprint'
+              description_student: ''
+              description_teacher: ''
+            'Programming: My Robotic Friends':
+              name: 'Programmazione: I Miei Amici Robotici'
+              description_student: ''
+              description_teacher: ''
+            Programming in Maze:
+              name: Programmazione nel Labirinto
+              description_student: ''
+              description_teacher: ''
+            'Programming: Star Wars':
+              name: 'Programming: Star Wars'
+              description_student: ''
+              description_teacher: ''
+            'Loops: My Loopy Robotic Friends':
+              name: 'Cicli: I Miei Ciclici Amici Robotici'
+              description_student: ''
+              description_teacher: ''
+            Loops in Collector:
+              name: Cicli con il Collezionista
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Cicli con l'Artista
+              description_student: ''
+              description_teacher: ''
+            'Events: The Big Event':
+              name: Eventi
+              description_student: ''
+              description_teacher: ''
+            Events in Play Lab:
+              name: 'Laboratorio: Eventi'
+              description_student: ''
+              description_teacher: ''
+            Spelling Bee:
+              name: Ape Sapiente
+              description_student: ''
+              description_teacher: ''
+            Move It, Move It:
+              name: Muovilo, muovilo
+            Sequencing with Scrat:
+              name: Sequencing with Scrat
+            Your Digital Footprint:
+              name: La tua Impronta Digitale
+            Programming in Ice Age:
+              name: Programming in Ice Age
+            Copyright and Creativity:
+              name: Copyright and Creativity
+            Programming with Rey and BB-8:
+              name: Programmare con Rey e BB-8
+            Loops in Ice Age:
+              name: Loops in Ice Age
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: 'Persistence & Frustration: Stevie and the Big Project'
