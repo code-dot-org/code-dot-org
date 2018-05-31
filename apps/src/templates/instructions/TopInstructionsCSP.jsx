@@ -7,6 +7,7 @@ import {connect} from 'react-redux';
 import processMarkdown from 'marked';
 import renderer from "../../util/StylelessRenderer";
 import TeacherOnlyMarkdown from './TeacherOnlyMarkdown';
+import StudentFeedback from "./StudentFeedback";
 import TeacherFeedback from "./TeacherFeedback";
 import InlineAudio from './InlineAudio';
 import ContainedLevel from '../ContainedLevel';
@@ -262,10 +263,12 @@ class TopInstructions extends Component {
 
     const displayFeedbackStable = experiments.isEnabled(experiments.COMMENT_BOX_TAB) && this.props.viewAs === ViewType.Teacher;
 
-    const displayFeedbackDev = experiments.isEnabled(experiments.DEV_COMMENT_BOX_TAB) &&
+    const displayFeedbackDevTeacher = experiments.isEnabled(experiments.DEV_COMMENT_BOX_TAB) &&
       this.props.viewAs === ViewType.Teacher && this.props.readOnlyWorkspace;
 
-    const displayFeedback = displayFeedbackDev || displayFeedbackStable;
+    const displayFeedbackDevStudent = experiments.isEnabled(experiments.DEV_COMMENT_BOX_TAB) && this.props.viewAs === ViewType.Student;
+
+    const displayFeedback = displayFeedbackDevTeacher || displayFeedbackStable || displayFeedbackDevStudent;
     return (
       <div style={mainStyle} className="editor-column">
         <PaneHeader hasFocus={false}>
@@ -343,10 +346,19 @@ class TopInstructions extends Component {
               />
             }
             {this.state.tabSelected === TabType.COMMENTS &&
-              <TeacherFeedback
-                ref="commentTab"
-                withUnreleasedFeatures={displayFeedbackDev}
-              />
+              <div>
+                {this.props.viewAs === ViewType.Teacher &&
+                  <TeacherFeedback
+                    ref="commentTab"
+                    withUnreleasedFeatures={displayFeedbackDevTeacher}
+                  />
+                }
+                {this.props.viewAs === ViewType.Student &&
+                  <StudentFeedback
+                    ref="commentTab"
+                  />
+                }
+              </div>
             }
           </div>
           {!this.props.isEmbedView &&
