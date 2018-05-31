@@ -26,6 +26,33 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     refute_nil user.purged_at
   end
 
+  test 'purges all accounts associated with email' do
+    email = 'fakeuser@example.com'
+    account1 = create :student, email: email
+    account1.destroy
+    account2 = create :teacher, email: email
+    account2.destroy
+    account3 = create :student, email: email
+
+    [account1, account2, account3].each(&:reload)
+    refute_nil account1.deleted_at
+    refute_nil account2.deleted_at
+    assert_nil account3.deleted_at
+    assert_nil account1.purged_at
+    assert_nil account2.purged_at
+    assert_nil account3.purged_at
+
+    purge_all_accounts_with_email email
+
+    [account1, account2, account3].each(&:reload)
+    refute_nil account1.deleted_at
+    refute_nil account2.deleted_at
+    refute_nil account3.deleted_at
+    refute_nil account1.purged_at
+    refute_nil account2.purged_at
+    refute_nil account3.purged_at
+  end
+
   test 'clears user.name' do
     user = create :student
     refute_nil user.name
@@ -230,7 +257,65 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # Table: dashboard.sections
+  #
+
+  test "hard-deletes all of a user's owned sections" do
+    user = create :teacher
+    create_list :section, 3, user: user
+    user.sections.first.destroy
+    section_ids = user.sections.with_deleted.map(&:id)
+
+    assert_equal 2, Section.where(id: section_ids).count
+    assert_equal 3, Section.with_deleted.where(id: section_ids).count
+
+    purge_user user
+
+    assert_empty Section.where(id: section_ids)
+    assert_empty Section.with_deleted.where(id: section_ids)
+  end
+
+  #
+  # Table: dashboard.followers
+  #
+
+  test "hard-deletes all of a hard-deleted student's follower rows" do
+    user = create :student
+    section = create :section
+    section.students << user
+
+    assert_includes user.sections_as_student, section
+    assert_includes section.students, user
+    refute_empty Follower.where(student_user: user)
+
+    purge_user user
+    section.reload
+
+    assert_empty user.sections_as_student
+    refute_includes section.students, user
+    assert_empty Follower.with_deleted.where(student_user: user)
+  end
+
+  test "hard-deletes all followers of a hard-deleted teacher's sections" do
+    user = create :teacher
+    section_1 = create :section, teacher: user
+    section_1.students << create_list(:student, 3)
+    section_2 = create :section, teacher: user
+    section_2.students << create_list(:student, 3)
+
+    section_ids = user.sections.map(&:id)
+
+    assert_equal 6, Follower.with_deleted.where(section_id: section_ids).count
+
+    purge_user user
+
+    assert_empty Follower.with_deleted.where(section_id: section_ids)
+  end
+
+  #
   # Table: dashboard.activities
+  # Table: dashboard.overflow_activities
+  # Table: dashboard.gallery_activities
   #
 
   test "clears activities.level_source_id for all of user's activity" do
@@ -244,6 +329,36 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     refute Activity.where(user: user).any?(&:level_source),
       'Expected no activity record that references a level source to exist for this user'
+  end
+
+  # Note: table overflow_activities only exists on production, which makes it
+  # difficult to test.
+
+  test 'disconnects gallery activities from level sources' do
+    user = create :student
+    gallery_activity = create :gallery_activity, user: user
+
+    refute_nil gallery_activity.level_source_id
+
+    purge_user user
+    gallery_activity.reload
+
+    assert_nil gallery_activity.level_source_id
+  end
+
+  #
+  # Table: dashboard.user_levels
+  #
+
+  test "Disconnects user_levels from level_sources" do
+    user_level = create :user_level, level_source: create(:level_source)
+
+    refute_nil user_level.level_source_id
+
+    purge_user user_level.user
+    user_level.reload
+
+    assert_nil user_level.level_source_id
   end
 
   #
@@ -427,6 +542,95 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_equal 0, cohort.deleted_teachers.size
   end
 
+  #
+  # Table: dashboard.districts
+  # Table: dashboard.districts_users
+  #
+
+  test 'removes purged user from any districts' do
+    district1 = create :district
+    district2 = create :district
+    user = create :user
+    user.districts << district1
+    user.districts << district2
+
+    assert_equal 2, user.districts.count
+    assert_includes district1.users, user
+    assert_includes district2.users, user
+
+    purge_user user
+    district1.reload
+    district2.reload
+
+    assert_empty user.districts
+    refute_includes district1.users.with_deleted, user
+    refute_includes district2.users.with_deleted, user
+  end
+
+  test 'removes purged district contact from district' do
+    district = create :district
+    user = create :user, district_as_contact: district
+
+    assert_equal district, user.district_as_contact
+    assert_equal user, district.contact
+
+    purge_user user
+    district.reload
+
+    assert_nil user.district_as_contact
+    assert_nil district.contact
+  end
+
+  #
+  # Table: dashboard.email_preferences
+  # Associated through the user's email
+  #
+
+  test "removes email preference rows for the purged user's email address" do
+    user = create :teacher
+    email = user.email
+    create :email_preference, email: email
+
+    refute_empty EmailPreference.where(email: email)
+
+    purge_user user
+
+    assert_empty EmailPreference.where(email: email)
+  end
+
+  #
+  # Table: dashboard.studio_people
+  #
+
+  test "removes StudioPerson if it only belongs to this one account" do
+    user = create :teacher
+    studio_person_id = user.studio_person_id
+
+    refute_nil user.studio_person_id
+    refute_empty StudioPerson.where(id: studio_person_id)
+
+    purge_user user
+
+    assert_nil user.studio_person_id
+    assert_empty StudioPerson.where(id: studio_person_id)
+  end
+
+  test "leaves StudioPerson if it is linked to more than one account" do
+    user = create :teacher
+    user2 = create :teacher, studio_person: user.studio_person
+    studio_person_id = user.studio_person_id
+
+    refute_nil user.studio_person_id
+    refute_nil user2.studio_person_id
+    refute_empty StudioPerson.where(id: studio_person_id)
+
+    purge_user user
+
+    assert_nil user.studio_person_id
+    refute_nil user2.studio_person_id
+    refute_empty StudioPerson.where(id: studio_person_id)
+  end
+
   private
 
   #
@@ -438,5 +642,10 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     SolrHelper.stubs(:delete_document).once
     DeleteAccountsHelper.new(solr: {}).purge_user(user)
     user.reload
+  end
+
+  def purge_all_accounts_with_email(email)
+    SolrHelper.stubs(:delete_document).at_least_once
+    DeleteAccountsHelper.new(solr: {}).purge_all_accounts_with_email(email)
   end
 end

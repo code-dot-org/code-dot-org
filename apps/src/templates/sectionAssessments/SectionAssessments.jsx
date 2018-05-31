@@ -29,7 +29,7 @@ class SectionAssessments extends Component {
 
   onChangeScript = scriptId => {
     const {setScriptId, asyncLoadAssessments, sectionId} = this.props;
-    asyncLoadAssessments(sectionId, scriptId, () => {
+    asyncLoadAssessments(sectionId, scriptId).then(() => {
       setScriptId(scriptId);
     });
   };
@@ -75,7 +75,7 @@ export default connect(state => ({
   setScriptId(scriptId) {
     dispatch(setScriptId(scriptId));
   },
-  asyncLoadAssessments(sectionId, scriptId, onComplete) {
-    dispatch(asyncLoadAssessments(sectionId, scriptId, onComplete));
+  asyncLoadAssessments(sectionId, scriptId) {
+    return dispatch(asyncLoadAssessments(sectionId, scriptId));
   }
 }))(SectionAssessments);

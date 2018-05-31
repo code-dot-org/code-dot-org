@@ -315,6 +315,7 @@ Devise.setup do |config|
 
   # Powerschool OpenID config
   config.omniauth :openid, {
+    provider_ignores_state: true,
     name: :powerschool,
     identifier_param: 'openid_identifier'
   }

@@ -85,7 +85,7 @@ module Pd
       # @param jotform_entity [Hash]
       # @return [String]
       def get_type(jotform_entity)
-        jotform_entity['type'].delete_prefix('control_')
+        Question.sanitize_type jotform_entity['type']
       end
 
       # Parses a JotForm question, optionally replacing its text

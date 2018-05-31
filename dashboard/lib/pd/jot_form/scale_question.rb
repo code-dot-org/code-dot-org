@@ -36,6 +36,11 @@ module Pd
 
         numeric_answer
       end
+
+      # @override
+      def type_specific_summary
+        {max_value: values.last}
+      end
     end
   end
 end
