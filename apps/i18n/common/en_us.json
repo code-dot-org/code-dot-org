@@ -1010,6 +1010,7 @@
   "sharingAgePrompt": "Please select an age.",
   "sharingBlockedByTeacher": "Sorry, you do not have permissions to share this project. If you want to be able to share your project, please ask your teacher to enable sharing of App Lab / Game Lab / Web Lab projects for your section from the 'Manage students' tab in their dashboard. They can do this by adding the project sharing column from the Actions settings menu.",
   "show": "Show",
+  "showStudentName": "Student name",
   "showAnswers": "Show answers",
   "showAnswersInstructions": "\"Show answers\" to put the assessment into a read-only mode.",
   "showBlock": "Get a block",
