@@ -86,7 +86,7 @@ class StudentAssessmentOverviewTable extends Component {
           transforms: [sortable],
         },
         cell: {
-          props: {style:tableLayoutStyles.cell},
+          props: {style: tableLayoutStyles.cell},
         }
       },
       {
