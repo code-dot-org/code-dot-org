@@ -11,7 +11,13 @@ import { installCustomBlocks } from '@cdo/apps/gamelab/blocks';
 let nameField;
 $(document).ready(() => {
   nameField = document.getElementById('block_name');
-  Blockly.inject(document.getElementById('blockly-container'), {});
+  Blockly.inject(document.getElementById('blockly-container'), {
+    valueTypeTabShapeMap: {
+      Sprite: 'angle',
+      Behavior: 'rounded',
+      Location: 'square',
+    }
+  });
 
   initializeCodeMirrorForJson('block_config', { onChange });
   initializeCodeMirror('block_helper_code', 'javascript');
