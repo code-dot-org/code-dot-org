@@ -1,11 +1,6 @@
 {
   "category": "Sprites",
   "config": {
-    "color": [
-      184,
-      1,
-      0.74
-    ],
     "func": "makeNewSprite",
     "blockText": "make a new {ANIMATION} sprite at {X} {Y}",
     "args": [
