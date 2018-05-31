@@ -25,7 +25,7 @@ const studentOverviewDataPropType = PropTypes.shape({
 });
 
 class StudentAssessmentOverviewTable extends Component {
-  static propTypes= {
+  static propTypes = {
     studentOverviewData: PropTypes.arrayOf(studentOverviewDataPropType),
   };
 
@@ -61,12 +61,8 @@ class StudentAssessmentOverviewTable extends Component {
     if (submissionStatus === 'Completed') {
       return (
         <div>
-          <div>
-            {submissionTimeStamp}
-          </div>
-          <div>
-            <FontAwesome id="checkmark" icon="check-circle"/>
-          </div>
+          {submissionTimeStamp}
+          <FontAwesome id="checkmark" icon="check-circle"/>
         </div>
       );
     } else {
