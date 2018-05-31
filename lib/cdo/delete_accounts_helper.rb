@@ -58,11 +58,6 @@ class DeleteAccountsHelper
   # Removes the link between the user's level-backed progress and the progress itself.
   # @param [Integer] user_id The user to clean the LevelSource-backed progress of.
   def clean_level_source_backed_progress(user_id)
-    GalleryActivity.where(user_id: user_id).each do |gallery_activity|
-      gallery_activity.level_source.try(:clear_data_and_image)
-    end
-    GalleryActivity.where(user_id: user_id).destroy_all
-
     UserLevel.where(user_id: user_id).find_each do |user_level|
       user_level.update!(level_source_id: nil)
     end
@@ -76,6 +71,10 @@ class DeleteAccountsHelper
       OverflowActivity.where(user_id: user_id).find_each do |activity|
         activity.update!(level_source_id: nil)
       end
+    end
+
+    GalleryActivity.where(user_id: user_id).each do |gallery_activity|
+      gallery_activity.update!(level_source_id: nil)
     end
 
     AuthoredHintViewRequest.where(user_id: user_id).each(&:clear_level_source_associations)
@@ -136,8 +135,12 @@ class DeleteAccountsHelper
 
   # Cleans all sections owned by the user.
   # @param [Integer] The ID of the user to anonymize the sections of.
-  def anonymize_user_sections(user_id)
-    Section.with_deleted.where(user_id: user_id).each(&:clean_data)
+  def remove_user_sections(user_id)
+    Section.with_deleted.where(user_id: user_id).each(&:really_destroy!)
+  end
+
+  def remove_user_from_sections_as_student(user)
+    Follower.with_deleted.where(student_user: user).each(&:really_destroy!)
   end
 
   # Removes all information about the user pertaining to Pardot. This encompasses Pardot itself, the
@@ -223,7 +226,8 @@ class DeleteAccountsHelper
     delete_project_backed_progress(user.id)
     purge_orphaned_students(user.id)
     clean_and_destroy_pd_content(user.id)
-    anonymize_user_sections(user.id)
+    remove_user_sections(user.id)
+    remove_user_from_sections_as_student(user)
     remove_from_pardot(user.id)
     remove_from_solr(user.id)
     purge_unshared_studio_person(user)
