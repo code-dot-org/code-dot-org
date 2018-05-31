@@ -9,16 +9,6 @@ stage 'Intro to Data', flex_category: 'csp_postap_1'
 named_level 'CSP U2L07 SFLP'
 assessment 'csp-pulse-check-survey-3-levelgroup-U2Ch2_2018', progression: 'Quick Check-In'
 
-stage 'Finding Trends with Visualizations', flex_category: 'csp_postap_1'
-named_level 'CSP U2L08 SFLP'
-assessment 'U2L8 google trends MC_2018', progression: 'Check Your Understanding'
-assessment 'U2L8 google trends hypothesis_2018', progression: 'Check Your Understanding'
-
-stage 'Check Your Assumptions', flex_category: 'csp_postap_1'
-named_level 'CSP U2L09 SFLP'
-assessment 'U2L9 What is digital divide MC_2018', progression: 'Check Your Understanding'
-assessment 'U2L9 FR digital divide issue_2018', progression: 'Check Your Understanding'
-
 stage 'Good and Bad Data Visualizations', flex_category: 'csp_postap_1'
 named_level 'CSP U2L10 SFLP'
 named_level 'Collection A: Good and Bad Visualizations_2018', progression: 'Collection A: Good and Bad Visualizations'
