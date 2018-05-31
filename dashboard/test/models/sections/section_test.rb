@@ -344,12 +344,6 @@ class SectionTest < ActiveSupport::TestCase
     assert_equal expected_url, section.teacher_dashboard_url
   end
 
-  test 'clean_data' do
-    section = create :section
-    section.clean_data
-    assert_equal Section::SYSTEM_DELETED_NAME, section.reload.name
-  end
-
   test 'default_script: no script or course assigned' do
     section = create :section, script: nil, course: nil
     assert_nil section.default_script
