@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180524174518) do
+ActiveRecord::Schema.define(version: 20180531011848) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -682,6 +682,19 @@ ActiveRecord::Schema.define(version: 20180524174518) do
     t.datetime "created_at",                        null: false
     t.datetime "updated_at",                        null: false
     t.index ["regional_partner_id"], name: "index_pd_payment_terms_on_regional_partner_id", using: :btree
+  end
+
+  create_table "pd_post_course_surveys", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.bigint  "form_id",                     null: false
+    t.bigint  "submission_id",               null: false
+    t.text    "answers",       limit: 65535
+    t.string  "year"
+    t.integer "user_id",                     null: false
+    t.string  "course",                                   comment: "csd or csp"
+    t.index ["form_id"], name: "index_pd_post_course_surveys_on_form_id", using: :btree
+    t.index ["submission_id"], name: "index_pd_post_course_surveys_on_submission_id", unique: true, using: :btree
+    t.index ["user_id", "form_id", "year", "course"], name: "index_pd_post_course_surveys_on_user_form_year_course", unique: true, using: :btree
+    t.index ["user_id"], name: "index_pd_post_course_surveys_on_user_id", using: :btree
   end
 
   create_table "pd_pre_workshop_surveys", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
