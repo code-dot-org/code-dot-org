@@ -9,7 +9,6 @@ export const studentOverviewData = [
     percentCorrect: '70%',
     submissionStatus: 'Completed',
     submissionTimeStamp: '2/16/18 - 7:41 AM',
-    isSubmitted: true,
   },
   {
     id: 2,
@@ -19,7 +18,6 @@ export const studentOverviewData = [
     percentCorrect: '',
     submissionStatus: 'In Progress',
     submissionTimeStamp: '',
-    isSubmitted: false,
   },
   {
     id: 3,
@@ -29,7 +27,6 @@ export const studentOverviewData = [
     percentCorrect: '80%',
     submissionStatus: 'Completed',
     submissionTimeStamp: '5/29/18 - 7:41 AM',
-    isSubmitted: true,
   },
   {
     id: 4,
@@ -39,7 +36,6 @@ export const studentOverviewData = [
     percentCorrect: '100%',
     submissionStatus: 'Completed',
     submissionTimeStamp: '5/29/18 - 8:00 AM',
-    isSubmitted: true,
   },
   {
     id: 5,
@@ -49,7 +45,6 @@ export const studentOverviewData = [
     percentCorrect: '',
     submissionStatus: 'Not Started',
     submissionTimeStamp: '',
-    isSubmitted: false,
   },
   {
     id: 6,
@@ -59,7 +54,6 @@ export const studentOverviewData = [
     percentCorrect: '0%',
     submissionStatus: 'Completed',
     submissionTimeStamp: '5/29/18 - 8:05 AM',
-    isSubmitted: true,
   },
 ];
 
