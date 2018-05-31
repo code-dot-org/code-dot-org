@@ -8,7 +8,9 @@ class ScriptsController < ApplicationController
 
   def show
     if @script.redirect_to?
-      redirect_to Script.get_from_cache(@script.redirect_to)
+      redirect_path = script_path(Script.get_from_cache(@script.redirect_to))
+      redirect_query_string = params[:section_id] ? "?section_id=#{params[:section_id]}" : ''
+      redirect_to "#{redirect_path}#{redirect_query_string}"
       return
     end
 
