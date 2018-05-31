@@ -1,11 +1,6 @@
 {
   "category": "Groups",
   "config": {
-    "color": [
-      184,
-      1,
-      0.74
-    ],
     "expression": "length",
     "orderPrecedence": 1,
     "name": "groupLength",

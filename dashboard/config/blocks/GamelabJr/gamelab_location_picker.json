@@ -1,11 +1,6 @@
 {
   "category": "Sprites",
   "config": {
-    "color": [
-      300,
-      0.46,
-      0.89
-    ],
     "simpleValue": true,
     "name": "location_picker",
     "blockText": "{LOCATION}",
