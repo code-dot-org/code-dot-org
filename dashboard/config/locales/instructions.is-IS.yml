@@ -8290,6 +8290,9 @@
       courseB_collector_loops_challenge2_instruction: Náum þessum fjársjóði! Hjálpaðu
         mér að færast eftir hverri röð og koma svo til baka til að byrja þá næstu.
         Getur þú séð mynstur?
+      courseB_collector_loops_challenge2_2018_instruction: Náum þessum fjársjóði!
+        Hjálpaðu mér að færast eftir hverri röð og koma svo til baka til að byrja
+        þá næstu. Getur þú séð mynstur?
       courseB_collector_loops_challenge2a_instruction: Hjálpaðu Laurel að ná minnst
         **5** fjársjóðum til að ljúka þessari þraut.
       courseB_collector_loops_challenge2a_2018_instruction: Hjálpaðu Laurel að ná
@@ -11067,6 +11070,8 @@
         pig. Otherwise I might get angry!"
       courseF_maze_ramp7_instruction: Notaðu það sem þú hefur lært og komdu fuglinum
         til svínsins!
+      courseF_playlab_brokenText_instruction: Það sem eftir er af þessu stigi ætlum
+        við að smíða leik sem þú stjórnar!
       courseF_playlab_embed_vars_instruction: Svaraðu spurningum Pegleg sjóræningja.
         Hvað gerist ef þú slærð inn leyniorðið "password"? Hvað með önnur leyniorð?
       courseF_playlab_variables0_instruction: |-
