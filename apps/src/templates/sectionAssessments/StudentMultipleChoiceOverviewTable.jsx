@@ -94,7 +94,7 @@ class StudentAssessmentOverviewTable extends Component {
           props: {style: tableLayoutStyles.headerCell},
         },
         cell: {
-          props: {style:tableLayoutStyles.cell},
+          props: {style: tableLayoutStyles.cell},
         }
       },
       {
@@ -104,7 +104,7 @@ class StudentAssessmentOverviewTable extends Component {
           props: {style: tableLayoutStyles.headerCell},
         },
         cell: {
-          props: {style:tableLayoutStyles.cell},
+          props: {style: tableLayoutStyles.cell},
         }
       },
       {
@@ -114,7 +114,7 @@ class StudentAssessmentOverviewTable extends Component {
           props: {style: tableLayoutStyles.headerCell},
         },
         cell: {
-          props: {style:tableLayoutStyles.cell},
+          props: {style: tableLayoutStyles.cell},
         }
       },
       {
@@ -125,7 +125,7 @@ class StudentAssessmentOverviewTable extends Component {
         },
         cell: {
           format: this.submissionTimestampColumnFormatter,
-          props: {style:tableLayoutStyles.cell},
+          props: {style: tableLayoutStyles.cell},
         }
       },
     ];
