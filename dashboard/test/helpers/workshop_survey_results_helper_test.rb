@@ -49,16 +49,19 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
           'sampleMatrix_0' => {
             text: 'I am excited for CS Principles',
             answer_type: ANSWER_SELECT_VALUE,
-            parent: 'sampleMatrix'
+            parent: 'sampleMatrix',
+            max_value: 5
           },
           'sampleMatrix_1' => {
             text: 'I am prepared for CS Principles',
             answer_type: ANSWER_SELECT_VALUE,
-            parent: 'sampleMatrix'
+            parent: 'sampleMatrix',
+            max_value: 5
           },
           'sampleScale' => {
             text: 'Do you like CS Principles?',
-            answer_type: ANSWER_SELECT_VALUE
+            answer_type: ANSWER_SELECT_VALUE,
+            max_value: 5
           },
           'sampleText' => {
             text: 'Write some thoughts here',
