@@ -634,6 +634,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
   # Table: pegasus.contacts
   #
+
   test "removes contacts rows for email" do
     user = create :teacher
     email = user.email
@@ -651,7 +652,11 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
   # Table: pegasus.contact_rollups
   #
-  # TODO: Can I test against the reporting db here?
+  # TODO: To interact correctly with contact_rollups (a table controlled only
+  #   by a nightly batch job) we may want to update our user purge to be a
+  #   long-running operation; we'll queue a contact purge that the contact
+  #   rollups job will take care of, and when all deferred work is done we
+  #   will report that the hard-delete is completed.
 
   #
   # Table: pegasus.forms
