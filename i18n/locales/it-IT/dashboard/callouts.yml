@@ -3,7 +3,7 @@ it:
     callouts:
       2-3 Artist 1 new_callout: { }
       2-3 Artist Debugging 1_callout:
-        2-3_Artist_Debugging_1_a: Negli esercizi dell'Artista non c'è il pulsante "Fai un passo", ma puoi spostare questo cursore per scegliere la velocità di esecuzione del programma.
+        2-3_Artist_Debugging_1_a: Negli esercizi dell'artista non c'è il pulsante "Fai un passo", ma puoi spostare questo cursore per scegliere la velocità di esecuzione del programma.
       2-3 Bee Conditionals 5_callout:
         Bee_Cond_5_1a: I fiori viola possono avere 1 o 0 dosi di nettare... ma non puoi saperlo fino a quando non esegui il codice!
       4-5 Artist Patterns Free Play_callout:
@@ -128,6 +128,7 @@ it:
       CSD U3 Direction Arrows_2018_callout: { }
       CSD U3 Draw Loop Plugged update your scene_callout: { }
       CSD U3 Draw Loop Plugged update your scene_2018_callout: { }
+      CSD U3 Draw Loop Plugged wiggle sprite y_2018_callout: { }
       CSD U3 Drawing Squares to Corners_callout: { }
       CSD U3 Drawing Squares to Corners_2018_callout: { }
       CSD U3 Else_callout: { }
@@ -971,15 +972,15 @@ it:
         courseA_playLab_events6_1: Questo ti permette di scegliere un suono "casuale", quindi non saprai quale suono verrà riprodotto ogni volta!
       courseA_toMakeLoopsVideo_Collector_callout: { }
       courseB_Scrat_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: Dopo aver attaccato tutti i blocchi tra loro, premi "Esegui" per far partire il programma.
       courseB_Scrat_ramp2_2018_callout: { }
       courseB_Scrat_ramp3a_2018_callout: { }
       courseB_Scrat_ramp4a_2018_callout: { }
       courseB_Scrat_ramp5a_2018_callout: { }
       courseB_artist_loops3_callout:
-        courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How will you use it?
+        courseB_artist_loops3_1: C'è solo uno di questi blocchi nella cassetta degli attrezzi. Come lo userai?
       courseB_artist_loops3_2018_callout:
-        courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How will you use it?
+        courseB_artist_loops3_1: C'è solo uno di questi blocchi nella cassetta degli attrezzi. Come lo userai?
       courseB_artist_loops5_callout:
         courseB_artist_loops5_1: Questo numero significa che non c'è nessun blocco come questo rimasto nella sezione degli strumenti.
       courseB_artist_loops5_2018_callout:
@@ -1003,9 +1004,9 @@ it:
       courseB_maze_seq7_callout: { }
       courseB_maze_seq7_2018_callout: { }
       courseB_playlab_events6_callout:
-        courseB_playlab_events6_a: Usa la freccia verde a tendina per cambiare le direzioni.
+        courseB_playlab_events6_a: Usa la freccia verde per cambiare la direzione.
       courseB_playlab_events6_2018_callout:
-        courseB_playlab_events6_a: Usa la freccia verde a tendina per cambiare le direzioni.
+        courseB_playlab_events6_a: Usa la freccia verde per cambiare la direzione.
       courseC_PlayLab_events8_callout:
         courseC_PlayLab_events8_callout1: Use this block for when Waddles and Chomp touch!
       courseC_PlayLab_events8_2018_callout:
@@ -1055,9 +1056,9 @@ it:
       courseC_maze_loops2_predict1_callout: { }
       courseC_maze_loops_challenge2_callout: { }
       courseC_maze_programming1_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: Dopo aver attaccato tutti i blocchi tra loro, premi "Esegui" per far partire il programma.
       courseC_maze_programming1_2018_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: Dopo aver attaccato tutti i blocchi tra loro, premi "Esegui" per far partire il programma.
       courseC_maze_programming2_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseC_maze_programming2_2018_callout:
@@ -1156,9 +1157,9 @@ it:
       courseD_harvester_nested_loops_challenge1-broken_callout: { }
       courseD_maze_loops_challenge1_callout: { }
       courseD_maze_ramp1_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: Dopo aver attaccato tutti i blocchi tra loro, premi "Esegui" per far partire il programma.
       courseD_maze_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: Dopo aver attaccato tutti i blocchi tra loro, premi "Esegui" per far partire il programma.
       courseD_maze_ramp2_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseD_maze_ramp2_2018_callout:
@@ -1194,12 +1195,14 @@ it:
         courseD_playLab_condFP_1: we have organized the blocks into categories to give you more code to play with!  Click here to see where everything went.
       courseD_playLab_condFP_a_callout:
         courseD_playLab_condFP_1: we have organized the blocks into categories to give you more code to play with!  Click here to see where everything went.
+      courseD_playLab_condForVideo_callout:
+        courseD_playLab_condFP_1: we have organized the blocks into categories to give you more code to play with!  Click here to see where everything went.
       courseD_scrat_predict1_callout: { }
       courseD_scrat_predict1_2018_callout: { }
       courseD_scrat_ramp1_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: Dopo aver attaccato tutti i blocchi tra loro, premi "Esegui" per far partire il programma.
       courseD_scrat_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: Dopo aver attaccato tutti i blocchi tra loro, premi "Esegui" per far partire il programma.
       courseD_scrat_ramp2_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseD_scrat_ramp2_2018_callout:
@@ -1339,10 +1342,10 @@ it:
       courseE_maze_predict1_callout: { }
       courseE_maze_predict1_2018_callout: { }
       courseE_maze_ramp1_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: Dopo aver attaccato tutti i blocchi tra loro, premi "Esegui" per far partire il programma.
       courseE_maze_ramp13_callout: { }
       courseE_maze_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: Dopo aver attaccato tutti i blocchi tra loro, premi "Esegui" per far partire il programma.
       courseE_maze_ramp2_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseE_maze_ramp2_2018_callout:
@@ -1550,12 +1553,12 @@ it:
       courseF_bee_variables_8_2018_callout: { }
       courseF_maze_predict1_callout: { }
       courseF_maze_ramp1_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: Dopo aver attaccato tutti i blocchi tra loro, premi "Esegui" per far partire il programma.
       courseF_maze_ramp13_callout: { }
       courseF_maze_ramp15_callout:
         courseF_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
       courseF_maze_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: Dopo aver attaccato tutti i blocchi tra loro, premi "Esegui" per far partire il programma.
       courseF_maze_ramp2_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseF_maze_ramp2_2018_callout:
@@ -1647,11 +1650,11 @@ it:
       frozen square snowflake_callout:
         replace_questions: Clicca sull'elenco a discesa per sostituire "???" con un numero
       grade1_artist_loops2_callout:
-        grade1_artist_loops2_1: There is only one of these blocks in the toolbox.  How will you use it?
+        grade1_artist_loops2_1: C'è solo uno di questi blocchi nella cassetta degli attrezzi. Come lo userai?
       grade1_maze_sequence6_callout:
         grade1_maze_sequence6_1: Questi blocchi grigi sono fatti di pietra! Questo significa che non possono essere cestinati.
       grade2_CaringForNewPet_0_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: Dopo aver attaccato tutti i blocchi tra loro, premi "Esegui" per far partire il programma.
       grade2_CaringForNewPet_1_callout:
         grade2_CaringForNewPet_1_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       grade2_CaringForNewPet_2_callout:

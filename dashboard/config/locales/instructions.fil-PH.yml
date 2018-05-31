@@ -9217,6 +9217,7 @@
         Help Scrat get all the way over to the
         acorn!
       courseB_iceage_loops11_instruction: Help Scrat get to the acorn!
+      courseB_iceage_loops11_forVideo_instruction: Help Scrat get to the acorn!
       courseB_iceage_loops12_instruction: Get to the acorn any way you can!
       courseB_iceage_loops2_instruction: |-
         Use two different move blocks to get to
@@ -10857,6 +10858,8 @@
         para ipakita sa iyong mga kaibigan!
       courseD_playLab_condFP_a_instruction: Ngayon, bumuo ng iyong sariling laro para
         ipakita sa iyong mga kaibigan!
+      courseD_playLab_condForVideo_instruction: Ngayon, bumuo ng iyong sariling laro
+        para ipakita sa iyong mga kaibigan!
       courseD_playLab_embedded_instruction: "Pagalawin si Pegleg ang Pirata gamit
         ang mga arrow key. Puntahan ang dragon para makakuha ng puntos, ngunit iwasan
         ang ninja! Ang pagtayo sa ibaba ng linya ng mga pugita ang magpapatigil sa

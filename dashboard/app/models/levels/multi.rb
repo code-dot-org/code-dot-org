@@ -47,4 +47,16 @@ ruby
   def self.value_to_letter(value)
     ("A".ord + value).chr
   end
+
+  def get_question_text
+    # Question text is stored in properties as "questions" or "markdown"
+    question_text = ''
+    unless properties['questions'].nil?
+      question_text = properties['questions'][0]['text']
+    end
+    unless properties['markdown'].nil?
+      question_text = properties['markdown']
+    end
+    return question_text
+  end
 end

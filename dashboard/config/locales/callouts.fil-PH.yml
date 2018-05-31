@@ -150,6 +150,7 @@
       CSD U3 Direction Arrows_2018_callout: {}
       CSD U3 Draw Loop Plugged update your scene_callout: {}
       CSD U3 Draw Loop Plugged update your scene_2018_callout: {}
+      CSD U3 Draw Loop Plugged wiggle sprite y_2018_callout: {}
       CSD U3 Drawing Squares to Corners_callout: {}
       CSD U3 Drawing Squares to Corners_2018_callout: {}
       CSD U3 Else_callout: {}
@@ -1489,6 +1490,10 @@
           para mabigyan ka nang mas maraming code para mapaglaruan! Mag-click dito
           para makita kung saan napunta ang lahat.
       courseD_playLab_condFP_a_callout:
+        courseD_playLab_condFP_1: aming inayos ang mga bloke ayon sa mga kategorya
+          para mabigyan ka nang mas maraming code para mapaglaruan! Mag-click dito
+          para makita kung saan napunta ang lahat.
+      courseD_playLab_condForVideo_callout:
         courseD_playLab_condFP_1: aming inayos ang mga bloke ayon sa mga kategorya
           para mabigyan ka nang mas maraming code para mapaglaruan! Mag-click dito
           para makita kung saan napunta ang lahat.

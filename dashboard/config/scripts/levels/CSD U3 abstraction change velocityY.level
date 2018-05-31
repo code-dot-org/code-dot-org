@@ -30,7 +30,6 @@
       "subtractOperator": null,
       "comment_Sprites": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "start_blocks": "var sprite = createSprite(200, 350);\r\nsprite.setAnimation(\"dragonfly\");\r\n// initialize your sprite's velocity here\r\n\r\nfunction draw() {\r\n  // change your sprite's velocity here\r\n  \r\n  background(color(150,50,250));\r\n  drawSprites();\r\n}\r\n",

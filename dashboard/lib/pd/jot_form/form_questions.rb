@@ -50,14 +50,24 @@ module Pd
         question
       end
 
+      def [](id_or_name)
+        if id_or_name.is_a? Integer
+          get_question_by_id id_or_name
+        else
+          get_question_by_name id_or_name
+        end
+      end
+
       # Constructs a form-question summary, a hash of
       #   {question_name => {text:, answer_type:}}
       # Note: matrix questions are expanded into their sub-questions,
       #   so the resulting summary may contain more items than the original list.
       # See #Question::summarize
-      def summarize
+      # @param show_hidden_questions [Boolean] optional, default false
+      def summarize(show_hidden_questions: false)
         {}.tap do |summary|
           @questions_by_id.values.sort_by(&:order).each do |question|
+            next if question.hidden? && !show_hidden_questions
             summary.merge! question.summarize
           end
         end
@@ -66,18 +76,27 @@ module Pd
       # Constructs form_data for answer_data (translated from a JotForm submission),
       #   based on these questions.
       # @param answers_data [Hash] {question_id => answer_data (format depends on the question type)}
+      # @param show_hidden_questions [Boolean] optional, default false
       # @return [Hash] {question_name => answer_data}, sorted by appearance order in the form
       # @see Question#process_answers
-      def process_answers(answers_data)
+      def process_answers(answers_data, show_hidden_questions: false)
         questions_with_form_data = answers_data.map do |question_id, answer_data|
           question = get_question_by_id(question_id)
-          raise "Unrecognized question id #{question_id} in #{form_id}.#{submission_id}" unless question
+          raise "Unrecognized question id #{question_id}" unless question
+
+          next if question.hidden? && !show_hidden_questions
+
+          form_data = begin
+            question.process_answer(answer_data)
+          rescue => e
+            raise e, "Error processing answer #{question_id}: #{e.message}", e.backtrace
+          end
 
           {
             question: question,
-            form_data: question.process_answer(answer_data)
+            form_data: form_data
           }
-        end
+        end.compact
 
         questions_with_form_data.
           sort_by {|d| d[:question].order}.

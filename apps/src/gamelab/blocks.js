@@ -710,5 +710,7 @@ export default {
     if (!hideCustomBlocks) {
       level.toolbox = appendBlocksByCategory(level.toolbox, blocksByCategory);
     }
+
+    return blocksByCategory;
   },
 };

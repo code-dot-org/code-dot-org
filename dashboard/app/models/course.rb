@@ -362,6 +362,23 @@ class Course < ApplicationRecord
     default_course_script
   end
 
+  # @param user [User]
+  # @return [Boolean] Whether the user has progress on another version of this course.
+  def has_other_version_progress?(user)
+    return nil unless user
+    user_script_ids = user.user_scripts.pluck(:script_id)
+
+    Course.
+      joins(:default_course_scripts).
+      # select only courses in the same course family.
+      where('name regexp ?', "^#{assignment_family_name}(-[0-9]{4})?$").
+      # exclude the current course.
+      where.not(id: id).
+      # select only courses with scripts which the user has progress in.
+      where('course_scripts.script_id' => user_script_ids).
+      count > 0
+  end
+
   @@course_cache = nil
   COURSE_CACHE_KEY = 'course-cache'.freeze
 

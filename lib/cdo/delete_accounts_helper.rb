@@ -77,6 +77,8 @@ class DeleteAccountsHelper
         activity.update!(level_source_id: nil)
       end
     end
+
+    AuthoredHintViewRequest.where(user_id: user_id).each(&:clear_level_source_associations)
   end
 
   # Cleans the responses for all surveys associated with the user.
@@ -124,7 +126,7 @@ class DeleteAccountsHelper
     end
   end
 
-  # Anonymizes the user by deleting various pieces of PII and PPII from the User and UserGeo models.
+  # Anonymizes the user by deleting various pieces of PII and PPII
   # @param [User] user to be anonymized.
   def anonymize_user(user)
     UserGeo.where(user_id: user.id).each(&:clear_user_geo)
@@ -179,6 +181,24 @@ class DeleteAccountsHelper
     end
   end
 
+  # Removes CensusSubmission records associated with this email address.
+  # @param [String] email An email address
+  def remove_census_submissions(email)
+    Census::CensusSubmission.where(submitter_email_address: email).each(&:destroy)
+  end
+
+  # Removes EmailPreference records associated with this email address.
+  # @param [String] email An email address
+  def remove_email_preferences(email)
+    EmailPreference.where(email: email).each(&:destroy)
+  end
+
+  # Removes signature and school_id from applications for this user
+  # @param [User] user
+  def anonymize_circuit_playground_discount_application(user)
+    user.circuit_playground_discount_application&.anonymize
+  end
+
   # Purges (deletes and cleans) various pieces of information owned by the user in our system.
   # Noops if the user is already marked as purged.
   # @param [User] user The user to purge.
@@ -195,6 +215,9 @@ class DeleteAccountsHelper
     # NOTE: We do not gate any deletion logic on `user.user_type` as its current state may not be
     # reflective of past state.
     user.destroy
+    remove_census_submissions(user.email) if user.email
+    remove_email_preferences(user.email) if user.email
+    anonymize_circuit_playground_discount_application(user)
     clean_level_source_backed_progress(user.id)
     clean_survey_responses(user.id)
     delete_project_backed_progress(user.id)
@@ -208,5 +231,17 @@ class DeleteAccountsHelper
 
     user.purged_at = Time.zone.now
     user.save(validate: false)
+  end
+
+  # Given an email address, locates all accounts (including soft-deleted accounts)
+  # associated with that email address and purges each of them in turn.
+  # @param [String] email an email address.
+  def purge_all_accounts_with_email(email)
+    # Note: Not yet taking into account parent_email or users with multiple
+    # email addresses tied to their account - we'll have to do that later.
+    (
+      User.with_deleted.where(email: email) +
+      User.with_deleted.where(hashed_email: User.hash_email(email))
+    ).each {|u| purge_user u}
   end
 end
