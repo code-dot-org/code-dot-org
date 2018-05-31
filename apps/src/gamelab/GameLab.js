@@ -503,6 +503,9 @@ GameLab.prototype.afterInject_ = function (config) {
       'levelSuccess',
       'levelFailure',
     ].join(','));
+
+    // Don't add infinite loop protection
+    Blockly.JavaScript.INFINITE_LOOP_TRAP = '';
   }
 
   // Update gameLabP5's scale and keep it updated with future resizes:

@@ -23,13 +23,17 @@ def main
     where(Sequel.~(email: 'anonymous@code.org')).
     where(Sequel.lit("JSON_EXTRACT(data, '$.age_i') < 16")).
     each do |petition|
-      EmailPreferenceHelper.upsert!(
-        email: petition[:email],
-        opt_in: false,
-        source: EmailPreferenceHelper::AUTOMATED_OPT_OUT_UNDER_16,
-        ip_address: EmailPreferenceHelper::CODE_DOT_ORG,
-        form_kind: '0'
-      )
+      begin
+        EmailPreferenceHelper.upsert!(
+          email: petition[:email],
+          opt_in: false,
+          source: EmailPreferenceHelper::AUTOMATED_OPT_OUT_UNDER_16,
+          ip_address: EmailPreferenceHelper::CODE_DOT_ORG,
+          form_kind: '0'
+        )
+      rescue StandardError => error
+        CDO.log.info "Unable to Opt Out email address - #{petition[:email]} - #{error}"
+      end
     end
   CDO.log.info "Finished Opt Out of Petition Emails Under 16"
 end

@@ -71,6 +71,7 @@ module Pd
           id: 1,
           name: 'sampleMatrix',
           text: 'How much do you agree or disagree with the following statements about this workshop?',
+          options: %w(Disagree Neutral Agree),
           sub_questions: [
             'I learned something',
             'It was a good use of time'
@@ -85,12 +86,14 @@ module Pd
           'sampleMatrix_0' => {
             text: 'I learned something',
             answer_type: ANSWER_SELECT_VALUE,
-            parent: 'sampleMatrix'
+            parent: 'sampleMatrix',
+            max_value: 3
           },
           'sampleMatrix_1' => {
             text: 'It was a good use of time',
             answer_type: ANSWER_SELECT_VALUE,
-            parent: 'sampleMatrix'
+            parent: 'sampleMatrix',
+            max_value: 3
           }
         }
 
