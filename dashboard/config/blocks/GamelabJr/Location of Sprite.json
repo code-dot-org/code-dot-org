@@ -1,0 +1,19 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "locationOf",
+    "blockText": "location of {SPRITE}",
+    "returnType": "Location",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      }
+    ],
+    "color": [
+      300,
+      "0.46",
+      "0.89"
+    ]
+  }
+}

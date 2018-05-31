@@ -83,7 +83,12 @@ module Pd
       # Generate question summary
       # @return [Hash] {question_name => {text:, answer_type:}}
       def summarize
-        {name => {text: text, answer_type: answer_type}}
+        {name => {text: text, answer_type: answer_type}.merge(type_specific_summary)}
+      end
+
+      # Override in derived class to provide type-specific summary fields.
+      def type_specific_summary
+        {}
       end
 
       # Generate form_data for an answer to this question.

@@ -1,5 +1,62 @@
 import i18n from '@cdo/locale';
 
+export const studentOverviewData = [
+  {
+    id: 1,
+    name: 'Caley',
+    numMultipleChoiceCorrect: 7,
+    numMultipleChoice: 10,
+    percentCorrect: '70%',
+    submissionStatus: 'Completed',
+    submissionTimeStamp: '2/16/18 - 7:41 AM',
+  },
+  {
+    id: 2,
+    name: 'Maddie',
+    numMultipleChoiceCorrect: 3,
+    numMultipleChoice: 10,
+    percentCorrect: '',
+    submissionStatus: 'In Progress',
+    submissionTimeStamp: '',
+  },
+  {
+    id: 3,
+    name: 'Erin',
+    numMultipleChoiceCorrect: 8,
+    numMultipleChoice: 10,
+    percentCorrect: '80%',
+    submissionStatus: 'Completed',
+    submissionTimeStamp: '5/29/18 - 7:41 AM',
+  },
+  {
+    id: 4,
+    name: 'Dave',
+    numMultipleChoiceCorrect: 10,
+    numMultipleChoice: 10,
+    percentCorrect: '100%',
+    submissionStatus: 'Completed',
+    submissionTimeStamp: '5/29/18 - 8:00 AM',
+  },
+  {
+    id: 5,
+    name: 'Brad',
+    numMultipleChoiceCorrect: 0,
+    numMultipleChoice: 10,
+    percentCorrect: '',
+    submissionStatus: 'Not Started',
+    submissionTimeStamp: '',
+  },
+  {
+    id: 6,
+    name: 'Mike',
+    numMultipleChoiceCorrect: 0,
+    numMultipleChoice: 10,
+    percentCorrect: '0%',
+    submissionStatus: 'Completed',
+    submissionTimeStamp: '5/29/18 - 8:05 AM',
+  },
+];
+
 export const studentData = [
   {
     id: '012896',

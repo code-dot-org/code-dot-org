@@ -1,5 +1,5 @@
 ---
-title: #HourOfCode Challenge
+title: Brand Assets Usage
 theme: responsive
 style_min: true
 ---

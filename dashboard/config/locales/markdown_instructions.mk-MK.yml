@@ -1,8 +1,10 @@
 "mk":
   data:
     markdown_instructions:
-      pre-assessment survey q25A'_markdown_instruction: "If yes, what computer\nscience
-        course(s) had you taken before your current computer science  class?\n\r\n"
+      pre-assessment survey q25A'_markdown_instruction: |
+        If yes, what computer
+        science course(s) had you taken before your current computer science  class?
+        \r
       2-3 Artist 1 new_markdown_instruction: "Hi, I'm an artist. You can write code\nto
         make me draw almost anything. Use a few blocks to make me draw over the\ngrey
         lines in the picture. (Each line is 100 pixels long)\r\n\r\n"
