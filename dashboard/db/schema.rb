@@ -1237,6 +1237,13 @@ ActiveRecord::Schema.define(version: 20180524174518) do
     t.index ["workshop_id"], name: "index_segments_on_workshop_id", using: :btree
   end
 
+  create_table "shared_blockly_functions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string "name",                      null: false
+    t.text   "description", limit: 65535
+    t.text   "arguments",   limit: 65535
+    t.text   "stack",       limit: 65535
+  end
+
   create_table "sign_ins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id",       null: false
     t.datetime "sign_in_at",    null: false
