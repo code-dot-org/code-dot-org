@@ -1271,7 +1271,9 @@ StudioApp.prototype.resizePinnedBelowVisualizationArea = function () {
 
 function applyTransformScaleToChildren(element, scale) {
   for (var i = 0; i < element.children.length; i++) {
-    applyTransformScale(element.children[i], scale);
+    if (!$(element.children[i]).hasClass('ignore-transform')) {
+      applyTransformScale(element.children[i], scale);
+    }
   }
 }
 function applyTransformScale(element, scale) {
@@ -2763,7 +2765,7 @@ StudioApp.prototype.displayAlert = function (selector, props, alertContents, pos
   var parent = $(selector);
   var container = parent.children('.react-alert');
   if (container.length === 0) {
-    container = $("<div class='react-alert'/>").css({
+    container = $("<div class='react-alert ignore-transform'/>").css({
       position: position,
       left: 0,
       right: 0,
