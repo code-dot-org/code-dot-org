@@ -19,9 +19,10 @@ Scenario: As a student, 'Feedback' tab is not visible
   And element ".uitest-feedback" is not visible
   And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/7?disableExperiments=commentBoxTab"
 
-Scenario: 'Feedback' tab is not visible if user is a student (dev flag)
+Scenario: As a student, with dev flag, 'Feedback' tab is visible and displays temporary text
   And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/7?enableExperiments=devCommentBoxTab"
-  And element ".uitest-feedback" is not visible
+  And I click selector ".uitest-feedback" once I see it
+  And I wait until ".editor-column" contains text "Feedback from Temp"
   And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/7?disableExperiments=devCommentBoxTab"
 
 Scenario: As teacher, with dev flag, default to feedback tab and see text area without temporary text
