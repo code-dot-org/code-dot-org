@@ -4,6 +4,7 @@
 #
 #  id          :integer          not null, primary key
 #  name        :string(255)      not null
+#  level_type  :string(255)
 #  block_type  :integer          default("function"), not null
 #  return      :string(255)
 #  description :text(65535)
