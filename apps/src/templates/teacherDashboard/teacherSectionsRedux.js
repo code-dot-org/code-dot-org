@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import $ from 'jquery';
 import { OAuthSectionTypes } from './shapes';
-import experiments, { COURSE_VERSIONS } from '../../util/experiments';
 
 /**
  * @const {string[]} The only properties that can be updated by the user
@@ -197,7 +196,7 @@ export const editSectionLoginType = (sectionId, loginType) => dispatch => {
 export const asyncLoadSectionData = (id) => (dispatch) => {
   dispatch({type: ASYNC_LOAD_BEGIN});
   // If section id is provided, load students for the current section.
-  const courseVersions = experiments.isEnabled(COURSE_VERSIONS);
+  const courseVersions = true;
 
   dispatch({type: ASYNC_LOAD_BEGIN});
   let apis = [
@@ -208,7 +207,7 @@ export const asyncLoadSectionData = (id) => (dispatch) => {
     // server for other version years (e.g. 2018) of those courses.
     `/dashboardapi/courses${courseVersions ? '?allVersions=1' : ''}`,
 
-    '/v2/sections/valid_scripts'
+    '/dashboardapi/sections/valid_scripts'
   ];
   if (id) {
     apis.push('/dashboardapi/sections/' + id + '/students');

@@ -533,7 +533,10 @@ Dashboard::Application.routes.draw do
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
   get '/dashboardapi/section_text_responses/:section_id', to: 'api#section_text_responses'
+  # Used in angular assessments tab
   get '/dashboardapi/section_assessments/:section_id', to: 'api#section_assessments'
+  # Used in react assessments tab
+  get '/dashboardapi/section_assessments_responses/:section_id', to: 'api#assessments_responses'
   get 'dashboardapi/assessments_structure/:script_id', to: 'api#assessments_structure'
   get '/dashboardapi/section_surveys/:section_id', to: 'api#section_surveys'
   get '/dashboardapi/student_progress/:section_id/:student_id', to: 'api#student_progress'
