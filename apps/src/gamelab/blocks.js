@@ -510,7 +510,6 @@ export default {
         // Must be marked EDITABLE so that cloned blocks share the same var name
         fieldLabel.EDITABLE = true;
         this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
-        this.setHSV(131, 0.64, 0.62);
         this.appendDummyInput()
             .appendTitle(Blockly.Msg.VARIABLES_GET_TITLE)
             .appendTitle(Blockly.disableVariableEditing ? fieldLabel
