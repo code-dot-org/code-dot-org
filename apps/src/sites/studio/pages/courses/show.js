@@ -10,7 +10,6 @@ import { initializeHiddenScripts } from '@cdo/apps/code-studio/hiddenStageRedux'
 import { setUserSignedIn } from '@cdo/apps/code-studio/progressRedux';
 import { getUserSignedInFromCookieAndDom } from '@cdo/apps/code-studio/initSigninState';
 import { setVerified, setVerifiedResources } from '@cdo/apps/code-studio/verifiedTeacherRedux';
-import experiments, { COURSE_VERSIONS } from '@cdo/apps/util/experiments';
 
 $(document).ready(showCourseOverview);
 
@@ -48,7 +47,7 @@ function showCourseOverview() {
     store.dispatch(initializeHiddenScripts(scriptData.hidden_scripts));
   }
 
-  const versions = experiments.isEnabled(COURSE_VERSIONS) ? courseSummary.versions : [];
+  const versions = courseSummary.versions;
 
   // Eventually we want to do this all via redux
   ReactDOM.render(

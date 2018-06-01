@@ -26,6 +26,7 @@ ________________
 
 May 2018
 
+- May 3 Local Summer Workshop Webinar ([Recording](https://code.zoom.us/recording/play/JXG9NjNVlbnsm8vGmU8LRiwCPGzVeCya6v3KiLGBEOxqyxRBY9GDZUQEMMy_XzGn), [Slides](https://drive.google.com/drive/folders/1KZBZvHP9OwDm_4VqOp6v-i7ICvivnGzo))
 - May 1 View into the Code.org Funding Model ([Recording](https://code.zoom.us/recording/share/W5BoJRfbxk_LRq1MgcQye8dlD7VXYKZk0ORiGBf0tEqwIumekTziMw), [Slides](https://drive.google.com/file/d/1kackyrWrkMLQbxPhYzlctIhjQRTRHj-h/view?usp=sharing))
 
 April 2018
