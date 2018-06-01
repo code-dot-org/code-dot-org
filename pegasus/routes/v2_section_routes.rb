@@ -13,6 +13,12 @@ end
 
 # DEPRECATED: Use POST /dashboardapi/sections instead
 post '/v2/sections' do
+  # Notify Honeybadger to determine if this endpoint is still used anywhere
+  Honeybadger.notify(
+    error_class: "DeprecatedEndpointWarning",
+    error_message: 'Deprecated endpoint POST /v2/sections called unexpectedly',
+  )
+
   only_for 'code.org'
   dont_cache
   unsupported_media_type! unless payload = request.json_body
