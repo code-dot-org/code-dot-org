@@ -665,28 +665,30 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   test "cleans forms matched by email if purging by email" do
     email = 'test@example.com'
-    create_form(email: email)
-    form_ids = PEGASUS_DB[:forms].where(email: email).map {|f| f[:id]}
+    with_form(email: email) do |_|
+      form_ids = PEGASUS_DB[:forms].where(email: email).map {|f| f[:id]}
 
-    refute_empty PEGASUS_DB[:forms].where(id: form_ids)
-    assert PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?}
+      refute_empty PEGASUS_DB[:forms].where(id: form_ids)
+      assert PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?}
 
-    purge_all_accounts_with_email email
+      purge_all_accounts_with_email email
 
-    refute PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?}
+      refute PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?}
+    end
   end
 
   test "cleans forms matched by user_id" do
     user = create :teacher
-    create_form(user: user)
-    form_ids = PEGASUS_DB[:forms].where(user_id: user.id).map {|f| f[:id]}
+    with_form(user: user) do |_|
+      form_ids = PEGASUS_DB[:forms].where(user_id: user.id).map {|f| f[:id]}
 
-    refute_empty PEGASUS_DB[:forms].where(id: form_ids)
-    assert PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?}
+      refute_empty PEGASUS_DB[:forms].where(id: form_ids)
+      assert PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?}
 
-    purge_user user
+      purge_user user
 
-    refute PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?}
+      refute PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?}
+    end
   end
 
   test "removes email from forms" do
@@ -773,68 +775,60 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   def assert_removes_field_from_forms(field, expect: :nil)
     user = create :teacher
-    form_id = create_form(user: user)
+    with_form(user: user) do |form_id|
+      initial_value = PEGASUS_DB[:forms].where(id: form_id).first[field]
+      initial_expectation_msg = "Expected initial #{field} not to be #{expect}"
+      case expect
+      when :empty
+        refute_empty initial_value, initial_expectation_msg
+      when :nil
+        refute_nil initial_value, initial_expectation_msg
+      else
+        refute_equal expect, initial_value, initial_expectation_msg
+      end
 
-    initial_value = PEGASUS_DB[:forms].where(id: form_id).first[field]
-    initial_expectation_msg = "Expected initial #{field} not to be #{expect}"
-    case expect
-    when :empty
-      refute_empty initial_value, initial_expectation_msg
-    when :nil
-      refute_nil initial_value, initial_expectation_msg
-    else
-      refute_equal expect, initial_value, initial_expectation_msg
+      purge_user user
+
+      cleared_value = PEGASUS_DB[:forms].where(id: form_id).first[field]
+      result_expectation_msg = "Expected cleared #{field} to be #{expect} but was #{cleared_value.inspect}"
+      case expect
+      when :empty
+        assert_empty cleared_value, result_expectation_msg
+      when :nil
+        assert_nil cleared_value, result_expectation_msg
+      else
+        assert_equal expected_result, cleared_value, result_expectation_msg
+      end
     end
-
-    purge_user user
-
-    cleared_value = PEGASUS_DB[:forms].where(id: form_id).first[field]
-    result_expectation_msg = "Expected cleared #{field} to be #{expect} but was #{cleared_value.inspect}"
-    case expect
-    when :empty
-      assert_empty cleared_value, result_expectation_msg
-    when :nil
-      assert_nil cleared_value, result_expectation_msg
-    else
-      assert_equal expected_result, cleared_value, result_expectation_msg
-    end
-
-    # Clean up
-    PEGASUS_DB[:forms].where(id: form_id).delete
   end
 
   def assert_removes_field_from_form_geos(field)
     user = create :teacher
-    form_id = create_form(user: user)
-    form_geo_id = create_form_geo(form_id)
+    with_form_geo(user) do |form_geo_id|
+      initial_value = PEGASUS_DB[:form_geos].where(id: form_geo_id).first[field]
+      refute_nil initial_value,
+        "Expected initial #{field} not to be nil"
 
-    initial_value = PEGASUS_DB[:form_geos].where(id: form_geo_id).first[field]
-    refute_nil initial_value,
-      "Expected initial #{field} not to be nil"
+      purge_user user
 
-    purge_user user
-
-    cleared_value = PEGASUS_DB[:form_geos].where(id: form_geo_id).first[field]
-    assert_nil cleared_value,
-      "Expected cleared #{field} to be nil but was #{cleared_value.inspect}"
-
-    # Clean up
-    PEGASUS_DB[:form_geos].where(id: form_geo_id).delete
-    PEGASUS_DB[:forms].where(id: form_id).delete
+      cleared_value = PEGASUS_DB[:form_geos].where(id: form_geo_id).first[field]
+      assert_nil cleared_value,
+        "Expected cleared #{field} to be nil but was #{cleared_value.inspect}"
+    end
   end
 
   #
-  # Adds a test row to pegasus.forms.
+  # Adds a test row to pegasus.forms, removes it at the end of the block.
   # Should provide either user or email as a param.
   # @param [User] user - A user to be treated as the form submitter.  If provided,
   #   email will be derived from user.
   # @param [String] email - An email for the form submitter.
-  # @return [Integer] id of the inserted row.
+  # @yields [Integer] The form_id for the created form.
   #
-  def create_form(user: nil, email: nil)
+  def with_form(user: nil, email: nil)
     use_name = user&.name || 'Fake Name'
     use_email = user ? user.email : email
-    PEGASUS_DB[:forms].insert(
+    form_id = PEGASUS_DB[:forms].insert(
       {
         kind: 'DeleteAccountsHelperTestForm',
         secret: SecureRandom.hex,
@@ -856,29 +850,37 @@ class DeleteAccountsHelperTest < ActionView::TestCase
         processed_at: DateTime.now,
       }
     )
+    yield form_id
+  ensure
+    PEGASUS_DB[:forms].where(id: form_id).delete
   end
 
   #
   # Adds a test row to pegasus.form_geos.
   # Must provide an existing form_id as a param.
-  # @param [Integer] form_id for a forms row.
-  # @return [Integer] id of the inserted row.
+  # @param [User] user for a forms row.
+  # @yields [Integer] the id of the form_geos row.
   #
-  def create_form_geo(form_id)
-    DB[:form_geos].insert(
-      {
-        form_id: form_id,
-        created_at: DateTime.now,
-        updated_at: DateTime.now,
-        ip_address: '1.2.3.4',
-        # World's largest ball of twine!
-        city: 'Cawker City',
-        state: 'Kansas',
-        country: 'USA',
-        postal_code: '67430',
-        latitude: 39.509222,
-        longitude: -98.433800,
-      }
-    )
+  def with_form_geo(user)
+    with_form(user: user) do |form_id|
+      form_geo_id = PEGASUS_DB[:form_geos].insert(
+        {
+          form_id: form_id,
+          created_at: DateTime.now,
+          updated_at: DateTime.now,
+          ip_address: '1.2.3.4',
+          # World's largest ball of twine!
+          city: 'Cawker City',
+          state: 'Kansas',
+          country: 'USA',
+          postal_code: '67430',
+          latitude: 39.509222,
+          longitude: -98.433800,
+        }
+      )
+      yield form_geo_id
+    ensure
+      PEGASUS_DB[:form_geos].where(id: form_geo_id).delete
+    end
   end
 end
