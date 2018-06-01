@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180524174518) do
+ActiveRecord::Schema.define(version: 20180601174113) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -1238,10 +1238,12 @@ ActiveRecord::Schema.define(version: 20180524174518) do
   end
 
   create_table "shared_blockly_functions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string "name",                      null: false
-    t.text   "description", limit: 65535
-    t.text   "arguments",   limit: 65535
-    t.text   "stack",       limit: 65535
+    t.string  "name",                                  null: false
+    t.integer "block_type",                default: 0, null: false
+    t.string  "return"
+    t.text    "description", limit: 65535
+    t.text    "arguments",   limit: 65535
+    t.text    "stack",       limit: 65535
   end
 
   create_table "sign_ins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
