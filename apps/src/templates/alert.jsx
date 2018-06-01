@@ -11,6 +11,7 @@ export default class Alert extends React.Component {
     onClose: PropTypes.func.isRequired,
     closeDelayMillis: PropTypes.number,
     sideMargin: PropTypes.number,
+    width: PropTypes.string,
   };
 
   render() {
@@ -20,7 +21,8 @@ export default class Alert extends React.Component {
         zIndex: 1000,
         marginTop: 20,
         marginLeft: this.props.sideMargin || 50,
-        marginRight: this.props.sideMargin || 50
+        marginRight: this.props.sideMargin || 50,
+        width: this.props.width || 'auto',
       },
       typeSpecific: {
         error: {
@@ -73,9 +75,10 @@ export default class Alert extends React.Component {
     if (this.props.closeDelayMillis) {
       setTimeout(this.props.onClose, this.props.closeDelayMillis);
     } else {
-      closeButton = (<button style={styles.closeButton} onClick={this.props.onClose}>
-        <span>&times;</span>
-      </button>);
+      closeButton = (
+          <button style={styles.closeButton} onClick={this.props.onClose}>
+            <span>&times;</span>
+          </button>);
     }
 
     return (

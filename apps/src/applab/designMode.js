@@ -572,10 +572,12 @@ designMode.onCopyElementToScreen = function (element, destScreen) {
   if (madeUndraggable) {
     makeDraggable(sourceElement.children());
   }
-  debugger;
+  const styles = {
+    textAlign: 'center',
+  };
   const alert = (
-      <div>
-        Copied {elementUtils.getId(sourceElement)} to {destScreen} as {elementUtils.getId(duplicateElement)}
+      <div style={styles}>
+        Copied <b>{elementUtils.getId(element)}</b> to <b>{destScreen}</b> as <b>{elementUtils.getId(duplicateElement)}</b>
       </div>);
   studioApp().displayPlayspaceNotification(alert);
 };
