@@ -13,7 +13,6 @@
 # Indexes
 #
 #  index_pd_post_course_surveys_on_form_id                (form_id)
-#  index_pd_post_course_surveys_on_form_user_year_course  (form_id,user_id,year,course) UNIQUE
 #  index_pd_post_course_surveys_on_submission_id          (submission_id) UNIQUE
 #  index_pd_post_course_surveys_on_user_form_year_course  (user_id,form_id,year,course) UNIQUE
 #  index_pd_post_course_surveys_on_user_id                (user_id)
