@@ -13,6 +13,8 @@ require_relative 'i18n_script_utils'
 require_relative '../i18n-codeorg/lib/merge-translation'
 require_relative '../i18n-codeorg/lib/export-without-merge'
 
+CLEAR = "\r\033[K"
+
 def sync_out
   rename_from_crowdin_name_to_locale
   distribute_translations
@@ -40,7 +42,7 @@ def distribute_translations
   total_locales = Languages.get_locale.count
   Languages.get_locale.each_with_index do |prop, i|
     locale = prop[:locale_s]
-    print "Distributing #{locale} (#{i}/#{total_locales})\r"
+    print "#{CLEAR}Distributing #{locale} (#{i}/#{total_locales})"
     $stdout.flush
     next if locale == 'en-US'
     next unless File.directory?("i18n/locales/#{locale}/")
@@ -105,7 +107,7 @@ def distribute_translations
     end
   end
 
-  puts "Distribution finished!      "
+  puts "#{CLEAR}Distribution finished!"
 end
 
 # For untranslated apps, copy English file for all locales
