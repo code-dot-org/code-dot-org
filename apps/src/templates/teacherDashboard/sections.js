@@ -97,8 +97,7 @@ export function renderSectionTable(section, studioUrlPrefix,) {
   store.dispatch(setSection(section));
 
   // Show share column by default for CSD and CSP courses.
-  // TODO(dave): remove 'csd' and 'csp' once they have been renamed to their 2017 versions.
-  const coursesToShowShareSetting = ['csd', 'csd-2017', 'csd-2018', 'csp', 'csp-2017', 'csp-2018'];
+  const coursesToShowShareSetting = ['csd-2017', 'csd-2018', 'csp-2017', 'csp-2018'];
   if (coursesToShowShareSetting.includes(section.course_name)) {
     store.dispatch(toggleSharingColumn());
   }
