@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180531011848) do
+ActiveRecord::Schema.define(version: 20180601174113) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -1249,6 +1249,16 @@ ActiveRecord::Schema.define(version: 20180531011848) do
     t.index ["end"], name: "index_segments_on_end", using: :btree
     t.index ["start"], name: "index_segments_on_start", using: :btree
     t.index ["workshop_id"], name: "index_segments_on_workshop_id", using: :btree
+  end
+
+  create_table "shared_blockly_functions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string  "name",                                  null: false
+    t.string  "level_type"
+    t.integer "block_type",                default: 0, null: false
+    t.string  "return"
+    t.text    "description", limit: 65535
+    t.text    "arguments",   limit: 65535
+    t.text    "stack",       limit: 65535
   end
 
   create_table "sign_ins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
