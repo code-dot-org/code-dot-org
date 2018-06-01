@@ -46,11 +46,8 @@
     "hide_custom_blocks": "true",
     "parent_level_id": 11927,
     "markdown_instructions": "Check out these two new blocks - the green \"When dog is touching cat\" block will run everything attached to it when the dog touches the cat, and the \"Remove behavior\" block removes a behavior from a sprite.\r\n\r\nSee if you can make both the dog and cat stop moving when they run into each other.",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
