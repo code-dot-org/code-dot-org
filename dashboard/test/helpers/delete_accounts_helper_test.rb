@@ -708,7 +708,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "removes data from forms" do
-    assert_removes_field_from_forms :data, expect: :empty
+    assert_removes_field_from_forms :data, expect: {}.to_json
   end
 
   test "removes created_ip from forms" do
@@ -805,7 +805,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       when :nil
         assert_nil cleared_value, result_expectation_msg
       else
-        assert_equal expected_result, cleared_value, result_expectation_msg
+        assert_equal expect, cleared_value, result_expectation_msg
       end
     end
   end
