@@ -285,7 +285,7 @@ class DeleteAccountsHelper
       )
     forms_recordset.
       update(
-        email: nil,
+        email: '',
         name: nil,
         data: nil,
         created_ip: nil,

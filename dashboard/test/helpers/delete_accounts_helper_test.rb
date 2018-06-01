@@ -773,9 +773,9 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   def assert_removes_field_from_forms(field, expect: :nil)
     user = create :teacher
-    create_form(user: user)
+    form_id = create_form(user: user)
 
-    initial_value = PEGASUS_DB[:forms].where(user_id: user.id).first[field]
+    initial_value = PEGASUS_DB[:forms].where(id: form_id).first[field]
     initial_expectation_msg = "Expected initial #{field} not to be #{expect}"
     case expect
     when :empty
@@ -788,7 +788,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     purge_user user
 
-    cleared_value = PEGASUS_DB[:forms].where(user_id: user.id).first[field]
+    cleared_value = PEGASUS_DB[:forms].where(id: form_id).first[field]
     result_expectation_msg = "Expected cleared #{field} to be #{expect} but was #{cleared_value.inspect}"
     case expect
     when :empty
@@ -798,22 +798,29 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     else
       assert_equal expected_result, cleared_value, result_expectation_msg
     end
+
+    # Clean up
+    PEGASUS_DB[:forms].where(id: form_id).delete
   end
 
   def assert_removes_field_from_form_geos(field)
     user = create :teacher
     form_id = create_form(user: user)
-    create_form_geo(form_id)
+    form_geo_id = create_form_geo(form_id)
 
-    initial_value = PEGASUS_DB[:form_geos].join(:forms, id: :form_id).where(user_id: user.id).first[field]
+    initial_value = PEGASUS_DB[:form_geos].where(id: form_geo_id).first[field]
     refute_nil initial_value,
       "Expected initial #{field} not to be nil"
 
     purge_user user
 
-    cleared_value = PEGASUS_DB[:form_geos].join(:forms, id: :form_id).where(user_id: user.id).first[field]
+    cleared_value = PEGASUS_DB[:form_geos].where(id: form_geo_id).first[field]
     assert_nil cleared_value,
       "Expected cleared #{field} to be nil but was #{cleared_value.inspect}"
+
+    # Clean up
+    PEGASUS_DB[:form_geos].where(id: form_geo_id).delete
+    PEGASUS_DB[:forms].where(id: form_id).delete
   end
 
   #
