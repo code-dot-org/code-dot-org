@@ -89,6 +89,13 @@ const customInputTypes = {
           block.dispose(true, true);
         }
       };
+      block.superSetTitleValue = block.setTitleValue;
+      block.setTitleValue = function (newValue, name) {
+        if (inputConfig.assignment && name === 'NAME') {
+          newValue = Blockly.Variables.generateUniqueName(newValue);
+        }
+        block.superSetTitleValue(newValue, name);
+      };
 
       currentInputRow
         .appendTitle(inputConfig.label)
