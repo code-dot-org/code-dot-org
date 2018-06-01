@@ -13,7 +13,7 @@ const TABLE_COLUMN_WIDTHS = {
   numMultipleChoiceCorrect: TABLE_WIDTH / 8,
   numMultipleChoice: TABLE_WIDTH / 8,
   percentCorrect: TABLE_WIDTH / 8,
-  timeStamp: TABLE_WIDTH / 5
+  submissionTimeStamp: TABLE_WIDTH / 5
 };
 
 const styles = {
@@ -114,7 +114,7 @@ class StudentAssessmentOverviewTable extends Component {
       {
         property: 'name',
         header: {
-          label: i18n.showStudentName(),
+          label: i18n.studentNameHeader(),
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
