@@ -44,7 +44,7 @@ def merge_translation(file_type, en_translation_path, new_translation_path, prev
   end
 
   # Translation begins
-  if file_type == "yml"
+  if file_type == 'yml'
     en_translation = YAML.load_file(en_translation_path)
     new_translation = YAML.load_file(new_translation_path)
     prev_translation = YAML.load_file(prev_translation_path)

@@ -56,9 +56,9 @@ def distribute_translations
         "dashboard/config/locales/#{relname}.#{locale}.yml"
 
       if locale == 'hy-AM' # Armenian accepts English translations, does not need fallback
-        export_without_merge "yml", loc_file, destination
+        export_without_merge 'yml', loc_file, destination
       else
-        merge_translation "yml", source, loc_file, destination
+        merge_translation 'yml', source, loc_file, destination
       end
     end
 
@@ -70,9 +70,9 @@ def distribute_translations
       destination = "apps/i18n/#{relname}/#{js_locale}.json"
 
       if locale == 'hy-AM' # Armenian accepts English translations, does not need fallback
-        export_without_merge "json", loc_file, destination
+        export_without_merge 'json', loc_file, destination
       else
-        merge_translation "json", source, loc_file, destination
+        merge_translation 'json', source, loc_file, destination
       end
     end
 
@@ -86,9 +86,9 @@ def distribute_translations
       FileUtils.mkdir_p(File.dirname(destination))
 
       if locale == 'hy-AM' # Armenian accepts English translations, does not need fallback
-        export_without_merge "json", loc_file, destination
+        export_without_merge 'json', loc_file, destination
       else
-        merge_translation "json", source, loc_file, destination
+        merge_translation 'json', source, loc_file, destination
       end
     end
 
@@ -99,9 +99,9 @@ def distribute_translations
 
     # Merge YML file.
     if locale == 'hy-AM' # Armenian accepts English translations, does not need fallback
-      export_without_merge "yml", loc_file, destination
+      export_without_merge 'yml', loc_file, destination
     else
-      merge_translation "yml", source, loc_file, destination
+      merge_translation 'yml', source, loc_file, destination
     end
   end
 
