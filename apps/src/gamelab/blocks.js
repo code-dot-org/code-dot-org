@@ -30,9 +30,10 @@ let sprites = () => {
 const customInputTypes = {
   locationPicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
-      const label = currentInputRow
-          .appendTitle(`${inputConfig.label}(0, 0)`, `${inputConfig.name}_LABEL`)
-          .titleRow[0];
+      currentInputRow.appendTitle(
+        `${inputConfig.label}(0, 0)`, `${inputConfig.name}_LABEL`);
+      const label =
+        currentInputRow.titleRow[currentInputRow.titleRow.length - 1];
       const icon = document.createElementNS(SVG_NS, 'tspan');
       icon.style.fontFamily = 'FontAwesome';
       icon.textContent = '\uf276';

@@ -15,3 +15,4 @@ level 'U6 Create PT - Make a Plan - Student Links_2018', progression: 'Create PT
 
 stage 'Create PT - Complete the Task', flex_category: 'csp_ap_3'
 level 'U6 Create PT - Complete the Task - Student Links_2018', progression: 'Create PT - Complete the Task - Student Links'
+level 'Practice Create Performance Task_2018', progression: 'Create PT - Complete the Task'
