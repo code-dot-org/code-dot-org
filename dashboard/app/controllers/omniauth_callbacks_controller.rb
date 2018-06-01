@@ -5,7 +5,15 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   # GET /users/auth/:provider/callback
   def all
-    @user = User.from_omniauth(request.env["omniauth.auth"], request.env['omniauth.params'])
+    auth_hash = request.env['omniauth.auth']
+    auth_params = request.env['omniauth.params']
+
+    # Fiddle with data if it's a Powerschool request (other OpenID 2.0 providers might need similar treatment if we add any)
+    if request.env["omniauth.auth"].provider.to_s == 'powerschool'
+      auth_hash = extract_powerschool_data(request.env["omniauth.auth"])
+    end
+
+    @user = User.from_omniauth(auth_hash, auth_params)
 
     # Set user-account locale only if no cookie is already set.
     if @user.locale &&
@@ -56,6 +64,24 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     move_oauth_params_to_cache(user)
     session["devise.user_attributes"] = user.attributes
     redirect_to new_user_registration_url
+  end
+
+  # TODO: figure out how to avoid skipping CSRF verification for Powerschool
+  skip_before_action :verify_authenticity_token, only: :powerschool
+
+  def extract_powerschool_data(auth)
+    # OpenID 2.0 data comes back in a different format compared to most of our other oauth data.
+    args = JSON.parse(auth.extra.response.message.to_json)['args']
+    auth_info = OmniAuth::AuthHash.new(
+      user_type: args["[\"http://openid.net/srv/ax/1.0\", \"value.ext0\"]"],
+      email: args["[\"http://openid.net/srv/ax/1.0\", \"value.ext1\"]"],
+      name: {
+        first: args["[\"http://openid.net/srv/ax/1.0\", \"value.ext2\"]"],
+        last: args["[\"http://openid.net/srv/ax/1.0\", \"value.ext3\"]"],
+      },
+    )
+    auth.info = auth_info
+    auth
   end
 
   # Clever signins have unique requirements, and must be handled a bit outside the normal flow
@@ -114,7 +140,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def allows_silent_takeover(oauth_user)
     allow_takeover = oauth_user.provider.present?
-    allow_takeover &= %w(facebook google_oauth2 windowslive).include?(oauth_user.provider)
+    allow_takeover &= %w(facebook google_oauth2 windowslive powerschool).include?(oauth_user.provider)
     # allow_takeover &= oauth_user.email_verified # TODO (eric) - set up and test for different providers
     lookup_user = User.find_by_email_or_hashed_email(oauth_user.email)
     allow_takeover && lookup_user
