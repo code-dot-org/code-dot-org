@@ -831,7 +831,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   # @param [User] user - A user to be treated as the form submitter.  If provided,
   #   email will be derived from user.
   # @param [String] email - An email for the form submitter.
-  # @yields [Integer] The form_id for the created form.
+  # @yields [Integer] The id for the created form.
   #
   def with_form(user: nil, email: nil)
     use_name = user&.name || 'Fake Name'
@@ -865,8 +865,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   #
   # Adds a test row to pegasus.form_geos.
-  # Must provide an existing form_id as a param.
-  # @param [User] user for a forms row.
+  # @param [User] user to create an associated form.
   # @yields [Integer] the id of the form_geos row.
   #
   def with_form_geo(user)
