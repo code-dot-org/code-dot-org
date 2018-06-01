@@ -1252,6 +1252,7 @@ ActiveRecord::Schema.define(version: 20180601174113) do
 
   create_table "shared_blockly_functions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.string  "name",                                  null: false
+    t.string  "level_type"
     t.integer "block_type",                default: 0, null: false
     t.string  "return"
     t.text    "description", limit: 65535
