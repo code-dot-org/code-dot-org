@@ -88,7 +88,7 @@ export default function sectionAssessments(state=initialState, action) {
 // Selector functions
 
 export const getAssessmentsForCurrentScript = (state) => {
-  return state.sectionAssessments.assessmentsByScript[state.scriptSelection.scriptId] || [];
+  return state.sectionAssessments.assessmentsByScript[state.scriptSelection.scriptId] || {};
 };
 
 // Make a request to the server for assessment data
@@ -99,7 +99,7 @@ const loadAssessmentsFromServer = (sectionId, scriptId) => {
   }
   // TODO(caleybrock): also fetch /dashboardapi/section_surveys
   return $.ajax({
-    url: `/dashboardapi/section_assessments/${sectionId}`,
+    url: `/dashboardapi/section_assessments_responses/${sectionId}`,
     method: 'GET',
     contentType: 'application/json;charset=UTF-8',
     data: payload

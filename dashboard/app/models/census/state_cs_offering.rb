@@ -21,6 +21,7 @@ class Census::StateCsOffering < ApplicationRecord
   validates :school_year, presence: true, numericality: {greater_than_or_equal_to: 2015, less_than_or_equal_to: 2030}
 
   SUPPORTED_STATES = %w(
+    AL
     AR
     CA
     CT
@@ -33,6 +34,7 @@ class Census::StateCsOffering < ApplicationRecord
     MI
     MS
     NC
+    OK
     SC
     UT
   ).freeze
@@ -52,6 +54,8 @@ class Census::StateCsOffering < ApplicationRecord
 
   def self.construct_state_school_id(state_code, row_hash)
     case state_code
+    when 'AL'
+      row_hash['State School ID']
     when 'AR'
       School.construct_state_school_id('AR', row_hash['District LEA'], row_hash['Location ID'])
     when 'CA'
@@ -88,6 +92,8 @@ class Census::StateCsOffering < ApplicationRecord
       # Remove district code prefix from school code.
       school_code.slice!(district_code)
       School.construct_state_school_id('NC', district_code, school_code)
+    when 'OK'
+      row_hash['State School ID']
     when 'SC'
       School.construct_state_school_id('SC', row_hash['districtcode'], row_hash['schoolcode'])
     when 'UT'
@@ -99,6 +105,25 @@ class Census::StateCsOffering < ApplicationRecord
   end
 
   UNSPECIFIED_COURSE = 'unspecified'
+
+  AL_COURSE_CODES = %w(
+    520006
+    520007
+    560024
+    520045
+    520046
+    560032
+    520018
+    220098
+    520043
+    925611
+    560025
+    560026
+    450012
+    520014
+    520044
+    520015
+  ).freeze
 
   AR_COURSE_CODES = %w(
     565320
@@ -245,6 +270,15 @@ class Census::StateCsOffering < ApplicationRecord
     WC22
   ).freeze
 
+  OK_COURSE_CODES = %w(
+    2510
+    2511
+    2531
+    2532
+    2535
+    2536
+  ).freeze
+
   # Utah did not provide codes, but did provide course titles.
   UT_COURSE_CODES = [
     'A.P.  Computer Science',
@@ -266,6 +300,8 @@ class Census::StateCsOffering < ApplicationRecord
 
   def self.get_courses(state_code, row_hash)
     case state_code
+    when 'AL'
+      AL_COURSE_CODES.select {|course| course == row_hash['Course Code']}
     when 'AR'
       AR_COURSE_CODES.select {|course| course == row_hash['Course ID']}
     when 'CA'
@@ -310,6 +346,8 @@ class Census::StateCsOffering < ApplicationRecord
       MS_COURSE_CODES.select {|course| course == row_hash['Course ID']}
     when 'NC'
       NC_COURSE_CODES.select {|course| course == row_hash['4 CHAR Code']}
+    when 'OK'
+      OK_COURSE_CODES.select {|course| course == row_hash['ClassCode']}
     when 'UT'
       UT_COURSE_CODES.select {|course| row_hash[course] == '1'}
     when 'SC'

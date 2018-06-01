@@ -91,7 +91,7 @@ namespace :seed do
     end
   end
 
-  SCRIPTS_DEPENDENCIES = [:environment, :games, :custom_levels, :dsls].freeze
+  SCRIPTS_DEPENDENCIES = [:environment, :games, :custom_levels, :dsls, :blocks].freeze
   task scripts: SCRIPTS_DEPENDENCIES do
     update_scripts(incremental: false)
   end
