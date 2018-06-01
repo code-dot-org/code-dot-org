@@ -598,7 +598,7 @@ describe('teacherSectionsRedux', () => {
 
     it('makes saveInProgress false after the server responds with success', () => {
       store.dispatch(beginEditingNewSection());
-      server.respondWith('POST', '/v2/sections', successResponse());
+      server.respondWith('POST', '/dashboardapi/sections', successResponse());
 
       store.dispatch(finishEditingSection());
       expect(state().saveInProgress).to.be.true;
@@ -609,7 +609,7 @@ describe('teacherSectionsRedux', () => {
 
     it('makes saveInProgress false after the server responds with failure', () => {
       store.dispatch(beginEditingNewSection());
-      server.respondWith('POST', '/v2/sections', failureResponse);
+      server.respondWith('POST', '/dashboardapi/sections', failureResponse);
 
       store.dispatch(finishEditingSection()).catch(() => {});
       expect(state().saveInProgress).to.be.true;
@@ -620,7 +620,7 @@ describe('teacherSectionsRedux', () => {
 
     it('resolves a returned promise when the server responds with success', () => {
       store.dispatch(beginEditingNewSection());
-      server.respondWith('POST', '/v2/sections', successResponse());
+      server.respondWith('POST', '/dashboardapi/sections', successResponse());
 
       const promise = store.dispatch(finishEditingSection());
       server.respond();
@@ -629,7 +629,7 @@ describe('teacherSectionsRedux', () => {
 
     it('rejects a returned promise when the server responds with failure', () => {
       store.dispatch(beginEditingNewSection());
-      server.respondWith('POST', '/v2/sections', failureResponse);
+      server.respondWith('POST', '/dashboardapi/sections', failureResponse);
 
       const promise = store.dispatch(finishEditingSection());
       server.respond();
@@ -638,7 +638,7 @@ describe('teacherSectionsRedux', () => {
 
     it('clears sectionBeingEdited after the server responds with success', () => {
       store.dispatch(beginEditingNewSection());
-      server.respondWith('POST', '/v2/sections', successResponse());
+      server.respondWith('POST', '/dashboardapi/sections', successResponse());
 
       store.dispatch(finishEditingSection());
       expect(state().sectionBeingEdited).not.to.be.null;
@@ -651,7 +651,7 @@ describe('teacherSectionsRedux', () => {
       store.dispatch(beginEditingNewSection());
       const originalSectionBeingEdited = state().sectionBeingEdited;
       expect(originalSectionBeingEdited).not.to.be.null;
-      server.respondWith('POST', '/v2/sections', failureResponse);
+      server.respondWith('POST', '/dashboardapi/sections', failureResponse);
 
       store.dispatch(finishEditingSection()).catch(() => {});
       expect(state().sectionBeingEdited).to.equal(originalSectionBeingEdited);
@@ -668,7 +668,7 @@ describe('teacherSectionsRedux', () => {
         loginType: 'picture',
         grade: '3',
       }));
-      server.respondWith('POST', '/v2/sections', successResponse({
+      server.respondWith('POST', '/dashboardapi/sections', successResponse({
         name: 'Aquarius PM Block 2',
         login_type: 'picture',
         grade: '3',
@@ -718,7 +718,7 @@ describe('teacherSectionsRedux', () => {
 
     it('does not modify sections map on failure', () => {
       store.dispatch(beginEditingNewSection());
-      server.respondWith('POST', '/v2/sections', failureResponse);
+      server.respondWith('POST', '/dashboardapi/sections', failureResponse);
       const originalSections = state().sections;
 
       store.dispatch(finishEditingSection()).catch(() => {});

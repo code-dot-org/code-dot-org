@@ -164,7 +164,7 @@ export const finishEditingSection = () => (dispatch, getState) => {
   const section = state.sectionBeingEdited;
   return new Promise((resolve, reject) => {
     $.ajax({
-      url: isAddingSection(state) ? '/v2/sections' : `/v2/sections/${section.id}/update`,
+      url: isAddingSection(state) ? '/dashboardapi/sections' : `/v2/sections/${section.id}/update`,
       method: 'POST',
       contentType: 'application/json;charset=UTF-8',
       data: JSON.stringify(serverSectionFromSection(section)),
