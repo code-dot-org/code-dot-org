@@ -20,3 +20,9 @@ assessment 'csp-post-survey-2018-levelgroup'
 
 stage 'CSD post survey 2018 staging'
 assessment 'csd-post-survey-2017-levelgroup-2018-2nd-semester'
+
+stage 'CSP pre survey 2018 staging'
+assessment 'csp-pre-survey-2017-levelgroup_2018'
+
+stage 'CSP mid survey 2018 staging'
+assessment 'csp-post-survey-2017-levelgroup_2018'
