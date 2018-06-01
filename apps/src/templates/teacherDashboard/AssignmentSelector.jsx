@@ -228,6 +228,7 @@ export default class AssignmentSelector extends Component {
         </select>
         {versions.length > 1 && (
           <select
+            id="assignment-version-year"
             value={selectedVersion.year}
             onChange={this.onChangeVersion}
             style={dropdownStyle}

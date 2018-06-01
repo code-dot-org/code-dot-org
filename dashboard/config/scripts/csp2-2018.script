@@ -45,10 +45,12 @@ assessment 'U2L5 FR brighten darken image_2018', progression: 'Check Your Unders
 
 stage 'Lossy vs Lossless Compression', flex_category: 'csp2_1_2018'
 named_level 'CSP U2L05 SFLP'
-assessment 'U1L16 - Matching File Compression Types_2018', progression: 'Check Your Understanding'
+assessment 'U2L05 Lossy Lossless MC 1_2018', progression: 'Check Your Understanding'
+assessment 'U2L05 Lossy Lossless MC 2_2018', progression: 'Check Your Understanding'
+assessment 'U2L05 Lossy vs. Lossless FR 1_2018', progression: 'Check Your Understanding'
 
 stage 'Rapid Research - Format Showdown', flex_category: 'csp2_1_2018'
 named_level 'CSP U2L06 SFLP'
 
-stage 'Unit 2 Chapter 1 Assessment', lockable: true, flex_category: 'cspAssessment'
+stage 'Unit 2 Assessment', lockable: true, flex_category: 'cspAssessment'
 assessment 'CSP Unit 2 Ch1 Cumulative Assessment MC_2018'
