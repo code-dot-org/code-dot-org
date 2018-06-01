@@ -348,8 +348,8 @@ function draw() {
     for (let i = 0; i < touchEvents.length; i++) {
       const eventType = touchEvents[i].type;
       const event = touchEvents[i].event;
-      const param = touchEvents[i].param;
-      if (eventType(param)) {
+      const param = touchEvents[i].param && touchEvents[i].param();
+      if (param && eventType(param)) {
         event();
       }
     }
@@ -357,8 +357,11 @@ function draw() {
     // Run collision events
     for (let i = 0; i<collisionEvents.length; i++) {
       const collisionEvent = collisionEvents[i];
-      const a = collisionEvent.a;
-      const b = collisionEvent.b;
+      const a = collisionEvent.a && collisionEvent.a();
+      const b = collisionEvent.b && collisionEvent.b();
+      if (!a || !b) {
+        continue;
+      }
       if (a.overlap(b)) {
         if (!collisionEvent.touching || collisionEvent.keepFiring) {
           collisionEvent.event();
