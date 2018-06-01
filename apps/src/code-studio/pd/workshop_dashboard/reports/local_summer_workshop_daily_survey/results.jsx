@@ -164,7 +164,7 @@ export default class Results extends React.Component {
         {this.props.facilitators[facilitatorId]}
         <ul>
           {
-            hasResponses && responses.map((response, i) => (
+            hasResponses && responses[facilitatorId].map((response, i) => (
               <li key={i} style={styles.facilitatorResponseList}>
                 {response}
               </li>
