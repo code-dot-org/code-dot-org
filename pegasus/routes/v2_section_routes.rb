@@ -46,6 +46,12 @@ get '/v2/sections/membership' do
 end
 
 get '/v2/sections/valid_scripts' do
+  # Notify Honeybadger to determine if this endpoint is still used anywhere
+  Honeybadger.notify(
+    error_class: "DeprecatedEndpointWarning",
+    error_message: 'Deprecated endpoint /v2/sections/valid_scripts called unexpectedly',
+  )
+
   only_for 'code.org'
   dont_cache
   forbidden! unless dashboard_user_id
