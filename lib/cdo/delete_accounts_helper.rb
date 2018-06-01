@@ -287,7 +287,7 @@ class DeleteAccountsHelper
       update(
         email: '',
         name: nil,
-        data: {},
+        data: {}.to_json,
         created_ip: '',
         updated_ip: '',
         processed_data: nil,
