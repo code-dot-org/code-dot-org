@@ -91,7 +91,7 @@ const customInputTypes = {
       };
       block.superSetTitleValue = block.setTitleValue;
       block.setTitleValue = function (newValue, name) {
-        if (inputConfig.assignment && name === 'NAME') {
+        if (inputConfig.assignment && name === 'NAME' && block.blockSpace.isFlyout) {
           newValue = Blockly.Variables.generateUniqueName(newValue);
         }
         block.superSetTitleValue(newValue, name);
