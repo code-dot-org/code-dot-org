@@ -10,7 +10,7 @@ def export_without_merge(file_type, new_translation_path, prev_translation_path)
   end
 
   # Translation begins
-  if file_type == "yml"
+  if file_type == 'yml'
     new_translation = YAML.load_file(new_translation_path)
 
     File.open(prev_translation_path, 'w+') do |f|
