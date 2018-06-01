@@ -128,7 +128,8 @@ nl:
     field_is_required: "is vereist"
     accept_terms: "Je moet akkoord gaan om een account aan te maken"
     error: "Er is een fout opgetreden."
-    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: "Ja"
     email_preference_no: "Nee"
     email_preference_required: "You must specify an email preference."
@@ -467,6 +468,8 @@ nl:
   gender:
     male: 'Man'
     female: 'Vrouw'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: 'Wil ik liever niet zeggen'
   user_type:
     student: 'Leerling'
@@ -719,7 +722,7 @@ nl:
     tos: "Gebruiksvoorwaarden"
     privacy: "Privacybeleid"
     privacy_notice: "Privacyverklaring"
-    accept_label: 'I agree to the updated <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>'
+    accept_label: 'I agree to the <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.'
     accept: "Accepteren"
     print: "Afdrukken"
     reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'

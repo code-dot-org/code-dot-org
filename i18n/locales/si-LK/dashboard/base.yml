@@ -128,7 +128,8 @@ si:
     field_is_required: "අවශ්‍යයි"
     accept_terms: "ගිණුමක් නිර්මාණය කිරීමට ඔබ එකඟ විය යුතුය"
     error: "An error occurred."
-    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: "ඔව්"
     email_preference_no: "නැහැ"
     email_preference_required: "You must specify an email preference."
@@ -467,6 +468,8 @@ si:
   gender:
     male: 'පිරිමි'
     female: 'ගැහැණු'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: 'පිළිතුරු නොදීමට කැමතියි'
   user_type:
     student: 'ශිෂ්‍යයා'

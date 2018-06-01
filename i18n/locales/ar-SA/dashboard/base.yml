@@ -128,7 +128,8 @@ ar:
     field_is_required: "مطلوب"
     accept_terms: "يجب عليك الموافقة على إنشاء حساب"
     error: "An error occurred."
-    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: "نعم"
     email_preference_no: "لا"
     email_preference_required: "You must specify an email preference."
@@ -468,6 +469,8 @@ ar:
   gender:
     male: 'ذكر'
     female: 'أنثى'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: 'أفضل عدم الإجابة'
   user_type:
     student: 'طالب'

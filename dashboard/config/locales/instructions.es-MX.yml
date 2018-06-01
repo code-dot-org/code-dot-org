@@ -8771,6 +8771,9 @@
       courseB_collector_loops_challenge2_instruction: "¡Consigamos el tesoro! Ayúdame
         a cruzar cada fila y luego regresa para comenzar la siguiente fila. ¿Puedes
         encontrar un patrón?"
+      courseB_collector_loops_challenge2_2018_instruction: "¡Consigamos el tesoro!
+        Ayúdame a cruzar cada fila y luego regresa para comenzar la siguiente fila.
+        ¿Puedes encontrar un patrón?"
       courseB_collector_loops_challenge2a_instruction: Ayuda a Laurel a obtener **
         5 ** piezas del tesoro para completar este rompecabezas.
       courseB_collector_loops_challenge2a_2018_instruction: Ayuda a Laurel a obtener
@@ -11259,6 +11262,8 @@
         pig. Otherwise I might get angry!"
       courseF_maze_ramp7_instruction: "¡Usa lo que has aprendido para llevar al pájaro
         hasta el cerdo!"
+      courseF_playlab_brokenText_instruction: En el resto de esta etapa, ¡vams a construir
+        un juego que tú controles!
       courseF_playlab_embed_vars_instruction: Respnde Las preguntas de Pegleg el Pirata.
         ¿Qué sucede si ingresas la "contraseña" códigonombre? ¿Qué pasa con otros
         nombres de código?

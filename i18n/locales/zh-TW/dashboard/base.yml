@@ -128,7 +128,8 @@ zh-TW:
     field_is_required: "必填"
     accept_terms: "你必須同意以建立一個帳戶"
     error: "發生錯誤。"
-    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: "是"
     email_preference_no: "否"
     email_preference_required: "You must specify an email preference."
@@ -467,6 +468,8 @@ zh-TW:
   gender:
     male: '男性'
     female: '女性'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: '不想回答'
   user_type:
     student: '學生'
