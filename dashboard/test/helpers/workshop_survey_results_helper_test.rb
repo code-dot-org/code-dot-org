@@ -4,13 +4,19 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
   include Pd::WorkshopSurveyResultsHelper
   include Pd::JotForm::Constants
 
-  PRE_SURVEY_STUBBED_FORM_ID = 1
+  FORM_IDS = {
+    pre_workshop: 0,
+    day_1: 1,
+    day_2: 2,
+    day_3: 3,
+    day_4: 4
+  }
 
   self.use_transactional_test_case = true
   setup_all do
     @workshop = create :pd_workshop, :local_summer_workshop, course: Pd::SharedWorkshopConstants::COURSE_CSP, num_facilitators: 2
 
-    @questions = [
+    @pre_workshop_questions = [
       Pd::JotForm::MatrixQuestion.new(
         id: 1,
         name: 'sampleMatrix',
@@ -35,10 +41,51 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
       )
     ]
 
+    @daily_questions = [
+      Pd::JotForm::ScaleQuestion.new(
+        id: 1,
+        name: 'sampleDailyScale',
+        text: 'How was your day?',
+        options: %w(Poor Fair Good Great Excellent),
+        values: (1..5).to_a,
+        type: TYPE_SCALE
+      )
+    ]
+
     Pd::SurveyQuestion.create(
-      form_id: PRE_SURVEY_STUBBED_FORM_ID,
-      questions: Pd::JotForm::FormQuestions.new(PRE_SURVEY_STUBBED_FORM_ID, @questions).serialize.to_json
+      form_id: FORM_IDS[:pre_workshop],
+      questions: Pd::JotForm::FormQuestions.new(FORM_IDS[:pre_workshop], @pre_workshop_questions).serialize.to_json
     )
+
+    Pd::SurveyQuestion.create(
+      form_id: FORM_IDS[:day_1],
+      questions: Pd::JotForm::FormQuestions.new(FORM_IDS[:day_1], @daily_questions).serialize.to_json
+    )
+
+    Pd::SurveyQuestion.create(
+      form_id: FORM_IDS[:day_2],
+      questions: Pd::JotForm::FormQuestions.new(FORM_IDS[:day_2], @daily_questions).serialize.to_json
+    )
+
+    Pd::SurveyQuestion.create(
+      form_id: FORM_IDS[:day_3],
+      questions: Pd::JotForm::FormQuestions.new(FORM_IDS[:day_3], @daily_questions).serialize.to_json
+    )
+
+    Pd::SurveyQuestion.create(
+      form_id: FORM_IDS[:day_4],
+      questions: Pd::JotForm::FormQuestions.new(FORM_IDS[:day_4], @daily_questions).serialize.to_json
+    )
+
+    expected_daily_questions = {
+      general: {
+        'sampleDailyScale' => {
+          text: 'How was your day?',
+          answer_type: ANSWER_SELECT_VALUE,
+          max_value: 5
+        },
+      }
+    }
 
     @expected_questions = {
       'Pre Workshop' => {
@@ -69,7 +116,11 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
             answer_type: ANSWER_TEXT
           }
         }
-      }
+      },
+      'Day 1' => expected_daily_questions,
+      'Day 2' => expected_daily_questions,
+      'Day 3' => expected_daily_questions,
+      'Day 4' => expected_daily_questions
     }
   end
 
@@ -215,13 +266,29 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
   end
 
   test 'daily survey get_question_for_forms gets workshop questions and substitutes question texts' do
-    CDO.expects(:jotform_forms).returns({'local' => {'day_0' => PRE_SURVEY_STUBBED_FORM_ID}})
+    CDO.expects(:jotform_forms).times(5).returns(
+      {
+        'local' => {
+          'day_0' => FORM_IDS[:pre_workshop],
+          'day_1' => FORM_IDS[:day_1],
+          'day_2' => FORM_IDS[:day_2],
+          'day_3' => FORM_IDS[:day_3],
+          'day_4' => FORM_IDS[:day_4],
+        }
+      }
+    )
 
     assert_equal(@expected_questions, get_questions_for_forms(@workshop))
   end
 
   test 'generate workshop survey summary works as expected' do
-    CDO.stubs(:jotform_forms).returns({'local' => {'day_0' => PRE_SURVEY_STUBBED_FORM_ID}})
+    CDO.stubs(:jotform_forms).returns(
+      {
+        'local' => {
+          'day_0' => FORM_IDS[:pre_workshop]
+        }
+      }
+    )
 
     common_survey_hash = {
       form_id: CDO.jotform_forms['local']['day_0'],
@@ -278,6 +345,13 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
       )
     ).save(validate: false)
 
+    daily_expected_results = {
+      response_count: nil,
+      general: {
+        'sampleDailyScale' => {}
+      }
+    }
+
     assert_equal(
       {
         'Pre Workshop' => {
@@ -295,8 +369,13 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
               4 => 1
             },
             'sampleText' => ['Here are my thoughts', 'More thoughts']
-          }
-        }
+          },
+          response_count: 3
+        },
+        'Day 1' => daily_expected_results,
+        'Day 2' => daily_expected_results,
+        'Day 3' => daily_expected_results,
+        'Day 4' => daily_expected_results
       }, generate_workshops_survey_summary(@workshop, @expected_questions)
     )
   end
