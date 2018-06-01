@@ -159,4 +159,38 @@ class EmailPreferenceHelperTest < SequelTestCase
 
     Timecop.return
   end
+
+  def test_upsert_does_not_update_all_rows
+    EmailPreferenceHelper.upsert!(
+      email: 'existing@example.net',
+      opt_in: false,
+      ip_address: '1.1.1.1',
+      source: EmailPreferenceHelper::ACCOUNT_SIGN_UP,
+      form_kind: nil
+    )
+
+    EmailPreferenceHelper.upsert!(
+      email: 'update_me@example.net',
+      opt_in: false,
+      ip_address: '9.9.9.9',
+      source: EmailPreferenceHelper::FORM_PETITION,
+      form_kind: nil
+    )
+
+    EmailPreferenceHelper.upsert!(
+      email: 'update_me@example.net',
+      opt_in: true,
+      ip_address: '8.8.8.8',
+      source: EmailPreferenceHelper::FORM_HOUR_OF_CODE,
+      form_kind: '0'
+    )
+
+    updated_email_preference = Dashboard.db[:email_preferences].where(email: 'update_me@example.net').first
+    another_email_preference = Dashboard.db[:email_preferences].where(email: 'existing@example.net').first
+
+    refute_equal updated_email_preference[:opt_in], another_email_preference[:opt_in]
+    refute_equal updated_email_preference[:ip_address], another_email_preference[:ip_address]
+    refute_equal updated_email_preference[:source], another_email_preference[:source]
+    refute_equal updated_email_preference[:form_kind], another_email_preference[:form_kind]
+  end
 end
