@@ -2,9 +2,9 @@
   data:
     course:
       name:
-        csp:
+        csp-2017:
           assignment_family_title: Computer Science Principles
-          title: Tietojenkäsittelytieteiden alkeet
+          title: Computer Science Principles ('17-'18)
           version_title: "'17-'18"
           description_student: Syksyllä 2016 College Board käynnisti uusimman AP®
             kurssin, AP Tietojenkäsittelyn periaatteet. Kurssi tutustuttaa opiskelijat
@@ -23,20 +23,20 @@
             ovat perinteisesti aliedustettuina välttämätömillä tietojenkäsittelytieteiden
             työkaluilla ja monialaisilla mahdollisuuksilla.
           description_short: Opi perustavanlaatuisia teitojenkäsittelytieteiden käsitteitä.
-        csd:
+        csd-2017:
           assignment_family_title: Computer Science Discoveries
-          title: Tietojenkäsittelytieteiden löydöt
+          title: Computer Science Discoveries ('17-'18)
           version_title: "'17-'18"
-          description_student: Tietojenkäsittelytieteiden löydöt (TKT löydöt) on johdantokurssi,
-            joka antaa opiskelijoille mahdollisuuden luoda aitoja esineitä ja tarjoaa
-            tietojenkäsittelytieteet välineenä luovuutta, viestintää, ongelmanratkaisua
-            ja hauskanpitoa varten.
-          description_teacher: Tietojenkäsittelytieteiden löydöt (TKT löydöt) on johdantokurssi,
-            joka antaa opiskelijoille mahdollisuuden luoda aitoja esineitä ja tarjoaa
-            tietojenkäsittelytieteet välineenä luovuutta, viestintää, ongelmanratkaisua
-            ja hauskanpitoa varten.
-          description_short: Johdantokurssi tietojenkäsittelytieteisiin joka mahdollistaa
-            oppilaiden luoda aitoja esineitä.
+          description_student: Computer Science Discoveries (CS Discoveries) is an
+            introductory computer science course that empowers students to create
+            authentic artifacts and engage with computer science as a medium for creativity,
+            communication, problem solving, and fun.
+          description_teacher: Computer Science Discoveries (CS Discoveries) is an
+            introductory computer science course that empowers students to create
+            authentic artifacts and engage with computer science as a medium for creativity,
+            communication, problem solving, and fun.
+          description_short: An introductory computer science course that empowers
+            students to create authentic artifacts.
         allthethingscourse:
           title: allthethingscourse
           description_short: This is a course for allthethings

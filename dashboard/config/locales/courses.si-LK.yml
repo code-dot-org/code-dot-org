@@ -2,9 +2,9 @@
   data:
     course:
       name:
-        csp:
+        csp-2017:
           assignment_family_title: Computer Science Principles
-          title: Computer Science Principles
+          title: Computer Science Principles ('17-'18)
           version_title: "'17-'18"
           description_student: In fall 2016, the College Board launched its newest
             AP® course, AP Computer Science Principles. The course introduces students
@@ -23,9 +23,9 @@
             underrepresented with essential computing tools and multidisciplinary
             opportunities.
           description_short: Learn foundational computer science concepts.
-        csd:
+        csd-2017:
           assignment_family_title: Computer Science Discoveries
-          title: Computer Science Discoveries
+          title: Computer Science Discoveries ('17-'18)
           version_title: "'17-'18"
           description_student: Computer Science Discoveries (CS Discoveries) is an
             introductory computer science course that empowers students to create

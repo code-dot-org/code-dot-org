@@ -1579,6 +1579,8 @@
         New Play Lab Project_callout1: Klikk kategoriene for å se blokkene i verktøykassa! Dra blokker til arbeidsområdet for å legge dem til programmet
         New Play Lab Project_callout2: Trykk "Kjør" for å lagre og kjøre programmet
         sign_in_to_save_project: Vil du åpne prosjektet senere? Logg på for å lagre prosjektet til kontoen din!
+      courseF_playlab_brokenText_callout:
+        courseF_playlab_variables5c_1: You will find your variable block in here.
       courseF_playlab_embed_vars_callout: { }
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: The toolbox has been organized into categories to make it easier to find the blocks you need.

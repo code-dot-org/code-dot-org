@@ -128,7 +128,8 @@ da:
     field_is_required: "krævet"
     accept_terms: "Du skal acceptere at oprette en konto"
     error: "Der opstod en fejl."
-    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: "Ja"
     email_preference_no: "Nej"
     email_preference_required: "You must specify an email preference."
@@ -467,6 +468,8 @@ da:
   gender:
     male: 'Mand'
     female: 'Kvinde'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: 'Foretrækker ikke at svare'
   user_type:
     student: 'studerende'
@@ -719,7 +722,7 @@ da:
     tos: "Termer"
     privacy: "Privatlivspolitik"
     privacy_notice: "Privacy Notice"
-    accept_label: 'I agree to the updated <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>'
+    accept_label: 'I agree to the <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.'
     accept: "Accept"
     print: "Udskriv"
     reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'

@@ -1579,6 +1579,8 @@ id:
         New Play Lab Project_callout1: Klik kategori untuk melihat blok di kotak peralatan Anda! Pindahkan blok ke ruang kerja untuk menambahkannya ke program Anda
         New Play Lab Project_callout2: Tekan "Run" untuk menyimpan dan menjalankan program Anda
         sign_in_to_save_project: Anda Ingin mengakses proyek nanti? Masuk untuk menyimpan proyek ini ke akun anda!
+      courseF_playlab_brokenText_callout:
+        courseF_playlab_variables5c_1: Anda akan menemukan blok variabel anda di sini.
       courseF_playlab_embed_vars_callout: { }
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: Toolbox telah disusun kedalam kategori-kategori untuk mempermudah menemukan blok-blok yang kamu butuhkan.
