@@ -9,6 +9,7 @@ has_lesson_plan true
 script_announcements [{"notice"=>"Know a teacher interested in teaching computer science?", "details"=>"Applications for the 2018 middle and high school Professional Learning program are now open!  No computer science experience is necessary.", "link"=>"https://code.org/educate/professional-learning-2018", "type"=>"bullhorn"}, {"notice"=>"Updates to CS Discoveries are Coming!", "details"=>"We're getting ready to roll out updated curriculum for the '18-'19 school year - check out the details on our teacher blog.", "link"=>"http://teacherblog.code.org/post/174125780419/updates-to-cs-discoveries-are-coming", "type"=>"bullhorn"}]
 new_name "csd3-2017"
 family_name "csd3"
+is_stable true
 
 stage 'Programming for Entertainment', flex_category: 'csd3_1'
 named_level 'CSD U3 Lesson Overview 1'

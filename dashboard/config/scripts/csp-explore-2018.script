@@ -5,6 +5,7 @@ student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp/csp-explore/"], ["teacherForum", "https://forum.code.org/c/csp/ap-prep"], ["standardMappings", "https://curriculum.code.org/csp/csp-explore/standards/"]]
 has_verified_resources true
 has_lesson_plan true
+is_stable true
 
 stage 'Explore PT Prep - Reviewing the Task', flex_category: 'csp_ap_2'
 level 'U6 Explore PT Review - Student Links_2018', progression: 'Explore PT - Review the Task'
