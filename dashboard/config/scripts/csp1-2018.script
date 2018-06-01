@@ -7,9 +7,6 @@ teacher_resources [["lessonPlans", "https://curriculum.code.org/csp/unit1/"], ["
 has_verified_resources true
 has_lesson_plan true
 
-stage 'CS Principles Pre-survey', lockable: true
-assessment 'csp-pre-survey-2017-levelgroup_2018'
-
 stage 'Personal Innovations', flex_category: 'csp1_1'
 named_level 'CSP U1L01 SFLP'
 named_level 'Computer Science is Changing Everything_2018', progression: 'Computer Science is Changing Everything'

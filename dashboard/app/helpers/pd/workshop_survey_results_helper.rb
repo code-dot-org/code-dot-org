@@ -184,12 +184,14 @@ module Pd::WorkshopSurveyResultsHelper
 
     workshop_summary = {}
 
-    # Each session will have at least one response section - general. Some may have a
-    # second one - facilitator
+    # Each session has a general response section.
+    # Some also have a facilitator response section
     questions.each do |session, response_sections|
       surveys_for_session = surveys[session]
 
-      session_summary = {}
+      session_summary = {
+        response_count: surveys[session][:response_count]
+      }
 
       response_sections.each do |response_section, section_questions|
         session_summary[response_section] = {}
@@ -239,7 +241,6 @@ module Pd::WorkshopSurveyResultsHelper
               # nulls removed
               # [1, 1, 2, 2, 3, 5, 7, 7, 7, 7, 7, nil, nil] => {1: 2, 2: 2, 3: 1, 5: 1, 7: 5}
               summary = surveys_for_session[response_section].map {|survey| survey[q_key]}.group_by {|v| v}.transform_values(&:size)
-
               session_summary[response_section][q_key] = summary.reject {|k, _| k.nil?}
             end
           end
@@ -257,25 +258,56 @@ module Pd::WorkshopSurveyResultsHelper
 
     {
       'Pre Workshop' => {
-        general: pre_workshop_submissions.map(&:form_data_hash)
-      }
+        general: pre_workshop_submissions.map(&:form_data_hash),
+        response_count: pre_workshop_submissions.count
+      },
+      'Day 1' => {
+        general: []
+      },
+      'Day 2' => {
+        general: []
+      },
+      'Day 3' => {
+        general: []
+      },
+      'Day 4' => {
+        general: []
+      },
     }
   end
 
   def get_questions_for_forms(workshop)
-    pre_workshop_general = Pd::SurveyQuestion.find_by(form_id: CDO.jotform_forms['local']['day_0'])
-    pre_workshop_general_summary = pre_workshop_general.summarize
+    {
+      'Pre Workshop' => {
+        general: get_summary_for_form(CDO.jotform_forms['local']['day_0'], workshop)
+      },
+      'Day 1' => {
+        general: get_summary_for_form(CDO.jotform_forms['local']['day_1'], workshop)
+      },
+      'Day 2' => {
+        general: get_summary_for_form(CDO.jotform_forms['local']['day_2'], workshop)
+      },
+      'Day 3' => {
+        general: get_summary_for_form(CDO.jotform_forms['local']['day_3'], workshop)
+      },
+      'Day 4' => {
+        general: get_summary_for_form(CDO.jotform_forms['local']['day_4'], workshop)
+      }
+    }
+  end
 
-    pre_workshop_general_summary.each do |_, question|
+  private
+
+  def get_summary_for_form(form_id, workshop)
+    survey = Pd::SurveyQuestion.find_by(form_id: form_id)
+    summary = survey.summarize
+
+    summary.each do |_, question|
       if question[:text].match? '{.*}'
         question[:text] = question[:text].gsub '{workshopCourse}', workshop.course
       end
     end
 
-    {
-      'Pre Workshop' => {
-        general: pre_workshop_general_summary
-      }
-    }
+    summary
   end
 end
