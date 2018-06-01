@@ -288,8 +288,8 @@ class DeleteAccountsHelper
         email: '',
         name: nil,
         data: {},
-        created_ip: nil,
-        updated_ip: nil,
+        created_ip: '',
+        updated_ip: '',
         processed_data: nil,
         hashed_email: nil,
       )
