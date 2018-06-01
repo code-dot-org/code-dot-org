@@ -927,7 +927,7 @@ And /^I create a new section$/ do
   }
 end
 
-And /^I create a new section with course "([^"]*)"(?: and unit "([^"]*)")?$/ do |primary, secondary|
+And /^I create a new section with course "([^"]*)", version "([^"]*)"(?: and unit "([^"]*)")?$/ do |assignment_family, version_year, secondary|
   individual_steps %Q{
     When I press the new section button
     Then I should see the new section dialog
@@ -935,7 +935,8 @@ And /^I create a new section with course "([^"]*)"(?: and unit "([^"]*)")?$/ do 
     When I select email login
     Then I wait to see "#uitest-assignment-family"
 
-    When I select the "#{primary}" option in dropdown "uitest-assignment-family"
+    When I select the "#{assignment_family}" option in dropdown "uitest-assignment-family"
+    And I select the "#{version_year}" option in dropdown "assignment-version-year"
   }
 
   if secondary

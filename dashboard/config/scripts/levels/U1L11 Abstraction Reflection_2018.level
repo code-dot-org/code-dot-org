@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-04-26T22:50:50.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Reflection: Sending Formatted Text",
+    "markdown_instructions": "An abstraction is a simplified representation of something that is more complex. Decimal numbers were a useful abstraction in the context of today's lesson. Write a short response to both questions below.\r\n\r\n* What is the underlying complexity decimal numbers were used to represent.\r\n* How were decimal numbers helpful in designing a system to represent text in bits?",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 2408,
+    "name_suffix": "_2018",
+    "instructions_important": "false",
+    "display_name": "Abstraction Reflection",
+    "encrypted_solution": "F0Ov1zIfF6niFZmjeEHD0SZr0fvBSZB8s4eGBefidf4nTP97I/RQgwnoAt0e\nW286BIjjXwp4p6F9P60n9Bemvn2u2vQPA/3HOSTjv9i5INsoB3731tI1Z0qA\nVZn3oei1NtOmrKmU/OvpCbEWua1MSWsDdslDcGM6iqr20VfkKo9fDmMMEYBd\nHTTxln3jArar9CHjB/wkNXqH3sJR3hRyKcEaVMUhd9ZbiKTI23FByH0i8S+W\nRp34Qyn77+7QLgIuESb79q1stO6Uva+3GJAkrPI/1HQj2diDOdBJwX2WWWm6\nV7ZU9X0l+w/RB3J20RaKW/zB1v7m4uJXUIrPw6YgHXbJjfJVYiYua+GfauAc\ngHHAOO6WjQOuw9qOau3s7mRppCCxw8jJRUKHIr/egMpbybWtxefGiyW9TdrW\n8baZ00D9+tHDu6d+eTRRbUdYj1ESHxkiYTi2Fwx8LSTFeimLQMZoEZflWp54\nxJOPkMzn2Ak=\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-05-30 19:25:15 +0000\",\"changed\":[\"name\",\"notes\",\"markdown_instructions\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>
