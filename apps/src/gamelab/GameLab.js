@@ -623,6 +623,7 @@ GameLab.prototype.rerunSetupCode = function () {
       !this.areAnimationsReady_()) {
     return;
   }
+  this.gameLabP5.resetWorld();
   this.gameLabP5.p5.allSprites.removeSprites();
   this.JSInterpreter.deinitialize();
   this.initInterpreter(false /* attachDebugger */);
@@ -1395,7 +1396,6 @@ GameLab.prototype.onP5Draw = function () {
         }
       }
     } else if (this.shouldAutoRunSetup) {
-      this.gameLabP5.p5.background('white');
       switch (this.level.autoRunSetup) {
         case GamelabAutorunOptions.draw_loop:
           this.eventHandlers.draw.apply(null);
