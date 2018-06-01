@@ -59,10 +59,12 @@ module Pd
 
     # Skip other environments. Only keep this environment.
     def skip_submission?(processed_answers)
-      environment = processed_answers['environment']
-      raise "Missing required environment field" unless environment
+      return false
 
-      environment != Rails.env
+      # environment = processed_answers['environment']
+      # raise "Missing required environment field" unless environment
+      #
+      # environment != Rails.env
     end
 
     def self.get_form_id_for_day(day)
