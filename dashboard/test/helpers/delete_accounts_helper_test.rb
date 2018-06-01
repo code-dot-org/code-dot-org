@@ -17,6 +17,14 @@ require 'cdo/delete_accounts_helper'
 # reviewed by the product team.
 #
 class DeleteAccountsHelperTest < ActionView::TestCase
+  setup_all do
+    store_initial_pegasus_table_sizes %i{contacts forms form_geos}
+  end
+
+  teardown_all do
+    check_final_pegasus_table_sizes
+  end
+
   test 'sets purged_at' do
     user = create :student
     assert_nil user.purged_at
@@ -881,6 +889,25 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       yield form_geo_id
     ensure
       PEGASUS_DB[:form_geos].where(id: form_geo_id).delete
+    end
+  end
+
+  #
+  # Verify that tests clean up affected Pegasus tables properly, since we
+  # aren't depending on FactoryBot to do that for us.
+  #
+  def store_initial_pegasus_table_sizes(table_names)
+    @initial_pegasus_table_sizes = table_names.map do |table_name|
+      [table_name, PEGASUS_DB[table_name].count]
+    end.to_h
+  end
+
+  def check_final_pegasus_table_sizes
+    @initial_pegasus_table_sizes.each do |table_name, initial_size|
+      final_size = PEGASUS_DB[table_name].count
+      assert_equal initial_size, final_size,
+        "Expected pegasus.#{table_name} to contain #{initial_size} rows but " \
+        "it had #{final_size} rows"
     end
   end
 end
