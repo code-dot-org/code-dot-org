@@ -8,7 +8,7 @@
 #  answers       :text(65535)
 #  year          :string(255)
 #  user_id       :integer          not null
-#  course        :string(255)
+#  course        :string(255)      not null
 #
 # Indexes
 #

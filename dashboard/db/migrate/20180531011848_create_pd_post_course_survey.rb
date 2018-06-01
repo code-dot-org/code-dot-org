@@ -6,7 +6,7 @@ class CreatePdPostCourseSurvey < ActiveRecord::Migration[5.0]
       t.text :answers
       t.string :year
       t.references :user, null: false
-      t.string :course, comment: 'csd or csp'
+      t.string :course, null: false, comment: 'csd or csp'
 
       # Only allow one submission per user, form, year, and course.
       t.index [:user_id, :form_id, :year, :course], unique: true,
