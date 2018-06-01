@@ -32,6 +32,14 @@
     - if @workshop.subject
       = "(#{@workshop.subject})"
 
+- if @workshop.regional_partner
+  %div.row
+    %div.span2{style: 'text-align: right'}
+      %strong
+        Regional Partner:
+    %div.span2
+      = @workshop.regional_partner.name
+
   %div.span6
     %p{style: 'white-space: pre-wrap'}
       = @workshop.notes
