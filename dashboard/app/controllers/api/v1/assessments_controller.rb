@@ -1,5 +1,6 @@
 class Api::V1::AssessmentsController < Api::V1::JsonApiController
   include LevelsHelper
+  load_and_authorize_resource :section
 
   # For each assessment in a script, return an object of script_level IDs to question data.
   # Question data includes the question text, all possible answers, and the correct answers.
@@ -73,14 +74,13 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
   # GET '/dashboardapi/assessments/section_responses'
   # TODO(caleybrock): currently only used in internal experiment, must add controller tests.
   def section_responses
-    section = load_section
-    script = load_script(section)
+    script = load_script(@section)
 
     responses_by_student = {}
 
     level_group_script_levels = script.script_levels.includes(:levels).where('levels.type' => 'LevelGroup')
 
-    section.students.each do |student|
+    @section.students.each do |student|
       # Initialize student hash
       student_hash = {
         student_name: student.name
@@ -162,7 +162,7 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
           stage: script_level.stage.localized_title,
           puzzle: script_level.position,
           question: level_group.properties["title"],
-          url: build_script_level_url(script_level, section_id: section.id, user_id: student.id),
+          url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id),
           multi_correct: multi_count_correct,
           multi_count: multi_count,
           submitted: submitted,
@@ -182,12 +182,6 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
   end
 
   private
-
-  def load_section
-    section = Section.find(params[:section_id])
-    authorize! :read, section
-    section
-  end
 
   def load_script(section=nil)
     script_id = params[:script_id] if params[:script_id].present?
