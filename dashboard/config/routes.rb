@@ -95,6 +95,15 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  # Used in react assessments tab
+  concern :assessments_routes do
+    resources :assessments, only: [:index] do
+      collection do
+        get 'section_responses'
+      end
+    end
+  end
+
   post '/dashboardapi/sections/transfers', to: 'transfers#create'
   post '/api/sections/transfers', to: 'transfers#create'
 
@@ -533,12 +542,13 @@ Dashboard::Application.routes.draw do
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
   get '/dashboardapi/section_text_responses/:section_id', to: 'api#section_text_responses'
+  # Used in angular assessments tab
   get '/dashboardapi/section_assessments/:section_id', to: 'api#section_assessments'
-  get 'dashboardapi/assessments_structure/:script_id', to: 'api#assessments_structure'
   get '/dashboardapi/section_surveys/:section_id', to: 'api#section_surveys'
   get '/dashboardapi/student_progress/:section_id/:student_id', to: 'api#student_progress'
   scope 'dashboardapi', module: 'api/v1' do
     concerns :section_api_routes
+    concerns :assessments_routes
   end
 
   # Wildcard routes for API controller: select all public instance methods in the controller,

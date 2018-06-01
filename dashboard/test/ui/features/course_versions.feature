@@ -5,7 +5,7 @@ Feature: Course versions
 Scenario: Version warning announcement on course and unit overview pages
   # course and unit pages do not show version warning initially
 
-  When I am on "http://studio.code.org/courses/csp-2017?enableExperiments=courseVersions"
+  When I am on "http://studio.code.org/courses/csp-2017"
   And I wait to see ".uitest-CourseScript"
   And element "#version-selector" is visible
   Then element ".announcement-notification:contains(right version)" does not exist

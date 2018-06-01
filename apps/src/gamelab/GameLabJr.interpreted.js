@@ -326,7 +326,7 @@ function shouldUpdate() {
 function draw() {
   background(World.background_color || "white");
 
-  if (shouldUpdate) {
+  if (shouldUpdate()) {
     // Perform sprite behaviors
     sprites.forEach(function (sprite) {
       sprite.behaviors.forEach(function (behavior) {
