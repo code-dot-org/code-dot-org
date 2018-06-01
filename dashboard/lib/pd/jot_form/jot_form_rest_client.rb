@@ -52,6 +52,12 @@ module Pd
         get "form/#{form_id}/submissions", params
       end
 
+      # Get a specific submission by id
+      # @param submission_id [Integer]
+      def get_submission(submission_id)
+        get "submission/#{submission_id}"
+      end
+
       private
 
       # Makes a GET call to the specified path
