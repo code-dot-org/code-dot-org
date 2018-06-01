@@ -1,0 +1,18 @@
+name 'U4 - Making Data Visualizations - Free Play_2018'
+title 'title'
+description 'description here'
+css 'unplugged'
+markdown <<MARKDOWN
+# Now It’s Your Turn!
+
+Now that you know the basics of how to create charts in Google Sheets, try making some visualizations of your own!
+
+You can continue exploring the spreadsheet from the previous exercises, or download the additional data set below:
+
+* <a href="https://drive.google.com/open?id=0B78N8p4zhHFgVElwb3hnVVlmZ1U" target="_blank">MovieRating_disneyMovies.csv</a>
+
+Remember, this exercise is all about exploring trends and discovering connections in the data. Don’t stress about trying to create the perfect chart. Experiment with different chart types, try using different combinations of columns, and see what else you can learn about this data!
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

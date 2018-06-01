@@ -1,0 +1,81 @@
+name 'Intro to Debugging and Common Problems_2018'
+title 'title'
+css 'unplugged'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Learning How to Debug Programs
+
+Debugging is a skill and an art.  With practice you learn how to write relatively bug-free code and more importantly you **learn about yourself and the kinds of errors you typically make**.
+
+But learning how to debug takes some time and getting used to, and you will learn about the different kinds of things that can go wrong when you write programs.
+
+It bears repeating:
+
+**Debugging is part of the problem-solving process of programming**.  
+
+* Rarely does code work exactly the way you want the first time. 
+* If you write some code and need to work out a few bugs that does not mean you are bad programmer - actually the opposite might be true.
+
+**Be a Pro! Even professionals do not expect to write bug-free code on the first try!!!** 
+
+ * Instead they get in the habit of running their code, checking their assumptions, and making changes as needed. Programming isn't a fixed set of steps. 
+ * It's a creative and continuous cycle of writing, testing, and improving code. 
+
+**Don't Worry! We'll Practice.**
+
+* With practice you eventually stop making certain kinds of errors that beginners run into, but there's always something around the corner that needs to be worked out.
+
+# Common Types of Errors
+In the next few levels we'll practice debugging a few common types of errors.  They generally fall in two categories:
+
+**Syntax errors**
+
+ * Things you misspelled or wrote in such a way the computer doesn't understand what you're trying to say
+ * Usually the computer spits out an error message of some kind that is a clue about what it can't understand
+ * Fix these with careful reading of the lines that have errors
+ 
+**Logic errors** 
+
+ * The program runs but doesn't do what you think it should.
+ * Can be tricky to fix because there might not be an error message
+ * Fix by retracing your steps, being humble, and trying to understand why the computer is interpreting what you wrote the way it is.
+ 
+### Click Continue to start practicing
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+### Teaching Tips
+
+You may want to pause at this point to go over and provide encouragement related to:
+
+1. Key Behavior and Attitude about Debugging
+2. Common Types of Errors
+
+**Learning How to Debug Programs**
+!!!content "Try This"
+
+Here's an off-the-wall metaphor you might consider trying with your students: **programming and debugging is like getting dressed up to go out.** (stay with me).
+
+* You put on some clothes that you think will look good but then you have to look in the mirror, make some adjustments and decisions, maybe even realize you need to go a different direction entirely, and so on -- you are debugging your outfit.
+
+* Writing a program is initially is like throwing on some clothes, and running the program is like looking in the mirror for the first time. You do it to see what it looks like, knowing that you're going to have to make some adjustments.  
+
+* But looking in the mirror frequently to see what everything looks like together actually *speeds up the process*. Getting ready to go out, putting on makeup or combing your hair *without* looking in the mirror would not only slow things down, it's foolish.
+
+* The **Run. Test. Debug.** pattern of behavior is part of the programming process, just like using a mirror is part of making yourself presentable.
+    
+Understanding that debugging is part of the problem solving process is a **key understanding and behavior** we want to see from students. Many early programmers express frustration when code they write doesn't work the first time, or report that the "computer hates me!".  Or that if they write a program that doesn't work or has problems that they are "dumb" or that they'll never get it.  This is *exactly the wrong attitude to have*.  
+
+Writing a program is not like solving some big problem with blinders on and then checking at the end to see if you were right.  It's a process of writing and making adjustments.
+
+**Common Types of Errors**
+
+You might point out to students that:
+
+* **Syntax Errors** are the kinds of problems that show errors in the console.  In the grand scheme of things **syntax errors are easy problems to solve** because the computer is telling you it can't understand something, you just have to find out what it is.
+
+* **Logic Errors** can be **much harder to solve** because the computer doesn't report anything wrong at all.  The program just doesn't do what you think it should or want it to.  Tracking down these kinds of errors is much harder, and requires some practice to get used to it.  We suggest some techniques in the levels that follow.
+
+
+MARKDOWN

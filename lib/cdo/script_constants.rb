@@ -20,8 +20,10 @@ module ScriptConstants
   # order of the categories will be their order in the dropdown.
   CATEGORIES = {
     full_course: [
-      CSP = 'csp'.freeze,
-      CSD = 'csd'.freeze,
+      CSP_2017 = 'csp-2017'.freeze,
+      CSP_2018 = 'csp-2018'.freeze,
+      CSD_2017 = 'csd-2017'.freeze,
+      CSD_2018 = 'csd-2018'.freeze,
     ],
     csf: [
       COURSEA_NAME = 'coursea'.freeze,
@@ -83,6 +85,14 @@ module ScriptConstants
       COURSEE_DRAFT_NAME = 'coursee-draft'.freeze,
       COURSEF_DRAFT_NAME = 'coursef-draft'.freeze,
     ],
+    csd_2018: [
+      CSD1_2018_NAME = 'csd1-2018'.freeze,
+      CSD2_2018_NAME = 'csd2-2018'.freeze,
+      CSD3_2018_NAME = 'csd3-2018'.freeze,
+      CSD4_2018_NAME = 'csd4-2018'.freeze,
+      CSD5_2018_NAME = 'csd5-2018'.freeze,
+      CSD6_2018_NAME = 'csd6-2018'.freeze,
+    ],
     csd: [
       CSD1_NAME = 'csd1'.freeze,
       CSD2_NAME = 'csd2'.freeze,
@@ -90,6 +100,16 @@ module ScriptConstants
       CSD4_NAME = 'csd4'.freeze,
       CSD5_NAME = 'csd5'.freeze,
       CSD6_NAME = 'csd6'.freeze,
+    ],
+    csp_2018: [
+      CSP1_2018_NAME = 'csp1-2018'.freeze,
+      CSP2_2018_NAME = 'csp2-2018'.freeze,
+      CSP3_2018_NAME = 'csp3-2018'.freeze,
+      CSP4_2018_NAME = 'csp4-2018'.freeze,
+      CSP5_2018_NAME = 'csp5-2018'.freeze,
+      CSP_EXPLORE_2018_NAME = 'csp-explore-2018'.freeze,
+      CSP_CREATE_2018_NAME = 'csp-create-2018'.freeze,
+      CSP_POSTAP_2018_NAME = 'csppostap-2018'.freeze,
     ],
     csp: [
       CSP_UNIT1_NAME = 'cspunit1'.freeze,
@@ -106,9 +126,10 @@ module ScriptConstants
       CSP17_UNIT4_NAME = 'csp4'.freeze,
       CSP17_UNIT5_NAME = 'csp5'.freeze,
       # CSP17_UNIT6_NAME = 'csp6'.freeze,
-      CSP17_EXPORE_NAME = 'csp-explore'.freeze,
+      CSP17_EXPLORE_NAME = 'csp-explore'.freeze,
       CSP17_CREATE_NAME = 'csp-create'.freeze,
       CSP17_POSTAP_NAME = 'csppostap'.freeze,
+      CSP17_SURVEY_NAME = 'csp-post-survey'.freeze,
     ],
     cspexams: [
       CSP_ASSESSMENT_NAME = 'cspassessment'.freeze,
@@ -126,6 +147,14 @@ module ScriptConstants
       TTS_NAME = 'allthettsthings'.freeze
     ],
   }.freeze
+
+  # If the course name (e.g. "foo-2018") has a version suffix, then the first
+  # capture group is the assignment family name ("foo") and the second capture
+  # group is the version year ("2018"). Does not match course name without
+  # version suffix.
+  VERSIONED_COURSE_NAME_REGEX = /^(.*)-(\d{4})$/
+
+  DEFAULT_VERSION_YEAR = '2017'
 
   def self.script_in_category?(category, script)
     return CATEGORIES[category].include? script

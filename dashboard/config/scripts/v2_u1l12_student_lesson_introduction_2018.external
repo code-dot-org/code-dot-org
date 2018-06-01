@@ -1,0 +1,46 @@
+name 'v2 U1L12 Student Lesson Introduction_2018'
+title 'The Need for DNS'
+
+css 'unplugged'
+skip_dialog 'true'
+
+markdown <<MARKDOWN
+# Unit 1: Lesson 12 - The Need for DNS
+
+## Background
+
+It would be impossible for packets to be routed across the internet without IP addresses. The problem with this system is that, while computers are good at referring to other computers by numbers, humans are not. The Domain Name System (DNS) solves this problem so that we can identify a webpage by its name, even when the IP addresses change.
+
+## Vocabulary
+
+* **DNS:** an abbreviation for Domain Name System, the Internet's system for converting alphabetic names into numeric IP addresses.
+
+## Lesson
+
+* Discover how DNS translates human-readable locations on the Internet into a numeric IP address.
+* Use the Internet Simulator to send requests to the built-in DNS to get the IP addresses of other computers in the network.
+* Watch a video to learn about the hierarchy of DNS.
+* Examine real-world issues related to DNS
+
+## Resources
+
+
+* DNS Partner Questionnaire - Activity Guide ([PDF](https://docs.google.com/document/d/1PRucTGYp_Ie40aszZvXOKNtTqD4mPzecuWYAAn1g1iI/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1PRucTGYp_Ie40aszZvXOKNtTqD4mPzecuWYAAn1g1iI/export?format=doc))
+* Names and Addresses - Worksheet ([PDF](https://docs.google.com/document/d/1Q9k1nUNyXMM3rD-Ne0tKmURXw3GIAl7Dt-Ojqc-bZAI/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1Q9k1nUNyXMM3rD-Ne0tKmURXw3GIAl7Dt-Ojqc-bZAI/export?format=doc))
+* Research: DNS in the Real World - Activity Guide ([PDF](https://docs.google.com/document/d/1n3jB4CLTsIdaX5VSrAPQYCTXYvWSZutQT30WJCeyP9w/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1n3jB4CLTsIdaX5VSrAPQYCTXYvWSZutQT30WJCeyP9w/export?format=doc))
+
+
+
+## Articles
+* <a href="http://www.information-age.com/technology/security/123459033/growing-threat-ddos-attacks-dns" target="_blank">  Growing Threat of DDoS on DNS</a>
+* <a href="http://www.business2community.com/tech-gadgets/the-details-behind-a-denial-of-service-attack-what-it-is-why-it-matters-and-what-you-can-do-to-stop-it-01241089" target="_blank">  The Details Behind a Denial of Service Attack: What it is, Why it Matters, and What You can do to Stop it</a>
+* <a href="https://blog.cloudflare.com/65gbps-ddos-no-problem/" target="_blank">  How to Launch a 65Gbps DDoS, and How to Stop One</a>
+* <a href="http://www.pcworld.com/article/2889392/like-google-in-vietnam-lenovo-tripped-up-by-a-dns-attack.html" target="_blank">  How DNS Works</a>
+* <a href="http://www.scmagazine.com/ddos-attacks-against-nato-likely-dns-amplification-or-ntp-reflection-expert-suggests/article/338524/" target="_blank">  DDoS Attacks Against NATO Likely DNS Amplification or NTP Reflection, Expert Suggests</a>
+* <a href="http://thehackernews.com/2014/06/dns-flood-ddos-attack-hit-video-gaming.html" target="_blank">  DNS Flood DDoS Attack Hit Video Gaming Industry with 90 Million Requests per Second</a>
+* <a href="http://krebsonsecurity.com/2015/05/st-louis-federal-reserve-suffers-dns-breach/" target="_blank">  St. Louis Federal Reserve Suffers DNS Breach</a>
+* <a href="http://www.forbes.com/sites/thomasbrewster/2015/01/26/china-great-firewall-causing-ddos-attacks/" target="_blank">  China Great Firewall Causing DDoS Attacks</a>
+* <a href="http://www.techtimes.com/articles/4998/20140331/turkish-isps-intercept-google-dns-services-to-spy-on-internet-users.htm" target="_blank">  Turkish ISPs Intercept Google DNS Service to Spy on Internet Users</a>
+* <a href="http://www.scmagazineuk.com/ddos-attacks-double-but-could-go-bigger-still-with-ipv6/article/415736/" target="_blank">  DDoS Attacks Double But Could go Bigger Still With IPv6</a>
+* <a href="http://thenextweb.com/insider/2015/04/10/new-zealand-internet-providers-threatened-with-legal-action-for-providing-access-to-us-netflix/" target="_blank">  New Zealand Internet Providers Threatened with Legal Action for Providing Access to US Netflix</a>
+MARKDOWN

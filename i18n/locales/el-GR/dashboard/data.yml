@@ -462,9 +462,6 @@ el:
         alg_15_biggame_update_player: Πληροφορική στην Άλγεβρα - Ανανέωση παίκτη μεγάλου παιχνιδιού
         alg_16_biggame_collision_detection: Πληροφορική στην Άλγεβρα - Ανίχνευση σύγκρουσης μεγάλου παιχνιδιού
         alg_17_sambat_compound_booleans: Πληροφορική στην Άλγεβρα - Σύνθετες λογικές τιμές
-        hoc2015_preview_blocks: Make your own game blocks
-        hoc2015_preview_typing: Make your own game typing
-        hoc2015_preview_conclusion: Make your own game conclusion
         starwars_intro: 'Πόλεμος των Άστρων: Κατασκευάζοντας έναν γαλαξία με Κώδικα - Εισαγωγή'
         starwars_typing: 'Πόλεμος των Άστρων: Κατασκευάζοντας έναν Γαλαξία με Κώδικα - JavaScript'
         starwars_events: 'Πόλεμος των Άστρων: Κατασκευάζοντας έναν Γαλαξία με Κώδικα - Γεγονότα'
@@ -528,6 +525,7 @@ el:
         CSF_harvester_skinOverview_K-1: The Harvester
         CSF_harvester_loops_K1: Loops in Harvester
         CSF_scrat_loops_K1: Loops in Ice Age
+        CSF_scrat_loops_CF: Loops in Ice Age
     callout:
       text:
         drag_blocks: Πιάσε ένα μπλοκ "κίνηση" και φέρ'το κάτω από το άλλο μπλοκ

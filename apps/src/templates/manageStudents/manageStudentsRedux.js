@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {sectionCode, sectionName} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 // Response from server after adding a new student to the section.
 export const AddStatus = {
@@ -15,6 +16,49 @@ export const RowType = {
   NEW_STUDENT: "newStudentRow",
   STUDENT: "studentRow",
 };
+
+// Constants around moving students to another section.
+// Response from server after moving student(s) to a new section
+export const TransferStatus = {
+  SUCCESS: "success",
+  FAIL: "fail"
+};
+
+// Type of student transfer - whether students are being moved (and subsequently removed from current section) or copied to new section
+export const TransferType = {
+  MOVE_STUDENTS: "moveStudents",
+  COPY_STUDENTS: "copyStudents"
+};
+
+/** Initial state for manageStudents.transferData redux store.
+ * studentIds - student ids selected to be moved to another section
+ * sectionId - section id to which new students will be moved
+ * otherTeacher - students are being moved to a section owned by a different teacher
+ * otherTeacherSection - if new section is owned by a different teacher, current teacher inputs new section code
+ * copyStudents - whether or not students will be copied to new section or moved (and subsequently removed from current section)
+ */
+export const blankStudentTransfer = {
+  studentIds: [],
+  sectionId: null,
+  otherTeacher: false,
+  otherTeacherSection: '',
+  copyStudents: true
+};
+
+/** Initial state for manageStudents.transferStatus redux store.
+ * status (TransferStatus) - whether transfer was successful or failed
+ * type (TransferType) - whether transfer moved students (and subsequently removed them from current section) or copied them
+ * error - error text returned from server
+ * numStudents - number of students transferred to new section
+ * sectionDisplay - how section should be displayed to user. most likely the section name or section code
+ */
+ export const blankStudentTransferStatus = {
+   status: null,
+   type: null,
+   error: null,
+   numStudents: 0,
+   sectionDisplay: ''
+ };
 
 // This doesn't get used to make a server call, but does
 // need to be unique from the rest of the ids.
@@ -60,19 +104,20 @@ const blankNewStudentRow = {
  * in the edit fields on the client which has not yet been persisted to the server.
  * showSharingColumn - whether the control project sharing column should be hidden or visible in the table.
  * addStatus - status is of type AddStatus and numStudents is how many students were added.
+ * transferData - initial state described above in blankStudentTransfer assignment
  */
 const initialState = {
   loginType: '',
   studentData: {},
   editingData: {},
-  sectionId: null,
   showSharingColumn: false,
   addStatus: {status: null, numStudents: null},
+  transferData: {...blankStudentTransfer},
+  transferStatus: {...blankStudentTransferStatus}
 };
 
 const SET_LOGIN_TYPE = 'manageStudents/SET_LOGIN_TYPE';
 const SET_STUDENTS = 'manageStudents/SET_STUDENTS';
-const SET_SECTION_ID = 'manageStudents/SET_SECTION_ID';
 const START_EDITING_STUDENT = 'manageStudents/START_EDITING_STUDENT';
 const CANCEL_EDITING_STUDENT = 'manageStudents/CANCEL_EDITING_STUDENT';
 const REMOVE_STUDENT = 'manageStudents/REMOVE_STUDENT';
@@ -88,9 +133,12 @@ const TOGGLE_SHARING_COLUMN = 'manageStudents/TOGGLE_SHARING_COLUMN';
 const EDIT_ALL = 'manageStudents/EDIT_ALL';
 const UPDATE_ALL_SHARE_SETTING = 'manageStudents/UPDATE_ALL_SHARE_SETTING';
 const SET_SHARING_DEFAULT = 'manageStudents/SET_SHARING_DEFAULT';
+const UPDATE_STUDENT_TRANSFER = 'manageStudents/UPDATE_STUDENT_TRANSFER';
+const CANCEL_STUDENT_TRANSFER = 'manageStudents/CANCEL_STUDENT_TRANSFER';
+const TRANSFER_STUDENTS_SUCCESS = 'manageStudents/TRANSFER_STUDENTS_SUCCESS';
+const TRANSFER_STUDENTS_FAILURE = 'manageStudents/TRANSFER_STUDENTS_FAILURE';
 
 export const setLoginType = loginType => ({ type: SET_LOGIN_TYPE, loginType });
-export const setSectionId = sectionId => ({ type: SET_SECTION_ID, sectionId});
 export const setStudents = studentData => ({ type: SET_STUDENTS, studentData });
 export const startEditingStudent = (studentId) => ({ type: START_EDITING_STUDENT, studentId });
 export const cancelEditingStudent = (studentId) => ({ type: CANCEL_EDITING_STUDENT, studentId });
@@ -103,6 +151,12 @@ export const editAll = () => ({ type: EDIT_ALL });
 export const updateAllShareSetting = (disable) => ({type: UPDATE_ALL_SHARE_SETTING, disable});
 export const startSavingStudent = (studentId) => ({ type: START_SAVING_STUDENT, studentId });
 export const saveStudentSuccess = (studentId) => ({ type: SAVE_STUDENT_SUCCESS, studentId });
+export const updateStudentTransfer = transferData => ({ type: UPDATE_STUDENT_TRANSFER, transferData });
+export const cancelStudentTransfer = () => ({ type: CANCEL_STUDENT_TRANSFER });
+export const transferStudentsSuccess = (transferType, numStudents, sectionDisplay) => (
+  { type: TRANSFER_STUDENTS_SUCCESS, transferType, numStudents, sectionDisplay }
+);
+export const transferStudentsFailure = error => ({ type: TRANSFER_STUDENTS_FAILURE, error });
 export const addStudentsSuccess = (numStudents, rowIds, studentData) => (
   { type: ADD_STUDENT_SUCCESS, numStudents, rowIds, studentData }
 );
@@ -122,8 +176,9 @@ export const handleShareSetting = (disable) => {
 export const saveStudent = (studentId) => {
   return (dispatch, getState) => {
     const state = getState().manageStudents;
+    const sectionId = getState().sectionData.section.id;
     dispatch(startSavingStudent(studentId));
-    updateStudentOnServer(state.editingData[studentId], state.sectionId, (error, data) => {
+    updateStudentOnServer(state.editingData[studentId], sectionId, (error, data) => {
       if (error) {
         console.error(error);
       }
@@ -164,6 +219,7 @@ export const saveAllStudents = () => {
 export const addStudents = (studentIds) => {
   return (dispatch, getState) => {
     const state = getState().manageStudents;
+    const sectionId = getState().sectionData.section.id;
     const numStudentsToAdd = studentIds.length;
 
     // Update each row to saving in progress.
@@ -174,13 +230,13 @@ export const addStudents = (studentIds) => {
     const arrayOfEditedData = Object.values(state.editingData);
     const filteredData = arrayOfEditedData.filter(student => studentIds.includes(student.id));
     addStudentOnServer(filteredData,
-      state.sectionId, (error, data) => {
+      sectionId, (error, data) => {
       if (error) {
         dispatch(addStudentsFailure(numStudentsToAdd, error, studentIds));
         console.error(error);
       } else {
         dispatch(addStudentsSuccess(numStudentsToAdd, studentIds,
-          convertStudentServerData(data, state.loginType, state.sectionId)));
+          convertStudentServerData(data, state.loginType, sectionId)));
       }
     });
   };
@@ -209,6 +265,40 @@ export const addMultipleAddRows = (studentNames) => {
   };
 };
 
+export const transferStudents = (onComplete) => {
+  return (dispatch, getState) => {
+    const state = getState();
+    // Get section code for current section from teacherSectionsRedux
+    const currentSectionCode = sectionCode(state, state.sectionData.section.id);
+    const {studentIds, sectionId: newSectionId, otherTeacher, otherTeacherSection, copyStudents} = state.manageStudents.transferData;
+    let newSectionCode;
+
+    if (otherTeacher && otherTeacherSection) {
+      newSectionCode = otherTeacherSection;
+    } else {
+      newSectionCode = sectionCode(state, newSectionId);
+    }
+
+    transferStudentsOnServer(studentIds, currentSectionCode, newSectionCode, copyStudents, (error, data) => {
+      if (error) {
+        console.error(error);
+        dispatch(transferStudentsFailure((data && data.error) || error));
+      } else {
+        if (!copyStudents || !otherTeacher) {
+          studentIds.forEach(id => {
+            dispatch(removeStudent(id));
+          });
+        }
+        const transferType = copyStudents ? TransferType.COPY_STUDENTS : TransferType.MOVE_STUDENTS;
+        // Get section name for new section from teacherSectionsRedux
+        const sectionDisplay = otherTeacher ? otherTeacherSection : sectionName(state, newSectionId);
+        dispatch(transferStudentsSuccess(transferType, studentIds.length, sectionDisplay));
+        onComplete();
+      }
+    });
+  };
+};
+
 export default function manageStudents(state=initialState, action) {
   if (action.type === SET_LOGIN_TYPE) {
     let addRowInitialization = {};
@@ -233,12 +323,6 @@ export default function manageStudents(state=initialState, action) {
       ...state,
       loginType: action.loginType,
       ...addRowInitialization,
-    };
-  }
-  if (action.type === SET_SECTION_ID) {
-    return {
-      ...state,
-      sectionId: action.sectionId,
     };
   }
   if (action.type === SET_STUDENTS) {
@@ -471,6 +555,49 @@ export default function manageStudents(state=initialState, action) {
       showSharingColumn: !state.showSharingColumn,
     };
   }
+  if (action.type === UPDATE_STUDENT_TRANSFER) {
+    return {
+      ...state,
+      transferData: {
+        ...state.transferData,
+        ...action.transferData
+      },
+      // clear any previous status if transfer data has changed
+      transferStatus: blankStudentTransferStatus
+    };
+  }
+  if (action.type === CANCEL_STUDENT_TRANSFER) {
+    return {
+      ...state,
+      transferData: blankStudentTransfer,
+      transferStatus: {
+        ...state.transferStatus,
+        error: null
+      }
+    };
+  }
+  if (action.type === TRANSFER_STUDENTS_SUCCESS) {
+    return {
+      ...state,
+      transferStatus: {
+        ...state.transferStatus,
+        status: TransferStatus.SUCCESS,
+        type: action.transferType,
+        numStudents: action.numStudents,
+        sectionDisplay: action.sectionDisplay
+      }
+    };
+  }
+  if (action.type === TRANSFER_STUDENTS_FAILURE) {
+    return {
+      ...state,
+      transferStatus: {
+        ...state.transferStatus,
+        status: TransferStatus.FAIL,
+        error: action.error
+      }
+    };
+  }
 
   return state;
 }
@@ -556,5 +683,25 @@ const addStudentOnServer = (updatedStudentsInfo, sectionId, onComplete) => {
     onComplete(null, data);
   }).fail((jqXhr, status) => {
     onComplete(status, null);
+  });
+};
+
+// Make a post request to transfer students.
+const transferStudentsOnServer = (studentIds, currentSectionCode, newSectionCode, stayEnrolledInCurrentSection, onComplete) => {
+  const payload = {
+    student_ids: studentIds,
+    current_section_code: currentSectionCode,
+    new_section_code: newSectionCode,
+    stay_enrolled_in_current_section: stayEnrolledInCurrentSection
+  };
+  $.ajax({
+    url: '/dashboardapi/sections/transfers',
+    method: 'POST',
+    contentType: 'application/json;charset=UTF-8',
+    data: JSON.stringify(payload)
+  }).done(data => {
+    onComplete(null, data);
+  }).fail((jqXhr, status) => {
+    onComplete(status, jqXhr.responseJSON);
   });
 };

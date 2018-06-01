@@ -462,9 +462,6 @@ ko:
         alg_15_biggame_update_player: 대수학 CS - 빅게임 플레이어 업데이트
         alg_16_biggame_collision_detection: 대수학 CS - 빅게임 충돌 감지
         alg_17_sambat_compound_booleans: 대수학 CS - 복합 부울
-        hoc2015_preview_blocks: Make your own game blocks
-        hoc2015_preview_typing: Make your own game typing
-        hoc2015_preview_conclusion: Make your own game conclusion
         starwars_intro: '스타워즈: 코드로 은하계 건설하기 - 소개'
         starwars_typing: '스타워즈: 코드로 은하계 건설하기 - 자바스크립트'
         starwars_events: '스타워즈: 코드로 은하계 건설하기 - 이벤트'
@@ -528,6 +525,7 @@ ko:
         CSF_harvester_skinOverview_K-1: The Harvester
         CSF_harvester_loops_K1: Loops in Harvester
         CSF_scrat_loops_K1: Loops in Ice Age
+        CSF_scrat_loops_CF: Loops in Ice Age
     callout:
       text:
         drag_blocks: '"움직이기" 블럭을 끌어다가 다른 블럭의 아래에 탁 붙여보세요.'

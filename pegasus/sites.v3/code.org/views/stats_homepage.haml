@@ -1,9 +1,9 @@
 :ruby
   student_accounts_percent = "25%"
-  female_students = "11M"
+  female_students = "13M"
   teacher_users = "800K"
   world_students_hoc_percent = "10%"
-  states_policy_change = "40"
+  states_policy_change = "43"
 
   top_statistic_number = student_accounts_percent
   top_statistic_phrase = "of U.S. students have accounts on Code.org"
@@ -31,7 +31,10 @@
     },
   ]
 
-.make-difference We're making a difference
+  showing_below_hero_announcement = Homepage.get_below_hero_announcement[:showing]
+
+- if !showing_below_hero_announcement
+  .make-difference We're making a difference
 
 .statistics
   %a.nounderscorehover.col-20.stats-box.linktag{href: CDO.studio_url('/courses'), id: "stats-0"}

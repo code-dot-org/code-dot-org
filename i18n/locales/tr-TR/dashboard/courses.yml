@@ -3,12 +3,16 @@ tr:
     course:
       name:
         csp:
+          assignment_family_title: Computer Science Principles
           title: Bilgisayar Bilimleri Prensipleri
+          version_title: "'17-'18"
           description_student: 2016'ı sonbaharında , Üniversite Yönetim Kurulu en yeni bilgisayar bilimi ilkeleri dersini başlattı. Ders öğrencilere bilgisayar bilimi temel kavramlarını tanıtır ve onların bilgisayar ve teknolojinin dünyaya nasıl etkisi olabileceğini keşfetmelerini sağlar. AP bilgisayar bilim ilkeleri dersi bilgisayar bilimi alanında liderler oluşturmak, temel bilgisayar eğitimine ulaşımı olmayanları bilgisayar bilimi ile tanıştırmak ve disiplinler arası bağ kurmak amacı ile tasarlanmıştır.
           description_teacher: 2016'ı sonbaharında , Üniversite Yönetim Kurulu en yeni bilgisayar bilimi ilkeleri dersini başlattı. Ders öğrencilere bilgisayar bilimi temel kavramlarını tanıtır ve onların bilgisayar ve teknolojinin dünyaya nasıl etkisi olabileceğini keşfetmelerini sağlar. AP bilgisayar bilim ilkeleri dersi bilgisayar bilimi alanında liderler oluşturmak, temel bilgisayar eğitimine ulaşımı olmayanları bilgisayar bilimi ile tanıştırmak ve disiplinler arası bağ kurmak amacı ile tasarlanmıştır.
           description_short: Temel bilgisayar bilim kavramlarını öğrenin.
         csd:
+          assignment_family_title: Computer Science Discoveries
           title: Bilgisayar Bilimi Keşifleri
+          version_title: "'17-'18"
           description_student: Bilgisayar Bilimi Keşifleri (CS Keşifleri) giriş seviyesi bilgisayar bilimi dersi olup öğrencilerin otantik eserler oluşturmasını; ve onların üreticilik, iletişim, problem çözme ve eğlence için bir araç olarak bilgisayar bilimi ile uğraşmasını sağlar.
           description_teacher: Bilgisayar Bilimi Keşifleri (CS Keşifleri) giriş seviyesi bilgisayar bilimi dersi olup öğrencilerin otantik eserler oluşturmasını; ve onların üreticilik, iletişim, problem çözme ve eğlence için bir araç olarak bilgisayar bilimi ile uğraşmasını sağlar.
           description_short: Bilgisayar bilimlerine giriş niteliğindeki bir kurs, öğrencilere özgün eserler oluşturabilme yetkinliğini sağlamakta yardımcı olur.
@@ -17,3 +21,17 @@ tr:
           description_short: Bu tümherşey için bir kurs
           description_student: Bu tümherşey için bir kurs ve öğrenciler için daha uzun bir tanıma sahip
           description_teacher: Bu tümherşey için bir kurs ve öğretmenler için daha uzun bir tanıma sahip
+        csd-2018:
+          assignment_family_title: Computer Science Discoveries
+          title: Computer Science Discoveries ('18-'19)
+          version_title: "'18-'19"
+          description_short: The 2018-2019 version of the CS Discoveries course.
+          description_student: ''
+          description_teacher: ''
+        csp-2018:
+          assignment_family_title: Computer Science Principles
+          title: Computer Science Principles ('18-'19)
+          version_title: "'18-'19"
+          description_short: Temel bilgisayar bilim kavramlarını öğrenin.
+          description_student: 2016'ı sonbaharında , Üniversite Yönetim Kurulu en yeni bilgisayar bilimi ilkeleri dersini başlattı. Ders öğrencilere bilgisayar bilimi temel kavramlarını tanıtır ve onların bilgisayar ve teknolojinin dünyaya nasıl etkisi olabileceğini keşfetmelerini sağlar. AP bilgisayar bilim ilkeleri dersi bilgisayar bilimi alanında liderler oluşturmak, temel bilgisayar eğitimine ulaşımı olmayanları bilgisayar bilimi ile tanıştırmak ve disiplinler arası bağ kurmak amacı ile tasarlanmıştır.
+          description_teacher: 2016'ı sonbaharında , Üniversite Yönetim Kurulu en yeni bilgisayar bilimi ilkeleri dersini başlattı. Ders öğrencilere bilgisayar bilimi temel kavramlarını tanıtır ve onların bilgisayar ve teknolojinin dünyaya nasıl etkisi olabileceğini keşfetmelerini sağlar. AP bilgisayar bilim ilkeleri dersi bilgisayar bilimi alanında liderler oluşturmak, temel bilgisayar eğitimine ulaşımı olmayanları bilgisayar bilimi ile tanıştırmak ve disiplinler arası bağ kurmak amacı ile tasarlanmıştır.

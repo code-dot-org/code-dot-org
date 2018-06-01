@@ -138,6 +138,13 @@
     valid_password: Gyldig adgangskode!
     invalid_password: Adgangskoden skal være på mindst 6 tegn
     mismatch_password: De to adgangskoder du har indtastet stemmer ikke overens
+    agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
+      and <a href='http://code.org/privacy'>Privacy Policy</a>.
+    under_13_consent: Hvis jeg er under 13 år, bekræfter jeg, at jeg har mine forældres
+      eller værges tilladelse til at benytte tjenesterne fra Code.org.
+    agree_us_website: Jeg accepterer at bruge en hjemmeside baseret i USA.
+    my_data_to_us: Data fra min brug af dette websted kan sendes til og gemmes eller
+      behandles i USA.
     student_terms: Jeg accepterer Code.org <a href='http://code.org/tos'>Servicevilkår</a>.
       Hvis jeg er under 13 år, bekræfte jeg ved at indsende denne formular, at jeg
       har mine forældre eller værges tilladelse til at benytte Code.org. <br/>For
@@ -147,12 +154,19 @@
       for code.org.
     additional_information: Vi har brug for nogle ekstra oplysninger til at fortsætte
       med at logge dig.
+    user_type_button: Update Account Type
     user_type_label: Kontotype
     user_type_teacher: Lærer
     user_type_student: Elev
     field_is_required: krævet
     accept_terms: Du skal acceptere at oprette en konto
     error: Der opstod en fejl.
+    email_preference_question: Kan vi e-maile dig om opdateringer til vores kurser,
+      lokale muligheder eller andre nyheder om computervidenskab?
+    email_preference_privacy: (Se vores privatlivspolitik)
+    email_preference_yes: Ja
+    email_preference_no: Nej
+    email_preference_required: You must specify an email preference.
   school_info:
     title: Skoleoplysninger (valgfri)
     school_country: Skolens land
@@ -422,6 +436,7 @@
     confirm_secret_words: Confirm that it is you by entering your current secret words
     enter_parent_email: Enter your parent or guardian's email address (for password
       recovery)
+    update: Update Account
   user_level:
     completed: Fuldført
     tried: Forsøgt
@@ -598,6 +613,8 @@
       in your section.
     already_enrolled_in_new_section: You cannot move these students because this teacher
       already has them in another section.
+    third_party_login: You cannot move students to a section that is synced with a
+      third party tool.
   share:
     title: Lære om Code Studio
     description: Enhver kan lære programmering. Lav spil, apps og kunst med kode.
@@ -1127,6 +1144,7 @@
     csd5_2: 'Chapter 2: Solving Data Problems'
     csd6_1: 'Chapter 1: Hardware Output'
     csd6_2: 'Chapter 2: Hardware Input'
+    csd_survey: Post-Course Survey
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -1140,6 +1158,11 @@
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Unit 2: Digital Information'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: Reflection Prompts
   external_links:
     disclaimer: Disclaimer
@@ -1282,3 +1305,16 @@
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
   courses_category: Full Courses
+  cookie_banner:
+    message: By continuing to browse our site or clicking "I agree," you agree to
+      the storing of cookies on your computer or device.
+    more_information: See Code.org's Privacy Policy.
+    accept: Jeg er enig
+  gdpr_dialog:
+    heading: Do you agree to using a web site based in the United States?
+    message: Data from your use of this site may be sent to and stored or processed
+      in the United States.
+    link_intro: For details see our
+    privacy_policy: privacy policy
+    logout: Logout
+    true: Ja

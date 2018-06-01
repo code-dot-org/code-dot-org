@@ -1,0 +1,26 @@
+<Pixelation>
+  <config><![CDATA[{
+  "game_id": 44,
+  "created_at": "2018-05-03T16:35:39.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "instructions": "We start you with the 4x2 image Maddie was creating, but we've left out the last two squares. Finish off the image by figuring out which two colors are missing and encode them.",
+    "markdown_instructions": "# Color Pixelation: Task 1\r\n**Directions:**\r\n\r\n* We start you with the 4x2 image Maddie was creating, but we've left out the last two squares. \r\n* Finish off the image by figuring out which two colors are missing and encode them.\r\n",
+    "version": "3",
+    "data": "000001000000001000000011000111100010001101",
+    "href": "pixelation/pixelation.html",
+    "video_key": "csp_pixelation_color_1",
+    "skip_dialog": true,
+    "instructions_important": "false",
+    "hex": "false",
+    "hide_encoding_controls": "false",
+    "v1_hide_sliders": "false",
+    "parent_level_id": 1814,
+    "name_suffix": "_2018"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-03-09 00:42:08 +0000\",\"changed\":[\"notes\",\"published\",\"markdown_instructions\",\"data\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]"
+}]]></config>
+</Pixelation>

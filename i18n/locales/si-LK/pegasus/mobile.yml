@@ -383,6 +383,8 @@
   homepage_header_donors: "Code.org එහි අනුග්‍රාහකයින්ට තුති පුදයි"
   homepage_donors_seall: "සියල්ල බලන්න"
   homepage_donors_donate: "පරිත්‍යාග"
+  homepage_below_hero_announcement_text: "We care about your privacy and are making some updates to our privacy policy, effective May 25."
+  homepage_below_hero_announcement_link_text: "වැඩිදුර ඉගෙන ගන්න"
   contact_form_topic_student: "මම ශිෂ්‍යයෙක්"
   contact_form_topic_parent: "මම දෙමාපියෙක්"
   contact_form_topic_teacher: "මම ගුරුවරයෙකු / අධ්යාපනඥයෙකු"
@@ -510,8 +512,10 @@
   video_title_real_madrid: "Hour of Code with Real Madrid"
   video_title_marco_belinelli: "Hour of Code with Marco Belinelli"
   video_title_chris_bosh: "Chris Bosh on Computer Science"
+  video_title_my_name_is_aracely: "My Name is Aracely"
   video_1min: "1 min"
   video_2min: "2 min"
+  video_3min: "3 min"
   video_5min: "5 min"
   speak_another_language: "ඔබ තවත් භාෂාවක් කතා කරනවා ද?"
   help_translate: "පරිවර්තනයෙන් සහාය වන්න."
@@ -551,6 +555,9 @@
   volunteer_engineer_submission_field_email: "විද්‍යුත් තැපැල් ලිපිනය"
   volunteer_engineer_submission_field_email_desc: "ඔබගේ විද්‍යුත් තැපැල් ලිපිනය බෙදා නොගැනේ, නමුත් අපි ඔබගේ ඉල්ලීම ගුරුවරු හරහා යවනවා."
   volunteer_engineer_submission_field_email_placeholder: "විද්‍යුත් තැපැල් ලිපිනය"
+  volunteer_engineer_submission_field_email_preference: "Can we email you about updates to our courses, volunteer opportunities, or other computer science news?"
+  volunteer_engineer_submission_field_email_preference_yes: 'ඔව්'
+  volunteer_engineer_submission_field_email_preference_no: 'නැහැ'
   volunteer_engineer_submission_final_paragraph: "Hour of Code හෝ වෙනත් ස්වේච්ඡා කටයුතුසදහා ප්‍රාදේශීය ගුරුවරුන්ට ඇමතීම සදහා ඔබව සිතියම මත ලැයිස්තු ගත කරාවි. අප ඔබේ විද්‍යුත් තැපෑල සහ නියම ලිපිනිය කිසිදු අවස්ථාවක වෙනත් පාර්වශයක් සමග බෙදා නොගනී. නමුත් ප්‍රාදේශීය ගුරුවරුන්ට ප්රසිද්ධියේ වෙනත් තොරතුරු(ආසන්නතම ස්ථානය ඇතුලත්ව) නැරබීය හැකිවේ."
   volunteer_engineer_submission_checkbox_contact: 'ගුරුවරුන් විසින් ස්වේච්ඡා අවස්ථා සඳහා මාව සම්බන්ධ කරගත හැකි බවට, මම එකඟ වෙමි. (සැ. යු.: ඔබගේ Email ලිපිනය වෙනත් පාර්ශවයන් සමග බෙදාගනු නොලැබේ)'
   volunteer_engineer_submission_checkbox_age_18_plus: "I certify that I am at least 18 years old."
@@ -956,6 +963,20 @@
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Unit 5: Data and Society'
   csd6_name: 'Unit 6: Physical Computing'
+  csd1-2018_name: 'Unit 1: Problem Solving'
+  csd2-2018_name: 'Unit 2: Web Development'
+  csd3-2018_name: 'Unit 3: Animation and Games'
+  csd4-2018_name: 'Unit 4: The Design Process'
+  csd5-2018_name: 'Unit 5: Data and Society'
+  csd6-2018_name: 'Unit 6: Physical Computing'
+  csp1-2018_name: 'පාඩම් අංක 1: අන්තර්ජාලය'
+  csp2-2018_name: '2වන ඒකකය: අංකිත තොරතුරු'
+  csp3-2018_name: '3 වැනි ඒකකය: ඇල්ගොරිතම සහ ක්‍රමලේඛනය'
+  csp4-2018_name: 'Unit 4: Big Data and Privacy'
+  csp5-2018_name: 'Unit 5: Building Apps'
+  csp-explore-2018_name: 'AP: Explore PT Prep'
+  csp-create-2018_name: 'AP: Create PT Prep'
+  csppostap-2018_name: 'Post AP: Databases in Apps'
   csp1_name: 'පාඩම් අංක 1: අන්තර්ජාලය'
   csp2_name: '2වන ඒකකය: අංකිත තොරතුරු'
   csp3_name: '3 වැනි ඒකකය: ඇල්ගොරිතම සහ ක්‍රමලේඛනය'
@@ -966,6 +987,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: "පූර්ණ පරීක්ෂණය - 50 ප්රශ්න"
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'
@@ -991,9 +1013,11 @@
   csf_category_name: "පරිගණක විද්‍යාවේ මූලිකාංග"
   csf_international_category_name: "CS Fundamentals International"
   csf2_draft_category_name: 'Under Development: Courses A - F'
-  csd_category_name: "CS Discoveries"
+  csd_category_name: "CS Discoveries ('17-'18)"
+  csd_2018_category_name: "CS Discoveries ('18-'19)"
   csp_category_name: "'15-'16 පරිගණක විද්‍යාවේ මූලිකාංග"
   csp17_category_name: "'16-'17 පරිගණක විද්‍යාවේ මූලිකාංග"
+  csp_2018_category_name: "CS Principles ('18-'19)"
   cspexams_category_name: "පරිගණක විද්‍යාවේ මූලිකාංග පුහුණු පරික්ශණය"
   research_studies_category_name: "Research Studies"
   applab_name: "මෘදුකාංග විද්‍යාගාරය"
@@ -1452,12 +1476,13 @@
   header_documentation: "Documentation"
   csp_name: "'16-'17 පරිගණක විද්‍යාවේ මූලිකාංග"
   csd_name: "CS Discoveries"
+  csd_2018_name: "CS Discoveries"
   full_course_category_name: "Full Courses"
   user_header_label: "ආයුබෝවන් %{username}"
   user_header_settings: "මගේ ගිණුම"
   user_header_logout: "නික්මෙන්න"
   user_header_signin: "පුරන්න"
-  view_all_sections: "View All Sections"
+  view_all_sections: "View all sections"
   view_section: "View Section"
   view_named_section: "View %{section_name}"
   privacy_doc_explanation: "Click here for our privacy document that can be shared or printed for your students."

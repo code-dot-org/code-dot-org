@@ -462,9 +462,6 @@ zh-TW:
         alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
         alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
         alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
-        hoc2015_preview_blocks: Make your own game blocks
-        hoc2015_preview_typing: Make your own game typing
-        hoc2015_preview_conclusion: Make your own game conclusion
         starwars_intro: '星際大戰：用程式建立一個銀河系 - 介紹'
         starwars_typing: '星際大戰：用程式建立一個銀河系 - JavaScript'
         starwars_events: '星際大戰：用程式建立一個銀河系 - 事件'
@@ -528,6 +525,7 @@ zh-TW:
         CSF_harvester_skinOverview_K-1: The Harvester
         CSF_harvester_loops_K1: Loops in Harvester
         CSF_scrat_loops_K1: Loops in Ice Age
+        CSF_scrat_loops_CF: Loops in Ice Age
     callout:
       text:
         drag_blocks: 拖曳一個「移動」積木並將它放到其他積木下方

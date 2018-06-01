@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+require_relative '../../../dashboard/config/environment'
+
+count = 0
+RegionalPartnerProgramManager.find_each do |pm|
+  user = pm.program_manager
+  unless user.program_manager?
+    count += 1
+    user.permission = UserPermission::PROGRAM_MANAGER
+  end
+end
+
+puts "#{count} users updated with program manager permissions"

@@ -1,10 +1,12 @@
 /**
  * @overview React component to allow for easy editing and creation of Cells.
  * can be extended to allow for editing of various specialized kinds of cells.
- * @see @cdo/apps/maze/cell
+ * @see @code-dot-org/maze/src/cell
  */
 import React, {PropTypes} from 'react';
-import { SquareType } from '@cdo/apps/maze/tiles';
+import { tiles } from '@code-dot-org/maze';
+
+const SquareType = tiles.SquareType;
 
 export default class CellEditor extends React.Component {
   static propTypes = {

@@ -1,0 +1,17 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-04-26T22:50:41.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Assessment: Binary Numbers",
+    "markdown_instructions": "In 100 words or less describe how place value is used in the binary number system. How is it similar or different from the way place value is used in the base 10 number system.\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 1916,
+    "name_suffix": "_2018"
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

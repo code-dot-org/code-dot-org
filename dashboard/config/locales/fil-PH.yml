@@ -144,6 +144,13 @@
     valid_password: Mali ang na-type na password!
     invalid_password: Ang Password ay dapat may at least 6 characters
     mismatch_password: Ang passwords na iyong inenter ay hindi tugma sa isa't isa
+    agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
+      and <a href='http://code.org/privacy'>Privacy Policy</a>.
+    under_13_consent: If I am under 13 years of age, I confirm that I have my parent
+      or legal guardian's permission to use the Code.org services.
+    agree_us_website: I agree to using a website based in the United States.
+    my_data_to_us: Data from my use of this site may be sent to and stored or processed
+      in the United States.
     student_terms: Ako ay sumang-ayon na mapailalim sa Code.org na <a href='http://code.org/tos'>mga
       palatuntunin</a>. Kung ako ay mas bata pa 13 taong gulang, kinokompirma ko ito
       sa pamamagitan ng pagpasa ng form na ito na nagpapakita na mayroon akong pahintulot
@@ -158,12 +165,18 @@
       sa privacy</a>.
     additional_information: Kailangan namin ng karagdagang impormasyon para maituloy
       ang pag-sign up sa iyo.
+    user_type_button: Update Account Type
     user_type_label: Uri ng Account
     user_type_teacher: Teacher
     user_type_student: Estudyante
     field_is_required: ay kailangan
     accept_terms: Kailangan mong sumang-ayon para gumawa ng account
     error: May problemang naganap.
+    email_preference_question: Can we email you about updates to our courses, local
+      learning opportunities, or other computer science news?
+    email_preference_yes: Oo
+    email_preference_no: Hindi
+    email_preference_required: You must specify an email preference.
   school_info:
     title: Impormasyon ng Paaralan (opsyonal)
     school_country: Bansa ng Paaralan
@@ -441,6 +454,7 @@
       ng iyong kasalukuyang mga secret na mga pulong
     enter_parent_email: Ilagay ang iyong mga magulang, o tagapangalaga na email address
       (para sa password recovery)
+    update: Update Account
   user_level:
     completed: Nakompleto
     tried: Sinubukan
@@ -644,6 +658,8 @@
       naka-enrol sa iyong seksiyon.
     already_enrolled_in_new_section: Hindi mo maaring ilipat ang mga estudyanteng
       ito dahil nasa bagong seksiyon na sila.
+    third_party_login: You cannot move students to a section that is synced with a
+      third party tool.
   share:
     title: Mag-aral sa Code Studio
     description: Kahit sino man ay maaring matuto ng computer science. Gumawa ng mga
@@ -1198,6 +1214,7 @@
     csd5_2: 'Kabanata 2: Paglutas ng mga Problema sa Datos'
     csd6_1: 'Kabanata 1: Output ng Hardware'
     csd6_2: 'Kabanata 2: Input ng Hardware'
+    csd_survey: Post-Course Survey
     csp1_1: 'Kabanata 1: Pag-representa at Pagpasa ng Impormasyon'
     csp1_2: 'Kabanata 2: Pag-imbento ng Internet'
     csp2_1: 'Kabanata 1: Pag-encode at Pag-compress ng Komplikadong Impormasyon'
@@ -1211,6 +1228,11 @@
     csp_ap_1: 'Kabanata 1: AP Tech na Setup'
     csp_ap_2: 'Kabanata 2: AP Explore na Performance Task'
     csp_ap_3: 'Kabanata 3: AP Maglikha ng Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Yunit 2: Digital na Impormasyon'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: Pagmunimuni na mga Prompt
   external_links:
     disclaimer: Disclaimer
@@ -1355,3 +1377,16 @@
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
   courses_category: Buong mga Kurso
+  cookie_banner:
+    message: By continuing to browse our site or clicking "I agree," you agree to
+      the storing of cookies on your computer or device.
+    more_information: See Code.org's Privacy Policy.
+    accept: Ako ay sumasang-ayon
+  gdpr_dialog:
+    heading: Do you agree to using a web site based in the United States?
+    message: Data from your use of this site may be sent to and stored or processed
+      in the United States.
+    link_intro: For details see our
+    privacy_policy: privacy policy
+    logout: Logout
+    true: Oo

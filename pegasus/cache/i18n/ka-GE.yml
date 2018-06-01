@@ -464,6 +464,9 @@
   homepage_header_donors: Code.org მადლობას უხდის მხარდამჭერებს
   homepage_donors_seall: ყველას ნახვა
   homepage_donors_donate: შემოწირულობის გაღება
+  homepage_below_hero_announcement_text: We care about your privacy and are making
+    some updates to our privacy policy, effective May 25.
+  homepage_below_hero_announcement_link_text: გაიგეთ მეტი
   contact_form_topic_student: მე ვარ მოსწავლე
   contact_form_topic_parent: მე ვარ მშობელი
   contact_form_topic_teacher: მე ვარ მასწავლებელი/პედაგოგი
@@ -637,8 +640,10 @@
   video_title_real_madrid: კოდის ერთი საათი რეალ მადრიდთან ერთად
   video_title_marco_belinelli: კოდის ერთი საათი მარკო ბელინელთან ერთად
   video_title_chris_bosh: კრის ბოში კომპიუტერული მეცნიერებების შესახებ
+  video_title_my_name_is_aracely: My Name is Aracely
   video_1min: 1 წუთი
   video_2min: 2 წუთი
+  video_3min: 3 min
   video_5min: 5 წუთი
   speak_another_language: სხვა ენაზე ლაპარაკობთ?
   help_translate: დაგვეხმარეთ თარგმნაში.
@@ -704,6 +709,10 @@
   volunteer_engineer_submission_field_email_desc: თქვენი ელ. ფოსტის მისამართი ინახება
     კონფიდენციალურად, მაგრამ ჩვენ გამოგიგზავნით მასწავლებლების შეტყობინებებს.
   volunteer_engineer_submission_field_email_placeholder: ელ.ფოსტის მისამართი
+  volunteer_engineer_submission_field_email_preference: Can we email you about updates
+    to our courses, volunteer opportunities, or other computer science news?
+  volunteer_engineer_submission_field_email_preference_yes: დიახ
+  volunteer_engineer_submission_field_email_preference_no: არა
   volunteer_engineer_submission_final_paragraph: თქვენ იქნებით აღნიშნული რუკაზე, რათა
     ადგილობრივმა მასწავლებლემა მარტივად შეძლონ თქვენი პოვნა კოდის ერთი საათისა ან
     სხვა მოხალისეობრივი პროექტებისთვის. ჩვენ არსად არ ვაზიარებთ თქვენს ელ. ფოსტასა
@@ -1239,6 +1248,20 @@
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'თავი 5: მონაცემები და საზოგადოება'
   csd6_name: 'თავი 6: ფიზიკური კომპიუტერული გამოთვლები'
+  csd1-2018_name: 'Unit 1: Problem Solving'
+  csd2-2018_name: 'Unit 2: Web Development'
+  csd3-2018_name: 'Unit 3: Animation and Games'
+  csd4-2018_name: 'Unit 4: The Design Process'
+  csd5-2018_name: 'თავი 5: მონაცემები და საზოგადოება'
+  csd6-2018_name: 'თავი 6: ფიზიკური კომპიუტერული გამოთვლები'
+  csp1-2018_name: 'სექცია 1: ინტერნეტი'
+  csp2-2018_name: 'სექცია 2: ციფრული ინფორმაცია'
+  csp3-2018_name: 'Unit 3: Algorithms and Programming'
+  csp4-2018_name: 'Unit 4: Big Data and Privacy'
+  csp5-2018_name: 'Unit 5: Building Apps'
+  csp-explore-2018_name: 'AP: Explore PT Prep'
+  csp-create-2018_name: 'AP: Create PT Prep'
+  csppostap-2018_name: 'Post AP: Databases in Apps'
   csp1_name: 'სექცია 1: ინტერნეტი'
   csp2_name: 'სექცია 2: ციფრული ინფორმაცია'
   csp3_name: 'Unit 3: Algorithms and Programming'
@@ -1249,6 +1272,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: სრული ტესტი – 50 კითხვა
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'
@@ -1279,8 +1303,10 @@
   csf_international_category_name: კომპიუტერული მეცნიერების საერთაშორისო საფუძვლები
   csf2_draft_category_name: 'დამუშავების ქვეშ: კურსები A - F'
   csd_category_name: 'Under Development: CS Discoveries'
+  csd_2018_category_name: CS Discoveries ('18-'19)
   csp_category_name: "'15-'16 CS საფუძვლები"
   csp17_category_name: CS საფუძვლები
+  csp_2018_category_name: CS Principles ('18-'19)
   cspexams_category_name: CS საფუძვლების სავარჯიშო ტესტი
   research_studies_category_name: Research Studies
   applab_name: აპლიკაციების ლაბორატორია
@@ -2026,6 +2052,7 @@
   header_documentation: დოკუმენტაცია
   csp_name: CS საფუძვლები
   csd_name: CS Discoveries
+  csd_2018_name: CS Discoveries
   full_course_category_name: ყველა კურსი
   user_header_label: გამარჯობა %{username}
   user_header_settings: ანგარიშის პარამეტრები
@@ -2086,5 +2113,5 @@
     ვარიანტი:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  video_title_my_name_is_aracely: My Name is Aracely
-  video_3min: 3 min
+  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
+    policy)"

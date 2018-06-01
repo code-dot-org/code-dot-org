@@ -1,9 +1,4 @@
-const Farmer = require('../farmer');
-const Bee = require('../bee');
-const Collector = require('../collector');
-const Wordsearch = require('../wordsearch');
-const Harvester = require('../harvester');
-const Planter = require('../planter');
+const subtypes = require('@code-dot-org/maze').subtypes;
 
 const FarmerHandler = require('./farmer');
 const BeeHandler = require('./bee');
@@ -16,17 +11,17 @@ const ResultsHandler = require('./resultsHandler');
 export function createResultsHandlerForSubtype(controller, config) {
   let handler = ResultsHandler;
 
-  if (controller.subtype instanceof Farmer) {
+  if (controller.subtype instanceof subtypes.Farmer) {
     handler = FarmerHandler;
-  } else if (controller.subtype instanceof Bee) {
+  } else if (controller.subtype instanceof subtypes.Bee) {
     handler = BeeHandler;
-  } else if (controller.subtype instanceof Collector) {
+  } else if (controller.subtype instanceof subtypes.Collector) {
     handler = CollectorHandler;
-  } else if (controller.subtype instanceof Wordsearch) {
+  } else if (controller.subtype instanceof subtypes.Wordsearch) {
     handler = WordsearchHandler;
-  } else if (controller.subtype instanceof Harvester) {
+  } else if (controller.subtype instanceof subtypes.Harvester) {
     handler = HarvesterHandler;
-  } else if (controller.subtype instanceof Planter) {
+  } else if (controller.subtype instanceof subtypes.Planter) {
     handler = PlanterHandler;
   }
 

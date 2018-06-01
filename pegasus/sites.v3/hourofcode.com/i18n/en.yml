@@ -13,12 +13,23 @@
   campaign_date_year: "2017"
   campaign_date_full_year: "December 4-10, 2017"
 
+  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+  cookie_banner_more_information: "See Code.org's Privacy Policy."
+  cookie_banner_accept: 'I agree'
+
   front_header_banner: 'Join the largest learning event in history, %{campaign_date}'
   front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 45 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_watch_video: 'Watch the new video'
   front_watch_regular_video: 'Watch the video'
   front_volunteers: 'Technical volunteers wanted'
   front_start_learning: 'Start learning'
+
+  gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
+  gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+  gdpr_dialog_link_intro: 'For details see our'
+  gdpr_dialog_privacy_policy: 'privacy policy'
+  gdpr_dialog_logout: 'Logout'
+  gdpr_dialog_yes: 'Yes'
 
   header_menu_resources: 'Resources'
   header_menu_faq: 'FAQ'
@@ -255,6 +266,11 @@
   signup_your_event: 'Sign up your event'
   signup_host_an_hour: 'Host an hour'
   signup_match_volunteer: 'Help me find a local software engineer to inspire my students'
+  signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
+  signup_email_preference_privacy: '(See our privacy policy)'
+  signup_email_preference_yes: 'Yes'
+  signup_email_preference_no: 'No'
+  signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "We will put your school name and city on the map when you register. If you're hosting multiple events, please submit a unique name or email for each one. We only count one event per name and email combination."
   signup_registration_deadline: "Registration for the Hour of Code closes December 11."
 

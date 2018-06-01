@@ -7,6 +7,15 @@ After('@as_student') do
   steps 'When I sign out'
 end
 
+Before('@as_young_student') do
+  steps "Given I create a young student named \"Test #{rand(100000)}_Student\""
+end
+
+After('@as_young_student') do
+  check_window_for_js_errors('after @as_young_student')
+  steps 'When I sign out'
+end
+
 Before('@as_taught_student') do
   steps "Given I create a teacher-associated student named \"Taught #{rand(100000)}_Student\""
 end

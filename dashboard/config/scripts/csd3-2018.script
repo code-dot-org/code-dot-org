@@ -1,14 +1,18 @@
+hidden false
 login_required true
 hideable_stages true
 exclude_csf_column_in_legend true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csd/unit3/"], ["teacherForum", "https://forum.code.org/c/csd3"], ["vocabulary", "https://curriculum.code.org/csd/unit3/vocab/"], ["standardMappings", "https://curriculum.code.org/csd/unit3/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd/unit3/code/"]]
+stage_extras_available true
 has_verified_resources true
 has_lesson_plan true
+project_widget_visible true
+project_widget_types ["gamelab", "weblab"]
 script_announcements [{"notice"=>"Know a teacher interested in teaching computer science?", "details"=>"Applications for the 2018 middle and high school Professional Learning program are now open!  No computer science experience is necessary.", "link"=>"https://code.org/educate/professional-learning-2018", "type"=>"bullhorn"}]
 
 stage 'Programming for Entertainment', flex_category: 'csd3_1'
-named_level 'CSD U3 Lesson Overview 1_2018'
+named_level 'CSD U3L01 TFMD_2018'
 named_level 'CSD U3 Entertainment_2018'
 level 'CSD U3 Entertainment Sample 4_2018', progression: 'Sample Programs'
 level 'CSD U3 Entertainment Sample 3_2018', progression: 'Sample Programs'
@@ -16,11 +20,11 @@ level 'CSD U3 Entertainment Sample 1_2018', progression: 'Sample Programs'
 level 'CSD U3 Entertainment Sample 2_2018', progression: 'Sample Programs'
 
 stage 'Plotting Shapes', flex_category: 'csd3_1'
-named_level 'CSD U3 Lesson Overview 2_2018'
+named_level 'CSD U3L02 TFMD_2018'
 named_level 'CSD U3 Plotting Shapes Shape Lab_2018'
 
 stage 'Drawing in Game Lab', flex_category: 'csd3_1'
-named_level 'CSD U3 Lesson Overview 3_2018'
+named_level 'CSD U3L03 TFMD_2018'
 named_level 'CSD U3 rect_2018'
 named_level 'CSD: Drawing in Game Lab 1_2018'
 named_level 'CSD U3 Drawing Squares to Corners_2018'
@@ -36,7 +40,7 @@ bonus 'CSD U3 challenge new shape_2018', progression: 'Challenges'
 bonus 'CSD U3 L3 Freeplay_2018'
 
 stage 'Shapes and Randomization', flex_category: 'csd3_1'
-named_level 'CSD U3 Lesson Overview 4_2018'
+named_level 'CSD U3L04 TFMD_2018'
 level 'CSD U3 Random Taller Rectangle_2018', progression: 'New Shapes'
 named_level 'CSD U3 shape size map_2018'
 level 'CSD U3 Random Ellipse Behind_2018', progression: 'More Parameters'
@@ -51,7 +55,7 @@ level 'CSD U3 Random rainbow snake_2018', progression: 'Using Random Numbers'
 bonus 'CSD U3 L4 Freeplay_2018'
 
 stage 'Variables', flex_category: 'csd3_1'
-named_level 'CSD U3 Lesson Overview 5_2018'
+named_level 'CSD U3L05 TFMD_2018'
 named_level 'Introduction to Variables - Part 1_2018'
 level 'CSD U3 Variables Predict Where X_2018', progression: 'Intro to Variables'
 named_level 'CSD U3 Variables Map_2018'
@@ -66,7 +70,7 @@ bonus 'CSD U3 Variables Challenge_2018'
 bonus 'CSD U3 L5 Freeplay_2018'
 
 stage 'Sprites', flex_category: 'csd3_1'
-named_level 'CSD U3 Lesson Overview 6_2018'
+named_level 'CSD U3L06 TFMD_2018'
 named_level 'CSD: Sprites in Game Lab_2018'
 named_level 'CSD U3 Sprites Map_2018'
 level 'CSD U3 Sprites intro sprites_2018', progression: 'Intro to Sprites'
@@ -88,7 +92,7 @@ bonus 'CSD U3 Sprites scene challenge_2018'
 bonus 'CSD U3 L6 Freeplay_2018'
 
 stage 'The Draw Loop', flex_category: 'csd3_1'
-named_level 'CSD U3 Lesson Overview 7_2018'
+named_level 'CSD U3L07 TFMD_2018'
 named_level 'CSD: Introduction to the Draw Loop_2018'
 level 'CSD U3 Draw Loop Plugged predict 1_2018', progression: 'Shapes and the Draw Loop'
 named_level 'CSD U3 The Draw Loop Map_2018'
@@ -103,10 +107,10 @@ level 'CSD U3 Draw Loop Plugged update your scene_2018', progression: 'Animate Y
 bonus 'CSD U3 L7 Freeplay_2018'
 
 stage 'The Counter Pattern Unplugged', flex_category: 'csd3_1'
-named_level 'CSD U3 Lesson Overview 8_2018'
+named_level 'CSD U3L08 TFMD_2018'
 
 stage 'Sprite Movement', flex_category: 'csd3_1'
-named_level 'CSD U3 Lesson Overview 9_2018'
+named_level 'CSD U3L09 TFMD_2018'
 named_level 'CSD: Animating Sprite Movement_2018'
 named_level 'CSD Counter Pattern Map_2018'
 level 'CSD U3 - Simple Counter Predict_2018', progression: 'Movement with the Counter Pattern'
@@ -125,10 +129,10 @@ bonus 'CSD U3 Movement Challenges_2018'
 bonus 'CSD U3 L9 Freeplay_2018'
 
 stage 'Booleans Unplugged', flex_category: 'csd3_1'
-named_level 'CSD U3 Lesson Overview 10_2018'
+named_level 'CSD U3L10 TFMD_2018'
 
 stage 'Conditionals', flex_category: 'csd3_1'
-named_level 'CSD U3 Lesson Overview 11_2018'
+named_level 'CSD U3L11 TFMD_2018'
 level 'CSD U3 Boolean Predict_2018', progression: 'Make a Prediction'
 named_level 'CSD U3 - Booleans Video_2018'
 named_level 'CSD Booleans Map_2018'
@@ -143,7 +147,7 @@ bonus 'CSD U3 - conditionals - first conditional 2_2018', progression: 'Basic Co
 bonus 'CSD U3 L11 Freeplay_2018'
 
 stage 'Keyboard Input', flex_category: 'csd3_1'
-named_level 'CSD U3 Lesson Overview 12_2018'
+named_level 'CSD U3L12 TFMD_2018'
 level 'CSD U3 Keypress Boolean_2018', progression: 'Keyboard Input'
 level 'CSD U3 keydown conditional_2018', progression: 'Keyboard Input'
 level 'CSD U3 UP_ARROW_2018', progression: 'Keyboard Input'
@@ -156,7 +160,7 @@ bonus 'CSD U3 Keyboard Input Challenge_2018'
 bonus 'CSD U3 L12 Freeplay_2018'
 
 stage 'Other Forms of Input', flex_category: 'csd3_1'
-named_level 'CSD U3 Lesson Overview 13_2018'
+named_level 'CSD U3L13 TFMD_2018'
 level 'CSD U3 Mouse Input Bee 1_2018', progression: 'Follow the Mouse'
 level 'CSD U3 Mouse Input Bee 2_2018', progression: 'Follow the Mouse'
 named_level 'CSD U3 - Conditionals Video_2018'
@@ -172,7 +176,7 @@ bonus 'CSD U3 Compound Nested Challenge_2018'
 bonus 'CSD U3 L13 Freeplay_2018'
 
 stage 'Project - Interactive Card', flex_category: 'csd3_1'
-named_level 'CSD U3 Lesson Overview 14_2018'
+named_level 'CSD U3L14 TFMD_2018'
 named_level 'CSD U3 Interactive Card Exemplar_2018'
 named_level 'CSD U3 Card Examples_2018'
 level 'CSD U3 Interactive Card Background_2018', progression: 'Project Work'
@@ -183,7 +187,7 @@ level 'CSD U3 Interactive Card Final_2018', progression: 'Project Work'
 assessment 'csd-pulse-check-survey-1-levelgroup U3Ch1_2018', progression: 'Reflection'
 
 stage 'Velocity', flex_category: 'csd3_2'
-named_level 'CSD U3 SFLP Velocity_2018'
+named_level 'CSD U3L15 TFMD_2018'
 named_level 'CSD: Sprite Velocity_2018'
 named_level 'CSD U3 velocity map_2018'
 level 'CSD U3 abstraction velocityX_2018', progression: 'Velocity'
@@ -199,7 +203,7 @@ level 'CSD U3 abstraction looping_2018', progression: 'Side Scroller'
 bonus 'CSD U3 L15 Freeplay_2018'
 
 stage 'Collision Detection', flex_category: 'csd3_2'
-named_level 'CSD U3 Collision Detection_2018'
+named_level 'CSD U3L16 TFMD_2018'
 named_level 'CSD U3 collisions car intro_2018'
 named_level 'CSD U3 collisions build isTouching_2018'
 level 'CSD U3 collisions isTouching intro_2018', progression: 'isTouching'
@@ -213,7 +217,7 @@ named_level 'CSD U3 istouching map_2018'
 bonus 'CSD U3 L16 Freeplay_2018'
 
 stage 'Complex Sprite Movement', flex_category: 'csd3_2'
-named_level 'CSD U3 complex sprite movement SFLP_2018'
+named_level 'CSD U3L17 TFMD_2018'
 named_level 'CSD U3 Complex Movement counter prediction gamelab_2018'
 level 'CSD U3 abstraction accelerateX_2018', progression: 'Velocity and the Counter Pattern'
 level 'CSD U3 abstraction accelerateY_2018', progression: 'Velocity and the Counter Pattern'
@@ -230,7 +234,7 @@ named_level 'CSD U3 acceleration map_2018'
 bonus 'CSD U3 L17 Freeplay_2018'
 
 stage 'Collisions', flex_category: 'csd3_2'
-named_level 'CSD U3 Collisions SFLP_2018'
+named_level 'CSD U3L18 TFMD_2018'
 named_level 'CSD U3 collisions predict set velocity code_2018'
 level 'CSD U3 collisions displace x_2018', progression: 'Collisions'
 level 'CSD U3 collisions displace y_2018', progression: 'Collisions'
@@ -250,7 +254,7 @@ named_level 'CSD U3 interactions map_2018'
 named_level 'CSD U3 L18 Freeplay_2018'
 
 stage 'Functions', flex_category: 'csd3_2'
-named_level 'CSD U3 Functions SFLP_2018'
+named_level 'CSD U3L19 TFMD_2018'
 level 'CSD U3 Functions Call Function_2018', progression: 'Functions'
 level 'CSD U3 Functions Order Functions_2018', progression: 'Functions'
 level 'CSD U3 Functions Prediction Order of Create_2018', progression: 'Functions'
@@ -265,7 +269,7 @@ named_level 'CSD U3 functions review_2018'
 named_level 'CSD U3 L19 Freeplay_2018'
 
 stage 'The Game Design Process', flex_category: 'csd3_2'
-named_level 'CSD U3 Defender SFLP_2018'
+named_level 'CSD U3L20 TFMD_2018'
 named_level 'CSD U3 AnimationsMulti Play Defender_2018'
 named_level 'CSD U3 AnimationsMulti STOP project guide_2018'
 level 'CSD U3 AnimationsMulti introducing multiframe_2018', progression: 'Multiframe Animations'
@@ -284,7 +288,7 @@ level 'CSD U3 AnimationsMulti defender touch water_2018', progression: 'Cake Def
 level 'CSD U3 AnimationsMulti defender make it your own_2018', progression: 'Cake Defender'
 
 stage 'Using the Game Design Process', flex_category: 'csd3_2'
-named_level 'CSD U3 Using the Game Design Process SLFP_2018'
+named_level 'CSD U3L21 TFMD_2018'
 named_level 'CSD U3 platform sample1_2018'
 named_level 'CSD U3 platform intro_2018'
 level 'CSD U3 platform background1_2018', progression: 'Platform Jumper - Background and Variables'
@@ -306,7 +310,7 @@ named_level 'CSD U3 platform sample3_2018'
 named_level 'CSD U3 platform challenge_2018'
 
 stage 'Project - Design a Game', flex_category: 'csd3_2'
-named_level 'CSD U3 Project Build a Game SFLP_2018'
+named_level 'CSD U3L22 TFMD_2018'
 named_level 'CSD U3 game intro_2018'
 level 'CSD U3 game variables_2018', progression: 'Project - Background and Variables'
 level 'CSD U3 game backgrounds_2018', progression: 'Project - Background and Variables'
@@ -319,6 +323,3 @@ level 'CSD U3 game user controls_2018', progression: 'Project - Sprites and Inte
 level 'CSD U3 game interactions_2018', progression: 'Project - Sprites and Interactions'
 named_level 'CSD U3 finishing touches_2018'
 assessment 'csd-pulse-check-survey-1-levelgroup U3Ch2_2018', progression: 'Reflection'
-
-stage 'CS Discoveries End of Semester Survey', lockable: true, flex_category: 'cspSurvey'
-assessment 'csd-post-survey-2017-levelgroup_2018'

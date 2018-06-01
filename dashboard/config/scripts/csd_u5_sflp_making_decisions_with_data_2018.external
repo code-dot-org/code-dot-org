@@ -1,0 +1,15 @@
+name 'CSD-U5-SFLP Making Decisions with Data_2018'
+display_name 'Overview'
+markdown <<MARKDOWN
+# Overview
+
+In this lesson you'll get some practice making decisions with data with some problems that might feel familiar.
+
+## Resources
+
+* [Making Decisions with Data](https://docs.google.com/document/d/1ByeV-Q0e0VsgphCoVUZOxol0Fp2ArrsyV3rH8djnllg/export?format=pdf) - Activity Guide
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+* [Making Decisions with Data](https://docs.google.com/document/d/1MJ_Q6TF3pztGNIdKFhwZMC4kHZNXNvWQtbFPPQShQRk/edit?usp=sharing) - Exemplar ([PDF](https://docs.google.com/document/d/1MJ_Q6TF3pztGNIdKFhwZMC4kHZNXNvWQtbFPPQShQRk/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1MJ_Q6TF3pztGNIdKFhwZMC4kHZNXNvWQtbFPPQShQRk/export?format=doc))
+MARKDOWN

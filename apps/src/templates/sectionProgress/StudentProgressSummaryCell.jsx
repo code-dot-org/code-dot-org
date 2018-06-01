@@ -1,6 +1,6 @@
 import React, { PropTypes, Component } from 'react';
 import ProgressBox from '../sectionProgress/ProgressBox';
-import { LevelStatus } from '@cdo/apps/util/sharedConstants';
+import { summarizeProgressInStage } from '@cdo/apps/templates/progress/progressHelpers';
 import Radium from 'radium';
 
 class StudentProgressSummaryCell extends Component {
@@ -10,46 +10,9 @@ class StudentProgressSummaryCell extends Component {
     levelsWithStatus: PropTypes.arrayOf(PropTypes.object),
   };
 
-  studentLevelProgressInStage() {
-    const { levelsWithStatus } = this.props;
-
-    // Get counts of statuses
-    let statusCounts = {
-      total: levelsWithStatus.length,
-      completed: 0,
-      imperfect: 0,
-      incomplete: 0,
-      attempted: 0,
-    };
-    for (let i = 0; i <levelsWithStatus.length; i++) {
-      const status = levelsWithStatus[i].status;
-      switch (status) {
-        case LevelStatus.perfect:
-        case LevelStatus.submitted:
-          statusCounts.completed = statusCounts.completed + 1;
-          break;
-        case LevelStatus.not_tried:
-          statusCounts.incomplete = statusCounts.incomplete + 1;
-          break;
-        case LevelStatus.attempted:
-          statusCounts.incomplete = statusCounts.incomplete + 1;
-          statusCounts.attempted = statusCounts.attempted + 1;
-          break;
-        case LevelStatus.passed:
-          statusCounts.imperfect = statusCounts.imperfect + 1;
-          break;
-        // All others are assumed to be not tried
-        default:
-          statusCounts.incomplete = statusCounts.incomplete + 1;
-      }
-
-    }
-    return statusCounts;
-  }
-
   render() {
     const totalPixels = 20;
-    const statusCounts = this.studentLevelProgressInStage();
+    const statusCounts = summarizeProgressInStage(this.props.levelsWithStatus);
     const perfectPixels = Math.floor((statusCounts.completed / statusCounts.total) * totalPixels);
     const imperfectPixels = Math.floor((statusCounts.imperfect / statusCounts.total) * totalPixels);
     const incompletePixels = totalPixels - perfectPixels - imperfectPixels;

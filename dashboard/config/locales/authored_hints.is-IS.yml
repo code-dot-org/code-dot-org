@@ -71,25 +71,47 @@
         2-3_Artist_Debugging_9_b: Þú þarft ekki að bæta við öðrum kubbi til að ná
           fullum snúningi. Bættu bara 60 gráðum við kubbinn `snúa til vinstri` sem
           er þarna!
+      2-3 Artist Functions 1 a_authored_hint:
+        2-3_Artist_Functions_1_a: Hver ferningur hefur 100 díla hliðar. Það þýðir
+          að þú þarft að fara áfram um 175 díla áður en þú teiknar næsta ferning.
+        2-3_Artist_Functions_1_b: Það er í lagi að láta línurnar skarast við gerð
+          gleraugnanna.
       2-3 Artist Functions 1_authored_hint:
         2-3_Artist_Functions_1_a: Hver ferningur hefur 100 díla hliðar. Það þýðir
           að þú þarft að fara áfram um 175 díla áður en þú teiknar næsta ferning.
         2-3_Artist_Functions_1_b: Það er í lagi að láta línurnar skarast við gerð
           gleraugnanna.
+      2-3 Artist Functions 11 a_authored_hint:
+        2-3_Artist_Functions_11_a: Þú þarft að breyta ekki bara fjölda og lengd hliðanna
+          innan í fallinu, heldur líka horninu sem listamaðurinn snýr um á milli hliða.
       2-3 Artist Functions 11_authored_hint:
         2-3_Artist_Functions_11_a: Þú þarft að breyta ekki bara fjölda og lengd hliðanna
           innan í fallinu, heldur líka horninu sem listamaðurinn snýr um á milli hliða.
+      2-3 Artist Functions 12 a_authored_hint:
+        2-3_Artist_Functions_12_a: Prófaðu að keyra kóðann fyrst til að sjá hverju
+          þú þarft að bæta við.
       2-3 Artist Functions 12_authored_hint:
         2-3_Artist_Functions_12_a: Prófaðu að keyra kóðann fyrst til að sjá hverju
           þú þarft að bæta við.
+      2-3 Artist Functions 2 a_authored_hint:
+        2-3_Artist_Functions_2_a: |-
+          Forritið þitt ætti að:
+          - Nota fall
+          - Fara áfram 100 + 75 díla
+          - Nota fall
       2-3 Artist Functions 2_authored_hint:
         2-3_Artist_Functions_2_a: |-
           Forritið þitt ætti að:
           - Nota fall
           - Fara áfram 100 + 75 díla
           - Nota fall
+      2-3 Artist Functions 3 a_authored_hint:
+        2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
       2-3 Artist Functions 3_authored_hint:
         2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
+      2-3 Artist Functions 4 a_authored_hint:
+        2-3_Artist_Functions_4_a: Listamaðurinn þarf að snúa um 120 gráður á milli
+          ferninga til að teikna þetta mynstur.
       2-3 Artist Functions 4_authored_hint:
         2-3_Artist_Functions_4_a: Listamaðurinn þarf að snúa um 120 gráður á milli
           ferninga til að teikna þetta mynstur.
@@ -383,7 +405,7 @@
           það í lykkju í staðinn!"
       4-5 Nested Loops 12_authored_hint:
         4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
-      4-5 Nested Loops 2_authored_hint: []
+      4-5 Nested Loops 2_authored_hint: {}
       4-5 Nested Loops 6_authored_hint:
         4-5_Nested_Loops_6_a: |-
           Ekki gleyma að snúa eftir innri lykkjuna.
@@ -403,11 +425,11 @@
           **360 / 6 = ?**
       4-5 While Loops 8_authored_hint:
         4-5_While_Loops_8_a: Hvert atriði mun þurfa sína eigin `meðan` lykkju.
-      AppLab Intro 3 - Change Screen Color_authored_hint: []
-      AppLab Intro 4 - Change Screen Color_authored_hint: []
-      AppLab Intro 5 - Change Screen Color_authored_hint: []
-      AppLab Intro 6 - Change Screen Color_authored_hint: []
-      AppLab Intro 7 - Change Screen Color_authored_hint: []
+      AppLab Intro 3 - Change Screen Color_authored_hint: {}
+      AppLab Intro 4 - Change Screen Color_authored_hint: {}
+      AppLab Intro 5 - Change Screen Color_authored_hint: {}
+      AppLab Intro 6 - Change Screen Color_authored_hint: {}
+      AppLab Intro 7 - Change Screen Color_authored_hint: {}
       Artist Inspiration_authored_hint:
         brush_width: Við stilltum þykkt pensils á 1 og litinn á blátt áður en við
           gerðum nokkuð annað.
@@ -497,7 +519,7 @@
       Course 4 Artist 6_authored_hint:
         Course_4_Artist_6_a: Það eru 3 þríhyrningar innan 360 gráðu snúningsins...hve
           oft gengur 3 upp í 360?
-      Course 4 Artist 7_authored_hint: []
+      Course 4 Artist 7_authored_hint: {}
       Course 4 Artist 8a_authored_hint:
         Course_4_Artist_8a: |-
           Þarftu hjálp við að finna út hve mikið á að snúa?
@@ -874,7 +896,7 @@
       Course 4 Play Labs For Loops 2_authored_hint:
         Course_4_Play_Labs_For_Loops_2_a: Hverju mundir þú bæta við `frá` lykkjuna
           í hverri umferð til að sleppa jöfnu tölunum?
-      Course 4 Playlab For Loop Freeplay_authored_hint: []
+      Course 4 Playlab For Loop Freeplay_authored_hint: {}
       Course 4 Playlab For Loops 4b_authored_hint:
         Course_4_Playlab_For_Loops_4b_a: Flöggin eru um 330 díla frá leikmönnunum.
         Course_4_Playlab_For_Loops_4b_b: Hvernig getur þú látið hvern leikmann færast
@@ -886,7 +908,7 @@
         Course_4_Playlab_For_Loops_5b_a: Leikmennirnir eru um 175 díla frá miðjunni.
         Course_4_Playlab_For_Loops_5b_b: Mundu að næsta skref leikmanns verður lengra
           en það á undan vegna þess að teljarinn stækkar.
-      Course 4 Playlab For Loops 6b_authored_hint: []
+      Course 4 Playlab For Loops 6b_authored_hint: {}
       Course 4 SCF 1_authored_hint:
         Course_4_SCF_1_a: Hver sexhyrningur er með 40 díla hliðar.
         Course_4_SCF_1_b: Það er 120 díla hopp á milli sexhyrninganna á sömu láréttu
@@ -1215,8 +1237,8 @@
 
 
           ![Image of Solution Blocks](https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
-      InspirationalArtwork_authored_hint: []
-      InspirationalArtwork_2018_authored_hint: []
+      InspirationalArtwork_authored_hint: {}
+      InspirationalArtwork_2018_authored_hint: {}
       K2.0 sequence 1_authored_hint:
         K2.0_sequence_1_a: This program is missing one block. Can you figure out which
           one?
@@ -1372,8 +1394,8 @@
           Þú getur keyrt kóðann þó hann sé ekki réttur. Keyrðu og endurstilltu kóðann aftur og aftur þar til þú finnur út hvar vandamálið er.
         MC_HOC_2017_08_RY_b: Það eru MARGAR lausnir á þessari þraut. Prófaðu!
         MC_HOC_2017_08_RY_c: Prófaðu að fylgja punktalínunni svo þú komist yfir hraunið.
-      MC_HOC_2017_FP10x10_authored_hint: []
-      MC_HOC_2017_FP10x10_RE_authored_hint: []
+      MC_HOC_2017_FP10x10_authored_hint: {}
+      MC_HOC_2017_FP10x10_RE_authored_hint: {}
       MC_HOC_2017_FP20x20_authored_hint:
         MC_HOC_2017_13_Cole_a: Prófaðu að láta Umbann byggja brýr svo að Alex eða
           Steve geti gengið um utan við jaðar kortsins.
@@ -1534,7 +1556,7 @@
           hunang, sem þú þarft að gera í hverri býkúpu?
       Quantum Bee - Ryan_authored_hint:
         test_hint: Þetta er vísbending til prufu.
-      Test embedded K1 Blockly in instructions_authored_hint: []
+      Test embedded K1 Blockly in instructions_authored_hint: {}
       Underground Avoiding Lava_authored_hint:
         mc_11_a: Það er búið að setja allan kóða sem þarf til að athuga með hraun
           og höndla það. Þú þarft bara að bæta við hreyfingu.
@@ -1582,13 +1604,12 @@
           út kolin.
         mc_9_c: Notaðu `setja kyndil` til að setja kyndil á reitinn þar sem þú stendur.
       Valentine_artist2_01_authored_hint:
-        Valentine_artist2_01_a: Each side of the grass is 30 pixels long. Try using
-          a stair step pattern.
-        Valentine_artist2_01_b: 'Do you see any patterns repeating? You should be
-          using two `move forward` blocks and two different `turn` blocks inside a
-          loop. '
+        Valentine_artist2_01_a: Hver hlið grasblettsins er 30 dílar á lengd. Prófaðu
+          að nota tröppumynstur.
+        Valentine_artist2_01_b: 'Sérðu einhver endurtekin mynstur? Þú ættir að vera
+          að nota tvo `færa áfram` kubba og tvo mismunandi `snúa` kubba innan í lykkju. '
         Valentine_artist2_01_c: |-
-          Try this loop
+          Prófaðu þessa lykkju
           <xml><block type="controls_repeat">
           <title name="TIMES">8</title>
           <statement name="DO">
@@ -1617,18 +1638,18 @@
           </statement>
           </block></xml>
       Valentine_artist_01_authored_hint:
-        Valentine_artist_01_a: Which direction does the artist need to face to move?
-          Which direction does the artist need to face to place a new llama sticker?
-        Valentine_artist_01_b: The artist needs to place 10 llama stickers and turn
-          90 degrees at each turn.
+        Valentine_artist_01_a: Í hvaða átt þarf listamaðurinn að snúa þegar hann færir
+          sig? Í hvaða átt þarf hann að snúa til að setja nýjan lamadýrsmiða?
+        Valentine_artist_01_b: Listamaðurinn þarf að setja 10 lamadýrsmiða og snúa
+          um 90 gráður við hverja beygju.
       Valentine_playlab_01_authored_hint:
         Valentine_playlab_01_a: |-
-          Snap the `actor 1 throw red hearts down` block into the `when actor 1 clicked` event.
+          Tengdu kubbinn `leikmaður 1 kastar rauðum hjörtum niður` við atburðinn `þegar smellt á leikmann 1`.
 
-          Don't forget to change `left` to `down`!
-        Valentine_playlab_01_b: Use the `move actor 1 left` block by clicking it into
-          place beneath the `when left arrow clicked` event.
-      aE1_authored_hint: []
+          Ekki gleyma að breyta `vinstri` í `niður`!
+        Valentine_playlab_01_b: Notaðu kubbinn `færa leikmann 1 til vinstri` og settu
+          hann undir atburðinn `þegar smellt á vinstri ör`.
+      aE1_authored_hint: {}
       aE2_authored_hint:
         aE2_a: Taktu eftir að þar sem servíetturnar eru 20 díla langar, þarft þú að
           hoppa 20 díla áður en þú byrjar á næstu lykkju.
@@ -1680,7 +1701,7 @@
           á dýpt.
         aE4_d: Ef kóðinn verður of flókinn getur þú alltaf smellt á "Byrja aftur"
           og prófað aftur!
-      aE5_authored_hint: []
+      aE5_authored_hint: {}
       aE6_authored_hint:
         aE6_a: |-
           Ef það eru 180 gráður í hálfhring og hver lykkja lætur listamanninn snúa um 3 gráður, hve oft þarft þú að endurtaka lykkjuna til að teikna hálfan hring?
@@ -1706,9 +1727,9 @@
         allHallows2017_b: 'Baker segir: "Chicago liturinn virkar bara á *grænu línunni*."'
         allHallows2017_f: 'Amy segir: "Þú getur þetta! Hugsaðu út fyrir rammann"'
       artistDebugVideo1_authored_hint:
-        courseA_artist_loops7_a: Can't figure out where to put the loop? Try writing
-          the code step-by-step and look for a pattern.
-      artistFunctionsVideo1_authored_hint: []
+        courseA_artist_loops7_a: Sérðu ekki hvar á að setja lykkjuna? Prófaðu að skrifa
+          kóðann skref-fyrir-skref á blað og leita að endurtekningum.
+      artistFunctionsVideo1_authored_hint: {}
       artistLoopsK2_authored_hint:
         artistLoopsK2_a: Ef þú vilt láta lykkjuna endurtaka sig oftar en 4 sinnum,
           getur þú breytt tölunni efst í kubbnum.
@@ -1739,12 +1760,13 @@
       artistLoopsKB_authored_hint:
         artistLoopsKB_a: Það ættu að vera 3 kubbar innan í lykkjunni til að leysa
           þessa þraut.
-      artistLoopsKFP_authored_hint: []
+      artistLoopsKFP_authored_hint: {}
       comment_intro_maze_2018_authored_hint:
-        courseC_maze_programming4_a: Comments are also helpful when other people try
-          to read your code.
-        courseC_maze_programming4_b: Add a comment when you change directions- what
-          would have happened if you turned the other way?
+        courseC_maze_programming4_a: Athugasemdir eru einnig hjálplegar þegar aðrir
+          reyna að lesa kóðann þinn.
+        courseC_maze_programming4_b: Bættu við athugasemd þegar þú breytir um stefnu-
+          hvað hefði gerst ef þú hefðir snúið í hina áttina?
+      conditionals_forvideo_harvester_authored_hint: {}
       course1_artist_loops_challenge1_authored_hint:
         courseA_artist_loops_challenge1_a: |
           Þú getur notað svona lykkjur til að búa til veggina og þakið. Prófaðu að endurtaka mismunandi kubba.
@@ -2116,7 +2138,7 @@
           Ef þú kemst svona langt, vantar bara að `snúa til vinstri` og svo `færa áfram` nokkrum sinnum. Ekki gefast upp!
 
           ![](https://images.code.org/7696c5c16b8ddf1d53436cdc7fb6346d-image-1494101728016.14.34 PM.png)
-      course2_maze_programming_challenge1_authored_hint: []
+      course2_maze_programming_challenge1_authored_hint: {}
       course2_maze_programming_challenge2_authored_hint:
         courseC_maze_programming_challenge2_a: "*Ef þú sendir mig aftur á bak, þarftu
           að passa sérstaklega að ég snúi í rétta átt!*"
@@ -2363,7 +2385,7 @@
       course3_farmer_condLoops_challenge2_authored_hint:
         courseD_farmer_condLoops_challenge2_a: Magn grænmetis í hverjum reit er breytilegt.
           Notaðu þá `meðan` lykkjur.
-      course3_farmer_until_challenge2_authored_hint: []
+      course3_farmer_until_challenge2_authored_hint: {}
       course3_maze_debugging_challenge1_authored_hint:
         courseC_maze_debugging_challenge1_a: Vinstri eða hægri? Þú ræður!
         courseC_maze_debugging_challenge1_b: Slóðin sem Scrat þarf að fara er rétthyrningur!
@@ -2380,7 +2402,7 @@
           Þú getur farið tvær mismunandi slóðir með því að nota bara `færa áfram` og 4 snúninga. Ef þú finnur leið til að nota `endurtaka` kubbinn, gætu slóðirnar verið fleiri!
 
           ![](https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png)
-      course3_maze_until_challenge1_authored_hint: []
+      course3_maze_until_challenge1_authored_hint: {}
       course3_playLab_challenge1_authored_hint:
         courseE_playLab_challenge1_a: |-
           Hér eru nokkrar hugmyndir um hvað þú gætir gert þegar spilarinn vinnur leikinn:
@@ -2469,7 +2491,7 @@
           tiltekinn díl mælt frá vinstri og tiltekinn díl mælt ofan frá. Staðurinn
           er því alltaf mældur frá efra vinstra horninu, svo það skiptir ekki máli
           hvar uppvakningurinn er *áður* en skipunin er keyrð!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
-      course4_artist_fwp_challenge1_authored_hint: []
+      course4_artist_fwp_challenge1_authored_hint: {}
       course4_artist_variables_challenge1_authored_hint:
         courseF_artist_variables_challenge1_a: Hver lóðrétt lína hefur lengdina 10.
           Hver lárétt lína ætti að hafa lengdina `lengd`.
@@ -2644,7 +2666,7 @@
           **Lausn:**
 
           ![Solution](https://images.code.org/311b4a946cb8f3b4144b5075be6460a3-image-1469641878222.png)
-      course4_bee_for_challenge1_authored_hint: []
+      course4_bee_for_challenge1_authored_hint: {}
       course4_bee_fwp_challenge1_authored_hint:
         courseF_bee_fwp_challenge1_a: |-
           Aðalforritið ætti líta út einhvern veginn svona:
@@ -3121,33 +3143,35 @@
           Þegar allt er klárt ættir þú að geta smellt á annan hvorn leikmanninn og fengið allt að 8 mismunandi skilaboð. Er mögulegt að útfæra þetta eitthvað frekar?
 
           Fáðu vin til að prófa appið þegar það er tilbúið!
-      courseA_artist_loops10_authored_hint: []
-      courseA_artist_loops10_2018_authored_hint: []
-      courseA_artist_loops11_authored_hint: []
-      courseA_artist_loops11_2018_authored_hint: []
-      courseA_artist_loops11_predict2_authored_hint: []
-      courseA_artist_loops12_authored_hint: []
-      courseA_artist_loops12_2018_authored_hint: []
+      courseA_artist_loops10_authored_hint: {}
+      courseA_artist_loops10_2018_authored_hint: {}
+      courseA_artist_loops11_authored_hint: {}
+      courseA_artist_loops11_2018_authored_hint: {}
+      courseA_artist_loops11_predict2_authored_hint: {}
+      courseA_artist_loops12_authored_hint: {}
+      courseA_artist_loops12_2018_authored_hint: {}
       courseA_artist_loops2_authored_hint:
-        courseA_artist_loops2_a: Can't figure out how to draw a line?  Start attaching
-          blocks to the `when run` block to see what happens.
+        courseA_artist_loops2_a: Ertu ekki viss um hvernig á að teikna línu? Tengdu
+          kubba við <xml><block type="when_run"/></xml> kubbinn til að prófa og sjá
+          hvað gerist.
         courseA_artist_loops2_b: Notaðu kubbinn <xml><block type="simple_move_right"/></xml>
           til að leysa þessa þraut.
       courseA_artist_loops2_2018_authored_hint:
-        courseA_artist_loops2_a: Can't figure out how to draw a line?  Start attaching
-          blocks to the <xml><block type="when_run"/></xml> block to see what happens.
+        courseA_artist_loops2_a: Ertu ekki viss um hvernig á að teikna línu? Tengdu
+          kubba við <xml><block type="when_run"/></xml> kubbinn til að prófa og sjá
+          hvað gerist.
         courseA_artist_loops2_b: Notaðu kubbinn <xml><block type="simple_move_right"/></xml>
           til að leysa þessa þraut.
       courseA_artist_loops3_authored_hint:
-        courseA_artist_loops3_a: Is something not quite right?  Trace slowly through
-          the program with your finger to see where it goes wrong.
+        courseA_artist_loops3_a: Rektu þig hægt í gegnum forritið með fingrinum til
+          að sjá hvar það fer úrskeiðis.
         courseA_artist_loops3_b: |-
           Þú vilt sennilega nota svona kubb til að leysa þessa þraut.
 
           ![](https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png)
       courseA_artist_loops3_2018_authored_hint:
-        courseA_artist_loops3_a: Trace slowly through the program with your finger
-          to see where it goes wrong.
+        courseA_artist_loops3_a: Rektu þig hægt í gegnum forritið með fingrinum til
+          að sjá hvar það fer úrskeiðis.
         courseA_artist_loops3_b: |-
           Þú vilt sennilega nota svona kubb til að leysa þessa þraut.
 
@@ -3179,18 +3203,18 @@
         courseA_artist_loops5_c: Þar sem þú getur bara notað einn Austur kubb, ættirðu
           að prófa að setja hann í `endurtaka` lykkjuna.
       courseA_artist_loops6_authored_hint:
-        courseA_artist_loops6_a: Can't figure out how to make the hill?  Try playing
-          with the blocks a bit to see what each one draws.
+        courseA_artist_loops6_a: Ertu ekki viss um hvernig á að búa til hæðina? Prófaðu
+          hina ýmsu kubba til að sjá hvað þeir gera.
         courseA_artist_loops6_b: Þú þarft að nota tvo kubba með mismunandi stefnur
           til að leysa þessa þraut.
       courseA_artist_loops6_2018_authored_hint:
-        courseA_artist_loops6_a: Can't figure out how to make the hill?  Try playing
-          with the blocks a bit to see what each one draws.
+        courseA_artist_loops6_a: Ertu ekki viss um hvernig á að búa til hæðina? Prófaðu
+          hina ýmsu kubba til að sjá hvað þeir gera.
         courseA_artist_loops6_b: Þú þarft að nota tvo kubba með mismunandi stefnur
           til að leysa þessa þraut.
       courseA_artist_loops7_authored_hint:
-        courseA_artist_loops7_a: Can't figure out where to put the loop? Try writing
-          the code step-by-step and look for a pattern.
+        courseA_artist_loops7_a: Sérðu ekki hvar á að setja lykkjuna? Prófaðu að skrifa
+          kóðann skref-fyrir-skref á blað og leita að endurtekningum.
         courseA_artist_loops7_b: Skrifaðu kóðann fyrir eina bylgju fyrst og reyndu
           svo að endurtaka það til að teikna hinar tvær.
         courseA_artist_loops7_c: |-
@@ -3198,8 +3222,8 @@
           <title name="TIMES">???</title>
           </block></xml> ` lykkju.
       courseA_artist_loops7_2018_authored_hint:
-        courseA_artist_loops7_a: Can't figure out where to put the loop? Try writing
-          the code step-by-step and look for a pattern.
+        courseA_artist_loops7_a: Sérðu ekki hvar á að setja lykkjuna? Prófaðu að skrifa
+          kóðann skref-fyrir-skref á blað og leita að endurtekningum.
         courseA_artist_loops7_b: Skrifaðu kóðann fyrir eina bylgju fyrst og reyndu
           svo að endurtaka það til að teikna hinar tvær.
         courseA_artist_loops7_c: |-
@@ -3207,8 +3231,8 @@
           <title name="TIMES">???</title>
           </block></xml> ` lykkju.
       courseA_artist_loops7_forVideo_authored_hint:
-        courseA_artist_loops7_a: Can't figure out where to put the loop? Try writing
-          the code step-by-step and look for a pattern.
+        courseA_artist_loops7_a: Sérðu ekki hvar á að setja lykkjuna? Prófaðu að skrifa
+          kóðann skref-fyrir-skref á blað og leita að endurtekningum.
         courseA_artist_loops7_b: Skrifaðu kóðann fyrir eina bylgju fyrst og reyndu
           svo að endurtaka það til að teikna hinar tvær.
         courseA_artist_loops7_c: |-
@@ -3216,37 +3240,35 @@
           <title name="TIMES">???</title>
           </block></xml> ` lykkju.
       courseA_artist_loops8_authored_hint:
-        courseA_artist_loops8_a: Try running the code to see what has been written
-          for you.
-        courseA_artist_loops8_b: How would you loop the code that has been given to
-          you?
-        courseA_artist_loops8_c: "What does the code do?  \nWhat is it supposed to
-          do?  \nWhat does that tell you?"
+        courseA_artist_loops8_a: Prófaðu að keyra kóðann til að sjá hvað hefur verið
+          skrifað fyrir þig.
+        courseA_artist_loops8_b: Hvernig myndir þú setja gefna kóðann í lykkju?
+        courseA_artist_loops8_c: "Hvað gerir kóðinn? \nHvað er ætlast til að hann
+          geri? \nHvað segir það þér?"
       courseA_artist_loops8_2018_authored_hint:
-        courseA_artist_loops8_a: Try running the code to see what has been written
-          for you.
-        courseA_artist_loops8_b: How would you loop the code that has been given to
-          you?
-        courseA_artist_loops8_c: "What does the code do?  \nWhat is it supposed to
-          do?  \nWhat does that tell you?"
+        courseA_artist_loops8_a: Prófaðu að keyra kóðann til að sjá hvað hefur verið
+          skrifað fyrir þig.
+        courseA_artist_loops8_b: Hvernig myndir þú setja gefna kóðann í lykkju?
+        courseA_artist_loops8_c: "Hvað gerir kóðinn? \nHvað er ætlast til að hann
+          geri? \nHvað segir það þér?"
       courseA_artist_loops9_authored_hint:
-        courseA_artist_loops9_a: 'You don''t have to delete everything!  Some of the
-          code is good. Use it to build the rest of the stairs. '
+        courseA_artist_loops9_a: Bættu öðrum kubbi við gefna kóðann til að teikna
+          afganginn af tröppunum.
         courseA_artist_loops9_b: "Kubburinn, sem þú bætir við, á að fara inn í \n<xml><block
           type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>
           lykkjuna."
         courseA_artist_loops9_c: Ef þú sérð ekki hvar á hafa lykkjuna, er ráð að skrifa
           kóðann þrep fyrir þrep og leita svo að endurtekningum.
       courseA_artist_loops9_2018_authored_hint:
-        courseA_artist_loops9_a: Add another block to the code you are given to draw
-          the rest of the stairs.
+        courseA_artist_loops9_a: Bættu öðrum kubbi við gefna kóðann til að teikna
+          afganginn af tröppunum.
         courseA_artist_loops9_b: "Kubburinn, sem þú bætir við, á að fara inn í \n<xml><block
           type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>
           lykkjuna."
         courseA_artist_loops9_c: Ef þú sérð ekki hvar á hafa lykkjuna, er ráð að skrifa
           kóðann þrep fyrir þrep og leita svo að endurtekningum.
-      courseA_artist_loops_challenge1_authored_hint: []
-      courseA_artist_loops_challenge1_2018_authored_hint: []
+      courseA_artist_loops_challenge1_authored_hint: {}
+      courseA_artist_loops_challenge1_2018_authored_hint: {}
       courseA_artist_loops_challenge2_authored_hint:
         courseA_artist_loops_challenge2_a: 'Svona kubbar: <xml>  <block type="simple_move_up_left"/></xml>
           láta listamanninn færast á ská!'
@@ -3257,56 +3279,56 @@
       courseA_artist_loops_challenge2a_authored_hint:
         courseA_artist_loops_challenge2_a: 'Svona kubbar: <xml>  <block type="simple_move_up_left"/></xml>
           láta listamanninn færast á ská!'
-        courseA_artist_loops_challenge2_b: When you finish one tent, `jump` up twice
-          to get to the next!
-        courseA_artist_loops_challenge2_c: All of your blocks will need to be inside
-          of a loop to finish this puzzle.
+        courseA_artist_loops_challenge2_b: Þegar þú klárar eitt tjald, þarftu að `hoppa`
+          upp tvisvar til að komast að því næsta!
+        courseA_artist_loops_challenge2_c: Allir kubbarnir þínir þurfa að vera innan
+          í lykkju til að klára þessa þraut.
       courseA_artist_loops_challenge2a_2018_authored_hint:
         courseA_artist_loops_challenge2_a: 'Svona kubbar: <xml>  <block type="simple_move_up_left"/></xml>
           láta listamanninn færast á ská!'
-        courseA_artist_loops_challenge2_b: When you finish one tent, `jump` up twice
-          to get to the next!
-        courseA_artist_loops_challenge2_c: All of your blocks will need to be inside
-          of a loop to finish this puzzle.
+        courseA_artist_loops_challenge2_b: Þegar þú klárar eitt tjald, þarftu að `hoppa`
+          upp tvisvar til að komast að því næsta!
+        courseA_artist_loops_challenge2_c: Allir kubbarnir þínir þurfa að vera innan
+          í lykkju til að klára þessa þraut.
       courseA_artist_loops_challenge3_authored_hint:
         harvey_tictactoe: Þú getur notað `hoppa` kubba til að fara á önnur svæði.
       courseA_bee_seq1_authored_hint:
         courseA_bee_seq1_a: |-
-          Use this block to get nectar once the bee finds a flower.
+          Notaðu þennan kubb til að ná í blómasafa þegar býflugan hefur fundið blóm.
 
           <xml>
           <block type="maze_nectar"/>
           </xml>
-      courseA_bee_seq10_authored_hint: []
-      courseA_bee_seq11_authored_hint: []
+      courseA_bee_seq10_authored_hint: {}
+      courseA_bee_seq11_authored_hint: {}
       courseA_bee_seq12_authored_hint:
         courseA_bee_seq1_a: |-
-          Use this block to get nectar once the bee finds a flower.
+          Notaðu þennan kubb til að ná í blómasafa þegar býflugan hefur fundið blóm.
 
           <xml>
           <block type="maze_nectar"/>
           </xml>
-      courseA_bee_seq13_authored_hint: []
-      courseA_bee_seq14_authored_hint: []
-      courseA_bee_seq2_authored_hint: []
-      courseA_bee_seq3_authored_hint: []
-      courseA_bee_seq4_authored_hint: []
-      courseA_bee_seq5_authored_hint: []
-      courseA_bee_seq6_authored_hint: []
-      courseA_bee_seq7_authored_hint: []
-      courseA_bee_seq8_authored_hint: []
-      courseA_bee_seq9_authored_hint: []
+      courseA_bee_seq13_authored_hint: {}
+      courseA_bee_seq14_authored_hint: {}
+      courseA_bee_seq2_authored_hint: {}
+      courseA_bee_seq3_authored_hint: {}
+      courseA_bee_seq4_authored_hint: {}
+      courseA_bee_seq5_authored_hint: {}
+      courseA_bee_seq6_authored_hint: {}
+      courseA_bee_seq7_authored_hint: {}
+      courseA_bee_seq8_authored_hint: {}
+      courseA_bee_seq9_authored_hint: {}
       courseA_collector_loops1_authored_hint:
         courseA_collector_loops1_a: |-
           Eftir að þú hefur farið á reit með fjársjóði þá notarðu `taka fjársjóð` kubbinn til að taka hann upp.
           <xml>  <block type="collector_collect"/></xml>
         courseA_collector_loops1_b: Einföld lausn væri að fara tvisvar í Austur og
           svo taka fjársjóð.
-      courseA_collector_loops10_authored_hint: []
-      courseA_collector_loops10_2018_authored_hint: []
-      courseA_collector_loops11_authored_hint: []
-      courseA_collector_loops11_2018_authored_hint: []
-      courseA_collector_loops11_predict2_authored_hint: []
+      courseA_collector_loops10_authored_hint: {}
+      courseA_collector_loops10_2018_authored_hint: {}
+      courseA_collector_loops11_authored_hint: {}
+      courseA_collector_loops11_2018_authored_hint: {}
+      courseA_collector_loops11_predict2_authored_hint: {}
       courseA_collector_loops1_2018_authored_hint:
         courseA_collector_loops1_a: |-
           Eftir að þú hefur farið á reit með fjársjóði þá notarðu `taka fjársjóð` kubbinn til að taka hann upp.
@@ -3335,75 +3357,76 @@
         courseA_collector_loops3_b: Mundu að þú getur sett fleiri en einn kubb inn
           í <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES"
           config="3-10">???</title></block></xml> lykkju.
-      courseA_collector_loops3_predict1_authored_hint: []
+      courseA_collector_loops3_predict1_authored_hint: {}
       courseA_collector_loops4_authored_hint:
-        courseA_collector_loops4_a: To change how far the adventurer goes, change
-          the number of times that the loop runs.
-        courseA_collector_loops4_b: Don't forget that the adventurer needs to walk
-          down and collect gold after she finishes the `repeat` loop!
+        courseA_collector_loops4_a: Þú getur stjórnað því hve langt Laurel færist
+          með því að breyta því hve oft lykkjan keyrir.
+        courseA_collector_loops4_b: Ekki gleyma því að Laurel þarf að ganga niður
+          og taka fjársjóðinn þegar hún er búin með <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> lykkjuna!
       courseA_collector_loops4_2018_authored_hint:
-        courseA_collector_loops4_a: To change how far Laurel goes, change the number
-          of times that the loop runs.
-        courseA_collector_loops4_b: Don't forget that Laurel needs to walk down and
-          collect the treasure after she finishes the <xml><block type="controls_repeat_simplified_dropdown"><title
-          name="TIMES" config="3-10">???</title></block></xml> loop!
+        courseA_collector_loops4_a: Þú getur stjórnað því hve langt Laurel færist
+          með því að breyta því hve oft lykkjan keyrir.
+        courseA_collector_loops4_b: Ekki gleyma því að Laurel þarf að ganga niður
+          og taka fjársjóðinn þegar hún er búin með <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> lykkjuna!
       courseA_collector_loops5_authored_hint:
-        courseA_collector_loops5_a: If you can't figure out the answer right away,
-          try using a piece of paper to figure out what arrows you will need and look
-          for a pattern.
+        courseA_collector_loops5_a: Ef þú kemur ekki strax auga á svarið, gætir þú
+          prófað að teikna á blað til að sjá hvaða örvar þú munt þurfa og leita að
+          endurtekningum.
         courseA_collector_loops5_b: Prófaðu að kljúfa verkefnið í 2 hluta, fara til
           hliðar og svo niður.
         courseA_collector_loops5_c: Þú ættir að byrja á <xml><block type="controls_repeat_simplified_dropdown"><title
           name="TIMES" config="3-10">???</title></block></xml> lykkju sem færir Láru
           í vestur og safnar fjársjóði.
       courseA_collector_loops5_2018_authored_hint:
-        courseA_collector_loops5_a: If you can't figure out the answer right away,
-          try using a piece of paper to figure out what arrows you will need and look
-          for a pattern.
+        courseA_collector_loops5_a: Ef þú kemur ekki strax auga á svarið, gætir þú
+          prófað að teikna á blað til að sjá hvaða örvar þú munt þurfa og leita að
+          endurtekningum.
         courseA_collector_loops5_b: Prófaðu að kljúfa verkefnið í 2 hluta, fara til
           hliðar og svo niður.
         courseA_collector_loops5_c: Þú ættir að byrja á <xml><block type="controls_repeat_simplified_dropdown"><title
           name="TIMES" config="3-10">???</title></block></xml> lykkju sem færir Láru
           í vestur og safnar fjársjóði.
       courseA_collector_loops6_authored_hint:
-        courseA_collector_loops6_a: Can't figure out what's wrong? Try running the
-          code a couple of times to see what happens.
+        courseA_collector_loops6_a: Sérðu ekki hvað er að? Prófaðu að keyra kóðann
+          nokkrum sinnum til að sjá hvað gerist.
         courseA_collector_loops6_b: Stysta lausnin hefur tvær <xml><block type="controls_repeat_simplified_dropdown"><title
           name="TIMES" config="3-10">???</title></block></xml> lykkjur í röð.
       courseA_collector_loops6_2018_authored_hint:
-        courseA_collector_loops6_a: Can't figure out what's wrong? Try running the
-          code a couple of times to see what happens.
+        courseA_collector_loops6_a: Sérðu ekki hvað er að? Prófaðu að keyra kóðann
+          nokkrum sinnum til að sjá hvað gerist.
         courseA_collector_loops6_b: Stysta lausnin hefur tvær <xml><block type="controls_repeat_simplified_dropdown"><title
           name="TIMES" config="3-10">???</title></block></xml> lykkjur í röð.
       courseA_collector_loops7_authored_hint:
-        courseA_collector_loops7_a: If you can't figure out what comes next, try running
-          the code to see where Laurel ends up.
+        courseA_collector_loops7_a: Ef þú sérð ekki hvað á að koma næst, gætirðu prófað
+          að keyra kóðann til að sjá hvar Laurel endar.
       courseA_collector_loops7_2018_authored_hint:
-        courseA_collector_loops7_a: If you can't figure out what comes next, try running
-          the code to see where Laurel ends up.
+        courseA_collector_loops7_a: Ef þú sérð ekki hvað á að koma næst, gætirðu prófað
+          að keyra kóðann til að sjá hvar Laurel endar.
       courseA_collector_loops8_authored_hint:
-        courseA_collector_loops8_a: If you are having trouble figuring this puzzle
-          out, try writing the moves down on a piece of paper and look for a pattern.
+        courseA_collector_loops8_a: Ef þú átt í erfiðleikum með þessa þraut, er ráð
+          að skrifa hreyfingarnar á blað og leita svo að endurtekningum.
         courseA_collector_loops8_b: Prófaðu að skipta þessari þraut í 3 aðskilin verkefni
           og skrifa lykkjur fyrir hvert.
         courseA_collector_loops8_c: Mundu að þú getur skrifað kóðann eitt skref í
           einu og svo keyrt hann til að sjá hvað þarf að gera næst.
       courseA_collector_loops8_2018_authored_hint:
-        courseA_collector_loops8_a: If you are having trouble figuring this puzzle
-          out, try writing the moves down on a piece of paper and looking for a pattern.
+        courseA_collector_loops8_a: Ef þú átt í erfiðleikum með þessa þraut, er ráð
+          að skrifa hreyfingarnar á blað og leita svo að endurtekningum.
         courseA_collector_loops8_b: Prófaðu að skipta þessari þraut í 3 aðskilin verkefni
           og skrifa lykkjur fyrir hvert.
         courseA_collector_loops8_c: Mundu að þú getur skrifað kóðann eitt skref í
           einu og svo keyrt hann til að sjá hvað þarf að gera næst.
       courseA_collector_loops9_authored_hint:
-        courseA_collector_loops9_a: Does the code feel really long?  Try putting two
-          of your `repeat` loops inside of another loop to make it much shorter!
+        courseA_collector_loops9_a: 'Ef þú sérð ekki hvar best væri að nota lykkjur,
+          er ráð að kóða þetta skref-fyrir-skref og sjá hvar kóðinn endurtekur sig. '
         courseA_collector_loops9_b: Prófaðu að setja 2 <xml><block type="controls_repeat_simplified_dropdown"><title
           name="TIMES" config="3-10">???</title></block></xml> lykkjur innan í aðra
           lykkju svo kóðinn þinn verði styttri!
       courseA_collector_loops9_2018_authored_hint:
-        courseA_collector_loops9_a: 'If you can''t spot the best places to use loops,
-          try coding it out step-by-step and look for a pattern. '
+        courseA_collector_loops9_a: 'Ef þú sérð ekki hvar best væri að nota lykkjur,
+          er ráð að kóða þetta skref-fyrir-skref og sjá hvar kóðinn endurtekur sig. '
         courseA_collector_loops9_b: Prófaðu að setja 2 <xml><block type="controls_repeat_simplified_dropdown"><title
           name="TIMES" config="3-10">???</title></block></xml> lykkjur innan í aðra
           lykkju svo kóðinn þinn verði styttri!
@@ -3466,9 +3489,9 @@
         courseA_collector_loops_challenge2kp_b: Prófaðu þessa slóð til að finna lausn.
         courseA_collector_loops_challenge2kp_a: Getur þú notað lykkjur til að leysa
           þessa þraut?
-      courseA_collector_preLoops1_authored_hint: []
-      courseA_collector_preLoops2_authored_hint: []
-      courseA_collector_preLoops3_authored_hint: []
+      courseA_collector_preLoops1_authored_hint: {}
+      courseA_collector_preLoops2_authored_hint: {}
+      courseA_collector_preLoops3_authored_hint: {}
       courseA_collector_preLoops4_authored_hint:
         courseA_collector_preLoops4_a: Náðu fjársjóðnum með því að tengja tvo ![](https://images.code.org/2df8a25d7e96207f57d1a6b504950b70-image-1508906116743.34.37.png)
           kubba og einn ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
@@ -3483,32 +3506,33 @@
         courseA_collector_loops2_b: |-
           Eftir að þú hefur farið á reit með fjársjóði þá notarðu `taka fjársjóð` kubbinn til að taka hann upp.
           <xml>  <block type="collector_collect"/></xml>
-      courseA_forVideoTest_artist_authored_hint: []
+      courseA_forVideoTest_artist_authored_hint: {}
       courseA_harvester_forVideo_authored_hint:
         courseA_harvester_loops3_a: |-
-          Use a `repeat` block like this to help you!
+          Notaðu svona `endurtaka` kubb til að hjálpa þér!
           <xml><block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="2-10">3</title>
           </block></xml>
       courseA_harvester_loops1_authored_hint:
         courseA_harvester_loops1_a: |-
-          Once you move to some corn, use this block to pick it!
+          Þegar þú ert hjá maís getur þú notað þennan kubb til að tína hann!
           <xml><block type="harvester_corn"/></xml>
-      courseA_harvester_loops10_authored_hint: []
-      courseA_harvester_loops11_authored_hint: []
+      courseA_harvester_loops10_authored_hint: {}
+      courseA_harvester_loops11_authored_hint: {}
       courseA_harvester_loops2_authored_hint:
-        courseA_harvester_loops2_a: 'Your code will have **four** `move West` blocks
-          and **four** `pick corn` blocks. '
+        courseA_harvester_loops2_a: 'Kóðinn þinn ætti að hafa **fjóra** `fara í vestur`
+          kubba og **fjóra** `tína maís` kubba. '
       courseA_harvester_loops3_authored_hint:
         courseA_harvester_loops3_a: |-
-          Use a `repeat` block like this to help you!
+          Svona `endurtaka` kubbur getur bjargað málunum!
           <xml><block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="2-10">4</title>
           </block></xml>
         courseA_harvester_loops3_b: Þú getur endurtekið kóða með því að draga fram
           `endurtaka` lykkju og setja kóðann í hana.
       courseA_harvester_loops4_authored_hint:
-        courseA_harvester_loops4_a: Don't be afraid to press `Run` to see what happens!
+        courseA_harvester_loops4_a: Ekki hika við að ýta á `Keyra` til að sjá hvað
+          gerist!
         courseA_harvester_loops4_b: How many pieces of corn are there? How many times
           does your code repeat?
       courseA_harvester_loops5_authored_hint:
@@ -3535,7 +3559,7 @@
       courseA_harvester_loops7_authored_hint:
         courseA_harvester_loops7_a: You will need two `repeat` loops after each other!
         courseA_harvester_loops7_b: Use two loops to follow this path.
-      courseA_harvester_loops8_authored_hint: []
+      courseA_harvester_loops8_authored_hint: {}
       courseA_harvester_loops9_authored_hint:
         courseA_harvester_loops9_a: Break this puzzle up into three different parts.
           One part to the first corner, one part to the second corner, and one part
@@ -3561,8 +3585,8 @@
         courseA_harvester_seq10_b: You need to `Move East`, then `Move North`. Do
           this two times. Don't forget to get all the corn too!
         courseA_harvester_seq10_c: Try using this path to pick all the corn.
-      courseA_harvester_seq11_authored_hint: []
-      courseA_harvester_seq12_authored_hint: []
+      courseA_harvester_seq11_authored_hint: {}
+      courseA_harvester_seq12_authored_hint: {}
       courseA_harvester_seq13_authored_hint:
         courseA_bee_seq1_a: |-
           Use this block to pick corn once the harvester gets to it.
@@ -3600,7 +3624,7 @@
           the corner and one part after the corner.
         courseA_harvester_seq7_b: Having trouble? This is the path the harvester should
           take.
-      courseA_harvester_seq8_authored_hint: []
+      courseA_harvester_seq8_authored_hint: {}
       courseA_harvester_seq9_authored_hint:
         courseA_harvester_seq9_a: Run the code a few times to see what happens. Where
           does the harvester stop?
@@ -3714,11 +3738,11 @@
         courseA_maze_seq10_a: If you're having trouble, try writing down the steps
           on a piece of paper first.
         courseA_maze_seq10_b: You will need to go 3 directions to solve this puzzle.
-      courseA_maze_seq11_authored_hint: []
-      courseA_maze_seq11_2018_authored_hint: []
-      courseA_maze_seq12_authored_hint: []
-      courseA_maze_seq12_2018_authored_hint: []
-      courseA_maze_seq12_predict2_authored_hint: []
+      courseA_maze_seq11_authored_hint: {}
+      courseA_maze_seq11_2018_authored_hint: {}
+      courseA_maze_seq12_authored_hint: {}
+      courseA_maze_seq12_2018_authored_hint: {}
+      courseA_maze_seq12_predict2_authored_hint: {}
       courseA_maze_seq13_authored_hint:
         courseA_maze_seq13_a: If the path you need is unclear, use your finger to
           trace your way from the bird to the pig.
@@ -3755,7 +3779,7 @@
           one?
         courseA_maze_seq2_b: Prófaðu að keyra kóðann fyrst til að sjá hvert fuglinn
           fer. Hvert þarf hann að fara næst?
-      courseA_maze_seq2_predict1_authored_hint: []
+      courseA_maze_seq2_predict1_authored_hint: {}
       courseA_maze_seq3_authored_hint:
         courseA_maze_seq3_a: One of the blocks is moving the bird in the wrong direction.
           Can you figure out which one and replace it with the correct block?
@@ -4003,7 +4027,7 @@
           <title name="SPRITE1">1</title>
           <title name="SPRITE2">0</title>
           </block></xml>
-      courseA_playlab_challengeTemplate_authored_hint: []
+      courseA_playlab_challengeTemplate_authored_hint: {}
       courseA_playlab_events_challenge1_authored_hint:
         courseA_playlab_events_challenge1_a: "Láttu mörgæsina Waddles birtast þegar
           þú smellir á Robin!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
@@ -4187,7 +4211,7 @@
           \   <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n
           \     </block>\n    </next>\n  </block></xml>"
-      courseA_toMakeLoopsVideo_Collector_authored_hint: []
+      courseA_toMakeLoopsVideo_Collector_authored_hint: {}
       courseB_Scrat_ramp1_2018_authored_hint:
         '1': If Scrat isn't doing what you want, make sure both of the blocks have
           been fully clicked together, then click "Run" again.
@@ -4263,8 +4287,8 @@
           </next>
           </block>
           </xml>
-      courseB_artist_loops10_authored_hint: []
-      courseB_artist_loops10_2018_authored_hint: []
+      courseB_artist_loops10_authored_hint: {}
+      courseB_artist_loops10_2018_authored_hint: {}
       courseB_artist_loops2_authored_hint:
         courseB_artist_loops2_a: Ef þú vilt láta lykkjuna endurtaka sig oftar en 4
           sinnum, getur þú breytt tölunni efst í kubbnum.
@@ -4339,19 +4363,19 @@
           the ladder?
         courseB_artist_loops8_b: Prófaðu að keyra kóðann sem þú fékkst til að sjá
           hvað hann gerir.
-      courseB_artist_loops8_predict1_authored_hint: []
+      courseB_artist_loops8_predict1_authored_hint: {}
       courseB_artist_loops9_authored_hint:
         courseB_artist_loops9_a: Mundu að hoppa kubbana má nota til að færast áfram
           án þess að teikna línu.
         courseB_artist_loops9_b: Þú vilt fara í Vestur til að leysa þessa þraut.
-        courseB_artist_loops9_c: Can't figure out where to put the loop? Try writing
-          the code step-by-step and look for a pattern.
+        courseB_artist_loops9_c: Sérðu ekki hvar á að setja lykkjuna? Prófaðu að skrifa
+          kóðann skref-fyrir-skref á blað og leita að endurtekningum.
       courseB_artist_loops9_2018_authored_hint:
         courseB_artist_loops9_a: Mundu að hoppa kubbana má nota til að færast áfram
           án þess að teikna línu.
         courseB_artist_loops9_b: Þú vilt fara í Vestur til að leysa þessa þraut.
-        courseB_artist_loops9_c: Can't figure out where to put the loop? Try writing
-          the code step-by-step and look for a pattern.
+        courseB_artist_loops9_c: Sérðu ekki hvar á að setja lykkjuna? Prófaðu að skrifa
+          kóðann skref-fyrir-skref á blað og leita að endurtekningum.
       courseB_artist_loops_challenge1_authored_hint:
         courseB_artist_loops_challenge1_a: 'Svona kubbar: <xml>  <block type="simple_move_up_right"/></xml>
           láta listamanninn færast á ská!'
@@ -4415,15 +4439,15 @@
       courseB_collector_loops4_authored_hint:
         courseB_collector_loops4_a: Is something not right? Try using the step button
           to figure out where things go wrong.
-        courseB_collector_loops4_b: To change how far the adventurer goes, change
-          the number of times that the loop runs.
+        courseB_collector_loops4_b: Þú getur stjórnað því hve langt Laurel færist
+          með því að breyta því hve oft lykkjan keyrir.
         courseB_collector_loops4_c: Lára þarf að ganga niður og safna fjársjóðnum
           eftir að hún er búin með `endurtaka` lykkjuna!
       courseB_collector_loops4_2018_authored_hint:
         courseB_collector_loops4_a: Try using the step button to figure out where
           things go wrong.
-        courseB_collector_loops4_b: To change how far Laurel goes, change the number
-          of times that the loop runs.
+        courseB_collector_loops4_b: Þú getur stjórnað því hve langt Laurel færist
+          með því að breyta því hve oft lykkjan keyrir.
         courseB_collector_loops4_c: Lára þarf að ganga niður og safna fjársjóðnum
           eftir að hún er búin með `endurtaka` lykkjuna!
       courseB_collector_loops5_authored_hint:
@@ -4770,23 +4794,23 @@
         courseB_maze_seq10_a: If you're having trouble, try writing down the steps
           on a piece of paper first.
         courseB_maze_seq10_b: Þú þarft að fara í tvær mismunandi áttir til að ná svíninu.
-      courseB_maze_seq10_2018_authored_hint: []
-      courseB_maze_seq10_predict1_authored_hint: []
-      courseB_maze_seq10_predict1_2018_authored_hint: []
+      courseB_maze_seq10_2018_authored_hint: {}
+      courseB_maze_seq10_predict1_authored_hint: {}
+      courseB_maze_seq10_predict1_2018_authored_hint: {}
       courseB_maze_seq11_authored_hint:
         courseB_maze_seq11_a: If you're having trouble, try writing down the steps
           on a piece of paper first.
         courseB_maze_seq11_b: Ef þú festist er ráð að reyna að skipta þrautinni í
           það sem gerist á undan horninu og það sem gerist eftir hornið.
-      courseB_maze_seq11_2018_authored_hint: []
+      courseB_maze_seq11_2018_authored_hint: {}
       courseB_maze_seq1_2018_authored_hint:
         courseB_maze_seq1_a: Tengdu kubba við <xml><block type="when_run"/></xml>
           kubbinn til að láta fuglinn hreyfast!
         courseB_maze_seq1_b: Dragðu þrjár af þessum <xml><block type="maze_moveSouth"/></xml>
           örvum fram og tengdu þær við <xml><block type="when_run"/></xml> kubbinn
           til að koma fuglinum til svínsins.
-      courseB_maze_seq1_predict1_authored_hint: []
-      courseB_maze_seq1_predict1_2018_authored_hint: []
+      courseB_maze_seq1_predict1_authored_hint: {}
+      courseB_maze_seq1_predict1_2018_authored_hint: {}
       courseB_maze_seq2_authored_hint:
         courseB_maze_seq2_a: This program is missing one block. Can you figure out
           which one?
@@ -4873,7 +4897,7 @@
           prófað hann um leið.
         courseB_maze_seq9_c: Það eru tvær leiðir til að leysa þessa þraut.
         courseB_maze_seq9_d: Stuck?  Try this path!
-      courseB_maze_seq9_challenge1_authored_hint: []
+      courseB_maze_seq9_challenge1_authored_hint: {}
       courseB_maze_seqCold_authored_hint:
         courseB_maze_seqCold_a: Stuck? Try tracing the bird's path with your finger.
         courseB_maze_seqCold_b: The extra blocks need to be added before the last
@@ -4900,8 +4924,8 @@
         courseB_maze_seq_challenge2_a: Þú þarft ekki að bæta við eða fjarlægja kubba
           til að leysa þessa þraut.
         courseB_maze_seq_challenge2_b: Endurraðaðu kubbunum og farðu eftir miðslóðinni.
-      courseB_playlab_challenge1_Template_authored_hint: []
-      courseB_playlab_challenge1_Template_2018_authored_hint: []
+      courseB_playlab_challenge1_Template_authored_hint: {}
+      courseB_playlab_challenge1_Template_2018_authored_hint: {}
       courseB_playlab_events2_authored_hint:
         courseB_playlab_events2_a: |-
           This is the block to have Daisy say something:
@@ -5092,8 +5116,8 @@
           <title name="SPRITE">1</title>
           </block>
           </xml>
-      courseB_playlab_eventsTemplate_authored_hint: []
-      courseB_playlab_eventsTemplate_2018_authored_hint: []
+      courseB_playlab_eventsTemplate_authored_hint: {}
+      courseB_playlab_eventsTemplate_2018_authored_hint: {}
       courseB_playlab_eventsToolbox_authored_hint:
         courseB_playlab_events7_a: |-
           This is the event block that you will need:
@@ -5275,17 +5299,17 @@
           Láttu sum dýrin gefa fleiri stig en önnur.
           Notaðu mismunandi hljóð.
           Breyttu skapi dýranna!
-      courseB_scrat_forVideo_authored_hint: []
+      courseB_scrat_forVideo_authored_hint: {}
       courseB_starWars_prog1_authored_hint:
         courseB_starWars_prog1_a: Prófaðu að bæta einum kubbi við í einu og keyra
           forritið til að sjá hvað gerist.
         courseB_starWars_prog1_b: |
           Þú þarft að fara í Austur til að leysa þessa þraut. Hve langt þarftu að fara?
           <xml><block type="studio_moveEast"/></xml>
-      courseB_starWars_prog10_authored_hint: []
-      courseB_starWars_prog10_2018_authored_hint: []
-      courseB_starWars_prog11_authored_hint: []
-      courseB_starWars_prog11_2018_authored_hint: []
+      courseB_starWars_prog10_authored_hint: {}
+      courseB_starWars_prog10_2018_authored_hint: {}
+      courseB_starWars_prog11_authored_hint: {}
+      courseB_starWars_prog11_2018_authored_hint: {}
       courseB_starWars_prog1_2018_authored_hint:
         courseB_starWars_prog1_a: Prófaðu að bæta einum kubbi við í einu og keyra
           forritið til að sjá hvað gerist.
@@ -5410,7 +5434,7 @@
         courseB_starWars_prog9_c: Ekki hræðast að gera mistök! Prófaðu að bæta við
           kubbum og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist
           þú ekki hafa klárað lausnina.
-      courseC_PlayLab_embed_events9_authored_hint: []
+      courseC_PlayLab_embed_events9_authored_hint: {}
       courseC_PlayLab_events1_authored_hint:
         courseC_PlayLab_events1_a: |-
           Tengdu þennan kubb við `þegar keyrt` kubbinn:
@@ -5848,8 +5872,8 @@
           Notaðu þennan kubb til að fara áfram um 50 díla:
 
           ![](https://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27 AM.png)
-      courseC_artist_prog1_authored_hint: []
-      courseC_artist_prog1_2018_authored_hint: []
+      courseC_artist_prog1_authored_hint: {}
+      courseC_artist_prog1_2018_authored_hint: {}
       courseC_artist_prog2_authored_hint:
         courseC_artist_prog2_a: Ef þú notar kubbinn sem lætur mig `fara áfram um 100
           díla`, þá mun ég teikna línu sjálfkrafa.
@@ -5939,8 +5963,8 @@
           on its corner.
         courseC_artist_prog6_c: Since this diamond is also a square, be sure to turn
           90 degrees at the corners.
-      courseC_artist_prog6_predict1_authored_hint: []
-      courseC_artist_prog6_predict1_2018_authored_hint: []
+      courseC_artist_prog6_predict1_authored_hint: {}
+      courseC_artist_prog6_predict1_2018_authored_hint: {}
       courseC_artist_prog7_authored_hint:
         courseC_artist_prog7_a: Every angle is either 45 or 90 degrees.
         courseC_artist_prog7_b: "Does it work at the first step?  \nHow about the
@@ -5979,8 +6003,8 @@
         courseC_artist_prog7_e: Ekki hræðast að gera mistök! Prófaðu að bæta við kubbum
           og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist þú ekki
           hafa klárað lausnina.
-      courseC_artist_prog8_authored_hint: []
-      courseC_artist_prog8_2018_authored_hint: []
+      courseC_artist_prog8_authored_hint: {}
+      courseC_artist_prog8_2018_authored_hint: {}
       courseC_artist_prog_challenge1-doghouse_authored_hint:
         courseC_artist_prog7_a: Notaðu 60 gráðu horn til að búa til þakið.
       courseC_artist_prog_challenge1_authored_hint:
@@ -6107,10 +6131,10 @@
           moving in the right direction?  Pull one from the toolbox.
         courseC_collector_prog7_c: Having trouble seeing a route to collect all of
           the treasure?  Try this path!
-      courseC_collector_prog8_authored_hint: []
-      courseC_collector_prog8_2018_authored_hint: []
-      courseC_collector_prog9_authored_hint: []
-      courseC_collector_prog9_2018_authored_hint: []
+      courseC_collector_prog8_authored_hint: {}
+      courseC_collector_prog8_2018_authored_hint: {}
+      courseC_collector_prog9_authored_hint: {}
+      courseC_collector_prog9_2018_authored_hint: {}
       courseC_collector_progA_authored_hint:
         courseC_collector_progA_a: Try using the "Step" button to go through your
           code line by line.
@@ -6130,7 +6154,7 @@
           til að safna öðrum fjársjóðum.
         courseC_collector_prog_challenge1_b: Lost your way?  Try this path to solve
           the puzzle!
-      courseC_external_events_authored_hint: []
+      courseC_external_events_authored_hint: {}
       courseC_flappy_events1_authored_hint:
         courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
       courseC_flappy_events1_2018_authored_hint:
@@ -6183,18 +6207,18 @@
       courseC_flappy_events9_2018_authored_hint:
         courseC_flappy_events9_a: Tengdu kubbinn `setja stig á 0` við atburðinn `þegar
           rekst á hindrun` til að klára þetta borð.
-      courseC_flappy_events_template_authored_hint: []
-      courseC_flappy_events_template_2018_authored_hint: []
+      courseC_flappy_events_template_authored_hint: {}
+      courseC_flappy_events_template_2018_authored_hint: {}
       courseC_harvester_loops1_authored_hint:
         courseC_harvester_loops1_a: Eftir að þú hefur fært þig á grasker notar þú
           <xml><block type="harvester_pumpkin"/></xml> til að taka það.
         courseC_harvester_loops1_b: Þú getur notað lykkju með kubbnum <xml><block
           type="harvester_pumpkin"/></xml> til að tína fleiri en eitt grasker af sama
           reit.
-      courseC_harvester_loops10_authored_hint: []
-      courseC_harvester_loops10_2018_authored_hint: []
-      courseC_harvester_loops11_authored_hint: []
-      courseC_harvester_loops11_2018_authored_hint: []
+      courseC_harvester_loops10_authored_hint: {}
+      courseC_harvester_loops10_2018_authored_hint: {}
+      courseC_harvester_loops11_authored_hint: {}
+      courseC_harvester_loops11_2018_authored_hint: {}
       courseC_harvester_loops1_2018_authored_hint:
         courseC_harvester_loops1_a: Eftir að þú hefur fært þig á grasker notar þú
           <xml><block type="harvester_pumpkin"/></xml> til að taka það.
@@ -6279,8 +6303,8 @@
           Hreyfingarnar eru svipaðar, mundu bara að safna uppskeru á leiðinni.
         courseC_harvester_loops8_b: Ef þú vilt einfalda kóðann enn meira, getur þú
           reyndar sett eina lykkju innan í aðra! Það er kallað að **falda** lykkju.
-      courseC_harvester_loops9_authored_hint: []
-      courseC_harvester_loops9_2018_authored_hint: []
+      courseC_harvester_loops9_authored_hint: {}
+      courseC_harvester_loops9_2018_authored_hint: {}
       courseC_harvester_loops_challenge1_authored_hint:
         courseC_harvester_loops_challenge1_a: Ekki láta þér detta í hug að reyna þetta
           án þess að nota lykkjur!
@@ -6408,7 +6432,7 @@
           Þetta spíral-mynstur er hægt að kóða með aðeins 18 kubbum!
 
           ![](https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png)
-      courseC_harvester_loops_forVid_authored_hint: []
+      courseC_harvester_loops_forVid_authored_hint: {}
       courseC_maze_debugging1_authored_hint:
         courseC_maze_debugging1_a: |-
           - Does everything work after the first step?
@@ -6428,8 +6452,8 @@
           - Does everything work after the first step?
           - Does it still work after the second?
           - Where does it go wrong?
-        courseC_maze_debugging2_c: Can't figure out what's wrong? Try running the
-          code a couple of times to see what happens.
+        courseC_maze_debugging2_c: Sérðu ekki hvað er að? Prófaðu að keyra kóðann
+          nokkrum sinnum til að sjá hvað gerist.
       courseC_maze_debugging2_2018_authored_hint:
         courseC_maze_debugging2_a: There is a lot of valuable code in the workspace.  Don't
           just delete it all and start over!
@@ -6437,8 +6461,8 @@
           - Does everything work after the first step?
           - Does it still work after the second?
           - Where does it go wrong?
-        courseC_maze_debugging2_c: Can't figure out what's wrong? Try running the
-          code a couple of times to see what happens.
+        courseC_maze_debugging2_c: Sérðu ekki hvað er að? Prófaðu að keyra kóðann
+          nokkrum sinnum til að sjá hvað gerist.
       courseC_maze_debugging3_authored_hint:
         courseC_maze_debugging3_a: |-
           To remove a block, pull the other blocks aside to get to the one you're trying to delete, then drag that one off to the trash.
@@ -6446,8 +6470,8 @@
           Don't forget to put your other blocks back!
 
           ![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)
-        courseC_maze_debugging3_b: Can't figure out what's wrong? Try running the
-          code a couple of times to see what happens.
+        courseC_maze_debugging3_b: Sérðu ekki hvað er að? Prófaðu að keyra kóðann
+          nokkrum sinnum til að sjá hvað gerist.
       courseC_maze_debugging3_2018_authored_hint:
         courseC_maze_debugging3_a: |-
           To delete a block from the middle of your code, drag all of the blocks to another part of the workspace.
@@ -6457,8 +6481,8 @@
           Finally, put your other blocks back where they belong.
 
           ![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)
-        courseC_maze_debugging3_b: Can't figure out what's wrong? Try running the
-          code a couple of times to see what happens.
+        courseC_maze_debugging3_b: Sérðu ekki hvað er að? Prófaðu að keyra kóðann
+          nokkrum sinnum til að sjá hvað gerist.
       courseC_maze_debugging4_authored_hint:
         courseC_maze_debugging4_a: Use the "Step" button to run through the instructions
           one at a time.  Does that help you find the line where things go wrong?
@@ -6526,10 +6550,10 @@
           - What is Skrat supposed to do?
           - What does Skrat do?
           - What does that tell you?
-      courseC_maze_debugging8_predict1_authored_hint: []
-      courseC_maze_debugging8_predict1_2018_authored_hint: []
-      courseC_maze_debugging9_authored_hint: []
-      courseC_maze_debugging9_2018_authored_hint: []
+      courseC_maze_debugging8_predict1_authored_hint: {}
+      courseC_maze_debugging8_predict1_2018_authored_hint: {}
+      courseC_maze_debugging9_authored_hint: {}
+      courseC_maze_debugging9_2018_authored_hint: {}
       courseC_maze_debugging_challenge1_authored_hint:
         courseC_maze_debugging_challenge1_a: Vinstri eða hægri? Þú ræður!
         courseC_maze_debugging_challenge1_b: Slóðin sem Scrat þarf að fara er rétthyrningur!
@@ -6558,9 +6582,9 @@
           Þú getur farið tvær mismunandi slóðir með því að nota bara `færa áfram` og 4 snúninga. Ef þú finnur leið til að nota `endurtaka` kubbinn, gætu slóðirnar verið fleiri!
 
           ![](https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png)
-      courseC_maze_loops10_authored_hint: []
-      courseC_maze_loops10_predict2_authored_hint: []
-      courseC_maze_loops11_authored_hint: []
+      courseC_maze_loops10_authored_hint: {}
+      courseC_maze_loops10_predict2_authored_hint: {}
+      courseC_maze_loops11_authored_hint: {}
       courseC_maze_loops2_authored_hint:
         courseC_maze_loops2_a: You can solve this puzzle with just three blocks, including
           `when run`.
@@ -6735,10 +6759,10 @@
         courseC_maze_programming8_b: Ekki hræðast að gera mistök! Prófaðu að bæta
           við kubbum og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist
           þú ekki hafa klárað lausnina.
-      courseC_maze_programming8_predict1_authored_hint: []
-      courseC_maze_programming8_predict1_2018_authored_hint: []
-      courseC_maze_programming9_authored_hint: []
-      courseC_maze_programming9_2018_authored_hint: []
+      courseC_maze_programming8_predict1_authored_hint: {}
+      courseC_maze_programming8_predict1_2018_authored_hint: {}
+      courseC_maze_programming9_authored_hint: {}
+      courseC_maze_programming9_2018_authored_hint: {}
       courseC_maze_programming_challenge1_authored_hint:
         courseC_maze_programming_challenge1_a: Það eru margar leiðir sem liggja til
           svínsins. Notaðu fingurinn til að rekja slóð og forritaðu hana svo!
@@ -6757,10 +6781,10 @@
         courseC_maze_programming_challenge2_b: 'Stysta lausnin notar aðeins 5 kubba,
           en hún notar þennan kubb: <xml><block type="controls_repeat_dropdown"><title
           name="TIMES" config="3-10">???</title></block></xml>'
-      courseC_playLab_embedded_authored_hint: []
+      courseC_playLab_embedded_authored_hint: {}
       courseC_puppy_loops10_authored_hint:
         courseC_puppy_loops9_1: I need to move two or three time between each turn.
-      courseC_puppy_loops11_authored_hint: []
+      courseC_puppy_loops11_authored_hint: {}
       courseC_puppy_loops8_authored_hint:
         2-3_Maze_Loops_17_a: Try thinking about this problem in small parts. Take
           your time. You don't need to solve it on the first try!
@@ -6802,10 +6826,10 @@
           `endurtaka` lykkju innan í aðra!  \nÞað er kallað **földuð lykkja**."
         courseC_starWars_loops10_c: Ekki óttast að gera mistök! Keyrðu kóðann til
           að sjá hvað gerist þó þú hafir ekki enn leyst þrautina.
-      courseC_starWars_loops10_predict2_authored_hint: []
-      courseC_starWars_loops10_predict2_2018_authored_hint: []
-      courseC_starWars_loops11_authored_hint: []
-      courseC_starWars_loops11_2018_authored_hint: []
+      courseC_starWars_loops10_predict2_authored_hint: {}
+      courseC_starWars_loops10_predict2_2018_authored_hint: {}
+      courseC_starWars_loops11_authored_hint: {}
+      courseC_starWars_loops11_2018_authored_hint: {}
       courseC_starWars_loops1_2018_authored_hint:
         courseC_starWars_loops1_a: Þegar BB-8 fer yfir brotamálm tínir hann brotin
           upp sjálfkrafa.
@@ -6950,6 +6974,42 @@
           Hér eru tvö mismunandi löng snjókorn, teiknuð hvort á eftir öðru (með 30 gráðu snúningi á milli.)
 
           <img src="https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png" width="200px" />
+      courseD_artist_1_2018_authored_hint:
+        courseD_artist_project1_a: "Prófaðu faldaðar lykkjur!\n\nNotaðu kóðann sem
+          þú gerðir til að teikna röð forma og faldaðu hann innan í annarri lykkju.
+          Neðst, áður en ytri lykkjan endar, skaltu svo bæta við kubbi sem lætur Elsu
+          snúa við.  \n\n- Prófaðu 72 gráður ef þú ert að endurtaka ytri lykkjuna
+          5 sinnum\n- Prófaðu 60 gráður ef þú ert að endurtaka ytri lykkjuna 6 sinnum"
+        courseD_artist_project1_b: Mundu að `færa áfram` teiknar línu, en `hoppa fram`
+          gerir það ekki.
+      courseD_artist_2_2018_authored_hint:
+        courseD_artist_project1_b: Remember that `move` draws a line, while `jump`
+          does not.
+        courseD_artist_project1_a: "Prófaðu faldaðar lykkjur!\n\nNotaðu kóðann sem
+          þú gerðir til að teikna röð forma og faldaðu hann innan í annarri lykkju.
+          Neðst, áður en ytri lykkjan endar, skaltu svo bæta við kubbi sem lætur Elsu
+          snúa við.  \n\n- Prófaðu 72 gráður ef þú ert að endurtaka ytri lykkjuna
+          5 sinnum\n- Prófaðu 60 gráður ef þú ert að endurtaka ytri lykkjuna 6 sinnum"
+      courseD_artist_3_2018_authored_hint: {}
+      courseD_artist_4_2018_authored_hint: {}
+      courseD_artist_5_2018_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
+      courseD_artist_6_2018_authored_hint: {}
+      courseD_artist_7_2018_authored_hint:
+        courseD_artist_project2a_a: |
+          Þessi teikning var gerð með því að falda lykkju með 4 tröppum og `snúa hægri 180 gráður` kubbi innan í `endurtaka 2 sinnum` kubbi.
+
+          <img src="https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png" width="200px" />
+      courseD_artist_8_2018_authored_hint:
+        courseD_artist_project3a_a: Þú getur valið um mismunandi mikla snúninga fyrir
+          formið! Hvað með 18 sinnum með 20 gráðu snúningi á milli?
+      courseD_artist_9_2018_authored_hint:
+        courseD_artist_project4a_a: |
+          Hér eru tvö mismunandi löng snjókorn, teiknuð hvort á eftir öðru (með 30 gráðu snúningi á milli.)
+
+          <img src="https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png" width="200px" />
+      courseD_artist_Template_2018_authored_hint: {}
       courseD_artist_binary1_authored_hint:
         courseD_artist_binary1_a: Skiptu út "???" í textakubbnum með tvíundarmynstrinu
           sem þú vilt fá. Notaðu 0 og 1.
@@ -7040,9 +7100,9 @@
           ert með í höndunum.
         courseD_artist_binary8_c: Ekki hræðast að gera mistök! Prófaðu að skrifa tvíundir
           og keyra svo kóðann til að sjá hvað gerist. Prófaðu þig áfram.
-      courseD_artist_binaryFP_authored_hint: []
-      courseD_artist_binaryFP8_authored_hint: []
-      courseD_artist_binaryFP_2018_authored_hint: []
+      courseD_artist_binaryFP_authored_hint: {}
+      courseD_artist_binaryFP8_authored_hint: {}
+      courseD_artist_binaryFP_2018_authored_hint: {}
       courseD_artist_binary_challenge2_authored_hint:
         courseD_artist_binary_challenge2_a: Það eru aðeins nokkrar rangar línur í
           upphaflega forritinu.
@@ -7054,9 +7114,9 @@
           Besta ráðið sem ég hef er að þú ýtir á `byrja aftur` ef þetta er ekki að ganga.
 
           Það eru aðeins nokkrar rangar línur í upphaflega forritinu. Ef ein nálgun virkar ekki, er best að fara til baka og reyna aftur. Það er til lausn!
-      courseD_artist_embed_frozen_authored_hint: []
-      courseD_artist_embed_frozen2_authored_hint: []
-      courseD_artist_embedded_project1a_authored_hint: []
+      courseD_artist_embed_frozen_authored_hint: {}
+      courseD_artist_embed_frozen2_authored_hint: {}
+      courseD_artist_embedded_project1a_authored_hint: {}
       courseD_artist_functions10_authored_hint:
         courseD_artist_functions10_b: This drawing is a lot like the last one, except
           the function draws a different kind of line.
@@ -7113,8 +7173,8 @@
           kubbum í `endurtaka` lykkju. Hvaða kubbar eru það?
         courseD_artist_nestedLoops1_c: Prófaðu að skrifa þrepin á blað og leita að
           endurtekningum sem gætu farið í lykkjur.
-      courseD_artist_nestedLoops10_authored_hint: []
-      courseD_artist_nestedLoops10_2018_authored_hint: []
+      courseD_artist_nestedLoops10_authored_hint: {}
+      courseD_artist_nestedLoops10_2018_authored_hint: {}
       courseD_artist_nestedLoops1_2018_authored_hint:
         courseD_artist_nestedLoops1_a: The easiest way to draw this is to move forward
           and use right turns.
@@ -7297,8 +7357,8 @@
           - teiknaðu þríhyrning
           - hoppaðu áfram 50 díla
           - snúðu til hægri um 45 gráður
-      courseD_artist_nestedLoops9_predict1_authored_hint: []
-      courseD_artist_nestedLoops9_predict1_2018_authored_hint: []
+      courseD_artist_nestedLoops9_predict1_authored_hint: {}
+      courseD_artist_nestedLoops9_predict1_2018_authored_hint: {}
       courseD_artist_nestedLoopsFP_authored_hint:
         courseD_artist_nestedLoopsFP_a: |-
           <img src="https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png" width="200px"/>
@@ -7325,7 +7385,7 @@
           <img src="https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png" width="200px"/>
 
           This image was made using a single nested loop that repeats a pentagon (with 50px sides) 15 times using a 48 degree turn.
-      courseD_artist_nestedLoopsPre1_authored_hint: []
+      courseD_artist_nestedLoopsPre1_authored_hint: {}
       courseD_artist_nestedLoops_challenge1_authored_hint:
         courseD_artist_nestedLoops_challenge1_a: Byrjaðu á að nota faldaða lykkju
           til að búa til fjóra átthyrninga. Snúðu um 45 gráður til teikna átthyrninginn.
@@ -7401,8 +7461,8 @@
           gerir það ekki.
         courseD_artist_project2_b: Eftir að þú teiknar og færir í fyrsta skipti, getur
           þú endurtekið kóðann með því að setja lykkju utan um hann.
-      courseD_artist_project2Template_authored_hint: []
-      courseD_artist_project2Template_2018_authored_hint: []
+      courseD_artist_project2Template_authored_hint: {}
+      courseD_artist_project2Template_2018_authored_hint: {}
       courseD_artist_project2_2018_authored_hint:
         courseD_artist_project2_a: Mundu að `færa áfram` teiknar línu, en `hoppa fram`
           gerir það ekki.
@@ -7490,9 +7550,9 @@
           Raðir með 2 sexhyrningum og 4 þríhyrningum:
 
           <img src="https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png" width="200px" />
-      courseD_artist_projectTemplate_authored_hint: []
-      courseD_artist_projectTemplate_2018_authored_hint: []
-      courseD_artist_project_embedded_authored_hint: []
+      courseD_artist_projectTemplate_authored_hint: {}
+      courseD_artist_projectTemplate_2018_authored_hint: {}
+      courseD_artist_project_embedded_authored_hint: {}
       courseD_artist_ramp11_authored_hint:
         courseD_artist_ramp11a: Teiknaðu hlið með því að nota `færa áfram 100 díla`
           kubbinn og breyta 100 í 200.
@@ -7510,8 +7570,8 @@
       courseD_bee_conditionals1_authored_hint:
         courseD_bee_conditionals1_a: You will need to use an `if` block to check to
           see if there is a flower beneath the cloud before you try to get nectar.
-      courseD_bee_conditionals10_authored_hint: []
-      courseD_bee_conditionals10_2018_authored_hint: []
+      courseD_bee_conditionals10_authored_hint: {}
+      courseD_bee_conditionals10_2018_authored_hint: {}
       courseD_bee_conditionals1_predict1_authored_hint:
         courseD_bee_conditionals1_a: You will need to use an `if` block to check to
           see if there is a flower beneath the cloud before you try to get nectar.
@@ -7720,8 +7780,8 @@
           ![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)
         courseD_bee_conditionals8_hintVid2: Watch this video for help solving this
           puzzle.
-      courseD_bee_conditionals9_authored_hint: []
-      courseD_bee_conditionals9_2018_authored_hint: []
+      courseD_bee_conditionals9_authored_hint: {}
+      courseD_bee_conditionals9_2018_authored_hint: {}
       courseD_bee_conditionals_challenge1_authored_hint:
         courseD_bee_conditionals_challenge1_a: Getur þú fundið leið sem nær til allra
           blóma og býkúpa án þess að lenda á tré? Besta slóðin er spírall.
@@ -7840,7 +7900,7 @@
         courseD_bee_debugging9_c: "Hér má sjá tröppumynstur fyrir leið að blómunum.
           \  \n\n![](https://images.code.org/d3dfd710961b9ff8571816a97d76ae46-image-1501012931437.59.18.png)\n\nGetur
           þú búið til aðra hvora með því sem er á vinnusvæðinu og í verkfærakassanum?\n\n"
-      courseD_bee_debugging9_predict1_authored_hint: []
+      courseD_bee_debugging9_predict1_authored_hint: {}
       courseD_bee_debugging_challenge1_authored_hint:
         courseD_bee_debugging_challenge1_a: Hvers vegna virkar fyrri helmingur þessa
           forrits? Hugsaðu um hvers vegna býflugan þarf að fara aftur á bak. Hvað
@@ -7946,8 +8006,8 @@
           að skrifa kóða á blað og leita að endurtekningum.
         courseD_bee_nestedLoops2_c: Mundu að þú getur sett fleiri en einn kubb inn
           í lykkju.
-      courseD_bee_nestedLoops2_predict1_authored_hint: []
-      courseD_bee_nestedLoops2_predict1_2018_authored_hint: []
+      courseD_bee_nestedLoops2_predict1_authored_hint: {}
+      courseD_bee_nestedLoops2_predict1_2018_authored_hint: {}
       courseD_bee_nestedLoops3_authored_hint:
         grade4_bee_nestedLoops1_a: If you don't understand how to use nested loops
           here, try writing out the instructions step by step on a piece of paper.  Circle
@@ -7959,7 +8019,7 @@
           You will need a nested loop to move forward and get nectar, but only a single loop to collect honey at the end.
 
           Altogether, you should be using 3 loops.
-      courseD_bee_nestedLoops6_authored_hint: []
+      courseD_bee_nestedLoops6_authored_hint: {}
       courseD_bee_nestedLoops6_2018_authored_hint:
         courseD_maze_nestedLoops6_a: If you are stuck, try writing out the code out
           on paper without loops first and look for patterns.
@@ -7995,12 +8055,12 @@
           - get nectar
           - move forward
           - turn right
-      courseD_bee_nestedLoops8_authored_hint: []
-      courseD_bee_nestedLoops8_2018_authored_hint: []
-      courseD_bee_nestedLoops9_authored_hint: []
-      courseD_bee_nestedLoops9_2018_authored_hint: []
-      courseD_bee_nestedLoops9_predict2_authored_hint: []
-      courseD_bee_nestedLoops9_predict2_2018_authored_hint: []
+      courseD_bee_nestedLoops8_authored_hint: {}
+      courseD_bee_nestedLoops8_2018_authored_hint: {}
+      courseD_bee_nestedLoops9_authored_hint: {}
+      courseD_bee_nestedLoops9_2018_authored_hint: {}
+      courseD_bee_nestedLoops9_predict2_authored_hint: {}
+      courseD_bee_nestedLoops9_predict2_2018_authored_hint: {}
       courseD_bee_nested_loops_challenge1_authored_hint:
         courseD_bee_nested_loops_challenge2_a: Ekki gleyma að þú getur `endurtekið`
           eina skipun eða fleiri. Þú getur meira að segja endurtekið `endurtaka` kubb!
@@ -8123,8 +8183,8 @@
       courseD_bounce_events7s_2018_authored_hint:
         courseD_bounce_events7s_a: Þú getur bætt hljóðum við á fleiri stöðum ef þú
           vilt!
-      courseD_bounce_events_template_authored_hint: []
-      courseD_bounce_events_template_2018_authored_hint: []
+      courseD_bounce_events_template_authored_hint: {}
+      courseD_bounce_events_template_2018_authored_hint: {}
       courseD_collector_debugging1_authored_hint:
         courseD_collector_debugging1_a: |-
           Use the "Step" button to see if everything is right at the first step.
@@ -8376,8 +8436,8 @@
           with a loop?
         courseD_collector_debugging8_b: Try using a nested loop to make this code
           shorter.
-      courseD_collector_debugging8a_authored_hint: []
-      courseD_collector_debugging8a_2018_authored_hint: []
+      courseD_collector_debugging8a_authored_hint: {}
+      courseD_collector_debugging8a_2018_authored_hint: {}
       courseD_collector_debugging9_authored_hint:
         courseD_collector_debugging9_a: There are several ways to solve this problem...but
           they all involve turns!
@@ -8388,8 +8448,8 @@
           they all involve turns!
         courseD_collector_debugging9_b: Figure out how you would solve the puzzle,
           then move step-by-step to try to make the code match what is in your head.
-      courseD_collector_debugging9a_authored_hint: []
-      courseD_collector_debugging9a_2018_authored_hint: []
+      courseD_collector_debugging9a_authored_hint: {}
+      courseD_collector_debugging9a_2018_authored_hint: {}
       courseD_collector_debugging_challenge2_authored_hint:
         courseD_collector_debugging_challenge2_a: "Einbeittu þér fyrst að því að safna
           TVEIMUR eðalsteinum úr tveimur fyrstu hrúgunum.\n\n![](https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04
@@ -8679,7 +8739,7 @@
           safna honum. Getur þú endurtekið þessa runu aðgerða til að ná hinni hrúgunni?
         courseD_collector_ramp9_b: Ef þú vilt einfalda kóðann getur þú reyndar sett
           eina lykkju innan í aðra! Það er kallað að **falda** lykkju.
-      courseD_collector_until_challenge1_authored_hint: []
+      courseD_collector_until_challenge1_authored_hint: {}
       courseD_debugging_1_authored_hint:
         courseD_debugging_1_a: |-
           Use the "Step" button to see if everything is right at the first step.
@@ -8734,7 +8794,7 @@
         courseD_debugging_6_b: It looks like all of the right steps are here, you
           just need more of them.  How can you repeat the `get nectar` and `make honey`
           actions multiple times?
-      courseD_external_cond_authored_hint: []
+      courseD_external_cond_authored_hint: {}
       courseD_farmer_condLoops1_authored_hint:
         courseD_farmer_condLoops1_a: You will need to look for corn 5 times, using
           a repeat loop.
@@ -8850,12 +8910,12 @@
           ![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)
         courseD_farmer_condLoops7_b: Try using `when path ahead` to keep the harvester
           moving the right number of steps.
-      courseD_farmer_condLoops8_authored_hint: []
-      courseD_farmer_condLoops8_2018_authored_hint: []
-      courseD_farmer_condLoops9_authored_hint: []
-      courseD_farmer_condLoops9_2018_authored_hint: []
-      courseD_farmer_condLoops9_predict1_authored_hint: []
-      courseD_farmer_condLoops9_predict1_2018_authored_hint: []
+      courseD_farmer_condLoops8_authored_hint: {}
+      courseD_farmer_condLoops8_2018_authored_hint: {}
+      courseD_farmer_condLoops9_authored_hint: {}
+      courseD_farmer_condLoops9_2018_authored_hint: {}
+      courseD_farmer_condLoops9_predict1_authored_hint: {}
+      courseD_farmer_condLoops9_predict1_2018_authored_hint: {}
       courseD_farmer_condLoops_challenge1_authored_hint:
         courseD_farmer_condLoops_challenge1_a: Í þessari áskorun gæti `Þrep` hnappurinn
           reynst gagnlegur.
@@ -8872,8 +8932,8 @@
       courseD_farmer_condLoops_challenge2_2018_authored_hint:
         courseD_farmer_condLoops_challenge2_a: Magn grænmetis í hverjum reit er breytilegt.
           Notaðu þá `meðan` lykkjur.
-      courseD_farmer_condLoops_challenge2_clone_authored_hint: []
-      courseD_farmer_conditionals10_authored_hint: []
+      courseD_farmer_condLoops_challenge2_clone_authored_hint: {}
+      courseD_farmer_conditionals10_authored_hint: {}
       courseD_farmer_conditionals4_authored_hint:
         courseD_farmer_conditionals4_a: Instead of using a `repeat` loop, use a `while`
           loop to keep digging until the pile is gone.
@@ -8895,18 +8955,18 @@
           `while path ahead` before using `while there is a hole`.
         courseD_farmer_conditionals8_c: Notice that you need to repeat the `while
           path ahead`, `while there is a hole` code six times.
-      courseD_farmer_conditionals9_authored_hint: []
-      courseD_farmer_until_challenge2_authored_hint: []
-      courseD_farmer_until_challenge2_2018_authored_hint: []
+      courseD_farmer_conditionals9_authored_hint: {}
+      courseD_farmer_until_challenge2_authored_hint: {}
+      courseD_farmer_until_challenge2_2018_authored_hint: {}
       courseD_farmer_while1_authored_hint:
         courseD_farmer_while1_a: Þú þarft að fara áfram fjórum sinnum til að komast
           að haugnum. Getur þú notað `endurtaka` lykkju til þess?
         courseD_farmer_while1_b: Notaðu `fjarlægja 1` kubb þegar þú stendur á moldarhaug
           til að fjarlægja hann.
-      courseD_farmer_while10_authored_hint: []
-      courseD_farmer_while10_2018_authored_hint: []
-      courseD_farmer_while10_predict2_authored_hint: []
-      courseD_farmer_while10_predict2_2018_authored_hint: []
+      courseD_farmer_while10_authored_hint: {}
+      courseD_farmer_while10_2018_authored_hint: {}
+      courseD_farmer_while10_predict2_authored_hint: {}
+      courseD_farmer_while10_predict2_2018_authored_hint: {}
       courseD_farmer_while1_2018_authored_hint:
         courseD_farmer_while1_a: Þú þarft að fara áfram fjórum sinnum til að komast
           að haugnum. Getur þú notað `endurtaka` lykkju til þess?
@@ -8940,8 +9000,8 @@
           loop to keep digging until the pile is gone.
         courseD_farmer_conditionals4_b: Þetta er mjög líkt fyrri þraut en þú þarft
           að nota öðruvísi lykkju.
-      courseD_farmer_while4_predict1_authored_hint: []
-      courseD_farmer_while4_predict1_2018_authored_hint: []
+      courseD_farmer_while4_predict1_authored_hint: {}
+      courseD_farmer_while4_predict1_2018_authored_hint: {}
       courseD_farmer_while5_authored_hint:
         courseD_farmer_conditionals5a_a: Try nesting a `while` loop inside of a `repeat`
           loop.
@@ -9016,8 +9076,8 @@
           `while path ahead` before using `while there is a hole`.
         courseD_farmer_conditionals8_c: Notice that you need to repeat the `while
           path ahead`, `while there is a hole` code six times.
-      courseD_farmer_while9_authored_hint: []
-      courseD_farmer_while9_2018_authored_hint: []
+      courseD_farmer_while9_authored_hint: {}
+      courseD_farmer_while9_2018_authored_hint: {}
       courseD_farmer_while_challenge1_authored_hint:
         courseD_farmer_while_challenge1_a: Hver hola eða haugur er einum reit **til
           baka** frá enda slóðarinnar.
@@ -9286,10 +9346,10 @@
         courseC_maze_programming5_c: Ekki hræðast að gera mistök! Prófaðu að bæta
           við kubbum og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist
           þú ekki hafa klárað lausnina.
-      courseD_maze_ramp5c_authored_hint: []
-      courseD_maze_ramp5c_2018_authored_hint: []
-      courseD_maze_ramp5d_authored_hint: []
-      courseD_maze_ramp5d_2018_authored_hint: []
+      courseD_maze_ramp5c_authored_hint: {}
+      courseD_maze_ramp5c_2018_authored_hint: {}
+      courseD_maze_ramp5d_authored_hint: {}
+      courseD_maze_ramp5d_2018_authored_hint: {}
       courseD_maze_ramp6_authored_hint:
         courseC_maze_programming6_a: Það eru tvær leiðir til að leysa þessa þraut!
         courseC_maze_programming6_b: Fuglinn snýr að vegg í upphafi svo þú þarft að
@@ -9310,10 +9370,10 @@
         courseD_maze_until1_a: Eru einhverjar kubbaraðir sem þú gætir sett í lykkju
           til að stytta kóðann?
         courseD_maze_until1_b: Prófaðu að nota faldaða lykkju til að leysa þessa þraut.
-      courseD_maze_until10_authored_hint: []
-      courseD_maze_until10_2018_authored_hint: []
-      courseD_maze_until10_predict2_authored_hint: []
-      courseD_maze_until10_predict2_2018_authored_hint: []
+      courseD_maze_until10_authored_hint: {}
+      courseD_maze_until10_2018_authored_hint: {}
+      courseD_maze_until10_predict2_authored_hint: {}
+      courseD_maze_until10_predict2_2018_authored_hint: {}
       courseD_maze_until1_2018_authored_hint:
         courseD_maze_until1_a: Eru einhverjar kubbaraðir sem þú gætir sett í lykkju
           til að stytta kóðann?
@@ -9321,8 +9381,8 @@
       courseD_maze_until2_authored_hint:
         courseD_maze_until2_a: An `until pig` loop will help you keep going until
           you succeed!
-      courseD_maze_until2_predict1_authored_hint: []
-      courseD_maze_until2_predict1_2018_authored_hint: []
+      courseD_maze_until2_predict1_authored_hint: {}
+      courseD_maze_until2_predict1_2018_authored_hint: {}
       courseD_maze_until3_authored_hint:
         courseD_maze_until3_a: |-
           - What does your code do?
@@ -9371,12 +9431,8 @@
         courseD_maze_until5_c: Eftir hvert þrep ætti uppvakningurinn að athuga hvort
           það sé slóð til vinstri. Hvað á hann að gera ef svo er?
       courseD_maze_until5_2018_authored_hint:
-        courseD_maze_until5_a: Don't forget to use `if path to the left` to keep the
-          zombie checking for a place to turn.
         courseD_maze_until5_b: Þú getur notað bara einn `færa áfram` kubb ef þú setur
           hann inn í `endurtaka þar til sólblóm` kubb.
-        courseD_maze_until5_c: Eftir hvert þrep ætti uppvakningurinn að athuga hvort
-          það sé slóð til vinstri. Hvað á hann að gera ef svo er?
       courseD_maze_until6_authored_hint:
         courseD_maze_until6_a: This time, try the `if path to the right` to keep the
           zombie on track.
@@ -9385,12 +9441,8 @@
         courseD_maze_until6_c: Þó að það séu fleiri snúningar nú en í síðustu þraut
           getur þú nú notað nánast sama kóða vegna `endurtaka þar til` kubbsins!
       courseD_maze_until6_2018_authored_hint:
-        courseD_maze_until6_a: This time, try the `if path to the right` to keep the
-          zombie on track.
         courseD_maze_until6_b: Þú getur notað bara einn `færa áfram` kubb ef þú setur
           hann inn í `endurtaka þar til sólblóm` kubb.
-        courseD_maze_until6_c: Þó að það séu fleiri snúningar nú en í síðustu þraut
-          getur þú nú notað nánast sama kóða vegna `endurtaka þar til` kubbsins!
       courseD_maze_until7_authored_hint:
         courseD_maze_until7_a: You don't need your code to be any longer, just because
           the maze is!
@@ -9403,8 +9455,6 @@
           time, just because the maze is!
         courseD_maze_until7_b: Þó að það séu fleiri snúningar nú en í síðustu þraut
           getur þú nú notað nánast sama kóða vegna `endurtaka þar til` kubbsins!
-        courseD_maze_until7_c: Mundu að athuga með slóðir til vinstri, vegna þess
-          að hægri snúningur mun leiða þig á villigötur!
       courseD_maze_until8_authored_hint:
         courseD_maze_until8_a: Make sure you're using an `if/else` block to keep the
           zombie headed the right direction.
@@ -9426,16 +9476,13 @@
         courseD_maze_until8_c: Mundu að nota `endurtaka þar til` kubbinn til að koma
           þér til sólblómsins!
       courseD_maze_until9_2018_authored_hint:
-        courseD_maze_until8_a: Using `if path ahead` will keep you going forward whenever
-          possible, helping you miss the paths with chompers.
-        courseD_maze_until8_b: Í hvaða átt ættir þú að snúa ef það er engin slóð framundan?
         courseD_maze_until8_c: Mundu að nota `endurtaka þar til` kubbinn til að koma
           þér til sólblómsins!
-      courseD_maze_until_challenge_authored_hint: []
-      courseD_maze_until_challenge1-delete-this-copy_authored_hint: []
-      courseD_maze_until_challenge1_authored_hint: []
-      courseD_maze_until_challenge1_2018_authored_hint: []
-      courseD_maze_until_challenge2_authored_hint: []
+      courseD_maze_until_challenge_authored_hint: {}
+      courseD_maze_until_challenge1-delete-this-copy_authored_hint: {}
+      courseD_maze_until_challenge1_authored_hint: {}
+      courseD_maze_until_challenge1_2018_authored_hint: {}
+      courseD_maze_until_challenge2_authored_hint: {}
       courseD_playLab_cond1_authored_hint:
         courseD_playLab_cond1_a: To solve this challenge, attach the `move actor 1
           up` block to the `when up arrow` event, then do the same for every other
@@ -9528,10 +9575,10 @@
         courseD_playLab_cond6_c: Add a `wait 1 second` block to the top of the `repeat
           forever` loop that checks the pirate position (but not inside the `if` statement)
           to keep points from being removed too quickly.
-      courseD_playLab_embed_cond6a_authored_hint: []
-      courseD_playLab_embedded_authored_hint: []
-      courseD_scrat_predict1_authored_hint: []
-      courseD_scrat_predict1_2018_authored_hint: []
+      courseD_playLab_embed_cond6a_authored_hint: {}
+      courseD_playLab_embedded_authored_hint: {}
+      courseD_scrat_predict1_authored_hint: {}
+      courseD_scrat_predict1_2018_authored_hint: {}
       courseD_scrat_ramp1_authored_hint:
         courseC_maze_programming1_a: Ef Skrat er ekki að komast til akornsins, þarftu
           að ganga úr skugga um að allir kubbarnir hafi verið tengdir saman og smella
@@ -9704,7 +9751,7 @@
           <xml>  <block type="jump_to">
           <title name="VALUE">???</title>
           </block></xml>
-      courseE_artist_embed_functions8_authored_hint: []
+      courseE_artist_embed_functions8_authored_hint: {}
       courseE_artist_functions1_authored_hint:
         courseE_artist_functions1_a: Hver ferningur hefur 100 díla hliðar. Það þýðir
           að þú þarft að fara áfram um 175 díla áður en þú teiknar næsta ferning.
@@ -9768,13 +9815,7 @@
           If you can't remember what the starter code was, click "start over" in the upper right corner of the workspace.
         courseD_artist_functions3_b: Lykkjan þín ætti að innihalda alla 3 kubbana
           sem byrjað er með.
-      courseE_artist_functions3_2018_authored_hint:
-        courseD_artist_functions3_a: |-
-          To solve this puzzle, you just need to add a  loop that repeats the starter code 8 times.
-
-          If you can't remember what the starter code was, click "start over" in the upper right corner of the workspace.
-        courseD_artist_functions3_b: Lykkjan þín ætti að innihalda alla 3 kubbana
-          sem byrjað er með.
+      courseE_artist_functions3_2018_authored_hint: {}
       courseE_artist_functions4_authored_hint:
         courseD_artist_functions4_a: Try using a function!
         courseD_artist_functions4_b: Dragðu kubbinn fyrir `teikna stjörnu` fallið
@@ -9871,6 +9912,25 @@
         courseD_artist_functions8_c: At the end of each line of squares, the artist
           will need to jump down and backward before he draws the next line of squares.
         courseD_artist_functions8_g: "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
+      courseE_artist_functions8a_2018_authored_hint: {}
+      courseE_artist_functions8b_2018_authored_hint:
+        courseD_artist_functions8_f: You only need one `move forward` block if you're
+          doing this correctly!
+        courseD_artist_functions8_a: Start by making a function for a square, then
+          try making a function for a line of squares.
+        courseD_artist_functions8_d: |-
+          To make a line of squares,
+          - repeat 3 times
+          - draw a square
+          - jump forward **100 pixels**
+      courseE_artist_functions8c_2018_authored_hint:
+        courseD_artist_functions8_f: This is easier than it looks!  You shouldn't
+          need any `move` or `jump` blocks here!
+        courseD_artist_functions8_a: The second line of squares is just a 180 degree
+          turn different than the first!
+        courseD_artist_functions8_c: At the end of each line of squares, the artist
+          only needs to turn 180 degrees before drawing the next line of squares.  Put
+          the whole thing in a repeat loop to set you up for the next exercise!
       courseE_artist_functions9_authored_hint:
         courseD_artist_functions9_e: |-
           Sérðu alla fjóra staðina þar sem fallið `röð þríhyrninga` gæti nýst í þessari teikningu?
@@ -9921,6 +9981,7 @@
           - snúa 120 gráður
           - teikna röð þríhyrninga
           - snúa 60 gráður
+      courseE_artist_functionsProj_2018_authored_hint: {}
       courseE_artist_functions_challenge_authored_hint:
         courseE_artist_functions_challenge_a: Ef þú kallar á fallið einu sinni enn,
           getur þú búið til þessa sömu hönnun í síðasta horninu. Þú getur líka `hoppað`
@@ -9953,12 +10014,12 @@
           tiltekinn díl mælt frá vinstri og tiltekinn díl mælt ofan frá. Staðurinn
           er því alltaf mældur frá efra vinstra horninu, svo það skiptir ekki máli
           hvar uppvakningurinn er *áður* en skipunin er keyrð!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
-      courseE_artist_functions_predict1_authored_hint: []
-      courseE_artist_functions_predict1_2018_authored_hint: []
-      courseE_artist_functions_predict2_authored_hint: []
-      courseE_artist_functions_predict2_2018_authored_hint: []
-      courseE_artist_predict1_authored_hint: []
-      courseE_artist_predict1_2018_authored_hint: []
+      courseE_artist_functions_predict1_authored_hint: {}
+      courseE_artist_functions_predict1_2018_authored_hint: {}
+      courseE_artist_functions_predict2_authored_hint: {}
+      courseE_artist_functions_predict2_2018_authored_hint: {}
+      courseE_artist_predict1_authored_hint: {}
+      courseE_artist_predict1_2018_authored_hint: {}
       courseE_artist_ramp10_authored_hint:
         courseD_artist_ramp10_a: Ekki gleyma að snúa um 60 gráður eftir hvern þríhyrning.
           Í hvaða lykkju þarft þú að setja þá skipun?
@@ -10294,6 +10355,14 @@
           reit. Gættu þess að nota `meðan` lykkjur til að ná þeim öllum!
         courseE_bee_ramp14_c: Þessi þraut er næstum alveg eins og sú fyrri nema í
           stað grænmetis kemur nú hunang og blómasafi.
+      courseE_bee_ramp14_2018_authored_hint:
+        courseE_bee_ramp14_a: Býflugan virkar alveg eins og bóndinn í síðustu þraut.
+          Láttu hana fljúga eftir slóðinni og safna blómasafa ef hann finnst (>0)
+          og búa til allt hunangið.
+        courseE_bee_ramp14_b: Það getur verið fleiri en eitt blóm eða býkúpa á hverjum
+          reit. Gættu þess að nota `meðan` lykkjur til að ná þeim öllum!
+        courseE_bee_ramp14_c: Þessi þraut er næstum alveg eins og sú fyrri nema í
+          stað grænmetis kemur nú hunang og blómasafi.
       courseE_bee_ramp17_authored_hint:
         courseE_bee_ramp17_a: Við höfum ekki `endurtaka` kubb til að gera eitthvað
           tiltekið oft, svo hvaða kubb getum við þá notað til að færa okkur eftir
@@ -10365,7 +10434,8 @@
           með.
         courseE_farmer_functions1_b: Þú þarft aðeins að tína eitt grasker, en gætir
           þú notað lykkju til að komast þangað?
-      courseE_farmer_functions10_authored_hint: []
+      courseE_farmer_functions10_authored_hint: {}
+      courseE_farmer_functions10a1_2018_authored_hint: {}
       courseE_farmer_functions10b_authored_hint:
         courseE_farmer_functions10b_a: Fyrst verður þú að endurskapa fallið þitt.
         courseE_farmer_functions10b_b: Í hvað átt ættir þú að snúa eftir fyrsta graskerið?
@@ -10376,8 +10446,9 @@
         courseE_farmer_functions10b_b: Í hvað átt ættir þú að snúa eftir fyrsta graskerið?
         courseE_farmer_functions10b_c: Kíktu til baka á síðustu þraut ef þú þarft
           hjálp við gerð fallsins.
-      courseE_farmer_functions11_predict_authored_hint: []
-      courseE_farmer_functions11_predict_2018_authored_hint: []
+      courseE_farmer_functions11_predict_authored_hint: {}
+      courseE_farmer_functions11_predict_2018_authored_hint: {}
+      courseE_farmer_functions13_2018_authored_hint: {}
       courseE_farmer_functions1_2018_authored_hint:
         courseE_farmer_functions1_a: Verkfærakassinn er með svolítið öðru skipulagi
           í þetta sinn! Smelltu á hina ýmsu flokka til að kanna hvaða kubba þú ert
@@ -10394,8 +10465,8 @@
           by step. What should you do if you are standing at a corn plant?
         courseE_farmer_functions1a_b: Notaðu `endurtaka þar til` kubb til að komast
           til graskersins!
-      courseE_farmer_functions2a_authored_hint: []
-      courseE_farmer_functions2aALT_authored_hint: []
+      courseE_farmer_functions2a_authored_hint: {}
+      courseE_farmer_functions2aALT_authored_hint: {}
       courseE_farmer_functions2b_authored_hint:
         courseE_farmer_functions2b_a: Þú getur notað `endurtaka þar til grasker` til
           að komast á enda slóðanna tveggja.
@@ -10418,8 +10489,6 @@
       courseE_farmer_functions2ba_2018_authored_hint:
         courseE_farmer_functions2ba_a: Notaðu græna `maís og grasker` kubbinn til
           að kalla á þetta fall.
-        courseE_farmer_functions2ba_b: Dragðu alla kubbana í verkfærakassanum saman
-          undir `þegar keyrt` til að sjá hvernig þetta fall virkar.
       courseE_farmer_functions3_authored_hint:
         courseE_farmer_functions3_a: Try using a `while path ahead` loop to get you
           where you need to be.
@@ -10431,11 +10500,8 @@
           Getur þú dregið þá kubba inn í fallið?
         courseE_farmer_functions3c_b: Ekki gleyma að kalla á fallið á þeim stöðum
           í aðalforritinu sem kubbar voru fjarlægðir úr.
-      courseE_farmer_functions3c_2018_authored_hint:
-        courseE_farmer_functions3c_a: Hvaða röð er oft endurtekin í þessu forriti?
-          Getur þú dregið þá kubba inn í fallið?
-        courseE_farmer_functions3c_b: Ekki gleyma að kalla á fallið á þeim stöðum
-          í aðalforritinu sem kubbar voru fjarlægðir úr.
+      courseE_farmer_functions3c1_2018_authored_hint: {}
+      courseE_farmer_functions3c_2018_authored_hint: {}
       courseE_farmer_functions4_authored_hint:
         courseE_farmer_functions4_a: Drag all of the code out of your `repeat` loop
           and into the `go get pumpkins` function.
@@ -10455,8 +10521,8 @@
         courseE_farmer_functions4b_b: Mundu að snúa eftir hverja slóð.
         courseE_farmer_functions4b_c: Grænu `maís og grasker` kubbarnir eru undir
           Föll í verkfærakassanum.
-      courseE_farmer_functions5_authored_hint: []
-      courseE_farmer_functions5a_authored_hint: []
+      courseE_farmer_functions5_authored_hint: {}
+      courseE_farmer_functions5a_authored_hint: {}
       courseE_farmer_functions5b_authored_hint:
         courseE_farmer_functions5b_a: You will need to use a `while corn` loop, a
           `while lettuce` and a `while pumpkin` to make sure you get everything.
@@ -10472,8 +10538,8 @@
         courseE_farmer_functions5c_b: Ekki hræðast að gera mistök! Prófaðu að bæta
           við kubbum og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist
           þú ekki hafa klárað lausnina.
-      courseE_farmer_functions6_authored_hint: []
-      courseE_farmer_functions6b_authored_hint: []
+      courseE_farmer_functions6_authored_hint: {}
+      courseE_farmer_functions6b_authored_hint: {}
       courseE_farmer_functions6c_authored_hint:
         courseE_farmer_functions6c_a: Breyttu fallinu svo að það athugi líka með kál.
         courseE_farmer_functions6c_b: Mundi `ef/annars` kubbur hjálpa við að athuga
@@ -10484,7 +10550,8 @@
         courseE_farmer_functions6c_b: Mundi `ef/annars` kubbur hjálpa við að athuga
           hvort það sé kál í reit?
         courseE_farmer_functions6c_c: Ekki gleyma að halda áfram að athuga með maís!
-      courseE_farmer_functions7_authored_hint: []
+      courseE_farmer_functions7_authored_hint: {}
+      courseE_farmer_functions7a1_2018_authored_hint: {}
       courseE_farmer_functions7b_authored_hint:
         courseE_farmer_functions7b_a: Þú þarft ekki fall hér, en þú getur búið eitt
           til ef það er gagnlegt!
@@ -10502,6 +10569,7 @@
       courseE_farmer_functions8_authored_hint:
         courseE_farmer_functions8_a: Create a function that takes the farmer to the
           corn, gets all of the corn, then turns around and comes back.
+      courseE_farmer_functions8a1_2018_authored_hint: {}
       courseE_farmer_functions8b_authored_hint:
         courseE_farmer_functions8b_a: Prófaðu að keyra gefna kóðann til að sjá hvað
           hann gerir. Hvað þarftu eftir þetta?
@@ -10517,6 +10585,7 @@
       courseE_farmer_functions9_authored_hint:
         courseE_farmer_functions8_a: Create a function that takes the farmer to the
           corn, gets all of the corn, then turns around and comes back.
+      courseE_farmer_functions9a1_2018_authored_hint: {}
       courseE_farmer_functions9b_authored_hint:
         courseE_farmer_functions9b_a: Getur þú notað faldaðar `ef` og `ef/annars`
           yrðingar til komast eftir slóðinni?
@@ -10531,12 +10600,17 @@
           um allar slóðirnar.
         courseE_farmer_functions9b_c: Þú munt þurfa að fara eftir slóðunum eins og
           ef þær væru ferningar sem stækka eftir hverja umferð lykkjunnar.
-      courseE_farmer_functions9b_clone_authored_hint: []
+      courseE_farmer_functions9b_clone_authored_hint: {}
       courseE_farmer_predict1_authored_hint:
         courseE_farmer_ramp12a: Ekki hika við að fara aftur í síðustu þraut ef þú
           þarft að rifja upp hvernig á að uppskera aðeins á **meðan** það er einhver
           afurð að uppskera.
-      courseE_farmer_predict2_authored_hint: []
+      courseE_farmer_predict1_2018_authored_hint:
+        courseE_farmer_ramp12a: Ekki hika við að fara aftur í síðustu þraut ef þú
+          þarft að rifja upp hvernig á að uppskera aðeins á **meðan** það er einhver
+          afurð að uppskera.
+      courseE_farmer_predict2_authored_hint: {}
+      courseE_farmer_predict2_2018_authored_hint: {}
       courseE_farmer_ramp11_authored_hint:
         courseE_farmer_ramp11_a: Ef þú átt erfitt með að sjá hvar lykkjur ættu að
           vera, er ráð að forrita öll skrefin í röð og leita svo að endurtekningum.
@@ -10566,6 +10640,9 @@
       courseE_farmer_ramp12_authored_hint:
         courseE_farmer_ramp12_b: Þú þarft samt enn að nota `endurtaka` lykkju utan
           um allt til að segja bóndanum hve oft á að fara áfram og ná í kál.
+      courseE_farmer_ramp12_2018_authored_hint:
+        courseE_farmer_ramp12_b: Þú þarft samt enn að nota `endurtaka` lykkju utan
+          um allt til að segja bóndanum hve oft á að fara áfram og ná í kál.
       courseE_farmer_ramp12_forswap_authored_hint:
         courseE_farmer_ramp12_b: Þú þarft samt enn að nota `endurtaka` lykkju utan
           um allt til að segja bóndanum hve oft á að fara áfram og ná í kál.
@@ -10580,8 +10657,16 @@
           hafa klárað lausnina.
         courseE_farmer_ramp12d: Það er ekkert nema kál svo þú þarft ekki hafa áhyggjur
           af tómum reitum, maís eða graskerjum.
-      courseE_farmer_ramp12b_authored_hint: []
-      courseE_farmer_ramp12b_2018_authored_hint: []
+      courseE_farmer_ramp12a_2018_authored_hint:
+        courseE_farmer_ramp12b: Þú þarft að athuga `ef/annars` yrðinguna í 21 skipti
+          til að leysa þessa þraut.
+        courseE_farmer_ramp12c: Ekki hræðast að gera mistök! Prófaðu að bæta við kubbum
+          og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist þú ekki
+          hafa klárað lausnina.
+        courseE_farmer_ramp12d: Það er ekkert nema kál svo þú þarft ekki hafa áhyggjur
+          af tómum reitum, maís eða graskerjum.
+      courseE_farmer_ramp12b_authored_hint: {}
+      courseE_farmer_ramp12b_2018_authored_hint: {}
       courseE_farmer_ramp12c_authored_hint:
         courseE_farmer_ramp12b_b: Þú munt samt þurfa að nota `þar til` lykkju fyrst
           og síðan nota `meðan` lykkju við kálið.
@@ -10619,7 +10704,21 @@
           skrifa `ef` yrðingu fyrir hvern reit.
         courseE_farmer_ramp13_c: If you can't figure out where to put the loops, try
           writing your code step-by-step and look for patterns.
+      courseE_farmer_ramp13_2018_authored_hint:
+        courseE_farmer_ramp13_a: Það getur verið meira en 1 af uppskeru í reit, svo
+          að þú verður að nota `meðan` lykkju til að safna henni allri!
+        courseE_farmer_ramp13_b: Notaðu `endurtaka` lykkju svo að þú þurfir ekki að
+          skrifa `ef` yrðingu fyrir hvern reit.
+        courseE_farmer_ramp13_c: If you can't figure out where to put the loops, try
+          writing your code step-by-step and look for patterns.
       courseE_farmer_ramp15_authored_hint:
+        courseE_farmer_ramp15_a: Notaðu `endurtaka þar til grasker` til að komast
+          á enda slóðarinnar.
+        courseE_farmer_ramp15_b: Hvað annað þarf að gera þegar farið er eftir slóðinni
+          í átt að graskerinu?
+        courseE_farmer_ramp15_c: Sprotarnir fela mismunandi magn af annað hvort maís
+          eða káli sem þú þarft að uppskera á leiðinni til graskersins.
+      courseE_farmer_ramp15_2018_authored_hint:
         courseE_farmer_ramp15_a: Notaðu `endurtaka þar til grasker` til að komast
           á enda slóðarinnar.
         courseE_farmer_ramp15_b: Hvað annað þarf að gera þegar farið er eftir slóðinni
@@ -10634,8 +10733,8 @@
           ekkert?
         courseE_farmer_ramp16_c: Notaðu `ef/annars` kubb til að halda ferðinni áfram.
           Hvert þarftu að snúa ef það er engin slóð framundan?
-      courseE_maze_predict1_authored_hint: []
-      courseE_maze_predict1_2018_authored_hint: []
+      courseE_maze_predict1_authored_hint: {}
+      courseE_maze_predict1_2018_authored_hint: {}
       courseE_maze_ramp1_authored_hint:
         courseC_maze_programming1_0: If the bird isn't getting to the pig, make sure
           all three of the blocks have been fully clicked together, then click "Run"
@@ -10741,7 +10840,7 @@
         courseD_maze_ramp7_c: Ekki hræðast að gera mistök! Prófaðu að bæta við kubbum
           og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist þú ekki
           hafa klárað lausnina.
-      courseE_maze_ramp_predict1_authored_hint: []
+      courseE_maze_ramp_predict1_authored_hint: {}
       courseE_multi_maze_ramp5_authored_hint:
         courseC_maze_programming5_a: Try using the "Step" button to run your code
           line by line. Can you figure out what you need to do next?
@@ -10781,7 +10880,7 @@
           * Látið risaeðluna segja eitthvað.
           * Skipt um bakgrunn.
           * Látið alla leikmenn hverfa og birt skilaboðin "Leik lokið!"
-      courseE_playLab_embed_scaffold5_authored_hint: []
+      courseE_playLab_embed_scaffold5_authored_hint: {}
       courseE_playLab_scaffold1_authored_hint:
         courseE_playLab_scaffold1_a: Kubburinn `stilla leikmann 1 á ??? mynd` er notaður
           til að bæta leikmanni á sviðið.
@@ -10810,8 +10909,8 @@
           með hreyfingu í tiltekna stefnu undir hverjum þeirra.
         courseE_playLab_scaffold1_c: Þegar þetta er tilbúið ættir þú að geta hreyft
           hetjuna þína með örvarlyklunum!
-      courseE_playLab_scaffold3_authored_hint: []
-      courseE_playLab_scaffold3_2018_authored_hint: []
+      courseE_playLab_scaffold3_authored_hint: {}
+      courseE_playLab_scaffold3_2018_authored_hint: {}
       courseE_playLab_scaffold4_authored_hint:
         courseE_playLab_scaffold4_a: Notaðu `skora stig` til að bæta við stigi og
           `fjarlægja stig` til að draga stig frá.
@@ -10978,8 +11077,8 @@
           koma þessari þraut í rétt horf. '
         iceage_warn_ice_age_b: Bættu báðum nýju kubbunum neðan við `þegar keyrt` atburðinn
           til að láta þá gerast strax í upphafi forritsins.
-      courseF_IceAge_template_authored_hint: []
-      courseF_artist_embed_for7_authored_hint: []
+      courseF_IceAge_template_authored_hint: {}
+      courseF_artist_embed_for7_authored_hint: {}
       courseF_artist_for1_authored_hint:
         courseF_artist_for1_a: |-
           Can you draw something like this:
@@ -11161,8 +11260,8 @@
           </next>
           </block>
           </xml>
-      courseF_artist_for10_predict1_authored_hint: []
-      courseF_artist_for10_predict1_2018_authored_hint: []
+      courseF_artist_for10_predict1_authored_hint: {}
+      courseF_artist_for10_predict1_2018_authored_hint: {}
       courseF_artist_for1_2018_authored_hint:
         courseF_artist_for1_a: |-
           Can you draw something like this:
@@ -11690,8 +11789,8 @@
           inside your `move forward` block!
         courseF_artist_fwp2_b: When calling your function, use a `for loop` for the
           best possible code!
-      courseF_artist_fwp2_predict1_authored_hint: []
-      courseF_artist_fwp2_predict1_2018_authored_hint: []
+      courseF_artist_fwp2_predict1_authored_hint: {}
+      courseF_artist_fwp2_predict1_2018_authored_hint: {}
       courseF_artist_fwp3_authored_hint:
         courseF_artist_fwp3_a: This gets easier if you put it all in a `for` loop.
         courseF_artist_fwp3_b: |-
@@ -11807,8 +11906,19 @@
           **Lausn:**
 
           ![Solution Blocks](https://images.code.org/a82cfea836b95ce6625b08afcc3b7b37-image-1469727289590.png)
-      courseF_artist_predict1_authored_hint: []
+      courseF_artist_predict1_authored_hint: {}
+      courseF_artist_predict1_2018_authored_hint: {}
       courseF_artist_ramp10_authored_hint:
+        courseF_artist_ramp10_a: Ekki gleyma að snúa um 60 gráður eftir hvern þríhyrning.
+          Í hvaða lykkju þarft þú að setja þá skipun?
+        courseF_artist_ramp10_b: Ef kóðinn þinn fyrir þríhyrning er inni í <xml><block
+          type="controls_repeat"><title name="TIMES">6</title></block></xml> lykkju,
+          verður þetta verkefni mun auðveldara.
+        courseF_artist_ramp10_c: |-
+          Þú átt að teikna sex þríhyrninga í allt til að fá þessa mynd:
+
+          ![](https://images.code.org/bc62bed22e90d35e420b0a116ac487ef-image-1500347536221.2_solution2.gif)
+      courseF_artist_ramp10_2018_authored_hint:
         courseF_artist_ramp10_a: Ekki gleyma að snúa um 60 gráður eftir hvern þríhyrning.
           Í hvaða lykkju þarft þú að setja þá skipun?
         courseF_artist_ramp10_b: Ef kóðinn þinn fyrir þríhyrning er inni í <xml><block
@@ -11827,7 +11937,23 @@
           Ekki gleyma að snúa á eftir!
         courseF_artist_ramp8_c: Snúningurinn fer líka inn í <xml><block type="controls_repeat"><title
           name="TIMES">3</title></block></xml> lykkjuna.
+      courseF_artist_ramp8_2018_authored_hint:
+        courseF_artist_ramp8_a: Teiknaðu hlið með því að nota `færa áfram 100 díla`
+          kubbinn og breyta 100 í 200.
+        courseF_artist_ramp8_b: |-
+          Teiknaðu 4 hliðar með því að setja `færa áfram um 100 díla` kubb innan í `endurtaka` lykkju og gæta þess að lykkjan teikni 4 sinnum.
+
+          Ekki gleyma að snúa á eftir!
+        courseF_artist_ramp8_c: Snúningurinn fer líka inn í <xml><block type="controls_repeat"><title
+          name="TIMES">3</title></block></xml> lykkjuna.
       courseF_artist_ramp9_authored_hint:
+        courseF_artist_ramp9_a: Hvernig líkist þetta ferningi? Hvernig er þetta ólíkt?
+        courseF_artist_ramp9_b: Þú getur notað fellilistann á `snúa` kubbunum til
+          að sjá hvaða horn þú þarft að nota!
+        courseF_artist_ramp9_c: Þú munt vilja fara áfram um 100 díla, og snúa svo
+          til hægri um 120 gráður fyrir hverja hlið. Getur þú notað <xml><block type="controls_repeat"><title
+          name="TIMES">3</title></block></xml> lykkju til að stytta kóðann?
+      courseF_artist_ramp9_2018_authored_hint:
         courseF_artist_ramp9_a: Hvernig líkist þetta ferningi? Hvernig er þetta ólíkt?
         courseF_artist_ramp9_b: Þú getur notað fellilistann á `snúa` kubbunum til
           að sjá hvaða horn þú þarft að nota!
@@ -12382,8 +12508,8 @@
           reitur hafi blómasafa eða hunang.
         courseF_bee_conditionals10_c: Gæti `meðan` lykkja hjálpað þér að komast á
           enda þessarar slóðar?
-      courseF_bee_conditionals1_predict1_authored_hint: []
-      courseF_bee_conditionals1_predict1_2018_authored_hint: []
+      courseF_bee_conditionals1_predict1_authored_hint: {}
+      courseF_bee_conditionals1_predict1_2018_authored_hint: {}
       courseF_bee_conditionals2_authored_hint:
         courseF_bee_conditionals2_a: Sometimes a flower will be there, sometimes it
           won't.  If you want your code to run in both cases, make sure to use an
@@ -12458,8 +12584,8 @@
         courseF_bee_conditionals5_d: Til að halda áfram eftir slóðinni þarf býflugan
           að `fara áfram` Á slóðinni þarf býflugan að athuga hvort þar sé blóm. Hvað
           á hún að gera ef það er blóm?
-      courseF_bee_conditionals7_predict2_authored_hint: []
-      courseF_bee_conditionals7_predict2_2018_authored_hint: []
+      courseF_bee_conditionals7_predict2_authored_hint: {}
+      courseF_bee_conditionals7_predict2_2018_authored_hint: {}
       courseF_bee_conditionals8_authored_hint:
         courseF_bee_conditionals8_a: "**Mundu:** Þessi þraut breytist í hvert sinn
           sem hún er keyrð. \n\nÞú þarft að nota skilyrðiskubb (`ef` eða `ef/annars`)
@@ -12533,8 +12659,8 @@
           nectar is gathered to solve this puzzle. '
         courseF_bee_for3_b: Your `for` loop will need to count from 1 to 5 with an
           increment of 1.
-      courseF_bee_for3_predict1_authored_hint: []
-      courseF_bee_for3_predict1_2018_authored_hint: []
+      courseF_bee_for3_predict1_authored_hint: {}
+      courseF_bee_for3_predict1_2018_authored_hint: {}
       courseF_bee_for4_authored_hint:
         courseF_bee_for4_a: Use a `for` loop that goes from 1 to 7 with an increment
           of 1 to solve this puzzle.
@@ -12623,8 +12749,8 @@
           of each loop iteration if you want to solve the puzzle.
         courseF_bee_for9_b: "**Remember:** If your loop is counting up, the increment
           is added to your `counter` variable each time through."
-      courseF_bee_for_challenge1_authored_hint: []
-      courseF_bee_for_challenge1_2018_authored_hint: []
+      courseF_bee_for_challenge1_authored_hint: {}
+      courseF_bee_for_challenge1_2018_authored_hint: {}
       courseF_bee_for_challenge2_authored_hint:
         courseF_bee_for_challenge2_a: "Skoðaðu þennan valkost varðandi hreyfingu:
           \  \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
@@ -12903,7 +13029,7 @@
         courseF_bee_functions7_a: "Ef þrautin virðist erfið, er ráð að byggja upp
           fallið í minni áföngum. \n\nSettu inn kubba og prófaðu. Bættu svo fleirum
           við og prófaðu aftur. Þetta heppnast áður en þú veist!"
-        courseF_bee_functions7_b: |-
+        courseF_bee_functions7_b: |
           Mundu að smíða kóðann innan í græna fallkubbnum.
 
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
@@ -12919,6 +13045,9 @@
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
         courseF_bee_functions7_c: Í hvaða átt ættir þú að snúa ef það býkúpa? En ef
           það er blóm? En ef það er ekki neitt?
+      courseF_bee_functions_1_2018_authored_hint: {}
+      courseF_bee_functions_2_2018_authored_hint: {}
+      courseF_bee_functions_3_2018_authored_hint: {}
       courseF_bee_functions_challenge1_authored_hint:
         courseF_bee_functions_challenge1_a: Þú getur notað föllin í verkfærakassanum
           til að hjálpa þér. Þú getur kallað á fall innan í skilgreiningu annars falls!
@@ -13248,9 +13377,9 @@
         courseF_bee_fwp8_a: Hvernig gæti `frá` lykkja hjálpað í þessari þraut?
         courseF_bee_fwp8_b: Þar sem spírallinn minnkar eftir því sem innan dregur,
           ætti `frá` lykkjan þín að telja niður.
-      courseF_bee_fwp9_authored_hint: []
-      courseF_bee_fwp9_predict1_authored_hint: []
-      courseF_bee_fwp9_predict1_2018_authored_hint: []
+      courseF_bee_fwp9_authored_hint: {}
+      courseF_bee_fwp9_predict1_authored_hint: {}
+      courseF_bee_fwp9_predict1_2018_authored_hint: {}
       courseF_bee_fwp_challenge1_authored_hint:
         courseF_bee_fwp_challenge1_a: |-
           Aðalforritið ætti líta út einhvern veginn svona:
@@ -13919,6 +14048,14 @@
           </block>
           </next>
           </block></xml>
+      courseF_bee_variables_1_2018_authored_hint: {}
+      courseF_bee_variables_2_2018_authored_hint: {}
+      courseF_bee_variables_3_2018_authored_hint: {}
+      courseF_bee_variables_4_2018_authored_hint: {}
+      courseF_bee_variables_5_2018_authored_hint: {}
+      courseF_bee_variables_6_2018_authored_hint: {}
+      courseF_bee_variables_7_2018_authored_hint: {}
+      courseF_bee_variables_8_2018_authored_hint: {}
       courseF_farmer_ramp11_authored_hint:
         courseF_farmer_ramp11_a: Ef þú átt erfitt með að sjá hvar lykkjur ættu að
           vera, er ráð að forrita öll skrefin í röð og leita svo að endurtekningum.
@@ -13927,7 +14064,15 @@
         courseF_farmer_ramp11_c: Þú þarft ekki að nota 5 `endurtaka` lykkjur til að
           ná öllu kálinu. Dragðu heldur lykkjuna sem tínir kálið inn í aðra endurtekningarlykkju
           (ásamt `færa áfram` kubbi) og málið er leyst!
-      courseF_maze_predict1_authored_hint: []
+      courseF_farmer_ramp11_2018_authored_hint:
+        courseF_farmer_ramp11_a: Ef þú átt erfitt með að sjá hvar lykkjur ættu að
+          vera, er ráð að forrita öll skrefin í röð og leita svo að endurtekningum.
+        courseF_farmer_ramp11_b: Hvernig getur þú notað `endurtaka` lykkju til að
+          tína kál í stað þess að nota 5 `tína kál` kubba?
+        courseF_farmer_ramp11_c: Þú þarft ekki að nota 5 `endurtaka` lykkjur til að
+          ná öllu kálinu. Dragðu heldur lykkjuna sem tínir kálið inn í aðra endurtekningarlykkju
+          (ásamt `færa áfram` kubbi) og málið er leyst!
+      courseF_maze_predict1_authored_hint: {}
       courseF_maze_ramp1_authored_hint:
         courseF_maze_ramp1_a: Ef fuglinn er ekki að komast til svínsins, þarftu að
           ganga úr skugga um að allir kubbarnir hafi verið tengdir saman og smella
@@ -13950,7 +14095,19 @@
           block by block and look for errors.
         courseF_maze_ramp7_a: Notaðu `endurtaka` lykkjur til að keyra stakan kubb
           eða stæðu af kubbum aftur og aftur.
+      courseF_maze_ramp1_2018_authored_hint:
+        courseF_maze_ramp1_a: Ef fuglinn er ekki að komast til svínsins, þarftu að
+          ganga úr skugga um að allir kubbarnir hafi verið tengdir saman og smella
+          svo aftur á "Keyra".
+        courseF_maze_ramp1_b: Þú þarft ekki neina fleiri kubba úr verkfærakassanum
+          hér!
       courseF_maze_ramp2_authored_hint:
+        courseF_maze_ramp2_a: Þú notar þennan nýja kubb með því að draga hann út á
+          vinnusvæðið og tengja hann við forritið sem er tengt við <xml><block type="when_run"/></xml>
+          kubbinn.
+        courseF_maze_ramp2_b: Gættu þess að <xml><block type="maze_moveForward"/></xml>
+          kubburinn sé innan í lykkjunni svo hann verði endurtekinn.
+      courseF_maze_ramp2_2018_authored_hint:
         courseF_maze_ramp2_a: Þú notar þennan nýja kubb með því að draga hann út á
           vinnusvæðið og tengja hann við forritið sem er tengt við <xml><block type="when_run"/></xml>
           kubbinn.
@@ -13965,13 +14122,35 @@
         courseF_maze_ramp4_c: Ekki hræðast að gera mistök! Prófaðu að bæta við kubbum
           og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist þú ekki
           hafa klárað lausnina.
+      courseF_maze_ramp4_2018_authored_hint:
+        courseF_maze_ramp4_a: You can turn right or left from the bird's point of
+          view. If you are facing right, turning right will make you point downwards.
+        courseF_maze_ramp4_b: Fylgdu slóðinni með því að fara áfram og snúa í eina
+          átt, síðan fara áfram þrisvar sinnum áður en þú snýrð í öfuga átt. Farðu
+          áfram einu sinni enn til að ná svíninu.
+        courseF_maze_ramp4_c: Ekki hræðast að gera mistök! Prófaðu að bæta við kubbum
+          og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist þú ekki
+          hafa klárað lausnina.
       courseF_maze_ramp5_authored_hint:
         courseF_maze_ramp5_a: Try using the "Step" button to run your code line by
           line. Can you figure out what you need to do next?
         courseF_maze_ramp5_b: Það er fleiri en leið til að komast til svínsins.
         courseF_maze_ramp5_c: Prófaðu að nota <xml><block type="controls_repeat"><title
           name="TIMES">3</title></block></xml> lykkju til að stytta kóðann!
+      courseF_maze_ramp5_2018_authored_hint:
+        courseF_maze_ramp5_a: Try using the "Step" button to run your code line by
+          line. Can you figure out what you need to do next?
+        courseF_maze_ramp5_b: Það er fleiri en leið til að komast til svínsins.
+        courseF_maze_ramp5_c: Prófaðu að nota <xml><block type="controls_repeat"><title
+          name="TIMES">3</title></block></xml> lykkju til að stytta kóðann!
       courseF_maze_ramp6_authored_hint:
+        courseF_maze_ramp6_a: Það eru tvær leiðir til að leysa þessa þraut!
+        courseF_maze_ramp6_b: Fuglinn snýr að vegg í upphafi svo þú þarft að muna
+          að snúa áður en þú færir!
+        courseF_maze_ramp6_c: Ekki hræðast að gera mistök! Prófaðu að bæta við kubbum
+          og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist þú ekki
+          hafa klárað lausnina.
+      courseF_maze_ramp6_2018_authored_hint:
         courseF_maze_ramp6_a: Það eru tvær leiðir til að leysa þessa þraut!
         courseF_maze_ramp6_b: Fuglinn snýr að vegg í upphafi svo þú þarft að muna
           að snúa áður en þú færir!
@@ -14431,6 +14610,14 @@
           put your other blocks back in place where they belong.\n"
         courseF_maze_ramp3_b: Notaðu hnappinn `þrep` til að keyra forritið línu fyrir
           línu. Hvar fer það út af sporinu?
+      coursef_maze_ramp3_2018_authored_hint:
+        courseF_maze_ramp3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo
+          delete a block from the middle of your code, drag all of the blocks underneath
+          it away to the right and let them sit in the workspace for a while.  \n\nClick
+          on the block you want to delete, and drag it back to the toolbox.\n\nFinally,
+          put your other blocks back in place where they belong.\n"
+        courseF_maze_ramp3_b: Notaðu hnappinn `þrep` til að keyra forritið línu fyrir
+          línu. Hvar fer það út af sporinu?
       drawings!_authored_hint:
         triangle_geometry_hint: 'Mundu: jafnhliða þríhyrningur hefur þrjár hliðar,
           með 60 gráðu snúningi á milli þeirra allra!'
@@ -14471,11 +14658,11 @@
           sinnum, getur þú breytt tölunni efst í kubbnum.
       grade1_artist_loops2_authored_hint:
         grade1_artist_loops2_a: Remember to use a `repeat` loop for better code!
-      grade1_artist_loops3_authored_hint: []
+      grade1_artist_loops3_authored_hint: {}
       grade1_artist_loops4_authored_hint:
         grade1_artist_loops4_a: Drag out a `repeat` loop, then put the other blocks
           inside of it. How many times do you need to repeat?
-      grade1_artist_loops5_authored_hint: []
+      grade1_artist_loops5_authored_hint: {}
       grade1_artist_loops6_authored_hint:
         grade1_artist_loops6_a: Þessi áskorun notar FJÓRAR lykkjur, hverja á eftir
           annarri!
@@ -14486,7 +14673,7 @@
         grade1_artist_loops6_c: "The loops should do this:\n- Loop 1\n  - Right\n
           \ - Down\n  \n- Loop 2\n  - Right\n  - Up\n\n- Loop 3\n  - Left\n  - Up\n\n-
           Loop 4\n  - Left\n  - Down"
-      grade1_artist_loops7_authored_hint: []
+      grade1_artist_loops7_authored_hint: {}
       grade1_artist_loops7a_authored_hint:
         artistLoopsK9_a: Þessi áskorun notar FJÓRAR lykkjur, hverja á eftir annarri!
         artistLoopsK9_b: |-
@@ -14499,9 +14686,9 @@
       grade1_artist_loops7b_authored_hint:
         grade1_artist_loops7b_a: How many times should you repeat the pattern to make
           the ladder?
-      grade1_artist_loops8_authored_hint: []
-      grade1_artist_loops9_authored_hint: []
-      grade1_artist_loopsFP_authored_hint: []
+      grade1_artist_loops8_authored_hint: {}
+      grade1_artist_loops9_authored_hint: {}
+      grade1_artist_loopsFP_authored_hint: {}
       grade1_maze_sequence1_authored_hint:
         grade1_maze_sequence1_a: This program is missing one block. Can you figure
           out which one?
@@ -14547,7 +14734,7 @@
       grade2_CaringForNewPet_1_authored_hint:
         2-3_Maze_1_a: To use a `move forward` block, drag it from the toolbox out
           into the workspace and connect it to the `when run` block.
-      grade2_CaringForNewPet_11_authored_hint: []
+      grade2_CaringForNewPet_11_authored_hint: {}
       grade2_CaringForNewPet_2courseC_maze_programming3_authored_hint:
         courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo
           delete a block from the middle of your code, drag all of the blocks underneath
@@ -14561,7 +14748,7 @@
           times.
         hint3: To follow the path, move forward and turn one way, then move again
           and turn the opposite way. Move forward one more time to reach the pig.
-      grade2_CaringForNewPet_3D_authored_hint: []
+      grade2_CaringForNewPet_3D_authored_hint: {}
       grade2_CaringForNewPet_4_authored_hint:
         2-3_Maze_6_a: Það eru tvær leiðir til að leysa þessa þraut!
       grade2_CaringForNewPet_5_authored_hint:
@@ -14584,7 +14771,7 @@
           sides.
       grade2_MakeDogTag_3_authored_hint:
         2-3_Artist_4_a: To finish the rocket, just draw the triangle on top!
-      grade2_MakeDogTag_4_authored_hint: []
+      grade2_MakeDogTag_4_authored_hint: {}
       grade2_MakeDogTag_5_authored_hint:
         grade2_MakeDogTag_5a: The artist is already facing the correct way to draw
           his first line.
@@ -14605,7 +14792,7 @@
           ![](https://images.code.org/e5c7492f509dd41efe2888c7e7895c28-image-1461177002636.29.02.png)
         2-3_Artist_Loops_New_11_b: Nýi snúningurinn ætti að bætast við **enda** kóðans
           innan lykkjunnar.
-      grade2_MakeDogTag_BFP_authored_hint: []
+      grade2_MakeDogTag_BFP_authored_hint: {}
       grade2_PuppyLoops_10_authored_hint:
         2-3_Artist_Debugging_8_a: |-
           Hve oft var formið mitt endurtekið?
@@ -14638,9 +14825,9 @@
       grade2_collector_2_authored_hint:
         hint1: You can use four `move forward` blocks or use the `repeat 4 times`
           block to make your program shorter.
-      grade2_collector_A_authored_hint: []
-      grade2_collector_A_2018_authored_hint: []
-      grade2_maze_debuggingFP_authored_hint: []
+      grade2_collector_A_authored_hint: {}
+      grade2_collector_A_2018_authored_hint: {}
+      grade2_maze_debuggingFP_authored_hint: {}
       grade2_maze_intro4_authored_hint:
         hint_1: Connect a "move forward" block to the bottom of the program.
       grade2_playlab_project_6_authored_hint:
@@ -14920,8 +15107,8 @@
       grade3_maze_loops5_authored_hint:
         2-3_Maze_Loops_21_a: Ef þú átt erfitt með að koma auga á tröppumynstrið, getur
           þú reynt að fela hindraðar slóðir með fingri.
-      grade3_robotFarmer_ConditionalsIntro_10a_authored_hint: []
-      grade3_robotFarmer_ConditionalsIntro_11a_authored_hint: []
+      grade3_robotFarmer_ConditionalsIntro_10a_authored_hint: {}
+      grade3_robotFarmer_ConditionalsIntro_11a_authored_hint: {}
       grade3_robotFarmer_ConditionalsIntro_5_authored_hint:
         grade3_robotFarmer_ConditionalsIntro_5a: Try nesting a `while` loop inside
           of a `repeat` loop.
@@ -14950,7 +15137,7 @@
           Þú þarft að endurtaka þetta form 6 sinnum í alls 360 gráður.
 
           **360 / 6 = ?**
-      grade4_arist_nested_loop_triangles2_authored_hint: []
+      grade4_arist_nested_loop_triangles2_authored_hint: {}
       grade4_arist_nested_loop_triangles3_authored_hint:
         4-5_Nested_Loops_6_a: |-
           Ekki gleyma að snúa eftir innri lykkjuna.
@@ -15062,7 +15249,7 @@
           Þú þarft að endurtaka þetta form 6 sinnum í alls 360 gráður.
 
           **360 / 6 = ?**
-      grade4_artist_nested_loop_triangles2_authored_hint: []
+      grade4_artist_nested_loop_triangles2_authored_hint: {}
       grade4_artist_nested_loop_triangles3_authored_hint:
         4-5_Nested_Loops_6_a: |-
           Don't forget to make a turn after your inner loop.
@@ -15229,8 +15416,8 @@
           to set it to `1` before you start.
         grade5_artist_for_loops7_b: Notice that this spiral turns right instead of
           left!
-      grade5_artist_for_loops7a_authored_hint: []
-      grade5_artist_for_loops7b_authored_hint: []
+      grade5_artist_for_loops7a_authored_hint: {}
+      grade5_artist_for_loops7b_authored_hint: {}
       grade5_artist_for_loops8_authored_hint:
         Course_4_Artist_For_Loops_11_a: "Snúningshornið breytist fyrir hvert form!
           \n\nNotaðu reikningskubbinn og settu í hann 360 deilt með fjölda hliða á
@@ -15435,15 +15622,15 @@
         gradek_adventurer_loops3_b: Don't forget that the adventurer needs to walk
           down and collect gold after she finishes the `repeat` loop!
       gradek_adventurer_loops4_authored_hint:
-        gradek_adventurer_loops4_a: If you can't figure out the answer right away,
-          try using a piece of paper to figure out what arrows you will need and look
-          for a pattern.
+        gradek_adventurer_loops4_a: Ef þú kemur ekki strax auga á svarið, gætir þú
+          prófað að teikna á blað til að sjá hvaða örvar þú munt þurfa og leita að
+          endurtekningum.
       gradek_adventurer_loops4a_authored_hint:
         gradek_adventurer_loops4a_a: Can't figure out what's wrong? Try running the
           code to see what happens.
       gradek_adventurer_loops5_authored_hint:
-        gradek_adventurer_loops5_a: If you can't figure out what comes next, try running
-          the code to see where Laurel ends up.
+        gradek_adventurer_loops5_a: Ef þú sérð ekki hvað á að koma næst, gætirðu prófað
+          að keyra kóðann til að sjá hvar Laurel endar.
       gradek_adventurer_loops6_authored_hint:
         gradek_adventurer_loops6_a: If you are having trouble figuring this puzzle
           out, try writing the moves down on a piece of paper and look for a pattern.
@@ -15470,18 +15657,17 @@
         artistLoopsK3_a: Reyndu að nota það sem þú hefur lært um lykkjukubba til að
           ljúka þessari þraut!
       gradek_artist_loops5_authored_hint:
-        gradek_artist_loops5_a: Can't figure out how to make the hill?  Try playing
-          with the blocks a bit to see what each one draws.
+        gradek_artist_loops5_a: Ertu ekki viss um hvernig á að búa til hæðina? Prófaðu
+          hina ýmsu kubba til að sjá hvað þeir gera.
       gradek_artist_loops6_authored_hint:
-        gradek_artist_loops6_a: Can't figure out where to put the loop? Try writing
-          the code step-by-step and look for a pattern.
+        gradek_artist_loops6_a: Sérðu ekki hvar á að setja lykkjuna? Prófaðu að skrifa
+          kóðann skref-fyrir-skref á blað og leita að endurtekningum.
       gradek_artist_loops7_authored_hint:
-        gradek_artist_loops7_a: Try running the code to see what has been written
-          for you.
-        gradek_artist_loops7_b: How would you loop the code that has been given to
-          you?
-        gradek_artist_loops7_c: "What does the code do?  \nWhat is it supposed to
-          do?  \nWhat does that tell you?"
+        gradek_artist_loops7_a: Prófaðu að keyra kóðann til að sjá hvað hefur verið
+          skrifað fyrir þig.
+        gradek_artist_loops7_b: Hvernig myndir þú setja gefna kóðann í lykkju?
+        gradek_artist_loops7_c: "Hvað gerir kóðinn? \nHvað er ætlast til að hann geri?
+          \nHvað segir það þér?"
       gradek_artist_loops8_authored_hint:
         gradek_artist_loops8_a: 'You don''t have to delete everything!  Some of the
           code is good. Use it to build the rest of the stairs. '
@@ -15491,7 +15677,7 @@
       gradek_artist_loopsA_authored_hint:
         artistLoopsKB_a: There should be 2 blocks inside of your loop to solve this
           puzzle.
-      gradek_artist_loopsFP_authored_hint: []
+      gradek_artist_loopsFP_authored_hint: {}
       gradek_playlab_events1a_authored_hint:
         gradek_playlab_events1a_a: Attach the `move up` block to the `when click`
           event so that the cat moves up when the "up" button is pressed.
@@ -15540,11 +15726,11 @@
           by step. What should you do if you are standing at a corn plant?
         courseE_farmer_functions1a_b: Notaðu `endurtaka þar til` kubb til að komast
           til graskersins!
-      harvey_snowflake_artist1_authored_hint: []
-      harvey_snowflake_artist2_authored_hint: []
+      harvey_snowflake_artist1_authored_hint: {}
+      harvey_snowflake_artist2_authored_hint: {}
       harvey_tictactoe_authored_hint:
         harvey_tictactoe: Þú getur notað `hoppa` kubba til að fara á önnur svæði.
-      iceAgeLoopsforVideo_authored_hint: []
+      iceAgeLoopsforVideo_authored_hint: {}
       iceage_click_hello_authored_hint:
         iceage_click_hello_a: Bættum einum eða fleiri `leikmaður 1 segir` kubbum við
           `þegar smellt` atburðinn til að klára þessa þraut.
@@ -15638,7 +15824,7 @@
         iceage_throw_hearts_b: Til að gera ömmu glaða þegar hún fær hjarta verður
           þú að tengja kubbinn `hafa leikmann 2 í góðu skapi` neðan á atburðinn `þegar
           leikmaður 2 snertir sendingu`.
-      iceage_warn_embed_ice_age_authored_hint: []
+      iceage_warn_embed_ice_age_authored_hint: {}
       iceage_warn_ice_age_authored_hint:
         iceage_warn_ice_age_a: 'Þú þarft aðeins að bæta við tveimur kubbum til að
           koma þessari þraut í rétt horf. '
@@ -15649,7 +15835,7 @@
           koma þessari þraut í rétt horf. '
         iceage_warn_ice_age_b: Bættu báðum nýju kubbunum neðan við `þegar keyrt` atburðinn
           til að láta þá gerast strax í upphafi forritsins.
-      k1stickerfreeplay_authored_hint: []
+      k1stickerfreeplay_authored_hint: {}
       level 'grade3_Loops_10_authored_hint:
         2-3_Bee_Loops_4_a: Í lokin ættir þú að hafa fimm kubba innan í lykkjunni.
       level 'grade3_Loops_11_authored_hint:
@@ -15699,4 +15885,4 @@
         sample6_a: Did you know that you can use more than one repeat loop in a puzzle?
         sample6_b: Sometimes repeat loops have lots of blocks inside, and sometimes
           they might only have one!
-      sample7assessment_authored_hint: []
+      sample7assessment_authored_hint: {}

@@ -114,15 +114,24 @@ bs:
     valid_password: "Ispravna lozinka!"
     invalid_password: "Lozinka mora biti duga najmanje 6 znakova"
     mismatch_password: "Dvije lozinke koje ste unijeli se ne podudaraju"
-    student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/><br/>Email addresses are not stored in a form that allows us to contact students. Students will never recieve emails from Code.org except for password recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more information."
+    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
+    under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
+    agree_us_website: "I agree to using a website based in the United States."
+    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
+    student_terms: "Email addresses are not stored in a form that allows us to contact students. Students will never recieve emails from Code.org except for password recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more information."
     teacher_terms: "I agree to be bound by the Code.org terms of service. For more information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>."
     additional_information: "Trebamo dodatne informacije kako bismo nastavili vašu prijavu."
+    user_type_button: "Update Account Type"
     user_type_label: "Tip računa"
     user_type_teacher: "Učitelj"
     user_type_student: "Učenik"
     field_is_required: "je neophodno"
     accept_terms: "Morate pristati da bi napravili račun"
     error: "Došlo je do greške."
+    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_yes: "Da"
+    email_preference_no: "Ne"
+    email_preference_required: "You must specify an email preference."
   school_info:
     title: 'Informacije o školi (nije obavezno)'
     school_country: 'School Country'
@@ -365,6 +374,7 @@ bs:
     enter_new_login_info: 'Unesite svoje nove podatke za prijavu'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Unesi email adresu od svog roditelja ili staratelja (za obnovu lozinke)"
+    update: "Update Account"
   user_level:
     completed: 'Kompletirano'
     tried: 'Pokušano'
@@ -446,6 +456,7 @@ bs:
     student_not_found: "One or more students could not be found."
     all_students_must_be_in_current_section: "Svi učenici trenutno moraju biti upisani u vaše odjeljenje."
     already_enrolled_in_new_section: "Ne možete premjestiti ove učenike zato što su oni već u novom odjeljenju."
+    third_party_login: "You cannot move students to a section that is synced with a third party tool."
   share:
     title: "Naučite o Code Studiu"
     description: "Svako može naučiti računarske znanosti, te pisati kod za igre, aplikacije i umjetnost."
@@ -720,21 +731,21 @@ bs:
     message: "Please tell us your race (check all that apply)"
     races:
       - 
-        white: White
+        white: "White"
       - 
-        black: Black or African American
+        black: "Black or African American"
       - 
-        hispanic: Hispanic or Latino
+        hispanic: "Hispanic or Latino"
       - 
-        asian: Asian
+        asian: "Asian"
       - 
-        hawaiian: Native Hawaiian or other Pacific Islander
+        hawaiian: "Native Hawaiian or other Pacific Islander"
       - 
-        american_indian: American Indian/Alaska Native
+        american_indian: "American Indian/Alaska Native"
       - 
-        other: Ostalo
+        other: "Ostalo"
       - 
-        opt_out: Prefer not to say
+        opt_out: "Prefer not to say"
     submit: "Potvrdi"
     decline: "Zatvori"
   zendesk_too_young_message: 'Nažalost, mlađi korisnici se ne mogu prijaviti na našu stranicu za podršku. Možeš pregledavati <a href="http://support.code.org"> support.code.org</a> bez prijavljivanja ili pitaj roditelje ili učitelja da nas kontaktiraju umjesto tebe.'
@@ -865,6 +876,7 @@ bs:
     csd5_2: 'Poglavlje 2: Rješavanje problema podataka'
     csd6_1: 'Chapter 1: Programming with Hardware'
     csd6_2: 'Chapter 2: Building Physical Prototypes'
+    csd_survey: 'Post-Course Survey'
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -878,6 +890,11 @@ bs:
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Unit 2: Digital Information'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: 'Reflection Prompts'
   external_links:
     disclaimer: Disclaimer
@@ -982,3 +999,14 @@ bs:
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: 'Full Courses'
+  cookie_banner:
+    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+    more_information: "See Code.org's Privacy Policy."
+    accept: 'Slažem se'
+  gdpr_dialog:
+    heading: 'Do you agree to using a web site based in the United States?'
+    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+    link_intro: 'For details see our'
+    privacy_policy: 'privacy policy'
+    logout: 'Logout'
+    yes: 'Da'

@@ -1,7 +1,7 @@
 is:
   data:
     callouts:
-      2-3 Artist 1 new_callout: [ ]
+      2-3 Artist 1 new_callout: { }
       2-3 Artist Debugging 1_callout:
         2-3_Artist_Debugging_1_a: Listamaðurinn hefur ekki "Skref"-hnapp, en þú getur dregið sleðann til vinstri til að sjá forritið keyra hægar.
       2-3 Bee Conditionals 5_callout:
@@ -30,22 +30,22 @@ is:
         designToolboxCallOut: Dragðu hnapp út á skjáinn.
         changeButtonID: Notaðu lýsandi "auðkenni" fyrir hnappinn. T. d. "kallaVinHnappur" eða "faraÚtHnappur"
         screenSelectorCallout3: Farðu á "upphafsSkjáinn"
-      AppLab Intro 2 - add more buttons 2_callout: [ ]
-      AppLab Intro 2 - add more buttons_callout: [ ]
+      AppLab Intro 2 - add more buttons 2_callout: { }
+      AppLab Intro 2 - add more buttons_callout: { }
       AppLab Intro 2 - add onEvent_callout:
         onEventFirstTime: Smelltu á og dragðu "onEvent" kubb út á vinnusvæðið hægra megin
         setScreenFirstTime: Smelltu og dragðu inn í plássið í "onEvent" kubbnum
       AppLab Intro 7 - Change Screen Color_callout:
         applab_hoc_finish: Smelltu hér þegar þetta er tilbúið!
       AppLab Intro 7 - thisOrThatAddButton_callout:
-        AppLabHoCFinal11: You're now in Design Mode.
-      AppLab_test02_callout: [ ]
-      Applab AllTheThings ResourcesTab AllResources_callout: [ ]
-      Applab AllTheThings ResourcesTab MapReference_callout: [ ]
-      Applab AllTheThings ResourcesTab ReferenceLinks_callout: [ ]
-      Applab test_callout: [ ]
-      Big Game Animation 1 (copy 1)_callout: [ ]
-      Big Game Animation 1_callout: [ ]
+        AppLabHoCFinal11: Þú ert nú í Hönnunarstöðu.
+      AppLab_test02_callout: { }
+      Applab AllTheThings ResourcesTab AllResources_callout: { }
+      Applab AllTheThings ResourcesTab MapReference_callout: { }
+      Applab AllTheThings ResourcesTab ReferenceLinks_callout: { }
+      Applab test_callout: { }
+      Big Game Animation 1 (copy 1)_callout: { }
+      Big Game Animation 1_callout: { }
       Big Game Animation 2 (copy 1)_callout:
         Big Game Animation 2: Edit this function to animate the target
       Big Game Animation 2_callout:
@@ -54,24 +54,24 @@ is:
       Big Game Animation 3_callout:
         Big Game Animation 3_callout1: Edit this function to animate the danger
         Big Game Animation 3_callout2: Delete this block and complete the definition
-      Big Game Animation 4_callout: [ ]
-      Big Game Booleans 1_callout: [ ]
+      Big Game Animation 4_callout: { }
+      Big Game Booleans 1_callout: { }
       Big Game Booleans 2_callout:
         Big Game Booleans 2: Open this drawer to edit the safe-left? function
-      Big Game Booleans 3_callout: [ ]
+      Big Game Booleans 3_callout: { }
       Big Game Booleans 4_callout:
         Big Game Booleans 3: Edit the onscreen? function to check both safe-left? and safe-right?
-      Big Game Booleans 5_callout: [ ]
-      Big Game Collision 1 (copy 1)_callout: [ ]
-      Big Game Collision 1_callout: [ ]
-      Big Game Collision 2_callout: [ ]
+      Big Game Booleans 5_callout: { }
+      Big Game Collision 1 (copy 1)_callout: { }
+      Big Game Collision 1_callout: { }
+      Big Game Collision 2_callout: { }
       Big Game Collision 3_callout:
         Big Game Collision 3: Fix this 'distance' function to make your collision detection work. You can use the existing 'line-length' function to calculate the distance from px to cx, and from py to cy.
       Big Game Collision 4_callout:
         Big Game Collision 4: Complete the collide? function so that it checks whether the distance between a given pair of coordinates is close enough for them to be touching.
-      Big Game Final_callout: [ ]
-      Big Game Player 1_callout: [ ]
-      Big Game Player 2_callout: [ ]
+      Big Game Final_callout: { }
+      Big Game Player 1_callout: { }
+      Big Game Player 2_callout: { }
       Big Game Vars 1_callout:
         big_game_finish: Click the finish button when you're ready to move to the next level.
       Big Game Vars 2 (copy 1)_callout:
@@ -83,111 +83,112 @@ is:
         big_game_bg: Edit this variable to change the background image of your game
       Big Game Vars 3_callout:
         big_game_bg: Click "edit" to change the background image of your game
-      Big Game Vars 4 (copy 1)_callout: [ ]
-      Big Game Vars 4_callout: [ ]
-      CSD U3 - complex - compound conditionals_callout: [ ]
-      CSD U3 - complex - key up and down_callout: [ ]
-      CSD U3 - complex - key up and down_2018_callout: [ ]
-      CSD U3 - complex - mouse down_callout: [ ]
-      CSD U3 - complex - mouse down_2018_callout: [ ]
-      CSD U3 - complex - mouse move_callout: [ ]
-      CSD U3 - complex - mouse move_2018_callout: [ ]
-      CSD U3 - complex - nested conditional_callout: [ ]
-      CSD U3 - conditionals - first conditional 2-2018_callout: [ ]
-      CSD U3 - conditionals - first conditional 2_callout: [ ]
-      CSD U3 - conditionals - first conditional 2_2018_callout: [ ]
-      CSD U3 - conditionals - first conditional_callout: [ ]
-      CSD U3 - conditionals - first conditional_2018_callout: [ ]
-      CSD U3 - conditionals - transition 2_callout: [ ]
+      Big Game Vars 4 (copy 1)_callout: { }
+      Big Game Vars 4_callout: { }
+      CSD U3 - complex - compound conditionals_callout: { }
+      CSD U3 - complex - key up and down_callout: { }
+      CSD U3 - complex - key up and down_2018_callout: { }
+      CSD U3 - complex - mouse down_callout: { }
+      CSD U3 - complex - mouse down_2018_callout: { }
+      CSD U3 - complex - mouse move_callout: { }
+      CSD U3 - complex - mouse move_2018_callout: { }
+      CSD U3 - complex - nested conditional_callout: { }
+      CSD U3 - conditionals - first conditional 2-2018_callout: { }
+      CSD U3 - conditionals - first conditional 2_callout: { }
+      CSD U3 - conditionals - first conditional 2_2018_callout: { }
+      CSD U3 - conditionals - first conditional_callout: { }
+      CSD U3 - conditionals - first conditional_2018_callout: { }
+      CSD U3 - conditionals - transition 2_callout: { }
       CSD U3 - conditionals - transition_callout:
         CSD_U3_L8_S6_C1: Put the console log statement here
       CSD U3 - conditionals - transition_2018_callout:
         CSD_U3_L8_S6_C1: Put the console log statement here
-      CSD U3 - images - first sprite with image_callout: [ ]
-      CSD U3 Boolean Modify_callout: [ ]
-      CSD U3 Boolean Modify_2018_callout: [ ]
-      CSD U3 Boolean Predict_callout: [ ]
-      CSD U3 Boolean Predict_2018_callout: [ ]
-      CSD U3 Compound Nested Challenge_callout: [ ]
-      CSD U3 Compound Nested Challenge_2018_callout: [ ]
-      CSD U3 Compound Nested Examples_callout: [ ]
-      CSD U3 Conditional Project_callout: [ ]
-      CSD U3 Conditionals Apple 2-2018_callout: [ ]
-      CSD U3 Conditionals Apple 2_callout: [ ]
-      CSD U3 Conditionals Apple 2_2018_callout: [ ]
-      CSD U3 Conditionals Apple-2018_callout: [ ]
-      CSD U3 Conditionals Apple_callout: [ ]
-      CSD U3 Conditionals Apple_2018_callout: [ ]
-      CSD U3 Diagonal Movement_callout: [ ]
-      CSD U3 Diagonal Movement_2018_callout: [ ]
-      CSD U3 Direction Animations-2018_callout: [ ]
-      CSD U3 Direction Animations_callout: [ ]
-      CSD U3 Direction Animations_2018_callout: [ ]
-      CSD U3 Direction Arrows-2018_callout: [ ]
-      CSD U3 Direction Arrows_callout: [ ]
-      CSD U3 Direction Arrows_2018_callout: [ ]
-      CSD U3 Draw Loop Plugged update your scene_callout: [ ]
-      CSD U3 Draw Loop Plugged update your scene_2018_callout: [ ]
-      CSD U3 Drawing Squares to Corners_callout: [ ]
-      CSD U3 Drawing Squares to Corners_2018_callout: [ ]
-      CSD U3 Else_callout: [ ]
-      CSD U3 Else_2018_callout: [ ]
-      CSD U3 If Else_callout: [ ]
-      CSD U3 If Else_2018_callout: [ ]
-      CSD U3 Keyboard Input Challenge-2018_callout: [ ]
-      CSD U3 Keyboard Input Challenge_callout: [ ]
-      CSD U3 Keyboard Input Challenge_2018_callout: [ ]
-      CSD U3 Keypress Boolean-2018_callout: [ ]
-      CSD U3 Keypress Boolean_callout: [ ]
-      CSD U3 Keypress Boolean_2018_callout: [ ]
-      CSD U3 Keypress Watchers_callout: [ ]
-      CSD U3 Keypress Watchers_2018_callout: [ ]
-      CSD U3 L11 Freeplay_callout: [ ]
-      CSD U3 L11 Freeplay_2018_callout: [ ]
-      CSD U3 L12 Freeplay_callout: [ ]
-      CSD U3 L12 Freeplay_2018_callout: [ ]
-      CSD U3 L13 Freeplay_callout: [ ]
-      CSD U3 L13 Freeplay_2018_callout: [ ]
-      CSD U3 L3 Freeplay_callout: [ ]
-      CSD U3 L3 Freeplay_2018_callout: [ ]
-      CSD U3 L4 Freeplay_callout: [ ]
-      CSD U3 L4 Freeplay_2018_callout: [ ]
-      CSD U3 L6 Freeplay_callout: [ ]
-      CSD U3 L6 Freeplay_2018_callout: [ ]
-      CSD U3 L7 Freeplay_callout: [ ]
-      CSD U3 L7 Freeplay_2018_callout: [ ]
-      CSD U3 Property Conditional Multi_callout: [ ]
-      CSD U3 Property Conditional_callout: [ ]
-      CSD U3 Random Choice_callout: [ ]
-      CSD U3 Random Intro_callout: [ ]
-      CSD U3 Random Min Max_callout: [ ]
-      CSD U3 Simple Drawing - Animation 2_callout: [ ]
-      CSD U3 Sprites anitab 1_callout: [ ]
-      CSD U3 Sprites anitab 1_2018_callout: [ ]
-      CSD U3 Sprites intro debug_callout: [ ]
-      CSD U3 Sprites intro debug_2018_callout: [ ]
-      CSD U3 Sprites intro predict_callout: [ ]
-      CSD U3 Sprites intro predict_2018_callout: [ ]
-      CSD U3 Sprites intro sprites_callout: [ ]
-      CSD U3 Sprites intro sprites_2018_callout: [ ]
-      CSD U3 Sprites scene challenge_callout: [ ]
-      CSD U3 Sprites scene challenge_2018_callout: [ ]
-      CSD U3 Sprites scene drawing_callout: [ ]
-      CSD U3 Sprites scene drawing_2018_callout: [ ]
-      CSD U3 Sprites scene sprites_callout: [ ]
-      CSD U3 Sprites scene sprites_2018_callout: [ ]
-      CSD U3 Sprites scene template_callout: [ ]
-      CSD U3 Sprites scene template_2018_callout: [ ]
-      CSD U3 Sprites scene text_callout: [ ]
-      CSD U3 Sprites scene text_2018_callout: [ ]
-      CSD U3 Sprites text debug-2018_callout: [ ]
-      CSD U3 Sprites text debug_callout: [ ]
-      CSD U3 Sprites text debug_2018_callout: [ ]
-      CSD U3 Sprites text_callout: [ ]
-      CSD U3 Sprites text_2018_callout: [ ]
-      CSD U3 UP_ARROW-2018_callout: [ ]
-      CSD U3 UP_ARROW_callout: [ ]
-      CSD U3 UP_ARROW_2018_callout: [ ]
+      CSD U3 - images - first sprite with image_callout: { }
+      CSD U3 Boolean Modify_callout: { }
+      CSD U3 Boolean Modify_2018_callout: { }
+      CSD U3 Boolean Predict_callout: { }
+      CSD U3 Boolean Predict_2018_callout: { }
+      CSD U3 Compound Nested Challenge_callout: { }
+      CSD U3 Compound Nested Challenge_2018_callout: { }
+      CSD U3 Compound Nested Examples_callout: { }
+      CSD U3 Conditional Project_callout: { }
+      CSD U3 Conditionals Apple 2-2018_callout: { }
+      CSD U3 Conditionals Apple 2_callout: { }
+      CSD U3 Conditionals Apple 2_2018_callout: { }
+      CSD U3 Conditionals Apple-2018_callout: { }
+      CSD U3 Conditionals Apple_callout: { }
+      CSD U3 Conditionals Apple_2018_callout: { }
+      CSD U3 Diagonal Movement_callout: { }
+      CSD U3 Diagonal Movement_2018_callout: { }
+      CSD U3 Direction Animations-2018_callout: { }
+      CSD U3 Direction Animations_callout: { }
+      CSD U3 Direction Animations_2018_callout: { }
+      CSD U3 Direction Arrows-2018_callout: { }
+      CSD U3 Direction Arrows_callout: { }
+      CSD U3 Direction Arrows_2018_callout: { }
+      CSD U3 Draw Loop Plugged update your scene_callout: { }
+      CSD U3 Draw Loop Plugged update your scene_2018_callout: { }
+      CSD U3 Draw Loop Plugged wiggle sprite y_2018_callout: { }
+      CSD U3 Drawing Squares to Corners_callout: { }
+      CSD U3 Drawing Squares to Corners_2018_callout: { }
+      CSD U3 Else_callout: { }
+      CSD U3 Else_2018_callout: { }
+      CSD U3 If Else_callout: { }
+      CSD U3 If Else_2018_callout: { }
+      CSD U3 Keyboard Input Challenge-2018_callout: { }
+      CSD U3 Keyboard Input Challenge_callout: { }
+      CSD U3 Keyboard Input Challenge_2018_callout: { }
+      CSD U3 Keypress Boolean-2018_callout: { }
+      CSD U3 Keypress Boolean_callout: { }
+      CSD U3 Keypress Boolean_2018_callout: { }
+      CSD U3 Keypress Watchers_callout: { }
+      CSD U3 Keypress Watchers_2018_callout: { }
+      CSD U3 L11 Freeplay_callout: { }
+      CSD U3 L11 Freeplay_2018_callout: { }
+      CSD U3 L12 Freeplay_callout: { }
+      CSD U3 L12 Freeplay_2018_callout: { }
+      CSD U3 L13 Freeplay_callout: { }
+      CSD U3 L13 Freeplay_2018_callout: { }
+      CSD U3 L3 Freeplay_callout: { }
+      CSD U3 L3 Freeplay_2018_callout: { }
+      CSD U3 L4 Freeplay_callout: { }
+      CSD U3 L4 Freeplay_2018_callout: { }
+      CSD U3 L6 Freeplay_callout: { }
+      CSD U3 L6 Freeplay_2018_callout: { }
+      CSD U3 L7 Freeplay_callout: { }
+      CSD U3 L7 Freeplay_2018_callout: { }
+      CSD U3 Property Conditional Multi_callout: { }
+      CSD U3 Property Conditional_callout: { }
+      CSD U3 Random Choice_callout: { }
+      CSD U3 Random Intro_callout: { }
+      CSD U3 Random Min Max_callout: { }
+      CSD U3 Simple Drawing - Animation 2_callout: { }
+      CSD U3 Sprites anitab 1_callout: { }
+      CSD U3 Sprites anitab 1_2018_callout: { }
+      CSD U3 Sprites intro debug_callout: { }
+      CSD U3 Sprites intro debug_2018_callout: { }
+      CSD U3 Sprites intro predict_callout: { }
+      CSD U3 Sprites intro predict_2018_callout: { }
+      CSD U3 Sprites intro sprites_callout: { }
+      CSD U3 Sprites intro sprites_2018_callout: { }
+      CSD U3 Sprites scene challenge_callout: { }
+      CSD U3 Sprites scene challenge_2018_callout: { }
+      CSD U3 Sprites scene drawing_callout: { }
+      CSD U3 Sprites scene drawing_2018_callout: { }
+      CSD U3 Sprites scene sprites_callout: { }
+      CSD U3 Sprites scene sprites_2018_callout: { }
+      CSD U3 Sprites scene template_callout: { }
+      CSD U3 Sprites scene template_2018_callout: { }
+      CSD U3 Sprites scene text_callout: { }
+      CSD U3 Sprites scene text_2018_callout: { }
+      CSD U3 Sprites text debug-2018_callout: { }
+      CSD U3 Sprites text debug_callout: { }
+      CSD U3 Sprites text debug_2018_callout: { }
+      CSD U3 Sprites text_callout: { }
+      CSD U3 Sprites text_2018_callout: { }
+      CSD U3 UP_ARROW-2018_callout: { }
+      CSD U3 UP_ARROW_callout: { }
+      CSD U3 UP_ARROW_2018_callout: { }
       CSD U3 Variables Predict Where X_callout:
         CSD_U3_variables: Breyttu tölunni hér
       CSD U3 Variables Predict Where XY Embed_callout:
@@ -200,11 +201,11 @@ is:
         grid: Smelltu hér til að sýna grindina.
       CSD U3 Variables Predict Where X_2018_callout:
         CSD_U3_variables: Breyttu tölunni hér
-      CSD U3 Variables TEMPLATE square_callout: [ ]
-      CSD U3 Variables make a big square_callout: [ ]
-      CSD U3 Variables make a square_callout: [ ]
-      CSD U3 Watcher Debug_callout: [ ]
-      CSD U3 Watcher Debug_2018_callout: [ ]
+      CSD U3 Variables TEMPLATE square_callout: { }
+      CSD U3 Variables make a big square_callout: { }
+      CSD U3 Variables make a square_callout: { }
+      CSD U3 Watcher Debug_callout: { }
+      CSD U3 Watcher Debug_2018_callout: { }
       CSD U3 abstraction accelerateX_callout:
         CSD_U3_L11_S6_C1: Add your code here.
       CSD U3 abstraction accelerateX_2018_callout:
@@ -319,10 +320,10 @@ is:
         CSD_U3_L11_S5_C1: Add your block here.
       CSD U3 abstraction velocityY_2018_callout:
         CSD_U3_L11_S5_C1: Add your block here.
-      CSD U3 challenge face_callout: [ ]
-      CSD U3 challenge face_2018_callout: [ ]
-      CSD U3 challenge new shape_callout: [ ]
-      CSD U3 challenge new shape_2018_callout: [ ]
+      CSD U3 challenge face_callout: { }
+      CSD U3 challenge face_2018_callout: { }
+      CSD U3 challenge new shape_callout: { }
+      CSD U3 challenge new shape_2018_callout: { }
       CSD U3 collisions getSpeed_callout:
         CSD_U3_L11_S2_C1: Add your code for the compass here.
         CSD_U3_L11_S2_C2: Change the code to display speed here.
@@ -376,14 +377,14 @@ is:
       CSD U3 game variables_2018_callout:
         CSD_U3_S18_L3_C1: This block creates a new variable.
         CSD_U3_L18_S3_C2: Variables area
-      CSD U3 keydown conditional-2018_callout: [ ]
-      CSD U3 keydown conditional_callout: [ ]
-      CSD U3 keydown conditional_2018_callout: [ ]
+      CSD U3 keydown conditional-2018_callout: { }
+      CSD U3 keydown conditional_callout: { }
+      CSD U3 keydown conditional_2018_callout: { }
       CSD U3 my-rect_callout:
         CSD_U3_rect_c1: Hér er kóðinn
         CSD_U3_rect_c2: Hér er "Keyra" hnappurinn.
-      CSD U3 picture_callout: [ ]
-      CSD U3 picture_2018_callout: [ ]
+      CSD U3 picture_callout: { }
+      CSD U3 picture_2018_callout: { }
       CSD U3 platform background1_callout:
         CSD_U3_L16_S3_C1: the function that draws the background
         CSD_U3_L16_S3_C2: the code that calls the function
@@ -417,23 +418,23 @@ is:
         CSD_U3_rect_c1: Hér er kóðinn
         CSD_U3_rect_c2: Dragðu þennan kubb yfir á kóðasvæðið.
       CSD U6 colorLeds intensity_callout:
-        CSDU6L10_rainbow: Add your code here
+        CSDU6L10_rainbow: Settu kóðann þinn hér
       CSD U6 colorLeds intensity_2018_callout:
-        CSDU6L10_rainbow: Add your code here
-      CSD U6 colorLeds predict_callout: [ ]
-      CSD U6 colorLeds predict_2018_callout: [ ]
+        CSDU6L10_rainbow: Settu kóðann þinn hér
+      CSD U6 colorLeds predict_callout: { }
+      CSD U6 colorLeds predict_2018_callout: { }
       CSD U6 getProperty input_callout:
         CSD_U6L06P03: Add your block here.
       CSD U6 getProperty input_2018_callout:
         CSD_U6L06P03: Add your block here.
       CSD U6 light show predict_callout:
-        CSDUDL03P09: What does this line do?
+        CSDUDL03P09: Hvað gerir þessi lína?
       CSD U6 light show predict_2018_callout:
-        CSDUDL03P09: What does this line do?
+        CSDUDL03P09: Hvað gerir þessi lína?
       CSD U6 light show_callout:
-        CSDUDL03P09: What does this line do?
+        CSDUDL03P09: Hvað gerir þessi lína?
       CSD U6 light show_2018_callout:
-        CSDUDL03P09: What does this line do?
+        CSDUDL03P09: Hvað gerir þessi lína?
       CSD U6 tugowar variables 1_callout:
         CSD_U6_startGame: Skilgreindu startGame hér
       CSD U6 tugowar variables 1_2018_callout:
@@ -446,12 +447,16 @@ is:
         CSD_U6_checkWin: Athugaðu hvort spilarinn hafi unnið
       CSD U6 tugowar variables 3_2018_callout:
         CSD_U6_checkWin: Athugaðu hvort spilarinn hafi unnið
-      CSDU4 - Design Mode - 3_callout: [ ]
+      CSDU4 - Design Mode - 3_callout: { }
       CSPU5_U3L16 - setPosition to fixed location_callout:
         firstTimeSetPosition: Drag this inside the event handler function. Then click the arrows to get rid of the width and height parameters.
       CSPU5_U3L16 - setPosition to move button_callout:
         randNumReminder: Use this as the the value for the x and y coordinates in setPosition.  Just drag it into the parameter you want.
+      CSPU5_U3L16 - setPosition to move button_2018_callout:
+        randNumReminder: Use this as the the value for the x and y coordinates in setPosition.  Just drag it into the parameter you want.
       CSPU5_setPosition to fixed location_callout:
+        firstTimeSetPosition: Drag this inside the event handler function. Then click the arrows to get rid of the width and height parameters.
+      CSPU5_setPosition to fixed location_2018_callout:
         firstTimeSetPosition: Drag this inside the event handler function. Then click the arrows to get rid of the width and height parameters.
       Calc Circles of Eval .1_callout:
         Calc Circles of Eval .1: This is the evaluation block. Click on the drop down box to change the number
@@ -467,7 +472,7 @@ is:
         Calc Vars 1_edit_option: Click on edit to change the value of this variable
       Calc Vars 2.1_callout:
         Calc Vars 2.1_num_months: Drop the number of months in a year here
-      Code Studio Puzzle Challenge 1 - Artist_callout: [ ]
+      Code Studio Puzzle Challenge 1 - Artist_callout: { }
       Code Studio Puzzle Challenge 12 - Artist_callout:
         Code Studio Puzzle Challenge 12 - Artist_callout1: Click "Clear Puzzle" to return to the original code.
       Code Studio Puzzle Challenge 5 - Bee_callout:
@@ -476,7 +481,7 @@ is:
         Code Studio Puzzle Challenge 5 - Bee_callout3: 1. Drag blocks from the toolbox
       Code Studio Puzzle Challenge 6 - Bee_callout:
         Code Studio Puzzle Challenge 6 - Bee_callout1: Drag blocks into the trash can to delete them
-      Code Studio Puzzle Challenge Var - Artist_callout: [ ]
+      Code Studio Puzzle Challenge Var - Artist_callout: { }
       Counting_callout:
         New Play Lab Project_callout1: Smelltu á flokkana til að sjá kubbana í verkfærakassanum! Dragðu kubba inn á vinnusvæðið til að bæta þeim við forritið þitt
         New Play Lab Project_callout2: Smelltu á "Keyra" til að vista og keyra forritið þitt
@@ -505,7 +510,7 @@ is:
         set_sides: Notaðu þennan kubb til að setja töluna fyrir "hliðar" sem vantar til að ljúka þrautinni.
       Course 4 Artist Vars 12_callout:
         set_length: Notaðu þennan kubb til að stilla "lengd" á rétt gildi.
-      Course 4 Artist Vars 13_callout: [ ]
+      Course 4 Artist Vars 13_callout: { }
       Course 4 Artist Vars 2_callout:
         set_length: Notaðu þennan kubb til að stilla "lengd" á rétt gildi.
       Course 4 Artist Vars 3_callout:
@@ -526,10 +531,10 @@ is:
         actions_category: Verkfærakassinn er með nýtt útlit! Kubbarnir "Aðgerðir" hafa nú bæst við.
       Course 4 Bee Params 2_callout:
         edit_get_nectar: Notaðu þennan hnapp til að breyta fallinu og breyta í hvaða átt býflugan mun snúa til að sækja blómasafann.
-      Course 4 Bee Params 3_callout: [ ]
+      Course 4 Bee Params 3_callout: { }
       Course 4 Bee Params 4 - Two WhenRun_callout:
         Course_4_Bee_Params_4: Þegar við setjum "0" eða "1" í þessar breytur er það kallað að "flagga". Flaggið getur sagt fallinu okkar í hvaða átt býflugan á að fara.
-      Course 4 Bee Params 4_callout: [ ]
+      Course 4 Bee Params 4_callout: { }
       Course 4 Maze 1_callout:
         Course 4 Maze 1_callout1: Smelltu á "Keyra" til að prófa forritið þitt
         Course 4 Maze 1_callout2: Dragðu kubbinn "færa" og festu hann við hina kubbana á vinnusvæðinu
@@ -539,31 +544,31 @@ is:
         Course_4 _Play_Lab_Params_2_1: Smelltu á "breyta" til að uppfæra þetta fall svo að það noti stikann fyrir hæð.
       Course 4 Play Lab Params 3_callout:
         edit_function: Smelltu hér til að breyta fallinu þínu.
-      Course 4 Play Lab Params 5_callout: [ ]
+      Course 4 Play Lab Params 5_callout: { }
       Course 4 Play Lab Params 6_callout:
         edit_add_parameter: Smelltu á breyta til að bæta stika við fallið þitt
       Course 4 Play Lab Vars 1_callout:
         arrows_move_actor: Notaðu örvarlyklana til að færa persónuna
-      Course 4 Play Lab Vars 6_callout: [ ]
+      Course 4 Play Lab Vars 6_callout: { }
       Course 4 Play Lab Vars 9_callout:
         Course_4_Play_Lab_Vars_9_1: Öllum kubbunum hefur nú verið raða í flokka! Smelltu á heiti flokks til að sjá kubbana í honum.
       Course 4 Play Labs For Loops 5_callout:
         Course_4_Play_Labs_For_Loops_5: Vó! Kóðinn minn sprakk! Getur þú sett hann saman aftur til að leysa þessa þraut?
-      Course 4 Playlab For Loop Freeplay_callout: [ ]
+      Course 4 Playlab For Loop Freeplay_callout: { }
       Course 4 Playlab For Loops 4b_callout:
         Course_4_Playlab_For_Loops_4b_1: Taktu eftir að breytan "teljari" er með mismunandi heiti fyrir hvern leikmann? Það er til að hver "frá" lykkja hafi teljara út af fyrir sig.
         Course_4_Playlab_For_Loops_4b_2: Í þessari þraut mátt þú bara breyta "aukanum" í "frá" lykkjunum.
-      Course 4 Playlab For Loops 5b_callout: [ ]
-      Course 4 Playlab For Loops 6b_callout: [ ]
+      Course 4 Playlab For Loops 5b_callout: { }
+      Course 4 Playlab For Loops 6b_callout: { }
       Course 4 SCV 6_callout:
         Course_4_SCV_6: Með þessum kubbi getur þú búið til næstum hvaða lit sem er! Leiktu þér með tölurnar til að sjá hvaða áhrif það hefur!
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: Notaðu örvarlyklana til að færa persónuna
       CourseF_PlayLab_vars10_callout:
         Course_4_Play_Lab_Vars_9_1: Öllum kubbunum hefur nú verið raða í flokka! Smelltu á heiti flokks til að sjá kubbana í honum.
-      CourseF_PlayLab_vars6_callout: [ ]
-      CourseF_PlayLab_vars7_callout: [ ]
-      CourseF_PlayLab_vars8_callout: [ ]
+      CourseF_PlayLab_vars6_callout: { }
+      CourseF_PlayLab_vars7_callout: { }
+      CourseF_PlayLab_vars8_callout: { }
       Eval Booleans 2_callout:
         Eval Booleans 2 1: Select a number that will make this expression evaluate to true
       Eval Cond 1_callout:
@@ -584,7 +589,7 @@ is:
         eval_design_recipe_3: This is your function definition. This code runs every time you use the 'wide-rect' function
       Eval Strings Images .1_callout:
         type_string: 'Drag this string into the evaluate block in the workspace. '
-      Eval Strings Images .2_callout: [ ]
+      Eval Strings Images .2_callout: { }
       Eval Strings Images 1_callout:
         purple_image_block: Purple colored blocks output Image values
       Eval Strings Images 2_callout:
@@ -593,7 +598,7 @@ is:
         Eval Strings Images 3: Use this style block and select "outline"
       Eval Strings Images 5_callout:
         Eval Strings Images 5_callout1: Overlay a triangle by filling in this slot
-      Eval Strings Images 7_callout: [ ]
+      Eval Strings Images 7_callout: { }
       Frozen Project Test Toolbox_callout:
         snowflake_dropdown: Notaðu þennan fellilista til að búa til mismunandi snjókorn!
       Frozen Project Toolbox (Old)_callout:
@@ -616,9 +621,9 @@ is:
       Infinity_repeat_callout:
         Infinity_repeat_callout: Setja "færa" kubba hér innan í
       InspirationalArtwork_callout:
-        InspirationalArtwork_1: Try using the new `comment` block under this label to leave yourself notes inside your program!
+        InspirationalArtwork_1: Prófaðu að setja nýja ' aths ' kubbinn neðan við þetta merki til að hafa athugasemd í forritinu þínu!
       InspirationalArtwork_2018_callout:
-        InspirationalArtwork_1: Try using the new `comment` block under this label to leave yourself notes inside your program!
+        InspirationalArtwork_1: Prófaðu að setja nýja ' aths ' kubbinn neðan við þetta merki til að hafa athugasemd í forritinu þínu!
       Luigi's Pizza 1 (copy 1)_callout:
         luigi's pizza 1: Try ordering a pepperoni pizza
       Luigi's Pizza 1_callout:
@@ -627,20 +632,20 @@ is:
         luigi's pizza 2: Edit this function to add your own toppings
       Luigi's Pizza 2_callout:
         luigi_pizza_2: Edit this function to add your own toppings
-      Luigi's Pizza 3 (copy 1)_callout: [ ]
-      Luigi's Pizza 3_callout: [ ]
-      Luigi's Pizza 4_callout: [ ]
+      Luigi's Pizza 3 (copy 1)_callout: { }
+      Luigi's Pizza 3_callout: { }
+      Luigi's Pizza 4_callout: { }
       MC HOC 2016 Level 2-2_callout:
         craft2_run_button_callout: Smelltu á "Keyra" þegar þú vilt prófa forritið.
-      MC HOC 2016 Level 6_callout: [ ]
-      MC HOC 2016 New Drop_callout: [ ]
-      MC HOC 2016 New Spawn_callout: [ ]
+      MC HOC 2016 Level 6_callout: { }
+      MC HOC 2016 New Drop_callout: { }
+      MC HOC 2016 New Spawn_callout: { }
       MC HOC 2016 New Walk_callout:
         MC_HOC_2016_New_Walk_callout2: Ýttu á "Keyra" til að byrja að hreyfast.
       MC_HOC_2017_01_Cole_callout:
         MC_HOC_2017_01_Cole_2: Notaðu örvarlyklana eða smelltu hér til að byrja að færa leikmanninn.
-      MC_HOC_2017_01_Kiki_callout: [ ]
-      MC_HOC_2017_02_Cole_callout: [ ]
+      MC_HOC_2017_01_Kiki_callout: { }
+      MC_HOC_2017_02_Cole_callout: { }
       MC_HOC_2017_02_Will_callout:
         MC_HOC_2017_02_Cole_1: Nú hefur leikmaðurinn eignast vin! Þú getur skrifað kóða fyrir Umbann til að hjálpa þér í gegnum borðin.
       MC_HOC_2017_03_Cole_callout:
@@ -666,8 +671,8 @@ is:
         New Play Lab Project_callout1: Smelltu á flokkana til að sjá kubbana í verkfærakassanum! Dragðu kubba inn á vinnusvæðið til að bæta þeim við forritið þitt
         New Play Lab Project_callout2: Smelltu á "Keyra" til að vista og keyra forritið þitt
         sign_in_to_save_project: Viltu komast í verkefnið þitt seinna? Skráðu þig inn til að vista verkefnið undir aðgangi þínum!
-      Modular Arithmetic_callout: [ ]
-      NEW Course 4 Artist Functions 10_callout: [ ]
+      Modular Arithmetic_callout: { }
+      NEW Course 4 Artist Functions 10_callout: { }
       NEW Course 4 Artist Functions 3_callout:
         NEW_Course_4_Artist_Functions_3_1: Smelltu hér til að breyta nýja fallinu svo að það búi til ferning.
       NEW Course 4 Artist Functions 5_callout:
@@ -680,9 +685,9 @@ is:
       NEW Course 4 Artist Params 10_callout:
         create_function: Smelltu hér til að opna hliðargluggann "Föll" og smelltu svo á "Búa til fall" hnappinn.
       NEW Course 4 Artist Params 2_callout:
-        create_function: ""
-        name_function: ""
-        write_draw_triangle_function: ""
+        create_function:
+        name_function:
+        write_draw_triangle_function:
       NEW Course 4 Artist Params 9_callout:
         edit_add_parameter: Smelltu á breyta til að bæta stika við fallið þitt
         add_and_drag_parameter: Skrifaðu heiti stikans hér, smelltu svo á bæta við og dragðu hann síðan inn í skilgreininguna á fallinu þínu
@@ -692,14 +697,14 @@ is:
         bee_for_loop: Færðu hér inn stærstu töluna fyrir blómasafa sem þú vilt að býflugan safni
       NEW Course 4 Bee For Loops 5_callout:
         actions_category: Verkfærakassinn er með nýtt útlit! Kubbarnir "Aðgerðir" hafa nú bæst við.
-      New App Lab Project_callout: [ ]
+      New App Lab Project_callout: { }
       New Artist Project_callout:
         New Artist Project_callout1: Smelltu á flokkana til að sjá kubbana í verkfærakassanum! Dragðu kubba inn á vinnusvæðið til að bæta þeim við forritið þitt
         New Artist Project_callout2: Smelltu á "Keyra" til að vista og keyra forritið þitt
         sign_in_to_save_project: Viltu komast í verkefnið þitt seinna? Skráðu þig inn til að vista verkefnið undir aðgangi þínum!
       New Frozen Project_callout:
         snowflake_dropdown: Notaðu þennan fellilista til að búa til mismunandi snjókorn!
-      New Maker Lab Project_callout: [ ]
+      New Maker Lab Project_callout: { }
       New Play Lab Project_callout:
         New Play Lab Project_callout1: Smelltu á flokkana til að sjá kubbana í verkfærakassanum! Dragðu kubba inn á vinnusvæðið til að bæta þeim við forritið þitt
         New Play Lab Project_callout2: Smelltu á "Keyra" til að vista og keyra forritið þitt
@@ -726,11 +731,11 @@ is:
         craft_inside_repeat: Endurtaktu aðgerðir með því að setja kubba hér
       Overworld Place Wall_2018_callout:
         craft_inside_repeat: Endurtaktu aðgerðir með því að setja kubba hér
-      PDAlg 13-16 Sam Extension Puzzle_callout: [ ]
-      PDAlg 17-20 Luigi Extension Puzzle_callout: [ ]
-      PDAlg Big Game History_callout: [ ]
-      PDAlg Big Game Remix_callout: [ ]
-      PDAlg Design Recipe Delete_callout: [ ]
+      PDAlg 13-16 Sam Extension Puzzle_callout: { }
+      PDAlg 17-20 Luigi Extension Puzzle_callout: { }
+      PDAlg Big Game History_callout: { }
+      PDAlg Big Game Remix_callout: { }
+      PDAlg Design Recipe Delete_callout: { }
       PS clone CSD U3 Variables Predict Where XY_callout:
         grid: Smelltu hér til að sýna grindina.
       PS copy - CSD U3 Variables Predict Where XY Embed_callout:
@@ -748,14 +753,14 @@ is:
         pass_function: Með þessum svarta kassa getur þú bætt fallinu þínu (ekki gildinu sem hún skilar út frá einhverju inntaki) í safnið fyrir hreyfingar flaugar. Hreyfingin sem þú sérð á skjánum er í raun að nota fallið þitt til að hreyfa flaugina!
       Play Lab Rocket 3_callout:
         Play Lab Rocket 3 1: Uppfærðu markmiðssetninguna áður þú byrjar á dæmunum og skilgreiningunni.
-      Play Lab Rocket Free Play_callout: [ ]
-      Poorva copy U3L2 Using Simple Commands_callout: [ ]
+      Play Lab Rocket Free Play_callout: { }
+      Poorva copy U3L2 Using Simple Commands_callout: { }
       Quantum Bee - Ryan_callout:
         feeling_stuck_callout_test: " Kemstu ekkert áfram?<br />Smelltu á peruna til að fá vísbendingu!"
       Robot Doodle_callout:
-        4-5_Artist_Patterns_Free_Play_2: Try using the new `comment` block under this label to leave yourself notes inside your program!
+        4-5_Artist_Patterns_Free_Play_2: Prófaðu að setja nýja ' aths ' kubbinn neðan við þetta merki til að hafa athugasemd í forritinu þínu!
       Robot Doodle_2018_callout:
-        4-5_Artist_Patterns_Free_Play_2: Try using the new `comment` block under this label to leave yourself notes inside your program!
+        4-5_Artist_Patterns_Free_Play_2: Prófaðu að setja nýja ' aths ' kubbinn neðan við þetta merki til að hafa athugasemd í forritinu þínu!
       Robot Drawing_callout:
         4-5_Artist_Patterns_Free_Play_1: Öllum uppáhaldskubbunum þínum hefur nú verið raðað í flokka. Smelltu á þessi orð til að sjá hvert allt fór!
       Robot_callout:
@@ -770,51 +775,57 @@ is:
         4_5_Bee_Conditionals_2_1: Mundu að athuga með HVERT ský hvort það hafi BLÓM. Þú þarft ekkert að athuga með hunang.
       Ryan - Bee Conditionals_callout:
         4_5_Bee_Conditionals_2_1: Mundu að athuga með HVERT ský hvort það hafi BLÓM. Þú þarft ekkert að athuga með hunang.
-      SG Add Subgoals practice_callout: [ ]
+      SG Add Subgoals practice_callout: { }
       SG U3L08 how to add comments_callout:
         comment_highlight: Dragðu athugasemdakubb héðan og inn í kóðann þinn
-      SG U3L2 Using Simple Commands part 1_callout: [ ]
-      SG U3L2 Using Simple Commands_callout: [ ]
-      SG U3L2_Add-subgoals_callout: [ ]
+      SG U3L2 Using Simple Commands part 1_callout: { }
+      SG U3L2 Using Simple Commands_callout: { }
+      SG U3L2_Add-subgoals_callout: { }
       SG U3L2_Turtle3by3Grid_callout:
         pen_functions: Aðgerðirnar penUp og penDown eru nú hér ef þú vilt nota þær.
         goals_tab: dragðu markmið út héðan
-      SG U3L2_TurtleSquare_right_callout: [ ]
+      SG U3L2_TurtleSquare_right_callout: { }
       SGU3L2A Introducing Subgoals_callout:
         goals_palette_show: Hér er listi yfir undirmarkmið
         goals_workspace: Dæmi um kóða sem inniheldur undirmarkmið
       Sam the Butterfly 3_callout:
         Sam the Butterfly 3 1: Breyttu þessu falli svo að Sammi fari ekki út af hægra megin
-      Sam the Butterfly 5_callout: [ ]
+      Sam the Butterfly 5_callout: { }
       Test Play Lab Project With Walls_callout:
         New Play Lab Project_callout1: Smelltu á flokkana til að sjá kubbana í verkfærakassanum! Dragðu kubba inn á vinnusvæðið til að bæta þeim við forritið þitt
         New Play Lab Project_callout2: Smelltu á "Keyra" til að vista og keyra forritið þitt
         sign_in_to_save_project: Viltu komast í verkefnið þitt seinna? Skráðu þig inn til að vista verkefnið undir aðgangi þínum!
-      TestLab_callout: [ ]
-      U3 - Simple Drawing - Ellipse and No Fill_callout: [ ]
-      U3 - Simple Drawing - Fill_callout: [ ]
-      U3 - Simple Drawing - No Fill_callout: [ ]
-      U3 - Simple Drawing - Order of Blocks_callout: [ ]
-      U3 - Simple Drawing - Oval_callout: [ ]
-      U3 - Simple Drawing - Rectangle Width and Height_callout: [ ]
-      U3 - Simple Drawing - Rectangle_callout: [ ]
-      U3 - Simple Drawing - Stroke and Stroke Weight_callout: [ ]
-      U3 - Simple Drawing - X and Y values_callout: [ ]
-      U3 - Simple Drawing - regular polygon_callout: [ ]
-      U3 - Simple Drawing - text_callout: [ ]
-      U3 - Sprites - Intro Sprites_callout: [ ]
-      U3 Variables flower example_callout: [ ]
-      U3 Variables gray square_callout: [ ]
-      U3 Variables make a square_callout: [ ]
-      U3L05_3x3GridEfficiencyChallenge_callout: [ ]
-      U3L05_draw3x3GridEfficiently_callout: [ ]
+      TestLab_callout: { }
+      U3 - Simple Drawing - Ellipse and No Fill_callout: { }
+      U3 - Simple Drawing - Fill_callout: { }
+      U3 - Simple Drawing - No Fill_callout: { }
+      U3 - Simple Drawing - Order of Blocks_callout: { }
+      U3 - Simple Drawing - Oval_callout: { }
+      U3 - Simple Drawing - Rectangle Width and Height_callout: { }
+      U3 - Simple Drawing - Rectangle_callout: { }
+      U3 - Simple Drawing - Stroke and Stroke Weight_callout: { }
+      U3 - Simple Drawing - X and Y values_callout: { }
+      U3 - Simple Drawing - regular polygon_callout: { }
+      U3 - Simple Drawing - text_callout: { }
+      U3 - Sprites - Intro Sprites_callout: { }
+      U3 Variables flower example_callout: { }
+      U3 Variables gray square_callout: { }
+      U3 Variables make a square_callout: { }
+      U3L05_3x3GridEfficiencyChallenge_callout: { }
+      U3L05_draw3x3GridEfficiently_callout: { }
       U3L08 how to add comments_callout:
         comment_highlight: Dragðu athugasemdakubb héðan og inn í kóðann þinn
-      U3L2 Using Simple Commands (no tooltips)_callout: [ ]
-      U3L2 Using Simple Commands_callout: [ ]
-      U3L2_Turtle3by3Grid_callout: [ ]
-      U3L2_TurtleSquare_right_callout: [ ]
-      U5 ColorSleuth Template_callout: [ ]
+      U3L08 how to add comments_2018_callout:
+        comment_highlight: Dragðu athugasemdakubb héðan og inn í kóðann þinn
+      U3L2 Using Simple Commands (no tooltips)_callout: { }
+      U3L2 Using Simple Commands_callout: { }
+      U3L2 Using Simple Commands_2018_callout: { }
+      U3L2_Turtle3by3Grid_callout: { }
+      U3L2_Turtle3by3Grid_2018_callout: { }
+      U3L2_TurtleSquare_right_callout: { }
+      U3L2_TurtleSquare_right_2018_callout: { }
+      U5 ColorSleuth Template_callout: { }
+      U5 ColorSleuth Template_2018_callout: { }
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: Þessi kóði mun athuga með hraun. Getur þú bætt við skipun um að fara áfram?
       Underground Avoiding Lava_2018_callout:
@@ -845,18 +856,18 @@ is:
         aE6_1: Aðeins 1 "færa áfram" og 1 "snúa" kubbur
       aEfreeplay_callout:
         aEfreeplay_1: Að láta listamanninn byrja í miðjunni getur verið óheppilegt. Ætlunin er að bæta við aðgerðum sem geta fært listamanninn á tiltekna staði.
-      allthethings_U3 - Simple Drawing - Rectangle Width and Height_callout: [ ]
+      allthethings_U3 - Simple Drawing - Rectangle Width and Height_callout: { }
       artistLoopsK2_callout:
         artistLoopsK2_1: Þessi tala segir þér hve marga af þessum kubbum þú mátt nota í þessari þraut.
       artistLoopsK2gradek_artist_loops3_callout:
         artistLoopsK2_1: Þessi tala segir þér hve marga af þessum kubbum þú mátt nota í þessari þraut.
-      comment_intro_maze_2018_callout: [ ]
-      course2_artist_nestedLoops_challenge2_callout: [ ]
+      comment_intro_maze_2018_callout: { }
+      course2_artist_nestedLoops_challenge2_callout: { }
       course2_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Notaðu þessa lykkju til að safna öllum blómasafanum (eða hunangi) frá einu blómi (eða búi).
-      course2_collector_loops_challenge2_callout: [ ]
-      course2_collector_prog_challenge1_callout: [ ]
-      course2_collector_prog_challenge2_callout: [ ]
+      course2_collector_loops_challenge2_callout: { }
+      course2_collector_prog_challenge1_callout: { }
+      course2_collector_prog_challenge2_callout: { }
       course3_artist_functions_challenge1_callout:
         courseE_artist_functions_challenge1_callout1: Haltu áfram með því að bæta meiri kóða við neðst.
         courseE_artist_functions_challenge1_callout2: Ef þér líkar ekki þessi hönnun, getur þú breytt henni í hvað sem þú vilt!
@@ -868,19 +879,19 @@ is:
       course3_bee_functions_challenge3_callout:
         courseF_bee_functions_challenge1_1: Hvaða kóða ættir þú að setja í þetta fall?
         courseF_bee_functions_challenge1_2: Fallið "athuga blómasafa eða hunang" má nota hér ef því er breytt svo það búi endurtekið til hunang.
-      course3_bee_functions_challenge4_callout: [ ]
-      course3_collector_debugging_challenge2_callout: [ ]
-      course3_farmer_until_challenge2_callout: [ ]
+      course3_bee_functions_challenge4_callout: { }
+      course3_collector_debugging_challenge2_callout: { }
+      course3_farmer_until_challenge2_callout: { }
       course3_playLab_challenge1_callout:
         courseC_PlayLab_events_challenge1_1: Með þessum kubbi getur þú fært leikmenn á staði á leiksvæðinu.
-      course4_artist_concept_challenge2_callout: [ ]
+      course4_artist_concept_challenge2_callout: { }
       course4_artist_functions_challenge2_callout:
         courseE_artist_functions_challenge2_callout1: Haltu áfram með því að bæta meiri kóða við neðst.
         courseE_artist_functions_challenge2_callout2: Ef þér líkar ekki þessi hönnun, getur þú breytt henni í hvað sem þú vilt!
-      course4_bee_for_challenge1_callout: [ ]
+      course4_bee_for_challenge1_callout: { }
       course4_bee_fwp_challenge2_callout:
         courseF_bee_fwp_challenge2_callout1: Þetta fall virkar vel með maís, en hvað með hinar jurtirnar?
-      course4_collector_nested_loops_challenge2_callout: [ ]
+      course4_collector_nested_loops_challenge2_callout: { }
       courseA_artist_loops4_callout:
         courseA_artist_loops4_1: Þessi tala segir þér hve marga af þessum kubbum þú mátt nota í þessari þraut.
       courseA_artist_loops4_2018_callout:
@@ -892,9 +903,9 @@ is:
       courseA_artist_loops7_forVideo_callout:
         courseA_artist_loops7_1: Þessi tala táknar að það má bara nota einn svona kubb í lokasvarinu.
       courseA_artist_loops8_callout:
-        courseA_artist_loops8_1: Did you know that you can draw back over a line whenever you need to?
+        courseA_artist_loops8_1: Veistu að þú getur teiknað aftur yfir línu hvenær sem þú þarft?
       courseA_artist_loops8_2018_callout:
-        courseA_artist_loops8_1: Did you know that you can draw back over a line whenever you need to?
+        courseA_artist_loops8_1: Veistu að þú getur teiknað aftur yfir línu hvenær sem þú þarft?
       courseA_collector_loops1_callout:
         courseA_collector_loops1_1: Sérðu einhverja nýja kubba í verkfærakassanum? Ekki hafa áhyggjur, þeir verða útskýrðir seinna í stiginu.
       courseA_collector_loops1_2018_callout:
@@ -903,7 +914,7 @@ is:
         gradek_adventurer_loops2_1: Þessi tala segir þér hve marga af þessum kubbum þú mátt nota í þessari þraut.
       courseA_collector_loops3_2018_callout:
         gradek_adventurer_loops2_1: Þessi tala segir þér hve marga af þessum kubbum þú mátt nota í þessari þraut.
-      courseA_collector_loops3_predict1_callout: [ ]
+      courseA_collector_loops3_predict1_callout: { }
       courseA_collector_preLoops1_callout:
         courseA_collector_preLoops1_1: Smelltu hér til að sjá kóðann keyra!
       courseA_collector_preLoops2_callout:
@@ -916,20 +927,20 @@ is:
         courseA_collector_loops1_1: Sérðu einhverja nýja kubba í verkfærakassanum? Ekki hafa áhyggjur, þeir verða útskýrðir seinna í stiginu.
       courseA_collector_preLoops6_callout:
         courseA_collector_loops1_1: Sérðu einhverja nýja kubba í verkfærakassanum? Ekki hafa áhyggjur, þeir verða útskýrðir seinna í stiginu.
-      courseA_forVideoTest_artist_callout: [ ]
+      courseA_forVideoTest_artist_callout: { }
       courseA_maze_ramp2_2018_callout:
-        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+        courseC_maze_programming2_1: Þetta er Verkfærakassinn. Þar finnur þú fleiri kubba til að klára þrautirnar.
       courseA_maze_ramp2a_2018_callout:
-        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+        courseC_maze_programming2_1: Þetta er Verkfærakassinn. Þar finnur þú fleiri kubba til að klára þrautirnar.
       courseA_maze_ramp3_2018_callout:
-        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
+        courseC_maze_programming3_2: Dragðu óþarfa kubba aftur í verkfærakassann til að losa þig við þá.
         stone_block_2: Gráir kubbar eru naglfastir og ekki hægt að fleygja þeim.
-      courseA_maze_ramp3a_2018_callout: [ ]
+      courseA_maze_ramp3a_2018_callout: { }
       courseA_maze_ramp4_2018_callout:
-        courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
-      courseA_maze_ramp4a_2018_callout: [ ]
-      courseA_maze_ramp5_2018_callout: [ ]
-      courseA_maze_ramp5a_2018_callout: [ ]
+        courseC_maze_programming4_1: Þetta sýnir fjölda kubbanna. Þá veistu hvað þú átt marga svona kubba eftir til að nota.
+      courseA_maze_ramp4a_2018_callout: { }
+      courseA_maze_ramp5_2018_callout: { }
+      courseA_maze_ramp5a_2018_callout: { }
       courseA_maze_seq1_callout:
         courseA_maze_seq1_1: Smelltu á ljósperuna ef þú þarft vísbendingu!
       courseA_maze_seq1_2018_callout:
@@ -942,11 +953,11 @@ is:
         made_of_stone: Þessar blokkir eru meitlaðar í stein! Þú getur fært þær en þú getur ekki eytt þeim!
       courseA_maze_seq4_2018_callout:
         made_of_stone: Þessar blokkir eru meitlaðar í stein! Þú getur fært þær en þú getur ekki eytt þeim!
-      courseA_maze_seq4a_callout: [ ]
-      courseA_playLab_events2_callout: [ ]
-      courseA_playLab_events2_2018_callout: [ ]
-      courseA_playLab_events3_callout: [ ]
-      courseA_playLab_events3_2018_callout: [ ]
+      courseA_maze_seq4a_callout: { }
+      courseA_playLab_events2_callout: { }
+      courseA_playLab_events2_2018_callout: { }
+      courseA_playLab_events3_callout: { }
+      courseA_playLab_events3_2018_callout: { }
       courseA_playLab_events4_callout:
         courseA_playlab_events4_callout1: Þetta er skýring
       courseA_playLab_events4_2018_callout:
@@ -956,20 +967,20 @@ is:
       courseA_playLab_events5_2018_callout:
         courseA_playLab_events5_1: Smelltu hér til að breyta stefnu atburðarörvarinnar.
       courseA_playLab_events6_callout:
-        courseA_playLab_events6_1: This let's you choose a "random" sound, which means that you don't know what you are going to get until you hear it!
+        courseA_playLab_events6_1: Með þessu getur þú valið "eitthvað" hljóð, sem þýðir að þú veist ekki hvaða hljóð þú færð fyrr en þú heyrir það!
       courseA_playLab_events6_2018_callout:
-        courseA_playLab_events6_1: This let's you choose a "random" sound, which means that you don't know what you are going to get until you hear it!
-      courseA_toMakeLoopsVideo_Collector_callout: [ ]
+        courseA_playLab_events6_1: Með þessu getur þú valið "eitthvað" hljóð, sem þýðir að þú veist ekki hvaða hljóð þú færð fyrr en þú heyrir það!
+      courseA_toMakeLoopsVideo_Collector_callout: { }
       courseB_Scrat_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
-      courseB_Scrat_ramp2_2018_callout: [ ]
-      courseB_Scrat_ramp3a_2018_callout: [ ]
-      courseB_Scrat_ramp4a_2018_callout: [ ]
-      courseB_Scrat_ramp5a_2018_callout: [ ]
+        grade2_CaringForNewPet_0_1: Þegar búið er að tengja alla kubbana er ýtt á "Keyra" til að ræsa forritið.
+      courseB_Scrat_ramp2_2018_callout: { }
+      courseB_Scrat_ramp3a_2018_callout: { }
+      courseB_Scrat_ramp4a_2018_callout: { }
+      courseB_Scrat_ramp5a_2018_callout: { }
       courseB_artist_loops3_callout:
-        courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How will you use it?
+        courseB_artist_loops3_1: Það er aðeins einn af þessum kubbum í verkfærakassanum.  Hvernig ætlar þú að nota hann?
       courseB_artist_loops3_2018_callout:
-        courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How will you use it?
+        courseB_artist_loops3_1: Það er aðeins einn af þessum kubbum í verkfærakassanum.  Hvernig ætlar þú að nota hann?
       courseB_artist_loops5_callout:
         courseB_artist_loops5_1: Þessi tala þýðir að það eru ekki fleiri svona kubbar eftir í verkfærakassanum.
       courseB_artist_loops5_2018_callout:
@@ -990,16 +1001,16 @@ is:
         courseB_maze_seq3_1: Gráu kubbarnir eru höggnir í stein og ekki hægt að fleygja þeim.
       courseB_maze_seq3_2018_callout:
         courseB_maze_seq3_1: Gráu kubbarnir eru höggnir í stein og ekki hægt að fleygja þeim.
-      courseB_maze_seq7_callout: [ ]
-      courseB_maze_seq7_2018_callout: [ ]
+      courseB_maze_seq7_callout: { }
+      courseB_maze_seq7_2018_callout: { }
       courseB_playlab_events6_callout:
         courseB_playlab_events6_a: Notaðu græna fellilistann til að skipta um stefnu.
       courseB_playlab_events6_2018_callout:
         courseB_playlab_events6_a: Notaðu græna fellilistann til að skipta um stefnu.
       courseC_PlayLab_events8_callout:
-        courseC_PlayLab_events8_callout1: Use this block for when Waddles and Chomp touch!
+        courseC_PlayLab_events8_callout1: Notaðu þennan kubb þegar Waddles og Chomp snertast!
       courseC_PlayLab_events8_2018_callout:
-        courseC_PlayLab_events8_callout1: Use this block for when Waddles and Chomp touch!
+        courseC_PlayLab_events8_callout1: Notaðu þennan kubb þegar Waddles og Chomp snertast!
       courseC_PlayLab_events_challenge1_callout:
         courseC_PlayLab_events_challenge1_1: Með þessum kubbi getur þú fært leikmenn á staði á leiksvæðinu.
       courseC_PlayLab_events_challenge1_2018_callout:
@@ -1008,30 +1019,30 @@ is:
         courseC_artist_loopsPrePre1a_1: Byrjaðu á að nota þennan kubb til að koma listamanninum á miðjan skjáinn.
       courseC_artist_loopsPrePre1a_2018_callout:
         courseC_artist_loopsPrePre1a_1: Byrjaðu á að nota þennan kubb til að koma listamanninum á miðjan skjáinn.
-      courseC_artist_prog1_callout: [ ]
-      courseC_artist_prog1_2018_callout: [ ]
-      courseC_artist_prog2_callout: [ ]
-      courseC_artist_prog2_2018_callout: [ ]
-      courseC_collector_loops_challenge2_callout: [ ]
-      courseC_collector_loops_challenge2_2018_callout: [ ]
+      courseC_artist_prog1_callout: { }
+      courseC_artist_prog1_2018_callout: { }
+      courseC_artist_prog2_callout: { }
+      courseC_artist_prog2_2018_callout: { }
+      courseC_collector_loops_challenge2_callout: { }
+      courseC_collector_loops_challenge2_2018_callout: { }
       courseC_collector_prog1_callout:
         courseC_collector_prog1_1: Sérðu einhverja nýja kubba í verkfærakassanum? Ekki hafa áhyggjur, þeir verða útskýrðir seinna í stiginu.
       courseC_collector_prog1_2018_callout:
         courseC_collector_prog1_1: Sérðu einhverja nýja kubba í verkfærakassanum? Ekki hafa áhyggjur, þeir verða útskýrðir seinna í stiginu.
       courseC_collector_prog7_callout:
-        courseC_collector_prog7_1: You can take more blocks from the toolbox if you need them!
+        courseC_collector_prog7_1: Þú getur tekið fleiri kubbar úr verkfærakassanum þegar þú þarft!
       courseC_collector_prog7_2018_callout:
-        courseC_collector_prog7_1: You can take more blocks from the toolbox if you need them!
-      courseC_collector_prog8_callout: [ ]
-      courseC_collector_prog8_2018_callout: [ ]
-      courseC_collector_prog9_callout: [ ]
-      courseC_collector_prog9_2018_callout: [ ]
-      courseC_collector_progA_callout: [ ]
-      courseC_collector_progB_callout: [ ]
-      courseC_collector_prog_challenge1_callout: [ ]
-      courseC_collector_prog_challenge1_2018_callout: [ ]
-      courseC_collector_prog_challenge2_callout: [ ]
-      courseC_collector_prog_challenge2_2018_callout: [ ]
+        courseC_collector_prog7_1: Þú getur tekið fleiri kubbar úr verkfærakassanum þegar þú þarft!
+      courseC_collector_prog8_callout: { }
+      courseC_collector_prog8_2018_callout: { }
+      courseC_collector_prog9_callout: { }
+      courseC_collector_prog9_2018_callout: { }
+      courseC_collector_progA_callout: { }
+      courseC_collector_progB_callout: { }
+      courseC_collector_prog_challenge1_callout: { }
+      courseC_collector_prog_challenge1_2018_callout: { }
+      courseC_collector_prog_challenge2_callout: { }
+      courseC_collector_prog_challenge2_2018_callout: { }
       courseC_harvester_loops1_callout:
         courseC_harvester_loops1_callout1: Tala 4 á graskerinu segir þér að þú getir tínt fjögur grasker.
       courseC_harvester_loops1_2018_callout:
@@ -1041,80 +1052,80 @@ is:
       courseC_maze_debugging5_2018_callout:
         courseC_maze_debugging5_1: Þessir kubbar eru læstir og ekki hægt að eyða þeim!
       courseC_maze_loops2_callout:
-        courseC_maze_loops2_1: You only have one of these blocks available in this puzzle.
-      courseC_maze_loops2_predict1_callout: [ ]
-      courseC_maze_loops_challenge2_callout: [ ]
+        courseC_maze_loops2_1: Þú hefur ekki nema einn svona kubb í þessari þraut.
+      courseC_maze_loops2_predict1_callout: { }
+      courseC_maze_loops_challenge2_callout: { }
       courseC_maze_programming1_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: Þegar búið er að tengja alla kubbana er ýtt á "Keyra" til að ræsa forritið.
       courseC_maze_programming1_2018_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: Þegar búið er að tengja alla kubbana er ýtt á "Keyra" til að ræsa forritið.
       courseC_maze_programming2_callout:
-        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+        courseC_maze_programming2_1: Þetta er Verkfærakassinn. Þar finnur þú fleiri kubba til að klára þrautirnar.
       courseC_maze_programming2_2018_callout:
-        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+        courseC_maze_programming2_1: Þetta er Verkfærakassinn. Þar finnur þú fleiri kubba til að klára þrautirnar.
       courseC_maze_programming3_callout:
-        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
+        courseC_maze_programming3_2: Dragðu óþarfa kubba aftur í verkfærakassann til að losa þig við þá.
         courseC_maze_programming3_3: Þessar blokkir eru úr steini og ekki hægt að fleygja þeim.
       courseC_maze_programming3_2018_callout:
-        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
+        courseC_maze_programming3_2: Dragðu óþarfa kubba aftur í verkfærakassann til að losa þig við þá.
         courseC_maze_programming3_3: Þessar blokkir eru úr steini og ekki hægt að fleygja þeim.
       courseC_maze_programming4_callout:
-        courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
+        courseC_maze_programming4_1: Þetta sýnir fjölda kubbanna. Þá veistu hvað þú átt marga svona kubba eftir til að nota.
       courseC_maze_programming4_2018_callout:
-        courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
-      courseC_maze_programming5_callout: [ ]
-      courseC_maze_programming5_2018_callout: [ ]
+        courseC_maze_programming4_1: Þetta sýnir fjölda kubbanna. Þá veistu hvað þú átt marga svona kubba eftir til að nota.
+      courseC_maze_programming5_callout: { }
+      courseC_maze_programming5_2018_callout: { }
       courseC_maze_programming7_callout:
-        courseC_maze_programming7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
+        courseC_maze_programming7_1: Þetta er fyrsta áskorunarþraut þín! Þær eru hafðar erfiðar og geta þurft nokkrar tilraunir.
         courseC_maze_programming7_2: Þessar blokkir eru úr steini og ekki hægt að fleygja þeim.
       courseC_maze_programming7_2018_callout:
-        courseC_maze_programming7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
+        courseC_maze_programming7_1: Þetta er fyrsta áskorunarþraut þín! Þær eru hafðar erfiðar og geta þurft nokkrar tilraunir.
         courseC_maze_programming7_2: Þessar blokkir eru úr steini og ekki hægt að fleygja þeim.
-      courseC_starWars_loops10_callout: [ ]
-      courseC_starWars_loops10_2018_callout: [ ]
-      courseC_starWars_loops10_predict2_callout: [ ]
-      courseC_starWars_loops10_predict2_2018_callout: [ ]
-      courseC_starWars_loops11_callout: [ ]
-      courseC_starWars_loops11_2018_callout: [ ]
+      courseC_starWars_loops10_callout: { }
+      courseC_starWars_loops10_2018_callout: { }
+      courseC_starWars_loops10_predict2_callout: { }
+      courseC_starWars_loops10_predict2_2018_callout: { }
+      courseC_starWars_loops11_callout: { }
+      courseC_starWars_loops11_2018_callout: { }
       courseC_starWars_loops2_callout:
-        courseC_starWars_loops2: You only have one of these blocks available in this puzzle.
+        courseC_starWars_loops2: Þú hefur ekki nema einn svona kubb í þessari þraut.
       courseC_starWars_loops2_2018_callout:
-        courseC_starWars_loops2: You only have one of these blocks available in this puzzle.
-      courseC_starWars_loops4_callout: [ ]
-      courseC_starWars_loops4_2018_callout: [ ]
-      courseC_starWars_loops5_callout: [ ]
-      courseC_starWars_loops5_2018_callout: [ ]
-      courseC_starWars_loops6_callout: [ ]
-      courseC_starWars_loops6_2018_callout: [ ]
-      courseC_starWars_loops7_callout: [ ]
-      courseC_starWars_loops7_2018_callout: [ ]
-      courseC_starWars_loops8_callout: [ ]
-      courseC_starWars_loops8_2018_callout: [ ]
-      courseC_starWars_loops9_callout: [ ]
-      courseC_starWars_loops9_2018_callout: [ ]
+        courseC_starWars_loops2: Þú hefur ekki nema einn svona kubb í þessari þraut.
+      courseC_starWars_loops4_callout: { }
+      courseC_starWars_loops4_2018_callout: { }
+      courseC_starWars_loops5_callout: { }
+      courseC_starWars_loops5_2018_callout: { }
+      courseC_starWars_loops6_callout: { }
+      courseC_starWars_loops6_2018_callout: { }
+      courseC_starWars_loops7_callout: { }
+      courseC_starWars_loops7_2018_callout: { }
+      courseC_starWars_loops8_callout: { }
+      courseC_starWars_loops8_2018_callout: { }
+      courseC_starWars_loops9_callout: { }
+      courseC_starWars_loops9_2018_callout: { }
       courseD_artist_functions2_callout:
-        courseD_artist_functions2_1: When this green block runs, all of the code in the function will run. What should the artist do after drawing the first square?
+        courseD_artist_functions2_1: Þegar þessi græni kubbur er keyrður er allur kóðinn í fallinu keyrður. Hvað ætti listamaðurinn að gera næst eftir fyrsta ferninginn?
       courseD_artist_functions8_callout:
-        courseD_artist_functions8_1: Your blocks to create functions have been moved under this label in the toolbox.
+        courseD_artist_functions8_1: Kubbarnir sem búa til föll hafa verið færðir undir þetta merki í verkfærakassanum.
       courseD_artist_nestedLoops1a_callout:
         courseD_artist_nestedLoops1a_1: Þú þarft ekki að nota liti til að leysa þessa þraut. Ef þú vilt nota liti, er það auðvelt með kubbnum "einhver litur"!
       courseD_artist_nestedLoops1a_2018_callout:
         courseD_artist_nestedLoops1a_1: Þú þarft ekki að nota liti til að leysa þessa þraut. Ef þú vilt nota liti, er það auðvelt með kubbnum "einhver litur"!
-      courseD_artist_nestedLoops_challenge2_callout: [ ]
-      courseD_artist_nestedLoops_challenge2_2018_callout: [ ]
+      courseD_artist_nestedLoops_challenge2_callout: { }
+      courseD_artist_nestedLoops_challenge2_2018_callout: { }
       courseD_artist_ramp11_callout:
         courseD_artist_ramp11_1: Þú getur breytt þessari tölu.
         courseD_artist_ramp11_2: Smelltu hér til að skrifa tölu fyrir hve oft á að endurtaka kóðann.
-      courseD_artist_ramp12_callout: [ ]
+      courseD_artist_ramp12_callout: { }
       courseD_bee_conditionals2_callout:
         4_5_Bee_Conditionals_2_1: Mundu að athuga með HVERT ský hvort það hafi BLÓM. Þú þarft ekkert að athuga með hunang.
-        4_5_Bee_Conditionals_2_2: Need help?  Click here for a VIDEO hint!
+        4_5_Bee_Conditionals_2_2: Þarftu aðstoð?  Smelltu hér til að sjá hjálparmyndband!
       courseD_bee_conditionals2_2018_callout:
         4_5_Bee_Conditionals_2_1: Mundu að athuga með HVERT ský hvort það hafi BLÓM. Þú þarft ekkert að athuga með hunang.
-        4_5_Bee_Conditionals_2_2: Need help?  Click here for a VIDEO hint!
+        4_5_Bee_Conditionals_2_2: Þarftu aðstoð?  Smelltu hér til að sjá hjálparmyndband!
       courseD_bee_conditionals2_test_callout:
         4_5_Bee_Conditionals_2_1: Mundu að athuga með HVERT ský hvort það hafi BLÓM. Þú þarft ekkert að athuga með hunang.
-        4_5_Bee_Conditionals_2_2: Need a little help?  Click here to see our new VIDEO HINTS!
+        4_5_Bee_Conditionals_2_2: Þarftu smá aðstoð?  Smelltu hér til að sjá nýju hjálparmyndböndin okkar!
       courseD_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Notaðu þessa lykkju til að safna öllum blómasafanum (eða hunangi) frá einu blómi (eða búi).
       courseD_bee_conditionals_challenge2_2018_callout:
@@ -1129,79 +1140,83 @@ is:
         courseD_bee_debugging_challenge1_callout1: Notaðu þessa skipun til að færa býfluguna aftur á bak.
       courseD_bee_debugging_challenge2_callout:
         courseD_bee_debugging_challenge1_callout1: Notaðu þessa skipun til að færa býfluguna aftur á bak.
-      courseD_bee_nested_loops_challenge1_callout: [ ]
-      courseD_bee_nested_loops_challenge2_callout: [ ]
-      courseD_collector_debugging_challenge2_callout: [ ]
-      courseD_collector_debugging_challenge2_2018_callout: [ ]
-      courseD_collector_nested_loops_challenge2_callout: [ ]
-      courseD_collector_nested_loops_challenge2_2018_callout: [ ]
-      courseD_collector_nested_loops_challenge2a_callout: [ ]
-      courseD_collector_ramp10_callout: [ ]
+      courseD_bee_nested_loops_challenge1_callout: { }
+      courseD_bee_nested_loops_challenge2_callout: { }
+      courseD_collector_debugging_challenge2_callout: { }
+      courseD_collector_debugging_challenge2_2018_callout: { }
+      courseD_collector_nested_loops_challenge2_callout: { }
+      courseD_collector_nested_loops_challenge2_2018_callout: { }
+      courseD_collector_nested_loops_challenge2a_callout: { }
+      courseD_collector_ramp10_callout: { }
       courseD_collector_ramp8_callout:
         courseD_collector_ramp8_1: 'Notaðu þennan kubb til að safna einum fjársjóði.  '
-      courseD_collector_ramp9_callout: [ ]
-      courseD_collector_until_challenge1_callout: [ ]
-      courseD_farmer_until_challenge2_callout: [ ]
-      courseD_farmer_until_challenge2_2018_callout: [ ]
-      courseD_harvester_nested_loops_challenge1-broken_callout: [ ]
-      courseD_maze_loops_challenge1_callout: [ ]
+      courseD_collector_ramp9_callout: { }
+      courseD_collector_until_challenge1_callout: { }
+      courseD_farmer_until_challenge2_callout: { }
+      courseD_farmer_until_challenge2_2018_callout: { }
+      courseD_harvester_nested_loops_challenge1-broken_callout: { }
+      courseD_maze_loops_challenge1_callout: { }
       courseD_maze_ramp1_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: Þegar búið er að tengja alla kubbana er ýtt á "Keyra" til að ræsa forritið.
       courseD_maze_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: Þegar búið er að tengja alla kubbana er ýtt á "Keyra" til að ræsa forritið.
       courseD_maze_ramp2_callout:
-        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+        courseC_maze_programming2_1: Þetta er Verkfærakassinn. Þar finnur þú fleiri kubba til að klára þrautirnar.
       courseD_maze_ramp2_2018_callout:
-        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+        courseC_maze_programming2_1: Þetta er Verkfærakassinn. Þar finnur þú fleiri kubba til að klára þrautirnar.
       courseD_maze_ramp3_callout:
-        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
+        courseC_maze_programming3_2: Dragðu óþarfa kubba aftur í verkfærakassann til að losa þig við þá.
         stone_block_2: Gráir kubbar eru naglfastir og ekki hægt að fleygja þeim.
       courseD_maze_ramp3_2018_callout:
-        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
+        courseC_maze_programming3_2: Dragðu óþarfa kubba aftur í verkfærakassann til að losa þig við þá.
         stone_block_2: Gráir kubbar eru naglfastir og ekki hægt að fleygja þeim.
       courseD_maze_ramp4_callout:
-        courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
+        courseC_maze_programming4_1: Þetta sýnir fjölda kubbanna. Þá veistu hvað þú átt marga svona kubba eftir til að nota.
       courseD_maze_ramp4_2018_callout:
-        courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
-      courseD_maze_ramp5_callout: [ ]
-      courseD_maze_ramp5_2018_callout: [ ]
-      courseD_maze_ramp5a_callout: [ ]
-      courseD_maze_ramp5a_2018_callout: [ ]
-      courseD_maze_ramp5b_callout: [ ]
-      courseD_maze_ramp5b_2018_callout: [ ]
-      courseD_maze_ramp5c_callout: [ ]
-      courseD_maze_ramp5c_2018_callout: [ ]
-      courseD_maze_ramp5d_callout: [ ]
-      courseD_maze_ramp5d_2018_callout: [ ]
+        courseC_maze_programming4_1: Þetta sýnir fjölda kubbanna. Þá veistu hvað þú átt marga svona kubba eftir til að nota.
+      courseD_maze_ramp5_callout: { }
+      courseD_maze_ramp5_2018_callout: { }
+      courseD_maze_ramp5a_callout: { }
+      courseD_maze_ramp5a_2018_callout: { }
+      courseD_maze_ramp5b_callout: { }
+      courseD_maze_ramp5b_2018_callout: { }
+      courseD_maze_ramp5c_callout: { }
+      courseD_maze_ramp5c_2018_callout: { }
+      courseD_maze_ramp5d_callout: { }
+      courseD_maze_ramp5d_2018_callout: { }
       courseD_maze_ramp6_callout:
         courseD_maze_ramp6_1: Kóðinn sem þú setur hér verður endurtekinn eins oft og þú segir til um, áður en afgangurinn af forritinu er keyrður.
       courseD_maze_ramp6a_callout:
         courseD_maze_ramp6_1: Kóðinn sem þú setur hér verður endurtekinn eins oft og þú segir til um, áður en afgangurinn af forritinu er keyrður.
-      courseD_maze_ramp7_callout: [ ]
+      courseD_maze_ramp7_callout: { }
       courseD_playLab_condFP_callout:
-        courseD_playLab_condFP_1: we have organized the blocks into categories to give you more code to play with!  Click here to see where everything went.
+        courseD_playLab_condFP_1: við höfum raðað kubbunum í flokka svo þú fáir meiri kóða að leika þér með! Smelltu hér til að sjá hvert allt fór.
       courseD_playLab_condFP_2018_callout:
-        courseD_playLab_condFP_1: we have organized the blocks into categories to give you more code to play with!  Click here to see where everything went.
-      courseD_scrat_predict1_callout: [ ]
-      courseD_scrat_predict1_2018_callout: [ ]
+        courseD_playLab_condFP_1: við höfum raðað kubbunum í flokka svo þú fáir meiri kóða að leika þér með! Smelltu hér til að sjá hvert allt fór.
+      courseD_playLab_condFP_a_callout:
+        courseD_playLab_condFP_1: við höfum raðað kubbunum í flokka svo þú fáir meiri kóða að leika þér með! Smelltu hér til að sjá hvert allt fór.
+      courseD_playLab_condForVideo_callout:
+        courseD_playLab_condFP_1: við höfum raðað kubbunum í flokka svo þú fáir meiri kóða að leika þér með! Smelltu hér til að sjá hvert allt fór.
+      courseD_scrat_predict1_callout: { }
+      courseD_scrat_predict1_2018_callout: { }
       courseD_scrat_ramp1_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: Þegar búið er að tengja alla kubbana er ýtt á "Keyra" til að ræsa forritið.
       courseD_scrat_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: Þegar búið er að tengja alla kubbana er ýtt á "Keyra" til að ræsa forritið.
       courseD_scrat_ramp2_callout:
-        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+        courseC_maze_programming2_1: Þetta er Verkfærakassinn. Þar finnur þú fleiri kubba til að klára þrautirnar.
       courseD_scrat_ramp2_2018_callout:
-        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+        courseC_maze_programming2_1: Þetta er Verkfærakassinn. Þar finnur þú fleiri kubba til að klára þrautirnar.
       courseD_scrat_ramp3_callout:
-        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
+        courseC_maze_programming3_2: Dragðu óþarfa kubba aftur í verkfærakassann til að losa þig við þá.
       courseD_scrat_ramp3_2018_callout:
-        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
+        courseC_maze_programming3_2: Dragðu óþarfa kubba aftur í verkfærakassann til að losa þig við þá.
       courseD_scrat_ramp4_callout:
-        courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
+        courseC_maze_programming4_1: Þetta sýnir fjölda kubbanna. Þá veistu hvað þú átt marga svona kubba eftir til að nota.
       courseD_scrat_ramp4_2018_callout:
-        courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
-      courseD_scrat_ramp5_callout: [ ]
-      courseD_scrat_ramp5_2018_callout: [ ]
+        courseC_maze_programming4_1: Þetta sýnir fjölda kubbanna. Þá veistu hvað þú átt marga svona kubba eftir til að nota.
+      courseD_scrat_ramp5_callout: { }
+      courseD_scrat_ramp5_2018_callout: { }
       courseD_scrat_ramp6_callout:
         courseD_maze_ramp6_1: Kóðinn sem þú setur hér verður endurtekinn eins oft og þú segir til um, áður en afgangurinn af forritinu er keyrður.
       courseD_scrat_ramp6_2018_callout:
@@ -1211,24 +1226,27 @@ is:
       courseD_scrat_ramp7_2018_callout:
         courseD_maze_ramp6_1: Kóðinn sem þú setur hér verður endurtekinn eins oft og þú segir til um, áður en afgangurinn af forritinu er keyrður.
       courseD_scrat_ramp8_callout:
-        courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
+        courseD_maze_ramp7_1: Þetta er fyrsta áskorunarþraut þín! Þær eru hafðar erfiðar og geta þurft nokkrar tilraunir.
       courseD_scrat_ramp8_2018_callout:
-        courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
-      courseE_artist_concept_challenge2_callout: [ ]
-      courseE_artist_concept_challenge2_2018_callout: [ ]
-      courseE_artist_embed_functions8_callout: [ ]
+        courseD_maze_ramp7_1: Þetta er fyrsta áskorunarþraut þín! Þær eru hafðar erfiðar og geta þurft nokkrar tilraunir.
+      courseE_artist_concept_challenge2_callout: { }
+      courseE_artist_concept_challenge2_2018_callout: { }
+      courseE_artist_embed_functions8_callout: { }
       courseE_artist_functions1_callout:
-        courseD_artist_functions1_1: Let's start by using this block to help create the first square.
+        courseD_artist_functions1_1: Við skulum nota þennan kubb til að byrja að búa til fyrsta ferninginn.
       courseE_artist_functions1_2018_callout:
-        courseD_artist_functions1_1: Let's start by using this block to help create the first square.
+        courseD_artist_functions1_1: Við skulum nota þennan kubb til að byrja að búa til fyrsta ferninginn.
       courseE_artist_functions2_callout:
-        courseD_artist_functions2_1: When this green block runs, all of the code in the function will run. What should the artist do after drawing the first square?
+        courseD_artist_functions2_1: Þegar þessi græni kubbur er keyrður er allur kóðinn í fallinu keyrður. Hvað ætti listamaðurinn að gera næst eftir fyrsta ferninginn?
       courseE_artist_functions2_2018_callout:
-        courseD_artist_functions2_1: When this green block runs, all of the code in the function will run. What should the artist do after drawing the first square?
+        courseD_artist_functions2_1: Þegar þessi græni kubbur er keyrður er allur kóðinn í fallinu keyrður. Hvað ætti listamaðurinn að gera næst eftir fyrsta ferninginn?
       courseE_artist_functions8_callout:
-        courseD_artist_functions8_1: Your blocks to create functions have been moved under this label in the toolbox.
-      courseE_artist_functions8_2018_callout:
-        courseD_artist_functions8_1: Your blocks to create functions have been moved under this label in the toolbox.
+        courseD_artist_functions8_1: Kubbarnir sem búa til föll hafa verið færðir undir þetta merki í verkfærakassanum.
+      courseE_artist_functions8_2018_callout: { }
+      courseE_artist_functions8a_2018_callout:
+        courseD_artist_functions8_1: Kubbarnir sem búa til föll hafa verið færðir undir þetta merki í verkfærakassanum.
+      courseE_artist_functions8b_2018_callout: { }
+      courseE_artist_functions8c_2018_callout: { }
       courseE_artist_functions_challenge_callout:
         courseE_artist_functions_challenge_callout1: Haltu áfram með því að bæta meiri kóða við neðst.
         courseE_artist_functions_challenge_callout2: Ef þér líkar ekki þessi hönnun, getur þú breytt henni í hvað sem þú vilt!
@@ -1244,15 +1262,15 @@ is:
       courseE_artist_functions_challenge2_2018_callout:
         courseE_artist_functions_challenge2_callout1: Haltu áfram með því að bæta meiri kóða við neðst.
         courseE_artist_functions_challenge2_callout2: Ef þér líkar ekki þessi hönnun, getur þú breytt henni í hvað sem þú vilt!
-      courseE_artist_functions_predict1_callout: [ ]
-      courseE_artist_functions_predict1_2018_callout: [ ]
-      courseE_artist_predict1_callout: [ ]
-      courseE_artist_predict1_2018_callout: [ ]
-      courseE_artist_ramp10_callout: [ ]
+      courseE_artist_functions_predict1_callout: { }
+      courseE_artist_functions_predict1_2018_callout: { }
+      courseE_artist_predict1_callout: { }
+      courseE_artist_predict1_2018_callout: { }
+      courseE_artist_ramp10_callout: { }
       courseE_artist_ramp11_callout:
         courseD_artist_ramp11_1: Þú getur breytt þessari tölu.
         courseD_artist_ramp11_2: Smelltu hér til að skrifa tölu fyrir hve oft á að endurtaka kóðann.
-      courseE_artist_ramp12_callout: [ ]
+      courseE_artist_ramp12_callout: { }
       courseE_artist_ramp8_callout:
         courseE_artist_ramp8_1: Þú getur breytt þessari tölu.
         courseE_artist_ramp8_2: Smelltu hér til að skrifa tölu fyrir hve oft á að endurtaka kóðann.
@@ -1265,86 +1283,93 @@ is:
       courseE_artist_ramp8_2_2018_callout:
         courseE_artist_ramp8_1: Þú getur breytt þessari tölu.
         courseE_artist_ramp8_2: Smelltu hér til að skrifa tölu fyrir hve oft á að endurtaka kóðann.
-      courseE_artist_ramp9_callout: [ ]
-      courseE_artist_ramp9_2_callout: [ ]
-      courseE_artist_ramp9_2018_callout: [ ]
-      courseE_artist_ramp9_2_2018_callout: [ ]
-      courseE_collector_ramp10_callout: [ ]
+      courseE_artist_ramp9_callout: { }
+      courseE_artist_ramp9_2_callout: { }
+      courseE_artist_ramp9_2018_callout: { }
+      courseE_artist_ramp9_2_2018_callout: { }
+      courseE_collector_ramp10_callout: { }
       courseE_collector_ramp8_callout:
         courseD_collector_ramp8_1: 'Notaðu þennan kubb til að safna einum fjársjóði.  '
-      courseE_collector_ramp9_callout: [ ]
+      courseE_collector_ramp9_callout: { }
       courseE_farmer_functions1_callout:
         courseE_farmer_functions1_2: Verkfærakassinn er með svolítið öðru skipulagi í þetta sinn! Smelltu á hina ýmsu flokka til að kanna hvaða kubba þú ert með.
-      courseE_farmer_functions10b_callout: [ ]
-      courseE_farmer_functions10b_2018_callout: [ ]
-      courseE_farmer_functions11_predict_callout: [ ]
-      courseE_farmer_functions11_predict_2018_callout: [ ]
+      courseE_farmer_functions10a1_2018_callout: { }
+      courseE_farmer_functions10b_callout: { }
+      courseE_farmer_functions10b_2018_callout: { }
+      courseE_farmer_functions11_predict_callout: { }
+      courseE_farmer_functions11_predict_2018_callout: { }
+      courseE_farmer_functions13_2018_callout:
+        courseE_farmer_functions1a_1: Þetta grænmeti er óþekkt. Það breytist í hvert sinn sem þú keyrir forritið.
       courseE_farmer_functions1_2018_callout:
         courseE_farmer_functions1_2: Verkfærakassinn er með svolítið öðru skipulagi í þetta sinn! Smelltu á hina ýmsu flokka til að kanna hvaða kubba þú ert með.
       courseE_farmer_functions1a_callout:
-        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time you run the program.
+        courseE_farmer_functions1a_1: Þetta grænmeti er óþekkt. Það breytist í hvert sinn sem þú keyrir forritið.
       courseE_farmer_functions1a_2018_callout:
-        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time you run the program.
+        courseE_farmer_functions1a_1: Þetta grænmeti er óþekkt. Það breytist í hvert sinn sem þú keyrir forritið.
       courseE_farmer_functions2a_callout:
-        courseE_farmer_functions2a_2: This code might not look exactly like what you wrote, but it will get the job done!
+        courseE_farmer_functions2a_2: Þessi kóði er kannske ekki eins og sá sem þú bjóst til, en hann mun leysa málið!
       courseE_farmer_functions2aALT_callout:
-        courseE_farmer_functions2a_2: This code might not look exactly like what you wrote, but it will get the job done!
+        courseE_farmer_functions2a_2: Þessi kóði er kannske ekki eins og sá sem þú bjóst til, en hann mun leysa málið!
       courseE_farmer_functions2b_callout:
-        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time you run the program.
+        courseE_farmer_functions1a_1: Þetta grænmeti er óþekkt. Það breytist í hvert sinn sem þú keyrir forritið.
       courseE_farmer_functions2b_2018_callout:
-        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time you run the program.
-      courseE_farmer_functions2ba_callout: [ ]
-      courseE_farmer_functions2ba_2018_callout: [ ]
+        courseE_farmer_functions1a_1: Þetta grænmeti er óþekkt. Það breytist í hvert sinn sem þú keyrir forritið.
+      courseE_farmer_functions2ba_callout: { }
+      courseE_farmer_functions2ba_2018_callout: { }
       courseE_farmer_functions3b_callout:
-        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time you run the program.
-      courseE_farmer_functions3c_callout: [ ]
-      courseE_farmer_functions3c_2018_callout: [ ]
-      courseE_farmer_functions4b_callout: [ ]
-      courseE_farmer_functions4b_2018_callout: [ ]
-      courseE_farmer_functions5b_callout: [ ]
-      courseE_farmer_functions5c_callout: [ ]
-      courseE_farmer_functions5c_2018_callout: [ ]
-      courseE_farmer_functions6b_callout: [ ]
-      courseE_farmer_functions6c_callout: [ ]
-      courseE_farmer_functions6c_2018_callout: [ ]
-      courseE_farmer_functions7b_callout: [ ]
-      courseE_farmer_functions7b_2018_callout: [ ]
-      courseE_farmer_functions8b_callout: [ ]
-      courseE_farmer_functions8b_2018_callout: [ ]
-      courseE_farmer_functions9b_callout: [ ]
-      courseE_farmer_functions9b_2018_callout: [ ]
-      courseE_farmer_functions9b_clone_callout: [ ]
-      courseE_maze_predict1_callout: [ ]
-      courseE_maze_predict1_2018_callout: [ ]
+        courseE_farmer_functions1a_1: Þetta grænmeti er óþekkt. Það breytist í hvert sinn sem þú keyrir forritið.
+      courseE_farmer_functions3c_callout: { }
+      courseE_farmer_functions3c1_2018_callout: { }
+      courseE_farmer_functions3c_2018_callout: { }
+      courseE_farmer_functions4b_callout: { }
+      courseE_farmer_functions4b_2018_callout: { }
+      courseE_farmer_functions5b_callout: { }
+      courseE_farmer_functions5c_callout: { }
+      courseE_farmer_functions5c_2018_callout: { }
+      courseE_farmer_functions6b_callout: { }
+      courseE_farmer_functions6c_callout: { }
+      courseE_farmer_functions6c_2018_callout: { }
+      courseE_farmer_functions7a1_2018_callout: { }
+      courseE_farmer_functions7b_callout: { }
+      courseE_farmer_functions7b_2018_callout: { }
+      courseE_farmer_functions8a1_2018_callout: { }
+      courseE_farmer_functions8b_callout: { }
+      courseE_farmer_functions8b_2018_callout: { }
+      courseE_farmer_functions9a1_2018_callout: { }
+      courseE_farmer_functions9b_callout: { }
+      courseE_farmer_functions9b_2018_callout: { }
+      courseE_farmer_functions9b_clone_callout: { }
+      courseE_maze_predict1_callout: { }
+      courseE_maze_predict1_2018_callout: { }
       courseE_maze_ramp1_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
-      courseE_maze_ramp13_callout: [ ]
+        grade2_CaringForNewPet_0_1: Þegar búið er að tengja alla kubbana er ýtt á "Keyra" til að ræsa forritið.
+      courseE_maze_ramp13_callout: { }
       courseE_maze_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: Þegar búið er að tengja alla kubbana er ýtt á "Keyra" til að ræsa forritið.
       courseE_maze_ramp2_callout:
-        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+        courseC_maze_programming2_1: Þetta er Verkfærakassinn. Þar finnur þú fleiri kubba til að klára þrautirnar.
       courseE_maze_ramp2_2018_callout:
-        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+        courseC_maze_programming2_1: Þetta er Verkfærakassinn. Þar finnur þú fleiri kubba til að klára þrautirnar.
       courseE_maze_ramp3_callout:
-        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
+        courseC_maze_programming3_2: Dragðu óþarfa kubba aftur í verkfærakassann til að losa þig við þá.
       courseE_maze_ramp3_2018_callout:
-        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
+        courseC_maze_programming3_2: Dragðu óþarfa kubba aftur í verkfærakassann til að losa þig við þá.
       courseE_maze_ramp4_callout:
-        courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
+        courseC_maze_programming4_1: Þetta sýnir fjölda kubbanna. Þá veistu hvað þú átt marga svona kubba eftir til að nota.
       courseE_maze_ramp4_2018_callout:
-        courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
-      courseE_maze_ramp5_callout: [ ]
-      courseE_maze_ramp5_2018_callout: [ ]
+        courseC_maze_programming4_1: Þetta sýnir fjölda kubbanna. Þá veistu hvað þú átt marga svona kubba eftir til að nota.
+      courseE_maze_ramp5_callout: { }
+      courseE_maze_ramp5_2018_callout: { }
       courseE_maze_ramp6_callout:
         courseD_maze_ramp6_1: Kóðinn sem þú setur hér verður endurtekinn eins oft og þú segir til um, áður en afgangurinn af forritinu er keyrður.
       courseE_maze_ramp6_2018_callout:
         courseD_maze_ramp6_1: Kóðinn sem þú setur hér verður endurtekinn eins oft og þú segir til um, áður en afgangurinn af forritinu er keyrður.
       courseE_maze_ramp7_callout:
-        courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
+        courseD_maze_ramp7_1: Þetta er fyrsta áskorunarþraut þín! Þær eru hafðar erfiðar og geta þurft nokkrar tilraunir.
       courseE_maze_ramp7_2018_callout:
-        courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
-      courseE_maze_ramp_predict1_callout: [ ]
-      courseE_multi_maze_ramp5_callout: [ ]
+        courseD_maze_ramp7_1: Þetta er fyrsta áskorunarþraut þín! Þær eru hafðar erfiðar og geta þurft nokkrar tilraunir.
+      courseE_maze_ramp_predict1_callout: { }
+      courseE_multi_maze_ramp5_callout: { }
       courseE_playLab_challenge1_callout:
         courseC_PlayLab_events_challenge1_1: Með þessum kubbi getur þú fært leikmenn á staði á leiksvæðinu.
       courseE_playLab_challenge1_2018_callout:
@@ -1355,65 +1380,71 @@ is:
         courseE_playLab_scaffold3_1: Komdu leikmanninum til flaggsins til að komast í næsta áfanga.
       courseF_IceAge_1_callout:
         playlab_drag_say_a: Dragðu kubbinn `leikmaður 1 segir` hingað og skrifaðu "Hæ!"
-      courseF_IceAge_10_callout: [ ]
-      courseF_IceAge_11_callout: [ ]
+      courseF_IceAge_10_callout: { }
+      courseF_IceAge_11_callout: { }
       courseF_IceAge_2_callout:
-        playlab_use_twice: ""
-      courseF_IceAge_3_callout: [ ]
+        playlab_use_twice:
+      courseF_IceAge_3_callout: { }
       courseF_IceAge_4_callout:
-        playlab_play_sound: ""
+        playlab_play_sound:
       courseF_IceAge_5_callout:
-        playlab_add_move: ""
-      courseF_IceAge_6_callout: [ ]
+        playlab_add_move:
+      courseF_IceAge_6_callout: { }
       courseF_IceAge_7_callout:
-        arrows_move_actor: ""
+        arrows_move_actor:
       courseF_IceAge_8_callout:
-        playlab_add_score: ""
+        playlab_add_score:
       courseF_IceAge_9_callout:
         playlab_add_blocks_1: Bættu kubbum við hér
       courseF_IceAge_template_callout:
-        arrows_move_actor: ""
-      courseF_artist_embed_variables9_callout: [ ]
+        arrows_move_actor:
+      courseF_artist_embed_variables9_callout: { }
       courseF_artist_for1_callout:
-        courseF_artist_for1_1: The toolbox is in "category" mode to make more room for your code.  The `for` loops live in here.
+        courseF_artist_for1_1: Verkfærakassinn er flokkaður til að kóðinn fái meira pláss. `Frá` lykkjurnar búa hér undir.
       courseF_artist_for1_2018_callout:
-        courseF_artist_for1_1: The toolbox is in "category" mode to make more room for your code.  The `for` loops live in here.
-      courseF_artist_for4_callout: [ ]
-      courseF_artist_for4_2018_callout: [ ]
+        courseF_artist_for1_1: Verkfærakassinn er flokkaður til að kóðinn fái meira pláss. `Frá` lykkjurnar búa hér undir.
+      courseF_artist_for4_callout: { }
+      courseF_artist_for4_2018_callout: { }
       courseF_artist_fwp1_callout:
-        courseF_artist_fwp1_1: Click the "edit" button to change the code inside the function.
+        courseF_artist_fwp1_1: Smelltu á "Breyta" hnappinn til að breyta kóðanum inni í fallinu.
       courseF_artist_fwp1_2018_callout:
-        courseF_artist_fwp1_1: Click the "edit" button to change the code inside the function.
+        courseF_artist_fwp1_1: Smelltu á "Breyta" hnappinn til að breyta kóðanum inni í fallinu.
       courseF_artist_fwp4_callout:
-        courseF_artist_fwp4_1: To complete your polygon, make sure you are always turning by 360 ÷ `sides` degrees.
+        courseF_artist_fwp4_1: Til að ljúka marghyrningnum skaltu gæta þess að snúa alltaf um 360 / `hliðar` gráður.
       courseF_artist_fwp4_2018_callout:
-        courseF_artist_fwp4_1: To complete your polygon, make sure you are always turning by 360 ÷ `sides` degrees.
+        courseF_artist_fwp4_1: Til að ljúka marghyrningnum skaltu gæta þess að snúa alltaf um 360 / `hliðar` gráður.
       courseF_artist_fwp5_callout:
         courseF_artist_fwp5_1: You will find the polygon function in here.
       courseF_artist_fwp5_2018_callout:
         courseF_artist_fwp5_1: You will find the polygon function in here.
-      courseF_artist_predict1_callout: [ ]
-      courseF_artist_ramp10_callout: [ ]
+      courseF_artist_predict1_callout: { }
+      courseF_artist_predict1_2018_callout: { }
+      courseF_artist_ramp10_callout: { }
+      courseF_artist_ramp10_2018_callout: { }
       courseF_artist_ramp8_callout:
         courseE_artist_ramp8_1: Þú getur breytt þessari tölu.
         courseE_artist_ramp8_2: Smelltu hér til að skrifa tölu fyrir hve oft á að endurtaka kóðann.
-      courseF_artist_ramp9_callout: [ ]
+      courseF_artist_ramp8_2018_callout:
+        courseE_artist_ramp8_1: Þú getur breytt þessari tölu.
+        courseE_artist_ramp8_2: Smelltu hér til að skrifa tölu fyrir hve oft á að endurtaka kóðann.
+      courseF_artist_ramp9_callout: { }
+      courseF_artist_ramp9_2018_callout: { }
       courseF_artist_variables1_callout:
         courseF_artist_variables1_1: Notice that blocks now have a new way to enter numbers. These `math` blocks can be pulled out and moved around!
-      courseF_artist_variables10_callout: [ ]
-      courseF_artist_variables10_2018_callout: [ ]
-      courseF_artist_variables2_callout: [ ]
-      courseF_artist_variables2_2018_callout: [ ]
+      courseF_artist_variables10_callout: { }
+      courseF_artist_variables10_2018_callout: { }
+      courseF_artist_variables2_callout: { }
+      courseF_artist_variables2_2018_callout: { }
       courseF_artist_variables3_callout:
         courseF_artist_variables3_a: Use this to set the value of the variable `length`
       courseF_artist_variables3_2018_callout:
         courseF_artist_variables3_a: Use this to set the value of the variable `length`
-      courseF_artist_variables3a_predict1_callout: [ ]
-      courseF_artist_variables3a_predict1_2018_callout: [ ]
-      courseF_artist_variables4_callout: [ ]
-      courseF_artist_variables4_2018_callout: [ ]
-      courseF_artist_variables5_callout: [ ]
-      courseF_artist_variables5_2018_callout: [ ]
+      courseF_artist_variables3a_predict1_callout: { }
+      courseF_artist_variables3a_predict1_2018_callout: { }
+      courseF_artist_variables4_callout: { }
+      courseF_artist_variables4_2018_callout: { }
+      courseF_artist_variables5_callout: { }
+      courseF_artist_variables5_2018_callout: { }
       courseF_artist_variables6_callout:
         courseF_artist_variables6_1: Variables can be helpful when you have to change a lot of copies of the same number.
       courseF_artist_variables6_2018_callout:
@@ -1422,31 +1453,31 @@ is:
         courseF_artist_variables6a_1: Variables can be helpful when you have to change a lot of copies of the same number.
       courseF_artist_variables6a_2018_callout:
         courseF_artist_variables6a_1: Variables can be helpful when you have to change a lot of copies of the same number.
-      courseF_artist_variables7_callout: [ ]
-      courseF_artist_variables7_2018_callout: [ ]
-      courseF_artist_variables8_callout: [ ]
-      courseF_artist_variables8_2018_callout: [ ]
-      courseF_artist_variables9_callout: [ ]
-      courseF_artist_variables9_2018_callout: [ ]
-      courseF_artist_variablesFP_callout: [ ]
-      courseF_artist_variablesFP_2018_callout: [ ]
-      courseF_artist_variables_10_callout: [ ]
-      courseF_artist_variables_2_callout: [ ]
+      courseF_artist_variables7_callout: { }
+      courseF_artist_variables7_2018_callout: { }
+      courseF_artist_variables8_callout: { }
+      courseF_artist_variables8_2018_callout: { }
+      courseF_artist_variables9_callout: { }
+      courseF_artist_variables9_2018_callout: { }
+      courseF_artist_variablesFP_callout: { }
+      courseF_artist_variablesFP_2018_callout: { }
+      courseF_artist_variables_10_callout: { }
+      courseF_artist_variables_2_callout: { }
       courseF_artist_variables_3_callout:
         courseF_artist_variables_3_a: Use this to set the value of the variable `length`
-      courseF_artist_variables_4_callout: [ ]
-      courseF_artist_variables_5_callout: [ ]
+      courseF_artist_variables_4_callout: { }
+      courseF_artist_variables_5_callout: { }
       courseF_artist_variables_6_callout:
         courseF_artist_variables_6_1: Variables can be helpful when you have to change a lot of copies of the same number.
       courseF_artist_variables_6a_callout:
         courseF_artist_variables6a_1: Variables can be helpful when you have to change a lot of copies of the same number.
-      courseF_artist_variables_7_callout: [ ]
-      courseF_artist_variables_8_callout: [ ]
-      courseF_artist_variables_9_callout: [ ]
-      courseF_artist_variables_FP_callout: [ ]
-      courseF_artist_variables_template_callout: [ ]
-      courseF_artist_variables_template_2018_callout: [ ]
-      courseF_artistembed_variables9_callout: [ ]
+      courseF_artist_variables_7_callout: { }
+      courseF_artist_variables_8_callout: { }
+      courseF_artist_variables_9_callout: { }
+      courseF_artist_variables_FP_callout: { }
+      courseF_artist_variables_template_callout: { }
+      courseF_artist_variables_template_2018_callout: { }
+      courseF_artistembed_variables9_callout: { }
       courseF_bee_conditionals2_callout:
         courseF_bee_conditionals2_2: Nú er verkfærakassinn flokkaður. Allir kubbar sem þú þarft eru í þessum flokkum!
       courseF_bee_conditionals2_2018_callout:
@@ -1457,20 +1488,20 @@ is:
         courseF_bee_conditionals5_1: Notaðu þennan kubb þegar lengd slóðarinnar breytist (eins og fyrir hliðar rétthyrningins!)
       courseF_bee_for3_callout:
         courseF_bee_for3_1: The `for` loop is so wide that we have changed the toolbox into category mode to save space.  You will find the new `for` loop in here!
-      courseF_bee_for3_predict1_callout: [ ]
-      courseF_bee_for3_predict1_2018_callout: [ ]
+      courseF_bee_for3_predict1_callout: { }
+      courseF_bee_for3_predict1_2018_callout: { }
       courseF_bee_for4_callout:
         courseF_bee_for4_1: Þú finnur `frá` lykkjuna hér!
       courseF_bee_for4_2018_callout:
         courseF_bee_for4_1: Þú finnur `frá` lykkjuna hér!
-      courseF_bee_for6_callout: [ ]
-      courseF_bee_for6_2018_callout: [ ]
+      courseF_bee_for6_callout: { }
+      courseF_bee_for6_2018_callout: { }
       courseF_bee_for9_callout:
         courseF_bee_for9_1: You will find the `math` block in here.
       courseF_bee_for9_2018_callout:
         courseF_bee_for9_1: You will find the `math` block in here.
-      courseF_bee_for_challenge1_callout: [ ]
-      courseF_bee_for_challenge1_2018_callout: [ ]
+      courseF_bee_for_challenge1_callout: { }
+      courseF_bee_for_challenge1_2018_callout: { }
       courseF_bee_functions2_callout:
         courseF_bee_functions2_1: Þessi kubbur kallar á fall. Smelltu á þennan "breyta" hnapp til að sjá innihald þess!
       courseF_bee_functions2_2018_callout:
@@ -1479,14 +1510,18 @@ is:
         courseF_bee_functions6_1: Ekki gleyma að gá hér að kubbum sem gætu gert þetta auðveldara!
       courseF_bee_functions6_2018_callout:
         courseF_bee_functions6_1: Ekki gleyma að gá hér að kubbum sem gætu gert þetta auðveldara!
+      courseF_bee_functions_1_2018_callout:
+        courseF_bee_functions_1_2018_1: You can find your variables under here!
+      courseF_bee_functions_2_2018_callout: { }
+      courseF_bee_functions_3_2018_callout: { }
       courseF_bee_functions_challenge1_callout:
         courseF_bee_functions_challenge1_1: Hvaða kóða ættir þú að setja í þetta fall?
         courseF_bee_functions_challenge1_2: Fallið "athuga blómasafa eða hunang" má nota hér ef því er breytt svo það búi endurtekið til hunang.
       courseF_bee_functions_challenge1_2018_callout:
         courseF_bee_functions_challenge1_1: Hvaða kóða ættir þú að setja í þetta fall?
         courseF_bee_functions_challenge1_2: Fallið "athuga blómasafa eða hunang" má nota hér ef því er breytt svo það búi endurtekið til hunang.
-      courseF_bee_functions_challenge2_callout: [ ]
-      courseF_bee_functions_challenge2_2018_callout: [ ]
+      courseF_bee_functions_challenge2_callout: { }
+      courseF_bee_functions_challenge2_2018_callout: { }
       courseF_bee_fwp1_callout:
         courseF_bee_fwp1_1: You can find `if` statements in here.
       courseF_bee_fwp1_2018_callout:
@@ -1507,36 +1542,54 @@ is:
         courseF_bee_fwp_challenge2_callout1: Þetta fall virkar vel með maís, en hvað með hinar jurtirnar?
       courseF_bee_fwp_challenge2_2018_callout:
         courseF_bee_fwp_challenge2_callout1: Þetta fall virkar vel með maís, en hvað með hinar jurtirnar?
-      courseF_maze_predict1_callout: [ ]
+      courseF_bee_variables_1_2018_callout:
+        courseF_bee_functions_1_2018_1: You can find your variables under here!
+      courseF_bee_variables_2_2018_callout: { }
+      courseF_bee_variables_3_2018_callout: { }
+      courseF_bee_variables_4_2018_callout: { }
+      courseF_bee_variables_5_2018_callout: { }
+      courseF_bee_variables_6_2018_callout: { }
+      courseF_bee_variables_7_2018_callout: { }
+      courseF_bee_variables_8_2018_callout: { }
+      courseF_maze_predict1_callout: { }
       courseF_maze_ramp1_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
-      courseF_maze_ramp13_callout: [ ]
+        grade2_CaringForNewPet_0_1: Þegar búið er að tengja alla kubbana er ýtt á "Keyra" til að ræsa forritið.
+      courseF_maze_ramp13_callout: { }
       courseF_maze_ramp15_callout:
-        courseF_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
+        courseF_maze_ramp7_1: Þetta er fyrsta áskorunarþraut þín! Þær eru hafðar erfiðar og geta þurft nokkrar tilraunir.
+      courseF_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: Þegar búið er að tengja alla kubbana er ýtt á "Keyra" til að ræsa forritið.
       courseF_maze_ramp2_callout:
-        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+        courseC_maze_programming2_1: Þetta er Verkfærakassinn. Þar finnur þú fleiri kubba til að klára þrautirnar.
+      courseF_maze_ramp2_2018_callout:
+        courseC_maze_programming2_1: Þetta er Verkfærakassinn. Þar finnur þú fleiri kubba til að klára þrautirnar.
       courseF_maze_ramp4_callout:
-        courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
-      courseF_maze_ramp5_callout: [ ]
+        courseC_maze_programming4_1: Þetta sýnir fjölda kubbanna. Þá veistu hvað þú átt marga svona kubba eftir til að nota.
+      courseF_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: Þetta sýnir fjölda kubbanna. Þá veistu hvað þú átt marga svona kubba eftir til að nota.
+      courseF_maze_ramp5_callout: { }
+      courseF_maze_ramp5_2018_callout: { }
       courseF_maze_ramp6_callout:
         courseD_maze_ramp6_1: Kóðinn sem þú setur hér verður endurtekinn eins oft og þú segir til um, áður en afgangurinn af forritinu er keyrður.
+      courseF_maze_ramp6_2018_callout:
+        courseD_maze_ramp6_1: Kóðinn sem þú setur hér verður endurtekinn eins oft og þú segir til um, áður en afgangurinn af forritinu er keyrður.
       courseF_maze_ramp7_callout:
-        courseF_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
+        courseF_maze_ramp7_1: Þetta er fyrsta áskorunarþraut þín! Þær eru hafðar erfiðar og geta þurft nokkrar tilraunir.
       courseF_playLab_func2_callout:
         New Play Lab Project_callout1: Smelltu á flokkana til að sjá kubbana í verkfærakassanum! Dragðu kubba inn á vinnusvæðið til að bæta þeim við forritið þitt
         New Play Lab Project_callout2: Smelltu á "Keyra" til að vista og keyra forritið þitt
         sign_in_to_save_project: Viltu komast í verkefnið þitt seinna? Skráðu þig inn til að vista verkefnið undir aðgangi þínum!
-      courseF_playlab_embed_vars_callout: [ ]
+      courseF_playlab_embed_vars_callout: { }
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: The toolbox has been organized into categories to make it easier to find the blocks you need.
       courseF_playlab_variables1a_2018_callout:
         courseF_playlab_variables1a_1: The toolbox has been organized into categories to make it easier to find the blocks you need.
       courseF_playlab_variables2_callout:
         course_playlab_variables2_1: Svona setur þú gildi í breytuna þína. Breyttu textanum sem er tengdur við þennan kubb til að breyta því sem er geymt í breytunni.
-      courseF_playlab_variables2a_callout: [ ]
-      courseF_playlab_variables3_callout: [ ]
-      courseF_playlab_variables4_callout: [ ]
-      courseF_playlab_variables5_callout: [ ]
+      courseF_playlab_variables2a_callout: { }
+      courseF_playlab_variables3_callout: { }
+      courseF_playlab_variables4_callout: { }
+      courseF_playlab_variables5_callout: { }
       courseF_playlab_variables5c RYAN Copy_callout:
         courseF_playlab_variables5c_1: Þú finnur breytukubbinn hér.
       courseF_playlab_variables5c_callout:
@@ -1551,8 +1604,8 @@ is:
         courseF_playlab_variables7c_1: Finndu `spyrja` kubbinn hér!
       courseF_playlab_variables7c_2018_callout:
         courseF_playlab_variables7c_1: Finndu `spyrja` kubbinn hér!
-      courseF_playlab_variables8c_callout: [ ]
-      courseF_playlab_variables8c_2018_callout: [ ]
+      courseF_playlab_variables8c_callout: { }
+      courseF_playlab_variables8c_2018_callout: { }
       courseF_playlab_variablesTemplate_callout:
         courseF_playlab_variables5c_1: Þú finnur breytukubbinn hér.
       courseF_playlab_variablesTemplate_2018_callout:
@@ -1564,8 +1617,10 @@ is:
       coursea_maze_ramp1_2018_callout:
         grade2_CaringForNewPet_0_1: After snapping all the blocks together, press "Run" to start your program.
       coursef_maze_ramp3_callout:
-        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
-      drawings!_callout: [ ]
+        courseC_maze_programming3_2: Dragðu óþarfa kubba aftur í verkfærakassann til að losa þig við þá.
+      coursef_maze_ramp3_2018_callout:
+        courseC_maze_programming3_2: Dragðu óþarfa kubba aftur í verkfærakassann til að losa þig við þá.
+      drawings!_callout: { }
       frozen circle function with parameter_callout:
         frozen_circle_function_with_parameter_circle: Notaðu "búa til hring" kubbinn og breyttu stærðinni.
       frozen cross rotate_callout:
@@ -1595,37 +1650,37 @@ is:
       frozen square snowflake_callout:
         replace_questions: Notaðu fellilistann til að skipta "???" út fyrir tölu
       grade1_artist_loops2_callout:
-        grade1_artist_loops2_1: There is only one of these blocks in the toolbox.  How will you use it?
+        grade1_artist_loops2_1: Það er aðeins einn af þessum kubbum í verkfærakassanum.  Hvernig ætlar þú að nota hann?
       grade1_maze_sequence6_callout:
         grade1_maze_sequence6_1: Þessir gráu kubbar eru jarðfastir! Það þýðir að það er ekki hægt að eyða þeim.
       grade2_CaringForNewPet_0_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: Þegar búið er að tengja alla kubbana er ýtt á "Keyra" til að ræsa forritið.
       grade2_CaringForNewPet_1_callout:
-        grade2_CaringForNewPet_1_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+        grade2_CaringForNewPet_1_1: Þetta er Verkfærakassinn. Þar finnur þú fleiri kubba til að klára þrautirnar.
       grade2_CaringForNewPet_2_callout:
         grade2_CaringForNewPet_2_1: Throw this extra block away so it doesn't cause problems.
-        grade2_CaringForNewPet_2_2: You can drag extra blocks to the toolbox to throw them away.
+        grade2_CaringForNewPet_2_2: Dragðu óþarfa kubba aftur í verkfærakassann til að losa þig við þá.
       grade2_CaringForNewPet_2courseC_maze_programming3_callout:
-        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
+        courseC_maze_programming3_2: Dragðu óþarfa kubba aftur í verkfærakassann til að losa þig við þá.
       grade2_CaringForNewPet_3_callout:
-        grade2_CaringForNewPet_3_1: This is your block limit.  It tells you how many of these blocks you have left to use.
-      grade2_CaringForNewPet_3D_callout: [ ]
+        grade2_CaringForNewPet_3_1: Þetta sýnir fjölda kubbanna. Þá veistu hvað þú átt marga svona kubba eftir til að nota.
+      grade2_CaringForNewPet_3D_callout: { }
       grade2_CaringForNewPet_7D_callout:
         grade2_CaringForNewPet_7D: This is your first challenge puzzle! These are meant to be harder and may take several tries.
-      grade2_MakeDogTag_1_callout: [ ]
-      grade2_MakeDogTag_BFP_callout: [ ]
-      grade2_collector_10_callout: [ ]
-      grade2_collector_10_2018_callout: [ ]
+      grade2_MakeDogTag_1_callout: { }
+      grade2_MakeDogTag_BFP_callout: { }
+      grade2_collector_10_callout: { }
+      grade2_collector_10_2018_callout: { }
       grade2_collector_7_callout:
-        grade2_collector_7_1: You can take more blocks from the toolbox if you need them!
-      grade2_collector_8_callout: [ ]
-      grade2_collector_9_callout: [ ]
-      grade2_collector_9a_callout: [ ]
-      grade2_collector_A_callout: [ ]
-      grade2_collector_A_2018_callout: [ ]
-      grade2_collector_A_predict1_callout: [ ]
-      grade2_collector_A_predict1_2018_callout: [ ]
-      grade2_maze_intro10_callout: [ ]
+        grade2_collector_7_1: Þú getur tekið fleiri kubbar úr verkfærakassanum þegar þú þarft!
+      grade2_collector_8_callout: { }
+      grade2_collector_9_callout: { }
+      grade2_collector_9a_callout: { }
+      grade2_collector_A_callout: { }
+      grade2_collector_A_2018_callout: { }
+      grade2_collector_A_predict1_callout: { }
+      grade2_collector_A_predict1_2018_callout: { }
+      grade2_maze_intro10_callout: { }
       grade2_maze_intro2_callout:
         grade2_maze_intro2_callout1: This is the run button. Press this button to run your program.
       grade2_maze_intro3_callout:
@@ -1634,12 +1689,12 @@ is:
         grade2_maze_intro4_callout1: This is the toolbox area, to add a block to your program, drag it from here into the workspace.
       grade2_maze_intro5_callout:
         grade2_maze_intro5_callout1: This area also works as a garbage can. If there is a block in your workspace that you don’t need, simply drag it back here to toss it away.
-      grade2_maze_intro6_callout: [ ]
-      grade2_maze_intro7_callout: [ ]
-      grade2_maze_intro8_callout: [ ]
-      grade2_maze_intro9_callout: [ ]
+      grade2_maze_intro6_callout: { }
+      grade2_maze_intro7_callout: { }
+      grade2_maze_intro8_callout: { }
+      grade2_maze_intro9_callout: { }
       grade2_puppy_loops2_callout:
-        grade2_puppy_loops2_callout1: You only have one of these blocks available in this puzzle.
+        grade2_puppy_loops2_callout1: Þú hefur ekki nema einn svona kubb í þessari þraut.
       grade3_ConditionalsElse_2_callout:
         4_5_Bee_Conditionals_2_1: Mundu að athuga með HVERT ský hvort það hafi BLÓM. Þú þarft ekkert að athuga með hunang.
       grade3_Conditionals_3_callout:
@@ -1653,9 +1708,9 @@ is:
       grade4_artist_freeplay_callout:
         4-5_Artist_Patterns_Free_Play_1: Öllum uppáhaldskubbunum þínum hefur nú verið raðað í flokka. Smelltu á þessi orð til að sjá hvert allt fór!
       grade4_artist_functions1_callout:
-        grade4_artist_functions1_1: Let's start by using this block to help create the first square.
+        grade4_artist_functions1_1: Við skulum nota þennan kubb til að byrja að búa til fyrsta ferninginn.
       grade4_artist_functions2_callout:
-        grade4_artist_funcions2_1: When this green block runs, all of the code in the function will run. What should the artist do after drawing the first square?
+        grade4_artist_funcions2_1: Þegar þessi græni kubbur er keyrður er allur kóðinn í fallinu keyrður. Hvað ætti listamaðurinn að gera næst eftir fyrsta ferninginn?
       grade4_artist_functions_freeplay_callout:
         4-5_Artist_Patterns_Free_Play_1: Öllum uppáhaldskubbunum þínum hefur nú verið raðað í flokka. Smelltu á þessi orð til að sjá hvert allt fór!
       grade4_artist_functions_stars3_callout:
@@ -1690,32 +1745,32 @@ is:
         New Play Lab Project_callout1: Smelltu á flokkana til að sjá kubbana í verkfærakassanum! Dragðu kubba inn á vinnusvæðið til að bæta þeim við forritið þitt
         New Play Lab Project_callout2: Smelltu á "Keyra" til að vista og keyra forritið þitt
         sign_in_to_save_project: Viltu komast í verkefnið þitt seinna? Skráðu þig inn til að vista verkefnið undir aðgangi þínum!
-      grade4_playlab_test_callout: [ ]
-      grade4_review_artist1_callout: [ ]
+      grade4_playlab_test_callout: { }
+      grade4_review_artist1_callout: { }
       grade5_artist_for_loops1b_callout:
         grade5_artist_for_loops1b_1: The toolbox has been changed into "category" mode to make more room for your code.  Now, `for` loops live in here.
-      grade5_artist_for_loops4_callout: [ ]
+      grade5_artist_for_loops4_callout: { }
       grade5_artist_freeplay_callout:
         4-5_Artist_Patterns_Free_Play_1: Öllum uppáhaldskubbunum þínum hefur nú verið raðað í flokka. Smelltu á þessi orð til að sjá hvert allt fór!
       grade5_artist_functionparameters8_callout:
         grade5_artist_functionparameters8_1: You will find the polygon function in here.
       grade5_artist_functionparameters_6_callout:
-        grade5_artist_functionparameters_6_1: To complete your polygon, make sure you are always turning by 360 ÷ `sides` degrees.
+        grade5_artist_functionparameters_6_1: Til að ljúka marghyrningnum skaltu gæta þess að snúa alltaf um 360 / `hliðar` gráður.
       grade5_artist_parameters_squares1_callout:
         edit_add_parameter: Smelltu á breyta til að bæta stika við fallið þitt
         add_and_drag_parameter: Skrifaðu heiti stikans hér, smelltu svo á bæta við og dragðu hann síðan inn í skilgreininguna á fallinu þínu
       grade5_artist_parameters_squares1a_callout:
-        grade5_artist_parameters_triangles1_1: Click the "edit" button to change the code inside the function.
+        grade5_artist_parameters_triangles1_1: Smelltu á "Breyta" hnappinn til að breyta kóðanum inni í fallinu.
       grade5_artist_parameters_stars1_callout:
         grade4_artist_functions_stars3_1: Drag this block into your program. Every time you use this block, all of the commands in the function will be executed!
       grade5_artist_parameters_triangles1_callout:
-        grade5_artist_parameters_triangles1_1: Click the "edit" button to change the code inside the function.
+        grade5_artist_parameters_triangles1_1: Smelltu á "Breyta" hnappinn til að breyta kóðanum inni í fallinu.
       grade5_artist_parameters_triangles1aa_callout:
         edit_add_parameter: Smelltu á breyta til að bæta stika við fallið þitt
         add_and_drag_parameter: Skrifaðu heiti stikans hér, smelltu svo á bæta við og dragðu hann síðan inn í skilgreininguna á fallinu þínu
       grade5_artist_variables_freeplay10_callout:
         Course_4_Artist_Vars_8_a: Þarftu meira pláss? Dragðu þessa slá frá til að stækka vinnusvæðið.
-      grade5_artist_variables_octagons13_callout: [ ]
+      grade5_artist_variables_octagons13_callout: { }
       grade5_artist_variables_pentagons1_callout:
         place_length_variable: Dragðu lengdarbreytuna hingað í staðinn fyrir spurningarmerkin
       grade5_artist_variables_pentagons12_callout:
@@ -1730,8 +1785,8 @@ is:
         set_length: Notaðu þennan kubb til að stilla "lengd" á rétt gildi.
       grade5_bee_for_loops3_callout:
         grade5_bee_for_loops3_1: The `for` loop is so large, that the toolbox has to change into category mode.  You will find the new `for` loop in here!
-      grade5_bee_for_loops4_callout: [ ]
-      grade5_bee_for_loops6_callout: [ ]
+      grade5_bee_for_loops4_callout: { }
+      grade5_bee_for_loops6_callout: { }
       grade5_bee_parameters_new1_callout:
         grade5_bee_parameters_new1_a: You can find `if` statements in here.
       grade5_bee_parameters_new3_callout:
@@ -1740,13 +1795,13 @@ is:
         grade5_bee_parameters_new4_1: Press the "edit" button to add a parameter to this function.
       grade5_playlab_variables1_callout:
         arrows_move_actor: Notaðu örvarlyklana til að færa persónuna
-      grade5_playlab_variables10_callout: [ ]
+      grade5_playlab_variables10_callout: { }
       grade5_playlab_variables11_callout:
         edit_add_parameter: Smelltu á breyta til að bæta stika við fallið þitt
       grade5_playlab_variables1ask_callout:
         arrows_move_actor: Notaðu örvarlyklana til að færa persónuna
-      grade5_playlab_variables6_callout: [ ]
-      grade5_playlab_variables6ask_callout: [ ]
+      grade5_playlab_variables6_callout: { }
+      grade5_playlab_variables6ask_callout: { }
       grade5_playlab_variables_freeplay_callout:
         Course_4_Play_Lab_Vars_9_1: Öllum kubbunum hefur nú verið raða í flokka! Smelltu á heiti flokks til að sjá kubbana í honum.
       grade5_playlab_variables_jump1_callout:
@@ -1756,59 +1811,59 @@ is:
       gradek_artist_loops3_callout:
         artistLoopsK2_1: Þessi tala segir þér hve marga af þessum kubbum þú mátt nota í þessari þraut.
       gradek_artist_loops7_callout:
-        gradek_artist_loops7_1: Did you know that you can draw back over a line whenever you need to?
-      gradek_playlab_events1c_callout: [ ]
-      gradek_playlab_events2c_callout: [ ]
-      gradek_playlab_events3c_callout: [ ]
-      gradek_playlab_events4c_callout: [ ]
+        gradek_artist_loops7_1: Veistu að þú getur teiknað aftur yfir línu hvenær sem þú þarft?
+      gradek_playlab_events1c_callout: { }
+      gradek_playlab_events2c_callout: { }
+      gradek_playlab_events3c_callout: { }
+      gradek_playlab_events4c_callout: { }
       gradek_playlab_events5c_callout:
-        gradek_playlab_events5c_1: This let's you choose a "random" sound, which means that you don't know what you are going to get until you hear it!
+        gradek_playlab_events5c_1: Með þessu getur þú valið "eitthvað" hljóð, sem þýðir að þú veist ekki hvaða hljóð þú færð fyrr en þú heyrir það!
       harvester_Kahoot_callout:
-        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time you run the program.
-      iceage_click_hello_callout: [ ]
-      iceage_click_hello_2018_callout: [ ]
-      iceage_free_play_callout: [ ]
-      iceage_free_play_2018_callout: [ ]
-      iceage_free_playcourseF_IceAge_11_callout: [ ]
+        courseE_farmer_functions1a_1: Þetta grænmeti er óþekkt. Það breytist í hvert sinn sem þú keyrir forritið.
+      iceage_click_hello_callout: { }
+      iceage_click_hello_2018_callout: { }
+      iceage_free_play_callout: { }
+      iceage_free_play_2018_callout: { }
+      iceage_free_playcourseF_IceAge_11_callout: { }
       iceage_hello1_callout:
-        playlab_drag_say: ""
+        playlab_drag_say:
       iceage_hello1_2018_callout:
-        playlab_drag_say: ""
+        playlab_drag_say:
       iceage_hello2_callout:
-        playlab_use_twice: ""
+        playlab_use_twice:
       iceage_hello2_2018_callout:
-        playlab_use_twice: ""
+        playlab_use_twice:
       iceage_move_events_callout:
-        arrows_move_actor: ""
+        arrows_move_actor:
       iceage_move_events_2018_callout:
-        arrows_move_actor: ""
+        arrows_move_actor:
       iceage_move_to_actor_callout:
-        playlab_play_sound: ""
+        playlab_play_sound:
       iceage_move_to_actor_2018_callout:
-        playlab_play_sound: ""
-      iceage_move_to_flag_callout: [ ]
-      iceage_move_to_flag_2018_callout: [ ]
+        playlab_play_sound:
+      iceage_move_to_flag_callout: { }
+      iceage_move_to_flag_2018_callout: { }
       iceage_repeat_callout:
-        playlab_add_move: ""
+        playlab_add_move:
       iceage_repeat_2018_callout:
-        playlab_add_move: ""
+        playlab_add_move:
       iceage_sound_and_points_callout:
-        playlab_add_score: ""
+        playlab_add_score:
       iceage_sound_and_points_2018_callout:
-        playlab_add_score: ""
-      iceage_throw_hearts_callout: [ ]
-      iceage_throw_hearts_2018_callout: [ ]
-      iceage_warn_embed_ice_age_callout: [ ]
+        playlab_add_score:
+      iceage_throw_hearts_callout: { }
+      iceage_throw_hearts_2018_callout: { }
+      iceage_warn_embed_ice_age_callout: { }
       iceage_warn_ice_age_callout:
-        playlab_add_blocks: ""
+        playlab_add_blocks:
       iceage_warn_ice_age_2018_callout:
-        playlab_add_blocks: ""
+        playlab_add_blocks:
       kikiTesta_callout:
         sample1_1: This will be an adventurer collecting coins, not a farmer digging.
-      playLabDebugVideo1_callout: [ ]
+      playLabDebugVideo1_callout: { }
       sample1_callout:
         sample1_1: This will be an adventurer collecting coins, not a farmer digging.
-      sample10a_callout: [ ]
+      sample10a_callout: { }
       sample2_callout:
         sample2_1: Notice that there is only one 'move forward' block available in this toolbox.
       sample3_callout:
@@ -1829,13 +1884,13 @@ is:
         New Play Lab Project_callout1: Smelltu á flokkana til að sjá kubbana í verkfærakassanum! Dragðu kubba inn á vinnusvæðið til að bæta þeim við forritið þitt
         New Play Lab Project_callout2: Smelltu á "Keyra" til að vista og keyra forritið þitt
         sign_in_to_save_project: Viltu komast í verkefnið þitt seinna? Skráðu þig inn til að vista verkefnið undir aðgangi þínum!
-      subgoal U3 L4 introducing subgoal labels_callout: [ ]
-      subgoal U3L2 Using Simple Commands_callout: [ ]
+      subgoal U3 L4 introducing subgoal labels_callout: { }
+      subgoal U3L2 Using Simple Commands_callout: { }
       subgoal-test-clone_callout:
         move_subgoal: Þetta er merkið fyrir undirmarkmiðið "færa skjaldböku". Dragðu það út á vinnusvæðið.
       subgoal-test_callout:
         move_subgoal: Þetta er merkið fyrir undirmarkmiðið "færa skjaldböku". Dragðu það út á vinnusvæðið.
         orient_subgoal: Þetta þýðir að þú vilt snúa skjaldbökunni
-      subgoalU3L2_TurtleSquare_right_callout: [ ]
+      subgoalU3L2_TurtleSquare_right_callout: { }
       testing code callout_callout:
         testing_code_callout: Þetta lætur kvikann hreyfast!

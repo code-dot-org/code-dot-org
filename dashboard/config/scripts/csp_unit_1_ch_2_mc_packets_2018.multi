@@ -1,0 +1,11 @@
+name 'CSP Unit 1 Ch 2 MC packets_2018'
+title 'Packets'
+question 'Which of the following is NOT true about TCP/IP packets?'
+wrong 'Packets are numbered so if they arrive out of order the message can be reassembled.'
+right 'TCP guarantees that no packets are ever dropped'
+wrong 'Packets can be routed on different paths from sender to receiver.'
+wrong 'Messages are broken into packets to improve reliability of the internet'
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

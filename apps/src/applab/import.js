@@ -131,29 +131,32 @@ export function importScreensAndAssets(projectId, screens, assets) {
     assets.forEach(asset => allAssetsToCopy[asset.filename] = true);
 
     screens.forEach(importableScreen => {
-      var newScreen = importableScreen.html;
-
-      // ugh, we have to pull this out before we attach the new one
-      // in case it exists and needs to be deleted.
-      // If we delete it first, then design mode will try to load the
-      // "default" screen. If this screen we are deleting is the only screen
-      // then loading the "default" screen will create a new one!
-      var deleteAfterAdd = elementUtils.getPrefixedElementById(importableScreen.id);
-      designMode.attachElement(
-        designMode.parseScreenFromLevelHtml(
-          newScreen,
-          true,
-          applabConstants.DESIGN_ELEMENT_ID_PREFIX
-        )
-      );
-      if (deleteAfterAdd) {
-        designMode.onDeletePropertiesButton(deleteAfterAdd);
-      }
       importableScreen.assetsToReplace.forEach(asset => allAssetsToCopy[asset] = true);
       importableScreen.assetsToImport.forEach(asset => allAssetsToCopy[asset] = true);
     });
 
     function finishImporting(xhr) {
+      screens.forEach(importableScreen => {
+        var newScreen = importableScreen.html;
+
+        // ugh, we have to pull this out before we attach the new one
+        // in case it exists and needs to be deleted.
+        // If we delete it first, then design mode will try to load the
+        // "default" screen. If this screen we are deleting is the only screen
+        // then loading the "default" screen will create a new one!
+        var deleteAfterAdd = elementUtils.getPrefixedElementById(importableScreen.id);
+        designMode.attachElement(
+          designMode.parseScreenFromLevelHtml(
+            newScreen,
+            true,
+            applabConstants.DESIGN_ELEMENT_ID_PREFIX
+          )
+        );
+        if (deleteAfterAdd) {
+          designMode.onDeletePropertiesButton(deleteAfterAdd);
+        }
+      });
+
       designMode.resetPropertyTab();
       resolve(xhr);
     }

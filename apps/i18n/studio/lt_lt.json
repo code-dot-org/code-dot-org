@@ -318,6 +318,7 @@
   "moveSpriteN": "pajudink veikėją {spriteIndex}",
   "moveDroid": "move droid",
   "moveDroidN": "pajudink droidą {spriteIndex}",
+  "to": "=",
   "toXY": "į x,y",
   "moveDown": "judėk žemyn",
   "moveDownTooltip": "Perkelti veikėją žemyn.",

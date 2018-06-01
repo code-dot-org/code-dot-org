@@ -1,0 +1,28 @@
+name 'v2 U2L9 Student Lesson Introduction_2018'
+title 'title'
+css 'unplugged'
+description 'description here'
+markdown <<MARKDOWN
+# Unit 2: Lesson 9 - Check Your Assumptions
+
+## Background
+
+Analyzing and interpreting data will typically require some assumptions to be made about the accuracy of the data and the cause of the relationships observed within it. When decisions are made based on a collection of data, they will often rest just as much on that set of assumptions about the data as the data itself. Learning to validate and clearly call out assumptions being made when interpreting data is an important part of both analyzing and communicating about data.
+
+## Lesson
+
+* Case study of Google Flu Trends
+* Examination of the "digital divide"
+* Identify assumptions made in a set of data-driven decisions
+
+## Resources
+
+* Digital Divide and Checking Assumptions - Activity Guide ([PDF](https://docs.google.com/document/d/1uthatjfbTnszD6XYARriktNsElacEZkYI4tkWxvSaYA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1uthatjfbTnszD6XYARriktNsElacEZkYI4tkWxvSaYA/export?format=doc))
+* [Google Trends Video](https://www.youtube.com/watch?v=6111nS66Dpk) - Video
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Student Activity KEY: <a href="https://docs.google.com/document/d/1gz16hsM0mbg5-04CKtyCsxOkvCH1K_HvHhbG-ii8rmQ/edit?usp=sharing" target="_blank">The Digital Divide and Checking Assumptions</a>
+MARKDOWN

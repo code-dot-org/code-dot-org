@@ -1,0 +1,29 @@
+name 'v2 U1L5 Student Lesson Introduction_2018'
+title 'title'
+description 'description here'
+css 'unplugged'
+skip_dialog 'true'
+markdown <<MARKDOWN
+# Unit 1: Lesson 5 - Binary Numbers
+
+## Background
+
+Binary number patterns occur over and over in computing contexts. A proper number system represents values and enables counting and arithmetic. Predictive rules for counting is one trademark of all number systems. Certain numbers occur over and over in computing (2, 4, 8, 16, 32, 64...). In a computer, numbers are represented as binary. The numbers listed earlier represent the highest value that can be represented with each additional binary digit.
+
+## Lesson
+
+* Represent numbers with patterns of only two symbols - 0 and 1.
+* Write numbers using 4 bits.
+* Convert between binary and decimal numbers.
+
+## Resources
+
+* Flippy Do Template - Worksheet([PDF](https://drive.google.com/file/d/0B6iNirqJ5EuVVTlla0RpR2RIa2s/export?format=pdf) | [DOCX](https://drive.google.com/file/d/0B6iNirqJ5EuVVTlla0RpR2RIa2s/export?format=doc))
+* Binary Practice - Activity Guide ([PDF](https://docs.google.com/document/d/1wVHCs52_5-aIMMb0Pz_uS58eBJf0G-iBIBGVp56ao50/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1wVHCs52_5-aIMMb0Pz_uS58eBJf0G-iBIBGVp56ao50/export?format=doc))
+* [Binary Odometer](https://studio.code.org/s/csp1/stage/5/puzzle/2) - Code Studio
+* Binary Game AppLab App: <a href="https://studio.code.org/projects/applab/iukLbcDnzqgoxuu810unLw" target=_blank> Binary Game </a>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+[KEY - Binary Practice](https://docs.google.com/document/d/1NYN7YZmbkyKSaPnOhT9t-u3rKzLqcJjuOswT06c2_Xc/edit)
+MARKDOWN

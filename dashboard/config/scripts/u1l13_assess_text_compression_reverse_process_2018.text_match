@@ -1,0 +1,18 @@
+name 'U1L13 - Assess Text Compression reverse process_2018'
+title 'Act as the computer!'
+answer 'the_big_bug_bit_the_bull_but_the_bull_bit_the_big_bug_back'
+
+
+markdown <<MARKDOWN
+Below is a piece of text that has already been compressed, and shows some of the information about it. Show you know how this works by reconstructing the original text from the dictionary and compressed version.
+
+![](https://images.code.org/ff0b1798def28b61dd1a623ca13f777e-image-1433782834840.png)
+
+In the text box below, enter the original text you've reconstructed from the compressed version above. **Make sure you use _ (underscore) instead of spaces in your answer.**
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+![](https://images.code.org/9b8c36690d234633413db6d24581c084-image-1476734718506.05.02 PM.png)
+MARKDOWN

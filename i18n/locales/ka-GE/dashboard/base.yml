@@ -114,15 +114,24 @@ ka:
     valid_password: "პაროლი დასაშვებია!"
     invalid_password: "პაროლი მინიმუმ 6 ნიშნისგან უნდა შედგებოდეს"
     mismatch_password: "თქვენ მიერ შეყვანილი ორი პაროლი არ ემთხვევა"
+    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
+    under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
+    agree_us_website: "I agree to using a website based in the United States."
+    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
     student_terms: "მე ვეთანხმები Code.org-ის <a href='http://code.org/tos'>მომსახურების პირობებს</a>. თუ მე 13 წელზე ნაკლები ასაკის ვარ, ამ ფორმის გამოგზავნით ვადასტურებ, რომ მაქვს ჩემი მშობლის ან მეურვის ნებართვა Code.org-ის მომსახურების გამოყენებაზე.<br/><br/>ელექტრონული ფოსტის მისამართები არის შენახული ისეთი ფორმით, რომ მოსწავლეებთან დაკავშირება შეუძლებელია. მოსწავლე არასდროს მიიღებს წერილს Code.org-ისგან, გარდა პაროლის აღდგენის შემთხვევისა. მეტი ინფორმაციისთვის ნახეთ ჩვენი <a href='http://code.org/privacy'>კონფიდენციალურობის პოლიტიკა</a>."
     teacher_terms: "მე ვეთანხმები Code.org-ის მომსახურების პირობებს. კონფიდენციალურობასთან დაკავშირებით მეტი ინფორმაციისთვის ნახეთ ჩვენი <a href='http://code.org/privacy'>კონფიდენციალურობის პოლიტიკა</a>."
     additional_information: "რეგისტრაციის გასაგრძელებლად გვჭირდება დამატებითი ინფორმაცია."
+    user_type_button: "Update Account Type"
     user_type_label: "ანგარიშის ტიპი"
     user_type_teacher: "მასწავლებელი"
     user_type_student: "მოსწავლე"
     field_is_required: "სავალდებულოა"
     accept_terms: "ანგარიშის შესაქმნელად უნდა დაეთანხმოთ"
     error: "მოხდა შეცდომა."
+    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_yes: "დიახ"
+    email_preference_no: "არა"
+    email_preference_required: "You must specify an email preference."
   school_info:
     title: 'სასკოლო ინფორმაცია (არასავალდებულო)'
     school_country: 'სკოლის ქვეყანა'
@@ -368,6 +377,7 @@ ka:
     enter_new_login_info: 'შეიყვანეთ თქვენი ანგარიშის ინფორმაცია'
     confirm_secret_words: 'დაადუსტურეთ, რომ ეს თქვენ ხართ. ამისათვის შეიყვანეთ თქვენი მიმდინარე საიდუმლო სიტყვები'
     enter_parent_email: "შეიყვანეთ თქვენი მშობლის ან მეურვის იმეილის მისამართი (პაროლის აღსადგენად)"
+    update: "Update Account"
   user_level:
     completed: 'დასრულებულია'
     tried: 'უკვე ნაცადია'
@@ -449,6 +459,7 @@ ka:
     student_not_found: "ერთი ან მეტი მოსწავლე ვერ მოიძებნა."
     all_students_must_be_in_current_section: "ყველა სტუდენტი ამჟამად უნდა ირიცხებოდეს თქვენს სექციაში."
     already_enrolled_in_new_section: "თქვენ არ შეგიძლიათ ამ სტუდენტების გადაადგილება, რადგანაც ისინი უკვე არიან ახალ სექციაში."
+    third_party_login: "You cannot move students to a section that is synced with a third party tool."
   share:
     title: "ისწავლეთ კოდის სტუდიაში"
     description: "ნებისმიერს შეუძლია კომპიუტერული მეცნერების სწავლა. შექმენით თამაშები, აპლიკაციები და ხელოვნების ნიმუშები კოდით."
@@ -723,21 +734,21 @@ ka:
     message: "თუ შეიძლება, გვითხარით თქვენი ეთნიკურობა (მონიშნეთ ყველა შესაფერისი ვარიანტი)"
     races:
       - 
-        white: თეთრკანიანი
+        white: "თეთრკანიანი"
       - 
-        black: შავკანიანი ან აფროამერიკელი
+        black: "შავკანიანი ან აფროამერიკელი"
       - 
-        hispanic: ესპანელი ან ლათინო
+        hispanic: "ესპანელი ან ლათინო"
       - 
-        asian: აზიელი
+        asian: "აზიელი"
       - 
-        hawaiian: ჰავაიელი ან მშვიდი ოკეანეს სხვა კუნძულების მაცხოვრებელი
+        hawaiian: "ჰავაიელი ან მშვიდი ოკეანეს სხვა კუნძულების მაცხოვრებელი"
       - 
-        american_indian: ამერიკელი ინდიელი/ალასკელი
+        american_indian: "ამერიკელი ინდიელი/ალასკელი"
       - 
-        other: სხვა
+        other: "სხვა"
       - 
-        opt_out: პასუხისგან თავის შეკავება
+        opt_out: "პასუხისგან თავის შეკავება"
     submit: "გაგზავნა"
     decline: "დახურვა"
   zendesk_too_young_message: 'სამწუხაროდ, თქვენი ასაკის მომხმარებლებისთვის ეს გვერდი მიუწვდომელია. შეგიძლიათ ეწვიოთ გვერდს <a href="http://support.code.org">support.code.org</a>  ავტორიზაციის გარეშე, ან სთხოვოთ თქვენს მშობელს ან მასწავლებელს თქვენ მაგივრად დაგვიკავშირდნენ.'
@@ -868,6 +879,7 @@ ka:
     csd5_2: 'თავი 2: მონაცემებთან დაკავშირებული პრობლემების გადაწყვეტა'
     csd6_1: 'თავი 1: აპარატული გამოყვანა'
     csd6_2: 'თავი 2: აპარატული შეყვანა'
+    csd_survey: 'Post-Course Survey'
     csp1_1: 'თავი 1: ინფორმაციის წარმოდგენა და გადაცემა'
     csp1_2: 'თავი 2: ინტერნეტის გამოგონება'
     csp2_1: 'თავი 1: რთული ინფრომაციის კოდირება და შეკუმშვა'
@@ -881,6 +893,11 @@ ka:
     csp_ap_1: 'თავი 1: AP (მოწინავე კომპიუტერული მეცნიერების) ტექნოლოგიების დაყენება'
     csp_ap_2: 'თავი 2: AP წარმადობის დავალების გამოკვლევა'
     csp_ap_3: 'თავი 2: AP წარმადობის დავალების შექმნა'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'სექცია 2: ციფრული ინფორმაცია'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: 'კითხვები განვლილი მასალიდან'
   external_links:
     disclaimer: უარყოფა
@@ -985,3 +1002,14 @@ ka:
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: 'ყველა კურსი'
+  cookie_banner:
+    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+    more_information: "See Code.org's Privacy Policy."
+    accept: 'ვეთანხმები'
+  gdpr_dialog:
+    heading: 'Do you agree to using a web site based in the United States?'
+    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+    link_intro: 'For details see our'
+    privacy_policy: 'privacy policy'
+    logout: 'Logout'
+    yes: 'დიახ'

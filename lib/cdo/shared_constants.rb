@@ -33,7 +33,8 @@ module SharedConstants
       attempted: "attempted",
       review_accepted: "review_accepted",
       review_rejected: "review_rejected",
-      dots_disabled: "dots_disabled"
+      dots_disabled: "dots_disabled",
+      free_play_complete: "free_play_complete",
     }
   ).freeze
 
@@ -66,7 +67,8 @@ module SharedConstants
     }
   )
 
-  PUBLISHABLE_PROJECT_TYPES_UNDER_13 = %w(
+  # This list of project types can be shared by anyone regardless of their age or sharing setting.
+  ALWAYS_PUBLISHABLE_PROJECT_TYPES = %w(
     artist
     frozen
     playlab
@@ -87,11 +89,14 @@ module SharedConstants
     playlab_k1
   ).freeze
 
-  PUBLISHABLE_PROJECT_TYPES_OVER_13 = PUBLISHABLE_PROJECT_TYPES_UNDER_13 + %w(
+  # For privacy reasons, App Lab and Game Lab can only be shared if certain conditions are met. These project types can be shared if: the user is >= 13 years old and their teacher has NOT disabled sharing OR the user is < 13 and their teacher has enabled sharing.
+  CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES = %w(
     applab
     gamelab
   ).freeze
 
+  ALL_PUBLISHABLE_PROJECT_TYPES =
+    ALWAYS_PUBLISHABLE_PROJECT_TYPES + CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES
   # This is a set of Applab blocks. It is used by dashboard to initialize the
   # default palette when creating a level. It is used by apps to determine
   # what the full set of blocks available is.
@@ -344,6 +349,7 @@ module SharedConstants
       "mouseWentDown": null,
       "mouseWentUp": null,
       "mousePressedOver": null,
+      "showMobileControls": null,
       "World.mouseX": null,
       "World.mouseY": null,
       "World.frameRate": null,

@@ -114,15 +114,24 @@ tr:
     valid_password: "Geçerli parola!"
     invalid_password: "Parola en az 6 karakter olmalıdır"
     mismatch_password: "Girdiğiniz iki parola aynı değil"
+    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
+    under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
+    agree_us_website: "I agree to using a website based in the United States."
+    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
     student_terms: "Code.org <a href='http://code.org/tos'> hizmet şartlarına</a> bağlı olmayı kabul edersiniz. Eğer ben 13 yaşını altında isem, ebeveyn veya yasal velimin Code.org Hizmetlerini kullanma izni verdiğini bu formu göndererek onaylıyorum. <br/> <br/> E-posta adresleri öğrencilerle bağlantı kurmamız için herhangi bir formda depolanmaz. Öğrenciler şifre kurtarma dışında Code.org'dan herhangi bir e-posta almaz. Daha fazla bilgi için <a href='http://code.org/privacy'> Gizlilik Politikamıza</a> bakınız."
     teacher_terms: "Code.org sitesinin Hizmet ve Gizlilik politikalarını kabul ediyorum. Daha fazla bilgi için, <a href='http://code.org/privacy'> Hizmet ve Gizlilik politikamıza göz atın</a>."
     additional_information: "Giriş işleminize devam edebilmek için ek bilgilere ihtiyaç duymaktayız."
+    user_type_button: "Update Account Type"
     user_type_label: "Hesap Türü"
     user_type_teacher: "Öğretmen"
     user_type_student: "öğrenci"
     field_is_required: "gerekli"
     accept_terms: "Hesap oluşturmak için kabul etmelisiniz"
     error: "Bir hata oluştu."
+    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_yes: "Evet"
+    email_preference_no: "Hayır"
+    email_preference_required: "You must specify an email preference."
   school_info:
     title: 'Okul bilgileri (isteğe bağlı)'
     school_country: 'Okulun bulunduğu ülke'
@@ -171,7 +180,7 @@ tr:
       email: 'E-posta adresi'
       submit: 'Gönder'
     reset_errors:
-      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
+      captcha_required: 'Şifreni değiştirmek için lütfen robot olmadığını kanıtla.'
       invalid_email: 'Geçersiz e-posta adresi ile kayıt olmuşsunuz gibi görünüyor. Parola kurtarma bağlantısı için support@code.org a e-posta gönderin.'
     change_form:
       title: 'Şifrenizi değiştirin'
@@ -365,6 +374,7 @@ tr:
     enter_new_login_info: 'Oturum açma bilgilerini gir'
     confirm_secret_words: 'Gizli kelimenizi girerek siz olduğunuzu doğrulayın'
     enter_parent_email: "Ebeveyn ya da velinizin elektronik posta adresini girin (şifre kurtarmak için)"
+    update: "Update Account"
   user_level:
     completed: 'Tamamlandı'
     tried: 'Denenmiş'
@@ -446,6 +456,7 @@ tr:
     student_not_found: "Öğrenci ve öğretmen bulunamadı."
     all_students_must_be_in_current_section: "Bütün öğrenciler şu anda sınıfınıza kayıtlı olmalıdır."
     already_enrolled_in_new_section: "Öğrenciler zaten başka bir bölümde bulunduğundan onları başka yere taşıyamazsınız."
+    third_party_login: "You cannot move students to a section that is synced with a third party tool."
   share:
     title: "Code Studio'da Öğrenin"
     description: "Herkes bilgisayar bilimi öğrenebilir. Kod kullanarak oyunlar, uygulamalar ve sanat yarat."
@@ -720,21 +731,21 @@ tr:
     message: " Lütfen bize ırkını söyle  ( Başvuruyu kontrol etmeyi unutma)"
     races:
       - 
-        white: Beyaz
+        white: "Beyaz"
       - 
-        black: Siyahi veya Afrika kökenli Amerikalı
+        black: "Siyahi veya Afrika kökenli Amerikalı"
       - 
-        hispanic: İspanyol veya Latin
+        hispanic: "İspanyol veya Latin"
       - 
-        asian: Asyalı
+        asian: "Asyalı"
       - 
-        hawaiian: Yerel Hawaii veya diğer Pasifik Adalı
+        hawaiian: "Yerel Hawaii veya diğer Pasifik Adalı"
       - 
-        american_indian: Amerikalı Kızılderili / Alaska Yerlisi
+        american_indian: "Amerikalı Kızılderili / Alaska Yerlisi"
       - 
-        other: Diğer
+        other: "Diğer"
       - 
-        opt_out: Söylememek istemiyorum
+        opt_out: "Söylememek istemiyorum"
     submit: "Gönder"
     decline: "Kapat"
   zendesk_too_young_message: 'Üzgünüz, genç kullanıcılarımız destek sitemize üye olamazlar. <a href="http://support.code.org">support.code.org</a> adresini giriş yapmadan kullanın ya da ebeveynlerinize veya öğretmeninize bizimle temasa geçmelerini söyleyin.'
@@ -865,6 +876,7 @@ tr:
     csd5_2: 'Bölüm 2: Veri problemlerini çözme'
     csd6_1: 'Bölüm 1: Donanım çıktısı'
     csd6_2: 'Bölüm 1: Donanım girdisi'
+    csd_survey: 'Post-Course Survey'
     csp1_1: 'Bölüm 1: Bilgiyi Sunma ve Aktarma'
     csp1_2: 'Interneti icat etme'
     csp2_1: 'Karmaşık bilgileri kodlama ve sıkıştırma'
@@ -878,6 +890,11 @@ tr:
     csp_ap_1: 'Bölüm 1: AP teknik kurulum'
     csp_ap_2: 'Bölüm 2: AP performans görevini keşfet'
     csp_ap_3: 'Bölüm 2: AP performans görevini yarat'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Ünite 2: Sayısal bilgi'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: 'Yansıma İstemleri'
   external_links:
     disclaimer: Yasal uyarı
@@ -982,3 +999,14 @@ tr:
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: 'Tüm Kurslar'
+  cookie_banner:
+    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+    more_information: "See Code.org's Privacy Policy."
+    accept: 'Kabul ediyorum'
+  gdpr_dialog:
+    heading: 'Do you agree to using a web site based in the United States?'
+    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+    link_intro: 'For details see our'
+    privacy_policy: 'privacy policy'
+    logout: 'Logout'
+    yes: 'Evet'

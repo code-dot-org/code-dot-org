@@ -1,0 +1,29 @@
+name 'v2 U1L11 Student Lesson Introduction_2018'
+title 'Packets and Making a Reliable Internet'
+
+css 'unplugged'
+skip_dialog 'true'
+
+markdown <<MARKDOWN
+# Unit 1: Lesson 11 - Packets and Making a Reliable Internet
+
+## Background
+
+The internet is inherently unreliable.  Wires can get cut, connections can get flooded with data, routers can crash. How can you ensure that a person receives the message you sent? In this lesson, we will investigate how packets and protocols to structure them can make the unreliable physical network appear to be reliable to people using it.
+
+## Vocabulary
+
+* **Packets:** Small chunks of information that have been carefully formed from larger chunks of information.
+* **TCP:** Transmission Control Protocol - provides reliable, ordered, and error-checked delivery of a stream of packets on the internet. TCP is tightly linked with IP and usually seen as TCP/IP in writing.
+
+## Lesson
+
+* Explain why protocols are necessary to overcome the underlying unreliability of the Internet
+* Develop a protocol for reliable communication on the Internet
+* Justify the need for acknowledgements and packet numbering in TCP
+
+## Resources
+
+* Packets and Making a Reliable Internet - Activity Guide ([PDF](https://docs.google.com/document/d/13v27WVdqY23nqG9Rp-U4ypp_vsFAPaKhz37_KbbCbGI/export?format=pdf) | [DOCX](https://docs.google.com/document/d/13v27WVdqY23nqG9Rp-U4ypp_vsFAPaKhz37_KbbCbGI/export?format=doc))
+
+MARKDOWN

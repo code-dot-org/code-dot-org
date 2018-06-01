@@ -141,6 +141,13 @@
     valid_password: Gültiges Passwort!
     invalid_password: Das Passwort muss mindestens 6 Zeichen lang sein
     mismatch_password: Die eingegebenen Passwörter stimmen nicht überein
+    agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
+      and <a href='http://code.org/privacy'>Privacy Policy</a>.
+    under_13_consent: Falls ich unter 13 Jahre alt bin, bestätige ich, dass ich die Erlaubnis
+      meines Erziehungsberechtigten habe, die Dienste von Code.org zu nutzen.
+    agree_us_website: Ich akzeptiere die Nutzung einer Website mit Sitz in den USA.
+    my_data_to_us: Daten aus meiner Nutzung dieser Site können in die USA geschickt werden und
+      dort gespeichert und verarbeitet werden.
     student_terms: Ich stimme den <a href='http://code.org/tos'>Nutzungsbedingungen</a>
       des Code.org Service zu. Falls ich unter 13 Jahren alt bin, dann bestätige ich
       hiermit das ich die Erlaubnis meiner Erziehungsberechtigten habe, die Code.org
@@ -153,12 +160,19 @@
       bzgl. Datenschutz, siehe unsere <a href='http://code.org/privacy'>Datenschutz-Bestimmungen</a>.
     additional_information: Wir benötigen noch ein paar weitere Informationen, um
       mit deiner Anmeldung fortzufahren.
+    user_type_button: Update Account Type
     user_type_label: Kontentyp
     user_type_teacher: Lehrer
     user_type_student: Schüler
     field_is_required: ist erforderlich
     accept_terms: Du musst der Erstellung eines Kontos zustimmen
     error: Ein Fehler ist aufgetreten.
+    email_preference_question: Dürfen wir dich per E-Mail über Neuigkeiten zu unseren Kursen,
+      lokale Möglichkeiten oder andere Neuigkeiten zur Informatik informieren?
+    email_preference_privacy: (Siehe unsere Datenschutzerklärung)
+    email_preference_yes: Ja
+    email_preference_no: Nein
+    email_preference_required: You must specify an email preference.
   school_info:
     title: Schulinformationen (optional)
     school_country: Land der Schule
@@ -433,6 +447,7 @@
     confirm_secret_words: Confirm that it is you by entering your current secret words
     enter_parent_email: Enter your parent or guardian's email address (for password
       recovery)
+    update: Update Account
   user_level:
     completed: Abgeschlossen
     tried: Versucht
@@ -617,6 +632,8 @@
       Sektion eingeschrieben sein.
     already_enrolled_in_new_section: Sie können diese Schüler nicht bewegen, weil
       dieser Lehrer sie bereits in einer anderen Sektion hat.
+    third_party_login: You cannot move students to a section that is synced with a
+      third party tool.
   share:
     title: Mit Code Studio lernen
     description: Jeder kann Informatik lernen. Mache Spiele, Apps und Kunst mit Code.
@@ -1167,6 +1184,7 @@
     csd5_2: 'Chapter 2: Solving Data Problems'
     csd6_1: 'Chapter 1: Hardware Output'
     csd6_2: 'Chapter 2: Hardware Input'
+    csd_survey: Post-Course Survey
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -1180,6 +1198,11 @@
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Einheit 2: Digitale Informationen'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: Reflection Prompts
   external_links:
     disclaimer: Haftungsausschluss
@@ -1323,3 +1346,16 @@
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
   courses_category: Full Courses
+  cookie_banner:
+    message: By continuing to browse our site or clicking "I agree," you agree to
+      the storing of cookies on your computer or device.
+    more_information: See Code.org's Privacy Policy.
+    accept: Ich stimme zu
+  gdpr_dialog:
+    heading: Do you agree to using a web site based in the United States?
+    message: Data from your use of this site may be sent to and stored or processed
+      in the United States.
+    link_intro: For details see our
+    privacy_policy: privacy policy
+    logout: Logout
+    true: Ja

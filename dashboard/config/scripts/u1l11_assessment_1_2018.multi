@@ -1,0 +1,20 @@
+name 'U1L11 Assessment 1_2018'
+title 'Assessment: Sending Numbers'
+wrong '3 bits'
+wrong '8 bits'
+wrong '16 bits'
+right '24 bits'
+wrong '32 bits'
+
+
+markdown <<MARKDOWN
+### How many bits?
+
+ASCII has an encoding for every character of the alphabet as well as encodings for numbers -- that is, encodings for the symbols of the digits 0-9.  So here is a trick question: How many bits are required to store the *text* of the number "150" in ASCII?'
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Answer**
+
+The answer is 24 because the ASCII text "150" is just 3 ASCII characters - same as any other 3-character text, "ABC", "DOG", whatever.  And in ASCII every character is encoded as one byte which is 8 bits, and `8 * 3 = 24`.
+MARKDOWN

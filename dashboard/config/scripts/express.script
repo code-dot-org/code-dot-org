@@ -5,6 +5,8 @@ has_lesson_plan true
 project_widget_visible true
 project_widget_types ["playlab", "artist"]
 script_announcements [{"notice"=>"New: Choose Which Lessons to Show or Hide for Your Section", "details"=>"Click \"Learn More\" to read the help article on showing and hiding lessons.", "link"=>"https://support.code.org/hc/en-us/articles/115001479372-Hiding-units-and-lessons-in-Code-org-s-CS-Principles-and-CS-Discoveries-courses bullhorn", "type"=>"bullhorn"}]
+new_name 'express-2017'
+family_name 'express'
 
 stage 'Algorithms: Graph Paper Programming'
 level 'GraphPaperProgramming'
@@ -245,7 +247,7 @@ assessment 'courseD_farmer_while10_predict2'
 bonus 'courseD_farmer_while_challenge1'
 bonus 'courseD_farmer_while_challenge2'
 
-stage 'Conditional Loops in Maze'
+stage 'Until Loops in Maze'
 level 'courseD_maze_until1'
 level 'courseD_video_repeatUntil'
 level 'courseD_maze_until2_predict1'

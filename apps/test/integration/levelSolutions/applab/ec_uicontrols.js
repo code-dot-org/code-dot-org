@@ -3,7 +3,7 @@
  */
 import $ from 'jquery';
 var tickWrapper = require('../../util/tickWrapper');
-var TestResults = require('@cdo/apps/constants').TestResults;
+import {TestResults} from '@cdo/apps/constants';
 
 // take advantage of the fact that we expose the filesystem via
 // localhost

@@ -5,6 +5,7 @@
  * off of those actions.
  */
 
+import experiments from '@cdo/apps/util/experiments';
 import { trySetLocalStorage, tryGetLocalStorage } from '../utils';
 
 const SET_CONSTANTS = 'instructions/SET_CONSTANTS';
@@ -288,8 +289,12 @@ export const determineInstructionsConstants = config => {
     }
     shortInstructions = undefined;
   } else {
-    // CSF mode - For non-English folks, only use the non-markdown instructions
-    longInstructions = (!locale || locale === ENGLISH_LOCALE) ? markdownInstructions : undefined;
+    if (experiments.isEnabled('i18nMarkdownInstructions')) {
+      longInstructions = markdownInstructions;
+    } else {
+      // CSF mode - For non-English folks, only use the non-markdown instructions
+      longInstructions = (!locale || locale === ENGLISH_LOCALE) ? markdownInstructions : undefined;
+    }
     shortInstructions = instructions;
     shortInstructions2 = instructions2;
 

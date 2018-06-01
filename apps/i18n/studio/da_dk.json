@@ -318,6 +318,7 @@
   "moveSpriteN": "flyt spiller {spriteIndex}",
   "moveDroid": "move droid",
   "moveDroidN": "move droid {spriteIndex}",
+  "to": "til",
   "toXY": "til x, y",
   "moveDown": "Flyt ned",
   "moveDownTooltip": "Flyt en spiller ned.",

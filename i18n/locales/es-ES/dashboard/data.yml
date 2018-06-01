@@ -462,9 +462,6 @@ es:
         alg_15_biggame_update_player: CS en álgebra - Big Game Actualización de jugador
         alg_16_biggame_collision_detection: CS en álgebra - Big Game detección de colisiones
         alg_17_sambat_compound_booleans: CS en álgebra - compuestos booleanos
-        hoc2015_preview_blocks: Make your own game blocks
-        hoc2015_preview_typing: Make your own game typing
-        hoc2015_preview_conclusion: Make your own game conclusion
         starwars_intro: 'Star Wars: Construyendo una Galaxia con Código - Introducción'
         starwars_typing: 'Star Wars: Construyendo una Galaxia con Código - JavaScript'
         starwars_events: 'Star Wars: Construyendo una Galaxia con Código - Eventos'
@@ -528,6 +525,7 @@ es:
         CSF_harvester_skinOverview_K-1: The Harvester
         CSF_harvester_loops_K1: Loops in Harvester
         CSF_scrat_loops_K1: Loops in Ice Age
+        CSF_scrat_loops_CF: Loops in Ice Age
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque

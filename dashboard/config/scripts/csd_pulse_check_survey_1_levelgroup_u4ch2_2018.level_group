@@ -1,0 +1,13 @@
+name 'csd-pulse-check-survey-1-levelgroup U4Ch2_2018'
+title 'CS Discoveries Rapid Survey!'
+submittable 'true'
+anonymous 'true'
+
+page
+text 'csd-pulse-check-survey-preamble_2018'
+level 'csd-pulse-check-survey-1-q1 U4Ch2_2018'
+level 'csd-pulse-check-survey-1-q2 U4Ch2_2018'
+level 'csd-pulse-check-survey-1-q3 U4Ch2_2018'
+level 'csd-pulse-check-survey-1-q4 U4Ch2_2018'
+level 'csd-pulse-check-survey-1-q5 U4Ch2_2018'
+level 'csd-pulse-check-survey-1-free-response U4Ch2_2018'

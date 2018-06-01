@@ -1,0 +1,19 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-04-26T22:50:36.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Reflect on this lesson",
+    "placeholder": "Enter your reflection here.",
+    "markdown_instructions": "A binary message was recorded as a wave as shown in the image below. Can you decode the message? Explain what information you would need in order to successfully decode the message into A’s and B’s.\n\n![](https://images.code.org/c8ba0db14fabb778dc034ac4656259fa-image-1434429617999.png)\n\n",
+    "encrypted_solution": "T4pw9UHzyGwg9gKRb4tCsgsIHYtdrwPB8/rJJbLpqqWce/wXNofk6bnmozn5\nSJsWrKQrxXP9Q8q94dD0bTuEX/DBq1sW0e/plqAK6Ol9DZ1b/bnX5Oitbxxp\nHePjJKyvu5KuyTSDAUhGh/+VGXMnySkVmsxrcO2wYygdQKtPWftgV/IfG/15\n5/Q1hdpIr339o4u+ZdNZnv62LLGJF+eqIhD6cAbNpwjaVPXqSGrfjaerEUlw\nlTTpvgWrPaH2U0uLi3YV6eEiBA8zIW4YtSi/nzT18lhxiWtYGDFo0c52vrSD\nZIxrUwJOX2eyEL+DjjKTe4RhNoxwlIUml4n6uHPLaMR0FDvNkjIiczLqjqIJ\nBT+n9qkT89hMc8eoRfKP9Ukj9a6mtglFs316qf1W6/3oliwnRkc8YGWm93U2\n21ff15Xmu1VQkVOzYaVe041GYqLsM1AZyPK1s2O3jOxSIUfKnjezOmPftfGk\n5zmnspOc6KDi4bhljRJ89q0a5d9minaxO6KctP/7b/lodKfzI9HDEc4L8z/H\nxSq5EYSLzldwZOUwBCsrmNM7urx0oACFKG3X/fRBub8cArqJqsZZi+4gHoWq\n7Z+tl8VW7Fg94nGEzKXSKXyeIYhDz0HCtDQFVDRWNq3GAfUWG6ZrcTRx0CZN\nFERv8GbaOGe4YxRRemTomEBGBbn3e0Z9MRl10pF5LGa3\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 1907,
+    "name_suffix": "_2018"
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

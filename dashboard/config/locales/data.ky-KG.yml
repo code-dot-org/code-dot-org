@@ -56,45 +56,44 @@
         parameters: Functions with parameters
     level:
       instructions:
-        maze_2_2: 'Can you help me to catch the naughty pig? Stack a couple of "move
-          forward" blocks together and press "Run" to help me get there. '
-        maze_2_1: This pig is ruffling my feathers. Help me to find him!
-        maze_2_2_5: Trace the path and lead me to the silly pig. Avoid TNT or the
-          feathers will fly!
-        maze_2_3: Guide me to the green evilness! (Watch out for TNT)
-        maze_2_4: Keep calm and help me to find the bad pig. Otherwise I might get
-          angry!
-        maze_2_5: There's a way I can get to the silly pig using only 2 blocks. Can
-          you figure it out?
-        maze_2_6: Try to get me to the green intruder using only three blocks.
-        maze_2_7: Help me banish this bad piggy using the fewest number of blocks.
-          Try using more than one "repeat times" block.
-        maze_2_8: 'When a block is grey, that means you can''t delete it. Solve this
-          puzzle using the "repeat" block that repeats 3 times. Try putting these
-          3 blocks inside the grey "repeat" block: move, move, turn.'
-        maze_2_9: Ok, try the new "repeat until" block - it will repeat until I reach
-          the annoying pig.
-        maze_2_10: Ok, one last time for practice - can you solve this one using only
-          4 blocks?
-        maze_2_11: Dear person.  Me zombie. Me hungry. Must... get... to sunflower...
-          Can you get me there with only 5 blocks?
-        maze_2_12: Ok, this is similar, but slightly different. Can you do it in only
-          5 blocks?
-        maze_2_13: 'Use the new "if" block to let me decide when to turn. Hint: you
-          only need one more block, but learn how we set it up so you can do it on
-          your own next time.'
-        maze_2_14: Ok, this is just like the last puzzle, but you need to remember
-          how you used the "if" block and the "repeat" block together.
-        maze_2_15: Me want sunflower! Use an "if" block to get me there with the fewest
-          number of blocks.
-        maze_2_16: Ok, let's do that again for practice - this isn't very different,
-          but watch out for the chompers!
-        maze_2_17: The "If-else" blocks checks a condition, and then does one thing
-          OR another. To get me to the sunflower try to use this new block.
-        maze_2_18: One more practice of the "if-else" block, can you get it right
-          on your first try?
-        maze_2_19: Can you add just 3 blocks to help me solve a more complex maze?
-          If you do it right, I can walk any curvy path no matter the length.
+        maze_2_2: 'Тентек торопойду кармаганга жардам бересиңби? Бир нече "алдыга
+          жыл" блогун бириктирип туруп "Аткарды" бас, жеткенге жардам бер. '
+        maze_2_1: Бул торопой жиниме тийип жатат. Ага жеткенге жардам бер!
+        maze_2_2_5: Жол көрсөтүп, тентек торопойго жеткиз. Жардыргычтан алыс бол же
+          жарылып кетесиң!
+        maze_2_3: Мени жашыл мокочого жеткиз! (Жардыргычтан алыс бол)
+        maze_2_4: Сабырдуу бол, шүмшүк торопойду тапканга жардам бер. Болбосо ачуум
+          келет!
+        maze_2_5: 2 эле блок колдонуп шум торопойго жетүүнүн жолу бар. Ошону таба
+          аласыңбы?
+        maze_2_6: Үч эле блок колдонуп мени жашыл шүмшүккө жеткирип көр.
+        maze_2_7: Болушунча аз блок менен шум торопойду кубалаганга жардам кыл. "Жолу
+          кайтала" блогун бирден ашык колдонгонго аракет кылгыла.
+        maze_2_8: 'Блок жашыл болсо, аны жок кыла аласыңыр дегенди түшүндүрөт. Бул
+          башкатырманы 3 жолу кайталанган "кайталоо" блогун колдонуп чечкиле. Бул
+          3 блокту боз "кайталоо" блогунун ичине салганга аракеттенгиле: жыл, жыл,
+          бурул.'
+        maze_2_9: Ок, жаңы "болгуча кайтала" блогун көргүлө - ал тажаткыр торопойго
+          жетмейинче кайталайт.
+        maze_2_10: Ок, дагы бир машыгуу - муну 4 эле блок колдонуп чече аласыңарбы?
+        maze_2_11: Урматтуум. Биз зомбибиз. Ачкабыз. Күн карамага... жетишибиз...
+          керек.. 5 блок менен жеткизе аласыңбы?
+        maze_2_12: Ок, окшош эле, бирок кичине башкача. Муну 5 блок менен аткара аласыңарбы?
+        maze_2_13: 'Жаңы if (эгер) блогун пайдаланып, качан бурулууну өзүм чечкенге
+          жол бергиле. Кеңеш: дагы бир эле блок керек болот. Кандай орнотулганын көрүп,
+          эмкиде өзүңөр кылгыдай болгула.'
+        maze_2_14: Ок, бул акыркы башкатырма окшойт, бирок "эгер" жана "кайталоо"
+          блокторун бирге кантип колдонгонуңарды эстеп калгыла.
+        maze_2_15: Бизге күн карама керек! "Эгер" блогун колдонуп, мени эң аз блок
+          менен ага жеткизгиле.
+        maze_2_16: Ок, көнүгүү үчүн дагы бир кайталайлы - айырмасы аз, бирок чомперлерден
+          сактангыла!
+        maze_2_17: '"If-else" (эгер дагы) блогу шартты текшерет, андан кийин бир нерсени
+          же башкасын кылат. Бул жаңы блокту колдонуп мени күн карамага жеткир.'
+        maze_2_18: '"If-else" (эгер дагы) блогу менен дагы көнүгүү. Биринчи жолкусунан
+          туура кыла аласыңбы?'
+        maze_2_19: Болгону 3 блок кошуп, татаалыраак лабиринттен өткөзө аласыңбы?
+          Туура кылсаң, узунуна карабастан ийри жолдордун баарын өтө алам.
         turtle_1_1: Hi, I'm an artist. You can write code to make me draw almost anything.
           Use a few blocks to make me draw over the grey lines in the picture.
         turtle_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
@@ -690,9 +689,6 @@
         alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
         alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
         alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
-        hoc2015_preview_blocks: Make your own game blocks
-        hoc2015_preview_typing: Make your own game typing
-        hoc2015_preview_conclusion: Make your own game conclusion
         starwars_intro: 'Star Wars: Building a Galaxy with Code - Introduction'
         starwars_typing: 'Star Wars: Building a Galaxy with Code - JavaScript'
         starwars_events: 'Star Wars: Building a Galaxy with Code - Events'
@@ -756,6 +752,7 @@
         CSF_harvester_skinOverview_K-1: The Harvester
         CSF_harvester_loops_K1: Loops in Harvester
         CSF_scrat_loops_K1: Loops in Ice Age
+        CSF_scrat_loops_CF: Loops in Ice Age
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

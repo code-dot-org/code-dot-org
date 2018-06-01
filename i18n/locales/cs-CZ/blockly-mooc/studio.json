@@ -318,6 +318,7 @@
   "moveSpriteN": "pohnout hercem {spriteIndex}",
   "moveDroid": "move droid",
   "moveDroidN": "move droid {spriteIndex}",
+  "to": "na",
   "toXY": "do x,y",
   "moveDown": "pohyb dolů",
   "moveDownTooltip": "pohnout hercem dolů.",

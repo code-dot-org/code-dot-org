@@ -1,60 +1,63 @@
 "ga":
   data:
     callouts:
-      2-3 Artist 1 new_callout: []
+      2-3 Artist 1 new_callout: {}
       2-3 Artist Debugging 1_callout:
-        2-3_Artist_Debugging_1_a: Artist doesn't have a "Step" button, but you can
-          drag the slider left to watch your program run more carefully.
+        2-3_Artist_Debugging_1_a: Níl cnaipe "Céim" ag an Ealaíontóir, ach is féidir
+          leat an sleamhnán a tharraingt ar chlé le mionscrúdú a dhéanamh ar do chód
+          agus é a rith.
       2-3 Bee Conditionals 5_callout:
-        Bee_Cond_5_1a: Purple flowers can have either 1 or 0 nectar...but you won't
-          know until you run the code!
+        Bee_Cond_5_1a: Bíonn 0 nó 1 neachtar i mbláth corcra... ach ní bhíonn a fhios
+          agat cé mhéad go dtí go gcuirfidh tú an cód ar siúl!
       4-5 Artist Patterns Free Play_callout:
-        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized
-          into categories.  Click on these words to see where everything went!
+        4-5_Artist_Patterns_Free_Play_1: Tá na blocanna is ansa leat leagtha amach
+          ina gcatagóirí anois. Cliceáil na focail seo le féachaint cá bhfuil chuile
+          rud anois!
       4-5 Bee Conditionals - FC Test_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
-          You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: Ba chóir duit GACH scamall a iniúchadh le féachaint
+          an bhfuil BLÁTH ann. Ní gá duit cíora meala a lorg ar chor ar bith.
       4-5 Bee Conditionals 2_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
-          You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: Ba chóir duit GACH scamall a iniúchadh le féachaint
+          an bhfuil BLÁTH ann. Ní gá duit cíora meala a lorg ar chor ar bith.
       AppLab Intro 2 - Edit place1 2_callout:
-        dragTextAreaIn: Click and drag a "Text Area" onto the screen
-        screenSelectorCallout3: Pick the screen you made
+        dragTextAreaIn: Cliceáil agus tarraing "Limistéar Téacs" ar an scáileán
+        screenSelectorCallout3: Roghnaigh an scáileán a rinne tú
       AppLab Intro 2 - Edit place1_callout:
-        screenSelectorCallout2: This is the screen selector
-        changePlace1ID: Change the name of your screen here.
+        screenSelectorCallout2: Seo é an roghnóir scáileán
+        changePlace1ID: Athraigh aitheantas do scáileáin anseo.
       AppLab Intro 2 - Edit startScreen_callout:
-        applabIntro2_1: Click the title of your app
-        appLabIntro2_designMenu: Use these menus to change your app's title
-        appLabIntro2_textColor: Scroll down to change the "text color"
+        applabIntro2_1: Cliceáil teideal na haipe
+        appLabIntro2_designMenu: Úsáid na roghchláir seo chun "téacs" na haipe a athrú
+        appLabIntro2_textColor: Scrollaigh síos chun dath an téacs a athrú
       AppLab Intro 2 - Edit startScreen2_callout:
-        applabIntro2storyText: Click the story text on this screen
-        appLabIntro2_editStoryText: Drag out the bottom right hand corner of this
-          text box for more space. Then fill in your story text
-        appLabIntro2_textColor: Try out some of the different properties you can change
-          below
+        applabIntro2storyText: Cliceáil téacs an scéil ar an scáileán seo
+        appLabIntro2_editStoryText: Tarraing cúinne an bhosca téacs seo ag an mbun
+          ar dheis chun tuilleadh spáis a fháil. Ansin líon isteach téacs do scéil
+        appLabIntro2_textColor: Bain triail as airíonna éagsúla inathraithe thíos
       AppLab Intro 2 - add Button_callout:
-        designToolboxCallOut: Drag another button into your app
-        changeButtonID: Choose a clear "id" for your button. For example "callFriendButton"
-          or "goOutsideButton"
-        screenSelectorCallout3: Go to your "startScreen"
-      AppLab Intro 2 - add more buttons 2_callout: []
-      AppLab Intro 2 - add more buttons_callout: []
+        designToolboxCallOut: Tarraing cnaipe ar an scáileán.
+        changeButtonID: Roghnaigh "id" soiléir don chnaipe. Mar shampla "cnaipeGlaoigh"
+          nó "cnaipeDulAmach"
+        screenSelectorCallout3: Oscail an "startScreen"
+      AppLab Intro 2 - add more buttons 2_callout: {}
+      AppLab Intro 2 - add more buttons_callout: {}
       AppLab Intro 2 - add onEvent_callout:
-        onEventFirstTime: Click and drag an "onEvent" block into the workspace to
-          the right
-        setScreenFirstTime: Click and drag into the space in your "onEvent" block
+        onEventFirstTime: Cliceáil agus tarraing bloc "onEvent" go dtí an spás oibre
+          ar dheis
+        setScreenFirstTime: Cliceáil agus tarraing go dtí an spás sa mbloc "onEvent"
       AppLab Intro 7 - Change Screen Color_callout:
-        applab_hoc_finish: Click here when you're done!
+        applab_hoc_finish: Ar iompaigh an scáileán uaine? Má tá sé uaine, cliceáil
+          'Críochnaigh'. Mura bhfuil, cliceáil 'Athshocraigh', athraigh an cód, agus
+          cliceáil 'Rith' arís.
       AppLab Intro 7 - thisOrThatAddButton_callout:
-        AppLabHoCFinal11: You're now in Design Mode.
-      AppLab_test02_callout: []
-      Applab AllTheThings ResourcesTab AllResources_callout: []
-      Applab AllTheThings ResourcesTab MapReference_callout: []
-      Applab AllTheThings ResourcesTab ReferenceLinks_callout: []
-      Applab test_callout: []
-      Big Game Animation 1 (copy 1)_callout: []
-      Big Game Animation 1_callout: []
+        AppLabHoCFinal11: Tá tú sa Mód Deartha anois.
+      AppLab_test02_callout: {}
+      Applab AllTheThings ResourcesTab AllResources_callout: {}
+      Applab AllTheThings ResourcesTab MapReference_callout: {}
+      Applab AllTheThings ResourcesTab ReferenceLinks_callout: {}
+      Applab test_callout: {}
+      Big Game Animation 1 (copy 1)_callout: {}
+      Big Game Animation 1_callout: {}
       Big Game Animation 2 (copy 1)_callout:
         Big Game Animation 2: Edit this function to animate the target
       Big Game Animation 2_callout:
@@ -63,18 +66,18 @@
       Big Game Animation 3_callout:
         Big Game Animation 3_callout1: Edit this function to animate the danger
         Big Game Animation 3_callout2: Delete this block and complete the definition
-      Big Game Animation 4_callout: []
-      Big Game Booleans 1_callout: []
+      Big Game Animation 4_callout: {}
+      Big Game Booleans 1_callout: {}
       Big Game Booleans 2_callout:
         Big Game Booleans 2: Open this drawer to edit the safe-left? function
-      Big Game Booleans 3_callout: []
+      Big Game Booleans 3_callout: {}
       Big Game Booleans 4_callout:
         Big Game Booleans 3: Edit the onscreen? function to check both safe-left?
           and safe-right?
-      Big Game Booleans 5_callout: []
-      Big Game Collision 1 (copy 1)_callout: []
-      Big Game Collision 1_callout: []
-      Big Game Collision 2_callout: []
+      Big Game Booleans 5_callout: {}
+      Big Game Collision 1 (copy 1)_callout: {}
+      Big Game Collision 1_callout: {}
+      Big Game Collision 2_callout: {}
       Big Game Collision 3_callout:
         Big Game Collision 3: Fix this 'distance' function to make your collision
           detection work. You can use the existing 'line-length' function to calculate
@@ -83,9 +86,9 @@
         Big Game Collision 4: Complete the collide? function so that it checks whether
           the distance between a given pair of coordinates is close enough for them
           to be touching.
-      Big Game Final_callout: []
-      Big Game Player 1_callout: []
-      Big Game Player 2_callout: []
+      Big Game Final_callout: {}
+      Big Game Player 1_callout: {}
+      Big Game Player 2_callout: {}
       Big Game Vars 1_callout:
         big_game_finish: Click the finish button when you're ready to move to the
           next level.
@@ -98,148 +101,149 @@
         big_game_bg: Edit this variable to change the background image of your game
       Big Game Vars 3_callout:
         big_game_bg: Click "edit" to change the background image of your game
-      Big Game Vars 4 (copy 1)_callout: []
-      Big Game Vars 4_callout: []
-      CSD U3 - complex - compound conditionals_callout: []
-      CSD U3 - complex - key up and down_callout: []
-      CSD U3 - complex - key up and down_2018_callout: []
-      CSD U3 - complex - mouse down_callout: []
-      CSD U3 - complex - mouse down_2018_callout: []
-      CSD U3 - complex - mouse move_callout: []
-      CSD U3 - complex - mouse move_2018_callout: []
-      CSD U3 - complex - nested conditional_callout: []
-      CSD U3 - conditionals - first conditional 2-2018_callout: []
-      CSD U3 - conditionals - first conditional 2_callout: []
-      CSD U3 - conditionals - first conditional 2_2018_callout: []
-      CSD U3 - conditionals - first conditional_callout: []
-      CSD U3 - conditionals - first conditional_2018_callout: []
-      CSD U3 - conditionals - transition 2_callout: []
+      Big Game Vars 4 (copy 1)_callout: {}
+      Big Game Vars 4_callout: {}
+      CSD U3 - complex - compound conditionals_callout: {}
+      CSD U3 - complex - key up and down_callout: {}
+      CSD U3 - complex - key up and down_2018_callout: {}
+      CSD U3 - complex - mouse down_callout: {}
+      CSD U3 - complex - mouse down_2018_callout: {}
+      CSD U3 - complex - mouse move_callout: {}
+      CSD U3 - complex - mouse move_2018_callout: {}
+      CSD U3 - complex - nested conditional_callout: {}
+      CSD U3 - conditionals - first conditional 2-2018_callout: {}
+      CSD U3 - conditionals - first conditional 2_callout: {}
+      CSD U3 - conditionals - first conditional 2_2018_callout: {}
+      CSD U3 - conditionals - first conditional_callout: {}
+      CSD U3 - conditionals - first conditional_2018_callout: {}
+      CSD U3 - conditionals - transition 2_callout: {}
       CSD U3 - conditionals - transition_callout:
         CSD_U3_L8_S6_C1: Put the console log statement here
       CSD U3 - conditionals - transition_2018_callout:
         CSD_U3_L8_S6_C1: Put the console log statement here
-      CSD U3 - images - first sprite with image_callout: []
-      CSD U3 Boolean Modify_callout: []
-      CSD U3 Boolean Modify_2018_callout: []
-      CSD U3 Boolean Predict_callout: []
-      CSD U3 Boolean Predict_2018_callout: []
-      CSD U3 Compound Nested Challenge_callout: []
-      CSD U3 Compound Nested Challenge_2018_callout: []
-      CSD U3 Compound Nested Examples_callout: []
-      CSD U3 Conditional Project_callout: []
-      CSD U3 Conditionals Apple 2-2018_callout: []
-      CSD U3 Conditionals Apple 2_callout: []
-      CSD U3 Conditionals Apple 2_2018_callout: []
-      CSD U3 Conditionals Apple-2018_callout: []
-      CSD U3 Conditionals Apple_callout: []
-      CSD U3 Conditionals Apple_2018_callout: []
-      CSD U3 Diagonal Movement_callout: []
-      CSD U3 Diagonal Movement_2018_callout: []
-      CSD U3 Direction Animations-2018_callout: []
-      CSD U3 Direction Animations_callout: []
-      CSD U3 Direction Animations_2018_callout: []
-      CSD U3 Direction Arrows-2018_callout: []
-      CSD U3 Direction Arrows_callout: []
-      CSD U3 Direction Arrows_2018_callout: []
-      CSD U3 Draw Loop Plugged update your scene_callout: []
-      CSD U3 Draw Loop Plugged update your scene_2018_callout: []
-      CSD U3 Drawing Squares to Corners_callout: []
-      CSD U3 Drawing Squares to Corners_2018_callout: []
-      CSD U3 Else_callout: []
-      CSD U3 Else_2018_callout: []
-      CSD U3 If Else_callout: []
-      CSD U3 If Else_2018_callout: []
-      CSD U3 Keyboard Input Challenge-2018_callout: []
-      CSD U3 Keyboard Input Challenge_callout: []
-      CSD U3 Keyboard Input Challenge_2018_callout: []
-      CSD U3 Keypress Boolean-2018_callout: []
-      CSD U3 Keypress Boolean_callout: []
-      CSD U3 Keypress Boolean_2018_callout: []
-      CSD U3 Keypress Watchers_callout: []
-      CSD U3 Keypress Watchers_2018_callout: []
-      CSD U3 L11 Freeplay_callout: []
-      CSD U3 L11 Freeplay_2018_callout: []
-      CSD U3 L12 Freeplay_callout: []
-      CSD U3 L12 Freeplay_2018_callout: []
-      CSD U3 L13 Freeplay_callout: []
-      CSD U3 L13 Freeplay_2018_callout: []
-      CSD U3 L3 Freeplay_callout: []
-      CSD U3 L3 Freeplay_2018_callout: []
-      CSD U3 L4 Freeplay_callout: []
-      CSD U3 L4 Freeplay_2018_callout: []
-      CSD U3 L6 Freeplay_callout: []
-      CSD U3 L6 Freeplay_2018_callout: []
-      CSD U3 L7 Freeplay_callout: []
-      CSD U3 L7 Freeplay_2018_callout: []
-      CSD U3 Property Conditional Multi_callout: []
-      CSD U3 Property Conditional_callout: []
-      CSD U3 Random Choice_callout: []
-      CSD U3 Random Intro_callout: []
-      CSD U3 Random Min Max_callout: []
-      CSD U3 Simple Drawing - Animation 2_callout: []
-      CSD U3 Sprites anitab 1_callout: []
-      CSD U3 Sprites anitab 1_2018_callout: []
-      CSD U3 Sprites intro debug_callout: []
-      CSD U3 Sprites intro debug_2018_callout: []
-      CSD U3 Sprites intro predict_callout: []
-      CSD U3 Sprites intro predict_2018_callout: []
-      CSD U3 Sprites intro sprites_callout: []
-      CSD U3 Sprites intro sprites_2018_callout: []
-      CSD U3 Sprites scene challenge_callout: []
-      CSD U3 Sprites scene challenge_2018_callout: []
-      CSD U3 Sprites scene drawing_callout: []
-      CSD U3 Sprites scene drawing_2018_callout: []
-      CSD U3 Sprites scene sprites_callout: []
-      CSD U3 Sprites scene sprites_2018_callout: []
-      CSD U3 Sprites scene template_callout: []
-      CSD U3 Sprites scene template_2018_callout: []
-      CSD U3 Sprites scene text_callout: []
-      CSD U3 Sprites scene text_2018_callout: []
-      CSD U3 Sprites text debug-2018_callout: []
-      CSD U3 Sprites text debug_callout: []
-      CSD U3 Sprites text debug_2018_callout: []
-      CSD U3 Sprites text_callout: []
-      CSD U3 Sprites text_2018_callout: []
-      CSD U3 UP_ARROW-2018_callout: []
-      CSD U3 UP_ARROW_callout: []
-      CSD U3 UP_ARROW_2018_callout: []
+      CSD U3 - images - first sprite with image_callout: {}
+      CSD U3 Boolean Modify_callout: {}
+      CSD U3 Boolean Modify_2018_callout: {}
+      CSD U3 Boolean Predict_callout: {}
+      CSD U3 Boolean Predict_2018_callout: {}
+      CSD U3 Compound Nested Challenge_callout: {}
+      CSD U3 Compound Nested Challenge_2018_callout: {}
+      CSD U3 Compound Nested Examples_callout: {}
+      CSD U3 Conditional Project_callout: {}
+      CSD U3 Conditionals Apple 2-2018_callout: {}
+      CSD U3 Conditionals Apple 2_callout: {}
+      CSD U3 Conditionals Apple 2_2018_callout: {}
+      CSD U3 Conditionals Apple-2018_callout: {}
+      CSD U3 Conditionals Apple_callout: {}
+      CSD U3 Conditionals Apple_2018_callout: {}
+      CSD U3 Diagonal Movement_callout: {}
+      CSD U3 Diagonal Movement_2018_callout: {}
+      CSD U3 Direction Animations-2018_callout: {}
+      CSD U3 Direction Animations_callout: {}
+      CSD U3 Direction Animations_2018_callout: {}
+      CSD U3 Direction Arrows-2018_callout: {}
+      CSD U3 Direction Arrows_callout: {}
+      CSD U3 Direction Arrows_2018_callout: {}
+      CSD U3 Draw Loop Plugged update your scene_callout: {}
+      CSD U3 Draw Loop Plugged update your scene_2018_callout: {}
+      CSD U3 Draw Loop Plugged wiggle sprite y_2018_callout: {}
+      CSD U3 Drawing Squares to Corners_callout: {}
+      CSD U3 Drawing Squares to Corners_2018_callout: {}
+      CSD U3 Else_callout: {}
+      CSD U3 Else_2018_callout: {}
+      CSD U3 If Else_callout: {}
+      CSD U3 If Else_2018_callout: {}
+      CSD U3 Keyboard Input Challenge-2018_callout: {}
+      CSD U3 Keyboard Input Challenge_callout: {}
+      CSD U3 Keyboard Input Challenge_2018_callout: {}
+      CSD U3 Keypress Boolean-2018_callout: {}
+      CSD U3 Keypress Boolean_callout: {}
+      CSD U3 Keypress Boolean_2018_callout: {}
+      CSD U3 Keypress Watchers_callout: {}
+      CSD U3 Keypress Watchers_2018_callout: {}
+      CSD U3 L11 Freeplay_callout: {}
+      CSD U3 L11 Freeplay_2018_callout: {}
+      CSD U3 L12 Freeplay_callout: {}
+      CSD U3 L12 Freeplay_2018_callout: {}
+      CSD U3 L13 Freeplay_callout: {}
+      CSD U3 L13 Freeplay_2018_callout: {}
+      CSD U3 L3 Freeplay_callout: {}
+      CSD U3 L3 Freeplay_2018_callout: {}
+      CSD U3 L4 Freeplay_callout: {}
+      CSD U3 L4 Freeplay_2018_callout: {}
+      CSD U3 L6 Freeplay_callout: {}
+      CSD U3 L6 Freeplay_2018_callout: {}
+      CSD U3 L7 Freeplay_callout: {}
+      CSD U3 L7 Freeplay_2018_callout: {}
+      CSD U3 Property Conditional Multi_callout: {}
+      CSD U3 Property Conditional_callout: {}
+      CSD U3 Random Choice_callout: {}
+      CSD U3 Random Intro_callout: {}
+      CSD U3 Random Min Max_callout: {}
+      CSD U3 Simple Drawing - Animation 2_callout: {}
+      CSD U3 Sprites anitab 1_callout: {}
+      CSD U3 Sprites anitab 1_2018_callout: {}
+      CSD U3 Sprites intro debug_callout: {}
+      CSD U3 Sprites intro debug_2018_callout: {}
+      CSD U3 Sprites intro predict_callout: {}
+      CSD U3 Sprites intro predict_2018_callout: {}
+      CSD U3 Sprites intro sprites_callout: {}
+      CSD U3 Sprites intro sprites_2018_callout: {}
+      CSD U3 Sprites scene challenge_callout: {}
+      CSD U3 Sprites scene challenge_2018_callout: {}
+      CSD U3 Sprites scene drawing_callout: {}
+      CSD U3 Sprites scene drawing_2018_callout: {}
+      CSD U3 Sprites scene sprites_callout: {}
+      CSD U3 Sprites scene sprites_2018_callout: {}
+      CSD U3 Sprites scene template_callout: {}
+      CSD U3 Sprites scene template_2018_callout: {}
+      CSD U3 Sprites scene text_callout: {}
+      CSD U3 Sprites scene text_2018_callout: {}
+      CSD U3 Sprites text debug-2018_callout: {}
+      CSD U3 Sprites text debug_callout: {}
+      CSD U3 Sprites text debug_2018_callout: {}
+      CSD U3 Sprites text_callout: {}
+      CSD U3 Sprites text_2018_callout: {}
+      CSD U3 UP_ARROW-2018_callout: {}
+      CSD U3 UP_ARROW_callout: {}
+      CSD U3 UP_ARROW_2018_callout: {}
       CSD U3 Variables Predict Where X_callout:
-        CSD_U3_variables: Change the number here
+        CSD_U3_variables: Athraigh an uimhir anseo
       CSD U3 Variables Predict Where XY Embed_callout:
-        grid: Click here to show the grid.
+        grid: Cliceáil anseo chun an greille a thaispeáint.
       CSD U3 Variables Predict Where XY Embed_2018_callout:
-        grid: Click here to show the grid.
+        grid: Cliceáil anseo chun an greille a thaispeáint.
       CSD U3 Variables Predict Where XY_callout:
-        grid: Click here to show the grid.
+        grid: Cliceáil anseo chun an greille a thaispeáint.
       CSD U3 Variables Predict Where XY_2018_callout:
-        grid: Click here to show the grid.
+        grid: Cliceáil anseo chun an greille a thaispeáint.
       CSD U3 Variables Predict Where X_2018_callout:
-        CSD_U3_variables: Change the number here
-      CSD U3 Variables TEMPLATE square_callout: []
-      CSD U3 Variables make a big square_callout: []
-      CSD U3 Variables make a square_callout: []
-      CSD U3 Watcher Debug_callout: []
-      CSD U3 Watcher Debug_2018_callout: []
+        CSD_U3_variables: Athraigh an uimhir anseo
+      CSD U3 Variables TEMPLATE square_callout: {}
+      CSD U3 Variables make a big square_callout: {}
+      CSD U3 Variables make a square_callout: {}
+      CSD U3 Watcher Debug_callout: {}
+      CSD U3 Watcher Debug_2018_callout: {}
       CSD U3 abstraction accelerateX_callout:
-        CSD_U3_L11_S6_C1: Add your code here.
+        CSD_U3_L11_S6_C1: Cuir do chuid cóid anseo.
       CSD U3 abstraction accelerateX_2018_callout:
-        CSD_U3_L11_S6_C1: Add your code here.
+        CSD_U3_L11_S6_C1: Cuir do chuid cóid anseo.
       CSD U3 abstraction accelerateY_callout:
-        CSD_U3_L11_S7_C1: Add your code here.
+        CSD_U3_L11_S7_C1: Cuir do chuid cóid anseo.
       CSD U3 abstraction accelerateY_2018_callout:
-        CSD_U3_L11_S7_C1: Add your code here.
+        CSD_U3_L11_S7_C1: Cuir do chuid cóid anseo.
       CSD U3 abstraction change velocityX_callout:
-        CSD_U3_L11_S5_C1: Add your block here.
+        CSD_U3_L11_S5_C1: Cuir do bhloc anseo.
       CSD U3 abstraction change velocityXY_callout:
         CSD_U3_L12_S4_C1: The velocity is updated here.
       CSD U3 abstraction change velocityY_callout:
-        CSD_U3_L11_S6_C1: Add your block here.
+        CSD_U3_L11_S6_C1: Cuir do bhloc anseo.
       CSD U3 abstraction circle_callout:
         CSD_U3_L12_S7_C1: Look at this line.
       CSD U3 abstraction dragonfly (OLD)_callout:
-        CSD_U3_L11_S5_C1: Add your block here.
+        CSD_U3_L11_S5_C1: Cuir do bhloc anseo.
       CSD U3 abstraction dragonfly OLD_callout:
-        CSD_U3_L11_S5_C1: Add your block here.
+        CSD_U3_L11_S5_C1: Cuir do bhloc anseo.
       CSD U3 abstraction horse_callout:
         CSD_U3_L11_S13_C1: Set your sprite's velocityX and velocityY here
         CSD_U3_L11_S13_C2: Change your sprite's velocityY here.
@@ -274,10 +278,10 @@
       CSD U3 abstraction looping_2018_callout:
         CSD_U3_L11_S17_C1: Look at this if statement
       CSD U3 abstraction parabola_callout:
-        CSD_U3_L11_S13_C1: Add your block here.
+        CSD_U3_L11_S13_C1: Cuir do bhloc anseo.
       CSD U3 abstraction rotation accelerate_callout:
         CSD_U3_L11_S5_C1: Look at this code.
-        CSD_U3_L11_S5_C2: Add your code here.
+        CSD_U3_L11_S5_C2: Cuir do chuid cóid anseo.
       CSD U3 abstraction rotation control_callout:
         CSD_U3_L11_S5_C1: Look at this code.
       CSD U3 abstraction rotation control_2018_callout:
@@ -287,7 +291,7 @@
       CSD U3 abstraction rotation_2018_callout:
         CSD_U3_L11_S4_C1: Use the rotationSpeed block here
       CSD U3 abstraction setSpeed accelerate_callout:
-        CSD_U3_L11_S14_C1: Add your code here.
+        CSD_U3_L11_S14_C1: Cuir do chuid cóid anseo.
       CSD U3 abstraction sidescroll intro_callout:
         CSD_U3_L11_S17_C1: Set the sprite's starting position here.
         CSD_U3_L11_S17_C2: Set the hay bale's velocity here
@@ -321,30 +325,30 @@
       CSD U3 abstraction velocityX if-statements_2018_callout:
         CSD_U3_L11_S5_C1: Look at this code.
       CSD U3 abstraction velocityX_callout:
-        CSD_U3_L11_S4_C1: Add your block here.
+        CSD_U3_L11_S4_C1: Cuir do bhloc anseo.
       CSD U3 abstraction velocityX_2018_callout:
-        CSD_U3_L11_S4_C1: Add your block here.
+        CSD_U3_L11_S4_C1: Cuir do bhloc anseo.
       CSD U3 abstraction velocityY 2_callout:
-        CSD_U3_L11_S5_C1: Add your block here.
+        CSD_U3_L11_S5_C1: Cuir do bhloc anseo.
       CSD U3 abstraction velocityY control_callout:
         CSD_U3_L11_S5_C1: Look at this code.
       CSD U3 abstraction velocityY control_2018_callout:
         CSD_U3_L11_S5_C1: Look at this code.
       CSD U3 abstraction velocityY_callout:
-        CSD_U3_L11_S5_C1: Add your block here.
+        CSD_U3_L11_S5_C1: Cuir do bhloc anseo.
       CSD U3 abstraction velocityY_2018_callout:
-        CSD_U3_L11_S5_C1: Add your block here.
-      CSD U3 challenge face_callout: []
-      CSD U3 challenge face_2018_callout: []
-      CSD U3 challenge new shape_callout: []
-      CSD U3 challenge new shape_2018_callout: []
+        CSD_U3_L11_S5_C1: Cuir do bhloc anseo.
+      CSD U3 challenge face_callout: {}
+      CSD U3 challenge face_2018_callout: {}
+      CSD U3 challenge new shape_callout: {}
+      CSD U3 challenge new shape_2018_callout: {}
       CSD U3 collisions getSpeed_callout:
         CSD_U3_L11_S2_C1: Add your code for the compass here.
         CSD_U3_L11_S2_C2: Change the code to display speed here.
       CSD U3 collisions isTouching intro_callout:
-        CSD_U3_L12_S2_C1: Add your block here.
+        CSD_U3_L12_S2_C1: Cuir do bhloc anseo.
       CSD U3 collisions isTouching intro_2018_callout:
-        CSD_U3_L12_S2_C1: Add your block here.
+        CSD_U3_L12_S2_C1: Cuir do bhloc anseo.
       CSD U3 collisions pinball2_callout:
         CSD_U3_L14_S16_C1: Sprite interactions go in this function.
       CSD U3 collisions scoreboard_callout:
@@ -360,27 +364,27 @@
       CSD U3 collisions try blocks_2018_callout:
         CSD_U3_L13_S6_C1: Change this block.
       CSD U3 collisions types_callout:
-        CSD_U3_L13_S6_C1: Add your code here.
+        CSD_U3_L13_S6_C1: Cuir do chuid cóid anseo.
       CSD U3 collisions types_2018_callout:
-        CSD_U3_L13_S6_C1: Add your code here.
+        CSD_U3_L13_S6_C1: Cuir do chuid cóid anseo.
       CSD U3 debug_callout:
-        CSD_U3_rect_c1: Here is the code
-        CSD_U3_rect_c2: Drag this block into the code area.
+        CSD_U3_rect_c1: Seo é an cód
+        CSD_U3_rect_c2: Tarraing an bloc seo go dtí an cód.
       CSD U3 debug_2018_callout:
-        CSD_U3_rect_c1: Here is the code
-        CSD_U3_rect_c2: Drag this block into the code area.
+        CSD_U3_rect_c1: Seo é an cód
+        CSD_U3_rect_c2: Tarraing an bloc seo go dtí an cód.
       CSD U3 ellipse_callout:
-        CSD_U3_rect_c1: Here is the code
-        CSD_U3_rect_c2: Drag this block into the code area.
+        CSD_U3_rect_c1: Seo é an cód
+        CSD_U3_rect_c2: Tarraing an bloc seo go dtí an cód.
       CSD U3 ellipse_2018_callout:
-        CSD_U3_rect_c1: Here is the code
-        CSD_U3_rect_c2: Drag this block into the code area.
+        CSD_U3_rect_c1: Seo é an cód
+        CSD_U3_rect_c2: Tarraing an bloc seo go dtí an cód.
       CSD U3 fill_callout:
-        CSD_U3_rect_c1: Here is the code
-        CSD_U3_rect_c2: Drag this block into the code area.
+        CSD_U3_rect_c1: Seo é an cód
+        CSD_U3_rect_c2: Tarraing an bloc seo go dtí an cód.
       CSD U3 fill_2018_callout:
-        CSD_U3_rect_c1: Here is the code
-        CSD_U3_rect_c2: Drag this block into the code area.
+        CSD_U3_rect_c1: Seo é an cód
+        CSD_U3_rect_c2: Tarraing an bloc seo go dtí an cód.
       CSD U3 game backgrounds_callout:
         CSD_U3_S18_L4_C1: This block calls your function.
         CSD_U3_L18_S4_C2: Functions area
@@ -393,14 +397,14 @@
       CSD U3 game variables_2018_callout:
         CSD_U3_S18_L3_C1: This block creates a new variable.
         CSD_U3_L18_S3_C2: Variables area
-      CSD U3 keydown conditional-2018_callout: []
-      CSD U3 keydown conditional_callout: []
-      CSD U3 keydown conditional_2018_callout: []
+      CSD U3 keydown conditional-2018_callout: {}
+      CSD U3 keydown conditional_callout: {}
+      CSD U3 keydown conditional_2018_callout: {}
       CSD U3 my-rect_callout:
-        CSD_U3_rect_c1: Here is the code
-        CSD_U3_rect_c2: Here is the "Run" button.
-      CSD U3 picture_callout: []
-      CSD U3 picture_2018_callout: []
+        CSD_U3_rect_c1: Seo é an cód
+        CSD_U3_rect_c2: Seo é an cnaipe "Rith".
+      CSD U3 picture_callout: {}
+      CSD U3 picture_2018_callout: {}
       CSD U3 platform background1_callout:
         CSD_U3_L16_S3_C1: the function that draws the background
         CSD_U3_L16_S3_C2: the code that calls the function
@@ -422,55 +426,61 @@
       CSD U3 platform variable1_2018_callout:
         callout: This block creates a variable.
       CSD U3 rect_callout:
-        CSD_U3_rect_c1: Here is the code
-        CSD_U3_rect_c2: Here is the "Run" button.
+        CSD_U3_rect_c1: Seo é an cód
+        CSD_U3_rect_c2: Seo é an cnaipe "Rith".
       CSD U3 rect_2018_callout:
-        CSD_U3_rect_c1: Here is the code
-        CSD_U3_rect_c2: Here is the "Run" button.
+        CSD_U3_rect_c1: Seo é an cód
+        CSD_U3_rect_c2: Seo é an cnaipe "Rith".
       CSD U3 sequence_callout:
-        CSD_U3_rect_c1: Here is the code
-        CSD_U3_rect_c2: Drag this block into the code area.
+        CSD_U3_rect_c1: Seo é an cód
+        CSD_U3_rect_c2: Tarraing an bloc seo go dtí an cód.
       CSD U3 sequence_2018_callout:
-        CSD_U3_rect_c1: Here is the code
-        CSD_U3_rect_c2: Drag this block into the code area.
+        CSD_U3_rect_c1: Seo é an cód
+        CSD_U3_rect_c2: Tarraing an bloc seo go dtí an cód.
       CSD U6 colorLeds intensity_callout:
-        CSDU6L10_rainbow: Add your code here
+        CSDU6L10_rainbow: Cuir do chuid cóid anseo
       CSD U6 colorLeds intensity_2018_callout:
-        CSDU6L10_rainbow: Add your code here
-      CSD U6 colorLeds predict_callout: []
-      CSD U6 colorLeds predict_2018_callout: []
+        CSDU6L10_rainbow: Cuir do chuid cóid anseo
+      CSD U6 colorLeds predict_callout: {}
+      CSD U6 colorLeds predict_2018_callout: {}
       CSD U6 getProperty input_callout:
-        CSD_U6L06P03: Add your block here.
+        CSD_U6L06P03: Cuir do bhloc anseo.
       CSD U6 getProperty input_2018_callout:
-        CSD_U6L06P03: Add your block here.
+        CSD_U6L06P03: Cuir do bhloc anseo.
       CSD U6 light show predict_callout:
-        CSDUDL03P09: What does this line do?
+        CSDUDL03P09: Cad a dhéanann an líne seo?
       CSD U6 light show predict_2018_callout:
-        CSDUDL03P09: What does this line do?
+        CSDUDL03P09: Cad a dhéanann an líne seo?
       CSD U6 light show_callout:
-        CSDUDL03P09: What does this line do?
+        CSDUDL03P09: Cad a dhéanann an líne seo?
       CSD U6 light show_2018_callout:
-        CSDUDL03P09: What does this line do?
+        CSDUDL03P09: Cad a dhéanann an líne seo?
       CSD U6 tugowar variables 1_callout:
-        CSD_U6_startGame: Define startGame here
+        CSD_U6_startGame: Sainmhínigh startGame anseo
       CSD U6 tugowar variables 1_2018_callout:
-        CSD_U6_startGame: Define startGame here
+        CSD_U6_startGame: Sainmhínigh startGame anseo
       CSD U6 tugowar variables 2_callout:
-        CSD_U6_movePlayer: Define movePlayer() here
+        CSD_U6_movePlayer: Sainmhínigh movePlayer() anseo
       CSD U6 tugowar variables 2_2018_callout:
-        CSD_U6_movePlayer: Define movePlayer() here
+        CSD_U6_movePlayer: Sainmhínigh movePlayer() anseo
       CSD U6 tugowar variables 3_callout:
-        CSD_U6_checkWin: Check if the player has won
+        CSD_U6_checkWin: Féach ar bhuaigh an t-imreoir
       CSD U6 tugowar variables 3_2018_callout:
-        CSD_U6_checkWin: Check if the player has won
-      CSDU4 - Design Mode - 3_callout: []
+        CSD_U6_checkWin: Féach ar bhuaigh an t-imreoir
+      CSDU4 - Design Mode - 3_callout: {}
       CSPU5_U3L16 - setPosition to fixed location_callout:
         firstTimeSetPosition: Drag this inside the event handler function. Then click
           the arrows to get rid of the width and height parameters.
       CSPU5_U3L16 - setPosition to move button_callout:
         randNumReminder: Use this as the the value for the x and y coordinates in
           setPosition.  Just drag it into the parameter you want.
+      CSPU5_U3L16 - setPosition to move button_2018_callout:
+        randNumReminder: Use this as the the value for the x and y coordinates in
+          setPosition.  Just drag it into the parameter you want.
       CSPU5_setPosition to fixed location_callout:
+        firstTimeSetPosition: Drag this inside the event handler function. Then click
+          the arrows to get rid of the width and height parameters.
+      CSPU5_setPosition to fixed location_2018_callout:
         firstTimeSetPosition: Drag this inside the event handler function. Then click
           the arrows to get rid of the width and height parameters.
       Calc Circles of Eval .1_callout:
@@ -490,7 +500,7 @@
         Calc Vars 1_edit_option: Click on edit to change the value of this variable
       Calc Vars 2.1_callout:
         Calc Vars 2.1_num_months: Drop the number of months in a year here
-      Code Studio Puzzle Challenge 1 - Artist_callout: []
+      Code Studio Puzzle Challenge 1 - Artist_callout: {}
       Code Studio Puzzle Challenge 12 - Artist_callout:
         Code Studio Puzzle Challenge 12 - Artist_callout1: Click "Clear Puzzle" to
           return to the original code.
@@ -503,13 +513,15 @@
       Code Studio Puzzle Challenge 6 - Bee_callout:
         Code Studio Puzzle Challenge 6 - Bee_callout1: Drag blocks into the trash
           can to delete them
-      Code Studio Puzzle Challenge Var - Artist_callout: []
+      Code Studio Puzzle Challenge Var - Artist_callout: {}
       Counting_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
+        New Play Lab Project_callout1: Cliceáil na catagóirí chun na blocanna sa mbosca
+          uirlisí a fheiceáil! Tarraing blocanna go dtí an spás oibre chun iad a chur
+          leis an gclár
+        New Play Lab Project_callout2: Cliceáil "Rith" chun do chód a shábháil agus
+          a rith
+        sign_in_to_save_project: Ar mhaith leat teacht ar do thogra ar ball? Logáil
+          isteach chun an cód seo a shábháil i do chuntas!
       Course 4 Artist 4_callout:
         repeat_full_circle: Cé mhéad uair a chaithfidh tú an zombaí a aistriú chun
           ciorcal iomlán a dhéanamh
@@ -526,9 +538,9 @@
       Course 4 Artist Functions 8_callout:
         edit_function: Cliceáil anseo le d'fheidhm a chur in eagar.
       Course 4 Artist Functions challenge_callout:
-        Course_4_Artist_Functions_challenge_1: Notice that we've sorted all of blocks
-          and put them behind categories to keep things tidy.  Click here to find
-          all of the blocks that you need.
+        Course_4_Artist_Functions_challenge_1: Tabhair faoi deara go ndearnamar eagrú
+          ar na blocanna, agus chuireamar isteach i gcatagóirí iad, le cúrsaí a chóiriú.
+          Cliceáil anseo le teacht ar na blocanna go léir a theastaíonn uait.
       Course 4 Artist Params 2_callout:
         length_parameter: An féidir leat an fheidhm seo a athrú chun úsáid a bhaint
           as an bparaiméadar "fad"?
@@ -542,7 +554,7 @@
           a chríochnú.
       Course 4 Artist Vars 12_callout:
         set_length: Úsáid an bloc seo chun an luach "fad" a shocrú.
-      Course 4 Artist Vars 13_callout: []
+      Course 4 Artist Vars 13_callout: {}
       Course 4 Artist Vars 2_callout:
         set_length: Úsáid an bloc seo chun an luach "fad" a shocrú.
       Course 4 Artist Vars 3_callout:
@@ -551,17 +563,17 @@
         degrees_per_side: Roinn 360 ar líon na dtaobhanna le teacht ar mhéid gach
           uillinne (céimeanna).
       Course 4 Artist Vars 8_callout:
-        Course_4_Artist_Vars_8_a: Need more space?  Pull this bar over to make the
-          coding area wider.
+        Course_4_Artist_Vars_8_a: An bhfuil tuilleadh spáis uait? Tarraing an barra
+          seo chun an spás códála a leathnú.
       Course 4 Artist Vars 9_callout:
         set_sides: Úsáid an bloc seo chun líon na dtaobh a shocrú agus an dúshlán
           a chríochnú.
       Course 4 Bee 1_callout:
-        if_bee_nectar: Use the "if" block to decide if the bee should get nectar or
-          make honey
+        if_bee_nectar: Úsáid an bloc "má" le cinneadh ar chóir don bheach neachtar
+          a fháil nó mil a dhéanamh
       Course 4 Bee 3_callout:
-        if_else_bee: Use the "if/else" block so that the Bee gets nectar from a flower
-          and makes honey if it's not a flower
+        if_else_bee: Úsáid an bloc "má/i ngach cás eile" chun cabhrú leis an mBeach
+          neachtar a fháil más bláth é, agus mil a dhéanamh murar bláth é
       Course 4 Bee For Loops 1_callout:
         get_nectar: Úsáid an bloc nua "faigh neachtar".
       Course 4 Bee For Loops 6_callout:
@@ -570,56 +582,56 @@
       Course 4 Bee Params 2_callout:
         edit_get_nectar: Úsáid an cnaipe seo chun an fheidhm a chur in eagar agus
           an treo ina gcasann an Beach le neachtar a fháil a athrú.
-      Course 4 Bee Params 3_callout: []
+      Course 4 Bee Params 3_callout: {}
       Course 4 Bee Params 4 - Two WhenRun_callout:
-        Course_4_Bee_Params_4: Setting these variables to either "0" or "1" is called
-          setting a "flag". This flag can signal our function with the direction that
-          our bee needs to go.
-      Course 4 Bee Params 4_callout: []
+        Course_4_Bee_Params_4: Nuair a thugann tú luach "0" nó "1" do na hathróga
+          seo, deirtear gur shocraigh tú "bratach". Cuireann an bhratach seo in iúl
+          don fheidhm an treo ba chóir don bheach a dhul.
+      Course 4 Bee Params 4_callout: {}
       Course 4 Maze 1_callout:
         Course 4 Maze 1_callout1: Cliceáil "Rith" chun triail a bhaint as
-        Course 4 Maze 1_callout2: Drag the "move" block and snap it below the other
-          blocks in the workspace
+        Course 4 Maze 1_callout2: Tarraing bloc "téigh ar aghaidh" agus ceangail faoi
+          na blocanna eile sa spás oibre é
       Course 4 Maze 4_callout:
         repeat: Cuir blocanna taobh istigh den lúb chun orduithe a dhéanamh arís is
           arís eile
       Course 4 Play Lab Params 2_callout:
-        Course_4 _Play_Lab_Params_2_1: Click "edit" to update this function so that
-          it uses the height parameter.
+        Course_4 _Play_Lab_Params_2_1: Cliceáil "eagar" chun an fheidhm seo a athrú
+          sa chaoi go n-úsáideann sé paraiméadar height.
       Course 4 Play Lab Params 3_callout:
         edit_function: Cliceáil anseo le d'fheidhm a chur in eagar.
-      Course 4 Play Lab Params 5_callout: []
+      Course 4 Play Lab Params 5_callout: {}
       Course 4 Play Lab Params 6_callout:
         edit_add_parameter: Cliceáil "eagar" chun paraiméadar a chur le d'fheidhm
       Course 4 Play Lab Vars 1_callout:
         arrows_move_actor: Úsáid na saighde chun an t-aisteoir a aistriú
-      Course 4 Play Lab Vars 6_callout: []
+      Course 4 Play Lab Vars 6_callout: {}
       Course 4 Play Lab Vars 9_callout:
-        Course_4_Play_Lab_Vars_9_1: All of your blocks are now organized behind categories!
-          Click on a label to see the pieces inside.
+        Course_4_Play_Lab_Vars_9_1: Tá do chuid blocanna leagtha amach ina gcatagóirí
+          anois! Cliceáil lipéad chun na píosaí laistigh de a fheiceáil.
       Course 4 Play Labs For Loops 5_callout:
-        Course_4_Play_Labs_For_Loops_5: Woah!  My code exploded!  Can you put it back
-          together to solve this puzzle?
-      Course 4 Playlab For Loop Freeplay_callout: []
+        Course_4_Play_Labs_For_Loops_5: Dia linn! Phléasc mo chuid cóid! An féidir
+          leat é a chur le chéile chun an fhadhb seo a réiteach?
+      Course 4 Playlab For Loop Freeplay_callout: {}
       Course 4 Playlab For Loops 4b_callout:
-        Course_4_Playlab_For_Loops_4b_1: Notice that the `counter` variable has a
-          different name for each character?  That's so each `for` loop can control
-          its own counter.
-        Course_4_Playlab_For_Loops_4b_2: In this puzzle, you are only allowed to change
-          the "increment" of the `for` loops.
-      Course 4 Playlab For Loops 5b_callout: []
-      Course 4 Playlab For Loops 6b_callout: []
+        Course_4_Playlab_For_Loops_4b_1: Tabhair faoi deara go bhfuil ainm difriúil
+          ar an athróg "áiritheoir" do gach carachtar. Déantar é seo chun go mbeidh
+          gach lúb "do gach" i gceannas ar a háiritheoir féin.
+        Course_4_Playlab_For_Loops_4b_2: Sa dúshlán seo, níl cead agat ach an "incrimint"
+          sna lúba "do gach" a athrú.
+      Course 4 Playlab For Loops 5b_callout: {}
+      Course 4 Playlab For Loops 6b_callout: {}
       Course 4 SCV 6_callout:
-        Course_4_SCV_6: This block allows you to customize your color to almost anything
-          you want to see!  Play around with the numbers to see what happens!
+        Course_4_SCV_6: Leis an mbloc seo, is féidir leat beagnach aon dath a thaitníonn
+          leat a roghnú! Bain triail as uimhreacha éagsúla le féachaint cad a tharlóidh!
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: Úsáid na saighde chun an t-aisteoir a aistriú
       CourseF_PlayLab_vars10_callout:
-        Course_4_Play_Lab_Vars_9_1: All of your blocks are now organized behind categories!
-          Click on a label to see the pieces inside.
-      CourseF_PlayLab_vars6_callout: []
-      CourseF_PlayLab_vars7_callout: []
-      CourseF_PlayLab_vars8_callout: []
+        Course_4_Play_Lab_Vars_9_1: Tá do chuid blocanna leagtha amach ina gcatagóirí
+          anois! Cliceáil lipéad chun na píosaí laistigh de a fheiceáil.
+      CourseF_PlayLab_vars6_callout: {}
+      CourseF_PlayLab_vars7_callout: {}
+      CourseF_PlayLab_vars8_callout: {}
       Eval Booleans 2_callout:
         Eval Booleans 2 1: Select a number that will make this expression evaluate
           to true
@@ -644,7 +656,7 @@
           time you use the 'wide-rect' function
       Eval Strings Images .1_callout:
         type_string: 'Drag this string into the evaluate block in the workspace. '
-      Eval Strings Images .2_callout: []
+      Eval Strings Images .2_callout: {}
       Eval Strings Images 1_callout:
         purple_image_block: Purple colored blocks output Image values
       Eval Strings Images 2_callout:
@@ -653,7 +665,7 @@
         Eval Strings Images 3: Use this style block and select "outline"
       Eval Strings Images 5_callout:
         Eval Strings Images 5_callout1: Overlay a triangle by filling in this slot
-      Eval Strings Images 7_callout: []
+      Eval Strings Images 7_callout: {}
       Frozen Project Test Toolbox_callout:
         snowflake_dropdown: Úsáid an roghchlár anuas seo chun calóga sneachta éagsúla
           a chruthú!
@@ -661,17 +673,20 @@
         snowflake_dropdown: Úsáid an roghchlár anuas seo chun calóga sneachta éagsúla
           a chruthú!
       Function intro Ryan_callout:
-        Function_intro_Ryan_1: This little instruction tells the computer to run the
-          BIG chunk of code with the same name in the workspace.
+        Function_intro_Ryan_1: Insíonn an t-ordú beag seo don ríomhaire an píosa MÓR
+          cóid sa spás oibre leis an ainm céanna a rith.
       Geometric Pattern_callout:
-        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized
-          into categories.  Click on these words to see where everything went!
+        4-5_Artist_Patterns_Free_Play_1: Tá na blocanna is ansa leat leagtha amach
+          ina gcatagóirí anois. Cliceáil na focail seo le féachaint cá bhfuil chuile
+          rud anois!
       Geometric Sun_callout:
-        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized
-          into categories.  Click on these words to see where everything went!
+        4-5_Artist_Patterns_Free_Play_1: Tá na blocanna is ansa leat leagtha amach
+          ina gcatagóirí anois. Cliceáil na focail seo le féachaint cá bhfuil chuile
+          rud anois!
       Geometric Sun_2018_callout:
-        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized
-          into categories.  Click on these words to see where everything went!
+        4-5_Artist_Patterns_Free_Play_1: Tá na blocanna is ansa leat leagtha amach
+          ina gcatagóirí anois. Cliceáil na focail seo le féachaint cá bhfuil chuile
+          rud anois!
       Infinity_move_collide_callout:
         Infinity_move_collide_callout: Seinn fuaim nuair a tharlaíonn an teagmhas
           seo.
@@ -684,11 +699,11 @@
       Infinity_repeat_callout:
         Infinity_repeat_callout: Cuir blocanna Téigh isteach anseo
       InspirationalArtwork_callout:
-        InspirationalArtwork_1: Try using the new `comment` block under this label
-          to leave yourself notes inside your program!
+        InspirationalArtwork_1: Bain triail as an mbloc nua "nóta tráchta" faoin lipéad
+          seo chun nóta a fhágáil duitse féin laistigh den chlár!
       InspirationalArtwork_2018_callout:
-        InspirationalArtwork_1: Try using the new `comment` block under this label
-          to leave yourself notes inside your program!
+        InspirationalArtwork_1: Bain triail as an mbloc nua "nóta tráchta" faoin lipéad
+          seo chun nóta a fhágáil duitse féin laistigh den chlár!
       Luigi's Pizza 1 (copy 1)_callout:
         luigi's pizza 1: Try ordering a pepperoni pizza
       Luigi's Pizza 1_callout:
@@ -697,41 +712,46 @@
         luigi's pizza 2: Edit this function to add your own toppings
       Luigi's Pizza 2_callout:
         luigi_pizza_2: Edit this function to add your own toppings
-      Luigi's Pizza 3 (copy 1)_callout: []
-      Luigi's Pizza 3_callout: []
-      Luigi's Pizza 4_callout: []
+      Luigi's Pizza 3 (copy 1)_callout: {}
+      Luigi's Pizza 3_callout: {}
+      Luigi's Pizza 4_callout: {}
       MC HOC 2016 Level 2-2_callout:
-        craft2_run_button_callout: When you are ready, hit "Run" to try your program.
-      MC HOC 2016 Level 6_callout: []
-      MC HOC 2016 New Drop_callout: []
-      MC HOC 2016 New Spawn_callout: []
+        craft2_run_button_callout: Nuair a bheidh tú réidh, cliceáil "Rith" le triail
+          a bhaint as.
+      MC HOC 2016 Level 6_callout: {}
+      MC HOC 2016 New Drop_callout: {}
+      MC HOC 2016 New Spawn_callout: {}
       MC HOC 2016 New Walk_callout:
-        MC_HOC_2016_New_Walk_callout2: Hit "Run" to start moving.
+        MC_HOC_2016_New_Walk_callout2: Cliceáil "Rith" le tosú.
       MC_HOC_2017_01_Cole_callout:
-        MC_HOC_2017_01_Cole_2: Use the arrow keys or click here to start moving the
-          player.
-      MC_HOC_2017_01_Kiki_callout: []
-      MC_HOC_2017_02_Cole_callout: []
+        MC_HOC_2017_01_Cole_2: Úsáid na heochracha ar an méarchlár nó cliceáil anseo
+          chun an t-imreoir a thosú.
+      MC_HOC_2017_01_Kiki_callout: {}
+      MC_HOC_2017_02_Cole_callout: {}
       MC_HOC_2017_02_Will_callout:
-        MC_HOC_2017_02_Cole_1: Now your player has a buddy!  You can write code for
-          the Agent to help get you through the levels.
+        MC_HOC_2017_02_Cole_1: Anois tá cara ag an imreoir! Is féidir leat cód a scríobh
+          don Ghníomhaire a chuideoidh leat do bhealach a dhéanamh trí na leibhéil.
       MC_HOC_2017_03_Cole_callout:
-        MC_HOC_2017_03_Cole_1: This is a `repeat` loop!  Click it into the workspace
-          and add code that you want to run over and over.
+        MC_HOC_2017_03_Cole_1: Is lúb "athdhéan" é seo! Cuir isteach sa spás oibre
+          é agus cuir cód isteach inti le rith arís is arís eile.
       MC_HOC_2017_04_Cole_callout:
-        MC_HOC_2017_04_Cole_a: The Agent can hover over water, but the player can't!
+        MC_HOC_2017_04_Cole_a: Tá an Gníomhaire in ann a bheith ar foluain os cionn
+          uisce, ach níl an t-imreoir in ann!
       MC_HOC_2017_04_Kiki_callout:
-        MC_HOC_2017_04_Kiki_1: Click this into the workspace and add some code to
-          repeat it over and over again!
+        MC_HOC_2017_04_Kiki_1: Cuir an bloc seo sa spás oibre agus cuir cód isteach
+          ann le rith arís is arís eile!
       MC_HOC_2017_06_Cole_callout:
-        MC_HOC_2017_06_Cole_1: You cannot throw these blocks away, but you can edit
-          them!
+        MC_HOC_2017_06_Cole_1: Ní féidir leat fáil réidh leis na blocanna seo, ach
+          is féidir iad a chur in eagar!
       MC_HOC_2017_08_RY_callout:
-        MC_HOC_2017_08_RY_1: 'The Agent can hover over lava, but the player can''t!  '
+        MC_HOC_2017_08_RY_1: 'Tá an Gníomhaire in ann a bheith ar foluain os cionn
+          laibhe, ach níl an t-imreoir in ann!  '
       MC_HOC_2017_08_Will_callout:
-        MC_HOC_2017_08_RY_1: 'The Agent can hover over lava, but the player can''t!  '
+        MC_HOC_2017_08_RY_1: 'Tá an Gníomhaire in ann a bheith ar foluain os cionn
+          laibhe, ach níl an t-imreoir in ann!  '
       MC_HOC_2017_Ali_callout:
-        MC_HOC_2017_08_RY_1: 'The Agent can hover over lava, but the player can''t!  '
+        MC_HOC_2017_08_RY_1: 'Tá an Gníomhaire in ann a bheith ar foluain os cionn
+          laibhe, ach níl Steve agus Alex in ann!  '
       MSM Defining Vars 2_callout:
         MSM Defining Vars 2_callout1: Click "edit" to open the function editor to
           update the function
@@ -739,16 +759,18 @@
       MSM Defining Vars 3_callout:
         MSM Defining Vars 3: Click here to find your variables
       Mike Playlab Project_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
-      Modular Arithmetic_callout: []
-      NEW Course 4 Artist Functions 10_callout: []
+        New Play Lab Project_callout1: Cliceáil na catagóirí chun na blocanna sa mbosca
+          uirlisí a fheiceáil! Tarraing blocanna go dtí an spás oibre chun iad a chur
+          leis an gclár
+        New Play Lab Project_callout2: Cliceáil "Rith" chun do chód a shábháil agus
+          a rith
+        sign_in_to_save_project: Ar mhaith leat teacht ar do thogra ar ball? Logáil
+          isteach chun an cód seo a shábháil i do chuntas!
+      Modular Arithmetic_callout: {}
+      NEW Course 4 Artist Functions 10_callout: {}
       NEW Course 4 Artist Functions 3_callout:
-        NEW_Course_4_Artist_Functions_3_1: Click here to edit the new function so
-          that it creates a square.
+        NEW_Course_4_Artist_Functions_3_1: Cliceáil anseo chun an fheidhm nua a chur
+          in eagar sa chaoi go ndéanfaidh sí cearnóg.
       NEW Course 4 Artist Functions 5_callout:
         edit_function: Cliceáil anseo le d'fheidhm a chur in eagar.
         function_editor_draw_square: Seo é sainmhíniú na feidhme. Rithfear na blocanna
@@ -772,28 +794,32 @@
         place_length_variable: Tarraing an athróg "fad" anseo agus cuir in ionad na
           gcomharthaí ceiste í
       NEW Course 4 Bee For Loops 4_callout:
-        bee_for_loop: Enter the largest number of nectar you want the bee to collect
-          here
+        bee_for_loop: Cuir isteach an líon is mó neachtar is féidir leis an mbeach
+          a bhailiú anseo
       NEW Course 4 Bee For Loops 5_callout:
         actions_category: Tá cuma nua ar an mbosca uirlisí! Gheobhaidh tú na blocanna
           "Gníomhartha" anseo anois.
-      New App Lab Project_callout: []
+      New App Lab Project_callout: {}
       New Artist Project_callout:
-        New Artist Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace to add them to your program
-        New Artist Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
+        New Artist Project_callout1: Cliceáil na catagóirí chun na blocanna sa mbosca
+          uirlisí a fheiceáil! Tarraing blocanna go dtí an spás oibre chun iad a chur
+          leis an gclár
+        New Artist Project_callout2: Cliceáil "Rith" chun do chód a shábháil agus
+          a rith
+        sign_in_to_save_project: Ar mhaith leat teacht ar do thogra ar ball? Logáil
+          isteach chun an cód seo a shábháil i do chuntas!
       New Frozen Project_callout:
         snowflake_dropdown: Úsáid an roghchlár anuas seo chun calóga sneachta éagsúla
           a chruthú!
-      New Maker Lab Project_callout: []
+      New Maker Lab Project_callout: {}
       New Play Lab Project_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
+        New Play Lab Project_callout1: Cliceáil na catagóirí chun na blocanna sa mbosca
+          uirlisí a fheiceáil! Tarraing blocanna go dtí an spás oibre chun iad a chur
+          leis an gclár
+        New Play Lab Project_callout2: Cliceáil "Rith" chun do chód a shábháil agus
+          a rith
+        sign_in_to_save_project: Ar mhaith leat teacht ar do thogra ar ball? Logáil
+          isteach chun an cód seo a shábháil i do chuntas!
       Ninjacat Demo B_callout:
         Ninjacat Demo B: Click `Run` to try out the game
       Ninjacat Demo No Animate_callout:
@@ -812,131 +838,145 @@
           leat é a chur i gcrích?
       Overworld Move to Sheep_callout:
         craft_run_button_callout: Cliceáil "Rith" chun triail a bhaint as
-        craft_drag_block_callout: Drag a "move forward" block and snap it below the
-          other block
+        craft_drag_block_callout: Tarraing bloc "téigh ar aghaidh" agus ceangail faoin
+          bhloc eile é
       Overworld Move to Sheep_2018_callout:
         craft_run_button_callout: Cliceáil "Rith" chun triail a bhaint as
-        craft_drag_block_callout: Drag a "move forward" block and snap it below the
-          other block
+        craft_drag_block_callout: Tarraing bloc "téigh ar aghaidh" agus ceangail faoin
+          bhloc eile é
       Overworld Place Wall_callout:
         craft_inside_repeat: Cuir blocanna anseo chun orduithe a dhéanamh arís is
           arís eile
       Overworld Place Wall_2018_callout:
         craft_inside_repeat: Cuir blocanna anseo chun orduithe a dhéanamh arís is
           arís eile
-      PDAlg 13-16 Sam Extension Puzzle_callout: []
-      PDAlg 17-20 Luigi Extension Puzzle_callout: []
-      PDAlg Big Game History_callout: []
-      PDAlg Big Game Remix_callout: []
-      PDAlg Design Recipe Delete_callout: []
+      PDAlg 13-16 Sam Extension Puzzle_callout: {}
+      PDAlg 17-20 Luigi Extension Puzzle_callout: {}
+      PDAlg Big Game History_callout: {}
+      PDAlg Big Game Remix_callout: {}
+      PDAlg Design Recipe Delete_callout: {}
       PS clone CSD U3 Variables Predict Where XY_callout:
-        grid: Click here to show the grid.
+        grid: Cliceáil anseo chun an greille a thaispeáint.
       PS copy - CSD U3 Variables Predict Where XY Embed_callout:
-        grid: Click here to show the grid.
+        grid: Cliceáil anseo chun an greille a thaispeáint.
       PS copy 2-3 Bee Conditionals 5_callout:
-        Bee_Cond_5_1a: Purple flowers can have either 1 or 0 nectar...but you won't
-          know until you run the code!
+        Bee_Cond_5_1a: Bíonn 0 nó 1 neachtar i mbláth corcra... ach ní bhíonn a fhios
+          agat cé mhéad go dtí go gcuirfidh tú an cód ar siúl!
       PS copy CSD U3 Variables Predict Where XY_callout:
-        grid: Click here to show the grid.
+        grid: Cliceáil anseo chun an greille a thaispeáint.
       Pizza on a Plate_callout:
-        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized
-          into categories.  Click on these words to see where everything went!
+        4-5_Artist_Patterns_Free_Play_1: Tá na blocanna is ansa leat leagtha amach
+          ina gcatagóirí anois. Cliceáil na focail seo le féachaint cá bhfuil chuile
+          rud anois!
       Play Lab Rocket 2_callout:
-        pass_function: This start(function) block lets you pass your function (not
-          the value your function returns with some input) into the rocket animation
-          library. The animation you see on screen is actually using your function
-          to move the rocket!
-        play lab rocket 2: Define your rocket-height function here
+        pass_function: Leis an mbloc "tosaigh(feidhm)" seo, is féidir leat an fheidhm
+          féin (seachas an luach a chuireann sí ar ais) a chur chuig an leabharlann
+          bheochana roicéid. Tá an bheochan a fheiceann tú ag baint úsáide as an bhfeidhm
+          chun an roicéad a rialú!
+        play lab rocket 2: Sainmhínigh an fheidhm airde-an-roicéid anseo
       Play Lab Rocket 2B_callout:
-        pass_function: This black block lets you pass your function (not the value
-          your function returns with some input) into the rocket animation library.
-          The animation you see on screen is actually using your function to move
-          the rocket!
+        pass_function: Leis an mbloc dubh seo, is féidir leat an fheidhm féin (seachas
+          an luach a chuireann sí ar ais) a chur chuig an leabharlann bheochana roicéid.
+          Tá an bheochan a fheiceann tú ag baint úsáide as an bhfeidhm chun an roicéad
+          a rialú!
       Play Lab Rocket 3_callout:
-        Play Lab Rocket 3 1: Update the purpose statement before moving on to the
-          examples and definition.
-      Play Lab Rocket Free Play_callout: []
-      Poorva copy U3L2 Using Simple Commands_callout: []
+        Play Lab Rocket 3 1: Nuashonraigh an ráiteas aidhme sula rachaidh tú ar aghaidh
+          go dtí na samplaí agus an sainmhíniú.
+      Play Lab Rocket Free Play_callout: {}
+      Poorva copy U3L2 Using Simple Commands_callout: {}
       Quantum Bee - Ryan_callout:
-        feeling_stuck_callout_test: " Feeling Stuck?<br />Click the lightbulb for
-          a hint!"
+        feeling_stuck_callout_test: " An bhfuil tú i bponc?<br />Cliceáil an bolgán
+          solais chun leid a fháil!"
       Robot Doodle_callout:
-        4-5_Artist_Patterns_Free_Play_2: Try using the new `comment` block under this
-          label to leave yourself notes inside your program!
+        4-5_Artist_Patterns_Free_Play_2: Bain triail as an mbloc nua "nóta tráchta"
+          faoin lipéad seo chun nóta a fhágáil duitse féin laistigh den chlár!
       Robot Doodle_2018_callout:
-        4-5_Artist_Patterns_Free_Play_2: Try using the new `comment` block under this
-          label to leave yourself notes inside your program!
+        4-5_Artist_Patterns_Free_Play_2: Bain triail as an mbloc nua "nóta tráchta"
+          faoin lipéad seo chun nóta a fhágáil duitse féin laistigh den chlár!
       Robot Drawing_callout:
-        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized
-          into categories.  Click on these words to see where everything went!
+        4-5_Artist_Patterns_Free_Play_1: Tá na blocanna is ansa leat leagtha amach
+          ina gcatagóirí anois. Cliceáil na focail seo le féachaint cá bhfuil chuile
+          rud anois!
       Robot_callout:
-        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized
-          into categories.  Click on these words to see where everything went!
+        4-5_Artist_Patterns_Free_Play_1: Tá na blocanna is ansa leat leagtha amach
+          ina gcatagóirí anois. Cliceáil na focail seo le féachaint cá bhfuil chuile
+          rud anois!
       Rock Paper Scissors_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
+        New Play Lab Project_callout1: Cliceáil na catagóirí chun na blocanna sa mbosca
+          uirlisí a fheiceáil! Tarraing blocanna go dtí an spás oibre chun iad a chur
+          leis an gclár
+        New Play Lab Project_callout2: Cliceáil "Rith" chun do chód a shábháil agus
+          a rith
+        sign_in_to_save_project: Ar mhaith leat teacht ar do thogra ar ball? Logáil
+          isteach chun an cód seo a shábháil i do chuntas!
       Rocket Height Course A_callout:
-        pass_function: This start(function) block lets you pass your function (not
-          the value your function returns with some input) into the rocket animation
-          library. The animation you see on screen is actually using your function
-          to move the rocket!
+        pass_function: Leis an mbloc "tosaigh(feidhm)" seo, is féidir leat an fheidhm
+          féin (seachas an luach a chuireann sí ar ais) a chur chuig an leabharlann
+          bheochana roicéid. Tá an bheochan a fheiceann tú ag baint úsáide as an bhfeidhm
+          chun an roicéad a rialú!
       Ryan - 4-5 Bee Conditionals 2_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
-          You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: Ba chóir duit GACH scamall a iniúchadh le féachaint
+          an bhfuil BLÁTH ann. Ní gá duit cíora meala a lorg ar chor ar bith.
       Ryan - Bee Conditionals_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
-          You don't have to check for honeycombs at all.
-      SG Add Subgoals practice_callout: []
+        4_5_Bee_Conditionals_2_1: Ba chóir duit GACH scamall a iniúchadh le féachaint
+          an bhfuil BLÁTH ann. Ní gá duit cíora meala a lorg ar chor ar bith.
+      SG Add Subgoals practice_callout: {}
       SG U3L08 how to add comments_callout:
-        comment_highlight: Drag a comment block from here into your code
-      SG U3L2 Using Simple Commands part 1_callout: []
-      SG U3L2 Using Simple Commands_callout: []
-      SG U3L2_Add-subgoals_callout: []
+        comment_highlight: Tarraing bloc nóta tráchta as seo go dtí an cód
+      SG U3L2 Using Simple Commands part 1_callout: {}
+      SG U3L2 Using Simple Commands_callout: {}
+      SG U3L2_Add-subgoals_callout: {}
       SG U3L2_Turtle3by3Grid_callout:
-        pen_functions: penUp and penDown are here now if you want to use them.
-        goals_tab: drag goals out from here
-      SG U3L2_TurtleSquare_right_callout: []
+        pen_functions: Tá peannSuas agus peannSíos anseo anois más mian leat iad a
+          úsáid.
+        goals_tab: tarraing spriocanna amach as seo
+      SG U3L2_TurtleSquare_right_callout: {}
       SGU3L2A Introducing Subgoals_callout:
-        goals_palette_show: Here is a list of subgoals
-        goals_workspace: Example of code with subgoals in it
+        goals_palette_show: Seo é liosta fospriocanna
+        goals_workspace: Cód samplach ina bhfuil fospriocanna
       Sam the Butterfly 3_callout:
-        Sam the Butterfly 3 1: Edit this function to keep Sam from going off the right
-          side
-      Sam the Butterfly 5_callout: []
+        Sam the Butterfly 3 1: Cuir an fheidhm seo in eagar chun cosc a chur ar Sam
+          imeacht ón scáileán ar thaobh na láimhe deise
+      Sam the Butterfly 5_callout: {}
       Test Play Lab Project With Walls_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
-      TestLab_callout: []
-      U3 - Simple Drawing - Ellipse and No Fill_callout: []
-      U3 - Simple Drawing - Fill_callout: []
-      U3 - Simple Drawing - No Fill_callout: []
-      U3 - Simple Drawing - Order of Blocks_callout: []
-      U3 - Simple Drawing - Oval_callout: []
-      U3 - Simple Drawing - Rectangle Width and Height_callout: []
-      U3 - Simple Drawing - Rectangle_callout: []
-      U3 - Simple Drawing - Stroke and Stroke Weight_callout: []
-      U3 - Simple Drawing - X and Y values_callout: []
-      U3 - Simple Drawing - regular polygon_callout: []
-      U3 - Simple Drawing - text_callout: []
-      U3 - Sprites - Intro Sprites_callout: []
-      U3 Variables flower example_callout: []
-      U3 Variables gray square_callout: []
-      U3 Variables make a square_callout: []
-      U3L05_3x3GridEfficiencyChallenge_callout: []
-      U3L05_draw3x3GridEfficiently_callout: []
+        New Play Lab Project_callout1: Cliceáil na catagóirí chun na blocanna sa mbosca
+          uirlisí a fheiceáil! Tarraing blocanna go dtí an spás oibre chun iad a chur
+          leis an gclár
+        New Play Lab Project_callout2: Cliceáil "Rith" chun do chód a shábháil agus
+          a rith
+        sign_in_to_save_project: Ar mhaith leat teacht ar do thogra ar ball? Logáil
+          isteach chun an cód seo a shábháil i do chuntas!
+      TestLab_callout: {}
+      U3 - Simple Drawing - Ellipse and No Fill_callout: {}
+      U3 - Simple Drawing - Fill_callout: {}
+      U3 - Simple Drawing - No Fill_callout: {}
+      U3 - Simple Drawing - Order of Blocks_callout: {}
+      U3 - Simple Drawing - Oval_callout: {}
+      U3 - Simple Drawing - Rectangle Width and Height_callout: {}
+      U3 - Simple Drawing - Rectangle_callout: {}
+      U3 - Simple Drawing - Stroke and Stroke Weight_callout: {}
+      U3 - Simple Drawing - X and Y values_callout: {}
+      U3 - Simple Drawing - regular polygon_callout: {}
+      U3 - Simple Drawing - text_callout: {}
+      U3 - Sprites - Intro Sprites_callout: {}
+      U3 Variables flower example_callout: {}
+      U3 Variables gray square_callout: {}
+      U3 Variables make a square_callout: {}
+      U3L05_3x3GridEfficiencyChallenge_callout: {}
+      U3L05_draw3x3GridEfficiently_callout: {}
       U3L08 how to add comments_callout:
-        comment_highlight: Drag a comment block from here into your code
-      U3L2 Using Simple Commands (no tooltips)_callout: []
-      U3L2 Using Simple Commands_callout: []
-      U3L2_Turtle3by3Grid_callout: []
-      U3L2_TurtleSquare_right_callout: []
-      U5 ColorSleuth Template_callout: []
+        comment_highlight: Tarraing bloc nóta tráchta as seo go dtí an cód
+      U3L08 how to add comments_2018_callout:
+        comment_highlight: Tarraing bloc nóta tráchta as seo go dtí an cód
+      U3L2 Using Simple Commands (no tooltips)_callout: {}
+      U3L2 Using Simple Commands_callout: {}
+      U3L2 Using Simple Commands_2018_callout: {}
+      U3L2_Turtle3by3Grid_callout: {}
+      U3L2_Turtle3by3Grid_2018_callout: {}
+      U3L2_TurtleSquare_right_callout: {}
+      U3L2_TurtleSquare_right_2018_callout: {}
+      U5 ColorSleuth Template_callout: {}
+      U5 ColorSleuth Template_2018_callout: {}
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: Lorgóidh an cód seo laibhe. An féidir leat ordú
           a chur leis chun bogadh ar aghaidh?
@@ -948,962 +988,1067 @@
       Underground Iron_2018_callout:
         craft_what_is_iron: Tochail an t-iarann seo!
       WebLab PS test - 1-12_callout:
-        version_history_button: Check out version history
+        version_history_button: Féach ar stair na leaganacha
       WhileAdventure_callout:
         sample1_1: This will be an adventurer collecting coins, not a farmer digging.
       aE1_callout:
-        aE1_1: There will only be two of these and two turns
+        aE1_1: Ní bheidh ach dhá cheann díobh agus dhá chasadh ann
       aE2_callout:
-        aE2_1: Still only two of these and two turns
+        aE2_1: Níl ach dhá cheann díobh agus dhá chasadh ann fós
       aE3_callout:
-        aE3_1: Only a handful of these available
+        aE3_1: Níl ach ríbheagán acu ar fáil
       aE3alternate_callout:
-        aE3_1: Only a handful of these available
+        aE3_1: Níl ach ríbheagán acu ar fáil
       aE3alternateB_callout:
-        aE3_1: Only a handful of these available
+        aE3_1: Níl ach ríbheagán acu ar fáil
       aE4_callout:
-        aE3_1: Only a handful of these available
+        aE3_1: Níl ach ríbheagán acu ar fáil
       aE5_callout:
-        aE3_1: Only a handful of these available
+        aE3_1: Níl ach ríbheagán acu ar fáil
       aE6_callout:
-        aE6_1: Only 1 move forward and 1 turn block
+        aE6_1: Bloc amháin "téigh ar aghaidh" agus bloc amháin "cas"
       aEfreeplay_callout:
-        aEfreeplay_1: Note that starting the artist in the middle can be awkward.  We're
-          looking at adding actions that can move the artist to absolute positions.
-      allthethings_U3 - Simple Drawing - Rectangle Width and Height_callout: []
+        aEfreeplay_1: Tabhair faoi deara go bhfuil sé sách ciotach nuair a thosaíonn
+          an t-ealaíontóir sa lár. Táimid ag smaoineamh ar ghníomhartha nua a bheadh
+          in ann an t-ealaíontóir a aistriú go háit ar bith.
+      allthethings_U3 - Simple Drawing - Rectangle Width and Height_callout: {}
       artistLoopsK2_callout:
-        artistLoopsK2_1: This number tells you how many of these blocks you can use
-          in this puzzle.
+        artistLoopsK2_1: Is éard atá san uimhir seo ná an líon blocanna den chineál
+          seo is féidir leat a úsáid sa dúshlán seo.
       artistLoopsK2gradek_artist_loops3_callout:
-        artistLoopsK2_1: This number tells you how many of these blocks you can use
-          in this puzzle.
-      comment_intro_maze_2018_callout: []
-      course2_artist_nestedLoops_challenge2_callout: []
+        artistLoopsK2_1: Is éard atá san uimhir seo ná an líon blocanna den chineál
+          seo is féidir leat a úsáid sa dúshlán seo.
+      comment_intro_maze_2018_callout: {}
+      course2_artist_nestedLoops_challenge2_callout: {}
       course2_bee_conditionals_challenge2_callout:
-        courseD_bee_conditionals_challenge2_1: Use this loop to collect all of the
-          nectar (or honey) from one flower (or honeycomb).
-      course2_collector_loops_challenge2_callout: []
-      course2_collector_prog_challenge1_callout: []
-      course2_collector_prog_challenge2_callout: []
+        courseD_bee_conditionals_challenge2_1: Úsáid an lúb seo chun an neachtar (nó
+          mil) go léir a bhailiú ó bhláth (nó cíor mheala) amháin.
+      course2_collector_loops_challenge2_callout: {}
+      course2_collector_prog_challenge1_callout: {}
+      course2_collector_prog_challenge2_callout: {}
       course3_artist_functions_challenge1_callout:
-        courseE_artist_functions_challenge1_callout1: Keep this program going by adding
-          more code to the bottom.
-        courseE_artist_functions_challenge1_callout2: If you don't like this design,
-          change it to anything you want!
+        courseE_artist_functions_challenge1_callout1: Coinnigh an clár seo ag dul
+          trí thuilleadh cóid a chur leis.
+        courseE_artist_functions_challenge1_callout2: Mura dtaitníonn an dearadh seo
+          leat, athraigh é ar do rogha bealach!
       course3_artist_functions_challenge2_callout:
-        courseE_artist_functions_challenge2_callout1: Keep this program going by adding
-          more code to the bottom.
-        courseE_artist_functions_challenge2_callout2: If you don't like this design,
-          change it to anything you want!
+        courseE_artist_functions_challenge2_callout1: Coinnigh an clár seo ag dul
+          trí thuilleadh cóid a chur leis.
+        courseE_artist_functions_challenge2_callout2: Mura dtaitníonn an dearadh seo
+          leat, athraigh é ar do rogha bealach!
       course3_bee_debugging_challenge1_callout:
-        courseD_bee_debugging_challenge1_callout1: Use this command to move the bee
-          backward.
+        courseD_bee_debugging_challenge1_callout1: Úsáid an t-ordú seo chun an beach
+          a aistriú ar gcúl.
       course3_bee_functions_challenge3_callout:
-        courseF_bee_functions_challenge1_1: What code should you put in this function?
-        courseF_bee_functions_challenge1_2: The "check nectar or honey" function can
-          be used here if edit it to make honey multiple times.
-      course3_bee_functions_challenge4_callout: []
-      course3_collector_debugging_challenge2_callout: []
-      course3_farmer_until_challenge2_callout: []
+        courseF_bee_functions_challenge1_1: Cén cód ba chóir duit a chur san fheidhm
+          seo?
+        courseF_bee_functions_challenge1_2: Is féidir leat an fheidhm "seiceáil neachtar
+          nó mil" a úsáid anseo má chuireann tú in eagar í chun mil a dhéanamh go
+          leor uaireanta.
+      course3_bee_functions_challenge4_callout: {}
+      course3_collector_debugging_challenge2_callout: {}
+      course3_farmer_until_challenge2_callout: {}
       course3_playLab_challenge1_callout:
-        courseC_PlayLab_events_challenge1_1: This block lets you move actors to different
-          parts of the game space.
-      course4_artist_concept_challenge2_callout: []
+        courseC_PlayLab_events_challenge1_1: Is féidir leat an bloc seo a úsáid chun
+          aisteoirí a aistriú timpeall an spáis oibre.
+      course4_artist_concept_challenge2_callout: {}
       course4_artist_functions_challenge2_callout:
-        courseE_artist_functions_challenge2_callout1: Keep this program going by adding
-          more code to the bottom.
-        courseE_artist_functions_challenge2_callout2: If you don't like this design,
-          change it to anything you want!
-      course4_bee_for_challenge1_callout: []
+        courseE_artist_functions_challenge2_callout1: Coinnigh an clár seo ag dul
+          trí thuilleadh cóid a chur leis.
+        courseE_artist_functions_challenge2_callout2: Mura dtaitníonn an dearadh seo
+          leat, athraigh é ar do rogha bealach!
+      course4_bee_for_challenge1_callout: {}
       course4_bee_fwp_challenge2_callout:
-        courseF_bee_fwp_challenge2_callout1: This function will do a good job with
-          corn, but what about the other vegetables?
-      course4_collector_nested_loops_challenge2_callout: []
+        courseF_bee_fwp_challenge2_callout1: Déanann an fheidhm seo jab maith le harbhar,
+          ach cad faoi ghlasraí eile?
+      course4_collector_nested_loops_challenge2_callout: {}
       courseA_artist_loops4_callout:
-        courseA_artist_loops4_1: This number tells you how many of these blocks you
-          can use in this puzzle.
+        courseA_artist_loops4_1: Is éard atá san uimhir seo ná an líon blocanna den
+          chineál seo is féidir leat a úsáid sa dúshlán seo.
       courseA_artist_loops4_2018_callout:
-        courseA_artist_loops4_1: This number tells you how many of these blocks you
-          can use in this puzzle.
+        courseA_artist_loops4_1: Is éard atá san uimhir seo ná an líon blocanna den
+          chineál seo is féidir leat a úsáid sa dúshlán seo.
       courseA_artist_loops7_callout:
-        courseA_artist_loops7_1: This number means that only one of this kind of block
-          can be used in the final answer.
+        courseA_artist_loops7_1: Ciallaíonn an uimhir seo nach féidir leat ach bloc
+          amháin den chineál seo a úsáid i do réiteach.
       courseA_artist_loops7_2018_callout:
-        courseA_artist_loops7_1: This number means that only one of this kind of block
-          can be used in the final answer.
+        courseA_artist_loops7_1: Ciallaíonn an uimhir seo nach féidir leat ach bloc
+          amháin den chineál seo a úsáid i do réiteach.
       courseA_artist_loops7_forVideo_callout:
-        courseA_artist_loops7_1: This number means that only one of this kind of block
-          can be used in the final answer.
+        courseA_artist_loops7_1: Ciallaíonn an uimhir seo nach féidir leat ach bloc
+          amháin den chineál seo a úsáid i do réiteach.
       courseA_artist_loops8_callout:
-        courseA_artist_loops8_1: Did you know that you can draw back over a line whenever
-          you need to?
+        courseA_artist_loops8_1: An bhfuil a fhios agat gur féidir leat tarraingt
+          anuas ar líne atá ann aon uair is gá?
       courseA_artist_loops8_2018_callout:
-        courseA_artist_loops8_1: Did you know that you can draw back over a line whenever
-          you need to?
+        courseA_artist_loops8_1: An bhfuil a fhios agat gur féidir leat tarraingt
+          anuas ar líne atá ann aon uair is gá?
       courseA_collector_loops1_callout:
-        courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't
-          worry, we will show you how to use them later in the stage.
+        courseA_collector_loops1_1: An bhfeiceann tú blocanna nua sa mbosca uirlisí?
+          Ná buair do cheann, taispeánfaimid duit an bealach chun iad a úsáid níos
+          déanaí sa chéim seo.
       courseA_collector_loops1_2018_callout:
-        courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't
-          worry, we will show you how to use them later in the stage.
+        courseA_collector_loops1_1: An bhfeiceann tú blocanna nua sa mbosca uirlisí?
+          Ná buair do cheann, taispeánfaimid duit an bealach chun iad a úsáid níos
+          déanaí sa chéim seo.
       courseA_collector_loops3_callout:
-        gradek_adventurer_loops2_1: This number tells you how many of these blocks
-          you can use in this puzzle.
+        gradek_adventurer_loops2_1: Is éard atá san uimhir seo ná an líon blocanna
+          den chineál seo is féidir leat a úsáid sa dúshlán seo.
       courseA_collector_loops3_2018_callout:
-        gradek_adventurer_loops2_1: This number tells you how many of these blocks
-          you can use in this puzzle.
-      courseA_collector_loops3_predict1_callout: []
+        gradek_adventurer_loops2_1: Is éard atá san uimhir seo ná an líon blocanna
+          den chineál seo is féidir leat a úsáid sa dúshlán seo.
+      courseA_collector_loops3_predict1_callout: {}
       courseA_collector_preLoops1_callout:
-        courseA_collector_preLoops1_1: Click here to watch the code run!
+        courseA_collector_preLoops1_1: Cliceáil anseo le féachaint ar an gcód ag rith!
       courseA_collector_preLoops2_callout:
-        courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't
-          worry, we will show you how to use them later in the stage.
+        courseA_collector_loops1_1: An bhfeiceann tú blocanna nua sa mbosca uirlisí?
+          Ná buair do cheann, taispeánfaimid duit an bealach chun iad a úsáid níos
+          déanaí sa chéim seo.
       courseA_collector_preLoops3_callout:
-        courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't
-          worry, we will show you how to use them later in the stage.
+        courseA_collector_loops1_1: An bhfeiceann tú blocanna nua sa mbosca uirlisí?
+          Ná buair do cheann, taispeánfaimid duit an bealach chun iad a úsáid níos
+          déanaí sa chéim seo.
       courseA_collector_preLoops4_callout:
-        courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't
-          worry, we will show you how to use them later in the stage.
+        courseA_collector_loops1_1: An bhfeiceann tú blocanna nua sa mbosca uirlisí?
+          Ná buair do cheann, taispeánfaimid duit an bealach chun iad a úsáid níos
+          déanaí sa chéim seo.
       courseA_collector_preLoops5_callout:
-        courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't
-          worry, we will show you how to use them later in the stage.
+        courseA_collector_loops1_1: An bhfeiceann tú blocanna nua sa mbosca uirlisí?
+          Ná buair do cheann, taispeánfaimid duit an bealach chun iad a úsáid níos
+          déanaí sa chéim seo.
       courseA_collector_preLoops6_callout:
-        courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't
-          worry, we will show you how to use them later in the stage.
-      courseA_forVideoTest_artist_callout: []
+        courseA_collector_loops1_1: An bhfeiceann tú blocanna nua sa mbosca uirlisí?
+          Ná buair do cheann, taispeánfaimid duit an bealach chun iad a úsáid níos
+          déanaí sa chéim seo.
+      courseA_forVideoTest_artist_callout: {}
       courseA_maze_ramp2_2018_callout:
-        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
-          blocks to complete your puzzles.
+        courseC_maze_programming2_1: Seo é an bosca uirlisí, áit a n-aimseoidh tú
+          blocanna breise a chuideoidh leat na dúshláin a chríochnú.
       courseA_maze_ramp2a_2018_callout:
-        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
-          blocks to complete your puzzles.
+        courseC_maze_programming2_1: Seo é an bosca uirlisí, áit a n-aimseoidh tú
+          blocanna breise a chuideoidh leat na dúshláin a chríochnú.
       courseA_maze_ramp3_2018_callout:
-        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
-          them away.
-        stone_block_2: Grey blocks are made of stone and cannot be thrown away.
-      courseA_maze_ramp3a_2018_callout: []
+        courseC_maze_programming3_2: Is féidir leat blocanna breise a tharraingt go
+          dtí an bosca uirlisí le fáil réidh leo.
+        stone_block_2: Tá na blocanna liatha déanta de chloch agus ní féidir leat
+          fáil réidh leo.
+      courseA_maze_ramp3a_2018_callout: {}
       courseA_maze_ramp4_2018_callout:
-        courseC_maze_programming4_1: This is your block limit.  It tells you how many
-          of these blocks you have left to use.
-      courseA_maze_ramp4a_2018_callout: []
-      courseA_maze_ramp5_2018_callout: []
-      courseA_maze_ramp5a_2018_callout: []
+        courseC_maze_programming4_1: Seo é an teorainn blocanna. Insíonn sé duit cé
+          mhéad bloc den chineál seo atá fágtha agat.
+      courseA_maze_ramp4a_2018_callout: {}
+      courseA_maze_ramp5_2018_callout: {}
+      courseA_maze_ramp5a_2018_callout: {}
       courseA_maze_seq1_callout:
-        courseA_maze_seq1_1: Click the lightbulb when you need a hint!
+        courseA_maze_seq1_1: Úsáid an bolgán solais nuair a theastaíonn leid uait!
       courseA_maze_seq1_2018_callout:
-        courseA_maze_seq1_1: Click the lightbulb when you need a hint!
+        courseA_maze_seq1_1: Úsáid an bolgán solais nuair a theastaíonn leid uait!
       courseA_maze_seq2_callout:
-        courseA_maze_seqA_callout1: Use the step button to go step-by-step through
-          the program. This will help you find the bug!
+        courseA_maze_seqA_callout1: Úsáid an cnaipe "céim" chun dul tríd an gcód céim
+          ar chéim. Cuideoidh seo leat fabhtanna a aimsiú!
       courseA_maze_seq2_2018_callout:
-        courseA_maze_seqA_callout1: Use the step button to go step-by-step through
-          the program. This will help you find the bug!
+        courseA_maze_seqA_callout1: Úsáid an cnaipe "céim" chun dul tríd an gcód céim
+          ar chéim. Cuideoidh seo leat fabhtanna a aimsiú!
       courseA_maze_seq4_callout:
-        made_of_stone: These blocks are made of stone.  You can move them, but you
-          can't delete them!
+        made_of_stone: Tá na blocanna seo déanta de chloch. Is féidir leat iad a bhogadh,
+          ach ní féidir iad a scriosadh!
       courseA_maze_seq4_2018_callout:
-        made_of_stone: These blocks are made of stone.  You can move them, but you
-          can't delete them!
-      courseA_maze_seq4a_callout: []
-      courseA_playLab_events2_callout: []
-      courseA_playLab_events2_2018_callout: []
-      courseA_playLab_events3_callout: []
-      courseA_playLab_events3_2018_callout: []
+        made_of_stone: Tá na blocanna seo déanta de chloch. Is féidir leat iad a bhogadh,
+          ach ní féidir iad a scriosadh!
+      courseA_maze_seq4a_callout: {}
+      courseA_playLab_events2_callout: {}
+      courseA_playLab_events2_2018_callout: {}
+      courseA_playLab_events3_callout: {}
+      courseA_playLab_events3_2018_callout: {}
       courseA_playLab_events4_callout:
-        courseA_playlab_events4_callout1: This is a callout
+        courseA_playlab_events4_callout1: Is tagrán é seo
       courseA_playLab_events4_2018_callout:
-        courseA_playlab_events4_callout1: This is a callout
+        courseA_playlab_events4_callout1: Is tagrán é seo
       courseA_playLab_events5_callout:
-        courseA_playLab_events5_1: Click here to change the direction of the event
-          arrow.
+        courseA_playLab_events5_1: Cliceáil anseo chun treo na saighde a athrú.
       courseA_playLab_events5_2018_callout:
-        courseA_playLab_events5_1: Click here to change the direction of the event
-          arrow.
+        courseA_playLab_events5_1: Cliceáil anseo chun treo na saighde a athrú.
       courseA_playLab_events6_callout:
-        courseA_playLab_events6_1: This let's you choose a "random" sound, which means
-          that you don't know what you are going to get until you hear it!
+        courseA_playLab_events6_1: Úsáid é seo le fuaim "randamach" a roghnú, rud
+          a chiallaíonn nach mbeidh a fhios agat cén fhuaim a bhéas ann go dtí go
+          gcloisfidh tú é!
       courseA_playLab_events6_2018_callout:
-        courseA_playLab_events6_1: This let's you choose a "random" sound, which means
-          that you don't know what you are going to get until you hear it!
-      courseA_toMakeLoopsVideo_Collector_callout: []
+        courseA_playLab_events6_1: Úsáid é seo le fuaim "randamach" a roghnú, rud
+          a chiallaíonn nach mbeidh a fhios agat cén fhuaim a bhéas ann go dtí go
+          gcloisfidh tú é!
+      courseA_toMakeLoopsVideo_Collector_callout: {}
       courseB_Scrat_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
-          start your program.
-      courseB_Scrat_ramp2_2018_callout: []
-      courseB_Scrat_ramp3a_2018_callout: []
-      courseB_Scrat_ramp4a_2018_callout: []
-      courseB_Scrat_ramp5a_2018_callout: []
+        grade2_CaringForNewPet_0_1: Tar éis duit na blocanna go léir a cheangal, cliceáil
+          "Rith" chun an clár a thosú.
+      courseB_Scrat_ramp2_2018_callout: {}
+      courseB_Scrat_ramp3a_2018_callout: {}
+      courseB_Scrat_ramp4a_2018_callout: {}
+      courseB_Scrat_ramp5a_2018_callout: {}
       courseB_artist_loops3_callout:
-        courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How
-          will you use it?
+        courseB_artist_loops3_1: Níl ach bloc amháin den sórt seo sa mbosca uirlisí.
+          Cén chaoi a n-úsáidfidh tú é?
       courseB_artist_loops3_2018_callout:
-        courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How
-          will you use it?
+        courseB_artist_loops3_1: Níl ach bloc amháin den sórt seo sa mbosca uirlisí.
+          Cén chaoi a n-úsáidfidh tú é?
       courseB_artist_loops5_callout:
-        courseB_artist_loops5_1: This number means that there are no more of this
-          block left in the toolbox.
+        courseB_artist_loops5_1: Ciallaíonn an uimhir seo nach bhfuil aon bhlocanna
+          den sórt seo fágtha sa mbosca uirlisí.
       courseB_artist_loops5_2018_callout:
-        courseB_artist_loops5_1: This number means that there are no more of this
-          block left in the toolbox.
+        courseB_artist_loops5_1: Ciallaíonn an uimhir seo nach bhfuil aon bhlocanna
+          den sórt seo fágtha sa mbosca uirlisí.
       courseB_collector_loops1_callout:
-        courseB_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't
-          worry, we will show you how to use them later in the stage.
+        courseB_collector_loops1_1: An bhfeiceann tú blocanna nua sa mbosca uirlisí?
+          Ná buair do cheann, taispeánfaimid duit an bealach chun iad a úsáid níos
+          déanaí sa chéim seo.
       courseB_collector_loops1_2018_callout:
-        courseB_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't
-          worry, we will show you how to use them later in the stage.
+        courseB_collector_loops1_1: An bhfeiceann tú blocanna nua sa mbosca uirlisí?
+          Ná buair do cheann, taispeánfaimid duit an bealach chun iad a úsáid níos
+          déanaí sa chéim seo.
       courseB_maze_seq1_callout:
-        courseB_maze_seq1: Click the lightbulb when you need a hint!
+        courseB_maze_seq1: Úsáid an bolgán solais nuair a theastaíonn leid uait!
       courseB_maze_seq1_2018_callout:
-        courseB_maze_seq1: Click the lightbulb when you need a hint!
+        courseB_maze_seq1: Úsáid an bolgán solais nuair a theastaíonn leid uait!
       courseB_maze_seq2_callout:
-        courseB_maze_seq2_callout1: Use the step button to go step-by-step through
-          the program. This will help you find the bug!
+        courseB_maze_seq2_callout1: Úsáid an cnaipe "céim" chun dul tríd an gcód céim
+          ar chéim. Cuideoidh seo leat fabhtanna a aimsiú!
       courseB_maze_seq2_2018_callout:
-        courseB_maze_seq2_callout1: Use the step button to go step-by-step through
-          the program. This will help you find the bug!
+        courseB_maze_seq2_callout1: Úsáid an cnaipe "céim" chun dul tríd an gcód céim
+          ar chéim. Cuideoidh seo leat fabhtanna a aimsiú!
       courseB_maze_seq3_callout:
-        courseB_maze_seq3_1: The grey blocks are made of stone and can't be thrown
-          away.
+        courseB_maze_seq3_1: Tá na blocanna liatha déanta de chloch agus ní féidir
+          leat fáil réidh leo.
       courseB_maze_seq3_2018_callout:
-        courseB_maze_seq3_1: The grey blocks are made of stone and can't be thrown
-          away.
-      courseB_maze_seq7_callout: []
-      courseB_maze_seq7_2018_callout: []
+        courseB_maze_seq3_1: Tá na blocanna liatha déanta de chloch agus ní féidir
+          leat fáil réidh leo.
+      courseB_maze_seq7_callout: {}
+      courseB_maze_seq7_2018_callout: {}
       courseB_playlab_events6_callout:
-        courseB_playlab_events6_a: Use the green drop down arrow to change directions.
+        courseB_playlab_events6_a: Úsáid an tsaighead uaine aníos chun an treo a athrú.
       courseB_playlab_events6_2018_callout:
-        courseB_playlab_events6_a: Use the green drop down arrow to change directions.
+        courseB_playlab_events6_a: Úsáid an tsaighead uaine aníos chun an treo a athrú.
       courseC_PlayLab_events8_callout:
-        courseC_PlayLab_events8_callout1: Use this block for when Waddles and Chomp
-          touch!
+        courseC_PlayLab_events8_callout1: Cuirfear an bloc seo i bhfeidhm nuair a
+          bhuaileann an phiongain agus an dineasár in aghaidh a chéile.
       courseC_PlayLab_events8_2018_callout:
-        courseC_PlayLab_events8_callout1: Use this block for when Waddles and Chomp
-          touch!
+        courseC_PlayLab_events8_callout1: Cuirfear an bloc seo i bhfeidhm nuair a
+          bhuaileann an phiongain agus an dineasár in aghaidh a chéile.
       courseC_PlayLab_events_challenge1_callout:
-        courseC_PlayLab_events_challenge1_1: This block lets you move actors to different
-          parts of the game space.
+        courseC_PlayLab_events_challenge1_1: Is féidir leat an bloc seo a úsáid chun
+          aisteoirí a aistriú timpeall an spáis oibre.
       courseC_PlayLab_events_challenge1_2018_callout:
-        courseC_PlayLab_events_challenge1_1: This block lets you move actors to different
-          parts of the game space.
+        courseC_PlayLab_events_challenge1_1: Is féidir leat an bloc seo a úsáid chun
+          aisteoirí a aistriú timpeall an spáis oibre.
       courseC_artist_loopsPrePre1a_callout:
-        courseC_artist_loopsPrePre1a_1: Start by using this block to get the artist
-          to the center of the screen.
+        courseC_artist_loopsPrePre1a_1: I dtús báire, úsáid an bloc seo chun an t-ealaíontóir
+          a chur i lár an scáileáin.
       courseC_artist_loopsPrePre1a_2018_callout:
-        courseC_artist_loopsPrePre1a_1: Start by using this block to get the artist
-          to the center of the screen.
-      courseC_artist_prog1_callout: []
-      courseC_artist_prog1_2018_callout: []
-      courseC_artist_prog2_callout: []
-      courseC_artist_prog2_2018_callout: []
-      courseC_collector_loops_challenge2_callout: []
-      courseC_collector_loops_challenge2_2018_callout: []
+        courseC_artist_loopsPrePre1a_1: I dtús báire, úsáid an bloc seo chun an t-ealaíontóir
+          a chur i lár an scáileáin.
+      courseC_artist_prog1_callout: {}
+      courseC_artist_prog1_2018_callout: {}
+      courseC_artist_prog2_callout: {}
+      courseC_artist_prog2_2018_callout: {}
+      courseC_collector_loops_challenge2_callout: {}
+      courseC_collector_loops_challenge2_2018_callout: {}
       courseC_collector_prog1_callout:
-        courseC_collector_prog1_1: Do you see some new blocks in the toolbox?  Don't
-          worry, we will show you how to use them later in the stage.
+        courseC_collector_prog1_1: An bhfeiceann tú blocanna nua sa mbosca uirlisí?
+          Ná buair do cheann, taispeánfaimid duit an bealach chun iad a úsáid níos
+          déanaí sa chéim seo.
       courseC_collector_prog1_2018_callout:
-        courseC_collector_prog1_1: Do you see some new blocks in the toolbox?  Don't
-          worry, we will show you how to use them later in the stage.
+        courseC_collector_prog1_1: An bhfeiceann tú blocanna nua sa mbosca uirlisí?
+          Ná buair do cheann, taispeánfaimid duit an bealach chun iad a úsáid níos
+          déanaí sa chéim seo.
       courseC_collector_prog7_callout:
-        courseC_collector_prog7_1: You can take more blocks from the toolbox if you
-          need them!
+        courseC_collector_prog7_1: Is féidir leat tuilleadh blocanna a fháil ón mbosca
+          uirlisí má theastaíonn siad uait!
       courseC_collector_prog7_2018_callout:
-        courseC_collector_prog7_1: You can take more blocks from the toolbox if you
-          need them!
-      courseC_collector_prog8_callout: []
-      courseC_collector_prog8_2018_callout: []
-      courseC_collector_prog9_callout: []
-      courseC_collector_prog9_2018_callout: []
-      courseC_collector_progA_callout: []
-      courseC_collector_progB_callout: []
-      courseC_collector_prog_challenge1_callout: []
-      courseC_collector_prog_challenge1_2018_callout: []
-      courseC_collector_prog_challenge2_callout: []
-      courseC_collector_prog_challenge2_2018_callout: []
+        courseC_collector_prog7_1: Is féidir leat tuilleadh blocanna a fháil ón mbosca
+          uirlisí má theastaíonn siad uait!
+      courseC_collector_prog8_callout: {}
+      courseC_collector_prog8_2018_callout: {}
+      courseC_collector_prog9_callout: {}
+      courseC_collector_prog9_2018_callout: {}
+      courseC_collector_progA_callout: {}
+      courseC_collector_progB_callout: {}
+      courseC_collector_prog_challenge1_callout: {}
+      courseC_collector_prog_challenge1_2018_callout: {}
+      courseC_collector_prog_challenge2_callout: {}
+      courseC_collector_prog_challenge2_2018_callout: {}
       courseC_harvester_loops1_callout:
-        courseC_harvester_loops1_callout1: The number four on the pumpkin tells you
-          that there are four pumpkins available to pick.
+        courseC_harvester_loops1_callout1: Ciallaíonn an uimhir a ceathair ar an bpuimcín
+          go bhfuil ceithre phuimcín ann le baint.
       courseC_harvester_loops1_2018_callout:
-        courseC_harvester_loops1_callout1: The number four on the pumpkin tells you
-          that there are four pumpkins available to pick.
+        courseC_harvester_loops1_callout1: Ciallaíonn an uimhir a ceathair ar an bpuimcín
+          go bhfuil ceithre phuimcín ann le baint.
       courseC_maze_debugging5_callout:
-        courseC_maze_debugging5_1: These blocks are locked and cannot be deleted!
+        courseC_maze_debugging5_1: Ní féidir leat blocanna liatha a scriosadh!
       courseC_maze_debugging5_2018_callout:
-        courseC_maze_debugging5_1: These blocks are locked and cannot be deleted!
+        courseC_maze_debugging5_1: Tá na blocanna seo faoi ghlas agus ní féidir iad
+          a scriosadh!
       courseC_maze_loops2_callout:
-        courseC_maze_loops2_1: You only have one of these blocks available in this
-          puzzle.
-      courseC_maze_loops2_predict1_callout: []
-      courseC_maze_loops_challenge2_callout: []
+        courseC_maze_loops2_1: Níl ach bloc amháin den chineál seo ar fáil sa dúshlán
+          seo.
+      courseC_maze_loops2_predict1_callout: {}
+      courseC_maze_loops_challenge2_callout: {}
       courseC_maze_programming1_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
-          start your program.
+        grade2_CaringForNewPet_0_1: Tar éis duit na blocanna go léir a cheangal, cliceáil
+          "Rith" chun an clár a thosú.
       courseC_maze_programming1_2018_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
-          start your program.
+        grade2_CaringForNewPet_0_1: Tar éis duit na blocanna go léir a cheangal, cliceáil
+          "Rith" chun an clár a thosú.
       courseC_maze_programming2_callout:
-        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
-          blocks to complete your puzzles.
+        courseC_maze_programming2_1: Seo é an bosca uirlisí, áit a n-aimseoidh tú
+          blocanna breise a chuideoidh leat na dúshláin a chríochnú.
       courseC_maze_programming2_2018_callout:
-        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
-          blocks to complete your puzzles.
+        courseC_maze_programming2_1: Seo é an bosca uirlisí, áit a n-aimseoidh tú
+          blocanna breise a chuideoidh leat na dúshláin a chríochnú.
       courseC_maze_programming3_callout:
-        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
-          them away.
-        courseC_maze_programming3_3: These blocks are stone and cannot be thrown away.
+        courseC_maze_programming3_2: Is féidir leat blocanna breise a tharraingt go
+          dtí an bosca uirlisí le fáil réidh leo.
+        courseC_maze_programming3_3: Déanta de chloch na blocanna seo agus ní féidir
+          leat fáil réidh leo.
       courseC_maze_programming3_2018_callout:
-        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
-          them away.
-        courseC_maze_programming3_3: These blocks are stone and cannot be thrown away.
+        courseC_maze_programming3_2: Is féidir leat blocanna breise a tharraingt go
+          dtí an bosca uirlisí le fáil réidh leo.
+        courseC_maze_programming3_3: Déanta de chloch na blocanna seo agus ní féidir
+          leat fáil réidh leo.
       courseC_maze_programming4_callout:
-        courseC_maze_programming4_1: This is your block limit.  It tells you how many
-          of these blocks you have left to use.
+        courseC_maze_programming4_1: Seo é an teorainn blocanna. Insíonn sé duit cé
+          mhéad bloc den chineál seo atá fágtha agat.
       courseC_maze_programming4_2018_callout:
-        courseC_maze_programming4_1: This is your block limit.  It tells you how many
-          of these blocks you have left to use.
-      courseC_maze_programming5_callout: []
-      courseC_maze_programming5_2018_callout: []
+        courseC_maze_programming4_1: Seo é an teorainn blocanna. Insíonn sé duit cé
+          mhéad bloc den chineál seo atá fágtha agat.
+      courseC_maze_programming5_callout: {}
+      courseC_maze_programming5_2018_callout: {}
       courseC_maze_programming7_callout:
-        courseC_maze_programming7_1: This is your first challenge puzzle! These are
-          meant to be hard and may take several tries.
-        courseC_maze_programming7_2: These blocks are made of stone and can't be thrown
-          away.
+        courseC_maze_programming7_1: Seo é an chéad ard-dúshlán! Tá na dúshláin seo
+          níos deacra agus seans go mbeidh ort níos mó ná iarracht amháin a dhéanamh.
+        courseC_maze_programming7_2: Tá na blocanna seo déanta de chloch agus ní féidir
+          leat fáil réidh leo.
       courseC_maze_programming7_2018_callout:
-        courseC_maze_programming7_1: This is your first challenge puzzle! These are
-          meant to be hard and may take several tries.
-        courseC_maze_programming7_2: These blocks are made of stone and can't be thrown
-          away.
-      courseC_starWars_loops10_callout: []
-      courseC_starWars_loops10_2018_callout: []
-      courseC_starWars_loops10_predict2_callout: []
-      courseC_starWars_loops10_predict2_2018_callout: []
-      courseC_starWars_loops11_callout: []
-      courseC_starWars_loops11_2018_callout: []
+        courseC_maze_programming7_1: Seo é an chéad ard-dúshlán! Tá na dúshláin seo
+          níos deacra agus seans go mbeidh ort níos mó ná iarracht amháin a dhéanamh.
+        courseC_maze_programming7_2: Tá na blocanna seo déanta de chloch agus ní féidir
+          leat fáil réidh leo.
+      courseC_starWars_loops10_callout: {}
+      courseC_starWars_loops10_2018_callout: {}
+      courseC_starWars_loops10_predict2_callout: {}
+      courseC_starWars_loops10_predict2_2018_callout: {}
+      courseC_starWars_loops11_callout: {}
+      courseC_starWars_loops11_2018_callout: {}
       courseC_starWars_loops2_callout:
-        courseC_starWars_loops2: You only have one of these blocks available in this
-          puzzle.
+        courseC_starWars_loops2: Níl ach bloc amháin den chineál seo ar fáil sa dúshlán
+          seo.
       courseC_starWars_loops2_2018_callout:
-        courseC_starWars_loops2: You only have one of these blocks available in this
-          puzzle.
-      courseC_starWars_loops4_callout: []
-      courseC_starWars_loops4_2018_callout: []
-      courseC_starWars_loops5_callout: []
-      courseC_starWars_loops5_2018_callout: []
-      courseC_starWars_loops6_callout: []
-      courseC_starWars_loops6_2018_callout: []
-      courseC_starWars_loops7_callout: []
-      courseC_starWars_loops7_2018_callout: []
-      courseC_starWars_loops8_callout: []
-      courseC_starWars_loops8_2018_callout: []
-      courseC_starWars_loops9_callout: []
-      courseC_starWars_loops9_2018_callout: []
+        courseC_starWars_loops2: Níl ach bloc amháin den chineál seo ar fáil sa dúshlán
+          seo.
+      courseC_starWars_loops4_callout: {}
+      courseC_starWars_loops4_2018_callout: {}
+      courseC_starWars_loops5_callout: {}
+      courseC_starWars_loops5_2018_callout: {}
+      courseC_starWars_loops6_callout: {}
+      courseC_starWars_loops6_2018_callout: {}
+      courseC_starWars_loops7_callout: {}
+      courseC_starWars_loops7_2018_callout: {}
+      courseC_starWars_loops8_callout: {}
+      courseC_starWars_loops8_2018_callout: {}
+      courseC_starWars_loops9_callout: {}
+      courseC_starWars_loops9_2018_callout: {}
       courseD_artist_functions2_callout:
-        courseD_artist_functions2_1: When this green block runs, all of the code in
-          the function will run. What should the artist do after drawing the first
-          square?
+        courseD_artist_functions2_1: Nuair a ritheann an bloc uaine seo, ritheann
+          an cód go léir laistigh den fheidhm. Cad ba chóir don ealaíontóir a dhéanamh
+          tar éis dó an chéad chearnóg a tharraingt?
       courseD_artist_functions8_callout:
-        courseD_artist_functions8_1: Your blocks to create functions have been moved
-          under this label in the toolbox.
+        courseD_artist_functions8_1: Cuireadh na blocanna a chruthaíonn feidhmeanna
+          faoin lipéad seo sa mbosca uirlisí.
       courseD_artist_nestedLoops1a_callout:
-        courseD_artist_nestedLoops1a_1: You don't have to use colors to get this puzzle
-          right. If you want to, this `random color` block makes it easy!
+        courseD_artist_nestedLoops1a_1: Ní gá dathanna a úsáid chun an dúshlán seo
+          a chríochnú. Ach tá sé éasca leis an mbloc "dath randamach"!
       courseD_artist_nestedLoops1a_2018_callout:
-        courseD_artist_nestedLoops1a_1: You don't have to use colors to get this puzzle
-          right. If you want to, this `random color` block makes it easy!
-      courseD_artist_nestedLoops_challenge2_callout: []
-      courseD_artist_nestedLoops_challenge2_2018_callout: []
+        courseD_artist_nestedLoops1a_1: Ní gá dathanna a úsáid chun an dúshlán seo
+          a chríochnú. Ach tá sé éasca leis an mbloc "dath randamach"!
+      courseD_artist_nestedLoops_challenge2_callout: {}
+      courseD_artist_nestedLoops_challenge2_2018_callout: {}
       courseD_artist_ramp11_callout:
-        courseD_artist_ramp11_1: You can change this number.
-        courseD_artist_ramp11_2: Click here to type in the number of times to repeat
-          your code.
-      courseD_artist_ramp12_callout: []
+        courseD_artist_ramp11_1: Is féidir leat an uimhir seo a athrú.
+        courseD_artist_ramp11_2: Cliceáil anseo chun an líon uaireanta ba mhaith leat
+          an cód a athdhéanamh a chur isteach.
+      courseD_artist_ramp12_callout: {}
       courseD_bee_conditionals2_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
-          You don't have to check for honeycombs at all.
-        4_5_Bee_Conditionals_2_2: Need help?  Click here for a VIDEO hint!
+        4_5_Bee_Conditionals_2_1: Ba chóir duit GACH scamall a iniúchadh le féachaint
+          an bhfuil BLÁTH ann. Ní gá duit cíora meala a lorg ar chor ar bith.
+        4_5_Bee_Conditionals_2_2: An bhfuil cúnamh uait? Cliceáil anseo chun leid
+          FÍSE a fháil!
       courseD_bee_conditionals2_2018_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
-          You don't have to check for honeycombs at all.
-        4_5_Bee_Conditionals_2_2: Need help?  Click here for a VIDEO hint!
+        4_5_Bee_Conditionals_2_1: Ba chóir duit GACH scamall a iniúchadh le féachaint
+          an bhfuil BLÁTH ann. Ní gá duit cíora meala a lorg ar chor ar bith.
+        4_5_Bee_Conditionals_2_2: An bhfuil cúnamh uait? Cliceáil anseo chun leid
+          FÍSE a fháil!
       courseD_bee_conditionals2_test_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
-          You don't have to check for honeycombs at all.
-        4_5_Bee_Conditionals_2_2: Need a little help?  Click here to see our new VIDEO
-          HINTS!
+        4_5_Bee_Conditionals_2_1: Ba chóir duit GACH scamall a iniúchadh le féachaint
+          an bhfuil BLÁTH ann. Ní gá duit cíora meala a lorg ar chor ar bith.
+        4_5_Bee_Conditionals_2_2: An bhfuil cúnamh uait? Cliceáil anseo chun na leideanna
+          úrnua FÍSE a fheiceáil!
       courseD_bee_conditionals_challenge2_callout:
-        courseD_bee_conditionals_challenge2_1: Use this loop to collect all of the
-          nectar (or honey) from one flower (or honeycomb).
+        courseD_bee_conditionals_challenge2_1: Úsáid an lúb seo chun an neachtar (nó
+          mil) go léir a bhailiú ó bhláth (nó cíor mheala) amháin.
       courseD_bee_conditionals_challenge2_2018_callout:
-        courseD_bee_conditionals_challenge2_1: Use this loop to collect all of the
-          nectar (or honey) from one flower (or honeycomb).
+        courseD_bee_conditionals_challenge2_1: Úsáid an lúb seo chun an neachtar (nó
+          mil) go léir a bhailiú ó bhláth (nó cíor mheala) amháin.
       courseD_bee_conditionals_challenge3_callout:
-        courseD_bee_conditionals_challenge3_1: Try repeating the move forward block
-          using this loop.
+        courseD_bee_conditionals_challenge3_1: Úsáid an lúb seo chun an bloc "téigh
+          ar aghaidh" a athdhéanamh.
       courseD_bee_debugging_challenge1_callout:
-        courseD_bee_debugging_challenge1_callout1: Use this command to move the bee
-          backward.
+        courseD_bee_debugging_challenge1_callout1: Úsáid an t-ordú seo chun an beach
+          a aistriú ar gcúl.
       courseD_bee_debugging_challenge1_2018_callout:
-        courseD_bee_debugging_challenge1_callout1: Use this command to move the bee
-          backward.
+        courseD_bee_debugging_challenge1_callout1: Úsáid an t-ordú seo chun an beach
+          a aistriú ar gcúl.
       courseD_bee_debugging_challenge1a_callout:
-        courseD_bee_debugging_challenge1_callout1: Use this command to move the bee
-          backward.
+        courseD_bee_debugging_challenge1_callout1: Úsáid an t-ordú seo chun an beach
+          a aistriú ar gcúl.
       courseD_bee_debugging_challenge2_callout:
-        courseD_bee_debugging_challenge1_callout1: Use this command to move the bee
-          backward.
-      courseD_bee_nested_loops_challenge1_callout: []
-      courseD_bee_nested_loops_challenge2_callout: []
-      courseD_collector_debugging_challenge2_callout: []
-      courseD_collector_debugging_challenge2_2018_callout: []
-      courseD_collector_nested_loops_challenge2_callout: []
-      courseD_collector_nested_loops_challenge2_2018_callout: []
-      courseD_collector_nested_loops_challenge2a_callout: []
-      courseD_collector_ramp10_callout: []
+        courseD_bee_debugging_challenge1_callout1: Úsáid an t-ordú seo chun an beach
+          a aistriú ar gcúl.
+      courseD_bee_nested_loops_challenge1_callout: {}
+      courseD_bee_nested_loops_challenge2_callout: {}
+      courseD_collector_debugging_challenge2_callout: {}
+      courseD_collector_debugging_challenge2_2018_callout: {}
+      courseD_collector_nested_loops_challenge2_callout: {}
+      courseD_collector_nested_loops_challenge2_2018_callout: {}
+      courseD_collector_nested_loops_challenge2a_callout: {}
+      courseD_collector_ramp10_callout: {}
       courseD_collector_ramp8_callout:
-        courseD_collector_ramp8_1: 'Use this block to collect a single piece of treasure.  '
-      courseD_collector_ramp9_callout: []
-      courseD_collector_until_challenge1_callout: []
-      courseD_farmer_until_challenge2_callout: []
-      courseD_farmer_until_challenge2_2018_callout: []
-      courseD_harvester_nested_loops_challenge1-broken_callout: []
-      courseD_maze_loops_challenge1_callout: []
+        courseD_collector_ramp8_1: 'Úsáid an bloc seo chun píosa maoine amháin a bhailiú.  '
+      courseD_collector_ramp9_callout: {}
+      courseD_collector_until_challenge1_callout: {}
+      courseD_farmer_until_challenge2_callout: {}
+      courseD_farmer_until_challenge2_2018_callout: {}
+      courseD_harvester_nested_loops_challenge1-broken_callout: {}
+      courseD_maze_loops_challenge1_callout: {}
       courseD_maze_ramp1_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
-          start your program.
+        grade2_CaringForNewPet_0_1: Tar éis duit na blocanna go léir a cheangal, cliceáil
+          "Rith" chun an clár a thosú.
       courseD_maze_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
-          start your program.
+        grade2_CaringForNewPet_0_1: Tar éis duit na blocanna go léir a cheangal, cliceáil
+          "Rith" chun an clár a thosú.
       courseD_maze_ramp2_callout:
-        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
-          blocks to complete your puzzles.
+        courseC_maze_programming2_1: Seo é an bosca uirlisí, áit a n-aimseoidh tú
+          blocanna breise a chuideoidh leat na dúshláin a chríochnú.
       courseD_maze_ramp2_2018_callout:
-        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
-          blocks to complete your puzzles.
+        courseC_maze_programming2_1: Seo é an bosca uirlisí, áit a n-aimseoidh tú
+          blocanna breise a chuideoidh leat na dúshláin a chríochnú.
       courseD_maze_ramp3_callout:
-        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
-          them away.
-        stone_block_2: Grey blocks are made of stone and cannot be thrown away.
+        courseC_maze_programming3_2: Is féidir leat blocanna breise a tharraingt go
+          dtí an bosca uirlisí le fáil réidh leo.
+        stone_block_2: Tá na blocanna liatha déanta de chloch agus ní féidir leat
+          fáil réidh leo.
       courseD_maze_ramp3_2018_callout:
-        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
-          them away.
-        stone_block_2: Grey blocks are made of stone and cannot be thrown away.
+        courseC_maze_programming3_2: Is féidir leat blocanna breise a tharraingt go
+          dtí an bosca uirlisí le fáil réidh leo.
+        stone_block_2: Tá na blocanna liatha déanta de chloch agus ní féidir leat
+          fáil réidh leo.
       courseD_maze_ramp4_callout:
-        courseC_maze_programming4_1: This is your block limit.  It tells you how many
-          of these blocks you have left to use.
+        courseC_maze_programming4_1: Seo é an teorainn blocanna. Insíonn sé duit cé
+          mhéad bloc den chineál seo atá fágtha agat.
       courseD_maze_ramp4_2018_callout:
-        courseC_maze_programming4_1: This is your block limit.  It tells you how many
-          of these blocks you have left to use.
-      courseD_maze_ramp5_callout: []
-      courseD_maze_ramp5_2018_callout: []
-      courseD_maze_ramp5a_callout: []
-      courseD_maze_ramp5a_2018_callout: []
-      courseD_maze_ramp5b_callout: []
-      courseD_maze_ramp5b_2018_callout: []
-      courseD_maze_ramp5c_callout: []
-      courseD_maze_ramp5c_2018_callout: []
-      courseD_maze_ramp5d_callout: []
-      courseD_maze_ramp5d_2018_callout: []
+        courseC_maze_programming4_1: Seo é an teorainn blocanna. Insíonn sé duit cé
+          mhéad bloc den chineál seo atá fágtha agat.
+      courseD_maze_ramp5_callout: {}
+      courseD_maze_ramp5_2018_callout: {}
+      courseD_maze_ramp5a_callout: {}
+      courseD_maze_ramp5a_2018_callout: {}
+      courseD_maze_ramp5b_callout: {}
+      courseD_maze_ramp5b_2018_callout: {}
+      courseD_maze_ramp5c_callout: {}
+      courseD_maze_ramp5c_2018_callout: {}
+      courseD_maze_ramp5d_callout: {}
+      courseD_maze_ramp5d_2018_callout: {}
       courseD_maze_ramp6_callout:
-        courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times
-          as you tell it to, then continue to run the rest of the program.
+        courseD_maze_ramp6_1: Athdhéanfar aon chód a chuireann tú isteach anseo an
+          líon uaireanta a shonraíonn tú, agus tar éis sin leanfar ar aghaidh leis
+          an gcuid eile den chlár.
       courseD_maze_ramp6a_callout:
-        courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times
-          as you tell it to, then continue to run the rest of the program.
-      courseD_maze_ramp7_callout: []
+        courseD_maze_ramp6_1: Athdhéanfar aon chód a chuireann tú isteach anseo an
+          líon uaireanta a shonraíonn tú, agus tar éis sin leanfar ar aghaidh leis
+          an gcuid eile den chlár.
+      courseD_maze_ramp7_callout: {}
       courseD_playLab_condFP_callout:
-        courseD_playLab_condFP_1: we have organized the blocks into categories to
-          give you more code to play with!  Click here to see where everything went.
+        courseD_playLab_condFP_1: táimid tar éis na blocanna a leagan amach ina gcatagóirí
+          chun tuilleadh spáis a thabhairt don chód! Cliceáil anseo le féachaint cá
+          bhfuil na blocanna go léir anois.
       courseD_playLab_condFP_2018_callout:
-        courseD_playLab_condFP_1: we have organized the blocks into categories to
-          give you more code to play with!  Click here to see where everything went.
-      courseD_scrat_predict1_callout: []
-      courseD_scrat_predict1_2018_callout: []
+        courseD_playLab_condFP_1: táimid tar éis na blocanna a leagan amach ina gcatagóirí
+          chun tuilleadh spáis a thabhairt don chód! Cliceáil anseo le féachaint cá
+          bhfuil na blocanna go léir anois.
+      courseD_playLab_condFP_a_callout:
+        courseD_playLab_condFP_1: táimid tar éis na blocanna a leagan amach ina gcatagóirí
+          chun tuilleadh spáis a thabhairt don chód! Cliceáil anseo le féachaint cá
+          bhfuil na blocanna go léir anois.
+      courseD_playLab_condForVideo_callout:
+        courseD_playLab_condFP_1: táimid tar éis na blocanna a leagan amach ina gcatagóirí
+          chun tuilleadh spáis a thabhairt don chód! Cliceáil anseo le féachaint cá
+          bhfuil na blocanna go léir anois.
+      courseD_scrat_predict1_callout: {}
+      courseD_scrat_predict1_2018_callout: {}
       courseD_scrat_ramp1_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
-          start your program.
+        grade2_CaringForNewPet_0_1: Tar éis duit na blocanna go léir a cheangal, cliceáil
+          "Rith" chun an clár a thosú.
       courseD_scrat_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
-          start your program.
+        grade2_CaringForNewPet_0_1: Tar éis duit na blocanna go léir a cheangal, cliceáil
+          "Rith" chun an clár a thosú.
       courseD_scrat_ramp2_callout:
-        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
-          blocks to complete your puzzles.
+        courseC_maze_programming2_1: Seo é an bosca uirlisí, áit a n-aimseoidh tú
+          blocanna breise a chuideoidh leat na dúshláin a chríochnú.
       courseD_scrat_ramp2_2018_callout:
-        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
-          blocks to complete your puzzles.
+        courseC_maze_programming2_1: Seo é an bosca uirlisí, áit a n-aimseoidh tú
+          blocanna breise a chuideoidh leat na dúshláin a chríochnú.
       courseD_scrat_ramp3_callout:
-        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
-          them away.
+        courseC_maze_programming3_2: Is féidir leat blocanna breise a tharraingt go
+          dtí an bosca uirlisí le fáil réidh leo.
       courseD_scrat_ramp3_2018_callout:
-        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
-          them away.
+        courseC_maze_programming3_2: Is féidir leat blocanna breise a tharraingt go
+          dtí an bosca uirlisí le fáil réidh leo.
       courseD_scrat_ramp4_callout:
-        courseC_maze_programming4_1: This is your block limit.  It tells you how many
-          of these blocks you have left to use.
+        courseC_maze_programming4_1: Seo é an teorainn blocanna. Insíonn sé duit cé
+          mhéad bloc den chineál seo atá fágtha agat.
       courseD_scrat_ramp4_2018_callout:
-        courseC_maze_programming4_1: This is your block limit.  It tells you how many
-          of these blocks you have left to use.
-      courseD_scrat_ramp5_callout: []
-      courseD_scrat_ramp5_2018_callout: []
+        courseC_maze_programming4_1: Seo é an teorainn blocanna. Insíonn sé duit cé
+          mhéad bloc den chineál seo atá fágtha agat.
+      courseD_scrat_ramp5_callout: {}
+      courseD_scrat_ramp5_2018_callout: {}
       courseD_scrat_ramp6_callout:
-        courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times
-          as you tell it to, then continue to run the rest of the program.
+        courseD_maze_ramp6_1: Athdhéanfar aon chód a chuireann tú isteach anseo an
+          líon uaireanta a shonraíonn tú, agus tar éis sin leanfar ar aghaidh leis
+          an gcuid eile den chlár.
       courseD_scrat_ramp6_2018_callout:
-        courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times
-          as you tell it to, then continue to run the rest of the program.
+        courseD_maze_ramp6_1: Athdhéanfar aon chód a chuireann tú isteach anseo an
+          líon uaireanta a shonraíonn tú, agus tar éis sin leanfar ar aghaidh leis
+          an gcuid eile den chlár.
       courseD_scrat_ramp7_callout:
-        courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times
-          as you tell it to, then continue to run the rest of the program.
+        courseD_maze_ramp6_1: Athdhéanfar aon chód a chuireann tú isteach anseo an
+          líon uaireanta a shonraíonn tú, agus tar éis sin leanfar ar aghaidh leis
+          an gcuid eile den chlár.
       courseD_scrat_ramp7_2018_callout:
-        courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times
-          as you tell it to, then continue to run the rest of the program.
+        courseD_maze_ramp6_1: Athdhéanfar aon chód a chuireann tú isteach anseo an
+          líon uaireanta a shonraíonn tú, agus tar éis sin leanfar ar aghaidh leis
+          an gcuid eile den chlár.
       courseD_scrat_ramp8_callout:
-        courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant
-          to be hard and may take several tries.
+        courseD_maze_ramp7_1: Seo é an chéad ard-dúshlán! Tá na dúshláin seo níos
+          deacra agus seans go mbeidh ort níos mó ná iarracht amháin a dhéanamh.
       courseD_scrat_ramp8_2018_callout:
-        courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant
-          to be hard and may take several tries.
-      courseE_artist_concept_challenge2_callout: []
-      courseE_artist_concept_challenge2_2018_callout: []
-      courseE_artist_embed_functions8_callout: []
+        courseD_maze_ramp7_1: Seo é an chéad ard-dúshlán! Tá na dúshláin seo níos
+          deacra agus seans go mbeidh ort níos mó ná iarracht amháin a dhéanamh.
+      courseE_artist_concept_challenge2_callout: {}
+      courseE_artist_concept_challenge2_2018_callout: {}
+      courseE_artist_embed_functions8_callout: {}
       courseE_artist_functions1_callout:
-        courseD_artist_functions1_1: Let's start by using this block to help create
-          the first square.
+        courseD_artist_functions1_1: I dtús báire, úsáid an bloc seo chun cabhrú leat
+          an chéad chearnóg a chruthú.
       courseE_artist_functions1_2018_callout:
-        courseD_artist_functions1_1: Let's start by using this block to help create
-          the first square.
+        courseD_artist_functions1_1: I dtús báire, úsáid an bloc seo chun cabhrú leat
+          an chéad chearnóg a chruthú.
       courseE_artist_functions2_callout:
-        courseD_artist_functions2_1: When this green block runs, all of the code in
-          the function will run. What should the artist do after drawing the first
-          square?
+        courseD_artist_functions2_1: Nuair a ritheann an bloc uaine seo, ritheann
+          an cód go léir laistigh den fheidhm. Cad ba chóir don ealaíontóir a dhéanamh
+          tar éis dó an chéad chearnóg a tharraingt?
       courseE_artist_functions2_2018_callout:
-        courseD_artist_functions2_1: When this green block runs, all of the code in
-          the function will run. What should the artist do after drawing the first
-          square?
+        courseD_artist_functions2_1: Nuair a ritheann an bloc uaine seo, ritheann
+          an cód go léir laistigh den fheidhm. Cad ba chóir don ealaíontóir a dhéanamh
+          tar éis dó an chéad chearnóg a tharraingt?
       courseE_artist_functions8_callout:
-        courseD_artist_functions8_1: Your blocks to create functions have been moved
-          under this label in the toolbox.
-      courseE_artist_functions8_2018_callout:
-        courseD_artist_functions8_1: Your blocks to create functions have been moved
-          under this label in the toolbox.
+        courseD_artist_functions8_1: Cuireadh na blocanna a chruthaíonn feidhmeanna
+          faoin lipéad seo sa mbosca uirlisí.
+      courseE_artist_functions8_2018_callout: {}
+      courseE_artist_functions8a_2018_callout:
+        courseD_artist_functions8_1: Cuireadh na blocanna a chruthaíonn feidhmeanna
+          faoin lipéad seo sa mbosca uirlisí.
+      courseE_artist_functions8b_2018_callout: {}
+      courseE_artist_functions8c_2018_callout: {}
       courseE_artist_functions_challenge_callout:
-        courseE_artist_functions_challenge_callout1: Keep this program going by adding
-          more code to the bottom.
-        courseE_artist_functions_challenge_callout2: If you don't like this design,
-          change it to anything you want!
+        courseE_artist_functions_challenge_callout1: Coinnigh an clár seo ag dul trí
+          thuilleadh cóid a chur leis.
+        courseE_artist_functions_challenge_callout2: Mura dtaitníonn an dearadh seo
+          leat, athraigh é ar do rogha bealach!
       courseE_artist_functions_challenge1_callout:
-        courseE_artist_functions_challenge1_callout1: Keep this program going by adding
-          more code to the bottom.
-        courseE_artist_functions_challenge1_callout2: If you don't like this design,
-          change it to anything you want!
+        courseE_artist_functions_challenge1_callout1: Coinnigh an clár seo ag dul
+          trí thuilleadh cóid a chur leis.
+        courseE_artist_functions_challenge1_callout2: Mura dtaitníonn an dearadh seo
+          leat, athraigh é ar do rogha bealach!
       courseE_artist_functions_challenge1_2018_callout:
-        courseE_artist_functions_challenge1_callout1: Keep this program going by adding
-          more code to the bottom.
-        courseE_artist_functions_challenge1_callout2: If you don't like this design,
-          change it to anything you want!
+        courseE_artist_functions_challenge1_callout1: Coinnigh an clár seo ag dul
+          trí thuilleadh cóid a chur leis.
+        courseE_artist_functions_challenge1_callout2: Mura dtaitníonn an dearadh seo
+          leat, athraigh é ar do rogha bealach!
       courseE_artist_functions_challenge2_callout:
-        courseE_artist_functions_challenge2_callout1: Keep this program going by adding
-          more code to the bottom.
-        courseE_artist_functions_challenge2_callout2: If you don't like this design,
-          change it to anything you want!
+        courseE_artist_functions_challenge2_callout1: Coinnigh an clár seo ag dul
+          trí thuilleadh cóid a chur leis.
+        courseE_artist_functions_challenge2_callout2: Mura dtaitníonn an dearadh seo
+          leat, athraigh é ar do rogha bealach!
       courseE_artist_functions_challenge2_2018_callout:
-        courseE_artist_functions_challenge2_callout1: Keep this program going by adding
-          more code to the bottom.
-        courseE_artist_functions_challenge2_callout2: If you don't like this design,
-          change it to anything you want!
-      courseE_artist_functions_predict1_callout: []
-      courseE_artist_functions_predict1_2018_callout: []
-      courseE_artist_predict1_callout: []
-      courseE_artist_predict1_2018_callout: []
-      courseE_artist_ramp10_callout: []
+        courseE_artist_functions_challenge2_callout1: Coinnigh an clár seo ag dul
+          trí thuilleadh cóid a chur leis.
+        courseE_artist_functions_challenge2_callout2: Mura dtaitníonn an dearadh seo
+          leat, athraigh é ar do rogha bealach!
+      courseE_artist_functions_predict1_callout: {}
+      courseE_artist_functions_predict1_2018_callout: {}
+      courseE_artist_predict1_callout: {}
+      courseE_artist_predict1_2018_callout: {}
+      courseE_artist_ramp10_callout: {}
       courseE_artist_ramp11_callout:
-        courseD_artist_ramp11_1: You can change this number.
-        courseD_artist_ramp11_2: Click here to type in the number of times to repeat
-          your code.
-      courseE_artist_ramp12_callout: []
+        courseD_artist_ramp11_1: Is féidir leat an uimhir seo a athrú.
+        courseD_artist_ramp11_2: Cliceáil anseo chun an líon uaireanta ba mhaith leat
+          an cód a athdhéanamh a chur isteach.
+      courseE_artist_ramp12_callout: {}
       courseE_artist_ramp8_callout:
-        courseE_artist_ramp8_1: You can change this number.
-        courseE_artist_ramp8_2: Click here to type in the number of times to repeat
-          your code.
+        courseE_artist_ramp8_1: Is féidir leat an uimhir seo a athrú.
+        courseE_artist_ramp8_2: Cliceáil anseo chun an líon uaireanta ba mhaith leat
+          an cód a athdhéanamh a chur isteach.
       courseE_artist_ramp8_2_callout:
-        courseE_artist_ramp8_1: You can change this number.
-        courseE_artist_ramp8_2: Click here to type in the number of times to repeat
-          your code.
+        courseE_artist_ramp8_1: Is féidir leat an uimhir seo a athrú.
+        courseE_artist_ramp8_2: Cliceáil anseo chun an líon uaireanta ba mhaith leat
+          an cód a athdhéanamh a chur isteach.
       courseE_artist_ramp8_2018_callout:
-        courseE_artist_ramp8_1: You can change this number.
-        courseE_artist_ramp8_2: Click here to type in the number of times to repeat
-          your code.
+        courseE_artist_ramp8_1: Is féidir leat an uimhir seo a athrú.
+        courseE_artist_ramp8_2: Cliceáil anseo chun an líon uaireanta ba mhaith leat
+          an cód a athdhéanamh a chur isteach.
       courseE_artist_ramp8_2_2018_callout:
-        courseE_artist_ramp8_1: You can change this number.
-        courseE_artist_ramp8_2: Click here to type in the number of times to repeat
-          your code.
-      courseE_artist_ramp9_callout: []
-      courseE_artist_ramp9_2_callout: []
-      courseE_artist_ramp9_2018_callout: []
-      courseE_artist_ramp9_2_2018_callout: []
-      courseE_collector_ramp10_callout: []
+        courseE_artist_ramp8_1: Is féidir leat an uimhir seo a athrú.
+        courseE_artist_ramp8_2: Cliceáil anseo chun an líon uaireanta ba mhaith leat
+          an cód a athdhéanamh a chur isteach.
+      courseE_artist_ramp9_callout: {}
+      courseE_artist_ramp9_2_callout: {}
+      courseE_artist_ramp9_2018_callout: {}
+      courseE_artist_ramp9_2_2018_callout: {}
+      courseE_collector_ramp10_callout: {}
       courseE_collector_ramp8_callout:
-        courseD_collector_ramp8_1: 'Use this block to collect a single piece of treasure.  '
-      courseE_collector_ramp9_callout: []
+        courseD_collector_ramp8_1: 'Úsáid an bloc seo chun píosa maoine amháin a bhailiú.  '
+      courseE_collector_ramp9_callout: {}
       courseE_farmer_functions1_callout:
-        courseE_farmer_functions1_2: The toolbox is organized a little differently
-          this time! Click on the different categories to see which blocks you have.
-      courseE_farmer_functions10b_callout: []
-      courseE_farmer_functions10b_2018_callout: []
-      courseE_farmer_functions11_predict_callout: []
-      courseE_farmer_functions11_predict_2018_callout: []
+        courseE_farmer_functions1_2: Tá leagan amach nua ar an mbosca uirlisí an uair
+          seo! Cliceáil ar na catagóirí éagsúla le féachaint na blocanna atá agat.
+      courseE_farmer_functions10a1_2018_callout: {}
+      courseE_farmer_functions10b_callout: {}
+      courseE_farmer_functions10b_2018_callout: {}
+      courseE_farmer_functions11_predict_callout: {}
+      courseE_farmer_functions11_predict_2018_callout: {}
+      courseE_farmer_functions13_2018_callout:
+        courseE_farmer_functions1a_1: Glasra anaithnid. Athraíonn sé gach uair a ritheann
+          tú an clár.
       courseE_farmer_functions1_2018_callout:
         courseE_farmer_functions1_2: The toolbox is organized a little differently
           this time! Click on the different categories to see which blocks you have.
       courseE_farmer_functions1a_callout:
-        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
-          you run the program.
+        courseE_farmer_functions1a_1: Glasra anaithnid. Athraíonn sé gach uair a ritheann
+          tú an clár.
       courseE_farmer_functions1a_2018_callout:
-        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
-          you run the program.
+        courseE_farmer_functions1a_1: Glasra anaithnid. Athraíonn sé gach uair a ritheann
+          tú an clár.
       courseE_farmer_functions2a_callout:
-        courseE_farmer_functions2a_2: This code might not look exactly like what you
-          wrote, but it will get the job done!
+        courseE_farmer_functions2a_2: B'fhéidir nach mar an gcéanna an cód seo agus
+          an cód a scríobh tú, ach déanfaidh sé cúis!
       courseE_farmer_functions2aALT_callout:
-        courseE_farmer_functions2a_2: This code might not look exactly like what you
-          wrote, but it will get the job done!
+        courseE_farmer_functions2a_2: B'fhéidir nach mar an gcéanna an cód seo agus
+          an cód a scríobh tú, ach déanfaidh sé cúis!
       courseE_farmer_functions2b_callout:
-        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
-          you run the program.
+        courseE_farmer_functions1a_1: Glasra anaithnid. Athraíonn sé gach uair a ritheann
+          tú an clár.
       courseE_farmer_functions2b_2018_callout:
-        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
-          you run the program.
-      courseE_farmer_functions2ba_callout: []
-      courseE_farmer_functions2ba_2018_callout: []
+        courseE_farmer_functions1a_1: Glasra anaithnid. Athraíonn sé gach uair a ritheann
+          tú an clár.
+      courseE_farmer_functions2ba_callout: {}
+      courseE_farmer_functions2ba_2018_callout: {}
       courseE_farmer_functions3b_callout:
-        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
-          you run the program.
-      courseE_farmer_functions3c_callout: []
-      courseE_farmer_functions3c_2018_callout: []
-      courseE_farmer_functions4b_callout: []
-      courseE_farmer_functions4b_2018_callout: []
-      courseE_farmer_functions5b_callout: []
-      courseE_farmer_functions5c_callout: []
-      courseE_farmer_functions5c_2018_callout: []
-      courseE_farmer_functions6b_callout: []
-      courseE_farmer_functions6c_callout: []
-      courseE_farmer_functions6c_2018_callout: []
-      courseE_farmer_functions7b_callout: []
-      courseE_farmer_functions7b_2018_callout: []
-      courseE_farmer_functions8b_callout: []
-      courseE_farmer_functions8b_2018_callout: []
-      courseE_farmer_functions9b_callout: []
-      courseE_farmer_functions9b_2018_callout: []
-      courseE_farmer_functions9b_clone_callout: []
-      courseE_maze_predict1_callout: []
-      courseE_maze_predict1_2018_callout: []
+        courseE_farmer_functions1a_1: Glasra anaithnid. Athraíonn sé gach uair a ritheann
+          tú an clár.
+      courseE_farmer_functions3c_callout: {}
+      courseE_farmer_functions3c1_2018_callout: {}
+      courseE_farmer_functions3c_2018_callout: {}
+      courseE_farmer_functions4b_callout: {}
+      courseE_farmer_functions4b_2018_callout: {}
+      courseE_farmer_functions5b_callout: {}
+      courseE_farmer_functions5c_callout: {}
+      courseE_farmer_functions5c_2018_callout: {}
+      courseE_farmer_functions6b_callout: {}
+      courseE_farmer_functions6c_callout: {}
+      courseE_farmer_functions6c_2018_callout: {}
+      courseE_farmer_functions7a1_2018_callout: {}
+      courseE_farmer_functions7b_callout: {}
+      courseE_farmer_functions7b_2018_callout: {}
+      courseE_farmer_functions8a1_2018_callout: {}
+      courseE_farmer_functions8b_callout: {}
+      courseE_farmer_functions8b_2018_callout: {}
+      courseE_farmer_functions9a1_2018_callout: {}
+      courseE_farmer_functions9b_callout: {}
+      courseE_farmer_functions9b_2018_callout: {}
+      courseE_farmer_functions9b_clone_callout: {}
+      courseE_maze_predict1_callout: {}
+      courseE_maze_predict1_2018_callout: {}
       courseE_maze_ramp1_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
-          start your program.
-      courseE_maze_ramp13_callout: []
+        grade2_CaringForNewPet_0_1: Tar éis duit na blocanna go léir a cheangal, cliceáil
+          "Rith" chun an clár a thosú.
+      courseE_maze_ramp13_callout: {}
       courseE_maze_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
-          start your program.
+        grade2_CaringForNewPet_0_1: Tar éis duit na blocanna go léir a cheangal, cliceáil
+          "Rith" chun an clár a thosú.
       courseE_maze_ramp2_callout:
-        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
-          blocks to complete your puzzles.
+        courseC_maze_programming2_1: Seo é an bosca uirlisí, áit a n-aimseoidh tú
+          blocanna breise a chuideoidh leat na dúshláin a chríochnú.
       courseE_maze_ramp2_2018_callout:
-        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
-          blocks to complete your puzzles.
+        courseC_maze_programming2_1: Seo é an bosca uirlisí, áit a n-aimseoidh tú
+          blocanna breise a chuideoidh leat na dúshláin a chríochnú.
       courseE_maze_ramp3_callout:
-        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
-          them away.
+        courseC_maze_programming3_2: Is féidir leat blocanna breise a tharraingt go
+          dtí an bosca uirlisí le fáil réidh leo.
       courseE_maze_ramp3_2018_callout:
-        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
-          them away.
+        courseC_maze_programming3_2: Is féidir leat blocanna breise a tharraingt go
+          dtí an bosca uirlisí le fáil réidh leo.
       courseE_maze_ramp4_callout:
-        courseC_maze_programming4_1: This is your block limit.  It tells you how many
-          of these blocks you have left to use.
+        courseC_maze_programming4_1: Seo é an teorainn blocanna. Insíonn sé duit cé
+          mhéad bloc den chineál seo atá fágtha agat.
       courseE_maze_ramp4_2018_callout:
-        courseC_maze_programming4_1: This is your block limit.  It tells you how many
-          of these blocks you have left to use.
-      courseE_maze_ramp5_callout: []
-      courseE_maze_ramp5_2018_callout: []
+        courseC_maze_programming4_1: Seo é an teorainn blocanna. Insíonn sé duit cé
+          mhéad bloc den chineál seo atá fágtha agat.
+      courseE_maze_ramp5_callout: {}
+      courseE_maze_ramp5_2018_callout: {}
       courseE_maze_ramp6_callout:
-        courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times
-          as you tell it to, then continue to run the rest of the program.
+        courseD_maze_ramp6_1: Athdhéanfar aon chód a chuireann tú isteach anseo an
+          líon uaireanta a shonraíonn tú, agus tar éis sin leanfar ar aghaidh leis
+          an gcuid eile den chlár.
       courseE_maze_ramp6_2018_callout:
-        courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times
-          as you tell it to, then continue to run the rest of the program.
+        courseD_maze_ramp6_1: Athdhéanfar aon chód a chuireann tú isteach anseo an
+          líon uaireanta a shonraíonn tú, agus tar éis sin leanfar ar aghaidh leis
+          an gcuid eile den chlár.
       courseE_maze_ramp7_callout:
-        courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant
-          to be hard and may take several tries.
+        courseD_maze_ramp7_1: Seo é an chéad ard-dúshlán! Tá na dúshláin seo níos
+          deacra agus seans go mbeidh ort níos mó ná iarracht amháin a dhéanamh.
       courseE_maze_ramp7_2018_callout:
-        courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant
-          to be hard and may take several tries.
-      courseE_maze_ramp_predict1_callout: []
-      courseE_multi_maze_ramp5_callout: []
+        courseD_maze_ramp7_1: Seo é an chéad ard-dúshlán! Tá na dúshláin seo níos
+          deacra agus seans go mbeidh ort níos mó ná iarracht amháin a dhéanamh.
+      courseE_maze_ramp_predict1_callout: {}
+      courseE_multi_maze_ramp5_callout: {}
       courseE_playLab_challenge1_callout:
-        courseC_PlayLab_events_challenge1_1: This block lets you move actors to different
-          parts of the game space.
+        courseC_PlayLab_events_challenge1_1: Is féidir leat an bloc seo a úsáid chun
+          aisteoirí a aistriú timpeall an spáis oibre.
       courseE_playLab_challenge1_2018_callout:
-        courseC_PlayLab_events_challenge1_1: This block lets you move actors to different
-          parts of the game space.
+        courseC_PlayLab_events_challenge1_1: Is féidir leat an bloc seo a úsáid chun
+          aisteoirí a aistriú timpeall an spáis oibre.
       courseE_playLab_scaffold3_callout:
-        courseE_playLab_scaffold3_1: Get the actor to this flag to move on to the
-          next level.
+        courseE_playLab_scaffold3_1: Treoraigh an t-aisteoir don bhratach seo chun
+          dul ar aghaidh go dtí an chéad leibhéal eile.
       courseE_playLab_scaffold3_2018_callout:
-        courseE_playLab_scaffold3_1: Get the actor to this flag to move on to the
-          next level.
+        courseE_playLab_scaffold3_1: Treoraigh an t-aisteoir don bhratach seo chun
+          dul ar aghaidh go dtí an chéad leibhéal eile.
       courseF_IceAge_1_callout:
-        playlab_drag_say_a: Drag the `actor 1 say` block here and type "Hello!"
-      courseF_IceAge_10_callout: []
-      courseF_IceAge_11_callout: []
+        playlab_drag_say_a: Tarraing an bloc "deir aisteoir 1" anseo agus cuir "Dia
+          dhuit!" isteach ann
+      courseF_IceAge_10_callout: {}
+      courseF_IceAge_11_callout: {}
       courseF_IceAge_2_callout:
         playlab_use_twice: ''
-      courseF_IceAge_3_callout: []
+      courseF_IceAge_3_callout: {}
       courseF_IceAge_4_callout:
         playlab_play_sound: ''
       courseF_IceAge_5_callout:
         playlab_add_move: ''
-      courseF_IceAge_6_callout: []
+      courseF_IceAge_6_callout: {}
       courseF_IceAge_7_callout:
         arrows_move_actor: ''
       courseF_IceAge_8_callout:
         playlab_add_score: ''
       courseF_IceAge_9_callout:
-        playlab_add_blocks_1: Add blocks here
+        playlab_add_blocks_1: Cuir blocanna anseo
       courseF_IceAge_template_callout:
         arrows_move_actor: ''
-      courseF_artist_embed_variables9_callout: []
+      courseF_artist_embed_variables9_callout: {}
       courseF_artist_for1_callout:
-        courseF_artist_for1_1: The toolbox is in "category" mode to make more room
-          for your code.  The `for` loops live in here.
+        courseF_artist_for1_1: Tá an bosca uirlisí sa mód "catagóirí" chun tuilleadh
+          spáis a thabhairt don chód. Gheobhaidh tú na lúba "do gach" anseo.
       courseF_artist_for1_2018_callout:
-        courseF_artist_for1_1: The toolbox is in "category" mode to make more room
-          for your code.  The `for` loops live in here.
-      courseF_artist_for4_callout: []
-      courseF_artist_for4_2018_callout: []
+        courseF_artist_for1_1: Tá an bosca uirlisí sa mód "catagóirí" chun tuilleadh
+          spáis a thabhairt don chód. Gheobhaidh tú na lúba "do gach" anseo.
+      courseF_artist_for4_callout: {}
+      courseF_artist_for4_2018_callout: {}
       courseF_artist_fwp1_callout:
-        courseF_artist_fwp1_1: Click the "edit" button to change the code inside the
-          function.
+        courseF_artist_fwp1_1: Cliceáil an cnaipe "eagar" chun an cód laistigh den
+          fheidhm a athrú.
       courseF_artist_fwp1_2018_callout:
-        courseF_artist_fwp1_1: Click the "edit" button to change the code inside the
-          function.
+        courseF_artist_fwp1_1: Cliceáil an cnaipe "eagar" chun an cód laistigh den
+          fheidhm a athrú.
       courseF_artist_fwp4_callout:
-        courseF_artist_fwp4_1: To complete your polygon, make sure you are always
-          turning by 360 ÷ `sides` degrees.
+        courseF_artist_fwp4_1: Chun an polagán a chur i gcrích, deimhnigh go bhfuil
+          tú ag casadh 360 ÷ `taobhanna` céim.
       courseF_artist_fwp4_2018_callout:
-        courseF_artist_fwp4_1: To complete your polygon, make sure you are always
-          turning by 360 ÷ `sides` degrees.
+        courseF_artist_fwp4_1: Chun an polagán a chur i gcrích, deimhnigh go bhfuil
+          tú ag casadh 360 ÷ `taobhanna` céim.
       courseF_artist_fwp5_callout:
-        courseF_artist_fwp5_1: You will find the polygon function in here.
+        courseF_artist_fwp5_1: Gheobhaidh tú an fheidhm "polagán" anseo.
       courseF_artist_fwp5_2018_callout:
-        courseF_artist_fwp5_1: You will find the polygon function in here.
-      courseF_artist_predict1_callout: []
-      courseF_artist_ramp10_callout: []
+        courseF_artist_fwp5_1: Gheobhaidh tú an fheidhm "polagán" anseo.
+      courseF_artist_predict1_callout: {}
+      courseF_artist_predict1_2018_callout: {}
+      courseF_artist_ramp10_callout: {}
+      courseF_artist_ramp10_2018_callout: {}
       courseF_artist_ramp8_callout:
-        courseE_artist_ramp8_1: You can change this number.
-        courseE_artist_ramp8_2: Click here to type in the number of times to repeat
-          your code.
-      courseF_artist_ramp9_callout: []
+        courseE_artist_ramp8_1: Is féidir leat an uimhir seo a athrú.
+        courseE_artist_ramp8_2: Cliceáil anseo chun an líon uaireanta ba mhaith leat
+          an cód a athdhéanamh a chur isteach.
+      courseF_artist_ramp8_2018_callout:
+        courseE_artist_ramp8_1: Is féidir leat an uimhir seo a athrú.
+        courseE_artist_ramp8_2: Cliceáil anseo chun an líon uaireanta ba mhaith leat
+          an cód a athdhéanamh a chur isteach.
+      courseF_artist_ramp9_callout: {}
+      courseF_artist_ramp9_2018_callout: {}
       courseF_artist_variables1_callout:
-        courseF_artist_variables1_1: Notice that blocks now have a new way to enter
-          numbers. These `math` blocks can be pulled out and moved around!
-      courseF_artist_variables10_callout: []
-      courseF_artist_variables10_2018_callout: []
-      courseF_artist_variables2_callout: []
-      courseF_artist_variables2_2018_callout: []
+        courseF_artist_variables1_1: Tabhair faoi deara go bhfuil bealach nua ann
+          uimhreacha a chur isteach i mblocanna. Is féidir leat na blocanna 'mata'
+          seo a tharraingt amach agus a bhogadh thart!
+      courseF_artist_variables10_callout: {}
+      courseF_artist_variables10_2018_callout: {}
+      courseF_artist_variables2_callout: {}
+      courseF_artist_variables2_2018_callout: {}
       courseF_artist_variables3_callout:
-        courseF_artist_variables3_a: Use this to set the value of the variable `length`
+        courseF_artist_variables3_a: Úsáid é seo chun luach na hathróige "fad" a shocrú
       courseF_artist_variables3_2018_callout:
-        courseF_artist_variables3_a: Use this to set the value of the variable `length`
-      courseF_artist_variables3a_predict1_callout: []
-      courseF_artist_variables3a_predict1_2018_callout: []
-      courseF_artist_variables4_callout: []
-      courseF_artist_variables4_2018_callout: []
-      courseF_artist_variables5_callout: []
-      courseF_artist_variables5_2018_callout: []
+        courseF_artist_variables3_a: Úsáid é seo chun luach na hathróige "fad" a shocrú
+      courseF_artist_variables3a_predict1_callout: {}
+      courseF_artist_variables3a_predict1_2018_callout: {}
+      courseF_artist_variables4_callout: {}
+      courseF_artist_variables4_2018_callout: {}
+      courseF_artist_variables5_callout: {}
+      courseF_artist_variables5_2018_callout: {}
       courseF_artist_variables6_callout:
-        courseF_artist_variables6_1: Variables can be helpful when you have to change
-          a lot of copies of the same number.
+        courseF_artist_variables6_1: Is mór an cúnamh iad athróga nuair is gá go leor
+          cóipeanna den uimhir chéanna a athrú.
       courseF_artist_variables6_2018_callout:
-        courseF_artist_variables6_1: Variables can be helpful when you have to change
-          a lot of copies of the same number.
+        courseF_artist_variables6_1: Is mór an cúnamh iad athróga nuair is gá go leor
+          cóipeanna den uimhir chéanna a athrú.
       courseF_artist_variables6a_callout:
-        courseF_artist_variables6a_1: Variables can be helpful when you have to change
-          a lot of copies of the same number.
+        courseF_artist_variables6a_1: Is mór an cúnamh iad athróga nuair is gá go
+          leor cóipeanna den uimhir chéanna a athrú.
       courseF_artist_variables6a_2018_callout:
-        courseF_artist_variables6a_1: Variables can be helpful when you have to change
-          a lot of copies of the same number.
-      courseF_artist_variables7_callout: []
-      courseF_artist_variables7_2018_callout: []
-      courseF_artist_variables8_callout: []
-      courseF_artist_variables8_2018_callout: []
-      courseF_artist_variables9_callout: []
-      courseF_artist_variables9_2018_callout: []
-      courseF_artist_variablesFP_callout: []
-      courseF_artist_variablesFP_2018_callout: []
-      courseF_artist_variables_10_callout: []
-      courseF_artist_variables_2_callout: []
+        courseF_artist_variables6a_1: Is mór an cúnamh iad athróga nuair is gá go
+          leor cóipeanna den uimhir chéanna a athrú.
+      courseF_artist_variables7_callout: {}
+      courseF_artist_variables7_2018_callout: {}
+      courseF_artist_variables8_callout: {}
+      courseF_artist_variables8_2018_callout: {}
+      courseF_artist_variables9_callout: {}
+      courseF_artist_variables9_2018_callout: {}
+      courseF_artist_variablesFP_callout: {}
+      courseF_artist_variablesFP_2018_callout: {}
+      courseF_artist_variables_10_callout: {}
+      courseF_artist_variables_2_callout: {}
       courseF_artist_variables_3_callout:
-        courseF_artist_variables_3_a: Use this to set the value of the variable `length`
-      courseF_artist_variables_4_callout: []
-      courseF_artist_variables_5_callout: []
+        courseF_artist_variables_3_a: Úsáid é seo chun luach na hathróige "fad" a
+          shocrú
+      courseF_artist_variables_4_callout: {}
+      courseF_artist_variables_5_callout: {}
       courseF_artist_variables_6_callout:
-        courseF_artist_variables_6_1: Variables can be helpful when you have to change
-          a lot of copies of the same number.
+        courseF_artist_variables_6_1: Is mór an cúnamh iad athróga nuair is gá go
+          leor cóipeanna den uimhir chéanna a athrú.
       courseF_artist_variables_6a_callout:
-        courseF_artist_variables6a_1: Variables can be helpful when you have to change
-          a lot of copies of the same number.
-      courseF_artist_variables_7_callout: []
-      courseF_artist_variables_8_callout: []
-      courseF_artist_variables_9_callout: []
-      courseF_artist_variables_FP_callout: []
-      courseF_artist_variables_template_callout: []
-      courseF_artist_variables_template_2018_callout: []
-      courseF_artistembed_variables9_callout: []
+        courseF_artist_variables6a_1: Is mór an cúnamh iad athróga nuair is gá go
+          leor cóipeanna den uimhir chéanna a athrú.
+      courseF_artist_variables_7_callout: {}
+      courseF_artist_variables_8_callout: {}
+      courseF_artist_variables_9_callout: {}
+      courseF_artist_variables_FP_callout: {}
+      courseF_artist_variables_template_callout: {}
+      courseF_artist_variables_template_2018_callout: {}
+      courseF_artistembed_variables9_callout: {}
       courseF_bee_conditionals2_callout:
-        courseF_bee_conditionals2_2: The toolbox is now in category mode.  All of
-          the blocks you need are beneath these labels!
+        courseF_bee_conditionals2_2: Tá an bosca uirlisí sa mód "catagóirí" anois.
+          Gheobhaidh tú gach bloc a theastaíonn uait faoi na lipéid seo!
       courseF_bee_conditionals2_2018_callout:
-        courseF_bee_conditionals2_2: The toolbox is now in category mode.  All of
-          the blocks you need are beneath these labels!
+        courseF_bee_conditionals2_2: Tá an bosca uirlisí sa mód "catagóirí" anois.
+          Gheobhaidh tú gach bloc a theastaíonn uait faoi na lipéid seo!
       courseF_bee_conditionals5_callout:
-        courseF_bee_conditionals5_1: Use this block when the length of the path changes
-          (as in the sides of the rectangle!)
+        courseF_bee_conditionals5_1: Úsáid an bloc seo nuair a athraíonn fad an chosáin
+          (is é sin taobhanna na dronuilleoige!)
       courseF_bee_conditionals5_2018_callout:
-        courseF_bee_conditionals5_1: Use this block when the length of the path changes
-          (as in the sides of the rectangle!)
+        courseF_bee_conditionals5_1: Úsáid an bloc seo nuair a athraíonn fad an chosáin
+          (is é sin taobhanna na dronuilleoige!)
       courseF_bee_for3_callout:
-        courseF_bee_for3_1: The `for` loop is so wide that we have changed the toolbox
-          into category mode to save space.  You will find the new `for` loop in here!
-      courseF_bee_for3_predict1_callout: []
-      courseF_bee_for3_predict1_2018_callout: []
+        courseF_bee_for3_1: Tá an lúb 'do gach' chomh leathan sin anois gur chuireamar
+          an bosca uirlisí sa mhód catagóirí chun spás a spáráil. Aimseoidh tú an
+          lúb nua 'do gach' anseo!
+      courseF_bee_for3_predict1_callout: {}
+      courseF_bee_for3_predict1_2018_callout: {}
       courseF_bee_for4_callout:
-        courseF_bee_for4_1: You will find the `for` loop in here!
+        courseF_bee_for4_1: Gheobhaidh tú an lúb "do gach" anseo!
       courseF_bee_for4_2018_callout:
-        courseF_bee_for4_1: You will find the `for` loop in here!
-      courseF_bee_for6_callout: []
-      courseF_bee_for6_2018_callout: []
+        courseF_bee_for4_1: Gheobhaidh tú an lúb "do gach" anseo!
+      courseF_bee_for6_callout: {}
+      courseF_bee_for6_2018_callout: {}
       courseF_bee_for9_callout:
-        courseF_bee_for9_1: You will find the `math` block in here.
+        courseF_bee_for9_1: Gheobhaidh tú an bloc 'mata' anseo.
       courseF_bee_for9_2018_callout:
-        courseF_bee_for9_1: You will find the `math` block in here.
-      courseF_bee_for_challenge1_callout: []
-      courseF_bee_for_challenge1_2018_callout: []
+        courseF_bee_for9_1: Gheobhaidh tú an bloc 'mata' anseo.
+      courseF_bee_for_challenge1_callout: {}
+      courseF_bee_for_challenge1_2018_callout: {}
       courseF_bee_functions2_callout:
-        courseF_bee_functions2_1: This block calls a function.  Click this "edit"
-          button to see what is inside!
+        courseF_bee_functions2_1: Glaonn an bloc seo feidhm. Cliceáil an cnaipe "eagar"
+          le féachaint céard atá laistigh di!
       courseF_bee_functions2_2018_callout:
-        courseF_bee_functions2_1: This block calls a function.  Click this "edit"
-          button to see what is inside!
+        courseF_bee_functions2_1: Glaonn an bloc seo feidhm. Cliceáil an cnaipe "eagar"
+          le féachaint céard atá laistigh di!
       courseF_bee_functions6_callout:
-        courseF_bee_functions6_1: Don't forget to look in here for more blocks that
-          might help make this easier!
+        courseF_bee_functions6_1: Ná déan dearmad féachaint anseo le lorg níos mó
+          blocanna a chabhródh leat é seo a dhéanamh!
       courseF_bee_functions6_2018_callout:
-        courseF_bee_functions6_1: Don't forget to look in here for more blocks that
-          might help make this easier!
+        courseF_bee_functions6_1: Ná déan dearmad féachaint anseo le lorg níos mó
+          blocanna a chabhródh leat é seo a dhéanamh!
+      courseF_bee_functions_1_2018_callout:
+        courseF_bee_functions_1_2018_1: Aimseoidh tú do chuid athróg anseo!
+      courseF_bee_functions_2_2018_callout: {}
+      courseF_bee_functions_3_2018_callout: {}
       courseF_bee_functions_challenge1_callout:
-        courseF_bee_functions_challenge1_1: What code should you put in this function?
-        courseF_bee_functions_challenge1_2: The "check nectar or honey" function can
-          be used here if edit it to make honey multiple times.
+        courseF_bee_functions_challenge1_1: Cén cód ba chóir duit a chur san fheidhm
+          seo?
+        courseF_bee_functions_challenge1_2: Is féidir leat an fheidhm "seiceáil neachtar
+          nó mil" a úsáid anseo má chuireann tú in eagar í chun mil a dhéanamh go
+          leor uaireanta.
       courseF_bee_functions_challenge1_2018_callout:
-        courseF_bee_functions_challenge1_1: What code should you put in this function?
-        courseF_bee_functions_challenge1_2: The "check nectar or honey" function can
-          be used here if edit it to make honey multiple times.
-      courseF_bee_functions_challenge2_callout: []
-      courseF_bee_functions_challenge2_2018_callout: []
+        courseF_bee_functions_challenge1_1: Cén cód ba chóir duit a chur san fheidhm
+          seo?
+        courseF_bee_functions_challenge1_2: Is féidir leat an fheidhm "seiceáil neachtar
+          nó mil" a úsáid anseo má chuireann tú in eagar í chun mil a dhéanamh go
+          leor uaireanta.
+      courseF_bee_functions_challenge2_callout: {}
+      courseF_bee_functions_challenge2_2018_callout: {}
       courseF_bee_fwp1_callout:
-        courseF_bee_fwp1_1: You can find `if` statements in here.
+        courseF_bee_fwp1_1: Gheobhaidh tú blocanna "má" anseo.
       courseF_bee_fwp1_2018_callout:
-        courseF_bee_fwp1_1: You can find `if` statements in here.
+        courseF_bee_fwp1_1: Gheobhaidh tú blocanna "má" anseo.
       courseF_bee_fwp2_callout:
-        courseF_bee_fwp2_a: The block that calls your function lives in here.
+        courseF_bee_fwp2_a: Gheobhaidh tú an bloc a ghlaonn an fheidhm anseo.
       courseF_bee_fwp2_2018_callout:
-        courseF_bee_fwp2_a: The block that calls your function lives in here.
+        courseF_bee_fwp2_a: Gheobhaidh tú an bloc a ghlaonn an fheidhm anseo.
       courseF_bee_fwp3_callout:
-        courseF_bee_fwp3_1: This same function can be used when checking for empty
-          spaces as well as clouds.
+        courseF_bee_fwp3_1: Is féidir leat an fheidhm chéanna a úsáid chun spás folamh
+          a lorg, chomh maith le néalta.
       courseF_bee_fwp3_2018_callout:
-        courseF_bee_fwp3_1: This same function can be used when checking for empty
-          spaces as well as clouds.
+        courseF_bee_fwp3_1: Is féidir leat an fheidhm chéanna a úsáid chun spás folamh
+          a lorg, chomh maith le néalta.
       courseF_bee_fwp4_callout:
-        courseF_bee_fwp4_1: Press the "edit" button to add a parameter to this function.
+        courseF_bee_fwp4_1: Cliceáil an cnaipe "eagar" chun paraiméadar a chur leis
+          an bhfeidhm seo.
       courseF_bee_fwp4_2018_callout:
-        courseF_bee_fwp4_1: Press the "edit" button to add a parameter to this function.
+        courseF_bee_fwp4_1: Cliceáil an cnaipe "eagar" chun paraiméadar a chur leis
+          an bhfeidhm seo.
       courseF_bee_fwp_challenge2_callout:
-        courseF_bee_fwp_challenge2_callout1: This function will do a good job with
-          corn, but what about the other vegetables?
+        courseF_bee_fwp_challenge2_callout1: Déanann an fheidhm seo jab maith le harbhar,
+          ach cad faoi ghlasraí eile?
       courseF_bee_fwp_challenge2_2018_callout:
-        courseF_bee_fwp_challenge2_callout1: This function will do a good job with
-          corn, but what about the other vegetables?
-      courseF_maze_predict1_callout: []
+        courseF_bee_fwp_challenge2_callout1: Déanann an fheidhm seo jab maith le harbhar,
+          ach cad faoi ghlasraí eile?
+      courseF_bee_variables_1_2018_callout:
+        courseF_bee_functions_1_2018_1: Aimseoidh tú do chuid athróg anseo!
+      courseF_bee_variables_2_2018_callout: {}
+      courseF_bee_variables_3_2018_callout: {}
+      courseF_bee_variables_4_2018_callout: {}
+      courseF_bee_variables_5_2018_callout: {}
+      courseF_bee_variables_6_2018_callout: {}
+      courseF_bee_variables_7_2018_callout: {}
+      courseF_bee_variables_8_2018_callout: {}
+      courseF_maze_predict1_callout: {}
       courseF_maze_ramp1_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
-          start your program.
-      courseF_maze_ramp13_callout: []
+        grade2_CaringForNewPet_0_1: Tar éis duit na blocanna go léir a cheangal, cliceáil
+          "Rith" chun an clár a thosú.
+      courseF_maze_ramp13_callout: {}
       courseF_maze_ramp15_callout:
-        courseF_maze_ramp7_1: This is your first challenge puzzle! These are meant
-          to be hard and may take several tries.
+        courseF_maze_ramp7_1: Seo é an chéad ard-dúshlán! Tá na dúshláin seo níos
+          deacra agus seans go mbeidh ort níos mó ná iarracht amháin a dhéanamh.
+      courseF_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: Tar éis duit na blocanna go léir a cheangal, cliceáil
+          "Rith" chun an clár a thosú.
       courseF_maze_ramp2_callout:
-        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
-          blocks to complete your puzzles.
+        courseC_maze_programming2_1: Seo é an bosca uirlisí, áit a n-aimseoidh tú
+          blocanna breise a chuideoidh leat na dúshláin a chríochnú.
+      courseF_maze_ramp2_2018_callout:
+        courseC_maze_programming2_1: Seo é an bosca uirlisí, áit a n-aimseoidh tú
+          blocanna breise a chuideoidh leat na dúshláin a chríochnú.
       courseF_maze_ramp4_callout:
-        courseC_maze_programming4_1: This is your block limit.  It tells you how many
-          of these blocks you have left to use.
-      courseF_maze_ramp5_callout: []
+        courseC_maze_programming4_1: Seo é an teorainn blocanna. Insíonn sé duit cé
+          mhéad bloc den chineál seo atá fágtha agat.
+      courseF_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: Seo é an teorainn blocanna. Insíonn sé duit cé
+          mhéad bloc den chineál seo atá fágtha agat.
+      courseF_maze_ramp5_callout: {}
+      courseF_maze_ramp5_2018_callout: {}
       courseF_maze_ramp6_callout:
-        courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times
-          as you tell it to, then continue to run the rest of the program.
+        courseD_maze_ramp6_1: Athdhéanfar aon chód a chuireann tú isteach anseo an
+          líon uaireanta a shonraíonn tú, agus tar éis sin leanfar ar aghaidh leis
+          an gcuid eile den chlár.
+      courseF_maze_ramp6_2018_callout:
+        courseD_maze_ramp6_1: Athdhéanfar aon chód a chuireann tú isteach anseo an
+          líon uaireanta a shonraíonn tú, agus tar éis sin leanfar ar aghaidh leis
+          an gcuid eile den chlár.
       courseF_maze_ramp7_callout:
-        courseF_maze_ramp7_1: This is your first challenge puzzle! These are meant
-          to be hard and may take several tries.
+        courseF_maze_ramp7_1: Seo é an chéad ard-dúshlán! Tá na dúshláin seo níos
+          deacra agus seans go mbeidh ort níos mó ná iarracht amháin a dhéanamh.
       courseF_playLab_func2_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
-      courseF_playlab_embed_vars_callout: []
+        New Play Lab Project_callout1: Cliceáil na catagóirí chun na blocanna sa mbosca
+          uirlisí a fheiceáil! Tarraing blocanna go dtí an spás oibre chun iad a chur
+          leis an gclár
+        New Play Lab Project_callout2: Cliceáil "Rith" chun do chód a shábháil agus
+          a rith
+        sign_in_to_save_project: Ar mhaith leat teacht ar do thogra ar ball? Logáil
+          isteach chun an cód seo a shábháil i do chuntas!
+      courseF_playlab_embed_vars_callout: {}
       courseF_playlab_variables1a_callout:
-        courseF_playlab_variables1a_1: The toolbox has been organized into categories
-          to make it easier to find the blocks you need.
+        courseF_playlab_variables1a_1: Táimid tar éis an bosca uirlisí a leagan amach
+          i gcatagóirí sa chaoi go mbeidh sé níos éasca teacht ar na blocanna a theastaíonn
+          uait.
       courseF_playlab_variables1a_2018_callout:
-        courseF_playlab_variables1a_1: The toolbox has been organized into categories
-          to make it easier to find the blocks you need.
+        courseF_playlab_variables1a_1: Táimid tar éis an bosca uirlisí a leagan amach
+          i gcatagóirí sa chaoi go mbeidh sé níos éasca teacht ar na blocanna a theastaíonn
+          uait.
       courseF_playlab_variables2_callout:
-        course_playlab_variables2_1: This is how you set the value of your variable.  Change
-          the text connected to this block to change what is being held in your variable.
-      courseF_playlab_variables2a_callout: []
-      courseF_playlab_variables3_callout: []
-      courseF_playlab_variables4_callout: []
-      courseF_playlab_variables5_callout: []
+        course_playlab_variables2_1: Seo an chaoi a socraíonn tú luach na hathróige.
+          Athraigh an téacs ceangailte leis an mbloc seo chun ábhar na hathróige a
+          athrú.
+      courseF_playlab_variables2a_callout: {}
+      courseF_playlab_variables3_callout: {}
+      courseF_playlab_variables4_callout: {}
+      courseF_playlab_variables5_callout: {}
       courseF_playlab_variables5c RYAN Copy_callout:
-        courseF_playlab_variables5c_1: You will find your variable block in here.
+        courseF_playlab_variables5c_1: Aimseoidh tú an bloc athróige anseo.
       courseF_playlab_variables5c_callout:
-        courseF_playlab_variables5c_1: You will find your variable block in here.
+        courseF_playlab_variables5c_1: Aimseoidh tú an bloc athróige anseo.
       courseF_playlab_variables5c_2018_callout:
-        courseF_playlab_variables5c_1: You will find your variable block in here.
+        courseF_playlab_variables5c_1: Aimseoidh tú an bloc athróige anseo.
       courseF_playlab_variables6c_callout:
-        courseF_playlab_variables5c_1: You will find your variable block in here.
+        courseF_playlab_variables5c_1: Aimseoidh tú an bloc athróige anseo.
       courseF_playlab_variables6c_2018_callout:
-        courseF_playlab_variables5c_1: You will find your variable block in here.
+        courseF_playlab_variables5c_1: Aimseoidh tú an bloc athróige anseo.
       courseF_playlab_variables7c_callout:
-        courseF_playlab_variables7c_1: Find the `ask` block here!
+        courseF_playlab_variables7c_1: Gheobhaidh tú an bloc "fiafraigh" anseo!
       courseF_playlab_variables7c_2018_callout:
-        courseF_playlab_variables7c_1: Find the `ask` block here!
-      courseF_playlab_variables8c_callout: []
-      courseF_playlab_variables8c_2018_callout: []
+        courseF_playlab_variables7c_1: Gheobhaidh tú an bloc "fiafraigh" anseo!
+      courseF_playlab_variables8c_callout: {}
+      courseF_playlab_variables8c_2018_callout: {}
       courseF_playlab_variablesTemplate_callout:
-        courseF_playlab_variables5c_1: You will find your variable block in here.
+        courseF_playlab_variables5c_1: Aimseoidh tú an bloc athróige anseo.
       courseF_playlab_variablesTemplate_2018_callout:
-        courseF_playlab_variables5c_1: You will find your variable block in here.
+        courseF_playlab_variables5c_1: Aimseoidh tú an bloc athróige anseo.
       course_playlab_variables2_callout:
-        course_playlab_variables2_1: This is how you set the value of your variable.  Change
-          the text connected to this block to change what is being held in your variable.
+        course_playlab_variables2_1: Seo an chaoi a socraíonn tú luach na hathróige.
+          Athraigh an téacs ceangailte leis an mbloc seo chun ábhar na hathróige a
+          athrú.
       course_playlab_variables3_callout:
-        course_playlab_variables3_1: This is how you set the value of your variable.
+        course_playlab_variables3_1: Seo an chaoi a socraíonn tú luach na hathróige.
       coursea_maze_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
-          start your program.
+        grade2_CaringForNewPet_0_1: Tar éis duit na blocanna go léir a cheangal, cliceáil
+          "Rith" chun an clár a thosú.
       coursef_maze_ramp3_callout:
-        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
-          them away.
-      drawings!_callout: []
+        courseC_maze_programming3_2: Is féidir leat blocanna breise a tharraingt go
+          dtí an bosca uirlisí le fáil réidh leo.
+      coursef_maze_ramp3_2018_callout:
+        courseC_maze_programming3_2: Is féidir leat blocanna breise a tharraingt go
+          dtí an bosca uirlisí le fáil réidh leo.
+      drawings!_callout: {}
       frozen circle function with parameter_callout:
         frozen_circle_function_with_parameter_circle: Úsáid an bloc "cruthaigh ciorcal"
           agus athraigh an mhéid.
@@ -1923,7 +2068,7 @@
         snowflake_dropdown: Úsáid an roghchlár anuas seo chun calóga sneachta éagsúla
           a chruthú!
       frozen line_callout:
-        run: Hit "Run" to try your program!
+        run: Cliceáil "Rith" chun triail a bhaint as!
         move_elsa_forward: Tarraing bloc "téigh ar aghaidh" agus ceangail leis an
           mbloc "nuair a ritear é" é chun Elsa a chur ar aghaidh
       frozen perpendicular_callout:
@@ -1940,47 +2085,47 @@
       frozen square snowflake_callout:
         replace_questions: Úsáid an roghchlár anuas chun uimhir a chur in áit "???"
       grade1_artist_loops2_callout:
-        grade1_artist_loops2_1: There is only one of these blocks in the toolbox.  How
-          will you use it?
+        grade1_artist_loops2_1: Níl ach bloc amháin den sórt seo sa mbosca uirlisí.
+          Cén chaoi a n-úsáidfidh tú é?
       grade1_maze_sequence6_callout:
-        grade1_maze_sequence6_1: These grey blocks are made of stone!  That means
-          that they can't be trashed.
+        grade1_maze_sequence6_1: Tá na blocanna liatha déanta de chloch! Ciallaíonn
+          seo nach féidir leat iad a scriosadh.
       grade2_CaringForNewPet_0_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
-          start your program.
+        grade2_CaringForNewPet_0_1: Tar éis duit na blocanna go léir a cheangal, cliceáil
+          "Rith" chun an clár a thosú.
       grade2_CaringForNewPet_1_callout:
-        grade2_CaringForNewPet_1_1: This is the toolbox. It’s where you’ll find extra
-          blocks to complete your puzzles.
+        grade2_CaringForNewPet_1_1: Seo é an bosca uirlisí, áit a n-aimseoidh tú blocanna
+          breise a chuideoidh leat na dúshláin a chríochnú.
       grade2_CaringForNewPet_2_callout:
         grade2_CaringForNewPet_2_1: Throw this extra block away so it doesn't cause
           problems.
-        grade2_CaringForNewPet_2_2: You can drag extra blocks to the toolbox to throw
-          them away.
+        grade2_CaringForNewPet_2_2: Is féidir leat blocanna breise a tharraingt go
+          dtí an bosca uirlisí le fáil réidh leo.
       grade2_CaringForNewPet_2courseC_maze_programming3_callout:
-        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
-          them away.
+        courseC_maze_programming3_2: Is féidir leat blocanna breise a tharraingt go
+          dtí an bosca uirlisí le fáil réidh leo.
       grade2_CaringForNewPet_3_callout:
-        grade2_CaringForNewPet_3_1: This is your block limit.  It tells you how many
-          of these blocks you have left to use.
-      grade2_CaringForNewPet_3D_callout: []
+        grade2_CaringForNewPet_3_1: Seo é an teorainn blocanna. Insíonn sé duit cé
+          mhéad bloc den chineál seo atá fágtha agat.
+      grade2_CaringForNewPet_3D_callout: {}
       grade2_CaringForNewPet_7D_callout:
         grade2_CaringForNewPet_7D: This is your first challenge puzzle! These are
           meant to be harder and may take several tries.
-      grade2_MakeDogTag_1_callout: []
-      grade2_MakeDogTag_BFP_callout: []
-      grade2_collector_10_callout: []
-      grade2_collector_10_2018_callout: []
+      grade2_MakeDogTag_1_callout: {}
+      grade2_MakeDogTag_BFP_callout: {}
+      grade2_collector_10_callout: {}
+      grade2_collector_10_2018_callout: {}
       grade2_collector_7_callout:
-        grade2_collector_7_1: You can take more blocks from the toolbox if you need
-          them!
-      grade2_collector_8_callout: []
-      grade2_collector_9_callout: []
-      grade2_collector_9a_callout: []
-      grade2_collector_A_callout: []
-      grade2_collector_A_2018_callout: []
-      grade2_collector_A_predict1_callout: []
-      grade2_collector_A_predict1_2018_callout: []
-      grade2_maze_intro10_callout: []
+        grade2_collector_7_1: Is féidir leat tuilleadh blocanna a fháil ón mbosca
+          uirlisí má theastaíonn siad uait!
+      grade2_collector_8_callout: {}
+      grade2_collector_9_callout: {}
+      grade2_collector_9a_callout: {}
+      grade2_collector_A_callout: {}
+      grade2_collector_A_2018_callout: {}
+      grade2_collector_A_predict1_callout: {}
+      grade2_collector_A_predict1_2018_callout: {}
+      grade2_maze_intro10_callout: {}
       grade2_maze_intro2_callout:
         grade2_maze_intro2_callout1: This is the run button. Press this button to
           run your program.
@@ -1995,22 +2140,22 @@
         grade2_maze_intro5_callout1: This area also works as a garbage can. If there
           is a block in your workspace that you don’t need, simply drag it back here
           to toss it away.
-      grade2_maze_intro6_callout: []
-      grade2_maze_intro7_callout: []
-      grade2_maze_intro8_callout: []
-      grade2_maze_intro9_callout: []
+      grade2_maze_intro6_callout: {}
+      grade2_maze_intro7_callout: {}
+      grade2_maze_intro8_callout: {}
+      grade2_maze_intro9_callout: {}
       grade2_puppy_loops2_callout:
-        grade2_puppy_loops2_callout1: You only have one of these blocks available
-          in this puzzle.
+        grade2_puppy_loops2_callout1: Níl ach bloc amháin den chineál seo ar fáil
+          sa dúshlán seo.
       grade3_ConditionalsElse_2_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
-          You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: Ba chóir duit GACH scamall a iniúchadh le féachaint
+          an bhfuil BLÁTH ann. Ní gá duit cíora meala a lorg ar chor ar bith.
       grade3_Conditionals_3_callout:
-        Bee_Cond_5_1a: Purple flowers can have either 1 or 0 nectar...but you won't
-          know until you run the code!
+        Bee_Cond_5_1a: Bíonn 0 nó 1 neachtar i mbláth corcra... ach ní bhíonn a fhios
+          agat cé mhéad go dtí go gcuirfidh tú an cód ar siúl!
       grade3_bee_conditionals_quantum2_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
-          You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: Ba chóir duit GACH scamall a iniúchadh le féachaint
+          an bhfuil BLÁTH ann. Ní gá duit cíora meala a lorg ar chor ar bith.
       grade3_playLab_buildGame_1_callout:
         Playlab_cond_1_1: Think of this block as the computer's way of rolling a die,
           and you get to decide how many sides the die has.
@@ -2019,18 +2164,20 @@
           your value: when you use the block labeled `j`, the program will give you
           the number you generate here at the top. '
       grade4_artist_freeplay_callout:
-        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized
-          into categories.  Click on these words to see where everything went!
+        4-5_Artist_Patterns_Free_Play_1: Tá na blocanna is ansa leat leagtha amach
+          ina gcatagóirí anois. Cliceáil na focail seo le féachaint cá bhfuil chuile
+          rud anois!
       grade4_artist_functions1_callout:
-        grade4_artist_functions1_1: Let's start by using this block to help create
-          the first square.
+        grade4_artist_functions1_1: I dtús báire, úsáid an bloc seo chun cabhrú leat
+          an chéad chearnóg a chruthú.
       grade4_artist_functions2_callout:
-        grade4_artist_funcions2_1: When this green block runs, all of the code in
-          the function will run. What should the artist do after drawing the first
-          square?
+        grade4_artist_funcions2_1: Nuair a ritheann an bloc uaine seo, ritheann an
+          cód go léir laistigh den fheidhm. Cad ba chóir don ealaíontóir a dhéanamh
+          tar éis dó an chéad chearnóg a tharraingt?
       grade4_artist_functions_freeplay_callout:
-        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized
-          into categories.  Click on these words to see where everything went!
+        4-5_Artist_Patterns_Free_Play_1: Tá na blocanna is ansa leat leagtha amach
+          ina gcatagóirí anois. Cliceáil na focail seo le féachaint cá bhfuil chuile
+          rud anois!
       grade4_artist_functions_stars3_callout:
         grade4_artist_functions_stars3_1: Drag this block into your program. Every
           time you use this block, all of the commands in the function will be executed!
@@ -2039,8 +2186,8 @@
         add_and_drag_parameter: Scríobh ainm an pharaiméadair anseo, cliceáil "cuir
           leis", ansin tarraing go dtí an sainmhíniú é
       grade4_bee_conditionals_quantum2_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
-          You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: Ba chóir duit GACH scamall a iniúchadh le féachaint
+          an bhfuil BLÁTH ann. Ní gá duit cíora meala a lorg ar chor ar bith.
       grade4_frozen_freeplay_callout:
         snowflake_dropdown: Úsáid an roghchlár anuas seo chun calóga sneachta éagsúla
           a chruthú!
@@ -2062,51 +2209,55 @@
       grade4_frozen_square_loop3_callout:
         replace_questions: Úsáid an roghchlár anuas chun uimhir a chur in áit "???"
       grade4_playLab_proj_example1_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
+        New Play Lab Project_callout1: Cliceáil na catagóirí chun na blocanna sa mbosca
+          uirlisí a fheiceáil! Tarraing blocanna go dtí an spás oibre chun iad a chur
+          leis an gclár
+        New Play Lab Project_callout2: Cliceáil "Rith" chun do chód a shábháil agus
+          a rith
       grade4_playLab_proj_example2_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
-      grade4_playlab_test_callout: []
-      grade4_review_artist1_callout: []
+        New Play Lab Project_callout1: Cliceáil na catagóirí chun na blocanna sa mbosca
+          uirlisí a fheiceáil! Tarraing blocanna go dtí an spás oibre chun iad a chur
+          leis an gclár
+        New Play Lab Project_callout2: Cliceáil "Rith" chun do chód a shábháil agus
+          a rith
+        sign_in_to_save_project: Ar mhaith leat teacht ar do thogra ar ball? Logáil
+          isteach chun an cód seo a shábháil i do chuntas!
+      grade4_playlab_test_callout: {}
+      grade4_review_artist1_callout: {}
       grade5_artist_for_loops1b_callout:
         grade5_artist_for_loops1b_1: The toolbox has been changed into "category"
           mode to make more room for your code.  Now, `for` loops live in here.
-      grade5_artist_for_loops4_callout: []
+      grade5_artist_for_loops4_callout: {}
       grade5_artist_freeplay_callout:
-        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized
-          into categories.  Click on these words to see where everything went!
+        4-5_Artist_Patterns_Free_Play_1: Tá na blocanna is ansa leat leagtha amach
+          ina gcatagóirí anois. Cliceáil na focail seo le féachaint cá bhfuil chuile
+          rud anois!
       grade5_artist_functionparameters8_callout:
-        grade5_artist_functionparameters8_1: You will find the polygon function in
-          here.
+        grade5_artist_functionparameters8_1: Gheobhaidh tú an fheidhm "polagán" anseo.
       grade5_artist_functionparameters_6_callout:
-        grade5_artist_functionparameters_6_1: To complete your polygon, make sure
-          you are always turning by 360 ÷ `sides` degrees.
+        grade5_artist_functionparameters_6_1: Chun an polagán a chur i gcrích, deimhnigh
+          go bhfuil tú ag casadh 360 ÷ `taobhanna` céim.
       grade5_artist_parameters_squares1_callout:
         edit_add_parameter: Cliceáil "eagar" chun paraiméadar a chur le d'fheidhm
         add_and_drag_parameter: Scríobh ainm an pharaiméadair anseo, cliceáil "cuir
           leis", ansin tarraing go dtí an sainmhíniú é
       grade5_artist_parameters_squares1a_callout:
-        grade5_artist_parameters_triangles1_1: Click the "edit" button to change the
-          code inside the function.
+        grade5_artist_parameters_triangles1_1: Cliceáil an cnaipe "eagar" chun an
+          cód laistigh den fheidhm a athrú.
       grade5_artist_parameters_stars1_callout:
         grade4_artist_functions_stars3_1: Drag this block into your program. Every
           time you use this block, all of the commands in the function will be executed!
       grade5_artist_parameters_triangles1_callout:
-        grade5_artist_parameters_triangles1_1: Click the "edit" button to change the
-          code inside the function.
+        grade5_artist_parameters_triangles1_1: Cliceáil an cnaipe "eagar" chun an
+          cód laistigh den fheidhm a athrú.
       grade5_artist_parameters_triangles1aa_callout:
         edit_add_parameter: Cliceáil "eagar" chun paraiméadar a chur le d'fheidhm
         add_and_drag_parameter: Scríobh ainm an pharaiméadair anseo, cliceáil "cuir
           leis", ansin tarraing go dtí an sainmhíniú é
       grade5_artist_variables_freeplay10_callout:
-        Course_4_Artist_Vars_8_a: Need more space?  Pull this bar over to make the
-          coding area wider.
-      grade5_artist_variables_octagons13_callout: []
+        Course_4_Artist_Vars_8_a: An bhfuil tuilleadh spáis uait? Tarraing an barra
+          seo chun an spás códála a leathnú.
+      grade5_artist_variables_octagons13_callout: {}
       grade5_artist_variables_pentagons1_callout:
         place_length_variable: Tarraing an athróg "fad" anseo agus cuir in ionad na
           gcomharthaí ceiste í
@@ -2116,65 +2267,68 @@
         degrees_per_side: Roinn 360 ar líon na dtaobhanna le teacht ar mhéid gach
           uillinne (céimeanna).
       grade5_artist_variables_triangles1_callout:
-        grade5_artist_variables_triangles1_1: Notice that blocks now have a new way
-          to enter numbers. These `math` blocks can be pulled out and moved around!
+        grade5_artist_variables_triangles1_1: Tabhair faoi deara go bhfuil bealach
+          nua ann uimhreacha a chur isteach i mblocanna. Is féidir leat na blocanna
+          'mata' seo a tharraingt amach agus a bhogadh thart!
       grade5_artist_variables_triangles1_2018_callout:
-        grade5_artist_variables_triangles1_1: Notice that blocks now have a new way
-          to enter numbers. These `math` blocks can be pulled out and moved around!
+        grade5_artist_variables_triangles1_1: Tabhair faoi deara go bhfuil bealach
+          nua ann uimhreacha a chur isteach i mblocanna. Is féidir leat na blocanna
+          'mata' seo a tharraingt amach agus a bhogadh thart!
       grade5_artist_variables_triangles2_callout:
         set_length: Úsáid an bloc seo chun an luach "fad" a shocrú.
       grade5_bee_for_loops3_callout:
         grade5_bee_for_loops3_1: The `for` loop is so large, that the toolbox has
           to change into category mode.  You will find the new `for` loop in here!
-      grade5_bee_for_loops4_callout: []
-      grade5_bee_for_loops6_callout: []
+      grade5_bee_for_loops4_callout: {}
+      grade5_bee_for_loops6_callout: {}
       grade5_bee_parameters_new1_callout:
-        grade5_bee_parameters_new1_a: You can find `if` statements in here.
+        grade5_bee_parameters_new1_a: Gheobhaidh tú blocanna "má" anseo.
       grade5_bee_parameters_new3_callout:
-        grade5_bee_parameters_new3_1: This same function can be used when checking
-          for empty spaces as well as clouds.
+        grade5_bee_parameters_new3_1: Is féidir leat an fheidhm chéanna a úsáid chun
+          spás folamh a lorg, chomh maith le néalta.
       grade5_bee_parameters_new4_callout:
-        grade5_bee_parameters_new4_1: Press the "edit" button to add a parameter to
-          this function.
+        grade5_bee_parameters_new4_1: Cliceáil an cnaipe "eagar" chun paraiméadar
+          a chur leis an bhfeidhm seo.
       grade5_playlab_variables1_callout:
         arrows_move_actor: Úsáid na saighde chun an t-aisteoir a aistriú
-      grade5_playlab_variables10_callout: []
+      grade5_playlab_variables10_callout: {}
       grade5_playlab_variables11_callout:
         edit_add_parameter: Cliceáil "eagar" chun paraiméadar a chur le d'fheidhm
       grade5_playlab_variables1ask_callout:
         arrows_move_actor: Úsáid na saighde chun an t-aisteoir a aistriú
-      grade5_playlab_variables6_callout: []
-      grade5_playlab_variables6ask_callout: []
+      grade5_playlab_variables6_callout: {}
+      grade5_playlab_variables6ask_callout: {}
       grade5_playlab_variables_freeplay_callout:
-        Course_4_Play_Lab_Vars_9_1: All of your blocks are now organized behind categories!
-          Click on a label to see the pieces inside.
+        Course_4_Play_Lab_Vars_9_1: Tá do chuid blocanna leagtha amach ina gcatagóirí
+          anois! Cliceáil lipéad chun na píosaí laistigh de a fheiceáil.
       grade5_playlab_variables_jump1_callout:
-        Course_4_Play_Lab_Vars_9_1: All of your blocks are now organized behind categories!
-          Click on a label to see the pieces inside.
+        Course_4_Play_Lab_Vars_9_1: Tá do chuid blocanna leagtha amach ina gcatagóirí
+          anois! Cliceáil lipéad chun na píosaí laistigh de a fheiceáil.
       gradek_adventurer_loops2_callout:
-        gradek_adventurer_loops2_1: This number tells you how many of these blocks
-          you can use in this puzzle.
+        gradek_adventurer_loops2_1: Is éard atá san uimhir seo ná an líon blocanna
+          den chineál seo is féidir leat a úsáid sa dúshlán seo.
       gradek_artist_loops3_callout:
-        artistLoopsK2_1: This number tells you how many of these blocks you can use
-          in this puzzle.
+        artistLoopsK2_1: Is éard atá san uimhir seo ná an líon blocanna den chineál
+          seo is féidir leat a úsáid sa dúshlán seo.
       gradek_artist_loops7_callout:
-        gradek_artist_loops7_1: Did you know that you can draw back over a line whenever
-          you need to?
-      gradek_playlab_events1c_callout: []
-      gradek_playlab_events2c_callout: []
-      gradek_playlab_events3c_callout: []
-      gradek_playlab_events4c_callout: []
+        gradek_artist_loops7_1: An bhfuil a fhios agat gur féidir leat tarraingt anuas
+          ar líne atá ann aon uair is gá?
+      gradek_playlab_events1c_callout: {}
+      gradek_playlab_events2c_callout: {}
+      gradek_playlab_events3c_callout: {}
+      gradek_playlab_events4c_callout: {}
       gradek_playlab_events5c_callout:
-        gradek_playlab_events5c_1: This let's you choose a "random" sound, which means
-          that you don't know what you are going to get until you hear it!
+        gradek_playlab_events5c_1: Úsáid é seo le fuaim "randamach" a roghnú, rud
+          a chiallaíonn nach mbeidh a fhios agat cén fhuaim a bhéas ann go dtí go
+          gcloisfidh tú é!
       harvester_Kahoot_callout:
-        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
-          you run the program.
-      iceage_click_hello_callout: []
-      iceage_click_hello_2018_callout: []
-      iceage_free_play_callout: []
-      iceage_free_play_2018_callout: []
-      iceage_free_playcourseF_IceAge_11_callout: []
+        courseE_farmer_functions1a_1: Glasra anaithnid. Athraíonn sé gach uair a ritheann
+          tú an clár.
+      iceage_click_hello_callout: {}
+      iceage_click_hello_2018_callout: {}
+      iceage_free_play_callout: {}
+      iceage_free_play_2018_callout: {}
+      iceage_free_playcourseF_IceAge_11_callout: {}
       iceage_hello1_callout:
         playlab_drag_say: ''
       iceage_hello1_2018_callout:
@@ -2191,8 +2345,8 @@
         playlab_play_sound: ''
       iceage_move_to_actor_2018_callout:
         playlab_play_sound: ''
-      iceage_move_to_flag_callout: []
-      iceage_move_to_flag_2018_callout: []
+      iceage_move_to_flag_callout: {}
+      iceage_move_to_flag_2018_callout: {}
       iceage_repeat_callout:
         playlab_add_move: ''
       iceage_repeat_2018_callout:
@@ -2201,19 +2355,19 @@
         playlab_add_score: ''
       iceage_sound_and_points_2018_callout:
         playlab_add_score: ''
-      iceage_throw_hearts_callout: []
-      iceage_throw_hearts_2018_callout: []
-      iceage_warn_embed_ice_age_callout: []
+      iceage_throw_hearts_callout: {}
+      iceage_throw_hearts_2018_callout: {}
+      iceage_warn_embed_ice_age_callout: {}
       iceage_warn_ice_age_callout:
         playlab_add_blocks: ''
       iceage_warn_ice_age_2018_callout:
         playlab_add_blocks: ''
       kikiTesta_callout:
         sample1_1: This will be an adventurer collecting coins, not a farmer digging.
-      playLabDebugVideo1_callout: []
+      playLabDebugVideo1_callout: {}
       sample1_callout:
         sample1_1: This will be an adventurer collecting coins, not a farmer digging.
-      sample10a_callout: []
+      sample10a_callout: {}
       sample2_callout:
         sample2_1: Notice that there is only one 'move forward' block available in
           this toolbox.
@@ -2238,20 +2392,22 @@
           does not have "turn" or "move forward". Also, the goals are not flexible
           (size or sprites).
       small_actors_playlab_projects_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
-      subgoal U3 L4 introducing subgoal labels_callout: []
-      subgoal U3L2 Using Simple Commands_callout: []
+        New Play Lab Project_callout1: Cliceáil na catagóirí chun na blocanna sa mbosca
+          uirlisí a fheiceáil! Tarraing blocanna go dtí an spás oibre chun iad a chur
+          leis an gclár
+        New Play Lab Project_callout2: Cliceáil "Rith" chun do chód a shábháil agus
+          a rith
+        sign_in_to_save_project: Ar mhaith leat teacht ar do thogra ar ball? Logáil
+          isteach chun an cód seo a shábháil i do chuntas!
+      subgoal U3 L4 introducing subgoal labels_callout: {}
+      subgoal U3L2 Using Simple Commands_callout: {}
       subgoal-test-clone_callout:
-        move_subgoal: This is the "move turtle" subgoal label.  Drag it out into the
-          workspace.
+        move_subgoal: Seo é an lipéad ar an bhfosprioc "bog an turtar". Tarraing go
+          dtí an spás oibre é.
       subgoal-test_callout:
-        move_subgoal: This is the "move turtle" subgoal label.  Drag it out into the
-          workspace.
-        orient_subgoal: This means you want to turn the turtle
-      subgoalU3L2_TurtleSquare_right_callout: []
+        move_subgoal: Seo é an lipéad ar an bhfosprioc "bog an turtar". Tarraing go
+          dtí an spás oibre é.
+        orient_subgoal: Ciallaíonn sé seo gur mhaith leat an turtar a chasadh
+      subgoalU3L2_TurtleSquare_right_callout: {}
       testing code callout_callout:
-        testing_code_callout: This makes the sprite move!
+        testing_code_callout: Cuireann seo an sprid ag imeacht!

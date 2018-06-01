@@ -1,0 +1,17 @@
+name 'CSD-U5-SFLP Solve a Data Problem_2018'
+display_name 'Level Overview'
+markdown <<MARKDOWN
+# Overview
+
+To conclude this unit you will design a way to use data to make a recommendation or prediction to help solve a problem of your choosing.
+
+## Resources
+
+* [Make a Recommendation](https://docs.google.com/document/d/1pKeFH1OkWzfg3MFTPCezhK_r4p8xu7QUkPKSf5vV41c/export?format=pdf) - Project Guide
+* [Make a Recommendation](https://docs.google.com/document/d/1ZdA-VIdyPZLONBFr7ojFeNfHCHYmacbrrphiR31k6Bk/export?format=pdf) - Peer Review
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+* Make a Recommendation - Project Guide Exemplar ([PDF](https://docs.google.com/document/d/1D-Wr_Q9st_DsT1MF92Ixm8RFnWwI9tYmQN2rUXpd8I8/export?format=pdf))
+* Make a Recommendation - Peer Review Exemplar ([PDF](https://docs.google.com/document/d/1hcZ8Ps_2AQqQcBwHgoNngu7w0Cg3FNHBv4n2vvLFqYE/export?format=pdf))
+MARKDOWN

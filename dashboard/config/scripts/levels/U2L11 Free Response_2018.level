@@ -1,0 +1,18 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-04-26T22:51:37.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "HTTP and Abstraction on the Internet: Free Response",
+    "markdown_instructions": "The definition of HTTP makes use of the ASCII character set without reference to how these characters are encoded. Explain why this is an example of abstraction.\n",
+    "encrypted_solution": "ItaPZwJMt8mo5R4i7WKa6z/KUc8w0Hb8r3G7nNKwN5CtlN/czBeZ53cdELZv\nRe9M/5mS1z8lT/07g9Y5RhSYllWv2nkuOSjfPxwDX7YWj0xpFCtxIGGjxrb/\nE7d1F7FopjaKhjPEuyAZvoCnyrwCCWdf3B9MBz2RAQNvZPtBinaRrEb5dCuw\neMu+y6jSCx5S4LZn8O0yZSQsOU6j3y7c2SmXU+NHUt98SnvNfsaojhzO0OMl\nTyAWN1PElJS3S8UqGxeytaN3yw21RTfAYUvBrFOWS+PY1K4toSy3Z4JGM460\nLVh8/L3Tbp4/RrYJyaeeq5jCsvCzq+l8aAdMTaog+wESWJZ5CWe9LiPKZkU3\nmcNCOGwznmvbzXOKuA5He7FrEDLZ9bwkgkB6+TxYiCR6fNHuIXEmqe9pMNyw\nEjpfCD7uhAZKX2R5feGTDen7mbeuFRKWNBNGbjBtC46lVucMtLFphn9GMCNO\n252TanGWVhWL/xac81+P67f6xtq4+ncGgZb9fMOpXsnZE6X7+h8KI/Dh9ug5\njgXUnEKZb6tjXnwl2JrrSw4A97mskmIjavvyctUC1n9zLSWl7++0bYLEpDkG\nipVASlOGaEZi1PWngYat+vo+gKDaCO0GcZ9VPbT+DoxKTGj0UXYnzaUkTl7t\nVLfn3yKQnPCVtY/S9cgu2aCToQQHEr7xepYwZS+IUXT7huqxRdInZVb7lqOV\n3+KS5mo7j7Wvchc4Wztu6/0f6qhXuvkDy1HL4YfQBN+gULqx0W4m7EAEY2IU\npe3goLSpQFH4eip9byWsVyblRQg75JD+UeCABF6mQOcNDhE+sTr0bRZOgH6D\nFbsaZKj4xYyfpTLcJGoLKtUd7vKSJ6Yj7ryJ9OATG8RHcxlQzoqINx4tJi2k\nwbgaGoGpY1OtO+jWq9xrL+QQOXSifrVaqmlL70Qlntiq5pgowIIZZJ1lXC//\n244paj3lBqnFRlneoeHzrYNXaGKPA0iASW7KNUDGgYsgkcyfKqCSAEVeRFjZ\njM1HZLybo6/rSE2au4sQNH0i6qLCh/eM8hUYSiIKYoAQPiUqdN6XgFlCqv1y\npbXVVAzkxBzOJs4QKYF0cs7DX+ouGMObB0bqVRkJDupqoRKtCArCzm/0GDF1\nM9LPS7pBJFJakXE8VV0VlwFz1FSQe2YVslz9hpvGlnqhy6WqoBQIZLEktrpI\nkC/UOGipmQrIudN8TPxeAg+S/XUZM1MvVgnk1hhMPUg9Xe7xGD7ov/Dq0jJ3\nQYlESRREI2Car7VkC/Iv8vR+BtXwYj/zGA9gYYZMjBdSs+qwaVloWHAcEcyq\n1N1qgxBK3lCz3ZuPu/t0+AdvWgudZ2WAqEufFhen2NgSaQ==\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 2730,
+    "name_suffix": "_2018"
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

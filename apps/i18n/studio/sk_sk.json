@@ -318,6 +318,7 @@
   "moveSpriteN": "posunúť postavu {spriteIndex}",
   "moveDroid": "move droid",
   "moveDroidN": "move droid {spriteIndex}",
+  "to": "na",
   "toXY": "na x, y",
   "moveDown": "posunúť nadol",
   "moveDownTooltip": "Posunúť postavu nadol.",

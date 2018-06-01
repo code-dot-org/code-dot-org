@@ -1,0 +1,30 @@
+name 'v2 U2L14 Student Lesson Introduction_2018'
+title 'title'
+description 'description here'
+css 'unplugged'
+markdown <<MARKDOWN
+# Unit 2: Lesson 14 - Creating Summary Tables
+
+## Background
+
+A summary table is a table used to compute summary statistics of a larger dataset. Summary tables are another way that computational tools can be used to look more closely at data in order to identify trends and patterns. They can often be good data visualizations on their own, and they are quite useful when trying to make charts from larger collections of data.
+
+## Vocabulary
+
+* **Summary Table:** A table that summarizes information about some larger dataset.  It typically consists of performing computations like sums, averages, and counts on higher level groupings of information.  The intent is to summarize lots of data into a form that is more useful, and easier to "see".
+* **Pivot Table:** The tool used by most spreadsheet programs to create a summary table.
+* **Aggregation:** A computation in which rows from a data set are grouped together and used to compute a single value of more significant meaning or measurement.  Common aggregations include: Average, Count, Sum, Max, Median, etc. 
+  * For example, if some dataset contained information about how many hours of television people watched and included their age, you could "aggregate the data by age" and compute the average hours watched for each age group.  You could also "aggregate by hours of TV watched" and compute the average age for each number of hours.
+
+## Lesson
+
+* Learn how to make summary tables in Google Sheets.
+* Make two (2) summary tables of your own data.
+
+## Resources
+
+* All activities are presented here in Code Studio.  
+* Click **Continue** to move on.
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

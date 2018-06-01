@@ -4,7 +4,7 @@
 - homepage_data[:initialtipsdismissed] = current_user.ui_tip_dismissed_homepage_header
 - homepage_data[:userid] = current_user.id
 - homepage_data[:valid_grades] = Section.valid_grades
-- homepage_data[:csfScriptIds] = Script.csf_script_ids
+- homepage_data[:stageExtrasScriptIds] = Script.stage_extras_script_ids
 - homepage_data[:topCourse] = @top_course
 - homepage_data[:isEnglish] = @is_english
 
@@ -15,7 +15,7 @@
   - if current_user.teacher?
     - homepage_data[:isTeacher] = true
     - homepage_data[:joined_sections] = @student_sections
-    - homepage_data[:announcement] = DCDO.get('census_announcement', nil)
+    - homepage_data[:announcement] = DCDO.get('announcement_override', nil)
     - homepage_data[:hoc_launch] = DCDO.get('hoc_launch', nil)
     - show_census_banner = !!(current_user.show_census_teacher_banner?)
     - homepage_data[:showCensusBanner] = show_census_banner
@@ -48,12 +48,17 @@
 
 .clear{style: "clear: both"}
 
+-# In-page reminders and surveys
 - if current_user
   - if current_user.teacher?
-    #terms_reminder
+    #teacher_reminders
       - unless current_user.accepted_latest_terms?
         = render template: 'api/accept_terms_reminder'
         = render partial: 'layouts/terms_interstitial'
+      - if show_nps_survey? SurveyResult::NET_PROMOTER_SCORE_2017
+        = render partial: 'home/survey_nps'
+      - elsif show_diversity_survey? SurveyResult::DIVERSITY_2018
+        = render partial: 'home/survey_diversity'
 
 #homepage-container
 

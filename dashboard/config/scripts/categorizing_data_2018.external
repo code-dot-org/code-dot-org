@@ -1,0 +1,31 @@
+name 'Categorizing Data_2018'
+css 'unplugged'
+markdown <<MARKDOWN
+# Categorizing Data
+
+In order to use computers to analyze data we usually need it to be **standardized in some way**. 
+
+Data collected as "free form text" will be particularly susceptible to this problem. If you ask people "What did you do last night" you will likely get a different response from every single person. Making charts or tables with this information would be meaningless and confusing.
+
+**Free form text data like this may be useful for a human to read but cannot easily be used by a computer**. 
+
+In order to fix this you might need to **create new columns of data by hand which categorize free form text into data that is more useful for computation**. 
+
+In the example below you'll see one possible way to categorize responses to the question, "What did you do to relax last night?" In this case the data is being categorized by what the person was doing. The resulting column of data will be much easier to use when analyzing this data with a computer.
+
+![](https://images.code.org/b7bd7bd954072681fa685afc0756108d-image-1453406846291.gif)
+
+*Standardizing how people relaxed by how they do the activity. This is only one of many different ways this data could be categorized.*
+
+**Note: This process is being done by hand using only one of many possible methods for creating categories. There are always many different ways to categorize data and there will rarely be one clearly "right" way. You'll have to make judgment calls about what makes the most sense.**
+
+## Do This:
+
+**Create at least one new column in your dataset that standardizes a column of data collected as "free form text".**  
+
+To do this you will need to invent a set of categories that applies to your data. **This may take a while to do. Consult with your partners and make sure you have a generally agreed-upon set of rules as you start**.
+
+Good luck!
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

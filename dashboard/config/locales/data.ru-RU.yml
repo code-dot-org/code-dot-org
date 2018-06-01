@@ -727,9 +727,6 @@
           Обнаружение Конфликтов'
         alg_17_sambat_compound_booleans: Информатика в Алгебре - Составные Логические
           значения
-        hoc2015_preview_blocks: Make your own game blocks
-        hoc2015_preview_typing: Make your own game typing
-        hoc2015_preview_conclusion: Make your own game conclusion
         starwars_intro: 'Звездные войны: Создайте галактику, используя код. Введение'
         starwars_typing: 'Звездные войны: Создайте галактику, используя код. Язык
           JavaScript'
@@ -797,6 +794,7 @@
         CSF_harvester_skinOverview_K-1: The Harvester
         CSF_harvester_loops_K1: Loops in Harvester
         CSF_scrat_loops_K1: Loops in Ice Age
+        CSF_scrat_loops_CF: Loops in Ice Age
     callout:
       text:
         drag_blocks: Перетащите блок «переместить» и поставьте его ниже другого блока

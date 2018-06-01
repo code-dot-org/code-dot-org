@@ -1,0 +1,48 @@
+name 'Unit 4 Lesson 5 Introduction_2018'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Unit 4: Lesson 5 - Simple Encryption
+
+## Background
+
+Encryption is a process - an algorithm - for transforming a message so that the original text is hidden from anyone who is not the intended recipient. This is often called a “secret code.” Reversing the encryption process to reveal the original message is called decryption. History is full of examples of people encrypting messages and attempting to crack secret codes.
+
+## Vocabulary
+
+
+* **Encryption** - a process of encoding messages to keep them secret, so only "authorized" parties can read it.
+* **Decryption** - a process that reverses encryption, taking a secret message and reproducing the original plain text
+* **Cipher** - the generic term for a technique (or algorithm) that performs encryption
+* **Caesar's Cipher** - a technique for encryption that shifts the alphabet by some number of characters.
+* **Random Substitution Cipher**: an encoding technique that maps each letter of the alphabet randomly to different letters or characters.
+* **Cracking encryption** - When you attempt to decode a secret message *without* knowing all the specifics of the cipher, you are trying to **crack** the encryption. 
+
+
+## Lesson
+
+* Think about the uses of encryption on the Internet.
+* Encrypt a message with a secret algorithm.
+* Test the security of your encryption.
+
+## Resources
+* Caesar Cipher Widget - Click Continue
+* Frequency Analysis Widget - (after Caesar widget).
+
+* **OPTIONAL** Brief history of cryptography and substitution ciphers pp. 165-169 [Blown to Bits: Chapter 5](http://www.bitsbook.com/wp-content/uploads/2008/12/chapter5.pdf)
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+* OPTIONAL: student actvity guide for Blown to Bits (if using that reading): * [Encryption Reading and Activity Guide](https://docs.google.com/document/d/1Adxoscvs8sf6ieEvoe8-5RfH542CvoCupb5t9ZiB1No/edit)
+
+[KEY]
+
+* <a href="https://docs.google.com/document/d/1VwLcgKThuombY9aXsGYg0NnQuva5b5roFAt3Ha0vWdQ/edit?usp=sharing"> Answer key for the Blown to Bits activity guide</a> 
+
+[/KEY]
+MARKDOWN

@@ -114,15 +114,24 @@ fr:
     valid_password: "Mot de passe correct !"
     invalid_password: "Le mot de passe doit comporter au moins 6 caractères."
     mismatch_password: "Les deux mots de passe ne sont pas identiques."
+    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
+    under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
+    agree_us_website: "I agree to using a website based in the United States."
+    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
     student_terms: "J'accepte d'être lié aux <a href='http://code.org/tos'>conditions d'utilisation</a> de Code.org. Si je suis âgé de moins de 13 ans, je confirme en soumettant ce formulaire que j'ai la permission de mes parents ou de mon tuteur légal pour utiliser les services Code.org. <br/><br/>Les adresses e-mail ne sont pas stockées sous une forme qui nous permettrait de contacter les élèves. Les élèves ne recevront jamais d'e-mails venant de Code.org sauf pour la récupération du mot de passe. Voir notre <a href='http://code.org/privacy'>politique de confidentialité</a> pour plus d'informations."
     teacher_terms: "J'accepte d'être lié aux conditions d'utilisation de Code.org. Pour plus d'informations sur la vie privée, voir notre <a href='http://code.org/privacy'>politique de confidentialité</a>."
     additional_information: "Nous avons besoin de quelques informations supplémentaires pour continuer l’inscription."
+    user_type_button: "Update Account Type"
     user_type_label: "Type de compte"
     user_type_teacher: "Enseignant"
     user_type_student: "Élève"
     field_is_required: "est obligatoire"
     accept_terms: "Vous devez accepter les conditions d'utilisation pour créer un compte"
     error: "Une erreur est apparue."
+    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_yes: "Oui"
+    email_preference_no: "Non"
+    email_preference_required: "You must specify an email preference."
   school_info:
     title: 'Informations de l’école (facultatif)'
     school_country: 'Pays de l’école'
@@ -368,6 +377,7 @@ fr:
     enter_new_login_info: 'Entrez vous nouvelles informations de connexion'
     confirm_secret_words: 'Confirmez votre identité en entrant vos mots secrets actuels'
     enter_parent_email: "Entrez l'adresse e-mail de vos parents ou de votre tuteur (pour la récupération de mot de passe)"
+    update: "Update Account"
   user_level:
     completed: 'Terminé'
     tried: 'A essayé'
@@ -449,6 +459,7 @@ fr:
     student_not_found: "Un ou plusieurs élèves n'ont pas été trouvés."
     all_students_must_be_in_current_section: "Tous les étudiants doivent être inscrits dans votre section."
     already_enrolled_in_new_section: "Vous ne pouvez pas déplacer ces élèves car ce professeur les a déjà dans une autre section."
+    third_party_login: "You cannot move students to a section that is synced with a third party tool."
   share:
     title: "Apprends avec Code Studio"
     description: "N'importe qui peut apprendre l’informatique. Crée des jeux, des applications et de l'art avec du code."
@@ -723,21 +734,21 @@ fr:
     message: "Veuillez nous dire votre ethnicité (plusieurs choix possibles)"
     races:
       - 
-        white: Blanc
+        white: "Blanc"
       - 
-        black: Noir ou afro-américain
+        black: "Noir ou afro-américain"
       - 
-        hispanic: Hispanique ou latino
+        hispanic: "Hispanique ou latino"
       - 
-        asian: Asiatique
+        asian: "Asiatique"
       - 
-        hawaiian: Hawaïen indigène ou autres îles du Pacifique
+        hawaiian: "Hawaïen indigène ou autres îles du Pacifique"
       - 
-        american_indian: Indien d'Amérique ou Alaska
+        american_indian: "Indien d'Amérique ou Alaska"
       - 
-        other: Autres
+        other: "Autres"
       - 
-        opt_out: Préfère ne pas le dire
+        opt_out: "Préfère ne pas le dire"
     submit: "Envoyer"
     decline: "Fermer"
   zendesk_too_young_message: 'Désolé, les plus jeunes utilisateurs ne peuvent pas accéder à notre site d’aide. Tu peux parcourir <a href="http://support.code.org"> support.code.org</a> sans t’authentifier ou demander à tes parents ou ton enseignant de nous contacter à ta place.'
@@ -868,6 +879,7 @@ fr:
     csd5_2: 'Chapitre 2 : Résoudre des problèmes avec des données'
     csd6_1: 'Chapitre 1 : Matériel pour la sortie des données'
     csd6_2: 'Chapitre 2 : Matériel pour l''entrée des données'
+    csd_survey: 'Post-Course Survey'
     csp1_1: 'Chapitre 1: Représentation et transmission de l''information'
     csp1_2: 'Chapitre 2: Créer l''Internet'
     csp2_1: 'Chapitre 1: Représentation et compression de données complexes'
@@ -881,6 +893,11 @@ fr:
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Unité 2: L’Information numérique'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: 'Reflection Prompts'
   external_links:
     disclaimer: Clause de non-responsabilité
@@ -985,3 +1002,14 @@ fr:
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: 'Cours complets'
+  cookie_banner:
+    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+    more_information: "See Code.org's Privacy Policy."
+    accept: 'J''accepte'
+  gdpr_dialog:
+    heading: 'Do you agree to using a web site based in the United States?'
+    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+    link_intro: 'For details see our'
+    privacy_policy: 'privacy policy'
+    logout: 'Logout'
+    yes: 'Oui'

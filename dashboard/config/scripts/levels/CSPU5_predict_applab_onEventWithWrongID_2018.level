@@ -1,0 +1,69 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2018-05-03T16:40:36.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
+      "turnLeft": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "encrypted_examples": "nBdoh6+qSqIVR4cNukGJxPLtfTBmxRgNMHVYeFx8pE/rUUFeb8PTsc818ryR\nOMZi\n",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "start_blocks": "onEvent(\"button1\",\"click\", function(){\r\n  moveForward(25);\r\n});",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "palette_category_at_start": "uicontrols",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 451px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><button id=\"forwardBtn\" style=\"padding: 0px; margin: 0px; height: 40px; width: 115px; font-size: 14px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 90px; top: 20px;\">Move Forward</button></div></div>",
+    "markdown_instructions": "# Debugging Event-Driven Programs: IDs\r\n\r\n**You Try it: Checking IDs** -- Your first debugging task will be to verify that the button IDs match the event-handlers.  You'll also see error messages in the **\"Debug Console\"**\r\n\r\n![](https://images.code.org/6bb61c1ab1af5c0ce84a8cc4dc9b95cd-image-1476970435861.png)\r\n\r\n1. **Run the program** and inspect the error messages in the Debug Console.\r\n  * **NOTE:** an error message *only* indicates where the computer ran into trouble.  It doesn't tell you the root cause of the problem, necessarily.\r\n2. **Investigate** -- Use the **error message as a clue** to investigate the possible problem.\r\n3. **Fix it** -- Make a change that you think will fix the problem.\r\n4. **Run the program** and verify that not only are there no error messages but the program works as intended (turtle moves forward on button click).\r\n5. **Didn't work?** - repeat the steps above.  And stick with it!  You'll get it eventually.\r\n\r\n**Remember:** You can see the ID of a UI element by just hovering your mouse over it.\r\n<details><summary>Hint? [click here]</summary>\r\n\r\n<li>In this case the ID of the button does not match the ID in the onEvent command</li>\r\n<li>The error message is saying: \"you're telling me to listen to events on a UI Element with id 'button1' and no such thing exists!\" </li><br>\r\nThere are two ways to fix this:<br>\r\n<li>Change the ID in the event handler code to match the button ID in design mode.</li>\r\n<li>...or Change the button ID in design mode to match the event handler</li></details>\r\n\r\n",
+    "instructions_important": "false",
+    "show_debug_watch": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "true",
+    "parent_level_id": 6984,
+    "name_suffix": "_2018",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+  <blocks/>
+</Applab>

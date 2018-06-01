@@ -1,5 +1,5 @@
 -# This variable will get any data we need to pass along to scriptOverview.js
-- scriptOverviewData = { scriptData: @script.summarize }
+- scriptOverviewData = { scriptData: @script.summarize(true, current_user) }
 - if @script.professional_learning_course? && @current_user && Plc::UserCourseEnrollment.exists?(user: @current_user, plc_course: @script.plc_course_unit.plc_course)
   -  scriptOverviewData[:plcBreadcrumb] = {unit_name: @script.plc_course_unit.unit_name, course_view_path: course_path(@script.plc_course_unit.plc_course.get_url_name)}
 - content_for(:head) do
@@ -16,11 +16,12 @@
 - else
   - course_link = @script.course_link(params[:section_id])
   - if course_link
+    - course_title = @script.course_title || I18n.t('view_all_units')
     #script-breadcrumb
       %a{href: course_link}
         %i.fa.fa-chevron-left
         %span
-          = I18n.t('view_all_units')
+          = course_title
   #landingpage
     #notification
     -# This div ends up being owned by ScriptOverviewHeader in react

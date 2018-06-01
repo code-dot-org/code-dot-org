@@ -98,7 +98,7 @@
   "setSpeed": "스피드 설정",
   "setSpeedTooltip": "레벨 스피드 설정",
   "shareFlappyTwitter": "@codeorg 에서 내가 직접 만든 플래피 게임을 해보세요.",
-  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
+  "shareFlappyTwitterDonor": "제가 만든 Flappy 게임을 한번 확인해 보세요. (@codeorg 를 서포트 해주셔서 감사합니다 {donor} 님)",
   "shareGame": "게임 공유하기:",
   "soundRandom": "random(랜덤)",
   "soundBounce": "튕기게 하기",

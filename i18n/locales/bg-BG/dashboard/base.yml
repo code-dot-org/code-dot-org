@@ -114,15 +114,24 @@ bg:
     valid_password: "Валидна парола!"
     invalid_password: "Паролата трябва да бъде поне 6 символа"
     mismatch_password: "Двете пароли, които въведохте не съвпадат"
+    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
+    under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
+    agree_us_website: "I agree to using a website based in the United States."
+    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
     student_terms: "Съгласен съм да се обвържа с Code.org <a href='http://code.org/tos'> условията за ползване</a>. Ако аз съм на възраст под 13 години, потвърждавам с подаването на този формуляр, че имам разрешението на моя родител или законен настойник за използване на услугите на Code.org. <br/> <br/> Имейл адресите не се съхраняват във форма, която да позволява да се свързваме с учениците. Курсистите не получават имейли от Code.org освен за възстановяване на парола. Вижте нашата <a href='http://code.org/privacy'> декларация за поверителност</a> за повече информация."
     teacher_terms: "Съгласен съм да се обвържа с Code.org условията за ползване. За повече информация за поверителност вижте нашата <a href='http://code.org/privacy'> политика за поверителност</a>."
     additional_information: "Ние изискваме  допълнителна информация за да продължим  вписването ви."
+    user_type_button: "Update Account Type"
     user_type_label: "Тип акаунт"
     user_type_teacher: "Учител"
     user_type_student: "Ученик"
     field_is_required: "е задължително"
     accept_terms: "Вие трябва да потвърдите, за да си създадете профил"
     error: "Възникна грешка."
+    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_yes: "Да"
+    email_preference_no: "Не"
+    email_preference_required: "You must specify an email preference."
   school_info:
     title: 'Информацшя за училището (по избор)'
     school_country: 'Училищен район'
@@ -366,6 +375,7 @@ bg:
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
+    update: "Update Account"
   user_level:
     completed: 'Завършено'
     tried: 'Опитах'
@@ -447,6 +457,7 @@ bg:
     student_not_found: "Ученикът/учениците не могат да бъдат намерени."
     all_students_must_be_in_current_section: "Всички ученици трябва да бъдат включени в раздел."
     already_enrolled_in_new_section: "Не можете да преместите тези учениции, защото този учител вече ги има в друг раздел."
+    third_party_login: "You cannot move students to a section that is synced with a third party tool."
   share:
     title: "Обучавайте се в Code Studio"
     description: "Всеки може да учи компютърни науки. Програмирай игри, приложения и изкуство с код."
@@ -721,21 +732,21 @@ bg:
     message: "Моля да ни кажете вашата раса (проверка на всички, които се прилагат)"
     races:
       - 
-        white: Бял
+        white: "Бял"
       - 
-        black: Черен или афро-американец
+        black: "Черен или афро-американец"
       - 
-        hispanic: Испанец или латино
+        hispanic: "Испанец или латино"
       - 
-        asian: Азиатец
+        asian: "Азиатец"
       - 
-        hawaiian: Хавайец или друг тихоокеански островитянин
+        hawaiian: "Хавайец или друг тихоокеански островитянин"
       - 
-        american_indian: Индианец/от Аляска
+        american_indian: "Индианец/от Аляска"
       - 
-        other: Друго
+        other: "Друго"
       - 
-        opt_out: Предпочитам да не отговоря
+        opt_out: "Предпочитам да не отговоря"
     submit: "Изпрати"
     decline: "Затваряне"
   zendesk_too_young_message: 'Съжаляваме, но малки потребители не може да влизат в нашия сайт за поддръжка. Може да разглеждате <a href="http://support.code.org"> support.code.org</a> без регистрация или попитайте вашия родител или учител да се свърже с нас за вас.'
@@ -866,6 +877,7 @@ bg:
     csd5_2: 'Chapter 2: Solving Data Problems'
     csd6_1: 'Chapter 1: Programming with Hardware'
     csd6_2: 'Chapter 2: Building Physical Prototypes'
+    csd_survey: 'Post-Course Survey'
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -879,6 +891,11 @@ bg:
     csp_ap_1: 'Глава 1: AP техническа настройка'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Част 1 - Дигитална информация'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: 'Reflection Prompts'
   external_links:
     disclaimer: Отказ от отговорност
@@ -983,3 +1000,14 @@ bg:
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: 'Full Courses'
+  cookie_banner:
+    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+    more_information: "See Code.org's Privacy Policy."
+    accept: 'Приемам'
+  gdpr_dialog:
+    heading: 'Do you agree to using a web site based in the United States?'
+    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+    link_intro: 'For details see our'
+    privacy_policy: 'privacy policy'
+    logout: 'Logout'
+    yes: 'Да'

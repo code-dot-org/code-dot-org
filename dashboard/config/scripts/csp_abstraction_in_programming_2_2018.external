@@ -1,0 +1,78 @@
+name 'CSP Abstraction in Programming 2_2018'
+css 'unplugged'
+markdown <<MARKDOWN
+# Abstraction - Managing Complexity
+
+## What is an abstraction?
+
+<img src="https://images.code.org/5340e9512209c791a5613e53bcbd3ec4-image-1509027914733.jpg" style="float:right;width:300px; margin-left: 10px">
+
+**Definition**
+
+An abstraction is a simplified representation of something more complex. Abstractions allow you to hide details to help you manage complexity, focus on relevant concepts, and reason about problems at a higher level.
+
+**Using abstractions in daily life**
+
+Modern life is filled with complex systems. Think for example, about a train system. It's theoretically possible to know the exact dimensions and turns of every rail on the system. If you just want to get from one place to another, however, these details are useless and even distracting. We need simpler representations of this complex system, like this map ([source](https://www.wmata.com/schedules/maps/upload/2017-System-Map.pdf)), to help us reason about and use it. In other words, we need an abstraction.
+
+<div style="clear: both"> </div>
+
+## Abstractions and Computer Science
+
+<div style="float: right; width: 250px; margin-left: 10px; background-color: #ffffff; color: #0094ca">
+  <img src="https://images.code.org/d872c6ecd8cf6eefeab3c2a293f93246-image-1508249463002.png" style="width: 90%">    
+  <br><br>
+  <em>drawRectangle()</em> and <em>right()</em> are examples of abstraction because they capture the code for more complex behavior and simplify the representation of that behavior by giving it a single name.
+</div>
+
+**What it means in computer science**
+
+Computer science deals with complex systems too. Think about the incredible complexity of a system like the Internet. Humans just can't keep all those little details in their head!
+
+In computer science we deal with complexity by "boxing it up" and giving it a name. For example, we develop a protocol to reliably send information from one person on the Internet to another. The protocol itself might be complex, but when we talk about it we can just call it "TCP". Simplified, high level representations of complex behavior make it possible to talk and reason about the complex systems we use and build in computer science. We call these representations *Abstractions*.
+
+**What it means in programming**
+
+Programs are complex systems. Individual commands may be easy to understand, but it can quickly become difficult to understand the logic and relationships connecting them. You need abstractions in your program code to let you "box up" these details so that you can focus on the bigger problem you're trying to solve.
+
+**Procedures (functions) are abstractions you make**
+
+Procedures (called "functions" in JavaScript) are abstractions you create. For example, by writing a function called `drawRectangle()`, you can "box up" and name the code necessary to draw a rectangle. Once you have tested that function and it works, you don't need to worry about the details of how it works anymore. You can now just use the simple, descriptive name you gave that complex underlying code (the name of your function). Creating abstractions like this helps you think about your code at a higher level, and makes sure you don't get lost in all the little details.
+
+<div style="clear: both"> </div>
+
+## Abstraction, Unit 3, and the AP Exam
+
+<img src="https://images.code.org/f884cf20d82ed87d6a63f35f0ab5fa2d-image-1509035460556.png" style="float:right; width:250px; margin-left: 10px;">
+
+**Abstractions help manage the complexity of the systems you build**
+
+As you'll see in this unit, the best way to build complex programs is to build abstractions. If you set out to build a complex turtle drawing (like the one to the right), you won't actually write all the individual movements and turns required to draw it. Instead you'll create abstractions (again, usually functions) that let you quickly express this complex behavior. This unit is largely about teaching you:
+
+* to use abstraction as a problem solving technique
+* to create and use abstractions in programs you write
+* to communicate about how abstraction helps you manage complexity
+
+**Abstraction and AP Computer Science Principles**
+
+(1) Abstraction is one of the seven big ideas of AP Computer Science Principles.
+
+(2) For the AP Create Performance Task you need to...
+
+<div style="width: 50%; margin-left: 40px; background-color: #EEEEEE; font-family: serif; font-size: 12pt; padding: 10px">
+[identify] a code segment that contains an abstraction you developed...[and]...explain how the abstraction helped manage the complexity of your program.
+</div>
+<br>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+#### How to use this level
+
+This level has a lot of text. Ways you might use it / incorporate it into your class:
+
+* Assign as reading for students the day before
+* Have students stop at this level during the normal progression and read as a group - discuss key points.
+* Read and summarize for your students
+* Make note of it as a reference for students that explains "abstraction"
+* Use in conjunction with a preview of the AP Create Performance Task
+MARKDOWN

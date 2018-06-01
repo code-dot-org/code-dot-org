@@ -1,0 +1,19 @@
+name 'CSP Unit 1 Ch2 Cumulative Assessment MC Group_2018'
+title 'CS Principles Unit 1 Ch 2 Assessment'
+submittable 'true'
+anonymous 'false'
+
+page
+text 'csp_unit_assessment_overview_2018'
+level 'CSP Unit 2 Ch 2 MC routing simple_2018'
+level 'CSP Unit 1 Ch 2 MC internet layers_2018'
+level 'CSPFinal_Question_23_2018'
+level 'CSPFinal_Question_12_2018'
+level 'CB_Question_20_2018'
+
+page
+level 'CSP Unit 1 Ch 2 MC packets_2018'
+level 'CSP Unit 2 Ch 2 MC IETF_2018'
+level 'CSPFinal_Question_6_2018'
+level 'CSPFinal_Question_3_2018'
+level 'CSPFinal_Question_4_2018'

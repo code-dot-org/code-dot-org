@@ -470,9 +470,6 @@
         alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
         alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
         alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
-        hoc2015_preview_blocks: Make your own game blocks
-        hoc2015_preview_typing: Make your own game typing
-        hoc2015_preview_conclusion: Make your own game conclusion
         starwars_intro: '星球大战: 用代码构建一个星系-介绍'
         starwars_typing: '星球大战: 用代码构建一个星系-JavaScript'
         starwars_events: '星球大战: 用代码构建一个星系-事件'
@@ -534,8 +531,9 @@
         CSF_bb8_skinOverview_K-1: BB-8
         CSF_bb8_loops_C-F: 与BB-8一起循环
         CSF_harvester_skinOverview_K-1: 收获者
-        CSF_harvester_loops_K1: 收割机中的循环
+        CSF_harvester_loops_K1: 收割者中的循环
         CSF_scrat_loops_K1: 冰河时代里的循环
+        CSF_scrat_loops_CF: 冰河时代里的循环
     callout:
       text:
         drag_blocks: 拖动一个"移动"的块，并将它吸到别的模块下面

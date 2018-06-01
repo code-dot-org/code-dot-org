@@ -372,6 +372,8 @@
   homepage_header_donors: "Code.org takkar støttespelarane sine"
   homepage_donors_seall: "Sjå alt"
   homepage_donors_donate: "Gi bidrag"
+  homepage_below_hero_announcement_text: "We care about your privacy and are making some updates to our privacy policy, effective May 25."
+  homepage_below_hero_announcement_link_text: "Lær meir"
   contact_form_topic_student: "Eg er ein elev"
   contact_form_topic_parent: "Eg er ein forelder"
   contact_form_topic_teacher: "Eg er ein lærar"
@@ -411,7 +413,7 @@
   class_submission_languages_other: "Andre språk"
   videos_more: "Fleire <a href='%{inspiring_videos_playlist}'>inspirerande videoar</a> med rollemodellar og kjendisar"
   careers_page_more: "Fleire <a href='%{careers_url}' target='_blank'>inspirerande videoar</a> med profesjonelle innanfor teknologi"
-  playlab_choose_theme: "Velg eit tema for Spill-Lab"
+  playlab_choose_theme: "Velg eit tema for Spel-lab"
   playlab_classic_title: "Klassisk"
   playlab_gumball_title: "Gumballs fantastiske verd"
   playlab_iceage_title: "Istid - Kjem snart"
@@ -499,8 +501,10 @@
   video_title_real_madrid: "Kodetimen med Real Madrid"
   video_title_marco_belinelli: "Kodetimen med Marco Belinelli"
   video_title_chris_bosh: "Chris Bosh om programmering"
+  video_title_my_name_is_aracely: "My Name is Aracely"
   video_1min: "1 min"
   video_2min: "2 min"
+  video_3min: "3 min"
   video_5min: "5 min"
   speak_another_language: "Snakkar du eit anna språk?"
   help_translate: "Hjelp oss med å omsette."
@@ -540,6 +544,9 @@
   volunteer_engineer_submission_field_email: "E-postadresse"
   volunteer_engineer_submission_field_email_desc: "Di epostadresse vil ikkje bli delt, men me vil senda deg førespurnader frå lærarar."
   volunteer_engineer_submission_field_email_placeholder: "E-postadresse"
+  volunteer_engineer_submission_field_email_preference: "Can we email you about updates to our courses, volunteer opportunities, or other computer science news?"
+  volunteer_engineer_submission_field_email_preference_yes: 'Ja'
+  volunteer_engineer_submission_field_email_preference_no: 'Nei'
   volunteer_engineer_submission_final_paragraph: "Du vil bli vist på eit kart slik at lokale lærarar kan kontakta deg for å få hjelp til Kodetimen eller andre frivillig-oppgåver. Di epostadresse og din nøyaktige posisjon vil ikkje bli delt, men andre opplysningar (inkludert omtrentleg plassering) vil vera synleg for lokale lærarar."
   volunteer_engineer_submission_checkbox_contact: 'Eg godtar at lærarar kan kontakta meg for å hjelpa til med Kodetimen (Obs: di epostadresse vil ikkje bli delt)'
   volunteer_engineer_submission_checkbox_age_18_plus: "Eg stadfestar at eg er minst 18 år."
@@ -905,7 +912,7 @@
   projguts_name: "Stein, saks, papir"
   hourofcode_name: "Klassisk labyrint"
   playlab_name: "Spel-lab"
-  infinity_name: "Infinity Spill-lab"
+  infinity_name: "Infinity i Spel-lab"
   artist_name: "Kunstnar"
   monstercoding_name: "Kodeoppdraget Mysterieøya"
   allcancode_name: "Kjør Marco!"
@@ -945,6 +952,20 @@
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Eining 5: Data og samfunn'
   csd6_name: 'Eining 6: Fysisk programmering'
+  csd1-2018_name: 'Unit 1: Problem Solving'
+  csd2-2018_name: 'Unit 2: Web Development'
+  csd3-2018_name: 'Unit 3: Animation and Games'
+  csd4-2018_name: 'Unit 4: The Design Process'
+  csd5-2018_name: 'Eining 5: Data og samfunn'
+  csd6-2018_name: 'Eining 6: Fysisk programmering'
+  csp1-2018_name: 'Eining 1: Internett'
+  csp2-2018_name: 'Eining 2: Digital informasjon'
+  csp3-2018_name: 'Unit 3: Algorithms and Programming'
+  csp4-2018_name: 'Unit 4: Big Data and Privacy'
+  csp5-2018_name: 'Unit 5: Building Apps'
+  csp-explore-2018_name: 'Utforsk PT forberedelse'
+  csp-create-2018_name: 'Lag en PT forberedelse'
+  csppostap-2018_name: 'Post-AP: Databasar i appar'
   csp1_name: 'Eining 1: Internett'
   csp2_name: 'Eining 2: Digital informasjon'
   csp3_name: 'Unit 3: Algorithms and Programming'
@@ -955,6 +976,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP-ytelseaktivitetar
   csppostap_name: 'Post-AP: Databasar i appar'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: "Full test - 50 spørsmål"
   csp-explore_name: 'Utforsk PT forberedelse'
   csp-create_name: 'Lag en PT forberedelse'
@@ -980,12 +1002,14 @@
   csf_category_name: "Grunnleggande informatikk"
   csf_international_category_name: "Grunnleggande informatikk internasjonalt"
   csf2_draft_category_name: 'Under utvikling: Kurs A - F'
-  csd_category_name: "CS Discoveries"
+  csd_category_name: "CS Discoveries ('17-'18)"
+  csd_2018_category_name: "CS Discoveries ('18-'19)"
   csp_category_name: "'15-'16 Prinsipper i informatikk"
   csp17_category_name: "Prinsipp i informatikk"
+  csp_2018_category_name: "CS Principles ('18-'19)"
   cspexams_category_name: "Prinsipp i teoriprøve i informatikk"
   research_studies_category_name: "Research Studies"
-  applab_name: "App Lab"
+  applab_name: "App-lab"
   gamelab_name: "Spel-lab"
   basketball_name: "Lag eit basketballspel"
   sports_name: "Kode din eigen sport"
@@ -1441,6 +1465,7 @@
   header_documentation: "Dokumentasjon"
   csp_name: "Prinsipp i informatikk"
   csd_name: "CS Discoveries"
+  csd_2018_name: "CS Discoveries"
   full_course_category_name: "Alle kurs"
   user_header_label: "Hei %{username}"
   user_header_settings: "Kontoinnstillingar"

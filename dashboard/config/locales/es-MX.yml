@@ -139,6 +139,12 @@
     valid_password: "¡Contraseña válida!"
     invalid_password: La Contraseña debe tener al menos 6 caracteres
     mismatch_password: Las dos contraseñas que introdujo no coinciden
+    agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
+      and <a href='http://code.org/privacy'>Privacy Policy</a>.
+    under_13_consent: Si soy menor de 13 años de edad, confirmo que tengo autorización de mi padres o de mi
+      tutor legal para utilizar los servicios de Code.org.
+    agree_us_website: Acepto usar un sitio web con sede en Estados Unidos.
+    my_data_to_us: Acepto que se envíen y almacenen datos de mi utilización de este sitio web en Estados Unidos.
     student_terms: Estoy de acuerdo a regirme por los <a href='http://code.org/tos'>términos
       de servicio</a> de Code.org. Si tengo menos de 13 años, confirmo al enviar este
       formulario que tengo el permiso de mi padre o tutor legal para usar los servicios
@@ -152,12 +158,19 @@
       de privacidad</a>.
     additional_information: Necesitamos alguna información adicional para continuar
       con su registro.
+    user_type_button: Update Account Type
     user_type_label: Tipo de cuenta
     user_type_teacher: Profesor
     user_type_student: estudiante
     field_is_required: es requerido
     accept_terms: Debes estar de acuerdo para crear una cuenta
     error: Ocurrió un error.
+    email_preference_question: ¿Podemos enviarle por correo electrónico actualizaciones de nuestros cursos,
+      oportunidades en su zona u otras noticias sobre informática?
+    email_preference_privacy: (Consulte nuestra política de privacidad)
+    email_preference_yes: Sí
+    email_preference_no: 'No'
+    email_preference_required: You must specify an email preference.
   school_info:
     title: Información de la escuela (opcional)
     school_country: País de la escuela
@@ -196,8 +209,8 @@
     picture: Ahora encuentra tu foto secreta
     words: Introduce ahora tus palabras secretas
     login: Iniciar Sesión
-    invalid_login: Invalid login, please try again
-    pair_programming: I have a partner at my computer
+    invalid_login: Inicio de sesión no válido, por favor intente de nuevo
+    pair_programming: Tengo a mi pareja en mi ordenador
     student_privacy: Aprende más acerca de por qué no estás viendo tu nombre completo
       <a href='%{student_privacy_blog}' target='_blank'>aquí</a>.
   password:
@@ -351,9 +364,9 @@
       signup: Crear una cuenta
       already_registered: "¿Ya estás registrado?"
       pair_programming: Programación de pares
-      team: Team
-      driver: Driver
-      navigator: Navigator
+      team: Equipo
+      driver: Conductor
+      navigator: Navegador
     popup:
       progress_for_user: progreso de %{name}
       progress: Tu progreso
@@ -389,7 +402,7 @@
       example_with_number: Ejemplo de solución %{solution_number}
       submitted_on: Enviado el %{date}
       unsubmit: NO enviado
-      worked_with: Worked With
+      worked_with: Trabajado con
       update_lock_settings: Actualizar los ajustes de bloqueo aquí.
       clear_response: Respuesta clara
   user:
@@ -433,6 +446,7 @@
     enter_new_login_info: Ingresa tu nueva información de inicio de sesión
     confirm_secret_words: Confirma que eres tú al ingresar tus palabras secretas actuales
     enter_parent_email: Ingresa el email de tu padre o tutor (para recuperar la contraseña)
+    update: Update Account
   user_level:
     completed: Completada
     tried: Intentaste
@@ -623,6 +637,8 @@
       actualmente en su sección.
     already_enrolled_in_new_section: No puedes mover estos estudiantes porque este
       profesor ya los tiene en otra sección.
+    third_party_login: You cannot move students to a section that is synced with a
+      third party tool.
   share:
     title: Aprender en Code Studio
     description: Cualquier persona puede aprender informática. Crear juegos, aplicaciones
@@ -1165,6 +1181,7 @@
     csd5_2: 'Capítulo 2: Resolviendo problemas de datos'
     csd6_1: 'Capítulo 1: Programación con Hardware'
     csd6_2: 'Capítulo 2: Construcción de prototipos físicos'
+    csd_survey: Post-Course Survey
     csp1_1: 'Capítulo 1: Representación y transmisión de información'
     csp1_2: 'Capítulo 2: Inventando el Internet'
     csp2_1: 'Capítulo 1: Codificación y compresión de información compleja'
@@ -1178,6 +1195,11 @@
     csp_ap_1: 'Capítulo 1: Configuración de AP Tech'
     csp_ap_2: 'Capítulo 2: AP Examinar tareas de rendimiento'
     csp_ap_3: 'Capítulo 3: AP Crear tareas de rendimiento'
+    csp_postap_1: 'Capítulo 1: Manipulación y visualización de datos'
+    csp_postap_2: 'Capítulo 2: Aplicaciones y bases de datos'
+    csp2_1_2018: 'Unidad 2: Información Digital'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: Preguntas de reflexión
   external_links:
     disclaimer: Descargo de responsabilidad
@@ -1322,3 +1344,16 @@
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
   courses_category: Full Courses
+  cookie_banner:
+    message: By continuing to browse our site or clicking "I agree," you agree to
+      the storing of cookies on your computer or device.
+    more_information: See Code.org's Privacy Policy.
+    accept: De acuerdo
+  gdpr_dialog:
+    heading: Do you agree to using a web site based in the United States?
+    message: Data from your use of this site may be sent to and stored or processed
+      in the United States.
+    link_intro: For details see our
+    privacy_policy: privacy policy
+    logout: Logout
+    true: Sí

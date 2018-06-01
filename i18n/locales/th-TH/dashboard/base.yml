@@ -114,15 +114,24 @@ th:
     valid_password: "รหัสผ่านถูกต้อง"
     invalid_password: "รหัสผ่านต้องมีอย่างน้อย 6 ตัวอักษร"
     mismatch_password: "รหัสผ่านที่คุณป้อนไม่ตรงกัน"
+    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
+    under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
+    agree_us_website: "I agree to using a website based in the United States."
+    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
     student_terms: "ข้าพเจ้ายอมรับผูกพันตาม<a href='http://code.org/tos'>เงื่อนไขการให้บริการ</a>ของ Code.org ถ้าหากข้าพเจ้าอายุต่ำกว่า 13 ปี ข้าพเจ้ายืนยัน โดยส่งแบบฟอร์มนี้ว่า มีคุณพ่อคุณแม่หรือผู้ปกครองตามกฎหมายอนุญาตให้ใช้บริการ Code.org. <br/> <br/> ไม่มีการจัดเก็บที่อยู่อีเมล์ในแบบฟอร์มที่ให้เราได้ติดต่อนักเรียน นักเรียนจะไม่รับอีเมล์จาก Code.org ยกเว้นการกู้คืนรหัสผ่าน ดูข้อมูลเพิ่มเติมจาก <a href='http://code.org/privacy'>นโยบายความเป็นส่วนตัว</a>ของเรา"
     teacher_terms: "ข้าพเจ้ายอมรับผูกพันตามเงื่อนไขการให้บริการของ Code.org สำหรับข้อมูลเพิ่มเติมเกี่ยวกับความเป็นส่วนตัว ดูได้จาก<a href='http://code.org/privacy'>นโยบายความเป็นส่วนตัว</a>ของเรา"
     additional_information: "เราต้องการข้อมูลบางอย่างเพิ่มเติมเพื่อดำเนินการสมัครต่อ"
+    user_type_button: "Update Account Type"
     user_type_label: "ประเภทบัญชี"
     user_type_teacher: "ครู"
     user_type_student: "นักเรียน"
     field_is_required: "จำเป็น"
     accept_terms: "คุณต้อง ยอมรับ เพื่อสร้างบัญชี"
     error: "An error occurred."
+    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_yes: "ใช่"
+    email_preference_no: "ไม่ใช่"
+    email_preference_required: "You must specify an email preference."
   school_info:
     title: 'School Information (optional)'
     school_country: 'School Country'
@@ -351,8 +360,8 @@ th:
     email_resend_confirm: 'ส่งคำแนะนำการยืนยันตัวอีกครั้ง'
     new_password_hint: "(ปล่อยว่างไว้ถ้าคุณไม่ต้องการเปลี่ยน)"
     current_password_hint: '(we need your current password to confirm your changes)'
-    delete: 'Delete your account'
-    delete_text: "Clicking the button below will delete your account."
+    delete: 'Delete Account'
+    delete_text: "Deleting your account will erase all information and progress connected to this account."
     delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
     delete_confirm: 'Are you sure you want to delete your account?'
     deleted_user: 'deleted user'
@@ -368,6 +377,7 @@ th:
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
+    update: "Update Account"
   user_level:
     completed: 'สมบูรณ์'
     tried: 'Tried'
@@ -449,6 +459,7 @@ th:
     student_not_found: "One or more students could not be found."
     all_students_must_be_in_current_section: "All the students must currently be enrolled in your section."
     already_enrolled_in_new_section: "You cannot move these students because they are already in the new section."
+    third_party_login: "You cannot move students to a section that is synced with a third party tool."
   share:
     title: "เรียนกับ Code Studio"
     description: "Anyone can learn computer science. Make games, apps and art with code."
@@ -723,21 +734,21 @@ th:
     message: "Please tell us your race (check all that apply)"
     races:
       - 
-        white: White
+        white: "White"
       - 
-        black: Black or African American
+        black: "Black or African American"
       - 
-        hispanic: Hispanic or Latino
+        hispanic: "Hispanic or Latino"
       - 
-        asian: Asian
+        asian: "Asian"
       - 
-        hawaiian: Native Hawaiian or other Pacific Islander
+        hawaiian: "Native Hawaiian or other Pacific Islander"
       - 
-        american_indian: American Indian/Alaska Native
+        american_indian: "American Indian/Alaska Native"
       - 
-        other: อาชีพอื่น ๆ
+        other: "อาชีพอื่น ๆ"
       - 
-        opt_out: Prefer not to say
+        opt_out: "Prefer not to say"
     submit: "ส่ง"
     decline: "Close"
   zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'
@@ -868,6 +879,7 @@ th:
     csd5_2: 'Chapter 2: Solving Data Problems'
     csd6_1: 'Chapter 1: Programming with Hardware'
     csd6_2: 'Chapter 2: Building Physical Prototypes'
+    csd_survey: 'Post-Course Survey'
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -881,6 +893,11 @@ th:
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Unit 2: Digital Information'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: 'Reflection Prompts'
   external_links:
     disclaimer: Disclaimer
@@ -985,3 +1002,14 @@ th:
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: 'Full Courses'
+  cookie_banner:
+    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+    more_information: "See Code.org's Privacy Policy."
+    accept: 'ฉันเห็นด้วย'
+  gdpr_dialog:
+    heading: 'Do you agree to using a web site based in the United States?'
+    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+    link_intro: 'For details see our'
+    privacy_policy: 'privacy policy'
+    logout: 'Logout'
+    yes: 'ใช่'

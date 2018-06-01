@@ -267,13 +267,9 @@ class ApiController < ApplicationController
       return head :range_not_satisfiable
     end
 
-    # TODO: This could likely be constructed more efficiently. At the very least,
-    # instead of asking for a summary, and then using only one portion of it (levels)
-    # we could probably expose a way to get just levels and have it be in the same
-    # form as user_progress. However, we might be able to do even better and query
-    # all the data that we need in a single db request
+    # Get the level progress for each student
     paged_students.each do |student|
-      data[student.id] = summarize_user_progress(script, student)[:levels]
+      data[student.id] = user_progress_for_levels(script, student)
     end
     render json: {
       students: data,
@@ -410,6 +406,7 @@ class ApiController < ApplicationController
   # Each such array contains an array of individual level results, matching the order of the LevelGroup's
   # levels.  For each level, the student's answer content is in :student_result, and its correctness
   # is in :correct.
+  # TODO(caleybrock): remove once the assessments tab is in react
   def section_assessments
     section = load_section
     script = load_script(section)

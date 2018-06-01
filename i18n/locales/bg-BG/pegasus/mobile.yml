@@ -16,7 +16,7 @@
   anybody_can_learn: "Всеки може да се научи."
   learn_now: "Научете сега"
   petition_message: "Всеки ученик в училище трябва да има възможност да учи компютърни науки"
-  petition_sign_message: 'Ако сте съгласни, подпишете се с името си. Присъединете се към # всички останали.'
+  petition_sign_message: 'Ако сте съгласни, подпишете се с името си. Присъединете се към # други.'
   petition_sign_message_support: 'Ако ни подкрепяте, запишете се.  Присъединете се # към другите.'
   petition_join_others: 'Присъединете се към # другите'
   name: "Име"
@@ -365,6 +365,8 @@
   homepage_header_donors: "Code.org благодари на своите привърженици"
   homepage_donors_seall: "Вижте всички"
   homepage_donors_donate: "Дарения"
+  homepage_below_hero_announcement_text: "We care about your privacy and are making some updates to our privacy policy, effective May 25."
+  homepage_below_hero_announcement_link_text: "Научете повече"
   contact_form_topic_student: "Аз съм ученик"
   contact_form_topic_parent: "Аз съм родител"
   contact_form_topic_teacher: "Аз съм учител/обучител"
@@ -492,8 +494,10 @@
   video_title_real_madrid: "Russell Okung с Real Madrid"
   video_title_marco_belinelli: "Hour of Code с Marco Belinelli"
   video_title_chris_bosh: "Крис Бош за компютърните науки"
+  video_title_my_name_is_aracely: "My Name is Aracely"
   video_1min: "1 мин."
   video_2min: "2 мин."
+  video_3min: "3 min"
   video_5min: "5 мин."
   speak_another_language: "Говорите друг език?"
   help_translate: "Помогнете ни с превода."
@@ -533,6 +537,9 @@
   volunteer_engineer_submission_field_email: "Имейл адрес"
   volunteer_engineer_submission_field_email_desc: "Вашият имейл адрес няма да бъде споделен, но ние ще Ви изпратим заявки от учителите."
   volunteer_engineer_submission_field_email_placeholder: "Имейл адрес"
+  volunteer_engineer_submission_field_email_preference: "Can we email you about updates to our courses, volunteer opportunities, or other computer science news?"
+  volunteer_engineer_submission_field_email_preference_yes: 'Да'
+  volunteer_engineer_submission_field_email_preference_no: 'Не'
   volunteer_engineer_submission_final_paragraph: "Вие ще бъдете отбелязан на картата в помощ на местните учители, за да се свържем с Вас за Часът на кода или други възможности за доброволчество. Вашата електронна поща и точния адрес няма да бъдат споделяни. Но друга информация (включително приблизителното местоположение) ще бъде публична и видима от местните учители."
   volunteer_engineer_submission_checkbox_contact: 'Съгласен съм, учителите да могат да се свържат с мен за доброволческа помощ (Забележка: Вашият имейл адрес няма да бъде споделен)'
   volunteer_engineer_submission_checkbox_age_18_plus: "I certify that I am at least 18 years old."
@@ -938,6 +945,20 @@
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Unit 5: Data and Society'
   csd6_name: 'Unit 6: Physical Computing'
+  csd1-2018_name: 'Unit 1: Problem Solving'
+  csd2-2018_name: 'Unit 2: Web Development'
+  csd3-2018_name: 'Unit 3: Animation and Games'
+  csd4-2018_name: 'Unit 4: The Design Process'
+  csd5-2018_name: 'Unit 5: Data and Society'
+  csd6-2018_name: 'Unit 6: Physical Computing'
+  csp1-2018_name: 'Раздел 1: Интернет'
+  csp2-2018_name: 'Част 1 - Дигитална информация'
+  csp3-2018_name: 'Unit 3: Algorithms and Programming'
+  csp4-2018_name: 'Unit 4: Big Data and Privacy'
+  csp5-2018_name: 'Unit 5: Building Apps'
+  csp-explore-2018_name: 'AP: Explore PT Prep'
+  csp-create-2018_name: 'AP: Create PT Prep'
+  csppostap-2018_name: 'Post AP: Databases in Apps'
   csp1_name: 'Раздел 1: Интернет'
   csp2_name: 'Част 1 - Дигитална информация'
   csp3_name: 'Unit 3: Algorithms and Programming'
@@ -948,6 +969,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: "Пълен тест - 50 въпроса"
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'
@@ -973,9 +995,11 @@
   csf_category_name: "CS основи"
   csf_international_category_name: "CS Fundamentals International"
   csf2_draft_category_name: 'Under Development: Courses A - F'
-  csd_category_name: "CS Discoveries"
+  csd_category_name: "CS Discoveries ('17-'18)"
+  csd_2018_category_name: "CS Discoveries ('18-'19)"
   csp_category_name: "\"15-\" 16 CS принципи"
   csp17_category_name: "\"15-\" 16 CS принципи"
+  csp_2018_category_name: "CS Principles ('18-'19)"
   cspexams_category_name: "CS принципи практически тест"
   research_studies_category_name: "Research Studies"
   applab_name: "Лаборатория за приложения"
@@ -1434,12 +1458,13 @@
   header_documentation: "Documentation"
   csp_name: "\"15-\" 16 CS принципи"
   csd_name: "CS Discoveries"
+  csd_2018_name: "CS Discoveries"
   full_course_category_name: "Full Courses"
   user_header_label: "Здравейте %{username}"
   user_header_settings: "Моят акаунт"
   user_header_logout: "Изход"
   user_header_signin: "Вход"
-  view_all_sections: "View All Sections"
+  view_all_sections: "Покажи всички раздели"
   view_section: "View Section"
   view_named_section: "View %{section_name}"
   privacy_doc_explanation: "Click here for our privacy document that can be shared or printed for your students."

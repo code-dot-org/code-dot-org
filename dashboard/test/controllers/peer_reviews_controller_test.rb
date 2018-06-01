@@ -50,16 +50,17 @@ class PeerReviewsControllerTest < ActionController::TestCase
   end
 
   test 'Reviewers can access peer escalated reviews and view other submissions' do
-    @peer_review.update(status: 2, reviewer: @user, data: 'Help!')
-    PeerReview.second.update(status: 0, reviewer: (create :teacher), data: 'Looks good to me')
-    sign_out(@user)
     reviewer = create :plc_reviewer
+
+    @peer_review.update(reviewer: @user, data: 'Looks good to the user')
+    PeerReview.second.update(reviewer: reviewer, status: 'accepted', data: 'Looks good to the reviewer')
+    sign_out(@user)
     sign_in(reviewer)
 
     get :show, params: {id: PeerReview.last.id}
     assert :success
-    assert_select '.peer-review-content', 2
-    assert_equal ['Help!', 'Looks good to me'], css_select('.peer-review-data').map(&:text)
+    assert_select '.peer-review-content', 1
+    assert_equal ['Looks good to the user'], css_select('.peer-review-data').map(&:text)
   end
 
   test 'Users cannot access other peer reviews' do
@@ -98,7 +99,7 @@ class PeerReviewsControllerTest < ActionController::TestCase
     @peer_review.update(reviewer_id: plc_reviewer.id)
     post :update, params: {
       id: @peer_review.id,
-      peer_review: {status: LEVEL_STATUS.accepted, data: 'This is great'}
+      peer_review: {status: 'accepted', data: 'This is great'}
     }
     @peer_review.reload
     assert @peer_review.from_instructor
@@ -112,7 +113,7 @@ class PeerReviewsControllerTest < ActionController::TestCase
 
     post :update, params: {
       id: @peer_review.id,
-      peer_review: {status: LEVEL_STATUS.accepted, data: 'This is great'}
+      peer_review: {status: 'accepted', data: 'This is great'}
     }
 
     assert_redirected_to peer_review_path(@peer_review)
@@ -122,7 +123,7 @@ class PeerReviewsControllerTest < ActionController::TestCase
     @peer_review.update(reviewer_id: @user.id)
     post :update, params: {
       id: @peer_review.id,
-      peer_review: {status: LEVEL_STATUS.accepted, data: 'This is great'}
+      peer_review: {status: 'accepted', data: 'This is great'}
     }
     assert_redirected_to script_path(@script)
   end
@@ -131,7 +132,7 @@ class PeerReviewsControllerTest < ActionController::TestCase
     @peer_review.update(reviewer_id: @user.id)
     post :update, params: {
       id: @peer_review.id,
-      peer_review: {status: LEVEL_STATUS.accepted, data: panda_panda}
+      peer_review: {data: panda_panda}
     }
     @peer_review.reload
     assert_equal 'Panda', @peer_review.data

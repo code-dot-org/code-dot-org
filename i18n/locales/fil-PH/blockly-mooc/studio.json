@@ -318,6 +318,7 @@
   "moveSpriteN": "move actor {spriteIndex}",
   "moveDroid": "igalaw ang droid",
   "moveDroidN": "igalaw ang droid {spriteIndex}",
+  "to": "sa",
   "toXY": "sa x, y",
   "moveDown": "igalaw pababa",
   "moveDownTooltip": "Igalaw ang aktor pababa.",

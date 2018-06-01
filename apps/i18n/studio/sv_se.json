@@ -318,6 +318,7 @@
   "moveSpriteN": "flytta spelkaraktären {spriteIndex}",
   "moveDroid": "move droid",
   "moveDroidN": "move droid {spriteIndex}",
+  "to": "till",
   "toXY": "x, y",
   "moveDown": "flytta neråt",
   "moveDownTooltip": "Flytta en spelkaraktär nedåt.",

@@ -770,9 +770,6 @@
         alg_16_biggame_collision_detection: CS in Algebra - Big Game Rilevamento delle
           collisioni
         alg_17_sambat_compound_booleans: CS in Algebra - Booleani composti
-        hoc2015_preview_blocks: Make your own game blocks
-        hoc2015_preview_typing: Make your own game typing
-        hoc2015_preview_conclusion: Make your own game conclusion
         starwars_intro: 'Guerre Stellari: Costruisci una galassia con il codice -
           Introduzione'
         starwars_typing: 'Guerre Stellari: Costruisci una galassia con il codice -
@@ -841,8 +838,9 @@
         CSF_bb8_skinOverview_K-1: BB-8
         CSF_bb8_loops_C-F: Loops with BB-8
         CSF_harvester_skinOverview_K-1: The Harvester
-        CSF_harvester_loops_K1: Loops in Harvester
+        CSF_harvester_loops_K1: Cicli con la Mietitrice
         CSF_scrat_loops_K1: Loops in Ice Age
+        CSF_scrat_loops_CF: Loops in Ice Age
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto

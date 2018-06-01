@@ -47,6 +47,15 @@ class Experiment < ApplicationRecord
         (experiment.script_id.nil? || experiment.script_id == script.try(:id)) &&
         (experiment_name.nil? || experiment.name == experiment_name)
     end
+  rescue => e
+    Honeybadger.notify(
+      e,
+      error_message: 'Error getting experiments',
+      context: {
+        user_id: user && user.id
+      }
+    )
+    []
   end
 
   # Returns whether the experiment_name is enabled for the specified user,

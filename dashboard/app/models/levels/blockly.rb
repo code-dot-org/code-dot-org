@@ -73,6 +73,7 @@ class Blockly < Level
     contained_level_names
     encrypted_examples
     disable_if_else_editing
+    show_type_hints
   )
 
   before_save :update_ideal_level_source
@@ -265,6 +266,7 @@ class Blockly < Level
           toolbox_blocks ||
           default_toolbox_blocks
         level_prop['codeFunctions'] = try(:project_template_level).try(:code_functions) || code_functions
+        level_prop['sharedBlocks'] = shared_blocks
       end
 
       if is_a? Applab
@@ -316,19 +318,25 @@ class Blockly < Level
     options.freeze
   end
 
-  def localized_failure_message_override
-    if should_localize? && failure_message_override
-      I18n.t("data.failure_message_overrides").
-        try(:[], "#{name}_failure_message_override".to_sym)
+  def get_localized_property(property_name)
+    if should_localize? && try(property_name)
+      I18n.t("data.#{property_name.pluralize}.#{name}_#{property_name.singularize}", default: nil)
     end
+  end
+
+  def localized_failure_message_override
+    get_localized_property("failure_message_overrides")
+  end
+
+  def localized_markdown_instructions
+    get_localized_property("markdown_instructions")
   end
 
   def localized_authored_hints
     return unless authored_hints
 
     if should_localize?
-      translations = I18n.t("data.authored_hints").
-        try(:[], "#{name}_authored_hint".to_sym)
+      translations = get_localized_property("authored_hints")
 
       return unless translations.instance_of? Hash
 
@@ -359,7 +367,7 @@ class Blockly < Level
 
   def localized_instructions
     if custom?
-      loc_val = I18n.t("data.instructions").try(:[], "#{name}_instruction".to_sym)
+      loc_val = get_localized_property("instructions")
       unless I18n.en? || loc_val.nil?
         return loc_val
       end
@@ -402,5 +410,18 @@ class Blockly < Level
 
   def default_toolbox_blocks
     nil
+  end
+
+  # Clear 'is_project_level' from cloned levels
+  def clone_with_name(name)
+    level = super(name)
+    level.update!(is_project_level: false)
+    level
+  end
+
+  def shared_blocks
+    Rails.cache.fetch("blocks/#{type}", force: !Script.should_cache?) do
+      Block.where(level_type: type).map(&:block_options)
+    end
   end
 end

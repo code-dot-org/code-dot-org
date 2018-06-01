@@ -114,15 +114,24 @@ ro:
     valid_password: "Parolă validă!"
     invalid_password: "Parola trebuie să conţină cel puțin 6 caractere"
     mismatch_password: "Cele două parole introduse nu se potrivesc"
+    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
+    under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
+    agree_us_website: "I agree to using a website based in the United States."
+    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
     student_terms: "Sunt de acord să respect Code.org <a href='http://code.org/tos'> termenii de serviciu</a>. Dacă am sub vârsta de 13 ani, confirm prin trimiterea acestui formular că am părinte sau tutore legal și permisiunea de a utiliza serviciile Code.org. <br/> <br/> Adresele de e-mail nu sunt stocate într-o formă care permite să contactăm studenţii. Elevii nu vor primi niciodată e-mailuri de la Code.org cu excepţia de recuperare a parolei. A se vedea termenii noștrii<a href='http://code.org/privacy'> de confidentialitate</a> pentru mai multe informaţii."
     teacher_terms: "Sunt de acord să respect termenii Code.org de serviciu. Pentru mai multe informaţii despre confidenţialitate, consultaţi <a href='http://code.org/privacy'> politica noastră de confidenţialitate</a>."
     additional_information: "Mai avem nevoie de câteva informaţii adiționale pentru a te putea înscrie."
+    user_type_button: "Update Account Type"
     user_type_label: "Tipul contului"
     user_type_teacher: "Profesor"
     user_type_student: "elev"
     field_is_required: "este necesar"
     accept_terms: "Trebuie să fii de acord pentru a crea un cont"
     error: "S-a produs o eroare."
+    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_yes: "Da"
+    email_preference_no: "Nu"
+    email_preference_required: "You must specify an email preference."
   school_info:
     title: 'Informații școală (opțional)'
     school_country: 'Țara școlii'
@@ -368,6 +377,7 @@ ro:
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
+    update: "Update Account"
   user_level:
     completed: 'Finalizat'
     tried: 'Încercat'
@@ -449,6 +459,7 @@ ro:
     student_not_found: "Unul sau mai mulți studenți nu au putut fi găsiți."
     all_students_must_be_in_current_section: "Toţi studenţii trebuie să fie înscrişi în prezent în secţiune."
     already_enrolled_in_new_section: "Nu puteţi muta aceşti studenţi deoarece acest profesor ii are deja în altă secţiune."
+    third_party_login: "You cannot move students to a section that is synced with a third party tool."
   share:
     title: "Învață in Atelierul de programare"
     description: "Oricine poate învăţa programare. Face jocuri, aplicaţii şi artă cu programare."
@@ -723,21 +734,21 @@ ro:
     message: "Va rog sa ne spuneti rasa dvs"
     races:
       - 
-        white: Alb
+        white: "Alb"
       - 
-        black: Negru sau afro-americani
+        black: "Negru sau afro-americani"
       - 
-        hispanic: Hispanic sau Latino
+        hispanic: "Hispanic sau Latino"
       - 
-        asian: Asiatic
+        asian: "Asiatic"
       - 
-        hawaiian: Nativ hawaian sau din zona Pacificului
+        hawaiian: "Nativ hawaian sau din zona Pacificului"
       - 
-        american_indian: American Indian/Nativ Alaska
+        american_indian: "American Indian/Nativ Alaska"
       - 
-        other: Alte
+        other: "Alte"
       - 
-        opt_out: Prefer să nu răspund
+        opt_out: "Prefer să nu răspund"
     submit: "Trimite"
     decline: "Închide"
   zendesk_too_young_message: 'Ne pare rău, însă utilizatorii mai tineri nu au voie să intre pe site-ul nostru de suport. Poți naviga pe <a href="http://support.code.org">support.code.org</a> fără a te loga sau solicită ajutorul unui părinte sau profesor să ne contacteze în numele tău.'
@@ -868,6 +879,7 @@ ro:
     csd5_2: 'Chapter 2: Solving Data Problems'
     csd6_1: 'Chapter 1: Programming with Hardware'
     csd6_2: 'Chapter 2: Building Physical Prototypes'
+    csd_survey: 'Post-Course Survey'
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -881,6 +893,11 @@ ro:
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Unitatea 2: Informaţii digitale'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: 'Reflection Prompts'
   external_links:
     disclaimer: Act de renuntare
@@ -985,3 +1002,14 @@ ro:
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: 'Toate cursurile'
+  cookie_banner:
+    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+    more_information: "See Code.org's Privacy Policy."
+    accept: 'Sunt de acord'
+  gdpr_dialog:
+    heading: 'Do you agree to using a web site based in the United States?'
+    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+    link_intro: 'For details see our'
+    privacy_policy: 'privacy policy'
+    logout: 'Logout'
+    yes: 'Da'

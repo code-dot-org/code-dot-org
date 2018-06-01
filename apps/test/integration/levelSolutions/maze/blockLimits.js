@@ -1,4 +1,4 @@
-const TestResults = require('@cdo/apps/constants.js').TestResults;
+import {TestResults} from '@cdo/apps/constants';
 const blockUtils = require('@cdo/apps/block_utils');
 
 const levelDef = {

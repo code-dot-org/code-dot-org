@@ -47,11 +47,15 @@ function showCourseOverview() {
     store.dispatch(initializeHiddenScripts(scriptData.hidden_scripts));
   }
 
+  const versions = courseSummary.versions;
+
   // Eventually we want to do this all via redux
   ReactDOM.render(
     <Provider store={store}>
       <CourseOverview
+        name={courseSummary.name}
         title={courseSummary.title}
+        assignmentFamilyTitle={courseSummary.assignment_family_title}
         id={courseSummary.id}
         descriptionStudent={courseSummary.description_student}
         descriptionTeacher={courseSummary.description_teacher}
@@ -62,6 +66,8 @@ function showCourseOverview() {
         scripts={courseSummary.scripts}
         isVerifiedTeacher={!!scriptData.is_verified_teacher}
         hasVerifiedResources={!!courseSummary.has_verified_resources}
+        versions={versions}
+        showVersionWarning={!!scriptData.show_version_warning && versions.length > 1}
       />
     </Provider>,
   document.getElementById('course_overview'));

@@ -21,7 +21,6 @@
       "multiplyOperator": null,
       "divideOperator": null
     },
-    "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "<img src=\"https://images.code.org/9f9162cb94a02d9b3aba9b6067d0281a-image-1491862771496.gif\" style=\"float: right; margin-left: 20px\">\r\n\r\n# Moving to the Left\r\n\r\nIf adding to a sprite's x coordinate makes it move to the right, how could you make it move to the left?\r\n\r\n# Do This\r\n\r\nMake your program animate like the image to the right. Update `fly.x` inside the draw loop so that in each frame the fly is drawn a little bit further to the left.\r\n\r\n_Tip: You can make your sprites move faster by adding or subtracting larger numbers. The fly in our example moves about twice as fast as the plane in the last level._",
@@ -29,7 +28,7 @@
     "start_blocks": "var fly = createSprite(350, 200);\r\nfly.setAnimation(\"fly\");\r\n\r\nfunction draw() {\r\n  background(\"skyblue\");\r\n  // Move the fly a bit to the left\r\n  // each time the draw loop is run.\r\n\r\n  drawSprites();\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -61,11 +60,18 @@
     "encrypted_examples": "xxBtHD8Kwcp0DvTWpdUgzsc7RTKJPEm5pjOw+GlCd9JH4KufqUm5/u4l+lk5\nC/MGNhuiqcrPJZrgd9dRoXo9uA==\n",
     "parent_level_id": 8801,
     "name_suffix": "_2018",
+    "map_reference": "/docs/csd-1718/counter_pattern/index.html",
+    "video_key": "csd_gamelab_sprites_2",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-13 20:46:14 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-26 17:49:58 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-13 20:46:14 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-26 17:49:58 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-15 19:25:42 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-15 19:26:13 +0000\",\"changed\":[\"code_functions\",\"never_autoplay_video\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

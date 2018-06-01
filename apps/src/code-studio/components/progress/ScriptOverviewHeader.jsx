@@ -7,8 +7,10 @@ import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 import { SignInState } from '@cdo/apps/code-studio/progressRedux';
 import ScriptAnnouncements from './ScriptAnnouncements';
 import { announcementShape } from '@cdo/apps/code-studio/scriptAnnouncementsRedux';
-import { NotificationType } from '@cdo/apps/templates/Notification';
+import Notification, { NotificationType } from '@cdo/apps/templates/Notification';
 import i18n from '@cdo/locale';
+
+const SCRIPT_OVERVIEW_WIDTH = 1100;
 
 /**
  * This component takes some of the HAML generated content on the script overview
@@ -29,6 +31,7 @@ class ScriptOverviewHeader extends Component {
     isSignedIn: PropTypes.bool.isRequired,
     isVerifiedTeacher: PropTypes.bool.isRequired,
     hasVerifiedResources: PropTypes.bool.isRequired,
+    showVersionWarning: PropTypes.bool,
   };
 
   componentDidMount() {
@@ -43,6 +46,7 @@ class ScriptOverviewHeader extends Component {
       isSignedIn,
       isVerifiedTeacher,
       hasVerifiedResources,
+      showVersionWarning,
     } = this.props;
 
     let verifiedResourcesAnnounce = [];
@@ -66,6 +70,16 @@ class ScriptOverviewHeader extends Component {
         {viewAs === ViewType.Teacher && isSignedIn &&
           <ScriptAnnouncements
             announcements={verifiedResourcesAnnounce.concat(announcements)}
+            width={SCRIPT_OVERVIEW_WIDTH}
+          />
+        }
+        {showVersionWarning &&
+          <Notification
+            type={NotificationType.warning}
+            notice={i18n.wrongCourseVersionWarningNotice()}
+            details={i18n.wrongUnitVersionWarningDetails()}
+            dismissible={true}
+            width={SCRIPT_OVERVIEW_WIDTH}
           />
         }
         <ProtectedStatefulDiv

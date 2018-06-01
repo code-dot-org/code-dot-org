@@ -1,0 +1,8 @@
+name 'U1L2 Multiple Choice Assessment Question_2018'
+title 'Multiple Choice: Sending Binary Messages'
+description ''
+question 'A binary question is defined as:'
+wrong 'A piece of information that is sent in pairs'
+wrong 'Two questions which share the same answer'
+wrong 'A message which has two possible states'
+right 'A question which can be answered in only one of two possible ways'

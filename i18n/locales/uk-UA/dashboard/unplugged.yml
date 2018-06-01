@@ -266,41 +266,41 @@ uk:
         title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
         desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
       BuildingAFoundation_2018:
-        title: ""
-        desc: ""
+        title:
+        desc:
       courseB_unplugged_loopyMRF_2018:
-        title: ""
-        desc: ""
+        title:
+        desc:
       DiceRace_2018:
-        title: ""
-        desc: ""
+        title:
+        desc:
       courseE_unplugged_privateInformation_2018:
-        title: ""
-        desc: ""
+        title:
+        desc:
       SongwritingParameters_2018:
-        title: ""
-        desc: ""
+        title:
+        desc:
       Internet_2018:
-        title: ""
-        desc: ""
+        title:
+        desc:
       Crowdsourcing_2018:
-        title: ""
-        desc: ""
+        title:
+        desc:
       TangramAlgorithms_2018:
-        title: ""
-        desc: ""
+        title:
+        desc:
       courseF_unplugged_powerOfWords_2018:
-        title: ""
-        desc: ""
+        title:
+        desc:
       EnvelopeVariables_2018:
-        title: ""
-        desc: ""
+        title:
+        desc:
       ForLoopFun_2018:
-        title: ""
-        desc: ""
+        title:
+        desc:
       SongwritingWithParameters_2018:
-        title: ""
-        desc: ""
+        title:
+        desc:
       PlantASeed_2018:
         title: 'Життєві алгоритми: посадити насіння'
         desc: Цей урок висвітлює способи використання алгоритмів у повсякденному житті, на прикладі висівання насіння. Він також акцентує увагу на ширшому контексті інформатики та важливій ролі, яку відіграють у ній алгоритми.
@@ -346,3 +346,12 @@ uk:
       MoveItMoveIt_2018:
         title: Рухайся, рухайся
         desc: ''
+      courseB_unplugged_CnC_2018:
+        title: It's Great to Create and Play Fair
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the creative process of sharing and inspiration.  Along with that comes the promotion of creative expression and the need to be fair with creative work.
+      courseE_unplugged_CnC_2018:
+        title: Digital Sharing
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.
+      RelayProgramming_2018:
+        title: Естафетне програмування
+        desc: This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.

@@ -137,6 +137,13 @@
     valid_password: Gilt lykilorð!
     invalid_password: Lykilorð verður að vera að minnsta kosti 6 stafir
     mismatch_password: Lykilorðin tvö sem þú slóst inn eru ekki eins
+    agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
+      and <a href='http://code.org/privacy'>Privacy Policy</a>.
+    under_13_consent: If I am under 13 years of age, I confirm that I have my parent
+      or legal guardian's permission to use the Code.org services.
+    agree_us_website: I agree to using a website based in the United States.
+    my_data_to_us: Data from my use of this site may be sent to and stored or processed
+      in the United States.
     student_terms: Ég samþykki að hlíta <a href='http://code.org/tos'>þjónustuskilmálum</a>
       Code.org. Ef ég er yngri en 13 ára, staðfesti ég með því að senda inn þetta
       form að ég hef leyfi foreldra eða löglegs forráðamanns til að nota þjónustu
@@ -149,12 +156,18 @@
       okkar.
     additional_information: Við þurfum viðbótarupplýsingar til að geta haldið áfram
       að skrá þig.
+    user_type_button: Update Account Type
     user_type_label: Tegund aðgangs
     user_type_teacher: Kennari
     user_type_student: nemandi
     field_is_required: er nauðsynlegt
     accept_terms: Þú verður að samþykkja að stofna aðgang
     error: Villa kom upp.
+    email_preference_question: Can we email you about updates to our courses, local
+      learning opportunities, or other computer science news?
+    email_preference_yes: Já
+    email_preference_no: Nei
+    email_preference_required: You must specify an email preference.
   school_info:
     title: Upplýsingar skóla (val)
     school_country: Land skóla
@@ -205,7 +218,7 @@
       email: Netfang
       submit: Senda inn
     reset_errors:
-      captcha_required: Please fill out the CAPTCHA to reset your password.
+      captcha_required: Vinsamlegast kláraðu skynprófið til að endurstilla leyniorðið.
       invalid_email: Svo virðist sem þú hafir skráð þig með ógildu netfangi. Vinsamlegast
         sendu póst á support@code.org til að fá tengil fyrir endurstillingu lykilorðs.
     change_form:
@@ -425,6 +438,7 @@
       leyniorð
     enter_parent_email: Skráðu netfang foreldris eða forráðamanns (ef leyniorð skyldi
       gleymast)
+    update: Update Account
   user_level:
     completed: Lokið
     tried: Reynt
@@ -605,6 +619,8 @@
       í hópinn þinn.
     already_enrolled_in_new_section: Þú getur ekki fært þessa nemendur vegna þess
       að þessi kennari er þegar með þá í öðrum hópi.
+    third_party_login: You cannot move students to a section that is synced with a
+      third party tool.
   share:
     title: Lærðu í Kóðastúdíóinu
     description: Allir geta lært tölvunarfræði. Búðu til leiki, öpp og list með kóða.
@@ -768,7 +784,7 @@
       cta: Læra hvernig
     hoc-encryption:
       title: Einföld dulkóðun
-      body: Students will learn techniques to create and crack encrypted messages.
+      body: Nemendur munu læra aðferðir til að búa til og þýða dulkóðuð skilaboð.
     weblab:
       title: Vefsmiðja (beta)
       body: Vefsmiðjan er forritunarumhverfi þar sem þú getur búið til einfaldar vefsíður
@@ -872,9 +888,9 @@
     hide_survey_last_answer: Þessi könnun er nafnlaus. Þú getur séð samanteknar niðurstöður
       á stjórnborði kennara. Athugaðu að niðurstöður sjást ekki nema a.m.k. fimm nemendur
       hafi svarað.
-    survey_submission_thankyou: Thank you for submitting this survey! The survey has
-      been cleared so that your responses stay anonymous. Note that your teacher will
-      still be able to see responses for the whole class, but without names attached.
+    survey_submission_thankyou: Kærar þakkir fyrir að senda inn þessa könnun! Allar
+      upplýsingar um þig hafa verið fjarlægðar úr svörunum. Athugaðu að kennarinn
+      mun samt geta séð hvernig allur bekkurinn svaraði en án þess að nöfn komi fram.
   level_group-submittable:
     wrong_title: Takk fyrir
     wrong_body: Takk fyrir að senda inn svör.
@@ -1116,7 +1132,7 @@
     content: Innihald
     practice: Kennsluaðferðir
     peer_review: Álit samnemenda
-    ramp_up: Ramp-Up
+    ramp_up: Efling
     end_of_course_project: End of Course Project
     optional_stages: Optional Stages
     main_course: Aðalnámskeið
@@ -1137,6 +1153,7 @@
     csd5_2: 'Kafli 2: Lausn vandamála með gögn'
     csd6_1: 'Kafli 1: Úttak vélbúnaðar'
     csd6_2: 'Kafli 2: Inntak vélbúnaðar'
+    csd_survey: Post-Course Survey
     csp1_1: 'Kafli 1: Framsetning og flutningur upplýsinga'
     csp1_2: 'Kafli 2: Að finna upp internetið'
     csp2_1: 'Kafli 1: Að umkóða og þjappa margbrotnar upplýsingar'
@@ -1150,6 +1167,11 @@
     csp_ap_1: 'Kafli 1: AP - Tækniumhverfið'
     csp_ap_2: 'Kafli 2: AP - Skilningsverkefni'
     csp_ap_3: 'Kafli 3: AP - Sköpunarverkefni'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: Kafli 2 - Stafrænar upplýsingar
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: Kvaðningar um íhugun
   external_links:
     disclaimer: Afsal ábyrgðar
@@ -1292,3 +1314,16 @@
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
   courses_category: Heil námskeið
+  cookie_banner:
+    message: By continuing to browse our site or clicking "I agree," you agree to
+      the storing of cookies on your computer or device.
+    more_information: See Code.org's Privacy Policy.
+    accept: Sammála
+  gdpr_dialog:
+    heading: Do you agree to using a web site based in the United States?
+    message: Data from your use of this site may be sent to and stored or processed
+      in the United States.
+    link_intro: For details see our
+    privacy_policy: privacy policy
+    logout: Logout
+    true: Já

@@ -14,6 +14,7 @@
  * fill,
  * keyDown,
  * keyWentDown,
+ * keyWentUp,
  * mousePressedOver,
  * mouseWentDown,
  * randomNumber,
@@ -25,13 +26,15 @@
 
 createEdgeSprites();
 let inputEvents = [];
+let touchEvents = [];
 let collisionEvents = [];
 let loops = [];
 let sprites = [];
 let score = 0;
 let game_over = false;
 let show_score = false;
-let title = '', subTitle = '';
+let title = '';
+let subTitle = '';
 
 function initialize(setupHandler) {
   setupHandler();
@@ -39,25 +42,70 @@ function initialize(setupHandler) {
 
 // Behaviors
 
-function addBehavior(sprite, behavior, name) {
-  var index = sprite.behavior_keys.indexOf(name);
+function addBehavior(sprite, behavior) {
+  if (!sprite || !behavior) {
+    return;
+  }
+  behavior = normalizeBehavior(behavior);
+
+  if (findBehavior(sprite, behavior) !== -1) {
+    return;
+  }
+  sprite.behaviors.push(behavior);
+}
+
+function removeBehavior(sprite, behavior) {
+  if (!sprite || !behavior) {
+    return;
+  }
+  behavior = normalizeBehavior(behavior);
+
+  var index = findBehavior(sprite, behavior);
   if (index === -1) {
-    sprite.behavior_keys.push(name);
+    return;
   }
-
-  sprite.behaviors[name] = behavior;
+  sprite.behaviors.splice(index, 1);
 }
 
-function removeBehavior(sprite, behavior, name) {
-  var index = sprite.behavior_keys.indexOf(name);
-  if (index > -1) {
-    sprite.behavior_keys.splice(index, 1);
+function normalizeBehavior(behavior) {
+  if (typeof behavior === 'function')  {
+    behavior = {
+      func: behavior,
+      extraArgs: [],
+    };
   }
+  return behavior;
 }
 
-function hasBehavior(sprite, behavior, name) {
-  var index = sprite.behavior_keys.indexOf(name);
-  return index > -1;
+function findBehavior(sprite, behavior) {
+  for (var i = 0; i < sprite.behaviors.length; i++) {
+    var myBehavior = sprite.behaviors[i];
+    if (behaviorsEqual(behavior, myBehavior)) {
+      return i;
+    }
+  }
+  return -1;
+}
+
+function behaviorsEqual(behavior1, behavior2) {
+  if (behavior1.func.name && behavior2.func.name) {
+    // These are legacy behaviors, check for equality based only on the name.
+    return behavior1.func.name === behavior2.func.name;
+  }
+  if (behavior1.func !== behavior2.func) {
+    return false;
+  }
+  if (behavior2.extraArgs.length !== behavior1.extraArgs.length) {
+    return false;
+  }
+  var extraArgsEqual = true;
+  for (var j = 0; j < behavior1.extraArgs.length; j++) {
+    if (behavior2.extraArgs[j] !== behavior1.extraArgs[j]) {
+      extraArgsEqual = false;
+      break;
+    }
+  }
+  return extraArgsEqual;
 }
 
 function patrol(sprite, direction) {
@@ -124,11 +172,16 @@ function whileSpace(event) {
 }
 
 function whenMouseClicked(event) {
-  inputEvents.push({type: mouseWentDown, event: event, param: 'leftButton'});
+  touchEvents.push({type: mouseWentDown, event: event, param: 'leftButton'});
+}
+
+function whenPressedAndReleased(direction, pressedHandler, releasedHandler) {
+  touchEvents.push({type: keyWentDown, event: pressedHandler, param: direction});
+  touchEvents.push({type: keyWentUp, event: releasedHandler, param: direction});
 }
 
 function clickedOn(sprite, event) {
-  inputEvents.push({type: mousePressedOver, event: event, param: sprite});
+  touchEvents.push({type: mousePressedOver, event: event, param: sprite});
 }
 
 function spriteDestroyed(sprite, event) {
@@ -141,6 +194,10 @@ function whenTouching(a, b, event) {
 
 function whileTouching(a, b, event) {
   collisionEvents.push({a: a, b: b, event: event, keepFiring: true});
+}
+
+function whenStartAndStopTouching(a, b, startHandler, stopHandler) {
+  collisionEvents.push({a: a, b: b, event: startHandler, eventEnd: stopHandler});
 }
 
 // Loops
@@ -162,13 +219,14 @@ function makeNewSpriteLocation(animation, loc) {
 function makeNewSprite(animation, x, y) {
   var sprite = createSprite(x, y);
 
-  sprite.setAnimation(animation);
+  if (animation) {
+    sprite.setAnimation(animation);
+  }
   sprites.push(sprite);
   sprite.speed = 10;
   sprite.patrolling = false;
   sprite.things_to_say = [];
-  sprite.behavior_keys = [];
-  sprite.behaviors = {};
+  sprite.behaviors = [];
 
   sprite.setSpeed = function (speed) {
     sprite.speed = speed;
@@ -221,9 +279,9 @@ function makeNewSprite(animation, x, y) {
 
 function makeNewGroup() {
   var group = createGroup();
-  group.addBehaviorEach = function (behavior, name) {
+  group.addBehaviorEach = function (behavior) {
     for (var i=0; i < group.length; i++) {
-      addBehavior(group[i], behavior, name);
+      addBehavior(group[i], behavior);
     }
   };
   group.destroy = group.destroyEach;
@@ -261,12 +319,23 @@ function hideTitleScreen() {
   title = subTitle = '';
 }
 
+function shouldUpdate() {
+  return World.frameCount > 1;
+}
+
 function draw() {
   background(World.background_color || "white");
 
-  if (World.frameCount > 1) {
-    // Run input events
-    for (var i=0; i<inputEvents.length; i++) {
+  if (shouldUpdate()) {
+    // Perform sprite behaviors
+    sprites.forEach(function (sprite) {
+      sprite.behaviors.forEach(function (behavior) {
+        behavior.func.apply(null, [sprite].concat(behavior.extraArgs));
+      });
+    });
+
+    // Run key events
+    for (let i = 0; i < inputEvents.length; i++) {
       const eventType = inputEvents[i].type;
       const event = inputEvents[i].event;
       const param = inputEvents[i].param;
@@ -275,9 +344,18 @@ function draw() {
       }
     }
 
+    // Run touch events
+    for (let i = 0; i < touchEvents.length; i++) {
+      const eventType = touchEvents[i].type;
+      const event = touchEvents[i].event;
+      const param = touchEvents[i].param;
+      if (eventType(param)) {
+        event();
+      }
+    }
 
     // Run collision events
-    for (let i=0; i<collisionEvents.length; i++) {
+    for (let i = 0; i<collisionEvents.length; i++) {
       const collisionEvent = collisionEvents[i];
       const a = collisionEvent.a;
       const b = collisionEvent.b;
@@ -287,42 +365,20 @@ function draw() {
         }
         collisionEvent.touching = true;
       } else {
+        if (collisionEvent.touching && collisionEvent.eventEnd) {
+          collisionEvent.eventEnd();
+        }
         collisionEvent.touching = false;
       }
     }
 
     // Run loops
-    for (let i=0; i<loops.length; i++) {
+    for (let i = 0; i<loops.length; i++) {
       var loop = loops[i];
       if (!loop.condition()) {
         loops.splice(i, 1);
       } else {
         loop.loop();
-      }
-    }
-
-
-    for (let i=0; i<sprites.length; i++) {
-      var sprite = sprites[i];
-
-      // Perform sprite behaviors
-
-      for (var j=0; j<sprite.behavior_keys.length; j++) {
-        sprite.behaviors[sprite.behavior_keys[j]](sprite);
-      }
-
-      // Make sprites say things
-      if (sprite.things_to_say.length > 0) {
-        fill("white");
-        rect(sprite.x + 10, sprite.y - 15, sprite.things_to_say[0][0].length * 7, 20);
-        fill("black");
-        text(sprite.things_to_say[0][0], sprite.x + 15, sprite.y);
-
-        if (sprite.things_to_say[0][1] === 0) {
-          sprite.things_to_say.shift();
-        } else if (sprite.things_to_say[0][1] > -1) {
-          sprite.things_to_say[0][1]--;
-        }
       }
     }
   }

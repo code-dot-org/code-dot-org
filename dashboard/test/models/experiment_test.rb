@@ -130,17 +130,20 @@ class ExperimentTest < ActiveSupport::TestCase
       section_id: @section.id
     assert_equal [experiment], Experiment.get_all_enabled(section: @section)
     assert Experiment.enabled?(section: @section, experiment_name: experiment.name)
+    experiment.destroy
   end
 
   test "single section experiment is not enabled" do
     experiment = create :single_section_experiment
     assert_empty Experiment.get_all_enabled(section: @section)
     refute Experiment.enabled?(section: @section, experiment_name: experiment.name)
+    experiment.destroy
   end
 
   test "teacher is included in single-section experiment" do
     experiment = create :single_section_experiment
     assert Experiment.enabled?(experiment_name: experiment.name, user: experiment.section.user)
+    experiment.destroy
   end
 
   test 'single user experiment is enabled' do

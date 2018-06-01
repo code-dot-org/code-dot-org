@@ -94,9 +94,8 @@
       WhileAdventure_failure_message_override: Gratulerer! Du samlet X mynter!
       courseE_playLab_scaffold3_failure_message_override: Du må legge til to eller
         flere nye spillere og programmere dem til å bevege seg.
-      courseE_playLab_scaffold3_2018_failure_message_override: |-
-        You must add two
-        or more new actors to your game and program them to move.
+      courseE_playLab_scaffold3_2018_failure_message_override: Du må legge til to
+        eller flere nye spillere og programmere dem til å bevege seg.
       grade4_scaffolded_project3_failure_message_override: Du må legge til to eller
         flere nye figurer som beveger seg.
       kikiTesta_failure_message_override: Gratulerer! Du har samlet X mynter!

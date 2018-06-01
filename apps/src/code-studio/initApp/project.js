@@ -523,7 +523,7 @@ var projects = module.exports = {
         this.sourceHandler.setInitialLevelSource(currentSources.source);
         this.showMinimalProjectHeader();
       }
-    } else if (appOptions.isLegacyShare && this.getStandaloneApp()) {
+    } else if (appOptions.legacyShareStyle && this.getStandaloneApp()) {
       this.setName('Untitled Project');
       this.showMinimalProjectHeader();
     }
@@ -607,7 +607,10 @@ var projects = module.exports = {
       case 'applab':
         return 'applab';
       case 'gamelab':
-        return 'gamelab';
+        if (appOptions.droplet) {
+          return 'gamelab';
+        }
+        return 'spritelab';
       case 'turtle':
         if (appOptions.skinId === 'elsa' || appOptions.skinId === 'anna') {
           return 'frozen';
@@ -1036,6 +1039,19 @@ var projects = module.exports = {
     }
     current.frozen = true;
     current.hidden = true;
+    this.updateChannels_(callback);
+  },
+
+  /**
+   * Unfreezes the project. Also unhides so that it's available for
+   * deleting/renaming in the user's project list.
+   */
+  unfreeze(callback) {
+    if (!(current && current.isOwner)) {
+      return;
+    }
+    current.frozen = false;
+    current.hidden = false;
     this.updateChannels_(callback);
   },
 

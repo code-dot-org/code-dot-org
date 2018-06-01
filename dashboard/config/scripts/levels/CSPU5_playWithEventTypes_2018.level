@@ -1,0 +1,73 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2018-05-03T16:40:34.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
+      "moveForward": null,
+      "turnLeft": null,
+      "turnRight": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "instructions": "Debug the program by fixing the logical error within the program. (Click to see full instructions)",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "slider_speed": "1.0",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "markdown_instructions": "\r\n# Play with different event types\r\n\r\n<img src=\"https://images.code.org/9f013bd84577eb2498061757e18a72f4-image-1444322870272.46.06 AM.png\" style=\"float: right\">\r\nIf you haven't yet, you should experiment with different event types with your `onEvent` blocks.  The ones that will work best here are mouse-related ones such as:\r\n  * click\r\n  * mousemove\r\n  * mousedown\r\n  * mouseup\r\n  * mouseover\r\n\r\n*There are some events that capture keystrokes from the keyboard. These are interesting, but they do not work easily with buttons. We'll stick to mouse events for now, and get to keys later.*\r\n\r\n**Be sure** to experiment with each of the ones that start with \"mouse...\".\r\n\r\nOnce you've have played a little bit, click Finish to move on.\r\n",
+    "instructions_important": "false",
+    "project_template_level_name": "CSPU5_twoButtonTurtleDriver_templateLevel_2018",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "parent_level_id": 7001,
+    "name_suffix": "_2018",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-01-15 22:24:12 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":177,\"changed_by_email\":\"josh.schulte@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Applab>

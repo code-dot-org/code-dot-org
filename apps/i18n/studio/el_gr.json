@@ -318,6 +318,7 @@
   "moveSpriteN": "προχώρησε τον ηθοποιό {spriteIndex}",
   "moveDroid": "move droid",
   "moveDroidN": "move droid {spriteIndex}",
+  "to": "σε",
   "toXY": "έως x, y",
   "moveDown": "προχώρησε προς τα κάτω",
   "moveDownTooltip": "Προχώρησε τον ηθοποιό προς τα κάτω.",

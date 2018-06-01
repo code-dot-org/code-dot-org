@@ -6,17 +6,22 @@ class Api::V1::SectionsStudentsController < Api::V1::JsonApiController
 
   # GET /sections/<section_id>/students
   def index
-    passing_level_counts = UserLevel.count_passed_levels_for_users(@section.students.pluck(:id))
-    render json: (@section.students.map do |student|
-      student.summarize.merge(
-        completed_levels_count: passing_level_counts[student.id] || 0,
-      )
-    end)
+    render json: @section.students.map(&:summarize)
   end
 
-  # PATCH /sections/<section_id>/student/<id>/update
+  # GET /sections/<section_id>/students/completed_levels_count
+  def completed_levels_count
+    passing_level_counts = UserLevel.count_passed_levels_for_users(@section.students.pluck(:id))
+    completed_levels_count_per_student = {}
+    @section.students.each do |student|
+      completed_levels_count_per_student[student.id] = passing_level_counts[student.id] || 0
+    end
+    render json: completed_levels_count_per_student
+  end
+
+  # PATCH /sections/<section_id>/students/<id>
   def update
-    return render_404 unless @student
+    @student.reset_secrets if params[:secrets] == User::RESET_SECRETS
 
     if @student.update(student_params)
       render json: @student.summarize
@@ -82,6 +87,7 @@ class Api::V1::SectionsStudentsController < Api::V1::JsonApiController
       :gender,
       :name,
       :sharing_disabled,
+      :password,
     )
   end
 end

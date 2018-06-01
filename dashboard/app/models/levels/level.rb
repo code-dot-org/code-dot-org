@@ -455,13 +455,17 @@ class Level < ActiveRecord::Base
     end
   end
 
-  def summary_for_lesson_plans
-    summary = {
+  def summarize
+    {
       level_id: id,
       type: self.class.to_s,
       name: name,
       display_name: display_name
     }
+  end
+
+  def summary_for_lesson_plans
+    summary = summarize
 
     %w(title questions answers instructions markdown_instructions markdown teacher_markdown pages reference).each do |key|
       value = properties[key] || try(key)
@@ -475,6 +479,25 @@ class Level < ActiveRecord::Base
     unless contained_levels.empty?
       summary[:contained_levels] = contained_levels.map(&:summary_for_lesson_plans)
     end
+
+    summary
+  end
+
+  # Overriden by some child classes
+  def get_question_text
+    properties['markdown_instructions']
+  end
+
+  # Used for individual levels in assessments
+  def question_summary
+    summary = summarize
+
+    %w(title answers).each do |key|
+      value = properties[key] || try(key)
+      summary[key] = value if value
+    end
+
+    summary[:question_text] = get_question_text
 
     summary
   end
@@ -506,9 +529,12 @@ class Level < ActiveRecord::Base
   #   level when choosing a name for the new level, replacing any existing
   #   name_suffix if one exists.
   def clone_with_suffix(new_suffix)
-    new_name = "#{base_name}#{new_suffix}"
+    # Make sure we don't go over the 70 character limit.
+    new_name = "#{base_name[0..64]}#{new_suffix}"
 
-    level = Level.find_by_name(new_name) || clone_with_name(new_name)
+    return Level.find_by_name(new_name) if Level.find_by_name(new_name)
+
+    level = clone_with_name(new_name)
 
     update_params = {name_suffix: new_suffix}
 

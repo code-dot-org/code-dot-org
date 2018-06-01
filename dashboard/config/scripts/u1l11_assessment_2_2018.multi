@@ -1,0 +1,14 @@
+name 'U1L11 Assessment 2_2018'
+title 'Assessment: Sending Formatted Text'
+description ''
+question 'The word “Apple” translated into its ASCII number (decimal) equivalent is:'
+wrong '097 112 112 108 101'
+wrong '097 108 108 111 119'
+right '065 112 112 108 101'
+wrong '065 110 110 105 101'
+wrong '041 108 108 111 119'
+
+
+markdown <<MARKDOWN
+
+MARKDOWN

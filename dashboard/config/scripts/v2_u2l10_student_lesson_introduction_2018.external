@@ -1,0 +1,30 @@
+name 'v2 U2L10 Student Lesson Introduction_2018'
+title 'title'
+css 'unplugged'
+description 'description here'
+markdown <<MARKDOWN
+# Unit 2: Lesson 10 - Good and Bad Data Visualizations
+
+## Background
+
+Visualizations of data are a powerful way to present information and insights learned from data. However, people use data visuals with varying success. In fact, very smart people struggle to make good data visualizations which correctly convey the findings from data. Some are strong data visualizations that create a deeper understanding of the underlying data. Others create misconceptions about the findings of data. Others are just hilariously bad. Your job is to rate the quality of the visualizations and keep a few notes about why they are good or bad.
+
+## Lesson
+
+* Review Data Visualization 101 - How to Design Charts and Graphs
+* Review and evaluate a collection of data visualizations
+
+## Resources
+
+* Data Visualization 101: How to design charts and graphs - [Link](http://content.visage.co/hs-fs/hub/424038/file-2094950163-pdf)
+* Data Visualization Scorecard - Worksheet ([PDF](https://docs.google.com/document/d/1arDO1s59RNu5Li_JNSRG7CXkWT3zfKiLhIpMj3N4enQ/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1arDO1s59RNu5Li_JNSRG7CXkWT3zfKiLhIpMj3N4enQ/export?format=doc))
+* Good and Bad Data Visualizations 
+	* **Collection A** (in code studio, "bubble 2")
+    * **Collection B** (in code studio, "bubble 3")
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

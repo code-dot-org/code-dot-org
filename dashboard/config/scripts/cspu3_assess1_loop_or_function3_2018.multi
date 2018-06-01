@@ -1,0 +1,13 @@
+name 'cspu3_assess1_loop_or_function3_2018'
+right 'Loop'
+wrong 'Function(s)'
+
+markdown <<MARKDOWN
+For this scenario related to turtle drawing, indicate whether it is better to write a loop or a function (or a set of functions) to handle the task:
+
+**Drawing 100 tiny dots in a line** 
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+The main action is in this problem is drawing a dot and moving one way to draw multiple dots in a line. A loop can be used to repeat "drawDot()" 100 times in a row.
+MARKDOWN

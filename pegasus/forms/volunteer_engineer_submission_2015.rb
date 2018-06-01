@@ -29,6 +29,7 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
     result[:allow_contact_b] = required data[:allow_contact_b]
     result[:age_18_plus_b] = required data[:age_18_plus_b]
     result[:unsubscribed_s] = nil_if_empty data[:unsubscribed_s]
+    result[:email_preference_opt_in_s] = required enum(data[:email_preference_opt_in_s].to_s.strip.downcase, ['yes', 'no'])
 
     result
   end
@@ -101,7 +102,17 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
     results
   end
 
-  def self.process(data)
+  def self.process_with_ip(data, created_ip)
+    if data['email_preference_opt_in_s'] && created_ip && data['email_s']
+      EmailPreferenceHelper.upsert!(
+        email: data['email_s'],
+        opt_in: data['email_preference_opt_in_s'] == 'yes',
+        ip_address: created_ip,
+        source: EmailPreferenceHelper::FORM_VOLUNTEER,
+        form_kind: '0'
+      )
+    end
+
     {}.tap do |results|
       location = search_for_address(data['location_s'])
       results.merge! location.to_solr if location

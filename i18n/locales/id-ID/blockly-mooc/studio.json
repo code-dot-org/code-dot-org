@@ -318,6 +318,7 @@
   "moveSpriteN": "pindahkan aktor {spriteIndex}",
   "moveDroid": "pindahkan droid",
   "moveDroidN": "pindahkan droid {spriteIndex}",
+  "to": "untuk",
   "toXY": "ke x, y",
   "moveDown": "Pindahkan ke bawah",
   "moveDownTooltip": "Gerakkan pelaku ke bawah.",

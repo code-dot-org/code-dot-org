@@ -114,15 +114,24 @@
     valid_password: "Gyldig passord!"
     invalid_password: "Passordet må bestå av minimum seks tegn"
     mismatch_password: "De to passordene du skrev inn samsvarer ikke"
+    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
+    under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
+    agree_us_website: "I agree to using a website based in the United States."
+    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
     student_terms: "Jeg aksepterer <a href='http://code.org/tos'>brukerbetingelsene</a>  til Code.org. Hvis jeg er under 13 år, bekrefter jeg ved å sende inn dette skjemaet at jeg har tillatelse fra mine foreldre eller verge til å bruke tjenestene til Code.org.<br/><br/>Epost-adresser lagres ikke i en form som gjør at vi kan kontakte elever. Code.org vil aldri sende epost til elever, unntatt for passordpåminnelser. Se våre <a href='http://code.org/privacy'>personvernbetingelser</a> for mer informasjon."
     teacher_terms: "Jeg aksepterer brukerbetingelsene til Code.org. Se våre <a href='http://code.org/privacy'>personvernbetingelser</a> for mer informasjon om personvern."
     additional_information: "Vi trenger noen flere opplysninger for å fortsette registreringen din."
+    user_type_button: "Update Account Type"
     user_type_label: "Kontotype"
     user_type_teacher: "Lærer"
     user_type_student: "elev"
     field_is_required: "må fylles ut"
     accept_terms: "Du må gå med på å opprette en konto"
     error: "En feil har oppstått."
+    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_yes: "Ja"
+    email_preference_no: "Nei"
+    email_preference_required: "You must specify an email preference."
   school_info:
     title: 'Informasjon til skolen (valgfritt)'
     school_country: 'Landet til skolen'
@@ -171,7 +180,7 @@
       email: 'E-postadresse'
       submit: 'Send'
     reset_errors:
-      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
+      captcha_required: 'Fyll ut CAPTCHA for å lage nytt passord.'
       invalid_email: 'Det ser ut til at du har registrert deg med en ugyldig e-post adresse. Vennligst send epost til support@code.org for å få tilsendt en lenke for tilbakestilling av passord.'
     change_form:
       title: 'Endre passordet ditt'
@@ -368,6 +377,7 @@
     enter_new_login_info: 'Angi ny påloggingsinformasjon'
     confirm_secret_words: 'Bekreft at det er deg ved å angi gjeldende hemmelige ord'
     enter_parent_email: "Angi dine foreldre eller foresattes epostadresse (for passordgjenoppretting)"
+    update: "Oppdater konto"
   user_level:
     completed: 'Fullført'
     tried: 'Forsøkt'
@@ -449,6 +459,7 @@
     student_not_found: "En eller flere elever ble ikke funnet."
     all_students_must_be_in_current_section: "Alle elever må være innrullert i din avdeling."
     already_enrolled_in_new_section: "Du kan ikke flytte disse elevene fordi de allerede er i den nye seksjonen."
+    third_party_login: "You cannot move students to a section that is synced with a third party tool."
   share:
     title: "Lære i Code Studio"
     description: "Alle kan lære programmering. Lag egne spill, programmer og tegninger ved å kode."
@@ -723,21 +734,21 @@
     message: "Oppgi din etnisitet (kryss av alle som passer)"
     races:
       - 
-        white: Hvit
+        white: "Hvit"
       - 
-        black: Afrikansk
+        black: "Afrikansk"
       - 
-        hispanic: Latinamerikansk
+        hispanic: "Latinamerikansk"
       - 
-        asian: Asiatisk
+        asian: "Asiatisk"
       - 
-        hawaiian: Hawaii eller stillehavsøyene
+        hawaiian: "Hawaii eller stillehavsøyene"
       - 
-        american_indian: Amerikansk urbefolkning
+        american_indian: "Amerikansk urbefolkning"
       - 
-        other: Andre
+        other: "Andre"
       - 
-        opt_out: Ønsker ikke å si
+        opt_out: "Ønsker ikke å si"
     submit: "Send"
     decline: "Lukk"
   zendesk_too_young_message: 'Beklager, yngre brukere kan ikke logge på nettstedet for kundestøtte. Du kan bla gjennom <a href="http://support.code.org"> support.code.org</a> uten å logge på eller be en forelder eller lærer å kontakte oss for deg.'
@@ -868,6 +879,7 @@
     csd5_2: 'Kapittel 2: Problemløsing med data'
     csd6_1: 'Kapittel 1: Maskinvare utganger'
     csd6_2: 'Kapittel 2: Maskinvareinnganger'
+    csd_survey: 'Post-Course Survey'
     csp1_1: 'Kapittel 1: Representerer og formidle informasjon'
     csp1_2: 'Kapittel 2: Finne opp Internett'
     csp2_1: 'Kapittel 1: Kode og komprimere kompleks informasjon'
@@ -881,6 +893,11 @@
     csp_ap_1: 'Kapittel 1: AP Tech oppsett'
     csp_ap_2: 'Kapittel 2: AP utforske ytelse oppgave'
     csp_ap_3: 'Kapittel 3: AP opprette ytelse oppgave'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Enhet 2: Digital informasjon'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: 'Spørsmål til refleksjon'
   external_links:
     disclaimer: Ansvarsfraskrivelse
@@ -985,3 +1002,14 @@
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: 'Alle kurs'
+  cookie_banner:
+    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+    more_information: "See Code.org's Privacy Policy."
+    accept: 'Jeg samtykker'
+  gdpr_dialog:
+    heading: 'Do you agree to using a web site based in the United States?'
+    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+    link_intro: 'For details see our'
+    privacy_policy: 'privacy policy'
+    logout: 'Logout'
+    yes: 'Ja'

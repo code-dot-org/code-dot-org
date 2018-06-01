@@ -9,7 +9,8 @@ class Pd::RegionalPartnerContactTest < ActiveSupport::TestCase
     role: 'School Administrator',
     job_title: 'title',
     grade_levels: ['High School'],
-    school_state: 'NY'
+    school_state: 'NY',
+    opt_in: 'Yes'
   }
 
   MATCHED_FORM_DATA = {

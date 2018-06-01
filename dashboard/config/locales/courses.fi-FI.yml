@@ -3,7 +3,9 @@
     course:
       name:
         csp:
+          assignment_family_title: Computer Science Principles
           title: Tietojenkäsittelytieteiden alkeet
+          version_title: "'17-'18"
           description_student: Syksyllä 2016 College Board käynnisti uusimman AP®
             kurssin, AP Tietojenkäsittelyn periaatteet. Kurssi tutustuttaa opiskelijat
             perustavanlatuisten tietojenkäsittelyopin käsitteisiin ja haastaa tutkimaan,
@@ -22,7 +24,9 @@
             työkaluilla ja monialaisilla mahdollisuuksilla.
           description_short: Opi perustavanlaatuisia teitojenkäsittelytieteiden käsitteitä.
         csd:
+          assignment_family_title: Computer Science Discoveries
           title: Tietojenkäsittelytieteiden löydöt
+          version_title: "'17-'18"
           description_student: Tietojenkäsittelytieteiden löydöt (TKT löydöt) on johdantokurssi,
             joka antaa opiskelijoille mahdollisuuden luoda aitoja esineitä ja tarjoaa
             tietojenkäsittelytieteet välineenä luovuutta, viestintää, ongelmanratkaisua
@@ -40,3 +44,31 @@
             description for students
           description_teacher: This is a course for allthethings and has a longer
             description for teachers
+        csd-2018:
+          assignment_family_title: Computer Science Discoveries
+          title: Computer Science Discoveries 2018
+          version_title: "'18-'19"
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+        csp-2018:
+          assignment_family_title: Computer Science Principles
+          title: Computer Science Principles ('18-'19)
+          version_title: "'18-'19"
+          description_short: Opi perustavanlaatuisia teitojenkäsittelytieteiden käsitteitä.
+          description_student: Syksyllä 2016 College Board käynnisti uusimman AP®
+            kurssin, AP Tietojenkäsittelyn periaatteet. Kurssi tutustuttaa opiskelijat
+            perustavanlatuisten tietojenkäsittelyopin käsitteisiin ja haastaa tutkimaan,
+            miten tietotekniikka ja teknologia voi vaikuttaa maailmaan. AP-ohjelma
+            suunnitteli AP Tietojenkäsittelyn periaatteet tavoitteena luoda johtajia
+            tietojenkäsittelytieteiden alalle ja houkutella ja harjoittaa niitä, jotka
+            ovat perinteisesti aliedustettuina välttämätömillä tietojenkäsittelytieteiden
+            työkaluilla ja monialaisilla mahdollisuuksilla.
+          description_teacher: Syksyllä 2016 College Board käynnisti uusimman AP®
+            kurssin, AP Tietojenkäsittelyn periaatteet. Kurssi tutustuttaa opiskelijat
+            perustavanlatuisten tietojenkäsittelyopin käsitteisiin ja haastaa tutkimaan,
+            miten tietotekniikka ja teknologia voi vaikuttaa maailmaan. AP-ohjelma
+            suunnitteli AP Tietojenkäsittelyn periaatteet tavoitteena luoda johtajia
+            tietojenkäsittelytieteiden alalle ja houkutella ja harjoittaa niitä, jotka
+            ovat perinteisesti aliedustettuina välttämätömillä tietojenkäsittelytieteiden
+            työkaluilla ja monialaisilla mahdollisuuksilla.

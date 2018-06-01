@@ -1,7 +1,7 @@
 import $ from 'jquery';
 var testUtils = require('../../../util/testUtils');
 var tickWrapper = require('../../util/tickWrapper');
-var TestResults = require('@cdo/apps/constants').TestResults;
+import {TestResults} from '@cdo/apps/constants';
 import {expect} from '../../../util/configuredChai';
 
 // take advantage of the fact that we expose the filesystem via

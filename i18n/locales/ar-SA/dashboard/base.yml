@@ -114,15 +114,24 @@ ar:
     valid_password: "كلمة المرور متاحة!"
     invalid_password: "كلمة المرور يجب ان تكون على الاقل 6 احرف"
     mismatch_password: "كلمة المرور التي ادخلتها غير متطابقة"
+    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
+    under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
+    agree_us_website: "I agree to using a website based in the United States."
+    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
     student_terms: "أوافق على الالتزام <a href='http://code.org/tos'> شروط الخدمة</a> Code.org. إذا كنت دون سن 13 عاماً، اؤكد بتقديم هذه الاستمارة بان أحد والدي أو وأي امري اذن باستخدام الخدمات Code.org. <br/> <br/> لا يتم تخزين عناوين البريد الإلكتروني في شكل يسمح لنا بالاتصال بالطلاب. سوف يتلقى الطلاب ابدأ رسائل البريد الإلكتروني من Code.org باستثناء استرداد كلمة المرور. الاطلاع على <a href='http://code.org/privacy'> سياسة الخصوصية</a> لمزيد من المعلومات."
     teacher_terms: "أوافق على الالتزام بشروط الخدمة Code.org. لمزيد من المعلومات حول الخصوصية، راجع لدينا <a href='http://code.org/privacy'> سياسة الخصوصية</a>."
     additional_information: "نحتاج للمزيد من المعلومات لمواصلة تسجيلك في الموقع."
+    user_type_button: "Update Account Type"
     user_type_label: "نوع الحساب"
     user_type_teacher: "المدرس"
     user_type_student: "طالب"
     field_is_required: "مطلوب"
     accept_terms: "يجب عليك الموافقة على إنشاء حساب"
     error: "An error occurred."
+    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_yes: "نعم"
+    email_preference_no: "لا"
+    email_preference_required: "You must specify an email preference."
   school_info:
     title: 'School Information (optional)'
     school_country: 'School Country'
@@ -369,6 +378,7 @@ ar:
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
+    update: "Update Account"
   user_level:
     completed: 'أكمل'
     tried: 'حاول'
@@ -450,6 +460,7 @@ ar:
     student_not_found: "لا يمكن إيجاد الطالب أو مجموعة الطلاب."
     all_students_must_be_in_current_section: "يجب على جميع الطلاب أن تلتحق بقسمك في الوقت الحالي."
     already_enrolled_in_new_section: "لا يمكنك نقل هؤلاء الطلاب لأن هذا المدرّس قد حصل عليهم في قسم أخر."
+    third_party_login: "You cannot move students to a section that is synced with a third party tool."
   share:
     title: "تعلّم على كود استوديو"
     description: "أي شخص يمكن تعلّم علوم الكمبيوتر. اصنع الألعاب والتطبيقات والفن مع التعليمات البرمجية."
@@ -724,21 +735,21 @@ ar:
     message: "Please tell us your race (check all that apply)"
     races:
       - 
-        white: أبيض
+        white: "أبيض"
       - 
-        black: أسود أو أمريكي من أصل أفريقي
+        black: "أسود أو أمريكي من أصل أفريقي"
       - 
-        hispanic: Hispanic or Latino
+        hispanic: "Hispanic or Latino"
       - 
-        asian: آسيوي
+        asian: "آسيوي"
       - 
-        hawaiian: Native Hawaiian or other Pacific Islander
+        hawaiian: "Native Hawaiian or other Pacific Islander"
       - 
-        american_indian: American Indian/Alaska Native
+        american_indian: "American Indian/Alaska Native"
       - 
-        other: أخرى
+        other: "أخرى"
       - 
-        opt_out: Prefer not to say
+        opt_out: "Prefer not to say"
     submit: "تسجيل"
     decline: "إغلاق"
   zendesk_too_young_message: 'عذراً، لا يمكن للمستخدمين الصغار تسجيل الدخول إلى موقع دعمنا، يمكنك تصفح <a href="http://support.code.org">صفحة الدعم</a> دون تسجيل الدخول أو الطلب من والديك أو معلمك التواصل معنا نيابة عنك.'
@@ -869,6 +880,7 @@ ar:
     csd5_2: 'Chapter 2: Solving Data Problems'
     csd6_1: 'Chapter 1: Programming with Hardware'
     csd6_2: 'Chapter 2: Building Physical Prototypes'
+    csd_survey: 'Post-Course Survey'
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -882,6 +894,11 @@ ar:
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Unit 2: Digital Information'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: 'Reflection Prompts'
   external_links:
     disclaimer: Disclaimer
@@ -986,3 +1003,14 @@ ar:
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: 'Full Courses'
+  cookie_banner:
+    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+    more_information: "See Code.org's Privacy Policy."
+    accept: 'أوافق'
+  gdpr_dialog:
+    heading: 'Do you agree to using a web site based in the United States?'
+    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+    link_intro: 'For details see our'
+    privacy_policy: 'privacy policy'
+    logout: 'Logout'
+    yes: 'نعم'

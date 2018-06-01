@@ -8,7 +8,8 @@ module Pd
       COURSE_CS_IN_S = 'CS in Science'.freeze,
       COURSE_CSD = 'CS Discoveries'.freeze,
       COURSE_COUNSELOR = 'Counselor'.freeze,
-      COURSE_ADMIN = 'Admin'.freeze
+      COURSE_ADMIN = 'Admin'.freeze,
+      COURSE_FACILITATOR = 'Facilitator'.freeze
     ].freeze
 
     STATES = [
@@ -60,6 +61,12 @@ module Pd
         SUBJECT_CSF_101 = 'Intro Workshop'.freeze,
         SUBJECT_CSF_FIT = SUBJECT_FIT
       ]
+    }.freeze
+
+    WORKSHOP_TYPES = {
+      teachercon: SUBJECT_TEACHER_CON,
+      local_summer: SUBJECT_SUMMER_WORKSHOP,
+      both: 'both'
     }.freeze
   end
 end

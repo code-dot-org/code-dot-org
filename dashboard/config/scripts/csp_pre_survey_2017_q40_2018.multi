@@ -1,0 +1,8 @@
+name 'csp-pre-survey-2017-q40_2018'
+question 'If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.'
+right 'After school program at my school'
+right 'After school program somewhere else (e.g., Boys and Girls Club, etc.)'
+right 'Online program'
+right 'Summer program/camp'
+right 'Other'
+right 'I did not do any computer science outside of school'

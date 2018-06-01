@@ -318,6 +318,7 @@
   "moveSpriteN": "taşı aktör {spriteIndex}",
   "moveDroid": "driod'i taşı",
   "moveDroidN": "droidi taşı{spriteIndex}",
+  "to": "e",
   "toXY": "x, y konumuna",
   "moveDown": "aşağı yönde ilerle",
   "moveDownTooltip": "Bir oyuncuyu aşağıya ilerlet.",

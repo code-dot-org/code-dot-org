@@ -39,17 +39,6 @@ def get_contained_question(contained_level)
 end
 
 def main
-  # Truncate the existing tables.
-  %w(
-    contained_levels
-    contained_level_answers
-    level_sources_multi_types
-  ).each do |table_name|
-    ActiveRecord::Base.connection.execute(
-      "TRUNCATE #{table_name}"
-    )
-  end
-
   # Build the data for the tables.
   contained_levels = []
   contained_level_answers = []
@@ -137,9 +126,20 @@ def main
   end
 
   # Verify that the data size is sensible.
-  raise 'contained_levels too big' if contained_levels.size > 1_000
-  raise 'contained_level_answers too big' if contained_level_answers.size > 10_000
-  raise 'level_sources too big' if level_sources_multi_types.size > 10_000
+  raise "contained_levels too big: #{contained_levels.size} rows exceeds limit of 10000" if contained_levels.size > 10_000
+  raise "contained_level_answers too big: #{contained_levels_answers.size} rows exceeds limit of 100000" if contained_level_answers.size > 100_000
+  raise "level_sources too big: #{level_sources_multi_types.size} rows exceeds limit of 100000" if level_sources_multi_types.size > 100_000
+
+  # Truncate the existing tables.
+  %w(
+    contained_levels
+    contained_level_answers
+    level_sources_multi_types
+  ).each do |table_name|
+    ActiveRecord::Base.connection.execute(
+      "TRUNCATE #{table_name}"
+    )
+  end
 
   # Write the data to the DB tables.
   ActiveRecord::Base.transaction do

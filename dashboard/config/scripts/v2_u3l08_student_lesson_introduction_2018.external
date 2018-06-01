@@ -1,0 +1,27 @@
+name 'v2 U3L08 Student Lesson Introduction_2018'
+display_name 'Lesson Vocabulary & Resources'
+title 'Creating Functions with Parameters'
+css 'unplugged'
+
+markdown <<MARKDOWN
+# Unit 3: Lesson 08 - Creating Functions with Parameters
+
+
+## Lesson
+
+* Identify situations for creating functions with parameters.
+* Incorporate functions with parameters into an “Under the Sea” digital scene.
+* Test functions with parameters using random input.
+
+## Vocabulary
+
+* **Parameter:** An extra piece of information that you pass to a function to customize it for a specific need.
+
+## New Blocks
+
+*  **[randomNumber min/max](//docs.code.org/applab/randomNumber_min_max/)** - `randomNumber min/max`
+*  **[Call a function with parameters](//docs.code.org/applab/callMyFunction_n/)** - `Call a function with parameters`
+*  **[Define a function with parameters](//docs.code.org/applab/functionParams_n/)** - `function myFunction(n){ //code }`
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

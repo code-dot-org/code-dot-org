@@ -9,8 +9,8 @@ fa:
     errors:
       messages:
         blank: "%s لازم است"
-        blank_plural: "are required"
-        invalid_plural: "are invalid"
+        blank_plural: "ضروری هستند"
+        invalid_plural: "معتبر نیستند"
     attributes:
       user:
         name: 'نمایش نام'
@@ -94,11 +94,11 @@ fa:
     student_count: '%{count} دانش آموز تا حالا ثبت نام کرده اند.'
     teacher_count: '%{count} معلم تا حالا ثبت نام کرده اند.'
     overview: 'Sign up for an account to track your progress or manage your classroom. <a href="/">You can browse the various stages and puzzles</a> without an account, but you will need to sign up to save your progress and projects.'
-    hoc_already_signed_up_heading: 'Get started without logging in'
+    hoc_already_signed_up_heading: 'بدون وارد شدن به سیستم شروع به کار کنید'
     hoc_already_signed_up_content: 'You are signed up to teach an Hour of Code! You and your students do not need to sign in to Code Studio to participate in this event. To get started, <a href="%{learn_url}">choose a tutorial</a> for your classroom and share the link with them.<br/><br/>If you enjoyed the Hour of Code and want to go further, you can set up a password and create a Code Studio account below to enroll your students in any of our <a href="%{educate_url}">longer courses</a>.'
     hoc_already_signed_up_content_post_hoc: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. <a href="%{studio_url}">You can also continue to browse the various stages and puzzles</a> without creating an account.'
     teacher_educator_guide: 'به راهنمای معلم مراجعه کنید'
-    title: "Sign up for Code.org"
+    title: "در code.org ثبت نام کنید"
     school_name: 'نام مدرسه (اختیاری)'
     school_address: 'نشانی مدرسه (اختیاری)'
     address_placeholder: 'نشانی، شهر، استان، کدپستی'
@@ -114,22 +114,31 @@ fa:
     valid_password: "رمز عبور معتبر!"
     invalid_password: "رمز عبور باید حداقل 6 حرف باشد"
     mismatch_password: "دو کلمه عبور واردشده یکی نیستند"
-    student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/><br/>Email addresses are not stored in a form that allows us to contact students. Students will never recieve emails from Code.org except for password recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more information."
+    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
+    under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
+    agree_us_website: "I agree to using a website based in the United States."
+    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
+    student_terms: "Email addresses are not stored in a form that allows us to contact students. Students will never recieve emails from Code.org except for password recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more information."
     teacher_terms: "I agree to be bound by the Code.org terms of service. For more information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>."
     additional_information: "ما به اطلاعات بیشتری برای ادامه ثبت نام شما احتیاج داریم."
+    user_type_button: "Update Account Type"
     user_type_label: "نوع حساب کاربری"
     user_type_teacher: "دبیر"
     user_type_student: "دانش آموز"
     field_is_required: "%s لازم است"
     accept_terms: "You must agree to create an account"
-    error: "An error occurred."
+    error: "خطایی رخ داد."
+    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_yes: "بله"
+    email_preference_no: "نه"
+    email_preference_required: "You must specify an email preference."
   school_info:
-    title: 'School Information (optional)'
+    title: 'اطلاعات مدرسه(اختیاری)'
     school_country: 'School Country'
-    select_school_type: 'School Type'
+    select_school_type: 'نوع مدرسه'
     charter: 'Charter'
-    private: 'Private'
-    public: 'Public'
+    private: 'خصوصی'
+    public: 'عمومی'
     homeschool: 'Homeschool'
     after_school: 'After School'
     other: 'دیگر'
@@ -137,17 +146,17 @@ fa:
     district: 'District'
     other_district_not_listed: 'Other district not listed above'
     district_name: 'District Name'
-    school: 'School'
+    school: 'مدرسه'
     other_school_not_listed: 'Other school not listed above'
-    school_name: 'School Name'
+    school_name: 'نام مدرسه'
     school_zip: 'School Zip Code'
-    school_address: 'School Address'
+    school_address: 'آدرس مدرسه'
     school_organization_name: 'School/Organization Name'
     school_organization_zip: 'School/Organization Zip Code'
   signin_form:
     title: 'دارای حساب کاربری در حال حاضر؟ ورود'
     login: 'ایمیل'
-    login_username: 'Email or Username'
+    login_username: 'ایمیل یا نام کاربری'
     password: 'کلمه عبور'
     remember: 'مرا به خاطر بسپار'
     submit: 'ورود'
@@ -161,7 +170,7 @@ fa:
     picture: 'اکنون عکس مخفی خود را پیدا کنید'
     words: 'حالا کلمات مخفی خود را وارد کنید'
     login: 'ورود'
-    invalid_login: 'Invalid login, please try again'
+    invalid_login: 'ورود نامعتبر, لطفا دوباره سعی کنید'
     pair_programming: 'I have a partner at my computer'
     student_privacy: "Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}' target='_blank'>here</a>."
   password:
@@ -192,8 +201,8 @@ fa:
     new_teacher_subject: 'Welcome to Code.org!'
   section:
     your_section:
-      one: 'Your section:'
-      other: 'Your sections:'
+      one: 'بخش شما:'
+      other: 'بخش‌های شما:'
     code_with_teacher: '%{section_code} with %{teacher_name}'
     confirm:
       remove: 'Are you sure you want to leave this section?'
@@ -366,6 +375,7 @@ fa:
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
+    update: "Update Account"
   user_level:
     completed: 'انجام شد'
     tried: 'سعی شد'
@@ -418,7 +428,7 @@ fa:
     announcement_learn_more_button: "بیشتر بیاموزید"
     announcement_try_now_button: "هم اکنون شروع کنید"
     announcement_host_an_hour_button: "Host an Hour"
-    announcement_watch_video_button: "Watch video"
+    announcement_watch_video_button: "ویدیو را تماشا کنید"
     announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
     announcement_petition_button: "نام خود را اضافه کنید"
     announcement_go_beyond_button: "Go beyond"
@@ -447,6 +457,7 @@ fa:
     student_not_found: "One or more students could not be found."
     all_students_must_be_in_current_section: "تمام دانش آموزان باید اکنون در بخش شما نام نویسی شده باشند."
     already_enrolled_in_new_section: "شما نمیتوانید این دانش آموزان را جا به جا کنید به این دلیل که این معلم آنها را در بخش دیگری دارد."
+    third_party_login: "You cannot move students to a section that is synced with a third party tool."
   share:
     title: "در استودیو ی کد یاد بگیرید"
     description: "هرکسی می تواند علوم کامپیوتر را بیاموزد. با کد نویسی بازی، نرم افزار و هنر ایجاد کنید."
@@ -562,7 +573,7 @@ fa:
       title: "گالری"
       body: "دیدن یگ گالری از برنامه ها و تصاویر هنرمندانه ایجاد شده توسط کاربران ما"
     gamelab:
-      title: "Game Lab"
+      title: "کارگاه بازی سازی"
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
       audience: "سنین سیزده به بالا"
       cta: "یادبگیر چگونه"
@@ -721,21 +732,21 @@ fa:
     message: "Please tell us your race (check all that apply)"
     races:
       - 
-        white: White
+        white: "White"
       - 
-        black: Black or African American
+        black: "Black or African American"
       - 
-        hispanic: Hispanic or Latino
+        hispanic: "Hispanic or Latino"
       - 
-        asian: Asian
+        asian: "Asian"
       - 
-        hawaiian: Native Hawaiian or other Pacific Islander
+        hawaiian: "Native Hawaiian or other Pacific Islander"
       - 
-        american_indian: American Indian/Alaska Native
+        american_indian: "American Indian/Alaska Native"
       - 
-        other: دیگر
+        other: "دیگر"
       - 
-        opt_out: Prefer not to say
+        opt_out: "Prefer not to say"
     submit: "ارسال کنید"
     decline: "ببند"
   zendesk_too_young_message: 'با عرض پوزش ، کاربران کم سن ممکن است نتوانند به بخش پشتیبانی سایت ما وارد شوند . شما می توانید بخش <a href="http://support.code.org"> support.code.org</a> را بدون ورود به سیستم و درخواست از والدین یا معلم برای تماس با ما مشاهده کنید .'
@@ -866,6 +877,7 @@ fa:
     csd5_2: 'Chapter 2: Solving Data Problems'
     csd6_1: 'Chapter 1: Programming with Hardware'
     csd6_2: 'Chapter 2: Building Physical Prototypes'
+    csd_survey: 'Post-Course Survey'
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -879,6 +891,11 @@ fa:
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Unit 2: Digital Information'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: 'Reflection Prompts'
   external_links:
     disclaimer: Disclaimer
@@ -983,3 +1000,14 @@ fa:
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: 'Full Courses'
+  cookie_banner:
+    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+    more_information: "See Code.org's Privacy Policy."
+    accept: 'موافقم'
+  gdpr_dialog:
+    heading: 'Do you agree to using a web site based in the United States?'
+    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+    link_intro: 'For details see our'
+    privacy_policy: 'privacy policy'
+    logout: 'Logout'
+    yes: 'بله'

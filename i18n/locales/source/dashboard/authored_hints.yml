@@ -54,21 +54,38 @@ en:
       2-3 Artist Debugging 9_authored_hint:
         2-3_Artist_Debugging_9_a: The artist needs to turn 60 degrees farther left before starting to draw!
         2-3_Artist_Debugging_9_b: You don't need to add another block to get the full turn, just add 60 degrees to the `turn left` block that's already there!
+      2-3 Artist Functions 1 a_authored_hint:
+        2-3_Artist_Functions_1_a: The squares each have 100 pixel sides, that means that you will have to move forward 175 pixels before drawing your second square.
+        2-3_Artist_Functions_1_b: It is okay to draw overlapping lines to make your glasses.
       2-3 Artist Functions 1_authored_hint:
         2-3_Artist_Functions_1_a: The squares each have 100 pixel sides, that means that you will have to move forward 175 pixels before drawing your second square.
         2-3_Artist_Functions_1_b: It is okay to draw overlapping lines to make your glasses.
+      2-3 Artist Functions 11 a_authored_hint:
+        2-3_Artist_Functions_11_a: You will need to change not only the number and length of sides within the function, but also the angle the artist turns between each side.
       2-3 Artist Functions 11_authored_hint:
         2-3_Artist_Functions_11_a: You will need to change not only the number and length of sides within the function, but also the angle the artist turns between each side.
+      2-3 Artist Functions 12 a_authored_hint:
+        2-3_Artist_Functions_12_a: Try running the code first to see what you need to add.
       2-3 Artist Functions 12_authored_hint:
         2-3_Artist_Functions_12_a: Try running the code first to see what you need to add.
+      2-3 Artist Functions 2 a_authored_hint:
+        2-3_Artist_Functions_2_a: |-
+          Your program should:
+          - Use function
+          - Move forward 100 + 75 pixels
+          - Use function
       2-3 Artist Functions 2_authored_hint:
         2-3_Artist_Functions_2_a: |-
           Your program should:
           - Use function
           - Move forward 100 + 75 pixels
           - Use function
+      2-3 Artist Functions 3 a_authored_hint:
+        2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
       2-3 Artist Functions 3_authored_hint:
         2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
+      2-3 Artist Functions 4 a_authored_hint:
+        2-3_Artist_Functions_4_a: The artist needs to turn 120 degrees between each square to complete this design.
       2-3 Artist Functions 4_authored_hint:
         2-3_Artist_Functions_4_a: The artist needs to turn 120 degrees between each square to complete this design.
       2-3 Artist Loops New 11_authored_hint:
@@ -4043,6 +4060,7 @@ en:
       comment_intro_maze_2018_authored_hint:
         courseC_maze_programming4_a: Comments are also helpful when other people try to read your code.
         courseC_maze_programming4_b: Add a comment when you change directions- what would have happened if you turned the other way?
+      conditionals_forvideo_harvester_authored_hint: {}
       course1_artist_loops_challenge1_authored_hint:
         courseA_artist_loops_challenge1_a: |+
           You can use loops like this to create the walls and the roof. Try repeating different blocks.
@@ -8245,6 +8263,30 @@ en:
           Here are two different lengths of snowflake, drawn one after another (with a 30 degree turn in between.)
 
           <img src="https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png" width="200px" />
+      courseD_artist_1_2018_authored_hint:
+        courseD_artist_project1_a: Use the drop down menu on the `turn` blocks to choose the angle you need!
+        courseD_artist_project1_b: Remember that `move forward` draws a line, while `jump forward` does not.
+      courseD_artist_2_2018_authored_hint:
+        courseD_artist_project1_b: Remember that `move` draws a line, while `jump` does not.
+        courseD_artist_project1_a: Use the drop down menu on the `turn` blocks to choose the angle you need!
+      courseD_artist_3_2018_authored_hint: {}
+      courseD_artist_4_2018_authored_hint: {}
+      courseD_artist_5_2018_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to switch their angles, too!
+      courseD_artist_6_2018_authored_hint: {}
+      courseD_artist_7_2018_authored_hint:
+        courseD_artist_project2a_a: |
+          This drawing was made by nesting a loop of 4 stairs and a `turn right 180 degrees` block inside of a `repeat 2 times` block.
+
+          <img src="https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png" width="200px" />
+      courseD_artist_8_2018_authored_hint:
+        courseD_artist_project3a_a: You can choose different amounts to rotate your shape! What about 18 times with a 20 degree turn in between?
+      courseD_artist_9_2018_authored_hint:
+        courseD_artist_project4a_a: |
+          Here are two different lengths of snowflake, drawn one after another (with a 30 degree turn in between.)
+
+          <img src="https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png" width="200px" />
+      courseD_artist_Template_2018_authored_hint: {}
       courseD_artist_binary1_authored_hint:
         courseD_artist_binary1_a: Replace the "???" in the text block with the binary image you want, in zeroes and ones.
         courseD_artist_binary1_b: The artist will draw a white space for every 1 and a black space for every 0.
@@ -9604,8 +9646,8 @@ en:
         courseD_farmer_condLoops5_a: 'There is a new loop: `repeat until at pumpkin`. Can you see how to use it in this puzzle?'
         courseD_farmer_condLoops5_b: There could be more than one corn or lettuce plant in each spot. Use a `while` loop to gather all of them!
       courseD_farmer_condLoops6_authored_hint:
-        courseD_farmer_condLoops6_a: Use a `while path ahead` loop to move the farmer down each piece of the spiral.
-        courseD_farmer_condLoops6_b: You only need to check for corn during most of the harvest.  Just pick one pumpkin at the very end of your program.
+        courseD_farmer_condLoops6_a: Use a `while there is corn` loop to make sure you get all of the corn along the way. This block won't do anything if there's no corn to pick.
+        courseD_farmer_condLoops6_b: Make sure to check `if` there's a path ahead before you take your next step!
       courseD_farmer_condLoops6_2018_authored_hint:
         courseD_farmer_condLoops6_a: Use a `while path ahead` loop to move the farmer down each piece of the spiral.
         courseD_farmer_condLoops6_b: You only need to check for corn during most of the harvest.  Just pick one pumpkin at the very end of your program.
@@ -9959,17 +10001,13 @@ en:
         courseD_maze_until5_b: To use only one `move forward`, put it inside the `repeat until sunflower` block.
         courseD_maze_until5_c: After each step, the zombie should check whether there is a path to the left. What should he do if he finds one?
       courseD_maze_until5_2018_authored_hint:
-        courseD_maze_until5_a: Don't forget to use `if path to the left` to keep the zombie checking for a place to turn.
         courseD_maze_until5_b: To use only one `move forward`, put it inside the `repeat until sunflower` block.
-        courseD_maze_until5_c: After each step, the zombie should check whether there is a path to the left. What should he do if he finds one?
       courseD_maze_until6_authored_hint:
         courseD_maze_until6_a: This time, try the `if path to the right` to keep the zombie on track.
         courseD_maze_until6_b: To use only one `move forward`, put it inside the `repeat until sunflower` block.
         courseD_maze_until6_c: Although there are more turns here than the last puzzle, your code can be almost identical because of the `repeat until` block!
       courseD_maze_until6_2018_authored_hint:
-        courseD_maze_until6_a: This time, try the `if path to the right` to keep the zombie on track.
         courseD_maze_until6_b: To use only one `move forward`, put it inside the `repeat until sunflower` block.
-        courseD_maze_until6_c: Although there are more turns here than the last puzzle, your code can be almost identical because of the `repeat until` block!
       courseD_maze_until7_authored_hint:
         courseD_maze_until7_a: You don't need your code to be any longer than last time, just because the maze is!
         courseD_maze_until7_b: Although there are more turns here than the last puzzle, your code can be almost identical because of the `repeat until` block!
@@ -9977,7 +10015,6 @@ en:
       courseD_maze_until7_2018_authored_hint:
         courseD_maze_until7_a: You don't need your code to be any longer than last time, just because the maze is!
         courseD_maze_until7_b: Although there are more turns here than the last puzzle, your code can be almost identical because of the `repeat until` block!
-        courseD_maze_until7_c: Remember to check for paths to the left, because turning right will take you down the wrong path!
       courseD_maze_until8_authored_hint:
         courseD_maze_until8_a: Make sure you're using an `if/else` block to keep the zombie headed the right direction.
         courseD_maze_until8_b: 'With your `if/else` block: if there is a path ahead, what should you do?'
@@ -9991,8 +10028,6 @@ en:
         courseD_maze_until8_b: Which direction should you turn if there is no path forward?
         courseD_maze_until8_c: Remember to use the `repeat until` block to get you to the sunflower!
       courseD_maze_until9_2018_authored_hint:
-        courseD_maze_until8_a: Using `if path ahead` will keep you going forward whenever possible, helping you miss the paths with chompers.
-        courseD_maze_until8_b: Which direction should you turn if there is no path forward?
         courseD_maze_until8_c: Remember to use the `repeat until` block to get you to the sunflower!
       courseD_maze_until_challenge_authored_hint: {}
       courseD_maze_until_challenge1-delete-this-copy_authored_hint: {}
@@ -10185,9 +10220,9 @@ en:
           - Move forward 100 + 75 pixels
           - Use function
       courseE_artist_functions2_2018_authored_hint:
-        courseD_artist_functions2_b: The function you write should not contain your whole program, just the part that draws a square with 100 pixel sides.
+        courseD_artist_functions2_b: The function should not contain your whole program, just the part that draws a square with 100 pixel sides.
         courseD_artist_functions2_c: |-
-          Use the green `draw a square` block to "call" your function under the `when run` block. Otherwise, the code in your function will not run.
+          Make sure that you use the green `draw a square` block to "call" your function. Otherwise, the code in your function will not run.
           <xml><block type="procedures_callnoreturn" limit="2"><mutation name="draw a square"/></block></xml>
         courseD_artist_functions2_a: |-
           Your program should:
@@ -10200,12 +10235,7 @@ en:
 
           If you can't remember what the starter code was, click "start over" in the upper right corner of the workspace.
         courseD_artist_functions3_b: Your loop should have all 3 starter code blocks inside of it.
-      courseE_artist_functions3_2018_authored_hint:
-        courseD_artist_functions3_a: |-
-          To solve this puzzle, you just need to add a  loop that repeats the starter code 8 times.
-
-          If you can't remember what the starter code was, click "start over" in the upper right corner of the workspace.
-        courseD_artist_functions3_b: Your loop should have all 3 starter code blocks inside of it.
+      courseE_artist_functions3_2018_authored_hint: {}
       courseE_artist_functions4_authored_hint:
         courseD_artist_functions4_a: Try using a function!
         courseD_artist_functions4_b: Drag the `draw a star` function block out of the toolbox to begin building your function. It should have the same code as the previous puzzle, since you are drawing the same star pattern.
@@ -10221,7 +10251,7 @@ en:
       courseE_artist_functions5_2018_authored_hint:
         courseD_artist_functions5_a: Don't give up!  Remember what you have been learning.
         courseD_artist_functions5_b: Functions make it easy to call saved code at any time, not just from inside a loop!
-        courseD_artist_functions5_c: Start by dragging the code for a star shape into the `draw a star` function, then use this function to draw the three stars!
+        courseD_artist_functions5_c: Start by creating your `draw a star` function, then use this function to draw the three stars!
       courseE_artist_functions6_authored_hint:
         grade4_artist_functions_windows0_a: Focus only on making one window for now.  We'll create a function in the next puzzle.
         grade4_artist_functions_windows0_b: Try using nested loops. The inner loop will make the square and the outer loop will rotate the square four times.
@@ -10235,7 +10265,7 @@ en:
         courseD_artist_functions7_b: You shouldn't need to add any extra repeat loops.  Just jump the artist 100 pixels between each top window, then down 150 pixels to get to the bottom windows.
       courseE_artist_functions7_2018_authored_hint:
         courseD_artist_functions7_a: Try creating your function first then add windows one at a time.
-        courseD_artist_functions7_b: You shouldn't need to add any extra repeat loops.  Just jump the artist 100 pixels between each top window, then down 150 pixels to get to the bottom windows.
+        courseD_artist_functions7_b: To get from the top windows to the bottom windows, simply turn the artist right, jump 150 pixels, then turn the artist right again!  Now the artist will be facing the correct direction to finish the rest of the house!
       courseE_artist_functions8_authored_hint:
         courseD_artist_functions8_f: You only need one `move forward` block, but you will need quite a few `jump forward` and/or `jump backward` blocks!
         courseD_artist_functions8_a: |-
@@ -10268,8 +10298,21 @@ en:
           Think of each row in this picture as a line of 3 squares. How many lines of squares are there and where do you start drawing each of them?
 
           ![](https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png)
-        courseD_artist_functions8_c: At the end of each line of squares, the artist will need to jump down and backward before he draws the next line of squares.
+        courseD_artist_functions8_c: At the end of each set of staggered squares, the artist will need to jump down and backward before he draws the next set of staggered squares.
         courseD_artist_functions8_g: "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
+      courseE_artist_functions8a_2018_authored_hint: {}
+      courseE_artist_functions8b_2018_authored_hint:
+        courseD_artist_functions8_f: You only need one `move forward` block if you're doing this correctly!
+        courseD_artist_functions8_a: Start by making a function for a square, then try making a function for a line of squares.
+        courseD_artist_functions8_d: |-
+          To make a line of squares,
+           - repeat 3 times
+              - draw a square
+              - jump forward **100 pixels**
+      courseE_artist_functions8c_2018_authored_hint:
+        courseD_artist_functions8_f: This is easier than it looks!  You shouldn't need any `move` or `jump` blocks here!
+        courseD_artist_functions8_a: The second line of squares is just a 180 degree turn different than the first!
+        courseD_artist_functions8_c: At the end of each line of squares, the artist only needs to turn 180 degrees before drawing the next line of squares.  Put the whole thing in a repeat loop to set you up for the next exercise!
       courseE_artist_functions9_authored_hint:
         courseD_artist_functions9_e: |-
           Can you spot all four places that the `line of triangles` can be used in this drawing?
@@ -10316,6 +10359,7 @@ en:
               - turn 60 degrees
               - draw a line of triangles
               - turn 120 degrees
+      courseE_artist_functionsProj_2018_authored_hint: {}
       courseE_artist_functions_challenge_authored_hint:
         courseE_artist_functions_challenge_a: If you call the function one more time, you can create the same design in the final corner. You can also `jump to` other positions or change the whole thing around however you want!
       courseE_artist_functions_challenge1_authored_hint:
@@ -10542,6 +10586,10 @@ en:
         courseE_bee_ramp14_a: The bee works just like the farmer in the previous puzzle. Buzz along the path and collect nectar while there is nectar (while nectar > 0) and make all of the honey.
         courseE_bee_ramp14_b: There can be more than one flower or honeycomb at each space, so make sure to use `while` loops to get them all!
         courseE_bee_ramp14_c: This puzzle is nearly identical to the previous one, just with honey and nectar instead of vegetables.
+      courseE_bee_ramp14_2018_authored_hint:
+        courseE_bee_ramp14_a: The bee works just like the farmer in the previous puzzle. Buzz along the path and collect nectar while there is nectar (while nectar > 0) and make all of the honey.
+        courseE_bee_ramp14_b: There can be more than one flower or honeycomb at each space, so make sure to use `while` loops to get them all!
+        courseE_bee_ramp14_c: This puzzle is nearly identical to the previous one, just with honey and nectar instead of vegetables.
       courseE_bee_ramp17_authored_hint:
         courseE_bee_ramp17_a: Since we don't have a repeat block to do something a certain number of times, what block should we use to move along the path?
         courseE_bee_ramp17: If you were to solve this puzzle without an until block, where would you see repeated code? How can you use this repeated code to shape how you must use an until block to solve the problem?
@@ -10586,6 +10634,7 @@ en:
         courseE_farmer_functions1_a: The toolbox is organized a little differently this time! Click on the different categories to see which blocks you have.
         courseE_farmer_functions1_b: You only need to pick one pumpkin, but could you use a loop to get to it?
       courseE_farmer_functions10_authored_hint: {}
+      courseE_farmer_functions10a1_2018_authored_hint: {}
       courseE_farmer_functions10b_authored_hint:
         courseE_farmer_functions10b_a: You will have to re-create your function first.
         courseE_farmer_functions10b_b: Which way do you need to turn after the first pumpkin?
@@ -10596,6 +10645,7 @@ en:
         courseE_farmer_functions10b_c: Look back at the last puzzle if you need help making the function.
       courseE_farmer_functions11_predict_authored_hint: {}
       courseE_farmer_functions11_predict_2018_authored_hint: {}
+      courseE_farmer_functions13_2018_authored_hint: {}
       courseE_farmer_functions1_2018_authored_hint:
         courseE_farmer_functions1_a: The toolbox is organized a little differently this time! Click on the different categories to see which blocks you have.
         courseE_farmer_functions1_b: You only need to pick one pumpkin, but could you use a loop to get to it?
@@ -10603,7 +10653,7 @@ en:
         courseE_farmer_functions1a_a: Think through the `if/else` statements step by step. What should you do if you are standing at a corn plant?
         courseE_farmer_functions1a_b: Use a `repeat until` block to get to the pumpkin!
       courseE_farmer_functions1a_2018_authored_hint:
-        courseE_farmer_functions1a_a: Think through the `if/else` statements step by step. What should you do if you are standing at a corn plant?
+        courseE_farmer_functions1a_a: Make sure you read through the function definition. Can you tell what it does?
         courseE_farmer_functions1a_b: Use a `repeat until` block to get to the pumpkin!
       courseE_farmer_functions2a_authored_hint: {}
       courseE_farmer_functions2aALT_authored_hint: {}
@@ -10612,15 +10662,14 @@ en:
         courseE_farmer_functions2b_b: There is no corn on the connecting path, so you can just move along it and turn.
         courseE_farmer_functions2b_c: You will need two separate `repeat until` blocks to get all of the crops.
       courseE_farmer_functions2b_2018_authored_hint:
-        courseE_farmer_functions2b_a: You can use a `repeat until pumpkin` to get to the ends of the two paths.
+        courseE_farmer_functions2b_a: You can `repeat until pumpkin` to get to the ends of the two paths.
         courseE_farmer_functions2b_b: There is no corn on the connecting path, so you can just move along it and turn.
         courseE_farmer_functions2b_c: You will need two separate `repeat until` blocks to get all of the crops.
       courseE_farmer_functions2ba_authored_hint:
         courseE_farmer_functions2ba_a: Use the green `corn and pumpkin` block to call this function.
         courseE_farmer_functions2ba_b: Drag all of the blocks in the workspace together under `when run` to see how this function works.
       courseE_farmer_functions2ba_2018_authored_hint:
-        courseE_farmer_functions2ba_a: Use the green `corn and pumpkin` block to call this function.
-        courseE_farmer_functions2ba_b: Drag all of the blocks in the workspace together under `when run` to see how this function works.
+        courseE_farmer_functions2ba_a: Use the green `get all pumpkins` block to make sure you get all of the pumpkins!
       courseE_farmer_functions3_authored_hint:
         courseE_farmer_functions3_a: Try using a `while path ahead` loop to get you where you need to be.
       courseE_farmer_functions3b_authored_hint:
@@ -10628,9 +10677,8 @@ en:
       courseE_farmer_functions3c_authored_hint:
         courseE_farmer_functions3c_a: What sequence is repeated often in this program? Can you drag these blocks into the function?
         courseE_farmer_functions3c_b: Don't forget to call your function in the main program wherever you removed blocks.
-      courseE_farmer_functions3c_2018_authored_hint:
-        courseE_farmer_functions3c_a: What sequence is repeated often in this program? Can you drag these blocks into the function?
-        courseE_farmer_functions3c_b: Don't forget to call your function in the main program wherever you removed blocks.
+      courseE_farmer_functions3c1_2018_authored_hint: {}
+      courseE_farmer_functions3c_2018_authored_hint: {}
       courseE_farmer_functions4_authored_hint:
         courseE_farmer_functions4_a: Drag all of the code out of your `repeat` loop and into the `go get pumpkins` function.
         courseE_farmer_functions4_b: Don't forget to put the block that calls the `go get pumpkins` functions inside your loop before you run your code.
@@ -10663,6 +10711,7 @@ en:
         courseE_farmer_functions6c_b: Would an `if/else` block help to check if there is lettuce in a space?
         courseE_farmer_functions6c_c: Don't forget to keep checking for corn!
       courseE_farmer_functions7_authored_hint: {}
+      courseE_farmer_functions7a1_2018_authored_hint: {}
       courseE_farmer_functions7b_authored_hint:
         courseE_farmer_functions7b_a: You don't need a function here, but you can make one if it is helpful to you!
         courseE_farmer_functions7b_b: Use an `if/else` statement to check for crops, then turn based on which crop you find.
@@ -10673,6 +10722,7 @@ en:
         courseE_farmer_functions7b_c: A `repeat until pumpkin` loop can help you get all the way through the maze.
       courseE_farmer_functions8_authored_hint:
         courseE_farmer_functions8_a: Create a function that takes the farmer to the corn, gets all of the corn, then turns around and comes back.
+      courseE_farmer_functions8a1_2018_authored_hint: {}
       courseE_farmer_functions8b_authored_hint:
         courseE_farmer_functions8b_a: Try running the code given to see what it does. What do you need after this?
         courseE_farmer_functions8b_b: Drag all of the starter blocks into a function so that you can use them more than once.
@@ -10683,6 +10733,7 @@ en:
         courseE_farmer_functions8b_c: How many times do you need to call the function?
       courseE_farmer_functions9_authored_hint:
         courseE_farmer_functions8_a: Create a function that takes the farmer to the corn, gets all of the corn, then turns around and comes back.
+      courseE_farmer_functions9a1_2018_authored_hint: {}
       courseE_farmer_functions9b_authored_hint:
         courseE_farmer_functions9b_a: Can you use nested `if` and `if/else` statements to move along the path?
         courseE_farmer_functions9b_b: Use `repeat until pumpkin` to move through all of the paths.
@@ -10694,7 +10745,10 @@ en:
       courseE_farmer_functions9b_clone_authored_hint: {}
       courseE_farmer_predict1_authored_hint:
         courseE_farmer_ramp12a: Feel free to go back to the last puzzle if you need a reminder of how to pick produce only **while** there is produce to pick.
+      courseE_farmer_predict1_2018_authored_hint:
+        courseE_farmer_ramp12a: Feel free to go back to the last puzzle if you need a reminder of how to pick produce only **while** there is produce to pick.
       courseE_farmer_predict2_authored_hint: {}
+      courseE_farmer_predict2_2018_authored_hint: {}
       courseE_farmer_ramp11_authored_hint:
         courseE_farmer_ramp11_a: If you're having a hard time seeing where the loops should go, try coding it all out then looking for a pattern.
         courseE_farmer_ramp11_b: How can you use a `repeat` loop to pick lettuce instead of dragging out 5 `pick lettuce` blocks?
@@ -10711,11 +10765,17 @@ en:
         courseE_farmer_ramp11b_a: You can nest your `while` loop inside of a `repeat` loop to make your code shorter.
       courseE_farmer_ramp12_authored_hint:
         courseE_farmer_ramp12_b: You will still need to use a `repeat` loop on the outside of it all to tell the farmer how many times to walk forward and get lettuce.
+      courseE_farmer_ramp12_2018_authored_hint:
+        courseE_farmer_ramp12_b: You will still need to use a `repeat` loop on the outside of it all to tell the farmer how many times to walk forward and get lettuce.
       courseE_farmer_ramp12_forswap_authored_hint:
         courseE_farmer_ramp12_b: You will still need to use a `repeat` loop on the outside of it all to tell the farmer how many times to walk forward and get lettuce.
       courseE_farmer_ramp12_forswap_2018_authored_hint:
         courseE_farmer_ramp12_b: You will still need to use a `repeat` loop on the outside of it all to tell the farmer how many times to walk forward and get lettuce.
       courseE_farmer_ramp12a_authored_hint:
+        courseE_farmer_ramp12b: You will need to check your `if` statement 21 times to solve this puzzle.
+        courseE_farmer_ramp12c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.
+        courseE_farmer_ramp12d: There will only be lettuce, so you don't need to worry about empty spaces, corn, or pumpkins.
+      courseE_farmer_ramp12a_2018_authored_hint:
         courseE_farmer_ramp12b: You will need to check your `if` statement 21 times to solve this puzzle.
         courseE_farmer_ramp12c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.
         courseE_farmer_ramp12d: There will only be lettuce, so you don't need to worry about empty spaces, corn, or pumpkins.
@@ -10745,7 +10805,15 @@ en:
         courseE_farmer_ramp13_a: There can be more than one of either crop in a space, so make sure to use `while` loops to pick them all!
         courseE_farmer_ramp13_b: Use a `repeat` loop so that you don't have to write a separate if statement for each square.
         courseE_farmer_ramp13_c: If you can't figure out where to put the loops, try writing your code step-by-step and look for patterns.
+      courseE_farmer_ramp13_2018_authored_hint:
+        courseE_farmer_ramp13_a: There can be more than one of either crop in a space, so make sure to use `while` loops to pick them all!
+        courseE_farmer_ramp13_b: Use a `repeat` loop so that you don't have to write a separate if statement for each square.
+        courseE_farmer_ramp13_c: If you can't figure out where to put the loops, try writing your code step-by-step and look for patterns.
       courseE_farmer_ramp15_authored_hint:
+        courseE_farmer_ramp15_a: Use the `repeat until at pumpkin` block to make it to the end of the path.
+        courseE_farmer_ramp15_b: What else needs to be done while moving along the path to the pumpkin?
+        courseE_farmer_ramp15_c: The sprouts hide various amounts of either corn or lettuce to harvest on your way to the pumpkin.
+      courseE_farmer_ramp15_2018_authored_hint:
         courseE_farmer_ramp15_a: Use the `repeat until at pumpkin` block to make it to the end of the path.
         courseE_farmer_ramp15_b: What else needs to be done while moving along the path to the pumpkin?
         courseE_farmer_ramp15_c: The sprouts hide various amounts of either corn or lettuce to harvest on your way to the pumpkin.
@@ -11835,7 +11903,15 @@ en:
 
           ![Solution Blocks](https://images.code.org/a82cfea836b95ce6625b08afcc3b7b37-image-1469727289590.png)
       courseF_artist_predict1_authored_hint: {}
+      courseF_artist_predict1_2018_authored_hint: {}
       courseF_artist_ramp10_authored_hint:
+        courseF_artist_ramp10_a: Don't forget to turn by 60 degrees after each triangle.  Which loop do you need to put that instruction inside?
+        courseF_artist_ramp10_b: If your code for a triangle is in a <xml><block type="controls_repeat"><title name="TIMES">6</title></block></xml> loop, this task will be a lot simpler.
+        courseF_artist_ramp10_c: |-
+          You will draw six triangles in total for this design:
+
+          ![](https://images.code.org/bc62bed22e90d35e420b0a116ac487ef-image-1500347536221.2_solution2.gif)
+      courseF_artist_ramp10_2018_authored_hint:
         courseF_artist_ramp10_a: Don't forget to turn by 60 degrees after each triangle.  Which loop do you need to put that instruction inside?
         courseF_artist_ramp10_b: If your code for a triangle is in a <xml><block type="controls_repeat"><title name="TIMES">6</title></block></xml> loop, this task will be a lot simpler.
         courseF_artist_ramp10_c: |-
@@ -11849,7 +11925,18 @@ en:
 
           Don't forget to turn afterward!
         courseF_artist_ramp8_c: Your turn will also go inside of the <xml><block type="controls_repeat"><title name="TIMES">3</title></block></xml> loop.
+      courseF_artist_ramp8_2018_authored_hint:
+        courseF_artist_ramp8_a: To draw a side, use the <xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">100</title></block></xml> block, and change the 100 to a 200.
+        courseF_artist_ramp8_b: |-
+          To draw 4 sides, put the <xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">200</title></block></xml> block inside of a repeat loop and make sure the loop is set to draw 4 times.
+
+          Don't forget to turn afterward!
+        courseF_artist_ramp8_c: Your turn will also go inside of the <xml><block type="controls_repeat"><title name="TIMES">3</title></block></xml> loop.
       courseF_artist_ramp9_authored_hint:
+        courseF_artist_ramp9_a: How is this similar to a square?  How is it different?
+        courseF_artist_ramp9_b: You can use the drop down menu on the turn blocks to see which angle you need!
+        courseF_artist_ramp9_c: You will want to move forward 100 pixels, then turn right 120 degrees for each side. Can you use a <xml><block type="controls_repeat"><title name="TIMES">3</title></block></xml> loop to make your code shorter?
+      courseF_artist_ramp9_2018_authored_hint:
         courseF_artist_ramp9_a: How is this similar to a square?  How is it different?
         courseF_artist_ramp9_b: You can use the drop down menu on the turn blocks to see which angle you need!
         courseF_artist_ramp9_c: You will want to move forward 100 pixels, then turn right 120 degrees for each side. Can you use a <xml><block type="controls_repeat"><title name="TIMES">3</title></block></xml> loop to make your code shorter?
@@ -12894,7 +12981,7 @@ en:
         courseF_bee_functions5a_b: Use a `while` loop to travel down all of the main paths, since they are different lengths.
         courseF_bee_functions5a_c: Within your `while` loop, make sure to move forward, then use your function to check for a path.
       courseF_bee_functions6_authored_hint:
-        courseF_bee_functions6_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        courseF_bee_functions6_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\n\n\n<xml>\n  <block type=\"procedures_defnoreturn\" editable=\"false\">\n    <mutation/>\n    <title name=\"NAME\">get nectar make honey</title>\n    <statement name=\"STACK\">\n\n    </statement>\n  </block>\n</xml>"
         courseF_bee_functions6_b: Your function should check if there is a flower or honeycomb, get nectar or make honey, then turn.
         courseF_bee_functions6_c: Since you are turning within your function, you only need one `while` loop to get you through this maze.
       courseF_bee_functions6_2018_authored_hint:
@@ -12915,10 +13002,18 @@ en:
         courseF_bee_functions8a_b: "Remember to build code inside of the function editor.\n\n"
       courseF_bee_functionsPre7_authored_hint:
         courseF_bee_functions7_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
-        courseF_bee_functions7_b: |-
+        courseF_bee_functions7_b: |
           Remember to build code inside of the green function block.
 
-          ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
+          <xml>
+            <block type="procedures_defnoreturn" editable="false">
+              <mutation/>
+              <title name="NAME">get nectar make honey</title>
+              <statement name="STACK">
+
+              </statement>
+            </block>
+          </xml>
         courseF_bee_functions7_c: Which way should you turn if there is a honeycomb? What about a flower? What if there is nothing?
       courseF_bee_functionsPre7_2018_authored_hint:
         courseF_bee_functions7_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
@@ -12927,6 +13022,9 @@ en:
 
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
         courseF_bee_functions7_c: Which way should you turn if there is a honeycomb? What about a flower? What if there is nothing?
+      courseF_bee_functions_1_2018_authored_hint: {}
+      courseF_bee_functions_2_2018_authored_hint: {}
+      courseF_bee_functions_3_2018_authored_hint: {}
       courseF_bee_functions_challenge1_authored_hint:
         courseF_bee_functions_challenge1_a: You can use the functions in the tool box to help you. You can call a function inside of another function's definition!
       courseF_bee_functions_challenge1_2018_authored_hint:
@@ -13871,7 +13969,19 @@ en:
                 </block>
               </next>
               </block></xml>
+      courseF_bee_variables_1_2018_authored_hint: {}
+      courseF_bee_variables_2_2018_authored_hint: {}
+      courseF_bee_variables_3_2018_authored_hint: {}
+      courseF_bee_variables_4_2018_authored_hint: {}
+      courseF_bee_variables_5_2018_authored_hint: {}
+      courseF_bee_variables_6_2018_authored_hint: {}
+      courseF_bee_variables_7_2018_authored_hint: {}
+      courseF_bee_variables_8_2018_authored_hint: {}
       courseF_farmer_ramp11_authored_hint:
+        courseF_farmer_ramp11_a: If you're having a hard time seeing where the loops should go, try coding it all out then looking for a pattern.
+        courseF_farmer_ramp11_b: How can you use a <xml><block type="controls_repeat"><title name="TIMES">???</title></block></xml> loop to pick lettuce, instead of dragging out 5 <xml><block type="harvester_lettuce"/></xml> blocks?
+        courseF_farmer_ramp11_c: You don't need to use 5 repeat loops to get all of the lettuce.  Instead, drag your lettuce picking repeat loop inside of another loop (along with a <xml><block type="maze_moveForward"/></xml> block, and you'll have it!)
+      courseF_farmer_ramp11_2018_authored_hint:
         courseF_farmer_ramp11_a: If you're having a hard time seeing where the loops should go, try coding it all out then looking for a pattern.
         courseF_farmer_ramp11_b: How can you use a <xml><block type="controls_repeat"><title name="TIMES">???</title></block></xml> loop to pick lettuce, instead of dragging out 5 <xml><block type="harvester_lettuce"/></xml> blocks?
         courseF_farmer_ramp11_c: You don't need to use 5 repeat loops to get all of the lettuce.  Instead, drag your lettuce picking repeat loop inside of another loop (along with a <xml><block type="maze_moveForward"/></xml> block, and you'll have it!)
@@ -13887,10 +13997,20 @@ en:
       courseF_maze_ramp15_authored_hint:
         courseF_maze_ramp7_b: Don't forget to use the "Step" button to go through block by block and look for errors.
         courseF_maze_ramp7_a: Use repeat blocks to run either a single block or a chunk of code over and over.
+      courseF_maze_ramp1_2018_authored_hint:
+        courseF_maze_ramp1_a: If the bird isn't getting to the pig, make sure all of the blocks have been fully snapped together, then click "Run" again.
+        courseF_maze_ramp1_b: You don't need any extra blocks from the toolbox here!
       courseF_maze_ramp2_authored_hint:
         courseF_maze_ramp2_a: To use a new block, drag it from the toolbox out into the workspace and connect it to the program that is attached to the <xml><block type="when_run"/></xml> block.
         courseF_maze_ramp2_b: Make sure the <xml><block type="maze_moveForward"/></xml> block is inside of the loop, so that it is repeated.
+      courseF_maze_ramp2_2018_authored_hint:
+        courseF_maze_ramp2_a: To use a new block, drag it from the toolbox out into the workspace and connect it to the program that is attached to the <xml><block type="when_run"/></xml> block.
+        courseF_maze_ramp2_b: Make sure the <xml><block type="maze_moveForward"/></xml> block is inside of the loop, so that it is repeated.
       courseF_maze_ramp4_authored_hint:
+        courseF_maze_ramp4_a: You can turn right or left from the bird's point of view. If you are facing right, turning right will make you point downwards.
+        courseF_maze_ramp4_b: To follow the path, move forward and turn one way, then move three times before turning the opposite way. Move forward one more time to reach the pig.
+        courseF_maze_ramp4_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.
+      courseF_maze_ramp4_2018_authored_hint:
         courseF_maze_ramp4_a: You can turn right or left from the bird's point of view. If you are facing right, turning right will make you point downwards.
         courseF_maze_ramp4_b: To follow the path, move forward and turn one way, then move three times before turning the opposite way. Move forward one more time to reach the pig.
         courseF_maze_ramp4_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.
@@ -13898,7 +14018,15 @@ en:
         courseF_maze_ramp5_a: Try using the "Step" button to run your code line by line. Can you figure out what you need to do next?
         courseF_maze_ramp5_b: There is more than one way to get to the pig.
         courseF_maze_ramp5_c: Try using a <xml><block type="controls_repeat"><title name="TIMES">3</title></block></xml> loop for shorter code!
+      courseF_maze_ramp5_2018_authored_hint:
+        courseF_maze_ramp5_a: Try using the "Step" button to run your code line by line. Can you figure out what you need to do next?
+        courseF_maze_ramp5_b: There is more than one way to get to the pig.
+        courseF_maze_ramp5_c: Try using a <xml><block type="controls_repeat"><title name="TIMES">3</title></block></xml> loop for shorter code!
       courseF_maze_ramp6_authored_hint:
+        courseF_maze_ramp6_a: There are two ways to solve this puzzle!
+        courseF_maze_ramp6_b: The bird starts facing a wall, so remember to turn before moving!
+        courseF_maze_ramp6_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+      courseF_maze_ramp6_2018_authored_hint:
         courseF_maze_ramp6_a: There are two ways to solve this puzzle!
         courseF_maze_ramp6_b: The bird starts facing a wall, so remember to turn before moving!
         courseF_maze_ramp6_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
@@ -14298,6 +14426,9 @@ en:
         courseC_maze_programming1_a: If the bird isn't getting to the pig, make sure both of the blocks have been fully clicked together, then click "Run" again.
         courseC_maze_programming1_b: Don't be afraid to make a mistake! Try something, and if it doesn't work, try something else!
       coursef_maze_ramp3_authored_hint:
+        courseF_maze_ramp3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo delete a block from the middle of your code, drag all of the blocks underneath it away to the right and let them sit in the workspace for a while.  \n\nClick on the block you want to delete, and drag it back to the toolbox.\n\nFinally, put your other blocks back in place where they belong.\n"
+        courseF_maze_ramp3_b: Use the step button to go through the program line-by-line. Where does something go wrong?
+      coursef_maze_ramp3_2018_authored_hint:
         courseF_maze_ramp3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo delete a block from the middle of your code, drag all of the blocks underneath it away to the right and let them sit in the workspace for a while.  \n\nClick on the block you want to delete, and drag it back to the toolbox.\n\nFinally, put your other blocks back in place where they belong.\n"
         courseF_maze_ramp3_b: Use the step button to go through the program line-by-line. Where does something go wrong?
       drawings!_authored_hint:

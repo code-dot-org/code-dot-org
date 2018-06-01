@@ -5,13 +5,15 @@ require 'cdo/delete_accounts_helper'
 require 'cdo/only_one'
 
 def main
+  delete_accounts_helper = DeleteAccountsHelper.new
+
   # Delete inactive users, e.g., those users with no account activity in the past seven years.
   seven_years_ago = Time.now - 7.years
   User.with_deleted.
     where(purged_at: nil).
     where('current_sign_in_at < ?', seven_years_ago).
     find_each do |user|
-    DeleteAccountsHelper.purge_user(user)
+    delete_accounts_helper.purge_user(user)
   end
 
   # Delete stale soft-deleted users, e.g., those users who have been soft-deleted for thirty days.
@@ -20,7 +22,7 @@ def main
     where(purged_at: nil).
     where('deleted_at < ?', thirty_days_ago).
     find_each do |user|
-    DeleteAccountsHelper.purge_user(user)
+    delete_accounts_helper.purge_user(user)
   end
 end
 

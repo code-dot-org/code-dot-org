@@ -1,7 +1,8 @@
 /** @file JavaScript run only on the gamelab level edit page. */
 import $ from 'jquery';
-import jsonic from 'jsonic';
-import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
+import initializeCodeMirror, {
+  initializeCodeMirrorForJson,
+} from '@cdo/apps/code-studio/initializeCodeMirror';
 import {throwIfSerializedAnimationListIsInvalid} from '@cdo/apps/gamelab/shapes';
 
 const VALID_COLOR = 'black';
@@ -33,30 +34,21 @@ $(document).ready(function () {
 
   // Leniently validate and fix up custom block JSON using jsonic
   if (document.getElementById('level_custom_blocks')) {
-    const customBlocksValidationDiv = $('#custom-blocks-validation');
-    const customBlocksEditor =
-      initializeCodeMirror('level_custom_blocks', 'application/json');
-    customBlocksEditor.on('blur', () => {
-      try {
-        if (customBlocksEditor.getValue().trim()) {
-          let blocks = jsonic(customBlocksEditor.getValue().trim());
-          if (!Array.isArray(blocks)) {
-            blocks = [blocks];
-          }
-          customBlocksEditor.setValue(JSON.stringify(blocks, null, 2));
-        } else {
-          customBlocksEditor.setValue('');
+    initializeCodeMirrorForJson('level_custom_blocks', {
+      validationDiv: 'custom-blocks-validation',
+      onBlur(blocks) {
+        if (!Array.isArray(blocks)) {
+          return [blocks];
         }
-        customBlocksValidationDiv.text('Custom block JSON appears valid.');
-        customBlocksValidationDiv.css('color', VALID_COLOR);
-      } catch (err) {
-        customBlocksValidationDiv.text(err.toString());
-        customBlocksValidationDiv.css('color', INVALID_COLOR);
+        return blocks;
       }
     });
   }
   if (document.getElementById('level_custom_helper_library')) {
     initializeCodeMirror('level_custom_helper_library', 'javascript');
+  }
+  if (document.getElementById('level_validation_code')) {
+    initializeCodeMirror('level_validation_code', 'javascript');
   }
   const autoRunSetup = document.getElementById('level_auto_run_setup');
   const customSetupCode = document.getElementById('level_custom_setup_code');

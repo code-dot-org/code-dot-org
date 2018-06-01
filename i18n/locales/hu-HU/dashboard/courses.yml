@@ -3,12 +3,16 @@ hu:
     course:
       name:
         csp:
+          assignment_family_title: Computer Science Principles
           title: Számítógép-tudományi alapelvek
+          version_title: "'17-'18"
           description_student: 2016 őszén mutatkozott be a College Board legújabb AP® (előrehozott felsőfokú) tanfolyama, az AP Számítógép-tudomány alapjai. A tanfolyam bevezeti a tanulókat a számítógép-tudomány alapvető fogalmaiba és arra ösztönzi őket, hogy felfedezzék, hogyan változtathat a számítógép és a technológia a világon. Az előrehozott felsőfokú programként tervezett AP Számítógép-tudomány alapjainak célja a számítógép-tudományi területek vezetőinek képzése, és olyan személyek bevonása, akik hagyományosan alacsonyabb számban voltak jelen, szükséges eszközök és interdiszciplináris lehetőségek felkínálásával.
           description_teacher: 2016 őszén mutatkozott be a College Board legújabb AP® (előrehozott felsőfokú) tanfolyama, az AP Számítógép-tudomány alapjai. A tanfolyam bevezeti a tanulókat a számítógép-tudomány alapvető fogalmaiba és arra ösztönzi őket, hogy felfedezzék, hogyan változtathat a számítógép és a technológia a világon. Az előrehozott felsőfokú programként tervezett AP Számítógép-tudomány alapjainak célja a számítógép-tudományi területek vezetőinek képzése, és olyan személyek bevonása, akik hagyományosan alacsonyabb számban voltak jelen, szükséges eszközök és interdiszciplináris lehetőségek felkínálásával.
           description_short: Ismerd meg az alapvető számítógép-tudományi fogalmakat.
         csd:
+          assignment_family_title: Computer Science Discoveries
           title: Számítógép-tudományi felfedezések
+          version_title: "'17-'18"
           description_student: A Számítógép-tudományi felfedezések (CS Discoveries) egy olyan bevezető kurzus, ami képessé teszi a tanulókat autentikus termékek létrehozására, és felvértezi őket, hogy a számitógép-tudomány eszközeit, mint kreatív, kommunikációs, problémamegoldó és szórakoztató médiumokat.
           description_teacher: A Számítógép-tudományi felfedezések (CS Discoveries) egy olyan bevezető kurzus, ami képessé teszi a tanulókat autentikus termékek létrehozására, és felvértezi őket, hogy a számitógép-tudomány eszközeit, mint kreatív, kommunikációs, problémamegoldó és szórakoztató médiumokat.
           description_short: Egy bevezető számítógép-tudományi tanfolyam, ami lehetővé teszi a tanulók számára, hogy autentikus termékeket hozzanak létre.
@@ -17,3 +21,17 @@ hu:
           description_short: This is a course for allthethings
           description_student: This is a course for allthethings and has a longer description for students
           description_teacher: This is a course for allthethings and has a longer description for teachers
+        csd-2018:
+          assignment_family_title: Computer Science Discoveries
+          title: Computer Science Discoveries ('18-'19)
+          version_title: "'18-'19"
+          description_short: The 2018-2019 version of the CS Discoveries course.
+          description_student: ''
+          description_teacher: ''
+        csp-2018:
+          assignment_family_title: Computer Science Principles
+          title: Computer Science Principles ('18-'19)
+          version_title: "'18-'19"
+          description_short: Ismerd meg az alapvető számítógép-tudományi fogalmakat.
+          description_student: 2016 őszén mutatkozott be a College Board legújabb AP® (előrehozott felsőfokú) tanfolyama, az AP Számítógép-tudomány alapjai. A tanfolyam bevezeti a tanulókat a számítógép-tudomány alapvető fogalmaiba és arra ösztönzi őket, hogy felfedezzék, hogyan változtathat a számítógép és a technológia a világon. Az előrehozott felsőfokú programként tervezett AP Számítógép-tudomány alapjainak célja a számítógép-tudományi területek vezetőinek képzése, és olyan személyek bevonása, akik hagyományosan alacsonyabb számban voltak jelen, szükséges eszközök és interdiszciplináris lehetőségek felkínálásával.
+          description_teacher: 2016 őszén mutatkozott be a College Board legújabb AP® (előrehozott felsőfokú) tanfolyama, az AP Számítógép-tudomány alapjai. A tanfolyam bevezeti a tanulókat a számítógép-tudomány alapvető fogalmaiba és arra ösztönzi őket, hogy felfedezzék, hogyan változtathat a számítógép és a technológia a világon. Az előrehozott felsőfokú programként tervezett AP Számítógép-tudomány alapjainak célja a számítógép-tudományi területek vezetőinek képzése, és olyan személyek bevonása, akik hagyományosan alacsonyabb számban voltak jelen, szükséges eszközök és interdiszciplináris lehetőségek felkínálásával.

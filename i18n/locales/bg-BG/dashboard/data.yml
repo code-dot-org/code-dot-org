@@ -462,9 +462,6 @@ bg:
         alg_15_biggame_update_player: 'CS в алгебрата - "Голямата игра": актуализация на играч'
         alg_16_biggame_collision_detection: 'CS в алгебрата - "Голямата игра": отчитане на сблъсък'
         alg_17_sambat_compound_booleans: CS в алгебрата - комбинирани Booleans
-        hoc2015_preview_blocks: Make your own game blocks
-        hoc2015_preview_typing: Make your own game typing
-        hoc2015_preview_conclusion: Make your own game conclusion
         starwars_intro: 'Междузвездни войни: Изграждане на галактика с код - Въведение'
         starwars_typing: 'Междузвездни войни: Изграждане на галактика с код - JavaScript'
         starwars_events: 'Междузвездни войни: Изграждане на галактика с код - събития'
@@ -528,6 +525,7 @@ bg:
         CSF_harvester_skinOverview_K-1: The Harvester
         CSF_harvester_loops_K1: Loops in Harvester
         CSF_scrat_loops_K1: Loops in Ice Age
+        CSF_scrat_loops_CF: Loops in Ice Age
     callout:
       text:
         drag_blocks: Плъзнете блока за преместване и го поставете под другия блок

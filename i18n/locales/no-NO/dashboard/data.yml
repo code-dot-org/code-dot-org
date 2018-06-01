@@ -378,15 +378,15 @@
         infinity_playlab_intro: Spill-Lab – introduksjon
         infinity_playlab_events: Spill-Lab – hendelser
         infinity_playlab_repeat_forever: Spill-Lab Gjenta for alltid
-        csd_concept_how_computers_work: Introducing How Computers Work
+        csd_concept_how_computers_work: Introduser hvordan datamaskiner virker
         csd_concept_computer: 'Hvordan datamaskiner fungerer: Hva gjør en datamaskin til en datamaskin?'
         csd_concept_binary_data: 'Hvordan datamaskiner fungerer: Binær og data'
-        csd_concept_circuits_logic: 'How Computers Work: Circuits & Logic'
-        csd_concept_memory_cpu_input_output: 'How Computers Work: Memory, CPU, Input, & Output'
-        csd_concept_hardware_software: 'How Computers Work: Hardware & Software'
+        csd_concept_circuits_logic: 'Hvordan datamaskiner virker: Kretser og logikk'
+        csd_concept_memory_cpu_input_output: 'Hvordan datamaskiner virker: Minne, prosesser, inn- og ut-data'
+        csd_concept_hardware_software: 'Hvordan datamaskiner virker: Maskinvare & programvare'
         csd_concept_search: Hvordan søk fungerer
         csd_external_amazon_data: Hvordan Stordata brukes i Amazon Anbefalings systemer kan endre livene våre
-        csd_external_netflix_data: How Does Netflix Make TV Show and Movie Suggestions?
+        csd_external_netflix_data: Hvordan lager Netflix forslagene til serier og filmer?
         csd_external_waze_data: Hvorfor er så mange brukere opptatt av «Waze»?
         csd_gamelab_animation_tab: Animasjons-lab
         csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
@@ -462,9 +462,6 @@
         alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
         alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
         alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
-        hoc2015_preview_blocks: Make your own game blocks
-        hoc2015_preview_typing: Make your own game typing
-        hoc2015_preview_conclusion: Make your own game conclusion
         starwars_intro: 'Star Wars: Skap en galakse med kode - introduksjon'
         starwars_typing: 'Star Wars: Skap en galakse med kode - JavaScript'
         starwars_events: 'Star Wars: Skap en galakse med kode - Hendelser'
@@ -528,6 +525,7 @@
         CSF_harvester_skinOverview_K-1: The Harvester
         CSF_harvester_loops_K1: Loops in Harvester
         CSF_scrat_loops_K1: Loops in Ice Age
+        CSF_scrat_loops_CF: Loops in Ice Age
     callout:
       text:
         drag_blocks: Dra en "flytt" blokk og fest den under den andre blokken

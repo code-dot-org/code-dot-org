@@ -1589,10 +1589,25 @@ a.download-video {
   }
   .itemblock {
     display: table;
+
+    input[type=radio] {
+      margin-top: -4px;
+      margin-right: 4px;
+    }
+
+    label {
+      display: inline-block;
+    }
   }
   .labelblock {
     display: table-cell;
     width: 140px;
+    vertical-align: middle;
+  }
+  .labelblock-wide {
+    display: table-cell;
+    width: 350px;
+    padding-right: 10px;
     vertical-align: middle;
   }
   .school-info-labelblock {
@@ -3071,4 +3086,21 @@ code {
 #survey-submission-thankyou {
   color: $purple;
   font-size: 18px;
+}
+
+hr.danger {
+  border-color: $red;
+  border-width: medium;
+}
+
+h2.danger {
+  color: $red;
+}
+
+.account-page-section-break {
+  margin-top: 6em;
+}
+
+#change-user-type-status {
+  vertical-align: middle;
 }

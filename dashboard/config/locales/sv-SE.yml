@@ -137,6 +137,13 @@
     valid_password: Giltigt lösenord!
     invalid_password: Lösenordet måste vara minst 6 tecken långt
     mismatch_password: De två lösenord du skrev matchar inte varandra
+    agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
+      and <a href='http://code.org/privacy'>Privacy Policy</a>.
+    under_13_consent: Om jag är under 13 år bekräftar jag härmed att jag har min förälders eller
+      målsmans tillåtelse att använda tjänsterna på Code.org.
+    agree_us_website: Jag samtycker till att använda en webbplats baserad i USA.
+    my_data_to_us: När jag använder denna webbplats kan information om detta skickas till och lagras
+      eller bearbetas i USA.
     student_terms: Jag har läst och godkänner Code.org <a href='http://code.org/tos'>användarvillkor</a>.
       Om jag är under 13 år gammal, så bekräftar jag, genom att skicka in det här
       formuläret, att jag har min vårdnadshavares godkännande för att använda mig
@@ -148,12 +155,19 @@
       vår <a href='http://code.org/privacy'>sekretesspolicy</a>.
     additional_information: Vi behöver  ytterligare information att fortsätta registrera
       dig.
+    user_type_button: Update Account Type
     user_type_label: Kontotyp
     user_type_teacher: Lärare
     user_type_student: Student
     field_is_required: krävs
     accept_terms: Du måste godkänna för att skapa ett konto
     error: An error occurred.
+    email_preference_question: Får vi skicka e-post till dig med nyheter om våra kurser, lokala
+      erbjudanden eller andra nyheter i ämnet datavetenskap?
+    email_preference_privacy: (Se vår sekretesspolicy)
+    email_preference_yes: Ja
+    email_preference_no: Nej
+    email_preference_required: You must specify an email preference.
   school_info:
     title: School Information (optional)
     school_country: Skolans land
@@ -423,6 +437,7 @@
     confirm_secret_words: Confirm that it is you by entering your current secret words
     enter_parent_email: Enter your parent or guardian's email address (for password
       recovery)
+    update: Update Account
   user_level:
     completed: Avklarade
     tried: Försökte
@@ -597,6 +612,8 @@
       grupp.
     already_enrolled_in_new_section: Du kan inte flytta dessa studenter eftersom deras
       lärare redan har placerat dem i en annat grupp.
+    third_party_login: You cannot move students to a section that is synced with a
+      third party tool.
   share:
     title: Lär med Code Studio
     description: Alla kan lära sig datavetenskap. Gör spel, apps och konst med kod.
@@ -1130,6 +1147,7 @@
     csd5_2: 'Chapter 2: Solving Data Problems'
     csd6_1: 'Chapter 1: Hardware Output'
     csd6_2: 'Chapter 2: Hardware Input'
+    csd_survey: Post-Course Survey
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -1143,6 +1161,11 @@
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Unit 2: Digital Information'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: Reflection Prompts
   external_links:
     disclaimer: Disclaimer
@@ -1285,3 +1308,16 @@
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
   courses_category: Full Courses
+  cookie_banner:
+    message: By continuing to browse our site or clicking "I agree," you agree to
+      the storing of cookies on your computer or device.
+    more_information: See Code.org's Privacy Policy.
+    accept: Jag håller med
+  gdpr_dialog:
+    heading: Do you agree to using a web site based in the United States?
+    message: Data from your use of this site may be sent to and stored or processed
+      in the United States.
+    link_intro: For details see our
+    privacy_policy: privacy policy
+    logout: Logout
+    true: Ja

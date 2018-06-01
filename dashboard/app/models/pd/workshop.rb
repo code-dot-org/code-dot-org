@@ -210,8 +210,18 @@ class Pd::Workshop < ActiveRecord::Base
     in_state(STATE_IN_PROGRESS).scheduled_end_on_or_before(Time.zone.now - 2.days)
   end
 
+  # Find the workshop that is closest in time to today
+  # @return [Pd::Workshop, nil]
+  def self.nearest
+    includes(:sessions).
+      flat_map(&:sessions).
+      compact.
+      min {|s| (Date.today - s.start.to_date).to_i.abs}&.
+      workshop
+  end
+
   def course_name
-    COURSE_NAMES_MAP[course]
+    COURSE_NAME_OVERRIDES[course] || course
   end
 
   def course_target

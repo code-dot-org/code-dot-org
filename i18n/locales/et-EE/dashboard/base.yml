@@ -114,15 +114,24 @@ et:
     valid_password: "Sobilik salasõna!"
     invalid_password: "Salasõna peab olema vähemalt 6 tähemärgi pikkune"
     mismatch_password: "Sinu poolt sisestatud salasõnad ei ühti"
+    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
+    under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
+    agree_us_website: "I agree to using a website based in the United States."
+    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
     student_terms: "Nõustun Code.org<a href='http://code.org/tos'>teenusetingimustega</a>. Kui ma olen alla 13 aasta vana, kinnitan ma käesoleva vormi esitamisega, et mul on enda vanema või seadusliku eestkostja luba Code.org teenuseid kasutada.<br/><br/>E-posti aadresse ei salvestata viisil, mis lubaks meil õpilastega ühendust võtta. Õpilased ei saa Code.org'ilt e-kirju v.a parooli seadistamiseks. Vaata meie<a href='http://code.org/privacy'>privaatsuspoliitikat</a>, et saada rohkem informatsiooni."
     teacher_terms: "Nõustun Code.org teenusetingimustega. Vaata meie<a href='http://code.org/privacy'>privaatsuspoliitikat</a>, et saada rohkem informatsiooni."
     additional_information: "Meil on vaja täiendavat teavet, et sind registreerida."
+    user_type_button: "Update Account Type"
     user_type_label: "Konto tüüp"
     user_type_teacher: "Õpetaja"
     user_type_student: "Õpilane"
     field_is_required: "on nõutud"
     accept_terms: "Pead konto loomiseks nõustuma"
     error: "An error occurred."
+    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_yes: "Jah"
+    email_preference_no: "Ei"
+    email_preference_required: "You must specify an email preference."
   school_info:
     title: 'School Information (optional)'
     school_country: 'School Country'
@@ -362,6 +371,7 @@ et:
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
+    update: "Update Account"
   user_level:
     completed: 'Tehtud'
     tried: 'Proovisin'
@@ -443,6 +453,7 @@ et:
     student_not_found: "Ühte või mitut õpilast ei leitud."
     all_students_must_be_in_current_section: "Kõik õpilased peavad praegu sinu sektsiooni registreeritud olema."
     already_enrolled_in_new_section: "Sa ei saa neid õpilasi liigutada, sest nad on selle õpetaja uues sektsioonis."
+    third_party_login: "You cannot move students to a section that is synced with a third party tool."
   share:
     title: "Õpi Code stuudios"
     description: "Igaüks saab õppida arvutiteadust. Tee mänge, äppe ja kunsti koodimisega."
@@ -717,21 +728,21 @@ et:
     message: "Palun ütle meile, millisesse rassi kuulud (märgi kõik, millega end identifitseerid)"
     races:
       - 
-        white: Valge
+        white: "Valge"
       - 
-        black: Mustanahaline või afroameeriklane
+        black: "Mustanahaline või afroameeriklane"
       - 
-        hispanic: Hispaania või ladina päritolu
+        hispanic: "Hispaania või ladina päritolu"
       - 
-        asian: aasialane
+        asian: "aasialane"
       - 
-        hawaiian: Havai põlisrahvusest või pärit vaikse ookeani saartelt
+        hawaiian: "Havai põlisrahvusest või pärit vaikse ookeani saartelt"
       - 
-        american_indian: põlisameeriklane või Alaska põliselanik
+        american_indian: "põlisameeriklane või Alaska põliselanik"
       - 
-        other: Muu
+        other: "Muu"
       - 
-        opt_out: Ei soovi vastata
+        opt_out: "Ei soovi vastata"
     submit: "Esita"
     decline: "Sulge"
   zendesk_too_young_message: 'Vabandame, nooremad kasutajad ei saa meie kasutajatoe lehele sisse logida. Võid sirvida <a href="http://support.code.org"> support.code.org</a> ilma sisse logimata või paluda oma emal ja isal või õpetajal meiega ühendust võtta.'
@@ -862,6 +873,7 @@ et:
     csd5_2: 'Chapter 2: Solving Data Problems'
     csd6_1: 'Chapter 1: Programming with Hardware'
     csd6_2: 'Chapter 2: Building Physical Prototypes'
+    csd_survey: 'Post-Course Survey'
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -875,6 +887,11 @@ et:
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Unit 2: Digital Information'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: 'Reflection Prompts'
   external_links:
     disclaimer: Lahtiütlemine
@@ -979,3 +996,14 @@ et:
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: 'Full Courses'
+  cookie_banner:
+    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+    more_information: "See Code.org's Privacy Policy."
+    accept: 'Olen nõus'
+  gdpr_dialog:
+    heading: 'Do you agree to using a web site based in the United States?'
+    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+    link_intro: 'For details see our'
+    privacy_policy: 'privacy policy'
+    logout: 'Logout'
+    yes: 'Jah'

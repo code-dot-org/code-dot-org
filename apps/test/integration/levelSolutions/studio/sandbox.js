@@ -1,5 +1,5 @@
 var tickWrapper = require('../../util/tickWrapper');
-var TestResults = require('@cdo/apps/constants.js').TestResults;
+import {TestResults} from '@cdo/apps/constants';
 var Direction = require('@cdo/apps/studio/constants.js').Direction;
 var blockUtils = require('@cdo/apps/block_utils');
 

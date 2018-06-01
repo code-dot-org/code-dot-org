@@ -1,0 +1,24 @@
+name 'v2 U2L13 Student Lesson Introduction_2018'
+title 'title'
+description 'description here'
+css 'unplugged'
+
+markdown <<MARKDOWN
+# Unit 2: Lesson 13 - Cleaning Data
+
+## Background
+
+Computational tools like spreadsheets make it much easier to analyze and visualize data. As powerful as computers are, however, they typically rely on data being in an organized and standardized state prior to performing any computation with it. It is important to make sure that data is "cleaned" before performing any analysis to ensure usable and reliable results.
+
+## Lesson
+
+* Introduction to filtering and sorting data.
+* Clean results from survey data.
+* Categorize results from survey data.
+
+## Resources
+
+* Activity guides are presented in Code Studio (click Continue)
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

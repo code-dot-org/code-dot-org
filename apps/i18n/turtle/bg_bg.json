@@ -38,7 +38,7 @@
   "drawUpperWave": "рисува горната вълна",
   "drawLowerWave": "рисува долна вълна",
   "drawSticker": "Начертайте стикер",
-  "drawStickerWithSize": "draw sticker with size",
+  "drawStickerWithSize": "начертайте стикер с размери",
   "heightParameter": "височина",
   "hideTurtle": "скрива художника",
   "jump": "скок",
@@ -74,7 +74,7 @@
   "penDown": "молив надолу",
   "penTooltip": "Вдига или сваля молива, за да започнете или да спрете да чертаете.",
   "penUp": "молив нагоре",
-  "pointTo": "point to",
+  "pointTo": "посочете към",
   "pixels": "пиксели",
   "reinfFeedbackMsg": "Тук е вашата рисунка! Продължете да работите върху нея или преминете към следващия пъзел.",
   "setAlpha": "задава алфа",
@@ -94,6 +94,6 @@
   "turnTooltip": "Завърта художника наляво или надясно на определен ъгъл.",
   "turtleVisibilityTooltip": "Прави художника видим или невидим.",
   "widthTooltip": "Променя дебелината на молива.",
-  "withSize": "with size",
+  "withSize": "с размер",
   "wrongColour": "Вашата картина е в грешен цвят. За този пъзел, тя трябва да е %1."
 }

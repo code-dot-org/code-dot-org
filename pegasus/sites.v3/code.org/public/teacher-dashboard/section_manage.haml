@@ -3,65 +3,8 @@ layout: none
 theme: none
 content-type: text/ng-template
 ---
-%div{class: "modal fade move-students-modal", id: "move-students", "ng-controller" => "MovingStudentsController as msCtrl", "ng-init" => "transferUrl = '#{CDO.studio_url("/sections/transfer")}'"}
-  .modal-dialog
-    .modal-content
-      .modal-header
-        %button{ type: "button", class: "close", :"data-dismiss"=> "modal" }
-          %span{ :"aria-hidden"=>"true" } &times;
-          %span.sr-only= I18n.t('dashboard_sections_close')
-        .move-students-error
-        .move-students-header= I18n.t('dashboard_sections_move_students_desc')
-        .move-students-container
-          .student-selection-area
-            %table
-              %tr
-                %th.manage-th.checkboxes
-                  %input{ type: "checkbox", "ng-model" => "selectedAll", "ng-click" => "checkAll()" }
-                %th.manage-th
-                  = I18n.t('dashboard_students_name')
-              %tr{ "ng-repeat" => "student in students" }
-                %td
-                  %input{ type: "checkbox", "ng-model" => "student.selected" }
-                %td
-                  {{student.name}}
-          .destination-section-area
-            %label
-              .section-title.selection= I18n.t('dashboard_sections_move_to_section')
-              %select{ "ng-model" => "selectedSectionCode" }
-                %option{"ng-repeat" => "section in sections | filter: {id: '!' + currentSection.id} | filter: teacher_managed_section", value: "{{section.code}}"}
-                  {{section.name}}
-                %option{value: "{{otherTeacher}}"}
-                  = I18n.t('dashboard_sections_other_section')
-            %div{ "ng-show" => "selectedSectionCode != '{{otherTeacher}}'" }
-              = I18n.t('dashboard_sections_one_per_teacher')
-            %div{ "ng-show" => "selectedSectionCode == '{{otherTeacher}}'" }
-              %label
-                .section-title.selection= I18n.t('dashboard_sections_enter_code')
-                %input{ class: "text-box selection-text", type: 'text', maxlength: 6, "ng-model" => "manuallySelectedSectionCode", placeholder: I18n.t('dashboard_sections_code_placeholder') }
-              %div
-                .section-title= I18n.t('dashboard_sections_both_sections')
-                %form
-                  %label.selection-text
-                    %input{ type: 'radio', "ng-model" => "stayEnrolledInCurrentSection", value: "true" }
-                    .option= I18n.t('dashboard_sections_yes_both')
-                  %label.selection-text
-                    %input{ type: 'radio', "ng-model" => "stayEnrolledInCurrentSection", value: "false" }
-                    .option= I18n.t('dashboard_sections_no_move')
-            .modal-buttons
-              %button{ :type=>"button", :class=>"btn btn-primary btn-white", :"data-dismiss"=>"modal" }= I18n.t('dashboard_action_cancel')
-              %button{ :type=>"button", :class=>"btn btn-primary", "ng-click" => "moveStudents()" }= I18n.t('dashboard_sections_move_students')
 
 #uitest-manage-tab
-
-  #bulk_import.panel.panel-default{"ng-show" => "bulk_import.editing"}
-    .panel-heading
-      = I18n.t('dashboard_students_add_multiple')
-    .panel-body
-      %textarea{"ng-model" => "bulk_import.students"}
-      %br/
-      %button.btn.btn-primary{"ng-click" => "add_bulk_import()"}= I18n.t('dashboard_action_done')
-      %button.btn.btn-white{"ng-click" => "clear_bulk_import()"}= I18n.t('dashboard_action_cancel')
 
   #react-sync-oauth-section{'ng-init' => '$emit("react-sync-oauth-section-rendered");'}
 
@@ -70,31 +13,3 @@ content-type: text/ng-template
 
   #student-table-react{'ng-init' => '$emit("student-table-react-rendered");'}
 
-  %div{"ng-if" => "section.login_type === 'picture' || section.login_type === 'word'"}
-    %h3
-      = I18n.t 'dashboard_students_share_section', section_code: '{{section.code}}', join_url: CDO.code_org_url('/join', 'http:')
-      %br/
-      %br/
-      = I18n.t('dashboard_students_share_section_secondary')
-      %a{"ng-href" => CDO.studio_url("/sections/{{section.code}}"), target: "_blank"}
-        http:#{CDO.studio_url('/sections/{{section.code}}')}
-    %h3
-      %a{'ng-href' => "#/sections/{{section.id}}/print_signin_cards", target: "_blank"}
-        = I18n.t('dashboard_students_print_info')
-    %br/
-
-  %div{'ng-show' => "section.id && section.login_type === 'email'"}
-    %br/
-    %br/
-    %div.jumbotron{style: "line-height: 36px;"}
-      %p
-        = I18n.t('dashboard_students_join_link')
-        %a{"ng-href" => CDO.studio_url("/join/{{section.code}}"), target: "_blank"}
-          http:#{CDO.studio_url('/join/{{section.code}}')}
-
-  #login-type-react{'ng-init' => '$emit("login-type-react-rendered");'}
-
-  %br/
-  %div{id: 'privacy_link'}
-    %a{'ng-href' => CDO.code_org_url("/privacy/student-privacy"), target: "_blank"}
-      =I18n.t('privacy_doc_explanation')

@@ -462,9 +462,6 @@ ar:
         alg_15_biggame_update_player: CS في الجبر - تحديث اللاعب للعبة الكبيرة
         alg_16_biggame_collision_detection: CS في الجبر - اكتشاف الارتطام للعبة الكبيرة
         alg_17_sambat_compound_booleans: CS في الجبر - Booleans معقّد
-        hoc2015_preview_blocks: Make your own game blocks
-        hoc2015_preview_typing: Make your own game typing
-        hoc2015_preview_conclusion: Make your own game conclusion
         starwars_intro: 'حرب النجوم: بناء مجرة باستعمال  البرمجة --مقدمة'
         starwars_typing: 'حرب النجوم: بناء مجرة باستعمال البرمجة --جافا سكريبت'
         starwars_events: 'حرب النجوم: بناء مجرة باستعمال البرمجة --الأحداث'
@@ -528,6 +525,7 @@ ar:
         CSF_harvester_skinOverview_K-1: The Harvester
         CSF_harvester_loops_K1: Loops in Harvester
         CSF_scrat_loops_K1: Loops in Ice Age
+        CSF_scrat_loops_CF: Loops in Ice Age
     callout:
       text:
         drag_blocks: اسحب المقطع البرمجي "تقدم للأمام" وثبته تحت مقطع آخر

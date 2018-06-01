@@ -1,0 +1,50 @@
+name 'How To: Share Code with Teammates_2018'
+href 'path/to/html/in/asset/folder'
+css 'unplugged'
+markdown <<MARKDOWN
+# How To: Share Code with Teammates
+
+Now that you have created your functions for the Digital Scene you need to share them with your teammates. To share your code follow the steps below.
+
+### 1) Click the "Share" button at the top left corner of the level.
+
+<img src="https://images.code.org/7ea30339a13a2491f70a504169cc6583-image-1481038945549.23.38 AM.png" style="width:500px">
+
+### 2) A window like the one below will open up. Copy the link in the box and give it to your teammates. Two possible ways to share would be to write down the URL or email the link to your teammates.
+
+<img src="https://images.code.org/333b443783644a375d2f901733edf2c7-image-1481039037286.43.27 AM.png" style="width:400px">
+
+# How To: Look at Shared Code
+
+### 1) Open the link that your teammate share with you. You will end up at a page that looks like:
+
+<img src="https://images.code.org/352d0731c9f80643ddbfc52b80af2d3e-image-1481038247445.30.35 AM.png" style="width:300px">
+
+### 2) Click on "Built on Code Studio" button at the bottom of the App.
+
+<img src="https://images.code.org/4bd46f4c6dbe2d3ef83319904f361e37-image-1481038284834.30.35 AM.png" style="width:300px">
+
+### 3) Click "How It Works" to open up the code.
+
+<img src="https://images.code.org/31d19fd455bbb369c1768b3517b90606-image-1481038399898.32.36 AM.png" style="width:300px">
+
+### 4) The code that opens up will be "View Only". To get your own version of their code that you can copy parts of click on the "Remix" button at the top of the window.
+
+<img src="https://images.code.org/24b855e92a63ea6b59a2abda27e10297-image-1481039122573.35.01 AM.png" style="width:600px">
+
+### 5) The easiest way to copy code between projects will be in Text Mode. Switch both projects to Text Mode and copy the code from one to the other.
+
+<img src="https://images.code.org/81a9d24c25cb5b3bef037b57efea2500-image-1481039300103.47.33 AM.png" style="width:400px">
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+### Recombine Code
+
+Students will need some way of recombining their code. Possible solutions are:
+
+* emailing links to their individual code
+* creating a shared document / spreadsheet into which students can paste links
+
+
+
+MARKDOWN

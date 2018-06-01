@@ -20,7 +20,7 @@ import * as dom from './dom';
 import * as dropletUtils from './dropletUtils';
 import * as shareWarnings from './shareWarnings';
 import * as utils from './utils';
-import AbuseError from './code-studio/components/abuse_error';
+import AbuseError from './code-studio/components/AbuseError';
 import Alert from './templates/alert';
 import AuthoredHints from './authoredHints';
 import ChallengeDialog from './templates/ChallengeDialog';
@@ -52,9 +52,10 @@ import {getValidatedResult, initializeContainedLevel} from './containedLevels';
 import {lockContainedLevelAnswers} from './code-studio/levels/codeStudioLevels';
 import {parseElement as parseXmlElement} from './xml';
 import {resetAniGif} from '@cdo/apps/utils';
-import {setIsRunning} from './redux/runState';
+import {setIsRunning, setStepSpeed} from './redux/runState';
 import {setPageConstants} from './redux/pageConstants';
 import {setVisualizationScale} from './redux/layout';
+import {mergeProgress} from './code-studio/progressRedux';
 import {
   setAchievements,
   setBlockLimit,
@@ -213,6 +214,11 @@ StudioApp.prototype.configure = function (options) {
 
   this.maxVisualizationWidth = options.maxVisualizationWidth || MAX_VISUALIZATION_WIDTH;
   this.minVisualizationWidth = options.minVisualizationWidth || MIN_VISUALIZATION_WIDTH;
+
+  // Set default speed
+  if (options.level && options.level.sliderSpeed) {
+    getStore().dispatch(setStepSpeed(options.level.sliderSpeed));
+  }
 };
 
 /**
@@ -254,9 +260,10 @@ StudioApp.prototype.init = function (config) {
   config.getCode = this.getCode.bind(this);
   copyrightStrings = config.copyrightStrings;
 
-  if (config.isLegacyShare && config.hideSource) {
+  if (config.legacyShareStyle && config.hideSource) {
     $("body").addClass("legacy-share-view");
     if (dom.isMobile()) {
+      $("body").addClass("legacy-share-view-mobile");
       $('#main-logo').hide();
     }
     if (dom.isIOS() && !window.navigator.standalone) {
@@ -303,6 +310,7 @@ StudioApp.prototype.init = function (config) {
       level: config.level,
       noHowItWorks: config.noHowItWorks,
       isLegacyShare: config.isLegacyShare,
+      legacyShareStyle: config.legacyShareStyle,
       wireframeShare: config.wireframeShare,
     });
   }
@@ -460,7 +468,7 @@ StudioApp.prototype.init = function (config) {
     }.bind(this));
   }
 
-  if (config.isLegacyShare && config.hideSource) {
+  if (config.legacyShareStyle && config.hideSource) {
     this.setupLegacyShareView();
   }
 
@@ -1322,7 +1330,12 @@ StudioApp.prototype.resizeVisualization = function (width) {
   var scale = (newVizWidth / this.nativeVizWidth);
   getStore().dispatch(setVisualizationScale(scale));
 
-  applyTransformScaleToChildren(visualization, 'scale(' + scale + ')');
+  const cssScale = `scale(${scale})`;
+  applyTransformScaleToChildren(visualization, cssScale);
+  const dpadContainer = document.getElementById('studio-dpad-container');
+  if (dpadContainer) {
+    applyTransformScaleToChildren(dpadContainer, cssScale);
+  }
 
   if (oldVizWidth < 230 && newVizWidth >= 230) {
     $('#soft-buttons').removeClass('soft-buttons-compact');
@@ -1408,14 +1421,24 @@ StudioApp.prototype.displayFeedback = function (options) {
     options.feedbackType = TestResults.EDIT_BLOCKS;
   }
 
+  // Write updated progress to Redux.
+  const store = getStore();
+  store.dispatch(mergeProgress({[this.config.serverLevelId]: options.feedbackType}));
+
   if (experiments.isEnabled('bubbleDialog')) {
-    const ignoredKeys = ['level', 'alreadySaved', 'appStrings', 'disableSaveToGallery', 'message', 'saveToLegacyGalleryUrl', 'saveToProjectGallery', 'showingSharing'];
-    ignoredKeys.forEach(key => delete options[key]);
-    const {
-      response, preventDialog, feedbackType, feedbackImage, ...otherOptions
-    } = options;
-    if (Object.keys(otherOptions).length === 0) {
-      const store = getStore();
+    const {response, preventDialog, feedbackType, feedbackImage} = options;
+
+    const newFinishDialogApps = {
+      turtle: true,
+      karel: true,
+      maze: true,
+      studio: true,
+      flappy: true,
+      bounce: true,
+    };
+    const hasNewFinishDialog = newFinishDialogApps[this.config.app];
+
+    if (hasNewFinishDialog && !this.hasContainedLevels) {
       const generatedCodeProperties =
         this.feedback_.getGeneratedCodeProperties(this.config.appStrings);
       const studentCode = {
@@ -1437,9 +1460,6 @@ StudioApp.prototype.displayFeedback = function (options) {
         this.onFeedback(options);
         return;
       }
-    } else {
-      console.warn('Unexpected feedback props:');
-      console.warn(otherOptions);
     }
   }
   options.onContinue = this.onContinue;
@@ -1903,7 +1923,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
 
   // Chrome-less share page.
   if (this.share) {
-    if (options.isLegacyShare || options.wireframeShare) {
+    if (options.legacyShareStyle || options.wireframeShare) {
       document.body.style.backgroundColor = '#202B34';
       if (options.level.iframeEmbed) {
         // so help me god.
@@ -1913,7 +1933,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
 
       $('.header-wrapper').hide();
       var vizColumn = document.getElementById('visualizationColumn');
-      if (dom.isMobile() && (options.isLegacyShare || !dom.isIPad())) {
+      if (dom.isMobile() && (options.legacyShareStyle || !dom.isIPad())) {
         $(vizColumn).addClass('chromelessShare');
       } else {
         $(vizColumn).addClass('wireframeShare');
@@ -1941,7 +1961,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
           ReactDOM.render(React.createElement(WireframeButtons, {
             channelId: project.getCurrentId(),
             appType: project.getStandaloneApp(),
-            isLegacyShare: options.isLegacyShare,
+            isLegacyShare: !!options.isLegacyShare,
           }), div);
         }
       }
@@ -2404,6 +2424,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     readOnly: utils.valueOr(config.readonlyWorkspace, false),
     showExampleTestButtons: utils.valueOr(config.showExampleTestButtons, false),
     valueTypeTabShapeMap: utils.valueOr(config.valueTypeTabShapeMap, {}),
+    typeHints: utils.valueOr(config.level.showTypeHints, false),
   };
 
   // Never show unused blocks or disable autopopulate in edit mode
@@ -2736,13 +2757,14 @@ StudioApp.prototype.displayPlayspaceNotification = function (notificationContent
  * @param {number} [object.sideMaring] - Optional param specifying margin on
  *   either side of element
  * @param {React.Component} alertContents
+ * @param {?string} position
  */
-StudioApp.prototype.displayAlert = function (selector, props, alertContents) {
+StudioApp.prototype.displayAlert = function (selector, props, alertContents, position = 'absolute') {
   var parent = $(selector);
   var container = parent.children('.react-alert');
   if (container.length === 0) {
     container = $("<div class='react-alert'/>").css({
-      position: 'absolute',
+      position: position,
       left: 0,
       right: 0,
       top: 0,
@@ -2831,13 +2853,13 @@ StudioApp.prototype.forLoopHasDuplicatedNestedVariables_ = function (block) {
 
   // Not the most efficient of algo's, but we shouldn't have enough blocks for
   // it to matter.
-  return innerBlock && block.getVars().some(function (varName) {
+  return innerBlock && Blockly.Variables.allVariablesFromBlock(block).some(function (varName) {
     return innerBlock.getDescendants().some(function (descendant) {
       if (descendant.type !== 'controls_for' &&
           descendant.type !== 'controls_for_counter') {
         return false;
       }
-      return descendant.getVars().indexOf(varName) !== -1;
+      return Blockly.Variables.allVariablesFromBlock(descendant).indexOf(varName) !== -1;
     });
   });
 };

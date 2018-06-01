@@ -15,12 +15,16 @@ import 'codemirror/addon/fold/xml-fold';
 import 'codemirror/mode/xml/xml';
 import 'codemirror/mode/javascript/javascript';
 import './vendor/codemirror.inline-attach';
+import jsonic from 'jsonic';
 import marked from 'marked';
 import stylelessRenderer from '@cdo/apps/util/StylelessRenderer';
 
 CodeMirrorSpellChecker({
   codeMirrorInstance: CodeMirror,
 });
+
+const VALID_COLOR = 'black';
+const INVALID_COLOR = '#d00';
 
 /**
  * initializeCodeMirror replaces a textarea on the page with a full-featured
@@ -31,7 +35,7 @@ CodeMirrorSpellChecker({
  * @param {booblen} [attachments] - whether to enable attachment uploading in
  *        this editor.
  */
-module.exports = function initializeCodeMirror(target, mode, callback, attachments) {
+function initializeCodeMirror(target, mode, callback, attachments) {
   let updatePreview;
 
   // Code mirror parses html using xml mode
@@ -108,4 +112,43 @@ module.exports = function initializeCodeMirror(target, mode, callback, attachmen
     inlineAttach.attachToCodeMirror(editor, attachOptions);
   }
   return editor;
+}
+module.exports = initializeCodeMirror;
+
+module.exports.initializeCodeMirrorForJson = function (
+  textAreaId, {validationDivId, onBlur, onChange}) {
+  // Leniently validate and fix up custom block JSON using jsonic
+  const textAreaEl = document.getElementById(textAreaId);
+  if (textAreaEl) {
+    const jsonValidationDiv = validationDivId ?
+      $(`#${validationDivId}`) :
+      $(textAreaEl.parentNode.insertBefore(
+        document.createElement('div'),
+        textAreaEl.nextSibling
+      ));
+    const fixupJson = () => {
+      try {
+        if (jsonEditor.getValue().trim()) {
+          let blocks = jsonic(jsonEditor.getValue().trim());
+          if (onBlur) {
+            blocks = onBlur(blocks);
+          }
+          jsonEditor.setValue(JSON.stringify(blocks, null, 2));
+        } else {
+          jsonEditor.setValue('');
+        }
+        jsonValidationDiv.text('JSON appears valid.');
+        jsonValidationDiv.css('color', VALID_COLOR);
+      } catch (err) {
+        jsonValidationDiv.text(err.toString());
+        jsonValidationDiv.css('color', INVALID_COLOR);
+      }
+    };
+
+    const jsonEditor =
+      initializeCodeMirror(textAreaId, 'application/json', onChange);
+    jsonEditor.on('blur', fixupJson);
+    fixupJson();
+    return jsonEditor;
+  }
 };

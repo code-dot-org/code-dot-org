@@ -1,0 +1,31 @@
+name 'v2 U1L2 Student Lesson Introduction_2018'
+title 'title'
+description 'description here'
+css 'unplugged'
+skip_dialog 'true'
+
+
+markdown <<MARKDOWN
+# Unit 1: Lesson 2 - Sending Binary Messages
+
+## Background
+
+One of the most simple forms of communication is the transmission of a binary message. Interestingly enough, “binary” is not a computing term. The word “binary” is used to describe something that can be in one of only two possible states. For example, the question, "Do we have a quiz today?" is a binary question, as there are only two possible responses: "yes" and "no.” In fact, any question that can only be answered with a "yes/no” or "true/false” or something along those lines would be considered a binary question. It is also possible to make a question binary by limiting the acceptable responses to two, as in, “Which do you prefer: Coke or Pepsi? Country music or hip hop?”
+
+## Vocabulary
+
+* **Binary Question:** a question to which there are only two possible answers.
+* **Binary Message:** a message that can only be one of two possible values.
+
+## Lesson
+
+* Think of a message that can be communicated with such a simple method. 
+* Build a device from everyday objects to communicate the message across the room. 
+* Work with your teammates in an iterative design process of rapidly building and improving your device.  
+
+## Resources
+
+* Binary Message Devices - Activity Guide ([PDF](https://docs.google.com/document/d/1kp1DYhJLR4mLR0ZvWabxZY5OJHOU4ZlW_c2fOlbZyAU/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1kp1DYhJLR4mLR0ZvWabxZY5OJHOU4ZlW_c2fOlbZyAU/export?format=doc))
+* Binary Message Devices - Rubric ([PDF](https://docs.google.com/document/d/1pQ5p19TBzvPXr02v-ZTjocwGy0uNjSR-CvTnueQ8fo0/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1pQ5p19TBzvPXr02v-ZTjocwGy0uNjSR-CvTnueQ8fo0/export?format=doc))
+
+MARKDOWN

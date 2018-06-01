@@ -1,0 +1,122 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2018-05-03T16:38:03.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "moveForward": null,
+      "moveTo": null,
+      "turnLeft": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
+      "turnRight": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
+      "penUp": null,
+      "penDown": null,
+      "functionParams_none": null,
+      "functionParams_n": null,
+      "callMyFunction": null,
+      "callMyFunction_n": null,
+      "comment": null
+    },
+    "edit_code": true,
+    "encrypted_examples": "XqDmNbuRBi8Sq4/gi4i3QW7Q/zaoEm8Ey+7wjy6L+XDnGU+DDz8E2niNXN0Y\nFrCWb7iCw3ePud6PGAQCvhSDHg==\n",
+    "embed": "false",
+    "instructions": "Define a function that accepts a parameter to match the function calls and complete the image. (Click to see full instructions)",
+    "markdown_instructions": "# Defining Functions with Parameters\r\n\r\nThis time you're going to write your own function with parameters to complete an image. Two function calls to `drawTriangle` have been placed at the top of the program but the function itself needs to be defined.  The program should draw this:\r\n\r\n![](https://images.code.org/4a96eff03ba79b881b98137048140953-image-1442523578705.59.20 PM.png)\r\n\r\n# Do This:\r\n**Complete** the function definition for `drawTriangle(sideLength)` . Notice that you have already been given a **descriptive and meaningful parameter name**, `sideLength`, but you can change it if you wish.\r\n\r\n**Hint:** you should put the pen down and pick it up as part of the definition of `drawTriangle` - that way you guarantee that a call to drawTriangle will always actually draw. Picking the pen up as the last act of the function is a nice thing to do for any other code that might not be expecting drawTriangle to have a side effect of putting the pen down.\r\n\r\nAs a reminder of how to use a parameter within the function here is a correct version of `drawSquare(size)` for reference.\r\n\r\n![](https://images.code.org/ead2720df19b117cae753c4397dd832d-image-1442868072299.png)",
+    "start_blocks": "penUp();\r\nmoveTo(150,150);\r\ndrawTriangle(100);\r\nmoveTo(250,300);\r\ndrawTriangle(150);\r\n\r\nfunction drawTriangle(sideLength){\r\n  \r\n}",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "slider_speed": ".9",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "app_width": "320",
+    "app_height": "480",
+    "show_turtle_before_run": "true",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "fail_on_lint_errors": "false",
+    "log_conditions": [
+      {
+        "entries": [
+          "[forTest]"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "Hey! You're using a programming construct - loops - we haven't (officially) learned about yet :).  Don't worry, your knowledge will come in handy later, but for now, try to stick to the constraints of this problem"
+      },
+      {
+        "entries": [
+          "drawTriangle:1",
+          "penDown:0",
+          "penUp:0"
+        ],
+        "matchType": "inexact",
+        "minTimes": 2,
+        "message": "App Lab is expecting that you will put the pen down and pick it back up again inside your drawTriangle function. Make sure you're calling drawTriangle() twice as well!"
+      },
+      {
+        "entries": [
+          "drawTriangle:1",
+          "moveForward:1",
+          "turnLeft:1",
+          "moveForward:1",
+          "turnLeft:1",
+          "moveForward:1",
+          "turnLeft:1"
+        ],
+        "matchType": "inexact",
+        "minTimes": 2,
+        "message": "App Lab is expecting that you will define drawTriangle to moveForward and turnLeft 3 times, with the turtle ending up back where it started facing the direction it started. Make sure you're calling drawTriangle() twice as well!"
+      }
+    ],
+    "instructions_important": "false",
+    "show_debug_watch": "false",
+    "makerlab_enabled": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
+    "parent_level_id": 3182,
+    "name_suffix": "_2018",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-11-17 00:18:08 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]"
+}]]></config>
+  <blocks/>
+</Applab>

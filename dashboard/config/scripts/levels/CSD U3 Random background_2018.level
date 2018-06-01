@@ -12,7 +12,6 @@
       "rect": null,
       "background": null
     },
-    "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Background\r\n\r\nSometimes you'll want to fill the entire screen with a color.  For that, you can use `background`.  It covers everything on the screen with the color you choose.\r\n\r\n# Do This\r\n\r\n* Run the code to see `background` work.\r\n* Change the background from yellow to orange.\r\n\r\n*Challenge: There is a purple square that is covered up by the background.  Can you change the order of the code so you can see both the purple and blue squares?*",
@@ -51,11 +50,19 @@
     "encrypted_examples": "52WOAYrSSqzjd6Leyyp3C7tuD5KdSPik3xJY7DX9NsX7CWUs8ccmgMx6ZpNr\nEhslsBXP/olMbmMM+gWtjkyTjG1yoDEfuidTJBRc9k+bd0xhGfOF2RSKgAVf\nERTYID45MWjN7SfGHORWe+OgwmNrxg==\n",
     "parent_level_id": 8777,
     "name_suffix": "_2018",
+    "reference_links": [
+      "/docs/csd-1718/drawing_shapes_map/index.html"
+    ],
+    "map_reference": "/docs/csd-1718/shape_size_map/index.html",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-08 23:44:10 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-13 20:39:21 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-26 19:25:21 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-08 23:44:10 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-13 20:39:21 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-26 19:25:21 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-09 18:50:19 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

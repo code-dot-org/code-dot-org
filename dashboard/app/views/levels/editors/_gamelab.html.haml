@@ -29,10 +29,6 @@
   = boolean_check_box f, :all_animations_single_frame
 
 .field
-  = f.label :show_d_pad
-  = boolean_check_box f, :show_d_pad
-
-.field
   = f.label :expand_debugger, 'Expand Debugger by Default'
   = boolean_check_box f, :expand_debugger
 
@@ -92,6 +88,12 @@
   = selector
   = f.label 'Custom setup code'
   = f.text_field :custom_setup_code
+
+.field
+  = f.label 'Validation code'
+  %p
+    This is a snippet of javascript that is run after every draw loop. Call levelSuccess() in here to stop the level as a success. You can also pass a number into levelSuccess() to give the student a non-perfect test result (see <a href="https://github.com/code-dot-org/code-dot-org/blob/101fbfd2dcdd635d7359e991559ba782f9fd00be/apps/src/constants.js#L33-L106">TestResults</a> for the list of valid test results).
+  = f.text_area :validation_code
 
 .field
   =f.label 'Animations are paused by default'

@@ -16,12 +16,11 @@ import {
   loadScript,
   getCurrentProgress,
   getCurrentScriptData,
-  setScriptId,
   setLessonOfInterest,
-  sectionDataPropType,
-  validScriptPropType,
   scriptDataPropType,
 } from './sectionProgressRedux';
+import { sectionDataPropType } from '@cdo/apps/redux/sectionDataRedux';
+import { setScriptId, validScriptPropType } from '@cdo/apps/redux/scriptSelectionRedux';
 
 const styles = {
   heading: {
@@ -129,7 +128,7 @@ class SectionProgress extends Component {
             <SectionProgressToggle />
           </div>
           <div style={styles.lessonSelectorContainer}>
-            {lessons.length !== 0 &&
+            {currentView === ViewType.DETAIL && lessons.length !== 0 &&
               <LessonSelector
                 lessons={lessons}
                 onChange={this.onChangeLevel}
@@ -138,9 +137,9 @@ class SectionProgress extends Component {
           </div>
         </div>
         <div style={{clear: 'both'}}>
-          {!levelDataInitialized && <FontAwesome icon="spinner" className="fa-pulse fa-3x"/>}
+          {!levelDataInitialized && <FontAwesome id="uitest-spinner" icon="spinner" className="fa-pulse fa-3x"/>}
           {(levelDataInitialized && currentView === ViewType.SUMMARY) &&
-            <div>
+            <div id="uitest-summary-view">
               <VirtualizedSummaryView
                 section={section}
                 scriptData={scriptData}
@@ -151,13 +150,13 @@ class SectionProgress extends Component {
             </div>
           }
           {(levelDataInitialized && currentView === ViewType.DETAIL) &&
-            <div>
+            <div id="uitest-detail-view">
               <VirtualizedDetailView
                 section={section}
                 scriptData={scriptData}
               />
               <ProgressLegend
-                excludeCsfColumn={true}
+                excludeCsfColumn={scriptData.excludeCsfColumnInLegend}
               />
             </div>
           }
@@ -170,9 +169,9 @@ class SectionProgress extends Component {
 export const UnconnectedSectionProgress = SectionProgress;
 
 export default connect(state => ({
-  scriptId: state.sectionProgress.scriptId,
-  section: state.sectionProgress.section,
-  validScripts: state.sectionProgress.validScripts,
+  scriptId: state.scriptSelection.scriptId,
+  section: state.sectionData.section,
+  validScripts: state.scriptSelection.validScripts,
   currentView: state.sectionProgress.currentView,
   scriptData: getCurrentScriptData(state),
   studentLevelProgress: getCurrentProgress(state),

@@ -36,7 +36,7 @@ module UsersHelper
     session.delete('clever_takeover_token')
   end
 
-  # Summarize a user and his or her progress progress within a certain script.
+  # Summarize a user and their progress within a certain script.
   # Example return value:
   # {
   #   "linesOfCode": 34,
@@ -60,6 +60,18 @@ module UsersHelper
     user_data[:current_stage] = user.next_unpassed_progression_level(script).stage.id unless exclude_level_progress || script.script_levels.empty?
 
     user_data.compact
+  end
+
+  # Get a users level progress within a certain script.
+  # Example return value (where 135 and 136 are levelIds):
+  #   {
+  #     "135": {"status": "perfect", "result": 100}
+  #.    "136": {"status": "perfect", "result": 100}
+  #   }
+  def user_progress_for_levels(script, user = current_user)
+    user_data = {}
+    merge_script_progress(user_data, user, script)
+    user_data[:levels]
   end
 
   def level_with_best_progress(ids, level_progress)

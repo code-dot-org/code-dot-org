@@ -1,0 +1,27 @@
+name 'CSPFinal_Question_23_2018'
+wrong 'Which students are visiting social media sites from school'
+wrong 'Which classes are assigning the most homework using the computers'
+wrong 'Which programs students are running on the lab computers'
+right 'Which websites are most frequently visited before and after school hours from a school computer'
+
+markdown <<MARKDOWN
+A school starts tracking which websites each computer in the school is visiting by monitoring the packets leaving the school. A sample of the information they have collected appears below:
+
+
+|IP Address|Time |URL|
+|----------|----|----|
+| ...|... | ...|
+|1.1.1.1|11:05:23.22|example.com|
+|1.5.1.8|11:05:29.71|news.com |
+|1.1.5.1|11:06:13.48|sports.com |
+|1.5.1.8|11:08:09.95|example.com |
+| ...|... | ...|
+|1.1.5.1 |17:04:29.20| news.com |
+
+
+
+<br/>
+Which of the following is MOST likely to be answerable using all the data collected by this monitoring?
+
+
+MARKDOWN

@@ -15,6 +15,7 @@ style_min: true
 
 - cookie_key = '_user_type' + (rack_env == :production ? '' : "_#{rack_env.to_s}")
 - user_type = request.cookies[cookie_key]
+- user_type = "student" if user_type == "student_y"
 - if ["student", "teacher"].include?(user_type)
   - redirect CDO.studio_url('/home', CDO.default_scheme)
 
@@ -23,8 +24,10 @@ style_min: true
 
   - if request.language == "en"
     = view :homepage_professional_learning_2018
+    = view :homepage_below_hero_announcement
     = view :stats_homepage
   - else
+    = view :homepage_below_hero_announcement
     #petitionexpand{style: "display: block"}
       = view :petition_expand
 

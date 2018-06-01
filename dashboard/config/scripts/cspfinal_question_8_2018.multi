@@ -1,0 +1,18 @@
+name 'CSPFinal_Question_8_2018'
+wrong 'BIN: <strong>1110</strong>, DEC: <strong>13</strong>, HEX: <strong>F</strong>'
+right 'DEC: <strong>13</strong>, BIN: <strong>1110</strong>, HEX: <strong>F</strong>'
+wrong 'DEC: <strong>13</strong>, HEX: <strong>F</strong>, BIN: <strong>1110</strong>'
+wrong 'HEX: <strong>F</strong> DEC: <strong>13</strong>, BIN: <strong>1110</strong>'
+markdown <<MARKDOWN
+Consider the following numbers given in Binary (BIN), Decimal (DEC), and Hexadecimal (HEX) representations:
+
+BIN: **1110**
+
+DEC: **13**
+
+HEX: **F** 
+
+Which of the following lists the numbers in order from least to greatest?
+
+
+MARKDOWN

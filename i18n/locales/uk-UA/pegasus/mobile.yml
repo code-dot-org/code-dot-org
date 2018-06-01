@@ -383,6 +383,8 @@
   homepage_header_donors: "Code.org дякує своїм помічникам"
   homepage_donors_seall: "Подивитися усіх"
   homepage_donors_donate: "Підтримати"
+  homepage_below_hero_announcement_text: "We care about your privacy and are making some updates to our privacy policy, effective May 25."
+  homepage_below_hero_announcement_link_text: "Дізнайтеся більше"
   contact_form_topic_student: "Я учень"
   contact_form_topic_parent: "Я батько/мати"
   contact_form_topic_teacher: "Я вчитель/педагог"
@@ -510,8 +512,10 @@
   video_title_real_madrid: "Година коду з Реал Мадрид"
   video_title_marco_belinelli: "Година коду з Марко Белінеллі"
   video_title_chris_bosh: "Кріс Бош про інформатику"
+  video_title_my_name_is_aracely: "My Name is Aracely"
   video_1min: "1 хв"
   video_2min: "2 хв"
+  video_3min: "3 min"
   video_5min: "5 хв"
   speak_another_language: "Інша мова?"
   help_translate: "Допоможіть нам з перекладом."
@@ -551,6 +555,9 @@
   volunteer_engineer_submission_field_email: "Адреса електронної пошти"
   volunteer_engineer_submission_field_email_desc: "Ваша адреса електронної пошти ніколи не передаватиметься, але ми надішлемо вам запити від учителів."
   volunteer_engineer_submission_field_email_placeholder: "Адреса електронної пошти"
+  volunteer_engineer_submission_field_email_preference: "Can we email you about updates to our courses, volunteer opportunities, or other computer science news?"
+  volunteer_engineer_submission_field_email_preference_yes: 'Так'
+  volunteer_engineer_submission_field_email_preference_no: 'Ні'
   volunteer_engineer_submission_final_paragraph: "Ви з'явитесь на карті, щоб місцеві вчителі могли зв'язатися з Вами для Години коду чи інших волонтерських заходів. Ваша адреса електронної пошти чи поштова адреса НІКОЛИ не буде оприлюднена. Але інша інформація (включаючи приблизне розташування) буде публічно доступною місцевим вчителям."
   volunteer_engineer_submission_checkbox_contact: 'Я погоджуюсь, що вчителі можуть зв''язуватися зі мною для волонтерських заходів (Примітка: ваша адреса електронної пошти не повідомлятиметься)'
   volunteer_engineer_submission_checkbox_age_18_plus: "Я підтверджую, що мені щонайменше 18 років."
@@ -956,6 +963,20 @@
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Розділ 5: Дані та суспільство'
   csd6_name: 'Розділ 6: Фізичні обчислення'
+  csd1-2018_name: 'Unit 1: Problem Solving'
+  csd2-2018_name: 'Unit 2: Web Development'
+  csd3-2018_name: 'Unit 3: Animation and Games'
+  csd4-2018_name: 'Unit 4: The Design Process'
+  csd5-2018_name: 'Розділ 5: Дані та суспільство'
+  csd6-2018_name: 'Розділ 6: Фізичні обчислення'
+  csp1-2018_name: 'Розділ 1: Інтернет'
+  csp2-2018_name: 'Розділ 2: Цифрова інформація'
+  csp3-2018_name: 'Unit 3: Algorithms and Programming'
+  csp4-2018_name: 'Unit 4: Big Data and Privacy'
+  csp5-2018_name: 'Unit 5: Building Apps'
+  csp-explore-2018_name: 'AP: Explore PT Prep'
+  csp-create-2018_name: 'AP: Create PT Prep'
+  csppostap-2018_name: 'Після довишівської підготовки: Бази даних у програмах'
   csp1_name: 'Розділ 1: Інтернет'
   csp2_name: 'Розділ 2: Цифрова інформація'
   csp3_name: 'Unit 3: Algorithms and Programming'
@@ -966,6 +987,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Після довишівської підготовки: Бази даних у програмах'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: "Повний тест - 50 запитань"
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'
@@ -991,9 +1013,11 @@
   csf_category_name: "Основи інформатики"
   csf_international_category_name: "CS Fundamentals International"
   csf2_draft_category_name: 'В розробці: курси А—Д'
-  csd_category_name: "CS Discoveries"
+  csd_category_name: "CS Discoveries ('17-'18)"
+  csd_2018_category_name: "CS Discoveries ('18-'19)"
   csp_category_name: "'15-'16 принципи інформатики"
   csp17_category_name: "'16-'17 принципи інформатики"
+  csp_2018_category_name: "CS Principles ('18-'19)"
   cspexams_category_name: "Практичний тест з принципів інформатики"
   research_studies_category_name: "Research Studies"
   applab_name: "App Lab"
@@ -1452,12 +1476,13 @@
   header_documentation: "Documentation"
   csp_name: "'16-'17 принципи інформатики"
   csd_name: "CS Discoveries"
+  csd_2018_name: "CS Discoveries"
   full_course_category_name: "Full Courses"
   user_header_label: "Привіт %{username}"
   user_header_settings: "Мій профіль"
   user_header_logout: "Вийти"
   user_header_signin: "Вхід"
-  view_all_sections: "View All Sections"
+  view_all_sections: "View all sections"
   view_section: "View Section"
   view_named_section: "View %{section_name}"
   privacy_doc_explanation: "Click here for our privacy document that can be shared or printed for your students."

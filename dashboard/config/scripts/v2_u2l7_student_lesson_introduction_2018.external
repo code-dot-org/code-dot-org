@@ -1,0 +1,34 @@
+name 'v2 U2L7 Student Lesson Introduction_2018'
+title 'title'
+description 'description here'
+css 'unplugged'
+
+markdown <<MARKDOWN
+# Unit 2: Lesson 7 - Introduction to Data
+
+## Background
+
+In this kickoff to the Data Unit, you will begin thinking about how data is collected and what can be learned from it. You will be introduced to the Class Data Tracker project that will run through the first half of this unit, and be asked to make predictions of what you will find when all the data has been collected in a couple weeks.
+
+## Vocabulary
+
+* **Hypothesis:** A proposed explanation for some phenomenon used as the basis for further investigation.
+
+## Lesson
+
+* Zimbio Quiz
+* Where does data come from?
+* Introduction to the Class Data Tracker
+* Hypothesize about findings
+
+## Resources
+
+* Zimbio Quiz: <a href="http://www.zimbio.com/quiz/3FlNH9tImJ4/How+Much+Left+Right+Brained+Person" target="_blank">How much of a left-brained or right-brained person are you?</a>
+* Class Data Tracker: *Your teacher will provide a link to your class data tracker survey.*
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Teacher Note: please see the lesson plan for setup instructions.  You will need to provide students with a link to a survey that you create specifically for your students.
+MARKDOWN

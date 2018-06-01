@@ -1,0 +1,10 @@
+name 'csp-post-survey-unit3-preamble'
+title 'title'
+description 'description here'
+markdown <<MARKDOWN
+# Unit 3: Algorithms and Programming
+
+### Here is a reminder of the topics in this unit.
+
+![](https://images.code.org/a611e835c5a4d2312d2415a68c15ba2d-image-1525875094699.png)
+MARKDOWN
