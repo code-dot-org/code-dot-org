@@ -6,6 +6,7 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
 
   PRE_SURVEY_STUBBED_FORM_ID = 1
 
+  self.use_transactional_test_case = true
   setup_all do
     @workshop = create :pd_workshop, :local_summer_workshop, course: Pd::SharedWorkshopConstants::COURSE_CSP, num_facilitators: 2
 
