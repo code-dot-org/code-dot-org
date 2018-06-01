@@ -2716,14 +2716,14 @@ StudioApp.prototype.displayPlayspaceAlert = function (type, alertContents) {
 };
 
 /**
- * Displays a small notification box inside the playspace that goes away after 2 seconds
+ * Displays a small notification box inside the playspace that goes away after 5 seconds
  * @param {React.Component} notificationContents
  */
 StudioApp.prototype.displayPlayspaceNotification = function (notificationContents) {
   StudioApp.prototype.displayAlert("#visualization", {
-    type: "notification",
-    sideMargin: 20,
-    closeDelayMillis: 2000,
+    type: 'notification',
+    closeDelayMillis: 1000000,
+    width: '100%',
   }, notificationContents);
 };
 
@@ -2756,8 +2756,13 @@ StudioApp.prototype.displayAlert = function (selector, props, alertContents) {
     ReactDOM.unmountComponentAtNode(renderElement);
   };
   ReactDOM.render(
-    <Alert onClose={handleAlertClose} type={props.type} sideMargin={props.sideMargin}
-        closeDelayMillis={props.closeDelayMillis}>
+    <Alert
+      onClose={handleAlertClose}
+      type={props.type}
+      sideMargin={props.sideMargin}
+      width={props.width}
+      closeDelayMillis={props.closeDelayMillis}
+    >
       {alertContents}
     </Alert>, renderElement);
 
