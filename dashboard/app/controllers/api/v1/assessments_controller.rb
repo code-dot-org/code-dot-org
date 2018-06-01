@@ -1,7 +1,7 @@
 class Api::V1::AssessmentsController < Api::V1::JsonApiController
   include LevelsHelper
   load_and_authorize_resource :section
-  load_resource :script
+  load_and_authorize_resource :script
 
   # For each assessment in a script, return an object of script_level IDs to question data.
   # Question data includes the question text, all possible answers, and the correct answers.
