@@ -64,8 +64,6 @@ Dashboard::Application.routes.draw do
   get 'docs/*path', to: 'curriculum_proxy#get_doc'
   get 'curriculum/*path', to: 'curriculum_proxy#get_curriculum'
 
-  post 'teacherFeedback/create', to: 'teacher_feedbacks#create'
-
   # User-facing section routes
   resources :sections, only: [:show, :update] do
     member do
@@ -616,6 +614,8 @@ Dashboard::Application.routes.draw do
       # Routes used by the peer reviews admin pages
       get 'peer_review_submissions/index', to: 'peer_review_submissions#index'
       get 'peer_review_submissions/report_csv', to: 'peer_review_submissions#report_csv'
+
+      resources :teacher_feedbacks, only: [:show, :create]
     end
   end
 

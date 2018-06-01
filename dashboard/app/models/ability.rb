@@ -77,9 +77,7 @@ class Ability
         can :manage, User do |u|
           user.students.include?(u)
         end
-        can :create, TeacherFeedback do |f|
-          user.students.include?(f.student_id)
-        end
+        can :manage, TeacherFeedback, sections: {user_id: user.id}
         can :manage, Follower
         can :read, Workshop
         can :manage, UserLevel do |user_level|
