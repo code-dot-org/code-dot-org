@@ -160,9 +160,9 @@ class EmailPreferenceHelperTest < SequelTestCase
     Timecop.return
   end
 
-  def test_upsert_does_not_update_all_rows
+  def test_upsert_does_not_update_other_rows
     EmailPreferenceHelper.upsert!(
-      email: 'existing@example.net',
+      email: 'another_row@example.net',
       opt_in: false,
       ip_address: '1.1.1.1',
       source: EmailPreferenceHelper::ACCOUNT_SIGN_UP,
@@ -186,7 +186,7 @@ class EmailPreferenceHelperTest < SequelTestCase
     )
 
     updated_email_preference = Dashboard.db[:email_preferences].where(email: 'update_me@example.net').first
-    another_email_preference = Dashboard.db[:email_preferences].where(email: 'existing@example.net').first
+    another_email_preference = Dashboard.db[:email_preferences].where(email: 'another_row@example.net').first
 
     refute_equal updated_email_preference[:opt_in], another_email_preference[:opt_in]
     refute_equal updated_email_preference[:ip_address], another_email_preference[:ip_address]
