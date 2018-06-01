@@ -189,7 +189,9 @@ module Pd::WorkshopSurveyResultsHelper
     questions.each do |session, response_sections|
       surveys_for_session = surveys[session]
 
-      session_summary = {}
+      session_summary = {
+        response_count: surveys[session][:response_count]
+      }
 
       response_sections.each do |response_section, section_questions|
         session_summary[response_section] = {}
@@ -256,7 +258,8 @@ module Pd::WorkshopSurveyResultsHelper
 
     {
       'Pre Workshop' => {
-        general: pre_workshop_submissions.map(&:form_data_hash)
+        general: pre_workshop_submissions.map(&:form_data_hash),
+        response_count: pre_workshop_submissions.count
       },
       'Day 1' => {
         general: []

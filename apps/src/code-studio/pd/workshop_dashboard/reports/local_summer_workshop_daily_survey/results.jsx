@@ -42,7 +42,7 @@ export default class Results extends React.Component {
                       dangerouslySetInnerHTML={{__html: question_data['text']}}// eslint-disable-line react/no-danger
                     />
                     <td>
-                      {this.computeAverageFromAnswerObject(this.props.thisWorkshop[session]['general'][question_key], question_data['answer_type'] !== 'none')}
+                      {this.computeAverageFromAnswerObject(this.props.thisWorkshop[session]['general'][question_key], question_data['max_value'], question_data['answer_type'] !== 'none')}
                     </td>
                   </tr>
                 );
@@ -168,7 +168,7 @@ export default class Results extends React.Component {
 
   renderAllSessionsResults() {
     return this.props.sessions.map((session, i) => (
-      <Tab eventKey={i + 1} key={i} title={session}>
+      <Tab eventKey={i + 1} key={i} title={`${session} (${this.props.thisWorkshop[session]['response_count'] || 0})`}>
         <br/>
         {this.renderSessionResultsTable(session)}
         {this.renderSessionResultsFreeResponse(session)}
@@ -179,7 +179,7 @@ export default class Results extends React.Component {
     ));
   }
 
-  computeAverageFromAnswerObject(answerHash, shouldFakeData) {
+  computeAverageFromAnswerObject(answerHash, maxValue, shouldFakeData) {
     let sum = 0;
     Object.keys(answerHash).map((key) => {
       if (Number(key) > 0) {
@@ -189,7 +189,7 @@ export default class Results extends React.Component {
 
     if (sum === 0) {
       if (shouldFakeData) {
-        return ((Math.random() * 8) + 1).toFixed(2);
+        return ((Math.random() * 8) + 1).toFixed(2) + ' / ' + maxValue;
       } else {
         return '';
       }
@@ -197,7 +197,7 @@ export default class Results extends React.Component {
       let average = sum / Object.values(answerHash).reduce((sum, x) => {
         return sum + x;
       });
-      return average.toFixed(2);
+      return `${average.toFixed(2)} / ${maxValue}`;
     }
   }
 
