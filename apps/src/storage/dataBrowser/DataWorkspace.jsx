@@ -23,7 +23,7 @@ const styles = {
     borderLeft: '1px solid gray',
     borderRight: '1px solid gray',
     borderBottom: '1px solid gray',
-    overflowY: 'scroll',
+    overflowY: 'auto',
   }
 };
 
