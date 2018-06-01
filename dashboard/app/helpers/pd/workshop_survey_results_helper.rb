@@ -200,9 +200,9 @@ module Pd::WorkshopSurveyResultsHelper
             if response_section == :facilitator
               # For facilitator specific free responses, we want a hash of facilitator IDs
               # to an array of all of their specific responses
-              facilitator_responses = Hash.new []
+              facilitator_responses = Hash.new
               surveys_for_session[:facilitator]&.each do |survey|
-                facilitator_responses[survey['facilitatorId'].to_i] = facilitator_responses[survey['facilitatorId']].append survey[q_key]
+                facilitator_responses[survey['facilitatorId'].to_i] = (facilitator_responses[survey['facilitatorId'].to_i] || []).append survey[q_key]
               end
 
               if current_user&.facilitator?
