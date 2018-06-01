@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180524174518) do
+ActiveRecord::Schema.define(version: 20180601174113) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -684,6 +684,19 @@ ActiveRecord::Schema.define(version: 20180524174518) do
     t.index ["regional_partner_id"], name: "index_pd_payment_terms_on_regional_partner_id", using: :btree
   end
 
+  create_table "pd_post_course_surveys", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.bigint  "form_id",                     null: false
+    t.bigint  "submission_id",               null: false
+    t.text    "answers",       limit: 65535
+    t.string  "year"
+    t.integer "user_id",                     null: false
+    t.string  "course",                      null: false, comment: "csd or csp"
+    t.index ["form_id"], name: "index_pd_post_course_surveys_on_form_id", using: :btree
+    t.index ["submission_id"], name: "index_pd_post_course_surveys_on_submission_id", unique: true, using: :btree
+    t.index ["user_id", "form_id", "year", "course"], name: "index_pd_post_course_surveys_on_user_form_year_course", unique: true, using: :btree
+    t.index ["user_id"], name: "index_pd_post_course_surveys_on_user_id", using: :btree
+  end
+
   create_table "pd_pre_workshop_surveys", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "pd_enrollment_id",               null: false
     t.text     "form_data",        limit: 65535, null: false
@@ -1235,6 +1248,16 @@ ActiveRecord::Schema.define(version: 20180524174518) do
     t.index ["end"], name: "index_segments_on_end", using: :btree
     t.index ["start"], name: "index_segments_on_start", using: :btree
     t.index ["workshop_id"], name: "index_segments_on_workshop_id", using: :btree
+  end
+
+  create_table "shared_blockly_functions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string  "name",                                  null: false
+    t.string  "level_type"
+    t.integer "block_type",                default: 0, null: false
+    t.string  "return"
+    t.text    "description", limit: 65535
+    t.text    "arguments",   limit: 65535
+    t.text    "stack",       limit: 65535
   end
 
   create_table "sign_ins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|

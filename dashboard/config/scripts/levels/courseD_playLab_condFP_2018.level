@@ -53,12 +53,12 @@
     "disable_if_else_editing": "true",
     "show_type_hints": "false",
     "remove_items_when_actor_collides": "false",
-    "contained_level_names": null,
-    "markdown_instructions": "Now, build your own game to show off to your friends!\r\n\r\n---\r\n\r\nYou could:\r\n - Have the pirate and ninja work together to get points from the octopus\r\n - Have both octopuses follow the pirate, doing double damage to the ninja when they collide\r\n - Have each character disappear when touched by the ninja\r\n - Invent your own game!"
+    "markdown_instructions": "Now, build your own game to show off to your friends!\r\n\r\n---\r\n\r\nYou could:\r\n - Have the pirate and ninja work together to get points from the octopus\r\n - Have both octopuses follow the pirate, doing double damage to the ninja when they collide\r\n - Have each character disappear when touched by the ninja\r\n - Invent your own game!",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-05-01 19:55:33 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-11 19:12:03 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-11 19:13:21 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-31 19:44:01 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-05-01 19:55:33 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-11 19:12:03 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-11 19:13:21 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-31 19:44:01 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-01 02:26:43 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -280,6 +280,11 @@
             <title name="VALUE">win</title>
           </block>
           <block type="studio_getScore"/>
+        </category>
+        <category name="Comment">
+          <block type="comment">
+            <title name="TEXT"/>
+          </block>
         </category>
       </xml>
     </toolbox_blocks>

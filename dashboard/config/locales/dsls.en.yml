@@ -8555,20 +8555,13 @@ en:
         Lossless compression throws away unimportant details that a human being will likely be unable to detect.: Lossless compression throws away unimportant details that a human being will likely be unable to detect.
         Lossy compression is only possible on files that are at least one gigabyte in size before compression.: Lossy compression is only possible on files that are at least one gigabyte in size before compression.
         Lossy compression techniques are no longer commonly used.: Lossy compression techniques are no longer commonly used.
-        Lossy vs. Lossless Compression: Lossy vs. Lossless Compression
         'Multiple Choice 1: Lossy vs Lossless Compression': 'Multiple Choice 1: Lossy vs Lossless Compression'
         Which of the following is true of lossy and lossless compression techniques?: Which of the following is true of lossy and lossless compression techniques?
       U2L05 Lossy Lossless MC 2_2018:
         Both lossy and lossless compression techniques will result in some information being lost from the original file.: Both lossy and lossless compression techniques will result in some information being lost from the original file.
-        Lossless compression is fully reversible, meaning the original file can be recreated bit for bit.: Lossless compression is fully reversible, meaning the original file can be recreated bit for bit.
         Lossless compression is only used in situations where lossy compression techniques can't be used.: Lossless compression is only used in situations where lossy compression techniques can't be used.
-        Lossless compression throws away unimportant details that a human being will likely be unable to detect.: Lossless compression throws away unimportant details that a human being will likely be unable to detect.
         ? Lossy compression is best suited for situations where some loss of detail is tolerable, especially if it will not be detectable by a human.
         : Lossy compression is best suited for situations where some loss of detail is tolerable, especially if it will not be detectable by a human.
-        Lossy compression is only possible on files that are at least one gigabyte in size before compression.: Lossy compression is only possible on files that are at least one gigabyte in size before compression.
-        Lossy compression techniques are no longer commonly used.: Lossy compression techniques are no longer commonly used.
-        Lossy vs. Lossless Compression: Lossy vs. Lossless Compression
-        'Multiple Choice 1: Lossy vs Lossless Compression': 'Multiple Choice 1: Lossy vs Lossless Compression'
         'Multiple Choice 2: Lossy vs Lossless Compression': 'Multiple Choice 2: Lossy vs Lossless Compression'
         Neither lossy nor lossless compression can actually reduce the number of bits needed to represent a file.: Neither lossy nor lossless compression can actually reduce the number of bits needed to represent a file.
         Which of the following is true of lossy and lossless compression techniques?: Which of the following is true of lossy and lossless compression techniques?
@@ -8591,8 +8584,6 @@ en:
       U2L05 Lossy vs. Lossless MC 2_2018:
         Both lossy and lossless compression techniques will result in some information being lost from the original file.: Both lossy and lossless compression techniques will result in some information being lost from the original file.
         Lossless compression is only used in situations where lossy compression techniques can't be used.: Lossless compression is only used in situations where lossy compression techniques can't be used.
-        Lossless compression is only used in situations where lossy compression techniques cannot be used.: Lossless compression is only used in situations where lossy compression techniques cannot be used.
-        Lossless compression is only used in situations where lossy compression techniques cant be used.: Lossless compression is only used in situations where lossy compression techniques cant be used.
         ? Lossy compression is best suited for situations where some loss of detail is tolerable, especially if it will not be detectable by a human.
         : Lossy compression is best suited for situations where some loss of detail is tolerable, especially if it will not be detectable by a human.
         'Multiple Choice 2: Lossy vs Lossless Compression': 'Multiple Choice 2: Lossy vs Lossless Compression'

@@ -62,8 +62,7 @@ class ExperimentsController < ApplicationController
       return
     end
 
-    experiment = SingleUserExperiment.find_by(min_user_id: current_user.id, name: experiment_name)
-    experiment.destroy
+    SingleUserExperiment.where(min_user_id: current_user.id, name: experiment_name).destroy_all
     redirect_to '/', flash: {notice: "You have successfully disabled the experiment '#{params[:experiment_name]}'."}
   end
 end
