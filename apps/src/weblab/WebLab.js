@@ -101,6 +101,10 @@ WebLab.prototype.init = function (config) {
       // Delete everything from the service and restart the initial sync
       filesApi.deleteAll((xhr, filesVersionId) => {
           this.fileEntries = null;
+          if (!this.brambleHost) {
+            reject(new Error('no bramble host'));
+            return;
+          }
           // Force brambleHost to reload based on startSources
           this.brambleHost.startInitialFileSync(err => {
               if (err) {
@@ -182,11 +186,15 @@ WebLab.prototype.init = function (config) {
   this.readOnly = config.readonlyWorkspace;
 
   function onAddFileHTML() {
-    this.brambleHost.addFileHTML();
+    if (this.brambleHost) {
+      this.brambleHost.addFileHTML();
+    }
   }
 
   function onAddFileCSS() {
-    this.brambleHost.addFileCSS();
+    if (this.brambleHost) {
+      this.brambleHost.addFileCSS();
+    }
   }
 
   function onAddFileImage() {
@@ -199,41 +207,53 @@ WebLab.prototype.init = function (config) {
   }
 
   function onUndo() {
-    this.brambleHost.undo();
+    if (this.brambleHost) {
+      this.brambleHost.undo();
+    }
   }
 
   function onRedo() {
-    this.brambleHost.redo();
+    if (this.brambleHost) {
+      this.brambleHost.redo();
+    }
   }
 
   function onRefreshPreview() {
     project.autosave(() => {
-      this.brambleHost.refreshPreview();
+      if (this.brambleHost) {
+        this.brambleHost.refreshPreview();
+      }
     });
   }
 
   function onStartFullScreenPreview() {
-    this.brambleHost.enableFullscreenPreview(() => {
-      // We always want to disable the inspector as we enter fullscreen preview,
-      // as it interferes with the preview display...
-      if (getStore().getState().inspectorOn) {
-        this.brambleHost.disableInspector();
-      }
-      getStore().dispatch(actions.changeFullScreenPreviewOn(true));
-    });
+    if (this.brambleHost) {
+      this.brambleHost.enableFullscreenPreview(() => {
+        // We always want to disable the inspector as we enter fullscreen preview,
+        // as it interferes with the preview display...
+        if (getStore().getState().inspectorOn) {
+          this.brambleHost.disableInspector();
+        }
+        getStore().dispatch(actions.changeFullScreenPreviewOn(true));
+      });
+    }
   }
 
   function onEndFullScreenPreview() {
-    this.brambleHost.disableFullscreenPreview(() => {
-      getStore().dispatch(actions.changeFullScreenPreviewOn(false));
-    });
+    if (this.brambleHost) {
+      this.brambleHost.disableFullscreenPreview(() => {
+        getStore().dispatch(actions.changeFullScreenPreviewOn(false));
+      });
+    }
   }
 
   function onToggleInspector() {
-    if (getStore().getState().inspectorOn) {
-      this.brambleHost.disableInspector();
-    } else {
-      this.brambleHost.enableInspector();
+    if (this.brambleHost) {
+      if (getStore().getState().inspectorOn) {
+        this.brambleHost.disableInspector();
+      } else {
+        this.brambleHost.enableInspector();
+      }
     }
   }
 
@@ -379,24 +399,22 @@ WebLab.prototype.onInspectorChanged = function (inspectorOn) {
 
 /*
  * Called by Bramble host to set our reference to its interfaces
- * @param {!Object} bramble host interfaces
+ * @param {!Object} brambleHost host interfaces
  * @return {String} current project path (project id plus initial version)
  */
-WebLab.prototype.setBrambleHost = function (obj) {
-  this.brambleHost = obj;
-  this.brambleHost.onBrambleReady(() => {
+WebLab.prototype.setBrambleHost = function (brambleHost) {
+  brambleHost.onBrambleReady(() => {
+    this.brambleHost = brambleHost;
+    brambleHost.onProjectChanged(this.onProjectChanged.bind(this));
+    brambleHost.onInspectorChanged(this.onInspectorChanged.bind(this));
     this.brambleReady = true;
     // Enable the Finish/Submit/Unsubmit button if it is present:
     let shareCell = document.getElementById('share-cell');
     if (shareCell) {
       shareCell.className = 'share-cell-enabled';
     }
-    if (this.syncBrambleWhenReady) {
-      this.brambleHost.syncFiles(() => {});
-    }
+    this.brambleHost.syncFiles(() => {});
   });
-  this.brambleHost.onProjectChanged(this.onProjectChanged.bind(this));
-  this.brambleHost.onInspectorChanged(this.onInspectorChanged.bind(this));
   if (this.suppliedFilesVersionId) {
     return `${project.getCurrentId()}-${this.suppliedFilesVersionId}`;
   } else {
@@ -431,7 +449,7 @@ WebLab.prototype.onIsRunningChange = function () {
 /**
  * Load the file entry list and store it as this.fileEntries
  */
-WebLab.prototype.loadFileEntries = function () {
+WebLab.prototype.loadFileEntries = async function () {
   filesApi.getFiles(result => {
     assetListStore.reset(result.files);
     this.fileEntries = assetListStore.list().map(fileEntry => ({
@@ -448,10 +466,8 @@ WebLab.prototype.loadFileEntries = function () {
       // current version (until the browser page reloads)
       project.filesVersionId = result.filesVersionId;
     }
-    if (this.brambleHost && this.brambleReady) {
+    if (this.brambleHost) {
       this.brambleHost.syncFiles(() => {});
-    } else {
-      this.syncBrambleWhenReady = true;
     }
   }, xhr => {
     console.error('files API failed, status: ' +  xhr.status);

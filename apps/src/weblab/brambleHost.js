@@ -392,49 +392,62 @@ function onInspectorChanged(callback) {
   onInspectorChangedCallback_ = callback;
 }
 
-function startInitialFileSync(callback, forceResetToStartSources) {
-  const currentProjectVersion = webLab_.getCurrentFilesVersionId();
+var _hasMounted = false;
 
-  if (!currentProjectVersion || forceResetToStartSources) {
-    // Get initial sources to put in file system
-    const startSources = webLab_.getStartSources();
-
-    // Sync what's on the service locally (should be nothing, but this ensures
-    // our _lastSyncedVersionId matches before we make changes)
-    syncFiles(err => {
-      if (err) {
-        console.warn(`Bramble host: Initial syncFiles failed with error: ${err}`);
-      }
-      // put the source files into the Bramble file system
-      putFilesInBramble(startSources, err => {
-        if (err) {
-          callback();
-        } else {
-          if (forceResetToStartSources) {
-            console.log('startInitialFileSync: forceResetToStartSources - calling syncFiles()');
-            // Start the initial files sync
-            syncFiles(callback);
-          } else {
-            // First-time level load - no project versionId
-
-            // Ignore all of the change events that just occured as we wrote the
-            // startSources into bramble - there is no need to save these during
-            // sync until a user-initiated change occurs
-            resetBrambleChangesAndProjectVersion(currentProjectVersion);
-            webLab_.registerBeforeFirstWriteHook(uploadAllFilesFromBramble);
-
-            // Start the initial files sync
-            syncFiles(callback);
-          }
-        }
-      });
-    });
-  } else {
-    ensureProjectRootDirExists(err => {
-      // Start the initial files sync
-      syncFiles(callback);
-    });
+function ensureMounted() {
+  if (!_hasMounted) {
+    bramble_.mount(`${weblabRoot}/${currentProjectPath}`);
   }
+  _hasMounted = true;
+}
+
+function startInitialFileSync(callback, forceResetToStartSources) {
+
+  ensureProjectRootDirExists(err => {
+    const wrappedCallback = err => {
+      ensureMounted();
+      callback(err);
+    };
+
+    if (err) {
+      wrappedCallback(err);
+      return;
+    }
+
+    const currentProjectVersion = webLab_.getCurrentFilesVersionId();
+    if (!currentProjectVersion || forceResetToStartSources) {
+      // Get initial sources to put in file system
+      const startSources = webLab_.getStartSources();
+
+      // Sync what's on the service locally (should be nothing, but this ensures
+      // our _lastSyncedVersionId matches before we make changes)
+      syncFiles(err => {
+        if (err) {
+          console.warn(`Bramble host: Initial syncFiles failed with error: ${err}`);
+        }
+        // put the source files into the Bramble file system
+        putFilesInBramble(startSources, err => {
+          if (!err) {
+            if (forceResetToStartSources) {
+              console.log('startInitialFileSync: forceResetToStartSources - calling syncFiles()');
+            } else {
+              // First-time level load - no project versionId
+
+              // Ignore all of the change events that just occured as we wrote the
+              // startSources into bramble - there is no need to save these during
+              // sync until a user-initiated change occurs
+              resetBrambleChangesAndProjectVersion(currentProjectVersion);
+              webLab_.registerBeforeFirstWriteHook(uploadAllFilesFromBramble);
+            }
+          }
+          // Start the initial files sync
+          syncFiles(wrappedCallback);
+        });
+      });
+    } else {
+      syncFiles(wrappedCallback);
+    }
+  });
 }
 
 function syncFiles(callback) {
@@ -594,10 +607,7 @@ function load(Bramble) {
 
   });
 
-  startInitialFileSync(function () {
-    // tell Bramble which root dir to mount
-    Bramble.mount(`${weblabRoot}/${currentProjectPath}`);
-  });
+  startInitialFileSync(() => {});
 }
 
 // Load bramble.js
