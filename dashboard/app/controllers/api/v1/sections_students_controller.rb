@@ -19,9 +19,9 @@ class Api::V1::SectionsStudentsController < Api::V1::JsonApiController
     render json: completed_levels_count_per_student
   end
 
-  # PATCH /sections/<section_id>/student/<id>/update
+  # PATCH /sections/<section_id>/students/<id>
   def update
-    return render_404 unless @student
+    @student.reset_secrets if params[:secrets] == User::RESET_SECRETS
 
     if @student.update(student_params)
       render json: @student.summarize

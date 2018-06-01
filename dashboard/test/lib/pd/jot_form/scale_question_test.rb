@@ -7,8 +7,8 @@ module Pd
       include Constants
 
       test 'parse jotform question data for scale' do
-        data = {
-          id: '1',
+        jotform_question = {
+          qid: '1',
           type: TYPE_SCALE,
           name: 'sampleScale',
           text: 'This is a scale label',
@@ -19,11 +19,7 @@ module Pd
           toText: 'Strongly Disagree'
         }.stringify_keys
 
-        question = ScaleQuestion.from_jotform_question(
-          id: '1',
-          type: TYPE_SCALE,
-          jotform_question: data
-        )
+        question = ScaleQuestion.from_jotform_question jotform_question
         assert question.is_a? ScaleQuestion
         assert_equal 1, question.id
         assert_equal TYPE_SCALE, question.type
@@ -58,6 +54,24 @@ module Pd
 
         question = ScaleQuestion.new(hash)
         assert_equal hash, question.to_h
+      end
+
+      test 'summarize' do
+        question = ScaleQuestion.new(
+          id: 1,
+          name: 'sampleScale',
+          text: 'a label',
+          values: (1..5).to_a
+        )
+
+        expected_summary = {
+          'sampleScale' => {
+            text: 'a label',
+            answer_type: ANSWER_SELECT_VALUE,
+            max_value: 5
+          }
+        }
+        assert_equal expected_summary, question.summarize
       end
     end
   end

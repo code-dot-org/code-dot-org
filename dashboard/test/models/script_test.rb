@@ -91,6 +91,59 @@ class ScriptTest < ActiveSupport::TestCase
     assert_not_equal script_level_id, script.script_levels[4].id
   end
 
+  test 'cannot rename a script without a new_name' do
+    l = create :level
+    dsl = <<-SCRIPT
+      stage 'Stage1'
+      level '#{l.name}'
+    SCRIPT
+    old_script = Script.add_script(
+      {name: 'old script name'},
+      ScriptDSL.parse(dsl, 'a filename')[0][:stages]
+    )
+    assert_equal 'old script name', old_script.name
+
+    new_script = Script.add_script(
+      {name: 'new script name'},
+      ScriptDSL.parse(dsl, 'a filename')[0][:stages]
+    )
+    assert_equal 'new script name', new_script.name
+
+    # a new script was created
+    refute_equal old_script.id, new_script.id
+  end
+
+  test 'can rename a script between original name and new_name' do
+    l = create :level
+    dsl = <<-SCRIPT
+      stage 'Stage1'
+      level '#{l.name}'
+    SCRIPT
+    old_script = Script.add_script(
+      {name: 'old script name', new_name: 'new script name'},
+      ScriptDSL.parse(dsl, 'a filename')[0][:stages]
+    )
+    assert_equal 'old script name', old_script.name
+
+    new_script = Script.add_script(
+      {name: 'new script name', new_name: 'new script name'},
+      ScriptDSL.parse(dsl, 'a filename')[0][:stages]
+    )
+    assert_equal 'new script name', new_script.name
+
+    # the old script was renamed
+    assert_equal old_script.id, new_script.id
+
+    old_script = Script.add_script(
+      {name: 'old script name', new_name: 'new script name'},
+      ScriptDSL.parse(dsl, 'a filename')[0][:stages]
+    )
+    assert_equal 'old script name', old_script.name
+
+    # the script was renamed back to the old name
+    assert_equal old_script.id, new_script.id
+  end
+
   test 'should remove empty stages' do
     scripts, _ = Script.setup([@script_file])
     assert_equal 2, scripts[0].stages.count
@@ -462,6 +515,27 @@ class ScriptTest < ActiveSupport::TestCase
     refute script.has_lesson_plan
     summary = script.summarize
     refute summary[:has_lesson_plan]
+  end
+
+  test 'summarize includes show_version_warning' do
+    csp_2017 = create(:course, name: 'csp-2017')
+    csp1_2017 = create(:script, name: 'csp1-2017')
+    create(:course_script, course: csp_2017, script: csp1_2017, position: 1)
+
+    csp_2018 = create(:course, name: 'csp-2018')
+    csp1_2018 = create(:script, name: 'csp1-2018')
+    create(:course_script, course: csp_2018, script: csp1_2018, position: 1)
+
+    summary = csp1_2017.summarize
+    refute summary[:show_version_warning]
+
+    user = create(:student)
+    summary = csp1_2017.summarize(true, user)
+    refute summary[:show_version_warning]
+
+    create(:user_script, user: user, script: csp1_2018)
+    summary = csp1_2017.summarize(true, user)
+    assert summary[:show_version_warning]
   end
 
   test 'should generate PLC objects' do

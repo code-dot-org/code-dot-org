@@ -285,11 +285,7 @@ GameLab.prototype.init = function (config) {
 
     if (this.studioApp_.isUsingBlockly()) {
       // Custom blockly config options for game lab jr
-      config.valueTypeTabShapeMap = {
-        Sprite: 'angle',
-        Behavior: 'rounded',
-        Location: 'square',
-      };
+      config.valueTypeTabShapeMap = GameLab.valueTypeTabShapeMap(Blockly);
 
       this.studioApp_.displayAlert('#belowVisualization', {type: 'warning', sideMargin: 0},
         <div>
@@ -503,6 +499,9 @@ GameLab.prototype.afterInject_ = function (config) {
       'levelSuccess',
       'levelFailure',
     ].join(','));
+
+    // Don't add infinite loop protection
+    Blockly.JavaScript.INFINITE_LOOP_TRAP = '';
   }
 
   // Update gameLabP5's scale and keep it updated with future resizes:
@@ -624,6 +623,7 @@ GameLab.prototype.rerunSetupCode = function () {
       !this.areAnimationsReady_()) {
     return;
   }
+  this.gameLabP5.resetWorld();
   this.gameLabP5.p5.allSprites.removeSprites();
   this.JSInterpreter.deinitialize();
   this.initInterpreter(false /* attachDebugger */);
@@ -1396,7 +1396,6 @@ GameLab.prototype.onP5Draw = function () {
         }
       }
     } else if (this.shouldAutoRunSetup) {
-      this.gameLabP5.p5.background('white');
       switch (this.level.autoRunSetup) {
         case GamelabAutorunOptions.draw_loop:
           this.eventHandlers.draw.apply(null);
@@ -1518,4 +1517,12 @@ GameLab.prototype.getAnimationDropdown = function () {
 
 GameLab.prototype.getAppReducers = function () {
   return reducers;
+};
+
+GameLab.valueTypeTabShapeMap = function (blockly) {
+  return {
+    [blockly.BlockValueType.SPRITE]: 'angle',
+    [blockly.BlockValueType.BEHAVIOR]: 'rounded',
+    [blockly.BlockValueType.LOCATION]: 'square',
+  };
 };
