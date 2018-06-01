@@ -24,7 +24,7 @@ module Pd
         return render_404 unless session
         return render :too_late unless session.open_for_attendance?
 
-        return render :no_attendence unless session.attendances.exists?(teacher: current_user)
+        return render :no_attendance unless session.attendances.exists?(teacher: current_user)
       end
 
       @form_id = WorkshopDailySurvey.get_form_id_for_day day
