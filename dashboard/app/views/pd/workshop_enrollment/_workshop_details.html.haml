@@ -40,6 +40,19 @@
     %div.span2
       = @workshop.regional_partner.name
 
+%div.row
+  %div.span2{style: 'text-align: right'}
+    %strong
+      Organizer Name:
+  %div.span2
+    = @workshop.organizer.name
+%div.row
+  %div.span2{style: 'text-align: right'}
+    %strong
+      Organizer Email:
+  %div.span4
+    = @workshop.organizer.email
+
   %div.span6
     %p{style: 'white-space: pre-wrap'}
       = @workshop.notes
