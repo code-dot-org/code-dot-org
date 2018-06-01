@@ -181,4 +181,16 @@ describe('Game Lab Jr Helper Library', () => {
     keyWentDownStub.restore();
     mouseWentDownStub.restore();
   });
+
+  it('does not run behaviors if shouldUpdate returns false', () => {
+    const shouldUpdateStub = stub(window, 'shouldUpdate').returns(false);
+    const sprite = makeNewSprite(null, 200, 200);
+    const eventLog = [];
+    addBehavior(sprite, () => eventLog.push('behavior 1 ran'));
+
+    draw();
+    expect(eventLog).to.be.empty;
+
+    shouldUpdateStub.restore();
+  });
 });

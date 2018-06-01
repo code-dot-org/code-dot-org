@@ -1002,3 +1002,13 @@ GameLabP5.prototype.preloadAnimations = function (animationList) {
     });
   }));
 };
+
+/**
+ * Reset just the world object without reloading the rest of p5
+ */
+GameLabP5.prototype.resetWorld = function () {
+  if (!this.p5) {
+    return;
+  }
+  this.gameLabWorld = new GameLabWorld(this.p5);
+};

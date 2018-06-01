@@ -145,7 +145,7 @@ function withFakeServer({courses = [], sections = []} = {}) {
     {"Content-Type": "application/json"},
     JSON.stringify(body)
   ];
-  server.respondWith('GET', '/dashboardapi/courses', successResponse(courses));
+  server.respondWith('GET', '/dashboardapi/courses?allVersions=1', successResponse(courses));
   server.respondWith('GET', '/dashboardapi/sections', successResponse(sections));
   server.respondWith('GET', '/dashboardapi/sections/valid_scripts', successResponse([]));
 }
