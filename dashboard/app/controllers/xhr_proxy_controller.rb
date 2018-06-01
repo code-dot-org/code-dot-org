@@ -30,17 +30,20 @@ class XhrProxyController < ApplicationController
     api.coinmarketcap.com
     api.data.gov
     api.football-data.org
+    api.foursquare.com
     api.nasa.gov
     api.open-notify.org
     api.openweathermap.org
     api.pegelalarm.at
     api.randomuser.me
+    api.rebrandly.com
     api.spotify.com
     api.themoviedb.org
     api.zippopotam.us
     atlas.media.mit.edu
     bible-api.com
     code.org
+    compete.hsctf.com
     data.cityofchicago.org
     data.gv.at
     data.nasa.gov
@@ -59,6 +62,7 @@ class XhrProxyController < ApplicationController
     nuevaschool.ngrok.io
     nuevaschool2.ngrok.io
     nuevaschool3.ngrok.io
+    numbersapi.com
     rhcloud.com
     sheets.googleapis.com
     spreadsheets.google.com

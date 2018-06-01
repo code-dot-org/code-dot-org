@@ -1,0 +1,14 @@
+name 'U4L1 - MC moores law_2018'
+question 'Historically it has been observed that computer processing speeds tend to double every two years.  This is known as:'
+wrong 'Boolean\’s Conjecture'
+right 'Moore\'s Law'
+wrong 'The “Big Data Effect”'
+wrong 'Powers of 2 Principle'
+
+teacher_markdown <<MARKDOWN
+Moore's Law is discussed at length in the lesson plan as a lead-in to the "Big Data Sleuth" activity.
+
+**Moore's Law** - a predication made by Gordon Moore in 1965 that computing power will double every 1.5-2 years, it has remained more or less true ever since.
+
+For purposes of the AP exam a looser definition is supported - **Moore's Law**: the observation that computing power roughly doubles every two years.
+MARKDOWN

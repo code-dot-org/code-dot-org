@@ -1,0 +1,30 @@
+name 'v2 U1L13 Student Lesson Introduction_2018'
+title 'HTTP and Abstraction'
+
+css 'unplugged'
+skip_dialog 'true'
+
+markdown <<MARKDOWN
+# Unit 1: Lesson 13 - HTTP and Abstraction on the Internet
+
+## Background
+
+Internet protocols define how computers "talk" to one another on the Internet. Most of the conversations are conducted in ASCII-text which can easily be read by humans. Thanks to the power of abstraction, we can rely on TCP/IP and the multiple layers of the physical Internet to handle the details of actually sending these messages. HTTP is one such protocol, and defines how your browser asks a remote server for the text, images, audio, and formatting information used to render a complete webpage.
+
+## Vocabulary
+
+* **HTTP: Hypertext Transfer Protocol (HTTP)** is the protocol used by the World Wide Web. It describes how messages are formatted and interchanged, and how web servers respond to commands.
+* **Abstraction:** Reducing information and detail to focus on essential characteristics.
+* **Server:** A computer that awaits and responds to requests for data.
+* **Client:** A computer that requests data stored on a server.
+
+## Lesson
+
+* Learn about abstraction and layers of the Internet in a video: "The Internet: HTML and HTTP”
+* Investigate HTTP traffic across browser
+
+## Resources
+
+* HTTP and Abstraction on the Internet - Resource ([PDF](https://docs.google.com/document/d/1ctikDy9v-e_bxvZvgFIE4Di7OUt2usz2V8qvdCpF5Ts/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1ctikDy9v-e_bxvZvgFIE4Di7OUt2usz2V8qvdCpF5Ts/export?format=doc))
+* HTTP in Action - Worksheet ([PDF](https://docs.google.com/document/d/1zAaHDXi00V4ewphP8w2A41hF-9Fj3Sjg8c6oPbez254/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1zAaHDXi00V4ewphP8w2A41hF-9Fj3Sjg8c6oPbez254/export?format=doc))
+MARKDOWN

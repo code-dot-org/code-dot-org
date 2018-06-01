@@ -1,8 +1,8 @@
 import sinon from 'sinon';
 import {expect} from '../../util/configuredChai';
 import {parseElement} from '@cdo/apps/xml';
+import {Position} from '@cdo/apps/constants';
 const Artist = require('@cdo/apps/turtle/artist');
-const constants = require('@cdo/apps/constants');
 
 const SHORT_DIAGONAL = 50 * Math.sqrt(2);
 const VERY_LONG_DIAGONAL = 150 * Math.sqrt(2);
@@ -251,7 +251,7 @@ describe('Artist', () => {
 
       Object.keys(expectations).forEach(position => {
         const [x, y] = expectations[position];
-        artist.step('JT', [constants.Position[position]]);
+        artist.step('JT', [Position[position]]);
         expect(artist.visualization.x).to.equal(x);
         expect(artist.visualization.y).to.equal(y);
       });

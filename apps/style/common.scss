@@ -248,38 +248,134 @@ button.arrow:disabled {
   background-color: #C7C7C7;
 }
 
-$dpad-red: #F78183;
+$dpad-button: #FFFFFF;
+$dpad-border: #EFEFEF;
+$dpad-shadow: #7F7F7F;
+$dpad-active-border: #9F9F9F;
+$dpad-cone-active: #FFD080;
+$dpad-cone-inactive: #9C9C9C;
+$dpad-rim: #FFFFFF;
 
 #studio-dpad {
-  display: inline-block;
+  width: 390px;
   vertical-align: top;
-  margin-left: -5px;
+  margin-left: 10px;
   -webkit-touch-callout: none;
-  &.studio-dpad-none {
-    display: none;
+}
+
+#studio-dpad-rim {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border: 76px solid $dpad-rim;
+  border-radius: 76px;
+  box-shadow: 1px 1px 1px 0 $dpad-shadow;
+}
+
+#studio-dpad-cone {
+  position: absolute;
+  margin: 2px;
+  width: 0px;
+  height: 0px;
+  border: 74px solid $dpad-cone-inactive;
+  border-radius: 74px;
+  &.left {
+    border-top-color: $dpad-cone-active;
+    transform: rotate(270deg);
+    &.down {
+      transform: rotate(225deg);
+    }
+    &.up {
+      transform: rotate(315deg);
+    }
+  }
+  &.right {
+    border-top-color: $dpad-cone-active;
+    transform: rotate(90deg);
+    &.down {
+      transform: rotate(135deg);
+    }
+    &.up {
+      transform: rotate(45deg);
+    }
+  }
+  &.up {
+    border-top-color: $dpad-cone-active;
+    transform: rotate(0deg);
+  }
+  &.down {
+    border-top-color: $dpad-cone-active;
+    transform: rotate(180deg);
   }
 }
 
 #studio-dpad-button {
   display: inline;
   position: relative;
-  border-radius: 21px;
-  margin: 5px;
+  border-radius: 40px;
+  width: 80px;
+  height: 80px;
+  margin: 36px 5px 5px 36px;
+  border: 1px solid $dpad-border;
+  background-color: $dpad-button;
+  box-shadow: 1px 1px 1px 0 $dpad-shadow;
   &.active {
-    background: $dpad-red;
-    border: 1px solid $dpad-red;
+    border: 1px solid $dpad-active-border;
+    box-shadow: none;
   }
   &.left {
-    left: -5px;
+    left: -17px;
+    &.up {
+      left: -12px;
+      top: -12px;
+    }
+    &.down {
+      left: -12px;
+      top: 12px;
+    }
   }
   &.right {
-    left: 5px;
+    left: 17px;
+    &.up {
+      left: 12px;
+      top: -12px;
+    }
+    &.down {
+      left: 12px;
+      top: 12px;
+    }
   }
   &.up {
-    top: -5px;
+    top: -17px;
   }
   &.down {
-    top: 5px;
+    top: 17px;
+  }
+}
+
+$space-fill: #FFA000;
+$space-shadow: #FFD07F;
+$space-border: #666666;
+$space-active-border: #9F9F9F;
+
+#studio-space-button {
+  position: absolute;
+  border-radius: 40px;
+  width: 80px;
+  height: 80px;
+  right: 10px;
+  border-color: $space-border;
+  background-color: $space-fill;
+  box-shadow: inset 1px 1px 0px 0 $space-shadow;
+  &.active {
+    border-radius: 39px;
+    width: 78px;
+    height: 78px;
+    margin-right: 6px;
+    margin-top: 6px;
+  }
+  &:focus {
+    outline: 0;
   }
 }
 
@@ -448,6 +544,18 @@ html[dir='rtl'] div#visualizationResizeBar {
   }
 }
 
+#studio-dpad-container.responsive > * {
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+
+  html[dir="RTL"] & {
+    -webkit-transform-origin: 100% 0;
+    -ms-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+  }
+}
+
 /* Make buttons, videos, etc. clickable. Otherwise, the scaled svg/canvas
  * obscures clicks on its original, unscaled position.  */
 #belowVisualization {
@@ -459,6 +567,15 @@ html[dir='rtl'] div#visualizationResizeBar {
   @include visualization-width-height-original($width, $width, 400px);
 }
 
+@mixin studio-dpad-container-width($width) {
+  $scale: $width / 400px;
+  #studio-dpad-container.responsive > * {
+    -webkit-transform: scale($scale);
+    -ms-transform: scale($scale);
+    transform: scale($scale);
+  }
+}
+
 @mixin karel-counter($font-size, $stroke-width) {
   .karel-counter-text {
     font-size: $font-size;
@@ -468,21 +585,25 @@ html[dir='rtl'] div#visualizationResizeBar {
 
 @media screen and (min-width: 1101px) and (max-width: 1150px) {
   @include visualization-width(350px);
+  @include studio-dpad-container-width(350px);
   @include karel-counter(20px, 1.2px);
 }
 
 @media screen and (min-width: 1051px) and (max-width: 1100px) {
   @include visualization-width(300px);
+  @include studio-dpad-container-width(300px);
   @include karel-counter(24px, 1.4px);
 }
 
 @media screen and (min-width: 1001px) and (max-width: 1050px) {
   @include visualization-width(250px);
+  @include studio-dpad-container-width(250px);
   @include karel-counter(28px, 1.6px);
 }
 
 @media screen and (max-width: 1000px) {
   @include visualization-width(200px);
+  @include studio-dpad-container-width(200px);
   @include karel-counter(32px, 2px);
 
   #soft-buttons {
@@ -1586,7 +1707,30 @@ a.WireframeButtons_active, div.WireframeButtons_active {
   background-size: 432px 757px;
 }
 
+@media screen and (max-height: 780px) {
+  .legacy-share-view {
+    div#visualizationColumn.wireframeShare {
+      width: 402px !important;
+      height: 602px !important;
+      background-size: 402px 602px;
+
+      div#phoneFrameScreen {
+        border-width: 1px;
+        border-color: gray;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}
+
 .legacy-share-view {
+  overflow: hidden;
+
+  &.legacy-share-view-mobile {
+    position: fixed;
+  }
+
   #belowVisualization, .hide-source #belowVisualization {
     display: none;
   }
@@ -1624,7 +1768,7 @@ a.WireframeButtons_active, div.WireframeButtons_active {
 
   #gameButtons {
     width: auto;
-    padding: 1% 5%;
+    padding: 4px 5%;
     #right-button-cell {
       display: none; /* don't show Finish button in share view */
     }
@@ -1637,6 +1781,10 @@ a.WireframeButtons_active, div.WireframeButtons_active {
     left: 0;
     right: 0;
     width: auto !important;
+  }
+
+  #studio-dpad-container {
+    margin-top: -24px;
   }
 
   #more-menu, #copyright-flyout {

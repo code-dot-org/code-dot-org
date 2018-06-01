@@ -1,0 +1,18 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-04-26T22:51:24.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Routers and Redundancy: Question 5",
+    "markdown_instructions": "Can you know in advance the path a message will take between you and another computer on the Internet? Justify your answer.\n",
+    "encrypted_solution": "sCGeUGI2w2YbUU/UpwjAnsHo3Rnq1qAVyKh2lK2Abb+v2tJYdbnwft8jrfuz\nc5mQRJEZVP2f+6W0ZV2Rpc/ry7YbVQ1u92x99uSIvGsetbZpU3e9ObgJsHr1\nOpXHEZ9yPpbcrAit88FF9lecri5An7aUSCQvuD3Q3sZRLMrHCSoBZzRj/M19\nz08WZVIDVwmej6ZITOpXxcH4cpppEeLsIs4S8IZB7Ar40YQlbZH5ZK6+0DWN\nJYfi50Ev8T7pSvwRIsxDjb4A0ambkxrEGO7V0qSAa+MPIBt+hSyQxd7nFSqF\nLnfOkVbt26wB98xxQR6NNW5rpDohSrqd2d5hWVAIArhrTCoYbBgec3Y2u7Rn\njeBeS0/u+Czl+2rHInab51PiuolNzsdfjQtMB8uXclAM05KzQpT3wlhPhYPM\nX3Fd1yiSe1DpPQtxDItbIjezge2t\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 2473,
+    "name_suffix": "_2018"
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

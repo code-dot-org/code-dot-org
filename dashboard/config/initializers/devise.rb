@@ -313,6 +313,13 @@ Devise.setup do |config|
     }
   }
 
+  # Powerschool OpenID config
+  config.omniauth :openid, {
+    provider_ignores_state: true,
+    name: :powerschool,
+    identifier_param: 'openid_identifier'
+  }
+
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.
@@ -328,13 +335,23 @@ Devise.setup do |config|
 
   require 'cookie_helpers'
   Warden::Manager.after_set_user do |user, auth|
-    auth.cookies[environment_specific_cookie_name("_user_type")] = {value: user.teacher? ? "teacher" : "student", domain: :all, httponly: true}
+    user_type =
+      if user.teacher?
+        "teacher"
+      elsif user.under_13?
+        "student_y"
+      else
+        "student"
+      end
+    auth.cookies[environment_specific_cookie_name("_user_type")] = {value: user_type, domain: :all, httponly: true}
     auth.cookies[environment_specific_cookie_name("_shortName")] = {value: user.short_name, domain: :all}
+    auth.cookies[environment_specific_cookie_name("_experiments")] = {value: user.get_active_experiment_names.to_json, domain: :all}
   end
 
   Warden::Manager.before_logout do |_, auth|
     auth.cookies[environment_specific_cookie_name("_user_type")] = {value: "", expires: Time.at(0), domain: :all, httponly: true}
     auth.cookies[environment_specific_cookie_name("_shortName")] = {value: "", expires: Time.at(0), domain: :all}
+    auth.cookies[environment_specific_cookie_name("_experiments")] = {value: "", expires: Time.at(0), domain: :all}
   end
 
   # ==> Mountable engine configurations

@@ -59,7 +59,6 @@
       "comment_Sprites": null,
       "console.log": null
     },
-    "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Gears with Conditionals\r\n\r\nLet's make the gears spin only when the space key is being held down.\r\n\r\n# Do This\r\n\r\n* Add an `if` statement.\r\n* Use `keyDown` as input to the if statement to check when the space key is pressed.\r\n* Move the code that makes the gears rotate inside the `if`.",
@@ -100,11 +99,24 @@
     "start_animations": "{\r\n    \"orderedKeys\": [\r\n        \"blue_gear\",\r\n        \"green_gear\",\r\n        \"red_gear\"\r\n    ],\r\n    \"propsByKey\": {\r\n        \"blue_gear\": {\r\n            \"name\": \"blue_gear\",\r\n            \"sourceUrl\": \"https://curriculum.code.org/images/sprites/blue_gear.png\",\r\n            \"sourceSize\": {\r\n                \"x\": 123,\r\n                \"y\": 124\r\n            },\r\n            \"frameSize\": {\r\n                \"x\": 123,\r\n                \"y\": 124\r\n            },\r\n            \"frameCount\": 1,\r\n            \"frameDelay\": 2,\r\n            \"looping\": true\r\n        },\r\n        \"green_gear\": {\r\n            \"name\": \"green_gear\",\r\n            \"sourceUrl\": \"https://curriculum.code.org/images/sprites/green_gear.png\",\r\n            \"sourceSize\": {\r\n                \"x\": 122,\r\n                \"y\": 122\r\n            },\r\n            \"frameSize\": {\r\n                \"x\": 122,\r\n                \"y\": 122\r\n            },\r\n            \"frameCount\": 1,\r\n            \"frameDelay\": 2,\r\n            \"looping\": true\r\n        },\r\n        \"red_gear\": {\r\n            \"name\": \"red_gear\",\r\n            \"sourceUrl\": \"https://curriculum.code.org/images/sprites/red_gear.png\",\r\n            \"sourceSize\": {\r\n                \"x\": 122,\r\n                \"y\": 121\r\n            },\r\n            \"frameSize\": {\r\n                \"x\": 122,\r\n                \"y\": 121\r\n            },\r\n            \"frameCount\": 1,\r\n            \"frameDelay\": 2,\r\n            \"looping\": true\r\n        }\r\n    }\r\n}",
     "parent_level_id": 8887,
     "name_suffix": "_2018",
+    "reference_links": [
+      "/docs/gamelab/keyDown/index.html",
+      "/docs/csd-1718/if_statements/index.html",
+      "/docs/csd-1718/booleans/index.html",
+      "/docs/csd-1718/counter_pattern/index.html",
+      "/docs/csd-1718/sprite_properties/index.html",
+      "/docs/csd-1718/sprites/index.html"
+    ],
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-22 18:55:56 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-22 18:55:56 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-15 21:24:37 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

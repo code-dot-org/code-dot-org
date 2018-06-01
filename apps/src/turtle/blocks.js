@@ -25,11 +25,9 @@
 var Colours = require('./colours');
 var msg = require('./locale');
 var commonMsg = require('@cdo/locale');
-
 var customLevelBlocks = require('./customLevelBlocks');
-var constants = require('../constants');
+import {Position} from '../constants';
 
-const Position = constants.Position;
 const RANDOM_VALUE = 'RAND';
 
 const POSITION_VALUES = [[commonMsg.positionRandom(), RANDOM_VALUE],
@@ -360,9 +358,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setOutput(true);
       this.setTooltip(blockly.Msg.VARIABLES_GET_TOOLTIP);
     },
-    getVars: function () {
-      return [this.getTitleValue('VAR')];
-    }
+    getVars: Blockly.Variables.getVars,
   };
 
   generator.variables_get_counter = generator.variables_get;
@@ -379,9 +375,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setOutput(true);
       this.setTooltip(blockly.Msg.VARIABLES_GET_TOOLTIP);
     },
-    getVars: function () {
-      return [this.getTitleValue('VAR')];
-    }
+    getVars: Blockly.Variables.getVars,
   };
 
   generator.variables_get_length = generator.variables_get;
@@ -398,9 +392,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setOutput(true);
       this.setTooltip(blockly.Msg.VARIABLES_GET_TOOLTIP);
     },
-    getVars: function () {
-      return [this.getTitleValue('VAR')];
-    }
+    getVars: Blockly.Variables.getVars,
   };
 
   generator.variables_get_sides = generator.variables_get;
@@ -513,9 +505,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setTooltip(blockly.Msg.CONTROLS_FOR_TOOLTIP.replace(
           '%1', this.getTitleValue('VAR')));
     },
-    getVars: function () {
-      return [this.getTitleValue('VAR')];
-    },
+    getVars: Blockly.Variables.getVars,
     // serialize the counter variable name to xml so that it can be used across
     // different locales
     mutationToDom: function () {
@@ -921,11 +911,11 @@ exports.install = function (blockly, blockInstallOptions) {
       this.appendDummyInput()
           .appendTitle(new blockly.FieldTextInput('0',
             blockly.FieldTextInput.numberValidator), 'XPOS')
-          .appendTitle("over");
+          .appendTitle(commonMsg.positionAbsoluteOver());
       this.appendDummyInput()
           .appendTitle(new blockly.FieldTextInput('0',
             blockly.FieldTextInput.numberValidator), 'YPOS')
-          .appendTitle("down");
+          .appendTitle(commonMsg.positionAbsoluteDown());
       this.setPreviousStatement(true);
       this.setInputsInline(true);
       this.setNextStatement(true);

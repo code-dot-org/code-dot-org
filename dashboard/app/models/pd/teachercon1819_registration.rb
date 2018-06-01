@@ -287,4 +287,9 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
   def course_name
     pd_application.try(&:course_name)
   end
+
+  # at the time of registration
+  def teachercon_city
+    sanitize_form_data_hash[:city]
+  end
 end

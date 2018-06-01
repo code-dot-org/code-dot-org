@@ -2,7 +2,8 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { MultiGrid } from 'react-virtualized';
 import styleConstants from '../../styleConstants';
-import { sectionDataPropType, scriptDataPropType, getLevels } from './sectionProgressRedux';
+import { scriptDataPropType, getLevels } from './sectionProgressRedux';
+import { sectionDataPropType } from '@cdo/apps/redux/sectionDataRedux';
 import StudentProgressSummaryCell from '../sectionProgress/StudentProgressSummaryCell';
 import SectionProgressLessonNumberCell from '../sectionProgress/SectionProgressLessonNumberCell';
 import color from "../../util/color";
@@ -29,7 +30,6 @@ class VirtualizedSummaryView extends Component {
   };
 
   cellRenderer = ({columnIndex, key, rowIndex, style}) => {
-    const {section, scriptData, getLevels} = this.props;
     // Subtract 1 to account for the header row.
     const studentStartIndex = rowIndex-1;
     // Subtract 1 to account for the student name column.
@@ -40,14 +40,13 @@ class VirtualizedSummaryView extends Component {
       ...style,
       ...progressStyles.cell,
     };
-    // Alternate background colour of each row
-    if (studentStartIndex%2 === 1) {
-      cellStyle = {
-        ...cellStyle,
-        backgroundColor: color.background_gray,
-      };
+
+    // Student rows
+    if (studentStartIndex >= 0) {
+      return this.studentCellRenderer(studentStartIndex, stageIdIndex, key, cellStyle);
     }
 
+    // Header rows
     return (
       <div className={progressStyles.Cell} key={key} style={cellStyle}>
         {(rowIndex === 0 && columnIndex === 0) &&
@@ -60,18 +59,37 @@ class VirtualizedSummaryView extends Component {
             lessonNumber={columnIndex}
           />
         }
-        {(rowIndex >= 1 && columnIndex === 0) &&
+      </div>
+    );
+  };
+
+  studentCellRenderer = (studentStartIndex, stageIdIndex, key, style) => {
+    const {section, scriptData, getLevels} = this.props;
+
+    // Alternate background colour of each row
+    if (studentStartIndex%2 === 1) {
+      style = {
+        ...style,
+        backgroundColor: color.background_gray,
+      };
+    }
+
+    const student = section.students[studentStartIndex];
+
+    return (
+      <div className={progressStyles.Cell} key={key} style={style}>
+        {(stageIdIndex < 0) &&
           <SectionProgressNameCell
-            name={section.students[studentStartIndex].name}
-            studentId={section.students[studentStartIndex].id}
+            name={student.name}
+            studentId={student.id}
             sectionId={section.id}
             scriptId={scriptData.id}
           />
         }
-        {(rowIndex >= 1 && columnIndex > 0) &&
+        {(stageIdIndex >= 0) &&
           <StudentProgressSummaryCell
-            studentId={section.students[studentStartIndex].id}
-            levelsWithStatus={getLevels(section.students[studentStartIndex].id, stageIdIndex)}
+            studentId={student.id}
+            levelsWithStatus={getLevels(student.id, stageIdIndex)}
             style={progressStyles.summaryCell}
           />
         }

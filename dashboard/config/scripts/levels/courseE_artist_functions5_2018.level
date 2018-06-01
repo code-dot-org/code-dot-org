@@ -8,7 +8,7 @@
     "skin": "artist_zombie",
     "embed": "false",
     "instructions": "Draw only those three stars to finish this puzzle.",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Don't give up!  Remember what you have been learning.\",\"hint_id\":\"courseD_artist_functions5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5565ab5a03e2e30868c82267a0d63cdc/courseE_artist_functions5.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Functions make it easy to call saved code at any time, not just from inside a loop!\",\"hint_id\":\"courseD_artist_functions5_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/62fbc4434b6a63445243be3d9c05def0/courseE_artist_functions5.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Start by dragging the code for a star shape into the `draw a star` function, then use this function to draw the three stars!\",\"hint_id\":\"courseD_artist_functions5_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f9fa243cdd4366f9c2e80ac8155192e4/courseE_artist_functions5.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Don't give up!  Remember what you have been learning.\",\"hint_id\":\"courseD_artist_functions5_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5565ab5a03e2e30868c82267a0d63cdc/courseE_artist_functions5_2018.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Functions make it easy to call saved code at any time, not just from inside a loop!\",\"hint_id\":\"courseD_artist_functions5_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/62fbc4434b6a63445243be3d9c05def0/courseE_artist_functions5_2018.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Start by creating your `draw a star` function, then use this function to draw the three stars!\",\"hint_id\":\"courseD_artist_functions5_c\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/0509cf572af0309118c60fff5c0e0a10/courseE_artist_functions5_2018.mp3\"}]",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "true",
@@ -32,35 +32,130 @@
     "x": "50",
     "y": "100",
     "ideal": "11",
-    "markdown_instructions": "When is drawing three stars harder than drawing four? When you also have to jump over the moon!\r\n\r\nDraw only those three stars to finish this puzzle.",
+    "markdown_instructions": "When is drawing three stars harder than drawing four? When you also have to jump over the moon!\r\n\r\nDraw only those three stars to finish this puzzle.\r\n\r\n---\r\n\r\n- The jump between the first and second star is **200** pixels\r\n- The jump between the second and third is **100** pixels",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "name_suffix": "_2018",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/aac2dae95cf01b265f8d45310f9c25bb=levelbuilder/37068.png",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-13 03:44:59 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-07-13 03:44:59 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2018-05-01 19:06:07 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 19:06:56 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 19:07:22 +0000\",\"changed\":[\"initialization_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 19:07:49 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 19:08:16 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 19:14:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 19:16:40 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 19:17:54 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <initialization_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false"/>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="draw_colour" inline="false" id="draw-color">
+              <value name="COLOUR">
+                <block type="colour_picker">
+                  <title name="COLOUR">#ffffff</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
       </xml>
     </initialization_blocks>
     <start_blocks>
       <xml>
+        <block type="when_run" deletable="false" movable="false"/>
+        <block type="procedures_defnoreturn" editable="false" x="200" y="200">
+          <mutation/>
+          <title name="NAME">draw a star</title>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">25</title>
+        </block>
+        <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE" config="45,60,90,120,180">45</title>
+        </block>
+        <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">turnLeft</title>
+          <title name="VALUE" config="45,60,90,120,180">45</title>
+        </block>
+        <block type="jump_by_constant">
+          <title name="DIR">jumpForward</title>
+          <title name="VALUE">100</title>
+        </block>
+        <block type="controls_repeat" limit="1">
+          <title name="TIMES">8</title>
+        </block>
+        <block type="procedures_callnoreturn">
+          <mutation name="draw a star"/>
+        </block>
+        <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+            <block type="colour_picker">
+              <title name="COLOUR">#ffffff</title>
+            </block>
+          </value>
+        </block>
+        <block type="procedures_defnoreturn" movable="false" uservisible="false">
+          <mutation/>
+          <title name="NAME">draw a star</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <recommended_blocks>
+      <xml/>
+    </recommended_blocks>
+    <solution_blocks>
+      <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="draw_colour" inline="true" id="draw-color">
+            <block type="procedures_callnoreturn">
+              <mutation name="draw a star"/>
+              <next>
+                <block type="jump_by_constant">
+                  <title name="DIR">jumpForward</title>
+                  <title name="VALUE">200</title>
+                  <next>
+                    <block type="procedures_callnoreturn">
+                      <mutation name="draw a star"/>
+                      <next>
+                        <block type="jump_by_constant">
+                          <title name="DIR">jumpForward</title>
+                          <title name="VALUE">100</title>
+                          <next>
+                            <block type="procedures_callnoreturn">
+                              <mutation name="draw a star"/>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">draw a star</title>
+          <statement name="STACK">
+            <block type="draw_colour" inline="false" id="draw-color">
               <value name="COLOUR">
                 <block type="colour_picker">
                   <title name="COLOUR">#ffffff</title>
                 </block>
               </value>
               <next>
-                <block type="controls_repeat" editable="false">
+                <block type="controls_repeat">
                   <title name="TIMES">8</title>
                   <statement name="DO">
                     <block type="draw_move_by_constant">
@@ -82,119 +177,6 @@
                   </statement>
                 </block>
               </next>
-            </block>
-          </next>
-        </block>
-        <block type="procedures_defnoreturn" editable="false">
-          <mutation/>
-          <title name="NAME">draw a star</title>
-        </block>
-      </xml>
-    </start_blocks>
-    <toolbox_blocks>
-      <xml>
-        <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-            <block type="colour_picker">
-              <title name="COLOUR">#ffffff</title>
-            </block>
-          </value>
-        </block>
-        <block type="draw_move_by_constant">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE">25</title>
-        </block>
-        <block type="draw_turn_by_constant">
-          <title name="DIR">turnRight</title>
-          <title name="VALUE">45</title>
-        </block>
-        <block type="draw_turn_by_constant">
-          <title name="DIR">turnLeft</title>
-          <title name="VALUE">90</title>
-        </block>
-        <block type="jump_by_constant">
-          <title name="DIR">jumpForward</title>
-          <title name="VALUE">100</title>
-        </block>
-        <block type="controls_repeat" limit="1">
-          <title name="TIMES">8</title>
-        </block>
-        <block type="procedures_callnoreturn">
-          <mutation name="draw a star"/>
-        </block>
-        <block type="procedures_defnoreturn">
-          <mutation/>
-          <title name="NAME">draw a star</title>
-        </block>
-      </xml>
-    </toolbox_blocks>
-    <recommended_blocks>
-      <xml/>
-    </recommended_blocks>
-    <solution_blocks>
-      <xml>
-        <block type="when_run" deletable="false" movable="false">
-          <next>
-            <block type="draw_colour" inline="true" id="draw-color">
-              <value name="COLOUR">
-                <block type="colour_picker">
-                  <title name="COLOUR">#ffffff</title>
-                </block>
-              </value>
-              <next>
-                <block type="procedures_callnoreturn">
-                  <mutation name="draw a star"/>
-                  <next>
-                    <block type="jump_by_constant">
-                      <title name="DIR">jumpForward</title>
-                      <title name="VALUE">200</title>
-                      <next>
-                        <block type="procedures_callnoreturn">
-                          <mutation name="draw a star"/>
-                          <next>
-                            <block type="jump_by_constant">
-                              <title name="DIR">jumpForward</title>
-                              <title name="VALUE">100</title>
-                              <next>
-                                <block type="procedures_callnoreturn">
-                                  <mutation name="draw a star"/>
-                                </block>
-                              </next>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
-        <block type="procedures_defnoreturn">
-          <mutation/>
-          <title name="NAME">draw a star</title>
-          <statement name="STACK">
-            <block type="controls_repeat">
-              <title name="TIMES">8</title>
-              <statement name="DO">
-                <block type="draw_move_by_constant">
-                  <title name="DIR">moveForward</title>
-                  <title name="VALUE">25</title>
-                  <next>
-                    <block type="draw_move_by_constant">
-                      <title name="DIR">moveBackward</title>
-                      <title name="VALUE">25</title>
-                      <next>
-                        <block type="draw_turn_by_constant">
-                          <title name="DIR">turnRight</title>
-                          <title name="VALUE">45</title>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </statement>
             </block>
           </statement>
         </block>

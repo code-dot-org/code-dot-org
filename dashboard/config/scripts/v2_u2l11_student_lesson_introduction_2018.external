@@ -1,0 +1,29 @@
+name 'v2 U2L11 Student Lesson Introduction_2018'
+title 'title'
+css 'unplugged'
+description 'description here'
+markdown <<MARKDOWN
+# Unit 2: Lesson 11 - Making Data Visualizations
+
+## Background
+
+Good visualizations can help people make sense of data sets that are too large to interpret by looking at the raw data. Now that you’ve had the chance to see and evaluate some data visualizations, you will learn to use a spreadsheet tool to make visualizations of your own.
+
+## Lesson
+
+* Make a scatter chart.
+* Make a line chart.
+* Make a bar chart.
+* Make your own chart.
+
+## Resources
+
+* Data Visualization 101: How to design charts and graphs - [link](http://content.visage.co/hs-fs/hub/424038/file-2094950163-pdf)
+* MovieRating_avgRatingByAgeByGender.csv - Data Set ([download](https://docs.google.com/spreadsheets/export?format=csv&id=1S0AfxlpbG92Uj-p85puhQG2A-Yew1EMorizv5MiNGpQ))
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Target Charts: <a href="https://docs.google.com/document/d/1ckcDtJYg8LNjNvtwBey6kbyGOoH5jn1sNP3Em2KR8DQ/" target="_blank">Making Data Visualizations</a>
+MARKDOWN

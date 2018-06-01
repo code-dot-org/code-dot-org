@@ -135,6 +135,12 @@ export default class AdminCohortViewTable extends React.Component {
           format: this.formatBoolean
         }
       }, {
+        property: 'teachercon_assigned_at_registration',
+        header: {
+          label: 'Teachercon Assigned at Registration',
+          transforms: [sortable]
+        }
+      }, {
         property: 'accepted_teachercon',
         header: {
           label: 'Accepted Teachercon',
@@ -154,6 +160,12 @@ export default class AdminCohortViewTable extends React.Component {
         },
         cell: {
           format: this.formatBoolean
+        }
+      }, {
+        property: 'fit_assigned_at_registration',
+        header: {
+          label: 'FiT Assigned at Registration',
+          transforms: [sortable]
         }
       }, {
         property: 'accepted_fit',

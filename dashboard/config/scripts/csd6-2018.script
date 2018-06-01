@@ -1,18 +1,21 @@
+hidden false
 login_required true
 hideable_stages true
 exclude_csf_column_in_legend true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csd/unit6/"], ["teacherForum", "https://forum.code.org/c/csd6"], ["vocabulary", "https://curriculum.code.org/csd/unit6/vocab/"], ["standardMappings", "https://curriculum.code.org/csd/unit6/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd/unit6/code/"]]
+stage_extras_available true
 has_verified_resources true
 has_lesson_plan true
-project_widget_types ["applab"]
+project_widget_visible true
+project_widget_types ["applab", "gamelab", "weblab"]
 script_announcements [{"notice"=>"Know a teacher interested in teaching computer science?", "details"=>"Applications for the 2018 middle and high school Professional Learning program are now open!  No computer science experience is necessary.", "link"=>"https://code.org/educate/professional-learning-2018", "type"=>"bullhorn"}, {"notice"=>"This Unit has been Updated!", "details"=>"In response to feedback from our pilot last year, we've recently published significant updates to this unit. To learn more about these updates, click the \"Learn more\" button.", "link"=>"http://forum.code.org/t/updated-unit-6-released/", "type"=>"information"}]
 
-stage 'Innovations in Computing_', flex_category: 'csd6_1'
+stage 'Innovations in Computing', flex_category: 'csd6_1'
 named_level 'CSD U6L01 TFMD_2018'
 named_level 'CSDU6 Innovation_2018'
 
-stage 'Designing Screens with Code_', flex_category: 'csd6_1'
+stage 'Designing Screens with Code', flex_category: 'csd6_1'
 named_level 'CSD U6L02 TFMD_2018'
 named_level 'CSD U6 setProperty Map_2018'
 level 'CSD U6 setProperty predict app_2018', progression: 'Setting Properties'
@@ -28,7 +31,7 @@ level 'CSD U6 emotion machine 2_2018', progression: 'Building an App'
 level 'CSD U6 emotion machine 3_2018', progression: 'Building an App'
 level 'CSD U6 emotion machine 4_2018', progression: 'Building an App'
 
-stage 'The Circuit Playground_', flex_category: 'csd6_1'
+stage 'The Circuit Playground', flex_category: 'csd6_1'
 named_level 'CSD U6L03 TFMD_2018'
 named_level 'CSD U6 hardware software video_2018'
 named_level 'CSD LEDs Map_2018'
@@ -44,12 +47,12 @@ level 'CSD U6 Catch the Mouse_2018', progression: 'LED Apps'
 level 'CSD U6 create LED app_2018', progression: 'LED Apps'
 level 'CSD U6 create LED app 2_2018', progression: 'LED Apps'
 
-stage 'Input Unplugged_', flex_category: 'csd6_1'
+stage 'Input Unplugged', flex_category: 'csd6_1'
 named_level 'CSD U6L04 TFMD_2018'
 level 'CSDU6 GameLab Input 1_2018', progression: 'Input Examples'
 level 'CSDU6 AppLab Input 1_2018', progression: 'Input Examples'
 
-stage 'Board Events_', flex_category: 'csd6_1'
+stage 'Board Events', flex_category: 'csd6_1'
 named_level 'CSD U6L05 TFMD_2018'
 named_level 'CSD onBoardEvent Map_2018'
 level 'CSDU6 - button LED prediction_2018', progression: 'Board Events'
@@ -65,7 +68,7 @@ level 'CSDU6 - buzzer duration_2018', progression: 'The Buzzer'
 level 'CSDU6 - buzzer duration buttons_2018', progression: 'The Buzzer'
 bonus 'CSDU6 - board event challenge_2018'
 
-stage 'Getting Properties_', flex_category: 'csd6_1'
+stage 'Getting Properties', flex_category: 'csd6_1'
 named_level 'CSD U6L06 TFMD_2018'
 named_level 'CSD U6 getProperty Map_2018'
 level 'CSD U6 getProperty Demo_2018', progression: 'Getting Properties'
@@ -84,7 +87,7 @@ level 'CSD U6 move motorcycle_2018', progression: 'Motorcycle'
 level 'CSD U6 design motorcycle_2018', progression: 'Motorcycle'
 bonus 'CSD U6 challenge motorcycle_2018'
 
-stage 'Analog Input_', flex_category: 'csd6_1'
+stage 'Analog Input', flex_category: 'csd6_1'
 named_level 'CSD U6L07 TFMD_2018'
 named_level 'CSD U6 sensor experiment embedded_2018'
 named_level 'CSD Board Sensors Map_2018'
@@ -100,9 +103,9 @@ named_level 'CSD Set Scale Map_2018'
 level 'CSD U6 analog rbg 1_2018', progression: 'Sensors to Colors'
 level 'CSD U6 analog rbg 2_2018', progression: 'Sensors to Colors'
 level 'CSD U6 analog rgb 3_2018', progression: 'Sensors to Colors'
-named_level 'CSD U6 analog challenge_2018'
+bonus 'CSD U6 analog challenge_2018'
 
-stage 'The Program Design Process_', flex_category: 'csd6_1'
+stage 'The Program Design Process', flex_category: 'csd6_1'
 named_level 'CSD U6L08 TFMD_2018'
 named_level 'CSD U6 emoji race demo_2018'
 named_level 'CSD U6 tugowar stop_2018'
@@ -118,7 +121,7 @@ level 'CSD U6 tugowar setProperty_2018', progression: 'Checking for a Winner'
 level 'CSD U6 tugowar buzzer_2018', progression: 'Checking for a Winner'
 named_level 'CSD U6 tugowar final_2018'
 
-stage 'Project: Make a Game__', flex_category: 'csd6_1'
+stage 'Project: Make a Game', flex_category: 'csd6_1'
 named_level 'CSD U6L09 TFMD_2018'
 named_level 'CSD U6 tugowar demo_2018'
 named_level 'CSD U6 game project stop_2018'
@@ -130,7 +133,7 @@ level 'CSD U6 game project functions call_2018', progression: 'Functions'
 level 'CSD U6 game project finish_2018', progression: 'Finishing Touches'
 assessment 'csd-pulse-check-survey-1-levelgroup U6Ch1_2018', progression: 'Reflection'
 
-stage 'Arrays and Color LEDs__', flex_category: 'csd6_2'
+stage 'Arrays and Color LEDs', flex_category: 'csd6_2'
 named_level 'CSD U6L10 TFMD_2018'
 named_level 'CSD U6 arrays intro_2018'
 level 'CSD U6 arrays select predict_2018', progression: 'Introduction to Arrays'
@@ -149,7 +152,7 @@ level 'CSD U6 colorLeds light pattern_2018', progression: 'Light Show'
 level 'CSD U6 light pattern off_2018', progression: 'Light Show'
 bonus 'CSD U6 light pattern challenge_2018', progression: 'Challenge Levels'
 
-stage 'Making Music_', flex_category: 'csd6_2'
+stage 'Making Music', flex_category: 'csd6_2'
 named_level 'CSD U6L11 TFMD_2018'
 level 'CSDU6 circuit playground piano_2018', progression: 'Making Sounds'
 level 'CSDU6 frequency modification_2018', progression: 'Making Sounds'
@@ -167,7 +170,7 @@ level 'CDU U6 Playground Sound Board_2018', progression: 'Making Songs'
 bonus 'CSDU6 buzzer 2d arrays_2018'
 bonus 'CSDU6 buzzer.stop_2018'
 
-stage 'Arrays and For Loops_', flex_category: 'csd6_2'
+stage 'Arrays and For Loops', flex_category: 'csd6_2'
 named_level 'CSD U6L12 TFMD_2018'
 level 'CSD U6 for loop click predict_2018', progression: 'Programs that Repeat'
 level 'CSD U6 for loop click exit_2018', progression: 'Programs that Repeat'
@@ -187,7 +190,7 @@ bonus 'CSD U6 for loop led bonus 1_2018'
 bonus 'CSD U6 for loop led bonus 2_2018'
 bonus 'CSD U6 for loop led bonus 3_2018'
 
-stage 'Accelerometer_', flex_category: 'csd6_2'
+stage 'Accelerometer', flex_category: 'csd6_2'
 named_level 'CSD U6L13 TFMD_2018'
 named_level 'The Accelerometer_2018'
 level 'CSD U6 Airplane predict_2018', progression: 'Orientation'
@@ -202,7 +205,7 @@ level 'CSD U6 goalie_2018', progression: 'Accelerometer Events'
 level 'CSD U6 Driver pt1_2018', progression: 'Accelerometer Events'
 level 'CSD U6 Driver pt 2_2018', progression: 'Accelerometer Events'
 
-stage 'Functions with Parameters_', flex_category: 'csd6_2'
+stage 'Functions with Parameters', flex_category: 'csd6_2'
 named_level 'CSD U6L14 TFMD_2018'
 level 'CSD U6 params predict_2018', progression: 'Functions with Parameters'
 level 'CSD U6 params modify clouds_2018', progression: 'Functions with Parameters'
@@ -220,7 +223,7 @@ level 'CSD U6 params starchaser 5_2018', progression: 'Star Chaser'
 bonus 'CSD U6 params starchaser challenge 1_2018', progression: 'Star Chaser'
 bonus 'CSD U6 params starchaser challenge 2_2018', progression: 'Star Chaser'
 
-stage 'Circuits and Physical Prototypes_', flex_category: 'csd6_2'
+stage 'Circuits and Physical Prototypes', flex_category: 'csd6_2'
 named_level 'CSD U6L15 TFMD_2018'
 named_level 'CSD U6 circuit logic video_2018'
 level 'CSD U6 circuit predict_2018', progression: 'Simple Circuits'
@@ -233,12 +236,11 @@ level 'CSD U6 circuit smart bike blinker buttons_2018', progression: 'Smart Bike
 level 'CSD U6 circuit smart bike blinker build_2018', progression: 'Smart Bike - Blinkers'
 level 'CSD U6 circuit button map_2018', progression: 'Button Circuits'
 level 'CSD U6 circuit createButton_2018', progression: 'Button Circuits'
-level 'CSD U6 circuit createButton scratch_2018', progression: 'Button Circuits'
 level 'CSD U6 circuit smart bike buzzer_2018', progression: 'Finish the Prototype'
 level 'CSD U6 circuit smart bike light_2018', progression: 'Finish the Prototype'
 level 'CSD U6 circuit smart bike final_2018', progression: 'Finish the Prototype'
 
-stage 'Project: Prototype an Innovation_', flex_category: 'csd6_2'
+stage 'Project: Prototype an Innovation', flex_category: 'csd6_2'
 named_level 'CSD U6L16 TFMD_2018'
 named_level 'CSD U6 final intro_2018'
 level 'CSDU6 - final project 1_2018', progression: 'User Interface'

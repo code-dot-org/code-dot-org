@@ -5,11 +5,12 @@ import StudentProgressDetailCell from '@cdo/apps/templates/sectionProgress/Stude
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import styleConstants from '../../styleConstants';
 import {
-  sectionDataPropType,
   scriptDataPropType,
   getColumnWidthsForDetailView,
   getLevels,
+  setLessonOfInterest,
 } from './sectionProgressRedux';
+import { sectionDataPropType } from '@cdo/apps/redux/sectionDataRedux';
 import { getIconForLevel } from '@cdo/apps/templates/progress/progressHelpers';
 import color from "../../util/color";
 import {
@@ -75,6 +76,7 @@ class VirtualizedDetailView extends Component {
     section: sectionDataPropType.isRequired,
     scriptData: scriptDataPropType.isRequired,
     lessonOfInterest: PropTypes.number.isRequired,
+    setLessonOfInterest: PropTypes.func.isRequired,
     columnWidths: PropTypes.arrayOf(PropTypes.number).isRequired,
     getLevels: PropTypes.func,
   };
@@ -94,8 +96,12 @@ class VirtualizedDetailView extends Component {
     }
   }
 
+  onClickLevel = lessonOfInterest => {
+    this.props.setLessonOfInterest(lessonOfInterest);
+  };
+
   cellRenderer = ({columnIndex, key, rowIndex, style}) => {
-    const {section, scriptData, columnWidths, getLevels} = this.props;
+    const {scriptData, columnWidths} = this.props;
     // Subtract 2 to account for the 2 header rows.
     // We don't want leave off the first 2 students.
     const studentStartIndex = rowIndex-2;
@@ -107,14 +113,13 @@ class VirtualizedDetailView extends Component {
       ...style,
       ...progressStyles.cell,
     };
-    // Alternate background colour of each row
-    if (studentStartIndex%2 === 1) {
-      cellStyle = {
-        ...cellStyle,
-        backgroundColor: color.background_gray,
-      };
+
+    // Student rows
+    if (studentStartIndex >= 0) {
+      return this.studentCellRenderer(studentStartIndex, stageIdIndex, key, cellStyle);
     }
 
+    // Header rows
     return (
       <div className={progressStyles.Cell} key={key} style={cellStyle}>
         {(rowIndex === 0 && columnIndex === 0) && (
@@ -126,7 +131,10 @@ class VirtualizedDetailView extends Component {
         )}
         {(rowIndex === 0 && columnIndex >= 1) && (
           <div style={styles.lessonHeaderContainer}>
-            <div style={styles.numberHeader}>
+            <div
+              onClick={() => this.onClickLevel(columnIndex)}
+              style={styles.numberHeader}
+            >
               {columnIndex}
             </div>
             {(columnWidths[columnIndex] > MAX_COLUMN_WITHOUT_ARROW) &&
@@ -151,26 +159,46 @@ class VirtualizedDetailView extends Component {
               <FontAwesome
                 icon={getIconForLevel(level)}
                 style={
-                  level.kind === "unplugged" ? progressStyles.unpluggedIcon : progressStyles.icon
+                  level.isUnplugged ? progressStyles.unpluggedIcon : progressStyles.icon
                 }
                 key={i}
               />
             )}
           </span>
         )}
-        {(rowIndex >= 2 && columnIndex === 0) && (
+      </div>
+    );
+  };
+
+  studentCellRenderer = (studentStartIndex, stageIdIndex, key, style) => {
+    const {section, scriptData, getLevels} = this.props;
+
+    // Alternate background colour of each row
+    if (studentStartIndex%2 === 1) {
+      style = {
+        ...style,
+        backgroundColor: color.background_gray,
+      };
+    }
+
+    const student = section.students[studentStartIndex];
+
+    return (
+      <div className={progressStyles.Cell} key={key} style={style}>
+        {(stageIdIndex < 0) && (
           <SectionProgressNameCell
-            name={section.students[studentStartIndex].name}
-            studentId={section.students[studentStartIndex].id}
+            name={student.name}
+            studentId={student.id}
             sectionId={section.id}
             scriptId={scriptData.id}
           />
         )}
-        {rowIndex > 1 && columnIndex > 0 && (
+        {stageIdIndex >= 0 && (
           <StudentProgressDetailCell
-            studentId={section.students[studentStartIndex].id}
+            studentId={student.id}
+            sectionId={section.id}
             stageId={stageIdIndex}
-            levelsWithStatus={getLevels(section.students[studentStartIndex].id, stageIdIndex)}
+            levelsWithStatus={getLevels(student.id, stageIdIndex)}
           />
         )}
       </div>
@@ -222,4 +250,8 @@ export default connect(state => ({
   columnWidths: getColumnWidthsForDetailView(state),
   lessonOfInterest: state.sectionProgress.lessonOfInterest,
   getLevels: (studentId, stageId) => getLevels(state, studentId, stageId),
+}), dispatch => ({
+  setLessonOfInterest(lessonOfInterest) {
+    dispatch(setLessonOfInterest(lessonOfInterest));
+  }
 }))(VirtualizedDetailView);

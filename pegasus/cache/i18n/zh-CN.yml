@@ -19,7 +19,7 @@
   anybody_can_learn: 任何人都可以学习。
   learn_now: 现在开始学习
   petition_message: 在每个学校每个学生都应该有机会学习计算机科学
-  petition_sign_message: 如果你同意，与#人一样签上你的名字。
+  petition_sign_message: 如果你同意，签上你的名字。加入#其他人。
   petition_sign_message_support: 如果你支持我们，与#人一样签上你的名字。
   petition_join_others: '加入 # 其他'
   name: 姓名
@@ -393,6 +393,8 @@
   homepage_header_donors: Code.org 感谢各位支持者
   homepage_donors_seall: 查看全部
   homepage_donors_donate: 捐赠
+  homepage_below_hero_announcement_text: 我们尊重您的隐私，为此我们对隐私政策进行了一些更新，并将从 5 月 25 日起生效。
+  homepage_below_hero_announcement_link_text: 了解详情
   contact_form_topic_student: 我是学生
   contact_form_topic_parent: 我是家长
   contact_form_topic_teacher: 我的老师或教育家
@@ -527,8 +529,10 @@
   video_title_real_madrid: 编程一小时和Real Madrid
   video_title_marco_belinelli: 编程一小时和Marco Belinelli
   video_title_chris_bosh: Chris Bosh和计算机科学
+  video_title_my_name_is_aracely: 我叫阿拉丝莉
   video_1min: 1 分钟
   video_2min: 2 分钟
+  video_3min: 3分钟
   video_5min: 5 分钟
   speak_another_language: 使用另一种语言？
   help_translate: 帮助我们翻译
@@ -575,6 +579,10 @@
   volunteer_engineer_submission_field_email: 电子邮件地址
   volunteer_engineer_submission_field_email_desc: 您的电子邮件地址决不公开，但我们会把教师们的请求转发给你。
   volunteer_engineer_submission_field_email_placeholder: 电子邮件地址
+  volunteer_engineer_submission_field_email_preference: 我们能否向您发送有关课程更新、本地机会或其他计算机科学新闻的电子邮件？
+  volunteer_engineer_submission_field_email_preference_privacy: （如需了解详情，请查看我们的隐私政策）
+  volunteer_engineer_submission_field_email_preference_yes: 是
+  volunteer_engineer_submission_field_email_preference_no: 不
   volunteer_engineer_submission_final_paragraph: 作为志愿者，你将被在地图中标示出来，以便当地教师与你联系，讨论编程一小时活动或其他志愿者服务的机会。我们决不泄漏您的电子邮件和确切地址。但是其他信息（包括大概位置）将在当地教师中共享。
   volunteer_engineer_submission_checkbox_contact: '我同意教师们可以就志愿者服务机会联系我 （注: 您的电子邮件地址不会泄漏）'
   volunteer_engineer_submission_checkbox_age_18_plus: 我保证，我已满18周岁。
@@ -736,7 +744,7 @@
   dashboard_sections_code_placeholder: 6 个字符的代码 (ABCDEF)
   dashboard_sections_other_section: 其他老师
   dashboard_sections_both_sections: 你想要学生两个部分都参加吗？
-  dashboard_sections_yes_both: 是的，我想要复制学生到本章节和新章节中。
+  dashboard_sections_yes_both: 是的，我想要复制学生到本小组和新小组中
   dashboard_sections_no_move: 不，我想移动学生到新章节中。
   dashboard_sections_move_students: 转移学生
   dashboard_sections_assign_hoc_script_desc: 参与编程一小时？
@@ -998,6 +1006,20 @@
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 单元 5︰ 数据和社会
   csd6_name: 单元 6︰ 物理计算
+  csd1-2018_name: 'Unit 1: Problem Solving'
+  csd2-2018_name: 'Unit 2: Web Development'
+  csd3-2018_name: 'Unit 3: Animation and Games'
+  csd4-2018_name: 'Unit 4: The Design Process'
+  csd5-2018_name: 单元 5︰ 数据和社会
+  csd6-2018_name: 单元 6︰ 物理计算
+  csp1-2018_name: 第1单元：互联网
+  csp2-2018_name: 第2单元︰ 数字信息
+  csp3-2018_name: 'Unit 3: Algorithms and Programming'
+  csp4-2018_name: 'Unit 4: Big Data and Privacy'
+  csp5-2018_name: 'Unit 5: Building Apps'
+  csp-explore-2018_name: AP：探索表演任务的准备工作
+  csp-create-2018_name: AP：创建表演任务
+  csppostap-2018_name: 'Post AP: App中的数据库'
   csp1_name: 第1单元：互联网
   csp2_name: 第2单元︰ 数字信息
   csp3_name: 'Unit 3: Algorithms and Programming'
@@ -1008,6 +1030,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP 性能任务
   csppostap_name: 'Post AP: App中的数据库'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: 完整测试 - 共50题
   csp-explore_name: AP：探索表演任务的准备工作
   csp-create_name: AP：创建表演任务
@@ -1038,8 +1061,10 @@
   csf_international_category_name: 计算机基础国际版
   csf2_draft_category_name: 开发中：课程A - F
   csd_category_name: 'Under Development: CS Discoveries'
+  csd_2018_category_name: CS Discoveries ('18-'19)
   csp_category_name: 15-16 计算机原理
   csp17_category_name: 计算机原理
+  csp_2018_category_name: CS Principles ('18-'19)
   cspexams_category_name: 计算机原理练习测试
   research_studies_category_name: Research Studies
   applab_name: 应用实验室
@@ -1539,6 +1564,7 @@
   header_documentation: 使用文档
   csp_name: 计算机科学原理
   csd_name: CS Discoveries
+  csd_2018_name: CS Discoveries
   full_course_category_name: 完整课程
   user_header_label: 你好%{username}
   user_header_settings: 帐户设置
@@ -1579,5 +1605,3 @@
   google_sign_in_instruct: '从那里, 他们应该选择 "使用谷歌帐户登录" 选项:'
   hero_name: "《我的世界》: 英雄之旅"
   applab-intro_name: 应用程序实验室简介
-  video_title_my_name_is_aracely: My Name is Aracely
-  video_3min: 3 min

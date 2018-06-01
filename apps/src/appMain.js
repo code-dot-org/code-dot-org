@@ -6,6 +6,7 @@ import {generateAuthoredHints} from './authoredHintUtils';
 import {addReadyListener} from './dom';
 import * as blocksCommon from './blocksCommon';
 import * as commonReducers from './redux/commonReducers';
+import codegen from './lib/tools/jsinterpreter/codegen';
 
 window.__TestInterface = {
   loadBlocks: (...args) => studioApp().loadBlocks(...args),
@@ -76,15 +77,27 @@ export default function (app, levels, options) {
     blocksCommon.install(Blockly, blockInstallOptions);
     options.blocksModule.install(Blockly, blockInstallOptions);
 
-    if (options.blocksModule.installCustomBlocks && level.customBlocks) {
-      options.blocksModule.installCustomBlocks(
-        Blockly,
-        blockInstallOptions,
-        JSON.parse(level.customBlocks),
-        options.level,
-        level.hideCustomBlocks,
-      );
+    if (level) {
+      const levelCustomBlocksConfig = !level.customBlocks ? [] :
+        JSON.parse(level.customBlocks).map(blockConfig =>
+          ({ config: blockConfig, category: 'Custom' }));
+      const sharedBlocksConfig = level.sharedBlocks || [];
+      const customBlocksConfig = [
+        ...sharedBlocksConfig,
+        ...levelCustomBlocksConfig,
+      ];
+      if (options.blocksModule.installCustomBlocks && customBlocksConfig.length > 0) {
+        options.blocksModule.installCustomBlocks(
+          Blockly,
+          blockInstallOptions,
+          customBlocksConfig,
+          options.level,
+          level.hideCustomBlocks,
+        );
+      }
     }
+
+    Blockly.JavaScript.INFINITE_LOOP_TRAP = codegen.loopTrap();
   }
 
   function onReady() {

@@ -10,6 +10,10 @@ module Dashboard
     DASHBOARD_DB
   end
 
+  def self.db_reporting_reader
+    DASHBOARD_REPORTING_DB_READER
+  end
+
   def self.admin?(user_id)
     !!db[:users][id: user_id, admin: true]
   end

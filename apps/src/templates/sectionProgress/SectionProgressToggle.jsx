@@ -4,6 +4,7 @@ import color from "@cdo/apps/util/color";
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import { connect } from 'react-redux';
 import {setCurrentView, ViewType} from './sectionProgressRedux';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const styles = {
   toggleButton: {
@@ -21,20 +22,59 @@ class SectionProgressToggle extends React.Component {
     setCurrentView: PropTypes.func.isRequired,
   };
 
+  state = {
+    selectedToggle: this.props.currentView,
+  };
+
+  componentWillReceiveProps(nextProps) {
+    // currentView can be set externally, and the component will
+    // still need to update when that happens.
+    if (this.state.selectedToggle !== nextProps.currentView) {
+      this.setState({selectedToggle: nextProps.currentView});
+    }
+  }
+
   onChange = () => {
-    if (this.props.currentView === ViewType.SUMMARY) {
-      this.props.setCurrentView(ViewType.DETAIL);
+    // Display the toggle based on the internal state so that it is
+    // more immediately responsive. Once setting internal state is
+    // complete, then update the redux currentView.
+    // Timeouts forces a render of the local state before dispatching
+    // the action.
+    if (this.state.selectedToggle === ViewType.SUMMARY) {
+      firehoseClient.putRecord(
+        {
+          study: 'teacher-dashboard',
+          study_group: 'react',
+          event: 'progress-detailed'
+        }
+      );
+      this.setState({selectedToggle: ViewType.DETAIL}, () => {
+        setTimeout(() => {
+          this.props.setCurrentView(ViewType.DETAIL);
+        }, 0);
+      });
     } else {
-      this.props.setCurrentView(ViewType.SUMMARY);
+      firehoseClient.putRecord(
+        {
+          study: 'teacher-dashboard',
+          study_group: 'react',
+          event: 'progress-summary'
+        }
+      );
+      this.setState({selectedToggle: ViewType.SUMMARY}, () => {
+        setTimeout(() => {
+          this.props.setCurrentView(ViewType.SUMMARY);
+        }, 0);
+      });
     }
   };
 
   render() {
-    const { currentView } = this.props;
+    const { selectedToggle } = this.state;
 
     return (
       <ToggleGroup
-        selected={currentView}
+        selected={selectedToggle}
         activeColor={color.teal}
         onChange={this.onChange}
       >

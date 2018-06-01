@@ -129,6 +129,7 @@ en:
       CSD U3 Direction Arrows_2018_callout: {}
       CSD U3 Draw Loop Plugged update your scene_callout: {}
       CSD U3 Draw Loop Plugged update your scene_2018_callout: {}
+      CSD U3 Draw Loop Plugged wiggle sprite y_2018_callout: {}
       CSD U3 Drawing Squares to Corners_callout: {}
       CSD U3 Drawing Squares to Corners_2018_callout: {}
       CSD U3 Else_callout: {}
@@ -452,7 +453,11 @@ en:
         firstTimeSetPosition: Drag this inside the event handler function. Then click the arrows to get rid of the width and height parameters.
       CSPU5_U3L16 - setPosition to move button_callout:
         randNumReminder: Use this as the the value for the x and y coordinates in setPosition.  Just drag it into the parameter you want.
+      CSPU5_U3L16 - setPosition to move button_2018_callout:
+        randNumReminder: Use this as the the value for the x and y coordinates in setPosition.  Just drag it into the parameter you want.
       CSPU5_setPosition to fixed location_callout:
+        firstTimeSetPosition: Drag this inside the event handler function. Then click the arrows to get rid of the width and height parameters.
+      CSPU5_setPosition to fixed location_2018_callout:
         firstTimeSetPosition: Drag this inside the event handler function. Then click the arrows to get rid of the width and height parameters.
       Calc Circles of Eval .1_callout:
         Calc Circles of Eval .1: This is the evaluation block. Click on the drop down box to change the number
@@ -811,11 +816,17 @@ en:
       U3L05_draw3x3GridEfficiently_callout: {}
       U3L08 how to add comments_callout:
         comment_highlight: Drag a comment block from here into your code
+      U3L08 how to add comments_2018_callout:
+        comment_highlight: Drag a comment block from here into your code
       U3L2 Using Simple Commands (no tooltips)_callout: {}
       U3L2 Using Simple Commands_callout: {}
+      U3L2 Using Simple Commands_2018_callout: {}
       U3L2_Turtle3by3Grid_callout: {}
+      U3L2_Turtle3by3Grid_2018_callout: {}
       U3L2_TurtleSquare_right_callout: {}
+      U3L2_TurtleSquare_right_2018_callout: {}
       U5 ColorSleuth Template_callout: {}
+      U5 ColorSleuth Template_2018_callout: {}
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: This code will check for lava, can you add a command to move forward?
       Underground Avoiding Lava_2018_callout:
@@ -1183,6 +1194,10 @@ en:
         courseD_playLab_condFP_1: we have organized the blocks into categories to give you more code to play with!  Click here to see where everything went.
       courseD_playLab_condFP_2018_callout:
         courseD_playLab_condFP_1: we have organized the blocks into categories to give you more code to play with!  Click here to see where everything went.
+      courseD_playLab_condFP_a_callout:
+        courseD_playLab_condFP_1: we have organized the blocks into categories to give you more code to play with!  Click here to see where everything went.
+      courseD_playLab_condForVideo_callout:
+        courseD_playLab_condFP_1: we have organized the blocks into categories to give you more code to play with!  Click here to see where everything went.
       courseD_scrat_predict1_callout: {}
       courseD_scrat_predict1_2018_callout: {}
       courseD_scrat_ramp1_callout:
@@ -1228,8 +1243,11 @@ en:
         courseD_artist_functions2_1: When this green block runs, all of the code in the function will run. What should the artist do after drawing the first square?
       courseE_artist_functions8_callout:
         courseD_artist_functions8_1: Your blocks to create functions have been moved under this label in the toolbox.
-      courseE_artist_functions8_2018_callout:
+      courseE_artist_functions8_2018_callout: {}
+      courseE_artist_functions8a_2018_callout:
         courseD_artist_functions8_1: Your blocks to create functions have been moved under this label in the toolbox.
+      courseE_artist_functions8b_2018_callout: {}
+      courseE_artist_functions8c_2018_callout: {}
       courseE_artist_functions_challenge_callout:
         courseE_artist_functions_challenge_callout1: Keep this program going by adding more code to the bottom.
         courseE_artist_functions_challenge_callout2: If you don't like this design, change it to anything you want!
@@ -1276,10 +1294,13 @@ en:
       courseE_collector_ramp9_callout: {}
       courseE_farmer_functions1_callout:
         courseE_farmer_functions1_2: The toolbox is organized a little differently this time! Click on the different categories to see which blocks you have.
+      courseE_farmer_functions10a1_2018_callout: {}
       courseE_farmer_functions10b_callout: {}
       courseE_farmer_functions10b_2018_callout: {}
       courseE_farmer_functions11_predict_callout: {}
       courseE_farmer_functions11_predict_2018_callout: {}
+      courseE_farmer_functions13_2018_callout:
+        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time you run the program.
       courseE_farmer_functions1_2018_callout:
         courseE_farmer_functions1_2: The toolbox is organized a little differently this time! Click on the different categories to see which blocks you have.
       courseE_farmer_functions1a_callout:
@@ -1299,6 +1320,7 @@ en:
       courseE_farmer_functions3b_callout:
         courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time you run the program.
       courseE_farmer_functions3c_callout: {}
+      courseE_farmer_functions3c1_2018_callout: {}
       courseE_farmer_functions3c_2018_callout: {}
       courseE_farmer_functions4b_callout: {}
       courseE_farmer_functions4b_2018_callout: {}
@@ -1308,10 +1330,13 @@ en:
       courseE_farmer_functions6b_callout: {}
       courseE_farmer_functions6c_callout: {}
       courseE_farmer_functions6c_2018_callout: {}
+      courseE_farmer_functions7a1_2018_callout: {}
       courseE_farmer_functions7b_callout: {}
       courseE_farmer_functions7b_2018_callout: {}
+      courseE_farmer_functions8a1_2018_callout: {}
       courseE_farmer_functions8b_callout: {}
       courseE_farmer_functions8b_2018_callout: {}
+      courseE_farmer_functions9a1_2018_callout: {}
       courseE_farmer_functions9b_callout: {}
       courseE_farmer_functions9b_2018_callout: {}
       courseE_farmer_functions9b_clone_callout: {}
@@ -1394,11 +1419,17 @@ en:
       courseF_artist_fwp5_2018_callout:
         courseF_artist_fwp5_1: You will find the polygon function in here.
       courseF_artist_predict1_callout: {}
+      courseF_artist_predict1_2018_callout: {}
       courseF_artist_ramp10_callout: {}
+      courseF_artist_ramp10_2018_callout: {}
       courseF_artist_ramp8_callout:
         courseE_artist_ramp8_1: You can change this number.
         courseE_artist_ramp8_2: Click here to type in the number of times to repeat your code.
+      courseF_artist_ramp8_2018_callout:
+        courseE_artist_ramp8_1: You can change this number.
+        courseE_artist_ramp8_2: Click here to type in the number of times to repeat your code.
       courseF_artist_ramp9_callout: {}
+      courseF_artist_ramp9_2018_callout: {}
       courseF_artist_variables1_callout:
         courseF_artist_variables1_1: Notice that blocks now have a new way to enter numbers. These `math` blocks can be pulled out and moved around!
       courseF_artist_variables10_callout: {}
@@ -1480,6 +1511,10 @@ en:
         courseF_bee_functions6_1: Don't forget to look in here for more blocks that might help make this easier!
       courseF_bee_functions6_2018_callout:
         courseF_bee_functions6_1: Don't forget to look in here for more blocks that might help make this easier!
+      courseF_bee_functions_1_2018_callout:
+        courseF_bee_functions_1_2018_1: You can find your variables under here!
+      courseF_bee_functions_2_2018_callout: {}
+      courseF_bee_functions_3_2018_callout: {}
       courseF_bee_functions_challenge1_callout:
         courseF_bee_functions_challenge1_1: What code should you put in this function?
         courseF_bee_functions_challenge1_2: The "check nectar or honey" function can be used here if edit it to make honey multiple times.
@@ -1508,18 +1543,36 @@ en:
         courseF_bee_fwp_challenge2_callout1: This function will do a good job with corn, but what about the other vegetables?
       courseF_bee_fwp_challenge2_2018_callout:
         courseF_bee_fwp_challenge2_callout1: This function will do a good job with corn, but what about the other vegetables?
+      courseF_bee_variables_1_2018_callout:
+        courseF_bee_functions_1_2018_1: You can find your variables under here!
+      courseF_bee_variables_2_2018_callout: {}
+      courseF_bee_variables_3_2018_callout: {}
+      courseF_bee_variables_4_2018_callout: {}
+      courseF_bee_variables_5_2018_callout: {}
+      courseF_bee_variables_6_2018_callout: {}
+      courseF_bee_variables_7_2018_callout: {}
+      courseF_bee_variables_8_2018_callout: {}
       courseF_maze_predict1_callout: {}
       courseF_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
       courseF_maze_ramp13_callout: {}
       courseF_maze_ramp15_callout:
         courseF_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
+      courseF_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
       courseF_maze_ramp2_callout:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+      courseF_maze_ramp2_2018_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseF_maze_ramp4_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
+      courseF_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
       courseF_maze_ramp5_callout: {}
+      courseF_maze_ramp5_2018_callout: {}
       courseF_maze_ramp6_callout:
+        courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program.
+      courseF_maze_ramp6_2018_callout:
         courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program.
       courseF_maze_ramp7_callout:
         courseF_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
@@ -1565,6 +1618,8 @@ en:
       coursea_maze_ramp1_2018_callout:
         grade2_CaringForNewPet_0_1: After snapping all the blocks together, press "Run" to start your program.
       coursef_maze_ramp3_callout:
+        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
+      coursef_maze_ramp3_2018_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
       drawings!_callout: {}
       frozen circle function with parameter_callout:

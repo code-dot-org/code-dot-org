@@ -1,0 +1,24 @@
+name 'v2 U3L01 Student Lesson Introduction_2018'
+display_name 'Lesson Vocabulary & Resources'
+title 'Why Programming and Programming Languages?'
+css 'unplugged'
+
+markdown <<MARKDOWN
+# Unit 3: Lesson 01 - The Need for Programming Languages
+
+## Lesson
+
+* Create instructions using only words to construct a specific arrangement of toy blocks.
+* Test the clarity of your instructions by exchanging with another member of the class.
+* Brainstorm strategies for effectively communicating the steps of an algorithm.
+
+## Resources
+
+* Building Blocks of Drawing - Activity Guide (<a href='https://docs.google.com/document/d/120alBIYfPoSG85HMZLKNp5F60dAdGHd5f9UsGdi8a4o/export?format=pdf' class='print_link'>PDF</a> | <a href='https://docs.google.com/document/d/120alBIYfPoSG85HMZLKNp5F60dAdGHd5f9UsGdi8a4o/export?format=doc' class='print_link'>DOCX</a>)
+* LEGO Algorithms - Activity Guide (<a href='https://docs.google.com/document/d/1cd4ebtVpHnJdN-eVuko5wJPwoO1rq7lVw6V-JNUxZ4Y/export?format=pdf' class='print_link'>PDF</a> | <a href='https://docs.google.com/document/d/1cd4ebtVpHnJdN-eVuko5wJPwoO1rq7lVw6V-JNUxZ4Y/export?format=doc' class='print_link'>DOCX</a>)
+* <a href='https://www.youtube.com/watch?v=xfBWk4nw440' target='_blank' class='print_link'>You Should Learn to Program: Christian Genco at TEDxSMU</a> - Video
+
+*LEGO&reg; is a trademark of Penguin Group (USA) LLC, which does not sponsor, authorize or endorse this site.*
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

@@ -1,6 +1,6 @@
 var testUtils = require('../../../util/testUtils');
 var tickWrapper = require('../../util/tickWrapper');
-var TestResults = require('@cdo/apps/constants').TestResults;
+import {TestResults} from '@cdo/apps/constants';
 var levels = require('@cdo/apps/applab/levels');
 var $ = require('jquery');
 

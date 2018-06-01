@@ -1,0 +1,6 @@
+name 'CSPFinal_Question_21_2018'
+question 'A programmer is writing a system that is intended to be able to store large amounts of personal data.  As the programmer develops the data system, which of the following is LEAST likely to impact the programmer\’s choices in designing the structure of the system?'
+wrong 'Maintaining privacy of the information stored in the data set.'
+wrong 'Scalability of the system.'
+wrong 'Structuring the metadata of the information for analysis.'
+right 'The frequency of a particular item occurring in a data set.'

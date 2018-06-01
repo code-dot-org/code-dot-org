@@ -1,5 +1,4 @@
-var constants = require('@cdo/apps/constants.js');
-var TestResults = constants.TestResults;
+import {TestResults} from '@cdo/apps/constants.js';
 
 // Inspired by https://studio.code.org/s/course4/stage/16/puzzle/4
 // In this level, we set variables `left` and `right` in a hidden

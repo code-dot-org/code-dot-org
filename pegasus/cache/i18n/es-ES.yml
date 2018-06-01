@@ -24,8 +24,9 @@
   learn_now: Aprende Ahora
   petition_message: Cada alumno de cada escuela debería tener la oportunidad de aprender
     Ciencias de la Computación
-  petition_sign_message: 'Si estás de acuerdo, firma con tu nombre. Únete a # otros.'
-  petition_sign_message_support: 'Si nos apoyas, firma con tu nombre. Invita a # otros.'
+  petition_sign_message: 'Si estás de acuerdo, firma con tu nombre.  Unete a # otros.'
+  petition_sign_message_support: 'Si usted nos apoya, firme su nombre.  Invite a #
+    otros.'
   petition_join_others: 'Únete a # otros'
   name: Nombre
   email: Correo electrónico
@@ -477,6 +478,10 @@
   homepage_header_donors: Code.org agradece a sus colaboradores
   homepage_donors_seall: Ver todo
   homepage_donors_donate: Dona
+  homepage_below_hero_announcement_text: Nos preocupamos por su privacidad y estamos
+    haciendo algunas actualizaciones a nuestra política de privacidad, a partir del 25 de
+    mayo.
+  homepage_below_hero_announcement_link_text: Aprende más
   contact_form_topic_student: Soy un estudiante
   contact_form_topic_parent: Soy un padre
   contact_form_topic_teacher: Soy un profesor/educador
@@ -656,8 +661,10 @@
   video_title_real_madrid: Hora de código con el Real Madrid
   video_title_marco_belinelli: Hora de código con Marco Belinelli
   video_title_chris_bosh: Chris Bosh sobre Ciencias de la computación
+  video_title_my_name_is_aracely: My Name is Aracely
   video_1min: 1 min
   video_2min: 2 min
+  video_3min: 3 min
   video_5min: 5 min
   speak_another_language: "¿Hablas otro idioma?"
   help_translate: Ayúdanos a traducir.
@@ -729,6 +736,12 @@
   volunteer_engineer_submission_field_email_desc: Tu dirección de correo electrónico
     nunca será compartida, pero te enviaremos solicitudes enviadas por docentes.
   volunteer_engineer_submission_field_email_placeholder: Dirección de correo electrónico
+  volunteer_engineer_submission_field_email_preference: ¿Podemos enviarle por correo electrónico
+    las actualizaciones a nuestros cursos, oportunidades locales u otras noticias de informática?
+  volunteer_engineer_submission_field_email_preference_privacy: (Para obtener más detalles,
+    consulte nuestra política de privacidad)
+  volunteer_engineer_submission_field_email_preference_yes: Sí
+  volunteer_engineer_submission_field_email_preference_no: 'No'
   volunteer_engineer_submission_final_paragraph: Se mostrará tu ubicación en el mapa
     local de docentes para que puedan contactarlo para oportunidades de voluntariado
     en la Hora de Code. Tu dirección exacta y correo electrónico NUNCA serán compartidos.
@@ -1275,6 +1288,20 @@
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Unidad 5: Información y Sociedad'
   csd6_name: 'Unidad 6: Computación Física'
+  csd1-2018_name: 'Unit 1: Problem Solving'
+  csd2-2018_name: 'Unit 2: Web Development'
+  csd3-2018_name: 'Unit 3: Animation and Games'
+  csd4-2018_name: 'Unit 4: The Design Process'
+  csd5-2018_name: 'Unidad 5: Información y Sociedad'
+  csd6-2018_name: 'Unidad 6: Computación Física'
+  csp1-2018_name: 'Tema 1: El Internet'
+  csp2-2018_name: 'Unidad 2: Información Digital'
+  csp3-2018_name: 'Unit 3: Algorithms and Programming'
+  csp4-2018_name: 'Unit 4: Big Data and Privacy'
+  csp5-2018_name: 'Unit 5: Building Apps'
+  csp-explore-2018_name: 'AP: Explore PT Prep'
+  csp-create-2018_name: 'AP: Create PT Prep'
+  csppostap-2018_name: 'Post AP: Bases de datos en Apps'
   csp1_name: 'Tema 1: El Internet'
   csp2_name: 'Unidad 2: Información Digital'
   csp3_name: 'Unit 3: Algorithms and Programming'
@@ -1285,6 +1312,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Bases de datos en Apps'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: Prueba completa - 50 preguntas
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'
@@ -1315,8 +1343,10 @@
   csf_international_category_name: CS Fundamentals International
   csf2_draft_category_name: 'En desarrollo: Cursos A - F'
   csd_category_name: 'Under Development: CS Discoveries'
+  csd_2018_category_name: CS Discoveries ('18-'19)
   csp_category_name: "'15-'16 Principios de CS"
   csp17_category_name: "'16-'17 Principios de CS"
+  csp_2018_category_name: CS Principles ('18-'19)
   cspexams_category_name: Prueba de práctica de principios de CS
   research_studies_category_name: Research Studies
   applab_name: Laboratorio de Aplicaciones
@@ -2107,12 +2137,13 @@
   header_documentation: Documentacion
   csp_name: "'16-'17 Principios de CS"
   csd_name: CS Discoveries
+  csd_2018_name: CS Discoveries
   full_course_category_name: Full Courses
   user_header_label: Hola %{username}
   user_header_settings: Mi cuenta
   user_header_logout: Cerrar sesión
   user_header_signin: Iniciar Sesión
-  view_all_sections: View All Sections
+  view_all_sections: Mirar todas las secciones
   view_section: View Section
   view_named_section: View %{section_name}
   privacy_doc_explanation: Click here for our privacy document that can be shared
@@ -2167,5 +2198,3 @@
     cuenta de Google":'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  video_title_my_name_is_aracely: My Name is Aracely
-  video_3min: 3 min

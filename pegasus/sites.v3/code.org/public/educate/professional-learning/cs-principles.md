@@ -20,14 +20,13 @@ theme: responsive
 
 [col-50]
 
-## Applications for 2018 are now available!
+## Spots still open for 2018!
 
-- **Step 1:** Read about the [Program Features and Commitments](#features).
-- **Step 2:** Check out the course page for [CS Principles](/educate/csp).
-- **Step 3:** Set aside 10 - 15 minutes to complete the application.
+- **Step 1**: Check [the list below](#openings) to see if applications are still being accepted in your area.
+- **Step 2:** Read about the [Program Features and Commitments](#features).
+- **Step 3:** Check out the course page for [CS Principles](/educate/csp).
+- **Step 4:** Set aside 10 - 15 minutes to complete the application.
 [<button>Apply now!</button>](https://studio.code.org/pd/application/teacher)
-
-**Applications are still being accepted through the spring in most regions. If you haven't done so already, please apply!** 
 
 Be sure to check out our <a href="https://docs.google.com/document/d/1d3BRQt7NARChV6ZPgwyxJNP4TSYyBlo06m2TvJjOnwQ/edit#", target=_"blank">FAQs</a> or <a href="mailto:teacher@code.org">contact us</a> if you have questions.
 
@@ -46,6 +45,60 @@ The program kicks off with a 5-day summer workshop where you'll have the opportu
 {img: '/images/testimonials/fit-150/twoteachers.jpg', text: '"I do not have a computer science background. I would change nothing about the training. It was an incredible experience, and I felt valued and respected."'},
 {img: '/images/testimonials/fit-150/teacher-renee.jpg', text: '"I would absolutely recommend anything Code.org has to offer to any teacher. Period. The lesson plans are incredible."'},
 {img: '/images/testimonials/fit-150/teacher-juan.jpg', text: '"It was absolutely rich and the most meaningful training I have ever attended in 16 years of teaching."'}] %>
+
+## <a name="openings"></a>Applications are still being accepted in some states
+
+The priority deadline for 2018 has passed, but we still have openings for our CS Principles Professional Learning Program in the following states: 
+
+[col-33]
+
+Alabama<br>
+California<br>
+Florida<br>
+Georgia<br>
+Hawaii<br>
+Idaho<br>
+Illinois<br>
+Indiana<br>
+Iowa<br>
+Kansas<br>
+Kentucky<br>
+
+[/col-33]
+
+[col-33]
+
+Maine<br>
+Maryland<br>
+Massachusetts<br>
+Mississippi<br>
+Missouri<br>
+Montana<br>
+New Hampshire<br>
+New Jersey<br>
+New Mexico<br>
+Southeastern New York<br>
+
+[/col-33]
+
+[col-33]
+
+North Carolina<br>
+North Dakota<br>
+Oklahoma<br>
+Pennsylvania<br>
+South Dakota<br>
+Texas<br>
+Vermont<br>
+Virginia<br>
+Wisconsin<br>
+Wyoming<br>
+
+[/col-33]
+
+<div style="clear: both;"></div>
+
+If applications for our professional learning program are now closed in your state, you can [join our interest list](https://studio.code.org/pd/regional_partner_contact/new) to be the first to hear about next year’s application. We also have a [list of 3rd party options](https://code.org/educate/curriculum/3rd-party) for computer science classes. And, all [our curriculum](https://code.org/educate/csp) is available at no cost to you and your school if you are comfortable teaching it without professional development.
 
 ## <a name="features"></a>Program Features
 
@@ -173,7 +226,7 @@ Be sure to complete the following steps before you apply.
 
 [<button>Apply now!</button>](https://studio.code.org/pd/application/teacher)
 
-**Applications are still being accepted through the spring in most regions. If you haven't done so already, please apply!** 
+**Applications are still being accepted in some regions. Check [the list above](#openings) to see if applications are still being accepted in your area.**
 
 Be sure to check out our <a href="https://docs.google.com/document/d/1d3BRQt7NARChV6ZPgwyxJNP4TSYyBlo06m2TvJjOnwQ/edit#", target=_"blank">FAQs</a> or <a href="mailto:teacher@code.org">contact us</a> if you have questions.
 

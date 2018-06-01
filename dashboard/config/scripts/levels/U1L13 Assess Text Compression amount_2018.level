@@ -1,0 +1,18 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-05-03T16:35:34.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Is this a good compression rate?",
+    "markdown_instructions": "Here's the same compressed text that you saw on the last level, but now we also see the size of the original, uncompressed text. On the previous level you reconstructed the text by tracing back through the dictionary. Now we're going to think about if this is a \"good\" compression rate.\n\n![](https://images.code.org/ffb941527193cd04c02ff2ce392d02e6-image-1439479301236.20.23 AM.png)\n\nIn the text box below, answer the following two questions:\n\n- What is the compression rate, or the compressed text size + dictionary size compared to the original text size? (as a percentage) \n- Is this a \"good\" compression rate? Why or why not? \n\n\n",
+    "encrypted_solution": "0V7/eSMMUdifb1WkRYcMeYIWxWUlLCiGhsP5b/+6NJz8zV9MgBdRSJXRzRc4\ncnT4/b44bCAtQJo/1muq5w3xn7TUnKoh1w6WR/VRx2zC4X5BJ+RDg0cbbIuy\nUjCDFjO0JvxXiC1RFNxXMM8woHO0HFq1hJ+EPSyUf6Fnlc9zYpGxR0YZ62HE\njH9gf6+oiREQHdi3ahwL5hDMtLsA0ESAGSeZze4A73fxi0Q3jN0mizyblezD\nD/UjwZBRyeTLYM/9a4i6AXCc6DB0suQNKIofQqvc3068IjTx4xXmcpVp/Zmn\nxMLY+nevWLd/FoA/ukVqjHZ1zp0HT9gFkf3aKuPHstoy+z7awcuFsKt1UBBr\nn0hiK1AswqC74H5qwCG/ZfX5TWmi0PHMy/7hoOJDlLxeIv9TWPO1Qtc4vsLc\n+ggKi8WN2PaDXER0L18/Lrph/smmcbVPlD0ouRlkKmvbwrKzvpEKgqhIMKW9\nWiTRM6dWs1QjIZbiAT6qJQPRVejdvP/WYWiEonSsHWs0CNWZI9behKD6sTEi\ndMERS3ONF3+/+TP/JIawuUJ+ycY2dYATQWjIMP63woIVDv+YXSUgaDSNMVRk\nWfeZXgqXa+PErTSXU7KC4uul+KXMNQZAR7UyFRjTIkzVmngmp4p6IlJ61BMU\njA==\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 2936,
+    "name_suffix": "_2018"
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

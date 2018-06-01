@@ -1,0 +1,9 @@
+name 'CSPFinal_Question_6_2018'
+right 'It asks a DNS server for the corresponding IP address'
+wrong 'It scans addresses until it finds the one it\’s looking for'
+wrong 'It uses a Border Gateway Protocol to get the address from a nearby computer.'
+wrong 'It creates an IP address for the domain, and shares it with the closest DNS.'
+markdown <<MARKDOWN
+How does a computer resolve a domain name into an IP address?
+
+MARKDOWN

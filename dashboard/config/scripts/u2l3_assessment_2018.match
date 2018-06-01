@@ -1,0 +1,24 @@
+name 'U2L3 Assessment_2018'
+title 'IP addresses, Packets and Protocols'
+question 'protocol'
+answer 'A well-known set of rules and standards used to communicate'
+question 'packet'
+answer 'A chunk of information that gets sent on the internet'
+question 'The Internet Protocol (IP)'
+answer 'The required structure of a packet to be sent on the internet'
+question 'IPv4 packet'
+answer 'A packet of data that uses 32-bit addresses'
+
+markdown <<MARKDOWN
+(You may want to have seen the video: IP Addresses and DNS before responding to this)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Answers:
+
+- protocol: A well-known set of rules and standards used to communicate
+- packet: A chunk of information that gets sent on the internet
+- Internet Protocol: The required structure of a packet to be sent on the internet
+- IPv4 packet: A packet of data that uses 32-bit addresses
+
+MARKDOWN

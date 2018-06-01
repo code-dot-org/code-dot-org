@@ -1,0 +1,28 @@
+name 'U2L5 Color Pixel MC Question_2018'
+title 'How many bytes?'
+description 'How many bytes does it take...?'
+question ' '
+wrong '1,250 bytes (10,000 bits)'
+wrong '1,253 bytes (10,024 bits)'
+wrong '3,750 bytes (30,000 bits)'
+right '3,753 bytes (30,024 bits)'
+wrong '30,003 bytes (240,024 bits)'
+
+markdown <<MARKDOWN
+How many bytes (or bits) are required to encode an image that is 25 pixels wide and 50 pixels tall, if you encode each pixel with 3 bytes (24 bits) of RGB data.
+
+(Don't forget to add in the metadata! -- you should assume that we are using the file format used in this lesson with metadata that had 1 byte each for width, height and bits-per-pixel.)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+The correct answer is: **3,753 bytes (30,024 bits)**
+
+Here is the caclulation:
+
+* (25 pixels) * (50 pixels) = 1250 pixels...
+
+* (1250 pixels) * (3 bytes of RGB *for each* pixel) = 3,750 bytes of RGB data...
+
+* (3,750 pixel data ) + (3 bytes of meta data) = **3,753 bytes** (multiply by 8 for number of bits: 30,024)
+
+MARKDOWN

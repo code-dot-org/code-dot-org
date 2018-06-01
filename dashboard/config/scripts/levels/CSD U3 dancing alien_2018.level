@@ -20,14 +20,13 @@
       "declareAssign_x": null,
       "assign_x": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "instructions_important": "false",
     "start_blocks": "World.frameRate = 10;\r\nvar sprite = createSprite(100,200);\r\nsprite.setAnimation(\"greenAlien\");\r\nfunction draw() {\r\n  background(\"orange\");\r\n  sprite.x = randomNumber(200,220);\r\n  drawSprites();\r\n}\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -59,11 +58,21 @@
     "markdown_instructions": "# Sprites in the Draw Loop\r\n\r\nBy changing sprite properties in the draw loop, you can animate your characters. \r\n\r\nThis animation has also been slowed down.  At the beginning of the program the `World.frameRate` block has been used to set the frame rate to 10. Usually the frame rate is 30. Feel free to explore different frame rates.\r\n\r\n# Do This\r\n* Run the code to see how it works.\r\n* Discuss with your partner why some code is inside the draw loop and some code is outside.\r\n* Try changing the frame rate and running the code again.",
     "parent_level_id": 8989,
     "name_suffix": "_2018",
+    "map_reference": "/docs/csd-1718/sprite_properties/index.html",
+    "video_key": "csd_gamelab_drawloop",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
+    "reference_links": [
+      "/docs/csd-1718/draw_loop/index.html"
+    ],
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-13 20:45:40 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-13 20:45:40 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-15 17:45:12 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-15 17:46:47 +0000\",\"changed\":[\"code_functions\",\"never_autoplay_video\",\"contained_level_names\",\"encrypted_examples\",\"map_reference\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

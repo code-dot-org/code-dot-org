@@ -1,0 +1,19 @@
+name 'U2L04 Assessment4_2018'
+title 'Routers and Redundancy: Question 2'
+type 'multi2'
+
+question 'If the post office delivered mail exactly like routers deliver messages on the internet, which 2 of the following statements would be true?'
+wrong 'One mailman would be responsible for delivering a letter from sender to receiver.'
+right 'The mailman would sometimes take a different path to deliver each letter to your home.'
+right 'Letters would be written on the outside of envelopes for all to read instead of letters put inside envelopes.'
+wrong 'Your mail could not be delivered if a road your mailman was planning to take were under construction.'
+
+markdown <<MARKDOWN
+
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Answers:
+
+- B: The mail carrier would sometimes take different paths to deliver each letter to your home.
+- C: Letters would be written on the outside of envelopes for all to read instead of being put inside envelopes.
+MARKDOWN

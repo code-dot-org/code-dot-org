@@ -1,0 +1,67 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2018-05-03T16:40:27.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
+      "moveForward": null,
+      "turnLeft": null
+    },
+    "edit_code": true,
+    "encrypted_examples": "FwAFQH+MEbYxq4/EjyaM5XE9qRNxcBYqiMKgxiIAuKLVE2zWEo/Nc7wKvHQx\n2fVF\n",
+    "embed": "false",
+    "instructions": "Add a large red button to your screen using Design Mode. (Click for full instructions.)",
+    "markdown_instructions": "<img src=\"https://images.code.org/5e6fa5738796d69775c0786ca9b4a076-image-1476735925167.png\" style=\"float: right\">\r\n# Design Mode\r\n\r\n**You Try it:** Add a large red button to your app using Design Mode.\r\n\r\n* Switch to Design Mode\r\n* Drag a button onto the app screen\r\n* Change the text to say \"Click Me!\"\r\n* Make the color of the button red.\r\n\r\n\r\n",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "true",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "video_key": "csp_applab_design",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "instructions_important": "false",
+    "project_template_level_name": "CSPU5_twoButtonTurtleDriver_templateLevel_2018",
+    "show_debug_watch": "false",
+    "parent_level_id": 6736,
+    "name_suffix": "_2018",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "Baker 10.17.16 Remove embed video from here?"
+}]]></config>
+  <blocks/>
+</Applab>

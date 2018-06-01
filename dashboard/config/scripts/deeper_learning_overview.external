@@ -1,0 +1,31 @@
+name 'Deeper Learning Overview'
+title 'Deeper Learning Description'
+description 'description here'
+markdown <<MARKDOWN
+# Deeper Learning Program
+
+## Background
+It’s important for facilitators from all backgrounds to be able to develop proficiency with the Code.org Curriculum and practice sharing that knowledge with teachers. To aid that goal, we’ve developed the Deeper Learning Program, which is a framework to help you become comfortable addressing the types of questions we commonly get from teachers during workshops. The Deeper Learning Program is required for all facilitators who have joined the 2018-2019 Facilitator Development Program.
+
+## Why Deeper Learning?
+Completing the Deeper Learning Reflections allows you to develop a sense of the types of curriculum-focused questions you will need to answer as a Code.org facilitator. It also helps Code.org better understand aspects of the curriculum that facilitators might need more support with. Code.org will use your Deeper Learning reflections as one indicator of your preparation throughout the year, and your readiness to co-lead your local five-day summer workshops the following summer.
+
+## What is the Process? 
+At a high level, the Deeper Learning Plan for facilitators can be broken into three stages: 
+
+### **Step 1: Understanding the Curriculum**
+The facilitator studies and gains an understanding of the curriculum. This step can be done alone or with a partner. An example process is:
+
+* Read and work through the lessons
+* Use provided reflection prompts to do a gut check of understanding
+* Seek help through office hours or on the forum for topics that are unclear
+
+### **Step 2: Demonstrate Understanding**
+The facilitator demonstrates that understanding of the curriculum. This step must be done on your own.
+Complete and submit the provided reflection prompts for a given unit. All deeper learning reflections will be reviewed by other facilitators through the peer review feature on the Code.org website. 
+
+### **Step 3: Grow Community of Knowledge**
+The facilitator reviews peers' submissions. Once you have completed your own reflections for a given unit, you will review the reflections submitted by your peers. In completing this review, you will provide feedback on reflections.
+
+
+MARKDOWN

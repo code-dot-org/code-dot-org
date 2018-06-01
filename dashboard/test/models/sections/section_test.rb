@@ -287,6 +287,14 @@ class SectionTest < ActiveSupport::TestCase
     refute Section.new(section_type: 'not_a_workshop').workshop_section?
   end
 
+  test 'externally_rostered?' do
+    [Section::LOGIN_TYPE_GOOGLE_CLASSROOM, Section::LOGIN_TYPE_CLEVER].each do |type|
+      assert Section.new(login_type: type).externally_rostered?
+    end
+
+    refute Section.new.externally_rostered?
+  end
+
   test 'name safe students' do
     def verify(actual, expected)
       section = create :section
@@ -334,12 +342,6 @@ class SectionTest < ActiveSupport::TestCase
 
     expected_url = "https://#{CDO.pegasus_hostname}/teacher-dashboard#/sections/#{section.id}/manage"
     assert_equal expected_url, section.teacher_dashboard_url
-  end
-
-  test 'clean_data' do
-    section = create :section
-    section.clean_data
-    assert_equal Section::SYSTEM_DELETED_NAME, section.reload.name
   end
 
   test 'default_script: no script or course assigned' do

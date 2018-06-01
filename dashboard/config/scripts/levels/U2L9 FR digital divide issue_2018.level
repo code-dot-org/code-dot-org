@@ -1,0 +1,21 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-05-03T16:36:12.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "markdown_instructions": "Consider the following statement from the CS Principles course framework:\r\n\r\n```\r\n7.4.1C The global distribution of computing resources raises issues of equity, access, and power.\r\n```\r\n\r\nBriefly describe one of these issues that you learned about in the lesson and how it affects your life or the lives of people you know.  Keep your response to about 100 words (about 3-5 sentences).",
+    "title": "Personal Reflection",
+    "allow_user_uploads": "false",
+    "submittable": "true",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 5618,
+    "name_suffix": "_2018"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</FreeResponse>

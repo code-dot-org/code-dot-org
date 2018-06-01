@@ -1,6 +1,10 @@
+select *
+from
+(
 -- New CSF teachers by month
 SELECT COUNT(DISTINCT user_id_teacher) value,
-       'New CSF teachers' metric
+       'New CSF teachers' metric,
+       1 as sort
 FROM (SELECT user_id_teacher,
              user_id_student,
              first_script_started_at,
@@ -26,7 +30,8 @@ UNION ALL
 
 -- New CSF students by month
 SELECT COUNT(DISTINCT user_id) value,
-       'New CSF students' metric
+       'New CSF students' metric,
+       2 as sort
 FROM (SELECT user_id,
              MIN(started_at) date_first_activity
       FROM (SELECT us.user_id,
@@ -45,7 +50,8 @@ UNION ALL
 
 -- New CSF students by month, percent female
 SELECT COUNT(DISTINCT CASE WHEN gender = 'f' THEN user_id END)::FLOAT/ COUNT(DISTINCT user_id) value,
-       'New CSF students, % female' metric
+       'New CSF students, % female' metric,
+       3 as sort
 FROM (SELECT user_id,
              gender,
              MIN(started_at) date_first_activity
@@ -70,7 +76,8 @@ UNION ALL
 -- note: no check on when they started teaching vs. when they went through PD.
 -- Could have started teaching before going through PD
 SELECT COUNT(DISTINCT user_id_teacher) value,
-       'New PDd CSF teachers' metric
+       'New PDd CSF teachers' metric,
+       4 as sort
 FROM (SELECT user_id_teacher,
              user_id_student,
              first_script_started_at,
@@ -108,7 +115,8 @@ UNION ALL
 -- note: no check on when their teachers started teaching vs. when they went through PD.
 -- Could have started teaching before going through PD
 SELECT COUNT(DISTINCT user_id) value,
-       'New PDd CSF students' metric
+       'New PDd CSF students' metric,
+       5 as sort
 FROM (SELECT user_id,
              MIN(started_at) date_first_activity
       FROM (SELECT us.user_id,
@@ -140,7 +148,8 @@ UNION ALL
 -- note: no check on when their teachers started teaching vs. when they went through PD.
 -- Could have started teaching before going through PD
 SELECT COUNT(DISTINCT CASE WHEN gender = 'f' THEN user_id END)::FLOAT/ COUNT(DISTINCT user_id) value,
-       'New PDd CSF students, % female' metric
+       'New PDd CSF students, % female' metric,
+       6 as sort
 FROM (SELECT user_id,
              gender,
              MIN(started_at) date_first_activity
@@ -176,7 +185,8 @@ UNION ALL
 -- % high needs among students in CSF classrooms with PD'd teachers
 -- Only about 10K students (out of ~100K per month) who are starting with PD teachers we actually have data on their FARM status?
 SELECT AVG(high_needs::FLOAT) value,
-       '% high needs among PDd CSF students' metric
+       '% high needs among PDd CSF students' metric,
+       7 as sort
 FROM (SELECT us.user_id,
              high_needs,
              MIN(us.started_at) date_first_activity
@@ -205,5 +215,7 @@ FROM (SELECT us.user_id,
                2)
 WHERE DATE_PART(month,date_first_activity) = CASE WHEN DATE_PART(month,getdate()) = 1 THEN 12 ELSE DATE_PART(month,getdate()) - 1 END
 AND   DATE_PART(year,date_first_activity) = CASE WHEN DATE_PART(month,getdate()) = 1 THEN DATE_PART(year,getdate()) - 1 ELSE DATE_PART(year,getdate()) END
-GROUP BY 2;
+GROUP BY 2
+)
+order by sort asc;
 

@@ -10,13 +10,12 @@
       "ellipse": null,
       "declareAssign_x": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "start_blocks": "var xPosition = 300;\r\nvar whatsTheY = 100;\r\n\r\nellipse(xPosition, whatsTheY);",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -50,11 +49,23 @@
     ],
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"grid\",\r\n  \"callout_text\": \"Click here to show the grid.\",\r\n  \"element_id\": \"#grid-checkbox\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "parent_level_id": 8738,
-    "name_suffix": "_2018"
+    "name_suffix": "_2018",
+    "map_reference": "/docs/csd-1718/variables_intro_csd/index.html",
+    "video_key": "csd_gamelab_variables_1",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
+    "reference_links": [
+      "/docs/csd-1718/drawing_shapes_map/index.html",
+      "/docs/csd-1718/shape_size_map/index.html",
+      "/docs/csd-1718/random_numbers_csd/index.html"
+    ]
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-02 19:01:30 +0000\",\"changed\":[\"code_functions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-02 19:03:16 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-02 19:03:33 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"callout_json\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-02 19:52:36 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-13 20:36:06 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-02 19:01:30 +0000\",\"changed\":[\"code_functions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-02 19:03:16 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-02 19:03:33 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"callout_json\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-02 19:52:36 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-13 20:36:06 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-11 17:48:11 +0000\",\"changed\":[\"code_functions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-11 17:53:03 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-11 17:53:23 +0000\",\"changed\":[\"code_functions\",\"never_autoplay_video\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

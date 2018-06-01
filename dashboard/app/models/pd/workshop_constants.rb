@@ -4,14 +4,9 @@ module Pd
   module WorkshopConstants
     include SharedWorkshopConstants
 
-    COURSE_NAMES_MAP = {
-      COURSE_CSF => 'CS Fundamentals',
-      COURSE_CSP => 'CS Principles',
-      COURSE_ECS => 'Exploring Computer Science',
-      COURSE_CS_IN_A => 'CS in Algebra',
-      COURSE_CS_IN_S => 'CS in Science',
-      COURSE_CSD => 'CS Discoveries',
-      COURSE_COUNSELOR => 'Counselor',
+    # Override certain course names for display purposes.
+    # Otherwise the raw course name will be used.
+    COURSE_NAME_OVERRIDES = {
       COURSE_ADMIN => 'Administrator'
     }.freeze
 

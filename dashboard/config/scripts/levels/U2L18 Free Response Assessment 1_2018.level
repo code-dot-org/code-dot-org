@@ -1,0 +1,18 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-05-04T22:59:41.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Asymmetric Encryption Assessment 1",
+    "markdown_instructions": "In symmetric encryption the same key is used to encrypt and decrypt a message. In asymmetric encryption different keys are used to encrypt and decrypt. Give at least one reason why asymmetric encryption is useful",
+    "encrypted_solution": "MKq5wWsmB1W3AuvkP2b1AsOFJYhjHnTKbFa+kcZNSNPFHdjx5zX3P3boO+Id\n3yxQ1QM3VoPT7wvCSBhNSVHvp1MECD/p8rdosYdDwS942+tOrs8aXhljQsnR\ni9yw43d/R4CM99BUBGQ7zSZKJ+8iPx/vsH3bxJyT61HwRmnmIVmrChaLZRVQ\nYQG8xlglqPVU2fl0ux32ZxWYG71jMAxYSCHYwemaSSmQZCVe+ywmBWzsedbf\n3nISBTl87CMJ6enDJviXuj3J7eRyu1UQjHT9fxtvvJFOztNiuQUrSMQHyd8=\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 3007,
+    "name_suffix": "_2018"
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

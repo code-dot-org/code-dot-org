@@ -73,8 +73,8 @@ def main
     LEVEL_STATUS
     SECTION_LOGIN_TYPE
     POST_MILESTONE_MODE
-    PUBLISHABLE_PROJECT_TYPES_UNDER_13
-    PUBLISHABLE_PROJECT_TYPES_OVER_13
+    ALWAYS_PUBLISHABLE_PROJECT_TYPES
+    ALL_PUBLISHABLE_PROJECT_TYPES
   )
 
   generate_shared_js_file(shared_content, "#{REPO_DIR}/apps/src/util/sharedConstants.js")
@@ -84,7 +84,7 @@ def main
 
   generate_shared_js_file(
     generate_multiple_constants(
-      %w(COURSES SUBJECTS STATES),
+      %w(COURSES SUBJECTS STATES WORKSHOP_TYPES),
       source_module: Pd::SharedWorkshopConstants,
       transform_keys: false
     ),

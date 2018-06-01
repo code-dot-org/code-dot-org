@@ -356,16 +356,16 @@ class SectionApiHelperTest < SequelTestCase
         test_locale = :"te-ST"
         I18n.locale = test_locale
         custom_i18n = {
-          "csp_name" => "CS Principles",
+          "csp-2017_name" => "CS Principles",
           "full_course_category_name" => "Full Courses"
         }
         I18n.backend.store_translations test_locale, custom_i18n
 
-        csp_course = DashboardSection.valid_courses.find {|course| course[:script_name] == 'csp'}
+        csp_course = DashboardSection.valid_courses.find {|course| course[:script_name] == 'csp-2017'}
         expected = {
           id: 15,
           name: 'CS Principles',
-          script_name: 'csp',
+          script_name: 'csp-2017',
           category: 'Full Courses',
           position: 0,
           category_priority: 0,
@@ -857,6 +857,7 @@ class SectionApiHelperTest < SequelTestCase
                 secret_picture_path: nil,
                 location: "/v2/users/#{FakeDashboard::STUDENT[:id]}",
                 age: nil,
+                # completed_levels_count is deprecated and will always be 0
                 completed_levels_count: 0
               }
             ],
@@ -894,7 +895,8 @@ class SectionApiHelperTest < SequelTestCase
                 secret_picture_path: nil,
                 location: "/v2/users/#{FakeDashboard::STUDENT[:id]}",
                 age: nil,
-                completed_levels_count: 1
+                # completed_levels_count is deprecated and will always be 0
+                completed_levels_count: 0
               }
             ],
             students

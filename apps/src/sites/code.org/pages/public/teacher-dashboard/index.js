@@ -11,17 +11,23 @@ import { Provider } from 'react-redux';
 import { registerReducers, getStore } from '@cdo/apps/redux';
 import SectionProjectsList from '@cdo/apps/templates/projects/SectionProjectsList';
 import SectionProgress from '@cdo/apps/templates/sectionProgress/SectionProgress';
+import SectionAssessments from '@cdo/apps/templates/sectionAssessments/SectionAssessments';
+import GDPRDialog from '@cdo/apps/templates/GDPRDialog';
 import experiments from '@cdo/apps/util/experiments';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {
   renderSyncOauthSectionControl,
   unmountSyncOauthSectionControl,
-  renderLoginTypeControls,
-  unmountLoginTypeControls,
   renderSectionTable,
+  renderStatsTable,
+  renderTextResponsesTable
 } from '@cdo/apps/templates/teacherDashboard/sections';
 import logToCloud from '@cdo/apps/logToCloud';
-import sectionProgress, {setSection, setValidScripts} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import scriptSelection, { loadValidScripts } from '@cdo/apps/redux/scriptSelectionRedux';
+import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import sectionData, { setSection } from '@cdo/apps/redux/sectionDataRedux';
+import sectionAssessments,
+  { asyncLoadAssessments } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 
 const script = document.querySelector('script[data-teacherdashboard]');
 const scriptData = JSON.parse(script.dataset.teacherdashboard);
@@ -49,12 +55,32 @@ function renderSectionProjects(sectionId) {
   });
 }
 
-function renderSectionProgress(section, validScripts) {
-  registerReducers({sectionProgress});
+function renderSectionAssessments(section, validScripts) {
+  registerReducers({scriptSelection, sectionData, sectionAssessments});
   const store = getStore();
   store.dispatch(setSection(section));
-  store.dispatch(setValidScripts(validScripts));
 
+  const scriptId = store.getState().scriptSelection.scriptId;
+  store.dispatch(asyncLoadAssessments(section.id, scriptId));
+
+  store.dispatch(loadValidScripts(section, validScripts)).then(() => {
+    ReactDOM.render(
+      <Provider store={store}>
+        <SectionAssessments />
+      </Provider>,
+      document.getElementById('section-assessments-react')
+    );
+  });
+}
+
+function renderSectionProgress(section, validScripts) {
+  registerReducers({sectionProgress, scriptSelection, sectionData});
+  const store = getStore();
+  store.dispatch(setSection(section));
+  store.dispatch(loadValidScripts(section, validScripts)).then(() => renderSectionProgressReact(store));
+}
+
+function renderSectionProgressReact(store) {
   ReactDOM.render(
     <Provider store={store}>
       <SectionProgress />
@@ -63,6 +89,18 @@ function renderSectionProgress(section, validScripts) {
   );
 }
 
+$(document).ready(function () {
+  const gdprData = scriptData.gdpr;
+  const studioUrlPrefix = scriptData.studiourlprefix;
+  ReactDOM.render(
+    <GDPRDialog
+      isDialogOpen={gdprData.show_gdpr_dialog}
+      currentUserId={gdprData.current_user_id}
+      studioUrlPrefix={studioUrlPrefix}
+    />,
+    document.getElementById('gdpr-dialog')
+  );
+});
 //  Everything below was copied wholesale from index.haml, where we had no linting.
 // TODO (bjvanminnen): Fix remaining lint errors and re-enable rules.
 /* eslint-disable eqeqeq, no-unused-vars */
@@ -176,11 +214,6 @@ function main() {
       //  'query':  {method:'GET', isArray:true},
       //  'remove': {method:'DELETE'},
       //  'delete': {method:'DELETE'}
-         update: {method:'POST', url: 'v2/sections/:id/update'},
-         allStudents: {method:'GET', url:'v2/sections/:id/students', isArray: true},
-         addStudents: {method:'POST', url:'/v2/sections/:id/students', isArray: true},
-         moveStudents: {method:'POST', url:'/dashboardapi/sections/transfers'},
-         removeStudent: {method:'DELETE', url:'/v2/sections/:id/students/:studentId'},
          progress: {method:'GET', url:'/dashboardapi/section_progress/:id'},
          studentProgress: {method:'GET', url:'/dashboardapi/student_progress/:id/:studentId'},
          responses: {method:'GET', url:'/dashboardapi/section_text_responses/:id', isArray: true},
@@ -192,19 +225,7 @@ function main() {
       // Angular originally set this, but removed it in a breaking change in v1.4 because it is "rarely used in practice":
       // https://github.com/angular/angular.js/commit/3a75b1124d062f64093a90b26630938558909e8d
       $httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';
-    }]);
-
-  services.factory('studentsService', ['$resource',
-    function ($resource) {
-      return $resource('/v2/students/:id', {}, {
-      // default methods: see https://code.angularjs.org/1.2.21/docs/api/ngResource/service/$resource
-      //  'get':    {method:'GET'},
-      //  'save':   {method:'POST'},
-      //  'query':  {method:'GET', isArray:true},
-      //  'remove': {method:'DELETE'},
-      //  'delete': {method:'DELETE'}
-         update: {method:'POST', url: 'v2/students/:id/update'},
-      });
+      $httpProvider.defaults.cache = true;
     }]);
 
   // For large sections, we're having requests time out before we hear back from
@@ -323,8 +344,8 @@ function main() {
     };
   }]);
 
-  app.controller('SectionDetailController', ['$scope', '$routeParams', '$window', '$q', '$location', 'sectionsService', 'studentsService',
-                                             function ($scope, $routeParams, $window, $q, $location, sectionsService, studentsService) {
+  app.controller('SectionDetailController', ['$scope', '$routeParams', '$window', '$q', '$location', 'sectionsService',
+                                             function ($scope, $routeParams, $window, $q, $location, sectionsService) {
     firehoseClient.putRecord(
       {
         study: 'teacher-dashboard-tabbing',
@@ -383,10 +404,11 @@ function main() {
 
     if ($scope.tab === 'stats') {
       $scope.$on('stats-table-rendered', () => {
+        $scope.section.$promise.then(renderStatsTable);
         firehoseClient.putRecord(
           {
             study: 'teacher-dashboard',
-            study_group: 'control',
+            study_group: 'react',
             event: 'stats'
           }
         );
@@ -403,16 +425,12 @@ function main() {
         );
       });
 
-      $scope.$on('login-type-react-rendered', () => {
-        $scope.section.$promise.then(section => renderLoginTypeControls(section.id));
-      });
-
       $scope.$on('student-table-react-rendered', () => {
-        $scope.section.$promise.then(section => renderSectionTable(section.id, section.login_type, section.course_name));
+        $scope.section.$promise.then(section => renderSectionTable(section, scriptData.studiourlprefix));
         firehoseClient.putRecord(
           {
             study: 'teacher-dashboard',
-            study_group: 'control',
+            study_group: 'react',
             event: 'manage'
           }
         );
@@ -420,257 +438,8 @@ function main() {
 
       $scope.$on('$destroy', () => {
         unmountSyncOauthSectionControl();
-        unmountLoginTypeControls();
       });
     }
-
-    $scope.edit = function (student) {
-      student.editing = true;
-    };
-
-    $scope.resetSecrets = function (student) {
-      var newStudent = studentsService.update({id: student.id}, {secrets: 'reset'});
-      newStudent.$promise.then(
-        function (student) {
-          student.showing_password = true;
-        }
-      );
-
-      newStudent.$promise.catch($scope.genericError);
-      $scope.section.students[$scope.section.students.indexOf(student)] = newStudent;
-    };
-
-    $scope.save = function (students) {
-      if (!$.isArray(students)) {
-        return $scope.save([students]); // heh
-      }
-
-      var newStudents = [];
-      var modifiedStudents = [];
-
-      $.each(students, function (index, student) {
-        if (student.editing || student.editing_password) {
-          if (student.id) {
-            modifiedStudents.push(student);
-          } else {
-            newStudents.push(student);
-          }
-        }
-      });
-
-      // create new students
-      if (newStudents && newStudents.length > 0) {
-        // remove 'new' students from array
-        $.each(newStudents, function (index, student) {
-          $scope.section.students.splice($scope.section.students.indexOf(student), 1);
-        });
-
-        // add the results from the service to the array
-        sectionsService.addStudents({id: $scope.section.id}, newStudents, function (resultStudents) {
-          $.each(resultStudents, function (index, student) {
-            $scope.section.students.unshift(student);
-          });
-        }).$promise.then(() => {
-          // If we started with zero students, we need to rerender login type
-          // controls so the correct options are available.
-          // Because 'temporary' students are included in $scope.section.students
-          // before we reach this save() action, if _all_ students are new
-          // students then we had zero saved students to begin with.
-          // TODO: Once everything is React this should become unnecessary.
-          if (newStudents.length === $scope.section.students.length) {
-            unmountLoginTypeControls();
-            renderLoginTypeControls($scope.section.id);
-          }
-        }).catch($scope.genericError);
-      }
-
-      // update existing students
-      $.each(modifiedStudents, function (index, student) {
-        studentsService.update({id: student.id}, student).$promise.then(
-          function (result_student) {
-            result_student.editing = false;
-            $scope.section.students[$scope.section.students.indexOf(student)] = result_student;
-          }
-        ).catch($scope.genericError);
-      });
-   };
-
-   $scope.confirm_delete = function (student) {
-     student.confirmDelete = true;
-   };
-
-    $scope.del = function (student) { // note -- IE doesn't like it when you name things 'delete'
-      sectionsService.removeStudent({id: $scope.section.id, studentId: student.id}).$promise.then(
-        function () {
-          $scope.section.students.splice($scope.section.students.indexOf(student), 1); // remove from array
-        }
-      ).then(() => {
-        // If we removed the last student, rerender login type controls so
-        // the correct options are available.
-        // TODO: Once everything is React this should become unnecessary.
-        if ($scope.section.students.length <= 0) {
-          unmountLoginTypeControls();
-          renderLoginTypeControls($scope.section.id);
-        }
-      }).catch($scope.genericError);
-    };
-
-    $scope.cancel = function (student) {
-      if (student.id) {
-        student.editing = false;
-      } else {
-        $scope.section.students.splice($scope.section.students.indexOf(student), 1); // remove from array
-      }
-    };
-
-    $scope.new_student = function () {
-      $scope.section.students.unshift({editing: true});
-    };
-
-    $scope.showMoveStudentsModal = function () {
-      $('#move-students').modal('show');
-    };
-
-    $scope.clear_bulk_import = function () {
-      $scope.bulk_import.editing = false;
-      $scope.bulk_import.students = '';
-    };
-
-    $scope.add_bulk_import = function () {
-      var student_names = $scope.bulk_import.students.split("\n");
-      for (var i = 0; i < student_names.length; i++) {
-        var student_name = student_names[i];
-        student_name = student_name.trim();
-        if (student_name.length > 0) {
-          $scope.section.students.unshift({editing: true, name: student_name});
-        }
-      }
-      $scope.clear_bulk_import();
-    };
-
-    $scope.editingAny = function (things) {
-      if (!things) {
-        return false;
-      }
-      for (var i = 0; i < things.length; i++) {
-        if (things[i].editing) {
-          return true;
-        }
-      }
-      return false;
-    };
-
-    $scope.editingAll = function (things) {
-      if (!things) {
-        return false;
-      }
-      for (var i = 0; i < things.length; i++) {
-        if (!things[i].editing) {
-          return false;
-        }
-      }
-      return true;
-    };
-
-    $scope.print = function () {
-      $window.print();
-    };
-
-  }]);
-
-  app.controller('MovingStudentsController', ['$route', '$scope', '$routeParams', '$q', '$window', '$http', 'sectionsService', function ($route, $scope, $routeParams, $q, $window, $http, sectionsService) {
-    firehoseClient.putRecord(
-      {
-        study: 'teacher-dashboard-tabbing',
-        event: 'MovingStudentsController'
-      }
-    );
-
-    var self = this;
-
-    // 'Other Section' selected
-    $scope.otherTeacher = 'Other Teacher';
-    $scope.stayEnrolledInCurrentSection = 'true';
-
-    // Query
-    $scope.currentSection = sectionsService.get({id: $routeParams.id});
-    $scope.sections = sectionsService.query();
-    $scope.students = sectionsService.allStudents({id: $routeParams.id});
-
-    $scope.moveStudents = function () {
-      function isOwnSection(sectionCode) {
-        return $scope.sections.some(function (section) {return section.code === sectionCode;});
-      }
-
-      function displayError(errorMessage) {
-        $('.move-students-error').text(errorMessage);
-      }
-
-      var params = {};
-      params['new_section_code'] = $scope.getNewSectionCode();
-      params['current_section_code'] = $scope.getCurrentSectionCode();
-      params['student_ids'] = $scope.getSelectedStudentIds().join(',');
-      params['stay_enrolled_in_current_section'] = $scope.getStayEnrolledInCurrentSection();
-
-      if (!params['student_ids']) {
-        displayError(error_string_none_selected);
-      } else if (isOwnSection($scope.manuallySelectedSectionCode)) {
-        displayError(error_string_other_section);
-      } else {
-        sectionsService.moveStudents(params, {}).$promise.then(
-          function success(response) {
-            $('#move-students').modal('hide');
-            $route.reload();
-          },
-          function error(response) {
-            $('.move-students-error').text(response.data["error"]);
-          });
-      }
-    };
-
-    $scope.showModal = function () {
-      $q.all([$scope.currentSection.$promise, $scope.students.$promise]).then(function () {
-        $('#move-students').modal('show');
-      });
-    };
-
-    $scope.checkAll = function () {
-      $scope.selectedAll = !$scope.selectedAll;
-      angular.forEach($scope.students, function (student) {
-        student.selected = $scope.selectedAll;
-      });
-    };
-
-    $scope.getCurrentSectionCode = function () {
-      return $scope.section.code;
-    };
-
-    $scope.getSelectedStudentIds = function () {
-      var student_ids = [];
-      angular.forEach($scope.students, function (student) {
-        if (student.selected) {
-          student_ids.push(student.id);
-        }
-      });
-
-      return student_ids;
-    };
-
-    $scope.getNewSectionCode = function () {
-      if ($scope.selectedSectionCode !== $scope.otherTeacher) {
-        return $scope.selectedSectionCode;
-      } else {
-        return $scope.manuallySelectedSectionCode;
-      }
-    };
-
-    $scope.getStayEnrolledInCurrentSection = function () {
-      if ($scope.selectedSectionCode == $scope.otherTeacher) {
-        return $scope.stayEnrolledInCurrentSection;
-      } else {
-        return false;
-      }
-    };
   }]);
 
   app.controller('SectionSigninCardsController', ['$scope', '$routeParams', '$window', '$q', 'sectionsService',
@@ -726,7 +495,7 @@ function main() {
     firehoseClient.putRecord(
       {
         study: 'teacher-dashboard',
-        study_group: 'control',
+        study_group: 'react',
         event: 'projects'
       }
     );
@@ -758,8 +527,8 @@ function main() {
     );
   }]);
 
-  app.controller('SectionProgressController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', 'sectionsService', 'studentsService', 'paginatedSectionProgressService',
-                                             function ($scope, $routeParams, $window, $q, $timeout, $interval, sectionsService, studentsService, paginatedSectionProgressService) {
+  app.controller('SectionProgressController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', 'sectionsService', 'paginatedSectionProgressService',
+                                             function ($scope, $routeParams, $window, $q, $timeout, $interval, sectionsService, paginatedSectionProgressService) {
     firehoseClient.putRecord(
       {
         study: 'teacher-dashboard-tabbing',
@@ -770,7 +539,7 @@ function main() {
     firehoseClient.putRecord(
       {
         study: 'teacher-dashboard',
-        study_group: 'control',
+        study_group: experiments.isEnabled(experiments.TEACHER_EXP_2018) ? 'react' : 'angular',
         event: 'progress-summary'
       }
     );
@@ -807,7 +576,7 @@ function main() {
       firehoseClient.putRecord(
         {
           study: 'teacher-dashboard',
-          study_group: 'control',
+          study_group: 'angular',
           event: 'progress-detailed'
         }
       );
@@ -819,13 +588,13 @@ function main() {
       firehoseClient.putRecord(
         {
           study: 'teacher-dashboard',
-          study_group: 'control',
+          study_group: 'angular',
           event: 'progress-summary'
         }
       );
     };
 
-    if (experiments.isEnabled('sectionProgressRedesign')) {
+    if (experiments.isEnabled(experiments.PROGRESS_TAB)) {
       $scope.react_progress = true;
       $scope.$on('section-progress-rendered', () => {
         $scope.section.$promise.then(script =>
@@ -835,7 +604,7 @@ function main() {
       return;
     }
 
-    // The below is not run if our sectionProgressRedesign experiment is not enabled
+    // The below is not run if our experiments.PROGRESS_TAB experiment is not enabled
 
     const paginatedPromise = paginatedSectionProgressService.get($routeParams.id)
       .then(result => {
@@ -955,8 +724,8 @@ function main() {
     };
   }]);
 
-  app.controller('SectionResponsesController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', '$sanitize', 'sectionsService', 'studentsService',
-                                             function ($scope, $routeParams, $window, $q, $timeout, $interval, $sanitize, sectionsService, studentsService) {
+  app.controller('SectionResponsesController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', '$sanitize', 'sectionsService',
+                                             function ($scope, $routeParams, $window, $q, $timeout, $interval, $sanitize, sectionsService) {
     firehoseClient.putRecord(
       {
         study: 'teacher-dashboard-tabbing',
@@ -967,7 +736,7 @@ function main() {
     firehoseClient.putRecord(
       {
         study: 'teacher-dashboard',
-        study_group: 'control',
+        study_group: experiments.isEnabled(experiments.TEACHER_EXP_2018) ? 'react' : 'angular',
         event: 'text-responses'
       }
     );
@@ -975,6 +744,14 @@ function main() {
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
     $scope.tab = 'responses';
+
+    if (experiments.isEnabled(experiments.TEXT_RESPONSES_TAB)) {
+      $scope.react_text_responses = true;
+      $scope.$on('text-responses-table-rendered', () => {
+        $scope.section.$promise.then(section => renderTextResponsesTable(section, valid_scripts));
+      });
+      return;
+    }
 
     $scope.responses = sectionsService.responses({id: $routeParams.id});
     // error handling
@@ -1037,8 +814,8 @@ function main() {
   }]);
 
 
-  app.controller('SectionAssessmentsController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', '$sanitize', 'sectionsService', 'studentsService',
-                                             function ($scope, $routeParams, $window, $q, $timeout, $interval, $sanitize, sectionsService, studentsService) {
+  app.controller('SectionAssessmentsController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', '$sanitize', 'sectionsService',
+                                             function ($scope, $routeParams, $window, $q, $timeout, $interval, $sanitize, sectionsService) {
     firehoseClient.putRecord(
       {
         study: 'teacher-dashboard-tabbing',
@@ -1049,7 +826,7 @@ function main() {
     firehoseClient.putRecord(
       {
         study: 'teacher-dashboard',
-        study_group: 'control',
+        study_group: experiments.isEnabled(experiments.TEACHER_EXP_2018) ? 'react' : 'angular',
         event: 'assessments'
       }
     );
@@ -1081,6 +858,16 @@ function main() {
     $scope.surveysLoaded = false;
     $scope.surveyStages = [];
     $scope.surveys = sectionsService.surveys({id: $routeParams.id});
+
+    if (experiments.isEnabled(experiments.ASSESSMENTS_TAB)) {
+      $scope.react_assessments = true;
+      $scope.$on('section-assessments-rendered', () => {
+        $scope.section.$promise.then(script =>
+          renderSectionAssessments(script, valid_scripts)
+        );
+      });
+      return;
+    }
 
     // Error handling.
     $scope.genericError = function (result) {

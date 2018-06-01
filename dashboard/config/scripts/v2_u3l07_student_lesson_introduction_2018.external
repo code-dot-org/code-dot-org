@@ -1,0 +1,43 @@
+name 'v2 U3L07 Student Lesson Introduction_2018'
+display_name 'Lesson Vocabulary & Resources'
+title 'APIs and Function Parameters'
+css 'unplugged'
+
+markdown <<MARKDOWN
+# Unit 3: Lesson 07 - APIs and Function Parameters
+
+Students read and use App Lab's API documentation to learn about new turtle commands that they must use to complete a series of drawing puzzles.
+
+## Vocabulary
+
+* **API** - a collection of commands made available to a programmer
+* **Documentation** - a description of the behavior of a command, function, library, API, etc.
+* **Hexadecimal** - A base-16 number system that uses sixteen distinct symbols 0-9 and A-F to represent numbers from 0 to 15.
+* **Library** - a collection of commands / functions, typically with a shared purpose
+* **Parameter** - An extra piece of information that you pass to the function to customize it for a specific need.
+
+## New Blocks
+
+*  **[rgb()](//docs.code.org/applab/rgb/)** - `rgb()`
+*  **[penWidth](//docs.code.org/applab/penWidth/)** - `penWidth`
+*  **[arcRight](//docs.code.org/applab/arcRight/)** - `arcRight`
+*  **[moveTo](//docs.code.org/applab/moveTo/)** - `moveTo`
+*  **[penColor](//docs.code.org/applab/penColor/)** - `penColor`
+*  **[arcLeft](//docs.code.org/applab/arcLeft/)** - `arcLeft`
+*  **[turnTo](//docs.code.org/applab/turnTo/)** - `turnTo`
+
+## Lesson
+
+* See parameterized versions of turtle functions. 
+* Explore the AppLab API to learn to use new commands.
+* Create more complex drawings using the API functions and parameters. 
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+A new version of the `moveForward` command is introduced: `moveForward(pixels)`.
+Students use it to move the turtle to the edge of the screen in one command.
+
+Encourage students to read the explanation of the term parameter and not just skip it. It’s an important term to know.
+
+**Terminology:** Parameter is introduced. Students are shown parameterized versions of basic turtle move commands and asked to draw a triangle.
+MARKDOWN

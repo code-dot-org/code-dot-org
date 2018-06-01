@@ -1,0 +1,21 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2018-04-26T22:50:34.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "video_key": "csp_concept_internet_wires_cables_wifi",
+    "markdown_instructions": "[Video guide and questions](https://docs.google.com/document/d/1k-qKthfOewieVcWgsAP8v2hW-dh3CbK-f7oXlHpF6Cs/edit)",
+    "encrypted_teacher_markdown": "5KQcxdG2dIFDZz7ROz7asXvAiY0r8xwne1qA2aL3R22IJDttgkMXJHUpNLIS\nLAyOURYJC/istVwrneAIDlBJYQMICvlLaqHFbh7G6/r9x/xkkicDeC9FX3XX\n+uxq/N4yASUMlwj/FnZDNKOfS+wFlT027tuPiAW6Ax4L10F0sXWjBo1ySbJr\n1h3IKZ3o5h8jdZmTtQvCk3IJFqcnT6dfa4Z5oENhvE61oTMTa+DAWqOML/Qa\nF70pDwYY1mPhCJYf3akYjr7bIh8IFtzQMvPRLF5B9Umk1rgxOiDMX57wkyGk\nfrwQJD6+UXWPm53/8I7oLeu0SelK3C27PnBKuAyQWy6UKdAueAv6MRAzaZjX\n2+ZkF9T0GjpketuibEIoahku\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "instructions_important": "false",
+    "parent_level_id": 1910,
+    "name_suffix": "_2018"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-08-29 13:31:57 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":37,\"changed_by_email\":\"brook@code.org\"}]"
+}]]></config>
+</StandaloneVideo>

@@ -1,0 +1,23 @@
+name 'CSD U1 Lesson 5 Overview_2018'
+display_name 'Lesson Overview'
+css 'unplugged'
+markdown <<MARKDOWN
+# Overview
+
+In this lesson you'll learn about the different types of input and output devices used by computers and the types of information they send and receive.
+
+## Vocabulary
+
+* **Input** - A device or component that allows information to be given to a computer
+* **Output** - Any device or component that receives information from a computer
+
+
+## Resources
+
+* [Input and Output - Activity Guide](https://docs.google.com/document/d/1ObS_kxkXoueaotPYFAEkcCDzn690zumqoLLnrU5kY2Q/export?format=pdf)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+[Input and Output - Exemplar](https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/edit?usp=sharing) - Activity Guide ([PDF](https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/export?format=doc))
+
+MARKDOWN

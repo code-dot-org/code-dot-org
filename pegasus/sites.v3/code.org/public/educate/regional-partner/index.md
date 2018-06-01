@@ -15,9 +15,9 @@ To begin the partnership, each partner's Program Manager will attend TeacherCon 
 
 The ideal Regional Partner is a U.S. based regional education unit, a nonprofit, or a university with existing, positive relationships with nearby school districts and the local education community.
 
-### Application deadline extended to *April 6, 2018.* ###
+**We will open applications for new Regional Partners in Spring 2019. Check the map below to see if your region needs a partner. If it does, please submit an Interest Form. We will notify you when applications are open.
 
-[<button>Apply Now</button>](https://code.org/educate/regional-partner/apply)
+[<button>Interest Form</button>](https://docs.google.com/forms/d/e/1FAIpQLSfuwUxlfQ7HFJ2q_X0NkZvwm-1MxNpxybrM3I2SicA-XvHmIA/viewform)
 
 
 [col-50]

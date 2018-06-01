@@ -399,6 +399,15 @@ class DashboardSection
     courses
   end
 
+  # This only applies to courses because scripts are currently assumed to be in
+  # their own assignment family, e.g. "coursea-2018" would be in assignment family
+  # "coursea-2018" not "coursea". This will change once we start recognizing
+  # multiple versions of scripts.
+  def self.course_assignment_family(course)
+    m = ScriptConstants::VERSIONED_COURSE_NAME_REGEX.match(course[:name])
+    m ? m[1] : course[:name]
+  end
+
   # Gets a list of valid scripts in which progress tracking has been disabled via
   # the gatekeeper key postMilestone.
   def self.progress_disabled_scripts(user_id = nil)
@@ -609,18 +618,10 @@ class DashboardSection
           }
         )
       end
-    # Though it would be simpler to query the level counts for each student via
-    # DashboardStudent#completed_levels and inject them to @students via the row.merge above,
-    # querying all students together (as below) is significantly more performant.
-    student_ids = @students.map {|s| s[:id]}
-    level_counts = Dashboard.db[:user_levels].
-      group_and_count(:user_id).
-      where(user_id: student_ids).
-      where("best_result >= #{ActivityConstants::MINIMUM_PASS_RESULT}").
-      all
+    # completed_levels_count is deprecated and is no longer needed on the UI,
+    # but adding this field to not break anything unexpected.
     @students.each do |datum|
-      level_count = level_counts.find {|x| x[:user_id] == datum[:id]}
-      datum[:completed_levels_count] = level_count ? level_count[:count] : 0
+      datum[:completed_levels_count] = 0
     end
 
     @students

@@ -1,0 +1,23 @@
+name 'v2 U3L04 Student Lesson Introduction_2018'
+title 'title'
+description 'description here'
+markdown <<MARKDOWN
+# Unit 3 - Lesson 4: Using Simple Commands
+
+## Lesson
+* Learn to use the App Lab programming environment
+* Write a program that uses basic "building blocks" to draw an image in App Lab
+* Think about what "efficiency" means when programming
+
+## Vocab
+
+* **Turtle Programming** - a classic method for learning programming with commands to control movement and drawing of an on-screen robot called a "turtle". The turtle hearkens back to early implementations in which children programmed a physical robot whose dome-like shape was reminiscent of a turtle.
+
+## Introduced Code
+
+* [moveForward](//docs.code.org/applab/moveForward/)
+* [penDown](//docs.code.org/applab/penDown/)
+* [penUp](//docs.code.org/applab/penUp/)
+* [turnLeft](//docs.code.org/applab/turnLeft/)
+
+MARKDOWN

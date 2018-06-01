@@ -1,0 +1,15 @@
+name 'U2L11 Assessment 2_2018'
+title 'HTTP and Abstraction on the Internet: Question 2'
+type 'multi2'
+question 'Choose Two: Identify the two true statements about HTTP.'
+right 'An HTTP request is sent from a client to request access to data stored on a server.'
+wrong 'HTTP requests and responses have identical formats.'
+right 'Displaying a web page will often require multiple HTTP requests in order to acquire all the necessary data.'
+wrong 'An HTTP response code is only used when a server could not fulfill a request.'
+
+teacher_markdown <<MARKDOWN
+Answer:
+
+- An HTTP request is sent from a client to request access to data stored on a server.
+- Displaying a web page will often require multiple HTTP requests in order to acquire all the necessary data.
+MARKDOWN

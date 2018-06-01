@@ -1,0 +1,24 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-05-03T16:38:13.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "markdown_instructions": "# AP Practice - Identify the Abstraction\r\n\r\nOne component of the **AP Create Performance Task** is selecting an abstraction that you developed.\r\n\r\n<div style=\"width: 80%; margin: auto; background-color: #EEEEEE; padding: 10px; font-family: serif; font-size: 12pt\">\r\n\r\n<b>3. Program Code</b>\r\n<ul>\r\n<li>Mark with a <b>rectangle</b> the segment of program code that represents an abstraction you developed.</li>\r\n</ul>\r\n</div>\r\n<br>\r\n\r\nHere's the scoring guide for this question\r\n\r\n<div style=\"magin:auto\">\r\n\t<img src=\"https://images.code.org/341764b27f16965cf27680e20c893a23-image-1508190677805.50.59 PM.png\">\r\n</div>\r\n\r\n# Choose the Student-Created Abstraction\r\n\r\nThe program code below is from a program a student developed. \r\n\r\n![](https://images.code.org/86d48cfc2c9c81551aa059281e9c62f3-image-1508189804595.34.48 PM.png)\r\n\r\n**Write which of the rectangles (A, B, C, or D) is placed around a student-developed abstraction.**\r\n\r\n**Then explain your answer using the criteria in the scoring guide.**",
+    "instructions_important": "false",
+    "placeholder": "Which rectangle is around a student-developed abstraction? Justify your reasoning.",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "encrypted_solution": "IY9xpPD+sH2b6z37n4J/XV7zG48SOtWOyuLDU/VMxkazajbGCsRTF7IiQSLL\nS2kLS/P/MH2XKzUdP71wqwJc2PhVUH0SM3+dnZyjM4Q1lmDCcCigFzfFlV3F\n9uKK1uCCo8PlfVsQp9ayZoOzJVzIk7i/Lg+Cr3dD0xpur09oMVWcfF/cVByl\n1uIUIO6Nj5VGsPSVl/TdstoYjC6mTK4uayNcHUQXKFNyAcN5DntAift7egY4\nHKjJ+/XInOFUYiLkZbmlz7DW2Z0SfcVhT3tfflLin9h7u8Cta0WZuWamupE0\nIk47aMUgwuT8R7nRzYywtk4oi65JWH03xL9yD8T5kMyMt+yOCjYpgHEFAAwC\n+U698CiLamWty0P+P2M7gTSQYKu5hfJJqq0VZAQNOvte5clY089retL0hBJQ\nyLZSIyR3fOfvZyi/1NKE/wndbcKaDqStl9YmiKr9rr0yykK/6t3RerhKJz6c\nHQegT5xwh6NF+S/FHuEhynZ21X78bMTq7qxHUNjjGj+gEddU7OBWxiwKyq9h\nDLSKprS+STlWKjOIYtJiyyhpO+4Dvhd2Hv82PNvR/UhRJ4Tjxs8SX5TAV64g\nTFZ3dtwzObAQYih+Rl0I3DtH+HbgPDPH4ckek1hJBhY6pUvtYDMY1PC9+pV1\naYyzkoI8W+c4C09IvWtQGU8QvQA/EzK/tpsz/wC7u7XNz4gdwPFkDSavZHD+\nK1ZAtoZ4krKoMD/742EemSmWOUYvk4M2tZtTGwahWmKlrIBE3osR+p9UCEJH\n8ChyUQrX/ZoBwhcrDPNnSTaZfs0fiD9aTj0bMVfWt5mmM6ITDuy/X5sB7wkI\nSIHvdQVTT3WivfcGy7aoKNGZwlol8asZzw159Kzh5gLXONwslrFsEn2LlKDR\nROcQizuzGXTAqVsTlw==\n",
+    "parent_level_id": 10228,
+    "name_suffix": "_2018"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-10-13 21:50:17 +0000\",\"changed\":[],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-10-13 21:51:16 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-10-13 21:52:30 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-10-16 21:43:04 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-10-16 21:44:32 +0000\",\"changed\":[\"markdown_instructions\",\"placeholder\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-10-16 21:45:49 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-10-16 21:51:34 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-10-16 23:15:45 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-10-16 23:20:54 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-10-16 23:22:24 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-10-16 23:36:05 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-10-24 22:13:47 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]"
+}]]></config>
+</FreeResponse>

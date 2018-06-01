@@ -1,0 +1,73 @@
+name 'Unit 5 Lesson 10 Introduction_2018'
+title 'title'
+css 'unplugged'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Unit 5: Lesson 10 - Building an App: Color Sleuth
+
+## Background
+
+<div style="float:right; width: 400px">
+
+
+<a href="https://images.code.org/4eb59e2e07f3bb5d86c7d031274ca836-image-1480703334204.png" target="_blank"><img src="https://images.code.org/4eb59e2e07f3bb5d86c7d031274ca836-image-1480703334204.png" style="width: 400px; float: right"></a>
+
+<br>(click image above to enlarge)
+
+</div>
+
+Follow two imaginary characters, Alexis and Michael, as they walk through building an app from scratch - The *Color Sleuth App*.  As you follow the story Alexis and Michael will solve problems and make decisions about how to write the code, but you will do all of the actual code writing.
+
+## Vocabulary
+
+This vocab should be review but it comes up in this lesson
+
+* **Boolean Expression** - in programming, an expression that evaluates to True or False.
+* **Conditionals** - Statements that only run under certain conditions.
+* **If-Statement** - The common programming structure that implements "conditional statements".
+* **Selection** - A generic term for a type of programming statement (usually an if-statement) that uses a Boolean condition to determine, or select, whether or not to run a certain block of statements.
+
+## Lesson
+
+* Warm-up: What are you worried about, where would you start?
+* Activity: Building an app: *Color Sleuth* walk-through
+* Wrap-up: Gallery Walk and Review the Epilogue
+
+## Introduced Code
+
+* [setProperty()](//docs.code.org/applab/setProperty/)
+* [rgb()](//docs.code.org/gamelab/rgb/)
+
+## Resources
+
+* [Color Sleuth Project Rubric](https://docs.google.com/document/d/18aE8jpjd_gHpdrzWUgwtKAeymvtzMnEdDNk6tuJXb_0/export?format=pdf) (copy as [MS Word](https://docs.google.com/document/d/18aE8jpjd_gHpdrzWUgwtKAeymvtzMnEdDNk6tuJXb_0/export?format=doc), [Google Doc](https://docs.google.com/document/d/18aE8jpjd_gHpdrzWUgwtKAeymvtzMnEdDNk6tuJXb_0/copy))
+
+* Explanation of how the final color sleuth project meets the requirements of the AP Create Performance Task
+  
+    * [Color Sleuth and the AP Create PT](https://docs.google.com/document/d/1V3fS8FKixvspuDg2WRrBCGIwWlgJQ3XVdsjremCNxTU/export?format=pdf) - AP Explanation (copy as [MS Word](https://docs.google.com/document/d/1V3fS8FKixvspuDg2WRrBCGIwWlgJQ3XVdsjremCNxTU/export?format=doc), [Google Doc](https://docs.google.com/document/d/1V3fS8FKixvspuDg2WRrBCGIwWlgJQ3XVdsjremCNxTU/copy))
+
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+## Teaching This Lesson
+
+This lesson looks like it has a lot of reading. The reading should go fairly fast since it's written like a script of two people talking.
+
+You can **think about your pause points** in this lesson, where you might gather everyone to check for understanding, or at least do a check-in with various groups.
+
+* There are a few unavoidably tricky steps in the latter half of the lesson - steps that require students to modify or add to the code in more than one place in order to see the next thing. It's worth verifying that students have successfully completed these before moving on.
+
+You **might also consider reading out loud** some parts of the script - particularly some the tricker decision-making points - to make sure students understand what decision was made and why.
+
+* It's also important to acknowledge along the way what's recapped in the Epilogue - that what we're walking students through here is NOT the *one true correct* way to make this app.  Each decision, while well-reasoned, is relatively arbitrary.
+* The goal of the script is to provide a model for collaboration, thinking about problems in small pieces, and how a process of iterative development can lead to a robust project.
+
+
+
+MARKDOWN

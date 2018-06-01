@@ -54,7 +54,7 @@ import {blockAsXmlNode, cleanBlocks} from '../block_utils';
 import ArtistSkins from './skins';
 import dom from '../dom';
 import {SignInState} from '../code-studio/progressRedux';
-import Visualization from './turtle.js';
+import Visualization from '@code-dot-org/artist/visualization';
 
 const CANVAS_HEIGHT = 400;
 const CANVAS_WIDTH = 400;
@@ -327,7 +327,7 @@ Artist.prototype.init = function (config) {
   this.studioApp_.setPageConstants(config, appSpecificConstants);
 
   var iconPath = '/blockly/media/turtle/' +
-    (config.isLegacyShare && config.hideSource ? 'icons_white.png' : 'icons.png');
+    (config.legacyShareStyle && config.hideSource ? 'icons_white.png' : 'icons.png');
   var visualizationColumn = (
     <ArtistVisualizationColumn
       showFinishButton={!!config.level.freePlay && !config.level.isProjectLevel}
@@ -890,7 +890,7 @@ Artist.prototype.finishExecution_ = function () {
   captureThumbnailFromCanvas(this.getThumbnailCanvas_());
 
   if (this.level.freePlay) {
-    window.dispatchEvent(new Event('artistDrawingComplete'));
+    window.dispatchEvent(utils.createEvent('artistDrawingComplete'));
   } else {
     this.checkAnswer();
   }

@@ -17,6 +17,7 @@ import {
 } from './templates/publishDialog/publishDialogRedux';
 import {createHiddenPrintWindow} from './utils';
 import testImageAccess from './code-studio/url_test';
+import {TestResults, KeyCodes} from './constants';
 
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
@@ -42,9 +43,6 @@ var codegen = require('./lib/tools/jsinterpreter/codegen');
 var msg = require('@cdo/locale');
 var dom = require('./dom');
 var FeedbackBlocks = require('./feedbackBlocks');
-var constants = require('./constants');
-var TestResults = constants.TestResults;
-var KeyCodes = constants.KeyCodes;
 var puzzleRatingUtils = require('./puzzleRatingUtils');
 var DialogButtons = require('./templates/DialogButtons');
 var CodeWritten = require('./templates/feedback/CodeWritten');
@@ -1268,14 +1266,23 @@ FeedbackUtils.prototype.getEmptyContainerBlock_ = function () {
  *   are found.
  */
 FeedbackUtils.prototype.checkForEmptyContainerBlockFailure_ = function () {
-  var emptyBlock = this.getEmptyContainerBlock_();
+  const emptyBlock = this.getEmptyContainerBlock_();
   if (!emptyBlock) {
     return TestResults.ALL_PASS;
   }
 
-  var type = emptyBlock.type;
+  const type = emptyBlock.type;
   if (type === 'procedures_defnoreturn' || type === 'procedures_defreturn') {
-    return TestResults.EMPTY_FUNCTION_BLOCK_FAIL;
+    const emptyBlockInfo = emptyBlock.getProcedureInfo();
+    const findUsages = block =>
+      block.type === emptyBlockInfo.callType &&
+      block.getTitleValue('NAME') === emptyBlockInfo.name;
+
+    if (Blockly.mainBlockSpace.getAllUsedBlocks().filter(findUsages).length) {
+      return TestResults.EMPTY_FUNCTION_BLOCK_FAIL;
+    } else {
+      return TestResults.ALL_PASS;
+    }
   }
 
   // Block is assumed to be "if" or "repeat" if we reach here.

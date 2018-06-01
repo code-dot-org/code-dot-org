@@ -1,0 +1,18 @@
+<Vigenere>
+  <config><![CDATA[{
+  "game_id": 48,
+  "created_at": "2018-05-03T16:40:17.000Z",
+  "level_num": "custom",
+  "user_id": 42,
+  "properties": {
+    "instructions": "Instructions",
+    "markdown_instructions": "# Encrypt and decrypt a message with the Vigenère cipher\r\n\r\nThis is an interactive version of the Vigenère cipher that animates the encryption and decryption as it’s happening, given a piece of text to encrypt or decrypt and the key.\r\n\r\n# Do this\r\n### Encrypt a message\r\nClick Step several times, and trace what’s happening. Pay attention to:\r\n\r\n- How the ciphertext is being produced\r\n- What happens when you get to the last character of the key\r\n- After you’ve stepped through a few characters click Play to watch the rest animate\r\n- Hit Restart and play the animation again. You can use the speed slider to speed it up or slow it down  \r\n\r\n![](https://images.code.org/06858f88ac12997bba73f4f76638a068-image-1443574425185.gif)\r\n\r\n### Decrypt a message\r\nEncrypt a message as above, then:  \r\n\r\n- Highlight and copy the ciphertext\r\n- Paste it into the plaintext area. Note: Don’t change the key\r\n- Change the Encrypt/Decrypt toggle to Decrypt\r\n- Hit Step a few times, and then Play\r\n\r\nYou should see the original text emerge.  \r\n![](https://images.code.org/dc89d6c19c17adb23b6b5ff9a62c4583-image-1443574425182.gif)\r\n\r\n\r\nHow hard would it be to crack a message encrypted with this cipher? Does the length of the key make a difference?",
+    "skip_dialog": true,
+    "href": "vigenere/vigenere.html",
+    "parent_level_id": 3370,
+    "name_suffix": "_2018"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</Vigenere>

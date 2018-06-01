@@ -78,6 +78,12 @@ class UserTest < ActiveSupport::TestCase
     assert_equal teachers[0].school_info, teachers[1].school_info
   end
 
+  test 'single user experiment is enabled' do
+    experiment = create(:single_user_experiment, min_user_id: @user.id)
+    assert_equal [experiment[:name]], @user.get_active_experiment_names
+    experiment.destroy
+  end
+
   test 'normalize_email' do
     teacher = create :teacher, email: 'CAPS@EXAMPLE.COM'
     assert_equal 'caps@example.com', teacher.email
@@ -888,6 +894,14 @@ class UserTest < ActiveSupport::TestCase
     assert user.under_13?
   end
 
+  test "reset_secrets calls generate_secret_picture and generate_secret_words" do
+    user = create :user
+
+    user.expects(:generate_secret_picture).once
+    user.expects(:generate_secret_words).once
+    user.reset_secrets
+  end
+
   test "no send reset password for blank email" do
     error_user = User.send_reset_password_instructions(email: '')
     assert error_user.errors[:email]
@@ -970,6 +984,26 @@ class UserTest < ActiveSupport::TestCase
     student = User.find(student.id)
     # password was changed
     assert old_password != student.encrypted_password
+  end
+
+  test 'validates format of parent email on create' do
+    refute_creates User do
+      assert_raises Exception do
+        create :young_student, parent_email: 'bad_email_format@nowhere'
+      end
+    end
+  end
+
+  test 'validates format of parent email on update' do
+    student = create :young_student
+    assert student.valid?
+
+    student.parent_email = 'bad_email_format@nowhere'
+    refute student.valid?
+
+    refute student.save
+    assert_equal({parent_email: ['is invalid']}, student.errors.messages)
+    assert_equal({parent_email: [{error: :invalid}]}, student.errors.details)
   end
 
   test 'send reset password for student without age' do
@@ -1131,6 +1165,64 @@ class UserTest < ActiveSupport::TestCase
 
   test 'can_edit_email? is true for user with password' do
     assert @student.can_edit_email?
+  end
+
+  test 'can change own user type as a student with a password' do
+    student = create :student
+    refute_empty student.encrypted_password
+    assert student.can_change_own_user_type?
+  end
+
+  test 'can change own user type as an oauth student' do
+    student = create :google_oauth2_student
+    assert student.can_change_own_user_type?
+  end
+
+  test 'can change own user type as a teacher with a password' do
+    teacher = create :teacher
+    refute_empty teacher.encrypted_password
+    assert teacher.can_change_own_user_type?
+  end
+
+  test 'can change own user type as an oauth teacher' do
+    teacher = create :teacher,
+      encrypted_password: nil,
+      provider: 'facebook',
+      uid: '1111111'
+    assert teacher.can_change_own_user_type?
+  end
+
+  test 'cannot change own user type as a student with a picture or secret words' do
+    student = create :student_in_picture_section
+    refute student.can_change_own_user_type?
+  end
+
+  test 'cannot change own user type as a teacher with sections' do
+    section = create :section
+    teacher = section.teacher
+    refute_empty teacher.sections
+    refute teacher.can_change_own_user_type?
+  end
+
+  test 'can delete own account if teacher' do
+    user = create :teacher
+    assert user.can_delete_own_account?
+  end
+
+  test 'can delete own account if independent student' do
+    user = create :student
+    refute user.teacher_managed_account?
+    assert user.can_delete_own_account?
+  end
+
+  test 'cannot delete own account if teacher-managed student' do
+    picture_section = create(:section, login_type: Section::LOGIN_TYPE_PICTURE)
+    user = create(:student, encrypted_password: '')
+    create(:follower, student_user: user, section: picture_section)
+    user.reload
+
+    assert user.teacher_managed_account?
+    refute user.can_delete_own_account?
   end
 
   test 'teacher_managed_account? is false for teacher' do
@@ -1479,15 +1571,23 @@ class UserTest < ActiveSupport::TestCase
   test 'normalize_gender' do
     assert_equal 'f', User.normalize_gender('f')
     assert_equal 'm', User.normalize_gender('m')
+    assert_equal 'n', User.normalize_gender('n')
+    assert_equal 'o', User.normalize_gender('o')
 
     assert_equal 'f', User.normalize_gender('F')
     assert_equal 'm', User.normalize_gender('M')
+    assert_equal 'n', User.normalize_gender('N')
+    assert_equal 'o', User.normalize_gender('O')
 
     assert_equal 'f', User.normalize_gender('Female')
     assert_equal 'm', User.normalize_gender('Male')
+    assert_equal 'n', User.normalize_gender('NonBinary')
+    assert_equal 'o', User.normalize_gender('NotListed')
 
     assert_equal 'f', User.normalize_gender('female')
     assert_equal 'm', User.normalize_gender('male')
+    assert_equal 'n', User.normalize_gender('non-binary')
+    assert_equal 'o', User.normalize_gender('notlisted')
 
     assert_nil User.normalize_gender('some nonsense')
     assert_nil User.normalize_gender('')
@@ -2310,28 +2410,6 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
-  test 'clear_user removes all PII and other information' do
-    user = create :teacher
-
-    user.clear_user_and_mark_purged
-    user.reload
-
-    assert user.valid?
-    assert_nil user.name
-    refute_nil user.username =~ /sys_deleted_\w{8}/
-    assert_nil user.current_sign_in_ip
-    assert_nil user.last_sign_in_ip
-    assert_equal '', user.email
-    assert_equal '', user.hashed_email
-    assert_nil user.parent_email
-    assert_nil user.encrypted_password
-    assert_nil user.uid
-    assert_nil user.reset_password_token
-    assert_nil user.full_address
-    assert_equal({"sharing_disabled" => false}, user.properties)
-    refute_nil user.purged_at
-  end
-
   test 'omniauth login stores auth token' do
     auth = OmniAuth::AuthHash.new(
       provider: 'google_oauth2',
@@ -2424,8 +2502,8 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'stage_extras_enabled?' do
-    script = create :script
-    other_script = create :script
+    script = create :script, stage_extras_available: true
+    other_script = create :script, stage_extras_available: true
     teacher = create :teacher
     student = create :student
 
@@ -2743,5 +2821,62 @@ class UserTest < ActiveSupport::TestCase
     assert_not_equal user.email, user.authentication_options.first.email
     assert_not_equal user.email, user.primary_authentication_option.email
     assert_equal user.primary_authentication_option.email, user.authentication_options.first.email
+  end
+
+  test 'within_united_states? is false without UserGeo record' do
+    user = create :student
+    assert_empty user.user_geos
+    refute user.within_united_states?
+  end
+
+  test 'within_united_states? is false if latest UserGeo has incomplete data' do
+    # Based on behavior in trackable.rb where we push a UserGeo with just
+    # user_id and ip_address, no other geo information
+    user = create :student
+    Timecop.freeze do
+      create :user_geo, :seattle, user: user
+      Timecop.travel 1
+      create :user_geo, user: user
+    end
+    assert_equal 2, user.user_geos.count
+    refute user.within_united_states?
+  end
+
+  test 'within_united_states? is false if latest UserGeo from another country' do
+    user = create :student
+    Timecop.freeze do
+      create :user_geo, :seattle, user: user
+      Timecop.travel 1
+      create :user_geo, :sydney, user: user
+    end
+    assert_equal 2, user.user_geos.count
+    refute user.within_united_states?
+  end
+
+  test 'within_united_states? is true if latest UserGeo from the United States' do
+    user = create :student
+    Timecop.freeze do
+      create :user_geo, :sydney, user: user
+      Timecop.travel 1
+      create :user_geo, :seattle, user: user
+    end
+    assert_equal 2, user.user_geos.count
+    assert user.within_united_states?
+  end
+
+  test 'hidden_script_access? is false if user is not admin and does not have permission' do
+    user = create :student
+    refute user.hidden_script_access?
+  end
+
+  test 'hidden_script_access? is true if user is admin' do
+    user = create :admin
+    assert user.hidden_script_access?
+  end
+
+  test 'hidden_script_access? is true if user has permission' do
+    user = create :teacher
+    user.update(permission: UserPermission::HIDDEN_SCRIPT_ACCESS)
+    assert user.hidden_script_access?
   end
 end

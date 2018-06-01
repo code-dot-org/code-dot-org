@@ -1,5 +1,5 @@
 var testUtils = require('../../../util/testUtils');
-var TestResults = require('@cdo/apps/constants.js').TestResults;
+import {TestResults} from '@cdo/apps/constants';
 var blockUtils = require('@cdo/apps/block_utils.js');
 
 module.exports = {

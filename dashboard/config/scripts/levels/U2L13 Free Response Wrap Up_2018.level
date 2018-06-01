@@ -1,0 +1,23 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-05-03T16:40:14.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Tell Me a Secret: Wrap Up",
+    "markdown_instructions": "List 3 characteristics of the ideal encryption scheme.\r\n",
+    "encrypted_solution": "lz1/pmOKHJ7A78j961fA1t/XtH83bh5QbY8E8sIG7VIlZY2eDB+GDt4FMcuP\n2+ruSLblGUEAOrPoZHzRthaiZ1cO8niwmuLC6+zc5OByvxwuU1FBw5gvoKvQ\nBqhnY34z9ugDKZUWgmQ+AX5n7Y/HObUcEcuJrFfYgMzTpnjQ/ieuVMnVbkqc\n7wOcvDvAtALTfDqIp0gP6zUTzpp9xlBzbhKEiD9nuBT1hVRPP0AaeFwD9nKF\nGxONOBTNff/oqn12BjGox6WsrDI6NYrntsRCxHo7SuBkJqLhEp0gRGcu0w+k\nbHvm93K709C0vvYa/xVh/UbaEPTlV9j61d/0b8wTf/l5wD/crji9PKGg/l/s\n5wZ9e8pvwlyAQ9sHW8Z8rirclCBf5Qi57NOHIVcxbAvIiQ==\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "instructions_important": "false",
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "parent_level_id": 2545,
+    "name_suffix": "_2018"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</FreeResponse>

@@ -18,14 +18,13 @@
       "x": null,
       "y": null
     },
-    "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
     "instructions_important": "false",
     "start_blocks": "var pencil = createSprite(100,200);\r\npencil.setAnimation(\"pencil\");\r\n\r\nvar brush = createSprite(300,200);\r\nbrush.setAnimation(\"brush\");\r\n\r\nfunction draw(){\r\n  background(\"white\");\r\n  pencil.x = randomNumber(100,110);\r\n  brush.x = 300;\r\n  drawSprites();\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -58,11 +57,22 @@
     "encrypted_examples": "i6RPkcmdsc7W33hTbyb7h5xxNBhvPRsgcUatV/vp0vcBuckza6SCKEI4ZLtx\nhQxUc8xGLyWms8mpHeHzVEBf9A==\n",
     "parent_level_id": 8870,
     "name_suffix": "_2018",
+    "reference_links": [
+      "/docs/csd-1718/draw_loop/index.html",
+      "/docs/csd-1718/sprites/index.html"
+    ],
+    "map_reference": "/docs/csd-1718/sprite_properties/index.html",
+    "video_key": "csd_gamelab_drawloop",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-08 19:22:04 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-13 20:45:46 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-26 18:15:26 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-08 19:22:04 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-13 20:45:46 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-26 18:15:26 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-15 17:49:25 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-15 17:49:41 +0000\",\"changed\":[\"code_functions\",\"never_autoplay_video\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

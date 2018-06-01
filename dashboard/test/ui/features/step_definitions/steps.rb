@@ -143,6 +143,13 @@ When /^I wait until (?:element )?"([^"]*)" (?:has|contains) text "([^"]*)"$/ do 
   wait_until {@browser.execute_script("return $(#{selector.dump}).text();").include? text}
 end
 
+When /^I wait until (?:element )?"([^"]*)" does not (?:have|contain) text "([^"]*)"$/ do |selector, text|
+  wait_short_until do
+    element_text = @browser.execute_script("return $(#{selector.dump}).text();")
+    !element_text.include? text
+  end
+end
+
 When /^I wait until the first (?:element )?"([^"]*)" (?:has|contains) text "([^"]*)"$/ do |selector, text|
   wait_until {@browser.execute_script("return $(#{selector.dump}).first().text();").include? text}
 end
@@ -344,9 +351,11 @@ When /^I press the SVG text "([^"]*)"$/ do |name|
   @browser.execute_script("$('" + name_selector + "').simulate('drag', function(){});")
 end
 
-When /^I select the "([^"]*)" option in dropdown "([^"]*)"$/ do |option_text, element_id|
-  select = Selenium::WebDriver::Support::Select.new(@browser.find_element(:id, element_id))
-  select.select_by(:text, option_text)
+When /^I select the "([^"]*)" option in dropdown "([^"]*)"( to load a new page)?$/ do |option_text, element_id, load|
+  page_load(load) do
+    select = Selenium::WebDriver::Support::Select.new(@browser.find_element(:id, element_id))
+    select.select_by(:text, option_text)
+  end
 end
 
 When /^I open the topmost blockly category "([^"]*)"$/ do |name|
@@ -918,15 +927,16 @@ And /^I create a new section$/ do
   }
 end
 
-And /^I create a new section with course "([^"]*)"(?: and unit "([^"]*)")?$/ do |primary, secondary|
+And /^I create a new section with course "([^"]*)", version "([^"]*)"(?: and unit "([^"]*)")?$/ do |assignment_family, version_year, secondary|
   individual_steps %Q{
     When I press the new section button
     Then I should see the new section dialog
 
     When I select email login
-    Then I wait to see "#uitest-primary-assignment"
+    Then I wait to see "#uitest-assignment-family"
 
-    When I select the "#{primary}" option in dropdown "uitest-primary-assignment"
+    When I select the "#{assignment_family}" option in dropdown "uitest-assignment-family"
+    And I select the "#{version_year}" option in dropdown "assignment-version-year"
   }
 
   if secondary
@@ -970,6 +980,44 @@ And(/^I create a student named "([^"]*)"$/) do |name|
     And I type "#{password}" into "#user_password"
     And I type "#{password}" into "#user_password_confirmation"
     And I select the "16" option in dropdown "user_user_age"
+    And I click selector "#user_terms_of_service_version"
+    And I click selector "#signup-button"
+    And I wait until I am on "http://studio.code.org/home"
+  }
+end
+
+And(/^I create a student in the eu named "([^"]*)"$/) do |name|
+  email, password = generate_user(name)
+
+  steps %Q{
+    Given I am on "http://studio.code.org/users/sign_up?force_in_eu=1"
+    And I wait to see "#user_name"
+    And I select the "Student" option in dropdown "user_user_type"
+    And I type "#{name}" into "#user_name"
+    And I type "#{email}" into "#user_email"
+    And I type "#{password}" into "#user_password"
+    And I type "#{password}" into "#user_password_confirmation"
+    And I select the "16" option in dropdown "user_user_age"
+    And I click selector "#user_terms_of_service_version"
+    And I click selector "#user_data_transfer_agreement_accepted"
+    And I click selector "#signup-button"
+    And I wait until I am on "http://studio.code.org/home"
+  }
+end
+
+And(/^I create a young student named "([^"]*)"$/) do |name|
+  email, password = generate_user(name)
+
+  steps %Q{
+    Given I am on "http://studio.code.org/users/sign_up"
+    And I wait to see "#user_name"
+    And I select the "Student" option in dropdown "user_user_type"
+    And I type "#{name}" into "#user_name"
+    And I type "#{email}" into "#user_email"
+    And I type "#{password}" into "#user_password"
+    And I type "#{password}" into "#user_password_confirmation"
+    And I select the "10" option in dropdown "user_user_age"
+    And I click selector "#user_terms_of_service_version"
     And I click selector "#signup-button"
     And I wait until I am on "http://studio.code.org/home"
   }
@@ -988,6 +1036,7 @@ And(/^I create a teacher named "([^"]*)"$/) do |name|
     And I type "#{email}" into "#user_email"
     And I type "#{password}" into "#user_password"
     And I type "#{password}" into "#user_password_confirmation"
+    And I select the "Yes" option in dropdown "user_email_preference_opt_in"
     And I click selector "#user_terms_of_service_version"
     And I click selector "#signup-button" to load a new page
     And I wait until I am on "http://studio.code.org/home"
@@ -998,44 +1047,6 @@ And(/^I give user "([^"]*)" hidden script access$/) do |name|
   require_rails_env
   user = User.find_by_email_or_hashed_email(@users[name][:email])
   user.permission = UserPermission::HIDDEN_SCRIPT_ACCESS
-end
-
-And(/^I give user "([^"]*)" project validator permission$/) do |name|
-  require_rails_env
-  user = User.find_by_email_or_hashed_email(@users[name][:email])
-  user.permission = UserPermission::PROJECT_VALIDATOR
-  user.save!
-end
-
-Then(/^I remove featured projects from the gallery$/) do
-  require_rails_env
-  FeaturedProject.delete_all
-end
-
-Then(/^I make a playlab project named "([^"]*)"$/) do |name|
-  steps %Q{
-    Then I am on "http://studio.code.org/projects/playlab/new"
-    And I get redirected to "/projects/playlab/([^\/]*?)/edit" via "dashboard"
-    And I wait for the page to fully load
-    And element "#runButton" is visible
-    And element ".project_updated_at" eventually contains text "Saved"
-    And I click selector ".project_edit"
-    And I type "#{name}" into "input.project_name"
-    And I click selector ".project_save"
-    And I wait until element ".project_edit" is visible
-    Then I should see title "#{name} - Play Lab"
-    And I press "#runButton" using jQuery
-    And I wait until element ".project_updated_at" contains text "Saved"
-    And I wait until initial thumbnail capture is complete
-  }
-end
-
-Then(/^I publish the project$/) do
-  steps %Q{
-    Given I open the project share dialog
-    And the project is unpublished
-    When I publish the project from the share dialog
-  }
 end
 
 And(/^I save the section url$/) do

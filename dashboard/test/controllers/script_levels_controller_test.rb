@@ -1259,6 +1259,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       )
     )
     assert_equal assigns(:level), level
+    experiment.destroy
   end
 
   test "should present experiment level if in the section experiment" do
@@ -1274,6 +1275,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       )
     )
     assert_equal assigns(:level), level
+    experiment.destroy
   end
 
   test "should present experiment level if in one of the experiments" do
@@ -1290,6 +1292,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       )
     )
     assert_equal assigns(:level), level
+    experiment1.destroy
+    experiment2.destroy
   end
 
   test "should not present experiment level if not in the experiment" do
@@ -1305,6 +1309,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       )
     )
     assert_equal assigns(:level), level2
+    experiment.destroy
   end
 
   test "hidden_stage_ids for user not signed in" do

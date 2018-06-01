@@ -7,8 +7,6 @@
   - email_mismatch = current_user.errors.delete(:email_mismatch)
   - current_user.reload if email_mismatch.present?
   = devise_error_messages!
-  - if f.object.can_edit_email?
-    = f.hidden_field :hashed_email
   %div
   .field
     = f.label :name
@@ -24,13 +22,11 @@
     - else
       .field
         = f.label :email
+        %span#displayed-user-email= f.object.email.present? ? f.object.email : '***encrypted***'
         - if current_user.can_edit_email? && !current_user.oauth?
-          = f.email_field :email, placeholder: '***encrypted***', autocomplete: 'off', maxlength: 255
-        - elsif current_user.can_edit_email? && current_user.oauth?
-          = f.hidden_field :email
-          = f.object.email.present? ? f.object.email : '***encrypted***'
-        - else
-          = f.object.email.present? ? f.object.email : '***encrypted***'
+          (
+          %a#edit-email-link{href: '#'}= "Update"
+          )
   - if resource.username.present?
     .field
       = f.label :username
@@ -72,27 +68,13 @@
       = f.label :full_address
       = f.text_area :full_address, class: 'input-xxlarge', rows: 4, maxlength: 255
     = f.hidden_field :age, value: "21"
-  -#
-    Don't allow editing user type unless we can also edit email, because
-    changing from a student (encrypted email) to a teacher (plaintext email)
-    requires entering an email address.
-    Don't allow editing user type for teachers with sections, as our validations
-    require sections to be owned by teachers.
-  - if f.object.can_edit_email? && (f.object.student? || Section.where(user_id: f.object.id).empty?)
-    .field
-      = f.label t('signup_form.user_type')
-      = f.select :user_type, user_type_options
 
-  %div#submit-update= f.submit t('crud.update'), class: 'btn btn-default'
-- if !current_user.teacher_managed_account?
-  %h2= t('user.delete')
-  %p
-    = t('user.delete_text')
-    - if current_user.teacher?
-      = t('user.delete_text_teacher_note')
-    - data_hash = { confirm: t('user.delete_confirm') }
-    = button_to t('user.delete'), registration_path(resource_name), data: data_hash, method: :delete, class: 'btn btn-danger'
+  %div#submit-update= f.submit t('user.update'), class: 'btn btn-primary'
+
+= link_to t('crud.back'), :back
+
 - if current_user.can_create_personal_login?
+  %hr
   %h2= t('user.create_personal_login')
   %p= no_email ? t('user.create_personal_login_under_13_info') : t('user.create_personal_login_info')
   = form_for(current_user, url: '/users/upgrade', html: {id: 'edit_user_create_personal_account'}, namespace: 'create_personal') do |form|
@@ -129,12 +111,61 @@
       %p= t('user.create_personal_login_email_note', privacy_policy_url: CDO.code_org_url('/privacy')).html_safe
     %div= form.submit t('crud.submit'), id: 'create-personal-login', class: 'btn btn-warning'
 
-= link_to t('crud.back'), :back
+-# Separately-submittable form section allowing the user to edit their own
+-# account type.  We keep this separate because it's sometimes a multi-step
+-# process (for example, confirming one's email when upgrading from a student
+-# account to a teacher account)
+- if resource.can_change_own_user_type?
+  = form_for(resource,
+      as: resource_name,
+      url: '/users/user_type',
+      remote: true,
+      html: { id: 'change-user-type-modal-form' },
+      namespace: 'change-user-type',
+    ) do |f|
+    = f.hidden_field :email
+    = f.hidden_field :hashed_email
+    = f.hidden_field :email_preference_opt_in
+    %hr.account-page-section-break
+    %h2= t('signup_form.user_type_label')
+    .field
+      = f.label t('signup_form.user_type')
+      = f.select :user_type, user_type_options
+    .farSide
+      %span#change-user-type-status
+      %button.btn#change-user-type-button{disabled: true}= t('signup_form.user_type_button')
+
+- if current_user.can_delete_own_account?
+  %hr.danger.account-page-section-break
+  %h2.danger= t('user.delete')
+  %p
+    = t('user.delete_text')
+    - if current_user.teacher?
+      = t('user.delete_text_teacher_note')
+    .farSide
+      - data_hash = { confirm: t('user.delete_confirm') }
+      = button_to t('user.delete'), registration_path(resource_name), data: data_hash, method: :delete, class: 'btn btn-danger'
+
+-# Hidden form used to asynchronously submit an email change to Rails with the
+-# appropriate authenticity tokens.  See ChangeEmailModal.jsx for more details.
+- if resource.can_edit_email?
+  = form_for(resource,
+      as: resource_name,
+      url: '/users/email',
+      remote: true,
+      html: { id: 'change-email-modal-form' },
+      namespace: 'change-email-modal',
+    ) do |f|
+    = f.hidden_field :email
+    = f.hidden_field :hashed_email
+    = f.hidden_field :email_preference_opt_in
+    = f.hidden_field :current_password
 
 :ruby
   script_data = {
     edit: {
-      userType: current_user.reload.user_type,
+      userAge: current_user.age,
+      userType: current_user.user_type,
       isOauth: current_user.oauth?
     }.to_json
   }

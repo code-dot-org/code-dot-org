@@ -5,9 +5,13 @@
 "@cdo/apps@file:src":
   version "0.0.1"
 
-"@code-dot-org/blockly@1.9.2":
-  version "1.9.2"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.9.2.tgz#785cda013630d601ec658a0aaa2a0029c505bc30"
+"@code-dot-org/artist@github:code-dot-org/artist#9c3ad003522aeab9d652fb1d8703a95d7ebde393":
+  version "0.0.1"
+  resolved "https://codeload.github.com/code-dot-org/artist/tar.gz/9c3ad003522aeab9d652fb1d8703a95d7ebde393"
+
+"@code-dot-org/blockly@2.3.2":
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-2.3.2.tgz#6b22e4a5c8b5341f5590ad3c0f0d6eb578db1408"
 
 "@code-dot-org/bramble@0.1.26":
   version "0.1.26"
@@ -89,9 +93,13 @@
   version "0.1.0-cdo.0"
   resolved "https://registry.yarnpkg.com/@code-dot-org/js-numbers/-/js-numbers-0.1.0-cdo.0.tgz#810092a993c3c75441f2e5a3282f1257d9670715"
 
-"@code-dot-org/p5.play@1.2.1-cdo":
-  version "1.2.1-cdo"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/p5.play/-/p5.play-1.2.1-cdo.tgz#0c0a0d9cd12981d13311564ee3bdba2981d78dc8"
+"@code-dot-org/maze@1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/maze/-/maze-1.1.0.tgz#7c8185adf06a9172e3bde4ccd6f6738a787b2a7c"
+
+"@code-dot-org/p5.play@1.2.2-cdo":
+  version "1.2.2-cdo"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/p5.play/-/p5.play-1.2.2-cdo.tgz#aea10ee61a6e4945b691cdfeaa7581861efe2d60"
 
 "@code-dot-org/piskel@0.13.0-cdo.3":
   version "0.13.0-cdo.3"
@@ -681,6 +689,10 @@ assert@^1.1.1:
   resolved "https://registry.yarnpkg.com/assert/-/assert-1.3.0.tgz#03939a622582a812cc202320a0b9a56c9b815849"
   dependencies:
     util "0.10.3"
+
+assertion-error@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/assertion-error/-/assertion-error-1.0.0.tgz#c7f85438fdd466bc7ca16ab90c81513797a5d23b"
 
 assertion-error@^1.0.1, assertion-error@^1.0.2:
   version "1.0.2"
@@ -2769,6 +2781,13 @@ chai-subset@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/chai-subset/-/chai-subset-1.2.0.tgz#84360d8d68bb0b80de068f7e5178baff512957d1"
 
+chai-xml@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/chai-xml/-/chai-xml-0.3.2.tgz#61d0776aa8fd936a2178769adcaabf3bfb52b8b1"
+  dependencies:
+    chai "^1.9.1"
+    xml2js "^0.4.4"
+
 chai@3.5.0, chai@^3.2.0:
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/chai/-/chai-3.5.0.tgz#4d02637b067fe958bdbfdd3a40ec56fef7373247"
@@ -2776,6 +2795,13 @@ chai@3.5.0, chai@^3.2.0:
     assertion-error "^1.0.1"
     deep-eql "^0.1.3"
     type-detect "^1.0.0"
+
+chai@^1.9.1:
+  version "1.10.0"
+  resolved "https://registry.yarnpkg.com/chai/-/chai-1.10.0.tgz#e4031cc87654461a75943e5a35ab46eaf39c1eb9"
+  dependencies:
+    assertion-error "1.0.0"
+    deep-eql "0.1.3"
 
 chain-function@^1.0.0:
   version "1.0.0"
@@ -3771,7 +3797,7 @@ deep-diff@0.3.4:
   version "0.3.4"
   resolved "https://registry.yarnpkg.com/deep-diff/-/deep-diff-0.3.4.tgz#aac5c39952236abe5f037a2349060ba01b00ae48"
 
-deep-eql@^0.1.3:
+deep-eql@0.1.3, deep-eql@^0.1.3:
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/deep-eql/-/deep-eql-0.1.3.tgz#ef558acab8de25206cd713906d74e56930eb69f2"
   dependencies:
@@ -9057,6 +9083,10 @@ pend@~1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/pend/-/pend-1.2.0.tgz#7a57eb550a6783f9115331fcf4663d5c8e007a50"
 
+pepjs@^0.4.3:
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/pepjs/-/pepjs-0.4.3.tgz#16080e970aae779913756c2daef88eaa7486df41"
+
 performance-now@^0.2.0, performance-now@~0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-0.2.0.tgz#33ef30c5c77d4ea21c5a53869d91b56d8f2555e5"
@@ -9845,6 +9875,10 @@ react-color@^2.11.7:
     reactcss "^1.2.0"
     tinycolor2 "^1.1.2"
 
+react-csv@^1.0.14:
+  version "1.0.14"
+  resolved "https://registry.yarnpkg.com/react-csv/-/react-csv-1.0.14.tgz#7c9e444fc4c3ca1e1cf73a81129b1ec032838a71"
+
 react-datepicker@0.37.0:
   version "0.37.0"
   resolved "https://registry.yarnpkg.com/react-datepicker/-/react-datepicker-0.37.0.tgz#94eef12ae508d733c74fbf9e0f996609a9dd9b89"
@@ -10011,6 +10045,10 @@ react-overlays@^0.6.6:
     dom-helpers "^2.4.0"
     react-prop-types "^0.4.0"
     warning "^3.0.0"
+
+react-pointable@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/react-pointable/-/react-pointable-1.1.1.tgz#4f9b1ca397dfb5f506923d3b470421b0b30d16c2"
 
 react-portal:
   version "3.0.0"
@@ -12643,7 +12681,7 @@ xml-char-classes@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/xml-char-classes/-/xml-char-classes-1.0.0.tgz#64657848a20ffc5df583a42ad8a277b4512bbc4d"
 
-xml2js@0.4.15:
+xml2js@0.4.15, xml2js@^0.4.4:
   version "0.4.15"
   resolved "https://registry.yarnpkg.com/xml2js/-/xml2js-0.4.15.tgz#95cd03ff2dd144ec28bc6273bf2b2890c581ad0c"
   dependencies:

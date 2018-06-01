@@ -1,0 +1,12 @@
+name 'U2L02 Assessment 3_2018'
+title 'The Need For Addressing'
+question 'To improve communication in playing battleship on the Internet Simulator your group invented a(n):'
+wrong 'heuristic'
+wrong 'algorithm'
+right 'protocol'
+wrong 'encoding'
+teacher_markdown <<MARKDOWN
+Answer:
+
+- protocol
+MARKDOWN

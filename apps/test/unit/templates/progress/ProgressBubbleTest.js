@@ -112,7 +112,7 @@ describe('ProgressBubble', () => {
         level={{
           ...defaultProps.level,
           kind: LevelKind.assessment,
-          status: LevelStatus.perfect
+          status: LevelStatus.submitted
         }}
       />
     );
@@ -286,6 +286,19 @@ describe('ProgressBubble', () => {
         />
       );
       assert.include(wrapper.find('a').prop('href'), 'section_id=12345');
+    });
+
+    it('includes the user_id in the queryparams if selectedStudentId is present', () => {
+      fakeLocation.href = "http://studio.code.org/s/csd3/stage/3/puzzle/7";
+      const wrapper = shallow(
+        <ProgressBubble
+          {...defaultProps}
+          currentLocation={fakeLocation}
+          selectedSectionId="12345"
+          selectedStudentId="207"
+        />
+      );
+      assert.include(wrapper.find('a').prop('href'), 'user_id=207');
     });
 
     it('preserves the queryparams of the current location', () => {

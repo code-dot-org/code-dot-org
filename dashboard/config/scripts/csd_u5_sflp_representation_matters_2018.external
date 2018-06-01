@@ -1,0 +1,21 @@
+name 'CSD-U5-SFLP Representation Matters_2018'
+display_name 'Unit 5 Lesson 1 Overview'
+css 'unplugged'
+markdown <<MARKDOWN
+# Overview
+
+Get your first taste of the importance of how information is represented and how it affects the way we make decisions. You'll help a few people decide which meal they should order.
+
+## Resources
+
+* [Representation Matters - Activity Guide](https://docs.google.com/document/d/1wU8QANCmyz_DiJf2vdg2QPqKHq1YE0XDLGJmEsbKfiU/export?format=pdf)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+[key]
+
+* [Representation Matters](https://docs.google.com/document/d/1iBGzpLZVxyU0v1rOQMydrs4EpaXScbsB0x2hvbY3qxA/edit?usp=sharing) - Exemplar ([PDF](https://docs.google.com/document/d/1iBGzpLZVxyU0v1rOQMydrs4EpaXScbsB0x2hvbY3qxA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1iBGzpLZVxyU0v1rOQMydrs4EpaXScbsB0x2hvbY3qxA/export?format=doc))
+* [Meals Data](https://docs.google.com/document/d/1PAuIlPz-GEg3JsHpJd-rEnVcjP_DL3BAxT8wCmvrlGA/edit?usp=sharing) - Resource ([PDF](https://docs.google.com/document/d/1PAuIlPz-GEg3JsHpJd-rEnVcjP_DL3BAxT8wCmvrlGA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1PAuIlPz-GEg3JsHpJd-rEnVcjP_DL3BAxT8wCmvrlGA/export?format=doc))
+
+[/key]
+MARKDOWN

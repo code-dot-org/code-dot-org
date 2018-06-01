@@ -1,0 +1,17 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-05-03T16:35:26.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Reflection: Data Storage",
+    "markdown_instructions": "Respond to this prompt or to another as directed by your teacher.\n\nThe salesperson in a cell phone store is telling me that the phone I'm considering has 8GB of memory, which means I can save 10,000 photos taken with the phone's camera! \n\nIs the salesperson telling me the truth? Why or why not?\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 1936,
+    "name_suffix": "_2018"
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

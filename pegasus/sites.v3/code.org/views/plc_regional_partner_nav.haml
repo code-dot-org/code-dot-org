@@ -4,11 +4,9 @@
     -{'Regional Partner Home'=>'/educate/regional-partner',
       'Terms of Partnership'=>'/educate/regional-partner/terms',
       'Where we have partners'=> '/educate/regional-partner/partners',
-      'Apply'=>'/educate/regional-partner/apply',
       'FAQ'=>'/educate/regional-partner/faq'}.each_pair do |label,url|
       - if current_url == url
         %span.about_list_item_selected= label
       -else
         %a.about_list_item{:href=>url}= label
       %hr.narrow_hr
-

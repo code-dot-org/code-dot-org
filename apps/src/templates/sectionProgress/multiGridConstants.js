@@ -23,6 +23,7 @@ export const progressStyles = {
     ':hover': {
       cursor: 'pointer'
     },
+    textAlign: 'center'
   },
   lessonOfInterest: {
     backgroundColor: color.teal,
@@ -30,8 +31,9 @@ export const progressStyles = {
     fontSize: 18,
     paddingTop: 10,
     paddingBottom: 10,
+    paddingLeft: 10,
     paddingRight: 10,
-    paddingLeft: 16,
+    textAlign: 'center'
   },
   multigrid: {
     border: '1px solid',

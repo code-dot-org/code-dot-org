@@ -34,7 +34,6 @@ class Gamelab < Blockly
     hide_animation_mode
     start_in_animation_tab
     all_animations_single_frame
-    show_d_pad
     soft_buttons
     submittable
     data_properties
@@ -48,6 +47,7 @@ class Gamelab < Blockly
     teacher_markdown
     auto_run_setup
     custom_setup_code
+    validation_code
   )
 
   # List of possible skins, the first is used as a default.
@@ -68,7 +68,6 @@ class Gamelab < Blockly
         level_num: 'custom',
         properties: {
           code_functions: JSON.parse(palette),
-          show_d_pad: true,
           show_debug_watch: true
         }
       )

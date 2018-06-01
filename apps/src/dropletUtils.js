@@ -93,7 +93,8 @@ export const dropletBuiltinConfigBlocks = [
   {func: 'Math.abs', category: 'Math', type: 'value', params: ['__'], docFunc: 'mathAbs' },
   {func: 'Math.max', category: 'Math', type: 'value', params: ['__'], docFunc: 'mathMax' },
   {func: 'Math.min', category: 'Math', type: 'value', params: ['__'], docFunc: 'mathMin' },
-  {func: 'Math.random', category: 'Math', type: 'value', docFunc: 'mathRandom' }
+  {func: 'Math.random', category: 'Math', type: 'value', docFunc: 'mathRandom' },
+  {func: 'Math.pow', category: 'Math', type: 'value', params: ['__'], docFunc: 'mathPow' }
 ];
 
 /**
@@ -132,6 +133,7 @@ standardConfig.blocks = [
   {func: 'mathMax', block: 'Math.max(__)', category: 'Math' },
   {func: 'mathMin', block: 'Math.min(__)', category: 'Math' },
   {func: 'mathRandom', block: 'Math.random()', category: 'Math' },
+  {func: 'mathPow', block: 'Math.pow(__, __)', category: 'Math' },
 
   // Variables
   {func: 'declareAssign_x', block: 'var x = __;', category: 'Variables' },
@@ -810,9 +812,15 @@ export function setParamAtIndex(index, value, block) {
   // We have a block. Parse it to find our first socket.
   let token = block.start;
   let paramNumber = -1;
+  // Accounts for the additional socket depth from using arrays and indices as
+  // parameters
+  let socketDepth = 0;
   do {
     if (token.type === 'socketStart') {
-      paramNumber++;
+      if (socketDepth === 0) {
+        paramNumber++;
+      }
+      socketDepth++;
       if (paramNumber !== index) {
         token = token.next;
         continue;
@@ -822,6 +830,13 @@ export function setParamAtIndex(index, value, block) {
       editor.populateSocket(socket, value);
       editor.redrawPalette();
       editor.redrawMain();
+      break;
+    }
+    if (token.type === 'socketEnd') {
+      socketDepth--;
+      if (socketDepth < 0) {
+        break;
+      }
     }
     token = token.next;
   } while (token);

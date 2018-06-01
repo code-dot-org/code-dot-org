@@ -67,6 +67,7 @@ class CensusForm extends Component {
         followUpMore: '',
         acceptedPledge: false,
         share: '',
+        optIn: '',
         existingInaccuracyReason: ''
       },
       errors: {
@@ -274,6 +275,7 @@ class CensusForm extends Component {
         tenHours: this.validateNotBlank(this.state.submission.tenHours),
         twentyHours: this.validateNotBlank(this.state.submission.twentyHours),
         share: this.validateNotBlank(this.state.submission.share),
+        optIn: this.validateNotBlank(this.state.submission.optIn),
         existingInaccuracyReason: this.validateExistingInaccuracyReason()
       }
     }, this.censusFormSubmit);
@@ -293,6 +295,7 @@ class CensusForm extends Component {
         !errors.twentyHours &&
         !errors.country &&
         !errors.share &&
+        !errors.optIn &&
         !errors.existingInaccuracyReason) {
       $.ajax({
         url: "/dashboardapi/v1/census/CensusYourSchool2017v7",
@@ -334,6 +337,7 @@ class CensusForm extends Component {
                             errors.country ||
                             errors.nces ||
                             errors.share ||
+                            errors.optIn ||
                             errors.existingInaccuracyReason);
     const US = submission.country === "United States";
     const prefillData = this.props.prefillData || {};
@@ -762,6 +766,37 @@ class CensusForm extends Component {
               <span style={styles.asterisk}> *</span>
             </label>
           </div>
+
+          <div>
+            {errors.optIn && (
+               <div style={styles.errors}>
+                 Required. Please let us know if we can email you.
+               </div>
+            )}
+            <span style={styles.share}>
+              Can we email you about updates to our courses, local opportunities, or other computer science news?
+              &nbsp;
+              <a
+                href="/privacy"
+                target="_blank"
+              >
+                (See our privacy policy)
+              </a>
+            </span>
+
+            <select
+              name="opt_in"
+              value={this.state.submission.optIn}
+              onChange={this.handleChange.bind(this, 'optIn')}
+              style={styles.dropdown}
+            >
+              <option value="" disabled>{i18n.yesNo()}</option>
+              <option value="true">{i18n.yes()}</option>
+              <option value="false">{i18n.no()}</option>
+            </select>
+            <span style={styles.asterisk}> *</span>
+          </div>
+
           <div>
             <label>
               <div style={styles.question}>
@@ -792,6 +827,7 @@ class CensusForm extends Component {
               </label>
             </div>
           )}
+
           {showErrorMsg && (
             <div style={styles.errors}>
               {i18n.censusRequired()}

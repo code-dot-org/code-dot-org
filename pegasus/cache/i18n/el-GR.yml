@@ -508,6 +508,9 @@
   homepage_header_donors: Το Code.org ευχαριστεί τους υποστηρικτές του
   homepage_donors_seall: Εμφάνιση όλων
   homepage_donors_donate: Κάντε μια δωρεά
+  homepage_below_hero_announcement_text: We care about your privacy and are making
+    some updates to our privacy policy, effective May 25.
+  homepage_below_hero_announcement_link_text: Μάθετε περισσότερα
   contact_form_topic_student: Είμαι μαθητής
   contact_form_topic_parent: Είμαι γονέας
   contact_form_topic_teacher: Είμαι δάσκαλος/εκπαιδευτικός
@@ -687,8 +690,10 @@
   video_title_real_madrid: Η Ώρα του Κώδικα με την Ρεάλ Μαδρίτης
   video_title_marco_belinelli: Η Ώρα του Κώδικα με τον Μάρκο Μπελινέλι
   video_title_chris_bosh: Ο Κρις Μπος για την Πληροφορική
+  video_title_my_name_is_aracely: My Name is Aracely
   video_1min: 1 λεπτό
   video_2min: 2 λεπτά
+  video_3min: 3 min
   video_5min: 5 λεπτά
   speak_another_language: Μιλάτε άλλη γλώσσα;
   help_translate: Βοηθήστε μας με τη μετάφραση.
@@ -759,6 +764,10 @@
   volunteer_engineer_submission_field_email_desc: Η διεύθυνση email σας δεν πρόκειται
     ποτέ να κοινοποιηθεί, αλλά θα σας στέλνουμε αιτήσεις από τους εκπαιδευτικούς.
   volunteer_engineer_submission_field_email_placeholder: Διεύθυνση email
+  volunteer_engineer_submission_field_email_preference: Can we email you about updates
+    to our courses, volunteer opportunities, or other computer science news?
+  volunteer_engineer_submission_field_email_preference_yes: Ναι
+  volunteer_engineer_submission_field_email_preference_no: Όχι
   volunteer_engineer_submission_final_paragraph: Θα εμφανιστείτε στο χάρτη για τοπικούς
     δασκάλους ώστε να επικοινωνήσουμε μαζί σας για την Ώρα του Κώδικα ή άλλες δυνατότητες
     εθελοντισμού. Το email σας και η ακριβή σας διεύθυνση δεν θα κοινοποιηθούν ποτέ
@@ -1312,6 +1321,20 @@
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Unit 5: Data and Society'
   csd6_name: 'Unit 6: Physical Computing'
+  csd1-2018_name: 'Unit 1: Problem Solving'
+  csd2-2018_name: 'Unit 2: Web Development'
+  csd3-2018_name: 'Unit 3: Animation and Games'
+  csd4-2018_name: 'Unit 4: The Design Process'
+  csd5-2018_name: 'Unit 5: Data and Society'
+  csd6-2018_name: 'Unit 6: Physical Computing'
+  csp1-2018_name: 'Unit 1: The Internet'
+  csp2-2018_name: 'Unit 2: Digital Information'
+  csp3-2018_name: 'Unit 3: Algorithms and Programming'
+  csp4-2018_name: 'Unit 4: Big Data and Privacy'
+  csp5-2018_name: 'Unit 5: Building Apps'
+  csp-explore-2018_name: 'AP: Explore PT Prep'
+  csp-create-2018_name: 'AP: Create PT Prep'
+  csppostap-2018_name: 'Post AP: Databases in Apps'
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
@@ -1322,6 +1345,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: Πλήρης εξέταση - 50 ερωτήσεις
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'
@@ -1352,8 +1376,10 @@
   csf_international_category_name: Διεθνείς Βασικές Αρχές Επιστήμης Υπολογιστών
   csf2_draft_category_name: 'Υπό ανάπτυξη: Μαθήματα A - F'
   csd_category_name: 'Under Development: CS Discoveries'
+  csd_2018_category_name: CS Discoveries ('18-'19)
   csp_category_name: Αρχές της Επιστήμης των Υπολογιστών ' 15-'16
   csp17_category_name: Βασικές Αρχές της Επιστήμης των Υπολογιστών ' 16-'17
+  csp_2018_category_name: CS Principles ('18-'19)
   cspexams_category_name: Τεστ στις Βασικές Αρχές της Επιστήμης των Υπολογιστών
   research_studies_category_name: Research Studies
   applab_name: Εργαστήριο εφαρμογών
@@ -2185,6 +2211,7 @@
   header_documentation: Documentation
   csp_name: Βασικές Αρχές της Επιστήμης των Υπολογιστών ' 16-'17
   csd_name: CS Discoveries
+  csd_2018_name: CS Discoveries
   full_course_category_name: Full Courses
   user_header_label: Γεια σου %{username}
   user_header_settings: Ο λογαριασμός μου
@@ -2245,5 +2272,5 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  video_title_my_name_is_aracely: My Name is Aracely
-  video_3min: 3 min
+  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
+    policy)"

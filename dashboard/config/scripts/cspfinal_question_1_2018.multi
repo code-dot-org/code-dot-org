@@ -1,0 +1,14 @@
+name 'CSPFinal_Question_1_2018'
+layout 'wrap'
+right 'Add a bit to <code>studentID</code> to double the number of IDs that the database can represent.'
+wrong 'Double the number of bits in <code>studentID</code> to double the number of IDs that the database can represent'
+wrong 'Keep using an 8-bit number for <code>studentID</code> but reserve the first bit to indicate middle school or high school.'
+wrong 'Remove a bit from <code>studentID</code> to make room for incoming students'
+
+markdown <<MARKDOWN
+A middle school is expanding to open a high school next year, doubling the total number of students. The school keeps a database in which each student’s unique ID number is stored as an 8 bit number called `studentID`. Before the arrival of the new students almost every 8 bit number has already been assigned to a student. Of the options provided below, which is the smallest change to the way `studentID` is represented necessary to ensure each incoming student receives a unique ID?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+NOTE: Doubling the number of bits would obviously make room for more student IDs, but it's inaccurate to say that that doubles the number of possible IDs.  If the number of bits went from 8 to 16, it's 256 TIMES AS MANY possible ids.  8 bits = 256 values and 16 bits = 65,536 IDs.  
+MARKDOWN

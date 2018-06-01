@@ -1,0 +1,4 @@
+name 'csp-pre-survey-2017-q37_2018'
+question 'Before your current computer science class, had you taken any other computer science classes at school?'
+right 'yes'
+right 'no'

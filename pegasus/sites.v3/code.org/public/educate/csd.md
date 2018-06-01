@@ -254,7 +254,7 @@ Some schools may want to use parts of the CS Discoveries curriculum without runn
 * Containers that can hold water
 * [Adafruit's Circuit Playground Boards](/circuitplayground) and Micro USB cables. The curriculum is designed for a ratio of 2 students to 1 board & 1 usb cable.***
 
-\*** Participants in our 2018-19 Professional Learning Program who are teaching in schools with 50%+ free and reduced meal rates are eligibe to receive a subsidized Adafruit Circuit Playground classroom kit if they are implementing the full course. This kit contains 15 boards and accessories and supports a classroom of 30 students, assuming a 2:1 ratio of students to boards. To learn more about the classroom kit, software requirements, and the details of the subsidy visit [code.org/circuitplayground](/circuitplayground)  \***
+\*** Participants in our 2018-19 Professional Learning Program who are teaching in schools with 50%+ free and reduced meal rates are eligible to receive a subsidized Adafruit Circuit Playground classroom kit if they are implementing the full course. This kit contains 15 boards and accessories and supports a classroom of 30 students, assuming a 2:1 ratio of students to boards. To learn more about the classroom kit, software requirements, and the details of the subsidy visit [code.org/circuitplayground](/circuitplayground)  \***
 
 ### <a name="pathway"></a>How does CS Discoveries fit with the other Code.org courses?
 

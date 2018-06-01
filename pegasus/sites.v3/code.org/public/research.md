@@ -61,37 +61,7 @@ In the meantime, we've done one experiment with researchers at Stanford Universi
 
 We'd like to take this further and look at what factors influence learning. For example, how do different puzzle types promote learning? How well do students transfer learning from one type of puzzle to another? How can we give students the right type of hints at the right time? What can we do to help students persist through hard problems instead of giving up? How do external factors (gender, age, class size, geography, etc.) impact student learning and what can we do to support diverse classes?
 
-If you're interested in working with us on these questions (and more), sign up below. We'll share our raw data with you as we publish it.
-
-### Sign up to hear when we open up this data
-
-<!-- Begin MailChimp Signup Form -->
-<link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-  #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif;  width:500px;}
-  /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-     We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-</style>
-<div id="mc_embed_signup">
-<form action="//code.us6.list-manage.com/subscribe/post?u=cabadc8d10a257f2cd70c583e&amp;id=0302f9f64e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-    <div id="mc_embed_signup_scroll">
-  <div class="mc-field-group">
-  <label for="mce-EMAIL">Email Address </label>
-  <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-</div>
-  <div id="mce-responses" class="clear">
-    <div class="response" id="mce-error-response" style="display:none"></div>
-    <div class="response" id="mce-success-response" style="display:none"></div>
-  </div>
-    <div style="position: absolute; left: -5000px;"><input type="text" name="b_cabadc8d10a257f2cd70c583e_0302f9f64e" tabindex="-1" value=""></div>
-    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-    </div>
-</form>
-</div>
-
-<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-
-
+If you're interested in working with us on these questions (and more), email research@code.org.
 
 ## Data from 2 puzzles from Hour of Code 2013
 

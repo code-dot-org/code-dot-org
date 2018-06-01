@@ -1,4 +1,4 @@
-var TestResults = require('@cdo/apps/constants.js').TestResults;
+import {TestResults} from '@cdo/apps/constants';
 var calcMsg = require('@cdo/apps/calc/locale');
 
 var level = {

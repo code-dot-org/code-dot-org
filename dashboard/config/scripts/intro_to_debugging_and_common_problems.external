@@ -39,7 +39,7 @@ In the next few levels we'll practice debugging a few common types of errors.  T
 
  * The program runs but doesn't do what you think it should.
  * Can be tricky to fix because there might not be an error message
- * Fix by retracing your steps, being humble, and trying to understand why the computer is interpretting what you wrote the way it is.
+ * Fix by retracing your steps, being humble, and trying to understand why the computer is interpreting what you wrote the way it is.
  
 ### Click Continue to start practicing
 MARKDOWN
