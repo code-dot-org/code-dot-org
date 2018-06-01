@@ -202,9 +202,12 @@ module Pd::WorkshopSurveyResultsHelper
               # to an array of all of their specific responses
               facilitator_responses = Hash.new []
               surveys_for_session[:facilitator]&.each do |survey|
-                facilitator_responses[survey['facilitatorId']] = facilitator_responses[survey['facilitatorId']].append survey[q_key]
+                facilitator_responses[survey['facilitatorId'].to_i] = facilitator_responses[survey['facilitatorId']].append survey[q_key]
               end
 
+              if current_user&.facilitator?
+                facilitator_responses.slice! current_user.id
+              end
               session_summary[:facilitator][q_key] = facilitator_responses
             else
               # Otherwise, we just want a list of all responses
