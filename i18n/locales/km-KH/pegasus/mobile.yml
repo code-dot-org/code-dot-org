@@ -550,6 +550,7 @@
   volunteer_engineer_submission_field_email_desc: "អាសយដ្ឋានអ៊ីមែលរបស់អ្នកនឹងមិនត្រូវបានចែករំលែកទេប៉ុន្តែយើងនឹងផ្ញើសំណើពីគ្រូទៅកាន់អ្នក។"
   volunteer_engineer_submission_field_email_placeholder: "អាសយដ្ឋាន​អ៊ីមែល"
   volunteer_engineer_submission_field_email_preference: "Can we email you about updates to our courses, volunteer opportunities, or other computer science news?"
+  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy policy)"
   volunteer_engineer_submission_field_email_preference_yes: 'យល់ព្រម'
   volunteer_engineer_submission_field_email_preference_no: 'ទេ'
   volunteer_engineer_submission_final_paragraph: "អ្នកនឹងត្រូវបានចុះបញ្ជីនៅលើផែនទីសម្រាប់គ្រូបង្រៀនក្នុងតំបន់ដើម្បីទាក់ទងអ្នកសម្រាប់កម្មវិធី Hour of Code ឬឱកាសការងារស្ម័គ្រចិត្តផ្សេងទៀត។ អ៊ីម៉ែលនិងអាសយដ្ឋានពិតប្រាកដរបស់អ្នកនឹងមិនត្រូវបានចែករំលែកដោយពួកយើងទេ។ ប៉ុន្តែព័ត៌មានផ្សេងទៀត (រួមទាំងទីតាំងប្រហាក់ប្រហែល) នឹងត្រូវបានមើលឃើញជាសាធារណៈដោយគ្រូក្នុងតំបន់។"
@@ -957,12 +958,26 @@
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Unit 5: Data and Society'
   csd6_name: 'Unit 6: Physical Computing'
+  csd1-2017_name: 'Unit 1: Problem Solving'
+  csd2-2017_name: 'Unit 2: Web Development'
+  csd3-2017_name: 'Unit 3: Animation and Games'
+  csd4-2017_name: 'Unit 4: The Design Process'
+  csd5-2017_name: 'Unit 5: Data and Society'
+  csd6-2017_name: 'Unit 6: Physical Computing'
   csd1-2018_name: 'Unit 1: Problem Solving'
   csd2-2018_name: 'Unit 2: Web Development'
   csd3-2018_name: 'Unit 3: Animation and Games'
   csd4-2018_name: 'Unit 4: The Design Process'
   csd5-2018_name: 'Unit 5: Data and Society'
   csd6-2018_name: 'Unit 6: Physical Computing'
+  csp1-2017_name: 'Unit 1: The Internet'
+  csp2-2017_name: 'Unit 2: Digital Information'
+  csp3-2017_name: 'Unit 3: Algorithms and Programming'
+  csp4-2017_name: 'Unit 4: Big Data and Privacy'
+  csp5-2017_name: 'Unit 5: Building Apps'
+  csp-explore-2017_name: 'AP: Explore PT Prep'
+  csp-create-2017_name: 'AP: Create PT Prep'
+  csppostap-2017_name: 'Post AP: Databases in Apps'
   csp1-2018_name: 'Unit 1: The Internet'
   csp2-2018_name: 'Unit 2: Digital Information'
   csp3-2018_name: 'Unit 3: Algorithms and Programming'

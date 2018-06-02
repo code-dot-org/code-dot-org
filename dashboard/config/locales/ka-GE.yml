@@ -166,6 +166,7 @@
     error: მოხდა შეცდომა.
     email_preference_question: Can we email you about updates to our courses, local
       learning opportunities, or other computer science news?
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: დიახ
     email_preference_no: არა
     email_preference_required: You must specify an email preference.
@@ -644,6 +645,8 @@
   gender:
     male: მამრობითი
     female: მდედრობითი
+    non_binary: Non-binary
+    not_listed: Preferred term not listed
     none: პასუხისგან თავის შეკავება
   user_type:
     student: მოსწავლე

@@ -1,6 +1,20 @@
 "fil":
   data:
     script:
+      category:
+        csd_category_name: CS Discoveries ('17-'18)
+        csd_2018_category_name: CS Discoveries ('18-'19)
+        csf_category_name: CS Fundamentals
+        csf_international_category_name: Internasyonal na CS Fundamentals
+        csf2_draft_category_name: 'Kasalukuyang Ginagawa: Mga Kursong A - F'
+        csp_category_name: "'15-'16 na mga Prinsipyo ng CS"
+        csp_2018_category_name: CS Principles ('18-'19)
+        cspexams_category_name: Pag-ensayo na Pagsubok sa mga Prinsipyo ng CS
+        csp17_category_name: Mga Prinsipyo ng CS
+        full_course_category_name: Buong mga Kurso
+        hoc_category_name: Hour of Code
+        math_category_name: Math
+        research_studies_category_name: Research Studies
       name:
         course1:
           title: Kurso 1
@@ -11156,6 +11170,74 @@
               name: Mga Kondisyonal sa Bee
             Until Loops in Maze:
               name: Until Loops in Maze
+            Programming in Maze:
+              name: Pag-Program sa Maze
+            Debugging in Maze:
+              name: Pagde-debug sa Maze
+            Programming in Collector:
+              name: Pag-program sa Kolektor
+            Programming in Artist:
+              name: Pag-program sa Artist
+            'Loops: Getting Loopy':
+              name: 'Mga Loops: Pagiging Loopy'
+            Loops with Rey and BB-8:
+              name: Mga Loops kasama sina Rey at BB-8
+            Copyright and Creativity:
+              name: Copyright and Creativity
+            'Concept Practice with Minecraft ':
+              name: 'Concept Practice with Minecraft '
+            Nested Loops in Bee:
+              name: Mga Naka-Nest na mga Loop sa Bee
+            Nested Loops in Frozen:
+              name: Naka-nest na mga Loop sa Frozen
+            Conditionals with Cards:
+              name: Mga Conditional gamit ang mga Card
+            Conditionals & Loops in Harvester:
+              name: Mga Kondisyonal & Mga Loop sa Harvester
+            'Functions: Songwriting':
+              name: 'Mga Function: Pagsusulat ng Awit'
+            Functions in Minecraft:
+              name: Functions in Minecraft
+            Functions in Harvester:
+              name: Functions in Harvester
+            Functions in Artist:
+              name: Mga Function sa Artist
+            Screen Out the Mean:
+              name: I-Screen Palabas ang Mean
+            Determine the Concept:
+              name: Tukuyin ang Konsepto
+            Build a Flappy Game:
+              name: Bumuo ng Flappy na Laro
+            The Power of Words:
+              name: Ang Kapangyarihan ng mga Salita
+            Envelope Variables:
+              name: Balot ng mga Variables
+            Variables as Constant in Artist:
+              name: Variables as Constant in Artist
+            Variables that Change in Bee:
+              name: Variables that Change in Bee
+            Variables that Change in Artist:
+              name: Variables that Change in Artist
+            For Loop Fun:
+              name: Saya sa For Loop
+            Learning Sprites with Sprite Lab:
+              name: Learning Sprites with Sprite Lab
+            Alien Dance Party with Sprite Lab:
+              name: Alien Dance Party with Sprite Lab
+            Pet Giraffe with Sprite Lab:
+              name: Pet Giraffe with Sprite Lab
+            Binary Bracelets:
+              name: Binary na mga Pulseras
+            'Unplugged: Binary':
+              name: 'Unplugged: Binary'
+            Artist Binary:
+              name: Artist na Binary
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Pag-crowdsourcing
+            Relay Programming:
+              name: Relay Programming
         courseb-2018:
           title: Kursong B
           description: Alamin ang mga pangunahing alituntunin sa computer science
@@ -12258,6 +12340,8 @@
               name: Yunit 1 Kabanata 2 Pagtatasa
               description_student: ''
               description_teacher: ''
+            Sending Text:
+              name: Sending Text
         csd1-2018:
           title: CSD Unit 1 - Problem Solving
           description: " \r\nUnit 1 is a highly interactive and collaborative introduction
@@ -13874,6 +13958,14 @@
               name: Novice Reflection Overview
             Monday:
               name: Monday
+            Day 1:
+              name: Day 1
+            Day 2:
+              name: Day 2
+            Day 3:
+              name: Day 3
+            Day 4:
+              name: Day 4
           title: CS Discoveries Novice Reflections 2018-2019
           description_audience: CS Discoveries Facilitators in Training 2018-2019
           description_short: 'Novice reflection materials for CS Discoveries facilitators
@@ -13895,6 +13987,16 @@
               name: Huwebes
             Wrap Up:
               name: Tapusin Na
+            Apprentice Reflection Overview:
+              name: Apprentice Reflection Overview
+            Day 1:
+              name: Day 1
+            Day 2:
+              name: Day 2
+            Day 3:
+              name: Day 3
+            Day 4:
+              name: Day 4
           title: CS Discoveries Apprentice Reflections 2018-2019
           description_audience: CS Discoveries Facilitators in Training 2018-2019
           description_short: 'Apprentice reflection materials for CS Discoveries facilitators
@@ -13916,6 +14018,16 @@
               name: Huwebes
             Wrap Up:
               name: Tapusin Na
+            Monday:
+              name: Monday
+            Day 1:
+              name: Day 1
+            Day 2:
+              name: Day 2
+            Day 3:
+              name: Day 3
+            Day 4:
+              name: Day 4
           title: CS Principles Novice Reflections 2018-2019
           description_audience: CS Principles Facilitators in Training 2018-2019
           description_short: 'Novice reflection materials for CS Principles facilitators
@@ -13937,6 +14049,16 @@
               name: Huwebes
             Wrap Up:
               name: Tapusin Na
+            Apprentice Reflection Overview:
+              name: Apprentice Reflection Overview
+            Day 1:
+              name: Day 1
+            Day 2:
+              name: Day 2
+            Day 3:
+              name: Day 3
+            Day 4:
+              name: Day 4
           title: CS Principles Novice Reflections 2018-2019
           description_audience: CS Principles Facilitators in Training 2018-2019
           description_short: 'Novice reflection materials for CS Principles facilitators
@@ -13946,3 +14068,85 @@
             will find reflection prompts for each day of your in-person 5-day summer
             workshop. This questions will be the foundation of work we do at the Facilitator
             Training Weekend.
+        pre-express-2018:
+          title: Hindi Marunong Magbasa Express
+          description: Alamin ang mga pangunahing alituntunin sa computer science
+            at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling
+            laro o istorya na maaari mong ibahagi.
+          description_short: 'Isang introduksyon sa computer science para sa mga hindi
+            marunong magbasa: pinagsama ang pinakamahusay sa aming kindergarten at
+            unang baitang na mga kurso.'
+          description_audience: 'Mga Edad: 4-8'
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Pag-dedebug: Hindi nakitang mga Bug'
+              description_student: ''
+              description_teacher: ''
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: 'Pagtitiyaga & Mga Kabiguan: Si Stevie at ang mga Holen'
+              description_student: ''
+              description_teacher: ''
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Mga Totoong-buhay na Algoritmo: Pagtatanim ng Buto'
+              description_student: ''
+              description_teacher: ''
+            Learn to Drag and Drop:
+              name: Matutong Mag-Drag at Mag-Drop
+              description_student: ''
+              description_teacher: ''
+            'Online Safety: Your Digital Footprint':
+              name: 'Online Safety: Your Digital Footprint'
+              description_student: ''
+              description_teacher: ''
+            'Programming: My Robotic Friends':
+              name: 'Pag-Program: Ang Aking mga Robotik na mga Kaibigan'
+              description_student: ''
+              description_teacher: ''
+            Programming in Maze:
+              name: Pag-Program sa Maze
+              description_student: ''
+              description_teacher: ''
+            'Programming: Star Wars':
+              name: 'Pag-Program: Star Wars'
+              description_student: ''
+              description_teacher: ''
+            'Loops: My Loopy Robotic Friends':
+              name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
+              description_student: ''
+              description_teacher: ''
+            Loops in Collector:
+              name: Loops in Collector
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+              description_student: ''
+              description_teacher: ''
+            Events in Play Lab:
+              name: Events in Play Lab
+              description_student: ''
+              description_teacher: ''
+            Spelling Bee:
+              name: Spelling Bee
+              description_student: ''
+              description_teacher: ''
+            Move It, Move It:
+              name: Galawin ito, Galawin ito
+            Sequencing with Scrat:
+              name: Sequencing with Scrat
+            Your Digital Footprint:
+              name: Ang Iyong Digital na Bakas
+            Programming in Ice Age:
+              name: Programming in Ice Age
+            Copyright and Creativity:
+              name: Copyright and Creativity
+            Programming with Rey and BB-8:
+              name: Pag-Program kasama sina Rey at BB-8
+            Loops in Ice Age:
+              name: Loops in Ice Age
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: 'Persistence & Frustration: Stevie and the Big Project'

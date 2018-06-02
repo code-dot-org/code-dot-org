@@ -2,9 +2,9 @@
   data:
     course:
       name:
-        csp:
+        csp-2017:
           assignment_family_title: Computer Science Principles
-          title: Принципы информатики
+          title: Computer Science Principles ('17-'18)
           version_title: "'17-'18"
           description_student: Осенью 2016 года Совет колледжа запустил свой новейший
             курс AP®, основанный на принципах AP-программирования. Курс знакомит студентов
@@ -23,18 +23,20 @@
             недостаточно представлен существенными вычислительными инструментами и
             многодисциплинарными возможностями.
           description_short: Узнайте основные принципы информатики.
-        csd:
+        csd-2017:
           assignment_family_title: Computer Science Discoveries
-          title: Открытия информатики
+          title: Computer Science Discoveries ('17-'18)
           version_title: "'17-'18"
-          description_student: '"Открытия информатики" - вводный курс информатики,
-            который даёт возможность студентам создавать подлинные артефакты и заниматься
-            информатикой как средство для творчества, общения, решения проблем и веселья.'
-          description_teacher: '"Открытия информатики" - вводный курс информатики,
-            который даёт возможность студентам создавать подлинные артефакты и заниматься
-            информатикой как средство для творчества, общения, решения проблем и веселья.'
-          description_short: Вводный курс информатики, который даёт возможность студентам
-            создавать подлинные артефакты.
+          description_student: Computer Science Discoveries (CS Discoveries) is an
+            introductory computer science course that empowers students to create
+            authentic artifacts and engage with computer science as a medium for creativity,
+            communication, problem solving, and fun.
+          description_teacher: Computer Science Discoveries (CS Discoveries) is an
+            introductory computer science course that empowers students to create
+            authentic artifacts and engage with computer science as a medium for creativity,
+            communication, problem solving, and fun.
+          description_short: An introductory computer science course that empowers
+            students to create authentic artifacts.
         allthethingscourse:
           title: allthethingscourse
           description_short: This is a course for allthethings

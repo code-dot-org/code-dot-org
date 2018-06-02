@@ -141,7 +141,7 @@
     accept_terms: アカウントを作成することに、同意が必要です。
     error: An error occurred.
     email_preference_question: 当社のコースについての最新情報、各地域における機会、コンピュータサイエンスに関するニュースなどを電子メールを介して送付してもよろしいですか？
-    email_preference_privacy: （Code.orgのプライバシーポリシーをご覧ください）
+    email_preference_privacy: "（Code.orgのプライバシーポリシーをご覧ください）"
     email_preference_yes: はい
     email_preference_no: いいえ
     email_preference_required: You must specify an email preference.
@@ -521,6 +521,8 @@
   gender:
     male: 男性
     female: 女性
+    non_binary: Non-binary
+    not_listed: Preferred term not listed
     none: 答えたくない
   user_type:
     student: 生徒

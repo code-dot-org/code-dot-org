@@ -161,6 +161,7 @@
     error: An error occurred.
     email_preference_question: Can we email you about updates to our courses, local
       learning opportunities, or other computer science news?
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: Taip
     email_preference_no: Ne
     email_preference_required: You must specify an email preference.
@@ -617,6 +618,8 @@
   gender:
     male: Vyras
     female: Moteris
+    non_binary: Non-binary
+    not_listed: Preferred term not listed
     none: Nenoriu atsakyti
   user_type:
     student: Mokinys

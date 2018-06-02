@@ -1579,6 +1579,8 @@ vi:
         New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
         New Play Lab Project_callout2: Nhấn "Run" để lưu và thử chương trình của bạn
         sign_in_to_save_project: Muốn xem lại dự án này lúc khác? Hãy đăng kí để lưu dự án này vào tài khoản của bạn!
+      courseF_playlab_brokenText_callout:
+        courseF_playlab_variables5c_1: You will find your variable block in here.
       courseF_playlab_embed_vars_callout: { }
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: The toolbox has been organized into categories to make it easier to find the blocks you need.

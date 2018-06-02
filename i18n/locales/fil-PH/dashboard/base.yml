@@ -128,7 +128,8 @@ fil:
     field_is_required: "ay kailangan"
     accept_terms: "Kailangan mong sumang-ayon para gumawa ng account"
     error: "May problemang naganap."
-    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: "Oo"
     email_preference_no: "Hindi"
     email_preference_required: "You must specify an email preference."
@@ -467,6 +468,8 @@ fil:
   gender:
     male: 'Lalaki'
     female: 'Babae'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: 'Mas mabuti na hindi sagutin'
   user_type:
     student: 'Estudyante'

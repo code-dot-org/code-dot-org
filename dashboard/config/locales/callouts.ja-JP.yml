@@ -1876,6 +1876,8 @@
         New Play Lab Project_callout2: "「実行（じっこう）」ボタンをおすと、プログラムを保存（ほぞん）して、実行します。"
         sign_in_to_save_project: Want to access your project later? Sign in to save
           this project to your account!
+      courseF_playlab_brokenText_callout:
+        courseF_playlab_variables5c_1: You will find your variable block in here.
       courseF_playlab_embed_vars_callout: {}
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: The toolbox has been organized into categories
