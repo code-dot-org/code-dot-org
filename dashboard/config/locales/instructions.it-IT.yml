@@ -8880,48 +8880,49 @@
       courseA_bee_seq8_instruction: Make sure to get nectar from every flower!
       courseA_bee_seq9_instruction: Make sure to get nectar from every flower!
       courseA_collector_loops1_instruction: |-
-        Muovi Laurel raccogliendo più tesori che puoi! <br>
-        (Se non sei riuscito a raccogliere tutti i tesori, ma sei soddisfatto, premi il pulsante "Termina")
-      courseA_collector_loops10_instruction: Aiuta Laurel a raccogliere tutti i tesori
+        Muovi Laurel raccogliendo più diamanti che puoi! <br>
+        (Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante "Termina")
+      courseA_collector_loops10_instruction: Aiuta Laurel a raccogliere tutti i diamanti
         lungo questo percorso.
       courseA_collector_loops10_2018_instruction: Aiuta Laurel a raccogliere tutti
-        i tesori lungo questo percorso.
-      courseA_collector_loops11_instruction: Aiuta Laurel a raccogliere tutti i tesori
+        i diamanti lungo questo percorso.
+      courseA_collector_loops11_instruction: Aiuta Laurel a raccogliere tutti i diamanti
         da questa grotta.
       courseA_collector_loops11_2018_instruction: Aiuta Laurel a raccogliere tutti
-        i tesori da questa grotta.
-      courseA_collector_loops12_instruction: '*"Evviva! Raccogli più tesori che puoi!"*'
+        i diamanti da questa grotta.
+      courseA_collector_loops12_instruction: '*"Evviva! Raccogli più diamanti che
+        puoi!"*'
       courseA_collector_loops12_2018_instruction: '*"Evviva! Raccogli più tesori che
         puoi!"*'
       courseA_collector_loops1_2018_instruction: |-
         Muovi Laurel raccogliendo più tesori che puoi! <br>
         (Se non sei riuscito a raccogliere tutti i tesori, ma sei soddisfatto, premi il pulsante "Termina")
-      courseA_collector_loops2_instruction: Raccogli tutte e tre le gemme per completare
+      courseA_collector_loops2_instruction: Raccogli tutti e tre i diamanti per completare
         l'esercizio.
-      courseA_collector_loops2_2018_instruction: Raccogli tutte e tre le gemme per
+      courseA_collector_loops2_2018_instruction: Raccogli tutti e tre i diamanti per
         completare l'esercizio.
       courseA_collector_loops4_instruction: Correggi il percorso di Laurel per raccogliere
-        tutti i tesori.
+        tutti i diamanti.
       courseA_collector_loops4_2018_instruction: Correggi il percorso di Laurel per
         raccogliere tutti i tesori.
       courseA_collector_loops5_instruction: Usa quanto imparato sinora per raccogliere
-        tutti i tesori.
+        tutti i diamanti.
       courseA_collector_loops5_2018_instruction: Usa quanto imparato sinora per raccogliere
         tutti i tesori.
       courseA_collector_loops6_instruction: Aggiungi dei blocchi a questo programma
-        per raccogliere tutti i tesori.
+        per raccogliere tutti i diamanti.
       courseA_collector_loops6_2018_instruction: Aggiungi dei blocchi a questo programma
         per raccogliere tutti i tesori.
       courseA_collector_loops7_instruction: Cosa devi aggiungere al codice per raccogliere
-        tutti i tesori?
+        tutti i diamanti?
       courseA_collector_loops7_2018_instruction: Cosa devi aggiungere al codice per
         raccogliere tutti i tesori?
       courseA_collector_loops8_instruction: Scrivi del codice per raccogliere tutti
-        i tesori.
+        i diamanti.
       courseA_collector_loops8_2018_instruction: Scrivi del codice per raccogliere
-        tutti i tesori.
-      courseA_collector_loops9_instruction: "**Sfida:** Le gemme salgono le scale!
-        Scrivi il codice per aiutare Laurel a raccoglierle tutte."
+        tutti i diamanti.
+      courseA_collector_loops9_instruction: "**Sfida:** I diamanti salgono le scale!
+        Scrivi il codice per aiutare Laurel a raccoglierli tutti."
       courseA_collector_loops9_2018_instruction: "**Sfida:** Le gemme salgono le scale!
         Scrivi il codice per aiutare Laurel a raccoglierle tutte."
       courseA_collector_loops_challenge1_instruction: '*"Mi aiuti a trovare alcuni
@@ -8930,9 +8931,9 @@
       courseA_collector_loops_challenge1_2018_instruction: '*"Mi aiuti a trovare alcuni
         errori? So da che parte voglio andare, ma non sono sicuro di quanti passi
         devo fare."*'
-      courseA_collector_loops_challenge2_instruction: 'Raccogli tutto il tesoro! '
-      courseA_collector_loops_challenge2kp_instruction: Raccogli almeno *3* pezzi
-        del tesoro per completare questo esercizio.
+      courseA_collector_loops_challenge2_instruction: 'Raccogli tutti i diamanti! '
+      courseA_collector_loops_challenge2kp_instruction: Raccogli almeno *3* diamanti
+        per completare questo esercizio.
       courseA_collector_loops_challenge2kp_2018_instruction: Raccogli almeno *3* pezzi
         del tesoro per completare questo esercizio.
       courseA_collector_preLoops1_instruction: "This is Laurel the Adventurer! \r\n\r\nPress
@@ -9224,54 +9225,54 @@
         Draw as many X's as you
         can. Can you get 3 in a row?
       courseB_collector_loops1_instruction: Lei è Laurel l'avventuriera! Puoi muoverla
-        per farle raccogliere il tesoro?
-      courseB_collector_loops10_instruction: Aiuta Laurel a raccogliere tutti i tesori
+        per farle raccogliere i diamanti?
+      courseB_collector_loops10_instruction: Aiuta Laurel a raccogliere tutti i diamanti
         da questa grotta.
       courseB_collector_loops10_2018_instruction: Aiuta Laurel a raccogliere tutti
-        i tesori da questa grotta.
-      courseB_collector_loops11_instruction: "Evviva! Raccogli più tesori che puoi!
-        \n(Se non sei riuscito a raccogliere tutti i tesori, ma sei comunque soddisfatto,
+        i diamanti da questa grotta.
+      courseB_collector_loops11_instruction: "Evviva! Raccogli più diamanti che puoi!
+        \n(Se non sei riuscito a raccogliere tutti i diamanti, ma sei comunque soddisfatto,
         premi il pulsante \"Termina\")"
       courseB_collector_loops11_2018_instruction: |-
-        Evviva! Raccogli più tesori che puoi!
-        (Se non sei riuscito a raccogliere tutti i tesori, ma sei soddisfatto, premi il pulsante "Termina")
+        Evviva! Raccogli più diamanti che puoi!
+        (Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante "Termina")
       courseB_collector_loops1_2018_instruction: Lei è Laurel l'avventuriera! Puoi
-        muoverla per farle raccogliere il tesoro?
-      courseB_collector_loops2_instruction: Raccogli tutte e quattro le gemme per
+        muoverla per farle raccogliere i diamanti?
+      courseB_collector_loops2_instruction: Raccogli tutti e quattro i diamanti per
         completare l'esercizio.
-      courseB_collector_loops2_2018_instruction: Raccogli tutte e quattro le gemme
+      courseB_collector_loops2_2018_instruction: Raccogli tutti e quattro i diamanti
         per completare l'esercizio.
-      courseB_collector_loops3_instruction: Come può Laurel raccogliere tutte e cinque
-        le gemme del tesoro utilizzando un solo blocco `E-->`?
+      courseB_collector_loops3_instruction: Come può Laurel raccogliere tutti e cinque
+        i diamanti utilizzando un solo blocco `E-->`?
       courseB_collector_loops3_2018_instruction: Come può Laurel raccogliere tutte
         e cinque le perle del tesoro utilizzando un solo blocco 'E-->'?
       courseB_collector_loops3_predict1_instruction: |-
         How can Laurel collect all
         five piles of gold using only one `E -->` block?
       courseB_collector_loops4_instruction: Correggi il percorso di Laurel per raccogliere
-        tutto il tesoro!
+        tutti i diamanti!
       courseB_collector_loops4_2018_instruction: Correggi il percorso di Laurel per
-        raccogliere tutto il tesoro!
+        raccogliere tutti i diamanti!
       courseB_collector_loops5_instruction: Questo è il programma che risolve il precedente
-        esercizio, modificalo per farmi prendere tutto il tesoro.
+        esercizio, modificalo per farmi prendere tutti i diamanti.
       courseB_collector_loops5_2018_instruction: Questo è il programma che risolve
-        il precedente esercizio, modificalo per farmi prendere tutto il tesoro.
+        il precedente esercizio, modificalo per farmi prendere tutti i diamanti.
       courseB_collector_loops6_instruction: Scopri il codice necessario per aiutare
-        Laurel a prendere tutto il tesoro!
+        Laurel a prendere tutti i diamanti!
       courseB_collector_loops6_2018_instruction: Scopri il codice necessario per aiutare
-        Laurel a prendere tutto il tesoro!
-      courseB_collector_loops7_instruction: Scrivi il codice per raccogliere tutto
-        questo tesoro.
+        Laurel a prendere tutti i diamanti!
+      courseB_collector_loops7_instruction: Scrivi il codice per raccogliere tutti
+        questi diamanti.
       courseB_collector_loops7_2018_instruction: Scrivi il codice per raccogliere
-        tutto questo tesoro.
-      courseB_collector_loops8_instruction: "**Sfida:** Il tesoro si è sparpagliato
-        giù per le scale! Scrivi il codice per aiutare Laurel a recuperarlo."
-      courseB_collector_loops8_2018_instruction: "**Sfida:** Il tesoro si è sparpagliato
-        giù per le scale! Scrivi il codice per aiutare Laurel a recuperarlo."
-      courseB_collector_loops9_instruction: '*"Aiutami a raccogliere il tesoro da
+        tutti questi diamanti.
+      courseB_collector_loops8_instruction: "**Sfida:** I diamanti si sono sparpagliati
+        giù per le scale! Scrivi il codice per aiutare Laurel a recuperarli."
+      courseB_collector_loops8_2018_instruction: "**Sfida:** I diamanti si sono sparpagliati
+        giù per le scale! Scrivi il codice per aiutare Laurel a recuperarli."
+      courseB_collector_loops9_instruction: '*"Aiutami a raccogliere i diamanti in
         questa ripida discesa."*'
-      courseB_collector_loops9_2018_instruction: '*"Aiutami a raccogliere il tesoro
-        da questa ripida discesa."*'
+      courseB_collector_loops9_2018_instruction: '*"Aiutami a raccogliere i diamanti
+        in questa ripida discesa."*'
       courseB_collector_loops_challenge1_instruction: "This time you have limited\nblocks.
         Get all of the treasure! "
       courseB_collector_loops_challenge1_2018_instruction: "This time you have limited\nblocks.
@@ -9279,6 +9280,9 @@
       courseB_collector_loops_challenge2_instruction: |-
         Let's get the treasure! Help
         me across each row then come back to start the next row. Can you find a pattern?
+      courseB_collector_loops_challenge2_2018_instruction: Let's get the treasure!
+        Help me across each row then come back to start the next row. Can you find
+        a pattern?
       courseB_collector_loops_challenge2a_instruction: |-
         Help Laurel get at least
         **5** pieces of treasure to finish this puzzle.
@@ -9565,107 +9569,102 @@
         he runs into the Dinosaur and when he scores a point. This will make your
         game more challenging and fun!\r\n\r\nPlay the game and move Waddles with
         the arrows until you score enough points."
-      courseC_artist_loop1_instruction: Let's add some pizazz!
-      courseC_artist_loop1_2018_instruction: Let's add some pizazz!
+      courseC_artist_loop1_instruction: Aggiungiamo un po' di brio!
+      courseC_artist_loop1_2018_instruction: Aggiungiamo un po' di brio!
       courseC_artist_loops1_instruction: "<b>\"Zombie. Disegnare!\"</b><br>\n<br>\nLo
         zombie vuole disegnare una linea da dove si trova fino al giardino di girasoli.
         Puoi aiutarlo?<br>\n<b>(Il giardino è distante 250 pixel)</b>  "
-      courseC_artist_loops1a_instruction: "Get the artist to the center of the play\narea,
-        then draw a bird using a sticker. "
-      courseC_artist_loops1a_2018_instruction: "Get the artist to the center of the\nplay
-        area, then draw a bird using a sticker. "
+      courseC_artist_loops1a_instruction: Fai in modo che l'artista vada al centro
+        dell'area gioco, quindi fagli disegnare un uccello usando un adesivo.
+      courseC_artist_loops1a_2018_instruction: Fai in modo che l'artista vada al centro
+        dell'area gioco, quindi fagli disegnare un uccello usando un adesivo.
       courseC_artist_loops2_instruction: Ora che lo zombie conosce la strada, aiutalo
         a scavare buche <b>lunghe 25 pixel</b> lungo il percorso per piantare più
         fiori!
-      courseC_artist_loops2a_instruction: |-
-        Now, use a loop to spin your bird around
-        12 times with a 30 degree turn.
-      courseC_artist_loops2a_2018_instruction: |-
-        Now, use a loop to spin your bird
-        around 12 times with a 30 degree turn.
+      courseC_artist_loops2a_instruction: Ora usa un ciclo per disegnare l'uccello
+        12 volte con un angolo di 30 gradi.
+      courseC_artist_loops2a_2018_instruction: Ora usa un ciclo per disegnare l'uccello
+        12 volte con un angolo di 30 gradi.
       courseC_artist_loops3_instruction: Ottimo! Ora che i fiori sono germogliati,
         aiuta lo zombie a piazzare un amico ogni 50 pixel per proteggerli finché non
         crescono.
-      courseC_artist_loops3a_instruction: Now add a bat!
-      courseC_artist_loops3a_2018_instruction: Now add a bat!
+      courseC_artist_loops3a_instruction: Ora aggiungi un pipistrello!
+      courseC_artist_loops3a_2018_instruction: Ora aggiungi un pipistrello!
       courseC_artist_loops4_instruction: Lo zombie ha trovato una fattoria abbandonata!
         Puoi aiutarlo a riportarla in vita incollando adesivi di animali ogni 100
         pixel intorno al bordo?
-      courseC_artist_loops4a_instruction: Try jumping forward by 75 pixels.
-      courseC_artist_loops4a_2018_instruction: Try jumping forward by 75 pixels.
+      courseC_artist_loops4a_instruction: Prova a fare un salto avanti di 75 pixel.
+      courseC_artist_loops4a_2018_instruction: Prova a fare un salto avanti di 75
+        pixel.
       courseC_artist_loops5_instruction: |-
         Grande! Ora è il momento di costruire una staccionata per tener fuori gli animali.<br>
         <br>
-      courseC_artist_loops5a_instruction: Try new stickers!
-      courseC_artist_loops5a_2018_instruction: Try new stickers!
-      courseC_artist_loops5b_instruction: Try adding lines!
-      courseC_artist_loops5b_2018_instruction: Try adding lines!
+      courseC_artist_loops5a_instruction: Prova nuovi adesivi!
+      courseC_artist_loops5a_2018_instruction: Prova nuovi adesivi!
+      courseC_artist_loops5b_instruction: Prova ad aggiungere delle linee!
+      courseC_artist_loops5b_2018_instruction: Prova ad aggiungere delle linee!
       courseC_artist_loops6_instruction: |-
         Cosa dovrebbe mettere lo zombie nel giardino? <br>
         <br>
         <br>
-      courseC_artist_loops6a_instruction: Add another sticker!
-      courseC_artist_loops6a_2018_instruction: Add another sticker!
-      courseC_artist_loops7a_instruction: Play with the loops and angles.
-      courseC_artist_loops7a_2018_instruction: Play with the loops and angles.
-      courseC_artist_loops8a_instruction: Now try something on your own!
-      courseC_artist_loops8a_2018_instruction: Now try something on your own!
-      courseC_artist_loopsPre1a_instruction: Time to spin that line around!
-      courseC_artist_loopsPre1a_2018_instruction: Time to spin that line around!
-      courseC_artist_loopsPrePre1a_instruction: "Get the artist to the center of\nthe
-        play area, then draw a line. "
-      courseC_artist_loopsPrePre1a_2018_instruction: "Get the artist to the center\nof
-        the play area, then draw a line. "
+      courseC_artist_loops6a_instruction: Aggiungi un altro adesivo!
+      courseC_artist_loops6a_2018_instruction: Aggiungi un altro adesivo!
+      courseC_artist_loops7a_instruction: Gioca con cicli e angoli.
+      courseC_artist_loops7a_2018_instruction: Gioca con cicli e angoli.
+      courseC_artist_loops8a_instruction: Ora prova qualcosa per conto tuo!
+      courseC_artist_loops8a_2018_instruction: Ora prova qualcosa per conto tuo!
+      courseC_artist_loopsPre1a_instruction: È ora di far girare tutt'intorno quella
+        linea!
+      courseC_artist_loopsPre1a_2018_instruction: È ora di far girare tutt'intorno
+        quella linea!
+      courseC_artist_loopsPrePre1a_instruction: 'Fai in modo che l''artista vada al
+        centro dell''area gioco, quindi fagli disegnare una linea. '
+      courseC_artist_loopsPrePre1a_2018_instruction: 'Fai in modo che l''artista vada
+        al centro dell''area gioco, quindi fagli disegnare una linea. '
       courseC_artist_loopsTemplate_instruction: Ottimo! Ora che i fiori sono germogliati,
         aiuta lo zombie a piazzare un amico ogni 50 pixel per proteggerli finché non
         crescono.
-      courseC_artist_loopsTemplateA_instruction: "Get the artist to the center of\nthe
-        play area, then draw a bird using a sticker. "
-      courseC_artist_loopsTemplateA_2018_instruction: "Get the artist to the center\nof
-        the play area, then draw a bird using a sticker. "
-      courseC_artist_prog1_instruction: |-
-        Play with the blocks in the toolbox to see
-        what they do!
-      courseC_artist_prog1_2018_instruction: |-
-        Play with the blocks in the toolbox
-        to see what they do!
-      courseC_artist_prog2_instruction: |-
-        Drag blocks onto the screen to have the
-        artist draw over the grey lines in the picture. (Each line is 100 pixels long)
-      courseC_artist_prog2_2018_instruction: |-
-        Drag blocks onto the screen to have
-        the artist draw over the grey lines in the picture. (Each line is 100 pixels
-        long)
-      courseC_artist_prog3_instruction: |-
-        Each side of the inner square is 100 pixels
-        and all of the angles are 90 degrees.
-      courseC_artist_prog3_2018_instruction: |-
-        Each side of the inner square is 100
-        pixels and all of the angles are 90 degrees.
-      courseC_artist_prog4_instruction: |-
-        Finish Starla's rocket so she can chase
-        her pet.
-      courseC_artist_prog4_2018_instruction: |-
-        Finish Starla's rocket so she can
-        chase her pet.
+      courseC_artist_loopsTemplateA_instruction: Fai in modo che l'artista vada al
+        centro dell'area gioco, quindi fagli disegnare un uccello usando un adesivo.
+      courseC_artist_loopsTemplateA_2018_instruction: Fai in modo che l'artista vada
+        al centro dell'area gioco, quindi fagli disegnare un uccello usando un adesivo.
+      courseC_artist_prog1_instruction: Gioca con i blocchi nella cassetta degli attrezzi
+        per capire cosa fanno!
+      courseC_artist_prog1_2018_instruction: Gioca con i blocchi nella cassetta degli
+        attrezzi per capire cosa fanno!
+      courseC_artist_prog2_instruction: Trascina i blocchi dalla cassetta degli attrezzi
+        per far in modo che l'artista disegni lungo le linee grige della figura. (Ogni
+        linea è lunga 100 pixel.)
+      courseC_artist_prog2_2018_instruction: Trascina i blocchi dalla cassetta degli
+        attrezzi per far in modo che l'artista disegni lungo le linee grige della
+        figura. (Ogni linea è lunga 100 pixel.)
+      courseC_artist_prog3_instruction: Ogni lato del quadrato interno è lungo 100
+        pixel e tutti gli angoli sono di 90 gradi.
+      courseC_artist_prog3_2018_instruction: Ogni lato del quadrato interno è lungo
+        100 pixel e tutti gli angoli sono di 90 gradi.
+      courseC_artist_prog4_instruction: Completa il razzo in modo che l'alieno possa
+        seguire il suo mostriciattolo domestico.
+      courseC_artist_prog4_2018_instruction: Completa il razzo in modo che l'alieno
+        possa seguire il suo mostriciattolo domestico.
       courseC_artist_prog5_instruction: |-
-        Questa casa ha bisogno di un tetto! Disegna un triangolo.<br><br>
-        <b>Suggerimento</b>: tutti e tre i lati hanno la stessa lunghezza.
+        Completa questa etichetta disegnando un rettangolo sul contorno.
+        (I lati lunghi sono di 200 pixel ognuno e quelli corti di 100 pixel)
       courseC_artist_prog5_2018_instruction: |-
         Questa casa ha bisogno di un tetto! Disegna un triangolo.<br><br>
         <b>Suggerimento</b>: tutti e tre i lati hanno la stessa lunghezza.
-      courseC_artist_prog6_instruction: Draw this diamond with 200 pixel sides.
-      courseC_artist_prog6_2018_instruction: Draw this diamond with 200 pixel sides.
-      courseC_artist_prog7_instruction: |-
-        **Challenge:** This tag is a special one!  Can
-        you figure out how to draw the outline?
-      courseC_artist_prog7_2018_instruction: |-
-        **Challenge:** This tag is a special
-        one!  Can you figure out how to draw the outline?
-      courseC_artist_prog8_instruction: "One more tag.  This is a triangle for Pi.\r\n(Each
-        side is 150 pixels)"
-      courseC_artist_prog8_2018_instruction: "One more tag.  This is a triangle for
-        Pi.\r\n(Each side is 150 pixels)"
+      courseC_artist_prog6_instruction: Disegna questo rombo con i lati di 200 pixel.
+      courseC_artist_prog6_2018_instruction: Disegna questo rombo con i lati di 200
+        pixel.
+      courseC_artist_prog7_instruction: "**Sfida:** Questa è una targhetta speciale!
+        Riesci a capire come disegnare il contorno?"
+      courseC_artist_prog7_2018_instruction: "**Sfida:** Questa è una targhetta speciale!
+        Riesci a capire come disegnare il contorno?"
+      courseC_artist_prog8_instruction: |-
+        Ancora una targhetta. Questa volta triangolare.
+        (Ogni lato è di 150 pixel)
+      courseC_artist_prog8_2018_instruction: |-
+        Ancora una targhetta. Questa volta triangolare.
+        (Ogni lato è di 150 pixel)
       courseC_artist_prog_challenge1-doghouse_instruction: |-
         Let's build a dog house
         for Jorge!
@@ -9688,57 +9687,41 @@
       courseC_collector_loops_challenge2_2018_instruction: |-
         Get at least **5** pieces
         of treasure!
-      courseC_collector_prog1_instruction: |-
-        Play around with the blocks to see if
-        you can help Laurel collect some treasure.
-      courseC_collector_prog1_2018_instruction: |-
-        Play around with the blocks to see
-        if you can help Laurel collect some treasure.
-      courseC_collector_prog2_instruction: |-
-        Move Laurel to the treasure, then use
-        `collect` to pick it up.
-      courseC_collector_prog2_2018_instruction: |-
-        Move Laurel to the treasure, then
-        use `collect` to pick it up.
-      courseC_collector_prog3_instruction: |-
-        Order these blocks to collect the treasure
-        and solve the puzzle.
-      courseC_collector_prog3_2018_instruction: |-
-        Order these blocks to collect the
-        treasure and solve the puzzle.
-      courseC_collector_prog4_instruction: |-
-        Put these blocks in order to collect
-        all of the treasure and solve the puzzle.
-      courseC_collector_prog4_2018_instruction: |-
-        Put these blocks in order to collect
-        all of the treasure and solve the puzzle.
-      courseC_collector_prog5_instruction: |-
-        These blocks are in the wrong order.
-        Can you fix them?
-      courseC_collector_prog5_2018_instruction: |-
-        These blocks are in the wrong order.
-        Can you fix them?
-      courseC_collector_prog6_instruction: |-
-        Reorder the blocks to collect all of
-        the treasure.
-      courseC_collector_prog6_2018_instruction: |-
-        Reorder the blocks to collect all
-        of the treasure.
-      courseC_collector_prog7_instruction: |-
-        Use blocks from the toolbox to collect
-        all of the treasure.
-      courseC_collector_prog7_2018_instruction: |-
-        Use blocks from the toolbox to collect
-        all of the treasure.
-      courseC_collector_prog8_instruction: |-
-        *"Keep up the good work! Help me collect
-        all of the treasure."*
-      courseC_collector_prog8_2018_instruction: |-
-        *"Keep up the good work! Help me
-        collect all of the treasure."*
-      courseC_collector_prog9_instruction: '*"Let''s get all of the coins!"*'
-      courseC_collector_prog9_2018_instruction: '*"Let''s get all of the treasure!"*'
-      courseC_collector_progA_instruction: Help Laurel collect all of the treasure.
+      courseC_collector_prog1_instruction: Gioca coi blocchi per vedere se riesci
+        ad aiutare Laurel a raccogliere un po' di diamanti.
+      courseC_collector_prog1_2018_instruction: Gioca coi blocchi per vedere se riesci
+        ad aiutare Laurel a raccogliere un po' di diamanti.
+      courseC_collector_prog2_instruction: Fai muovere Laurel fino al diamante, quindi
+        usa il blocco `raccogli` per prenderlo.
+      courseC_collector_prog2_2018_instruction: Fai muovere Laurel fino al diamante,
+        quindi usa il blocco `raccogli` per prenderlo.
+      courseC_collector_prog3_instruction: Riordina questi blocchi per raccogliere
+        i diamanti e risolvere l'esercizio.
+      courseC_collector_prog3_2018_instruction: Riordina questi blocchi per raccogliere
+        i diamanti e risolvere l'esercizio.
+      courseC_collector_prog4_instruction: Riordina questi blocchi per raccogliere
+        tutti i diamanti e risolvere l'esercizio.
+      courseC_collector_prog4_2018_instruction: Riordina questi blocchi per raccogliere
+        tutti i diamanti e risolvere l'esercizio.
+      courseC_collector_prog5_instruction: Questi blocchi sono nell'ordine sbagliato.
+        Riesci a riordinarli?
+      courseC_collector_prog5_2018_instruction: Questi blocchi sono nell'ordine sbagliato.
+        Riesci a riordinarli?
+      courseC_collector_prog6_instruction: Riordina i blocchi per raccogliere tutti
+        i diamanti.
+      courseC_collector_prog6_2018_instruction: Riordina i blocchi per raccogliere
+        tutti i diamanti.
+      courseC_collector_prog7_instruction: Riordina i blocchi e aggiungine altri dalla
+        cassetta degli attrezzi per farle raccogliere tutti i diamanti.
+      courseC_collector_prog7_2018_instruction: Riordina i blocchi e aggiungine altri
+        dalla cassetta degli attrezzi per farle raccogliere tutti i diamanti.
+      courseC_collector_prog8_instruction: '*"Continua alla grande! Aiutami a collezionare
+        tutti i diamanti."*'
+      courseC_collector_prog8_2018_instruction: '*"Continua alla grande! Aiutami a
+        collezionare tutti i diamanti."*'
+      courseC_collector_prog9_instruction: '*"Prendiamoli tutti ''sti diamanti!"*'
+      courseC_collector_prog9_2018_instruction: '*"Prendiamoli tutti ''sti diamanti!"*'
+      courseC_collector_progA_instruction: Aiuto Laurel a raccogliere tutti i diamanti.
       courseC_collector_progB_instruction: |-
         Collect as many coins as you can to finish
         the stage!
@@ -9893,57 +9876,42 @@
       courseC_harvester_loops_forVid_instruction: |-
         Collect all of the corn, all of
         the lettuce, and all of the pumpkins.
-      courseC_maze_debugging1_instruction: |-
-        Fix the code to help get Scrat get to
-        the acorn.
+      courseC_maze_debugging1_instruction: Correggi il codice per aiutare Scrat a
+        raggiungere la ghianda.
       courseC_maze_debugging10_instruction: Correggi questo programma riordinando,
         aggiungendo o cancellando blocchi, per farmi arrivare al maialino!
-      courseC_maze_debugging1_2018_instruction: |-
-        Fix the code to help get Scrat get
-        to the acorn.
-      courseC_maze_debugging2_instruction: |-
-        Use your debugging skills to get Scrat
-        to the acorn.
-      courseC_maze_debugging2_2018_instruction: |-
-        Use your debugging skills to get
-        Scrat to the acorn.
-      courseC_maze_debugging3_instruction: Remove blocks to get Skrat to the acorn!
-      courseC_maze_debugging3_2018_instruction: |-
-        Remove blocks to get Scrat to the
-        acorn!
-      courseC_maze_debugging4_instruction: |-
-        Someone has their directions mixed up!
-        Can you help?
-      courseC_maze_debugging4_2018_instruction: |-
-        Someone has their directions mixed
-        up! Can you help?
-      courseC_maze_debugging5_instruction: |-
-        Debug this level by rearranging and changing
-        blocks.
-      courseC_maze_debugging5_2018_instruction: |-
-        Debug this level by rearranging
-        and changing blocks.
-      courseC_maze_debugging6_instruction: |-
-        Figure out what is wrong and get Scrat
-        to the acorn.
-      courseC_maze_debugging6_2018_instruction: |-
-        Figure out what is wrong and get
-        Scrat to the acorn.
-      courseC_maze_debugging7_instruction: |-
-        **Challenge:** Debug this level by rearranging,
-        adding, and deleting blocks.
-      courseC_maze_debugging7_2018_instruction: |-
-        **Challenge:** Debug this level
-        by rearranging, adding, and deleting blocks.
-      courseC_maze_debugging8_instruction: |-
-        Debug this level to get Scrat to the
-        acorn.
-      courseC_maze_debugging9_instruction: |-
-        Debug this level to get Scrat to the
-        acorn.
-      courseC_maze_debugging9_2018_instruction: |-
-        Debug this level to get Scrat to
-        the acorn.
+      courseC_maze_debugging1_2018_instruction: Correggi il codice per aiutare Scrat
+        a raggiungere la ghianda.
+      courseC_maze_debugging2_instruction: Usa le tue abilità di debugging (correzione
+        degli errori) per fare arrivare Scrat fino alla ghianda.
+      courseC_maze_debugging2_2018_instruction: Usa le tue abilità di debugging (correzione
+        degli errori) per fare arrivare Scrat fino alla ghianda.
+      courseC_maze_debugging3_instruction: Rimuovi dei blocchi per far arrivare Scrat
+        fino alla ghianda!
+      courseC_maze_debugging3_2018_instruction: Rimuovi dei blocchi per far arrivare
+        Scrat fino alla ghianda!
+      courseC_maze_debugging4_instruction: Qualcuno ha cambiato qualche svolta! Puoi
+        aiutarmi?
+      courseC_maze_debugging4_2018_instruction: Qualcuno ha cambiato qualche svolta!
+        Puoi aiutarmi?
+      courseC_maze_debugging5_instruction: Correggi questo esercizio spostando e modificando
+        dei blocchi.
+      courseC_maze_debugging5_2018_instruction: Correggi questo esercizio spostando
+        e modificando dei blocchi.
+      courseC_maze_debugging6_instruction: Cerca di capire cosa c'è di sbagliato e
+        fai arrivare Scrat fino alla ghianda.
+      courseC_maze_debugging6_2018_instruction: Cerca di capire cosa c'è di sbagliato
+        e fai arrivare Scrat fino alla ghianda.
+      courseC_maze_debugging7_instruction: "**Sfida:** Correggi questo programma spostando,
+        aggiungendo e cancellando blocchi."
+      courseC_maze_debugging7_2018_instruction: "**Sfida:** Correggi questo programma
+        spostando, aggiungendo e cancellando blocchi."
+      courseC_maze_debugging8_instruction: Correggi questo programma per far arrivare
+        Scrat fino alla ghianda.
+      courseC_maze_debugging9_instruction: Correggi questo programma per far arrivare
+        Scrat fino alla ghianda.
+      courseC_maze_debugging9_2018_instruction: Correggi questo programma per far
+        arrivare Scrat fino alla ghianda.
       courseC_maze_debugging_challenge1_instruction: |-
         Help Scrat decide which way
         to turn to get to the acorn.
@@ -9959,10 +9927,9 @@
       courseC_maze_loops1_instruction: |-
         Can you get the bird to the pig using 5 of
         the same kind of blocks?
-      courseC_maze_loops10_instruction: You are doing great! Keep it up!
-      courseC_maze_loops11_instruction: |-
-        You are almost there! This time, choose
-        any path you like!
+      courseC_maze_loops10_instruction: Stai andando alla grande! Continua così!
+      courseC_maze_loops11_instruction: Ci sei quasi! Questa volta scegli il percorso
+        che preferisci!
       courseC_maze_loops2_instruction: |-
         Can you get the bird to the pig by creating
         a loop that uses only one `move forward` block inside of a `repeat`?
@@ -9971,14 +9938,12 @@
         In this puzzle, two `repeat` loops will help
         you get the bird to the pig with the fewest number of blocks!
       courseC_maze_loops5_instruction: '*"Get me to the pig as quickly as possible!"*'
-      courseC_maze_loops6_instruction: |-
-        Loops even work with more than one block
-        inside!  Can you loop this sequence?
+      courseC_maze_loops6_instruction: I cicli funzionano anche con più di un blocco
+        al loro interno!  Puoi far ripetere questa sequenza?
       courseC_maze_loops7_instruction: Use what you learned in other puzzles!
-      courseC_maze_loops8_instruction: |-
-        Challenge: Combine ideas from the last few
-        puzzles to complete this level.
-      courseC_maze_loops9_instruction: You are doing great! Keep it up!
+      courseC_maze_loops8_instruction: 'Sfida: Metti a frutto ciò che hai imparato
+        negli ultimi esercizi per completare questo livello.'
+      courseC_maze_loops9_instruction: Stai andando alla grande! Continua così!
       courseC_maze_loops_challenge1_instruction: "Now Scrat wants to try using loops\nto
         find his acorn! "
       courseC_maze_loops_challenge1a_instruction: "Now Scrat wants to try using loops\nto
@@ -10018,24 +9983,18 @@
         errori. Dovrai eliminare dei blocchi ed aggiungerne altri."
       courseC_maze_programming7_2018_instruction: "**Sfida:** Questo programma ha
         molti errori. Dovrai eliminare dei blocchi ed aggiungerne altri."
-      courseC_maze_programming8_instruction: |-
-        *"Keep calm and help me find the bad
-        pig."*
-      courseC_maze_programming8_2018_instruction: |-
-        *"Keep calm and help me find
-        the bad pig."*
-      courseC_maze_programming8_predict1_instruction: |-
-        *"Keep calm and help me find
-        the bad pig."*
-      courseC_maze_programming8_predict1_2018_instruction: |-
-        *"Keep calm and help
-        me find the bad pig."*
-      courseC_maze_programming9_instruction: |-
-        *"Now, help me sneak up on the pig
-        any way you want to!"*
-      courseC_maze_programming9_2018_instruction: |-
-        *"Now, help me sneak up on the
-        pig any way you want to!"*
+      courseC_maze_programming8_instruction: '*"Mantieni la calma e aiutami a trovare
+        il maialino cattivo."*'
+      courseC_maze_programming8_2018_instruction: '*"Mantieni la calma e aiutami a
+        trovare il maialino cattivo."*'
+      courseC_maze_programming8_predict1_instruction: '*"Mantieni la calma e aiutami
+        a trovare il maialino cattivo."*'
+      courseC_maze_programming8_predict1_2018_instruction: '*"Mantieni la calma e
+        aiutami a trovare il maialino cattivo."*'
+      courseC_maze_programming9_instruction: '*"Ora aiutami a sorprendere il maiale
+        nel modo che preferisci!"*'
+      courseC_maze_programming9_2018_instruction: '*"Ora aiutami a sorprendere il
+        maiale nel modo che preferisci!"*'
       courseC_maze_programming_challenge1_instruction: "The pig is hiding, and the\ngoal
         is to find it. "
       courseC_maze_programming_challenge1_2018_instruction: "The pig is hiding, and\nthe
@@ -10051,33 +10010,28 @@
       courseC_playLab_embedded_instruction: "Here's a game for you to play! To win,
         use your arrow keys to get the penguin to run into the octopus.\r\n\r\nOnce
         you are done, you will learn how to make this game!"
-      courseC_puppy_loops10_instruction: You are doing great! Keep it up!
-      courseC_puppy_loops11_instruction: |-
-        You are almost there! This time, choose
-        any path you like!
-      courseC_puppy_loops8_instruction: |-
-        Challenge: Combine ideas from the last few
-        puzzles to complete this level.
-      courseC_puppy_loops8courseC_maze_loops8_instruction: |-
-        Challenge: Combine ideas
-        from the last few puzzles to complete this level.
-      courseC_puppy_loops9_instruction: You are doing great! Keep it up!
+      courseC_puppy_loops10_instruction: Stai andando alla grande! Continua così!
+      courseC_puppy_loops11_instruction: Ci sei quasi! Questa volta scegli il percorso
+        che preferisci!
+      courseC_puppy_loops8_instruction: 'Sfida: Metti a frutto ciò che hai imparato
+        negli ultimi esercizi per completare questo livello.'
+      courseC_puppy_loops8courseC_maze_loops8_instruction: 'Sfida: Metti a frutto
+        ciò che hai imparato negli ultimi esercizi per completare questo livello.'
+      courseC_puppy_loops9_instruction: Stai andando alla grande! Continua così!
       courseC_starWars_loops1_instruction: BB-8 recupererà tutti i rottami metallici
-        lungo la strada percorsa. Usa 5 blocchi uguali per far sì che BB-8 a recuperi
+        lungo la strada percorsa. Usa 5 blocchi uguali per far sì che BB-8 recuperi
         tutti i rottami nell'area di gioco.
-      courseC_starWars_loops10_instruction: You are doing great! Keep it up!
-      courseC_starWars_loops10_2018_instruction: You are doing great! Keep it up!
+      courseC_starWars_loops10_instruction: Stai andando alla grande! Continua così!
+      courseC_starWars_loops10_2018_instruction: Stai andando alla grande! Continua
+        così!
       courseC_starWars_loops10_predict2_instruction: Stai andando alla grande! Continua
         così!
-      courseC_starWars_loops10_predict2_2018_instruction: |-
-        You are doing great! Keep
-        it up!
-      courseC_starWars_loops11_instruction: |-
-        You are almost there! This time, choose
-        any path you like!
-      courseC_starWars_loops11_2018_instruction: |-
-        You are almost there! This time,
-        choose any path you like!
+      courseC_starWars_loops10_predict2_2018_instruction: Stai andando alla grande!
+        Continua così!
+      courseC_starWars_loops11_instruction: Ci sei quasi! Questa volta scegli il percorso
+        che preferisci!
+      courseC_starWars_loops11_2018_instruction: Ci sei quasi! Questa volta scegli
+        il percorso che preferisci!
       courseC_starWars_loops1_2018_instruction: BB-8 recupererà tutti i rottami metallici
         lungo la strada percorsa. Usa 5 blocchi uguali per far sì che BB-8 a recuperi
         tutti i rottami nell'area di gioco.
@@ -10086,41 +10040,37 @@
         a recuperi tutti i rottami nell'area di gioco.
       courseC_starWars_loops1_predict1_2018_instruction: BB-8 recupererà tutti i rottami
         metallici lungo la strada percorsa. Usa 5 blocchi uguali per far sì che BB-8
-        a recuperi tutti i rottami nell'area di gioco.
-      courseC_starWars_loops2_instruction: Riesci a far recuperare a BB-8 tutti i
-        rottami metallici creando un ciclo con un solo blocco all'interno del blocco
-        "ripeti ... volte"?
+        recuperi tutti i rottami nell'area di gioco.
+      courseC_starWars_loops2_instruction: Per recuperare tutti i rottami metallici,
+        prova a creare un ciclo con un solo blocco all'interno del blocco `ripeti
+        ... volte`.
       courseC_starWars_loops2_2018_instruction: Riesci a far recuperare a BB-8 tutti
         i rottami metallici creando un ciclo con un solo blocco all'interno del blocco
         "ripeti ... volte"?
-      courseC_starWars_loops4_instruction: In questo esercizio, BB-8 deve recuperare
-        tutti i rottami metallici con il minor numero di blocchi possibile! Usa due
-        blocchi "ripeti ... volte".
+      courseC_starWars_loops4_instruction: In questo esercizio, due cicli `ripeti
+        ... volte` ti aiuteranno a far in modo che BB-8 recuperi tutti i rottami metallici
+        con il minor numero di blocchi possibile!
       courseC_starWars_loops4_2018_instruction: In questo esercizio, BB-8 deve recuperare
         tutti i rottami metallici con il minor numero di blocchi possibile! Usa due
         blocchi "ripeti ... volte".
-      courseC_starWars_loops5_instruction: "*Fai raccogliere a BB-8 tutti i rottami
-        metallici il più velocemente possibile!*"
+      courseC_starWars_loops5_instruction: Fai raccogliere a BB-8 tutti i rottami
+        metallici il più velocemente possibile!
       courseC_starWars_loops5_2018_instruction: "*Fai raccogliere a BB-8 tutti i rottami
         metallici il più velocemente possibile!*"
-      courseC_starWars_loops6_instruction: |-
-        Loops even work with more than one block
-        inside!  Can you loop this sequence?
-      courseC_starWars_loops6_2018_instruction: |-
-        Loops even work with more than one
-        block inside!  Can you loop this sequence?
+      courseC_starWars_loops6_instruction: I cicli funzionano anche con più di un
+        blocco al loro interno!  Puoi far ripetere questa sequenza?
+      courseC_starWars_loops6_2018_instruction: I cicli funzionano anche con più di
+        un blocco al loro interno!  Puoi far ripetere questa sequenza?
       courseC_starWars_loops7_instruction: Riesci a recuperare tutti i rottami metallici
         usando un solo ciclo? Prova a programmare tutto con blocchi singoli, poi cerca
         il codice ripetuto da mettere nel ciclo.
       courseC_starWars_loops7_2018_instruction: Riesci a recuperare tutti i rottami
         metallici usando un solo ciclo? Prova a programmare tutto con blocchi singoli,
         poi cerca il codice ripetuto da mettere nel ciclo.
-      courseC_starWars_loops9_instruction: |-
-        Use what you have learned to pick up
-        all of the scrap metal!
-      courseC_starWars_loops9_2018_instruction: |-
-        Use what you have learned to pick
-        up all of the scrap metal!
+      courseC_starWars_loops9_instruction: Sfrutta ciò che hai imparato per recuperare
+        tutti i rottami metallici!
+      courseC_starWars_loops9_2018_instruction: Sfrutta ciò che hai imparato per recuperare
+        tutti i rottami metallici!
       courseD_Frozen_nested1_instruction: Aiuta Elsa a disegnare una piccola figura
         a tua scelta.
       courseD_Frozen_nested2_instruction: Ora parti dalla tua forma e disegnane due
@@ -10662,37 +10612,37 @@
         net swish when you hit the basket and have the whistle blow when the ball
         misses your hand. Bounce the ball until it hits the finish target.
       courseD_collector_debugging1_instruction: Correggi gli errori per raccogliere
-        tutto il tesoro.
+        tutti i diamanti.
       courseD_collector_debugging1_2018_instruction: Correggi gli errori per raccogliere
         tutto il tesoro.
       courseD_collector_debugging1a_instruction: Correggi gli errori per raccogliere
-        tutto il tesoro.
+        tutti i diamanti.
       courseD_collector_debugging1a_2018_instruction: Correggi gli errori per raccogliere
-        tutto il tesoro.
+        tutti i diamanti.
       courseD_collector_debugging2_instruction: Correggi gli errori per raccogliere
-        tutto il tesoro.
+        tutti i diamanti.
       courseD_collector_debugging2_2018_instruction: Correggi gli errori per raccogliere
-        tutto il tesoro.
+        tutti i diamanti.
       courseD_collector_debugging2a_instruction: Correggi gli errori per raccogliere
-        tutto il tesoro.
+        tutti i diamanti.
       courseD_collector_debugging2a_2018_instruction: Correggi gli errori per raccogliere
-        tutto il tesoro.
+        tutti i diamanti.
       courseD_collector_debugging3_instruction: Correggi gli errori per raccogliere
-        tutto il tesoro.
+        tutti i diamanti.
       courseD_collector_debugging3_2018_instruction: Correggi gli errori per raccogliere
-        tutto il tesoro.
+        tutti i diamanti.
       courseD_collector_debugging3a_instruction: Correggi gli errori per raccogliere
-        tutto il tesoro.
+        tutti i diamanti.
       courseD_collector_debugging3a_2018_instruction: Correggi gli errori per raccogliere
-        tutto il tesoro.
+        tutti i diamanti.
       courseD_collector_debugging4_instruction: Correggi gli errori per raccogliere
-        tutto il tesoro.
+        tutti i diamanti.
       courseD_collector_debugging4_2018_instruction: Correggi gli errori per raccogliere
-        tutto il tesoro.
+        tutti i diamanti.
       courseD_collector_debugging4a_instruction: Correggi gli errori per raccogliere
-        tutto il tesoro.
+        tutti i diamanti.
       courseD_collector_debugging4a_2018_instruction: Correggi gli errori per raccogliere
-        tutto il tesoro.
+        tutti i diamanti.
       courseD_collector_debugging5_instruction: 'Sfida: tutti i blocchi che ti servono
         sono già qui... sfrutta tutte le tue abilità di debugging per capire come
         risolvere questo esercizio.'
@@ -10737,9 +10687,9 @@
       courseD_collector_nested_loops_challenge2a_instruction: |-
         Help Laurel collect
         at least two piles of treasure.
-      courseD_collector_ramp10_instruction: Help Laurel collect all of the treasure.
-      courseD_collector_ramp8_instruction: Help Laurel collect all of the treasure.
-      courseD_collector_ramp9_instruction: Help Laurel collect all of the treasure.
+      courseD_collector_ramp10_instruction: Aiuto Laurel a raccogliere tutti i diamanti.
+      courseD_collector_ramp8_instruction: Aiuto Laurel a raccogliere tutti i diamanti.
+      courseD_collector_ramp9_instruction: Aiuto Laurel a raccogliere tutti i diamanti.
       courseD_collector_until_challenge1_instruction: |-
         Are you an expert of nested
         loops? Use what you have learned so far to collect all of the treasure!
@@ -11444,9 +11394,9 @@
         Help the bee follow the path to gather
         all of the honey and all of the nectar.
       courseE_bee_ramp17_instruction: Use what you have learned to solve this puzzle.
-      courseE_collector_ramp10_instruction: Help Laurel collect all of the treasure.
-      courseE_collector_ramp8_instruction: Help Laurel collect all of the treasure.
-      courseE_collector_ramp9_instruction: Help Laurel collect all of the treasure.
+      courseE_collector_ramp10_instruction: Aiuto Laurel a raccogliere tutti i diamanti.
+      courseE_collector_ramp8_instruction: Aiuto Laurel a raccogliere tutti i diamanti.
+      courseE_collector_ramp9_instruction: Aiuto Laurel a raccogliere tutti i diamanti.
       courseE_farmer_concept1_instruction: |-
         Can you write a program that fills these
         holes until the ground is even?
@@ -12367,6 +12317,8 @@
       courseF_maze_ramp7_instruction: |-
         Use what you've learned to get the bird to
         the pig!
+      courseF_playlab_brokenText_instruction: In the rest of this stage, we're going
+        to build a game that you control!
       courseF_playlab_embed_vars_instruction: |-
         Answer Pegleg the Pirate's questions.
         What happens if you enter the codename "password"? What about some other
@@ -12801,22 +12753,23 @@
       grade2_CaringForNewPet_7D_instruction: |-
         Challenge: This code has a lot of bugs.
         You'll need to remove blocks and add blocks.
-      grade2_MakeDogTag_1_instruction: |-
-        Drag blocks onto the screen to have the artist
-        draw over the grey lines in the picture. (Each line is 100 pixels long)
+      grade2_MakeDogTag_1_instruction: Trascina i blocchi dalla cassetta degli attrezzi
+        per far in modo che l'artista disegni lungo le linee grige della figura. (Ogni
+        linea è lunga 100 pixel.)
       grade2_MakeDogTag_10_instruction: Disegna qualcosa che ti piace.
       grade2_MakeDogTag_2_instruction: "This spaceship needs a window!\r\n\r\nEach
         side of the inner square is 100 pixels and all of the angles are 90 degrees."
       grade2_MakeDogTag_3_instruction: Aiutami a completare la casa per questo gatto.
       grade2_MakeDogTag_4_instruction: |-
-        Questa casa ha bisogno di un tetto! Disegna un triangolo.<br><br>
-        <b>Suggerimento</b>: tutti e tre i lati hanno la stessa lunghezza.
+        Completa questa etichetta disegnando un rettangolo sul contorno.
+        (I lati lunghi sono di 200 pixel ognuno e quelli corti di 100 pixel)
       grade2_MakeDogTag_5_instruction: "\"Now a tag for Belle!\"\r\n\r\nDraw this
         diamond with 200 pixel sides."
       grade2_MakeDogTag_6_instruction: 'Tempo di giocare: disegna qualcosa che ti
         piace.'
-      grade2_MakeDogTag_7_instruction: "One more tag.  This is a triangle for Pi.\r\n(Each
-        side is 150 pixels)"
+      grade2_MakeDogTag_7_instruction: |-
+        Ancora una targhetta. Questa volta triangolare.
+        (Ogni lato è di 150 pixel)
       grade2_MakeDogTag_8_instruction: Cerca adesso di disegnare una serie di V collegate,
         usando un ciclo.
       grade2_MakeDogTag_9_instruction: Riscrivi il codice del precedente esercizio,
@@ -12852,11 +12805,13 @@
         Questo codice disegna la C al contrario nella parola "CODE".<br>
         Riesci a farla disegnare correttamente?
       grade2_collector_10_instruction: |-
-        You're almost done! Collect as many pieces
-        of treasure as you can to finish the stage!
+        È quasi fatta! Colleziona più diamanti che puoi per completare la lezione!
+
+        (Se non hai raccolto tutti i diamanti, ma sei soddisfatto, premi il tasto "Termina" per passare alla lezione successiva.)
       grade2_collector_10_2018_instruction: |-
-        You're almost done! Collect as many
-        pieces of treasure as you can to finish the stage!
+        È quasi fatta! Colleziona più diamanti che puoi per completare la lezione!
+
+        (Se non hai raccolto tutti i diamanti, ma sei soddisfatto, premi il tasto "Termina" per passare alla lezione successiva.)
       grade2_collector_2_instruction: |-
         Move Laurel to the gold, then use `collect`
         to pick it up.
@@ -12867,11 +12822,9 @@
         Sequence matters! The blocks you need are
         already in the workspace, but not connected.  Order these blocks to solve
         the puzzle.
-      grade2_collector_5_instruction: |-
-        These blocks are in the wrong order. Can you
-        fix them?
-      grade2_collector_6_instruction: "\"Help me collect each gold coin!\"\r\n\r\nThese\nblocks
-        are in the wrong order."
+      grade2_collector_5_instruction: Questi blocchi sono nell'ordine sbagliato. Riesci
+        a riordinarli?
+      grade2_collector_6_instruction: Riordina i blocchi per raccogliere tutti i diamanti.
       grade2_collector_7_instruction: |-
         Challenge puzzle! Use blocks from the toolbox
         to collect all of the treasure.
@@ -12880,8 +12833,8 @@
         of the coins."
       grade2_collector_9_instruction: Let's get the coins!
       grade2_collector_9a_instruction: "**Challenge:** Grab all of the coins."
-      grade2_collector_A_instruction: Help Laurel collect all of the treasure.
-      grade2_collector_A_2018_instruction: Help Laurel collect all of the treasure.
+      grade2_collector_A_instruction: Aiuto Laurel a raccogliere tutti i diamanti.
+      grade2_collector_A_2018_instruction: Aiuto Laurel a raccogliere tutti i diamanti.
       grade2_collector_pre1_instruction: "\"Hi, I'm Laurel. Today I'm searching for
         treasure at the dog park!\" \r\n\r\nPlay around with the blocks to see if
         you can help Laurel collect some gold."
@@ -14362,8 +14315,8 @@
         fino al maialino!
       loops_forvideo_bee_cf_instruction: Usa i cicli per aiutare l'ape a prendere
         il nettare da tutti i fiori!
-      loops_forvideo_collector_ab_instruction: Usa i cicli per aiutare il collezionista
-        a prendere tutte le gemme!
+      loops_forvideo_collector_ab_instruction: Usa i cicli per aiutare la collezionista
+        a prendere tutti i diamanti!
       loops_forvideo_collector_cf_instruction: Usa i cicli per aiutare Laurel a collezionare
         gemme!
       loops_forvideo_harvester_ab_instruction: Usa i cicli per aiutare la mietitrice
@@ -14572,7 +14525,7 @@
         but can't get it right.  Can you help?
       test_sarah_instruction: hi
       u3-old-drawing-view_instruction: DO This
-      valentine_artist_03_instruction: Now try something on your own!
+      valentine_artist_03_instruction: Ora prova qualcosa per conto tuo!
       weird_playLab_instruction: |-
         About My Robot Project! Write code so that clicking
         on each bird shows a new fact about your robot.

@@ -1947,6 +1947,8 @@
         New Play Lab Project_callout2: Hit "Run" para guardar y ejecutar el programa
         sign_in_to_save_project: "¿Quieres acceder a tu proyecto más adelante? ¡Regístrese
           para guardar este proyecto a su cuenta!"
+      courseF_playlab_brokenText_callout:
+        courseF_playlab_variables5c_1: Encontrarás tu bloque de variable aquí.
       courseF_playlab_embed_vars_callout: {}
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: The toolbox has been organized into categories

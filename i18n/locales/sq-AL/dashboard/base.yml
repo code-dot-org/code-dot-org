@@ -128,7 +128,8 @@ sq:
     field_is_required: "E domosdoshme"
     accept_terms: "Ju duhet të jeni dakord për të krijuar një llogari"
     error: "An error occurred."
-    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: "Po"
     email_preference_no: "Jo"
     email_preference_required: "You must specify an email preference."
@@ -467,6 +468,8 @@ sq:
   gender:
     male: 'Mashkull'
     female: 'Femër'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: 'Preferoj të mos përgjigjem'
   user_type:
     student: 'student'

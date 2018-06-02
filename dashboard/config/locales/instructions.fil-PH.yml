@@ -9180,6 +9180,9 @@
       courseB_collector_loops_challenge2_instruction: Ating kunin ang mga kayamanan!
         Tulungan akong makatawid sa bawat isang hanay, at pagkatapos ay babalik para
         simulan ang sunod na hanay. Maaari ka bang makahanap ng pattern?
+      courseB_collector_loops_challenge2_2018_instruction: Ating kunin ang mga kayamanan!
+        Tulungan akong makatawid sa bawat isang hanay, at pagkatapos ay babalik para
+        simulan ang sunod na hanay. Maaari ka bang makahanap ng pattern?
       courseB_collector_loops_challenge2a_instruction: Tulungan si Laurel na makakuha
         ng hindi bababa sa **5** mga piraso ng kayamanan para matapos ang palaisipang
         ito.
@@ -11875,6 +11878,8 @@
         pig. Otherwise I might get angry!"
       courseF_maze_ramp7_instruction: Gamitin ang natutunan mo para mapapunta ang
         ibon sa baboy!
+      courseF_playlab_brokenText_instruction: Sa huling bahagi ng yugtong ito, tayo
+        ay bubuo ng isang laro na kinokontrol mo!
       courseF_playlab_embed_vars_instruction: |-
         Sagutin ang mga katanungan ni Pegleg ang Pirata.
         Ano ang mangyayari kapag iniligay mo ang codename na "password"? Paano kapag ang ibang mga code name?

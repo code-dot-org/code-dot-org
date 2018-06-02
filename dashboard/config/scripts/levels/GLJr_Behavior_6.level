@@ -46,11 +46,8 @@
     "hide_custom_blocks": "true",
     "instructions": "Let's try some more behaviors - make the dog run up and make the cat run right.",
     "parent_level_id": 11925,
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -128,7 +128,8 @@ ru:
     field_is_required: "требуется"
     accept_terms: "Вы должны принять условия перед созданием учетной записи"
     error: "Произошла ошибка."
-    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_privacy: "(См. нашу политику конфиденциальности)"
     email_preference_yes: "Да"
     email_preference_no: "Нет"
     email_preference_required: "You must specify an email preference."
@@ -467,6 +468,8 @@ ru:
   gender:
     male: 'Мужской'
     female: 'Женский'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: 'Предпочитаю не отвечать'
   user_type:
     student: 'Ученик'

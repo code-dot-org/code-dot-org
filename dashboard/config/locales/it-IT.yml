@@ -142,13 +142,13 @@
     valid_password: Password valida!
     invalid_password: La password deve essere lunga almeno 6 caratteri
     mismatch_password: Le due password che hai inserito non corrispondono
-    agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
-      and <a href='http://code.org/privacy'>Privacy Policy</a>.
-    under_13_consent: Se ho meno di 13 anni, confermo di avere l’autorizzazione dei miei genitori o
-      del mio tutore legale all’utilizzo dei servizi di Code.org.
-    agree_us_website: Accetto di utilizzare un sito Web con sede negli Stati Uniti.
-    my_data_to_us: I dati relativi al mio utilizzo di questo sito Web possono essere inviati e archiviati
-      o elaborati negli Stati Uniti.
+    agree_tos_privacy: Accetto i <a href='http://code.org/tos'>Termini di Servizio</a>
+      e l'<a href='http://code.org/privacy'>Informativa sulla Privacy</a>.
+    under_13_consent: Se ho meno di 13 anni, confermo che i miei genitori o di chi
+      ne fa le veci mi hanno dato il permesso di utilizzare i servizi di Code.org.
+    agree_us_website: Accetto di utilizzare un sito web con sede negli Stati Uniti.
+    my_data_to_us: I dati del mio utilizzo di questo sito possono essere inviati e
+      memorizzati o elaborati negli Stati Uniti.
     student_terms: Accetto di essere legato ai <a href='http://code.org/tos'> Termini
       di Servizio </a> di Code.org. Se ho meno di 13 anni, confermo, sottoscrivendo
       a questo modulo che ho il permesso da parte di un genitore o di un tutore legale
@@ -161,19 +161,20 @@
       la nostra <a href='http://code.org/privacy'>Informativa sulla Privacy</a>.
     additional_information: Abbiamo bisogno di alcune informazioni aggiuntive per
       continuare la tua iscrizione.
-    user_type_button: Update Account Type
+    user_type_button: Aggiorna Tipologia di Account
     user_type_label: Tipo di account
     user_type_teacher: Insegnante
     user_type_student: Studente
     field_is_required: è un dato obbligatorio
     accept_terms: Devi accettare le condizioni per creare un account
     error: Si è verificato un errore.
-    email_preference_question: Consenti l’invio di aggiornamenti sui nostri corsi,
-      opportunità a livello locale o altre notizie informatiche?
-    email_preference_privacy: (Vedi la nostra Privacy policy)
+    email_preference_question: Possiamo inviarti email sulle novità dei nostri corsi
+      o su altre notizie legate all'informatica?
+    email_preference_privacy: "(Vedi la nostra informativa sulla privacy)"
     email_preference_yes: Sì
     email_preference_no: 'No'
-    email_preference_required: You must specify an email preference.
+    email_preference_required: Devi specificare una preferenza relativa all'indirizzo
+      email.
   school_info:
     title: Informazioni sulla scuola (opzionale)
     school_country: Paese della Scuola
@@ -635,8 +636,8 @@
       appartenere alla tua classe.
     already_enrolled_in_new_section: Non puoi spostare questi studenti perché appartengono
       già ad una classe di questo insegnante.
-    third_party_login: You cannot move students to a section that is synced with a
-      third party tool.
+    third_party_login: Non puoi spostare gli studenti in una classe sincronizzata
+      con un strumento di terze parti.
   share:
     title: Impara su Code Studio
     description: Chiunque può imparare l'informatica. Realizza giochi, app e lavori
@@ -645,6 +646,8 @@
   gender:
     male: Maschile
     female: Femminile
+    non_binary: Non-binary
+    not_listed: Preferred term not listed
     none: Preferisco non rispondere
   user_type:
     student: Studente
@@ -1353,10 +1356,10 @@
     more_information: Leggi l'informativa sulla privacy di Code.org.
     accept: Accetto
   gdpr_dialog:
-    heading: Do you agree to using a web site based in the United States?
-    message: Data from your use of this site may be sent to and stored or processed
-      in the United States.
-    link_intro: For details see our
-    privacy_policy: privacy policy
-    logout: Logout
+    heading: Accetti di utilizzare un sito web con sede negli Stati Uniti?
+    message: I dati del tuo utilizzo di questo sito possono essere inviati e memorizzati
+      o elaborati negli Stati Uniti.
+    link_intro: Per ulteriori informazioni vedi la nostra
+    privacy_policy: informativa sulla privacy
+    logout: Esci
     true: Sì

@@ -11,12 +11,11 @@ module Pd
 
     included do
       before_validation :map_answers_to_attributes, if: :answers_changed?
+      validates_presence_of :form_id, :submission_id
+    end
 
-      validates_presence_of(
-        :form_id,
-        :submission_id,
-        :answers
-      )
+    def placeholder?
+      answers.nil?
     end
 
     class_methods do
@@ -126,6 +125,16 @@ module Pd
         raise KeyError, "No survey questions for form #{form_id}" unless survey_question
         survey_question.form_questions
       end
+    end
+
+    # Update answers for this submission from the JotForm API
+    # Useful for filling in placeholder response entries (submission id but no answers)
+    def sync_from_jotform
+      raise 'Missing submission id' unless submission_id.present?
+      self.class.sync_questions_from_jotform form_id
+
+      submission = JotForm::Translation.new(form_id).get_submission(submission_id)
+      update!(answers: submission[:answers].to_json)
     end
 
     # Supplies values for important model attributes from the JotForm-downloaded form answers.

@@ -61,18 +61,6 @@ class Course < ApplicationRecord
     serialization = File.read(path)
     hash = JSON.parse(serialization)
 
-    # Allow renaming between csp and csp-2017 during seed. This allows the csp
-    # --> csp-2017 rename in the next PR, as well as allowing for that PR to be
-    # reverted. This code should be removed once the course has been renamed.
-    if ['csp', 'csp-2017'].include?(hash['name'])
-      Course.where(name: ['csp', 'csp-2017']).first.try(:update!, {name: hash['name']})
-    end
-
-    # Allow renaming between csd and csd-2017 during seed.
-    if ['csd', 'csd-2017'].include?(hash['name'])
-      Course.where(name: ['csd', 'csd-2017']).first.try(:update!, {name: hash['name']})
-    end
-
     course = Course.find_or_create_by!(name: hash['name'])
     course.update_scripts(hash['script_names'], hash['alternate_scripts'])
     course.properties = hash['properties']
@@ -419,18 +407,6 @@ class Course < ApplicationRecord
   end
 
   def self.get_without_cache(id_or_name)
-    # When the caller requests csp or csp-2017, make sure we serve the CSP 2017 course,
-    # regardless of whether it has been renamed from csp to csp-2017 yet.
-    if ['csp', 'csp-2017'].include?(id_or_name)
-      return Course.where(name: ['csp', 'csp-2017']).first
-    end
-
-    # When the caller requests csd or csd-2017, make sure we serve the CSD 2017 course,
-    # regardless of whether it has been renamed from csd to csd-2017 yet.
-    if ['csd', 'csd-2017'].include?(id_or_name)
-      return Course.where(name: ['csd', 'csd-2017']).first
-    end
-
     # a bit of trickery so we support both ids which are numbers and
     # names which are strings that may contain numbers (eg. 2-3)
     find_by = (id_or_name.to_i.to_s == id_or_name.to_s) ? :id : :name

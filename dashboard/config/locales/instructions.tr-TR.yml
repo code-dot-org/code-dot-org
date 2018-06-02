@@ -8514,6 +8514,9 @@
         birini kullanabilirsiniz. Tüm hazineyi al! '
       courseB_collector_loops_challenge2_instruction: Hazineyi alalım! Her satır boyunca
         ilerleyip bir sonraki satır için geri dön. Bir tekrar bulabilirsiniz mi?
+      courseB_collector_loops_challenge2_2018_instruction: Hazineyi alalım! Her satır
+        boyunca ilerleyip bir sonraki satır için geri dön. Bir tekrar bulabilirsiniz
+        mi?
       courseB_collector_loops_challenge2a_instruction: Bu bulmacayı bitirmek için
         Laurel'in **5** tane hazine bulmasına yardım edin.
       courseB_collector_loops_challenge2a_2018_instruction: Bu bulmacayı bitirmek
@@ -11286,6 +11289,8 @@
         "Keep calm and help me find the bad
         pig. Otherwise I might get angry!"
       courseF_maze_ramp7_instruction: Kuşu domuza ulaştırmak için öğrendiklerini kullan!
+      courseF_playlab_brokenText_instruction: Bu aşamanın sonunda, sizin kontrol ettiğiniz
+        bir oyun oluşturacağız!
       courseF_playlab_embed_vars_instruction: Tahta bacak korsanın sorularını cevaplayın.
         Kod adı "şifre"yi girsen ne olur? Ya başka bir kod adı girsen?
       courseF_playlab_variables0_instruction: |-

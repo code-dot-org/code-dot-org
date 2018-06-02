@@ -16,8 +16,8 @@
   anybody_can_learn: "任何人都可以学习。"
   learn_now: "现在开始学习"
   petition_message: "在每个学校每个学生都应该有机会学习计算机科学"
-  petition_sign_message: '如果你同意，签上你的名字。加入#其他人。'
-  petition_sign_message_support: '如果你支持我们，与#人一样签上你的名字。'
+  petition_sign_message: '如果同意，签名并像其他#人一样加入邮件列表。'
+  petition_sign_message_support: '如果支持我们，签名并像其他#人一样加入邮件列表。'
   petition_join_others: '加入 # 其他'
   name: "姓名"
   email: "电子邮件"
@@ -373,7 +373,7 @@
   homepage_header_donors: "Code.org 感谢各位支持者"
   homepage_donors_seall: "查看全部"
   homepage_donors_donate: "捐赠"
-  homepage_below_hero_announcement_text: "We care about your privacy and are making some updates to our privacy policy, effective May 25."
+  homepage_below_hero_announcement_text: "我们关心您的隐私, 并正在对我们的隐私政策进行了一些更新, 自5月25日生效。"
   homepage_below_hero_announcement_link_text: "了解详情"
   contact_form_topic_student: "我是学生"
   contact_form_topic_parent: "我是家长"
@@ -545,7 +545,8 @@
   volunteer_engineer_submission_field_email: "电子邮件地址"
   volunteer_engineer_submission_field_email_desc: "您的电子邮件地址决不公开，但我们会把教师们的请求转发给你。"
   volunteer_engineer_submission_field_email_placeholder: "电子邮件地址"
-  volunteer_engineer_submission_field_email_preference: "Can we email you about updates to our courses, volunteer opportunities, or other computer science news?"
+  volunteer_engineer_submission_field_email_preference: "我们可以通过电子邮件向您发送有关我们课程、志愿者机会以及其他计算机科学新闻吗？"
+  volunteer_engineer_submission_field_email_preference_privacy: "(请参阅我们的隐私政策)"
   volunteer_engineer_submission_field_email_preference_yes: '是'
   volunteer_engineer_submission_field_email_preference_no: '不'
   volunteer_engineer_submission_final_paragraph: "作为志愿者，你将被在地图中标示出来，以便当地教师与你联系，讨论编程一小时活动或其他志愿者服务的机会。我们决不泄漏您的电子邮件和确切地址。但是其他信息（包括大概位置）将在当地教师中共享。"
@@ -953,12 +954,26 @@
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: '单元 5︰ 数据和社会'
   csd6_name: '单元 6︰ 物理计算'
+  csd1-2017_name: 'Unit 1: Problem Solving'
+  csd2-2017_name: 'Unit 2: Web Development'
+  csd3-2017_name: 'Unit 3: Animation and Games'
+  csd4-2017_name: 'Unit 4: The Design Process'
+  csd5-2017_name: '单元 5︰ 数据和社会'
+  csd6-2017_name: '单元 6︰ 物理计算'
   csd1-2018_name: 'Unit 1: Problem Solving'
   csd2-2018_name: 'Unit 2: Web Development'
   csd3-2018_name: 'Unit 3: Animation and Games'
   csd4-2018_name: 'Unit 4: The Design Process'
   csd5-2018_name: '单元 5︰ 数据和社会'
   csd6-2018_name: '单元 6︰ 物理计算'
+  csp1-2017_name: '第1单元：互联网'
+  csp2-2017_name: '第2单元︰ 数字信息'
+  csp3-2017_name: 'Unit 3: Algorithms and Programming'
+  csp4-2017_name: 'Unit 4: Big Data and Privacy'
+  csp5-2017_name: 'Unit 5: Building Apps'
+  csp-explore-2017_name: 'AP：探索表演任务的准备工作'
+  csp-create-2017_name: 'AP：创建表演任务'
+  csppostap-2017_name: 'Post AP: App中的数据库'
   csp1-2018_name: '第1单元：互联网'
   csp2-2018_name: '第2单元︰ 数字信息'
   csp3-2018_name: 'Unit 3: Algorithms and Programming'
@@ -977,7 +992,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP 性能任务
   csppostap_name: 'Post AP: App中的数据库'
-  csp-post-survey_name: Student Post-Course Survey
+  csp-post-survey_name: 学生课程后调查
   cspassessment_name: "完整测试 - 共50题"
   csp-explore_name: 'AP：探索表演任务的准备工作'
   csp-create_name: 'AP：创建表演任务'
@@ -1004,10 +1019,10 @@
   csf_international_category_name: "计算机基础国际版"
   csf2_draft_category_name: '开发中：课程A - F'
   csd_category_name: "CS Discoveries ('17-'18)"
-  csd_2018_category_name: "CS Discoveries ('18-'19)"
+  csd_2018_category_name: "计算机科学发现 (' 18-' 19)"
   csp_category_name: "15-16 计算机原理"
-  csp17_category_name: "计算机原理"
-  csp_2018_category_name: "CS Principles ('18-'19)"
+  csp17_category_name: "计算机原理('17-'18)"
+  csp_2018_category_name: "计算机科学原理 ('18-'19)"
   cspexams_category_name: "计算机原理练习测试"
   research_studies_category_name: "Research Studies"
   applab_name: "应用实验室"
@@ -1465,8 +1480,8 @@
   header_tutorials: "教程"
   header_documentation: "使用文档"
   csp_name: "计算机科学原理"
-  csd_name: "CS Discoveries"
-  csd_2018_name: "CS Discoveries"
+  csd_name: "计算机科学发现"
+  csd_2018_name: "计算机科学发现"
   full_course_category_name: "完整课程"
   user_header_label: "你好%{username}"
   user_header_settings: "帐户设置"

@@ -128,7 +128,8 @@ es-MX:
     field_is_required: "es requerido"
     accept_terms: "Debes estar de acuerdo para crear una cuenta"
     error: "Ocurrió un error."
-    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_privacy: "(Vea nuestra política de privacidad)"
     email_preference_yes: "Sí"
     email_preference_no: "No"
     email_preference_required: "You must specify an email preference."
@@ -461,6 +462,8 @@ es-MX:
   gender:
     male: 'Varón'
     female: 'Mujer'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: 'Prefiero no contestar'
   user_type:
     student: 'estudiante'

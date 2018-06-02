@@ -1932,6 +1932,8 @@
           speichern und auszuführen
         sign_in_to_save_project: Möchtest du dein Projekt später abrufen? Logg dich
           ein um dieses Projekt in deinem Account zu speichern!
+      courseF_playlab_brokenText_callout:
+        courseF_playlab_variables5c_1: You will find your variable block in here.
       courseF_playlab_embed_vars_callout: {}
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: The toolbox has been organized into categories

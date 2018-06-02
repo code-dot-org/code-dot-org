@@ -128,7 +128,8 @@ tr:
     field_is_required: "gerekli"
     accept_terms: "Hesap oluşturmak için kabul etmelisiniz"
     error: "Bir hata oluştu."
-    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: "Evet"
     email_preference_no: "Hayır"
     email_preference_required: "You must specify an email preference."
@@ -464,6 +465,8 @@ tr:
   gender:
     male: 'Erkek'
     female: 'Kadın'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: 'Cevap vermemeyi tercih ederim'
   user_type:
     student: 'öğrenci'

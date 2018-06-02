@@ -41,7 +41,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-12 19:21:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-07-12 19:21:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2018-06-01 03:26:42 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
 }]]></config>
   <blocks>
     <start_blocks>
@@ -269,6 +269,9 @@
         </block>
         <block type="text">
           <title name="TEXT">0</title>
+        </block>
+        <block type="comment">
+          <title name="TEXT"/>
         </block>
       </xml>
     </toolbox_blocks>
