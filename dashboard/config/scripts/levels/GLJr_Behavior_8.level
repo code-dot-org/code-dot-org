@@ -46,11 +46,8 @@
     "hide_custom_blocks": "true",
     "parent_level_id": 11928,
     "markdown_instructions": "The cat and dog are so excited to see each other that they want to have a dance party. In addition to removing their move behaviors when the two sprites touch, add the \"dance party\" behavior so they celebrate!",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

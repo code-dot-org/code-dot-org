@@ -26,6 +26,7 @@ with completed as
          coalesce(ss_summer_pd.school_district_name, ss_user.school_district_name) school_district_name,
          coalesce(ss_summer_pd.school_district_id, ss_user.school_district_id) school_district_id,
          coalesce(ss_summer_pd.high_needs, ss_user.high_needs) high_needs,
+         coalesce(ss_summer_pd.rural, ss_user.rural) rural,
          qwa.q1,
          qwa.q2,
          qwa.q3,

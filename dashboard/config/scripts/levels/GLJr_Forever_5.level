@@ -47,11 +47,8 @@
     "instructions": "Now we have two sprites! Use a loop to make the dog jittery and make the cat wander",
     "parent_level_id": 11925,
     "markdown_instructions": "Now we have two sprites! Use a loop to make the dog jittery and make the cat wander",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

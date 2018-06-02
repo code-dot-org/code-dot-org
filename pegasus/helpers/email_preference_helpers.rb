@@ -40,7 +40,7 @@ class EmailPreferenceHelper
     # Don't change opt_in to false if a preference with opt_in = true exists already.
     # We currently only enable a user to opt out via the Pardot unsubscribe link.
     elsif !existing_email_preference[:opt_in] || input_opt_in
-      Dashboard.db[:email_preferences].update(
+      Dashboard.db[:email_preferences].where(email: email).update(
         {
           opt_in: input_opt_in,
           source: source,
