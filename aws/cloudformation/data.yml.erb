@@ -156,11 +156,6 @@ Resources:
         skip_name_resolve: 1
         # Use compression for replication.
         slave_compressed_protocol: 1
-        # Enable parallel replication.
-        slave_parallel_workers: 8
-        # Enable parallel replication without violating consistency.
-        slave_parallel_type: LOGICAL_CLOCK
-        slave_preserve_commit_order: 1
         # Enable slow query log.
         slow_query_log: 1
         # Reduce durability for better performance.
