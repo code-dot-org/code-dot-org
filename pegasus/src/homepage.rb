@@ -124,7 +124,7 @@ class Homepage
 
   def self.get_blocks(request)
     if request.language == "en"
-      @en_blocks_entries || @en_blocks_entries = [
+      @en_blocks_entries ||= [
         {
           id: "students-en",
           type: "block",
@@ -230,7 +230,7 @@ class Homepage
         }
       ].each {|entry| entry[:image].gsub!("/images/", "/images/fit-400/")}
     else
-      @non_en_blocks_entries || @non_en_blocks_entries = [
+      @non_en_blocks_entries ||= [
         {
           id: "students-nonen",
           type: "blockshort",
