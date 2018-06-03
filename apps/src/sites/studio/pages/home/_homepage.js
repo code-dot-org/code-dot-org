@@ -165,6 +165,9 @@ function getTeacherAnnouncement(override) {
     id: "privacy_gdpr"
   };
 
+  // But for now, no announcement (unless there's an override).
+  announcement = null;
+
   // Optional override of teacher announcement (typically via DCDO).
   // Note that teacher_announce_type is optional.
   if (override &&
@@ -174,11 +177,14 @@ function getTeacherAnnouncement(override) {
     override.teacher_announce_id) {
 
     // Use the override.
-    announcement.heading = override.teacher_announce_heading;
-    announcement.description = override.teacher_announce_description;
-    announcement.link = override.teacher_announce_url;
-    announcement.type = override.teacher_announce_type;
-    announcement.id = override.teacher_announce_id;
+    announcement = {
+      heading: override.teacher_announce_heading,
+      buttonText: i18n.learnMore(),
+      description: override.teacher_announce_description,
+      link: override.teacher_announce_url,
+      type: override.teacher_announce_type,
+      id: override.teacher_announce_id
+    };
   }
 
   return announcement;
