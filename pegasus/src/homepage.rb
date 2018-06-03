@@ -338,7 +338,7 @@ class Homepage
 
   def self.get_below_hero_announcement
     {
-      showing: true,
+      showing: false,
       text: "homepage_below_hero_announcement_text",
       link: "/privacy-may2018",
       link_text: "homepage_below_hero_announcement_link_text"
