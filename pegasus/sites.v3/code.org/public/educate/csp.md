@@ -59,7 +59,7 @@ Our middle and high school programs offer year-round support. The program kicks 
 
 <img src="../files/apcsp_providerbadge_sm_alpha.png" style="float: right; width: 100px" alt="Code.org AP CSP Endorsed Badge">Code.org is recognized by the [College Board](http://collegeboard.org/APCSP) as an endorsed provider of curriculum and professional development for AP® Computer Science Principles. This endorsement affirms that all components of Code.org CS Principles’s offerings are aligned to the AP Curriculum Framework standards and the AP CS Principles assessment. Using an endorsed provider affords schools access to resources including an AP CS Principles syllabus pre-approved by the College Board’s AP Course Audit, and officially recognized professional development that prepares teachers to teach this course.
 
- * [Code.org 2017-18 AP CS Principles Endorsed Syllabus](/files/CSPSyllabusMay2017.pdf)
+ * [Code.org 2018-19 AP CS Principles Endorsed Syllabus](/files/CSPSyllabusMay2018.pdf)
  * [Instructions: How to add our authorized syllabus to your AP Course Audit](https://drive.google.com/open?id=0B21d4g64Z62YSVptX3JKcWdiVWlKWVc5MWlXQldkUmVxLXFZ)
 
 <div style="clear:both"></div>
