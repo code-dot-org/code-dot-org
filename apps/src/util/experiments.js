@@ -3,7 +3,8 @@
  * can be enabled/disabled using query parameters:
  *   enable:  http://foo.com/?enableExperiments=experimentOne,experimentTwo
  *   disable: http://foo.com/?disableExperiments=experimentOne,experimentTwo
- * Experiment state is persisted across page loads using local storage.
+ * Experiment state is persisted across page loads using local storage.  Note
+ * that it's only written when isEnabled is called for the key in question.
  */
 import { trySetLocalStorage } from '../utils';
 import Cookie from 'js-cookie';
