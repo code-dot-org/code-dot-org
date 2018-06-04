@@ -1,5 +1,7 @@
 class Api::V1::AssessmentsController < Api::V1::JsonApiController
   include LevelsHelper
+  load_and_authorize_resource :section
+  load_and_authorize_resource :script
 
   # For each assessment in a script, return an object of script_level IDs to question data.
   # Question data includes the question text, all possible answers, and the correct answers.
@@ -16,12 +18,10 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
   # GET '/dashboardapi/assessments'
   # TODO(caleybrock): currently only used in internal experiment, must add controller tests.
   def index
-    script = load_script
-
     # Only authorized teachers have access to locked question and answer data.
     render status: :forbidden unless current_user.authorized_teacher?
 
-    level_group_script_levels = script.script_levels.includes(:levels).where('levels.type' => 'LevelGroup')
+    level_group_script_levels = @script.script_levels.includes(:levels).where('levels.type' => 'LevelGroup')
 
     assessments = {}
 
@@ -73,14 +73,11 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
   # GET '/dashboardapi/assessments/section_responses'
   # TODO(caleybrock): currently only used in internal experiment, must add controller tests.
   def section_responses
-    section = load_section
-    script = load_script(section)
-
     responses_by_student = {}
 
-    level_group_script_levels = script.script_levels.includes(:levels).where('levels.type' => 'LevelGroup')
+    level_group_script_levels = @script.script_levels.includes(:levels).where('levels.type' => 'LevelGroup')
 
-    section.students.each do |student|
+    @section.students.each do |student|
       # Initialize student hash
       student_hash = {
         student_name: student.name
@@ -162,7 +159,7 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
           stage: script_level.stage.localized_title,
           puzzle: script_level.position,
           question: level_group.properties["title"],
-          url: build_script_level_url(script_level, section_id: section.id, user_id: student.id),
+          url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id),
           multi_correct: multi_count_correct,
           multi_count: multi_count,
           submitted: submitted,
@@ -179,21 +176,5 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
     end
 
     render json: responses_by_student
-  end
-
-  private
-
-  def load_section
-    section = Section.find(params[:section_id])
-    authorize! :read, section
-    section
-  end
-
-  def load_script(section=nil)
-    script_id = params[:script_id] if params[:script_id].present?
-    script_id ||= section.default_script.try(:id)
-    script = Script.get_from_cache(script_id) if script_id
-    script ||= Script.twenty_hour_script
-    script
   end
 end
