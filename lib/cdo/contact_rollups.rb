@@ -8,6 +8,9 @@ require 'json'
 class ContactRollups
   # Connection to read from Pegasus production database.
   PEGASUS_DB_READER = sequel_connect(CDO.pegasus_db_reader, CDO.pegasus_db_reader)
+  # Production database has a global max query execution timeout setting.  This 20 minute setting can be used
+  # to override the timeout for a specific session or query.
+  MAX_EXECUTION_TIME = 1_200_000
 
   # Connection to write to Pegasus production database.
   PEGASUS_DB_WRITER = sequel_connect(CDO.pegasus_db_writer, CDO.pegasus_db_reader)
@@ -147,6 +150,9 @@ class ContactRollups
     update_teachers_from_forms
     update_teachers_from_census_submissions
 
+    # Set opt_in based on information collected in Dashboard Email Preference.
+    update_email_preferences
+
     count = PEGASUS_REPORTING_DB_READER["select count(*) as cnt from #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}"].first[:cnt]
     log "Done. Total overall time: #{Time.now - start} seconds. #{count} records created in contact_rollups_daily table."
   end
@@ -164,7 +170,8 @@ class ContactRollups
     # Query all of the contacts in the latest daily contact rollup table (contact_rollups_daily) sorted by email.
     contact_rollups_src = PEGASUS_REPORTING_DB_READER['SELECT * FROM contact_rollups_daily FORCE INDEX(contact_rollups_email_index) ORDER BY email']
     # Query all of the contacts in the master contact rollup table (contact_rollups_daily) sorted by email.
-    contact_rollups_dest = PEGASUS_DB_READER['SELECT * FROM contact_rollups FORCE INDEX(contact_rollups_email_index) ORDER BY email']
+    # Use MYSQL 5.7 MAX_EXECUTION_TIME optimizer hint to override the production database global query timeout.
+    contact_rollups_dest = PEGASUS_DB_READER["SELECT /*+ MAX_EXECUTION_TIME(#{MAX_EXECUTION_TIME}) */ * FROM contact_rollups FORCE INDEX(contact_rollups_email_index) ORDER BY email"]
 
     # Create iterators for both queries using the #stream method so we stream the results back rather than
     # trying to load everything in memory
@@ -407,6 +414,16 @@ class ContactRollups
     log_completion(start)
   end
 
+  def self.update_email_preferences
+    start = Time.now
+    log "Updating from dashboard.email_preferences"
+    PEGASUS_REPORTING_DB_WRITER.run "
+    UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
+    INNER JOIN #{DASHBOARD_DB_NAME}.email_preferences on email_preferences.email = #{DEST_TABLE_NAME}.email
+    SET #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}.opt_in = #{DASHBOARD_DB_NAME}.email_preferences.opt_in"
+    log_completion(start)
+  end
+
   def self.insert_from_pegasus_forms
     start = Time.now
     log "Inserting contacts and IP geo data from pegasus.forms"
@@ -446,8 +463,8 @@ class ContactRollups
     add_role_from_script_sections_taught("CSF Teacher", CSF_SCRIPT_LIST)
     # CSD and CSP scripts are mapped to course - identify CSD/CSP teachers
     # that way
-    add_role_from_course_sections_taught("CSD Teacher", "csd")
-    add_role_from_course_sections_taught("CSP Teacher", "csp")
+    add_role_from_course_sections_taught("CSD Teacher", "csd-2017")
+    add_role_from_course_sections_taught("CSP Teacher", "csp-2017")
     log_completion(start)
   end
 

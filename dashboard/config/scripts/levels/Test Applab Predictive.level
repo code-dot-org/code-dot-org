@@ -41,9 +41,6 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "start_blocks": "write('Test Applab Containing Free Response Level');",
-    "encrypted_examples": [
-
-    ],
     "map_reference": "/docs/csd-1718/maker_leds/index.html",
     "instructions_important": "false",
     "disable_procedure_autopopulate": "false",

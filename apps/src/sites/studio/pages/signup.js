@@ -72,7 +72,7 @@ window.SignupManager = function (options) {
     showTeacher();
   }
 
-  function formSuccess(success) {
+  this.formSuccess = function (success) {
     var url;
     if (self.options.returnToUrl !== "") {
       url = self.options.returnToUrl;
@@ -83,9 +83,9 @@ window.SignupManager = function (options) {
     }
 
     window.location.href = url;
-  }
+  };
 
-  function formError(err) {
+  this.formError = function (err) {
     // re-enable "Sign up" button upon error
     $('#signup-button').prop('disabled', false);
 
@@ -100,7 +100,8 @@ window.SignupManager = function (options) {
       "gender",
       "terms_of_service_version",
       "school_info.zip",
-      "email_preference_opt_in"
+      "email_preference_opt_in",
+      "data_transfer_agreement_accepted"
     ];
 
     var fieldsWithErrors = 0;
@@ -111,6 +112,8 @@ window.SignupManager = function (options) {
           var errorField = $(`#${field}-block .error_in_field`);
           // We have a custom inline message for user_type errors already set in the DOM.
           if (field === "terms_of_service_version") {
+            errorField.text(self.options.acceptTermsString);
+          } else if (field === 'data_transfer_agreement_accepted') {
             errorField.text(self.options.acceptTermsString);
           } else if (field === 'email_preference_opt_in') {
             errorField.text(self.options.emailPreferenceOptInString);
@@ -132,7 +135,7 @@ window.SignupManager = function (options) {
       $('#signup-error').show();
     }
 
-  }
+  };
 
   $("#user_user_type").change(function () {
     var value = $(this).val();
@@ -161,11 +164,11 @@ window.SignupManager = function (options) {
     $(".email-preference").hide();
 
     // Show correct terms below form.
-    $("#student-terms").fadeIn();
-    $("#teacher-terms").hide();
+    $(".student-options").fadeIn();
+    $(".teacher-options").hide();
 
-    // Implicitly accept terms of service for students.
-    $("#user_terms_of_service_version").prop('checked', true);
+    // Force students to explicitly accept terms of service.
+    $("#user_terms_of_service_version").prop('checked', false);
   }
 
   function onCountryChange(_, event) {
@@ -258,8 +261,8 @@ window.SignupManager = function (options) {
     $(".email-preference").fadeIn();
 
     // Show correct terms below form.
-    $("#student-terms").hide();
-    $("#teacher-terms").fadeIn();
+    $(".student-options").hide();
+    $(".teacher-options").fadeIn();
 
     // Force teachers to explicitly accept terms of service.
     $("#user_terms_of_service_version").prop('checked', false);
@@ -328,7 +331,7 @@ window.SignupManager = function (options) {
       type: "post",
       dataType: "json",
       data: formData
-    }).done(formSuccess).fail(formError);
+    }).done(self.formSuccess).fail(self.formError);
 
     return false;
   });

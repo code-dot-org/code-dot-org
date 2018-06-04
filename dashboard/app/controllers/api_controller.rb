@@ -406,6 +406,7 @@ class ApiController < ApplicationController
   # Each such array contains an array of individual level results, matching the order of the LevelGroup's
   # levels.  For each level, the student's answer content is in :student_result, and its correctness
   # is in :correct.
+  # TODO(caleybrock): remove once the assessments tab is in react
   def section_assessments
     section = load_section
     script = load_script(section)

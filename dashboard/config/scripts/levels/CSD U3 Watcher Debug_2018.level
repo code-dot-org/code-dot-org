@@ -6,7 +6,6 @@
   "user_id": 155,
   "properties": {
     "skin": "gamelab",
-    "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
     "is_k1": "false",
@@ -80,7 +79,6 @@
     "encrypted_examples": "5BDVs+Z+38MhnHp7jr6pEzzWaSrLVut3vkDrU2qYtTTAw1GNiNnZ+gNx1Prc\nhSDPJom9H8EFhhpd7L8tvFPidw==\n",
     "parent_level_id": 8871,
     "name_suffix": "_2018",
-    "contained_level_names": null,
     "reference_links": [
       "/docs/csd-1718/counter_pattern/index.html",
       "/docs/csd-1718/sprite_properties/index.html"
@@ -89,7 +87,8 @@
     "video_key": "csd_gamelab_sprites_2",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

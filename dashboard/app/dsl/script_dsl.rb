@@ -24,6 +24,8 @@ class ScriptDSL < BaseDSL
     @project_widget_types = []
     @wrapup_video = nil
     @script_announcements = nil
+    @new_name = nil
+    @family_name = nil
   end
 
   integer :id
@@ -42,6 +44,8 @@ class ScriptDSL < BaseDSL
 
   string :wrapup_video
   string :script_announcements
+  string :new_name
+  string :family_name
 
   def teacher_resources(resources)
     @teacher_resources = resources
@@ -88,6 +92,8 @@ class ScriptDSL < BaseDSL
       project_widget_visible: @project_widget_visible,
       project_widget_types: @project_widget_types,
       script_announcements: @script_announcements,
+      new_name: @new_name,
+      family_name: @family_name,
     }
   end
 
@@ -240,6 +246,8 @@ class ScriptDSL < BaseDSL
     s << 'project_widget_visible true' if script.project_widget_visible
     s << "project_widget_types #{script.project_widget_types}" if script.project_widget_types
     s << "script_announcements #{script.script_announcements}" if script.script_announcements
+    s << "new_name '#{script.new_name}'" if script.new_name
+    s << "family_name '#{script.family_name}'" if script.family_name
 
     s << '' unless s.empty?
     s << serialize_stages(script)

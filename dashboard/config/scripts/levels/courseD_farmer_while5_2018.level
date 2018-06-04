@@ -38,7 +38,8 @@
     "contained_level_names": null
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-06-01 01:38:03 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
 }]]></config>
   <blocks>
     <start_blocks>
@@ -62,6 +63,9 @@
         </block>
         <block type="maze_untilBlockedOrNotClear">
           <title name="DIR">pilePresent</title>
+        </block>
+        <block type="comment">
+          <title name="TEXT"/>
         </block>
       </xml>
     </toolbox_blocks>

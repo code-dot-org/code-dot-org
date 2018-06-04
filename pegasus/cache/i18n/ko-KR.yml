@@ -429,6 +429,9 @@
   homepage_header_donors: Code.org는 후원자 여러분에게 감사의 인사를 드립니다.
   homepage_donors_seall: 모두 보기
   homepage_donors_donate: 기부하기
+  homepage_below_hero_announcement_text: 당사는 귀하의 개인 정보를 관리하며 당사의 업데이트된 개인 정보 보호 정책은
+    5월 25일에 발효됩니다.
+  homepage_below_hero_announcement_link_text: 더 알아보기
   contact_form_topic_student: 학생입니다.
   contact_form_topic_parent: 부모입니다.
   contact_form_topic_teacher: 교사/교육자입니다.
@@ -643,6 +646,12 @@
   volunteer_engineer_submission_field_email_desc: 여러분의 이메일 주소는 절대 공유되지 않을 것입니다. 그러나
     우리는 선생님들의 요청을 여러분들께 전달할 것입니다.
   volunteer_engineer_submission_field_email_placeholder: 이메일
+  volunteer_engineer_submission_field_email_preference: 당사의 코스, 현지 기회, 또는 다른 컴퓨터 과학
+    뉴스 업데이트에 관한 이메일을 귀하께 보내드려도 되겠습니까?
+  volunteer_engineer_submission_field_email_preference_privacy: "(상세한 내용은 당사의 개인 정보
+    보호 정책을 참조하십시오.)"
+  volunteer_engineer_submission_field_email_preference_yes: 예
+  volunteer_engineer_submission_field_email_preference_no: 아니요
   volunteer_engineer_submission_final_paragraph: 여러분은 지역 선생님들의 Hour of Code 활동 등이
     가능한 자원봉사자 명단에 들어갈 것입니다. 여러분의 이메일과 주소는 절대로 공개되지 않습니다만 아래의 정보들(정확한 위치를 포함한 정보들)
     은 지역 선생님들에게 안내가 될 것입니다.
@@ -1107,12 +1116,26 @@
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: '5단원: 데이터와 사회'
   csd6_name: '6단원: 피지컬 컴퓨팅'
+  csd1-2017_name: 'Unit 1: Problem Solving'
+  csd2-2017_name: 'Unit 2: Web Development'
+  csd3-2017_name: 'Unit 3: Animation and Games'
+  csd4-2017_name: 'Unit 4: The Design Process'
+  csd5-2017_name: '5단원: 데이터와 사회'
+  csd6-2017_name: '6단원: 피지컬 컴퓨팅'
   csd1-2018_name: 'Unit 1: Problem Solving'
   csd2-2018_name: 'Unit 2: Web Development'
   csd3-2018_name: 'Unit 3: Animation and Games'
   csd4-2018_name: 'Unit 4: The Design Process'
   csd5-2018_name: '5단원: 데이터와 사회'
   csd6-2018_name: '6단원: 피지컬 컴퓨팅'
+  csp1-2017_name: '유닛 1: 인터넷'
+  csp2-2017_name: '유닛 2: 디지털 정보'
+  csp3-2017_name: 'Unit 3: Algorithms and Programming'
+  csp4-2017_name: 'Unit 4: Big Data and Privacy'
+  csp5-2017_name: 'Unit 5: Building Apps'
+  csp-explore-2017_name: 'AP: Explore PT Prep'
+  csp-create-2017_name: 'AP: Create PT Prep'
+  csppostap-2017_name: 'Post AP: 앱 안의 데이터베이스'
   csp1-2018_name: '유닛 1: 인터넷'
   csp2-2018_name: '유닛 2: 디지털 정보'
   csp3-2018_name: 'Unit 3: Algorithms and Programming'
@@ -1131,6 +1154,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: 앱 안의 데이터베이스'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: 전체 테스트 - 50 문항
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'

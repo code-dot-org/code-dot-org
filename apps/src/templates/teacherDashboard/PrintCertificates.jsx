@@ -38,7 +38,7 @@ class PrintCertificates extends Component {
   };
 
   onClickPrintCerts = () => {
-    $.ajax(`/v2/sections/${this.props.sectionId}/students`).done(result => {
+    $.ajax(`/dashboardapi/sections/${this.props.sectionId}/students`).done(result => {
       const names = result.map(student => student.name);
       this.setState({names}, this.submitForm);
     });
@@ -61,7 +61,11 @@ class PrintCertificates extends Component {
           <input key={index} type="hidden" name="names[]" value={name}/>
         ))}
         <div style={styles.outerStyle}>
-          <div style={styles.actionText} onClick={this.onClickPrintCerts}>
+          <div
+            className="uitest-certs-link"
+            style={styles.actionText}
+            onClick={this.onClickPrintCerts}
+          >
             {i18n.printCertificates()}
           </div>
         </div>

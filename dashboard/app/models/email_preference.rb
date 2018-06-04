@@ -15,7 +15,12 @@
 #
 #  index_email_preferences_on_email  (email) UNIQUE
 #
-#
+
+# Notes:
+#   source: Indicates the source of the opt-in choice.
+#   form_kind: "0", "1", etc.  Indicates which version of the opt-in string the
+#     user agreed to, for a given source.  This value should be bumped each
+#     time the corresponding user-facing string is updated.
 require_dependency 'cdo/email_preference_constants'
 
 class EmailPreference < ApplicationRecord
@@ -34,14 +39,18 @@ class EmailPreference < ApplicationRecord
 
   def self.upsert!(email:, opt_in:, ip_address:, source:, form_kind:)
     email_preference = EmailPreference.find_or_initialize_by(email: email)
-    email_preference.update!(
-      email: email,
-      # Don't change opt_in to false if the record exists already.  We currently only allow user to opt out via Pardot
-      # unsubscribe link.
-      opt_in: (!email_preference.new_record? && !opt_in) ? email_preference.opt_in : opt_in,
-      ip_address: ip_address,
-      source: source,
-      form_kind: form_kind
-    )
+    # Don't change opt_in to false if a preference with opt_in = true exists already.
+    # We currently only enable a user to opt out via the Pardot unsubscribe link.
+    if email_preference.new_record? || opt_in || !email_preference.opt_in
+      email_preference.update!(
+        email: email,
+        opt_in: opt_in,
+        ip_address: ip_address,
+        source: source,
+        form_kind: form_kind
+      )
+    end
+    # This is a write-only helper method.  Don't return data to the caller.
+    return
   end
 end

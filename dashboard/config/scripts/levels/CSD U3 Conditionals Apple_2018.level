@@ -32,7 +32,6 @@
     "debugger_disabled": "true",
     "markdown_instructions": "# More Practice With Booleans\r\n\r\nLet's use one more Boolean expression to check the condition of a sprite.  You can use a `console.log` command to check whether its scale is 2 yet.\r\n\r\n# Do This\r\n\r\n* Add a `console.log` statement.\r\n* Add a Boolean expression inside the `console.log` that checks whether the `apple.scale` is greater than 2.",
     "callout_json": "[]",
-    "show_d_pad": "false",
     "project_template_level_name": "CSD U3 apple template-2018",
     "instructions_important": "false",
     "hide_animation_mode": "false",
@@ -94,13 +93,13 @@
     "encrypted_examples": "RbHUch7BxbgkpSrOJH5P3HUPGx5t/YPfRzfVUJlbcCKeJzXs2VoXx+bWYsZu\ncnZLm5YlNHzhukTsXsV+rTKOBA==\n",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "contained_level_names": null,
     "reference_links": [
       "/docs/csd-1718/sprite_properties/index.html",
       "/docs/csd-1718/sprites/index.html"
     ],
     "map_reference": "/docs/csd-1718/booleans/index.html",
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

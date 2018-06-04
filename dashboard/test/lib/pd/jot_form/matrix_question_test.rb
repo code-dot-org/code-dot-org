@@ -7,8 +7,8 @@ module Pd
       include Constants
 
       test 'parse jotform question data for matrix' do
-        data = {
-          id: '1',
+        jotform_question = {
+          qid: '1',
           type: TYPE_MATRIX,
           name: 'sampleMatrix',
           text: 'This is a matrix label',
@@ -17,11 +17,7 @@ module Pd
           mrows: 'Question 1|Question 2'
         }.stringify_keys
 
-        question = MatrixQuestion.from_jotform_question(
-          id: '1',
-          type: TYPE_MATRIX,
-          jotform_question: data
-        )
+        question = MatrixQuestion.from_jotform_question jotform_question
         assert question.is_a? MatrixQuestion
         assert_equal 1, question.id
         assert_equal TYPE_MATRIX, question.type
@@ -37,16 +33,17 @@ module Pd
         question = MatrixQuestion.new(
           id: 1,
           options: %w(Agree Neutral Disagree),
-          sub_questions: ['Question 1', 'Question 2']
+          sub_questions: ['Question 1', 'Question 2', 'Question 3']
         )
 
         answer = {
           'Question 1' => 'Neutral',
-          'Question 2' => 'Agree'
+          'Question 2' => '', # blank answer should be ignored
+          'Question 3' => 'Agree'
         }
 
         assert_equal(
-          {0 => 2, 1 => 1},
+          {0 => 2, 2 => 1},
           question.get_value(answer)
         )
       end
@@ -69,11 +66,12 @@ module Pd
         assert_equal "Unable to find 'Nonexistent Answer' in the options for matrix question 1", e.message
       end
 
-      test 'to_summary' do
+      test 'summarize' do
         question = MatrixQuestion.new(
           id: 1,
           name: 'sampleMatrix',
           text: 'How much do you agree or disagree with the following statements about this workshop?',
+          options: %w(Disagree Neutral Agree),
           sub_questions: [
             'I learned something',
             'It was a good use of time'
@@ -88,19 +86,21 @@ module Pd
           'sampleMatrix_0' => {
             text: 'I learned something',
             answer_type: ANSWER_SELECT_VALUE,
-            parent: 'sampleMatrix'
+            parent: 'sampleMatrix',
+            max_value: 3
           },
           'sampleMatrix_1' => {
             text: 'It was a good use of time',
             answer_type: ANSWER_SELECT_VALUE,
-            parent: 'sampleMatrix'
+            parent: 'sampleMatrix',
+            max_value: 3
           }
         }
 
-        assert_equal expected_summary, question.to_summary
+        assert_equal expected_summary, question.summarize
       end
 
-      test 'to_form_data' do
+      test 'process_answer' do
         question = MatrixQuestion.new(
           id: 1,
           name: 'sampleMatrix',
@@ -121,7 +121,7 @@ module Pd
             'sampleMatrix_0' => 3,
             'sampleMatrix_1' => 2
           },
-          question.to_form_data(answer)
+          question.process_answer(answer)
         )
       end
 

@@ -124,7 +124,7 @@ class Homepage
 
   def self.get_blocks(request)
     if request.language == "en"
-      [
+      @en_blocks_entries ||= [
         {
           id: "students-en",
           type: "block",
@@ -159,7 +159,7 @@ class Homepage
           color1: "0, 148, 202",
           color2: "89, 185, 220",
           url: "/educate",
-          image: "/shared/images/courses/logo_tall_teacher2.jpg",
+          image: "/images/homepage/ap-feature-2017.jpg",
           links:
             [
               {
@@ -228,9 +228,9 @@ class Homepage
               }
             ]
         }
-      ]
+      ].each {|entry| entry[:image].gsub!("/images/", "/images/fit-400/")}
     else
-      [
+      @non_en_blocks_entries ||= [
         {
           id: "students-nonen",
           type: "blockshort",
@@ -249,7 +249,7 @@ class Homepage
           color1: "0, 148, 202",
           color2: "89, 185, 220",
           url: CDO.studio_url("/courses?view=teacher"),
-          image: "/shared/images/courses/logo_tall_teacher2.jpg"
+          image: "/images/homepage/ap-feature-2017.jpg"
         },
         {
           id: "hoc-nonen",
@@ -271,7 +271,7 @@ class Homepage
           url: CDO.studio_url("/s/flappy/reset"),
           image: "/shared/images/courses/logo_tall_flappy.jpg"
         }
-      ]
+      ].each {|entry| entry[:image].gsub!("/images/", "/images/fit-400/")}
     end
   end
 

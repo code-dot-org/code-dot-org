@@ -1,7 +1,7 @@
 class Api::V1::SectionsController < Api::V1::JsonApiController
   load_resource :section, find_by: :code, only: [:join, :leave]
   before_action :find_follower, only: :leave
-  load_and_authorize_resource except: [:join, :leave]
+  load_and_authorize_resource except: [:join, :leave, :membership, :valid_scripts, :create]
 
   skip_before_action :verify_authenticity_token, only: :update_sharing_disabled
 
@@ -30,7 +30,11 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   # POST /api/v1/sections
   # Create a new section
   def create
+    authorize! :create, Section
+
     # TODO: Push validation into model when old API is fully deprecated
+    # Once this has been done, endpoint can use CanCan load_and_authorize_resource
+    # rather than manually authorizing (above)
     return head :bad_request unless Section.valid_login_type? params[:login_type]
 
     valid_script = params[:script] && Script.valid_script_id?(current_user, params[:script][:id])
@@ -106,7 +110,16 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   # GET /api/v1/sections/membership
   # Get the set of sections that the current user is enrolled in.
   def membership
-    render json: @sections, each_serializer: Api::V1::SectionNameAndIdSerializer
+    return head :forbidden unless current_user
+    render json: current_user.sections_as_student, each_serializer: Api::V1::SectionNameAndIdSerializer
+  end
+
+  # GET /api/v1/sections/valid_scripts
+  def valid_scripts
+    return head :forbidden unless current_user
+
+    scripts = Script.valid_scripts(current_user).map(&:assignable_info)
+    render json: scripts
   end
 
   private

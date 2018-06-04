@@ -2,6 +2,148 @@ require 'test_helper'
 
 class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
   include Pd::WorkshopSurveyResultsHelper
+  include Pd::JotForm::Constants
+
+  FORM_IDS = {
+    pre_workshop: 0,
+    day_1: 1,
+    day_2: 2,
+    day_3: 3,
+    day_4: 4,
+    facilitator: 5
+  }
+
+  self.use_transactional_test_case = true
+  setup_all do
+    @workshop = create :pd_workshop, :local_summer_workshop, course: Pd::SharedWorkshopConstants::COURSE_CSP, num_facilitators: 2
+
+    @pre_workshop_questions = [
+      Pd::JotForm::MatrixQuestion.new(
+        id: 1,
+        name: 'sampleMatrix',
+        type: TYPE_MATRIX,
+        text: 'How do you feel about these statements?',
+        options: %w(Strongly\ Agree Agree Neutral Disagree Strongly\ Disagree),
+        sub_questions: ['I am excited for {workshopCourse}', 'I am prepared for {workshopCourse}']
+      ),
+      Pd::JotForm::ScaleQuestion.new(
+        id: 2,
+        name: 'sampleScale',
+        text: 'Do you like {workshopCourse}?',
+        options: %w(Strongly\ Agree Strongly\ Disagree),
+        values: (1..5).to_a,
+        type: TYPE_SCALE
+      ),
+      Pd::JotForm::TextQuestion.new(
+        id: 3,
+        name: 'sampleText',
+        text: 'Write some thoughts here',
+        type: TYPE_TEXTBOX
+      )
+    ]
+
+    @daily_questions = [
+      Pd::JotForm::ScaleQuestion.new(
+        id: 1,
+        name: 'sampleDailyScale',
+        text: 'How was your day?',
+        options: %w(Poor Fair Good Great Excellent),
+        values: (1..5).to_a,
+        type: TYPE_SCALE
+      )
+    ]
+
+    @daily_facilitator_questions = [
+      Pd::JotForm::TextQuestion.new(
+        id: 1,
+        name: 'sampleFacilitatorText',
+        text: 'How was the facilitator?',
+        type: TYPE_TEXTBOX
+      )
+    ]
+
+    Pd::SurveyQuestion.create(
+      form_id: FORM_IDS[:pre_workshop],
+      questions: Pd::JotForm::FormQuestions.new(FORM_IDS[:pre_workshop], @pre_workshop_questions).serialize.to_json
+    )
+
+    Pd::SurveyQuestion.create(
+      form_id: FORM_IDS[:day_1],
+      questions: Pd::JotForm::FormQuestions.new(FORM_IDS[:day_1], @daily_questions).serialize.to_json
+    )
+
+    Pd::SurveyQuestion.create(
+      form_id: FORM_IDS[:day_2],
+      questions: Pd::JotForm::FormQuestions.new(FORM_IDS[:day_2], @daily_questions).serialize.to_json
+    )
+
+    Pd::SurveyQuestion.create(
+      form_id: FORM_IDS[:day_3],
+      questions: Pd::JotForm::FormQuestions.new(FORM_IDS[:day_3], @daily_questions).serialize.to_json
+    )
+
+    Pd::SurveyQuestion.create(
+      form_id: FORM_IDS[:day_4],
+      questions: Pd::JotForm::FormQuestions.new(FORM_IDS[:day_4], @daily_questions).serialize.to_json
+    )
+
+    Pd::SurveyQuestion.create(
+      form_id: FORM_IDS[:facilitator],
+      questions: Pd::JotForm::FormQuestions.new(FORM_IDS[:facilitator], @daily_facilitator_questions).serialize.to_json
+    )
+
+    expected_daily_questions = {
+      general: {
+        'sampleDailyScale' => {
+          text: 'How was your day?',
+          answer_type: ANSWER_SELECT_VALUE,
+          max_value: 5
+        },
+      },
+      facilitator: {
+        'sampleFacilitatorText' => {
+          text: 'How was the facilitator?',
+          answer_type: ANSWER_TEXT
+        }
+      }
+    }
+
+    @expected_questions = {
+      'Pre Workshop' => {
+        general: {
+          'sampleMatrix' => {
+            text: 'How do you feel about these statements?',
+            answer_type: ANSWER_NONE
+          },
+          'sampleMatrix_0' => {
+            text: 'I am excited for CS Principles',
+            answer_type: ANSWER_SELECT_VALUE,
+            parent: 'sampleMatrix',
+            max_value: 5
+          },
+          'sampleMatrix_1' => {
+            text: 'I am prepared for CS Principles',
+            answer_type: ANSWER_SELECT_VALUE,
+            parent: 'sampleMatrix',
+            max_value: 5
+          },
+          'sampleScale' => {
+            text: 'Do you like CS Principles?',
+            answer_type: ANSWER_SELECT_VALUE,
+            max_value: 5
+          },
+          'sampleText' => {
+            text: 'Write some thoughts here',
+            answer_type: ANSWER_TEXT
+          }
+        }
+      },
+      'Day 1' => expected_daily_questions,
+      'Day 2' => expected_daily_questions,
+      'Day 3' => expected_daily_questions,
+      'Day 4' => expected_daily_questions
+    }
+  end
 
   test 'summarize summarizes teachercons as expected' do
     enrollment_1 = create :pd_enrollment
@@ -142,5 +284,124 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
     assert_raise RuntimeError do
       summarize_workshop_surveys(workshops: [local_workshop, teachercon])
     end
+  end
+
+  test 'daily survey get_question_for_forms gets workshop questions and substitutes question texts' do
+    CDO.expects(:jotform_forms).times(9).returns( # 5 for general, 4 for facilitator
+      {
+        'local' => {
+          'day_0' => FORM_IDS[:pre_workshop],
+          'day_1' => FORM_IDS[:day_1],
+          'day_2' => FORM_IDS[:day_2],
+          'day_3' => FORM_IDS[:day_3],
+          'day_4' => FORM_IDS[:day_4],
+          'facilitator' => FORM_IDS[:facilitator]
+        }
+      }
+    )
+
+    assert_equal(@expected_questions, get_questions_for_forms(@workshop))
+  end
+
+  test 'generate workshop survey summary works as expected' do
+    CDO.stubs(:jotform_forms).returns(
+      {
+        'local' => {
+          'day_0' => FORM_IDS[:pre_workshop]
+        }
+      }
+    )
+
+    common_survey_hash = {
+      form_id: CDO.jotform_forms['local']['day_0'],
+      pd_workshop: @workshop,
+      day: 0
+    }
+
+    Pd::WorkshopDailySurvey.new(
+      common_survey_hash.merge(
+        {
+          submission_id: (Pd::WorkshopDailySurvey.maximum(:id) || 0) + 1,
+          user: create(:teacher),
+          answers: {
+            '1' => {
+              'I am excited for {workshopCourse}' => 'Strongly Agree',
+              'I am prepared for {workshopCourse}' => 'Agree'
+            },
+            '2' => '4',
+            '3' => 'Here are my thoughts'
+          }.to_json
+        }
+      )
+    ).save(validate: false)
+
+    Pd::WorkshopDailySurvey.new(
+      common_survey_hash.merge(
+        {
+          submission_id: (Pd::WorkshopDailySurvey.maximum(:id) || 0) + 1,
+          user: create(:teacher),
+          answers: {
+            '1' => {
+              'I am excited for {workshopCourse}' => 'Disagree',
+              'I am prepared for {workshopCourse}' => 'Agree'
+            },
+            '2' => '2',
+            '3' => 'More thoughts'
+          }.to_json
+        }
+      )
+    ).save(validate: false)
+
+    Pd::WorkshopDailySurvey.new(
+      common_survey_hash.merge(
+        {
+          submission_id: (Pd::WorkshopDailySurvey.maximum(:id) || 0) + 1,
+          user: create(:teacher),
+          answers: {
+            '1' => {
+              'I am excited for {workshopCourse}' => 'Strongly Agree',
+              'I am prepared for {workshopCourse}' => 'Agree'
+            }
+          }.to_json
+        }
+      )
+    ).save(validate: false)
+
+    daily_expected_results = {
+      response_count: 0,
+      general: {
+        'sampleDailyScale' => {}
+      },
+      facilitator: {
+        'sampleFacilitatorText' => {}
+      }
+    }
+
+    assert_equal(
+      {
+        'Pre Workshop' => {
+          general: {
+            'sampleMatrix' => {},
+            'sampleMatrix_0' => {
+              1 => 2,
+              4 => 1
+            },
+            'sampleMatrix_1' => {
+              2 => 3,
+            },
+            'sampleScale' => {
+              2 => 1,
+              4 => 1
+            },
+            'sampleText' => ['Here are my thoughts', 'More thoughts']
+          },
+          response_count: 3
+        },
+        'Day 1' => daily_expected_results,
+        'Day 2' => daily_expected_results,
+        'Day 3' => daily_expected_results,
+        'Day 4' => daily_expected_results
+      }, generate_workshops_survey_summary(@workshop, @expected_questions)
+    )
   end
 end

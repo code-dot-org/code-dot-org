@@ -894,6 +894,32 @@ class UserTest < ActiveSupport::TestCase
     assert user.under_13?
   end
 
+  test "reset_secrets calls generate_secret_picture and generate_secret_words" do
+    user = create :user
+
+    user.expects(:generate_secret_picture).once
+    user.expects(:generate_secret_words).once
+    user.reset_secrets
+  end
+
+  test "generate_secret_picture sets a new secret picture on user" do
+    user = create :user
+    old_secret_picture = user.secret_picture
+
+    user.generate_secret_picture
+
+    refute_equal old_secret_picture, user.secret_picture
+  end
+
+  test "generate_secret_words sets new secret words on user" do
+    user = create :user
+    old_secret_words = user.secret_words
+
+    user.generate_secret_words
+
+    refute_equal old_secret_words, user.secret_words
+  end
+
   test "no send reset password for blank email" do
     error_user = User.send_reset_password_instructions(email: '')
     assert error_user.errors[:email]
@@ -976,6 +1002,26 @@ class UserTest < ActiveSupport::TestCase
     student = User.find(student.id)
     # password was changed
     assert old_password != student.encrypted_password
+  end
+
+  test 'validates format of parent email on create' do
+    refute_creates User do
+      assert_raises Exception do
+        create :young_student, parent_email: 'bad_email_format@nowhere'
+      end
+    end
+  end
+
+  test 'validates format of parent email on update' do
+    student = create :young_student
+    assert student.valid?
+
+    student.parent_email = 'bad_email_format@nowhere'
+    refute student.valid?
+
+    refute student.save
+    assert_equal({parent_email: ['is invalid']}, student.errors.messages)
+    assert_equal({parent_email: [{error: :invalid}]}, student.errors.details)
   end
 
   test 'send reset password for student without age' do
@@ -1543,15 +1589,23 @@ class UserTest < ActiveSupport::TestCase
   test 'normalize_gender' do
     assert_equal 'f', User.normalize_gender('f')
     assert_equal 'm', User.normalize_gender('m')
+    assert_equal 'n', User.normalize_gender('n')
+    assert_equal 'o', User.normalize_gender('o')
 
     assert_equal 'f', User.normalize_gender('F')
     assert_equal 'm', User.normalize_gender('M')
+    assert_equal 'n', User.normalize_gender('N')
+    assert_equal 'o', User.normalize_gender('O')
 
     assert_equal 'f', User.normalize_gender('Female')
     assert_equal 'm', User.normalize_gender('Male')
+    assert_equal 'n', User.normalize_gender('NonBinary')
+    assert_equal 'o', User.normalize_gender('NotListed')
 
     assert_equal 'f', User.normalize_gender('female')
     assert_equal 'm', User.normalize_gender('male')
+    assert_equal 'n', User.normalize_gender('non-binary')
+    assert_equal 'o', User.normalize_gender('notlisted')
 
     assert_nil User.normalize_gender('some nonsense')
     assert_nil User.normalize_gender('')
@@ -2826,5 +2880,21 @@ class UserTest < ActiveSupport::TestCase
     end
     assert_equal 2, user.user_geos.count
     assert user.within_united_states?
+  end
+
+  test 'hidden_script_access? is false if user is not admin and does not have permission' do
+    user = create :student
+    refute user.hidden_script_access?
+  end
+
+  test 'hidden_script_access? is true if user is admin' do
+    user = create :admin
+    assert user.hidden_script_access?
+  end
+
+  test 'hidden_script_access? is true if user has permission' do
+    user = create :teacher
+    user.update(permission: UserPermission::HIDDEN_SCRIPT_ACCESS)
+    assert user.hidden_script_access?
   end
 end

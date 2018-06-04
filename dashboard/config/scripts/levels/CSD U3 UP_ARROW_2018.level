@@ -59,7 +59,6 @@
       "comment_Sprites": null,
       "console.log": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Moving Sprites\r\n\r\nYou can change your sprite's position based on key presses in the same way you changed its animations.\r\n\r\n# Do This\r\n\r\n* Add an `if` statement inside your draw loop.\r\n* Check whether the right arrow key has been pressed down.\r\n* Add code inside the conditional to move the sprite right if the right arrow is down.\r\n\r\n_Do you need to change sprite's x or y property to move it right?_",
@@ -99,10 +98,6 @@
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 4761,
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "reference_links": [
       "/docs/gamelab/keyDown/index.html",
       "/docs/csd-1718/if_statements/index.html",
@@ -111,7 +106,8 @@
       "/docs/csd-1718/sprite_properties/index.html",
       "/docs/csd-1718/sprites/index.html"
     ],
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

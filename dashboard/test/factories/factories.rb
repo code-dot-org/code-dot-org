@@ -48,7 +48,7 @@ FactoryGirl.define do
   end
 
   factory :user do
-    birthday Date.new(1991, 3, 14)
+    birthday Time.zone.today - 21.years
     email {("#{user_type}_#{(User.maximum(:id) || 0) + 1}@code.org")}
     password "00secret"
     locale 'en-US'
@@ -154,6 +154,7 @@ FactoryGirl.define do
 
     factory :student do
       user_type User::TYPE_STUDENT
+      birthday Time.zone.today - 17.years
 
       factory :young_student do
         birthday Time.zone.today - 10.years
@@ -460,6 +461,22 @@ FactoryGirl.define do
     game {Game.curriculum_reference}
   end
 
+  factory :block do
+    transient do
+      sequence(:index)
+    end
+    name {"gamelab_block#{index}"}
+    category 'custom'
+    level_type 'fakeLevelType'
+    config do
+      {
+        func: "block#{index}",
+        args: [{name: 'ARG'}],
+      }.to_json
+    end
+    helper_code {"function block#{index}() {}"}
+  end
+
   factory :level_source do
     level
     data '<xml/>'
@@ -683,6 +700,15 @@ FactoryGirl.define do
     user {create :student}
     script {create :script}
     level {create :level}
+  end
+
+  factory :authored_hint_view_request do
+    user {create :student}
+    script {create :script}
+    level {create :level}
+    prev_level_source_id {create(:level_source).id}
+    next_level_source_id {create(:level_source).id}
+    final_level_source_id {create(:level_source).id}
   end
 
   factory :level_concept_difficulty do
@@ -914,6 +940,7 @@ FactoryGirl.define do
   end
 
   factory :circuit_playground_discount_application do
+    user {create :teacher}
   end
 
   factory :seeded_s3_object do

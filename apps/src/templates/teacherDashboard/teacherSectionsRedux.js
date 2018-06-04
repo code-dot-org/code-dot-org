@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import $ from 'jquery';
 import { OAuthSectionTypes } from './shapes';
-import experiments, { COURSE_VERSIONS } from '../../util/experiments';
 
 /**
  * @const {string[]} The only properties that can be updated by the user
@@ -164,7 +163,7 @@ export const finishEditingSection = () => (dispatch, getState) => {
   const section = state.sectionBeingEdited;
   return new Promise((resolve, reject) => {
     $.ajax({
-      url: isAddingSection(state) ? '/v2/sections' : `/v2/sections/${section.id}/update`,
+      url: isAddingSection(state) ? '/dashboardapi/sections' : `/v2/sections/${section.id}/update`,
       method: 'POST',
       contentType: 'application/json;charset=UTF-8',
       data: JSON.stringify(serverSectionFromSection(section)),
@@ -197,19 +196,18 @@ export const editSectionLoginType = (sectionId, loginType) => dispatch => {
 export const asyncLoadSectionData = (id) => (dispatch) => {
   dispatch({type: ASYNC_LOAD_BEGIN});
   // If section id is provided, load students for the current section.
-  const courseVersions = experiments.isEnabled(COURSE_VERSIONS);
+  const courseVersions = true;
 
   dispatch({type: ASYNC_LOAD_BEGIN});
   let apis = [
     '/dashboardapi/sections',
 
-    // Because there is no notion of hidden courses, the server by default looks
-    // up only our specified list of courses (csp and csd). When the
-    // courseVersions experiment is enabled, we also ask the server for other
-    // versions (e.g. csd-2018) of those courses.
+    // The server by default only returns stable courses (version year 2017).
+    // When the courseVersions experiment is enabled, we also ask the
+    // server for other version years (e.g. 2018) of those courses.
     `/dashboardapi/courses${courseVersions ? '?allVersions=1' : ''}`,
 
-    '/v2/sections/valid_scripts'
+    '/dashboardapi/sections/valid_scripts'
   ];
   if (id) {
     apis.push('/dashboardapi/sections/' + id + '/students');

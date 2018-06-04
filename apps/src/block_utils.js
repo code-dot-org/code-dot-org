@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import xml from './xml';
 
 const ATTRIBUTES_TO_CLEAN = [
@@ -16,7 +17,7 @@ exports.createToolbox = function (blocks) {
 };
 
 const appendBlocks = function (toolboxDom, blockTypes) {
-  const root = toolboxDom.getRootNode().firstChild;
+  const root = toolboxDom.firstChild;
   blockTypes.forEach(blockName => {
     const block = toolboxDom.createElement('block');
     block.setAttribute('type', blockName);
@@ -26,21 +27,35 @@ const appendBlocks = function (toolboxDom, blockTypes) {
 };
 exports.appendBlocks = appendBlocks;
 
-exports.appendCategory = function (toolboxXml, blockTypes, categoryName) {
+exports.appendBlocksByCategory = function (toolboxXml, blocksByCategory) {
   const parser = new DOMParser();
   const toolboxDom = parser.parseFromString(toolboxXml, 'text/xml');
   if (!toolboxDom.querySelector('category')) {
     // Uncategorized toolbox, just add blocks to the end
-    return appendBlocks(toolboxDom, blockTypes);
+    const allBlocks = _.flatten(Object.values(blocksByCategory));
+    return appendBlocks(toolboxDom, allBlocks);
   }
-  const customCategory = toolboxDom.createElement('category');
-  customCategory.setAttribute('name', categoryName);
-  blockTypes.forEach(blockName => {
-    const block = toolboxDom.createElement('block');
-    block.setAttribute('type', blockName);
-    customCategory.appendChild(block);
+  Object.keys(blocksByCategory).forEach(categoryName => {
+    let category =
+        toolboxDom.querySelector(`category[name="${categoryName}"]`);
+    let existingCategory = true;
+    if (!category) {
+      category = toolboxDom.createElement('category');
+      existingCategory = false;
+    }
+    category.setAttribute('name', categoryName);
+    blocksByCategory[categoryName].forEach(blockName => {
+      if (category.querySelector(`block[type="${blockName}"]`)) {
+        return;
+      }
+      const block = toolboxDom.createElement('block');
+      block.setAttribute('type', blockName);
+      category.appendChild(block);
+    });
+    if (!existingCategory) {
+      toolboxDom.firstChild.appendChild(category);
+    }
   });
-  toolboxDom.getRootNode().firstChild.appendChild(customCategory);
   return xml.serialize(toolboxDom);
 };
 
@@ -399,6 +414,8 @@ exports.cleanBlocks = function (blocksDom) {
  * @property {boolean} empty Indicates that an input should not render a
  *   connection or generate any code. Mostly just useful as a line break for
  *   non-inlined blocks.
+ * @property {boolean} assignment Indicates that this block should generate
+ *   an assignment statement, with this input yielding the variable name.
  */
 
 /**
@@ -416,6 +433,36 @@ const STATEMENT_INPUT = 'statement';
 const FIELD_INPUT = 'field';
 
 /**
+ * Splits a blockText into labelled inputs, each match will a label followed by
+ * an input. The label is an arbitrary (possibly empty) string. The input is
+ * either a real named input like '{VALUE}', a newline, or if it matched a
+ * trailing label, nothing.
+ */
+const LABELED_INPUTS_REGEX = /.*?({[^}]*}|\n|$)/gm;
+
+/**
+ * Splits a labeled input into its parts. The resulting groups are:
+ * 1: the label
+ * 2: the input (a named input like '{VALUE}', a newline, or nothing)
+ * 3: the input's name (e.g. 'VALUE')
+ */
+const LABELED_INPUT_PARTS_REGEX = /(.*?)({([^}]*)}|\n|$)/m;
+
+/**
+ * Finds the input config for the given input name, and removes it from args.
+ * @param {InputConfig[]} args List of configs to search through
+ * @param {string} inputName name of input to find and remove
+ * @returns InputConfig the input config with name `inputName`
+ */
+const findAndRemoveInputConfig = (args, inputName) => {
+  const argIndex = args.findIndex(arg => arg.name === inputName);
+  if (argIndex !== -1) {
+    return args.splice(argIndex, 1)[0];
+  }
+  throw new Error(`${inputName} not found in args`);
+};
+
+/**
  * Given block text with input names specified in curly braces, returns a list
  * of labeled inputs that should be added to the block.
  *
@@ -428,69 +475,53 @@ const FIELD_INPUT = 'field';
  * @returns {LabeledInputConfig[]} a list of labeled inputs
  */
 const determineInputs = function (text, args, strictTypes=[]) {
-  const tokens = text.split(/[{}]/);
-  if (tokens[tokens.length - 1] === '') {
+  const tokens = text.match(LABELED_INPUTS_REGEX);
+  if (tokens.length && tokens[tokens.length - 1] === '') {
     tokens.pop();
   }
-  const inputs = [];
-  for (let i = 0; i < tokens.length; i += 2) {
-    const label = tokens[i];
-    const input = tokens[i + 1];
-    if (input) {
-      const argIndex = args.findIndex(arg => arg.name === input);
-      const [arg] = args.splice(argIndex, 1);
+  const inputs = tokens.map(token => {
+    const parts = token.match(LABELED_INPUT_PARTS_REGEX);
+    const label = parts[1];
+    const inputName = parts[3];
+    if (inputName) {
+      const arg = findAndRemoveInputConfig(args, inputName);
       const strict = arg.strict || strictTypes.includes(arg.type);
+      let mode;
       if (arg.options) {
-        inputs.push({
-          mode: DROPDOWN_INPUT,
-          name: arg.name,
-          options: arg.options,
-          label,
-          strict,
-        });
+        mode = DROPDOWN_INPUT;
       } else if (arg.field) {
-        inputs.push({
-          mode: FIELD_INPUT,
-          name: arg.name,
-          type: arg.type,
-          label,
-        });
+        mode = FIELD_INPUT;
       } else if (arg.customInput) {
-        inputs.push({
-          mode: arg.customInput,
-          name: arg.name,
-          type: arg.type,
-          label,
-          strict,
-        });
+        mode = arg.customInput;
       } else if (arg.statement) {
-        inputs.push({
-          mode: STATEMENT_INPUT,
-          name: arg.name,
-          label,
-        });
+        mode = STATEMENT_INPUT;
       } else if (arg.empty) {
-        inputs.push({
-          mode: DUMMY_INPUT,
-          name: arg.name,
-          label,
-        });
+        mode = DUMMY_INPUT;
       } else {
-        inputs.push({
-          mode: VALUE_INPUT,
-          name: arg.name,
-          type: arg.type,
-          label,
-          strict,
-        });
+        mode = VALUE_INPUT;
       }
+      const labeledInput = {
+        name: arg.name,
+        mode,
+        label,
+        strict,
+        type: arg.type,
+        options: arg.options,
+        assignment: arg.assignment,
+      };
+      Object.keys(labeledInput).forEach(key => {
+        if (labeledInput[key] === undefined) {
+          delete labeledInput[key];
+        }
+      });
+      return labeledInput;
     } else {
-      inputs.push({
+      return {
         mode: DUMMY_INPUT,
         label,
-      });
+      };
     }
-  }
+  });
   const statementInputs = args
     .filter(arg => arg.statement)
     .map(arg => ({
@@ -787,9 +818,14 @@ exports.createJsWrapperBlockCreator = function (
     };
 
     generator[blockName] = function () {
+      let prefix = '';
       const values = args.map(arg => {
         const inputConfig = inputConfigs.find(input => input.name === arg.name);
-        return inputTypes[inputConfig.mode].generateCode(this, inputConfig);
+        const inputCode = inputTypes[inputConfig.mode].generateCode(this, inputConfig);
+        if (inputConfig.assignment) {
+          prefix += `${inputCode} = `;
+        }
+        return inputCode;
       }).filter(value => value !== null).map(value => {
         if (value === "") {
           // Missing inputs should be passed into func as undefined
@@ -805,11 +841,10 @@ exports.createJsWrapperBlockCreator = function (
         ];
       }
 
-      let prefix = '';
       if (methodCall) {
         const object =
           Blockly.JavaScript.valueToCode(this, 'THIS', ORDER_MEMBER);
-        prefix = `${object}.`;
+        prefix += `${object}.`;
       }
 
       if (eventBlock) {

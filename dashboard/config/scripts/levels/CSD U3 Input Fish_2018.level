@@ -59,7 +59,6 @@
       "comment_Sprites": null,
       "console.log": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Fish With Arrows\r\n\r\nThe fish are back. Can you make the fish move left only when the left arrow key is pressed down?\r\n\r\n# Do This\r\n\r\n* Add an if statement to check when the left arrow key is pressed down.\r\n* Move the commands for moving the fish inside the if statement.",
@@ -101,7 +100,6 @@
     "start_blocks": "var orangeFish = createSprite(400, randomNumber(0, 100));\r\norangeFish.setAnimation(\"orange_fish\");\r\nvar blueFish = createSprite(250, randomNumber(0, 200));\r\nblueFish.setAnimation(\"blue_fish\");\r\nvar greenFish = createSprite(300, randomNumber(200, 300));\r\ngreenFish.setAnimation(\"green_fish\");\r\n\r\nfunction draw() {\r\n  // Draw Background\r\n  background(\"navy\");\r\n  \r\n  // Update Values\r\n  orangeFish.x = orangeFish.x - 2;\r\n  blueFish.x = blueFish.x - 3;\r\n  greenFish.x = greenFish.x - 1;\r\n  \r\n  // Draw Animations\r\n  drawSprites();\r\n}\r\n",
     "parent_level_id": 8886,
     "name_suffix": "_2018",
-    "contained_level_names": null,
     "reference_links": [
       "/docs/gamelab/keyDown/index.html",
       "/docs/csd-1718/if_statements/index.html",
@@ -110,7 +108,8 @@
       "/docs/csd-1718/sprite_properties/index.html",
       "/docs/csd-1718/sprites/index.html"
     ],
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

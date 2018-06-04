@@ -301,7 +301,7 @@ class ProjectsController < ApplicationController
     # for sharing pages, the app will display the footer inside the playspace instead
     no_footer = sharing
     # if the game doesn't own the sharing footer, treat it as a legacy share
-    @is_legacy_share = sharing && !@game.owns_footer_for_share?
+    @legacy_share_style = sharing && !@game.owns_footer_for_share?
     view_options(
       readonly_workspace: sharing || readonly,
       full_width: true,
@@ -310,7 +310,6 @@ class ProjectsController < ApplicationController
       no_footer: no_footer,
       code_studio_logo: sharing && !iframe_embed,
       no_header: sharing,
-      is_legacy_share: @is_legacy_share,
       small_footer: !no_footer && (@game.uses_small_footer? || @level.enable_scrolling?),
       has_i18n: @game.has_i18n?,
       game_display_name: data_t("game.name", @game.name)
