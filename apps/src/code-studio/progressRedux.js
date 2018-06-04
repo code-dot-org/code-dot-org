@@ -467,6 +467,9 @@ export function pairingForLevel(level, levelProgress) {
  *   TestResult
  */
 export function statusForLevel(level, levelProgress) {
+  if (levelProgress[level.activeId]) {
+    return levelProgress[level.activeId].status;
+  }
   // Peer Reviews use a level object to track their state, but have some subtle
   // differences from regular levels (such as a separate id namespace). Unlike
   // levels, Peer Reviews store status on the level object (for the time being)
@@ -474,7 +477,6 @@ export function statusForLevel(level, levelProgress) {
     if (level.locked) {
       return LevelStatus.locked;
     }
-    return level.status;
   }
 
   // Assessment levels will have a uid for each page (and a test-result
