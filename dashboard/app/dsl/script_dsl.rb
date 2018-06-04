@@ -246,6 +246,8 @@ class ScriptDSL < BaseDSL
     s << 'project_widget_visible true' if script.project_widget_visible
     s << "project_widget_types #{script.project_widget_types}" if script.project_widget_types
     s << "script_announcements #{script.script_announcements}" if script.script_announcements
+    s << "new_name '#{script.new_name}'" if script.new_name
+    s << "family_name '#{script.family_name}'" if script.family_name
 
     s << '' unless s.empty?
     s << serialize_stages(script)
