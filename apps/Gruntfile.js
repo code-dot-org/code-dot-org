@@ -509,6 +509,7 @@ describe('entry tests', () => {
     'pd/application/principal_approval_application/new': './src/sites/studio/pages/pd/application/principal_approval_application/new.js',
     'pd/teachercon1819_registration/new': './src/sites/studio/pages/pd/teachercon1819_registration/new.js',
     'pd/fit_weekend1819_registration/new': './src/sites/studio/pages/pd/fit_weekend1819_registration/new.js',
+    'pd/workshop_enrollment/new': './src/sites/studio/pages/pd/workshop_enrollment/new.js',
 
     'pd/professional_learning_landing/index': './src/sites/studio/pages/pd/professional_learning_landing/index.js',
     'pd/regional_partner_contact/new': './src/sites/studio/pages/pd/regional_partner_contact/new.js',

@@ -23,6 +23,13 @@ class Pd::WorkshopEnrollmentController < ApplicationController
         @enrollment.email = current_user.email
         @enrollment.email_confirmation = current_user.email
       end
+
+      @script_data = {
+        props: {
+          workshop: @workshop,
+          enrollment: @enrollment
+        }.to_json
+      }
     end
   end
 
