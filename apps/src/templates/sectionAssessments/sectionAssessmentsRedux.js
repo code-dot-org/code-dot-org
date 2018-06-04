@@ -91,6 +91,29 @@ export const getAssessmentsForCurrentScript = (state) => {
   return state.sectionAssessments.assessmentsByScript[state.scriptSelection.scriptId] || {};
 };
 
+export const getQuestionAnswerData = (state) => {
+  const assessmentsStructure = state.sectionAssessments.assessmentsStructureByScript[state.scriptSelection.scriptId] || {};
+  if (Object.keys(assessmentsStructure).length === 0) {
+    return {};
+  }
+  const firstAssessment = Object.values(assessmentsStructure)[0];
+  const questionData = firstAssessment.questions;
+  console.log('question data -->', questionData);
+  return questionData;
+};
+
+export const getStudentAnswerData = (state) => {
+  const studentResponses = state.sectionAssessments.assessmentsByScript[state.scriptSelection.scriptId] || {};
+  if (Object.keys(studentResponses).length === 0) {
+    return {};
+  }
+  const studentId = Object.keys(studentResponses)[0];
+  const firstStudentResponses = studentResponses[studentId].responses_by_assessment;
+  const firstStudentAssessment = Object.values(firstStudentResponses)[0];
+  console.log('student assessment', firstStudentAssessment);
+  return firstStudentAssessment;
+};
+
 // Make a request to the server for assessment data
 const loadAssessmentsFromServer = (sectionId, scriptId) => {
   let payload = {section_id: sectionId};
