@@ -69,8 +69,20 @@ class ScriptLevelsController < ApplicationController
     authorize! :read, ScriptLevel
     @script = Script.get_from_cache(params[:script_id])
 
+    # Redirect to the same script level within @script.redirect_to.
+    # There are too many variations of the script level path to use
+    # a path helper, so use a regex to compute the new path.
     if @script.redirect_to?
-      redirect_to build_script_level_path(Script.get_from_cache(@script.redirect_to).starting_level)
+      new_script = Script.get_from_cache(@script.redirect_to)
+      new_path = request.fullpath.sub(%r{^/s/#{params[:script_id]}/}, "/s/#{new_script.name}/")
+
+      # avoid a redirect loop if the string substitution failed
+      if new_path == request.fullpath
+        redirect_to build_script_level_path(new_script.starting_level)
+        return
+      end
+
+      redirect_to new_path
       return
     end
 
