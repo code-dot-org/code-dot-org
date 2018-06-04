@@ -161,7 +161,9 @@ class User < ActiveRecord::Base
 
   SYSTEM_DELETED_USERNAME = 'sys_deleted'
 
+  # constants for resetting user secret words/picture
   RESET_SECRETS = 'reset_secrets'.freeze
+  MAX_SECRET_RESET_ATTEMPTS = 5
 
   # :user_type is locked. Use the :permissions property for more granular user permissions.
   USER_TYPE_OPTIONS = [
@@ -1243,11 +1245,27 @@ class User < ActiveRecord::Base
   end
 
   def generate_secret_picture
-    self.secret_picture = SecretPicture.random
+    MAX_SECRET_RESET_ATTEMPTS.times do
+      new_secret_picture = SecretPicture.random
+
+      # retry if random picture is same as user's current secret picture
+      next if new_secret_picture == secret_picture
+
+      self.secret_picture = new_secret_picture
+      break
+    end
   end
 
   def generate_secret_words
-    self.secret_words = [SecretWord.random.word, SecretWord.random.word].join(" ")
+    MAX_SECRET_RESET_ATTEMPTS.times do
+      new_secret_words = [SecretWord.random.word, SecretWord.random.word].join(" ")
+
+      # retry if random words are same as user's current secret words
+      next if new_secret_words == secret_words
+
+      self.secret_words = new_secret_words
+      break
+    end
   end
 
   # Returns an array of experiment name strings

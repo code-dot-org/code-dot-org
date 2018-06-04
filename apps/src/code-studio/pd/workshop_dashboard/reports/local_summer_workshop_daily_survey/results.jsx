@@ -1,6 +1,5 @@
 import React, {PropTypes} from 'react';
 import {Tab, Tabs} from 'react-bootstrap';
-import _ from 'lodash';
 
 const styles = {
   table: {
@@ -43,7 +42,12 @@ export default class Results extends React.Component {
                       dangerouslySetInnerHTML={{__html: question_data['text']}}// eslint-disable-line react/no-danger
                     />
                     <td>
-                      {this.computeAverageFromAnswerObject(this.props.thisWorkshop[session]['general'][question_key])}
+                      {
+                        this.computeAverageFromAnswerObject(
+                          this.props.thisWorkshop[session]['general'][question_key],
+                          question_data['max_value']
+                        )
+                      }
                     </td>
                   </tr>
                 );
@@ -81,10 +85,14 @@ export default class Results extends React.Component {
   }
 
   renderFacilitatorSpecificResultsTable(session) {
+    const hasTableResponses = Object.values(this.props.questions[session]['facilitator']).some((question) => {
+      return question['answer_type'] === 'selectValue';
+    });
 
-    return (
-      <table className="table table-bordered" style={styles.table}>
-        <thead>
+    if (hasTableResponses) {
+      return (
+        <table className="table table-bordered" style={styles.table}>
+          <thead>
           <tr>
             <th/>
             {this.state.facilitatorIds.map((id, i) => (
@@ -93,11 +101,11 @@ export default class Results extends React.Component {
               </th>
             ))}
           </tr>
-        </thead>
-        <tbody>
+          </thead>
+          <tbody>
           {
             Object.entries(this.props.questions[session]['facilitator']).map(([question_key, question_data], i) => {
-              if (!question_data['free_response']) {
+              if (question_data['answer_type'] === 'selectValue') {
                 return (
                   <tr key={i}>
                     <td>
@@ -115,9 +123,12 @@ export default class Results extends React.Component {
               }
             })
           }
-        </tbody>
-      </table>
-    );
+          </tbody>
+        </table>
+      );
+    } else {
+      return null;
+    }
   }
 
   renderFacilitatorSpecificFreeResponses(session) {
@@ -125,25 +136,17 @@ export default class Results extends React.Component {
       <div>
         {
           Object.entries(this.props.questions[session]['facilitator']).map(([question_key, question_data], i) => {
-            if (question_data['free_response']) {
+            if (question_data['answer_type'] === 'text') {
               return (
                 <div key={i} className="well">
                   {question_data['text']}
                   {
-                    this.state.facilitatorIds.map((id, j) => (
-                      <li key={j}>
-                        {this.props.facilitators[id]}
-                        <ul>
-                          {
-                            this.props.thisWorkshop[session]['facilitator'][question_key][id].map((response, k) => (
-                              <li key={k} style={styles.facilitatorResponseList}>
-                                {response}
-                              </li>
-                            ))
-                          }
-                        </ul>
-                      </li>
-                    ))
+                    this.state.facilitatorIds.map((id) => {
+                      return this.renderFacilitatorSpecificBullets(
+                        this.props.thisWorkshop[session]['facilitator'][question_key],
+                        id
+                      );
+                    })
                   }
                 </div>
               );
@@ -151,6 +154,24 @@ export default class Results extends React.Component {
           })
         }
       </div>
+    );
+  }
+
+  renderFacilitatorSpecificBullets(responses, facilitatorId) {
+    const hasResponses = responses && responses[facilitatorId];
+    return (
+      <li key={facilitatorId}>
+        {this.props.facilitators[facilitatorId]}
+        <ul>
+          {
+            hasResponses && responses[facilitatorId].map((response, i) => (
+              <li key={i} style={styles.facilitatorResponseList}>
+                {response}
+              </li>
+            ))
+          }
+        </ul>
+      </li>
     );
   }
 
@@ -169,7 +190,7 @@ export default class Results extends React.Component {
 
   renderAllSessionsResults() {
     return this.props.sessions.map((session, i) => (
-      <Tab eventKey={i + 1} key={i} title={session}>
+      <Tab eventKey={i + 1} key={i} title={`${session} (${this.props.thisWorkshop[session]['response_count'] || 0})`}>
         <br/>
         {this.renderSessionResultsTable(session)}
         {this.renderSessionResultsFreeResponse(session)}
@@ -180,7 +201,7 @@ export default class Results extends React.Component {
     ));
   }
 
-  computeAverageFromAnswerObject(answerHash) {
+  computeAverageFromAnswerObject(answerHash, maxValue) {
     let sum = 0;
     Object.keys(answerHash).map((key) => {
       if (Number(key) > 0) {
@@ -189,13 +210,12 @@ export default class Results extends React.Component {
     });
 
     if (sum === 0) {
-      return '-';
+      return '';
     } else {
       let average = sum / Object.values(answerHash).reduce((sum, x) => {
         return sum + x;
       });
-
-      return _.round(average, 2);
+      return `${average.toFixed(2)} / ${maxValue}`;
     }
   }
 

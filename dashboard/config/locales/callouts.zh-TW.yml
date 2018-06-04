@@ -1746,6 +1746,8 @@
         New Play Lab Project_callout1: 點擊工具箱上的各個類別以檢視其中的積木！拖曳積木到工作區，把他們添加到你的程式中。
         New Play Lab Project_callout2: 點擊「運行」以儲存並運行你的程式
         sign_in_to_save_project: 想要在以後繼續使用這個專案嗎？登入以將這個專案保存到你的帳戶！
+      courseF_playlab_brokenText_callout:
+        courseF_playlab_variables5c_1: You will find your variable block in here.
       courseF_playlab_embed_vars_callout: {}
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: The toolbox has been organized into categories

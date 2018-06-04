@@ -1,6 +1,20 @@
 "ka":
   data:
     script:
+      category:
+        csd_category_name: CS Discoveries ('17-'18)
+        csd_2018_category_name: CS Discoveries ('18-'19)
+        csf_category_name: CS საფუძვლები
+        csf_international_category_name: კომპიუტერული მეცნიერების საერთაშორისო საფუძვლები
+        csf2_draft_category_name: 'დამუშავების ქვეშ: კურსები A - F'
+        csp_category_name: "'15-'16 CS საფუძვლები"
+        csp_2018_category_name: CS Principles ('18-'19)
+        cspexams_category_name: CS საფუძვლების სავარჯიშო ტესტი
+        csp17_category_name: CS საფუძვლები
+        full_course_category_name: ყველა კურსი
+        hoc_category_name: კოდის ერთი საათი
+        math_category_name: მათემატიკა
+        research_studies_category_name: Research Studies
       name:
         course1:
           title: კურსი 1
@@ -10352,6 +10366,74 @@
               name: პირობითი ბრძანებები ფუტკარში
             Until Loops in Maze:
               name: Until Loops in Maze
+            Programming in Maze:
+              name: პროგრამირება ლაბირინთში
+            Debugging in Maze:
+              name: დებაგირება ლაბირინთში
+            Programming in Collector:
+              name: პროგრამირება შემგროვებელში
+            Programming in Artist:
+              name: პროგრამირება მსახიობში
+            'Loops: Getting Loopy':
+              name: 'Loops: Getting Loopy'
+            Loops with Rey and BB-8:
+              name: ციკლები რეისთან და BB-8-სთან ერთად
+            Copyright and Creativity:
+              name: Copyright and Creativity
+            'Concept Practice with Minecraft ':
+              name: 'Concept Practice with Minecraft '
+            Nested Loops in Bee:
+              name: ჩადგმული ციკლები ფუტკარში
+            Nested Loops in Frozen:
+              name: Nested Loops in Frozen
+            Conditionals with Cards:
+              name: პირობები ბარათებით
+            Conditionals & Loops in Harvester:
+              name: პირობითი წინადადებები და ციკლები ფერმერში
+            'Functions: Songwriting':
+              name: 'ფუნქციები: სიმღერების დაწერა'
+            Functions in Minecraft:
+              name: Functions in Minecraft
+            Functions in Harvester:
+              name: Functions in Harvester
+            Functions in Artist:
+              name: ფუნქციები მხატვარში
+            Screen Out the Mean:
+              name: Screen Out the Mean
+            Determine the Concept:
+              name: Determine the Concept
+            Build a Flappy Game:
+              name: ააწყვეთ მოფარფატე ჩიტის თამაში
+            The Power of Words:
+              name: სიტყვების ძალა
+            Envelope Variables:
+              name: ცვლადები კონვერტებში
+            Variables as Constant in Artist:
+              name: Variables as Constant in Artist
+            Variables that Change in Bee:
+              name: Variables that Change in Bee
+            Variables that Change in Artist:
+              name: Variables that Change in Artist
+            For Loop Fun:
+              name: ხალისი "მიზნისთვის" ციკლით
+            Learning Sprites with Sprite Lab:
+              name: Learning Sprites with Sprite Lab
+            Alien Dance Party with Sprite Lab:
+              name: Alien Dance Party with Sprite Lab
+            Pet Giraffe with Sprite Lab:
+              name: Pet Giraffe with Sprite Lab
+            Binary Bracelets:
+              name: ორობითი სამაჯურები
+            'Unplugged: Binary':
+              name: 'გაკვეთილი კომპიუტერის გარეშე: ორობითი სისტემა'
+            Artist Binary:
+              name: 'მხატვარი: ორობითი'
+            Internet:
+              name: ინტერნეტი
+            Crowdsourcing:
+              name: ქრაუდსორსინგი
+            Relay Programming:
+              name: ესტაფეტური პროგრამირება
         courseb-2018:
           title: კურსი B
           description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების
@@ -11374,6 +11456,8 @@
               name: Unit 1 Chapter 2 Assessment
               description_student: ''
               description_teacher: ''
+            Sending Text:
+              name: Sending Text
         csd1-2018:
           title: CSD Unit 1 - Problem Solving
           description: " \r\nUnit 1 is a highly interactive and collaborative introduction
@@ -12804,6 +12888,14 @@
               name: Novice Reflection Overview
             Monday:
               name: Monday
+            Day 1:
+              name: Day 1
+            Day 2:
+              name: Day 2
+            Day 3:
+              name: Day 3
+            Day 4:
+              name: Day 4
           title: CS Discoveries Novice Reflections 2018-2019
           description_audience: CS Discoveries Facilitators in Training 2018-2019
           description_short: 'Novice reflection materials for CS Discoveries facilitators
@@ -12825,6 +12917,16 @@
               name: ხუთშაბათი
             Wrap Up:
               name: შეჯამება
+            Apprentice Reflection Overview:
+              name: Apprentice Reflection Overview
+            Day 1:
+              name: Day 1
+            Day 2:
+              name: Day 2
+            Day 3:
+              name: Day 3
+            Day 4:
+              name: Day 4
           title: CS Discoveries Apprentice Reflections 2018-2019
           description_audience: CS Discoveries Facilitators in Training 2018-2019
           description_short: 'Apprentice reflection materials for CS Discoveries facilitators
@@ -12846,6 +12948,16 @@
               name: ხუთშაბათი
             Wrap Up:
               name: შეჯამება
+            Monday:
+              name: Monday
+            Day 1:
+              name: Day 1
+            Day 2:
+              name: Day 2
+            Day 3:
+              name: Day 3
+            Day 4:
+              name: Day 4
           title: CS Principles Novice Reflections 2018-2019
           description_audience: CS Principles Facilitators in Training 2018-2019
           description_short: 'Novice reflection materials for CS Principles facilitators
@@ -12867,6 +12979,16 @@
               name: ხუთშაბათი
             Wrap Up:
               name: შეჯამება
+            Apprentice Reflection Overview:
+              name: Apprentice Reflection Overview
+            Day 1:
+              name: Day 1
+            Day 2:
+              name: Day 2
+            Day 3:
+              name: Day 3
+            Day 4:
+              name: Day 4
           title: CS Principles Novice Reflections 2018-2019
           description_audience: CS Principles Facilitators in Training 2018-2019
           description_short: 'Novice reflection materials for CS Principles facilitators
@@ -12876,3 +12998,84 @@
             will find reflection prompts for each day of your in-person 5-day summer
             workshop. This questions will be the foundation of work we do at the Facilitator
             Training Weekend.
+        pre-express-2018:
+          title: Pre-reader Express
+          description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების
+            საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის
+            გაზიარებას შეძლებთ.
+          description_short: 'An introduction to computer science for pre-readers:
+            combines the best of our kindergarten and first grade courses.'
+          description_audience: 'ასაკი: 4-8'
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Debugging: Unspotted Bugs'
+              description_student: ''
+              description_teacher: ''
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: 'Persistence & Frustration: Stevie and the Marbles'
+              description_student: ''
+              description_teacher: ''
+            'Real-life Algorithms: Plant a Seed':
+              name: 'ცხოვრებისეული ალგორითმები: დათესე მცენარე'
+              description_student: ''
+              description_teacher: ''
+            Learn to Drag and Drop:
+              name: Learn to Drag and Drop
+              description_student: ''
+              description_teacher: ''
+            'Online Safety: Your Digital Footprint':
+              name: 'Online Safety: Your Digital Footprint'
+              description_student: ''
+              description_teacher: ''
+            'Programming: My Robotic Friends':
+              name: 'პროგრამირება: ჩემი რობოტისებრი მეგობრები'
+              description_student: ''
+              description_teacher: ''
+            Programming in Maze:
+              name: პროგრამირება ლაბირინთში
+              description_student: ''
+              description_teacher: ''
+            'Programming: Star Wars':
+              name: 'პროგრამირება: ვარსკვლავური ომები'
+              description_student: ''
+              description_teacher: ''
+            'Loops: My Loopy Robotic Friends':
+              name: 'ციკლები: ჩემი ციკლური რობოტისებრი მეგობრები'
+              description_student: ''
+              description_teacher: ''
+            Loops in Collector:
+              name: ციკლები შემგროვებელში
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: ციკლები მხატვარში
+              description_student: ''
+              description_teacher: ''
+            'Events: The Big Event':
+              name: 'მოვლენები: დიდი მოვლენა'
+              description_student: ''
+              description_teacher: ''
+            Events in Play Lab:
+              name: მოვლენები სათამაშო ლაბორატორიაში
+              description_student: ''
+              description_teacher: ''
+            Spelling Bee:
+              name: შეჯიბრი დამარცვლაში
+              description_student: ''
+              description_teacher: ''
+            Move It, Move It:
+              name: ვისწავლოთ გადაადგილება
+            Sequencing with Scrat:
+              name: Sequencing with Scrat
+            Your Digital Footprint:
+              name: თქვენი ციფრული ნაკვალევი
+            Programming in Ice Age:
+              name: Programming in Ice Age
+            Copyright and Creativity:
+              name: Copyright and Creativity
+            Programming with Rey and BB-8:
+              name: პროგრამირება რეისთან და BB-8-სთან ერთად
+            Loops in Ice Age:
+              name: Loops in Ice Age
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: 'Persistence & Frustration: Stevie and the Big Project'

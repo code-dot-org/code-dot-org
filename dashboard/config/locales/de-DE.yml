@@ -143,11 +143,11 @@
     mismatch_password: Die eingegebenen Passwörter stimmen nicht überein
     agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
       and <a href='http://code.org/privacy'>Privacy Policy</a>.
-    under_13_consent: Falls ich unter 13 Jahre alt bin, bestätige ich, dass ich die Erlaubnis
-      meines Erziehungsberechtigten habe, die Dienste von Code.org zu nutzen.
+    under_13_consent: Falls ich unter 13 Jahre alt bin, bestätige ich, dass ich die
+      Erlaubnis meines Erziehungsberechtigten habe, die Dienste von Code.org zu nutzen.
     agree_us_website: Ich akzeptiere die Nutzung einer Website mit Sitz in den USA.
-    my_data_to_us: Daten aus meiner Nutzung dieser Site können in die USA geschickt werden und
-      dort gespeichert und verarbeitet werden.
+    my_data_to_us: Daten aus meiner Nutzung dieser Site können in die USA geschickt
+      werden und dort gespeichert und verarbeitet werden.
     student_terms: Ich stimme den <a href='http://code.org/tos'>Nutzungsbedingungen</a>
       des Code.org Service zu. Falls ich unter 13 Jahren alt bin, dann bestätige ich
       hiermit das ich die Erlaubnis meiner Erziehungsberechtigten habe, die Code.org
@@ -167,9 +167,9 @@
     field_is_required: ist erforderlich
     accept_terms: Du musst der Erstellung eines Kontos zustimmen
     error: Ein Fehler ist aufgetreten.
-    email_preference_question: Dürfen wir dich per E-Mail über Neuigkeiten zu unseren Kursen,
-      lokale Möglichkeiten oder andere Neuigkeiten zur Informatik informieren?
-    email_preference_privacy: (Siehe unsere Datenschutzerklärung)
+    email_preference_question: Dürfen wir dich per E-Mail über Neuigkeiten zu unseren
+      Kursen, lokale Möglichkeiten oder andere Neuigkeiten zur Informatik informieren?
+    email_preference_privacy: "(Siehe unsere Datenschutzerklärung)"
     email_preference_yes: Ja
     email_preference_no: Nein
     email_preference_required: You must specify an email preference.
@@ -641,6 +641,8 @@
   gender:
     male: Männlich
     female: Weiblich
+    non_binary: Non-binary
+    not_listed: Preferred term not listed
     none: Möchte ich nicht beantworten
   user_type:
     student: Schüler

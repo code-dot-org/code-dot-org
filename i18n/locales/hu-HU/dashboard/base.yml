@@ -128,7 +128,8 @@ hu:
     field_is_required: "szükséges"
     accept_terms: "El kell fogadnia, hogy létre hozzon egy fiókot"
     error: "An error occurred."
-    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: "Igen"
     email_preference_no: "Nem"
     email_preference_required: "You must specify an email preference."
@@ -463,6 +464,8 @@ hu:
   gender:
     male: 'Férfi'
     female: 'Nő'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: 'Inkább nem válaszolok'
   user_type:
     student: 'Diák'

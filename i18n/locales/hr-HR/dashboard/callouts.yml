@@ -1579,6 +1579,8 @@ hr:
         New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
         New Play Lab Project_callout2: Hit "Run" to save and run your program
         sign_in_to_save_project: Want to access your project later? Sign in to save this project to your account!
+      courseF_playlab_brokenText_callout:
+        courseF_playlab_variables5c_1: You will find your variable block in here.
       courseF_playlab_embed_vars_callout: { }
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: The toolbox has been organized into categories to make it easier to find the blocks you need.

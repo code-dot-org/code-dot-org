@@ -93,13 +93,13 @@ export const getAssessmentsForCurrentScript = (state) => {
 
 // Make a request to the server for assessment data
 const loadAssessmentsFromServer = (sectionId, scriptId) => {
-  let payload = {};
+  let payload = {section_id: sectionId};
   if (scriptId) {
     payload.script_id = scriptId;
   }
   // TODO(caleybrock): also fetch /dashboardapi/section_surveys
   return $.ajax({
-    url: `/dashboardapi/section_assessments_responses/${sectionId}`,
+    url: `/dashboardapi/assessments/section_responses`,
     method: 'GET',
     contentType: 'application/json;charset=UTF-8',
     data: payload
@@ -107,9 +107,11 @@ const loadAssessmentsFromServer = (sectionId, scriptId) => {
 };
 
 const loadAssessmentsStructureFromServer = (scriptId) => {
+  const payload = {script_id: scriptId};
   return $.ajax({
-    url: `/dashboardapi/assessments_structure/${scriptId}`,
+    url: `/dashboardapi/assessments`,
     method: 'GET',
     contentType: 'application/json;charset=UTF-8',
+    data: payload,
   });
 };

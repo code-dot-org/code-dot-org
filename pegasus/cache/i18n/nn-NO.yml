@@ -712,6 +712,8 @@
   volunteer_engineer_submission_field_email_placeholder: E-postadresse
   volunteer_engineer_submission_field_email_preference: Can we email you about updates
     to our courses, volunteer opportunities, or other computer science news?
+  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
+    policy)"
   volunteer_engineer_submission_field_email_preference_yes: Ja
   volunteer_engineer_submission_field_email_preference_no: Nei
   volunteer_engineer_submission_final_paragraph: Du vil bli vist på eit kart slik
@@ -1239,12 +1241,26 @@
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Eining 5: Data og samfunn'
   csd6_name: 'Eining 6: Fysisk programmering'
+  csd1-2017_name: 'Unit 1: Problem Solving'
+  csd2-2017_name: 'Unit 2: Web Development'
+  csd3-2017_name: 'Unit 3: Animation and Games'
+  csd4-2017_name: 'Unit 4: The Design Process'
+  csd5-2017_name: 'Eining 5: Data og samfunn'
+  csd6-2017_name: 'Eining 6: Fysisk programmering'
   csd1-2018_name: 'Unit 1: Problem Solving'
   csd2-2018_name: 'Unit 2: Web Development'
   csd3-2018_name: 'Unit 3: Animation and Games'
   csd4-2018_name: 'Unit 4: The Design Process'
   csd5-2018_name: 'Eining 5: Data og samfunn'
   csd6-2018_name: 'Eining 6: Fysisk programmering'
+  csp1-2017_name: 'Eining 1: Internett'
+  csp2-2017_name: 'Eining 2: Digital informasjon'
+  csp3-2017_name: 'Unit 3: Algorithms and Programming'
+  csp4-2017_name: 'Unit 4: Big Data and Privacy'
+  csp5-2017_name: 'Unit 5: Building Apps'
+  csp-explore-2017_name: Utforsk PT forberedelse
+  csp-create-2017_name: Lag en PT forberedelse
+  csppostap-2017_name: 'Post-AP: Databasar i appar'
   csp1-2018_name: 'Eining 1: Internett'
   csp2-2018_name: 'Eining 2: Digital informasjon'
   csp3-2018_name: 'Unit 3: Algorithms and Programming'
@@ -2109,5 +2125,3 @@
   google_sign_in_instruct: 'Derfra bør dei velge alternativet "Logg på med Google-kontoen":'
   hero_name: 'Minecraft: Helten si reise'
   applab-intro_name: Lab-intro til appen
-  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
-    policy)"

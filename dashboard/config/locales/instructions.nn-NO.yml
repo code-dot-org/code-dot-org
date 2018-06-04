@@ -8646,6 +8646,9 @@
       courseB_collector_loops_challenge2_instruction: "La oss få tak i skatten! Hjelp
         \nmeg over kvar rad og kom deretter tilbake for å starte neste rad. Kan du
         finne eit mønster?"
+      courseB_collector_loops_challenge2_2018_instruction: "La oss få tak i skatten!
+        Hjelp \nmeg over kvar rad og kom deretter tilbake for å starte neste rad.
+        Kan du finne eit mønster?"
       courseB_collector_loops_challenge2a_instruction: |-
         Help Laurel get at least
         **5** pieces of treasure to finish this puzzle.
@@ -11531,6 +11534,8 @@
       courseF_maze_ramp7_instruction: |-
         Use what you've learned to get the bird to
         the pig!
+      courseF_playlab_brokenText_instruction: In the rest of this stage, we're going
+        to build a game that you control!
       courseF_playlab_embed_vars_instruction: |-
         Answer Pegleg the Pirate's questions.
         What happens if you enter the codename "password"? What about some other

@@ -3364,6 +3364,7 @@ fil:
       courseB_collector_loops_challenge1_instruction: 'Sa oras na ito, mayroon ka lang limitadong mga bloke. Kunin ang lahat ng mga yaman! '
       courseB_collector_loops_challenge1_2018_instruction: 'Sa oras na ito, mayroon ka lang limitadong mga bloke. Kunin ang lahat ng mga yaman! '
       courseB_collector_loops_challenge2_instruction: Ating kunin ang mga kayamanan! Tulungan akong makatawid sa bawat isang hanay, at pagkatapos ay babalik para simulan ang sunod na hanay. Maaari ka bang makahanap ng pattern?
+      courseB_collector_loops_challenge2_2018_instruction: Ating kunin ang mga kayamanan! Tulungan akong makatawid sa bawat isang hanay, at pagkatapos ay babalik para simulan ang sunod na hanay. Maaari ka bang makahanap ng pattern?
       courseB_collector_loops_challenge2a_instruction: Tulungan si Laurel na makakuha ng hindi bababa sa **5** mga piraso ng kayamanan para matapos ang palaisipang ito.
       courseB_collector_loops_challenge2a_2018_instruction: Tulungan si Laurel na makakuha ng hindi bababa sa **5** mga piraso ng kayamanan para matapos ang palaisipang ito.
       courseB_collector_loops_challenge`_instruction: 'Sa oras na ito, maaari ka lang gumamit ng isa sa bawat arrow na bloke. Kunin ang lahat ng mga yaman! '
@@ -4620,6 +4621,7 @@ fil:
       courseF_maze_ramp6_instruction: '"Keep calm and help me find the bad pig. Otherwise I might get angry!"'
       courseF_maze_ramp6_2018_instruction: '"Keep calm and help me find the bad pig. Otherwise I might get angry!"'
       courseF_maze_ramp7_instruction: Gamitin ang natutunan mo para mapapunta ang ibon sa baboy!
+      courseF_playlab_brokenText_instruction: Sa huling bahagi ng yugtong ito, tayo ay bubuo ng isang laro na kinokontrol mo!
       courseF_playlab_embed_vars_instruction: "Sagutin ang mga katanungan ni Pegleg ang Pirata.\nAno ang mangyayari kapag iniligay mo ang codename na \"password\"? Paano kapag ang ibang mga code name?"
       courseF_playlab_variables0_instruction: Ito si Piratang Pegleg. Siya ay talagang mahirap intindihin sa mga araw na ito!
       courseF_playlab_variables1_instruction: Ito si Piratang Pegleg. Siya ay talagang mahirap intindihin sa mga araw na ito!
