@@ -14,35 +14,34 @@
       -# Left Column
       .span6
         = render partial: 'workshop_details'
-        %h2
-          Your Information
-        - unless current_user
-          %div.info-box-teal
-            %div.info-box-left
-              =image_tag image_url("info_icon.png")
-            %div.info-box-right
-              %p
-                %span.info-box-message
-                  Already have a Code.org account?
-              %p
-                = link_to 'Sign in', CDO.studio_url("/users/sign_in?user_return_to=#{request.url}")
-                first to pre-fill some information.
+        %h2 Facilitators
+        - @workshop.facilitators.each do |facilitator|
+          -# TODO: Retire old K5 dashboard, and come up with more permanent solution that doesn't require cross-project file dependency.
 
-        = render partial: 'enroll_form', locals: {action: 'create', submit_text: 'Register'}
+          - bio_file = pegasus_dir("sites.v3/code.org/views/workshop_affiliates/#{facilitator.id}_bio.md")
+          - image_file = pegasus_dir("sites.v3/code.org/public/images/affiliate-images/#{facilitator.id}.jpg")
+          = image_tag CDO.code_org_url("/images/affiliate-images/fit-150/#{facilitator.id}.jpg") if File.exists? image_file
+          - if File.exists? bio_file
+            = render file: bio_file
+          - else
+            %h2= facilitator.name
+            %p= mail_to facilitator.email
 
       -# Right column
       %div.span6
         %div.row
           %div.span6
-            %h2 Facilitators
-            - @workshop.facilitators.each do |facilitator|
-              -# TODO: Retire old K5 dashboard, and come up with more permanent solution that doesn't require cross-project file dependency.
-
-              - bio_file = pegasus_dir("sites.v3/code.org/views/workshop_affiliates/#{facilitator.id}_bio.md")
-              - image_file = pegasus_dir("sites.v3/code.org/public/images/affiliate-images/#{facilitator.id}.jpg")
-              = image_tag CDO.code_org_url("/images/affiliate-images/fit-150/#{facilitator.id}.jpg") if File.exists? image_file
-              - if File.exists? bio_file
-                = render file: bio_file
-              - else
-                %h2= facilitator.name
-                %p= mail_to facilitator.email
+            %h2
+              Your Information
+            - unless current_user
+              %div.info-box-teal
+                %div.info-box-left
+                  =image_tag image_url("info_icon.png")
+                %div.info-box-right
+                  %p
+                    %span.info-box-message
+                      Already have a Code.org account?
+                  %p
+                    = link_to 'Sign in', CDO.studio_url("/users/sign_in?user_return_to=#{request.url}")
+                    first to pre-fill some information.
+            = render partial: 'enroll_form', locals: {action: 'create', submit_text: 'Register'}
