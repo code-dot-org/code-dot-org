@@ -1,0 +1,10 @@
+- content_for(:head) do
+  %script{src: asset_path('js/blockly.js')}
+  %script{src: asset_path("js/#{js_locale}/blockly_locale.js")}
+  = stylesheet_link_tag 'css/levelbuilder', media: 'all'
+
+%h1= @shared_blockly_function.new_record? ? "New Blockly Function" : "Editing Blockly Function #{@shared_blockly_function.name}"
+
+#blockly-container
+
+= link_to "Back", shared_blockly_functions_path
