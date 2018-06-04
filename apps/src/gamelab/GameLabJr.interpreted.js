@@ -176,12 +176,12 @@ function whenMouseClicked(event) {
 }
 
 function whenPressedAndReleased(direction, pressedHandler, releasedHandler) {
-  touchEvents.push({type: keyWentDown, event: pressedHandler, param: direction});
-  touchEvents.push({type: keyWentUp, event: releasedHandler, param: direction});
+  inputEvents.push({type: keyWentDown, event: pressedHandler, param: direction()});
+  inputEvents.push({type: keyWentUp, event: releasedHandler, param: direction()});
 }
 
 function clickedOn(sprite, event) {
-  touchEvents.push({type: mousePressedOver, event: event, param: sprite});
+  touchEvents.push({type: mousePressedOver, event: event, sprite: sprite});
 }
 
 function spriteDestroyed(sprite, event) {
@@ -348,7 +348,9 @@ function draw() {
     for (let i = 0; i < touchEvents.length; i++) {
       const eventType = touchEvents[i].type;
       const event = touchEvents[i].event;
-      const param = touchEvents[i].param && touchEvents[i].param();
+      const param = touchEvents[i].sprite ?
+        touchEvents[i].sprite() :
+        touchEvents[i].param;
       if (param && eventType(param)) {
         event();
       }
