@@ -18,7 +18,7 @@ Scenario: View Authored Hints
   # View the second hint verify that it contains an image
   When I view the next authored hint
 
-  Then element ".csf-top-instructions" contains text "This is the second hint. It has an image."
+  Then element ".csf-top-instructions" contains text "This is the second hint. It has a hint video."
   And I see jquery selector .csf-top-instructions img
   And the hint lightbulb shows 1 hints available
 

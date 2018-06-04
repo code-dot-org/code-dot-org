@@ -36,9 +36,9 @@
         onEventFirstTime: Klikk og dra en "onEvent"-blokk inn i arbeidsområdet til høyre
         setScreenFirstTime: Klikk og dra inn i området for din "onEvent"-blokk
       AppLab Intro 7 - Change Screen Color_callout:
-        applab_hoc_finish: Did the screen turn green? If so, hit 'Finish'. If not, hit 'Reset', change your code, and hit 'Run' again.
+        applab_hoc_finish: Ble skjermen grønn? Hvis den ble det, klikk 'Fullfør'. Hvis ikke, klikk 'Nullstill', endre koden og klikk 'Kjør' igjen.
       AppLab Intro 7 - thisOrThatAddButton_callout:
-        AppLabHoCFinal11: You're now in Design Mode.
+        AppLabHoCFinal11: Du er nå i Design modus.
       AppLab_test02_callout: { }
       Applab AllTheThings ResourcesTab AllResources_callout: { }
       Applab AllTheThings ResourcesTab MapReference_callout: { }
@@ -128,6 +128,7 @@
       CSD U3 Direction Arrows_2018_callout: { }
       CSD U3 Draw Loop Plugged update your scene_callout: { }
       CSD U3 Draw Loop Plugged update your scene_2018_callout: { }
+      CSD U3 Draw Loop Plugged wiggle sprite y_2018_callout: { }
       CSD U3 Drawing Squares to Corners_callout: { }
       CSD U3 Drawing Squares to Corners_2018_callout: { }
       CSD U3 Else_callout: { }
@@ -189,17 +190,17 @@
       CSD U3 UP_ARROW_callout: { }
       CSD U3 UP_ARROW_2018_callout: { }
       CSD U3 Variables Predict Where X_callout:
-        CSD_U3_variables: Change the number here
+        CSD_U3_variables: Endre antall her
       CSD U3 Variables Predict Where XY Embed_callout:
-        grid: Click here to show the grid.
+        grid: Klikk her for å vise rutenett.
       CSD U3 Variables Predict Where XY Embed_2018_callout:
-        grid: Click here to show the grid.
+        grid: Klikk her for å vise rutenett.
       CSD U3 Variables Predict Where XY_callout:
-        grid: Click here to show the grid.
+        grid: Klikk her for å vise rutenett.
       CSD U3 Variables Predict Where XY_2018_callout:
-        grid: Click here to show the grid.
+        grid: Klikk her for å vise rutenett.
       CSD U3 Variables Predict Where X_2018_callout:
-        CSD_U3_variables: Change the number here
+        CSD_U3_variables: Endre antall her
       CSD U3 Variables TEMPLATE square_callout: { }
       CSD U3 Variables make a big square_callout: { }
       CSD U3 Variables make a square_callout: { }
@@ -417,9 +418,9 @@
         CSD_U3_rect_c1: Her er koden
         CSD_U3_rect_c2: Dra denne blokken inn i kode-området.
       CSD U6 colorLeds intensity_callout:
-        CSDU6L10_rainbow: Add your code here
+        CSDU6L10_rainbow: Legg til koden din her
       CSD U6 colorLeds intensity_2018_callout:
-        CSDU6L10_rainbow: Add your code here
+        CSDU6L10_rainbow: Legg til koden din her
       CSD U6 colorLeds predict_callout: { }
       CSD U6 colorLeds predict_2018_callout: { }
       CSD U6 getProperty input_callout:
@@ -427,21 +428,21 @@
       CSD U6 getProperty input_2018_callout:
         CSD_U6L06P03: Add your block here.
       CSD U6 light show predict_callout:
-        CSDUDL03P09: What does this line do?
+        CSDUDL03P09: Hva gjør denne linjen?
       CSD U6 light show predict_2018_callout:
-        CSDUDL03P09: What does this line do?
+        CSDUDL03P09: Hva gjør denne linjen?
       CSD U6 light show_callout:
-        CSDUDL03P09: What does this line do?
+        CSDUDL03P09: Hva gjør denne linjen?
       CSD U6 light show_2018_callout:
-        CSDUDL03P09: What does this line do?
+        CSDUDL03P09: Hva gjør denne linjen?
       CSD U6 tugowar variables 1_callout:
         CSD_U6_startGame: Definer startGame her
       CSD U6 tugowar variables 1_2018_callout:
         CSD_U6_startGame: Definer startGame her
       CSD U6 tugowar variables 2_callout:
-        CSD_U6_movePlayer: Define movePlayer() here
+        CSD_U6_movePlayer: Definer movePlayer() her
       CSD U6 tugowar variables 2_2018_callout:
-        CSD_U6_movePlayer: Define movePlayer() here
+        CSD_U6_movePlayer: Definer movePlayer() her
       CSD U6 tugowar variables 3_callout:
         CSD_U6_checkWin: Sjekk hvis spilleren har vunnet
       CSD U6 tugowar variables 3_2018_callout:
@@ -556,7 +557,7 @@
       Course 4 Playlab For Loop Freeplay_callout: { }
       Course 4 Playlab For Loops 4b_callout:
         Course_4_Playlab_For_Loops_4b_1: Legg merke til at variabelen 'teller' har et annet navn for hvert tegn?  Det er så hver "for"-løkke kan styre sin egen teller.
-        Course_4_Playlab_For_Loops_4b_2: In this puzzle, you are only allowed to change the "increment" of the `for` loops.
+        Course_4_Playlab_For_Loops_4b_2: I denne oppgaven kan du kun endre feltet "øk" i for-løkkene.
       Course 4 Playlab For Loops 5b_callout: { }
       Course 4 Playlab For Loops 6b_callout: { }
       Course 4 SCV 6_callout:
@@ -603,7 +604,7 @@
       Frozen Project Toolbox (Old)_callout:
         snowflake_dropdown: Bruk denne rullegardinlisten for å lage forskjellige snøflak!
       Function intro Ryan_callout:
-        Function_intro_Ryan_1: This little instruction tells the computer to run the BIG chunk of code with the same name in the workspace.
+        Function_intro_Ryan_1: Denne lille instruksjonen forteller datamaskinen at den skal kjøre den store bolken med kode med samme navn i arbeidsområdet.
       Geometric Pattern_callout:
         4-5_Artist_Patterns_Free_Play_1: Alle dine favorittblokker er nå organisert i kategorier. Klikk på disse ordene for å se hvor alt ble av!
       Geometric Sun_callout:
@@ -620,9 +621,9 @@
       Infinity_repeat_callout:
         Infinity_repeat_callout: Plasser flytte blokker her
       InspirationalArtwork_callout:
-        InspirationalArtwork_1: Try using the new `comment` block under this label to leave yourself notes inside your program!
+        InspirationalArtwork_1: Prøv å bruke den nye `kommenter`-blokken under denne etiketten for å etterlate noen notater til deg selv i programmet!
       InspirationalArtwork_2018_callout:
-        InspirationalArtwork_1: Try using the new `comment` block under this label to leave yourself notes inside your program!
+        InspirationalArtwork_1: Prøv å bruke den nye `kommenter`-blokken under denne etiketten for å etterlate noen notater til deg selv i programmet!
       Luigi's Pizza 1 (copy 1)_callout:
         luigi's pizza 1: Try ordering a pepperoni pizza
       Luigi's Pizza 1_callout:
@@ -736,13 +737,13 @@
       PDAlg Big Game Remix_callout: { }
       PDAlg Design Recipe Delete_callout: { }
       PS clone CSD U3 Variables Predict Where XY_callout:
-        grid: Click here to show the grid.
+        grid: Klikk her for å vise rutenett.
       PS copy - CSD U3 Variables Predict Where XY Embed_callout:
-        grid: Click here to show the grid.
+        grid: Klikk her for å vise rutenett.
       PS copy 2-3 Bee Conditionals 5_callout:
         Bee_Cond_5_1a: Lilla blomster kan ha 1 eller 0 nektar... men det vet du ikke før du kjører koden!
       PS copy CSD U3 Variables Predict Where XY_callout:
-        grid: Click here to show the grid.
+        grid: Klikk her for å vise rutenett.
       Pizza on a Plate_callout:
         4-5_Artist_Patterns_Free_Play_1: Alle dine favorittblokker er nå organisert i kategorier. Klikk på disse ordene for å se hvor alt ble av!
       Play Lab Rocket 2_callout:
@@ -755,11 +756,11 @@
       Play Lab Rocket Free Play_callout: { }
       Poorva copy U3L2 Using Simple Commands_callout: { }
       Quantum Bee - Ryan_callout:
-        feeling_stuck_callout_test: " Feeling Stuck?<br />Click the lightbulb for a hint!"
+        feeling_stuck_callout_test: " Står du fast?<br />Klikk på lyspæren for å få et hint!"
       Robot Doodle_callout:
-        4-5_Artist_Patterns_Free_Play_2: Try using the new `comment` block under this label to leave yourself notes inside your program!
+        4-5_Artist_Patterns_Free_Play_2: Prøv å bruke den nye `kommenter`-blokken under denne etiketten for å etterlate noen notater til deg selv i programmet!
       Robot Doodle_2018_callout:
-        4-5_Artist_Patterns_Free_Play_2: Try using the new `comment` block under this label to leave yourself notes inside your program!
+        4-5_Artist_Patterns_Free_Play_2: Prøv å bruke den nye `kommenter`-blokken under denne etiketten for å etterlate noen notater til deg selv i programmet!
       Robot Drawing_callout:
         4-5_Artist_Patterns_Free_Play_1: Alle dine favorittblokker er nå organisert i kategorier. Klikk på disse ordene for å se hvor alt ble av!
       Robot_callout:
@@ -776,17 +777,17 @@
         4_5_Bee_Conditionals_2_1: Husk, sjekk om HVER sky har en BLOMST. Du trenger ikke å se etter bikaker i det hele tatt.
       SG Add Subgoals practice_callout: { }
       SG U3L08 how to add comments_callout:
-        comment_highlight: Drag a comment block from here into your code
+        comment_highlight: Dra en kommentar-blokk herfra og inn i koden din
       SG U3L2 Using Simple Commands part 1_callout: { }
       SG U3L2 Using Simple Commands_callout: { }
       SG U3L2_Add-subgoals_callout: { }
       SG U3L2_Turtle3by3Grid_callout:
-        pen_functions: penUp and penDown are here now if you want to use them.
-        goals_tab: drag goals out from here
+        pen_functions: penUp og penDown er her hvis du har lyst til å bruke dem.
+        goals_tab: dra mål ut herfra
       SG U3L2_TurtleSquare_right_callout: { }
       SGU3L2A Introducing Subgoals_callout:
         goals_palette_show: Her er en liste over delmål
-        goals_workspace: Example of code with subgoals in it
+        goals_workspace: Eksempel på kode med delmål
       Sam the Butterfly 3_callout:
         Sam the Butterfly 3 1: Rediger denne funksjonen for å hindre at Sam forsvinner ut til høyre
       Sam the Butterfly 5_callout: { }
@@ -813,9 +814,9 @@
       U3L05_3x3GridEfficiencyChallenge_callout: { }
       U3L05_draw3x3GridEfficiently_callout: { }
       U3L08 how to add comments_callout:
-        comment_highlight: Drag a comment block from here into your code
+        comment_highlight: Dra en kommentar-blokk herfra og inn i koden din
       U3L08 how to add comments_2018_callout:
-        comment_highlight: Drag a comment block from here into your code
+        comment_highlight: Dra en kommentar-blokk herfra og inn i koden din
       U3L2 Using Simple Commands (no tooltips)_callout: { }
       U3L2 Using Simple Commands_callout: { }
       U3L2 Using Simple Commands_2018_callout: { }
@@ -882,7 +883,7 @@
       course3_collector_debugging_challenge2_callout: { }
       course3_farmer_until_challenge2_callout: { }
       course3_playLab_challenge1_callout:
-        courseC_PlayLab_events_challenge1_1: This block lets you move actors to different parts of the game space.
+        courseC_PlayLab_events_challenge1_1: Denne blokka lar deg flytte figurer til forskjellige deler av spillet.
       course4_artist_concept_challenge2_callout: { }
       course4_artist_functions_challenge2_callout:
         courseE_artist_functions_challenge2_callout1: Keep this program going by adding more code to the bottom.
@@ -896,15 +897,15 @@
       courseA_artist_loops4_2018_callout:
         courseA_artist_loops4_1: Dette tallet angir hvor mange av disse blokkene du kan bruke i denne oppgaven.
       courseA_artist_loops7_callout:
-        courseA_artist_loops7_1: This number means that only one of this kind of block can be used in the final answer.
+        courseA_artist_loops7_1: Dette tallet betyr at kun en av denne typen blokk kan bli brukt i det endelige svaret.
       courseA_artist_loops7_2018_callout:
-        courseA_artist_loops7_1: This number means that only one of this kind of block can be used in the final answer.
+        courseA_artist_loops7_1: Dette tallet betyr at kun en av denne typen blokk kan bli brukt i det endelige svaret.
       courseA_artist_loops7_forVideo_callout:
-        courseA_artist_loops7_1: This number means that only one of this kind of block can be used in the final answer.
+        courseA_artist_loops7_1: Dette tallet betyr at kun en av denne typen blokk kan bli brukt i det endelige svaret.
       courseA_artist_loops8_callout:
-        courseA_artist_loops8_1: Did you know that you can draw back over a line whenever you need to?
+        courseA_artist_loops8_1: Visste du at du kan tegne tilbake og over en linje når du vil?
       courseA_artist_loops8_2018_callout:
-        courseA_artist_loops8_1: Did you know that you can draw back over a line whenever you need to?
+        courseA_artist_loops8_1: Visste du at du kan tegne tilbake og over en linje når du vil?
       courseA_collector_loops1_callout:
         courseA_collector_loops1_1: Ser du noen nye blokker i verktøykassen?  Ta det helt med ro, vi vil vise deg hvordan du bruker dem senere i nivået.
       courseA_collector_loops1_2018_callout:
@@ -945,30 +946,30 @@
       courseA_maze_seq1_2018_callout:
         courseA_maze_seq1_1: Klikk på lyspæren når du trenger hjelp!
       courseA_maze_seq2_callout:
-        courseA_maze_seqA_callout1: Use the step button to go step-by-step through the program. This will help you find the bug!
+        courseA_maze_seqA_callout1: Bruk steg-knappen for å gå skritt for skritt gjennom programmet. Dette vil hjelpe deg med å finne ut hvor det går feil!
       courseA_maze_seq2_2018_callout:
-        courseA_maze_seqA_callout1: Use the step button to go step-by-step through the program. This will help you find the bug!
+        courseA_maze_seqA_callout1: Bruk steg-knappen for å gå skritt for skritt gjennom programmet. Dette vil hjelpe deg med å finne ut hvor det går feil!
       courseA_maze_seq4_callout:
-        made_of_stone: These blocks are made of stone.  You can move them, but you can't delete them!
+        made_of_stone: Disse blokkene er lagd av stein. Du kan flytte dem, men du kan ikke slette dem!
       courseA_maze_seq4_2018_callout:
-        made_of_stone: These blocks are made of stone.  You can move them, but you can't delete them!
+        made_of_stone: Disse blokkene er lagd av stein. Du kan flytte dem, men du kan ikke slette dem!
       courseA_maze_seq4a_callout: { }
       courseA_playLab_events2_callout: { }
       courseA_playLab_events2_2018_callout: { }
       courseA_playLab_events3_callout: { }
       courseA_playLab_events3_2018_callout: { }
       courseA_playLab_events4_callout:
-        courseA_playlab_events4_callout1: This is a callout
+        courseA_playlab_events4_callout1: Dette er et rop
       courseA_playLab_events4_2018_callout:
-        courseA_playlab_events4_callout1: This is a callout
+        courseA_playlab_events4_callout1: Dette er et rop
       courseA_playLab_events5_callout:
-        courseA_playLab_events5_1: Click here to change the direction of the event arrow.
+        courseA_playLab_events5_1: Klikk her for å endre retningen på hendelses-pilen.
       courseA_playLab_events5_2018_callout:
-        courseA_playLab_events5_1: Click here to change the direction of the event arrow.
+        courseA_playLab_events5_1: Klikk her for å endre retningen på hendelses-pilen.
       courseA_playLab_events6_callout:
-        courseA_playLab_events6_1: This let's you choose a "random" sound, which means that you don't know what you are going to get until you hear it!
+        courseA_playLab_events6_1: Dette lar deg velge en "tilfeldig" lyd, som betyr at du ikke vet hvilken lyd du får før du hører den!
       courseA_playLab_events6_2018_callout:
-        courseA_playLab_events6_1: This let's you choose a "random" sound, which means that you don't know what you are going to get until you hear it!
+        courseA_playLab_events6_1: Dette lar deg velge en "tilfeldig" lyd, som betyr at du ikke vet hvilken lyd du får før du hører den!
       courseA_toMakeLoopsVideo_Collector_callout: { }
       courseB_Scrat_ramp1_2018_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
@@ -977,13 +978,13 @@
       courseB_Scrat_ramp4a_2018_callout: { }
       courseB_Scrat_ramp5a_2018_callout: { }
       courseB_artist_loops3_callout:
-        courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How will you use it?
+        courseB_artist_loops3_1: Det er kun en av disse blokkene i verktøykassa. Hvordan vil du bruke den?
       courseB_artist_loops3_2018_callout:
-        courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How will you use it?
+        courseB_artist_loops3_1: Det er kun en av disse blokkene i verktøykassa. Hvordan vil du bruke den?
       courseB_artist_loops5_callout:
-        courseB_artist_loops5_1: This number means that there are no more of this block left in the toolbox.
+        courseB_artist_loops5_1: Dette tallet betyr at det ikke er noen flere blokker igjen av denne typen i verktøykassa.
       courseB_artist_loops5_2018_callout:
-        courseB_artist_loops5_1: This number means that there are no more of this block left in the toolbox.
+        courseB_artist_loops5_1: Dette tallet betyr at det ikke er noen flere blokker igjen av denne typen i verktøykassa.
       courseB_collector_loops1_callout:
         courseB_collector_loops1_1: Ser du noen nye blokker i verktøykassen?  Ta det helt med ro, vi vil vise deg hvordan du bruker dem senere i nivået.
       courseB_collector_loops1_2018_callout:
@@ -993,31 +994,31 @@
       courseB_maze_seq1_2018_callout:
         courseB_maze_seq1: Klikk på lyspæren når du trenger hjelp!
       courseB_maze_seq2_callout:
-        courseB_maze_seq2_callout1: Use the step button to go step-by-step through the program. This will help you find the bug!
+        courseB_maze_seq2_callout1: Bruk steg-knappen for å gå skritt for skritt gjennom programmet. Dette vil hjelpe deg med å finne ut hvor det går feil!
       courseB_maze_seq2_2018_callout:
-        courseB_maze_seq2_callout1: Use the step button to go step-by-step through the program. This will help you find the bug!
+        courseB_maze_seq2_callout1: Bruk steg-knappen for å gå skritt for skritt gjennom programmet. Dette vil hjelpe deg med å finne ut hvor det går feil!
       courseB_maze_seq3_callout:
-        courseB_maze_seq3_1: The grey blocks are made of stone and can't be thrown away.
+        courseB_maze_seq3_1: De grå blokkene er lagd av stein og kan ikke kastes bort.
       courseB_maze_seq3_2018_callout:
-        courseB_maze_seq3_1: The grey blocks are made of stone and can't be thrown away.
+        courseB_maze_seq3_1: De grå blokkene er lagd av stein og kan ikke kastes bort.
       courseB_maze_seq7_callout: { }
       courseB_maze_seq7_2018_callout: { }
       courseB_playlab_events6_callout:
-        courseB_playlab_events6_a: Use the green drop down arrow to change directions.
+        courseB_playlab_events6_a: Bruk den grønne nedtrekksmenyen for å endre retning.
       courseB_playlab_events6_2018_callout:
-        courseB_playlab_events6_a: Use the green drop down arrow to change directions.
+        courseB_playlab_events6_a: Bruk den grønne nedtrekksmenyen for å endre retning.
       courseC_PlayLab_events8_callout:
-        courseC_PlayLab_events8_callout1: Use this block for when Waddles and Chomp touch!
+        courseC_PlayLab_events8_callout1: Bruk denne blokken når Waddles og Chomp er borti hverandre!
       courseC_PlayLab_events8_2018_callout:
-        courseC_PlayLab_events8_callout1: Use this block for when Waddles and Chomp touch!
+        courseC_PlayLab_events8_callout1: Bruk denne blokken når Waddles og Chomp er borti hverandre!
       courseC_PlayLab_events_challenge1_callout:
-        courseC_PlayLab_events_challenge1_1: This block lets you move actors to different parts of the game space.
+        courseC_PlayLab_events_challenge1_1: Denne blokka lar deg flytte figurer til forskjellige deler av spillet.
       courseC_PlayLab_events_challenge1_2018_callout:
-        courseC_PlayLab_events_challenge1_1: This block lets you move actors to different parts of the game space.
+        courseC_PlayLab_events_challenge1_1: Denne blokka lar deg flytte figurer til forskjellige deler av spillet.
       courseC_artist_loopsPrePre1a_callout:
-        courseC_artist_loopsPrePre1a_1: Start by using this block to get the artist to the center of the screen.
+        courseC_artist_loopsPrePre1a_1: Start med å bruke denne blokka for å få kunstneren til midten av skjermen.
       courseC_artist_loopsPrePre1a_2018_callout:
-        courseC_artist_loopsPrePre1a_1: Start by using this block to get the artist to the center of the screen.
+        courseC_artist_loopsPrePre1a_1: Start med å bruke denne blokka for å få kunstneren til midten av skjermen.
       courseC_artist_prog1_callout: { }
       courseC_artist_prog1_2018_callout: { }
       courseC_artist_prog2_callout: { }
@@ -1029,9 +1030,9 @@
       courseC_collector_prog1_2018_callout:
         courseC_collector_prog1_1: Ser du noen nye blokker i verktøykassen?  Ta det helt med ro, vi vil vise deg hvordan du bruker dem senere i nivået.
       courseC_collector_prog7_callout:
-        courseC_collector_prog7_1: You can take more blocks from the toolbox if you need them!
+        courseC_collector_prog7_1: Du kan bruke flere blokker fra verktøykassa hvis du trenger dem!
       courseC_collector_prog7_2018_callout:
-        courseC_collector_prog7_1: You can take more blocks from the toolbox if you need them!
+        courseC_collector_prog7_1: Du kan bruke flere blokker fra verktøykassa hvis du trenger dem!
       courseC_collector_prog8_callout: { }
       courseC_collector_prog8_2018_callout: { }
       courseC_collector_prog9_callout: { }
@@ -1043,15 +1044,15 @@
       courseC_collector_prog_challenge2_callout: { }
       courseC_collector_prog_challenge2_2018_callout: { }
       courseC_harvester_loops1_callout:
-        courseC_harvester_loops1_callout1: The number four on the pumpkin tells you that there are four pumpkins available to pick.
+        courseC_harvester_loops1_callout1: Tallet fire på gresskaret forteller deg at det er fire gresskar igjen å bruke.
       courseC_harvester_loops1_2018_callout:
-        courseC_harvester_loops1_callout1: The number four on the pumpkin tells you that there are four pumpkins available to pick.
+        courseC_harvester_loops1_callout1: Tallet fire på gresskaret forteller deg at det er fire gresskar igjen å bruke.
       courseC_maze_debugging5_callout:
         courseC_maze_debugging5_1: Disse blokkene er låste og kan ikke bli slettet!
       courseC_maze_debugging5_2018_callout:
         courseC_maze_debugging5_1: Disse blokkene er låste og kan ikke bli slettet!
       courseC_maze_loops2_callout:
-        courseC_maze_loops2_1: You only have one of these blocks available in this puzzle.
+        courseC_maze_loops2_1: Du har kun en av disse blokkene igjen i denne oppgaven.
       courseC_maze_loops2_predict1_callout: { }
       courseC_maze_loops_challenge2_callout: { }
       courseC_maze_programming1_callout:
@@ -1087,9 +1088,9 @@
       courseC_starWars_loops11_callout: { }
       courseC_starWars_loops11_2018_callout: { }
       courseC_starWars_loops2_callout:
-        courseC_starWars_loops2: You only have one of these blocks available in this puzzle.
+        courseC_starWars_loops2: Du har kun en av disse blokkene igjen i denne oppgaven.
       courseC_starWars_loops2_2018_callout:
-        courseC_starWars_loops2: You only have one of these blocks available in this puzzle.
+        courseC_starWars_loops2: Du har kun en av disse blokkene igjen i denne oppgaven.
       courseC_starWars_loops4_callout: { }
       courseC_starWars_loops4_2018_callout: { }
       courseC_starWars_loops5_callout: { }
@@ -1194,6 +1195,8 @@
         courseD_playLab_condFP_1: we have organized the blocks into categories to give you more code to play with!  Click here to see where everything went.
       courseD_playLab_condFP_a_callout:
         courseD_playLab_condFP_1: we have organized the blocks into categories to give you more code to play with!  Click here to see where everything went.
+      courseD_playLab_condForVideo_callout:
+        courseD_playLab_condFP_1: we have organized the blocks into categories to give you more code to play with!  Click here to see where everything went.
       courseD_scrat_predict1_callout: { }
       courseD_scrat_predict1_2018_callout: { }
       courseD_scrat_ramp1_callout:
@@ -1273,7 +1276,7 @@
         courseE_artist_ramp8_2: Click here to type in the number of times to repeat your code.
       courseE_artist_ramp8_2_callout:
         courseE_artist_ramp8_1: You can change this number.
-        courseE_artist_ramp8_2: Click here to type in the number of times to repeat your code.
+        courseE_artist_ramp8_2: Klikk her for å skrive inn antall ganger du vil gjenta koden.
       courseE_artist_ramp8_2018_callout:
         courseE_artist_ramp8_1: You can change this number.
         courseE_artist_ramp8_2: Click here to type in the number of times to repeat your code.
@@ -1286,35 +1289,35 @@
       courseE_artist_ramp9_2_2018_callout: { }
       courseE_collector_ramp10_callout: { }
       courseE_collector_ramp8_callout:
-        courseD_collector_ramp8_1: 'Use this block to collect a single piece of treasure.  '
+        courseD_collector_ramp8_1: 'Bruk denne blokken til å samle en enkelt skatt.  '
       courseE_collector_ramp9_callout: { }
       courseE_farmer_functions1_callout:
-        courseE_farmer_functions1_2: The toolbox is organized a little differently this time! Click on the different categories to see which blocks you have.
+        courseE_farmer_functions1_2: Verktøykassa er organisert litt annerledes denne gangen! Klikk på de forskjellige kategoriene for å se hvilke blokker du har tilgjengelig.
       courseE_farmer_functions10a1_2018_callout: { }
       courseE_farmer_functions10b_callout: { }
       courseE_farmer_functions10b_2018_callout: { }
       courseE_farmer_functions11_predict_callout: { }
       courseE_farmer_functions11_predict_2018_callout: { }
       courseE_farmer_functions13_2018_callout:
-        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time you run the program.
+        courseE_farmer_functions1a_1: Denne grønnsaken er ukjent. Den endrer seg hver gang du kjører programmet.
       courseE_farmer_functions1_2018_callout:
         courseE_farmer_functions1_2: The toolbox is organized a little differently this time! Click on the different categories to see which blocks you have.
       courseE_farmer_functions1a_callout:
-        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time you run the program.
+        courseE_farmer_functions1a_1: Denne grønnsaken er ukjent. Den endrer seg hver gang du kjører programmet.
       courseE_farmer_functions1a_2018_callout:
-        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time you run the program.
+        courseE_farmer_functions1a_1: Denne grønnsaken er ukjent. Den endrer seg hver gang du kjører programmet.
       courseE_farmer_functions2a_callout:
-        courseE_farmer_functions2a_2: This code might not look exactly like what you wrote, but it will get the job done!
+        courseE_farmer_functions2a_2: Denne koden ser kanskje ikke helt lik ut som den du skrev, men den får jobben gjort!
       courseE_farmer_functions2aALT_callout:
-        courseE_farmer_functions2a_2: This code might not look exactly like what you wrote, but it will get the job done!
+        courseE_farmer_functions2a_2: Denne koden ser kanskje ikke helt lik ut som den du skrev, men den får jobben gjort!
       courseE_farmer_functions2b_callout:
-        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time you run the program.
+        courseE_farmer_functions1a_1: Denne grønnsaken er ukjent. Den endrer seg hver gang du kjører programmet.
       courseE_farmer_functions2b_2018_callout:
-        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time you run the program.
+        courseE_farmer_functions1a_1: Denne grønnsaken er ukjent. Den endrer seg hver gang du kjører programmet.
       courseE_farmer_functions2ba_callout: { }
       courseE_farmer_functions2ba_2018_callout: { }
       courseE_farmer_functions3b_callout:
-        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time you run the program.
+        courseE_farmer_functions1a_1: Denne grønnsaken er ukjent. Den endrer seg hver gang du kjører programmet.
       courseE_farmer_functions3c_callout: { }
       courseE_farmer_functions3c1_2018_callout: { }
       courseE_farmer_functions3c_2018_callout: { }
@@ -1339,20 +1342,20 @@
       courseE_maze_predict1_callout: { }
       courseE_maze_predict1_2018_callout: { }
       courseE_maze_ramp1_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: Etter du har koblet sammen alle blokkene, klikk på "Kjør" for å starte programmet.
       courseE_maze_ramp13_callout: { }
       courseE_maze_ramp1_2018_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
       courseE_maze_ramp2_callout:
-        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+        courseC_maze_programming2_1: Dette er verktøykassa. Der vil du finne ekstra blokker for å fullføre oppgavene.
       courseE_maze_ramp2_2018_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseE_maze_ramp3_callout:
-        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
+        courseC_maze_programming3_2: Du kan dra ekstra blokker tilbake til verktøykassa hvis du trenger å kaste dem.
       courseE_maze_ramp3_2018_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
       courseE_maze_ramp4_callout:
-        courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
+        courseC_maze_programming4_1: Dette er grensen på antall blokker. Den forteller deg hvor mange av disse blokkene du har igjen å bruke.
       courseE_maze_ramp4_2018_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
       courseE_maze_ramp5_callout: { }
@@ -1368,9 +1371,9 @@
       courseE_maze_ramp_predict1_callout: { }
       courseE_multi_maze_ramp5_callout: { }
       courseE_playLab_challenge1_callout:
-        courseC_PlayLab_events_challenge1_1: This block lets you move actors to different parts of the game space.
+        courseC_PlayLab_events_challenge1_1: Denne blokka lar deg flytte figurer til forskjellige deler av spillet.
       courseE_playLab_challenge1_2018_callout:
-        courseC_PlayLab_events_challenge1_1: This block lets you move actors to different parts of the game space.
+        courseC_PlayLab_events_challenge1_1: Denne blokka lar deg flytte figurer til forskjellige deler av spillet.
       courseE_playLab_scaffold3_callout:
         courseE_playLab_scaffold3_1: Get the actor to this flag to move on to the next level.
       courseE_playLab_scaffold3_2018_callout:
@@ -1576,6 +1579,8 @@
         New Play Lab Project_callout1: Klikk kategoriene for å se blokkene i verktøykassa! Dra blokker til arbeidsområdet for å legge dem til programmet
         New Play Lab Project_callout2: Trykk "Kjør" for å lagre og kjøre programmet
         sign_in_to_save_project: Vil du åpne prosjektet senere? Logg på for å lagre prosjektet til kontoen din!
+      courseF_playlab_brokenText_callout:
+        courseF_playlab_variables5c_1: You will find your variable block in here.
       courseF_playlab_embed_vars_callout: { }
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: The toolbox has been organized into categories to make it easier to find the blocks you need.
@@ -1647,7 +1652,7 @@
       frozen square snowflake_callout:
         replace_questions: Bruk rullegardinlisten for å erstatte «???» med et tall
       grade1_artist_loops2_callout:
-        grade1_artist_loops2_1: There is only one of these blocks in the toolbox.  How will you use it?
+        grade1_artist_loops2_1: Det er kun en av disse blokkene i verktøykassa. Hvordan vil du bruke den?
       grade1_maze_sequence6_callout:
         grade1_maze_sequence6_1: These grey blocks are made of stone!  That means that they can't be trashed.
       grade2_CaringForNewPet_0_callout:
@@ -1669,7 +1674,7 @@
       grade2_collector_10_callout: { }
       grade2_collector_10_2018_callout: { }
       grade2_collector_7_callout:
-        grade2_collector_7_1: You can take more blocks from the toolbox if you need them!
+        grade2_collector_7_1: Du kan bruke flere blokker fra verktøykassa hvis du trenger dem!
       grade2_collector_8_callout: { }
       grade2_collector_9_callout: { }
       grade2_collector_9a_callout: { }
@@ -1691,7 +1696,7 @@
       grade2_maze_intro8_callout: { }
       grade2_maze_intro9_callout: { }
       grade2_puppy_loops2_callout:
-        grade2_puppy_loops2_callout1: You only have one of these blocks available in this puzzle.
+        grade2_puppy_loops2_callout1: Du har kun en av disse blokkene igjen i denne oppgaven.
       grade3_ConditionalsElse_2_callout:
         4_5_Bee_Conditionals_2_1: Husk, sjekk om HVER sky har en BLOMST. Du trenger ikke å se etter bikaker i det hele tatt.
       grade3_Conditionals_3_callout:
@@ -1808,15 +1813,15 @@
       gradek_artist_loops3_callout:
         artistLoopsK2_1: Dette tallet angir hvor mange av disse blokkene du kan bruke i denne oppgaven.
       gradek_artist_loops7_callout:
-        gradek_artist_loops7_1: Did you know that you can draw back over a line whenever you need to?
+        gradek_artist_loops7_1: Visste du at du kan tegne tilbake og over en linje når du vil?
       gradek_playlab_events1c_callout: { }
       gradek_playlab_events2c_callout: { }
       gradek_playlab_events3c_callout: { }
       gradek_playlab_events4c_callout: { }
       gradek_playlab_events5c_callout:
-        gradek_playlab_events5c_1: This let's you choose a "random" sound, which means that you don't know what you are going to get until you hear it!
+        gradek_playlab_events5c_1: Dette lar deg velge en "tilfeldig" lyd, som betyr at du ikke vet hvilken lyd du får før du hører den!
       harvester_Kahoot_callout:
-        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time you run the program.
+        courseE_farmer_functions1a_1: Denne grønnsaken er ukjent. Den endrer seg hver gang du kjører programmet.
       iceage_click_hello_callout: { }
       iceage_click_hello_2018_callout: { }
       iceage_free_play_callout: { }

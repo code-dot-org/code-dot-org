@@ -114,18 +114,25 @@ fi:
     valid_password: "Salasana kelpaa!"
     invalid_password: "Salasanan tulee olla vähintään 6 merkkiä pitkä"
     mismatch_password: "Antamasi salasanat eivät täsmää"
+    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
+    under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
+    agree_us_website: "I agree to using a website based in the United States."
+    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
     student_terms: "Hyväksyn Code.org <a href='http://code.org/tos'> käyttöehdot</a>. Jos olen alle 13-vuotiaat, vahvistan lähettämällä tämän lomakkeen, että minulla on minun vanhemman tai laillisen huoltajan lupaa käyttää Code.org. <br/> <br/> Sähköpostiosoitteita ei tallenneta millään tavalla, jonka avulla voimme ottaa yhteyttä opiskelijoiden. Opiskelijat eivät tule saamaan ikinä sähköpostia Code.org:ilta paitsi unohtuneen salasanan takaisin saamisessa. Katso meidän <a href='http://code.org/privacy'> yksityisyydensuoja</a> lisätietoja."
     teacher_terms: "Hyväksyn Code.org käyttöehdot sitovat. Saat lisätietoja meidän tietosuojasta <a href='http://code.org/privacy'> yksityisyydensuoja</a>."
     additional_information: "Tarvitsemme joitakin lisätietoja voidaksesi jatkaa kirjautumista."
+    user_type_button: "Update Account Type"
     user_type_label: "Tilin tyyppi"
     user_type_teacher: "Opettaja"
     user_type_student: "Oppilas"
     field_is_required: "vaaditaan"
     accept_terms: "Sinun on hyväksyttävä luodaksesi tili"
     error: "Virhe."
-    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: "Kyllä"
     email_preference_no: "Ei"
+    email_preference_required: "You must specify an email preference."
   school_info:
     title: 'Koulun tiedot (valinnainen)'
     school_country: 'Koulun maa'
@@ -453,6 +460,7 @@ fi:
     student_not_found: "Yhtä tai enempää oppilasta ei löytynyt."
     all_students_must_be_in_current_section: "Kaikki opiskelijat pitää olla tällä hetkellä kirjoilla ryhmässäsi."
     already_enrolled_in_new_section: "Et voit liikuttaa näitä oppilaita koska tämä opettaja on liikuttanu heidät jo eri ryhmään."
+    third_party_login: "You cannot move students to a section that is synced with a third party tool."
   share:
     title: "Opiskele Code Studio:ssa"
     description: "Kuka tahansa voi oppia tietojenkäsittelyä. Rakenna koodaamalla pelejä, sovelluksia ja taidetta."
@@ -460,6 +468,8 @@ fi:
   gender:
     male: 'Mies'
     female: 'Nainen'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: 'En halua vastata'
   user_type:
     student: 'Oppilas'
@@ -712,7 +722,7 @@ fi:
     tos: "Ehdot"
     privacy: "Yksityisyyskäytäntö"
     privacy_notice: "Tietosuoja"
-    accept_label: 'I agree to the updated <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>'
+    accept_label: 'I agree to the <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.'
     accept: "Hyväksy"
     print: "Tulosta"
     reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'
@@ -872,6 +882,7 @@ fi:
     csd5_2: 'Luku 2: Tieto-ongelmien ratkaisu'
     csd6_1: 'Luku 1: Laitteiston palaute'
     csd6_2: 'Luku 2: Laitteiston syöte'
+    csd_survey: 'Post-Course Survey'
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -998,3 +1009,10 @@ fi:
     message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
     more_information: "See Code.org's Privacy Policy."
     accept: 'Hyväksyn'
+  gdpr_dialog:
+    heading: 'Do you agree to using a web site based in the United States?'
+    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+    link_intro: 'For details see our'
+    privacy_policy: 'privacy policy'
+    logout: 'Logout'
+    yes: 'Kyllä'

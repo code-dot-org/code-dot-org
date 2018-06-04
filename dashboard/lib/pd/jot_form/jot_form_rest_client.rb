@@ -33,21 +33,29 @@ module Pd
       # @param form_id [Integer]
       # @param last_known_submission_id [Integer] (optional)
       #   when specified, only new submissions after the known id will be returned.
+      # @param min_date [Date] (optional)
+      #   when specified, only new submissions on or after the known date will be returned.
       # Note - get_submissions has a default limit of 100.
       #   The API returns the limit (which will be 100), and the count.
       #   We can add functionality to override the limit if it becomes an issue.
       # See https://api.jotform.com/docs/#form-id-submissions
-      def get_submissions(form_id, last_known_submission_id: nil)
+      def get_submissions(form_id, last_known_submission_id: nil, min_date: nil)
         params = {
           orderby: 'id asc'
         }
-        if last_known_submission_id
-          params[:filter] = {
-            'id:gt' => last_known_submission_id.to_s
-          }.to_json
-        end
+
+        filter = {}
+        filter['id:gt'] = last_known_submission_id.to_s if last_known_submission_id
+        filter['created_at:gt'] = min_date.to_s if min_date
+        params[:filter] = filter.to_json unless filter.empty?
 
         get "form/#{form_id}/submissions", params
+      end
+
+      # Get a specific submission by id
+      # @param submission_id [Integer]
+      def get_submission(submission_id)
+        get "submission/#{submission_id}"
       end
 
       private

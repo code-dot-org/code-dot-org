@@ -146,6 +146,7 @@
       CSD U3 Direction Arrows_2018_callout: {}
       CSD U3 Draw Loop Plugged update your scene_callout: {}
       CSD U3 Draw Loop Plugged update your scene_2018_callout: {}
+      CSD U3 Draw Loop Plugged wiggle sprite y_2018_callout: {}
       CSD U3 Drawing Squares to Corners_callout: {}
       CSD U3 Drawing Squares to Corners_2018_callout: {}
       CSD U3 Else_callout: {}
@@ -1484,6 +1485,10 @@
         courseD_playLab_condFP_1: táimid tar éis na blocanna a leagan amach ina gcatagóirí
           chun tuilleadh spáis a thabhairt don chód! Cliceáil anseo le féachaint cá
           bhfuil na blocanna go léir anois.
+      courseD_playLab_condForVideo_callout:
+        courseD_playLab_condFP_1: táimid tar éis na blocanna a leagan amach ina gcatagóirí
+          chun tuilleadh spáis a thabhairt don chód! Cliceáil anseo le féachaint cá
+          bhfuil na blocanna go léir anois.
       courseD_scrat_predict1_callout: {}
       courseD_scrat_predict1_2018_callout: {}
       courseD_scrat_ramp1_callout:
@@ -1991,6 +1996,8 @@
           a rith
         sign_in_to_save_project: Ar mhaith leat teacht ar do thogra ar ball? Logáil
           isteach chun an cód seo a shábháil i do chuntas!
+      courseF_playlab_brokenText_callout:
+        courseF_playlab_variables5c_1: Aimseoidh tú an bloc athróige anseo.
       courseF_playlab_embed_vars_callout: {}
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: Táimid tar éis an bosca uirlisí a leagan amach

@@ -141,6 +141,13 @@
     valid_password: Focal faire bailí!
     invalid_password: Ní mór ar a laghad 6 charachtar a bheith i bhfocal faire
     mismatch_password: Ní ionann an dá fhocal faire a chuir tú isteach
+    agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
+      and <a href='http://code.org/privacy'>Privacy Policy</a>.
+    under_13_consent: If I am under 13 years of age, I confirm that I have my parent
+      or legal guardian's permission to use the Code.org services.
+    agree_us_website: I agree to using a website based in the United States.
+    my_data_to_us: Data from my use of this site may be sent to and stored or processed
+      in the United States.
     student_terms: Glacaim le <a href='http://code.org/tos'>téarmaí seirbhíse</a>
       Code.org. Má tá mé níos óige ná 13 bliain d'aois, deimhním gur thug tuismitheoir
       nó caomhnóir cead dom seirbhísí Code.org a úsáid.<br/><br/>Ní stórálaimid seoltaí
@@ -152,16 +159,19 @@
       príobháideachais</a> chun tuilleadh eolais a fháil.
     additional_information: Teastaíonn tuilleadh eolais uainn sular féidir linn tú
       a chlárú.
+    user_type_button: Update Account Type
     user_type_label: Sórt cuntais
     user_type_teacher: Múinteoir
     user_type_student: Dalta
     field_is_required: riachtanach
     accept_terms: Caithfidh tú glacadh leis chun cuntas a chruthú
     error: Tharla earráid.
-    email_preference_question: Can we email you about updates to our courses, local
-      learning opportunities, or other computer science news?
+    email_preference_question: An bhfuil cead againn ríomhphost a sheoladh chugat
+      maidir lenár gcúrsaí, deiseanna foghlamtha áitiúla, nó nuacht eile faoin ríomheolaíocht?
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: Tá
     email_preference_no: Níl
+    email_preference_required: You must specify an email preference.
   school_info:
     title: Eolas faoin scoil (roghnach)
     school_country: Tír na Scoile
@@ -620,6 +630,8 @@
       cláraithe le do rannánsa.
     already_enrolled_in_new_section: Ní féidir leat na daltaí seo a bhogadh toisc
       go bhfuil siad sa rannán nua cheana.
+    third_party_login: You cannot move students to a section that is synced with a
+      third party tool.
   share:
     title: Foghlaim sa Stiúideo Códála
     description: Is féidir le haon duine an ríomheolaíocht a fhoghlaim. Déan cluichí,
@@ -628,6 +640,8 @@
   gender:
     male: Fireannach
     female: Baineannach
+    non_binary: Non-binary
+    not_listed: Preferred term not listed
     none: B'fhearr liom gan freagra a thabhairt
   user_type:
     student: Dalta
@@ -1163,6 +1177,7 @@
     csd5_2: 'Caibidil 2: Réiteach Fadhbanna Sonraí'
     csd6_1: 'Caibidil 1: Ríomhchlárú le Crua-Earraí'
     csd6_2: 'Caibidil 2: Fréamhshamhlacha Fisiceacha'
+    csd_survey: Post-Course Survey
     csp1_1: 'Caibidil 1: Léiriú agus Traschur Sonraí'
     csp1_2: 'Caibidil 2: Airgeadh an Idirlín'
     csp2_1: 'Caibidil 1: Ionchódú agus Comhbhrú Sonraí Casta'
@@ -1176,10 +1191,10 @@
     csp_ap_1: 'Caibidil 1: Socrú Teicneolaíochta AP'
     csp_ap_2: 'Caibidil 2: Tasc Taiscéalaíoch AP'
     csp_ap_3: 'Caibidil 3: Tasc Cruthaitheach AP'
-    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
-    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp_postap_1: 'Caibidil 1: Láimhseáil agus Léirshamhlú Sonraí'
+    csp_postap_2: 'Caibidil 2: Aipeanna agus Bunachair Sonraí'
     csp2_1_2018: 'Aonad 2: Faisnéis dhigiteach'
-    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp3_1_2018: 'Aonad 3: Buneolas ar Ríomhchlárú'
     csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: Ábhar Machnaimh
   external_links:
@@ -1326,7 +1341,15 @@
         at this workshop?
   courses_category: Cúrsaí Iomlána
   cookie_banner:
-    message: By continuing to browse our site or clicking "I agree," you agree to
-      the storing of cookies on your computer or device.
-    more_information: See Code.org's Privacy Policy.
+    message: Má chliceálann tú "Glacaim leis" nó má leanann tú ar aghaidh ag brabhsáil,
+      glacfaidh tú le stóráil fianán ar do ríomhaire nó gléas soghluaiste.
+    more_information: Polasaí Príobháideachais Code.org.
     accept: Glacaim leis
+  gdpr_dialog:
+    heading: Do you agree to using a web site based in the United States?
+    message: Data from your use of this site may be sent to and stored or processed
+      in the United States.
+    link_intro: For details see our
+    privacy_policy: privacy policy
+    logout: Logout
+    true: Tá

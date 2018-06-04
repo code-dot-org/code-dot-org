@@ -33,7 +33,8 @@ module SharedConstants
       attempted: "attempted",
       review_accepted: "review_accepted",
       review_rejected: "review_rejected",
-      dots_disabled: "dots_disabled"
+      dots_disabled: "dots_disabled",
+      free_play_complete: "free_play_complete",
     }
   ).freeze
 
@@ -348,6 +349,7 @@ module SharedConstants
       "mouseWentDown": null,
       "mouseWentUp": null,
       "mousePressedOver": null,
+      "showMobileControls": null,
       "World.mouseX": null,
       "World.mouseY": null,
       "World.frameRate": null,

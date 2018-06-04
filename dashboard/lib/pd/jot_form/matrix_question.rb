@@ -32,7 +32,7 @@ module Pd
 
       attr_accessor :sub_questions
 
-      def self.from_jotform_question(id:, type:, jotform_question:)
+      def self.from_jotform_question(jotform_question)
         super.tap do |matrix_question|
           matrix_question.options = jotform_question['mcolumns'].split('|')
           matrix_question.sub_questions = jotform_question['mrows'].split('|')
@@ -46,8 +46,10 @@ module Pd
       end
 
       def get_value(answer)
+        raise "Unable to process matrix answer: #{answer}" unless answer.is_a? Hash
+
         # Matrix answer is a Hash of sub_question => string_answer
-        answer.map do |sub_question, sub_answer|
+        answer.reject {|_, v| v.blank?}.map do |sub_question, sub_answer|
           sub_question_index = sub_questions.index(sub_question)
           raise "Unable to find sub-question '#{sub_question}' in matrix question #{id}" unless sub_question_index
 
@@ -59,7 +61,7 @@ module Pd
         end.to_h
       end
 
-      def to_summary
+      def summarize
         heading_hash = {name => {text: text, answer_type: ANSWER_NONE}}
         sub_questions_hash = sub_questions.each_with_index.map do |sub_question, i|
           [
@@ -67,7 +69,8 @@ module Pd
             {
               text: sub_question,
               answer_type: ANSWER_SELECT_VALUE,
-              parent: name
+              parent: name,
+              max_value: options.length
             }
           ]
         end.to_h
@@ -75,7 +78,7 @@ module Pd
         heading_hash.merge(sub_questions_hash)
       end
 
-      def to_form_data(answer)
+      def process_answer(answer)
         # Prefix the matrix name to each sub question key
         get_value(answer).transform_keys {|sub_question_index| generate_sub_question_key(sub_question_index)}
       end

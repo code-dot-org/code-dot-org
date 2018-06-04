@@ -30,7 +30,6 @@
       "console.log": null,
       "keyWentUp": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Changing Sprites\r\n\r\nYou saw on the last level that `keyDown` returns `true` while you are holding a key down and `false` when the key is not pressed down.   The input for the `keyDown` command is the name of key you want to check in quotes. Some examples are \"x\", \"up\" and \"space\".\r\n\r\nWe can use `keyDown` as an input to an `if` statement to change our animations based on key presses!\r\n\r\n# Do This\r\n* Run the code and try pressing the \"p\" and \"h\" keys.\r\n* Look inside the `if` statement to see how the code works.\r\n* Add a block inside the third `if` statement to change the animation to a different animal.\r\n\r\n*Challenge: When you use `setAnimation`, it keeps the new animation until you change it again.  Can you change the code so that the sprite will automatically go back to a giraffe when you're not holding one of the keys down?*",
@@ -72,14 +71,14 @@
     "top_level_procedure_autopopulate": "false",
     "start_blocks": "var sprite = createSprite(200, 200);\r\nsprite.setAnimation(\"giraffe\");\r\n\r\nfunction draw() {\r\n  background(\"white\");\r\n  if(keyDown(\"h\")) {\r\n     sprite.setAnimation(\"hippo\");\r\n  }\r\n  if(keyDown(\"p\")) {\r\n     sprite.setAnimation(\"pig\");\r\n  }\r\n  if(keyDown(\"r\")) {\r\n    \r\n  }\r\n  drawSprites();\r\n}\r\n",
     "parent_level_id": 8992,
-    "contained_level_names": null,
     "reference_links": [
       "/docs/gamelab/keyDown/index.html",
       "/docs/csd-1718/if_statements/index.html",
       "/docs/csd-1718/booleans/index.html",
       "/docs/gamelab/setAnimation/index.html"
     ],
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

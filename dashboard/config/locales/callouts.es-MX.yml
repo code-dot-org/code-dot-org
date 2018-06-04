@@ -146,6 +146,7 @@
       CSD U3 Direction Arrows_2018_callout: {}
       CSD U3 Draw Loop Plugged update your scene_callout: {}
       CSD U3 Draw Loop Plugged update your scene_2018_callout: {}
+      CSD U3 Draw Loop Plugged wiggle sprite y_2018_callout: {}
       CSD U3 Drawing Squares to Corners_callout: {}
       CSD U3 Drawing Squares to Corners_2018_callout: {}
       CSD U3 Else_callout: {}
@@ -1453,6 +1454,10 @@
         courseD_playLab_condFP_1: hemos organizado los bloques en categorías para
           darte más códigos con los que jugar. Has click aquí para ver adónde fue
           todo.
+      courseD_playLab_condForVideo_callout:
+        courseD_playLab_condFP_1: hemos organizado los bloques en categorías para
+          darte más códigos con los que jugar. Has click aquí para ver adónde fue
+          todo.
       courseD_scrat_predict1_callout: {}
       courseD_scrat_predict1_2018_callout: {}
       courseD_scrat_ramp1_callout:
@@ -1949,6 +1954,8 @@
           tu programa
         sign_in_to_save_project: "¿Quieres ingresar a tu proyecto más tarde? ¡Ingresa
           para guardar este proyecto en tu cuenta!"
+      courseF_playlab_brokenText_callout:
+        courseF_playlab_variables5c_1: Aquí encontrarás tu bloque de variables.
       courseF_playlab_embed_vars_callout: {}
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: La caja de herramientas se ha organizado en

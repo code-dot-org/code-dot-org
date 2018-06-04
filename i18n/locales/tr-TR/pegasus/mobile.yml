@@ -16,8 +16,8 @@
   anybody_can_learn: "Herkes öğrenebilir."
   learn_now: "Şimdi Öğren"
   petition_message: "Her okuldaki her öğrencinin bilgisayar bilimlerini öğrenmek için fırsatı olmalıdır"
-  petition_sign_message: 'Kabul ediyorsanız, adınızı girin. Diğerlerine # katılın.'
-  petition_sign_message_support: 'Bize destek olmak isterseniz kullanıcı adınızı girin. # kişinin arasına katılın.'
+  petition_sign_message: 'Kabul ederseniz , adınızı girin ve diğerlerine # katılın.'
+  petition_sign_message_support: 'Bize destek olmak isterseniz kullanıcı adınızı girerek # ile bize katılabilirsiniz.'
   petition_join_others: '# kişinin arasına katılın'
   name: "İsim"
   email: "e-posta"
@@ -371,6 +371,8 @@
   homepage_header_donors: "Code.org destekleyenlere teşekkürler"
   homepage_donors_seall: "Tümünü göster"
   homepage_donors_donate: "Bağış Yap"
+  homepage_below_hero_announcement_text: "We care about your privacy and are making some updates to our privacy policy, effective May 25."
+  homepage_below_hero_announcement_link_text: "Daha fazlasını öğren"
   contact_form_topic_student: "Ben öğrenciyim"
   contact_form_topic_parent: "Bir ebeveynim"
   contact_form_topic_teacher: "Bir öğretmen/eğitimciyim"
@@ -541,6 +543,10 @@
   volunteer_engineer_submission_field_email: "E-posta adresi"
   volunteer_engineer_submission_field_email_desc: "E-posta adresiniz asla paylaşılmaz, ancak öğretmenlerden size istekler göndereceğiz."
   volunteer_engineer_submission_field_email_placeholder: "E-posta adresi"
+  volunteer_engineer_submission_field_email_preference: "Can we email you about updates to our courses, volunteer opportunities, or other computer science news?"
+  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy policy)"
+  volunteer_engineer_submission_field_email_preference_yes: 'Evet'
+  volunteer_engineer_submission_field_email_preference_no: 'Hayır'
   volunteer_engineer_submission_final_paragraph: "Kod Saati ve diğer gönüllü fırsatlarında sizinle temasa geçilebilmesi için, yerel öğretmenler için olan bir haritada kayıt edileceksiniz. Tam adresiniz ve e-postanız bizim tarafımızdan ASLA paylaşılmayacaktır. Fakat diğer bilgileriniz (yaklaşık konumunuz dahil) yerel öğretmenlerce açıkça görülebilir şekilde yayınlanacaktır."
   volunteer_engineer_submission_checkbox_contact: 'Öğretmenlerin gönüllülük fırsatları için benimle iletişime geçmesini kabul ediyorum (Not: Mail adresiniz paylaşılmaz)'
   volunteer_engineer_submission_checkbox_age_18_plus: "En az 18 yaşında olduğumu bildiririm."
@@ -946,12 +952,26 @@
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Ünite 5: Veri ve toplum'
   csd6_name: 'Ünite 6: Fiziksel bilişim'
+  csd1-2017_name: 'Unit 1: Problem Solving'
+  csd2-2017_name: 'Unit 2: Web Development'
+  csd3-2017_name: 'Unit 3: Animation and Games'
+  csd4-2017_name: 'Unit 4: The Design Process'
+  csd5-2017_name: 'Ünite 5: Veri ve toplum'
+  csd6-2017_name: 'Ünite 6: Fiziksel bilişim'
   csd1-2018_name: 'Unit 1: Problem Solving'
   csd2-2018_name: 'Unit 2: Web Development'
   csd3-2018_name: 'Unit 3: Animation and Games'
   csd4-2018_name: 'Unit 4: The Design Process'
   csd5-2018_name: 'Ünite 5: Veri ve toplum'
   csd6-2018_name: 'Ünite 6: Fiziksel bilişim'
+  csp1-2017_name: 'Ünite 1: Internet'
+  csp2-2017_name: 'Ünite 2: Sayısal bilgi'
+  csp3-2017_name: 'Unit 3: Algorithms and Programming'
+  csp4-2017_name: 'Unit 4: Big Data and Privacy'
+  csp5-2017_name: 'Unit 5: Building Apps'
+  csp-explore-2017_name: 'AP: Explore PT Prep'
+  csp-create-2017_name: 'AP: Create PT Prep'
+  csppostap-2017_name: 'Post-AP: Uygulamalardaki veritabanları'
   csp1-2018_name: 'Ünite 1: Internet'
   csp2-2018_name: 'Ünite 2: Sayısal bilgi'
   csp3-2018_name: 'Unit 3: Algorithms and Programming'
@@ -970,6 +990,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP (Advanced Placement-İleri Düzey Yerleştirme) Performans Görevleri
   csppostap_name: 'Post-AP: Uygulamalardaki veritabanları'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: "Tam test - 50 soru"
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'

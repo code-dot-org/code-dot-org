@@ -114,18 +114,25 @@ cs:
     valid_password: "Platné heslo!"
     invalid_password: "Heslo musí obsahovat nejméně 6 znaků"
     mismatch_password: "Zadaná dvě hesla se neshodují"
+    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
+    under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
+    agree_us_website: "I agree to using a website based in the United States."
+    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
     student_terms: "Souhlasím, že budu dodržovat <a href='http://code.org/tos'>podmínky služeb</a>. Pokud jsem mladší 13 let, přihlášením potvrzuji souhlas rodičů nebo mého zákonného zástupce s používáním služeb Code.org.<br/><br/> E-mailové adresy se neukládají. Studenti nebudou dostávat e-maily od Code.org s výjimkou obnovení hesla. Pro více informací navštivte<a href='http://code.org/privacy'>zásady ochrany osobních údajů</a>."
     teacher_terms: "Souhlasím, že budu dodržovat podmínky služeb Code.org. Více informací najdete na <a href='http://code.org/privacy'>Zásady ochrany osobních údajů</a>."
     additional_information: "Potřebujeme další informace pro pokračování vaši registrace."
+    user_type_button: "Update Account Type"
     user_type_label: "Typ účtu"
     user_type_teacher: "Učitel"
     user_type_student: "student"
     field_is_required: "je požadováno"
     accept_terms: "Musíte souhlasit pro vytvoření účtu"
     error: "An error occurred."
-    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: "Ano"
     email_preference_no: "Ne"
+    email_preference_required: "You must specify an email preference."
   school_info:
     title: 'Název školy (nepovinné)'
     school_country: 'Země školy'
@@ -453,6 +460,7 @@ cs:
     student_not_found: "Nelze nalézt jednoho nebo více studentů."
     all_students_must_be_in_current_section: "Všichni studenti musí být zapsáni v tvoji v sekci."
     already_enrolled_in_new_section: "Tyto studenty nelze přesunout, protože tento učitel je již má v další části."
+    third_party_login: "You cannot move students to a section that is synced with a third party tool."
   share:
     title: "Poznat Code studio"
     description: "Každý se může naučit informatiku. Udělejte hry, aplikace a umění s kódem."
@@ -460,6 +468,8 @@ cs:
   gender:
     male: 'Muž'
     female: 'Žena'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: 'Raději bych neodpovídal/a'
   user_type:
     student: 'student'
@@ -872,6 +882,7 @@ cs:
     csd5_2: 'Chapter 2: Solving Data Problems'
     csd6_1: 'Chapter 1: Programming with Hardware'
     csd6_2: 'Chapter 2: Building Physical Prototypes'
+    csd_survey: 'Post-Course Survey'
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -998,3 +1009,10 @@ cs:
     message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
     more_information: "See Code.org's Privacy Policy."
     accept: 'Souhlasím'
+  gdpr_dialog:
+    heading: 'Do you agree to using a web site based in the United States?'
+    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+    link_intro: 'For details see our'
+    privacy_policy: 'privacy policy'
+    logout: 'Logout'
+    yes: 'Ano'

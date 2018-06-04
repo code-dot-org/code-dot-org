@@ -19,7 +19,7 @@ class SectionAssessments extends Component {
   static propTypes = {
     // provided by redux
     sectionId: PropTypes.number.isRequired,
-    assessments: PropTypes.array,
+    assessments: PropTypes.object,
     isLoadingAssessments: PropTypes.bool.isRequired,
     validScripts: PropTypes.arrayOf(validScriptPropType).isRequired,
     scriptId: PropTypes.number,
@@ -29,13 +29,13 @@ class SectionAssessments extends Component {
 
   onChangeScript = scriptId => {
     const {setScriptId, asyncLoadAssessments, sectionId} = this.props;
-    asyncLoadAssessments(sectionId, scriptId, () => {
+    asyncLoadAssessments(sectionId, scriptId).then(() => {
       setScriptId(scriptId);
     });
   };
 
   render() {
-    const {validScripts, scriptId, assessments} = this.props;
+    const {validScripts, scriptId} = this.props;
 
     return (
       <div>
@@ -53,9 +53,6 @@ class SectionAssessments extends Component {
           This is a list of the questions for the assessments we get back.
           <br />
           <div>
-            {assessments.map(assessment => (
-              <div key={assessment.puzzle + assessment.student.id}>{assessment.question}</div>
-            ))}
           </div>
         </div>
       </div>
@@ -75,7 +72,7 @@ export default connect(state => ({
   setScriptId(scriptId) {
     dispatch(setScriptId(scriptId));
   },
-  asyncLoadAssessments(sectionId, scriptId, onComplete) {
-    dispatch(asyncLoadAssessments(sectionId, scriptId, onComplete));
+  asyncLoadAssessments(sectionId, scriptId) {
+    return dispatch(asyncLoadAssessments(sectionId, scriptId));
   }
 }))(SectionAssessments);

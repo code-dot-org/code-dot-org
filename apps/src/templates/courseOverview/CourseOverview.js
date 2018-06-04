@@ -7,6 +7,9 @@ import { resourceShape } from './resourceType';
 import styleConstants from '@cdo/apps/styleConstants';
 import VerifiedResourcesNotification from './VerifiedResourcesNotification';
 import * as utils from '../../utils';
+import { queryParams } from '../../code-studio/utils';
+import i18n from '@cdo/locale';
+import Notification, { NotificationType } from '@cdo/apps/templates/Notification';
 
 const styles = {
   main: {
@@ -51,12 +54,15 @@ export default class CourseOverview extends Component {
       name: PropTypes.string.isRequired,
       version_year: PropTypes.string.isRequired
     })).isRequired,
+    showVersionWarning: PropTypes.bool,
   };
 
   onChangeVersion = event => {
     const courseName = event.target.value;
     if (courseName !== this.props.name) {
-      utils.navigateToHref(`/courses/${courseName}`);
+      const sectionId = queryParams('section_id');
+      const queryString = sectionId ? `?section_id=${sectionId}` : '';
+      utils.navigateToHref(`/courses/${courseName}${queryString}`);
     }
   };
 
@@ -76,6 +82,7 @@ export default class CourseOverview extends Component {
       isVerifiedTeacher,
       hasVerifiedResources,
       versions,
+      showVersionWarning,
     } = this.props;
 
     // We currently set .container.main to have a width of 940 at a pretty high
@@ -91,6 +98,14 @@ export default class CourseOverview extends Component {
 
     return (
       <div style={mainStyle}>
+        {showVersionWarning &&
+          <Notification
+            type={NotificationType.warning}
+            notice={i18n.wrongCourseVersionWarningNotice()}
+            details={i18n.wrongCourseVersionWarningDetails()}
+            dismissible={true}
+          />
+        }
         <div style={styles.titleWrapper}>
           <h1 style={styles.title}>{assignmentFamilyTitle}</h1>
           {versions.length > 1 &&
@@ -98,7 +113,7 @@ export default class CourseOverview extends Component {
               onChange={this.onChangeVersion}
               value={name}
               style={styles.versionDropdown}
-              className="version-selector"
+              id="version-selector"
             >
               {versions.map(version => (
                 <option key={version.name} value={version.name}>

@@ -143,6 +143,7 @@
       CSD U3 Direction Arrows_2018_callout: {}
       CSD U3 Draw Loop Plugged update your scene_callout: {}
       CSD U3 Draw Loop Plugged update your scene_2018_callout: {}
+      CSD U3 Draw Loop Plugged wiggle sprite y_2018_callout: {}
       CSD U3 Drawing Squares to Corners_callout: {}
       CSD U3 Drawing Squares to Corners_2018_callout: {}
       CSD U3 Else_callout: {}
@@ -1422,6 +1423,9 @@
       courseD_playLab_condFP_a_callout:
         courseD_playLab_condFP_1: we have organized the blocks into categories to
           give you more code to play with!  Click here to see where everything went.
+      courseD_playLab_condForVideo_callout:
+        courseD_playLab_condFP_1: we have organized the blocks into categories to
+          give you more code to play with!  Click here to see where everything went.
       courseD_scrat_predict1_callout: {}
       courseD_scrat_predict1_2018_callout: {}
       courseD_scrat_ramp1_callout:
@@ -1909,6 +1913,8 @@
         New Play Lab Project_callout2: Hit "Run" to save and run your program
         sign_in_to_save_project: Deseja acessar seu projeto depois? Logue para salvar
           esse projeto em sua conta!
+      courseF_playlab_brokenText_callout:
+        courseF_playlab_variables5c_1: Você encontrará seu bloco variável aqui.
       courseF_playlab_embed_vars_callout: {}
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: The toolbox has been organized into categories

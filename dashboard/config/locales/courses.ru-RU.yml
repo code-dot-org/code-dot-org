@@ -2,8 +2,10 @@
   data:
     course:
       name:
-        csp:
-          title: Принципы информатики
+        csp-2017:
+          assignment_family_title: Computer Science Principles
+          title: Computer Science Principles ('17-'18)
+          version_title: "'17-'18"
           description_student: Осенью 2016 года Совет колледжа запустил свой новейший
             курс AP®, основанный на принципах AP-программирования. Курс знакомит студентов
             с основополагающими концепциями компьютерной науки и ставит их перед необходимостью
@@ -21,16 +23,20 @@
             недостаточно представлен существенными вычислительными инструментами и
             многодисциплинарными возможностями.
           description_short: Узнайте основные принципы информатики.
-        csd:
-          title: Открытия информатики
-          description_student: '"Открытия информатики" - вводный курс информатики,
-            который даёт возможность студентам создавать подлинные артефакты и заниматься
-            информатикой как средство для творчества, общения, решения проблем и веселья.'
-          description_teacher: '"Открытия информатики" - вводный курс информатики,
-            который даёт возможность студентам создавать подлинные артефакты и заниматься
-            информатикой как средство для творчества, общения, решения проблем и веселья.'
-          description_short: Вводный курс информатики, который даёт возможность студентам
-            создавать подлинные артефакты.
+        csd-2017:
+          assignment_family_title: Computer Science Discoveries
+          title: Computer Science Discoveries ('17-'18)
+          version_title: "'17-'18"
+          description_student: Computer Science Discoveries (CS Discoveries) is an
+            introductory computer science course that empowers students to create
+            authentic artifacts and engage with computer science as a medium for creativity,
+            communication, problem solving, and fun.
+          description_teacher: Computer Science Discoveries (CS Discoveries) is an
+            introductory computer science course that empowers students to create
+            authentic artifacts and engage with computer science as a medium for creativity,
+            communication, problem solving, and fun.
+          description_short: An introductory computer science course that empowers
+            students to create authentic artifacts.
         allthethingscourse:
           title: allthethingscourse
           description_short: This is a course for allthethings
@@ -39,7 +45,30 @@
           description_teacher: This is a course for allthethings and has a longer
             description for teachers
         csd-2018:
+          assignment_family_title: Computer Science Discoveries
           title: Computer Science Discoveries 2018
+          version_title: "'18-'19"
           description_short: ''
           description_student: ''
           description_teacher: ''
+        csp-2018:
+          assignment_family_title: Computer Science Principles
+          title: Computer Science Principles ('18-'19)
+          version_title: "'18-'19"
+          description_short: Узнайте основные принципы информатики.
+          description_student: Осенью 2016 года Совет колледжа запустил свой новейший
+            курс AP®, основанный на принципах AP-программирования. Курс знакомит студентов
+            с основополагающими концепциями компьютерной науки и ставит их перед необходимостью
+            исследовать то, как вычисления и технологии могут влиять на мир. Программа
+            AP разработала принципы AP-программирования с целью создания лидеров в
+            области компьютерных наук и привлечения и занимания тех, кто традиционно
+            недостаточно представлен существенными вычислительными инструментами и
+            многодисциплинарными возможностями.
+          description_teacher: Осенью 2016 года Совет колледжа запустил свой новейший
+            курс AP®, основанный на принципах AP-программирования. Курс знакомит студентов
+            с основополагающими концепциями компьютерной науки и ставит их перед необходимостью
+            исследовать то, как вычисления и технологии могут влиять на мир. Программа
+            AP разработала принципы AP-программирования с целью создания лидеров в
+            области компьютерных наук и привлечения и занимания тех, кто традиционно
+            недостаточно представлен существенными вычислительными инструментами и
+            многодисциплинарными возможностями.

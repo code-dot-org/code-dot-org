@@ -114,18 +114,25 @@ es-MX:
     valid_password: "¡Contraseña válida!"
     invalid_password: "La Contraseña debe tener al menos 6 caracteres"
     mismatch_password: "Las dos contraseñas que introdujo no coinciden"
+    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
+    under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
+    agree_us_website: "I agree to using a website based in the United States."
+    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
     student_terms: "Estoy de acuerdo a regirme por los <a href='http://code.org/tos'>términos de servicio</a> de Code.org. Si tengo menos de 13 años, confirmo al enviar este formulario que tengo el permiso de mi padre o tutor legal para usar los servicios de Code.org. <br/><br/>Las direcciones de correo electrónico no se almacenan de forma que nos permita contactar a los alumnos. Los alumnos nunca recibirán correos electrónicos de Code.org excepto para la recuperación de su contraseña. Vea nuestra <a href='http://code.org/privacy'>política de privacidad</a> para mayor información."
     teacher_terms: "Estoy de acuerdo en regirme por los términos de servicio de Code.org. Para más información acerca de la privacidad, vea nuestra <a href='http://code.org/privacy'>política de privacidad</a>."
     additional_information: "Necesitamos alguna información adicional para continuar con su registro."
+    user_type_button: "Update Account Type"
     user_type_label: "Tipo de cuenta"
     user_type_teacher: "Profesor"
     user_type_student: "estudiante"
     field_is_required: "es requerido"
     accept_terms: "Debes estar de acuerdo para crear una cuenta"
     error: "Ocurrió un error."
-    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_privacy: "(Vea nuestra política de privacidad)"
     email_preference_yes: "Sí"
     email_preference_no: "No"
+    email_preference_required: "You must specify an email preference."
   school_info:
     title: 'Información de la escuela (opcional)'
     school_country: 'País de la escuela'
@@ -447,6 +454,7 @@ es-MX:
     student_not_found: "No se encontró uno o más estudiantes."
     all_students_must_be_in_current_section: "Todos los estudiantes deben estar matriculados actualmente en su sección."
     already_enrolled_in_new_section: "No puedes mover estos estudiantes porque este profesor ya los tiene en otra sección."
+    third_party_login: "You cannot move students to a section that is synced with a third party tool."
   share:
     title: "Aprender en Code Studio"
     description: "Cualquier persona puede aprender informática. Crear juegos, aplicaciones y arte con código."
@@ -454,6 +462,8 @@ es-MX:
   gender:
     male: 'Varón'
     female: 'Mujer'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: 'Prefiero no contestar'
   user_type:
     student: 'estudiante'
@@ -866,6 +876,7 @@ es-MX:
     csd5_2: 'Capítulo 2: Resolviendo problemas de datos'
     csd6_1: 'Capítulo 1: Programación con Hardware'
     csd6_2: 'Capítulo 2: Construcción de prototipos físicos'
+    csd_survey: 'Post-Course Survey'
     csp1_1: 'Capítulo 1: Representación y transmisión de información'
     csp1_2: 'Capítulo 2: Inventando el Internet'
     csp2_1: 'Capítulo 1: Codificación y compresión de información compleja'
@@ -879,8 +890,8 @@ es-MX:
     csp_ap_1: 'Capítulo 1: Configuración de AP Tech'
     csp_ap_2: 'Capítulo 2: AP Examinar tareas de rendimiento'
     csp_ap_3: 'Capítulo 3: AP Crear tareas de rendimiento'
-    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
-    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp_postap_1: 'Capítulo 1: Manipulación y visualización de datos'
+    csp_postap_2: 'Capítulo 2: Aplicaciones y bases de datos'
     csp2_1_2018: 'Unidad 2: Información Digital'
     csp3_1_2018: 'Unit 3: Intro to Programming'
     csp4_1_2018: 'Unit 4: Big Data and Privacy'
@@ -992,3 +1003,10 @@ es-MX:
     message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
     more_information: "See Code.org's Privacy Policy."
     accept: 'De acuerdo'
+  gdpr_dialog:
+    heading: 'Do you agree to using a web site based in the United States?'
+    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+    link_intro: 'For details see our'
+    privacy_policy: 'privacy policy'
+    logout: 'Logout'
+    yes: 'Sí'

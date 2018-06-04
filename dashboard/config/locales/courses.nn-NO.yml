@@ -2,8 +2,10 @@
   data:
     course:
       name:
-        csp:
-          title: Computer Science Principles
+        csp-2017:
+          assignment_family_title: Informatikkprinsipper
+          title: Computer Science Principles ('17-'18)
+          version_title: "'17-'18"
           description_student: In fall 2016, the College Board launched its newest
             AP® course, AP Computer Science Principles. The course introduces students
             to the foundational concepts of computer science and challenges them to
@@ -21,8 +23,10 @@
             underrepresented with essential computing tools and multidisciplinary
             opportunities.
           description_short: Learn foundational computer science concepts.
-        csd:
-          title: Computer Science Discoveries
+        csd-2017:
+          assignment_family_title: Informatikkoppdagelser
+          title: Computer Science Discoveries ('17-'18)
+          version_title: "'17-'18"
           description_student: Computer Science Discoveries (CS Discoveries) is an
             introductory computer science course that empowers students to create
             authentic artifacts and engage with computer science as a medium for creativity,
@@ -41,7 +45,30 @@
           description_teacher: Dette er ei kursrekke for alle kurs og har lengre skildring
             for lærarar
         csd-2018:
-          title: Computer Science Discoveries 2018
-          description_short: ''
+          assignment_family_title: Informatikkoppdagelser
+          title: Informatikkoppdagelser ('18-'19)
+          version_title: "'18-'19"
+          description_short: 2018-2019-versjonen av kurset Informatikkoppdagelser.
           description_student: ''
           description_teacher: ''
+        csp-2018:
+          assignment_family_title: Informatikkprinsipper
+          title: Informatikkprinsipper ('18-'19)
+          version_title: "'18-'19"
+          description_short: Learn foundational computer science concepts.
+          description_student: In fall 2016, the College Board launched its newest
+            AP® course, AP Computer Science Principles. The course introduces students
+            to the foundational concepts of computer science and challenges them to
+            explore how computing and technology can impact the world. The AP Program
+            designed AP Computer Science Principles with the goal of creating leaders
+            in computer science fields and attracting and engaging those who are traditionally
+            underrepresented with essential computing tools and multidisciplinary
+            opportunities.
+          description_teacher: In fall 2016, the College Board launched its newest
+            AP® course, AP Computer Science Principles. The course introduces students
+            to the foundational concepts of computer science and challenges them to
+            explore how computing and technology can impact the world. The AP Program
+            designed AP Computer Science Principles with the goal of creating leaders
+            in computer science fields and attracting and engaging those who are traditionally
+            underrepresented with essential computing tools and multidisciplinary
+            opportunities.

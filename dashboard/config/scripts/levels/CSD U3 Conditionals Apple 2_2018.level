@@ -32,7 +32,6 @@
     "debugger_disabled": "true",
     "markdown_instructions": "# Changing Fruit\r\n\r\nNow that we know how to use _if_ statements, you can do more than just check if the apple has reached a scale of 2. You turn it into a pear once it happens.\r\n\r\n# Do This\r\n\r\nUse a conditional in the draw loop to check whether `fruit.scale` is greater than 2.  If it is, change the fruit's animation to \"pear\".\r\n\r\n_Challenge: Can you also make the fruit stop growing once it turns into a pear?_",
     "callout_json": "[]",
-    "show_d_pad": "false",
     "project_template_level_name": "CSD U3 apple template-2018",
     "instructions_important": "false",
     "hide_animation_mode": "false",
@@ -94,7 +93,6 @@
     "encrypted_examples": "2eMP4R7hopbR2Q4+VjpQr+1omA2X37TWHmW0fCJYVAb6+Krl6cgghAOZqiIF\na+OqMKccfNAweFCH7QB05xWIoGS0suG69m4rpxxo47IXuoQUky/H45Jd2iQk\neZDG9pSe+JRiQ7ZM+N2gCwejxaJkeA==\n",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "contained_level_names": null,
     "reference_links": [
       "/docs/csd-1718/booleans/index.html",
       "/docs/csd-1718/sprite_properties/index.html",
@@ -102,7 +100,8 @@
       "/docs/gamelab/setAnimation/index.html"
     ],
     "map_reference": "/docs/csd-1718/if_statements/index.html",
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

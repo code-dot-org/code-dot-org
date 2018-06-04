@@ -107,6 +107,14 @@ class User < ActiveRecord::Base
     closed_dialog
     nonsense
   ).freeze
+
+  # Notes:
+  #   data_transfer_agreement_source: Indicates the source of the data transfer
+  #     agreement.
+  #   data_transfer_agreement_kind: "0", "1", etc.  Indicates which version
+  #     of the data transfer agreement string the user to agreed to, for a given
+  #     data_transfer_agreement_source.  This value should be bumped each time
+  #     the corresponding user-facing string is updated.
   serialized_attrs %w(
     ops_first_name
     ops_last_name
@@ -122,6 +130,11 @@ class User < ActiveRecord::Base
     oauth_token_expiration
     sharing_disabled
     next_census_display
+    data_transfer_agreement_accepted
+    data_transfer_agreement_request_ip
+    data_transfer_agreement_source
+    data_transfer_agreement_kind
+    data_transfer_agreement_at
   )
 
   # Include default devise modules. Others available are:
@@ -143,9 +156,14 @@ class User < ActiveRecord::Base
     the_school_project
     twitter
     windowslive
+    powerschool
   ).freeze
 
   SYSTEM_DELETED_USERNAME = 'sys_deleted'
+
+  # constants for resetting user secret words/picture
+  RESET_SECRETS = 'reset_secrets'.freeze
+  MAX_SECRET_RESET_ATTEMPTS = 5
 
   # :user_type is locked. Use the :permissions property for more granular user permissions.
   USER_TYPE_OPTIONS = [
@@ -206,9 +224,11 @@ class User < ActiveRecord::Base
 
   has_many :user_geos, -> {order 'updated_at desc'}
 
+  validate :validate_parent_email
+
   after_create :associate_with_potential_pd_enrollments
 
-  after_create :save_email_preference, if: -> {email_preference_opt_in.present?}
+  after_save :save_email_preference, if: -> {email_preference_opt_in.present?}
 
   def save_email_preference
     if teacher?
@@ -216,8 +236,8 @@ class User < ActiveRecord::Base
         email: email,
         opt_in: email_preference_opt_in.downcase == "yes",
         ip_address: email_preference_request_ip,
-        source: :ACCOUNT_SIGN_UP,
-        form_kind: "0"
+        source: email_preference_source,
+        form_kind: email_preference_form_kind,
       )
     end
   end
@@ -422,12 +442,24 @@ class User < ActiveRecord::Base
     [nil, ''],
     ['gender.male', 'm'],
     ['gender.female', 'f'],
-    ['gender.none', '-']
+    ['gender.non_binary', 'n'],
+    ['gender.not_listed', 'o'],
+    ['gender.none', '-'],
+  ].freeze
+
+  DATA_TRANSFER_AGREEMENT_SOURCE_TYPES = [
+    ACCOUNT_SIGN_UP = 'ACCOUNT_SIGN_UP'.freeze,
+    ACCEPT_DATA_TRANSFER_DIALOG = 'ACCEPT_DATA_TRANSFER_DIALOG'.freeze
   ].freeze
 
   attr_accessor :login
-  attr_accessor :email_preference_opt_in_required, :email_preference_opt_in
+  attr_accessor :email_preference_opt_in_required
+  attr_accessor :email_preference_opt_in
   attr_accessor :email_preference_request_ip
+  attr_accessor :email_preference_source
+  attr_accessor :email_preference_form_kind
+
+  attr_accessor :data_transfer_agreement_required
 
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
 
@@ -482,8 +514,6 @@ class User < ActiveRecord::Base
 
   validate :email_matches_for_oauth_upgrade, if: 'oauth? && user_type_changed?', on: :update
 
-  validates_presence_of :email_preference_opt_in, if: :email_preference_opt_in_required
-
   def email_matches_for_oauth_upgrade
     if user_type == User::TYPE_TEACHER
       # The stored email must match the passed email
@@ -494,6 +524,17 @@ class User < ActiveRecord::Base
     end
     true
   end
+
+  validates_presence_of :email_preference_opt_in, if: :email_preference_opt_in_required
+  validates_presence_of :email_preference_request_ip, if: -> {email_preference_opt_in.present?}
+  validates_presence_of :email_preference_source, if: -> {email_preference_opt_in.present?}
+  validates_presence_of :email_preference_form_kind, if: -> {email_preference_opt_in.present?}
+
+  validates :data_transfer_agreement_accepted, acceptance: true, if: :data_transfer_agreement_required
+  validates_presence_of :data_transfer_agreement_request_ip, if: -> {data_transfer_agreement_accepted.present?}
+  validates_inclusion_of :data_transfer_agreement_source, in: DATA_TRANSFER_AGREEMENT_SOURCE_TYPES, if: -> {data_transfer_agreement_accepted.present?}
+  validates_presence_of :data_transfer_agreement_kind, if: -> {data_transfer_agreement_accepted.present?}
+  validates_presence_of :data_transfer_agreement_at, if: -> {data_transfer_agreement_accepted.present?}
 
   # When adding a new version, append to the end of the array
   # using the next increasing natural number.
@@ -651,6 +692,10 @@ class User < ActiveRecord::Base
       'f'
     when 'm', 'male'
       'm'
+    when 'o', 'notlisted'
+      'o'
+    when 'n', 'nonbinary', 'non-binary'
+      'n'
     else
       nil
     end
@@ -936,6 +981,10 @@ class User < ActiveRecord::Base
       first
   end
 
+  def hidden_script_access?
+    admin? || permission?(UserPermission::HIDDEN_SCRIPT_ACCESS)
+  end
+
   # Is the provided script_level hidden, on account of the section(s) that this
   # user is enrolled in
   def script_level_hidden?(script_level)
@@ -1190,12 +1239,33 @@ class User < ActiveRecord::Base
     return nil
   end
 
+  def reset_secrets
+    generate_secret_picture
+    generate_secret_words
+  end
+
   def generate_secret_picture
-    self.secret_picture = SecretPicture.random
+    MAX_SECRET_RESET_ATTEMPTS.times do
+      new_secret_picture = SecretPicture.random
+
+      # retry if random picture is same as user's current secret picture
+      next if new_secret_picture == secret_picture
+
+      self.secret_picture = new_secret_picture
+      break
+    end
   end
 
   def generate_secret_words
-    self.secret_words = [SecretWord.random.word, SecretWord.random.word].join(" ")
+    MAX_SECRET_RESET_ATTEMPTS.times do
+      new_secret_words = [SecretWord.random.word, SecretWord.random.word].join(" ")
+
+      # retry if random words are same as user's current secret words
+      next if new_secret_words == secret_words
+
+      self.secret_words = new_secret_words
+      break
+    end
   end
 
   # Returns an array of experiment name strings
@@ -1715,6 +1785,11 @@ class User < ActiveRecord::Base
   def clear_user_and_mark_purged
     random_suffix = (('0'..'9').to_a + ('a'..'z').to_a).sample(8).join
 
+    authentication_options.with_deleted.each(&:really_destroy!)
+
+    districts.clear
+    self.district_as_contact = nil
+
     self.studio_person_id = nil
     self.name = nil
     self.username = "#{SYSTEM_DELETED_USERNAME}_#{random_suffix}"
@@ -1885,5 +1960,12 @@ class User < ActiveRecord::Base
       counts = all_ids.each_with_object(Hash.new(0)) {|id, hash| hash[id] += 1}
       return counts.select {|_, val| val == assigned_sections.length}.keys
     end
+  end
+
+  # Parent email is not required, but if it is present, it must be a
+  # well-formed email address.
+  def validate_parent_email
+    errors.add(:parent_email) unless parent_email.nil? ||
+      Cdo::EmailValidator.email_address?(parent_email)
   end
 end

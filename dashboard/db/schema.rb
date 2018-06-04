@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180517082249) do
+ActiveRecord::Schema.define(version: 20180601174113) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -86,6 +86,16 @@ ActiveRecord::Schema.define(version: 20180517082249) do
     t.index ["level_id"], name: "fk_rails_8f51960e09", using: :btree
     t.index ["script_id", "level_id"], name: "index_authored_hint_view_requests_on_script_id_and_level_id", using: :btree
     t.index ["user_id", "script_id", "level_id", "hint_id"], name: "index_authored_hint_view_requests_on_all_related_ids", using: :btree
+  end
+
+  create_table "blocks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "name"
+    t.string   "level_type"
+    t.text     "category",    limit: 65535
+    t.text     "config",      limit: 65535
+    t.text     "helper_code", limit: 65535
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
   create_table "callouts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -674,6 +684,19 @@ ActiveRecord::Schema.define(version: 20180517082249) do
     t.index ["regional_partner_id"], name: "index_pd_payment_terms_on_regional_partner_id", using: :btree
   end
 
+  create_table "pd_post_course_surveys", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.bigint  "form_id",                     null: false
+    t.bigint  "submission_id",               null: false
+    t.text    "answers",       limit: 65535
+    t.string  "year"
+    t.integer "user_id",                     null: false
+    t.string  "course",                      null: false, comment: "csd or csp"
+    t.index ["form_id"], name: "index_pd_post_course_surveys_on_form_id", using: :btree
+    t.index ["submission_id"], name: "index_pd_post_course_surveys_on_submission_id", unique: true, using: :btree
+    t.index ["user_id", "form_id", "year", "course"], name: "index_pd_post_course_surveys_on_user_form_year_course", unique: true, using: :btree
+    t.index ["user_id"], name: "index_pd_post_course_surveys_on_user_id", using: :btree
+  end
+
   create_table "pd_pre_workshop_surveys", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "pd_enrollment_id",               null: false
     t.text     "form_data",        limit: 65535, null: false
@@ -745,11 +768,11 @@ ActiveRecord::Schema.define(version: 20180517082249) do
   end
 
   create_table "pd_survey_questions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "form_id"
+    t.bigint   "form_id"
     t.text     "questions",  limit: 65535, null: false, comment: "JSON Question data for this JotForm form."
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
-    t.index ["form_id"], name: "index_pd_survey_questions_on_form_id", using: :btree
+    t.index ["form_id"], name: "index_pd_survey_questions_on_form_id", unique: true, using: :btree
   end
 
   create_table "pd_teacher_applications", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -792,7 +815,7 @@ ActiveRecord::Schema.define(version: 20180517082249) do
     t.integer "user_id",                      null: false
     t.integer "pd_session_id"
     t.integer "pd_workshop_id",               null: false
-    t.text    "form_data",      limit: 65535
+    t.text    "answers",        limit: 65535
     t.integer "day",                          null: false, comment: "Day of the workshop (1-based), or zero for the pre-workshop survey"
     t.index ["form_id"], name: "index_pd_workshop_daily_surveys_on_form_id", using: :btree
     t.index ["pd_session_id"], name: "index_pd_workshop_daily_surveys_on_pd_session_id", using: :btree
@@ -809,13 +832,11 @@ ActiveRecord::Schema.define(version: 20180517082249) do
     t.integer "pd_session_id"
     t.integer "pd_workshop_id",               null: false
     t.integer "facilitator_id",               null: false
-    t.text    "form_data",      limit: 65535
+    t.text    "answers",        limit: 65535
     t.integer "day",                          null: false, comment: "Day of the workshop (1-based)"
-    t.integer "integer",                      null: false, comment: "Day of the workshop (1-based)"
     t.index ["day"], name: "index_pd_workshop_facilitator_daily_surveys_on_day", using: :btree
     t.index ["form_id", "user_id", "pd_session_id", "facilitator_id"], name: "index_pd_workshop_facilitator_daily_surveys_unique", unique: true, using: :btree
     t.index ["form_id"], name: "index_pd_workshop_facilitator_daily_surveys_on_form_id", using: :btree
-    t.index ["integer"], name: "index_pd_workshop_facilitator_daily_surveys_on_integer", using: :btree
     t.index ["pd_session_id"], name: "index_pd_workshop_facilitator_daily_surveys_on_pd_session_id", using: :btree
     t.index ["pd_workshop_id"], name: "index_pd_workshop_facilitator_daily_surveys_on_pd_workshop_id", using: :btree
     t.index ["submission_id"], name: "index_pd_workshop_facilitator_daily_surveys_on_submission_id", unique: true, using: :btree
@@ -1149,7 +1170,11 @@ ActiveRecord::Schema.define(version: 20180517082249) do
     t.integer  "user_id"
     t.boolean  "login_required",                default: false, null: false
     t.text     "properties",      limit: 65535
+    t.string   "new_name"
+    t.string   "family_name"
+    t.index ["family_name"], name: "index_scripts_on_family_name", using: :btree
     t.index ["name"], name: "index_scripts_on_name", unique: true, using: :btree
+    t.index ["new_name"], name: "index_scripts_on_new_name", unique: true, using: :btree
     t.index ["wrapup_video_id"], name: "index_scripts_on_wrapup_video_id", using: :btree
   end
 
@@ -1223,6 +1248,16 @@ ActiveRecord::Schema.define(version: 20180517082249) do
     t.index ["end"], name: "index_segments_on_end", using: :btree
     t.index ["start"], name: "index_segments_on_start", using: :btree
     t.index ["workshop_id"], name: "index_segments_on_workshop_id", using: :btree
+  end
+
+  create_table "shared_blockly_functions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string  "name",                                  null: false
+    t.string  "level_type"
+    t.integer "block_type",                default: 0, null: false
+    t.string  "return"
+    t.text    "description", limit: 65535
+    t.text    "arguments",   limit: 65535
+    t.text    "stack",       limit: 65535
   end
 
   create_table "sign_ins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|

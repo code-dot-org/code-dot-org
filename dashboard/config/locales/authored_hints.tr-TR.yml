@@ -4236,6 +4236,53 @@
           </next>
           </block>
           </xml>
+      courseB_collector_loops_challenge2_2018_authored_hint:
+        courseB_collector_loops_challenge2_a: Eğer işler ters giderse, yeniden başlamaktan
+          korkma! Sakın pes etme!
+        courseB_collector_loops_challenge2_b: "Bu tekrar eden kodu kullanırsan, Laurel
+          mağaranın içindeki duvara çarpmayacak! \n\n<xml><block type=\"maze_moveEast\">\n<next>\n<block
+          type=\"collector_collect\">\n<next>\n<block type=\"maze_moveWest\">\n<next>\n<block
+          type=\"maze_moveWest\">\n<next>\n<block type=\"maze_moveSouth\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block></xml>"
+        courseB_collector_loops_challenge2_c: Son hazine yığınını toplamak için bir
+          döngü kullanmayı unutma!
+        courseB_collector_loops_challenge2_d: |-
+          Bu çözümü deneyin:
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="3-10">4</title>
+          <statement name="DO">
+          <block type="maze_moveEast">
+          <next>
+          <block type="collector_collect">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="3-10">6</title>
+          <statement name="DO">
+          <block type="collector_collect"/>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_collector_loops_challenge2a_authored_hint:
         courseB_collector_loops_challenge2a_a: Eğer herhangi bir şey ters giderse,
           hata ayıklamayı deneyin. Pes etmeyin!
@@ -13572,6 +13619,9 @@
         courseF_maze_ramp7_d: Domuza ulaşmak için birden fazla yol var. Hangi yol
           en az kod gerektiriyor?
         courseF_maze_ramp7_aa: "Bu yola bak... \n\n![](https://images.code.org/e1d29901495eea9504c194b09efaa88e-image-1503437474226.29.32.png)"
+      courseF_playlab_brokenText_authored_hint:
+        courseF_playlab_variables6c_a: '"Girdi" bölümü altında, kullanıcılardan girdi
+          almak için`sor` bloğunu kullanın.'
       courseF_playlab_variables1a_authored_hint:
         courseF_playlab_variables1a_a: Put the word "Goal!" inside the green block
           that is connected to the purple `set shout to` block.

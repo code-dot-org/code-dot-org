@@ -247,22 +247,22 @@ class SectionApiHelperTest < SequelTestCase
 
       it 'includes default csp scripts' do
         script_ids = DashboardSection.valid_scripts.map {|script| script[:script_name]}
-        assert_includes script_ids, 'csp1'
-        assert_includes script_ids, 'csp2'
+        assert_includes script_ids, 'csp1-2017'
+        assert_includes script_ids, 'csp2-2017'
         refute_includes script_ids, 'csp2-alt'
-        assert_includes script_ids, 'csp3'
+        assert_includes script_ids, 'csp3-2017'
       end
 
       it 'includes default csp scripts for user without experiment' do
         user_id = 1
         valid_scripts = DashboardSection.valid_scripts(user_id)
         script_names = valid_scripts.map {|script| script[:script_name]}
-        assert_includes script_names, 'csp1'
-        assert_includes script_names, 'csp2'
+        assert_includes script_names, 'csp1-2017'
+        assert_includes script_names, 'csp2-2017'
         refute_includes script_names, 'csp2-alt'
-        assert_includes script_names, 'csp3'
+        assert_includes script_names, 'csp3-2017'
 
-        assert_equal 'Unit 2: Digital Information', valid_scripts.find {|s| s[:script_name] == 'csp2'}[:name]
+        assert_equal 'Unit 2: Digital Information', valid_scripts.find {|s| s[:script_name] == 'csp2-2017'}[:name]
       end
 
       it 'only hits the database to check hidden script access on subsequent requests without experiment' do
@@ -279,10 +279,10 @@ class SectionApiHelperTest < SequelTestCase
         user_id = FakeDashboard::CSP2_ALT_EXPERIMENT[:min_user_id]
         valid_scripts = DashboardSection.valid_scripts(user_id)
         script_names = valid_scripts.map {|script| script[:script_name]}
-        assert_includes script_names, 'csp1'
-        refute_includes script_names, 'csp2'
+        assert_includes script_names, 'csp1-2017'
+        refute_includes script_names, 'csp2-2017'
         assert_includes script_names, 'csp2-alt'
-        assert_includes script_names, 'csp3'
+        assert_includes script_names, 'csp3-2017'
 
         # Without an entry in the i18n gsheet, the script name is shown.
         assert_equal 'csp2-alt', valid_scripts.find {|s| s[:script_name] == 'csp2-alt'}[:name]
@@ -306,7 +306,7 @@ class SectionApiHelperTest < SequelTestCase
 
           # Initially, the user sees the default scripts.
           script_names = DashboardSection.valid_scripts(user_id).map {|script| script[:script_name]}
-          assert_includes script_names, 'csp2'
+          assert_includes script_names, 'csp2-2017'
           refute_includes script_names, 'csp2-alt'
 
           Dashboard.db[:experiments].insert(
@@ -321,14 +321,14 @@ class SectionApiHelperTest < SequelTestCase
           # the default scripts.
           Timecop.travel 59
           script_names = DashboardSection.valid_scripts(user_id).map {|script| script[:script_name]}
-          assert_includes script_names, 'csp2'
+          assert_includes script_names, 'csp2-2017'
           refute_includes script_names, 'csp2-alt'
 
           # Beyond 60 seconds after the experiment is set, the user sees the
           # alternate scripts.
           Timecop.travel 2
           script_names = DashboardSection.valid_scripts(user_id).map {|script| script[:script_name]}
-          refute_includes script_names, 'csp2'
+          refute_includes script_names, 'csp2-2017'
           assert_includes script_names, 'csp2-alt'
 
           Timecop.return
@@ -356,16 +356,16 @@ class SectionApiHelperTest < SequelTestCase
         test_locale = :"te-ST"
         I18n.locale = test_locale
         custom_i18n = {
-          "csp_name" => "CS Principles",
+          "csp-2017_name" => "CS Principles",
           "full_course_category_name" => "Full Courses"
         }
         I18n.backend.store_translations test_locale, custom_i18n
 
-        csp_course = DashboardSection.valid_courses.find {|course| course[:script_name] == 'csp'}
+        csp_course = DashboardSection.valid_courses.find {|course| course[:script_name] == 'csp-2017'}
         expected = {
           id: 15,
           name: 'CS Principles',
-          script_name: 'csp',
+          script_name: 'csp-2017',
           category: 'Full Courses',
           position: 0,
           category_priority: 0,

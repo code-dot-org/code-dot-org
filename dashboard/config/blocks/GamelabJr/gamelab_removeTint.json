@@ -1,0 +1,16 @@
+{
+  "category": "Sprites",
+  "config": {
+    "color": [
+      184,
+      1,
+      0.74
+    ],
+    "func": "removeTint",
+    "blockText": "remove color from {THIS}",
+    "args": [
+
+    ],
+    "methodCall": true
+  }
+}

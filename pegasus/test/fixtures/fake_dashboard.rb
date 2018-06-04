@@ -60,7 +60,7 @@ module FakeDashboard
   COURSES = [
     COURSE_CSP = {
       id: 15,
-      name: 'csp',
+      name: 'csp-2017',
       created_at: '2016-01-01 00:01:02',
       updated_at: '2016-01-01 00:01:02'
     }
@@ -102,17 +102,17 @@ module FakeDashboard
     },
     SCRIPT_CSP1 = {
       id: 31,
-      name: 'csp1',
+      name: 'csp1-2017',
       hidden: 0,
     },
     SCRIPT_CSP2 = {
       id: 32,
-      name: 'csp2',
+      name: 'csp2-2017',
       hidden: 0,
     },
     SCRIPT_CSP3 = {
       id: 34,
-      name: 'csp3',
+      name: 'csp3-2017',
       hidden: 0,
     },
     # put the hidden scripts at the end and give them higher ids, to make

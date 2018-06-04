@@ -138,6 +138,13 @@
     valid_password: Derīga parole!
     invalid_password: Parolē jābūt vismaz 6 rakstzīmēm
     mismatch_password: Abas ievadītās paroles nesakrīt
+    agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
+      and <a href='http://code.org/privacy'>Privacy Policy</a>.
+    under_13_consent: If I am under 13 years of age, I confirm that I have my parent
+      or legal guardian's permission to use the Code.org services.
+    agree_us_website: I agree to using a website based in the United States.
+    my_data_to_us: Data from my use of this site may be sent to and stored or processed
+      in the United States.
     student_terms: Piekrītu Code.org <a href='http://code.org/tos'> lietošanas noteikumiem</a>.
       Ja es esmu jaunāks par 13 gadiem, iesniedzot šo veidlapu, apstiprinu, ka man
       ir vecāku vai likumīgā aizbildņa atļauja lietot Code.org pakalpojumus.<br/>Lietotājiem,
@@ -146,6 +153,7 @@
     teacher_terms: Es piekrītu Code.org <a href='http://code.org/tos'>lietošanas noteikumiem</a>.
     additional_information: Mums nepieciešama papildus informācija, lai turpinātu
       Tavu pieteikumu.
+    user_type_button: Update Account Type
     user_type_label: Account Type
     user_type_teacher: Skolotāja
     user_type_student: Students
@@ -154,8 +162,10 @@
     error: An error occurred.
     email_preference_question: Can we email you about updates to our courses, local
       learning opportunities, or other computer science news?
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: Jā
     email_preference_no: Nē
+    email_preference_required: You must specify an email preference.
   school_info:
     title: School Information (optional)
     school_country: School Country
@@ -601,6 +611,8 @@
       in your section.
     already_enrolled_in_new_section: You cannot move these students because this teacher
       already has them in another section.
+    third_party_login: You cannot move students to a section that is synced with a
+      third party tool.
   share:
     title: Mācies Code Studio
     description: Jebkurš var apgūt datorzinības. Izveido spēles aplikācijas un mākslu
@@ -609,6 +621,8 @@
   gender:
     male: Vīrietis
     female: Sieviete
+    non_binary: Non-binary
+    not_listed: Preferred term not listed
     none: Nēlos atbildēt
   user_type:
     student: Students
@@ -1123,6 +1137,7 @@
     csd5_2: 'Chapter 2: Solving Data Problems'
     csd6_1: 'Chapter 1: Hardware Output'
     csd6_2: 'Chapter 2: Hardware Input'
+    csd_survey: Post-Course Survey
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -1288,3 +1303,11 @@
       the storing of cookies on your computer or device.
     more_information: See Code.org's Privacy Policy.
     accept: es piekrītu
+  gdpr_dialog:
+    heading: Do you agree to using a web site based in the United States?
+    message: Data from your use of this site may be sent to and stored or processed
+      in the United States.
+    link_intro: For details see our
+    privacy_policy: privacy policy
+    logout: Logout
+    true: Jā

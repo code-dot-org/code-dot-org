@@ -14,7 +14,6 @@
       "comment_Drawing": null,
       "randomNumber_min_max": null
     },
-    "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "<img src=\"https://images.code.org/8306a9fd01470ac8582cf4374dde7033-image-1520403513967.17.40 PM.png\" style=\"float:right;height:150px\">\r\n\r\n# Random Numbers\r\n\r\nHere's the same sun from last time.  Right now only the x-coordinate is random, but you can make the y-coordinate random, too.\r\n\r\n# Do This\r\n\r\n* Use `randomNumber()` for the ellipse's Y parameter so the circle is drawn in a random Y position, too.\r\n* As long as your circle is appearing at random X and Y positions, you can move on.",

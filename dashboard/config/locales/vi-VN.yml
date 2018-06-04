@@ -142,6 +142,13 @@
     valid_password: Mật khẩu hợp lệ!
     invalid_password: Mật khẩu phải có ít nhất 6 ký tự
     mismatch_password: Hai mật khẩu bạn nhập không khớp
+    agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
+      and <a href='http://code.org/privacy'>Privacy Policy</a>.
+    under_13_consent: Nếu dưới 13 tuổi, tôi xác nhận rằng tôi đã được cha mẹ hoặc
+      người giám hộ hợp pháp cho phép sử dụng các dịch vụ trên Code.org.
+    agree_us_website: Tôi đồng ý với việc sử dụng trang web đặt tại Hoa Kỳ.
+    my_data_to_us: Dữ liệu từ việc tôi sử dụng trang web này có thể được gửi đến và
+      lưu trữ hoặc xử lý tại Hoa Kỳ.
     student_terms: Tôi đồng ý tuân theo <a href='http://code.org/tos'>các điều khoản
       dịch vụ</a> của Code.org. Nếu tôi dưới 13 tuổi, tôi xác nhận bằng cách nộp bản
       đơn này với sự đồng ý cho phép sử dụng dịch vụ của Code.org của phụ huynh hoặc
@@ -154,12 +161,20 @@
       riêng tư</a>.
     additional_information: Chúng tôi cần một số thông tin bổ sung để tiếp tục đăng
       ký cho bạn.
+    user_type_button: Update Account Type
     user_type_label: Loại tài khoản
     user_type_teacher: Giáo viên
     user_type_student: học sinh
     field_is_required: là bắt buộc
     accept_terms: Bạn phải đồng ý để tạo một tài khoản
     error: Có lỗi xảy ra.
+    email_preference_question: Chúng tôi có thể gửi email cho bạn thông tin cập nhật
+      về các khóa học của chúng tôi, các cơ hội ở địa phương hay tin tức về khoa học
+      máy tính khác không?
+    email_preference_privacy: "(Xem chính sách bảo mật của chúng tôi)"
+    email_preference_yes: Đồng ý
+    email_preference_no: Không
+    email_preference_required: You must specify an email preference.
   school_info:
     title: Thông tin trường học (không bắt buộc)
     school_country: Quốc gia
@@ -619,6 +634,8 @@
       in your section.
     already_enrolled_in_new_section: You cannot move these students because this teacher
       already has them in another section.
+    third_party_login: You cannot move students to a section that is synced with a
+      third party tool.
   share:
     title: Học về Xưởng Code
     description: Ai cũng có thẻ học khoa học máy tính. Làm trò chơi, ứng dụng và nghệ
@@ -627,6 +644,8 @@
   gender:
     male: Nam
     female: Nữ
+    non_binary: Non-binary
+    not_listed: Preferred term not listed
     none: Tùy chọn không muốn trả lời
   user_type:
     student: học sinh
@@ -1174,6 +1193,7 @@
     csd5_2: 'Chapter 2: Solving Data Problems'
     csd6_1: 'Chapter 1: Hardware Output'
     csd6_2: 'Chapter 2: Hardware Input'
+    csd_survey: Post-Course Survey
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -1187,6 +1207,11 @@
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Unit 2: Digital Information'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: Reflection Prompts
   external_links:
     disclaimer: Miễn trừ trách nhiệm
@@ -1329,3 +1354,16 @@
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
   courses_category: Full Courses
+  cookie_banner:
+    message: By continuing to browse our site or clicking "I agree," you agree to
+      the storing of cookies on your computer or device.
+    more_information: See Code.org's Privacy Policy.
+    accept: Tôi đồng ý
+  gdpr_dialog:
+    heading: Do you agree to using a web site based in the United States?
+    message: Data from your use of this site may be sent to and stored or processed
+      in the United States.
+    link_intro: For details see our
+    privacy_policy: privacy policy
+    logout: Logout
+    true: Đồng ý

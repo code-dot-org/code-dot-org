@@ -1,6 +1,20 @@
 es-MX:
   data:
     script:
+      category:
+        csd_category_name: CS Discoveries ('17-'18)
+        csd_2018_category_name: CS Discoveries ('18-'19)
+        csf_category_name: Fundamentos de CS
+        csf_international_category_name: CS Fundamentals International
+        csf2_draft_category_name: 'En desarrollo: Cursos A - F'
+        csp_category_name: "'15-'16 Principios de CS"
+        csp_2018_category_name: CS Principles ('18-'19)
+        cspexams_category_name: Prueba de práctica de principios de CS
+        csp17_category_name: '''16-''17 Principios de CS'
+        full_course_category_name: Full Courses
+        hoc_category_name: Hora del código
+        math_category_name: Matemáticas
+        research_studies_category_name: Research Studies
       name:
         course1:
           title: Curso 1
@@ -1632,7 +1646,7 @@ es-MX:
             Privacy in a Digital World:
               name: Privacy in a Digital World
             Privacy vs Utility:
-              name: Privacy vs Utility
+              name: Privacidad vs utilidad
             Rapid Research - Data Innovations:
               name: Rapid Research - Data Innovations
             Reading Records:
@@ -2137,6 +2151,8 @@ es-MX:
               name: '¡Participe en un estudio longitudinal!'
             CSP Student Post-Course Survey:
               name: CSP Student Post-Course Survey
+            Post-Course Survey:
+              name: Post-Course Survey
         csp2:
           title: CSP Unit 2 - Digital Information
           description: This unit further explores the ways that digital information is encoded, represented and manipulated. Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.
@@ -2185,6 +2201,8 @@ es-MX:
               name: CSP Student Post-Course Survey
             Practice PT - Encode an Experience:
               name: Practice PT - Encode an Experience
+            Post-Course Survey:
+              name: Post-Course Survey
         csp3:
           title: CSP Unit 3 - Intro to Programming
           description: "Esta unidad presenta los conceptos fundamentales de la programación informática, que desbloquea la capacidad de crear aplicaciones ricas e interactivas. Este curso utiliza JavaScript como lenguaje de programación y App Lab como el entorno de programación para crear aplicaciones, pero los conceptos aprendidos en estas lecciones abarcan todos los lenguajes y herramientas de programación.\\r\n\\r\nEsta unidad se actualizó por última vez el 30 de octubre de 2017. Obtenga más información sobre las actualizaciones de los planes de estudios en forum.code.org/c/csp/updates."
@@ -2229,6 +2247,8 @@ es-MX:
               name: CSP Mid-course survey
             Please complete the CSP Mid-course survey!:
               name: Please complete the CSP Mid-course survey!
+            Post-Course Survey:
+              name: Post-Course Survey
         csp4:
           title: CSP Unit 4 - Big Data and Privacy
           description: "The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.\\r\n\\r\nThis unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
@@ -2269,6 +2289,10 @@ es-MX:
               name: '¡Participe en un estudio longitudinal!'
             CSP Student Post-Course Survey:
               name: CSP Student Post-Course Survey
+            Post-Course Survey:
+              name: Post-Course Survey
+            Student Post-Course Survey:
+              name: Student Post-Course Survey
         csp5:
           title: CSP Unit 5 - Building Apps
           description: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
@@ -2379,6 +2403,8 @@ es-MX:
               name: '"if" Statements Unplugged'
             Boolean Expressions and "if" Statements:
               name: Boolean Expressions and "if" Statements
+            Post-Course Survey:
+              name: Post-Course Survey
         csp6:
           title: CSP Unit 6 - AP Performance Tasks
           description: This unit covers the preparation and completion of the Create and Explore Performance Tasks.
@@ -3382,6 +3408,8 @@ es-MX:
               name: Shapes and Randomization
             CS Discoveries End of Semester Survey:
               name: CS Discoveries End of Semester Survey
+            CSD Post-Course Survey:
+              name: CSD Post-Course Survey
         grade2:
           title: Grade 2
           description: Planning Script for CSF 2.0
@@ -3807,6 +3835,8 @@ es-MX:
               name: Headings
               description_student: This lesson continues the introduction to HTML tags, this time with headers.  The class practices using header tags to create page and section titles and learns how the different header elements are displayed by default.  Next, the class plans how to organize their content on the personal web pages that will be built across the unit and begins the first page of the project.
               description_teacher: In this lesson, students continue to use HTML to structure text on web pages, this time with headings.  Students learn how the different heading elements are displayed by default and practice using them to create page and section titles.  Students then start to decide how they will organize their content on their own personal web pages.  In the last level, students begin the project that they will continue to work on throughout the unit.
+            CSD Post-Course Survey:
+              name: CSD Post-Course Survey
         csp2-support:
           title: Unit 2 Online Professional Learning Course
           description_audience: ''
@@ -3937,6 +3967,8 @@ es-MX:
               name: Project - App Presentation
               description_student: Each team prepares a presentation to "pitch" the app they've developed. This is the time to share struggles, triumphs, and plans for the future.
               description_teacher: At this point teams have researched a topic of personal and social importance, developed and tested both a paper prototype and a digital prototype, and iterated on the initial app to incorporate new features and bug fixes. Now is the time for them to review what they have done and pull together a coherent presentation to demonstrate their process of creation. Using the provided presentation template, teams prepare to present about their process of app development, including the problem they set out to solve, the ways in which they've incorporated feedback from testing, and their plans for the future.
+            CSD Post-Course Survey:
+              name: CSD Post-Course Survey
         minecraft:
           title: 'Minecraft: Hora del Código para diseñar'
           description_audience: ''
@@ -4502,6 +4534,8 @@ es-MX:
               name: Aplicaciones de ejemplo
             Final Project:
               name: Final Project
+            Post-Course Survey:
+              name: Post-Course Survey
         unit6-csd-draft:
           title: ''
           description_audience: ''
@@ -4914,6 +4948,8 @@ es-MX:
               name: Arrays and Color LEDs
               description_student: Learn how lists can be used to store multiple values in a single variable name.
               description_teacher: An array is an ordered collection of items, usually of the same type. In this lesson, students learn ways to access either a specific or random value from a list using its index.  They then learn how to access the colorLEDs array that controls the behavior of the color LEDs on the Circuit Playground.  Students will control the color and intensity of each LED, then use what they have learned to program light patterns to create a light show on their Circuit Playground.
+            CSD Post-Course Survey:
+              name: CSD Post-Course Survey
         csd3-draft:
           title: 'CSD Unit 3 - Programming: Animations and Games'
           description_audience: ''
@@ -5048,6 +5084,8 @@ es-MX:
               name: Keeping Data Secret
               description_student: Students have a discussion on the different levels of security they would like for personal data.  Once the class has developed an understanding of the importance of privacy, they learn about the process of encrypting information by enciphering a note for a partner and deciphering the partner's note.  The class concludes with a discussion about the importance of both physical and digital security.
               description_teacher: Students have a discussion on the different levels of security they would like for personal data.  Once the class has developed an understanding of the importance of privacy, they learn about the process of encrypting information by enciphering a note for a partner and deciphering the partner's note.  The class concludes with a discussion about the importance of both physical and digital security.
+            CSD Post-Course Survey:
+              name: CSD Post-Course Survey
         csd3-old:
           title: CSD Unit 3 (DEPRECATED)
           description_audience: ''
@@ -5294,10 +5332,14 @@ es-MX:
               name: '¡Participe en un estudio longitudinal!'
             CSP Post-Course Survey:
               name: CSP Post-Course Survey
+            CSP post survey 2018 staging:
+              name: CSP post survey 2018 staging
+            CSP post-course survey:
+              name: CSP post-course survey
           title: CSP Student Post-Course Survey
           description_audience: CSP Students
           description_short: CSP Student Post Course Survey
-          description: 'Welcome to the Code.org CS Principles Post-Course Survey.  This survey takes about 10 minutes to complete.  Your responses are private and anonymous.  '
+          description: Welcome to the Code.org CS Principles Post-Course Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
         public-key-cryptography:
           stages:
             Public Key Crypto Widgets:
@@ -6894,6 +6936,8 @@ es-MX:
               name: CSP mid and post survey 2017 staging
             CSP post survey 2018 staging:
               name: CSP post survey 2018 staging
+            CSD post survey 2018 staging:
+              name: CSD post survey 2018 staging
           title: All the surveys
           description_audience: ''
           description_short: Place to stage and test Code.org surveys
@@ -6952,6 +6996,8 @@ es-MX:
               name: Tech Setup - Your AP Digital Portfolio and Other Tools
             'Setup: Digital Portfolio and Other Tools':
               name: 'Setup: Digital Portfolio and Other Tools'
+            Post-Course Survey:
+              name: Post-Course Survey
           title: Explore - AP Performance Task Prep
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and complete the AP Explore Performance Tasks.
@@ -6966,6 +7012,8 @@ es-MX:
               name: Create PT Prep - Making a Plan
             Create PT - Complete the Task:
               name: Create PT - Complete the Task
+            Post-Course Survey:
+              name: Post-Course Survey
           title: Create - AP Performance Task Prep
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and complete the AP Create Performance Tasks.
@@ -7503,6 +7551,8 @@ es-MX:
               name: Ciclos en Harvester
             Sequencing in Maze:
               name: Secuencias en Maze
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: 'Persistence & Frustration: Stevie and the Big Project'
         express-2018:
           title: Express Course
           description: Aprende los basicos de las ciencias de la compuación y el internet. Al final del curso, crea tu propio juego o historia para compartir.
@@ -7653,6 +7703,74 @@ es-MX:
               name: Condicionales en Bee
             Until Loops in Maze:
               name: Until Loops in Maze
+            Programming in Maze:
+              name: Programación en Laberinto
+            Debugging in Maze:
+              name: Depuración en Maze
+            Programming in Collector:
+              name: Programación en Collector
+            Programming in Artist:
+              name: Programación en Artist
+            'Loops: Getting Loopy':
+              name: 'Ciclos: Haciendo ciclos'
+            Loops with Rey and BB-8:
+              name: Ciclos con Rey y BB-8
+            Copyright and Creativity:
+              name: Copyright and Creativity
+            'Concept Practice with Minecraft ':
+              name: 'Concept Practice with Minecraft '
+            Nested Loops in Bee:
+              name: Ciclos anidados en Bee
+            Nested Loops in Frozen:
+              name: Ciclos anidados con Frozen
+            Conditionals with Cards:
+              name: Condicionales con tarjetas
+            Conditionals & Loops in Harvester:
+              name: Condicionales y ciclos en Harvester
+            'Functions: Songwriting':
+              name: 'Funciones: composición'
+            Functions in Minecraft:
+              name: Functions in Minecraft
+            Functions in Harvester:
+              name: Funciones en Harvester
+            Functions in Artist:
+              name: Funciones de artista
+            Screen Out the Mean:
+              name: Encuentra la media
+            Determine the Concept:
+              name: Determinar el concepto
+            Build a Flappy Game:
+              name: Construye un juego Flappy
+            The Power of Words:
+              name: El poder de las palabras
+            Envelope Variables:
+              name: Variables de sobre
+            Variables as Constant in Artist:
+              name: Variables as Constant in Artist
+            Variables that Change in Bee:
+              name: Variables that Change in Bee
+            Variables that Change in Artist:
+              name: Variables that Change in Artist
+            For Loop Fun:
+              name: Diversión con bucles Para
+            Learning Sprites with Sprite Lab:
+              name: Learning Sprites with Sprite Lab
+            Alien Dance Party with Sprite Lab:
+              name: Alien Dance Party with Sprite Lab
+            Pet Giraffe with Sprite Lab:
+              name: Pet Giraffe with Sprite Lab
+            Binary Bracelets:
+              name: Pulseras binarias
+            'Unplugged: Binary':
+              name: 'Desconectado: binario'
+            Artist Binary:
+              name: Artista binario
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Colaboración abierta
+            Relay Programming:
+              name: Programación bajo presión
         courseb-2018:
           title: Curso B
           description: Aprende los basicos de las ciencias de la compuación y el internet. Al final del curso, crea tu propio juego o historia para compartir.
@@ -7805,6 +7923,12 @@ es-MX:
               name: Condicionales en Maze
             Conditionals & Loops in Harvester:
               name: Condicionales y ciclos en Harvester
+            Graph Paper Programming:
+              name: Programación de hoja cuadriculada
+            Relay Programming:
+              name: Programación bajo presión
+            Introduction to Online Puzzles:
+              name: Introducción a los acertijos en línea
         jr-test:
           stages:
             Programming with Behaviors:
@@ -7823,6 +7947,8 @@ es-MX:
               name: Virtual Pet - Forever
             Alien Dance Party - Input:
               name: Alien Dance Party - Input
+            Virtual Pet - Interactions:
+              name: Virtual Pet - Interactions
           title: ''
           description_audience: ''
           description_short: ''
@@ -8340,6 +8466,8 @@ es-MX:
               name: Pet Giraffe with Sprite Lab
             Functions in Minecraft:
               name: Functions in Minecraft
+            Conditionals in Farmer:
+              name: Condicionales en Farmer
         csp1-2018:
           title: CSP Unit 1 - The Internet
           description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. The unit then explores the structure and design of the internet and the implications of those design decisions.
@@ -8414,6 +8542,8 @@ es-MX:
               name: Unit 1 Chapter 2 Assessment
               description_student: ''
               description_teacher: ''
+            Sending Text:
+              name: Sending Text
         csd1-2018:
           title: CSD Unit 1 - Problem Solving
           description: " \\r\nUnit 1 is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\\r\n"
@@ -8998,16 +9128,346 @@ es-MX:
             Alien Dance Party - Input:
               name: Alien Dance Party - Input
           title: Introduction to Sprite Lab (PILOT)
-          description_audience: ''
-          description_short: ''
-          description: ''
+          description_audience: Course E/F Students
+          description_short: This is a pilot course for Code.org's new Sprite Lab tool for Courses E and F
+          description: This is a pilot course for Code.org's new Sprite Lab tool for Courses E and F
         csd1-dlp-18:
           stages:
             Deeper Learning Overview:
               name: Deeper Learning Overview
             Complete Unit 1 Deeper Learning Reflections:
               name: Complete Unit 1 Deeper Learning Reflections
+            Complete Unit 2 Deeper Learning Reflections:
+              name: Complete Unit 2 Deeper Learning Reflections
+            Complete Unit 3 Deeper Learning Reflections:
+              name: Complete Unit 3 Deeper Learning Reflections
           title: CS Discoveries Unit 1 Deeper Learning 2018-2019
           description_audience: CS Discoveries Facilitators in Training 2018-2019
           description_short: 'Deeper Learning materials for CS Discoveries facilitators in training '
           description: 'This is Unit 1 of the Deeper Learning Plan for Code.org CS Discoveries facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 1 of the Code.org CS Discoveries Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+        csd2-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Unit 2 Deeper Learning Reflections:
+              name: Complete Unit 2 Deeper Learning Reflections
+          title: CS Discoveries Unit 2 Deeper Learning 2018-2019
+          description_audience: CS Discoveries Facilitators in Training 2018-2019
+          description_short: 'Deeper Learning materials for CS Discoveries facilitators in training '
+          description: 'This is Unit 1 of the Deeper Learning Plan for Code.org CS Discoveries facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 1 of the Code.org CS Discoveries Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+        csd3-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Unit 3 Deeper Learning Reflections:
+              name: Complete Unit 3 Deeper Learning Reflections
+          title: CS Discoveries Unit 3 Deeper Learning 2018-2019
+          description_audience: CS Discoveries Facilitators in Training 2018-2019
+          description_short: 'Deeper Learning materials for CS Discoveries facilitators in training '
+          description: 'This is Unit 3 of the Deeper Learning Plan for Code.org CS Discoveries facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 3 of the Code.org CS Discoveries Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+        csd4-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Unit 2 Deeper Learning Reflections:
+              name: Complete Unit 2 Deeper Learning Reflections
+            Complete Unit 4 Deeper Learning Reflections:
+              name: Complete Unit 4 Deeper Learning Reflections
+          title: CS Discoveries Unit 4 Deeper Learning 2018-2019
+          description_audience: CS Discoveries Facilitators in Training 2018-2019
+          description_short: 'Deeper Learning materials for CS Discoveries facilitators in training '
+          description: 'This is Unit 4 of the Deeper Learning Plan for Code.org CS Discoveries facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 4 of the Code.org CS Discoveries Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+        csd5-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Unit 5 Deeper Learning Reflections:
+              name: Complete Unit 5 Deeper Learning Reflections
+          title: CS Discoveries Unit 5 Deeper Learning 2018-2019
+          description_audience: CS Discoveries Facilitators in Training 2018-2019
+          description_short: 'Deeper Learning materials for CS Discoveries facilitators in training '
+          description: 'This is Unit 5 of the Deeper Learning Plan for Code.org CS Discoveries facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 5 of the Code.org CS Discoveries Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+        csd6-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Unit 5 Deeper Learning Reflections:
+              name: Complete Unit 5 Deeper Learning Reflections
+            Complete Unit 6 Deeper Learning Reflections:
+              name: Complete Unit 6 Deeper Learning Reflections
+          title: CS Discoveries Unit 6 Deeper Learning 2018-2019
+          description_audience: CS Discoveries Facilitators in Training 2018-2019
+          description_short: 'Deeper Learning materials for CS Discoveries facilitators in training '
+          description: 'This is Unit 6 of the Deeper Learning Plan for Code.org CS Discoveries facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 6 of the Code.org CS Discoveries Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+        csp1-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Unit 1 Deeper Learning Reflections:
+              name: Complete Unit 1 Deeper Learning Reflections
+          title: CS Principles Unit 1 Deeper Learning 2018-2019
+          description_audience: CS Principles Facilitators in Training 2018-2019
+          description_short: 'Deeper Learning materials for CS Principles facilitators in training '
+          description: 'This is Unit 1 of the Deeper Learning Plan for Code.org CS Principles facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 1 of the Code.org CS Principles Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+        csp2-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Unit 2 Deeper Learning Reflections:
+              name: Complete Unit 2 Deeper Learning Reflections
+          title: CS Principles Unit 2 Deeper Learning 2018-2019
+          description_audience: CS Principles Facilitators in Training 2018-2019
+          description_short: 'Deeper Learning materials for CS Principles facilitators in training '
+          description: 'This is Unit 2 of the Deeper Learning Plan for Code.org CS Principles facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 2 of the Code.org CS Principles Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+        csp3-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Unit 3 Deeper Learning Reflections:
+              name: Complete Unit 3 Deeper Learning Reflections
+          title: CS Principles Unit 3 Deeper Learning 2018-2019
+          description_audience: CS Principles Facilitators in Training 2018-2019
+          description_short: 'Deeper Learning materials for CS Principles facilitators in training '
+          description: 'This is Unit 3 of the Deeper Learning Plan for Code.org CS Principles facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 3 of the Code.org CS Principles Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+        csp4-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Unit 3 Deeper Learning Reflections:
+              name: Complete Unit 3 Deeper Learning Reflections
+            Complete Unit 4 Deeper Learning Reflections:
+              name: Complete Unit 4 Deeper Learning Reflections
+          title: CS Principles Unit 4 Deeper Learning 2018-2019
+          description_audience: CS Principles Facilitators in Training 2018-2019
+          description_short: 'Deeper Learning materials for CS Principles facilitators in training '
+          description: 'This is Unit 4 of the Deeper Learning Plan for Code.org CS Principles facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 4 of the Code.org CS Principles Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+        csp5-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Unit 5 Deeper Learning Reflections:
+              name: Complete Unit 5 Deeper Learning Reflections
+          title: CS Principles Unit 5 Deeper Learning 2018-2019
+          description_audience: CS Principles Facilitators in Training 2018-2019
+          description_short: 'Deeper Learning materials for CS Principles facilitators in training '
+          description: 'This is Unit 5 of the Deeper Learning Plan for Code.org CS Principles facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 5 of the Code.org CS Principles Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+        csp-explore-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Unit 6 Deeper Learning Reflections:
+              name: Complete Unit 6 Deeper Learning Reflections
+            Complete Explore AP Unit Deeper Learning Reflections:
+              name: Complete Explore AP Unit Deeper Learning Reflections
+            Complete Explore Deeper Learning Reflections:
+              name: Complete Explore Deeper Learning Reflections
+          title: CS Principles Explore Deeper Learning 2018-2019
+          description_audience: CS Principles Facilitators in Training 2018-2019
+          description_short: 'Deeper Learning materials for CS Principles facilitators in training '
+          description: 'This is the Explore AP Unit of the Deeper Learning Plan for Code.org CS Principles facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of the Explore AP Unit of the Code.org CS Principles Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+        csp-create-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Create Deeper Learning Reflections:
+              name: Complete Create Deeper Learning Reflections
+          title: CS Principles Create Deeper Learning 2018-2019
+          description_audience: CS Principles Facilitators in Training 2018-2019
+          description_short: 'Deeper Learning materials for CS Principles facilitators in training '
+          description: 'This is the Create AP Unit of the Deeper Learning Plan for Code.org CS Principles facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of the Create AP Unit of the Code.org CS Principles Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+        csd-post-survey:
+          stages:
+            CSD post-course survey:
+              name: CSD post-course survey
+          title: CSD Student Post-Course Survey
+          description_audience: CSD Students
+          description_short: CSD Student Post-Course Survey
+          description: Welcome to the Code.org CS Discoveries Post-Course Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
+        csd-novice-18:
+          stages:
+            Novice Reflections Overview:
+              name: Novice Reflections Overview
+            Welcome:
+              name: Welcome
+            Tuesday:
+              name: Tuesday
+            Wednesday:
+              name: Wednesday
+            Thursday:
+              name: Thursday
+            Wrap Up:
+              name: Wrap Up
+            Friday:
+              name: Friday
+            Novice Reflection Overview:
+              name: Novice Reflection Overview
+            Monday:
+              name: Monday
+            Day 1:
+              name: Day 1
+            Day 2:
+              name: Day 2
+            Day 3:
+              name: Day 3
+            Day 4:
+              name: Day 4
+          title: CS Discoveries Novice Reflections 2018-2019
+          description_audience: CS Discoveries Facilitators in Training 2018-2019
+          description_short: 'Novice reflection materials for CS Discoveries facilitators in training '
+          description: This is the set of novice reflections for Code.org CS Discoveries facilitators in training during their 5-day summer workshop. Here you will find reflection prompts for each day of your in-person 5-day summer workshop. This questions will be the foundation of work we do at the Facilitator Training Weekend.
+        csd-apprentice-18:
+          stages:
+            Novice Reflection Overview:
+              name: Novice Reflection Overview
+            Tuesday:
+              name: Tuesday
+            Wednesday:
+              name: Wednesday
+            Thursday:
+              name: Thursday
+            Wrap Up:
+              name: Wrap Up
+            Apprentice Reflection Overview:
+              name: Apprentice Reflection Overview
+            Day 1:
+              name: Day 1
+            Day 2:
+              name: Day 2
+            Day 3:
+              name: Day 3
+            Day 4:
+              name: Day 4
+          title: CS Discoveries Apprentice Reflections 2018-2019
+          description_audience: CS Discoveries Facilitators in Training 2018-2019
+          description_short: 'Apprentice reflection materials for CS Discoveries facilitators in training '
+          description: This is the set of apprentice reflections for Code.org CS Discoveries facilitators in training during their 5-day summer workshop. Here you will find reflection prompts for each day of your in-person 5-day summer workshop. This questions will be the foundation of work we do at the Facilitator Training Weekend.
+        csp-novice-18:
+          stages:
+            Novice Reflection Overview:
+              name: Novice Reflection Overview
+            Tuesday:
+              name: Tuesday
+            Wednesday:
+              name: Wednesday
+            Thursday:
+              name: Thursday
+            Wrap Up:
+              name: Wrap Up
+            Monday:
+              name: Monday
+            Day 1:
+              name: Day 1
+            Day 2:
+              name: Day 2
+            Day 3:
+              name: Day 3
+            Day 4:
+              name: Day 4
+          title: CS Principles Novice Reflections 2018-2019
+          description_audience: CS Principles Facilitators in Training 2018-2019
+          description_short: 'Novice reflection materials for CS Principles facilitators in training '
+          description: This is the set of novice reflections for Code.org CS Principles facilitators in training during their 5-day summer workshop. Here you will find reflection prompts for each day of your in-person 5-day summer workshop. This questions will be the foundation of work we do at the Facilitator Training Weekend.
+        csp-apprentice-18:
+          stages:
+            Novice Reflection Overview:
+              name: Novice Reflection Overview
+            Tuesday:
+              name: Tuesday
+            Wednesday:
+              name: Wednesday
+            Thursday:
+              name: Thursday
+            Wrap Up:
+              name: Wrap Up
+            Apprentice Reflection Overview:
+              name: Apprentice Reflection Overview
+            Day 1:
+              name: Day 1
+            Day 2:
+              name: Day 2
+            Day 3:
+              name: Day 3
+            Day 4:
+              name: Day 4
+          title: CS Principles Apprentice Reflections 2018-2019
+          description_audience: CS Principles Facilitators in Training 2018-2019
+          description_short: 'Apprentice reflection materials for CS Principles facilitators in training '
+          description: This is the set of apprentice reflections for Code.org CS Principles facilitators in training during their 5-day summer workshop. Here you will find reflection prompts for each day of your in-person 5-day summer workshop. This questions will be the foundation of work we do at the Facilitator Training Weekend.
+        pre-express-2018:
+          title: Pre-reader Express
+          description: Aprende los basicos de las ciencias de la compuación y el internet. Al final del curso, crea tu propio juego o historia para compartir.
+          description_short: 'An introduction to computer science for pre-readers: combines the best of our kindergarten and first grade courses.'
+          description_audience: 'Ages: 4-8'
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Depuración: Errores desapercibidos'
+              description_student: ''
+              description_teacher: ''
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: 'Persistencia y frustración: Stevie y las canicas'
+              description_student: ''
+              description_teacher: ''
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmos de la vida real: Planta una semilla'
+              description_student: ''
+              description_teacher: ''
+            Learn to Drag and Drop:
+              name: Aprende a arrastrar y soltar
+              description_student: ''
+              description_teacher: ''
+            'Online Safety: Your Digital Footprint':
+              name: 'Online Safety: Your Digital Footprint'
+              description_student: ''
+              description_teacher: ''
+            'Programming: My Robotic Friends':
+              name: 'Programación: Mis amigos robóticos'
+              description_student: ''
+              description_teacher: ''
+            Programming in Maze:
+              name: Programación en Laberinto
+              description_student: ''
+              description_teacher: ''
+            'Programming: Star Wars':
+              name: 'Programando: La Guerra de las Galaxias'
+              description_student: ''
+              description_teacher: ''
+            'Loops: My Loopy Robotic Friends':
+              name: 'Ciclos: Mis amigos roboticos'
+              description_student: ''
+              description_teacher: ''
+            Loops in Collector:
+              name: Loops in Collector
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+              description_student: ''
+              description_teacher: ''
+            Events in Play Lab:
+              name: Events in Play Lab
+              description_student: ''
+              description_teacher: ''
+            Spelling Bee:
+              name: Concurso de ortografía
+              description_student: ''
+              description_teacher: ''
+            Move It, Move It:
+              name: Muévelo, Muévelo
+            Sequencing with Scrat:
+              name: Secuencias con Scrat
+            Your Digital Footprint:
+              name: Tu huella dactilar
+            Programming in Ice Age:
+              name: Programación en Ice Age
+            Copyright and Creativity:
+              name: Copyright and Creativity
+            Programming with Rey and BB-8:
+              name: Programación con Rey y BB-8
+            Loops in Ice Age:
+              name: Ciclos en Ice Age
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: 'Persistence & Frustration: Stevie and the Big Project'

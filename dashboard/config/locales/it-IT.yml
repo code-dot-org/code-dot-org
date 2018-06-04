@@ -5,11 +5,11 @@
       too_young: Questo contenuto ha attivi dei limiti di età e non è disponibile
         per gli studenti più giovani.
       teacher_must_accept_terms: Questo contenuto ha restrizioni di età in corso e
-        non è disponibile per gli studenti più giovani. Chiedi al tuo/a insegnante
-        di accettare i Termini di Servizio aggiornati per accedere a questo contenuto.
-        Il/La tuo/a insegnante può farlo effettuando il login a Code Studio e cliccando
-        sul bottone "Revisiona Termini Aggiornati" in alto nella pagina iniziale di
-        Code Studio.
+        non è disponibile per gli studenti più giovani. Chiedi al tuo (o alla tua)
+        insegnante di accettare i Termini di Servizio aggiornati per accedere a questo
+        contenuto. Il tuo (o la tua) insegnante può farlo effettuando il login in
+        Code Studio e cliccando sul bottone "Revisiona Termini Aggiornati" in alto
+        nella pagina iniziale di Code Studio.
       pair_programmer: Attualmente stai programmando in coppia con uno studente che
         non ha accesso a questo contenuto. Per accedervi, ferma la programmazione
         in coppia e riprova.
@@ -142,6 +142,13 @@
     valid_password: Password valida!
     invalid_password: La password deve essere lunga almeno 6 caratteri
     mismatch_password: Le due password che hai inserito non corrispondono
+    agree_tos_privacy: Accetto i <a href='http://code.org/tos'>Termini di Servizio</a>
+      e l'<a href='http://code.org/privacy'>Informativa sulla Privacy</a>.
+    under_13_consent: Se ho meno di 13 anni, confermo che i miei genitori o di chi
+      ne fa le veci mi hanno dato il permesso di utilizzare i servizi di Code.org.
+    agree_us_website: Accetto di utilizzare un sito web con sede negli Stati Uniti.
+    my_data_to_us: I dati del mio utilizzo di questo sito possono essere inviati e
+      memorizzati o elaborati negli Stati Uniti.
     student_terms: Accetto di essere legato ai <a href='http://code.org/tos'> Termini
       di Servizio </a> di Code.org. Se ho meno di 13 anni, confermo, sottoscrivendo
       a questo modulo che ho il permesso da parte di un genitore o di un tutore legale
@@ -154,16 +161,20 @@
       la nostra <a href='http://code.org/privacy'>Informativa sulla Privacy</a>.
     additional_information: Abbiamo bisogno di alcune informazioni aggiuntive per
       continuare la tua iscrizione.
+    user_type_button: Aggiorna Tipologia di Account
     user_type_label: Tipo di account
     user_type_teacher: Insegnante
     user_type_student: Studente
     field_is_required: è un dato obbligatorio
     accept_terms: Devi accettare le condizioni per creare un account
     error: Si è verificato un errore.
-    email_preference_question: Can we email you about updates to our courses, local
-      learning opportunities, or other computer science news?
+    email_preference_question: Possiamo inviarti email sulle novità dei nostri corsi
+      o su altre notizie legate all'informatica?
+    email_preference_privacy: "(Vedi la nostra informativa sulla privacy)"
     email_preference_yes: Sì
     email_preference_no: 'No'
+    email_preference_required: Devi specificare una preferenza relativa all'indirizzo
+      email.
   school_info:
     title: Informazioni sulla scuola (opzionale)
     school_country: Paese della Scuola
@@ -625,6 +636,8 @@
       appartenere alla tua classe.
     already_enrolled_in_new_section: Non puoi spostare questi studenti perché appartengono
       già ad una classe di questo insegnante.
+    third_party_login: Non puoi spostare gli studenti in una classe sincronizzata
+      con un strumento di terze parti.
   share:
     title: Impara su Code Studio
     description: Chiunque può imparare l'informatica. Realizza giochi, app e lavori
@@ -633,6 +646,8 @@
   gender:
     male: Maschile
     female: Femminile
+    non_binary: Non-binary
+    not_listed: Preferred term not listed
     none: Preferisco non rispondere
   user_type:
     student: Studente
@@ -1173,6 +1188,7 @@
     csd5_2: 'Capitolo 2: Risoluzione dei problemi di dati'
     csd6_1: 'Capitolo 1: Output Hardware'
     csd6_2: 'Capitolo 2: Input Hardware'
+    csd_survey: Post-Course Survey
     csp1_1: 'Capitolo 1: Rappresentazione e trasmissione delle informazioni'
     csp1_2: 'Capitolo 2: Inventare Internet'
     csp2_1: 'Capitolo 1: Codifica e compressione delle informazioni complesse'
@@ -1335,7 +1351,15 @@
         at this workshop?
   courses_category: Corsi Avanzati
   cookie_banner:
-    message: By continuing to browse our site or clicking "I agree," you agree to
-      the storing of cookies on your computer or device.
-    more_information: See Code.org's Privacy Policy.
-    accept: Firmo
+    message: Continuando a navigare nel nostro sito o cliccando su "Accetto", accetti
+      la memorizzazione dei cookie sul tuo computer o dispositivo.
+    more_information: Leggi l'informativa sulla privacy di Code.org.
+    accept: Accetto
+  gdpr_dialog:
+    heading: Accetti di utilizzare un sito web con sede negli Stati Uniti?
+    message: I dati del tuo utilizzo di questo sito possono essere inviati e memorizzati
+      o elaborati negli Stati Uniti.
+    link_intro: Per ulteriori informazioni vedi la nostra
+    privacy_policy: informativa sulla privacy
+    logout: Esci
+    true: Sì

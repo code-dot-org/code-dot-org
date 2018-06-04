@@ -24,7 +24,7 @@
         screenSelectorCallout2: Dette er skjermveljaren
         changePlace1ID: Endre skjerm-ID her.
       AppLab Intro 2 - Edit startScreen_callout:
-        applabIntro2_1: Klikk på tittelen på appen
+        applabIntro2_1: Klikk på tittelen på appen din
         appLabIntro2_designMenu: Bruk desse menyane til å endre "teksten" i appen
           din
         appLabIntro2_textColor: Bla ned for å endre "tekstfargen"
@@ -145,6 +145,7 @@
       CSD U3 Direction Arrows_2018_callout: {}
       CSD U3 Draw Loop Plugged update your scene_callout: {}
       CSD U3 Draw Loop Plugged update your scene_2018_callout: {}
+      CSD U3 Draw Loop Plugged wiggle sprite y_2018_callout: {}
       CSD U3 Drawing Squares to Corners_callout: {}
       CSD U3 Drawing Squares to Corners_2018_callout: {}
       CSD U3 Else_callout: {}
@@ -436,9 +437,9 @@
         CSD_U3_rect_c1: Her er koden
         CSD_U3_rect_c2: Dra denne blokka inn i kodeområdet.
       CSD U6 colorLeds intensity_callout:
-        CSDU6L10_rainbow: Add your code here
+        CSDU6L10_rainbow: Legg til koden din her
       CSD U6 colorLeds intensity_2018_callout:
-        CSDU6L10_rainbow: Add your code here
+        CSDU6L10_rainbow: Legg til koden din her
       CSD U6 colorLeds predict_callout: {}
       CSD U6 colorLeds predict_2018_callout: {}
       CSD U6 getProperty input_callout:
@@ -446,13 +447,13 @@
       CSD U6 getProperty input_2018_callout:
         CSD_U6L06P03: Add your block here.
       CSD U6 light show predict_callout:
-        CSDUDL03P09: What does this line do?
+        CSDUDL03P09: Hva gjør denne linjen?
       CSD U6 light show predict_2018_callout:
-        CSDUDL03P09: What does this line do?
+        CSDUDL03P09: Hva gjør denne linjen?
       CSD U6 light show_callout:
-        CSDUDL03P09: What does this line do?
+        CSDUDL03P09: Hva gjør denne linjen?
       CSD U6 light show_2018_callout:
-        CSDUDL03P09: What does this line do?
+        CSDUDL03P09: Hva gjør denne linjen?
       CSD U6 tugowar variables 1_callout:
         CSD_U6_startGame: Definér startSpel her
       CSD U6 tugowar variables 1_2018_callout:
@@ -689,11 +690,11 @@
       Infinity_repeat_callout:
         Infinity_repeat_callout: Plassér Flytt-blokker innanfor her
       InspirationalArtwork_callout:
-        InspirationalArtwork_1: Try using the new `comment` block under this label
-          to leave yourself notes inside your program!
+        InspirationalArtwork_1: Prøv å bruke den nye `kommenter`-blokken under denne
+          etiketten for å etterlate noen notater til deg selv i programmet!
       InspirationalArtwork_2018_callout:
-        InspirationalArtwork_1: Try using the new `comment` block under this label
-          to leave yourself notes inside your program!
+        InspirationalArtwork_1: Prøv å bruke den nye `kommenter`-blokken under denne
+          etiketten for å etterlate noen notater til deg selv i programmet!
       Luigi's Pizza 1 (copy 1)_callout:
         luigi's pizza 1: Try ordering a pepperoni pizza
       Luigi's Pizza 1_callout:
@@ -860,11 +861,11 @@
         feeling_stuck_callout_test: " Står du fast?<br />Klikk på lyspæra for å få
           eit hint!"
       Robot Doodle_callout:
-        4-5_Artist_Patterns_Free_Play_2: Try using the new `comment` block under this
-          label to leave yourself notes inside your program!
+        4-5_Artist_Patterns_Free_Play_2: Prøv å bruke den nye `kommenter`-blokken
+          under denne etiketten for å etterlate noen notater til deg selv i programmet!
       Robot Doodle_2018_callout:
-        4-5_Artist_Patterns_Free_Play_2: Try using the new `comment` block under this
-          label to leave yourself notes inside your program!
+        4-5_Artist_Patterns_Free_Play_2: Prøv å bruke den nye `kommenter`-blokken
+          under denne etiketten for å etterlate noen notater til deg selv i programmet!
       Robot Drawing_callout:
         4-5_Artist_Patterns_Free_Play_1: Alle dine favorittblokker er no organisert
           i kategoriar. Klikk på desse orda for å sjå kor alt blei av!
@@ -1039,11 +1040,11 @@
         courseA_artist_loops7_1: Dette talet betyr at berre ei av desse blokkene kan
           bli brukt i det endelege svaret.
       courseA_artist_loops8_callout:
-        courseA_artist_loops8_1: Did you know that you can draw back over a line whenever
-          you need to?
+        courseA_artist_loops8_1: Visste du at du kan tegne tilbake og over en linje
+          når du vil?
       courseA_artist_loops8_2018_callout:
-        courseA_artist_loops8_1: Did you know that you can draw back over a line whenever
-          you need to?
+        courseA_artist_loops8_1: Visste du at du kan tegne tilbake og over en linje
+          når du vil?
       courseA_collector_loops1_callout:
         courseA_collector_loops1_1: Ser du nokre nye blokker i verktøykassa?  Ta det
           heilt med ro, vi skal vise deg korleis du bruker dei seinare i nivået.
@@ -1122,11 +1123,11 @@
       courseA_playLab_events5_2018_callout:
         courseA_playLab_events5_1: Klikk her for å endre retninga på pil-hendinga.
       courseA_playLab_events6_callout:
-        courseA_playLab_events6_1: This let's you choose a "random" sound, which means
-          that you don't know what you are going to get until you hear it!
+        courseA_playLab_events6_1: Dette lar deg velge en "tilfeldig" lyd, som betyr
+          at du ikke vet hvilken lyd du får før du hører den!
       courseA_playLab_events6_2018_callout:
-        courseA_playLab_events6_1: This let's you choose a "random" sound, which means
-          that you don't know what you are going to get until you hear it!
+        courseA_playLab_events6_1: Dette lar deg velge en "tilfeldig" lyd, som betyr
+          at du ikke vet hvilken lyd du får før du hører den!
       courseA_toMakeLoopsVideo_Collector_callout: {}
       courseB_Scrat_ramp1_2018_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
@@ -1136,11 +1137,11 @@
       courseB_Scrat_ramp4a_2018_callout: {}
       courseB_Scrat_ramp5a_2018_callout: {}
       courseB_artist_loops3_callout:
-        courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How
-          will you use it?
+        courseB_artist_loops3_1: Det er kun en av disse blokkene i verktøykassa. Hvordan
+          vil du bruke den?
       courseB_artist_loops3_2018_callout:
-        courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How
-          will you use it?
+        courseB_artist_loops3_1: Det er kun en av disse blokkene i verktøykassa. Hvordan
+          vil du bruke den?
       courseB_artist_loops5_callout:
         courseB_artist_loops5_1: Dette talet betyr at det ikkje er fleire blokker
           att i verktøykassa.
@@ -1174,11 +1175,11 @@
       courseB_playlab_events6_2018_callout:
         courseB_playlab_events6_a: Bruk den grøne pila ned for å endre retningar.
       courseC_PlayLab_events8_callout:
-        courseC_PlayLab_events8_callout1: Use this block for when Waddles and Chomp
-          touch!
+        courseC_PlayLab_events8_callout1: Bruk denne blokken når Waddles og Chomp
+          er borti hverandre!
       courseC_PlayLab_events8_2018_callout:
-        courseC_PlayLab_events8_callout1: Use this block for when Waddles and Chomp
-          touch!
+        courseC_PlayLab_events8_callout1: Bruk denne blokken når Waddles og Chomp
+          er borti hverandre!
       courseC_PlayLab_events_challenge1_callout:
         courseC_PlayLab_events_challenge1_1: Denne blokka lar deg flytte figurar til
           ulike delar av speleområdet.
@@ -1204,11 +1205,11 @@
         courseC_collector_prog1_1: Ser du nokre nye blokker i verktøykassa?  Ta det
           heilt med ro, vi skal vise deg korleis du bruker dei seinare i nivået.
       courseC_collector_prog7_callout:
-        courseC_collector_prog7_1: You can take more blocks from the toolbox if you
-          need them!
+        courseC_collector_prog7_1: Du kan bruke flere blokker fra verktøykassa hvis
+          du trenger dem!
       courseC_collector_prog7_2018_callout:
-        courseC_collector_prog7_1: You can take more blocks from the toolbox if you
-          need them!
+        courseC_collector_prog7_1: Du kan bruke flere blokker fra verktøykassa hvis
+          du trenger dem!
       courseC_collector_prog8_callout: {}
       courseC_collector_prog8_2018_callout: {}
       courseC_collector_prog9_callout: {}
@@ -1230,8 +1231,7 @@
       courseC_maze_debugging5_2018_callout:
         courseC_maze_debugging5_1: Desse blokkene er låste og kan ikkje slettast!
       courseC_maze_loops2_callout:
-        courseC_maze_loops2_1: You only have one of these blocks available in this
-          puzzle.
+        courseC_maze_loops2_1: Du har kun en av disse blokkene igjen i denne oppgaven.
       courseC_maze_loops2_predict1_callout: {}
       courseC_maze_loops_challenge2_callout: {}
       courseC_maze_programming1_callout:
@@ -1279,11 +1279,9 @@
       courseC_starWars_loops11_callout: {}
       courseC_starWars_loops11_2018_callout: {}
       courseC_starWars_loops2_callout:
-        courseC_starWars_loops2: You only have one of these blocks available in this
-          puzzle.
+        courseC_starWars_loops2: Du har kun en av disse blokkene igjen i denne oppgaven.
       courseC_starWars_loops2_2018_callout:
-        courseC_starWars_loops2: You only have one of these blocks available in this
-          puzzle.
+        courseC_starWars_loops2: Du har kun en av disse blokkene igjen i denne oppgaven.
       courseC_starWars_loops4_callout: {}
       courseC_starWars_loops4_2018_callout: {}
       courseC_starWars_loops5_callout: {}
@@ -1417,6 +1415,9 @@
         courseD_playLab_condFP_1: we have organized the blocks into categories to
           give you more code to play with!  Click here to see where everything went.
       courseD_playLab_condFP_a_callout:
+        courseD_playLab_condFP_1: we have organized the blocks into categories to
+          give you more code to play with!  Click here to see where everything went.
+      courseD_playLab_condForVideo_callout:
         courseD_playLab_condFP_1: we have organized the blocks into categories to
           give you more code to play with!  Click here to see where everything went.
       courseD_scrat_predict1_callout: {}
@@ -1560,34 +1561,34 @@
       courseE_farmer_functions11_predict_callout: {}
       courseE_farmer_functions11_predict_2018_callout: {}
       courseE_farmer_functions13_2018_callout:
-        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
-          you run the program.
+        courseE_farmer_functions1a_1: Denne grønnsaken er ukjent. Den endrer seg hver
+          gang du kjører programmet.
       courseE_farmer_functions1_2018_callout:
         courseE_farmer_functions1_2: The toolbox is organized a little differently
           this time! Click on the different categories to see which blocks you have.
       courseE_farmer_functions1a_callout:
-        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
-          you run the program.
+        courseE_farmer_functions1a_1: Denne grønnsaken er ukjent. Den endrer seg hver
+          gang du kjører programmet.
       courseE_farmer_functions1a_2018_callout:
-        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
-          you run the program.
+        courseE_farmer_functions1a_1: Denne grønnsaken er ukjent. Den endrer seg hver
+          gang du kjører programmet.
       courseE_farmer_functions2a_callout:
-        courseE_farmer_functions2a_2: This code might not look exactly like what you
-          wrote, but it will get the job done!
+        courseE_farmer_functions2a_2: Denne koden ser kanskje ikke helt lik ut som
+          den du skrev, men den får jobben gjort!
       courseE_farmer_functions2aALT_callout:
-        courseE_farmer_functions2a_2: This code might not look exactly like what you
-          wrote, but it will get the job done!
+        courseE_farmer_functions2a_2: Denne koden ser kanskje ikke helt lik ut som
+          den du skrev, men den får jobben gjort!
       courseE_farmer_functions2b_callout:
-        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
-          you run the program.
+        courseE_farmer_functions1a_1: Denne grønnsaken er ukjent. Den endrer seg hver
+          gang du kjører programmet.
       courseE_farmer_functions2b_2018_callout:
-        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
-          you run the program.
+        courseE_farmer_functions1a_1: Denne grønnsaken er ukjent. Den endrer seg hver
+          gang du kjører programmet.
       courseE_farmer_functions2ba_callout: {}
       courseE_farmer_functions2ba_2018_callout: {}
       courseE_farmer_functions3b_callout:
-        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
-          you run the program.
+        courseE_farmer_functions1a_1: Denne grønnsaken er ukjent. Den endrer seg hver
+          gang du kjører programmet.
       courseE_farmer_functions3c_callout: {}
       courseE_farmer_functions3c1_2018_callout: {}
       courseE_farmer_functions3c_2018_callout: {}
@@ -1907,6 +1908,8 @@
         New Play Lab Project_callout2: Trykk "Køyr" for å lagre og køyre programmet
         sign_in_to_save_project: Vil du opne prosjektet seinare? Logg på for å lagre
           prosjektet til kontoen din!
+      courseF_playlab_brokenText_callout:
+        courseF_playlab_variables5c_1: Du vil finne variabel-blokka inni her.
       courseF_playlab_embed_vars_callout: {}
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: The toolbox has been organized into categories
@@ -1990,8 +1993,8 @@
       frozen square snowflake_callout:
         replace_questions: Bruk nedtrekkslista for å erstatte «???» med eit tal
       grade1_artist_loops2_callout:
-        grade1_artist_loops2_1: There is only one of these blocks in the toolbox.  How
-          will you use it?
+        grade1_artist_loops2_1: Det er kun en av disse blokkene i verktøykassa. Hvordan
+          vil du bruke den?
       grade1_maze_sequence6_callout:
         grade1_maze_sequence6_1: Desse grå blokkene er laga av stein!  Det betyr at
           dei ikkje kan kastast.
@@ -2021,8 +2024,8 @@
       grade2_collector_10_callout: {}
       grade2_collector_10_2018_callout: {}
       grade2_collector_7_callout:
-        grade2_collector_7_1: You can take more blocks from the toolbox if you need
-          them!
+        grade2_collector_7_1: Du kan bruke flere blokker fra verktøykassa hvis du
+          trenger dem!
       grade2_collector_8_callout: {}
       grade2_collector_9_callout: {}
       grade2_collector_9a_callout: {}
@@ -2050,8 +2053,8 @@
       grade2_maze_intro8_callout: {}
       grade2_maze_intro9_callout: {}
       grade2_puppy_loops2_callout:
-        grade2_puppy_loops2_callout1: You only have one of these blocks available
-          in this puzzle.
+        grade2_puppy_loops2_callout1: Du har kun en av disse blokkene igjen i denne
+          oppgaven.
       grade3_ConditionalsElse_2_callout:
         4_5_Bee_Conditionals_2_1: Hugs, sjekk at KVAR sky har ein BLOM. Du treng ikkje
           å sjå etter bikaker i det heile teke.
@@ -2210,18 +2213,18 @@
         artistLoopsK2_1: Dette talet seier kor mange av desse blokkene du kan bruke
           i denne oppgåva.
       gradek_artist_loops7_callout:
-        gradek_artist_loops7_1: Did you know that you can draw back over a line whenever
-          you need to?
+        gradek_artist_loops7_1: Visste du at du kan tegne tilbake og over en linje
+          når du vil?
       gradek_playlab_events1c_callout: {}
       gradek_playlab_events2c_callout: {}
       gradek_playlab_events3c_callout: {}
       gradek_playlab_events4c_callout: {}
       gradek_playlab_events5c_callout:
-        gradek_playlab_events5c_1: This let's you choose a "random" sound, which means
-          that you don't know what you are going to get until you hear it!
+        gradek_playlab_events5c_1: Dette lar deg velge en "tilfeldig" lyd, som betyr
+          at du ikke vet hvilken lyd du får før du hører den!
       harvester_Kahoot_callout:
-        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
-          you run the program.
+        courseE_farmer_functions1a_1: Denne grønnsaken er ukjent. Den endrer seg hver
+          gang du kjører programmet.
       iceage_click_hello_callout: {}
       iceage_click_hello_2018_callout: {}
       iceage_free_play_callout: {}

@@ -14,7 +14,6 @@
       "fill": null,
       "randomNumber_min_max": null
     },
-    "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
     "instructions_important": "false",
@@ -53,7 +52,6 @@
     "encrypted_examples": "rU0c9eZ0HeXmR24WLgLAOIEsCJp6R24IbKWcHZHGL/7SIQTbZFkpl9zMsPMn\npwU9ljBjLdXqtjTexCXIsSkc2g==\n",
     "parent_level_id": 8869,
     "name_suffix": "_2018",
-    "contained_level_names": null,
     "reference_links": [
       "/docs/csd-1718/drawing_shapes_map/index.html",
       "/docs/csd-1718/shape_size_map/index.html"
@@ -62,7 +60,8 @@
     "video_key": "csd_gamelab_drawloop",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

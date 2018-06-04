@@ -47,7 +47,6 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:destroy, Activity)
 
     refute ability.can?(:read, Section)
-    assert ability.can?(:membership, Section)
 
     assert ability.can?(:create, GalleryActivity)
     assert ability.can?(:destroy, GalleryActivity)

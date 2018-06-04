@@ -34,7 +34,6 @@ class Gamelab < Blockly
     hide_animation_mode
     start_in_animation_tab
     all_animations_single_frame
-    show_d_pad
     soft_buttons
     submittable
     data_properties
@@ -69,7 +68,6 @@ class Gamelab < Blockly
         level_num: 'custom',
         properties: {
           code_functions: JSON.parse(palette),
-          show_d_pad: true,
           show_debug_watch: true
         }
       )

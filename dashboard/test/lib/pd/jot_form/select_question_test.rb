@@ -15,8 +15,8 @@ module Pd
           name = "sample#{type.camelize}"
           text = "This is a #{type} label"
 
-          data = {
-            id: '1',
+          jotform_question = {
+            qid: '1',
             type: type,
             name: name,
             text: text,
@@ -25,11 +25,7 @@ module Pd
             allowOther: 'No'
           }.stringify_keys
 
-          question = SelectQuestion.from_jotform_question(
-            id: '1',
-            type: type,
-            jotform_question: data
-          )
+          question = SelectQuestion.from_jotform_question jotform_question
 
           assert question.is_a? SelectQuestion
           assert_equal 1, question.id
@@ -118,6 +114,25 @@ module Pd
 
         question = SelectQuestion.new(hash)
         assert_equal hash, question.to_h
+      end
+
+      test 'summarize' do
+        question = SelectQuestion.new(
+          id: 1,
+          type: TYPE_RADIO,
+          name: 'sampleSelect',
+          text: 'a label',
+          options: %w(One Two Three)
+        )
+
+        expected_summary = {
+          'sampleSelect' => {
+            text: 'a label',
+            answer_type: ANSWER_SELECT_VALUE,
+            max_value: 3
+          }
+        }
+        assert_equal expected_summary, question.summarize
       end
     end
   end

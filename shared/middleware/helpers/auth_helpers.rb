@@ -34,6 +34,7 @@ def under_13?(user_id)
 end
 
 def sharing_disabled?
+  return false unless current_user
   get_sharing_disabled_from_properties(current_user[:properties])
 end
 

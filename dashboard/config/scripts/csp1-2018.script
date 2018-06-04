@@ -7,9 +7,6 @@ teacher_resources [["lessonPlans", "https://curriculum.code.org/csp/unit1/"], ["
 has_verified_resources true
 has_lesson_plan true
 
-stage 'CS Principles Pre-survey', lockable: true
-assessment 'csp-pre-survey-2017-levelgroup_2018'
-
 stage 'Personal Innovations', flex_category: 'csp1_1'
 named_level 'CSP U1L01 SFLP'
 named_level 'Computer Science is Changing Everything_2018', progression: 'Computer Science is Changing Everything'
@@ -51,16 +48,14 @@ named_level 'Internet Simulator: Sending Numbers_2018', progression: 'Internet S
 assessment 'U1L8 Free Response Reflection_2018', progression: 'Check Your Understanding'
 assessment 'U1L8 Multiple Choice_2018', progression: 'Check Your Understanding'
 
-stage 'Encoding and Sending Formatted Text', flex_category: 'csp1_1'
+stage 'Sending Text', flex_category: 'csp1_1'
 named_level 'CSP U1L07 SFLP'
 named_level 'Internet Simulator: Sending Text_2018', progression: 'Internet Simulator: Sending Text'
 assessment 'U1L10 Assessment 1_2018', progression: 'Check Your Understanding'
 assessment 'U1L10 Assessment 2_2018', progression: 'Check Your Understanding'
-assessment 'U1L10 Assessment Free Response_2018', progression: 'Check Your Understanding'
 assessment 'U1L11 Assessment 1_2018', progression: 'Check Your Understanding'
-assessment 'U1L11 Assessment 2_2018', progression: 'Check Your Understanding'
-assessment 'U1L11 Reflection Free Response_2018', progression: 'Check Your Understanding'
-assessment 'U1L11 Collaboration Reflection_2018', progression: 'Check Your Understanding'
+assessment 'U1L11 Reflection Multiple Representations_2018', progression: 'Check Your Understanding'
+assessment 'U1L11 Abstraction Reflection_2018', progression: 'Check Your Understanding'
 
 stage 'Unit 1 Chapter 1 Assessment', lockable: true, flex_category: 'csp1_1'
 assessment 'CSP Unit 1 Ch1 Cumulative Assessment MC Group v2_2018'

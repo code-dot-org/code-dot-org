@@ -140,6 +140,13 @@
     valid_password: Kata sandi valid!
     invalid_password: Kata sandi harus minimal 6 karakter
     mismatch_password: kedua password yang anda masukkan tidak sama
+    agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
+      and <a href='http://code.org/privacy'>Privacy Policy</a>.
+    under_13_consent: If I am under 13 years of age, I confirm that I have my parent
+      or legal guardian's permission to use the Code.org services.
+    agree_us_website: I agree to using a website based in the United States.
+    my_data_to_us: Data from my use of this site may be sent to and stored or processed
+      in the United States.
     student_terms: Saya setuju untuk terikat oleh Code.org <a href='http://code.org/tos'>
       persyaratan layanan </a>. apabila saya berusia di bawah 13 tahun, saya mengonfirmasi
       dengan mengirimkan formulir ini bahwa saya memiliki izin orang tua atau wali
@@ -153,6 +160,7 @@
       kebijakan privasi </a> kami.
     additional_information: Kami membutuhkan informasi tambahan untuk melanjutkan
       pendaftaran anda
+    user_type_button: Update Account Type
     user_type_label: Jenis akun
     user_type_teacher: Guru
     user_type_student: siswa
@@ -161,8 +169,10 @@
     error: Sebuah kesalahan terjadi.
     email_preference_question: Can we email you about updates to our courses, local
       learning opportunities, or other computer science news?
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: Ya
     email_preference_no: Tidak
+    email_preference_required: You must specify an email preference.
   school_info:
     title: Informasi sekolah (pilihan)
     school_country: Negara Sekolah
@@ -640,6 +650,8 @@
       di bagian Anda.
     already_enrolled_in_new_section: Anda tidak dapat memindahkan siswa ini karena
       mereka sudah dalam bagian baru.
+    third_party_login: You cannot move students to a section that is synced with a
+      third party tool.
   share:
     title: Belajar di Code Studio
     description: Siapa pun bisa belajar ilmu komputer. Membuat permainan, aplikasi
@@ -648,6 +660,8 @@
   gender:
     male: Laki-laki
     female: Wanita
+    non_binary: Non-binary
+    not_listed: Preferred term not listed
     none: Memilih untuk tidak menjawab
   user_type:
     student: siswa
@@ -1183,6 +1197,7 @@
     csd5_2: 'Bab 2: Memecahkan Masalah Data'
     csd6_1: 'Bab 1: Pemrograman dengan Hardware'
     csd6_2: 'Bab 2: Membangun Prototipe Fisik'
+    csd_survey: Post-Course Survey
     csp1_1: 'Bab 1: Mewakili dan Transmisi Informasi'
     csp1_2: 'Bab 2: Menciptakan Internet'
     csp2_1: 'Bab 1: Encoding dan Mengompresi Informasi yang Kompleks'
@@ -1348,3 +1363,11 @@
       the storing of cookies on your computer or device.
     more_information: See Code.org's Privacy Policy.
     accept: Saya setuju
+  gdpr_dialog:
+    heading: Do you agree to using a web site based in the United States?
+    message: Data from your use of this site may be sent to and stored or processed
+      in the United States.
+    link_intro: For details see our
+    privacy_policy: privacy policy
+    logout: Logout
+    true: Ya

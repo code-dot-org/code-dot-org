@@ -2,9 +2,9 @@
   data:
     course:
       name:
-        csp:
+        csp-2017:
           assignment_family_title: Computer Science Principles
-          title: Principi računarske nauke
+          title: Computer Science Principles ('17-'18)
           version_title: "'17-'18"
           description_student: In fall 2016, the College Board launched its newest
             AP® course, AP Computer Science Principles. The course introduces students
@@ -23,9 +23,9 @@
             underrepresented with essential computing tools and multidisciplinary
             opportunities.
           description_short: Naučiti temeljne koncepte računarstva.
-        csd:
+        csd-2017:
           assignment_family_title: Computer Science Discoveries
-          title: Otkrića računarske nauke
+          title: Computer Science Discoveries ('17-'18)
           version_title: "'17-'18"
           description_student: Computer Science Discoveries (CS Discoveries) is an
             introductory computer science course that empowers students to create
@@ -35,8 +35,8 @@
             introductory computer science course that empowers students to create
             authentic artifacts and engage with computer science as a medium for creativity,
             communication, problem solving, and fun.
-          description_short: Uvod u kurs računarske nauke koji osposobljava studente
-            za stvaranje autentičnih rukotvorina.
+          description_short: An introductory computer science course that empowers
+            students to create authentic artifacts.
         allthethingscourse:
           title: allthethingscourse
           description_short: This is a course for allthethings

@@ -6,7 +6,6 @@
   "user_id": 155,
   "properties": {
     "skin": "gamelab",
-    "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
     "is_k1": "false",
@@ -68,10 +67,6 @@
     "project_template_level_name": "CSD U3 Sprites scene template_2018",
     "parent_level_id": 8773,
     "name_suffix": "_2018",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "reference_links": [
       "/docs/gamelab/text/index.html",
       "/docs/gamelab/textSize/index.html",
@@ -85,7 +80,8 @@
     ],
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -97,10 +97,9 @@
         összetett dolgok többszöri megrajzolására. Fel tudod használni a "rajzolj
         egy virágot" függvényt  az egész láda beültetésére? (Tipp: A növények 100
         pixeles távolságban állnak egymástól.)'
-      2-3 Artist Functions 13_instruction: 'Készítettünk számodra négy függvényt.
-        Változtasd meg kedvedre a belsejüket egy vagy több ismétléssel, hogy az elkészült
-        képet megoszthasd barátaiddal. Kattints a "Futtatás"-ra, hogy láthass egy
-        példát. '
+      2-3 Artist Functions 13_instruction: Készítettünk számodra négy függvényt. Változtasd
+        meg kedvedre a belsejüket egy vagy több ismétléssel, hogy az elkészült képet
+        megoszthasd barátaiddal. Kattints a "Futtatás"-ra, hogy láthass egy példát.
       2-3 Artist Functions 2 a_instruction: "Use the small green `draw a square`\nblock
         to call this new function and create the glasses. "
       2-3 Artist Functions 2_instruction: A függvények segítségével új blokkokat határozhatsz
@@ -149,8 +148,8 @@
         egy négyzetet, aminek az oldalai 100 pixel hosszúak?
       2-3 Artist Loops New 10_instruction: Most kössük össze ezt a sok V alakot! Rajzold
         őket egy ciklusban!
-      2-3 Artist Loops New 11_instruction: 'Ezúttal 24-szer rajzold meg! A kód végéhez
-        rakj hozzá egy 30 fokos balra fordulást, és tedd az egészet egy ismétlő elembe! '
+      2-3 Artist Loops New 11_instruction: Ezúttal 24-szer rajzold meg! A kód végéhez
+        rakj hozzá egy 30 fokos balra fordulást, és tedd az egészet egy ismétlő elembe!
       2-3 Artist Loops New 12_instruction: 'Rajzold meg a gyémántot 100 pixel hosszú
         oldalakkal.
 
@@ -809,7 +808,7 @@
         belsejébe, hogy 10 db háromszöget rajzoljon. Az ilyet  egymásba ágyazott ciklusnak
         nevezik. Tipp: a 10 háromszög 360°-os körben van egyenlően elosztva.  '
       4-5 Nested Loops 3_instruction: "Készíts egy napocskát a kiindulási kód másik
-        ciklusba ágyazásával. Ezt hívják egymásba ágyazott ciklusnak.\r\n"
+        ciklusba ágyazásával. Ezt hívják egymásba ágyazott ciklusnak.\r"
       4-5 Nested Loops 5_instruction: Ismételd meg a megadott kódot annyiszor, hogy
         szélmalmot készíts.
       4-5 Nested Loops 6_instruction: Meg tudod rajzolni a hatszöget a háromszög rajzoló
@@ -1340,20 +1339,26 @@
         és egyesek begépelésével
       CSD U5 black white images pixelation_2018_instruction: Egészítsd ki az X alakot
         nullák és egyesek begépelésével
-      CSD U6 params modify clouds_instruction: "# Clouds\r\n\r\nThis program makes
-        the clouds move when you blow on the sound sensor, but it's not finished.\r\n\r\n#
-        Do This\r\n* Create a new function `moveCloud(name)` that will move any cloud.\r\n
-        \ * (Hint: you will use almost all the same code as the `moveCloud0` function)\r\n*
-        Call your new `moveCloud(name)` function inside the event block, once for
-        each cloud name.\r\n * (Hint: this is similar to how the `loopCloud(name)`
-        function is called many times."
-      CSD U6 params modify clouds_2018_instruction: "# Clouds\r\n\r\nThis program
-        makes the clouds move when you blow on the sound sensor, but it's not finished.\r\n\r\n#
-        Do This\r\n* Create a new function `moveCloud(name)` that will move any cloud.\r\n
-        \ * (Hint: you will use almost all the same code as the `moveCloud0` function)\r\n*
-        Call your new `moveCloud(name)` function inside the event block, once for
-        each cloud name.\r\n * (Hint: this is similar to how the `loopCloud(name)`
-        function is called many times."
+      CSD U6 params modify clouds_instruction: |-
+        # Clouds
+
+        This program makes the clouds move when you blow on the sound sensor, but it's not finished.
+
+        # Do This
+        * Create a new function `moveCloud(name)` that will move any cloud.
+        * (Hint: you will use almost all the same code as the `moveCloud0` function)
+        * Call your new `moveCloud(name)` function inside the event block, once for each cloud name.
+        * (Hint: this is similar to how the `loopCloud(name)` function is called many times.
+      CSD U6 params modify clouds_2018_instruction: |-
+        # Clouds
+
+        This program makes the clouds move when you blow on the sound sensor, but it's not finished.
+
+        # Do This
+        * Create a new function `moveCloud(name)` that will move any cloud.
+        * (Hint: you will use almost all the same code as the `moveCloud0` function)
+        * Call your new `moveCloud(name)` function inside the event block, once for each cloud name.
+        * (Hint: this is similar to how the `loopCloud(name)` function is called many times.
       CSD U6 params modify planes_instruction: "# Multi-plane Controller\r\n\r\nThis
         program moves the three planes using the board accelerometer and the on-screen
         check boxes.  Right now, only the red plane works.\r\n\r\n# Do This\r\n* Create
@@ -1972,9 +1977,9 @@
       CSPU5_U3 - High Low - Else if_2018_instruction: Add an else-if statement in
         order to tell the user if their guess is high or low instead of just wrong.
         (Click to see full instructions)
-      CSPU5_U3 - High Low - Else_instruction: "Add an else statement so that the program
+      CSPU5_U3 - High Low - Else_instruction: 'Add an else statement so that the program
         will tell the user when they are right and when they are wrong. (Click to
-        see full instructions)\r\n"
+        see full instructions)  '
       CSPU5_U3 - High Low - If_instruction: |-
         Add code to the if statement that indicates
         the user guessed the secret number. (Click to see full instructions)
@@ -2295,10 +2300,10 @@
       CSPU5_U3 - Simulation - 2_2018_instruction: Keep track of how many heads (1's)
         your program generates and print the results to the screen. (Click to see
         full instructions)
-      CSPU5_U3 - Simulation - 3_instruction: "Add functionality that counts how many
-        heads in a row are flipped. (Click to see full instructions)\r\n"
-      CSPU5_U3 - Simulation - 3_2018_instruction: "Add functionality that counts how
-        many heads in a row are flipped. (Click to see full instructions)\r\n"
+      CSPU5_U3 - Simulation - 3_instruction: 'Add functionality that counts how many
+        heads in a row are flipped. (Click to see full instructions)  '
+      CSPU5_U3 - Simulation - 3_2018_instruction: 'Add functionality that counts how
+        many heads in a row are flipped. (Click to see full instructions)  '
       CSPU5_U3 - Simulation - 4_instruction: |-
         Update your while loop's condition
         so the the coin flips until there are three heads in a row. (Click to see
@@ -3265,8 +3270,8 @@
       Course 4 Artist Functions 2_instruction: |-
         Tudsz rajzolni 3 négyzetet egymástól 20 képpontra?
         Tipp: mindegyik négyzet 100 képpont oldalhosszúságú
-      Course 4 Artist Functions 3_instruction: "Using the \"draw a square\" function
-        block, can you draw this picture? Hint: each square is 120 pixels apart.\r\n"
+      Course 4 Artist Functions 3_instruction: 'Using the "draw a square" function
+        block, can you draw this picture? Hint: each square is 120 pixels apart.  '
       Course 4 Artist Functions 4_instruction: |-
         Are you ready to create your own
         "Function Block"? Click on the "Functions" block in the tool box, name
@@ -3277,8 +3282,8 @@
       Course 4 Artist Functions 5 OLD_instruction: |-
         Let's try to use our two functions
         to draw a house - what needs to be fixed in this code to draw the house properly?
-      Course 4 Artist Functions 5_instruction: "Using the \"draw a square\" function
-        block, can you draw this picture? Hint: each square is 120 pixels apart.\r\n"
+      Course 4 Artist Functions 5_instruction: 'Using the "draw a square" function
+        block, can you draw this picture? Hint: each square is 120 pixels apart.  '
       Course 4 Artist Functions 6_instruction: |-
         Which block do you need to add to
         get the triangle to sit on top of the square?
@@ -3954,10 +3959,10 @@
         other shapes if you like. You can choose the size of each shape. Don’t forget
         to add an “else” clause!\r\nOne example - and part of the definition -  has
         already been done for you!\r\n"
-      Eval Cond 8_instruction: "Free Play: Suppose you want to own a car at 21, or
+      Eval Cond 8_instruction: 'Free Play: Suppose you want to own a car at 21, or
         have your own business by 30. Write a function called life-goals, which takes
         in an age and produces a string that describes your life goals by then. Don’t
-        forget to add an “else” clause!\r\n"
+        forget to add an “else” clause!  '
       Eval Contracts 1_instruction: |-
         Use the "star" function to produce a red star
         with a 60 pixel radius
@@ -4253,18 +4258,18 @@
         egy hasonlót. Ha nem, akkor csinálj valamit te magad.
       InspirationalArtwork_2018_instruction: Ha ez a kép inspirál téged, akkor csinálhatsz
         egy hasonlót. Ha nem, akkor csinálj valamit te magad.
-      'Internet Simulator: Broadcast Mode_instruction': "Now use the Internet Simulator
+      'Internet Simulator: Broadcast Mode_instruction': 'Now use the Internet Simulator
         to send the battleship moves. For setup, join a Room with your group, and
         add ships to your paper board for each opponent. When playing, all communication
-        must be done through the tool, so no talking, but have fun!\r\n"
-      'Internet Simulator: Broadcast_instruction': "Now use the Internet Simulator
+        must be done through the tool, so no talking, but have fun!  '
+      'Internet Simulator: Broadcast_instruction': 'Now use the Internet Simulator
         to send the battleship moves. For setup, join a Room with your group, and
         add ships to your paper board for each opponent. When playing, all communication
-        must be done through the tool, so no talking, but have fun!\r\n"
-      'Internet Simulator: Broadcast_2018_instruction': "Now use the Internet Simulator
+        must be done through the tool, so no talking, but have fun!  '
+      'Internet Simulator: Broadcast_2018_instruction': 'Now use the Internet Simulator
         to send the battleship moves. For setup, join a Room with your group, and
         add ships to your paper board for each opponent. When playing, all communication
-        must be done through the tool, so no talking, but have fun!\r\n"
+        must be done through the tool, so no talking, but have fun!  '
       'Internet Simulator: DNS Mode_instruction': |-
         In this version of the Internet
         Simulator, a Domain Name System (DNS) is provided for you and knows the IP
@@ -4519,8 +4524,8 @@
       K2.0 sequence pre_instruction: |-
         Play with these blocks to see if you can get
         me to the pig!
-      KIKI GLJ Test Response_instruction: "Look carefully at the code below.  What
-        do you think the plane will do when you click \"Run\"?\r\n"
+      KIKI GLJ Test Response_instruction: 'Look carefully at the code below.  What
+        do you think the plane will do when you click "Run"?  '
       KTest1_instruction: Can you make me move South once more to get to the pig?
       KTest2_instruction: Tervezd meg az utat a malacig. A TNT-t viszont kerüld el
         mindenképp, vagy repülsz!
@@ -4587,15 +4592,15 @@
       MC HOC 2016 New Drop_instruction: |-
         A Minecraftban a birkák ledobják a gyapjút. Helyezd a
         `ledob` blokkot a `használatkor`blokkba, aztán menj oda, és használd a birkát, hogy ledobjon egy tárgyat!
-      MC HOC 2016 New Spawn_instruction: 'Most telerakhatod a világot olyan dolgokkal,
+      MC HOC 2016 New Spawn_instruction: Most telerakhatod a világot olyan dolgokkal,
         amikkel csak akarod! Húzd a `születik` blokkot a `futtatáskor` blokkba, hogy
-        dolgok szülessenek, amikor a játék kezdődik. '
+        dolgok szülessenek, amikor a játék kezdődik.
       MC HOC 2016 New Walk_instruction: Fedezzük fel a világunkat! Mozogj a nyilakkal,
         és nyomd le a space billentyűt vagy érintsd meg a játékmezőt, hogy használni
         tudj tárgyakat! Használd az ajtót, hogy belépj a házba!
-      MC HOC 2016 SCORE LEVEL_instruction: 'Egyes játékokban pontokat szerezhetsz.
+      MC HOC 2016 SCORE LEVEL_instruction: Egyes játékokban pontokat szerezhetsz.
         Fogócskázz ezekkel a Vasgólemekkel, és használd az `adj hozzá` blokkot, hogy
-        pontot adj magadnak, valahányszor elkapod őket. Szerezz 5 pontot a győzelemhez! '
+        pontot adj magadnak, valahányszor elkapod őket. Szerezz 5 pontot a győzelemhez!
       MC HOC 2016 Village Test_instruction: Jaj ne! A zombik bezártak! Programozd
         a Vasgólemet, hogy üldözze és támadja meg a zombikat!
       MC_2017_Ryan_02_instruction: |-
@@ -4788,8 +4793,8 @@
         function block. The blocks in the function editor are the definition that
         make up "draw a square." When you're done looking around, click "Save
         and Close" and then "Run."
-      NEW Course 4 Artist Functions 6_instruction: "Using the \"draw a square\" function
-        block, can you draw this picture? Hint: each square is 20 pixels apart.\r\n"
+      NEW Course 4 Artist Functions 6_instruction: 'Using the "draw a square" function
+        block, can you draw this picture? Hint: each square is 20 pixels apart.  '
       NEW Course 4 Artist Functions 7_instruction: "Kezdesz ráérezni, hogyan kell
         használni a függvény blokkokat?\nMódosítsuk most ezt a négyzetet úgy, hogy
         200 képpont hosszúak legyenek az oldalai.\nKattints a \"szerkeszt\" gombra,
@@ -4891,8 +4896,8 @@
       NEW Course 4 Bee For Loops 3_instruction: 'Uh, A "számold (for) ciklus" sokkal
         egyszerűbbé teszi ezt! Minden szükséges kód itt van. Figyeld meg, hogyan kell
         összerakni, majd kattints a "Futtatás" gombra, és nézd meg, hogyan működik. '
-      NEW Course 4 Bee For Loops 4 4_instruction: 'Tudsz segíteni a méhnek összegyűjteni
-        a maradék mézet ennek a for ciklusnak a használatával? '
+      NEW Course 4 Bee For Loops 4 4_instruction: Tudsz segíteni a méhnek összegyűjteni
+        a maradék mézet ennek a for ciklusnak a használatával?
       NEW Course 4 Bee For Loops 4_instruction: 'Cseréld ki a for ciklusban a ???
         -t a legnagyobb nektármennyiségre, amit a méhnek gyűjteni kell. '
       NEW Course 4 Bee For Loops 5 5_instruction: Kezdesz belejönni a for ciklus használatába?
@@ -4937,10 +4942,10 @@
         Simulator, a Domain Name System (DNS) is provided for you and knows the IP
         addresses of all connected computers. Send a message in the form GET [hostname]
         to the DNS service at address <yourRouterNumber>.15 to get a student's address.
-      NetSim Standalone Broadcast_instruction: "In this version of the Internet Simulator,
+      NetSim Standalone Broadcast_instruction: 'In this version of the Internet Simulator,
         you can connect to up to 5 other people in a room. When you send messages
         in the room, everyone receives them. What are some of the challenges of this
-        system, and how might you solve them?\r\n"
+        system, and how might you solve them?  '
       NetSim Standalone Classroom Routers_instruction: |-
         In this version of the Internet
         Simulator, everyone connects to a router and has a specific address. To send
@@ -5060,8 +5065,8 @@
       October15 JoL 1_instruction: |-
         Program the artist to design a face for your
         jack-o-lantern!
-      October15 bat_instruction: "Freeplay: Here are some functions to play with.
-        \ Can you draw a bat?\r\n"
+      October15 bat_instruction: 'Freeplay: Here are some functions to play with.  Can
+        you draw a bat?  '
       October15 ghost 1_instruction: |-
         Give the ghost eyes, using the "draw a circle"
         function.
@@ -5708,15 +5713,17 @@
         Each side should be 100 pixels long.
       StepIntro_instruction: Here's how to use the "Step" button.
       Test Play Lab_instruction: This is a test play lab level.
-      Test embedded Blockly in instructions_instruction: "As a block element, we should
-        be able to include XML representing a valid Blockly block or blocks.\r\n\r\n<xml>\r\n
-        \ <block type=\"draw_move_by_constant\">\r\n    <title name=\"DIR\">moveForward</title>\r\n
-        \   <title name=\"VALUE\">100</title>\r\n  </block>\r\n</xml>\r\n\r\nWe also
-        support Blockly XML as an inline element like so: <xml><block type=\"draw_move_by_constant\"><title
-        name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>.
-        The difference in input format being that this one is embedded within a paragraph,
-        whereas the previous one is in a text block of its own. The difference in
-        output is comparable."
+      Test embedded Blockly in instructions_instruction: |-
+        As a block element, we should be able to include XML representing a valid Blockly block or blocks.
+
+        <xml>
+        <block type="draw_move_by_constant">
+        <title name="DIR">moveForward</title>
+        <title name="VALUE">100</title>
+        </block>
+        </xml>
+
+        We also support Blockly XML as an inline element like so: <xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">100</title></block></xml>. The difference in input format being that this one is embedded within a paragraph, whereas the previous one is in a text block of its own. The difference in output is comparable.
       Test embedded K1 Blockly in instructions_instruction: |-
         Use three `move west`
         blocks and one `pick corn` block to solve this puzzle.
@@ -5779,10 +5786,10 @@
         can't see the other students' addresses.  Instead, one of you must act as
         a name service, to help share addresses with each other.
       U2L14 frequency random_instruction: Test
-      U2L2 NetSim Hub Mode_instruction: "Now use the Internet Simulator to send the
+      U2L2 NetSim Hub Mode_instruction: 'Now use the Internet Simulator to send the
         battleship moves. For setup, join a Room with your group, and add ships to
         your paper board for each opponent. When playing, all communication must be
-        done through the tool, so no talking, but have fun!\r\n"
+        done through the tool, so no talking, but have fun!  '
       U2L3 NetSim Hub Mode_instruction: |-
         Use the Internet Simulator to test out your
         group's binary communication protocol for battleship. How short can you make
@@ -6035,9 +6042,9 @@
         Add an else-if statement in order to
         tell the user if their guess is high or low instead of just wrong. (Click
         to see full instructions)
-      U3 - High Low - Else_instruction: "Add an else statement so that the program
+      U3 - High Low - Else_instruction: 'Add an else statement so that the program
         will tell the user when they are right and when they are wrong. (Click to
-        see full instructions)\r\n"
+        see full instructions)  '
       U3 - High Low - If_instruction: |-
         Add code to the if statement that indicates
         the user guessed the secret number. (Click to see full instructions)
@@ -6241,26 +6248,26 @@
       U3 - Practice Create Performance Task_instruction: |-
         Design and implement your
         practice Create Performance Task. (Click to see full instructions)
-      U3 - Read Record - 1.2_instruction: "Console.log the records returned by a call
-        to readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 1.5_instruction: "Console.log the records returned by a call
-        to readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 1.6_instruction: "Console.log the records returned by a call
-        to readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 1_instruction: "Console.log the records returned by a call
-        to readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 2_instruction: "Change the table name so that the records
-        are read from the new table.(Click to see full instructions)\r\n"
-      U3 - Read Record - 3_instruction: "Change the name of the table in a readRecords
-        command to read from a table that does not exist. (Click to see full instructions)\r\n"
-      U3 - Read Record - 4.1_instruction: "Print out each record return from the readRecords
-        call individually. (Click to see full instructions)\r\n"
-      U3 - Read Record - 4_instruction: "Print out each record return from the readRecords
-        call individually. (Click to see full instructions)\r\n"
-      U3 - Read Record - 5 and half_instruction: "Print out the name of each movie
-        in the records return from the readRecords call. (Click to see full instructions)\r\n"
-      U3 - Read Record - 5_instruction: "Print out the name of each movie in the records
-        return from the readRecords call. (Click to see full instructions)\r\n"
+      U3 - Read Record - 1.2_instruction: 'Console.log the records returned by a call
+        to readRecords. (Click to see full instructions)  '
+      U3 - Read Record - 1.5_instruction: 'Console.log the records returned by a call
+        to readRecords. (Click to see full instructions)  '
+      U3 - Read Record - 1.6_instruction: 'Console.log the records returned by a call
+        to readRecords. (Click to see full instructions)  '
+      U3 - Read Record - 1_instruction: 'Console.log the records returned by a call
+        to readRecords. (Click to see full instructions)  '
+      U3 - Read Record - 2_instruction: 'Change the table name so that the records
+        are read from the new table.(Click to see full instructions)  '
+      U3 - Read Record - 3_instruction: 'Change the name of the table in a readRecords
+        command to read from a table that does not exist. (Click to see full instructions)  '
+      U3 - Read Record - 4.1_instruction: 'Print out each record return from the readRecords
+        call individually. (Click to see full instructions)  '
+      U3 - Read Record - 4_instruction: 'Print out each record return from the readRecords
+        call individually. (Click to see full instructions)  '
+      U3 - Read Record - 5 and half_instruction: 'Print out the name of each movie
+        in the records return from the readRecords call. (Click to see full instructions)  '
+      U3 - Read Record - 5_instruction: 'Print out the name of each movie in the records
+        return from the readRecords call. (Click to see full instructions)  '
       U3 - Return Values - constrainTurtle_instruction: |-
         Use constrain in this simple
         app to keep the turtle from driving off the screen.  (Click to see full instructions)
@@ -6296,18 +6303,18 @@
         Write the function maxVal and
         then use it within the console.log statement to calculate the maximum of two
         values.  (Click to see full instructions)
-      U3 - Search Terms - 1_instruction: "Create an array of all the movies made in
-        2008 and print it out. (Click to see full instructions)\r\n"
-      U3 - Search Terms - 2_instruction: "Print out all the movies with year 2008
-        using the readRecords search terms. (Click to see full instructions)\r\n"
-      U3 - Search Terms - 3_instruction: "Print whether or not there are movies matching
-        the search criteria (Click to see full instructions)\r\n"
-      U3 - Search Terms - 4_instruction: "Print whether or not there are movies matching
-        the search criteria (Click to see full instructions)\r\n"
-      U3 - Search Terms - 5_instruction: "Print out the cities that are in California
-        or have a population of 2,000,000. (Click to see full instructions)\r\n"
-      U3 - Search Terms - 6_instruction: "Print out the cities that are in California
-        or have a population of 2,000,000. (Click to see full instructions)\r\n"
+      U3 - Search Terms - 1_instruction: 'Create an array of all the movies made in
+        2008 and print it out. (Click to see full instructions)  '
+      U3 - Search Terms - 2_instruction: 'Print out all the movies with year 2008
+        using the readRecords search terms. (Click to see full instructions)  '
+      U3 - Search Terms - 3_instruction: 'Print whether or not there are movies matching
+        the search criteria (Click to see full instructions)  '
+      U3 - Search Terms - 4_instruction: 'Print whether or not there are movies matching
+        the search criteria (Click to see full instructions)  '
+      U3 - Search Terms - 5_instruction: 'Print out the cities that are in California
+        or have a population of 2,000,000. (Click to see full instructions)  '
+      U3 - Search Terms - 6_instruction: 'Print out the cities that are in California
+        or have a population of 2,000,000. (Click to see full instructions)  '
       U3 - Simple Drawing - Comments_instruction: Do this
       U3 - Simple Drawing - Ellipse and No Fill_instruction: Do this
       U3 - Simple Drawing - Fill_instruction: Do This
@@ -6337,8 +6344,8 @@
         Keep track of how many heads (1's) your
         program generates and print the results to the screen. (Click to see full
         instructions)
-      U3 - Simulation - 3_instruction: "Add functionality that counts how many heads
-        in a row are flipped. (Click to see full instructions)\r\n"
+      U3 - Simulation - 3_instruction: 'Add functionality that counts how many heads
+        in a row are flipped. (Click to see full instructions)  '
       U3 - Simulation - 4_instruction: |-
         Update your while loop's condition so the
         the coin flips until there are three heads in a row. (Click to see full instructions)
@@ -7373,18 +7380,14 @@
         print each record to the console. (Click to see full instructions)
       U4 - Charts - Import Data 2_2018_instruction: Call readRecords on “mytable”
         and print each record to the console. (Click to see full instructions)
-      U4 - Charts - Line Chart 1_instruction: |-
-        Create a line chart showing the change
-        in popularity of “#tbt” over time. (Click to see full instructions)
+      U4 - Charts - Line Chart 1_instruction: Create a line chart showing the change
+        in popularity of “
       U4 - Charts - Line Chart 1_2018_instruction: Create a line chart showing the
-        change in popularity of “#tbt” over time. (Click to see full instructions)
-      U4 - Charts - Line Chart 2_instruction: |-
-        Add a second line to your chart to
-        show the change in popularity of both “#tbt” and “#nofilter” at the same time.
-        (Click to see full instructions)
+        change in popularity of “
+      U4 - Charts - Line Chart 2_instruction: Add a second line to your chart to show
+        the change in popularity of both “
       U4 - Charts - Line Chart 2_2018_instruction: Add a second line to your chart
-        to show the change in popularity of both “#tbt” and “#nofilter” at the same
-        time. (Click to see full instructions)
+        to show the change in popularity of both “
       U4 - Charts - Line Chart Template_instruction: This is a template.
       U4 - Charts - Remixing Apps with Data_instruction: |-
         Run this app and see what
@@ -7583,52 +7586,38 @@
       U4 - Objects - writeWrap_instruction: |-
         Use the wrap function to prevent currentIndex
         from leaving the bounds of your array. (Click to see full instructions)
-      U4 - Read Record - 1.2_instruction: "Place a console.log command below the readRecords
-        command. (Click to see full instructions)\r\n"
+      U4 - Read Record - 1.2_instruction: 'Place a console.log command below the readRecords
+        command. (Click to see full instructions)  '
       U4 - Read Record - 1.2_2018_instruction: 'Place a console.log command below
-        the readRecords command. (Click to see full instructions)
-
-'
-      U4 - Read Record - 1.3_instruction: "Add a console.log command inside the callback
-        function. (Click to see full instructions)\r\n"
+        the readRecords command. (Click to see full instructions)  '
+      U4 - Read Record - 1.3_instruction: 'Add a console.log command inside the callback
+        function. (Click to see full instructions)  '
       U4 - Read Record - 1.3_2018_instruction: 'Add a console.log command inside the
-        callback function. (Click to see full instructions)
-
-'
-      U4 - Read Record - 1_instruction: "Use console.log to display the records returned
-        by a call to readRecords. (Click to see full instructions)\r\n"
+        callback function. (Click to see full instructions)  '
+      U4 - Read Record - 1_instruction: 'Use console.log to display the records returned
+        by a call to readRecords. (Click to see full instructions)  '
       U4 - Read Record - 1_2018_instruction: 'Use console.log to display the records
-        returned by a call to readRecords. (Click to see full instructions)
-
-'
-      U4 - Read Record - 2_instruction: "Change the table name so that the records
-        are read from the new table. (Click to see full instructions)\r\n"
+        returned by a call to readRecords. (Click to see full instructions)  '
+      U4 - Read Record - 2_instruction: 'Change the table name so that the records
+        are read from the new table. (Click to see full instructions)  '
       U4 - Read Record - 2_2018_instruction: 'Change the table name so that the records
-        are read from the new table. (Click to see full instructions)
-
-'
-      U4 - Read Record - 3_instruction: "Change the name of the table in a readRecords
-        command to read from a table that does not exist. (Click to see full instructions)\r\n"
+        are read from the new table. (Click to see full instructions)  '
+      U4 - Read Record - 3_instruction: 'Change the name of the table in a readRecords
+        command to read from a table that does not exist. (Click to see full instructions)  '
       U4 - Read Record - 3_2018_instruction: 'Change the name of the table in a readRecords
-        command to read from a table that does not exist. (Click to see full instructions)
-
-'
-      U4 - Read Record - 4.1_instruction: "Use indexes and dot notation to reference
-        values in the response from the database. (Click to see full instructions)\r\n"
+        command to read from a table that does not exist. (Click to see full instructions)  '
+      U4 - Read Record - 4.1_instruction: 'Use indexes and dot notation to reference
+        values in the response from the database. (Click to see full instructions)  '
       U4 - Read Record - 4.1_2018_instruction: 'Use indexes and dot notation to reference
-        values in the response from the database. (Click to see full instructions)
-
-'
-      U4 - Read Record - 4_instruction: "Print out each record return from the readRecords
-        call individually. (Click to see full instructions)\r\n"
-      U4 - Read Record - 5_instruction: "Using a for loop, display the title of each
-        movie in your database. (Click to see full instructions)\r\n"
+        values in the response from the database. (Click to see full instructions)  '
+      U4 - Read Record - 4_instruction: 'Print out each record return from the readRecords
+        call individually. (Click to see full instructions)  '
+      U4 - Read Record - 5_instruction: 'Using a for loop, display the title of each
+        movie in your database. (Click to see full instructions)  '
       U4 - Read Record - 5_2018_instruction: 'Using a for loop, display the title
-        of each movie in your database. (Click to see full instructions)
-
-'
-      U4 - Read Record - part 1 - template_instruction: "Use console.log to display
-        the records returned by a call to readRecords. (Click to see full instructions)\r\n"
+        of each movie in your database. (Click to see full instructions)  '
+      U4 - Read Record - part 1 - template_instruction: 'Use console.log to display
+        the records returned by a call to readRecords. (Click to see full instructions)  '
       U4 - ReadRecords - Contacts App 1_instruction: |-
         Use readRecords to copy the
         data in your database into your "contacts" global variable and call showCurrentContact.
@@ -8962,6 +8951,9 @@
       courseB_collector_loops_challenge2_instruction: |-
         Let's get the treasure! Help
         me across each row then come back to start the next row. Can you find a pattern?
+      courseB_collector_loops_challenge2_2018_instruction: Let's get the treasure!
+        Help me across each row then come back to start the next row. Can you find
+        a pattern?
       courseB_collector_loops_challenge2a_instruction: |-
         Help Laurel get at least
         **5** pieces of treasure to finish this puzzle.
@@ -8984,6 +8976,7 @@
         Help Scrat get all the way over to the
         acorn!
       courseB_iceage_loops11_instruction: Help Scrat get to the acorn!
+      courseB_iceage_loops11_forVideo_instruction: Help Scrat get to the acorn!
       courseB_iceage_loops12_instruction: Get to the acorn any way you can!
       courseB_iceage_loops2_instruction: |-
         Use two different move blocks to get to
@@ -9857,15 +9850,15 @@
         of one another?"
       courseD_artist_1_2018_instruction: "Draw a small square with **30** pixel long
         sides.  \r\n"
-      courseD_artist_2_2018_instruction: "Now, turn right by **60** degrees, then
+      courseD_artist_2_2018_instruction: 'Now, turn right by **60** degrees, then
         draw a straight line **150** pixels long and jump back to the center of the
-        play area.\r\n"
+        play area.  '
       courseD_artist_3_2018_instruction: "Nest all of the code inside of another\n`repeat`
         loop and run it a total of **6** times. "
       courseD_artist_4_2018_instruction: Add a tiny shape to the end of your line!
       courseD_artist_5_2018_instruction: Play with the snowflakes!
-      courseD_artist_6_2018_instruction: "Try changing your long 150 pixel line into
-        6 short lines of **25** pixels, with little turns at the end.\r\n"
+      courseD_artist_6_2018_instruction: 'Try changing your long 150 pixel line into
+        6 short lines of **25** pixels, with little turns at the end.  '
       courseD_artist_7_2018_instruction: |-
         Now, turn around 180 degrees and draw the
         stair pattern again!
@@ -10893,6 +10886,8 @@
         off to your friends!
       courseD_playLab_condFP_a_instruction: Now, build your own game to show off to
         your friends!
+      courseD_playLab_condForVideo_instruction: Now, build your own game to show off
+        to your friends!
       courseD_playLab_embedded_instruction: "Move Pegleg the Pirate with the arrow
         keys. Get to the dragon to score points, but avoid the ninja! Standing below
         the line of octopuses will make the ninja stop chasing you, but beware! The
@@ -12100,6 +12095,8 @@
       courseF_maze_ramp7_instruction: |-
         Use what you've learned to get the bird to
         the pig!
+      courseF_playlab_brokenText_instruction: In the rest of this stage, we're going
+        to build a game that you control!
       courseF_playlab_embed_vars_instruction: |-
         Answer Pegleg the Pirate's questions.
         What happens if you enter the codename "password"? What about some other
@@ -12463,8 +12460,8 @@
       grade1_playlab_events2a_instruction: |-
         Edit the code so that when the second
         bird is clicked, your program plays a sound!
-      grade1_playlab_events3_instruction: "This program makes Robin fly.  Can you
-        make the robot jump when you press the up button?\r\n"
+      grade1_playlab_events3_instruction: 'This program makes Robin fly.  Can you
+        make the robot jump when you press the up button?  '
       grade1_playlab_events3a_instruction: |-
         When the third bird is clicked, the background
         should change to a city. Can you add code to make this happen?
@@ -12553,8 +12550,8 @@
         side is 150 pixels)"
       grade2_MakeDogTag_8_instruction: Most kössük össze ezt a sok V alakot! Rajzold
         őket egy ciklusban!
-      grade2_MakeDogTag_9_instruction: 'Ezúttal 24-szer rajzold meg! A kód végéhez
-        rakj hozzá egy 30 fokos balra fordulást, és tedd az egészet egy ismétlő elembe! '
+      grade2_MakeDogTag_9_instruction: Ezúttal 24-szer rajzold meg! A kód végéhez
+        rakj hozzá egy 30 fokos balra fordulást, és tedd az egészet egy ismétlő elembe!
       grade2_MakeDogTag_BFP_instruction: "\"Hi, I'm an artist. You can write code
         to make me draw almost anything.\"\r\n\r\nPlay with the blocks in the toolbox
         to see what they do!"
@@ -12661,8 +12658,10 @@
         done, click "Finish" to share with friends.
       grade2_puppy_loops2_instruction: 'Helyettesíteni tudod ezt az öt blokkot csak
         két blokkal? (Tipp: készíts ciklust az "ismételd alkalommal" blokkal.)'
-      grade2_puppy_loops3_instruction: "\"Get me to the pig!\"\r\n\r\n Solve this
-        puzzle by creating a loop!"
+      grade2_puppy_loops3_instruction: |-
+        "Get me to the pig!"
+
+        Solve this puzzle by creating a loop!
       grade2_puppy_loops4_instruction: Használd a ciklusokat, hogy kevesebb blokkal
         jussunk a malacig.
       grade2_puppy_loops5_instruction: Vigyél el a malachoz.
@@ -13015,7 +13014,7 @@
       grade4_arist_nested_loop_triangles4_instruction: Rajzold meg az alligátor alsó
         fogsorát!
       grade4_arist_nested_loop_triangles5_instruction: "Készíts egy napocskát a kiindulási
-        kód másik ciklusba ágyazásával. Ezt hívják egymásba ágyazott ciklusnak.\r\n"
+        kód másik ciklusba ágyazásával. Ezt hívják egymásba ágyazott ciklusnak.\r"
       grade4_arist_nested_loop_triangles6_instruction: Meg tudod rajzolni ezt a 36
         darab háromszöget egymásba ágyazott ciklusok segítségével?
       grade4_artist_freeplay_instruction: |-
@@ -13107,7 +13106,7 @@
         try some different types of drawings together. Can you help me draw the bottom
         teeth in the alligator's mouth?
       grade4_artist_nested_loop_triangles5_instruction: "Készíts egy napocskát a kiindulási
-        kód másik ciklusba ágyazásával. Ezt hívják egymásba ágyazott ciklusnak.\r\n"
+        kód másik ciklusba ágyazásával. Ezt hívják egymásba ágyazott ciklusnak.\r"
       grade4_artist_nested_loop_triangles6_instruction: Meg tudod rajzolni ezt a 36
         darab háromszöget egymásba ágyazott ciklusok segítségével?
       grade4_artist_parameters_squares1_instruction: 'Kattints a "szerkeszt" gombra,

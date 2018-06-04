@@ -69,7 +69,6 @@
       "comment_Drawing": null,
       "console.log": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# What If My Condition Isn't True?\r\n\r\n<img src=\"https://images.code.org/1a997d78fcd88efeb9e6dc5a02aa88e8-image-1464706463138.53.58.png\" width=\"125px\" style=\"float:right\">\r\n\r\nSometimes we want to tell our program what to do if a condition is `true`, but also what to do if it's `false`. Pressing the plus button at the bottom of your conditional block will give you another section called `else`. This `else` section will be run whenever the condition in the `if` before it is `false`.\r\n\r\n# Do This\r\nThe gears are back again. The last time you worked with them, you made them spin when the space bar is pressed. Instead of the gears only spinning when the space key is pressed, we want them to spin one way when the space key is pressed and spin the other way when it's not pressed.\r\n<img src=\"https://images.code.org/b074d47ca8dfa5ab3bfd08344b4f4e42-image-1464706389475.gif\" style=\"float:right\">\r\n\r\n* Click the _plus_ button at the bottom of the if block to add an else.\r\n* Add commands to make the gears spin opposite of the direction that they do when the space bar is pressed.",
@@ -110,10 +109,10 @@
     "start_animations": "{\r\n    \"orderedKeys\": [\r\n        \"blue_gear\",\r\n        \"green_gear\",\r\n        \"red_gear\"\r\n    ],\r\n    \"propsByKey\": {\r\n        \"blue_gear\": {\r\n            \"name\": \"blue_gear\",\r\n            \"sourceUrl\": \"https://curriculum.code.org/images/sprites/blue_gear.png\",\r\n            \"sourceSize\": {\r\n                \"x\": 123,\r\n                \"y\": 124\r\n            },\r\n            \"frameSize\": {\r\n                \"x\": 123,\r\n                \"y\": 124\r\n            },\r\n            \"frameCount\": 1,\r\n            \"frameDelay\": 2,\r\n            \"looping\": true\r\n        },\r\n        \"green_gear\": {\r\n            \"name\": \"green_gear\",\r\n            \"sourceUrl\": \"https://curriculum.code.org/images/sprites/green_gear.png\",\r\n            \"sourceSize\": {\r\n                \"x\": 122,\r\n                \"y\": 122\r\n            },\r\n            \"frameSize\": {\r\n                \"x\": 122,\r\n                \"y\": 122\r\n            },\r\n            \"frameCount\": 1,\r\n            \"frameDelay\": 2,\r\n            \"looping\": true\r\n        },\r\n        \"red_gear\": {\r\n            \"name\": \"red_gear\",\r\n            \"sourceUrl\": \"https://curriculum.code.org/images/sprites/red_gear.png\",\r\n            \"sourceSize\": {\r\n                \"x\": 122,\r\n                \"y\": 121\r\n            },\r\n            \"frameSize\": {\r\n                \"x\": 122,\r\n                \"y\": 121\r\n            },\r\n            \"frameCount\": 1,\r\n            \"frameDelay\": 2,\r\n            \"looping\": true\r\n        }\r\n    }\r\n}",
     "parent_level_id": 4893,
     "name_suffix": "_2018",
-    "contained_level_names": null,
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

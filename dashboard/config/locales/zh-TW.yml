@@ -118,17 +118,28 @@
     valid_password: 密碼有效！
     invalid_password: 密碼必須要 6 個字元以上
     mismatch_password: 你輸入的兩次密碼不一致
+    agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
+      and <a href='http://code.org/privacy'>Privacy Policy</a>.
+    under_13_consent: 如果我未滿 13 歲，我確認已獲得我的父母或法定監護人的同意來使用 Code.org 服務。
+    agree_us_website: 我同意使用位於美國境內的網站。
+    my_data_to_us: 我在使用此網站時產生的數據資料可能會被系統傳送至並儲存在美國境內，或在美國境內進行處理。
     student_terms: 我同意接受Code.org<a href='http://code.org/tos'>服務條款</a>的約束。如果我未滿13歲，我透過這份文件，保證我有取得我的父母或是法律監護人的同意使用Code.org。<br/><br/>Code.org不會利用電子郵件主動與學生聯繫接觸，除了忘記密碼的時候。更多的詳細資訊，請見<a
       href='http://code.org/privacy'>隱私權政策</a>。
     teacher_terms: 我同意 Code.org 的服務條款約束。有關隱私的詳細資訊，請參閱我們的 <a href='Http://code.org/privacy'>
       隱私政策</a>。
     additional_information: 我們還需要一些其他資訊來完成你的註冊。
+    user_type_button: Update Account Type
     user_type_label: 帳戶類型
     user_type_teacher: 教師
     user_type_student: 學生
     field_is_required: 必填
     accept_terms: 你必須同意以建立一個帳戶
     error: 發生錯誤。
+    email_preference_question: 我們是否可以透過電子郵件向您發送有關我們課程、當地機會或其它計算機科學資訊的一些更新？
+    email_preference_privacy: "（查看我們的隱私權政策）"
+    email_preference_yes: 是
+    email_preference_no: 否
+    email_preference_required: You must specify an email preference.
   school_info:
     title: 學校資訊（非必填）
     school_country: 學校所屬國家
@@ -490,6 +501,8 @@
     student_not_found: 無法找到其中的一個或多個學生。
     all_students_must_be_in_current_section: 所有的學生都必須在你的學習小組中。
     already_enrolled_in_new_section: 你無法移動這些學生，因為這個教師已經把他們放到另一個學習小組了。
+    third_party_login: You cannot move students to a section that is synced with a
+      third party tool.
   share:
     title: 在 Code Studio 上學習
     description: 任何人都可以學習計算機科學，用程式來建立遊戲、應用程式及藝術作品。
@@ -497,6 +510,8 @@
   gender:
     male: 男性
     female: 女性
+    non_binary: Non-binary
+    not_listed: Preferred term not listed
     none: 不想回答
   user_type:
     student: 學生
@@ -932,6 +947,7 @@
     csd5_2: 第 2 章：解決數據問題
     csd6_1: 第 1 章：硬體輸出
     csd6_2: 第 2 章：硬體輸入
+    csd_survey: Post-Course Survey
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -945,6 +961,11 @@
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 單元 2：數位資訊
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: 反射提示
   external_links:
     disclaimer: 免責聲明
@@ -1075,3 +1096,16 @@
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
   courses_category: Full Courses
+  cookie_banner:
+    message: By continuing to browse our site or clicking "I agree," you agree to
+      the storing of cookies on your computer or device.
+    more_information: See Code.org's Privacy Policy.
+    accept: 我同意
+  gdpr_dialog:
+    heading: Do you agree to using a web site based in the United States?
+    message: Data from your use of this site may be sent to and stored or processed
+      in the United States.
+    link_intro: For details see our
+    privacy_policy: privacy policy
+    logout: Logout
+    true: 是

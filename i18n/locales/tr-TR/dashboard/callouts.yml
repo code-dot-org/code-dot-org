@@ -128,6 +128,7 @@ tr:
       CSD U3 Direction Arrows_2018_callout: { }
       CSD U3 Draw Loop Plugged update your scene_callout: { }
       CSD U3 Draw Loop Plugged update your scene_2018_callout: { }
+      CSD U3 Draw Loop Plugged wiggle sprite y_2018_callout: { }
       CSD U3 Drawing Squares to Corners_callout: { }
       CSD U3 Drawing Squares to Corners_2018_callout: { }
       CSD U3 Else_callout: { }
@@ -1194,6 +1195,8 @@ tr:
         courseD_playLab_condFP_1: sana oynayabileceğin şekilde daha fazla kod vermek için blokları kategorilere ayrılacak şekilde organize ettik. Herşeyin nereye gittiğini görmek için buraya tıkla.
       courseD_playLab_condFP_a_callout:
         courseD_playLab_condFP_1: sana oynayabileceğin şekilde daha fazla kod vermek için blokları kategorilere ayrılacak şekilde organize ettik. Herşeyin nereye gittiğini görmek için buraya tıkla.
+      courseD_playLab_condForVideo_callout:
+        courseD_playLab_condFP_1: sana oynayabileceğin şekilde daha fazla kod vermek için blokları kategorilere ayrılacak şekilde organize ettik. Herşeyin nereye gittiğini görmek için buraya tıkla.
       courseD_scrat_predict1_callout: { }
       courseD_scrat_predict1_2018_callout: { }
       courseD_scrat_ramp1_callout:
@@ -1576,6 +1579,8 @@ tr:
         New Play Lab Project_callout1: Kategorilere ait blokları görmek için tıklayın! Çalışma alanına sürükleyin ve onları programınıza ekleyin
         New Play Lab Project_callout2: Programınızı denemek içi "Çalıştır"a basın
         sign_in_to_save_project: Projenize daha sonra erişmek ister misiniz? Hesabınıza bu projeyi kaydetmek için oturum açın!
+      courseF_playlab_brokenText_callout:
+        courseF_playlab_variables5c_1: Değişken bloğunuzu burada bulabilirsiniz.
       courseF_playlab_embed_vars_callout: { }
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: The toolbox has been organized into categories to make it easier to find the blocks you need.

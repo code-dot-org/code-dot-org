@@ -25,8 +25,8 @@ describe('activityCssClass', function () {
     assert.strictEqual(activityCssClass(TestResults.EXAMPLE_FAILED), 'attempted');
     assert.strictEqual(activityCssClass(TestResults.MINIMUM_PASS_RESULT), 'passed');
     assert.strictEqual(activityCssClass(29), 'passed');
-    assert.strictEqual(activityCssClass(TestResults.FREE_PLAY), 'perfect');
-    assert.strictEqual(activityCssClass(101), 'perfect');
+    assert.strictEqual(activityCssClass(TestResults.FREE_PLAY), 'free_play_complete');
+    assert.strictEqual(activityCssClass(31), 'perfect');
     assert.strictEqual(activityCssClass(TestResults.CONTAINED_LEVEL_RESULT), 'perfect');
   });
 });

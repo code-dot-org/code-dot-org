@@ -128,6 +128,7 @@ nn:
       CSD U3 Direction Arrows_2018_callout: { }
       CSD U3 Draw Loop Plugged update your scene_callout: { }
       CSD U3 Draw Loop Plugged update your scene_2018_callout: { }
+      CSD U3 Draw Loop Plugged wiggle sprite y_2018_callout: { }
       CSD U3 Drawing Squares to Corners_callout: { }
       CSD U3 Drawing Squares to Corners_2018_callout: { }
       CSD U3 Else_callout: { }
@@ -1194,6 +1195,8 @@ nn:
         courseD_playLab_condFP_1: we have organized the blocks into categories to give you more code to play with!  Click here to see where everything went.
       courseD_playLab_condFP_a_callout:
         courseD_playLab_condFP_1: we have organized the blocks into categories to give you more code to play with!  Click here to see where everything went.
+      courseD_playLab_condForVideo_callout:
+        courseD_playLab_condFP_1: we have organized the blocks into categories to give you more code to play with!  Click here to see where everything went.
       courseD_scrat_predict1_callout: { }
       courseD_scrat_predict1_2018_callout: { }
       courseD_scrat_ramp1_callout:
@@ -1576,6 +1579,8 @@ nn:
         New Play Lab Project_callout1: Klikk på kategoriane for å sjå blokkene i verktøykassa! Dra blokker til arbeidsområdet for å leggje dei til programmet
         New Play Lab Project_callout2: Trykk "Køyr" for å lagre og køyre programmet
         sign_in_to_save_project: Vil du opne prosjektet seinare? Logg på for å lagre prosjektet til kontoen din!
+      courseF_playlab_brokenText_callout:
+        courseF_playlab_variables5c_1: Du vil finne variabel-blokka inni her.
       courseF_playlab_embed_vars_callout: { }
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: The toolbox has been organized into categories to make it easier to find the blocks you need.

@@ -20,7 +20,6 @@
       "declareAssign_x": null,
       "assign_x": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "instructions_important": "false",
@@ -59,10 +58,6 @@
     "markdown_instructions": "# Sprites in the Draw Loop\r\n\r\nBy changing sprite properties in the draw loop, you can animate your characters. \r\n\r\nThis animation has also been slowed down.  At the beginning of the program the `World.frameRate` block has been used to set the frame rate to 10. Usually the frame rate is 30. Feel free to explore different frame rates.\r\n\r\n# Do This\r\n* Run the code to see how it works.\r\n* Discuss with your partner why some code is inside the draw loop and some code is outside.\r\n* Try changing the frame rate and running the code again.",
     "parent_level_id": 8989,
     "name_suffix": "_2018",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "map_reference": "/docs/csd-1718/sprite_properties/index.html",
     "video_key": "csd_gamelab_drawloop",
     "disable_procedure_autopopulate": "false",
@@ -70,7 +65,8 @@
     "show_type_hints": "false",
     "reference_links": [
       "/docs/csd-1718/draw_loop/index.html"
-    ]
+    ],
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

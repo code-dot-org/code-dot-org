@@ -21,7 +21,6 @@
       "multiplyOperator": null,
       "divideOperator": null
     },
-    "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "<img src=\"https://images.code.org/629bc615a879f0f3dc9f290bea2358c8-image-1491861334164.gif\" style=\"float: right; margin-left: 20px\">\r\n\r\n# Sprite Movement\r\n\r\nUsing the counter pattern, you can write programs that animate sprites smoothly. Adding to or removing from a sprite's `x` or `y` property in the draw loop makes your sprite move just a bit each time it is redrawn.\r\n\r\n# Do This\r\n\r\nMake your program animate like the image to the right. We've already added a line to update `plane.x` in the draw loop, but it needs to be finished.\r\n",
@@ -61,12 +60,12 @@
     "encrypted_examples": "A8OYhFdw5WysTrjOvpGVBeK4Pf9s8DoP6C4lZnwGXGnu4N+wZ1WbOnMyKWq9\ngR+D1tiah4YqOPIOQ32FmqfbIw==\n",
     "parent_level_id": 8800,
     "name_suffix": "_2018",
-    "contained_level_names": null,
     "map_reference": "/docs/csd-1718/counter_pattern/index.html",
     "video_key": "csd_gamelab_sprites_2",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

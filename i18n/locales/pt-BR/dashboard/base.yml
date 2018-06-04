@@ -114,18 +114,25 @@ pt-BR:
     valid_password: "Senha válida!"
     invalid_password: "A senha deve ter pelo menos 6 caracteres"
     mismatch_password: "As duas senhas que você digitou são diferentes"
+    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
+    under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
+    agree_us_website: "I agree to using a website based in the United States."
+    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
     student_terms: "Eu aceito os <a href='http://code.org/tos'>Termos de Serviço</a> da Code.org. Se eu tiver menos de 13 anos de idade, confirmo, com o envio deste formulário, que tenho a permissão dos meus pais ou tutores legais para usar os serviços da Code.org.<br/><br/>Os endereços de e-mail não são armazenados em um formulário que nos permita entrar em contato com os alunos. Os alunos nunca receberão e-mails da Code.org, exceto em caso de recuperação de senha. Consulte nossa <a href='http://code.org/privacy'>Política de Privacidade</a> para ver outras informações."
     teacher_terms: "Eu aceito os Termos de Serviço da Code.org. Para ver mais informações sobre privacidade, consulte nossa <a href='http://code.org/privacy'>Política de Privacidade</a>."
     additional_information: "Precisamos de mais informações para continuar com o processo de inscrição."
+    user_type_button: "Update Account Type"
     user_type_label: "Tipo de conta"
     user_type_teacher: "Professor"
     user_type_student: "Estudante"
     field_is_required: "é obrigatório"
     accept_terms: "Você precisa aceitar criar uma conta"
     error: "Ocorreu um erro."
-    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_privacy: "(Consulte a nossa política de privacidade)"
     email_preference_yes: "Sim"
     email_preference_no: "Não"
+    email_preference_required: "You must specify an email preference."
   school_info:
     title: 'Informações da escola (opcional)'
     school_country: 'País da Escola'
@@ -453,6 +460,7 @@ pt-BR:
     student_not_found: "Não foi possível encontrar um ou mais alunos."
     all_students_must_be_in_current_section: "Todos os alunos devem estar inscritos em sua seção atualmente."
     already_enrolled_in_new_section: "Não é possível mover esses alunos porque eles já estão em outra seção deste professor."
+    third_party_login: "You cannot move students to a section that is synced with a third party tool."
   share:
     title: "Aprenda no Code Studio"
     description: "Qualquer pessoa pode aprender ciência da computação. Crie jogos, aplicativos e arte com a programação."
@@ -460,6 +468,8 @@ pt-BR:
   gender:
     male: 'Masculino'
     female: 'Feminino'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: 'Prefiro não responder'
   user_type:
     student: 'Estudante'
@@ -872,6 +882,7 @@ pt-BR:
     csd5_2: 'Capítulo 2: Resolvendo Problemas de Informações'
     csd6_1: 'Capítulo 1: Programando com Hardware'
     csd6_2: 'Capítulo 2: Construindo protótipos físicos'
+    csd_survey: 'Post-Course Survey'
     csp1_1: 'Capítulo 1: Representando e Transmitindo Informação'
     csp1_2: 'Capítulo 2: Inventando a Internet'
     csp2_1: 'Capítulo 1: Codificando e Comprimindo Informações Complexas'
@@ -998,3 +1009,10 @@ pt-BR:
     message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
     more_information: "See Code.org's Privacy Policy."
     accept: 'Aceito'
+  gdpr_dialog:
+    heading: 'Do you agree to using a web site based in the United States?'
+    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+    link_intro: 'For details see our'
+    privacy_policy: 'privacy policy'
+    logout: 'Logout'
+    yes: 'Sim'

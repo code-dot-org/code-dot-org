@@ -137,6 +137,13 @@
     valid_password: Gyldig passord!
     invalid_password: Passordet må ha minst seks teikn
     mismatch_password: Dei to passorda du skreiv inn er ikkje like
+    agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
+      and <a href='http://code.org/privacy'>Privacy Policy</a>.
+    under_13_consent: If I am under 13 years of age, I confirm that I have my parent
+      or legal guardian's permission to use the Code.org services.
+    agree_us_website: I agree to using a website based in the United States.
+    my_data_to_us: Data from my use of this site may be sent to and stored or processed
+      in the United States.
     student_terms: Eg aksepterer <a href='http://code.org/tos'>vilkåra</a> til Code.org.
       Om eg er under 13 år, bekreftar eg ved å sende inn dette skjemaet at eg har
       løyve frå mine foreldre eller verge til å bruke tenestene til Code.org.<br/><br/>Epostadresser
@@ -147,12 +154,19 @@
       for personvern</a> for meir informasjon om personvern.
     additional_information: Vi treng nokre tilleggsopplysingar for å fortsette registreringa
       di.
+    user_type_button: Update Account Type
     user_type_label: Kontotype
     user_type_teacher: Lærar
     user_type_student: Elev
     field_is_required: er påkreva
     accept_terms: Du må gå med på å opprette ein konto
     error: Ein feil har oppstått.
+    email_preference_question: Can we email you about updates to our courses, local
+      learning opportunities, or other computer science news?
+    email_preference_privacy: "(See our privacy policy)"
+    email_preference_yes: Ja
+    email_preference_no: Nei
+    email_preference_required: You must specify an email preference.
   school_info:
     title: Informasjon til skulen (valfritt)
     school_country: Landet til skulen
@@ -203,7 +217,7 @@
       email: E-postadresse
       submit: Send inn
     reset_errors:
-      captcha_required: Please fill out the CAPTCHA to reset your password.
+      captcha_required: Fyll ut CAPTCHA for å lage nytt passord.
       invalid_email: Det kan sjå ut som om du ikkje har ei gyldig epostadresse registrert
         hos oss. Send ein epost til support@code.org for å få ei 'gjenopprett passord'-lenke.
     change_form:
@@ -290,12 +304,12 @@
       finished_hoc: Eg har fullført Kodetimen min
       sign_in_to_save: Logg inn for å lagre framgangen
       free_play:
-        playlab: Lag ein app
+        playlab: Lag ein app i Spel-lab
         artist: Teikn noko
         calculate: Calculate Something
-        applab: Lag ein app
-        gamelab: Lag eit Spellab-prosjekt
-        weblab: Lag eit Weblab-prosjekt (beta)
+        applab: Lag ein app i Spel-lab
+        gamelab: Lag eit prosjekt i Spel-lab
+        weblab: Lag eit Nett-lab-prosjekt (beta)
       home: Heim
       my_dashboard: Kontrollpanel
       courses: Kurs
@@ -421,7 +435,7 @@
       ord
     enter_parent_email: Skriv inn epostadressa til ein av dine føresette (for å gjenopprette
       passord)
-    update: Update Account
+    update: Oppdater konto
   user_level:
     completed: Fullført
     tried: Forsøkt
@@ -591,6 +605,8 @@
     all_students_must_be_in_current_section: Alle elevar må vere registert i di gruppe.
     already_enrolled_in_new_section: Du kan ikkje flytte desse elevane fordi dei allereie
       er i den nye seksjonen.
+    third_party_login: You cannot move students to a section that is synced with a
+      third party tool.
   share:
     title: Lær i Code Studio
     description: Alle kan lære programmering. Lag spel, appar og kunst med kode.
@@ -598,6 +614,8 @@
   gender:
     male: Mann
     female: Kvinne
+    non_binary: Non-binary
+    not_listed: Preferred term not listed
     none: Foretrekker å ikkje svare
   user_type:
     student: Elev
@@ -696,7 +714,7 @@
     title: Klikk "Kjør" for å sjå programmet mitt i aksjon
     bounce_og_title: Sjekk ut sprette-spelet mitt
     flappy_og_title: Sjekk ut Flakse-spelet mitt
-    studio_og_title: Sjekk ut Play Lab App'en min
+    studio_og_title: Sjekk ut appen min i Spel-lab
     check_out_what_i_made: Sjekk ut det eg har laga
     og_description: Eg skreiv koden sjølv med Code.org
     phone_number_not_allowed: Det ser ut som om det er eit telefonnummer i det. Prøv
@@ -717,12 +735,12 @@
       unused: Ubrukte nivå
   upsell:
     applab:
-      title: App Lab
-      body: App Lab er eit programmeringsmiljø kor du kan lage enkle appar. Lag ein
-        app, programmer med blokkar eller JavaScript for å få det til å virke, deretter
-        kan du dele appen på få sekundar.
-      body_short: Design en app, blokkar med kode eller JavaScript for å få det til
-        å fungere, deretter kan du dele din app i løpet av sekundar.
+      title: App-lab
+      body: App-lab er eit programmeringsmiljø kor du kan lage enkle appar. Lag ein
+        app, programmer med blokker eller JavaScript for å få det til å virke, deretter
+        kan du dele appen på få sekunder.
+      body_short: Design ein app, blokker med kode eller JavaScript for å få det til
+        å fungere, deretter kan du dele appen din i løpet av sekunder.
       audience: Alder 13+
       cta: Lær korleis
     hoc:
@@ -754,7 +772,7 @@
       title: Enkel kryptering
       body: Studentene lærer teknikker for å lage og knekke krypterte meldinger.
     weblab:
-      title: Web Lab (beta)
+      title: Nett-lab (beta)
       body: Web Lab er et programmeringsmiljø hvor du kan gjøre lage web-sider med
         HTML og CSS. Design din webside og del siden din i løpet av sekunder.
       audience: Alder 13+
@@ -764,7 +782,7 @@
     starwars:
       title: Star Wars
     infinity:
-      title: Infinity Spill-lab
+      title: Infinity i Spel-lab
       body: Bruk Spill-Lab for å lage ei historie eller spel med Disney Infinity figurar.
     minecraft:
       title: Minecraft
@@ -1016,9 +1034,9 @@
     name: Namn
     updated: Oppdatert
     project_type: Prosjekttype
-    help_text: Klikk <strong> Lag ein app</strong> eller <strong>Tegn noko</strong>
-      under for å lage eit nytt Spill-lab eller kunstprosjekt!<br/>Du kan komme tilbake
-      og jobbe på prosjekta dine når som helst.
+    help_text: Klikk <strong>Lag ein app</strong> eller <strong>Teikn noko</strong>
+      under for å lage eit prosjekt!<br/>Du kan komme tilbake og jobbe på prosjekta
+      dine når som helst.
     need_help: Treng du hjelp for å kome i gong?
     thumbnail_help: Ikke riktig miniatyrbildet for prosjektet? Kjør din app for å
       generere et nytt miniatyrbilde. Merk at det kan ta et par timer før miniatyrbildet
@@ -1120,6 +1138,7 @@
     csd5_2: 'Kapittel 2: Problemløsing med data'
     csd6_1: 'Kapittel 1: Maskinvare utganger'
     csd6_2: 'Kapittel 2: Maskinvareinnganger'
+    csd_survey: Post-Course Survey
     csp1_1: 'Kapittel 1: Representerer og formidle informasjon'
     csp1_2: 'Kapittel 2: Finne opp Internett'
     csp2_1: 'Kapittel 1: Kode og komprimere kompleks informasjon'
@@ -1133,6 +1152,11 @@
     csp_ap_1: 'Kapittel 1: AP Tech oppsett'
     csp_ap_2: 'Kapittel 2: AP utforske ytelse oppgave'
     csp_ap_3: 'Kapittel 3: AP opprette ytelse oppgave'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Eining 2: Digital informasjon'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: Spørsmål til refleksjon
   external_links:
     disclaimer: Fråskrive seg ansvar
@@ -1141,8 +1165,8 @@
     disclaimer_text: Denne nettstaden kan ha vilkår for personvern som avvik frå vilkåra
       til Code.org. Vi har vald desse tredjeparts ressursane fordi vi trur dei vil
       vere nyttig for deg. Vi er ikkje direkte ansvarleg for innhaldet på denne nettstaden,
-      ver vennleg å <a href='%{support_url}'>kontakt support</a> om du finn innhaldet
-      støytande, eller om den kobla sida ikkje lenger er tilgjengeleg.
+      ver vennleg å <a href='%{support_url}'>kontakte brukerstøtte</a> om du finn
+      innhaldet støytande, eller om lenka til sida ikkje lenger er tilgjengeleg.
   hoc_download:
     title: Kodetimen nedlastingar
     capsule_title: Har du internett?
@@ -1275,3 +1299,16 @@
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
   courses_category: Alle kurs
+  cookie_banner:
+    message: By continuing to browse our site or clicking "I agree," you agree to
+      the storing of cookies on your computer or device.
+    more_information: See Code.org's Privacy Policy.
+    accept: Eg er einig
+  gdpr_dialog:
+    heading: Do you agree to using a web site based in the United States?
+    message: Data from your use of this site may be sent to and stored or processed
+      in the United States.
+    link_intro: For details see our
+    privacy_policy: privacy policy
+    logout: Logout
+    true: Ja

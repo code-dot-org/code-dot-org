@@ -1,0 +1,10 @@
+{
+  "category": "Sprites",
+  "config": {
+    "expression": "arguments[1]",
+    "orderPrecedence": 1,
+    "name": "secondTouched",
+    "blockText": "second touched sprite",
+    "returnType": "Sprite"
+  }
+}

@@ -81,7 +81,7 @@ it:
         desc: Gli studenti costruiscono una struttura usando solo il materiale disponibile. Le strutture devono soddisfare alcuni requisiti (raggiungere una specifica altezza o sopportare un determinato peso) e gli studenti riflettono sull'importanza di insistere quando i problemi sono complicati.
       GettingLoopy:
         title: Diventare Ripetitivi
-        desc: Questa lezione introduce il costrutto di programmazione detto <i>ciclo</i> (istruzioni ripetute) attraverso una danza. Gli studenti imparano una semplice coreografia e sono istruiti a ripeterla.
+        desc: Questa lezione introduce il costrutto di programmazione detto ciclo (istruzioni ripetute) attraverso una danza. Gli studenti imparano una semplice coreografia e sono istruiti a ripeterla.
       RelayProgramming:
         title: Programmazione a Staffetta
         desc: Gli studenti fanno una corsa a staffetta, nella quale uno alla volta corrono a scrivere un algoritmo basato su un disegno dalla lezione "Programmazione su carta a quadretti". Possono scrivere una sola istruzione alla volta, e se trovano un errore in qualche punto, devono cancellare tutto fino a quel punto.
@@ -171,7 +171,7 @@ it:
         desc: In questa lezione, "programmerai" i tuoi amici!
       courseB_unplugged_loopyMRF:
         title: 'Attività Tradizionale: I Miei Ciclici Amici Robotici'
-        desc: Just like in "My Robotic Friends", you will be "programming" your friends, but this time with loops!
+        desc: Come nella lezione "I Miei Amici Robotici", dovrai "programmare" i tuoi amici, ma questa volta usando i cicli!
       courseC_Unplugged_ScreenOutTheMean:
         title: Attività Tradizionale
         desc: Today you will learn about what to do if someone is being mean online.
@@ -210,7 +210,7 @@ it:
         desc: Questa lezione tratta degli algoritmi nella vita quotidiana, nel caso specifico costruire un aeroplano di carta. Viene discussa anche una visione più generale dell'informatica  e il fatto che gli algoritmi ne sono una parte essenziale.
       courseC_unplugged_gettingLoopy:
         title: Diventare Ripetitivi
-        desc: Questa lezione introduce il costrutto di programmazione detto <i>ciclo</i> (istruzioni ripetute) attraverso una danza. Gli studenti imparano una semplice coreografia e sono istruiti a ripeterla.
+        desc: Questa lezione introduce il costrutto di programmazione detto ciclo (istruzioni ripetute) attraverso una danza. Gli studenti imparano una semplice coreografia e sono istruiti a ripeterla.
       courseC_unplugged_binaryBracelets:
         title: Braccialetti Binari
         desc: Gli studenti creano dei braccialetti che rappresentano con l'alfabeto binario la prima lettera del loro nome. Imparano quindi che i dati possono essere rappresentati e memorizzati in più di un modo.
@@ -339,7 +339,7 @@ it:
         desc: Questa lezione tratta degli algoritmi nella vita quotidiana, nel caso specifico costruire un aeroplano di carta. Viene discussa anche una visione più generale dell'informatica  e il fatto che gli algoritmi ne sono una parte essenziale.
       GettingLoopy_2018:
         title: Diventare Ripetitivi
-        desc: Questa lezione introduce il costrutto di programmazione detto <i>ciclo</i> (istruzioni ripetute) attraverso una danza. Gli studenti imparano una semplice coreografia e sono istruiti a ripeterla.
+        desc: Questa lezione introduce il costrutto di programmazione detto ciclo (istruzioni ripetute) attraverso una danza. Gli studenti imparano una semplice coreografia e sono istruiti a ripeterla.
       BinaryBracelets_2018:
         title: Braccialetti Binari
         desc: Gli studenti creano dei braccialetti che rappresentano con l'alfabeto binario la prima lettera del loro nome. Imparano quindi che i dati possono essere rappresentati e memorizzati in più di un modo.
@@ -352,3 +352,6 @@ it:
       courseE_unplugged_CnC_2018:
         title: Digital Sharing
         desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.
+      RelayProgramming_2018:
+        title: Programmazione a Staffetta
+        desc: This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.

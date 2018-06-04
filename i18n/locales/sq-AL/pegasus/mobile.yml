@@ -377,6 +377,8 @@
   homepage_header_donors: "Code.org falenderon të gjithë mbështetësit"
   homepage_donors_seall: "Shiko të gjitha"
   homepage_donors_donate: "Dhuro"
+  homepage_below_hero_announcement_text: "We care about your privacy and are making some updates to our privacy policy, effective May 25."
+  homepage_below_hero_announcement_link_text: "Mëso më shumë"
   contact_form_topic_student: "Unë jam një student"
   contact_form_topic_parent: "Unë jam një prind"
   contact_form_topic_teacher: "Unë jam një mësues"
@@ -547,6 +549,10 @@
   volunteer_engineer_submission_field_email: "Adresa Email-it"
   volunteer_engineer_submission_field_email_desc: "Email adresa yte nuk do të shpërndahet, por do ju dërgojmë kërkesat nga mësuesit."
   volunteer_engineer_submission_field_email_placeholder: "Adresa Email-it"
+  volunteer_engineer_submission_field_email_preference: "Can we email you about updates to our courses, volunteer opportunities, or other computer science news?"
+  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy policy)"
+  volunteer_engineer_submission_field_email_preference_yes: 'Po'
+  volunteer_engineer_submission_field_email_preference_no: 'Jo'
   volunteer_engineer_submission_final_paragraph: "Ju do të jeni listuar në hartën e mësuesve lokal për t'ju kontaktuar rreth Orës së Kodit ose mundësive tjera vullnetare. Email-i juaj dhe adresa e saktë ASNJËHERË nuk do të shpërndahet nga ana jonë. Por informata tjetër (duke përfshirë lokacionin e përafërt) do të jetë e shikueshme nga ana e mësuesve lokal."
   volunteer_engineer_submission_checkbox_contact: 'Unë pranoj mësuesit të më kontaktojnë për mundësit vullnetare (Vërejtje: email adresa yte nuk do të shpërdahet)'
   volunteer_engineer_submission_checkbox_age_18_plus: "Unë vërtetoj që jam të paktën 18 vjeç."
@@ -952,12 +958,26 @@
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Unit 5: Data and Society'
   csd6_name: 'Unit 6: Physical Computing'
+  csd1-2017_name: 'Unit 1: Problem Solving'
+  csd2-2017_name: 'Unit 2: Web Development'
+  csd3-2017_name: 'Unit 3: Animation and Games'
+  csd4-2017_name: 'Unit 4: The Design Process'
+  csd5-2017_name: 'Unit 5: Data and Society'
+  csd6-2017_name: 'Unit 6: Physical Computing'
   csd1-2018_name: 'Unit 1: Problem Solving'
   csd2-2018_name: 'Unit 2: Web Development'
   csd3-2018_name: 'Unit 3: Animation and Games'
   csd4-2018_name: 'Unit 4: The Design Process'
   csd5-2018_name: 'Unit 5: Data and Society'
   csd6-2018_name: 'Unit 6: Physical Computing'
+  csp1-2017_name: 'Unit 1: The Internet'
+  csp2-2017_name: 'Unit 2: Digital Information'
+  csp3-2017_name: 'Unit 3: Algorithms and Programming'
+  csp4-2017_name: 'Unit 4: Big Data and Privacy'
+  csp5-2017_name: 'Unit 5: Building Apps'
+  csp-explore-2017_name: 'AP: Explore PT Prep'
+  csp-create-2017_name: 'AP: Create PT Prep'
+  csppostap-2017_name: 'Post AP: Databases in Apps'
   csp1-2018_name: 'Unit 1: The Internet'
   csp2-2018_name: 'Unit 2: Digital Information'
   csp3-2018_name: 'Unit 3: Algorithms and Programming'
@@ -976,6 +996,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: "Full Test - 50 questions"
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'

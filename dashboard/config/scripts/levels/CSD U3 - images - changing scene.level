@@ -50,7 +50,6 @@
       "comment_Sprites": null,
       "console.log": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Images\r\n\r\nUse the animations tab to finish making all three sprites fish images.\r\n\r\n<img src=\"https://images.code.org/f947fc6800cd1abda023b08c20a2ee87-image-1477679298953.gif\" style=\"float:right\">\r\n\r\n# Do This\r\nYour goal is to finish the underwater scene so all three sprites are fish like the example on the right. \r\n\r\n* There is a rectangle sprite already created for you for each fish.\r\n* Run the code to see how it works.\r\n* Add a `setAnimation` command to change the look for the remaining two fish. \r\n* Run it to see that your rectangle is now an image!\r\n",
