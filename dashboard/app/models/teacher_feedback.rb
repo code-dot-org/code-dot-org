@@ -11,12 +11,10 @@
 #  updated_at :datetime         not null
 #
 
-#don't store sections id in model
-
 class TeacherFeedback < ApplicationRecord
-  validates_presence_of :student_id, :section_id, :level_id
+  validates_presence_of :student_id, :level_id
   belongs_to :student, class_name: 'User'
   has_many :student_sections, class_name: 'Section', through: :student, source: 'sections_as_student'
-  belongs_to :section
   belongs_to :level
+  belongs_to :teacher, class_name: 'User'
 end
