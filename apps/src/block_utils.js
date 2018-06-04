@@ -829,8 +829,8 @@ exports.createJsWrapperBlockCreator = function (
         if (inputConfig.assignment) {
           prefix += `${inputCode} = `;
         }
-        return (eventBlock || eventLoopBlock) ?
-          `function () { return ${inputCode}; }` :
+        return ((eventBlock || eventLoopBlock) && inputConfig.mode !== STATEMENT_INPUT) ?
+          `function () {\n  return ${inputCode};\n}` :
           inputCode;
       }).filter(value => value !== null).map(value => {
         if (value === "") {
