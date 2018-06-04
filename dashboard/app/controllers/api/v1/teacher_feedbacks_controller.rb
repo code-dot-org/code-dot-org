@@ -1,5 +1,5 @@
 class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
-  authorize_resource
+  load_and_authorize_resource
 
   def show
     @teacher_feedback = TeacherFeedback.find(params[:id])
@@ -8,8 +8,6 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
   # POST /teacher_feedbacks
   # POST /teacher_feedbacks.json
   def create
-    @teacher_feedback = TeacherFeedback.new(teacher_feedback_params)
-
     if @teacher_feedback.save
       head :created
     else
