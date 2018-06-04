@@ -51,10 +51,7 @@
     "auto_run_setup": "DRAW_LOOP",
     "show_type_hints": "true",
     "parent_level_id": 11086,
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
