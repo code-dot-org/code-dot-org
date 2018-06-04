@@ -196,16 +196,12 @@ export const editSectionLoginType = (sectionId, loginType) => dispatch => {
 export const asyncLoadSectionData = (id) => (dispatch) => {
   dispatch({type: ASYNC_LOAD_BEGIN});
   // If section id is provided, load students for the current section.
-  const courseVersions = true;
-
   dispatch({type: ASYNC_LOAD_BEGIN});
   let apis = [
     '/dashboardapi/sections',
 
-    // The server by default only returns stable courses (version year 2017).
-    // When the courseVersions experiment is enabled, we also ask the
-    // server for other version years (e.g. 2018) of those courses.
-    `/dashboardapi/courses${courseVersions ? '?allVersions=1' : ''}`,
+    // Ask the server for other version years of courses.
+    `/dashboardapi/courses?allVersions=1`,
 
     '/dashboardapi/sections/valid_scripts'
   ];
