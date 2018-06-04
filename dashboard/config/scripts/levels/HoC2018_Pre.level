@@ -6,7 +6,6 @@
   "user_id": 63,
   "properties": {
     "skin": "artist",
-    "contained_level_names": null,
     "embed": "false",
     "instructions_important": "false",
     "is_k1": "false",
@@ -32,7 +31,8 @@
     "free_play": "false",
     "impressive": "false",
     "discard_background": "false",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

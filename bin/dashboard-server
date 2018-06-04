@@ -4,7 +4,7 @@ require_relative '../deployment'
 def main
   dirs = [deploy_dir('lib'), deploy_dir('shared/middleware')]
   dirs += [pegasus_dir] if CDO.dashboard_enable_pegasus
-  rerun = "rerun -p '**/*.{rb,ru,yml}' -d '#{dirs.join(',')}' -i '**/migrations/*.rb' --"
+  rerun = "rerun -p '**/*.{rb,ru,yml}' -d '#{dirs.join(',')}' -i '**/migrations/*.rb' -i 'test/**/*.rb' --"
   pids = []
 
   unless CDO.use_my_apps

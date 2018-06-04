@@ -724,11 +724,11 @@
   volunteer_engineer_submission_field_email_desc: Twój adres e-mail nigdy nie będzie
     udostępniany, ale prześlemy Ci prośby od nauczycieli.
   volunteer_engineer_submission_field_email_placeholder: Adres e-mail
-  volunteer_engineer_submission_field_email_preference: Czy wyrażasz zgodę na otrzymywanie od
-    nas wiadomości e-mail z najnowszymi informacjami o naszych kursach, lokalnymi ofertami oraz
-    innymi nowościami informatycznymi?
-  volunteer_engineer_submission_field_email_preference_privacy: (Aby poznać szczegóły, sprawdź
-    naszą Politykę prywatności)
+  volunteer_engineer_submission_field_email_preference: Czy wyrażasz zgodę na otrzymywanie
+    od nas wiadomości e-mail z najnowszymi informacjami o naszych kursach, lokalnymi
+    ofertami oraz innymi nowościami informatycznymi?
+  volunteer_engineer_submission_field_email_preference_privacy: "(Aby poznać szczegóły,
+    sprawdź naszą Politykę prywatności)"
   volunteer_engineer_submission_field_email_preference_yes: Tak
   volunteer_engineer_submission_field_email_preference_no: Nie
   volunteer_engineer_submission_final_paragraph: Będziesz wymieniona/y na mapie, by
@@ -1275,12 +1275,26 @@
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Jednostka 5: Dane i Społeczeństwo'
   csd6_name: 'Jednostka 6: Programowanie Urządzeń'
+  csd1-2017_name: 'Unit 1: Problem Solving'
+  csd2-2017_name: 'Unit 2: Web Development'
+  csd3-2017_name: 'Unit 3: Animation and Games'
+  csd4-2017_name: 'Unit 4: The Design Process'
+  csd5-2017_name: 'Jednostka 5: Dane i Społeczeństwo'
+  csd6-2017_name: 'Jednostka 6: Programowanie Urządzeń'
   csd1-2018_name: 'Unit 1: Problem Solving'
   csd2-2018_name: 'Unit 2: Web Development'
   csd3-2018_name: 'Unit 3: Animation and Games'
   csd4-2018_name: 'Unit 4: The Design Process'
   csd5-2018_name: 'Jednostka 5: Dane i Społeczeństwo'
   csd6-2018_name: 'Jednostka 6: Programowanie Urządzeń'
+  csp1-2017_name: 'Unit 1: Internet'
+  csp2-2017_name: 'Unit 2: Cyfrowe informacje'
+  csp3-2017_name: 'Unit 3: Algorithms and Programming'
+  csp4-2017_name: 'Unit 4: Big Data and Privacy'
+  csp5-2017_name: 'Unit 5: Building Apps'
+  csp-explore-2017_name: 'AP: Explore PT Prep'
+  csp-create-2017_name: 'AP: Create PT Prep'
+  csppostap-2017_name: 'Post-AP: Bazy Danych w Aplikacjach'
   csp1-2018_name: 'Unit 1: Internet'
   csp2-2018_name: 'Unit 2: Cyfrowe informacje'
   csp3-2018_name: 'Unit 3: Algorithms and Programming'

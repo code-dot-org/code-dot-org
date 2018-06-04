@@ -216,6 +216,41 @@ FROM (SELECT us.user_id,
 WHERE DATE_PART(month,date_first_activity) = CASE WHEN DATE_PART(month,getdate()) = 1 THEN 12 ELSE DATE_PART(month,getdate()) - 1 END
 AND   DATE_PART(year,date_first_activity) = CASE WHEN DATE_PART(month,getdate()) = 1 THEN DATE_PART(year,getdate()) - 1 ELSE DATE_PART(year,getdate()) END
 GROUP BY 2
+
+UNION ALL
+
+-- % rural among students in CSF classrooms with PD'd teachers
+SELECT AVG(rural::FLOAT) value,
+       '% rural among PDd CSF students' metric,
+       8 as sort
+FROM (SELECT us.user_id,
+             rural,
+             MIN(us.started_at) date_first_activity
+      FROM dashboard_production.sections se
+        JOIN dashboard_production.followers f ON f.section_id = se.id
+        JOIN dashboard_production.user_scripts us ON us.user_id = f.student_user_id
+        JOIN dashboard_production.users u ON u.id = us.user_id
+        JOIN dashboard_production_pii.pd_enrollments pde ON pde.user_id = se.user_id
+        JOIN dashboard_production.school_infos si ON si.id = pde.school_info_id
+        JOIN school_stats ss ON ss.school_id = si.school_id
+      -- CSF scripts: Old courses 1-4 (17,18,19,23), new courses A-F (236-241), 20-hour course (1), express (258) and pre-express (259)
+      WHERE se.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259)
+      AND   us.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259)
+      AND   u.user_type = 'student'
+      AND   se.user_id IN (SELECT DISTINCT f.student_user_id user_id
+                           FROM followers f
+                             JOIN sections se ON se.id = f.section_id
+                           WHERE se.section_type = 'csf_workshop'
+                           UNION
+                           SELECT DISTINCT pde.user_id
+                           FROM pd_enrollments pde
+                             JOIN pd_attendances pda ON pda.pd_enrollment_id = pde.id
+                             JOIN pd_workshops pdw ON pdw.id = pde.pd_workshop_id
+                           WHERE course = 'CS Fundamentals')
+      GROUP BY 1,
+               2)
+WHERE DATE_PART(month,date_first_activity) = CASE WHEN DATE_PART(month,getdate()) = 1 THEN 12 ELSE DATE_PART(month,getdate()) - 1 END
+AND   DATE_PART(year,date_first_activity) = CASE WHEN DATE_PART(month,getdate()) = 1 THEN DATE_PART(year,getdate()) - 1 ELSE DATE_PART(year,getdate()) END
+GROUP BY 2
 )
 order by sort asc;
-

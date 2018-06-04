@@ -95,6 +95,15 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  # Used in react assessments tab
+  concern :assessments_routes do
+    resources :assessments, only: [:index] do
+      collection do
+        get 'section_responses'
+      end
+    end
+  end
+
   post '/dashboardapi/sections/transfers', to: 'transfers#create'
   post '/api/sections/transfers', to: 'transfers#create'
 
@@ -475,6 +484,10 @@ Dashboard::Application.routes.draw do
     get 'workshop_survey/facilitators/:session_id(/:facilitator_index)', to: 'workshop_daily_survey#new_facilitator'
     get 'workshop_survey/thanks', to: 'workshop_daily_survey#thanks'
 
+    get 'post_course_survey/thanks', to: 'post_course_survey#thanks'
+    post 'post_course_survey/submit', to: 'post_course_survey#submit'
+    get 'post_course_survey/:course_initials', to: 'post_course_survey#new'
+
     namespace :application do
       get 'facilitator', to: 'facilitator_application#new'
       get 'teacher', to: 'teacher_application#new'
@@ -535,13 +548,11 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/section_text_responses/:section_id', to: 'api#section_text_responses'
   # Used in angular assessments tab
   get '/dashboardapi/section_assessments/:section_id', to: 'api#section_assessments'
-  # Used in react assessments tab
-  get '/dashboardapi/section_assessments_responses/:section_id', to: 'api#assessments_responses'
-  get 'dashboardapi/assessments_structure/:script_id', to: 'api#assessments_structure'
   get '/dashboardapi/section_surveys/:section_id', to: 'api#section_surveys'
   get '/dashboardapi/student_progress/:section_id/:student_id', to: 'api#student_progress'
   scope 'dashboardapi', module: 'api/v1' do
     concerns :section_api_routes
+    concerns :assessments_routes
   end
 
   # Wildcard routes for API controller: select all public instance methods in the controller,
