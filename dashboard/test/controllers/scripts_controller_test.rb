@@ -314,4 +314,24 @@ class ScriptsControllerTest < ActionController::TestCase
     script = Script.find_by_id(script.id)
     assert script.has_lesson_plan?
   end
+
+  test 'should redirect to latest stable version in script family' do
+    dogs1 = create :script, name: 'dogs1', family_name: 'dogs', version_year: '1901'
+
+    assert_raises ActiveRecord::RecordNotFound do
+      get :show, params: {id: 'dogs'}
+    end
+
+    dogs1.update!(is_stable: true)
+    get :show, params: {id: 'dogs'}
+    assert_redirected_to "/s/dogs1"
+
+    create :script, name: 'dogs2', family_name: 'dogs', version_year: '1902', is_stable: true
+    get :show, params: {id: 'dogs'}
+    assert_redirected_to "/s/dogs2"
+
+    create :script, name: 'dogs3', family_name: 'dogs', version_year: '1899', is_stable: true
+    get :show, params: {id: 'dogs'}
+    assert_redirected_to "/s/dogs2"
+  end
 end
