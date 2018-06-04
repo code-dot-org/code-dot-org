@@ -11,7 +11,6 @@ require 'tempfile'
 require_relative 'i18n_script_utils'
 
 require_relative '../i18n-codeorg/lib/merge-translation'
-require_relative '../i18n-codeorg/lib/export-without-merge'
 
 CLEAR = "\r\033[K"
 
@@ -57,11 +56,7 @@ def distribute_translations
         "dashboard/config/locales/#{locale}.yml" :
         "dashboard/config/locales/#{relname}.#{locale}.yml"
 
-      if locale == 'hy-AM' # Armenian accepts English translations, does not need fallback
-        export_without_merge 'yml', loc_file, destination
-      else
-        merge_translation 'yml', source, loc_file, destination
-      end
+      merge_translation 'yml', source, loc_file, destination
     end
 
     ### Apps
@@ -71,27 +66,17 @@ def distribute_translations
       source = "i18n/locales/source/blockly-mooc/#{relname}.json"
       destination = "apps/i18n/#{relname}/#{js_locale}.json"
 
-      if locale == 'hy-AM' # Armenian accepts English translations, does not need fallback
-        export_without_merge 'json', loc_file, destination
-      else
-        merge_translation 'json', source, loc_file, destination
-      end
+      merge_translation 'json', source, loc_file, destination
     end
 
     ### Blockly Core
-
-    # Copy JSON files.
     Dir.glob("i18n/locales/#{locale}/blockly-core/*.json") do |loc_file|
       relname = File.basename(loc_file)
       source = "i18n/locales/source/blockly-core/#{relname}"
       destination = "apps/node_modules/@code-dot-org/blockly/i18n/locales/#{locale}/#{relname}"
       FileUtils.mkdir_p(File.dirname(destination))
 
-      if locale == 'hy-AM' # Armenian accepts English translations, does not need fallback
-        export_without_merge 'json', loc_file, destination
-      else
-        merge_translation 'json', source, loc_file, destination
-      end
+      merge_translation 'json', source, loc_file, destination
     end
 
     ### Pegasus
@@ -99,12 +84,7 @@ def distribute_translations
     source = "i18n/locales/source/pegasus/mobile.yml"
     destination = "pegasus/cache/i18n/#{locale}.yml"
 
-    # Merge YML file.
-    if locale == 'hy-AM' # Armenian accepts English translations, does not need fallback
-      export_without_merge 'yml', loc_file, destination
-    else
-      merge_translation 'yml', source, loc_file, destination
-    end
+    merge_translation 'yml', source, loc_file, destination
   end
 
   puts "#{CLEAR}Distribution finished!"
