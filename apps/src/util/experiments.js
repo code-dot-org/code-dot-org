@@ -16,7 +16,8 @@ const STORAGE_KEY = 'experimentsList';
 const GA_EVENT = 'experiments';
 const EXPERIMENT_LIFESPAN_HOURS = 12;
 
-// specific experiment names
+// Specific experiment names
+experiments.REDUX_LOGGING = 'reduxLogging';
 experiments.COMMENT_BOX_TAB = 'commentBoxTab';
 experiments.DEV_COMMENT_BOX_TAB = 'devCommentBoxTab';
 experiments.PROGRESS_TAB = 'sectionProgressRedesign';
