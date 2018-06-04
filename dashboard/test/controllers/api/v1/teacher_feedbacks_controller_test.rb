@@ -14,7 +14,6 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     params = {
       student_id: student.id,
       level_id:  level.id,
-      section_id: section.id,
       comment: "good job"
     }
 
@@ -26,9 +25,10 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     teacher_feedback = TeacherFeedback.last
     assert_equal student.id, teacher_feedback.student_id
     assert_equal level.id, teacher_feedback.level_id
+    assert_equal teacher.id, teacher_feedback.teacher_id
   end
 
-  test 'missing parameters' do
+  test 'forbidden with missing parameters' do
     teacher = create :teacher
     sign_in teacher
     params = {
@@ -43,14 +43,12 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
   test 'forbidden to leave feedback for student not in teacher section' do
     teacher = create :teacher
     student = create :student
-    section = create :section, user: teacher
     level = create :level
 
     sign_in teacher
     params = {
       student_id: student.id,
       level_id:  level.id,
-      section_id: section.id,
       comment: "good job"
     }
 
