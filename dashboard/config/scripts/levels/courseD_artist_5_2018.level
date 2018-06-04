@@ -41,8 +41,8 @@
     "parent_level_id": 9225,
     "top_level_procedure_autopopulate": "false",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/b37b8f5fb32fba217e6c1cb571d57979=levelbuilder/36850.png",
-    "contained_level_names": null,
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -1,0 +1,23 @@
+{
+  "category": "Events",
+  "config": {
+    "color": [
+      140,
+      1,
+      0.74
+    ],
+    "func": "whenTouching",
+    "blockText": "when {SPRITE1} touches {SPRITE2}",
+    "args": [
+      {
+        "name": "SPRITE1",
+        "type": "Sprite"
+      },
+      {
+        "name": "SPRITE2",
+        "type": "Sprite"
+      }
+    ],
+    "eventBlock": true
+  }
+}

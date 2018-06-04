@@ -106,7 +106,6 @@ $(document).ready(function () {
 /* eslint-disable eqeqeq, no-unused-vars */
 function main() {
   const studioUrlPrefix = scriptData.studiourlprefix;
-  var valid_scripts = scriptData.valid_scripts;
   var disabled_scripts = scriptData.disabled_scripts;
   var i18n = scriptData.i18n;
   var error_string_none_selected = i18n.error_string_none_selected;
@@ -219,6 +218,7 @@ function main() {
          responses: {method:'GET', url:'/dashboardapi/section_text_responses/:id', isArray: true},
          assessments: {method:'GET', url:'/dashboardapi/section_assessments/:id', isArray: true},
          surveys: {method:'GET', url:'/dashboardapi/section_surveys/:id', isArray: true},
+         validScripts: {method:'GET', url:'/dashboardapi/sections/valid_scripts', isArray: true},
       });
     }]).config(['$httpProvider', function ($httpProvider) {
       // X-Requested-With header required for CSRF requests protected by Rack::Protection::JsonCsrf included by Sinatra.
@@ -335,7 +335,7 @@ function main() {
     $scope.section = sectionsService.get({id: $routeParams.sectionid});
 
     $scope.script_id = parseInt($routeParams.scriptid);
-    $scope.script_list = valid_scripts;
+    $scope.script_list = sectionsService.validScripts();
 
     $scope.progress = sectionsService.studentProgress({id: $routeParams.sectionid, studentId: $routeParams.studentid});
 
@@ -594,11 +594,13 @@ function main() {
       );
     };
 
+    $scope.script_list = sectionsService.validScripts();
+
     if (experiments.isEnabled(experiments.PROGRESS_TAB)) {
       $scope.react_progress = true;
       $scope.$on('section-progress-rendered', () => {
         $scope.section.$promise.then(script =>
-          renderSectionProgress(script, valid_scripts)
+          renderSectionProgress(script, $scope.script_list)
         );
       });
       return;
@@ -614,8 +616,6 @@ function main() {
 
     $scope.progressLoadedFirst = false;
     $scope.progressLoaded = false;
-
-    $scope.script_list = valid_scripts;
     $scope.progress_disabled_scripts = disabled_scripts;
 
     // wait until we have both the students and the student progress
@@ -743,12 +743,13 @@ function main() {
 
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
+    $scope.script_list = sectionsService.validScripts();
     $scope.tab = 'responses';
 
     if (experiments.isEnabled(experiments.TEXT_RESPONSES_TAB)) {
       $scope.react_text_responses = true;
       $scope.$on('text-responses-table-rendered', () => {
-        $scope.section.$promise.then(section => renderTextResponsesTable(section, valid_scripts));
+        $scope.section.$promise.then(section => renderTextResponsesTable(section, $scope.script_list));
       });
       return;
     }
@@ -783,8 +784,6 @@ function main() {
 
     $scope.responsesLoaded = false;
     $scope.stages = [];
-
-    $scope.script_list = valid_scripts;
 
     // wait until we have both the students and the student progress
     $q.all([$scope.section.$promise, $scope.responses.$promise]).then(function () {
@@ -849,7 +848,7 @@ function main() {
     $scope.sections = sectionsService.query();
     $scope.tab = 'assessments';
 
-    $scope.script_list = valid_scripts;
+    $scope.script_list = sectionsService.validScripts();
 
     $scope.assessmentsLoaded = false;
     $scope.assessmentStages = [];
@@ -863,7 +862,7 @@ function main() {
       $scope.react_assessments = true;
       $scope.$on('section-assessments-rendered', () => {
         $scope.section.$promise.then(script =>
-          renderSectionAssessments(script, valid_scripts)
+          renderSectionAssessments(script, $scope.script_list)
         );
       });
       return;
