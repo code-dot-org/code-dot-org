@@ -2,7 +2,6 @@ import React, {Component, PropTypes} from 'react';
 import { setScriptId, validScriptPropType } from '@cdo/apps/redux/scriptSelectionRedux';
 import {
   asyncLoadAssessments,
-  getAssessmentsForCurrentScript
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {connect} from 'react-redux';
 import {h3Style} from "../../lib/ui/Headings";
@@ -20,7 +19,6 @@ class SectionAssessments extends Component {
   static propTypes = {
     // provided by redux
     sectionId: PropTypes.number.isRequired,
-    assessments: PropTypes.object,
     isLoadingAssessments: PropTypes.bool.isRequired,
     validScripts: PropTypes.arrayOf(validScriptPropType).isRequired,
     scriptId: PropTypes.number,
@@ -62,7 +60,6 @@ export const UnconnectedSectionAssessments = SectionAssessments;
 
 export default connect(state => ({
   sectionId: state.sectionData.section.id,
-  assessments: getAssessmentsForCurrentScript(state),
   isLoadingAssessments: state.sectionAssessments.isLoadingAssessments,
   validScripts: state.scriptSelection.validScripts,
   scriptId: state.scriptSelection.scriptId,
