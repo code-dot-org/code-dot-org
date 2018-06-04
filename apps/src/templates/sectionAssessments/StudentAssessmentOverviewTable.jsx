@@ -53,7 +53,7 @@ const questionDataPropType = PropTypes.shape({
 class StudentAssessmentOverviewTable extends Component {
   static propTypes= {
     questionAnswerData: PropTypes.arrayOf(questionDataPropType),
-    studentAnswerData: PropTypes.arrayOf(studentAnswerDataPropType)
+    studentAnswerData: studentAnswerDataPropType
   };
 
   state = {
@@ -95,34 +95,22 @@ class StudentAssessmentOverviewTable extends Component {
   };
 
   correctAnswerColumnFormatter = (answers, {rowData, columnIndex}) => {
-    const multipleChoiceAnswers = rowData.answers;
-
-    let displayAnswer = this.getCorrectAnswer(multipleChoiceAnswers);
-
     return (
       <MultipleChoiceAnswerCell
         id={rowData.id}
-        displayAnswer={displayAnswer}
+        displayAnswer={rowData.correctAnswer}
       />
     );
   };
 
   studentAnswerColumnFormatter = (studentAnswers, {rowData, rowIndex}) => {
-    const studentAnswersArr = this.props.studentAnswerData.map(studentObj => {
-      return studentObj.studentAnswers[rowIndex].answers;
-    });
-
-    const studentResponse = studentAnswersArr.join(',');
-
-    const multipleChoiceAnswers = rowData.answers;
-
-    let displayAnswer = this.getCorrectAnswer(multipleChoiceAnswers);
+    const answerData = this.props.studentAnswerData.studentAnswers[rowIndex];
 
     return (
       <MultipleChoiceAnswerCell
         id={rowData.id}
-        displayAnswer={studentResponse}
-        isCorrectAnswer={(studentResponse === displayAnswer)}
+        displayAnswer={answerData.answers}
+        isCorrectAnswer={answerData.status === 'correct'}
       />
     );
   };
