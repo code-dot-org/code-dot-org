@@ -183,9 +183,9 @@
     "encrypted_examples": "DeLCervPM7DmhckVXBUdfbGFro7v2kNefucvhVB/vkTpzX1yWXcQJ1wd1ahV\nUYVE\n",
     "parent_level_id": 5673,
     "name_suffix": "_2018",
-    "contained_level_names": null,
     "top_level_procedure_autopopulate": "false",
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
