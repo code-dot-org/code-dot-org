@@ -15,6 +15,8 @@ import {getAppOptions, setAppOptions, setupApp} from '@cdo/apps/code-studio/init
 import {getStore} from '@cdo/apps/redux';
 import {setIsRunning} from '@cdo/apps/redux/runState';
 import {getExportedGlobals} from './export';
+import * as shareWarnings from '../shareWarnings';
+import {navigateToHref} from '../utils';
 window.CDOSounds = Sounds.getSingleton();
 
 const noop = function () {};
@@ -31,7 +33,8 @@ Applab.render = noop;
 const exportOptions = Object.assign({isExported: true}, window.EXPORT_OPTIONS);
 setAppOptions(Object.assign(window.APP_OPTIONS, exportOptions));
 setupApp(window.APP_OPTIONS);
-loadApplab(getAppOptions());
+const config = getAppOptions();
+loadApplab(config);
 // reset applab turtle manually (normally called when execution begins)
 // before the student's code is run.
 Applab.resetTurtle();
@@ -55,3 +58,25 @@ injectErrorHandler(new JavaScriptModeErrorHandler(
   () => Applab.JSInterpreter,
   Applab
 ));
+
+function __start() {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = 'code.js';
+  document.getElementsByTagName("head")[0].appendChild(script);
+}
+
+if (!config.nativeExport) {
+  document.addEventListener('DOMContentLoaded', () => {
+    if (config.exportUsesDataAPIs) {
+      shareWarnings.checkSharedAppWarnings({
+        channelId: config.channel,
+        hasDataAPIs: () => ( true ),
+        onWarningsComplete: __start,
+        onTooYoung: () => ( navigateToHref('https://studio.code.org/too_young') ),
+      });
+    } else {
+      __start();
+    }
+  });
+}
