@@ -758,7 +758,6 @@ exports.createJsWrapperBlockCreator = function (
       console.warn('blocks with multiple statement inputs cannot be inlined');
       inline = false;
     }
-    color = color || DEFAULT_COLOR;
     const blockName = `${blocksModuleName}_${name || func}`;
     if (eventLoopBlock && args.filter(arg => arg.statement).length === 0) {
       // If the eventloop block doesn't explicitly list its statement inputs,
@@ -788,7 +787,11 @@ exports.createJsWrapperBlockCreator = function (
     blockly.Blocks[blockName] = {
       helpUrl: '',
       init: function () {
-        this.setHSV(...color);
+        if (color) {
+          this.setHSV(...color);
+        } else if (!returnType) {
+          this.setHSV(DEFAULT_COLOR);
+        }
 
         interpolateInputs(
           blockly,
