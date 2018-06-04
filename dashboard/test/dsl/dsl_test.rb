@@ -617,14 +617,22 @@ DSL
     assert_equal expected, output
   end
 
-  test 'serialize new_name and family_name' do
+  test 'serialize new_name, family_name, version_year and is_stable' do
     puts 'test_serialize_new_name_and_family_name'
-    script = create :script, new_name: 'new name', family_name: 'family name'
+    script = create :script,
+      {
+        new_name: 'new name',
+        family_name: 'family name',
+        version_year: '2001',
+        is_stable: true
+      }
     script_text = ScriptDSL.serialize_to_string(script)
     expected = <<-SCRIPT
 hidden false
 new_name 'new name'
 family_name 'family name'
+version_year '2001'
+is_stable true
 
 SCRIPT
     assert_equal expected, script_text
