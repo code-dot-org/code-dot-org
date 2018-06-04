@@ -585,10 +585,12 @@ DSL
     assert_equal expected, output
   end
 
-  test 'Script DSL with new_name and family_name' do
+  test 'Script DSL with new_name, family_name, version_year and is_stable' do
     input_dsl = <<DSL
 new_name 'new name'
 family_name 'family name'
+version_year '3035'
+is_stable true
 stage 'Stage1'
 level 'Level 1'
 level 'Level 2'
@@ -597,6 +599,8 @@ DSL
       {
         new_name: "new name",
         family_name: "family name",
+        version_year: "3035",
+        is_stable: true,
         stages: [
           {
             stage: "Stage1",
