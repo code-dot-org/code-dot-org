@@ -11,9 +11,9 @@ describe("Local Summer Workshop Daily Survey Results class", () => {
             'Pre Workshop': {
               'general': {
                 'q1': {text: 'Matrix header', answer_type: 'none'},
-                'q2': {text: 'Matrix 1', answer_type: 'selectValue'},
-                'q3': {text: 'Matrix 2', answer_type: 'selectValue'},
-                'q4': {text: 'Scale 1', answer_type: 'selectValue'},
+                'q2': {text: 'Matrix 1', answer_type: 'selectValue', max_value: '5'},
+                'q3': {text: 'Matrix 2', answer_type: 'selectValue', max_value: '5'},
+                'q4': {text: 'Scale 1', answer_type: 'selectValue', max_value: '5'},
                 'f1': {text: 'Day 1, Free Response 1', answer_type: 'text'},
                 'f2': {text: 'Day 1, Free Response 2', answer_type: 'text'}
               }
@@ -28,7 +28,8 @@ describe("Local Summer Workshop Daily Survey Results class", () => {
               'q4': {3: 3, 4: 1, 5: 1},
               'f1': ['a', 'b', 'c'],
               'f2': ['d', 'e', 'f']
-            }
+            },
+            'response_count': 10
           }
         }}
         sessions={['Pre Workshop']}
@@ -42,10 +43,10 @@ describe("Local Summer Workshop Daily Survey Results class", () => {
     expect(results.find('table')).to.have.length(1);
     expect(results.find('td').map((x) => x.text())).to.deep.equal(
       [
-        'Matrix header', '-',
-        'Matrix 1', '3.86',
-        'Matrix 2', '2.33',
-        'Scale 1', '3.6',
+        'Matrix header', '',
+        'Matrix 1', '3.86 / 5',
+        'Matrix 2', '2.33 / 5',
+        'Scale 1', '3.60 / 5',
       ]
     );
     expect(results.find('.well')).to.have.length(2); // 2 general responses

@@ -128,7 +128,9 @@ Need a different format? See more frequently updated short list and calendar vie
 <br/>
 </p>
 </details>
-
+<details>
+  <summary>March</summary>
+  <p>
 
 ## March Areas of Focus
 
@@ -148,7 +150,11 @@ Need a different format? See more frequently updated short list and calendar vie
 | March 5 - 8, 2018| Regional Partner Spring Summit in conjunction with the March 3-5 training for current and new CS Fundamentals facilitators.|
 | March 16, 2018| Signed contracts due from accepted CSD and CSP facilitators (**Group 3 partners only**)|
 | March 30, 2018 - April 6| CSD and CSP facilitators register for assigned TeacherCon and Facilitator-in-Training weekend (**Group 3 partners only**)|
-
+</p>
+</details>
+<details>
+  <summary>April</summary>
+  <p>
 ## April Areas of Focus
 
 - Teacher and District Recruitment<br/>
@@ -166,7 +172,11 @@ Need a different format? See more frequently updated short list and calendar vie
 | April 6, 2018| Priority deadline for all Group 3 teacher applications (**Group 3 partners only**)|
 | April 6, 2018 - July| Application link will remain open for Group 1 and 2 partners, and as needed for Group 3 partners|
 | April 23, 2018| Deadline for accepting teachers for TeacherCon 1 (**Group 3 partners only**)|
-
+</p>
+</details>
+<details>
+  <summary>May</summary>
+  <p>
 ## May Areas of Focus
 
 - Set dates with facilitators for academic year workshops <br/>
@@ -181,7 +191,8 @@ Need a different format? See more frequently updated short list and calendar vie
 |-----------------|--------------------------------------------------|
 | May 12-14, 2018| Facilitators will attend and participate in one 3-day workshop with other facilitators to prepare for the academic year facilitation in Chicago (Rosemont), IL.|
 | May 21, 2018| Deadline for accepting teachers for TeacherCon 2 (**Group 3 partners only**)|
-
+</p>
+</details>
 ## June Areas of Focus
 
 - Host Local Summer Workshops (Group 1 & 2)<br/>
@@ -191,7 +202,8 @@ Need a different format? See more frequently updated short list and calendar vie
 
 | **June** ||
 |-----------------|--------------------------------------------------|
-| June 17 - 22, 2018| TeacherCon 1 in Atlanta, GA|
+|June 1, 2018| CS Fundamentals facilitators are contracted by Regional Partner
+|June 17 - 22, 2018| TeacherCon 1 in Atlanta, GA|
 
 ## July Areas of Focus
 
@@ -203,7 +215,7 @@ Need a different format? See more frequently updated short list and calendar vie
 | **July** ||
 |-----------------|--------------------------------------------------|
 | July 22-27, 2018| TeacherCon 2 in Phoenix, AZ|
-
+| July 13, 2018| Annual reports are due
 <br/>
 
 More information to come.

@@ -127,6 +127,3 @@ variants
   level 'csp_affirmation_intervention_3_2018', experiments: ["rene-control-affirmation","rene-belonging-affirmation"], progression: 'Pre-test reflection'
 endvariants
 assessment 'CSP Unit 3 Ch1 Cumulative Assessment MC Group_2018'
-
-stage 'Please complete the CSP Mid-course survey!', lockable: true, flex_category: 'cspSurvey'
-assessment 'csp-post-survey-2017-levelgroup_2018'
