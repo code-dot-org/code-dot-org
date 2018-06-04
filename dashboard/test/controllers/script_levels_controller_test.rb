@@ -1484,7 +1484,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     script.update(redirect_to: new_script.name)
 
     get :show, params: {script_id: script.name, stage_position: '1', id: '2'}
-    assert_redirected_to "/s/#{new_script.name}/stage/1/puzzle/1"
+    assert_redirected_to "/s/#{new_script.name}/stage/1/puzzle/2"
   end
 
   test "should indicate challenge levels as challenge levels" do
