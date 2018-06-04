@@ -1,9 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import StudentAssessmentOverviewTable from './StudentAssessmentOverviewTable';
-import {
-  studentAnswerDataPropType,
-  questionDataPropType,
-} from './assessmentDataShapes';
+import { studentAnswerDataPropType } from './assessmentDataShapes';
 import {
   getQuestionAnswerData,
   getStudentAnswerData,
@@ -12,7 +9,7 @@ import { connect } from 'react-redux';
 
 class MultipleChoiceByStudentSection extends Component {
   static propTypes = {
-    questionAnswerData: PropTypes.arrayOf(questionDataPropType),
+    questionAnswerData: PropTypes.array,
     studentAnswerData: studentAnswerDataPropType,
   };
 
@@ -20,7 +17,7 @@ class MultipleChoiceByStudentSection extends Component {
     const {questionAnswerData, studentAnswerData} = this.props;
     return (
       <div>
-        <h1>Student Multiple Choice Overview Section</h1>
+        <h2>Multiple choice answers by student section</h2>
         <StudentAssessmentOverviewTable
           questionAnswerData={questionAnswerData}
           studentAnswerData={studentAnswerData}

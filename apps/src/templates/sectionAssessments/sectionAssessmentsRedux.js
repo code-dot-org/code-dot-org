@@ -131,7 +131,7 @@ export const getStudentAnswerData = (state) => {
     studentAnswers: firstStudentAssessment.level_results.map(answer => {
       return {
         answers: answer.student_result || '',
-        status: answer.status,
+        isCorrect: answer.status === 'correct',
       };
     })
   };

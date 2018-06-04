@@ -82,16 +82,14 @@ class StudentAssessmentOverviewTable extends Component {
     });
   };
 
-  getCorrectAnswer = (multipleChoiceAnswers) => {
-    const answersArr = multipleChoiceAnswers.filter(answerObj => {
-      return answerObj.isCorrectAnswer;
-    });
-
-    const getCorrectAnswers = answersArr.map(answerObj => {
-      return answerObj.multipleChoiceOption;
-    });
-
-    return getCorrectAnswers.join(',');
+  questionCellFormatter = (question, {rowData, rowIndex}) => {
+    // TODO(caleybrock): Since we're only filtering for multiple choice
+    // questions, this questionNumber may be incorrect. Look into getting
+    // question number from the server.
+    const questionNumber = rowIndex + 1;
+    return (
+      <div>{`${questionNumber}. ${question}`}</div>
+    );
   };
 
   correctAnswerColumnFormatter = (answers, {rowData, columnIndex}) => {
@@ -105,12 +103,11 @@ class StudentAssessmentOverviewTable extends Component {
 
   studentAnswerColumnFormatter = (studentAnswers, {rowData, rowIndex}) => {
     const answerData = this.props.studentAnswerData.studentAnswers[rowIndex];
-
     return (
       <MultipleChoiceAnswerCell
         id={rowData.id}
         displayAnswer={answerData.answers}
-        isCorrectAnswer={answerData.status === 'correct'}
+        isCorrectAnswer={answerData.isCorrect}
       />
     );
   };
@@ -125,6 +122,7 @@ class StudentAssessmentOverviewTable extends Component {
           transforms: [sortable],
         },
         cell: {
+          format: this.questionCellFormatter,
           props: {
             style: {
               ...tableLayoutStyles.cell,
