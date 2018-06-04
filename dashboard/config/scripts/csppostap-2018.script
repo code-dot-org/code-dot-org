@@ -4,6 +4,7 @@ hideable_stages true
 student_detail_progress_view true
 has_verified_resources true
 has_lesson_plan true
+family_name 'csppostap'
 version_year '2018'
 is_stable true
 
