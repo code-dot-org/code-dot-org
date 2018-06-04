@@ -1,10 +1,19 @@
-import React from 'react';
-import StudentMultipleChoiceOverviewTable from './StudentMultipleChoiceOverviewTable';
+import React, {Component} from 'react';
+import StudentAssessmentOverviewTable from './StudentAssessmentOverviewTable';
 
+class MultipleChoiceByStudentSection extends Component {
 
-<h2>Header</h2>
+  render() {
+    return (
+      <div>
+        <h1>Student Multiple Choice Overview Section</h1>
+        <StudentAssessmentOverviewTable
+          questionAnswerData={[]}
+          studentAnswerData={[]}
+        />
+      </div>
+    );
+  }
+}
 
-
-
-
-export default StudentMultipleChoiceOverviewTable;
+export default MultipleChoiceByStudentSection;
