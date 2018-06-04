@@ -280,7 +280,7 @@ export default class WorkshopTable extends React.Component {
         date={date}
         editUrl={state === 'Not Started' ? `/workshops/${id}/edit` : null}
         onDelete={state !== 'Ended' ? this.props.onDelete : null}
-        showSurveyUrl={state === 'Ended'}
+        showSurveyUrl={state === 'Ended' || subject === '5-day Summer'}
       />
     );
   };
