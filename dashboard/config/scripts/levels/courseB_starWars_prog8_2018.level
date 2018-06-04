@@ -47,11 +47,10 @@
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/45078df12680cca729189d7e69a944c0=levelbuilder/28564.png",
     "parent_level_id": 9211,
     "name_suffix": "_2018",
-    "contained_level_names": null,
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
-    "maze_data": null,
-    "remove_items_when_actor_collides": "false"
+    "remove_items_when_actor_collides": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
