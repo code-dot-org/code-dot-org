@@ -42,11 +42,12 @@
     "disable_procedure_autopopulate": "false",
     "name_suffix": "_2018",
     "top_level_procedure_autopopulate": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "show_type_hints": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-20 20:50:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-13 03:23:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-28 22:35:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-24 15:52:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-05-01 18:44:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"instructions\",\"markdown_instructions\",\"authored_hints\",\"instructions_important\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-20 20:50:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-13 03:23:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-28 22:35:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-24 15:52:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-05-01 18:44:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"instructions\",\"markdown_instructions\",\"authored_hints\",\"instructions_important\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-04 20:47:34 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-04 20:48:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -85,36 +86,49 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="draw_move_by_constant" limit="2">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE">100</title>
-        </block>
-        <block type="draw_turn_by_constant" limit="1">
-          <title name="DIR">turnRight</title>
-          <title name="VALUE">90</title>
-        </block>
-        <block type="jump_by_constant">
-          <title name="DIR">jumpForward</title>
-          <title name="VALUE">100</title>
-        </block>
-        <block type="controls_repeat" limit="1">
-          <title name="TIMES">???</title>
-        </block>
-        <block type="procedures_callnoreturn" limit="2">
-          <mutation name="draw a square"/>
-        </block>
-        <block type="draw_colour" inline="true">
-          <value name="COLOUR">
-            <block type="colour_picker">
-              <title name="COLOUR">#ff0000</title>
-            </block>
-          </value>
-        </block>
-        <block type="draw_colour" inline="true">
-          <value name="COLOUR">
-            <block type="colour_random"/>
-          </value>
-        </block>
+        <category name="Actions">
+          <block type="draw_move_by_constant" limit="2">
+            <title name="DIR">moveForward</title>
+            <title name="VALUE">100</title>
+          </block>
+          <block type="draw_turn_by_constant" limit="1">
+            <title name="DIR">turnRight</title>
+            <title name="VALUE">90</title>
+          </block>
+          <block type="jump_by_constant">
+            <title name="DIR">jumpForward</title>
+            <title name="VALUE">100</title>
+          </block>
+        </category>
+        <category name="Loops">
+          <block type="controls_repeat" limit="1">
+            <title name="TIMES">???</title>
+          </block>
+        </category>
+        <category name="Brushes">
+          <block type="draw_colour" inline="true">
+            <value name="COLOUR">
+              <block type="colour_picker">
+                <title name="COLOUR">#ff0000</title>
+              </block>
+            </value>
+          </block>
+          <block type="draw_colour" inline="true">
+            <value name="COLOUR">
+              <block type="colour_random"/>
+            </value>
+          </block>
+        </category>
+        <category name="Functions ">
+          <block type="procedures_callnoreturn" limit="2">
+            <mutation name="draw a square"/>
+          </block>
+        </category>
+        <category name="Comments">
+          <block type="comment">
+            <title name="TEXT"/>
+          </block>
+        </category>
       </xml>
     </toolbox_blocks>
     <solution_blocks>
