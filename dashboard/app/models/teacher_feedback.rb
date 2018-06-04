@@ -20,13 +20,7 @@
 class TeacherFeedback < ApplicationRecord
   validates_presence_of :student_id, :section_id, :level_id
   belongs_to :student, class_name: 'User'
-  has_many :sections, through: :student
-  has_many :section_students, through: :sections, source: :students
-
-  def initialize(params)
-    puts "In initializer: #{params}"
-    super params
-    puts "DONE"
-    puts valid?
-  end
+  has_many :student_sections, class_name: 'Section', through: :student, source: 'sections_as_student'
+  belongs_to :section
+  belongs_to :level
 end

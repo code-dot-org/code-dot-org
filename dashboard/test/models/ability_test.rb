@@ -162,4 +162,27 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:manage, Script)
     assert ability.can?(:manage, ScriptLevel)
   end
+
+  test 'teachers can manage feedback for students in a section they own' do
+    teacher = create :teacher
+    student = create :student
+    section = create :section, user: teacher
+    section.add_student student
+    feedback = create :teacher_feedback, student: student
+
+    assert Ability.new(teacher).can? :manage, feedback
+  end
+
+  test 'teachers cannot manage feedback for students not in a section they own' do
+    teacher = create :teacher
+    student = create :student
+    section_with_student = create :section
+    section_with_student.add_student student
+
+    # teacher section, not the same one that contains the student
+    create :section, user: teacher
+    feedback = create :teacher_feedback, student: student
+
+    refute Ability.new(teacher).can? :manage, feedback
+  end
 end
