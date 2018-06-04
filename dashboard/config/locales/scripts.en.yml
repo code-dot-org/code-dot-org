@@ -7516,15 +7516,15 @@ en:
           description_audience: 'Ages: 4-7'
           stages:
             'Debugging: Unspotted Bugs':
-              name: 'Unspotted Bugs'
+              name: Unspotted Bugs
               description_student: ''
               description_teacher: 'This lesson will guide students through the steps of debugging.  Students will learn the mantra: "What happened?  What was supposed to happen? What does that tell you?"'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Stevie and the Big Project'
+              name: Stevie and the Big Project
               description_student: ''
               description_teacher: "When students run into a barrier while answering a question or working on a project, it’s so easy for them to get frustrated and give up.  This lesson will introduce students to the idea that frustration can be an important part of learning. Here, frustration is presented as a step in the creative process, rather than a sign of failure.\r\n\r\nThis lession can be done over one or two class sessions.  If you have more time, feel free to draw out the building and revising phase of the Marble Run activity."
             'Real-life Algorithms: Plant a Seed':
-              name: 'Plant a Seed'
+              name: Plant a Seed
               description_student: ''
               description_teacher: "In this lesson, students will relate the concept of algorithms back to everyday, real-life activities by planting an actual seed. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.\r\n"
             Learn to Drag and Drop:
@@ -7532,7 +7532,7 @@ en:
               description_student: ''
               description_teacher: This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.
             'Programming: Happy Maps':
-              name: 'Happy Maps'
+              name: Happy Maps
               description_student: ''
               description_teacher: The bridge from algorithms to programming can be a short one if students understand the difference between planning out a sequence and encoding that sequence into the appropriate language.  This activity will help students gain experience reading and writing in shorthand code.
             Programming in Maze:
@@ -7544,7 +7544,7 @@ en:
               description_student: ''
               description_teacher: In collaboration with [r common-sense-media], this lesson helps students learn that many websites ask for information that is private and discusses how to responsibly handle such requests. Students also find out that they can go to exciting places online, but they need to follow certain rules to remain safe.
             'Loops: Happy Loops':
-              name: 'Happy Loops'
+              name: Happy Loops
               description_student: ''
               description_teacher: Loops are a very helpful and powerful tool in programming. To understand how helpful loops can be, students will need to be driven to want an easier way to solve mundane problems.
             Loops in Collector:
@@ -7556,7 +7556,7 @@ en:
               description_student: ''
               description_teacher: Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous plugged lesson, loops were used to traverse a maze and collect treasure. Here, loops are creating patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.
             'Events: The Big Event':
-              name: 'The Big Event'
+              name: The Big Event
               description_student: ''
               description_teacher: Events are a great way to add variety to a pre-written algorithm. Sometimes you want your program to be able to respond to the user exactly when the user wants it to. That is what events are for.
             Events in Play Lab:
@@ -7572,7 +7572,7 @@ en:
             Sequencing in Maze:
               name: Sequencing with Angry Birds
             'Persistence & Frustration: Stevie and the Big Project':
-              name: 'Stevie and the Big Project'
+              name: Stevie and the Big Project
         express-2018:
           title: Express Course
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
@@ -7818,7 +7818,7 @@ en:
               description_student: ''
               description_teacher: ''
             'Programming: My Robotic Friends':
-              name: 'My Robotic Friends Jr.'
+              name: My Robotic Friends Jr.
               description_student: ''
               description_teacher: ''
             Programming in Maze:
@@ -7842,7 +7842,7 @@ en:
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: 'The Big Event'
+              name: The Big Event
               description_student: ''
               description_teacher: ''
             Events in Play Lab:
@@ -7906,7 +7906,7 @@ en:
               description_student: ''
               description_teacher: ''
             Conditionals in Bee:
-              name: 'If/Else with Bee'
+              name: If/Else with Bee
               description_student: ''
               description_teacher: ''
             Conditionals & Loops in Maze:
@@ -7926,7 +7926,7 @@ en:
               description_student: ''
               description_teacher: ''
             'Unplugged: Binary':
-              name: 'Binary Images'
+              name: Binary Images
               description_student: ''
               description_teacher: ''
             Artist Binary:
@@ -8068,7 +8068,7 @@ en:
               description_student: ''
               description_teacher: ''
             'Real-life Algorithms: Paper Planes':
-              name: 'Paper Planes'
+              name: Paper Planes
               description_student: ''
               description_teacher: ''
             Programming in Collector:
@@ -8080,7 +8080,7 @@ en:
               description_student: ''
               description_teacher: ''
             'Loops: Getting Loopy':
-              name: 'Getting Loopy'
+              name: Getting Loopy
               description_student: ''
               description_teacher: ''
             Loops with Rey and BB-8:
@@ -9450,7 +9450,7 @@ en:
               description_student: ''
               description_teacher: ''
             'Programming: My Robotic Friends':
-              name: 'My Robotic Friends Jr.'
+              name: My Robotic Friends Jr.
               description_student: ''
               description_teacher: ''
             Programming in Maze:
@@ -9462,7 +9462,7 @@ en:
               description_student: ''
               description_teacher: ''
             'Loops: My Loopy Robotic Friends':
-              name: 'My Loopy Robotic Friends Jr.'
+              name: My Loopy Robotic Friends Jr.
               description_student: ''
               description_teacher: ''
             Loops in Collector:
