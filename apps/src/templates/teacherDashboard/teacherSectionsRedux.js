@@ -199,10 +199,7 @@ export const asyncLoadSectionData = (id) => (dispatch) => {
   dispatch({type: ASYNC_LOAD_BEGIN});
   let apis = [
     '/dashboardapi/sections',
-
-    // Ask the server for other version years of courses.
-    `/dashboardapi/courses?allVersions=1`,
-
+    `/dashboardapi/courses`,
     '/dashboardapi/sections/valid_scripts'
   ];
   if (id) {
