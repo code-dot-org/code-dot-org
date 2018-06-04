@@ -484,6 +484,10 @@ Dashboard::Application.routes.draw do
     get 'workshop_survey/facilitators/:session_id(/:facilitator_index)', to: 'workshop_daily_survey#new_facilitator'
     get 'workshop_survey/thanks', to: 'workshop_daily_survey#thanks'
 
+    get 'post_course_survey/thanks', to: 'post_course_survey#thanks'
+    post 'post_course_survey/submit', to: 'post_course_survey#submit'
+    get 'post_course_survey/:course_initials', to: 'post_course_survey#new'
+
     namespace :application do
       get 'facilitator', to: 'facilitator_application#new'
       get 'teacher', to: 'teacher_application#new'

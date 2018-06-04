@@ -31,14 +31,14 @@ module Pd
 
       @form_params = {
         environment: Rails.env,
-        user_id: current_user.id,
-        user_name: current_user.name,
-        user_email: current_user.email,
-        workshop_id: workshop.id,
-        workshop_course: workshop.course,
-        workshop_subject: workshop.subject,
-        regional_partner_name: workshop.regional_partner&.name,
-        session_id: session&.id,
+        userId: current_user.id,
+        userName: current_user.name,
+        userEmail: current_user.email,
+        workshopId: workshop.id,
+        workshopCourse: workshop.course,
+        workshopSubject: workshop.subject,
+        regionalPartnerName: workshop.regional_partner&.name,
+        sessionId: session&.id,
         day: day
       }
     end
@@ -70,19 +70,19 @@ module Pd
 
       @form_params = {
         environment: Rails.env,
-        user_id: current_user.id,
-        user_name: current_user.name,
-        user_email: current_user.email,
-        workshop_id: workshop.id,
-        workshop_course: workshop.course,
-        workshop_subject: workshop.subject,
-        regional_partner_name: workshop.regional_partner&.name,
-        session_id: session.id,
+        userId: current_user.id,
+        userName: current_user.name,
+        userEmail: current_user.email,
+        workshopId: workshop.id,
+        workshopCourse: workshop.course,
+        workshopSubject: workshop.subject,
+        regionalPartnerName: workshop.regional_partner&.name,
+        sessionId: session.id,
         day: workshop.sessions.index(session) + 1,
-        facilitator_id: facilitator.id,
-        facilitator_name: facilitator.name,
-        facilitator_position: facilitator_index + 1,
-        num_facilitators: facilitators.size
+        facilitatorId: facilitator.id,
+        facilitatorName: facilitator.name,
+        facilitatorPosition: facilitator_index + 1,
+        numFacilitators: facilitators.size
       }
     end
 

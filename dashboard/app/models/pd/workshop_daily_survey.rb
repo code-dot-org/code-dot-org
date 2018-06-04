@@ -41,7 +41,7 @@ module Pd
 
     before_validation :set_day_from_form_id, if: -> {day.nil?}
     def set_day_from_form_id
-      self.day = VALID_DAYS.find {|d| self.class.get_form_id_for_day(d)}
+      self.day = VALID_DAYS.find {|d| self.class.get_form_id_for_day(d) == form_id}
     end
 
     validates_uniqueness_of :user_id, scope: [:pd_workshop_id, :day, :form_id],
