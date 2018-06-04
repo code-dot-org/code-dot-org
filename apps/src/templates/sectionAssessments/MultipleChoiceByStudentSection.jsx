@@ -11,18 +11,19 @@ import {
 import { connect } from 'react-redux';
 
 class MultipleChoiceByStudentSection extends Component {
-  static PropTypes = {
+  static propTypes = {
     questionAnswerData: PropTypes.arrayOf(questionDataPropType),
-    studentAnswerData: PropTypes.arrayOf(studentAnswerDataPropType)
+    studentAnswerData: studentAnswerDataPropType,
   };
 
   render() {
+    const {questionAnswerData, studentAnswerData} = this.props;
     return (
       <div>
         <h1>Student Multiple Choice Overview Section</h1>
         <StudentAssessmentOverviewTable
-          questionAnswerData={[]}
-          studentAnswerData={[]}
+          questionAnswerData={questionAnswerData}
+          studentAnswerData={studentAnswerData}
         />
       </div>
     );

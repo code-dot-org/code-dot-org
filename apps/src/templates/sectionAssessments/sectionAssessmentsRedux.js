@@ -91,6 +91,12 @@ export const getAssessmentsForCurrentScript = (state) => {
   return state.sectionAssessments.assessmentsByScript[state.scriptSelection.scriptId] || {};
 };
 
+const getCorrectAnswer = (answerArr) => {
+  const correctIndex = answerArr.findIndex(answer => answer.correct);
+  const letterArr = ['A','B', 'C', 'D'];
+  return letterArr[correctIndex];
+};
+
 export const getQuestionAnswerData = (state) => {
   const assessmentsStructure = state.sectionAssessments.assessmentsStructureByScript[state.scriptSelection.scriptId] || {};
   if (Object.keys(assessmentsStructure).length === 0) {
@@ -99,7 +105,15 @@ export const getQuestionAnswerData = (state) => {
   const firstAssessment = Object.values(assessmentsStructure)[0];
   const questionData = firstAssessment.questions;
   console.log('question data -->', questionData);
-  return questionData;
+  const transformedData = questionData.filter(question => question.answers).map(question => {
+    return {
+      id: question.level_id,
+      question: question.question_text,
+      correctAnswer: getCorrectAnswer(question.answers),
+    };
+  });
+  console.log('transformed data', transformedData);
+  return transformedData;
 };
 
 export const getStudentAnswerData = (state) => {
@@ -111,7 +125,18 @@ export const getStudentAnswerData = (state) => {
   const firstStudentResponses = studentResponses[studentId].responses_by_assessment;
   const firstStudentAssessment = Object.values(firstStudentResponses)[0];
   console.log('student assessment', firstStudentAssessment);
-  return firstStudentAssessment;
+  const transformedData = {
+    id: studentId,
+    name: studentResponses[studentId].student_name,
+    studentAnswers: firstStudentAssessment.level_results.map(answer => {
+      return {
+        answers: answer.student_result || '',
+        status: answer.status,
+      };
+    })
+  };
+  console.log('transformedData', transformedData);
+  return transformedData;
 };
 
 // Make a request to the server for assessment data
