@@ -2,6 +2,7 @@
  * New workshop enrollment page
  */
 import React, {PropTypes} from 'react';
+import WorkshopDetails from './workshop_details';
 
 export default class WorkshopEnrollment extends React.Component {
   static propTypes = {
@@ -23,7 +24,9 @@ export default class WorkshopEnrollment extends React.Component {
           <div className="row">
             {/* Left Column*/}
             <div className ="span6">
-              <h2>Workshop Details Here</h2>
+              <WorkshopDetails
+                workshop={this.props.workshop}
+              />
 
               <h2>Facilitators</h2>
 
