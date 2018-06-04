@@ -386,17 +386,20 @@ class Script < ActiveRecord::Base
   end
 
   # Given a script family name, return a dummy Script with redirect_to field
-  # pointing toward the latest stable script in that family. For now, we assume:
-  #   1. the 2017 version is the latest stable version
-  #   2. the 2017 version's name is the family_name with the '-2017' suffix
+  # pointing toward the latest stable script in that family.
   # @param family_name [String] The name of the script family to search in.
   # @return [Script|nil] A dummy script object, not persisted to the database,
   #   with only the redirect_to field set.
   def self.get_script_family_redirect(family_name)
-    script_version_name = "#{family_name}-#{2017}"
-    Script.find_by(name: script_version_name) ?
-      Script.new(redirect_to: script_version_name) :
-      nil
+    script_name =
+      Script.
+        where(family_name: family_name).
+        all.
+        select(&:is_stable).
+        sort_by(&:version_year).
+        last.
+        try(:name)
+    script_name ? Script.new(redirect_to: script_name) : nil
   end
 
   def text_response_levels
