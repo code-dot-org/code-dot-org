@@ -163,6 +163,7 @@
     error: Došlo je do greške.
     email_preference_question: Can we email you about updates to our courses, local
       learning opportunities, or other computer science news?
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: Da
     email_preference_no: Ne
     email_preference_required: You must specify an email preference.
@@ -618,6 +619,8 @@
   gender:
     male: Muško
     female: Žensko
+    non_binary: Non-binary
+    not_listed: Preferred term not listed
     none: Radije ne bih odgovorio/la
   user_type:
     student: Učenik

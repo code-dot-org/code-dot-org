@@ -2,9 +2,9 @@
   data:
     course:
       name:
-        csp:
+        csp-2017:
           assignment_family_title: Computer Science Principles
-          title: Principios de Ciencias de la Computación
+          title: Computer Science Principles ('17-'18)
           version_title: "'17-'18"
           description_student: En otoño 2016, el College Board lanzó su más reciente
             curso AP, Principios de Ciencias de la Computación. El curso introduce
@@ -14,29 +14,29 @@
             el campo de Ciencias de la Computación y atraer a quienes tradicionalmente
             son subrepresentados en el con herramientas computacionales esenciales
             y oportunidades multidisciplinarias.
-          description_teacher: En otoño de 2016, el College Board lanzó su más reciente
+          description_teacher: En otoño 2016, el College Board lanzó su más reciente
             curso AP, Principios de Ciencias de la Computación. El curso introduce
             a los estudiantes a los conceptos fundamentales de Ciencias de la computación
             y desafía a explorar cómo la computación y la tecnología pueden impactar
-            el mundo. El Programa AP lo diseñó con el objetivo de crear líderes en
+            el mundo. El programa AP lo diseñó con el objetivo de crear líderes en
             el campo de Ciencias de la Computación y atraer a quienes tradicionalmente
             son subrepresentados en el con herramientas computacionales esenciales
             y oportunidades multidisciplinarias.
           description_short: Aprende conceptos fundamentales de ciencias de la computación.
-        csd:
+        csd-2017:
           assignment_family_title: Computer Science Discoveries
-          title: Computer Science Discoveries
+          title: Computer Science Discoveries ('17-'18)
           version_title: "'17-'18"
-          description_student: CS Discoveries es un curso introductorio que permite
-            a los estudiantes crear artefactos auténticos y utilizar las Ciencias
-            de la computación como un medio para la creatividad, comunicación, resolución
-            de problemas y diversión.
-          description_teacher: CS Discoveries es un curso introductorio que permite
-            a los estudiantes crear artefactos auténticos y utilizar las Ciencias
-            de la computación como un medio para la creatividad, comunicación, resolución
-            de problemas y diversión.
-          description_short: Un curso introductorio de Ciencias de la Computación
-            que permite a los estudiantes crear artefactos auténticos.
+          description_student: Computer Science Discoveries (CS Discoveries) is an
+            introductory computer science course that empowers students to create
+            authentic artifacts and engage with computer science as a medium for creativity,
+            communication, problem solving, and fun.
+          description_teacher: Computer Science Discoveries (CS Discoveries) is an
+            introductory computer science course that empowers students to create
+            authentic artifacts and engage with computer science as a medium for creativity,
+            communication, problem solving, and fun.
+          description_short: An introductory computer science course that empowers
+            students to create authentic artifacts.
         allthethingscourse:
           title: allthethingscourse
           description_short: Este es un curso para allthethings

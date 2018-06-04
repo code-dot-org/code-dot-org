@@ -2,7 +2,7 @@
   data:
     course:
       name:
-        csp:
+        csp-2017:
           assignment_family_title: Computer Science Principles
           title: Computer Science Principles ('17-'18)
           version_title: "'17-'18"
@@ -23,7 +23,7 @@
             underrepresented with essential computing tools and multidisciplinary
             opportunities.
           description_short: Learn foundational computer science concepts.
-        csd:
+        csd-2017:
           assignment_family_title: Computer Science Discoveries
           title: Computer Science Discoveries ('17-'18)
           version_title: "'17-'18"

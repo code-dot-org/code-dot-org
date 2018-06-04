@@ -1579,6 +1579,8 @@ pl:
         New Play Lab Project_callout1: Kliknij na kategorie aby zobaczyć bloki w twoim przyborniku! Przeciągnij je na obszar roboczy aby dodać je do swojego programu.
         New Play Lab Project_callout2: Naciśnij "uruchom" aby zapisać i wypróbować swój program
         sign_in_to_save_project: Chcesz później wczytać projekt? Zaloguj się i zapisz go na swoim koncie!
+      courseF_playlab_brokenText_callout:
+        courseF_playlab_variables5c_1: Tutaj znajdziesz swój blok zmiennej.
       courseF_playlab_embed_vars_callout: { }
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: The toolbox has been organized into categories to make it easier to find the blocks you need.

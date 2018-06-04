@@ -1016,9 +1016,9 @@ it:
       courseC_PlayLab_events_challenge1_2018_callout:
         courseC_PlayLab_events_challenge1_1: Questo blocco ti permette di muovere gli attori in diverse parti dello spazio di gioco.
       courseC_artist_loopsPrePre1a_callout:
-        courseC_artist_loopsPrePre1a_1: Start by using this block to get the artist to the center of the screen.
+        courseC_artist_loopsPrePre1a_1: Inizia usando questo blocco per portare l'artista al centro dello schermo.
       courseC_artist_loopsPrePre1a_2018_callout:
-        courseC_artist_loopsPrePre1a_1: Start by using this block to get the artist to the center of the screen.
+        courseC_artist_loopsPrePre1a_1: Inizia usando questo blocco per portare l'artista al centro dello schermo.
       courseC_artist_prog1_callout: { }
       courseC_artist_prog1_2018_callout: { }
       courseC_artist_prog2_callout: { }
@@ -1030,9 +1030,9 @@ it:
       courseC_collector_prog1_2018_callout:
         courseC_collector_prog1_1: Vedi qualche nuovo blocco nella cassetta degli attrezzi? Non preoccuparti, ti mostreremo come usarli più avanti in questa lezione.
       courseC_collector_prog7_callout:
-        courseC_collector_prog7_1: You can take more blocks from the toolbox if you need them!
+        courseC_collector_prog7_1: Se necessario, puoi prendere altri blocchi dalla cassetta degli attrezzi!
       courseC_collector_prog7_2018_callout:
-        courseC_collector_prog7_1: You can take more blocks from the toolbox if you need them!
+        courseC_collector_prog7_1: Se necessario, puoi prendere altri blocchi dalla cassetta degli attrezzi!
       courseC_collector_prog8_callout: { }
       courseC_collector_prog8_2018_callout: { }
       courseC_collector_prog9_callout: { }
@@ -1048,9 +1048,9 @@ it:
       courseC_harvester_loops1_2018_callout:
         courseC_harvester_loops1_callout1: Il numero quattro sulla zucca dice che ci sono quattro zucche disponibili da raccogliere.
       courseC_maze_debugging5_callout:
-        courseC_maze_debugging5_1: Grey blocks cannot be deleted!
+        courseC_maze_debugging5_1: Non puoi cancellare i blocchi grigi!
       courseC_maze_debugging5_2018_callout:
-        courseC_maze_debugging5_1: These blocks are locked and cannot be deleted!
+        courseC_maze_debugging5_1: Questi blocchi grigi sono bloccati e non possono essere cancellati!
       courseC_maze_loops2_callout:
         courseC_maze_loops2_1: You only have one of these blocks available in this puzzle.
       courseC_maze_loops2_predict1_callout: { }
@@ -1149,7 +1149,7 @@ it:
       courseD_collector_nested_loops_challenge2a_callout: { }
       courseD_collector_ramp10_callout: { }
       courseD_collector_ramp8_callout:
-        courseD_collector_ramp8_1: 'Usa questo blocco per raccogliere un singolo pezzo di tesoro.  '
+        courseD_collector_ramp8_1: 'Usa questo blocco per raccogliere un diamante.'
       courseD_collector_ramp9_callout: { }
       courseD_collector_until_challenge1_callout: { }
       courseD_farmer_until_challenge2_callout: { }
@@ -1289,7 +1289,7 @@ it:
       courseE_artist_ramp9_2_2018_callout: { }
       courseE_collector_ramp10_callout: { }
       courseE_collector_ramp8_callout:
-        courseD_collector_ramp8_1: 'Usa questo blocco per raccogliere un singolo pezzo di tesoro.  '
+        courseD_collector_ramp8_1: 'Usa questo blocco per raccogliere un diamante.'
       courseE_collector_ramp9_callout: { }
       courseE_farmer_functions1_callout:
         courseE_farmer_functions1_2: The toolbox is organized a little differently this time! Click on the different categories to see which blocks you have.
@@ -1579,6 +1579,8 @@ it:
         New Play Lab Project_callout1: Clicca le categorie nella cassetta degli attrezzi per vedere tutti i blocchi a disposizione. Trascina i blocchi nell'area di lavoro per aggiungerli al tuo programma.
         New Play Lab Project_callout2: Clicca su "Esegui" per salvare e provare il tuo progetto
         sign_in_to_save_project: Vuoi poter recuperare il tuo progetto in un altro momento? Accedi per salvare questo progetto nel tuo account!
+      courseF_playlab_brokenText_callout:
+        courseF_playlab_variables5c_1: Troverai qui il tuo blocco variabile.
       courseF_playlab_embed_vars_callout: { }
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: The toolbox has been organized into categories to make it easier to find the blocks you need.
@@ -1672,7 +1674,7 @@ it:
       grade2_collector_10_callout: { }
       grade2_collector_10_2018_callout: { }
       grade2_collector_7_callout:
-        grade2_collector_7_1: You can take more blocks from the toolbox if you need them!
+        grade2_collector_7_1: Se necessario, puoi prendere altri blocchi dalla cassetta degli attrezzi!
       grade2_collector_8_callout: { }
       grade2_collector_9_callout: { }
       grade2_collector_9a_callout: { }

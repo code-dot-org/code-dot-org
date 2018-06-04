@@ -3292,8 +3292,8 @@ zh-CN:
       courseA_playLab_events2_2018_instruction: Jorge the Dog wants to say "Hi there."  Can you help him?
       courseA_playLab_events3_instruction: 将 "向左移动" 块连接到工作区中的 "当点击向左时"的事件块。
       courseA_playLab_events3_2018_instruction: 将`向左移动`模块连接到工作区中的`当点击向左时`的事件模块下。
-      courseA_playLab_events4_instruction: 现在，在`右`按钮被点击时，让乔治向右移动。
-      courseA_playLab_events4_2018_instruction: 现在，在`右`按钮被点击时，让乔治向右移动。
+      courseA_playLab_events4_instruction: 添加模块，在点击`右`按钮时向右移动。
+      courseA_playLab_events4_2018_instruction: 添加另一个时间模块，在按下`右`按钮时，让乔治向右移动。
       courseA_playLab_events5_instruction: 添加事件让乔治在`上`和`下`按钮被点击时，向上和下移动。
       courseA_playLab_events5_2018_instruction: 添加事件让乔治在`上`和`下`按钮被点击时，向上和下移动。
       courseA_playLab_events6_instruction: 当乔治被点击的时候，改变背景和播放随机声音来添加一些乐趣。
@@ -3363,6 +3363,7 @@ zh-CN:
       courseB_collector_loops_challenge1_instruction: '这次你的模块有限。得到所有的宝藏! '
       courseB_collector_loops_challenge1_2018_instruction: '这次你的模块有限。得到所有的宝藏! '
       courseB_collector_loops_challenge2_instruction: 让我们去拿宝藏吧! 帮助我越过每一行, 然后回来开始下一行。你能找到规律吗？
+      courseB_collector_loops_challenge2_2018_instruction: 让我们去拿宝藏吧! 帮助我越过每一行, 然后回来开始下一行。你能找到规律吗？
       courseB_collector_loops_challenge2a_instruction: 帮助罗瑞尔获得至少**5**份财宝来通过这关。
       courseB_collector_loops_challenge2a_2018_instruction: 帮助罗瑞尔获得至少**5**份财宝来通过这关。
       courseB_collector_loops_challenge`_instruction: '这一次您只能每个箭头使用一次。去拿所有的宝藏吧! '
@@ -4619,6 +4620,7 @@ zh-CN:
       courseF_maze_ramp6_instruction: '"保持冷静, 帮助我找到那只坏猪。否则我会生气的!“'
       courseF_maze_ramp6_2018_instruction: '"Keep calm and help me find the bad pig. Otherwise I might get angry!"'
       courseF_maze_ramp7_instruction: 使用你学会的，让小鸟飞到猪那里！
+      courseF_playlab_brokenText_instruction: 在这一阶段的剩余部分，我们要建立一个由你来控制的游戏！
       courseF_playlab_embed_vars_instruction: 回答 Pegleg 海盗的问题。如果输入代号 "密码" 会发生什么情况？或者其他的代码名称呢？
       courseF_playlab_variables0_instruction: 这是一个海盗。近来，他非常难以理解！
       courseF_playlab_variables1_instruction: 这是一个海盗。近来，他非常难以理解！

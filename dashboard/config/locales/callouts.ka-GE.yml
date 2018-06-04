@@ -1939,6 +1939,8 @@
           და გასაშვებად
         sign_in_to_save_project: გსურთ მოგვიანებით გაწვდეთ ამ პროექტს? შედით თქვენს
           ანგარიშში, რათა შეინახოთ ეს პროექტი მასში!
+      courseF_playlab_brokenText_callout:
+        courseF_playlab_variables5c_1: აქ თქვენ იპოვით თქვენს ცვლადის ბლოკს.
       courseF_playlab_embed_vars_callout: {}
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: The toolbox has been organized into categories

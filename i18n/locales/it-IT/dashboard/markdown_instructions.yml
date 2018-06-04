@@ -11109,8 +11109,8 @@ it:
         # Debug: colorLeds
         
         Can you debug the index values so that the rainbow shows up on the board like in the picture?
-      CSD U6 colorLeds debug_2018_markdown_instruction: |-
-        <img src="https://images.code.org/e055be621221385d3503962bee5aa616-image-1491493475417.44.28.png" style="width:250px; float:right">
+      CSD U6 colorLeds debug_2018_markdown_instruction: |
+        <img src="https://images.code.org/723f036c40ef2770426d5d437e69fcde-image-1527268321449.png" style="width:250px; float:right">
         
         # Debug: colorLeds
         
@@ -11665,7 +11665,7 @@ it:
         
         # Do This
         
-        We're going to start an app that will control all of the Color LEDs on your board. The first step is to wire up the button that turns all of the LEDs on.
+        Over the next few levels, you'll create an app that will control all of the Color LEDs on your board. The first step is to wire up the button that turns all of the LEDs on.  (Don't worry about the rest of the comments in the workspace.  You'll work on those in later levels.)
         
         * Add an event handler for "button_on"
         * Place a _for loop_ in your event handler that repeats until it reaches in the end of the array `colorLeds`
@@ -12455,7 +12455,7 @@ it:
         * The movement meter is being triggered by a button press, instead of the accelerometer's `change` event.
         * The programmer forgot how to use the counter pattern to increase the movement variable.
         
-        Once you have found the bugs, run the program and try to pass the board to your partner without setting off the alerm.
+        Once you have found the bugs, run the program and try to pass the board to your partner without setting off the alarm.
       CSD U6 stillness game predict code_2018_markdown_instruction: |-
         # Change with the Accelerometer
         
@@ -19550,7 +19550,10 @@ it:
         
         ![](https://images.code.org/d79263f7a6e129962f830ce0af2ed3cc-image-1434414362601.PNG)
       'Internet Simulator: Sending Text_markdown_instruction': "## Sending Formatted Text Activity\n\n**Directions:**  \nWork with a partner or in a small team to develop a protocol that allows you to send formatted text. \n\n**Guidelines:**  \n- Both the text and the formatting instructions must be derived from the printable ASCII character set (i.e. codes 32-126).\n- Your protocol must encode at least:\n\\t- bold, italics, and underlining\n\\t- three different font sizes (large, medium, and small)\n\\t- three different font colors (red, black, blue)\n- You will demonstrate that your protocol works by having the recipient be able to faithfully draw (or produce in some fashion) the formatted text based only on the data she received through an ASCII-text version of the Internet Simulator. A sample message can be found below.\n\n![](https://images.code.org/6fa1d53e4d36a9d0bac5b9b8fb4bc81d-image-1434427211242.PNG)\n\n**Develop Your Protocol:**  \nUse the worksheet handed out by your teacher to brainstorm ideas for your protocol. Iteratively improve your protocol by testing it out with simple sample messages.\n"
-      'Internet Simulator: Sending Text_2018_markdown_instruction': "## Sending Formatted Text Activity\n\n**Directions:**  \nWork with a partner or in a small team to develop a protocol that allows you to send formatted text. \n\n**Guidelines:**  \n- Both the text and the formatting instructions must be derived from the printable ASCII character set (i.e. codes 32-126).\n- Your protocol must encode at least:\n\\t- bold, italics, and underlining\n\\t- three different font sizes (large, medium, and small)\n\\t- three different font colors (red, black, blue)\n- You will demonstrate that your protocol works by having the recipient be able to faithfully draw (or produce in some fashion) the formatted text based only on the data she received through an ASCII-text version of the Internet Simulator. A sample message can be found below.\n\n![](https://images.code.org/6fa1d53e4d36a9d0bac5b9b8fb4bc81d-image-1434427211242.PNG)\n\n**Develop Your Protocol:**  \nUse the worksheet handed out by your teacher to brainstorm ideas for your protocol. Iteratively improve your protocol by testing it out with simple sample messages.\n"
+      'Internet Simulator: Sending Text_2018_markdown_instruction': |-
+        ## Sending Text
+        
+        **Directions:** Design an encoding system to send text using the Internet Simulator. Your teacher will provide you with a number of increasingly complex challenges that you'll need to solve.
       Internet Speed Test_markdown_instruction: "# Check for Internet Accessibility\n\nAnother difference in how people will experience your website is in the speed of their internet connection as they try to load the content on your web page. To check this we can use the Google Chrome Developer Tools to simulate a slow internet connection.\n\n# Do This\n\n* Open this page in the Google Chrome Web Browser\n* From the _View_ menu, find _Developer_ \n\n<img src=\"https://images.code.org/c6f91de459cec7ed561b11783ea833bd-image-1475634452345.png\" style=\"width:200px\">\n\n* In the _Developer_ submenu, select _Developer Tools_ \n\n<img src=\"https://images.code.org/fb8402f57f9121c729c0880d7bf06dfa-image-1475634452345.png\" style=\"width:200px\">\n\n* The _Developer Tools_ will open as a frame at the bottom of your browser window\n\n<img src=\"https://images.code.org/95be9a273afd32305a0bc4c20b530647-image-1475634452344.png\" style=\"width:400px\">\n\n* Click the menu that says \"No throttling\" and select \"GPRS\" \n\n<img src=\"https://images.code.org/07240b96943b01a80505ba6b3900b7da-image-1475634452344.png\" style=\"width:200px\">\n\n*  Hold down _Shift_ while reloading the page (this will delete cached files so the browser has to re download them while throttled)"
       Introduction to App Lab and Turtle Programming_markdown_instruction: 'The video below is from lesson 4, and introduces App Lab and the Turtle. '
       Introduction to Conditionals - Part 2.2_markdown_instruction: "### Points to pay attention to:\n\n**Start** play at 1:37 \n**Stop** play at 2:20\n\nIt's all you need for the exercises that follow.  You'll watch the remainder of the video after that.\n\n* An IF statement can have an else clause, but an ELSE clause cannot exist on its own.\n* With an else clause you are *guaranteeing* that one of two portions of code will run.\n\n"
@@ -20814,6 +20817,11 @@ it:
         **Instructions**:
         
         Invent and test a protocol for encoding and sending text messages. Your protocol must include the letters a-z, spaces, and common punctuation marks. You may add additional characters if you wish. See the worksheet handed out by your teacher for more detailed instructions!
+      U1L11 Abstraction Reflection_2018_markdown_instruction: |-
+        An abstraction is a simplified representation of something that is more complex. Decimal numbers were a useful abstraction in the context of today's lesson. Write a short response to both questions below.
+        
+        * What is the underlying complexity decimal numbers were used to represent.
+        * How were decimal numbers helpful in designing a system to represent text in bits?
       U1L11 Collaboration Reflection_markdown_instruction: |
         What problems arose in your efforts to create a working protocol? How did you think about the problem(s) in order to solve it?
         
@@ -20825,6 +20833,10 @@ it:
       U1L11 NetSim numbers with Ascii_markdown_instruction: "## Sending Formatted Text Activity\n\n**Directions:**  \nWork with a partner or in a small team to develop a protocol that allows you to send formatted text. \n\n**Guidelines:**  \n- Both the text and the formatting instructions must be derived from the printable ASCII character set (i.e. codes 32-126).\n- Your protocol must encode at least:\n\\t- bold, italics, and underlining\n\\t- three different font sizes (large, medium, and small)\n\\t- three different font colors (red, black, blue)\n- You will demonstrate that your protocol works by having the recipient be able to faithfully draw (or produce in some fashion) the formatted text based only on the data she received through an ASCII-text version of the Internet Simulator. A sample message can be found below.\n\n![](https://images.code.org/6fa1d53e4d36a9d0bac5b9b8fb4bc81d-image-1434427211242.PNG)\n\n**Develop Your Protocol:**  \nUse the worksheet handed out by your teacher to brainstorm ideas for your protocol. Iteratively improve your protocol by testing it out with simple sample messages.\n"
       U1L11 Reflection Free Response_markdown_instruction: "Respond to this prompt or to another as directed by your teacher.\n\nHow long did it take to send a formatted text message using your protocol? \n\nHow many extra bits did your encoding scheme need to communicate the text?  Calculate the percentage of bits that were used for formatting instead of sending the actual text message. \n\npercent = (formatting bits)/(total bits) * 100\n\n\n"
       U1L11 Reflection Free Response_2018_markdown_instruction: "Respond to this prompt or to another as directed by your teacher.\n\nHow long did it take to send a formatted text message using your protocol? \n\nHow many extra bits did your encoding scheme need to communicate the text?  Calculate the percentage of bits that were used for formatting instead of sending the actual text message. \n\npercent = (formatting bits)/(total bits) * 100\n\n\n"
+      U1L11 Reflection Multiple Representations_2018_markdown_instruction: |-
+        "The binary pattern `01000001` represents the number 65."
+        
+        Write a brief response explaining whether you believe this statement is always true. Explain your reasoning.
       U1L12 Reflection Free Response_markdown_instruction: "Respond to this prompt or to another as directed by your teacher.\n\nThe salesperson in a cell phone store is telling me that the phone I'm considering has 8GB of memory, which means I can save 10,000 photos taken with the phone's camera! \n\nIs the salesperson telling me the truth? Why or why not?\n"
       U1L12 Reflection Free Response_2018_markdown_instruction: "Respond to this prompt or to another as directed by your teacher.\n\nThe salesperson in a cell phone store is telling me that the phone I'm considering has 8GB of memory, which means I can save 10,000 photos taken with the phone's camera! \n\nIs the salesperson telling me the truth? Why or why not?\n"
       U1L13 Assess Text Compression amount_markdown_instruction: "Here's the same compressed text that you saw on the last level, but now we also see the size of the original, uncompressed text. On the previous level you reconstructed the text by tracing back through the dictionary. Now we're going to think about if this is a \"good\" compression rate.\n\n![](https://images.code.org/ffb941527193cd04c02ff2ce392d02e6-image-1439479301236.20.23 AM.png)\n\nIn the text box below, answer the following two questions:\n\n- What is the compression rate, or the compressed text size + dictionary size compared to the original text size? (as a percentage) \n- Is this a \"good\" compression rate? Why or why not? \n\n\n"
@@ -20995,6 +21007,7 @@ it:
       U2L04 Assessment3_2018_markdown_instruction: 'Can you know in advance the path a message will take between you and another computer on the Internet? Justify your answer.  '
       U2L04 Free Response Wrap Up_markdown_instruction: 'How do you think the routers are physically connected? Does it matter to you? Why or why not?  '
       U2L05 - NetSim - Packets and Building TCP_markdown_instruction: "## Packets and Making a Reliable Internet\n\n**Challenge:** Develop a protocol for reliably sending a message across an unreliable network\n\n**An Unreliable Internet Simulator:** The current version of the Internet Simulator is modeled after some actual constraints of the Internet\n- Messages must be divided into packets which may contain <em><strong> at most eight (8) ASCII characters </em></strong>\n- Messages should be long enough to require at least 10 packets\n- Packets may not arrive in the order sent\n- Packets may be dropped while in transmission\n\n**Directions:** In a group or individually join a router in the Internet Simulator and practice sending messages given these new constraints. Once you are comfortable with the challenge, iteratively design a protocol that can reliably send a message to a partner. You and your partner should join <em><strong> DIFFERENT </strong></em> routers.\n\n**Protocol Requirements:**\n- All communication can only be done through the Internet Simulator\n- You must send a message that spans at least 10 packets (i.e. an 80 character ASCII message). \n- The protocol should account for the possibility that the characters might be entirely random (i.e. not necessarily English - do not count on human intuition to reconstruct the message. The message is not known beforehand.)\n- The sender and receiver must be confident the full message was successfully transmitted and reconstructed."
+      U2L05 Lossy vs. Lossless FR 1_2018_markdown_instruction: In general, what are reasons that someone would choose to use lossy compression? When would they choose to use lossless compression? Write a brief response below.
       U2L05 Reflection 1_markdown_instruction: 'In your own words, what were the primary obstacles you needed to overcome in today’s challenge? How do these obstacles mirror actual problems encountered on the Internet?  '
       U2L05 Reflection 1_2018_markdown_instruction: 'In your own words, what were the primary obstacles you needed to overcome in today’s challenge? How do these obstacles mirror actual problems encountered on the Internet?  '
       U2L07 Assessment5_markdown_instruction: 'When analyzing algorithms why doesn''t the amount of real time (clock time) tell us very much about the algorithm''s "efficiency"?  '
@@ -24785,7 +24798,7 @@ it:
         
         # Do This:
         
-        **You code from the previous exercise** is provided.
+        **Your code from the previous exercise** is provided.
         
         * Use the syntax shown above **to display the `name` and `grade` of the first student in your students array.**
         * Use the syntax shown above **to display the `name` and `onTimeToClass` for the last student in your students array.**
@@ -27113,27 +27126,27 @@ it:
       courseA_bee_seq8_markdown_instruction: This maze looks familiar... can you figure out what looks different?
       courseA_bee_seq9_markdown_instruction: This bee needs nectar! Do you see a pattern?
       courseA_collector_loops1_markdown_instruction: |-
-        **Tempo di giocare:** questa è Laurel l'Avventuriera! Muovila per farle raccogliere più tesori che puoi.\r
+        **Tempo di giocare:** questa è Laurel l'Avventuriera! Muovila per farle raccogliere più diamanti che puoi.\r
         \r
-        Trascina i blocchi nell'area di lavoro e cerca di capire come prendere il tesoro. Raccogli almeno un elemento per superare questo livello.\r
+        Trascina i blocchi nell'area di lavoro e cerca di capire come prendere i diamanti. Raccogli almeno un diamante per completare questo esercizio.\r
         \r
-        (Se non sei riuscito a raccogliere tutti i tesori, ma sei soddisfatto, premi il pulsante "Termina")
-      courseA_collector_loops12_markdown_instruction: "*\"Evviva! Raccogli più tesori che puoi!\"* \\r\n(Se non sei riuscito a raccogliere tutti i tesori, ma sei soddisfatto, premi il pulsante \"Termina\")"
-      courseA_collector_loops12_2018_markdown_instruction: "*\"Evviva! Raccogli più tesori che puoi!\"* \\r\n(Se non sei riuscito a raccogliere tutti i tesori, ma sei soddisfatto, premi il pulsante \"Termina\")"
+        (Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante "Termina")
+      courseA_collector_loops12_markdown_instruction: "*\"Evviva! Raccogli più diamanti che puoi!\"* \\r\n(Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante \"Termina\")"
+      courseA_collector_loops12_2018_markdown_instruction: "*\"Evviva! Raccogli più diamanti che puoi!\"* \\r\n(Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante \"Termina\")"
       courseA_collector_loops1_2018_markdown_instruction: |-
-        **Tempo di giocare:** questa è Laurel l'Avventuriera! Muovila per farle raccogliere più tesori che puoi.\r
+        **Tempo di giocare:** questa è Laurel l'Avventuriera! Muovila per farle raccogliere più diamanti che puoi.\r
         \r
-        Trascina i blocchi nell'area di lavoro e cerca di capire come prendere il tesoro. Raccogli almeno un elemento per superare questo livello.\r
+        Trascina i blocchi nell'area di lavoro e cerca di capire come prendere i diamanti. Raccogli almeno un diamante per completare questo esercizio.\r
         \r
-        (Se non sei riuscito a raccogliere tutti i tesori, ma sei soddisfatto, premi il pulsante "Termina")
+        (Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante "Termina")
       courseA_collector_loops2_markdown_instruction: |2
-        Raccogli tutte e tre le gemme! Muovi Laurel su ogni pezzo del tesoro e poi usa questo blocco:\r
+        Raccogli tutti e tre i diamanti! Muovi Laurel su ogni diamante e poi usa questo blocco:\r
          <xml><block type="collector_collect"/></xml>
       courseA_collector_loops2_2018_markdown_instruction: |2
-        Raccogli tutte e tre le gemme! Muovi Laurel su ogni pezzo del tesoro e poi usa questo blocco:\r
+        Raccogli tutti e tre i diamanti! Muovi Laurel su ogni diamante e poi usa questo blocco:\r
          <xml><block type="collector_collect"/></xml>
-      courseA_collector_loops3_markdown_instruction: "Come può Laurel raccogliere tutte e cinque le gemme del tesoro utilizzando un solo blocco?\n<xml><block type=\"maze_moveEast\"/></xml>"
-      courseA_collector_loops3_2018_markdown_instruction: "Come può Laurel raccogliere tutte e cinque le gemme del tesoro utilizzando un solo blocco?\n<xml><block type=\"maze_moveEast\"/></xml>"
+      courseA_collector_loops3_markdown_instruction: "Come può Laurel raccogliere tutti e cinque i diamanti usando un solo blocco?\n<xml><block type=\"maze_moveEast\"/></xml>"
+      courseA_collector_loops3_2018_markdown_instruction: "Come può Laurel raccogliere tutti e cinque i diamanti usando un solo blocco?\n<xml><block type=\"maze_moveEast\"/></xml>"
       courseA_collector_loops_challenge1_markdown_instruction: '*"Can you help me spot some bugs? I know which way I want to go, but I''m not sure how many steps to take."*'
       courseA_collector_loops_challenge1_2018_markdown_instruction: '*"Can you help me spot some bugs? I know which way I want to go, but I''m not sure how many steps to take."*'
       courseA_collector_preLoops1_markdown_instruction: "This is Laurel the Adventurer! \n\nPress \"Run\" to see her walk up to the treasure and grab it."
@@ -27367,21 +27380,21 @@ it:
         
         (Se non sei riuscito a raccogliere tutti i tesori, ma sei soddisfatto, premi il pulsante "Termina")
       courseB_collector_loops1_2018_markdown_instruction: |-
-        **Tempo di giocare:** questa è Laurel l'Avventuriera! Muovila per farle raccogliere più tesori che puoi.\r
+        **Tempo di giocare:** questa è Laurel l'Avventuriera! Muovila per farle raccogliere più diamanti che puoi.\r
         \r
-        Trascina i blocchi nell'area di lavoro e cerca di capire come prendere il tesoro. Raccogli almeno un elemento per superare questo livello.\r
+        Trascina i blocchi nell'area di lavoro e cerca di capire come prendere i diamanti. Raccogli almeno un diamante per completare questo esercizio.\r
         \r
-        (Se non sei riuscito a raccogliere tutti i tesori, ma sei soddisfatto, premi il pulsante "Termina")
+        (Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante "Termina")
       courseB_collector_loops2_markdown_instruction: |-
-        Muovi Laurel lungo il tesoro e usa il blocco <xml><block type="collector_collect"/></xml> per racccoglierlo.
+        Muovi Laurel lungo i diamanti e usa il blocco <xml><block type="collector_collect"/></xml> per racccoglierlo.
         
-        Raccogli tutte e quattro le gemme per completare l'esercizio.
+        Raccogli tutti e quattro i diamanti per completare l'esercizio.
       courseB_collector_loops2_2018_markdown_instruction: |-
-        Muovi Laurel lungo il tesoro e usa il blocco <xml><block type="collector_collect"/></xml> per racccoglierlo.
+        Muovi Laurel lungo i diamanti e usa il blocco <xml><block type="collector_collect"/></xml> per racccoglierlo.
         
-        Raccogli tutte e quattro le gemme per completare l'esercizio.
-      courseB_collector_loops3_markdown_instruction: "Come può Laurel raccogliere tutte e cinque le gemme del tesoro utilizzando un solo blocco?\n<xml><block type=\"maze_moveEast\"/></xml>"
-      courseB_collector_loops3_2018_markdown_instruction: "Come può Laurel raccogliere tutte e cinque le gemme del tesoro utilizzando un solo blocco?\n<xml><block type=\"maze_moveEast\"/></xml>"
+        Raccogli tutti e quattro i diamanti per completare l'esercizio.
+      courseB_collector_loops3_markdown_instruction: "Come può Laurel raccogliere tutti e cinque i diamanti usando un solo blocco?\n<xml><block type=\"maze_moveEast\"/></xml>"
+      courseB_collector_loops3_2018_markdown_instruction: "Come può Laurel raccogliere tutti e cinque i diamanti usando un solo blocco?\n<xml><block type=\"maze_moveEast\"/></xml>"
       courseB_collector_loops3_predict1_markdown_instruction: How can Laurel collect all five piles of gold using only one `E -->` block?
       courseB_collector_loops_challenge2a_markdown_instruction: |-
         *"Let's get the treasure!"*
@@ -27493,21 +27506,21 @@ it:
         Use a new block to make Waddles automatically move back to the start when he runs into the Dinosaur and when he scores a point. This will make your game more challenging and fun!
         
         Play the game and move Waddles with the arrows until you score enough points. Waddles must be moved to the `middle left` position of the screen to complete this challenge.
-      courseC_artist_loop1_markdown_instruction: "Fantastic!  \n\nLet's add some style by changing the brush using the `set pattern` block before our loop starts."
-      courseC_artist_loop1_2018_markdown_instruction: "Fantastic!  \n\nLet's add some style by changing the brush using the `set pattern` block before our loop starts."
-      courseC_artist_loops1a_markdown_instruction: "**Free Play:** Let's build something bigger, one step at a time!  You can make anything you want, but we're going to show you how to make something like this!\n\n![expandable](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)\n\nUse the `jump to 200 over 200 down` to get the artist to the center of the play area, then use the `draw a sticker` block to make a bird appear.  \n\n---\n\nPress \"Finish\" when you are happy with what you've made."
+      courseC_artist_loop1_markdown_instruction: "Fantastico!\n\nAggiungiamo un po' di stile modificando il pennello con il blocco 'imposta lo schema' prima che inizi il ciclo."
+      courseC_artist_loop1_2018_markdown_instruction: "Fantastico!\n\nAggiungiamo un po' di stile modificando il pennello con il blocco 'imposta lo schema' prima che inizi il ciclo."
+      courseC_artist_loops1a_markdown_instruction: "**Tempo di giocare:** Facciamo qualcosa di più intrigante, un passo alla volta! Puoi creare ciò che preferisci, ma se vuoi ti mostriamo come fare un disegno come questo!\n\n![expandable](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)\n\nUsa il blocco `salta a 200 avanti 200 in basso` per portarti al centro dell'area di gioco, quindi usa il blocco `disegna un adesivo` per far apparire un uccello.\n\n---\n\nPremi \"Termina\" quando sei soddisfatto di ciò che hai creato."
       courseC_artist_loops1a_2018_markdown_instruction: "**Free Play:** Let's build something bigger, one step at a time!  \n\nUse the `jump to 200 over 200 down` to get the artist to the center of the play area, then use the `draw a sticker` block to make a bird appear.  \n\n---\n\nPress \"Finish\" when you are happy with what you've made."
       courseC_artist_loops2_markdown_instruction: |-
         Now that the zombie knows his way, help him dig **25 pixel long** holes along the path to plant more flowers!
         - Each hole should be 25 pixels long
         - Each hole has 25 pixels of space before the next hole
-      courseC_artist_loops2a_markdown_instruction: Now, use a loop to spin your bird around 12 times with a 30 degree turn.
-      courseC_artist_loops2a_2018_markdown_instruction: Now, use a loop to spin your bird around 12 times with a 30 degree turn.
-      courseC_artist_loops3a_markdown_instruction: "So much fun!  \n\nNow, add a bat sticker right after the bird to make an image like the one below.\n___\n\n![expandable](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)"
-      courseC_artist_loops3a_2018_markdown_instruction: "So much fun!  \n\nNow, add a bat sticker right after the bird to make an image like the one below.\n___\n\n![expandable](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)"
+      courseC_artist_loops2a_markdown_instruction: Ora usa un ciclo per disegnare l'uccello 12 volte con un angolo di 30 gradi.
+      courseC_artist_loops2a_2018_markdown_instruction: Ora usa un ciclo per disegnare l'uccello 12 volte con un angolo di 30 gradi.
+      courseC_artist_loops3a_markdown_instruction: "Troppo divertente!\n\nOra aggiungi l'adesivo di un pipistrello subito dopo l'uccello per ottenere un'immagine come quella qui sotto.\n___\n\n![expandable](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)"
+      courseC_artist_loops3a_2018_markdown_instruction: "Troppo divertente!\n\nOra aggiungi l'adesivo di un pipistrello subito dopo l'uccello per ottenere un'immagine come quella qui sotto.\n___\n\n![expandable](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)"
       courseC_artist_loops4a_markdown_instruction: |-
-        Add a block to your code so that the artist jumps forward by 75 pixels between stamping the bird and the bat. In this puzzle, make sure you have `jump to 200 over 200 down` inside of your loop, so you stay in the center!
-        ___
+        Aggiungi un blocco al tuo codice in modo che l'artista faccia un salto avanti di 75 pixel tra la stampa dell'uccello e quella del pipistrello. In questo esercizio assicurati di avere il blocco `salta a 200 avanti 200 in basso` all'interno del ciclo, in modo da rimanere al centro dello schermo.
+        __
         
         ![expandable](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)
       courseC_artist_loops4a_2018_markdown_instruction: |-
@@ -27517,104 +27530,102 @@ it:
         ![expandable](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)
       courseC_artist_loops5_markdown_instruction: "Great!  Now it's time to make a fence inside to keep the animals out.   \nMake any kind of fence that you want!\n\n"
       courseC_artist_loops5a_markdown_instruction: |-
-        What happens when you replace one or both of the stickers with a different creature?
+        Cosa accade se sostituisci uno o entrambi gli adesivi con creature differenti?
         ___
         ![expandable](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)
       courseC_artist_loops5a_2018_markdown_instruction: |-
-        What happens when you replace one or both of the stickers with a different creature?
+        Cosa accade se sostituisci uno o entrambi gli adesivi con creature differenti?
         ___
         ![expandable](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)
-      courseC_artist_loops5b_markdown_instruction: "What happens when you `move forward` then `move backward` by 100, 200, or 400 pixels somewhere inside the loop?  \n- Try using the `set pattern` block before you start your loop to make a work of art!\n___\n![expandable](https://images.code.org/d523de02389fd23db3029327c03b727d-image-1497039953252.24.18.png)"
-      courseC_artist_loops5b_2018_markdown_instruction: "What happens when you `move forward` then `move backward` by 100, 200, or 400 pixels somewhere inside the loop?  \n- Try using the `set pattern` block before you start your loop to make a work of art!\n___\n![expandable](https://images.code.org/d523de02389fd23db3029327c03b727d-image-1497039953252.24.18.png)"
+      courseC_artist_loops5b_markdown_instruction: "Cosa accade quando `vai avanti` e poi `vai indietro` di 100, 200 o 400 pixel all'interno del ciclo?\n- Per realizzare un'opera d'arte, prova ad usare il blocco `imposta lo schema` prima di iniziare il ciclo!\n___\n![expandable](https://images.code.org/d523de02389fd23db3029327c03b727d-image-1497039953252.24.18.png)"
+      courseC_artist_loops5b_2018_markdown_instruction: "Cosa accade quando `vai avanti` e poi `vai indietro` di 100, 200 o 400 pixel all'interno del ciclo?\n- Per realizzare un'opera d'arte, prova ad usare il blocco `imposta lo schema` prima di iniziare il ciclo!\n___\n![expandable](https://images.code.org/d523de02389fd23db3029327c03b727d-image-1497039953252.24.18.png)"
       courseC_artist_loops6_markdown_instruction: "What should the zombie put inside of the garden?  \n\nDraw anything you'd like inside of the fence.  Would you like some flowers or a few bugs? \n*(See hints for more suggestions.)*\n\n\n"
       courseC_artist_loops6a_markdown_instruction: |-
-        Add a third sticker anywhere in the loop that you want! What does it look like now?
-        - Change the pattern on your brush for more variety!
-        
+        Aggiungi un terzo adesivo dove preferisci all'interno del ciclo! Come ti sembra adesso?
+        - Per avere ancora più varietà, cambia anche lo schema del pennello!
         ___
         
         ![expandable](https://images.code.org/b0f999ef4b9ab6bd9780e9fbac07dc8d-image-1497040845047.39.55.png)
       courseC_artist_loops6a_2018_markdown_instruction: |-
-        Add a third sticker anywhere in the loop that you want! What does it look like now?
-        - Change the pattern on your brush for more variety!
-        
+        Aggiungi un terzo adesivo dove preferisci all'interno del ciclo! Come ti sembra adesso?
+        - Per avere ancora più varietà, cambia anche lo schema del pennello!
         ___
         
         ![expandable](https://images.code.org/b0f999ef4b9ab6bd9780e9fbac07dc8d-image-1497040845047.39.55.png)
       courseC_artist_loops7a_markdown_instruction: |-
-        Try changing the `repeat` loop to run a different number of times.  How far do you have to turn to go around in a full circle?
-        - Try changing how many times you spin
-        - Try a 60 degree turn for 6 times around
-        - Try a 20 degree turn for 18 times around
+        Prova a modificare il ciclo `ripeti ... volte` in modo che venga eseguito un differente numero di volte. Di quanto devi far girare l'artista per continuare a compiere un giro completo?
+        - Prova a cambiare il numero di rotazioni
+        - Prova curve di 60 gradi per 6 volte
+        - Prova curve di 20 gradi per 18 volte
         ___
-        This image uses a pirate, a ninja, and a giraffe. They loop 18 times with a 20 degree turn.
+        Questa immagine usa un pirata, un ninja e una giraffa. Il ciclo si ripete 18 volte con curve di 20 gradi ciascuna.
         
         ![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)
       courseC_artist_loops7a_2018_markdown_instruction: |-
-        Try changing the `repeat` loop to run a different number of times.  How far do you have to turn to go around in a full circle?
-        - Try changing how many times you spin
-        - Try a 60 degree turn for 6 times around
-        - Try a 20 degree turn for 18 times around
+        Prova a modificare il ciclo `ripeti ... volte` in modo che venga eseguito un differente numero di volte. Di quanto devi far girare l'artista per continuare a compiere un giro completo?
+        - Prova a cambiare il numero di rotazioni
+        - Prova curve di 60 gradi per 6 volte
+        - Prova curve di 20 gradi per 18 volte
         ___
-        This image uses a pirate, a ninja, and a giraffe. They loop 18 times with a 20 degree turn.
+        Questa immagine usa un pirata, un ninja e una giraffa. Il ciclo si ripete 18 volte con curve di 20 gradi ciascuna.
         
         ![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)
       courseC_artist_loops8a_markdown_instruction: |-
-        Now make something on your own.  What happens when you make two separate circles of different stickers?
+        Ora crea qualcosa di tuo. Cosa accade se realizzi due cerchi distinti con adesivi diversi?
         ___
-        Need an idea? Try making a design like this one.
+        Ti serve un'idea? Prova a fare un disegno come questo.
         
         ![expandable](https://images.code.org/d8e0ad6294aa5e04e4aab56631a6b50b-image-1496714582863.02.14.png)
       courseC_artist_loops8a_2018_markdown_instruction: |-
-        Now make something on your own.  What happens when you make two separate circles of different stickers?
+        Ora crea qualcosa di tuo. Cosa accade se realizzi due cerchi distinti con adesivi diversi?
         ___
-        Need an idea? Try making a design like this one.
+        Ti serve un'idea? Prova a fare un disegno come questo.
         
         ![expandable](https://images.code.org/d8e0ad6294aa5e04e4aab56631a6b50b-image-1496714582863.02.14.png)
       courseC_artist_loopsPre1a_markdown_instruction: |-
-        Now, put this code into  a `repeat` block and loop it **6** times.
-        - Notice that we have added a 60 degree turn at the end of the looped code to get a full rotation.
+        Ora, metti questo codice in un ciclo `ripeti` è fallo ripetere per **6** volte.
+        - Nota che abbiamo aggiunto una curva di 60 gradi alla fine del codice all'interno del ciclo per ottenere una rotazione completa.
       courseC_artist_loopsPre1a_2018_markdown_instruction: |-
-        Now, put this code into  a `repeat` block and loop it **6** times.
-        - Notice that we have added a 60 degree turn at the end of the looped code to get a full rotation.
-      courseC_artist_loopsPrePre1a_markdown_instruction: "Use the <xml><block type=\"jump_to_xy\" id=\"callMe\"><title name=\"XPOS\">200</title><title name=\"YPOS\">200</title></block></xml> block to get the artist to the center of the play area.  \nThen draw a line 50 pixels long with the <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">50</title></block></xml> block."
-      courseC_artist_loopsPrePre1a_2018_markdown_instruction: "Use the <xml><block type=\"jump_to_xy\" id=\"callMe\"><title name=\"XPOS\">200</title><title name=\"YPOS\">200</title></block></xml> block to get the artist to the center of the play area.  \nThen draw a line 50 pixels long with the <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">50</title></block></xml> block."
+        Ora, metti questo codice in un ciclo `ripeti` è fallo ripetere per **6** volte.
+        - Nota che abbiamo aggiunto una curva di 60 gradi alla fine del codice all'interno del ciclo per ottenere una rotazione completa.
+      courseC_artist_loopsPrePre1a_markdown_instruction: "Usa il blocco <xml><block type=\"jump_to_xy\" id=\"callMe\"><title name=\"XPOS\">200</title><title name=\"YPOS\">200</title></block></xml> per portare l'artista al centro dell'area di gioco.\nQuindi disegna una linea lunga 50 pixel con il blocco  <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">50</title></block></xml>"
+      courseC_artist_loopsPrePre1a_2018_markdown_instruction: "Usa il blocco <xml><block type=\"jump_to_xy\" id=\"callMe\"><title name=\"XPOS\">200</title><title name=\"YPOS\">200</title></block></xml> per portare l'artista al centro dell'area di gioco.\nQuindi disegna una linea lunga 50 pixel con il blocco  <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">50</title></block></xml>"
       courseC_artist_loopsTemplateA_markdown_instruction: 'Use the `jump to 200 over 200 down` to get the artist to the center of the play area, then use the `draw a sticker` block to make a bird appear. '
       courseC_artist_loopsTemplateA_2018_markdown_instruction: 'Use the `jump to 200 over 200 down` to get the artist to the center of the play area, then use the `draw a sticker` block to make a bird appear. '
       courseC_artist_prog1_markdown_instruction: |-
-        *"Hi, I'm an artist. You can write code to make me draw almost anything."*
+        *"Ciao, sono un artista. puoi scrivere del codice per farmi disegnare quasi qualunque cosa."*
         
-        Play with the blocks in the toolbox to see what they do!
+        Gioca con i blocchi nella cassetta degli attrezzi per capire cosa fanno!
       courseC_artist_prog1_2018_markdown_instruction: |-
-        *"Hi, I'm an artist. You can write code to make me draw almost anything."*
+        *"Ciao, sono un artista. puoi scrivere del codice per farmi disegnare quasi qualunque cosa."*
         
-        Play with the blocks in the toolbox to see what they do!
-      courseC_artist_prog2_markdown_instruction: "*\"Let's make a cage for my pet monster!\"*\n\nDrag blocks onto the screen to have the artist draw over the grey lines in the picture.  \n(Each line is 100 pixels long)"
-      courseC_artist_prog2_2018_markdown_instruction: "*\"Let's make a cage for my pet monster!\"*\n\nDrag blocks onto the screen to have the artist draw over the grey lines in the picture.  \n(Each line is 100 pixels long)"
+        Gioca con i blocchi nella cassetta degli attrezzi per capire cosa fanno!
+      courseC_artist_prog2_markdown_instruction: "*\"Fammi costruire una gabbia per il mio mostriciattolo domestico!\"*\n\nTrascina i blocchi dalla cassetta degli attrezzi per far in modo che l'artista disegni lungo le linee grige della figura. (Ogni linea è lunga 100 pixel.)"
+      courseC_artist_prog2_2018_markdown_instruction: "*\"Fammi costruire una gabbia per il mio mostriciattolo domestico!\"*\n\nTrascina i blocchi dalla cassetta degli attrezzi per far in modo che l'artista disegni lungo le linee grige della figura. (Ogni linea è lunga 100 pixel.)"
       courseC_artist_prog3_markdown_instruction: |-
-        *"This spaceship needs a window!"*
+        *"A questa astronave serve un finestrino!"*
         
-        Each side of the inner square is 100 pixels and all of the angles are 90 degrees.
+        Ogni lato del quadrato interno è lungo 100 pixel e tutti gli angoli sono di 90 gradi.
       courseC_artist_prog3_2018_markdown_instruction: |-
-        *"This spaceship needs a window!"*
+        *"A questa astronave serve un finestrino!"*
         
-        Each side of the inner square is 100 pixels and all of the angles are 90 degrees.
-      courseC_artist_prog4_markdown_instruction: "*\"Oh no!  Starla's pet alien just flew away! Let's help the spacewoman!\"*\n\nFinish Starla's rocket so she can chase her pet.  \n(Each side of the triangle is 100 pixels long and has 120 degree outer angles.)"
-      courseC_artist_prog4_2018_markdown_instruction: "*\"Oh no!  Starla's pet alien just flew away! Let's help the spacewoman!\"*\n\nFinish Starla's rocket so she can chase her pet.  \n(Each side of the triangle is 100 pixels long and has 120 degree outer angles.)"
-      courseC_artist_prog5_markdown_instruction: "*\"Maybe we should make a tag for each of our pets in case they get lost!\"*\n\nFinish this tag by drawing a rectangle around the outside.  \n(The long sides are 200 pixels each and the short sides are each 100 pixels)"
-      courseC_artist_prog5_2018_markdown_instruction: "*\"Maybe we should make a tag for each of our pets in case they get lost!\"*\n\nFinish this tag by drawing a rectangle around the outside.  \n(The long sides are 200 pixels each and the short sides are each 100 pixels)"
+        Ogni lato del quadrato interno è lungo 100 pixel e tutti gli angoli sono di 90 gradi.
+      courseC_artist_prog4_markdown_instruction: "*\"Oh no! Il mostriciattolo domestico è volato via! Aiuta l'alieno!\"*\n\nCompleta il razzo in modo che l'alieno possa seguire il suo animale domestico.\n(Ogni lato del triangolo è lungo 100 pixel ed ha angoli esterni di 120 gradi.)"
+      courseC_artist_prog4_2018_markdown_instruction: "*\"Oh no! Il mostriciattolo domestico è volato via! Aiuta l'alieno!\"*\n\nCompleta il razzo in modo che l'alieno possa seguire il suo animale domestico.\n(Ogni lato del triangolo è lungo 100 pixel ed ha angoli esterni di 120 gradi.)"
+      courseC_artist_prog5_markdown_instruction: "*\"Forse dovremmo costruire una targhetta per ciascuno dei nostri animali domestici nel caso in cui si perdano.\"*\n\nCompleta questa targhetta disegnando un rettangolo sul contorno.\n(I lati lunghi sono di 200 pixel ognuno e quelli corti di 100 pixel)"
+      courseC_artist_prog5_2018_markdown_instruction: "*\"Forse dovremmo costruire una targhetta per ciascuno dei nostri animali domestici nel caso in cui si perdano.\"*\n\nCompleta questa targhetta disegnando un rettangolo sul contorno.\n(I lati lunghi sono di 200 pixel ognuno e quelli corti di 100 pixel)"
       courseC_artist_prog6_markdown_instruction: |-
-        *"Now a tag for Belle!"*
+        *"Ora una targhetta per Belle!"*
         
-        Draw this diamond with 200 pixel sides.
+        Disegna questo rombo con i lati di 200 pixel.
       courseC_artist_prog6_2018_markdown_instruction: |-
-        *"Now a tag for Belle!"*
+        *"Ora una targhetta per Belle!"*
         
-        Draw this diamond with 200 pixel sides.
-      courseC_artist_prog7_markdown_instruction: "**Challenge:** This tag is a special one!  \n\nCan you figure out how to draw the outline?  \n(The long side is 150 pixels and each of the short sides are 75 pixels.)"
-      courseC_artist_prog7_2018_markdown_instruction: "**Challenge:** This tag is a special one!  \n\nCan you figure out how to draw the outline?  \n(The long side is 150 pixels and each of the short sides are 75 pixels.)"
-      courseC_artist_prog8_markdown_instruction: "One more tag.  This is a triangle for Pi.  \n(Each side is 150 pixels)"
-      courseC_artist_prog8_2018_markdown_instruction: "One more tag.  This is a triangle for Pi.  \n(Each side is 150 pixels)"
+        Disegna questo rombo con i lati di 200 pixel.
+      courseC_artist_prog7_markdown_instruction: "**Sfida:** Questa è una targhetta speciale!\n\nRiesci a capire come disegnare il contorno?\n(I lati lunghi sono di 150 pixel e quelli corti di 75 pixel.)"
+      courseC_artist_prog7_2018_markdown_instruction: "**Sfida:** Questa è una targhetta speciale!\n\nRiesci a capire come disegnare il contorno?\n(I lati lunghi sono di 150 pixel e quelli corti di 75 pixel.)"
+      courseC_artist_prog8_markdown_instruction: "Ancora una targhetta. Questa volta triangolare.\n(Ogni lato è di 150 pixel)"
+      courseC_artist_prog8_2018_markdown_instruction: "Ancora una targhetta. Questa volta triangolare.\n(Ogni lato è di 150 pixel)"
       courseC_artist_prog_challenge1-doghouse_markdown_instruction: Let's build a dog house for Jorge!
       courseC_artist_prog_challenge1_markdown_instruction: Draw rooms for each of the animals. There are many different ways to solve this puzzle, so have some fun! Each square has a side length of 100 pixels.
       courseC_artist_prog_challenge1_2018_markdown_instruction: Draw rooms for each of the animals. There are many different ways to solve this puzzle, so have some fun! Each square has a side length of 100 pixels.
@@ -27636,42 +27647,46 @@ it:
         
         Help the collector get at least **5** pieces of treasure.
       courseC_collector_prog1_markdown_instruction: |-
-        **Free Play:** This is Laurel the Adventurer! Move her around and get as much treasure as you can. Use the `collect` block to pick up the treasure!
+        **Tempo di giocare:** questa è Laurel l'Avventuriera! Muovila per farle raccogliere più diamanti che puoi.
         
-        Drag blocks into the workspace and try to figure out how to get treasure.  Get at least one item to pass this level.
+        Trascina i blocchi nell'area di lavoro e cerca di capire come prendere i diamanti. Raccogli almeno un diamante per completare questo esercizio.
+        
+        (Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante "Termina")
       courseC_collector_prog1_2018_markdown_instruction: |-
-        **Free Play:** This is Laurel the Adventurer! Move her around and get as much treasure as you can. Use the `collect` block to pick up the treasure!
+        **Tempo di giocare:** questa è Laurel l'Avventuriera! Muovila per farle raccogliere più diamanti che puoi.
         
-        Drag blocks into the workspace and try to figure out how to get treasure.  Get at least one item to pass this level.
-      courseC_collector_prog2_markdown_instruction: Move Laurel to the treasure, then use <xml><block type="collector_collect"/></xml> to pick it up.
-      courseC_collector_prog2_2018_markdown_instruction: Move Laurel to the treasure, then use <xml><block type="collector_collect"/></xml> to pick it up.
-      courseC_collector_prog3_markdown_instruction: "*\"Sequence matters!\"* \n\nThe blocks you need are already in the workspace, but not connected.  \nOrder these blocks to collect the treasure and solve the puzzle."
-      courseC_collector_prog3_2018_markdown_instruction: "*\"Sequence matters!\"* \n\nThe blocks you need are already in the workspace, but not connected.  \nOrder these blocks to collect the treasure and solve the puzzle."
-      courseC_collector_prog4_markdown_instruction: "*\"Sequence matters!\"*\n\nThe blocks you need are already in the workspace, but not connected.  \n\nPut these blocks in order to collect all of the treasure and solve the puzzle."
-      courseC_collector_prog4_2018_markdown_instruction: "*\"Sequence matters!\"*\n\nThe blocks you need are already in the workspace, but not connected.  \n\nPut these blocks in order to collect all of the treasure and solve the puzzle."
+        Trascina i blocchi nell'area di lavoro e cerca di capire come prendere i diamanti. Raccogli almeno un diamante per completare questo esercizio.
+        
+        (Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante "Termina")
+      courseC_collector_prog2_markdown_instruction: Fai muovere Laurel fino al diamante, quindi usa il blocco <xml><block type="collector_collect"/></xml> per prenderlo.
+      courseC_collector_prog2_2018_markdown_instruction: Fai muovere Laurel fino al diamante, quindi usa il blocco <xml><block type="collector_collect"/></xml> per prenderlo.
+      courseC_collector_prog3_markdown_instruction: "*\"L'ordine conta!\"* \n\nTrovi già nell'area di lavoro tutti i blocchi di cui hai bisogno, ma non sono collegati tra loro. Riordina questi blocchi per raccogliere tutti i diamanti e risolvere l'esercizio."
+      courseC_collector_prog3_2018_markdown_instruction: "*\"L'ordine conta!\"* \n\nTrovi già nell'area di lavoro tutti i blocchi di cui hai bisogno, ma non sono collegati tra loro. Riordina questi blocchi per raccogliere tutti i diamanti e risolvere l'esercizio."
+      courseC_collector_prog4_markdown_instruction: "*\"L'ordine conta!\"* \n\nTrovi già nell'area di lavoro tutti i blocchi di cui hai bisogno, ma non sono collegati tra loro. Riordina questi blocchi per raccogliere tutti i diamanti e risolvere l'esercizio."
+      courseC_collector_prog4_2018_markdown_instruction: "*\"L'ordine conta!\"* \n\nTrovi già nell'area di lavoro tutti i blocchi di cui hai bisogno, ma non sono collegati tra loro. Riordina questi blocchi per raccogliere tutti i diamanti e risolvere l'esercizio."
       courseC_collector_prog5_markdown_instruction: |-
-        *"Help me collect each bit of treasure!"*
+        *"Aiutami a raccogliere ogni diamante"!*
         
-        These blocks are in the wrong order. Can you fix them?
+        Questi blocchi sono nell'ordine sbagliato. Riesci a riordinarli?
       courseC_collector_prog5_2018_markdown_instruction: |-
-        *"Help me collect each bit of treasure!"*
+        *"Aiutami a raccogliere ogni diamante"!*
         
-        These blocks are in the wrong order. Can you fix them?
+        Questi blocchi sono nell'ordine sbagliato. Riesci a riordinarli?
       courseC_collector_prog6_markdown_instruction: |-
-        *"Help me collect all of the treasure!"*
+        *"Aiutami a raccogliere tutti i diamanti!!"*
         
-        These blocks are in the wrong order. Reorder them to collect all of the treasure.
+        Questi blocchi sono nell'ordine sbagliato. Riordinarli per raccogliere tutti i diamanti.
       courseC_collector_prog6_2018_markdown_instruction: |-
-        *"Help me collect all of the treasure!"*
+        *"Aiutami a raccogliere tutti i diamanti!!"*
         
-        These blocks are in the wrong order. Reorder them to collect all of the treasure.
-      courseC_collector_prog7_markdown_instruction: "**Challenge:** *\"What is going on here?\"*\n\nEven if we put these in the right order, there will still be some missing.  \nUse blocks from the toolbox to collect all of the treasure."
-      courseC_collector_prog7_2018_markdown_instruction: "**Challenge:** *\"What is going on here?\"*\n\nEven if we put these in the right order, there will still be some missing.  \nUse blocks from the toolbox to collect all of the treasure."
-      courseC_collector_prog8_markdown_instruction: '*"Keep up the good work! Help me collect all of the treasure."*'
-      courseC_collector_prog8_2018_markdown_instruction: '*"Keep up the good work! Help me collect all of the treasure."*'
-      courseC_collector_prog9_markdown_instruction: '*"Let''s get all of the treasure!"*'
-      courseC_collector_prog9_2018_markdown_instruction: '*"Let''s get all of the treasure!"*'
-      courseC_collector_progA_markdown_instruction: Help Laurel collect all of the treasure.
+        Questi blocchi sono nell'ordine sbagliato. Riordinarli per raccogliere tutti i diamanti.
+      courseC_collector_prog7_markdown_instruction: "**Sfida:** *Cosa sta succedendo qui?*\n\nAnche dopo che avrai messo i blocchi nell'ordine giusto, mancherà ancora qualcosa.\nUsa nuovi blocchi dalla cassetta degli attrezzi per raccogliere tutti i diamanti."
+      courseC_collector_prog7_2018_markdown_instruction: "**Sfida:** *Cosa sta succedendo qui?*\n\nAnche dopo che avrai messo i blocchi nell'ordine giusto, mancherà ancora qualcosa.\nUsa nuovi blocchi dalla cassetta degli attrezzi per raccogliere tutti i diamanti."
+      courseC_collector_prog8_markdown_instruction: '*"Continua alla grande! Aiutami a collezionare tutti i diamanti."*'
+      courseC_collector_prog8_2018_markdown_instruction: '*"Continua alla grande! Aiutami a collezionare tutti i diamanti."*'
+      courseC_collector_prog9_markdown_instruction: '*"Prendiamoli tutti ''sti diamanti!"*'
+      courseC_collector_prog9_2018_markdown_instruction: '*"Prendiamoli tutti ''sti diamanti!"*'
+      courseC_collector_progA_markdown_instruction: Aiuto Laurel a raccogliere tutti i diamanti.
       courseC_collector_progB_markdown_instruction: "You're almost done!  \n\nCollect as many coins as you can to finish the stage!"
       courseC_collector_prog_challenge2_markdown_instruction: There are 20 pieces of treasure in this cave. Collect at least **10** to finish the challenge!
       courseC_collector_prog_challenge2_2018_markdown_instruction: There are 20 pieces of treasure in this cave. Collect at least **10** to finish the challenge!
@@ -27733,10 +27748,10 @@ it:
       courseC_harvester_loops_challenge2_markdown_instruction: Collect all of the lettuce. Avoid the trees and fields!
       courseC_harvester_loops_challenge2_2018_markdown_instruction: Collect all of the lettuce. Avoid the trees and fields!
       courseC_harvester_loops_forVid_markdown_instruction: Collect all of the corn and all of the pumpkins.
-      courseC_maze_debugging1_markdown_instruction: "This code isn't quite right!  \n\nFix the code to help Scrat get to the acorn."
-      courseC_maze_debugging1_2018_markdown_instruction: "This code isn't quite right!  \n\nFix the code to help Scrat get to the acorn."
-      courseC_maze_debugging3_markdown_instruction: "Something is not quite right. \n\nRemove blocks to get Scrat to the acorn!"
-      courseC_maze_debugging3_2018_markdown_instruction: "Something is not quite right. \n\nRemove blocks to get Scrat to the acorn!"
+      courseC_maze_debugging1_markdown_instruction: "Questo programma è sbagliato!\n\nCorreggilo per aiutare Scrat a raggiungere la ghianda."
+      courseC_maze_debugging1_2018_markdown_instruction: "Questo programma è sbagliato!\n\nCorreggilo per aiutare Scrat a raggiungere la ghianda."
+      courseC_maze_debugging3_markdown_instruction: "C'è ancora qualcosa di sbagliato.\n\nRimuovi dei blocchi per far arrivare Scrat fino alla ghianda!"
+      courseC_maze_debugging3_2018_markdown_instruction: "C'è ancora qualcosa di sbagliato.\n\nRimuovi dei blocchi per far arrivare Scrat fino alla ghianda!"
       courseC_maze_debugging_challenge2_markdown_instruction: If Scrat turns too often, he might get dizzy! Help him reach the acorn with only four `turn` commands.
       courseC_maze_debugging_challenge2_2018_markdown_instruction: If Scrat turns too often, he might get dizzy! Help him reach the acorn with only four `turn` commands.
       courseC_maze_loops2_markdown_instruction: |-
@@ -27758,7 +27773,7 @@ it:
         *"Get me to the pig!"*
         
         Use what you learned in other puzzles!
-      courseC_maze_loops8_markdown_instruction: "**Challenge:** Combine ideas from the last few puzzles to complete this level."
+      courseC_maze_loops8_markdown_instruction: "**Sfida:** Metti a frutto ciò che hai imparato negli ultimi esercizi per completare questo livello."
       courseC_maze_loops_challenge2_markdown_instruction: Let's hunt for treasure - using loops! Help the collector by debugging this code. Get all of the treasure!
       courseC_maze_programming1_markdown_instruction: Per risolvere questo esercizio, collega tutti i blocchi e clicca su "Esegui" per vederlo in funzione!
       courseC_maze_programming1_2018_markdown_instruction: Per risolvere questo esercizio, collega tutti i blocchi e clicca su "Esegui" per vederlo in funzione!
@@ -27792,89 +27807,89 @@ it:
         *"È ora di arrabbiarsi!"*
         
         **Sfida:** Questo programma ha molti errori. Dovrai eliminare dei blocchi ed aggiungerne altri.
-      courseC_maze_programming8_markdown_instruction: '*"Keep calm and help me find the bad pig."*'
-      courseC_maze_programming8_2018_markdown_instruction: '*"Keep calm and help me find the bad pig."*'
-      courseC_maze_programming8_predict1_markdown_instruction: '*"Keep calm and help me find the bad pig."*'
-      courseC_maze_programming8_predict1_2018_markdown_instruction: '*"Keep calm and help me find the bad pig."*'
-      courseC_maze_programming9_markdown_instruction: '*"Now, help me sneak up on the pig any way you want to!"*'
-      courseC_maze_programming9_2018_markdown_instruction: '*"Now, help me sneak up on the pig any way you want to!"*'
+      courseC_maze_programming8_markdown_instruction: '*"Mantieni la calma e aiutami a trovare il maialino cattivo."*'
+      courseC_maze_programming8_2018_markdown_instruction: '*"Mantieni la calma e aiutami a trovare il maialino cattivo."*'
+      courseC_maze_programming8_predict1_markdown_instruction: '*"Mantieni la calma e aiutami a trovare il maialino cattivo."*'
+      courseC_maze_programming8_predict1_2018_markdown_instruction: '*"Mantieni la calma e aiutami a trovare il maialino cattivo."*'
+      courseC_maze_programming9_markdown_instruction: '*"Ora aiutami a sorprendere il maiale nel modo che preferisci!"*'
+      courseC_maze_programming9_2018_markdown_instruction: '*"Ora aiutami a sorprendere il maiale nel modo che preferisci!"*'
       courseC_maze_programming_challenge1_markdown_instruction: 'The bird needs your help! The pig is hiding, and the goal is to find it. '
       courseC_maze_programming_challenge1_2018_markdown_instruction: 'The bird needs your help! The pig is hiding, and the goal is to find it. '
       courseC_maze_programming_challenge2_markdown_instruction: Sometimes there is more than one way to solve the same problem. Sometimes it's faster to go backwards than it is to go forwards!
       courseC_maze_programming_challenge2_2018_markdown_instruction: Sometimes there is more than one way to solve the same problem. Sometimes it's faster to go backwards than it is to go forwards!
       courseC_playLab_embedded_markdown_instruction: "##Here's a game for you to play! \nTo win, get the penguin to run into the octopus. Use your arrow keys to move the penguin around.\n\nOnce you are done, you will learn how to make this game!"
-      courseC_puppy_loops8_markdown_instruction: "**Challenge:** Combine ideas from the last few puzzles to complete this level."
-      courseC_puppy_loops8courseC_maze_loops8_markdown_instruction: "**Challenge:** Combine ideas from the last few puzzles to complete this level."
-      courseC_starWars_loops1_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _\"Go get the scrap metal, BB-8!\"_ \n\nUse five of the same blocks to get the scrap metal. Scrap metal glows like this: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
+      courseC_puppy_loops8_markdown_instruction: "**Sfida:** Metti a frutto ciò che hai imparato negli ultimi esercizi per completare questo livello."
+      courseC_puppy_loops8courseC_maze_loops8_markdown_instruction: "**Sfida:** Metti a frutto ciò che hai imparato negli ultimi esercizi per completare questo livello."
+      courseC_starWars_loops1_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _\"Vai a recuperare i rottami metallici, BB-8!\"_ \n\nUsa cinque blocchi uguali per recuperare i rottami metallici che brillano come questo: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
       courseC_starWars_loops10_markdown_instruction: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _"Go BB-8!"_
+        _"Vai BB-8!"_
         
-        You are doing great! Keep it up!
+        Stai andando alla grande! Continua così!
       courseC_starWars_loops10_2018_markdown_instruction: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _"Go BB-8!"_
+        _"Vai BB-8!"_
         
-        You are doing great! Keep it up!
+        Stai andando alla grande! Continua così!
       courseC_starWars_loops11_markdown_instruction: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Keep going, BB-8!"_
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Continua, BB-8!"_
         
-        You are almost there! This time, choose any path you like!
+        Ci sei quasi! Questa volta scegli il percorso che preferisci!
       courseC_starWars_loops11_2018_markdown_instruction: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Keep going, BB-8!"_
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Continua, BB-8!"_
         
-        You are almost there! This time, choose any path you like!
-      courseC_starWars_loops1_2018_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _\"Go get the scrap metal, BB-8!\"_ \n\nUse five of the same blocks to get the scrap metal. Scrap metal glows like this: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
+        Ci sei quasi! Questa volta scegli il percorso che preferisci!
+      courseC_starWars_loops1_2018_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _\"Vai a recuperare i rottami metallici, BB-8!\"_ \n\nUsa cinque blocchi uguali per recuperare i rottami metallici che brillano come questo: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
       courseC_starWars_loops2_markdown_instruction: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Go BB-8!"_
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Vai BB-8!"_
         
-        To get all the scrap metal, try creating a loop that uses only one block inside of a `repeat` block.
+        Per recuperare tutti i rottami metallici, prova a creare un ciclo con un solo blocco all'interno del blocco `ripeti ... volte`.
       courseC_starWars_loops2_2018_markdown_instruction: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Go BB-8!"_
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Vai BB-8!"_
         
-        To get all the scrap metal, try creating a loop that uses only one block inside of a `repeat` block.
+        Per recuperare tutti i rottami metallici, prova a creare un ciclo con un solo blocco all'interno del blocco `ripeti ... volte`.
       courseC_starWars_loops4_markdown_instruction: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Keep it up, BB-8."_
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Continua così, BB-8."_
         
-        In this puzzle, two `repeat` loops will help you get BB-8 to all of the scrap metal with the fewest number of blocks!
+        In questo esercizio, due cicli `ripeti ... volte` ti aiuteranno a far in modo che BB-8 recuperi tutti i rottami metallici con il minor numero di blocchi possibile!
       courseC_starWars_loops4_2018_markdown_instruction: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Keep it up, BB-8."_
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Continua così, BB-8."_
         
-        In this puzzle, two `repeat` loops will help you get BB-8 to all of the scrap metal with the fewest number of blocks!
-      courseC_starWars_loops5_markdown_instruction: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Go BB-8!"_'
-      courseC_starWars_loops5_2018_markdown_instruction: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Go BB-8!"_'
+        In questo esercizio, due cicli `ripeti ... volte` ti aiuteranno a far in modo che BB-8 recuperi tutti i rottami metallici con il minor numero di blocchi possibile!
+      courseC_starWars_loops5_markdown_instruction: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Vai BB-8!"_'
+      courseC_starWars_loops5_2018_markdown_instruction: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Vai BB-8!"_'
       courseC_starWars_loops6_markdown_instruction: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Can you get it all?"_
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Riesci a prenderli tutti?"_
         
-        Loops even work with more than one block inside!  Can you loop this sequence?
+        I cicli funzionano anche con più di un blocco al loro interno!  Puoi far ripetere questa sequenza?
       courseC_starWars_loops6_2018_markdown_instruction: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Can you get it all?"_
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Riesci a prenderli tutti?"_
         
-        Loops even work with more than one block inside!  Can you loop this sequence?
+        I cicli funzionano anche con più di un blocco al loro interno!  Puoi far ripetere questa sequenza?
       courseC_starWars_loops7_markdown_instruction: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"You can do it!"_
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Puoi farcela!"_
         
-        Can you try to get all the scrap metal using just one loop? Try programming it all out then finding the repeating code to put in a loop.
+        Riesci a recuperare tutti i rottami metallici usando un solo ciclo? Prova a programmare tutto con blocchi singoli, poi cerca il codice ripetuto da mettere nel ciclo.
       courseC_starWars_loops7_2018_markdown_instruction: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"You can do it!"_
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Puoi farcela!"_
         
-        Can you try to get all the scrap metal using just one loop? Try programming it all out then finding the repeating code to put in a loop.
+        Riesci a recuperare tutti i rottami metallici usando un solo ciclo? Prova a programmare tutto con blocchi singoli, poi cerca il codice ripetuto da mettere nel ciclo.
       courseC_starWars_loops8_markdown_instruction: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Keep it up, BB-8."_
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Continua così, BB-8."_
         
-        **Challenge:** Combine ideas from the last few puzzles to complete this level.
+        **Sfida:** Metti a frutto ciò che hai imparato negli ultimi esercizi per completare questo livello.
       courseC_starWars_loops8_2018_markdown_instruction: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Keep it up, BB-8."_
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Continua così, BB-8."_
         
-        **Challenge:** Combine ideas from the last few puzzles to complete this level.
+        **Sfida:** Metti a frutto ciò che hai imparato negli ultimi esercizi per completare questo livello.
       courseC_starWars_loops9_markdown_instruction: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Keep going!"_
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Continua!"_
         
-        Use what you have learned to pick up all of the scrap metal!
+        Sfrutta ciò che hai imparato per recuperare tutti i rottami metallici!
       courseC_starWars_loops9_2018_markdown_instruction: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Keep going!"_
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Continua!"_
         
-        Use what you have learned to pick up all of the scrap metal!
+        Sfrutta ciò che hai imparato per recuperare tutti i rottami metallici!
       courseD_Frozen_nested1_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _“Hi, I’m Elsa of Arendelle, help me draw a shape.”_\n\nDraw a small shape, between **20 and 50** pixels wide.  It can be any shape that you like.  \n<hr/>\n\nYou can try making a polygon, like one of these:  \n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)  \n\n  \n  \nOr even an abstract shape, like one of these:  \n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)\n"
       courseD_Frozen_nested2_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _“Now, let’s draw more than one.”_\n\nNow take your shape and draw two or three in a row by jumping forward some number of pixels.  \n\n- If you jump forward by **less** than the width of your shape, they might overlap\n- If you jump forward by **more** than the width of your shape, you will get a gap\n\n<hr/>\n\nYour row might end up straight like with these:\n\n![](https://images.code.org/cefc818d8636c7ce185738311870ff1d-image-1495820778762.39.25.png)\n![](https://images.code.org/80dc77914de15685dc696825dff61723-image-1495820778762.39.43.png)\n![](https://images.code.org/00cda078f119b1ddb0af27ae4a44b089-image-1495820778761.39.08.png)\n<br/>  <br/>\n\n\nOr, your shapes might move around like one of these: \n\n![](https://images.code.org/0c4066fe7547bc1f4495aacbeecdea6d-image-1496437220447.47.04.png)\n![](https://images.code.org/4069376b784c147a8d443d49e22f783f-image-1496437220446.40.15.png)\n![](https://images.code.org/02704ab3fb3356f76c544bb64c1a7cce-image-1496437220446.32.04.png)"
       courseD_Frozen_nested3_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Let’s make it into a snowflake.\"_\n\nNext, jump Elsa back to the center using the `jump to 200 over and 200 down` block, and spin her around to draw the line of shapes again and again in a bunch of different directions.   \n\nWhat amazing snowflakes you can make!\n<hr/>\nTake a look at these examples with polygons:  \n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\n\nAbstract shapes might make a snowflake more like one of these:  \n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
@@ -29594,6 +29609,10 @@ it:
         *"It's time to get angry!"*
         
         **Challenge:** Use what you've learned to get the bird to the pig!
+      courseF_playlab_brokenText_markdown_instruction: |-
+        In the rest of this stage, we will use multiple `ask` blocks and multiple `if/else` statements to create a game that **you** control!
+        
+        Start by setting the "codename" variable to a word that you can remember.  Then, use an `ask` block to get a codename from the users.  You will need an `if/else` block to see if the codename entered matches the codename that you have set.
       courseF_playlab_variables0_markdown_instruction: "This is Pirate Pegleg.  He's awfully hard to understand these days!  \n\nDecode his speech by changing these pieces of text in the code:\n- \"arrrg\" should be \"a\" \n- \"ye\" should be \"e\"\n\n"
       courseF_playlab_variables1_markdown_instruction: "This is Pirate Pegleg.  He's awfully hard to understand these days!  \n\nDecode his speech by changing these pieces of text in the code:\n- \"arrrg\" should be \"a\" \n- \"ye\" should be \"e\"\n\n"
       courseF_playlab_variables1a_markdown_instruction: "Variables can be used to store text that you want to use later.  \n\nHave Kiki, the soccer player,  scream \"Goal!\" by assigning that text to the `shout` variable."
@@ -29770,7 +29789,7 @@ it:
       csd1dlp-lessons_markdown_instruction: "<br><br>\n\n> **NOTE: Before you start this reflection, make sure you’ve reviewed the lessons in Unit 1 and have a good sense of the connections between lessons. If you haven’t already reviewed the materials, do that now and come back to this reflection later.**\n\n\n# Unit 1 Lesson Connections and Philosophy\n\nFor this reflection, you’re going to consider each of the prompts below and craft a written response that demonstrates your understanding of the lessons in Unit 1. Your response should clearly address each of the items below: \n\n1. What does a typical lesson in this unit look like? \n\n2. What is the connection between early lessons and later lessons?\n\n3. Where do you see the Curriculum Values and philosophy emphasized in this unit?\n\\t- In what ways does the curriculum support building a positive classroom community?\n\n4. How does the Input-Output-Store-Process model help prepare a student to think more deeply about the way computers help us to solve problems?\n\n\n>## Getting Credit for Completing this Reflection \n\n>- Once you submit your reflection, your response to the prompt above will be shared anonymously and reviewed by your peers, and you will review the work done by other facilitators. Reviewers will be looking for thoughtful and thorough answers that demonstrate that you have spent time considering the reflection questions listed above. Reviewers will have an opportunity to give feedback on your submission, and you can respond to that feedback and resubmit.\n- In order to get credit for completing this prompt, two reviewers need to agree that you have responded to the prompts fully. If reviewers don’t feel comfortable making a decision about your task submission, they can elevate to an instructor for review. You will always have a chance to address feedback from your reviewers and resubmit your reflections! Reviewer feedback will show up at the bottom of this page, once it’s available. \n \n\n"
       csd1dlp-q1_markdown_instruction: "<br><br>\n\n# Unit 1 - Question 1\n**NOTE:** Before you start this reflection, make sure you’ve reviewed the lessons in this unit and have a good sense of the connections between lessons. If you haven’t already reviewed the materials, do that now and come back to this reflection later.\n\nFor this reflection, you’re going to consider the prompt below and craft a written response that demonstrates your understanding of the lessons as well as how to address teacher concerns about the unit . We suggest you write your response in another text editor and copy it in here once you are ready to submit.\n\n> **Prompt:** How would you respond to a teacher who says, “What does this problem solving unit have to do with computer science?”\n\n## Getting Credit for Completing this Reflection \n\n- Once you submit your reflection, your response to the prompt above will be shared anonymously and read by your peers, and you will read the work done by other facilitators. This give facilitators a chance to learn from each other.\n- Your submission will also be given to an expert reviewer. Expert reviewers will be looking for thoughtful and thorough answers that demonstrate that you have spent time considering the reflection questions listed above. Reviewers will have an opportunity to give feedback on your submission, and you can respond to that feedback and resubmit.\n- In order to get credit for completing this prompt, your expert review needs to say \"Yes\" responded to the prompts fully. If reviewers don’t feel comfortable making a decision about your task submission, they can elevate to an instructor for review. You will always have a chance to address feedback from your reviewers and resubmit your reflections! Reviewer feedback will show up at the bottom of this page, once it’s available."
       csd1dlp-q2_markdown_instruction: "<br><br>\n\n# Unit 1 - Question 2\n**NOTE:** Before you start this reflection, make sure you’ve reviewed the lessons in this unit and have a good sense of the connections between lessons. If you haven’t already reviewed the materials, do that now and come back to this reflection later.\n\nFor this reflection, you’re going to consider the prompt below and craft a written response that demonstrates your understanding of the lessons as well as how to address teacher concerns about the unit . We suggest you write your response in another text editor and copy it in here once you are ready to submit.\n\n> **Prompt:** How would you respond to a teacher who asks, “Why does the first unit not use computers?”\n\n## Getting Credit for Completing this Reflection \n\n- Once you submit your reflection, your response to the prompt above will be shared anonymously and read by your peers, and you will read the work done by other facilitators. This give facilitators a chance to learn from each other.\n- Your submission will also be given to an expert reviewer. Expert reviewers will be looking for thoughtful and thorough answers that demonstrate that you have spent time considering the reflection questions listed above. Reviewers will have an opportunity to give feedback on your submission, and you can respond to that feedback and resubmit.\n- In order to get credit for completing this prompt, your expert review needs to say \"Yes\" responded to the prompts fully. If reviewers don’t feel comfortable making a decision about your task submission, they can elevate to an instructor for review. You will always have a chance to address feedback from your reviewers and resubmit your reflections! Reviewer feedback will show up at the bottom of this page, once it’s available."
-      csd1dlp-q3_markdown_instruction: "<br><br>\n\n# Unit 1 - Question 3\n**NOTE:** Before you start this reflection, make sure you’ve reviewed the lessons in this unit and have a good sense of the connections between lessons. If you haven’t already reviewed the materials, do that now and come back to this reflection later.\n\nFor this reflection, you’re going to consider the prompt below and craft a written response that demonstrates your understanding of the lessons as well as how to address teacher concerns about the unit . We suggest you write your response in another text editor and copy it in here once you are ready to submit.\n\n> **Prompt:** How would you respond to a teacher who asks, “Why does the first unit not use computers?”\n\n## Getting Credit for Completing this Reflection \n\n- Once you submit your reflection, your response to the prompt above will be shared anonymously and read by your peers, and you will read the work done by other facilitators. This give facilitators a chance to learn from each other.\n- Your submission will also be given to an expert reviewer. Expert reviewers will be looking for thoughtful and thorough answers that demonstrate that you have spent time considering the reflection questions listed above. Reviewers will have an opportunity to give feedback on your submission, and you can respond to that feedback and resubmit.\n- In order to get credit for completing this prompt, your expert review needs to say \"Yes\" responded to the prompts fully. If reviewers don’t feel comfortable making a decision about your task submission, they can elevate to an instructor for review. You will always have a chance to address feedback from your reviewers and resubmit your reflections! Reviewer feedback will show up at the bottom of this page, once it’s available."
+      csd1dlp-q3_markdown_instruction: "<br><br>\n\n# Unit 1 - Question 3\n**NOTE:** Before you start this reflection, make sure you’ve reviewed the lessons in this unit and have a good sense of the connections between lessons. If you haven’t already reviewed the materials, do that now and come back to this reflection later.\n\nFor this reflection, you’re going to consider the prompt below and craft a written response that demonstrates your understanding of the lessons as well as how to address teacher concerns about the unit . We suggest you write your response in another text editor and copy it in here once you are ready to submit.\n\n> **Prompt:** How would you respond to a teacher who says, “I’m brand new to computer science. What supports exist for me in the curriculum? How will I assess my students knowledge if I don't myself know the material?”\n\n## Getting Credit for Completing this Reflection \n\n- Once you submit your reflection, your response to the prompt above will be shared anonymously and read by your peers, and you will read the work done by other facilitators. This give facilitators a chance to learn from each other.\n- Your submission will also be given to an expert reviewer. Expert reviewers will be looking for thoughtful and thorough answers that demonstrate that you have spent time considering the reflection questions listed above. Reviewers will have an opportunity to give feedback on your submission, and you can respond to that feedback and resubmit.\n- In order to get credit for completing this prompt, your expert review needs to say \"Yes\" responded to the prompts fully. If reviewers don’t feel comfortable making a decision about your task submission, they can elevate to an instructor for review. You will always have a chance to address feedback from your reviewers and resubmit your reflections! Reviewer feedback will show up at the bottom of this page, once it’s available."
       csd1dlp-tools_markdown_instruction: "\n\n<br><br>\n\n> **NOTE: before you start this reflection, make sure you’ve reviewed the lesson in Unit 1, and have a good sense of the the role of tools in the lessons. If you haven’t already reviewed the materials, do that now and come back to this reflection later.**\n\n\n# Unit 1 Tool Philosophy and Use\n\nFor this reflection, you’re going to consider each of the prompts below and craft a written response that demonstrates your understanding of the lessons in Unit 1. Your response should clearly address each of the items below: \n\n- How would you respond to a teacher who asks why is the first unit does not use computers?\n\n\n>## Getting Credit for Completing this Reflection \n\n>- Once you submit your reflection, your response to the prompt above will be shared anonymously and reviewed by your peers, and you will review the work done by other facilitators. Reviewers will be looking for thoughtful and thorough answers that demonstrate that you have spent time considering the reflection questions listed above. Reviewers will have an opportunity to give feedback on your submission, and you can respond to that feedback and resubmit.\n- In order to get credit for completing this prompt, two reviewers need to agree that you have responded to the prompts fully. If reviewers don’t feel comfortable making a decision about your task submission, they can elevate to an instructor for review. You will always have a chance to address feedback from your reviewers and resubmit your reflections! Reviewer feedback will show up at the bottom of this page, once it’s available. \n \n\n\n"
       csd2dlp-assessment_markdown_instruction: "<br><br>\n\n> **NOTE: before you start this reflection, make sure you’ve reviewed the lesson in Unit 2, and have a good sense of the the role of assessment across the unit. If you haven’t already reviewed the materials, do that now and come back to this reflection later.**\n\n\n# Assessment in Unit 2\n\nFor this reflection, you’re going to consider each of the prompts below and craft a written response that demonstrates your understanding of the lessons in Unit 2. Your response should clearly address each of the items below: \n\n1. What summative and formative assessment opportunities are built into the unit? \n\\t* What’s the role of the project(s) in the unit? \n\\t* How does the project(s) apply content and skills that were developed during the unit? \n\\t* What kinds of special considerations come with the unit long project in this unit?\n2. What skills and knowledge should students leave the unit with?\n3. What are the core 2017 CSTA standards or threads of the K-12 framework in this unit?\n\n\n\n>## Getting Credit for Completing this Reflection \n\n>- Once you submit your reflection, your response to the prompt above will be shared anonymously and reviewed by your peers, and you will review the work done by other facilitators. Reviewers will be looking for thoughtful and thorough answers that demonstrate that you have spent time considering the reflection questions listed above. Reviewers will have an opportunity to give feedback on your submission, and you can respond to that feedback and resubmit.\n- In order to get credit for completing this prompt, two reviewers need to agree that you have responded to the prompts fully. If reviewers don’t feel comfortable making a decision about your task submission, they can elevate to an instructor for review. You will always have a chance to address feedback from your reviewers and resubmit your reflections! Reviewer feedback will show up at the bottom of this page, once it’s available. \n \n\n"
       csd2dlp-lessons_markdown_instruction: "<br><br>\n\n> **NOTE: before you start this reflection, make sure you’ve reviewed the lesson in Unit 2, and have a good sense of the connections between lessons. If you haven’t already reviewed the materials, do that now and come back to this reflection later.**\n\n\n# Unit 2 Lesson Connections and Philosophy\n\nFor this reflection, you’re going to consider each of the prompts below and craft a written response that demonstrates your understanding of the lessons in Unit 2. Your response should clearly address each of the items below: \n\n1. Which lessons are particularly tricky to teach in this unit and why? \n2. How is the content spiraled or scaffolded within the unit? \n3. What connections or hooks into Unit 1 can be used to motivate early lessons in unit 2?\n4. Why teach HTML and CSS before starting with JavaScript in Game Lab? \n5. What two Classroom Practices do you feel are most important in this unit? Why?\n\n>## Getting Credit for Completing this Reflection \n\n>- Once you submit your reflection, your response to the prompt above will be shared anonymously and reviewed by your peers, and you will review the work done by other facilitators. Reviewers will be looking for thoughtful and thorough answers that demonstrate that you have spent time considering the reflection questions listed above. Reviewers will have an opportunity to give feedback on your submission, and you can respond to that feedback and resubmit.\n- In order to get credit for completing this prompt, two reviewers need to agree that you have responded to the prompts fully. If reviewers don’t feel comfortable making a decision about your task submission, they can elevate to an instructor for review. You will always have a chance to address feedback from your reviewers and resubmit your reflections! Reviewer feedback will show up at the bottom of this page, once it’s available. \n \n\n\n"
@@ -30274,7 +30293,102 @@ it:
       cspu5_assess4_shortAnswerShopping_markdown_instruction: "**Short Answer:** Cecelia would like to write an app to help manage a trip to the grocery store.  The app will maintain a shopping list (a list of words) of all the items to buy.  Describe how Cecelia might use a second list in the app.  What else might be tracked? Describe how the list would be used and updated in the app.\n"
       cspu5_assess4_shortAnswerShopping_2018_markdown_instruction: "**Short Answer:** Cecelia would like to write an app to help manage a trip to the grocery store.  The app will maintain a shopping list (a list of words) of all the items to buy.  Describe how Cecelia might use a second list in the app.  What else might be tracked? Describe how the list would be used and updated in the app.\n"
       cspu5_assess4_shortAnswerShopping_exam_prep_markdown_instruction: "**Short Answer:** Cecelia would like to write an app to help manage a trip to the grocery store.  The app will maintain a shopping list (a list of words) of all the items to buy.  Describe how Cecelia might use a second list in the app.  What else might be tracked? Describe how the list would be used and updated in the app.\n"
+      debrief-monday_markdown_instruction: |-
+        # Day 1: End of Day Debrief
+        
+        * What were the key takeaways the leads had today (e.g., teachers’ gots and needs, working together as facilitators, keeping a healthy cohort rapport, etc.)?
+        * Did they decide to make any adjustments to their approach for the next day? If so, what do they plan to change and why?
+      debrief-thursday_markdown_instruction: |-
+        # Day 4: End of Day Debrief
+        
+        * What were the key takeaways the leads had today (e.g., teachers’ gots and needs, working together as facilitators, keeping a healthy cohort rapport, etc.)?
+        * Did they decide to make any adjustments to their approach for the next day? If so, what do they plan to change and why?
+      debrief-tuesday_markdown_instruction: |-
+        # Day 2: End of Day Debrief
+        
+        * What were the key takeaways the leads had today (e.g., teachers’ gots and needs, working together as facilitators, keeping a healthy cohort rapport, etc.)?
+        * Did they decide to make any adjustments to their approach for the next day? If so, what do they plan to change and why?
+      debrief-wednesday_markdown_instruction: |-
+        # Day 3: End of Day Debrief
+        
+        * What were the key takeaways the leads had today (e.g., teachers’ gots and needs, working together as facilitators, keeping a healthy cohort rapport, etc.)?
+        * Did they decide to make any adjustments to their approach for the next day? If so, what do they plan to change and why?
+      discussion-thursday_markdown_instruction: |
+        # Day 4: Discussion-Based
+        
+        You have now seen a couple discussion-based (purple) sessions. Some specific examples include the Getting Buy-In (Wednesday), and Recruiting Students (Thursday) sessions. What common facilitator strategies were used in these sessions?
+        
+        * What are facilitators doing?
+        * What are teachers doing?
+      engagement-monday_markdown_instruction: |+
+        # Day 1: Engagement
+        
+        Think of one participant engagement challenge the lead facilitators faced today.
+        
+        * What was the challenge?
+        * How did the lead facilitator(s) manage that challenge?
+        * How would you approach this challenge in a session you lead?
+      engagement-thursday_markdown_instruction: |+
+        # Day 4: Engagement
+        
+        Think of one participant engagement challenge the lead facilitators faced today.
+        
+        * What was the challenge?
+        * How did the lead facilitator(s) manage that challenge?
+        * How would you approach this challenge in a session you lead?
+      engagement-tuesday_markdown_instruction: |+
+        # Day 2: Engagement
+        
+        Think of one participant engagement challenge the lead facilitators faced today.
+        
+        * What was the challenge?
+        * How did the lead facilitator(s) manage that challenge?
+        * How would you approach this challenge in a session you lead?
+      engagement-wednesday_markdown_instruction: |+
+        # Day 3: Engagement
+        
+        Think of one participant engagement challenge the lead facilitators faced today.
+        
+        * What was the challenge?
+        * How did the lead facilitator(s) manage that challenge?
+        * How would you approach this challenge in a session you lead?
       expresslink_markdown_instruction: <a href="https://studio.code.org/s/express"><img src="https://images.code.org/32b135ea9a16684b30f89ffe0f6606b1-image-1507039514762.05.01 AM.png"/><img src="https://images.code.org/cfea3adf1aec120e23e039ed06856f6f-image-1507039555039.05.48 AM.png"/></a>
+      facilitator-prez-wednesday_markdown_instruction: |-
+        # Day 3: Facilitator Presentation
+        
+        You have now seen a bunch of facilitator presentation sessions (orange sessions). What common facilitator strategies were used in these sessions?
+        
+        * What are facilitators doing?
+        * What are teachers doing?
+        * What strategies did you see facilitators use to keep teachers engaged?
+      feel-monday_markdown_instruction: |
+        # Day 1: Feel
+        
+        Use a few words or sentences to describe the ways participants seemed to feel throughout the day today (e.g., confused, engaged, anxious, etc.)
+        
+        * What factors seemed to contribute to those feelings?
+        * What did you see the lead facilitators do to address or support the general participant experience throughout the day?
+      feel-thursday_markdown_instruction: |
+        # Day 4: Feel
+        
+        Use a few words or sentences to describe the ways participants seemed to feel throughout the day today (e.g., confused, engaged, anxious, etc.)
+        
+        * What factors seemed to contribute to those feelings?
+        * What did you see the lead facilitators do to address or support the general participant experience throughout the day?
+      feel-tuesday_markdown_instruction: |
+        # Day 2: Feel
+        
+        Use a few words or sentences to describe the ways participants seemed to feel throughout the day today (e.g., confused, engaged, anxious, etc.)
+        
+        * What factors seemed to contribute to those feelings?
+        * What did you see the lead facilitators do to address or support the general participant experience throughout the day?
+      feel-wednesday_markdown_instruction: |
+        # Day 3: Feel
+        
+        Use a few words or sentences to describe the ways participants seemed to feel throughout the day today (e.g., confused, engaged, anxious, etc.)
+        
+        * What factors seemed to contribute to those feelings?
+        * What did you see the lead facilitators do to address or support the general participant experience throughout the day?
       frozen circle function in circle_markdown_instruction: Ora disegniamo 20 cerchi sovrapposti, girando di 18 gradi tra un cerchio e l'altro. Di quanto devi saltare in avanti?
       frozen circle function with parameter_markdown_instruction: In questo esercizio il blocco "disegna un cerchio" può creare cerchi di diverse dimensioni. Usalo per disegnare un cerchio piccolo di dimensione 5 e un cerchio più grande di dimensione 10.
       frozen circle function_markdown_instruction: Usa il nuovo blocco "disegna un cerchio" per disegnare 10 cerchi sovrapposti. Devi capire di quanto saltare in avanti tra un cerchio e l'altro.
@@ -30294,6 +30408,13 @@ it:
       frozen square loop 3x_markdown_instruction: Disegniamo tre quadrati, girando dopo ognuno di essi. Assicurati di girare di 120 gradi ogni volta.
       frozen square loop_markdown_instruction: Ciao, sono Anna di Arendelle! Disegniamo un quadrato usando il blocco "ripeti ... volte", così da utilizzare il minor numero possibile di blocchi. Quante volte il blocco "ripeti ... volte" deve ripetere i blocchi al suo interno per ottenere il quadrato?
       frozen square snowflake_markdown_instruction: Riesci a creare un fiocco di neve usando il blocco "ripeti ... volte" per disegnare 10 volte un quadrato, e il blocco "gira a ..." per girare di 36 gradi tra un quadrato e l'altro?
+      getting-buy-in-wednesday_markdown_instruction: |
+        # Day 3: Getting Buy In
+        
+        In the Getting Buy-In session this morning you talked about building community and dealing with barriers to growing your CS education community locally. (If you were not with your region think about what you experienced in this sessions that might apply to your region.)
+        
+        * What were common barriers teachers in your region shared?
+        * What things did you see today that you want to check in on throughout the year?
       gl jr clone me ram2_markdown_instruction: Clone this level, and then make your own programs!
       gl jr clone me_markdown_instruction: Clone this level, and then make your own programs!
       grade1_adventurer_loops2_markdown_instruction: How can Laurel collect all five piles of gold using only one `E -->` block?
@@ -30335,7 +30456,7 @@ it:
       grade1_playlab_eventsFP_markdown_instruction: "Usa la tua immaginazione. Come puoi rendere questo gioco ancora più divertente?<br/>\n\n<h5>\n<details>\n<summary><b>Ti serve qualche idea?</b></summary>\n\\t<br/>\n\\t<h5>\n\\t\\t<ul>\n        \\t<li><strong>Quattro chiacchiere</strong> - Aggiungi dei blocchi per far dire \"Ciao!\" ai due personaggi quando si scontrano.</li>\n\n            <li><strong>Dov'è la Draghetta?</strong> - Fai svanire la draghetta quando si preme la freccia in su.</li>\n            <li><strong>Super Draghetta</strong> - Fai muovere la draghetta ad una velocità maggiore e cerca di fare in modo che il cavaliere la raggiunga. </li>\n        </ul>\n\\t</h5>\n</details>\n</h5>"
       grade2_CaringForNewPet_0_markdown_instruction: Per risolvere questo esercizio, collega tutti i blocchi e clicca su "Esegui" per vederlo in funzione!
       grade2_CaringForNewPet_1_markdown_instruction: Drag an extra `move forward` block out of the toolbox to finish your code.
-      grade2_CaringForNewPet_11_markdown_instruction: '*"Keep calm and help me find the bad pig."*'
+      grade2_CaringForNewPet_11_markdown_instruction: '*"Mantieni la calma e aiutami a trovare il maialino cattivo."*'
       grade2_CaringForNewPet_2_markdown_instruction: "*\"This pig is ruffling my feathers.\"*\n\nThere is one extra block that is going to cause the bird to crash.  \nThrow it away by dragging it back to the toolbox."
       grade2_CaringForNewPet_2courseC_maze_programming3_markdown_instruction: "*\"This pig is ruffling my feathers.\"*\n\nThere is one extra block that is going to cause the bird to crash.  \nThrow it away by dragging it back to the toolbox."
       grade2_CaringForNewPet_3_markdown_instruction: '*"Trace the path and lead me to the silly pig. Avoid TNT or feathers will fly!"*'
@@ -30346,7 +30467,7 @@ it:
         *"It's time to get angry!"*
         
         **Challenge:** This code has a lot of bugs. You'll need to remove blocks and add blocks.
-      grade2_MakeDogTag_1_markdown_instruction: "*\"Let's make a cage for my pet monster!\"*\n\nDrag blocks onto the screen to have the artist draw over the grey lines in the picture.  \n(Each line is 100 pixels long)"
+      grade2_MakeDogTag_1_markdown_instruction: "*\"Fammi costruire una gabbia per il mio mostriciattolo domestico!\"*\n\nTrascina i blocchi dalla cassetta degli attrezzi per far in modo che l'artista disegni lungo le linee grige della figura. (Ogni linea è lunga 100 pixel.)"
       grade2_MakeDogTag_10_markdown_instruction: |+
         Now, draw anything you like!
         <br/><br/>
@@ -30371,23 +30492,23 @@ it:
         </tr>
         </table>
       grade2_MakeDogTag_2_markdown_instruction: |-
-        *"This spaceship needs a window!"*
+        *"A questa astronave serve un finestrino!"*
         
-        Each side of the inner square is 100 pixels and all of the angles are 90 degrees.
+        Ogni lato del quadrato interno è lungo 100 pixel e tutti gli angoli sono di 90 gradi.
       grade2_MakeDogTag_3_markdown_instruction: "*\"Oh no!  Starla's pet alien just flew away! Let's help the spacewoman!\"*\n\nFinish Starla's rocket so she can chase her pet.  \n(Each side of the triangle is 100 pixels long and has 120 degree outer angles)"
-      grade2_MakeDogTag_4_markdown_instruction: "*\"Maybe we should make a tag for each of our pets in case they get lost!\"*\n\nFinish this tag by drawing a rectangle around the outside.  \n(The long sides are 200 pixels each and the short sides are each 100 pixels)"
+      grade2_MakeDogTag_4_markdown_instruction: "*\"Forse dovremmo costruire una targhetta per ciascuno dei nostri animali domestici nel caso in cui si perdano.\"*\n\nCompleta questa targhetta disegnando un rettangolo sul contorno.\n(I lati lunghi sono di 200 pixel ognuno e quelli corti di 100 pixel)"
       grade2_MakeDogTag_5_markdown_instruction: |-
-        *"Now a tag for Belle!"*
+        *"Ora una targhetta per Belle!"*
         
-        Draw this diamond with 200 pixel sides.
+        Disegna questo rombo con i lati di 200 pixel.
       grade2_MakeDogTag_6_markdown_instruction: "**Challenge:** This tag is a special one!  Can you figure out how to draw the outline?  \n(The long side is 150 pixels and each of the short sides are 75 pixels.)"
-      grade2_MakeDogTag_7_markdown_instruction: "One more tag.  This is a triangle for Pi.  \n(Each side is 150 pixels)"
+      grade2_MakeDogTag_7_markdown_instruction: "Ancora una targhetta. Questa volta triangolare.\n(Ogni lato è di 150 pixel)"
       grade2_MakeDogTag_8_markdown_instruction: Cerca adesso di disegnare una serie di V collegate, usando un ciclo.
       grade2_MakeDogTag_9_markdown_instruction: "Riscrivi il codice del precedente esercizio, ma questa volta aggiungi il blocco `gira a sinistra di 30 gradi` all'interno del blocco `ripeti ... volte`. Poi, ripeti il ciclo 24 volte invece che 8."
       grade2_MakeDogTag_BFP_markdown_instruction: |-
-        *"Hi, I'm an artist. You can write code to make me draw almost anything."*
+        *"Ciao, sono un artista. puoi scrivere del codice per farmi disegnare quasi qualunque cosa."*
         
-        Play with the blocks in the toolbox to see what they do!
+        Gioca con i blocchi nella cassetta degli attrezzi per capire cosa fanno!
       grade2_MakeDogTag_FP_markdown_instruction: |-
         **Freeplay:** What shape will you make the tag for your pet?
         <br/><br/>
@@ -30407,8 +30528,8 @@ it:
       grade2_PuppyLoops_9_markdown_instruction: |-
         Questo codice disegna la C al contrario nella parola "CODE".<br>
         Riesci a farla disegnare correttamente?
-      grade2_collector_10_markdown_instruction: "You're almost done!  \n\nCollect as many pieces of treasure as you can to finish the stage!"
-      grade2_collector_10_2018_markdown_instruction: "You're almost done!  \n\nCollect as many pieces of treasure as you can to finish the stage!"
+      grade2_collector_10_markdown_instruction: "È quasi fatta! Colleziona più diamanti che puoi per completare la lezione!"
+      grade2_collector_10_2018_markdown_instruction: "È quasi fatta! Colleziona più diamanti che puoi per completare la lezione!"
       grade2_collector_2_markdown_instruction: Move Laurel to the gold, then use `collect` to pick it up.
       grade2_collector_3_markdown_instruction: |-
         *"Sequence matters!"*
@@ -30416,9 +30537,9 @@ it:
         The blocks you need are already in the workspace, but not connected.  Put these blocks in order to collect all of the gold and solve the puzzle.
       grade2_collector_4_markdown_instruction: Sequence matters! The blocks you need are already in the workspace, but not connected.  Order these blocks to solve the puzzle.
       grade2_collector_5_markdown_instruction: |-
-        *"Help me collect each gold coin!"*
+        *"Aiutami a raccogliere ogni moneta d'oro"!*
         
-        These blocks are in the wrong order. Can you fix them?
+        Questi blocchi sono nell'ordine sbagliato. Riesci a riordinarli?
       grade2_collector_6_markdown_instruction: |-
         "Help me collect all of the treasure!"
         
@@ -30427,11 +30548,11 @@ it:
       grade2_collector_8_markdown_instruction: '*"Keep up the good work! Help me collect all of the coins."*'
       grade2_collector_9_markdown_instruction: '*"Let''s get all of the coins!"*'
       grade2_collector_9a_markdown_instruction: "**Challenge:** Grab all of the coins."
-      grade2_collector_A_markdown_instruction: Help Laurel collect all of the treasure.
-      grade2_collector_A_2018_markdown_instruction: Help Laurel collect all of the treasure.
+      grade2_collector_A_markdown_instruction: Aiuto Laurel a raccogliere tutti i diamanti.
+      grade2_collector_A_2018_markdown_instruction: Aiuto Laurel a raccogliere tutti i diamanti.
       grade2_collector_pre1_markdown_instruction: "*\"Hi, I'm Laurel. Today I'm searching for treasure at the dog park!\"*  \n\nPlay around with the blocks to see if you can help Laurel collect some gold."
       grade2_link_RunMarco_partner_markdown_instruction: <a href="https://www.allcancode.com/runmarco"></a><img src="https://images.code.org/c754e82a395ab69e5c1e3b2dfe8bf9ff-image-1486603338831.22.10.png" width="400px"/></a>
-      grade2_maze_debuggingFP_markdown_instruction: '*"Now, help me sneak up on the pig any way you want to!"*'
+      grade2_maze_debuggingFP_markdown_instruction: '*"Ora aiutami a sorprendere il maiale nel modo che preferisci!"*'
       grade2_maze_intro10_markdown_instruction: Solve this puzzle.
       grade2_maze_intro2_markdown_instruction: Welcome to Code Studio! Here you will learn to use blocks to build programs. Press `Ok`, then find the `Run` button to run your first program.
       grade2_maze_intro3_markdown_instruction: The `workspace` is where you will create all of your programs. Find the workspace, then see what the program does.
@@ -31095,6 +31216,13 @@ it:
       iceage_throw_hearts_2018_markdown_instruction: "Sid vuol far sapere a sua nonna, la Nonnina, che la ama. Usa l'istruzione `il personaggio lancia` per far lanciare a Sid (il personaggio 1) dei cuori alla Nonnina (il personaggio 2)! Imposta l'umore della Nonnina a felice quando viene colpita dai cuori."
       iceage_warn_ice_age_markdown_instruction: "Tutti devono muoversi più velocemente perché l'era glaciale sta arrivando! Cambia lo sfondo impostandone uno con ghiaccio e imposta la velocità di Sid (personaggio 1) a veloce, quindi premi \"Esegui\" per farlo correre da Diego ad avvertirlo."
       iceage_warn_ice_age_2018_markdown_instruction: "Tutti devono muoversi più velocemente perché l'era glaciale sta arrivando! Cambia lo sfondo impostandone uno con ghiaccio e imposta la velocità di Sid (personaggio 1) a veloce, quindi premi \"Esegui\" per farlo correre da Diego ad avvertirlo."
+      instructional-strategy-tuesday_markdown_instruction: |
+        # Day 2: Instructional Strategies
+        
+        Name two Instructional Strategies (from the Curriculum Guide) you saw modeled in the 5 Model Lesson or TLOs you’ve seen in the past couple of days?
+        
+        * When were they successful?
+        * What were characteristics of situations where there was room for improvement?
       jessie-test_markdown_instruction: |-
         # Cool
         
@@ -31108,6 +31236,15 @@ it:
         
         ###### forever
       kikiTesta_markdown_instruction: "Our adventurer wants to collect coins.  But she can only use 4 blocks to get them.  \n\nCan you help her grab as many as she can using just 4 blocks?"
+      lesson-exploration-tuesday_markdown_instruction: |
+        # Day 2: Lesson Exploration
+        
+        You have seen 2 Model Lessons (taught by facilitators) and today you will see 1 more Model Lesson and  2 Participant TLOs (taught by teachers). What patterns do you notice about what facilitators do during these sessions (consider the lessons themselves and the debriefs)?
+        
+        * What are facilitators doing during lesson?
+        * What are facilitators doing during debrief?
+        * What are teachers doing throughout the session?
+        * What is the key takeaway from the session?
       level 'grade3_Loops_10_markdown_instruction: |-
         Quest'ape ha molto da fare!<br>
         Aiutala a raccogliere tutto il nettare e produrre tutto il miele, usando il minor numero possibile di blocchi.<br><br>
@@ -31151,16 +31288,48 @@ it:
         
         * *Hint:* You can copy and paste the value of a pixel to use it repeatedly.
       mike3bitmario_markdown_instruction: "# 3-Bit Color\n \n**Challenge:** \n\nA careless binary coder typed in ONE extra 0 or 1 somewhere within this image's data. The extra bit that is causing Mario to glitch out! \n\nDelete the extra bit to restore Mario back to normal!\n\n![](https://images.code.org/8b7c17ba204a1a4d33e1bd6de7f01d76-image-1477306657312.54.57 AM.png)"
+      morning-prep-monday_markdown_instruction: |-
+        # Day 1: Morning Prep
+        
+        What did you notice about how the lead facilitators prepared this morning? What were the top priorities on their mind for the day?
+      morning-prep-thursday_markdown_instruction: |-
+        # Day 4: Morning Prep
+        
+        What did you notice about how the lead facilitators prepared this morning? What were the top priorities on their mind for the day?
+      morning-prep-tuesday_markdown_instruction: |-
+        # Day 2: Morning Prep
+        
+        What did you notice about how the lead facilitators prepared this morning? What were the top priorities on their mind for the day?
+      morning-prep-wednesday_markdown_instruction: |-
+        # Day 3: Morning Prep
+        
+        What did you notice about how the lead facilitators prepared this morning? What were the top priorities on their mind for the day?
       multi-lesson Teaching and Student Support Plan_markdown_instruction: "<br><br>\n> **NOTE: before you start this task, make sure you’ve reviewed the lesson resources in this module, and have a good sense of how the lesson works. If you haven’t already reviewed the materials, do that now and come back to this task later.**\n\n# Teaching and Student Support Plan\n\n## Task Description\n\nNow that you have a better sense of this lessons in this sequence, let’s think about the types of supports students will need in order to be successful. Since the curriculum is based on inquiry learning, lessons feature activities that engage students in discovering core concepts themselves. It’s important to think through implementation plans and student support. In this task you will make a plan for teaching and student support **for one of the lessons in this sequence** that takes into account differentiation strategies and make-up work for absent students. Your teaching and student support plan should cover the following: \n\n\n- **Which lesson in the sequence are you discussing?** \n\n- **Details on how you will implement and differentiate the lesson:**\n\n - An outline of any changes you will need to make to the lesson to fit your local constraints or context (for example: pacing and time, dealing with classroom setup, etc). \n - An overview of the types of student needs you’ll likely need to support in your classroom (for example: students who are struggling to understand the underlying concept; students who are already familiar with the concept, but still have room to learn more; etc)\n - Your plan for addressing each of the needs outlined above (for example: integrating extension activities or other materials for students who already know something about the topic)\n - How will you address or emphasize the connection between lessons in this sequence? \n\n<br>\n- **Plan for catching up absent students:**\n\n - How will absent students catch up on activities they missed? \n - How will you use the fact that the lessons in this sequence are related and build on one another to address make-up work? \n\nYou can type out your teaching and student support plan in the box below, or you can upload a word doc or pdf file. \n\n## Getting Credit for Completing this Task\n\n#### Task Review Details\n\nIf this module is listed as  your “focus area”, then your response to the prompt above will be shared anonymously and reviewed by your peers, and you will review the work done by other teachers. Reviewers will be looking for thoughtful and thorough answers that demonstrate that you have spent time considering how the lesson will play out in your own classroom. Reviewers will have an opportunity to give feedback on your submission, and you can respond to that feedback and resubmit. \n\nIn order to get credit for completing this task, two reviewers need to agree that you have responded to the prompts fully. If reviewers don’t feel comfortable making a decision about your task submission, they can elevate to a facilitator to review. You will always have a chance to address feedback from your reviewers and resubmit your task! Reviewer feedback will show up at the bottom of this page, once it’s available. \n\n<br><br>"
       name 'CSD U3 Keypress Boolean Predict'_markdown_instruction: |-
         # Make a Prediction: keyDown()
         The `keyDown()` block is the first of a new set of blocks that will let us get input from the user. This is the first step on our road to actually making games! See if you can figure out how the `keyDown()` block works.
         
         What do you think will happen when you run the program and press the "up" arrow? Write your prediction below and then run the program to see if your prediction was accurate.
-      novice-monday-1_markdown_instruction: "# Day 1 Question 1\n\nThink back on your experience today.\n\n* Use a few words or sentences to describe how you felt as a participant during those sessions today (e.g., confused, engaged, anxious, etc.)\n* What factors contributed to you feeling that way? \n* Did you feel supported as a teacher today? \n\\t* If yes, why?\n\\t* If no, why? What would have improved your experience?\n"
+      novice-monday-1_markdown_instruction: "# Day 1 Question 1\n\nThink back on your experience today.\n\n* Use a few words or sentences to describe how you felt as a participant during those sessions today (e.g., confused, engaged, anxious, etc.)\n* What factors contributed to you feeling that way? \n* Did you feel supported as a participant today? Why?\n* What does your experience today make you think about your role as a facilitator?\n"
+      novice-monday-2_markdown_instruction: |
+        # Day 1 Question 2
+        
+        What additional questions came up for you today? Record them here so we can discuss your questions during your FiT training.
       novice-thursday-1_markdown_instruction: "# Day 4 Question 1\n\nThink back on your experience today.\n\n* Use a few words or sentences to describe how you felt as a participant during those sessions today (e.g., confused, engaged, anxious, etc.)\n* What factors contributed to you feeling that way? \n* Did you feel supported as a teacher today? \n\\t* If yes, why?\n\\t* If no, why? What would have improved your experience?\n"
+      novice-thursday-2_markdown_instruction: |
+        # Day 4 Question 2
+        
+        What additional questions came up for you today? Record them here so we can discuss your questions during your FiT training.
       novice-tuesday-1_markdown_instruction: "# Day 2 Question 1\n\nThink back on your experience today.\n\n* Use a few words or sentences to describe how you felt as a participant during those sessions today (e.g., confused, engaged, anxious, etc.)\n* What factors contributed to you feeling that way? \n* Did you feel supported as a teacher today? \n\\t* If yes, why?\n\\t* If no, why? What would have improved your experience?\n"
+      novice-tuesday-2_markdown_instruction: |
+        # Day 2 Question 2
+        
+        What additional questions came up for you today? Record them here so we can discuss your questions during your FiT training.
       novice-wednesday-1_markdown_instruction: "# Day 3 Question 1\n\nThink back on your experience today.\n\n* Use a few words or sentences to describe how you felt as a participant during those sessions today (e.g., confused, engaged, anxious, etc.)\n* What factors contributed to you feeling that way? \n* Did you feel supported as a teacher today? \n\\t* If yes, why?\n\\t* If no, why? What would have improved your experience?\n"
+      novice-wednesday-2_markdown_instruction: |
+        # Day 3 Question 2
+        
+        What additional questions came up for you today? Record them here so we can discuss your questions during your FiT training.
       playEventsK1_markdown_instruction: |-
         This game is called "Play Lab".
         
@@ -31229,6 +31398,14 @@ it:
       ramp_artist_loops8_clone_markdown_instruction: "**Challenge:** Look for a pattern and make this code shorter using loops."
       ramp_artist_loops9_markdown_instruction: Solve this puzzle by drawing a square with 200 pixel sides.
       ramp_artist_loops9_2018_markdown_instruction: Solve this puzzle by drawing a square with 200 pixel sides.
+      recruiting-thursday_markdown_instruction: |
+        # Day 4: Recruiting
+        
+        In the Recruiting Students session this morning you talked about recruiting students and meeting students needs in the region where you work. (If you were not with your region think about what you experienced in this sessions that might apply to your region.)
+        
+        * What were common recruiting pain points teachers in your region shared?
+        * What were common student support needs teachers in your region shared?
+        * What things did you see today that you want to check in on throughout the year?
       sample1_markdown_instruction: "Our adventurer wants to collect coins.  But she can only use 4 blocks to get them.  \n\nCan you help her grab as many as she can using just 4 blocks?"
       sample10a_markdown_instruction: "<h4>You have helped the adventurer and her bee!  \nAs a reward, please stay and play around in my magical village.  \n<br/>\n\nYou should have everything you need to create a game of your own.</h4>"
       sample4_markdown_instruction: |-

@@ -46,6 +46,16 @@ module Pd
         response['content'].map {|s| parse_jotform_submission(s)}
       end
 
+      # Retrieves a specific submission from JotForm's API
+      # @param submission_id [Integer]
+      # @return [Hash] hash with keys :form_id, :submission_id, :answers
+      #   where answers is itself a hash of question ids to raw answers.
+      # @see get_submissions
+      def get_submission(submission_id)
+        response = @client.get_submission submission_id
+        parse_jotform_submission response['content']
+      end
+
       # Determine which sub-class of Question will handle parsing a given JotForm question type
       # @param type [String] the part of the JotForm control type string after "control_"
       # @return [Class] sub-class of Question

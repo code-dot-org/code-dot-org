@@ -45,7 +45,14 @@ get '/v2/sections/membership' do
   JSON.pretty_generate(sections)
 end
 
+# DEPRECATED: User GET /dashboardapi/sections/valid_scripts instead
 get '/v2/sections/valid_scripts' do
+  # Notify Honeybadger to determine if this endpoint is still used anywhere
+  Honeybadger.notify(
+    error_class: "DeprecatedEndpointWarning",
+    error_message: 'Deprecated endpoint /v2/sections/valid_scripts called unexpectedly',
+  )
+
   only_for 'code.org'
   dont_cache
   forbidden! unless dashboard_user_id

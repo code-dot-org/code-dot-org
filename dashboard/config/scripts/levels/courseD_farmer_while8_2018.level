@@ -33,13 +33,13 @@
     "markdown_instructions": "**Challenge:** Fill all of these holes using as few blocks as possible. ",
     "parent_level_id": 5724,
     "name_suffix": "_2018",
-    "contained_level_names": null,
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "show_type_hints": "false",
-    "shape_shift": "false"
+    "shape_shift": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

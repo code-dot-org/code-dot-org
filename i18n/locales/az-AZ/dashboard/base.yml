@@ -128,7 +128,8 @@ az:
     field_is_required: "zəruridir"
     accept_terms: "You must agree to create an account"
     error: "An error occurred."
-    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: "Bəli"
     email_preference_no: "Xeyr"
     email_preference_required: "You must specify an email preference."
@@ -467,6 +468,8 @@ az:
   gender:
     male: 'Kişi'
     female: 'Qadın'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: 'Cavab verməməyə üstünlük verirəm'
   user_type:
     student: 'şagird'
@@ -719,7 +722,7 @@ az:
     tos: "Xidmət şərtləri"
     privacy: "Məxfilik siyasəti"
     privacy_notice: "Privacy Notice"
-    accept_label: 'I agree to the updated <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>'
+    accept_label: 'I agree to the <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.'
     accept: "Qəbul et"
     print: "çap"
     reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'

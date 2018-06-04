@@ -169,6 +169,7 @@
     error: Възникна грешка.
     email_preference_question: Can we email you about updates to our courses, local
       learning opportunities, or other computer science news?
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: Да
     email_preference_no: Не
     email_preference_required: You must specify an email preference.
@@ -633,6 +634,8 @@
   gender:
     male: Мъж
     female: Жена
+    non_binary: Non-binary
+    not_listed: Preferred term not listed
     none: Предпочитам да не отговоря
   user_type:
     student: Ученик

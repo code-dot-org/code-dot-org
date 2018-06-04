@@ -486,7 +486,7 @@
   homepage_donors_donate: Bağış Yap
   homepage_below_hero_announcement_text: Gizliliğinize önem veriyoruz ve gizlilik
     politikamızda 25 Mayıs’ta yürürlüğe girecek bazı güncellemeler yapıyoruz.
-  homepage_below_hero_announcement_link_text: Daha fazla bilgi edinin
+  homepage_below_hero_announcement_link_text: Daha fazlasını öğren
   contact_form_topic_student: Ben öğrenciyim
   contact_form_topic_parent: Bir ebeveynim
   contact_form_topic_teacher: Bir öğretmen/eğitimciyim
@@ -730,10 +730,11 @@
   volunteer_engineer_submission_field_email_desc: E-posta adresiniz asla paylaşılmaz,
     ancak öğretmenlerden size istekler göndereceğiz.
   volunteer_engineer_submission_field_email_placeholder: E-posta adresi
-  volunteer_engineer_submission_field_email_preference: Size kurslarımızdaki yenilikler, yerel
-    fırsatlar veya diğer bilgisayar bilimi haberleriyle ilgili e-posta gönderebilir miyiz?
-  volunteer_engineer_submission_field_email_preference_privacy: (Ayrıntılar için gizlilik
-    politikamıza bakın)
+  volunteer_engineer_submission_field_email_preference: Size kurslarımızdaki yenilikler,
+    yerel fırsatlar veya diğer bilgisayar bilimi haberleriyle ilgili e-posta gönderebilir
+    miyiz?
+  volunteer_engineer_submission_field_email_preference_privacy: "(Ayrıntılar için
+    gizlilik politikamıza bakın)"
   volunteer_engineer_submission_field_email_preference_yes: Evet
   volunteer_engineer_submission_field_email_preference_no: Hayır
   volunteer_engineer_submission_final_paragraph: Kod Saati ve diğer gönüllü fırsatlarında
@@ -1251,12 +1252,26 @@
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Ünite 5: Veri ve toplum'
   csd6_name: 'Ünite 6: Fiziksel bilişim'
+  csd1-2017_name: 'Unit 1: Problem Solving'
+  csd2-2017_name: 'Unit 2: Web Development'
+  csd3-2017_name: 'Unit 3: Animation and Games'
+  csd4-2017_name: 'Unit 4: The Design Process'
+  csd5-2017_name: 'Ünite 5: Veri ve toplum'
+  csd6-2017_name: 'Ünite 6: Fiziksel bilişim'
   csd1-2018_name: 'Unit 1: Problem Solving'
   csd2-2018_name: 'Unit 2: Web Development'
   csd3-2018_name: 'Unit 3: Animation and Games'
   csd4-2018_name: 'Unit 4: The Design Process'
   csd5-2018_name: 'Ünite 5: Veri ve toplum'
   csd6-2018_name: 'Ünite 6: Fiziksel bilişim'
+  csp1-2017_name: 'Ünite 1: Internet'
+  csp2-2017_name: 'Ünite 2: Sayısal bilgi'
+  csp3-2017_name: 'Unit 3: Algorithms and Programming'
+  csp4-2017_name: 'Unit 4: Big Data and Privacy'
+  csp5-2017_name: 'Unit 5: Building Apps'
+  csp-explore-2017_name: 'AP: Explore PT Prep'
+  csp-create-2017_name: 'AP: Create PT Prep'
+  csppostap-2017_name: 'Post-AP: Uygulamalardaki veritabanları'
   csp1-2018_name: 'Ünite 1: Internet'
   csp2-2018_name: 'Ünite 2: Sayısal bilgi'
   csp3-2018_name: 'Unit 3: Algorithms and Programming'

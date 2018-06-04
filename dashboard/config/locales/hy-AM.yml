@@ -162,7 +162,8 @@
     accept_terms: You must agree to create an account
     error: An error occurred.
     email_preference_question: Can we email you about updates to our courses, local
-      learning opportunities, or other computer science news?
+      opportunities, or other computer science news?
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: այո
     email_preference_no: ոչ
     email_preference_required: You must specify an email preference.
@@ -624,6 +625,8 @@
   gender:
     male: արական
     female: իգական
+    non_binary: Non-binary
+    not_listed: Preferred term not listed
     none: Նախընտրում եմ չպատասխանել
   user_type:
     student: Աշակերտ
@@ -962,8 +965,8 @@
     tos: Ծառայությունների մատուցման պայմաններ
     privacy: Գաղտնիության քաղաքականություն
     privacy_notice: Privacy Notice
-    accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
-      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
+    accept_label: I agree to the <a href="%{tos_url}" target="_blank">Terms of Service</a>
+      and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
     accept: Accept
     print: տպել
     reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms

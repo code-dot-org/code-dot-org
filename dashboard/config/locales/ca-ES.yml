@@ -167,6 +167,7 @@
     error: An error occurred.
     email_preference_question: Can we email you about updates to our courses, local
       learning opportunities, or other computer science news?
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: Sí
     email_preference_no: 'No'
     email_preference_required: You must specify an email preference.
@@ -629,6 +630,8 @@
   gender:
     male: Home
     female: Dona
+    non_binary: Non-binary
+    not_listed: Preferred term not listed
     none: Prefereixo no respondre
   user_type:
     student: estudiant

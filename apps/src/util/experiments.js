@@ -3,7 +3,8 @@
  * can be enabled/disabled using query parameters:
  *   enable:  http://foo.com/?enableExperiments=experimentOne,experimentTwo
  *   disable: http://foo.com/?disableExperiments=experimentOne,experimentTwo
- * Experiment state is persisted across page loads using local storage.
+ * Experiment state is persisted across page loads using local storage.  Note
+ * that it's only written when isEnabled is called for the key in question.
  */
 import { trySetLocalStorage } from '../utils';
 import Cookie from 'js-cookie';
@@ -16,7 +17,8 @@ const STORAGE_KEY = 'experimentsList';
 const GA_EVENT = 'experiments';
 const EXPERIMENT_LIFESPAN_HOURS = 12;
 
-// specific experiment names
+// Specific experiment names
+experiments.REDUX_LOGGING = 'reduxLogging';
 experiments.COMMENT_BOX_TAB = 'commentBoxTab';
 experiments.DEV_COMMENT_BOX_TAB = 'devCommentBoxTab';
 experiments.PROGRESS_TAB = 'sectionProgressRedesign';
