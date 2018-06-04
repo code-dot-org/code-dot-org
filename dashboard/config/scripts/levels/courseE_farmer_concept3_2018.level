@@ -36,11 +36,15 @@
     "shape_shift": "false",
     "step_speed": "2",
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-14 01:42:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-17 20:49:15 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-17 20:49:30 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-10-04 02:22:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-07-14 01:42:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-17 20:49:15 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-17 20:49:30 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-10-04 02:22:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-04 22:10:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>
@@ -50,40 +54,46 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="maze_move">
-          <title name="DIR">moveForward</title>
-        </block>
-        <block type="maze_turn">
-          <title name="DIR">turnLeft</title>
-        </block>
-        <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-        </block>
-        <block type="maze_dig"/>
-        <block type="maze_fill"/>
-        <block type="controls_repeat">
-          <title name="TIMES">???</title>
-        </block>
-        <block type="maze_untilBlockedOrNotClear">
-          <title name="DIR">holePresent</title>
-        </block>
-        <block type="maze_untilBlocked"/>
-        <block type="maze_if">
-          <title name="DIR">isPathLeft</title>
-        </block>
-        <block type="maze_ifElse">
-          <title name="DIR">isPathLeft</title>
-        </block>
-        <block type="karel_if">
-          <title name="DIR">holePresent</title>
-        </block>
-        <block type="procedures_callnoreturn">
-          <mutation name="do something"/>
-        </block>
-        <block type="procedures_defnoreturn">
-          <mutation/>
-          <title name="NAME">do something</title>
-        </block>
+        <category name="Actions">
+          <block type="maze_move">
+            <title name="DIR">moveForward</title>
+          </block>
+          <block type="maze_turn">
+            <title name="DIR">turnLeft</title>
+          </block>
+          <block type="maze_turn">
+            <title name="DIR">turnRight</title>
+          </block>
+          <block type="maze_dig"/>
+          <block type="maze_fill"/>
+        </category>
+        <category name="Loops">
+          <block type="controls_repeat">
+            <title name="TIMES">???</title>
+          </block>
+          <block type="maze_untilBlockedOrNotClear">
+            <title name="DIR">holePresent</title>
+          </block>
+          <block type="maze_untilBlocked"/>
+        </category>
+        <category name="Conditionals">
+          <block type="maze_untilBlockedOrNotClear">
+            <title name="DIR">holePresent</title>
+          </block>
+          <block type="maze_untilBlocked"/>
+          <block type="maze_if">
+            <title name="DIR">isPathLeft</title>
+          </block>
+          <block type="maze_ifElse">
+            <title name="DIR">isPathLeft</title>
+          </block>
+        </category>
+        <category name="Functions" custom="PROCEDURE"/>
+        <category name="Comments">
+          <block type="comment">
+            <title name="TEXT"/>
+          </block>
+        </category>
       </xml>
     </toolbox_blocks>
     <recommended_blocks>
