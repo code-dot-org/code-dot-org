@@ -87,47 +87,60 @@ export default function sectionAssessments(state=initialState, action) {
 
 // Selector functions
 
-export const getAssessmentsForCurrentScript = (state) => {
+// Get the student responses for assessments in the current script
+export const getAssessmentResponsesForCurrentScript = (state) => {
   return state.sectionAssessments.assessmentsByScript[state.scriptSelection.scriptId] || {};
 };
 
-const getCorrectAnswer = (answerArr) => {
-  const correctIndex = answerArr.findIndex(answer => answer.correct);
-  const letterArr = ['A','B', 'C', 'D'];
-  return letterArr[correctIndex];
+// Get the question structure for assessments in the current script
+export const getAssessmentStructureForCurrentScript = (state) => {
+  return state.sectionAssessments.assessmentsStructureByScript[state.scriptSelection.scriptId] || {};
 };
 
+
+// TODO(caleybrock): each section of these function should be broken up into helpers
+// and tested. We also need better names.
 export const getQuestionAnswerData = (state) => {
-  const assessmentsStructure = state.sectionAssessments.assessmentsStructureByScript[state.scriptSelection.scriptId] || {};
+  const assessmentsStructure = getAssessmentStructureForCurrentScript(state);
+
+  // TODO(caleybrock): handle loading states better.
   if (Object.keys(assessmentsStructure).length === 0) {
     return {};
   }
-  const firstAssessment = Object.values(assessmentsStructure)[0];
-  const questionData = firstAssessment.questions;
-  console.log('question data -->', questionData);
-  const transformedData = questionData.filter(question => question.answers).map(question => {
+
+  // For now, get the structure of just the first assessment.
+  // This will be selected based on the future assessment drop down filter.
+  const firstAssessmentStructure = Object.values(assessmentsStructure)[0];
+  const questionData = firstAssessmentStructure.questions;
+
+  // Transform that data into what we need for this particular table.
+  return questionData.filter(question => question.answers).map(question => {
     return {
       id: question.level_id,
       question: question.question_text,
       correctAnswer: getCorrectAnswer(question.answers),
     };
   });
-  console.log('transformed data', transformedData);
-  return transformedData;
 };
 
 export const getStudentAnswerData = (state) => {
-  const studentResponses = state.sectionAssessments.assessmentsByScript[state.scriptSelection.scriptId] || {};
+  const studentResponses = getAssessmentResponsesForCurrentScript(state);
+
+  // TODO(caleybrock): handle loading states better.
   if (Object.keys(studentResponses).length === 0) {
     return {};
   }
+
+  // For now get the first student's first assessment.
+  // This will be selected based on the future assessment drop down filter.
   const studentId = Object.keys(studentResponses)[0];
-  const firstStudentResponses = studentResponses[studentId].responses_by_assessment;
-  const firstStudentAssessment = Object.values(firstStudentResponses)[0];
-  console.log('student assessment', firstStudentAssessment);
-  const transformedData = {
+  const studentObject = studentResponses[studentId];
+  const firstStudentAssessment = Object.values(studentObject.responses_by_assessment)[0];
+
+  // Transform that data into what we need for this particular table.
+  return {
     id: studentId,
-    name: studentResponses[studentId].student_name,
+    name: studentObject.student_name,
     studentAnswers: firstStudentAssessment.level_results.map(answer => {
       return {
         answers: answer.student_result || '',
@@ -135,11 +148,24 @@ export const getStudentAnswerData = (state) => {
       };
     })
   };
-  console.log('transformedData', transformedData);
-  return transformedData;
 };
 
-// Make a request to the server for assessment data
+// Helpers
+
+// Takes in an array of objects {answerText: '', correct: true/false} and
+// returns the corresponding letter to the option with the correct answer.
+// Ex - [{correct: false}, {correct: true}] --> returns 'B'
+const getCorrectAnswer = (answerArr) => {
+  const correctIndex = answerArr.findIndex(answer => answer.correct);
+  // TODO(caleybrock): Add letter options to response from the server so they are
+  // consistent with the structure, but for now look up letter in this array.
+  const letterArr = ['A','B', 'C', 'D', 'E', 'F', 'G', 'H'];
+  return letterArr[correctIndex];
+};
+
+// Requests to the server for assessment data
+
+// Loads the assessment responses
 const loadAssessmentsFromServer = (sectionId, scriptId) => {
   let payload = {section_id: sectionId};
   if (scriptId) {
@@ -154,6 +180,7 @@ const loadAssessmentsFromServer = (sectionId, scriptId) => {
   });
 };
 
+// Loads the assessment question structure
 const loadAssessmentsStructureFromServer = (scriptId) => {
   const payload = {script_id: scriptId};
   return $.ajax({
