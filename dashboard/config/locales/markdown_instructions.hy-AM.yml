@@ -14192,8 +14192,8 @@
         # Debug: colorLeds
 
         Can you debug the index values so that the rainbow shows up on the board like in the picture?
-      CSD U6 colorLeds debug_2018_markdown_instruction: |-
-        <img src="https://images.code.org/e055be621221385d3503962bee5aa616-image-1491493475417.44.28.png" style="width:250px; float:right">
+      CSD U6 colorLeds debug_2018_markdown_instruction: |
+        <img src="https://images.code.org/723f036c40ef2770426d5d437e69fcde-image-1527268321449.png" style="width:250px; float:right">
 
         # Debug: colorLeds
 
@@ -14756,7 +14756,7 @@
 
         # Do This
 
-        We're going to start an app that will control all of the Color LEDs on your board. The first step is to wire up the button that turns all of the LEDs on.
+        Over the next few levels, you'll create an app that will control all of the Color LEDs on your board. The first step is to wire up the button that turns all of the LEDs on.  (Don't worry about the rest of the comments in the workspace.  You'll work on those in later levels.)
 
         * Add an event handler for "button_on"
         * Place a _for loop_ in your event handler that repeats until it reaches in the end of the array `colorLeds`
@@ -15628,7 +15628,7 @@
         * The movement meter is being triggered by a button press, instead of the accelerometer's `change` event.
         * The programmer forgot how to use the counter pattern to increase the movement variable.
 
-        Once you have found the bugs, run the program and try to pass the board to your partner without setting off the alerm.
+        Once you have found the bugs, run the program and try to pass the board to your partner without setting off the alarm.
       CSD U6 stillness game predict code_2018_markdown_instruction: |-
         # Change with the Accelerometer
 
@@ -29607,20 +29607,10 @@
         Your Protocol:**  \nUse the worksheet handed out by your teacher to brainstorm
         ideas for your protocol. Iteratively improve your protocol by testing it out
         with simple sample messages.\n"
-      'Internet Simulator: Sending Text_2018_markdown_instruction': "## Sending Formatted
-        Text Activity\n\n**Directions:**  \nWork with a partner or in a small team
-        to develop a protocol that allows you to send formatted text. \n\n**Guidelines:**
-        \ \n- Both the text and the formatting instructions must be derived from the
-        printable ASCII character set (i.e. codes 32-126).\n- Your protocol must encode
-        at least:\n\\t- bold, italics, and underlining\n\\t- three different font
-        sizes (large, medium, and small)\n\\t- three different font colors (red, black,
-        blue)\n- You will demonstrate that your protocol works by having the recipient
-        be able to faithfully draw (or produce in some fashion) the formatted text
-        based only on the data she received through an ASCII-text version of the Internet
-        Simulator. A sample message can be found below.\n\n![](https://images.code.org/6fa1d53e4d36a9d0bac5b9b8fb4bc81d-image-1434427211242.PNG)\n\n**Develop
-        Your Protocol:**  \nUse the worksheet handed out by your teacher to brainstorm
-        ideas for your protocol. Iteratively improve your protocol by testing it out
-        with simple sample messages.\n"
+      'Internet Simulator: Sending Text_2018_markdown_instruction': |-
+        ## Sending Text
+
+        **Directions:** Design an encoding system to send text using the Internet Simulator. Your teacher will provide you with a number of increasingly complex challenges that you'll need to solve.
       Internet Speed Test_markdown_instruction: "# Check for Internet Accessibility\n\nAnother
         difference in how people will experience your website is in the speed of their
         internet connection as they try to load the content on your web page. To check
@@ -33007,6 +32997,11 @@
         **Instructions**:
 
         Invent and test a protocol for encoding and sending text messages. Your protocol must include the letters a-z, spaces, and common punctuation marks. You may add additional characters if you wish. See the worksheet handed out by your teacher for more detailed instructions!
+      U1L11 Abstraction Reflection_2018_markdown_instruction: |-
+        An abstraction is a simplified representation of something that is more complex. Decimal numbers were a useful abstraction in the context of today's lesson. Write a short response to both questions below.
+
+        * What is the underlying complexity decimal numbers were used to represent.
+        * How were decimal numbers helpful in designing a system to represent text in bits?
       U1L11 Collaboration Reflection_markdown_instruction: |
         What problems arose in your efforts to create a working protocol? How did you think about the problem(s) in order to solve it?
 
@@ -33041,6 +33036,10 @@
         your encoding scheme need to communicate the text?  Calculate the percentage
         of bits that were used for formatting instead of sending the actual text message.
         \n\npercent = (formatting bits)/(total bits) * 100\n\n\n"
+      U1L11 Reflection Multiple Representations_2018_markdown_instruction: |-
+        "The binary pattern `01000001` represents the number 65."
+
+        Write a brief response explaining whether you believe this statement is always true. Explain your reasoning.
       U1L12 Reflection Free Response_markdown_instruction: "Respond to this prompt
         or to another as directed by your teacher.\n\nThe salesperson in a cell phone
         store is telling me that the phone I'm considering has 8GB of memory, which
@@ -33634,6 +33633,9 @@
         necessarily English - do not count on human intuition to reconstruct the message.
         The message is not known beforehand.)\n- The sender and receiver must be confident
         the full message was successfully transmitted and reconstructed."
+      U2L05 Lossy vs. Lossless FR 1_2018_markdown_instruction: In general, what are
+        reasons that someone would choose to use lossy compression? When would they
+        choose to use lossless compression? Write a brief response below.
       U2L05 Reflection 1_markdown_instruction: 'In your own words, what were the primary
         obstacles you needed to overcome in today’s challenge? How do these obstacles
         mirror actual problems encountered on the Internet?  '
@@ -42549,7 +42551,7 @@
 
         # Do This:
 
-        **You code from the previous exercise** is provided.
+        **Your code from the previous exercise** is provided.
 
         * Use the syntax shown above **to display the `name` and `grade` of the first student in your students array.**
         * Use the syntax shown above **to display the `name` and `onTimeToClass` for the last student in your students array.**
@@ -51944,6 +51946,10 @@
         *"It's time to get angry!"*
 
         **Challenge:** Use what you've learned to get the bird to the pig!
+      courseF_playlab_brokenText_markdown_instruction: |-
+        In the rest of this stage, we will use multiple `ask` blocks and multiple `if/else` statements to create a game that **you** control!
+
+        Start by setting the "codename" variable to a word that you can remember.  Then, use an `ask` block to get a codename from the users.  You will need an `if/else` block to see if the codename entered matches the codename that you have set.
       courseF_playlab_variables0_markdown_instruction: "This is Pirate Pegleg.  He's
         awfully hard to understand these days!  \n\nDecode his speech by changing
         these pieces of text in the code:\n- \"arrrg\" should be \"a\" \n- \"ye\"
@@ -52417,21 +52423,23 @@
         the lessons as well as how to address teacher concerns about the unit . We
         suggest you write your response in another text editor and copy it in here
         once you are ready to submit.\n\n> **Prompt:** How would you respond to a
-        teacher who asks, “Why does the first unit not use computers?”\n\n## Getting
-        Credit for Completing this Reflection \n\n- Once you submit your reflection,
-        your response to the prompt above will be shared anonymously and read by your
-        peers, and you will read the work done by other facilitators. This give facilitators
-        a chance to learn from each other.\n- Your submission will also be given to
-        an expert reviewer. Expert reviewers will be looking for thoughtful and thorough
-        answers that demonstrate that you have spent time considering the reflection
-        questions listed above. Reviewers will have an opportunity to give feedback
-        on your submission, and you can respond to that feedback and resubmit.\n-
-        In order to get credit for completing this prompt, your expert review needs
-        to say \"Yes\" responded to the prompts fully. If reviewers don’t feel comfortable
-        making a decision about your task submission, they can elevate to an instructor
-        for review. You will always have a chance to address feedback from your reviewers
-        and resubmit your reflections! Reviewer feedback will show up at the bottom
-        of this page, once it’s available."
+        teacher who says, “I’m brand new to computer science. What supports exist
+        for me in the curriculum? How will I assess my students knowledge if I don't
+        myself know the material?”\n\n## Getting Credit for Completing this Reflection
+        \n\n- Once you submit your reflection, your response to the prompt above will
+        be shared anonymously and read by your peers, and you will read the work done
+        by other facilitators. This give facilitators a chance to learn from each
+        other.\n- Your submission will also be given to an expert reviewer. Expert
+        reviewers will be looking for thoughtful and thorough answers that demonstrate
+        that you have spent time considering the reflection questions listed above.
+        Reviewers will have an opportunity to give feedback on your submission, and
+        you can respond to that feedback and resubmit.\n- In order to get credit for
+        completing this prompt, your expert review needs to say \"Yes\" responded
+        to the prompts fully. If reviewers don’t feel comfortable making a decision
+        about your task submission, they can elevate to an instructor for review.
+        You will always have a chance to address feedback from your reviewers and
+        resubmit your reflections! Reviewer feedback will show up at the bottom of
+        this page, once it’s available."
       csd1dlp-tools_markdown_instruction: "\n\n<br><br>\n\n> **NOTE: before you start
         this reflection, make sure you’ve reviewed the lesson in Unit 1, and have
         a good sense of the the role of tools in the lessons. If you haven’t already
@@ -55293,10 +55301,105 @@
         \ The app will maintain a shopping list (a list of words) of all the items
         to buy.  Describe how Cecelia might use a second list in the app.  What else
         might be tracked? Describe how the list would be used and updated in the app.\n"
+      debrief-monday_markdown_instruction: |-
+        # Day 1: End of Day Debrief
+
+        * What were the key takeaways the leads had today (e.g., teachers’ gots and needs, working together as facilitators, keeping a healthy cohort rapport, etc.)?
+        * Did they decide to make any adjustments to their approach for the next day? If so, what do they plan to change and why?
+      debrief-thursday_markdown_instruction: |-
+        # Day 4: End of Day Debrief
+
+        * What were the key takeaways the leads had today (e.g., teachers’ gots and needs, working together as facilitators, keeping a healthy cohort rapport, etc.)?
+        * Did they decide to make any adjustments to their approach for the next day? If so, what do they plan to change and why?
+      debrief-tuesday_markdown_instruction: |-
+        # Day 2: End of Day Debrief
+
+        * What were the key takeaways the leads had today (e.g., teachers’ gots and needs, working together as facilitators, keeping a healthy cohort rapport, etc.)?
+        * Did they decide to make any adjustments to their approach for the next day? If so, what do they plan to change and why?
+      debrief-wednesday_markdown_instruction: |-
+        # Day 3: End of Day Debrief
+
+        * What were the key takeaways the leads had today (e.g., teachers’ gots and needs, working together as facilitators, keeping a healthy cohort rapport, etc.)?
+        * Did they decide to make any adjustments to their approach for the next day? If so, what do they plan to change and why?
+      discussion-thursday_markdown_instruction: |
+        # Day 4: Discussion-Based
+
+        You have now seen a couple discussion-based (purple) sessions. Some specific examples include the Getting Buy-In (Wednesday), and Recruiting Students (Thursday) sessions. What common facilitator strategies were used in these sessions?
+
+        * What are facilitators doing?
+        * What are teachers doing?
+      engagement-monday_markdown_instruction: |
+        # Day 1: Engagement
+
+        Think of one participant engagement challenge the lead facilitators faced today.
+
+        * What was the challenge?
+        * How did the lead facilitator(s) manage that challenge?
+        * How would you approach this challenge in a session you lead?
+      engagement-thursday_markdown_instruction: |
+        # Day 4: Engagement
+
+        Think of one participant engagement challenge the lead facilitators faced today.
+
+        * What was the challenge?
+        * How did the lead facilitator(s) manage that challenge?
+        * How would you approach this challenge in a session you lead?
+      engagement-tuesday_markdown_instruction: |
+        # Day 2: Engagement
+
+        Think of one participant engagement challenge the lead facilitators faced today.
+
+        * What was the challenge?
+        * How did the lead facilitator(s) manage that challenge?
+        * How would you approach this challenge in a session you lead?
+      engagement-wednesday_markdown_instruction: |
+        # Day 3: Engagement
+
+        Think of one participant engagement challenge the lead facilitators faced today.
+
+        * What was the challenge?
+        * How did the lead facilitator(s) manage that challenge?
+        * How would you approach this challenge in a session you lead?
       expresslink_markdown_instruction: <a href="https://studio.code.org/s/express"><img
         src="https://images.code.org/32b135ea9a16684b30f89ffe0f6606b1-image-1507039514762.05.01
         AM.png"/><img src="https://images.code.org/cfea3adf1aec120e23e039ed06856f6f-image-1507039555039.05.48
         AM.png"/></a>
+      facilitator-prez-wednesday_markdown_instruction: |-
+        # Day 3: Facilitator Presentation
+
+        You have now seen a bunch of facilitator presentation sessions (orange sessions). What common facilitator strategies were used in these sessions?
+
+        * What are facilitators doing?
+        * What are teachers doing?
+        * What strategies did you see facilitators use to keep teachers engaged?
+      feel-monday_markdown_instruction: |
+        # Day 1: Feel
+
+        Use a few words or sentences to describe the ways participants seemed to feel throughout the day today (e.g., confused, engaged, anxious, etc.)
+
+        * What factors seemed to contribute to those feelings?
+        * What did you see the lead facilitators do to address or support the general participant experience throughout the day?
+      feel-thursday_markdown_instruction: |
+        # Day 4: Feel
+
+        Use a few words or sentences to describe the ways participants seemed to feel throughout the day today (e.g., confused, engaged, anxious, etc.)
+
+        * What factors seemed to contribute to those feelings?
+        * What did you see the lead facilitators do to address or support the general participant experience throughout the day?
+      feel-tuesday_markdown_instruction: |
+        # Day 2: Feel
+
+        Use a few words or sentences to describe the ways participants seemed to feel throughout the day today (e.g., confused, engaged, anxious, etc.)
+
+        * What factors seemed to contribute to those feelings?
+        * What did you see the lead facilitators do to address or support the general participant experience throughout the day?
+      feel-wednesday_markdown_instruction: |
+        # Day 3: Feel
+
+        Use a few words or sentences to describe the ways participants seemed to feel throughout the day today (e.g., confused, engaged, anxious, etc.)
+
+        * What factors seemed to contribute to those feelings?
+        * What did you see the lead facilitators do to address or support the general participant experience throughout the day?
       frozen circle function in circle_markdown_instruction: |-
         Now let's create 20 overlapping
         circles, turning 18 degrees between each circle.
@@ -55362,6 +55465,13 @@
         Can you create a snowflake using the
         “Repeat” block to make a square 10 times, and the “Turn” block to turn 36
         degrees between each square?
+      getting-buy-in-wednesday_markdown_instruction: |
+        # Day 3: Getting Buy In
+
+        In the Getting Buy-In session this morning you talked about building community and dealing with barriers to growing your CS education community locally. (If you were not with your region think about what you experienced in this sessions that might apply to your region.)
+
+        * What were common barriers teachers in your region shared?
+        * What things did you see today that you want to check in on throughout the year?
       gl jr clone me ram2_markdown_instruction: Clone this level, and then make your
         own programs!
       gl jr clone me_markdown_instruction: Clone this level, and then make your own
@@ -56911,6 +57021,13 @@
         because an ice storm is coming! \nChange the scene to an icy background and
         set Sid’s (actor 1) speed to fast.\nPress \"Run\" and move Sid to Diego to
         warn him."
+      instructional-strategy-tuesday_markdown_instruction: |
+        # Day 2: Instructional Strategies
+
+        Name two Instructional Strategies (from the Curriculum Guide) you saw modeled in the 5 Model Lesson or TLOs you’ve seen in the past couple of days?
+
+        * When were they successful?
+        * What were characteristics of situations where there was room for improvement?
       jessie-test_markdown_instruction: |-
         # Cool
 
@@ -56926,6 +57043,15 @@
       kikiTesta_markdown_instruction: "Our adventurer wants to collect coins.  But
         she can only use 4 blocks to get them.  \n\nCan you help her grab as many
         as she can using just 4 blocks?"
+      lesson-exploration-tuesday_markdown_instruction: |
+        # Day 2: Lesson Exploration
+
+        You have seen 2 Model Lessons (taught by facilitators) and today you will see 1 more Model Lesson and  2 Participant TLOs (taught by teachers). What patterns do you notice about what facilitators do during these sessions (consider the lessons themselves and the debriefs)?
+
+        * What are facilitators doing during lesson?
+        * What are facilitators doing during debrief?
+        * What are teachers doing throughout the session?
+        * What is the key takeaway from the session?
       level 'grade3_Loops_10_markdown_instruction: |-
         Such a busy bee!
 
@@ -57005,6 +57131,22 @@
         data. The extra bit that is causing Mario to glitch out! \n\nDelete the extra
         bit to restore Mario back to normal!\n\n![](https://images.code.org/8b7c17ba204a1a4d33e1bd6de7f01d76-image-1477306657312.54.57
         AM.png)"
+      morning-prep-monday_markdown_instruction: |-
+        # Day 1: Morning Prep
+
+        What did you notice about how the lead facilitators prepared this morning? What were the top priorities on their mind for the day?
+      morning-prep-thursday_markdown_instruction: |-
+        # Day 4: Morning Prep
+
+        What did you notice about how the lead facilitators prepared this morning? What were the top priorities on their mind for the day?
+      morning-prep-tuesday_markdown_instruction: |-
+        # Day 2: Morning Prep
+
+        What did you notice about how the lead facilitators prepared this morning? What were the top priorities on their mind for the day?
+      morning-prep-wednesday_markdown_instruction: |-
+        # Day 3: Morning Prep
+
+        What did you notice about how the lead facilitators prepared this morning? What were the top priorities on their mind for the day?
       multi-lesson Teaching and Student Support Plan_markdown_instruction: "<br><br>\n>
         **NOTE: before you start this task, make sure you’ve reviewed the lesson resources
         in this module, and have a good sense of how the lesson works. If you haven’t
@@ -57056,26 +57198,42 @@
         experience today.\n\n* Use a few words or sentences to describe how you felt
         as a participant during those sessions today (e.g., confused, engaged, anxious,
         etc.)\n* What factors contributed to you feeling that way? \n* Did you feel
-        supported as a teacher today? \n\\t* If yes, why?\n\\t* If no, why? What would
-        have improved your experience?\n"
+        supported as a participant today? Why?\n* What does your experience today
+        make you think about your role as a facilitator?\n"
+      novice-monday-2_markdown_instruction: |
+        # Day 1 Question 2
+
+        What additional questions came up for you today? Record them here so we can discuss your questions during your FiT training.
       novice-thursday-1_markdown_instruction: "# Day 4 Question 1\n\nThink back on
         your experience today.\n\n* Use a few words or sentences to describe how you
         felt as a participant during those sessions today (e.g., confused, engaged,
         anxious, etc.)\n* What factors contributed to you feeling that way? \n* Did
         you feel supported as a teacher today? \n\\t* If yes, why?\n\\t* If no, why?
         What would have improved your experience?\n"
+      novice-thursday-2_markdown_instruction: |
+        # Day 4 Question 2
+
+        What additional questions came up for you today? Record them here so we can discuss your questions during your FiT training.
       novice-tuesday-1_markdown_instruction: "# Day 2 Question 1\n\nThink back on
         your experience today.\n\n* Use a few words or sentences to describe how you
         felt as a participant during those sessions today (e.g., confused, engaged,
         anxious, etc.)\n* What factors contributed to you feeling that way? \n* Did
         you feel supported as a teacher today? \n\\t* If yes, why?\n\\t* If no, why?
         What would have improved your experience?\n"
+      novice-tuesday-2_markdown_instruction: |
+        # Day 2 Question 2
+
+        What additional questions came up for you today? Record them here so we can discuss your questions during your FiT training.
       novice-wednesday-1_markdown_instruction: "# Day 3 Question 1\n\nThink back on
         your experience today.\n\n* Use a few words or sentences to describe how you
         felt as a participant during those sessions today (e.g., confused, engaged,
         anxious, etc.)\n* What factors contributed to you feeling that way? \n* Did
         you feel supported as a teacher today? \n\\t* If yes, why?\n\\t* If no, why?
         What would have improved your experience?\n"
+      novice-wednesday-2_markdown_instruction: |
+        # Day 3 Question 2
+
+        What additional questions came up for you today? Record them here so we can discuss your questions during your FiT training.
       playEventsK1_markdown_instruction: |-
         This game is called "Play Lab".
 
@@ -57181,6 +57339,14 @@
         with 200 pixel sides.
       ramp_artist_loops9_2018_markdown_instruction: Solve this puzzle by drawing a
         square with 200 pixel sides.
+      recruiting-thursday_markdown_instruction: |
+        # Day 4: Recruiting
+
+        In the Recruiting Students session this morning you talked about recruiting students and meeting students needs in the region where you work. (If you were not with your region think about what you experienced in this sessions that might apply to your region.)
+
+        * What were common recruiting pain points teachers in your region shared?
+        * What were common student support needs teachers in your region shared?
+        * What things did you see today that you want to check in on throughout the year?
       sample1_markdown_instruction: "Our adventurer wants to collect coins.  But she
         can only use 4 blocks to get them.  \n\nCan you help her grab as many as she
         can using just 4 blocks?"

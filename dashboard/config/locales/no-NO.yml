@@ -141,10 +141,11 @@
     mismatch_password: De to passordene du skrev inn samsvarer ikke
     agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
       and <a href='http://code.org/privacy'>Privacy Policy</a>.
-    under_13_consent: Jeg er under 13 år og bekrefter jeg at har tillatelse fra mine foreldre eller
-      verge til å bruke tjenestene til Code.org.
+    under_13_consent: Jeg er under 13 år og bekrefter jeg at har tillatelse fra mine
+      foreldre eller verge til å bruke tjenestene til Code.org.
     agree_us_website: Jeg aksepterer å bruke et nettsted som er basert i USA.
-    my_data_to_us: "Mine data fra bruken av dette nettstedet kan sendes til, lagres eller behandles i USA."
+    my_data_to_us: Mine data fra bruken av dette nettstedet kan sendes til, lagres
+      eller behandles i USA.
     student_terms: Jeg aksepterer <a href='http://code.org/tos'>brukerbetingelsene</a>  til
       Code.org. Hvis jeg er under 13 år, bekrefter jeg ved å sende inn dette skjemaet
       at jeg har tillatelse fra mine foreldre eller verge til å bruke tjenestene til
@@ -163,8 +164,9 @@
     field_is_required: må fylles ut
     accept_terms: Du må gå med på å opprette en konto
     error: En feil har oppstått.
-    email_preference_question: Kan vi sende deg nyheter om kursene våre, lokale jobbmuligheter eller andre IT-relaterte nyheter?
-    email_preference_privacy: (Se våre vilkår for personvern)
+    email_preference_question: Kan vi sende deg nyheter om kursene våre, lokale jobbmuligheter
+      eller andre IT-relaterte nyheter?
+    email_preference_privacy: "(Se våre vilkår for personvern)"
     email_preference_yes: Ja
     email_preference_no: Nei
     email_preference_required: You must specify an email preference.
@@ -620,6 +622,8 @@
   gender:
     male: Mann
     female: Kvinne
+    non_binary: Non-binary
+    not_listed: Preferred term not listed
     none: Foretrekker å ikke svare
   user_type:
     student: elev

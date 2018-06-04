@@ -448,7 +448,7 @@
   minecraft_adventurer: "Minecraft Adventurer"
   minecraft_tutorials: "Minecraft Hour of Code Tutorials"
   minecraft_specs: "Many languages | Modern browsers and tablets | Grades 2+"
-  minecraft_agent_description: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
+  minecraft_agent_description: "Minecraft Код саатына жаңы тапшырма менен кайтып келди! Код жазып Minecraft өткүлө."
   minecraft_agent_button: "Start"
   minecraft_designer_description: "Program animals and other Minecraft creatures in your own version of Minecraft."
   minecraft_designer_button: "Start"
@@ -556,6 +556,7 @@
   volunteer_engineer_submission_field_email_desc: "Your email address will never be shared, but we'll send you requests from teachers."
   volunteer_engineer_submission_field_email_placeholder: "Email address"
   volunteer_engineer_submission_field_email_preference: "Can we email you about updates to our courses, volunteer opportunities, or other computer science news?"
+  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy policy)"
   volunteer_engineer_submission_field_email_preference_yes: 'Yes'
   volunteer_engineer_submission_field_email_preference_no: 'No'
   volunteer_engineer_submission_final_paragraph: "You will be listed on a map for local teachers to contact you for the Hour of Code or other volunteer opportunities. Your email and exact address will NEVER be shared by us. But the other information (including approximate location) will be publicly viewable by local teachers."
@@ -932,8 +933,8 @@
   codesters_name: "Codesters"
   texasinstruments_name: "10 Minutes of Code"
   teacherled_name: "Teacher Led Lesson Plans"
-  course1_name: "Course 1"
-  course2_name: "Course 2"
+  course1_name: "Курс 1"
+  course2_name: "Курс 2"
   course3_name: "Course 3"
   course4_name: "Course 4"
   coursea-draft_name: Course A
@@ -963,12 +964,26 @@
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Unit 5: Data and Society'
   csd6_name: 'Unit 6: Physical Computing'
+  csd1-2017_name: 'Unit 1: Problem Solving'
+  csd2-2017_name: 'Unit 2: Web Development'
+  csd3-2017_name: 'Unit 3: Animation and Games'
+  csd4-2017_name: 'Unit 4: The Design Process'
+  csd5-2017_name: 'Unit 5: Data and Society'
+  csd6-2017_name: 'Unit 6: Physical Computing'
   csd1-2018_name: 'Unit 1: Problem Solving'
   csd2-2018_name: 'Unit 2: Web Development'
   csd3-2018_name: 'Unit 3: Animation and Games'
   csd4-2018_name: 'Unit 4: The Design Process'
   csd5-2018_name: 'Unit 5: Data and Society'
   csd6-2018_name: 'Unit 6: Physical Computing'
+  csp1-2017_name: 'Unit 1: The Internet'
+  csp2-2017_name: 'Unit 2: Digital Information'
+  csp3-2017_name: 'Unit 3: Algorithms and Programming'
+  csp4-2017_name: 'Unit 4: Big Data and Privacy'
+  csp5-2017_name: 'Unit 5: Building Apps'
+  csp-explore-2017_name: 'AP: Explore PT Prep'
+  csp-create-2017_name: 'AP: Create PT Prep'
+  csppostap-2017_name: 'Post AP: Databases in Apps'
   csp1-2018_name: 'Unit 1: The Internet'
   csp2-2018_name: 'Unit 2: Digital Information'
   csp3-2018_name: 'Unit 3: Algorithms and Programming'

@@ -11909,8 +11909,8 @@ zh-CN:
         # Debug: colorLeds
         
         Can you debug the index values so that the rainbow shows up on the board like in the picture?
-      CSD U6 colorLeds debug_2018_markdown_instruction: |-
-        <img src="https://images.code.org/e055be621221385d3503962bee5aa616-image-1491493475417.44.28.png" style="width:250px; float:right">
+      CSD U6 colorLeds debug_2018_markdown_instruction: |
+        <img src="https://images.code.org/723f036c40ef2770426d5d437e69fcde-image-1527268321449.png" style="width:250px; float:right">
         
         # Debug: colorLeds
         
@@ -13269,36 +13269,36 @@ zh-CN:
         _提示：应用实验室的屏幕是320像素宽，450像素高。随机数应该在什么范围内，才能保证整个笑脸都能完全显示在屏幕上？_\r
         
       CSD U6 setProperty xy_markdown_instruction: |-
-        # 改变位置\r
-        \r
-        每个设计元素（除了屏幕以外）都有"x"和"y"属性来控制它的位置。\r
-        \r
-        # 这样做\r
-        \r
-        <div markdown="1" style="float:right">\r
-        \r
-        ![expandable](https://images.code.org/e5c325d8105a0cf7cf681d6eab898595-image-1507319516043.png)\r
-        \r
-        </div>\r
-        \r
-        用`setProperty()`（设置属性）模块来移动"red_button"（红色按钮），让它和右边的图片一样。（点击图片查看大图）\r
-        \r
+        # 改变位置
+        
+        每个设计元素（除了屏幕以外）都有"x"和"y"属性来控制它的位置。
+        
+        # 这样做
+        
+        <div markdown="1" style="float:right">
+        
+        ![expandable](https://images.code.org/3a67642609071cf6766c296b8ca5a68e-image-1526944857178.png)
+        
+        </div>
+        
+        用`setProperty()`（设置属性）模块来移动"red_button"（红色按钮），让它和右边的图片一样。（点击图片查看大图）
+        
         _注意：我们已经去掉了设计模式，这样你能练习使用setProperty（设置属性），但我们会在你创建自己应用的时候，再把它加回来。_
       CSD U6 setProperty xy_2018_markdown_instruction: |-
-        # 改变位置\r
-        \r
-        每个设计元素（除了屏幕以外）都有"x"和"y"属性来控制它的位置。\r
-        \r
-        # 这样做\r
-        \r
-        <div markdown="1" style="float:right">\r
-        \r
-        ![expandable](https://images.code.org/e5c325d8105a0cf7cf681d6eab898595-image-1507319516043.png)\r
-        \r
-        </div>\r
-        \r
-        用`setProperty()`（设置属性）模块来移动"red_button"（红色按钮），让它和右边的图片一样。（点击图片查看大图）\r
-        \r
+        # 改变位置
+        
+        每个设计元素（除了屏幕以外）都有"x"和"y"属性来控制它的位置。
+        
+        # 这样做
+        
+        <div markdown="1" style="float:right">
+        
+        ![expandable](https://images.code.org/3a67642609071cf6766c296b8ca5a68e-image-1526944857178.png)
+        
+        </div>
+        
+        用`setProperty()`（设置属性）模块来移动"red_button"（红色按钮），让它和右边的图片一样。（点击图片查看大图）
+        
         _注意：我们已经去掉了设计模式，这样你能练习使用setProperty（设置属性），但我们会在你创建自己应用的时候，再把它加回来。_
       CSD U6 slider intro_markdown_instruction: "# 滑动条\\r\n\\r\n上次，你的用户只能在短和长的蜂鸣声中选择一个。为了让用户能够精确的控制蜂鸣器的持续时间，你需要一个滑动条。\\r\n\\r\n滑动条让用户可以选择一个在100到1000之间的值，作为蜂鸣声的持续时间。但是这里没弄对，所以它无法工作。\\r\n\\r\n# 这样做\\r\n* 查看一下代码，找到让持续时间无法正常设置的缺陷。\\r\n\\t* (暗示：将鼠标悬停到黄色的三角上来查看关于代码什么地方错了的提示。)"
       CSD U6 slider intro_2018_markdown_instruction: "# 滑动条\\r\n\\r\n上次，你的用户只能在短和长的蜂鸣声中选择一个。为了让用户能够精确的控制蜂鸣器的持续时间，你需要一个滑动条。\\r\n\\r\n滑动条让用户可以选择一个在100到1000之间的值，作为蜂鸣声的持续时间。但是这里没弄对，所以它无法工作。\\r\n\\r\n# 这样做\\r\n* 查看一下代码，找到让持续时间无法正常设置的缺陷。\\r\n\\t* (暗示：将鼠标悬停到黄色的三角上来查看关于代码什么地方错了的提示。)"
@@ -20494,7 +20494,10 @@ zh-CN:
         
         ![](https://images.code.org/d79263f7a6e129962f830ce0af2ed3cc-image-1434414362601.PNG)
       'Internet Simulator: Sending Text_markdown_instruction': "## Sending Formatted Text Activity\n\n**Directions:**  \nWork with a partner or in a small team to develop a protocol that allows you to send formatted text. \n\n**Guidelines:**  \n- Both the text and the formatting instructions must be derived from the printable ASCII character set (i.e. codes 32-126).\n- Your protocol must encode at least:\n\\t- bold, italics, and underlining\n\\t- three different font sizes (large, medium, and small)\n\\t- three different font colors (red, black, blue)\n- You will demonstrate that your protocol works by having the recipient be able to faithfully draw (or produce in some fashion) the formatted text based only on the data she received through an ASCII-text version of the Internet Simulator. A sample message can be found below.\n\n![](https://images.code.org/6fa1d53e4d36a9d0bac5b9b8fb4bc81d-image-1434427211242.PNG)\n\n**Develop Your Protocol:**  \nUse the worksheet handed out by your teacher to brainstorm ideas for your protocol. Iteratively improve your protocol by testing it out with simple sample messages.\n"
-      'Internet Simulator: Sending Text_2018_markdown_instruction': "## Sending Formatted Text Activity\n\n**Directions:**  \nWork with a partner or in a small team to develop a protocol that allows you to send formatted text. \n\n**Guidelines:**  \n- Both the text and the formatting instructions must be derived from the printable ASCII character set (i.e. codes 32-126).\n- Your protocol must encode at least:\n\\t- bold, italics, and underlining\n\\t- three different font sizes (large, medium, and small)\n\\t- three different font colors (red, black, blue)\n- You will demonstrate that your protocol works by having the recipient be able to faithfully draw (or produce in some fashion) the formatted text based only on the data she received through an ASCII-text version of the Internet Simulator. A sample message can be found below.\n\n![](https://images.code.org/6fa1d53e4d36a9d0bac5b9b8fb4bc81d-image-1434427211242.PNG)\n\n**Develop Your Protocol:**  \nUse the worksheet handed out by your teacher to brainstorm ideas for your protocol. Iteratively improve your protocol by testing it out with simple sample messages.\n"
+      'Internet Simulator: Sending Text_2018_markdown_instruction': |-
+        ## Sending Text
+        
+        **Directions:** Design an encoding system to send text using the Internet Simulator. Your teacher will provide you with a number of increasingly complex challenges that you'll need to solve.
       Internet Speed Test_markdown_instruction: "# Check for Internet Accessibility\n\nAnother difference in how people will experience your website is in the speed of their internet connection as they try to load the content on your web page. To check this we can use the Google Chrome Developer Tools to simulate a slow internet connection.\n\n# Do This\n\n* Open this page in the Google Chrome Web Browser\n* From the _View_ menu, find _Developer_ \n\n<img src=\"https://images.code.org/c6f91de459cec7ed561b11783ea833bd-image-1475634452345.png\" style=\"width:200px\">\n\n* In the _Developer_ submenu, select _Developer Tools_ \n\n<img src=\"https://images.code.org/fb8402f57f9121c729c0880d7bf06dfa-image-1475634452345.png\" style=\"width:200px\">\n\n* The _Developer Tools_ will open as a frame at the bottom of your browser window\n\n<img src=\"https://images.code.org/95be9a273afd32305a0bc4c20b530647-image-1475634452344.png\" style=\"width:400px\">\n\n* Click the menu that says \"No throttling\" and select \"GPRS\" \n\n<img src=\"https://images.code.org/07240b96943b01a80505ba6b3900b7da-image-1475634452344.png\" style=\"width:200px\">\n\n*  Hold down _Shift_ while reloading the page (this will delete cached files so the browser has to re download them while throttled)"
       Introduction to App Lab and Turtle Programming_markdown_instruction: 'The video below is from lesson 4, and introduces App Lab and the Turtle. '
       Introduction to Conditionals - Part 2.2_markdown_instruction: "### Points to pay attention to:\n\n**Start** play at 1:37 \n**Stop** play at 2:20\n\nIt's all you need for the exercises that follow.  You'll watch the remainder of the video after that.\n\n* An IF statement can have an else clause, but an ELSE clause cannot exist on its own.\n* With an else clause you are *guaranteeing* that one of two portions of code will run.\n\n"
@@ -21797,6 +21800,11 @@ zh-CN:
         **Instructions**:
         
         Invent and test a protocol for encoding and sending text messages. Your protocol must include the letters a-z, spaces, and common punctuation marks. You may add additional characters if you wish. See the worksheet handed out by your teacher for more detailed instructions!
+      U1L11 Abstraction Reflection_2018_markdown_instruction: |-
+        An abstraction is a simplified representation of something that is more complex. Decimal numbers were a useful abstraction in the context of today's lesson. Write a short response to both questions below.
+        
+        * What is the underlying complexity decimal numbers were used to represent.
+        * How were decimal numbers helpful in designing a system to represent text in bits?
       U1L11 Collaboration Reflection_markdown_instruction: |
         What problems arose in your efforts to create a working protocol? How did you think about the problem(s) in order to solve it?
         
@@ -21808,6 +21816,10 @@ zh-CN:
       U1L11 NetSim numbers with Ascii_markdown_instruction: "## Sending Formatted Text Activity\n\n**Directions:**  \nWork with a partner or in a small team to develop a protocol that allows you to send formatted text. \n\n**Guidelines:**  \n- Both the text and the formatting instructions must be derived from the printable ASCII character set (i.e. codes 32-126).\n- Your protocol must encode at least:\n\\t- bold, italics, and underlining\n\\t- three different font sizes (large, medium, and small)\n\\t- three different font colors (red, black, blue)\n- You will demonstrate that your protocol works by having the recipient be able to faithfully draw (or produce in some fashion) the formatted text based only on the data she received through an ASCII-text version of the Internet Simulator. A sample message can be found below.\n\n![](https://images.code.org/6fa1d53e4d36a9d0bac5b9b8fb4bc81d-image-1434427211242.PNG)\n\n**Develop Your Protocol:**  \nUse the worksheet handed out by your teacher to brainstorm ideas for your protocol. Iteratively improve your protocol by testing it out with simple sample messages.\n"
       U1L11 Reflection Free Response_markdown_instruction: "Respond to this prompt or to another as directed by your teacher.\n\nHow long did it take to send a formatted text message using your protocol? \n\nHow many extra bits did your encoding scheme need to communicate the text?  Calculate the percentage of bits that were used for formatting instead of sending the actual text message. \n\npercent = (formatting bits)/(total bits) * 100\n\n\n"
       U1L11 Reflection Free Response_2018_markdown_instruction: "Respond to this prompt or to another as directed by your teacher.\n\nHow long did it take to send a formatted text message using your protocol? \n\nHow many extra bits did your encoding scheme need to communicate the text?  Calculate the percentage of bits that were used for formatting instead of sending the actual text message. \n\npercent = (formatting bits)/(total bits) * 100\n\n\n"
+      U1L11 Reflection Multiple Representations_2018_markdown_instruction: |-
+        "The binary pattern `01000001` represents the number 65."
+        
+        Write a brief response explaining whether you believe this statement is always true. Explain your reasoning.
       U1L12 Reflection Free Response_markdown_instruction: "Respond to this prompt or to another as directed by your teacher.\n\nThe salesperson in a cell phone store is telling me that the phone I'm considering has 8GB of memory, which means I can save 10,000 photos taken with the phone's camera! \n\nIs the salesperson telling me the truth? Why or why not?\n"
       U1L12 Reflection Free Response_2018_markdown_instruction: "Respond to this prompt or to another as directed by your teacher.\n\nThe salesperson in a cell phone store is telling me that the phone I'm considering has 8GB of memory, which means I can save 10,000 photos taken with the phone's camera! \n\nIs the salesperson telling me the truth? Why or why not?\n"
       U1L13 Assess Text Compression amount_markdown_instruction: "Here's the same compressed text that you saw on the last level, but now we also see the size of the original, uncompressed text. On the previous level you reconstructed the text by tracing back through the dictionary. Now we're going to think about if this is a \"good\" compression rate.\n\n![](https://images.code.org/ffb941527193cd04c02ff2ce392d02e6-image-1439479301236.20.23 AM.png)\n\nIn the text box below, answer the following two questions:\n\n- What is the compression rate, or the compressed text size + dictionary size compared to the original text size? (as a percentage) \n- Is this a \"good\" compression rate? Why or why not? \n\n\n"
@@ -21978,6 +21990,7 @@ zh-CN:
       U2L04 Assessment3_2018_markdown_instruction: 'Can you know in advance the path a message will take between you and another computer on the Internet? Justify your answer.  '
       U2L04 Free Response Wrap Up_markdown_instruction: 'How do you think the routers are physically connected? Does it matter to you? Why or why not?  '
       U2L05 - NetSim - Packets and Building TCP_markdown_instruction: "## Packets and Making a Reliable Internet\n\n**Challenge:** Develop a protocol for reliably sending a message across an unreliable network\n\n**An Unreliable Internet Simulator:** The current version of the Internet Simulator is modeled after some actual constraints of the Internet\n- Messages must be divided into packets which may contain <em><strong> at most eight (8) ASCII characters </em></strong>\n- Messages should be long enough to require at least 10 packets\n- Packets may not arrive in the order sent\n- Packets may be dropped while in transmission\n\n**Directions:** In a group or individually join a router in the Internet Simulator and practice sending messages given these new constraints. Once you are comfortable with the challenge, iteratively design a protocol that can reliably send a message to a partner. You and your partner should join <em><strong> DIFFERENT </strong></em> routers.\n\n**Protocol Requirements:**\n- All communication can only be done through the Internet Simulator\n- You must send a message that spans at least 10 packets (i.e. an 80 character ASCII message). \n- The protocol should account for the possibility that the characters might be entirely random (i.e. not necessarily English - do not count on human intuition to reconstruct the message. The message is not known beforehand.)\n- The sender and receiver must be confident the full message was successfully transmitted and reconstructed."
+      U2L05 Lossy vs. Lossless FR 1_2018_markdown_instruction: In general, what are reasons that someone would choose to use lossy compression? When would they choose to use lossless compression? Write a brief response below.
       U2L05 Reflection 1_markdown_instruction: 'In your own words, what were the primary obstacles you needed to overcome in today’s challenge? How do these obstacles mirror actual problems encountered on the Internet?  '
       U2L05 Reflection 1_2018_markdown_instruction: 'In your own words, what were the primary obstacles you needed to overcome in today’s challenge? How do these obstacles mirror actual problems encountered on the Internet?  '
       U2L07 Assessment5_markdown_instruction: 'When analyzing algorithms why doesn''t the amount of real time (clock time) tell us very much about the algorithm''s "efficiency"?  '
@@ -25773,7 +25786,7 @@ zh-CN:
         
         # Do This:
         
-        **You code from the previous exercise** is provided.
+        **Your code from the previous exercise** is provided.
         
         * Use the syntax shown above **to display the `name` and `grade` of the first student in your students array.**
         * Use the syntax shown above **to display the `name` and `onTimeToClass` for the last student in your students array.**
@@ -28405,8 +28418,8 @@ zh-CN:
           </block></xml>事件模块帮助乔治狗移动。\r
         \r
         把乔治带到旗那里来过此关卡！
-      courseA_playLab_events4_markdown_instruction: 现在，在`右`按钮被点击时，让乔治向右移动。
-      courseA_playLab_events4_2018_markdown_instruction: 现在，在`右`按钮被点击时，让乔治向右移动。
+      courseA_playLab_events4_markdown_instruction: 现在，添加更多的模块，来让乔治在右方向键按下时，向右移动。
+      courseA_playLab_events4_2018_markdown_instruction: 现在，添加另一个模块，来让乔治在右方向键按下时，向右移动。
       courseA_playLab_events5_markdown_instruction: 添加事件让乔治在`上`和`下`按钮被点击时，向上和下移动。
       courseA_playLab_events5_2018_markdown_instruction: 添加事件让乔治在`上`和`下`按钮被点击时，向上和下移动。
       courseA_playlab_events_challenge1_markdown_instruction: |-
@@ -30100,7 +30113,7 @@ zh-CN:
       courseE_farmer_functions10b_2018_markdown_instruction: 用新函数两次来过关。
       courseE_farmer_functions11_predict_markdown_instruction: 找出要哪个函数，要删除哪个，然后通过这关！
       courseE_farmer_functions11_predict_2018_markdown_instruction: 找出要哪个函数，要删除哪个，然后通过这关！
-      courseE_farmer_functions13_2018_markdown_instruction: "用23个或更少的模块来解决这个难题。\\r\n___  \\r\n\\r\n##### 每个芽会长出 *最多一个* 玉米。"
+      courseE_farmer_functions13_2018_markdown_instruction: "用23个或更少的模块来解决这个难题。\n___  \n\n##### 每个芽会长出 *最多一个* 玉米。要找到最佳方案的话，需要直接编辑函数。"
       courseE_farmer_functions1_2018_markdown_instruction: |-
         *"我们以前见过吗？我是收割者！"*\r
         \r
@@ -30800,6 +30813,10 @@ zh-CN:
         \r
         \r
         **挑战：**用你学到的知识来帮小鸟抓到猪！
+      courseF_playlab_brokenText_markdown_instruction: |-
+        在这个阶段剩下来的时间，我们要用多个`问`模块和多个`如果/否则`模块来创造一个**你**控制的游戏！\r
+        \r
+        从设置"codename"（代号）变量开始，来设置一个你能记得的词语。然后用一个`问`模块来从用户那里获得一个代号。你需要`如果/否则`模块来看是否输入的代号和你设置的代号是一样的。
       courseF_playlab_variables0_markdown_instruction: "这是海盗。他这几天非常难以理解！\\r\n\\r\n通过改变代码中的文本块来解码他的话：\\r\n- \"arrrg\"应该是\"a\"\\r\n- \"ye\"应该是\"e\"\\r\n\\r\n"
       courseF_playlab_variables1_markdown_instruction: "这是海盗。他这几天非常难以理解！\\r\n\\r\n通过改变代码中的文本块来解码他的话：\\r\n- \"arrrg\"应该是\"a\"\\r\n- \"ye\"应该是\"e\"\\r\n\\r\n"
       courseF_playlab_variables1a_markdown_instruction: "变量能够用来存放晚一些想用的文本。\\r\n\\r\n通过将这个文本赋值给`shout`（喊叫）变量，让足球运动员琪琪喊出：\"进球了！\""
@@ -30989,7 +31006,7 @@ zh-CN:
       csd1dlp-lessons_markdown_instruction: "<br><br>\\r\n\\r\n> **注意：在你开始这个反思之前，确保回顾了第1单元的课程，并对课程间的联系有了很好的认识。如果你还没有回顾这些资料，可以现在做，稍后再回到这个反思部分。**\\r\n\\r\n\\r\n#\n第1单元课程联系和理念\\r\n\\r\n在这个反思里，你要考虑下面的每个提示，写下一个回应来展示你对第一单元课程的理解。你的答复应该清楚的达到以下目标： \\r\n\\r\n1. 这个单元里，一次典型的课程是什么样子的？ \\r\n\\r\n2. 前后的课程之间有什么关联？\\r\n\\r\n3. 在这个单元中，哪里让你看到了教案的价值和哲学得到了强调？\\r\n\\t- 教案支持用什么方式构建一个积极主动的班集体？\\r\n\\r\n4. 输入-输出-存储-处理的模型，是如何帮助学生深入思考计算机帮助我们解决问题的方式的？\\r\n\\r\n\\r\n>## 完成反思获得分数 \\r\n\\r\n>- 一旦你提交了反思，对问题的答复会被匿名分享，并被同伴评论，你也会评论其他引导员的答复。评论者会寻找有思考的和深入的答案，这些答案显示你花了时间来思考问题。评论者也有机会给你的提交写反馈，你还能回应反馈并再次提交。\\r\n- 为了完成答复并获得分数，需要两个评论者来完全同意你的答复。如果评论者不能决定你提交的答复，他们可以提交到教练那里来评论。你随时有机会来回答他们的反馈，并重新提交反思！一旦评论者有了反馈，它们会显示在页面的最下方。 \\r\n\n\\r\n\\r\n"
       csd1dlp-q1_markdown_instruction: "<br><br>\n\n# Unit 1 - Question 1\n**NOTE:** Before you start this reflection, make sure you’ve reviewed the lessons in this unit and have a good sense of the connections between lessons. If you haven’t already reviewed the materials, do that now and come back to this reflection later.\n\nFor this reflection, you’re going to consider the prompt below and craft a written response that demonstrates your understanding of the lessons as well as how to address teacher concerns about the unit . We suggest you write your response in another text editor and copy it in here once you are ready to submit.\n\n> **Prompt:** How would you respond to a teacher who says, “What does this problem solving unit have to do with computer science?”\n\n## Getting Credit for Completing this Reflection \n\n- Once you submit your reflection, your response to the prompt above will be shared anonymously and read by your peers, and you will read the work done by other facilitators. This give facilitators a chance to learn from each other.\n- Your submission will also be given to an expert reviewer. Expert reviewers will be looking for thoughtful and thorough answers that demonstrate that you have spent time considering the reflection questions listed above. Reviewers will have an opportunity to give feedback on your submission, and you can respond to that feedback and resubmit.\n- In order to get credit for completing this prompt, your expert review needs to say \"Yes\" responded to the prompts fully. If reviewers don’t feel comfortable making a decision about your task submission, they can elevate to an instructor for review. You will always have a chance to address feedback from your reviewers and resubmit your reflections! Reviewer feedback will show up at the bottom of this page, once it’s available."
       csd1dlp-q2_markdown_instruction: "<br><br>\n\n# Unit 1 - Question 2\n**NOTE:** Before you start this reflection, make sure you’ve reviewed the lessons in this unit and have a good sense of the connections between lessons. If you haven’t already reviewed the materials, do that now and come back to this reflection later.\n\nFor this reflection, you’re going to consider the prompt below and craft a written response that demonstrates your understanding of the lessons as well as how to address teacher concerns about the unit . We suggest you write your response in another text editor and copy it in here once you are ready to submit.\n\n> **Prompt:** How would you respond to a teacher who asks, “Why does the first unit not use computers?”\n\n## Getting Credit for Completing this Reflection \n\n- Once you submit your reflection, your response to the prompt above will be shared anonymously and read by your peers, and you will read the work done by other facilitators. This give facilitators a chance to learn from each other.\n- Your submission will also be given to an expert reviewer. Expert reviewers will be looking for thoughtful and thorough answers that demonstrate that you have spent time considering the reflection questions listed above. Reviewers will have an opportunity to give feedback on your submission, and you can respond to that feedback and resubmit.\n- In order to get credit for completing this prompt, your expert review needs to say \"Yes\" responded to the prompts fully. If reviewers don’t feel comfortable making a decision about your task submission, they can elevate to an instructor for review. You will always have a chance to address feedback from your reviewers and resubmit your reflections! Reviewer feedback will show up at the bottom of this page, once it’s available."
-      csd1dlp-q3_markdown_instruction: "<br><br>\n\n# Unit 1 - Question 3\n**NOTE:** Before you start this reflection, make sure you’ve reviewed the lessons in this unit and have a good sense of the connections between lessons. If you haven’t already reviewed the materials, do that now and come back to this reflection later.\n\nFor this reflection, you’re going to consider the prompt below and craft a written response that demonstrates your understanding of the lessons as well as how to address teacher concerns about the unit . We suggest you write your response in another text editor and copy it in here once you are ready to submit.\n\n> **Prompt:** How would you respond to a teacher who asks, “Why does the first unit not use computers?”\n\n## Getting Credit for Completing this Reflection \n\n- Once you submit your reflection, your response to the prompt above will be shared anonymously and read by your peers, and you will read the work done by other facilitators. This give facilitators a chance to learn from each other.\n- Your submission will also be given to an expert reviewer. Expert reviewers will be looking for thoughtful and thorough answers that demonstrate that you have spent time considering the reflection questions listed above. Reviewers will have an opportunity to give feedback on your submission, and you can respond to that feedback and resubmit.\n- In order to get credit for completing this prompt, your expert review needs to say \"Yes\" responded to the prompts fully. If reviewers don’t feel comfortable making a decision about your task submission, they can elevate to an instructor for review. You will always have a chance to address feedback from your reviewers and resubmit your reflections! Reviewer feedback will show up at the bottom of this page, once it’s available."
+      csd1dlp-q3_markdown_instruction: "<br><br>\n\n# Unit 1 - Question 3\n**NOTE:** Before you start this reflection, make sure you’ve reviewed the lessons in this unit and have a good sense of the connections between lessons. If you haven’t already reviewed the materials, do that now and come back to this reflection later.\n\nFor this reflection, you’re going to consider the prompt below and craft a written response that demonstrates your understanding of the lessons as well as how to address teacher concerns about the unit . We suggest you write your response in another text editor and copy it in here once you are ready to submit.\n\n> **Prompt:** How would you respond to a teacher who says, “I’m brand new to computer science. What supports exist for me in the curriculum? How will I assess my students knowledge if I don't myself know the material?”\n\n## Getting Credit for Completing this Reflection \n\n- Once you submit your reflection, your response to the prompt above will be shared anonymously and read by your peers, and you will read the work done by other facilitators. This give facilitators a chance to learn from each other.\n- Your submission will also be given to an expert reviewer. Expert reviewers will be looking for thoughtful and thorough answers that demonstrate that you have spent time considering the reflection questions listed above. Reviewers will have an opportunity to give feedback on your submission, and you can respond to that feedback and resubmit.\n- In order to get credit for completing this prompt, your expert review needs to say \"Yes\" responded to the prompts fully. If reviewers don’t feel comfortable making a decision about your task submission, they can elevate to an instructor for review. You will always have a chance to address feedback from your reviewers and resubmit your reflections! Reviewer feedback will show up at the bottom of this page, once it’s available."
       csd1dlp-tools_markdown_instruction: "\\r\n\\r\n<br><br>\\r\n\\r\n> **注意：在你开始这个反思之前，确保回顾了第1单元的课程，并对课程中工具的角色有了很好的认识。如果你还没有回顾这些资料，可以现在做，稍后再回到这个反思部分。**\\r\n\\r\n\\r\n# 第1单元工具理念和使用\\r\n\\r\n在这个反思里，你要考虑下面的每个提示，写下一个回应来展示你对第一单元课程的理解。你的答复应该清楚的达到以下目标： \\r\n\\r\n- 如果一位老师问你为什么第一单元不使用计算机，你会如何回答？\\r\n\\r\n\\r\n>## 完成反思获得分数 \\r\n\\r\n>- 一旦你提交了反思，对问题的答复会被匿名分享，并被同伴评论，你也会评论其他引导员的答复。评论者会寻找有思考的和深入的答案，这些答案显示你花了时间来思考问题。评论者也有机会给你的提交写反馈，你还能回应反馈并再次提交。\\r\n- 为了完成答复并获得分数，需要两个评论者来完全同意你的答复。如果评论者不能决定你提交的答复，他们可以提交到教练那里来评论。你随时有机会来回答他们的反馈，并重新提交反思！一旦评论者有了反馈，它们会显示在页面的最下方。 \\r\n \\r\n\\r\n\\r\n"
       csd2dlp-assessment_markdown_instruction: "<br><br>\\r\n\\r\n> **注意：在你开始这个反思之前，确保回顾了第2单元的课程，并对整个单元的角色评估有了很好的认识。如果你还没有回顾这些资料，可以现在做，稍后再回到这个反思部分。**\\r\n\\r\n\\r\n# 第2单元里的评估\\r\n\\r\n在这个反思里，你要考虑下面的每个提示，写下一个回应来展示你对第2单元课程的理解。你的答复应该清楚的达到以下目标： \\r\n\\r\n1. 这个单元里有什么总结并正式的评估的机会？ \\r\n\\t* 这个单元里的项目是什么角色？ \\r\n\\t* 这些项目是如何应用在这个单元中发展的内容和技能的？ \\r\n\\t* 这个单元中的长项目有什么特殊的考虑？\\r\n2.\n学完这单元后，学生们会获得什么样的技能和知识？\\r\n3. 这个单元里K12框架里的2017CSTA核心里的标准或思路是什么？\\r\n\\r\n\\r\n\\r\n>## 完成反思获得分数 \\r\n\\r\n>- 一旦你提交了反思，对问题的答复会被匿名分享，并被同伴评论，你也会评论其他引导员的答复。评论者会寻找有思考的和深入的答案，这些答案显示你花了时间来思考问题。评论者也有机会给你的提交写反馈，你还能回应反馈并再次提交。\\r\n- 为了完成答复并获得分数，需要两个评论者来完全同意你的答复。如果评论者不能决定你提交的答复，他们可以提交到教练那里来评论。你随时有机会来回答他们的反馈，并重新提交反思！一旦评论者有了反馈，它们会显示在页面的最下方。 \\r\n\n \\r\n\\r\n"
       csd2dlp-lessons_markdown_instruction: "<br><br>\\r\n\\r\n> **注意：在你开始这个反思之前，确保回顾了第2单元的课程，并对课程间的联系有了很好的认识。如果你还没有回顾这些资料，可以现在做，稍后再回到这个反思部分。**\\r\n\\r\n\\r\n#\n第2单元课程联系和理念\\r\n\\r\n在这个反思里，你要考虑下面的每个提示，写下一个回应来展示你对第2单元课程的理解。你的答复应该清楚的达到以下目标： \\r\n\\r\n1. 这个单元中哪堂课比较难教，为什么？ \\r\n2. 这单元的内容是如何一步步递进的？ \\r\n3. 第1单元的内容能被如何联系并激励第2单元中前面的课程？\\r\n4. 为什么游戏实验室要在教Javascript前，先教HTML和CSS？ \\r\n5. 你觉得这个单元中最重要的两个课堂练习是什么？为什么？\\r\n\\r\n>## 完成反思获得分数 \\r\n\\r\n>- 一旦你提交了反思，对问题的答复会被匿名分享，并被同伴评论，你也会评论其他引导员的答复。评论者会寻找有思考的和深入的答案，这些答案显示你花了时间来思考问题。评论者也有机会给你的提交写反馈，你还能回应反馈并再次提交。\\r\n- 为了完成答复并获得分数，需要两个评论者来完全同意你的答复。如果评论者不能决定你提交的答复，他们可以提交到教练那里来评论。你随时有机会来回答他们的反馈，并重新提交反思！一旦评论者有了反馈，它们会显示在页面的最下方。 \n\\r\n \\r\n\\r\n\\r\n"
@@ -31031,7 +31048,7 @@ zh-CN:
       csp-post-survey-2017-FR_markdown_instruction: 有什么别的你想说的，关于在课程中的体验吗？
       csp-post-survey-2017-FR_2018_markdown_instruction: 有什么别的你想说的，关于在课程中的体验吗？
       csp-post-survey-2017-q36-e_markdown_instruction: '因为别的原因担心：'
-      csp-post-survey-2017-q36-e_2018_markdown_instruction: '因为别的原因担心：'
+      csp-post-survey-2017-q36-e_2018_markdown_instruction: '我因为别的原因担心：'
       csp-post-survey-2018-PT-feedback-FR_markdown_instruction: Any other feedback about the AP Exam or Performance Tasks?
       csp-post-survey-2018-topics-liked-FR_markdown_instruction: Please provide any other feedback you have about the units of this course.
       csp-post-survey-2018-topics-want-FR_markdown_instruction: What other topics are you interested in learning about in the future?
@@ -31551,7 +31568,102 @@ zh-CN:
       cspu5_assess4_shortAnswerShopping_markdown_instruction: "**Short Answer:** Cecelia would like to write an app to help manage a trip to the grocery store.  The app will maintain a shopping list (a list of words) of all the items to buy.  Describe how Cecelia might use a second list in the app.  What else might be tracked? Describe how the list would be used and updated in the app.\n"
       cspu5_assess4_shortAnswerShopping_2018_markdown_instruction: "**Short Answer:** Cecelia would like to write an app to help manage a trip to the grocery store.  The app will maintain a shopping list (a list of words) of all the items to buy.  Describe how Cecelia might use a second list in the app.  What else might be tracked? Describe how the list would be used and updated in the app.\n"
       cspu5_assess4_shortAnswerShopping_exam_prep_markdown_instruction: "**简答题：** 希西利娅想写一个应用来帮助管理管理一次到杂货铺的出行。这个应用要维护一个购物的清单（一个词语列表），即所有要买的东西。描述一下，希西利娅会在应用里用上另一个列表。还有什么信息需要被跟踪？描述一下这个列表在应用里会被如何使用和更新。\\r\n"
+      debrief-monday_markdown_instruction: |-
+        # Day 1: End of Day Debrief
+        
+        * What were the key takeaways the leads had today (e.g., teachers’ gots and needs, working together as facilitators, keeping a healthy cohort rapport, etc.)?
+        * Did they decide to make any adjustments to their approach for the next day? If so, what do they plan to change and why?
+      debrief-thursday_markdown_instruction: |-
+        # Day 4: End of Day Debrief
+        
+        * What were the key takeaways the leads had today (e.g., teachers’ gots and needs, working together as facilitators, keeping a healthy cohort rapport, etc.)?
+        * Did they decide to make any adjustments to their approach for the next day? If so, what do they plan to change and why?
+      debrief-tuesday_markdown_instruction: |-
+        # Day 2: End of Day Debrief
+        
+        * What were the key takeaways the leads had today (e.g., teachers’ gots and needs, working together as facilitators, keeping a healthy cohort rapport, etc.)?
+        * Did they decide to make any adjustments to their approach for the next day? If so, what do they plan to change and why?
+      debrief-wednesday_markdown_instruction: |-
+        # Day 3: End of Day Debrief
+        
+        * What were the key takeaways the leads had today (e.g., teachers’ gots and needs, working together as facilitators, keeping a healthy cohort rapport, etc.)?
+        * Did they decide to make any adjustments to their approach for the next day? If so, what do they plan to change and why?
+      discussion-thursday_markdown_instruction: |
+        # Day 4: Discussion-Based
+        
+        You have now seen a couple discussion-based (purple) sessions. Some specific examples include the Getting Buy-In (Wednesday), and Recruiting Students (Thursday) sessions. What common facilitator strategies were used in these sessions?
+        
+        * What are facilitators doing?
+        * What are teachers doing?
+      engagement-monday_markdown_instruction: |+
+        # Day 1: Engagement
+        
+        Think of one participant engagement challenge the lead facilitators faced today.
+        
+        * What was the challenge?
+        * How did the lead facilitator(s) manage that challenge?
+        * How would you approach this challenge in a session you lead?
+      engagement-thursday_markdown_instruction: |+
+        # Day 4: Engagement
+        
+        Think of one participant engagement challenge the lead facilitators faced today.
+        
+        * What was the challenge?
+        * How did the lead facilitator(s) manage that challenge?
+        * How would you approach this challenge in a session you lead?
+      engagement-tuesday_markdown_instruction: |+
+        # Day 2: Engagement
+        
+        Think of one participant engagement challenge the lead facilitators faced today.
+        
+        * What was the challenge?
+        * How did the lead facilitator(s) manage that challenge?
+        * How would you approach this challenge in a session you lead?
+      engagement-wednesday_markdown_instruction: |+
+        # Day 3: Engagement
+        
+        Think of one participant engagement challenge the lead facilitators faced today.
+        
+        * What was the challenge?
+        * How did the lead facilitator(s) manage that challenge?
+        * How would you approach this challenge in a session you lead?
       expresslink_markdown_instruction: "<a href=\"https://studio.code.org/s/express\"><img\nsrc=\"https://images.code.org/32b135ea9a16684b30f89ffe0f6606b1-image-1507039514762.05.01\nAM.png\"/><img src=\"https://images.code.org/cfea3adf1aec120e23e039ed06856f6f-image-1507039555039.05.48\nAM.png\"/></a>"
+      facilitator-prez-wednesday_markdown_instruction: |-
+        # Day 3: Facilitator Presentation
+        
+        You have now seen a bunch of facilitator presentation sessions (orange sessions). What common facilitator strategies were used in these sessions?
+        
+        * What are facilitators doing?
+        * What are teachers doing?
+        * What strategies did you see facilitators use to keep teachers engaged?
+      feel-monday_markdown_instruction: |
+        # Day 1: Feel
+        
+        Use a few words or sentences to describe the ways participants seemed to feel throughout the day today (e.g., confused, engaged, anxious, etc.)
+        
+        * What factors seemed to contribute to those feelings?
+        * What did you see the lead facilitators do to address or support the general participant experience throughout the day?
+      feel-thursday_markdown_instruction: |
+        # Day 4: Feel
+        
+        Use a few words or sentences to describe the ways participants seemed to feel throughout the day today (e.g., confused, engaged, anxious, etc.)
+        
+        * What factors seemed to contribute to those feelings?
+        * What did you see the lead facilitators do to address or support the general participant experience throughout the day?
+      feel-tuesday_markdown_instruction: |
+        # Day 2: Feel
+        
+        Use a few words or sentences to describe the ways participants seemed to feel throughout the day today (e.g., confused, engaged, anxious, etc.)
+        
+        * What factors seemed to contribute to those feelings?
+        * What did you see the lead facilitators do to address or support the general participant experience throughout the day?
+      feel-wednesday_markdown_instruction: |
+        # Day 3: Feel
+        
+        Use a few words or sentences to describe the ways participants seemed to feel throughout the day today (e.g., confused, engaged, anxious, etc.)
+        
+        * What factors seemed to contribute to those feelings?
+        * What did you see the lead facilitators do to address or support the general participant experience throughout the day?
       frozen circle function in circle_markdown_instruction: 现在让我们创建20个交叠的圆圈，在每圆圈之间转18度。
       frozen circle function with parameter_markdown_instruction: 这里有一个“创建圆圈”的模块，可以画不同大小的圆圈。你可以用它来创建一个5像素的小圆圈和10像素的大圆圈吗?
       frozen circle function_markdown_instruction: 使用新的"创建一个圆"块来创建 10 个相互重叠的圆圈。画圈之间别忘了跳一下哦。
@@ -31571,6 +31683,13 @@ zh-CN:
       frozen square loop 3x_markdown_instruction: 让我们绘制三个正方形，每绘制一个正方形后，别忘了先转120度后再继续绘制下一个正方形。
       frozen square loop_markdown_instruction: 你好！我是艾伦代尔的安娜公主！我们一起应用“重复“块绘制一个正方形。这样一来，我们可以减少必须使用的代码块。你觉得“重复”块必须循环多少次（???）才能让里面的代码块绘制出一个正方形呢？
       frozen square snowflake_markdown_instruction: 你可以试试绘制一朵雪花。用“重复”块绘制10个正方形，而且记得在绘制成每个正方形移之后，先把它移转36度后才开始画下一个正方形。
+      getting-buy-in-wednesday_markdown_instruction: |
+        # Day 3: Getting Buy In
+        
+        In the Getting Buy-In session this morning you talked about building community and dealing with barriers to growing your CS education community locally. (If you were not with your region think about what you experienced in this sessions that might apply to your region.)
+        
+        * What were common barriers teachers in your region shared?
+        * What things did you see today that you want to check in on throughout the year?
       gl jr clone me ram2_markdown_instruction: 克隆这一关，并制作自己的程序！
       gl jr clone me_markdown_instruction: 克隆这一关，并制作自己的程序！
       grade1_adventurer_loops2_markdown_instruction: How can Laurel collect all five piles of gold using only one `E -->` block?
@@ -32403,6 +32522,13 @@ zh-CN:
       iceage_throw_hearts_2018_markdown_instruction: "喜得想让他的奶奶格瑞尼，知道他很爱她。\\r\n\\r\n用`演员 __ 扔`命令来让喜得（演员1）向格瑞尼（演员2）扔爱心！\\r\n当格瑞尼碰到爱心时，设置她的表情为高兴。"
       iceage_warn_ice_age_markdown_instruction: "每个人都要快点移动，因为冰暴就要来了！\\r\n将场景改为冰雪的背景，并设置喜得（演员1）的速度为快速。\\r\n按下\"运行\"，并将喜得移动到迪亚哥那里警告他。"
       iceage_warn_ice_age_2018_markdown_instruction: "每个人都要快点移动，因为冰暴就要来了！\\r\n将场景改为冰雪的背景，并设置喜得（演员1）的速度为快速。\\r\n按下\"运行\"，并将喜得移动到迪亚哥那里警告他。"
+      instructional-strategy-tuesday_markdown_instruction: |
+        # Day 2: Instructional Strategies
+        
+        Name two Instructional Strategies (from the Curriculum Guide) you saw modeled in the 5 Model Lesson or TLOs you’ve seen in the past couple of days?
+        
+        * When were they successful?
+        * What were characteristics of situations where there was room for improvement?
       jessie-test_markdown_instruction: |-
         # Cool
         
@@ -32416,6 +32542,15 @@ zh-CN:
         
         ###### forever
       kikiTesta_markdown_instruction: "Our adventurer wants to collect coins.  But she can only use 4 blocks to get them.  \n\nCan you help her grab as many as she can using just 4 blocks?"
+      lesson-exploration-tuesday_markdown_instruction: |
+        # Day 2: Lesson Exploration
+        
+        You have seen 2 Model Lessons (taught by facilitators) and today you will see 1 more Model Lesson and  2 Participant TLOs (taught by teachers). What patterns do you notice about what facilitators do during these sessions (consider the lessons themselves and the debriefs)?
+        
+        * What are facilitators doing during lesson?
+        * What are facilitators doing during debrief?
+        * What are teachers doing throughout the session?
+        * What is the key takeaway from the session?
       level 'grade3_Loops_10_markdown_instruction: |-
         忙碌的蜜蜂！\r
         \r
@@ -32464,6 +32599,22 @@ zh-CN:
         
         * *Hint:* You can copy and paste the value of a pixel to use it repeatedly.
       mike3bitmario_markdown_instruction: "# 3-Bit Color\n \n**Challenge:** \n\nA careless binary coder typed in ONE extra 0 or 1 somewhere within this image's data. The extra bit that is causing Mario to glitch out! \n\nDelete the extra bit to restore Mario back to normal!\n\n![](https://images.code.org/8b7c17ba204a1a4d33e1bd6de7f01d76-image-1477306657312.54.57 AM.png)"
+      morning-prep-monday_markdown_instruction: |-
+        # Day 1: Morning Prep
+        
+        What did you notice about how the lead facilitators prepared this morning? What were the top priorities on their mind for the day?
+      morning-prep-thursday_markdown_instruction: |-
+        # Day 4: Morning Prep
+        
+        What did you notice about how the lead facilitators prepared this morning? What were the top priorities on their mind for the day?
+      morning-prep-tuesday_markdown_instruction: |-
+        # Day 2: Morning Prep
+        
+        What did you notice about how the lead facilitators prepared this morning? What were the top priorities on their mind for the day?
+      morning-prep-wednesday_markdown_instruction: |-
+        # Day 3: Morning Prep
+        
+        What did you notice about how the lead facilitators prepared this morning? What were the top priorities on their mind for the day?
       multi-lesson Teaching and Student Support Plan_markdown_instruction: "<br><br>\n> **NOTE: before you start this task, make sure you’ve reviewed the lesson resources in this module, and have a good sense of how the lesson works. If you haven’t already reviewed the materials, do that now and come back to this task later.**\n\n# Teaching and Student Support Plan\n\n## Task Description\n\nNow that you have a better sense of this lessons in this sequence, let’s think about the types of supports students will need in order to be successful. Since the curriculum is based on inquiry learning, lessons feature activities that engage students in discovering core concepts themselves. It’s important to think through implementation plans and student support. In this task you will make a plan for teaching and student support **for one of the lessons in this sequence** that takes into account differentiation strategies and make-up work for absent students. Your teaching and student support plan should cover the following: \n\n\n- **Which lesson in the sequence are you discussing?** \n\n- **Details on how you will implement and differentiate the lesson:**\n\n - An outline of any changes you will need to make to the lesson to fit your local constraints or context (for example: pacing and time, dealing with classroom setup, etc). \n - An overview of the types of student needs you’ll likely need to support in your classroom (for example: students who are struggling to understand the underlying concept; students who are already familiar with the concept, but still have room to learn more; etc)\n - Your plan for addressing each of the needs outlined above (for example: integrating extension activities or other materials for students who already know something about the topic)\n - How will you address or emphasize the connection between lessons in this sequence? \n\n<br>\n- **Plan for catching up absent students:**\n\n - How will absent students catch up on activities they missed? \n - How will you use the fact that the lessons in this sequence are related and build on one another to address make-up work? \n\nYou can type out your teaching and student support plan in the box below, or you can upload a word doc or pdf file. \n\n## Getting Credit for Completing this Task\n\n#### Task Review Details\n\nIf this module is listed as  your “focus area”, then your response to the prompt above will be shared anonymously and reviewed by your peers, and you will review the work done by other teachers. Reviewers will be looking for thoughtful and thorough answers that demonstrate that you have spent time considering how the lesson will play out in your own classroom. Reviewers will have an opportunity to give feedback on your submission, and you can respond to that feedback and resubmit. \n\nIn order to get credit for completing this task, two reviewers need to agree that you have responded to the prompts fully. If reviewers don’t feel comfortable making a decision about your task submission, they can elevate to a facilitator to review. You will always have a chance to address feedback from your reviewers and resubmit your task! Reviewer feedback will show up at the bottom of this page, once it’s available. \n\n<br><br>"
       name 'CSD U3 Keypress Boolean Predict'_markdown_instruction: |-
         # 做出预测：
@@ -32471,10 +32622,26 @@ zh-CN:
         `keyDown()`（按下键时）模块是我们的第一个能从用户得到输入的模块。这是我们做一个真正的游戏的第一步！看看你是否能明白`keyDown()`（按下键时）模块是如何工作的。\r
         \r
         你觉得当你运行程序并按下”上方向键”时会发生什么？将你的预测写下来，并运行程序来看看你的预测是否精确。
-      novice-monday-1_markdown_instruction: "# Day 1 Question 1\n\nThink back on your experience today.\n\n* Use a few words or sentences to describe how you felt as a participant during those sessions today (e.g., confused, engaged, anxious, etc.)\n* What factors contributed to you feeling that way? \n* Did you feel supported as a teacher today? \n\\t* If yes, why?\n\\t* If no, why? What would have improved your experience?\n"
+      novice-monday-1_markdown_instruction: "# Day 1 Question 1\n\nThink back on your experience today.\n\n* Use a few words or sentences to describe how you felt as a participant during those sessions today (e.g., confused, engaged, anxious, etc.)\n* What factors contributed to you feeling that way? \n* Did you feel supported as a participant today? Why?\n* What does your experience today make you think about your role as a facilitator?\n"
+      novice-monday-2_markdown_instruction: |
+        # Day 1 Question 2
+        
+        What additional questions came up for you today? Record them here so we can discuss your questions during your FiT training.
       novice-thursday-1_markdown_instruction: "# Day 4 Question 1\n\nThink back on your experience today.\n\n* Use a few words or sentences to describe how you felt as a participant during those sessions today (e.g., confused, engaged, anxious, etc.)\n* What factors contributed to you feeling that way? \n* Did you feel supported as a teacher today? \n\\t* If yes, why?\n\\t* If no, why? What would have improved your experience?\n"
+      novice-thursday-2_markdown_instruction: |
+        # Day 4 Question 2
+        
+        What additional questions came up for you today? Record them here so we can discuss your questions during your FiT training.
       novice-tuesday-1_markdown_instruction: "# Day 2 Question 1\n\nThink back on your experience today.\n\n* Use a few words or sentences to describe how you felt as a participant during those sessions today (e.g., confused, engaged, anxious, etc.)\n* What factors contributed to you feeling that way? \n* Did you feel supported as a teacher today? \n\\t* If yes, why?\n\\t* If no, why? What would have improved your experience?\n"
+      novice-tuesday-2_markdown_instruction: |
+        # Day 2 Question 2
+        
+        What additional questions came up for you today? Record them here so we can discuss your questions during your FiT training.
       novice-wednesday-1_markdown_instruction: "# Day 3 Question 1\n\nThink back on your experience today.\n\n* Use a few words or sentences to describe how you felt as a participant during those sessions today (e.g., confused, engaged, anxious, etc.)\n* What factors contributed to you feeling that way? \n* Did you feel supported as a teacher today? \n\\t* If yes, why?\n\\t* If no, why? What would have improved your experience?\n"
+      novice-wednesday-2_markdown_instruction: |
+        # Day 3 Question 2
+        
+        What additional questions came up for you today? Record them here so we can discuss your questions during your FiT training.
       playEventsK1_markdown_instruction: |-
         这个游戏叫做"剧本实验室"。\r
         \r
@@ -32543,6 +32710,14 @@ zh-CN:
       ramp_artist_loops8_clone_markdown_instruction: "**挑战：**寻找规律，使用循环使此代码更短！"
       ramp_artist_loops9_markdown_instruction: 画一个边长200像素的正方形来通过这关。
       ramp_artist_loops9_2018_markdown_instruction: 画一个边长200像素的正方形来通过这关。
+      recruiting-thursday_markdown_instruction: |
+        # Day 4: Recruiting
+        
+        In the Recruiting Students session this morning you talked about recruiting students and meeting students needs in the region where you work. (If you were not with your region think about what you experienced in this sessions that might apply to your region.)
+        
+        * What were common recruiting pain points teachers in your region shared?
+        * What were common student support needs teachers in your region shared?
+        * What things did you see today that you want to check in on throughout the year?
       sample1_markdown_instruction: "Our adventurer wants to collect coins.  But she can only use 4 blocks to get them.  \n\nCan you help her grab as many as she can using just 4 blocks?"
       sample10a_markdown_instruction: "<h4>You have helped the adventurer and her bee!  \nAs a reward, please stay and play around in my magical village.  \n<br/>\n\nYou should have everything you need to create a game of your own.</h4>"
       sample4_markdown_instruction: |-

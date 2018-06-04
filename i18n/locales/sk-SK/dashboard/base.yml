@@ -128,7 +128,8 @@ sk:
     field_is_required: "sa vyžaduje"
     accept_terms: "Musíte súhlasiť s vytvorením účtu"
     error: "An error occurred."
-    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: "Áno"
     email_preference_no: "Nie"
     email_preference_required: "You must specify an email preference."
@@ -467,6 +468,8 @@ sk:
   gender:
     male: 'Muž'
     female: 'Žena'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: 'Preferujem neodpovedať'
   user_type:
     student: 'Študent'

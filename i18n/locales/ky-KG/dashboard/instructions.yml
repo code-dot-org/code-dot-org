@@ -3359,6 +3359,7 @@ ky:
       courseB_collector_loops_challenge1_instruction: 'This time you have limited blocks. Get all of the treasure! '
       courseB_collector_loops_challenge1_2018_instruction: 'This time you have limited blocks. Get all of the treasure! '
       courseB_collector_loops_challenge2_instruction: Let's get the treasure! Help me across each row then come back to start the next row. Can you find a pattern?
+      courseB_collector_loops_challenge2_2018_instruction: Let's get the treasure! Help me across each row then come back to start the next row. Can you find a pattern?
       courseB_collector_loops_challenge2a_instruction: Help Laurel get at least **5** pieces of treasure to finish this puzzle.
       courseB_collector_loops_challenge2a_2018_instruction: Help Laurel get at least **5** pieces of treasure to finish this puzzle.
       courseB_collector_loops_challenge`_instruction: 'This time you can only use one of each arrow block. Get all of the treasure! '
@@ -4616,6 +4617,7 @@ ky:
       courseF_maze_ramp6_instruction: '"Keep calm and help me find the bad pig. Otherwise I might get angry!"'
       courseF_maze_ramp6_2018_instruction: '"Keep calm and help me find the bad pig. Otherwise I might get angry!"'
       courseF_maze_ramp7_instruction: Use what you've learned to get the bird to the pig!
+      courseF_playlab_brokenText_instruction: In the rest of this stage, we're going to build a game that you control!
       courseF_playlab_embed_vars_instruction: Answer Pegleg the Pirate's questions. What happens if you enter the codename "password"? What about some other code name?
       courseF_playlab_variables0_instruction: This is Pirate Pegleg.  He's awfully hard to understand these days!
       courseF_playlab_variables1_instruction: This is Pirate Pegleg.  He's awfully hard to understand these days!

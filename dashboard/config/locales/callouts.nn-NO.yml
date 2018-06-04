@@ -1908,6 +1908,8 @@
         New Play Lab Project_callout2: Trykk "Køyr" for å lagre og køyre programmet
         sign_in_to_save_project: Vil du opne prosjektet seinare? Logg på for å lagre
           prosjektet til kontoen din!
+      courseF_playlab_brokenText_callout:
+        courseF_playlab_variables5c_1: Du vil finne variabel-blokka inni her.
       courseF_playlab_embed_vars_callout: {}
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: The toolbox has been organized into categories

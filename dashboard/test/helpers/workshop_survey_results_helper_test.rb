@@ -9,7 +9,8 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
     day_1: 1,
     day_2: 2,
     day_3: 3,
-    day_4: 4
+    day_4: 4,
+    facilitator: 5
   }
 
   self.use_transactional_test_case = true
@@ -52,6 +53,15 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
       )
     ]
 
+    @daily_facilitator_questions = [
+      Pd::JotForm::TextQuestion.new(
+        id: 1,
+        name: 'sampleFacilitatorText',
+        text: 'How was the facilitator?',
+        type: TYPE_TEXTBOX
+      )
+    ]
+
     Pd::SurveyQuestion.create(
       form_id: FORM_IDS[:pre_workshop],
       questions: Pd::JotForm::FormQuestions.new(FORM_IDS[:pre_workshop], @pre_workshop_questions).serialize.to_json
@@ -77,6 +87,11 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
       questions: Pd::JotForm::FormQuestions.new(FORM_IDS[:day_4], @daily_questions).serialize.to_json
     )
 
+    Pd::SurveyQuestion.create(
+      form_id: FORM_IDS[:facilitator],
+      questions: Pd::JotForm::FormQuestions.new(FORM_IDS[:facilitator], @daily_facilitator_questions).serialize.to_json
+    )
+
     expected_daily_questions = {
       general: {
         'sampleDailyScale' => {
@@ -84,6 +99,12 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
           answer_type: ANSWER_SELECT_VALUE,
           max_value: 5
         },
+      },
+      facilitator: {
+        'sampleFacilitatorText' => {
+          text: 'How was the facilitator?',
+          answer_type: ANSWER_TEXT
+        }
       }
     }
 
@@ -266,7 +287,7 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
   end
 
   test 'daily survey get_question_for_forms gets workshop questions and substitutes question texts' do
-    CDO.expects(:jotform_forms).times(5).returns(
+    CDO.expects(:jotform_forms).times(9).returns( # 5 for general, 4 for facilitator
       {
         'local' => {
           'day_0' => FORM_IDS[:pre_workshop],
@@ -274,6 +295,7 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
           'day_2' => FORM_IDS[:day_2],
           'day_3' => FORM_IDS[:day_3],
           'day_4' => FORM_IDS[:day_4],
+          'facilitator' => FORM_IDS[:facilitator]
         }
       }
     )
@@ -346,9 +368,12 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
     ).save(validate: false)
 
     daily_expected_results = {
-      response_count: nil,
+      response_count: 0,
       general: {
         'sampleDailyScale' => {}
+      },
+      facilitator: {
+        'sampleFacilitatorText' => {}
       }
     }
 

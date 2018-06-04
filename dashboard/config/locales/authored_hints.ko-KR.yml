@@ -3723,8 +3723,7 @@
       NEW Course 4 Artist Params 11_authored_hint:
         NEW_Course_4_Artist_Params_11_a: 함수 내에서 변수로 대체해야하는 숫자가 두 개 이상 있습니다.
       NEW Course 4 Artist Params 13_authored_hint:
-        NEW_Course_4_Artist_Params_13_a: 'You will need to divide the *perimeter*
-          by the number of sides in order to keep the shapes the same size overall. '
+        NEW_Course_4_Artist_Params_13_a: '모양을 같은 크기로 유지하려면 *경계* 수를 측면 수로 나누어야 합니다. '
       NEW Course 4 Artist Params 14_authored_hint:
         NEW_Course_4_Artist_Params_14_a: It's okay to run the program a few times
           to figure out how the function works with different parameters.
@@ -3859,109 +3858,92 @@
 
           What do you have to do to the counter at each flower to equal the amount of nectar you need to collect?
       NEW Course 4 Bee For Loops 8_authored_hint:
-        NEW_Course_4_Bee_For_Loops_8_a: "If your loop is counting up, the increment
-          is added to your counter variable each time through. \n\nWhat do you need
-          to add to each number to get the number after it?"
+        NEW_Course_4_Bee_For_Loops_8_a: |-
+          반복문이 계산 중일 때마다 증분이 매번 카운터 변수에 추가됩니다.
+
+          그 번호 뒤에 번호를 얻기 위해 각 번호에 무엇을 추가해야합니까?
       New Minecraft Hero Project_authored_hint:
         MC_HOC_2017_13_Cole_a: Agent를 통해 필요한 곳에 다리를 지어 알렉스나 스티브가 이동할 수 있게 해주세요.
       Overworld Avoid Monsters_authored_hint:
-        mc_8_a: There are a few paths you can take. Which is the shortest?
-        mc_8_b: Use `repeat` loops to simplify your code.
-        mc_8_c: Your goal is to get into the doorway of the house at the top of the
-          screen.
+        mc_8_a: 당신이 취할 수 있는 몇 가지 경로가 있습니다. 어느 것이 가장 짧습니까?
+        mc_8_b: 코드를 단순화하려면`반복` 루프를 사용 하십시오.
+        mc_8_c: 당신의 목표는 화면 상단의 집 출입구에 들어가는 것입니다.
       Overworld Avoid Monsters_2018_authored_hint:
-        mc_8_a: There are a few paths you can take. Which is the shortest?
-        mc_8_b: Use `repeat` loops to simplify your code.
-        mc_8_c: Your goal is to get into the doorway of the house at the top of the
-          screen.
+        mc_8_a: 당신이 취할 수 있는 몇 가지 경로가 있습니다. 어느 것이 가장 짧습니까?
+        mc_8_b: 코드를 단순화하려면`반복` 루프를 사용 하십시오.
+        mc_8_c: 당신의 목표는 화면 상단의 집 출입구에 들어가는 것입니다.
       Overworld Chop Tree_authored_hint:
-        mc_2_a: 'You need to `move forward` twice to stand in front of the tree.  '
-        mc_2_b: The `destroy block` command cuts down the tree in front of you.
+        mc_2_a: '나무 앞에서 두 번 ''앞으로 이동'' 움직여야 합니다.  '
+        mc_2_b: "`블록 파괴하기` 명령은 여러분 앞에있는 나무를 자릅니다."
       Overworld Chop Tree_2018_authored_hint:
-        mc_2_a: 'You need to `move forward` twice to stand in front of the tree.  '
-        mc_2_b: The `destroy block` command cuts down the tree in front of you.
+        mc_2_a: '나무 앞에서 두 번 ''앞으로 이동'' 움직여야 합니다.  '
+        mc_2_b: "`블록 파괴하기` 명령은 여러분 앞에있는 나무를 자릅니다."
       Overworld Chop Trees_authored_hint:
-        mc_4_a: 'You can chop down trees in any order. What path takes the smallest
-          number of blocks?  '
-        mc_4_b: The `destroy block` command cuts down the tree in front of you.
+        mc_4_a: '어떤 순서로든 나무를 자를 수 있습니다. 어떤 경로가 가장 작은 블록 수를 차지합니까?  '
+        mc_4_b: "`블록 파괴하기` 명령은 여러분 앞에있는 나무를 자릅니다."
       Overworld Chop Trees_2018_authored_hint:
-        mc_4_a: 'You can chop down trees in any order. What path takes the smallest
-          number of blocks?  '
-        mc_4_b: The `destroy block` command cuts down the tree in front of you.
+        mc_4_a: '어떤 순서로든 나무를 자를 수 있습니다. 어떤 경로가 가장 작은 블록 수를 차지합니까?  '
+        mc_4_b: "`블록 파괴하기` 명령은 여러분 앞에있는 나무를 자릅니다."
       Overworld House Frame Chosen_authored_hint:
-        mc_6_a: Click the arrow on the `place` block to choose what you want to place.
+        mc_6_a: "'놓기'블록의 화살표를 클릭하여 놓을 항목을 선택하십시오."
         mc_6_b: Don't be afraid to make a mistake! Run the code to see what happens,
           even if you haven't solved the puzzle yet.
-        mc_6_c: You can put more than one block inside of a `repeat` loop.
+        mc_6_c: 몇개의 블럭을 '반복'문 안에 놓을 수 있습니다.
       Overworld House Frame Chosen_2018_authored_hint:
-        mc_6_a: Click the arrow on the `place` block to choose what you want to place.
+        mc_6_a: "'놓기'블록의 화살표를 클릭하여 놓을 항목을 선택하십시오."
         mc_6_b: Don't be afraid to make a mistake! Run the code to see what happens,
           even if you haven't solved the puzzle yet.
-        mc_6_c: You can put more than one block inside of a `repeat` loop.
+        mc_6_c: 몇개의 블럭을 '반복'문 안에 놓을 수 있습니다.
       Overworld Move to Sheep_authored_hint:
-        mc_1_a: 'The `move forward` block is at the top of the toolbox.  '
-        mc_1_b: 'Make sure both `move forward` blocks are snapped to the `when run`
-          block.  '
+        mc_1_a: "'앞으로 이동' 블럭은 도구 상자의 맨 위에 있습니다.  "
+        mc_1_b: "'앞으로 이동` 블록이`실행하면` 블록에 붙여지는지 확인하십시오.  "
       Overworld Move to Sheep_2018_authored_hint:
-        mc_1_a: 'The `move forward` block is at the top of the toolbox.  '
-        mc_1_b: 'Make sure both `move forward` blocks are snapped to the `when run`
-          block.  '
+        mc_1_a: "'앞으로 이동' 블럭은 도구 상자의 맨 위에 있습니다.  "
+        mc_1_b: "'앞으로 이동` 블록이`실행하면` 블록에 붙여지는지 확인하십시오.  "
       Overworld Place Wall_authored_hint:
-        mc_5_a: Use the `place` block first, and then the `move` block.
-        mc_5_b: Make sure both blocks are inside of the `repeat` loop to run the code
-          more than once.
+        mc_5_a: "`놓기` 블록을 먼저 사용하고,`이동` 블록을 사용하십시오."
+        mc_5_b: 코드를 두 번 이상 실행하려면 두 블록 모두`반복`문 안에 있어야 합니다.
         mc_5_c: Don't be afraid to make a mistake! Run the code to see what happens,
           even if you haven't solved the puzzle yet.
       Overworld Place Wall_2018_authored_hint:
-        mc_5_a: Use the `place` block first, and then the `move` block.
-        mc_5_b: Make sure both blocks are inside of the `repeat` loop to run the code
-          more than once.
+        mc_5_a: "`놓기` 블록을 먼저 사용하고,`이동` 블록을 사용하십시오."
+        mc_5_b: 코드를 두 번 이상 실행하려면 두 블록 모두`반복`문 안에 있어야 합니다.
         mc_5_c: Don't be afraid to make a mistake! Run the code to see what happens,
           even if you haven't solved the puzzle yet.
       Overworld Plant Crops_authored_hint:
-        mc_7_a: Use the `plant crop` block to plant a crop in the space where you
-          are standing.
-        mc_7_b: Both stripes of dark brown land by the water need to be filled with
-          crops.
-        mc_7_c: You can put more than one block inside of a `repeat` loop.
+        mc_7_a: "'작물 심기' 블럭을 이용하여 지금 서 있는 곳에 심으세요."
+        mc_7_b: 짙은 갈색 땅의 줄무늬는 물로 채워야 합니다.
+        mc_7_c: 몇개의 블럭을 '반복'문 안에 놓을 수 있습니다.
       Overworld Plant Crops_2018_authored_hint:
-        mc_7_a: Use the `plant crop` block to plant a crop in the space where you
-          are standing.
-        mc_7_b: Both stripes of dark brown land by the water need to be filled with
-          crops.
-        mc_7_c: You can put more than one block inside of a `repeat` loop.
+        mc_7_a: "'작물 심기' 블럭을 이용하여 지금 서 있는 곳에 심으세요."
+        mc_7_b: 짙은 갈색 땅의 줄무늬는 물로 채워야 합니다.
+        mc_7_c: 몇개의 블럭을 '반복'문 안에 놓을 수 있습니다.
       Overworld Powered Minecart_authored_hint:
-        mc_13_a: Use `place rail` to lay rail on the square you are standing in.
-        mc_13_b: Use `repeat` loops to make your code shorter.
+        mc_13_a: 현재 서 있는 정사각형에 레일을 놓기 위해`놓기 레일'을 사용하십시오.
+        mc_13_b: 코드를 짧게 만드려면 '반복'문을 사용하세요.
       Overworld Powered Minecart_2018_authored_hint:
-        mc_13_a: Use `place rail` to lay rail on the square you are standing in.
-        mc_13_b: Use `repeat` loops to make your code shorter.
+        mc_13_a: 현재 서 있는 정사각형에 레일을 놓기 위해`놓기 레일'을 사용하십시오.
+        mc_13_b: 코드를 짧게 만드려면 '반복'문을 사용하세요.
       Overworld Shear Sheep_authored_hint:
-        mc_3_a: 'The `shear` block gets the sheep in front of you. Are you facing
-          the sheep?  '
-        mc_3_b: 'If you need to change the way you are facing, use a `turn` block.  '
-        mc_3_c: 'Don''t be afraid to make a mistake! Run the code to see what happens,
-          even if you haven''t solved the puzzle yet.  '
+        mc_3_a: "`털 깍기'블록은 당신 앞에서 양을 잡습니다. 양 앞에 있습니까?  "
+        mc_3_b: '만약 당신이 직면하고 있는 방향을 바꿀 필요가 있다면,`회전` 블록을 사용하십시오.  '
+        mc_3_c: '실수하는 것을 두려워하지 마라! 퍼즐을 아직 풀지 않은 경우에도 코드를 실행하여 어떤 일이 발생하는지 확인하십시오.  '
       Overworld Shear Sheep_2018_authored_hint:
-        mc_3_a: 'The `shear` block gets the sheep in front of you. Are you facing
-          the sheep?  '
-        mc_3_b: 'If you need to change the way you are facing, use a `turn` block.  '
-        mc_3_c: 'Don''t be afraid to make a mistake! Run the code to see what happens,
-          even if you haven''t solved the puzzle yet.  '
+        mc_3_a: "`털 깍기'블록은 당신 앞에서 양을 잡습니다. 양 앞에 있습니까?  "
+        mc_3_b: '만약 당신이 직면하고 있는 방향을 바꿀 필요가 있다면,`회전` 블록을 사용하십시오.  '
+        mc_3_c: '실수하는 것을 두려워하지 마라! 퍼즐을 아직 풀지 않은 경우에도 코드를 실행하여 어떤 일이 발생하는지 확인하십시오.  '
       Pattern Bee 1_authored_hint:
         conditional_pointer: |-
-          Start by thinking about this part: what's different each step of the way? What kind of block can you use to make a *decision* about whether you're at a flower or honeycomb?
+          이 부분을 생각해보기 시작하십시오. 각 단계가 다른 점은 무엇입니까? 꽃이 있거나 벌집에 있는지 여부를 "결정"할 때 어떤 블럭을 사용 할 수 있습니까?
 
-          ![](https://images.code.org/a4883ea91c2f879ca1bb281d7944ed87-image-1471477752512.48.07 PM.png)
-        turn_at_honeycomb_pointer: Other than making honey, do you see anything different
-          that you have to do at each honeycomb?
+          ! [] (https://images.code.org/a4883ea91c2f879ca1bb281d7944ed87-image-1471477752512.48.07 PM.png)
+        turn_at_honeycomb_pointer: 꿀을 만드는 것 외에는, 당신이 각각의 벌집에서 해야할 일과 다른 것이 보입니까?
       Planning Farmer_authored_hint:
         conditional_pointer: |-
-          Start by thinking about this part: what's different each step of the way? What kind of block can you use to make a *decision* about whether you're at a flower or honeycomb?
+          이 부분을 생각해보기 시작하십시오. 각 단계가 다른 점은 무엇입니까? 꽃이 있거나 벌집에 있는지 여부를 "결정"할 때 어떤 블럭을 사용 할 수 있습니까?
 
-          ![](https://images.code.org/a4883ea91c2f879ca1bb281d7944ed87-image-1471477752512.48.07 PM.png)
-        turn_at_honeycomb_pointer: Other than making honey, do you see anything different
-          that you have to do at each honeycomb?
+          ! [] (https://images.code.org/a4883ea91c2f879ca1bb281d7944ed87-image-1471477752512.48.07 PM.png)
+        turn_at_honeycomb_pointer: 꿀을 만드는 것 외에는, 당신이 각각의 벌집에서 해야할 일과 다른 것이 보입니까?
       Quantum Bee - Ryan_authored_hint:
         test_hint: 이것은 테스트 힌트 입니다.
       Test embedded K1 Blockly in instructions_authored_hint: {}
@@ -7058,6 +7040,69 @@
           </next>
           </block></xml>
         courseB_collector_loops_challenge2_c: Don't forget to use a loop to collect
+          the final pile of treasure!
+        courseB_collector_loops_challenge2_d: |-
+          Try this solution:
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="3-10">4</title>
+          <statement name="DO">
+          <block type="maze_moveEast">
+          <next>
+          <block type="collector_collect">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="3-10">6</title>
+          <statement name="DO">
+          <block type="collector_collect"/>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_collector_loops_challenge2_2018_authored_hint:
+        courseB_collector_loops_challenge2_a: If something goes wrong, don't be afraid
+          to start over. Don't give up!
+        courseB_collector_loops_challenge2_b: |-
+          If you repeat this pattern, Laurel won't hit the wall at the bottom of the cave!
+
+          <xml><block type="maze_moveEast">
+          <next>
+          <block type="collector_collect">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block></xml>
+        courseB_collector_loops_challenge2_c: Try using a `repeat` block to collect
           the final pile of treasure!
         courseB_collector_loops_challenge2_d: |-
           Try this solution:
@@ -16953,6 +16998,9 @@
           Look at this path...
 
           ![](https://images.code.org/e1d29901495eea9504c194b09efaa88e-image-1503437474226.29.32.png)
+      courseF_playlab_brokenText_authored_hint:
+        courseF_playlab_variables6c_a: Under the “Input” section, use the `ask` block
+          to get input from users.
       courseF_playlab_variables1a_authored_hint:
         courseF_playlab_variables1a_a: Put the word "Goal!" inside the green block
           that is connected to the purple `set shout to` block.

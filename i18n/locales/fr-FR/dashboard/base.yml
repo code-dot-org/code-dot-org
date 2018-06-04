@@ -114,24 +114,25 @@ fr:
     valid_password: "Mot de passe correct !"
     invalid_password: "Le mot de passe doit comporter au moins 6 caractères."
     mismatch_password: "Les deux mots de passe ne sont pas identiques."
-    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
-    under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
-    agree_us_website: "I agree to using a website based in the United States."
-    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
+    agree_tos_privacy: "Je sui d'accord avec les <a href='http://code.org/tos'> modalités de service</a> et la <a href='http://code.org/privacy'> politique de confidentialité</a>."
+    under_13_consent: "Si j'ai moins de 13 ans, je confirme que j'ai l'autorisation de l'un de mes parents ou de mon représentant légal pour utiliser les services de Code.org."
+    agree_us_website: "Je suis d'accord pour utiliser un site internet situé aux Etats-Unis."
+    my_data_to_us: "Mes données de connexion sur ce site peuvent être envoyées et stockées ou traitées aux Etats-Unis."
     student_terms: "J'accepte d'être lié aux <a href='http://code.org/tos'>conditions d'utilisation</a> de Code.org. Si je suis âgé de moins de 13 ans, je confirme en soumettant ce formulaire que j'ai la permission de mes parents ou de mon tuteur légal pour utiliser les services Code.org. <br/><br/>Les adresses e-mail ne sont pas stockées sous une forme qui nous permettrait de contacter les élèves. Les élèves ne recevront jamais d'e-mails venant de Code.org sauf pour la récupération du mot de passe. Voir notre <a href='http://code.org/privacy'>politique de confidentialité</a> pour plus d'informations."
     teacher_terms: "J'accepte d'être lié aux conditions d'utilisation de Code.org. Pour plus d'informations sur la vie privée, voir notre <a href='http://code.org/privacy'>politique de confidentialité</a>."
     additional_information: "Nous avons besoin de quelques informations supplémentaires pour continuer l’inscription."
-    user_type_button: "Update Account Type"
+    user_type_button: "Mise à jour du type de compte"
     user_type_label: "Type de compte"
     user_type_teacher: "Enseignant"
     user_type_student: "Élève"
     field_is_required: "est obligatoire"
     accept_terms: "Vous devez accepter les conditions d'utilisation pour créer un compte"
     error: "Une erreur est apparue."
-    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_question: "Pouvons-nous vous envoyer des mises à jour concernant nos cours, les possibilités de formation locales ou les nouveautés en sciences informatique ?"
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: "Oui"
     email_preference_no: "Non"
-    email_preference_required: "You must specify an email preference."
+    email_preference_required: "Vous devez préciser une adresse mail préférée."
   school_info:
     title: 'Informations de l’école (facultatif)'
     school_country: 'Pays de l’école'
@@ -210,7 +211,7 @@ fr:
       remove: 'Êtes-vous sûr de vouloir quitter cette section ?'
     remove: '(supprimer la section)'
     type:
-      picture: 'Picture Password'
+      picture: 'Mot de passe par image'
       word: 'Mot secret'
       email: 'E-mail'
       google_classroom: 'Salle de classe Google'
@@ -377,7 +378,7 @@ fr:
     enter_new_login_info: 'Entrez vous nouvelles informations de connexion'
     confirm_secret_words: 'Confirmez votre identité en entrant vos mots secrets actuels'
     enter_parent_email: "Entrez l'adresse e-mail de vos parents ou de votre tuteur (pour la récupération de mot de passe)"
-    update: "Update Account"
+    update: "Mise à jour du compte"
   user_level:
     completed: 'Terminé'
     tried: 'A essayé'
@@ -467,6 +468,8 @@ fr:
   gender:
     male: 'Masculin'
     female: 'Femme'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: 'Préfère ne pas répondre'
   user_type:
     student: 'Élève'
@@ -1007,9 +1010,9 @@ fr:
     more_information: "See Code.org's Privacy Policy."
     accept: 'J''accepte'
   gdpr_dialog:
-    heading: 'Do you agree to using a web site based in the United States?'
-    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
-    link_intro: 'For details see our'
-    privacy_policy: 'privacy policy'
-    logout: 'Logout'
+    heading: 'Etes-vous d''accord pour utiliser un site internet situé aux Etats-Unis ?'
+    message: 'Vos données de connexion sur ce site peuvent être envoyées et stockées ou traitées aux Etats-Unis.'
+    link_intro: 'Pour plus de détails consultez notre'
+    privacy_policy: 'politique de confidentialité'
+    logout: 'Déconnexion'
     yes: 'Oui'
