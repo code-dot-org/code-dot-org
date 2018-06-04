@@ -14,10 +14,12 @@ import exportFontAwesomeCssEjs from '../templates/export/fontAwesome.css.ejs';
 import exportExpoIndexEjs from '../templates/export/expo/index.html.ejs';
 import exportExpoPackageJson from '../templates/export/expo/package.exported_json';
 import exportExpoAppJsonEjs from '../templates/export/expo/app.json.ejs';
-import exportExpoAppJs from '../templates/export/expo/App.exported_js';
+import exportExpoAppEjs from '../templates/export/expo/App.js.ejs';
 import exportExpoCustomAssetJs from '../templates/export/expo/CustomAsset.exported_js';
+import exportExpoDataWarningJs from '../templates/export/expo/DataWarning.exported_js';
 import exportExpoPackagedFilesEjs from '../templates/export/expo/packagedFiles.js.ejs';
 import exportExpoPackagedFilesEntryEjs from '../templates/export/expo/packagedFilesEntry.js.ejs';
+import exportExpoWarningPng from '../templates/export/expo/warning.png';
 import exportExpoIconPng from '../templates/export/expo/icon.png';
 import exportExpoSplashPng from '../templates/export/expo/splash.png';
 import logToCloud from '../logToCloud';
@@ -139,7 +141,7 @@ const APP_OPTIONS_OVERRIDES = {
   readonlyWorkspace: true,
 };
 
-export function getAppOptionsFile() {
+export function getAppOptionsFile(expoMode) {
   function getAppOptionsAtPath(whitelist, sourceOptions) {
     if (!whitelist || !sourceOptions) {
       return null;
@@ -155,6 +157,12 @@ export function getAppOptionsFile() {
   }
   const options = getAppOptionsAtPath(APP_OPTIONS_WHITELIST, getAppOptions());
   _.merge(options, APP_OPTIONS_OVERRIDES);
+  options.nativeExport = expoMode;
+  if (!expoMode) {
+    // call non-whitelisted hasDataAPIs() function and persist as a bool in
+    // the exported options:
+    options.exportUsesDataAPIs = getAppOptions().shareWarningInfo.hasDataAPIs();
+  }
   return `window.APP_OPTIONS = ${JSON.stringify(options)};`;
 }
 
@@ -296,6 +304,11 @@ export default {
 
     if (expoMode) {
       appAssets.push({
+        url: exportExpoWarningPng,
+        zipPath: appName + '/appassets/warning.png',
+        dataType: 'binary',
+      });
+      appAssets.push({
         url: exportExpoIconPng,
         zipPath: appName + '/appassets/icon.png',
         dataType: 'binary',
@@ -315,11 +328,15 @@ export default {
         appName: appName,
         projectId: project.getCurrentId()
       });
+      const appJs = exportExpoAppEjs({
+        hasDataAPIs: getAppOptions().shareWarningInfo.hasDataAPIs(),
+      });
 
       zip.file(appName + "/package.json", exportExpoPackageJson);
       zip.file(appName + "/app.json", appJson);
-      zip.file(appName + "/App.js", exportExpoAppJs);
+      zip.file(appName + "/App.js", appJs);
       zip.file(appName + "/CustomAsset.js", exportExpoCustomAssetJs);
+      zip.file(appName + "/DataWarning.js", exportExpoDataWarningJs);
     }
     // NOTE: for expoMode, it is important that index.html comes first...
     zip.file(mainProjectFilesPrefix + "index.html", rewriteAssetUrls(appAssets, html));
@@ -347,7 +364,7 @@ export default {
       ))).then(
         ([applabApi], [commonLocale], [applabLocale], [applabCSS], [commonCSS], [fontAwesomeWOFF], ...rest) => {
           zip.file(appName + "/" + (expoMode ? "assets/applab-api.j" : rootApplabPrefix + "applab-api.js"),
-                   [getAppOptionsFile(), commonLocale, applabLocale, applabApi].join('\n'));
+                   [getAppOptionsFile(expoMode), commonLocale, applabLocale, applabApi].join('\n'));
           zip.file(mainProjectFilesPrefix + fontAwesomeWOFFPath, fontAwesomeWOFF);
           if (expoMode) {
             const [data] = rest[0];
@@ -461,7 +478,7 @@ export default {
   },
 
   async publishToExpo(appName, code, levelHtml) {
-    const appOptionsJs = getAppOptionsFile();
+    const appOptionsJs = getAppOptionsFile(true);
     const { css, outerHTML } = transformLevelHtml(levelHtml);
     const fontAwesomeCSS = exportFontAwesomeCssEjs({fontPath: fontAwesomeWOFFPath});
     const exportConfigPath = getExportConfigPath();
@@ -481,12 +498,16 @@ export default {
       commonCssPath: `${origin}/blockly/css/common.css`,
       applabCssPath: `${origin}/blockly/css/applab.css`,
     });
+    const appJs = exportExpoAppEjs({
+      hasDataAPIs: getAppOptions().shareWarningInfo.hasDataAPIs(),
+    });
 
     const appAssets = generateAppAssets({ html, code });
 
     const files = {
-      'App.js': { contents: exportExpoAppJs, type: 'CODE'},
+      'App.js': { contents: appJs, type: 'CODE'},
       'CustomAsset.js': { contents: exportExpoCustomAssetJs, type: 'CODE'},
+      'DataWarning.js': { contents: exportExpoDataWarningJs, type: 'CODE'},
     };
 
     const session = new SnackSession({
@@ -522,6 +543,13 @@ export default {
       filename: fontAwesomeWOFFPath,
     });
 
+    appAssets.push({
+      url: exportExpoWarningPng,
+      dataType: 'binary',
+      filename: 'warning.png',
+      assetLocation: 'appassets/',
+    });
+
     const assetDownloads = appAssets.map(asset =>
       download(asset.url, asset.dataType || 'text')
     );
@@ -533,7 +561,7 @@ export default {
     const snackAssetUrls = await Promise.all(assetUploads);
 
     snackAssetUrls.forEach((url, index) => {
-      files['assets/' + appAssets[index].filename] = {
+      files[(appAssets[index].assetLocation || 'assets/') + appAssets[index].filename] = {
         contents: url,
         type: 'ASSET',
       };
