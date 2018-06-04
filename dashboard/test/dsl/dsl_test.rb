@@ -24,6 +24,8 @@ class DslTest < ActiveSupport::TestCase
     script_announcements: nil,
     new_name: nil,
     family_name: nil,
+    version_year: nil,
+    is_stable: nil,
   }
 
   test 'test Script DSL' do

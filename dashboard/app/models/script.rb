@@ -136,6 +136,8 @@ class Script < ActiveRecord::Base
     has_verified_resources
     has_lesson_plan
     script_announcements
+    version_year
+    is_stable
   )
 
   def self.twenty_hour_script
@@ -1107,6 +1109,8 @@ class Script < ActiveRecord::Base
       has_verified_resources: !!script_data[:has_verified_resources],
       has_lesson_plan: !!script_data[:has_lesson_plan],
       script_announcements: script_data[:script_announcements],
+      version_year: script_data[:version_year],
+      is_stable: script_data[:is_stable],
     }.compact
   end
 
