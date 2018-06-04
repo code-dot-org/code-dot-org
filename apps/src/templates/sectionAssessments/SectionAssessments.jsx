@@ -8,6 +8,7 @@ import {connect} from 'react-redux';
 import {h3Style} from "../../lib/ui/Headings";
 import i18n from '@cdo/locale';
 import ScriptSelector from '@cdo/apps/templates/sectionProgress/ScriptSelector';
+import MultipleChoiceByStudentSection from './MultipleChoiceByStudentSection';
 
 const styles = {
   header: {
@@ -50,10 +51,7 @@ class SectionAssessments extends Component {
           />
         </div>
         <div>
-          This is a list of the questions for the assessments we get back.
-          <br />
-          <div>
-          </div>
+          <MultipleChoiceByStudentSection />
         </div>
       </div>
     );
