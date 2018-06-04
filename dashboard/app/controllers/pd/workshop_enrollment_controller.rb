@@ -24,10 +24,16 @@ class Pd::WorkshopEnrollmentController < ApplicationController
         @enrollment.email_confirmation = current_user.email
       end
 
+      session_dates = []
+      @workshop.sessions.each do |session|
+        session_dates << session.formatted_date_with_start_and_end_times
+      end
+
       @script_data = {
         props: {
           workshop: @workshop,
-          enrollment: @enrollment
+          enrollment: @enrollment,
+          session_dates: session_dates
         }.to_json
       }
     end

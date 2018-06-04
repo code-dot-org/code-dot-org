@@ -7,7 +7,8 @@ import WorkshopDetails from './workshop_details';
 export default class WorkshopEnrollment extends React.Component {
   static propTypes = {
     workshop: PropTypes.object,
-    enrollment: PropTypes.object
+    enrollment: PropTypes.object,
+    session_dates: PropTypes.arrayOf(PropTypes.string)
   };
 
   render() {
@@ -26,6 +27,7 @@ export default class WorkshopEnrollment extends React.Component {
             <div className ="span6">
               <WorkshopDetails
                 workshop={this.props.workshop}
+                sessionDates={this.props.session_dates}
               />
 
               <h2>Facilitators</h2>
