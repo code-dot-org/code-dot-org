@@ -11,7 +11,7 @@ class MultipleChoiceByStudentSection extends Component {
   // TODO(caleybrock): define a multipleChoiceStructure PropType
   static propTypes = {
     multipleChoiceStructure: PropTypes.array,
-    studentAnswerData: studentAnswerDataPropType,
+    studentAnswerData: PropTypes.arrayOf(studentAnswerDataPropType),
   };
 
   render() {
@@ -19,10 +19,15 @@ class MultipleChoiceByStudentSection extends Component {
     return (
       <div>
         <h2>Multiple choice answers by student section</h2>
-        <StudentAssessmentOverviewTable
-          questionAnswerData={multipleChoiceStructure}
-          studentAnswerData={studentAnswerData}
-        />
+        {studentAnswerData.map((studentResponse, index) => (
+          <div key={index}>
+            <h3>{`Student number ${index}`}</h3>
+            <StudentAssessmentOverviewTable
+              questionAnswerData={multipleChoiceStructure}
+              studentAnswerData={studentResponse}
+            />
+          </div>
+        ))}
       </div>
     );
   }
