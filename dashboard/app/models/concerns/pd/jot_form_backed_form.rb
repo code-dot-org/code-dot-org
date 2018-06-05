@@ -117,7 +117,7 @@ module Pd
         raise KeyError, "Missing jotform form category #{category}" unless CDO.jotform_forms&.key? category
         forms = CDO.jotform_forms[category]
         raise KeyError, "Mising jotform form: #{category}.#{name}" unless forms.key? name
-        forms[name]
+        forms[name].to_i
       end
 
       def questions_for_form(form_id)
