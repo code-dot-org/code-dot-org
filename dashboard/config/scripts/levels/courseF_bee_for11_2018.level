@@ -36,11 +36,19 @@
     "markdown_instructions": "If your loop is counting down, the increment is **subtracted** from your counter variable each time through. \r\n\r\nWhat should your increment be to collect 15, then 12, then 9, 6, 3 nectar?",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"How much less is 12 than 15?  \\nHow much less is 9 than 12?\\n\\nDo you see a pattern?\",\"hint_id\":\"courseF_bee_for11_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/76c3d43f1af200d376a3940fcc8dded2/courseF_bee_for11.mp3\"}]",
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_type_hints": "false",
+    "shape_shift": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-05-07 21:01:40 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2018-05-07 21:01:40 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-05 00:36:24 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>
@@ -96,12 +104,16 @@
           </block>
           <block type="controls_repeat_ext" inline="true"/>
         </category>
-        <category name="Variables" custom="VARIABLE">
+        <category name="Variables ">
           <block type="variables_get">
             <title name="VAR">counter</title>
           </block>
         </category>
-        <category name="Functions" custom="PROCEDURE"/>
+        <category name="Comments">
+          <block type="comment">
+            <title name="TEXT"/>
+          </block>
+        </category>
       </xml>
     </toolbox_blocks>
     <solution_blocks>
