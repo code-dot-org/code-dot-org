@@ -77,6 +77,7 @@ export default function sectionAssessments(state=initialState, action) {
         ...state.assessmentsStructureByScript,
         [action.scriptId]: action.assessments
       },
+      // Default the assessmentId to the first assessment in the structure
       assessmentId: parseInt(Object.keys(action.assessments)[0]),
     };
   }
