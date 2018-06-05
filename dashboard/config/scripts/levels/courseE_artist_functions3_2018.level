@@ -40,8 +40,8 @@
     "name_suffix": "_2018",
     "top_level_procedure_autopopulate": "false",
     "markdown_instructions": "Build a function that will create this star.\r\n\r\n---\r\n\r\n- Each arm of the star is 25 pixels long\r\n- You need to turn 45 degrees to get 8 arms\r\n- It is okay to go forward and backward over the same arm",
-    "contained_level_names": null,
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
