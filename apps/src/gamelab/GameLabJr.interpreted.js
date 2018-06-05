@@ -176,8 +176,8 @@ function whenMouseClicked(event) {
 }
 
 function whenPressedAndReleased(direction, pressedHandler, releasedHandler) {
-  inputEvents.push({type: keyWentDown, event: pressedHandler, param: direction()});
-  inputEvents.push({type: keyWentUp, event: releasedHandler, param: direction()});
+  touchEvents.push({type: keyWentDown, event: pressedHandler, param: direction});
+  touchEvents.push({type: keyWentUp, event: releasedHandler, param: direction});
 }
 
 function clickedOn(sprite, event) {
