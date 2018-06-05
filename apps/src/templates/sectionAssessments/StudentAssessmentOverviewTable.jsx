@@ -7,6 +7,7 @@ import orderBy from 'lodash/orderBy';
 import MultipleChoiceAnswerCell from './MultipleChoiceAnswerCell';
 import {
   studentAnswerDataPropType,
+  questionStructurePropType,
 } from './assessmentDataShapes';
 
 export const COLUMNS = {
@@ -33,26 +34,13 @@ const styles = {
   }
 };
 
-// Custom data shapes for table showing a list of questions and
-// what an individual student answered for each question.
-const answerDataPropType = PropTypes.shape({
-  multipleChoiceOption: PropTypes.string,
-  isCorrectAnswer: PropTypes.bool,
-});
-
-const questionDataPropType = PropTypes.shape({
-  id: PropTypes.number.isRequired,
-  question: PropTypes.string.isRequired,
-  answers: PropTypes.arrayOf(answerDataPropType),
-});
-
 // Single table for individual student and individual assessment
 // multiple choice assessment. Each row is a single question,
 // the students response to that question, and whether the student got
 // the correct answer.
 class StudentAssessmentOverviewTable extends Component {
   static propTypes= {
-    questionAnswerData: PropTypes.arrayOf(questionDataPropType),
+    questionAnswerData: PropTypes.arrayOf(questionStructurePropType),
     studentAnswerData: studentAnswerDataPropType
   };
 
