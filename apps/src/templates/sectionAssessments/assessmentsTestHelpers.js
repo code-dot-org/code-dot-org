@@ -72,6 +72,7 @@ export const studentData = [
   },
 ];
 
+// Data for overview table
 export const multipleChoiceData = [
   {
     id: 1,
@@ -136,6 +137,20 @@ export const multipleChoiceData = [
     notAnswered: 25,
   },
 ];
+
+// Data for single student table.
+export const multipleChoiceDataForSingleStudent = multipleChoiceData.map(question => {
+  return {
+    id: question.id,
+    question: question.question,
+    answers: question.answers.map(answer => {
+      return {
+        multipleChoiceOption: answer.multipleChoiceOption,
+        isCorrectAnswer: answer.isCorrectAnswer,
+      };
+    })
+  };
+});
 
 export const questionOne = [
   {
