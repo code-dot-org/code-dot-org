@@ -16,6 +16,16 @@
 
 #blockly-container
 
+%p
+
+= form_for @shared_blockly_function do |f|
+  = f.hidden_field :name
+  = f.hidden_field :description
+  = f.hidden_field :arguments
+  = f.hidden_field :stack
+  %div
+    = f.submit class: 'btn'
+
 %script{src: minifiable_asset_path('js/shared_blockly_functions/edit.js')}
 
 = link_to "Back", shared_blockly_functions_path

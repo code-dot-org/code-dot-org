@@ -4,10 +4,13 @@ import { install } from '@cdo/apps/gamelab/blocks';
 import { valueTypeTabShapeMap } from '@cdo/apps/gamelab/GameLab';
 
 Blockly.inject(document.getElementById('blockly-container'), {
+  assetUrl,
   valueTypeTabShapeMap: valueTypeTabShapeMap(Blockly),
+  hasVerticalScrollbars: true,
+  typeHints: true,
 });
 
-install(Blockly, { assetUrl });
+install(Blockly);
 
 Blockly.behaviorEditor = new Blockly.FunctionEditor(
   {
