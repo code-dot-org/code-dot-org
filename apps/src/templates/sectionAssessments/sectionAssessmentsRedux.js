@@ -157,7 +157,7 @@ export const getStudentAnswerData = (state) => {
   const studentAssessment = studentObject.responses_by_assessment[currentAssessmentId];
 
   // Transform that data into what we need for this particular table.
-  return {
+  return [{
     id: studentId,
     name: studentObject.student_name,
     studentAnswers: studentAssessment.level_results.map(answer => {
@@ -166,7 +166,7 @@ export const getStudentAnswerData = (state) => {
         isCorrect: answer.status === 'correct',
       };
     })
-  };
+  }];
 };
 
 // Helpers
