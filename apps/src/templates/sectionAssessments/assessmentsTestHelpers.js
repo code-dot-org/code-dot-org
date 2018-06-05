@@ -57,20 +57,18 @@ export const studentOverviewData = [
   },
 ];
 
-export const studentData = [
-  {
-    id: '012896',
-    name: 'Caley',
-    studentAnswers: [
-      {question: 1, answers: ['']},
-      {question: 2, answers: ['B', 'D']},
-      {question: 3, answers: ['E']},
-      {question: 4, answers: ['C']},
-      {question: 5, answers: ['A']},
-      {question: 6, answers: ['']},
-    ],
-  },
-];
+// type: studentAnswerDataPropType
+export const studentData = {
+  id: '012896',
+  name: 'Caley',
+  studentAnswers: [
+    {isCorrect: false, answers: ''},
+    {isCorrect: false, answers: 'B D'},
+    {isCorrect: false, answers: 'E'},
+    {isCorrect: false, answers: 'C'},
+    {isCorrect: true, answers: 'A'},
+  ],
+};
 
 // Data for overview table
 export const multipleChoiceData = [
@@ -139,16 +137,11 @@ export const multipleChoiceData = [
 ];
 
 // Data for single student table.
-export const multipleChoiceDataForSingleStudent = multipleChoiceData.map(question => {
+export const multipleChoiceDataForSingleStudent = multipleChoiceData.map((question, index) => {
   return {
     id: question.id,
     question: question.question,
-    answers: question.answers.map(answer => {
-      return {
-        multipleChoiceOption: answer.multipleChoiceOption,
-        isCorrectAnswer: answer.isCorrectAnswer,
-      };
-    })
+    correctAnswer: ['C', 'C B', 'D', 'B', 'A'][index],
   };
 });
 
