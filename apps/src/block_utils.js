@@ -790,17 +790,8 @@ exports.createJsWrapperBlockCreator = function (
         if (color) {
           this.setHSV(...color);
         } else if (!returnType) {
-          this.setHSV(DEFAULT_COLOR);
+          this.setHSV(...DEFAULT_COLOR);
         }
-
-        interpolateInputs(
-          blockly,
-          this,
-          inputRows,
-          inputTypes,
-          inline,
-        );
-        this.setInputsInline(inline);
 
         if (returnType) {
           this.setOutput(
@@ -817,6 +808,16 @@ exports.createJsWrapperBlockCreator = function (
           this.setNextStatement(true);
           this.setPreviousStatement(true);
         }
+
+        interpolateInputs(
+          blockly,
+          this,
+          inputRows,
+          inputTypes,
+          inline,
+        );
+        this.setInputsInline(inline);
+
       },
     };
 
