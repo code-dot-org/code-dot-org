@@ -24,7 +24,7 @@
   = f.hidden_field :arguments
   = f.hidden_field :stack
   %div
-    = f.submit class: 'btn'
+    = f.submit class: 'btn', id: 'shared_function_submit'
 
 %script{src: minifiable_asset_path('js/shared_blockly_functions/edit.js')}
 
