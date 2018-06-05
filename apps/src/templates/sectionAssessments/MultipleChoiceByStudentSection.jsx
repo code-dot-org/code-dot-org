@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import StudentAssessmentOverviewTable from './StudentAssessmentOverviewTable';
-import { studentAnswerDataPropType } from './assessmentDataShapes';
+import { studentAnswerDataPropType, questionStructurePropType } from './assessmentDataShapes';
 import {
   getMultipleChoiceStructureForCurrentAssessment,
   getStudentMCResponsesForCurrentAssessment,
@@ -8,9 +8,8 @@ import {
 import { connect } from 'react-redux';
 
 class MultipleChoiceByStudentSection extends Component {
-  // TODO(caleybrock): define a multipleChoiceStructure PropType
   static propTypes = {
-    multipleChoiceStructure: PropTypes.array,
+    multipleChoiceStructure: PropTypes.arrayOf(questionStructurePropType),
     studentAnswerData: PropTypes.arrayOf(studentAnswerDataPropType),
   };
 
