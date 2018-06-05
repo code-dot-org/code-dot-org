@@ -26,7 +26,7 @@ export default class TeacherHomepage extends Component {
     joinedSections: shapes.sections,
     courses: shapes.courses,
     topCourse: shapes.topCourse,
-    announcements: PropTypes.array.isRequired,
+    announcement: shapes.teacherAnnouncement,
     queryStringOpen: PropTypes.string,
     canViewAdvancedTools: PropTypes.bool,
     isEnglish: PropTypes.bool.isRequired,
@@ -124,7 +124,7 @@ export default class TeacherHomepage extends Component {
   }
 
   render() {
-    const { courses, topCourse, announcements, joinedSections } = this.props;
+    const { courses, topCourse, announcement, joinedSections } = this.props;
     const { ncesSchoolId, censusQuestion, schoolYear } = this.props;
     const { teacherId, teacherName, teacherEmail } = this.props;
     const { canViewAdvancedTools, isEnglish, queryStringOpen } = this.props;
@@ -147,17 +147,17 @@ export default class TeacherHomepage extends Component {
         {isEnglish && showSpecialAnnouncement && (
           <SpecialAnnouncementActionBlock/>
         )}
-        {announcements.length > 0 && (
+        {announcement && (
           <div>
             <Notification
-              type={announcements[0].type || "bullhorn"}
-              notice={announcements[0].heading}
-              details={announcements[0].description}
+              type={announcement.type || "bullhorn"}
+              notice={announcement.heading}
+              details={announcement.description}
               dismissible={false}
-              buttonText={announcements[0].buttonText}
-              buttonLink={announcements[0].link}
+              buttonText={announcement.buttonText}
+              buttonLink={announcement.link}
               newWindow={true}
-              analyticId={announcements[0].id}
+              analyticId={announcement.id}
             />
             <div style={styles.clear}/>
           </div>
