@@ -3,7 +3,7 @@ import StudentAssessmentOverviewTable from './StudentAssessmentOverviewTable';
 import { studentAnswerDataPropType } from './assessmentDataShapes';
 import {
   getMultipleChoiceStructureForCurrentAssessment,
-  getStudentAnswerData,
+  getStudentMCResponsesForCurrentAssessment,
 } from './sectionAssessmentsRedux';
 import { connect } from 'react-redux';
 
@@ -21,6 +21,7 @@ class MultipleChoiceByStudentSection extends Component {
         <h2>Multiple choice answers by student section</h2>
         {studentAnswerData.map((studentResponse, index) => (
           <div key={index}>
+            {/* TODO(caleybrock): update to use heading from spec */}
             <h3>{`Student number ${index}`}</h3>
             <StudentAssessmentOverviewTable
               questionAnswerData={multipleChoiceStructure}
@@ -37,5 +38,5 @@ export const UnconnectedMultipleChoiceByStudentSection = MultipleChoiceByStudent
 
 export default connect(state => ({
   multipleChoiceStructure: getMultipleChoiceStructureForCurrentAssessment(state),
-  studentAnswerData: getStudentAnswerData(state),
+  studentAnswerData: getStudentMCResponsesForCurrentAssessment(state),
 }))(MultipleChoiceByStudentSection);
