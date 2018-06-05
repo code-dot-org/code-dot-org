@@ -34,7 +34,7 @@ class SessionsController < Devise::SessionsController
   end
 
   def clever_modal_dismissed
-    clear_clever_session_variables
+    clear_takeover_session_variables
     render status: 200, nothing: true
   end
 
