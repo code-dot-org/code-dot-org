@@ -41,7 +41,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-20 20:45:14 +0000\",\"changed\":[\"toolbox_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-18 18:03:14 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-10 00:07:09 +0000\",\"changed\":[],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-10 00:07:44 +0000\",\"changed\":[\"toolbox_blocks\",\"authored_hints\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-10 00:08:20 +0000\",\"changed\":[\"toolbox_blocks\",\"authored_hints\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-10 00:08:37 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2018-05-09 02:54:34 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-20 20:45:14 +0000\",\"changed\":[\"toolbox_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-18 18:03:14 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-10 00:07:09 +0000\",\"changed\":[],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-10 00:07:44 +0000\",\"changed\":[\"toolbox_blocks\",\"authored_hints\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-10 00:08:20 +0000\",\"changed\":[\"toolbox_blocks\",\"authored_hints\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-10 00:08:37 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2018-05-09 02:54:34 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-05 00:42:20 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
 }]]></config>
   <blocks>
     <start_blocks>
@@ -205,6 +205,11 @@
           </block>
         </category>
         <category name="Functions" custom="PROCEDURE"/>
+        <category name="Comments">
+          <block type="comment">
+            <title name="TEXT"/>
+          </block>
+        </category>
       </xml>
     </toolbox_blocks>
   </blocks>
