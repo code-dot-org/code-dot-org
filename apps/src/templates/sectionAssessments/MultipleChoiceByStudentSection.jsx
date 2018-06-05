@@ -22,7 +22,7 @@ class MultipleChoiceByStudentSection extends Component {
         {studentAnswerData.map((studentResponse, index) => (
           <div key={index}>
             {/* TODO(caleybrock): update to use heading from spec */}
-            <h3>{`Student number ${index}`}</h3>
+            <h3>{`Here is how ${studentResponse.name} responded`}</h3>
             <StudentAssessmentOverviewTable
               questionAnswerData={multipleChoiceStructure}
               studentAnswerData={studentResponse}
