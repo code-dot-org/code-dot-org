@@ -1062,6 +1062,7 @@
   "studentControl": "個々の生徒のコントロール",
   "studentLockStateInstructions": "次の表を使用して、個々の生徒の状態をコントロールします。",
   "studentName": "生徒の名前",
+  "studentNameHeader": "Student name",
   "studentAnswer": "Student answer",
   "submissionTimestamp": "提出時刻",
   "submit": "送信",

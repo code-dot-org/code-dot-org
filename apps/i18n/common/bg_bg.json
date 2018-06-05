@@ -1062,6 +1062,7 @@
   "studentControl": "Контрол на ученика",
   "studentLockStateInstructions": "Използвайте таблицата по-долу, за да контролирате състоянието на всеки отделен ученик.",
   "studentName": "Име на ученика",
+  "studentNameHeader": "Student name",
   "studentAnswer": "Student answer",
   "submissionTimestamp": "Подаване на дата и час",
   "submit": "Изпрати",

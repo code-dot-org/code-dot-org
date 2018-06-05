@@ -1062,6 +1062,7 @@
   "studentControl": "Bireysel öğrenci kontrolü",
   "studentLockStateInstructions": "Her bir öğrencinin durumunu kontrol etmek için aşağıdaki tabloyu kullanın.",
   "studentName": "Öğrenci İsmi",
+  "studentNameHeader": "Student name",
   "studentAnswer": "Student answer",
   "submissionTimestamp": "Gönderme Zamanı",
   "submit": "Gönder",
