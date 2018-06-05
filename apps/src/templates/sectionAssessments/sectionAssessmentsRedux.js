@@ -141,32 +141,35 @@ export const getMultipleChoiceStructureForCurrentAssessment = (state) => {
   });
 };
 
-export const getStudentAnswerData = (state) => {
+// Returns an array of objects, each of type studentAnswerDataPropType
+// indicating the student answers to multiple choice questions for the
+// currently selected assessment.
+// TODO(caleybrock): needs to be tested.
+export const getStudentMCResponsesForCurrentAssessment = (state) => {
   const studentResponses = getAssessmentResponsesForCurrentScript(state);
-
-  // TODO(caleybrock): handle loading states better.
-  if (Object.keys(studentResponses).length === 0) {
+  if (studentResponses === {}) {
     return {};
   }
 
-  // For now get the first student's first assessment.
-  // This will be selected based on the future assessment drop down filter.
-  const studentId = Object.keys(studentResponses)[0];
-  const studentObject = studentResponses[studentId];
-  const currentAssessmentId = state.sectionAssessments.assessmentId;
-  const studentAssessment = studentObject.responses_by_assessment[currentAssessmentId];
+  const studentResponsesArray = Object.keys(studentResponses).map(studentId => {
+    const studentObject = studentResponses[studentId];
+    const currentAssessmentId = state.sectionAssessments.assessmentId;
+    const studentAssessment = studentObject.responses_by_assessment[currentAssessmentId];
 
-  // Transform that data into what we need for this particular table.
-  return [{
-    id: studentId,
-    name: studentObject.student_name,
-    studentAnswers: studentAssessment.level_results.map(answer => {
-      return {
-        answers: answer.student_result || '',
-        isCorrect: answer.status === 'correct',
-      };
-    })
-  }];
+    // Transform that data into what we need for this particular table.
+    return {
+      id: studentId,
+      name: studentObject.student_name,
+      studentAnswers: studentAssessment.level_results.map(answer => {
+        return {
+          answers: answer.student_result || '',
+          isCorrect: answer.status === 'correct',
+        };
+      })
+    };
+  });
+
+  return studentResponsesArray;
 };
 
 // Helpers
