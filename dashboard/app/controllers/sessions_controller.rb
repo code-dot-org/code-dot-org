@@ -41,7 +41,7 @@ class SessionsController < Devise::SessionsController
   # POST /resource/sign_in
   def create
     super do |user|
-      check_and_apply_clever_takeover(user)
+      check_and_apply_oauth_takeover(user)
     end
   end
 
