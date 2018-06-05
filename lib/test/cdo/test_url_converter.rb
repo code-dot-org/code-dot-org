@@ -91,7 +91,7 @@ class UrlConverterTest < Minitest::Test
     assert_equal 'https://localhost.csedweek.org:3000', url_converter.replace_origin('https://csedweek.org')
     assert_equal 'https://localhost.csedweek.org:3000/about', url_converter.replace_origin('https://csedweek.org/about')
     assert_equal 'https://localhost-advocacy.code.org:3000', url_converter.replace_origin('https://advocacy.code.org')
-    assert_equal 'https://localhost-advocacy.code.org:3000/policy-resources', url_converter.replace_origin('https://advocacy.code.org/advocacy')
+    assert_equal 'https://localhost-advocacy.code.org:3000/policy-resources', url_converter.replace_origin('https://advocacy.code.org/policy-resources')
   end
 
   def test_does_not_upgrade_protocol_in_local_configuration
