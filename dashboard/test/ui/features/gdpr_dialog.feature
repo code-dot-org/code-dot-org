@@ -3,6 +3,7 @@
 
 Feature: GDPR Dialog - data transfer agreement
 
+  @skip
   Scenario: EU user sees the GDPR Dialog on dashboard, opt out
     Given I am a teacher
     Given I am on "http://studio.code.org/home?force_in_eu=1"
@@ -12,6 +13,7 @@ Feature: GDPR Dialog - data transfer agreement
     Then I wait to see ".header_user"
     Then element ".ui-test-gdpr-dialog" is not visible
 
+  @skip
   Scenario: EU user sees the GDPR Dialog on pegasus, opt out
     Given I am on "http://code.org/"
     And I am a teacher
