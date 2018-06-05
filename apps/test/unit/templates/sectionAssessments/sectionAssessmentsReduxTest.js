@@ -4,6 +4,7 @@ import sectionAssessments, {
   setAssessmentsStructure,
   startLoadingAssessments,
   finishLoadingAssessments,
+  setAssessmentId,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
 
@@ -50,6 +51,15 @@ describe('sectionAssessmentsRedux', () => {
       const nextState = sectionAssessments(initialState, action);
       const actualAssessmentData = nextState.assessmentsStructureByScript[scriptId];
       assert.deepEqual(actualAssessmentData, assessmentData);
+      assert.deepEqual(nextState.assessmentId, 139);
+    });
+  });
+
+  describe('setAssessmentId', () => {
+    it('sets the id of the current assessment in view', () => {
+      const action = setAssessmentId(456);
+      const nextState = sectionAssessments(initialState, action);
+      assert.deepEqual(nextState.assessmentId, 456);
     });
   });
 
