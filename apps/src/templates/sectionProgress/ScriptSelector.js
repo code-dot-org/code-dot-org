@@ -4,7 +4,7 @@ import _ from 'lodash';
 
 // TODO: Can/should we share any logic with AssignmentSelector?
 
-const styles = {
+export const dropdownStyles = {
   dropdown: {
     width: 250,
     display: 'block',
@@ -30,7 +30,7 @@ const groupedAssignments = assignments => (
 export default class ScriptSelector extends Component {
   static propTypes = {
     // This shape is similar to that used by AssignmentSelector, but in that
-    // case they've been semi-processed and given assignIds to diferentiate
+    // case they've been semi-processed and given assignIds to differentiate
     // courses and scripts
     validScripts: PropTypes.arrayOf(validScriptPropType).isRequired,
     scriptId: PropTypes.number,
@@ -48,7 +48,7 @@ export default class ScriptSelector extends Component {
         <select
           value={scriptId}
           onChange={event => onChange(parseInt(event.target.value))}
-          style={styles.dropdown}
+          style={dropdownStyles.dropdown}
         >
           {Object.keys(grouped).map((groupName, index) => (
             <optgroup key={index} label={groupName}>
