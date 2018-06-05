@@ -1,0 +1,57 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "setProp",
+    "blockText": "set {SPRITE} {PROPERTY} to {VAL}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "PROPERTY",
+        "options": [
+          [
+            "size",
+            "\"scale\""
+          ],
+          [
+            "rotation",
+            "\"rotation\""
+          ],
+          [
+            "x position",
+            "\"x\""
+          ],
+          [
+            "y position",
+            "\"y\""
+          ],
+          [
+            "x velocity",
+            "\"velocityX\""
+          ],
+          [
+            "y velocity",
+            "\"velocityY\""
+          ],
+          [
+            "costume",
+            "\"costume\""
+          ],
+          [
+            "movement direction",
+            "\"direction\""
+          ],
+          [
+            "tint",
+            "\"tint\""
+          ]
+        ]
+      },
+      {
+        "name": "VAL"
+      }
+    ]
+  }
+}
