@@ -837,7 +837,7 @@ exports.createJsWrapperBlockCreator = function (
           // Missing inputs should be passed into func as undefined
           inputCode = "undefined";
         }
-        if (inputConfig.defer && inputConfig.mode !== STATEMENT_INPUT) {
+        if (inputConfig.defer) {
           inputCode = `function () {\n  return ${inputCode};\n}`;
         }
         return inputCode;
