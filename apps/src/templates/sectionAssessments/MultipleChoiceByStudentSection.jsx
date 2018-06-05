@@ -2,26 +2,33 @@ import React, {Component, PropTypes} from 'react';
 import StudentAssessmentOverviewTable from './StudentAssessmentOverviewTable';
 import { studentAnswerDataPropType } from './assessmentDataShapes';
 import {
-  getQuestionAnswerData,
-  getStudentAnswerData,
+  getMultipleChoiceStructureForCurrentAssessment,
+  getStudentMCResponsesForCurrentAssessment,
 } from './sectionAssessmentsRedux';
 import { connect } from 'react-redux';
 
 class MultipleChoiceByStudentSection extends Component {
+  // TODO(caleybrock): define a multipleChoiceStructure PropType
   static propTypes = {
-    questionAnswerData: PropTypes.array,
-    studentAnswerData: studentAnswerDataPropType,
+    multipleChoiceStructure: PropTypes.array,
+    studentAnswerData: PropTypes.arrayOf(studentAnswerDataPropType),
   };
 
   render() {
-    const {questionAnswerData, studentAnswerData} = this.props;
+    const {multipleChoiceStructure, studentAnswerData} = this.props;
     return (
       <div>
         <h2>Multiple choice answers by student section</h2>
-        <StudentAssessmentOverviewTable
-          questionAnswerData={questionAnswerData}
-          studentAnswerData={studentAnswerData}
-        />
+        {studentAnswerData.map((studentResponse, index) => (
+          <div key={index}>
+            {/* TODO(caleybrock): update to use heading from spec */}
+            <h3>{`Here is how ${studentResponse.name} responded`}</h3>
+            <StudentAssessmentOverviewTable
+              questionAnswerData={multipleChoiceStructure}
+              studentAnswerData={studentResponse}
+            />
+          </div>
+        ))}
       </div>
     );
   }
@@ -30,6 +37,6 @@ class MultipleChoiceByStudentSection extends Component {
 export const UnconnectedMultipleChoiceByStudentSection = MultipleChoiceByStudentSection;
 
 export default connect(state => ({
-  questionAnswerData: getQuestionAnswerData(state),
-  studentAnswerData: getStudentAnswerData(state),
+  multipleChoiceStructure: getMultipleChoiceStructureForCurrentAssessment(state),
+  studentAnswerData: getStudentMCResponsesForCurrentAssessment(state),
 }))(MultipleChoiceByStudentSection);
