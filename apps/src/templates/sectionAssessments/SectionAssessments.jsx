@@ -57,7 +57,7 @@ class SectionAssessments extends Component {
         </div>
         <div>
           <div style={{...h3Style, ...styles.header}}>
-            Select an assessment or survey
+            {i18n.selectAssessment()}
           </div>
           <AssessmentSelector
             assessmentList={assessmentList}
