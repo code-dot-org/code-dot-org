@@ -2,24 +2,25 @@ import React, {Component, PropTypes} from 'react';
 import StudentAssessmentOverviewTable from './StudentAssessmentOverviewTable';
 import { studentAnswerDataPropType } from './assessmentDataShapes';
 import {
-  getQuestionAnswerData,
+  getMultipleChoiceStructureForCurrentAssessment,
   getStudentAnswerData,
 } from './sectionAssessmentsRedux';
 import { connect } from 'react-redux';
 
 class MultipleChoiceByStudentSection extends Component {
+  // TODO(caleybrock): define a multipleChoiceStructure PropType
   static propTypes = {
-    questionAnswerData: PropTypes.array,
+    multipleChoiceStructure: PropTypes.array,
     studentAnswerData: studentAnswerDataPropType,
   };
 
   render() {
-    const {questionAnswerData, studentAnswerData} = this.props;
+    const {multipleChoiceStructure, studentAnswerData} = this.props;
     return (
       <div>
         <h2>Multiple choice answers by student section</h2>
         <StudentAssessmentOverviewTable
-          questionAnswerData={questionAnswerData}
+          questionAnswerData={multipleChoiceStructure}
           studentAnswerData={studentAnswerData}
         />
       </div>
@@ -30,6 +31,6 @@ class MultipleChoiceByStudentSection extends Component {
 export const UnconnectedMultipleChoiceByStudentSection = MultipleChoiceByStudentSection;
 
 export default connect(state => ({
-  questionAnswerData: getQuestionAnswerData(state),
+  multipleChoiceStructure: getMultipleChoiceStructureForCurrentAssessment(state),
   studentAnswerData: getStudentAnswerData(state),
 }))(MultipleChoiceByStudentSection);

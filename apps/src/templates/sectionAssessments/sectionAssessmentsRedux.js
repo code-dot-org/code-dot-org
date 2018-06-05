@@ -121,13 +121,10 @@ export const getCurrentAssessmentStructure = (state) => {
   return currentScriptData[state.sectionAssessments.assessmentId];
 };
 
-
-// TODO(caleybrock): each section of these function should be broken up into helpers
-// and tested. We also need better names.
-export const getQuestionAnswerData = (state) => {
+// Gets the multiple choice structure for a current assessment.
+// TODO(caleybrock): needs to be tested.
+export const getMultipleChoiceStructureForCurrentAssessment = (state) => {
   const assessmentsStructure = getCurrentAssessmentStructure(state);
-
-  // TODO(caleybrock): handle loading states better.
   if (assessmentsStructure === {}) {
     return {};
   }
@@ -135,7 +132,7 @@ export const getQuestionAnswerData = (state) => {
   const questionData = assessmentsStructure.questions;
 
   // Transform that data into what we need for this particular table.
-  return questionData.filter(question => question.answers).map(question => {
+  return questionData.filter(question => question.type === 'Multi').map(question => {
     return {
       id: question.level_id,
       question: question.question_text,
