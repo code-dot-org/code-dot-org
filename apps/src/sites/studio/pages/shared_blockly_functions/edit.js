@@ -1,3 +1,4 @@
+import zip from 'lodash/zip';
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
 
 import { install } from '@cdo/apps/gamelab/blocks';
@@ -42,3 +43,17 @@ const blockXml = `<xml>
 
 Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, Blockly.Xml.textToDom(blockXml));
 Blockly.behaviorEditor.openAndEditFunction('acting');
+
+function getInput(name) {
+  return document.querySelector(`input[name="shared_blockly_function[${name}]"]`);
+}
+
+document.querySelector('#shared_function_submit').addEventListener('click', () => {
+  const block = Blockly.mainBlockSpace.getTopBlocks()[0];
+  const procInfo = block.getProcedureInfo();
+
+  getInput('name').value = procInfo.name;
+  getInput('arguments').value = JSON.stringify(zip(procInfo.parameterNames, procInfo.parameterTypes));
+  getInput('description').value = document.querySelector('#functionDescriptionText').value;
+  getInput('stack').value = Blockly.Xml.domToText(Blockly.Xml.blockToDom(block.getInputTargetBlock('STACK')));
+});
