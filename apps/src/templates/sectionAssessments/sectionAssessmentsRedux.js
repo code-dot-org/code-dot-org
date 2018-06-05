@@ -125,8 +125,8 @@ export const getCurrentAssessmentStructure = (state) => {
 // TODO(caleybrock): needs to be tested.
 export const getMultipleChoiceStructureForCurrentAssessment = (state) => {
   const assessmentsStructure = getCurrentAssessmentStructure(state);
-  if (assessmentsStructure === {}) {
-    return {};
+  if (!assessmentsStructure) {
+    return [];
   }
 
   const questionData = assessmentsStructure.questions;
@@ -148,8 +148,8 @@ export const getMultipleChoiceStructureForCurrentAssessment = (state) => {
 // TODO(caleybrock): needs to be tested.
 export const getStudentMCResponsesForCurrentAssessment = (state) => {
   const studentResponses = getAssessmentResponsesForCurrentScript(state);
-  if (studentResponses === {}) {
-    return {};
+  if (!studentResponses) {
+    return [];
   }
 
   const studentResponsesArray = Object.keys(studentResponses).map(studentId => {
