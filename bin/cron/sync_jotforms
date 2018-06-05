@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+require_relative '../../lib/cdo/only_one'
+require_relative '../config/environment'
+
+JOT_FORM_CLASSES = [
+  Pd::WorkshopDailySurvey,
+  Pd::WorkshopFacilitatorDailySurvey,
+  Pd::PostCourseSurvey
+].freeze
+
+def main
+  JOT_FORM_CLASSES.each(&:sync_from_jotform)
+end
+
+main if only_one_running?(__FILE__)
