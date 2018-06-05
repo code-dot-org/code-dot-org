@@ -109,31 +109,30 @@ export const getAssessmentList = (state) => {
   });
 };
 
-// Get the student responses for assessments in the current script
+// Get the student responses for assessments in the current script and current assessment
 export const getAssessmentResponsesForCurrentScript = (state) => {
   return state.sectionAssessments.assessmentsByScript[state.scriptSelection.scriptId] || {};
 };
 
-// Get the question structure for assessments in the current script
-export const getAssessmentStructureForCurrentScript = (state) => {
-  return state.sectionAssessments.assessmentsStructureByScript[state.scriptSelection.scriptId] || {};
+// Get the question structure for assessments in the current script and current assessment
+export const getCurrentAssessmentStructure = (state) => {
+  const currentScriptData = state.sectionAssessments.assessmentsStructureByScript[state.scriptSelection.scriptId]
+    || {};
+  return currentScriptData[state.sectionAssessments.assessmentId];
 };
 
 
 // TODO(caleybrock): each section of these function should be broken up into helpers
 // and tested. We also need better names.
 export const getQuestionAnswerData = (state) => {
-  const assessmentsStructure = getAssessmentStructureForCurrentScript(state);
+  const assessmentsStructure = getCurrentAssessmentStructure(state);
 
   // TODO(caleybrock): handle loading states better.
-  if (Object.keys(assessmentsStructure).length === 0) {
+  if (assessmentsStructure === {}) {
     return {};
   }
 
-  // For now, get the structure of just the first assessment.
-  // This will be selected based on the future assessment drop down filter.
-  const firstAssessmentStructure = Object.values(assessmentsStructure)[0];
-  const questionData = firstAssessmentStructure.questions;
+  const questionData = assessmentsStructure.questions;
 
   // Transform that data into what we need for this particular table.
   return questionData.filter(question => question.answers).map(question => {
@@ -157,13 +156,14 @@ export const getStudentAnswerData = (state) => {
   // This will be selected based on the future assessment drop down filter.
   const studentId = Object.keys(studentResponses)[0];
   const studentObject = studentResponses[studentId];
-  const firstStudentAssessment = Object.values(studentObject.responses_by_assessment)[0];
+  const currentAssessmentId = state.sectionAssessments.assessmentId;
+  const studentAssessment = studentObject.responses_by_assessment[currentAssessmentId];
 
   // Transform that data into what we need for this particular table.
   return {
     id: studentId,
     name: studentObject.student_name,
-    studentAnswers: firstStudentAssessment.level_results.map(answer => {
+    studentAnswers: studentAssessment.level_results.map(answer => {
       return {
         answers: answer.student_result || '',
         isCorrect: answer.status === 'correct',
