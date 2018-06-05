@@ -2,7 +2,7 @@ require 'digest/md5'
 require_relative '../../deployment'
 require lib_dir 'forms/pegasus_form_validation'
 require lib_dir 'utf8mb4_extensions'
-require_relative '../forms/form'
+require_relative '../src/forms'
 
 include PegasusFormValidation
 
