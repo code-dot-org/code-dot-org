@@ -2,16 +2,19 @@ import {SET_SECTION} from '@cdo/apps/redux/sectionDataRedux';
 
  // Initial state of sectionAssessmentsRedux
  // TODO(caleybrock): define a shape for sectionAssessment data that gets stored in redux.
+ // assessmentId is the id of the assessment currently in view
 const initialState = {
   assessmentsByScript: {},
   assessmentsStructureByScript: {},
-  isLoadingAssessments: false
+  isLoadingAssessments: false,
+  assessmentId: 0,
 };
 
 const SET_ASSESSMENTS = 'sectionAssessments/SET_ASSESSMENTS';
 const SET_ASSESSMENTS_STRUCTURE = 'sectionAssessments/SET_ASSESSMENTS_STRUCTURE';
 const START_LOADING_ASSESSMENTS = 'sectionAssessments/START_LOADING_ASSESSMENTS';
 const FINISH_LOADING_ASSESSMENTS = 'sectionAssessments/FINISH_LOADING_ASSESSMENTS';
+const SET_ASSESSMENT_ID = 'sectionAssessments/SET_ASSESSMENT_ID';
 
 // Action creators
 export const setAssessments = (scriptId, assessments) => ({ type: SET_ASSESSMENTS, scriptId, assessments});
@@ -19,6 +22,7 @@ export const setAssessmentsStructure = (scriptId, assessments) =>
   ({ type: SET_ASSESSMENTS_STRUCTURE, scriptId, assessments});
 export const startLoadingAssessments = () => ({ type: START_LOADING_ASSESSMENTS });
 export const finishLoadingAssessments = () => ({ type: FINISH_LOADING_ASSESSMENTS });
+export const setAssessmentId = (assessmentId) => ({ type: SET_ASSESSMENT_ID, assessmentId: assessmentId });
 
 export const asyncLoadAssessments = (sectionId, scriptId) => {
   return async (dispatch, getState) => {
@@ -51,6 +55,12 @@ export default function sectionAssessments(state=initialState, action) {
       ...initialState
     };
   }
+  if (action.type === SET_ASSESSMENT_ID) {
+    return {
+      ...state,
+      assessmentId: action.assessmentId,
+    };
+  }
   if (action.type === SET_ASSESSMENTS) {
     return {
       ...state,
@@ -66,7 +76,9 @@ export default function sectionAssessments(state=initialState, action) {
       assessmentsStructureByScript: {
         ...state.assessmentsStructureByScript,
         [action.scriptId]: action.assessments
-      }
+      },
+      // Default the assessmentId to the first assessment in the structure
+      assessmentId: parseInt(Object.keys(action.assessments)[0]),
     };
   }
   if (action.type === START_LOADING_ASSESSMENTS) {
@@ -86,6 +98,16 @@ export default function sectionAssessments(state=initialState, action) {
 }
 
 // Selector functions
+
+export const getAssessmentList = (state) => {
+  const assessmentStructure = state.sectionAssessments.assessmentsStructureByScript[state.scriptSelection.scriptId] || {};
+  return Object.values(assessmentStructure).map(assessment => {
+    return {
+      id: assessment.id,
+      name: assessment.name,
+    };
+  });
+};
 
 // Get the student responses for assessments in the current script
 export const getAssessmentResponsesForCurrentScript = (state) => {

@@ -403,7 +403,7 @@ class CourseTest < ActiveSupport::TestCase
     )
     create(:course_script, position: 3, course: csp, script: csp3)
 
-    courses = Course.valid_courses(include_unstable: true)
+    courses = Course.valid_courses
 
     # one entry for each 2017 and 2018 course in ScriptConstants
     assert_equal 4, courses.length
@@ -429,7 +429,7 @@ class CourseTest < ActiveSupport::TestCase
 
     # teacher without experiment has default script_ids
     teacher = create(:teacher)
-    courses = Course.valid_courses(user: teacher, include_unstable: true)
+    courses = Course.valid_courses(user: teacher)
     assert_equal csp.id, courses[2][:id]
     csp_assign_info = courses[2]
     assert_equal [csp1.id, csp2.id, csp3.id], csp_assign_info[:script_ids]
@@ -437,7 +437,7 @@ class CourseTest < ActiveSupport::TestCase
     # teacher with experiment has alternate script_ids
     teacher_with_experiment = create(:teacher)
     experiment = create(:single_user_experiment, name: 'csp2-alt-experiment', min_user_id: teacher_with_experiment.id)
-    courses = Course.valid_courses(user: teacher_with_experiment, include_unstable: true)
+    courses = Course.valid_courses(user: teacher_with_experiment)
     assert_equal csp.id, courses[2][:id]
     csp_assign_info = courses[2]
     assert_equal [csp1.id, csp2_alt.id, csp3.id], csp_assign_info[:script_ids]

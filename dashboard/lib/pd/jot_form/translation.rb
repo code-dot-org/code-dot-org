@@ -137,7 +137,7 @@ module Pd
         answers = included_answers.map do |question_id, answer_data|
           [
             question_id.to_i,
-            answer_data['answer']
+            answer_data['answer'].strip
           ]
         end.to_h
 
