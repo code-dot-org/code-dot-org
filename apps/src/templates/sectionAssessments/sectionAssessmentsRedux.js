@@ -156,6 +156,11 @@ export const getStudentMCResponsesForCurrentAssessment = (state) => {
     const currentAssessmentId = state.sectionAssessments.assessmentId;
     const studentAssessment = studentObject.responses_by_assessment[currentAssessmentId];
 
+    // If the student has not submitted this assessment, don't display results.
+    if (!studentAssessment) {
+      return;
+    }
+
     // Transform that data into what we need for this particular table.
     return {
       id: studentId,
@@ -167,7 +172,7 @@ export const getStudentMCResponsesForCurrentAssessment = (state) => {
         };
       })
     };
-  });
+  }).filter(studentData => studentData);
 
   return studentResponsesArray;
 };
