@@ -1,6 +1,9 @@
 import React from 'react';
 import StudentAssessmentOverviewTable from './StudentAssessmentOverviewTable';
-import { studentData, multipleChoiceData } from './assessmentsTestHelpers';
+import {
+  studentData,
+  multipleChoiceDataForSingleStudent
+} from './assessmentsTestHelpers';
 
 export default storybook => {
   return storybook
@@ -11,7 +14,7 @@ export default storybook => {
         description: 'Ability to see assessment overview for a single student',
         story: () => (
           <StudentAssessmentOverviewTable
-            questionAnswerData={multipleChoiceData}
+            questionAnswerData={multipleChoiceDataForSingleStudent}
             studentAnswerData={studentData}
           />
         )
