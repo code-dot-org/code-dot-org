@@ -137,6 +137,7 @@ export const multipleChoiceData = [
 ];
 
 // Data for single student table.
+// Array of questionStructurePropType from StudentAssessmentOverviewTable
 export const multipleChoiceDataForSingleStudent = multipleChoiceData.map((question, index) => {
   return {
     id: question.id,

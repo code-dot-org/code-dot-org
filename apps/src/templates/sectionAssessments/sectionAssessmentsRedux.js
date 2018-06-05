@@ -131,7 +131,8 @@ export const getMultipleChoiceStructureForCurrentAssessment = (state) => {
 
   const questionData = assessmentsStructure.questions;
 
-  // Transform that data into what we need for this particular table.
+  // Transform that data into what we need for this particular table, in this case
+  // questionStructurePropType structure.
   return questionData.filter(question => question.type === 'Multi').map(question => {
     return {
       id: question.level_id,
@@ -161,7 +162,8 @@ export const getStudentMCResponsesForCurrentAssessment = (state) => {
       return;
     }
 
-    // Transform that data into what we need for this particular table.
+    // Transform that data into what we need for this particular table, in this case
+    // is the structure studentAnswerDataPropType
     return {
       id: studentId,
       name: studentObject.student_name,
