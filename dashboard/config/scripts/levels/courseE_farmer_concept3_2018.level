@@ -36,9 +36,9 @@
     "shape_shift": "false",
     "step_speed": "2",
     "name_suffix": "_2018",
-    "contained_level_names": null,
     "top_level_procedure_autopopulate": "false",
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

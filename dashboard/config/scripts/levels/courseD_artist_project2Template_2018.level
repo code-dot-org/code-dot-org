@@ -34,10 +34,10 @@
     "disable_sharing": "false",
     "authored_hints": "[]",
     "name_suffix": "_2018",
-    "contained_level_names": null,
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

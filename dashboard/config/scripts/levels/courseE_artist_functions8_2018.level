@@ -40,8 +40,8 @@
     "name_suffix": "_2018",
     "top_level_procedure_autopopulate": "false",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/02806220211cb4ccc7821f2fb04ae1eb=levelbuilder/37114.png",
-    "contained_level_names": null,
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
