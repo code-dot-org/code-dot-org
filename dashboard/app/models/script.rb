@@ -1183,6 +1183,7 @@ class Script < ActiveRecord::Base
       # scripts, which just use version_year.
       info[:version_title] = version_year
     end
+    info[:is_stable] = true if is_stable
 
     info[:category] = I18n.t("data.script.category.#{info[:category]}_category_name", default: info[:category])
 
