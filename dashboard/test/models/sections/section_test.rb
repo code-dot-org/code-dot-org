@@ -85,13 +85,6 @@ class SectionTest < ActiveSupport::TestCase
     assert section.pairing_allowed
   end
 
-  test "create sets invalid grade to nil" do
-    teacher = create :teacher
-    section = create :section, grade: "13", user: teacher
-
-    assert_nil section.grade
-  end
-
   test "create assigns script to user if script is supplied" do
     teacher = create :teacher
     script = create :script
@@ -198,6 +191,13 @@ class SectionTest < ActiveSupport::TestCase
       refute student_section.valid?
       assert_equal ["User must be a teacher"], student_section.errors.full_messages
     end
+  end
+
+  test "grade must be K-12" do
+    section = build :section, grade: "13"
+
+    refute section.valid?
+    assert_equal ["Grade is not included in the list"], section.errors.full_messages
   end
 
   test "can create section with duplicate name" do

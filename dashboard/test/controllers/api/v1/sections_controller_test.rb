@@ -282,7 +282,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     end
   end
 
-  %w(K 1 2 3 4 5 6 7 8 9 10 11 12 Other).each do |desired_grade|
+  Section::VALID_GRADES.each do |desired_grade|
     test "can set grade to #{desired_grade} during creation" do
       sign_in @teacher
       post :create, params: {
@@ -298,11 +298,9 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   test "default grade is nil" do
     sign_in @teacher
     post :create, params: {
-      section: {
-        login_type: Section::LOGIN_TYPE_EMAIL,
-        grade: nil,
-      }
+      section: {login_type: Section::LOGIN_TYPE_EMAIL}
     }
+
     assert_nil returned_section.grade
   end
 
@@ -314,10 +312,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
         grade: '13',
       }
     }
-    assert_response :success
-    # TODO: Better to fail here?
-
-    assert_nil returned_section.grade
+    assert_response :unprocessable_entity
   end
 
   test 'creates a six-letter section code' do

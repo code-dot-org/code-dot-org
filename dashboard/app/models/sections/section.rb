@@ -82,6 +82,9 @@ class Section < ActiveRecord::Base
   ADD_STUDENT_SUCCESS = 'success'.freeze
   ADD_STUDENT_FAILURE = 'failure'.freeze
 
+  VALID_GRADES = ['K'] + (1..12).collect(&:to_s) + ['Other']
+  validates_inclusion_of :grade, in: VALID_GRADES, allow_blank: true
+
   def self.valid_login_type?(type)
     LOGIN_TYPES.include? type
   end
@@ -109,12 +112,8 @@ class Section < ActiveRecord::Base
   end
   validate :user_must_be_teacher, unless: -> {deleted?}
 
-  before_create :scrub_section
-  def scrub_section
-    # Set grade to nil if invalid value supplied
-    self.grade = nil unless Section.valid_grade?(grade)
-
-    # Generate section code
+  before_create :assign_code
+  def assign_code
     self.code = unused_random_code unless code
   end
 
@@ -267,7 +266,7 @@ class Section < ActiveRecord::Base
   end
 
   def self.valid_grades
-    @@valid_grades ||= ['K'] + (1..12).collect(&:to_s) + ['Other']
+    @@valid_grades ||= VALID_GRADES
   end
 
   def self.valid_grade?(grade)
