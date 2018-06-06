@@ -24,7 +24,7 @@ class Video < ActiveRecord::Base
   # YouTube video IDs must be 11 characters and contain no invalid characters, such as exclamation points or asterisks.
   # Ref: https://developers.google.com/youtube/iframe_api_reference (events|onError|2)
   YOUTUBE_ID_REGEX = /[^!*"&?\/ ]{11}/
-  # YouTube embed URL has the following format: http://www.youtube.com/embed/VIDEO_ID
+  # YouTube embed URL has the following format: http://www.youtube-nocookie.com/embed/VIDEO_ID
   # Ref: https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds
   EMBED_URL_REGEX = /(?:http[s]?:)?\/\/(?:www\.)?(?:youtube(?:education)?(-nocookie)?)\.com\/embed\/(?<id>#{YOUTUBE_ID_REGEX})/
 
