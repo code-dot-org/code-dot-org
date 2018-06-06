@@ -263,7 +263,7 @@ export default {
       // TODO: add support for passing extra params into this block
       const extraArgs = [];
       return [
-        `createBehavior(${name}, [${extraArgs.join(', ')}])`,
+        `new Behavior(${name}, [${extraArgs.join(', ')}])`,
         Blockly.JavaScript.ORDER_ATOMIC
       ];
     };
