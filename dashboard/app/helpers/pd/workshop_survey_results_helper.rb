@@ -189,6 +189,8 @@ module Pd::WorkshopSurveyResultsHelper
     questions.each do |session, response_sections|
       surveys_for_session = surveys[session]
 
+      next unless surveys_for_session
+
       session_summary = {
         response_count: surveys[session][:response_count]
       }
@@ -305,6 +307,10 @@ module Pd::WorkshopSurveyResultsHelper
       'Day 4' => {
         general: get_summary_for_form(CDO.jotform_forms['local']['day_4'], workshop),
         facilitator: get_summary_for_form(CDO.jotform_forms['local']['facilitator'], workshop)
+      },
+      'Day 5' => {
+        general: get_summary_for_form(CDO.jotform_forms['local']['day_5'], workshop),
+        facilitator: get_summary_for_form(CDO.jotform_forms['local']['facilitator'], workshop)
       }
     }
   end
@@ -313,7 +319,7 @@ module Pd::WorkshopSurveyResultsHelper
 
   def get_summary_for_form(form_id, workshop)
     survey = Pd::SurveyQuestion.find_by(form_id: form_id)
-    summary = survey.summarize
+    summary = survey&.summarize || {}
 
     summary.each do |_, question|
       if question[:text].match? '{.*}'
