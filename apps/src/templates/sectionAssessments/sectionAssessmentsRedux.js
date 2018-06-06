@@ -185,6 +185,9 @@ export const getStudentMCResponsesForCurrentAssessment = (state) => {
 // returns the corresponding letter to the option with the correct answer.
 // Ex - [{correct: false}, {correct: true}] --> returns 'B'
 const getCorrectAnswer = (answerArr) => {
+  if (!answerArr) {
+    return '';
+  }
   const correctIndex = answerArr.findIndex(answer => answer.correct);
   // TODO(caleybrock): Add letter options to response from the server so they are
   // consistent with the structure, but for now look up letter in this array.
