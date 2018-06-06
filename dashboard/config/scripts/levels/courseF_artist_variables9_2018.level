@@ -42,8 +42,8 @@
     "disable_if_else_editing": "false",
     "top_level_procedure_autopopulate": "false",
     "name_suffix": "_2018",
-    "contained_level_names": null,
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
