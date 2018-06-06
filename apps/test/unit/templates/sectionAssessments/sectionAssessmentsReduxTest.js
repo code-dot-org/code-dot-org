@@ -139,6 +139,35 @@ describe('sectionAssessmentsRedux', () => {
         const result = getStudentMCResponsesForCurrentAssessment(rootState);
         assert.deepEqual(result, []);
       });
+
+      it('returns an array of objects of studentAnswerDataPropType', () => {
+        const stateWithAssessment = {
+          ...rootState,
+          sectionAssessments: {
+            ...rootState.sectionAssessments,
+            assessmentId: 123,
+            assessmentsByScript: {
+              3: {
+                1: {
+                  student_name: 'Saira',
+                  responses_by_assessment: {
+                    123: {
+                      level_results: [
+                        {
+                          student_result: 'D',
+                          status: 'incorrect',
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        };
+        const result = getStudentMCResponsesForCurrentAssessment(stateWithAssessment);
+        assert.deepEqual(result, [{id: '1', name: 'Saira', studentAnswers: [{answers: 'D', isCorrect: false}]}]);
+      });
     });
   });
 });
