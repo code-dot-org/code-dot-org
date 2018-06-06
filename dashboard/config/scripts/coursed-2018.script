@@ -1,3 +1,6 @@
+family_name 'coursed'
+version_year '2018'
+
 stage 'Algorithms: Graph Paper Programming'
 level 'GraphPaperProgramming_2018'
 
