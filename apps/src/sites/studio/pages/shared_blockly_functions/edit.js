@@ -64,15 +64,20 @@ function getInput(name) {
   return document.querySelector(`input[name="shared_blockly_function[${name}]"]`);
 }
 
-document.querySelector('#shared_function_submit').addEventListener('click', () => {
-  const block = Blockly.modalBlockSpace.getTopBlocks()[0];
-  const procInfo = block.getProcedureInfo();
-  const stack = block.getInputTargetBlock('STACK');
+document.querySelector('#shared_function_submit').addEventListener('click', event => {
+  try {
+    const block = Blockly.modalBlockSpace.getTopBlocks()[0];
+    const procInfo = block.getProcedureInfo();
+    const stack = block.getInputTargetBlock('STACK');
 
-  getInput('name').value = procInfo.name;
-  getInput('arguments').value = JSON.stringify(zip(procInfo.parameterNames, procInfo.parameterTypes));
-  getInput('description').value = document.querySelector('#functionDescriptionText').value;
-  if (stack) {
-    getInput('stack').value = Blockly.Xml.domToText(Blockly.Xml.blockToDom(stack));
+    getInput('name').value = procInfo.name;
+    getInput('arguments').value = JSON.stringify(zip(procInfo.parameterNames, procInfo.parameterTypes));
+    getInput('description').value = document.querySelector('#functionDescriptionText').value;
+    if (stack) {
+      getInput('stack').value = Blockly.Xml.domToText(Blockly.Xml.blockToDom(stack));
+    }
+  } catch (error) {
+    alert(`Error saving:\n\n${error}`);
+    event.preventDefault();
   }
 });
