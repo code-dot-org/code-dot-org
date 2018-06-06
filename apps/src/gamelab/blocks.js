@@ -490,7 +490,7 @@ export default {
     // Legacy style block definitions :(
     const generator = blockly.Generator.get('JavaScript');
 
-    const behaviorEditor = new Blockly.FunctionEditor(
+    const behaviorEditor = Blockly.behaviorEditor = new Blockly.FunctionEditor(
       {
         FUNCTION_HEADER: 'Behavior',
         FUNCTION_NAME_LABEL: 'Name your behavior:',
@@ -500,7 +500,15 @@ export default {
       {
         [Blockly.BlockValueType.SPRITE]: 'sprite_parameter_get',
       },
-      true /* disableParamEditing */,
+      false /* disableParamEditing */,
+      [
+        Blockly.BlockValueType.NUMBER,
+        Blockly.BlockValueType.STRING,
+        Blockly.BlockValueType.COLOUR,
+        Blockly.BlockValueType.BOOLEAN,
+        Blockly.BlockValueType.SPRITE,
+        Blockly.BlockValueType.LOCATION,
+      ]
     );
 
     Blockly.Blocks.sprite_variables_get = {

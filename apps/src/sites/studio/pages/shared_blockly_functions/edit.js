@@ -14,25 +14,6 @@ Blockly.inject(document.getElementById('blockly-container'), {
 
 install(Blockly);
 
-Blockly.behaviorEditor = new Blockly.FunctionEditor(
-  {
-    FUNCTION_HEADER: 'Behavior',
-    FUNCTION_NAME_LABEL: 'Name your behavior:',
-    FUNCTION_DESCRIPTION_LABEL: 'What is your behavior supposed to do?',
-  },
-  'behavior_definition',
-  null,
-  false /* disableParamEditing */,
-  [
-    Blockly.BlockValueType.NUMBER,
-    Blockly.BlockValueType.STRING,
-    Blockly.BlockValueType.COLOUR,
-    Blockly.BlockValueType.BOOLEAN,
-    Blockly.BlockValueType.SPRITE,
-    Blockly.BlockValueType.LOCATION,
-  ]
-);
-
 const DEFAULT_NAME = 'acting';
 
 const blockXml = `<xml>

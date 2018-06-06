@@ -18,10 +18,11 @@ class SharedBlocklyFunction < ApplicationRecord
     behavior: 1,
   }
 
+  validates_presence_of :name
   validates_uniqueness_of :name
 
   before_save do
-    self.block_type = 1
+    self.block_type = 'behavior'
     self.level_type = 'GameLabJr'
   end
 end
