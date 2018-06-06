@@ -140,8 +140,7 @@ export default class AssignmentSelector extends Component {
   }
   onChangeAssignmentFamily = event => {
     const assignmentFamily = event.target.value;
-    const { versions } = this.state;
-    this.setPrimary(assignmentFamily, versions[0]);
+    this.setPrimary(assignmentFamily);
   };
 
   onChangeVersion = event => {
@@ -166,7 +165,8 @@ export default class AssignmentSelector extends Component {
 
   setPrimary = (selectedAssignmentFamily, selectedVersion) => {
     const versions = this.getVersions(selectedAssignmentFamily);
-    selectedVersion = selectedVersion || versions[0];
+    const recommendedVersion = versions.find(v => v.isRecommended);
+    selectedVersion = selectedVersion || recommendedVersion || versions[0];
     const selectedPrimaryId = this.getSelectedPrimaryId(selectedAssignmentFamily, selectedVersion);
     const selectedSecondaryId = noAssignment;
 
