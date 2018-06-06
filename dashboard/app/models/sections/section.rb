@@ -111,12 +111,11 @@ class Section < ActiveRecord::Base
 
   before_create :scrub_section
   def scrub_section
+    # Set defaults if none supplied
     self.stage_extras = false if stage_extras.nil?
     self.pairing_allowed = true if pairing_allowed.nil?
 
-    # Clear any invalid fields
-    self.course_id = nil unless Course.valid_course_id?(course_id)
-    self.script_id = nil unless Script.valid_script_id?(user, script_id)
+    # Set grade to nil if invalid value supplied
     self.grade = nil unless Section.valid_grade?(grade)
 
     # Generate section code
