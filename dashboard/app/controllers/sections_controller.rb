@@ -48,7 +48,7 @@ class SectionsController < ApplicationController
       bypass_sign_in user
       user.update_tracked_fields!(request)
       session[:show_pairing_dialog] = true if params[:show_pairing_dialog]
-      check_and_apply_clever_takeover(user)
+      check_and_apply_oauth_takeover(user)
       redirect_to_section_script_or_course
     else
       flash[:alert] = I18n.t('signinsection.invalid_login')
