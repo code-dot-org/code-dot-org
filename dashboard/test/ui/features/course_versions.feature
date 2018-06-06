@@ -10,7 +10,7 @@ Scenario: Version warning announcement on course and unit overview pages
   And element "#version-selector" is visible
   Then element ".announcement-notification:contains(right version)" does not exist
 
-  When I am on "http://studio.code.org/s/csp2"
+  When I am on "http://studio.code.org/s/csp2-2017"
   And I wait until element "span:contains(Chapter 1)" is visible
   Then element ".announcement-notification:contains(right version)" does not exist
 
@@ -28,7 +28,7 @@ Scenario: Version warning announcement on course and unit overview pages
   # make sure we are showing the warning specific to course overview pages
   Then element ".announcement-notification:contains(use the version dropdown)" is visible
 
-  When I am on "http://studio.code.org/s/csp2"
+  When I am on "http://studio.code.org/s/csp2-2017"
   And I wait until element "span:contains(Chapter 1)" is visible
   Then element ".announcement-notification:contains(right version)" is visible
   # make sure we are showing the warning specific to course units
