@@ -1062,6 +1062,7 @@
   "studentControl": "Індивідуальний контроль студента",
   "studentLockStateInstructions": "Скористайтесь таблицею, щоб контролювати етапи кожного учня.",
   "studentName": "Ім'я учня",
+  "studentNameHeader": "Student name",
   "studentAnswer": "Student answer",
   "submissionTimestamp": "Час надсилання",
   "submit": "Надіслати",

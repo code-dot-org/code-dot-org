@@ -1,0 +1,49 @@
+ta:
+  data:
+    block_categories:
+      Actions: செயல்கள்
+      Loops: சுழற்சிகள்
+      Functions: செயல்பாடுகள்
+      Color: நிறம்
+      Brushes: Brushes
+      Math: கணிதம்
+      Logic: தர்க்கம்
+      Variables: மாறிலிகள்
+      Number: Number
+      String: String
+      Image: Image
+      Boolean: Boolean
+      Conditionals: Conditionals
+      Events: Events
+      Games/Score: Games/Score
+      Comments: Comments
+      Category: Category
+      Prebuilt: Prebuilt
+      Text: உரை
+      Picker: Picker
+      Comment: Comment
+      'Variables ': 'Variables '
+      everythingelse: everythingelse
+      numbers: numbers
+      Numbers: Numbers
+      Input: Input
+      Default: Default
+      Sprites: Sprites
+      Behaviors: Behaviors
+      World: World
+      Sprite: Sprite
+      Brush: Brush
+      Make Sprite: Make Sprite
+      Movement: Movement
+      Start: தொடங்குக
+      Groups: Groups
+      Booleans: Booleans
+      Functional: Functional
+      Predefined: Predefined
+      test: சோதனை
+      test2: test2
+      Foo: Foo
+      Name: பெயர்
+      NEW BLOCKS: NEW BLOCKS
+      Game/Score: Game/Score
+      Function: இயக்கி

@@ -1062,6 +1062,7 @@
   "studentControl": "Individual student control",
   "studentLockStateInstructions": "Use the table below to control the state for each individual student.",
   "studentName": "Student Name",
+  "studentNameHeader": "Student name",
   "studentAnswer": "Student answer",
   "submissionTimestamp": "Submission timestamp",
   "submit": "Հաստատել",

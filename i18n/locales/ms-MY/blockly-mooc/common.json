@@ -1062,6 +1062,7 @@
   "studentControl": "Kawalan individu pelajar",
   "studentLockStateInstructions": "Gunakan jadual di bawah untuk mengawal kedudukan bagi setiap pelajar.",
   "studentName": "Nama pelajar",
+  "studentNameHeader": "Student name",
   "studentAnswer": "Student answer",
   "submissionTimestamp": "Submission timestamp",
   "submit": "Hantar",

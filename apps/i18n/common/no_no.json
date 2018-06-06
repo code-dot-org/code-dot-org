@@ -1062,6 +1062,7 @@
   "studentControl": "Individuell elevkontroll",
   "studentLockStateInstructions": "Bruk tabellen nedenfor til å kontrollere statusen for hver enkelt elev.",
   "studentName": "Elevnavn",
+  "studentNameHeader": "Student name",
   "studentAnswer": "Student answer",
   "submissionTimestamp": "Innleverings-tidspunkt",
   "submit": "Send",

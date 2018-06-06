@@ -1,0 +1,49 @@
+"fa":
+  data:
+    block_categories:
+      Actions: اقدامات
+      Loops: حلقه ها
+      Functions: توابع
+      Color: رنگ
+      Brushes: Brushes
+      Math: ریاضی
+      Logic: منطق
+      Variables: متغیرها
+      Number: Number
+      String: String
+      Image: Image
+      Boolean: Boolean
+      Conditionals: مشروط
+      Events: رویدادها
+      Games/Score: Games/Score
+      Comments: Comments
+      Category: Category
+      Prebuilt: Prebuilt
+      Text: متن
+      Picker: Picker
+      Comment: Comment
+      'Variables ': 'Variables '
+      everythingelse: everythingelse
+      numbers: numbers
+      Numbers: Numbers
+      Input: Input
+      Default: Default
+      Sprites: Sprites
+      Behaviors: Behaviors
+      World: World
+      Sprite: Sprite
+      Brush: Brush
+      Make Sprite: Make Sprite
+      Movement: Movement
+      Start: شروع
+      Groups: Groups
+      Booleans: بولی ها
+      Functional: Functional
+      Predefined: Predefined
+      test: آزمایش
+      test2: test2
+      Foo: Foo
+      Name: نام
+      NEW BLOCKS: NEW BLOCKS
+      Game/Score: Game/Score
+      Function: تابع

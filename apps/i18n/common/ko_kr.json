@@ -1062,6 +1062,7 @@
   "studentControl": "학생별 관리",
   "studentLockStateInstructions": "각 학생들의 진행 단계들을 관리하기 위해 아래 표를 사용하세요.",
   "studentName": "학생 이름",
+  "studentNameHeader": "Student name",
   "studentAnswer": "Student answer",
   "submissionTimestamp": "제출 시간 표시",
   "submit": "제출하기",

@@ -1,0 +1,49 @@
+"ku":
+  data:
+    block_categories:
+      Actions: کردەوەکان
+      Loops: گرێکان
+      Functions: Functions
+      Color: ڕەنگ
+      Brushes: Brushes
+      Math: بیرکاری
+      Logic: لۆژيك
+      Variables: گۆڕاوەکان
+      Number: Number
+      String: String
+      Image: Image
+      Boolean: Boolean
+      Conditionals: Conditionals
+      Events: Events
+      Games/Score: Games/Score
+      Comments: Comments
+      Category: Category
+      Prebuilt: Prebuilt
+      Text: دەق
+      Picker: Picker
+      Comment: Comment
+      'Variables ': 'Variables '
+      everythingelse: everythingelse
+      numbers: numbers
+      Numbers: Numbers
+      Input: Input
+      Default: Default
+      Sprites: Sprites
+      Behaviors: Behaviors
+      World: World
+      Sprite: Sprite
+      Brush: Brush
+      Make Sprite: Make Sprite
+      Movement: Movement
+      Start: دەستپێبکە
+      Groups: Groups
+      Booleans: Booleans
+      Functional: Functional
+      Predefined: Predefined
+      test: تاقیکردنەوە
+      test2: test2
+      Foo: Foo
+      Name: ناو
+      NEW BLOCKS: NEW BLOCKS
+      Game/Score: Game/Score
+      Function: فرمان
