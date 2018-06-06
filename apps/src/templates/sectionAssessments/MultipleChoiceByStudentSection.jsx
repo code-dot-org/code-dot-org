@@ -1,5 +1,5 @@
 import React, {Component, PropTypes} from 'react';
-import StudentAssessmentOverviewTable from './StudentAssessmentOverviewTable';
+import SingleStudentAssessmentsTable from './SingleStudentAssessmentsTable';
 import { studentAnswerDataPropType, questionStructurePropType } from './assessmentDataShapes';
 import {
   getMultipleChoiceStructureForCurrentAssessment,
@@ -22,7 +22,7 @@ class MultipleChoiceByStudentSection extends Component {
           <div key={index}>
             {/* TODO(caleybrock): update to use heading from spec */}
             <h3>{`Here is how ${studentResponse.name} responded`}</h3>
-            <StudentAssessmentOverviewTable
+            <SingleStudentAssessmentsTable
               questionAnswerData={multipleChoiceStructure}
               studentAnswerData={studentResponse}
             />
