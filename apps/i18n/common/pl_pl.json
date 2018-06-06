@@ -1062,6 +1062,7 @@
   "studentControl": "Indywidualna kontrola ucznia",
   "studentLockStateInstructions": "Wykorzystaj poniższą tabelę, aby kontrolować sytuację każdego ucznia.",
   "studentName": "Imię ucznia",
+  "studentNameHeader": "Student name",
   "studentAnswer": "Student answer",
   "submissionTimestamp": "Czas przesłania",
   "submit": "Wyślij",

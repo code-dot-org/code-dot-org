@@ -1062,6 +1062,7 @@
   "studentControl": "Kontrolli për çdo student",
   "studentLockStateInstructions": "Përdorni tabelën më poshtë që të kontrolloni çdo student.",
   "studentName": "Emri Studentit",
+  "studentNameHeader": "Student name",
   "studentAnswer": "Student answer",
   "submissionTimestamp": "Submission timestamp",
   "submit": "Dorëzo",

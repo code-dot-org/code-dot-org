@@ -1,0 +1,49 @@
+"hr":
+  data:
+    block_categories:
+      Actions: Akcije
+      Loops: Petlje
+      Functions: Funkcije
+      Color: Boja
+      Brushes: Brushes
+      Math: Matematika
+      Logic: Logika
+      Variables: Varijable
+      Number: Number
+      String: String
+      Image: Image
+      Boolean: Boolean
+      Conditionals: Uvjeti
+      Events: Događaji
+      Games/Score: Games/Score
+      Comments: Comments
+      Category: Category
+      Prebuilt: Prebuilt
+      Text: tekst
+      Picker: Picker
+      Comment: Comment
+      'Variables ': 'Variables '
+      everythingelse: everythingelse
+      numbers: numbers
+      Numbers: Numbers
+      Input: Input
+      Default: Default
+      Sprites: Sprites
+      Behaviors: Behaviors
+      World: World
+      Sprite: Sprite
+      Brush: Brush
+      Make Sprite: Make Sprite
+      Movement: Movement
+      Start: Početak
+      Groups: Groups
+      Booleans: Logičke varijable
+      Functional: Functional
+      Predefined: Predefined
+      test: uvjet
+      test2: test2
+      Foo: Foo
+      Name: Ime
+      NEW BLOCKS: NEW BLOCKS
+      Game/Score: Game/Score
+      Function: Funkcija

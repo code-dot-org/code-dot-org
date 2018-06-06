@@ -1062,6 +1062,7 @@
   "studentControl": "Indibidwal na kontrol ng estudyante",
   "studentLockStateInstructions": "Gamitin ang talahanayan sa baba para kontrolin ang estado ng bawat indibidwal na estudyante.",
   "studentName": "Pangalan ng Estudyante",
+  "studentNameHeader": "Student name",
   "studentAnswer": "Student answer",
   "submissionTimestamp": "Timestamp ng Pagsusumite",
   "submit": "Ipasa",

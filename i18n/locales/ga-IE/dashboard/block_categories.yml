@@ -1,0 +1,49 @@
+ga:
+  data:
+    block_categories:
+      Actions: Gníomhartha
+      Loops: Lúba
+      Functions: Feidhmeanna
+      Color: Dath
+      Brushes: Brushes
+      Math: Matamaitic
+      Logic: Loighic
+      Variables: Athróga
+      Number: Number
+      String: String
+      Image: Image
+      Boolean: Boolean
+      Conditionals: Coinníollacha
+      Events: Teagmhais
+      Games/Score: Games/Score
+      Comments: Comments
+      Category: Category
+      Prebuilt: Prebuilt
+      Text: Téacs
+      Picker: Picker
+      Comment: Comment
+      'Variables ': 'Variables '
+      everythingelse: everythingelse
+      numbers: numbers
+      Numbers: Numbers
+      Input: Input
+      Default: Default
+      Sprites: Sprites
+      Behaviors: Behaviors
+      World: World
+      Sprite: Sprite
+      Brush: Brush
+      Make Sprite: Make Sprite
+      Movement: Movement
+      Start: Tosaigh
+      Groups: Groups
+      Booleans: Luachanna Boole
+      Functional: Functional
+      Predefined: Predefined
+      test: tástáil
+      test2: test2
+      Foo: Foo
+      Name: Ainm
+      NEW BLOCKS: NEW BLOCKS
+      Game/Score: Game/Score
+      Function: Feidhm

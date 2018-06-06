@@ -2105,7 +2105,7 @@ tr:
               name: Gelecek için planlama
             Sharing Student Work:
               name: Öğrenci çalışmalarını paylaşma
-        csp1:
+        csp1-2017:
           title: CSP Unit 1 - The Internet
           description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. The unit then explores the structure and design of the internet and the implications of those design decisions.
           description_short: Explore the challenges about representing information as bits and how to get those bits from one place to another.
@@ -2153,7 +2153,7 @@ tr:
               name: Bilgisayar Bilimi ilkeleri kurs sonrası anketi
             Post-Course Survey:
               name: Post-Course Survey
-        csp2:
+        csp2-2017:
           title: CSP Unit 2 - Digital Information
           description: This unit further explores the ways that digital information is encoded, represented and manipulated. Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.
           description_short: Explore how more complex digital information is represented and manipulated through computation and visualization.
@@ -2170,7 +2170,7 @@ tr:
             Discover a Data Story:
               name: Bir Veri Hikayesi Keşfet
             Encode a Complex Thing:
-              name: Karmaşık bir şey kodlamak
+              name: Encode a Complex Thing
             Encoding B&W Images:
               name: Siyah beyaz resimlerini kodlama
             Encoding Color Images:
@@ -2203,7 +2203,7 @@ tr:
               name: Uygulama PT - Bir deneyim kodlamak
             Post-Course Survey:
               name: Post-Course Survey
-        csp3:
+        csp3-2017:
           title: CSP Unit 3 - Intro to Programming
           description: "Bu ünite, zengin içerikli etkileşimli uygulamalar yapma yeteneğini ortaya çıkaran bilgisayar programlamasının temel kavramlarını öğretir. Bu kurs programlama dili olarak JavaScript ve uygulama yapmak için programlama ortamı olarak Uygulama Laboratuvarını kullanır ancak bu derslerde öğrenilen kavramlar tüm programlama dilleri ve araçları için geçerlidir.\\r\n\\r\nBu ünite en son 30 Ekim 2017 tarihinde güncellenmiştir. Ders planı güncellemeleriyle ilgili daha fazla bilgi için: forum.code.org/c/csp/updates."
           description_short: Programlama
@@ -2249,14 +2249,14 @@ tr:
               name: Lütfen CSP kurs ortası anketini tamamlayın!
             Post-Course Survey:
               name: Post-Course Survey
-        csp4:
+        csp4-2017:
           title: CSP Unit 4 - Big Data and Privacy
           description: "The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.\\r\n\\r\nThis unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
           description_short: Explore the data-rich world we live, and how data impacts public policy, personal privacy, security, the law, and ethics.
           description_audience: ''
           stages:
             Alice and Bob and Asymmetric Keys:
-              name: Alice ve Bob ve Asimetrik Anahtarlar
+              name: Alice and Bob and Asymmetric Keys
             Cracking the Code:
               name: Kodu çözmek
             Encryption with Keys and Passwords:
@@ -2293,7 +2293,7 @@ tr:
               name: Post-Course Survey
             Student Post-Course Survey:
               name: Student Post-Course Survey
-        csp5:
+        csp5-2017:
           title: CSP Unit 5 - Building Apps
           description: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           description_short: Continue to learn foundational concepts of computer programming in JavaScript by making rich, interactive apps.
@@ -2342,35 +2342,35 @@ tr:
             While Loops:
               name: While(...durumunda) Döngüleri
             Edited lessons ABOVE this line:
-              name: Düzenlenmiş dersler bu çizginin üstünde
+              name: Edited lessons ABOVE this line
             Buttons and Events:
               name: Butonlar ve Olaylar
             Make Your Own Multi-Screen App:
-              name: Kendi Çoklu Ekran Uygulamanı Yap
+              name: Make Your Own Multi-Screen App
             Unit 5 Assessment 1:
               name: 5. Ünite 1. Değerlendirme
             Unit 5 Assessment 2:
               name: 5. Ünite 2. Değerlendirme
             "'If' Statements Unplugged":
-              name: "Bağımsız (Unplugged) If (Eğer) İfadeleri"
+              name: "'If' Statements Unplugged"
             '"If" Statements Unplugged':
               name: 'Bağımsız (unplugged) if (eğer) İfadeleri'
             Getting started with If Statements:
-              name: If (eğer) İfadelerine Başlarken
+              name: Getting started with If Statements
             Unit 3 Chapter 1 Assessment 3:
-              name: 3. Ünite 1. Bölüm 3. Değerlendirme
+              name: Unit 3 Chapter 1 Assessment 3
             If statements:
-              name: Eğer ifadesi
+              name: If statements
             Unit 3 Assessment 3:
-              name: 3. Ünite 3. Değerlendirme
+              name: Unit 3 Assessment 3
             Unit 3 Assessment 4:
-              name: 3. Ünite 4. Değerlendirme
+              name: Unit 3 Assessment 4
             If-else-if and Conditional Logic:
-              name: If-else-if ve Koşullu Mantık
+              name: If-else-if and Conditional Logic
             'Building an App: Color Sleuth':
               name: 'Bir Uygulama Oluşturmak: Renk Dedektifi'
             Possibly use later:
-              name: Daha sonra kullanılabilir
+              name: Possibly use later
             Unit 5 Assessment 3:
               name: 5. Ünite 3. Değerlendirme
             Unit 5 Assessment 4:
@@ -2388,7 +2388,7 @@ tr:
             'Building an App: Canvas Painter':
               name: 'Bir uygulama inşa etme: Kanvas ressamı'
             Unit 5 Assessment 5 - Practice AP questions:
-              name: Birim 5 Değerlendirme 5 - AP sorularını uygula
+              name: Unit 5 Assessment 5 - Practice AP questions
             Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
               name: Birim 5 değerlendirme 5 - AP Sözdekod uygulaması soruları
             CSP Student Post Survey Staging:
@@ -2398,11 +2398,11 @@ tr:
             CSP Student Post-Course Survey:
               name: Bilgisayar Bilimi ilkeleri kurs sonrası anketi
             Multi-Screen Apps:
-              name: Çoklu ekranlı Uygulamalar
+              name: Multi-Screen Apps
             '"if" Statements Unplugged':
-              name: '"eğer" deyimleri serbest'
+              name: '"if" Statements Unplugged'
             Boolean Expressions and "if" Statements:
-              name: Mantıksal ifadeler ve "Eğer" deyimleri
+              name: Boolean Expressions and "if" Statements
             Post-Course Survey:
               name: Post-Course Survey
         csp6:
@@ -3281,7 +3281,7 @@ tr:
               name: Ders 2,3
             Test stage with bubbles:
               name: Baloncuklar ile Sahne Testi
-        csd3:
+        csd3-2017:
           title: CSD Unit 3 - Animations and Games
           description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
           description_short: "Programlama"
@@ -3351,8 +3351,8 @@ tr:
               description_teacher: Öğrenciler şekillerle nasıl çizileceğini iletmenin zorluklarını keşfederler ve Oyun Laboratuarında bu probleme nasıl yaklaşıldığını tanıtan bir araç kullanırlar. Isınma etkinliği, ortak referans noktası olmadan konum bilgisi iletmenin zorluklarını hızla gösterir. Ana etkinlikte öğrenciler,  Oyun Laboratuarının 400 x 400 ızgara şekillerini interaktif olarak yerleştirebilmelerini sağlayan bir Oyun Laboratuar aracını keşfederler. Daha sonra, bu aracı kullanarak takım arkadaşlarına sırayla gizli bir resim çizdirirler ve bu sayede Oyun Laboratuvarında programlama yaparken karşılaşacakları zorlukların benzerini deneyimlerler. Öğrenciler isteğe bağlı olarak sunum yapmadan önce kendi çizdirecekleri resimlerini oluştururlar.
             Shapes and Randomness:
               name: Şekiller ve Rastgelelik
-              description_student: Bu ders çizim becerilerini genişlik ve yüksekliği kapsayacak şekilde verir ve rastgele sayı üretme kavramını tanıtır. Sınıf ellipse() ve rect() işlevlerinin genişlik ve yükseklik parametrelerini içeren çizimlerini çizmeyi ve ekranı renkle doldurmak için background() bloğunu kullanmayı öğrenir. İlerleyişin sonunda sınıf, randomNumber() bloğunu tanır ve yeni blokları rastgele seçilmiş bir gökkuşağı yılanı çizmek için kullanır.
-              description_teacher: Bu derste öğrenciler çizim yeteneklerini geliştirmeye devam ederler. Dersin başında bir öğretmen liderliğinde yapılan tartışmada, ihtiyaç duyulan daha fazla girdi blokları ve parametreleri, genişletilmiş blok işlevleri (örneğin farklı boyutlardaki şekiller) tartılışılır, konuşulur. Öğrenciler, çizim için 'ellipse()' ve 'rect()' bloklarını yükseklik ve genişlik özellikleriyle birlikte kullanmayı öğrenirler. Aynı zamanda 'background()' bloğunu kullanmayı öğrenirler. Sürecin sonunda öğrencilere 'randomNumber()' bloğu tanıtılır. Dersin sonunda öğrenciler tüm bu becerileri birlikte kullanarak, rastgele bir gökkuşağı yılanı çizecekler.
+              description_student: This lesson extends the drawing skills to include width and height and introduces the concept of random number generation. The class learns to draw with versions of ellipse() and rect() that include width and height parameters and to use the background() block to fill the screen with color. At the end of the progression the class is introduced to the randomNumber() block and uses the new blocks to draw a randomized rainbow snake.
+              description_teacher: In this lesson students continue to develop their drawing skills. At the beginning of the lesson a teacher-led discussion connects expanded block functionality (e.g. different sized shapes) with the need for more block inputs, or "parameters". Students learn to draw with versions of `ellipse()` and `rect()` that include width and height parameters. They also learn to use the `background()` block. At the end of the progression students are introduced to the `randomNumber()` block. Combining all of these skills students will draw a randomized rainbow snake at the end of the lesson.
             Variables:
               name: Değişkenler
               description_student: Bu derste, rastgele üretilen bir numarayı kaydetmenin veya bir numarayı etiketlemenin bir yolu olarak değişkenler tanıtılır. Sınıf, değişkenlerin amacının basit bir açıklamasıyla derse başlar ve yeni blokları kullanarak alıştırma yapar. Daha sonra, sınıf, rastgele bir numarayı kaydetmek için değişkenleri kullanır, programların aynı rastgele sayıyı birden çok kez kullanmalarını sağlar.
@@ -3403,7 +3403,7 @@ tr:
               description_student: Sınıf, önceki iki dersteki proje rehberi kullanarak orjinal oyunlar planlar ve oluşturur. Bireysel veya çiftler halinde çalışarak sınıf, oyunları planlar, geliştirir ve geri bildirim verir. Akran geri bildirimini dahil edildikten sonra, sınıf tamamlanmış oyunları paylaşır.
               description_teacher: Öğrenciler, projelerini yönlendirmek için önceki iki dersin proje rehberini kullanarak kendi oyunlarını planlayacak ve inşa edecektir. Bireysel ya da çift olarak çalışarak, öğrenciler ilham kaynağı olarak örnek oyun seti alarak, kurmak istedikleri oyun türüne karar verecekler. Ardından, oyunun davranışını açıklayacak ve oluşturmaları gereken değişkenleri, hareketli nesneleri ve işlevleri kapsam altına alacakları boş bir proje kılavuzu tamamlayacaklardır. Code Studio'da, bir dizi seviye, onlara bu planı uygulamak için kullanabilecekleri genel bir sıra üzerinde bilgi ister. Süreç boyunca, öğrenciler akran incelemesi için projelerini paylaşacak ve oyunun bitiminde geri bildirim içeriyor olacak. Ders sonunda öğrenciler tamamladıkları oyunları sınıf arkadaşlarıyla paylaşacaklardır. Bu proje birden fazla sınıfı kapsayacak ve 3-5 sınıf döneminden herhangi bir yeri kolayca alabilecektir.
             Parameters and Randomization:
-              name: Parametreler ve Rastgelelik (Randomization)
+              name: Parameters and Randomization
             Shapes and Randomization:
               name: Şekiller ve Rastgelelik
             CS Discoveries End of Semester Survey:
@@ -3530,7 +3530,7 @@ tr:
               name: Ünite 4 Bölüm 1 değerlendirme
             'Anonymous student survey: Taking the AP exam':
               name: 'Anonim öğrenci anketi: AP sınavına girme'
-        csd1:
+        csd1-2017:
           title: CSD Unit 1 - Problem Solving
           description_short: "  İnsanların problemleri çözmek için bilgisayarlarla nasıl çalıştıklarını öğrenin."
           description: " \\r\nUnit 1 is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\\r\n"
@@ -3560,7 +3560,7 @@ tr:
             Processing with Bits:
               name: Bitlerle işlem
             Human vs. Computer Processing:
-              name: İnsana karşı bilgisayar işleme
+              name: Human vs. Computer Processing
             Processing with Apps:
               name: Uygulamalar ile işleme
             'Project: Apps and Problem Solving':
@@ -3735,7 +3735,7 @@ tr:
               name: RGB(Kırmızı Yeşil Mavi) renkler
             Processing with Bits:
               name: Bitlerle işlem
-        csd2:
+        csd2-2017:
           title: CSD Unit 2 - Web Development
           description_audience: ''
           description_short: "  Web Lab'da kendi web siteni oluşturmayı öğren."
@@ -3810,7 +3810,7 @@ tr:
             Headers:
               name: Başlıklar
               description_student: Bu derste HTML etiketleri tanıtmaya devam ediyor, bu kez üst başlıklarla birlikte. Sınıf, sayfa ve bölüm başlıkları oluşturmak için üstbilgi etiketlerini kullanır ve farklı üstbilgi öğelerinin varsayılan olarak nasıl göründüğünü öğrenir. Daha sonra, sınıf, ünite yoluyla oluşturulacak ve projenin ilk sayfası olacak olan kişisel web sayfalarındaki içeriklerini nasıl düzenleyeceğini planlıyor.
-              description_teacher: Bu derste öğrenciler, bu sefer üst başlıkları kullanarak web sitelerinde metin biçimlendirmek için HTML kullanmaya devam ederler. Öğrenciler, farklı üst başlık öğelerinin varsayılan olarak nasıl görüntülendiğini öğrenirler ve bunları kullanarak sayfa ve bölüm başlıkları oluşturmak için alıştırma yaparlar. Daha sonra, öğrenciler kendi kişisel web sayfalarındaki içeriği nasıl organize edeceklerine karar vermeye başlarlar. Son aşamada, öğrenciler ünite boyunca üzerinde çalışamaya devam edecekleri projeye başlarlar.
+              description_teacher: In this lesson, students continue to use HTML to structure text on web pages, this time with headers.  Students learn how the different header elements are displayed by default and practice using them to create page and section titles.  Students then start to decide how they will organize their content on their own personal web pages.  In the last level, students begin the project that they will continue to work on throughout the unit.
             Lists:
               name: Listeler
               description_student: Bu ders, sıralı ve sıralı olmayan listeleri ve ilgili &lt;ul&gt;, &lt;ol&gt; ve &lt;li&gt; HTML etiketlerini öğretir. Sınıf etiketleri kullanarak alıştırma yapar, sonra kişisel web sayfası projesine giderek bu yeni etiketleri içeren yeni bir HTML sayfası ekler.
@@ -3865,7 +3865,7 @@ tr:
               name: Öğrenci Öğrenmesini Ölçme
             AP Preparation and Support:
               name: AP Hazırlık ve Destek
-        csd4:
+        csd4-2017:
           title: CSD Unit 4 - The Design Process
           description_audience: ''
           description_short: "  Learn how to design a program that meets the needs of your users."
@@ -3892,7 +3892,7 @@ tr:
             Analyzing Interviews:
               name: Görüşmeleri analiz etme
             Redesigning a Space:
-              name: Bir Alanı Yeniden Tasarlama
+              name: Redesigning a Space
             Presenting Your Design:
               name: Tasarımınızın sunulması
             Designing Apps for Good:
@@ -3918,11 +3918,11 @@ tr:
             Event Driven Programming:
               name: Olay Temelli Programlama
               description_student: Önceki derste sınıf tarafından tasarlanan ekranlar kuruluyor, takımlar ekranları tek bir uygulamada birleştiriyor. Düğme tıklamalarının uygun ekranda değiştirilebilmesi için basit kod eklendi.
-              description_teacher: Bu derste takımlar bir önceki derste tasarladıkları ekranları tek bir uygulamada birleştirir, ve daha sonra basit olaylar kullanarak programlamaya başlarlar. Öğrenciler butonlara tıklayan kullanıcılara cevap veren bir kaç küçük uygulama yaparak, temel olay odaklı programlama yapmayı öğrenirler. Bununla birlikte, grup üyeleri olaylara butonlar bağlayarak interaktif bir hale getirilecek durumda olan geliştirdikleri ekranları paylaşır ve her grup üyesi ekranların hepsini kendi uygulamalarının kopyasına aktarır.
+              description_teacher: In this lesson teams combine the screens that they designed in the previous lesson into a single app, which they then begin to program using simple events. Students learn basic event driven programming by making several small apps that respond to users clicking buttons. Following that, group members share the screens they've developed and each group member imports all of the screens into their own copy of the app, which they will make interactive by connecting buttons to events.
             Basic App Functionality:
               name: Temel uygulama işlevselliği
-              description_student: Takımlar uygulamalarını test etmeden önce biraz daha işlevsellik katar ve düzenleme yaparlar. Harika özellikler ekleyen basit kodları göstermek için bir kaç örnek bulunmaktadır.
-              description_teacher: Geliştirme işleminin bu aşamasında, her öğrencinin kağıt prototipin dijital bir versiyonuna sahip olması gerekir - bunlar düğmelerle bağlantılı sabit ekranlardır. Çoğu uygulamada kullanıcılarla teste başlamaya ihtiyacınız vardır, ama bu derste test aşamasına geçmeden önce öğrencilere, uygulamalarına biraz daha işlevsellik kazandırmalarını keşfetme şansı sağlanacaktır. Bu derste tanıtılan programlama kavramları projenin tamamlanması için gerekli değildir ve isterseniz atlayabilirsiniz.
+              description_student: Teams add a bit more polish and functionality to their apps before testing. Several examples are provided to demonstrate simple code that adds cool features.
+              description_teacher: At this point in the development process, each student should have what is essentially a digital version of the paper prototype - static screens that are linked together with buttons. For many apps this is all you really need to start testing with users, but this lesson will give students a chance to explore simple ways to add a bit more functionality to their apps before moving into the testing phase. The programming concepts introduced in this lesson are **not necessary** to successfully complete the project, and can be omitted at your discretion.
             Testing the App:
               name: Uygulamayı Test Etmek
               description_student: Takımlar bu kez etkileşimli prototipleriyle birlikte başka bir kullanıcı testi aşaması çalıştırır. Bu aşamada testten toplanan geri bildirimler uygulama prototiplerinin sonucunun, tekrarını bildirecektir.
@@ -4510,7 +4510,7 @@ tr:
           description_short: ''
           description: 'COMING SOON: soon this page will host a set of resources for teachers preparing for the AP exam'
           stages: { }
-        csppostap:
+        csppostap-2017:
           title: CSP Post-AP - Databases and Using Data in Your Apps
           description_audience: ''
           description_short: App Lab uygulamalarında veri toplama ve kullanmayı öğren
@@ -4766,7 +4766,7 @@ tr:
               name: Koşullar
             'Real Life Algorithms: Dice Race':
               name: 'Gerçek yaşam algoritması: Zar Yarışı'
-        csd6:
+        csd6-2017:
           title: CSD bilgisayar birimi 6 - fiziksel
           description_audience: ''
           description_short: Fiziksel aygıtları programlama
@@ -4774,72 +4774,72 @@ tr:
           stages:
             Computing Innovations:
               name: Bilgi İşlem Yenilikleri
-              description_student: Bilgisayarın ne olabileceğine dair algılarını genişletirken çok çeşitli yeni ve inovatif bilgisayar platformlarını keşfetmek.
-              description_teacher: Bu dersin son bölümünü başlatmak için, öğrenciler bilgisayarlarda ilginç yenilikler konusunda biraz araştırma yapacaklardır. Bu ders öğrencileri bilgisayarlardan etkilenen alanlar ve bilgisayar form faktörlerinden daha geniş bir kitleye (bir bilgisayarın nasıl göründüğü) açıklayacak. Daha sonra bu birimde öğrenciler kendi fiziki bilgi işlem cihazlarını geliştirdikçe bu derste karşılaştıkları cihazlara bakacaklardır.
+              description_student: Explore a wide variety of new and innovative computing platforms while expanding your understanding of what a computer can be.
+              description_teacher: To kick off the final unit of this course, students will do some research into interesting innovations in computing. This lesson will expose students to wider variety of computing form factors (what a computer looks like) and fields that are impacted by computing. Later in this unit students will look back on the devices they encountered in this lesson as they develop their own physical computing devices.
             Input Unplugged:
               name: Bağımsız (Unplugged) Girdi
-              description_student: Bir uygulamanın bir kullanıcıdan girdi alabilmesi için iki farklı yoldan deneyim edin ve Uygulama Laboratuarı'nda kullanılan etkinliğe dayalı programlama modeli hakkında daha fazla bilgi edinin.
-              description_teacher: Uygulama Laboratuvarı ile programlamaya daha derinlemesine inme hazırlığında, öğrenciler, hem Oyun Laboratuvarında hem de Uygulama Laboratuvarında yazılan az miktardaki farklı programların kullanıcılardan girdi almayı nasıl ele aldığını keşfedecekler. Örnek uygulamalarda gördükleri yaklaşımların benzer ve farklı yönlerini kıyasladıktan sonra, öğrenciler, nasıl çalıştıklarına dair daha iyi bir anlayış kazanmak adına girdi için (sonsuz ve eş zamansız etkinliklerde koşullar) iki farklı modeli canlandırmak üzere toplanırlar.
+              description_student: Experience two different ways that an app can take input from a user, while learning more about the event-driven programming model used in App Lab.
+              description_teacher: In preparation for delving deeper into programming with App Lab, students will explore how a handful of different programs written in both Game Lab and App Lab handle taking input from the user. After comparing and contrasting the approaches they saw in the example apps, students group up to act out the two different models for input (conditionals in an infinite loop and asynchronous events) to gain a better understanding of how they work.
             Event Types:
               name: Olay Türleri
-              description_student: App Lab' da programlamanın temellerini gözden geçirin ve programlarınızda kullanılabilen yeni olay türlerini keşfedin.
-              description_teacher: Bu derste öğrenciler, bu Birim'de Uygulama Laboratuvarına dönmek için hazırlanmak için Birim 4'teki Uygulama Laboratuarı'nda uygulamalar oluşturma hakkında edindikleri bilgileri incelerler. Bu inceleme, öğrencilerinizin ihtiyaçlarını en iyi şekilde karşılamak üzere değiştirilmeli ve Uygulama Laboratuarı'ndaki programlama deneyim ve tecrübelerine uymalıdır. İncelemeye ek olarak öğrenciler, daha önce görülmemiş muhtemelen çeşitli yeni etkinlik türlerini deneyeceklerdir.
+              description_student: Review the basics of programming in App Lab and explore some new event types that can be used in your programs.
+              description_teacher: In this lesson students review the material they learned about creating apps in App Lab from Unit 4 in order to prepare for a return to App Lab in this unit. This review should be modified to best meet the needs of your students and their experience and familiarity with programming in App Lab. In addition to the review the students will also experiment with a variety of new event types that they likely have not seen before.
             Getters and Setters:
               name: Alıcılar ve Belirleyiciler
-              description_student: Bir uygulama ekranındaki içeriği değiştirip okurken, sınıf, yalnızca bir ekrana ihtiyaç duyan uygulamalar geliştirmeye başlar. Tek bir ekranla bile, bu teknikler, bir çok kullanıcı etkileşimi ve işlevselliğe izin verir.
-              description_teacher: Birim 4'te öğrenciler, Uygulama Laboratuvarı'nda uygulama etkileşimi için ayrı bir ekran gerektiren çok basit bir uygulama geliştirme yaklaşımını öğrendi. Öğrencilerin yapabilecekleri uygulamaları çeşitlendirmek ve kullanıcıların uygulamayla nasıl etkileşim kurduğu konusunda yeni yollarla düşünmeye teşvik etmek için "getters" ve "setters" kavramlarını tanıtmaktayız. Bunlar, çeşitli tasarım öğelerinin içeriğini ve özelliklerini alabilen ve ayarlayan (veya değiştirecek) komutlardır. Bu derste öğrenciler, içeriği alıcılar ve ayarlayıcılar kullanılarak değiştirilen, yalnızca tek bir ekran gerektiren basit uygulamalar oluşturmaktadır.
+              description_student: By reading and changing the content on the screen of an app, the class starts to build apps that only need a single screen. Even with just one screen, these techniques allow for lots of user interaction and functionality.
+              description_teacher: In Unit 4 students learned a very simple approach to app development in App Lab that required a separate screen for most interactions. To expand the kinds of apps that students can make, and to encourage them to think in new ways about how users interact with apps, we introduce the concept of "getters" and "setters". These are commands which can get and set (or change) the content and properties of various design elements. In this lesson students build up simple apps that only require a single screen, the content of which is changed using getters and setters.
             The Circuit Playground:
               name: Çember Oyun Alanı
-              description_student: Bu ünitenin geri kalanında kullanılacak devre tahtası, Devre Kullanma alanını tanıyın. Uygulama Lab'ı kullanarak çıktı için Devre Kullanma alanındaki programları geliştirin.
-              description_teacher: Bu derste öğrenciler, Devre Oyun Alanını kullanan programlar yazmanın ilk fırsatını bulurlar. İlk önce yönetim kurulunu görsel olarak inceledikten ve olası işlevleri hipotizleştirdikten sonra öğrenciler bir LED ışığı yanıp sönen ve zil sesiyle ses çıkaran uygulamalar yazmayı öğrenecekleri ortama çevrimiçi geçtiler. Öğrenciler Uygulama Laboratuarı ekranlarını Devre Oyun Alanları ile birleştirerek, kullanıcı girişi için Uygulama Laboratuvarı'na güvenirken yavaş yavaş kurulu elemanları bir çıkış cihazı olarak entegre etmeye başlayabilirler.
+              description_student: Get to know the Circuit Playground, the circuit board that will be used throughout the rest of this unit. Using App Lab, develop programs that use the Circuit Playground for output.
+              description_teacher: In this lesson students get their first opportunity to write programs that use the Circuit Playground. After first inspecting the board visually and hypothesizing possibly functionalities, students move online where they will learn to write applications that control an LED. By combining App Lab screens with the Circuit Playgrounds, students can gradually start to integrate elements of the board as an ouput device while relying on App Lab for user input.
             Lists:
               name: Listeler
-              description_student: Listelerin tek bir değişken isminde çoklu değerleri nasıl saklayabileceğini öğrenmek.
-              description_teacher: Bir liste, ki genellikle dizi olarak bilinir, tek seferde çok fazla değeri saklayabilen bir değişken tipidir. Bu derste öğrenciler, tek bir değişkende birbiriyle ilişkili bir dizi değeri saklayan listeleri oluşturmayı öğrenecekler. Kendi listelerini oluşturduktan sonra, öğrenciler bir listeden özel olarak veya rastgele belirlenmiş bir değeri seçmenin yollarını öğrenecekler.
+              description_student: Learn how lists can be used to store multiple values in a single variable name.
+              description_teacher: A list, also commonly known as an array, is a type of variable that can store many values at once. In this lesson, students learn to create lists which store a series of related values in a single variable. After creating lists of their own, students will learn about ways to extract either a specific or random value from a list using its index.
             Lights:
               name: Işıklar
-              description_student: Bir önceki dersten liste kavramlarını kullanarak sınıf, Çember Oyun Alanı üzerinde 10 renkli Ledleri kontrol eden bir program yazar.
-              description_teacher: Circuit Playground, dış kenarın çevresindeki halkada 10 renk LED içerir. Bu LED'ler kodda 'colorLeds' adı verilen bir liste olarak erişilebilir durumdadır. Önceki derslerden gelen listelerin anlaşılması üzerine öğrenciler, renk LED'lerini bir listeden erişerek kontrol eden programlar yazarlar.
+              description_student: Using the concept of lists from the previous lesson, the class writes programs that control the ten color LEDs on the Circuit Playground.
+              description_teacher: The Circuit Playground includes 10 color LEDs in a ring around the outside edge. These LEDs are accessible in code as a list called `colorLeds`. Building on the understanding of lists from the previous lesson, students write programs that control the color LEDs by accessing them from a list.
             For Loops:
               name: For Döngüleri
-              description_student: Sınıf _bir döngü_ kullanarak talimatları yineleme hakkında, "robot" u önce bir sistem üzerinden, ve daha sonra da Uygulama Laboratuvarı'ndan kontrol ederek öğrenir.
-              description_teacher: Öğrenciler bu dersi _bir döngü_ için bazı kodları belirli sayıda tekrar etmenin bir yolu olarak tanıtıyorlar. Öğrenciler sisteme karşı olan bir robotun kılavuz boyunca gezinmek için kullandığı tıklanmamış bir etkinlikle başlarlar. Tamamlandıktan sonra öğrenciler bilgilerini Uygulama Laboratuvarı'na alırlar ve burada _bir döngü_ kullanarak yinelemeye dayanan programlar yazarlar.
+              description_student: The class learns about repeating instructions using a _for loop_, first by controlling a "robot" through a grid, and then in App Lab.
+              description_teacher: Students are introduced to the _for loop_ in this lesson as a way to repeat some code a certain numbers of times. Students start with an unplugged activity where they use for loops to navigate a robot across a grid. Once complete, students then take their knowledge into App Lab where they write programs that rely on iteration using a _for loop_.
             Lists and For Loops:
               name: Listeler ve 'Şununla Say' Döngüleri
               description_student: Combining _lists_ and _for loops_ allows you to write code that impacts every element of a list, regardless of how long it is. The class uses this structure to write programs that process all of the elements in lists, include the list of color LEDs.
-              description_teacher: 'Bir sıradaki bütün ögeleri tekrarlamak için bir for döngüsü kullanmak çoğu programlama dilinde gerçekten yararlı bir yapıdır. Bu derste öğrenciler, bu model öğrenmeye başlamak için listeler ve for döngüleri hakkında öğrendiklerini birleştirirler. Öğrenciler her öge için kod yazmak zorunda kalmadan bir listedeki her ögeyi teker teker incelemek için for döngüleri kullanırlar. Ders sonuna doğru öğrenciler, bunu tahtadaki ‘colorLed’ listesi ile uygulayacaklar. '
+              description_teacher: 'Using a _for loop_ to iterate over all of the elements in an array is a really useful construct in most programming languages. In this lesson, students combine what they have learned about lists and for loops in order to start learning this pattern. Students use for loops to go through each element in a list one at a time without having to write code for each element. Towards the end of the lesson students will apply this with the `colorLed` list on the board. '
             Timed Loops:
               name: Zamanlanmış döngü
-              description_student: Bu derste, öğrencilerin zamanlanmış bir döngü adı verilen daha sofistike bir yapı hakkında bilgi edinmek için döngüleri anlamalarını sağlıyoruz. Döngülerden farklı olarak, belirli bir döngünün ne kadar çabuk tekrarlanacağını kontrol edebilirsiniz ve döngü yinelemeleri arasında diğer kodlar (olay işleyicileri gibi) çalıştırılabilir. Bu, sonsuza kadar tekrar eden ilginç animasyonlar yaratmamıza izin verirken diğer kodun yanında yayınlanmasına izin verir.
+              description_student: In this lesson we build on students understanding of for loops to learn about a more sophisticated structure called a timed loop. Unlike for loops, you can control how quickly a timed loop repeats, and other code (such as event handlers) can be run between iterations of the loop. This allows us to create interesting animations that repeat infinitely, while still allowing other code to run alongside it.
               description_teacher: In this lesson we build on students understanding of _for loops_ to learn about a more sophisticated structure called a _timed loop_. Unlike _for loops_, you can control how quickly a _timed loop_ repeats, and other code (such as event handlers) can be run between iterations of the loop. This allows us to create interesting animations that repeat infinitely, while still allowing other code to run alongside it.
             'Project: Board Output':
               name: 'Proje: Kart Çıktısı'
-              description_student: Öğrenciler, öğrendiklerini birinci bölüm aracılığıyla alıyor ve bilgi üretmek için tahtayı kullanan kendi tasarımlarından bir uygulama geliştiriyorlar.
-              description_teacher: Öğrenciler, öğrendiklerini birinci bölüm aracılığıyla alıyor ve bilgi üretmek için tahtayı kullanan kendi tasarımlarından bir uygulama geliştiriyorlar.
+              description_student: Students take what they've learned through chapter one, and develop an app of their own design that uses the board to output information.
+              description_teacher: Students take what they've learned through chapter one, and develop an app of their own design that uses the board to output information.
             Physical Input:
               name: Fiziksel Girdi
-              description_student: Donanım düğmelerini ve anahtarını kullanarak sınıf, Devre Oyun Alanını bir girdi olarak kullanan programlar geliştirir.
-              description_teacher: Bu ders, Öğrencileri Devre Oyun Sahası'nı, hem girdi hem de çıktı için bir araç olarak kullanmaya doğru kesinlikle bir çıkış aracı olarak düşünmeye çevirir. Donanım düğmelerinden ve anahtarından başlayarak, donanım düğmelerini ve anahtarı söyleyerek, öğrenciler Devre Oyun Alanlarından girdiyi almak için `onEvent ()`benzeri olarak `onBoardEvent ()` i kullanmayı öğrenirler.
+              description_student: Using the hardware buttons and switch, the class develops programs that use the Circuit Playground as an input.
+              description_teacher: This lesson transitions students from consider the Circuit Playground as strictly an output device towards using it as a tool for both input and output. Starting with the hardware buttons and switch,sing the hardware buttons and switch, students learn to use `onBoardEvent()`, analogously to `onEvent()`, in order to take input from their Circuit Playgrounds.
             Analog Input:
               name: Analog girdi
-              description_student: Devre Oyun Alanındaki analog girdileri keşfederek, çevreye sensörler aracılığıyla cevap veren programlar yazın.
-              description_teacher: Bu derste öğrenciler, ortamdaki değişikliklere cevap veren programlar yazmak için üç analog sensörün (ses, ışık ve sıcaklık) nasıl kullanılabileceğini keşfederler. Bu sensörlerin kullanımı, kullanıcıların bir programla nasıl etkileşime girdiğiyle ilgili bir geçiş işaretler. Sensörleri bir girdi olarak kullanarak, uygulamanın kullanıcısının kendisiyle doğrudan etkileşime girmesi gerekmez veya bunu gerçekte fark etmeden etkileşime girebilir.
+              description_student: Explore the analog inputs on the Circuit Playground, writing programs that respond to the environment through sensors.
+              description_teacher: In this lesson, students explore how the three analog sensors (sound, light, and temperature) can be used to write programs that respond to changes in the environment. The use of these sensors marks a transition in terms of how users interact with a program. By using sensors as an input, the user of an app doesn't have to directly interact with it at all, or may interact without actually realizing they are doing so.
             Sensor Applications:
               name: Sensör uygulamaları
-              description_student: Derslerden önce sensörlerin kullanımlarını daha iyi anlamak için üç küçük uygulama ile çalışın.
-              description_teacher: Öğrencilerin bir önceki derste öğrendikleri sensörleri takip etmek için her biri farklı bir sensöre dayanan üç uygulamadan geçiyoruz. Bu üç uygulama, takip eden nihai projedeki öğrencilere puan atlamak olarak görev yapabilir.
+              description_student: Work through three small apps to better understand the uses of the sensors from the previous lesson.
+              description_teacher: To follow up on the sensors that students learned about in the previous lesson, we walk through a three apps, each of which relies on a different sensor. These three apps can serve as jumping off points for students in the final project that follows.
             'Project: Prototype an Innovation':
               name: 'Proje: Bir yenilik prototiple'
-              description_student: Bu ders boyunca öğrendiğiniz her şeyi kullanarak kendi tasarımınızla yenilikçi bilgisayar aygıtları geliştirin.
-              description_teacher: 'Kursun bu son projesinde, öğrenci ekibi Devre Oyun Alanına dayalı yenilikçi bilgisayar cihazı için bir prototip geliştirir ve test eder. Panodaki mevcut giriş ve çıkışları kullanarak, gruplar ilginç ve özgün kullanıcı etkileşimleri sağlayan programlar oluşturacaklardır. '
+              description_student: Develop innovative computing devices of your own design, using everything you've learned throughout this course.
+              description_teacher: 'In this final project for the course, students team to develop and test a prototype for an innovative computing device based on the Circuit Playground. Using the inputs and outputs available on the board, groups will create programs that allow for interesting and unique user interactions. '
             Designing Screens with Code:
               name: Kod ile Ekranlar Tasarlama
-              description_student: Bir uygulama ekranındaki içeriği değiştirip okurken, sınıf, yalnızca bir ekrana ihtiyaç duyan uygulamalar geliştirmeye başlar. Tek bir ekranla bile, bu teknikler, bir çok kullanıcı etkileşimi ve işlevselliğe izin verir.
+              description_student: By reading and changing the content on the screen of an app, the class starts to build apps that only need a single screen. Even with just one screen, these techniques allow for lots of user interaction and functionality.
               description_teacher: In Unit 4 students learned a very simple approach to app development in App Lab that required a separate screen for most interactions. To expand the kinds of apps that students can make, and to encourage them to think in new ways about how users interact with apps, we introduce the `setProperty()` block. This command can be used to set the content and properties of various UI elements, allowing students to write programs that update information on a single screen, instead of manually creating duplicate screens. In this lesson students build up simple apps that only require a single screen, the content of which is changed using `setProperty()`.
             Board Events:
               name: Kurul Etkinlikleri
-              description_student: Donanım düğmelerini ve anahtarını kullanarak sınıf, Devre Oyun Alanını bir girdi olarak kullanan programlar geliştirir.
-              description_teacher: Bu ders, Öğrencileri Devre Oyun Sahası'nı, hem girdi hem de çıktı için bir araç olarak kullanmaya doğru kesinlikle bir çıkış aracı olarak düşünmeye çevirir. Donanım düğmelerinden ve anahtarından başlayarak, donanım düğmelerini ve anahtarı söyleyerek, öğrenciler Devre Oyun Alanlarından girdiyi almak için `onEvent ()`benzeri olarak `onBoardEvent ()` i kullanmayı öğrenirler.
+              description_student: Using the hardware buttons and switch, the class develops programs that use the Circuit Playground as an input.
+              description_teacher: This lesson transitions students from consider the Circuit Playground as strictly an output device towards using it as a tool for both input and output. Starting with the hardware buttons and switch,sing the hardware buttons and switch, students learn to use `onBoardEvent()`, analogously to `onEvent()`, in order to take input from their Circuit Playgrounds.
             Getting Properties:
               name: Özelikleri Alma
               description_student: This lesson introduces students to the getProperty block, which allows them to access the properties of different elements with code.  Students first practice using the block to determine what the user has input in various user interface elements. Students later use getProperty and setProperty together with the counter patters to make elements move across the screen.  A new screen element, the slider, and a new event trigger, onChange, are also introduced.
@@ -4850,11 +4850,11 @@ tr:
               description_teacher: This lesson introduces students to the process they will use to design programs of their own throughout this unit. This process is centered around a project guide which asks students to sketch out their screens, identify elements of the Circuit Playground to be used, define variables, and describe events before they begin programming. This process is similar to the Game Design Process that we used in Unit 3. In this lesson students begin by playing a tug o' war style game where the code is hidden. They discuss what they think the board components, events, and variables would need to be to make the program. They are then given a completed project guide which shows one way to implement the project. Students are then walked through this process through a series of levels. At the end of the lesson students have an opportunity to make improvements to the program to make it their own.
             'Project: Make a Game':
               name: 'Proje: Bir Oyun Yap'
-              description_student: Öğrenciler, öğrendiklerini birinci bölüm aracılığıyla alıyor ve bilgi üretmek için tahtayı kullanan kendi tasarımlarından bir uygulama geliştiriyorlar.
-              description_teacher: Öğrenciler, öğrendiklerini birinci bölüm aracılığıyla alıyor ve bilgi üretmek için tahtayı kullanan kendi tasarımlarından bir uygulama geliştiriyorlar.
+              description_student: Students take what they've learned through chapter one, and develop an app of their own design that uses the board to output information.
+              description_teacher: Students take what they've learned through chapter one, and develop an app of their own design that uses the board to output information.
             Arrays:
               name: Diziler
-              description_student: Listelerin tek bir değişken isminde çoklu değerleri nasıl saklayabileceğini öğrenmek.
+              description_student: Learn how lists can be used to store multiple values in a single variable name.
               description_teacher: An array is an ordered collection of items, usually of the same type. In this lesson, students learn ways to access either a specific or random value from a list using its index.  They then learn how to access the colorLEDs array that controls the behavior of the color LEDs on the Circuit Playground.  Students will control the color and intensity of each LED, then use what they have learned to program light patterns to create a light show on their Circuit Playground.
             Making Music:
               name: Müzik yapma
@@ -4882,32 +4882,32 @@ tr:
               name: Arrays and Color LEDs
             Innovations in Computing_:
               name: Innovations in Computing
-              description_student: Bilgisayarın ne olabileceğine dair algılarını genişletirken çok çeşitli yeni ve inovatif bilgisayar platformlarını keşfetmek.
-              description_teacher: Bu dersin son bölümünü başlatmak için, öğrenciler bilgisayarlarda ilginç yenilikler konusunda biraz araştırma yapacaklardır. Bu ders öğrencileri bilgisayarlardan etkilenen alanlar ve bilgisayar form faktörlerinden daha geniş bir kitleye (bir bilgisayarın nasıl göründüğü) açıklayacak. Daha sonra bu birimde öğrenciler kendi fiziki bilgi işlem cihazlarını geliştirdikçe bu derste karşılaştıkları cihazlara bakacaklardır.
+              description_student: Explore a wide variety of new and innovative computing platforms while expanding your understanding of what a computer can be.
+              description_teacher: To kick off the final unit of this course, students will do some research into interesting innovations in computing. This lesson will expose students to wider variety of computing form factors (what a computer looks like) and fields that are impacted by computing. Later in this unit students will look back on the devices they encountered in this lesson as they develop their own physical computing devices.
             Designing Screens with Code_:
               name: Kod ile Ekranlar Tasarlama
-              description_student: Bir uygulama ekranındaki içeriği değiştirip okurken, sınıf, yalnızca bir ekrana ihtiyaç duyan uygulamalar geliştirmeye başlar. Tek bir ekranla bile, bu teknikler, bir çok kullanıcı etkileşimi ve işlevselliğe izin verir.
+              description_student: By reading and changing the content on the screen of an app, the class starts to build apps that only need a single screen. Even with just one screen, these techniques allow for lots of user interaction and functionality.
               description_teacher: In Unit 4 students learned a very simple approach to app development in App Lab that required a separate screen for most interactions. To expand the kinds of apps that students can make, and to encourage them to think in new ways about how users interact with apps, we introduce the `setProperty()` block. This command can be used to set the content and properties of various UI elements, allowing students to write programs that update information on a single screen, instead of manually creating duplicate screens. In this lesson students build up simple apps that only require a single screen, the content of which is changed using `setProperty()`.
             The Circuit Playground_:
               name: Çember Oyun Alanı
-              description_student: Bu ünitenin geri kalanında kullanılacak devre tahtası, Devre Kullanma alanını tanıyın. Uygulama Lab'ı kullanarak çıktı için Devre Kullanma alanındaki programları geliştirin.
-              description_teacher: Bu derste öğrenciler, Devre Oyun Alanını kullanan programlar yazmanın ilk fırsatını bulurlar. İlk önce yönetim kurulunu görsel olarak inceledikten ve olası işlevleri hipotizleştirdikten sonra öğrenciler bir LED ışığı yanıp sönen ve zil sesiyle ses çıkaran uygulamalar yazmayı öğrenecekleri ortama çevrimiçi geçtiler. Öğrenciler Uygulama Laboratuarı ekranlarını Devre Oyun Alanları ile birleştirerek, kullanıcı girişi için Uygulama Laboratuvarı'na güvenirken yavaş yavaş kurulu elemanları bir çıkış cihazı olarak entegre etmeye başlayabilirler.
+              description_student: Get to know the Circuit Playground, the circuit board that will be used throughout the rest of this unit. Using App Lab, develop programs that use the Circuit Playground for output.
+              description_teacher: In this lesson students get their first opportunity to write programs that use the Circuit Playground. After first inspecting the board visually and hypothesizing possibly functionalities, students move online where they will learn to write applications that control an LED. By combining App Lab screens with the Circuit Playgrounds, students can gradually start to integrate elements of the board as an ouput device while relying on App Lab for user input.
             Input Unplugged_:
               name: Bağımsız (Unplugged) Girdi
-              description_student: Bir uygulamanın bir kullanıcıdan girdi alabilmesi için iki farklı yoldan deneyim edin ve Uygulama Laboratuarı'nda kullanılan etkinliğe dayalı programlama modeli hakkında daha fazla bilgi edinin.
-              description_teacher: Uygulama Laboratuvarı ile programlamaya daha derinlemesine inme hazırlığında, öğrenciler, hem Oyun Laboratuvarında hem de Uygulama Laboratuvarında yazılan az miktardaki farklı programların kullanıcılardan girdi almayı nasıl ele aldığını keşfedecekler. Örnek uygulamalarda gördükleri yaklaşımların benzer ve farklı yönlerini kıyasladıktan sonra, öğrenciler, nasıl çalıştıklarına dair daha iyi bir anlayış kazanmak adına girdi için (sonsuz ve eş zamansız etkinliklerde koşullar) iki farklı modeli canlandırmak üzere toplanırlar.
+              description_student: Experience two different ways that an app can take input from a user, while learning more about the event-driven programming model used in App Lab.
+              description_teacher: In preparation for delving deeper into programming with App Lab, students will explore how a handful of different programs written in both Game Lab and App Lab handle taking input from the user. After comparing and contrasting the approaches they saw in the example apps, students group up to act out the two different models for input (conditionals in an infinite loop and asynchronous events) to gain a better understanding of how they work.
             Board Events_:
               name: Kurul Etkinlikleri
-              description_student: Donanım düğmelerini ve anahtarını kullanarak sınıf, Devre Oyun Alanını bir girdi olarak kullanan programlar geliştirir.
-              description_teacher: Bu ders, Öğrencileri Devre Oyun Sahası'nı, hem girdi hem de çıktı için bir araç olarak kullanmaya doğru kesinlikle bir çıkış aracı olarak düşünmeye çevirir. Donanım düğmelerinden ve anahtarından başlayarak, donanım düğmelerini ve anahtarı söyleyerek, öğrenciler Devre Oyun Alanlarından girdiyi almak için `onEvent ()`benzeri olarak `onBoardEvent ()` i kullanmayı öğrenirler.
+              description_student: Using the hardware buttons and switch, the class develops programs that use the Circuit Playground as an input.
+              description_teacher: This lesson transitions students from consider the Circuit Playground as strictly an output device towards using it as a tool for both input and output. Starting with the hardware buttons and switch,sing the hardware buttons and switch, students learn to use `onBoardEvent()`, analogously to `onEvent()`, in order to take input from their Circuit Playgrounds.
             Getting Properties_:
               name: Özelikleri Alma
               description_student: This lesson introduces students to the getProperty block, which allows them to access the properties of different elements with code.  Students first practice using the block to determine what the user has input in various user interface elements. Students later use getProperty and setProperty together with the counter pattern to make elements move across the screen.  A new screen element, the slider, and a new event trigger, onChange, are also introduced.
               description_teacher: This lesson introduces students to the `getProperty` block, which allows them to access the properties of different elements with code.  Students first practice using the block to determine what the user has input in various user interface elements. Students later use `getProperty` and `setProperty` together with the counter pattern to make elements move across the screen.  A new screen element, the slider, and a new event trigger, `onChange`, are also introduced.
             Analog Input_:
               name: Analog girdi
-              description_student: Devre Oyun Alanındaki analog girdileri keşfederek, çevreye sensörler aracılığıyla cevap veren programlar yazın.
-              description_teacher: Bu derste öğrenciler, ortamdaki değişikliklere cevap veren programlar yazmak için üç analog sensörün (ses, ışık ve sıcaklık) nasıl kullanılabileceğini keşfederler. Bu sensörlerin kullanımı, kullanıcıların bir programla nasıl etkileşime girdiğiyle ilgili bir geçiş işaretler. Sensörleri bir girdi olarak kullanarak, uygulamanın kullanıcısının kendisiyle doğrudan etkileşime girmesi gerekmez veya bunu gerçekte fark etmeden etkileşime girebilir.
+              description_student: Explore the analog inputs on the Circuit Playground, writing programs that respond to the environment through sensors.
+              description_teacher: In this lesson, students explore how the three analog sensors (sound, light, and temperature) can be used to write programs that respond to changes in the environment. The use of these sensors marks a transition in terms of how users interact with a program. By using sensors as an input, the user of an app doesn't have to directly interact with it at all, or may interact without actually realizing they are doing so.
             The Program Design Process_:
               name: Program Tasarım Süreci
               description_student: This lesson introduces students to the process they will use to design programs of their own throughout this unit. This process is centered around a project guide which asks students to sketch out their screens, identify elements of the Circuit Playground to be used, define variables, and describe events before they begin programming. This process is similar to the Game Design Process that we used in Unit 3. In this lesson students begin by playing a tug o' war style game where the code is hidden. They discuss what they think the board components, events, and variables would need to be to make the program. They are then given a completed project guide which shows one way to implement the project. Students are then walked through this process through a series of levels. At the end of the lesson students have an opportunity to make improvements to the program to make it their own.
@@ -4938,15 +4938,15 @@ tr:
               description_teacher: In preparation for this chapter's final project, students will learn how to develop a prototype of a physical object that includes a Circuit Playground. Using a modelled project planning guide, students will learn how to wire a couple of simple circuits and to build prototypes that can communicate the intended design of a product, using cheap and easily found materials such as cardboard and duct tape.
             'Project: Prototype an Innovation_':
               name: 'Proje: Bir yenilik prototiple'
-              description_student: Bu ders boyunca öğrendiğiniz her şeyi kullanarak kendi tasarımınızla yenilikçi bilgisayar aygıtları geliştirin.
-              description_teacher: 'Kursun bu son projesinde, öğrenci ekibi Devre Oyun Alanına dayalı yenilikçi bilgisayar cihazı için bir prototip geliştirir ve test eder. Panodaki mevcut giriş ve çıkışları kullanarak, gruplar ilginç ve özgün kullanıcı etkileşimleri sağlayan programlar oluşturacaklardır. '
+              description_student: Develop innovative computing devices of your own design, using everything you've learned throughout this course.
+              description_teacher: 'In this final project for the course, students team to develop and test a prototype for an innovative computing device based on the Circuit Playground. Using the inputs and outputs available on the board, groups will create programs that allow for interesting and unique user interactions. '
             'Project: Make a Game__':
               name: 'Proje: Bir Oyun Yap'
-              description_student: Öğrenciler, öğrendiklerini birinci bölüm aracılığıyla alıyor ve bilgi üretmek için tahtayı kullanan kendi tasarımlarından bir uygulama geliştiriyorlar.
-              description_teacher: Öğrenciler, öğrendiklerini birinci bölüm aracılığıyla alıyor ve bilgi üretmek için tahtayı kullanan kendi tasarımlarından bir uygulama geliştiriyorlar.
+              description_student: Students take what they've learned through chapter one, and develop an app of their own design that uses the board to output information.
+              description_teacher: Students take what they've learned through chapter one, and develop an app of their own design that uses the board to output information.
             Arrays and Color LEDs__:
               name: Arrays and Color LEDs
-              description_student: Listelerin tek bir değişken isminde çoklu değerleri nasıl saklayabileceğini öğrenmek.
+              description_student: Learn how lists can be used to store multiple values in a single variable name.
               description_teacher: An array is an ordered collection of items, usually of the same type. In this lesson, students learn ways to access either a specific or random value from a list using its index.  They then learn how to access the colorLEDs array that controls the behavior of the color LEDs on the Circuit Playground.  Students will control the color and intensity of each LED, then use what they have learned to program light patterns to create a light show on their Circuit Playground.
             CSD Post-Course Survey:
               name: CSD Post-Course Survey
@@ -5006,7 +5006,7 @@ tr:
               name: Oyun tasarım süreci kullanarak
             'Project: Design a Game':
               name: 'Proje - Bir oyun tasarla'
-        csd5:
+        csd5-2017:
           title: CSD ünite 5 - veri ve toplum
           description_audience: ''
           description_short: İnsanların veri problemlerini çözmek için bilgisayarı nasıl kullandıklarını öğrenin.
@@ -5070,8 +5070,8 @@ tr:
               description_teacher: Bu derste, öğrenciler ikili sayı sistemini öğrenirler. Öğrenciler ikili bir (taban-2) sayı sisteminde yer değerlerini noktalar topluluğuyla temsil eden bir kart setiyle, kartları öne ve arkaya dönerek bitleri "açık" veya "kapalı" konumuna çevirirler, ardından farklı desenlerin sonucunu gözlemlerler. Sonunda, öğrenciler deseni genel 4-bitlik bir sisteme taşırlar.
             8-bit Numbers:
               name: 8- ikilili numaralar
-              description_student: Öğrenciler ikili sayı kavramını inceler ve bir dizi biti çözmek için her bir sayının bit uzunluğunu bilmeleri gerektiğini tartışırlar. Daha sonra, 8-bit sayıları (0-255) kodlarlar ve kodlanmamış olanları çözmek için onlara yardımcı olacak bir kağıdı hileli olarak ters çevirirler. Flippy-do ile çalıştıktan sonra, öğrenciler bu standardizasyonun diğer veri türlerine nasıl genişletilebileceğini tartışırlar.
-              description_teacher: Öğrenciler ikili sayı kavramını inceler ve bir dizi biti çözmek için her bir sayının bit uzunluğunu bilmeleri gerektiğini tartışırlar. Daha sonra, 8-bit sayıları (0-255) kodlarlar ve kodlanmamış olanları çözmek için onlara yardımcı olacak bir kağıdı hileli olarak ters çevirirler. Flippy-do ile çalıştıktan sonra, öğrenciler bu standardizasyonun diğer veri türlerine nasıl genişletilebileceğini tartışırlar.
+              description_student: Students review the concept of binary numbers, and discuss that they need to know the bit-length of each number in order to decode a series of bits.  They then made a flippy-do, a paper manipulative that will help them to encode and decode 8-bit numbers (0-255).  After practicing with the flippy-do, students discuss how they could extend that standardization to the other types of data.
+              description_teacher: Students review the concept of binary numbers, and discuss that they need to know the bit-length of each number in order to decode a series of bits.  They then made a flippy-do, a paper manipulative that will help them to encode and decode 8-bit numbers (0-255).  After practicing with the flippy-do, students discuss how they could extend that standardization to the other types of data.
             Encryption:
               name: Şifreleme
               description_student: Öğrenciler, kişisel veriler için istedikleri farklı güvenlik seviyeleri hakkında bir tartışmaya sahip olurlar. Sınıf gizliliğin önemi hakkında bir anlayış geliştirdikten sonra, ortak için bir not şifrelemek ve ortağın notunu çözerek bilgi şifreleme sürecini öğrenirler. Ders, fiziksel ve dijital güvenliğin önemi hakkında bir tartışma ile sonuçlanır.
@@ -6939,6 +6939,14 @@ tr:
               name: CSP post survey 2018 staging
             CSD post survey 2018 staging:
               name: CSD post survey 2018 staging
+            CSD pre survey 2018 staging:
+              name: CSD pre survey 2018 staging
+            CSP pre survey 2018 staging:
+              name: CSP pre survey 2018 staging
+            CSP mid survey 2018 stagin:
+              name: CSP mid survey 2018 stagin
+            CSP mid survey 2018 staging:
+              name: CSP mid survey 2018 staging
           title: Tüm anketler
           description_audience: ''
           description_short: Place to stage and test Code.org surveys
@@ -6983,7 +6991,7 @@ tr:
           description_audience: ''
           description_short: ''
           description: ''
-        csp-explore:
+        csp-explore-2017:
           stages:
             new stage:
               name: yeni kademe
@@ -6996,14 +7004,14 @@ tr:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
               name: Teknik kurulum - AP dijital portföy ve diğer araçlar
             'Setup: Digital Portfolio and Other Tools':
-              name: 'Kurulum: Dijital Portföy ve Diğer Araçlar'
+              name: 'Setup: Digital Portfolio and Other Tools'
             Post-Course Survey:
               name: Post-Course Survey
           title: Explore - AP Performance Task Prep
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and complete the AP Explore Performance Tasks.
           description: "Bu dersler,AP Araştırma Performans Görevini anlamanıza, bunun için hazırlanmanıza ve yapmanıza yardımcı olmak için buradadır.Her \"ders\", öğretmeninizin sizin gözden geçirmenize  yardımcı olabileceği yardımcı belgelerle olan bağlantıları içerir.NOT: Birinci derste yer alan ikinci öğe Araştırma PT ile doğrudan alakalı değildir, fakat genel teknoloji kurulumunu ve yapmanız gereken  Araştırma ve Oluşturma görevlerinin çeşitli unsurlarının araçlarını kapsar.\\r\n\\r\nBu ünite en son  Kasım 2017'de güncellendi. Müfredat güncellemeleri hakkında daha fazla bilgiyi forum.code.org/c/csp/updates adresinden alabilirsiniz."
-        csp-create:
+        csp-create-2017:
           stages:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
               name: Teknik kurulum - AP dijital portföy ve diğer araçlar
@@ -8810,6 +8818,8 @@ tr:
               name: Rapid Research - Format Showdown
             Lossy vs Lossless Compression:
               name: Lossy vs Lossless Compression
+            Unit 2 Assessment:
+              name: Unit 2 Assessment
         csp3-2018:
           title: CSP Unit 3 - Intro to Programming
           description: "Bu ünite, zengin içerikli etkileşimli uygulamalar yapma yeteneğini ortaya çıkaran bilgisayar programlamasının temel kavramlarını öğretir. Bu kurs programlama dili olarak JavaScript ve uygulama yapmak için programlama ortamı olarak Uygulama Laboratuvarını kullanır ancak bu derslerde öğrenilen kavramlar tüm programlama dilleri ve araçları için geçerlidir.\\r\n\\r\nBu ünite en son 30 Ekim 2017 tarihinde güncellenmiştir. Ders planı güncellemeleriyle ilgili daha fazla bilgi için: forum.code.org/c/csp/updates."
@@ -8864,6 +8874,8 @@ tr:
               name: Lütfen CSP kurs ortası anketini tamamlayın!
               description_student: ''
               description_teacher: ''
+            Creating Functions with Parameters:
+              name: Parametreli Fonksiyonlar yaratma
         csp-explore-2018:
           title: Explore - AP Performance Task Prep
           description: "Bu dersler,AP Araştırma Performans Görevini anlamanıza, bunun için hazırlanmanıza ve yapmanıza yardımcı olmak için buradadır.Her \"ders\", öğretmeninizin sizin gözden geçirmenize  yardımcı olabileceği yardımcı belgelerle olan bağlantıları içerir.NOT: Birinci derste yer alan ikinci öğe Araştırma PT ile doğrudan alakalı değildir, fakat genel teknoloji kurulumunu ve yapmanız gereken  Araştırma ve Oluşturma görevlerinin çeşitli unsurlarının araçlarını kapsar.\\r\n\\r\nBu ünite en son  Kasım 2017'de güncellendi. Müfredat güncellemeleri hakkında daha fazla bilgiyi forum.code.org/c/csp/updates adresinden alabilirsiniz."
@@ -8954,6 +8966,8 @@ tr:
               name: Görselleştirmeler ile Tendleri Bulma
             Check Your Assumptions:
               name: Varsayımlarını kontrol et
+            Unit 4 Assessment:
+              name: Unit 4 Assessment
         csp5-2018:
           title: CSP Unit 5 - Building Apps
           description: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
@@ -9128,6 +9142,8 @@ tr:
               name: Fish Tank - Creating Sprites
             Alien Dance Party - Input:
               name: Alien Dance Party - Input
+            Virtual Pet - Interactions:
+              name: Virtual Pet - Interactions
           title: Introduction to Sprite Lab (PILOT)
           description_audience: Course E/F Students
           description_short: This is a pilot course for Code.org's new Sprite Lab tool for Courses E and F

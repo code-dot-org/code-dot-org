@@ -2111,7 +2111,7 @@ ru:
               name: Planning For the Future
             Sharing Student Work:
               name: Sharing Student Work
-        csp1:
+        csp1-2017:
           title: CSP Unit 1 - The Internet
           description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. The unit then explores the structure and design of the internet and the implications of those design decisions.
           description_short: Explore the challenges about representing information as bits and how to get those bits from one place to another.
@@ -2159,7 +2159,7 @@ ru:
               name: CSP Student Post-Course Survey
             Post-Course Survey:
               name: Post-Course Survey
-        csp2:
+        csp2-2017:
           title: CSP Unit 2 - Digital Information
           description: This unit further explores the ways that digital information is encoded, represented and manipulated. Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.
           description_short: Explore how more complex digital information is represented and manipulated through computation and visualization.
@@ -2209,7 +2209,7 @@ ru:
               name: Practice PT - Encode an Experience
             Post-Course Survey:
               name: Post-Course Survey
-        csp3:
+        csp3-2017:
           title: CSP Unit 3 - Intro to Programming
           description: "This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.\\r\n\\r\nThis unit was last updated October 30th, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
           description_short: Программирование
@@ -2255,7 +2255,7 @@ ru:
               name: Please complete the CSP Mid-course survey!
             Post-Course Survey:
               name: Post-Course Survey
-        csp4:
+        csp4-2017:
           title: CSP Unit 4 - Big Data and Privacy
           description: "The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.\\r\n\\r\nThis unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
           description_short: Explore the data-rich world we live, and how data impacts public policy, personal privacy, security, the law, and ethics.
@@ -2299,7 +2299,7 @@ ru:
               name: Post-Course Survey
             Student Post-Course Survey:
               name: Student Post-Course Survey
-        csp5:
+        csp5-2017:
           title: CSP Unit 5 - Building Apps
           description: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           description_short: Continue to learn foundational concepts of computer programming in JavaScript by making rich, interactive apps.
@@ -3289,7 +3289,7 @@ ru:
               name: Lesson 2,3
             Test stage with bubbles:
               name: Test stage with bubbles
-        csd3:
+        csd3-2017:
           title: CSD Unit 3 - Animations and Games
           description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
           description_short: "Программирование"
@@ -3538,7 +3538,7 @@ ru:
               name: Unit 4 Chapter 1 Assessment
             'Anonymous student survey: Taking the AP exam':
               name: 'Anonymous student survey: Taking the AP exam'
-        csd1:
+        csd1-2017:
           title: CSD Unit 1 - Problem Solving
           description_short: "  Learn how humans work with computers to solve problems."
           description: " \\r\nUnit 1 is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\\r\n"
@@ -3743,7 +3743,7 @@ ru:
               name: RGB цвета
             Processing with Bits:
               name: Processing with Bits
-        csd2:
+        csd2-2017:
           title: CSD Unit 2 - Web Development
           description_audience: ''
           description_short: "  Learn to build your own web site in Web Lab."
@@ -3873,7 +3873,7 @@ ru:
               name: Measuring Student Learning
             AP Preparation and Support:
               name: AP Preparation and Support
-        csd4:
+        csd4-2017:
           title: CSD Unit 4 - The Design Process
           description_audience: ''
           description_short: "  Learn how to design a program that meets the needs of your users."
@@ -4518,7 +4518,7 @@ ru:
           description_short: ''
           description: 'COMING SOON: soon this page will host a set of resources for teachers preparing for the AP exam'
           stages: { }
-        csppostap:
+        csppostap-2017:
           title: CSP Post-AP - Databases and Using Data in Your Apps
           description_audience: ''
           description_short: Learn to collect and use data in App Lab apps.
@@ -4774,7 +4774,7 @@ ru:
               name: Условные операторы
             'Real Life Algorithms: Dice Race':
               name: 'Алгоритмы из повседневной жизни: Гонки кубиков'
-        csd6:
+        csd6-2017:
           title: CSD Unit 6 - Physical Computing
           description_audience: ''
           description_short: Программирование с физическими устройствами
@@ -5014,7 +5014,7 @@ ru:
               name: Using the Game Design Process
             'Project: Design a Game':
               name: 'Project: Design a Game'
-        csd5:
+        csd5-2017:
           title: CSD Unit 5 - Data and Society
           description_audience: ''
           description_short: Learn how people use computers to solve data problems.
@@ -6946,6 +6946,14 @@ ru:
               name: CSP post survey 2018 staging
             CSD post survey 2018 staging:
               name: CSD post survey 2018 staging
+            CSD pre survey 2018 staging:
+              name: CSD pre survey 2018 staging
+            CSP pre survey 2018 staging:
+              name: CSP pre survey 2018 staging
+            CSP mid survey 2018 stagin:
+              name: CSP mid survey 2018 stagin
+            CSP mid survey 2018 staging:
+              name: CSP mid survey 2018 staging
           title: All the surveys
           description_audience: ''
           description_short: Place to stage and test Code.org surveys
@@ -6990,7 +6998,7 @@ ru:
           description_audience: ''
           description_short: ''
           description: ''
-        csp-explore:
+        csp-explore-2017:
           stages:
             new stage:
               name: new stage
@@ -7010,7 +7018,7 @@ ru:
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and complete the AP Explore Performance Tasks.
           description: "These lessons are here to help you understand, prepare for, and do the AP Explore Performance Task.  Each \"lesson\" contains links to helpful documents that your teacher can help walk you through. NOTE: the second item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.\\r\n\\r\nThis unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
-        csp-create:
+        csp-create-2017:
           stages:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
               name: Tech Setup - Your AP Digital Portfolio and Other Tools
@@ -8817,6 +8825,8 @@ ru:
               name: Rapid Research - Format Showdown
             Lossy vs Lossless Compression:
               name: Lossy vs Lossless Compression
+            Unit 2 Assessment:
+              name: Unit 2 Assessment
         csp3-2018:
           title: CSP Unit 3 - Intro to Programming
           description: "This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.\\r\n\\r\nThis unit was last updated October 30th, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
@@ -8871,6 +8881,8 @@ ru:
               name: Please complete the CSP Mid-course survey!
               description_student: ''
               description_teacher: ''
+            Creating Functions with Parameters:
+              name: Creating Functions with Parameters
         csp-explore-2018:
           title: Explore - AP Performance Task Prep
           description: "These lessons are here to help you understand, prepare for, and do the AP Explore Performance Task.  Each \"lesson\" contains links to helpful documents that your teacher can help walk you through. NOTE: the second item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.\\r\n\\r\nThis unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
@@ -8961,6 +8973,8 @@ ru:
               name: Finding Trends with Visualizations
             Check Your Assumptions:
               name: Check Your Assumptions
+            Unit 4 Assessment:
+              name: Unit 4 Assessment
         csp5-2018:
           title: CSP Unit 5 - Building Apps
           description: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
@@ -9135,6 +9149,8 @@ ru:
               name: Fish Tank - Creating Sprites
             Alien Dance Party - Input:
               name: Alien Dance Party - Input
+            Virtual Pet - Interactions:
+              name: Virtual Pet - Interactions
           title: Introduction to Sprite Lab (PILOT)
           description_audience: Course E/F Students
           description_short: This is a pilot course for Code.org's new Sprite Lab tool for Courses E and F

@@ -378,20 +378,20 @@ th:
     C1_artist_intro:
       1:
         image: 'notes/C1_artist_intro_1.png'
-        text: "These are your draw blocks. Use the correct one to move the artist where he needs to go to fill in the grey lines."
+        text: "นี่คือบล็อกที่คุณใช้วาดเส้น ใช้บล็อกให้ถูกต้องเพื่อย้ายศิลปินไปในที่ที่เขาต้องการไปเพื่อวาดเส้นสีเทา"
       2:
         image: 'notes/C1_artist_intro_2.png'
-        text: "These are jump blocks. When you use these, your artist moves but doesn't draw, so use these to jump to the next grey line."
+        text: "นี่คือบล็อกที่คุณใช้กระโดด เมื่อใช้บล็อกเหล่านี้ ศิลปินของคุณย้ายที่แต่ไม่ได้วาดอะไร ดังนั้นจะใช้บล็อกนี้เพื่อกระโดดไปยังเส้นสีเทาเส้นต่อไป"
     C1_bee_level_intro:
       1:
         image: 'notes/C1_bee_level_intro_1.png'
-        text: "Aren't bees super cool? In this next set of puzzles, your goal is to help the bee get to the flowers and get nectar from the flowers and fly over to the honeycomb to make honey. You'll need to use the \"get nectar\" and the \"make honey\" blocks for this exercise."
+        text: "ผึ้งนี่สุดเจ๋งจริงไหม? ในปริศนาชุดถัดไป เป้าหมายของคุณคือช่วยให้ผึ้งบินไปถึงดอกไม้ เก็บน้ำหวานจากเกสรดอกไม้ และบินไปยังรังผึ้งเพื่อทำน้ำผึ้ง คุณจะต้องใช้บล็อก \"เก็บน้ำหวาน\" และ \"ทำน้ำผึ้ง\" สำหรับกิจกรรมนี้"
       2:
         image: 'notes/C1_bee_level_intro_2.png'
-        text: "Every flower has a different number of nectars: 1, 2, 3, or more. We know how much nectar is in the red flowers, by the little number in the corner. So be sure to get all the nectar from the flower before you move forward. Also, every honeycomb can only hold so much honey: 1, 2, 3, or more. So be sure to make as much honey as the honeycomb can hold."
+        text: "ดอกไม้ทุกๆดอกมีจำนวนนำหวานจากเกสรที่ต่างกันไป: 1, 2, 3 หรือมากกว่านั้น เรารู้ว่าดอกไม้สีแดงมีน้ำหวานอยู่เท่าใด โดยดูจากตัวเลขเล็กๆที่มุมขอบ ด้วยเหตุนี้ให้แน่ใจได้เก็บน้ำหวานทั้งหมดจากดอกไม้แล้ว ก่อนที่คุณจะขยับไปข้างหน้า อีกอย่างหนึ่งคือรวงผึ้งแต่ละรวงสามารถเก็บน้ำผึ้งได้จำนวนจำกัด: 1, 2, 3 หรือมากกว่าได้ ดังนั้น ให้แน่ใจว่าผึ้งทำน้ำผึ้งได้เท่าที่รวงผึ้งสามารถกักเก็บได้"
       3:
         image: 'notes/C1_bee_level_intro_3.png'
-        text: "If you're able to get all the nectar and make all the honey, you succeed and go to the next level. Otherwise, you need to try this puzzle again. Play around a while and see what it feels like to \"bee\" a programmer!"
+        text: "หากคุณสามารถเก็บน้ำหวานได้ทั้งหมด และสามารถทำน้ำผึ้งได้ทั้งหมดด้วย ถือว่าคุณประสบความสำเร็จ และเลื่อนขึ้นระดับถัดไป มิฉะนั้น คุณต้องลองเล่นปริศนานี้อีก เล่นให้สนุก และมาดูว่าการเป็นโปรแกรมเมอร์นั้นมันให้ความรู้สึกอย่างไร"
     C1_bee_loops:
       1:
         image: 'notes/C1_bee_loops_1.png'
@@ -482,10 +482,10 @@ th:
     C1_maze_intro_sequencing:
       1:
         image: 'notes/C1_maze_intro_sequencing_1.png'
-        text: "For this puzzle, you need to get the bird to the pig. Look at the puzzle and see what directions it needs to take."
+        text: "สำหรับปริศนานี้ คุณต้องนำทางเจ้านกไปหาเจ้าหมู ให้ดูที่ปริศนาและดูว่าทิศทางใดที่จำเป็นต้องใช้"
       2:
         image: 'notes/C1_maze_intro_sequencing_2.png'
-        text: "You need to drag the blocks over from the toolbox to the workspace. Make sure it's under the \"when run\" block and when you think you've got the right solution, then you can click \"Run\" and watch the bird go to the pig."
+        text: "คุณต้องลากบล็อกจากกล่องเครื่องมือไปยังพื้นที่ทำงาน ให้แน่ใจว่ามันอยู่ใต้บล็อก(@quotes)เมื่อเรียกใช้งาน(@quotes)และเมื่อคุณมั่นใจว่า คุณมีทางออกที่ถูกต้องแล้ว คุณสามารถคลิก(@quotes)เริ่ม(@quotes)และดูเจ้านกขยับไปหาเจ้าหมูนั่น"
     C1_maze_loops:
       1:
         image: 'notes/C1_maze_loops_1.png'

@@ -1008,9 +1008,9 @@ it:
       courseB_playlab_events6_2018_callout:
         courseB_playlab_events6_a: Usa la freccia verde per cambiare la direzione.
       courseC_PlayLab_events8_callout:
-        courseC_PlayLab_events8_callout1: Use this block for when Waddles and Chomp touch!
+        courseC_PlayLab_events8_callout1: Usa questo blocco per indicare cosa fare quando il pinguino e il dinosauro si toccano!
       courseC_PlayLab_events8_2018_callout:
-        courseC_PlayLab_events8_callout1: Use this block for when Waddles and Chomp touch!
+        courseC_PlayLab_events8_callout1: Usa questo blocco per indicare cosa fare quando il pinguino e il dinosauro si toccano!
       courseC_PlayLab_events_challenge1_callout:
         courseC_PlayLab_events_challenge1_1: Questo blocco ti permette di muovere gli attori in diverse parti dello spazio di gioco.
       courseC_PlayLab_events_challenge1_2018_callout:
@@ -1044,9 +1044,9 @@ it:
       courseC_collector_prog_challenge2_callout: { }
       courseC_collector_prog_challenge2_2018_callout: { }
       courseC_harvester_loops1_callout:
-        courseC_harvester_loops1_callout1: Il numero quattro sulla zucca dice che ci sono quattro zucche disponibili da raccogliere.
+        courseC_harvester_loops1_callout1: Il numero quattro sulla zucca indica che ci sono quattro zucche disponibili da raccogliere.
       courseC_harvester_loops1_2018_callout:
-        courseC_harvester_loops1_callout1: Il numero quattro sulla zucca dice che ci sono quattro zucche disponibili da raccogliere.
+        courseC_harvester_loops1_callout1: Il numero quattro sulla zucca indica che ci sono quattro zucche disponibili da raccogliere.
       courseC_maze_debugging5_callout:
         courseC_maze_debugging5_1: Non puoi cancellare i blocchi grigi!
       courseC_maze_debugging5_2018_callout:

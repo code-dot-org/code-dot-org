@@ -468,7 +468,7 @@ it:
   gender:
     male: 'Maschile'
     female: 'Femminile'
-    non_binary: 'Non-binary'
+    non_binary: 'Non-binario'
     not_listed: 'Preferred term not listed'
     none: 'Preferisco non rispondere'
   user_type:

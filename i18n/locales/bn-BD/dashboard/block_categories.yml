@@ -1,0 +1,49 @@
+bn:
+  data:
+    block_categories:
+      Actions: ক্রিয়া
+      Loops: চক্র
+      Functions: ফাংশনগুলি
+      Color: রং
+      Brushes: Brushes
+      Math: গণিত
+      Logic: যুক্তি
+      Variables: চলকগুলো
+      Number: Number
+      String: String
+      Image: Image
+      Boolean: Boolean
+      Conditionals: শর্তযুক্ত
+      Events: ঘটনাবলী
+      Games/Score: Games/Score
+      Comments: Comments
+      Category: Category
+      Prebuilt: Prebuilt
+      Text: পাঠ
+      Picker: Picker
+      Comment: Comment
+      'Variables ': 'Variables '
+      everythingelse: everythingelse
+      numbers: numbers
+      Numbers: Numbers
+      Input: Input
+      Default: Default
+      Sprites: Sprites
+      Behaviors: Behaviors
+      World: World
+      Sprite: Sprite
+      Brush: Brush
+      Make Sprite: Make Sprite
+      Movement: Movement
+      Start: শুরু করুন
+      Groups: Groups
+      Booleans: বুলিয়ান
+      Functional: Functional
+      Predefined: Predefined
+      test: পরীক্ষা
+      test2: test2
+      Foo: Foo
+      Name: নাম
+      NEW BLOCKS: NEW BLOCKS
+      Game/Score: Game/Score
+      Function: ফাংশন

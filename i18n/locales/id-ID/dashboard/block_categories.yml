@@ -1,0 +1,49 @@
+id:
+  data:
+    block_categories:
+      Actions: Aksi
+      Loops: Loop
+      Functions: Fungsi
+      Color: Warna
+      Brushes: Brushes
+      Math: Matematika
+      Logic: Logika
+      Variables: Variabel
+      Number: Number
+      String: String
+      Image: Image
+      Boolean: Boolean
+      Conditionals: Kondisi
+      Events: kegiatan
+      Games/Score: Games/Score
+      Comments: Comments
+      Category: Category
+      Prebuilt: Prebuilt
+      Text: teks
+      Picker: Picker
+      Comment: Comment
+      'Variables ': 'Variables '
+      everythingelse: everythingelse
+      numbers: numbers
+      Numbers: Numbers
+      Input: Masukan
+      Default: Default
+      Sprites: Sprites
+      Behaviors: Behaviors
+      World: World
+      Sprite: Sprite
+      Brush: Brush
+      Make Sprite: Make Sprite
+      Movement: Movement
+      Start: Mulai
+      Groups: Groups
+      Booleans: Boolean
+      Functional: Functional
+      Predefined: Predefined
+      test: test
+      test2: test2
+      Foo: Foo
+      Name: Nama
+      NEW BLOCKS: NEW BLOCKS
+      Game/Score: Game/Score
+      Function: Fungsi
