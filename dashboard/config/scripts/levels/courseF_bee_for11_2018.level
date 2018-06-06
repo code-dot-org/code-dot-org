@@ -36,13 +36,13 @@
     "markdown_instructions": "If your loop is counting down, the increment is **subtracted** from your counter variable each time through. \r\n\r\nWhat should your increment be to collect 15, then 12, then 9, 6, 3 nectar?",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"How much less is 12 than 15?  \\nHow much less is 9 than 12?\\n\\nDo you see a pattern?\",\"hint_id\":\"courseF_bee_for11_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/76c3d43f1af200d376a3940fcc8dded2/courseF_bee_for11.mp3\"}]",
     "name_suffix": "_2018",
-    "contained_level_names": null,
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "show_type_hints": "false",
-    "shape_shift": "false"
+    "shape_shift": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
