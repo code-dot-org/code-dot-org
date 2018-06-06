@@ -160,40 +160,15 @@ class SectionsControllerTest < ActionController::TestCase
 
   test "update: can update section you own" do
     sign_in @teacher
-    section_with_script = create(
-      :section,
-      user: @teacher,
-      script_id: Script.flappy_script.id,
-      login_type: Section::LOGIN_TYPE_WORD,
-      grade: "1",
-      stage_extras: true,
-      pairing_allowed: false,
-      hidden: true
-    )
-
+    section_with_script = create(:section, user: @teacher, script_id: Script.flappy_script.id)
     post :update, params: {
       id: section_with_script.id,
-      course_id: @course.id,
-      name: "My Section",
-      login_type: Section::LOGIN_TYPE_PICTURE,
-      grade: "K",
-      stage_extras: false,
-      pairing_allowed: true,
-      hidden: false
+      course_id: @course.id
     }
     assert_response :success
-
-    # Cannot use section_with_script.reload because login_type has changed
-    section_with_script = Section.find(section_with_script.id)
-
+    section_with_script.reload
     assert_equal(@course.id, section_with_script.course_id)
-    assert_nil(section_with_script.script_id)
-    assert_equal("My Section", section_with_script.name)
-    assert_equal(Section::LOGIN_TYPE_PICTURE, section_with_script.login_type)
-    assert_equal("K", section_with_script.grade)
-    assert_equal(false, section_with_script.stage_extras)
-    assert_equal(true, section_with_script.pairing_allowed)
-    assert_equal(false, section_with_script.hidden)
+    assert_nil section_with_script.script_id
   end
 
   test "update: cannot update section you dont own" do
