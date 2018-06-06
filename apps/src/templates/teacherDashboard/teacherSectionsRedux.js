@@ -451,13 +451,18 @@ export default function teacherSections(state=initialState, action) {
       // them, one must first select the corresponding course from the assignment
       // family dropdown, and then select the script from the secondary dropdown.
       if (!secondaryAssignmentIds.includes(assignId)) {
-        // Scripts currently have only one version, so each script will form its
-        // own assignment family.
-        assignmentFamilies.push({
-          ..._.pick(script, assignmentFamilyFields),
-          assignment_family_title: assignmentFamilyTitle,
-          assignment_family_name: assignmentFamilyName
-        });
+        // Borrow the fields we need to display the assignment family from the
+        // script in that family with the default version year, 2017. This
+        // assumes that script has a display name suitable or describing all
+        // versions in the family like "Course A", not a version-specific name
+        // like "Course A (2017)".
+        if (versionYear === defaultVersionYear) {
+          assignmentFamilies.push({
+            ..._.pick(script, assignmentFamilyFields),
+            assignment_family_title: assignmentFamilyTitle,
+            assignment_family_name: assignmentFamilyName
+          });
+        }
       }
     });
 
