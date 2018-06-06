@@ -27,11 +27,11 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       # Redirect to open roster dialog on home page if user just authorized access
       # to Google Classroom courses and rosters
       redirect_to '/home?open=rosterDialog'
-    elsif @user.provider == 'clever' && @user.persisted?
-      handle_clever_signin(@user)
+    elsif User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(@user.provider) && @user.persisted?
+      handle_untrusted_email_signin(@user)
     elsif @user.persisted?
       # If email is already taken, persisted? will be false because of a validation failure
-      check_and_apply_clever_takeover(@user)
+      check_and_apply_oauth_takeover(@user)
       sign_in_user
     elsif allows_silent_takeover(@user)
       silent_takeover(@user)
@@ -84,9 +84,9 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     auth
   end
 
-  # Clever signins have unique requirements, and must be handled a bit outside the normal flow
-  def handle_clever_signin(user)
-    force_takeover = user.teacher? && user.email.present? && user.email.end_with?('.cleveremailalreadytaken')
+  # Clever/Powerschool signins have unique requirements, and must be handled a bit outside the normal flow
+  def handle_untrusted_email_signin(user)
+    force_takeover = user.teacher? && user.email.present? && user.email.end_with?('.oauthemailalreadytaken')
 
     # If account exists (as looked up by Clever ID) and it's not the first login, just sign in
     if user.persisted? && user.sign_in_count > 0 && !force_takeover
@@ -94,7 +94,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     else
       # Otherwise, it's either the first login, or a user who must connect -
       # offer to connect the Clever account to an existing one, or insist if needed
-      session['clever_link_flag'] = true
+      session['clever_link_flag'] = user.provider
       session['clever_takeover_id'] = user.uid
       session['clever_takeover_token'] = user.oauth_token
       session['force_clever_takeover'] = force_takeover
@@ -140,7 +140,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def allows_silent_takeover(oauth_user)
     allow_takeover = oauth_user.provider.present?
-    allow_takeover &= %w(facebook google_oauth2 windowslive powerschool).include?(oauth_user.provider)
+    allow_takeover &= %w(facebook google_oauth2 windowslive).include?(oauth_user.provider)
     # allow_takeover &= oauth_user.email_verified # TODO (eric) - set up and test for different providers
     lookup_user = User.find_by_email_or_hashed_email(oauth_user.email)
     allow_takeover && lookup_user
