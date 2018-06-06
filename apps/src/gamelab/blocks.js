@@ -257,10 +257,13 @@ export default {
     };
 
     generator.gamelab_behavior_get = function () {
-      return [
-        Blockly.JavaScript.variableDB_.getName(
+      const name = Blockly.JavaScript.variableDB_.getName(
             this.getTitleValue('VAR'),
-            Blockly.Procedures.NAME_TYPE),
+            Blockly.Procedures.NAME_TYPE);
+      // TODO: add support for passing extra params into this block
+      const extraArgs = [];
+      return [
+        `new Behavior(${name}, [${extraArgs.join(', ')}])`,
         Blockly.JavaScript.ORDER_ATOMIC
       ];
     };
