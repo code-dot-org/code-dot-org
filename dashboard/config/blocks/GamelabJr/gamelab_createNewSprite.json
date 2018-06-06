@@ -5,9 +5,9 @@
     "inline": false,
     "blockText": "make a new sprite {EMPTY1} called {NAME} {EMPTY2} with costume {COSTUME} {EMPTY3} at {LOCATION}",
     "color": [
-      0,
-      ".45",
-      ".65"
+      355,
+      ".7",
+      ".7"
     ],
     "args": [
       {
