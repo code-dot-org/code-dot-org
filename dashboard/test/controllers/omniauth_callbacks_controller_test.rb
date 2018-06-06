@@ -336,25 +336,27 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
   end
 
-  test 'clever takeover transfers sections to taken over account' do
-    teacher = create :teacher
-    section = create :section, user: teacher, login_type: 'clever'
-    clever_student = create :student, provider: 'clever', uid: '12345'
-    student = create :student
+  test 'oauth takeover transfers sections to taken over account' do
+    User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.each do |provider|
+      teacher = create :teacher
+      section = create :section, user: teacher, login_type: 'clever'
+      oauth_student = create :student, provider: provider, uid: '12345'
+      student = create :student
 
-    clever_students = [clever_student]
-    section.set_exact_student_list(clever_students)
+      oauth_students = [oauth_student]
+      section.set_exact_student_list(oauth_students)
 
-    # Pull sections_as_student from the database and store them in an array to compare later
-    sections_as_student = clever_student.sections_as_student.to_ary
+      # Pull sections_as_student from the database and store them in an array to compare later
+      sections_as_student = oauth_student.sections_as_student.to_ary
 
-    @request.cookies[:pm] = 'clever_takeover'
-    @request.session['clever_link_flag'] = true
-    @request.session['clever_takeover_id'] = clever_student.uid
-    @request.session['clever_takeover_token'] = '54321'
-    check_and_apply_clever_takeover(student)
+      @request.cookies[:pm] = 'clever_takeover'
+      @request.session['clever_link_flag'] = provider
+      @request.session['clever_takeover_id'] = oauth_student.uid
+      @request.session['clever_takeover_token'] = '54321'
+      check_and_apply_oauth_takeover(student)
 
-    assert_equal sections_as_student, student.sections_as_student
+      assert_equal sections_as_student, student.sections_as_student
+    end
   end
 
   def generate_auth_user_hash(email, user_type)
