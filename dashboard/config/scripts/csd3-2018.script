@@ -9,7 +9,6 @@ has_verified_resources true
 has_lesson_plan true
 project_widget_visible true
 project_widget_types ["gamelab", "weblab"]
-script_announcements [{"notice"=>"Know a teacher interested in teaching computer science?", "details"=>"Applications for the 2018 middle and high school Professional Learning program are now open!  No computer science experience is necessary.", "link"=>"https://code.org/educate/professional-learning-2018", "type"=>"bullhorn"}]
 
 stage 'Programming for Entertainment', flex_category: 'csd3_1'
 named_level 'CSD U3L01 TFMD_2018'
