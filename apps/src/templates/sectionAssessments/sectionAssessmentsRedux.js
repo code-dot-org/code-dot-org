@@ -99,7 +99,9 @@ export default function sectionAssessments(state=initialState, action) {
 
 // Selector functions
 
-export const getAssessmentList = (state) => {
+// Returns an array of objects, each indicating an assessment name and it's id
+// for the assessments in the current script.
+export const getCurrentScriptAssessmentList = (state) => {
   const assessmentStructure = state.sectionAssessments.assessmentsStructureByScript[state.scriptSelection.scriptId] || {};
   return Object.values(assessmentStructure).map(assessment => {
     return {
