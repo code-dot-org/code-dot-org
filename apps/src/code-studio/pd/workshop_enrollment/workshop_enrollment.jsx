@@ -3,12 +3,14 @@
  */
 import React, {PropTypes} from 'react';
 import WorkshopDetails from './workshop_details';
+import FacilitatorBio from './facilitator_bio';
 
 export default class WorkshopEnrollment extends React.Component {
   static propTypes = {
     workshop: PropTypes.object,
     enrollment: PropTypes.object,
-    session_dates: PropTypes.arrayOf(PropTypes.string)
+    session_dates: PropTypes.arrayOf(PropTypes.string),
+    facilitators: PropTypes.arrayOf(PropTypes.object)
   };
 
   render() {
@@ -29,9 +31,13 @@ export default class WorkshopEnrollment extends React.Component {
                 workshop={this.props.workshop}
                 sessionDates={this.props.session_dates}
               />
-
               <h2>Facilitators</h2>
-
+              {this.props.facilitators.map(facilitator => (
+                <FacilitatorBio
+                  key={facilitator.email}
+                  facilitator={facilitator}
+                />
+              ))}
             </div>
             {/* Right Column*/}
             <div className ="span6">
