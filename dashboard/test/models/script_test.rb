@@ -1031,7 +1031,7 @@ endvariants
             'csp17_category_name' => 'CSP Test'
           },
           'name' => {
-            'csp1' => {
+            'csp1-2017' => {
               'title' => 'CSP Unit 1 Test'
             }
           }
@@ -1040,7 +1040,7 @@ endvariants
     }
     I18n.backend.store_translations test_locale, custom_i18n
 
-    script = build(:script, name: 'csp1')
+    script = build(:script, name: 'csp1-2017')
     assignable_info = script.assignable_info
 
     assert_equal('CSP Unit 1 Test', assignable_info[:name])

@@ -39,8 +39,8 @@
     "parent_level_id": 12593,
     "top_level_procedure_autopopulate": "false",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/676bf3bef0e5da5b9706f1fd0950d277=levelbuilder/36839.png",
-    "contained_level_names": null,
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

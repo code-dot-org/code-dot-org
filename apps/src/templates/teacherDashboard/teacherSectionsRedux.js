@@ -161,10 +161,13 @@ export const finishEditingSection = () => (dispatch, getState) => {
   dispatch({type: EDIT_SECTION_REQUEST});
   const state = getState().teacherSections;
   const section = state.sectionBeingEdited;
+
+  const dataUrl = isAddingSection(state) ? '/dashboardapi/sections' : `/sections/${section.id}`;
+  const httpMethod = isAddingSection(state) ? 'POST' : 'PATCH';
   return new Promise((resolve, reject) => {
     $.ajax({
-      url: isAddingSection(state) ? '/dashboardapi/sections' : `/v2/sections/${section.id}/update`,
-      method: 'POST',
+      url: dataUrl,
+      method: httpMethod,
       contentType: 'application/json;charset=UTF-8',
       data: JSON.stringify(serverSectionFromSection(section)),
     }).done(result => {
@@ -196,17 +199,10 @@ export const editSectionLoginType = (sectionId, loginType) => dispatch => {
 export const asyncLoadSectionData = (id) => (dispatch) => {
   dispatch({type: ASYNC_LOAD_BEGIN});
   // If section id is provided, load students for the current section.
-  const courseVersions = true;
-
   dispatch({type: ASYNC_LOAD_BEGIN});
   let apis = [
     '/dashboardapi/sections',
-
-    // The server by default only returns stable courses (version year 2017).
-    // When the courseVersions experiment is enabled, we also ask the
-    // server for other version years (e.g. 2018) of those courses.
-    `/dashboardapi/courses${courseVersions ? '?allVersions=1' : ''}`,
-
+    `/dashboardapi/courses`,
     '/dashboardapi/sections/valid_scripts'
   ];
   if (id) {

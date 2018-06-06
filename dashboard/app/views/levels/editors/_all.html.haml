@@ -54,7 +54,9 @@
 
 .field
   = f.label :video_key, 'Level Video'
-  %p Ask an engineer to add new videos to the videos.csv and data.en.yml files.
+  %p
+    Add new videos by going to
+    %a{href:"/videos/new"} the add video page
   = f.select :video_key, options_for_select(video_key_choices, @level.video_key), {include_blank: true}, {class: 'video-dropdown'}
   .video-preview{style: 'display: block'}
 

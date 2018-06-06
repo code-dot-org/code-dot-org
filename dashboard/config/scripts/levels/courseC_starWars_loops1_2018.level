@@ -48,9 +48,8 @@
     "remove_items_when_actor_collides": "false",
     "parent_level_id": 9177,
     "name_suffix": "_2018",
-    "contained_level_names": null,
     "show_type_hints": "false",
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

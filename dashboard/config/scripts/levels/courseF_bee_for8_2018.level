@@ -41,11 +41,15 @@
     "disable_procedure_autopopulate": "false",
     "shape_shift": "false",
     "name_suffix": "_2018",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-08-25 15:39:08 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-08-25 15:39:08 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-06-05 00:34:16 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>
@@ -101,9 +105,14 @@
           </block>
           <block type="controls_repeat_ext" inline="true"/>
         </category>
-        <category name="Variables" custom="VARIABLE">
+        <category name="Variables ">
           <block type="variables_get">
             <title name="VAR">counter</title>
+          </block>
+        </category>
+        <category name="Comments">
+          <block type="comment">
+            <title name="TEXT"/>
           </block>
         </category>
       </xml>
