@@ -25,8 +25,8 @@ class SectionsController < ApplicationController
 
     # TODO: (madelynkasula) refactor to use strong params
     fields = {}
-    fields[:course_id] = course_id
-    fields[:script_id] = script_id
+    fields[:course_id] = course_id if Course.valid_course_id?(course_id)
+    fields[:script_id] = script_id if Script.valid_script_id?(current_user, script_id)
     fields[:name] = params[:name] unless params[:name].nil_or_empty?
     fields[:login_type] = params[:login_type] if Section.valid_login_type?(params[:login_type])
     fields[:grade] = params[:grade] if Section.valid_grade?(params[:grade])
