@@ -125,7 +125,7 @@ class Section < ActiveRecord::Base
   def login_type_must_be_valid
     errors.add(:login_type, 'must be a valid login type') unless Section.valid_login_type?(login_type)
   end
-  validate :login_type_must_be_valid, unless: -> {login_type.nil?}
+  validate :login_type_must_be_valid
 
   before_create :assign_code
   def assign_code
