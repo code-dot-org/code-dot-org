@@ -1,4 +1,5 @@
 import zip from 'lodash/zip';
+import unzip from 'lodash/unzip';
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
 
 import { install } from '@cdo/apps/gamelab/blocks';
@@ -20,10 +21,7 @@ Blockly.behaviorEditor = new Blockly.FunctionEditor(
     FUNCTION_DESCRIPTION_LABEL: 'What is your behavior supposed to do?',
   },
   'behavior_definition',
-  {
-    [Blockly.BlockValueType.SPRITE]: 'sprite_variables_get',
-    [Blockly.BlockValueType.LOCATION]: 'location_variables_get'
-  },
+  null,
   false /* disableParamEditing */,
   [
     Blockly.BlockValueType.NUMBER,
@@ -42,18 +40,34 @@ const blockXml = `<xml>
 </xml>`;
 
 Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, Blockly.Xml.textToDom(blockXml));
-Blockly.behaviorEditor.openAndEditFunction('acting');
+const block = Blockly.mainBlockSpace.getTopBlocks()[0];
+const name = getInput('name').value;
+const stack = Blockly.Xml.domToBlock(Blockly.mainBlockSpace, Blockly.Xml.textToDom('<xml>' + getInput('stack').value + '</xml>').firstChild);
+
+if (name) {
+  block.setTitleValue(name, 'NAME');
+}
+const [names, types] = unzip(JSON.parse(getInput('arguments').value));
+block.updateParamsFromArrays(names, names, types);
+block.attachBlockToInputName(stack, 'STACK');
+
+Blockly.behaviorEditor.openAndEditFunction(name);
+
+document.querySelector('#functionDescriptionText').value = getInput('description').value;
 
 function getInput(name) {
   return document.querySelector(`input[name="shared_blockly_function[${name}]"]`);
 }
 
 document.querySelector('#shared_function_submit').addEventListener('click', () => {
-  const block = Blockly.mainBlockSpace.getTopBlocks()[0];
+  const block = Blockly.modalBlockSpace.getTopBlocks()[0];
   const procInfo = block.getProcedureInfo();
+  const stack = block.getInputTargetBlock('STACK');
 
   getInput('name').value = procInfo.name;
   getInput('arguments').value = JSON.stringify(zip(procInfo.parameterNames, procInfo.parameterTypes));
   getInput('description').value = document.querySelector('#functionDescriptionText').value;
-  getInput('stack').value = Blockly.Xml.domToText(Blockly.Xml.blockToDom(block.getInputTargetBlock('STACK')));
+  if (stack) {
+    getInput('stack').value = Blockly.Xml.domToText(stack);
+  }
 });

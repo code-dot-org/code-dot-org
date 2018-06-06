@@ -13,7 +13,7 @@ class SharedBlocklyFunctionsController < ApplicationController
   def update
     if @shared_blockly_function.update update_params
       redirect_to(
-        edit_blockly_shared_function_path(id: @shared_blockly_function.id),
+        edit_shared_blockly_function_path(id: @shared_blockly_function.id),
         notice: 'Function definition saved',
       )
     else
