@@ -8550,11 +8550,35 @@ en:
         Packets are routed on different paths from sender to receiver.: Packets are routed on different paths from sender to receiver.
         The receiver computer must confirm to the sending computer that each packet was received.: The receiver computer must confirm to the sending computer that each packet was received.
         Which of the following is NOT true about packets?: Which of the following is NOT true about packets?
+      U2L05 Lossy Lossless MC 1_2018:
+        Lossless compression is fully reversible, meaning the original file can be recreated bit for bit.: Lossless compression is fully reversible, meaning the original file can be recreated bit for bit.
+        Lossless compression throws away unimportant details that a human being will likely be unable to detect.: Lossless compression throws away unimportant details that a human being will likely be unable to detect.
+        Lossy compression is only possible on files that are at least one gigabyte in size before compression.: Lossy compression is only possible on files that are at least one gigabyte in size before compression.
+        Lossy compression techniques are no longer commonly used.: Lossy compression techniques are no longer commonly used.
+        'Multiple Choice 1: Lossy vs Lossless Compression': 'Multiple Choice 1: Lossy vs Lossless Compression'
+        Which of the following is true of lossy and lossless compression techniques?: Which of the following is true of lossy and lossless compression techniques?
+      U2L05 Lossy Lossless MC 2_2018:
+        Both lossy and lossless compression techniques will result in some information being lost from the original file.: Both lossy and lossless compression techniques will result in some information being lost from the original file.
+        Lossless compression is only used in situations where lossy compression techniques can't be used.: Lossless compression is only used in situations where lossy compression techniques can't be used.
+        ? Lossy compression is best suited for situations where some loss of detail is tolerable, especially if it will not be detectable by a human.
+        : Lossy compression is best suited for situations where some loss of detail is tolerable, especially if it will not be detectable by a human.
+        'Multiple Choice 2: Lossy vs Lossless Compression': 'Multiple Choice 2: Lossy vs Lossless Compression'
+        Neither lossy nor lossless compression can actually reduce the number of bits needed to represent a file.: Neither lossy nor lossless compression can actually reduce the number of bits needed to represent a file.
+        Which of the following is true of lossy and lossless compression techniques?: Which of the following is true of lossy and lossless compression techniques?
+      U2L05 Lossy Lossless MC 3_2018:
+        Both lossy and lossless compression techniques will result in some information being lost from the original file.: Both lossy and lossless compression techniques will result in some information being lost from the original file.
+        Lossless compression is only used in situations where lossy compression techniques can't be used.: Lossless compression is only used in situations where lossy compression techniques can't be used.
+        ? Lossy compression is best suited for situations where some loss of detail is tolerable, especially if it will not be detectable by a human.
+        : Lossy compression is best suited for situations where some loss of detail is tolerable, especially if it will not be detectable by a human.
+        'Multiple Choice 2: Lossy vs Lossless Compression': 'Multiple Choice 2: Lossy vs Lossless Compression'
+        Neither lossy nor lossless compression can actually reduce the number of bits needed to represent a file.: Neither lossy nor lossless compression can actually reduce the number of bits needed to represent a file.
+        Which of the following is true of lossy and lossless compression techniques?: Which of the following is true of lossy and lossless compression techniques?
       U2L05 Lossy vs. Lossless MC 1_2018:
         Lossless compression is fully reversible, meaning the original file can be recreated bit for bit.: Lossless compression is fully reversible, meaning the original file can be recreated bit for bit.
         Lossless compression throws away unimportant details that a human being will likely be unable to detect.: Lossless compression throws away unimportant details that a human being will likely be unable to detect.
         Lossy compression is only possible on files that are at least one gigabyte in size before compression.: Lossy compression is only possible on files that are at least one gigabyte in size before compression.
         Lossy compression techniques are no longer commonly used.: Lossy compression techniques are no longer commonly used.
+        Lossy vs. Lossless Compression: Lossy vs. Lossless Compression
         'Multiple Choice 1: Lossy vs Lossless Compression': 'Multiple Choice 1: Lossy vs Lossless Compression'
         Which of the following is true of lossy and lossless compression techniques?: Which of the following is true of lossy and lossless compression techniques?
       U2L05 Lossy vs. Lossless MC 2_2018:
@@ -8565,6 +8589,15 @@ en:
         'Multiple Choice 2: Lossy vs Lossless Compression': 'Multiple Choice 2: Lossy vs Lossless Compression'
         Neither lossy nor lossless compression can actually reduce the number of bits needed to represent a file.: Neither lossy nor lossless compression can actually reduce the number of bits needed to represent a file.
         Which of the following is true of lossy and lossless compression techniques?: Which of the following is true of lossy and lossless compression techniques?
+      U2L05 Test  MC Question_2018:
+        " ": " "
+        1,250 bytes (10,000 bits): 1,250 bytes (10,000 bits)
+        1,253 bytes (10,024 bits): 1,253 bytes (10,024 bits)
+        3,750 bytes (30,000 bits): 3,750 bytes (30,000 bits)
+        3,753 bytes (30,024 bits): 3,753 bytes (30,024 bits)
+        30,003 bytes (240,024 bits): 30,003 bytes (240,024 bits)
+        How many bytes does it take...?: How many bytes does it take...?
+        How many bytes?: How many bytes?
       'U2L06 - MC: Which is an MST?':
         ? "<p>The images below all show the same map (or graph) but have different paths between the points highlighted.</p>\n<p>Please choose the image that is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The “distance” between points is depicted by the number of line segments connecting any two points.</p> \n<img src='https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png'>"
         : "<p>The images below all show the same map (or graph) but have different paths between the points highlighted.</p>\n<p>Please choose the image that is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The “distance” between points is depicted by the number of line segments connecting any two points.</p> \n<img src='https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png'>"
