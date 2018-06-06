@@ -556,7 +556,7 @@
   volunteer_engineer_submission_field_email_desc: "Your email address will never be shared, but we'll send you requests from teachers."
   volunteer_engineer_submission_field_email_placeholder: "Email address"
   volunteer_engineer_submission_field_email_preference: "Can we email you about updates to our courses, volunteer opportunities, or other computer science news?"
-  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy policy)"
+  volunteer_engineer_submission_field_email_preference_privacy: "(Купуялуулук саясатыбызды карагыла)"
   volunteer_engineer_submission_field_email_preference_yes: 'Yes'
   volunteer_engineer_submission_field_email_preference_no: 'No'
   volunteer_engineer_submission_final_paragraph: "You will be listed on a map for local teachers to contact you for the Hour of Code or other volunteer opportunities. Your email and exact address will NEVER be shared by us. But the other information (including approximate location) will be publicly viewable by local teachers."
@@ -1453,7 +1453,7 @@
   playlab_shortcode: "lab"
   artist_shortcode: "art"
   header_home: "Home"
-  header_my_dashboard: "My Dashboard"
+  header_my_dashboard: "Менин тактам"
   header_courses: "Courses"
   header_course_catalog: "Course Catalog"
   header_project_gallery: "Projects"

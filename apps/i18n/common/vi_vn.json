@@ -1062,6 +1062,7 @@
   "studentControl": "Điều khiển cá nhân học sinh",
   "studentLockStateInstructions": "Sử dụng bảng dưới đây để kiểm soát tình trạng của mỗi học sinh.",
   "studentName": "Tên Học sinh",
+  "studentNameHeader": "Student name",
   "studentAnswer": "Student answer",
   "submissionTimestamp": "Submission timestamp",
   "submit": "Gửi",

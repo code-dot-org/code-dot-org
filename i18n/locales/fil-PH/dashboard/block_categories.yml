@@ -1,0 +1,49 @@
+fil:
+  data:
+    block_categories:
+      Actions: Mga aksyon
+      Loops: Mga loop
+      Functions: Mga function
+      Color: Kulay
+      Brushes: Brushes
+      Math: Math
+      Logic: Lohika
+      Variables: Mga variable
+      Number: Number
+      String: String
+      Image: Image
+      Boolean: Boolean
+      Conditionals: Mga conditional
+      Events: Mga event
+      Games/Score: Games/Score
+      Comments: Comments
+      Category: Category
+      Prebuilt: Prebuilt
+      Text: Text
+      Picker: Picker
+      Comment: Comment
+      'Variables ': 'Variables '
+      everythingelse: everythingelse
+      numbers: numbers
+      Numbers: Numbers
+      Input: Input
+      Default: Default
+      Sprites: Mga Sprites
+      Behaviors: Behaviors
+      World: World
+      Sprite: Sprite
+      Brush: Brush
+      Make Sprite: Make Sprite
+      Movement: Movement
+      Start: Panimula
+      Groups: Groups
+      Booleans: Mga Boolean
+      Functional: Functional
+      Predefined: Predefined
+      test: subukan
+      test2: test2
+      Foo: Foo
+      Name: Pangalan
+      NEW BLOCKS: NEW BLOCKS
+      Game/Score: Game/Score
+      Function: Function

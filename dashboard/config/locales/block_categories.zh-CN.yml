@@ -1,0 +1,49 @@
+"zh-CN":
+  data:
+    block_categories:
+      Actions: 操作
+      Loops: 循环
+      Functions: 函数
+      Color: 颜色
+      Brushes: Brushes
+      Math: 数学
+      Logic: 逻辑
+      Variables: 变量
+      Number: Number
+      String: String
+      Image: Image
+      Boolean: Boolean
+      Conditionals: 条件语句
+      Events: 事件
+      Games/Score: Games/Score
+      Comments: Comments
+      Category: Category
+      Prebuilt: Prebuilt
+      Text: 文本
+      Picker: Picker
+      Comment: Comment
+      'Variables ': 'Variables '
+      everythingelse: everythingelse
+      numbers: numbers
+      Numbers: Numbers
+      Input: 输入
+      Default: Default
+      Sprites: 精灵
+      Behaviors: Behaviors
+      World: World
+      Sprite: Sprite
+      Brush: Brush
+      Make Sprite: Make Sprite
+      Movement: Movement
+      Start: 开始
+      Groups: Groups
+      Booleans: 布尔值
+      Functional: Functional
+      Predefined: Predefined
+      test: 测试
+      test2: test2
+      Foo: Foo
+      Name: 姓名
+      NEW BLOCKS: NEW BLOCKS
+      Game/Score: Game/Score
+      Function: 函数

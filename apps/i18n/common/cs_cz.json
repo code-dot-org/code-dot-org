@@ -1062,6 +1062,7 @@
   "studentControl": "Individuální ovládání studentů",
   "studentLockStateInstructions": "Použijte tabulku níže pro kontrolu stavu každého studenta.",
   "studentName": "Jméno studenta",
+  "studentNameHeader": "Student name",
   "studentAnswer": "Student answer",
   "submissionTimestamp": "Časové razítko odeslání",
   "submit": "Odeslat",

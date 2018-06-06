@@ -1062,6 +1062,7 @@
   "studentControl": "Kontrol setiap siswa",
   "studentLockStateInstructions": "Gunakan tabel di bawah ini untuk mengatur negara untuk setiap siswa.",
   "studentName": "Nama siswa",
+  "studentNameHeader": "Student name",
   "studentAnswer": "Student answer",
   "submissionTimestamp": "Pengiriman stempel waktu",
   "submit": "Kirim",

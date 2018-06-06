@@ -5537,13 +5537,13 @@
       courseA_artist_loops12_authored_hint: {}
       courseA_artist_loops12_2018_authored_hint: {}
       courseA_artist_loops2_authored_hint:
-        courseA_artist_loops2_a: ¿No sabes cómo dibujar una línea? Comience unir  bloques
-          a la <xml> <tipo de bloque = "when_run" /> </ xml>   para ver qué pasa.
+        courseA_artist_loops2_a: ¿No sabes cómo dibujar una línea? Comience unir bloques
+          a la <xml><block type="when_run"/></xml> para ver qué pasa.
         courseA_artist_loops2_b: Usa este bloque <xml><block type="simple_move_right"/></xml>
           para resolver este rompecabezas.
       courseA_artist_loops2_2018_authored_hint:
-        courseA_artist_loops2_a: ¿No sabes cómo dibujar una línea? Comience unir  bloques
-          a la <xml> <tipo de bloque = "when_run" /> </ xml>   para ver qué pasa.
+        courseA_artist_loops2_a: ¿No sabes cómo dibujar una línea? Comience unir bloques
+          a la <xml><block type="when_run"/></xml> para ver qué pasa.
         courseA_artist_loops2_b: Usa este bloque <xml><block type="simple_move_right"/></xml>
           para resolver este rompecabezas.
       courseA_artist_loops3_authored_hint:

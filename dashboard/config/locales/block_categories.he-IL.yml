@@ -1,0 +1,49 @@
+"he":
+  data:
+    block_categories:
+      Actions: פעולות
+      Loops: לולאות
+      Functions: פונקציות
+      Color: צבע
+      Brushes: Brushes
+      Math: מתמטיקה
+      Logic: הגיון
+      Variables: משתנים
+      Number: Number
+      String: String
+      Image: Image
+      Boolean: Boolean
+      Conditionals: תנאים
+      Events: אירועים
+      Games/Score: Games/Score
+      Comments: Comments
+      Category: Category
+      Prebuilt: Prebuilt
+      Text: טקסט
+      Picker: Picker
+      Comment: Comment
+      'Variables ': 'Variables '
+      everythingelse: everythingelse
+      numbers: numbers
+      Numbers: Numbers
+      Input: Input
+      Default: Default
+      Sprites: Sprites
+      Behaviors: Behaviors
+      World: World
+      Sprite: Sprite
+      Brush: Brush
+      Make Sprite: Make Sprite
+      Movement: Movement
+      Start: התחל
+      Groups: Groups
+      Booleans: Booleans
+      Functional: Functional
+      Predefined: Predefined
+      test: בדיקה
+      test2: test2
+      Foo: Foo
+      Name: שם
+      NEW BLOCKS: NEW BLOCKS
+      Game/Score: Game/Score
+      Function: פונקציה

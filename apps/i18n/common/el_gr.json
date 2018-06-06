@@ -1062,6 +1062,7 @@
   "studentControl": "Έλεγχος μαθητή ξεχωριστά",
   "studentLockStateInstructions": "Χρησιμοποιήστε τον παρακάτω πίνακα για τον έλεγχο της κατάστασης για κάθε μαθητή.",
   "studentName": "Όνομα μαθητή",
+  "studentNameHeader": "Student name",
   "studentAnswer": "Student answer",
   "submissionTimestamp": "Ημενρομηνία και ώρα υποβολής",
   "submit": "Υποβολή",

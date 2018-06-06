@@ -1,0 +1,49 @@
+hi:
+  data:
+    block_categories:
+      Actions: क्रियाएँ
+      Loops: फंदे
+      Functions: कार्य
+      Color: रंग
+      Brushes: Brushes
+      Math: गणित
+      Logic: तर्क
+      Variables: चर
+      Number: Number
+      String: String
+      Image: Image
+      Boolean: Boolean
+      Conditionals: शर्तें
+      Events: घटनाएँ
+      Games/Score: Games/Score
+      Comments: Comments
+      Category: Category
+      Prebuilt: Prebuilt
+      Text: पाठ
+      Picker: Picker
+      Comment: Comment
+      'Variables ': 'Variables '
+      everythingelse: everythingelse
+      numbers: numbers
+      Numbers: Numbers
+      Input: Input
+      Default: Default
+      Sprites: Sprites
+      Behaviors: Behaviors
+      World: World
+      Sprite: Sprite
+      Brush: Brush
+      Make Sprite: Make Sprite
+      Movement: Movement
+      Start: शुरू करें
+      Groups: Groups
+      Booleans: Booleans
+      Functional: Functional
+      Predefined: Predefined
+      test: परिक्षा
+      test2: test2
+      Foo: Foo
+      Name: नाम
+      NEW BLOCKS: NEW BLOCKS
+      Game/Score: Game/Score
+      Function: समारोह
