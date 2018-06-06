@@ -429,6 +429,10 @@ export default function teacherSections(state=initialState, action) {
 
     action.validScripts.forEach(script => {
       const assignId = assignmentId(null, script.id);
+      const assignmentFamilyName = script.assignment_family_name || script.script_name;
+      const assignmentFamilyTitle = script.assignment_family_title || script.name;
+      const versionYear = script.version_year || defaultVersionYear;
+      const versionTitle = script.version_title || defaultVersionYear;
       validAssignments[assignId] = {
         ...script,
         courseId: null,
@@ -438,9 +442,9 @@ export default function teacherSections(state=initialState, action) {
 
         // Put each script in its own assignment family with the default version
         // year, unless those values were provided by the server.
-        assignment_family_name: script.assignment_family_name || script.script_name,
-        version_year: script.version_year || defaultVersionYear,
-        version_title: script.version_title || defaultVersionYear
+        assignment_family_name: assignmentFamilyName,
+        version_year: versionYear,
+        version_title: versionTitle
       };
 
       // Do not add assignment families for scripts belonging to courses. To assign
@@ -451,8 +455,8 @@ export default function teacherSections(state=initialState, action) {
         // own assignment family.
         assignmentFamilies.push({
           ..._.pick(script, assignmentFamilyFields),
-          assignment_family_title: script.name,
-          assignment_family_name: script.script_name
+          assignment_family_title: assignmentFamilyTitle,
+          assignment_family_name: assignmentFamilyName
         });
       }
     });
