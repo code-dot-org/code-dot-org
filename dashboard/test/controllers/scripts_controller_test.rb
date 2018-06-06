@@ -333,5 +333,10 @@ class ScriptsControllerTest < ActionController::TestCase
     create :script, name: 'dogs3', family_name: 'dogs', version_year: '1899', is_stable: true
     get :show, params: {id: 'dogs'}
     assert_redirected_to "/s/dogs2"
+
+    # do not redirect within script family if the requested script exists
+    create :script, name: 'dogs'
+    get :show, params: {id: 'dogs'}
+    assert_response :success
   end
 end
