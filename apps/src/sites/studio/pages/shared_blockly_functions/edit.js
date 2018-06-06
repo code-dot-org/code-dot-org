@@ -5,8 +5,22 @@ import assetUrl from '@cdo/apps/code-studio/assetUrl';
 import { install } from '@cdo/apps/gamelab/blocks';
 import { valueTypeTabShapeMap } from '@cdo/apps/gamelab/GameLab';
 
+const customSimpleDialog = function ({bodyText, prompt, promptPrefill, onCancel: callback}) {
+  if (prompt) {
+    const result = window.prompt(bodyText, promptPrefill);
+    if (result !== null) {
+      callback(result);
+    }
+  } else {
+    if (window.confirm(bodyText)) {
+      callback();
+    }
+  }
+};
+
 Blockly.inject(document.getElementById('blockly-container'), {
   assetUrl,
+  customSimpleDialog,
   valueTypeTabShapeMap: valueTypeTabShapeMap(Blockly),
   hasVerticalScrollbars: true,
   typeHints: true,
