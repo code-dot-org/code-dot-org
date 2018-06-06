@@ -1,0 +1,47 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "getProp",
+    "blockText": "{SPRITE} {PROPERTY}",
+    "returnType": "None",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "PROPERTY",
+        "options": [
+          [
+            "size",
+            "\"scale\""
+          ],
+          [
+            "rotation",
+            "\"rotation\""
+          ],
+          [
+            "x position",
+            "\"x\""
+          ],
+          [
+            "y position",
+            "\"y\""
+          ],
+          [
+            "costume",
+            "\"costume\""
+          ],
+          [
+            "movement direction",
+            "\"direction\""
+          ],
+          [
+            "tint",
+            "\"tint\""
+          ]
+        ]
+      }
+    ]
+  }
+}

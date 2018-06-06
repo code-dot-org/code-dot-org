@@ -1062,6 +1062,7 @@
   "studentControl": "Individuel student-kontrol",
   "studentLockStateInstructions": "Brug nedenstående tabel for at kontrollere fasen for den enkelte elev.",
   "studentName": "Elevens navn",
+  "studentNameHeader": "Student name",
   "studentAnswer": "Student answer",
   "submissionTimestamp": "Indsendelsestid",
   "submit": "Indsend",

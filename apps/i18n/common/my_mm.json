@@ -1062,6 +1062,7 @@
   "studentControl": "ကျောင်းသား/သူ တစ်ဦးချင်း ထိန်းချုပ်မှု",
   "studentLockStateInstructions": "ကျောင်းသား/သူ တစ်ဦးတစ်ယောက်စီအတွက် အခြေအနေများကို ထိန်းချုပ်နိုင်ရန် အောက်တွင်ပေးထားသော ဇယားကို အသုံးပြုပါ",
   "studentName": "Student Name",
+  "studentNameHeader": "Student name",
   "studentAnswer": "Student answer",
   "submissionTimestamp": "Submission timestamp",
   "submit": "ပေးပို့ပါ",

@@ -1062,6 +1062,7 @@
   "studentControl": "個別學生控管",
   "studentLockStateInstructions": "使用下表控管個別學生的狀態。",
   "studentName": "學生姓名",
+  "studentNameHeader": "Student name",
   "studentAnswer": "Student answer",
   "submissionTimestamp": "提交時間戳記",
   "submit": "提交",

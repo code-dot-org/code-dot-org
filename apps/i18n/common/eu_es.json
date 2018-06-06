@@ -1062,6 +1062,7 @@
   "studentControl": "Ikasleen banakako kontrola",
   "studentLockStateInstructions": "Erabili beheko taula ikasle bakoitzaren egoera kontrolatzeko.",
   "studentName": "Ikaslearen izena",
+  "studentNameHeader": "Student name",
   "studentAnswer": "Student answer",
   "submissionTimestamp": "Submission timestamp",
   "submit": "Bidali",

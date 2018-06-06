@@ -1062,6 +1062,7 @@
   "studentControl": "სტუდენტის ინდივიდუალური კონტროლი",
   "studentLockStateInstructions": "თითოეული მოსწავლის მდგომარეობის გასაკონტროლებლად გამოიყენეთ ქვედა ტაბულა.",
   "studentName": "მოსწავლის სახელი",
+  "studentNameHeader": "Student name",
   "studentAnswer": "Student answer",
   "submissionTimestamp": "გადაცემის ჩაწერის დრო",
   "submit": "გაგზავნა",

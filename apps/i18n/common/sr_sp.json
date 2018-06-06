@@ -1062,6 +1062,7 @@
   "studentControl": "Контрола појединих студената",
   "studentLockStateInstructions": "Use the table below to control the state for each individual student.",
   "studentName": "Име ученика",
+  "studentNameHeader": "Student name",
   "studentAnswer": "Student answer",
   "submissionTimestamp": "Submission timestamp",
   "submit": "Пошаљи",

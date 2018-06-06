@@ -1,0 +1,49 @@
+"az":
+  data:
+    block_categories:
+      Actions: Əmrlər
+      Loops: Dövlər
+      Functions: Funksiyalar
+      Color: Rəng
+      Brushes: Brushes
+      Math: Riyaziyyat
+      Logic: Məntiq
+      Variables: Dəyişənlər
+      Number: Number
+      String: String
+      Image: Image
+      Boolean: Boolean
+      Conditionals: Şərti ifadələr
+      Events: Hadisələr
+      Games/Score: Games/Score
+      Comments: Comments
+      Category: Category
+      Prebuilt: Prebuilt
+      Text: mətn
+      Picker: Picker
+      Comment: Comment
+      'Variables ': 'Variables '
+      everythingelse: everythingelse
+      numbers: numbers
+      Numbers: Numbers
+      Input: Input
+      Default: Default
+      Sprites: Sprites
+      Behaviors: Behaviors
+      World: World
+      Sprite: Sprite
+      Brush: Brush
+      Make Sprite: Make Sprite
+      Movement: Movement
+      Start: Başlayın
+      Groups: Groups
+      Booleans: Booleans
+      Functional: Functional
+      Predefined: Predefined
+      test: yoxla
+      test2: test2
+      Foo: Foo
+      Name: Ad
+      NEW BLOCKS: NEW BLOCKS
+      Game/Score: Game/Score
+      Function: Funksiya

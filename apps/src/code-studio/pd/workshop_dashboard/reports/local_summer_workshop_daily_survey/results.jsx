@@ -1,5 +1,6 @@
 import React, {PropTypes} from 'react';
 import {Tab, Tabs} from 'react-bootstrap';
+import he from 'he';
 
 const styles = {
   table: {
@@ -71,7 +72,7 @@ export default class Results extends React.Component {
                   {
                     this.props.thisWorkshop[session]['general'][question_key].map((answer, j) => (
                       <li key={j}>
-                        {answer}
+                        {he.decode(answer)}
                       </li>
                     ))
                   }
@@ -114,7 +115,7 @@ export default class Results extends React.Component {
                     {
                       this.state.facilitatorIds.map((id, j) => (
                         <td key={j}>
-                          {this.props.thisWorkshop[session]['facilitator'][question_key][id]}
+                          {he.decode(this.props.thisWorkshop[session]['facilitator'][question_key][id])}
                         </td>
                       ))
                     }

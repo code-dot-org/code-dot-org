@@ -1062,6 +1062,7 @@
   "studentControl": "Iga üksiku õpilase kontroll",
   "studentLockStateInstructions": "Kontrolli alltoodud tabeli abil iga üksiku õpilase seisu.",
   "studentName": "Õpilase nimi",
+  "studentNameHeader": "Student name",
   "studentAnswer": "Student answer",
   "submissionTimestamp": "Submission timestamp",
   "submit": "Esita",

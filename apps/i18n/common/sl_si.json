@@ -1062,6 +1062,7 @@
   "studentControl": "Nadzor posameznega učenca",
   "studentLockStateInstructions": "Uporabi spodnjo tabelo, če želiš upravljati s stanjem vsakega učenca posebaj.",
   "studentName": "Ime učenca",
+  "studentNameHeader": "Student name",
   "studentAnswer": "Student answer",
   "submissionTimestamp": "Submission timestamp",
   "submit": "Pošlji",

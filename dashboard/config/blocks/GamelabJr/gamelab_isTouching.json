@@ -1,0 +1,20 @@
+{
+  "category": "Logic",
+  "config": {
+    "func": "isTouching",
+    "blockText": "{THIS} is touching {TARGET}",
+    "args": [
+      {
+        "name": "TARGET",
+        "type": "Sprite"
+      }
+    ],
+    "methodCall": true,
+    "returnType": "Boolean",
+    "color": [
+      197,
+      0.88,
+      0.78
+    ]
+  }
+}

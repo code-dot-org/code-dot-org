@@ -1062,6 +1062,7 @@
   "studentControl": "Controlo individual do aluno",
   "studentLockStateInstructions": "Use a tabela seguinte para controlar o estado de cada etapa individual do aluno.",
   "studentName": "Nome do aluno",
+  "studentNameHeader": "Student name",
   "studentAnswer": "Student answer",
   "submissionTimestamp": "Hora/Data da submissão",
   "submit": "OK",

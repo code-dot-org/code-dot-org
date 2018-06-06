@@ -675,7 +675,7 @@ GEM
     selenium-webdriver (3.8.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.0)
-    sequel (4.45.0)
+    sequel (5.9.0)
     sexp_processor (4.10.1)
     shotgun (0.9.1)
       rack (>= 1.0)
@@ -906,7 +906,7 @@ DEPENDENCIES
   sdoc
   seamless_database_pool!
   selenium-webdriver (= 3.8.0)
-  sequel (~> 4.30)
+  sequel
   shotgun
   simplecov (~> 0.9)
   sinatra (~> 2.0.0.beta2)
