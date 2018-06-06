@@ -33,25 +33,33 @@ Blockly.behaviorEditor = new Blockly.FunctionEditor(
   ]
 );
 
+const DEFAULT_NAME = 'acting';
+
 const blockXml = `<xml>
   <block type="behavior_definition">
-    <title name="NAME">acting</title>
+    <title name="NAME">${DEFAULT_NAME}</title>
   </block>
 </xml>`;
 
 Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, Blockly.Xml.textToDom(blockXml));
 const block = Blockly.mainBlockSpace.getTopBlocks()[0];
 const name = getInput('name').value;
-const stack = Blockly.Xml.domToBlock(Blockly.mainBlockSpace, Blockly.Xml.textToDom('<xml>' + getInput('stack').value + '</xml>').firstChild);
 
 if (name) {
   block.setTitleValue(name, 'NAME');
 }
-const [names, types] = unzip(JSON.parse(getInput('arguments').value));
-block.updateParamsFromArrays(names, names, types);
-block.attachBlockToInputName(stack, 'STACK');
+const [names, types] = unzip(JSON.parse(getInput('arguments').value || '[]'));
+if (names && types) {
+  block.updateParamsFromArrays(names, names, types);
+}
 
-Blockly.behaviorEditor.openAndEditFunction(name);
+const childBlock = Blockly.Xml.textToDom('<xml>' + getInput('stack').value + '</xml>').firstChild;
+if (childBlock) {
+  const stack = Blockly.Xml.domToBlock(Blockly.mainBlockSpace, childBlock);
+  block.attachBlockToInputName(stack, 'STACK');
+}
+
+Blockly.behaviorEditor.openAndEditFunction(name || DEFAULT_NAME);
 
 document.querySelector('#functionDescriptionText').value = getInput('description').value;
 
