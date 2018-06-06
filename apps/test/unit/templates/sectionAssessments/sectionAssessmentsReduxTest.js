@@ -6,6 +6,7 @@ import sectionAssessments, {
   finishLoadingAssessments,
   setAssessmentId,
   getMultipleChoiceStructureForCurrentAssessment,
+  getStudentMCResponsesForCurrentAssessment,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
 
@@ -81,15 +82,30 @@ describe('sectionAssessmentsRedux', () => {
   });
 
   describe('Selector functions', () => {
+    let rootState;
+    beforeEach(() => {
+      rootState = {
+        sectionAssessments: initialState,
+        scriptSelection: {
+          scriptId: 3
+        }
+      };
+    });
+
+    afterEach(()=>{
+      rootState = {};
+    });
+
     describe('getMultipleChoiceStructureForCurrentAssessment', () => {
       it('returns an empty array when no assessments in redux', () => {
-        const rootState = {
-          sectionAssessments: initialState,
-          scriptSelection: {
-            scriptId: 3
-          }
-        };
         const result = getMultipleChoiceStructureForCurrentAssessment(rootState);
+        assert.deepEqual(result, []);
+      });
+    });
+
+    describe('getStudentMCResponsesForCurrentAssessment', () => {
+      it('returns an empty array when no assessments in redux', () => {
+        const result = getStudentMCResponsesForCurrentAssessment(rootState);
         assert.deepEqual(result, []);
       });
     });
