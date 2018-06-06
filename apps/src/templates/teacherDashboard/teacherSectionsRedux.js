@@ -161,13 +161,10 @@ export const finishEditingSection = () => (dispatch, getState) => {
   dispatch({type: EDIT_SECTION_REQUEST});
   const state = getState().teacherSections;
   const section = state.sectionBeingEdited;
-
-  const dataUrl = isAddingSection(state) ? '/dashboardapi/sections' : `/sections/${section.id}`;
-  const httpMethod = isAddingSection(state) ? 'POST' : 'PATCH';
   return new Promise((resolve, reject) => {
     $.ajax({
-      url: dataUrl,
-      method: httpMethod,
+      url: isAddingSection(state) ? '/dashboardapi/sections' : `/v2/sections/${section.id}/update`,
+      method: 'POST',
       contentType: 'application/json;charset=UTF-8',
       data: JSON.stringify(serverSectionFromSection(section)),
     }).done(result => {
