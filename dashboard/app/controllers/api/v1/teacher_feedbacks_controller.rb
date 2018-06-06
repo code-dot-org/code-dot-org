@@ -1,8 +1,9 @@
 class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
   load_and_authorize_resource
 
-  def show
-    @teacher_feedback = TeacherFeedback.find(params[:id])
+  def show_most_recent_feedback
+    @feedback = TeacherFeedback.where(student_id: params[:student_id], level_id: params[:level_id], teacher_id: params[:teacher_id]).last
+    render json: @feedback
   end
 
   # POST /teacher_feedbacks

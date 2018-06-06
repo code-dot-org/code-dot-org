@@ -615,7 +615,11 @@ Dashboard::Application.routes.draw do
       get 'peer_review_submissions/index', to: 'peer_review_submissions#index'
       get 'peer_review_submissions/report_csv', to: 'peer_review_submissions#report_csv'
 
-      resources :teacher_feedbacks, only: [:show, :create]
+      resources :teacher_feedbacks, only: [:create] do
+        collection do
+          get 'show_most_recent_feedback'
+        end
+      end
     end
   end
 
