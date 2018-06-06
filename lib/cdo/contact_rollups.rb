@@ -61,15 +61,15 @@ class ContactRollups
     course2
     course3
     course4
-    coursea
-    courseb
-    coursec
-    coursed
-    coursee
-    coursef
+    coursea-2017
+    courseb-2017
+    coursec-2017
+    coursed-2017
+    coursee-2017
+    coursef-2017
     20-hour
-    express
-    pre-express
+    express-2017
+    pre-express-2017
   ).freeze
 
   CSF_SCRIPT_LIST = CSF_SCRIPT_ARRAY.map {|x| "'#{x}'"}.join(',')
