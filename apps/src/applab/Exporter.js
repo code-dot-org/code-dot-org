@@ -161,7 +161,9 @@ export function getAppOptionsFile(expoMode) {
   if (!expoMode) {
     // call non-whitelisted hasDataAPIs() function and persist as a bool in
     // the exported options:
-    options.exportUsesDataAPIs = getAppOptions().shareWarningInfo.hasDataAPIs();
+    const { shareWarningInfo = {} } = getAppOptions();
+    const { hasDataAPIs } = shareWarningInfo;
+    options.exportUsesDataAPIs = hasDataAPIs && hasDataAPIs();
   }
   return `window.APP_OPTIONS = ${JSON.stringify(options)};`;
 }
@@ -328,8 +330,10 @@ export default {
         appName: appName,
         projectId: project.getCurrentId()
       });
+      const { shareWarningInfo = {} } = getAppOptions();
+      const { hasDataAPIs } = shareWarningInfo;
       const appJs = exportExpoAppEjs({
-        hasDataAPIs: getAppOptions().shareWarningInfo.hasDataAPIs(),
+        hasDataAPIs: hasDataAPIs && hasDataAPIs(),
       });
 
       zip.file(appName + "/package.json", exportExpoPackageJson);
@@ -498,8 +502,10 @@ export default {
       commonCssPath: `${origin}/blockly/css/common.css`,
       applabCssPath: `${origin}/blockly/css/applab.css`,
     });
+    const { shareWarningInfo = {} } = getAppOptions();
+    const { hasDataAPIs } = shareWarningInfo;
     const appJs = exportExpoAppEjs({
-      hasDataAPIs: getAppOptions().shareWarningInfo.hasDataAPIs(),
+      hasDataAPIs: hasDataAPIs && hasDataAPIs(),
     });
 
     const appAssets = generateAppAssets({ html, code });
