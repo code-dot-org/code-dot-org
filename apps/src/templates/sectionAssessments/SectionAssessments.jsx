@@ -3,7 +3,7 @@ import { setScriptId, validScriptPropType } from '@cdo/apps/redux/scriptSelectio
 import {
   asyncLoadAssessments,
   getAssessmentsForCurrentScript,
-  getAssessmentList,
+  getCurrentScriptAssessmentList,
   setAssessmentId,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {connect} from 'react-redux';
@@ -83,7 +83,7 @@ export default connect(state => ({
   assessments: getAssessmentsForCurrentScript(state),
   isLoadingAssessments: state.sectionAssessments.isLoadingAssessments,
   validScripts: state.scriptSelection.validScripts,
-  assessmentList: getAssessmentList(state),
+  assessmentList: getCurrentScriptAssessmentList(state),
   scriptId: state.scriptSelection.scriptId,
   assessmentId: state.sectionAssessments.assessmentId,
 }), dispatch => ({
