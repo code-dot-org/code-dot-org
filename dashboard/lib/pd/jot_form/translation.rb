@@ -137,7 +137,7 @@ module Pd
         answers = included_answers.map do |question_id, answer_data|
           [
             question_id.to_i,
-            answer_data['answer'].strip
+            strip_answer(answer_data['answer'])
           ]
         end.to_h
 
@@ -146,6 +146,17 @@ module Pd
           submission_id: submission_id,
           answers: answers
         }
+      end
+
+      # Strip leading and trailing whitespace from each answer
+      def strip_answer(answer)
+        if answer.is_a? String
+          answer.strip
+        elsif answer.is_a? Array
+          answer.map(&:strip)
+        elsif answer.is_a? Hash
+          answer.transform_values(&:strip)
+        end
       end
     end
   end
