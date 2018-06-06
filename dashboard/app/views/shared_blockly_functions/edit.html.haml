@@ -12,7 +12,7 @@
       display: none;
     }
 
-%h1= @shared_blockly_function.new_record? ? "New Blockly Function" : "Editing Blockly Function #{@shared_blockly_function.name}"
+%h1= @shared_blockly_function.new_record? ? 'New Blockly Function' : 'Editing Blockly Function'
 
 #blockly-container
 
@@ -28,4 +28,4 @@
 
 %script{src: minifiable_asset_path('js/shared_blockly_functions/edit.js')}
 
-= link_to "Back", shared_blockly_functions_path
+= link_to 'Back', shared_blockly_functions_path
