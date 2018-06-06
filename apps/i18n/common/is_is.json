@@ -1062,6 +1062,7 @@
   "studentControl": "Stjórnun einstakra nemenda",
   "studentLockStateInstructions": "Notaðu töfluna hér fyrir neðan til að stjórna stöðu einstakra nemenda.",
   "studentName": "Nafn nemanda",
+  "studentNameHeader": "Student name",
   "studentAnswer": "Student answer",
   "submissionTimestamp": "Tímastimpill skila",
   "submit": "Senda inn",

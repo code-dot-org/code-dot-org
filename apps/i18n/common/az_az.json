@@ -1062,6 +1062,7 @@
   "studentControl": "Fərdi tələbə kontrolu",
   "studentLockStateInstructions": "Hər bir şagirdin vəziyyətini yoxlamaq üçün aşağıdakı cədvəli istifadə edin.",
   "studentName": "Şagirdin adı",
+  "studentNameHeader": "Student name",
   "studentAnswer": "Student answer",
   "submissionTimestamp": "Submission timestamp",
   "submit": "Göndər",

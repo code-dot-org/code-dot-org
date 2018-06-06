@@ -1,7 +1,7 @@
 zh-CN:
   data:
     markdown_instructions:
-      "'pre-assessment survey q25A'_markdown_instruction": "If yes, what computer science course(s) had you taken before your current computer science  class? \n"
+      "'pre-assessment survey q25A'_markdown_instruction": "如果是，在当前的计算机科学课程前，你还学过什么计算机科学课程？\n"
       2-3 Artist 1 new_markdown_instruction: "嗨，我是一个艺术家。您可以编写代码来让我画几乎任何东西。使用几个块，让我在这幅画中沿成灰色线条画。（每条线是 100 像素长）\\r\n\\r\n"
       2-3 Artist 11_markdown_instruction: '为停止标志画一个八边形的边，边长为100像素。 '
       2-3 Artist 12_markdown_instruction: "画一个圆圈来完成这个眼球！\\r\n\\r\n如果每次都是转1度，你需要重复次才能完成这个圈？ "
@@ -5546,18 +5546,18 @@ zh-CN:
         * Click the _plus_ button at the bottom of the if block to add an else.
         * Add commands to make the gears spin opposite of the direction that they do when the space bar is pressed.
       CSD U3 Else_2018_markdown_instruction: |-
-        # What If My Condition Isn't True?
+        # 如果我的条件不为真呢?
         
         <img src="https://images.code.org/1a997d78fcd88efeb9e6dc5a02aa88e8-image-1464706463138.53.58.png" width="125px" style="float:right">
         
-        Sometimes we want to tell our program what to do if a condition is `true`, but also what to do if it's `false`. Pressing the plus button at the bottom of your conditional block will give you another section called `else`. This `else` section will be run whenever the condition in the `if` before it is `false`.
+        有时，我们要告诉程序在条件为`真`时做什么，但也有时候要决定为`假`时做什么。在条件模块下点击加号按钮，可以增加一个叫做`否则`的章节。 `否则`章节会在`如果`条件为`假`时运行。
         
-        # Do This
-        The gears are back again. The last time you worked with them, you made them spin when the space bar is pressed. Instead of the gears only spinning when the space key is pressed, we want them to spin one way when the space key is pressed and spin the other way when it's not pressed.
+        # 这样做
+        齿轮又回来了。上次使用它们时，在按下空格键时让他们旋转。这次在按下空格键时让它们往一个方向旋转，在没按下时往另一个方向旋转。
         <img src="https://images.code.org/b074d47ca8dfa5ab3bfd08344b4f4e42-image-1464706389475.gif" style="float:right">
         
-        * Click the _plus_ button at the bottom of the if block to add an else.
-        * Add commands to make the gears spin opposite of the direction that they do when the space bar is pressed.
+        * 点击如果模块下的_加号_按钮来增加一个否则章节。
+        * 增加命令来让齿轮往按下空格时的相反方向转动。
       CSD U3 Entertainment Sample 1 - unembed_markdown_instruction: |-
         # 外星人跳跃\r
         \r
@@ -9922,7 +9922,7 @@ zh-CN:
       CSD U3 game choose background_markdown_instruction: |
         # Choose your Backgrounds
         
-        Now that you have the backgrounds that you need, you'll write the code to choose the correct background.  You've seen this done in [Lesson 15 Level 11](/s/csd3/stage/15/puzzle/11).
+        Now that you have the backgrounds that you need, you'll write the code to choose the correct background.  You've seen this done in [Lesson 19 Level 11](/s/csd3/stage/19/puzzle/11).
         
         After you've written the code, test it by changing the starting value of your variables and making sure the correct background shows up.
       CSD U3 game choose background_2018_markdown_instruction: |
@@ -9960,7 +9960,7 @@ zh-CN:
       CSD U3 game display boards_markdown_instruction: |
         # Display Boards
         
-        Now that your backgrounds are working, you can add your display boards.  Most games have a score board, but you might also want to display information about player level or lives remaining.  Look at [Lesson 12 Puzzle 9](/s/csd3/stage/12/puzzle/9) for an example of how to make a scoreboard.
+        Now that your backgrounds are working, you can add your display boards.  Most games have a score board, but you might also want to display information about player level or lives remaining.  Look at [Lesson 16 Puzzle 9](/s/csd3/stage/16/puzzle/9) for an example of how to make a scoreboard.
         
         For each display board:
         * Create a function to display the information
@@ -10627,7 +10627,7 @@ zh-CN:
         * Read through the properties and experiment with them
         * Add a label element next to each that describes what they do (don't forget to give it an id too!)
       CSD U4 - Design Mode Project_markdown_instruction: "# Mocking Up Your App\n\nUsing your paper prototype, create a digital version of your screen using the Design Mode elements you've learned about.\n\n# Do This\n\n* Rename the screen to match your _namespace_.\n* Use the built-in elements to lay out your app screen, giving each a proper ID\n\\t* For example, if your namespace is \"home_\" you might create IDs like:\n    \\t* \"home_title\"\n        * \"home_login_button\"\n        * \"home_logo\"\n* For any components of your app that can't be recreated with the built in elements you can either:\n\\t* Redesign to utilize built in elements\n    * Find an image to use in place of your element\n    * Draw the element using your preferred image editor\n* Share your design regularly with your teammates to ensure consistent style"
-      CSD U4 - Design Mode Project_2018_markdown_instruction: "# Mocking Up Your App\n\nUsing your paper prototype, create a digital version of your screen using the Design Mode elements you've learned about.\n\n# Do This\n\n* Rename the screen to match your _namespace_.\n* Use the built-in elements to lay out your app screen, giving each a proper ID\n\\t* For example, if your namespace is \"home_\" you might create IDs like:\n    \\t* \"home_title\"\n        * \"home_login_button\"\n        * \"home_logo\"\n* For any components of your app that can't be recreated with the built in elements you can either:\n\\t* Redesign to utilize built in elements\n    * Find an image to use in place of your element\n    * Draw the element using your preferred image editor\n* Share your design regularly with your teammates to ensure consistent style"
+      CSD U4 - Design Mode Project_2018_markdown_instruction: "# Mocking Up Your App\n\nUsing your paper prototype, create a digital version of your screen using the Design Mode elements you've learned about.\n\n# Do This\n\n* Rename the screen to match your _namespace_.\n* Use the built-in elements to lay out your app screen, giving each a proper ID\n\\t* For example, if your namespace is \"home_\" you might create IDs like:\n    \\t* \"home_title\"\n        * \"home_login_button\"\n        * \"home_logo\"\n* For any components of your app that can't be recreated with the built in elements you can either:\n\\t* Redesign to utilize built in elements\n    * Find an image to use in place of your element\n    * Draw the element using your preferred image editor\n* Make sure that you and your teammates are regularly looking at each other's designs to ensure consistent style"
       CSD U4 - Design Mode Text_markdown_instruction: "# Adding Text\n<img src=\"https://images.code.org/86ba633e04f90f3ca47dff3dcd064847-image-1469812708683.15.36.png\" style=\"float: right; width: 75px\"/>\nThe label element lets you add any text you'd like to your app. Just drag out a label block and set its \"text\" property. \n\n# Do This\nUse a label element to create a title for this app.\n\n* Drag out a label and place it on the top of the screen\n* Change the id to \"titleLabel\"\n* Change the text to \"My App\"\n* Increase the font size\n* Choose a color you like for the title\n\n"
       CSD U5 Amazon Data Video_markdown_instruction: 观看此视频, 了解亚马逊如何解决这个问题, 。当你看的时候，考虑是什么数据被收集, 它是从哪里来的。
       CSD U5 Amazon Data Video_2018_markdown_instruction: 观看此视频, 了解亚马逊如何解决这个问题, 。当你看的时候，考虑是什么数据被收集, 它是从哪里来的。
@@ -11912,9 +11912,9 @@ zh-CN:
       CSD U6 colorLeds debug_2018_markdown_instruction: |
         <img src="https://images.code.org/723f036c40ef2770426d5d437e69fcde-image-1527268321449.png" style="width:250px; float:right">
         
-        # Debug: colorLeds
+        # 调试: 彩色LED灯
         
-        Can you debug the index values so that the rainbow shows up on the board like in the picture?
+        你能调试索引值，来让彩虹像图片上显示的一样吗？
       CSD U6 colorLeds intensity_markdown_instruction: |-
         #改变亮度\r
         \r
@@ -15101,7 +15101,7 @@ zh-CN:
         * Work on your app until it works. Try to stay focused on only the single piece of functionality you've chosen
         * When done, pick a new idea and start the process over
       CSDU4 Project Import_markdown_instruction: "# Back To Your App\n\nNow that you've had some practice with importing screens, it's time to start working on your team's app.\n\n# Do This\n\nEach member of your team is going to create their own copy of the app, with all of the team members' screens imported in. This will be your copy of the app, and the copy that you will start to add code to in the next lesson.\n\n* Collect all of the sharing urls for your team's pages\n\\t* You can find the share url by going back to the last level of the previous lesson, or by finding the screen in your [projects directory](/projects)\n* Import each of the screens, one at a time\n\\t* If you run into an ID error with one of the screens, discuss the issue with the screen's creator so it can be fixed and imported\n* Delete the default \"screen1\"\n* Set the main screen as the default\n\nDon't worry about adding any code at this point; we'll get to that in the next level."
-      CSDU4 Project Import_2018_markdown_instruction: "# Back To Your App\n\nNow that you've had some practice with importing screens, it's time to start working on your team's app.\n\n# Do This\n\nEach member of your team is going to create their own copy of the app, with all of the team members' screens imported in. This will be your copy of the app, and the copy that you will start to add code to in the next lesson.\n\n* Collect all of the sharing urls for your team's pages\n\\t* You can find the share url by going back to the last level of the previous lesson, or by finding the screen in your [projects directory](/projects)\n* Import each of the screens, one at a time\n\\t* If you run into an ID error with one of the screens, discuss the issue with the screen's creator so it can be fixed and imported\n* Delete the default \"screen1\"\n* Set the main screen as the default\n\nDon't worry about adding any code at this point; we'll get to that in the next level."
+      CSDU4 Project Import_2018_markdown_instruction: "# Back To Your App\n\nNow that you've had some practice with importing screens, it's time to start working on your team's app.\n\n# Do This\n\nEach member of your team is going to create their own copy of the app, with all of the team members' screens imported in. This will be your copy of the app, and the copy that you will start to add code to in the next lesson.  (Don't forget that you'll also need to import your own screen into this project.)\n\n* Collect all of the sharing urls for your team's pages, **including your own**\n\\t* Each team member can find the share url for their own screen by going back to the last level of the previous lesson, or by finding the screen in their [projects directory](/projects)\n* Import each of the screens, one at a time\n\\t* If you run into an ID error with one of the screens, discuss the issue with the screen's creator so it can be fixed and imported\n* Delete the default \"screen1\"\n* Set the main screen as the default\n\nDon't worry about adding any code at this point; we'll get to that in the next level."
       CSDU4 Quiz App Demo_markdown_instruction: |-
         # Quiz Me
         
@@ -16680,7 +16680,7 @@ zh-CN:
         <a href="https://images.code.org/8abc8eedb4975d2c55ac5848cac0d0ed-image-1454087887353.png" target="_blank">
         <img src="https://images.code.org/8abc8eedb4975d2c55ac5848cac0d0ed-image-1454087887353.png" style="width: 250px; float: right">
         </a>
-        <i>Click to enlarge.</i>
+        <i>点击放大。</i>
         </div>
       CSP U5 AP Practice Choose the Algorithm_markdown_instruction: "# AP 练习\n- 确定算法\\r\n\\r\n**AP 创建表演任务**的其中一个环节就是选择你要开发的算法。\\r\n\\r\n<div style=\"width:\n80%; margin: auto; background-color: #EEEEEE; padding: 10px; font-family:\nserif; font-size: 12pt\">\\r\n\\r\n<b>3. 程序代码</b>\\r\n<ul>\\r\n<li>用一个<b>椭圆</b>标示出程序中你创建的实现算法的部分，它集成了其它算法和数学或逻辑的概念。</li>\\r\n</ul>\\r\n</div>\\r\n<br>\\r\n这时这个问题的评分指南\\r\n<div style=\"magin:auto\">\\r\n\\t<img\nsrc=\"https://images.code.org/3240bf9a7f457b8590cf28c4dd4d5418-image-1516294760622.58.32\nAM.png\">\\r\n<img src=\"https://images.code.org/4edd1b265ad8932a7d6b9294e5622106-image-1516294762983.58.44\nAM.png\">\\r\n</div>\\r\n\\r\n\\r\n# 选择学生开发的算法\\r\n\\r\n下面是从刚刚完成的颜色侦探活动的程序代码。\\r\n\\r\n![](https://images.code.org/4708875d71e4dc7cd06e2c1e472d8fdc-image-1516311447828.png)\\r\n\\r\n**写下哪个椭圆(A, B, C, or D)内的代码最符合学生开发的算法的标准。**\\r\n\\r\n**用评分指南的标准来解释你的答案。**"
       CSP U5 AP Practice Choose the Algorithm_2018_markdown_instruction: "# AP 练习\n- 确定算法\\r\n\\r\n**AP 创建表演任务**的其中一个环节就是选择你要开发的算法。\\r\n\\r\n<div style=\"width:\n80%; margin: auto; background-color: #EEEEEE; padding: 10px; font-family:\nserif; font-size: 12pt\">\\r\n\\r\n<b>3. 程序代码</b>\\r\n<ul>\\r\n<li>用一个<b>椭圆</b>标示出程序中你创建的实现算法的部分，它集成了其它算法和数学或逻辑的概念。</li>\\r\n</ul>\\r\n</div>\\r\n<br>\\r\n这时这个问题的评分指南\\r\n<div style=\"magin:auto\">\\r\n\\t<img\nsrc=\"https://images.code.org/3240bf9a7f457b8590cf28c4dd4d5418-image-1516294760622.58.32\nAM.png\">\\r\n<img src=\"https://images.code.org/4edd1b265ad8932a7d6b9294e5622106-image-1516294762983.58.44\nAM.png\">\\r\n</div>\\r\n\\r\n\\r\n# 选择学生开发的算法\\r\n\\r\n下面是从刚刚完成的颜色侦探活动的程序代码。\\r\n\\r\n![](https://images.code.org/4708875d71e4dc7cd06e2c1e472d8fdc-image-1516311447828.png)\\r\n\\r\n**写下哪个椭圆(A, B, C, or D)内的代码最符合学生开发的算法的标准。**\\r\n\\r\n**用评分指南的标准来解释你的答案。**"
@@ -21095,7 +21095,10 @@ zh-CN:
       Poorva copy U3L2 Using Simple Commands_markdown_instruction: "<img src=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\" align=right>\n\nGiven only 4 turtle commands, write code in App Lab to complete the drawings in each of the challenges below.  Your goal is to write code that solves the problem as efficiently as possible using only the commands provided.\n\nWhat does “efficient” mean?  In computer science it can actually mean several different things depending on what you’re talking about.  Work on these challenges, try to solve them in a way that you think is best and we’ll ask about efficiency at the end.\n\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\" align=right>\n# Do This: \nDraw a 1 x 1 square to the front and left of the turtle as efficiently as possible. The program should stop with turtle in its original position, facing its original direction.\n\nOnce you think you have a solution, click the Finish button - it will appear once you run the program."
       Poorva-test_markdown_instruction: "# Header 1\n## Header 2\n### Header 3\n#### Header 4\n##### Header 5\n\nThis is regular text, **bolded text** and *italicized text*. "
       Practice Create Performance Task_markdown_instruction: "# Practice Create Performance Task\n\nYou've finally made it to the end of the Building Apps Unit! We will continue some programming in the next unit, but for now we are going to use all the new concepts you have learn to create something of your own design! \n\n# Do This:\n\n* **Read the Project Overview** to understand the entire project.\n* **Follow the Project Planning Guide**.\n* **Implement your final program in this level**."
-      Practice Create Performance Task_2018_markdown_instruction: "# Practice Create Performance Task\n\nYou've finally made it to the end of the Building Apps Unit! We will continue some programming in the next unit, but for now we are going to use all the new concepts you have learn to create something of your own design! \n\n# Do This:\n\n* **Read the Project Overview** to understand the entire project.\n* **Follow the Project Planning Guide**.\n* **Implement your final program in this level**."
+      Practice Create Performance Task_2018_markdown_instruction: |-
+        # Create Performance Task
+        
+        It's time to complete the Create Performance Task. Complete it here.
       Predict Loop I_markdown_instruction: |-
         # 预测\r
         \r
@@ -21990,7 +21993,10 @@ zh-CN:
       U2L04 Assessment3_2018_markdown_instruction: 'Can you know in advance the path a message will take between you and another computer on the Internet? Justify your answer.  '
       U2L04 Free Response Wrap Up_markdown_instruction: 'How do you think the routers are physically connected? Does it matter to you? Why or why not?  '
       U2L05 - NetSim - Packets and Building TCP_markdown_instruction: "## Packets and Making a Reliable Internet\n\n**Challenge:** Develop a protocol for reliably sending a message across an unreliable network\n\n**An Unreliable Internet Simulator:** The current version of the Internet Simulator is modeled after some actual constraints of the Internet\n- Messages must be divided into packets which may contain <em><strong> at most eight (8) ASCII characters </em></strong>\n- Messages should be long enough to require at least 10 packets\n- Packets may not arrive in the order sent\n- Packets may be dropped while in transmission\n\n**Directions:** In a group or individually join a router in the Internet Simulator and practice sending messages given these new constraints. Once you are comfortable with the challenge, iteratively design a protocol that can reliably send a message to a partner. You and your partner should join <em><strong> DIFFERENT </strong></em> routers.\n\n**Protocol Requirements:**\n- All communication can only be done through the Internet Simulator\n- You must send a message that spans at least 10 packets (i.e. an 80 character ASCII message). \n- The protocol should account for the possibility that the characters might be entirely random (i.e. not necessarily English - do not count on human intuition to reconstruct the message. The message is not known beforehand.)\n- The sender and receiver must be confident the full message was successfully transmitted and reconstructed."
-      U2L05 Lossy vs. Lossless FR 1_2018_markdown_instruction: In general, what are reasons that someone would choose to use lossy compression? When would they choose to use lossless compression? Write a brief response below.
+      U2L05 Lossy vs. Lossless FR 1_2018_markdown_instruction: |-
+        # When to use lossy compression?
+        
+        In general, what are reasons that someone would choose to use lossy compression? Write a brief response below including at least one example of a situation when lossy compression would be appropriate.
       U2L05 Reflection 1_markdown_instruction: 'In your own words, what were the primary obstacles you needed to overcome in today’s challenge? How do these obstacles mirror actual problems encountered on the Internet?  '
       U2L05 Reflection 1_2018_markdown_instruction: 'In your own words, what were the primary obstacles you needed to overcome in today’s challenge? How do these obstacles mirror actual problems encountered on the Internet?  '
       U2L07 Assessment5_markdown_instruction: 'When analyzing algorithms why doesn''t the amount of real time (clock time) tell us very much about the algorithm''s "efficiency"?  '
@@ -29898,6 +29904,16 @@ zh-CN:
       courseD_playLab_cond6a_markdown_instruction: "我们不想让海盗呆在\"安全区\"太久！ \\r\n\\r\n在`如果`语句下增加代码，如果海盗（演员1）在安全区里，程序等一秒，然后只要他呆在章鱼线下，就减一分。"
       courseD_playLab_cond6a_2018_markdown_instruction: "我们不想让海盗呆在\"安全区\"太久！ \\r\n\\r\n在`如果`语句下增加代码，如果海盗（演员1）在安全区里，程序等一秒，然后只要他呆在章鱼线下，就减一分。"
       courseD_playLab_cond6cloneForTest_markdown_instruction: 我们能让这个工作吗？
+      courseD_playLab_condFP_2018_markdown_instruction: |-
+        Now, build your own game to show off to your friends!
+        
+        ---
+        
+        You could:
+        - Have the pirate and ninja work together to get points from the octopus
+        - Have both octopuses follow the pirate, doing double damage to the ninja when they collide
+        - Have each character disappear when touched by the ninja
+        - Invent your own game!
       courseD_scrat_ramp1_markdown_instruction: 对于这个关卡，把所有的块都拼在一起，并点击"运行"来看看！
       courseD_scrat_ramp1_2018_markdown_instruction: 对于这个关卡，把所有的块都拼在一起，并点击"运行"来看看！
       courseD_scrat_ramp2_markdown_instruction: 将额外的 "向前移动" 块拖出工具箱, 然后将所有块附加到 "运行时" 以完成代码。

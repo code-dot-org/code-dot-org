@@ -1,0 +1,49 @@
+"km":
+  data:
+    block_categories:
+      Actions: សកម្មភាព
+      Loops: រង្វិល​ជុំ
+      Functions: អនុគមន៍
+      Color: ពណ៌
+      Brushes: Brushes
+      Math: គណិតវិទ្យា
+      Logic: តក្កវិជ្ជា
+      Variables: អថេរ
+      Number: Number
+      String: String
+      Image: Image
+      Boolean: Boolean
+      Conditionals: លក្ខខណ្ឌ
+      Events: ព្រឹត្តិការណ៍
+      Games/Score: Games/Score
+      Comments: Comments
+      Category: Category
+      Prebuilt: Prebuilt
+      Text: អត្ថ​​បទ
+      Picker: Picker
+      Comment: Comment
+      'Variables ': 'Variables '
+      everythingelse: everythingelse
+      numbers: numbers
+      Numbers: Numbers
+      Input: Input
+      Default: Default
+      Sprites: Sprites
+      Behaviors: Behaviors
+      World: World
+      Sprite: Sprite
+      Brush: Brush
+      Make Sprite: Make Sprite
+      Movement: Movement
+      Start: ចាប់​ផ្ដើម
+      Groups: Groups
+      Booleans: Booleans
+      Functional: Functional
+      Predefined: Predefined
+      test: សាក​ល្បង
+      test2: test2
+      Foo: Foo
+      Name: ឈ្មោះ
+      NEW BLOCKS: NEW BLOCKS
+      Game/Score: Game/Score
+      Function: អនុគមន៍

@@ -1,5 +1,5 @@
 {
-  "achievements": "Achievements",
+  "achievements": "الانجازات",
   "activity": "نشاط",
   "actions": "الإجراءات",
   "add": "أضف",
@@ -1062,6 +1062,7 @@
   "studentControl": "النحكم الفردى للطالب",
   "studentLockStateInstructions": "استخدم الجدول بالأسفل لتتحكم بالحالة لكل طالب فردياً.",
   "studentName": "اسم التلميذ",
+  "studentNameHeader": "Student name",
   "studentAnswer": "Student answer",
   "submissionTimestamp": "Submission timestamp",
   "submit": "تسجيل",

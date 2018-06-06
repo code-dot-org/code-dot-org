@@ -1062,6 +1062,7 @@
   "studentControl": "کنترل فردی دانش آموز",
   "studentLockStateInstructions": "از جدول زیر برای کنترل وضع فردی هر دانش آموز استفاده کنید.",
   "studentName": "نام دانش آموز",
+  "studentNameHeader": "Student name",
   "studentAnswer": "Student answer",
   "submissionTimestamp": "Submission timestamp",
   "submit": "ارسال کنید",

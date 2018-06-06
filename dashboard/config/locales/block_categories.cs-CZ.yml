@@ -1,0 +1,49 @@
+"cs":
+  data:
+    block_categories:
+      Actions: Akce
+      Loops: Smyčky
+      Functions: Funkce
+      Color: Barva
+      Brushes: Brushes
+      Math: Matematika
+      Logic: Logika
+      Variables: Proměnné
+      Number: Number
+      String: String
+      Image: Image
+      Boolean: Boolean
+      Conditionals: Podmínky
+      Events: Události
+      Games/Score: Games/Score
+      Comments: Comments
+      Category: Category
+      Prebuilt: Prebuilt
+      Text: text
+      Picker: Picker
+      Comment: Comment
+      'Variables ': 'Variables '
+      everythingelse: everythingelse
+      numbers: numbers
+      Numbers: Numbers
+      Input: Input
+      Default: Default
+      Sprites: Sprites
+      Behaviors: Behaviors
+      World: World
+      Sprite: Sprite
+      Brush: Brush
+      Make Sprite: Make Sprite
+      Movement: Movement
+      Start: Spustit
+      Groups: Groups
+      Booleans: Logické hodnoty
+      Functional: Functional
+      Predefined: Predefined
+      test: otestuj
+      test2: test2
+      Foo: Foo
+      Name: Jméno
+      NEW BLOCKS: NEW BLOCKS
+      Game/Score: Game/Score
+      Function: Funkce

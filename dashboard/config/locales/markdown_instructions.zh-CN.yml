@@ -1,9 +1,9 @@
 "zh-CN":
   data:
     markdown_instructions:
-      "'pre-assessment survey q25A'_markdown_instruction": "If yes, what computer
-        science course(s) had you taken before your current computer science  class?
-        \n"
+      "'pre-assessment survey q25A'_markdown_instruction": '如果是，在当前的计算机科学课程前，你还学过什么计算机科学课程？
+
+'
       2-3 Artist 1 new_markdown_instruction: "嗨，我是一个艺术家。您可以编写代码来让我画几乎任何东西。使用几个块，让我在这幅画中沿成灰色线条画。（每条线是
         100 像素长）\r\n\r\n"
       2-3 Artist 11_markdown_instruction: '为停止标志画一个八边形的边，边长为100像素。 '
@@ -4080,20 +4080,19 @@
         style=\"float:right\">\r\n\r\n* Click the _plus_ button at the bottom of the
         if block to add an else.\r\n* Add commands to make the gears spin opposite
         of the direction that they do when the space bar is pressed."
-      CSD U3 Else_2018_markdown_instruction: "# What If My Condition Isn't True?\r\n\r\n<img
-        src=\"https://images.code.org/1a997d78fcd88efeb9e6dc5a02aa88e8-image-1464706463138.53.58.png\"
-        width=\"125px\" style=\"float:right\">\r\n\r\nSometimes we want to tell our
-        program what to do if a condition is `true`, but also what to do if it's `false`.
-        Pressing the plus button at the bottom of your conditional block will give
-        you another section called `else`. This `else` section is a fallback - it
-        will get called whenever the condition in the `if` before it is `false`.\r\n\r\n#
-        Do This\r\nThe gears are back again. The last time you worked with them, you
-        made them spin when the space bar is pressed. Instead of the gears only spinning
-        when the space key is pressed, we want them to spin one way when the space
-        key is pressed and spin the other way when it's not pressed.\r\n<img src=\"https://images.code.org/b074d47ca8dfa5ab3bfd08344b4f4e42-image-1464706389475.gif\"
-        style=\"float:right\">\r\n\r\n* Click the _plus_ button at the bottom of the
-        if block to add an else.\r\n* Add commands to make the gears spin opposite
-        of the direction that they do when the space bar is pressed."
+      CSD U3 Else_2018_markdown_instruction: |-
+        # 如果我的条件不为真呢?
+
+        <img src="https://images.code.org/1a997d78fcd88efeb9e6dc5a02aa88e8-image-1464706463138.53.58.png" width="125px" style="float:right">
+
+        有时，我们要告诉程序在条件为`真`时做什么，但也有时候要决定为`假`时做什么。在条件模块下点击加号按钮，可以增加一个叫做`否则`的章节。 `否则`章节会在`如果`条件为`假`时运行。
+
+        # 这样做
+        齿轮又回来了。上次使用它们时，在按下空格键时让他们旋转。这次在按下空格键时让它们往一个方向旋转，在没按下时往另一个方向旋转。
+        <img src="https://images.code.org/b074d47ca8dfa5ab3bfd08344b4f4e42-image-1464706389475.gif" style="float:right">
+
+        * 点击如果模块下的_加号_按钮来增加一个否则章节。
+        * 增加命令来让齿轮往按下空格时的相反方向转动。
       CSD U3 Entertainment Sample 1 - unembed_markdown_instruction: "# 外星人跳跃\r\n\r\n按下“运行”按钮来播放左边的游戏。你能用空格键让外星人跳起来，并用方向键让它左右移动。收集星星可以得分，如果得到足够高的分，背景就会改变。"
       CSD U3 Entertainment Sample 1_markdown_instruction: "# 外星人跳跃\r\n\r\n按下“运行”按钮来播放左边的游戏。你能用空格键让外星人跳起来，并用方向键让它左右移动。收集星星可以得分，如果得到足够高的分，背景就会改变。"
       CSD U3 Entertainment Sample 1_2018_markdown_instruction: "# 外星人跳跃\r\n\r\n按下“运行”按钮来播放左边的游戏。你能用空格键让外星人跳起来，并用方向键让它左右移动。收集星星可以得分，如果得到足够高的分，背景就会改变。"
@@ -7675,7 +7674,7 @@
         \t* Redesign to utilize built in elements
             * Find an image to use in place of your element
             * Draw the element using your preferred image editor
-        * Share your design regularly with your teammates to ensure consistent style
+        * Make sure that you and your teammates are regularly looking at each other's designs to ensure consistent style
       CSD U4 - Design Mode Text_markdown_instruction: "# Adding Text\r\n<img src=\"https://images.code.org/86ba633e04f90f3ca47dff3dcd064847-image-1469812708683.15.36.png\"
         style=\"float: right; width: 75px\"/>\r\nThe label element lets you add any
         text you'd like to your app. Just drag out a label block and set its \"text\"
@@ -8000,10 +7999,12 @@
         style=\"width:250px; float:right\">\r\n\r\n# Debug: colorLeds\r\n\r\nCan you
         debug the index values so that the rainbow shows up on the board like in the
         picture?"
-      CSD U6 colorLeds debug_2018_markdown_instruction: "<img src=\"https://images.code.org/e055be621221385d3503962bee5aa616-image-1491493475417.44.28.png\"
-        style=\"width:250px; float:right\">\r\n\r\n# Debug: colorLeds\r\n\r\nCan you
-        debug the index values so that the rainbow shows up on the board like in the
-        picture?"
+      CSD U6 colorLeds debug_2018_markdown_instruction: |
+        <img src="https://images.code.org/723f036c40ef2770426d5d437e69fcde-image-1527268321449.png" style="width:250px; float:right">
+
+        # 调试: 彩色LED灯
+
+        你能调试索引值，来让彩虹像图片上显示的一样吗？
       CSD U6 colorLeds intensity_markdown_instruction: "#改变亮度\r\n\r\n`intensity()`（强度）指令可以让你设置LED的亮度（或者叫做_强度_）为1到100的值。这个程序让你能够为你的彩虹灯选择三个不同级别的亮度，但中间级别还不能工作。\r\n\r\n#
         这样做\r\n\r\n*\n阅读程序查看\"Bright\"（亮）和\"Dim\"（暗）按钮是如何工作的。\r\n*\n添加代码，使得\"Medium\"（中等）按钮可以调整彩虹的亮度到中等（在”明亮“和”昏暗“之间）。
         ([显示在哪里](#triggercallout=code_triggered))"
@@ -10796,10 +10797,10 @@
 
         # Do This
 
-        Each member of your team is going to create their own copy of the app, with all of the team members' screens imported in. This will be your copy of the app, and the copy that you will start to add code to in the next lesson.
+        Each member of your team is going to create their own copy of the app, with all of the team members' screens imported in. This will be your copy of the app, and the copy that you will start to add code to in the next lesson.  (Don't forget that you'll also need to import your own screen into this project.)
 
-        * Collect all of the sharing urls for your team's pages
-        \t* You can find the share url by going back to the last level of the previous lesson, or by finding the screen in your [projects directory](/projects)
+        * Collect all of the sharing urls for your team's pages, **including your own**
+        \t* Each team member can find the share url for their own screen by going back to the last level of the previous lesson, or by finding the screen in their [projects directory](/projects)
         * Import each of the screens, one at a time
         \t* If you run into an ID error with one of the screens, discuss the issue with the screen's creator so it can be fixed and imported
         * Delete the default "screen1"
@@ -11763,7 +11764,7 @@
         <a href="https://images.code.org/8abc8eedb4975d2c55ac5848cac0d0ed-image-1454087887353.png" target="_blank">
         <img src="https://images.code.org/8abc8eedb4975d2c55ac5848cac0d0ed-image-1454087887353.png" style="width: 250px; float: right">
         </a>
-        <i>Click to enlarge.</i>
+        <i>点击放大。</i>
         </div>
       CSP U5 AP Practice Choose the Algorithm_markdown_instruction: "# AP 练习\n- 确定算法\r\n\r\n**AP
         创建表演任务**的其中一个环节就是选择你要开发的算法。\r\n\r\n<div style=\"width:\n80%; margin: auto;
@@ -37258,6 +37259,16 @@
       courseD_playLab_cond6a_markdown_instruction: "我们不想让海盗呆在\"安全区\"太久！ \r\n\r\n在`如果`语句下增加代码，如果海盗（演员1）在安全区里，程序等一秒，然后只要他呆在章鱼线下，就减一分。"
       courseD_playLab_cond6a_2018_markdown_instruction: "我们不想让海盗呆在\"安全区\"太久！ \r\n\r\n在`如果`语句下增加代码，如果海盗（演员1）在安全区里，程序等一秒，然后只要他呆在章鱼线下，就减一分。"
       courseD_playLab_cond6cloneForTest_markdown_instruction: 我们能让这个工作吗？
+      courseD_playLab_condFP_2018_markdown_instruction: |-
+        Now, build your own game to show off to your friends!
+
+        ---
+
+        You could:
+        - Have the pirate and ninja work together to get points from the octopus
+        - Have both octopuses follow the pirate, doing double damage to the ninja when they collide
+        - Have each character disappear when touched by the ninja
+        - Invent your own game!
       courseD_scrat_ramp1_markdown_instruction: 对于这个关卡，把所有的块都拼在一起，并点击"运行"来看看！
       courseD_scrat_ramp1_2018_markdown_instruction: 对于这个关卡，把所有的块都拼在一起，并点击"运行"来看看！
       courseD_scrat_ramp2_markdown_instruction: 将额外的 "向前移动" 块拖出工具箱, 然后将所有块附加到 "运行时"
@@ -37817,10 +37828,7 @@
       courseF_maze_ramp6_2018_markdown_instruction: "*\"保持冷静，帮我找到坏猪。否则，我会生气的！\"*\r\n\r\n当你将几个同样的模块排成一列时，试试将它们挪到<xml><block
         type=\"controls_repeat\"><title\nname=\"TIMES\">???</title></block></xml>循环里。这会用更少的代码来做相同的事情！"
       courseF_maze_ramp7_markdown_instruction: "*\"我该生气了！\"* \r\n\r\n\r\n**挑战：**用你学到的知识来帮小鸟抓到猪！"
-      courseF_playlab_brokenText_markdown_instruction: |-
-        在这个阶段剩下来的时间，我们要用多个`问`模块和多个`如果/否则`模块来创造一个**你**控制的游戏！\r
-        \r
-        从设置"codename"（代号）变量开始，来设置一个你能记得的词语。然后用一个`问`模块来从用户那里获得一个代号。你需要`如果/否则`模块来看是否输入的代号和你设置的代号是一样的。
+      courseF_playlab_brokenText_markdown_instruction: "在这个阶段剩下来的时间，我们要用多个`问`模块和多个`如果/否则`模块来创造一个**你**控制的游戏！\r\n\r\n从设置\"codename\"（代号）变量开始，来设置一个你能记得的词语。然后用一个`问`模块来从用户那里获得一个代号。你需要`如果/否则`模块来看是否输入的代号和你设置的代号是一样的。"
       courseF_playlab_variables0_markdown_instruction: "这是海盗。他这几天非常难以理解！\r\n\r\n通过改变代码中的文本块来解码他的话：\r\n-
         \"arrrg\"应该是\"a\"\r\n- \"ye\"应该是\"e\"\r\n\r\n"
       courseF_playlab_variables1_markdown_instruction: "这是海盗。他这几天非常难以理解！\r\n\r\n通过改变代码中的文本块来解码他的话：\r\n-

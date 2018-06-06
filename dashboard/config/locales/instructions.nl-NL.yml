@@ -106,21 +106,20 @@
       2-3 Artist Functions 13_instruction: |-
         We hebben je voorzien van vier functies.
         Gebruik ze on elke manier die je wilt in één of meer lussen om tekeningen te maken die je met je vrienden kunt delen. Druk op uitvoeren om een voorbeeld te zien.
-      2-3 Artist Functions 2 a_instruction: "Use the small green `draw a square`\nblock
-        to call this new function and create the glasses. "
+      2-3 Artist Functions 2 a_instruction: Gebruik het kleine, groene blok "teken
+        een vierkant" om deze functie te gebruiken en maak de bril.
       2-3 Artist Functions 2_instruction: Met functies kan je nieuwe blokken definiëren!
         We hebben de blokken om een vierkant te tekenen in een functie met de naam
         "teken een vierkant". Kan je de "teken een vierkant" functie gebruiken om
         de brillenglazen te tekenen? De vierkanten staan 75 pixels uit elkaar.
-      2-3 Artist Functions 3 a_instruction: "Edit the \"draw a square\" function to
-        draw glasses with frames that are 115px on each side. \r\n\r\nThe squares
-        are now 45 pixels apart."
+      2-3 Artist Functions 3 a_instruction: Verander de functie "teken een vierkant"
+        zodat je een bril kunt tekenen met glazen van 115 pixels aan elke kant. De
+        vierkanten staan 45 pixels uit elkaar.
       2-3 Artist Functions 3_instruction: Bewerk de functie om een vierkant te teken
         met als lengte van een zijde 115 en een grotere bril te tekenen. De vierkantjes
         staan nu 45 pixels uit elkaar.
-      2-3 Artist Functions 4 a_instruction: |-
-        Now, put the function inside of a loop
-        and add an extra turn to draw these three squares.
+      2-3 Artist Functions 4 a_instruction: Plaats nu de functie in de lus en voeg
+        een extra draai toe om deze drie vierkanten te tekenen.
       2-3 Artist Functions 4_instruction: Gebruik het "herhaal" block om deze 3 vierkanten
         te tekenen.
       2-3 Artist Functions 7_instruction: 'Gebruik de "teken een huis" functie om

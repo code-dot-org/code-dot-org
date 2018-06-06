@@ -1062,6 +1062,7 @@
   "studentControl": "স্বতন্ত্র ছাত্র নিয়ন্ত্রণ",
   "studentLockStateInstructions": "নিচের টেবিলে একে স্বতন্ত্র ছাত্র রাষ্ট্রীয় নিয়ন্ত্রণ করতে ব্যবহার করুন।.",
   "studentName": "শিক্ষার্থীর নাম",
+  "studentNameHeader": "Student name",
   "studentAnswer": "Student answer",
   "submissionTimestamp": "জমা দেওয়ার টাইমস্ট্যাম্প",
   "submit": "জমা করুন",
