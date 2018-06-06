@@ -1,5 +1,3 @@
-require pegasus_dir 'forms/volunteer_engineer_submission'
-
 class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
   # Ability for volunteers to have a custom unsubscribe preference from teacher
   # requests was added during HoC 2015. They had two options to unsubscribe: until the
