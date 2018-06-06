@@ -109,9 +109,23 @@ class Section < ActiveRecord::Base
   end
   validate :user_must_be_teacher, unless: -> {deleted?}
 
-  before_create :assign_code
-  def assign_code
+  before_create :scrub_section
+  def scrub_section
+    self.stage_extras = false if stage_extras.nil?
+    self.pairing_allowed = true if pairing_allowed.nil?
+
+    # Clear any invalid fields
+    self.course_id = nil unless Course.valid_course_id?(course_id)
+    self.script_id = nil unless Script.valid_script_id?(user, script_id)
+    self.grade = nil unless Section.valid_grade?(grade)
+
+    # Generate section code
     self.code = unused_random_code unless code
+  end
+
+  after_create :assign_script
+  def assign_script
+    user.assign_script(script) unless script.nil?
   end
 
   def update_student_sharing(sharing_disabled)
