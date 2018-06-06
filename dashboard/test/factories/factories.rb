@@ -8,6 +8,10 @@ FactoryGirl.define do
 
   factory :course do
     sequence(:name) {|n| "bogus-course-#{n}"}
+
+    factory :valid_course_for_section do
+      name ScriptConstants::CATEGORIES[:full_course].sample
+    end
   end
 
   factory :experiment do
