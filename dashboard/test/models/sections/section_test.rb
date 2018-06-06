@@ -71,6 +71,33 @@ class SectionTest < ActiveSupport::TestCase
     end
   end
 
+  test "create sets stage_extras to false by default" do
+    teacher = create :teacher
+    section = create :section, user: teacher
+
+    refute section.stage_extras
+  end
+
+  test "create sets pairing_allowed to true by default" do
+    teacher = create :teacher
+    section = create :section, user: teacher
+
+    assert section.pairing_allowed
+  end
+
+  test "create sets invalid fields to nil" do
+    Course.stubs(:valid_course_id?).returns(false)
+    Script.stubs(:valid_script_id?).returns(false)
+    Section.stubs(:valid_grade?).returns(false)
+
+    teacher = create :teacher
+    section = create :section, course_id: 1, script_id: 2, grade: "13", user: teacher
+
+    assert_nil section.course_id
+    assert_nil section.script_id
+    assert_nil section.grade
+  end
+
   test 'update_student_sharing updates user settings' do
     student = create :student, sharing_disabled: false
     section = create :section, sharing_disabled: false
@@ -368,6 +395,8 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'default_script: no script assigned, course assigned' do
+    Course.stubs(:valid_course_id?).returns(true)
+
     script1 = create :script
     script2 = create :script
     course = create :course
@@ -380,6 +409,8 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'summarize: section with a course assigned' do
+    Course.stubs(:valid_course_id?).returns(true)
+
     course = create :course, name: 'somecourse'
     section = create :section, script: nil, course: course
 
@@ -408,6 +439,8 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'summarize: section with a script assigned' do
+    Script.stubs(:valid_script_id?).returns(true)
+
     # Use an existing script so that it has a translation
     script = Script.find_by_name('jigsaw')
     section = create :section, script: script, course: nil
@@ -437,6 +470,9 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'summarize: section with both a course and a script' do
+    Script.stubs(:valid_script_id?).returns(true)
+    Course.stubs(:valid_course_id?).returns(true)
+
     # Use an existing script so that it has a translation
     script = Script.find_by_name('jigsaw')
     course = create :course, name: 'somecourse'
