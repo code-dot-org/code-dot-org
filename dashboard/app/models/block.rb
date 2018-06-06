@@ -55,9 +55,11 @@ class Block < ApplicationRecord
   end
 
   def self.load_blocks
+    block_names = []
     LevelLoader.for_each_file('config/blocks/**/*.json') do |json_path|
-      load_block json_path
+      block_names << load_block(json_path)
     end
+    Block.where.not(name: block_names).destroy_all
   end
 
   def self.load_block(json_path)
@@ -79,5 +81,6 @@ class Block < ApplicationRecord
     block.config = block_config['config'].to_json
     block.helper_code = helper_code
     block.save!
+    block.name
   end
 end
