@@ -387,7 +387,7 @@ class SectionTest < ActiveSupport::TestCase
   test 'default_script: script and course assigned' do
     script1 = create :script
     script2 = create :script
-    course = create :course
+    course = create :valid_course_for_section
     create :course_script, course: course, script: script1, position: 1
     create :course_script, course: course, script: script2, position: 2
     course.reload
@@ -399,7 +399,7 @@ class SectionTest < ActiveSupport::TestCase
   test 'default_script: no script assigned, course assigned' do
     script1 = create :script
     script2 = create :script
-    course = create :course
+    course = create :valid_course_for_section
     create :course_script, course: course, script: script1, position: 1
     create :course_script, course: course, script: script2, position: 2
     course.reload
@@ -409,7 +409,7 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'summarize: section with a course assigned' do
-    course = create :course, name: 'somecourse'
+    course = create :course, name: 'csp-2018'
     section = create :section, script: nil, course: course
 
     expected = {
@@ -417,8 +417,8 @@ class SectionTest < ActiveSupport::TestCase
       name: section.name,
       teacherName: section.teacher.name,
       linkToProgress: "//test.code.org/teacher-dashboard#/sections/#{section.id}/progress",
-      assignedTitle: 'somecourse',
-      linkToAssigned: '/courses/somecourse',
+      assignedTitle: "Computer Science Principles ('18-'19)",
+      linkToAssigned: '/courses/csp-2018',
       numberOfStudents: 0,
       linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
       code: section.code,
@@ -439,7 +439,12 @@ class SectionTest < ActiveSupport::TestCase
   test 'summarize: section with a script assigned' do
     # Use an existing script so that it has a translation
     script = Script.find_by_name('jigsaw')
-    section = create :section, script: script, course: nil
+
+    # User needs hidden script access for above script
+    teacher = create :teacher
+    teacher.permission = UserPermission::HIDDEN_SCRIPT_ACCESS
+
+    section = create :section, user: teacher, script: script, course: nil
 
     expected = {
       id: section.id,
@@ -468,18 +473,23 @@ class SectionTest < ActiveSupport::TestCase
   test 'summarize: section with both a course and a script' do
     # Use an existing script so that it has a translation
     script = Script.find_by_name('jigsaw')
-    course = create :course, name: 'somecourse'
+
+    # User needs hidden script access for above script
+    teacher = create :teacher
+    teacher.permission = UserPermission::HIDDEN_SCRIPT_ACCESS
+
+    course = create :course, name: 'csp-2017'
     # If this were a real section, it would actually have a script that is part of
     # the provided course
-    section = create :section, script: script, course: course
+    section = create :section, user: teacher, script: script, course: course
 
     expected = {
       id: section.id,
       name: section.name,
       teacherName: section.teacher.name,
       linkToProgress: "//test.code.org/teacher-dashboard#/sections/#{section.id}/progress",
-      assignedTitle: 'somecourse',
-      linkToAssigned: '/courses/somecourse',
+      assignedTitle: "Computer Science Principles ('17-'18)",
+      linkToAssigned: '/courses/csp-2017',
       numberOfStudents: 0,
       linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
       code: section.code,
