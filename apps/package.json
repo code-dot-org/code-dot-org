@@ -89,6 +89,7 @@
     "css-loader": "^0.23.1",
     "csv-parse": "^1.1.7",
     "data-collection": "^1.1.6",
+    "dedent": "^0.7.0",
     "ejs": "0.8.4",
     "ejs-compiled-loader": "2.1.1",
     "enzyme": "2.8.0",
