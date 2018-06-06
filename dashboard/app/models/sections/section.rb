@@ -112,6 +112,21 @@ class Section < ActiveRecord::Base
   end
   validate :user_must_be_teacher, unless: -> {deleted?}
 
+  def script_must_be_valid
+    errors.add(:script_id, 'must be a valid script') unless Script.valid_script_id?(user, script_id)
+  end
+  validate :script_must_be_valid, unless: -> {script_id.nil?}
+
+  def course_must_be_valid
+    errors.add(:course_id, 'must be a valid course') unless Course.valid_course_id?(course_id)
+  end
+  validate :course_must_be_valid, unless: -> {course_id.nil?}
+
+  def login_type_must_be_valid
+    errors.add(:login_type, 'must be a valid login type') unless Section.valid_login_type?(login_type)
+  end
+  validate :login_type_must_be_valid, unless: -> {login_type.nil?}
+
   before_create :assign_code
   def assign_code
     self.code = unused_random_code unless code
