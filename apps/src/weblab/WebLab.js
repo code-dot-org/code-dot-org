@@ -407,7 +407,6 @@ WebLab.prototype.setBrambleHost = function (brambleHost) {
     this.brambleHost = brambleHost;
     brambleHost.onProjectChanged(this.onProjectChanged.bind(this));
     brambleHost.onInspectorChanged(this.onInspectorChanged.bind(this));
-    this.brambleReady = true;
     // Enable the Finish/Submit/Unsubmit button if it is present:
     let shareCell = document.getElementById('share-cell');
     if (shareCell) {
@@ -449,7 +448,7 @@ WebLab.prototype.onIsRunningChange = function () {
 /**
  * Load the file entry list and store it as this.fileEntries
  */
-WebLab.prototype.loadFileEntries = async function () {
+WebLab.prototype.loadFileEntries = function () {
   filesApi.getFiles(result => {
     assetListStore.reset(result.files);
     this.fileEntries = assetListStore.list().map(fileEntry => ({

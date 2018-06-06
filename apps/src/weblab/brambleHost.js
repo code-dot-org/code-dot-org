@@ -392,13 +392,13 @@ function onInspectorChanged(callback) {
   onInspectorChangedCallback_ = callback;
 }
 
-var _hasMounted = false;
+var hasMounted_ = false;
 
 function ensureMounted() {
-  if (!_hasMounted) {
+  if (!hasMounted_) {
     bramble_.mount(`${weblabRoot}/${currentProjectPath}`);
   }
-  _hasMounted = true;
+  hasMounted_ = true;
 }
 
 function startInitialFileSync(callback, forceResetToStartSources) {
@@ -427,18 +427,14 @@ function startInitialFileSync(callback, forceResetToStartSources) {
         }
         // put the source files into the Bramble file system
         putFilesInBramble(startSources, err => {
-          if (!err) {
-            if (forceResetToStartSources) {
-              console.log('startInitialFileSync: forceResetToStartSources - calling syncFiles()');
-            } else {
-              // First-time level load - no project versionId
+          if (!err && !forceResetToStartSources) {
+            // First-time level load - no project versionId
 
-              // Ignore all of the change events that just occured as we wrote the
-              // startSources into bramble - there is no need to save these during
-              // sync until a user-initiated change occurs
-              resetBrambleChangesAndProjectVersion(currentProjectVersion);
-              webLab_.registerBeforeFirstWriteHook(uploadAllFilesFromBramble);
-            }
+            // Ignore all of the change events that just occured as we wrote the
+            // startSources into bramble - there is no need to save these during
+            // sync until a user-initiated change occurs
+            resetBrambleChangesAndProjectVersion(currentProjectVersion);
+            webLab_.registerBeforeFirstWriteHook(uploadAllFilesFromBramble);
           }
           // Start the initial files sync
           syncFiles(wrappedCallback);
