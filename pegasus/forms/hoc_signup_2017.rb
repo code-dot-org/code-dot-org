@@ -1,5 +1,3 @@
-require pegasus_dir 'forms/hoc_signup_2014'
-
 class HocSignup2017 < HocSignup2014
   def self.normalize(data)
     result = super
