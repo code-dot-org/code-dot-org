@@ -30,12 +30,8 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   # POST /api/v1/sections
   # Create a new section
   def create
-    return head :bad_request unless Section.valid_login_type?(@section.login_type)
-
     @section.name = 'New Section' if @section.name.nil_or_empty?
     @section.user = current_user
-    @section.course_id = nil unless Course.valid_course_id?(@section.course_id)
-    @section.script_id = nil unless Script.valid_script_id?(@section.user, @section.script_id)
 
     if @section.save
       render json: @section.summarize

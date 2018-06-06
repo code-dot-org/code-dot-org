@@ -278,7 +278,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       post :create, params: {
         section: {login_type: empty_type},
       }
-      assert_response :bad_request
+      assert_response :unprocessable_entity
     end
   end
 
@@ -444,11 +444,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
         course_id: @course.id, # Not CSP or CSD
       }
     }
-    assert_response :success
-    # TODO: Better to fail here?
-
-    assert_nil returned_json['course_id']
-    assert_nil returned_section.course
+    assert_response :unprocessable_entity
   end
 
   test 'can create with a script id but no course id' do
@@ -476,13 +472,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
         script_id: 'MALYON', # Script IDs are numeric
       }
     }
-    assert_response :success
-    # TODO: Better to fail here?
-
-    assert_nil returned_json['script']['id']
-    assert_nil returned_section.script
-    assert_nil returned_json['course_id']
-    assert_nil returned_section.course
+    assert_response :unprocessable_entity
   end
 
   test 'can create with both a course id and a script id' do
