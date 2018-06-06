@@ -44,8 +44,8 @@
     "top_level_procedure_autopopulate": "false",
     "honey_goal": "6",
     "markdown_instructions": "*\"Such an a-MAZE-ing garden!\"*\r\n\r\nIn this puzzle, each patch needs the variable to be one less than the patch before. Subtract one from the variable each time through the loop if you want to use the same function to solve this level.",
-    "contained_level_names": null,
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

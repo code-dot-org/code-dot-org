@@ -24,6 +24,7 @@ class Census::StateCsOffering < ApplicationRecord
     AL
     AR
     CA
+    CO
     CT
     FL
     GA
@@ -44,6 +45,7 @@ class Census::StateCsOffering < ApplicationRecord
   # that the state data is conplete for the following states so we do
   # not want to treat the lack of data as a no for those.
   INFERRED_NO_EXCLUSION_LIST = %w(
+    CO
     ID
     MI
   ).freeze
@@ -60,6 +62,8 @@ class Census::StateCsOffering < ApplicationRecord
       School.construct_state_school_id('AR', row_hash['District LEA'], row_hash['Location ID'])
     when 'CA'
       School.construct_state_school_id('CA', row_hash['DistrictCode'], row_hash['schoolCode'])
+    when 'CO'
+      row_hash['state_school_id']
     when 'CT'
       district_id = row_hash['District Code'][0..2]
       school_id = row_hash['School Code'][3..4]
@@ -169,6 +173,18 @@ class Census::StateCsOffering < ApplicationRecord
     4647
     5612
     8131
+  ).freeze
+
+  CO_COURSE_CODES = %w(
+    10152
+    10155
+    10156
+    10157
+    10153
+    10011
+    10159
+    10154
+    10012
   ).freeze
 
   CT_COURSE_CODES = [
@@ -306,6 +322,8 @@ class Census::StateCsOffering < ApplicationRecord
       AR_COURSE_CODES.select {|course| course == row_hash['Course ID']}
     when 'CA'
       CA_COURSE_CODES.select {|course| course == row_hash['CourseCode']}
+    when 'CO'
+      CO_COURSE_CODES.select {|course| course == row_hash['course']}
     when 'CT'
       enrollment = row_hash['CourseEnrollments']
       # Don't consider a course as offered at a school if there is no enrollment ("*") or it is not a positive number
