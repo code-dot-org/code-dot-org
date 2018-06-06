@@ -308,9 +308,9 @@ allthethings:
   user_id:
   login_required: false
   properties: '{}'
-coursea:
+coursea-2017:
   id: 80
-  name: coursea
+  name: coursea-2017
   created_at: 2015-10-16 22:38:12.000000000 Z
   updated_at: 2015-10-16 22:38:13.000000000 Z
   wrapup_video_id:
@@ -318,9 +318,9 @@ coursea:
   user_id:
   login_required: false
   properties: '{}'
-courseb:
+courseb-2017:
   id: 81
-  name: courseb
+  name: courseb-2017
   created_at: 2015-10-16 22:38:12.000000000 Z
   updated_at: 2015-10-16 22:38:13.000000000 Z
   wrapup_video_id:
@@ -328,9 +328,9 @@ courseb:
   user_id:
   login_required: false
   properties: '{}'
-coursec:
+coursec-2017:
   id: 82
-  name: coursec
+  name: coursec-2017
   created_at: 2015-10-16 22:38:12.000000000 Z
   updated_at: 2015-10-16 22:38:13.000000000 Z
   wrapup_video_id:
@@ -338,9 +338,9 @@ coursec:
   user_id:
   login_required: false
   properties: '{}'
-coursed:
+coursed-2017:
   id: 83
-  name: coursed
+  name: coursed-2017
   created_at: 2015-10-16 22:38:12.000000000 Z
   updated_at: 2015-10-16 22:38:13.000000000 Z
   wrapup_video_id:
@@ -348,9 +348,9 @@ coursed:
   user_id:
   login_required: false
   properties: '{}'
-coursee:
+coursee-2017:
   id: 84
-  name: coursee
+  name: coursee-2017
   created_at: 2015-10-16 22:38:12.000000000 Z
   updated_at: 2015-10-16 22:38:13.000000000 Z
   wrapup_video_id:
@@ -358,9 +358,9 @@ coursee:
   user_id:
   login_required: false
   properties: '{}'
-coursef:
+coursef-2017:
   id: 85
-  name: coursef
+  name: coursef-2017
   created_at: 2015-10-16 22:38:12.000000000 Z
   updated_at: 2015-10-16 22:38:13.000000000 Z
   wrapup_video_id:
@@ -368,9 +368,9 @@ coursef:
   user_id:
   login_required: false
   properties: '{}'
-express:
+express-2017:
   id: 86
-  name: express
+  name: express-2017
   created_at: 2015-10-16 22:38:12.000000000 Z
   updated_at: 2015-10-16 22:38:13.000000000 Z
   wrapup_video_id:
@@ -378,9 +378,9 @@ express:
   user_id:
   login_required: false
   properties: '{}'
-pre-express:
+pre-express-2017:
   id: 87
-  name: pre-express
+  name: pre-express-2017
   created_at: 2015-10-16 22:38:12.000000000 Z
   updated_at: 2015-10-16 22:38:13.000000000 Z
   wrapup_video_id:

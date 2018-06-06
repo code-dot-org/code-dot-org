@@ -19,7 +19,7 @@ max_age: 60
 
 
 
-- if %w(course1 course2 course3 course4 coursea courseb coursec coursed coursee coursef accelerated).include? course
+- if %w(course1 course2 course3 course4 coursea-2017 courseb-2017 coursec-2017 coursed-2017 coursee-2017 coursef-2017 accelerated).include? course
   = view :csf_congrats, course: course
 - else
   - redirect "/congrats"
