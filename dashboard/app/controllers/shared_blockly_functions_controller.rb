@@ -1,5 +1,6 @@
 class SharedBlocklyFunctionsController < ApplicationController
   before_action :require_levelbuilder_mode
+  before_action :load_block_pool, only: [:new, :edit]
   load_and_authorize_resource
 
   def new
@@ -22,6 +23,11 @@ class SharedBlocklyFunctionsController < ApplicationController
   end
 
   private
+
+  def load_block_pool
+    @@level ||= Level.find_by_key('New Sprite Lab Project')
+    @block_pool = @@level.shared_blocks
+  end
 
   def create_params
     update_params

@@ -2,7 +2,7 @@ import zip from 'lodash/zip';
 import unzip from 'lodash/unzip';
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
 
-import { install } from '@cdo/apps/gamelab/blocks';
+import { install, installCustomBlocks } from '@cdo/apps/gamelab/blocks';
 import { valueTypeTabShapeMap } from '@cdo/apps/gamelab/GameLab';
 
 const customSimpleDialog = function ({bodyText, prompt, promptPrefill, onCancel: callback}) {
@@ -26,7 +26,9 @@ Blockly.inject(document.getElementById('blockly-container'), {
   typeHints: true,
 });
 
+const blockPool = JSON.parse(document.querySelector('script[data-blockpool').dataset.blockpool);
 install(Blockly);
+installCustomBlocks(Blockly, {}, blockPool, null, true);
 
 const DEFAULT_NAME = 'acting';
 
@@ -71,6 +73,6 @@ document.querySelector('#shared_function_submit').addEventListener('click', () =
   getInput('arguments').value = JSON.stringify(zip(procInfo.parameterNames, procInfo.parameterTypes));
   getInput('description').value = document.querySelector('#functionDescriptionText').value;
   if (stack) {
-    getInput('stack').value = Blockly.Xml.domToText(stack);
+    getInput('stack').value = Blockly.Xml.domToText(Blockly.Xml.blockToDom(stack));
   }
 });
