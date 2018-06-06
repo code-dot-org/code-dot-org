@@ -143,6 +143,22 @@ module Pd
         assert_equal expected_result, result
       end
 
+      test 'strip_answer' do
+        translation = Translation.new(@form_id)
+        assert_equal(
+          'text answer',
+          translation.send(:strip_answer, '  text answer  ')
+        )
+        assert_equal(
+          %w(one two),
+          translation.send(:strip_answer, ['  one  ', '  two  '])
+        )
+        assert_equal(
+          {1 => 'one', 2 => 'two'},
+          translation.send(:strip_answer, {1 => '  one  ', 2 => '  two  '})
+        )
+      end
+
       protected
 
       def get_submissions_result
