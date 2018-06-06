@@ -111,10 +111,6 @@ class Section < ActiveRecord::Base
 
   before_create :scrub_section
   def scrub_section
-    # Set defaults if none supplied
-    self.stage_extras = false if stage_extras.nil?
-    self.pairing_allowed = true if pairing_allowed.nil?
-
     # Set grade to nil if invalid value supplied
     self.grade = nil unless Section.valid_grade?(grade)
 
