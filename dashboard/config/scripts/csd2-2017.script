@@ -6,9 +6,9 @@ student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csd/unit2/"], ["teacherForum", "https://forum.code.org/c/csd2"], ["vocabulary", "https://curriculum.code.org/csd/unit2/vocab/"], ["standardMappings", "https://curriculum.code.org/csd/unit2/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd/unit2/code/"]]
 has_verified_resources true
 has_lesson_plan true
-script_announcements [{"notice"=>"Know a teacher interested in teaching computer science?", "details"=>"Applications for the 2018 middle and high school Professional Learning program are now open!  No computer science experience is necessary.", "link"=>"https://code.org/educate/professional-learning-2018", "type"=>"bullhorn"}, {"notice"=>"Updates to CS Discoveries are Coming!", "details"=>"We're getting ready to roll out updated curriculum for the '18-'19 school year - check out the details on our teacher blog.", "link"=>"http://teacherblog.code.org/post/174125780419/updates-to-cs-discoveries-are-coming", "type"=>"bullhorn"}]
-new_name "csd2-2017"
-family_name "csd2"
+script_announcements [{"notice"=>"Updates to CS Discoveries are Coming!", "details"=>"We're getting ready to roll out updated curriculum for the '18-'19 school year - check out the details on our teacher blog.", "link"=>"http://teacherblog.code.org/post/174125780419/updates-to-cs-discoveries-are-coming", "type"=>"bullhorn"}]
+new_name 'csd2-2017'
+family_name 'csd2'
 
 stage 'Exploring Websites', flex_category: 'csd2_1'
 named_level 'CSD U2 L1 Overview'
