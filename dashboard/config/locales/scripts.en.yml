@@ -7580,7 +7580,7 @@ en:
           description_audience: 'Ages: 9-18'
           stages:
             'Algorithms: Graph Paper Programming':
-              name: 'Algorithms: Graph Paper Programming'
+              name: Graph Paper Programming
               description_student: ''
               description_teacher: ''
             Introduction:
@@ -7600,7 +7600,7 @@ en:
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: Loops in Artist
+              name: Sticker Art with Loops
               description_student: ''
               description_teacher: ''
             Nested Loops:
@@ -7624,7 +7624,7 @@ en:
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: 'Events: The Big Event'
+              name: The Big Event
               description_student: ''
               description_teacher: ''
             Events in Star Wars:
@@ -7644,7 +7644,7 @@ en:
               description_student: ''
               description_teacher: ''
             While Loops in Farmer:
-              name: While Loops in Farmer
+              name: While Loops with the Farmer
               description_student: ''
               description_teacher: ''
             Conditional Loops in Maze:
@@ -7676,11 +7676,11 @@ en:
               description_student: ''
               description_teacher: ''
             For Loops in Bee:
-              name: For Loops in Bee
+              name: For Loops with Bee
               description_student: ''
               description_teacher: ''
             For Loops in Artist:
-              name: For Loops in Artist
+              name: For Loops with Artist
               description_student: ''
               description_teacher: ''
             'Functions: Songwriting with Parameters':
@@ -7724,21 +7724,21 @@ en:
             Until Loops in Maze:
               name: Until Loops in Maze
             Programming in Maze:
-              name: Programming in Maze
+              name: Programming with Angry Birds
             Debugging in Maze:
-              name: Debugging in Maze
+              name: Debugging with Angry Birds
             Programming in Collector:
-              name: Programming in Collector
+              name: Collecting Treasure with Laurel
             Programming in Artist:
-              name: Programming in Artist
+              name: Creating Art with Code
             'Loops: Getting Loopy':
-              name: 'Loops: Getting Loopy'
+              name: Getting Loopy
             Loops with Rey and BB-8:
               name: Loops with Rey and BB-8
             Copyright and Creativity:
               name: Copyright and Creativity
             'Concept Practice with Minecraft ':
-              name: 'Concept Practice with Minecraft '
+              name: Looking Ahead with Minecraft
             Nested Loops in Bee:
               name: Nested Loops in Bee
             Nested Loops in Frozen:
@@ -7748,7 +7748,7 @@ en:
             Conditionals & Loops in Harvester:
               name: Conditionals & Loops in Harvester
             'Functions: Songwriting':
-              name: 'Functions: Songwriting'
+              name: Songwriting
             Functions in Minecraft:
               name: Functions in Minecraft
             Functions in Harvester:
@@ -7766,27 +7766,27 @@ en:
             Envelope Variables:
               name: Envelope Variables
             Variables as Constant in Artist:
-              name: Variables as Constant in Artist
+              name: Variables with Artist
             Variables that Change in Bee:
-              name: Variables that Change in Bee
+              name: Changing Variables with Bee
             Variables that Change in Artist:
-              name: Variables that Change in Artist
+              name: Changing Variables with Artist
             For Loop Fun:
               name: For Loop Fun
             Learning Sprites with Sprite Lab:
-              name: Learning Sprites with Sprite Lab
+              name: Learning Sprite Lab
             Alien Dance Party with Sprite Lab:
-              name: Alien Dance Party with Sprite Lab
+              name: Alien Dance Party
             Pet Giraffe with Sprite Lab:
-              name: Pet Giraffe with Sprite Lab
+              name: Pet Giraffe
             Binary Bracelets:
               name: Binary Bracelets
             'Unplugged: Binary':
-              name: 'Unplugged: Binary'
+              name: Binary Images
             Artist Binary:
-              name: Artist Binary
+              name: Binary Images with Artist
             Internet:
-              name: Internet
+              name: The Internet
             Crowdsourcing:
               name: Crowdsourcing
             Relay Programming:
@@ -8425,11 +8425,11 @@ en:
               description_student: You're going to have loads of fun learning about `for` loops!
               description_teacher: 'We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops that have extra structures built right in. These new structures will allow students to create code that is more powerful and dynamic. '
             For Loops in Bee:
-              name: For Loops in Bee
+              name: For Loops with Bee
               description_student: Buzz buzz. In these puzzles you will be guiding a bee to nectar and honey using `for` loops!
               description_teacher: Featuring Bee, this lesson focuses on for loops and using an incrementing variable to solve more complicated puzzles. Students will begin by reviewing loops from previous lessons, then walked through using for loops to more effectively solve complicated problems.
             For Loops in Artist:
-              name: For Loops in Artist
+              name: For Loops with Artist
               description_student: Get ready to make your next masterpiece. Here you will be using `for` loops to make some jaw-dropping pictures.
               description_teacher: In this lesson, students continue to practice for loops, this time with Artist. Students will complete puzzles combining the ideas of variables, loops, and for loops to create complex designs. At the end, they will have a chance to create their own art in a freeplay level.
             Songwriting with Parameters:
@@ -8487,7 +8487,7 @@ en:
             Functions in Minecraft:
               name: Functions with Minecraft
             Conditionals in Farmer:
-              name: Conditionals in Farmer
+              name: Conditionals with the Farmer
         csp1-2018:
           title: CSP Unit 1 - The Internet
           description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. The unit then explores the structure and design of the internet and the implications of those design decisions.

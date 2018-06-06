@@ -9,6 +9,8 @@ has_lesson_plan true
 script_announcements [{"notice"=>"Have your students take the Post-Course Survey!", "details"=>"We want to make CSP even better! Please have your students complete the Post-Course survey now at the bottom of this unit. You'll be able to see anonymized results as well.", "link"=>"", "type"=>"bullhorn"}, {"notice"=>"Updates to CS Principles are Coming!", "details"=>"We're getting ready to roll out updated curriculum for the '18-'19 school year - check out the details on our teacher blog.", "link"=>"http://teacherblog.code.org/post/174125989369/updates-to-cs-principles-are-coming", "type"=>"bullhorn"}]
 new_name 'csp1-2017'
 family_name 'csp1'
+version_year '2017'
+is_stable true
 
 stage 'CS Principles Pre-survey', lockable: true, flex_category: 'cspSurvey'
 assessment 'csp-pre-survey-2017-levelgroup'
