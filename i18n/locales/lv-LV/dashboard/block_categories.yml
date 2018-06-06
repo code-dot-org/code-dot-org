@@ -1,0 +1,49 @@
+lv:
+  data:
+    block_categories:
+      Actions: Darbības
+      Loops: Cikli
+      Functions: Funkcijas
+      Color: Krāsa
+      Brushes: Brushes
+      Math: Matemātika
+      Logic: Loģika
+      Variables: Mainīgie
+      Number: Number
+      String: String
+      Image: Image
+      Boolean: Boolean
+      Conditionals: Sazarojumi
+      Events: Pasākumi
+      Games/Score: Games/Score
+      Comments: Comments
+      Category: Category
+      Prebuilt: Prebuilt
+      Text: Teksts
+      Picker: Picker
+      Comment: Comment
+      'Variables ': 'Variables '
+      everythingelse: everythingelse
+      numbers: numbers
+      Numbers: Numbers
+      Input: Input
+      Default: Default
+      Sprites: Sprites
+      Behaviors: Behaviors
+      World: World
+      Sprite: Sprite
+      Brush: Brush
+      Make Sprite: Make Sprite
+      Movement: Movement
+      Start: Sākt
+      Groups: Groups
+      Booleans: Booleans
+      Functional: Functional
+      Predefined: Predefined
+      test: pārbaude
+      test2: test2
+      Foo: Foo
+      Name: Vārds
+      NEW BLOCKS: NEW BLOCKS
+      Game/Score: Game/Score
+      Function: Funkcija

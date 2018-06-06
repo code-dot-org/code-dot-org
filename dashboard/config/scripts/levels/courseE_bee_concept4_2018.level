@@ -41,57 +41,71 @@
     "disable_procedure_autopopulate": "false",
     "shape_shift": "false",
     "name_suffix": "_2018",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-14 01:38:47 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-17 20:12:44 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-17 20:14:41 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-17 20:15:46 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-10-04 02:09:48 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-10-04 02:14:39 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-07-14 01:38:47 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-17 20:12:44 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-17 20:14:41 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-17 20:15:46 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-10-04 02:09:48 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-10-04 02:14:39 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-04 21:47:09 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>
       <xml>
-        <block type="maze_moveForward"/>
-        <block type="maze_turn">
-          <title name="DIR">turnLeft</title>
-        </block>
-        <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-        </block>
-        <block type="maze_nectar"/>
-        <block type="maze_honey"/>
-        <block type="controls_repeat">
-          <title name="TIMES">???</title>
-        </block>
-        <block type="bee_whileNectarAmount">
-          <title name="ARG1">nectarRemaining</title>
-          <title name="OP">==</title>
-          <title name="ARG2">0</title>
-        </block>
-        <block type="maze_untilBlocked"/>
-        <block type="bee_ifNectarAmount">
-          <title name="ARG1">nectarRemaining</title>
-          <title name="OP">==</title>
-          <title name="ARG2">0</title>
-        </block>
-        <block type="bee_ifFlower">
-          <title name="LOC">atFlower</title>
-        </block>
-        <block type="bee_ifElseFlower">
-          <title name="LOC">atFlower</title>
-        </block>
-        <block type="maze_ifElse">
-          <title name="DIR">isPathForward</title>
-        </block>
-        <block type="maze_if">
-          <title name="DIR">isPathForward</title>
-        </block>
-        <block type="procedures_defnoreturn" editable="false">
-          <mutation/>
-          <title name="NAME">honey nectar</title>
-        </block>
-        <block type="procedures_callnoreturn">
-          <mutation name="honey nectar"/>
-        </block>
+        <category name="Actions">
+          <block type="maze_move">
+            <title name="DIR">moveForward</title>
+          </block>
+          <block type="maze_turn">
+            <title name="DIR">turnLeft</title>
+          </block>
+          <block type="maze_turn">
+            <title name="DIR">turnRight</title>
+          </block>
+          <block type="maze_nectar"/>
+          <block type="maze_honey"/>
+        </category>
+        <category name="Loops">
+          <block type="controls_repeat">
+            <title name="TIMES">???</title>
+          </block>
+          <block type="bee_whileNectarAmount">
+            <title name="ARG1">nectarRemaining</title>
+            <title name="OP">==</title>
+            <title name="ARG2">0</title>
+          </block>
+          <block type="maze_untilBlocked"/>
+        </category>
+        <category name="Conditionals">
+          <block type="bee_whileNectarAmount">
+            <title name="ARG1">nectarRemaining</title>
+            <title name="OP">==</title>
+            <title name="ARG2">0</title>
+          </block>
+          <block type="maze_untilBlocked"/>
+          <block type="bee_ifNectarAmount">
+            <title name="ARG1">nectarRemaining</title>
+            <title name="OP">==</title>
+            <title name="ARG2">0</title>
+          </block>
+          <block type="bee_ifFlower">
+            <title name="LOC">atFlower</title>
+          </block>
+          <block type="maze_ifElse">
+            <title name="DIR">isPathForward</title>
+          </block>
+          <block type="maze_if">
+            <title name="DIR">isPathForward</title>
+          </block>
+        </category>
+        <category name="Functions" custom="PROCEDURE"/>
+        <category name="Comments">
+          <block type="comment">
+            <title name="TEXT"/>
+          </block>
+        </category>
       </xml>
     </toolbox_blocks>
     <solution_blocks>

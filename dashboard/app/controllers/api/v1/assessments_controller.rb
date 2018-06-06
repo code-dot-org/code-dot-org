@@ -155,7 +155,7 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
         submitted = last_attempt[:submitted]
         timestamp = last_attempt[:updated_at].to_formatted_s
 
-        responses_by_level_group[script_level.id] = {
+        responses_by_level_group[level_group.id] = {
           stage: script_level.stage.localized_title,
           puzzle: script_level.position,
           question: level_group.properties["title"],

@@ -1,0 +1,49 @@
+ko:
+  data:
+    block_categories:
+      Actions: 동작
+      Loops: 반복
+      Functions: 함수
+      Color: 색
+      Brushes: Brushes
+      Math: 계산
+      Logic: 논리
+      Variables: 변수
+      Number: Number
+      String: String
+      Image: Image
+      Boolean: Boolean
+      Conditionals: 조건/선택
+      Events: 이벤트
+      Games/Score: Games/Score
+      Comments: Comments
+      Category: Category
+      Prebuilt: Prebuilt
+      Text: 문장
+      Picker: Picker
+      Comment: Comment
+      'Variables ': 'Variables '
+      everythingelse: everythingelse
+      numbers: numbers
+      Numbers: Numbers
+      Input: Input
+      Default: Default
+      Sprites: Sprites
+      Behaviors: Behaviors
+      World: World
+      Sprite: Sprite
+      Brush: Brush
+      Make Sprite: Make Sprite
+      Movement: Movement
+      Start: '시작:'
+      Groups: Groups
+      Booleans: 불(참 또는 거짓)값들
+      Functional: Functional
+      Predefined: Predefined
+      test: 검사
+      test2: test2
+      Foo: Foo
+      Name: 이름
+      NEW BLOCKS: NEW BLOCKS
+      Game/Score: Game/Score
+      Function: 함수

@@ -1,0 +1,49 @@
+"el":
+  data:
+    block_categories:
+      Actions: Ενέργειες
+      Loops: Βρόχοι
+      Functions: Συναρτήσεις
+      Color: Χρώμα
+      Brushes: Brushes
+      Math: Μαθηματικά
+      Logic: Λογική
+      Variables: Μεταβλητές
+      Number: Number
+      String: String
+      Image: Image
+      Boolean: Boolean
+      Conditionals: Έλεγχοι
+      Events: Συμβάντα
+      Games/Score: Games/Score
+      Comments: Comments
+      Category: Category
+      Prebuilt: Prebuilt
+      Text: κείμενο
+      Picker: Picker
+      Comment: Comment
+      'Variables ': 'Variables '
+      everythingelse: everythingelse
+      numbers: numbers
+      Numbers: Numbers
+      Input: Input
+      Default: Default
+      Sprites: Sprites
+      Behaviors: Behaviors
+      World: World
+      Sprite: Sprite
+      Brush: Brush
+      Make Sprite: Make Sprite
+      Movement: Movement
+      Start: Έναρξη
+      Groups: Groups
+      Booleans: Δυαδικοί
+      Functional: Functional
+      Predefined: Predefined
+      test: δοκιμή
+      test2: test2
+      Foo: Foo
+      Name: Όνομα
+      NEW BLOCKS: NEW BLOCKS
+      Game/Score: Game/Score
+      Function: Συνάρτηση

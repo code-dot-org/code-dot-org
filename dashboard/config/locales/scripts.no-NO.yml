@@ -2194,14 +2194,15 @@
               name: Planning For the Future
             Sharing Student Work:
               name: Sharing Student Work
-        csp1:
-          title: CS Principles Unit 1 - The Internet
+        csp1-2017:
+          title: CSP Unit 1 - The Internet
           description: This unit explores the technical challenges and questions that
             arise from the need to represent digital information in computers and
             transfer it between people and computational devices. The unit then explores
             the structure and design of the internet and the implications of those
             design decisions.
-          description_short: Internett
+          description_short: Explore the challenges about representing information
+            as bits and how to get those bits from one place to another.
           description_audience: ''
           stages:
             Binary Numbers:
@@ -2246,8 +2247,8 @@
               name: CSP Student Post-Course Survey
             Post-Course Survey:
               name: Post-Course Survey
-        csp2:
-          title: CS Principles Unit 2 - Digital Information
+        csp2-2017:
+          title: CSP Unit 2 - Digital Information
           description: This unit further explores the ways that digital information
             is encoded, represented and manipulated. Being able to digitally manipulate
             data, visualize it, and identify patterns, trends and possible meanings
@@ -2256,7 +2257,8 @@
             be learned or extracted from it, and being able to use computational tools
             to manipulate data and communicate about it are the primary skills addressed
             in the unit.
-          description_short: Digital Information
+          description_short: Explore how more complex digital information is represented
+            and manipulated through computation and visualization.
           description_audience: ''
           stages:
             Bytes and File Sizes:
@@ -2303,16 +2305,14 @@
               name: Practice PT - Encode an Experience
             Post-Course Survey:
               name: Post-Course Survey
-        csp3:
-          title: CSP Unit 3 - Programming
-          description: "This unit introduces the foundational concepts of computer
-            programming, which unlocks the ability to make rich, interactive apps.
-            This course uses JavaScript as the programming language, and App Lab as
-            the programming environment to build apps, but the concepts learned in
-            these lessons span all programming languages and tools.\r\n\r\nThis unit
-            was last updated October 30th, 2017. Read more about curriculum updates
-            at forum.code.org/c/csp/updates."
-          description_short: Programming
+        csp3-2017:
+          title: CSP Unit 3 - Intro to Programming
+          description: |-
+            This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.\r
+            \r
+            This unit was last updated October 30th, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
+          description_short: Learn the basics of programming in JavaScript through
+            a top-down design approach using classic turtle drawing.
           description_audience: ''
           stages:
             APIs and Function Parameters:
@@ -2355,15 +2355,14 @@
               name: Please complete the CSP Mid-course survey!
             Post-Course Survey:
               name: Post-Course Survey
-        csp4:
-          title: CS Principles Unit 4 - Big Data and Privacy
-          description: "The data-rich world we live in introduces many complex questions
-            related to public policy, law, ethics and societal impact. The goals of
-            this unit are to develop a well-rounded and balanced view about data in
-            the world, including the positive and negative effects of it, and to understand
-            the basics of how and why modern encryption works.\r\n\r\nThis unit was
-            last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
-          description_short: Big Data and Privacy
+        csp4-2017:
+          title: CSP Unit 4 - Big Data and Privacy
+          description: |-
+            The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.\r
+            \r
+            This unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
+          description_short: Explore the data-rich world we live, and how data impacts
+            public policy, personal privacy, security, the law, and ethics.
           description_audience: ''
           stages:
             Alice and Bob and Asymmetric Keys:
@@ -2404,14 +2403,15 @@
               name: Post-Course Survey
             Student Post-Course Survey:
               name: Student Post-Course Survey
-        csp5:
-          title: CS Principles Unit 5 - Building Apps
-          description: 'This unit continues the introduction of foundational concepts
+        csp5-2017:
+          title: CSP Unit 5 - Building Apps
+          description: This unit continues the introduction of foundational concepts
             of computer programming, which unlocks the ability to make rich, interactive
             apps. This course uses JavaScript as the programming language, and App
             Lab as the programming environment to build apps, but the concepts learned
-            in these lessons span all programming languages and tools. '
-          description_short: Building Apps
+            in these lessons span all programming languages and tools.
+          description_short: Continue to learn foundational concepts of computer programming
+            in JavaScript by making rich, interactive apps.
           description_audience: ''
           stages:
             Beyond Buttons Toward Apps:
@@ -3418,10 +3418,16 @@
               name: Lesson 2,3
             Test stage with bubbles:
               name: Test stage with bubbles
-        csd3:
-          title: " TEMP CSD Unit 3 - Interactive Games and Animations"
-          description: Temp place to work on U3 of Disco
-          description_short: Programming
+        csd3-2017:
+          title: CSD Unit 3 - Animations and Games
+          description: " In Unit 3, you’ll build on your coding experience as you
+            program animations, interactive art, and games in Game Lab. The unit starts
+            off with simple shapes and builds up to more sophisticated sprite-based
+            games, using the same programming concepts and the design process computer
+            scientists use daily. In the final project, you’ll develop a personalized,
+            interactive program."
+          description_short: " Learn to program animations, interactive art, and games
+            in Game Lab."
           description_audience: ''
           stages:
             Booleans and Conditionals:
@@ -3906,16 +3912,12 @@
               name: Unit 4 Chapter 1 Assessment
             'Anonymous student survey: Taking the AP exam':
               name: 'Anonymous student survey: Taking the AP exam'
-        csd1:
-          title: 'CSD Unit 1 - Problem Solving: Computers and Logic'
-          description_short: Problem Solving
-          description: " \r\nUnit 1 is a highly interactive and collaborative introduction
-            to the field of computer science, as framed within the broader pursuit
-            of solving problems. You’ll practice using a problem solving process to
-            address a series of puzzles, challenges, and real world scenarios. Next,
-            you’ll learn how computers input, output, store, and process information
-            to help humans solve problems.  The unit concludes with a project in which
-            you design an application that helps solve a problem of your choosing.\r\n"
+        csd1-2017:
+          title: CSD Unit 1 - Problem Solving
+          description_short: "  Learn how humans work with computers to solve problems."
+          description: |2
+             \r
+            Unit 1 is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r
           description_audience: ''
           stages:
             Intro to Problem Solving:
@@ -4242,11 +4244,16 @@
               name: RGB Color
             Processing with Bits:
               name: Processing with Bits
-        csd2:
-          title: 'CSD Unit 2 - The Internet: Web Development'
+        csd2-2017:
+          title: CSD Unit 2 - Web Development
           description_audience: ''
-          description_short: Web Development
-          description: ''
+          description_short: "  Learn to build your own web site in Web Lab."
+          description: " In Unit 2, you’ll learn how to create and share the content
+            on your own web pages. After deciding what content you want to share with
+            the world, you’ll learn how to structure and style your pages using HTML
+            and CSS. You’ll also practice valuable programming skills such as debugging
+            and commenting.  By the end of the unit, you’ll have a personal website
+            that you can publish to the Internet."
           stages:
             new stage:
               name: new stage
@@ -4267,13 +4274,13 @@
                 a sequence of increasingly complex web pages found on Code Studio
                 and learn the importance of comments, whitespace, and indentation
                 as tools for making web pages easier to read.
-              description_teacher: In this lesson students will deal with common issues
-                that arise when designing web pages in HTML. Students will correct
-                errors in a sequence of increasingly complex web pages found on Code
-                Studio. In the process they will learn the importance of comments,
-                whitespace, and indentation as tools for making web pages easier to
-                read. At the end of the lesson students create a list of strategies
-                for debugging web pages and ensuring they are easy to read and maintain.
+              description_teacher: Students deal with common issues that arise when
+                designing web pages in HTML. Students will correct errors in a sequence
+                of increasingly complex web pages. In the process they will learn
+                the importance of comments, whitespace, and indentation as tools for
+                making web pages easier to read. At the end of the lesson students
+                create a list of strategies for debugging web pages and ensuring they
+                are easy to read and maintain.
             Introduction to Styling with CSS:
               name: Introduction to Styling with CSS
             Multi-Page Websites:
@@ -4296,22 +4303,12 @@
                 could be shared intentionally or unintentionally.  Finally, the class
                 comes up with a set of guidelines to follow when putting information
                 online.
-              description_teacher: "As students have recently spent some time thinking
-                about the actual content that will go into their personal website,
-                this lesson takes a step back from the unit-long project (publication
-                of a personal website) to help students articulate what personal information
-                they choose to share digitally and with whom.  It also reinforces
-                the notion that much of the information that they choose to share
-                digitally falls largely out of their control the moment it is released.
-                \ \r\n\r\nStudents begin by individually identifying appropriate audiences
-                with whom they would be comfortable sharing given pieces of personal
-                information.  They then look at several social media pages to determine
-                what sorts of information people are sharing about themselves or one
-                another.  Last, students reflect on what guidelines they think are
-                appropriate for posting information online.\r\n\r\nThe ultimate point
-                of this lesson is not to scare students, but rather to experientially
-                bring students to realizing precisely what level of control they don’t
-                have in releasing information into the web."
+              description_teacher: |-
+                As students have recently spent some time thinking about the actual content that will go into their personal website, this lesson takes a step back from the unit-long project (publication of a personal website) to help students articulate what personal information they choose to share digitally and with whom.  It also reinforces the notion that much of the information that they choose to share digitally falls largely out of their control the moment it is released.  \r
+                \r
+                Students begin by individually identifying appropriate audiences with whom they would be comfortable sharing given pieces of personal information.  They then look at several social media pages to determine what sorts of information people are sharing about themselves or one another.  Last, students reflect on what guidelines they think are appropriate for posting information online.\r
+                \r
+                The ultimate point of this lesson is not to scare students, but rather to experientially bring students to realizing precisely what level of control they don’t have in releasing information into the web.
             Publishing a Website:
               name: Publishing a Website
             Sources and Search Engines:
@@ -4341,13 +4338,9 @@
                 on the page. The class learns the basic syntax for CSS rule-sets and
                 then explores properties that impact HTML text elements.  Finally,
                 everyone applies text styles to their personal websites.
-              description_teacher: "This lesson introduces CSS as a way to style elements
-                on the page. Students learn the basic syntax for CSS rule-sets and
-                then explore properties that impact HTML text elements. They work
-                on a HTML page about Guinness World Record holders, adding their own
-                style to the provided page. In the last level, students apply what
-                they have learned about styles for text elements to their personal
-                web page.\r\n\r\n"
+              description_teacher: |
+                This lesson introduces CSS as a way to style elements on the page. Students learn the basic syntax for CSS rule-sets and then explore properties that impact HTML text elements. They work on a HTML page about Guinness World Record holders, adding their own style to the provided page. In the last level, students apply what they have learned about styles for text elements to their personal web page.\r
+                \r
             Styling Elements with CSS:
               name: Styling Elements with CSS
               description_student: This lesson continues the introduction to CSS style
@@ -4446,14 +4439,10 @@
                 of the creator of that media. After first studying Creative Commons
                 licensing, the class learns how to add images to web pages, and how
                 to give proper attribution when doing so.
-              description_teacher: "Starting with an discussion of their personal
-                opinions on how others should be allowed to use their work, the class
-                explores the purpose and role of copyright for both creators and users
-                of creative content.  They then move on to an activity exploring the
-                various Creative Commons licenses as a solution to the difficulty
-                in dealing with copyright. \r\n\r\nFinally, with a common understanding
-                of the restrictions of various Creative Commons licenses, students
-                learn how to add images to their web pages using the &lt;img&gt; tag."
+              description_teacher: |-
+                Starting with an discussion of their personal opinions on how others should be allowed to use their work, the class explores the purpose and role of copyright for both creators and users of creative content.  They then move on to an activity exploring the various Creative Commons licenses as a solution to the difficulty in dealing with copyright. \r
+                \r
+                Finally, with a common understanding of the restrictions of various Creative Commons licenses, students learn how to add images to their web pages using the &lt;img&gt; tag.
             Project - Multi-Page Websites:
               name: Project - Multi-Page Websites
               description_student: 'This lesson covers hyperlinks, which allow web
@@ -4461,12 +4450,9 @@
                 will link together all the previous pages into one project, and create
                 navigation bars for each page before publishing the entire site to
                 the Web.  '
-              description_teacher: "After learning about how to link web pages to
-                one another, students are finally able to publish the website they
-                have been working on.  In this lesson, they link together all the
-                previous pages they have created into one project, create a new page,
-                and add navigation between the pages before publishing the entire
-                site to the Web.  \r\n\r\n"
+              description_teacher: |
+                After learning about how to link web pages to one another, students are finally able to publish the website they have been working on.  In this lesson, they link together all the previous pages they have created into one project, create a new page, and add navigation between the pages before publishing the entire site to the Web.  \r
+                \r
             RGB Colors and Classes:
               name: RGB Colors and Classes
               description_student: This lesson covers classes and custom colors. The
@@ -4488,13 +4474,15 @@
                 their personal websites, working with peers to get feedback, review
                 the rubric, and put the finishing touches on the site. To cap off
                 the unit, everyone shares their projects and how they were developed.
-              description_teacher: "Students have spent a lot of time throughout the
+              description_teacher: 'Students have spent a lot of time throughout the
                 unit working on their Personal Website. In the final couple of days
                 students finalize their websites.  They work with peers to get feedback,
                 put the finishing touches on the websites, review the rubric and reflect
                 on their process. To cap off the unit, they will share their projects
                 and also a overview of the process they took to get to that final
-                design.\r\n"
+                design.\r
+
+'
             Headings:
               name: Headings
               description_student: This lesson continues the introduction to HTML
@@ -4542,11 +4530,18 @@
               name: Measuring Student Learning
             AP Preparation and Support:
               name: AP Preparation and Support
-        csd4:
-          title: 'CSD Unit 4 - Problem Solving: The Design Process'
+        csd4-2017:
+          title: CSD Unit 4 - The Design Process
           description_audience: ''
-          description_short: The Design Process
-          description: ''
+          description_short: "  Learn how to design a program that meets the needs
+            of your users."
+          description: Unit 4 introduces the broader social impacts of computing.
+            Through a series of design challenges, you will learn how to better understand
+            the needs of others while developing a solution to a problem. The second
+            half of the unit consists of an iterative team project, during which teams
+            have the opportunity to identify a need that they care about, prototype
+            solutions both on paper and in App Lab, and test solutions with real users
+            to get feedback and drive further iteration.
           stages:
             Analysis of Design:
               name: Analysis of Design
@@ -4570,13 +4565,15 @@
                 users might react to a variety of products. Role playing as a different
                 person, each member of the class will get to experience designs through
                 someone else's eyes.
-              description_teacher: "Designers need to understand their users’ needs
+              description_teacher: 'Designers need to understand their users’ needs
                 in order to create useful products.  This lesson encourages students
                 to think about how to design for another person by role-playing as
                 someone else using a user profile and reacting as that user to a series
                 of products.  Each student is assigned a user profile describing a
                 person, which they then use to choose appropriate products, critique
-                product design, and suggest improvements to design.\r\n"
+                product design, and suggest improvements to design.\r
+
+'
             Discovering Users:
               name: Discovering Users
             User-Centered Design Micro Activity:
@@ -4640,7 +4637,7 @@
                 ideas before investing a lot of time writing code. In this lesson
                 teams explore some example apps created in App Lab, using those apps
                 to help inform the first paper prototypes of their apps.
-              description_teacher: "Before starting to design apps, we need to help
+              description_teacher: 'Before starting to design apps, we need to help
                 students to better scope their expectations. Because students will
                 eventually be prototyping these apps in App Lab, they will be in better
                 shape if their ideas align with the kinds of apps that are easily
@@ -4649,7 +4646,9 @@
                 with App Lab. Teams then can chose one (or more) of the apps as a
                 basis for their own. From there, teams have some time to discuss the
                 basic functionality of their app before using 3x5 index cards to develop
-                paper prototypes.\r\n"
+                paper prototypes.\r
+
+'
             Prototype Testing:
               name: Prototype Testing
               description_student: In this lesson teams test out their paper prototypes
@@ -4670,17 +4669,18 @@
             Digital Design:
               name: Digital Design
               description_student: Having developed, tested, and gathered feedback
-                on a paper prototype, teams now moves to App Lab to build the next
+                on a paper prototype, teams now move to App Lab to build the next
                 iteration of their apps. Using the drag-and-drop Design Mode, each
                 team member builds out at least one page of their team's app, responding
                 to feedback that was received in the previous round of testing.
               description_teacher: Having collaboratively developed a paper prototype
-                for their apps, groups now divide and conquer to begin implementing
-                an interactive digital version of their prototype. Using the drag-and-drop
-                design mode of App Lab, students individually work through a progression
-                of skill-building levels to learn how to build digital app wireframes.
-                From there, each group member builds out at least one page of their
-                app in App Lab.
+                for their apps, groups now divide and conquer to begin work on an
+                interactive digital version based on the paper prototype. Using the
+                drag-and-drop design mode of App Lab, students individually work through
+                a progression of skill-building levels to learn how to build digital
+                versions of a paper prototype. From there, each group member builds
+                out at least one page of their app in App Lab, to be later combined
+                into a single app.
             Event Driven Programming:
               name: Event Driven Programming
               description_student: Building on the screens that the class designed
@@ -5441,10 +5441,10 @@
           description: 'COMING SOON: In mid-February, this page will host a set of
             resources for teachers preparing for the AP exam'
           stages: {}
-        csppostap:
+        csppostap-2017:
           title: CSP Post-AP - Databases and Using Data in Your Apps
           description_audience: ''
-          description_short: ''
+          description_short: Learn to collect and use data in App Lab apps.
           description: App Lab has a number of tools that allow you to collect and
             use data in your apps. The following material provides an overview of
             how these tools work, a sampling of example projects that can be built
@@ -5712,13 +5712,18 @@
               name: Betingelser
             'Real Life Algorithms: Dice Race':
               name: 'Virkelige algoritmer: Terningrace'
-        csd6:
+        csd6-2017:
           title: CSD Unit 6 - Physical Computing
           description_audience: ''
-          description_short: Programming with physical devices
-          description: The sixth unit of CS Discoveries, in which students use App
-            Lab and the Maker Toolkit to develop programs that communicate with a
-            physical board.
+          description_short: Learn to program with physical devices.
+          description: Unit 6 explores the role of hardware platforms in computing
+            and how different sensors can provide more effective input and output
+            than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s
+            Circuit Playground, you’ll develop programs that utilize the same hardware
+            inputs and outputs that you see in the smart devices, looking at how a
+            simple rough prototype can lead to a finished product. The unit concludes
+            with a design challenge to use the Circuit Playground as the basis for
+            an innovation of your own design.
           stages:
             Computing Innovations:
               name: Computing Innovations
@@ -5741,8 +5746,8 @@
                 written in both Game Lab and App Lab handle taking input from the
                 user. After comparing and contrasting the approaches they saw in the
                 example apps, students group up to act out the two different models
-                for input (conditionals in an infinite and asynchronous events) to
-                gain a better understanding of how they work.
+                for input (conditionals in an infinite loop and asynchronous events)
+                to gain a better understanding of how they work.
             Event Types:
               name: Event Types
               description_student: Review the basics of programming in App Lab and
@@ -5777,11 +5782,10 @@
               description_teacher: In this lesson students get their first opportunity
                 to write programs that use the Circuit Playground. After first inspecting
                 the board visually and hypothesizing possibly functionalities, students
-                move online where they will learn to write applications that blink
-                an LED and make noise with a buzzer. By combining App Lab screens
-                with the Circuit Playgrounds, students can gradually start to integrate
-                elements of the board as an ouput device while relying on App Lab
-                for user input.
+                move online where they will learn to write applications that control
+                an LED. By combining App Lab screens with the Circuit Playgrounds,
+                students can gradually start to integrate elements of the board as
+                an ouput device while relying on App Lab for user input.
             Lists:
               name: Lister
               description_student: Learn how lists can be used to store multiple values
@@ -5884,7 +5888,7 @@
               name: 'Project: Prototype an Innovation'
               description_student: Develop innovative computing devices of your own
                 design, using everything you've learned throughout this course.
-              description_teacher: 'In this final project for the course, student
+              description_teacher: 'In this final project for the course, students
                 team to develop and test a prototype for an innovative computing device
                 based on the Circuit Playground. Using the inputs and outputs available
                 on the board, groups will create programs that allow for interesting
@@ -6344,27 +6348,30 @@
               name: Using the Game Design Process
             'Project: Design a Game':
               name: 'Project: Design a Game'
-        csd5:
+        csd5-2017:
           title: CSD Unit 5 - Data and Society
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: Learn how people use computers to solve data problems.
+          description: Unit 5 is about the importance of data in solving problems
+            and highlights how computers can help in this process. The first chapter
+            explores different systems used to represent information in a computer
+            and the challenges and tradeoffs posed by using them. In the second chapter
+            you’ll learn how collections of data are used to solve problems, and how
+            computers help to automate the steps of this process. The chapter concludes
+            by considering how the data problem solving process can be applied to
+            an area of your choosing.
           stages:
             Representation Matters:
               name: Representation Matters
-              description_student: In the first lesson of the data unit, students
-                will get an overview of what data is and how it is used to solve problems.  Students
-                will start off with a brief discussion to come to a common understanding
-                of data.  They then split into groups and use a data set to make a
-                series of meal recommendations for people with various criteria.  Each
-                group has the choices of meal represented in a different way (pictures,
-                recipes, menu, nutrition) that gives an advantage for one of the recommendations.  Afterwards,
+              description_student: This first lesson provides an overview of what
+                data is and how it is used to solve problems.  Groups use a data set
+                to make a series of meal recommendations for people with various criteria.   Afterwards,
                 groups compare their responses and discuss how the different representations
                 of the meal data affected how the students were able to solve the
                 different problems.
               description_teacher: In the first lesson of the data unit, students
-                will get an overview of what data is and how it is used to solve problems.  Students
-                will start off with a brief discussion to come to a common understanding
+                get an overview of what data is and how it is used to solve problems.  Students
+                start off with a brief discussion to come to a common understanding
                 of data.  They then split into groups and use a data set to make a
                 series of meal recommendations for people with various criteria.  Each
                 group has the choices of meal represented in a different way (pictures,
@@ -6374,20 +6381,13 @@
                 different problems.
             Patterns and Representation:
               name: Patterns and Representation
-              description_student: In this lesson students create their own system
-                for representing information. They begin by brainstorming all the
-                different systems they already use to represent yes-no responses.
-                They then work in small groups to create a system that can represent
-                any letter in the alphabet using only a single stack of cards. The
-                cards used have one of 6 different possible drawings (6 animals, 6
-                colors, etc.) and so to represent the entire alphabet students will
-                need to use patterns of multiple cards to represent each letter. Students
-                will create messages with their systems and exchange with other groups
-                to ensure the system worked as intended. In the wrap-up discussion
-                the class will review any pros and cons of the different systems.
-                They will discuss commonalities between working systems and recognize
-                that there are many possible solutions to this problem and what's
-                important is that everyone use the same arbitrary system to communicate.
+              description_student: This lesson looks closer at what is needed to create
+                a system of representation.  Groups create systems that can represent
+                any letter in the alphabet using only a single stack of cards, then
+                create messages with their systems and exchange with other groups
+                to ensure the system worked as intended.   The class discusses commonalities
+                between working systems while recognizing that there are many possible
+                working solutions.
               description_teacher: In this lesson students create their own system
                 for representing information. They begin by brainstorming all the
                 different systems they already use to represent yes-no responses.
@@ -6396,23 +6396,21 @@
                 cards used have one of 6 different possible drawings (6 animals, 6
                 colors, etc.) and so to represent the entire alphabet students will
                 need to use patterns of multiple cards to represent each letter. Students
-                will create messages with their systems and exchange with other groups
+                create messages with their systems and exchange with other groups
                 to ensure the system worked as intended. In the wrap-up discussion
-                the class will review any pros and cons of the different systems.
-                They will discuss commonalities between working systems and recognize
-                that there are many possible solutions to this problem and what's
-                important is that everyone use the same arbitrary system to communicate.
+                the class  reviews any pros and cons of the different systems. They
+                discuss commonalities between working systems and recognize that there
+                are many possible solutions to this problem and what's important is
+                that everyone use the same arbitrary system to communicate.
             ASCII and Binary Representation:
               name: ASCII and Binary Representation
-              description_student: In this lesson students learn to use their first
-                binary system for encoding information, the ASCII system for representing
-                letters and other characters. At the beginning of the lesson the teacher
-                introduces the fact that computers must represent information using
-                either "on" or "off". Then students are introduced to the ASCII system
-                for representing text using binary symbols. Students practice using
-                this system before encoding their own message using ASCII. At the
-                end of the lesson a debrief conversation helps synthesize the key
-                learning objectives of the activity.
+              description_student: This lesson introduces a formal binary system for
+                encoding information, the ASCII system for representing letters and
+                other characters. At the beginning of the lesson the teacher introduces
+                the fact that computers must represent information using either "on"
+                or "off". The class is then introduced to the ASCII system for representing
+                text using binary symbols and practices using this system before encoding
+                their own messages using ASCII.
               description_teacher: In this lesson students learn to use their first
                 binary system for encoding information, the ASCII system for representing
                 letters and other characters. At the beginning of the lesson the teacher
@@ -6424,18 +6422,13 @@
                 learning objectives of the activity.
             Representing Images:
               name: Representing Images
-              description_student: In this lesson students learn how computers represent
-                images. To begin the lesson they consider the challenge of turning
-                all the complexity of vision into a binary pattern. Through a series
-                of images showing how this transformation is made students are introduced
-                to the concept of splitting images into squares or "pixels" which
-                can then be turned on or off individually to make the entire image.
-                Students then do a short set of challenges using the Pixelation Widget
-                in order to draw black and white images. Puzzles are designed to call
-                out some of the challenges of representing images in this way. In
-                the wrap up students make connections between the system for representing
-                images and the system for representing text they learned in the previous
-                lesson.
+              description_student: This lesson continues the study of binary representation
+                systems, this time with images. The class is introduced to the concept
+                of splitting images into squares or "pixels" which can then be turned
+                on or off individually to make the entire image. After doing a short
+                set of challenges using the Pixelation Widget, the class makes connections
+                between the system for representing images and the system for representing
+                text they learned in the previous lesson.
               description_teacher: In this lesson students learn how computers represent
                 images. To begin the lesson they consider the challenge of turning
                 all the complexity of vision into a binary pattern. Through a series
@@ -6454,14 +6447,13 @@
               name: Representing Numbers Part 2
             Combining Representations:
               name: Combining Representations
-              description_student: In this lesson, students use all three types of
-                binary representation systems (ASCII characters, binary number, and
-                images) to decode information in a record.  After seeing a series
-                of bits and being asked to decode them, students are introduced to
-                the idea that in order to understand binary information, they must
-                understand both the system that is being used and the meaning of the
-                information encoded.  They then decode a record representing a pet
-                based on a given structure.
+              description_student: This lesson combines all three types of binary
+                representation systems (ASCII characters, binary number, and images)
+                to allow for the encode of more complex types information in a record.  After
+                seeing a series of bits and being asked to decode them, the class
+                is introduced to the idea that  understanding binary information requires
+                understanding both the system that is being used and the meaning of
+                the information encoded.
               description_teacher: In this lesson, students use all three types of
                 binary representation systems (ASCII characters, binary number, and
                 images) to decode information in a record.  After seeing a series
@@ -6472,17 +6464,14 @@
                 based on a given structure.
             Project - Create a Representation:
               name: Project - Create a Representation
-              description_student: In this lesson students design a structure to represent
-                their perfect day using the binary representation systems they've
-                learned in this chapter. Students will first write a short description
-                of their perfect day and then review with a partner to identify the
-                key pieces of information they think a computer could capture. As
-                a class students will decide how a punch card of bytes of information
-                will be interpreted to represent those pieces of information. Students
-                will then use the ASCII, binary number, and image formats they have
-                learned to represent their perfect days. Students then trade punch
-                cards and try to decipher what the other student's perfect day is
-                like. The lesson ends with a reflection.
+              description_student: The class designs structure to represent their
+                perfect day using the binary representation systems they've learned
+                in this chapter. After deciding which pieces of information the record
+                should capture, the class will decide how a punch card of bytes of
+                information will be interpreted to represent those pieces of information.
+                Afterwards, everyone will use the ASCII, binary number, and image
+                formats they have learned to represent their perfect days try to decipher
+                what a partner's perfect day is like.
               description_teacher: In this lesson students design a structure to represent
                 their perfect day using the binary representation systems they've
                 learned in this chapter. Students will first write a short description
@@ -6496,21 +6485,30 @@
                 like. The lesson ends with a reflection.
             Problem Solving and Data:
               name: Problem Solving and Data
-              description_student: In this lesson, students use the problem solving
-                process from earlier in the course to solve a data problem.
-              description_teacher: In this lesson, students use the problem solving
-                process from earlier in the course to solve a data problem.
+              description_student: This lesson covers how the problem solving process
+                can be tailored to deal with data problems, in particular.  The class
+                is tasked with deciding what a city most needs to spend resources
+                on.  They must find and use data from the Internet to support their
+                decision.
+              description_teacher: 'In this lesson, students use the problem solving
+                process from earlier in the course to solve a data problem.  After
+                reviewing the process, the class is presented with a decision: whether
+                a city should build a library, pet shelter, or fire department.  Students
+                work in teams to collect information on the Internet to help them
+                decide what should be built, then use this information build an argument
+                that will convince the city council of their choice.  They then map
+                what they have done to the problem solving process that they have
+                been using throughout the course, comparing the general problem solving
+                process to its specific application to data problems.'
             Making Decisions with Data:
               name: Making Decisions with Data
-              description_student: In this lesson students get practice making decisions
-                with data based on some problems designed to be familiar to middle
-                school students. Students work in groups discussing how they would
-                use the data presented to make a decision before the class discusses
-                their final choices. Not all questions have right answers and in some
-                cases students can and should decide that they should collect more
-                data. The lesson concludes with a discussion of how different people
-                could draw different conclusions from the same data, or how collecting
-                different data might have affected the decisions they made.
+              description_student: This lesson gives the class a chance to practice
+                the data problem solving process introduced in the last lesson.  Not
+                all questions have right answers and in some cases the class can and
+                should decide that they should collect more data. The lesson concludes
+                with a discussion of how different people could draw different conclusions
+                from the same data, or how collecting different data might have affected
+                the decisions they made.
               description_teacher: In this lesson students get practice making decisions
                 with data based on some problems designed to be familiar to middle
                 school students. Students work in groups discussing how they would
@@ -6522,110 +6520,103 @@
                 different data might have affected the decisions they made.
             Interpreting Data:
               name: Interpreting Data
-              description_student: In this lesson, students go further into the interpretation
-                of data, including cleaning and visualizing raw data sets.  Students
-                first look at the how presenting data in different ways can help people
-                to understand it better.  They then visualize their own raw data set,
-                in the context of a pizza topping survey, deciding what to do with
-                data that does not easily fit into the visualization scheme that they
-                have chosen.  Last, students look at what parts of this process can
-                be automated, and what need a human to make decisions.
-              description_teacher: In this lesson, students go further into the interpretation
-                of data, including cleaning and visualizing raw data sets.  Students
-                first look at the how presenting data in different ways can help people
-                to understand it better.  They then visualize their own raw data set,
-                in the context of a pizza topping survey, deciding what to do with
-                data that does not easily fit into the visualization scheme that they
-                have chosen.  Last, students look at what parts of this process can
-                be automated, and what need a human to make decisions.
+              description_student: Students begin the lesson by looking at a cake
+                preference survey that allows respondents to specify both a cake and
+                an icing flavor.  They discuss how knowing the relationship between
+                cake and icing preference helps them better decide which combination
+                to recommend.  They are then introduced to cross tabulation, which
+                allows them to graph relationships to different preferences.  They
+                use this technique to find relationships in a preference survey, then
+                brainstorm the different types of problems that this process could
+                help solve.
+              description_teacher: Students begin the lesson by looking at a cake
+                preference survey that allows respondents to specify both a cake and
+                an icing flavor.  They discuss how knowing the relationship between
+                cake and icing preference helps them better decide which combination
+                to recommend.  They are then introduced to cross tabulation, which
+                allows them to graph relationships to different preferences.  They
+                use this technique to find relationships in a preference survey, then
+                brainstorm the different types of problems that this process could
+                help solve.
             Automating Data Decisions:
               name: Automating Data Decisions
               description_student: In this lesson students look at a simple example
-                of how a computer could be used to complete essentially every step
-                of the data problem solving process. To begin students are given the
-                clean data they collected about their ice cream preferences. They
-                use a spreadsheet to visualize this data using simple charts and discuss
-                in groups the decision they would make with this data. Students then
-                create rules, or an algorithm, that a computer could use to make this
-                decision automatically. Groups share their rules and what choices
+                of how a computer could be used to complete the decision making step
+                of the data problem solving process. Students are given the task of
+                creating an algorithm that could suggest a vacation spot.  Students
+                then create rules, or an algorithm, that a computer could use to make
+                this decision automatically. Students share their rules and what choices
                 their rules would make with the class data. They then use their rules
-                on data from another class to reinforce the fact that the rules they
-                create should be useful for any data set. The lesson concludes with
+                on data from their classmates to test whether their rules would make
+                the same decision that  a person would. The lesson concludes with
                 a discussion about the benefits and drawbacks of using computers to
                 automate the data problem solving process.
               description_teacher: In this lesson students look at a simple example
-                of how a computer could be used to complete essentially every step
-                of the data problem solving process. To begin students are given the
-                clean data they collected about their ice cream preferences. They
-                use a spreadsheet to visualize this data using simple charts and discuss
-                in groups the decision they would make with this data. Students then
-                create rules, or an algorithm, that a computer could use to make this
-                decision automatically. Groups share their rules and what choices
+                of how a computer could be used to complete the decision making step
+                of the data problem solving process. Students are given the task of
+                creating an algorithm that could suggest a vacation spot.  Students
+                then create rules, or an algorithm, that a computer could use to make
+                this decision automatically. Students share their rules and what choices
                 their rules would make with the class data. They then use their rules
-                on data from another class to reinforce the fact that the rules they
-                create should be useful for any data set. The lesson concludes with
+                on data from their classmates to test whether their rules would make
+                the same decision that  a person would. The lesson concludes with
                 a discussion about the benefits and drawbacks of using computers to
                 automate the data problem solving process.
             Problem Solving with Big Data:
               name: Problem Solving with Big Data
-              description_student: In this lesson, students look at how data is collected
-                and used by a organizations to solve problems in the real world. The
-                lesson begins with a quick review of the data problem solving process
-                they have explored in this unit. Then students are presented three
-                scenarios that could be solved using data and they brainstorm the
-                types of data they would want to solve them and how they could collect
-                the data. Each problem is designed to reflect a real-world service
-                that exists. After brainstorming students will watch a video about
-                a real-world service and will record notes about what data is collected
-                by the real-world service and how it is used. At the end of the lesson
-                students record whether data was provided actively by a user, was
-                recorded passively, or is collected by sensors.
+              description_student: This lesson covers how data is collected and used
+                by a organizations to solve problems in the real world. The class
+                looks at three scenarios that could be solved using data and brainstorms
+                the types of data they would want to solve them and how they could
+                collect the data.  Each scenario also includes a video about a real-world
+                service that has solved a similar problem with data.
               description_teacher: In this lesson, students look at how data is collected
-                and used by a organizations to solve problems in the real world. The
+                and used by organizations to solve problems in the real world. The
                 lesson begins with a quick review of the data problem solving process
-                they have explored in this unit. Then students are presented three
-                scenarios that could be solved using data and they brainstorm the
-                types of data they would want to solve them and how they could collect
-                the data. Each problem is designed to reflect a real-world service
-                that exists. After brainstorming students will watch a video about
-                a real-world service and will record notes about what data is collected
-                by the real-world service and how it is used. At the end of the lesson
-                students record whether data was provided actively by a user, was
-                recorded passively, or is collected by sensors.
+                they  explored in the last lesson. Then students are presented three
+                scenarios that could be solved using data and brainstorm the types
+                of data they would want to solve them and how they could collect the
+                data. Each problem is designed to reflect a real-world service that
+                exists. After brainstorming, students watch a video about a real-world
+                service and record notes about what data is collected by the real-world
+                service and how it is used. At the end of the lesson, students record
+                whether data was provided actively by a user, was recorded passively,
+                or is collected by sensors.
             Project - Solve a Data Problem:
               name: Project - Solve a Data Problem
-              description_student: To conclude this unit students will design a way
-                to use data to make a recommendation or prediction to help solve a
-                problem. Students will follow a project guide to complete this multi-day
-                activity. In the first several steps students brainstorm problems,
-                perform simple research, and define a problem of their choosing. They
-                will then decide what kind of data they would want to collect, how
-                it could be collected, and how it could be used. Students will perform
-                a peer review and make any necessary updates to their project before
-                preparing a presentation to their classmates.
-              description_teacher: To conclude this unit students will design a way
-                to use data to make a recommendation or prediction to help solve a
-                problem. Students will follow a project guide to complete this multi-day
-                activity. In the first several steps students brainstorm problems,
-                perform simple research, and define a problem of their choosing. They
-                will then decide what kind of data they would want to collect, how
-                it could be collected, and how it could be used. Students will perform
-                a peer review and make any necessary updates to their project before
-                preparing a presentation to their classmates.
+              description_student: To conclude this unit the class designs ways to
+                use data to make a recommendations or predictions to help solve a
+                problem.  In the first several steps the class brainstorms problems,
+                performs simple research, and defines a problem of their choosing.
+                They then decide what kind of data they want to collect, how it could
+                be collected, and how it could be used, before exchanging feedback
+                and giving a final presentation.
+              description_teacher: To conclude this unit, students design a recommendation
+                engine based on data that they collect and analyze from their classmates.
+                After looking at an example of a recommendation app, students follow
+                a project guide to complete this multi-day activity. In the first
+                several steps, students choose what choice they want to help the user
+                to make, what data they need to give the recommendation, create a
+                survey, and collect information about their classmates' choices. They
+                then interpret the data and use what they have learned to create the
+                recommendation algorithm.  Last, they use their algorithms to make
+                recommendations to a few classmates. Students perform a peer review
+                and make any necessary updates to their projects before preparing
+                a presentation to the class.
             Representing Numbers:
               name: Representing Numbers
-              description_student: In this lesson, students learn about the binary
-                number system.  With a set of cards that represent the place values
-                in a binary (base-2) number system by a collection of dots, students
-                turn bits "on" or "off" by turning cards face up and face down, then
-                observe the numbers that result from these different patterns.  Eventually,
-                student extend the pattern to a generic 4-bit system.
+              description_student: This lesson introduces the binary number system.  With
+                a set of cards that represent the place values in a binary (base-2)
+                number system, the class turns bits "on" or "off" by turning cards
+                face up and face down, then observes the numbers that result from
+                these different patterns.  Eventually, the pattern is extended to
+                a generic 4-bit system.
               description_teacher: In this lesson, students learn about the binary
                 number system.  With a set of cards that represent the place values
                 in a binary (base-2) number system by a collection of dots, students
                 turn bits "on" or "off" by turning cards face up and face down, then
                 observe the numbers that result from these different patterns.  Eventually,
-                student extend the pattern to a generic 4-bit system.
+                students extend the pattern to a generic 4-bit system.
             8-bit Numbers:
               name: 8-bit Numbers
               description_student: Students review the concept of binary numbers,
@@ -6665,13 +6656,14 @@
                 can help people make better decisions, the class looks at what parts
                 of this process can be automated, and what need a human.
               description_teacher: In this lesson, students go further into the collection
-                and interpretation of data, including cleaning and visualizing raw
-                data sets.  Students first look at the how presenting data in different
-                ways can help people to understand it better.  They then visualize
-                their own raw data set, in the context of a pizza topping survey,
-                deciding what to do with data that does not easily fit into the visualization
-                scheme that they have chosen.  Last, students look at what parts of
-                this process can be automated, and what need a human to make decisions.
+                and interpretation of data, including cleaning and visualizing data.  Students
+                first look at the how presenting data in different ways can help people
+                to understand it better, and they then create visualizations of their
+                own data. Using a the results of a preferred pizza topping survey,
+                students must decide what to do with data that does not easily fit
+                into the visualization scheme that they have chosen.  Finally, students
+                look at which parts of this process can be automated by a computer
+                and which need a human to make decisions.
             Keeping Data Secret:
               name: Keeping Data Secret
               description_student: Students have a discussion on the different levels
@@ -9038,6 +9030,14 @@
               name: CSP post survey 2018 staging
             CSD post survey 2018 staging:
               name: CSD post survey 2018 staging
+            CSD pre survey 2018 staging:
+              name: CSD pre survey 2018 staging
+            CSP pre survey 2018 staging:
+              name: CSP pre survey 2018 staging
+            CSP mid survey 2018 stagin:
+              name: CSP mid survey 2018 stagin
+            CSP mid survey 2018 staging:
+              name: CSP mid survey 2018 staging
           title: All the surveys
           description_audience: ''
           description_short: Place to stage and test Code.org surveys
@@ -9083,7 +9083,7 @@
           description_audience: ''
           description_short: ''
           description: ''
-        csp-explore:
+        csp-explore-2017:
           stages:
             new stage:
               name: new stage
@@ -9103,14 +9103,11 @@
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and
             complete the AP Explore Performance Tasks.
-          description: "These lessons are here to help you understand, prepare for,
-            and do the AP Explore Performance Task.  Each \"lesson\" contains links
-            to helpful documents that your teacher can help walk you through. NOTE:
-            the second item in the first lesson is not related to the Explore PT directly,
-            but covers general tech setup and tools you need to do various elements
-            of both the Explore and Create tasks.\r\n\r\nThis unit was last updated
-            November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
-        csp-create:
+          description: |-
+            These lessons are here to help you understand, prepare for, and do the AP Explore Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the second item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.\r
+            \r
+            This unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
+        csp-create-2017:
           stages:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
               name: Tech Setup - Your AP Digital Portfolio and Other Tools
@@ -9126,13 +9123,10 @@
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and
             complete the AP Create Performance Tasks.
-          description: "These lessons are here to help you understand, prepare for,
-            and do the AP Create Performance Task.  Each \"lesson\" contains links
-            to helpful documents that your teacher can help walk you through. NOTE:
-            the first item in the first lesson is not related to the Create PT directly,
-            but covers general tech setup and tools you need to do various elements
-            of both the Explore and Create tasks.\r\n\r\nThis unit was last updated
-            December, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
+          description: |-
+            These lessons are here to help you understand, prepare for, and do the AP Create Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the first item in the first lesson is not related to the Create PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.\r
+            \r
+            This unit was last updated December, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
         csp3-reovery:
           stages:
             Under the sea recovery:
@@ -12160,6 +12154,8 @@
               name: Rapid Research - Format Showdown
             Lossy vs Lossless Compression:
               name: Lossy vs Lossless Compression
+            Unit 2 Assessment:
+              name: Unit 2 Assessment
         csp3-2018:
           title: CSP Unit 3 - Intro to Programming
           description: "This unit introduces the foundational concepts of computer
@@ -12221,6 +12217,8 @@
               name: Please complete the CSP Mid-course survey!
               description_student: ''
               description_teacher: ''
+            Creating Functions with Parameters:
+              name: Creating Functions with Parameters
         csp-explore-2018:
           title: Explore - AP Performance Task Prep
           description: "These lessons are here to help you understand, prepare for,
@@ -12331,6 +12329,8 @@
               name: Finding Trends with Visualizations
             Check Your Assumptions:
               name: Check Your Assumptions
+            Unit 4 Assessment:
+              name: Unit 4 Assessment
         csp5-2018:
           title: CSP Unit 5 - Building Apps
           description: This unit continues the introduction of foundational concepts
@@ -12519,6 +12519,8 @@
               name: Fish Tank - Creating Sprites
             Alien Dance Party - Input:
               name: Alien Dance Party - Input
+            Virtual Pet - Interactions:
+              name: Virtual Pet - Interactions
           title: Introduction to Sprite Lab (PILOT)
           description_audience: Course E/F Students
           description_short: This is a pilot course for Code.org's new Sprite Lab

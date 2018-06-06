@@ -53,10 +53,10 @@
     "background": "soccer",
     "parent_level_id": 7987,
     "name_suffix": "_2018",
-    "contained_level_names": null,
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
-    "remove_items_when_actor_collides": "false"
+    "remove_items_when_actor_collides": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

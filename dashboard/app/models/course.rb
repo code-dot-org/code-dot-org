@@ -198,17 +198,14 @@ class Course < ApplicationRecord
   # contains localized strings so we can only cache on a per locale basis.
   #
   # @param [User] user Whose experiments to check for possible script substitutions.
-  # @param [Boolean] include_unstable Whether to show all course versions, rather
-  #   than just the stable ones. Default: false.
-  def self.valid_courses(user: nil, include_unstable: false)
+  def self.valid_courses(user: nil)
     # Do not cache if the user might have a course experiment enabled which puts them
     # on an alternate script.
     if user && has_any_course_experiments?(user)
-      return Course.valid_courses_without_cache(user: user, include_unstable: include_unstable)
+      return Course.valid_courses_without_cache(user: user)
     end
-    cache_key_suffix = include_unstable ? 'all' : 'stable'
-    Rails.cache.fetch("valid_courses_#{cache_key_suffix}/#{I18n.locale}") do
-      Course.valid_courses_without_cache(include_unstable: include_unstable)
+    Rails.cache.fetch("valid_courses/#{I18n.locale}") do
+      Course.valid_courses_without_cache
     end
   end
 
@@ -233,28 +230,24 @@ class Course < ApplicationRecord
 
   # Get the set of valid courses for the dropdown in our sections table, using
   # any alternate scripts based on any experiments the user belongs to.
-  def self.valid_courses_without_cache(user: nil, include_unstable: false)
+  def self.valid_courses_without_cache(user: nil)
     course_infos = Course.
       where(name: ScriptConstants::CATEGORIES[:full_course]).
       map {|course| course.assignable_info(user)}
 
-    # For now, infer whether the course is stable from its version year.
-    # * Currently, only 2017 versions are stable.
+    # Only return stable course versions.
+    # * Currently, all course versions are stable.
     # * In the future, stability will be set as a property by the levelbuilder.
     #
     # Group courses by family when showing multiple versions of each course.
-    include_unstable ?
-      course_infos.sort_by {|info| [info[:assignment_family_name], info[:version_year]]} :
-      course_infos.
-        select {|info| info[:version_year] == ScriptConstants::DEFAULT_VERSION_YEAR}.
-        sort_by {|info| info[:assignment_family_name]}
+    course_infos.sort_by {|info| [info[:assignment_family_name], info[:version_year]]}
   end
 
   # Returns whether the course id is valid, even if it is not "stable" yet.
   # @param course_id [String] id of the course we're checking the validity of
   # @return [Boolean] Whether this is a valid course ID
   def self.valid_course_id?(course_id)
-    valid_courses(include_unstable: true).any? {|course| course[:id] == course_id.to_i}
+    valid_courses.any? {|course| course[:id] == course_id.to_i}
   end
 
   def summarize(user = nil)
