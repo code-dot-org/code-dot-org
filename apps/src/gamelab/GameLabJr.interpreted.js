@@ -67,12 +67,17 @@ function removeBehavior(sprite, behavior) {
   sprite.behaviors.splice(index, 1);
 }
 
+function Behavior(func, extraArgs) {
+  if (!extraArgs) {
+    extraArgs = [];
+  }
+  this.func = func;
+  this.extraArgs = extraArgs;
+}
+
 function normalizeBehavior(behavior) {
   if (typeof behavior === 'function')  {
-    behavior = {
-      func: behavior,
-      extraArgs: [],
-    };
+    return new Behavior(behavior);
   }
   return behavior;
 }
