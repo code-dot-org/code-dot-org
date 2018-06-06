@@ -9,5 +9,16 @@
     "csd6-2018"
   ],
   "properties": {
+    "teacher_resources": [
+      [
+        "curriculum",
+        "https://curriculum.code.org/csd-18/"
+      ],
+      [
+        "teacherForum",
+        "https://forum.code.org/c/csd"
+      ]
+    ],
+    "has_verified_resources": true
   }
 }
