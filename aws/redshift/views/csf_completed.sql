@@ -20,8 +20,8 @@ from
     join dashboard_production.scripts sc on sc.id = us.script_id
     join analysis.school_years sy on us.started_at between sy.started_at and sy.ended_at
     join dashboard_production.users u on u.id = us.user_id and u.user_type = 'student'
-    left join analysis.unplugged_or_standalone_video_stages vs on vs.script_id = us.script_id and vs.stage_number = us.stage_number
-  where vs.script_id is null
+    left join analysis.stages_ignored_for_completion sic on sic.script_id = us.script_id and sic.stage_number = us.stage_number
+  where sic.script_id is null
 ) us
 join analysis.csf_plugged_stage_counts sc on sc.script_id = us.script_id and us.stage_order = sc.plugged_stage_counts
 with no schema binding; 
