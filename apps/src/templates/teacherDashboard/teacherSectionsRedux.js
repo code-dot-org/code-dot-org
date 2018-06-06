@@ -436,12 +436,11 @@ export default function teacherSections(state=initialState, action) {
         assignId,
         path: `/s/${script.script_name}`,
 
-        // For now we put each script in its own assignment family. When we
-        // implement versioning for scripts we will start computing these values
-        // on the server.
-        assignment_family_name: script.script_name,
-        version_year: defaultVersionYear,
-        version_title: defaultVersionYear
+        // Put each script in its own assignment family with the default version
+        // year, unless those values were provided by the server.
+        assignment_family_name: script.assignment_family_name || script.script_name,
+        version_year: script.version_year || defaultVersionYear,
+        version_title: script.version_title || defaultVersionYear
       };
 
       // Do not add assignment families for scripts belonging to courses. To assign
