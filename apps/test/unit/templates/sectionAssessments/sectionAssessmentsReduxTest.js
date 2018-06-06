@@ -101,6 +101,37 @@ describe('sectionAssessmentsRedux', () => {
         const result = getMultipleChoiceStructureForCurrentAssessment(rootState);
         assert.deepEqual(result, []);
       });
+
+      it('returns an array of objects of questionStructurePropType', () => {
+        const stateWithAssessment = {
+          ...rootState,
+          sectionAssessments: {
+            ...rootState.sectionAssessments,
+            assessmentId: 123,
+            assessmentsStructureByScript: {
+              3: {
+                123: {
+                  id: 123,
+                  name: 'Assessment 1',
+                  questions: [
+                    {
+                      answers: [
+                        {correct: false, text: 'answer 1'},
+                        {correct: true, text: 'answer 2'},
+                      ],
+                      question_text: 'What is a variable?',
+                      type: 'Multi',
+                      level_id: 456,
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        };
+        const result = getMultipleChoiceStructureForCurrentAssessment(stateWithAssessment);
+        assert.deepEqual(result, [{correctAnswer: 'B', id: 456, question: 'What is a variable?'}]);
+      });
     });
 
     describe('getStudentMCResponsesForCurrentAssessment', () => {
