@@ -14,7 +14,7 @@ markdown <<MARKDOWN
 
 ## **Vocab to Know**
 
-* ### **Condition** - An action that causes something to happen
+* ### **Condition** - Something a program checks before allowing an action
 
 * ### **Conditionals** - Statements that only run under certain conditions
 

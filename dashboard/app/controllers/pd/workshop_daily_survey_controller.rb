@@ -18,6 +18,9 @@ module Pd
       return render :not_enrolled unless workshop
 
       day = params[:day].to_i
+
+      # Accept days 0 through 4. Day 5 is the post workshop survey and should use the new_post route
+      return render_404 if day < 0 || day > 4
       session = nil
       if day > 0
         session = workshop.sessions[day - 1]
@@ -84,6 +87,32 @@ module Pd
         facilitatorPosition: facilitator_index + 1,
         numFacilitators: facilitators.size
       }
+    end
+
+    # Post workshop survey. This one will be emailed and displayed in the my PL page,
+    # and can persist for more than a day, so it uses an enrollment code to be tied to a specific workshop.
+    # GET /pd/workshop_survey/post/:enrollment_code
+    def new_post
+      enrollment = Enrollment.find_by!(code: params[:enrollment_code])
+      workshop = enrollment.workshop
+
+      return redirect_to :thanks if WorkshopDailySurvey.exists?(user: current_user, pd_workshop: workshop)
+      @form_id = WorkshopDailySurvey.get_form_id_for_day 5
+
+      @form_params = {
+        environment: Rails.env,
+        userId: current_user.id,
+        userName: current_user.name,
+        userEmail: current_user.email,
+        workshopId: workshop.id,
+        workshopCourse: workshop.course,
+        workshopSubject: workshop.subject,
+        regionalPartnerName: workshop.regional_partner&.name,
+        day: 5
+      }
+
+      # Same view as the general daily survey
+      render :new_general
     end
 
     # GET /pd/workshop_survey/thanks

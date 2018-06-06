@@ -27,7 +27,7 @@ export const loadValidScripts = (section, validScripts) => {
       }),
       $.ajax({
         method: 'GET',
-        url: `/dashboardapi/courses?allVersions=1`,
+        url: `/dashboardapi/courses`,
         dataType: 'json'
       })
     ];
