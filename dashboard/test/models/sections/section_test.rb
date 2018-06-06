@@ -92,6 +92,14 @@ class SectionTest < ActiveSupport::TestCase
     assert_nil section.grade
   end
 
+  test "create assigns script to user if script is supplied" do
+    teacher = create :teacher
+    script = create :script
+    create :section, script_id: script.id, user: teacher
+
+    assert teacher.scripts.include?(script)
+  end
+
   test 'update_student_sharing updates user settings' do
     student = create :student, sharing_disabled: false
     section = create :section, sharing_disabled: false
