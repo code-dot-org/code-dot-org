@@ -1062,6 +1062,7 @@
   "studentControl": "Yksittäisen oppilaan ohjaus",
   "studentLockStateInstructions": "Käytä alla olevaa taulukkoa valvoaksesi jokaisen oppilaan vaihetta.",
   "studentName": "Opiskelijan nimi",
+  "studentNameHeader": "Student name",
   "studentAnswer": "Student answer",
   "submissionTimestamp": "Submission timestamp",
   "submit": "Jatka",

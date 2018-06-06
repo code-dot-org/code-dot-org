@@ -1062,6 +1062,7 @@
   "studentControl": "තනි පුද්ගල ශිෂ්ය පාලනය",
   "studentLockStateInstructions": "එක් එක් සිසුවාගේ තත්වය පාලනය කිරීම සඳහා පහත වඟුව භාවිතා කරන්න.",
   "studentName": "සිසුවාගේ නම",
+  "studentNameHeader": "Student name",
   "studentAnswer": "Student answer",
   "submissionTimestamp": "ඉදිරිපත් කරන ලද වේලාව",
   "submit": "යොමු කරන්න",

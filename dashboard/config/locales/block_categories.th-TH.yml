@@ -1,0 +1,49 @@
+"th":
+  data:
+    block_categories:
+      Actions: การดำเนินการ
+      Loops: ลูป
+      Functions: ฟังก์ชัน
+      Color: สี
+      Brushes: Brushes
+      Math: คำนวณ
+      Logic: ตรรกะ
+      Variables: ตัวแปร
+      Number: Number
+      String: String
+      Image: Image
+      Boolean: Boolean
+      Conditionals: เงื่อนไข
+      Events: เหตุการณ์
+      Games/Score: Games/Score
+      Comments: Comments
+      Category: Category
+      Prebuilt: Prebuilt
+      Text: ข้อความ
+      Picker: Picker
+      Comment: Comment
+      'Variables ': 'Variables '
+      everythingelse: everythingelse
+      numbers: numbers
+      Numbers: Numbers
+      Input: Input
+      Default: Default
+      Sprites: Sprites
+      Behaviors: Behaviors
+      World: World
+      Sprite: Sprite
+      Brush: Brush
+      Make Sprite: Make Sprite
+      Movement: Movement
+      Start: เริ่มต้น
+      Groups: Groups
+      Booleans: Booleans
+      Functional: Functional
+      Predefined: Predefined
+      test: ทดสอบ
+      test2: test2
+      Foo: Foo
+      Name: ชื่อ
+      NEW BLOCKS: NEW BLOCKS
+      Game/Score: Game/Score
+      Function: ฟังก์ชัน

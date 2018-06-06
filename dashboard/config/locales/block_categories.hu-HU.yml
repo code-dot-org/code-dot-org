@@ -1,0 +1,49 @@
+"hu":
+  data:
+    block_categories:
+      Actions: Műveletek
+      Loops: Ciklusok
+      Functions: Függvények
+      Color: Szín
+      Brushes: Brushes
+      Math: Matematika
+      Logic: Logika
+      Variables: Változók
+      Number: Number
+      String: String
+      Image: Image
+      Boolean: Boolean
+      Conditionals: Feltételek
+      Events: Események
+      Games/Score: Games/Score
+      Comments: Comments
+      Category: Category
+      Prebuilt: Prebuilt
+      Text: szöveg
+      Picker: Picker
+      Comment: Comment
+      'Variables ': 'Variables '
+      everythingelse: everythingelse
+      numbers: numbers
+      Numbers: Numbers
+      Input: Input
+      Default: Default
+      Sprites: Sprites
+      Behaviors: Behaviors
+      World: World
+      Sprite: Sprite
+      Brush: Brush
+      Make Sprite: Make Sprite
+      Movement: Movement
+      Start: Kezdés
+      Groups: Groups
+      Booleans: Logikai adattípus
+      Functional: Functional
+      Predefined: Predefined
+      test: 'kifejezés:'
+      test2: test2
+      Foo: Foo
+      Name: Név
+      NEW BLOCKS: NEW BLOCKS
+      Game/Score: Game/Score
+      Function: Függvény

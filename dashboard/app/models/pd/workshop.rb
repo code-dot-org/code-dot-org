@@ -89,7 +89,11 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def self.enrolled_in_by(teacher)
-    joins(:enrollments).where(pd_enrollments: {email: teacher.email}).distinct
+    base_query = joins(:enrollments)
+    user_id_where_clause = base_query.where(pd_enrollments: {user_id: teacher.id})
+    email_where_clause = base_query.where(pd_enrollments: {email: teacher.email})
+
+    user_id_where_clause.or(email_where_clause).distinct
   end
 
   def self.exclude_summer

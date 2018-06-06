@@ -6,6 +6,9 @@ student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csd/unit1"], ["teacherForum", "https://forum.code.org/c/csd1"], ["vocabulary", "https://curriculum.code.org/csd/unit1/vocab/"], ["standardMappings", "https://curriculum.code.org/csd/unit1/standards/"]]
 has_verified_resources true
 has_lesson_plan true
+family_name "csd1"
+version_year '2018'
+is_stable true
 
 stage 'Intro to Problem Solving', flex_category: 'csd1_1'
 named_level 'CSD U1L01 TFMD_2018'

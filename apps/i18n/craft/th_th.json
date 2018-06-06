@@ -148,7 +148,7 @@
   "eventTypeWhenAttacked": "เมื่อถูกโจมตี",
   "eventTypeWhenDay": "เมื่อกลางวัน",
   "eventTypeWhenNight": "เมื่อกลางคืน",
-  "eventTypeWhenRun": "เมื่อเรียกให้ทำงาน",
+  "eventTypeWhenRun": "เมื่อเรียกใช้งาน",
   "eventTypeWhenSpawned": "เมื่อเกิด",
   "eventTypeWhenTouched": "เมื่อสัมผัส",
   "eventTypeWhenUsed": "เมื่อใช้",

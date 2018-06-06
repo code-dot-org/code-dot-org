@@ -10,9 +10,13 @@ require 'tempfile'
 
 require_relative 'i18n_script_utils'
 
+require_relative '../i18n-codeorg/lib/merge-translation'
+
+CLEAR = "\r\033[K"
+
 def sync_out
   rename_from_crowdin_name_to_locale
-  run_bash_script "bin/i18n-codeorg/out.sh"
+  distribute_translations
   copy_untranslated_apps
   rebuild_blockly_js_files
   check_for_mismatching_links_or_images
@@ -29,6 +33,61 @@ def rename_from_crowdin_name_to_locale
       FileUtils.rm_r "i18n/locales/#{prop[:crowdin_name_s]}"
     end
   end
+end
+
+# Distribute downloaded translations from i18n/locales
+# back to blockly, apps, pegasus, and dashboard.
+def distribute_translations
+  total_locales = Languages.get_locale.count
+  Languages.get_locale.each_with_index do |prop, i|
+    locale = prop[:locale_s]
+    print "#{CLEAR}Distributing #{locale} (#{i}/#{total_locales})"
+    $stdout.flush
+    next if locale == 'en-US'
+    next unless File.directory?("i18n/locales/#{locale}/")
+
+    ### Dashboard
+    Dir.glob("i18n/locales/#{locale}/dashboard/*.yml") do |loc_file|
+      relname = File.basename(loc_file, '.yml')
+      source = "i18n/locales/source/dashboard/#{relname}.yml"
+
+      # Special case the un-prefixed Yaml file.
+      destination = (relname == "base") ?
+        "dashboard/config/locales/#{locale}.yml" :
+        "dashboard/config/locales/#{relname}.#{locale}.yml"
+
+      merge_translation 'yml', source, loc_file, destination
+    end
+
+    ### Apps
+    js_locale = locale.tr('-', '_').downcase
+    Dir.glob("i18n/locales/#{locale}/blockly-mooc/*.json") do |loc_file|
+      relname = File.basename(loc_file, '.json')
+      source = "i18n/locales/source/blockly-mooc/#{relname}.json"
+      destination = "apps/i18n/#{relname}/#{js_locale}.json"
+
+      merge_translation 'json', source, loc_file, destination
+    end
+
+    ### Blockly Core
+    Dir.glob("i18n/locales/#{locale}/blockly-core/*.json") do |loc_file|
+      relname = File.basename(loc_file)
+      source = "i18n/locales/source/blockly-core/#{relname}"
+      destination = "apps/node_modules/@code-dot-org/blockly/i18n/locales/#{locale}/#{relname}"
+      FileUtils.mkdir_p(File.dirname(destination))
+
+      merge_translation 'json', source, loc_file, destination
+    end
+
+    ### Pegasus
+    loc_file = "i18n/locales/#{locale}/pegasus/mobile.yml"
+    source = "i18n/locales/source/pegasus/mobile.yml"
+    destination = "pegasus/cache/i18n/#{locale}.yml"
+
+    merge_translation 'yml', source, loc_file, destination
+  end
+
+  puts "#{CLEAR}Distribution finished!"
 end
 
 # For untranslated apps, copy English file for all locales

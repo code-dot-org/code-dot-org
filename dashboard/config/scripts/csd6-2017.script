@@ -10,6 +10,8 @@ project_widget_types ["applab"]
 script_announcements [{"notice"=>"Updates to CS Discoveries are Coming!", "details"=>"We're getting ready to roll out updated curriculum for the '18-'19 school year - check out the details on our teacher blog.", "link"=>"http://teacherblog.code.org/post/174125780419/updates-to-cs-discoveries-are-coming", "type"=>"bullhorn"}]
 new_name 'csd6-2017'
 family_name 'csd6'
+version_year '2017'
+is_stable true
 
 stage 'Innovations in Computing_', flex_category: 'csd6_1'
 named_level 'CSD U6L01 TFMD'

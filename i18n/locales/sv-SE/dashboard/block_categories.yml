@@ -1,0 +1,49 @@
+sv:
+  data:
+    block_categories:
+      Actions: Handlingar
+      Loops: Loopar
+      Functions: Funktioner
+      Color: Färg
+      Brushes: Brushes
+      Math: Matte
+      Logic: Logik
+      Variables: Variabler
+      Number: Number
+      String: String
+      Image: Image
+      Boolean: Boolean
+      Conditionals: Villkor
+      Events: Händelser
+      Games/Score: Games/Score
+      Comments: Comments
+      Category: Category
+      Prebuilt: Prebuilt
+      Text: text
+      Picker: Picker
+      Comment: Comment
+      'Variables ': 'Variables '
+      everythingelse: everythingelse
+      numbers: numbers
+      Numbers: Numbers
+      Input: Input
+      Default: Default
+      Sprites: Sprites
+      Behaviors: Behaviors
+      World: World
+      Sprite: Sprite
+      Brush: Brush
+      Make Sprite: Make Sprite
+      Movement: Movement
+      Start: Start
+      Groups: Groups
+      Booleans: Booleska värden
+      Functional: Functional
+      Predefined: Predefined
+      test: test
+      test2: test2
+      Foo: Foo
+      Name: Namn
+      NEW BLOCKS: NEW BLOCKS
+      Game/Score: Game/Score
+      Function: Funktion

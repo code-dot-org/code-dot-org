@@ -7,6 +7,8 @@ project_widget_types ["playlab_k1", "artist_k1"]
 script_announcements [{"notice"=>"Relevant Common Core and NGSS standards are now listed in Courses A-F!", "details"=>"Check out the full standards alignment document ", "link"=>"https://curriculum.code.org/csf-1718/coursea/standards/", "type"=>"bullhorn"}]
 new_name 'coursea-2017'
 family_name 'coursea'
+version_year '2017'
+is_stable true
 
 stage 'Debugging: Unspotted Bugs'
 level 'courseB_video_Unspotted'

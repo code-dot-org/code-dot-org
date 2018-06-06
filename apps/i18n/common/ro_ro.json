@@ -1062,6 +1062,7 @@
   "studentControl": "Controlul individual al studenţilor",
   "studentLockStateInstructions": "Utilizaţi tabelul următor pentru a controla statusul fiecărui elev în parte.",
   "studentName": "Numele elevului",
+  "studentNameHeader": "Student name",
   "studentAnswer": "Student answer",
   "submissionTimestamp": "Prezentarea timestamp",
   "submit": "Trimite",
