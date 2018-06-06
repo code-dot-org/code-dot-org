@@ -1501,6 +1501,12 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     create :script, name: 'cats2', family_name: 'cats', version_year: '2018', is_stable: true
     get :show, params: {script_id: 'cats', stage_position: 1, id: 1}
     assert_redirected_to "/s/cats1/stage/1/puzzle/1"
+
+    # do not redirect within script family if the requested script exists
+    cats = create :script, name: 'cats'
+    create :script_level, script: cats
+    get :show, params: {script_id: 'cats', stage_position: 1, id: 1}
+    assert_response :success
   end
 
   test "should indicate challenge levels as challenge levels" do
