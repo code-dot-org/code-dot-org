@@ -29,20 +29,15 @@ class Block < ApplicationRecord
   def write_block_files
     delete_block_files(level_type_was, name_was) if name_changed? || level_type_changed?
     FileUtils.mkdir_p "config/blocks/#{level_type}"
-    block_path = Rails.root.join "config/blocks/#{level_type}/#{name}.json"
-    File.write block_path, file_json
+    File.write json_path, file_json
 
     return unless helper_code.try(:present?)
-    js_path = Rails.root.join "config/blocks/#{level_type}/#{name}.js"
     File.write js_path, helper_code
   end
 
   def delete_block_files(old_level_type=level_type, old_name=name)
-    base_path = Rails.root.join("config/blocks/#{old_level_type}/#{old_name}")
-    json_path = "#{base_path}.json"
-    js_path = "#{base_path}.js"
-    File.delete json_path if File.exist? json_path
-    File.delete js_path if File.exist? js_path
+    File.delete json_path if File.exist? json_path(old_level_type, old_name)
+    File.delete js_path if File.exist? js_path(old_level_type, old_name)
   end
 
   def file_json
@@ -52,6 +47,14 @@ class Block < ApplicationRecord
         config: JSON.parse(config),
       }
     )
+  end
+
+  def js_path(type=level_type, block_name=name)
+    Rails.root.join "config/blocks/#{type}/#{block_name}.js"
+  end
+
+  def json_path(type=level_type, block_name=name)
+    Rails.root.join "config/blocks/#{type}/#{block_name}.json"
   end
 
   def self.load_blocks
