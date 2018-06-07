@@ -26,7 +26,7 @@ class Video < ActiveRecord::Base
   YOUTUBE_ID_REGEX = /[^!*"&?\/ ]{11}/
   # YouTube embed URL has the following format: http://www.youtube-nocookie.com/embed/VIDEO_ID
   # Ref: https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds
-  EMBED_URL_REGEX = /(?:http[s]?:)?\/\/(?:www\.)?(?:youtube(?:education)?(-nocookie)?)\.com\/embed\/(?<id>#{YOUTUBE_ID_REGEX})/
+  EMBED_URL_REGEX = /(?:http[s]?:)?\/\/(?:www\.)?(?:youtube(?:education|-nocookie)?)\.com\/embed\/(?<id>#{YOUTUBE_ID_REGEX})/
 
   def self.check_i18n_names
     video_keys = Video.all.collect(&:key)
