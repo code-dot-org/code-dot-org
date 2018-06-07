@@ -138,7 +138,7 @@ class ScriptOverviewHeader extends Component {
         <div id="lesson">
           <div id="heading" style={styles.heading}>
             <div style={styles.titleWrapper}>
-              <h1 style={styles.title}>
+              <h1 style={styles.title} id="script-title">
                 {scriptTitle}
                 {" "}
                 {betaTitle &&
@@ -150,6 +150,7 @@ class ScriptOverviewHeader extends Component {
                   onChange={this.onChangeVersion}
                   value={scriptName}
                   style={styles.versionDropdown}
+                  id="version-selector"
                 >
                   {versions.map(version => (
                     <option key={version.name} value={version.name}>
