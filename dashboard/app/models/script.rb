@@ -1124,6 +1124,7 @@ class Script < ActiveRecord::Base
   # Returns an array of objects showing the name and version year for all scripts
   # sharing the family_name of this course, including this one.
   def summarize_versions
+    return [] unless family_name
     Script.
       where(family_name: family_name).
       map {|s| {name: s.name, version_year: s.version_year, version_title: s.version_year}}.
