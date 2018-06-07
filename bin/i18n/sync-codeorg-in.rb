@@ -45,6 +45,7 @@ def localize_level_content
   level_authored_hints = Hash.new
   level_callouts = Hash.new
   level_block_categories = Hash.new
+  level_function_names = Hash.new
 
   Dir.glob("dashboard/config/scripts/levels/*.level").sort.each do |file|
     level_name = File.basename(file, ".*")
@@ -93,6 +94,12 @@ def localize_level_content
           name = category.attr('name')
           level_block_categories[name] = name if name
         end
+
+        ## Function Names
+        blocks.xpath('//../block[@type="procedures_defnoreturn"]').each do |function|
+          name = function.at_xpath('./title[@name="NAME"]')
+          level_function_names[name.content] = name.content if name
+        end
       end
     end
   end
@@ -103,6 +110,7 @@ def localize_level_content
   copy_to_yml("authored_hints", level_authored_hints)
   copy_to_yml("callouts", level_callouts)
   copy_to_yml("block_categories", level_block_categories)
+  copy_to_yml("function_names", level_function_names)
 end
 
 sync_in if __FILE__ == $0

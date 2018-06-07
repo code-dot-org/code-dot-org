@@ -53,10 +53,7 @@
     "markdown_instructions": "We can’t have a dirty giraffe wandering around!  Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?\r\n\r\nTo reset the color, set it to white using this block:\r\n\r\n![](https://images.code.org/e98c7949116888b4229d4794f6cd2a82-image-1526512133821.06.05 PM.png)",
     "show_type_hints": "true",
     "project_template_level_name": "Virtual Pet 2",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
