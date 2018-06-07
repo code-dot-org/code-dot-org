@@ -59,7 +59,7 @@ const studentOverviewDataPropType = PropTypes.shape({
   submissionStatus: PropTypes.string,
 });
 
-class StudentAssessmentOverviewTable extends Component {
+class StudentsAssessmentsMCTable extends Component {
   static propTypes = {
     studentOverviewData: PropTypes.arrayOf(studentOverviewDataPropType),
   };
@@ -221,4 +221,4 @@ class StudentAssessmentOverviewTable extends Component {
   }
 }
 
-export default StudentAssessmentOverviewTable;
+export default StudentsAssessmentsMCTable;
