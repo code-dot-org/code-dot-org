@@ -3,14 +3,17 @@ require 'test_helper'
 class SectionTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
   setup_all do
-    # Expect any courses to be valid section courses unless specified by test
-    Course.stubs(:valid_course_id?).returns(true)
-
     @student = create :student
     @teacher = create :teacher
     @section = create :section, teacher: @teacher
 
     @default_attrs = {user: @teacher, name: 'test-section'}
+  end
+
+  setup do
+    # Expect any scripts/courses to be valid section scripts/courses unless specified by test
+    Course.stubs(:valid_course_id?).returns(true)
+    Script.stubs(:valid_script_id?).returns(true)
   end
 
   test "sections are soft-deleted" do
@@ -388,7 +391,6 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'default_script: script and course assigned' do
-    Course.stubs(:valid_course_id?).returns(true)
     script1 = create :script
     script2 = create :script
     course = create :course
@@ -401,7 +403,6 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'default_script: no script assigned, course assigned' do
-    Course.stubs(:valid_course_id?).returns(true)
     script1 = create :script
     script2 = create :script
     course = create :course
@@ -414,7 +415,7 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'summarize: section with a course assigned' do
-    course = create :course, name: 'csp-2018'
+    course = create :course, name: 'somecourse'
     section = create :section, script: nil, course: course
 
     expected = {
@@ -422,8 +423,8 @@ class SectionTest < ActiveSupport::TestCase
       name: section.name,
       teacherName: section.teacher.name,
       linkToProgress: "//test.code.org/teacher-dashboard#/sections/#{section.id}/progress",
-      assignedTitle: "Computer Science Principles ('18-'19)",
-      linkToAssigned: '/courses/csp-2018',
+      assignedTitle: 'somecourse',
+      linkToAssigned: '/courses/somecourse',
       numberOfStudents: 0,
       linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
       code: section.code,
@@ -444,12 +445,7 @@ class SectionTest < ActiveSupport::TestCase
   test 'summarize: section with a script assigned' do
     # Use an existing script so that it has a translation
     script = Script.find_by_name('jigsaw')
-
-    # User needs hidden script access for above script
-    teacher = create :teacher
-    teacher.permission = UserPermission::HIDDEN_SCRIPT_ACCESS
-
-    section = create :section, user: teacher, script: script, course: nil
+    section = create :section, script: script, course: nil
 
     expected = {
       id: section.id,
@@ -478,23 +474,18 @@ class SectionTest < ActiveSupport::TestCase
   test 'summarize: section with both a course and a script' do
     # Use an existing script so that it has a translation
     script = Script.find_by_name('jigsaw')
-
-    # User needs hidden script access for above script
-    teacher = create :teacher
-    teacher.permission = UserPermission::HIDDEN_SCRIPT_ACCESS
-
-    course = create :course, name: 'csp-2017'
+    course = create :course, name: 'somecourse'
     # If this were a real section, it would actually have a script that is part of
     # the provided course
-    section = create :section, user: teacher, script: script, course: course
+    section = create :section, script: script, course: course
 
     expected = {
       id: section.id,
       name: section.name,
       teacherName: section.teacher.name,
       linkToProgress: "//test.code.org/teacher-dashboard#/sections/#{section.id}/progress",
-      assignedTitle: "Computer Science Principles ('17-'18)",
-      linkToAssigned: '/courses/csp-2017',
+      assignedTitle: 'somecourse',
+      linkToAssigned: '/courses/somecourse',
       numberOfStudents: 0,
       linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
       code: section.code,
