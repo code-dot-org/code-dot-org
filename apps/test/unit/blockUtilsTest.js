@@ -1,3 +1,4 @@
+import dedent from 'dedent';
 import {
   appendBlocksByCategory,
   cleanBlocks,
@@ -497,7 +498,7 @@ describe('block utils', () => {
         );
         generator = Blockly.Generator.get('JavaScript');
       });
-      it ('generates code for a single assignment', () => {
+      it('generates code for a single assignment', () => {
         createBlock({
           func: 'foo',
           blockText: 'set {NAME} to foo()',
@@ -513,7 +514,7 @@ describe('block utils', () => {
         const code = generator['test_foo'].bind(fakeBlock)();
         expect(code).to.equal('someVar = foo(someVar);\n');
       });
-      it ('generates code for a double assignment', () => {
+      it('generates code for a double assignment', () => {
         createBlock({
           func: 'foo',
           blockText: 'set {NAME1} and {NAME2} to foo()',
@@ -538,6 +539,42 @@ describe('block utils', () => {
         };
         const code = generator['test_foo'].bind(fakeBlock)();
         expect(code).to.equal('a = b = foo(a, b);\n');
+      });
+      it('generates code for a deferred input', () => {
+        createBlock({
+          func: 'yellAt',
+          blockText: '{NAME1} yells at {NAME2}',
+          args: [
+            {
+              name: 'NAME1',
+              defer: true,
+            },
+            {
+              name: 'NAME2',
+              defer: true,
+            },
+          ],
+        });
+
+        const valueToCodeStub = sinon.stub(Blockly.JavaScript, 'valueToCode')
+          .callsFake((block, name) => {
+            return {
+              NAME1: 'elrond',
+              NAME2: 'isildur',
+            }[name];
+          });
+        const code = generator['test_yellAt']();
+
+
+        expect(code.trim()).to.equal(dedent`
+          yellAt(function () {
+            return elrond;
+          }, function () {
+            return isildur;
+          });
+        `);
+
+        valueToCodeStub.restore();
       });
     });
   });

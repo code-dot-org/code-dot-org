@@ -1,0 +1,297 @@
+import React, { Component } from 'react';
+import {
+  AsyncStorage,
+  Dimensions,
+  Image,
+  Linking,
+  Picker,
+  Text,
+  TouchableOpacity,
+  View,
+  SafeAreaView,
+  StyleSheet,
+} from 'react-native';
+import PropTypes from 'prop-types';
+
+export default class DataWarning extends Component {
+  state = { };
+
+  propTypes = {
+    onComplete: PropTypes.func,
+  };
+
+  static AGE_KEY = '@ApplabApp:age';
+  static AGE_MINIMUM = 13;
+  static SMALL_SCREEN_WIDTH = 320;
+
+  async componentDidMount() {
+    const age = await AsyncStorage.getItem(DataWarning.AGE_KEY);
+    if (!age) {
+      return;
+    }
+
+    this.setState({
+      age,
+      ageLocked: true,
+      ageText: this.ageTextFromAge(age),
+    });
+    if (age >= DataWarning.AGE_MINIMUM) {
+      onComplete && onComplete();
+    }
+  }
+
+  onPressAge = () => {
+    this.setState({ picking: true });
+  };
+
+  onPressDone = () => {
+    this.setState({ picking: false });
+  };
+
+  onAgeChange = (itemValue) => {
+    this.setState({ age: itemValue, ageText: this.ageTextFromAge(itemValue) });
+  };
+
+  onPressPrivacy = () => {
+    Linking.openURL('https://code.org/privacy');
+  };
+
+  ageTextFromAge(age) {
+    return age == 21 ? '21+' : age;
+  }
+
+  onPressOK = async () => {
+    const { onComplete } = this.props;
+    const { age } = this.state;
+    try {
+      await AsyncStorage.setItem(DataWarning.AGE_KEY, age);
+    } catch (e) {
+    }
+    if (!age) {
+      return;
+    }
+    this.setState({ ageLocked: true });
+    if (age >= DataWarning.AGE_MINIMUM) {
+      onComplete && onComplete();
+    }
+  };
+
+  renderTooYoung() {
+    return (
+      <SafeAreaView style={styles.background}>
+        <View style={[styles.container, styles.containerTooYoung]}>
+          <Text style={styles.paragraph}>
+            Sorry, you cannot access this content.
+          </Text>
+        </View>
+      </SafeAreaView>
+    );
+  }
+
+  render() {
+    const { age, ageLocked, ageText, picking } = this.state;
+    if (ageLocked && age < DataWarning.AGE_MINIMUM) {
+      return this.renderTooYoung();
+    }
+    const { height, width } = Dimensions.get('window');
+    const smallScreen = Math.min(height, width) <= DataWarning.SMALL_SCREEN_WIDTH;
+    const paragraphStyle = smallScreen ? styles.paragraphSmallScreen : styles.paragraph;
+    const ageSelected = !!ageText;
+    return [
+      (<SafeAreaView style={styles.background} key="background">
+        <View style={styles.container}>
+          <View style={styles.topWarningContainer}>
+            <Image
+              source={require('./appassets/warning.png')}
+              style={styles.warningImage}
+            />
+            <Text style={[paragraphStyle, styles.topWarning]}>
+              Warning
+            </Text>
+          </View>
+          <Text style={paragraphStyle}>
+            This app was built on Code.org by a student. The Code.org platform is optimized for creating prototypes and student projects, and as a result any data you enter while using the app could potentially be viewed by anyone with access to the app on any platform or website where this app is shared.
+            {'\n'}
+            {'\n'}
+            <Text style={[paragraphStyle, styles.warning]}>While using this app please do not enter any private information</Text> (such as your name, email, or street address). Any data you enter may be broadly accessible to the public.
+            {'\n'}
+            {'\n'}
+            Please provide your age below and click OK to continue.
+          </Text>
+          <TouchableOpacity onPress={this.onPressAge} style={styles.ageContainer}>
+            <Text style={paragraphStyle}>
+              {ageSelected ? ageText : 'Select Age'}
+            </Text>
+          </TouchableOpacity>
+          <View style={styles.okContainer}>
+            <TouchableOpacity onPress={this.onPressPrivacy}>
+              <Text style={[paragraphStyle, styles.privacy]}>
+                Code.org Privacy Policy
+              </Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              disabled={!ageSelected}
+              onPress={this.onPressOK}
+              style={[styles.okButtonContainer, ageSelected ? undefined : styles.okButtonContainerDisabled]}
+            >
+              <Text style={styles.okButton}>
+                OK
+              </Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </SafeAreaView>),
+      picking && <View style={styles.pickerFullscreen} key="picker">
+        <TouchableOpacity onPress={this.onPressDone} style={styles.pickerDoneContainer}>
+          <Text style={[paragraphStyle, styles.pickingDone]}>
+            Done
+          </Text>
+        </TouchableOpacity>
+        <Picker
+          itemStyle={styles.pickerItem}
+          onValueChange={this.onAgeChange}
+          selectedValue={age}
+          style={styles.picker}
+        >
+          <Picker.Item label="Select Age" />
+          <Picker.Item label="4" value="4" />
+          <Picker.Item label="5" value="5" />
+          <Picker.Item label="6" value="6" />
+          <Picker.Item label="7" value="7" />
+          <Picker.Item label="8" value="8" />
+          <Picker.Item label="9" value="9" />
+          <Picker.Item label="10" value="10" />
+          <Picker.Item label="11" value="11" />
+          <Picker.Item label="12" value="12" />
+          <Picker.Item label="13" value="13" />
+          <Picker.Item label="14" value="14" />
+          <Picker.Item label="15" value="15" />
+          <Picker.Item label="16" value="16" />
+          <Picker.Item label="17" value="17" />
+          <Picker.Item label="18" value="18" />
+          <Picker.Item label="19" value="19" />
+          <Picker.Item label="20" value="20" />
+          <Picker.Item label="21+" value="21" />
+        </Picker>
+      </View>
+    ];
+  }
+}
+
+const styles = StyleSheet.create({
+  ageContainer: {
+    alignItems: 'center',
+    borderColor: '#94a9be',
+    borderRadius: 8,
+    borderWidth: 1,
+    flexDirection: 'row',
+    marginTop: 10,
+    minHeight: 40,
+    paddingHorizontal: 10,
+  },
+  background: {
+    ...StyleSheet.absoluteFillObject,
+    justifyContent: 'flex-start',
+    backgroundColor: '#444444',
+  },
+  container: {
+    alignItems: 'stretch',
+    backgroundColor: 'white',
+    borderColor: 'white',
+    borderRadius: 18,
+    borderWidth: 18,
+    flex: 1,
+    justifyContent: 'flex-start',
+    margin: 6,
+    paddingTop: 6,
+  },
+  containerTooYoung: {
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  okButton: {
+    color: 'white',
+    fontFace: 'sans-serif',
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  okButtonContainer: {
+    alignItems: 'center',
+    backgroundColor: '#ffa400',
+    borderRadius: 6,
+    justifyContent: 'center',
+    height: 40,
+    minWidth: 65,
+  },
+  okButtonContainerDisabled: {
+    backgroundColor: '#ffa4006f',
+  },
+  okContainer: {
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop: 20,
+  },
+  paragraph: {
+    fontFace: 'sans-serif',
+    fontSize: 16,
+    lineHeight: 24,
+    textAlign: 'left',
+    color: '#34495e',
+  },
+  paragraphSmallScreen: {
+    fontFace: 'sans-serif',
+    fontSize: 14,
+    lineHeight: 18,
+    textAlign: 'left',
+    color: '#34495e',
+  },
+  picker: {
+    backgroundColor: 'white',
+  },
+  pickerDoneContainer: {
+    alignItems: 'center',
+    backgroundColor: 'white',
+    borderColor: '#94a9be',
+    borderBottomWidth: 1,
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    minHeight: 40,
+    paddingHorizontal: 10,
+  },
+  pickerFullscreen: {
+    ...StyleSheet.absoluteFillObject,
+    justifyContent: 'center',
+    backgroundColor: '#000000af',
+  },
+  pickerItem: {
+    fontFace: 'sans-serif',
+    color: 'black',
+  },
+  pickingDone: {
+    textAlign: 'right',
+    fontWeight: 'bold',
+  },
+  privacy: {
+    color: '#00adbd',
+    fontWeight: '900',
+  },
+  topWarning: {
+    fontSize: 26,
+    fontWeight: 'bold',
+  },
+  topWarningContainer: {
+    alignItems: 'center',
+    flexDirection: 'row',
+    marginBottom: 20,
+  },
+  warning: {
+    fontWeight: 'bold',
+    textDecorationLine: 'underline',
+  },
+  warningImage: {
+    height: 50,
+    width: 50,
+    marginRight: 15,
+  },
+});

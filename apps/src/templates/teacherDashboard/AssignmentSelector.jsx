@@ -34,7 +34,8 @@ const categorizeAssignmentFamilies = assignmentFamilies => (
 
 const getVersion = assignment => ({
     year: assignment.version_year,
-    title: assignment.version_title
+    title: assignment.version_title,
+    isStable: assignment.is_stable,
 });
 
 /**
@@ -60,18 +61,28 @@ export default class AssignmentSelector extends Component {
    *   {string} year The year associated with this version, used as a key for
    *     identifying this version programmatically.
    *   {string} title The UI string associated with this version.
+   *   {boolean} isStable Whether this version is stable.
+   *   {boolean} isRecommended Whether this is the latest stable version.
    */
   getVersions = assignmentFamilyName => {
     if (!assignmentFamilyName) {
       return [];
     }
-    return _(this.props.assignments)
+    const versions = _(this.props.assignments)
       .values()
       .filter(assignment => assignment.assignment_family_name === assignmentFamilyName)
       .map(getVersion)
       .sortBy('year')
       .reverse()
       .value();
+
+    // Because the versions are sorted most recent first, we can just look for
+    // the first stable version.
+    const recommendedVersion = versions.find(v => v.isStable);
+    if (recommendedVersion) {
+      recommendedVersion.isRecommended = true;
+    }
+    return versions;
   };
 
   constructor(props) {
@@ -129,8 +140,7 @@ export default class AssignmentSelector extends Component {
   }
   onChangeAssignmentFamily = event => {
     const assignmentFamily = event.target.value;
-    const { versions } = this.state;
-    this.setPrimary(assignmentFamily, versions[0]);
+    this.setPrimary(assignmentFamily);
   };
 
   onChangeVersion = event => {
@@ -155,7 +165,8 @@ export default class AssignmentSelector extends Component {
 
   setPrimary = (selectedAssignmentFamily, selectedVersion) => {
     const versions = this.getVersions(selectedAssignmentFamily);
-    selectedVersion = selectedVersion || versions[0];
+    const recommendedVersion = versions.find(v => v.isRecommended);
+    selectedVersion = selectedVersion || recommendedVersion || versions[0];
     const selectedPrimaryId = this.getSelectedPrimaryId(selectedAssignmentFamily, selectedVersion);
     const selectedSecondaryId = noAssignment;
 
@@ -240,14 +251,7 @@ export default class AssignmentSelector extends Component {
                   key={version.year}
                   value={version.year}
                 >
-                  {
-                    // If present, the 2018 version is the recommended one,
-                    // because this will be the recommended version of csp and
-                    // csd, which are the only two versioned courses we will
-                    // show initially. This information will need to be provided
-                    // by the server once we support versioning of scripts.
-                  }
-                  {version.year === '2018' ? `${version.title} (Recommended)` : version.title}
+                  {version.isRecommended ? `${version.title} (Recommended)` : version.title}
                 </option>
               ))
             }

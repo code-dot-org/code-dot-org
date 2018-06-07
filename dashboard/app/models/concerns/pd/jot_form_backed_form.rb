@@ -5,6 +5,8 @@
 #  - form_id: JotForm form id
 #  - submission_id: JotForm submission id
 #  - answers: JotForm submission answer data
+# Required JotForm question names:
+#  - environment: Set to Rails.env, so we can filter out results from other environments
 module Pd
   module JotFormBackedForm
     extend ActiveSupport::Concern
@@ -13,6 +15,8 @@ module Pd
       before_validation :map_answers_to_attributes, if: :answers_changed?
       validates_presence_of :form_id, :submission_id
     end
+
+    CACHE_TTL = 5.minutes.freeze
 
     def placeholder?
       answers.nil?
@@ -62,45 +66,77 @@ module Pd
         all_form_ids.compact.map {|form_id| sync_from_jotform(form_id)}.sum
       end
 
-      def sync_questions_from_jotform(form_id)
-        Pd::SurveyQuestion.sync_from_jotform form_id
+      def get_questions(form_id, force_sync: false)
+        cache_key = "Pd::SurveyQuestion.#{form_id}"
+        if force_sync
+          # Force sync from jotform (which has an implicit DB save) and write to Rails cache
+          Pd::SurveyQuestion.sync_from_jotform(form_id).tap do |questions|
+            Rails.cache.write(cache_key, questions, expires_in: CACHE_TTL)
+          end
+        else
+          # Attempt to fetch from cache, then db, then finally JotForm
+          Rails.cache.fetch(cache_key, expires_in: CACHE_TTL) do
+            Pd::SurveyQuestion.find_by(form_id: form_id) || Pd::SurveyQuestion.sync_from_jotform(form_id)
+          end
+        end
       end
 
       # Download new responses from JotForm
       def sync_from_jotform(form_id = nil)
         return sync_all_from_jotform unless form_id
 
-        sync_questions_from_jotform(form_id)
+        get_questions(form_id)
 
         JotForm::Translation.new(form_id).get_submissions(
           last_known_submission_id: get_last_known_submission_id(form_id),
-          min_date: get_min_date(form_id)
+          min_date: get_min_date(form_id),
+          full_text_search: Rails.env
         ).map do |submission|
-          # TODO(Andrew): don't stop the whole set when one fails
-
           answers = submission[:answers]
 
           # When we pass the last_known_submission_id filter, there should be no duplicates,
           # But just in case handle them gracefully as an upsert.
           find_or_initialize_by(submission.slice(:form_id, :submission_id)).tap do |model|
-            model.answers = answers.to_json
+            # Try first to parse the answers with existing question data. On first failure, force sync questions
+            # and retry. Second failure will propagate and fail the entire sync operation.
+            Retryable.retryable(sleep: 0, exception_cb: proc {model.force_sync_questions}) do
+              model.answers = answers.to_json
 
-            # Note, form_data_hash processes the answers and will raise an error if they don't match the questions.
-            # Include hidden questions for full validation and so skip_submission? can inspect them.
-            next if skip_submission?(model.form_data_hash(show_hidden_questions: true))
-            model.save!
+              # Note, form_data_hash processes the answers and will raise an error if they don't match the questions.
+              # Include hidden questions for full validation and so skip_submission? can inspect them.
+              if skip_submission?(model.form_data_hash(show_hidden_questions: true))
+                CDO.log.info "Skipping #{submission[:submission_id]}"
+                next
+              end
+              model.save!
+            end
           end
         rescue => e
           raise e, "Error processing submission #{submission[:submission_id]} for form #{form_id}: #{e.message}", e.backtrace
         end.compact
       end
 
-      # Override in included class to provide filtering rules
+      # Override in included class to provide custom filtering rules.
+      # By default skip other environments. This assumes that environment is a property in the processed answers.
       # TODO(Andrew): Filter in the API query if possible, once we hear back from JotForm API support.
-      # See https://www.jotform.com/answers/1482175-API-Integration-Matrix-answer-returning-false-in-the-API#2
+      # See https://www.jotform.com/answers/1483561-API-Filter-form-id-submissions-endpoint-with-question-and-answer#4
       # @param processed_answers [Hash]
       # @return [Boolean] true if this submission should be skipped
       def skip_submission?(processed_answers)
+        environment = processed_answers['environment']
+        raise "Missing required environment field" unless environment
+
+        # Skip other environments. Only keep this environment.
+        return true if environment != Rails.env
+
+        # Is it a duplicate? These will be prevented in the future, but for now log and skip
+        # TODO(Andrew): prevent duplicates and remove this code.
+        key_attributes = attribute_mapping.transform_values {|k| processed_answers[k]}
+        if exists?(key_attributes)
+          CDO.log.warn "Submission already exists for #{key_attributes}, skipping"
+          return true
+        end
+
         false
       end
 
@@ -118,12 +154,6 @@ module Pd
         forms = CDO.jotform_forms[category]
         raise KeyError, "Mising jotform form: #{category}.#{name}" unless forms.key? name
         forms[name].to_i
-      end
-
-      def questions_for_form(form_id)
-        survey_question = SurveyQuestion.find_by(form_id: form_id)
-        raise KeyError, "No survey questions for form #{form_id}" unless survey_question
-        survey_question.form_questions
       end
     end
 
@@ -148,9 +178,13 @@ module Pd
       end
     end
 
-    # Get question for this form
+    def force_sync_questions
+      @questions = self.class.get_questions(form_id, force_sync: true)
+    end
+
+    # Get questions for this form
     def questions
-      self.class.questions_for_form(form_id)
+      @questions ||= self.class.get_questions(form_id)
     end
 
     # Answers json parsed in hash form
@@ -192,6 +226,7 @@ module Pd
     end
 
     def clear_memoized_values
+      @questions = nil
       @form_data_hash = nil
       @sanitized_form_data_hash = nil
     end
