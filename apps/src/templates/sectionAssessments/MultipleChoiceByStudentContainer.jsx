@@ -7,7 +7,7 @@ import {
 } from './sectionAssessmentsRedux';
 import { connect } from 'react-redux';
 
-class MultipleChoiceByStudentSection extends Component {
+class MultipleChoiceByStudentContainer extends Component {
   static propTypes = {
     multipleChoiceStructure: PropTypes.arrayOf(questionStructurePropType),
     studentAnswerData: PropTypes.arrayOf(studentAnswerDataPropType),
@@ -33,9 +33,9 @@ class MultipleChoiceByStudentSection extends Component {
   }
 }
 
-export const UnconnectedMultipleChoiceByStudentSection = MultipleChoiceByStudentSection;
+export const UnconnectedMultipleChoiceByStudentContainer = MultipleChoiceByStudentContainer;
 
 export default connect(state => ({
   multipleChoiceStructure: getMultipleChoiceStructureForCurrentAssessment(state),
   studentAnswerData: getStudentMCResponsesForCurrentAssessment(state),
-}))(MultipleChoiceByStudentSection);
+}))(MultipleChoiceByStudentContainer);
