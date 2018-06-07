@@ -19,7 +19,8 @@ module Forms
   class << self
     def events_by_country(kind, except_country='US', explain: false)
       FORMS.
-        where({kind: kind} & ~{COUNTRY_CODE => except_country}).
+        where(kind: kind).
+        exclude(COUNTRY_CODE => except_country).
         group_and_count(COUNTRY_CODE.as(:country_code)).
         tap {|x| puts x.sql, x.explain if explain}.
         all
