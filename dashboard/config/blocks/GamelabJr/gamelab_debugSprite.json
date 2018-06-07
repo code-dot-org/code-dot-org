@@ -1,0 +1,26 @@
+{
+  "category": "Advanced",
+  "config": {
+    "func": "debugSprite",
+    "blockText": "debug {SPRITE} {VAL}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "VAL",
+        "options": [
+          [
+            "true",
+            "true"
+          ],
+          [
+            "false",
+            "false"
+          ]
+        ]
+      }
+    ]
+  }
+}

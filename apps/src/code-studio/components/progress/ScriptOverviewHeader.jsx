@@ -27,6 +27,9 @@ class ScriptOverviewHeader extends Component {
       courseViewPath: PropTypes.string.isRequired,
     }),
     announcements: PropTypes.arrayOf(announcementShape),
+    scriptTitle: PropTypes.string.isRequired,
+    scriptDescription: PropTypes.string.isRequired,
+    betaTitle: PropTypes.string,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isSignedIn: PropTypes.bool.isRequired,
     isVerifiedTeacher: PropTypes.bool.isRequired,
@@ -35,13 +38,16 @@ class ScriptOverviewHeader extends Component {
   };
 
   componentDidMount() {
-    $('#lesson').appendTo(ReactDOM.findDOMNode(this.protected));
+    $('#lesson-heading-extras').appendTo(ReactDOM.findDOMNode(this.protected));
   }
 
   render() {
     const {
       plcHeaderProps,
       announcements,
+      scriptTitle,
+      scriptDescription,
+      betaTitle,
       viewAs,
       isSignedIn,
       isVerifiedTeacher,
@@ -82,9 +88,23 @@ class ScriptOverviewHeader extends Component {
             width={SCRIPT_OVERVIEW_WIDTH}
           />
         }
-        <ProtectedStatefulDiv
-          ref={element => this.protected = element}
-        />
+        <div id="lesson">
+          <div id="heading">
+            <h1>
+              {scriptTitle}
+              {" "}
+              {betaTitle &&
+                <span className="betatext">{betaTitle}</span>
+              }
+            </h1>
+            <p>
+              {scriptDescription}
+            </p>
+          </div>
+          <ProtectedStatefulDiv
+            ref={element => this.protected = element}
+          />
+        </div>
       </div>
     );
   }
@@ -95,6 +115,9 @@ export const UnconnectedScriptOverviewHeader = ScriptOverviewHeader;
 export default connect(state => ({
   plcHeaderProps: state.plcHeader,
   announcements: state.scriptAnnouncements || [],
+  scriptTitle: state.progress.scriptTitle,
+  scriptDescription: state.progress.scriptDescription,
+  betaTitle: state.progress.betaTitle,
   isSignedIn: state.progress.signInState === SignInState.SignedIn,
   viewAs: state.viewAs,
   isVerifiedTeacher: state.verifiedTeacher.isVerified,
