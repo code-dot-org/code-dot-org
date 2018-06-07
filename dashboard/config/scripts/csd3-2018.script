@@ -9,10 +9,9 @@ has_verified_resources true
 has_lesson_plan true
 project_widget_visible true
 project_widget_types ["gamelab", "weblab"]
-family_name "csd3"
+family_name 'csd3'
 version_year '2018'
 is_stable true
-
 
 stage 'Programming for Entertainment', flex_category: 'csd3_1'
 named_level 'CSD U3L01 TFMD_2018'
@@ -143,6 +142,7 @@ level 'CSD U3 Boolean Modify_2018', progression: 'Boolean Comparison'
 level 'CSD U3 - conditionals - Matching_2018', progression: 'Boolean Comparison'
 level 'CSD U3 - conditionals - transition_2018', progression: 'Boolean Comparison'
 level 'CSD U3 Conditionals Apple_2018', progression: 'Boolean Comparison'
+named_level 'csd U3 conditional statements video'
 named_level 'CSD If Statements Map_2018'
 level 'CSD U3 - conditionals - first conditional_2018', progression: 'Basic Conditionals'
 level 'CSD U3 Conditionals Apple 2_2018', progression: 'Basic Conditionals'
