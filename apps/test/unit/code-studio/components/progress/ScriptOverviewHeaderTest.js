@@ -15,6 +15,7 @@ const defaultProps = {
   hasVerifiedResources: false,
   scriptTitle: 'Course One',
   scriptDescription: 'The first course',
+  versions: [],
 };
 
 const fakeAnnouncement = {
