@@ -7518,7 +7518,7 @@ en:
               description_student: In the last few days of the unit, the class finalizes their personal websites, working with peers to get feedback, review the rubric, and put the finishing touches on the site. To cap off the unit, everyone shares their projects and how they were developed.
               description_teacher: "Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\r\n"
         coursea-2018:
-          title: Course A
+          title: Course A (2018)
           assignment_family_title: Course A
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
           description_short: An introduction to computer science for pre-readers.
@@ -7583,7 +7583,7 @@ en:
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie and the Big Project
         express-2018:
-          title: Express Course
+          title: Express Course (2018)
           assignment_family_title: Express Course
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
           description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
@@ -7802,7 +7802,7 @@ en:
             Relay Programming:
               name: Relay Programming
         courseb-2018:
-          title: Course B
+          title: Course B (2018)
           assignment_family_title: Course B
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
           description_short: An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)
@@ -7871,7 +7871,7 @@ en:
             Copyright and Creativity:
               name: It's Great to Create and Play Fair
         coursed-2018:
-          title: New Course D Script
+          title: New Course D Script (2018)
           description: ''
           description_short: ''
           description_audience: ''
@@ -8061,7 +8061,7 @@ en:
           description_short: CS Principles AP Exam Prep
           description: 'This page contains copies of all the multiple choice assessment questions that appeared in Units 1-5 in the course.  Students may want to practice for the multiple choice exam by re-taking these little tests.  '
         coursec-2018:
-          title: Course C
+          title: Course C (2018)
           assignment_family_title: Course C
           description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
           description_short: Learn the basics of computer science and create your own art, stories, and games.
@@ -8232,7 +8232,7 @@ en:
             'Project: Prototype an Innovation':
               name: 'Project: Prototype an Innovation'
         coursee-2018:
-          title: Course E
+          title: Course E (2018)
           assignment_family_title: Course E
           description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
           description_short: Quickly cover concepts in Course C & D and then go further with functions.
@@ -8360,7 +8360,7 @@ en:
             Copyright and Creativity:
               name: Copyright and Creativity
         coursef-2018:
-          title: Course F
+          title: Course F (2018)
           assignment_family_title: Course F
           description: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
           description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
@@ -9438,7 +9438,7 @@ en:
           description_short: 'Apprentice reflection materials for CS Principles facilitators in training '
           description: This is the set of apprentice reflections for Code.org CS Principles facilitators in training during their 5-day summer workshop. Here you will find reflection prompts for each day of your in-person 5-day summer workshop. This questions will be the foundation of work we do at the Facilitator Training Weekend.
         pre-express-2018:
-          title: Pre-reader Express
+          title: Pre-reader Express (2018)
           assignment_family_title: Pre-reader Express
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
           description_short: 'An introduction to computer science for pre-readers: combines the best of our kindergarten and first grade courses.'
