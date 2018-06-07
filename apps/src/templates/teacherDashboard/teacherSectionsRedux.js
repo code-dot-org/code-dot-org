@@ -414,11 +414,8 @@ export default function teacherSections(state=initialState, action) {
         path: `/courses/${course.script_name}`
       };
 
-      // Borrow the fields we need to display the assignment family from the
-      // course in that family with the default version year, 2017. This assumes
-      // that course has a display name suitable or describing all versions in
-      // the family like "CS Discoveries", not a version-specific name like "CS
-      // Discoveries 2017".
+      // Use the assignment family fields from the course in that family with
+      // the default version year, 2017.
       if (course.version_year === defaultVersionYear) {
         assignmentFamilies.push(_.pick(course, assignmentFamilyFields));
       }
@@ -429,19 +426,20 @@ export default function teacherSections(state=initialState, action) {
 
     action.validScripts.forEach(script => {
       const assignId = assignmentId(null, script.id);
+
+      // Put each script in its own assignment family with the default version
+      // year, unless those values were provided by the server.
       const assignmentFamilyName = script.assignment_family_name || script.script_name;
       const assignmentFamilyTitle = script.assignment_family_title || script.name;
       const versionYear = script.version_year || defaultVersionYear;
       const versionTitle = script.version_title || defaultVersionYear;
+
       validAssignments[assignId] = {
         ...script,
         courseId: null,
         scriptId: script.id,
         assignId,
         path: `/s/${script.script_name}`,
-
-        // Put each script in its own assignment family with the default version
-        // year, unless those values were provided by the server.
         assignment_family_name: assignmentFamilyName,
         version_year: versionYear,
         version_title: versionTitle
@@ -451,11 +449,8 @@ export default function teacherSections(state=initialState, action) {
       // them, one must first select the corresponding course from the assignment
       // family dropdown, and then select the script from the secondary dropdown.
       if (!secondaryAssignmentIds.includes(assignId)) {
-        // Borrow the fields we need to display the assignment family from the
-        // script in that family with the default version year, 2017. This
-        // assumes that script has a display name suitable or describing all
-        // versions in the family like "Course A", not a version-specific name
-        // like "Course A (2017)".
+        // Use the assignment family fields from the script in that family with
+        // the default version year, 2017.
         if (versionYear === defaultVersionYear) {
           assignmentFamilies.push({
             ..._.pick(script, assignmentFamilyFields),
