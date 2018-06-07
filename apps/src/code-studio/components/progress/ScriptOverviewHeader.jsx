@@ -36,6 +36,11 @@ class ScriptOverviewHeader extends Component {
     hasVerifiedResources: PropTypes.bool.isRequired,
     showCourseUnitVersionWarning: PropTypes.bool,
     showScriptVersionWarning: PropTypes.bool,
+    versions: PropTypes.arrayOf(PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      version_year: PropTypes.string.isRequired,
+      version_title: PropTypes.string.isRequired,
+    })).isRequired,
   };
 
   componentDidMount() {
