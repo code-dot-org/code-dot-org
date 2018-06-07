@@ -618,7 +618,7 @@ module.exports = class Maze {
    */
   prepareForExecution_() {
     this.executionInfo = new ExecutionInfo({
-      ticks: 100
+      ticks: 1e4
     });
     this.resultsHandler.executionInfo = this.executionInfo;
     this.result = ResultType.UNSET;
