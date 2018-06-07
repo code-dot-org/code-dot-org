@@ -322,7 +322,7 @@ module LevelsHelper
 
   def set_hint_prompt_options(level_options)
     if @script && @script.hint_prompt_enabled?
-      level_options[:hintPromptAttemptsThreshold] = @script_level.hint_prompt_attempts_threshold
+      level_options[:hintPromptAttemptsThreshold] = @level.hint_prompt_attempts_threshold
     end
   end
 
