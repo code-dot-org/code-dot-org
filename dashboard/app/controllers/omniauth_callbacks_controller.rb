@@ -88,11 +88,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def handle_untrusted_email_signin(user)
     force_takeover = user.teacher? && user.email.present? && user.email.end_with?('.oauthemailalreadytaken')
 
-    # We used to check this based on sign_in_count, but we're explicitly logging it now
-    seen_oauth_takeover_dialog = (!!user.seen_oauth_connect_dialog) || user.sign_in_count > 1
-
     # If account exists (as looked up by Clever ID) and it's not the first login, just sign in
-    if user.persisted? && seen_oauth_takeover_dialog && !force_takeover
+    if user.persisted? && user.sign_in_count > 0 && !force_takeover
       sign_in_user
     else
       # Otherwise, it's either the first login, or a user who must connect -
@@ -101,8 +98,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       session['clever_takeover_id'] = user.uid
       session['clever_takeover_token'] = user.oauth_token
       session['force_clever_takeover'] = force_takeover
-      user.seen_oauth_connect_dialog = true
-      user.save!
       sign_in_user
     end
   end
