@@ -34,7 +34,7 @@ class ScriptOverviewHeader extends Component {
     isSignedIn: PropTypes.bool.isRequired,
     isVerifiedTeacher: PropTypes.bool.isRequired,
     hasVerifiedResources: PropTypes.bool.isRequired,
-    showVersionWarning: PropTypes.bool,
+    showCourseUnitVersionWarning: PropTypes.bool,
   };
 
   componentDidMount() {
@@ -52,7 +52,7 @@ class ScriptOverviewHeader extends Component {
       isSignedIn,
       isVerifiedTeacher,
       hasVerifiedResources,
-      showVersionWarning,
+      showCourseUnitVersionWarning,
     } = this.props;
 
     let verifiedResourcesAnnounce = [];
@@ -79,7 +79,7 @@ class ScriptOverviewHeader extends Component {
             width={SCRIPT_OVERVIEW_WIDTH}
           />
         }
-        {showVersionWarning &&
+        {showCourseUnitVersionWarning &&
           <Notification
             type={NotificationType.warning}
             notice={i18n.wrongCourseVersionWarningNotice()}

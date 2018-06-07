@@ -143,7 +143,7 @@ progress.renderCourseProgress = function (scriptData) {
         onOverviewPage={true}
         excludeCsfColumnInLegend={scriptData.excludeCsfColumnInLegend}
         teacherResources={teacherResources}
-        showVersionWarning={scriptData.show_course_unit_version_warning}
+        showCourseUnitVersionWarning={scriptData.show_course_unit_version_warning}
       />
     </Provider>,
     mountPoint
