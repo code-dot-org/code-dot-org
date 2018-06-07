@@ -7720,7 +7720,7 @@ en:
               description_student: ''
               description_teacher: ''
             Conditionals in Bee:
-              name: Conditionals in Bee
+              name: If/Else with Bee
             Until Loops in Maze:
               name: Until Loops in Maze
             Programming in Maze:
@@ -7746,7 +7746,7 @@ en:
             Conditionals with Cards:
               name: Conditionals with Cards
             Conditionals & Loops in Harvester:
-              name: Conditionals & Loops in Harvester
+              name: Harvesting with Conditionals
             'Functions: Songwriting':
               name: Songwriting
             Functions in Minecraft:
@@ -8345,7 +8345,7 @@ en:
             Pet Giraffe with Sprite Lab:
               name: Pet Giraffe
             Copyright and Creativity:
-              name: Copyright and Creativity
+              name: Digital Sharing
         coursef-2018:
           title: Course F
           description: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
@@ -9501,3 +9501,15 @@ en:
               name: Loops in Ice Age
             'Persistence & Frustration: Stevie and the Big Project':
               name: 'Persistence & Frustration: Stevie and the Big Project'
+        spritelab-validated:
+          stages:
+            Fish Tank - Creating Sprites:
+              name: Fish Tank - Creating Sprites
+            Alien Dance Party - Input:
+              name: Alien Dance Party - Input
+            Virtual Pet - Interactions:
+              name: Virtual Pet - Interactions
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
