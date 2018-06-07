@@ -50,7 +50,7 @@ const styles = {
   },
 };
 
-class UnconnectedTwoColumnActionBlock extends Component {
+export class UnconnectedTwoColumnActionBlock extends Component {
   static propTypes = {
     isRtl: PropTypes.bool.isRequired,
     responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
@@ -116,7 +116,7 @@ class UnconnectedTwoColumnActionBlock extends Component {
   }
 }
 
-const TwoColumnActionBlock = connect(state => ({
+export const TwoColumnActionBlock = connect(state => ({
   responsiveSize: state.responsive.responsiveSize,
   isRtl: state.isRtl,
 }))(UnconnectedTwoColumnActionBlock);

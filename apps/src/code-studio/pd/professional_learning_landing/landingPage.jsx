@@ -6,8 +6,32 @@ import React, {PropTypes} from 'react';
 import {Button} from 'react-bootstrap';
 import ProfessionalLearningCourseProgress from './professionalLearningCourseProgress';
 import {TwoPartBanner} from './twoPartBanner';
+import {UnconnectedTwoColumnActionBlock as TwoColumnActionBlock} from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
 import {EnrolledWorkshops} from './enrolledWorkshops';
 import _ from 'lodash';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import i18n from "@cdo/locale";
+
+const styles = {
+  headerImage: {
+    width: '100%',
+    height: '300px',
+    background: `url(/blockly/media/BannerKids.png) no-repeat`,
+    backgroundSize: 'cover',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  headerText: {
+    backgroundColor: 'rgba(0, 0, 0, .5)',
+    alignSelf: 'flex-end',
+    width: '100%',
+    textAlign: 'center',
+    padding: '30px',
+    fontSize: '40px',
+    color: 'white'
+  },
+}
 
 const LandingPage = React.createClass({
   propTypes: {
@@ -18,28 +42,8 @@ const LandingPage = React.createClass({
 
   renderHeaderImage() {
     return (
-      <div
-        style={{
-          width: '100%',
-          height: '300px',
-          background: `url(/blockly/media/BannerKids.png) no-repeat`,
-          backgroundSize: 'cover',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center'
-        }}
-      >
-        <div
-          style={{
-            backgroundColor: 'rgba(0, 0, 0, .5)',
-            alignSelf: 'flex-end',
-            width: '100%',
-            textAlign: 'center',
-            padding: '30px',
-            fontSize: '40px',
-            color: 'white'
-          }}
-        >
+      <div style={styles.headerImage}>
+        <div style={styles.headerText}>
           My Professional Learning
         </div>
       </div>
@@ -82,12 +86,35 @@ const LandingPage = React.createClass({
   },
 
   render() {
-    const lastWorkshopSurveyBanner = this.props.lastWorkshopSurveyUrl && (
-      <TwoPartBanner
-        textElement={this.renderWorkshopSurveyInterior()}
-        imageUrl="url('https://code.org/images/email/BJC4NYC.jpg')"
-        imagePosition="imageLeft"
-      />
+    const CSF = this.props.lastWorkshopSurveyCourse === 'CS Fundamentals';
+    const subheading = CSF ? Submit feedback and order free course kit : Submit your feedback;
+    const description = CSF ? Thank you for taking a CS Fundamentals workshop! Please complete this survey about your experience and you
+    will be able to order supplies for your classroom. :
+    Thank you for completing a {this.props.lastWorkshopSurveyCourse} workshop!
+    Please complete this survey about your experience to help us improve future
+    workshops.;
+
+    const lastWorkshopSurveyBanner = (
+      <div>
+        <TwoColumnActionBlock
+          isRtl={false}
+          responsiveSize='lg'
+          imageUrl={pegasus('shared/images/misc/teacher-training.png')}
+          subHeading={subheading}
+          description={description}
+          buttons={[
+            {
+              url: pegasus('/learn/local'),
+              text: "Start survey"
+            }
+          ]}
+        />
+        <TwoPartBanner
+          textElement={this.renderWorkshopSurveyInterior()}
+          imageUrl="url('https://code.org/images/email/BJC4NYC.jpg')"
+          imagePosition="imageLeft"
+        />
+      </div>
     );
 
     const upcomingWorkshops = (
@@ -107,7 +134,7 @@ const LandingPage = React.createClass({
       <div>
         {this.renderHeaderImage()}
         <br/>
-        {this.props.lastWorkshopSurveyUrl && lastWorkshopSurveyBanner}
+        {lastWorkshopSurveyBanner}
         {upcomingWorkshops}
         {plcData}
       </div>
