@@ -213,7 +213,6 @@ class SectionsControllerTest < ActionController::TestCase
     section.reload
     assert_response :success
     assert_nil section.course_id
-    refute_equal 1, section.course_id
   end
 
   test "update: script_id is not updated if invalid" do
@@ -229,7 +228,6 @@ class SectionsControllerTest < ActionController::TestCase
     section.reload
     assert_response :success
     assert_nil section.script_id
-    refute_equal 1, section.script_id
   end
 
   test "update: cannot update section you dont own" do
