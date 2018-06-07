@@ -38,13 +38,16 @@ class ScriptOverviewHeader extends Component {
   };
 
   componentDidMount() {
-    $('#lesson').appendTo(ReactDOM.findDOMNode(this.protected));
+    $('#lesson-heading-extras').appendTo(ReactDOM.findDOMNode(this.protected));
   }
 
   render() {
     const {
       plcHeaderProps,
       announcements,
+      scriptTitle,
+      scriptDescription,
+      betaTitle,
       viewAs,
       isSignedIn,
       isVerifiedTeacher,
@@ -85,9 +88,23 @@ class ScriptOverviewHeader extends Component {
             width={SCRIPT_OVERVIEW_WIDTH}
           />
         }
-        <ProtectedStatefulDiv
-          ref={element => this.protected = element}
-        />
+        <div id="lesson">
+          <div id="heading">
+            <h1>
+              {scriptTitle}
+              {" "}
+              {betaTitle &&
+                <span className="betatext">{betaTitle}</span>
+              }
+            </h1>
+            <p>
+              {scriptDescription}
+            </p>
+          </div>
+          <ProtectedStatefulDiv
+            ref={element => this.protected = element}
+          />
+        </div>
       </div>
     );
   }
