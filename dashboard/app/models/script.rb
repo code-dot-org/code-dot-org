@@ -1020,6 +1020,8 @@ class Script < ActiveRecord::Base
       id: id,
       name: name,
       title: localized_title,
+      description: localized_description,
+      beta_title: Script.beta?(name) ? I18n.t('beta') : nil,
       course_id: course.try(:id),
       hidden: hidden,
       loginRequired: login_required,
@@ -1107,6 +1109,10 @@ class Script < ActiveRecord::Base
 
   def localized_title
     I18n.t "data.script.name.#{name}.title"
+  end
+
+  def localized_description
+    I18n.t "data.script.name.#{name}.description"
   end
 
   def disable_post_milestone?
