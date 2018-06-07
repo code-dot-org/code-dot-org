@@ -1,7 +1,9 @@
 class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
   load_and_authorize_resource
+  #TODO: (epeach) - Figure out workaround to delete the skip
+  skip_before_action :verify_authenticity_token
 
-  def show_most_recent_feedback
+  def show_feedback_from_teacher
     @feedback = TeacherFeedback.where(student_id: params[:student_id], level_id: params[:level_id], teacher_id: params[:teacher_id]).last
     render json: @feedback
   end

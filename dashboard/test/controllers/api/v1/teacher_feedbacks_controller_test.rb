@@ -76,7 +76,7 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
       assert_response :success
     end
 
-    get "#{API}/show_most_recent_feedback?student_id=#{student.id}&level_id=#{level.id}&teacher_id=#{teacher.id}"
+    get "#{API}/show_feedback_from_teacher?student_id=#{student.id}&level_id=#{level.id}&teacher_id=#{teacher.id}"
 
     assert_equal comment, JSON.parse(@response.body)['comment']
   end
@@ -115,7 +115,7 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
       assert_response :success
     end
 
-    get "#{API}/show_most_recent_feedback?student_id=#{student1.id}&level_id=#{level.id}&teacher_id=#{teacher.id}"
+    get "#{API}/show_feedback_from_teacher?student_id=#{student1.id}&level_id=#{level.id}&teacher_id=#{teacher.id}"
 
     assert_response :success
     assert_equal student1.id, JSON.parse(@response.body)['student_id']
@@ -161,10 +161,10 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
 
     sign_in teacher1
 
-    get "#{API}/show_most_recent_feedback?student_id=#{student.id}&level_id=#{level.id}&teacher_id=#{teacher1.id}"
+    get "#{API}/show_feedback_from_teacher?student_id=#{student.id}&level_id=#{level.id}&teacher_id=#{teacher1.id}"
     assert_equal comment1, JSON.parse(@response.body)['comment']
 
-    get "#{API}/show_most_recent_feedback?student_id=#{student.id}&level_id=#{level.id}&teacher_id=#{teacher2.id}"
+    get "#{API}/show_feedback_from_teacher?student_id=#{student.id}&level_id=#{level.id}&teacher_id=#{teacher2.id}"
     assert_equal comment2, JSON.parse(@response.body)['comment']
   end
 
@@ -214,7 +214,7 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
       assert_response :success
     end
 
-    get "#{API}/show_most_recent_feedback?student_id=#{student.id}&level_id=#{level2.id}&teacher_id=#{teacher.id}"
+    get "#{API}/show_feedback_from_teacher?student_id=#{student.id}&level_id=#{level2.id}&teacher_id=#{teacher.id}"
 
     assert_equal comment2, JSON.parse(@response.body)['comment']
   end
@@ -263,7 +263,7 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
       assert_response :success
     end
 
-    get "#{API}/show_most_recent_feedback?student_id=#{student.id}&level_id=#{level.id}&teacher_id=#{teacher.id}"
+    get "#{API}/show_feedback_from_teacher?student_id=#{student.id}&level_id=#{level.id}&teacher_id=#{teacher.id}"
 
     assert_equal comment3, JSON.parse(@response.body)['comment']
   end
