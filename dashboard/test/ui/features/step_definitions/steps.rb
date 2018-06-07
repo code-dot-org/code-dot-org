@@ -1399,9 +1399,10 @@ Then /^the section table should have (\d+) rows?$/ do |expected_row_count|
   expect(row_count.to_i).to eq(expected_row_count.to_i)
 end
 
-Then /^the section table row at index (\d+) has script path "([^"]+)"$/ do |row_index, expected_path|
+Then /^the section table row at index (\d+) has (primary|secondary) assignment path "([^"]+)"$/ do |row_index, assignment_type, expected_path|
+  link_index = (assignment_type == 'primary') ? 0 : 1
   href = @browser.execute_script(
-    "return $('.uitest-owned-sections tbody tr:eq(#{row_index}) td:eq(3) a:eq(1)').attr('href');"
+    "return $('.uitest-owned-sections tbody tr:eq(#{row_index}) td:eq(3) a:eq(#{link_index})').attr('href');"
   )
   # ignore query params
   actual_path = href.split('?')[0]

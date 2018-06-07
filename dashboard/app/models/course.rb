@@ -186,6 +186,8 @@ class Course < ApplicationRecord
     info[:assignment_family_title] = localized_assignment_family_title
     info[:version_year] = version_year
     info[:version_title] = localized_version_title
+    # For now, all course versions visible in the UI are stable.
+    info[:is_stable] = true
     info[:category] = I18n.t('courses_category')
     info[:script_ids] = user ?
       scripts_for_user(user).map(&:id) :

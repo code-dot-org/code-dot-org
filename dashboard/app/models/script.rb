@@ -1109,6 +1109,10 @@ class Script < ActiveRecord::Base
     I18n.t "data.script.name.#{name}.title"
   end
 
+  def localized_assignment_family_title
+    I18n.t("data.script.name.#{name}.assignment_family_title", default: localized_title)
+  end
+
   def disable_post_milestone?
     !Gatekeeper.allows('postMilestone', where: {script_name: name}, default: true)
   end
@@ -1168,6 +1172,18 @@ class Script < ActiveRecord::Base
     info = ScriptConstants.assignable_info(self)
     info[:name] = I18n.t("data.script.name.#{info[:name]}.title", default: info[:name])
     info[:name] += " *" if hidden
+
+    if family_name
+      info[:assignment_family_name] = family_name
+      info[:assignment_family_title] = localized_assignment_family_title
+    end
+    if version_year
+      info[:version_year] = version_year
+      # No need to localize version_title yet, since we only display it for CSF
+      # scripts, which just use version_year.
+      info[:version_title] = version_year
+    end
+    info[:is_stable] = true if is_stable
 
     info[:category] = I18n.t("data.script.category.#{info[:category]}_category_name", default: info[:category])
 
