@@ -53,10 +53,7 @@
     "markdown_instructions": "We can change all kinds of things in this program when you click on the sprites.  Let’s change their color!  **Add code to change the color of each alien when it gets clicked.**",
     "project_template_level_name": "Dance Party 2",
     "show_type_hints": "true",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

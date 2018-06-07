@@ -52,10 +52,7 @@
     "parent_level_id": 14099,
     "markdown_instructions": "**Make a prediction:** Here’s a sprite called `alien1`! What do you think will happen when you click on her?",
     "show_type_hints": "true",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
