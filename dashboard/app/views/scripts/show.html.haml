@@ -25,27 +25,16 @@
   #landingpage
     #notification
     -# This div ends up being owned by ScriptOverviewHeader in react
-    #lesson
-      #heading
-        %h1
-          = data_t_suffix('script.name', @script.name, 'title')
-          - if @script.beta?
-            %span.betatext
-              = t('beta')
-
+    #lesson-heading-extras
+      - if @script.banner_image
         %p
-          = data_t_suffix('script.name', @script.name, 'description')
+          - path = script_next_path(@script)
+          - path += "?section_id=#{params[:section_id]}" if params[:section_id]
+          = link_to image_tag(@script.banner_image), path, class: 'uitest-script-next-banner'
 
-      #lesson-heading-extras
-        - if @script.banner_image
-          %p
-            - path = script_next_path(@script)
-            - path += "?section_id=#{params[:section_id]}" if params[:section_id]
-            = link_to image_tag(@script.banner_image), path, class: 'uitest-script-next-banner'
-
-        - if @script.beta?
-          %p.lightgreytext
-            != t('landing.prerelease_hoc2014')
+      - if @script.beta?
+        %p.lightgreytext
+          != t('landing.prerelease_hoc2014')
 
     #stats
       .user-stats-block
