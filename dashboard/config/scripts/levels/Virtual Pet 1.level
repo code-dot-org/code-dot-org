@@ -52,10 +52,7 @@
     "parent_level_id": 14157,
     "markdown_instructions": "This is Geraldine, your new pet giraffe. What do you think will happen if you press run and then click on her?",
     "show_type_hints": "true",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
