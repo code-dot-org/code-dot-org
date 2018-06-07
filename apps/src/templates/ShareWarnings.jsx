@@ -5,9 +5,20 @@ import AgeDropdown from './AgeDropdown';
 import commonMsg from '@cdo/locale';
 
 const styles = {
+  ageDropdown: {
+    fontSize: 14,
+    width: 220,
+    height: 30,
+    lineHeight: '30px',
+    marginBottom: 10,
+  },
   dataMessage: {
     fontSize: 18,
+    lineHeight: '21px',
     marginBottom: 30
+  },
+  dataMessageHighlight: {
+    backgroundColor: 'yellow',
   },
   ageMessage: {
     fontSize: 18,
@@ -62,12 +73,18 @@ const ShareWarnings = React.createClass({
     return (
       <div>
         {this.props.showStoreDataAlert &&
-          <div style={styles.dataMessage}>{commonMsg.shareWarningsStoreData()}</div>
+          <div style={styles.dataMessage}>
+            {commonMsg.shareWarningsStoreDataBeforeHighlight()}
+            <span style={styles.dataMessageHighlight}>
+              {commonMsg.shareWarningsStoreDataHighlight()}
+            </span>
+            {commonMsg.shareWarningsStoreDataAfterHighlight()}
+          </div>
         }
         {this.props.promptForAge &&
           <div>
             <div style={styles.ageMessage}>{commonMsg.shareWarningsAge()}</div>
-            <AgeDropdown style={styles.ageDropdonw} ref="age"/>
+            <AgeDropdown style={styles.ageDropdown} ref="age"/>
           </div>
         }
         <div>
