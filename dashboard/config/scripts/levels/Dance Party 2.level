@@ -52,10 +52,7 @@
     "parent_level_id": 14100,
     "markdown_instructions": "The alien was proud of her dancing skills on Mars, but now she can only move up and down. Can you change the behavior inside the `begins` block to make her start spinning around?",
     "show_type_hints": "true",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
