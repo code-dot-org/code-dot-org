@@ -109,4 +109,29 @@ module GitUtils
     `git cat-file commit #{hash_or_branch}`
     $?.success?
   end
+
+  def self.merge_branch
+    "origin/#{pr_base_branch_or_default_no_origin}"
+  end
+
+  CIRCLE_CONFIG_FILE = '.circleci/config.yml'.freeze
+
+  def self.circle_yml_changed
+    system("git fetch origin #{pr_base_branch_or_default_no_origin}")
+    !`git diff ...#{merge_branch} -- #{CIRCLE_CONFIG_FILE}`.empty?
+  end
+
+  # Most changes can be merged from the base branch (usually staging) into the
+  # feature branch under test here and the build can proceed as usual.
+  # Changes to the CircleCI configuration file are a special case though, because
+  # it can control how the Circle container is created, and by the time we run
+  # this merge step we're already _in_ the container itself - so the only way
+  # to guarantee we're accurately testing the merge result is to have the config
+  # change in our feature branch from the moment the build starts.  Therefore we
+  # must stop and ask the user to manually merge the base branch into their own.
+  def self.ensure_latest_circle_yml
+    if circle_yml_changed
+      raise "#{CIRCLE_CONFIG_FILE} has changed.\nPlease merge the #{merge_branch} branch into your branch and try again."
+    end
+  end
 end
