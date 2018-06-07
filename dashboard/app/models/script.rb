@@ -626,6 +626,22 @@ class Script < ActiveRecord::Base
     script_levels.any? {|script_level| script_level.levels.any?(&:age_13_required?)}
   end
 
+  # @param user [User]
+  # @return [Boolean] Whether the user has progress on another version of this script.
+  def has_other_version_progress?(user)
+    return nil unless user
+    user_script_ids = user.user_scripts.pluck(:script_id)
+
+    Script.
+      # select only scripts in the same script family.
+      where(family_name: family_name).
+      # exclude the current script.
+      where.not(id: id).
+      # select only scripts which the user has progress in.
+      where(id: user_script_ids).
+      count > 0
+  end
+
   # Create or update any scripts, script levels and stages specified in the
   # script file definitions. If new_suffix is specified, create a copy of the
   # script and any associated levels, appending new_suffix to the name when
@@ -1042,6 +1058,7 @@ class Script < ActiveRecord::Base
       script_announcements: script_announcements,
       age_13_required: logged_out_age_13_required?,
       show_course_unit_version_warning: course.try(:has_other_version_progress?, user),
+      show_script_version_warning: has_other_version_progress?(user)
     }
 
     summary[:stages] = stages.map(&:summarize) if include_stages
