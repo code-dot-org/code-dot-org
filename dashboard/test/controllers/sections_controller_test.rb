@@ -22,7 +22,7 @@ class SectionsControllerTest < ActionController::TestCase
   setup do
     # place in setup instead of setup_all otherwise course ends up being serialized
     # to a file if levelbuilder_mode is true
-    @course = create(:course)
+    @course = create(:valid_course_for_section)
     @script_in_course = create(:script)
     create(:course_script, script: @script_in_course, course: @course, position: 1)
     @section_with_course = create(:section, user: @teacher, login_type: 'word', course_id: @course.id)
