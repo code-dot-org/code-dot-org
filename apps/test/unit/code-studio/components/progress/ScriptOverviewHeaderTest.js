@@ -13,6 +13,8 @@ const defaultProps = {
   viewAs: ViewType.Teacher,
   isVerifiedTeacher: true,
   hasVerifiedResources: false,
+  scriptTitle: 'Course One',
+  scriptDescription: 'The first course',
 };
 
 const fakeAnnouncement = {

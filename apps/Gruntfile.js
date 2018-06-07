@@ -437,6 +437,7 @@ describe('entry tests', () => {
     'levelbuilder_studio':          './src/sites/studio/pages/levelbuilder_studio.js',
     'levelbuilder_pixelation':      './src/sites/studio/pages/levelbuilder_pixelation.js',
     'blocks/edit':                  './src/sites/studio/pages/blocks/edit.js',
+    'shared_blockly_functions/edit':'./src/sites/studio/pages/shared_blockly_functions/edit.js',
     'levels/contract_match':        './src/sites/studio/pages/levels/contract_match.jsx',
     'levels/_curriculum_reference': './src/sites/studio/pages/levels/_curriculum_reference.js',
     'levels/_dialog':               './src/sites/studio/pages/levels/_dialog.js',
