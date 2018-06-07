@@ -145,6 +145,7 @@ progress.renderCourseProgress = function (scriptData) {
         teacherResources={teacherResources}
         showCourseUnitVersionWarning={scriptData.show_course_unit_version_warning}
         showScriptVersionWarning={scriptData.show_script_version_warning}
+        versions={scriptData.versions}
       />
     </Provider>,
     mountPoint
