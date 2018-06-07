@@ -206,6 +206,32 @@ class SectionTest < ActiveSupport::TestCase
     assert_equal ["Grade is not included in the list"], section.errors.full_messages
   end
 
+  test "script must be valid" do
+    Script.stubs(:valid_script_id?).returns(false)
+    section = build :section, script_id: 1
+
+    refute section.valid?
+    assert_equal ["Script must be a valid script"], section.errors.full_messages
+  end
+
+  test "section is valid with nil script_id" do
+    section = build :section, script_id: nil
+    assert section.valid?
+  end
+
+  test "course must be valid" do
+    Course.stubs(:valid_course_id?).returns(false)
+    section = build :section, course_id: 1
+
+    refute section.valid?
+    assert_equal ["Course must be a valid course"], section.errors.full_messages
+  end
+
+  test "section is valid with nil course_id" do
+    section = build :section, course_id: nil
+    assert section.valid?
+  end
+
   test "can create section with duplicate name" do
     assert_difference -> {Section.count}, 2 do
       2.times do
