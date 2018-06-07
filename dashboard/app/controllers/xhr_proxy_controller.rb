@@ -64,6 +64,7 @@ class XhrProxyController < ApplicationController
     nuevaschool3.ngrok.io
     numbersapi.com
     rhcloud.com
+    runescape.com
     sheets.googleapis.com
     spreadsheets.google.com
     swapi.co
