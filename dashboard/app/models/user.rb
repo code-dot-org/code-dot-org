@@ -135,6 +135,7 @@ class User < ActiveRecord::Base
     data_transfer_agreement_source
     data_transfer_agreement_kind
     data_transfer_agreement_at
+    seen_oauth_connect_dialog
   )
 
   # Include default devise modules. Others available are:
