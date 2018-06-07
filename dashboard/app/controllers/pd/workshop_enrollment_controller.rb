@@ -52,6 +52,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
             {
               organizer: @workshop.organizer,
               regional_partner: @workshop.regional_partner,
+              course_target: @workshop.course_target
             }
           ),
           session_dates: session_dates,
