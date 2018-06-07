@@ -116,6 +116,7 @@ class SectionActionDropdown extends Component {
           <MenuBreak/>
           <PopUpMenu.Item
             onClick={this.onClickEdit}
+            className="edit-section-details-link"
           >
             {i18n.editSectionDetails()}
           </PopUpMenu.Item>
