@@ -617,7 +617,7 @@ Dashboard::Application.routes.draw do
 
       resources :teacher_feedbacks, only: [:create] do
         collection do
-          get 'show_most_recent_feedback'
+          get 'show_feedback_from_teacher'
         end
       end
     end
