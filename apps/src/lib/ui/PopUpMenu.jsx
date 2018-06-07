@@ -170,10 +170,13 @@ class Item extends Component {
     last: PropTypes.bool,
     color: PropTypes.string,
     openInNewTab: PropTypes.bool,
+    className: PropTypes.string,
   };
 
   render() {
-    const {first, last, onClick, children, href, openInNewTab} = this.props;
+    const {first, last, onClick, children, href, openInNewTab, className} = this.props;
+    const defaultClassName = 'pop-up-menu-item';
+    const classList = className ? `${defaultClassName} ${className}` : defaultClassName;
     if (!href && !onClick) {
       throw new Error('Expect at least one of href/onClick');
     }
@@ -206,7 +209,7 @@ class Item extends Component {
       <div style={paddingStyle}>
         {this.props.href &&
           <a
-            className="pop-up-menu-item"
+            className={classList}
             href={href}
             style={{...textStyle, ...areaStyle}}
             target={target}
@@ -216,7 +219,7 @@ class Item extends Component {
         }
         {!this.props.href &&
           <div
-            className="pop-up-menu-item"
+            className={classList}
             style={textStyle}
             onClick={onClick}
           >
