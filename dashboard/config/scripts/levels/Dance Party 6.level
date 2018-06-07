@@ -52,10 +52,7 @@
     "parent_level_id": 14104,
     "markdown_instructions": "These aliens are running wild! Use the `stops everything` block to make each alien stop moving when it is clicked.",
     "show_type_hints": "true",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

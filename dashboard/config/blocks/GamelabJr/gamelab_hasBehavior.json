@@ -1,0 +1,18 @@
+{
+  "category": "Logic",
+  "config": {
+    "func": "hasBehavior",
+    "blockText": "{SPRITE} is currently {BEHAVIOR}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "BEHAVIOR",
+        "type": "Behavior"
+      }
+    ],
+    "returnType": "Boolean"
+  }
+}
