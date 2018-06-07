@@ -178,41 +178,6 @@ export default {
     };
     generator.sprite_parameter_get = generator.variables_get;
 
-    Blockly.Blocks.sprite_variables_set = {
-      // Variable setter.
-      init: function () {
-        var fieldLabel = new Blockly.FieldLabel(Blockly.Msg.VARIABLES_SET_ITEM);
-        // Must be marked EDITABLE so that cloned blocks share the same var name
-        fieldLabel.EDITABLE = true;
-        this.setHelpUrl(Blockly.Msg.VARIABLES_SET_HELPURL);
-        this.setHSV(131, 0.64, 0.62);
-        this.appendValueInput('VALUE')
-            .setStrictCheck(Blockly.BlockValueType.SPRITE)
-            .appendTitle(Blockly.Msg.VARIABLES_SET_TITLE)
-            .appendTitle(Blockly.disableVariableEditing ? fieldLabel
-              : new Blockly.FieldVariable(
-                  Blockly.Msg.VARIABLES_SET_ITEM,
-                  null,
-                  null,
-                  Blockly.BlockValueType.SPRITE,
-                ),
-              'VAR')
-            .appendTitle(Blockly.Msg.VARIABLES_SET_TAIL);
-        this.setPreviousStatement(true);
-        this.setNextStatement(true);
-        this.setTooltip(Blockly.Msg.VARIABLES_SET_TOOLTIP);
-      },
-      getVars: Blockly.Blocks.sprite_variables_get.getVars,
-      renameVar: function (oldName, newName) {
-        if (Blockly.Names.equals(oldName, this.getTitleValue('VAR'))) {
-          this.setTitleValue(newName, 'VAR');
-        }
-      },
-    };
-    generator.sprite_variables_set = generator.variables_set;
-    Blockly.Variables.registerSetter(Blockly.BlockValueType.SPRITE,
-      'sprite_variables_set');
-
     Blockly.Blocks.gamelab_behavior_get = {
       init() {
         var fieldLabel = new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);
