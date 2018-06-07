@@ -72,6 +72,7 @@ class Section < ActiveRecord::Base
     LOGIN_TYPE_GOOGLE_CLASSROOM = 'google_classroom'.freeze,
     LOGIN_TYPE_CLEVER = 'clever'.freeze
   ]
+  validates_inclusion_of :login_type, in: LOGIN_TYPES
 
   TYPES = [
     # Insert non-workshop section types here.
@@ -121,11 +122,6 @@ class Section < ActiveRecord::Base
     errors.add(:course_id, 'must be a valid course') unless Course.valid_course_id?(course_id)
   end
   validate :course_must_be_valid, unless: -> {course_id.nil?}
-
-  def login_type_must_be_valid
-    errors.add(:login_type, 'must be a valid login type') unless Section.valid_login_type?(login_type)
-  end
-  validate :login_type_must_be_valid
 
   before_create :assign_code
   def assign_code
