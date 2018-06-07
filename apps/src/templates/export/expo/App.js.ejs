@@ -1,8 +1,9 @@
 import React from 'react';
 import { AppLoading } from 'expo';
-import { Platform, StyleSheet, View, WebView } from 'react-native';
+import { AsyncStorage, Platform, StyleSheet, View, WebView } from 'react-native';
 
 import CustomAsset from './CustomAsset';
+import DataWarning from './DataWarning';
 import packagedFiles from './packagedFiles';
 
 export default class App extends React.Component {
@@ -12,12 +13,29 @@ export default class App extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+<% if (!hasDataAPIs) { -%>
+      age: DataWarning.AGE_MINIMUM,
+<% } -%>
+    };
   }
 
   componentDidMount() {
     this.prepareAssets();
+    this.checkAge();
   }
+
+<% if (hasDataAPIs) { -%>
+  checkAge = async () => {
+    try {
+      const age = await AsyncStorage.getItem(DataWarning.AGE_KEY);
+      this.setState({ age });
+    } catch (e) {
+    }
+  };
+<% } else { -%>
+  checkAge = () => {};
+<% } -%>
 
   async prepareAssets() {
     const downloadAssets = packagedFiles.map(({ module, fileName }) =>
@@ -56,7 +74,13 @@ export default class App extends React.Component {
   }
 
   render() {
-    const { height, indexUri } = this.state;
+    const { age, height, indexUri } = this.state;
+
+    if (!age || age < DataWarning.AGE_MINIMUM) {
+      return (
+        <DataWarning onComplete={this.checkAge} />
+      );
+    }
 
     if (!indexUri) {
       return (
