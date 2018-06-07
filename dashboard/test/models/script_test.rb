@@ -573,6 +573,20 @@ class ScriptTest < ActiveSupport::TestCase
     refute csp1_2017.summarize(true, user)[:show_script_version_warning]
   end
 
+  test 'summarize includes versions' do
+    a17 = create(:script, name: 'coursea-2017', family_name: 'coursea', version_year: '2017')
+    create(:script, name: 'coursea-2018', family_name: 'coursea', version_year: '2018')
+
+    versions = a17.summarize[:versions]
+    assert_equal 2, versions.length
+    assert_equal 'coursea-2018', versions[0][:name]
+    assert_equal '2018', versions[0][:version_year]
+    assert_equal '2018', versions[0][:version_title]
+    assert_equal 'coursea-2017', versions[1][:name]
+    assert_equal '2017', versions[1][:version_year]
+    assert_equal '2017', versions[1][:version_title]
+  end
+
   test 'should generate PLC objects' do
     script_file = File.join(self.class.fixture_path, 'test-plc.script')
     scripts, custom_i18n = Script.setup([script_file])

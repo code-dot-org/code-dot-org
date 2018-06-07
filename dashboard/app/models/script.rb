@@ -1061,6 +1061,7 @@ class Script < ActiveRecord::Base
       age_13_required: logged_out_age_13_required?,
       show_course_unit_version_warning: has_other_course_progress,
       show_script_version_warning: !has_other_course_progress && has_other_script_progress,
+      versions: summarize_versions,
     }
 
     summary[:stages] = stages.map(&:summarize) if include_stages
@@ -1118,6 +1119,16 @@ class Script < ActiveRecord::Base
       end
     end
     data
+  end
+
+  # Returns an array of objects showing the name and version year for all scripts
+  # sharing the family_name of this course, including this one.
+  def summarize_versions
+    Script.
+      where(family_name: family_name).
+      map {|s| {name: s.name, version_year: s.version_year, version_title: s.version_year}}.
+      sort_by {|info| info[:version_year]}.
+      reverse
   end
 
   def self.clear_cache
