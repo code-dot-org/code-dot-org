@@ -204,6 +204,8 @@ Dashboard::Application.routes.draw do
 
   resources :blocks, constraints: {id: /[^\/]+/}
 
+  resources :shared_blockly_functions, path: '/functions'
+
   resources :levels do
     get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'
     get 'embed_level', to: 'levels#embed_level', as: 'embed_level'

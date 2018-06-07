@@ -28,6 +28,8 @@ class BlocksController < ApplicationController
     redirect_to(blocks_path, notice: "Block Deleted")
   end
 
+  private
+
   def create_params
     update_params
   end

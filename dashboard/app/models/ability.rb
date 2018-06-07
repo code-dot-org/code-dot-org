@@ -222,6 +222,7 @@ class Ability
     if user.persisted? && user.permission?(UserPermission::LEVELBUILDER)
       can :manage, [
         Block,
+        SharedBlocklyFunction,
         Game,
         Level,
         Course,
