@@ -48,9 +48,14 @@ class Pd::WorkshopEnrollmentController < ApplicationController
 
       @script_data = {
         props: {
-          workshop: @workshop,
-          enrollment: @enrollment,
+          workshop: @workshop.attributes.merge(
+            {
+              organizer: @workshop.organizer,
+              regional_partner: @workshop.regional_partner,
+            }
+          ),
           session_dates: session_dates,
+          enrollment: @enrollment,
           facilitators: facilitators,
           sign_in_prompt_data: sign_in_prompt_data
         }.to_json
