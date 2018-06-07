@@ -4,13 +4,15 @@
 import React, {PropTypes} from 'react';
 import WorkshopDetails from './workshop_details';
 import FacilitatorBio from './facilitator_bio';
+import SignInPrompt from './sign_in_prompt';
 
 export default class WorkshopEnrollment extends React.Component {
   static propTypes = {
     workshop: PropTypes.object,
     enrollment: PropTypes.object,
     session_dates: PropTypes.arrayOf(PropTypes.string),
-    facilitators: PropTypes.arrayOf(PropTypes.object)
+    facilitators: PropTypes.arrayOf(PropTypes.object),
+    sign_in_prompt_data: PropTypes.object
   };
 
   render() {
@@ -44,7 +46,13 @@ export default class WorkshopEnrollment extends React.Component {
               <div className="row">
                 <div className ="span6">
                   <h2>Your Information</h2>
-
+                  {
+                    this.props.sign_in_prompt_data.show_sign_in_prompt &&
+                    <SignInPrompt
+                      info_icon={this.props.sign_in_prompt_data.info_icon}
+                      sign_in_url={this.props.sign_in_prompt_data.sign_in_url}
+                    />
+                  }
                   <h2>Enrollment Form Here</h2>
 
                 </div>
