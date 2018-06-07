@@ -193,6 +193,18 @@ const validScripts = [
     assignment_family_name: "coursea",
     version_year: "2018",
   },
+  {
+    id: 209,
+    name: "Course A (2017)",
+    script_name: "coursea-2017",
+    category: "CS Fundamentals (2017)",
+    position: 0,
+    category_priority: 4,
+    assignment_family_title: 'Course A',
+    assignment_family_name: "coursea",
+    version_year: "2017",
+    is_stable: true,
+  },
 ];
 
 const students = [
@@ -304,15 +316,23 @@ describe('teacherSectionsRedux', () => {
       assert.equal('2017', assignment.version_year);
     });
 
-    it('set assignment family and version from validScripts for a script not in a course', () => {
+    it('sets assignment family, version and is_stable from validScripts for a script not in a course', () => {
       const {assignmentFamilies, validAssignments} = nextState;
       assert(assignmentFamilies.find(af => af.assignment_family_name === 'coursea'));
 
-      const assignId = assignmentId(null, validScripts[7].id);
-      const assignment = validAssignments[assignId];
+      let assignId = assignmentId(null, validScripts[7].id);
+      let assignment = validAssignments[assignId];
       assert.equal('Course A (2018)', assignment.name);
       assert.equal('coursea', assignment.assignment_family_name);
       assert.equal('2018', assignment.version_year);
+      assert(!assignment.is_stable);
+
+      assignId = assignmentId(null, validScripts[8].id);
+      assignment = validAssignments[assignId];
+      assert.equal('Course A (2017)', assignment.name);
+      assert.equal('coursea', assignment.assignment_family_name);
+      assert.equal('2017', assignment.version_year);
+      assert.equal(true, assignment.is_stable);
     });
 
     it('does not add assignmentFamily for a script that is in a course', () => {
