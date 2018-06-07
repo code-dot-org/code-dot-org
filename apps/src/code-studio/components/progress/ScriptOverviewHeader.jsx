@@ -12,6 +12,27 @@ import i18n from '@cdo/locale';
 
 const SCRIPT_OVERVIEW_WIDTH = 1100;
 
+const styles = {
+  heading: {
+    width: '100%',
+  },
+  titleWrapper: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'flex-end',
+  },
+  title: {
+    display: 'inline-block',
+  },
+  versionDropdown: {
+    display: 'inline-block',
+    marginBottom: 13,
+  },
+  description: {
+    width: 700,
+  },
+};
+
 /**
  * This component takes some of the HAML generated content on the script overview
  * page, and moves it under our React root. This is done so that we can have React
@@ -27,6 +48,7 @@ class ScriptOverviewHeader extends Component {
       courseViewPath: PropTypes.string.isRequired,
     }),
     announcements: PropTypes.arrayOf(announcementShape),
+    scriptName: PropTypes.string.isRequired,
     scriptTitle: PropTypes.string.isRequired,
     scriptDescription: PropTypes.string.isRequired,
     betaTitle: PropTypes.string,
@@ -47,10 +69,18 @@ class ScriptOverviewHeader extends Component {
     $('#lesson-heading-extras').appendTo(ReactDOM.findDOMNode(this.protected));
   }
 
+  onChangeVersion = event => {
+    const scriptName = event.target.value;
+    if (scriptName !== this.props.scriptName) {
+      window.location.href = `/s/${scriptName}`;
+    }
+  };
+
   render() {
     const {
       plcHeaderProps,
       announcements,
+      scriptName,
       scriptTitle,
       scriptDescription,
       betaTitle,
@@ -60,6 +90,7 @@ class ScriptOverviewHeader extends Component {
       hasVerifiedResources,
       showCourseUnitVersionWarning,
       showScriptVersionWarning,
+      versions,
     } = this.props;
 
     let verifiedResourcesAnnounce = [];
@@ -105,15 +136,30 @@ class ScriptOverviewHeader extends Component {
           />
         }
         <div id="lesson">
-          <div id="heading">
-            <h1>
-              {scriptTitle}
-              {" "}
-              {betaTitle &&
+          <div id="heading" style={styles.heading}>
+            <div style={styles.titleWrapper}>
+              <h1 style={styles.title}>
+                {scriptTitle}
+                {" "}
+                {betaTitle &&
                 <span className="betatext">{betaTitle}</span>
+                }
+              </h1>
+              {versions.length > 1 &&
+                <select
+                  onChange={this.onChangeVersion}
+                  value={scriptName}
+                  style={styles.versionDropdown}
+                >
+                  {versions.map(version => (
+                    <option key={version.name} value={version.name}>
+                      {version.version_year}
+                    </option>
+                  ))}
+                </select>
               }
-            </h1>
-            <p>
+            </div>
+            <p style={styles.description}>
               {scriptDescription}
             </p>
           </div>
@@ -131,6 +177,7 @@ export const UnconnectedScriptOverviewHeader = ScriptOverviewHeader;
 export default connect(state => ({
   plcHeaderProps: state.plcHeader,
   announcements: state.scriptAnnouncements || [],
+  scriptName: state.progress.scriptName,
   scriptTitle: state.progress.scriptTitle,
   scriptDescription: state.progress.scriptDescription,
   betaTitle: state.progress.betaTitle,
