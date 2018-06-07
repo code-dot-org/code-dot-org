@@ -9,8 +9,8 @@ import SignInPrompt from './sign_in_prompt';
 export default class WorkshopEnrollment extends React.Component {
   static propTypes = {
     workshop: PropTypes.object,
-    enrollment: PropTypes.object,
     session_dates: PropTypes.arrayOf(PropTypes.string),
+    enrollment: PropTypes.object,
     facilitators: PropTypes.arrayOf(PropTypes.object),
     sign_in_prompt_data: PropTypes.object
   };
@@ -31,7 +31,7 @@ export default class WorkshopEnrollment extends React.Component {
             <div className ="span6">
               <WorkshopDetails
                 workshop={this.props.workshop}
-                sessionDates={this.props.session_dates}
+                session_dates={this.props.session_dates}
               />
               <h2>Facilitators</h2>
               {this.props.facilitators.map(facilitator => (

@@ -15,7 +15,7 @@ const styles = {
 export default class WorkshopDetails extends React.Component {
   static propTypes = {
     workshop: PropTypes.object,
-    sessionDates: PropTypes.arrayOf(PropTypes.string)
+    session_dates: PropTypes.arrayOf(PropTypes.string)
   };
 
   workshopCourse() {
@@ -40,11 +40,11 @@ export default class WorkshopDetails extends React.Component {
           style={styles.label}
         >
           <strong>
-            {this.props.sessionDates.length === 1 ? 'Date:' : 'Dates:'}
+            {this.props.session_dates.length === 1 ? 'Date:' : 'Dates:'}
           </strong>
         </div>
         <div className="span4">
-          {this.props.sessionDates.map(date => (
+          {this.props.session_dates.map(date => (
             <div key={date}>
               {date}
               <br/>
@@ -73,7 +73,7 @@ export default class WorkshopDetails extends React.Component {
     );
   }
 
-  courseAndNotes() {
+  courseAndSubject() {
     return (
       <div className="row">
         <div
@@ -87,10 +87,57 @@ export default class WorkshopDetails extends React.Component {
           <br/>
           {this.workshopSubject()}
         </div>
-        <div className="span6">
-          <p style={styles.notes}>
-            {this.props.workshop.notes}
-          </p>
+      </div>
+    );
+  }
+
+  regionalPartner() {
+    if (this.props.workshop.regional_partner) {
+      return (
+        <div className="row">
+          <div
+            className="span2"
+            style={styles.label}
+          >
+            <strong>RegionalPartner:</strong>
+          </div>
+          <div className="span2">
+            {this.props.workshop.regional_partner.name}
+          </div>
+        </div>
+      );
+    }
+  }
+
+  organizerAndNotes() {
+    return (
+      <div>
+        <div className="row">
+          <div
+            className="span2"
+            style={styles.label}
+          >
+            <strong>Organizer Name:</strong>
+          </div>
+          <div className="span2">
+            {this.props.workshop.organizer.name}
+          </div>
+        </div>
+        <div className="row">
+          <div
+            className="span2"
+            style={styles.label}
+          >
+            <strong>Organizer Email:</strong>
+          </div>
+          <div className="span2">
+            {this.props.workshop.organizer.email}
+          </div>
+          <div className="span6">
+            <p style={styles.notes}>
+              {this.props.workshop.notes}
+            </p>
+          </div>
         </div>
       </div>
     );
@@ -106,7 +153,9 @@ export default class WorkshopDetails extends React.Component {
         </div>
         {this.sessionDates()}
         {this.location()}
-        {this.courseAndNotes()}
+        {this.courseAndSubject()}
+        {this.regionalPartner()}
+        {this.organizerAndNotes()}
       </div>
     );
   }
