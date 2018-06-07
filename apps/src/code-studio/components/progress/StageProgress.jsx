@@ -55,8 +55,7 @@ class StageProgress extends Component {
   render() {
     const { stageExtrasUrl, onStageExtras, stageTrophyEnabled } = this.props;
     let levels = this.props.levels;
-    console.log("levels from stage progress", levels)
-    
+
     // Only puzzle levels (non-concept levels) should count towards mastery.
     if (stageTrophyEnabled) {
       levels = levels.filter(level => !level.isConceptLevel);
