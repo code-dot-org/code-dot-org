@@ -517,7 +517,7 @@ class ScriptTest < ActiveSupport::TestCase
     refute summary[:has_lesson_plan]
   end
 
-  test 'summarize includes show_version_warning' do
+  test 'summarize includes show_course_unit_version_warning' do
     csp_2017 = create(:course, name: 'csp-2017')
     csp1_2017 = create(:script, name: 'csp1-2017')
     create(:course_script, course: csp_2017, script: csp1_2017, position: 1)
@@ -527,15 +527,15 @@ class ScriptTest < ActiveSupport::TestCase
     create(:course_script, course: csp_2018, script: csp1_2018, position: 1)
 
     summary = csp1_2017.summarize
-    refute summary[:show_version_warning]
+    refute summary[:show_course_unit_version_warning]
 
     user = create(:student)
     summary = csp1_2017.summarize(true, user)
-    refute summary[:show_version_warning]
+    refute summary[:show_course_unit_version_warning]
 
     create(:user_script, user: user, script: csp1_2018)
     summary = csp1_2017.summarize(true, user)
-    assert summary[:show_version_warning]
+    assert summary[:show_course_unit_version_warning]
   end
 
   test 'should generate PLC objects' do
