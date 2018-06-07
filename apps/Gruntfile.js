@@ -141,7 +141,7 @@ describe('entry tests', () => {
         },
         {
           expand: true,
-          cwd: 'node_modules/@code-dot-org/craft/src/assets',
+          cwd: 'node_modules/@code-dot-org/craft/dist/assets',
           src: ['**'],
           dest: 'build/package/media/skins/craft',
         },
