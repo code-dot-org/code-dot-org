@@ -13,7 +13,11 @@ class SectionsController < ApplicationController
     authorize! :manage, section
 
     course_id = params[:course_id]
-    script_id = params[:script_id] || params[:script][:id]
+
+    # This endpoint needs to satisfy two endpoint formats for getting script_id
+    # This should be updated soon to always expect params[:script_id]
+    script_id = params[:script][:id] if params[:script]
+    script_id ||= params[:script_id]
 
     if script_id
       script = Script.get_from_cache(script_id)

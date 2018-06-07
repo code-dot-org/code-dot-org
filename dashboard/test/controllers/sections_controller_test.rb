@@ -266,4 +266,16 @@ class SectionsControllerTest < ActionController::TestCase
 
     assert_not_nil UserScript.find_by(script: Script.artist_script, user: student)
   end
+
+  test "update: can set script from nested script param" do
+    sign_in @teacher
+    section = create(:section, user: @teacher, script_id: Script.flappy_script.id)
+    post :update, as: :json, params: {
+      id: section.id,
+      script: {id: @script_in_course.id}
+    }
+    assert_response :success
+    section.reload
+    assert_equal(@script_in_course.id, section.script_id)
+  end
 end
