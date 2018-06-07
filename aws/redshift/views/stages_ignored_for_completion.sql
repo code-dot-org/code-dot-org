@@ -1,4 +1,4 @@
-create or replace view analysis.unplugged_or_standalone_video_stages as
+create or replace view analysis.stages_ignored_for_completion as
 with unplugged_stages as 
 (
   select distinct 
@@ -31,6 +31,23 @@ standalone_video_stages as
   from standalone_video_levels
   where levels = 1 
     and levels_standalone_video = 1
+),
+course_d_challenge_stages as
+(
+select distinct
+  script_id,
+  stage_number
+from analysis.course_structure 
+where stage_name like '%Super Challenge%' or stage_name like '%Extreme Challenge%'
+and script_name = 'course4'
+),
+courses_e_f_ramp_stages as
+(
+select distinct
+  script_id,
+  stage_number
+from analysis.course_structure 
+where script_name in ('coursee', 'coursef') and stage_number <= 9
 )
 select *
 from unplugged_stages
@@ -39,4 +56,17 @@ union
 
 select *
 from standalone_video_stages
+
+union 
+
+select *
+from course_d_challenge_stages
+
+union 
+
+select *
+from courses_e_f_ramp_stages
 with no schema binding;
+
+GRANT ALL PRIVILEGES ON analysis.stages_ignored_for_completion TO GROUP admin;
+GRANT SELECT ON analysis.stages_ignored_for_completion TO GROUP reader, GROUP reader_pii;

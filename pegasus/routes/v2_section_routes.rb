@@ -86,14 +86,7 @@ post '/v2/sections/:id/delete' do |id|
   call(env.merge('REQUEST_METHOD' => 'DELETE', 'PATH_INFO' => "/v2/sections/#{id}"))
 end
 
-# DEPRECATED: Use PATCH /sections/<id> instead
 patch '/v2/sections/:id' do |id|
-  # Notify Honeybadger to determine if this endpoint is still used anywhere
-  Honeybadger.notify(
-    error_class: "DeprecatedEndpointWarning",
-    error_message: 'Deprecated endpoint PATCH /v2/sections/:id called unexpectedly',
-  )
-
   only_for 'code.org'
   dont_cache
   unsupported_media_type! unless payload = request.json_body
