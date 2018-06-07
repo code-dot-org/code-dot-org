@@ -20,6 +20,10 @@ class SectionsControllerTest < ActionController::TestCase
   end
 
   setup do
+    # Expect any scripts/courses to be valid unless specified by test
+    Course.stubs(:valid_course_id?).returns(true)
+    Script.stubs(:valid_script_id?).returns(true)
+
     # place in setup instead of setup_all otherwise course ends up being serialized
     # to a file if levelbuilder_mode is true
     @course = create(:course)
@@ -194,6 +198,36 @@ class SectionsControllerTest < ActionController::TestCase
     assert_equal(false, section_with_script.stage_extras)
     assert_equal(true, section_with_script.pairing_allowed)
     assert_equal(false, section_with_script.hidden)
+  end
+
+  test "update: course_id is not updated if invalid" do
+    Course.stubs(:valid_course_id?).returns(false)
+
+    sign_in @teacher
+    section = create(:section, user: @teacher, course_id: nil)
+
+    post :update, params: {
+      id: section.id,
+      course_id: 1,
+    }
+    section.reload
+    assert_response :success
+    assert_nil section.course_id
+  end
+
+  test "update: script_id is not updated if invalid" do
+    Script.stubs(:valid_script_id?).returns(false)
+
+    sign_in @teacher
+    section = create(:section, user: @teacher, script_id: nil)
+
+    post :update, params: {
+      id: section.id,
+      script_id: 1,
+    }
+    section.reload
+    assert_response :success
+    assert_nil section.script_id
   end
 
   test "update: cannot update section you dont own" do
