@@ -1125,6 +1125,7 @@ class Script < ActiveRecord::Base
   # sharing the family_name of this course, including this one.
   def summarize_versions
     return [] unless family_name
+    return [] unless courses.empty?
     Script.
       where(family_name: family_name).
       map {|s| {name: s.name, version_year: s.version_year, version_title: s.version_year}}.
