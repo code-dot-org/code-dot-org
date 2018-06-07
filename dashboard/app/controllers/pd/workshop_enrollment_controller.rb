@@ -40,12 +40,19 @@ class Pd::WorkshopEnrollmentController < ApplicationController
         }
       end
 
+      sign_in_prompt_data = {
+        show_sign_in_prompt: !current_user,
+        info_icon: ActionController::Base.helpers.asset_url("info_icon.png", type: :image),
+        sign_in_url: CDO.studio_url("/users/sign_in?user_return_to=#{request.url}")
+      }
+
       @script_data = {
         props: {
           workshop: @workshop,
           enrollment: @enrollment,
           session_dates: session_dates,
-          facilitators: facilitators
+          facilitators: facilitators,
+          sign_in_prompt_data: sign_in_prompt_data
         }.to_json
       }
     end
