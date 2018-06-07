@@ -2,9 +2,10 @@ require 'active_support/core_ext/hash/indifferent_access'
 require 'cdo/firehose'
 
 class ProjectsController < ApplicationController
-  before_action :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy, :public, :index]
+  before_action :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy, :public, :index, :export_config]
   before_action :authorize_load_project!, only: [:load, :create_new, :edit, :remix]
-  before_action :set_level, only: [:load, :create_new, :show, :edit, :readonly, :remix]
+  before_action :set_level, only: [:load, :create_new, :show, :edit, :readonly, :remix, :export_config]
+  protect_from_forgery except: :export_config
   include LevelsHelper
 
   TEMPLATES = %w(projects).freeze
@@ -373,6 +374,15 @@ class ProjectsController < ApplicationController
     SourceBucket.new.remix_source src_channel_id, new_channel_id, animation_list
     FileBucket.new.copy_files src_channel_id, new_channel_id
     redirect_to action: 'edit', channel_id: new_channel_id
+  end
+
+  def export_config
+    return if redirect_under_13_without_tos_teacher(@level)
+    if params[:script_call]
+      render js: "#{params[:script_call]}(#{firebase_options.to_json});"
+    else
+      render json: firebase_options
+    end
   end
 
   def set_level

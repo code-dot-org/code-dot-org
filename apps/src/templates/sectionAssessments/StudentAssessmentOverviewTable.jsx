@@ -7,6 +7,7 @@ import orderBy from 'lodash/orderBy';
 import MultipleChoiceAnswerCell from './MultipleChoiceAnswerCell';
 import {
   studentAnswerDataPropType,
+  questionStructurePropType,
 } from './assessmentDataShapes';
 
 export const COLUMNS = {
@@ -33,27 +34,14 @@ const styles = {
   }
 };
 
-// Custom data shapes for table showing a list of questions and
-// what an individual student answered for each question.
-const answerDataPropType = PropTypes.shape({
-  multipleChoiceOption: PropTypes.string,
-  isCorrectAnswer: PropTypes.bool,
-});
-
-const questionDataPropType = PropTypes.shape({
-  id: PropTypes.number.isRequired,
-  question: PropTypes.string.isRequired,
-  answers: PropTypes.arrayOf(answerDataPropType),
-});
-
 // Single table for individual student and individual assessment
 // multiple choice assessment. Each row is a single question,
 // the students response to that question, and whether the student got
 // the correct answer.
 class StudentAssessmentOverviewTable extends Component {
   static propTypes= {
-    questionAnswerData: PropTypes.arrayOf(questionDataPropType),
-    studentAnswerData: PropTypes.arrayOf(studentAnswerDataPropType)
+    questionAnswerData: PropTypes.arrayOf(questionStructurePropType),
+    studentAnswerData: studentAnswerDataPropType
   };
 
   state = {
@@ -82,47 +70,32 @@ class StudentAssessmentOverviewTable extends Component {
     });
   };
 
-  getCorrectAnswer = (multipleChoiceAnswers) => {
-    const answersArr = multipleChoiceAnswers.filter(answerObj => {
-      return answerObj.isCorrectAnswer;
-    });
-
-    const getCorrectAnswers = answersArr.map(answerObj => {
-      return answerObj.multipleChoiceOption;
-    });
-
-    return getCorrectAnswers.join(',');
+  questionCellFormatter = (question, {rowData, rowIndex}) => {
+    // TODO(caleybrock): Since we're only filtering for multiple choice
+    // questions, this questionNumber may be incorrect. Look into getting
+    // question number from the server.
+    const questionNumber = rowIndex + 1;
+    return (
+      <div>{`${questionNumber}. ${question}`}</div>
+    );
   };
 
   correctAnswerColumnFormatter = (answers, {rowData, columnIndex}) => {
-    const multipleChoiceAnswers = rowData.answers;
-
-    let displayAnswer = this.getCorrectAnswer(multipleChoiceAnswers);
-
     return (
       <MultipleChoiceAnswerCell
         id={rowData.id}
-        displayAnswer={displayAnswer}
+        displayAnswer={rowData.correctAnswer}
       />
     );
   };
 
   studentAnswerColumnFormatter = (studentAnswers, {rowData, rowIndex}) => {
-    const studentAnswersArr = this.props.studentAnswerData.map(studentObj => {
-      return studentObj.studentAnswers[rowIndex].answers;
-    });
-
-    const studentResponse = studentAnswersArr.join(',');
-
-    const multipleChoiceAnswers = rowData.answers;
-
-    let displayAnswer = this.getCorrectAnswer(multipleChoiceAnswers);
-
+    const answerData = this.props.studentAnswerData.studentAnswers[rowIndex];
     return (
       <MultipleChoiceAnswerCell
         id={rowData.id}
-        displayAnswer={studentResponse}
-        isCorrectAnswer={(studentResponse === displayAnswer)}
+        displayAnswer={answerData.answers}
+        isCorrectAnswer={answerData.isCorrect}
       />
     );
   };
@@ -137,6 +110,7 @@ class StudentAssessmentOverviewTable extends Component {
           transforms: [sortable],
         },
         cell: {
+          format: this.questionCellFormatter,
           props: {
             style: {
               ...tableLayoutStyles.cell,

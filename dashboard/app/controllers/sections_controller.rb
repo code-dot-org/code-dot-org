@@ -13,7 +13,11 @@ class SectionsController < ApplicationController
     authorize! :manage, section
 
     course_id = params[:course_id]
-    script_id = params[:script_id]
+
+    # This endpoint needs to satisfy two endpoint formats for getting script_id
+    # This should be updated soon to always expect params[:script_id]
+    script_id = params[:script][:id] if params[:script]
+    script_id ||= params[:script_id]
 
     if script_id
       script = Script.get_from_cache(script_id)
@@ -25,8 +29,8 @@ class SectionsController < ApplicationController
 
     # TODO: (madelynkasula) refactor to use strong params
     fields = {}
-    fields[:course_id] = course_id
-    fields[:script_id] = script_id
+    fields[:course_id] = course_id if Course.valid_course_id?(course_id)
+    fields[:script_id] = script_id if Script.valid_script_id?(current_user, script_id)
     fields[:name] = params[:name] unless params[:name].nil_or_empty?
     fields[:login_type] = params[:login_type] if Section.valid_login_type?(params[:login_type])
     fields[:grade] = params[:grade] if Section.valid_grade?(params[:grade])
@@ -48,7 +52,7 @@ class SectionsController < ApplicationController
       bypass_sign_in user
       user.update_tracked_fields!(request)
       session[:show_pairing_dialog] = true if params[:show_pairing_dialog]
-      check_and_apply_clever_takeover(user)
+      check_and_apply_oauth_takeover(user)
       redirect_to_section_script_or_course
     else
       flash[:alert] = I18n.t('signinsection.invalid_login')
