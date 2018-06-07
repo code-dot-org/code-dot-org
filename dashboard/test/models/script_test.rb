@@ -538,6 +538,24 @@ class ScriptTest < ActiveSupport::TestCase
     assert summary[:show_course_unit_version_warning]
   end
 
+  test 'summarize includes show_script_version_warning' do
+    a17 = create(:script, name: 'coursea-2017', family_name: 'coursea')
+    a18 = create(:script, name: 'coursea-2018', family_name: 'coursea')
+    user = create(:student)
+
+    refute a17.summarize[:show_script_version_warning]
+
+    refute a17.summarize(true, user)[:show_script_version_warning]
+
+    create(:user_script, user: user, script: a18)
+    assert a17.summarize(true, user)[:show_script_version_warning]
+    refute a18.summarize(true, user)[:show_script_version_warning]
+
+    create(:user_script, user: user, script: a17)
+    assert a17.summarize(true, user)[:show_script_version_warning]
+    assert a18.summarize(true, user)[:show_script_version_warning]
+  end
+
   test 'should generate PLC objects' do
     script_file = File.join(self.class.fixture_path, 'test-plc.script')
     scripts, custom_i18n = Script.setup([script_file])
