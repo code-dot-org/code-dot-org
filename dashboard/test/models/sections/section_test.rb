@@ -3,6 +3,9 @@ require 'test_helper'
 class SectionTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
   setup_all do
+    # Expect any courses to be valid section courses unless specified by test
+    Course.stubs(:valid_course_id?).returns(true)
+
     @student = create :student
     @teacher = create :teacher
     @section = create :section, teacher: @teacher
@@ -385,9 +388,10 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'default_script: script and course assigned' do
+    Course.stubs(:valid_course_id?).returns(true)
     script1 = create :script
     script2 = create :script
-    course = create :valid_course_for_section
+    course = create :course
     create :course_script, course: course, script: script1, position: 1
     create :course_script, course: course, script: script2, position: 2
     course.reload
@@ -397,9 +401,10 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'default_script: no script assigned, course assigned' do
+    Course.stubs(:valid_course_id?).returns(true)
     script1 = create :script
     script2 = create :script
-    course = create :valid_course_for_section
+    course = create :course
     create :course_script, course: course, script: script1, position: 1
     create :course_script, course: course, script: script2, position: 2
     course.reload

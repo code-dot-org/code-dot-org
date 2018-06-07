@@ -20,9 +20,12 @@ class SectionsControllerTest < ActionController::TestCase
   end
 
   setup do
+    # Expect any courses to be valid section courses unless specified by test
+    Course.stubs(:valid_course_id?).returns(true)
+
     # place in setup instead of setup_all otherwise course ends up being serialized
     # to a file if levelbuilder_mode is true
-    @course = create(:valid_course_for_section)
+    @course = create(:course)
     @script_in_course = create(:script)
     create(:course_script, script: @script_in_course, course: @course, position: 1)
     @section_with_course = create(:section, user: @teacher, login_type: 'word', course_id: @course.id)

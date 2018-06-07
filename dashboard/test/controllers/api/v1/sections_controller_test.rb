@@ -10,7 +10,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   setup do
-    # Expect any scripts/courses to be valid unless specified by test
+    # Expect any scripts/courses to be valid section scripts/courses unless specified by test
     Course.stubs(:valid_course_id?).returns(true)
     Script.stubs(:valid_script_id?).returns(true)
 
