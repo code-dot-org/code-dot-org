@@ -15,6 +15,7 @@ const SET_CURRENT_VIEW = 'sectionProgress/SET_CURRENT_VIEW';
 const SET_LESSON_OF_INTEREST = 'sectionProgress/SET_LESSON_OF_INTEREST';
 const ADD_SCRIPT_DATA = 'sectionProgress/ADD_SCRIPT_DATA';
 const ADD_STUDENT_LEVEL_PROGRESS = 'sectionProgress/ADD_STUDENT_LEVEL_PROGRESS';
+const ADD_STUDENT_LEVEL_PAIRING = 'sectionProgress/ADD_STUDENT_LEVEL_PAIRING';
 const START_LOADING_PROGRESS = 'sectionProgress/START_LOADING_PROGRESS';
 const FINISH_LOADING_PROGRESS = 'sectionProgress/FINISH_LOADING_PROGRESS';
 const ADD_LEVELS_BY_LESSON = 'sectionProgress/ADD_LEVELS_BY_LESSON';
@@ -41,6 +42,23 @@ export const addScriptData = (scriptId, scriptData) => {
 export const addStudentLevelProgress = (scriptId, studentLevelProgress) => ({
   type: ADD_STUDENT_LEVEL_PROGRESS, scriptId, studentLevelProgress
 });
+export const addStudentLevelPairing = (scriptId, studentLevelProgressMetaData) => {
+  const data = studentLevelProgressMetaData;
+ const isValid = Object.keys(data).every((userId) => (
+   Object.keys(data[userId]).every((levelId) => (
+     data[userId][levelId].hasOwnProperty('status') &&
+     data[userId][levelId].hasOwnProperty('result') &&
+     data[userId][levelId].hasOwnProperty('paired')
+   ))
+ ));
+ if (!isValid) {
+   throw new Error("Input is invalid");
+ }
+
+ return {
+  type: ADD_STUDENT_LEVEL_PAIRING, scriptId, studentLevelProgressMetaData
+  };
+};
 
 export const jumpToLessonDetails = (lessonOfInterest) => {
   return (dispatch, getState) => {
@@ -304,6 +322,7 @@ export const loadScript = (scriptId) => {
             studentLevelProgress[studentId] = _.mapValues(dataByStudent[studentId], getLevelResult);
           });
           dispatch(addStudentLevelProgress(scriptId, studentLevelProgress));
+          dispatch(addStudentLevelPairing(scriptId, dataByStudent));
         });
     });
 

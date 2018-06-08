@@ -1,9 +1,10 @@
-import { assert } from '../../../util/configuredChai';
+import { assert, expect } from '../../../util/configuredChai';
 import sectionProgress, {
   setCurrentView,
   ViewType,
   addScriptData,
   addStudentLevelProgress,
+  addStudentLevelPairing,
   setLessonOfInterest,
   startLoadingProgress,
   finishLoadingProgress,
@@ -127,6 +128,66 @@ describe('sectionProgressRedux', () => {
       const action = setLessonOfInterest(lessonOfInterest);
       const nextState = sectionProgress(initialState, action);
       assert.deepEqual(nextState.lessonOfInterest, lessonOfInterest);
+    });
+  });
+
+  describe('addStudentLevelPairing', () => {
+    function isValidInput(input) {
+      addStudentLevelPairing(130, input);
+    }
+
+    function isInvalidInput(input) {
+      expect(() => {
+        addStudentLevelPairing(130, input);
+      }).to.throw(undefined, undefined, `
+        Expected input ${JSON.stringify(input)} to be rejected as invalid, but it was accepted`);
+    }
+
+    it('no students is valid', () => {
+      isValidInput({});
+    });
+
+    it('students without progress are valid', () => {
+      isValidInput({
+        375: {}
+      });
+    });
+
+    it('students without progress are valid', () => {
+      isValidInput({
+        377: {
+          5336: {
+            status: 'perfect',
+            result: 31,
+            paired: true
+          }
+        }
+      });
+    });
+
+    it('invalid if only result code is given', () => {
+      isInvalidInput({
+        377: {
+          5336: 31,
+          5337: 31
+        }
+      });
+    });
+
+    it('invalid if missing "paired" property', () => {
+      isInvalidInput({
+        377: {
+          5336: {
+            status: 'perfect',
+            result: 31,
+            paired: true
+          },
+          5337: {
+            status: 'perfect',
+            result: 31
+          }
+        }
+      });
     });
   });
 
