@@ -89,7 +89,9 @@ Feature: Using the teacher homepage sections feature
     And I click selector ".edit-section-details-link"
     And I wait until element "#uitest-section-name" is visible
 
+    # Section name input field needs to be emptied before typing new name
     And I type "" into "#uitest-section-name"
+
     And I press keys "My Favorite Section" for element "#uitest-section-name"
     And I select the "1" option in dropdown "uitest-grade-dropdown"
     And I select the "Computer Science Discoveries" option in dropdown "uitest-assignment-family"
