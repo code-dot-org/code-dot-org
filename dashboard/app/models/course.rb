@@ -272,6 +272,7 @@ class Course < ApplicationRecord
   # Returns an array of objects showing the name and version year for all courses
   # sharing the family_name of this course, including this one.
   def summarize_versions
+    return [] unless family_name
     Course.
       where("properties -> '$.family_name' = ?", family_name).
       map {|c| {name: c.name, version_year: c.assignment_version_year, version_title: c.localized_version_title}}.
