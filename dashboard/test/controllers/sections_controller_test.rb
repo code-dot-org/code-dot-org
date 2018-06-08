@@ -20,9 +20,8 @@ class SectionsControllerTest < ActionController::TestCase
   end
 
   setup do
-    # Expect any scripts/courses to be valid unless specified by test
+    # Expect any courses to be valid section courses unless specified by test
     Course.stubs(:valid_course_id?).returns(true)
-    Script.stubs(:valid_script_id?).returns(true)
 
     # place in setup instead of setup_all otherwise course ends up being serialized
     # to a file if levelbuilder_mode is true

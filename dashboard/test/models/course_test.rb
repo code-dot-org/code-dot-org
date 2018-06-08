@@ -169,6 +169,9 @@ class CourseTest < ActiveSupport::TestCase
 
   class SelectCourseScriptTests < ActiveSupport::TestCase
     setup do
+      # Expect any courses to be valid section courses unless specified by test
+      Course.stubs(:valid_course_id?).returns(true)
+
       @course = create(:course, name: 'my-course')
 
       @course_teacher = create :teacher

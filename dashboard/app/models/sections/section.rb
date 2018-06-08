@@ -72,6 +72,7 @@ class Section < ActiveRecord::Base
     LOGIN_TYPE_GOOGLE_CLASSROOM = 'google_classroom'.freeze,
     LOGIN_TYPE_CLEVER = 'clever'.freeze
   ]
+  validates_inclusion_of :login_type, in: LOGIN_TYPES
 
   TYPES = [
     # Insert non-workshop section types here.
@@ -81,6 +82,9 @@ class Section < ActiveRecord::Base
   ADD_STUDENT_EXISTS = 'exists'.freeze
   ADD_STUDENT_SUCCESS = 'success'.freeze
   ADD_STUDENT_FAILURE = 'failure'.freeze
+
+  VALID_GRADES = ['K'] + (1..12).collect(&:to_s) + ['Other']
+  validates_inclusion_of :grade, in: VALID_GRADES, allow_blank: true
 
   def self.valid_login_type?(type)
     LOGIN_TYPES.include? type
@@ -109,9 +113,24 @@ class Section < ActiveRecord::Base
   end
   validate :user_must_be_teacher, unless: -> {deleted?}
 
+  def script_must_be_valid
+    errors.add(:script_id, 'must be a valid script') unless Script.valid_script_id?(user, script_id)
+  end
+  validate :script_must_be_valid, unless: -> {script_id.nil?}
+
+  def course_must_be_valid
+    errors.add(:course_id, 'must be a valid course') unless Course.valid_course_id?(course_id)
+  end
+  validate :course_must_be_valid, unless: -> {course_id.nil?}
+
   before_create :assign_code
   def assign_code
     self.code = unused_random_code unless code
+  end
+
+  after_create :assign_script
+  def assign_script
+    user.assign_script(script) unless script.nil?
   end
 
   def update_student_sharing(sharing_disabled)
@@ -258,7 +277,7 @@ class Section < ActiveRecord::Base
   end
 
   def self.valid_grades
-    @@valid_grades ||= ['K'] + (1..12).collect(&:to_s) + ['Other']
+    @@valid_grades ||= VALID_GRADES
   end
 
   def self.valid_grade?(grade)

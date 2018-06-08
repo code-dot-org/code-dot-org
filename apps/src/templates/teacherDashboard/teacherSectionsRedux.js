@@ -164,12 +164,17 @@ export const finishEditingSection = () => (dispatch, getState) => {
 
   const dataUrl = isAddingSection(state) ? '/dashboardapi/sections' : `/sections/${section.id}`;
   const httpMethod = isAddingSection(state) ? 'POST' : 'PATCH';
+
+  // TODO: (madelynkasula) remove once PATCH /sections/:id has been updated to use strong params
+  let serverSection = serverSectionFromSection(section);
+  serverSection = isAddingSection(state) ? {section: serverSection} : serverSection;
+
   return new Promise((resolve, reject) => {
     $.ajax({
       url: dataUrl,
       method: httpMethod,
       contentType: 'application/json;charset=UTF-8',
-      data: JSON.stringify(serverSectionFromSection(section)),
+      data: JSON.stringify(serverSection),
     }).done(result => {
       dispatch({
         type: EDIT_SECTION_SUCCESS,
@@ -843,7 +848,10 @@ export function serverSectionFromSection(section) {
     pairing_allowed: section.pairingAllowed,
     sharing_disabled: section.sharingDisabled,
     course_id: section.courseId,
+    // TODO: (madelynkasula) remove duplicated script/script_id params once
+    // both section create/update dashboard actions use strong params
     script: (section.scriptId ? {id: section.scriptId} : undefined),
+    script_id: section.scriptId,
   };
 }
 

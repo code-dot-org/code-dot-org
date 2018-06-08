@@ -10,6 +10,12 @@ class SectionTest < ActiveSupport::TestCase
     @default_attrs = {user: @teacher, name: 'test-section'}
   end
 
+  setup do
+    # Expect any scripts/courses to be valid section scripts/courses unless specified by test
+    Course.stubs(:valid_course_id?).returns(true)
+    Script.stubs(:valid_script_id?).returns(true)
+  end
+
   test "sections are soft-deleted" do
     assert_no_change("Section.with_deleted.count") do
       @section.destroy
@@ -69,6 +75,28 @@ class SectionTest < ActiveSupport::TestCase
       section = create :section
       assert_match letters_without_vowels_regex, section.code
     end
+  end
+
+  test "create sets stage_extras to false by default" do
+    teacher = create :teacher
+    section = create :section, user: teacher
+
+    refute section.stage_extras
+  end
+
+  test "create sets pairing_allowed to true by default" do
+    teacher = create :teacher
+    section = create :section, user: teacher
+
+    assert section.pairing_allowed
+  end
+
+  test "create assigns script to user if script is supplied" do
+    teacher = create :teacher
+    script = create :script
+    create :section, script_id: script.id, user: teacher
+
+    assert teacher.scripts.include?(script)
   end
 
   test 'update_student_sharing updates user settings' do
@@ -169,6 +197,39 @@ class SectionTest < ActiveSupport::TestCase
       refute student_section.valid?
       assert_equal ["User must be a teacher"], student_section.errors.full_messages
     end
+  end
+
+  test "grade must be K-12" do
+    section = build :section, grade: "13"
+
+    refute section.valid?
+    assert_equal ["Grade is not included in the list"], section.errors.full_messages
+  end
+
+  test "script must be valid" do
+    Script.stubs(:valid_script_id?).returns(false)
+    section = build :section, script_id: 1
+
+    refute section.valid?
+    assert_equal ["Script must be a valid script"], section.errors.full_messages
+  end
+
+  test "section is valid with nil script_id" do
+    section = build :section, script_id: nil
+    assert section.valid?
+  end
+
+  test "course must be valid" do
+    Course.stubs(:valid_course_id?).returns(false)
+    section = build :section, course_id: 1
+
+    refute section.valid?
+    assert_equal ["Course must be a valid course"], section.errors.full_messages
+  end
+
+  test "section is valid with nil course_id" do
+    section = build :section, course_id: nil
+    assert section.valid?
   end
 
   test "can create section with duplicate name" do
