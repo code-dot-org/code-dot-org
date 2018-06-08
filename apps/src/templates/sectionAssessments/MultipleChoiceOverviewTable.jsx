@@ -64,6 +64,9 @@ const multipleChoiceDataPropType = PropTypes.shape({
   notAnswered: PropTypes.number.isRequired,
 });
 
+// A single table that shows students' responses to each multiple choice question.
+// The table displays the percent of students that select an answer choice and
+// percent of students that did not answer the question.
 class MultipleChoiceOverviewTable extends Component {
   static propTypes= {
     questionAnswerData: PropTypes.arrayOf(multipleChoiceDataPropType),
