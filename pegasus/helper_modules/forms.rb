@@ -17,7 +17,12 @@ module Forms
   STATE_CODE = json('processed_data.location_state_code_s')
 
   class << self
-    def events_by_country(kind, except_country='US', country_column: COUNTRY_CODE, explain: false)
+    def events_by_country(
+      kind,
+      except_country='US',
+      country_column: COUNTRY_CODE,
+      explain: false
+    )
       FORMS.
         where(kind: kind).
         exclude(country_column => except_country).
@@ -26,7 +31,13 @@ module Forms
         all
     end
 
-    def events_by_state(kind, country='US', explain: false, country_column: COUNTRY_CODE, state_column: STATE_CODE)
+    def events_by_state(
+      kind,
+      country='US',
+      explain: false,
+      country_column: COUNTRY_CODE,
+      state_column: STATE_CODE
+    )
       FORMS.
         where(
           kind: kind,
@@ -39,17 +50,25 @@ module Forms
         all
     end
 
-    def events_by_name(kind, country='US', state=nil, explain: false)
+    def events_by_name(
+      kind,
+      country='US',
+      state=nil,
+      explain: false,
+      country_column: COUNTRY_CODE,
+      state_column: STATE_CODE,
+      city_column: json('processed_data.location_city_s')
+    )
       where = {
         kind: kind,
-        COUNTRY_CODE => country
+        country_column => country
       }
-      where[STATE_CODE] = state if state
+      where[state_column] = state if state
 
       FORMS.
         select(
           json('data.organization_name_s').as(:name),
-          json('processed_data.location_city_s').as(:city)
+          city_column.as(:city)
         ).
         where(where).
         order_by(:city, :name).
