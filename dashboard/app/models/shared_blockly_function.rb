@@ -36,36 +36,25 @@ class SharedBlocklyFunction < ApplicationRecord
   end
 
   def file_xml
-    doc = Nokogiri.XML(
-      <<~XML
-        <xml>
-          <block
-            type="#{DEFINITION_BLOCK_TYPES[block_type.to_sym]}"
-            deletable="false"
-            movable="false"
-            editable="false"
-          >
-            <mutation>
-              #{arguments_xml}
-              <description>#{description}</description>
-            </mutation>
-            <title name="NAME">#{name}</title>
-            <statement name="STACK">
-              #{stack}
-            </statement>
-          </block>
-        </xml>
-      XML
-    ) {|config| config.strict.noblanks}
-    doc.root.to_xml(indent: 2)
-  end
-
-  def arguments_xml
-    JSON.parse(arguments).map do |name, type|
-      <<~XML
-        <arg name="#{name}" type="#{type}"></arg>
-      XML
-    end.join('')
+    Nokogiri::XML::Builder.new do |xml|
+      xml.block(
+        type: DEFINITION_BLOCK_TYPES[block_type.to_sym],
+        deletable: false,
+        movable: false,
+        editable: false,
+      ) do
+        xml.mutation do
+          JSON.parse(arguments).each do |name, type|
+            xml.arg(name: name, type: type)
+          end
+          xml.description description
+        end
+        xml.title(name, name: 'NAME')
+        xml.statement(name: 'STACK') do
+          xml << stack
+        end
+      end
+    end.to_xml
   end
 
   def self.arguments_from_xml(args_xml)
@@ -103,11 +92,11 @@ class SharedBlocklyFunction < ApplicationRecord
     function_doc = File.open(xml_path) do |f|
       Nokogiri.XML(f) {|config| config.strict.noblanks}
     end
-    block_type = function_doc.xpath('/xml/block/@type').text
-    arguments = arguments_from_xml(function_doc.xpath('/xml/block/mutation/arg'))
-    description = function_doc.xpath('/xml/block/mutation/description').text
-    name = function_doc.xpath('/xml/block/title[@name="NAME"]/text()').text
-    stack = function_doc.xpath('/xml/block/statement[@name="STACK"]/*')
+    block_type = function_doc.xpath('/block/@type').text
+    arguments = arguments_from_xml(function_doc.xpath('/block/mutation/arg'))
+    description = function_doc.xpath('/block/mutation/description').text
+    name = function_doc.xpath('/block/title[@name="NAME"]/text()').text
+    stack = function_doc.xpath('/block/statement[@name="STACK"]/*')
 
     function = find_or_initialize_by(name: name)
     function.level_type = level_type
