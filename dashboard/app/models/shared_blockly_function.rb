@@ -23,6 +23,8 @@ class SharedBlocklyFunction < ApplicationRecord
     behavior: 1,
   }
 
+  after_save :write_file
+  after_destroy :delete_file
   validates_presence_of :name
   validates_uniqueness_of :name
 
@@ -65,5 +67,16 @@ class SharedBlocklyFunction < ApplicationRecord
 
   def xml_path(type=level_type, function_name=name)
     Rails.root.join "config/shared_functions/#{type}/#{function_name}.js"
+  end
+
+  def write_file
+    delete_file(level_type_was, name_was) if name_changed? || level_type_changed?
+    FileUtils.mkdir_p "config/shared_functions/#{level_type}"
+    File.write xml_path, file_xml
+  end
+
+  def delete_file(old_level_type=level_type, old_name=name)
+    path = xml_path(old_level_type, old_name)
+    File.delete path if File.exist? path
   end
 end
