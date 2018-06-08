@@ -5,7 +5,7 @@ export function loadVideos(force_fallback) {
     setupVideos("fallback");
   }  else {
     testImageAccess(
-      "https://www.youtube-nocookie.com/favicon.ico?" + Math.random(),
+      "https://www.youtube.com/favicon.ico?" + Math.random(),
       function () { setupVideos("youtube"); },
       function () { setupVideos("fallback"); });
   }
@@ -57,7 +57,7 @@ function setupVideos(player) {
       $(this).parent().append(
         '<iframe class="lazyload" ' +
           'style="position:absolute; top: 0; left: 0; width: 100%; height: 100%" ' +
-          `data-src="https://www.youtube-nocookie.com/embed/${$(this).data("video-code")}?iv_load_policy=3&rel=0&autohide=1&showinfo=0&enablejsapi=1" ` +
+          `data-src="https://www.youtube.com/embed/${$(this).data("video-code")}?iv_load_policy=3&rel=0&autohide=1&showinfo=0&enablejsapi=1" ` +
           'frameborder="0" ' +
           'allowfullscreen=true' +
         `>`);
