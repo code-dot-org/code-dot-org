@@ -33,8 +33,6 @@ post '/forms/:kind/query' do |kind|
     halt 400
   end
   pass unless kind.respond_to?(:solr_query)
-
-  content_type :json
   kind.solr_query(params)
 end
 
