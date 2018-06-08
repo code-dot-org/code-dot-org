@@ -172,6 +172,27 @@ class Pd::Teachercon1819RegistrationControllerTest < ::ActionController::TestCas
     assert_equal @expected_partner_teachercon_registration_script_data, assigns(:script_data)[:props]
   end
 
+  # Program Manager with Group 4 partner should have appropriate script_data set
+  test 'Program manager with group 4 partner should have script_data values set' do
+    regional_partner = create :regional_partner, group: 4
+    regional_partner_program_manager = create :regional_partner_program_manager,
+      regional_partner: regional_partner
+    program_manager = regional_partner_program_manager.program_manager
+
+    sign_out(@teacher)
+    sign_in(program_manager)
+
+    get :partner, params: {city: 'Phoenix'}
+    assert_response :success
+    expected_script_data = JSON.parse(@expected_partner_teachercon_registration_script_data).merge(
+      {
+        regionalPartnerId: regional_partner.id,
+        email: program_manager.email
+      }
+    ).to_json
+    assert_equal expected_script_data, assigns(:script_data)[:props]
+  end
+
   # If a city is not specified, try and figure out the teachercon based on the mapping
   test 'Program manager with group 3 partner assigned to teachercon should have script_data values set even if city is not passed in' do
     sign_out(@teacher)
