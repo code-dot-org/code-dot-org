@@ -3,13 +3,13 @@ login_required true
 hideable_stages true
 exclude_csf_column_in_legend true
 student_detail_progress_view true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csd/unit6/"], ["teacherForum", "https://forum.code.org/c/csd6"], ["vocabulary", "https://curriculum.code.org/csd/unit6/vocab/"], ["standardMappings", "https://curriculum.code.org/csd/unit6/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd/unit6/code/"]]
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-18/unit6/"], ["teacherForum", "https://forum.code.org/c/csd6"], ["vocabulary", "https://curriculum.code.org/csd-18/unit6/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-18/unit6/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd-18/unit6/code/"]]
 stage_extras_available true
 has_verified_resources true
 has_lesson_plan true
 project_widget_visible true
 project_widget_types ["applab", "gamelab", "weblab"]
-family_name "csd6"
+family_name 'csd6'
 version_year '2018'
 is_stable true
 
