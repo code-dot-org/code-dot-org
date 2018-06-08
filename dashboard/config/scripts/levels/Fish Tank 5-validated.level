@@ -49,10 +49,7 @@
     "show_type_hints": "true",
     "validation_code": "if (World.frameCount > 50) {\r\n  if (World.allSprites.length > 5) {\r\n    levelSuccess(0);\r\n  } else {\r\n    levelSuccess(3);\r\n  }\r\n}",
     "project_template_level_name": "Fish Tank Template",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

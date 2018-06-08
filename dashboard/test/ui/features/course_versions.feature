@@ -12,6 +12,7 @@ Scenario: Version warning announcement on course and unit overview pages
 
   When I am on "http://studio.code.org/s/csp2-2017"
   And I wait until element "span:contains(Chapter 1)" is visible
+  And element "#version-selector" is not visible
   Then element ".announcement-notification:contains(right version)" does not exist
 
   # generate some progress in csp-2018
@@ -30,9 +31,41 @@ Scenario: Version warning announcement on course and unit overview pages
 
   When I am on "http://studio.code.org/s/csp2-2017"
   And I wait until element "span:contains(Chapter 1)" is visible
+  And element "#version-selector" is not visible
   Then element ".announcement-notification:contains(right version)" is visible
   # make sure we are showing the warning specific to course units
   Then element ".announcement-notification:contains(go back to the course page)" is visible
+
+@as_student
+@no_mobile
+Scenario: Versions warning announcement on script overview page
+  When I am on "http://studio.code.org/s/coursea"
+  And I wait until element "#script-title" is visible
+  And element "#version-selector" is visible
+  Then element ".announcement-notification:contains(right version)" does not exist
+
+  When I am on "http://studio.code.org/s/coursea-2018/next"
+  And I wait until current URL contains "/s/coursea-2018/stage/1/puzzle/1"
+
+  When I am on "http://studio.code.org/s/coursea"
+  And I wait until element "#script-title" is visible
+  And element "#version-selector" is visible
+  Then element ".announcement-notification:contains(right version)" is visible
+  Then element ".announcement-notification:contains(use the version dropdown)" is visible
+
+@as_student
+@no_mobile
+Scenario: Switch versions using dropdown on script overview page
+  When I am on "http://studio.code.org/s/coursea"
+  And I wait until element "#script-title" is visible
+  And element "#version-selector" is visible
+  And I select the "2018" option in dropdown "version-selector" to load a new page
+  Then I wait until I am on "http://studio.code.org/s/coursea-2018"
+
+  When I wait until element "#script-title" is visible
+  And element "#version-selector" is visible
+  And I select the "2017" option in dropdown "version-selector" to load a new page
+  Then I wait until I am on "http://studio.code.org/s/coursea"
 
 @as_student
 @no_mobile
