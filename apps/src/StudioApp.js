@@ -2745,7 +2745,7 @@ StudioApp.prototype.displayPlayspaceAlert = function (type, alertContents) {
 StudioApp.prototype.displayPlayspaceNotification = function (notificationContents) {
   StudioApp.prototype.displayAlert("#visualization", {
     type: 'notification',
-    closeDelayMillis: 1000000,
+    closeDelayMillis: 5000,
     childPadding: '8px 14px',
   }, notificationContents);
 };
@@ -2785,7 +2785,6 @@ StudioApp.prototype.displayAlert = function (selector, props, alertContents, pos
       onClose={handleAlertClose}
       type={props.type}
       sideMargin={props.sideMargin}
-      width={props.width}
       closeDelayMillis={props.closeDelayMillis}
       childPadding={props.childPadding}
     >

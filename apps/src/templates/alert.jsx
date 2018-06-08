@@ -12,7 +12,6 @@ export default class Alert extends React.Component {
     onClose: PropTypes.func.isRequired,
     closeDelayMillis: PropTypes.number,
     sideMargin: PropTypes.number,
-    width: PropTypes.string,
     childPadding: PropTypes.string,
   };
 
@@ -24,7 +23,6 @@ export default class Alert extends React.Component {
         marginTop: 20,
         marginLeft: valueOr(this.props.sideMargin, 50),
         marginRight: valueOr(this.props.sideMargin, 50),
-        width: valueOr(this.props.width, 'auto'),
       },
       typeSpecific: {
         error: {
