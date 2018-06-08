@@ -13,7 +13,11 @@ class FormError < ArgumentError
     @kind = kind
     @errors = errors
 
-    logger.warn "FormError[#{@kind}]: #{@errors.to_json}" if logger
+    logger.warn to_s if logger
+  end
+
+  def to_s
+    "FormError[#{@kind}]: #{@errors.to_json}"
   end
 end
 
