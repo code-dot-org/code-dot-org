@@ -55,8 +55,8 @@
       "/docs/csd-1718/drawing_shapes_map/index.html"
     ],
     "map_reference": "/docs/csd-1718/shape_size_map/index.html",
-    "contained_level_names": null,
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
