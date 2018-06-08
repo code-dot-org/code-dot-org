@@ -1,5 +1,5 @@
 import React, {Component, PropTypes} from 'react';
-import SingleStudentAssessmentsMCTable from './SingleStudentAssessmentMCTable';
+import SingleStudentAssessmentsMCTable from './SingleStudentAssessmentsMCTable';
 import { studentAnswerDataPropType, questionStructurePropType } from './assessmentDataShapes';
 import {
   getMultipleChoiceStructureForCurrentAssessment,
