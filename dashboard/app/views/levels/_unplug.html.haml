@@ -84,4 +84,11 @@
     var videoOptions = #{video.summarize(false).to_json};
     var videoHeight = #{page_width} / (16 / 9);
 
+    // Temporarily use youtube-nocookie.com for two videos.
+    if (appOptions.scriptName == "express" &&
+        (appOptions.stagePosition == 1 || appOptions.stagePosition == 3) &&
+        appOptions.levelPosition == 1) {
+      videoOptions.src = videoOptions.src.replace("youtube.com", "youtube-nocookie.com");
+    }
+
     window.dashboard.videos.createVideoWithFallback($('.video-container'), videoOptions, #{page_width}, videoHeight);
