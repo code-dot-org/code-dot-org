@@ -193,7 +193,6 @@ class AdvancedShareOptions extends React.Component {
         <p style={style.p}>
           Export your project as a zipped file, which will contain the
           HTML/CSS/JS files, as well as any assets, for your project.
-          Note that data APIs will not work outside of Code Studio.
         </p>
         <button onClick={this.downloadExport} style={{marginLeft: 0}}>
           {spinner}
@@ -227,7 +226,6 @@ class AdvancedShareOptions extends React.Component {
       <div>
         <p style={style.p}>
           Try running your project in the Expo app on iOS or Android.
-          Note that data APIs will not work outside of Code Studio.
           You can also export for submission to the Apple App Store or the
           Google Play Store (both require following our step-by-step guide).
         </p>

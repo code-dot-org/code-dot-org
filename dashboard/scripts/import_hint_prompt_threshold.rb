@@ -37,7 +37,5 @@ unless thresholds_csv
 end
 
 CSV.table(thresholds_csv).each do |row|
-  script_level = ScriptLevel.joins(:levels).where(script_id: row[:script_id], 'levels.id': row[:level_id]).first
-  script_level.hint_prompt_attempts_threshold = row[:attempts] + 1
-  script_level.save!
+  Level.find(row[:level_id]).update!(hint_prompt_attempts_threshold: row[:attempts] + 1)
 end

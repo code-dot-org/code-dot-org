@@ -159,6 +159,11 @@ class User < ActiveRecord::Base
     powerschool
   ).freeze
 
+  OAUTH_PROVIDERS_UNTRUSTED_EMAIL = %w(
+    clever
+    powerschool
+  ).freeze
+
   SYSTEM_DELETED_USERNAME = 'sys_deleted'
 
   # constants for resetting user secret words/picture
@@ -715,10 +720,10 @@ class User < ActiveRecord::Base
       user.name = name_from_omniauth auth.info.name
       user.user_type = params['user_type'] || auth.info.user_type
       # Store emails, except when using Clever
-      user.email = auth.info.email unless user.user_type == 'student' && auth.provider == 'clever'
+      user.email = auth.info.email unless user.user_type == 'student' && OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(auth.provider)
 
-      if auth.provider == 'clever' && User.find_by_email_or_hashed_email(user.email)
-        user.email = user.email + '.cleveremailalreadytaken'
+      if OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(auth.provider) && User.find_by_email_or_hashed_email(user.email)
+        user.email = user.email + '.oauthemailalreadytaken'
       end
 
       if auth.provider == :the_school_project

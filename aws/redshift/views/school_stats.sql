@@ -54,11 +54,20 @@ CREATE OR REPLACE VIEW analysis.school_stats AS
            school_stats_by_years.student_wh_count   AS student_wh,
            school_stats_by_years.student_hp_count   AS student_hp,
            school_stats_by_years.student_tr_count   AS student_tr,
-           ((student_am_count +
-             student_hi_count +
-             student_bl_count +
-             student_hp_count) /
-             students_total::float)                 AS urm_percent,
+           case when students_total    = 
+             coalesce(student_am_count,0)  +
+             coalesce(student_as_count,0)  +
+             coalesce(student_hi_count,0)  +
+             coalesce(student_bl_count,0)  +
+             coalesce(student_wh_count,0)  +
+             coalesce(student_hp_count,0)  +
+             coalesce(student_tr_count,0)
+           then 
+             (coalesce(student_am_count,0)  +
+             coalesce(student_hi_count,0)  +
+             coalesce(student_bl_count,0)  +
+             coalesce(student_hp_count,0)) / 
+             students_total::float END AS urm_percent,
            school_stats_by_years.frl_eligible_total AS frl_eligible,
            (CASE WHEN frl_eligible_total IS NULL
                    OR students_total IS NULL
