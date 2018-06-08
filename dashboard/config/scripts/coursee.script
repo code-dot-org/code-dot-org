@@ -7,6 +7,8 @@ project_widget_types ["playlab", "artist"]
 script_announcements [{"notice"=>"Relevant Common Core and NGSS standards are now listed in Courses A-F!", "details"=>"Check out the full standards alignment document ", "link"=>"https://curriculum.code.org/csf-1718/coursee/standards/", "type"=>"bullhorn"}, {"notice"=>"Sign up to pilot new Course E content!", "details"=>"We are looking for active Course E teachers to pilot new tools that we will be releasing next year. Click \"Learn more\" to find out more about how you can help.", "link"=>"https://bit.ly/csfpilot", "type"=>"information"}]
 new_name 'coursee-2017'
 family_name 'coursee'
+version_year '2017'
+is_stable true
 
 stage 'Programming: My Robotic Friends', flex_category: 'csf_e_1'
 level 'courseB_unplugged_MRF'

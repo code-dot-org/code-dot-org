@@ -164,7 +164,7 @@ describe('Game Lab Jr Helper Library', () => {
     addBehavior(sprite, () => eventLog.push('behavior 2 ran'));
     whenUpArrow(() => eventLog.push('key event ran'));
     whenMouseClicked(() => eventLog.push('touch event ran'));
-    whenTouching(sprite, otherSprite, () => eventLog.push('collision event ran'));
+    whenTouching(() => sprite, () => otherSprite, () => eventLog.push('collision event ran'));
 
     draw();
 

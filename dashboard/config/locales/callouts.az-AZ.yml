@@ -1920,6 +1920,8 @@
           Qaç düyməsinə vur
         sign_in_to_save_project: Öz layihəni sonra daxil etmək istəyirsən bu layihəni
           yadda saxlamaq üçün hesabına daxil ol!
+      courseF_playlab_brokenText_callout:
+        courseF_playlab_variables5c_1: You will find your variable block in here.
       courseF_playlab_embed_vars_callout: {}
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: The toolbox has been organized into categories

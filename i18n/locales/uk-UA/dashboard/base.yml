@@ -128,7 +128,8 @@ uk:
     field_is_required: "необхідне"
     accept_terms: "Потрібно погодитись, щоб створити обліковий запис"
     error: "An error occurred."
-    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: "Так"
     email_preference_no: "Ні"
     email_preference_required: "You must specify an email preference."
@@ -467,6 +468,8 @@ uk:
   gender:
     male: 'Чоловік'
     female: 'Жінка'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: 'Не волію відповідати'
   user_type:
     student: 'учень'

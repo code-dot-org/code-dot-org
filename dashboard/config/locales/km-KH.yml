@@ -162,6 +162,7 @@
     error: មានកំហុសមួយ
     email_preference_question: Can we email you about updates to our courses, local
       learning opportunities, or other computer science news?
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: យល់ព្រម
     email_preference_no: ទេ
     email_preference_required: You must specify an email preference.
@@ -614,6 +615,8 @@
   gender:
     male: ប្រុស
     female: ស្រី
+    non_binary: Non-binary
+    not_listed: Preferred term not listed
     none: សម្រេច​ចិត្ត​មិន​ឆ្លើយ
   user_type:
     student: សិស្ស

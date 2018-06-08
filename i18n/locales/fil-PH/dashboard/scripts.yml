@@ -1,6 +1,20 @@
 fil:
   data:
     script:
+      category:
+        csd_category_name: CS Discoveries ('17-'18)
+        csd_2018_category_name: CS Discoveries ('18-'19)
+        csf_category_name: CS Fundamentals
+        csf_international_category_name: Internasyonal na CS Fundamentals
+        csf2_draft_category_name: 'Kasalukuyang Ginagawa: Mga Kursong A - F'
+        csp_category_name: "'15-'16 na mga Prinsipyo ng CS"
+        csp_2018_category_name: CS Principles ('18-'19)
+        cspexams_category_name: Pag-ensayo na Pagsubok sa mga Prinsipyo ng CS
+        csp17_category_name: Mga Prinsipyo ng CS
+        full_course_category_name: Buong mga Kurso
+        hoc_category_name: Hour of Code
+        math_category_name: Math
+        research_studies_category_name: Research Studies
       name:
         course1:
           title: Kurso 1
@@ -2097,7 +2111,7 @@ fil:
               name: Pagpaplano Para Sa Hinaharap
             Sharing Student Work:
               name: Pagbabahagi ng gawain ng estudyante
-        csp1:
+        csp1-2017:
           title: CSP Unit 1 - The Internet
           description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. The unit then explores the structure and design of the internet and the implications of those design decisions.
           description_short: Explore the challenges about representing information as bits and how to get those bits from one place to another.
@@ -2145,7 +2159,7 @@ fil:
               name: Surbey Pagkatapos ng Kurso sa Estudyante ng CSP
             Post-Course Survey:
               name: Post-Course Survey
-        csp2:
+        csp2-2017:
           title: CSP Unit 2 - Digital Information
           description: This unit further explores the ways that digital information is encoded, represented and manipulated. Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.
           description_short: Explore how more complex digital information is represented and manipulated through computation and visualization.
@@ -2162,7 +2176,7 @@ fil:
             Discover a Data Story:
               name: Tuklasin ang Kuwento ng Datos
             Encode a Complex Thing:
-              name: Pag-encode ng Kumplikadong Bagay
+              name: Encode a Complex Thing
             Encoding B&W Images:
               name: Pag-eencode ng B&W na mga Larawan
             Encoding Color Images:
@@ -2195,7 +2209,7 @@ fil:
               name: Pagsasanay PT - Pag-encode ng Karanasan
             Post-Course Survey:
               name: Post-Course Survey
-        csp3:
+        csp3-2017:
           title: CSP Unit 3 - Intro to Programming
           description: "Ang yunit na ito ay nagpapakilala sa mga pundasyonal na mga konsepto sa pag-program sa kompyuter, kung saan nagbigay diin ito sa abilidad na makagawa ng mayaman, at inter-aktib na mga apps. Ang kursong ito ay gumagamit ng JavaScript bilang wika ng pang-program, at App Lab bilang kapaligiran sa pag-program para makabuo ng mga apps, ngunit ang mga konsepto na matutunan sa mga araling ito ay lumakip sa lahat ng mga wika ng pang-program at mga kagamitan.\\r\n\\r\nAng yunit na ito ay huling binago noong ika-30 ng Oktubre, 2017. Magbasa pa tungkol sa mga pagbabago sa kurikulum sa forum.code.org/c/csp/updates."
           description_short: Learn the basics of programming in JavaScript through a top-down design approach using classic turtle drawing.
@@ -2234,21 +2248,21 @@ fil:
             Creating Functions with Parameters:
               name: Paglikha ng mga Functions na may mga Parameter
             CSP End-of-Semester Mid-course survey:
-              name: Katapusan ng Semestre Kalagitnaan Kurso ng CSP na Surbey
+              name: CSP End-of-Semester Mid-course survey
             CSP Mid-course survey:
               name: Kalagitnaang Kurso ng CSP na Surbey
             Please complete the CSP Mid-course survey!:
               name: Mangyaring kumpletohin ang surbey ng kalagitnaang kurso ng CSP!
             Post-Course Survey:
               name: Post-Course Survey
-        csp4:
+        csp4-2017:
           title: CSP Unit 4 - Big Data and Privacy
           description: "The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.\\r\n\\r\nThis unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
           description_short: Explore the data-rich world we live, and how data impacts public policy, personal privacy, security, the law, and ethics.
           description_audience: ''
           stages:
             Alice and Bob and Asymmetric Keys:
-              name: Si Alice at si Bob at ang mga Asymmetic na mga Keys
+              name: Alice and Bob and Asymmetric Keys
             Cracking the Code:
               name: Paghula ng Code
             Encryption with Keys and Passwords:
@@ -2285,7 +2299,7 @@ fil:
               name: Post-Course Survey
             Student Post-Course Survey:
               name: Student Post-Course Survey
-        csp5:
+        csp5-2017:
           title: CSP Unit 5 - Building Apps
           description: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           description_short: Continue to learn foundational concepts of computer programming in JavaScript by making rich, interactive apps.
@@ -2334,35 +2348,35 @@ fil:
             While Loops:
               name: While Loops
             Edited lessons ABOVE this line:
-              name: Binagong mga aralin sa TAAS ng linyang ito
+              name: Edited lessons ABOVE this line
             Buttons and Events:
               name: Mga Buttons at mga Pangyayari
             Make Your Own Multi-Screen App:
-              name: Gumawa ng Sarili Mong Multi-Screen na App
+              name: Make Your Own Multi-Screen App
             Unit 5 Assessment 1:
               name: Yunit 5 Pagtatasa 1
             Unit 5 Assessment 2:
               name: Yunit 5 Pagtatasa 2
             "'If' Statements Unplugged":
-              name: "'If' na mga Pahayag Unplugged"
+              name: "'If' Statements Unplugged"
             '"If" Statements Unplugged':
               name: '"If" na mga Pahayag Unplugged'
             Getting started with If Statements:
-              name: Pagsisimula sa mga "If" na mga Pahayag
+              name: Getting started with If Statements
             Unit 3 Chapter 1 Assessment 3:
-              name: Yunit 3 Kabanata 1 Pagtatasa 3
+              name: Unit 3 Chapter 1 Assessment 3
             If statements:
-              name: If na mga pahayag
+              name: If statements
             Unit 3 Assessment 3:
-              name: Yunit 3 Pagtatasa 3
+              name: Unit 3 Assessment 3
             Unit 3 Assessment 4:
-              name: Yunit 3 Pagtatasa 4
+              name: Unit 3 Assessment 4
             If-else-if and Conditional Logic:
-              name: If-else-if at ang Kondisyonal na Lohika
+              name: If-else-if and Conditional Logic
             'Building an App: Color Sleuth':
               name: 'Pagbubuo ng App: Kulayan si Sleuth'
             Possibly use later:
-              name: Mangyaring gamitin mamaya
+              name: Possibly use later
             Unit 5 Assessment 3:
               name: Yunit 5 Pagtatasa 3
             Unit 5 Assessment 4:
@@ -2380,7 +2394,7 @@ fil:
             'Building an App: Canvas Painter':
               name: 'Pagbubuo ng App: Pintor sa Canvas'
             Unit 5 Assessment 5 - Practice AP questions:
-              name: Yunit 5 Assessment 5 - Pagsasanay sa AP na mga Katanungan
+              name: Unit 5 Assessment 5 - Practice AP questions
             Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
               name: Yunit 5 Pagtatasa 5 - AP Pseudocode na Pagsasanay na mga Katanungan
             CSP Student Post Survey Staging:
@@ -2390,11 +2404,11 @@ fil:
             CSP Student Post-Course Survey:
               name: Surbey Pagkatapos ng Kurso sa Estudyante ng CSP
             Multi-Screen Apps:
-              name: Multi-Screen na mga Apps
+              name: Multi-Screen Apps
             '"if" Statements Unplugged':
-              name: '"if" na mga Pahayag Unplugged'
+              name: '"if" Statements Unplugged'
             Boolean Expressions and "if" Statements:
-              name: Boolean na mga Ekspresyon at ang "if" na mga Pahayag
+              name: Boolean Expressions and "if" Statements
             Post-Course Survey:
               name: Post-Course Survey
         csp6:
@@ -3275,7 +3289,7 @@ fil:
               name: Aralin 2,3
             Test stage with bubbles:
               name: Pagsubok na antas ng mga bula
-        csd3:
+        csd3-2017:
           title: CSD Unit 3 - Animations and Games
           description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
           description_short: " Matutong mag-program ng mga animasyon, inter-aktib na sining, at mga laro sa Game Lab."
@@ -3345,8 +3359,8 @@ fil:
               description_teacher: Ang mga estudyante ay tutuklas sa mga hamon sa pakikipag-usap kung paano guguhit ng mga hugis at gumamit ng mga kagamitan na nagpapakilala kung paano harapin ang problemang ito sa Game Lab. Ang isang pagpapainit na gawain ay madaling nagpapakita sa mga hamon sa pakikipag-usap sa posisyon na walang iilang mga nakabahaging punto ng pagbabatayan. Sa pangunahing gawain, ang mga estudyante ay tutuklas sa Game Lab na kagamitan na nagbibigay ng paraan sa mga estudyante na inter-aktibong maglagay ng mga hugis sa 400 x 400 na grid ng Game Lab. Pagkatapos sila ay maghalinhinan sa pagbigay ng instruksyon sa kanilang kasama kung paano gumuhit ng nakatagong larawan gamit ang kagamitang ito, binibigyang diin ang mga maraming pagsubok na haharapin ng mga estudyante habang nag-program sa Game Lab. Ang mga estudyante ay pwede makalikha ng kanilang sariling larawan para makipag-usap bago ang isang debrief na diskusyon.
             Shapes and Randomness:
               name: Mga Hugis at Pagiging Random
-              description_student: Ang araling ito nagpapalawak sa mga kakayahan sa pagguhit na naglalakip ng lapad at haba at nagpapakilala ng konsepto ng paggawa ng random na numero. Ang klase ay matututo kung paano guguhit ng iba-ibang bersyon ng ellipse() at rect() na naglalakip ng mga lapad at haba na parameter at para gumamit ng background() na bloke para punuin ang screen ng kulay. Sa dulo ng progresyon, ang klase ay ipapakilala sa randomNumber() na bloke at gumagamit ng mga bagong bloke para makaguhit ng isang naka-random na rainbow na ahas.
-              description_teacher: Sa araling ito ang mga estudyante ay magpapatuloy sa pagpapabuti sa kanilang kakayahan sa pagguhit. Sa simula ng aralin, ang diskusyon na pinanguluhan ng guro ay kumukonekta sa mga pinalawak na functionality ng bloke (e.g. mga hugis na iba-ibang laki) na nangangailan ng karagdagang mga input sa bloke, o mga "parameter". Ang mga estudyante ay matututong gumuhit ng mga bersyon ng `ellipse()` ug `rect()` na naglalakip ng mga lapat at haba na mga parameter. Sila ay matututo ding gumamit ng `background()` na bloke. Sa dulo ng progresyon, ang mga estudyante ay ipapakilala sa `randomNumber()`na bloke. Ang pagsama-sama sa lahat ng mga kakayahang ito, ang mga estudyante ay makaguhit ng isang randomized na rainbow na ahas sa dulo ng aralin.
+              description_student: This lesson extends the drawing skills to include width and height and introduces the concept of random number generation. The class learns to draw with versions of ellipse() and rect() that include width and height parameters and to use the background() block to fill the screen with color. At the end of the progression the class is introduced to the randomNumber() block and uses the new blocks to draw a randomized rainbow snake.
+              description_teacher: In this lesson students continue to develop their drawing skills. At the beginning of the lesson a teacher-led discussion connects expanded block functionality (e.g. different sized shapes) with the need for more block inputs, or "parameters". Students learn to draw with versions of `ellipse()` and `rect()` that include width and height parameters. They also learn to use the `background()` block. At the end of the progression students are introduced to the `randomNumber()` block. Combining all of these skills students will draw a randomized rainbow snake at the end of the lesson.
             Variables:
               name: Mga variable
               description_student: Ang araling ito ay nagpapakilala sa mga variable bilang paraan para malagyan ng marka ang isang numero sa loob ng program o para mag-save ng random na nabuong halaga. Ang klase ay magsisimula sa aralin gamit ang pinakasimpleng paglalarawan sa layunin ng isang variable at ang mga gawain sa paggamit ng mga bagong bloke. Pagkatapos, ang klase ay gagamit ng mga variable para mag-save ng isang random na numero, na nagpapahintulot sa programa na gumamit sa parehong random na numero nang maraming beses.
@@ -3397,7 +3411,7 @@ fil:
               description_student: Ang klase ay gagawa ng plano at bubuo ng mga orihinal na laro gamit ang gabay ng proyekto mula sa nakaraang dalawang aralin. Habang nagtatrabaho ng isa o may kasama, ang klase ay magpaplano, magde-develop, at magbigay ng puna sa mga laro. Pagkatapos ilakip ang puna ng mga kasamahan, ang klase ay magbabahagi sa nakompletong mga laro.
               description_teacher: Ang mga estudyante ay magpaplano at bubuo ng kanilang sariling laro gamit ang gabay ng proyekto mula sa nakaraang dalawang aralin para gabayan sila sa kanilang proyekto. Habang nagtatrabaho nang mag-isa o may kasama, ang mga estudyante ay unang magdesisyon kung anong uri ng laro ang gusto nilang gawin, habang kumukuha ng inspirasyon sa isang grupo ng mga halimbawang mga laro. Sila ay kukumpleto sa isang blankong gabay sa proyekto kung saan ilalarawan nila ang paggalaw ng laro at ihanda ang mga variables, mga sprites, at mga functions na kailangan nilang gawin. Sa Code Studio, isang serye ng mga antas ay nag-prompt sa kanila sa isang pangkalahatang pagkasunod-sunod na maaari nilang gamitin para ipatupad ang planong ito. Sa kalagitnaan ng proseso, ang mga estudyante ay magbabahagi sa kanilang mga proyekto para repasuhin ng mga kasamahan at kanilang isama ang mga puna habang tinatapos nila ang kanilang laro. Sa bandang huli ng aralin, ang mga estudyante ay magbabahagi ng kanilang nakumpletong mga laro sa kanilang mga kamag-aral. Ang proyektong ito ay tatagal ng ilang klase at maaring aabot kahit saan hanggang sa 3-5 na oras ng klase.
             Parameters and Randomization:
-              name: Mga Parameter at Randomisasyon
+              name: Parameters and Randomization
             Shapes and Randomization:
               name: Mga Hugis at Randomisasyon
             CS Discoveries End of Semester Survey:
@@ -3524,7 +3538,7 @@ fil:
               name: Yunit 4 Kabanata 1 Pagtatasa
             'Anonymous student survey: Taking the AP exam':
               name: 'Surbey na hindi magpapakilala sa mga estudyante: Pagkuha ng pagsusulit sa AP'
-        csd1:
+        csd1-2017:
           title: CSD Unit 1 - Problem Solving
           description_short: "  Alamin kung paano ang mga tao gumagamit ng mga kompyuter para lutasan ang mga problema."
           description: " \\r\nUnit 1 is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\\r\n"
@@ -3554,7 +3568,7 @@ fil:
             Processing with Bits:
               name: Pagproseso kasama ang Bits
             Human vs. Computer Processing:
-              name: Tao vs. Pagproseso ng Kompyuter
+              name: Human vs. Computer Processing
             Processing with Apps:
               name: Pagproseso gamit ang Apps
             'Project: Apps and Problem Solving':
@@ -3584,7 +3598,7 @@ fil:
             CS Discoveries Pre-survey:
               name: Pre-surbey ng CS Discoveries
             CS Discoveries Rapid Survey:
-              name: Mabilis na Surbey ng CS Discoveries
+              name: CS Discoveries Rapid Survey
         csp-online-test:
           title: test space for csp online support
           description_short: This is a sample course for testing csp online pd
@@ -3729,7 +3743,7 @@ fil:
               name: Kulay na RGB
             Processing with Bits:
               name: Pagproseso kasama ang Bits
-        csd2:
+        csd2-2017:
           title: CSD Unit 2 - Web Development
           description_audience: ''
           description_short: "  Matutong bumuo ng iyong sariling we site sa Web Lab."
@@ -3804,7 +3818,7 @@ fil:
             Headers:
               name: Mga Header
               description_student: Ang araling ito ay nagpapatuloy sa introduksyon sa mga HTML na tag, ngayon ay tungkol sa mga header. Ang klase ay magsasanay sa paggamit ng mga header na tag para lumikha ng pahina at mga pamagat ng seksiyon at matututo kung paano ang iba't ibang mga elemento ng header ay naka-display ayon sa default. Sa sunod, ang klase ay magpaplano kung paano mag-organisa sa kanilang nilalaman sa personal na mga pahina sa web na gagawin sa loob ng yunit at nagsisimula sa unang pahina ng proyekto.
-              description_teacher: Sa araling ito, ang mga estudyante ay magpapatuloy na gagamit sa HTML para malagyan ng istraktura ang teksto ng mga pahina sa web, ngayon ay tungkol sa mga header. Ang mga mag-aaral ay matututo kung paano ang iba't ibang mga elemento ng header ay naka-display ayon sa default at magsasanay sa paggamit sa mga ito para lumikha ng pahina at mga pamagat ng seksiyon. Ang mga estudyante ay makakasimula nang magdesisyon kung paano nila i-organisa ang kanilang nilalaman sa kanilang sariling personal na mga pahina sa web. Sa huling antas, ang mga estudyante ay magsisimula sa isang proyekto na patuloy nilang gagawin sa buong yunit.
+              description_teacher: In this lesson, students continue to use HTML to structure text on web pages, this time with headers.  Students learn how the different header elements are displayed by default and practice using them to create page and section titles.  Students then start to decide how they will organize their content on their own personal web pages.  In the last level, students begin the project that they will continue to work on throughout the unit.
             Lists:
               name: Mga listahan
               description_student: Ang araling ito ay nagpapakilala sa mga ordered at unordered na mga listahan at ang kaugnay na  &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt;  mga HTML na tag. Ang klase ay magsasanay sa paggamit ng mga tags, pagkatapos ay babalik sa proyekto na personal na pahina sa web para idagdag ang bagong HTML na pahina na naglalaman ng mga bagong tags.
@@ -3859,7 +3873,7 @@ fil:
               name: Pagsukat ng Pagkatuto ng mga Mag-aaral
             AP Preparation and Support:
               name: Paghahanda at Suporta sa AP
-        csd4:
+        csd4-2017:
           title: CSD Unit 4 - The Design Process
           description_audience: ''
           description_short: "  Learn how to design a program that meets the needs of your users."
@@ -3886,7 +3900,7 @@ fil:
             Analyzing Interviews:
               name: Pagsusuri ng mga Panayam
             Redesigning a Space:
-              name: Muling pag-didisenyo ng Espasyo
+              name: Redesigning a Space
             Presenting Your Design:
               name: Pagpapakita ng Iyong Disenyo
             Designing Apps for Good:
@@ -3912,11 +3926,11 @@ fil:
             Event Driven Programming:
               name: Pag-Program na Pinapatakbo ng mga Events
               description_student: Ang paggamit sa mga screen na dinisenyo ng klase sa nakaraang aralin, ang mga koponan ay magsama-sama sa mga screen sa isang app. Ang simpleng code ay maaari ring idagdag para makagawa ng mga button na mga click para maglipat sa angkop na screen.
-              description_teacher: Sa araling ito ang mga koponan ay magsama-sama sa mga screen na dinisenyo nila sa nakaraang mga aralin sa isang app, kung saan sila ay magsisimulang mag-program gamit ang mga simpleng events. Ang mga estudyante ay matututo sa isang pangunahing pag-program na pinatakbo ng mga event sa pamamagitan ng paggawa ng iilang maliliit na mga app na tutugon sa mga pag-click sa mga buttons ng mga gumagamit. Kasunod nito, ang mga miyembro ng grupo ay magbabahagi sa mga screen na nagawa nila at bawat miyembro ng gruo ay mag-import sa lahat ng mga screen sa kanilang sariling kopya ng app, kung saan gagawin nila itong inter-aktib sa pamamagitan ng pagkonekta sa mga buttons sa mga events.
+              description_teacher: In this lesson teams combine the screens that they designed in the previous lesson into a single app, which they then begin to program using simple events. Students learn basic event driven programming by making several small apps that respond to users clicking buttons. Following that, group members share the screens they've developed and each group member imports all of the screens into their own copy of the app, which they will make interactive by connecting buttons to events.
             Basic App Functionality:
               name: Pangunahing Functionality ng App
-              description_student: Ang mga koponan ay magdadagdag ng kaunting pagpapahusay at functionality sa kanilang mga app bago ang pag-susubok. Iilang mga halimbawa ang ibinigay para ipakita ang simpleng code na nagdadagdag ng mga magagandang katangian.
-              description_teacher: Sa puntong ito sa proseso ng pag-develop, bawat estudyante ay dapat magkakaroon ng isang ganap na digital na bersyon ng papel na prototype - ang static na mga screen na naka-link sa mga buttons. Para sa maraming mga app, ito lang ang talagang kailangan mo para makasimulang mag-test kasama ang mga gumagamit, ngunit ang araling ito ay magbibigay din sa mga estudyante ng pagkakataon na tutuklas sa mga simpleng pamamaraan para magdagdag ng kaunting functionality sa kanilang mga app bago pupunta sa yugto ng pag-test. Ang mga konsepto ng pag-program na ipinakilala sa araling ito ay **hindi kailangan** para matagumpay na makumpleto ang proyekto, at maaaring tanggalin kung gusto mo.
+              description_student: Teams add a bit more polish and functionality to their apps before testing. Several examples are provided to demonstrate simple code that adds cool features.
+              description_teacher: At this point in the development process, each student should have what is essentially a digital version of the paper prototype - static screens that are linked together with buttons. For many apps this is all you really need to start testing with users, but this lesson will give students a chance to explore simple ways to add a bit more functionality to their apps before moving into the testing phase. The programming concepts introduced in this lesson are **not necessary** to successfully complete the project, and can be omitted at your discretion.
             Testing the App:
               name: Pag-test ng App
               description_student: Ang mga koponan ay gagawa ng isa pang ikot ng user na pag-test, ngayon gamit ang kanilang inter-aktib na prototype. Ang mga feedback na naipon mula sa round ng testing ay magpapaalam sa huling iterasyon ng mga prototype ng app.
@@ -4504,7 +4518,7 @@ fil:
           description_short: ''
           description: 'COMING SOON: soon this page will host a set of resources for teachers preparing for the AP exam'
           stages: { }
-        csppostap:
+        csppostap-2017:
           title: CSP Post-AP - Databases and Using Data in Your Apps
           description_audience: ''
           description_short: Matutong mangolekta at gumamit ng mga datos sa mga app sa App Lab.
@@ -4760,7 +4774,7 @@ fil:
               name: Mga conditional
             'Real Life Algorithms: Dice Race':
               name: 'Mga Totoong Buhay na mga Algoritmo: Betu-beto na Habulan'
-        csd6:
+        csd6-2017:
           title: CSD Yunit 6 - Pisikal na Pag-Compute
           description_audience: ''
           description_short: Matutong mag-program sa mga pisikal na mga kagamitan.
@@ -4768,180 +4782,180 @@ fil:
           stages:
             Computing Innovations:
               name: Pag-compute na mga Pagbabago
-              description_student: Galugarin ang isang malawak na iba-ibang mga bago at makabagong mga plataporma sa pag-compute habang nagpapalawak sa iyong pag-uunawa kung ano ang isang kompyuter maaaring maging.
-              description_teacher: Para simulan ang huling yunit ng kursong ito, ang mga estudyante ay gagawa ng isang pananaliksik sa kawili-wiling makabagong likha sa pag-compute. Ang araling ito ay magpapakita sa mga estudyante sa iba-bang mga mas malawak na kaibahan ng mga maaaring makakaapekto sa mga anyo ng pag-compute (ano ang hitsura ng kompyuter) at ang mga puwang na makakaapekto sa pag-compute. Mamaya sa yunit na ito, ang mga estudyante ay titingin pabalik sa mga kagawamitan na kanilang natagpuan sa araling ito habang sila ay gumagawa ng sarili nilang pisikal na mga pag-compute na mga kagamitan.
+              description_student: Explore a wide variety of new and innovative computing platforms while expanding your understanding of what a computer can be.
+              description_teacher: To kick off the final unit of this course, students will do some research into interesting innovations in computing. This lesson will expose students to wider variety of computing form factors (what a computer looks like) and fields that are impacted by computing. Later in this unit students will look back on the devices they encountered in this lesson as they develop their own physical computing devices.
             Input Unplugged:
               name: Input na Naka-Unplugged
-              description_student: Subukan ang dalawang magkaibang pamamaraan na ang app ay maaaring kumuha ng input mula sa gumagamit, habang natututo pa ng mas higit pa tungkol sa pag-program ng pinapatakbo ng mga event na modelo na ginagamit sa App Lab.
-              description_teacher: Bilang paghahanda para sa malalim na pagtingin sa pag-program gamit ang App Lab, ang mga estudyante ay tutuklas sa iilang maraming iba't ibang mga programa na isinulat sa parehong Game Lab at App Lab na nag-aasikaso sa pagkuha ng mga input mula sa mga gumagamit. Pagkatapos ihambing at tukuyin ang kaibahan ng dalawang pamamaraan na nakita nila sa halimbawa ng mga app, ang mga estudyante ay gagawa ng grupo para magsasadula ng dalawang iba't ibang mga modelo para sa input (mga kondisyonal na nasa isang infinite na loop at mga pangyayari na asynchronous) para makakuha ng mas malinaw na pag-uunawa kung paano sila gumagana.
+              description_student: Experience two different ways that an app can take input from a user, while learning more about the event-driven programming model used in App Lab.
+              description_teacher: In preparation for delving deeper into programming with App Lab, students will explore how a handful of different programs written in both Game Lab and App Lab handle taking input from the user. After comparing and contrasting the approaches they saw in the example apps, students group up to act out the two different models for input (conditionals in an infinite loop and asynchronous events) to gain a better understanding of how they work.
             Event Types:
               name: Mga Tipo ng Pangyayari
-              description_student: Magbalik-aral sa mga pangunahing kaalaman sa pag-program sa App Lab at tuklasin ang ilang mga bagong tipo ng mga pangyayari na maaaring gamitin sa iyong mga programa.
-              description_teacher: Sa araling ito, ang mga estudyante ay magbalik-aral sa mga materyal na natutunan nila tungkol sa paglikha ng mga app sa App Lab mula sa Yunit 4 para makahanda sa pagbabalik sa App Lab sa yunit na ito. Ang pagbalik-aral na ito ay dapat baguhin para mas lalo pang maabot ang pangangailangan ng iyong mga estudyante at ang kanilang mga karanasan at ang pagiging pamilyar sa pag-program sa App Lab. Bukod pa sa pagbalik-aral, ang mga estudyante ay gagawa din ng eksperimento gamit ang iba-ibang mga bagong tipo ng mga pangyayari na siguro ay hindi pa nila nakita dati.
+              description_student: Review the basics of programming in App Lab and explore some new event types that can be used in your programs.
+              description_teacher: In this lesson students review the material they learned about creating apps in App Lab from Unit 4 in order to prepare for a return to App Lab in this unit. This review should be modified to best meet the needs of your students and their experience and familiarity with programming in App Lab. In addition to the review the students will also experiment with a variety of new event types that they likely have not seen before.
             Getters and Setters:
               name: Tagakuha at Taga-takda
-              description_student: Sa pamamagitan ng pagbasa at pagpalit ng nilalaman sa screen ng app, ang klase ay magsisimulang bumuo ng mga apps na nangangailangan lang ng isang screen. Kahit na may isang screen lang, ang mga pamamaraang ito ay nagbibigay-daan sa napakaraming pakikipag-ugnayan sa mga gumagamit at kakayahan.
-              description_teacher: Sa Yunit 4, ang mga estudyante ay matututo ng isang napakasimpleng paraan sa paggawa ng mga app sa App Lab na nangangailangan ng magkahiwalay na screen para sa karamihan sa mga pakikipag-ugnayan. Para mapalawak ang mga uri ng mga app na magagawa ng mga estudyante, at para mahikayat sila na mag-isip ng mga bagong pamamaraan tungkol sa paano ang mga gumagamit nakikipag-ugnayan sa mga app, aming ipapakilala ang konsepto ng mga "taga-kuha" at mga "taga-takda". Ang mga bagong kautusan na ito na maaaring magkuha at magtakda (o magpalit) sa nilalaman at mga katangian ng sari-saring mga elemento ng disenyo. Sa araling ito, ang mga estudyante ay bubuo ng simpleng mga app na nangangailangan lang ng isang screen, ang nilalaman ay pinapalitan gamit ang mga taga-kuha at taga-takda.
+              description_student: By reading and changing the content on the screen of an app, the class starts to build apps that only need a single screen. Even with just one screen, these techniques allow for lots of user interaction and functionality.
+              description_teacher: In Unit 4 students learned a very simple approach to app development in App Lab that required a separate screen for most interactions. To expand the kinds of apps that students can make, and to encourage them to think in new ways about how users interact with apps, we introduce the concept of "getters" and "setters". These are commands which can get and set (or change) the content and properties of various design elements. In this lesson students build up simple apps that only require a single screen, the content of which is changed using getters and setters.
             The Circuit Playground:
               name: Ang Circuit na Playground
-              description_student: Kilalanin ang Circuit Playground, ang circuit board na gagamitin sa buong yunit na ito. Gamit ang App Laba, gagawa ng mga programa na gumagamit ng Circuit Playground para sa output.
-              description_teacher: Sa araling ito, ang mga estudyante ay makakakuha sa kanilang unang pagkakataon na magsulat ng mga programa na gumagamit ng Circuit Playground. Pagkatapos sa unang pagsisiyasat sa board sa paningin at sa pag-iisip sa mga posibleng kakayahan, ang mga estudyante ay pupunta online kung saan matutunan nila ang pagsulat ng mga aplikasyon na kumukontrol sa LED. Sa pamamagitan ng pagsama-sama sa mga App Lab na mga screen kasama ang Circuit Playgrounds, ang mga estudyante ay unti-unting magsimulang pagsamahin ang mga elemento ng board bilang output na kagamitan habang gumagamit ng App Lab para sa input ng gumagamit.
+              description_student: Get to know the Circuit Playground, the circuit board that will be used throughout the rest of this unit. Using App Lab, develop programs that use the Circuit Playground for output.
+              description_teacher: In this lesson students get their first opportunity to write programs that use the Circuit Playground. After first inspecting the board visually and hypothesizing possibly functionalities, students move online where they will learn to write applications that control an LED. By combining App Lab screens with the Circuit Playgrounds, students can gradually start to integrate elements of the board as an ouput device while relying on App Lab for user input.
             Lists:
               name: Mga listahan
-              description_student: Alamin kung paano ang mga listahan maaaring magamit para maglakip ng maraming mga halaga sa isang pangalan ng variable.
-              description_teacher: Ang listahan, ay karaniwang kinilala bilang isang array, ay isang tipo ng variable na maaaring maglakip ng maraming mga halaga nang sabay-sabay. Sa araling ito, ang mga estudyante ay matututong lumikha ng mga listahan na makakatago ng isang serye ng mga magkaugnay na halaga sa isang variable. Pagkatapos maglikha ng mga listahan nang sila lang, ang mga estudyante ay matututo tungkol sa mga pamamaraan para makuha ang alinman sa tiyak o nagkataon na halaga mula sa listahan gamit ang index nito.
+              description_student: Learn how lists can be used to store multiple values in a single variable name.
+              description_teacher: A list, also commonly known as an array, is a type of variable that can store many values at once. In this lesson, students learn to create lists which store a series of related values in a single variable. After creating lists of their own, students will learn about ways to extract either a specific or random value from a list using its index.
             Lights:
               name: Mga Ilaw
-              description_student: Ang paggamit ng konsepto ng mga listahan mula sa nakaraang aralin, ang klase ay magsusulat ng mga programa na kumukontrol sa sampung kulay ng mga LED sa Circuit Playground.
-              description_teacher: Ang Circuit Playground ay naglalakip ng 10 na mga kulay ng LED sa isang singsing sa paligin ng panlabas na gilid. Ang mga LED ay ma-access sa code bilang isang listahan na tinatawag na `colorLeds`. Nakasandig sa pag-uunawa sa mga listahan mula sa nakaraang aralin, ang mga estudyante ay magsusulat ng mga programa na kumukontrol sa kulay ng mga LED sa pamamagitan ng pag-access nito mula sa isang listahan.
+              description_student: Using the concept of lists from the previous lesson, the class writes programs that control the ten color LEDs on the Circuit Playground.
+              description_teacher: The Circuit Playground includes 10 color LEDs in a ring around the outside edge. These LEDs are accessible in code as a list called `colorLeds`. Building on the understanding of lists from the previous lesson, students write programs that control the color LEDs by accessing them from a list.
             For Loops:
               name: For Loops
-              description_student: Ang klase at matututo tungkol sa mga pag-uulit ng mga instruksyon gamit ang _for loop_, una sa pamamagitan ng pagkontrol ng "robot" sa pamamagitan ng grid, at pagkatapos sa App Lab.
-              description_teacher: Ang mga estudyante ay ipapakilala sa _for loop_ sa araling ito bilang isang paraan para maulit ang ilang code nang ilang tiyak na bilang na pag-ulit. Ang mga estudyante ay magsisimula sa isang unplugged na gawain kung saan gagamit sila ng mga loops para mag-navigate sa isang robot sa paligid ng grid. Kapag kumpleto na, ang mga estudyante ay dadalhin ang kanilang kaalaman sa App Lab kung saan sila ay magsusulat ng mga programa na umasa sa iterasyon gamit ang _for loop_.
+              description_student: The class learns about repeating instructions using a _for loop_, first by controlling a "robot" through a grid, and then in App Lab.
+              description_teacher: Students are introduced to the _for loop_ in this lesson as a way to repeat some code a certain numbers of times. Students start with an unplugged activity where they use for loops to navigate a robot across a grid. Once complete, students then take their knowledge into App Lab where they write programs that rely on iteration using a _for loop_.
             Lists and For Loops:
               name: Mga Listahan at mga For Loop
-              description_student: Ang pagsasama-sama sa mga _listahan_ at mga _for loop_ ay nagbibigay-daan sa iyo na makasulat ng code na nakakaapekto sa bawat elemento ng isang listahan, hindi alintana kung gaano na katagal ang mga ito. Ang klase ay gagamit sa istrakturang ito para magsulat ng mga programa na nagproproseso sa lahat ng mga elemento na nasa mga listahan, kalakip na ang listahan ng mga kulay ng LED.
-              description_teacher: 'Ang paggamit ng _for loop_ para mag-iterate sa lahat ng mga elemento sa isang array ay lubhang nakakatulong na construct sa karamihang mga pang-program na mga wika. Sa araling ito, ang mga estudyante ay magsama-sama sa natutunan nila tungkol sa mga listahan at sa mga for loop para masimulan ang pag-aaral sa pattern na ito. Ang mga estudyante ay gagamit ng mga loops para makapunta sa bawat elemento sa isang listahan ng paisa-isa nang hindi nangangailangang magsulat ng code para sa bawat elemento. Papunta sa dulo ng aralin, ang mga estudyante ay gagamit sa mga ito sa `colorLed` na listahan na nasa board. '
+              description_student: Combining _lists_ and _for loops_ allows you to write code that impacts every element of a list, regardless of how long it is. The class uses this structure to write programs that process all of the elements in lists, include the list of color LEDs.
+              description_teacher: 'Using a _for loop_ to iterate over all of the elements in an array is a really useful construct in most programming languages. In this lesson, students combine what they have learned about lists and for loops in order to start learning this pattern. Students use for loops to go through each element in a list one at a time without having to write code for each element. Towards the end of the lesson students will apply this with the `colorLed` list on the board. '
             Timed Loops:
               name: Mga Inorasang mga Loop
-              description_student: Sa araling ito, tayo ay magtatayo ayon sa pag-uunawa ng mga estudyante sa mga loops para matututo tungkol sa isang mas sopistikadong istraktura na tinatawag na inorasan na loop. Hindi tulad ng mga for loop, maaaring kang makakontrol kung paano kabilis ang pag-uulit ng mga inurasang mga loop, at ang ibang code (gaya ng mga handler ng mga event) ay maaaring patakbuhin sa pagitan ng mga iterasyon sa loop. Ito ay nagbibigay-daan sa atin na makalikha ng mga kawili-wiling mga animasyon na hindi natatapos ang pag-uulit, habang nagbibigay-daan pa rin sa ibang code na tatakbo kasabay nito.
-              description_teacher: Sa araling ito, tayo ay magtatayo sa pag-uunawa ng mga estudyante tungkol sa mga _for loops_ para matuto tungkol sa isang mas sopistikadong istraktura na tinatawag na _inorasang loop_. Hindi gaya ng mga _for loop_, maaari kang magkontrol kung paano kabilis ang pag-uulit ng isang _inorasang loop_, at ang ibang code (gaya ng mga taga-asikaso ng mga pangyayari) ay maaaring patakbuhin sa pagitan ng mga iterasyon ng loop. Ito ay nagbibigay-daan para makalikha ng kawili-wiling mga animasyon na hindi natatapos ang pag-ulit, habang nagbibigay-daan pa rin para mapatakbo ang code kasabay nito.
+              description_student: In this lesson we build on students understanding of for loops to learn about a more sophisticated structure called a timed loop. Unlike for loops, you can control how quickly a timed loop repeats, and other code (such as event handlers) can be run between iterations of the loop. This allows us to create interesting animations that repeat infinitely, while still allowing other code to run alongside it.
+              description_teacher: In this lesson we build on students understanding of _for loops_ to learn about a more sophisticated structure called a _timed loop_. Unlike _for loops_, you can control how quickly a _timed loop_ repeats, and other code (such as event handlers) can be run between iterations of the loop. This allows us to create interesting animations that repeat infinitely, while still allowing other code to run alongside it.
             'Project: Board Output':
               name: 'Proyekto: Output sa Pisara'
-              description_student: Ang mga estudyante ay magdadala sa mga natutunan nila mula sa unang kabatana, at gagawa ng isang app na dinisenyo nila para gumamit ng board para magpalabas ng mga impormasyon.
-              description_teacher: Ang mga estudyante ay magdadala sa mga natutunan nila mula sa unang kabatana, at gagawa ng isang app na dinisenyo nila para gumamit ng board para magpalabas ng mga impormasyon.
+              description_student: Students take what they've learned through chapter one, and develop an app of their own design that uses the board to output information.
+              description_teacher: Students take what they've learned through chapter one, and develop an app of their own design that uses the board to output information.
             Physical Input:
               name: Pisikal na Input
-              description_student: Gamit ang hardware na mga button at switch, ang klase ay bubuo ng mga programa na gumagamit sa Circuit Playground bilang input.
-              description_teacher: Ang araling ito ay nag-transisyon sa mga estudyante para bigyang pansin ang Circuit Playground bilang isang mahigpit na pang-output na mga kagamitan patungo sa paggamit nito bilang isang kagamitan para sa parehong input at output. Nagsisimula sa paggamit ng mga hardware na mga button at switch, ang mga estudyante ay matututong gumamit ng `onBoardEvent()`, na kapareho sa `onEvent()`, para makakuha ng input mula sa kanilang mga Circuit na Playground.
+              description_student: Using the hardware buttons and switch, the class develops programs that use the Circuit Playground as an input.
+              description_teacher: This lesson transitions students from consider the Circuit Playground as strictly an output device towards using it as a tool for both input and output. Starting with the hardware buttons and switch,sing the hardware buttons and switch, students learn to use `onBoardEvent()`, analogously to `onEvent()`, in order to take input from their Circuit Playgrounds.
             Analog Input:
               name: Analog na Input
-              description_student: Tuklasin ang mga analog na mga input na nasa Circuit na Playground, nagsulat ng mga programa na tumugon sa kapaligiran sa pamamagitan ng mga sensor.
-              description_teacher: Sa araling ito, ang mga estudyante ay tutuklas kung paano ang tatlong analog na mga sensor (tunog, ilaw, at temperatura) ay maaaring gamitin para magsulat ng mga programa na tumugon sa mga pagbabago sa kapaligiran. Ang gamit ng mga sensor na ito ay ang nagmamarka sa isang transisyon sa mga tuntunin kung paano ang mga gumagamit nakikipag-ugnayan sa isang programa. Sa pamamagitan ng paggamit ng mga sensor bilang input, ang mga gumagamit ng isang app ay hindi kinakailangang direktang makipag-ugnayan nito, o maaaring makipag-ugnayan kahit na hindi natatanto kung ano ang kanilang ginagawa.
+              description_student: Explore the analog inputs on the Circuit Playground, writing programs that respond to the environment through sensors.
+              description_teacher: In this lesson, students explore how the three analog sensors (sound, light, and temperature) can be used to write programs that respond to changes in the environment. The use of these sensors marks a transition in terms of how users interact with a program. By using sensors as an input, the user of an app doesn't have to directly interact with it at all, or may interact without actually realizing they are doing so.
             Sensor Applications:
               name: Mga Aplikasyon na Sensor
-              description_student: Magtrabaho sa tatlong mga malilit na mga app para mas maunawaan pa ang mga gamit ng mga sensor mula sa nakaraang aralin.
-              description_teacher: Para masundan pa ang mga sensor na natutunan ng mga estudyante sa nakaraang mga aralin, tayo ay sasaklaw sa tatlong mga apps, bawat isa sa mga ito ay nakasalalay sa isang ibang sensor. Ang tatlong mga app na ito ay magsisilbing pagsisimula sa kasunod na huling proyekto ng mga estudyante.
+              description_student: Work through three small apps to better understand the uses of the sensors from the previous lesson.
+              description_teacher: To follow up on the sensors that students learned about in the previous lesson, we walk through a three apps, each of which relies on a different sensor. These three apps can serve as jumping off points for students in the final project that follows.
             'Project: Prototype an Innovation':
               name: 'Proyekto: Mag-Prototype ng isang Pagbabago'
-              description_student: Bumuo ng malikhaing mga computing na kagamitan na iyong sariling dinisenyo, gamit ang lahat ng bagay na natutunan mo sa buong kursong ito.
-              description_teacher: 'Sa huling proyektong ito para sa kurso, ang mga estudyante ay maggrupo-grupo para makagawa at makasubok ng isang prototype para sa isang malikhain na computing na kagamitan na nakabase sa Circuit na Playground. Gamit ang mga input at mga output na nasa board, ang mga grupo ay lilikha ng mga programa na nagbibigay-daan para sa isang mas kawili-wili at pambihirang mga pakikipag-ugnayan sa mga gumagamit. '
+              description_student: Develop innovative computing devices of your own design, using everything you've learned throughout this course.
+              description_teacher: 'In this final project for the course, students team to develop and test a prototype for an innovative computing device based on the Circuit Playground. Using the inputs and outputs available on the board, groups will create programs that allow for interesting and unique user interactions. '
             Designing Screens with Code:
               name: Pagdidisenyo ng mga Screen gamit ang Code
-              description_student: Sa pamamagitan ng pagbasa at pagpalit ng nilalaman sa screen ng app, ang klase ay magsisimulang bumuo ng mga apps na nangangailangan lang ng isang screen. Kahit na may isang screen lang, ang mga pamamaraang ito ay nagbibigay-daan sa napakaraming pakikipag-ugnayan sa mga gumagamit at kakayahan.
-              description_teacher: Sa Yunit 4, natutunan ng mga estudyante ang isang napakasimpleng pamamaraan para sa paggawa ng mga app sa App Lab na nangangailangan ng magkahiwalay na screen para sa karamihan sa mga pakikipag-ugnayan. Para mapalawak ang mga klase ng app na maaaring magawa ng mga estudyante, at para hikayatin sila na mag-isip ng mga bagong pamamaraan tungkol sa kung paano ang mga gumagamit nakikipag-ugnayan sa mga apps, aming ipapakilala ang `setProperty()` na bloke. Ang kautusan na ito ay maaaring gamitin para magtakda ng mga nilalaman at mga katangian sa sari-saring mga UI na elemento, nagbibigay-daan sa mga estudyante na magsulat ng mga programa na nagbabago sa mga impormasyon sa isang screen, sa halip na mano-manong maglikha ng kaparehang mga screen. Sa araling ito, ang mga estudyante ay bubuo ng mga simpleng app na nangangailangan lang ng isang screen, kung saan ang mga nilalaman ay pinalitan gamit ang `setProperty()`.
+              description_student: By reading and changing the content on the screen of an app, the class starts to build apps that only need a single screen. Even with just one screen, these techniques allow for lots of user interaction and functionality.
+              description_teacher: In Unit 4 students learned a very simple approach to app development in App Lab that required a separate screen for most interactions. To expand the kinds of apps that students can make, and to encourage them to think in new ways about how users interact with apps, we introduce the `setProperty()` block. This command can be used to set the content and properties of various UI elements, allowing students to write programs that update information on a single screen, instead of manually creating duplicate screens. In this lesson students build up simple apps that only require a single screen, the content of which is changed using `setProperty()`.
             Board Events:
               name: Mga Pangyayari sa Board
-              description_student: Gamit ang hardware na mga button at switch, ang klase ay bubuo ng mga programa na gumagamit sa Circuit Playground bilang input.
-              description_teacher: Ang araling ito ay nag-transisyon sa mga estudyante para bigyang pansin ang Circuit Playground bilang isang mahigpit na pang-output na mga kagamitan patungo sa paggamit nito bilang isang kagamitan para sa parehong input at output. Nagsisimula sa paggamit ng mga hardware na mga button at switch, ang mga estudyante ay matututong gumamit ng `onBoardEvent()`, na kapareho sa `onEvent()`, para makakuha ng input mula sa kanilang mga Circuit na Playground.
+              description_student: Using the hardware buttons and switch, the class develops programs that use the Circuit Playground as an input.
+              description_teacher: This lesson transitions students from consider the Circuit Playground as strictly an output device towards using it as a tool for both input and output. Starting with the hardware buttons and switch,sing the hardware buttons and switch, students learn to use `onBoardEvent()`, analogously to `onEvent()`, in order to take input from their Circuit Playgrounds.
             Getting Properties:
               name: Pagkuha ng mga Katangian
-              description_student: Ang araling ito ay nagpapakilala sa mga estudyante sa getProperty na bloke, na nagbibigay-daan sa kanila na mapasok ang mga katangian ng iba't ibang mga elemento gamit ang code. Ang mga estudyante ay unang magsasanay sa paggamit ng mga bloke para matukoy kung ano ang na-input ng user sa sari-saring mga elemento ng gumagamit na interface. Ang mga estudyante ay gagamit mamaya sa getProperty at setProperty kasama ang mga tagabilang na mga patterns para mapagalaw ang mga elemento sa loob ng screen. Ang bagong elemento sa screen, ang slider, at ang bagong trigger ng pangyayari, onChange ay ipinakilala din.
-              description_teacher: Ang araling ito ay nagpapakilala sa mga estudyante sa `getProperty` na bloke, na nagbibigay daan sa kanila na ma-access ang mga katangian ng iba't ibang mga elemento gamit ang code. Ang mga estudyante ay unang magsasanay sa paggamit ng bloke para matukoy kung ano ang input ng gumagamit sa sari-saring mga elemento ng interface ng gumagamit. Ang mga estudyante ay gagamit mamaya sa `getProperty` at `setProperty` kasabay ng tagabilang na mga patterns para mapagalaw ang mga elemento sa paligid ng screen. Isang bagong elemento ng screen, ang slider, at ang bagong trigger ng mga pangyayari, `onChange`, ay pinakilala din.
+              description_student: This lesson introduces students to the getProperty block, which allows them to access the properties of different elements with code.  Students first practice using the block to determine what the user has input in various user interface elements. Students later use getProperty and setProperty together with the counter patters to make elements move across the screen.  A new screen element, the slider, and a new event trigger, onChange, are also introduced.
+              description_teacher: This lesson introduces students to the `getProperty` block, which allows them to access the properties of different elements with code.  Students first practice using the block to determine what the user has input in various user interface elements. Students later use `getProperty` and `setProperty` together with the counter patters to make elements move across the screen.  A new screen element, the slider, and a new event trigger, `onChange`, are also introduced.
             The Program Design Process:
               name: Ang Proseso ng Pagdisenyo ng Programa
-              description_student: Ang araling ito ay nagpapakilala sa mga estudyante sa proseso na gagamitin nila para magdisenyo sa mga sarili nilang programa sa buong yunit na ito. Ang prosesong ito ay nakasentro sa isang gabay ng proyekto na nagtatanong sa mga estudyante na iguhit ang kanilang mga screen, magtukoy sa mga elemento ng Circuit Playground na gagamitin, bigyang-kahulugan ang mga variables, at ilarawan ang pangyayari bago sila magsimulang mag-program. Ang prosesong ito ay pareho sa Proseso ng Pag-Disenyo ng Laro na ginamit natin sa Yunit 3. Sa araling ito, ang mga estudyante ay magsisimula sa pamamagitan ng paglaro ng isang tug o' war na istilo ng laro kung saan ang code ay nakatago. Sila ay magtatalakay sa kung ano ang naisip nila na mga bahagi ng board, mga pangyayari, at mga variables ang kakailanganin para magawa ang programa. Pagkatapos ay bibigyan sila ng isang nakumpletong gabay ng proyekto na nagpapakita sa kanila sa isa sa pamamaraan para magawa ang proyekto. Ang mga estudyante ay gagabayan sa prosesong ito sa pamamagitan ng isang serye ng mga antas. Sa bandang huli ng aralin, ang mga estudyante ay magkakaraoon ng oportunidad na makagawa ng pagpapahusay sa programa para magawa nila itong sarili nila.
-              description_teacher: Ang araling ito ay nagpapakilala sa mga estudyante sa proseso na gagamitin nila para magdisenyo sa mga sarili nilang programa sa buong yunit na ito. Ang prosesong ito ay nakasentro sa isang gabay ng proyekto na nagtatanong sa mga estudyante na iguhit ang kanilang mga screen, magtukoy sa mga elemento ng Circuit Playground na gagamitin, bigyang-kahulugan ang mga variables, at ilarawan ang pangyayari bago sila magsimulang mag-program. Ang prosesong ito ay pareho sa Proseso ng Pag-Disenyo ng Laro na ginamit natin sa Yunit 3. Sa araling ito, ang mga estudyante ay magsisimula sa pamamagitan ng paglaro ng isang tug o' war na istilo ng laro kung saan ang code ay nakatago. Sila ay magtatalakay sa kung ano ang naisip nila na mga bahagi ng board, mga pangyayari, at mga variables ang kakailanganin para magawa ang programa. Pagkatapos ay bibigyan sila ng isang nakumpletong gabay ng proyekto na nagpapakita sa kanila sa isa sa pamamaraan para magawa ang proyekto. Ang mga estudyante ay gagabayan sa prosesong ito sa pamamagitan ng isang serye ng mga antas. Sa bandang huli ng aralin, ang mga estudyante ay magkakaraoon ng oportunidad na makagawa ng pagpapahusay sa programa para magawa nila itong sarili nila.
+              description_student: This lesson introduces students to the process they will use to design programs of their own throughout this unit. This process is centered around a project guide which asks students to sketch out their screens, identify elements of the Circuit Playground to be used, define variables, and describe events before they begin programming. This process is similar to the Game Design Process that we used in Unit 3. In this lesson students begin by playing a tug o' war style game where the code is hidden. They discuss what they think the board components, events, and variables would need to be to make the program. They are then given a completed project guide which shows one way to implement the project. Students are then walked through this process through a series of levels. At the end of the lesson students have an opportunity to make improvements to the program to make it their own.
+              description_teacher: This lesson introduces students to the process they will use to design programs of their own throughout this unit. This process is centered around a project guide which asks students to sketch out their screens, identify elements of the Circuit Playground to be used, define variables, and describe events before they begin programming. This process is similar to the Game Design Process that we used in Unit 3. In this lesson students begin by playing a tug o' war style game where the code is hidden. They discuss what they think the board components, events, and variables would need to be to make the program. They are then given a completed project guide which shows one way to implement the project. Students are then walked through this process through a series of levels. At the end of the lesson students have an opportunity to make improvements to the program to make it their own.
             'Project: Make a Game':
               name: 'Proyekto: Gumawa ng Laro'
-              description_student: Ang mga estudyante ay magdadala sa mga natutunan nila mula sa unang kabatana, at gagawa ng isang app na dinisenyo nila para gumamit ng board para magpalabas ng mga impormasyon.
-              description_teacher: Ang mga estudyante ay magdadala sa mga natutunan nila mula sa unang kabatana, at gagawa ng isang app na dinisenyo nila para gumamit ng board para magpalabas ng mga impormasyon.
+              description_student: Students take what they've learned through chapter one, and develop an app of their own design that uses the board to output information.
+              description_teacher: Students take what they've learned through chapter one, and develop an app of their own design that uses the board to output information.
             Arrays:
               name: Mga Array
-              description_student: Alamin kung paano ang mga listahan maaaring magamit para maglakip ng maraming mga halaga sa isang pangalan ng variable.
-              description_teacher: Ang isang array ay isang naayos na mga koleksyon ng mga aytem, karaniwan ay magkapareho ang tipo. Sa araling ito, ang mga estudyante ay matututo sa mga pamamaraan para magamit ang alinman sa tiyak o nagkataon na halaga mula sa isang listahan gamit ang index nito. Pagkatapos sila ay matututo kung paano mag-access sa array na colorLEDS na kumukontrol sa pag-uugali ng mga kulay ng LED na nasa Circuit Playground. Ang mga estudyante ay magkokontrol sa kulay at sa lakas ng bawat LED, pagkatapos ay gagamit sa kung ano ang natutunan nila para magprogram ng mga pattern ng ilaw para makalikha ng ilaw na pagtatanghal sa kanilang Circuit Playground.
+              description_student: Learn how lists can be used to store multiple values in a single variable name.
+              description_teacher: An array is an ordered collection of items, usually of the same type. In this lesson, students learn ways to access either a specific or random value from a list using its index.  They then learn how to access the colorLEDs array that controls the behavior of the color LEDs on the Circuit Playground.  Students will control the color and intensity of each LED, then use what they have learned to program light patterns to create a light show on their Circuit Playground.
             Making Music:
               name: Paglikha ng Musika
-              description_student: Sa araling ito, ang mga estudyante ay gagamit ng buzzer sa buong lawak nito sa pamamagitan ng paggagawa ng mga tunog, mga nota, at mga awit gamit ang buzzer. Ang mga estudyante ay magsisimula sa maikling pagbabalik-aral sa mga parameter ng buzzer kung gaano kadalas at gaano katagal, pagkatapos ay pupunta sa konsepto ng mga nota. Ang mga nota ay nagbibigay-daan sa mga estudyante na limitahan ang kanilang mga sarili sa mga frequency na ginagamit sa mga Kanlurang musika at magbibigay ng isang antas ng paglalahat na nakakatulong sa kanila na maunawaan kung aling mga frequency ang maaaring maganda pakinggan nang magkasabay. Kapag ang mga estudyante ay nakakapatunog na ng mga nota sa buzzer, sila ay gagamit ng mga array para itago at paandarin ang sunod-sunod na mga nota, na bumubuo ng simpleng mga awitin.
-              description_teacher: Sa araling ito, ang mga estudyante ay gagamit ng buzzer sa buong lawak nito sa pamamagitan ng paggagawa ng mga tunog, mga nota, at mga awit gamit ang buzzer. Ang mga estudyante ay magsisimula sa maikling pagbabalik-aral sa mga parameter ng buzzer kung gaano kadalas at gaano katagal, pagkatapos ay pupunta sa konsepto ng mga nota. Ang mga nota ay nagbibigay-daan sa mga estudyante na limitahan ang kanilang mga sarili sa mga frequency na ginagamit sa mga Kanlurang musika at magbibigay ng isang antas ng paglalahat na nakakatulong sa kanila na maunawaan kung aling mga frequency ang maaaring maganda pakinggan nang magkasabay. Kapag ang mga estudyante ay nakakapatunog na ng mga nota sa buzzer, sila ay gagamit ng mga array para itago at paandarin ang sunod-sunod na mga nota, na bumubuo ng simpleng mga awitin.
+              description_student: In this lesson students will use the buzzer to its full extent by producing sounds, notes, and songs with the buzzer. Students start with a short review of the buzzer's frequency and duration parameters, then move on to the concept of notes.  Notes allow students to constrain themselves to frequencies that are used in Western music and provide a layer of abstraction that helps them to understand which frequencies might sound good together.  Onces students are able to play notes on the buzzer, they use arrays to hold and play sequences of notes, forming simple songs.
+              description_teacher: In this lesson students will use the buzzer to its full extent by producing sounds, notes, and songs with the buzzer. Students start with a short review of the buzzer's frequency and duration parameters, then move on to the concept of notes.  Notes allow students to constrain themselves to frequencies that are used in Western music and provide a layer of abstraction that helps them to understand which frequencies might sound good together.  Onces students are able to play notes on the buzzer, they use arrays to hold and play sequences of notes, forming simple songs.
             Arrays and For Loops:
               name: Mga Array at mga For Loop
-              description_student: Ang pagsasama-sama sa mga _listahan_ at mga _for loop_ ay nagbibigay-daan sa iyo na makasulat ng code na nakakaapekto sa bawat elemento ng isang listahan, hindi alintana kung gaano na katagal ang mga ito. Ang klase ay gagamit sa istrakturang ito para magsulat ng mga programa na nagproproseso sa lahat ng mga elemento na nasa mga listahan, kalakip na ang listahan ng mga kulay ng LED.
-              description_teacher: Ang paggamit ng _for loop_ para mag-iterate sa lahat ng mga elemento sa isang array ay lubhang nakakatulong na construct sa karamihang mga pang-program na mga wika. Sa araling ito, ang mga estudyante ay matututo kung paano ang _for loop_ maaaring gamitin para ulitin ang code, at pagkatapos isama ito sa kung ano ang natutunan nila sa mga arrays para makasulat ng mga programa na nagproseso sa lahat ng mga elemento sa isang array. Ang mga estudyante ay gagamit ng mga for loop para makapunta sa bawat elemento sa isang listahan ng paisa-isa nang hindi sumusulat ng code para sa bawat elemento. Papunta sa dulo ng aralin, ang mga estudyante ay gagamit sa mga ito sa `colorLed` na listahan sa pisara para makalikha ng app na nagbabago sa lahat ng mga LED bawat beses na ang button ay pinindot.
+              description_student: Combining _lists_ and _for loops_ allows you to write code that impacts every element of a list, regardless of how long it is. The class uses this structure to write programs that process all of the elements in lists, include the list of color LEDs.
+              description_teacher: Using a _for loop_ to iterate over all of the elements in an array is a really useful construct in most programming languages. In this lesson, students learn the basics of how a _for loop_ can be used to repeat code, and then combine it with what they've already learned about arrays to write programs that process all elements in an array. Students use for loops to go through each element in a list one at a time without having to write code for each element. Towards the end of the lesson students will apply this with the `colorLed` list on the board to create an app that changes all of the LEDs each time a button is clicked.
             Accelerometer:
               name: Accelerometer
-              description_student: Sa araling ito, ang mga estudyante ay tutuklas sa accelerometer at sa mga kakayahan nito. Sila ay magiging kabisado sa mga pangyayari nito at mga katangian, pati na rin ang paglikha ng maraming mga programa na gumagamit sa accelerometer katulad sa mga natagpuan mo na sigurong mga aplikasyon sa tunay na mundo.
-              description_teacher: Sa araling ito, ang mga estudyante ay tutuklas sa accelerometer at sa mga kakayahan nito. Sila ay magiging kabisado sa mga pangyayari nito at mga katangian, pati na rin ang paglikha ng maraming mga programa na gumagamit sa accelerometer katulad sa mga natagpuan mo na sigurong mga aplikasyon sa tunay na mundo.
+              description_student: In this lesson, students will explore the accelerometer and its capabilities. They’ll become familiar with its events and properties, as well as create multiple programs utilizing the accelerometer similar to those they’ve likely come across in real world applications.
+              description_teacher: In this lesson, students will explore the accelerometer and its capabilities. They’ll become familiar with its events and properties, as well as create multiple programs utilizing the accelerometer similar to those they’ve likely come across in real world applications.
             Functions with Parameters:
               name: Mga function na meron mga parameter
-              description_student: Ang aralin ay magsisimula sa isang madaliang pagbalik-aral sa mga paramters, sa konteksto ng App Lab na mga bloke na bago lang nakita ng mga estudyante. Ang mga estudyante ay titingin sa ilang mga halimbawa ng mga parameter sa loob ng nilikha na mga functions ng gumagamit sa App Lab at maglikha at magtawag ng mga functions na may mga parameter para sa kanila, gumamit sa mga ito para magkontrol ng maraming mga elemento sa screen. Pagkatapos, ang mga estudyante ay gagamit ng mga for loops para mag-iterate sa isang array, magpasa sa bawat elemento sa function. Sa huli, ang mga estudyante ay gagamit sa natutunan nila para maglikha ng tagasalo ng bituin na laro.
-              description_teacher: Ang aralin ay magsisimula sa isang madaliang pagbalik-aral sa mga paramters, sa konteksto ng App Lab na mga bloke na bago lang nakita ng mga estudyante. Ang mga estudyante ay titingin sa ilang mga halimbawa ng mga parameter sa loob ng nilikha na mga functions ng gumagamit sa App Lab at maglikha at magtawag ng mga functions na may mga parameter para sa kanila, gumamit sa mga ito para magkontrol ng maraming mga elemento sa screen. Pagkatapos, ang mga estudyante ay gagamit ng mga for loops para mag-iterate sa isang array, magpasa sa bawat elemento sa function. Sa huli, ang mga estudyante ay gagamit sa natutunan nila para maglikha ng tagasalo ng bituin na laro.
+              description_student: The lesson starts with a quick review of parameters, in the context of App Lab blocks that they students have seen recently.  Students then look at examples of parameters within user-created functions in App Lab and create and call functions with parameters for themselves, using them to control multiple elements on a screen.  Afterwards, students use for loops to iterate over an array, passing each element into a function.  Last, students use what they have learned to create a star catching game.
+              description_teacher: The lesson starts with a quick review of parameters, in the context of App Lab blocks that they students have seen recently.  Students then look at examples of parameters within user-created functions in App Lab and create and call functions with parameters for themselves, using them to control multiple elements on a screen.  Afterwards, students use for loops to iterate over an array, passing each element into a function.  Last, students use what they have learned to create a star catching game.
             Circuits and Physical Prototypes:
               name: Mga Circuit at Pisikal na mga Prototype
-              description_student: Mag-wire ng simpleng mga circuit para makalikha ng pisikal na prototype gamit ang mura at madaling hanapin na mga materyales.
-              description_teacher: Sa paghahanda para sa huling proyekto ng kabanatang ito, ang mga estudyante ay matututo kung paano gumawa ng isang prototype ng isang pisikal na bagay na naglalakip sa Circuit Playground. Gamit ang gabay sa pagplano ng na-model na proyekto, ang mga estudyante ay matututo kung paano mag-wire ng iilang mga simpleng circuit at para bumuo ng mga prototype na maaaring magpakita sa sinadyang disenyo ng isang produkto, gamit ang mura at madaling mahanap na mga materyales gaya ng cardboard at duct tape.
+              description_student: Wire simple circuits to create a physical prototype using cheap and easily found materials.
+              description_teacher: In preparation for this chapter's final project, students will learn how to develop a prototype of a physical object that includes a Circuit Playground. Using a modelled project planning guide, students will learn how to wire a couple of simple circuits and to build prototypes that can communicate the intended design of a product, using cheap and easily found materials such as cardboard and duct tape.
             Innovations in Computing:
               name: Mga Pagbabago sa Pag-Compute
             Arrays and Color LEDs:
               name: Mga Array at mga LED na mga kulay
             Innovations in Computing_:
               name: Mga Pagbabago sa Pag-Compute
-              description_student: Galugarin ang isang malawak na iba-ibang mga bago at makabagong mga plataporma sa pag-compute habang nagpapalawak sa iyong pag-uunawa kung ano ang isang kompyuter maaaring maging.
-              description_teacher: Para simulan ang huling yunit ng kursong ito, ang mga estudyante ay gagawa ng isang pananaliksik sa kawili-wiling makabagong likha sa pag-compute. Ang araling ito ay magpapakita sa mga estudyante sa iba-bang mga mas malawak na kaibahan ng mga maaaring makakaapekto sa mga anyo ng pag-compute (ano ang hitsura ng kompyuter) at ang mga puwang na makakaapekto sa pag-compute. Mamaya sa yunit na ito, ang mga estudyante ay titingin pabalik sa mga kagawamitan na kanilang natagpuan sa araling ito habang sila ay gumagawa ng sarili nilang pisikal na mga pag-compute na mga kagamitan.
+              description_student: Explore a wide variety of new and innovative computing platforms while expanding your understanding of what a computer can be.
+              description_teacher: To kick off the final unit of this course, students will do some research into interesting innovations in computing. This lesson will expose students to wider variety of computing form factors (what a computer looks like) and fields that are impacted by computing. Later in this unit students will look back on the devices they encountered in this lesson as they develop their own physical computing devices.
             Designing Screens with Code_:
               name: Pagdidisenyo ng mga Screen gamit ang Code
-              description_student: Sa pamamagitan ng pagbasa at pagpalit ng nilalaman sa screen ng app, ang klase ay magsisimulang bumuo ng mga apps na nangangailangan lang ng isang screen. Kahit na may isang screen lang, ang mga pamamaraang ito ay nagbibigay-daan sa napakaraming pakikipag-ugnayan sa mga gumagamit at kakayahan.
-              description_teacher: Sa Yunit 4, natutunan ng mga estudyante ang isang napakasimpleng pamamaraan para sa paggawa ng mga app sa App Lab na nangangailangan ng magkahiwalay na screen para sa karamihan sa mga pakikipag-ugnayan. Para mapalawak ang mga klase ng app na maaaring magawa ng mga estudyante, at para hikayatin sila na mag-isip ng mga bagong pamamaraan tungkol sa kung paano ang mga gumagamit nakikipag-ugnayan sa mga apps, aming ipapakilala ang `setProperty()` na bloke. Ang kautusan na ito ay maaaring gamitin para magtakda ng mga nilalaman at mga katangian sa sari-saring mga UI na elemento, nagbibigay-daan sa mga estudyante na magsulat ng mga programa na nagbabago sa mga impormasyon sa isang screen, sa halip na mano-manong maglikha ng kaparehang mga screen. Sa araling ito, ang mga estudyante ay bubuo ng mga simpleng app na nangangailangan lang ng isang screen, kung saan ang mga nilalaman ay pinalitan gamit ang `setProperty()`.
+              description_student: By reading and changing the content on the screen of an app, the class starts to build apps that only need a single screen. Even with just one screen, these techniques allow for lots of user interaction and functionality.
+              description_teacher: In Unit 4 students learned a very simple approach to app development in App Lab that required a separate screen for most interactions. To expand the kinds of apps that students can make, and to encourage them to think in new ways about how users interact with apps, we introduce the `setProperty()` block. This command can be used to set the content and properties of various UI elements, allowing students to write programs that update information on a single screen, instead of manually creating duplicate screens. In this lesson students build up simple apps that only require a single screen, the content of which is changed using `setProperty()`.
             The Circuit Playground_:
               name: Ang Circuit na Playground
-              description_student: Kilalanin ang Circuit Playground, ang circuit board na gagamitin sa buong yunit na ito. Gamit ang App Laba, gagawa ng mga programa na gumagamit ng Circuit Playground para sa output.
-              description_teacher: Sa araling ito, ang mga estudyante ay makakakuha sa kanilang unang pagkakataon na magsulat ng mga programa na gumagamit ng Circuit Playground. Pagkatapos sa unang pagsisiyasat sa board sa paningin at sa pag-iisip sa mga posibleng kakayahan, ang mga estudyante ay pupunta online kung saan matutunan nila ang pagsulat ng mga aplikasyon na kumukontrol sa LED. Sa pamamagitan ng pagsama-sama sa mga App Lab na mga screen kasama ang Circuit Playgrounds, ang mga estudyante ay unti-unting magsimulang pagsamahin ang mga elemento ng board bilang output na kagamitan habang gumagamit ng App Lab para sa input ng gumagamit.
+              description_student: Get to know the Circuit Playground, the circuit board that will be used throughout the rest of this unit. Using App Lab, develop programs that use the Circuit Playground for output.
+              description_teacher: In this lesson students get their first opportunity to write programs that use the Circuit Playground. After first inspecting the board visually and hypothesizing possibly functionalities, students move online where they will learn to write applications that control an LED. By combining App Lab screens with the Circuit Playgrounds, students can gradually start to integrate elements of the board as an ouput device while relying on App Lab for user input.
             Input Unplugged_:
               name: Input na Naka-Unplugged
-              description_student: Subukan ang dalawang magkaibang pamamaraan na ang app ay maaaring kumuha ng input mula sa gumagamit, habang natututo pa ng mas higit pa tungkol sa pag-program ng pinapatakbo ng mga event na modelo na ginagamit sa App Lab.
-              description_teacher: Bilang paghahanda para sa malalim na pagtingin sa pag-program gamit ang App Lab, ang mga estudyante ay tutuklas sa iilang maraming iba't ibang mga programa na isinulat sa parehong Game Lab at App Lab na nag-aasikaso sa pagkuha ng mga input mula sa mga gumagamit. Pagkatapos ihambing at tukuyin ang kaibahan ng dalawang pamamaraan na nakita nila sa halimbawa ng mga app, ang mga estudyante ay gagawa ng grupo para magsasadula ng dalawang iba't ibang mga modelo para sa input (mga kondisyonal na nasa isang infinite na loop at mga pangyayari na asynchronous) para makakuha ng mas malinaw na pag-uunawa kung paano sila gumagana.
+              description_student: Experience two different ways that an app can take input from a user, while learning more about the event-driven programming model used in App Lab.
+              description_teacher: In preparation for delving deeper into programming with App Lab, students will explore how a handful of different programs written in both Game Lab and App Lab handle taking input from the user. After comparing and contrasting the approaches they saw in the example apps, students group up to act out the two different models for input (conditionals in an infinite loop and asynchronous events) to gain a better understanding of how they work.
             Board Events_:
               name: Mga Pangyayari sa Board
-              description_student: Gamit ang hardware na mga button at switch, ang klase ay bubuo ng mga programa na gumagamit sa Circuit Playground bilang input.
-              description_teacher: Ang araling ito ay nag-transisyon sa mga estudyante para bigyang pansin ang Circuit Playground bilang isang mahigpit na pang-output na mga kagamitan patungo sa paggamit nito bilang isang kagamitan para sa parehong input at output. Nagsisimula sa paggamit ng mga hardware na mga button at switch, ang mga estudyante ay matututong gumamit ng `onBoardEvent()`, na kapareho sa `onEvent()`, para makakuha ng input mula sa kanilang mga Circuit na Playground.
+              description_student: Using the hardware buttons and switch, the class develops programs that use the Circuit Playground as an input.
+              description_teacher: This lesson transitions students from consider the Circuit Playground as strictly an output device towards using it as a tool for both input and output. Starting with the hardware buttons and switch,sing the hardware buttons and switch, students learn to use `onBoardEvent()`, analogously to `onEvent()`, in order to take input from their Circuit Playgrounds.
             Getting Properties_:
               name: Pagkuha ng mga Katangian
               description_student: This lesson introduces students to the getProperty block, which allows them to access the properties of different elements with code.  Students first practice using the block to determine what the user has input in various user interface elements. Students later use getProperty and setProperty together with the counter pattern to make elements move across the screen.  A new screen element, the slider, and a new event trigger, onChange, are also introduced.
               description_teacher: This lesson introduces students to the `getProperty` block, which allows them to access the properties of different elements with code.  Students first practice using the block to determine what the user has input in various user interface elements. Students later use `getProperty` and `setProperty` together with the counter pattern to make elements move across the screen.  A new screen element, the slider, and a new event trigger, `onChange`, are also introduced.
             Analog Input_:
               name: Analog na Input
-              description_student: Tuklasin ang mga analog na mga input na nasa Circuit na Playground, nagsulat ng mga programa na tumugon sa kapaligiran sa pamamagitan ng mga sensor.
-              description_teacher: Sa araling ito, ang mga estudyante ay tutuklas kung paano ang tatlong analog na mga sensor (tunog, ilaw, at temperatura) ay maaaring gamitin para magsulat ng mga programa na tumugon sa mga pagbabago sa kapaligiran. Ang gamit ng mga sensor na ito ay ang nagmamarka sa isang transisyon sa mga tuntunin kung paano ang mga gumagamit nakikipag-ugnayan sa isang programa. Sa pamamagitan ng paggamit ng mga sensor bilang input, ang mga gumagamit ng isang app ay hindi kinakailangang direktang makipag-ugnayan nito, o maaaring makipag-ugnayan kahit na hindi natatanto kung ano ang kanilang ginagawa.
+              description_student: Explore the analog inputs on the Circuit Playground, writing programs that respond to the environment through sensors.
+              description_teacher: In this lesson, students explore how the three analog sensors (sound, light, and temperature) can be used to write programs that respond to changes in the environment. The use of these sensors marks a transition in terms of how users interact with a program. By using sensors as an input, the user of an app doesn't have to directly interact with it at all, or may interact without actually realizing they are doing so.
             The Program Design Process_:
               name: Ang Proseso ng Pagdisenyo ng Programa
-              description_student: Ang araling ito ay nagpapakilala sa mga estudyante sa proseso na gagamitin nila para magdisenyo sa mga sarili nilang programa sa buong yunit na ito. Ang prosesong ito ay nakasentro sa isang gabay ng proyekto na nagtatanong sa mga estudyante na iguhit ang kanilang mga screen, magtukoy sa mga elemento ng Circuit Playground na gagamitin, bigyang-kahulugan ang mga variables, at ilarawan ang pangyayari bago sila magsimulang mag-program. Ang prosesong ito ay pareho sa Proseso ng Pag-Disenyo ng Laro na ginamit natin sa Yunit 3. Sa araling ito, ang mga estudyante ay magsisimula sa pamamagitan ng paglaro ng isang tug o' war na istilo ng laro kung saan ang code ay nakatago. Sila ay magtatalakay sa kung ano ang naisip nila na mga bahagi ng board, mga pangyayari, at mga variables ang kakailanganin para magawa ang programa. Pagkatapos ay bibigyan sila ng isang nakumpletong gabay ng proyekto na nagpapakita sa kanila sa isa sa pamamaraan para magawa ang proyekto. Ang mga estudyante ay gagabayan sa prosesong ito sa pamamagitan ng isang serye ng mga antas. Sa bandang huli ng aralin, ang mga estudyante ay magkakaraoon ng oportunidad na makagawa ng pagpapahusay sa programa para magawa nila itong sarili nila.
-              description_teacher: Ang araling ito ay nagpapakilala sa mga estudyante sa proseso na gagamitin nila para magdisenyo sa mga sarili nilang programa sa buong yunit na ito. Ang prosesong ito ay nakasentro sa isang gabay ng proyekto na nagtatanong sa mga estudyante na iguhit ang kanilang mga screen, magtukoy sa mga elemento ng Circuit Playground na gagamitin, bigyang-kahulugan ang mga variables, at ilarawan ang pangyayari bago sila magsimulang mag-program. Ang prosesong ito ay pareho sa Proseso ng Pag-Disenyo ng Laro na ginamit natin sa Yunit 3. Sa araling ito, ang mga estudyante ay magsisimula sa pamamagitan ng paglaro ng isang tug o' war na istilo ng laro kung saan ang code ay nakatago. Sila ay magtatalakay sa kung ano ang naisip nila na mga bahagi ng board, mga pangyayari, at mga variables ang kakailanganin para magawa ang programa. Pagkatapos ay bibigyan sila ng isang nakumpletong gabay ng proyekto na nagpapakita sa kanila sa isa sa pamamaraan para magawa ang proyekto. Ang mga estudyante ay gagabayan sa prosesong ito sa pamamagitan ng isang serye ng mga antas. Sa bandang huli ng aralin, ang mga estudyante ay magkakaraoon ng oportunidad na makagawa ng pagpapahusay sa programa para magawa nila itong sarili nila.
+              description_student: This lesson introduces students to the process they will use to design programs of their own throughout this unit. This process is centered around a project guide which asks students to sketch out their screens, identify elements of the Circuit Playground to be used, define variables, and describe events before they begin programming. This process is similar to the Game Design Process that we used in Unit 3. In this lesson students begin by playing a tug o' war style game where the code is hidden. They discuss what they think the board components, events, and variables would need to be to make the program. They are then given a completed project guide which shows one way to implement the project. Students are then walked through this process through a series of levels. At the end of the lesson students have an opportunity to make improvements to the program to make it their own.
+              description_teacher: This lesson introduces students to the process they will use to design programs of their own throughout this unit. This process is centered around a project guide which asks students to sketch out their screens, identify elements of the Circuit Playground to be used, define variables, and describe events before they begin programming. This process is similar to the Game Design Process that we used in Unit 3. In this lesson students begin by playing a tug o' war style game where the code is hidden. They discuss what they think the board components, events, and variables would need to be to make the program. They are then given a completed project guide which shows one way to implement the project. Students are then walked through this process through a series of levels. At the end of the lesson students have an opportunity to make improvements to the program to make it their own.
             Arrays and Color LEDs_:
               name: Mga Array at mga LED na mga kulay
             'Project: Make a Game_':
               name: 'Proyekto: Gumawa ng Laro'
             Making Music_:
               name: Paglikha ng Musika
-              description_student: Sa araling ito, ang mga estudyante ay gagamit ng buzzer sa buong lawak nito sa pamamagitan ng paggagawa ng mga tunog, mga nota, at mga awit gamit ang buzzer. Ang mga estudyante ay magsisimula sa maikling pagbabalik-aral sa mga parameter ng buzzer kung gaano kadalas at gaano katagal, pagkatapos ay pupunta sa konsepto ng mga nota. Ang mga nota ay nagbibigay-daan sa mga estudyante na limitahan ang kanilang mga sarili sa mga frequency na ginagamit sa mga Kanlurang musika at magbibigay ng isang antas ng paglalahat na nakakatulong sa kanila na maunawaan kung aling mga frequency ang maaaring maganda pakinggan nang magkasabay. Kapag ang mga estudyante ay nakakapatunog na ng mga nota sa buzzer, sila ay gagamit ng mga array para itago at paandarin ang sunod-sunod na mga nota, na bumubuo ng simpleng mga awitin.
-              description_teacher: Sa araling ito, ang mga estudyante ay gagamit ng buzzer sa buong lawak nito sa pamamagitan ng paggagawa ng mga tunog, mga nota, at mga awit gamit ang buzzer. Ang mga estudyante ay magsisimula sa maikling pagbabalik-aral sa mga parameter ng buzzer kung gaano kadalas at gaano katagal, pagkatapos ay pupunta sa konsepto ng mga nota. Ang mga nota ay nagbibigay-daan sa mga estudyante na limitahan ang kanilang mga sarili sa mga frequency na ginagamit sa mga Kanlurang musika at magbibigay ng isang antas ng paglalahat na nakakatulong sa kanila na maunawaan kung aling mga frequency ang maaaring maganda pakinggan nang magkasabay. Kapag ang mga estudyante ay nakakapatunog na ng mga nota sa buzzer, sila ay gagamit ng mga array para itago at paandarin ang sunod-sunod na mga nota, na bumubuo ng simpleng mga awitin.
+              description_student: In this lesson students will use the buzzer to its full extent by producing sounds, notes, and songs with the buzzer. Students start with a short review of the buzzer's frequency and duration parameters, then move on to the concept of notes.  Notes allow students to constrain themselves to frequencies that are used in Western music and provide a layer of abstraction that helps them to understand which frequencies might sound good together.  Onces students are able to play notes on the buzzer, they use arrays to hold and play sequences of notes, forming simple songs.
+              description_teacher: In this lesson students will use the buzzer to its full extent by producing sounds, notes, and songs with the buzzer. Students start with a short review of the buzzer's frequency and duration parameters, then move on to the concept of notes.  Notes allow students to constrain themselves to frequencies that are used in Western music and provide a layer of abstraction that helps them to understand which frequencies might sound good together.  Onces students are able to play notes on the buzzer, they use arrays to hold and play sequences of notes, forming simple songs.
             Arrays and For Loops_:
               name: Mga Array at mga For Loop
-              description_student: Ang pagsasama-sama sa mga _listahan_ at mga _for loop_ ay nagbibigay-daan sa iyo na makasulat ng code na nakakaapekto sa bawat elemento ng isang listahan, hindi alintana kung gaano na katagal ang mga ito. Ang klase ay gagamit sa istrakturang ito para magsulat ng mga programa na nagproproseso sa lahat ng mga elemento na nasa mga listahan, kalakip na ang listahan ng mga kulay ng LED.
-              description_teacher: Ang paggamit ng _for loop_ para mag-iterate sa lahat ng mga elemento sa isang array ay lubhang nakakatulong na construct sa karamihang mga pang-program na mga wika. Sa araling ito, ang mga estudyante ay matututo kung paano ang _for loop_ maaaring gamitin para ulitin ang code, at pagkatapos isama ito sa kung ano ang natutunan nila sa mga arrays para makasulat ng mga programa na nagproseso sa lahat ng mga elemento sa isang array. Ang mga estudyante ay gagamit ng mga for loop para makapunta sa bawat elemento sa isang listahan ng paisa-isa nang hindi sumusulat ng code para sa bawat elemento. Papunta sa dulo ng aralin, ang mga estudyante ay gagamit sa mga ito sa `colorLed` na listahan sa pisara para makalikha ng app na nagbabago sa lahat ng mga LED bawat beses na ang button ay pinindot.
+              description_student: Combining _lists_ and _for loops_ allows you to write code that impacts every element of a list, regardless of how long it is. The class uses this structure to write programs that process all of the elements in lists, include the list of color LEDs.
+              description_teacher: Using a _for loop_ to iterate over all of the elements in an array is a really useful construct in most programming languages. In this lesson, students learn the basics of how a _for loop_ can be used to repeat code, and then combine it with what they've already learned about arrays to write programs that process all elements in an array. Students use for loops to go through each element in a list one at a time without having to write code for each element. Towards the end of the lesson students will apply this with the `colorLed` list on the board to create an app that changes all of the LEDs each time a button is clicked.
             Accelerometer_:
               name: Accelerometer
-              description_student: Sa araling ito, ang mga estudyante ay tutuklas sa accelerometer at sa mga kakayahan nito. Sila ay magiging kabisado sa mga pangyayari nito at mga katangian, pati na rin ang paglikha ng maraming mga programa na gumagamit sa accelerometer katulad sa mga natagpuan mo na sigurong mga aplikasyon sa tunay na mundo.
-              description_teacher: Sa araling ito, ang mga estudyante ay tutuklas sa accelerometer at sa mga kakayahan nito. Sila ay magiging kabisado sa mga pangyayari nito at mga katangian, pati na rin ang paglikha ng maraming mga programa na gumagamit sa accelerometer katulad sa mga natagpuan mo na sigurong mga aplikasyon sa tunay na mundo.
+              description_student: In this lesson, students will explore the accelerometer and its capabilities. They’ll become familiar with its events and properties, as well as create multiple programs utilizing the accelerometer similar to those they’ve likely come across in real world applications.
+              description_teacher: In this lesson, students will explore the accelerometer and its capabilities. They’ll become familiar with its events and properties, as well as create multiple programs utilizing the accelerometer similar to those they’ve likely come across in real world applications.
             Functions with Parameters_:
               name: Mga function na meron mga parameter
-              description_student: Ang aralin ay magsisimula sa isang madaliang pagbalik-aral sa mga paramters, sa konteksto ng App Lab na mga bloke na bago lang nakita ng mga estudyante. Ang mga estudyante ay titingin sa ilang mga halimbawa ng mga parameter sa loob ng nilikha na mga functions ng gumagamit sa App Lab at maglikha at magtawag ng mga functions na may mga parameter para sa kanila, gumamit sa mga ito para magkontrol ng maraming mga elemento sa screen. Pagkatapos, ang mga estudyante ay gagamit ng mga for loops para mag-iterate sa isang array, magpasa sa bawat elemento sa function. Sa huli, ang mga estudyante ay gagamit sa natutunan nila para maglikha ng tagasalo ng bituin na laro.
-              description_teacher: Ang aralin ay magsisimula sa isang madaliang pagbalik-aral sa mga paramters, sa konteksto ng App Lab na mga bloke na bago lang nakita ng mga estudyante. Ang mga estudyante ay titingin sa ilang mga halimbawa ng mga parameter sa loob ng nilikha na mga functions ng gumagamit sa App Lab at maglikha at magtawag ng mga functions na may mga parameter para sa kanila, gumamit sa mga ito para magkontrol ng maraming mga elemento sa screen. Pagkatapos, ang mga estudyante ay gagamit ng mga for loops para mag-iterate sa isang array, magpasa sa bawat elemento sa function. Sa huli, ang mga estudyante ay gagamit sa natutunan nila para maglikha ng tagasalo ng bituin na laro.
+              description_student: The lesson starts with a quick review of parameters, in the context of App Lab blocks that they students have seen recently.  Students then look at examples of parameters within user-created functions in App Lab and create and call functions with parameters for themselves, using them to control multiple elements on a screen.  Afterwards, students use for loops to iterate over an array, passing each element into a function.  Last, students use what they have learned to create a star catching game.
+              description_teacher: The lesson starts with a quick review of parameters, in the context of App Lab blocks that they students have seen recently.  Students then look at examples of parameters within user-created functions in App Lab and create and call functions with parameters for themselves, using them to control multiple elements on a screen.  Afterwards, students use for loops to iterate over an array, passing each element into a function.  Last, students use what they have learned to create a star catching game.
             Circuits and Physical Prototypes_:
               name: Mga Circuit at Pisikal na mga Prototype
-              description_student: Mag-wire ng simpleng mga circuit para makalikha ng pisikal na prototype gamit ang mura at madaling hanapin na mga materyales.
-              description_teacher: Sa paghahanda para sa huling proyekto ng kabanatang ito, ang mga estudyante ay matututo kung paano gumawa ng isang prototype ng isang pisikal na bagay na naglalakip sa Circuit Playground. Gamit ang gabay sa pagplano ng na-model na proyekto, ang mga estudyante ay matututo kung paano mag-wire ng iilang mga simpleng circuit at para bumuo ng mga prototype na maaaring magpakita sa sinadyang disenyo ng isang produkto, gamit ang mura at madaling mahanap na mga materyales gaya ng cardboard at duct tape.
+              description_student: Wire simple circuits to create a physical prototype using cheap and easily found materials.
+              description_teacher: In preparation for this chapter's final project, students will learn how to develop a prototype of a physical object that includes a Circuit Playground. Using a modelled project planning guide, students will learn how to wire a couple of simple circuits and to build prototypes that can communicate the intended design of a product, using cheap and easily found materials such as cardboard and duct tape.
             'Project: Prototype an Innovation_':
               name: 'Proyekto: Mag-Prototype ng isang Pagbabago'
-              description_student: Bumuo ng malikhaing mga computing na kagamitan na iyong sariling dinisenyo, gamit ang lahat ng bagay na natutunan mo sa buong kursong ito.
-              description_teacher: 'Sa huling proyektong ito para sa kurso, ang mga estudyante ay maggrupo-grupo para makagawa at makasubok ng isang prototype para sa isang malikhain na computing na kagamitan na nakabase sa Circuit na Playground. Gamit ang mga input at mga output na nasa board, ang mga grupo ay lilikha ng mga programa na nagbibigay-daan para sa isang mas kawili-wili at pambihirang mga pakikipag-ugnayan sa mga gumagamit. '
+              description_student: Develop innovative computing devices of your own design, using everything you've learned throughout this course.
+              description_teacher: 'In this final project for the course, students team to develop and test a prototype for an innovative computing device based on the Circuit Playground. Using the inputs and outputs available on the board, groups will create programs that allow for interesting and unique user interactions. '
             'Project: Make a Game__':
               name: 'Proyekto: Gumawa ng Laro'
-              description_student: Ang mga estudyante ay magdadala sa mga natutunan nila mula sa unang kabatana, at gagawa ng isang app na dinisenyo nila para gumamit ng board para magpalabas ng mga impormasyon.
-              description_teacher: Ang mga estudyante ay magdadala sa mga natutunan nila mula sa unang kabatana, at gagawa ng isang app na dinisenyo nila para gumamit ng board para magpalabas ng mga impormasyon.
+              description_student: Students take what they've learned through chapter one, and develop an app of their own design that uses the board to output information.
+              description_teacher: Students take what they've learned through chapter one, and develop an app of their own design that uses the board to output information.
             Arrays and Color LEDs__:
               name: Mga Array at mga LED na mga kulay
-              description_student: Alamin kung paano ang mga listahan maaaring magamit para maglakip ng maraming mga halaga sa isang pangalan ng variable.
-              description_teacher: Ang isang array ay isang naayos na mga koleksyon ng mga aytem, karaniwan ay magkapareho ang tipo. Sa araling ito, ang mga estudyante ay matututo sa mga pamamaraan para magamit ang alinman sa tiyak o nagkataon na halaga mula sa isang listahan gamit ang index nito. Pagkatapos sila ay matututo kung paano mag-access sa array na colorLEDS na kumukontrol sa pag-uugali ng mga kulay ng LED na nasa Circuit Playground. Ang mga estudyante ay magkokontrol sa kulay at sa lakas ng bawat LED, pagkatapos ay gagamit sa kung ano ang natutunan nila para magprogram ng mga pattern ng ilaw para makalikha ng ilaw na pagtatanghal sa kanilang Circuit Playground.
+              description_student: Learn how lists can be used to store multiple values in a single variable name.
+              description_teacher: An array is an ordered collection of items, usually of the same type. In this lesson, students learn ways to access either a specific or random value from a list using its index.  They then learn how to access the colorLEDs array that controls the behavior of the color LEDs on the Circuit Playground.  Students will control the color and intensity of each LED, then use what they have learned to program light patterns to create a light show on their Circuit Playground.
             CSD Post-Course Survey:
               name: CSD Post-Course Survey
         csd3-draft:
@@ -5000,7 +5014,7 @@ fil:
               name: Gamitin ang Proseso ng Pagdisenyo ng Laro
             'Project: Design a Game':
               name: 'Proyekto: Pagdisenyo ng Laro'
-        csd5:
+        csd5-2017:
           title: CSD Yunit 5 - Mga Datos at Lipunan
           description_audience: ''
           description_short: Matututo kung paano ang mga tao gumamit ng mga kompyuter para malutas ang mga problem sa mga datos.
@@ -5064,8 +5078,8 @@ fil:
               description_teacher: Sa araling ito, natutunan ng mga estudyante ang tungkol sa sistema ng numerong binary. Gamit ang isang kaha ng baraha na nagrepresenta sa mga lugar ng halaga sa isang binary (base-2) na sistema ng numero sa pamamagitan ng isang koleksyon ng mga tuldok, ang mga estudyante ay gagawin ang mga bits na "on" o "off" sa pamamagitan ng pagpatihaya o pagbaling sa mga baraha, pagkatapos ay pagmasdan ang mga numero na nagresulta mula sa iba't ibang mga pattern. Dahan-dahan, ang mga estudyante ay palawakin pa ang pattern sa isang pangkalahatang 4-bit na sistema.
             8-bit Numbers:
               name: 8-bit na mga Numero
-              description_student: Ang mga estudyante ay magbabalik-aral sa konsepto ng mga binary na mga numero, at mag-uusap na kakailanganin nilang malaman ang haba ng bit sa bawat numero para ma-decode nila ang isang serye ng mga bits. Pagkatapos ay gagawa sila ng isang flippy-do, isang pagmanipula sa papel na makakatulong sa kanila para mag-encode at mag-decode ng mga 8-bit na mga numero (0-255). Pagkatapos ang pagsasanay gamit ang flippy-do, ang mga estudyante ay tatalakay sa kung paano nila palawakin ang standardisasyon sa ibang mga tipo ng mga datos.
-              description_teacher: Ang mga estudyante ay magbabalik-aral sa konsepto ng mga binary na mga numero, at mag-uusap na kakailanganin nilang malaman ang haba ng bit sa bawat numero para ma-decode nila ang isang serye ng mga bits. Pagkatapos ay gagawa sila ng isang flippy-do, isang pagmanipula sa papel na makakatulong sa kanila para mag-encode at mag-decode ng mga 8-bit na mga numero (0-255). Pagkatapos ang pagsasanay gamit ang flippy-do, ang mga estudyante ay tatalakay sa kung paano nila palawakin ang standardisasyon sa ibang mga tipo ng mga datos.
+              description_student: Students review the concept of binary numbers, and discuss that they need to know the bit-length of each number in order to decode a series of bits.  They then made a flippy-do, a paper manipulative that will help them to encode and decode 8-bit numbers (0-255).  After practicing with the flippy-do, students discuss how they could extend that standardization to the other types of data.
+              description_teacher: Students review the concept of binary numbers, and discuss that they need to know the bit-length of each number in order to decode a series of bits.  They then made a flippy-do, a paper manipulative that will help them to encode and decode 8-bit numbers (0-255).  After practicing with the flippy-do, students discuss how they could extend that standardization to the other types of data.
             Encryption:
               name: Pag-Encrypt
               description_student: Ang mga estudyante ay magkakaroon ng talakayan sa iba't ibang mga antas ng seguridad na gusto nila para sa kanilang mga personal na mga datos. Kapag ang klase ay nagkabuo ng pag-uunawa sa kahalagahan ng privacy, pagkatapos ay matutunan nila ang tungkol sa proseso ng pag-encrypt ng mga impormasyon sa pamamagitan ng pag-encipher ng nota para sa isang kasamahan at pag-decipher sa nota ng kasaman. Ang klase ay magtatapos sa isang diskusyon tungkol sa kahalagahan ng parehong pisikal at diginal na seguridad.
@@ -6932,6 +6946,14 @@ fil:
               name: CSP post survey 2018 staging
             CSD post survey 2018 staging:
               name: CSD post survey 2018 staging
+            CSD pre survey 2018 staging:
+              name: CSD pre survey 2018 staging
+            CSP pre survey 2018 staging:
+              name: CSP pre survey 2018 staging
+            CSP mid survey 2018 stagin:
+              name: CSP mid survey 2018 stagin
+            CSP mid survey 2018 staging:
+              name: CSP mid survey 2018 staging
           title: Lahat ng mga surbey
           description_audience: ''
           description_short: Lugar para i-stage at subukan ang mga surbey ng Code.org
@@ -6976,7 +6998,7 @@ fil:
           description_audience: ''
           description_short: ''
           description: ''
-        csp-explore:
+        csp-explore-2017:
           stages:
             new stage:
               name: bagong yugto
@@ -6989,14 +7011,14 @@ fil:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
               name: Tech na Setup - Iyong AP Digital na Portfolio at Ibang mga Kagamitan
             'Setup: Digital Portfolio and Other Tools':
-              name: 'Setup: Digital na Portfolio at Ibang mga Kagamitan'
+              name: 'Setup: Digital Portfolio and Other Tools'
             Post-Course Survey:
               name: Post-Course Survey
           title: Tuklasin - Paghahanda sa AP Performance Task
           description_audience: ''
           description_short: Mga aralin at mapagkukunan ng kaalaman para makayulong sa mga estudyante na maghanda at para makumpleto ang AP Pagtuklas sa Performance na mga Gawain.
           description: "Ang mga araling ito ay nandito para makatulong sa iyo na maunawaa, makahanda, at makagawa ng AP Explore Performance Task. Bawat \"aralin\" ay naglalaman ng mga link sa nakakatulong na mga dokumento para ang iyong guro ay makatulong sa iyo. TANDAAN: ang pangalawang aytem sa unang aralin ay walang direktang kinalaman sa Explore PT, ngunit sumasaklaw sa pangkaraniwan na tech setup at mga kagamitan na kailangan mong gawin para sa mga sari-saring mga elemento sa parehong Explore at Create na mga gawain.\\r\n\\r\nAng yunit na ito ay huling binago noong Nobyembre, 2017. Magbasa pa tungkol sa mga nabago sa kurikulum sa forum.code.org/c/csp/updates."
-        csp-create:
+        csp-create-2017:
           stages:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
               name: Tech na Setup - Iyong AP Digital na Portfolio at Ibang mga Kagamitan
@@ -7697,6 +7719,74 @@ fil:
               name: Mga Kondisyonal sa Bee
             Until Loops in Maze:
               name: Until Loops in Maze
+            Programming in Maze:
+              name: Pag-Program sa Maze
+            Debugging in Maze:
+              name: Pagde-debug sa Maze
+            Programming in Collector:
+              name: Pag-program sa Kolektor
+            Programming in Artist:
+              name: Pag-program sa Artist
+            'Loops: Getting Loopy':
+              name: 'Mga Loops: Pagiging Loopy'
+            Loops with Rey and BB-8:
+              name: Mga Loops kasama sina Rey at BB-8
+            Copyright and Creativity:
+              name: Copyright and Creativity
+            'Concept Practice with Minecraft ':
+              name: 'Concept Practice with Minecraft '
+            Nested Loops in Bee:
+              name: Mga Naka-Nest na mga Loop sa Bee
+            Nested Loops in Frozen:
+              name: Naka-nest na mga Loop sa Frozen
+            Conditionals with Cards:
+              name: Mga Conditional gamit ang mga Card
+            Conditionals & Loops in Harvester:
+              name: Mga Kondisyonal & Mga Loop sa Harvester
+            'Functions: Songwriting':
+              name: 'Mga Function: Pagsusulat ng Awit'
+            Functions in Minecraft:
+              name: Functions in Minecraft
+            Functions in Harvester:
+              name: Functions in Harvester
+            Functions in Artist:
+              name: Mga Function sa Artist
+            Screen Out the Mean:
+              name: I-Screen Palabas ang Mean
+            Determine the Concept:
+              name: Tukuyin ang Konsepto
+            Build a Flappy Game:
+              name: Bumuo ng Flappy na Laro
+            The Power of Words:
+              name: Ang Kapangyarihan ng mga Salita
+            Envelope Variables:
+              name: Balot ng mga Variables
+            Variables as Constant in Artist:
+              name: Variables as Constant in Artist
+            Variables that Change in Bee:
+              name: Variables that Change in Bee
+            Variables that Change in Artist:
+              name: Variables that Change in Artist
+            For Loop Fun:
+              name: Saya sa For Loop
+            Learning Sprites with Sprite Lab:
+              name: Learning Sprites with Sprite Lab
+            Alien Dance Party with Sprite Lab:
+              name: Alien Dance Party with Sprite Lab
+            Pet Giraffe with Sprite Lab:
+              name: Pet Giraffe with Sprite Lab
+            Binary Bracelets:
+              name: Binary na mga Pulseras
+            'Unplugged: Binary':
+              name: 'Unplugged: Binary'
+            Artist Binary:
+              name: Artist na Binary
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Pag-crowdsourcing
+            Relay Programming:
+              name: Relay Programming
         courseb-2018:
           title: Kursong B
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
@@ -8468,6 +8558,8 @@ fil:
               name: Yunit 1 Kabanata 2 Pagtatasa
               description_student: ''
               description_teacher: ''
+            Sending Text:
+              name: Sending Text
         csd1-2018:
           title: CSD Unit 1 - Problem Solving
           description: " \\r\nUnit 1 is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\\r\n"
@@ -8733,6 +8825,8 @@ fil:
               name: Rapid Research - Format Showdown
             Lossy vs Lossless Compression:
               name: Lossy vs Lossless Compression
+            Unit 2 Assessment:
+              name: Unit 2 Assessment
         csp3-2018:
           title: CSP Unit 3 - Intro to Programming
           description: "Ang yunit na ito ay nagpapakilala sa mga pundasyonal na mga konsepto sa pag-program sa kompyuter, kung saan nagbigay diin ito sa abilidad na makagawa ng mayaman, at inter-aktib na mga apps. Ang kursong ito ay gumagamit ng JavaScript bilang wika ng pang-program, at App Lab bilang kapaligiran sa pag-program para makabuo ng mga apps, ngunit ang mga konsepto na matutunan sa mga araling ito ay lumakip sa lahat ng mga wika ng pang-program at mga kagamitan.\\r\n\\r\nAng yunit na ito ay huling binago noong ika-30 ng Oktubre, 2017. Magbasa pa tungkol sa mga pagbabago sa kurikulum sa forum.code.org/c/csp/updates."
@@ -8787,6 +8881,8 @@ fil:
               name: Mangyaring kumpletohin ang surbey ng kalagitnaang kurso ng CSP!
               description_student: ''
               description_teacher: ''
+            Creating Functions with Parameters:
+              name: Paglikha ng mga Functions na may mga Parameter
         csp-explore-2018:
           title: Tuklasin - Paghahanda sa AP Performance Task
           description: "Ang mga araling ito ay nandito para makatulong sa iyo na maunawaa, makahanda, at makagawa ng AP Explore Performance Task. Bawat \"aralin\" ay naglalaman ng mga link sa nakakatulong na mga dokumento para ang iyong guro ay makatulong sa iyo. TANDAAN: ang pangalawang aytem sa unang aralin ay walang direktang kinalaman sa Explore PT, ngunit sumasaklaw sa pangkaraniwan na tech setup at mga kagamitan na kailangan mong gawin para sa mga sari-saring mga elemento sa parehong Explore at Create na mga gawain.\\r\n\\r\nAng yunit na ito ay huling binago noong Nobyembre, 2017. Magbasa pa tungkol sa mga nabago sa kurikulum sa forum.code.org/c/csp/updates."
@@ -8877,6 +8973,8 @@ fil:
               name: Paghahanap ng mga Uso sa Pagpapakita
             Check Your Assumptions:
               name: Suriin ang Iyong mga Palagay
+            Unit 4 Assessment:
+              name: Unit 4 Assessment
         csp5-2018:
           title: CSP Unit 5 - Building Apps
           description: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
@@ -9051,6 +9149,8 @@ fil:
               name: Fish Tank - Creating Sprites
             Alien Dance Party - Input:
               name: Alien Dance Party - Input
+            Virtual Pet - Interactions:
+              name: Virtual Pet - Interactions
           title: Introduction to Sprite Lab (PILOT)
           description_audience: Course E/F Students
           description_short: This is a pilot course for Code.org's new Sprite Lab tool for Courses E and F
@@ -9227,6 +9327,14 @@ fil:
               name: Novice Reflection Overview
             Monday:
               name: Monday
+            Day 1:
+              name: Day 1
+            Day 2:
+              name: Day 2
+            Day 3:
+              name: Day 3
+            Day 4:
+              name: Day 4
           title: CS Discoveries Novice Reflections 2018-2019
           description_audience: CS Discoveries Facilitators in Training 2018-2019
           description_short: 'Novice reflection materials for CS Discoveries facilitators in training '
@@ -9243,6 +9351,16 @@ fil:
               name: Huwebes
             Wrap Up:
               name: Tapusin Na
+            Apprentice Reflection Overview:
+              name: Apprentice Reflection Overview
+            Day 1:
+              name: Day 1
+            Day 2:
+              name: Day 2
+            Day 3:
+              name: Day 3
+            Day 4:
+              name: Day 4
           title: CS Discoveries Apprentice Reflections 2018-2019
           description_audience: CS Discoveries Facilitators in Training 2018-2019
           description_short: 'Apprentice reflection materials for CS Discoveries facilitators in training '
@@ -9259,6 +9377,16 @@ fil:
               name: Huwebes
             Wrap Up:
               name: Tapusin Na
+            Monday:
+              name: Monday
+            Day 1:
+              name: Day 1
+            Day 2:
+              name: Day 2
+            Day 3:
+              name: Day 3
+            Day 4:
+              name: Day 4
           title: CS Principles Novice Reflections 2018-2019
           description_audience: CS Principles Facilitators in Training 2018-2019
           description_short: 'Novice reflection materials for CS Principles facilitators in training '
@@ -9275,7 +9403,95 @@ fil:
               name: Huwebes
             Wrap Up:
               name: Tapusin Na
-          title: CS Principles Novice Reflections 2018-2019
+            Apprentice Reflection Overview:
+              name: Apprentice Reflection Overview
+            Day 1:
+              name: Day 1
+            Day 2:
+              name: Day 2
+            Day 3:
+              name: Day 3
+            Day 4:
+              name: Day 4
+          title: CS Principles Apprentice Reflections 2018-2019
           description_audience: CS Principles Facilitators in Training 2018-2019
-          description_short: 'Novice reflection materials for CS Principles facilitators in training '
+          description_short: 'Apprentice reflection materials for CS Principles facilitators in training '
           description: This is the set of apprentice reflections for Code.org CS Principles facilitators in training during their 5-day summer workshop. Here you will find reflection prompts for each day of your in-person 5-day summer workshop. This questions will be the foundation of work we do at the Facilitator Training Weekend.
+        pre-express-2018:
+          title: Hindi Marunong Magbasa Express
+          description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
+          description_short: 'Isang introduksyon sa computer science para sa mga hindi marunong magbasa: pinagsama ang pinakamahusay sa aming kindergarten at unang baitang na mga kurso.'
+          description_audience: 'Mga Edad: 4-8'
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Pag-dedebug: Hindi nakitang mga Bug'
+              description_student: ''
+              description_teacher: ''
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: 'Pagtitiyaga & Mga Kabiguan: Si Stevie at ang mga Holen'
+              description_student: ''
+              description_teacher: ''
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Mga Totoong-buhay na Algoritmo: Pagtatanim ng Buto'
+              description_student: ''
+              description_teacher: ''
+            Learn to Drag and Drop:
+              name: Matutong Mag-Drag at Mag-Drop
+              description_student: ''
+              description_teacher: ''
+            'Online Safety: Your Digital Footprint':
+              name: 'Online Safety: Your Digital Footprint'
+              description_student: ''
+              description_teacher: ''
+            'Programming: My Robotic Friends':
+              name: 'Pag-Program: Ang Aking mga Robotik na mga Kaibigan'
+              description_student: ''
+              description_teacher: ''
+            Programming in Maze:
+              name: Pag-Program sa Maze
+              description_student: ''
+              description_teacher: ''
+            'Programming: Star Wars':
+              name: 'Pag-Program: Star Wars'
+              description_student: ''
+              description_teacher: ''
+            'Loops: My Loopy Robotic Friends':
+              name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
+              description_student: ''
+              description_teacher: ''
+            Loops in Collector:
+              name: Loops in Collector
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+              description_student: ''
+              description_teacher: ''
+            Events in Play Lab:
+              name: Events in Play Lab
+              description_student: ''
+              description_teacher: ''
+            Spelling Bee:
+              name: Spelling Bee
+              description_student: ''
+              description_teacher: ''
+            Move It, Move It:
+              name: Galawin ito, Galawin ito
+            Sequencing with Scrat:
+              name: Sequencing with Scrat
+            Your Digital Footprint:
+              name: Ang Iyong Digital na Bakas
+            Programming in Ice Age:
+              name: Programming in Ice Age
+            Copyright and Creativity:
+              name: Copyright and Creativity
+            Programming with Rey and BB-8:
+              name: Pag-Program kasama sina Rey at BB-8
+            Loops in Ice Age:
+              name: Loops in Ice Age
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: 'Persistence & Frustration: Stevie and the Big Project'

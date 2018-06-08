@@ -9035,6 +9035,9 @@
       courseB_collector_loops_challenge2_instruction: Bailímis na seoda go léir! Cabhraigh
         liom dul trí gach ró ansin filleadh ar thús an chéad ró eile. An bhfeiceann
         tú patrún?
+      courseB_collector_loops_challenge2_2018_instruction: Bailímis na seoda go léir!
+        Cabhraigh liom dul trí gach ró ansin filleadh ar thús an chéad ró eile. An
+        bhfeiceann tú patrún?
       courseB_collector_loops_challenge2a_instruction: Cabhraigh le Laurel ar a laghad
         **5** sheoid a bhailiú chun an dúshlán seo a chríochnú.
       courseB_collector_loops_challenge2a_2018_instruction: Cabhraigh le Laurel ar
@@ -11893,6 +11896,8 @@
         dhána a aimsiú. Nó b'fhéidir go dtiocfaidh fearg orm!
       courseF_maze_ramp7_instruction: Úsáid ar fhoghlaim tú go dtí seo chun cabhrú
         leis an éan an mhuc a bhaint amach!
+      courseF_playlab_brokenText_instruction: In the rest of this stage, we're going
+        to build a game that you control!
       courseF_playlab_embed_vars_instruction: |-
         Answer Pegleg the Pirate's questions.
         What happens if you enter the codename "password"? What about some other

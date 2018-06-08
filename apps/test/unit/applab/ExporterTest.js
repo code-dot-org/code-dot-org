@@ -464,10 +464,12 @@ describe('The Exporter,', function () {
           'my-app/',
           'my-app/App.js',
           'my-app/CustomAsset.js',
+          'my-app/DataWarning.js',
           'my-app/app.json',
           'my-app/appassets/',
           'my-app/appassets/icon.png',
           'my-app/appassets/splash.png',
+          'my-app/appassets/warning.png',
           'my-app/assets/',
           'my-app/assets/README.txt',
           'my-app/assets/applab-api.j',
@@ -497,7 +499,7 @@ describe('The Exporter,', function () {
         assert.property(zipFiles, 'my-app/assets/applab-api.j');
         assert.equal(
           zipFiles['my-app/assets/applab-api.j'],
-          `${getAppOptionsFile()}\n${COMMON_LOCALE_JS_CONTENT}\n${APPLAB_LOCALE_JS_CONTENT}\n${APPLAB_API_JS_CONTENT}`
+          `${getAppOptionsFile(true)}\n${COMMON_LOCALE_JS_CONTENT}\n${APPLAB_LOCALE_JS_CONTENT}\n${APPLAB_API_JS_CONTENT}`
         );
       });
 

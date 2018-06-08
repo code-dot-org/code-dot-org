@@ -186,6 +186,7 @@ Dashboard::Application.routes.draw do
         get "/#{key}/:channel_id/view", to: 'projects#show', key: key.to_s, as: "#{key}_project_view", readonly: true
         get "/#{key}/:channel_id/embed", to: 'projects#show', key: key.to_s, as: "#{key}_project_iframe_embed", iframe_embed: true
         get "/#{key}/:channel_id/remix", to: 'projects#remix', key: key.to_s, as: "#{key}_project_remix"
+        get "/#{key}/:channel_id/export_config", to: 'projects#export_config', key: key.to_s, as: "#{key}_project_export_config"
       end
       get '/angular', to: 'projects#angular'
     end
@@ -203,6 +204,8 @@ Dashboard::Application.routes.draw do
   get '*i18npath/lang/:locale', to: 'home#set_locale'
 
   resources :blocks, constraints: {id: /[^\/]+/}
+
+  resources :shared_blockly_functions, path: '/functions'
 
   resources :levels do
     get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'
@@ -481,8 +484,13 @@ Dashboard::Application.routes.draw do
     post 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#send_email'
 
     get 'workshop_survey/day/:day', to: 'workshop_daily_survey#new_general'
+    get 'workshop_survey/post/:enrollment_code', to: 'workshop_daily_survey#new_post', as: 'new_workshop_survey'
     get 'workshop_survey/facilitators/:session_id(/:facilitator_index)', to: 'workshop_daily_survey#new_facilitator'
     get 'workshop_survey/thanks', to: 'workshop_daily_survey#thanks'
+
+    get 'post_course_survey/thanks', to: 'post_course_survey#thanks'
+    post 'post_course_survey/submit', to: 'post_course_survey#submit'
+    get 'post_course_survey/:course_initials', to: 'post_course_survey#new'
 
     namespace :application do
       get 'facilitator', to: 'facilitator_application#new'
@@ -513,7 +521,6 @@ Dashboard::Application.routes.draw do
     get 'workshop_materials', action: 'admin_index', controller: 'workshop_material_orders'
 
     get 'pre_workshop_survey/:enrollment_code', action: 'new', controller: 'pre_workshop_survey', as: 'new_pre_workshop_survey'
-    get 'workshop_survey/:enrollment_code', action: 'new', controller: 'workshop_survey', as: 'new_workshop_survey'
     get 'teachercon_survey/:enrollment_code', action: 'new', controller: 'teachercon_survey', as: 'new_teachercon_survey'
 
     get 'generate_csf_certificate/:enrollment_code', controller: 'csf_certificate', action: 'generate_certificate'

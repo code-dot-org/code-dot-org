@@ -3,7 +3,7 @@ require_relative '../src/database'
 require_relative 'sequel_test_case'
 require 'minitest/autorun'
 require 'mocha/mini_test'
-require_relative '../forms/hoc_signup_2017'
+require_relative '../src/forms'
 
 DEFAULT_DATA = {
   email_s: 'fake@example.com',
@@ -26,7 +26,7 @@ class FormHelpersTest < SequelTestCase
         {
           kind: DEFAULT_KIND,
           secret: DEFAULT_SECRET,
-          data: {name: 'fake_name', email: 'fake@example.com'},
+          data: {name: 'fake_name', email: 'fake@example.com'}.to_json,
           email: 'fake@example.com',
           created_at: DateTime.now,
           updated_at: DateTime.now,

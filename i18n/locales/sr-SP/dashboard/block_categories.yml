@@ -1,0 +1,49 @@
+sr:
+  data:
+    block_categories:
+      Actions: Акције
+      Loops: Петље
+      Functions: Функције
+      Color: Боја
+      Brushes: Brushes
+      Math: Математика
+      Logic: Логика
+      Variables: Променљиве
+      Number: Number
+      String: String
+      Image: Image
+      Boolean: Boolean
+      Conditionals: Кондиционали
+      Events: Догађаји
+      Games/Score: Games/Score
+      Comments: Comments
+      Category: Category
+      Prebuilt: Prebuilt
+      Text: текст
+      Picker: Picker
+      Comment: Comment
+      'Variables ': 'Variables '
+      everythingelse: everythingelse
+      numbers: numbers
+      Numbers: Numbers
+      Input: Input
+      Default: Default
+      Sprites: Sprites
+      Behaviors: Behaviors
+      World: World
+      Sprite: Sprite
+      Brush: Brush
+      Make Sprite: Make Sprite
+      Movement: Movement
+      Start: Покрени
+      Groups: Groups
+      Booleans: Booleans
+      Functional: Functional
+      Predefined: Predefined
+      test: тест
+      test2: test2
+      Foo: Foo
+      Name: Име
+      NEW BLOCKS: NEW BLOCKS
+      Game/Score: Game/Score
+      Function: Функција

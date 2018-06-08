@@ -161,10 +161,13 @@ export const finishEditingSection = () => (dispatch, getState) => {
   dispatch({type: EDIT_SECTION_REQUEST});
   const state = getState().teacherSections;
   const section = state.sectionBeingEdited;
+
+  const dataUrl = isAddingSection(state) ? '/dashboardapi/sections' : `/sections/${section.id}`;
+  const httpMethod = isAddingSection(state) ? 'POST' : 'PATCH';
   return new Promise((resolve, reject) => {
     $.ajax({
-      url: isAddingSection(state) ? '/dashboardapi/sections' : `/v2/sections/${section.id}/update`,
-      method: 'POST',
+      url: dataUrl,
+      method: httpMethod,
       contentType: 'application/json;charset=UTF-8',
       data: JSON.stringify(serverSectionFromSection(section)),
     }).done(result => {
@@ -196,17 +199,10 @@ export const editSectionLoginType = (sectionId, loginType) => dispatch => {
 export const asyncLoadSectionData = (id) => (dispatch) => {
   dispatch({type: ASYNC_LOAD_BEGIN});
   // If section id is provided, load students for the current section.
-  const courseVersions = true;
-
   dispatch({type: ASYNC_LOAD_BEGIN});
   let apis = [
     '/dashboardapi/sections',
-
-    // The server by default only returns stable courses (version year 2017).
-    // When the courseVersions experiment is enabled, we also ask the
-    // server for other version years (e.g. 2018) of those courses.
-    `/dashboardapi/courses${courseVersions ? '?allVersions=1' : ''}`,
-
+    `/dashboardapi/courses`,
     '/dashboardapi/sections/valid_scripts'
   ];
   if (id) {
@@ -421,11 +417,8 @@ export default function teacherSections(state=initialState, action) {
         path: `/courses/${course.script_name}`
       };
 
-      // Borrow the fields we need to display the assignment family from the
-      // course in that family with the default version year, 2017. This assumes
-      // that course has a display name suitable or describing all versions in
-      // the family like "CS Discoveries", not a version-specific name like "CS
-      // Discoveries 2017".
+      // Use the assignment family fields from the course in that family with
+      // the default version year, 2017.
       if (course.version_year === defaultVersionYear) {
         assignmentFamilies.push(_.pick(course, assignmentFamilyFields));
       }
@@ -436,32 +429,38 @@ export default function teacherSections(state=initialState, action) {
 
     action.validScripts.forEach(script => {
       const assignId = assignmentId(null, script.id);
+
+      // Put each script in its own assignment family with the default version
+      // year, unless those values were provided by the server.
+      const assignmentFamilyName = script.assignment_family_name || script.script_name;
+      const assignmentFamilyTitle = script.assignment_family_title || script.name;
+      const versionYear = script.version_year || defaultVersionYear;
+      const versionTitle = script.version_title || defaultVersionYear;
+
       validAssignments[assignId] = {
         ...script,
         courseId: null,
         scriptId: script.id,
         assignId,
         path: `/s/${script.script_name}`,
-
-        // For now we put each script in its own assignment family. When we
-        // implement versioning for scripts we will start computing these values
-        // on the server.
-        assignment_family_name: script.script_name,
-        version_year: defaultVersionYear,
-        version_title: defaultVersionYear
+        assignment_family_name: assignmentFamilyName,
+        version_year: versionYear,
+        version_title: versionTitle
       };
 
       // Do not add assignment families for scripts belonging to courses. To assign
       // them, one must first select the corresponding course from the assignment
       // family dropdown, and then select the script from the secondary dropdown.
       if (!secondaryAssignmentIds.includes(assignId)) {
-        // Scripts currently have only one version, so each script will form its
-        // own assignment family.
-        assignmentFamilies.push({
-          ..._.pick(script, assignmentFamilyFields),
-          assignment_family_title: script.name,
-          assignment_family_name: script.script_name
-        });
+        // Use the assignment family fields from the script in that family with
+        // the default version year, 2017.
+        if (versionYear === defaultVersionYear) {
+          assignmentFamilies.push({
+            ..._.pick(script, assignmentFamilyFields),
+            assignment_family_title: assignmentFamilyTitle,
+            assignment_family_name: assignmentFamilyName
+          });
+        }
       }
     });
 

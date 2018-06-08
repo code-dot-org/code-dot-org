@@ -1,4 +1,5 @@
 class BlocksController < ApplicationController
+  before_action :require_levelbuilder_mode, except: :index
   load_and_authorize_resource find_by: :name
 
   def new
@@ -26,6 +27,8 @@ class BlocksController < ApplicationController
     @block.destroy
     redirect_to(blocks_path, notice: "Block Deleted")
   end
+
+  private
 
   def create_params
     update_params

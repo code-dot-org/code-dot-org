@@ -1,6 +1,10 @@
 require 'test_helper'
 
 class BlockTest < ActiveSupport::TestCase
+  teardown do
+    FileUtils.rm_rf "config/blocks/fakeLevelType"
+  end
+
   test 'Block writes to and loads back from file' do
     block = create :block
     json_before = block.block_options
@@ -15,7 +19,6 @@ class BlockTest < ActiveSupport::TestCase
     assert_equal block.helper_code, seeded_block.helper_code
 
     seeded_block.destroy
-    Dir.rmdir "config/blocks/fakeLevelType"
   end
 
   test 'Block writes to and loads back from file without helper code' do
@@ -32,7 +35,6 @@ class BlockTest < ActiveSupport::TestCase
     assert_nil seeded_block.helper_code
 
     seeded_block.destroy
-    Dir.rmdir "config/blocks/fakeLevelType"
   end
 
   test 'Block deletes files after being destroyed' do
@@ -42,7 +44,17 @@ class BlockTest < ActiveSupport::TestCase
     block.destroy
     refute File.exist? "config/blocks/#{block.level_type}/#{block.name}.json"
     refute File.exist? "config/blocks/#{block.level_type}/#{block.name}.js"
+    assert_empty Dir.glob("config/blocks/fakeLevelType/*")
+  end
 
-    Dir.rmdir "config/blocks/fakeLevelType"
+  test 'load_blocks destroys old blocks' do
+    old_block = create :block
+    new_block = create :block
+    File.delete old_block.json_path
+
+    Block.load_blocks
+
+    assert_nil Block.find_by(name: old_block.name)
+    assert_not_nil Block.find_by(name: new_block.name)
   end
 end

@@ -1579,6 +1579,8 @@ tr:
         New Play Lab Project_callout1: Kategorilere ait blokları görmek için tıklayın! Çalışma alanına sürükleyin ve onları programınıza ekleyin
         New Play Lab Project_callout2: Programınızı denemek içi "Çalıştır"a basın
         sign_in_to_save_project: Projenize daha sonra erişmek ister misiniz? Hesabınıza bu projeyi kaydetmek için oturum açın!
+      courseF_playlab_brokenText_callout:
+        courseF_playlab_variables5c_1: Değişken bloğunuzu burada bulabilirsiniz.
       courseF_playlab_embed_vars_callout: { }
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: The toolbox has been organized into categories to make it easier to find the blocks you need.

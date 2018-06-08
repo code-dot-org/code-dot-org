@@ -72,7 +72,7 @@ class ScriptConstantsTest < Minitest::Test
   describe 'ScriptConstants::script_in_any_category?' do
     it 'finds artist and csd1' do
       assert ScriptConstants.script_in_any_category?('artist')
-      assert ScriptConstants.script_in_any_category?('csd1')
+      assert ScriptConstants.script_in_any_category?('csd1-2017')
     end
 
     it 'does not find nonexistent scripts' do

@@ -128,7 +128,8 @@ pl:
     field_is_required: "jest wymagane"
     accept_terms: "Musisz wyrazić zgodę, aby utworzyć konto"
     error: "Wystąpił błąd."
-    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: "Tak"
     email_preference_no: "Nie"
     email_preference_required: "You must specify an email preference."
@@ -467,6 +468,8 @@ pl:
   gender:
     male: 'Mężczyzna'
     female: 'Kobieta'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: 'Wolę nie odpowiadać'
   user_type:
     student: 'Uczeń'

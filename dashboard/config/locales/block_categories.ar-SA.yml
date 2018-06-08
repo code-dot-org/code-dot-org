@@ -1,0 +1,49 @@
+"ar":
+  data:
+    block_categories:
+      Actions: الإجراءات
+      Loops: الحلقات
+      Functions: الدوال
+      Color: اللون
+      Brushes: Brushes
+      Math: العمليات الحسابية
+      Logic: المنطق
+      Variables: المتغيرات
+      Number: Number
+      String: String
+      Image: Image
+      Boolean: Boolean
+      Conditionals: الجمل الشرطية
+      Events: الأحداث
+      Games/Score: Games/Score
+      Comments: Comments
+      Category: Category
+      Prebuilt: Prebuilt
+      Text: النص
+      Picker: Picker
+      Comment: Comment
+      'Variables ': 'Variables '
+      everythingelse: everythingelse
+      numbers: numbers
+      Numbers: Numbers
+      Input: Input
+      Default: Default
+      Sprites: Sprites
+      Behaviors: Behaviors
+      World: World
+      Sprite: Sprite
+      Brush: Brush
+      Make Sprite: Make Sprite
+      Movement: Movement
+      Start: إبدأ
+      Groups: Groups
+      Booleans: القيم المنطقية
+      Functional: Functional
+      Predefined: Predefined
+      test: اختبار
+      test2: test2
+      Foo: Foo
+      Name: الاسم
+      NEW BLOCKS: NEW BLOCKS
+      Game/Score: Game/Score
+      Function: دالة

@@ -1,0 +1,49 @@
+"pl":
+  data:
+    block_categories:
+      Actions: Działania
+      Loops: Pętle
+      Functions: Funkcje
+      Color: Kolor
+      Brushes: Brushes
+      Math: Matematyka
+      Logic: Logika
+      Variables: Zmienne
+      Number: Number
+      String: String
+      Image: Image
+      Boolean: Boolean
+      Conditionals: Warunkowe
+      Events: Zdarzenia
+      Games/Score: Games/Score
+      Comments: Comments
+      Category: Category
+      Prebuilt: Prebuilt
+      Text: Tekst
+      Picker: Picker
+      Comment: Comment
+      'Variables ': 'Variables '
+      everythingelse: everythingelse
+      numbers: numbers
+      Numbers: Numbers
+      Input: Input
+      Default: Default
+      Sprites: Sprites
+      Behaviors: Behaviors
+      World: World
+      Sprite: Sprite
+      Brush: Brush
+      Make Sprite: Make Sprite
+      Movement: Movement
+      Start: Start
+      Groups: Groups
+      Booleans: Wartości logiczne
+      Functional: Functional
+      Predefined: Predefined
+      test: test
+      test2: test2
+      Foo: Foo
+      Name: Imię/Nazwisko
+      NEW BLOCKS: NEW BLOCKS
+      Game/Score: Game/Score
+      Function: Funkcja

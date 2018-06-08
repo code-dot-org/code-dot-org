@@ -22,7 +22,7 @@ Feature: Using the teacher homepage sections feature
     And check that the URL contains "/home"
     And I create a new section with course "Computer Science Principles", version "'17-'18" and unit "CSP Unit 3 - Subgoals Group A *"
     Then the section table should have 1 row
-    And the section table row at index 0 has script path "/s/csp3-a"
+    And the section table row at index 0 has secondary assignment path "/s/csp3-a"
 
   Scenario: Navigate to course and unit pages
     When I see the section set up box
@@ -62,6 +62,21 @@ Feature: Using the teacher homepage sections feature
     And the href of selector "a:contains(View Unit Overview)" contains the section id
     And I wait until element ".header_popup_body .uitest-ProgressBubble:first" is visible
     And the href of selector ".header_popup_body .uitest-ProgressBubble:first" contains the section id
+
+  Scenario: Assign a CSF course with multiple versions
+    When I see the section set up box
+    And I create a new section with course "Course A", version "2017 (Recommended)"
+    Then the section table should have 1 rows
+    And the section table row at index 0 has primary assignment path "/s/coursea"
+
+    When I click selector ".ui-test-section-dropdown"
+    And I click selector ".edit-section-details-link"
+    And I wait until element "#assignment-version-year" is visible
+    And I select the "2018" option in dropdown "assignment-version-year"
+    And I press the first ".uitest-saveButton" element
+    And I wait for the dialog to close
+    Then I should see the section table
+    And the section table row at index 0 has primary assignment path "/s/coursea-2018"
 
   Scenario: Navigate to course pages with course versions enabled
     Given I am on "http://studio.code.org/home"

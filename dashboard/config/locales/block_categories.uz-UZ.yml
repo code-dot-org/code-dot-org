@@ -1,0 +1,49 @@
+"uz":
+  data:
+    block_categories:
+      Actions: Harakatlar
+      Loops: Sikllar
+      Functions: Funksiyalar
+      Color: Rang
+      Brushes: Brushes
+      Math: Matematik
+      Logic: Mantiq
+      Variables: O‘zgaruvchilar
+      Number: Number
+      String: String
+      Image: Image
+      Boolean: Boolean
+      Conditionals: Shart buyruqlari
+      Events: Events
+      Games/Score: Games/Score
+      Comments: Comments
+      Category: Category
+      Prebuilt: Prebuilt
+      Text: Matn
+      Picker: Picker
+      Comment: Comment
+      'Variables ': 'Variables '
+      everythingelse: everythingelse
+      numbers: numbers
+      Numbers: Numbers
+      Input: Input
+      Default: Default
+      Sprites: Sprites
+      Behaviors: Behaviors
+      World: World
+      Sprite: Sprite
+      Brush: Brush
+      Make Sprite: Make Sprite
+      Movement: Movement
+      Start: Boshlash
+      Groups: Groups
+      Booleans: Booleans
+      Functional: Functional
+      Predefined: Predefined
+      test: test
+      test2: test2
+      Foo: Foo
+      Name: Ismi
+      NEW BLOCKS: NEW BLOCKS
+      Game/Score: Game/Score
+      Function: Funksiya
