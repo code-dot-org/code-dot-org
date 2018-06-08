@@ -3,7 +3,7 @@ login_required true
 hideable_stages true
 exclude_csf_column_in_legend true
 student_detail_progress_view true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csp/unit3/"], ["teacherForum", "https://forum.code.org/c/csp3"], ["vocabulary", "https://curriculum.code.org/csp/unit3/vocab/"], ["codeIntroduced", "https://curriculum.code.org/csp/unit3/code/"], ["standardMappings", "https://curriculum.code.org/csp/unit3/standards/"], ["professionalLearning", "https://studio.code.org/s/csp3-support"]]
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-18/unit3/"], ["teacherForum", "https://forum.code.org/c/csp3"], ["vocabulary", "https://curriculum.code.org/csp-18/unit3/vocab/"], ["codeIntroduced", "https://curriculum.code.org/csp-18/unit3/code/"], ["standardMappings", "https://curriculum.code.org/csp-18/unit3/standards/"], ["professionalLearning", "https://studio.code.org/s/csp3-support"]]
 has_verified_resources true
 has_lesson_plan true
 family_name 'csp3'

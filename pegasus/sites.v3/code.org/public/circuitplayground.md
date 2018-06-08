@@ -61,7 +61,7 @@ Code.org has partnered with Adafruit to create a <a href="//www.adafruit.com/pro
  <img src="/images/cp_class_pack.jpg" style="max-width: 90%; margin: 0 0 20px 20px;">
  </div>
  
-### <a name="subsidy"></a> For teachers in Code.org's 2017-2018 CS Discoveries Professional Learning Program
+### <a name="subsidy"></a> For teachers in Code.org's 2018-19 CS Discoveries Professional Learning Program
 For teachers participating in the 2018-19 CS Discoveries Professional Learning Program and implementing the full-year version of the course, we're happy to announce that we 
 will be subsidizing the cost of a single classroom kit for each teacher. 
 
