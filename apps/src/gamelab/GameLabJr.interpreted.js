@@ -371,12 +371,12 @@ function draw() {
       }
       if (a.overlap(b)) {
         if (!collisionEvent.touching || collisionEvent.keepFiring) {
-          collisionEvent.event();
+          collisionEvent.event(a, b);
         }
         collisionEvent.touching = true;
       } else {
         if (collisionEvent.touching && collisionEvent.eventEnd) {
-          collisionEvent.eventEnd();
+          collisionEvent.eventEnd(a, b);
         }
         collisionEvent.touching = false;
       }
