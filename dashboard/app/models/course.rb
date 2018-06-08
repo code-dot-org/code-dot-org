@@ -214,15 +214,11 @@ class Course < ApplicationRecord
   end
 
   def assignment_family_name
-    m = ScriptConstants::VERSIONED_COURSE_NAME_REGEX.match(name)
-    m ? m[1] : name
+    family_name || name
   end
 
-  # return the 4-digit year from the suffix of the course name if one exists,
-  # otherwise return the DEFAULT_VERSION_YEAR.
   def assignment_version_year
-    m = ScriptConstants::VERSIONED_COURSE_NAME_REGEX.match(name)
-    m ? m[2] : ScriptConstants::DEFAULT_VERSION_YEAR
+    version_year || ScriptConstants::DEFAULT_VERSION_YEAR
   end
 
   # @param user [User]
@@ -274,10 +270,10 @@ class Course < ApplicationRecord
   end
 
   # Returns an array of objects showing the name and version year for all courses
-  # sharing the assignment_family_name of this course, including this one.
+  # sharing the family_name of this course, including this one.
   def summarize_versions
     Course.
-      where('name regexp ?', "^#{assignment_family_name}(-[0-9]{4})?$").
+      where("properties -> '$.family_name' = ?", family_name).
       map {|c| {name: c.name, version_year: c.assignment_version_year, version_title: c.localized_version_title}}.
       sort_by {|info| info[:version_year]}.
       reverse
@@ -356,7 +352,7 @@ class Course < ApplicationRecord
     Course.
       joins(:default_course_scripts).
       # select only courses in the same course family.
-      where('name regexp ?', "^#{assignment_family_name}(-[0-9]{4})?$").
+      where("properties -> '$.family_name' = ?", family_name).
       # exclude the current course.
       where.not(id: id).
       # select only courses with scripts which the user has progress in.
