@@ -1,3 +1,5 @@
+require pegasus_dir 'helper_modules/forms'
+
 class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
   # Ability for volunteers to have a custom unsubscribe preference from teacher
   # requests was added during HoC 2015. They had two options to unsubscribe: until the
@@ -160,7 +162,7 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
 
     if coordinates && distance
       distance_query = Sequel.function(:ST_Distance_Sphere,
-        Sequel.function(:ST_PointFromText, "POINT (#{coordinates.split(',').join(' ')})", 4326),
+        Sequel.function(:ST_PointFromText, "POINT (#{coordinates.split(',').reverse.join(' ')})", 4326),
         Sequel.function(:ST_PointFromText,
           Sequel.function(:concat, 'POINT (', Sequel.function(:replace, Forms.json('processed_data.location_p'), ',', ' '), ')'),
           4326
@@ -170,10 +172,15 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
       fl.push distance_query.as(:distance)
     end
 
-    query.select(
+    docs = query.select(
       *fl,
       Forms.json('processed_data.location_p').as(:location_p),
       :id
-    ).limit(rows)
+    ).limit(rows).to_a
+    {
+      response: {
+        docs: docs
+      }
+    }.to_json
   end
 end
