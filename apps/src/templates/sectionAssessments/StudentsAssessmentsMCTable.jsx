@@ -59,6 +59,12 @@ const studentOverviewDataPropType = PropTypes.shape({
   submissionStatus: PropTypes.string,
 });
 
+// A table that shows the summary data for each student in a section.
+// Each row is a single student, the number of questions the student
+// answered correctly, the total number of multiple choice questions,
+// the precent of correct answers, and status of each student's
+// assessment or a time-stamp for when a student submits an
+// assessment.
 class StudentsAssessmentsMCTable extends Component {
   static propTypes = {
     studentOverviewData: PropTypes.arrayOf(studentOverviewDataPropType),
