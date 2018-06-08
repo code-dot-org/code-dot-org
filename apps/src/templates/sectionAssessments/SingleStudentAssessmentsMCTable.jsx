@@ -80,7 +80,7 @@ class SingleStudentAssessmentsMCTable extends Component {
     );
   };
 
-  correctAnswerColumnFormatter = (answers, {rowData, columnIndex}) => {
+  correctAnswerColumnFormatter = (responses, {rowData, columnIndex}) => {
     return (
       <MultipleChoiceAnswerCell
         id={rowData.id}
@@ -89,12 +89,12 @@ class SingleStudentAssessmentsMCTable extends Component {
     );
   };
 
-  studentAnswerColumnFormatter = (studentAnswers, {rowData, rowIndex}) => {
-    const answerData = this.props.studentAnswerData.studentAnswers[rowIndex];
+  studentAnswerColumnFormatter = (studentResponses, {rowData, rowIndex}) => {
+    const answerData = this.props.studentAnswerData.studentResponses[rowIndex];
     return (
       <MultipleChoiceAnswerCell
         id={rowData.id}
-        displayAnswer={answerData.answers}
+        displayAnswer={answerData.responses}
         isCorrectAnswer={answerData.isCorrect}
       />
     );

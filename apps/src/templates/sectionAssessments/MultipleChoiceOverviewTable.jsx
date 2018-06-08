@@ -57,7 +57,7 @@ const answerDataPropType = PropTypes.shape({
   isCorrectAnswer: PropTypes.bool,
 });
 
-const questionDataPropType = PropTypes.shape({
+const multipleChoiceDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   question: PropTypes.string.isRequired,
   answers: PropTypes.arrayOf(answerDataPropType),
@@ -66,7 +66,7 @@ const questionDataPropType = PropTypes.shape({
 
 class MultipleChoiceOverviewTable extends Component {
   static propTypes= {
-    questionAnswerData: PropTypes.arrayOf(questionDataPropType),
+    questionAnswerData: PropTypes.arrayOf(multipleChoiceDataPropType),
   };
 
   state = {
