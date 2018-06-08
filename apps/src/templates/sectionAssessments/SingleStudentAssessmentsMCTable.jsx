@@ -7,7 +7,7 @@ import orderBy from 'lodash/orderBy';
 import MultipleChoiceAnswerCell from './MultipleChoiceAnswerCell';
 import {
   studentAnswerDataPropType,
-  questionStructurePropType,
+  multipleChoiceQuestionPropType,
 } from './assessmentDataShapes';
 
 export const COLUMNS = {
@@ -40,7 +40,7 @@ const styles = {
 // the correct answer.
 class SingleStudentAssessmentsMCTable extends Component {
   static propTypes= {
-    questionAnswerData: PropTypes.arrayOf(questionStructurePropType),
+    questionAnswerData: PropTypes.arrayOf(multipleChoiceQuestionPropType),
     studentAnswerData: studentAnswerDataPropType
   };
 

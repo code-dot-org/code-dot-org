@@ -31,7 +31,7 @@ export const studentAnswerDataPropType = PropTypes.shape({
 });
 
 // Represents a single multiple choice question structure
-export const questionStructurePropType = PropTypes.shape({
+export const multipleChoiceQuestionPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   question: PropTypes.string.isRequired,
   correctAnswer: PropTypes.string.isRequired,
