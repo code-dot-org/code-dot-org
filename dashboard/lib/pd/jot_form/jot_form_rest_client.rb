@@ -48,7 +48,7 @@ module Pd
         }
 
         filter = {}
-        filter['id:gt'] = last_known_submission_id.to_s if last_known_submission_id
+        filter['id:gt'] = last_known_submission_id if last_known_submission_id
         filter['created_at:gt'] = min_date.to_s if min_date
         filter['fullText'] = full_text_search if full_text_search
         params[:filter] = filter.to_json unless filter.empty?
