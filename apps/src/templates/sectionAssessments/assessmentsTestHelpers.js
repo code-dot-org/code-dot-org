@@ -1,5 +1,6 @@
 import i18n from '@cdo/locale';
 
+// Data for students assessments multiple choice table
 export const studentOverviewData = [
   {
     id: 1,
@@ -57,7 +58,8 @@ export const studentOverviewData = [
   },
 ];
 
-// type: studentAnswerDataPropType
+// Data for single student assessments table
+// type: studentWithResponsesPropType
 export const studentData = {
   id: '012896',
   name: 'Caley',
@@ -70,7 +72,7 @@ export const studentData = {
   ],
 };
 
-// Data for overview table
+// Data for multiple choice overview table
 export const multipleChoiceData = [
   {
     id: 1,
@@ -146,6 +148,7 @@ export const multipleChoiceDataForSingleStudent = multipleChoiceData.map((questi
   };
 });
 
+// Data for free responses assessments table.
 export const questionOne = [
   {
     id: 1,
@@ -175,6 +178,7 @@ export const questionOne = [
   },
 ];
 
+// Data for free responses assessments table.
 export const questionTwo = [
   {
     id: 1,
@@ -184,6 +188,7 @@ export const questionTwo = [
   },
 ];
 
+// Data for free responses assessments table.
 export const questionThree = [
   {
     id: 1,
@@ -193,6 +198,7 @@ export const questionThree = [
   },
 ];
 
+// Data for free responses survey table.
 export const surveyOne = [
   {
     id: 1,
@@ -226,6 +232,7 @@ export const surveyOne = [
   },
 ];
 
+// Data for free reponses for survey table
 export const surveyTwo = [
   {
     id: 1,
