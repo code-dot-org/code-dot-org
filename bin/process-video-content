@@ -9,7 +9,7 @@ cd -P -- "$(dirname -- "$0")"
 
 # These regular expressions should match those in markdown_handler.rb.
 VIDEO_ID_REGEX="[^!*\"&?\/\s]{11}"
-EMBED_URL_REGEX="(?:http[s]?:)?\/\/(?:www\.)?(?:youtube(?:education|-nocookie)?)\.com\/embed\/(?<id>#{YOUTUBE_ID_REGEX})"
+EMBED_URL_REGEX="(?:http[s]?:)?\/\/(?:www\.)?(?:youtube(?:education)?)\.com\/embed\/(?<id>${VIDEO_ID_REGEX})"
 
 grep --perl-regexp --recursive --only-matching --no-filename ${EMBED_URL_REGEX} ../dashboard/config/scripts | \
   # Split by / delimiter, print last column
