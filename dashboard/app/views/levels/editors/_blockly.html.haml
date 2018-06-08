@@ -12,6 +12,9 @@
   = f.label :skin
   = f.select :skin, options_for_select(@level.class.skins, @level.skin)
 .field
+  = f.label :thumbnail_url, 'Optional thumbnail URL (overrides default thumbnail)'
+  = f.text_field :thumbnail_url
+.field
   = f.label :is_k1, 'Is K1 level'
   = boolean_check_box f, :is_k1
 .field
