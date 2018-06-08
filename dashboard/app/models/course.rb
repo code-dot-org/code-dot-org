@@ -35,6 +35,8 @@ class Course < ApplicationRecord
   serialized_attrs %w(
     teacher_resources
     has_verified_resources
+    family_name
+    version_year
   )
 
   def to_param
