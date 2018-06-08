@@ -52,7 +52,7 @@ class Course < ApplicationRecord
   end
 
   def localized_version_title
-    I18n.t("data.course.name.#{name}.version_title", default: assignment_version_year)
+    I18n.t("data.course.name.#{name}.version_title", default: version_year)
   end
 
   def self.file_path(name)
@@ -275,7 +275,7 @@ class Course < ApplicationRecord
     return [] unless family_name
     Course.
       where("properties -> '$.family_name' = ?", family_name).
-      map {|c| {name: c.name, version_year: c.assignment_version_year, version_title: c.localized_version_title}}.
+      map {|c| {name: c.name, version_year: c.version_year, version_title: c.localized_version_title}}.
       sort_by {|info| info[:version_year]}.
       reverse
   end
