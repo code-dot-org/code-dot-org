@@ -322,7 +322,7 @@ module LevelsHelper
 
   def set_hint_prompt_options(level_options)
     if @script && @script.hint_prompt_enabled?
-      level_options[:hintPromptAttemptsThreshold] = @script_level.hint_prompt_attempts_threshold
+      level_options[:hintPromptAttemptsThreshold] = @level.hint_prompt_attempts_threshold
     end
   end
 
@@ -418,6 +418,18 @@ module LevelsHelper
     app_options[:unsubmitUrl] = level_view_options(@level.id)[:unsubmit_url]
 
     app_options
+  end
+
+  def firebase_options
+    fb_options = {}
+
+    if @level.game.use_firebase?
+      fb_options[:firebaseName] = CDO.firebase_name
+      fb_options[:firebaseAuthToken] = firebase_auth_token
+      fb_options[:firebaseChannelIdSuffix] = CDO.firebase_channel_id_suffix
+    end
+
+    fb_options
   end
 
   # Options hash for Blockly
@@ -550,11 +562,7 @@ module LevelsHelper
     app_options[:legacyShareStyle] = true if @legacy_share_style
     app_options[:isMobile] = true if browser.mobile?
     app_options[:labUserId] = lab_user_id if @game == Game.applab || @game == Game.gamelab
-    if @level.game.use_firebase?
-      app_options[:firebaseName] = CDO.firebase_name
-      app_options[:firebaseAuthToken] = firebase_auth_token
-      app_options[:firebaseChannelIdSuffix] = CDO.firebase_channel_id_suffix
-    end
+    app_options.merge!(firebase_options)
     app_options[:canResetAbuse] = true if current_user && current_user.permission?(UserPermission::PROJECT_VALIDATOR)
     app_options[:isSignedIn] = !current_user.nil?
     app_options[:isTooYoung] = !current_user.nil? && current_user.under_13? && current_user.terms_version.nil?

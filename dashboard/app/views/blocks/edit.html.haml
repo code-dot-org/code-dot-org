@@ -1,5 +1,6 @@
 - content_for(:head) do
   %script{src: asset_path('js/blockly.js')}
+  %script{src: asset_path("js/#{js_locale}/blockly_locale.js")}
   %script{src: minifiable_asset_path('js/blocks/edit.js')}
   = stylesheet_link_tag 'css/levelbuilder', media: 'all'
 
@@ -35,6 +36,6 @@
     %h3 Block Preview
     #blockly-container
     %h3 Generated Code
-    %code#code-preview
+    %pre#code-preview
 
 = link_to "Back", blocks_path

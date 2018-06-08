@@ -60,7 +60,25 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     workshops = Pd::Workshop.enrolled_in_by teacher
     assert_equal 1, workshops.length
-    assert_equal workshops.first, @workshop
+    assert_equal @workshop, workshops.first
+  end
+
+  test 'enrolled_in_by scope variations' do
+    teacher = create :teacher
+    enrollment = create :pd_enrollment, workshop: @workshop, full_name: teacher.name, email: 'nomatch@ex.net'
+    assert_empty Pd::Workshop.enrolled_in_by(teacher)
+
+    # Email match only
+    enrollment.update!(email: teacher.email)
+    assert_equal [@workshop], Pd::Workshop.enrolled_in_by(teacher)
+
+    # UserId only
+    enrollment.update!(email: 'nomatch@ex.net', user: teacher)
+    assert_equal [@workshop], Pd::Workshop.enrolled_in_by(teacher)
+
+    # Both email and user id. Should still find workshop exactly once
+    enrollment.update!(email: teacher.email, user: teacher)
+    assert_equal [@workshop], Pd::Workshop.enrolled_in_by(teacher)
   end
 
   test 'exclude_summer scope' do

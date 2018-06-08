@@ -270,16 +270,17 @@ export default class WorkshopTable extends React.Component {
   };
 
   formatManagement = (manageData) => {
-    const {id, subject, state} = manageData;
+    const {id, subject, state, date} = manageData;
 
     return (
       <WorkshopManagement
         workshopId={id}
         subject={subject}
         viewUrl={`/workshops/${id}`}
+        date={date}
         editUrl={state === 'Not Started' ? `/workshops/${id}/edit` : null}
         onDelete={state !== 'Ended' ? this.props.onDelete : null}
-        showSurveyUrl={state === 'Ended'}
+        showSurveyUrl={state === 'Ended' || subject === '5-day Summer'}
       />
     );
   };
@@ -294,7 +295,7 @@ export default class WorkshopTable extends React.Component {
       row => _.merge(row, {
         enrollments: `${row.enrolled_teacher_count} / ${row.capacity}`,
         date: row.sessions[0].start,
-        manage: {id: row.id, subject: row.subject, state: row.state}
+        manage: {id: row.id, subject: row.subject, state: row.state, date: row.sessions[0].start}
       })
     );
 

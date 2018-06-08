@@ -74,6 +74,7 @@ class Blockly < Level
     encrypted_examples
     disable_if_else_editing
     show_type_hints
+    thumbnail_url
   )
 
   before_save :update_ideal_level_source

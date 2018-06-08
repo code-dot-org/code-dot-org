@@ -542,8 +542,8 @@ class SectionTest < ActiveSupport::TestCase
     end
 
     setup_all do
-      @csd2 = create_script_with_levels('csd2', :weblab)
-      @csd3 = create_script_with_levels('csd3', :gamelab)
+      @csd2 = create_script_with_levels('csd2-2017', :weblab)
+      @csd3 = create_script_with_levels('csd3-2017', :gamelab)
     end
 
     test 'returns true when all conditions met' do
