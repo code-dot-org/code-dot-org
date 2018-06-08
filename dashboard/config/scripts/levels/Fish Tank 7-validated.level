@@ -49,10 +49,7 @@
     "auto_run_setup": "DRAW_LOOP",
     "show_type_hints": "true",
     "project_template_level_name": "Fish Tank Template",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
