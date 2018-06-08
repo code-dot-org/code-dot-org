@@ -315,7 +315,7 @@ class V2SectionRoutesTest < SequelTestCase
             "script_name" => "Foo",
             "category" => "other",
             "position" => nil,
-            "category_priority" => 17
+            "category_priority" => 18
           },
           {
             "id" => 3,
@@ -323,7 +323,7 @@ class V2SectionRoutesTest < SequelTestCase
             "script_name" => "Bar",
             "category" => "other",
             "position" => nil,
-            "category_priority" => 17
+            "category_priority" => 18
           },
           {
             "id" => 4,
@@ -331,7 +331,7 @@ class V2SectionRoutesTest < SequelTestCase
             "script_name" => "mc",
             "category" => "Hour of Code",
             "position" => 2,
-            "category_priority" => 2
+            "category_priority" => 3
           },
           {
             "id" => 5,
@@ -339,7 +339,7 @@ class V2SectionRoutesTest < SequelTestCase
             "script_name" => "hourofcode",
             "category" => "Hour of Code",
             "position" => 19,
-            "category_priority" => 2
+            "category_priority" => 3
           },
           {
             "id" => 6,
@@ -347,7 +347,7 @@ class V2SectionRoutesTest < SequelTestCase
             "script_name" => "minecraft",
             "category" => "Hour of Code",
             "position" => 3,
-            "category_priority" => 2
+            "category_priority" => 3
           },
           {
             "id" => 10,
@@ -355,7 +355,7 @@ class V2SectionRoutesTest < SequelTestCase
             "script_name" => "flappy",
             "category" => "Hour of Code",
             "position" => 7,
-            "category_priority" => 2
+            "category_priority" => 3
           },
           {
             "id" => 31,
@@ -363,7 +363,7 @@ class V2SectionRoutesTest < SequelTestCase
             "script_name" => "csp1-2017",
             "category" => "CS Principles ('17-'18)",
             "position" => 0,
-            "category_priority" => 11
+            "category_priority" => 12
           },
           {
             "id" => 32,
@@ -371,7 +371,7 @@ class V2SectionRoutesTest < SequelTestCase
             "script_name" => "csp2-2017",
             "category" => "CS Principles ('17-'18)",
             "position" => 1,
-            "category_priority" => 11
+            "category_priority" => 12
           },
           {
             "id" => 34,
@@ -379,7 +379,7 @@ class V2SectionRoutesTest < SequelTestCase
             "script_name" => "csp3-2017",
             "category" => "CS Principles ('17-'18)",
             "position" => 2,
-            "category_priority" => 11
+            "category_priority" => 12
           },
         ]
       end
@@ -422,14 +422,14 @@ class V2SectionRoutesTest < SequelTestCase
               'script_name' => 'allthehiddenthings',
               'category' => 'other',
               'position' => nil,
-              'category_priority' => 17
+              'category_priority' => 18
             } << {
               "id" => 53,
               "name" => "csp2-alt *",
               "script_name" => "csp2-alt",
               "category" => "other",
               "position" => nil,
-              "category_priority" => 17
+              "category_priority" => 18
             }
           ),
           JSON.pretty_generate(JSON.parse(@pegasus.last_response.body))
