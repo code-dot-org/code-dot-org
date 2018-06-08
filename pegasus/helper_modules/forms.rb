@@ -21,10 +21,14 @@ module Forms
       kind,
       except_country='US',
       country_column: COUNTRY_CODE,
+      entire_school: false,
+      review_approved: false,
       explain: false
     )
       FORMS.
         where(kind: kind).
+        where(entire_school ? {json('data.entire_school_flag_b') => true} : {}).
+        where(review_approved ? {review: 'approved'} : {}).
         exclude(country_column => except_country).
         group_and_count(country_column.as(:country_code)).
         tap {|x| puts x.sql, x.explain if explain}.
@@ -36,6 +40,8 @@ module Forms
       country='US',
       explain: false,
       country_column: COUNTRY_CODE,
+      entire_school: false,
+      review_approved: false,
       state_column: STATE_CODE
     )
       FORMS.
@@ -43,6 +49,8 @@ module Forms
           kind: kind,
           country_column => country
         ).
+        where(entire_school ? {json('data.entire_school_flag_b') => true} : {}).
+        where(review_approved ? {review: 'approved'} : {}).
         group_and_count(
           state_column.as(:state_code)
         ).
@@ -57,12 +65,10 @@ module Forms
       explain: false,
       country_column: COUNTRY_CODE,
       state_column: STATE_CODE,
+      entire_school: false,
+      review_approved: false,
       city_column: json('processed_data.location_city_s')
     )
-      where = {
-        kind: kind,
-        country_column => country
-      }
       where[state_column] = state if state
 
       FORMS.
@@ -70,7 +76,13 @@ module Forms
           json('data.organization_name_s').as(:name),
           city_column.as(:city)
         ).
-        where(where).
+        where(
+          kind: kind,
+          country_column => country
+        ).
+        where(state ? {state_column => state} : {}).
+        where(entire_school ? {json('data.entire_school_flag_b') => true} : {}).
+        where(review_approved ? {review: 'approved'} : {}).
         order_by(:city, :name).
         distinct.
         tap {|x| puts x.sql, x.explain if explain}.
