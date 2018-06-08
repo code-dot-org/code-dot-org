@@ -52,7 +52,7 @@ class Course < ApplicationRecord
   end
 
   def localized_version_title
-    I18n.t("data.course.name.#{name}.version_title", default: version_year)
+    I18n.t("data.course.name.#{name}.version_title", default: assignment_version_year)
   end
 
   def self.file_path(name)
@@ -186,7 +186,7 @@ class Course < ApplicationRecord
     info[:name] = localized_title
     info[:assignment_family_name] = assignment_family_name
     info[:assignment_family_title] = localized_assignment_family_title
-    info[:version_year] = version_year
+    info[:version_year] = assignment_version_year
     info[:version_title] = localized_version_title
     # For now, all course versions visible in the UI are stable.
     info[:is_stable] = true
@@ -220,7 +220,7 @@ class Course < ApplicationRecord
 
   # return the 4-digit year from the suffix of the course name if one exists,
   # otherwise return the DEFAULT_VERSION_YEAR.
-  def version_year
+  def assignment_version_year
     m = ScriptConstants::VERSIONED_COURSE_NAME_REGEX.match(name)
     m ? m[2] : ScriptConstants::DEFAULT_VERSION_YEAR
   end
@@ -278,7 +278,7 @@ class Course < ApplicationRecord
   def summarize_versions
     Course.
       where('name regexp ?', "^#{assignment_family_name}(-[0-9]{4})?$").
-      map {|c| {name: c.name, version_year: c.version_year, version_title: c.localized_version_title}}.
+      map {|c| {name: c.name, version_year: c.assignment_version_year, version_title: c.localized_version_title}}.
       sort_by {|info| info[:version_year]}.
       reverse
   end
