@@ -3,6 +3,14 @@ title: <%= hoc_s(:events_all_title) %>
 layout: wide
 nav: events_nav
 ---
+:ruby
+  require '../pegasus/helper_modules/forms'
+  kind = 'CSEdWeekEvent2013'
+  country_column = Forms.json('data.country_s')
+  state_column = Forms.json('data.state_code_s')
+  events = Forms.events_by_country(kind, country_column: country_column)
+  us_events = Forms.events_by_state(kind, country_column: country_column, state_column: state_column)
+
 -SOLR = Solr::Server.new(host:CDO.solr_server)
 
 -by_country = {}

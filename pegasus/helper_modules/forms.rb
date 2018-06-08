@@ -17,23 +17,23 @@ module Forms
   STATE_CODE = json('processed_data.location_state_code_s')
 
   class << self
-    def events_by_country(kind, except_country='US', explain: false)
+    def events_by_country(kind, except_country='US', country_column: COUNTRY_CODE, explain: false)
       FORMS.
         where(kind: kind).
-        exclude(COUNTRY_CODE => except_country).
-        group_and_count(COUNTRY_CODE.as(:country_code)).
+        exclude(country_column => except_country).
+        group_and_count(country_column.as(:country_code)).
         tap {|x| puts x.sql, x.explain if explain}.
         all
     end
 
-    def events_by_state(kind, country='US', explain: false)
+    def events_by_state(kind, country='US', explain: false, country_column: COUNTRY_CODE, state_column: STATE_CODE)
       FORMS.
         where(
           kind: kind,
-          COUNTRY_CODE => country
+          country_column => country
         ).
         group_and_count(
-          STATE_CODE.as(:state_code)
+          state_column.as(:state_code)
         ).
         tap {|x| puts x.sql, x.explain if explain}.
         all
