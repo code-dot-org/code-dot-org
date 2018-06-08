@@ -7,7 +7,6 @@ nav: events_nav
   require pegasus_dir 'helper_modules/forms'
   hoc_year = DCDO.get("hoc_year", 2017)
   kind = "HocSignup#{hoc_year}"
-
   events = Forms.events_by_country(kind)
   us_events = Forms.events_by_state(kind)
 

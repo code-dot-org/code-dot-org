@@ -5,13 +5,14 @@ nav: events_nav
 ---
 :ruby
   require pegasus_dir 'helper_modules/forms'
+  hoc_year = 2013
   kind = 'CSEdWeekEvent2013'
   country_column = Forms.json('data.country_s')
   state_column = Forms.json('data.state_code_s')
   events = Forms.events_by_country(kind, country_column: country_column)
   us_events = Forms.events_by_state(kind, country_column: country_column, state_column: state_column)
 
-%h1= hoc_s(:events_all_old_title).gsub(/\@year/, "2013")
+%h1= hoc_s(:events_all_old_title).gsub(/\@year/, hoc_year.to_s)
 
 %ul
   %li{class: "hoc-event-country"}
@@ -19,8 +20,8 @@ nav: events_nav
     %ul{style: "margin-top: 0; margin-bottom: 0;"}
       -us_events.each do |event|
         %li{class: "hoc-event-state"}
-          %a{href: "/events/2013/us/#{event[:state_code].downcase}"}= "#{event[:state_code]} (#{event[:count]} #{hoc_s(event[:count] > 1 ? :events : :event)})"
+          %a{href: "/events/#{hoc_year}/us/#{event[:state_code].downcase}"}= "#{event[:state_code]} (#{event[:count]} #{hoc_s(event[:count] > 1 ? :events : :event)})"
 %ul
   -events.each do |event|
     %li{class: "hoc-event-country"}
-      %a{href: "/events/2013/#{event[:country_code].downcase}"}= "#{country_name_from_code(event[:country_code])} (#{event[:count]} #{hoc_s(event[:count] > 1 ? :events : :event)})"
+      %a{href: "/events/#{hoc_year}/#{event[:country_code].downcase}"}= "#{country_name_from_code(event[:country_code])} (#{event[:count]} #{hoc_s(event[:count] > 1 ? :events : :event)})"
