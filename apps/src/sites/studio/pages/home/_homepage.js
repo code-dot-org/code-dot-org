@@ -204,7 +204,7 @@ window.CleverTakeoverManager = function (options) {
         handleCancel={cancel}
         handleSubmit={submit}
         forceConnect={options.forceConnect === 'true'}
-        provider={providerToLink}
+        providerToLink={providerToLink}
       />,
       linkCleverDiv[0]
     );

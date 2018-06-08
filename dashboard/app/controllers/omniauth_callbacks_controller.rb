@@ -72,13 +72,14 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def extract_powerschool_data(auth)
     # OpenID 2.0 data comes back in a different format compared to most of our other oauth data.
     args = JSON.parse(auth.extra.response.message.to_json)['args']
-    auth_info = OmniAuth::AuthHash.new(
+    auth_info = auth.info.merge(OmniAuth::AuthHash.new(
       user_type: args["[\"http://openid.net/srv/ax/1.0\", \"value.ext0\"]"],
       email: args["[\"http://openid.net/srv/ax/1.0\", \"value.ext1\"]"],
       name: {
         first: args["[\"http://openid.net/srv/ax/1.0\", \"value.ext2\"]"],
         last: args["[\"http://openid.net/srv/ax/1.0\", \"value.ext3\"]"],
       },
+      )
     )
     auth.info = auth_info
     auth
