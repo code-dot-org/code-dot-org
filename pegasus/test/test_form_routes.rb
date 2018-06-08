@@ -35,7 +35,7 @@ class FormRoutesTest < SequelTestCase
     name_s: 'fake_name',
     experience_s: 'university_student_or_researcher',
     location_s: 'somewhere',
-    location_flexibility_ss: 'onsite',
+    location_flexibility_ss: ['onsite'],
     description_s: 'description',
     allow_contact_b: '1',
     age_18_plus_b: '1',
