@@ -2746,7 +2746,7 @@ StudioApp.prototype.displayPlayspaceNotification = function (notificationContent
   StudioApp.prototype.displayAlert("#visualization", {
     type: 'notification',
     closeDelayMillis: 1000000,
-    width: '100%',
+    childPadding: '8px 14px',
   }, notificationContents);
 };
 
@@ -2770,7 +2770,8 @@ StudioApp.prototype.displayAlert = function (selector, props, alertContents, pos
       left: 0,
       right: 0,
       top: 0,
-      zIndex: 1000
+      zIndex: 1000,
+      transform: 'scale(1.0)',
     });
     parent.append(container);
   }
@@ -2786,6 +2787,7 @@ StudioApp.prototype.displayAlert = function (selector, props, alertContents, pos
       sideMargin={props.sideMargin}
       width={props.width}
       closeDelayMillis={props.closeDelayMillis}
+      childPadding={props.childPadding}
     >
       {alertContents}
     </Alert>, renderElement);
