@@ -1399,6 +1399,15 @@ Then /^the section table should have (\d+) rows?$/ do |expected_row_count|
   expect(row_count.to_i).to eq(expected_row_count.to_i)
 end
 
+Then /^the section table row at index (\d+) has (name|grade) "([^"]+)"$/ do |row_index, field_type, expected_text|
+  td_index = (field_type == 'name') ? 1 : 2
+  field_cell = @browser.execute_script(
+    "return $('.uitest-owned-sections tbody tr:eq(#{row_index}) td:eq(#{td_index})');"
+  )
+  actual_text = field_cell.first.text
+  expect(actual_text).to eq(expected_text)
+end
+
 Then /^the section table row at index (\d+) has (primary|secondary) assignment path "([^"]+)"$/ do |row_index, assignment_type, expected_path|
   link_index = (assignment_type == 'primary') ? 0 : 1
   href = @browser.execute_script(

@@ -78,6 +78,31 @@ Feature: Using the teacher homepage sections feature
     Then I should see the section table
     And the section table row at index 0 has primary assignment path "/s/coursea-2018"
 
+  Scenario: Update a section
+    When I see the section set up box
+    And I create a new section with course "Computer Science Principles", version "'18-'19 (Recommended)" and unit "CSP Unit 1 - The Internet"
+    Then the section table should have 1 rows
+    And the section table row at index 0 has primary assignment path "/courses/csp-2018"
+    And the section table row at index 0 has secondary assignment path "/s/csp1-2018"
+
+    When I click selector ".ui-test-section-dropdown"
+    And I click selector ".edit-section-details-link"
+    And I wait until element "#uitest-section-name" is visible
+
+    And I type "" into "#uitest-section-name"
+    And I press keys "My Favorite Section" for element "#uitest-section-name"
+    And I select the "1" option in dropdown "uitest-grade-dropdown"
+    And I select the "Computer Science Discoveries" option in dropdown "uitest-assignment-family"
+    And I select the "CSD Unit 1 - Problem Solving" option in dropdown "uitest-secondary-assignment"
+    And I press the first ".uitest-saveButton" element
+    And I wait for the dialog to close
+
+    Then I should see the section table
+    And the section table row at index 0 has name "My Favorite Section"
+    And the section table row at index 0 has grade "1"
+    And the section table row at index 0 has primary assignment path "/courses/csd-2018"
+    And the section table row at index 0 has secondary assignment path "/s/csd1-2018"
+
   Scenario: Navigate to course pages with course versions enabled
     Given I am on "http://studio.code.org/home"
     When I see the section set up box
