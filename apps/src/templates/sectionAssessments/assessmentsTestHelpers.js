@@ -61,12 +61,12 @@ export const studentOverviewData = [
 export const studentData = {
   id: '012896',
   name: 'Caley',
-  studentAnswers: [
-    {isCorrect: false, answers: ''},
-    {isCorrect: false, answers: 'B D'},
-    {isCorrect: false, answers: 'E'},
-    {isCorrect: false, answers: 'C'},
-    {isCorrect: true, answers: 'A'},
+  studentResponses: [
+    {isCorrect: false, responses: ''},
+    {isCorrect: false, responses: 'B D'},
+    {isCorrect: false, responses: 'E'},
+    {isCorrect: false, responses: 'C'},
+    {isCorrect: true, responses: 'A'},
   ],
 };
 
@@ -137,7 +137,7 @@ export const multipleChoiceData = [
 ];
 
 // Data for single student table.
-// Array of questionStructurePropType from StudentAssessmentOverviewTable
+// Array of questionStructurePropType from SingleStudendAssesmentsMCTable
 export const multipleChoiceDataForSingleStudent = multipleChoiceData.map((question, index) => {
   return {
     id: question.id,

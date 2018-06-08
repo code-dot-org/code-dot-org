@@ -137,13 +137,13 @@ export const getMultipleChoiceStructureForCurrentAssessment = (state) => {
     return {
       id: question.level_id,
       question: question.question_text,
-      correctAnswer: getCorrectAnswer(question.answers),
+      correctAnswer: getCorrectAnswer(question.responses),
     };
   });
 };
 
 // Returns an array of objects, each of type studentAnswerDataPropType
-// indicating the student answers to multiple choice questions for the
+// indicating the student responses to multiple choice questions for the
 // currently selected assessment.
 // TODO(caleybrock): needs to be tested.
 export const getStudentMCResponsesForCurrentAssessment = (state) => {
@@ -167,9 +167,9 @@ export const getStudentMCResponsesForCurrentAssessment = (state) => {
     return {
       id: studentId,
       name: studentObject.student_name,
-      studentAnswers: studentAssessment.level_results.map(answer => {
+      studentResponses: studentAssessment.level_results.map(answer => {
         return {
-          answers: answer.student_result || '',
+          responses: answer.student_result || '',
           isCorrect: answer.status === 'correct',
         };
       })
