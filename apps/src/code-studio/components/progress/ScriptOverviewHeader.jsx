@@ -103,6 +103,13 @@ class ScriptOverviewHeader extends Component {
       });
     }
 
+    let versionWarningDetails;
+    if (showCourseUnitVersionWarning) {
+      versionWarningDetails = i18n.wrongUnitVersionWarningDetails();
+    } else if (showScriptVersionWarning) {
+      versionWarningDetails = i18n.wrongCourseVersionWarningDetails();
+    }
+
     return (
       <div>
         {plcHeaderProps &&
@@ -117,20 +124,11 @@ class ScriptOverviewHeader extends Component {
             width={SCRIPT_OVERVIEW_WIDTH}
           />
         }
-        {showCourseUnitVersionWarning &&
+        {versionWarningDetails &&
           <Notification
             type={NotificationType.warning}
             notice={i18n.wrongCourseVersionWarningNotice()}
-            details={i18n.wrongUnitVersionWarningDetails()}
-            dismissible={true}
-            width={SCRIPT_OVERVIEW_WIDTH}
-          />
-        }
-        {showScriptVersionWarning &&
-          <Notification
-            type={NotificationType.warning}
-            notice={i18n.wrongCourseVersionWarningNotice()}
-            details={i18n.wrongCourseVersionWarningDetails()}
+            details={versionWarningDetails}
             dismissible={true}
             width={SCRIPT_OVERVIEW_WIDTH}
           />
