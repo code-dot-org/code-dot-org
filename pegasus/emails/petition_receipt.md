@@ -14,19 +14,15 @@ litmus_tracking_id: 'sfgaovfs'
 
 [Learn online](https://code.org/learn) or [find local schools, camps, or workshops](https://code.org/learn/local) that teach coding.
 
-## 2) [Sign the petition](https://www.change.org/p/offer-computer-science-in-our-public-schools-csforall) to Congress
-
-Be part of the biggest computer science education movement in U.S. history. [Join the list](https://www.change.org/p/offer-computer-science-in-our-public-schools-csforall) of CEOs, governors, education leaders, and advocates who have asked Congress to support computer science in every K-12 school!
-
 <% if ['educator'].include? role_s %>
 
-## 3) [Host an Hour of Code](https://hourofcode.com) during Computer Science Education Week
+## 2) [Host an Hour of Code](https://hourofcode.com) during Computer Science Education Week
 
 Help students worldwide learn their first Hour of Code, to show that anyone can learn the basics. Help us celebrate this year's Computer Science Education Week by leading your students through one Hour of Code!
 
 <% else %>
 
-## 3) [Host an Hour of Code](https://hourofcode.com) at work, in your community, or local school
+## 2) [Host an Hour of Code](https://hourofcode.com) at work, in your community, or local school
 
 During this year's Computer Science Education Week in December, help students worldwide learn their first Hour of Code. Organize an Hour of Code event at your office, a local school, or anywhere in your community. Or [try it yourself](https://code.org/learn).
 
@@ -34,22 +30,25 @@ During this year's Computer Science Education Week in December, help students wo
 
 <% if ['educator'].include? role_s %>
 
-## 4) Teach computer science
+## 3) Teach computer science
 
 You can teach these self-serve [intro courses](https://studio.code.org), with professional development included, inspire students with [these videos](https://code.org/educate/inspire), or partner with us to bring computer science [to your district or region](https://code.org/educate/partner). 
 
 <% else %>
 
-## 4) Ask your local school to [teach computer science](https://code.org/educate)
+## 3) Ask your local school to [teach computer science](https://code.org/educate)
 
 Here's a [sample letter](https://code.org/promote/letter) to send to your school! Your local school can teach these [intro courses](https://studio.code.org), partner with us to bring computer science [to your entire district or region](https://code.org/educate/partner), and inspire students with [these videos](https://code.org/educate/inspire). Check [our map](https://code.org/learn/local) to see if your school teaches computer science. If not, ask them to.
 
 <% end %>
 
-
-## 5) Support our work
+## 4) Support our work
 
 [Make a generous donation](https://code.org/donate) or [buy a t-shirt or hat](https://store.code.org). We're working to give every student the opportunity to learn computer science. One child learns for every dollar you donate.
+
+## 5) Not in the United States? Sign up to receive updates about Code.org's International Program
+
+Code.org partners with dozens of organizations around the world to promote computer science education. [Get the latest news](https://goo.gl/forms/MB6GVugftux6C0b42) about newsletters, webinars, and updates specifically for Code.org's international community. 
 
 In just a few years, support for computer science has impacted hundreds of thousands of classrooms and tens of millions of students. Many school districts, U.S. states, and even entire countries have joined the movement. 
 
