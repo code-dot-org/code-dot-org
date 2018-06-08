@@ -136,6 +136,8 @@ class Script < ActiveRecord::Base
     has_verified_resources
     has_lesson_plan
     script_announcements
+    version_year
+    is_stable
   )
 
   def self.twenty_hour_script
@@ -352,7 +354,7 @@ class Script < ActiveRecord::Base
     self.class.get_from_cache(id)
   end
 
-  def self.get_without_cache(id_or_name)
+  def self.get_without_cache(id_or_name, version_year: nil)
     # Also serve any script by its new_name, if it has one.
     script = id_or_name && Script.find_by(new_name: id_or_name)
     return script if script
@@ -367,34 +369,52 @@ class Script < ActiveRecord::Base
     unless is_id
       # We didn't find a script matching id_or_name. Next, look for a script
       # in the id_or_name script family to redirect to, e.g. csp1 --> csp1-2017.
-      script_with_redirect = Script.get_script_family_redirect(id_or_name)
+      script_with_redirect = Script.get_script_family_redirect(id_or_name, version_year: version_year)
       return script_with_redirect if script_with_redirect
     end
 
-    raise ActiveRecord::RecordNotFound.new("Couldn't find Script with id|name=#{id_or_name}")
+    raise ActiveRecord::RecordNotFound.new("Couldn't find Script with id|name|family_name=#{id_or_name}")
   end
 
-  def self.get_from_cache(id_or_name)
-    return get_without_cache(id_or_name) unless should_cache?
-
-    script_cache.fetch(id_or_name.to_s) do
+  # Returns the script with the specified id, or a script with the specified
+  # name, or a redirect to the latest version of the script within the specified
+  # family. Also populates the script cache so that future responses will be cached.
+  # For example:
+  #   get_from_cache('11') --> script_cache['11'] = <Script id=11, name=...>
+  #   get_from_cache('frozen') --> script_cache['frozen'] = <Script name="frozen", id=...>
+  #   get_from_cache('csp1') --> script_cache['csp1'] = <Script redirect_to="csp1-2018">
+  #   get_from_cache('csp1', version_year: '2017') --> script_cache['csp1/2017'] = <Script redirect_to="csp1-2017">
+  #
+  # @param id_or_name [String|Integer] script id, script name, or script family name.
+  # @param version_year [String] If specified, when looking for a script to redirect
+  #   to within a script family, redirect to this version rather than the latest.
+  def self.get_from_cache(id_or_name, version_year: nil)
+    return get_without_cache(id_or_name, version_year: version_year) unless should_cache?
+    cache_key_suffix = version_year ? "/#{version_year}" : ''
+    cache_key = "#{id_or_name}#{cache_key_suffix}"
+    script_cache.fetch(cache_key) do
       # Populate cache on miss.
-      script_cache[id_or_name.to_s] = get_without_cache(id_or_name)
+      script_cache[cache_key] = get_without_cache(id_or_name, version_year: version_year)
     end
   end
 
   # Given a script family name, return a dummy Script with redirect_to field
-  # pointing toward the latest stable script in that family. For now, we assume:
-  #   1. the 2017 version is the latest stable version
-  #   2. the 2017 version's name is the family_name with the '-2017' suffix
+  # pointing toward the latest stable script in that family, or to a specific
+  # version_year if one is specified.
   # @param family_name [String] The name of the script family to search in.
+  # @param version_year [String] Version year to return. Optional.
   # @return [Script|nil] A dummy script object, not persisted to the database,
   #   with only the redirect_to field set.
-  def self.get_script_family_redirect(family_name)
-    script_version_name = "#{family_name}-#{2017}"
-    Script.find_by(name: script_version_name) ?
-      Script.new(redirect_to: script_version_name) :
-      nil
+  def self.get_script_family_redirect(family_name, version_year: nil)
+    scripts =
+      Script.
+        where(family_name: family_name).
+        all.
+        select(&:is_stable).
+        sort_by(&:version_year)
+    scripts.select! {|s| s.version_year == version_year} if version_year
+    script_name = scripts.last.try(:name)
+    script_name ? Script.new(redirect_to: script_name) : nil
   end
 
   def text_response_levels
@@ -1000,6 +1020,8 @@ class Script < ActiveRecord::Base
       id: id,
       name: name,
       title: localized_title,
+      description: localized_description,
+      beta_title: Script.beta?(name) ? I18n.t('beta') : nil,
       course_id: course.try(:id),
       hidden: hidden,
       loginRequired: login_required,
@@ -1089,6 +1111,14 @@ class Script < ActiveRecord::Base
     I18n.t "data.script.name.#{name}.title"
   end
 
+  def localized_assignment_family_title
+    I18n.t("data.script.name.#{name}.assignment_family_title", default: localized_title)
+  end
+
+  def localized_description
+    I18n.t "data.script.name.#{name}.description"
+  end
+
   def disable_post_milestone?
     !Gatekeeper.allows('postMilestone', where: {script_name: name}, default: true)
   end
@@ -1107,6 +1137,8 @@ class Script < ActiveRecord::Base
       has_verified_resources: !!script_data[:has_verified_resources],
       has_lesson_plan: !!script_data[:has_lesson_plan],
       script_announcements: script_data[:script_announcements],
+      version_year: script_data[:version_year],
+      is_stable: script_data[:is_stable],
     }.compact
   end
 
@@ -1146,6 +1178,18 @@ class Script < ActiveRecord::Base
     info = ScriptConstants.assignable_info(self)
     info[:name] = I18n.t("data.script.name.#{info[:name]}.title", default: info[:name])
     info[:name] += " *" if hidden
+
+    if family_name
+      info[:assignment_family_name] = family_name
+      info[:assignment_family_title] = localized_assignment_family_title
+    end
+    if version_year
+      info[:version_year] = version_year
+      # No need to localize version_title yet, since we only display it for CSF
+      # scripts, which just use version_year.
+      info[:version_title] = version_year
+    end
+    info[:is_stable] = true if is_stable
 
     info[:category] = I18n.t("data.script.category.#{info[:category]}_category_name", default: info[:category])
 

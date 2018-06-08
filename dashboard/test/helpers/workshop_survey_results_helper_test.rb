@@ -10,7 +10,8 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
     day_2: 2,
     day_3: 3,
     day_4: 4,
-    facilitator: 5
+    day_5: 5,
+    facilitator: 6
   }
 
   self.use_transactional_test_case = true
@@ -88,6 +89,11 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
     )
 
     Pd::SurveyQuestion.create(
+      form_id: FORM_IDS[:day_5],
+      questions: Pd::JotForm::FormQuestions.new(FORM_IDS[:day_5], @daily_questions).serialize.to_json
+    )
+
+    Pd::SurveyQuestion.create(
       form_id: FORM_IDS[:facilitator],
       questions: Pd::JotForm::FormQuestions.new(FORM_IDS[:facilitator], @daily_facilitator_questions).serialize.to_json
     )
@@ -141,7 +147,8 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
       'Day 1' => expected_daily_questions,
       'Day 2' => expected_daily_questions,
       'Day 3' => expected_daily_questions,
-      'Day 4' => expected_daily_questions
+      'Day 4' => expected_daily_questions,
+      'Day 5' => expected_daily_questions
     }
   end
 
@@ -287,7 +294,7 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
   end
 
   test 'daily survey get_question_for_forms gets workshop questions and substitutes question texts' do
-    CDO.expects(:jotform_forms).times(9).returns( # 5 for general, 4 for facilitator
+    CDO.expects(:jotform_forms).times(11).returns( # 6 for general, 5 for facilitator
       {
         'local' => {
           'day_0' => FORM_IDS[:pre_workshop],
@@ -295,6 +302,7 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
           'day_2' => FORM_IDS[:day_2],
           'day_3' => FORM_IDS[:day_3],
           'day_4' => FORM_IDS[:day_4],
+          'day_5' => FORM_IDS[:day_5],
           'facilitator' => FORM_IDS[:facilitator]
         }
       }

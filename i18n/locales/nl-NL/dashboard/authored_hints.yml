@@ -123,25 +123,23 @@ nl:
       2-3 Bee Conditionals 6_authored_hint:
         2-3_Bee_Conditionals_6_a: 'Vergeet niet: Paarse bloemen wisselen tussen 0 en 1 nectar wanneer je het programma uitvoert!'
       2-3 Bee Debugging 1_authored_hint:
-        2-3_Bee_Debugging_1_a: Once you find and fix the incorrect block, do you see any patterns that could be made more simple using a `repeat` loop?
+        2-3_Bee_Debugging_1_a: Als je het foute blok hebt gevonden en opgelost, herken je dan een terugkerend patroon die je eenvoudiger kunt maken door een "herhaal keer" blok te gebruiken?
       2-3 Bee Debugging 2_authored_hint:
-        2-3_Bee_Debugging_2_a: Once you find and fix the incorrect block, do you see any patterns that could be made more simple using a `repeat` loop?
+        2-3_Bee_Debugging_2_a: Als je het foute blok hebt gevonden en opgelost, herken je dan een terugkerend patroon die je eenvoudiger kunt maken door een "herhaal keer" blok te gebruiken?
       2-3 Bee Debugging 4_authored_hint:
         2-3_Bee_Debugging_4_a: Is er een plek waar de bij iets doet wat helemaal geen zin heeft? Wat gebeurt er als je dat blok verandert?
       2-3 Bee Functions 4_authored_hint:
-        2-3_Bee_Functions_4_a: You don't have to use a loop with a function. Try moving, using the function, then moving and using the function again.
+        2-3_Bee_Functions_4_a: Je hoeft niet altijd een lus met een functie te gebruiken. Probeer het blok "beweeg vooruit", daarna het functie blok, dan weer "beweeg vooruit" en daarna weer de functie.
       2-3 Bee Functions 6_authored_hint:
-        2-3_Bee_Functions_6_a: You don't have to use a loop with a function. Try moving, using the function, then moving and using the function again.
+        2-3_Bee_Functions_6_a: Je hoeft niet altijd een lus met een functie te gebruiken. Probeer het blok "beweeg vooruit", daarna het functie blok, dan weer "beweeg vooruit" en daarna weer de functie.
       2-3 Bee Functions 8_authored_hint:
-        2-3_Bee_Functions_8_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        2-3_Bee_Functions_8_a: "Als de puzzel moeilijk lijkt, probeer dan je functie stap voor stap te maken. \n\nVoeg een paar blokken toe en test je programma. Voeg daarna weer een paar blokken toe en test dan opnieuw. Zo kom je er wel!"
       2-3 Bee Functions 9_authored_hint:
-        2-3_Bee_Functions_8_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        2-3_Bee_Functions_8_a: "Als de puzzel moeilijk lijkt, probeer dan je functie stap voor stap te maken. \n\nVoeg een paar blokken toe en test je programma. Voeg daarna weer een paar blokken toe en test dan opnieuw. Zo kom je er wel!"
         2-3_Bee_Functions_8_b: |-
-          Remember to build your code inside of the green function block.
-          
-          ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
+          Vergeet niet om jouw code binnenin het groene functie blok te plaatsen.
       2-3 Bee Loops 2_authored_hint:
-        2-3_Bee_Loops_2_a: You should end up with four blocks inside your loop.
+        2-3_Bee_Loops_2_a: Uiteindelijk moet je 4 blokken in jouw lus hebben.
       2-3 Bee Loops 3_authored_hint:
         2-3_Bee_Loops_3_a: Je zou 6 blokken moeten hebben in je lus.
       2-3 Bee Loops 3B_authored_hint:
@@ -150,21 +148,21 @@ nl:
         2-3_Bee_Loops_4_a: Je zou moeten eindigen met 5 blokken in je lus.
       2-3 Bee Loops 4A_authored_hint:
         2-3_Bee_Loops_4A_a: De eerste actie is een draai, in plaats van een beweging.
-        2-3_Bee_Loops_4A_b: The last piece of the program can be finished by writing code at the end of your program outside of your loop.
-        2-3_Bee_Loops_4A_c: If you can't spot the loops yet, try coding it out the long way first, then see what you can combine into a `repeat` loop at the end.
+        2-3_Bee_Loops_4A_b: Om het laatste stukje van het programma te schrijven, moet je onder de lus nog een paar blokken plaatsen.
+        2-3_Bee_Loops_4A_c: Als je de lussen niet gelijk ziet, maak dan stap voor stap eerst een lang programma en bekijk daarna wat je kunt combineren in een "herhaal keer" blok.
       2-3 Bee Loops 5_authored_hint:
-        2-3_Bee_Loops_5_a: If you can't spot the blocks to put inside `repeat` right away, start by coding out each move and look for a pattern.
+        2-3_Bee_Loops_5_a: Als je niet gelijk ziet welke blokken je in het "herhaal keer" blok moet zetten, probeer dan eerst elke stap te programmeren en daarna een terugkerend patroon te zoeken.
       2-3 Bee Loops 6_authored_hint:
-        2-3_Bee_Loops_6_a: If you can't tell what should go into the `repeat` loop, try dragging blocks out one by one and see if you can find a pattern.
+        2-3_Bee_Loops_6_a: Als je niet gelijk weet welke blokken je in het "herhaal keer" blok moet zetten, probeer dan eerst de blokken één voor één en kijk of je een terugkerend patroon kan vinden.
         2-3_Bee_Loops_6_b: Er zouden 6 blokken binnen in je `herhaal` lus moeten staan wanneer je gedaan hebt.
       2-3 Bee Loops 7_authored_hint:
         2-3_Bee_Loops_7_a: De eerste actie is een draai, in plaats van een beweging.
-        2-3_Bee_Loops_7_b: 'If you can''t quite picture the loop from the beginning, try coding it out the long way, then look for a pattern.  '
+        2-3_Bee_Loops_7_b: 'Als je in het begin niet gelijk ziet hoe de lus eruit moet zien, maak dan eerst een lang programma en zoek daarna naar een terugkerend patroon.'
       2-3 Maze 1_authored_hint:
-        2-3_Maze_1_a: To use a `move forward` block, drag it from the toolbar area out into the workspace and connect it to the `when run` block.
+        2-3_Maze_1_a: Om het "beweeg vooruit" blok te gebruiken, sleep je het vanuit het blokken gebied naar de werkplaats en plak je het direct onder het blok "als gestart".
       2-3 Maze 16_authored_hint:
-        2-3_Maze_16_a: If the pattern is hard to see, try coding it all out first and see what things repeat over and over before you put the loops in.
-        2-3_Maze_16_b: "To put lots of blocks inside a `repeat` loop, just drag a loop out into the workspace, then drag all of the blocks from the starting program inside of it.  \n\nConnect it all back to the `when run` block and you're good to go!"
+        2-3_Maze_16_a: Als het patroon lastig te zien is, maak dan eerst het hele programma zonder lussen en kijk daarna welke blokken steeds herhaald worden en voeg dan de lussen toe.
+        2-3_Maze_16_b: "Om meer blokken in een \"Herhaal\" lus te zetten, sleep je eerst het \"herhaal keer\" blok naar de werkplaats en daarna sleep je alle blokken onder het \"als gestart\" blok binnenin de lus. \n\nZet daarna alles weer terug onder het \"als gestart\" blok en je bent klaar!"
       2-3 Maze 6_authored_hint:
         2-3_Maze_6_a: Er zijn 2 manieren om deze puzzel op te lossen!
       2-3 Maze Loops 17_authored_hint:
@@ -174,11 +172,11 @@ nl:
         2-3_Maze_Loops_18_a: Als het patroon moeilijk te zien is, codeer dan eerst alles volledig zonder lussen. Bekijk vervolgens welke dingen zich herhalen en voeg dan de lussen toe.
       2-3 Maze Loops 19_authored_hint:
         2-3_Maze_Loops_19_a: Als je vastzit, probeer dan eerst de code zonder loops te schrijven. Zoek vervolgens naar patronen.
-        2-3_Maze_Loops_19_b: Putting one repeat loop inside of another can help decrease the number of blocks used.
+        2-3_Maze_Loops_19_b: Door een "herhaal keer" blok binnenin een andere "herhaal" lus te zetten, hoef je minder blokken te gebruiken.
       2-3 Maze Loops 20_authored_hint:
-        2-3_Maze_Loops_20_a: Look for a stair-step pattern in this maze to find where a loop can be used.
+        2-3_Maze_Loops_20_a: Bekijk het traptrede patroon in dit doolhof om te zien waar je een lus kan gebruiken.
       2-3 Maze Loops 21_authored_hint:
-        2-3_Maze_Loops_21_a: If you are having trouble finding the stair-step pattern, try covering the blocked paths with your finger.
+        2-3_Maze_Loops_21_a: Als je het lastig vindt om het traptrede patroon te vinden, volg dan eerst het pad met je vinger.
       4-5 Artist 1_authored_hint:
         4-5_Artist_1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       4-5 Artist 11_authored_hint:
@@ -201,7 +199,7 @@ nl:
           
           **90 / 3 = _____**
       4-5 Artist 7_authored_hint:
-        4-5_Artist_7_a: 'Which angle is the smallest?  At which angle is the artist standing? '
+        4-5_Artist_7_a: 'Welke hoek is het kleinst? In welke hoek staat de kunstenaar?'
       4-5 Artist 8_authored_hint:
         4-5_Artist_8_a: "De lange zijden zijn elk 240 pixels lang. Dat betekent dat de 2 korte zijden:\n\n**800 - 240 - 240 = 320**\n\nWat is **320/2** ? "
         4-5_Artist_8_b: "Deze afbeelding kan op 2 manieren gemaakt worden!\n- Teken 2 rechthoeken die **120** lang en **160** breed zijn, met een overlappende zijde\n\n- Teken één rechthoek die **240** lang en **160** breed is, en voeg dan een lijn in het midden toe."
@@ -209,16 +207,16 @@ nl:
         4-5_Artist_9_a: "Wanneer een driehoek gelijkzijdig is, zijn alle zijden en hoeken hetzelfde.\n"
         4-5_Artist_9_b: Je moet 3 driehoeken van dezelfde grootte tekenen. Vergeet niet achter elke driehoek naar de nieuwe positie te springen.
       4-5 Artist Assessment 1_authored_hint:
-        4-5_Artist_Assessment_1_a: You only need to draw the outside triangle to complete this puzzle.
+        4-5_Artist_Assessment_1_a: Je hoeft alleen de buitenste driehoek te tekenen om deze puzzel te maken.
       4-5 Artist Patterns 11_authored_hint:
         4-5_Artist_Patterns_11_a: Indien er 360 graden in een cirkel zit en iedere lus 3 graden draait, hoeveel keren moet je dan de lus uitvoeren om een halve cirkel te tekenen?
       4-5 Artist Patterns 2_authored_hint:
         4-5_Artist_Patterns_2_a: Merk op dat doordat de vierkanten elk 20 pixels lang zijn, je 20 pixels zal moeten springen om aan het volgend vierkant te beginnen.
       4-5 Artist Patterns 3_authored_hint:
         4-5_Artist_Patterns_3_a: Zorg ervoor dat je de vorige blok code er volledig uittrekt, elke keer wanneer je een nieuwe uitprobeert.
-        4-5_Artist_Patterns_3_b: If your code becomes too confusing, you can always click "Start Over" and try again!
+        4-5_Artist_Patterns_3_b: Als jouw programma te verwarrend wordt, kun je altijd op "Begin opnieuw" klikken en het opnieuw proberen!
       4-5 Artist Patterns 5_authored_hint:
-        4-5_Artist_Patterns_5_a: "Now, when the artist finished each diamond, he's facing the opposite direction from where he needs to be to start the next one.  \n\nHow many degrees does he need to be turned to set himself straight?"
+        4-5_Artist_Patterns_5_a: "Als de kunstenaar klaar is met de diamant, dan staat hij in de de tegenovergestelde richting van waar hij moet staan om de volgende diamant te tekenen. \n\nHoeveel graden moet hij draaien om weer goed te staan?"
       4-5 Bee Conditionals 4_authored_hint:
         remember_quantum: "**Herinnering:** De puzzel verandert iedere keer hij wordt uitgevoerd.\n\nJe zult een voorwaardelijke blok (`als` of `als/anders`) moeten gebruiken om deze uitdaging op te lossen."
       4-5 Bee Conditionals 5_authored_hint:
@@ -227,9 +225,9 @@ nl:
         4-5 Bee Conditionals 6_a: Je kan deze puzzel oplossen, gebruik makende van enkel de blokken op de werkplaats. In welke volgorde moeten ze worden geplaatst?
         4-5 Bee Conditionals 6_b: Wees zeker dat je ten minste **3** keer checkt dat de bloem meer dan **0** nectar heeft om deze puzzel op te lossen.
       4-5 Bee Debugging 1_authored_hint:
-        4-5_Bee_Debugging_1_a: If you are having trouble figuring out what's not right, try running it to see where things go wrong.
+        4-5_Bee_Debugging_1_a: Als je het lastig vindt om te zien wat er niet klopt, test dan eerst het programma en kijk dan waar het fout gaat.
       4-5 Bee Nested Loops Rows_authored_hint:
-        4-5_Bee_Nested_Loops_Rows_a: Try treating this puzzle like a long rectangle where the bee needs to move forward, then turn left several times to complete the path.
+        4-5_Bee_Nested_Loops_Rows_a: Denk bij deze puzzel aan een lange rechthoek waar de bij eerst vooruit moet bewegen en dan een paar keer linksom moet draaien om het hele pad af te gaan.
       4-5 Maze 10_authored_hint:
         4-5_Maze_10_a: |-
           If you can't see how to use loops to solve the puzzle right away, try solving it the long way first, then looking for a pattern.
@@ -282,7 +280,7 @@ nl:
           
           ![Image of Solution Blocks](https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
       Bergeron Robot Maze1_authored_hint:
-        2-3_Maze_1_a: To use a `move forward` block, drag it from the toolbar area out into the workspace and connect it to the `when run` block.
+        2-3_Maze_1_a: Om het "beweeg vooruit" blok te gebruiken, sleep je het vanuit het blokken gebied naar de werkplaats en plak je het direct onder het blok "als gestart".
       Course 4 Artist 11_authored_hint:
         Course_4_Artist_11_a: 'The half-hexagon has a **length of 30** and turns right by **60 degrees**.  '
         Course_4_Artist_11_b: 'The 2/3 triangle has a **length of 80** and turns right by **120 degrees**. '
@@ -3910,22 +3908,22 @@ nl:
         aE3_a: After you run your **nested loop** from the last stage, you need to jump back to the start of the line.
         aE3_b: "Don't forget to move the artist down before you start a new row of shapes! \n\nTo move the artist down and get him facing the right way again, make sure to:\n- Turn 90 degrees (to face down)\n- Jump 20 pixels (to get to new row)\n- Turn back 90 degrees (to face right again)"
         aE3_c: When you're all done, your **nested loops** should be three repeats deep.
-        aE3_d: If your code becomes too confusing, you can always click "Start Over" and try again!
+        aE3_d: Als jouw programma te verwarrend wordt, kun je altijd op "Begin opnieuw" klikken en het opnieuw proberen!
       aE3alternate_authored_hint:
         aE3alternate_a: After you run your **nested loop** from the last stage, you need to jump back to the start of the line.
         aE3alternate_b: "Don't forget to move the artist down before you start a new row of shapes! \n\nTo move the artist down and get him facing the right way again, make sure to:\n- Turn 90 degrees (to face down)\n- Jump 20 pixels (to get to new row)\n- Turn back 90 degrees (to face right again)"
         aE3alternate_c: When you're all done, your **nested loops** should be three repeats deep.
-        aE3alternate_d: If your code becomes too confusing, you can always click "Start Over" and try again!
+        aE3alternate_d: Als jouw programma te verwarrend wordt, kun je altijd op "Begin opnieuw" klikken en het opnieuw proberen!
       aE3alternateB_authored_hint:
         aE4alternateB_a: After you run your **nested loop** from the last stage, you need to jump back to the start of the line.
         aE4alternateB_b: "Don't forget to move the artist down before you start a new row of shapes! \n\nTo move the artist down and get him facing the right way again, make sure to:\n- Turn 90 degrees (to face down)\n- Jump 20 pixels (to get to new row)\n- Turn back 90 degrees (to face right again)"
         aE4alternateB_c: When you're all done, your **nested loops** should be three repeats deep.
-        aE4alternateB_d: If your code becomes too confusing, you can always click "Start Over" and try again!
+        aE4alternateB_d: Als jouw programma te verwarrend wordt, kun je altijd op "Begin opnieuw" klikken en het opnieuw proberen!
       aE4_authored_hint:
         aE4_a: After you run your **nested loop** from the last stage, you need to jump back to the start of the line.
         aE4_b: "Don't forget to move the artist down before you start a new row of shapes! \n\nTo move the artist down and get him facing the right way again, make sure to:\n- Turn 90 degrees (to face down)\n- Jump 20 pixels (to get to new row)\n- Turn back 90 degrees (to face right again)"
         aE4_c: When you're all done, your **nested loops** should be three repeats deep.
-        aE4_d: If your code becomes too confusing, you can always click "Start Over" and try again!
+        aE4_d: Als jouw programma te verwarrend wordt, kun je altijd op "Begin opnieuw" klikken en het opnieuw proberen!
       aE5_authored_hint: { }
       aE6_authored_hint:
         aE6_a: |-
@@ -4299,10 +4297,10 @@ nl:
           * Make 3 honey
           * Move backward
       course3_bee_functions_challenge1_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: "Als de puzzel moeilijk lijkt, probeer dan je functie stap voor stap te maken. \n\nVoeg een paar blokken toe en test je programma. Voeg daarna weer een paar blokken toe en test dan opnieuw. Zo kom je er wel!"
         courseE_bee_functions_challenge1_b: Remember to build your code inside of the green function block.
       course3_bee_functions_challenge2_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: "Als de puzzel moeilijk lijkt, probeer dan je functie stap voor stap te maken. \n\nVoeg een paar blokken toe en test je programma. Voeg daarna weer een paar blokken toe en test dan opnieuw. Zo kom je er wel!"
         courseE_bee_functions_challenge1_b: Remember to build your code inside of the green function block.
       course3_bee_functions_challenge3_authored_hint:
         courseF_bee_functions_challenge1_a: You can use the functions in the tool box to help you. You can call a function inside of another function's definition!
@@ -7981,9 +7979,9 @@ nl:
         courseC_maze_loops5_a: The best solution uses two `move forward` commands and one loop.
       courseC_maze_loops6_authored_hint:
         courseC_maze_loops6_a: If the pattern is hard to see, try coding it all out first and see what repeats over and over before you put the loops in.
-        courseC_maze_loops6_b: "To put lots of blocks inside a `repeat` loop, just drag a loop out into the workspace, then drag all of the blocks from the starting program inside of it.  \n\nConnect it all back to the `when run` block and you're good to go!"
+        courseC_maze_loops6_b: "Om meer blokken in een \"Herhaal\" lus te zetten, sleep je eerst het \"herhaal keer\" blok naar de werkplaats en daarna sleep je alle blokken onder het \"als gestart\" blok binnenin de lus. \n\nZet daarna alles weer terug onder het \"als gestart\" blok en je bent klaar!"
       courseC_maze_loops7_authored_hint:
-        courseC_maze_loops7_a: If the pattern is hard to see, try coding it all out first and see what things repeat over and over before you put the loops in.
+        courseC_maze_loops7_a: Als het patroon lastig te zien is, maak dan eerst het hele programma zonder lussen en kijk daarna welke blokken steeds herhaald worden en voeg dan de lussen toe.
       courseC_maze_loops8_authored_hint:
         courseC_puppy_loops8courseC_maze_loops8_a: Try thinking about this problem in small parts. Take your time. You don't need to solve it on the first try!
         courseC_puppy_loops8courseC_maze_loops8_b: The first half of this path is similar to the stairs from the last puzzle, but it goes in a different direction.
@@ -10496,27 +10494,23 @@ nl:
         courseE_bee_functions5_c: The `move forward` block can be changed into a `move backward` block. Use this instead of turning all the way around at the end of the paths!
         courseE_bee_functions5_b: "Your function should make the bee: \n- turn\n- move forward\n- collect all of the nectar\n- move backward\n- turn back to the direction that the bee started from"
       courseE_bee_functions6_authored_hint:
-        courseE_bee_functions6_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        courseE_bee_functions6_a: "Als de puzzel moeilijk lijkt, probeer dan je functie stap voor stap te maken. \n\nVoeg een paar blokken toe en test je programma. Voeg daarna weer een paar blokken toe en test dan opnieuw. Zo kom je er wel!"
         courseE_bee_functions6_b: It might help in this case to move inside of the function, but not all of your `move` blocks need to be there.
       courseE_bee_functions6_2018_authored_hint:
-        courseE_bee_functions6_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        courseE_bee_functions6_a: "Als de puzzel moeilijk lijkt, probeer dan je functie stap voor stap te maken. \n\nVoeg een paar blokken toe en test je programma. Voeg daarna weer een paar blokken toe en test dan opnieuw. Zo kom je er wel!"
         courseE_bee_functions6_b: It might help in this case to move inside of the function, but not all of your `move` blocks need to be there.
       courseE_bee_functions6test_authored_hint:
-        courseE_bee_functions6_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        courseE_bee_functions6_a: "Als de puzzel moeilijk lijkt, probeer dan je functie stap voor stap te maken. \n\nVoeg een paar blokken toe en test je programma. Voeg daarna weer een paar blokken toe en test dan opnieuw. Zo kom je er wel!"
         courseE_bee_functions6_b: It might help in this case to move inside of the function, but not all of your `move` blocks need to be there.
       courseE_bee_functions7_authored_hint:
-        courseE_bee_functions7_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions7_a: "Als de puzzel moeilijk lijkt, probeer dan je functie stap voor stap te maken. \n\nVoeg een paar blokken toe en test je programma. Voeg daarna weer een paar blokken toe en test dan opnieuw. Zo kom je er wel!"
         courseE_bee_functions7_b: |-
-          Remember to build your code inside of the green function block.
-          
-          ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
+          Vergeet niet om jouw code binnenin het groene functie blok te plaatsen.
         courseE_bee_functions7_c: This function should turn the bee to head him down the path, collect the nectar, make the honey, then turn the bee around and bring him back.
       courseE_bee_functions7_2018_authored_hint:
-        courseE_bee_functions7_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions7_a: "Als de puzzel moeilijk lijkt, probeer dan je functie stap voor stap te maken. \n\nVoeg een paar blokken toe en test je programma. Voeg daarna weer een paar blokken toe en test dan opnieuw. Zo kom je er wel!"
         courseE_bee_functions7_b: |-
-          Remember to build your code inside of the green function block.
-          
-          ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
+          Vergeet niet om jouw code binnenin het groene functie blok te plaatsen.
         courseE_bee_functions7_c: This function should turn the bee to head him down the path, collect the nectar, make the honey, then turn the bee around and bring him back.
       courseE_bee_functions8_authored_hint:
         courseE_bee_functions8_a: Your function will only need to collect nectar. Try using a while loop instead of a repeat loop.
@@ -10533,16 +10527,16 @@ nl:
         courseE_bee_functions9_a: You can use the exact same function for this puzzle as you did in the last puzzle.  All you need to do is create a function that collects all of the nectar when you get to each flower.
         courseE_bee_functions9_b: Even though you know how much nectar some of the flowers have, a `while` loop can make one function work for all of them.
       courseE_bee_functions_challenge1_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: "Als de puzzel moeilijk lijkt, probeer dan je functie stap voor stap te maken. \n\nVoeg een paar blokken toe en test je programma. Voeg daarna weer een paar blokken toe en test dan opnieuw. Zo kom je er wel!"
         courseE_bee_functions_challenge1_b: Remember to build your code inside of the green function block.
       courseE_bee_functions_challenge1_2018_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: "Als de puzzel moeilijk lijkt, probeer dan je functie stap voor stap te maken. \n\nVoeg een paar blokken toe en test je programma. Voeg daarna weer een paar blokken toe en test dan opnieuw. Zo kom je er wel!"
         courseE_bee_functions_challenge1_b: Remember to build your code inside of the green function block.
       courseE_bee_functions_challenge2_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: "Als de puzzel moeilijk lijkt, probeer dan je functie stap voor stap te maken. \n\nVoeg een paar blokken toe en test je programma. Voeg daarna weer een paar blokken toe en test dan opnieuw. Zo kom je er wel!"
         courseE_bee_functions_challenge1_b: Remember to build your code inside of the green function block.
       courseE_bee_functions_challenge2_2018_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: "Als de puzzel moeilijk lijkt, probeer dan je functie stap voor stap te maken. \n\nVoeg een paar blokken toe en test je programma. Voeg daarna weer een paar blokken toe en test dan opnieuw. Zo kom je er wel!"
         courseE_bee_functions_challenge1_b: Remember to build your code inside of the green function block.
       courseE_bee_ramp14_authored_hint:
         courseE_bee_ramp14_a: The bee works just like the farmer in the previous puzzle. Buzz along the path and collect nectar while there is nectar (while nectar > 0) and make all of the honey.
@@ -10591,7 +10585,7 @@ nl:
         grade3_robotFarmer_ConditionalsIntro_8_c: Use a `repeat` loop to run your code multiple times for each straight path.
       courseE_farmer_concept4_authored_hint:
         4-5_Artist_Patterns_3_a: Zorg ervoor dat je de vorige blok code er volledig uittrekt, elke keer wanneer je een nieuwe uitprobeert.
-        4-5_Artist_Patterns_3_b: If your code becomes too confusing, you can always click "Start Over" and try again!
+        4-5_Artist_Patterns_3_b: Als jouw programma te verwarrend wordt, kun je altijd op "Begin opnieuw" klikken en het opnieuw proberen!
       courseE_farmer_functions1_authored_hint:
         courseE_farmer_functions1_a: The toolbox is organized a little differently this time! Click on the different categories to see which blocks you have.
         courseE_farmer_functions1_b: You only need to pick one pumpkin, but could you use a loop to get to it?
@@ -12945,7 +12939,7 @@ nl:
         courseF_bee_functions6_b: Your function should check if there is a flower or honeycomb, get nectar or make honey, then turn.
         courseF_bee_functions6_c: Since you are turning within your function, you only need one `while` loop to get you through this maze.
       courseF_bee_functions6_2018_authored_hint:
-        courseF_bee_functions6_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        courseF_bee_functions6_a: "Als de puzzel moeilijk lijkt, probeer dan je functie stap voor stap te maken. \n\nVoeg een paar blokken toe en test je programma. Voeg daarna weer een paar blokken toe en test dan opnieuw. Zo kom je er wel!"
         courseF_bee_functions6_b: Your function should check if there is a flower or honeycomb, get nectar or make honey, then turn.
         courseF_bee_functions6_c: Since you are turning within your function, you only need one `while` loop to get you through this maze.
       courseF_bee_functions7_authored_hint:
@@ -12955,13 +12949,13 @@ nl:
         courseF_bee_functions7_a: You can look back at the last puzzle to see your function.
         courseF_bee_functions7_b: Try drawing a path through this maze with your finger. Where will the bee have to make a decision?
       courseF_bee_functions8a_authored_hint:
-        courseF_bee_functions8a_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseF_bee_functions8a_a: "Als de puzzel moeilijk lijkt, probeer dan je functie stap voor stap te maken. \n\nVoeg een paar blokken toe en test je programma. Voeg daarna weer een paar blokken toe en test dan opnieuw. Zo kom je er wel!"
         courseF_bee_functions8a_b: "Remember to build code inside of the function editor.\n\n"
       courseF_bee_functions8a_2018_authored_hint:
-        courseF_bee_functions8a_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseF_bee_functions8a_a: "Als de puzzel moeilijk lijkt, probeer dan je functie stap voor stap te maken. \n\nVoeg een paar blokken toe en test je programma. Voeg daarna weer een paar blokken toe en test dan opnieuw. Zo kom je er wel!"
         courseF_bee_functions8a_b: "Remember to build code inside of the function editor.\n\n"
       courseF_bee_functionsPre7_authored_hint:
-        courseF_bee_functions7_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseF_bee_functions7_a: "Als de puzzel moeilijk lijkt, probeer dan je functie stap voor stap te maken. \n\nVoeg een paar blokken toe en test je programma. Voeg daarna weer een paar blokken toe en test dan opnieuw. Zo kom je er wel!"
         courseF_bee_functions7_b: |
           Remember to build code inside of the green function block.
           
@@ -12976,7 +12970,7 @@ nl:
           </xml>
         courseF_bee_functions7_c: Which way should you turn if there is a honeycomb? What about a flower? What if there is nothing?
       courseF_bee_functionsPre7_2018_authored_hint:
-        courseF_bee_functions7_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseF_bee_functions7_a: "Als de puzzel moeilijk lijkt, probeer dan je functie stap voor stap te maken. \n\nVoeg een paar blokken toe en test je programma. Voeg daarna weer een paar blokken toe en test dan opnieuw. Zo kom je er wel!"
         courseF_bee_functions7_b: |-
           Remember to build code inside of the green function block.
           
@@ -13214,7 +13208,7 @@ nl:
           </block>
           </xml>
       courseF_bee_functions_challenge2_recursion_authored_hint:
-        courseF_bee_functions8a_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseF_bee_functions8a_a: "Als de puzzel moeilijk lijkt, probeer dan je functie stap voor stap te maken. \n\nVoeg een paar blokken toe en test je programma. Voeg daarna weer een paar blokken toe en test dan opnieuw. Zo kom je er wel!"
         courseF_bee_functions8a_b: "Remember to build code inside of the function editor.\n\n"
       courseF_bee_fwp1_authored_hint:
         courseF_bee_fwp1_a: Use `if` statements to make sure you're only getting nectar from a flower.
@@ -14523,10 +14517,10 @@ nl:
       grade2_PuppyLoops_5_authored_hint:
         hint1: The best solution uses two `move forward` commands and one loop.
       grade2_PuppyLoops_6_authored_hint:
-        2-3_Maze_16_a: If the pattern is hard to see, try coding it all out first and see what things repeat over and over before you put the loops in.
-        2-3_Maze_16_b: "To put lots of blocks inside a `repeat` loop, just drag a loop out into the workspace, then drag all of the blocks from the starting program inside of it.  \n\nConnect it all back to the `when run` block and you're good to go!"
+        2-3_Maze_16_a: Als het patroon lastig te zien is, maak dan eerst het hele programma zonder lussen en kijk daarna welke blokken steeds herhaald worden en voeg dan de lussen toe.
+        2-3_Maze_16_b: "Om meer blokken in een \"Herhaal\" lus te zetten, sleep je eerst het \"herhaal keer\" blok naar de werkplaats en daarna sleep je alle blokken onder het \"als gestart\" blok binnenin de lus. \n\nZet daarna alles weer terug onder het \"als gestart\" blok en je bent klaar!"
       grade2_PuppyLoops_7_authored_hint:
-        2-3_Maze_Loops_17_a: If the pattern is hard to see, try coding it all out first and see what things repeat over and over before you put the loops in.
+        2-3_Maze_Loops_17_a: Als het patroon lastig te zien is, maak dan eerst het hele programma zonder lussen en kijk daarna welke blokken steeds herhaald worden en voeg dan de lussen toe.
         2-3_Maze_Loops_17_b: Is de start code verwijderd? Klik dan op `Begin opnieuw` om het terug te krijgen!
       grade2_PuppyLoops_8_authored_hint:
         2-3_Artist_Debugging_2_a: 'Tip: Elke snorhaar is 75 pixels lang.'
@@ -14571,10 +14565,10 @@ nl:
       grade2_puppy_loops5_authored_hint:
         hint1: The best solution uses two `move forward` commands and one loop.
       grade2_puppy_loops6_authored_hint:
-        2-3_Maze_16_a: If the pattern is hard to see, try coding it all out first and see what things repeat over and over before you put the loops in.
-        2-3_Maze_16_b: "To put lots of blocks inside a `repeat` loop, just drag a loop out into the workspace, then drag all of the blocks from the starting program inside of it.  \n\nConnect it all back to the `when run` block and you're good to go!"
+        2-3_Maze_16_a: Als het patroon lastig te zien is, maak dan eerst het hele programma zonder lussen en kijk daarna welke blokken steeds herhaald worden en voeg dan de lussen toe.
+        2-3_Maze_16_b: "Om meer blokken in een \"Herhaal\" lus te zetten, sleep je eerst het \"herhaal keer\" blok naar de werkplaats en daarna sleep je alle blokken onder het \"als gestart\" blok binnenin de lus. \n\nZet daarna alles weer terug onder het \"als gestart\" blok en je bent klaar!"
       grade2_puppy_loops7_authored_hint:
-        2-3_Maze_Loops_17_a: If the pattern is hard to see, try coding it all out first and see what things repeat over and over before you put the loops in.
+        2-3_Maze_Loops_17_a: Als het patroon lastig te zien is, maak dan eerst het hele programma zonder lussen en kijk daarna welke blokken steeds herhaald worden en voeg dan de lussen toe.
       grade3_ConditionalsElse_4_authored_hint:
         remember_quantum: "**Herinnering:** De puzzel verandert iedere keer hij wordt uitgevoerd.\n\nJe zult een voorwaardelijke blok (`als` of `als/anders`) moeten gebruiken om deze uitdaging op te lossen."
       grade3_ConditionalsElse_5_authored_hint:
@@ -14582,7 +14576,7 @@ nl:
       grade3_ConditionalsElse_TeacherIDo_authored_hint:
         remember_quantum: "**Herinnering:** De puzzel verandert iedere keer hij wordt uitgevoerd.\n\nJe zult een voorwaardelijke blok (`als` of `als/anders`) moeten gebruiken om deze uitdaging op te lossen."
       grade3_Conditionals_10 BAD_authored_hint:
-        4-5_Bee_Nested_Loops_Rows_a: Try treating this puzzle like a long rectangle where the bee needs to move forward, then turn left several times to complete the path.
+        4-5_Bee_Nested_Loops_Rows_a: Denk bij deze puzzel aan een lange rechthoek waar de bij eerst vooruit moet bewegen en dan een paar keer linksom moet draaien om het hele pad af te gaan.
       grade3_Conditionals_11_authored_hint:
         2-3_Bee_Conditionals_14_a: Vind je het lastig om te bedenken hoe je de blokken beneden kunt krijgen? Probeer de rode bloem op precies dezelfde manier te behandelen als de paarse bloem!
         2-3_Bee_Conditionals_14_b: Als de rode bloem paars zou zijn, kun je dan uitzoeken hoe je een extra 'herhaal-lus' kunt gebruiken om de code korter te maken?
@@ -14596,7 +14590,7 @@ nl:
       grade3_Conditionals_TeacherIDo_authored_hint:
         2-3_Bee_Conditionals_6_a: 'Vergeet niet: Paarse bloemen wisselen tussen 0 en 1 nectar wanneer je het programma uitvoert!'
       grade3_Debugging_1_authored_hint:
-        2-3_Bee_Debugging_1_a: Once you find and fix the incorrect block, do you see any patterns that could be made more simple using a `repeat` loop?
+        2-3_Bee_Debugging_1_a: Als je het foute blok hebt gevonden en opgelost, herken je dan een terugkerend patroon die je eenvoudiger kunt maken door een "herhaal keer" blok te gebruiken?
       grade3_Debugging_10_authored_hint:
         grade3_Debugging_10_a: |-
           Start by looking at just the first loop.
@@ -14646,21 +14640,21 @@ nl:
       grade3_Loops_10_authored_hint:
         2-3_Bee_Loops_4_a: Je zou moeten eindigen met 5 blokken in je lus.
       grade3_Loops_11_authored_hint:
-        2-3_Bee_Loops_5_a: If you can't spot the blocks to put inside `repeat` right away, start by coding out each move and look for a pattern.
+        2-3_Bee_Loops_5_a: Als je niet gelijk ziet welke blokken je in het "herhaal keer" blok moet zetten, probeer dan eerst elke stap te programmeren en daarna een terugkerend patroon te zoeken.
       grade3_Loops_12_authored_hint:
-        2-3_Bee_Loops_6_a: If you can't tell what should go into the `repeat` loop, try dragging blocks out one by one and see if you can find a pattern.
+        2-3_Bee_Loops_6_a: Als je niet gelijk weet welke blokken je in het "herhaal keer" blok moet zetten, probeer dan eerst de blokken één voor één en kijk of je een terugkerend patroon kan vinden.
         2-3_Bee_Loops_6_b: Er zouden 6 blokken binnen in je `herhaal` lus moeten staan wanneer je gedaan hebt.
       grade3_Loops_4_authored_hint:
         2-3_Bee_Loops_3B_a: Je zal twéé verschillende `herhaal` lussen nodig hebben, de één achter de andere.
       grade3_Loops_5_authored_hint:
         2-3_Bee_Loops_7_a: De eerste actie is een draai, in plaats van een beweging.
-        2-3_Bee_Loops_7_b: 'If you can''t quite picture the loop from the beginning, try coding it out the long way, then look for a pattern.  '
+        2-3_Bee_Loops_7_b: 'Als je in het begin niet gelijk ziet hoe de lus eruit moet zien, maak dan eerst een lang programma en zoek daarna naar een terugkerend patroon.'
       grade3_Loops_6_authored_hint:
         2-3_Bee_Loops_4A_a: De eerste actie is een draai, in plaats van een beweging.
-        2-3_Bee_Loops_4A_b: The last piece of the program can be finished by writing code at the end of your program outside of your loop.
-        2-3_Bee_Loops_4A_c: If you can't spot the loops yet, try coding it out the long way first, then see what you can combine into a `repeat` loop at the end.
+        2-3_Bee_Loops_4A_b: Om het laatste stukje van het programma te schrijven, moet je onder de lus nog een paar blokken plaatsen.
+        2-3_Bee_Loops_4A_c: Als je de lussen niet gelijk ziet, maak dan stap voor stap eerst een lang programma en bekijk daarna wat je kunt combineren in een "herhaal keer" blok.
       grade3_Loops_8_authored_hint:
-        2-3_Bee_Loops_2_a: You should end up with four blocks inside your loop.
+        2-3_Bee_Loops_2_a: Uiteindelijk moet je 4 blokken in jouw lus hebben.
       grade3_Loops_9_authored_hint:
         2-3_Bee_Loops_3_a: Je zou 6 blokken moeten hebben in je lus.
       grade3_RunningFarm_1_authored_hint:
@@ -14723,7 +14717,7 @@ nl:
           Try using this path through the maze.
           
           ![](https://images.code.org/6a8b4b97a8eef813d8a827b0b7b2d36b-image-1480446509692.05.22.png)
-        grade3_maze_loops2_b: If the pattern is hard to see, try coding it all out first and see what things repeat over and over before you put the loops in.
+        grade3_maze_loops2_b: Als het patroon lastig te zien is, maak dan eerst het hele programma zonder lussen en kijk daarna welke blokken steeds herhaald worden en voeg dan de lussen toe.
         grade3_maze_loops2_c: Try using one `repeat` loop inside of another to cut down on the amount of code you need.
       grade3_maze_loops2a_authored_hint:
         grade3_maze_loops2a_a: To solve this puzzle, you will need to "nest" one `repeat` loop inside of another `repeat` loop.
@@ -14734,7 +14728,7 @@ nl:
       grade3_maze_loops4_authored_hint:
         2-3_Maze_Loops_20_a: Look for a stair-step pattern in this maze to find where a nested loop can be used.
       grade3_maze_loops5_authored_hint:
-        2-3_Maze_Loops_21_a: If you are having trouble finding the stair-step pattern, try covering the blocked paths with your finger.
+        2-3_Maze_Loops_21_a: Als je het lastig vindt om het traptrede patroon te vinden, volg dan eerst het pad met je vinger.
       grade3_robotFarmer_ConditionalsIntro_10a_authored_hint: { }
       grade3_robotFarmer_ConditionalsIntro_11a_authored_hint: { }
       grade3_robotFarmer_ConditionalsIntro_5_authored_hint:
@@ -14874,13 +14868,11 @@ nl:
         grade4_bee_functions6_a: Edit the function so that it solves the puzzle without having to change the main program.
         grade4_bee_functions6_b: "Your function should make the bee: \n- turn\n- move forward\n- collect all of the nectar\n- turn around\n- move back to the main path\n- turn back to the direction that the bee started from"
       grade4_bee_functions7_authored_hint:
-        2-3_Bee_Functions_8_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        2-3_Bee_Functions_8_a: "Als de puzzel moeilijk lijkt, probeer dan je functie stap voor stap te maken. \n\nVoeg een paar blokken toe en test je programma. Voeg daarna weer een paar blokken toe en test dan opnieuw. Zo kom je er wel!"
       grade4_bee_functions8_authored_hint:
-        2-3_Bee_Functions_8_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        2-3_Bee_Functions_8_a: "Als de puzzel moeilijk lijkt, probeer dan je functie stap voor stap te maken. \n\nVoeg een paar blokken toe en test je programma. Voeg daarna weer een paar blokken toe en test dan opnieuw. Zo kom je er wel!"
         2-3_Bee_Functions_8_b: |-
-          Remember to build your code inside of the green function block.
-          
-          ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
+          Vergeet niet om jouw code binnenin het groene functie blok te plaatsen.
         2-3_Bee_Functions_8_c: This function should turn the bee to head him down the path, collect the nectar, make the honey, then turn the bee around and bring him back.
       grade4_bee_functions9_authored_hint:
         grade4_bee_functions9_a: Your function will only need to collect nectar... but this time, you will need to use a `while` loop instead of a `repeat` loop.
@@ -15238,21 +15230,21 @@ nl:
       level 'grade3_Loops_10_authored_hint:
         2-3_Bee_Loops_4_a: Je zou moeten eindigen met 5 blokken in je lus.
       level 'grade3_Loops_11_authored_hint:
-        2-3_Bee_Loops_5_a: If you can't spot the blocks to put inside `repeat` right away, start by coding out each move and look for a pattern.
+        2-3_Bee_Loops_5_a: Als je niet gelijk ziet welke blokken je in het "herhaal keer" blok moet zetten, probeer dan eerst elke stap te programmeren en daarna een terugkerend patroon te zoeken.
       level 'grade3_Loops_12_authored_hint:
-        2-3_Bee_Loops_6_a: If you can't tell what should go into the `repeat` loop, try dragging blocks out one by one and see if you can find a pattern.
+        2-3_Bee_Loops_6_a: Als je niet gelijk weet welke blokken je in het "herhaal keer" blok moet zetten, probeer dan eerst de blokken één voor één en kijk of je een terugkerend patroon kan vinden.
         2-3_Bee_Loops_6_b: Er zouden 6 blokken binnen in je `herhaal` lus moeten staan wanneer je gedaan hebt.
       level 'grade3_Loops_4_authored_hint:
         2-3_Bee_Loops_3B_a: Je zal twéé verschillende `herhaal` lussen nodig hebben, de één achter de andere.
       level 'grade3_Loops_5_authored_hint:
         2-3_Bee_Loops_7_a: De eerste actie is een draai, in plaats van een beweging.
-        2-3_Bee_Loops_7_b: 'If you can''t quite picture the loop from the beginning, try coding it out the long way, then look for a pattern.  '
+        2-3_Bee_Loops_7_b: 'Als je in het begin niet gelijk ziet hoe de lus eruit moet zien, maak dan eerst een lang programma en zoek daarna naar een terugkerend patroon.'
       level 'grade3_Loops_6_authored_hint:
         2-3_Bee_Loops_4A_a: De eerste actie is een draai, in plaats van een beweging.
-        2-3_Bee_Loops_4A_b: The last piece of the program can be finished by writing code at the end of your program outside of your loop.
-        2-3_Bee_Loops_4A_c: If you can't spot the loops yet, try coding it out the long way first, then see what you can combine into a `repeat` loop at the end.
+        2-3_Bee_Loops_4A_b: Om het laatste stukje van het programma te schrijven, moet je onder de lus nog een paar blokken plaatsen.
+        2-3_Bee_Loops_4A_c: Als je de lussen niet gelijk ziet, maak dan stap voor stap eerst een lang programma en bekijk daarna wat je kunt combineren in een "herhaal keer" blok.
       level 'grade3_Loops_8_authored_hint:
-        2-3_Bee_Loops_2_a: You should end up with four blocks inside your loop.
+        2-3_Bee_Loops_2_a: Uiteindelijk moet je 4 blokken in jouw lus hebben.
       level 'grade3_Loops_9_authored_hint:
         2-3_Bee_Loops_3_a: Je zou 6 blokken moeten hebben in je lus.
       playLabDebugVideo1_authored_hint:

@@ -12175,7 +12175,7 @@
       CSD U3 game choose background_markdown_instruction: |
         # Choose your Backgrounds
 
-        Now that you have the backgrounds that you need, you'll write the code to choose the correct background.  You've seen this done in [Lesson 15 Level 11](/s/csd3/stage/15/puzzle/11).
+        Now that you have the backgrounds that you need, you'll write the code to choose the correct background.  You've seen this done in [Lesson 19 Level 11](/s/csd3/stage/19/puzzle/11).
 
         After you've written the code, test it by changing the starting value of your variables and making sure the correct background shows up.
       CSD U3 game choose background_2018_markdown_instruction: |
@@ -12213,7 +12213,7 @@
       CSD U3 game display boards_markdown_instruction: |
         # Display Boards
 
-        Now that your backgrounds are working, you can add your display boards.  Most games have a score board, but you might also want to display information about player level or lives remaining.  Look at [Lesson 12 Puzzle 9](/s/csd3/stage/12/puzzle/9) for an example of how to make a scoreboard.
+        Now that your backgrounds are working, you can add your display boards.  Most games have a score board, but you might also want to display information about player level or lives remaining.  Look at [Lesson 16 Puzzle 9](/s/csd3/stage/16/puzzle/9) for an example of how to make a scoreboard.
 
         For each display board:
         * Create a function to display the information
@@ -12963,7 +12963,7 @@
         \t* Redesign to utilize built in elements
             * Find an image to use in place of your element
             * Draw the element using your preferred image editor
-        * Share your design regularly with your teammates to ensure consistent style
+        * Make sure that you and your teammates are regularly looking at each other's designs to ensure consistent style
       CSD U4 - Design Mode Text_markdown_instruction: "# Adding Text\n<img src=\"https://images.code.org/86ba633e04f90f3ca47dff3dcd064847-image-1469812708683.15.36.png\"
         style=\"float: right; width: 75px\"/>\nThe label element lets you add any
         text you'd like to your app. Just drag out a label block and set its \"text\"
@@ -18531,10 +18531,10 @@
 
         # Do This
 
-        Each member of your team is going to create their own copy of the app, with all of the team members' screens imported in. This will be your copy of the app, and the copy that you will start to add code to in the next lesson.
+        Each member of your team is going to create their own copy of the app, with all of the team members' screens imported in. This will be your copy of the app, and the copy that you will start to add code to in the next lesson.  (Don't forget that you'll also need to import your own screen into this project.)
 
-        * Collect all of the sharing urls for your team's pages
-        \t* You can find the share url by going back to the last level of the previous lesson, or by finding the screen in your [projects directory](/projects)
+        * Collect all of the sharing urls for your team's pages, **including your own**
+        \t* Each team member can find the share url for their own screen by going back to the last level of the previous lesson, or by finding the screen in their [projects directory](/projects)
         * Import each of the screens, one at a time
         \t* If you run into an ID error with one of the screens, discuss the issue with the screen's creator so it can be fixed and imported
         * Delete the default "screen1"
@@ -31086,13 +31086,10 @@
         \n\n# Do This:\n\n* **Read the Project Overview** to understand the entire
         project.\n* **Follow the Project Planning Guide**.\n* **Implement your final
         program in this level**."
-      Practice Create Performance Task_2018_markdown_instruction: "# Practice Create
-        Performance Task\n\nYou've finally made it to the end of the Building Apps
-        Unit! We will continue some programming in the next unit, but for now we are
-        going to use all the new concepts you have learn to create something of your
-        own design! \n\n# Do This:\n\n* **Read the Project Overview** to understand
-        the entire project.\n* **Follow the Project Planning Guide**.\n* **Implement
-        your final program in this level**."
+      Practice Create Performance Task_2018_markdown_instruction: |-
+        # Create Performance Task
+
+        It's time to complete the Create Performance Task. Complete it here.
       Predict Loop I_markdown_instruction: |-
         # Predict
 
@@ -33633,9 +33630,10 @@
         necessarily English - do not count on human intuition to reconstruct the message.
         The message is not known beforehand.)\n- The sender and receiver must be confident
         the full message was successfully transmitted and reconstructed."
-      U2L05 Lossy vs. Lossless FR 1_2018_markdown_instruction: In general, what are
-        reasons that someone would choose to use lossy compression? When would they
-        choose to use lossless compression? Write a brief response below.
+      U2L05 Lossy vs. Lossless FR 1_2018_markdown_instruction: |-
+        # When to use lossy compression?
+
+        In general, what are reasons that someone would choose to use lossy compression? Write a brief response below including at least one example of a situation when lossy compression would be appropriate.
       U2L05 Reflection 1_markdown_instruction: 'In your own words, what were the primary
         obstacles you needed to overcome in today’s challenge? How do these obstacles
         mirror actual problems encountered on the Internet?  '
@@ -50521,6 +50519,16 @@
         wait one second, then deduct a point as long as he stays beneath the octopus
         line."
       courseD_playLab_cond6cloneForTest_markdown_instruction: Can we make this work?
+      courseD_playLab_condFP_2018_markdown_instruction: |-
+        Now, build your own game to show off to your friends!
+
+        ---
+
+        You could:
+        - Have the pirate and ninja work together to get points from the octopus
+        - Have both octopuses follow the pirate, doing double damage to the ninja when they collide
+        - Have each character disappear when touched by the ninja
+        - Invent your own game!
       courseD_scrat_ramp1_markdown_instruction: For this puzzle, snap all of the blocks
         together and click "Run" to watch it go!
       courseD_scrat_ramp1_2018_markdown_instruction: For this puzzle, snap all of

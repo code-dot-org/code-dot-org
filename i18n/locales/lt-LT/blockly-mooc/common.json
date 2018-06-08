@@ -1062,6 +1062,7 @@
   "studentControl": "Individualus studento valdymas",
   "studentLockStateInstructions": "Kontroliuoti kiekvieno studento būseną gali naudojantis žemiau pateikta lentele.",
   "studentName": "Mokinio vardas",
+  "studentNameHeader": "Student name",
   "studentAnswer": "Student answer",
   "submissionTimestamp": "Submission timestamp",
   "submit": "Pateikti",

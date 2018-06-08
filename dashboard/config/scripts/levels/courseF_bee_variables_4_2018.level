@@ -44,8 +44,8 @@
     "top_level_procedure_autopopulate": "false",
     "honey_goal": "6",
     "markdown_instructions": "*\"Un-BEE-lievable!\"\r\n\r\nEdit the code to make it work for this puzzle.",
-    "contained_level_names": null,
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

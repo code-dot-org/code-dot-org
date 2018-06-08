@@ -44,8 +44,7 @@
         ช่วยแก้ไขให้โค้ดวาดรูปถูกต้องหน่อยได้มั้ย?
       2-3 Artist Debugging 10_instruction: "แผ่นทิศบนตัวควบคุมเกมของฉันแคบเกินไป \r
         \r คุณสามารถทำมันกว้าง 10 พิกเซลได้หรือไม่? \r \r ลองรันโปรแกรมก่อนเพื่อดูว่ามีอะไรผิดพลาดได้"
-      2-3 Artist Debugging 11_instruction: "My snowflake is falling apart!\r\n\r\nCan
-        you figure out what's going wrong?"
+      2-3 Artist Debugging 11_instruction: จับคู่รูปร่างตามประเภท
       2-3 Artist Debugging 12_instruction: |-
         I'm supposed to add an ocean wave to
         this scene.  Can you help me?
@@ -347,8 +346,8 @@
         to turn, move forward and make 3 honey, then return the bee to where it started
         and turn back.
       2-3 Bee Loops 1_instruction: |-
-        Each flower contains one unit of nectar. Collect
-        nectar from each of the flowers.
+        ดอกไม้แต่ละดอกมีน้ำหวานจากเกสรเพียงหนึ่งเดียว ให้เก็บน้ำหวานจากเกสร
+        ดอกไม้แต่ละดอก
       2-3 Bee Loops 10_instruction: |-
         Can you use a while loop inside of two other
         loops to collect all of the nectar?
@@ -374,22 +373,18 @@
         Collect nectar from each flower and make honey
         at each honeycomb using the fewest blocks possible.
       2-3 Bee Loops 3A_instruction: Can you use a loop to collect all that nectar?
-      2-3 Bee Loops 3B_instruction: |-
-        Now use the `repeat` block to collect all of
-        the nectar and make all of the honey.
-      2-3 Bee Loops 4_instruction: "Such a busy bee!\r\n\r\nHelp bee collect all of
-        the nectar and make all of the honey with the fewest blocks possible."
-      2-3 Bee Loops 4A_instruction: "How many times can loops help you in this puzzle?
-        \ \r\n\r\nLoops are your friend! Use a few of them to complete this puzzle
-        with the fewest blocks possible."
-      2-3 Bee Loops 5_instruction: "The shape of this path is different than the others.
-        \r\n\r\nCan you collect all of the nectar using as few blocks as possible?"
-      2-3 Bee Loops 6_instruction: |-
-        Can you find the quickest way for the bee to
-        collect all of the nectar and make all of the honey?
-      2-3 Bee Loops 7_instruction: |-
-        What a beautiful field of flowers!   Help the
-        bee visit each one.  Can you find a way to do it with fewer than 7 blocks?
+      2-3 Bee Loops 3B_instruction: ตอนนี้ใช้บล็อก`ทำซ้ำ` เพื่อเก็บน้ำหวานจากเกสรทั้งหมดและทำน้ำผี้งให้หมดด้วย
+      2-3 Bee Loops 4_instruction: |-
+        เป็นผึ้งที่ขยันจริงๆ!
+        ช่วยผึ้งเก็บรวบรวมน้ำหวานจากเกสรทั้งหมด และทำน้ำผึ้งทั้งหมด โดยใช้บล็อกจำนวนที่น้อยที่สุดเท่าที่จะเป็นไปได้
+      2-3 Bee Loops 4A_instruction: กี่ครั้งแล้วที่ลูปช่วยคุณแก้ปริศนา ลูปเป็นเพื่อนของคุณ
+        ใช้ลูปสักสองสามลูปแก้ปริศนานี้ด้วยบล็อกที่น้อยที่สุดเท่าที่จะเป็นไปได้
+      2-3 Bee Loops 5_instruction: "รูปร่างของเส้นทางนี้แตกต่างจากเส้นทางอื่นๆ \nคุณสามารถเก็บน้ำหวานจากเกสรโดยใช้บล็อกให้น้อยที่สุดเท่าที่จะเป็นไปได้
+        ได้ไหม?"
+      2-3 Bee Loops 6_instruction: คุณสามารถหาทางที่เร็วที่สุด สำหรับผึ้งในการเก็บรวบรวมน้ำหวานจากเกสรทั้งหมด
+        และทำน้ำผึ้งทั้งหมด ได้หรือไม่?
+      2-3 Bee Loops 7_instruction: โอ้ ทุ่งดอกไม้ที่ช่างสวยงาม! ช่วยผี้งให้เข้าไปเก็บน้ำหวานจากเกสรดอกไม้แต่ละดอก
+        โดยที่คุณสามารถใช้บล็อกให้น้อยกว่า 7 บล็อกได้ไหม
       2-3 Bee Loops 8_instruction: "These purple flowers have different amount of
         nectar each time you run the puzzle. \r\n\r\nUse the `while nectar` loop to
         collect all of the nectar. \r\n\r\nThis loop will run as long as the condition
@@ -431,9 +426,8 @@
         Get me to the pig! You can only use one move forward
         block this time
       2-3 Maze 14 (old)_instruction: Get me to the pig with the Repeat until block!
-      2-3 Maze 14_instruction: |-
-        Get me to the sunflower! (Where is that "repeat
-        times" block when I need it?)
+      2-3 Maze 14_instruction: พาฉันไปหาดอกทานตะวัน! (ไอ้เจ้าบล็อก "ทำซ้ำกี่ครั้ง"
+        ไม่รู้ไปอยู่ที่ไหน ในยามที่ข้าต้องการใช้มัน?)
       2-3 Maze 15 (old)_instruction: Get me to the pig with the Repeat until block!
       2-3 Maze 15_instruction: |-
         In this puzzle, two `repeat` loops will help you
@@ -602,9 +596,7 @@
       4-5 Artist 11_instruction: |-
         Complete the green lines. The lines are 300 pixels
         long and 15 pixels apart.
-      4-5 Artist 2_instruction: |-
-        Loop this code using the `repeat` block to complete
-        the square.
+      4-5 Artist 2_instruction: ลูปโค้ดนี้โดยการใช้บล็อก `ทำซ้ำ(repeat)` เพื่อวาดสี่เหลี่ยมจตุรัสให้เสร็จสมบูรณ์
       4-5 Artist 3.5_instruction: |-
         Try to figure out what happens if you run this
         code (or just press "Run" and try it). Next, repeat the code enough times
@@ -4135,7 +4127,7 @@
       Course 4 Variables Assessment_instruction: |-
         Can you create this image using
         a variable for sides? Each line should be 50 pixels long.
-      Course1BeePuzzle12_instruction: Get three nectars and then make two honey
+      Course1BeePuzzle12_instruction: เก็บน้ำหวานจากเกสรสามครั้ง แล้วทำน้ำผึ้งสองครั้ง
       Course1MazeAssessment1_instruction: "This is a test!\r\nMove one way, then another
         to get me to the pig"
       Course1MazeAssessment2_instruction: "This is a test!\r\nMove one way, then another
@@ -4668,7 +4660,7 @@
       K-1 Artist 1 Assessment 1_instruction: |-
         Draw a short line up and a long one
         to the right!
-      K-1 Artist Loops 1_instruction: Draw this line by moving East 4 times.
+      K-1 Artist Loops 1_instruction: วาดเส้นนี้ โดยวาดไปทางทิศตะวันออก 4 ครั้ง
       K-1 Artist Loops 2_instruction: Can you draw the same line using a loop?
       K-1 Artist Loops 3_instruction: Can you loop these blocks to draw 6 lines?
       K-1 Artist Loops 4_instruction: |-
@@ -4682,64 +4674,53 @@
       K-1 Artist Loops 8_instruction: This staircase has longer steps.
       K-1 Artist Loops 9_instruction: 'Assessment: Use a loop to draw the stairs'
       K-1 Artist Loops Free Play_instruction: Free play, draw something fun!
-      K-1 Artist1 1_instruction: Draw the foot of the man with one line
-      K-1 Artist1 10_instruction: |-
-        Draw and Jump to make the dashed path to the treasure
-        X
-      K-1 Artist1 2_instruction: Draw the whisker on the cat with two lines!
-      K-1 Artist1 3_instruction: |-
-        Draw two lines east and two lines north to finish
-        the house!
-      K-1 Artist1 4_instruction: Draw lines up, over, and down to complete the castle!
+      K-1 Artist1 1_instruction: ให้วาดเท้าคนด้วยเส้นหนึ่งเส้น
+      K-1 Artist1 10_instruction: ให้วาด และกระโดดเพื่อสร้างทางที่เป็นเส้นประ ซึ่งโยงไปยังขุมสมบัติ
+      K-1 Artist1 2_instruction: ให้วาดหนวดแมวด้วยเส้นสองเส้น
+      K-1 Artist1 3_instruction: ให้วาดเส้นสองเส้นไปทางทิศตะวันออกและเส้นสองเส้นไปทางทิศเหนือเพื่อวาดบ้านให้เสร็จ
+      K-1 Artist1 4_instruction: ให้ลากเส้นขึ้น ลากเส้นข้ามไป และลากเส้นลงเมาพื่อวาดรูปปราสาทให้เสร็จ
       K-1 Artist1 5.5_instruction: |-
         Complete the third tower of the castle using
         short lines
-      K-1 Artist1 5_instruction: Draw the stem of this flower with two lines!
-      K-1 Artist1 6_instruction: Finish the picture by using a jump block!
+      K-1 Artist1 5_instruction: ให้วาดก้านของดอกไม้นี้ ด้วยเส้นสองเส้น
+      K-1 Artist1 6_instruction: ให้วาดรูปให้เสร็จ ด้วยการใช้บล็อกกระโดด
       K-1 Artist1 7_instruction: |-
         Use the jump block to move without drawing. Jump
         up and draw a line.
-      K-1 Artist1 8_instruction: |-
-        Draw the dashed line by using both the jump and
-        draw blocks
-      K-1 Artist1 9_instruction: Draw and Jump to make the dashed line
+      K-1 Artist1 8_instruction: ให้วาดเส้นประ โดยใช้ทั้ง บล็อกกระโดดและบล็อกลากเส้น
+      K-1 Artist1 9_instruction: ให้วาด และกระโดดเพื่อวาดเส้นประ
       K-1 Artist1 Assessment 1_instruction: Draw the short and long lines!
       K-1 Artist1 Assessment 2_instruction: Draw the short dashed lines!
-      K-1 Artist2 1_instruction: Draw a square below the triangle.
-      K-1 Artist2 2_instruction: Jump and draw a square next to the house.
-      K-1 Artist2 3_instruction: Draw a square above the other square
-      K-1 Artist2 4_instruction: Draw a rectangle to complete the bridge.
-      K-1 Artist2 5_instruction: Draw a rectangle to complete the bridge supports
-      K-1 Artist2 6_instruction: Draw two squares to make a rectangle!
-      K-1 Artist2 Assessment1_instruction: |-
-        Assessment: Draw a square next to the
-        other square.
-      K-1 Artist2 Free Draw_instruction: Draw anything!
-      K-1 Artist2_7_instruction: Draw a rectangle to give the dresser a top drawer!
-      K-1 Bee 1_instruction: |-
-        Move me to the flower, get the nectar, then move me
-        to the honeycomb, and make honey
-      K-1 Bee 10_instruction: Get four nectar and then make two honey!
+      K-1 Artist2 1_instruction: ให้วาดรูปสี่เหลี่ยมจตุรัสอยู่ภายใต้รูปสามเหลี่ยม
+      K-1 Artist2 2_instruction: ให้กระโดดและวาดสี่เหลี่ยมจตุรัสให้อยู่ข้างๆ บ้าน
+      K-1 Artist2 3_instruction: ให้วาดสี่เหลี่ยมจตุรัส ตั้งซ้อนอยู่บนสีเหลี่ยมจตุรัสอีกรูปหนึ่ง
+      K-1 Artist2 4_instruction: ให้วาดสี่เหลี่ยมผืนผ้า เพื่อเชื่อมต่อสะพานให้เสร็จสมบูรณ์
+      K-1 Artist2 5_instruction: ให้วาดสี่เหลี่ยมผืนผ้าเพื่อสร้างเป็นตอหม้อรองรับตัวสะพานให้เสร็จบริบูรณ์
+      K-1 Artist2 6_instruction: ให้วาดสี่เหลี่ยมจตุรัสสองรูปต่อกันเป็นสี่เหลี่ยมผืนผ้า
+      K-1 Artist2 Assessment1_instruction: 'การประเมินผล: ให้วาดสี่เหลี่ยมจตุรัสรูปหนึ่งอยู่ข้างๆ
+        สี่เหลี่ยมจตุรัสอีกรูปหนึ่ง'
+      K-1 Artist2 Free Draw_instruction: ให้วาดอะไรก็ได้ ตามที่คุณต้องการ!
+      K-1 Artist2_7_instruction: ให้วาดรูปสี่เหลี่ยมผืนผ้าเป็นลิ้นชักด้านบนสุดของตู้
+      K-1 Bee 1_instruction: พาฉันไปที่ดอกไม้ เก็บน้ำหวานจากเกสร และพาฉันไปที่รังผึ้ง
+        เพื่อทำน้ำหวาน
+      K-1 Bee 10_instruction: เก็บน้ำหวานจากเกสรสี่ครั้ง แล้วทำน้ำผึ้งสองครั้ง
       K-1 Bee 11.5_instruction: Get four nectar to make four honey!
-      K-1 Bee 11_instruction: Get three nectar and then make one honey
-      K-1 Bee 12_instruction: Get three nectar and then make two honey!
-      K-1 Bee 13_instruction: Get three nectar and then make one honey!
-      K-1 Bee 14_instruction: |-
-        Get me to the nectar, pick it up, get me to the honey,
-        and make honey!
-      K-1 Bee 15_instruction: Get two nectar to make two honey!
-      K-1 Bee 2_instruction: |-
-        Move me to the flower, get the nectar, then move me
-        to the honeycomb, and make honey
-      K-1 Bee 3_instruction: |-
-        Move me to the flower, get the nectar, then move me
-        to the honeycomb, and make honey
-      K-1 Bee 4_instruction: Get two nectar and then make two honey!
-      K-1 Bee 5_instruction: Get three nectar and then make three honey!
-      K-1 Bee 6_instruction: Get two nectar and then make two honey!
-      K-1 Bee 7_instruction: Get three nectar and then make two honey!
-      K-1 Bee 8_instruction: Get two nectar and then make two honey!
-      K-1 Bee 9_instruction: Get two nectar and then make two honey!
+      K-1 Bee 11_instruction: เก็บน้ำหวานจากเกสรสามครั้ง แล้วทำน้ำผึ้งหนึ่งครั้ง
+      K-1 Bee 12_instruction: เก็บน้ำหวานจากเกสรสามครั้ง แล้วทำน้ำผึ้งสองครั้ง!
+      K-1 Bee 13_instruction: เก็บน้ำหวานจากเกสรสามครั้ง แล้วทำน้ำผึ้งหนึ่งครั้ง!
+      K-1 Bee 14_instruction: พาฉันไปที่เกสรดอกไม้ เก็บน้ำหวานมา พาฉันไปที่รวงผึ้ง
+        และทำน้ำหวาน
+      K-1 Bee 15_instruction: เก็บน้ำหวานจากเกสรสองครั้ง เพื่อทำน้ำผึ้งสองครั้ง!
+      K-1 Bee 2_instruction: พาฉันไปที่ดอกไม้ เก็บน้ำหวานจากเกสร และพาฉันไปที่รังผึ้ง
+        เพื่อทำน้ำหวาน
+      K-1 Bee 3_instruction: พาฉันไปที่ดอกไม้ เก็บน้ำหวานจากเกสร และพาฉันไปที่รังผึ้ง
+        เพื่อทำน้ำหวาน
+      K-1 Bee 4_instruction: เก็บน้ำหวานจากเกสรสองครั้ง แล้วทำน้ำผึ้งสองครั้ง!
+      K-1 Bee 5_instruction: เก็บน้ำหวานจากเกสรสามครั้ง แล้วทำน้ำผึ้งสามครั้ง!
+      K-1 Bee 6_instruction: เก็บน้ำหวานจากเกสรสองครั้ง แล้วทำน้ำผึ้งสองครั้ง!
+      K-1 Bee 7_instruction: เก็บน้ำหวานจากเกสรสามครั้ง แล้วทำน้ำผึ้งสองครั้ง!
+      K-1 Bee 8_instruction: เก็บน้ำหวานจากเกสรสองครั้ง แล้วทำน้ำผึ้งสองครั้ง!
+      K-1 Bee 9_instruction: เก็บน้ำหวานจากเกสรสองครั้ง แล้วทำน้ำผึ้งสองครั้ง!
       K-1 Bee Assessment 1_instruction: Get nectar to make honey!
       K-1 Bee Assessment 2_instruction: Get nectar to make honey!
       K-1 Bee Loops 1_instruction: Get the nectar to make honey!
@@ -4770,23 +4751,22 @@
         Get nectar to make honey and use loops
         to move!
       K-1 Bee Loops Assessment 2_instruction: Get nectar to make honey using loops!
-      K-1 Bee Puzzle 12_instruction: Get three nectars and then make two honey
+      K-1 Bee Puzzle 12_instruction: เก็บน้ำหวานจากเกสรสามครั้ง แล้วทำน้ำผึ้งสองครั้ง
       K-1 Building a Foundation Assessment_instruction: |-
         Build a three level pyramid,
         there are no other directions, so just play with the pieces until you get
         it!
-      K-1 Maze 10_instruction: 'Go around the TNT to get me to the pig! '
-      K-1 Maze 11_instruction: |-
-        Trace the path and lead me to the silly pig. Avoid
-        TNT or the feathers will fly! Hint: He's South of me.
-      K-1 Maze 2_instruction: Move me East to get me to the pig!
-      K-1 Maze 3_instruction: Move me South to get me to the pig!
-      K-1 Maze 4_instruction: Move me North to get me to the pig!
-      K-1 Maze 5_instruction: Move me East to get me to the pig!
-      K-1 Maze 6_instruction: Move one way, then another to get me to the pig!
-      K-1 Maze 7_instruction: Move one way, then another to get me to the pig!
-      K-1 Maze 8_instruction: Move one way, then another to get me to the pig!
-      K-1 Maze 9_instruction: Move one way, then another to get me to the pig!
+      K-1 Maze 10_instruction: 'พาฉันอ้อมไปรอบ ๆ ระเบิด เพื่อไปจัดการเจ้าหมูนั่นให้ได้! '
+      K-1 Maze 11_instruction: 'แกะรอยเส้นทางให้ดีนะ เพื่อไปจัดการเจ้าหมูซื่อบื้อนั่น
+        อยู่ห่างๆระเบิดไว้ ไม่เช่นนั่นขนปลิวว่อนแน่! บอกใบ้: เจ้าหมูนั่นอยู่ทางใต้ของฉัน'
+      K-1 Maze 2_instruction: พาฉันไปทางทิศตะวันออก เพื่อไปจัดการเจ้าหมูตัวนั้น
+      K-1 Maze 3_instruction: พาฉันไปทางทิศใต้ เพื่อไปจัดการเจ้าหมูตัวนั้น
+      K-1 Maze 4_instruction: พาฉันไปทางทิศเหนือ เพื่อไปจัดการเจ้าหมูตัวนั้น
+      K-1 Maze 5_instruction: พาฉันไปทางทิศตะวันออก เพื่อไปจัดการเจ้าหมูตัวนั้น
+      K-1 Maze 6_instruction: ขยับฉันไปทางนี้ แล้วก็ขยับฉันไปทางนั้น เพื่อไปจัดการเจ้าหมูนั่น!
+      K-1 Maze 7_instruction: ขยับฉันไปทางนี้ แล้วก็ขยับฉันไปทางนั้น เพื่อไปจัดการเจ้าหมูนั่น!
+      K-1 Maze 8_instruction: ขยับฉันไปทางนี้ แล้วก็ขยับฉันไปทางนั้น เพื่อไปจัดการเจ้าหมูนั่น!
+      K-1 Maze 9_instruction: ขยับฉันไปทางนี้ แล้วก็ขยับฉันไปทางนั้น เพื่อไปจัดการเจ้าหมูนั่น!
       K-1 Maze Assessment 1_instruction: Assessment -- Get me to the pig!
       K-1 Maze Assessment 12_instruction: Assessment Level
       K-1 Maze Assessment 13_instruction: Assessment Level
@@ -4816,18 +4796,16 @@
         pig!
       K-1 Maze Multi 14_instruction: Assessment Level
       K-1 Maze Multi 15_instruction: Assessment Level
-      K-1 Maze Sequence Assessment 1_instruction: "Let's see what you've learned!\r\nMove
-        one way, then another to get me to the pig."
+      K-1 Maze Sequence Assessment 1_instruction: มาดูกันว่าคุณเรียนรู้อะไรไปบ้าง
+        ขยับฉันไปทางนี้ที แล้วก็ขยับฉันไปทางนั้นที เพื่อไปจัดการเจ้าหมูนั่น!
       K-1 Maze Sequence Assessment 2_instruction: |-
         Move one way, then another to
         get me to the pig.
       K-1 Maze debug Assessment 1_instruction: |-
         Assessment -- Debug this level by
         rearranging and adding blocks to get me to the pig!
-      K-1 artist 1 level 10_instruction: |-
-        Draw the dashed line by using both the
-        jump and draw blocks
-      K-1 artist 1 level 9_instruction: Draw this using three lines
+      K-1 artist 1 level 10_instruction: ให้วาดเส้นประ โดยใช้ทั้ง บล็อกกระโดดและบล็อกลากเส้น
+      K-1 artist 1 level 9_instruction: ให้วาดตามนี้ ใช้เส้นสามเส้น
       K-1 maze debug 1_instruction: Change the code to get me to the pig!
       K-1 maze debug 10_instruction: |-
         Debug this level by rearranging and changing
@@ -4871,7 +4849,7 @@
         Time for a shorter puzzle!  Move one way, then
         another to get me to the pig.
       K2.0 sequence 4a_instruction: Try this puzzle again from the start!
-      K2.0 sequence 5_instruction: Move one way, then another to get me to the pig!
+      K2.0 sequence 5_instruction: ขยับฉันไปทางนี้ แล้วก็ขยับฉันไปทางนั้น เพื่อไปจัดการเจ้าหมูนั่น!
       K2.0 sequence 6_instruction: |-
         Figure out what is missing and then add blocks
         to get me to the pig!
@@ -4881,7 +4859,7 @@
       K2.0 sequence 8_instruction: |-
         Debug this level by adding blocks to get me to
         the pig!
-      K2.0 sequence 9_instruction: "Challenge: Go around the TNT to get me to the\npig! "
+      K2.0 sequence 9_instruction: 'เพื่อการท้าทาย: พาฉันอ้อมไปรอบ ๆ ระเบิด เพื่อไปจัดการเจ้าหมูนั่นให้ได้! '
       K2.0 sequence FP_instruction: |-
         Now figure out how to get the pig any way you
         can!
@@ -5449,9 +5427,7 @@
       NetSim_Variant3_instruction: |-
         NetSim: Variant 3: Connects groups of 2-6 students
         with a router, and explores issues in routing and DNS
-      New Artist Project_instruction: |-
-        Draw something awesome! Your code is saved
-        as a project that you can return to at any time.
+      New Artist Project_instruction: วาดบางอย่างให้สุดยอดไปเลย! โค้ดที่ท่านเขียนไว้จะได้รับการบันทึกไว้เป็นโปรเจคที่ท่านสามารถกลับมาเล่นได้อีกทุกเวลา
       New Basketball Project_instruction: |-
         Create your own Basketball game. You can
         change all the rules. When you're done, click Finish to let friends try your
@@ -12944,9 +12920,7 @@
         Can you add 2 blocks to get the bird to
         the pig.
       grade1_maze_sequence4_instruction: Now try this puzzle from the start!
-      grade1_maze_sequence5_instruction: |-
-        Move one way, then another to get me to
-        the pig!
+      grade1_maze_sequence5_instruction: ขยับฉันไปทางนี้ แล้วก็ขยับฉันไปทางนั้น เพื่อไปจัดการเจ้าหมูนั่น!
       grade1_maze_sequence6_instruction: |-
         Figure out what is missing and then add
         blocks to get me to the pig!
@@ -12956,9 +12930,7 @@
       grade1_maze_sequence8_instruction: |-
         Debug this level by adding blocks to get
         me to the pig!
-      grade1_maze_sequence9_instruction: 'Go around the TNT to get me to the pig!
-
-'
+      grade1_maze_sequence9_instruction: 'พาฉันอ้อมไปรอบ ๆ ระเบิด เพื่อไปจัดการเจ้าหมูนั่นให้ได้! '
       grade1_maze_sequenceA_instruction: |-
         Challenge: Move me around the TNT to get
         to the pig.
@@ -13317,27 +13289,23 @@
         These blocks are really bugging me.
         Fix the error(s) to collect all of the nectar and make all of the honey.
       grade3_Loops_1_instruction: "Can you help me collect the nectar from these\nflowers? "
-      grade3_Loops_10_instruction: "Such a busy bee!\r\n\r\nHelp bee collect all of
-        the nectar and make all of the honey with the fewest blocks possible."
-      grade3_Loops_11_instruction: "The shape of this path is different than the others.
-        \r\n\r\nCan you collect all of the nectar using as few blocks as possible?"
-      grade3_Loops_12_instruction: |-
-        Can you find the quickest way for the bee to
-        collect all of the nectar and make all of the honey?
+      grade3_Loops_10_instruction: |-
+        เป็นผึ้งที่ขยันจริงๆ!
+        ช่วยผึ้งเก็บรวบรวมน้ำหวานจากเกสรทั้งหมด และทำน้ำผึ้งทั้งหมด โดยใช้บล็อกจำนวนที่น้อยที่สุดเท่าที่จะเป็นไปได้
+      grade3_Loops_11_instruction: "รูปร่างของเส้นทางนี้แตกต่างจากเส้นทางอื่นๆ \nคุณสามารถเก็บน้ำหวานจากเกสรโดยใช้บล็อกให้น้อยที่สุดเท่าที่จะเป็นไปได้
+        ได้ไหม?"
+      grade3_Loops_12_instruction: คุณสามารถหาทางที่เร็วที่สุด สำหรับผึ้งในการเก็บรวบรวมน้ำหวานจากเกสรทั้งหมด
+        และทำน้ำผึ้งทั้งหมด ได้หรือไม่?
       grade3_Loops_2_instruction: This time, use a loop to gather all of the nectar.
       grade3_Loops_3_instruction: Use a `repeat` loop to collect all of the nectar.
-      grade3_Loops_4_instruction: |-
-        Now use the `repeat` block to collect all of the
-        nectar and make all of the honey.
-      grade3_Loops_5_instruction: |-
-        What a beautiful field of flowers!   Help the
-        bee visit each one.  Can you find a way to do it with fewer than 7 blocks?
-      grade3_Loops_6_instruction: "How many times can loops help you in this puzzle?
-        \ \r\n\r\nLoops are your friend! Use a few of them to complete this puzzle
-        with the fewest blocks possible."
+      grade3_Loops_4_instruction: ตอนนี้ใช้บล็อก`ทำซ้ำ` เพื่อเก็บน้ำหวานจากเกสรทั้งหมดและทำน้ำผี้งให้หมดด้วย
+      grade3_Loops_5_instruction: โอ้ ทุ่งดอกไม้ที่ช่างสวยงาม! ช่วยผี้งให้เข้าไปเก็บน้ำหวานจากเกสรดอกไม้แต่ละดอก
+        โดยที่คุณสามารถใช้บล็อกให้น้อยกว่า 7 บล็อกได้ไหม
+      grade3_Loops_6_instruction: กี่ครั้งแล้วที่ลูปช่วยคุณแก้ปริศนา ลูปเป็นเพื่อนของคุณ
+        ใช้ลูปสักสองสามลูปแก้ปริศนานี้ด้วยบล็อกที่น้อยที่สุดเท่าที่จะเป็นไปได้
       grade3_Loops_7_instruction: |-
-        Each flower contains one unit of nectar. Collect
-        nectar from each of the flowers.
+        ดอกไม้แต่ละดอกมีน้ำหวานจากเกสรเพียงหนึ่งเดียว ให้เก็บน้ำหวานจากเกสร
+        ดอกไม้แต่ละดอก
       grade3_Loops_8_instruction: |-
         Collect all the nectar and make all of the honey
         using the fewest blocks possible.
@@ -13935,14 +13903,13 @@
         บล็อกกระโดดจะเคลื่อนย้ายศิลปินโดยไม่มีการวาดรูป
         วาดเส้นประโดยใช้บล็อก "กระโดดไปข้างหน้า" และ "ไปข้างหน้า"
         แต่ละเส้นมีความยาว 50 พิกเซล
-      grade4_review_bee1_instruction: |-
-        Now use the `repeat` block to collect all
-        of the nectar and make all of the honey.
+      grade4_review_bee1_instruction: ตอนนี้ใช้บล็อก`ทำซ้ำ` เพื่อเก็บน้ำหวานจากเกสรทั้งหมดและทำน้ำผี้งให้หมดด้วย
       grade4_review_bee2_instruction: |-
         Collect nectar from each flower and make honey
         at each honeycomb using the fewest blocks possible.
-      grade4_review_bee3_instruction: "Such a busy bee!\r\n\r\nHelp bee collect all
-        of the nectar and make all of the honey with the fewest blocks possible."
+      grade4_review_bee3_instruction: |-
+        เป็นผึ้งที่ขยันจริงๆ!
+        ช่วยผึ้งเก็บรวบรวมน้ำหวานจากเกสรทั้งหมด และทำน้ำผึ้งทั้งหมด โดยใช้บล็อกจำนวนที่น้อยที่สุดเท่าที่จะเป็นไปได้
       grade4_scaffolded_project1_instruction: |-
         It is amazing how much you have learned!
         Let's put them together to make a game, step by step.
@@ -14561,7 +14528,7 @@
         Change the scene to an icy background
         and set Sid’s (actor 1) speed to fast.
       jessie-test_instruction: Lots of instructions
-      k-1 maze 1_instruction: Can you make me move West to get to the pig?
+      k-1 maze 1_instruction: คุณช่วยให้ฉันขยับไปทางทิศตะวันตกไปหาเจ้าหมูได้หรือไม่?
       k1stickerfreeplay_instruction: |-
         The artist saw something funny in the distance.  Draw
         what you think he saw.
@@ -14569,32 +14536,27 @@
         only use 4 blocks to get them.\r\n\r\nCan you help her grab as many as she
         can using just 4 blocks?"
       kikiTesting_instruction: ".\r\n .\r\n.\r\n.\r\n.\r\n.\r\n\r\n.\r\n\r\n"
-      level 'grade3_Loops_10_instruction: "Such a busy bee!\r\n\r\nHelp bee collect
-        all of the nectar and make all of the honey with the fewest blocks possible."
-      level 'grade3_Loops_11_instruction: "The shape of this path is different than
-        the others. \r\n\r\nCan you collect all of the nectar using as few blocks
-        as possible?"
-      level 'grade3_Loops_12_instruction: |-
-        Can you find the quickest way for the
-        bee to collect all of the nectar and make all of the honey?
+      level 'grade3_Loops_10_instruction: |-
+        เป็นผึ้งที่ขยันจริงๆ!
+        ช่วยผึ้งเก็บรวบรวมน้ำหวานจากเกสรทั้งหมด และทำน้ำผึ้งทั้งหมด โดยใช้บล็อกจำนวนที่น้อยที่สุดเท่าที่จะเป็นไปได้
+      level 'grade3_Loops_11_instruction: "รูปร่างของเส้นทางนี้แตกต่างจากเส้นทางอื่นๆ
+        \nคุณสามารถเก็บน้ำหวานจากเกสรโดยใช้บล็อกให้น้อยที่สุดเท่าที่จะเป็นไปได้ ได้ไหม?"
+      level 'grade3_Loops_12_instruction: คุณสามารถหาทางที่เร็วที่สุด สำหรับผึ้งในการเก็บรวบรวมน้ำหวานจากเกสรทั้งหมด
+        และทำน้ำผึ้งทั้งหมด ได้หรือไม่?
       level 'grade3_Loops_2_instruction: |-
         This time, use a loop to gather all of
         the nectar.
       level 'grade3_Loops_3_instruction: |-
         Use a `repeat` loop to collect all of the
         nectar.
-      level 'grade3_Loops_4_instruction: |-
-        Now use the `repeat` block to collect all
-        of the nectar and make all of the honey.
-      level 'grade3_Loops_5_instruction: |-
-        What a beautiful field of flowers!   Help
-        the bee visit each one.  Can you find a way to do it with fewer than 7 blocks?
-      level 'grade3_Loops_6_instruction: "How many times can loops help you in this
-        puzzle?  \r\n\r\nLoops are your friend! Use a few of them to complete this
-        puzzle with the fewest blocks possible."
+      level 'grade3_Loops_4_instruction: ตอนนี้ใช้บล็อก`ทำซ้ำ` เพื่อเก็บน้ำหวานจากเกสรทั้งหมดและทำน้ำผี้งให้หมดด้วย
+      level 'grade3_Loops_5_instruction: โอ้ ทุ่งดอกไม้ที่ช่างสวยงาม! ช่วยผี้งให้เข้าไปเก็บน้ำหวานจากเกสรดอกไม้แต่ละดอก
+        โดยที่คุณสามารถใช้บล็อกให้น้อยกว่า 7 บล็อกได้ไหม
+      level 'grade3_Loops_6_instruction: กี่ครั้งแล้วที่ลูปช่วยคุณแก้ปริศนา ลูปเป็นเพื่อนของคุณ
+        ใช้ลูปสักสองสามลูปแก้ปริศนานี้ด้วยบล็อกที่น้อยที่สุดเท่าที่จะเป็นไปได้
       level 'grade3_Loops_7_instruction: |-
-        Each flower contains one unit of nectar. Collect
-        nectar from each of the flowers.
+        ดอกไม้แต่ละดอกมีน้ำหวานจากเกสรเพียงหนึ่งเดียว ให้เก็บน้ำหวานจากเกสร
+        ดอกไม้แต่ละดอก
       level 'grade3_Loops_8_instruction: |-
         Collect all the nectar and make all of
         the honey using the fewest blocks possible.

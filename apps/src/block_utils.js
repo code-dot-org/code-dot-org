@@ -416,6 +416,9 @@ exports.cleanBlocks = function (blocksDom) {
  *   non-inlined blocks.
  * @property {boolean} assignment Indicates that this block should generate
  *   an assignment statement, with this input yielding the variable name.
+ * @property {boolean} defer Indicates that this input should be wrapped in a
+ *   function before being passed into func, so that evaluation can be deferred
+ *   until later.
  */
 
 /**
@@ -508,6 +511,7 @@ const determineInputs = function (text, args, strictTypes=[]) {
         type: arg.type,
         options: arg.options,
         assignment: arg.assignment,
+        defer: arg.defer,
       };
       Object.keys(labeledInput).forEach(key => {
         if (labeledInput[key] === undefined) {
@@ -825,18 +829,19 @@ exports.createJsWrapperBlockCreator = function (
       let prefix = '';
       const values = args.map(arg => {
         const inputConfig = inputConfigs.find(input => input.name === arg.name);
-        const inputCode = inputTypes[inputConfig.mode].generateCode(this, inputConfig);
+        let inputCode = inputTypes[inputConfig.mode].generateCode(this, inputConfig);
         if (inputConfig.assignment) {
           prefix += `${inputCode} = `;
         }
-        return inputCode;
-      }).filter(value => value !== null).map(value => {
-        if (value === "") {
+        if (inputCode === "") {
           // Missing inputs should be passed into func as undefined
-          return "undefined";
+          inputCode = "undefined";
         }
-        return value;
-      });
+        if (inputConfig.defer) {
+          inputCode = `function () {\n  return ${inputCode};\n}`;
+        }
+        return inputCode;
+      }).filter(value => value !== null);
 
       if (simpleValue) {
         return [

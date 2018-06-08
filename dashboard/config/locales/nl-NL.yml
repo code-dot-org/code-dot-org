@@ -349,7 +349,7 @@
       learn: Leren
       stats: Statistieken
       help_us: Help ons
-      teach: Teach
+      teach: Onderwijzen
       about: Over
     user:
       classroom: Startpagina voor de leerkracht
@@ -629,7 +629,7 @@
   gender:
     male: Man
     female: Vrouw
-    non_binary: Non-binary
+    non_binary: Niet-binair
     not_listed: Preferred term not listed
     none: Wil ik liever niet zeggen
   user_type:

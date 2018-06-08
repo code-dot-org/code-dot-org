@@ -1062,6 +1062,7 @@
   "studentControl": "Prehľad o jenotlivých študentoch",
   "studentLockStateInstructions": "Tabuľka nižšie slúži na kontrolu v akej časti sa nachádzajú jednotliví študenti.",
   "studentName": "Meno študenta",
+  "studentNameHeader": "Student name",
   "studentAnswer": "Student answer",
   "submissionTimestamp": "Časová pečiatka odoslania",
   "submit": "Odoslať",

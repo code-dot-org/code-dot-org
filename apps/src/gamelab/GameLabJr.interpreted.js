@@ -67,12 +67,17 @@ function removeBehavior(sprite, behavior) {
   sprite.behaviors.splice(index, 1);
 }
 
+function Behavior(func, extraArgs) {
+  if (!extraArgs) {
+    extraArgs = [];
+  }
+  this.func = func;
+  this.extraArgs = extraArgs;
+}
+
 function normalizeBehavior(behavior) {
   if (typeof behavior === 'function')  {
-    behavior = {
-      func: behavior,
-      extraArgs: [],
-    };
+    return new Behavior(behavior);
   }
   return behavior;
 }
@@ -181,7 +186,7 @@ function whenPressedAndReleased(direction, pressedHandler, releasedHandler) {
 }
 
 function clickedOn(sprite, event) {
-  touchEvents.push({type: mousePressedOver, event: event, param: sprite});
+  touchEvents.push({type: mousePressedOver, event: event, sprite: sprite});
 }
 
 function spriteDestroyed(sprite, event) {
@@ -348,8 +353,10 @@ function draw() {
     for (let i = 0; i < touchEvents.length; i++) {
       const eventType = touchEvents[i].type;
       const event = touchEvents[i].event;
-      const param = touchEvents[i].param;
-      if (eventType(param)) {
+      const param = touchEvents[i].sprite ?
+        touchEvents[i].sprite() :
+        touchEvents[i].param;
+      if (param && eventType(param)) {
         event();
       }
     }
@@ -357,8 +364,11 @@ function draw() {
     // Run collision events
     for (let i = 0; i<collisionEvents.length; i++) {
       const collisionEvent = collisionEvents[i];
-      const a = collisionEvent.a;
-      const b = collisionEvent.b;
+      const a = collisionEvent.a && collisionEvent.a();
+      const b = collisionEvent.b && collisionEvent.b();
+      if (!a || !b) {
+        continue;
+      }
       if (a.overlap(b)) {
         if (!collisionEvent.touching || collisionEvent.keepFiring) {
           collisionEvent.event();

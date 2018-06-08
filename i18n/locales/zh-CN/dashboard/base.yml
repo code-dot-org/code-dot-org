@@ -465,8 +465,8 @@ zh-CN:
   gender:
     male: '男性'
     female: '女性'
-    non_binary: 'Non-binary'
-    not_listed: 'Preferred term not listed'
+    non_binary: '非二进制'
+    not_listed: '期望的术语未列出'
     none: '不愿回答'
   user_type:
     student: '学生'
@@ -879,7 +879,7 @@ zh-CN:
     csd5_2: '第 2 章︰ 解决数据问题'
     csd6_1: '第 1 章︰ 用硬件编程'
     csd6_2: '第 2 章︰ 创建物理原型'
-    csd_survey: 'Post-Course Survey'
+    csd_survey: '课后问卷'
     csp1_1: '第一章：表达和传输信息'
     csp1_2: '第二章：发明互联网'
     csp2_1: '第一章：编码和压缩复杂信息'

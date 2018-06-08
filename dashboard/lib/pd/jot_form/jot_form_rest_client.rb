@@ -35,18 +35,22 @@ module Pd
       #   when specified, only new submissions after the known id will be returned.
       # @param min_date [Date] (optional)
       #   when specified, only new submissions on or after the known date will be returned.
+      # @param full_text_search [String] (optional)
+      #   Filter to ensure at least one answer matches the given text (% for wildcards)
+      #   JotForm apparently doesn't support filtering answers to specific questions.
       # Note - get_submissions has a default limit of 100.
       #   The API returns the limit (which will be 100), and the count.
       #   We can add functionality to override the limit if it becomes an issue.
       # See https://api.jotform.com/docs/#form-id-submissions
-      def get_submissions(form_id, last_known_submission_id: nil, min_date: nil)
+      def get_submissions(form_id, last_known_submission_id: nil, min_date: nil, full_text_search: nil)
         params = {
           orderby: 'id asc'
         }
 
         filter = {}
-        filter['id:gt'] = last_known_submission_id.to_s if last_known_submission_id
+        filter['id:gt'] = last_known_submission_id if last_known_submission_id
         filter['created_at:gt'] = min_date.to_s if min_date
+        filter['fullText'] = full_text_search if full_text_search
         params[:filter] = filter.to_json unless filter.empty?
 
         get "form/#{form_id}/submissions", params
