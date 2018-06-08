@@ -21,6 +21,6 @@ And /^I've initialized the workspace with my flappy puzzle.$/ do
 end
 
 Then /^I see the first Flappy YouTube video with the correct parameters$/ do
-  correct_video_url = 'https://www.youtube-nocookie.com/embed/VQ4lo6Huylc/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=VQ4lo6Huylc&wmode=transparent'
+  correct_video_url = 'https://www.youtube.com/embed/VQ4lo6Huylc/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=VQ4lo6Huylc&wmode=transparent'
   expect(@browser.execute_script("return $('iframe').attr('src')")).to eq(correct_video_url)
 end
