@@ -87,19 +87,17 @@ const LandingPage = React.createClass({
 
   render() {
     const CSF = this.props.lastWorkshopSurveyCourse === 'CS Fundamentals';
-    const subheading = CSF ? Submit feedback and order free course kit : Submit your feedback;
-    const description = CSF ? Thank you for taking a CS Fundamentals workshop! Please complete this survey about your experience and you
-    will be able to order supplies for your classroom. :
-    Thank you for completing a {this.props.lastWorkshopSurveyCourse} workshop!
-    Please complete this survey about your experience to help us improve future
-    workshops.;
+    const subheading = CSF ? "Submit feedback and order free course kit" : "Submit your feedback";
+    const description = CSF ? "Thank you for taking a CS Fundamentals workshop! Please complete this survey about your experience and you will be able to order supplies for your classroom." :
+    `Thank you for completing a ${this.props.lastWorkshopSurveyCourse} workshop! Please complete this survey about your experience to help us improve future
+    workshops.`;
 
     const lastWorkshopSurveyBanner = (
       <div>
         <TwoColumnActionBlock
           isRtl={false}
           responsiveSize='lg'
-          imageUrl={pegasus('shared/images/misc/teacher-training.png')}
+          imageUrl={pegasus('/shared/images/fill-540x289/misc/beyond-local-map.png')}
           subHeading={subheading}
           description={description}
           buttons={[
