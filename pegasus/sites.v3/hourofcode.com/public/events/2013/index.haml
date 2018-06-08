@@ -4,45 +4,23 @@ layout: wide
 nav: events_nav
 ---
 :ruby
-  require '../pegasus/helper_modules/forms'
+  require pegasus_dir 'helper_modules/forms'
   kind = 'CSEdWeekEvent2013'
   country_column = Forms.json('data.country_s')
   state_column = Forms.json('data.state_code_s')
   events = Forms.events_by_country(kind, country_column: country_column)
   us_events = Forms.events_by_state(kind, country_column: country_column, state_column: state_column)
 
--SOLR = Solr::Server.new(host:CDO.solr_server)
-
--by_country = {}
--by_state = {}
--country_names = {}
--state_names = {}
-
--events = SOLR.query(q:"*:*", fq:["kind_s:CSEdWeekEvent2013", "country_s:[* TO *]", "state_code_s:[* TO *]", "organization_name_s:[* TO *]"], sort:'country_s asc, state_code_s asc', rows:1000)
--events.each do |event|
-  -country = event['country_s'].to_s
-  -by_country[country] = [] unless by_country.has_key?(country)
-  -by_country[country] << nil
-  -country_names[country] = event['country_s'].to_s unless country_names.has_key?(country)
-
-  -if country == 'united states'
-    -state_code = event['state_code_s'].to_s
-    -by_state[state_code] = [] unless by_state.has_key?(state_code)
-    -by_state[state_code] << nil
-    -state_names[state_code] = event['state_code_s'].to_s unless state_names.has_key?(state_code)
-
 %h1= hoc_s(:events_all_old_title).gsub(/\@year/, "2013")
 
 %ul
   %li{class: "hoc-event-country"}
-    %span{style: "font-weight: bold;"}= "United States (#{by_country['united states'].count rescue '0'} #{hoc_s(:events)})"
+    %span{style: "font-weight: bold;"}= "United States (#{us_events.count rescue '0'} #{hoc_s(:events)})"
     %ul{style: "margin-top: 0; margin-bottom: 0;"}
-      -by_state.each_pair do |state_code, events|
-        -unless state_code.nil_or_empty?
-          %li{class: "hoc-event-state"}
-            %a{href: "/events/2013/us/#{state_code.downcase}"}= events.count > 1 ? "#{state_names[state_code].upcase} (#{events.count} #{hoc_s(:events)})" : "#{state_names[state_code].upcase} (#{events.count} #{hoc_s(:event)})"
+      -us_events.each do |event|
+        %li{class: "hoc-event-state"}
+          %a{href: "/events/2013/us/#{event[:state_code].downcase}"}= "#{event[:state_code]} (#{event[:count]} #{hoc_s(event[:count] > 1 ? :events : :event)})"
 %ul
-  -by_country.each_pair do |country, events|
-    -if country != 'united states'
-      %li{class: "hoc-event-country"}
-        %a{href: "/events/2013/#{country.downcase}"}= events.count > 1 ? "#{country_names[country]} (#{events.count} #{hoc_s(:events)})" : "#{country_names[country]} (#{events.count} #{hoc_s(:event)})"
+  -events.each do |event|
+    %li{class: "hoc-event-country"}
+      %a{href: "/events/2013/#{event[:country_code].downcase}"}= "#{country_name_from_code(event[:country_code])} (#{event[:count]} #{hoc_s(event[:count] > 1 ? :events : :event)})"
