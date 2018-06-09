@@ -1423,6 +1423,8 @@ StudioApp.prototype.displayFeedback = function (options) {
 
   // Write updated progress to Redux.
   const store = getStore();
+  console.log("this.config.serverLevelId in StudioApp", this.config.serverLevelId)
+  console.log("options.feedbackType in StudioApp", options.feedbackType)
   store.dispatch(mergeProgress({[this.config.serverLevelId]: options.feedbackType}));
 
   if (experiments.isEnabled('bubbleDialog')) {

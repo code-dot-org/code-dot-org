@@ -116,6 +116,8 @@ class ProgressBubble extends React.Component {
 
     const disabled = this.props.disabled || levelIcon === 'lock';
 
+    const hideNumber = levelIcon === 'lock' || level.paired;
+
     const style = {
       ...styles.main,
       ...(!disabled && hoverStyle),
@@ -192,7 +194,8 @@ class ProgressBubble extends React.Component {
             }}
           >
             {levelIcon === 'lock' && <FontAwesome icon="lock"/>}
-            {levelIcon !== 'lock' && (
+            {level.paired && <FontAwesome icon="users"/>}
+            {!hideNumber && (
               <span>
                 {/*Text will not show up for smallBubble, but it's presence
                   causes bubble to be properly aligned vertically

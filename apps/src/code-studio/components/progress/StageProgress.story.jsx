@@ -105,13 +105,13 @@ export default storybook => {
         levels
       }]
     }));
-    store.dispatch(mergeProgress({123: TestResults.ALL_PASS}));
+    store.dispatch(mergeProgress({123: {status: "perfect", result: TestResults.ALL_PASS, paired: false}}));
     store.dispatch(setStageExtrasEnabled(showStageExtras));
     return store;
   };
 
   storybook
-    .storiesOf('StageProgress', module)
+    .storiesOf('Progress/StageProgress', module)
     .addStoryTable([
       {
         name: 'StageProgress example',

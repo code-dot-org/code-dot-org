@@ -1,4 +1,4 @@
-import { getLevelResult, levelsByLesson } from '@cdo/apps/code-studio/progressRedux';
+import { levelsByLesson } from '@cdo/apps/code-studio/progressRedux';
 import { processedLevel } from '@cdo/apps/templates/progress/progressHelpers';
 import { PropTypes } from 'react';
 import {
@@ -298,12 +298,7 @@ export const loadScript = (scriptId) => {
       return fetch(url, { credentials: 'include' })
         .then(response => response.json())
         .then((data) => {
-          const dataByStudent = data.students;
-          let studentLevelProgress = {};
-          Object.keys(dataByStudent).forEach((studentId) => {
-            studentLevelProgress[studentId] = _.mapValues(dataByStudent[studentId], getLevelResult);
-          });
-          dispatch(addStudentLevelProgress(scriptId, studentLevelProgress));
+          dispatch(addStudentLevelProgress(scriptId, data.students));
         });
     });
 

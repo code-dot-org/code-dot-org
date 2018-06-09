@@ -95,7 +95,11 @@ progress.renderStageProgress = function (scriptData, stageData, progressData,
   }, currentLevelId, false, saveAnswersBeforeNavigation);
 
   store.dispatch(mergeProgress(_.mapValues(progressData.levels,
-    level => level.submitted ? TestResults.SUBMITTED_RESULT : level.result)));
+    (level) => ({
+      ...level,
+      result: level.submitted ? TestResults.SUBMITTED_RESULT : level.result,
+    })
+  )));
 
   store.dispatch(setIsHocScript(isHocScript));
   if (signedIn) {
