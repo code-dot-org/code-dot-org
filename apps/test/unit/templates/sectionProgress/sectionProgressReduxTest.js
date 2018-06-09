@@ -8,6 +8,8 @@ import sectionProgress, {
   setLessonOfInterest,
   startLoadingProgress,
   finishLoadingProgress,
+  getStudentPairing,
+  getStudentLevelResult,
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import {setScriptId} from '@cdo/apps/redux/scriptSelectionRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
@@ -153,28 +155,26 @@ describe('sectionProgressRedux', () => {
       });
     });
 
-    it('students without progress are valid', () => {
+    it('students with progress, who did not pair are valid', () => {
       isValidInput({
         377: {
-          5336: {
-            status: 'perfect',
-            result: 31,
-            paired: true
-          }
+          5336: false
         }
       });
     });
 
-    it('invalid if only result code is given', () => {
-      isInvalidInput({
+    it('students with progress, who did pair are valid', () => {
+      isValidInput({
         377: {
-          5336: 31,
-          5337: 31
+          5336: true,
+        },
+        378: {
+          5336: true,
         }
       });
     });
 
-    it('invalid if missing "paired" property', () => {
+    it('invalid if contains too many properties', () => {
       isInvalidInput({
         377: {
           5336: {
@@ -215,6 +215,54 @@ describe('sectionProgressRedux', () => {
         ...fakeStudentProgress,
         3: {},
         4: {},
+      });
+    });
+  });
+
+  describe('getStudentPairing', () => {
+    it('plucks paired value from object', () => {
+      expect(getStudentPairing({
+        377: {
+          5336: {
+            status: 'perfect',
+            result: 31,
+            paired: true,
+          },
+          5337: {
+            status: 'perfect',
+            result: 31,
+            paired: false,
+          }
+        }
+      })).to.deep.equal({
+        377: {
+          5336: true,
+          5337: false
+        }
+      });
+    });
+  });
+
+  describe('getStudentLevelResult', () => {
+    it('plucks level result value from object', () => {
+      expect(getStudentLevelResult({
+        377: {
+          5336: {
+            status: 'perfect',
+            result: 31,
+            paired: true,
+          },
+          5337: {
+            status: 'perfect',
+            result: 31,
+            paired: false,
+          }
+        }
+      })).to.deep.equal({
+        377: {
+          5336: 31,
+          5337: 31
+        }
       });
     });
   });
