@@ -96,7 +96,7 @@ module Pd
       enrollment = Enrollment.find_by!(code: params[:enrollment_code])
       workshop = enrollment.workshop
 
-      return redirect_to :thanks if WorkshopDailySurvey.exists?(user: current_user, pd_workshop: workshop, day: 5)
+      return redirect_to :pd_workshop_survey_thanks if WorkshopDailySurvey.exists?(user: current_user, pd_workshop: workshop, day: 5)
       @form_id = WorkshopDailySurvey.get_form_id_for_day 5
 
       @form_params = {
