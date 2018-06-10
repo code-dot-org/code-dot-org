@@ -98,7 +98,15 @@ sub vcl_recv
   else if(req.http.Host == "<%= domain %>")
   {
     /* <%= domain %> redirects to <%= site %> */
-    return(synth(751, "https://<%= site %>" + req.url));
+    if(site ~ "^http://")
+    {
+      /* This site explicitly needs to be http:// */
+      return(synth(751, "<%= site %>" + req.url));
+    }
+    else
+    {
+      return(synth(751, "https://<%= site %>" + req.url));
+    }
   }
 <% end %>
   # Redirect http to https
