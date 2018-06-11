@@ -106,7 +106,7 @@ class CourseTest < ActiveSupport::TestCase
   end
 
   test "summarize" do
-    course = create :course, name: 'my-course'
+    course = create :course, name: 'my-course', family_name: 'my-family', version_year: '1999'
 
     test_locale = :"te-ST"
     I18n.locale = test_locale
@@ -160,7 +160,7 @@ class CourseTest < ActiveSupport::TestCase
 
     assert_equal 1, summary[:versions].length
     assert_equal 'my-course', summary[:versions].first[:name]
-    assert_equal '2017', summary[:versions].first[:version_year]
+    assert_equal '1999', summary[:versions].first[:version_year]
 
     # make sure we dont have stage info
     assert_nil summary[:scripts][0][:stages]
@@ -264,13 +264,13 @@ class CourseTest < ActiveSupport::TestCase
 
   class OtherVersionProgressTests < ActiveSupport::TestCase
     setup do
-      @csp_2017 = create(:course, name: 'csp-2017')
+      @csp_2017 = create(:course, name: 'csp-2017', family_name: 'csp')
       @csp1_2017 = create(:script, name: 'csp1-2017')
       @csp2_2017 = create(:script, name: 'csp2-2017')
       create :course_script, course: @csp_2017, script: @csp1_2017, position: 1
       create :course_script, course: @csp_2017, script: @csp2_2017, position: 1
 
-      @csp_2018 = create(:course, name: 'csp-2018')
+      @csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp')
       @csp1_2018 = create(:script, name: 'csp1-2018')
       @csp2_2018 = create(:script, name: 'csp2-2018')
       create :course_script, course: @csp_2018, script: @csp1_2018, position: 1
@@ -284,9 +284,6 @@ class CourseTest < ActiveSupport::TestCase
     end
 
     test 'validate test data' do
-      assert_equal 'csp', @csp_2017.family_name
-      assert_equal 'csp', @csp_2018.family_name
-
       assert_equal 2, @csp_2017.default_scripts.count
       assert_equal 2, @csp_2018.default_scripts.count
       assert_equal 1, @csd.default_scripts.count
