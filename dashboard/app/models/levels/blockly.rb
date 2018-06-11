@@ -380,18 +380,6 @@ class Blockly < Level
     end
   end
 
-  def localized_toolbox_blocks
-    if should_localize? && toolbox_blocks
-      block_xml = Nokogiri::XML(toolbox_blocks, &:noblanks)
-      block_xml.xpath('//../category').each do |category|
-        name = category.attr('name')
-        localized_name = I18n.t("data.block_categories.#{name}", default: nil)
-        category.set_attribute('name', localized_name) if localized_name
-      end
-      return block_xml.serialize(save_with: XML_OPTIONS).strip
-    end
-  end
-
   def self.base_url
     "#{Blockly.asset_host_prefix}/blockly/"
   end
