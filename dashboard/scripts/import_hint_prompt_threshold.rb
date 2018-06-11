@@ -37,5 +37,5 @@ unless thresholds_csv
 end
 
 CSV.table(thresholds_csv).each do |row|
-  Level.find(row[:level_id]).update!(hint_prompt_attempts_threshold: row[:attempts] + 1)
+  Level.find_by_key(row[:name]).update!(hint_prompt_attempts_threshold: row[:attempts] + 1)
 end
