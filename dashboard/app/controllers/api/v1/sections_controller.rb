@@ -1,7 +1,7 @@
 class Api::V1::SectionsController < Api::V1::JsonApiController
   load_resource :section, find_by: :code, only: [:join, :leave]
   before_action :find_follower, only: :leave
-  load_and_authorize_resource except: [:join, :leave, :membership, :valid_scripts, :create]
+  load_and_authorize_resource except: [:join, :leave, :membership, :valid_scripts, :create, :update]
 
   skip_before_action :verify_authenticity_token, only: :update_sharing_disabled
 
@@ -61,6 +61,46 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
       current_user.assign_script script_to_assign
     end
 
+    render json: section.summarize
+  end
+
+  # Allows you to update a section. Clears any assigned script_id in the process
+  def update
+    section = Section.find(params[:id])
+    authorize! :manage, section
+
+    course_id = params[:course_id]
+
+    # This endpoint needs to satisfy two endpoint formats for getting script_id
+    # This should be updated soon to always expect params[:script_id]
+    script_id = params[:script][:id] if params[:script]
+    script_id ||= params[:script_id]
+
+    if script_id
+      script = Script.get_from_cache(script_id)
+      # If given a course and script, make sure the script is in that course
+      return head :bad_request if course_id && course_id != script.course.try(:id)
+      # If script has a course and no course_id was provided, use default course
+      course_id ||= script.course.try(:id)
+    end
+
+    # TODO: (madelynkasula) refactor to use strong params
+    fields = {}
+    fields[:course_id] = course_id if Course.valid_course_id?(course_id)
+    fields[:script_id] = script_id if Script.valid_script_id?(current_user, script_id)
+    fields[:name] = params[:name] unless params[:name].nil_or_empty?
+    fields[:login_type] = params[:login_type] if Section.valid_login_type?(params[:login_type])
+    fields[:grade] = params[:grade] if Section.valid_grade?(params[:grade])
+    fields[:stage_extras] = params[:stage_extras] unless params[:stage_extras].nil?
+    fields[:pairing_allowed] = params[:pairing_allowed] unless params[:pairing_allowed].nil?
+    fields[:hidden] = params[:hidden] unless params[:hidden].nil?
+
+    section.update!(fields)
+    if script_id
+      section.students.each do |student|
+        student.assign_script(script)
+      end
+    end
     render json: section.summarize
   end
 
