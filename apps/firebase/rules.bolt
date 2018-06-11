@@ -23,15 +23,15 @@ path /v3/config {
 
 // Don't allow reading /v3/channels, since that would expose the list of channels.
 path /v3/channels/{channelId} {
-  read() { canAccessChannel(channelId) }
+  read() { isLoggedIn() }
 }
 
 path /v3/channels/{channelId}/serverTime is Number {
-  write() { canAccessChannel(channelId) }
+  write() { isLoggedIn() }
 }
 
 path /v3/channels/{channelId}/counters is Counters {
-  write() { canAccessChannel(channelId) }
+  write() { isLoggedIn() }
 }
 
 path /v3/channels/{channelId}/counters/limits/15 {
@@ -47,11 +47,11 @@ path /v3/channels/{channelId}/counters/limits/60 {
 }
 
 path /v3/channels/{channelId}/metadata is Metadata {
-  write() { canAccessChannel(channelId) }
+  write() { isLoggedIn() }
 }
 
 path /v3/channels/{channelId}/storage is Storage {
-  write() { canAccessChannel(channelId) }
+  write() { isLoggedIn() }
 }
 
 ///////////////////////////////////////////////////////////////////////////
@@ -125,7 +125,6 @@ type Record extends String {
 // auth helpers
 
 isLoggedIn() { auth.uid !== null }
-canAccessChannel(channelId) { auth.channel === channelId }
 
 // rate limit helpers
 
