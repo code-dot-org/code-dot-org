@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import ReactTooltip from 'react-tooltip';
@@ -129,7 +130,7 @@ class VirtualizedSummaryView extends Component {
     ));
   }
 
-  afterScroll = () => setTimeout(ReactTooltip.rebuild, 0);
+  afterScroll = _.debounce(ReactTooltip.rebuild, 10);
 
   render() {
     const {section, scriptData, lessonOfInterest} = this.props;
