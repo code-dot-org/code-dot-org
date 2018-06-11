@@ -1,4 +1,5 @@
-"it":
+---
+it:
   data:
     instructions:
       2-3 Artist 1 new_instruction: Ciao, io sono un artista. Puoi scrivere del codice
@@ -4166,8 +4167,8 @@
       Crack Random Substitution_2018_instruction: Istruzioni
       Crack a Caesar Cipher_instruction: Istruzioni
       Crack a Caesar Cipher_2018_instruction: Istruzioni
-      D_Frozen_nested3_instruction: Facciamo ruotare queste forme!
-      D_Frozen_nested4_instruction: È tempo di disegnare queste forme!
+      D_Frozen_nested3_instruction: Ora fai ruotare queste riga di figure!
+      D_Frozen_nested4_instruction: È ora di sovrapporre queste forme!
       D_Frozen_nested5_instruction: Play with the snowflakes!
       D_Frozen_nested6_instruction: |-
         Draw a stair-step pattern that uses turns between
@@ -5433,10 +5434,9 @@
       New Basketball Project_instruction: Crea il tuo gioco di basket. Puoi modificare
         tutte le regole. Quando hai finito, clicca su `Termina` per consentire agli
         amici di provare il tuo gioco sui loro telefoni.
-      New Bounce Project_instruction: |-
-        Create your own Bounce game. You can change
-        all the visuals and the rules. When you're done, click Finish to let friends
-        try your game on their phones.
+      New Bounce Project_instruction: Crea la tua versione del Ping-Pong. È possibile
+        modificare tutte le immagini e tutte le regole. Quando hai finito, clicca
+        su Condividi per far provare agli amici il gioco sui loro smartphone.
       New Course 4 Artist Functions Level 4_instruction: Utilizzate la funzione "disegna
         un quadrato" per disegnare questo modello.
       New Gumball Project_instruction: Crea il tuo gioco con i personaggi di Disney
@@ -8438,10 +8438,9 @@
       bounce_12_instruction: Crea la tua versione del Ping-Pong. È possibile modificare
         tutte le immagini e tutte le regole. Quando hai finito, clicca su Condividi
         per far provare agli amici il gioco sui loro smartphone.
-      bounce_12_2018_instruction: |-
-        Create your own Bounce game. You can change all
-        the visuals and the rules. When you're done, click Finish to let friends
-        try your game on their phones.
+      bounce_12_2018_instruction: Crea la tua versione del Ping-Pong. È possibile
+        modificare tutte le immagini e tutte le regole. Quando hai finito, clicca
+        su Condividi per far provare agli amici il gioco sui loro smartphone.
       bounce_12_basketball_instruction: Crea il tuo gioco di basket. Puoi modificare
         tutte le regole. Quando hai finito di giocare, clicca su "Termina" per ottenere
         un link da condividere con i tuoi amici o per giocare sul tuo telefono con
@@ -10031,10 +10030,10 @@
         tutti i rottami metallici!
       courseD_Frozen_nested1_instruction: Aiuta Elsa a disegnare una piccola figura
         a tua scelta.
-      courseD_Frozen_nested2_instruction: Ora parti dalla tua forma e disegnane due
+      courseD_Frozen_nested2_instruction: Ora parti dalla tua figura e disegnane due
         o tre di fila!
-      courseD_Frozen_nested3_instruction: Facciamo ruotare queste forme!
-      courseD_Frozen_nested4_instruction: È tempo di disegnare queste forme!
+      courseD_Frozen_nested3_instruction: Ora fai ruotare queste riga di figure!
+      courseD_Frozen_nested4_instruction: È ora di sovrapporre queste forme!
       courseD_Frozen_nested5_instruction: Play with the snowflakes!
       courseD_Frozen_nested6_instruction: |-
         Draw a stair-step pattern that uses turns
@@ -10263,8 +10262,8 @@
       courseD_artist_nestedLoops_challenge2_2018_instruction: |-
         Fix the code to make
         this picture!
-      courseD_artist_project1_instruction: Aiuta Elsa a disegnare una piccola figura
-        a tua scelta.
+      courseD_artist_project1_instruction: Disegna una piccola figura, larga tra **20
+        e 50** pixel. Può avere la forma che preferisci.
       courseD_artist_project1_2018_instruction: Aiuta Elsa a disegnare una piccola
         figura a tua scelta.
       courseD_artist_project1a_instruction: |-
@@ -10273,8 +10272,8 @@
       courseD_artist_project1a_2018_instruction: |-
         Draw a stair-step pattern that
         uses turns between 75 and 105 degrees.
-      courseD_artist_project2_instruction: Ora parti dalla tua forma e disegnane due
-        o tre di fila!
+      courseD_artist_project2_instruction: Ora parti dalla tua figura e disegnane
+        due o tre di fila!
       courseD_artist_project2_2018_instruction: Ora parti dalla tua forma e disegnane
         due o tre di fila!
       courseD_artist_project2a_instruction: |-
@@ -10283,16 +10282,16 @@
       courseD_artist_project2a_2018_instruction: |-
         Now, turn around 180 degrees and
         draw the stair pattern again!
-      courseD_artist_project3_instruction: Facciamo ruotare queste forme!
-      courseD_artist_project3_2018_instruction: Facciamo ruotare queste forme!
+      courseD_artist_project3_instruction: Ora fai ruotare queste riga di figure!
+      courseD_artist_project3_2018_instruction: Ora fai ruotare queste riga di figure!
       courseD_artist_project3a_instruction: |-
         Spin that shape around 5 or 6 times
         in a circle.
       courseD_artist_project3a_2018_instruction: |-
         Spin that shape around 5 or 6 times
         in a circle.
-      courseD_artist_project4_instruction: È tempo di disegnare queste forme!
-      courseD_artist_project4_2018_instruction: È tempo di disegnare queste forme!
+      courseD_artist_project4_instruction: È ora di sovrapporre queste forme!
+      courseD_artist_project4_2018_instruction: È ora di sovrapporre queste forme!
       courseD_artist_project4a_instruction: "Try playing around with what you've created.
         Draw whatever you like!\r\n- What happens if you use two different angles
         in your stair step pattern?\r\n- What happens if you make your diamond pattern
@@ -10308,10 +10307,9 @@
       courseD_artist_project_embedded_instruction: |-
         Here's what you will soon be
         making!
-      courseD_artist_ramp11_instruction: Now make a square using Artist!
-      courseD_artist_ramp12_instruction: |-
-        Use what you've learned to draw this triangle
-        inside of a square.
+      courseD_artist_ramp11_instruction: Ora disegna un quadrato usando l'Artista!
+      courseD_artist_ramp12_instruction: Usa ciò che hai imparato per disegnare questo
+        triangolo all'interno di un quadrato.
       courseD_bee_conditionals1_instruction: |-
         Check to see if there's a flower under
         the cloud. If there's a flower, get nectar.
@@ -10327,12 +10325,12 @@
       courseD_bee_conditionals1_predict1_2018_instruction: |-
         Check to see if there's
         a flower under the cloud. If there's a flower, get nectar.
-      courseD_bee_conditionals2_instruction: "Check underneath every cloud to see\nif
-        it is hiding a flower before you get nectar.  "
-      courseD_bee_conditionals2_2018_instruction: "Check underneath every cloud to\nsee
-        if it is hiding a flower before you get nectar.  "
-      courseD_bee_conditionals2_test_instruction: "Check underneath every cloud to\nsee
-        if it is hiding a flower before you get nectar.  "
+      courseD_bee_conditionals2_instruction: Prima di prendere il nettare, controlla
+        sotto ogni nuvola se sta nascondendo un fiore.
+      courseD_bee_conditionals2_2018_instruction: Prima di prendere il nettare, controlla
+        sotto ogni nuvola se sta nascondendo un fiore.
+      courseD_bee_conditionals2_test_instruction: Prima di prendere il nettare, controlla
+        sotto ogni nuvola se sta nascondendo un fiore.
       courseD_bee_conditionals3_instruction: "Help the bee collect all of the nectar.
         \r\n\r\nYou can only collect nectar from flowers, but you can check any space
         to see if there is a flower."
@@ -10501,10 +10499,9 @@
         of the places where the game needs a new ball. "
       courseD_bounce_events11s_2018_instruction: "Attach the `throw new ball` block\nin
         all of the places where the game needs a new ball. "
-      courseD_bounce_events12_instruction: |-
-        Create your own Bounce game. You can
-        change all the visuals and the rules. When you're done, click Finish to let
-        friends try your game on their phones.
+      courseD_bounce_events12_instruction: Crea la tua versione del Ping-Pong. È possibile
+        modificare tutte le immagini e tutte le regole. Quando hai finito, clicca
+        su Condividi per far provare agli amici il gioco sui loro smartphone.
       courseD_bounce_events12s_instruction: |-
         Make this game your own. You can change
         all the visuals and the rules. When you're done, click "Finish" to let
@@ -10572,7 +10569,7 @@
       courseD_collector_debugging1_instruction: Correggi gli errori per raccogliere
         tutti i diamanti.
       courseD_collector_debugging1_2018_instruction: Correggi gli errori per raccogliere
-        tutto il tesoro.
+        tutti i diamanti.
       courseD_collector_debugging1a_instruction: Correggi gli errori per raccogliere
         tutti i diamanti.
       courseD_collector_debugging1a_2018_instruction: Correggi gli errori per raccogliere
@@ -10601,21 +10598,20 @@
         tutti i diamanti.
       courseD_collector_debugging4a_2018_instruction: Correggi gli errori per raccogliere
         tutti i diamanti.
-      courseD_collector_debugging5_instruction: 'Sfida: tutti i blocchi che ti servono
-        sono già qui... sfrutta tutte le tue abilità di debugging per capire come
-        risolvere questo esercizio.'
+      courseD_collector_debugging5_instruction: Tutti i blocchi che ti servono sono
+        già qui... sfrutta tutte le tue abilità di debugging per capire come risolvere
+        questo esercizio.
       courseD_collector_debugging5_2018_instruction: 'Sfida: tutti i blocchi che ti
         servono sono già qui... sfrutta tutte le tue abilità di debugging per capire
         come risolvere questo esercizio.'
-      courseD_collector_debugging5a_instruction: 'Sfida: tutti i blocchi che ti servono
+      courseD_collector_debugging5a_instruction: Tutti i blocchi che ti servono sono
+        già qui... sfrutta tutte le tue abilità di debugging per capire come risolvere
+        questo esercizio.
+      courseD_collector_debugging5a_2018_instruction: Tutti i blocchi che ti servono
         sono già qui... sfrutta tutte le tue abilità di debugging per capire come
-        risolvere questo esercizio.'
-      courseD_collector_debugging5a_2018_instruction: 'Sfida: tutti i blocchi che
-        ti servono sono già qui... sfrutta tutte le tue abilità di debugging per capire
-        come risolvere questo esercizio.'
-      courseD_collector_debugging6_instruction: 'Sfida: tutti i blocchi che ti servono
-        sono già qui... sfrutta tutte le tue abilità di debugging per capire come
-        risolvere questo esercizio.'
+        risolvere questo esercizio.
+      courseD_collector_debugging6_instruction: 'Sfida: sfrutta tutte le tue abilità
+        di debugging per correggere gli errori e raccogliere tutti i diamanti.'
       courseD_collector_debugging6_2018_instruction: 'Sfida: tutti i blocchi che ti
         servono sono già qui... sfrutta tutte le tue abilità di debugging per capire
         come risolvere questo esercizio.'
@@ -10742,33 +10738,25 @@
       courseD_farmer_condLoops_challenge2_clone_instruction: |-
         Collect everything
         to complete the level.
-      courseD_farmer_conditionals1_instruction: |-
-        Move to the pile of dirt and use
-        the `remove` block to remove it.
-      courseD_farmer_conditionals10_instruction: "Flatten all of these piles using\nas
-        few blocks as possible. "
-      courseD_farmer_conditionals2_instruction: |-
-        Move to the hole and fill it with
-        six shovelfuls of dirt, using the `fill` block.
-      courseD_farmer_conditionals3_instruction: |-
-        Use as few blocks as possible to
-        solve this puzzle.
-      courseD_farmer_conditionals4_instruction: |-
-        Help the farmer remove this entire
-        pile using a `while` loop.
-      courseD_farmer_conditionals5_instruction: 'Help me remove all of this dirt.
-
-'
-      courseD_farmer_conditionals6_instruction: |-
-        Use the `while` loop to easily fill
-        all of the holes.
-      courseD_farmer_conditionals7_instruction: |-
-        Fill in the hole at the end of each
-        of these paths.
-      courseD_farmer_conditionals8_instruction: "Challenge: Fill all of these holes\nusing
-        as few blocks as possible. "
-      courseD_farmer_conditionals9_instruction: "Flatten all of these piles using\nas
-        few blocks as possible. "
+      courseD_farmer_conditionals1_instruction: Vai fino al mucchio di terra e usa
+        il blocco `rimuovi 1` per rimuoverlo.
+      courseD_farmer_conditionals10_instruction: Abbatti tutti questi mucchi usando
+        il minor numero possibile di blocchi.
+      courseD_farmer_conditionals2_instruction: Vai verso la buca e riempila con sei
+        palate di terra, usando il blocco `riempi 1`.
+      courseD_farmer_conditionals3_instruction: Usa il minor numero possibile di blocchi
+        per risolvere questo esercizio.
+      courseD_farmer_conditionals4_instruction: Aiuta la contadina a rimuovere tutto
+        questo mucchio usando un ciclo `mentre`.
+      courseD_farmer_conditionals5_instruction: Aiutami a rimuovere tutta questa terra.
+      courseD_farmer_conditionals6_instruction: Usa il ciclo `mentre` per riempire
+        le buche più semplicemente.
+      courseD_farmer_conditionals7_instruction: Riempi la buca al termine di ogni
+        tratto di questo percorso.
+      courseD_farmer_conditionals8_instruction: 'Sfida: Riempi tutte queste buche
+        usando il minor numero possibile di blocchi.'
+      courseD_farmer_conditionals9_instruction: Abbatti tutti questi mucchi usando
+        il minor numero possibile di blocchi.
       courseD_farmer_until_challenge2_instruction: |-
         Use If/Else blocks to follow
         the curvy path. At each corner, use the `remove 1` command in a loop to clear
@@ -10777,66 +10765,52 @@
         Use If/Else blocks to follow
         the curvy path. At each corner, use the `remove 1` command in a loop to clear
         the piles.
-      courseD_farmer_while1_instruction: |-
-        Move to the pile of dirt and use the `remove`
-        block to remove it.
-      courseD_farmer_while10_instruction: "Flatten all of these piles using as few\nblocks
-        as possible. "
-      courseD_farmer_while10_2018_instruction: "Flatten all of these piles using\nas
-        few blocks as possible. "
-      courseD_farmer_while10_predict2_instruction: "Flatten all of these piles using\nas
-        few blocks as possible. "
-      courseD_farmer_while10_predict2_2018_instruction: "Flatten all of these piles\nusing
-        as few blocks as possible. "
-      courseD_farmer_while1_2018_instruction: |-
-        Move to the pile of dirt and use the
-        `remove` block to remove it.
-      courseD_farmer_while2_instruction: |-
-        Move to the hole and fill it with six shovelfuls
-        of dirt, using the `fill` block.
-      courseD_farmer_while2_2018_instruction: |-
-        Move to the hole and fill it with
-        six shovelfuls of dirt, using the `fill` block.
-      courseD_farmer_while3_instruction: |-
-        Use as few blocks as possible to solve
-        this puzzle.
-      courseD_farmer_while3_2018_instruction: |-
-        Use as few blocks as possible to solve
-        this puzzle.
-      courseD_farmer_while4_instruction: |-
-        Help the farmer remove this entire pile
-        using a `while` loop.
-      courseD_farmer_while4_2018_instruction: |-
-        Help the farmer remove this entire
-        pile using a `while` loop.
-      courseD_farmer_while4_predict1_instruction: |-
-        Help the farmer remove this entire
-        pile using a `while` loop.
-      courseD_farmer_while4_predict1_2018_instruction: |-
-        Help the farmer remove this
-        entire pile using a `while` loop.
-      courseD_farmer_while5_instruction: 'Help me remove all of this dirt. '
-      courseD_farmer_while5_2018_instruction: 'Help me remove all of this dirt. '
-      courseD_farmer_while6_instruction: |-
-        Use the `while` loop to easily fill all
-        of the holes.
-      courseD_farmer_while6_2018_instruction: |-
-        Use the `while` loop to easily fill
-        all of the holes.
-      courseD_farmer_while7_instruction: |-
-        Fill in the hole at the end of each of
-        these paths.
-      courseD_farmer_while7_2018_instruction: |-
-        Fill in the hole at the end of each
-        of these paths.
-      courseD_farmer_while8_instruction: "Challenge: Fill all of these holes using\nas
-        few blocks as possible. "
-      courseD_farmer_while8_2018_instruction: "Challenge: Fill all of these holes\nusing
-        as few blocks as possible. "
-      courseD_farmer_while9_instruction: "Flatten all of these piles using as few\nblocks
-        as possible. "
-      courseD_farmer_while9_2018_instruction: "Flatten all of these piles using as\nfew
-        blocks as possible. "
+      courseD_farmer_while1_instruction: Vai fino al mucchio di terra e usa il blocco
+        `rimuovi 1` per rimuoverlo.
+      courseD_farmer_while10_instruction: Abbatti tutti questi mucchi usando il minor
+        numero possibile di blocchi.
+      courseD_farmer_while10_2018_instruction: Abbatti tutti questi mucchi usando
+        il minor numero possibile di blocchi.
+      courseD_farmer_while10_predict2_instruction: Abbatti tutti questi mucchi usando
+        il minor numero possibile di blocchi.
+      courseD_farmer_while10_predict2_2018_instruction: Abbatti tutti questi mucchi
+        usando il minor numero possibile di blocchi.
+      courseD_farmer_while1_2018_instruction: Vai fino al mucchio di terra e usa il
+        blocco `rimuovi 1` per rimuoverlo.
+      courseD_farmer_while2_instruction: Vai verso la buca e riempila con sei palate
+        di terra, usando il blocco `riempi 1`.
+      courseD_farmer_while2_2018_instruction: Vai verso la buca e riempila con sei
+        palate di terra, usando il blocco `riempi 1`.
+      courseD_farmer_while3_instruction: Usa il minor numero possibile di blocchi
+        per risolvere questo esercizio.
+      courseD_farmer_while3_2018_instruction: Usa il minor numero possibile di blocchi
+        per risolvere questo esercizio.
+      courseD_farmer_while4_instruction: Aiuta la contadina a rimuovere tutto questo
+        mucchio usando un ciclo `mentre`.
+      courseD_farmer_while4_2018_instruction: Aiuta la contadina a rimuovere tutto
+        questo mucchio usando un ciclo `mentre`.
+      courseD_farmer_while4_predict1_instruction: Aiuta la contadina a rimuovere tutto
+        questo mucchio usando un ciclo `mentre`.
+      courseD_farmer_while4_predict1_2018_instruction: Aiuta la contadina a rimuovere
+        tutto questo mucchio usando un ciclo `mentre`.
+      courseD_farmer_while5_instruction: Aiutami a rimuovere tutta questa terra.
+      courseD_farmer_while5_2018_instruction: Aiutami a rimuovere tutta questa terra.
+      courseD_farmer_while6_instruction: Usa il ciclo `mentre` per riempire le buche
+        più semplicemente.
+      courseD_farmer_while6_2018_instruction: Usa il ciclo `mentre` per riempire le
+        buche più semplicemente.
+      courseD_farmer_while7_instruction: Riempi la buca al termine di ogni tratto
+        di questo percorso.
+      courseD_farmer_while7_2018_instruction: Riempi la buca al termine di ogni tratto
+        di questo percorso.
+      courseD_farmer_while8_instruction: 'Sfida: Riempi tutte queste buche usando
+        il minor numero possibile di blocchi.'
+      courseD_farmer_while8_2018_instruction: 'Sfida: Riempi tutte queste buche usando
+        il minor numero possibile di blocchi.'
+      courseD_farmer_while9_instruction: Abbatti tutti questi mucchi usando il minor
+        numero possibile di blocchi.
+      courseD_farmer_while9_2018_instruction: Abbatti tutti questi mucchi usando il
+        minor numero possibile di blocchi.
       courseD_farmer_while_challenge1_instruction: Riempi tutte le buche e rimuovi
         tutti i mucchi.
       courseD_farmer_while_challenge1_2018_instruction: |-
@@ -10905,12 +10879,10 @@
         col minor numero possibile di blocchi!
       courseD_maze_nestedLoops6_2018_instruction: Usa i cicli per farmi arrivare al
         girasole col minor numero possibile di blocchi!
-      courseD_maze_ramp1_instruction: |-
-        For this puzzle, snap all of the blocks together
-        and click "Run" to watch it go!
-      courseD_maze_ramp1_2018_instruction: |-
-        For this puzzle, snap all of the blocks
-        together and click "Run" to watch it go!
+      courseD_maze_ramp1_instruction: Per risolvere questo esercizio, collega tutti
+        i blocchi e clicca su "Esegui" per vederlo in funzione!
+      courseD_maze_ramp1_2018_instruction: Per risolvere questo esercizio, collega
+        tutti i blocchi e clicca su "Esegui" per vederlo in funzione!
       courseD_maze_ramp2_instruction: Trascina ancora un blocco `vai avanti` fuori
         dalla cassetta degli attrezzi, quindi attacca tutti i blocchi al blocco arancione
         `quando si clicca su "Esegui"`per completare il programma.
@@ -11074,12 +11046,10 @@
         keys. Get to the dragon to score points, but avoid the ninja! Standing below
         the line of octopuses will make the ninja stop chasing you, but beware! The
         longer you stay there, the more points you lose. \r\n\r\nGet 5 points to win!"
-      courseD_scrat_ramp1_instruction: |-
-        For this puzzle, snap all of the blocks together
-        and click "Run" to watch it go!
-      courseD_scrat_ramp1_2018_instruction: |-
-        For this puzzle, snap all of the blocks
-        together and click "Run" to watch it go!
+      courseD_scrat_ramp1_instruction: Per risolvere questo esercizio, collega tutti
+        i blocchi e clicca su "Esegui" per vederlo in funzione!
+      courseD_scrat_ramp1_2018_instruction: Per risolvere questo esercizio, collega
+        tutti i blocchi e clicca su "Esegui" per vederlo in funzione!
       courseD_scrat_ramp2_instruction: Trascina ancora un blocco `vai avanti` fuori
         dalla cassetta degli attrezzi, quindi attacca tutti i blocchi al blocco arancione
         `quando si clicca su "Esegui"`per completare il programma.
@@ -11222,14 +11192,13 @@
       courseE_artist_ramp10_instruction: |-
         Now, drag the code for the last triangle
         into a new loop to spin it around and make a snowflake!
-      courseE_artist_ramp11_instruction: Now make a square using Artist!
-      courseE_artist_ramp12_instruction: |-
-        Use what you've learned to draw this triangle
-        inside of a square.
-      courseE_artist_ramp8_instruction: Now make a square using Artist!
-      courseE_artist_ramp8_2_instruction: Now make a square using Artist!
-      courseE_artist_ramp8_2018_instruction: Now make a square using Artist!
-      courseE_artist_ramp8_2_2018_instruction: Now make a square using Artist!
+      courseE_artist_ramp11_instruction: Ora disegna un quadrato usando l'Artista!
+      courseE_artist_ramp12_instruction: Usa ciò che hai imparato per disegnare questo
+        triangolo all'interno di un quadrato.
+      courseE_artist_ramp8_instruction: Ora disegna un quadrato usando l'Artista!
+      courseE_artist_ramp8_2_instruction: Ora disegna un quadrato usando l'Artista!
+      courseE_artist_ramp8_2018_instruction: Ora disegna un quadrato usando l'Artista!
+      courseE_artist_ramp8_2_2018_instruction: Ora disegna un quadrato usando l'Artista!
       courseE_artist_ramp9_instruction: Use what you've learned to draw this triangle.
       courseE_artist_ramp9_2_instruction: |-
         Use what you've learned to draw this
@@ -11363,12 +11332,10 @@
         these holes until the ground is even?
       courseE_farmer_concept2_instruction: Raccogli tutte le zucche.
       courseE_farmer_concept2_2018_instruction: Raccogli tutte le zucche.
-      courseE_farmer_concept3_instruction: |-
-        Fill in the hole at the end of each of
-        these paths.
-      courseE_farmer_concept3_2018_instruction: |-
-        Fill in the hole at the end of each
-        of these paths.
+      courseE_farmer_concept3_instruction: Riempi la buca al termine di ogni tratto
+        di questo percorso.
+      courseE_farmer_concept3_2018_instruction: Riempi la buca al termine di ogni
+        tratto di questo percorso.
       courseE_farmer_concept4_instruction: Andiamo ancora più a fondo! Abbiamo annidato
         il ciclo che disegna una cella della griglia all'interno di un altro ciclo,
         per disegnare così tutta la riga di celle. Per completare la griglia, devi
@@ -11882,8 +11849,8 @@
       courseF_artist_ramp10_2018_instruction: |-
         Now, drag the code for the last triangle
         into a new loop to spin it around and make a snowflake!
-      courseF_artist_ramp8_instruction: Now make a square using Artist!
-      courseF_artist_ramp8_2018_instruction: Now make a square using Artist!
+      courseF_artist_ramp8_instruction: Ora disegna un quadrato usando l'Artista!
+      courseF_artist_ramp8_2018_instruction: Ora disegna un quadrato usando l'Artista!
       courseF_artist_ramp9_instruction: Use what you've learned to draw this triangle.
       courseF_artist_ramp9_2018_instruction: |-
         Use what you've learned to draw this
@@ -13167,46 +13134,47 @@
       grade3_playLab_buildGame_final2_instruction: |-
         Here's all of your code to choose
         a card - try adding some other fun features!
-      grade3_robotFarmer_ConditionalsIntro4_instruction: |-
-        Help the farmer remove
-        this entire pile using a `while` loop.
-      grade3_robotFarmer_ConditionalsIntro_1_instruction: "*\"Hi, I'm a farmer. I
-        need your help to flatten the field on my farm so it's ready for planting!\"*
-        \ \r\n\r\nMove to the pile of dirt and use the `remove` block to remove it."
+      grade3_robotFarmer_ConditionalsIntro4_instruction: Aiuta la contadina a rimuovere
+        tutto questo mucchio usando un ciclo `mentre`.
+      grade3_robotFarmer_ConditionalsIntro_1_instruction: |-
+        *"Ciao, sono una contadina. Ho bisogno del tuo aiuto per livellare il terreno nella mia fattoria, in modo che sia pronto per la semina."*
+
+        Spostami verso i mucchi di terra e usa il blocco `rimuovi 1` per rimuoverli.
       grade3_robotFarmer_ConditionalsIntro_10_instruction: |-
         I'm working late, so
         it's dark out, and I can't tell how large the piles are. Now I don't have
         all the options I used to have on the while block. Move me along the field,
         and if there is a pile, remove it
-      grade3_robotFarmer_ConditionalsIntro_10a_instruction: "Flatten all of these\npiles
-        using as few blocks as possible. "
+      grade3_robotFarmer_ConditionalsIntro_10a_instruction: Abbatti tutti questi mucchi
+        usando il minor numero possibile di blocchi.
       grade3_robotFarmer_ConditionalsIntro_11_instruction: 'È ancora buio fuori. Spostami
         lungo il terreno. Se c''è un mucchio, rimuovilo e se c''è una buca, riempila.
         Suggerimento: usa il menu a discesa delle opzioni del blocco "se".'
-      grade3_robotFarmer_ConditionalsIntro_11a_instruction: "Flatten all of these\npiles
-        using as few blocks as possible. "
+      grade3_robotFarmer_ConditionalsIntro_11a_instruction: Abbatti tutti questi mucchi
+        usando il minor numero possibile di blocchi.
       grade3_robotFarmer_ConditionalsIntro_2_instruction: |-
         Next, move to the hole
         and fill it with six shovelfuls of dirt, using the `fill` block.
       grade3_robotFarmer_ConditionalsIntro_3_instruction: |-
         *"Move to the pile of
         dirt and tell me how many shovelfuls to remove using as few blocks as possible."*
-      grade3_robotFarmer_ConditionalsIntro_4_instruction: "*\"I don't know how much
-        dirt is in this pile!\"*\r\n\r\nHelp the farmer remove this entire pile using
-        a `while` loop."
-      grade3_robotFarmer_ConditionalsIntro_5_instruction: "Help me remove all of\nthis
-        dirt. "
+      grade3_robotFarmer_ConditionalsIntro_4_instruction: |-
+        *"Non so quanta terra c'è in questo mucchio!"*
+
+        Aiuta la contadina a rimuovere tutto questo mucchio usando un ciclo `mentre`.
+      grade3_robotFarmer_ConditionalsIntro_5_instruction: Aiutami a rimuovere tutta
+        questa terra.
       grade3_robotFarmer_ConditionalsIntro_6_instruction: 'Rimuovi tutti i mucchi
         di terra, usando il minor numero possibile di blocchi. Nota: la nuova versione
         del blocco "mentre" permette di sapere se sto sopra un mucchio.'
-      grade3_robotFarmer_ConditionalsIntro_7_instruction: "Look at all of those holes!
-        \ Each one needs a different amount of dirt.   \r\n\r\nYou can use the `while`
-        loop to easily fill them all!"
-      grade3_robotFarmer_ConditionalsIntro_8_instruction: |-
-        Fill in the hole at the
-        end of each of these paths.
-      grade3_robotFarmer_ConditionalsIntro_9_instruction: "**Challenge:** Fill all\nof
-        these holes using as few blocks as possible. "
+      grade3_robotFarmer_ConditionalsIntro_7_instruction: |-
+        Guarda tutte queste buche!  Ognuna ha bisogno di una diversa quantità di terra.
+
+        È possibile usare il ciclo `mentre` per riempirle tutte facilmente!
+      grade3_robotFarmer_ConditionalsIntro_8_instruction: Riempi la buca al termine
+        di ogni tratto di questo percorso.
+      grade3_robotFarmer_ConditionalsIntro_9_instruction: "**Sfida:** Riempi tutte
+        queste buche usando il minor numero possibile di blocchi."
       grade3_robotFarmer_ConditionalsIntro_TeacherIDo1_instruction: 'Aiutami a riempire
         ognuna di queste buche con 5 palate di terra. Suggerimento: puoi mettere un
         blocco "ripeti" all''interno del blocco "mentre".'

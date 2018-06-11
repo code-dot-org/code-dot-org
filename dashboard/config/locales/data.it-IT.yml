@@ -1,4 +1,5 @@
-"it":
+---
+it:
   data:
     game:
       name:
@@ -655,7 +656,7 @@
         C4_unplugged_parameters: Composizione di Canzoni - Parametri
         C4_unplugged_binary: Binario
         CSF_a_b_artist_loops: Cicli con l'Artista
-        CSF_artist_angles: Angoli in Artista
+        CSF_artist_angles: Angoli con l'Artista
         CSF_collector_k1_blocks: 'Fondamenti di Informatica: Il collezionista'
         CSF_collector_repeat_loops: 'Collezionista: Cicli di Ripetizione'
         CSF_collector_text_blocks: 'Fondamenti di Informatica: Il collezionista'
@@ -813,8 +814,8 @@
         mc_2017_puzzle_3: L'Ora del Codice con Minecraft - Cicli
         mc_2017_puzzle_8: L'Ora del Codice con Minecraft - Funzioni
         mc_2017_puzzle_12: Minecraft Hour of Code - Freeplay
-        hint_videos_d_11_3_first: 'Hint Videos: D.11.3 First'
-        hint_videos_d_11_3_last: 'Hint Videos: D.11.3 Last'
+        hint_videos_d_11_3_first: 'Video suggerimenti: D.11.3 Prima di tutto'
+        hint_videos_d_11_3_last: 'Video suggerimenti: D.11.3 Infine'
         hint_videos_d_11_4_first: 'Hint Videos: D.11.4 First'
         hint_videos_d_11_4_last: 'Hint Videos: D.11.4 Last'
         hint_videos_d_11_5_first: 'Hint Videos: D.11.5 First'
@@ -841,10 +842,12 @@
         CSF_harvester_loops_K1: Cicli con la Contadina
         CSF_scrat_loops_K1: Loops in Ice Age
         CSF_scrat_loops_CF: Loops in Ice Age
-        CSF_if_allskins: The If Block
-        CSF_ifelse_allskins: Using If/Else Blocks
-        CSF_ifelseifelse_allskins: Using If/ElseIf/Else Blocks
+        CSF_if_allskins: Il Blocco Se
+        CSF_ifelse_allskins: Uso dei Blocchi Se/Altrimenti
+        CSF_ifelseifelse_allskins: Uso dei Blocchi Se/AltrimentiSe/Altrimenti
         CSF_loops_AB: Ripetizioni
+        csd_gamelab_booleans: Boolean Expressions
+        csd_gamelab_conditional_statements: Conditional Statements
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto
