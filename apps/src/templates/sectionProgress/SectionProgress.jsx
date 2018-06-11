@@ -90,12 +90,7 @@ class SectionProgress extends Component {
   };
 
   renderTooltips() {
-    const {scriptData} = this.props;
-    if (!scriptData) {
-      return null;
-    }
-
-    return scriptData.stages.map((stage, i) => (
+    return this.props.scriptData.stages.map((stage) => (
       <ReactTooltip
         id={tooltipIdForLessonNumber(stage.position)}
         key={tooltipIdForLessonNumber(stage.position)}
@@ -108,6 +103,9 @@ class SectionProgress extends Component {
     ));
   }
 
+  // Re-attaches mouse handlers on tooltip targets to tooltips.  Called
+  // after the virtualized MultiGrid component scrolls, which may cause
+  // target cells to be created or destroyed.
   afterScroll = _.debounce(ReactTooltip.rebuild, 10);
 
   render() {
@@ -187,7 +185,7 @@ class SectionProgress extends Component {
             </div>
           }
         </div>
-        {this.renderTooltips()}
+        {levelDataInitialized && this.renderTooltips()}
       </div>
     );
   }

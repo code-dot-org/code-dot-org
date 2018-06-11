@@ -151,7 +151,6 @@ class VirtualizedSummaryView extends Component {
   }
 }
 
-
 export const UnconnectedVirtualizedSummaryView = VirtualizedSummaryView;
 
 export default connect(state => ({
