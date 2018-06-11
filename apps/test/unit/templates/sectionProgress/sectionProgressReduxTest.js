@@ -1,12 +1,15 @@
-import { assert } from '../../../util/configuredChai';
+import { assert, expect } from '../../../util/configuredChai';
 import sectionProgress, {
   setCurrentView,
   ViewType,
   addScriptData,
   addStudentLevelProgress,
+  addStudentLevelPairing,
   setLessonOfInterest,
   startLoadingProgress,
   finishLoadingProgress,
+  getStudentPairing,
+  getStudentLevelResult,
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import {setScriptId} from '@cdo/apps/redux/scriptSelectionRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
@@ -130,6 +133,64 @@ describe('sectionProgressRedux', () => {
     });
   });
 
+  describe('addStudentLevelPairing', () => {
+    function isValidInput(input) {
+      addStudentLevelPairing(130, input);
+    }
+
+    function isInvalidInput(input) {
+      expect(() => {
+        addStudentLevelPairing(130, input);
+      }).to.throw(undefined, undefined, `
+        Expected input ${JSON.stringify(input)} to be rejected as invalid, but it was accepted`);
+    }
+
+    it('no students is valid', () => {
+      isValidInput({});
+    });
+
+    it('students without progress are valid', () => {
+      isValidInput({
+        375: {}
+      });
+    });
+
+    it('students with progress, who did not pair are valid', () => {
+      isValidInput({
+        377: {
+          5336: false
+        }
+      });
+    });
+
+    it('students with progress, who did pair are valid', () => {
+      isValidInput({
+        377: {
+          5336: true,
+        },
+        378: {
+          5336: true,
+        }
+      });
+    });
+
+    it('invalid if contains too many properties', () => {
+      isInvalidInput({
+        377: {
+          5336: {
+            status: 'perfect',
+            result: 31,
+            paired: true
+          },
+          5337: {
+            status: 'perfect',
+            result: 31
+          }
+        }
+      });
+    });
+  });
+
   describe('addStudentLevelProgress', () => {
     it('adds multiple scriptData info', () => {
       const action = addStudentLevelProgress(130, fakeStudentProgress);
@@ -154,6 +215,54 @@ describe('sectionProgressRedux', () => {
         ...fakeStudentProgress,
         3: {},
         4: {},
+      });
+    });
+  });
+
+  describe('getStudentPairing', () => {
+    it('plucks paired value from object', () => {
+      expect(getStudentPairing({
+        377: {
+          5336: {
+            status: 'perfect',
+            result: 31,
+            paired: true,
+          },
+          5337: {
+            status: 'perfect',
+            result: 31,
+            paired: false,
+          }
+        }
+      })).to.deep.equal({
+        377: {
+          5336: true,
+          5337: false
+        }
+      });
+    });
+  });
+
+  describe('getStudentLevelResult', () => {
+    it('plucks level result value from object', () => {
+      expect(getStudentLevelResult({
+        377: {
+          5336: {
+            status: 'perfect',
+            result: 31,
+            paired: true,
+          },
+          5337: {
+            status: 'perfect',
+            result: 31,
+            paired: false,
+          }
+        }
+      })).to.deep.equal({
+        377: {
+          5336: 31,
+          5337: 31
+        }
       });
     });
   });
