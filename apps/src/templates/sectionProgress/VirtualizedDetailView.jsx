@@ -16,6 +16,7 @@ import color from "../../util/color";
 import {
   progressStyles,
   ROW_HEIGHT,
+  LAST_ROW_MARGIN_HEIGHT,
   MAX_TABLE_SIZE,
   PROGRESS_BUBBLE_WIDTH,
   DIAMOND_BUBBLE_WIDTH,
@@ -216,7 +217,7 @@ class VirtualizedDetailView extends Component {
     // Add 1 to account for the student name column
     const columnCount = scriptData.stages.length + 1;
     // Calculate height based on the number of rows
-    const tableHeightFromRowCount = ROW_HEIGHT * rowCount;
+    const tableHeightFromRowCount = ROW_HEIGHT * rowCount + LAST_ROW_MARGIN_HEIGHT;
     // Use a 'maxHeight' of 680 for when there are many rows
     const tableHeight = Math.min(tableHeightFromRowCount, MAX_TABLE_SIZE);
 
