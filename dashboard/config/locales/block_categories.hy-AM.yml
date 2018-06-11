@@ -1,4 +1,5 @@
-"hy":
+---
+hy:
   data:
     block_categories:
       Actions: գործողություններ
@@ -45,5 +46,6 @@
       Foo: Foo
       Name: Անուն
       NEW BLOCKS: NEW BLOCKS
+      'Functions ': 'Functions '
       Game/Score: Game/Score
       Function: Ֆունկցիա
