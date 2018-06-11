@@ -155,6 +155,8 @@ We will update this section as emails are sent for this event.
 
 <a href="http://go.pardot.com/webmail/153401/405632502/532ffc3eb36dd204cd978e5d0b5b8547187369e86e085555049f6891eb2c6536", target=_"blank">Email 2 - Prepare for TeacherCon: Complete your pre-work (CS Principles)</a>
 
+<a href="http://go.pardot.com/webmail/153401/414335722/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9", target=_"blank">Email 3 - 1-week to TeacherCon: Complete your pre-survey!</a>
+
 <a id="prework"></a>
 ## **Pre-work**
 <details>
@@ -200,30 +202,6 @@ We’re so excited to meet you in a few short weeks. [Visit our schedule](https:
 We will be using Remind to send general event updates while we’re in Atlanta. Remind is a messaging tool that helps us keep in touch with you via text message or the free Remind app without requiring you to give us any of your personal information. 
 
 <a href="http://remind.com/join/codeorgatl", target=_"blank">Click here</a> to receive reminders about TeacherCon Atlanta. Please note that this is not the only way we will communicate important conference updates and that this step is completely optional.
-</details>
-
-<a id="who"></a>
-## **Who's Who at TeacherCon?**
-<details>
-<summary>**Code.org Staff**</summary>
- <p>
- <br>
-More information coming soon!
-</details>
-
-<details>
-<summary>**Session Lead Facilitators**</summary>
- <p>
- <br>
-More information coming soon!
-</details>
-
-<details>
-<summary>**Regional Partners**</summary>
- <p>
- <br>
-More information coming soon!
-</p>
 </details>
 
 ## **Contact Us**
