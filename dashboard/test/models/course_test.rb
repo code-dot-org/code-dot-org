@@ -284,8 +284,8 @@ class CourseTest < ActiveSupport::TestCase
     end
 
     test 'validate test data' do
-      assert_equal 'csp', @csp_2017.assignment_family_name
-      assert_equal 'csp', @csp_2018.assignment_family_name
+      assert_equal 'csp', @csp_2017.family_name
+      assert_equal 'csp', @csp_2018.family_name
 
       assert_equal 2, @csp_2017.default_scripts.count
       assert_equal 2, @csp_2018.default_scripts.count

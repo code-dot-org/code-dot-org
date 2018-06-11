@@ -184,9 +184,9 @@ class Course < ApplicationRecord
     # ScriptConstants gives us untranslated versions of our course name, and the
     # category it's in. Set translated strings here
     info[:name] = localized_title
-    info[:assignment_family_name] = assignment_family_name
+    info[:assignment_family_name] = family_name || name
     info[:assignment_family_title] = localized_assignment_family_title
-    info[:version_year] = assignment_version_year
+    info[:version_year] = version_year || ScriptConstants::DEFAULT_VERSION_YEAR
     info[:version_title] = localized_version_title
     # For now, all course versions visible in the UI are stable.
     info[:is_stable] = true
@@ -211,14 +211,6 @@ class Course < ApplicationRecord
     Rails.cache.fetch("valid_courses/#{I18n.locale}") do
       Course.valid_courses_without_cache
     end
-  end
-
-  def assignment_family_name
-    family_name || name
-  end
-
-  def assignment_version_year
-    version_year || ScriptConstants::DEFAULT_VERSION_YEAR
   end
 
   # @param user [User]
