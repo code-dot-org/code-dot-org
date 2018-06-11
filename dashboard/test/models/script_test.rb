@@ -518,11 +518,11 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'summarize includes show_course_unit_version_warning' do
-    csp_2017 = create(:course, name: 'csp-2017')
+    csp_2017 = create(:course, name: 'csp-2017', family_name: 'csp')
     csp1_2017 = create(:script, name: 'csp1-2017')
     create(:course_script, course: csp_2017, script: csp1_2017, position: 1)
 
-    csp_2018 = create(:course, name: 'csp-2018')
+    csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp')
     csp1_2018 = create(:script, name: 'csp1-2018')
     create(:course_script, course: csp_2018, script: csp1_2018, position: 1)
 
@@ -559,11 +559,11 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'summarize only shows one version warning' do
-    csp_2017 = create(:course, name: 'csp-2017')
+    csp_2017 = create(:course, name: 'csp-2017', family_name: 'csp')
     csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp1')
     create(:course_script, course: csp_2017, script: csp1_2017, position: 1)
 
-    csp_2018 = create(:course, name: 'csp-2018')
+    csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp')
     csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp1')
     create(:course_script, course: csp_2018, script: csp1_2018, position: 1)
 

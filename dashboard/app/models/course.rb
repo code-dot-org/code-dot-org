@@ -35,6 +35,8 @@ class Course < ApplicationRecord
   serialized_attrs %w(
     teacher_resources
     has_verified_resources
+    family_name
+    version_year
   )
 
   def to_param
@@ -182,9 +184,9 @@ class Course < ApplicationRecord
     # ScriptConstants gives us untranslated versions of our course name, and the
     # category it's in. Set translated strings here
     info[:name] = localized_title
-    info[:assignment_family_name] = assignment_family_name
+    info[:assignment_family_name] = family_name || name
     info[:assignment_family_title] = localized_assignment_family_title
-    info[:version_year] = version_year
+    info[:version_year] = version_year || ScriptConstants::DEFAULT_VERSION_YEAR
     info[:version_title] = localized_version_title
     # For now, all course versions visible in the UI are stable.
     info[:is_stable] = true
@@ -209,18 +211,6 @@ class Course < ApplicationRecord
     Rails.cache.fetch("valid_courses/#{I18n.locale}") do
       Course.valid_courses_without_cache
     end
-  end
-
-  def assignment_family_name
-    m = ScriptConstants::VERSIONED_COURSE_NAME_REGEX.match(name)
-    m ? m[1] : name
-  end
-
-  # return the 4-digit year from the suffix of the course name if one exists,
-  # otherwise return the DEFAULT_VERSION_YEAR.
-  def version_year
-    m = ScriptConstants::VERSIONED_COURSE_NAME_REGEX.match(name)
-    m ? m[2] : ScriptConstants::DEFAULT_VERSION_YEAR
   end
 
   # @param user [User]
@@ -272,10 +262,11 @@ class Course < ApplicationRecord
   end
 
   # Returns an array of objects showing the name and version year for all courses
-  # sharing the assignment_family_name of this course, including this one.
+  # sharing the family_name of this course, including this one.
   def summarize_versions
+    return [] unless family_name
     Course.
-      where('name regexp ?', "^#{assignment_family_name}(-[0-9]{4})?$").
+      where("properties -> '$.family_name' = ?", family_name).
       map {|c| {name: c.name, version_year: c.version_year, version_title: c.localized_version_title}}.
       sort_by {|info| info[:version_year]}.
       reverse
@@ -354,7 +345,7 @@ class Course < ApplicationRecord
     Course.
       joins(:default_course_scripts).
       # select only courses in the same course family.
-      where('name regexp ?', "^#{assignment_family_name}(-[0-9]{4})?$").
+      where("properties -> '$.family_name' = ?", family_name).
       # exclude the current course.
       where.not(id: id).
       # select only courses with scripts which the user has progress in.
