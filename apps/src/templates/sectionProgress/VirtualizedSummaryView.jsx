@@ -1,5 +1,7 @@
+import _ from 'lodash';
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
+import ReactTooltip from 'react-tooltip';
 import { MultiGrid } from 'react-virtualized';
 import styleConstants from '../../styleConstants';
 import { scriptDataPropType, getLevels } from './sectionProgressRedux';
@@ -63,6 +65,7 @@ class VirtualizedSummaryView extends Component {
         {(rowIndex === 0 && columnIndex >= 1) &&
           <SectionProgressLessonNumberCell
             lessonNumber={columnIndex}
+            tooltipId={tooltipIdForLessonNumber(columnIndex)}
           />
         }
       </div>
@@ -110,6 +113,25 @@ class VirtualizedSummaryView extends Component {
     return SUMMARY_COLUMN_WIDTH;
   };
 
+  renderTooltips() {
+    const {scriptData} = this.props;
+    // Add 1 to account for the student name column
+    const columnCount = scriptData.stages.length + 1;
+    return _.range(columnCount).map((i) => (
+      <ReactTooltip
+        id={tooltipIdForLessonNumber(i)}
+        key={tooltipIdForLessonNumber(i)}
+        role="tooltip"
+        wrapper="span"
+        effect="solid"
+      >
+        {'Stage ' + i}
+      </ReactTooltip>
+    ));
+  }
+
+  afterScroll = () => setTimeout(ReactTooltip.rebuild, 0);
+
   render() {
     const {section, scriptData, lessonOfInterest} = this.props;
     // Add 1 to account for the header row
@@ -122,25 +144,33 @@ class VirtualizedSummaryView extends Component {
     const tableHeight = Math.min(tableHeightFromRowCount, MAX_TABLE_SIZE);
 
     return (
-      <MultiGrid
-        {...this.state}
-        cellRenderer={this.cellRenderer}
-        columnWidth={this.getColumnWidth}
-        columnCount={columnCount}
-        enableFixedColumnScroll
-        rowHeight={ROW_HEIGHT}
-        height={tableHeight}
-        scrollToColumn={lessonOfInterest}
-        scrollToAlignment={"start"}
-        rowCount={rowCount}
-        style={progressStyles.multigrid}
-        styleBottomLeftGrid={progressStyles.bottomLeft}
-        styleTopLeftGrid={progressStyles.topLeft}
-        styleTopRightGrid={progressStyles.topRight}
-        width={styleConstants['content-width']}
-      />
+      <div>
+        <MultiGrid
+          {...this.state}
+          cellRenderer={this.cellRenderer}
+          columnWidth={this.getColumnWidth}
+          columnCount={columnCount}
+          enableFixedColumnScroll
+          rowHeight={ROW_HEIGHT}
+          height={tableHeight}
+          scrollToColumn={lessonOfInterest}
+          scrollToAlignment={"start"}
+          rowCount={rowCount}
+          style={progressStyles.multigrid}
+          styleBottomLeftGrid={progressStyles.bottomLeft}
+          styleTopLeftGrid={progressStyles.topLeft}
+          styleTopRightGrid={progressStyles.topRight}
+          width={styleConstants['content-width']}
+          onScroll={this.afterScroll}
+        />
+        {this.renderTooltips()}
+      </div>
     );
   }
+}
+
+function tooltipIdForLessonNumber(i) {
+  return `tooltipForLesson${i}`;
 }
 
 export const UnconnectedVirtualizedSummaryView = VirtualizedSummaryView;
