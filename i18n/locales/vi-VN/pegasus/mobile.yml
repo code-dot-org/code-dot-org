@@ -369,7 +369,7 @@
   homepage_header_donors: "Code.org cảm ơn những người hỗ trợ"
   homepage_donors_seall: "Xem tất cả"
   homepage_donors_donate: "Quyên góp hỗ trợ"
-  homepage_below_hero_announcement_text: "We care about your privacy and are making some updates to our privacy policy, effective May 25."
+  homepage_below_hero_announcement_text: "Chúng tôi quan tâm đến việc giữ bảo mật thông tin của bạn và đang cập nhật chính sách bảo mật, có hiệu lực từ ngày 25 tháng 5."
   homepage_below_hero_announcement_link_text: "Tìm hiểu thêm"
   contact_form_topic_student: "Tôi là sinh viên"
   contact_form_topic_parent: "Tôi là một phụ huynh"
@@ -541,7 +541,7 @@
   volunteer_engineer_submission_field_email: "Địa chỉ Email"
   volunteer_engineer_submission_field_email_desc: "Địa chỉ email của bạn sẽ không bao giờ được chia sẻ, nhưng chúng tôi sẽ gửi cho bạn yêu cầu từ giáo viên."
   volunteer_engineer_submission_field_email_placeholder: "Địa chỉ Email"
-  volunteer_engineer_submission_field_email_preference: "Can we email you about updates to our courses, volunteer opportunities, or other computer science news?"
+  volunteer_engineer_submission_field_email_preference: "Chúng tôi có thể gửi email cho bạn thông tin cập nhật về các khóa học của chúng tôi, các cơ hội ở địa phương hay tin tức về khoa học máy tính khác không?"
   volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy policy)"
   volunteer_engineer_submission_field_email_preference_yes: 'Đồng ý'
   volunteer_engineer_submission_field_email_preference_no: 'Không'
@@ -935,9 +935,25 @@
   coursee_name: "Course E"
   coursef-draft_name: Course F
   coursef_name: "Course F"
+  coursea-2017_name: Course A (2017)
+  courseb-2017_name: Course B (2017)
+  coursec-2017_name: Course C (2017)
+  coursed-2017_name: Course D (2017)
+  coursee-2017_name: Course E (2017)
+  coursef-2017_name: Course F (2017)
+  coursea-2018_name: Course A (2018)
+  courseb-2018_name: Course B (2018)
+  coursec-2018_name: Course C (2018)
+  coursed-2018_name: Kịch bản khóa D mới
+  coursee-2018_name: Course E (2018)
+  coursef-2018_name: Course F (2018)
   accelerated_name: "Khóa học cấp tốc"
   express_name: "Express Course"
   pre-express_name: Pre-reader Express Course
+  express-2017_name: Express Course (2017)
+  pre-express-2017_name: Pre-reader Express Course (2017)
+  express-2018_name: Express Course (2018)
+  pre-express-2018_name: Pre-reader Express Course (2018)
   cspunit1_name: "(old) Unit 1: Digital Information"
   cspunit2_name: "(old) Unit 2: The Internet"
   cspunit3_name: "(old) Unit 3: Programming"
@@ -1012,6 +1028,8 @@
   math_category_name: "thuật toán"
   hoc_category_name: "Giờ của mã"
   csf_category_name: "CS Fundamentals"
+  csf_2017_category_name: "CS Fundamentals (2017)"
+  csf_2018_category_name: "CS Fundamentals (2018)"
   csf_international_category_name: "CS Fundamentals International"
   csf2_draft_category_name: 'Under Development: Courses A - F'
   csd_category_name: "CS Discoveries ('17-'18)"
