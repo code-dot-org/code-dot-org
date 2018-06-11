@@ -1,4 +1,5 @@
-"zh-TW":
+---
+zh-TW:
   errors:
     messages:
       not_saved: 請修正下列錯誤：
@@ -86,6 +87,7 @@
     facebook: Facebook
     windowslive: 微軟帳戶
     clever: Clever 帳號
+    powerschool: Powerschool Account
     forgot_password: 忘了密碼？
     need_confirmation: 沒有收到確認說明嗎？
     need_unlock: 沒有收到解鎖說明嗎？
