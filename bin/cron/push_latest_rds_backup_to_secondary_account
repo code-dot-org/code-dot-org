@@ -8,8 +8,8 @@ require 'cdo/chat_client'
 # Wait for an RDS snapshot to be in the 'available' state
 # @param snapshot [DBSnapshot] the snapshot to wait for
 def wait_for_snapshot_copy(snapshot)
-  # Wait up to 720 * 5 seconds = 60 minutes for snapshot to become available.
-  snapshot.wait_until(max_attempts: 720, delay: 5) do |snap|
+  # Wait up to 1080 * 5 seconds = 90 minutes for snapshot to become available.
+  snapshot.wait_until(max_attempts: 1080, delay: 5) do |snap|
     snap.status == 'available'
   end
 rescue Aws::Waiters::Errors::WaiterFailed
@@ -131,6 +131,9 @@ def main
         "RDS snapshot backup error: #{latest_snapshot.snapshot_id} already backed up"
       )
     end
+  rescue => e
+    ChatClient.message('cron-daily', e.message, color: 'red')
+    raise e
   ensure
     if copied_snapshot
       copied_snapshot.delete
