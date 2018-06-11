@@ -7,8 +7,8 @@ with completed as
     case when cc.course_name = 'csp' then 'CS Principles'
          when cc.course_name in ('csd','csd_half') then 'CS Discoveries'
     end as course
-  from csp_csd_completed_teachers cc
-  join users u on u.id = cc.user_id
+  from analysis.csp_csd_completed_teachers cc
+  join dashboard_production_pii.users u on u.id = cc.user_id
   where cc.school_year = '2017-18'
 ) 
   SELECT d.course,
