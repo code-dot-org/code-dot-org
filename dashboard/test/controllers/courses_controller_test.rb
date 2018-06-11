@@ -59,6 +59,21 @@ class CoursesControllerTest < ActionController::TestCase
 
   test_user_gets_response_for :show, response: :forbidden, user: :admin, params: -> {{course_name: @course_regular.name}}, queries: 3
 
+  # For now, this test passes due to hard-coded logic in CoursesController#show.
+  # This test ensures that hard-coded logic is not removed without being replaced
+  # by the appropriate db-driven redirection logic.
+  test "show: redirect to latest stable version in course family" do
+    create :course, name: 'csp-2017', family_name: 'csp', version_year: '2017'
+    create :course, name: 'csp-2018', family_name: 'csp', version_year: '2018'
+    get :show, params: {course_name: 'csp'}
+    assert_redirected_to '/courses/csp-2018'
+
+    create :course, name: 'csd-2017', family_name: 'csd', version_year: '2017'
+    create :course, name: 'csd-2018', family_name: 'csd', version_year: '2018'
+    get :show, params: {course_name: 'csd'}
+    assert_redirected_to '/courses/csd-2018'
+  end
+
   # Tests for create
 
   test "create: fails without levelbuilder permission" do
