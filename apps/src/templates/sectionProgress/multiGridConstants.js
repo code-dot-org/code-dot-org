@@ -1,6 +1,7 @@
 import color from "../../util/color";
 
 export const ROW_HEIGHT = 42;
+export const LAST_ROW_MARGIN_HEIGHT = 18;
 export const NAME_COLUMN_WIDTH = 170;
 export const MAX_TABLE_SIZE = 680;
 export const PROGRESS_BUBBLE_WIDTH = 38;
