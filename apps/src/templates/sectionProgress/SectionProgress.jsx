@@ -179,6 +179,7 @@ class SectionProgress extends Component {
               <VirtualizedDetailView
                 section={section}
                 scriptData={scriptData}
+                onScroll={this.afterScroll}
               />
               <ProgressLegend
                 excludeCsfColumn={scriptData.excludeCsfColumnInLegend}

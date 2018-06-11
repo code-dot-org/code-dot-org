@@ -20,6 +20,7 @@ import {
   MAX_TABLE_SIZE,
   PROGRESS_BUBBLE_WIDTH,
   DIAMOND_BUBBLE_WIDTH,
+  tooltipIdForLessonNumber,
 } from './multiGridConstants';
 import i18n from '@cdo/locale';
 import SectionProgressNameCell from './SectionProgressNameCell';
@@ -80,6 +81,7 @@ class VirtualizedDetailView extends Component {
     setLessonOfInterest: PropTypes.func.isRequired,
     columnWidths: PropTypes.arrayOf(PropTypes.number).isRequired,
     getLevels: PropTypes.func,
+    onScroll: PropTypes.func,
   };
 
   state = {
@@ -131,10 +133,14 @@ class VirtualizedDetailView extends Component {
           </div>
         )}
         {(rowIndex === 0 && columnIndex >= 1) && (
-          <div style={styles.lessonHeaderContainer}>
+          <div
+            style={styles.lessonHeaderContainer}
+          >
             <div
               onClick={() => this.onClickLevel(columnIndex)}
               style={styles.numberHeader}
+              data-tip
+              data-for={tooltipIdForLessonNumber(columnIndex)}
             >
               {columnIndex}
             </div>
@@ -211,7 +217,7 @@ class VirtualizedDetailView extends Component {
   };
 
   render() {
-    const {section, scriptData, lessonOfInterest} = this.props;
+    const {section, scriptData, lessonOfInterest, onScroll} = this.props;
     // Add 2 to account for the 2 header rows
     const rowCount = section.students.length + 2;
     // Add 1 to account for the student name column
@@ -239,6 +245,7 @@ class VirtualizedDetailView extends Component {
         styleTopRightGrid={progressStyles.topRight}
         width={styleConstants['content-width']}
         ref="detailView"
+        onScroll={onScroll}
       />
     );
   }
