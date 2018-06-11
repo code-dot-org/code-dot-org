@@ -8,9 +8,11 @@ import {valueOr} from '../utils';
 export default class Alert extends React.Component {
   static propTypes = {
     children: PropTypes.element.isRequired,
-    type: PropTypes.oneOf(["error", "warning"]).isRequired,
+    type: PropTypes.oneOf(["error", "warning", "notification"]).isRequired,
     onClose: PropTypes.func.isRequired,
+    closeDelayMillis: PropTypes.number,
     sideMargin: PropTypes.number,
+    childPadding: PropTypes.string,
   };
 
   render() {
@@ -33,10 +35,15 @@ export default class Alert extends React.Component {
           backgroundColor: color.bootstrap_warning_background,
           color: color.black
         },
+        notification: {
+          borderColor: color.light_green,
+          backgroundColor: color.lighter_green,
+          color: color.realgreen
+        },
       },
       child: {
         // from bootstrap's alert
-        padding: '8px 35px 8px 14px',
+        padding: valueOr(this.props.childPadding, '8px 35px 8px 14px'),
         marginBottom: 20,
         textShadoow: '0 1px 0 rgba(255, 255, 255, 0.5)',
         border: '1px solid',
@@ -64,13 +71,20 @@ export default class Alert extends React.Component {
     };
 
     const childStyle = {...styles.child, ...(styles.typeSpecific[this.props.type])};
+    let closeButton = '';
+    if (this.props.closeDelayMillis) {
+      setTimeout(this.props.onClose, this.props.closeDelayMillis);
+    } else {
+      closeButton = (
+          <button style={styles.closeButton} onClick={this.props.onClose}>
+            <span>&times;</span>
+          </button>);
+    }
 
     return (
       <div style={styles.main}>
         <div style={childStyle}>
-          <button style={styles.closeButton} onClick={this.props.onClose}>
-            <span>&times;</span>
-          </button>
+          {closeButton}
           {this.props.children}
         </div>
       </div>
