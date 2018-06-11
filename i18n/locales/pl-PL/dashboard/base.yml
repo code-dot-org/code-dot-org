@@ -85,6 +85,7 @@ pl:
     facebook: 'Facebooka'
     windowslive: 'Konto Microsoft'
     clever: 'Konto Clever'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Nie pamiętasz swojego hasła?'
     need_confirmation: "Czy nie otrzymałeś instrukcji potwierdzającej?"
     need_unlock: "Czy nie otrzymałeś instrukcji, jak odblokować?"
@@ -115,9 +116,9 @@ pl:
     invalid_password: "Hasło musi zawierać przynajmniej 6 znaków"
     mismatch_password: "Dwa hasła, które podałeś, nie są zgodne"
     agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
-    under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
-    agree_us_website: "I agree to using a website based in the United States."
-    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
+    under_13_consent: "Jeżeli mam mniej niż 13 lat, potwierdzam, że mój rodzic lub opiekun prawny wyraża zgodę na korzystanie przeze mnie ze strony Code.org services."
+    agree_us_website: "Zgadzam się na korzystanie ze strony, której siedziba znajduje się w Stanach Zjednoczonych."
+    my_data_to_us: "Dane gromadzone podczas korzystania przeze mnie z tej witryny mogą być wysyłane i przechowywane lub przetwarzane w Stanach Zjednoczonych."
     student_terms: "Zgadzam się na ograniczenia wynikające <a href='http://code.org/tos'> z warunków korzystania z usług </a> oferowanych przez Code.org. Jeśli mam mniej niż 13 lat, to potwierdzam przesyłając ten formularz, że mam zgodę moich rodziców lub prawnego opiekuna na korzystanie z usług Code.org. <br/> <br/> Adresy mailowe nie są przechowywane w postaci, która umożliwiałaby kontakt z uczniami. Uczniowie nie otrzymają maili z Code.org, z wyjątkiem służących do odzyskania hasła. Zobacz nasze <a href='http://code.org/privacy'> zasady ochrony prywatności</a>, aby uzyskać więcej informacji."
     teacher_terms: "Zgadzam się na ograniczenia wynikające z warunków korzystania z usług oferowanych przez Code.org. Aby uzyskać więcej informacji na temat prywatności, zobacz naszą <a href='http://code.org/privacy'> politykę prywatności</a>."
     additional_information: "Potrzebujemy dodatkowych informacji, aby móc Ciebie zarejestrować."
@@ -128,7 +129,7 @@ pl:
     field_is_required: "jest wymagane"
     accept_terms: "Musisz wyrazić zgodę, aby utworzyć konto"
     error: "Wystąpił błąd."
-    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_question: "Czy wyrażasz zgodę na otrzymywanie od nas wiadomości e-mail z najnowszymi informacjami o naszych kursach, lokalnymi ofertami oraz innymi nowościami informatycznymi?"
     email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: "Tak"
     email_preference_no: "Nie"
