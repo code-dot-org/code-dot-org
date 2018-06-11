@@ -1,0 +1,21 @@
+{
+  "category": "World",
+  "config": {
+    "func": "mixColors",
+    "blockText": "mix {COLOR1} and {COLOR2}",
+    "args": [
+      {
+        "name": "COLOR1"
+      },
+      {
+        "name": "COLOR2"
+      }
+    ],
+    "returnType": "Colour",
+    "color": [
+      196,
+      1,
+      0.79
+    ]
+  }
+}

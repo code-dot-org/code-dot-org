@@ -3,9 +3,12 @@ login_required true
 hideable_stages true
 exclude_csf_column_in_legend true
 student_detail_progress_view true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csp/unit1/"], ["teacherForum", "https://forum.code.org/c/csp1"], ["vocabulary", "https://curriculum.code.org/csp/unit1/vocab/"], ["standardMappings", "https://curriculum.code.org/csp/unit1/standards/"], ["professionalLearning", "https://studio.code.org/s/csp1-support"]]
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-18/unit1/"], ["teacherForum", "https://forum.code.org/c/csp1"], ["vocabulary", "https://curriculum.code.org/csp-18/unit1/vocab/"], ["standardMappings", "https://curriculum.code.org/csp-18/unit1/standards/"], ["professionalLearning", "https://studio.code.org/s/csp1-support"]]
 has_verified_resources true
 has_lesson_plan true
+family_name 'csp1'
+version_year '2018'
+is_stable true
 
 stage 'Personal Innovations', flex_category: 'csp1_1'
 named_level 'CSP U1L01 SFLP'

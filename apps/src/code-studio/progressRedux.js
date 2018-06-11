@@ -79,6 +79,8 @@ export default function reducer(state = initialState, action) {
       scriptId: action.scriptId,
       scriptName: action.scriptName,
       scriptTitle: action.scriptTitle,
+      scriptDescription: action.scriptDescription,
+      betaTitle: action.betaTitle,
       courseId: action.courseId,
       currentStageId,
       hasFullProgress: action.isFullProgress
@@ -283,7 +285,7 @@ export function processedStages(stages, isPlc) {
 // Action creators
 export const initProgress = ({currentLevelId, professionalLearningCourse,
     saveAnswersBeforeNavigation, stages, peerReviewStage, scriptId, scriptName,
-    scriptTitle, courseId, isFullProgress}) => ({
+    scriptTitle, scriptDescription, betaTitle, courseId, isFullProgress}) => ({
   type: INIT_PROGRESS,
   currentLevelId,
   professionalLearningCourse,
@@ -293,6 +295,8 @@ export const initProgress = ({currentLevelId, professionalLearningCourse,
   scriptId,
   scriptName,
   scriptTitle,
+  scriptDescription,
+  betaTitle,
   courseId,
   isFullProgress,
 });

@@ -117,7 +117,7 @@ module Pd
 
         JotFormRestClient.any_instance.
           expects(:get_submissions).
-          with(@form_id, last_known_submission_id: last_known_submission_id, min_date: nil).
+          with(@form_id, last_known_submission_id: last_known_submission_id, min_date: nil, full_text_search: nil).
           returns(get_submissions_result)
 
         result = Translation.new(@form_id).get_submissions(last_known_submission_id: last_known_submission_id)
@@ -141,6 +141,22 @@ module Pd
         ]
 
         assert_equal expected_result, result
+      end
+
+      test 'strip_answer' do
+        translation = Translation.new(@form_id)
+        assert_equal(
+          'text answer',
+          translation.send(:strip_answer, '  text answer  ')
+        )
+        assert_equal(
+          %w(one two),
+          translation.send(:strip_answer, ['  one  ', '  two  '])
+        )
+        assert_equal(
+          {1 => 'one', 2 => 'two'},
+          translation.send(:strip_answer, {1 => '  one  ', 2 => '  two  '})
+        )
       end
 
       protected

@@ -106,7 +106,7 @@ export default {
     // Legacy style block definitions :(
     const generator = blockly.Generator.get('JavaScript');
 
-    const behaviorEditor = new Blockly.FunctionEditor(
+    const behaviorEditor = Blockly.behaviorEditor = new Blockly.FunctionEditor(
       {
         FUNCTION_HEADER: 'Behavior',
         FUNCTION_NAME_LABEL: 'Name your behavior:',
@@ -116,7 +116,15 @@ export default {
       {
         [Blockly.BlockValueType.SPRITE]: 'sprite_parameter_get',
       },
-      true /* disableParamEditing */,
+      false /* disableParamEditing */,
+      [
+        Blockly.BlockValueType.NUMBER,
+        Blockly.BlockValueType.STRING,
+        Blockly.BlockValueType.COLOUR,
+        Blockly.BlockValueType.BOOLEAN,
+        Blockly.BlockValueType.SPRITE,
+        Blockly.BlockValueType.LOCATION,
+      ]
     );
 
     Blockly.Blocks.sprite_variables_get = {
@@ -160,7 +168,6 @@ export default {
         // Must be marked EDITABLE so that cloned blocks share the same var name
         fieldLabel.EDITABLE = true;
         this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
-        this.setHSV(7, 0.80, 0.95);
         this.appendDummyInput()
             .appendTitle(Blockly.Msg.VARIABLES_GET_TITLE)
             .appendTitle(fieldLabel , 'VAR')
@@ -177,41 +184,6 @@ export default {
       removeVar: Blockly.Blocks.variables_get.removeVar,
     };
     generator.sprite_parameter_get = generator.variables_get;
-
-    Blockly.Blocks.sprite_variables_set = {
-      // Variable setter.
-      init: function () {
-        var fieldLabel = new Blockly.FieldLabel(Blockly.Msg.VARIABLES_SET_ITEM);
-        // Must be marked EDITABLE so that cloned blocks share the same var name
-        fieldLabel.EDITABLE = true;
-        this.setHelpUrl(Blockly.Msg.VARIABLES_SET_HELPURL);
-        this.setHSV(131, 0.64, 0.62);
-        this.appendValueInput('VALUE')
-            .setStrictCheck(Blockly.BlockValueType.SPRITE)
-            .appendTitle(Blockly.Msg.VARIABLES_SET_TITLE)
-            .appendTitle(Blockly.disableVariableEditing ? fieldLabel
-              : new Blockly.FieldVariable(
-                  Blockly.Msg.VARIABLES_SET_ITEM,
-                  null,
-                  null,
-                  Blockly.BlockValueType.SPRITE,
-                ),
-              'VAR')
-            .appendTitle(Blockly.Msg.VARIABLES_SET_TAIL);
-        this.setPreviousStatement(true);
-        this.setNextStatement(true);
-        this.setTooltip(Blockly.Msg.VARIABLES_SET_TOOLTIP);
-      },
-      getVars: Blockly.Blocks.sprite_variables_get.getVars,
-      renameVar: function (oldName, newName) {
-        if (Blockly.Names.equals(oldName, this.getTitleValue('VAR'))) {
-          this.setTitleValue(newName, 'VAR');
-        }
-      },
-    };
-    generator.sprite_variables_set = generator.variables_set;
-    Blockly.Variables.registerSetter(Blockly.BlockValueType.SPRITE,
-      'sprite_variables_set');
 
     Blockly.Blocks.gamelab_behavior_get = {
       init() {
@@ -257,10 +229,13 @@ export default {
     };
 
     generator.gamelab_behavior_get = function () {
-      return [
-        Blockly.JavaScript.variableDB_.getName(
+      const name = Blockly.JavaScript.variableDB_.getName(
             this.getTitleValue('VAR'),
-            Blockly.Procedures.NAME_TYPE),
+            Blockly.Procedures.NAME_TYPE);
+      // TODO: add support for passing extra params into this block
+      const extraArgs = [];
+      return [
+        `new Behavior(${name}, [${extraArgs.join(', ')}])`,
         Blockly.JavaScript.ORDER_ATOMIC
       ];
     };

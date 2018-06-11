@@ -34,15 +34,21 @@ module Pd
       # Retrieves new submissions for this form from JotForm's API
       # @param last_known_submission_id [Integer] (optional) - filter to new submissions, since the last known id
       # @param min_date [Date] (optional) (optional) filter to new submissions on or after the min date
+      # @param full_text_search [String] (optional)
+      #   Filter to ensure at least one answer matches the given text (% for wildcards).
       # @return [Array<Hash>] array of hashes with keys :form_id, :submission_id, :answers
       #   where answers is itself a hash of question ids to raw answers.
       # Note - these answers are incomplete on their own, and need to be combined with the Question objects
       #        (from get_questions above)
-      def get_submissions(last_known_submission_id: nil, min_date: nil)
+      def get_submissions(last_known_submission_id: nil, min_date: nil, full_text_search: nil)
         CDO.log.info "Getting JotForm submissions for #{@form_id} "\
-          "last_known_submission_id: #{last_known_submission_id}, min_date: #{min_date}"
+          "last_known_submission_id: #{last_known_submission_id}, min_date: #{min_date}, search: #{full_text_search}"
 
-        response = @client.get_submissions(@form_id, last_known_submission_id: last_known_submission_id, min_date: min_date)
+        response = @client.get_submissions(@form_id,
+          last_known_submission_id: last_known_submission_id,
+          min_date: min_date,
+          full_text_search: full_text_search
+        )
         response['content'].map {|s| parse_jotform_submission(s)}
       end
 
@@ -137,7 +143,7 @@ module Pd
         answers = included_answers.map do |question_id, answer_data|
           [
             question_id.to_i,
-            answer_data['answer'].strip
+            strip_answer(answer_data['answer'])
           ]
         end.to_h
 
@@ -146,6 +152,17 @@ module Pd
           submission_id: submission_id,
           answers: answers
         }
+      end
+
+      # Strip leading and trailing whitespace from each answer
+      def strip_answer(answer)
+        if answer.is_a? String
+          answer.strip
+        elsif answer.is_a? Array
+          answer.map(&:strip)
+        elsif answer.is_a? Hash
+          answer.transform_values(&:strip)
+        end
       end
     end
   end

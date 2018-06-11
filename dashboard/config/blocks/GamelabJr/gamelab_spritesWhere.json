@@ -1,0 +1,46 @@
+{
+  "category": "Groups",
+  "config": {
+    "func": "spritesWhere",
+    "blockText": "sprites where {PROPERTY} is {VALUE}",
+    "returnType": "Sprite",
+    "args": [
+      {
+        "name": "PROPERTY",
+        "options": [
+          [
+            "size",
+            "\"scale\""
+          ],
+          [
+            "rotation",
+            "\"rotation\""
+          ],
+          [
+            "x position",
+            "\"x\""
+          ],
+          [
+            "y position",
+            "\"y\""
+          ],
+          [
+            "costume",
+            "\"costume\""
+          ],
+          [
+            "movement direction",
+            "\"direction\""
+          ],
+          [
+            "tint",
+            "\"tint\""
+          ]
+        ]
+      },
+      {
+        "name": "VALUE"
+      }
+    ]
+  }
+}

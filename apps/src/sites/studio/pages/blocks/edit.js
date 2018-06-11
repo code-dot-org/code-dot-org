@@ -13,6 +13,7 @@ let nameField;
 $(document).ready(() => {
   nameField = document.getElementById('block_name');
   Blockly.inject(document.getElementById('blockly-container'), {
+    assetUrl,
     valueTypeTabShapeMap: valueTypeTabShapeMap(Blockly),
   });
 
@@ -36,7 +37,7 @@ function onChange(editor) {
 
   const blocksInstalled = installCustomBlocks(
     Blockly,
-    { assetUrl },
+    {},
     [{
       name: nameField.value,
       category: 'Custom',

@@ -1487,6 +1487,28 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_redirected_to "/s/#{new_script.name}/stage/1/puzzle/2"
   end
 
+  test 'should redirect to 2017 version in script family' do
+    cats1 = create :script, name: 'cats1', family_name: 'cats', version_year: '2017'
+
+    assert_raises ActiveRecord::RecordNotFound do
+      get :show, params: {script_id: 'cats', stage_position: 1, id: 1}
+    end
+
+    cats1.update!(is_stable: true)
+    get :show, params: {script_id: 'cats', stage_position: 1, id: 1}
+    assert_redirected_to "/s/cats1/stage/1/puzzle/1"
+
+    create :script, name: 'cats2', family_name: 'cats', version_year: '2018', is_stable: true
+    get :show, params: {script_id: 'cats', stage_position: 1, id: 1}
+    assert_redirected_to "/s/cats1/stage/1/puzzle/1"
+
+    # do not redirect within script family if the requested script exists
+    cats = create :script, name: 'cats'
+    create :script_level, script: cats
+    get :show, params: {script_id: 'cats', stage_position: 1, id: 1}
+    assert_response :success
+  end
+
   test "should indicate challenge levels as challenge levels" do
     script_level = create :script_level,
       properties: {challenge: true}
