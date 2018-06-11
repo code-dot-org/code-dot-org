@@ -1,7 +1,5 @@
-import _ from 'lodash';
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import ReactTooltip from 'react-tooltip';
 import { MultiGrid } from 'react-virtualized';
 import styleConstants from '../../styleConstants';
 import { scriptDataPropType, getLevels } from './sectionProgressRedux';
@@ -14,7 +12,8 @@ import {
   ROW_HEIGHT,
   LAST_ROW_MARGIN_HEIGHT,
   NAME_COLUMN_WIDTH,
-  MAX_TABLE_SIZE
+  MAX_TABLE_SIZE,
+  tooltipIdForLessonNumber
 } from './multiGridConstants';
 import i18n from '@cdo/locale';
 import SectionProgressNameCell from './SectionProgressNameCell';
@@ -28,6 +27,7 @@ class VirtualizedSummaryView extends Component {
     scriptData: scriptDataPropType.isRequired,
     lessonOfInterest: PropTypes.number.isRequired,
     getLevels: PropTypes.func,
+    onScroll: PropTypes.func,
   };
 
   state = {
@@ -115,25 +115,8 @@ class VirtualizedSummaryView extends Component {
     return SUMMARY_COLUMN_WIDTH;
   };
 
-  renderTooltips() {
-    const {scriptData} = this.props;
-    return scriptData.stages.map((stage, i) => (
-      <ReactTooltip
-        id={tooltipIdForLessonNumber(stage.position)}
-        key={tooltipIdForLessonNumber(stage.position)}
-        role="tooltip"
-        wrapper="span"
-        effect="solid"
-      >
-        {stage.name}
-      </ReactTooltip>
-    ));
-  }
-
-  afterScroll = _.debounce(ReactTooltip.rebuild, 10);
-
   render() {
-    const {section, scriptData, lessonOfInterest} = this.props;
+    const {section, scriptData, lessonOfInterest, onScroll} = this.props;
     // Add 1 to account for the header row
     const rowCount = section.students.length + 1;
     // Add 1 to account for the student name column
@@ -161,17 +144,13 @@ class VirtualizedSummaryView extends Component {
           styleTopLeftGrid={progressStyles.topLeft}
           styleTopRightGrid={progressStyles.topRight}
           width={styleConstants['content-width']}
-          onScroll={this.afterScroll}
+          onScroll={onScroll}
         />
-        {this.renderTooltips()}
       </div>
     );
   }
 }
 
-function tooltipIdForLessonNumber(i) {
-  return `tooltipForLesson${i}`;
-}
 
 export const UnconnectedVirtualizedSummaryView = VirtualizedSummaryView;
 
