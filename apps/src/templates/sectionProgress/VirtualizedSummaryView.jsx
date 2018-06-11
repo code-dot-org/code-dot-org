@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import ReactTooltip from 'react-tooltip';
@@ -115,17 +114,15 @@ class VirtualizedSummaryView extends Component {
 
   renderTooltips() {
     const {scriptData} = this.props;
-    // Add 1 to account for the student name column
-    const columnCount = scriptData.stages.length + 1;
-    return _.range(columnCount).map((i) => (
+    return scriptData.stages.map((stage, i) => (
       <ReactTooltip
-        id={tooltipIdForLessonNumber(i)}
-        key={tooltipIdForLessonNumber(i)}
+        id={tooltipIdForLessonNumber(stage.position)}
+        key={tooltipIdForLessonNumber(stage.position)}
         role="tooltip"
         wrapper="span"
         effect="solid"
       >
-        {'Stage ' + i}
+        {stage.name}
       </ReactTooltip>
     ));
   }
