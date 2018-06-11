@@ -168,7 +168,6 @@ const SectionNameField = ({value, onChange, disabled}) => (
       {i18n.addSectionName()}
     </FieldDescription>
     <input
-      id="uitest-section-name"
       value={value}
       placeholder={i18n.addSectionNameHint()}
       onChange={event => onChange(event.target.value)}
@@ -192,7 +191,6 @@ const GradeField = ({value, onChange, validGrades, disabled}) => {
         {i18n.grade()}
       </FieldName>
       <Dropdown
-        id="uitest-grade-dropdown"
         value={value}
         onChange={event => onChange(event.target.value)}
         disabled={disabled}
