@@ -15,6 +15,7 @@ const SET_CURRENT_VIEW = 'sectionProgress/SET_CURRENT_VIEW';
 const SET_LESSON_OF_INTEREST = 'sectionProgress/SET_LESSON_OF_INTEREST';
 const ADD_SCRIPT_DATA = 'sectionProgress/ADD_SCRIPT_DATA';
 const ADD_STUDENT_LEVEL_PROGRESS = 'sectionProgress/ADD_STUDENT_LEVEL_PROGRESS';
+const ADD_STUDENT_LEVEL_PAIRING = 'sectionProgress/ADD_STUDENT_LEVEL_PAIRING';
 const START_LOADING_PROGRESS = 'sectionProgress/START_LOADING_PROGRESS';
 const FINISH_LOADING_PROGRESS = 'sectionProgress/FINISH_LOADING_PROGRESS';
 const ADD_LEVELS_BY_LESSON = 'sectionProgress/ADD_LEVELS_BY_LESSON';
@@ -41,6 +42,21 @@ export const addScriptData = (scriptId, scriptData) => {
 export const addStudentLevelProgress = (scriptId, studentLevelProgress) => ({
   type: ADD_STUDENT_LEVEL_PROGRESS, scriptId, studentLevelProgress
 });
+export const addStudentLevelPairing = (scriptId, studentLevelPairing) => {
+  const data = studentLevelPairing;
+  const isValid = Object.keys(data).every((userId) => (
+    Object.keys(data[userId]).every((levelId) => (
+      typeof data[userId][levelId] === "boolean"
+    ))
+ ));
+  if (!isValid) {
+    throw new Error("Input is invalid");
+  }
+
+  return {
+    type: ADD_STUDENT_LEVEL_PAIRING, scriptId, studentLevelPairing
+  };
+};
 
 export const jumpToLessonDetails = (lessonOfInterest) => {
   return (dispatch, getState) => {
@@ -52,15 +68,18 @@ export const processScriptAndProgress = (scriptId) => {
   return (dispatch, getState) => {
     const state = getState().sectionProgress;
     const studentLevelProgress = state.studentLevelProgressByScript[scriptId];
+    const studentLevelPairing = state.studentLevelPairingByScript[scriptId];
     const scriptData = state.scriptDataByScript[scriptId];
     let levelsByLessonByStudent = {};
     for (const studentId of Object.keys(studentLevelProgress)) {
       levelsByLessonByStudent[studentId] = levelsByLesson({
         stages: scriptData.stages,
         levelProgress: studentLevelProgress[studentId],
+        levelPairing: studentLevelPairing[studentId],
         currentLevelId: null
       });
     }
+
     dispatch(addLevelsByLesson(scriptId, levelsByLessonByStudent));
     dispatch(finishLoadingProgress());
   };
@@ -106,6 +125,7 @@ const initialState = {
   currentView: ViewType.SUMMARY,
   scriptDataByScript: {},
   studentLevelProgressByScript: {},
+  studentLevelPairingByScript: {},
   levelsByLessonByScript: {},
   lessonOfInterest: INITIAL_LESSON_OF_INTEREST,
   isLoadingProgress: true,
@@ -176,6 +196,18 @@ export default function sectionProgress(state=initialState, action) {
         [action.scriptId]: {
           ...state.studentLevelProgressByScript[action.scriptId],
           ...action.studentLevelProgress,
+        },
+      }
+    };
+  }
+  if (action.type === ADD_STUDENT_LEVEL_PAIRING) {
+    return {
+      ...state,
+      studentLevelPairingByScript: {
+        ...state.studentLevelPairingByScript,
+        [action.scriptId]: {
+          ...state.studentLevelPairingByScript[action.scriptId],
+          ...action.studentLevelPairing,
         },
       }
     };
@@ -299,11 +331,8 @@ export const loadScript = (scriptId) => {
         .then(response => response.json())
         .then((data) => {
           const dataByStudent = data.students;
-          let studentLevelProgress = {};
-          Object.keys(dataByStudent).forEach((studentId) => {
-            studentLevelProgress[studentId] = _.mapValues(dataByStudent[studentId], getLevelResult);
-          });
-          dispatch(addStudentLevelProgress(scriptId, studentLevelProgress));
+          dispatch(addStudentLevelProgress(scriptId, getStudentLevelResult(dataByStudent)));
+          dispatch(addStudentLevelPairing(scriptId, getStudentPairing(dataByStudent)));
         });
     });
 
@@ -311,3 +340,16 @@ export const loadScript = (scriptId) => {
     Promise.all(requests).then(() => dispatch(processScriptAndProgress(scriptId)));
   };
 };
+
+export function getStudentPairing(dataByStudent) {
+  return getInfoByStudentByLevel(dataByStudent, levelData => levelData.paired);
+}
+
+export function getStudentLevelResult(dataByStudent) {
+  return getInfoByStudentByLevel(dataByStudent, getLevelResult);
+}
+
+function getInfoByStudentByLevel(dataByStudent, infoFromLevelData) {
+  return _.mapValues(dataByStudent, (studentData) =>
+    _.mapValues(studentData, infoFromLevelData));
+}
