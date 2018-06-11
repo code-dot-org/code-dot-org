@@ -1,6 +1,8 @@
+DROP VIEW IF EXISTS csp_csd_teachers_trained CASCADE;
+
 -- to figure out
 -- 19 teachers who are listed in 2016 and 2017 PD cohort?
-create or replace view analysis.csp_csd_teachers_trained as
+create or replace view analysis.csp_csd_teachers_trained_test as
 with 
 -- school information collated through manual feedback/editing after teachercons 2017.
 schools_pd_2017 as
@@ -85,6 +87,7 @@ trained_2017 as
       when 'America Campaign - Big Sky Code Academy' then 'Teachers Teaching Tech (MT)'
       when 'No Partner' then NULL
       when 'mindSpark Learning and Colorado Education Initiative' then 'mindSpark Learning'
+      when 'The Div' then 'Oklahoma Public School Resource Center (OPSRC)'
       else regional_partner
     end as regional_partner
   from analysis_pii.teachers_trained_2017 tt
@@ -110,5 +113,5 @@ from trained_2017 t
 
 with no schema binding;
 
-GRANT ALL PRIVILEGES ON analysis.csp_csd_teachers_trained TO GROUP admin;
-GRANT SELECT ON analysis.csp_csd_teachers_trained TO GROUP reader, GROUP reader_pii;
+
+
