@@ -37,6 +37,8 @@ class VirtualizedSummaryView extends Component {
   };
 
   cellRenderer = ({columnIndex, key, rowIndex, style}) => {
+    const {scriptData} = this.props;
+
     // Subtract 1 to account for the header row.
     const studentStartIndex = rowIndex-1;
     // Subtract 1 to account for the student name column.
@@ -63,7 +65,7 @@ class VirtualizedSummaryView extends Component {
         }
         {(rowIndex === 0 && columnIndex >= 1) &&
           <SectionProgressLessonNumberCell
-            lessonNumber={columnIndex}
+            lessonNumber={scriptData.stages[columnIndex - 1].position}
             tooltipId={tooltipIdForLessonNumber(columnIndex)}
           />
         }
