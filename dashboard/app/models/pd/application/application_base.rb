@@ -59,7 +59,8 @@ module Pd::Application
       gender_identity: [
         'Female',
         'Male',
-        OTHER,
+        'Non-binary',
+        'Preferred term not listed',
         'Prefer not to answer'
       ],
 
