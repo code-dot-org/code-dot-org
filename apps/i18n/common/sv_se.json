@@ -1062,6 +1062,7 @@
   "studentControl": "Enskild elevkontroll",
   "studentLockStateInstructions": "Använd tabellen nedan för att styra tillståndet för varje enskild elev.",
   "studentName": "Studentnamn",
+  "studentNameHeader": "Student name",
   "studentAnswer": "Student answer",
   "submissionTimestamp": "Submission timestamp",
   "submit": "Skicka in",

@@ -7,29 +7,29 @@ module UsersHelper
 
   # If Clever takeover flags are present, the current account (user) is the one that the person just
   # logged into (to prove ownership), and all the Clever details are migrated over, including sections.
-  def check_and_apply_clever_takeover(user)
-    if session['clever_link_flag'].present? && session['clever_takeover_id'].present? && session['clever_takeover_token'].present?
+  def check_and_apply_oauth_takeover(user)
+    if session['clever_link_flag'].present? && session['clever_takeover_id'].present?
       uid = session['clever_takeover_id']
       # TODO: validate that we're not destroying an active account?
-      existing_clever_account = User.where(uid: uid, provider: 'clever').first
+      existing_account = User.where(uid: uid, provider: session['clever_link_flag']).first
 
       # Move over sections that students follow
-      if user.student? && existing_clever_account
-        Follower.where(student_user_id: existing_clever_account.id).each do |follower|
+      if user.student? && existing_account
+        Follower.where(student_user_id: existing_account.id).each do |follower|
           follower.update(student_user_id: user.id)
         end
       end
 
-      existing_clever_account.destroy! if existing_clever_account
-      user.provider = 'clever'
+      existing_account.destroy! if existing_account
+      user.provider = session['clever_link_flag']
       user.uid = uid
       user.oauth_token = session['clever_takeover_token']
       user.save
-      clear_clever_session_variables
+      clear_takeover_session_variables
     end
   end
 
-  def clear_clever_session_variables
+  def clear_takeover_session_variables
     return if session.empty?
     session.delete('clever_link_flag')
     session.delete('clever_takeover_id')

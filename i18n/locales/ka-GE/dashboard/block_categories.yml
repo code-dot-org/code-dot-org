@@ -1,0 +1,49 @@
+ka:
+  data:
+    block_categories:
+      Actions: მოქმედებები
+      Loops: ციკლები
+      Functions: ფუნქციები
+      Color: ფერი
+      Brushes: Brushes
+      Math: მათემატიკა
+      Logic: ლოგიკა
+      Variables: ცვლადები
+      Number: Number
+      String: String
+      Image: Image
+      Boolean: Boolean
+      Conditionals: პირობითი ბრძანებები
+      Events: მოვლენები
+      Games/Score: Games/Score
+      Comments: Comments
+      Category: Category
+      Prebuilt: Prebuilt
+      Text: ტექსტი
+      Picker: Picker
+      Comment: Comment
+      'Variables ': 'Variables '
+      everythingelse: everythingelse
+      numbers: numbers
+      Numbers: Numbers
+      Input: შემომავალი ინფორმაცია
+      Default: Default
+      Sprites: სპრაიტები
+      Behaviors: Behaviors
+      World: World
+      Sprite: Sprite
+      Brush: Brush
+      Make Sprite: Make Sprite
+      Movement: Movement
+      Start: დაწყება
+      Groups: Groups
+      Booleans: ბულის ტიპის მონაცემები (ლოგიკური ოპერატორები)
+      Functional: Functional
+      Predefined: Predefined
+      test: ტესტი
+      test2: test2
+      Foo: Foo
+      Name: სახელი
+      NEW BLOCKS: NEW BLOCKS
+      Game/Score: Game/Score
+      Function: ფუნქცია

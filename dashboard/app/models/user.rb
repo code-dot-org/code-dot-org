@@ -135,6 +135,7 @@ class User < ActiveRecord::Base
     data_transfer_agreement_source
     data_transfer_agreement_kind
     data_transfer_agreement_at
+    seen_oauth_connect_dialog
   )
 
   # Include default devise modules. Others available are:
@@ -156,6 +157,11 @@ class User < ActiveRecord::Base
     the_school_project
     twitter
     windowslive
+    powerschool
+  ).freeze
+
+  OAUTH_PROVIDERS_UNTRUSTED_EMAIL = %w(
+    clever
     powerschool
   ).freeze
 
@@ -495,7 +501,8 @@ class User < ActiveRecord::Base
   validates :name, length: {within: 1..70}, allow_blank: true
   validates :name, no_utf8mb4: true
 
-  defer_age = proc {|user| user.provider == 'google_oauth2' || user.provider == 'clever' || user.provider == User::PROVIDER_SPONSORED}
+  defer_age = proc {|user| %w(google_oauth2 clever powerschool).include?(user.provider) || user.provider == User::PROVIDER_SPONSORED}
+
   validates :age, presence: true, on: :create, unless: defer_age # only do this on create to avoid problems with existing users
   AGE_DROPDOWN_OPTIONS = (4..20).to_a << "21+"
   validates :age, presence: false, inclusion: {in: AGE_DROPDOWN_OPTIONS}, allow_blank: true
@@ -715,10 +722,10 @@ class User < ActiveRecord::Base
       user.name = name_from_omniauth auth.info.name
       user.user_type = params['user_type'] || auth.info.user_type
       # Store emails, except when using Clever
-      user.email = auth.info.email unless user.user_type == 'student' && auth.provider == 'clever'
+      user.email = auth.info.email unless user.user_type == 'student' && OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(auth.provider)
 
-      if auth.provider == 'clever' && User.find_by_email_or_hashed_email(user.email)
-        user.email = user.email + '.cleveremailalreadytaken'
+      if OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(auth.provider) && User.find_by_email_or_hashed_email(user.email)
+        user.email = user.email + '.oauthemailalreadytaken'
       end
 
       if auth.provider == :the_school_project

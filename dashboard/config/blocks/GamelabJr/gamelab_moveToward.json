@@ -1,0 +1,20 @@
+{
+  "category": "Actions",
+  "config": {
+    "func": "moveToward",
+    "blockText": "move {SPRITE} {DISTANCE} pixels toward {TARGET}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "DISTANCE"
+      },
+      {
+        "name": "TARGET",
+        "type": "Location"
+      }
+    ]
+  }
+}

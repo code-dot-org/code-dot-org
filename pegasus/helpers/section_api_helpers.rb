@@ -333,7 +333,7 @@ class DashboardSection
     # don't crash when loading environment before database has been created
     return {} unless (Dashboard.db[:scripts].count rescue nil)
 
-    where_clause = with_hidden ? "" : "hidden = 0"
+    where_clause = with_hidden ? {} : {hidden: 0}
 
     # cache result if we have to actually run the query
     scripts =

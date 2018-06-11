@@ -32,6 +32,9 @@ module Pd
     belongs_to :pd_workshop, class_name: 'Pd::Workshop'
     belongs_to :facilitator, class_name: 'User', foreign_key: 'facilitator_id'
 
+    validates_uniqueness_of :user_id, scope: [:pd_workshop_id, :pd_session_id, :facilitator_id, :form_id],
+      message: 'already has a submission for this workshop, session, facilitator, and form'
+
     # @override
     def self.attribute_mapping
       {

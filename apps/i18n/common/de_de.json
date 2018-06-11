@@ -1062,6 +1062,7 @@
   "studentControl": "Kontrolle je Schüler",
   "studentLockStateInstructions": "Bearbeiten sie in der untenstehenden Tabelle die Einstellungen für jeden einzelnen Schüler.",
   "studentName": "Schülername",
+  "studentNameHeader": "Student name",
   "studentAnswer": "Student answer",
   "submissionTimestamp": "Submission timestamp",
   "submit": "Absenden",

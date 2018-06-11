@@ -1062,6 +1062,7 @@
   "studentControl": "Rialú dalta ar dhalta",
   "studentLockStateInstructions": "Úsáid an tábla thíos chun socruithe éagsúla a dhéanamh i gcomhair daltaí éagsúla.",
   "studentName": "Ainm an Dalta",
+  "studentNameHeader": "Student name",
   "studentAnswer": "Student answer",
   "submissionTimestamp": "Stampa ama na hiarrachta",
   "submit": "Seol",

@@ -1062,6 +1062,7 @@
   "studentControl": "Egyedi tanulóellenőrzés",
   "studentLockStateInstructions": "Használd az alábbi táblát, hogy minden egyes diák állapotát ellenőrizd.",
   "studentName": "Diák neve",
+  "studentNameHeader": "Student name",
   "studentAnswer": "Student answer",
   "submissionTimestamp": "Submission timestamp",
   "submit": "Elküldés",

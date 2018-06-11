@@ -1,5 +1,4 @@
 require 'cdo/geocoder'
-require_relative './form'
 
 class Petition < Form
   def self.normalize(data)

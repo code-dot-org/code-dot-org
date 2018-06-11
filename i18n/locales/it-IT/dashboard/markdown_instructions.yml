@@ -9219,7 +9219,7 @@ it:
       CSD U3 game choose background_markdown_instruction: |
         # Choose your Backgrounds
         
-        Now that you have the backgrounds that you need, you'll write the code to choose the correct background.  You've seen this done in [Lesson 15 Level 11](/s/csd3/stage/15/puzzle/11).
+        Now that you have the backgrounds that you need, you'll write the code to choose the correct background.  You've seen this done in [Lesson 19 Level 11](/s/csd3/stage/19/puzzle/11).
         
         After you've written the code, test it by changing the starting value of your variables and making sure the correct background shows up.
       CSD U3 game choose background_2018_markdown_instruction: |
@@ -9257,7 +9257,7 @@ it:
       CSD U3 game display boards_markdown_instruction: |
         # Display Boards
         
-        Now that your backgrounds are working, you can add your display boards.  Most games have a score board, but you might also want to display information about player level or lives remaining.  Look at [Lesson 12 Puzzle 9](/s/csd3/stage/12/puzzle/9) for an example of how to make a scoreboard.
+        Now that your backgrounds are working, you can add your display boards.  Most games have a score board, but you might also want to display information about player level or lives remaining.  Look at [Lesson 16 Puzzle 9](/s/csd3/stage/16/puzzle/9) for an example of how to make a scoreboard.
         
         For each display board:
         * Create a function to display the information
@@ -9917,7 +9917,7 @@ it:
         * Read through the properties and experiment with them
         * Add a label element next to each that describes what they do (don't forget to give it an id too!)
       CSD U4 - Design Mode Project_markdown_instruction: "# Mocking Up Your App\n\nUsing your paper prototype, create a digital version of your screen using the Design Mode elements you've learned about.\n\n# Do This\n\n* Rename the screen to match your _namespace_.\n* Use the built-in elements to lay out your app screen, giving each a proper ID\n\\t* For example, if your namespace is \"home_\" you might create IDs like:\n    \\t* \"home_title\"\n        * \"home_login_button\"\n        * \"home_logo\"\n* For any components of your app that can't be recreated with the built in elements you can either:\n\\t* Redesign to utilize built in elements\n    * Find an image to use in place of your element\n    * Draw the element using your preferred image editor\n* Share your design regularly with your teammates to ensure consistent style"
-      CSD U4 - Design Mode Project_2018_markdown_instruction: "# Mocking Up Your App\n\nUsing your paper prototype, create a digital version of your screen using the Design Mode elements you've learned about.\n\n# Do This\n\n* Rename the screen to match your _namespace_.\n* Use the built-in elements to lay out your app screen, giving each a proper ID\n\\t* For example, if your namespace is \"home_\" you might create IDs like:\n    \\t* \"home_title\"\n        * \"home_login_button\"\n        * \"home_logo\"\n* For any components of your app that can't be recreated with the built in elements you can either:\n\\t* Redesign to utilize built in elements\n    * Find an image to use in place of your element\n    * Draw the element using your preferred image editor\n* Share your design regularly with your teammates to ensure consistent style"
+      CSD U4 - Design Mode Project_2018_markdown_instruction: "# Mocking Up Your App\n\nUsing your paper prototype, create a digital version of your screen using the Design Mode elements you've learned about.\n\n# Do This\n\n* Rename the screen to match your _namespace_.\n* Use the built-in elements to lay out your app screen, giving each a proper ID\n\\t* For example, if your namespace is \"home_\" you might create IDs like:\n    \\t* \"home_title\"\n        * \"home_login_button\"\n        * \"home_logo\"\n* For any components of your app that can't be recreated with the built in elements you can either:\n\\t* Redesign to utilize built in elements\n    * Find an image to use in place of your element\n    * Draw the element using your preferred image editor\n* Make sure that you and your teammates are regularly looking at each other's designs to ensure consistent style"
       CSD U4 - Design Mode Text_markdown_instruction: "# Adding Text\n<img src=\"https://images.code.org/86ba633e04f90f3ca47dff3dcd064847-image-1469812708683.15.36.png\" style=\"float: right; width: 75px\"/>\nThe label element lets you add any text you'd like to your app. Just drag out a label block and set its \"text\" property. \n\n# Do This\nUse a label element to create a title for this app.\n\n* Drag out a label and place it on the top of the screen\n* Change the id to \"titleLabel\"\n* Change the text to \"My App\"\n* Increase the font size\n* Choose a color you like for the title\n\n"
       CSD U5 Amazon Data Video_markdown_instruction: Watch this video to learn how this problem is solved by Amazon. As you watch think about what data is being collected and where it's coming from.
       CSD U5 Amazon Data Video_2018_markdown_instruction: Watch this video to learn how this problem is solved by Amazon. As you watch think about what data is being collected and where it's coming from.
@@ -14214,7 +14214,7 @@ it:
         * Work on your app until it works. Try to stay focused on only the single piece of functionality you've chosen
         * When done, pick a new idea and start the process over
       CSDU4 Project Import_markdown_instruction: "# Back To Your App\n\nNow that you've had some practice with importing screens, it's time to start working on your team's app.\n\n# Do This\n\nEach member of your team is going to create their own copy of the app, with all of the team members' screens imported in. This will be your copy of the app, and the copy that you will start to add code to in the next lesson.\n\n* Collect all of the sharing urls for your team's pages\n\\t* You can find the share url by going back to the last level of the previous lesson, or by finding the screen in your [projects directory](/projects)\n* Import each of the screens, one at a time\n\\t* If you run into an ID error with one of the screens, discuss the issue with the screen's creator so it can be fixed and imported\n* Delete the default \"screen1\"\n* Set the main screen as the default\n\nDon't worry about adding any code at this point; we'll get to that in the next level."
-      CSDU4 Project Import_2018_markdown_instruction: "# Back To Your App\n\nNow that you've had some practice with importing screens, it's time to start working on your team's app.\n\n# Do This\n\nEach member of your team is going to create their own copy of the app, with all of the team members' screens imported in. This will be your copy of the app, and the copy that you will start to add code to in the next lesson.\n\n* Collect all of the sharing urls for your team's pages\n\\t* You can find the share url by going back to the last level of the previous lesson, or by finding the screen in your [projects directory](/projects)\n* Import each of the screens, one at a time\n\\t* If you run into an ID error with one of the screens, discuss the issue with the screen's creator so it can be fixed and imported\n* Delete the default \"screen1\"\n* Set the main screen as the default\n\nDon't worry about adding any code at this point; we'll get to that in the next level."
+      CSDU4 Project Import_2018_markdown_instruction: "# Back To Your App\n\nNow that you've had some practice with importing screens, it's time to start working on your team's app.\n\n# Do This\n\nEach member of your team is going to create their own copy of the app, with all of the team members' screens imported in. This will be your copy of the app, and the copy that you will start to add code to in the next lesson.  (Don't forget that you'll also need to import your own screen into this project.)\n\n* Collect all of the sharing urls for your team's pages, **including your own**\n\\t* Each team member can find the share url for their own screen by going back to the last level of the previous lesson, or by finding the screen in their [projects directory](/projects)\n* Import each of the screens, one at a time\n\\t* If you run into an ID error with one of the screens, discuss the issue with the screen's creator so it can be fixed and imported\n* Delete the default \"screen1\"\n* Set the main screen as the default\n\nDon't worry about adding any code at this point; we'll get to that in the next level."
       CSDU4 Quiz App Demo_markdown_instruction: |-
         # Quiz Me
         
@@ -19797,8 +19797,8 @@ it:
       NEW Course 4 Artist Functions 9_markdown_instruction: Riesci a risolvere questo esercizio aggiungendo un solo blocco?
       NEW Course 4 Artist Functions inspire_markdown_instruction: "<img src=\"https://images.code.org/5e50e6ef0cafb40a8b697ea158047412-image-1441260841174.11.12.png\" width=\"250px\"/>\n\n**Free-Play Inspiration:** You've now learned everything you need to know to make a pattern like this! \n\nIf this picture inspires you, try to make something similar. Otherwise, create something all your own. \n\n"
       NEW Course 4 Artist Params 1_markdown_instruction: "Riesci a definire il codice per la funzione `draw a square` (<i>disegna un quadrato</i>) in modo che disegni un quadrato con i lati di 50 pixel?<br>\n<br>\nFai clic su \"modifica\" per iniziare. Se vuoi, puoi cambiare anche il nome e la descrizione della funzione."
-      NEW Course 4 Artist Params 10_markdown_instruction: "Crea un blocco funzione `draw a hexagon` (<i>disegna un esagono</i>) con un parametro per la lunghezza dei lati e poi disegna un esagono con i lati di 100 pixel."
-      NEW Course 4 Artist Params 11_markdown_instruction: "Riesci a capire come disegnare questa figura? Modifica la funzione `draw a polygon` (<i>disegna un poligono</i>) per utilizzare il parametro `lenght` (<i>lati</i>)."
+      NEW Course 4 Artist Params 10_markdown_instruction: "Crea un blocco funzione `draw a hexagon` (<i>disegna un esagono</i>) con un parametro per la lunghezza dei lati (denominata <i>length</i>) e poi disegna un esagono con i lati di 100 pixel."
+      NEW Course 4 Artist Params 11_markdown_instruction: "Riesci a capire come disegnare questa figura? Modifica la funzione `draw a polygon` (<i>disegna un poligono</i>) per utilizzare il parametro `sides` (<i>lati</i>)."
       NEW Course 4 Artist Params 12_markdown_instruction: "Riesci a completare questo disegno? I lati di tutte le figure sono lunghi 100 pixel."
       NEW Course 4 Artist Params 12a_markdown_instruction: "This image is similar to the last.  \n\nCan you use a `for` loop with your function to make this design?"
       NEW Course 4 Artist Params 13_markdown_instruction: "In questo esercizio devi modificare la funzione `draw a polygon` (<i>disegna un poligono</i>).<br>\n<br>\nHa già un parametro `sides` (<i>lati</i>) per disegnare un poligono con un numero di lati ogni volta diverso. Adesso aggiungi un parametro `length` (<i>lunghezza</i>) e modifica la funzione così da farle disegnare un poligono che abbia un perimetro sempre della stessa lunghezza indipendentemente dal numero di lati.<br>\n<br>\nIl perimetro di ogni poligono è lungo 200 pixel. Ti ricordi quale equazione ti consente di ottenere figure di uguale perimetro in base al numero di lati?"
@@ -20154,7 +20154,10 @@ it:
       Poorva copy U3L2 Using Simple Commands_markdown_instruction: "<img src=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\" align=right>\n\nGiven only 4 turtle commands, write code in App Lab to complete the drawings in each of the challenges below.  Your goal is to write code that solves the problem as efficiently as possible using only the commands provided.\n\nWhat does “efficient” mean?  In computer science it can actually mean several different things depending on what you’re talking about.  Work on these challenges, try to solve them in a way that you think is best and we’ll ask about efficiency at the end.\n\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\" align=right>\n# Do This: \nDraw a 1 x 1 square to the front and left of the turtle as efficiently as possible. The program should stop with turtle in its original position, facing its original direction.\n\nOnce you think you have a solution, click the Finish button - it will appear once you run the program."
       Poorva-test_markdown_instruction: "# Header 1\n## Header 2\n### Header 3\n#### Header 4\n##### Header 5\n\nThis is regular text, **bolded text** and *italicized text*. "
       Practice Create Performance Task_markdown_instruction: "# Practice Create Performance Task\n\nYou've finally made it to the end of the Building Apps Unit! We will continue some programming in the next unit, but for now we are going to use all the new concepts you have learn to create something of your own design! \n\n# Do This:\n\n* **Read the Project Overview** to understand the entire project.\n* **Follow the Project Planning Guide**.\n* **Implement your final program in this level**."
-      Practice Create Performance Task_2018_markdown_instruction: "# Practice Create Performance Task\n\nYou've finally made it to the end of the Building Apps Unit! We will continue some programming in the next unit, but for now we are going to use all the new concepts you have learn to create something of your own design! \n\n# Do This:\n\n* **Read the Project Overview** to understand the entire project.\n* **Follow the Project Planning Guide**.\n* **Implement your final program in this level**."
+      Practice Create Performance Task_2018_markdown_instruction: |-
+        # Create Performance Task
+        
+        It's time to complete the Create Performance Task. Complete it here.
       Predict Loop I_markdown_instruction: |-
         # Predict
         
@@ -21007,7 +21010,10 @@ it:
       U2L04 Assessment3_2018_markdown_instruction: 'Can you know in advance the path a message will take between you and another computer on the Internet? Justify your answer.  '
       U2L04 Free Response Wrap Up_markdown_instruction: 'How do you think the routers are physically connected? Does it matter to you? Why or why not?  '
       U2L05 - NetSim - Packets and Building TCP_markdown_instruction: "## Packets and Making a Reliable Internet\n\n**Challenge:** Develop a protocol for reliably sending a message across an unreliable network\n\n**An Unreliable Internet Simulator:** The current version of the Internet Simulator is modeled after some actual constraints of the Internet\n- Messages must be divided into packets which may contain <em><strong> at most eight (8) ASCII characters </em></strong>\n- Messages should be long enough to require at least 10 packets\n- Packets may not arrive in the order sent\n- Packets may be dropped while in transmission\n\n**Directions:** In a group or individually join a router in the Internet Simulator and practice sending messages given these new constraints. Once you are comfortable with the challenge, iteratively design a protocol that can reliably send a message to a partner. You and your partner should join <em><strong> DIFFERENT </strong></em> routers.\n\n**Protocol Requirements:**\n- All communication can only be done through the Internet Simulator\n- You must send a message that spans at least 10 packets (i.e. an 80 character ASCII message). \n- The protocol should account for the possibility that the characters might be entirely random (i.e. not necessarily English - do not count on human intuition to reconstruct the message. The message is not known beforehand.)\n- The sender and receiver must be confident the full message was successfully transmitted and reconstructed."
-      U2L05 Lossy vs. Lossless FR 1_2018_markdown_instruction: In general, what are reasons that someone would choose to use lossy compression? When would they choose to use lossless compression? Write a brief response below.
+      U2L05 Lossy vs. Lossless FR 1_2018_markdown_instruction: |-
+        # When to use lossy compression?
+        
+        In general, what are reasons that someone would choose to use lossy compression? Write a brief response below including at least one example of a situation when lossy compression would be appropriate.
       U2L05 Reflection 1_markdown_instruction: 'In your own words, what were the primary obstacles you needed to overcome in today’s challenge? How do these obstacles mirror actual problems encountered on the Internet?  '
       U2L05 Reflection 1_2018_markdown_instruction: 'In your own words, what were the primary obstacles you needed to overcome in today’s challenge? How do these obstacles mirror actual problems encountered on the Internet?  '
       U2L07 Assessment5_markdown_instruction: 'When analyzing algorithms why doesn''t the amount of real time (clock time) tell us very much about the algorithm''s "efficiency"?  '
@@ -27277,7 +27283,7 @@ it:
       courseA_maze_seq_challenge1_markdown_instruction: Debug this level. Remove the extra blocks, and add the missing blocks. Get the bird to the pig!
       courseA_maze_seq_challenge1_2018_markdown_instruction: Debug this level. Remove the extra blocks, and add the missing blocks. Get the bird to the pig!
       courseA_playLab_events3_markdown_instruction: |2
-        Aiuta il cane Jorge a muoversi unendo il blocco <xml><block type="studio_move">\r
+        Aiuta il cane a muoversi unendo il blocco <xml><block type="studio_move">\r
             <title name="SPRITE">1</title>\r
             <title
         name="DIR">8</title>\r
@@ -27288,7 +27294,7 @@ it:
         \r
         Fai arrivare Jorge alla bandierina per completare l'esercizio!
       courseA_playLab_events3_2018_markdown_instruction: |2
-        Aiuta il cane Jorge a muoversi unendo il blocco <xml><block type="studio_move">\r
+        Aiuta il cane a muoversi unendo il blocco <xml><block type="studio_move">\r
             <title name="SPRITE">1</title>\r
             <title
         name="DIR">8</title>\r
@@ -27298,10 +27304,10 @@ it:
           </block></xml> che si trova già nell'area di lavoro.\r
         \r
         Fai arrivare Jorge alla bandierina per completare l'esercizio!
-      courseA_playLab_events4_markdown_instruction: Ora fai muovere Jorge a destra quando si preme la freccia a destra.
-      courseA_playLab_events4_2018_markdown_instruction: Ora fai muovere Jorge a destra quando si preme la freccia a destra.
-      courseA_playLab_events5_markdown_instruction: Aggiungi gli eventi per far muovere Jorge su e giù quando si premono le frecce in su e in giù.
-      courseA_playLab_events5_2018_markdown_instruction: Aggiungi gli eventi per far muovere Jorge su e giù quando si premono le frecce in su e in giù.
+      courseA_playLab_events4_markdown_instruction: Ora fai muovere il cane a destra quando si preme la freccia a destra.
+      courseA_playLab_events4_2018_markdown_instruction: Ora fai muovere il cane a destra quando si preme la freccia a destra.
+      courseA_playLab_events5_markdown_instruction: Aggiungi gli eventi per far muovere il cane su e giù quando si premono le frecce in su e in giù.
+      courseA_playLab_events5_2018_markdown_instruction: Aggiungi gli eventi per far muovere il cane su e giù quando si premono le frecce in su e in giù.
       courseA_playlab_events_challenge1_markdown_instruction: |-
         Clicking Olive will make Robin appear! Can you write code to show the rest of the characters too?
         
@@ -27428,10 +27434,10 @@ it:
       courseB_maze_seq_challenge1_2018_markdown_instruction: You only have four of each move block. Can you find a path before you run out of blocks?
       courseB_playLab_events1_markdown_instruction: "Questo ambiente si chiama Laboratorio.\n\nCerca di capire cosa fa ogni blocco."
       courseB_playLab_events1_2018_markdown_instruction: "Questo ambiente si chiama Laboratorio.\n\nCerca di capire cosa fa ogni blocco."
-      courseB_playlab_events3_markdown_instruction: Usa un evento per fare in modo che la draghetta Daisy cambi umore in modo casuale ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png) quando clicchi su di lei.
-      courseB_playlab_events3_2018_markdown_instruction: Usa un evento per fare in modo che la draghetta Daisy cambi umore in modo casuale ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png) quando clicchi su di lei.
-      courseB_playlab_events4_markdown_instruction: "È il momento del cavaliere!\n\nAggiungi un evento per fare in modo che il cavaliere vada verso la draghetta quando clicchi sulla freccia sinistra."
-      courseB_playlab_events4_2018_markdown_instruction: "È il momento del cavaliere!\n\nAggiungi un evento per fare in modo che il cavaliere vada verso la draghetta quando clicchi sulla freccia sinistra."
+      courseB_playlab_events3_markdown_instruction: Usa un evento per fare in modo che il drago cambi umore in modo casuale ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png) quando clicchi su di lei.
+      courseB_playlab_events3_2018_markdown_instruction: Usa un evento per fare in modo che il drago cambi umore in modo casuale ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png) quando clicchi su di lei.
+      courseB_playlab_events4_markdown_instruction: "È il momento del cavaliere!\n\nAggiungi un evento per fare in modo che il cavaliere vada verso il drago quando clicchi sulla freccia sinistra."
+      courseB_playlab_events4_2018_markdown_instruction: "È il momento del cavaliere!\n\nAggiungi un evento per fare in modo che il cavaliere vada verso il drago quando clicchi sulla freccia sinistra."
       courseB_playlab_events6_markdown_instruction: |-
         Aiuta il tuo cavaliere a raggiungere tutte le bandiere!
         
@@ -27440,8 +27446,8 @@ it:
         Aiuta il tuo cavaliere a raggiungere tutte le bandiere!
         
         Per far questo, devi aggiungere gli eventi che permettono di muovere il cavaliere in su, in giù, a sinistra e a destra.
-      courseB_playlab_events7_markdown_instruction: "Rendi questo gioco divertente facendo svanire il cavaliere quando si scontra con la draghetta mentre cerca di raggiungere le bandierine!\n\nRiproduci anche un suono quando la colpisce, così sembra più reale.\n\nTocca tutte le bandierine, quindi vai contro la draghetta per completare l'esercizio."
-      courseB_playlab_events7_2018_markdown_instruction: "Rendi questo gioco divertente facendo svanire il cavaliere quando si scontra con la draghetta mentre cerca di raggiungere le bandierine!\n\nRiproduci anche un suono quando la colpisce, così sembra più reale.\n\nTocca tutte le bandierine, quindi vai contro la draghetta per completare l'esercizio."
+      courseB_playlab_events7_markdown_instruction: "Rendi questo gioco divertente facendo svanire il cavaliere quando si scontra con il drago mentre cerca di raggiungere le bandierine!\n\nRiproduci anche un suono quando lo colpisce, così sembra più reale.\n\nTocca tutte le bandierine, quindi vai contro il drago per completare l'esercizio."
+      courseB_playlab_events7_2018_markdown_instruction: "Rendi questo gioco divertente facendo svanire il cavaliere quando si scontra con il drago mentre cerca di raggiungere le bandierine!\n\nRiproduci anche un suono quando lo colpisce, così sembra più reale.\n\nTocca tutte le bandierine, quindi vai contro il drago per completare l'esercizio."
       courseB_playlab_events_challenge1_markdown_instruction: "It's time for the Great Animal Race! Make the animals move down when you press `▼`. \n\nWho will run the fastest?"
       courseB_playlab_events_challenge1_2018_markdown_instruction: "It's time for the Great Animal Race! Make the animals move down when you press `▼`. \n\nWho will run the fastest?"
       courseB_playlab_events_challenge2_markdown_instruction: |-
@@ -27489,15 +27495,15 @@ it:
       courseB_starWars_prog9_markdown_instruction: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Ce la puoi fare!"_'
       courseB_starWars_prog9_2018_markdown_instruction: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Ce la puoi fare!"_'
       courseC_PlayLab_events7_markdown_instruction: |-
-        The `repeat forever` block allows you to run code over and over forever.  Use this block to move Chomp the Dino (actor 2) up and down by 400 pixels forever.
+        Il blocco `ripeti per sempre` ti permette di ripetere del codice per sempre. Usa questo blocco per muovere ripetutamente il dinosauro (personaggio 2) in alto e in basso di 400 pixel.
         
         ![](https://images.code.org/0cbe6dd5f4e2251e3f121dbabc0cc19d-image-1523040103822.com-resize.gif)
       courseC_PlayLab_events7_2018_markdown_instruction: |-
-        The `repeat forever` block allows you to run code over and over forever.  Use this block to move Chomp the Dino (actor 2) up and down by 400 pixels forever.
+        Il blocco `ripeti per sempre` ti permette di ripetere del codice per sempre. Usa questo blocco per muovere ripetutamente il dinosauro (personaggio 2) in alto e in basso di 400 pixel.
         
         ![](https://images.code.org/0cbe6dd5f4e2251e3f121dbabc0cc19d-image-1523040103822.com-resize.gif)
-      courseC_PlayLab_events8_markdown_instruction: "Can you have Waddles (actor 1) say \"Ouch!\" and play a \"hit\" sound if he runs into Chomp? \n\nWhen you're done, play the game to make that happen.\n\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
-      courseC_PlayLab_events8_2018_markdown_instruction: "Can you have Waddles (actor 1) say \"Ouch!\" and play a \"hit\" sound if he runs into Chomp? \n\nWhen you're done, play the game to make that happen.\n\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
+      courseC_PlayLab_events8_markdown_instruction: "Puoi fare in modo che il pinguino (personaggio 1) riproduca il suono di \"un colpo\" e dica \"Ahi!\" quando sbatte contro il dinosauro?\n\nQuando hai finito, esegui il gioco e falli scontrare.\n\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
+      courseC_PlayLab_events8_2018_markdown_instruction: "Puoi fare in modo che il pinguino (personaggio 1) riproduca il suono di \"un colpo\" e dica \"Ahi!\" quando sbatte contro il dinosauro?\n\nQuando hai finito, esegui il gioco e falli scontrare.\n\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
       courseC_PlayLab_events_challenge1_markdown_instruction: |-
         Use a new block to make Waddles automatically move back to the start when he runs into the Dinosaur and when he scores a point. This will make your game more challenging and fun!
         
@@ -27506,8 +27512,8 @@ it:
         Use a new block to make Waddles automatically move back to the start when he runs into the Dinosaur and when he scores a point. This will make your game more challenging and fun!
         
         Play the game and move Waddles with the arrows until you score enough points. Waddles must be moved to the `middle left` position of the screen to complete this challenge.
-      courseC_artist_loop1_markdown_instruction: "Fantastico!\n\nAggiungiamo un po' di stile modificando il pennello con il blocco 'imposta lo schema' prima che inizi il ciclo."
-      courseC_artist_loop1_2018_markdown_instruction: "Fantastico!\n\nAggiungiamo un po' di stile modificando il pennello con il blocco 'imposta lo schema' prima che inizi il ciclo."
+      courseC_artist_loop1_markdown_instruction: "Fantastico!\n\nAggiungiamo un po' di stile modificando il pennello con il blocco `imposta lo schema` prima che inizi il ciclo."
+      courseC_artist_loop1_2018_markdown_instruction: "Fantastico!\n\nAggiungiamo un po' di stile modificando il pennello con il blocco `imposta lo schema` prima che inizi il ciclo."
       courseC_artist_loops1a_markdown_instruction: "**Tempo di giocare:** Facciamo qualcosa di più intrigante, un passo alla volta! Puoi creare ciò che preferisci, ma se vuoi ti mostriamo come fare un disegno come questo!\n\n![expandable](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)\n\nUsa il blocco `salta a 200 avanti 200 in basso` per portarti al centro dell'area di gioco, quindi usa il blocco `disegna un adesivo` per far apparire un uccello.\n\n---\n\nPremi \"Termina\" quando sei soddisfatto di ciò che hai creato."
       courseC_artist_loops1a_2018_markdown_instruction: "**Free Play:** Let's build something bigger, one step at a time!  \n\nUse the `jump to 200 over 200 down` to get the artist to the center of the play area, then use the `draw a sticker` block to make a bird appear.  \n\n---\n\nPress \"Finish\" when you are happy with what you've made."
       courseC_artist_loops2_markdown_instruction: |-
@@ -27690,64 +27696,64 @@ it:
       courseC_collector_progB_markdown_instruction: "You're almost done!  \n\nCollect as many coins as you can to finish the stage!"
       courseC_collector_prog_challenge2_markdown_instruction: There are 20 pieces of treasure in this cave. Collect at least **10** to finish the challenge!
       courseC_collector_prog_challenge2_2018_markdown_instruction: There are 20 pieces of treasure in this cave. Collect at least **10** to finish the challenge!
-      courseC_flappy_events1_markdown_instruction: "Attach the `flap a normal amount` block to the `when click` event, then press \"Run\".   \n\n---\n\nClick or tap on the play space to move Flappy to the target."
-      courseC_flappy_events10_markdown_instruction: "Create your own Flappy game! \n\nYou can change the visuals and the rules...even the gravity! \nWhen you're done, click \"Finish\" to share with friends on their phones."
-      courseC_flappy_events10_2018_markdown_instruction: "Create your own Flappy game! \n\nYou can change the visuals and the rules...even the gravity! \nWhen you're done, click \"Finish\" to share with friends on their phones."
-      courseC_flappy_events1_2018_markdown_instruction: "Attach the `flap a normal amount` block to the `when click` event, then press \"Run\".   \n\n---\n\nClick or tap on the play space to move Flappy to the target."
-      courseC_flappy_events2_markdown_instruction: "The `when run` event allows you to run code as soon as your game starts.  \n\nTry adding a block that sets the level speed when the \"Run\" button is pressed. \n\n---\n\nPlay the game and flap to the target to continue."
-      courseC_flappy_events2_2018_markdown_instruction: "The `when run` event allows you to run code as soon as your game starts.  \n\nTry adding a block that sets the level speed when the \"Run\" button is pressed. \n\n---\n\nPlay the game and flap to the target to continue."
-      courseC_flappy_events3_markdown_instruction: "Now we've added the ground. \n\nAttach the `end game` block to the `when hit the ground` event. \n\n---\n\nPlay the game and crash the bird into the ground to continue."
-      courseC_flappy_events3_2018_markdown_instruction: "Now we've added the ground. \n\nAttach the `end game` block to the `when hit the ground` event. \n\n---\n\nPlay the game and crash the bird into the ground to continue."
-      courseC_flappy_events4_markdown_instruction: "Flappy will fly right through obstacles unless you write code to make him crash. \n\nAttach a block to the `when hit an obstacle` event so that the game ends when Flappy crashes into the first set of pipes."
-      courseC_flappy_events4_2018_markdown_instruction: "Flappy will fly right through obstacles unless you write code to make him crash. \n\nAttach a block to the `when hit an obstacle` event so that the game ends when Flappy crashes into the first set of pipes."
-      courseC_flappy_events5_markdown_instruction: "We've added a scoreboard to count points when Flappy passes obstacles.  \n\nAdd a block to the `when pass an obstacle` event that scores a point, then press \"Run\" to fly Flappy through the first set of pipes."
-      courseC_flappy_events5_2018_markdown_instruction: "We've added a scoreboard to count points when Flappy passes obstacles.  \n\nAdd a block to the `when pass an obstacle` event that scores a point, then press \"Run\" to fly Flappy through the first set of pipes."
-      courseC_flappy_events6_markdown_instruction: "Click the down arrow inside of the `flap a normal amount` block to pick a different flapping power.  \n\nSee if you can still score a point after making Flappy flap either a smaller or larger amount each time you click."
-      courseC_flappy_events6_2018_markdown_instruction: "Click the down arrow inside of the `flap a normal amount` block to pick a different flapping power.  \n\nSee if you can still score a point after making Flappy flap either a smaller or larger amount each time you click."
-      courseC_flappy_events7_markdown_instruction: Next, try changing the scene by attaching a block to the `when run` event.
-      courseC_flappy_events7_2018_markdown_instruction: Next, try changing the scene by attaching a block to the `when run` event.
-      courseC_flappy_events8_markdown_instruction: "You can set the background under any event, not just when the game starts. \n\nTry setting a **random** scene when other events happen...for example, when passing an obstacle."
-      courseC_flappy_events8_2018_markdown_instruction: "You can set the background under any event, not just when the game starts. \n\nTry setting a **random** scene when other events happen...for example, when passing an obstacle."
-      courseC_flappy_events9_markdown_instruction: To mix things up, instead of ending the game when Flappy hits an obstacle, try setting the score back to 0.
-      courseC_flappy_events9_2018_markdown_instruction: To mix things up, instead of ending the game when Flappy hits an obstacle, try setting the score back to 0.
-      courseC_harvester_loops1_markdown_instruction: "Loops can be used to repeat more than moves.  \n\nUse loops to collect all four of the pumpkins."
-      courseC_harvester_loops10_markdown_instruction: Collect all of the corn and all of the pumpkins.
-      courseC_harvester_loops10_2018_markdown_instruction: Collect all of the corn and all of the pumpkins.
-      courseC_harvester_loops11_markdown_instruction: Collect all of the corn and all of the pumpkins.
-      courseC_harvester_loops11_2018_markdown_instruction: Collect all of the corn and all of the pumpkins.
-      courseC_harvester_loops1_2018_markdown_instruction: "Loops can be used to repeat more than moves.  \n\nUse loops to collect all four of the pumpkins."
-      courseC_harvester_loops2_markdown_instruction: Can you combine two different loops to move toward the pumpkins, then collect them all?
-      courseC_harvester_loops2_2018_markdown_instruction: Can you combine two different loops to move toward the pumpkins, then collect them all?
-      courseC_harvester_loops3_markdown_instruction: Collect all of the pumpkins.
-      courseC_harvester_loops3_2018_markdown_instruction: Collect all of the pumpkins.
+      courseC_flappy_events1_markdown_instruction: "Collega il blocco `sbatti le ali per un numero di volte normale` all'evento `quando ci clicca`, quindi premi \"Esegui\".\n\n---\n\nClicca o tocca nello spazio di gioco per far volare Flappy verso la sua destinazione."
+      courseC_flappy_events10_markdown_instruction: "Crea la tua versione del gioco Flappy.\n\nPuoi cambiare le immagini e le regole, persino la forza di gravità!\nQuando hai finito, clicca su \"Termina\" per far provare agli amici il gioco sui loro smartphone (devi inviargli il link sotto alla scritta \"Condividi il tuo gioco:\")."
+      courseC_flappy_events10_2018_markdown_instruction: "Crea la tua versione del gioco Flappy.\n\nPuoi cambiare le immagini e le regole, persino la forza di gravità!\nQuando hai finito, clicca su \"Termina\" per far provare agli amici il gioco sui loro smartphone (devi inviargli il link sotto alla scritta \"Condividi il tuo gioco:\")."
+      courseC_flappy_events1_2018_markdown_instruction: "Collega il blocco `sbatti le ali per un numero di volte normale` all'evento `quando ci clicca`, quindi premi \"Esegui\".\n\n---\n\nClicca o tocca nello spazio di gioco per far volare Flappy verso la sua destinazione."
+      courseC_flappy_events2_markdown_instruction: "L'evento `quando si clicca su \"Esegui\"` ti permette di eseguire del codice all'inizio del gioco.\n\nProva ad aggiungere un blocco che imposti la velocità quando viene premuto il pulsante \"Esegui\". \n\n---\n\nGioca volando fino a destinazione per continuare."
+      courseC_flappy_events2_2018_markdown_instruction: "L'evento `quando si clicca su \"Esegui\"` ti permette di eseguire del codice all'inizio del gioco.\n\nProva ad aggiungere un blocco che imposti la velocità quando viene premuto il pulsante \"Esegui\". \n\n---\n\nGioca volando fino a destinazione per continuare."
+      courseC_flappy_events3_markdown_instruction: "Ora abbiamo aggiunto il terreno.\n\nCollega il blocco `fine del gioco` all'evento `quando precipita a terra`.\n\n---\n\nGioca facendo precipitare a terra l'uccellino per continuare."
+      courseC_flappy_events3_2018_markdown_instruction: "Ora abbiamo aggiunto il terreno.\n\nCollega il blocco `fine del gioco` all'evento `quando precipita a terra`.\n\n---\n\nGioca facendo precipitare a terra l'uccellino per continuare."
+      courseC_flappy_events4_markdown_instruction: "Flappy volerà attraverso gli ostacoli, a meno che tu scriva del codice che lo fa schiantare.\n\nCollega un blocco all'evento `quando colpisce un ostacolo` in modo che il gioco finisca quando Flappy si schianta contro la prima serie di tubi."
+      courseC_flappy_events4_2018_markdown_instruction: "Flappy volerà attraverso gli ostacoli, a meno che tu scriva del codice che lo fa schiantare.\n\nCollega un blocco all'evento `quando colpisce un ostacolo` in modo che il gioco finisca quando Flappy si schianta contro la prima serie di tubi."
+      courseC_flappy_events5_markdown_instruction: "Ora guadagnerai dei punti quando Flappy oltrepasserà gli ostacoli.\n\nAggiungi un blocco all'evento `quando supera un ostacolo`, quindi premi \"Esegui\" per segnare un punto facendo volare Flappy oltre la prima serie di tubi."
+      courseC_flappy_events5_2018_markdown_instruction: "Ora guadagnerai dei punti quando Flappy oltrepasserà gli ostacoli.\n\nAggiungi un blocco all'evento `quando supera un ostacolo`, quindi premi \"Esegui\" per segnare un punto facendo volare Flappy oltre la prima serie di tubi."
+      courseC_flappy_events6_markdown_instruction: "Clicca la freccia in giù che trovi all'interno del blocco `sbatti le ali per un numero di volte normale` per scegliere una diversa potenza di volo.\n\nVedi se, cambiando di quanto Flappy sbatte le ali ogni volta che clicchi, riesci ancora a segnare un punto."
+      courseC_flappy_events6_2018_markdown_instruction: "Clicca la freccia in giù che trovi all'interno del blocco `sbatti le ali per un numero di volte normale` per scegliere una diversa potenza di volo.\n\nVedi se, cambiando di quanto Flappy sbatte le ali ogni volta che clicchi, riesci ancora a segnare un punto."
+      courseC_flappy_events7_markdown_instruction: Adesso, prova a cambiare la scena attaccando un blocco all'evento `quando si clicca su "Esegui"`.
+      courseC_flappy_events7_2018_markdown_instruction: Adesso, prova a cambiare la scena attaccando un blocco all'evento `quando si clicca su "Esegui"`.
+      courseC_flappy_events8_markdown_instruction: "Puoi cambiare lo sfondo in seguito a qualsiasi evento, non solo quando il gioco inizia.\n\nProva a impostare una scena **casuale** quando si verificano altri eventi... per esempio, quando si supera un ostacolo."
+      courseC_flappy_events8_2018_markdown_instruction: "Puoi cambiare lo sfondo in seguito a qualsiasi evento, non solo quando il gioco inizia.\n\nProva a impostare una scena **casuale** quando si verificano altri eventi... per esempio, quando si supera un ostacolo."
+      courseC_flappy_events9_markdown_instruction: Per cambiare le cose, invece di finire il gioco quando Flappy colpisce un ostacolo, prova ad impostare di nuovo il punteggio a 0.
+      courseC_flappy_events9_2018_markdown_instruction: Per cambiare le cose, invece di finire il gioco quando Flappy colpisce un ostacolo, prova ad impostare di nuovo il punteggio a 0.
+      courseC_harvester_loops1_markdown_instruction: "I cicli possono essere usati per ripetere più mosse.\n\nUsa i cicli per raccogliere tutte e quattro le zucche."
+      courseC_harvester_loops10_markdown_instruction: Raccogli tutte le pannocchie e tutte le zucche.
+      courseC_harvester_loops10_2018_markdown_instruction: Raccogli tutte le pannocchie e tutte le zucche.
+      courseC_harvester_loops11_markdown_instruction: Raccogli tutte le pannocchie e tutte le zucche.
+      courseC_harvester_loops11_2018_markdown_instruction: Raccogli tutte le pannocchie e tutte le zucche.
+      courseC_harvester_loops1_2018_markdown_instruction: "I cicli possono essere usati per ripetere più mosse.\n\nUsa i cicli per raccogliere tutte e quattro le zucche."
+      courseC_harvester_loops2_markdown_instruction: Riesci a combinare due diversi cicli per muoverti verso le zucche e poi raccoglierle tutte?
+      courseC_harvester_loops2_2018_markdown_instruction: Riesci a combinare due diversi cicli per muoverti verso le zucche e poi raccoglierle tutte?
+      courseC_harvester_loops3_markdown_instruction: Raccogli tutte le zucche.
+      courseC_harvester_loops3_2018_markdown_instruction: Raccogli tutte le zucche.
       courseC_harvester_loops4_markdown_instruction: |-
-        Now there is corn growing, too!
+        Ora crescono anche le pannocchie!
         
-        Collect all of the corn and all of the pumpkins.
+        Raccogli tutte le pannocchie e tutte le zucche.
       courseC_harvester_loops4_2018_markdown_instruction: |-
-        Now there is corn growing, too!
+        Ora crescono anche le pannocchie!
         
-        Collect all of the corn and all of the pumpkins.
-      courseC_harvester_loops5_markdown_instruction: Collect all of the corn and all of the pumpkins.
-      courseC_harvester_loops5_2018_markdown_instruction: Collect all of the corn and all of the pumpkins.
-      courseC_harvester_loops6_markdown_instruction: Collect all of the corn and all of the pumpkins.
-      courseC_harvester_loops6_2018_markdown_instruction: Collect all of the corn and all of the pumpkins.
-      courseC_harvester_loops7_markdown_instruction: Collect all of the corn and all of the pumpkins.
-      courseC_harvester_loops7_2018_markdown_instruction: Collect all of the corn and all of the pumpkins.
+        Raccogli tutte le pannocchie e tutte le zucche.
+      courseC_harvester_loops5_markdown_instruction: Raccogli tutte le pannocchie e tutte le zucche.
+      courseC_harvester_loops5_2018_markdown_instruction: Raccogli tutte le pannocchie e tutte le zucche.
+      courseC_harvester_loops6_markdown_instruction: Raccogli tutte le pannocchie e tutte le zucche.
+      courseC_harvester_loops6_2018_markdown_instruction: Raccogli tutte le pannocchie e tutte le zucche.
+      courseC_harvester_loops7_markdown_instruction: Raccogli tutte le pannocchie e tutte le zucche.
+      courseC_harvester_loops7_2018_markdown_instruction: Raccogli tutte le pannocchie e tutte le zucche.
       courseC_harvester_loops8_markdown_instruction: |-
-        **Challenge:** Collect all of the corn and all of the pumpkins.
+        **Sfida:** Raccogli tutte le pannocchie e tutte le zucche.
         
-        You can complete this challenge any way you want, but it will either take a lot of work or a lot of thinking!
+        Puoi completare questa sfida in qualunque modo preferisci, ma ci vorrà molto lavoro o molto ragionamento!
       courseC_harvester_loops8_2018_markdown_instruction: |-
-        **Challenge:** Collect all of the corn and all of the pumpkins.
+        **Sfida:** Raccogli tutte le pannocchie e tutte le zucche.
         
-        You can complete this challenge any way you want, but it will either take a lot of work or a lot of thinking!
-      courseC_harvester_loops9_markdown_instruction: Collect all of the corn and all of the pumpkins.
-      courseC_harvester_loops9_2018_markdown_instruction: Collect all of the corn and all of the pumpkins.
+        Puoi completare questa sfida in qualunque modo preferisci, ma ci vorrà molto lavoro o molto ragionamento!
+      courseC_harvester_loops9_markdown_instruction: Raccogli tutte le pannocchie e tutte le zucche.
+      courseC_harvester_loops9_2018_markdown_instruction: Raccogli tutte le pannocchie e tutte le zucche.
       courseC_harvester_loops_challenge1_markdown_instruction: Collect all of the corn.
       courseC_harvester_loops_challenge2_markdown_instruction: Collect all of the lettuce. Avoid the trees and fields!
       courseC_harvester_loops_challenge2_2018_markdown_instruction: Collect all of the lettuce. Avoid the trees and fields!
-      courseC_harvester_loops_forVid_markdown_instruction: Collect all of the corn and all of the pumpkins.
+      courseC_harvester_loops_forVid_markdown_instruction: Raccogli tutte le pannocchie e tutte le zucche.
       courseC_maze_debugging1_markdown_instruction: "Questo programma è sbagliato!\n\nCorreggilo per aiutare Scrat a raggiungere la ghianda."
       courseC_maze_debugging1_2018_markdown_instruction: "Questo programma è sbagliato!\n\nCorreggilo per aiutare Scrat a raggiungere la ghianda."
       courseC_maze_debugging3_markdown_instruction: "C'è ancora qualcosa di sbagliato.\n\nRimuovi dei blocchi per far arrivare Scrat fino alla ghianda!"
@@ -28729,6 +28735,16 @@ it:
       courseD_playLab_cond6a_markdown_instruction: "We don't want the pirate to stay in the \"safe zone\" too long!  \n\nAdd code to the `if` statement below so that if the pirate (actor 1) is in the safe zone, the program will wait one second, then deduct a point as long as he stays beneath the octopus line."
       courseD_playLab_cond6a_2018_markdown_instruction: "We don't want the pirate to stay in the \"safe zone\" too long!  \n\nAdd code to the `if` statement below so that if the pirate (actor 1) is in the safe zone, the program will wait one second, then deduct a point as long as he stays beneath the octopus line."
       courseD_playLab_cond6cloneForTest_markdown_instruction: Can we make this work?
+      courseD_playLab_condFP_2018_markdown_instruction: |-
+        Now, build your own game to show off to your friends!
+        
+        ---
+        
+        You could:
+        - Have the pirate and ninja work together to get points from the octopus
+        - Have both octopuses follow the pirate, doing double damage to the ninja when they collide
+        - Have each character disappear when touched by the ninja
+        - Invent your own game!
       courseD_scrat_ramp1_markdown_instruction: For this puzzle, snap all of the blocks together and click "Run" to watch it go!
       courseD_scrat_ramp1_2018_markdown_instruction: For this puzzle, snap all of the blocks together and click "Run" to watch it go!
       courseD_scrat_ramp2_markdown_instruction: Trascina ancora un blocco `vai avanti` fuori dalla cassetta degli attrezzi, quindi attacca tutti i blocchi al blocco arancione `quando si clicca su "Esegui"`per completare il programma.
@@ -30561,7 +30577,7 @@ it:
       grade2_maze_intro7_markdown_instruction: This time, try something a bit more challenging.
       grade2_maze_intro8_markdown_instruction: This is a challenge puzzle.  It is meant to be hard and will probably take you a couple of tries to solve.  If you don’t solve it after several tries, don’t worry!  It will be in the Play Zone at the end of the stage and you can try it again when you’ve had more practice.
       grade2_maze_intro9_markdown_instruction: Solve this puzzle.
-      grade2_playlab_project_3_markdown_instruction: "Can you have Waddles (actor 1) say \"Ouch!\" and play a \"hit\" sound if he runs into Chomp? \n\nWhen you're done, play the game to make that happen.\n\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
+      grade2_playlab_project_3_markdown_instruction: "Puoi fare in modo che il pinguino (personaggio 1) riproduca il suono di \"un colpo\" e dica \"Ahi!\" quando sbatte contro il dinosauro?\n\nQuando hai finito, esegui il gioco e falli scontrare.\n\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
       grade2_playlab_project_6_markdown_instruction: "<style>\n.hint{\n\\tpadding: 15px 15px 15px 40px; \n    background-color:#eeeeee; \n    border-radius:10px;\n}\n.hintInner{\n\\tpadding: 15px 15px 15px 15px;  \n    background-color:#FFFFFF; \n    border-radius:10px;\n}\n\nimg{\n\\tborder-radius: 10px;\n    mix-blend-mode: multiply;\n}\n\n</style>\n\nCreate your own story. When you're done, click \"Finish\" to share with friends.\n<br/>\n\n<h5 class=\"hint\">\n<details>\n<summary><b>Need some ideas?</b></summary>\n\\t<br/>\n\\t<h5 class=\"hintInner\">\n\\t\\t<ul>\n        \\t<li><strong>Who's there?</strong> - Make characters appear with random images, so no one knows who's showing up next.</li>\n            <li><strong>Going on an Adventure</strong> - Change the background, then have the characters talk about where they are now. </li>\n            <li><strong>Pinball</strong> - Make one character move using the arrow keys (use `when up arrow`, `when down arrow` blocks), then play random sounds when it collides with other characters on the screen. </li>\n        </ul>\n\\t</h5>\n</details>\n</h5>\n"
       grade2_puppy_loops2_markdown_instruction: |-
         Adesso è disponibile un nuovo blocco! Con il blocco `ripeti ... volte` (detto anche <i>ciclo</i>) puoi ripetere più volte un insieme di blocchi.<br>
