@@ -1,4 +1,5 @@
-"ga":
+---
+ga:
   errors:
     messages:
       not_saved: 'Ceartaigh na hearráidí seo a leanas:'
@@ -96,6 +97,7 @@
     facebook: Facebook
     windowslive: Cuntas Microsoft
     clever: Cuntas Clever
+    powerschool: Powerschool Account
     forgot_password: Focal faire dearmadta?
     need_confirmation: Nach bhfuair tú na treoracha deimhnithe?
     need_unlock: Nach bhfuair tú na treoracha díghlasála?
