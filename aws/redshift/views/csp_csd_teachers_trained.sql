@@ -2,7 +2,7 @@ DROP VIEW IF EXISTS csp_csd_teachers_trained CASCADE;
 
 -- to figure out
 -- 19 teachers who are listed in 2016 and 2017 PD cohort?
-create or replace view analysis.csp_csd_teachers_trained_test as
+create or replace view analysis.csp_csd_teachers_trained as
 with 
 -- school information collated through manual feedback/editing after teachercons 2017.
 schools_pd_2017 as
