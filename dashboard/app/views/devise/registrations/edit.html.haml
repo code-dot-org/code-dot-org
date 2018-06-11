@@ -22,6 +22,8 @@
     - else
       .field
         = f.label :email
+        %em= t('user.email_hint')
+        %br/
         %span#displayed-user-email= f.object.email.present? ? f.object.email : '***encrypted***'
         - if current_user.can_edit_email? && !current_user.oauth?
           (
@@ -170,4 +172,3 @@
     }.to_json
   }
 %script{src: minifiable_asset_path('js/devise/registrations/edit.js'), data: script_data}
-
