@@ -53,8 +53,8 @@ export const addStudentLevelPairing = (scriptId, studentLevelPairing) => {
     throw new Error("Input is invalid");
   }
 
- return {
-  type: ADD_STUDENT_LEVEL_PAIRING, scriptId, studentLevelPairing
+  return {
+    type: ADD_STUDENT_LEVEL_PAIRING, scriptId, studentLevelPairing
   };
 };
 
