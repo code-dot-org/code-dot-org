@@ -1,4 +1,5 @@
-"my":
+---
+my:
   data:
     block_categories:
       Actions: လုပ်​ဆောင်ချက်များ
@@ -45,5 +46,6 @@
       Foo: Foo
       Name: အမည္
       NEW BLOCKS: NEW BLOCKS
+      'Functions ': 'Functions '
       Game/Score: Game/Score
       Function: လုပ်ဆောင်ချက်
