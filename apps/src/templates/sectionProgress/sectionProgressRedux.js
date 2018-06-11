@@ -45,13 +45,13 @@ export const addStudentLevelProgress = (scriptId, studentLevelProgress) => ({
 export const addStudentLevelPairing = (scriptId, studentLevelPairing) => {
   const data = studentLevelPairing;
   const isValid = Object.keys(data).every((userId) => (
-   Object.keys(data[userId]).every((levelId) => (
-     typeof data[userId][levelId] === "boolean"
-   ))
+    Object.keys(data[userId]).every((levelId) => (
+      typeof data[userId][levelId] === "boolean"
+    ))
  ));
- if (!isValid) {
-   throw new Error("Input is invalid");
- }
+  if (!isValid) {
+    throw new Error("Input is invalid");
+  }
 
  return {
   type: ADD_STUDENT_LEVEL_PAIRING, scriptId, studentLevelPairing
