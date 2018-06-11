@@ -25,7 +25,7 @@
         %em= t('user.email_hint')
         %br/
         %span#displayed-user-email= f.object.email.present? ? f.object.email : '***encrypted***'
-        - if current_user.can_edit_email? && !current_user.oauth?
+        - if current_user.can_edit_email?
           (
           %a#edit-email-link{href: '#'}= "Update"
           )
