@@ -7,7 +7,13 @@ import { sectionDataPropType } from '@cdo/apps/redux/sectionDataRedux';
 import StudentProgressSummaryCell from '../sectionProgress/StudentProgressSummaryCell';
 import SectionProgressLessonNumberCell from '../sectionProgress/SectionProgressLessonNumberCell';
 import color from "../../util/color";
-import {progressStyles, ROW_HEIGHT, NAME_COLUMN_WIDTH, MAX_TABLE_SIZE} from './multiGridConstants';
+import {
+  progressStyles,
+  ROW_HEIGHT,
+  LAST_ROW_MARGIN_HEIGHT,
+  NAME_COLUMN_WIDTH,
+  MAX_TABLE_SIZE
+} from './multiGridConstants';
 import i18n from '@cdo/locale';
 import SectionProgressNameCell from './SectionProgressNameCell';
 
@@ -111,7 +117,7 @@ class VirtualizedSummaryView extends Component {
     // Add 1 to account for the student name column
     const columnCount = scriptData.stages.length + 1;
     // Calculate height based on the number of rows
-    const tableHeightFromRowCount = ROW_HEIGHT * rowCount;
+    const tableHeightFromRowCount = ROW_HEIGHT * rowCount + LAST_ROW_MARGIN_HEIGHT;
     // Use a 'maxHeight' of 680 for when there are many rows
     const tableHeight = Math.min(tableHeightFromRowCount, MAX_TABLE_SIZE);
 
@@ -122,7 +128,6 @@ class VirtualizedSummaryView extends Component {
         columnWidth={this.getColumnWidth}
         columnCount={columnCount}
         enableFixedColumnScroll
-        enableFixedRowScroll
         rowHeight={ROW_HEIGHT}
         height={tableHeight}
         scrollToColumn={lessonOfInterest}
