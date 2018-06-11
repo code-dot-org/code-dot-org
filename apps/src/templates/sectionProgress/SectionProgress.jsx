@@ -1,4 +1,6 @@
+import _ from 'lodash';
 import React, { PropTypes, Component } from 'react';
+import ReactTooltip from 'react-tooltip';
 import ScriptSelector from './ScriptSelector';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionProgressToggle';
@@ -19,6 +21,7 @@ import {
   setLessonOfInterest,
   scriptDataPropType,
 } from './sectionProgressRedux';
+import { tooltipIdForLessonNumber } from './multiGridConstants';
 import { sectionDataPropType } from '@cdo/apps/redux/sectionDataRedux';
 import { setScriptId, validScriptPropType } from '@cdo/apps/redux/scriptSelectionRedux';
 
@@ -86,6 +89,27 @@ class SectionProgress extends Component {
     this.props.setLessonOfInterest(lessonOfInterest);
   };
 
+  renderTooltips() {
+    const {scriptData} = this.props;
+    if (!scriptData) {
+      return null;
+    }
+
+    return scriptData.stages.map((stage, i) => (
+      <ReactTooltip
+        id={tooltipIdForLessonNumber(stage.position)}
+        key={tooltipIdForLessonNumber(stage.position)}
+        role="tooltip"
+        wrapper="span"
+        effect="solid"
+      >
+        {stage.name}
+      </ReactTooltip>
+    ));
+  }
+
+  afterScroll = _.debounce(ReactTooltip.rebuild, 10);
+
   render() {
     const {
       section,
@@ -143,6 +167,7 @@ class SectionProgress extends Component {
               <VirtualizedSummaryView
                 section={section}
                 scriptData={scriptData}
+                onScroll={this.afterScroll}
               />
               <SummaryViewLegend
                 showCSFProgressBox={!scriptData.excludeCsfColumnInLegend}
@@ -161,6 +186,7 @@ class SectionProgress extends Component {
             </div>
           }
         </div>
+        {this.renderTooltips()}
       </div>
     );
   }
