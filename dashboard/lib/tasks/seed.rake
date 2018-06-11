@@ -30,18 +30,20 @@ namespace :seed do
     'course2',
     'course3',
     'course4',
-    'csp1',
-    'csp2',
-    'csp3',
+    'coursea',
+    'coursea-2018',
+    'csp1-2017',
+    'csp2-2017',
+    'csp3-2017',
     'csp3-a',
     'csp3-research-mxghyt',
-    'csp4',
-    'csp5',
+    'csp4-2017',
+    'csp5-2017',
     'csp-ap',
-    'csp-explore',
-    'csp-create',
+    'csp-explore-2017',
+    'csp-create-2017',
     'csp-post-survey',
-    'csppostap',
+    'csppostap-2017',
     'csp1-2018',
     'csp2-2018',
     'csp3-2018',
@@ -91,7 +93,7 @@ namespace :seed do
     end
   end
 
-  SCRIPTS_DEPENDENCIES = [:environment, :games, :custom_levels, :dsls].freeze
+  SCRIPTS_DEPENDENCIES = [:environment, :games, :custom_levels, :dsls, :blocks].freeze
   task scripts: SCRIPTS_DEPENDENCIES do
     update_scripts(incremental: false)
   end

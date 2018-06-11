@@ -128,7 +128,8 @@ sv:
     field_is_required: "krävs"
     accept_terms: "Du måste godkänna för att skapa ett konto"
     error: "An error occurred."
-    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: "Ja"
     email_preference_no: "Nej"
     email_preference_required: "You must specify an email preference."
@@ -467,6 +468,8 @@ sv:
   gender:
     male: 'Man'
     female: 'Kvinna'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: 'Föredrar att inte svara'
   user_type:
     student: 'Student'

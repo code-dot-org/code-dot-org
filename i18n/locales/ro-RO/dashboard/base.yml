@@ -128,7 +128,8 @@ ro:
     field_is_required: "este necesar"
     accept_terms: "Trebuie să fii de acord pentru a crea un cont"
     error: "S-a produs o eroare."
-    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: "Da"
     email_preference_no: "Nu"
     email_preference_required: "You must specify an email preference."
@@ -467,6 +468,8 @@ ro:
   gender:
     male: 'De sex masculin'
     female: 'De sex feminin'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: 'Prefer să nu răspund'
   user_type:
     student: 'elev'

@@ -92,16 +92,54 @@ module Pd
 
       test 'summarize' do
         expected_summary = {
-          'text' => {text: 'text label', answer_type: ANSWER_TEXT},
-          'singleSelect' => {text: 'single select label', answer_type: ANSWER_SELECT_VALUE},
-          'singleSelectWithOther' => {text: 'single select with other label', answer_type: ANSWER_SELECT_TEXT},
-          'multiSelect' => {text: 'multi select label', answer_type: ANSWER_MULTI_SELECT},
-          'multiSelectWithOther' => {text: 'multi select with other label', answer_type: ANSWER_MULTI_SELECT},
-          'scale' => {text: 'scale label', answer_type: ANSWER_SELECT_VALUE},
-          'matrix' => {text: 'How much do you agree or disagree with the following statements about this workshop?', answer_type: ANSWER_NONE},
-          'matrix_0' => {text: 'I learned something', answer_type: ANSWER_SELECT_VALUE, parent: 'matrix'},
-          'matrix_1' => {text: 'It was a good use of time', answer_type: ANSWER_SELECT_VALUE, parent: 'matrix'},
-          'matrix_2' => {text: 'I enjoyed it', answer_type: ANSWER_SELECT_VALUE, parent: 'matrix'}
+          'text' => {
+            text: 'text label',
+            answer_type: ANSWER_TEXT
+          },
+          'singleSelect' => {
+            text: 'single select label',
+            answer_type: ANSWER_SELECT_VALUE,
+            max_value: 3
+          },
+          'singleSelectWithOther' => {
+            text: 'single select with other label',
+            answer_type: ANSWER_SELECT_TEXT
+          },
+          'multiSelect' => {
+            text: 'multi select label',
+            answer_type: ANSWER_MULTI_SELECT
+          },
+          'multiSelectWithOther' => {
+            text: 'multi select with other label',
+            answer_type: ANSWER_MULTI_SELECT
+          },
+          'scale' => {
+            text: 'scale label',
+            answer_type: ANSWER_SELECT_VALUE,
+            max_value: 3
+          },
+          'matrix' => {
+            text: 'How much do you agree or disagree with the following statements about this workshop?',
+            answer_type: ANSWER_NONE
+          },
+          'matrix_0' => {
+            text: 'I learned something',
+            answer_type: ANSWER_SELECT_VALUE,
+            parent: 'matrix',
+            max_value: 3
+          },
+          'matrix_1' => {
+            text: 'It was a good use of time',
+            answer_type: ANSWER_SELECT_VALUE,
+            parent: 'matrix',
+            max_value: 3
+          },
+          'matrix_2' => {
+            text: 'I enjoyed it',
+            answer_type: ANSWER_SELECT_VALUE,
+            parent: 'matrix',
+            max_value: 3
+          }
         }
 
         assert_equal expected_summary, @form_questions.summarize

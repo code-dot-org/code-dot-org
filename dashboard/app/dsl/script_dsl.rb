@@ -26,6 +26,8 @@ class ScriptDSL < BaseDSL
     @script_announcements = nil
     @new_name = nil
     @family_name = nil
+    @version_year = nil
+    @is_stable = nil
   end
 
   integer :id
@@ -41,11 +43,13 @@ class ScriptDSL < BaseDSL
   boolean :project_widget_visible
   boolean :has_verified_resources
   boolean :has_lesson_plan
+  boolean :is_stable
 
   string :wrapup_video
   string :script_announcements
   string :new_name
   string :family_name
+  string :version_year
 
   def teacher_resources(resources)
     @teacher_resources = resources
@@ -94,6 +98,8 @@ class ScriptDSL < BaseDSL
       script_announcements: @script_announcements,
       new_name: @new_name,
       family_name: @family_name,
+      version_year: @version_year,
+      is_stable: @is_stable,
     }
   end
 
@@ -246,6 +252,10 @@ class ScriptDSL < BaseDSL
     s << 'project_widget_visible true' if script.project_widget_visible
     s << "project_widget_types #{script.project_widget_types}" if script.project_widget_types
     s << "script_announcements #{script.script_announcements}" if script.script_announcements
+    s << "new_name '#{script.new_name}'" if script.new_name
+    s << "family_name '#{script.family_name}'" if script.family_name
+    s << "version_year '#{script.version_year}'" if script.version_year
+    s << 'is_stable true' if script.is_stable
 
     s << '' unless s.empty?
     s << serialize_stages(script)

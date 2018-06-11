@@ -2,9 +2,9 @@
   data:
     course:
       name:
-        csp:
-          assignment_family_title: Computer Science Principles
-          title: Bilgisayar Bilimleri Prensipleri
+        csp-2017:
+          assignment_family_title: Bilgisayar Bilimleri Prensipleri
+          title: Computer Science Principles ('17-'18)
           version_title: "'17-'18"
           description_student: 2016'ı sonbaharında , Üniversite Yönetim Kurulu en
             yeni bilgisayar bilimi ilkeleri dersini başlattı. Ders öğrencilere bilgisayar
@@ -21,21 +21,20 @@
             bilgisayar eğitimine ulaşımı olmayanları bilgisayar bilimi ile tanıştırmak
             ve disiplinler arası bağ kurmak amacı ile tasarlanmıştır.
           description_short: Temel bilgisayar bilim kavramlarını öğrenin.
-        csd:
-          assignment_family_title: Computer Science Discoveries
-          title: Bilgisayar Bilimi Keşifleri
+        csd-2017:
+          assignment_family_title: Bilgisayar Bilimi Keşifleri
+          title: Computer Science Discoveries ('17-'18)
           version_title: "'17-'18"
-          description_student: Bilgisayar Bilimi Keşifleri (CS Keşifleri) giriş seviyesi
-            bilgisayar bilimi dersi olup öğrencilerin otantik eserler oluşturmasını;
-            ve onların üreticilik, iletişim, problem çözme ve eğlence için bir araç
-            olarak bilgisayar bilimi ile uğraşmasını sağlar.
-          description_teacher: Bilgisayar Bilimi Keşifleri (CS Keşifleri) giriş seviyesi
-            bilgisayar bilimi dersi olup öğrencilerin otantik eserler oluşturmasını;
-            ve onların üreticilik, iletişim, problem çözme ve eğlence için bir araç
-            olarak bilgisayar bilimi ile uğraşmasını sağlar.
-          description_short: Bilgisayar bilimlerine giriş niteliğindeki bir kurs,
-            öğrencilere özgün eserler oluşturabilme yetkinliğini sağlamakta yardımcı
-            olur.
+          description_student: Computer Science Discoveries (CS Discoveries) is an
+            introductory computer science course that empowers students to create
+            authentic artifacts and engage with computer science as a medium for creativity,
+            communication, problem solving, and fun.
+          description_teacher: Computer Science Discoveries (CS Discoveries) is an
+            introductory computer science course that empowers students to create
+            authentic artifacts and engage with computer science as a medium for creativity,
+            communication, problem solving, and fun.
+          description_short: An introductory computer science course that empowers
+            students to create authentic artifacts.
         allthethingscourse:
           title: tümherşeykursu
           description_short: Bu tümherşey için bir kurs
@@ -44,16 +43,16 @@
           description_teacher: Bu tümherşey için bir kurs ve öğretmenler için daha
             uzun bir tanıma sahip
         csd-2018:
-          assignment_family_title: Computer Science Discoveries
-          title: Computer Science Discoveries 2018
-          version_title: "'18-'19"
-          description_short: ''
+          assignment_family_title: Bilgisayar Bilimi Keşifleri
+          title: Bilgisayar Bilimi Keşifler ('18-'19)
+          version_title: "' 18 - 19'"
+          description_short: BB Keşifleri doğrultusunda 2018-2019 sürümü.
           description_student: ''
           description_teacher: ''
         csp-2018:
-          assignment_family_title: Computer Science Principles
-          title: Computer Science Principles ('18-'19)
-          version_title: "'18-'19"
+          assignment_family_title: Bilgisayar Bilimleri Prensipleri
+          title: Bilgisayar Bilimi İlkeleri ('18-'19)
+          version_title: "' 18 - 19'"
           description_short: Temel bilgisayar bilim kavramlarını öğrenin.
           description_student: 2016'ı sonbaharında , Üniversite Yönetim Kurulu en
             yeni bilgisayar bilimi ilkeleri dersini başlattı. Ders öğrencilere bilgisayar

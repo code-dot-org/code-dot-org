@@ -3,7 +3,8 @@
  * can be enabled/disabled using query parameters:
  *   enable:  http://foo.com/?enableExperiments=experimentOne,experimentTwo
  *   disable: http://foo.com/?disableExperiments=experimentOne,experimentTwo
- * Experiment state is persisted across page loads using local storage.
+ * Experiment state is persisted across page loads using local storage.  Note
+ * that it's only written when isEnabled is called for the key in question.
  */
 import { trySetLocalStorage } from '../utils';
 import Cookie from 'js-cookie';
@@ -16,10 +17,10 @@ const STORAGE_KEY = 'experimentsList';
 const GA_EVENT = 'experiments';
 const EXPERIMENT_LIFESPAN_HOURS = 12;
 
-// specific experiment names
+// Specific experiment names
+experiments.REDUX_LOGGING = 'reduxLogging';
 experiments.COMMENT_BOX_TAB = 'commentBoxTab';
 experiments.DEV_COMMENT_BOX_TAB = 'devCommentBoxTab';
-experiments.COURSE_VERSIONS = 'courseVersions';
 experiments.PROGRESS_TAB = 'sectionProgressRedesign';
 experiments.TEXT_RESPONSES_TAB = 'textResponsesRedesign';
 experiments.ASSESSMENTS_TAB = 'assessmentsTab';
@@ -27,9 +28,9 @@ experiments.SCHOOL_AUTOCOMPLETE_DROPDOWN_NEW_SEARCH = 'schoolAutocompleteDropdow
 
 // This is a per user experiment and is defined in experiments.rb
 // On the front end we are treating it as an experiment group that contains
-// COURSE_VERSIONS and PROGRESS_TAB.
+// PROGRESS_TAB.
 experiments.TEACHER_EXP_2018 = '2018-teacher-experience';
-experiments.TEACHER_EXP_2018_LIST = [experiments.COURSE_VERSIONS, experiments.PROGRESS_TAB,
+experiments.TEACHER_EXP_2018_LIST = [experiments.PROGRESS_TAB,
   experiments.COMMENT_BOX_TAB, experiments.TEXT_RESPONSES_TAB];
 
 /**

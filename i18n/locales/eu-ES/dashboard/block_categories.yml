@@ -1,0 +1,49 @@
+eu:
+  data:
+    block_categories:
+      Actions: Ekintzak
+      Loops: Itzuliak
+      Functions: Funtzioak
+      Color: Kolorea
+      Brushes: Brushes
+      Math: Matematika
+      Logic: Logika
+      Variables: Aldagaiak
+      Number: Number
+      String: String
+      Image: Image
+      Boolean: Boolean
+      Conditionals: Baldintzak
+      Events: Gertaerak
+      Games/Score: Games/Score
+      Comments: Comments
+      Category: Category
+      Prebuilt: Prebuilt
+      Text: Testua
+      Picker: Picker
+      Comment: Comment
+      'Variables ': 'Variables '
+      everythingelse: everythingelse
+      numbers: numbers
+      Numbers: Numbers
+      Input: Input
+      Default: Default
+      Sprites: Sprites
+      Behaviors: Behaviors
+      World: World
+      Sprite: Sprite
+      Brush: Brush
+      Make Sprite: Make Sprite
+      Movement: Movement
+      Start: Hasiera
+      Groups: Groups
+      Booleans: Boolearrak
+      Functional: Functional
+      Predefined: Predefined
+      test: proba
+      test2: test2
+      Foo: Foo
+      Name: Izena
+      NEW BLOCKS: NEW BLOCKS
+      Game/Score: Game/Score
+      Function: Funtzioa

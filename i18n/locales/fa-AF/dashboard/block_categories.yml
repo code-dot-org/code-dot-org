@@ -1,0 +1,49 @@
+fa:
+  data:
+    block_categories:
+      Actions: Actions
+      Loops: Loops
+      Functions: Functions
+      Color: Color
+      Brushes: Brushes
+      Math: Math
+      Logic: Logic
+      Variables: Variables
+      Number: Number
+      String: String
+      Image: Image
+      Boolean: Boolean
+      Conditionals: Conditionals
+      Events: Events
+      Games/Score: Games/Score
+      Comments: Comments
+      Category: Category
+      Prebuilt: Prebuilt
+      Text: Text
+      Picker: Picker
+      Comment: Comment
+      'Variables ': 'Variables '
+      everythingelse: everythingelse
+      numbers: numbers
+      Numbers: Numbers
+      Input: Input
+      Default: Default
+      Sprites: Sprites
+      Behaviors: Behaviors
+      World: World
+      Sprite: Sprite
+      Brush: Brush
+      Make Sprite: Make Sprite
+      Movement: Movement
+      Start: Start
+      Groups: Groups
+      Booleans: Booleans
+      Functional: Functional
+      Predefined: Predefined
+      test: test
+      test2: test2
+      Foo: Foo
+      Name: Name
+      NEW BLOCKS: NEW BLOCKS
+      Game/Score: Game/Score
+      Function: Function

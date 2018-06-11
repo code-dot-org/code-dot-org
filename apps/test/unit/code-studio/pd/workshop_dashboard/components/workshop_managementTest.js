@@ -15,7 +15,8 @@ from '@cdo/apps/code-studio/pd/workshop_dashboard/permission';
 const defaultProps = {
   permission: new Permission(),
   workshopId: 123,
-  viewUrl: "viewUrl"
+  viewUrl: "viewUrl",
+  date: new Date().toISOString()
 };
 
 describe("WorkshopManagement", () => {
@@ -241,6 +242,40 @@ describe("WorkshopManagement", () => {
 
       mockRouter.expects("push").withExactArgs("/survey_results/123");
       surveyButton.simulate('click', mockClickEvent);
+    });
+  });
+
+  describe("For a local summer workshop in 2017 or earlier", () => {
+    it("Renders the correct survey results URL", () => {
+      mockRouter.expects("createHref").withExactArgs("viewUrl").returns("viewHref");
+      mockRouter.expects("createHref").withExactArgs("/local_summer_workshop_survey_results/123").returns("surveyResultsHref");
+
+      workshopManagement = shallow(
+        <WorkshopManagement
+          {...defaultProps}
+          showSurveyUrl={true}
+          subject="5-day Summer"
+          date="2017-06-04T09:00:00.000Z"
+        />,
+        {context}
+      );
+    });
+  });
+
+  describe("For a local summer workshop in 2018 or later", () => {
+    it("Renders the correct survey results URL", () => {
+      mockRouter.expects("createHref").withExactArgs("viewUrl").returns("viewHref");
+      mockRouter.expects("createHref").withExactArgs("/local_summer_workshop_daily_survey_results/123").returns("surveyResultsHref");
+
+      workshopManagement = shallow(
+        <WorkshopManagement
+          {...defaultProps}
+          showSurveyUrl={true}
+          subject="5-day Summer"
+          date="2018-06-04T09:00:00.000Z"
+        />,
+        {context}
+      );
     });
   });
 });

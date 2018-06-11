@@ -1,20 +1,76 @@
 import i18n from '@cdo/locale';
 
-export const studentData = [
+export const studentOverviewData = [
   {
-    id: '012896',
+    id: 1,
     name: 'Caley',
-    studentAnswers: [
-      {question: 1, answers: ['']},
-      {question: 2, answers: ['B', 'D']},
-      {question: 3, answers: ['E']},
-      {question: 4, answers: ['C']},
-      {question: 5, answers: ['A']},
-      {question: 6, answers: ['']},
-    ],
+    numMultipleChoiceCorrect: 7,
+    numMultipleChoice: 10,
+    percentCorrect: '70%',
+    submissionStatus: 'Completed',
+    submissionTimeStamp: '2/16/18 - 7:41 AM',
+  },
+  {
+    id: 2,
+    name: 'Maddie',
+    numMultipleChoiceCorrect: 3,
+    numMultipleChoice: 10,
+    percentCorrect: '',
+    submissionStatus: 'In Progress',
+    submissionTimeStamp: '',
+  },
+  {
+    id: 3,
+    name: 'Erin',
+    numMultipleChoiceCorrect: 8,
+    numMultipleChoice: 10,
+    percentCorrect: '80%',
+    submissionStatus: 'Completed',
+    submissionTimeStamp: '5/29/18 - 7:41 AM',
+  },
+  {
+    id: 4,
+    name: 'Dave',
+    numMultipleChoiceCorrect: 10,
+    numMultipleChoice: 10,
+    percentCorrect: '100%',
+    submissionStatus: 'Completed',
+    submissionTimeStamp: '5/29/18 - 8:00 AM',
+  },
+  {
+    id: 5,
+    name: 'Brad',
+    numMultipleChoiceCorrect: 0,
+    numMultipleChoice: 10,
+    percentCorrect: '',
+    submissionStatus: 'Not Started',
+    submissionTimeStamp: '',
+  },
+  {
+    id: 6,
+    name: 'Mike',
+    numMultipleChoiceCorrect: 0,
+    numMultipleChoice: 10,
+    percentCorrect: '0%',
+    submissionStatus: 'Completed',
+    submissionTimeStamp: '5/29/18 - 8:05 AM',
   },
 ];
 
+// type: studentAnswerDataPropType
+export const studentData = {
+  id: '012896',
+  name: 'Caley',
+  studentAnswers: [
+    {isCorrect: false, answers: ''},
+    {isCorrect: false, answers: 'B D'},
+    {isCorrect: false, answers: 'E'},
+    {isCorrect: false, answers: 'C'},
+    {isCorrect: true, answers: 'A'},
+  ],
+};
+
+// Data for overview table
 export const multipleChoiceData = [
   {
     id: 1,
@@ -79,6 +135,16 @@ export const multipleChoiceData = [
     notAnswered: 25,
   },
 ];
+
+// Data for single student table.
+// Array of questionStructurePropType from StudentAssessmentOverviewTable
+export const multipleChoiceDataForSingleStudent = multipleChoiceData.map((question, index) => {
+  return {
+    id: question.id,
+    question: question.question,
+    correctAnswer: ['C', 'C B', 'D', 'B', 'A'][index],
+  };
+});
 
 export const questionOne = [
   {

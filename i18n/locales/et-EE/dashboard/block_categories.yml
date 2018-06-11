@@ -1,0 +1,49 @@
+et:
+  data:
+    block_categories:
+      Actions: Tegevused
+      Loops: Tsüklid
+      Functions: Funktsioonid
+      Color: Värv
+      Brushes: Brushes
+      Math: Matemaatika
+      Logic: Loogika
+      Variables: Muutujad
+      Number: Number
+      String: String
+      Image: Image
+      Boolean: Boolean
+      Conditionals: Tingimuslaused
+      Events: Sündmused
+      Games/Score: Games/Score
+      Comments: Comments
+      Category: Category
+      Prebuilt: Prebuilt
+      Text: Tekst
+      Picker: Picker
+      Comment: Comment
+      'Variables ': 'Variables '
+      everythingelse: everythingelse
+      numbers: numbers
+      Numbers: Numbers
+      Input: Input
+      Default: Default
+      Sprites: Sprites
+      Behaviors: Behaviors
+      World: World
+      Sprite: Sprite
+      Brush: Brush
+      Make Sprite: Make Sprite
+      Movement: Movement
+      Start: Alusta
+      Groups: Groups
+      Booleans: Booleans
+      Functional: Functional
+      Predefined: Predefined
+      test: test
+      test2: test2
+      Foo: Foo
+      Name: Nimi
+      NEW BLOCKS: NEW BLOCKS
+      Game/Score: Game/Score
+      Function: Funktsioon

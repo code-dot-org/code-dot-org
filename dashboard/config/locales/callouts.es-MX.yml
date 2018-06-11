@@ -1954,6 +1954,8 @@
           tu programa
         sign_in_to_save_project: "¿Quieres ingresar a tu proyecto más tarde? ¡Ingresa
           para guardar este proyecto en tu cuenta!"
+      courseF_playlab_brokenText_callout:
+        courseF_playlab_variables5c_1: Aquí encontrarás tu bloque de variables.
       courseF_playlab_embed_vars_callout: {}
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: La caja de herramientas se ha organizado en

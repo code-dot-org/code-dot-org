@@ -20,13 +20,13 @@ Feature: Using the teacher homepage sections feature
     And I reload the page
     And I wait to see ".uitest-newsection"
     And check that the URL contains "/home"
-    And I create a new section with course "Computer Science Principles" and unit "Unit 3: Intro Programming (version A)"
+    And I create a new section with course "Computer Science Principles", version "'17-'18" and unit "CSP Unit 3 - Subgoals Group A *"
     Then the section table should have 1 row
-    And the section table row at index 0 has script path "/s/csp3-a"
+    And the section table row at index 0 has secondary assignment path "/s/csp3-a"
 
   Scenario: Navigate to course and unit pages
     When I see the section set up box
-    And I create a new section with course "Computer Science Principles" and unit "Unit 1: The Internet"
+    And I create a new section with course "Computer Science Principles", version "'17-'18" and unit "CSP Unit 1 - The Internet"
     And I create a new section
     Then the section table should have 2 rows
 
@@ -63,11 +63,51 @@ Feature: Using the teacher homepage sections feature
     And I wait until element ".header_popup_body .uitest-ProgressBubble:first" is visible
     And the href of selector ".header_popup_body .uitest-ProgressBubble:first" contains the section id
 
-  Scenario: Navigate to course pages with course versions enabled
-    Given I am on "http://studio.code.org/home?enableExperiments=courseVersions"
+  Scenario: Assign a CSF course with multiple versions
     When I see the section set up box
-    # By default, the '18-'19 version should be selected.
-    And I create a new section with course "Computer Science Principles" and unit "Unit 1: The Internet"
+    And I create a new section with course "Course A", version "2017 (Recommended)"
+    Then the section table should have 1 rows
+    And the section table row at index 0 has primary assignment path "/s/coursea"
+
+    When I click selector ".ui-test-section-dropdown"
+    And I click selector ".edit-section-details-link"
+    And I wait until element "#assignment-version-year" is visible
+    And I select the "2018" option in dropdown "assignment-version-year"
+    And I press the first ".uitest-saveButton" element
+    And I wait for the dialog to close
+    Then I should see the section table
+    And the section table row at index 0 has primary assignment path "/s/coursea-2018"
+
+  Scenario: Update a section
+    When I see the section set up box
+    And I create a new section with course "Course A", version "2017 (Recommended)"
+    Then the section table should have 1 rows
+    And the section table row at index 0 has primary assignment path "/s/coursea"
+
+    When I click selector ".ui-test-section-dropdown"
+    And I click selector ".edit-section-details-link"
+    And I wait until element "#uitest-section-name" is visible
+
+    # Section name input field needs to be emptied before typing new name
+    And I type "" into "#uitest-section-name"
+
+    And I press keys "My Favorite Section" for element "#uitest-section-name"
+    And I select the "1" option in dropdown "uitest-grade-dropdown"
+    And I select the "Computer Science Principles" option in dropdown "uitest-assignment-family"
+    And I select the "CSP Unit 1 - The Internet" option in dropdown "uitest-secondary-assignment"
+    And I press the first ".uitest-saveButton" element
+    And I wait for the dialog to close
+
+    Then I should see the section table
+    And the section table row at index 0 has name "My Favorite Section"
+    And the section table row at index 0 has grade "1"
+    And the section table row at index 0 has primary assignment path "/courses/csp-2018"
+    And the section table row at index 0 has secondary assignment path "/s/csp1-2018"
+
+  Scenario: Navigate to course pages with course versions enabled
+    Given I am on "http://studio.code.org/home"
+    When I see the section set up box
+    And I create a new section with course "Computer Science Principles", version "'18-'19 (Recommended)" and unit "CSP Unit 1 - The Internet"
     Then the section table should have 1 rows
 
     # save the older section id, from the last row of the table
@@ -87,3 +127,14 @@ Feature: Using the teacher homepage sections feature
     And check that the URL contains "/courses/csp-2017"
 
     And the href of selector ".uitest-CourseScript:contains(CSP Unit 2) .uitest-go-to-unit-button" contains the section id
+
+  Scenario: Loading the print certificates page for a section
+    Given I create a teacher-associated student named "Sally"
+    And I sign in as "Teacher_Sally"
+    And I click selector ".ui-test-section-dropdown" once I see it
+
+    And I click selector ".uitest-certs-link" once I see it
+    And I wait to see "#uitest-cert-names"
+
+    And check that the URL contains "/certificates"
+    Then element "#uitest-cert-names" contains text "Sally"

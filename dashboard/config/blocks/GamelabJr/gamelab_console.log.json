@@ -1,0 +1,12 @@
+{
+  "category": "Advanced",
+  "config": {
+    "func": "console.log",
+    "blockText": "log message {MESSAGE}",
+    "args": [
+      {
+        "name": "MESSAGE"
+      }
+    ]
+  }
+}

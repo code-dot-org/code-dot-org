@@ -128,7 +128,8 @@ mi:
     field_is_required: "me mātua"
     accept_terms: "Me mātua whakaae koe ki te waihanga pūkete"
     error: "An error occurred."
-    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: "Āe"
     email_preference_no: "Kāore"
     email_preference_required: "You must specify an email preference."
@@ -467,6 +468,8 @@ mi:
   gender:
     male: 'Tāne'
     female: 'Wahine'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: 'Kāore i te hiahia kia uruparetia'
   user_type:
     student: 'Student'

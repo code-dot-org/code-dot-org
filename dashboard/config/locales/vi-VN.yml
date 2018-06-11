@@ -171,7 +171,7 @@
     email_preference_question: Chúng tôi có thể gửi email cho bạn thông tin cập nhật
       về các khóa học của chúng tôi, các cơ hội ở địa phương hay tin tức về khoa học
       máy tính khác không?
-    email_preference_privacy: (Xem chính sách bảo mật của chúng tôi)
+    email_preference_privacy: "(Xem chính sách bảo mật của chúng tôi)"
     email_preference_yes: Đồng ý
     email_preference_no: Không
     email_preference_required: You must specify an email preference.
@@ -644,6 +644,8 @@
   gender:
     male: Nam
     female: Nữ
+    non_binary: Non-binary
+    not_listed: Preferred term not listed
     none: Tùy chọn không muốn trả lời
   user_type:
     student: học sinh

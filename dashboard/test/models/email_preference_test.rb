@@ -41,8 +41,9 @@ class EmailPreferenceTest < ActiveSupport::TestCase
     assert_equal 'form text version 2.71828', email_preference.form_kind
   end
 
-  test "upsert email preference that is already opted in does not opt out" do
+  test "upsert email preference with opt out that is already opted in does not update" do
     email_preference = create :email_preference, opt_in: true
+    original_attributes = email_preference.attributes
     EmailPreference.upsert!(
       email: email_preference.email,
       opt_in: false,
@@ -51,6 +52,9 @@ class EmailPreferenceTest < ActiveSupport::TestCase
       form_kind: 'form text version 3.14159'
     )
     email_preference.reload
+    # opt_in is still true.
     assert email_preference.opt_in
+    # No update carried out.  All attributes, including updated_at, are unchanged.
+    assert_equal original_attributes, email_preference.attributes
   end
 end

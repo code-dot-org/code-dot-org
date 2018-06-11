@@ -517,7 +517,7 @@ class ScriptTest < ActiveSupport::TestCase
     refute summary[:has_lesson_plan]
   end
 
-  test 'summarize includes show_version_warning' do
+  test 'summarize includes show_course_unit_version_warning' do
     csp_2017 = create(:course, name: 'csp-2017')
     csp1_2017 = create(:script, name: 'csp1-2017')
     create(:course_script, course: csp_2017, script: csp1_2017, position: 1)
@@ -526,16 +526,65 @@ class ScriptTest < ActiveSupport::TestCase
     csp1_2018 = create(:script, name: 'csp1-2018')
     create(:course_script, course: csp_2018, script: csp1_2018, position: 1)
 
-    summary = csp1_2017.summarize
-    refute summary[:show_version_warning]
+    refute csp1_2017.summarize[:show_course_unit_version_warning]
 
     user = create(:student)
-    summary = csp1_2017.summarize(true, user)
-    refute summary[:show_version_warning]
+    refute csp1_2017.summarize(true, user)[:show_course_unit_version_warning]
 
     create(:user_script, user: user, script: csp1_2018)
-    summary = csp1_2017.summarize(true, user)
-    assert summary[:show_version_warning]
+    assert csp1_2017.summarize(true, user)[:show_course_unit_version_warning]
+    refute csp1_2018.summarize(true, user)[:show_course_unit_version_warning]
+
+    create(:user_script, user: user, script: csp1_2017)
+    assert csp1_2017.summarize(true, user)[:show_course_unit_version_warning]
+    assert csp1_2018.summarize(true, user)[:show_course_unit_version_warning]
+  end
+
+  test 'summarize includes show_script_version_warning' do
+    a17 = create(:script, name: 'coursea-2017', family_name: 'coursea')
+    a18 = create(:script, name: 'coursea-2018', family_name: 'coursea')
+    user = create(:student)
+
+    refute a17.summarize[:show_script_version_warning]
+
+    refute a17.summarize(true, user)[:show_script_version_warning]
+
+    create(:user_script, user: user, script: a18)
+    assert a17.summarize(true, user)[:show_script_version_warning]
+    refute a18.summarize(true, user)[:show_script_version_warning]
+
+    create(:user_script, user: user, script: a17)
+    assert a17.summarize(true, user)[:show_script_version_warning]
+    assert a18.summarize(true, user)[:show_script_version_warning]
+  end
+
+  test 'summarize only shows one version warning' do
+    csp_2017 = create(:course, name: 'csp-2017')
+    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp1')
+    create(:course_script, course: csp_2017, script: csp1_2017, position: 1)
+
+    csp_2018 = create(:course, name: 'csp-2018')
+    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp1')
+    create(:course_script, course: csp_2018, script: csp1_2018, position: 1)
+
+    user = create(:student)
+    create(:user_script, user: user, script: csp1_2018)
+    assert csp1_2017.summarize(true, user)[:show_course_unit_version_warning]
+    refute csp1_2017.summarize(true, user)[:show_script_version_warning]
+  end
+
+  test 'summarize includes versions' do
+    a17 = create(:script, name: 'coursea-2017', family_name: 'coursea', version_year: '2017')
+    create(:script, name: 'coursea-2018', family_name: 'coursea', version_year: '2018')
+
+    versions = a17.summarize[:versions]
+    assert_equal 2, versions.length
+    assert_equal 'coursea-2018', versions[0][:name]
+    assert_equal '2018', versions[0][:version_year]
+    assert_equal '2018', versions[0][:version_title]
+    assert_equal 'coursea-2017', versions[1][:name]
+    assert_equal '2017', versions[1][:version_year]
+    assert_equal '2017', versions[1][:version_title]
   end
 
   test 'should generate PLC objects' do
@@ -1031,7 +1080,7 @@ endvariants
             'csp17_category_name' => 'CSP Test'
           },
           'name' => {
-            'csp1' => {
+            'csp1-2017' => {
               'title' => 'CSP Unit 1 Test'
             }
           }
@@ -1040,7 +1089,7 @@ endvariants
     }
     I18n.backend.store_translations test_locale, custom_i18n
 
-    script = build(:script, name: 'csp1')
+    script = build(:script, name: 'csp1-2017')
     assignable_info = script.assignable_info
 
     assert_equal('CSP Unit 1 Test', assignable_info[:name])

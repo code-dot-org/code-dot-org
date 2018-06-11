@@ -128,7 +128,8 @@ km:
     field_is_required: "ត្រូវការ"
     accept_terms: "អ្នកត្រូវតែយល់ព្រមជាមុនដើម្បីបង្កើតគណនេយ្យមួយ"
     error: "មានកំហុសមួយ"
-    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: "យល់ព្រម"
     email_preference_no: "ទេ"
     email_preference_required: "You must specify an email preference."
@@ -467,6 +468,8 @@ km:
   gender:
     male: 'ប្រុស'
     female: 'ស្រី'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: 'សម្រេច​ចិត្ត​មិន​ឆ្លើយ'
   user_type:
     student: 'សិស្ស'
@@ -719,7 +722,7 @@ km:
     tos: "លក្ខខណ្ឌ"
     privacy: "សិទ្ធបុគ្គល"
     privacy_notice: "Privacy Notice"
-    accept_label: 'I agree to the updated <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>'
+    accept_label: 'I agree to the <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.'
     accept: "Accept"
     print: "បោះពុម្ព"
     reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'

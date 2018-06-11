@@ -900,8 +900,8 @@
       Artist - Nested Loops 2_instruction: "Now nest this loop inside another loop\nto
         draw 10 triangles.  This is called a nested loop.  Hint: All 10 triangles\ncomplete
         a 360 degree rotation.  "
-      Artist - Nested Loops 3_instruction: "Create a sun by nesting the starter code
-        in another loop. This is called a nested loop.\r\n"
+      Artist - Nested Loops 3_instruction: 'Create a sun by nesting the starter code
+        in another loop. This is called a nested loop.  '
       Artist - Nested Loops 5_instruction: Loop the given code to create a windmill.
       Artist - Nested Loops 6_instruction: |-
         Can you draw a hexagon by looping the
@@ -1345,20 +1345,26 @@
         skrive nullar og eittal
       CSD U5 black white images pixelation_2018_instruction: Gjer ferdig X-forma ved
         å skrive nullar og eittal
-      CSD U6 params modify clouds_instruction: "# Clouds\r\n\r\nThis program makes
-        the clouds move when you blow on the sound sensor, but it's not finished.\r\n\r\n#
-        Do This\r\n* Create a new function `moveCloud(name)` that will move any cloud.\r\n
-        \ * (Hint: you will use almost all the same code as the `moveCloud0` function)\r\n*
-        Call your new `moveCloud(name)` function inside the event block, once for
-        each cloud name.\r\n * (Hint: this is similar to how the `loopCloud(name)`
-        function is called many times."
-      CSD U6 params modify clouds_2018_instruction: "# Clouds\r\n\r\nThis program
-        makes the clouds move when you blow on the sound sensor, but it's not finished.\r\n\r\n#
-        Do This\r\n* Create a new function `moveCloud(name)` that will move any cloud.\r\n
-        \ * (Hint: you will use almost all the same code as the `moveCloud0` function)\r\n*
-        Call your new `moveCloud(name)` function inside the event block, once for
-        each cloud name.\r\n * (Hint: this is similar to how the `loopCloud(name)`
-        function is called many times."
+      CSD U6 params modify clouds_instruction: |-
+        # Clouds
+
+        This program makes the clouds move when you blow on the sound sensor, but it's not finished.
+
+        # Do This
+        * Create a new function `moveCloud(name)` that will move any cloud.
+        * (Hint: you will use almost all the same code as the `moveCloud0` function)
+        * Call your new `moveCloud(name)` function inside the event block, once for each cloud name.
+        * (Hint: this is similar to how the `loopCloud(name)` function is called many times.
+      CSD U6 params modify clouds_2018_instruction: |-
+        # Clouds
+
+        This program makes the clouds move when you blow on the sound sensor, but it's not finished.
+
+        # Do This
+        * Create a new function `moveCloud(name)` that will move any cloud.
+        * (Hint: you will use almost all the same code as the `moveCloud0` function)
+        * Call your new `moveCloud(name)` function inside the event block, once for each cloud name.
+        * (Hint: this is similar to how the `loopCloud(name)` function is called many times.
       CSD U6 params modify planes_instruction: "# Multi-plane Controller\r\n\r\nThis
         program moves the three planes using the board accelerometer and the on-screen
         check boxes.  Right now, only the red plane works.\r\n\r\n# Do This\r\n* Create
@@ -1972,9 +1978,9 @@
       CSPU5_U3 - High Low - Else if_2018_instruction: Add an else-if statement in
         order to tell the user if their guess is high or low instead of just wrong.
         (Click to see full instructions)
-      CSPU5_U3 - High Low - Else_instruction: "Add an else statement so that the program
+      CSPU5_U3 - High Low - Else_instruction: 'Add an else statement so that the program
         will tell the user when they are right and when they are wrong. (Click to
-        see full instructions)\r\n"
+        see full instructions)  '
       CSPU5_U3 - High Low - If_instruction: |-
         Add code to the if statement that indicates
         the user guessed the secret number. (Click to see full instructions)
@@ -2294,10 +2300,10 @@
       CSPU5_U3 - Simulation - 2_2018_instruction: Keep track of how many heads (1's)
         your program generates and print the results to the screen. (Click to see
         full instructions)
-      CSPU5_U3 - Simulation - 3_instruction: "Add functionality that counts how many
-        heads in a row are flipped. (Click to see full instructions)\r\n"
-      CSPU5_U3 - Simulation - 3_2018_instruction: "Add functionality that counts how
-        many heads in a row are flipped. (Click to see full instructions)\r\n"
+      CSPU5_U3 - Simulation - 3_instruction: 'Add functionality that counts how many
+        heads in a row are flipped. (Click to see full instructions)  '
+      CSPU5_U3 - Simulation - 3_2018_instruction: 'Add functionality that counts how
+        many heads in a row are flipped. (Click to see full instructions)  '
       CSPU5_U3 - Simulation - 4_instruction: |-
         Update your while loop's condition
         so the the coin flips until there are three heads in a row. (Click to see
@@ -3580,16 +3586,16 @@
         minske kvar gong Katt kjem borti hund med eit smørbrød.\r\n\r\nMerk: Når du
         er ferdig, trykk på \"Køyr\" for å spele. Når Hund får 6 poeng, kan du gå
         vidare til neste oppgåve. "
-      Course 4 Play Lab Vars 1_instruction: 'Denne gongen treng du ikkje skrive om
+      Course 4 Play Lab Vars 1_instruction: Denne gongen treng du ikkje skrive om
         noko kode, berre trykk på "Køyr" for å spele. I dette spelet er du Hund, som
         prøver å samle meir flagg enn Katt. Bruk ned-piltasten til å kontrollere Hund.
-        Trykk "Fullfør" når du er ferdig med å spele. '
-      Course 4 Play Lab Vars 2_instruction: 'Løpet i førre oppgåve var ikkje veldig
+        Trykk "Fullfør" når du er ferdig med å spele.
+      Course 4 Play Lab Vars 2_instruction: Løpet i førre oppgåve var ikkje veldig
         rettferdig. Endre variabelen "hund_fart" for å sikra at du kan samla fleire
-        flagg enn Katt. Den fyrste til å samle 10 flagg vinn! '
-      Course 4 Play Lab Vars 3_instruction: 'Her er eit nytt type spel! Bruk venstre-
+        flagg enn Katt. Den fyrste til å samle 10 flagg vinn!
+      Course 4 Play Lab Vars 3_instruction: Her er eit nytt type spel! Bruk venstre-
         og høgrepilene til å bevega deg, og opp-pila til å hoppa. Sjå om du kan sanke
-        alle flagga. '
+        alle flagga.
       Course 4 Play Lab Vars 4_instruction: No nyttar vi ein variabel kalla «høgde»
         for å kontrollere kor høgt hunden kan hoppe. Sett «høgde»-variabelen slik
         at hunden kan hoppe høgt nok til å nå alle flagga.
@@ -3758,12 +3764,12 @@
         på å utforske alt som er tilgjengeleg. Lag eit spel eller ei historie og bruk
         gjenta-, variablar- og hendingar-brikker. \r\n\r\nHint: Bla ned for å sjå
         alle kommandoane i arbeidsområdet."
-      CourseF_PlayLab_vars2_instruction: 'Løpet i førre oppgåve var ikkje veldig rettferdig.
+      CourseF_PlayLab_vars2_instruction: Løpet i førre oppgåve var ikkje veldig rettferdig.
         Endre variabelen "hund_fart" for å sikra at du kan samla fleire flagg enn
-        Katt. Den fyrste til å samle 10 flagg vinn! '
-      CourseF_PlayLab_vars3_instruction: 'Her er eit nytt type spel! Bruk venstre-
+        Katt. Den fyrste til å samle 10 flagg vinn!
+      CourseF_PlayLab_vars3_instruction: Her er eit nytt type spel! Bruk venstre-
         og høgrepilene til å bevega deg, og opp-pila til å hoppa. Sjå om du kan sanke
-        alle flagga. '
+        alle flagga.
       CourseF_PlayLab_vars4_instruction: No nyttar vi ein variabel kalla «høgde» for
         å kontrollere kor høgt hunden kan hoppe. Sett «høgde»-variabelen slik at hunden
         kan hoppe høgt nok til å nå alle flagga.
@@ -3886,10 +3892,10 @@
         other shapes if you like. You can choose the size of each shape. Don’t forget
         to add an “else” clause!\r\nOne example - and part of the definition -  has
         already been done for you!\r\n"
-      Eval Cond 8_instruction: "Free Play: Suppose you want to own a car at 21, or
+      Eval Cond 8_instruction: 'Free Play: Suppose you want to own a car at 21, or
         have your own business by 30. Write a function called life-goals, which takes
         in an age and produces a string that describes your life goals by then. Don’t
-        forget to add an “else” clause!\r\n"
+        forget to add an “else” clause!  '
       Eval Contracts 1_instruction: |-
         Use the "star" function to produce a red star
         with a 60 pixel radius
@@ -4183,18 +4189,18 @@
         liknar. Eller du kan lage kva du vil.
       InspirationalArtwork_2018_instruction: Om dette bildet inspirerer deg, lag noko
         som liknar. Eller du kan lage kva du vil.
-      'Internet Simulator: Broadcast Mode_instruction': "Now use the Internet Simulator
+      'Internet Simulator: Broadcast Mode_instruction': 'Now use the Internet Simulator
         to send the battleship moves. For setup, join a Room with your group, and
         add ships to your paper board for each opponent. When playing, all communication
-        must be done through the tool, so no talking, but have fun!\r\n"
-      'Internet Simulator: Broadcast_instruction': "Now use the Internet Simulator
+        must be done through the tool, so no talking, but have fun!  '
+      'Internet Simulator: Broadcast_instruction': 'Now use the Internet Simulator
         to send the battleship moves. For setup, join a Room with your group, and
         add ships to your paper board for each opponent. When playing, all communication
-        must be done through the tool, so no talking, but have fun!\r\n"
-      'Internet Simulator: Broadcast_2018_instruction': "Now use the Internet Simulator
+        must be done through the tool, so no talking, but have fun!  '
+      'Internet Simulator: Broadcast_2018_instruction': 'Now use the Internet Simulator
         to send the battleship moves. For setup, join a Room with your group, and
         add ships to your paper board for each opponent. When playing, all communication
-        must be done through the tool, so no talking, but have fun!\r\n"
+        must be done through the tool, so no talking, but have fun!  '
       'Internet Simulator: DNS Mode_instruction': |-
         In this version of the Internet
         Simulator, a Domain Name System (DNS) is provided for you and knows the IP
@@ -4440,8 +4446,8 @@
       K2.0 sequence pre_instruction: |-
         Play with these blocks to see if you can get
         me to the pig!
-      KIKI GLJ Test Response_instruction: "Look carefully at the code below.  What
-        do you think the plane will do when you click \"Run\"?\r\n"
+      KIKI GLJ Test Response_instruction: 'Look carefully at the code below.  What
+        do you think the plane will do when you click "Run"?  '
       KTest1_instruction: Can you make me move South once more to get to the pig?
       KTest2_instruction: Følg stien og leid meg til den tåpelege grisen. Unngå TNT
         ellers vil fjørene mine fyke!
@@ -4841,10 +4847,10 @@
         Simulator, a Domain Name System (DNS) is provided for you and knows the IP
         addresses of all connected computers. Send a message in the form GET [hostname]
         to the DNS service at address <yourRouterNumber>.15 to get a student's address.
-      NetSim Standalone Broadcast_instruction: "In this version of the Internet Simulator,
+      NetSim Standalone Broadcast_instruction: 'In this version of the Internet Simulator,
         you can connect to up to 5 other people in a room. When you send messages
         in the room, everyone receives them. What are some of the challenges of this
-        system, and how might you solve them?\r\n"
+        system, and how might you solve them?  '
       NetSim Standalone Classroom Routers_instruction: |-
         In this version of the Internet
         Simulator, everyone connects to a router and has a specific address. To send
@@ -4958,8 +4964,8 @@
       October15 JoL 1_instruction: |-
         Program the artist to design a face for your
         jack-o-lantern!
-      October15 bat_instruction: "Freeplay: Here are some functions to play with.
-        \ Can you draw a bat?\r\n"
+      October15 bat_instruction: 'Freeplay: Here are some functions to play with.  Can
+        you draw a bat?  '
       October15 ghost 1_instruction: |-
         Give the ghost eyes, using the "draw a circle"
         function.
@@ -5563,15 +5569,17 @@
         framover. Kvar side bør vere 100 pikslar lange.
       StepIntro_instruction: Here's how to use the "Step" button.
       Test Play Lab_instruction: This is a test play lab level.
-      Test embedded Blockly in instructions_instruction: "As a block element, we should
-        be able to include XML representing a valid Blockly block or blocks.\r\n\r\n<xml>\r\n
-        \ <block type=\"draw_move_by_constant\">\r\n    <title name=\"DIR\">moveForward</title>\r\n
-        \   <title name=\"VALUE\">100</title>\r\n  </block>\r\n</xml>\r\n\r\nWe also
-        support Blockly XML as an inline element like so: <xml><block type=\"draw_move_by_constant\"><title
-        name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>.
-        The difference in input format being that this one is embedded within a paragraph,
-        whereas the previous one is in a text block of its own. The difference in
-        output is comparable."
+      Test embedded Blockly in instructions_instruction: |-
+        As a block element, we should be able to include XML representing a valid Blockly block or blocks.
+
+        <xml>
+        <block type="draw_move_by_constant">
+        <title name="DIR">moveForward</title>
+        <title name="VALUE">100</title>
+        </block>
+        </xml>
+
+        We also support Blockly XML as an inline element like so: <xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">100</title></block></xml>. The difference in input format being that this one is embedded within a paragraph, whereas the previous one is in a text block of its own. The difference in output is comparable.
       Test embedded K1 Blockly in instructions_instruction: |-
         Use three `move west`
         blocks and one `pick corn` block to solve this puzzle.
@@ -5633,10 +5641,10 @@
         can't see the other students' addresses.  Instead, one of you must act as
         a name service, to help share addresses with each other.
       U2L14 frequency random_instruction: Test
-      U2L2 NetSim Hub Mode_instruction: "Now use the Internet Simulator to send the
+      U2L2 NetSim Hub Mode_instruction: 'Now use the Internet Simulator to send the
         battleship moves. For setup, join a Room with your group, and add ships to
         your paper board for each opponent. When playing, all communication must be
-        done through the tool, so no talking, but have fun!\r\n"
+        done through the tool, so no talking, but have fun!  '
       U2L3 NetSim Hub Mode_instruction: |-
         Use the Internet Simulator to test out your
         group's binary communication protocol for battleship. How short can you make
@@ -5889,9 +5897,9 @@
         Add an else-if statement in order to
         tell the user if their guess is high or low instead of just wrong. (Click
         to see full instructions)
-      U3 - High Low - Else_instruction: "Add an else statement so that the program
+      U3 - High Low - Else_instruction: 'Add an else statement so that the program
         will tell the user when they are right and when they are wrong. (Click to
-        see full instructions)\r\n"
+        see full instructions)  '
       U3 - High Low - If_instruction: |-
         Add code to the if statement that indicates
         the user guessed the secret number. (Click to see full instructions)
@@ -6095,26 +6103,26 @@
       U3 - Practice Create Performance Task_instruction: |-
         Design and implement your
         practice Create Performance Task. (Click to see full instructions)
-      U3 - Read Record - 1.2_instruction: "Console.log the records returned by a call
-        to readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 1.5_instruction: "Console.log the records returned by a call
-        to readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 1.6_instruction: "Console.log the records returned by a call
-        to readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 1_instruction: "Console.log the records returned by a call
-        to readRecords. (Click to see full instructions)\r\n"
-      U3 - Read Record - 2_instruction: "Change the table name so that the records
-        are read from the new table.(Click to see full instructions)\r\n"
-      U3 - Read Record - 3_instruction: "Change the name of the table in a readRecords
-        command to read from a table that does not exist. (Click to see full instructions)\r\n"
-      U3 - Read Record - 4.1_instruction: "Print out each record return from the readRecords
-        call individually. (Click to see full instructions)\r\n"
-      U3 - Read Record - 4_instruction: "Print out each record return from the readRecords
-        call individually. (Click to see full instructions)\r\n"
-      U3 - Read Record - 5 and half_instruction: "Print out the name of each movie
-        in the records return from the readRecords call. (Click to see full instructions)\r\n"
-      U3 - Read Record - 5_instruction: "Print out the name of each movie in the records
-        return from the readRecords call. (Click to see full instructions)\r\n"
+      U3 - Read Record - 1.2_instruction: 'Console.log the records returned by a call
+        to readRecords. (Click to see full instructions)  '
+      U3 - Read Record - 1.5_instruction: 'Console.log the records returned by a call
+        to readRecords. (Click to see full instructions)  '
+      U3 - Read Record - 1.6_instruction: 'Console.log the records returned by a call
+        to readRecords. (Click to see full instructions)  '
+      U3 - Read Record - 1_instruction: 'Console.log the records returned by a call
+        to readRecords. (Click to see full instructions)  '
+      U3 - Read Record - 2_instruction: 'Change the table name so that the records
+        are read from the new table.(Click to see full instructions)  '
+      U3 - Read Record - 3_instruction: 'Change the name of the table in a readRecords
+        command to read from a table that does not exist. (Click to see full instructions)  '
+      U3 - Read Record - 4.1_instruction: 'Print out each record return from the readRecords
+        call individually. (Click to see full instructions)  '
+      U3 - Read Record - 4_instruction: 'Print out each record return from the readRecords
+        call individually. (Click to see full instructions)  '
+      U3 - Read Record - 5 and half_instruction: 'Print out the name of each movie
+        in the records return from the readRecords call. (Click to see full instructions)  '
+      U3 - Read Record - 5_instruction: 'Print out the name of each movie in the records
+        return from the readRecords call. (Click to see full instructions)  '
       U3 - Return Values - constrainTurtle_instruction: |-
         Use constrain in this simple
         app to keep the turtle from driving off the screen.  (Click to see full instructions)
@@ -6150,18 +6158,18 @@
         Write the function maxVal and
         then use it within the console.log statement to calculate the maximum of two
         values.  (Click to see full instructions)
-      U3 - Search Terms - 1_instruction: "Create an array of all the movies made in
-        2008 and print it out. (Click to see full instructions)\r\n"
-      U3 - Search Terms - 2_instruction: "Print out all the movies with year 2008
-        using the readRecords search terms. (Click to see full instructions)\r\n"
-      U3 - Search Terms - 3_instruction: "Print whether or not there are movies matching
-        the search criteria (Click to see full instructions)\r\n"
-      U3 - Search Terms - 4_instruction: "Print whether or not there are movies matching
-        the search criteria (Click to see full instructions)\r\n"
-      U3 - Search Terms - 5_instruction: "Print out the cities that are in California
-        or have a population of 2,000,000. (Click to see full instructions)\r\n"
-      U3 - Search Terms - 6_instruction: "Print out the cities that are in California
-        or have a population of 2,000,000. (Click to see full instructions)\r\n"
+      U3 - Search Terms - 1_instruction: 'Create an array of all the movies made in
+        2008 and print it out. (Click to see full instructions)  '
+      U3 - Search Terms - 2_instruction: 'Print out all the movies with year 2008
+        using the readRecords search terms. (Click to see full instructions)  '
+      U3 - Search Terms - 3_instruction: 'Print whether or not there are movies matching
+        the search criteria (Click to see full instructions)  '
+      U3 - Search Terms - 4_instruction: 'Print whether or not there are movies matching
+        the search criteria (Click to see full instructions)  '
+      U3 - Search Terms - 5_instruction: 'Print out the cities that are in California
+        or have a population of 2,000,000. (Click to see full instructions)  '
+      U3 - Search Terms - 6_instruction: 'Print out the cities that are in California
+        or have a population of 2,000,000. (Click to see full instructions)  '
       U3 - Simple Drawing - Comments_instruction: Do this
       U3 - Simple Drawing - Ellipse and No Fill_instruction: Do this
       U3 - Simple Drawing - Fill_instruction: Do This
@@ -6191,8 +6199,8 @@
         Keep track of how many heads (1's) your
         program generates and print the results to the screen. (Click to see full
         instructions)
-      U3 - Simulation - 3_instruction: "Add functionality that counts how many heads
-        in a row are flipped. (Click to see full instructions)\r\n"
+      U3 - Simulation - 3_instruction: 'Add functionality that counts how many heads
+        in a row are flipped. (Click to see full instructions)  '
       U3 - Simulation - 4_instruction: |-
         Update your while loop's condition so the
         the coin flips until there are three heads in a row. (Click to see full instructions)
@@ -7226,18 +7234,14 @@
         print each record to the console. (Click to see full instructions)
       U4 - Charts - Import Data 2_2018_instruction: Call readRecords on “mytable”
         and print each record to the console. (Click to see full instructions)
-      U4 - Charts - Line Chart 1_instruction: |-
-        Create a line chart showing the change
-        in popularity of “#tbt” over time. (Click to see full instructions)
+      U4 - Charts - Line Chart 1_instruction: Create a line chart showing the change
+        in popularity of “
       U4 - Charts - Line Chart 1_2018_instruction: Create a line chart showing the
-        change in popularity of “#tbt” over time. (Click to see full instructions)
-      U4 - Charts - Line Chart 2_instruction: |-
-        Add a second line to your chart to
-        show the change in popularity of both “#tbt” and “#nofilter” at the same time.
-        (Click to see full instructions)
+        change in popularity of “
+      U4 - Charts - Line Chart 2_instruction: Add a second line to your chart to show
+        the change in popularity of both “
       U4 - Charts - Line Chart 2_2018_instruction: Add a second line to your chart
-        to show the change in popularity of both “#tbt” and “#nofilter” at the same
-        time. (Click to see full instructions)
+        to show the change in popularity of both “
       U4 - Charts - Line Chart Template_instruction: This is a template.
       U4 - Charts - Remixing Apps with Data_instruction: |-
         Run this app and see what
@@ -7436,52 +7440,38 @@
       U4 - Objects - writeWrap_instruction: |-
         Use the wrap function to prevent currentIndex
         from leaving the bounds of your array. (Click to see full instructions)
-      U4 - Read Record - 1.2_instruction: "Place a console.log command below the readRecords
-        command. (Click to see full instructions)\r\n"
+      U4 - Read Record - 1.2_instruction: 'Place a console.log command below the readRecords
+        command. (Click to see full instructions)  '
       U4 - Read Record - 1.2_2018_instruction: 'Place a console.log command below
-        the readRecords command. (Click to see full instructions)
-
-'
-      U4 - Read Record - 1.3_instruction: "Add a console.log command inside the callback
-        function. (Click to see full instructions)\r\n"
+        the readRecords command. (Click to see full instructions)  '
+      U4 - Read Record - 1.3_instruction: 'Add a console.log command inside the callback
+        function. (Click to see full instructions)  '
       U4 - Read Record - 1.3_2018_instruction: 'Add a console.log command inside the
-        callback function. (Click to see full instructions)
-
-'
-      U4 - Read Record - 1_instruction: "Use console.log to display the records returned
-        by a call to readRecords. (Click to see full instructions)\r\n"
+        callback function. (Click to see full instructions)  '
+      U4 - Read Record - 1_instruction: 'Use console.log to display the records returned
+        by a call to readRecords. (Click to see full instructions)  '
       U4 - Read Record - 1_2018_instruction: 'Use console.log to display the records
-        returned by a call to readRecords. (Click to see full instructions)
-
-'
-      U4 - Read Record - 2_instruction: "Change the table name so that the records
-        are read from the new table. (Click to see full instructions)\r\n"
+        returned by a call to readRecords. (Click to see full instructions)  '
+      U4 - Read Record - 2_instruction: 'Change the table name so that the records
+        are read from the new table. (Click to see full instructions)  '
       U4 - Read Record - 2_2018_instruction: 'Change the table name so that the records
-        are read from the new table. (Click to see full instructions)
-
-'
-      U4 - Read Record - 3_instruction: "Change the name of the table in a readRecords
-        command to read from a table that does not exist. (Click to see full instructions)\r\n"
+        are read from the new table. (Click to see full instructions)  '
+      U4 - Read Record - 3_instruction: 'Change the name of the table in a readRecords
+        command to read from a table that does not exist. (Click to see full instructions)  '
       U4 - Read Record - 3_2018_instruction: 'Change the name of the table in a readRecords
-        command to read from a table that does not exist. (Click to see full instructions)
-
-'
-      U4 - Read Record - 4.1_instruction: "Use indexes and dot notation to reference
-        values in the response from the database. (Click to see full instructions)\r\n"
+        command to read from a table that does not exist. (Click to see full instructions)  '
+      U4 - Read Record - 4.1_instruction: 'Use indexes and dot notation to reference
+        values in the response from the database. (Click to see full instructions)  '
       U4 - Read Record - 4.1_2018_instruction: 'Use indexes and dot notation to reference
-        values in the response from the database. (Click to see full instructions)
-
-'
-      U4 - Read Record - 4_instruction: "Print out each record return from the readRecords
-        call individually. (Click to see full instructions)\r\n"
-      U4 - Read Record - 5_instruction: "Using a for loop, display the title of each
-        movie in your database. (Click to see full instructions)\r\n"
+        values in the response from the database. (Click to see full instructions)  '
+      U4 - Read Record - 4_instruction: 'Print out each record return from the readRecords
+        call individually. (Click to see full instructions)  '
+      U4 - Read Record - 5_instruction: 'Using a for loop, display the title of each
+        movie in your database. (Click to see full instructions)  '
       U4 - Read Record - 5_2018_instruction: 'Using a for loop, display the title
-        of each movie in your database. (Click to see full instructions)
-
-'
-      U4 - Read Record - part 1 - template_instruction: "Use console.log to display
-        the records returned by a call to readRecords. (Click to see full instructions)\r\n"
+        of each movie in your database. (Click to see full instructions)  '
+      U4 - Read Record - part 1 - template_instruction: 'Use console.log to display
+        the records returned by a call to readRecords. (Click to see full instructions)  '
       U4 - ReadRecords - Contacts App 1_instruction: |-
         Use readRecords to copy the
         data in your database into your "contacts" global variable and call showCurrentContact.
@@ -8656,6 +8646,9 @@
       courseB_collector_loops_challenge2_instruction: "La oss få tak i skatten! Hjelp
         \nmeg over kvar rad og kom deretter tilbake for å starte neste rad. Kan du
         finne eit mønster?"
+      courseB_collector_loops_challenge2_2018_instruction: "La oss få tak i skatten!
+        Hjelp \nmeg over kvar rad og kom deretter tilbake for å starte neste rad.
+        Kan du finne eit mønster?"
       courseB_collector_loops_challenge2a_instruction: |-
         Help Laurel get at least
         **5** pieces of treasure to finish this puzzle.
@@ -9458,15 +9451,15 @@
         of one another?"
       courseD_artist_1_2018_instruction: "Draw a small square with **30** pixel long
         sides.  \r\n"
-      courseD_artist_2_2018_instruction: "Now, turn right by **60** degrees, then
+      courseD_artist_2_2018_instruction: 'Now, turn right by **60** degrees, then
         draw a straight line **150** pixels long and jump back to the center of the
-        play area.\r\n"
+        play area.  '
       courseD_artist_3_2018_instruction: "Nest all of the code inside of another\n`repeat`
         loop and run it a total of **6** times. "
       courseD_artist_4_2018_instruction: Add a tiny shape to the end of your line!
       courseD_artist_5_2018_instruction: Leik med snøflak!
-      courseD_artist_6_2018_instruction: "Try changing your long 150 pixel line into
-        6 short lines of **25** pixels, with little turns at the end.\r\n"
+      courseD_artist_6_2018_instruction: 'Try changing your long 150 pixel line into
+        6 short lines of **25** pixels, with little turns at the end.  '
       courseD_artist_7_2018_instruction: Snu 180 gradar og teikn trappetrinnsmønsteret
         igjen!
       courseD_artist_8_2018_instruction: |-
@@ -9822,8 +9815,8 @@
       courseD_bee_nestedLoops2_predict1_2018_instruction: |-
         This time, help the bee
         collect all of the nectar using as few blocks as possible.
-      courseD_bee_nestedLoops3_instruction: 'Samle inn all nektar frå alle blomane.
-        Bruk ei løkke inni ei løkke. '
+      courseD_bee_nestedLoops3_instruction: Samle inn all nektar frå alle blomane.
+        Bruk ei løkke inni ei løkke.
       courseD_bee_nestedLoops5_instruction: 'Saml inn all nektar frå kvar blomst og
         lag honning i alle bikubene. '
       courseD_bee_nestedLoops6_instruction: Make all of the nectar.
@@ -10545,10 +10538,10 @@
         trekanten.
       courseE_artist_ramp9_2_2018_instruction: Bruk det du har lært til å teikne denne
         trekanten.
-      courseE_bee_concept1_instruction: 'Samle inn all nektar frå alle blomane. Bruk
-        ei løkke inni ei løkke. '
-      courseE_bee_concept1_2018_instruction: 'Samle inn all nektar frå alle blomane.
-        Bruk ei løkke inni ei løkke. '
+      courseE_bee_concept1_instruction: Samle inn all nektar frå alle blomane. Bruk
+        ei løkke inni ei løkke.
+      courseE_bee_concept1_2018_instruction: Samle inn all nektar frå alle blomane.
+        Bruk ei løkke inni ei løkke.
       courseE_bee_concept2_instruction: |-
         Help the bee make all of the honey. You
         can only make honey at a honeycomb, but you can check any space to see if
@@ -11541,6 +11534,8 @@
       courseF_maze_ramp7_instruction: |-
         Use what you've learned to get the bird to
         the pig!
+      courseF_playlab_brokenText_instruction: In the rest of this stage, we're going
+        to build a game that you control!
       courseF_playlab_embed_vars_instruction: |-
         Answer Pegleg the Pirate's questions.
         What happens if you enter the codename "password"? What about some other
@@ -11894,8 +11889,8 @@
       grade1_playlab_events2a_instruction: |-
         Edit the code so that when the second
         bird is clicked, your program plays a sound!
-      grade1_playlab_events3_instruction: "This program makes Robin fly.  Can you
-        make the robot jump when you press the up button?\r\n"
+      grade1_playlab_events3_instruction: 'This program makes Robin fly.  Can you
+        make the robot jump when you press the up button?  '
       grade1_playlab_events3a_instruction: |-
         When the third bird is clicked, the background
         should change to a city. Can you add code to make this happen?
@@ -12094,8 +12089,10 @@
         done, click "Finish" to share with friends.
       grade2_puppy_loops2_instruction: Kan du komme til grisen ved på lage ei løkke
         som brukar berre ei 'gå framover'-blokk innanfor ein"gjenta"-blokk?
-      grade2_puppy_loops3_instruction: "\"Get me to the pig!\"\r\n\r\n Solve this
-        puzzle by creating a loop!"
+      grade2_puppy_loops3_instruction: |-
+        "Get me to the pig!"
+
+        Solve this puzzle by creating a loop!
       grade2_puppy_loops4_instruction: Bruk to løkker for å komme til grisen ved å
         bruke færre blokkar.
       grade2_puppy_loops5_instruction: Få meg til grisen!
@@ -12664,8 +12661,8 @@
         Create a function that collects all of
         the nectar from each flower.
       grade4_bee_nestedLoops0_instruction: Bruk ei løkke til å samle inn all nektaren.
-      grade4_bee_nestedLoops1_instruction: 'Samle inn all nektar frå alle blomane.
-        Bruk ei løkke inni ei løkke. '
+      grade4_bee_nestedLoops1_instruction: Samle inn all nektar frå alle blomane.
+        Bruk ei løkke inni ei løkke.
       grade4_bee_nestedLoops2_instruction: |-
         **Challenge:** Figure out how to get
         all of the nectar using only the blocks available.
@@ -13079,10 +13076,10 @@
         will add a point, while changing the score by -1 will subtract a point.\r\n\r\nWhen
         you're done, click \"Run\" to play.  When Dog scores 6 points, you will move
         on to the next puzzle. "
-      grade5_playlab_variables1_instruction: 'Denne gongen treng du ikkje skrive om
+      grade5_playlab_variables1_instruction: Denne gongen treng du ikkje skrive om
         noko kode, berre trykk på "Køyr" for å spele. I dette spelet er du Hund, som
         prøver å samle meir flagg enn Katt. Bruk ned-piltasten til å kontrollere Hund.
-        Trykk "Fullfør" når du er ferdig med å spele. '
+        Trykk "Fullfør" når du er ferdig med å spele.
       grade5_playlab_variables10_instruction: Endre "patruljer"-funksjonen slik at
         den legg til ein "figur"-parameter, slik at vi kan kalle på den for kvar av
         figurane på skjermen. Hugs at figurane svarar til tala 1, 2 og 3.
@@ -13103,12 +13100,12 @@
         you will see a 'prompt' asking you for a number. This number will be stored
         in a variable used to set the dog's speed.\r\n\r\n\r\nPay attention to how
         this program is written!"
-      grade5_playlab_variables2_instruction: 'Løpet i førre oppgåve var ikkje veldig
+      grade5_playlab_variables2_instruction: Løpet i førre oppgåve var ikkje veldig
         rettferdig. Endre variabelen "hund_fart" for å sikra at du kan samla fleire
-        flagg enn Katt. Den fyrste til å samle 10 flagg vinn! '
-      grade5_playlab_variables3_instruction: 'Her er eit nytt type spel! Bruk venstre-
+        flagg enn Katt. Den fyrste til å samle 10 flagg vinn!
+      grade5_playlab_variables3_instruction: Her er eit nytt type spel! Bruk venstre-
         og høgrepilene til å bevega deg, og opp-pila til å hoppa. Sjå om du kan sanke
-        alle flagga. '
+        alle flagga.
       grade5_playlab_variables4_instruction: No nyttar vi ein variabel kalla «høgde»
         for å kontrollere kor høgt hunden kan hoppe. Sett «høgde»-variabelen slik
         at hunden kan hoppe høgt nok til å nå alle flagga.
