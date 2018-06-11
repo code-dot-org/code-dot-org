@@ -122,7 +122,6 @@ class VirtualizedSummaryView extends Component {
         columnWidth={this.getColumnWidth}
         columnCount={columnCount}
         enableFixedColumnScroll
-        enableFixedRowScroll
         rowHeight={ROW_HEIGHT}
         height={tableHeight}
         scrollToColumn={lessonOfInterest}
