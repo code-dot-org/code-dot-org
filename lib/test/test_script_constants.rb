@@ -59,8 +59,8 @@ class ScriptConstantsTest < Minitest::Test
 
   def test_category_priority
     assert_equal 0, ScriptConstants.category_priority(:full_course)
-    assert_equal 3, ScriptConstants.category_priority(:csf_international)
-    assert_equal 5, ScriptConstants.category_priority(:research_studies)
+    assert_equal 4, ScriptConstants.category_priority(:csf_international)
+    assert_equal 6, ScriptConstants.category_priority(:research_studies)
   end
 
   def test_assignable_info
