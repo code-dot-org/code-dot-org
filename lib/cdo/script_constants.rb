@@ -35,6 +35,16 @@ module ScriptConstants
       EXPRESS_NAME = 'express'.freeze,
       PRE_READER_EXPRESS_NAME = 'pre-express'.freeze,
     ],
+    csf_2018: [
+      COURSEA_2018_NAME = 'coursea-2018'.freeze,
+      COURSEB_2018_NAME = 'courseb-2018'.freeze,
+      COURSEC_2018_NAME = 'coursec-2018'.freeze,
+      COURSED_2018_NAME = 'coursed-2018'.freeze,
+      COURSEE_2018_NAME = 'coursee-2018'.freeze,
+      COURSEF_2018_NAME = 'coursef-2018'.freeze,
+      EXPRESS_2018_NAME = 'express-2018'.freeze,
+      PRE_READER_EXPRESS_2018_NAME = 'pre-express-2018'.freeze,
+    ],
     hoc: [
       # Note that now multiple scripts can be an 'hour of code' script.
       # If adding a script here,
