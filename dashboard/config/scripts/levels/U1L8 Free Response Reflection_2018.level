@@ -6,12 +6,20 @@
   "user_id": 0,
   "properties": {
     "title": "Reflection: Sending Numbers ",
-    "markdown_instructions": "<strong>Complete the Sending Numbers Rubric (on the second page of the <a href= \"https://docs.google.com/document/d/1cSlWYnxOciDQut0OAUcsddmM56bveHely71LUb_CHkM/edit\" target=\"_blank\">Sending Number activity guide</a>) and then respond to the following prompt.</strong>\n\nWhat problems arose in your efforts to create a working protocol? How did you think about the problem(s) in order to solve it?\n",
+    "markdown_instructions": "<strong>Complete the Sending Numbers Rubric (on the second page of the Sending Numbers activity guide</a>) and then respond to the following prompt.</strong>\r\n\r\nWhat problems arose in your efforts to create a working protocol? How did you think about the problem(s) in order to solve it?\r\n",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 1920,
-    "name_suffix": "_2018"
+    "name_suffix": "_2018",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false"
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-06-05 00:03:40 +0000\",\"changed\":[\"notes\",\"markdown_instructions\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </FreeResponse>

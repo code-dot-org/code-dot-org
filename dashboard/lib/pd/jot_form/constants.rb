@@ -15,9 +15,10 @@ module Pd
       IGNORED_QUESTION_TYPES = [
         TYPE_HEADING = 'head'.freeze,
         TYPE_BUTTON = 'button'.freeze,
+        TYPE_DIVIDER = 'divider'.freeze,
         TYPE_TEXT = 'text'.freeze,
         TYPE_PAGEBREAK = 'pagebreak'.freeze,
-        TYPE_DIVIDER = 'divider'.freeze,
+        TYPE_HEAD = 'head'.freeze,
         TYPE_WIDGET = 'widget'.freeze
       ].freeze
 
@@ -35,6 +36,12 @@ module Pd
         # No answer, just question metadata, e.g. matrix heading
         ANSWER_NONE = 'none'.freeze
       ].freeze
+
+      SURVEY_REPORT_TYPES = [
+        TYPE_SCALE,
+        TYPE_TEXTAREA,
+        TYPE_MATRIX
+      ]
     end
   end
 end

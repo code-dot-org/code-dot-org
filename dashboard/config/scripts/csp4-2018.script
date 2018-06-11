@@ -3,9 +3,12 @@ login_required true
 hideable_stages true
 exclude_csf_column_in_legend true
 student_detail_progress_view true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csp/unit4/"], ["teacherForum", "https://forum.code.org/c/csp4"], ["vocabulary", "https://curriculum.code.org/csp/unit4/vocab/"], ["standardMappings", "https://curriculum.code.org/csp/unit4/standards/"], ["professionalLearning", "https://studio.code.org/s/csp4-support"]]
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-18/unit4/"], ["teacherForum", "https://forum.code.org/c/csp4"], ["vocabulary", "https://curriculum.code.org/csp-18/unit4/vocab/"], ["standardMappings", "https://curriculum.code.org/csp-18/unit4/standards/"], ["professionalLearning", "https://studio.code.org/s/csp4-support"]]
 has_verified_resources true
 has_lesson_plan true
+family_name 'csp4'
+version_year '2018'
+is_stable true
 
 stage 'What is Big Data?', flex_category: 'csp4_1_2018'
 named_level 'CSP U4L01 SFLP'
@@ -84,7 +87,7 @@ stage 'Rapid Research - Cybercrime', flex_category: 'csp4_1_2018'
 named_level 'CSP U4L08 SFLP'
 named_level 'Video - Cybersecurity and Crime_2018', progression: 'Cybersecurity and Crime'
 
-stage 'Unit 4 Chapter 1 Assessment', lockable: true, flex_category: 'cspAssessment'
+stage 'Unit 4 Assessment', lockable: true, flex_category: 'cspAssessment'
 variants
   level 'csp_affirmation_control_4_2018', active: true, experiments: ["rene-control-control","rene-belonging-control"], progression: 'Pre-test reflection'
   level 'csp_affirmation_intervention_4_2018', experiments: ["rene-control-affirmation","rene-belonging-affirmation"], progression: 'Pre-test reflection'

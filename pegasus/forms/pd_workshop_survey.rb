@@ -1,5 +1,3 @@
-require_relative './form'
-
 class PdWorkshopSurvey < Form
   def self.normalize(data)
     result = {}

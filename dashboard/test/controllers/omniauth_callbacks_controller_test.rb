@@ -212,6 +212,37 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal '', user.email
   end
 
+  test "authorizing with unknown powerschool student account does not save email" do
+    auth = OmniAuth::AuthHash.new(
+      uid: '12345',
+      provider: 'powerschool',
+      info: {
+        name: nil,
+      },
+      extra: {
+        response: {
+          message: {
+            args: {
+              '["http://openid.net/srv/ax/1.0", "value.ext0"]': 'student',
+              '["http://openid.net/srv/ax/1.0", "value.ext1"]': 'splat.cat@example.com',
+              '["http://openid.net/srv/ax/1.0", "value.ext2"]': 'splat',
+              '["http://openid.net/srv/ax/1.0", "value.ext3"]': 'cat',
+            }
+          }
+        }
+      }
+    )
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+
+    assert_creates(User) do
+      get :powerschool
+    end
+
+    user = User.last
+    assert_equal '', user.email
+  end
+
   test "authorizing with known clever student account does not alter email or hashed email" do
     clever_student = create(:student, provider: 'clever', uid: '111133')
     student_hashed_email = clever_student.hashed_email
@@ -336,25 +367,27 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
   end
 
-  test 'clever takeover transfers sections to taken over account' do
-    teacher = create :teacher
-    section = create :section, user: teacher, login_type: 'clever'
-    clever_student = create :student, provider: 'clever', uid: '12345'
-    student = create :student
+  test 'oauth takeover transfers sections to taken over account' do
+    User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.each do |provider|
+      teacher = create :teacher
+      section = create :section, user: teacher, login_type: 'clever'
+      oauth_student = create :student, provider: provider, uid: '12345'
+      student = create :student
 
-    clever_students = [clever_student]
-    section.set_exact_student_list(clever_students)
+      oauth_students = [oauth_student]
+      section.set_exact_student_list(oauth_students)
 
-    # Pull sections_as_student from the database and store them in an array to compare later
-    sections_as_student = clever_student.sections_as_student.to_ary
+      # Pull sections_as_student from the database and store them in an array to compare later
+      sections_as_student = oauth_student.sections_as_student.to_ary
 
-    @request.cookies[:pm] = 'clever_takeover'
-    @request.session['clever_link_flag'] = true
-    @request.session['clever_takeover_id'] = clever_student.uid
-    @request.session['clever_takeover_token'] = '54321'
-    check_and_apply_clever_takeover(student)
+      @request.cookies[:pm] = 'clever_takeover'
+      @request.session['clever_link_flag'] = provider
+      @request.session['clever_takeover_id'] = oauth_student.uid
+      @request.session['clever_takeover_token'] = '54321'
+      check_and_apply_oauth_takeover(student)
 
-    assert_equal sections_as_student, student.sections_as_student
+      assert_equal sections_as_student, student.sections_as_student
+    end
   end
 
   def generate_auth_user_hash(email, user_type)

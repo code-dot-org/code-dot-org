@@ -927,7 +927,7 @@ And /^I create a new section$/ do
   }
 end
 
-And /^I create a new section with course "([^"]*)"(?: and unit "([^"]*)")?$/ do |primary, secondary|
+And /^I create a new section with course "([^"]*)", version "([^"]*)"(?: and unit "([^"]*)")?$/ do |assignment_family, version_year, secondary|
   individual_steps %Q{
     When I press the new section button
     Then I should see the new section dialog
@@ -935,7 +935,8 @@ And /^I create a new section with course "([^"]*)"(?: and unit "([^"]*)")?$/ do 
     When I select email login
     Then I wait to see "#uitest-assignment-family"
 
-    When I select the "#{primary}" option in dropdown "uitest-assignment-family"
+    When I select the "#{assignment_family}" option in dropdown "uitest-assignment-family"
+    And I select the "#{version_year}" option in dropdown "assignment-version-year"
   }
 
   if secondary
@@ -1398,9 +1399,19 @@ Then /^the section table should have (\d+) rows?$/ do |expected_row_count|
   expect(row_count.to_i).to eq(expected_row_count.to_i)
 end
 
-Then /^the section table row at index (\d+) has script path "([^"]+)"$/ do |row_index, expected_path|
+Then /^the section table row at index (\d+) has (name|grade) "([^"]+)"$/ do |row_index, field_type, expected_text|
+  td_index = (field_type == 'name') ? 1 : 2
+  field_cell = @browser.execute_script(
+    "return $('.uitest-owned-sections tbody tr:eq(#{row_index}) td:eq(#{td_index})');"
+  )
+  actual_text = field_cell.first.text
+  expect(actual_text).to eq(expected_text)
+end
+
+Then /^the section table row at index (\d+) has (primary|secondary) assignment path "([^"]+)"$/ do |row_index, assignment_type, expected_path|
+  link_index = (assignment_type == 'primary') ? 0 : 1
   href = @browser.execute_script(
-    "return $('.uitest-owned-sections tbody tr:eq(#{row_index}) td:eq(3) a:eq(1)').attr('href');"
+    "return $('.uitest-owned-sections tbody tr:eq(#{row_index}) td:eq(3) a:eq(#{link_index})').attr('href');"
   )
   # ignore query params
   actual_path = href.split('?')[0]

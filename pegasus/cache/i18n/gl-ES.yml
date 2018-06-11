@@ -752,6 +752,8 @@
   volunteer_engineer_submission_field_email_placeholder: Enderezo de email
   volunteer_engineer_submission_field_email_preference: Can we email you about updates
     to our courses, volunteer opportunities, or other computer science news?
+  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
+    policy)"
   volunteer_engineer_submission_field_email_preference_yes: Si
   volunteer_engineer_submission_field_email_preference_no: Non
   volunteer_engineer_submission_final_paragraph: Estarás nunha lista nun mapa para
@@ -1293,12 +1295,26 @@
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Unit 5: Data and Society'
   csd6_name: 'Unit 6: Physical Computing'
+  csd1-2017_name: 'Unit 1: Problem Solving'
+  csd2-2017_name: 'Unit 2: Web Development'
+  csd3-2017_name: 'Unit 3: Animation and Games'
+  csd4-2017_name: 'Unit 4: The Design Process'
+  csd5-2017_name: 'Unit 5: Data and Society'
+  csd6-2017_name: 'Unit 6: Physical Computing'
   csd1-2018_name: 'Unit 1: Problem Solving'
   csd2-2018_name: 'Unit 2: Web Development'
   csd3-2018_name: 'Unit 3: Animation and Games'
   csd4-2018_name: 'Unit 4: The Design Process'
   csd5-2018_name: 'Unit 5: Data and Society'
   csd6-2018_name: 'Unit 6: Physical Computing'
+  csp1-2017_name: 'Unit 1: The Internet'
+  csp2-2017_name: 'Unit 2: Digital Information'
+  csp3-2017_name: 'Unit 3: Algorithms and Programming'
+  csp4-2017_name: 'Unit 4: Big Data and Privacy'
+  csp5-2017_name: 'Unit 5: Building Apps'
+  csp-explore-2017_name: 'AP: Explore PT Prep'
+  csp-create-2017_name: 'AP: Create PT Prep'
+  csppostap-2017_name: 'Post AP: Databases in Apps'
   csp1-2018_name: 'Unit 1: The Internet'
   csp2-2018_name: 'Unit 2: Digital Information'
   csp3-2018_name: 'Unit 3: Algorithms and Programming'
@@ -2203,5 +2219,3 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
-    policy)"

@@ -83,8 +83,8 @@ export default function (app, levels, options) {
           ({ config: blockConfig, category: 'Custom' }));
       const sharedBlocksConfig = level.sharedBlocks || [];
       const customBlocksConfig = [
-        ...levelCustomBlocksConfig,
         ...sharedBlocksConfig,
+        ...levelCustomBlocksConfig,
       ];
       if (options.blocksModule.installCustomBlocks && customBlocksConfig.length > 0) {
         options.blocksModule.installCustomBlocks(
@@ -92,7 +92,7 @@ export default function (app, levels, options) {
           blockInstallOptions,
           customBlocksConfig,
           options.level,
-          level.hideCustomBlocks,
+          level.hideCustomBlocks && !options.level.edit_blocks,
         );
       }
     }

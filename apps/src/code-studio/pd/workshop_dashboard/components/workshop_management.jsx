@@ -23,7 +23,8 @@ export class WorkshopManagement extends React.Component {
     viewUrl: PropTypes.string.isRequired,
     editUrl: PropTypes.string,
     onDelete: PropTypes.func,
-    showSurveyUrl: PropTypes.bool
+    showSurveyUrl: PropTypes.bool,
+    date: PropTypes.string
   };
 
   static defaultProps = {
@@ -38,7 +39,11 @@ export class WorkshopManagement extends React.Component {
       let surveyBaseUrl;
 
       if (props.subject === '5-day Summer') {
-        surveyBaseUrl = "local_summer_workshop_survey_results";
+        if (new Date(this.props.date).getFullYear() >= 2018) {
+          surveyBaseUrl = "local_summer_workshop_daily_survey_results";
+        } else {
+          surveyBaseUrl = "local_summer_workshop_survey_results";
+        }
       } else {
         surveyBaseUrl = props.permission.hasAny(Organizer, ProgramManager) ? "organizer_survey_results" : "survey_results";
       }

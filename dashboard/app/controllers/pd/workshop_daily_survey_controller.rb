@@ -3,6 +3,8 @@ module Pd
     include WorkshopConstants
     include JotForm::EmbedHelper
 
+    LAST_DAY = 5
+
     # Require login
     authorize_resource class: 'Pd::Enrollment'
 
@@ -18,27 +20,30 @@ module Pd
       return render :not_enrolled unless workshop
 
       day = params[:day].to_i
+
+      # Accept days 0 through 4. Day 5 is the post workshop survey and should use the new_post route
+      return render_404 if day < 0 || day > 4
       session = nil
       if day > 0
         session = workshop.sessions[day - 1]
         return render_404 unless session
         return render :too_late unless session.open_for_attendance?
 
-        return render :no_attendence unless session.attendances.exists?(teacher: current_user)
+        return render :no_attendance unless session.attendances.exists?(teacher: current_user)
       end
 
       @form_id = WorkshopDailySurvey.get_form_id_for_day day
 
       @form_params = {
         environment: Rails.env,
-        user_id: current_user.id,
-        user_name: current_user.name,
-        user_email: current_user.email,
-        workshop_id: workshop.id,
-        workshop_course: workshop.course,
-        workshop_subject: workshop.subject,
-        regional_partner_name: workshop.regional_partner&.name,
-        session_id: session&.id,
+        userId: current_user.id,
+        userName: current_user.name,
+        userEmail: current_user.email,
+        workshopId: workshop.id,
+        workshopCourse: workshop.course,
+        workshopSubject: workshop.subject,
+        regionalPartnerName: workshop.regional_partner&.name,
+        sessionId: session&.id,
         day: day
       }
     end
@@ -53,11 +58,16 @@ module Pd
     def new_facilitator
       session = Session.find(params[:session_id])
       workshop = session.workshop
+      day = workshop.sessions.index(session) + 1
 
-      return render :too_late unless session.open_for_attendance?
+      # Post workshop survey (last day) does not need to be taken while the session is still open,
+      # and has less strict attendance requirements.
+      unless day == LAST_DAY
+        return render :too_late unless session.open_for_attendance?
 
-      attendance = session.attendances.find_by(teacher: current_user)
-      return render :no_attendance unless attendance
+        attendance = session.attendances.find_by(teacher: current_user)
+        return render :no_attendance unless attendance
+      end
 
       facilitator_index = params[:facilitator_index]&.to_i || 0
       facilitators = workshop.facilitators.order(:name, :id)
@@ -70,20 +80,49 @@ module Pd
 
       @form_params = {
         environment: Rails.env,
-        user_id: current_user.id,
-        user_name: current_user.name,
-        user_email: current_user.email,
-        workshop_id: workshop.id,
-        workshop_course: workshop.course,
-        workshop_subject: workshop.subject,
-        regional_partner_name: workshop.regional_partner&.name,
-        session_id: session.id,
-        day: workshop.sessions.index(session) + 1,
-        facilitator_id: facilitator.id,
-        facilitator_name: facilitator.name,
-        facilitator_position: facilitator_index + 1,
-        num_facilitators: facilitators.size
+        userId: current_user.id,
+        userName: current_user.name,
+        userEmail: current_user.email,
+        workshopId: workshop.id,
+        workshopCourse: workshop.course,
+        workshopSubject: workshop.subject,
+        regionalPartnerName: workshop.regional_partner&.name,
+        sessionId: session.id,
+        day: day,
+        facilitatorId: facilitator.id,
+        facilitatorName: facilitator.name,
+        facilitatorPosition: facilitator_index + 1,
+        numFacilitators: facilitators.size
       }
+    end
+
+    # Post workshop survey. This one will be emailed and displayed in the my PL page,
+    # and can persist for more than a day, so it uses an enrollment code to be tied to a specific workshop.
+    # GET /pd/workshop_survey/post/:enrollment_code
+    def new_post
+      enrollment = Enrollment.find_by!(code: params[:enrollment_code])
+      workshop = enrollment.workshop
+      session = workshop.sessions[LAST_DAY - 1]
+      return render_404 unless session
+
+      return redirect_to :pd_workshop_survey_thanks if WorkshopDailySurvey.exists?(user: current_user, pd_workshop: workshop, day: LAST_DAY)
+      @form_id = WorkshopDailySurvey.get_form_id_for_day LAST_DAY
+
+      @form_params = {
+        environment: Rails.env,
+        userId: current_user.id,
+        userName: current_user.name,
+        userEmail: current_user.email,
+        workshopId: workshop.id,
+        workshopCourse: workshop.course,
+        workshopSubject: workshop.subject,
+        regionalPartnerName: workshop.regional_partner&.name,
+        day: LAST_DAY,
+        sessionId: session.id
+      }
+
+      # Same view as the general daily survey
+      render :new_general
     end
 
     # GET /pd/workshop_survey/thanks

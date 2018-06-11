@@ -317,7 +317,13 @@ Devise.setup do |config|
   config.omniauth :openid, {
     provider_ignores_state: true,
     name: :powerschool,
-    identifier_param: 'openid_identifier'
+    identifier_param: 'openid_identifier',
+    required: %w(
+      http://powerschool.com/entity/type
+      http://powerschool.com/entity/email
+      http://powerschool.com/entity/firstName
+      http://powerschool.com/entity/lastName
+    ).freeze
   }
 
   # ==> Warden configuration
