@@ -69,6 +69,7 @@ class ProgressBubbleSet extends React.Component {
       PropTypes.number,
     ]),
     hideToolTips: PropTypes.bool,
+    pairingIconEnabled: PropTypes.bool
   };
 
   render() {
@@ -104,6 +105,7 @@ class ProgressBubbleSet extends React.Component {
                 selectedSectionId={selectedSectionId}
                 selectedStudentId={selectedStudentId}
                 hideToolTips={this.props.hideToolTips}
+                pairingIconEnabled={this.props.pairingIconEnabled}
               />
             </div>
           </div>
