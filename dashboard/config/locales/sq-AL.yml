@@ -1,4 +1,5 @@
-"sq":
+---
+sq:
   errors:
     messages:
       not_saved: 'Të lutem korrigjo gabimet që vijojnë:'
@@ -94,6 +95,7 @@
     facebook: Facebook
     windowslive: Llogaria e Microsoft
     clever: Clever Account
+    powerschool: Powerschool Account
     forgot_password: Keni harruar fjalëkalimin?
     need_confirmation: Nuk i keni marr instruksionet e konfirmimit?
     need_unlock: Nuk keni marre instruksionet e zhbllokimit?
