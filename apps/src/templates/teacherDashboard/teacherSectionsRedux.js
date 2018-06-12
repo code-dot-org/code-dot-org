@@ -162,7 +162,7 @@ export const finishEditingSection = () => (dispatch, getState) => {
   const state = getState().teacherSections;
   const section = state.sectionBeingEdited;
 
-  const dataUrl = isAddingSection(state) ? '/dashboardapi/sections' : `/sections/${section.id}`;
+  const dataUrl = isAddingSection(state) ? '/dashboardapi/sections' : `/v2/sections/${section.id}`;
   const httpMethod = isAddingSection(state) ? 'POST' : 'PATCH';
   return new Promise((resolve, reject) => {
     $.ajax({

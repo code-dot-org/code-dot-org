@@ -63,15 +63,24 @@
     "debugger_disabled": "true",
     "pause_animations_by_default": "false",
     "callout_json": "[]",
-    "markdown_instructions": "# Challenge: Draw an Image\r\n\r\n_Check with your teacher before starting any of the challenges._\r\n\r\nIn the previous lesson you and your partner created several interesting images. See if you can recreate one of them using code.",
+    "markdown_instructions": "# Challenge: Draw an Image\r\n\r\n_Check with your teacher before starting any of the challenges._\r\n\r\nIn the previous lesson you and your partner created several interesting images. See if you can recreate one of them using code.\r\n",
     "display_name": "Challenge: Draw an Image",
     "parent_level_id": 8753,
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ],
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
+    "thumbnail_url": "https://images.code.org/ed26831040f3fe0d3792402a2ae18431-image-1528743133929.40.05 PM.png"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-05-25 17:09:14 +0000\",\"changed\":[\"code_functions\",\"show_d_pad\",\"text_mode_at_start\",\"callout_json\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-06-02 15:42:37 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-05 22:52:05 +0000\",\"changed\":[\"code_functions\",\"hide_animation_mode\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-13 20:39:44 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-05-25 17:09:14 +0000\",\"changed\":[\"code_functions\",\"show_d_pad\",\"text_mode_at_start\",\"callout_json\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-06-02 15:42:37 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-05 22:52:05 +0000\",\"changed\":[\"code_functions\",\"hide_animation_mode\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-13 20:39:44 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-06-11 18:52:39 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>
