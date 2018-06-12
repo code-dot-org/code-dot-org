@@ -53,6 +53,16 @@ Scenario: Versions warning announcement on script overview page
   Then element ".announcement-notification:contains(right version)" is visible
   Then element ".announcement-notification:contains(use the version dropdown)" is visible
 
+  # Generate progress in course 2
+  When I am on "http://studio.code.org/s/course2/stage/1/puzzle/1"
+  And I click selector ".next-stage" once I see it
+  And I wait until current URL contains "/s/course2/stage/1/puzzle/2"
+
+  When I am on "http://studio.code.org/s/course1"
+  And I wait until element "#script-title" is visible
+  And element "#version-selector" is not visible
+  Then element ".announcement-notification:contains(right version)" is not visible
+
 @as_student
 @no_mobile
 Scenario: Switch versions using dropdown on script overview page
