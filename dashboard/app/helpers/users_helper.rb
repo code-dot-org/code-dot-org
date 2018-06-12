@@ -121,7 +121,7 @@ module UsersHelper
     unless exclude_level_progress
       uls = user.user_levels_by_level(script)
       paired_user_level_ids = PairedUserLevel.pairs(uls.values.map(&:id))
-      sls = script.script_levels.all.reduce(Hash.new) do |memo, obj|
+      sls = script.script_levels.includes(:stage).reduce(Hash.new) do |memo, obj|
         memo[obj.id.to_s] = obj
         memo
       end
