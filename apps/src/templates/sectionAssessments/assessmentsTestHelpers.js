@@ -1,6 +1,6 @@
 import i18n from '@cdo/locale';
 
-// Data for students assessments multiple choice table
+// Data for students' assessments multiple choice table
 export const studentOverviewData = [
   {
     id: 1,
