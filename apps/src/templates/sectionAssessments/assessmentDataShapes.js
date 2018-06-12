@@ -15,8 +15,11 @@ export const questionDataPropType = PropTypes.shape({
 
 // Shapes for single student multiple choice tables
 
-// Represents an individual student's response to a single
-// multiple choice question.
+/**
+ * Represents an individual student's response to a single
+ * multiple choice question.
+ * responses: returns strings such as 'A', or 'A, C'
+ */
 export const studentResponsePropType = PropTypes.shape({
   isCorrect: PropTypes.bool,
   responses: PropTypes.string,
