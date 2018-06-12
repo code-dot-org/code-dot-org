@@ -1,0 +1,49 @@
+"tr":
+  data:
+    block_categories:
+      Actions: Eylemler
+      Loops: Döngüler
+      Functions: Fonksiyonlar
+      Color: Renk
+      Brushes: Brushes
+      Math: Matematik
+      Logic: Mantık
+      Variables: Değişkenler
+      Number: Number
+      String: String
+      Image: Image
+      Boolean: Boolean
+      Conditionals: Koşullar
+      Events: Olaylar
+      Games/Score: Games/Score
+      Comments: Comments
+      Category: Category
+      Prebuilt: Prebuilt
+      Text: yazı
+      Picker: Picker
+      Comment: Comment
+      'Variables ': 'Variables '
+      everythingelse: everythingelse
+      numbers: numbers
+      Numbers: Numbers
+      Input: Girdi
+      Default: Default
+      Sprites: Hareketli Nesneler
+      Behaviors: Behaviors
+      World: World
+      Sprite: Sprite
+      Brush: Brush
+      Make Sprite: Make Sprite
+      Movement: Movement
+      Start: Başlayın
+      Groups: Groups
+      Booleans: Boolean Değerleri
+      Functional: Functional
+      Predefined: Predefined
+      test: dene
+      test2: test2
+      Foo: Foo
+      Name: İsim
+      NEW BLOCKS: NEW BLOCKS
+      Game/Score: Game/Score
+      Function: Fonksiyon

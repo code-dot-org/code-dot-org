@@ -4,7 +4,7 @@
       name:
         Unplug1: แนะนำวิทยาการคอมพิวเตอร์เบื้องต้น
         Maze: เขาวงกต
-        Multi: แบบมีตัวเลือก
+        Multi: ประเภทปรนัย
         Unplug2: คิดคำนวณ
         Unplug3: การเขียนกระดาษกราฟ
         Artist: ศิลปิน
@@ -286,18 +286,18 @@
         Custom_builder: Drag blocks from the toolbox to the workspace to draw the
           level you wish to create. Press "Run" when you are ready.
         jigsaw_1: Click the block
-        jigsaw_2: Drag the block to the target
-        jigsaw_3: Arrange the blocks to form the image
-        jigsaw_4: Arrange the blocks to form the image
-        jigsaw_5: Arrange the blocks to form the image
-        jigsaw_6: Arrange the blocks to form the image
-        jigsaw_7: Arrange the blocks to form the image
-        jigsaw_8: Arrange the blocks to form the image
-        jigsaw_9: Arrange the blocks to form the image
-        jigsaw_10: Arrange the blocks to form the image
-        jigsaw_11: Arrange the blocks to form the image
-        jigsaw_12: Arrange the blocks to form the image
-        jigsaw_13: Fix the puzzle!
+        jigsaw_2: ลากบล็อกไปยังเป้าหมาย
+        jigsaw_3: จัดเรียงบล็อกเพื่อประกอบกันเป็นรูปภาพ
+        jigsaw_4: จัดเรียงบล็อกเพื่อประกอบกันเป็นรูปภาพ
+        jigsaw_5: จัดเรียงบล็อกเพื่อประกอบกันเป็นรูปภาพ
+        jigsaw_6: จัดเรียงบล็อกเพื่อประกอบกันเป็นรูปภาพ
+        jigsaw_7: จัดเรียงบล็อกเพื่อประกอบกันเป็นรูปภาพ
+        jigsaw_8: จัดเรียงบล็อกเพื่อประกอบกันเป็นรูปภาพ
+        jigsaw_9: จัดเรียงบล็อกเพื่อประกอบกันเป็นรูปภาพ
+        jigsaw_10: จัดเรียงบล็อกเพื่อประกอบกันเป็นรูปภาพ
+        jigsaw_11: จัดบล็อกเหล่านี้ตามลำดับตัวเลข
+        jigsaw_12: จัดบล็อกเหล่านี้ตามลำดับตัวเลข
+        jigsaw_13: แก้ไขปริศนา!
         mazestep_1: Maze step description here
         mazestep_2: Maze step description here
         mazestep_3: Maze step description here
@@ -744,6 +744,10 @@
         CSF_harvester_loops_K1: Loops in Harvester
         CSF_scrat_loops_K1: Loops in Ice Age
         CSF_scrat_loops_CF: Loops in Ice Age
+        CSF_if_allskins: The If Block
+        CSF_ifelse_allskins: Using If/Else Blocks
+        CSF_ifelseifelse_allskins: Using If/ElseIf/Else Blocks
+        CSF_loops_AB: ลูป
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

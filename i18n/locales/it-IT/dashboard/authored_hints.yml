@@ -541,8 +541,7 @@ it:
       Farmer for Authored Hint testing_authored_hint:
         first_hint: |-
           Questo è il primo indizio. Ha * alcuni * * * basic * * 'markup'
-        second_hint: |-
-          Questo è il secondo suggerimento. Ha un'immagine. ! [] (https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)
+        second_hint: Questo è il secondo suggerimento. Ha un'immagine. ! [] (https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)
         last_hint: Questo è il terzo e ultimo suggerimento. Non ha nulla di speciale.
       Farmer for TTS testing_authored_hint:
         first_hint: |-
@@ -2261,9 +2260,9 @@ it:
       courseA_bee_seq9_authored_hint: { }
       courseA_collector_loops1_authored_hint:
         courseA_collector_loops1_a: |-
-          Dopo aver raggiunto una casella con il tesoro, usa questo blocco per raccoglierlo:
+          Dopo aver raggiunto una casella con un diamante, usa questo blocco per raccoglierlo:
           <xml><block type="collector_collect"/></xml>
-        courseA_collector_loops1_b: Una soluzione semplice sarebbe spostarsi a Est (`E -->`) 2 volte, quindi prendere il tesoro.
+        courseA_collector_loops1_b: Una soluzione semplice sarebbe spostarsi a Est (`E -->`) 2 volte, quindi prendere il diamante.
       courseA_collector_loops10_authored_hint: { }
       courseA_collector_loops10_2018_authored_hint: { }
       courseA_collector_loops11_authored_hint: { }
@@ -2271,18 +2270,18 @@ it:
       courseA_collector_loops11_predict2_authored_hint: { }
       courseA_collector_loops1_2018_authored_hint:
         courseA_collector_loops1_a: |-
-          Dopo aver raggiunto una casella con il tesoro, usa questo blocco per raccoglierlo:
+          Dopo aver raggiunto una casella con un diamante, usa questo blocco per raccoglierlo:
           <xml><block type="collector_collect"/></xml>
-        courseA_collector_loops1_b: Una soluzione semplice sarebbe spostarsi a Est (`E -->`) 2 volte, quindi prendere il tesoro.
+        courseA_collector_loops1_b: Una soluzione semplice sarebbe spostarsi a Est (`E -->`) 2 volte, quindi prendere il diamante.
       courseA_collector_loops2_authored_hint:
-        courseA_collector_loops2_a: Devi muoverti prima di raccogliere qualsiasi tesoro.
+        courseA_collector_loops2_a: Devi muoverti prima di raccogliere qualsiasi diamante.
         courseA_collector_loops2_b: |-
-          Dopo aver raggiunto una casella con il tesoro, usa questo blocco per raccoglierlo:
+          Dopo aver raggiunto una casella con un diamante, usa questo blocco per raccoglierlo:
           <xml><block type="collector_collect"/></xml>
       courseA_collector_loops2_2018_authored_hint:
-        courseA_collector_loops2_a: Devi muoverti prima di raccogliere qualsiasi tesoro.
+        courseA_collector_loops2_a: Devi muoverti prima di raccogliere qualsiasi diamante.
         courseA_collector_loops2_b: |-
-          Dopo aver raggiunto una casella con il tesoro, usa questo blocco per raccoglierlo:
+          Dopo aver raggiunto una casella con un diamante, usa questo blocco per raccoglierlo:
           <xml><block type="collector_collect"/></xml>
       courseA_collector_loops3_authored_hint:
         courseA_collector_loops3_a: "Prova ad utilizzare un ciclo <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
@@ -2293,18 +2292,18 @@ it:
       courseA_collector_loops3_predict1_authored_hint: { }
       courseA_collector_loops4_authored_hint:
         courseA_collector_loops4_a: Per modificare di quante caselle deve spostarsi Laurel, cambia il numero di volte che il ciclo viene eseguito.
-        courseA_collector_loops4_b: "Non dimenticare che Laurel deve ancora scendere per raccogliere l'ultimo tesoro, dopo aver terminato il ciclo\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+        courseA_collector_loops4_b: "Non dimenticare che Laurel deve ancora scendere per raccogliere l'ultimo diamante, dopo aver terminato il ciclo\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
       courseA_collector_loops4_2018_authored_hint:
         courseA_collector_loops4_a: Per modificare di quante caselle deve spostarsi Laurel, cambia il numero di volte che il ciclo viene eseguito.
-        courseA_collector_loops4_b: "Non dimenticare che Laurel deve ancora scendere per raccogliere l'ultimo tesoro, dopo aver terminato il ciclo\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+        courseA_collector_loops4_b: "Non dimenticare che Laurel deve ancora scendere per raccogliere l'ultimo diamante, dopo aver terminato il ciclo\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
       courseA_collector_loops5_authored_hint:
         courseA_collector_loops5_a: Se non riesci subito a capire la risposta, provare ad utilizzare un foglio di carta per capire di quali frecce hai bisogno e cerca di definire un percorso.
         courseA_collector_loops5_b: Prova a dividere il problema in due parti, muovendoti lateralmente e poi verso il basso.
-        courseA_collector_loops5_c: "Potresti iniziare con un ciclo\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\nche muove Laurel verso Ovest (`O <--`) e raccoglie il tesoro."
+        courseA_collector_loops5_c: "Potresti iniziare con un ciclo\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\nche muove Laurel verso Ovest (`O <--`) e raccoglie i diamanti."
       courseA_collector_loops5_2018_authored_hint:
         courseA_collector_loops5_a: Se non riesci subito a capire la risposta, provare ad utilizzare un foglio di carta per capire di quali frecce hai bisogno e cerca di definire un percorso.
         courseA_collector_loops5_b: Prova a dividere il problema in due parti, muovendoti lateralmente e poi verso il basso.
-        courseA_collector_loops5_c: "Potresti iniziare con un ciclo\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\nche muove Laurel verso Ovest (`O <--`) e raccoglie il tesoro."
+        courseA_collector_loops5_c: "Potresti iniziare con un ciclo\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\nche muove Laurel verso Ovest (`O <--`) e raccoglie i diamanti."
       courseA_collector_loops6_authored_hint:
         courseA_collector_loops6_a: Non riesci a capire cosa non va? Provare a eseguire il codice un paio di volte per vedere cosa succede.
         courseA_collector_loops6_b: "La soluzione più breve ha 2 cicli\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\nuno dopo l'altro."
@@ -2316,11 +2315,11 @@ it:
       courseA_collector_loops7_2018_authored_hint:
         courseA_collector_loops7_a: Se non riesci a capire che cosa accade dopo, prova ad eseguire il codice per vedere dove va a finire Laurel.
       courseA_collector_loops8_authored_hint:
-        courseA_collector_loops8_a: Se hai difficoltà nella risoluzione di questo esercizio, prova a scrivere le mosse su un foglio di carta e cerca di trovare uno schema.
+        courseA_collector_loops8_a: Se hai difficoltà nella risoluzione di questo esercizio, prova a scrivere le mosse su un foglio di carta e cerca di trovare uno schema che si ripete.
         courseA_collector_loops8_b: Prova a dividere questo esercizio in tre problemi separati e scrivi un ciclo per ciascuno di essi.
         courseA_collector_loops8_c: Ricorda che puoi scrivere un pezzo di codice alla volta, e poi premere "Esegui" per capire come devi procedere dal punto in cui sei arrivato.
       courseA_collector_loops8_2018_authored_hint:
-        courseA_collector_loops8_a: Se hai difficoltà nella risoluzione di questo esercizio, prova a scrivere le mosse su un foglio di carta e cerca di trovare uno schema.
+        courseA_collector_loops8_a: Se hai difficoltà nella risoluzione di questo esercizio, prova a scrivere le mosse su un foglio di carta e cerca di trovare uno schema che si ripete.
         courseA_collector_loops8_b: Prova a dividere questo esercizio in tre problemi separati e scrivi un ciclo per ciascuno di essi.
         courseA_collector_loops8_c: Ricorda che puoi scrivere un pezzo di codice alla volta, e poi premere "Esegui" per capire come devi procedere dal punto in cui sei arrivato.
       courseA_collector_loops9_authored_hint:
@@ -2387,7 +2386,7 @@ it:
         courseA_collector_preLoops6_a: You will need to use two ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png) blocks to solve this puzzle.
       courseA_collector_preLoops7_authored_hint:
         courseA_collector_loops2_b: |-
-          Dopo aver raggiunto una casella con il tesoro, usa questo blocco per raccoglierlo:
+          Dopo aver raggiunto una casella con un diamante, usa questo blocco per raccoglierlo:
           <xml><block type="collector_collect"/></xml>
       courseA_forVideoTest_artist_authored_hint: { }
       courseA_harvester_forVideo_authored_hint:
@@ -2410,7 +2409,7 @@ it:
           <xml><block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="2-10">4</title>
           </block></xml>
-        courseA_harvester_loops3_b: To repeat code, drag out a `repeat` loop, then put the block you want inside of it.
+        courseA_harvester_loops3_b: Per ripetere una sequenza di istruzioni, trascina nell'area di lavoro un blocco `ripeti ... volte` e inserisci al suo interno i blocchi che vuoi ripetere.
       courseA_harvester_loops4_authored_hint:
         courseA_harvester_loops4_a: Don't be afraid to press `Run` to see what happens!
         courseA_harvester_loops4_b: How many pieces of corn are there? How many times does your code repeat?
@@ -2419,7 +2418,7 @@ it:
         courseA_harvester_loops5_b: Your final code will have **one** `repeat` loop, **one** `move South` block, and **one** `move East` block.
         courseA_harvester_loops5_c: Use this path to pick all the corn!
       courseA_harvester_loops5a_authored_hint:
-        courseA_harvester_loops5a_a: You will need one `repeat` loop after another.
+        courseA_harvester_loops5a_a: Avrai bisogno di due cicli `ripeti ... volte`, uno dopo l'altro.
         courseA_harvester_loops5a_b: One loop will repeat `move South`, and the other will repeat `move East`.
         courseA_harvester_loops5a_c: Use this path to move one way, and then the other.
       courseA_harvester_loops5b_authored_hint:
@@ -2427,7 +2426,7 @@ it:
         courseA_harvester_loops5b_b: Are your loops repeating the right number of times?
         courseA_harvester_loops5b_c: Move one way, then the other with this path.
       courseA_harvester_loops6_authored_hint:
-        courseA_harvester_loops6_a: If you get stuck, try writing the steps on paper and looking for repeating patterns.
+        courseA_harvester_loops6_a: Se ti blocchi, prova a scrivere i passaggi su carta e cerca gli schemi che si ripetono.
         courseA_harvester_loops6_b: This is the path you should take to pick all the corn.
       courseA_harvester_loops7_authored_hint:
         courseA_harvester_loops7_a: You will need two `repeat` loops after each other!
@@ -2555,7 +2554,7 @@ it:
       courseA_maze_ramp5_2018_authored_hint:
         courseC_maze_programming5_a: Prova ad usare il pulsante "Fai un passo" per eseguire il codice un'istruzione alla volta. Riesci ad capire cosa devi fare dopo?
         courseC_maze_programming5_b: Remember that turns are from the bird's perspective.
-        courseC_maze_programming5_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+        courseC_maze_programming5_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseA_maze_ramp5a_2018_authored_hint:
         '1': |-
           Your code should look like this:
@@ -2718,7 +2717,7 @@ it:
           <xml><block type="studio_whenArrow">
           <title name="VALUE">left</title>
           </block></xml>
-        courseA_playLab_events3_b: Dopo che hai scritto il programma, ricorda di utilizzare la freccia a sinistra per muovere Jorge fino alla bandierina. Quando la bandierina diventa verde, hai finito! (Puoi cliccare sulle frecce che vedi sullo schermo, oppure usare le frecce della tastiera.)
+        courseA_playLab_events3_b: Dopo che hai scritto il programma, ricorda di utilizzare la freccia a sinistra per muovere il cane fino alla bandierina. Quando la bandierina diventa verde, hai finito! (Puoi cliccare sulle frecce che vedi sullo schermo, oppure usare le frecce della tastiera.)
       courseA_playLab_events3_2018_authored_hint:
         courseA_playLab_events3_a: |-
           Trascina questo blocco
@@ -2730,10 +2729,10 @@ it:
           <xml><block type="studio_whenArrow">
           <title name="VALUE">left</title>
           </block></xml>
-        courseA_playLab_events3_b: Dopo che hai scritto il programma, ricorda di utilizzare la freccia a sinistra per muovere Jorge fino alla bandierina. Quando la bandierina diventa verde, hai finito! (Puoi cliccare sulle frecce che vedi sullo schermo, oppure usare le frecce della tastiera.)
+        courseA_playLab_events3_b: Dopo che hai scritto il programma, ricorda di utilizzare la freccia a sinistra per muovere il cane fino alla bandierina. Quando la bandierina diventa verde, hai finito! (Puoi cliccare sulle frecce che vedi sullo schermo, oppure usare le frecce della tastiera.)
       courseA_playLab_events4_authored_hint:
         courseA_playLab_events4_a: |-
-          Ecco il blocco evento che dovresti usare per far muovere Jorge a destra:
+          Ecco il blocco evento che dovresti usare per far muovere il cane a destra:
           <xml><block type="studio_whenArrow"><title name="VALUE">right</title></block></xml>
         courseA_playLab_events4_b: |-
           Questo è il codice che ti serve per completare questo esercizio:
@@ -2746,7 +2745,7 @@ it:
           </block></next></block></xml>
       courseA_playLab_events4_2018_authored_hint:
         courseA_playLab_events4_a: |-
-          Ecco il blocco evento che dovresti usare per far muovere Jorge a destra:
+          Ecco il blocco evento che dovresti usare per far muovere il cane a destra:
           <xml><block type="studio_whenArrow"><title name="VALUE">right</title></block></xml>
         courseA_playLab_events4_b: |-
           Questo è il codice che ti serve per completare questo esercizio:
@@ -2758,13 +2757,13 @@ it:
           <title name="DIR">2</title>
           </block></next></block></xml>
       courseA_playLab_events5_authored_hint:
-        courseA_playLab_events5_a: "Ecco i blocchi degli eventi che dovresti usare per far muovere Jorge in su e in giù:\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n  </block></xml>\ne \n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n  </block></xml>"
+        courseA_playLab_events5_a: "Ecco i blocchi degli eventi che dovresti usare per far muovere il cane in su e in giù:\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n  </block></xml>\ne \n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n  </block></xml>"
         courseA_playLab_events5_b: |-
           Sapevi che puoi cambiare il verso della freccia nel blocco evento, cliccando sul disegno e scegliendone uno nuovo?
           
           ![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)
       courseA_playLab_events5_2018_authored_hint:
-        courseA_playLab_events5_a: "Ecco i blocchi degli eventi che dovresti usare per far muovere Jorge in su e in giù:\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n  </block></xml>\ne \n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n  </block></xml>"
+        courseA_playLab_events5_a: "Ecco i blocchi degli eventi che dovresti usare per far muovere il cane in su e in giù:\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n  </block></xml>\ne \n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n  </block></xml>"
         courseA_playLab_events5_b: |-
           Sapevi che puoi cambiare il verso della freccia nel blocco evento, cliccando sul disegno e scegliendone uno nuovo?
           
@@ -3065,7 +3064,7 @@ it:
         courseB_artist_loops_challenge2_a: The code to draw an X is already given to you. All you need to do is repeat the X and `jump` to the next spot.
         courseB_artist_loops_challenge2_b: You can use `jump` blocks to move to other spaces without drawing.
       courseB_collector_loops1_authored_hint:
-        courseB_collector_loops1_a: Il blocco <xml><block type="collector_collect_simplified"/></xml> consente di raccogliere il tesoro quando ti ci trovi sopra.
+        courseB_collector_loops1_a: Il blocco <xml><block type="collector_collect_simplified"/></xml> consente di raccogliere i diamanti quando ti ci trovi sopra.
       courseB_collector_loops10_authored_hint:
         courseB_collector_loops10_a: Se non riesci a capire dove mettere il ciclo `ripeti`, scrivi il codice con i singoli blocchi azzurri e poi cerca lo schema che si ripete.
         courseB_collector_loops10_b: Prova a scrivere le mosse su un pezzo di carta e cerca una sequenza che si ripete.
@@ -3073,29 +3072,29 @@ it:
         courseB_collector_loops10_a: Se non riesci a capire dove mettere il ciclo `ripeti`, scrivi il codice con i singoli blocchi azzurri e poi cerca lo schema che si ripete.
         courseB_collector_loops10_b: Prova a scrivere le mosse su un pezzo di carta e cerca una sequenza che si ripete.
       courseB_collector_loops1_2018_authored_hint:
-        courseB_collector_loops1_a: Il blocco <xml><block type="collector_collect_simplified"/></xml> consente di raccogliere il tesoro quando ti ci trovi sopra.
+        courseB_collector_loops1_a: Il blocco <xml><block type="collector_collect_simplified"/></xml> consente di raccogliere i diamanti quando ti ci trovi sopra.
       courseB_collector_loops2_authored_hint:
-        courseB_collector_loops2_a: Devi muoverti prima di raccogliere qualsiasi tesoro.
-        courseB_collector_loops2_b: Quando hai raggiunto una gemma, usa il blocco <xml><block type="collector_collect"/></xml> per raccoglierla.
+        courseB_collector_loops2_a: Devi muoverti prima di raccogliere qualsiasi diamante.
+        courseB_collector_loops2_b: Quando hai raggiunto un diamante, usa il blocco <xml><block type="collector_collect"/></xml> per raccoglierlo.
       courseB_collector_loops2_2018_authored_hint:
-        courseB_collector_loops2_a: Devi muoverti prima di raccogliere qualsiasi tesoro.
-        courseB_collector_loops2_b: Quando hai raggiunto una gemma, usa il blocco <xml><block type="collector_collect"/></xml> per raccoglierla.
+        courseB_collector_loops2_a: Devi muoverti prima di raccogliere qualsiasi diamante.
+        courseB_collector_loops2_b: Quando hai raggiunto un diamante, usa il blocco <xml><block type="collector_collect"/></xml> per raccoglierlo.
       courseB_collector_loops3_authored_hint:
-        courseB_collector_prog3_a: Prova ad usare un blocco <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">5</title></block></xml> per raccogliere tutto il tesoro.
+        courseB_collector_prog3_a: Prova ad usare un blocco <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">5</title></block></xml> per raccogliere tutti i diamanti.
         courseB_collector_prog3_b: Ricorda che puoi mettere più di un blocco all'interno di un ciclo `ripeti`.
       courseB_collector_loops3_2018_authored_hint:
-        courseB_collector_prog3_a: Prova ad usare un blocco <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">5</title></block></xml> per raccogliere tutto il tesoro.
+        courseB_collector_prog3_a: Prova ad usare un blocco <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">5</title></block></xml> per raccogliere tutti i diamanti.
         courseB_collector_prog3_b: Ricorda che puoi mettere più di un blocco all'interno di un ciclo `ripeti`.
       courseB_collector_loops3_predict1_authored_hint:
         courseB_collector_prog3_a: Try using a `repeat` block to collect your gold.
       courseB_collector_loops4_authored_hint:
         courseB_collector_loops4_a: Prova ad usare il pulsante "Fai un passo" per capire dove c'è qualcosa di sbagliato.
         courseB_collector_loops4_b: Per modificare di quante caselle deve spostarsi Laurel, cambia il numero di volte che il ciclo viene eseguito.
-        courseB_collector_loops4_c: Alla fine del ciclo `ripeti` Laurel deve muoversi verso il basso e finire di raccogliere il tesoro!
+        courseB_collector_loops4_c: Alla fine del ciclo `ripeti` Laurel deve muoversi verso il basso e finire di raccogliere i diamanti!
       courseB_collector_loops4_2018_authored_hint:
         courseB_collector_loops4_a: Prova ad usare il pulsante "Fai un passo" per capire dove c'è qualcosa di sbagliato.
         courseB_collector_loops4_b: Per modificare di quante caselle deve spostarsi Laurel, cambia il numero di volte che il ciclo viene eseguito.
-        courseB_collector_loops4_c: Alla fine del ciclo `ripeti` Laurel deve muoversi verso il basso e finire di raccogliere il tesoro!
+        courseB_collector_loops4_c: Alla fine del ciclo `ripeti` Laurel deve muoversi verso il basso e finire di raccogliere i diamanti!
       courseB_collector_loops5_authored_hint:
         courseB_collector_loops5_a: Devi usare più di un ciclo per risolvere bene l'esercizio.
         courseB_collector_loops5_b: Per vedere cosa fa questo programma, prova ad eseguirlo un paio di volte.
@@ -3105,19 +3104,19 @@ it:
       courseB_collector_loops6_authored_hint:
         courseB_collector_loops6_a: Non riesci a capire in che punto il programma inizia a sbagliare? Usa il pulsante "Fai un passo" per eseguire il programma un'istruzione alla volta.
         courseB_collector_loops6_b: Puoi modificare il numero di volte che il ciclo viene ripetuto cliccando sul numero "3" e scegliendo un altro numero.
-        courseB_collector_loops6_c: Dovresti usare 3 cicli `ripeti` per risolvere l'esercizio.
+        courseB_collector_loops6_c: Dovrai usare 3 cicli `ripeti` per risolvere l'esercizio.
         courseB_collector_loops6_d: Se sei confuso, prova a suddividere questo percorso in 3 parti.
       courseB_collector_loops6_2018_authored_hint:
         courseB_collector_loops6_a: Non riesci a capire in che punto il programma inizia a sbagliare? Usa il pulsante "Fai un passo" per eseguire il programma un'istruzione alla volta.
         courseB_collector_loops6_b: Puoi modificare il numero di volte che il ciclo viene ripetuto cliccando sul numero "3" e scegliendo un altro numero.
-        courseB_collector_loops6_c: Dovresti usare 3 cicli `ripeti` per risolvere l'esercizio.
+        courseB_collector_loops6_c: Dovrai usare 3 cicli `ripeti` per risolvere l'esercizio.
         courseB_collector_loops6_d: Se sei confuso, prova a suddividere questo percorso in 3 parti.
       courseB_collector_loops7_authored_hint:
         courseB_collector_loops7_a: Se hai problemi con questo esercizio, prova a disegnarlo su un pezzo di carta per aiutarti a capirlo.
-        courseB_collector_loops7_b: Hai bisogno di 3 cicli `ripeti` per risolvere questo esercizio e non dimenticare l'ultima gemma isolata!
+        courseB_collector_loops7_b: Hai bisogno di 3 cicli `ripeti` per risolvere questo esercizio e non dimenticare l'ultimo diamante isolato!
       courseB_collector_loops7_2018_authored_hint:
         courseB_collector_loops7_a: Se hai problemi con questo esercizio, prova a disegnarlo su un pezzo di carta per aiutarti a capirlo.
-        courseB_collector_loops7_b: Hai bisogno di 3 cicli `ripeti` per risolvere questo esercizio e non dimenticare l'ultima gemma isolata!
+        courseB_collector_loops7_b: Hai bisogno di 3 cicli `ripeti` per risolvere questo esercizio e non dimenticare l'ultimo diamante isolato!
       courseB_collector_loops8_authored_hint:
         courseB_collector_loops8_challenge_a: Se non riesci a capire dove mettere il ciclo `ripeti`, scrivi il codice con i singoli blocchi azzurri e poi cerca lo schema che si ripete.
       courseB_collector_loops8_2018_authored_hint:
@@ -3329,6 +3328,67 @@ it:
           </next>
           </block>
           </xml>
+      courseB_collector_loops_challenge2_2018_authored_hint:
+        courseB_collector_loops_challenge2_a: If something goes wrong, don't be afraid to start over. Don't give up!
+        courseB_collector_loops_challenge2_b: |-
+          If you repeat this pattern, Laurel won't hit the wall at the bottom of the cave!
+          
+          <xml><block type="maze_moveEast">
+          <next>
+          <block type="collector_collect">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block></xml>
+        courseB_collector_loops_challenge2_c: Try using a `repeat` block to collect the final pile of treasure!
+        courseB_collector_loops_challenge2_d: |-
+          Try this solution:
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="3-10">4</title>
+          <statement name="DO">
+          <block type="maze_moveEast">
+          <next>
+          <block type="collector_collect">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="3-10">6</title>
+          <statement name="DO">
+          <block type="collector_collect"/>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_collector_loops_challenge2a_authored_hint:
         courseB_collector_loops_challenge2a_a: If something goes wrong, try debugging it. Don't give up!
         courseB_collector_loops_challenge2a_b: Look at this option for getting through the maze. Do you see a pattern that you can repeat?
@@ -3364,7 +3424,7 @@ it:
           <xml><block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="3-10">5</title>
           </block></xml>
-        courseB_iceage_loops3_b: To repeat code, drag out a `repeat` loop, then put the block you want inside of it.
+        courseB_iceage_loops3_b: Per ripetere una sequenza di istruzioni, trascina nell'area di lavoro un blocco `ripeti ... volte` e inserisci al suo interno i blocchi che vuoi ripetere.
       courseB_iceage_loops4_authored_hint:
         courseB_iceage_loops4_a: Try writing down the steps Scrat would take to get to the acorn. Do you see a pattern?
         courseB_iceage_loops4_b: Don't be afraid to run your code and see what happens!
@@ -3488,7 +3548,7 @@ it:
       courseB_playlab_challenge1_Template_2018_authored_hint: { }
       courseB_playlab_events2_authored_hint:
         courseB_playlab_events2_a: |-
-          Questo è il blocco per far dire qualcosa a Daisy:
+          Questo è il blocco per far dire qualcosa al drago:
           
           <xml>
           <block type="studio_saySpriteChoices">
@@ -3498,7 +3558,7 @@ it:
           </xml>
       courseB_playlab_events2_2018_authored_hint:
         courseB_playlab_events2_a: |-
-          Questo è il blocco per far dire qualcosa a Daisy:
+          Questo è il blocco per far dire qualcosa al drago:
           
           <xml>
           <block type="studio_saySpriteChoices">
@@ -3516,7 +3576,7 @@ it:
           </block>
           </xml>
         courseB_playlab_events3_b: |-
-          Questo è il blocco di cui hai bisogno per cambiare l'umore di Daisy:
+          Questo è il blocco di cui hai bisogno per cambiare l'umore del drago:
           
           <xml>
           <block type="studio_setSpriteEmotion">
@@ -3534,7 +3594,7 @@ it:
           </block>
           </xml>
         courseB_playlab_events3_b: |-
-          Questo è il blocco di cui hai bisogno per cambiare l'umore di Daisy:
+          Questo è il blocco di cui hai bisogno per cambiare l'umore del drago:
           
           <xml>
           <block type="studio_setSpriteEmotion">
@@ -3948,35 +4008,35 @@ it:
       courseB_starWars_prog9_authored_hint:
         courseB_starWars_prog9_a: Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio.
         courseB_starWars_prog9_b: Ci sono molti modi per risolvere questo esercizio.
-        courseB_starWars_prog9_c: Un ciclo 'ripeti' potrebbe aiutarti qui?
+        courseB_starWars_prog9_c: Un ciclo `ripeti` potrebbe aiutarti qui?
       courseB_starWars_prog9_2018_authored_hint:
         courseB_starWars_prog9_a: Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio.
         courseB_starWars_prog9_b: Ci sono molti modi per risolvere questo esercizio.
-        courseB_starWars_prog9_c: Un ciclo 'ripeti' potrebbe aiutarti qui?
+        courseB_starWars_prog9_c: Un ciclo `ripeti` potrebbe aiutarti qui?
       courseC_PlayLab_embed_events9_authored_hint: { }
       courseC_PlayLab_events1_authored_hint:
         courseC_PlayLab_events1_a: |-
-          Attach this block to the `when run` block:
+          Collega questo blocco al blocco `quando si clicca su "Esegui"`:
           
           <xml>
           <block type="studio_saySpriteChoices">
           <title name="SPRITE">0</title>
-          <title name="VALUE">Hi there.</title>
+          <title name="VALUE">Ciao!</title>
           </block>
           </xml>
       courseC_PlayLab_events1_2018_authored_hint:
         courseC_PlayLab_events1_a: |-
-          Attach this block to the `when run` block:
+          Collega questo blocco al blocco `quando si clicca su "Esegui"`:
           
           <xml>
           <block type="studio_saySpriteChoices">
           <title name="SPRITE">0</title>
-          <title name="VALUE">Hi there.</title>
+          <title name="VALUE">Ciao!</title>
           </block>
           </xml>
       courseC_PlayLab_events2_authored_hint:
         courseC_PlayLab_events2_a: |-
-          Attach two of these blocks to the `when run` block:
+          Collega due di questi blocchi al blocco `quando si clicca su "Esegui"`:
           
           <xml>
           <block type="studio_saySpriteChoices">
@@ -3984,10 +4044,10 @@ it:
           <title name="VALUE">Hi there.</title>
           </block>
           </xml>
-        courseC_PlayLab_events2_b: Use the dropdown menu on the second `actor __ say` block to change which actor speaks.
+        courseC_PlayLab_events2_b: Usa il menu a tendina del secondo blocco `il personaggio ... dice` per specificare quale personaggio deve parlare.
       courseC_PlayLab_events2_2018_authored_hint:
         courseC_PlayLab_events2_a: |-
-          Attach two of these blocks to the `when run` block:
+          Collega due di questi blocchi al blocco `quando si clicca su "Esegui"`:
           
           <xml>
           <block type="studio_saySpriteChoices">
@@ -3995,12 +4055,12 @@ it:
           <title name="VALUE">Hi there.</title>
           </block>
           </xml>
-        courseC_PlayLab_events2_b: Use the dropdown menu on the second `actor __ say` block to change which actor speaks.
+        courseC_PlayLab_events2_b: Usa il menu a tendina del secondo blocco `il personaggio ... dice` per specificare quale personaggio deve parlare.
       courseC_PlayLab_events3_authored_hint:
-        courseC_PlayLab_events3_a: You only need to move Jorge to the right by about 25 pixels to solve this puzzle.
-        courseC_PlayLab_events3_b: Is there a block in the toolbox that looks like it would move an actor?
+        courseC_PlayLab_events3_a: Devi solo spostare il cane a destra di circa 25 pixel per risolvere questo esercizio.
+        courseC_PlayLab_events3_b: Nella cassetta degli attrezzi c'è un blocco che possa servire per muoverebbe un personaggio?
         courseC_PlayLab_events3_c: |-
-          Attach this block to the `when run` block:
+          Collega questo blocco al blocco `quando si clicca su "Esegui"`:
           
           <xml>
           <block type="studio_moveDistance">
@@ -4010,10 +4070,10 @@ it:
           </block>
           </xml>
       courseC_PlayLab_events3_2018_authored_hint:
-        courseC_PlayLab_events3_a: You only need to move Jorge to the right by about 25 pixels to solve this puzzle.
-        courseC_PlayLab_events3_b: Is there a block in the toolbox that looks like it would move an actor?
+        courseC_PlayLab_events3_a: Devi solo spostare il cane a destra di circa 25 pixel per risolvere questo esercizio.
+        courseC_PlayLab_events3_b: Nella cassetta degli attrezzi c'è un blocco che possa servire per muoverebbe un personaggio?
         courseC_PlayLab_events3_c: |-
-          Attach this block to the `when run` block:
+          Collega questo blocco al blocco `quando si clicca su "Esegui"`:
           
           <xml>
           <block type="studio_moveDistance">
@@ -4023,85 +4083,85 @@ it:
           </block>
           </xml>
       courseC_PlayLab_events4_authored_hint:
-        courseC_PlayLab_events4_b: When the "Run" button is clicked, Jorge needs to move right **100** pixels to reach Olive the Cat.
-        courseC_PlayLab_events4_a: You will need to attach an `actor __ say` block to the `when actor touches` event to solve this puzzle.
+        courseC_PlayLab_events4_b: Quando si clicca sul pulsante "Esegui", il cane deve spostarsi a destra di **100** pixel per raggiungere il gatto.
+        courseC_PlayLab_events4_a: Per risolvere questo esercizio sarà necessario collegare un blocco `il personaggio ... dice` all'evento `quando il personaggio ... tocca ...`.
       courseC_PlayLab_events4_2018_authored_hint:
-        courseC_PlayLab_events4_b: When the "Run" button is clicked, Jorge needs to move right **100** pixels to reach Olive the Cat.
-        courseC_PlayLab_events4_a: You will need to attach an `actor __ say` block to the `when actor touches` event to solve this puzzle.
+        courseC_PlayLab_events4_b: Quando si clicca sul pulsante "Esegui", il cane deve spostarsi a destra di **100** pixel per raggiungere il gatto.
+        courseC_PlayLab_events4_a: Per risolvere questo esercizio sarà necessario collegare un blocco `il personaggio ... dice` all'evento `quando il personaggio ... tocca ...`.
       courseC_PlayLab_events5_authored_hint:
-        courseC_PlayLab_events5_a: You will need to click the dropdown menu in the `actor say` block to find the text "What's new?"
-        courseC_PlayLab_events5_b: Click on Octavia when you run your program to check that it works!
+        courseC_PlayLab_events5_a: Sarà necessario cliccare sul secondo menu a tendina del blocco `il personaggio ... dice ...` per trovare il testo "Novità?"
+        courseC_PlayLab_events5_b: Per controllare che funzioni correttamente, clicca sul polpo dopo aver avviato il tuo programma!
       courseC_PlayLab_events5_2018_authored_hint:
-        courseC_PlayLab_events5_a: You will need to click the dropdown menu in the `actor say` block to find the text "What's new?"
-        courseC_PlayLab_events5_b: Click on Octavia when you run your program to check that it works!
+        courseC_PlayLab_events5_a: Sarà necessario cliccare sul secondo menu a tendina del blocco `il personaggio ... dice ...` per trovare il testo "Novità?"
+        courseC_PlayLab_events5_b: Per controllare che funzioni correttamente, clicca sul polpo dopo aver avviato il tuo programma!
       courseC_PlayLab_events6_authored_hint:
-        courseC_PlayLab_events6_a: Each green `when arrow` block should have one action below it.
-        courseC_PlayLab_events6_b: Use the drop down menu on the `move actor 1` block to change which direction Waddles moves.
-        courseC_PlayLab_events6_c: When you're done, you should be able to move Waddles around using the arrow keys on your computer!
+        courseC_PlayLab_events6_a: 'Ogni blocco verde `quando si preme sulla freccia verso ...`può essere associato delle specifiche azioni: i blocchi agganciati sotto di esso.'
+        courseC_PlayLab_events6_b: Usa il menu a tendina del blocco `sposta il personaggio 1 ...` per cambiare la direzione da dare al pinguino.
+        courseC_PlayLab_events6_c: Quando avrai finito, sarai in grado di muovere il pinguino in tutte le direzioni usando i tasti freccia (sulla tastiera o cliccando i tasti arancioni).
       courseC_PlayLab_events6_2018_authored_hint:
-        courseC_PlayLab_events6_a: Each green `when arrow` block should have one action below it.
-        courseC_PlayLab_events6_b: Use the drop down menu on the `move actor 1` block to change which direction Waddles moves.
-        courseC_PlayLab_events6_c: When you're done, you should be able to move Waddles around using the arrow keys on your computer!
+        courseC_PlayLab_events6_a: 'Ogni blocco verde `quando si preme sulla freccia verso ...`può essere associato delle specifiche azioni: i blocchi agganciati sotto di esso.'
+        courseC_PlayLab_events6_b: Usa il menu a tendina del blocco `sposta il personaggio 1 ...` per cambiare la direzione da dare al pinguino.
+        courseC_PlayLab_events6_c: Quando avrai finito, sarai in grado di muovere il pinguino in tutte le direzioni usando i tasti freccia (sulla tastiera o cliccando i tasti arancioni).
       courseC_PlayLab_events7_authored_hint:
-        courseC_PlayLab_events7_a: 'Use both the `move actor 2 up 400 pixels` block and the `move actor 2 down 400 pixels` block inside the `repeat forever` loop to solve this puzzle. '
-        courseC_PlayLab_events7_b: The `repeat forever` loop does not need to be connected to any other event blocks; it will run on its own.
+        courseC_PlayLab_events7_a: 'Per risolvere questo esercizio, devi usare entrambi il blocchi `sposta il personaggio 2 in alto 400 pixel` e `sposta il personaggio 2 in basso 400 pixel` all''interno del ciclo `ripeti per sempre`.'
+        courseC_PlayLab_events7_b: 'Il blocco `ripeti per sempre` non deve essere attaccato a nessun blocco evento: verrà eseguito in autonomia.'
       courseC_PlayLab_events7_2018_authored_hint:
-        courseC_PlayLab_events7_a: 'Use both the `move actor 2 up 400 pixels` block and the `move actor 2 down 400 pixels` block inside the `repeat forever` loop to solve this puzzle. '
-        courseC_PlayLab_events7_b: The `repeat forever` loop does not need to be connected to any other event blocks; it will run on its own.
+        courseC_PlayLab_events7_a: 'Per risolvere questo esercizio, devi usare entrambi il blocchi `sposta il personaggio 2 in alto 400 pixel` e `sposta il personaggio 2 in basso 400 pixel` all''interno del ciclo `ripeti per sempre`.'
+        courseC_PlayLab_events7_b: 'Il blocco `ripeti per sempre` non deve essere attaccato a nessun blocco evento: verrà eseguito in autonomia.'
       courseC_PlayLab_events8_authored_hint:
-        courseC_PlayLab_events8_a: You will need to connect blocks to the `when actor touches` block to make this happen correctly.
-        courseC_PlayLab_events8_b: The `actor say` and `play sound` blocks in the toolbox should help you out!
+        courseC_PlayLab_events8_a: Per risolvere l'esercizio, devi collegare dei blocchi all'evento `quando il personaggio 1 tocca il personaggio 2`.
+        courseC_PlayLab_events8_b: I blocchi nella cassetta degli attrezzi `il personaggio 1 dice ...` e `riproduci il suono di ...` dovrebbero darti una mano!
       courseC_PlayLab_events8_2018_authored_hint:
-        courseC_PlayLab_events8_a: You will need to connect blocks to the `when actor touches` block to make this happen correctly.
-        courseC_PlayLab_events8_b: The `actor say` and `play sound` blocks in the toolbox should help you out!
+        courseC_PlayLab_events8_a: Per risolvere l'esercizio, devi collegare dei blocchi all'evento `quando il personaggio 1 tocca il personaggio 2`.
+        courseC_PlayLab_events8_b: I blocchi nella cassetta degli attrezzi `il personaggio 1 dice ...` e `riproduci il suono di ...` dovrebbero darti una mano!
       courseC_PlayLab_events9_authored_hint:
-        courseC_PlayLab_events9_a: The `score point` block will help you to solve this puzzle.
-        courseC_PlayLab_events9_b: Make sure that your new `when actor touches` block says actor **1** and actor **3**.
-        courseC_PlayLab_events9_c: You can have more than one `when actor touches` event in your workspace at the same time, so you don't have to delete the first one!
+        courseC_PlayLab_events9_a: Il blocco `aggiungi un punto` ti aiuterà a risolvere questo esercizio.
+        courseC_PlayLab_events9_b: Controlla che il blocco evento `quando il personaggio ... tocca ...` sia impostato sui personaggi **1** e **3**.
+        courseC_PlayLab_events9_c: Puoi avere più di un evento `quando il personaggio ... tocca ...` contemporaneamente nella tua area di lavoro, quindi non devi eliminare il precedente!
       courseC_PlayLab_events9_2018_authored_hint:
-        courseC_PlayLab_events9_a: The `score point` block will help you to solve this puzzle.
-        courseC_PlayLab_events9_b: Make sure that your new `when actor touches` block says actor **1** and actor **3**.
-        courseC_PlayLab_events9_c: You can have more than one `when actor touches` event in your workspace at the same time, so you don't have to delete the first one!
+        courseC_PlayLab_events9_a: Il blocco `aggiungi un punto` ti aiuterà a risolvere questo esercizio.
+        courseC_PlayLab_events9_b: Controlla che il blocco evento `quando il personaggio ... tocca ...` sia impostato sui personaggi **1** e **3**.
+        courseC_PlayLab_events9_c: Puoi avere più di un evento `quando il personaggio ... tocca ...` contemporaneamente nella tua area di lavoro, quindi non devi eliminare il precedente!
       courseC_PlayLab_eventsA_authored_hint:
-        courseC_PlayLab_eventsA_a: Use the `set background` block and the `set actor to a ____ speed` block to solve this puzzle.
-        courseC_PlayLab_eventsA_b: You will need to specifically drag a `when run` event block into the workspace to solve this puzzle.
+        courseC_PlayLab_eventsA_a: Per risolvere questo esercizio, usa i blocchi `imposta uno sfondo ...` e `imposta il personaggio ... a una velocità ...`.
+        courseC_PlayLab_eventsA_b: Per risolvere questo esercizio, dovrai trascinare tu nell'area di lavoro il blocco evento `quando si clicca su "Esegui"`.
       courseC_PlayLab_eventsA_2018_authored_hint:
-        courseC_PlayLab_eventsA_a: Use the `set background` block and the `set actor to a ____ speed` block to solve this puzzle.
-        courseC_PlayLab_eventsA_b: You will need to specifically drag a `when run` event block into the workspace to solve this puzzle.
+        courseC_PlayLab_eventsA_a: Per risolvere questo esercizio, usa i blocchi `imposta uno sfondo ...` e `imposta il personaggio ... a una velocità ...`.
+        courseC_PlayLab_eventsA_b: Per risolvere questo esercizio, dovrai trascinare tu nell'area di lavoro il blocco evento `quando si clicca su "Esegui"`.
       courseC_PlayLab_eventsFP_authored_hint:
         idea1: |-
-          *Need an idea?*
+          *Serve un idea?*
           
-          **Who's there?** Make characters appear with random images, so no one knows who's showing up next.
+          **Chi c'è?** Fai comparire dei personaggi casuali, così nessuno potrà sapere quale sarà il successivo.
           
           ![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)
         idea2: |-
-          *Need an idea?*
+          *Serve un idea?*
           
-          **Going on an Adventure** - Change the background, then have the characters talk about where they are now.
+          **All'avventura!** - Cambia lo sfondo e fai raccontare ai personaggi dove si trovano.
           
           ![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)
         idea3: |-
-          *Need an idea?*
+          *Serve un idea?*
           
-          **Pinball** - Make one character move using the arrow keys (use `when up arrow`, `when down arrow` blocks), then play random sounds when it collides with other characters on the screen.
+          **Flipper** - Fai in modo di muovere un personaggio con le frecce (usa gli eventi `quando si preme sulla freccia verso l'alto` e `quando si preme sulla freccia verso il basso`), quindi riproduci un suono casuale quando il personaggio sbatte contro gli altri.
       courseC_PlayLab_eventsFP_2018_authored_hint:
         idea1: |-
-          *Need an idea?*
+          *Serve un idea?*
           
-          **Who's there?** Make characters appear with random images, so no one knows who's showing up next.
+          **Chi c'è?** Fai comparire dei personaggi casuali, così nessuno potrà sapere quale sarà il successivo.
           
           ![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)
         idea2: |-
-          *Need an idea?*
+          *Serve un idea?*
           
-          **Going on an Adventure** - Change the background, then have the characters talk about where they are now.
+          **All'avventura!** - Cambia lo sfondo e fai raccontare ai personaggi dove si trovano.
           
           ![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)
         idea3: |-
-          *Need an idea?*
+          *Serve un idea?*
           
-          **Pinball** - Make one character move using the arrow keys (use `when up arrow`, `when down arrow` blocks), then play random sounds when it collides with other characters on the screen.
+          **Flipper** - Fai in modo di muovere un personaggio con le frecce (usa gli eventi `quando si preme sulla freccia verso l'alto` e `quando si preme sulla freccia verso il basso`), quindi riproduci un suono casuale quando il personaggio sbatte contro gli altri.
       courseC_PlayLab_events_challenge1_authored_hint:
         courseC_PlayLab_events_challenge_a: |
           You can use this block to move actors to different places on the game space.
@@ -4153,9 +4213,9 @@ it:
           </block></xml>
           ![](https://images.code.org/b1559bf476ceb59f880c43271c5e10b2-image-1494111787192.59.49 PM.png)
       courseC_artist_loop1_authored_hint:
-        courseC_artist_loop1_a: You don't need to make any changes to the loop, just put one block above it.
+        courseC_artist_loop1_a: Non è necessaria alcuna modifica al ciclo, basta aggiungere un blocco sopra di esso.
         courseC_artist_loop1_b: |-
-          This is the block you will need to set a pattern:
+          Questo è il blocco di cui hai bisogno per impostare uno schema:
           
           <xml>
           <block type="draw_line_style_pattern">
@@ -4163,11 +4223,11 @@ it:
           </block>
           </xml>
           
-          Choose any pattern you like!
+          scegli lo schema che preferisci!
       courseC_artist_loop1_2018_authored_hint:
-        courseC_artist_loop1_a: You don't need to make any changes to the loop, just put one block above it.
+        courseC_artist_loop1_a: Non è necessaria alcuna modifica al ciclo, basta aggiungere un blocco sopra di esso.
         courseC_artist_loop1_b: |-
-          This is the block you will need to set a pattern:
+          Questo è il blocco di cui hai bisogno per impostare uno schema:
           
           <xml>
           <block type="draw_line_style_pattern">
@@ -4175,10 +4235,10 @@ it:
           </block>
           </xml>
           
-          Choose any pattern you like!
+          scegli lo schema che preferisci!
       courseC_artist_loops1a_authored_hint:
         courseC_artist_loops1a_a: |-
-          This is the first block you will need:
+          Questo è il primo blocco di cui hai bisogno:
           
           <xml>
           <block type="jump_to_xy">
@@ -4187,7 +4247,7 @@ it:
           </block>
           </xml>
         courseC_artist_loops1a_b: |-
-          Use this block to draw the sticker!
+          Usa questo blocco per disegnare l'adesivo!
           
           <xml>
           <block type="sticker">
@@ -4196,7 +4256,7 @@ it:
           </xml>
       courseC_artist_loops1a_2018_authored_hint:
         courseC_artist_loops1a_a: |-
-          This is the first block you will need:
+          Questo è il primo blocco di cui hai bisogno:
           
           <xml>
           <block type="jump_to_xy">
@@ -4205,7 +4265,7 @@ it:
           </block>
           </xml>
         courseC_artist_loops1a_b: |-
-          Use this block to draw the sticker!
+          Usa questo blocco per disegnare l'adesivo!
           
           <xml>
           <block type="sticker">
@@ -4213,20 +4273,20 @@ it:
           </block>
           </xml>
       courseC_artist_loops2a_authored_hint:
-        courseC_artist_loops2a_a: Inside your loop, you will want to jump to 200 over 200 down, then draw the bird sticker, then turn 30 degrees.
-        courseC_artist_loops2a_b: Click on the number at the top of the `repeat` loop to change how many times it repeats.
+        courseC_artist_loops2a_a: All'interno del ciclo dovresti saltare a "200 avanti 200 in basso" (per raggiungere il centro dello schermo), quindi disegnare l'adesivo dell'uccello e poi girare di 30 gradi.
+        courseC_artist_loops2a_b: Clicca sul numero in cima al blocco`ripeti ... volte` per cambiare quante volte deve essere ripetuto il ciclo.
       courseC_artist_loops2a_2018_authored_hint:
-        courseC_artist_loops2a_a: Inside your loop, you will want to jump to 200 over 200 down, then draw the bird sticker, then turn 30 degrees.
-        courseC_artist_loops2a_b: Click on the number at the top of the `repeat` loop to change how many times it repeats.
+        courseC_artist_loops2a_a: All'interno del ciclo dovresti saltare a "200 avanti 200 in basso" (per raggiungere il centro dello schermo), quindi disegnare l'adesivo dell'uccello e poi girare di 30 gradi.
+        courseC_artist_loops2a_b: Clicca sul numero in cima al blocco`ripeti ... volte` per cambiare quante volte deve essere ripetuto il ciclo.
       courseC_artist_loops3a_authored_hint:
-        courseC_artist_loops3a_a: You will want to add just one block inside of your loop, after the bird sticker.
-        courseC_artist_loops3a_b: Use the drop down menu on the `draw sticker` block to find the bat sticker.
+        courseC_artist_loops3a_a: Dovrai aggiungere solo un blocco all'interno del ciclo, dopo l'adesivo dell'uccello.
+        courseC_artist_loops3a_b: Usa il menù a tendina del blocco `disegna un adesivo` per trovare l'adesivo del pipistrello.
       courseC_artist_loops3a_2018_authored_hint:
-        courseC_artist_loops3a_a: You will want to add just one block inside of your loop, after the bird sticker.
-        courseC_artist_loops3a_b: Use the drop down menu on the `draw sticker` block to find the bat sticker.
+        courseC_artist_loops3a_a: Dovrai aggiungere solo un blocco all'interno del ciclo, dopo l'adesivo dell'uccello.
+        courseC_artist_loops3a_b: Usa il menù a tendina del blocco `disegna un adesivo` per trovare l'adesivo del pipistrello.
       courseC_artist_loops4a_authored_hint:
         courseC_artist_loops4a_a: |-
-          Use this block to jump forward:
+          Usa questo blocco per saltare in avanti:
           
           <xml>
           <block type="jump_by_constant">
@@ -4235,10 +4295,10 @@ it:
           </block>
           </xml>
           
-          Don't forget to change how far!
+          Non dimenticare di cambiare la distanza!
       courseC_artist_loops4a_2018_authored_hint:
         courseC_artist_loops4a_a: |-
-          Use this block to jump forward:
+          Usa questo blocco per saltare in avanti:
           
           <xml>
           <block type="jump_by_constant">
@@ -4247,7 +4307,7 @@ it:
           </block>
           </xml>
           
-          Don't forget to change how far!
+          Non dimenticare di cambiare la distanza!
       courseC_artist_loops5_authored_hint:
         courseC_artist_loops5_a: |-
           Try using the `jump to` block to get your artist back toward the center:
@@ -4259,29 +4319,29 @@ it:
           </block>
           </xml>
       courseC_artist_loops5a_authored_hint:
-        courseC_artist_loops5a_a: Use the drop down menus on the `draw sticker` blocks to change their images.
+        courseC_artist_loops5a_a: Usa i menù a tendina dei blocchi `disegna un adesivo` per cambiare le immagini.
       courseC_artist_loops5a_2018_authored_hint:
-        courseC_artist_loops5a_a: Use the drop down menus on the `draw sticker` blocks to change their images.
+        courseC_artist_loops5a_a: Usa i menù a tendina dei blocchi `disegna un adesivo` per cambiare le immagini.
       courseC_artist_loops5b_authored_hint:
         courseC_artist_loops5b_a: |-
-          Use this block to set the pattern of your lines:
+          Usa questo blocco per impostare lo schema delle tue linee:
           
           <xml>
           <block type="draw_line_style_pattern">
           <title name="VALUE">DEFAULT</title>
           </block>
           </xml>
-        courseC_artist_loops5b_b: To make a design like the one above, you will want to move backward the same amount that you move forward.
+        courseC_artist_loops5b_b: Per fare un disegno come quello qui sopra, devi far spostare l'artista all'indietro della stessa quantità di cui si è mosso in avanti.
       courseC_artist_loops5b_2018_authored_hint:
         courseC_artist_loops5b_a: |-
-          Use this block to set the pattern of your lines:
+          Usa questo blocco per impostare lo schema delle tue linee:
           
           <xml>
           <block type="draw_line_style_pattern">
           <title name="VALUE">DEFAULT</title>
           </block>
           </xml>
-        courseC_artist_loops5b_b: To make a design like the one above, you will want to move backward the same amount that you move forward.
+        courseC_artist_loops5b_b: Per fare un disegno come quello qui sopra, devi far spostare l'artista all'indietro della stessa quantità di cui si è mosso in avanti.
       courseC_artist_loops6_authored_hint:
         courseC_artist_loops6_a: |
           Try a triangle flower:
@@ -4290,141 +4350,141 @@ it:
           Or a little green bug:
           <img src="https://images.code.org/b9454d6f1159e19c58d9f5b5b37fd156-image-1495821067980.52.43.png" width="150px" />
       courseC_artist_loops6a_authored_hint:
-        courseC_artist_loops6a_a: To make a design like the one above, jump forward less than 75 pixels between each sticker.
+        courseC_artist_loops6a_a: Per realizzare un disegno come quello qui sopra, salta avanti meno di 75 pixel tra ogni adesivo.
       courseC_artist_loops6a_2018_authored_hint:
-        courseC_artist_loops6a_a: To make a design like the one above, jump forward less than 75 pixels between each sticker.
+        courseC_artist_loops6a_a: Per realizzare un disegno come quello qui sopra, salta avanti meno di 75 pixel tra ogni adesivo.
       courseC_artist_loops7a_authored_hint:
         courseC_artist_loops7a_a: |-
-          A circle has 360 degrees. Multiply the degrees in your turn times the number of times you repeat. Does it equal 360?
-          Check the suggested rotations to see that this works!
+          Per disegnare un cerchio completo ci vogliono 360 gradi. Moltiplica i gradi delle curve per il numero di volte che si ripete il ciclo. È uguale a 360?
+          Controlla le rotazioni suggerite per vedere che funziona!
       courseC_artist_loops7a_2018_authored_hint:
         courseC_artist_loops7a_a: |-
-          A circle has 360 degrees. Multiply the degrees in your turn times the number of times you repeat. Does it equal 360?
-          Check the suggested rotations to see that this works!
+          Per disegnare un cerchio completo ci vogliono 360 gradi. Moltiplica i gradi delle curve per il numero di volte che si ripete il ciclo. È uguale a 360?
+          Controlla le rotazioni suggerite per vedere che funziona!
       courseC_artist_loopsPre1a_authored_hint:
-        courseC_artist_loopsPre1a_a: Remember to put the `turn` block inside of the loop.
-        courseC_artist_loopsPre1a_b: 'Your `repeat` loop should have 3 blocks inside of it: `jump to 200 over 200 down`, `move forward by 50 pixels`, and `turn right by 60 degrees`.'
+        courseC_artist_loopsPre1a_a: Ricorda di inserire il blocco `gira a ...` all'interno del ciclo `ripeti ... volte`.
+        courseC_artist_loopsPre1a_b: 'Il ciclo `ripeti ... volte` dovrebbe avere 3 blocchi al suo interno: `salta a 200 avanti 200 in basso`, `vai avanti di 50 pixel` e `gira a destra di 60 gradi`.'
       courseC_artist_loopsPre1a_2018_authored_hint:
-        courseC_artist_loopsPre1a_a: Remember to put the `turn` block inside of the loop.
-        courseC_artist_loopsPre1a_b: 'Your `repeat` loop should have 3 blocks inside of it: `jump to 200 over 200 down`, `move forward by 50 pixels`, and `turn right by 60 degrees`.'
+        courseC_artist_loopsPre1a_a: Ricorda di inserire il blocco `gira a ...` all'interno del ciclo `ripeti ... volte`.
+        courseC_artist_loopsPre1a_b: 'Il ciclo `ripeti ... volte` dovrebbe avere 3 blocchi al suo interno: `salta a 200 avanti 200 in basso`, `vai avanti di 50 pixel` e `gira a destra di 60 gradi`.'
       courseC_artist_loopsPrePre1a_authored_hint:
         courseC_artist_loopsPrePre1a_a: |-
-          The first block you will need is:
+          Il primo blocco di cui avrai bisogno sarà:
           
           ![](https://images.code.org/60e3354a2e7dd37b64833eac1e8694be-image-1499710228373.08.14 AM.png)
         courseC_artist_loopsPrePre1a_b: |-
-          To move forward 50 pixels, use this block:
+          Per andare avanti di 50 pixel usa questo blocco:
           
           ![](https://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27 AM.png)
       courseC_artist_loopsPrePre1a_2018_authored_hint:
         courseC_artist_loopsPrePre1a_a: |-
-          The first block you will need is:
+          Il primo blocco di cui avrai bisogno sarà:
           
           ![](https://images.code.org/60e3354a2e7dd37b64833eac1e8694be-image-1499710228373.08.14 AM.png)
         courseC_artist_loopsPrePre1a_b: |-
-          To move forward 50 pixels, use this block:
+          Per andare avanti di 50 pixel usa questo blocco:
           
           ![](https://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27 AM.png)
       courseC_artist_prog1_authored_hint: { }
       courseC_artist_prog1_2018_authored_hint: { }
       courseC_artist_prog2_authored_hint:
-        courseC_artist_prog2_a: 'Se usi il blocco `vai avanti di 100 pixel`, disegnerò automaticamente una linea.'
-        courseC_artist_prog2_b: Problemi a girare? Utilizza il blocco `gira a destra di 90 gradi`.
+        courseC_artist_prog2_a: '*"Se usi il blocco <xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">100</title></block></xml> disegnerò una linea."*'
+        courseC_artist_prog2_b: Problemi a girare? Usa il blocco <xml><block type="draw_turn_by_constant_dropdown"><title name="DIR">turnRight</title><title name="VALUE" config="45,60,90,120,180">90</title></block></xml>
       courseC_artist_prog2_2018_authored_hint:
-        courseC_artist_prog2_a: 'Se usi il blocco `vai avanti di 100 pixel`, disegnerò automaticamente una linea.'
-        courseC_artist_prog2_b: Problemi a girare? Utilizza il blocco `gira a destra di 90 gradi`.
+        courseC_artist_prog2_a: '*"Se usi il blocco <xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">100</title></block></xml> disegnerò una linea."*'
+        courseC_artist_prog2_b: Problemi a girare? Usa il blocco <xml><block type="draw_turn_by_constant_dropdown"><title name="DIR">turnRight</title><title name="VALUE" config="45,60,90,120,180">90</title></block></xml>
       courseC_artist_prog3_authored_hint:
         courseC_artist_prog3_a: |-
-          To create this window, just draw a square with 100 pixel sides.
-          - move forward
-          - turn
-          - move forward
-          - turn
-          - move forward
-          - turn
-          - move forward
-        courseC_artist_prog3_b: Want to make shorter code? Try using a loop in this puzzle.
+          Per creare il finestrino, devi solo disegnare un quadrato con i lati di 100 pixel:
+          - vai avanti
+          - gira
+          - vai avanti
+          - gira
+          - vai avanti
+          - gira
+          - vai avanti
+        courseC_artist_prog3_b: Vuoi fare un programma più breve? Prova ad usare un ciclo `Ripeti ... volte`.
       courseC_artist_prog3_2018_authored_hint:
         courseC_artist_prog3_a: |-
-          To create this window, just draw a square with 100 pixel sides.
-          - move forward
-          - turn
-          - move forward
-          - turn
-          - move forward
-          - turn
-          - move forward
-        courseC_artist_prog3_b: Want to make shorter code? Try using a loop in this puzzle.
+          Per creare il finestrino, devi solo disegnare un quadrato con i lati di 100 pixel:
+          - vai avanti
+          - gira
+          - vai avanti
+          - gira
+          - vai avanti
+          - gira
+          - vai avanti
+        courseC_artist_prog3_b: Vuoi fare un programma più breve? Prova ad usare un ciclo `Ripeti ... volte`.
       courseC_artist_prog4_authored_hint:
-        courseC_artist_prog4_a: To finish the rocket, just draw the triangle on top!
-        courseC_artist_prog4_b: You can use the drop down menu on the `turn` blocks to see which angle you need!
+        courseC_artist_prog4_a: Per finire il razzo, basta disegnare il triangolo in cima!
+        courseC_artist_prog4_b: Puoi usare il menu a tendina del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
         courseC_artist_prog4_c: |-
-          To draw a triangle, you will want to:
-          - move forward
-          - turn left 120 degrees
-          - move forward
-          - turn left 120 degrees
-          - move forward
+          Per disegnare un triangolo dovresti fare così:
+          - vai avanti
+          - gira a sinistra di 120 gradi
+          - vai avanti
+          - gira a sinistra di 120 gradi
+          - vai avanti
       courseC_artist_prog4_2018_authored_hint:
-        courseC_artist_prog4_a: To finish the rocket, just draw the triangle on top!
-        courseC_artist_prog4_b: You can use the drop down menu on the `turn` blocks to see which angle you need!
+        courseC_artist_prog4_a: Per finire il razzo, basta disegnare il triangolo in cima!
+        courseC_artist_prog4_b: Puoi usare il menu a tendina del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
         courseC_artist_prog4_c: |-
-          To draw a triangle, you will want to:
-          - move forward
-          - turn left 120 degrees
-          - move forward
-          - turn left 120 degrees
-          - move forward
+          Per disegnare un triangolo dovresti fare così:
+          - vai avanti
+          - gira a sinistra di 120 gradi
+          - vai avanti
+          - gira a sinistra di 120 gradi
+          - vai avanti
       courseC_artist_prog5_authored_hint:
-        courseC_artist_prog5_a: Slow the slider down all the way until you can run your code line-by-line to see where things go wrong.
-        courseC_artist_prog5_b: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
-        courseC_artist_prog5_c: You can use the drop down menu on the `turn` blocks to see which angle you need!
-        courseC_artist_prog5_d: Each turn should be 90 degrees to the right.
+        courseC_artist_prog5_a: Trascina il cursore verso la tartaruga per veder eseguire il codice più lentamente e capire dove sono eventuali errori.
+        courseC_artist_prog5_b: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
+        courseC_artist_prog5_c: Puoi usare il menu a tendina del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
+        courseC_artist_prog5_d: Ogni curva dovrebbe essere di 90 gradi a destra.
       courseC_artist_prog5_2018_authored_hint:
-        courseC_artist_prog5_a: Slow the slider down all the way until you can run your code line-by-line to see where things go wrong.
-        courseC_artist_prog5_b: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
-        courseC_artist_prog5_c: You can use the drop down menu on the `turn` blocks to see which angle you need!
-        courseC_artist_prog5_d: Each turn should be 90 degrees to the right.
+        courseC_artist_prog5_a: Trascina il cursore verso la tartaruga per veder eseguire il codice più lentamente e capire dove sono eventuali errori.
+        courseC_artist_prog5_b: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
+        courseC_artist_prog5_c: Puoi usare il menu a tendina del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
+        courseC_artist_prog5_d: Ogni curva dovrebbe essere di 90 gradi a destra.
       courseC_artist_prog6_authored_hint:
-        courseC_artist_prog6_a: The artist is already facing the correct way to draw his first line.
-        courseC_artist_prog6_b: This diamond is really just a square that's standing on its corner.
-        courseC_artist_prog6_c: Since this diamond is also a square, be sure to turn 90 degrees at the corners.
+        courseC_artist_prog6_a: L'artista è già rivolto verso la direzione corretta per disegnare la prima linea.
+        courseC_artist_prog6_b: Questo rombo è semplicemente un quadrato ruotato su uno spigolo.
+        courseC_artist_prog6_c: Dal momento che questo rombo è anche un quadrato, controlla di girare di 90 gradi ad ogni angolo.
       courseC_artist_prog6_2018_authored_hint:
-        courseC_artist_prog6_a: The artist is already facing the correct way to draw his first line.
-        courseC_artist_prog6_b: This diamond is really just a square that's standing on its corner.
-        courseC_artist_prog6_c: Since this diamond is also a square, be sure to turn 90 degrees at the corners.
+        courseC_artist_prog6_a: L'artista è già rivolto verso la direzione corretta per disegnare la prima linea.
+        courseC_artist_prog6_b: Questo rombo è semplicemente un quadrato ruotato su uno spigolo.
+        courseC_artist_prog6_c: Dal momento che questo rombo è anche un quadrato, controlla di girare di 90 gradi ad ogni angolo.
       courseC_artist_prog6_predict1_authored_hint: { }
       courseC_artist_prog6_predict1_2018_authored_hint: { }
       courseC_artist_prog7_authored_hint:
-        courseC_artist_prog7_a: Every angle is either 45 or 90 degrees.
-        courseC_artist_prog7_b: "Does it work at the first step?  \nHow about the second?  \nWhere does it go wrong?"
-        courseC_artist_prog7_c: You can use the dropdown menu on the turn blocks to see which angle you need!
+        courseC_artist_prog7_a: Gli angoli sono di 45 o 90 gradi.
+        courseC_artist_prog7_b: "- Al primo passo tutto procede bene?\n- E al secondo?\n- Dov'è che qualcosa comincia a non funzionare?"
+        courseC_artist_prog7_c: Puoi usare il menu a tendina del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
         courseC_artist_prog7_d: |-
-          You will want to:
-          - move forward
-          - turn right 45 degrees
-          - move forward
-          - turn right 90 degrees
-          - move forward
-          - turn right 45 degrees
+          Dovresti fare così:
+          - vai avanti
+          - gira a destra di 45 gradi
+          - vai avanti
+          - gira a destra di 90 gradi
+          - vai avanti
+          - gira a destra di 45 gradi
           
-          Repeat this pattern 2 times!
-        courseC_artist_prog7_e: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+          Ripeti questa sequenza per 2 volte!
+        courseC_artist_prog7_e: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseC_artist_prog7_2018_authored_hint:
-        courseC_artist_prog7_a: Every angle is either 45 or 90 degrees.
-        courseC_artist_prog7_b: "Does it work at the first step?  \nHow about the second?  \nWhere does it go wrong?"
-        courseC_artist_prog7_c: You can use the dropdown menu on the turn blocks to see which angle you need!
+        courseC_artist_prog7_a: Gli angoli sono di 45 o 90 gradi.
+        courseC_artist_prog7_b: "- Al primo passo tutto procede bene?\n- E al secondo?\n- Dov'è che qualcosa comincia a non funzionare?"
+        courseC_artist_prog7_c: Puoi usare il menu a tendina del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
         courseC_artist_prog7_d: |-
-          You will want to:
-          - move forward
-          - turn right 45 degrees
-          - move forward
-          - turn right 90 degrees
-          - move forward
-          - turn right 45 degrees
+          Dovresti fare così:
+          - vai avanti
+          - gira a destra di 45 gradi
+          - vai avanti
+          - gira a destra di 90 gradi
+          - vai avanti
+          - gira a destra di 45 gradi
           
-          Repeat this pattern 2 times!
-        courseC_artist_prog7_e: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+          Ripeti questa sequenza per 2 volte!
+        courseC_artist_prog7_e: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseC_artist_prog8_authored_hint: { }
       courseC_artist_prog8_2018_authored_hint: { }
       courseC_artist_prog_challenge1-doghouse_authored_hint:
@@ -4446,57 +4506,57 @@ it:
       courseC_collector_loops_challenge2_2018_authored_hint:
         courseC_maze_loops_challenge2_b: Use loops so you don't run out of `collect` blocks!
       courseC_collector_prog1_authored_hint:
-        courseC_collector_prog1_a: When you are standing on a space with treasure, use the <xml><block type="collector_collect"/></xml> block to pick it up.
-        courseC_collector_prog1_b: The most simple solution would be to move forward once, then collect treasure.
+        courseC_collector_prog1_a: Quando hai raggiunto un diamante, usa il blocco <xml><block type="collector_collect"/></xml> per raccoglierlo.
+        courseC_collector_prog1_b: La soluzione più semplice è fare un passo avanti e raccogliere un diamante.
       courseC_collector_prog1_2018_authored_hint:
-        courseC_collector_prog1_a: When you are standing on a space with treasure, use the <xml><block type="collector_collect"/></xml> block to pick it up.
-        courseC_collector_prog1_b: The most simple solution would be to move forward once, then collect treasure.
+        courseC_collector_prog1_a: Quando hai raggiunto un diamante, usa il blocco <xml><block type="collector_collect"/></xml> per raccoglierlo.
+        courseC_collector_prog1_b: La soluzione più semplice è fare un passo avanti e raccogliere un diamante.
       courseC_collector_prog2_authored_hint:
-        courseC_collector_prog2_a: You can use four <xml><block type="maze_move"><title name="DIR">moveForward</title></block></xml> blocks or use the <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> block to make your program shorter.
-        courseC_collector_prog2_b: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+        courseC_collector_prog2_a: Puoi usare quattro blocchi <xml><block type="maze_move"><title name="DIR">moveForward</title></block></xml> oppure usare il blocco <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> per rendere il tuo programma più corto.
+        courseC_collector_prog2_b: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseC_collector_prog2_2018_authored_hint:
-        courseC_collector_prog2_a: You can use four <xml><block type="maze_move"><title name="DIR">moveForward</title></block></xml> blocks or use the <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> block to make your program shorter.
-        courseC_collector_prog2_b: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+        courseC_collector_prog2_a: Puoi usare quattro blocchi <xml><block type="maze_move"><title name="DIR">moveForward</title></block></xml> oppure usare il blocco <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> per rendere il tuo programma più corto.
+        courseC_collector_prog2_b: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseC_collector_prog3_authored_hint:
-        courseC_collector_prog3_a: The program will only run the blocks that are connected to the <xml><block type="when_run"/></xml> block.
-        courseC_collector_prog3_b: Try using the "Step" button to run your code one line at a time.  Do you see where the code goes wrong?
+        courseC_collector_prog3_a: Verranno eseguiti solo i blocchi collegati al blocco arancione <xml><block type="when_run"/></xml>
+        courseC_collector_prog3_b: Prova ad usare il pulsante "Fai un passo" per eseguire il programma un'istruzione alla volta. Riesci a trovare l'errore?
         courseC_collector_prog3_c: Se hai difficoltà a risolvere questo esercizio, prova prima a scrivere le mosse su un pezzo di carta.
       courseC_collector_prog3_2018_authored_hint:
-        courseC_collector_prog3_a: The program will only run the blocks that are connected to the <xml><block type="when_run"/></xml> block.
-        courseC_collector_prog3_b: Try using the "Step" button to run your code one line at a time.  Do you see where the code goes wrong?
+        courseC_collector_prog3_a: Verranno eseguiti solo i blocchi collegati al blocco arancione <xml><block type="when_run"/></xml>
+        courseC_collector_prog3_b: Prova ad usare il pulsante "Fai un passo" per eseguire il programma un'istruzione alla volta. Riesci a trovare l'errore?
         courseC_collector_prog3_c: Se hai difficoltà a risolvere questo esercizio, prova prima a scrivere le mosse su un pezzo di carta.
       courseC_collector_prog4_authored_hint:
-        courseC_collector_prog4_a: If you get stuck, try writing out the steps on a piece of paper.
-        courseC_collector_prog4_b: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
-        courseC_collector_prog4_c: Try this option for a path.
+        courseC_collector_prog4_a: Se ti blocchi, prova a scrivere i passaggi su un foglio.
+        courseC_collector_prog4_b: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
+        courseC_collector_prog4_c: Prova questo percorso.
       courseC_collector_prog4_2018_authored_hint:
-        courseC_collector_prog4_a: If you get stuck, try writing out the steps on a piece of paper.
-        courseC_collector_prog4_b: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
-        courseC_collector_prog4_c: Try this option for a path.
+        courseC_collector_prog4_a: Se ti blocchi, prova a scrivere i passaggi su un foglio.
+        courseC_collector_prog4_b: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
+        courseC_collector_prog4_c: Prova questo percorso.
       courseC_collector_prog5_authored_hint:
-        courseC_collector_prog5_a: "\"Does it work at the first step?\nDoes it work at the second step? \nWhere do things go wrong?\""
-        courseC_collector_prog5_b: If you fixed one bug and the program still doesn't work, use the steps above to find more bugs.
-        courseC_collector_prog5_c: If you get stuck, try writing out the steps on a piece of paper.
-        courseC_collector_prog5_d: Follow the path to collect the treasure.
+        courseC_collector_prog5_a: "\"Funziona il primo passo?\nÈ corretta la seconda istruzione?\nDov'è che il codice comincia a non fare ciò che avevi in mente?\""
+        courseC_collector_prog5_b: Se hai corretto un errore e il programma continua a non funzionare, usa la procedura del precedente suggerimento per trovare altri errori.
+        courseC_collector_prog5_c: Se ti blocchi, prova a scrivere i passaggi su un foglio.
+        courseC_collector_prog5_d: Segui il percorso per raccogliere i diamanti.
       courseC_collector_prog5_2018_authored_hint:
-        courseC_collector_prog5_a: "\"Does it work at the first step?\nDoes it work at the second step? \nWhere do things go wrong?\""
-        courseC_collector_prog5_b: If you fixed one bug and the program still doesn't work, use the steps above to find more bugs.
-        courseC_collector_prog5_c: If you get stuck, try writing out the steps on a piece of paper.
-        courseC_collector_prog5_d: Follow the path to collect the treasure.
+        courseC_collector_prog5_a: "\"Funziona il primo passo?\nÈ corretta la seconda istruzione?\nDov'è che il codice comincia a non fare ciò che avevi in mente?\""
+        courseC_collector_prog5_b: Se hai corretto un errore e il programma continua a non funzionare, usa la procedura del precedente suggerimento per trovare altri errori.
+        courseC_collector_prog5_c: Se ti blocchi, prova a scrivere i passaggi su un foglio.
+        courseC_collector_prog5_d: Segui il percorso per raccogliere i diamanti.
       courseC_collector_prog6_authored_hint:
-        courseC_collector_prog6_a: "Can you figure out what is going wrong?  \n\nTry using the \"Step\" button to find errors by running your code line by line."
-        courseC_collector_prog6_b: Stuck?  Try this path to collect the treasure.
+        courseC_collector_prog6_a: "Riesci a capire cosa non funziona?\n\nProva a usare il pulsante \"Fai un passo\" per trovare errori eseguendo il codice un blocco per volta."
+        courseC_collector_prog6_b: Ti sei bloccato? Segui il percorso per raccogliere i diamanti.
       courseC_collector_prog6_2018_authored_hint:
-        courseC_collector_prog6_a: "Can you figure out what is going wrong?  \n\nTry using the \"Step\" button to find errors by running your code line by line."
-        courseC_collector_prog6_b: Stuck?  Try this path to collect the treasure.
+        courseC_collector_prog6_a: "Riesci a capire cosa non funziona?\n\nProva a usare il pulsante \"Fai un passo\" per trovare errori eseguendo il codice un blocco per volta."
+        courseC_collector_prog6_b: Ti sei bloccato? Segui il percorso per raccogliere i diamanti.
       courseC_collector_prog7_authored_hint:
-        courseC_collector_prog7_a: 'There is already a lot of great code in the workspace.  You don''t need to delete any of it to solve this puzzle.  '
-        courseC_collector_prog7_b: Don't see the block you need to get the adventurer moving in the right direction?  Pull one from the toolbox.
-        courseC_collector_prog7_c: Having trouble seeing a route to collect all of the treasure?  Try this path!
+        courseC_collector_prog7_a: 'Ci sono già tanti ottimi blocchi nell''area di lavoro. Non hai bisogno di cancellarne alcuno per risolvere questo esercizio.'
+        courseC_collector_prog7_b: Non trovi il blocco che ti serve per far muovere l'avventuriera nella direzione corretta? Prendine uno dalla cassetta degli attrezzi.
+        courseC_collector_prog7_c: Hai difficoltà ad immaginare un percorso per raccogliere tutti i diamanti? Prova questo!
       courseC_collector_prog7_2018_authored_hint:
-        courseC_collector_prog7_a: 'There is already a lot of great code in the workspace.  You don''t need to delete any of it to solve this puzzle.  '
-        courseC_collector_prog7_b: Don't see the block you need to get the adventurer moving in the right direction?  Pull one from the toolbox.
-        courseC_collector_prog7_c: Having trouble seeing a route to collect all of the treasure?  Try this path!
+        courseC_collector_prog7_a: 'Ci sono già tanti ottimi blocchi nell''area di lavoro. Non hai bisogno di cancellarne alcuno per risolvere questo esercizio.'
+        courseC_collector_prog7_b: Non trovi il blocco che ti serve per far muovere l'avventuriera nella direzione corretta? Prendine uno dalla cassetta degli attrezzi.
+        courseC_collector_prog7_c: Hai difficoltà ad immaginare un percorso per raccogliere tutti i diamanti? Prova questo!
       courseC_collector_prog8_authored_hint: { }
       courseC_collector_prog8_2018_authored_hint: { }
       courseC_collector_prog9_authored_hint: { }
@@ -4519,99 +4579,99 @@ it:
       courseC_flappy_events1_2018_authored_hint:
         courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
       courseC_flappy_events2_authored_hint:
-        courseC_flappy_events2_a: 'The block you need to add is called `set speed`. '
-        courseC_flappy_events2_b: Connect the `set speed` block to the `when run` block to solve this puzzle.
+        courseC_flappy_events2_a: 'Il blocco che devi aggiungere si chiama `imposta una velocità ...`. '
+        courseC_flappy_events2_b: Collega il blocco `imposta una velocità ...` al blocco `quando si clicca su "Esegui"` per risolvere questo esercizio.
       courseC_flappy_events2_2018_authored_hint:
-        courseC_flappy_events2_a: 'The block you need to add is called `set speed`. '
-        courseC_flappy_events2_b: Connect the `set speed` block to the `when run` block to solve this puzzle.
+        courseC_flappy_events2_a: 'Il blocco che devi aggiungere si chiama `imposta una velocità ...`. '
+        courseC_flappy_events2_b: Collega il blocco `imposta una velocità ...` al blocco `quando si clicca su "Esegui"` per risolvere questo esercizio.
       courseC_flappy_events3_authored_hint:
-        courseC_flappy_events3_a: If something isn't working correctly, make sure your blocks are connected to the correct events in the workspace.
+        courseC_flappy_events3_a: Se qualcosa non funziona correttamente, controlla che i blocchi siano collegati agli eventi corretti nell'area di lavoro.
       courseC_flappy_events3_2018_authored_hint:
-        courseC_flappy_events3_a: If something isn't working correctly, make sure your blocks are connected to the correct events in the workspace.
+        courseC_flappy_events3_a: Se qualcosa non funziona correttamente, controlla che i blocchi siano collegati agli eventi corretti nell'area di lavoro.
       courseC_flappy_events4_authored_hint:
-        courseC_flappy_events4_a: Connect the `end game` block to `when hit an obstacle` to solve this puzzle.
+        courseC_flappy_events4_a: Per risolvere questo esercizio, collega il blocco `fine del gioco` al blocco dell'evento `quando colpisce un ostacolo`.
       courseC_flappy_events4_2018_authored_hint:
-        courseC_flappy_events4_a: Connect the `end game` block to `when hit an obstacle` to solve this puzzle.
+        courseC_flappy_events4_a: Per risolvere questo esercizio, collega il blocco `fine del gioco` al blocco dell'evento `quando colpisce un ostacolo`.
       courseC_flappy_events5_authored_hint:
-        courseC_flappy_events5_a: You will need to use the `score a point` block to pass this level.
+        courseC_flappy_events5_a: Dovrai usare il blocco `aggiungi un punto` per completare l'esercizio.
       courseC_flappy_events5_2018_authored_hint:
-        courseC_flappy_events5_a: You will need to use the `score a point` block to pass this level.
+        courseC_flappy_events5_a: Dovrai usare il blocco `aggiungi un punto` per completare l'esercizio.
       courseC_flappy_events6_authored_hint:
-        courseC_flappy_events6_a: Try connecting the `flap a ____ amount` block to the `when click` event.
+        courseC_flappy_events6_a: Prova a collegare il blocco `sbatti le ali un numero di volte ...` all'evento `quando si clicca`.
       courseC_flappy_events6_2018_authored_hint:
-        courseC_flappy_events6_a: Try connecting the `flap a ____ amount` block to the `when click` event.
+        courseC_flappy_events6_a: Prova a collegare il blocco `sbatti le ali un numero di volte ...` all'evento `quando si clicca`.
       courseC_flappy_events7_authored_hint:
-        courseC_flappy_events7_a: 'You can change the background using the `set scene` block. '
+        courseC_flappy_events7_a: 'Puoi modificare lo sfondo usando il blocco `imposta una scena ...`.'
       courseC_flappy_events7_2018_authored_hint:
-        courseC_flappy_events7_a: 'You can change the background using the `set scene` block. '
+        courseC_flappy_events7_a: 'Puoi modificare lo sfondo usando il blocco `imposta una scena ...`.'
       courseC_flappy_events8_authored_hint:
-        courseC_flappy_events8_a: Try connecting a second `set scene` block under the `when pass obstacle` event to pass this level.
+        courseC_flappy_events8_a: Per completare l'esercizio, devi collegare un secondo blocco `imposta una scena ...` sotto l'evento `quando supera un ostacolo`.
       courseC_flappy_events8_2018_authored_hint:
-        courseC_flappy_events8_a: Try connecting a second `set scene` block under the `when pass obstacle` event to pass this level.
+        courseC_flappy_events8_a: Per completare l'esercizio, devi collegare un secondo blocco `imposta una scena ...` sotto l'evento `quando supera un ostacolo`.
       courseC_flappy_events9_authored_hint:
-        courseC_flappy_events9_a: Connect the `set score 0` block to the `when hit an obstacle` event to pass this level.
+        courseC_flappy_events9_a: Per completare l'esercizio, collega il blocco `imposta il punteggio 0` all'evento `quando colpisce un ostacolo`.
       courseC_flappy_events9_2018_authored_hint:
-        courseC_flappy_events9_a: Connect the `set score 0` block to the `when hit an obstacle` event to pass this level.
+        courseC_flappy_events9_a: Per completare l'esercizio, collega il blocco `imposta il punteggio 0` all'evento `quando colpisce un ostacolo`.
       courseC_flappy_events_template_authored_hint: { }
       courseC_flappy_events_template_2018_authored_hint: { }
       courseC_harvester_loops1_authored_hint:
-        courseC_harvester_loops1_a: Once you have moved to a pumpkin, use <xml><block type="harvester_pumpkin"/></xml> to collect it.
-        courseC_harvester_loops1_b: You can use a loop with the <xml><block type="harvester_pumpkin"/></xml> block to pick more than one pumpkin from a square.
+        courseC_harvester_loops1_a: Quando arrivi ad una zucca, puoi usare il blocco <xml><block type="harvester_pumpkin"/></xml> per raccoglierla.
+        courseC_harvester_loops1_b: Puoi usare un ciclo con il blocco <xml><block type="harvester_pumpkin"/></xml> per prendere più di una zucca da una casella.
       courseC_harvester_loops10_authored_hint: { }
       courseC_harvester_loops10_2018_authored_hint: { }
       courseC_harvester_loops11_authored_hint: { }
       courseC_harvester_loops11_2018_authored_hint: { }
       courseC_harvester_loops1_2018_authored_hint:
-        courseC_harvester_loops1_a: Once you have moved to a pumpkin, use <xml><block type="harvester_pumpkin"/></xml> to collect it.
-        courseC_harvester_loops1_b: You can use a loop with the <xml><block type="harvester_pumpkin"/></xml> block to pick more than one pumpkin from a square.
+        courseC_harvester_loops1_a: Quando arrivi ad una zucca, puoi usare il blocco <xml><block type="harvester_pumpkin"/></xml> per raccoglierla.
+        courseC_harvester_loops1_b: Puoi usare un ciclo con il blocco <xml><block type="harvester_pumpkin"/></xml> per prendere più di una zucca da una casella.
       courseC_harvester_loops2_authored_hint:
-        courseC_harvester_loops2_a: If you get stuck, try writing the steps on paper and looking for repeating patterns.
-        courseC_harvester_loops2_b: You will need one `repeat` loop after another.
-        courseC_harvester_loops2_c: One loop will repeat the `move forward` command, and the other will repeat the `pick pumpkin` command.
+        courseC_harvester_loops2_a: Se ti blocchi, prova a scrivere i passaggi su carta e cerca gli schemi che si ripetono.
+        courseC_harvester_loops2_b: Avrai bisogno di due cicli `ripeti ... volte`, uno dopo l'altro.
+        courseC_harvester_loops2_c: Un ciclo ripeterà l'istruzione `vai avanti` e l'altro ripeterà l'istruzione `prendi zucca`.
       courseC_harvester_loops2_2018_authored_hint:
-        courseC_harvester_loops2_a: If you get stuck, try writing the steps on paper and looking for repeating patterns.
-        courseC_harvester_loops2_b: You will need one `repeat` loop after another.
-        courseC_harvester_loops2_c: One loop will repeat the `move forward` command, and the other will repeat the `pick pumpkin` command.
+        courseC_harvester_loops2_a: Se ti blocchi, prova a scrivere i passaggi su carta e cerca gli schemi che si ripetono.
+        courseC_harvester_loops2_b: Avrai bisogno di due cicli `ripeti ... volte`, uno dopo l'altro.
+        courseC_harvester_loops2_c: Un ciclo ripeterà l'istruzione `vai avanti` e l'altro ripeterà l'istruzione `prendi zucca`.
       courseC_harvester_loops3_authored_hint:
-        courseC_harvester_loops3_a: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.
-        courseC_harvester_loops3_b: For the first pumpkins, you can use code very similar to the last puzzle. Which way do you need to turn afterwards?
-        courseC_harvester_loops3_c: If you want to simplify your code, you can actually put one loop inside of another! This is called a **nested loop**.
+        courseC_harvester_loops3_a: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
+        courseC_harvester_loops3_b: Per la prima zucca, puoi usare un programma molto simile all'esercizio precedente. Da che parte devi girare dopo?
+        courseC_harvester_loops3_c: Se vuoi semplificare il tuo programma, puoi mettere un ciclo `ripeti ... volte` all'interno di un altro! Si chiama **ciclo annidato**.
       courseC_harvester_loops3_2018_authored_hint:
-        courseC_harvester_loops3_a: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.
-        courseC_harvester_loops3_b: For the first pumpkins, you can use code very similar to the last puzzle. Which way do you need to turn afterwards?
-        courseC_harvester_loops3_c: If you want to simplify your code, you can actually put one loop inside of another! This is called a **nested loop**.
+        courseC_harvester_loops3_a: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
+        courseC_harvester_loops3_b: Per la prima zucca, puoi usare un programma molto simile all'esercizio precedente. Da che parte devi girare dopo?
+        courseC_harvester_loops3_c: Se vuoi semplificare il tuo programma, puoi mettere un ciclo `ripeti ... volte` all'interno di un altro! Si chiama **ciclo annidato**.
       courseC_harvester_loops4_authored_hint:
-        courseC_harvester_loops4_a: Use the new `pick corn` block to collect the corn.
-        courseC_harvester_loops4_b: You can use multiple repeat loops in your code, some to pick corn and some to pick pumpkins.
-        courseC_harvester_loops4_c: If you want to simplify your code, you can actually put one loop inside of another! This is called a **nested loop**.
+        courseC_harvester_loops4_a: Usa il nuovo blocco `prendi pannocchia`per raccogliere le pannocchie.
+        courseC_harvester_loops4_b: Puoi usare diversi blocchi `ripeti ... volte` nel tuo programma, alcuni per raccogliere le pannocchie ed altri per le zucche.
+        courseC_harvester_loops4_c: Se vuoi semplificare il tuo programma, puoi mettere un ciclo `ripeti ... volte` all'interno di un altro! Si chiama **ciclo annidato**.
       courseC_harvester_loops4_2018_authored_hint:
-        courseC_harvester_loops4_a: Use the new `pick corn` block to collect the corn.
-        courseC_harvester_loops4_b: You can use multiple repeat loops in your code, some to pick corn and some to pick pumpkins.
-        courseC_harvester_loops4_c: If you want to simplify your code, you can actually put one loop inside of another! This is called a **nested loop**.
+        courseC_harvester_loops4_a: Usa il nuovo blocco `prendi pannocchia`per raccogliere le pannocchie.
+        courseC_harvester_loops4_b: Puoi usare diversi blocchi `ripeti ... volte` nel tuo programma, alcuni per raccogliere le pannocchie ed altri per le zucche.
+        courseC_harvester_loops4_c: Se vuoi semplificare il tuo programma, puoi mettere un ciclo `ripeti ... volte` all'interno di un altro! Si chiama **ciclo annidato**.
       courseC_harvester_loops5_authored_hint:
-        courseC_harvester_loops5_a: If you get stuck, try drawing the entire program and then looking for repeating patterns.
-        courseC_harvester_loops5_b: Does this stair step look familiar from other puzzles? The movements should be similar, just remember to collect crops along the way.
+        courseC_harvester_loops5_a: Se ti blocchi, prova a disegnare l'intero programma e poi cerca gli schemi che si ripetono.
+        courseC_harvester_loops5_b: Non ti sembra che questa gradinata assomigli a quella di altri esercizi? I movimenti dovrebbero essere simili, ricordati solo di raccogliere gli ortaggi lungo la strada.
       courseC_harvester_loops5_2018_authored_hint:
-        courseC_harvester_loops5_a: If you get stuck, try drawing the entire program and then looking for repeating patterns.
-        courseC_harvester_loops5_b: Does this stair step look familiar from other puzzles? The movements should be similar, just remember to collect crops along the way.
+        courseC_harvester_loops5_a: Se ti blocchi, prova a disegnare l'intero programma e poi cerca gli schemi che si ripetono.
+        courseC_harvester_loops5_b: Non ti sembra che questa gradinata assomigli a quella di altri esercizi? I movimenti dovrebbero essere simili, ricordati solo di raccogliere gli ortaggi lungo la strada.
       courseC_harvester_loops6_authored_hint:
-        courseC_harvester_loops6_a: Remember you can put multiple blocks in one repeat loop.
-        courseC_harvester_loops6_b: Don’t forget to turn at the end of the row of corn.
+        courseC_harvester_loops6_a: Ricorda che puoi mettere più di un blocco all'interno di un ciclo `ripeti ... volte`.
+        courseC_harvester_loops6_b: Non dimenticarti di girare alla fine della fila di pannocchie.
       courseC_harvester_loops6_2018_authored_hint:
-        courseC_harvester_loops6_a: Remember you can put multiple blocks in one repeat loop.
-        courseC_harvester_loops6_b: Don’t forget to turn at the end of the row of corn.
+        courseC_harvester_loops6_a: Ricorda che puoi mettere più di un blocco all'interno di un ciclo `ripeti ... volte`.
+        courseC_harvester_loops6_b: Non dimenticarti di girare alla fine della fila di pannocchie.
       courseC_harvester_loops7_authored_hint:
-        courseC_harvester_loops7_a: You can solve this puzzle two ways, either get the corn or the pumpkins first.
-        courseC_harvester_loops7_b: You will need multiple `repeat` loops to solve this puzzle.
+        courseC_harvester_loops7_a: 'Ci sono due modi per risolvere questo esercizio: raccogliere prima le pannocchie e poi le le zucche oppure viceversa, prima le zucche e poi le pannocchie.'
+        courseC_harvester_loops7_b: Dovrai usare diversi cicli `ripeti ... volte` per risolvere questo esercizio.
       courseC_harvester_loops7_2018_authored_hint:
-        courseC_harvester_loops7_a: You can solve this puzzle two ways, either get the corn or the pumpkins first.
-        courseC_harvester_loops7_b: You will need multiple `repeat` loops to solve this puzzle.
+        courseC_harvester_loops7_a: 'Ci sono due modi per risolvere questo esercizio: raccogliere prima le pannocchie e poi le le zucche oppure viceversa, prima le zucche e poi le pannocchie.'
+        courseC_harvester_loops7_b: Dovrai usare diversi cicli `ripeti ... volte` per risolvere questo esercizio.
       courseC_harvester_loops8_authored_hint:
-        courseC_harvester_loops8_a: Does this stair step look familiar from the previous puzzle? The movements should be similar, just remember to collect crops along the way.
-        courseC_harvester_loops8_b: If you want to simplify your code more, you can actually put one `repeat` loop inside of another! This is called a **nested loop**.
+        courseC_harvester_loops8_a: Non ti sembra che questa gradinata assomigli a quella dell'esercizio precedente? I movimenti dovrebbero essere simili, ricordati solo di raccogliere gli ortaggi lungo la strada.
+        courseC_harvester_loops8_b: Se vuoi semplificare il tuo programma, puoi mettere un ciclo `ripeti ... volte` all'interno di un altro! Si chiama **ciclo annidato**.
       courseC_harvester_loops8_2018_authored_hint:
-        courseC_harvester_loops8_a: Does this stair step look familiar from the previous puzzle? The movements should be similar, just remember to collect crops along the way.
-        courseC_harvester_loops8_b: If you want to simplify your code more, you can actually put one `repeat` loop inside of another! This is called a **nested loop**.
+        courseC_harvester_loops8_a: Non ti sembra che questa gradinata assomigli a quella dell'esercizio precedente? I movimenti dovrebbero essere simili, ricordati solo di raccogliere gli ortaggi lungo la strada.
+        courseC_harvester_loops8_b: Se vuoi semplificare il tuo programma, puoi mettere un ciclo `ripeti ... volte` all'interno di un altro! Si chiama **ciclo annidato**.
       courseC_harvester_loops9_authored_hint: { }
       courseC_harvester_loops9_2018_authored_hint: { }
       courseC_harvester_loops_challenge1_authored_hint:
@@ -4723,29 +4783,29 @@ it:
       courseC_harvester_loops_forVid_authored_hint: { }
       courseC_maze_debugging1_authored_hint:
         courseC_maze_debugging1_a: |-
-          - Does everything work after the first step?
-          - Does it still work after the second?
-          - Where does it go wrong?
-        courseC_maze_debugging1_b: There is 1 block you need to add to complete this puzzle.
+          - Al primo passo tutto procede bene?
+          - Va ancora tutto bene al secondo?
+          - Dov'è che qualcosa comincia a non funzionare?
+        courseC_maze_debugging1_b: Devi aggiungere 1 blocco per completare l'esercizio.
       courseC_maze_debugging1_2018_authored_hint:
         courseC_maze_debugging1_a: |-
-          - Does everything work after the first step?
-          - Does it still work after the second?
-          - Where does it go wrong?
-        courseC_maze_debugging1_b: There is 1 block you need to add to complete this puzzle.
+          - Al primo passo tutto procede bene?
+          - Va ancora tutto bene al secondo?
+          - Dov'è che qualcosa comincia a non funzionare?
+        courseC_maze_debugging1_b: Devi aggiungere 1 blocco per completare l'esercizio.
       courseC_maze_debugging2_authored_hint:
-        courseC_maze_debugging2_a: There is a lot of valuable code in the workspace.  Don't just delete it all and start over!
+        courseC_maze_debugging2_a: C'è un sacco di ottimo codice nell'area di lavoro. Non cancellarlo per ricominciare tutto da capo!
         courseC_maze_debugging2_b: |-
-          - Does everything work after the first step?
-          - Does it still work after the second?
-          - Where does it go wrong?
+          - Al primo passo tutto procede bene?
+          - Va ancora tutto bene al secondo?
+          - Dov'è che qualcosa comincia a non funzionare?
         courseC_maze_debugging2_c: Non riesci a capire cosa non va? Provare a eseguire il codice un paio di volte per vedere cosa succede.
       courseC_maze_debugging2_2018_authored_hint:
-        courseC_maze_debugging2_a: There is a lot of valuable code in the workspace.  Don't just delete it all and start over!
+        courseC_maze_debugging2_a: C'è un sacco di ottimo codice nell'area di lavoro. Non cancellarlo per ricominciare tutto da capo!
         courseC_maze_debugging2_b: |-
-          - Does everything work after the first step?
-          - Does it still work after the second?
-          - Where does it go wrong?
+          - Al primo passo tutto procede bene?
+          - Va ancora tutto bene al secondo?
+          - Dov'è che qualcosa comincia a non funzionare?
         courseC_maze_debugging2_c: Non riesci a capire cosa non va? Provare a eseguire il codice un paio di volte per vedere cosa succede.
       courseC_maze_debugging3_authored_hint:
         courseC_maze_debugging3_a: |-
@@ -4768,60 +4828,60 @@ it:
           ![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)
         courseC_maze_debugging3_b: Non riesci a capire cosa non va? Provare a eseguire il codice un paio di volte per vedere cosa succede.
       courseC_maze_debugging4_authored_hint:
-        courseC_maze_debugging4_a: Use the "Step" button to run through the instructions one at a time.  Does that help you find the line where things go wrong?
-        courseC_maze_debugging4_b: One of the turns is making Scrat go in the wrong direction. Can you figure out which one?
+        courseC_maze_debugging4_a: Usa il pulsante "Fai un passo" per eseguire un'istruzione alla volta. Questo potrebbe aiutarti a trovare il blocco sbagliato?
+        courseC_maze_debugging4_b: Una delle curve che sta facendo Scrat va nella direzione sbagliata. Riesci a capire qual'è?
       courseC_maze_debugging4_2018_authored_hint:
-        courseC_maze_debugging4_a: Use the "Step" button to run through the instructions one at a time.  Does that help you find the line where things go wrong?
-        courseC_maze_debugging4_b: One of the turns is making Scrat go in the wrong direction. Can you figure out which one?
+        courseC_maze_debugging4_a: Usa il pulsante "Fai un passo" per eseguire un'istruzione alla volta. Questo potrebbe aiutarti a trovare il blocco sbagliato?
+        courseC_maze_debugging4_b: Una delle curve che sta facendo Scrat va nella direzione sbagliata. Riesci a capire qual'è?
       courseC_maze_debugging5_authored_hint:
-        courseC_maze_debugging5_a: "There are lots of helpful blocks in the workspace already.  Don't delete them all! \n\nUse the \"Step\" button to go through and figure out where the code goes wrong."
-        courseC_maze_debugging5_b: Try saying what Scrat should do out loud.  Is it the same as the code in the workspace?  What goes wrong?
+        courseC_maze_debugging5_a: "Ci sono un sacco di blocchi utili nell'area di lavoro! Non cancellarli tutti!\n\nUsa il pulsante \"Fai un passo\" per indagare e capire dove il codice è sbagliato."
+        courseC_maze_debugging5_b: Prova a dire ad alta voce cosa dovrebbe fare Scrat.  Corrisponde al codice presente nell'area di lavoro?  Che differenza c'è?
       courseC_maze_debugging5_2018_authored_hint:
-        courseC_maze_debugging5_a: "There are lots of helpful blocks in the workspace already.  Don't delete them all! \n\nUse the \"Step\" button to go through and figure out where the code goes wrong."
-        courseC_maze_debugging5_b: Try saying what Scrat should do out loud.  Is it the same as the code in the workspace?  What goes wrong?
+        courseC_maze_debugging5_a: "Ci sono un sacco di blocchi utili nell'area di lavoro! Non cancellarli tutti!\n\nUsa il pulsante \"Fai un passo\" per indagare e capire dove il codice è sbagliato."
+        courseC_maze_debugging5_b: Prova a dire ad alta voce cosa dovrebbe fare Scrat.  Corrisponde al codice presente nell'area di lavoro?  Che differenza c'è?
       courseC_maze_debugging6_authored_hint:
         courseC_maze_debugging6_a: |-
-          - What is Scrat supposed to do?
-          - What does Scrat do?
-          - What does that tell you?
+          - Cosa dovrebbe fare Scrat?
+          - Cosa fa Scrat?
+          - Questo cosa ti suggerisce?
         courseC_maze_debugging6_b: |-
-          Once you've found and fixed the first bug, go through the debugging process again to find the second one.
+          Dopo aver trovato e risolto il primo errore, procedi con il debugging (correzione degli errori) per trovare il secondo.
           
-          Repeat the process until the program works!
+          Ripeti questo processo fino a quando il programma funziona!
       courseC_maze_debugging6_2018_authored_hint:
         courseC_maze_debugging6_a: |-
-          - What is Scrat supposed to do?
-          - What does Scrat do?
-          - What does that tell you?
+          - Cosa dovrebbe fare Scrat?
+          - Cosa fa Scrat?
+          - Questo cosa ti suggerisce?
         courseC_maze_debugging6_b: |-
-          Once you've found and fixed the first bug, go through the debugging process again to find the second one.
+          Dopo aver trovato e risolto il primo errore, procedi con il debugging (correzione degli errori) per trovare il secondo.
           
-          Repeat the process until the program works!
+          Ripeti questo processo fino a quando il programma funziona!
       courseC_maze_debugging7_authored_hint:
         courseC_maze_debugging7_a: |-
-          - Does everything work at the first step?
-          - How about the second step?
-          - Where does it go wrong?
-        courseC_maze_debugging7_b: Don't forget to use the "Step" button to run the program line by line!
+          - Al primo passo tutto procede bene?
+          - E al secondo?
+          - Dov'è che qualcosa comincia a non funzionare?
+        courseC_maze_debugging7_b: Non dimenticare di usare il pulsante "Fai un passo" per eseguire il programma un'istruzione alla volta!
         courseC_maze_debugging7_c: |-
-          After you find and fix the first bug, make sure to use the debugging process again to find the next one.
+          Dopo aver trovato e risolto il primo errore, fai attenzione a continuare ad usare il processo di debugging (correzione degli errori) per trovare il secondo.
           
-          Repeat the debugging process until the program works!
+          Ripeti il processo di debugging fino a quando il programma funziona!
       courseC_maze_debugging7_2018_authored_hint:
         courseC_maze_debugging7_a: |-
-          - Does everything work at the first step?
-          - How about the second step?
-          - Where does it go wrong?
-        courseC_maze_debugging7_b: Don't forget to use the "Step" button to run the program line by line!
+          - Al primo passo tutto procede bene?
+          - E al secondo?
+          - Dov'è che qualcosa comincia a non funzionare?
+        courseC_maze_debugging7_b: Non dimenticare di usare il pulsante "Fai un passo" per eseguire il programma un'istruzione alla volta!
         courseC_maze_debugging7_c: |-
-          After you find and fix the first bug, make sure to use the debugging process again to find the next one.
+          Dopo aver trovato e risolto il primo errore, fai attenzione a continuare ad usare il processo di debugging (correzione degli errori) per trovare il secondo.
           
-          Repeat the debugging process until the program works!
+          Ripeti il processo di debugging fino a quando il programma funziona!
       courseC_maze_debugging8_authored_hint:
         courseC_maze_debugging8_a: |-
-          - What is Scrat supposed to do?
-          - What does Scrat do?
-          - What does that tell you?
+          - Cosa dovrebbe fare Scrat?
+          - Cosa fa Scrat?
+          - Questo cosa ti suggerisce?
       courseC_maze_debugging8_predict1_authored_hint: { }
       courseC_maze_debugging8_predict1_2018_authored_hint: { }
       courseC_maze_debugging9_authored_hint: { }
@@ -4872,7 +4932,7 @@ it:
       courseC_maze_loops7_authored_hint:
         courseC_maze_loops7_a: Se fai fatica a capire lo schema che si ripete, prova prima a risolvere l'esercizio usando tutti i singoli blocchi, poi cerca di vedere quali sono le parti che si ripetono per inserirle nel blocco `ripeti ... volte`.
       courseC_maze_loops8_authored_hint:
-        courseC_puppy_loops8courseC_maze_loops8_a: Try thinking about this problem in small parts. Take your time. You don't need to solve it on the first try!
+        courseC_puppy_loops8courseC_maze_loops8_a: Prova a suddividere questo problema in piccole parti. Prenditi tutto il tempo che serve. Non è necessario risolvere l'esercizio al primo tentativo!
         courseC_puppy_loops8courseC_maze_loops8_b: The first half of this path is similar to the stairs from the last puzzle, but it goes in a different direction.
         courseC_puppy_loops8courseC_maze_loops8_c: "There are different ways to solve this. \n\nYou will want to use at least two loops, and repeat a set of actions in the first one, then a single `move forward` in the other."
       courseC_maze_loops9_authored_hint:
@@ -4962,11 +5022,11 @@ it:
         courseC_maze_programming7_a: Non dimenticare di usare il pulsante "Fai un passo" che esegue un blocco per volta permettendoti di notare più facilmente gli errori.
         courseC_maze_programming7_b: Se hai difficoltà a risolvere questo esercizio, prova prima a scrivere le mosse su un pezzo di carta.
       courseC_maze_programming8_authored_hint:
-        courseC_maze_programming8_a: Remember you can use the "Step" button to look through your code line-by-line if you get stuck.
-        courseC_maze_programming8_b: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+        courseC_maze_programming8_a: Ricordati che se ti blocchi puoi usare il pulsante "Fai un passo" per analizzare il tuo codice linea per linea.
+        courseC_maze_programming8_b: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseC_maze_programming8_2018_authored_hint:
-        courseC_maze_programming8_a: Remember you can use the "Step" button to look through your code line-by-line if you get stuck.
-        courseC_maze_programming8_b: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+        courseC_maze_programming8_a: Ricordati che se ti blocchi puoi usare il pulsante "Fai un passo" per analizzare il tuo codice linea per linea.
+        courseC_maze_programming8_b: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseC_maze_programming8_predict1_authored_hint: { }
       courseC_maze_programming8_predict1_2018_authored_hint: { }
       courseC_maze_programming9_authored_hint: { }
@@ -4990,91 +5050,91 @@ it:
         courseC_puppy_loops9_1: I need to move two or three time between each turn.
       courseC_puppy_loops11_authored_hint: { }
       courseC_puppy_loops8_authored_hint:
-        2-3_Maze_Loops_17_a: Try thinking about this problem in small parts. Take your time. You don't need to solve it on the first try!
+        2-3_Maze_Loops_17_a: Prova a suddividere questo problema in piccole parti. Prenditi tutto il tempo che serve. Non è necessario risolvere l'esercizio al primo tentativo!
         2-3_Maze_Loops_17_b: The first half of this path is similar to the stair step from the last puzzle, but it goes a different direction.
         courseC_puppy_loops8_c: There are different ways to solve this. You will want to use at least two loops, and repeat either a set of actions or a single movement.
       courseC_puppy_loops8courseC_maze_loops8_authored_hint:
-        courseC_puppy_loops8courseC_maze_loops8_a: Try thinking about this problem in small parts. Take your time. You don't need to solve it on the first try!
+        courseC_puppy_loops8courseC_maze_loops8_a: Prova a suddividere questo problema in piccole parti. Prenditi tutto il tempo che serve. Non è necessario risolvere l'esercizio al primo tentativo!
         courseC_puppy_loops8courseC_maze_loops8_b: The first half of this path is similar to the stairs from the last puzzle, but it goes in a different direction.
         courseC_puppy_loops8courseC_maze_loops8_c: "There are different ways to solve this. \n\nYou will want to use at least two loops, and repeat a set of actions in the first one, then a single `move forward` in the other."
       courseC_puppy_loops9_authored_hint:
         courseC_puppy_loops9_1: If you repeat the first few actions, you can get me to the pig with just four more blocks!
       courseC_starWars_loops1_authored_hint:
-        courseC_starWars_loops1_a: When BB-8 rolls over scrap metal he picks it up automatically.
+        courseC_starWars_loops1_a: Quando BB-8 rotola su un rottame metallico lo recupera automaticamente.
         courseC_starWars_loops1_b: Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio.
-        courseC_starWars_loops1_c: You will want to `move forward` five times to solve this puzzle.
+        courseC_starWars_loops1_c: Devi andare avanti cinque volte per risolvere questo esercizio.
       courseC_starWars_loops10_authored_hint:
-        courseC_starWars_loops10_a: Doesn't this pattern look like a giant set of stair steps? See if you can use what you learned from previous puzzles to get all of the turns.
-        courseC_starWars_loops10_b: "If you want to use less code, you can put one `repeat` loop inside of another!   \nThis is called a **nested loop**."
+        courseC_starWars_loops10_a: Questo schema non ricorda dei giganti gradini di una scala? Vedi se riesci a sfruttare ciò che hai imparato nei precedenti esercizi per fare le curve giuste.
+        courseC_starWars_loops10_b: "Se vuoi usare meno blocchi, puoi mettere un ciclo `ripeti ... volte` all'interno di un altro! Si chiama **ciclo annidato**."
         courseC_starWars_loops10_c: Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio.
       courseC_starWars_loops10_2018_authored_hint:
-        courseC_starWars_loops10_a: Doesn't this pattern look like a giant set of stair steps? See if you can use what you learned from previous puzzles to get all of the turns.
-        courseC_starWars_loops10_b: "If you want to use less code, you can put one `repeat` loop inside of another!   \nThis is called a **nested loop**."
+        courseC_starWars_loops10_a: Questo schema non ricorda dei giganti gradini di una scala? Vedi se riesci a sfruttare ciò che hai imparato nei precedenti esercizi per fare le curve giuste.
+        courseC_starWars_loops10_b: "Se vuoi usare meno blocchi, puoi mettere un ciclo `ripeti ... volte` all'interno di un altro! Si chiama **ciclo annidato**."
         courseC_starWars_loops10_c: Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio.
       courseC_starWars_loops10_predict2_authored_hint: { }
       courseC_starWars_loops10_predict2_2018_authored_hint: { }
       courseC_starWars_loops11_authored_hint: { }
       courseC_starWars_loops11_2018_authored_hint: { }
       courseC_starWars_loops1_2018_authored_hint:
-        courseC_starWars_loops1_a: When BB-8 rolls over scrap metal he picks it up automatically.
+        courseC_starWars_loops1_a: Quando BB-8 rotola su un rottame metallico lo recupera automaticamente.
         courseC_starWars_loops1_b: Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio.
-        courseC_starWars_loops1_c: You will want to `move forward` five times to solve this puzzle.
+        courseC_starWars_loops1_c: Devi andare avanti cinque volte per risolvere questo esercizio.
       courseC_starWars_loops2_authored_hint:
-        courseC_starWars_loops2_a: To repeat code, drag out a `repeat` loop, then put the block you want inside of it.
+        courseC_starWars_loops2_a: Per ripetere una sequenza di istruzioni, trascina nell'area di lavoro un blocco `ripeti ... volte` e inserisci al suo interno i blocchi che vuoi ripetere.
       courseC_starWars_loops2_2018_authored_hint:
-        courseC_starWars_loops2_a: To repeat code, drag out a `repeat` loop, then put the block you want inside of it.
+        courseC_starWars_loops2_a: Per ripetere una sequenza di istruzioni, trascina nell'area di lavoro un blocco `ripeti ... volte` e inserisci al suo interno i blocchi che vuoi ripetere.
       courseC_starWars_loops4_authored_hint:
-        courseC_starWars_loops4_c: Clicking on the small arrow next to "left" on the turn block will let you change it to  "right".
-        courseC_starWars_loops4_a: Use two `repeat` blocks.
-        courseC_starWars_loops4_b: 'Each `repeat` loop will have only one command inside of it: `move forward`.'
+        courseC_starWars_loops4_c: Cliccando sulla piccola freccia accanto a "sinistra" nel blocco `gira a ...` puoi sostituire con "destra".
+        courseC_starWars_loops4_a: Usa due blocchi `ripeti ... volte`.
+        courseC_starWars_loops4_b: 'Ogni ciclo `ripeti ... volte` avrà una sola istruzione al suo interno: `vai avanti`.'
       courseC_starWars_loops4_2018_authored_hint:
-        courseC_starWars_loops4_c: Clicking on the small arrow next to "left" on the turn block will let you change it to  "right".
-        courseC_starWars_loops4_a: Use two `repeat` blocks.
-        courseC_starWars_loops4_b: 'Each `repeat` loop will have only one command inside of it: `move forward`.'
+        courseC_starWars_loops4_c: Cliccando sulla piccola freccia accanto a "sinistra" nel blocco `gira a ...` puoi sostituire con "destra".
+        courseC_starWars_loops4_a: Usa due blocchi `ripeti ... volte`.
+        courseC_starWars_loops4_b: 'Ogni ciclo `ripeti ... volte` avrà una sola istruzione al suo interno: `vai avanti`.'
       courseC_starWars_loops5_authored_hint:
-        courseC_starWars_loops5_b: To move down, you have to turn and then move forward.
-        courseC_starWars_loops5_a: The best solution uses a turn, then a single `move forward`, another turn, then a loop.
+        courseC_starWars_loops5_b: Per far muovere BB-8 verso il basso, devi farlo girare e poi farlo andare avanti.
+        courseC_starWars_loops5_a: La soluzione migliore usa una curva, un singolo `vai avanti`, un'altra curva e infine un ciclo.
       courseC_starWars_loops5_2018_authored_hint:
-        courseC_starWars_loops5_b: To move down, you have to turn and then move forward.
-        courseC_starWars_loops5_a: The best solution uses a turn, then a single `move forward`, another turn, then a loop.
+        courseC_starWars_loops5_b: Per far muovere BB-8 verso il basso, devi farlo girare e poi farlo andare avanti.
+        courseC_starWars_loops5_a: La soluzione migliore usa una curva, un singolo `vai avanti`, un'altra curva e infine un ciclo.
       courseC_starWars_loops6_authored_hint:
-        courseC_starWars_loops6_a: Try writing all of the moves down on a piece of paper and looking for a pattern.
-        courseC_starWars_loops6_b: "If you want to use less code, you can put one `repeat` loop inside of another!   \nThis is called a **nested loop**."
+        courseC_starWars_loops6_a: Prova a scrivere tutte le mosse su un pezzo di carta e cerca una sequenza che si ripete.
+        courseC_starWars_loops6_b: "Se vuoi usare meno blocchi, puoi mettere un ciclo `ripeti ... volte` all'interno di un altro! Si chiama **ciclo annidato**."
       courseC_starWars_loops6_2018_authored_hint:
-        courseC_starWars_loops6_a: Try writing all of the moves down on a piece of paper and looking for a pattern.
-        courseC_starWars_loops6_b: "If you want to use less code, you can put one `repeat` loop inside of another!   \nThis is called a **nested loop**."
+        courseC_starWars_loops6_a: Prova a scrivere tutte le mosse su un pezzo di carta e cerca una sequenza che si ripete.
+        courseC_starWars_loops6_b: "Se vuoi usare meno blocchi, puoi mettere un ciclo `ripeti ... volte` all'interno di un altro! Si chiama **ciclo annidato**."
       courseC_starWars_loops7_authored_hint:
-        courseC_starWars_loops7_a: This pattern looks harder than it is! Start with a simple stair step. Does that cover all of the scrap metal?
-        courseC_starWars_loops7_b: If you are having trouble with this puzzle, try writing all of the moves on a piece of paper and looking for a pattern.
+        courseC_starWars_loops7_a: Questo schema sembra più difficile di quello che è! Inizia con un semplice gradino. Permette di recuperare tutti i rottami metallici?
+        courseC_starWars_loops7_b: Se hai difficoltà nella risoluzione di questo esercizio, prova a scrivere tutte le mosse su un foglio di carta e cerca di trovare uno schema che si ripete.
         courseC_starWars_loops7_c: Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio.
       courseC_starWars_loops7_2018_authored_hint:
-        courseC_starWars_loops7_a: This pattern looks harder than it is! Start with a simple stair step. Does that cover all of the scrap metal?
-        courseC_starWars_loops7_b: If you are having trouble with this puzzle, try writing all of the moves on a piece of paper and looking for a pattern.
+        courseC_starWars_loops7_a: Questo schema sembra più difficile di quello che è! Inizia con un semplice gradino. Permette di recuperare tutti i rottami metallici?
+        courseC_starWars_loops7_b: Se hai difficoltà nella risoluzione di questo esercizio, prova a scrivere tutte le mosse su un foglio di carta e cerca di trovare uno schema che si ripete.
         courseC_starWars_loops7_c: Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio.
       courseC_starWars_loops8_authored_hint:
-        course_starWars_loops8_a: Try thinking about this problem in small parts. Take your time. You don't need to solve it on the first try!
-        course_starWars_loops8_b: Think of the first half of this problem as a stair step problem. How did you solve that before?
+        course_starWars_loops8_a: Prova a suddividere questo problema in piccole parti. Prenditi tutto il tempo che serve. Non è necessario risolvere l'esercizio al primo tentativo!
+        course_starWars_loops8_b: Pensa alla prima parte di questo esercizio come ad una scalinata. Come puoi risolverla?
         course_starWars_loops8_c: |-
-          Take a look at this path.
+          Dai un'occhiata a questo percorso:
           
           ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
       courseC_starWars_loops8_2018_authored_hint:
-        course_starWars_loops8_a: Try thinking about this problem in small parts. Take your time. You don't need to solve it on the first try!
-        course_starWars_loops8_b: Think of the first half of this problem as a stair step problem. How did you solve that before?
+        course_starWars_loops8_a: Prova a suddividere questo problema in piccole parti. Prenditi tutto il tempo che serve. Non è necessario risolvere l'esercizio al primo tentativo!
+        course_starWars_loops8_b: Pensa alla prima parte di questo esercizio come ad una scalinata. Come puoi risolverla?
         course_starWars_loops8_c: |-
-          Take a look at this path.
+          Dai un'occhiata a questo percorso:
           
           ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
       courseC_starWars_loops9_authored_hint:
-        course_starWars_loops9_b: You can put more than one block inside a `repeat` loop.
+        course_starWars_loops9_b: Puoi mettere più di un blocco all'interno del blocco `ripeti ... volte`.
         course_starWars_loops9_c: |-
-          You do not need to turn left to solve this puzzle. All of your turns can be to the right.
+          Non dovrai mai girare a sinistra per risolvere questo esercizio. Tutte le curve saranno a destra.
           
           ![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)
       courseC_starWars_loops9_2018_authored_hint:
-        course_starWars_loops9_b: You can put more than one block inside a `repeat` loop.
+        course_starWars_loops9_b: Puoi mettere più di un blocco all'interno del blocco `ripeti ... volte`.
         course_starWars_loops9_c: |-
-          You do not need to turn left to solve this puzzle. All of your turns can be to the right.
+          Non dovrai mai girare a sinistra per risolvere questo esercizio. Tutte le curve saranno a destra.
           
           ![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)
       courseD_Frozen_nested1_authored_hint:
@@ -5539,7 +5599,7 @@ it:
       courseD_artist_ramp12_authored_hint:
         courseD_artist_ramp12_a: You can either draw the square first, then the triangle, or do it the other way around!
         courseD_artist_ramp12_b: Try splitting the problem into 2 parts, and using 2 loops.
-        courseD_artist_ramp12_c: You can use the drop down menu on the `turn` blocks to see which angle you need!
+        courseD_artist_ramp12_c: Puoi usare il menu a tendina del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
       courseD_bee_conditionals1_authored_hint:
         courseD_bee_conditionals1_a: You will need to use an `if` block to check to see if there is a flower beneath the cloud before you try to get nectar.
       courseD_bee_conditionals10_authored_hint: { }
@@ -5570,13 +5630,13 @@ it:
         courseD_bee_conditionals3_hintVid1: Need help getting started?  Watch the video!
         courseD_bee_conditionals3_a: Be sure to use an `if` statement to check each space to see if it has either a flower or nothing.
         courseD_bee_conditionals3_b: You can use a `repeat` loop or a `while` loop to keep the bee moving forward. Use whichever one you like!
-        courseD_bee_conditionals3_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.
+        courseD_bee_conditionals3_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
         courseD_bee_conditionals3_hintVid2: Watch this video for help solving this puzzle.
       courseD_bee_conditionals3_2018_authored_hint:
         courseD_bee_conditionals3_hintVid1: Need help getting started?  Watch the video!
         courseD_bee_conditionals3_a: Be sure to use an `if` statement to check each space to see if it has either a flower or nothing.
         courseD_bee_conditionals3_b: You can use a `repeat` loop or a `while` loop to keep the bee moving forward. Use whichever one you like!
-        courseD_bee_conditionals3_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.
+        courseD_bee_conditionals3_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
         courseD_bee_conditionals3_hintVid2: Watch this video for help solving this puzzle.
       courseD_bee_conditionals4_authored_hint:
         courseD_bee_conditionals4_hintVid1: Need help getting started?  Watch the video!
@@ -6393,7 +6453,7 @@ it:
         courseD_artist_ramp10_c: If you want to simplify your code, you can put one loop inside of another! This is called a **nested loop**.
       courseD_collector_ramp8_authored_hint:
         courseD_collector_ramp8_a: When you get to a square with treasure, use `collect` to pick it up. For this puzzle, you'll need to collect treasure more than once!
-        courseD_collector_ramp8_b: If you want to simplify your code more, you can actually put one `repeat` loop inside of another! This is called a **nested loop**.
+        courseD_collector_ramp8_b: Se vuoi semplificare il tuo programma, puoi mettere un ciclo `ripeti ... volte` all'interno di un altro! Si chiama **ciclo annidato**.
       courseD_collector_ramp9_authored_hint:
         courseD_collector_ramp9_a: Start by moving Laurel to the first treasure, then collecting it. Can you repeat this sequence to get the second pile?
         courseD_collector_ramp9_b: If you want to simplify your code, you can put one repeat loop inside of another! This is called a **nested loop**.
@@ -6739,10 +6799,10 @@ it:
         courseD_maze_nestedLoops6_c: It will take two sets of nested `repeat` loops to solve this puzzle.
       courseD_maze_ramp1_authored_hint:
         courseC_maze_programming1_a: If the bird isn't getting to the pig, make sure all three of the blocks have been fully clicked together, then click "Run" again.
-        courseC_maze_programming1_b: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+        courseC_maze_programming1_b: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseD_maze_ramp1_2018_authored_hint:
         courseC_maze_programming1_a: If the bird isn't getting to the pig, make sure all three of the blocks have been fully clicked together, then click "Run" again.
-        courseC_maze_programming1_b: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+        courseC_maze_programming1_b: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseD_maze_ramp2_authored_hint:
         courseC_maze_programming2_a: To use a `move forward` block, drag it from the toolbox out into the workspace and connect it to the `when run` block.
         courseC_maze_programming2_b: Make sure all 3 blocks are clicked together and attached to the `when run` block.
@@ -6762,27 +6822,27 @@ it:
       courseD_maze_ramp5_authored_hint:
         courseC_maze_programming5_a: Prova ad usare il pulsante "Fai un passo" per eseguire il codice un'istruzione alla volta. Riesci ad capire cosa devi fare dopo?
         courseC_maze_programming5_b: Remember that turns are from the bird's perspective.
-        courseC_maze_programming5_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+        courseC_maze_programming5_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseD_maze_ramp5_2018_authored_hint:
         courseC_maze_programming5_a: Prova ad usare il pulsante "Fai un passo" per eseguire il codice un'istruzione alla volta. Riesci ad capire cosa devi fare dopo?
         courseC_maze_programming5_b: Remember that turns are from the bird's perspective.
-        courseC_maze_programming5_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+        courseC_maze_programming5_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseD_maze_ramp5a_authored_hint:
         courseC_maze_programming5_a: Prova ad usare il pulsante "Fai un passo" per eseguire il codice un'istruzione alla volta. Riesci ad capire cosa devi fare dopo?
         courseC_maze_programming5_b: Remember that turns are from the bird's perspective.
-        courseC_maze_programming5_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+        courseC_maze_programming5_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseD_maze_ramp5a_2018_authored_hint:
         courseC_maze_programming5_a: Prova ad usare il pulsante "Fai un passo" per eseguire il codice un'istruzione alla volta. Riesci ad capire cosa devi fare dopo?
         courseC_maze_programming5_b: Remember that turns are from the bird's perspective.
-        courseC_maze_programming5_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+        courseC_maze_programming5_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseD_maze_ramp5b_authored_hint:
         courseC_maze_programming5_a: Prova ad usare il pulsante "Fai un passo" per eseguire il codice un'istruzione alla volta. Riesci ad capire cosa devi fare dopo?
         courseC_maze_programming5_b: Remember that turns are from the bird's perspective.
-        courseC_maze_programming5_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+        courseC_maze_programming5_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseD_maze_ramp5b_2018_authored_hint:
         courseC_maze_programming5_a: Prova ad usare il pulsante "Fai un passo" per eseguire il codice un'istruzione alla volta. Riesci ad capire cosa devi fare dopo?
         courseC_maze_programming5_b: Remember that turns are from the bird's perspective.
-        courseC_maze_programming5_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+        courseC_maze_programming5_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseD_maze_ramp5c_authored_hint: { }
       courseD_maze_ramp5c_2018_authored_hint: { }
       courseD_maze_ramp5d_authored_hint: { }
@@ -6939,10 +6999,10 @@ it:
       courseD_scrat_predict1_2018_authored_hint: { }
       courseD_scrat_ramp1_authored_hint:
         courseC_maze_programming1_a: If Scrat isn't getting to the acorn, make sure all three of the blocks have been fully snapped together, then click "Run" again.
-        courseC_maze_programming1_b: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+        courseC_maze_programming1_b: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseD_scrat_ramp1_2018_authored_hint:
         courseC_maze_programming1_a: If Scrat isn't getting to the acorn, make sure all three of the blocks have been fully snapped together, then click "Run" again.
-        courseC_maze_programming1_b: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+        courseC_maze_programming1_b: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseD_scrat_ramp2_authored_hint:
         courseC_maze_programming2_a: To use a `move forward` block, drag it from the toolbox out into the workspace and connect it to the `when run` block.
         courseC_maze_programming2_b: Make sure all three `move forward` blocks are attached to the `when run` block.
@@ -6958,11 +7018,11 @@ it:
       courseD_scrat_ramp4_authored_hint:
         courseC_maze_programming4_a: You can turn right or left from Scrat's point of view. If you are facing right, turning right will make you point downwards.
         courseC_maze_programming4_b: To follow the path, move forward and turn one way, then move again and turn the opposite way. Move forward one more time to reach the acorn.
-        courseC_maze_programming4_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+        courseC_maze_programming4_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseD_scrat_ramp4_2018_authored_hint:
         courseC_maze_programming4_a: You can turn right or left from Scrat's point of view. If you are facing right, turning right will make you point downwards.
         courseC_maze_programming4_b: To follow the path, move forward and turn one way, then move again and turn the opposite way. Move forward one more time to reach the acorn.
-        courseC_maze_programming4_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+        courseC_maze_programming4_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseD_scrat_ramp5_authored_hint:
         courseC_maze_programming5_a: Prova ad usare il pulsante "Fai un passo" per eseguire il codice un'istruzione alla volta. Riesci ad capire cosa devi fare dopo?
         courseC_maze_programming5_b: How far do you need to move to get to the corner?
@@ -6978,19 +7038,19 @@ it:
       courseD_scrat_ramp7_authored_hint:
         courseD_scrat_programming6_a: Ci sono due modi per risolvere questo esercizio!
         courseD_scrat_programming6_b: Remember to turn first before moving, since Scrat is facing the wrong direction.
-        courseD_scrat_programming6_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+        courseD_scrat_programming6_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseD_scrat_ramp7_2018_authored_hint:
         courseD_scrat_programming6_a: Ci sono due modi per risolvere questo esercizio!
         courseD_scrat_programming6_b: Remember to turn first before moving, since Scrat is facing the wrong direction.
-        courseD_scrat_programming6_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+        courseD_scrat_programming6_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseD_scrat_ramp8_authored_hint:
         courseD_maze_ramp7_b: Non dimenticare di usare il pulsante "Fai un passo" che esegue un blocco per volta permettendoti di notare più facilmente gli errori.
         courseD_maze_ramp7_a: Use repeat blocks to run either a single block or a chunk of code over and over.
-        courseD_maze_ramp7_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+        courseD_maze_ramp7_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseD_scrat_ramp8_2018_authored_hint:
         courseD_maze_ramp7_b: Non dimenticare di usare il pulsante "Fai un passo" che esegue un blocco per volta permettendoti di notare più facilmente gli errori.
         courseD_maze_ramp7_a: Use repeat blocks to run either a single block or a chunk of code over and over.
-        courseD_maze_ramp7_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+        courseD_maze_ramp7_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseE_artist_concept1_authored_hint:
         courseE_artist_concept1_a: The hexagons have 50 pixel sides and 60 degree turns to the right.
         courseE_artist_concept1_b: Try using a function here so you don't have to write the code for a hexagon over and over again.
@@ -7104,11 +7164,11 @@ it:
       courseE_artist_functions6_authored_hint:
         grade4_artist_functions_windows0_a: Focus only on making one window for now.  We'll create a function in the next puzzle.
         grade4_artist_functions_windows0_b: Try using nested loops. The inner loop will make the square and the outer loop will rotate the square four times.
-        grade4_artist_functions_windows0_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.
+        grade4_artist_functions_windows0_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseE_artist_functions6_2018_authored_hint:
         grade4_artist_functions_windows0_a: Focus only on making one window for now.  We'll create a function in the next puzzle.
         grade4_artist_functions_windows0_b: Try using nested loops. The inner loop will make the square and the outer loop will rotate the square four times.
-        grade4_artist_functions_windows0_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.
+        grade4_artist_functions_windows0_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseE_artist_functions7_authored_hint:
         courseD_artist_functions7_a: Try creating your function first then add windows one at a time.
         courseD_artist_functions7_b: You shouldn't need to add any extra repeat loops.  Just jump the artist 100 pixels between each top window, then down 150 pixels to get to the bottom windows.
@@ -7229,7 +7289,7 @@ it:
       courseE_artist_predict1_2018_authored_hint: { }
       courseE_artist_ramp10_authored_hint:
         courseD_artist_ramp10_a: Don't forget to turn by 60 degrees after each triangle.  Which loop do you need to put that instruction inside?
-        courseD_artist_ramp10_b: You can use the drop down menu on the `turn` blocks to see which angle you need!
+        courseD_artist_ramp10_b: Puoi usare il menu a tendina del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
         courseD_artist_ramp10_c: |-
           The artist will draw six triangles in total:
           
@@ -7272,19 +7332,19 @@ it:
         courseE_artist_ramp8_c: 'Your loop should have two blocks inside of it: `move forward` and `turn right by 90 degrees`.'
       courseE_artist_ramp9_authored_hint:
         courseD_artist_ramp12_a: How is this similar to a square?  How is it different?
-        courseD_artist_ramp12_b: You can use the drop down menu on the `turn` blocks to see which angle you need!
+        courseD_artist_ramp12_b: Puoi usare il menu a tendina del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
         courseD_artist_ramp12_c: To draw each side, you will need to move forward 100 pixels, then turn right 120 degrees. How many sides do you need?
       courseE_artist_ramp9_2_authored_hint:
         courseD_artist_ramp12_a: How is this similar to a square?  How is it different?
-        courseD_artist_ramp12_b: You can use the drop down menu on the `turn` blocks to see which angle you need!
+        courseD_artist_ramp12_b: Puoi usare il menu a tendina del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
         courseD_artist_ramp12_c: To draw each side, you will need to move forward 100 pixels, then turn right 120 degrees. How many sides do you need?
       courseE_artist_ramp9_2018_authored_hint:
         courseD_artist_ramp12_a: How is this similar to a square?  How is it different?
-        courseD_artist_ramp12_b: You can use the drop down menu on the `turn` blocks to see which angle you need!
+        courseD_artist_ramp12_b: Puoi usare il menu a tendina del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
         courseD_artist_ramp12_c: To draw each side, you will need to move forward 100 pixels, then turn right 120 degrees. How many sides do you need?
       courseE_artist_ramp9_2_2018_authored_hint:
         courseD_artist_ramp12_a: How is this similar to a square?  How is it different?
-        courseD_artist_ramp12_b: You can use the drop down menu on the `turn` blocks to see which angle you need!
+        courseD_artist_ramp12_b: Puoi usare il menu a tendina del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
         courseD_artist_ramp12_c: To draw each side, you will need to move forward 100 pixels, then turn right 120 degrees. How many sides do you need?
       courseE_bee_concept1_authored_hint:
         courseE_bee_concept1_b: Are there any patterns that *repeat* here?
@@ -7442,7 +7502,7 @@ it:
       courseE_bee_ramp17_authored_hint:
         courseE_bee_ramp17_a: Since we don't have a repeat block to do something a certain number of times, what block should we use to move along the path?
         courseE_bee_ramp17: If you were to solve this puzzle without an until block, where would you see repeated code? How can you use this repeated code to shape how you must use an until block to solve the problem?
-        courseE_bee_ramp17_b: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.
+        courseE_bee_ramp17_b: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
         courseE_bee_ramp17_c: You will want to move in a stair-step pattern. Try coding that first, then adding the `if/else` statement and `while` loops to check for flowers and honeycombs.
       courseE_collector_ramp10_authored_hint:
         courseD_artist_ramp10_a: |-
@@ -7532,11 +7592,11 @@ it:
         courseE_farmer_functions4_a: Drag all of the code out of your `repeat` loop and into the `go get pumpkins` function.
         courseE_farmer_functions4_b: Don't forget to put the block that calls the `go get pumpkins` functions inside your loop before you run your code.
       courseE_farmer_functions4b_authored_hint:
-        courseE_farmer_functions4b_a: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.
+        courseE_farmer_functions4b_a: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
         courseE_farmer_functions4b_b: Remember to turn after each path.
         courseE_farmer_functions4b_c: The green `corn and pumpkin` blocks are in the Functions tab of the toolbox.
       courseE_farmer_functions4b_2018_authored_hint:
-        courseE_farmer_functions4b_a: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.
+        courseE_farmer_functions4b_a: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
         courseE_farmer_functions4b_b: Remember to turn after each path.
         courseE_farmer_functions4b_c: The green `corn and pumpkin` blocks are in the Functions tab of the toolbox.
       courseE_farmer_functions5_authored_hint: { }
@@ -7545,10 +7605,10 @@ it:
         courseE_farmer_functions5b_a: You will need to use a `while corn` loop, a `while lettuce` and a `while pumpkin` to make sure you get everything.
       courseE_farmer_functions5c_authored_hint:
         courseE_farmer_functions5c_a: Are there any other patterns you can loop in this puzzle?
-        courseE_farmer_functions5c_b: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.
+        courseE_farmer_functions5c_b: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseE_farmer_functions5c_2018_authored_hint:
         courseE_farmer_functions5c_a: Are there any other patterns you can loop in this puzzle?
-        courseE_farmer_functions5c_b: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.
+        courseE_farmer_functions5c_b: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseE_farmer_functions6_authored_hint: { }
       courseE_farmer_functions6b_authored_hint: { }
       courseE_farmer_functions6c_authored_hint:
@@ -7622,11 +7682,11 @@ it:
         courseE_farmer_ramp12_b: You will still need to use a `repeat` loop on the outside of it all to tell the farmer how many times to walk forward and get lettuce.
       courseE_farmer_ramp12a_authored_hint:
         courseE_farmer_ramp12b: You will need to check your `if` statement 21 times to solve this puzzle.
-        courseE_farmer_ramp12c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.
+        courseE_farmer_ramp12c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
         courseE_farmer_ramp12d: There will only be lettuce, so you don't need to worry about empty spaces, corn, or pumpkins.
       courseE_farmer_ramp12a_2018_authored_hint:
         courseE_farmer_ramp12b: You will need to check your `if` statement 21 times to solve this puzzle.
-        courseE_farmer_ramp12c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.
+        courseE_farmer_ramp12c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
         courseE_farmer_ramp12d: There will only be lettuce, so you don't need to worry about empty spaces, corn, or pumpkins.
       courseE_farmer_ramp12b_authored_hint: { }
       courseE_farmer_ramp12b_2018_authored_hint: { }
@@ -7696,11 +7756,11 @@ it:
       courseE_maze_ramp4_authored_hint:
         courseC_maze_programming4_a: You can turn right or left from the bird's point of view. If you are facing right, turning right will make you point downwards.
         courseC_maze_programming4_b: To follow the path, move forward and turn one way, then move again and turn the opposite way. Move forward one more time to reach the pig.
-        courseC_maze_programming4_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+        courseC_maze_programming4_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseE_maze_ramp4_2018_authored_hint:
         courseC_maze_programming4_a: You can turn right or left from the bird's point of view. If you are facing right, turning right will make you point downwards.
         courseC_maze_programming4_b: To follow the path, move forward and turn one way, then move again and turn the opposite way. Move forward one more time to reach the pig.
-        courseC_maze_programming4_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+        courseC_maze_programming4_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseE_maze_ramp5_authored_hint:
         courseC_maze_programming5_a: Prova ad usare il pulsante "Fai un passo" per eseguire il codice un'istruzione alla volta. Riesci ad capire cosa devi fare dopo?
         courseC_maze_programming5_b: How far do you need to move to get to the corner?
@@ -7712,19 +7772,19 @@ it:
       courseE_maze_ramp6_authored_hint:
         courseC_maze_programming6_a: Ci sono due modi per risolvere questo esercizio!
         courseC_maze_programming6_b: Remember to turn first before moving, since the bird starts facing a wall.
-        courseC_maze_programming6_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+        courseC_maze_programming6_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseE_maze_ramp6_2018_authored_hint:
         courseC_maze_programming6_a: Ci sono due modi per risolvere questo esercizio!
         courseC_maze_programming6_b: Remember to turn first before moving, since the bird starts facing a wall.
-        courseC_maze_programming6_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+        courseC_maze_programming6_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseE_maze_ramp7_authored_hint:
         courseD_maze_ramp7_b: Non dimenticare di usare il pulsante "Fai un passo" che esegue un blocco per volta permettendoti di notare più facilmente gli errori.
         courseD_maze_ramp7_a: Use repeat blocks to run either a single block or a chunk of code over and over.
-        courseD_maze_ramp7_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+        courseD_maze_ramp7_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseE_maze_ramp7_2018_authored_hint:
         courseD_maze_ramp7_b: Non dimenticare di usare il pulsante "Fai un passo" che esegue un blocco per volta permettendoti di notare più facilmente gli errori.
         courseD_maze_ramp7_a: Use repeat blocks to run either a single block or a chunk of code over and over.
-        courseD_maze_ramp7_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+        courseD_maze_ramp7_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseE_maze_ramp_predict1_authored_hint: { }
       courseE_multi_maze_ramp5_authored_hint:
         courseC_maze_programming5_a: Prova ad usare il pulsante "Fai un passo" per eseguire il codice un'istruzione alla volta. Riesci ad capire cosa devi fare dopo?
@@ -8131,7 +8191,7 @@ it:
           </value>
           </block>
           </xml>
-        courseF_artist_for3_b: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.
+        courseF_artist_for3_b: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseF_artist_for3_2018_authored_hint:
         courseF_artist_for3_a: |-
           To have the `for` loop drive your movement, make sure that you're using `counter` as your distance in the `move forward` block.
@@ -8146,15 +8206,15 @@ it:
           </value>
           </block>
           </xml>
-        courseF_artist_for3_b: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.
+        courseF_artist_for3_b: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseF_artist_for4_authored_hint:
         courseF_artist_for4_a: "Ecco le domande cui rispondere per trovare i valori da inserire al posto dei `???`:<br>\nQual è il valore più piccolo che serve? <br>\nQual è il più grande?<br>\nQual è l'incremento necessario ad ogni ripetizione?<br>\n<b>Nota</b>: ora ci sono così tanti blocchi nella cassetta degli attrezzi che li abbiamo organizzati in diverse categorie. Prenditi un po' di tempo per esplorarle."
         courseF_artist_for4_b: Your code will be very similar to what you wrote in the last puzzle, but remember to draw a square this time!
-        courseF_artist_for4_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.
+        courseF_artist_for4_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseF_artist_for4_2018_authored_hint:
         courseF_artist_for4_a: "Ecco le domande cui rispondere per trovare i valori da inserire al posto dei `???`:<br>\nQual è il valore più piccolo che serve? <br>\nQual è il più grande?<br>\nQual è l'incremento necessario ad ogni ripetizione?<br>\n<b>Nota</b>: ora ci sono così tanti blocchi nella cassetta degli attrezzi che li abbiamo organizzati in diverse categorie. Prenditi un po' di tempo per esplorarle."
         courseF_artist_for4_b: Your code will be very similar to what you wrote in the last puzzle, but remember to draw a square this time!
-        courseF_artist_for4_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.
+        courseF_artist_for4_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseF_artist_for5_authored_hint:
         courseF_artist_for5_a: You don't need the `repeat` loop inside when making this spiral!
         courseF_artist_for5_b: Your `for` loop, move, and turn blocks can stay exactly the same.
@@ -8517,11 +8577,11 @@ it:
         courseF_artist_ramp8_c: Your turn will also go inside of the <xml><block type="controls_repeat"><title name="TIMES">3</title></block></xml> loop.
       courseF_artist_ramp9_authored_hint:
         courseF_artist_ramp9_a: How is this similar to a square?  How is it different?
-        courseF_artist_ramp9_b: You can use the drop down menu on the turn blocks to see which angle you need!
+        courseF_artist_ramp9_b: Puoi usare il menu a tendina del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
         courseF_artist_ramp9_c: You will want to move forward 100 pixels, then turn right 120 degrees for each side. Can you use a <xml><block type="controls_repeat"><title name="TIMES">3</title></block></xml> loop to make your code shorter?
       courseF_artist_ramp9_2018_authored_hint:
         courseF_artist_ramp9_a: How is this similar to a square?  How is it different?
-        courseF_artist_ramp9_b: You can use the drop down menu on the turn blocks to see which angle you need!
+        courseF_artist_ramp9_b: Puoi usare il menu a tendina del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
         courseF_artist_ramp9_c: You will want to move forward 100 pixels, then turn right 120 degrees for each side. Can you use a <xml><block type="controls_repeat"><title name="TIMES">3</title></block></xml> loop to make your code shorter?
       courseF_artist_variables10_authored_hint:
         courseF_artist_variables10_a: Have fun with this level! See what little changes can do to your code.
@@ -9060,11 +9120,11 @@ it:
       courseF_bee_for5_authored_hint:
         courseF_bee_for5_a: This time, your `move forward` block and your `get nectar` block will need to be in separate `repeat` loops, both inside the same `for` loop.
         courseF_bee_for5_b: Use the `counter` variable in each loop so the bee moves different distances between each flower.
-        courseF_bee_for5_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.
+        courseF_bee_for5_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseF_bee_for5_2018_authored_hint:
         courseF_bee_for5_a: This time, your `move forward` block and your `get nectar` block will need to be in separate `repeat` loops, both inside the same `for` loop.
         courseF_bee_for5_b: Use the `counter` variable in each loop so the bee moves different distances between each flower.
-        courseF_bee_for5_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.
+        courseF_bee_for5_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseF_bee_for6_authored_hint:
         courseF_bee_for6_a: Don't forget to use a `counter` variable inside your `repeat` loop.
         courseF_bee_for6_b: Within your `for` loop, you will want to have a `move forward` command, and a loop to collect nectar.
@@ -10173,7 +10233,7 @@ it:
       courseF_maze_ramp13_authored_hint:
         courseF_maze_ramp13_b: Non dimenticare di usare il pulsante "Fai un passo" che esegue un blocco per volta permettendoti di notare più facilmente gli errori.
         courseF_maze_ramp13_a: Use repeat blocks to run either a single block or a chunk of code over and over.
-        courseF_maze_ramp13_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.
+        courseF_maze_ramp13_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
         courseF_maze_ramp13_d: Once your loop is done, what do you have to do to move the final few squares? Attach these blocks after the loop.
       courseF_maze_ramp15_authored_hint:
         courseF_maze_ramp7_b: Non dimenticare di usare il pulsante "Fai un passo" che esegue un blocco per volta permettendoti di notare più facilmente gli errori.
@@ -10190,11 +10250,11 @@ it:
       courseF_maze_ramp4_authored_hint:
         courseF_maze_ramp4_a: You can turn right or left from the bird's point of view. If you are facing right, turning right will make you point downwards.
         courseF_maze_ramp4_b: To follow the path, move forward and turn one way, then move three times before turning the opposite way. Move forward one more time to reach the pig.
-        courseF_maze_ramp4_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.
+        courseF_maze_ramp4_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseF_maze_ramp4_2018_authored_hint:
         courseF_maze_ramp4_a: You can turn right or left from the bird's point of view. If you are facing right, turning right will make you point downwards.
         courseF_maze_ramp4_b: To follow the path, move forward and turn one way, then move three times before turning the opposite way. Move forward one more time to reach the pig.
-        courseF_maze_ramp4_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.
+        courseF_maze_ramp4_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseF_maze_ramp5_authored_hint:
         courseF_maze_ramp5_a: Prova ad usare il pulsante "Fai un passo" per eseguire il codice un'istruzione alla volta. Riesci ad capire cosa devi fare dopo?
         courseF_maze_ramp5_b: There is more than one way to get to the pig.
@@ -10206,20 +10266,22 @@ it:
       courseF_maze_ramp6_authored_hint:
         courseF_maze_ramp6_a: Ci sono due modi per risolvere questo esercizio!
         courseF_maze_ramp6_b: The bird starts facing a wall, so remember to turn before moving!
-        courseF_maze_ramp6_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+        courseF_maze_ramp6_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseF_maze_ramp6_2018_authored_hint:
         courseF_maze_ramp6_a: Ci sono due modi per risolvere questo esercizio!
         courseF_maze_ramp6_b: The bird starts facing a wall, so remember to turn before moving!
-        courseF_maze_ramp6_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+        courseF_maze_ramp6_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseF_maze_ramp7_authored_hint:
         courseF_maze_ramp7_b: Non dimenticare di usare il pulsante "Fai un passo" che esegue un blocco per volta permettendoti di notare più facilmente gli errori.
         courseF_maze_ramp7_a: Use repeat blocks to run either a single block or a chunk of code over and over.
-        courseF_maze_ramp7_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+        courseF_maze_ramp7_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
         courseF_maze_ramp7_d: There is more than one way to get to the pig. Which requires the least code?
         courseF_maze_ramp7_aa: |-
           Look at this path...
           
           ![](https://images.code.org/e1d29901495eea9504c194b09efaa88e-image-1503437474226.29.32.png)
+      courseF_playlab_brokenText_authored_hint:
+        courseF_playlab_variables6c_a: Under the “Input” section, use the `ask` block to get input from users.
       courseF_playlab_variables1a_authored_hint:
         courseF_playlab_variables1a_a: You will want to replace the words “What should I shout?” in the green block with “Goal!”
       courseF_playlab_variables1a_2018_authored_hint:
@@ -10714,15 +10776,15 @@ it:
       grade2_MakeDogTag_2_authored_hint:
         2-3_Artist_2_new_a: To create this window, just draw a square with 100 pixel sides.
       grade2_MakeDogTag_3_authored_hint:
-        2-3_Artist_4_a: To finish the rocket, just draw the triangle on top!
+        2-3_Artist_4_a: Per finire il razzo, basta disegnare il triangolo in cima!
       grade2_MakeDogTag_4_authored_hint: { }
       grade2_MakeDogTag_5_authored_hint:
-        grade2_MakeDogTag_5a: The artist is already facing the correct way to draw his first line.
-        grade2_MakeDogTag_5b: This diamond is really just a square that's standing on its corner.
-        grade2_MakeDogTag_5c: Since this diamond is also a square, be sure to turn 90 degrees at the corners.
+        grade2_MakeDogTag_5a: L'artista è già rivolto verso la direzione corretta per disegnare la prima linea.
+        grade2_MakeDogTag_5b: Questo rombo è semplicemente un quadrato ruotato su uno spigolo.
+        grade2_MakeDogTag_5c: Dal momento che questo rombo è anche un quadrato, controlla di girare di 90 gradi ad ogni angolo.
       grade2_MakeDogTag_6_authored_hint:
-        grade2_MakeDogTag_6a: Every angle is either 45 or 90 degrees.
-        grade2_MakeDogTag_6b: "Does it work at the first step?  \nHow about the second?  \nWhere does it go wrong?"
+        grade2_MakeDogTag_6a: Gli angoli sono di 45 o 90 gradi.
+        grade2_MakeDogTag_6b: "- Al primo passo tutto procede bene?\n- E al secondo?\n- Dov'è che qualcosa comincia a non funzionare?"
       grade2_MakeDogTag_7_authored_hint:
         2-3_Artist_11_a: The exterior angles on this triangle are 120 degrees each.
       grade2_MakeDogTag_9_authored_hint:
@@ -10762,21 +10824,21 @@ it:
         hint_1: Connect a "move forward" block to the bottom of the program.
       grade2_playlab_project_6_authored_hint:
         idea1: |-
-          *Need an idea?*
+          *Serve un idea?*
           
-          **Who's there?** Make characters appear with random images, so no one knows who's showing up next.
+          **Chi c'è?** Fai comparire dei personaggi casuali, così nessuno potrà sapere quale sarà il successivo.
           
           ![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)
         idea2: |-
-          *Need an idea?*
+          *Serve un idea?*
           
-          **Going on an Adventure** - Change the background, then have the characters talk about where they are now.
+          **All'avventura!** - Cambia lo sfondo e fai raccontare ai personaggi dove si trovano.
           
           ![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)
         idea3: |-
-          *Need an idea?*
+          *Serve un idea?*
           
-          **Pinball** - Make one character move using the arrow keys (use `when up arrow`, `when down arrow` blocks), then play random sounds when it collides with other characters on the screen.
+          **Flipper** - Fai in modo di muovere un personaggio con le frecce (usa gli eventi `quando si preme sulla freccia verso l'alto` e `quando si preme sulla freccia verso il basso`), quindi riproduci un suono casuale quando il personaggio sbatte contro gli altri.
       grade2_puppy_loops2_authored_hint:
         hint1: You can solve this puzzle with just three blocks, including `when run`.
         hint2: Try putting the `move forward` block inside of a `repeat` block to create a loop.
@@ -11298,7 +11360,7 @@ it:
         gradeK_sequence_4_a: Per trovare la soluzione, prova a scrivere i passi sulla carta!
       gradek_adventurer_loops3_authored_hint:
         gradek_adventurer_loops3_a: Per modificare di quante caselle deve spostarsi Laurel, cambia il numero di volte che il ciclo viene eseguito.
-        gradek_adventurer_loops3_b: Non dimenticare che l'Avventuriera deve scendere e raccogliere l'ultima gemma dopo che ha completato il ciclo `ripeti`!
+        gradek_adventurer_loops3_b: Non dimenticare che l'Avventuriera deve scendere e raccogliere l'ultimo diamante dopo che ha completato il ciclo `ripeti`!
       gradek_adventurer_loops4_authored_hint:
         gradek_adventurer_loops4_a: Se non riesci subito a capire la risposta, provare ad utilizzare un foglio di carta per capire di quali frecce hai bisogno e cerca di definire un percorso.
       gradek_adventurer_loops4a_authored_hint:

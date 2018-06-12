@@ -114,24 +114,25 @@ zh-CN:
     valid_password: "有效的密码 ！"
     invalid_password: "密码必须至少为 6 个字符"
     mismatch_password: "您输入的两个密码不匹配"
-    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
-    under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
-    agree_us_website: "I agree to using a website based in the United States."
-    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
-    student_terms: "我同意 Code.org 的<a href='http://code.org/tos'> 服务条款</a> 的约束.如果我未满13岁，我确认提交这份表格，有我的父母或法定监护人的许可使用 Code.org 服务。<1><br/>对于13岁以下的用户, 电子邮件地址不会存储在用于联络的表单中。学生不会收到除密码重置的邮件外的任何邮件。查看我们的<a href='http://code.org/privacy'>隐私政策</a>来获取更多信息。"
+    agree_tos_privacy: "我同意 <a href='http://code.org/tos'>服务条款</a> 和 <a href='http://code.org/privacy'>隐私策略</a>。"
+    under_13_consent: "如果我在13岁以下, 我确认我的父母或法定监护人同意我使用 Code.org 的服务。"
+    agree_us_website: "我同意使用一个美国的网站。"
+    my_data_to_us: "我使用本网站的数据可能会发送到美国并存储或处理。"
+    student_terms: "电子邮箱不会用来与学生进行联系。除了密码恢复的邮件，学生永远不会收到从Code.org寄来的任何邮件。更多信息请查看<a href='http://code.org/privacy'>隐私政策</a>。"
     teacher_terms: "我同意 Code.org 的服务条款。有关隐私的详细信息，请参阅我们的 <a href='http://code.org/privacy'> 隐私政策</a>。"
     additional_information: "我们需要一些额外的信息来继续为你注册."
-    user_type_button: "Update Account Type"
+    user_type_button: "更新帐户类型"
     user_type_label: "帐户类型"
     user_type_teacher: "老师"
     user_type_student: "学生"
     field_is_required: "必填"
     accept_terms: "您必须同意创建一个帐户"
     error: "发生错误。"
-    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_question: "我们可以通过电子邮件向您发送有关我们课程、本地的学习机会以及其他计算机科学新闻吗？"
+    email_preference_privacy: "(请参阅我们的隐私政策)"
     email_preference_yes: "是"
     email_preference_no: "不"
-    email_preference_required: "You must specify an email preference."
+    email_preference_required: "你必须指定一个电子邮件地址。"
   school_info:
     title: '学校信息（选填）'
     school_country: '学校所在国家'
@@ -456,7 +457,7 @@ zh-CN:
     student_not_found: "无法找到这一个或多个学生。"
     all_students_must_be_in_current_section: "所有的学生都必须注册到您的章节中。"
     already_enrolled_in_new_section: "您无法移动这些学生，因为他们已经在这个新的小组里了。"
-    third_party_login: "You cannot move students to a section that is synced with a third party tool."
+    third_party_login: "不能将从第三方工具同步的学生移动到另一个小组。"
   share:
     title: "在代码工作室学习"
     description: "任何人都可以学习计算机科学。用代码制作游戏、 应用程序和艺术作品。"
@@ -464,6 +465,8 @@ zh-CN:
   gender:
     male: '男性'
     female: '女性'
+    non_binary: '非二进制'
+    not_listed: '期望的术语未列出'
     none: '不愿回答'
   user_type:
     student: '学生'
@@ -876,7 +879,7 @@ zh-CN:
     csd5_2: '第 2 章︰ 解决数据问题'
     csd6_1: '第 1 章︰ 用硬件编程'
     csd6_2: '第 2 章︰ 创建物理原型'
-    csd_survey: 'Post-Course Survey'
+    csd_survey: '课后问卷'
     csp1_1: '第一章：表达和传输信息'
     csp1_2: '第二章：发明互联网'
     csp2_1: '第一章：编码和压缩复杂信息'
@@ -890,10 +893,10 @@ zh-CN:
     csp_ap_1: '第一章：安装'
     csp_ap_2: '第二章：浏览成绩工具'
     csp_ap_3: '第三章：创建性能工具'
-    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
-    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp_postap_1: '第一章：使用和可视化数据'
+    csp_postap_2: '第二章：应用程序和数据库'
     csp2_1_2018: '第2单元︰ 数字信息'
-    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp3_1_2018: '单元3：编程入门'
     csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: '反思提示'
   external_links:
@@ -1000,13 +1003,13 @@ zh-CN:
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: '完整课程'
   cookie_banner:
-    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
-    more_information: "See Code.org's Privacy Policy."
+    message: '通过继续浏览我们的网站或单击 "我同意", 您同意在你的计算机或设备上存储 cookie。'
+    more_information: "查看 Code.org 的隐私政策。"
     accept: '我同意'
   gdpr_dialog:
-    heading: 'Do you agree to using a web site based in the United States?'
-    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
-    link_intro: 'For details see our'
-    privacy_policy: 'privacy policy'
-    logout: 'Logout'
+    heading: '你同意使用一个美国的网站吗？'
+    message: '你使用本网站的数据可能会发送到美国，并被存储或处理。'
+    link_intro: '有关详细信息, 请参阅我们'
+    privacy_policy: '隐私条款'
+    logout: '注销'
     yes: '是'

@@ -550,6 +550,7 @@
   volunteer_engineer_submission_field_email_desc: "Ang iyong email address ay hindi ibabahagi kailan man, ngunit kami ay magpapadala sa iyo ng mga kahilingan mula sa mga guro."
   volunteer_engineer_submission_field_email_placeholder: "Email address"
   volunteer_engineer_submission_field_email_preference: "Can we email you about updates to our courses, volunteer opportunities, or other computer science news?"
+  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy policy)"
   volunteer_engineer_submission_field_email_preference_yes: 'Oo'
   volunteer_engineer_submission_field_email_preference_no: 'Hindi'
   volunteer_engineer_submission_final_paragraph: "Ikaw ay ililista sa isang mapa para sa mga lokal na mga guro na makipag-ugnayan sa iyo para sa Hour of Code o ibang mga oportunidad sa pagboluntaryo. Ang iyong email at eksaktong address ay HINDI namin ibabahagi. Ngunit ang ibang impormasyon (kalakip na ang tinatantyang lokasyon) ay publikong makikita ng mga lokal na guro."
@@ -957,12 +958,26 @@
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Yunit 5: Mga Datos at Lipunan'
   csd6_name: 'Yunit 6: Pisikal na Computing'
+  csd1-2017_name: 'Unit 1: Problem Solving'
+  csd2-2017_name: 'Unit 2: Web Development'
+  csd3-2017_name: 'Unit 3: Animation and Games'
+  csd4-2017_name: 'Unit 4: The Design Process'
+  csd5-2017_name: 'Yunit 5: Mga Datos at Lipunan'
+  csd6-2017_name: 'Yunit 6: Pisikal na Computing'
   csd1-2018_name: 'Unit 1: Problem Solving'
   csd2-2018_name: 'Unit 2: Web Development'
   csd3-2018_name: 'Unit 3: Animation and Games'
   csd4-2018_name: 'Unit 4: The Design Process'
   csd5-2018_name: 'Yunit 5: Mga Datos at Lipunan'
   csd6-2018_name: 'Yunit 6: Pisikal na Computing'
+  csp1-2017_name: 'Yunit 1: Ang Internet'
+  csp2-2017_name: 'Yunit 2: Digital na Impormasyon'
+  csp3-2017_name: 'Unit 3: Algorithms and Programming'
+  csp4-2017_name: 'Unit 4: Big Data and Privacy'
+  csp5-2017_name: 'Unit 5: Building Apps'
+  csp-explore-2017_name: 'AP: Tuklasin ang PT Prep'
+  csp-create-2017_name: 'AP: Maglikha ng PT Prep'
+  csppostap-2017_name: 'Pagkatapos ng AP: Mga Database sa mga Apps'
   csp1-2018_name: 'Yunit 1: Ang Internet'
   csp2-2018_name: 'Yunit 2: Digital na Impormasyon'
   csp3-2018_name: 'Unit 3: Algorithms and Programming'

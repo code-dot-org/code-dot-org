@@ -1,6 +1,20 @@
 es:
   data:
     script:
+      category:
+        csd_category_name: CS Discoveries ('17-'18)
+        csd_2018_category_name: CS Discoveries ('18-'19)
+        csf_category_name: Fundamentos de CS
+        csf_international_category_name: CS Fundamentals International
+        csf2_draft_category_name: 'En desarrollo: Cursos A - F'
+        csp_category_name: "'15-'16 Principios de CS"
+        csp_2018_category_name: CS Principles ('18-'19)
+        cspexams_category_name: Prueba de práctica de principios de CS
+        csp17_category_name: '''16-''17 Principios de CS'
+        full_course_category_name: Full Courses
+        hoc_category_name: Hora del Código
+        math_category_name: Matemáticas
+        research_studies_category_name: Research Studies
       name:
         course1:
           title: Curso 1
@@ -2091,7 +2105,7 @@ es:
               name: Planning For the Future
             Sharing Student Work:
               name: Sharing Student Work
-        csp1:
+        csp1-2017:
           title: CSP Unit 1 - The Internet
           description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. The unit then explores the structure and design of the internet and the implications of those design decisions.
           description_short: Explore the challenges about representing information as bits and how to get those bits from one place to another.
@@ -2139,7 +2153,7 @@ es:
               name: CSP Student Post-Course Survey
             Post-Course Survey:
               name: Post-Course Survey
-        csp2:
+        csp2-2017:
           title: CSP Unit 2 - Digital Information
           description: This unit further explores the ways that digital information is encoded, represented and manipulated. Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.
           description_short: Explore how more complex digital information is represented and manipulated through computation and visualization.
@@ -2189,7 +2203,7 @@ es:
               name: Practice PT - Encode an Experience
             Post-Course Survey:
               name: Post-Course Survey
-        csp3:
+        csp3-2017:
           title: CSP Unit 3 - Intro to Programming
           description: "Esta unidad presenta los conceptos fundamentales de la programación informática, que desbloquea la capacidad de crear aplicaciones ricas e interactivas. Este curso utiliza JavaScript como lenguaje de programación y App Lab como el entorno de programación para crear aplicaciones, pero los conceptos aprendidos en estas lecciones abarcan todos los lenguajes y herramientas de programación.\\r\n\\r\nEsta unidad se actualizó por última vez el 30 de octubre de 2017. Obtenga más información sobre las actualizaciones de los planes de estudios en forum.code.org/c/csp/updates."
           description_short: Programación
@@ -2235,7 +2249,7 @@ es:
               name: Please complete the CSP Mid-course survey!
             Post-Course Survey:
               name: Post-Course Survey
-        csp4:
+        csp4-2017:
           title: CSP Unit 4 - Big Data and Privacy
           description: "The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.\\r\n\\r\nThis unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
           description_short: Explore the data-rich world we live, and how data impacts public policy, personal privacy, security, the law, and ethics.
@@ -2279,7 +2293,7 @@ es:
               name: Post-Course Survey
             Student Post-Course Survey:
               name: Student Post-Course Survey
-        csp5:
+        csp5-2017:
           title: CSP Unit 5 - Building Apps
           description: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           description_short: Continue to learn foundational concepts of computer programming in JavaScript by making rich, interactive apps.
@@ -2328,11 +2342,11 @@ es:
             While Loops:
               name: Bucles Mientras
             Edited lessons ABOVE this line:
-              name: Lecciones editadas ENCIMA de esta línea
+              name: Edited lessons ABOVE this line
             Buttons and Events:
               name: Botones y eventos
             Make Your Own Multi-Screen App:
-              name: Crea tu propia aplicación de pantallas múltiples
+              name: Make Your Own Multi-Screen App
             Unit 5 Assessment 1:
               name: Unit 5 Assessment 1
             Unit 5 Assessment 2:
@@ -3267,7 +3281,7 @@ es:
               name: Lesson 2,3
             Test stage with bubbles:
               name: Test stage with bubbles
-        csd3:
+        csd3-2017:
           title: CSD Unit 3 - Animations and Games
           description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
           description_short: "Programación"
@@ -3337,7 +3351,7 @@ es:
               description_teacher: Los estudiantes exploran los desafíos de comunicación en cómo dibujar con formas y usan una herramienta que introduce la forma de abordar este problema en Game Lab. La actividad de calentamiento demuestra rápidamente los desafíos de comunicar sin algún punto de referencia compartido. En la actividad principal, los estudiantes exploran una herramienta de Game Lab que les permite a los mismo colocar formas interactivamente en la cuadrícula de 400 por 400 de Game Lab. Luego se turnan para instruir a un compañero sobre cómo dibujar una imagen oculta con esta herramienta, lo que representa muchos desafíos que los estudiantes enfrentarán al programar en Game Lab. Los estudiantes opcionalmente crean su propia imagen para comunicarse antes de discutir la informacion.
             Shapes and Randomness:
               name: Shapes and Randomness
-              description_student: Esta lección amplía las habilidades de dibujo para incluir ancho y alto e introduce el concepto de generación de números aleatorios. La clase aprende a dibujar con versiones de elipse() y rect() que incluyen parámetros de ancho y alto y para usar el bloque de background() para llenar la pantalla de color. Al final de la progresión, la clase se introduce en el bloque randomNumber() y utiliza los nuevos bloques para dibujar una serpiente de arcoiris aleatoria.
+              description_student: This lesson extends the drawing skills to include width and height and introduces the concept of random number generation. The class learns to draw with versions of ellipse() and rect() that include width and height parameters and to use the background() block to fill the screen with color. At the end of the progression the class is introduced to the randomNumber() block and uses the new blocks to draw a randomized rainbow snake.
               description_teacher: In this lesson students continue to develop their drawing skills. At the beginning of the lesson a teacher-led discussion connects expanded block functionality (e.g. different sized shapes) with the need for more block inputs, or "parameters". Students learn to draw with versions of `ellipse()` and `rect()` that include width and height parameters. They also learn to use the `background()` block. At the end of the progression students are introduced to the `randomNumber()` block. Combining all of these skills students will draw a randomized rainbow snake at the end of the lesson.
             Variables:
               name: Variables
@@ -3389,7 +3403,7 @@ es:
               description_student: The class plans and builds original games using the project guide from the previous two lessons. Working individually or in pairs, the class plans, develops, and gives feedback on the games.  After incorporating the peer feedback, the class shares out the completed games.
               description_teacher: Los estudiantes planificarán y construirán su propio juego utilizando la guía del proyecto de las dos lecciones anteriores para guiar su proyecto. Trabajando individualmente o en parejas, los estudiantes primero decidirán el tipo de juego que les gustaría construir, tomando como inspiración un conjunto de juegos de muestra. Luego completarán una guía de proyecto en blanco donde describirán el comportamiento del juego y el alcance de las variables, sprites y funciones que necesitarán construir. En Code Studio, una serie de niveles les indica una secuencia general que pueden usar para implementar este plan. A mitad del proceso, los estudiantes compartirán sus proyectos para la revisión por pares e incorporarán comentarios a medida que finalicen su juego. Al final de la lección, los estudiantes compartirán sus juegos completados con sus compañeros de clase. Este proyecto abarcará múltiples clases y puede tomar fácilmente de 3-5 períodos de clase.
             Parameters and Randomization:
-              name: Parámetros y aleatoriedad
+              name: Parameters and Randomization
             Shapes and Randomization:
               name: Shapes and Randomization
             CS Discoveries End of Semester Survey:
@@ -3516,7 +3530,7 @@ es:
               name: Unit 4 Chapter 1 Assessment
             'Anonymous student survey: Taking the AP exam':
               name: 'Anonymous student survey: Taking the AP exam'
-        csd1:
+        csd1-2017:
           title: CSD Unit 1 - Problem Solving
           description_short: "  Aprenda cómo los humanos trabajan con computadoras para resolver problemas."
           description: " \\r\nUnit 1 is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\\r\n"
@@ -3721,7 +3735,7 @@ es:
               name: RGB Color
             Processing with Bits:
               name: Processing with Bits
-        csd2:
+        csd2-2017:
           title: CSD Unit 2 - Web Development
           description_audience: ''
           description_short: "  Learn to build your own web site in Web Lab."
@@ -3851,7 +3865,7 @@ es:
               name: Measuring Student Learning
             AP Preparation and Support:
               name: AP Preparation and Support
-        csd4:
+        csd4-2017:
           title: CSD Unit 4 - The Design Process
           description_audience: ''
           description_short: "  Learn how to design a program that meets the needs of your users."
@@ -4496,7 +4510,7 @@ es:
           description_short: ''
           description: 'COMING SOON: soon this page will host a set of resources for teachers preparing for the AP exam'
           stages: { }
-        csppostap:
+        csppostap-2017:
           title: CSP Post-AP - Databases and Using Data in Your Apps
           description_audience: ''
           description_short: Learn to collect and use data in App Lab apps.
@@ -4752,7 +4766,7 @@ es:
               name: Condicionales
             'Real Life Algorithms: Dice Race':
               name: 'Algoritmos de la vida real: Carrera de dados'
-        csd6:
+        csd6-2017:
           title: CSD Unit 6 - Physical Computing
           description_audience: ''
           description_short: Learn to program with physical devices.
@@ -4992,7 +5006,7 @@ es:
               name: Using the Game Design Process
             'Project: Design a Game':
               name: 'Proyecto: Diseñar un juego'
-        csd5:
+        csd5-2017:
           title: CSD Unit 5 - Data and Society
           description_audience: ''
           description_short: Learn how people use computers to solve data problems.
@@ -6924,6 +6938,14 @@ es:
               name: CSP post survey 2018 staging
             CSD post survey 2018 staging:
               name: CSD post survey 2018 staging
+            CSD pre survey 2018 staging:
+              name: CSD pre survey 2018 staging
+            CSP pre survey 2018 staging:
+              name: CSP pre survey 2018 staging
+            CSP mid survey 2018 stagin:
+              name: CSP mid survey 2018 stagin
+            CSP mid survey 2018 staging:
+              name: CSP mid survey 2018 staging
           title: All the surveys
           description_audience: ''
           description_short: Place to stage and test Code.org surveys
@@ -6968,7 +6990,7 @@ es:
           description_audience: ''
           description_short: ''
           description: ''
-        csp-explore:
+        csp-explore-2017:
           stages:
             new stage:
               name: new stage
@@ -6988,7 +7010,7 @@ es:
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and complete the AP Explore Performance Tasks.
           description: "These lessons are here to help you understand, prepare for, and do the AP Explore Performance Task.  Each \"lesson\" contains links to helpful documents that your teacher can help walk you through. NOTE: the second item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.\\r\n\\r\nThis unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
-        csp-create:
+        csp-create-2017:
           stages:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
               name: Tech Setup - Your AP Digital Portfolio and Other Tools
@@ -7689,6 +7711,74 @@ es:
               name: Conditionals in Bee
             Until Loops in Maze:
               name: Until Loops in Maze
+            Programming in Maze:
+              name: Programming in Maze
+            Debugging in Maze:
+              name: Debugging in Maze
+            Programming in Collector:
+              name: Programming in Collector
+            Programming in Artist:
+              name: Programming in Artist
+            'Loops: Getting Loopy':
+              name: 'Loops: Getting Loopy'
+            Loops with Rey and BB-8:
+              name: Loops with Rey and BB-8
+            Copyright and Creativity:
+              name: Copyright and Creativity
+            'Concept Practice with Minecraft ':
+              name: 'Concept Practice with Minecraft '
+            Nested Loops in Bee:
+              name: Nested Loops in Bee
+            Nested Loops in Frozen:
+              name: Nested Loops in Frozen
+            Conditionals with Cards:
+              name: Condicionales con tarjetas
+            Conditionals & Loops in Harvester:
+              name: Conditionals & Loops in Harvester
+            'Functions: Songwriting':
+              name: 'Functions: Songwriting'
+            Functions in Minecraft:
+              name: Functions in Minecraft
+            Functions in Harvester:
+              name: Functions in Harvester
+            Functions in Artist:
+              name: Functions in Artist
+            Screen Out the Mean:
+              name: Screen Out the Mean
+            Determine the Concept:
+              name: Determine the Concept
+            Build a Flappy Game:
+              name: Build a Flappy Game
+            The Power of Words:
+              name: The Power of Words
+            Envelope Variables:
+              name: Variables de sobre
+            Variables as Constant in Artist:
+              name: Variables as Constant in Artist
+            Variables that Change in Bee:
+              name: Variables that Change in Bee
+            Variables that Change in Artist:
+              name: Variables that Change in Artist
+            For Loop Fun:
+              name: Diversión con bucles Para
+            Learning Sprites with Sprite Lab:
+              name: Learning Sprites with Sprite Lab
+            Alien Dance Party with Sprite Lab:
+              name: Alien Dance Party with Sprite Lab
+            Pet Giraffe with Sprite Lab:
+              name: Pet Giraffe with Sprite Lab
+            Binary Bracelets:
+              name: Pulseras Binarias
+            'Unplugged: Binary':
+              name: 'Desconectado: binario'
+            Artist Binary:
+              name: Artista binario
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Colaboración Abierta
+            Relay Programming:
+              name: Programación bajo presión
         courseb-2018:
           title: Curso B
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
@@ -8460,6 +8550,8 @@ es:
               name: Unit 1 Chapter 2 Assessment
               description_student: ''
               description_teacher: ''
+            Sending Text:
+              name: Sending Text
         csd1-2018:
           title: CSD Unit 1 - Problem Solving
           description: " \\r\nUnit 1 is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\\r\n"
@@ -8725,6 +8817,8 @@ es:
               name: Rapid Research - Format Showdown
             Lossy vs Lossless Compression:
               name: Lossy vs Lossless Compression
+            Unit 2 Assessment:
+              name: Unit 2 Assessment
         csp3-2018:
           title: CSP Unit 3 - Intro to Programming
           description: "Esta unidad presenta los conceptos fundamentales de la programación informática, que desbloquea la capacidad de crear aplicaciones ricas e interactivas. Este curso utiliza JavaScript como lenguaje de programación y App Lab como el entorno de programación para crear aplicaciones, pero los conceptos aprendidos en estas lecciones abarcan todos los lenguajes y herramientas de programación.\\r\n\\r\nEsta unidad se actualizó por última vez el 30 de octubre de 2017. Obtenga más información sobre las actualizaciones de los planes de estudios en forum.code.org/c/csp/updates."
@@ -8779,6 +8873,8 @@ es:
               name: Please complete the CSP Mid-course survey!
               description_student: ''
               description_teacher: ''
+            Creating Functions with Parameters:
+              name: Originando funciones con los parámetros
         csp-explore-2018:
           title: Explore - AP Performance Task Prep
           description: "These lessons are here to help you understand, prepare for, and do the AP Explore Performance Task.  Each \"lesson\" contains links to helpful documents that your teacher can help walk you through. NOTE: the second item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.\\r\n\\r\nThis unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
@@ -8869,6 +8965,8 @@ es:
               name: Finding Trends with Visualizations
             Check Your Assumptions:
               name: Verifica tus suposiciones
+            Unit 4 Assessment:
+              name: Unit 4 Assessment
         csp5-2018:
           title: CSP Unit 5 - Building Apps
           description: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
@@ -9043,6 +9141,8 @@ es:
               name: Fish Tank - Creating Sprites
             Alien Dance Party - Input:
               name: Alien Dance Party - Input
+            Virtual Pet - Interactions:
+              name: Virtual Pet - Interactions
           title: Introduction to Sprite Lab (PILOT)
           description_audience: Course E/F Students
           description_short: This is a pilot course for Code.org's new Sprite Lab tool for Courses E and F
@@ -9219,6 +9319,14 @@ es:
               name: Novice Reflection Overview
             Monday:
               name: Monday
+            Day 1:
+              name: Day 1
+            Day 2:
+              name: Day 2
+            Day 3:
+              name: Day 3
+            Day 4:
+              name: Day 4
           title: CS Discoveries Novice Reflections 2018-2019
           description_audience: CS Discoveries Facilitators in Training 2018-2019
           description_short: 'Novice reflection materials for CS Discoveries facilitators in training '
@@ -9235,6 +9343,16 @@ es:
               name: Thursday
             Wrap Up:
               name: Wrap Up
+            Apprentice Reflection Overview:
+              name: Apprentice Reflection Overview
+            Day 1:
+              name: Day 1
+            Day 2:
+              name: Day 2
+            Day 3:
+              name: Day 3
+            Day 4:
+              name: Day 4
           title: CS Discoveries Apprentice Reflections 2018-2019
           description_audience: CS Discoveries Facilitators in Training 2018-2019
           description_short: 'Apprentice reflection materials for CS Discoveries facilitators in training '
@@ -9251,6 +9369,16 @@ es:
               name: Thursday
             Wrap Up:
               name: Wrap Up
+            Monday:
+              name: Monday
+            Day 1:
+              name: Day 1
+            Day 2:
+              name: Day 2
+            Day 3:
+              name: Day 3
+            Day 4:
+              name: Day 4
           title: CS Principles Novice Reflections 2018-2019
           description_audience: CS Principles Facilitators in Training 2018-2019
           description_short: 'Novice reflection materials for CS Principles facilitators in training '
@@ -9267,7 +9395,95 @@ es:
               name: Thursday
             Wrap Up:
               name: Wrap Up
-          title: CS Principles Novice Reflections 2018-2019
+            Apprentice Reflection Overview:
+              name: Apprentice Reflection Overview
+            Day 1:
+              name: Day 1
+            Day 2:
+              name: Day 2
+            Day 3:
+              name: Day 3
+            Day 4:
+              name: Day 4
+          title: CS Principles Apprentice Reflections 2018-2019
           description_audience: CS Principles Facilitators in Training 2018-2019
-          description_short: 'Novice reflection materials for CS Principles facilitators in training '
+          description_short: 'Apprentice reflection materials for CS Principles facilitators in training '
           description: This is the set of apprentice reflections for Code.org CS Principles facilitators in training during their 5-day summer workshop. Here you will find reflection prompts for each day of your in-person 5-day summer workshop. This questions will be the foundation of work we do at the Facilitator Training Weekend.
+        pre-express-2018:
+          title: Pre-reader Express
+          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description_short: 'An introduction to computer science for pre-readers: combines the best of our kindergarten and first grade courses.'
+          description_audience: 'Ages: 4-8'
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Debugging: Unspotted Bugs'
+              description_student: ''
+              description_teacher: ''
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: 'Persistence & Frustration: Stevie and the Marbles'
+              description_student: ''
+              description_teacher: ''
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmos de la Vida Real: Planta una Semilla'
+              description_student: ''
+              description_teacher: ''
+            Learn to Drag and Drop:
+              name: Learn to Drag and Drop
+              description_student: ''
+              description_teacher: ''
+            'Online Safety: Your Digital Footprint':
+              name: 'Online Safety: Your Digital Footprint'
+              description_student: ''
+              description_teacher: ''
+            'Programming: My Robotic Friends':
+              name: 'Programming: My Robotic Friends'
+              description_student: ''
+              description_teacher: ''
+            Programming in Maze:
+              name: Programming in Maze
+              description_student: ''
+              description_teacher: ''
+            'Programming: Star Wars':
+              name: 'Programando: La Guerra de las Galaxias'
+              description_student: ''
+              description_teacher: ''
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+              description_student: ''
+              description_teacher: ''
+            Loops in Collector:
+              name: Loops in Collector
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+              description_student: ''
+              description_teacher: ''
+            Events in Play Lab:
+              name: Events in Play Lab
+              description_student: ''
+              description_teacher: ''
+            Spelling Bee:
+              name: Concurso de Ortografía
+              description_student: ''
+              description_teacher: ''
+            Move It, Move It:
+              name: Muévelo, Muévelo
+            Sequencing with Scrat:
+              name: Sequencing with Scrat
+            Your Digital Footprint:
+              name: Tu huella Digital
+            Programming in Ice Age:
+              name: Programming in Ice Age
+            Copyright and Creativity:
+              name: Copyright and Creativity
+            Programming with Rey and BB-8:
+              name: Programming with Rey and BB-8
+            Loops in Ice Age:
+              name: Loops in Ice Age
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: 'Persistence & Frustration: Stevie and the Big Project'

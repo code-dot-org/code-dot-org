@@ -161,6 +161,7 @@
     error: خطایی رخ داد.
     email_preference_question: Can we email you about updates to our courses, local
       learning opportunities, or other computer science news?
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: بله
     email_preference_no: نه
     email_preference_required: You must specify an email preference.
@@ -621,6 +622,8 @@
   gender:
     male: مرد
     female: زن
+    non_binary: Non-binary
+    not_listed: Preferred term not listed
     none: ترجیح می دهم چواب ندهم
   user_type:
     student: دانش آموز

@@ -1,0 +1,49 @@
+"nl":
+  data:
+    block_categories:
+      Actions: Acties
+      Loops: Lussen
+      Functions: Functies
+      Color: Kleur
+      Brushes: Brushes
+      Math: Wiskunde
+      Logic: Logica
+      Variables: Variabelen
+      Number: Number
+      String: String
+      Image: Image
+      Boolean: Boolean
+      Conditionals: Voorwaardelijke instructies
+      Events: Gebeurtenissen
+      Games/Score: Games/Score
+      Comments: Comments
+      Category: Category
+      Prebuilt: Prebuilt
+      Text: tekst
+      Picker: Picker
+      Comment: Comment
+      'Variables ': 'Variables '
+      everythingelse: everythingelse
+      numbers: numbers
+      Numbers: Numbers
+      Input: Input
+      Default: Default
+      Sprites: Sprites
+      Behaviors: Behaviors
+      World: World
+      Sprite: Sprite
+      Brush: Brush
+      Make Sprite: Make Sprite
+      Movement: Movement
+      Start: Start
+      Groups: Groups
+      Booleans: Booleans
+      Functional: Functional
+      Predefined: Predefined
+      test: test
+      test2: test2
+      Foo: Foo
+      Name: naam
+      NEW BLOCKS: NEW BLOCKS
+      Game/Score: Game/Score
+      Function: Functie

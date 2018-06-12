@@ -135,6 +135,7 @@ class User < ActiveRecord::Base
     data_transfer_agreement_source
     data_transfer_agreement_kind
     data_transfer_agreement_at
+    seen_oauth_connect_dialog
   )
 
   # Include default devise modules. Others available are:
@@ -159,9 +160,16 @@ class User < ActiveRecord::Base
     powerschool
   ).freeze
 
+  OAUTH_PROVIDERS_UNTRUSTED_EMAIL = %w(
+    clever
+    powerschool
+  ).freeze
+
   SYSTEM_DELETED_USERNAME = 'sys_deleted'
 
+  # constants for resetting user secret words/picture
   RESET_SECRETS = 'reset_secrets'.freeze
+  MAX_SECRET_RESET_ATTEMPTS = 5
 
   # :user_type is locked. Use the :permissions property for more granular user permissions.
   USER_TYPE_OPTIONS = [
@@ -493,7 +501,8 @@ class User < ActiveRecord::Base
   validates :name, length: {within: 1..70}, allow_blank: true
   validates :name, no_utf8mb4: true
 
-  defer_age = proc {|user| user.provider == 'google_oauth2' || user.provider == 'clever' || user.provider == User::PROVIDER_SPONSORED}
+  defer_age = proc {|user| %w(google_oauth2 clever powerschool).include?(user.provider) || user.provider == User::PROVIDER_SPONSORED}
+
   validates :age, presence: true, on: :create, unless: defer_age # only do this on create to avoid problems with existing users
   AGE_DROPDOWN_OPTIONS = (4..20).to_a << "21+"
   validates :age, presence: false, inclusion: {in: AGE_DROPDOWN_OPTIONS}, allow_blank: true
@@ -713,10 +722,10 @@ class User < ActiveRecord::Base
       user.name = name_from_omniauth auth.info.name
       user.user_type = params['user_type'] || auth.info.user_type
       # Store emails, except when using Clever
-      user.email = auth.info.email unless user.user_type == 'student' && auth.provider == 'clever'
+      user.email = auth.info.email unless user.user_type == 'student' && OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(auth.provider)
 
-      if auth.provider == 'clever' && User.find_by_email_or_hashed_email(user.email)
-        user.email = user.email + '.cleveremailalreadytaken'
+      if OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(auth.provider) && User.find_by_email_or_hashed_email(user.email)
+        user.email = user.email + '.oauthemailalreadytaken'
       end
 
       if auth.provider == :the_school_project
@@ -1243,11 +1252,27 @@ class User < ActiveRecord::Base
   end
 
   def generate_secret_picture
-    self.secret_picture = SecretPicture.random
+    MAX_SECRET_RESET_ATTEMPTS.times do
+      new_secret_picture = SecretPicture.random
+
+      # retry if random picture is same as user's current secret picture
+      next if new_secret_picture == secret_picture
+
+      self.secret_picture = new_secret_picture
+      break
+    end
   end
 
   def generate_secret_words
-    self.secret_words = [SecretWord.random.word, SecretWord.random.word].join(" ")
+    MAX_SECRET_RESET_ATTEMPTS.times do
+      new_secret_words = [SecretWord.random.word, SecretWord.random.word].join(" ")
+
+      # retry if random words are same as user's current secret words
+      next if new_secret_words == secret_words
+
+      self.secret_words = new_secret_words
+      break
+    end
   end
 
   # Returns an array of experiment name strings

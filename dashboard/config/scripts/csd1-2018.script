@@ -3,10 +3,12 @@ login_required true
 hideable_stages true
 exclude_csf_column_in_legend true
 student_detail_progress_view true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csd/unit1"], ["teacherForum", "https://forum.code.org/c/csd1"], ["vocabulary", "https://curriculum.code.org/csd/unit1/vocab/"], ["standardMappings", "https://curriculum.code.org/csd/unit1/standards/"]]
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-18/unit1"], ["teacherForum", "https://forum.code.org/c/csd1"], ["vocabulary", "https://curriculum.code.org/csd-18/unit1/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-18/unit1/standards/"]]
 has_verified_resources true
 has_lesson_plan true
-script_announcements [{"notice"=>"Know a teacher interested in teaching computer science?", "details"=>"Applications for the 2018 middle and high school Professional Learning program are now open!  No computer science experience is necessary.", "link"=>"https://code.org/educate/professional-learning-2018", "type"=>"bullhorn"}]
+family_name 'csd1'
+version_year '2018'
+is_stable true
 
 stage 'Intro to Problem Solving', flex_category: 'csd1_1'
 named_level 'CSD U1L01 TFMD_2018'

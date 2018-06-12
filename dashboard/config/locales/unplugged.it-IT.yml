@@ -143,7 +143,7 @@
           di insistere quando i problemi sono complicati.
       GettingLoopy:
         title: Diventare Ripetitivi
-        desc: Questa lezione introduce il costrutto di programmazione detto <i>ciclo</i>
+        desc: Questa lezione introduce il costrutto di programmazione detto ciclo
           (istruzioni ripetute) attraverso una danza. Gli studenti imparano una semplice
           coreografia e sono istruiti a ripeterla.
       RelayProgramming:
@@ -311,7 +311,8 @@
           amici, ma questa volta usando i cicli!
       courseC_Unplugged_ScreenOutTheMean:
         title: Attività Tradizionale
-        desc: Today you will learn about what to do if someone is being mean online.
+        desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in
+          rete.
       courseD_unplugged_digitalCitizenship:
         title: Attività Tradizionale
         desc: Today you will learn what it means to be a Digital Citizen.
@@ -320,7 +321,8 @@
         desc: Today you will learn the difference between private and personal information!
       courseF_unplugged_powerOfWords:
         title: Attività Tradizionale
-        desc: Today you will learn about what to do if someone is being mean online.
+        desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in
+          rete.
       deeper learning description:
         title: ''
         desc: 'translation missing: en-US.data.unplugged.desc'
@@ -363,7 +365,7 @@
           parte essenziale.
       courseC_unplugged_gettingLoopy:
         title: Diventare Ripetitivi
-        desc: Questa lezione introduce il costrutto di programmazione detto <i>ciclo</i>
+        desc: Questa lezione introduce il costrutto di programmazione detto ciclo
           (istruzioni ripetute) attraverso una danza. Gli studenti imparano una semplice
           coreografia e sono istruiti a ripeterla.
       courseC_unplugged_binaryBracelets:
@@ -556,8 +558,9 @@
         title: Attività Tradizionale
         desc: Today you will learn what it means to be a Digital Citizen.
       courseC_Unplugged_ScreenOutTheMean_2018:
-        title: Attività Tradizionale
-        desc: Today you will learn about what to do if someone is being mean online.
+        title: 'Cittadinanza Digitale: Caccia Via le Cattiverie dallo Schermo'
+        desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in
+          rete.
       Conditionals_2018:
         title: Istruzioni condizionali
         desc: Per imparare le istruzioni condizionali, gli studenti giocano con le
@@ -584,7 +587,7 @@
           parte essenziale.
       GettingLoopy_2018:
         title: Diventare Ripetitivi
-        desc: Questa lezione introduce il costrutto di programmazione detto <i>ciclo</i>
+        desc: Questa lezione introduce il costrutto di programmazione detto ciclo
           (istruzioni ripetute) attraverso una danza. Gli studenti imparano una semplice
           coreografia e sono istruiti a ripeterla.
       BinaryBracelets_2018:

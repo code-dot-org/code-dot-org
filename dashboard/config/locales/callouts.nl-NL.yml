@@ -1118,26 +1118,26 @@
         courseA_maze_seqA_callout1: Use the step button to go step-by-step through
           the program. This will help you find the bug!
       courseA_maze_seq4_callout:
-        made_of_stone: These blocks are made of stone.  You can move them, but you
-          can't delete them!
+        made_of_stone: Deze blokken zijn gemaakt van steen. Je kunt ze verplaatsen,
+          maar je kunt ze niet verwijderen!
       courseA_maze_seq4_2018_callout:
-        made_of_stone: These blocks are made of stone.  You can move them, but you
-          can't delete them!
+        made_of_stone: Deze blokken zijn gemaakt van steen. Je kunt ze verplaatsen,
+          maar je kunt ze niet verwijderen!
       courseA_maze_seq4a_callout: {}
       courseA_playLab_events2_callout: {}
       courseA_playLab_events2_2018_callout: {}
       courseA_playLab_events3_callout: {}
       courseA_playLab_events3_2018_callout: {}
       courseA_playLab_events4_callout:
-        courseA_playlab_events4_callout1: This is a callout
+        courseA_playlab_events4_callout1: Dit is een toelichting
       courseA_playLab_events4_2018_callout:
-        courseA_playlab_events4_callout1: This is a callout
+        courseA_playlab_events4_callout1: Dit is een toelichting
       courseA_playLab_events5_callout:
-        courseA_playLab_events5_1: Click here to change the direction of the event
-          arrow.
+        courseA_playLab_events5_1: Klik hier om de richting van de gebeurtenis pijl
+          te veranderen.
       courseA_playLab_events5_2018_callout:
-        courseA_playLab_events5_1: Click here to change the direction of the event
-          arrow.
+        courseA_playLab_events5_1: Klik hier om de richting van de gebeurtenis pijl
+          te veranderen.
       courseA_playLab_events6_callout:
         courseA_playLab_events6_1: This let's you choose a "random" sound, which means
           that you don't know what you are going to get until you hear it!
@@ -1181,11 +1181,11 @@
         courseB_maze_seq2_callout1: Use the step button to go step-by-step through
           the program. This will help you find the bug!
       courseB_maze_seq3_callout:
-        courseB_maze_seq3_1: The grey blocks are made of stone and can't be thrown
-          away.
+        courseB_maze_seq3_1: De grijze blokken zijn gemaakt van steen en kunnen niet
+          weggegooid worden.
       courseB_maze_seq3_2018_callout:
-        courseB_maze_seq3_1: The grey blocks are made of stone and can't be thrown
-          away.
+        courseB_maze_seq3_1: De grijze blokken zijn gemaakt van steen en kunnen niet
+          weggegooid worden.
       courseB_maze_seq7_callout: {}
       courseB_maze_seq7_2018_callout: {}
       courseB_playlab_events6_callout:
@@ -1223,11 +1223,11 @@
         courseC_collector_prog1_1: Do you see some new blocks in the toolbox?  Don't
           worry, we will show you how to use them later in the stage.
       courseC_collector_prog7_callout:
-        courseC_collector_prog7_1: You can take more blocks from the toolbox if you
-          need them!
+        courseC_collector_prog7_1: Je kunt meer blokken uit het menu gebruiken als
+          je ze nodig hebt!
       courseC_collector_prog7_2018_callout:
-        courseC_collector_prog7_1: You can take more blocks from the toolbox if you
-          need them!
+        courseC_collector_prog7_1: Je kunt meer blokken uit het menu gebruiken als
+          je ze nodig hebt!
       courseC_collector_prog8_callout: {}
       courseC_collector_prog8_2018_callout: {}
       courseC_collector_prog9_callout: {}
@@ -1928,6 +1928,8 @@
           en uit te voeren
         sign_in_to_save_project: Want to access your project later? Sign in to save
           this project to your account!
+      courseF_playlab_brokenText_callout:
+        courseF_playlab_variables5c_1: You will find your variable block in here.
       courseF_playlab_embed_vars_callout: {}
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: The toolbox has been organized into categories
@@ -1996,7 +1998,7 @@
         snowflake_dropdown: Gebruik deze vervolgkeuzelijst om verschillende sneeuwvlokken
           te maken!
       frozen line_callout:
-        run: Klik op "Run" om je programma te proberen!
+        run: Klik op "Start" om je programma te testen!
         move_elsa_forward: Sleep een "ga vooruit" blok en hang het onder de "als gestart"
           blok om Elsa vooruit te laten bewegen
       frozen perpendicular_callout:
@@ -2047,8 +2049,8 @@
       grade2_collector_10_callout: {}
       grade2_collector_10_2018_callout: {}
       grade2_collector_7_callout:
-        grade2_collector_7_1: You can take more blocks from the toolbox if you need
-          them!
+        grade2_collector_7_1: Je kunt meer blokken uit het menu gebruiken als je ze
+          nodig hebt!
       grade2_collector_8_callout: {}
       grade2_collector_9_callout: {}
       grade2_collector_9a_callout: {}
@@ -2337,7 +2339,7 @@
       subgoal-test_callout:
         move_subgoal: This is the "move turtle" subgoal label.  Drag it out into the
           workspace.
-        orient_subgoal: This means you want to turn the turtle
+        orient_subgoal: Dit betekent dat je de schildpad wilt draaien
       subgoalU3L2_TurtleSquare_right_callout: {}
       testing code callout_callout:
-        testing_code_callout: Dit maakt de geest bewegen!
+        testing_code_callout: Hiermee beweeg je de sprite!

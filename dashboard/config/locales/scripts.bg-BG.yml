@@ -1,6 +1,20 @@
 "bg":
   data:
     script:
+      category:
+        csd_category_name: CS Discoveries ('17-'18)
+        csd_2018_category_name: CS Discoveries ('18-'19)
+        csf_category_name: CS основи
+        csf_international_category_name: CS Fundamentals International
+        csf2_draft_category_name: 'Under Development: Courses A - F'
+        csp_category_name: '"15-" 16 CS принципи'
+        csp_2018_category_name: CS Principles ('18-'19)
+        cspexams_category_name: CS принципи практически тест
+        csp17_category_name: '"15-" 16 CS принципи'
+        full_course_category_name: Full Courses
+        hoc_category_name: Hour of Code
+        math_category_name: Математика
+        research_studies_category_name: Research Studies
       name:
         course1:
           title: Курс 1
@@ -2200,14 +2214,15 @@
               name: Planning For the Future
             Sharing Student Work:
               name: Sharing Student Work
-        csp1:
-          title: CS Principles Unit 1 - The Internet
+        csp1-2017:
+          title: CSP Unit 1 - The Internet
           description: This unit explores the technical challenges and questions that
             arise from the need to represent digital information in computers and
             transfer it between people and computational devices. The unit then explores
             the structure and design of the internet and the implications of those
             design decisions.
-          description_short: Интернет
+          description_short: Explore the challenges about representing information
+            as bits and how to get those bits from one place to another.
           description_audience: ''
           stages:
             Binary Numbers:
@@ -2252,8 +2267,8 @@
               name: CSP Student Post-Course Survey
             Post-Course Survey:
               name: Post-Course Survey
-        csp2:
-          title: CS Principles Unit 2 - Digital Information
+        csp2-2017:
+          title: CSP Unit 2 - Digital Information
           description: This unit further explores the ways that digital information
             is encoded, represented and manipulated. Being able to digitally manipulate
             data, visualize it, and identify patterns, trends and possible meanings
@@ -2310,7 +2325,7 @@
               name: Practice PT - Encode an Experience
             Post-Course Survey:
               name: Post-Course Survey
-        csp3:
+        csp3-2017:
           title: CSP блок 3 - програмиране
           description: Тази част въвежда фундаменталните концепции за компютърно програмиране,
             което отключва възможността да се правят богати, интерактивни приложения.
@@ -2360,15 +2375,14 @@
               name: Please complete the CSP Mid-course survey!
             Post-Course Survey:
               name: Post-Course Survey
-        csp4:
-          title: CS Principles Unit 4 - Big Data and Privacy
-          description: "The data-rich world we live in introduces many complex questions
-            related to public policy, law, ethics and societal impact. The goals of
-            this unit are to develop a well-rounded and balanced view about data in
-            the world, including the positive and negative effects of it, and to understand
-            the basics of how and why modern encryption works.\r\n\r\nThis unit was
-            last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
-          description_short: Big Data and Privacy
+        csp4-2017:
+          title: CSP Unit 4 - Big Data and Privacy
+          description: |-
+            The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.\r
+            \r
+            This unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
+          description_short: Explore the data-rich world we live, and how data impacts
+            public policy, personal privacy, security, the law, and ethics.
           description_audience: ''
           stages:
             Alice and Bob and Asymmetric Keys:
@@ -2409,14 +2423,15 @@
               name: Post-Course Survey
             Student Post-Course Survey:
               name: Student Post-Course Survey
-        csp5:
-          title: CS Principles Unit 5 - Building Apps
-          description: 'This unit continues the introduction of foundational concepts
+        csp5-2017:
+          title: CSP Unit 5 - Building Apps
+          description: This unit continues the introduction of foundational concepts
             of computer programming, which unlocks the ability to make rich, interactive
             apps. This course uses JavaScript as the programming language, and App
             Lab as the programming environment to build apps, but the concepts learned
-            in these lessons span all programming languages and tools. '
-          description_short: Building Apps
+            in these lessons span all programming languages and tools.
+          description_short: Continue to learn foundational concepts of computer programming
+            in JavaScript by making rich, interactive apps.
           description_audience: ''
           stages:
             Beyond Buttons Toward Apps:
@@ -3428,8 +3443,8 @@
               name: Lesson 2,3
             Test stage with bubbles:
               name: Test stage with bubbles
-        csd3:
-          title: " TEMP CSD Unit 3 - Interactive Games and Animations"
+        csd3-2017:
+          title: CSD Unit 3 - Animations and Games
           description: " In Unit 3, you’ll build on your coding experience as you
             program animations, interactive art, and games in Game Lab. The unit starts
             off with simple shapes and builds up to more sophisticated sprite-based
@@ -3921,16 +3936,12 @@
               name: Unit 4 Chapter 1 Assessment
             'Anonymous student survey: Taking the AP exam':
               name: 'Anonymous student survey: Taking the AP exam'
-        csd1:
-          title: 'CSD Unit 1 - Problem Solving: Computers and Logic'
+        csd1-2017:
+          title: CSD Unit 1 - Problem Solving
           description_short: "  Learn how humans work with computers to solve problems."
-          description: " \r\nUnit 1 is a highly interactive and collaborative introduction
-            to the field of computer science, as framed within the broader pursuit
-            of solving problems. You’ll practice using a problem solving process to
-            address a series of puzzles, challenges, and real world scenarios. Next,
-            you’ll learn how computers input, output, store, and process information
-            to help humans solve problems.  The unit concludes with a project in which
-            you design an application that helps solve a problem of your choosing.\r\n"
+          description: |2
+             \r
+            Unit 1 is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r
           description_audience: ''
           stages:
             Intro to Problem Solving:
@@ -4257,8 +4268,8 @@
               name: RGB Color
             Processing with Bits:
               name: Processing with Bits
-        csd2:
-          title: 'CSD Unit 2 - The Internet: Web Development'
+        csd2-2017:
+          title: CSD Unit 2 - Web Development
           description_audience: ''
           description_short: "  Learn to build your own web site in Web Lab."
           description: " In Unit 2, you’ll learn how to create and share the content
@@ -4287,13 +4298,13 @@
                 a sequence of increasingly complex web pages found on Code Studio
                 and learn the importance of comments, whitespace, and indentation
                 as tools for making web pages easier to read.
-              description_teacher: In this lesson students will deal with common issues
-                that arise when designing web pages in HTML. Students will correct
-                errors in a sequence of increasingly complex web pages found on Code
-                Studio. In the process they will learn the importance of comments,
-                whitespace, and indentation as tools for making web pages easier to
-                read. At the end of the lesson students create a list of strategies
-                for debugging web pages and ensuring they are easy to read and maintain.
+              description_teacher: Students deal with common issues that arise when
+                designing web pages in HTML. Students will correct errors in a sequence
+                of increasingly complex web pages. In the process they will learn
+                the importance of comments, whitespace, and indentation as tools for
+                making web pages easier to read. At the end of the lesson students
+                create a list of strategies for debugging web pages and ensuring they
+                are easy to read and maintain.
             Introduction to Styling with CSS:
               name: Introduction to Styling with CSS
             Multi-Page Websites:
@@ -4316,22 +4327,12 @@
                 could be shared intentionally or unintentionally.  Finally, the class
                 comes up with a set of guidelines to follow when putting information
                 online.
-              description_teacher: "As students have recently spent some time thinking
-                about the actual content that will go into their personal website,
-                this lesson takes a step back from the unit-long project (publication
-                of a personal website) to help students articulate what personal information
-                they choose to share digitally and with whom.  It also reinforces
-                the notion that much of the information that they choose to share
-                digitally falls largely out of their control the moment it is released.
-                \ \r\n\r\nStudents begin by individually identifying appropriate audiences
-                with whom they would be comfortable sharing given pieces of personal
-                information.  They then look at several social media pages to determine
-                what sorts of information people are sharing about themselves or one
-                another.  Last, students reflect on what guidelines they think are
-                appropriate for posting information online.\r\n\r\nThe ultimate point
-                of this lesson is not to scare students, but rather to experientially
-                bring students to realizing precisely what level of control they don’t
-                have in releasing information into the web."
+              description_teacher: |-
+                As students have recently spent some time thinking about the actual content that will go into their personal website, this lesson takes a step back from the unit-long project (publication of a personal website) to help students articulate what personal information they choose to share digitally and with whom.  It also reinforces the notion that much of the information that they choose to share digitally falls largely out of their control the moment it is released.  \r
+                \r
+                Students begin by individually identifying appropriate audiences with whom they would be comfortable sharing given pieces of personal information.  They then look at several social media pages to determine what sorts of information people are sharing about themselves or one another.  Last, students reflect on what guidelines they think are appropriate for posting information online.\r
+                \r
+                The ultimate point of this lesson is not to scare students, but rather to experientially bring students to realizing precisely what level of control they don’t have in releasing information into the web.
             Publishing a Website:
               name: Publishing a Website
             Sources and Search Engines:
@@ -4361,13 +4362,9 @@
                 on the page. The class learns the basic syntax for CSS rule-sets and
                 then explores properties that impact HTML text elements.  Finally,
                 everyone applies text styles to their personal websites.
-              description_teacher: "This lesson introduces CSS as a way to style elements
-                on the page. Students learn the basic syntax for CSS rule-sets and
-                then explore properties that impact HTML text elements. They work
-                on a HTML page about Guinness World Record holders, adding their own
-                style to the provided page. In the last level, students apply what
-                they have learned about styles for text elements to their personal
-                web page.\r\n\r\n"
+              description_teacher: |
+                This lesson introduces CSS as a way to style elements on the page. Students learn the basic syntax for CSS rule-sets and then explore properties that impact HTML text elements. They work on a HTML page about Guinness World Record holders, adding their own style to the provided page. In the last level, students apply what they have learned about styles for text elements to their personal web page.\r
+                \r
             Styling Elements with CSS:
               name: Styling Elements with CSS
               description_student: This lesson continues the introduction to CSS style
@@ -4466,14 +4463,10 @@
                 of the creator of that media. After first studying Creative Commons
                 licensing, the class learns how to add images to web pages, and how
                 to give proper attribution when doing so.
-              description_teacher: "Starting with an discussion of their personal
-                opinions on how others should be allowed to use their work, the class
-                explores the purpose and role of copyright for both creators and users
-                of creative content.  They then move on to an activity exploring the
-                various Creative Commons licenses as a solution to the difficulty
-                in dealing with copyright. \r\n\r\nFinally, with a common understanding
-                of the restrictions of various Creative Commons licenses, students
-                learn how to add images to their web pages using the &lt;img&gt; tag."
+              description_teacher: |-
+                Starting with an discussion of their personal opinions on how others should be allowed to use their work, the class explores the purpose and role of copyright for both creators and users of creative content.  They then move on to an activity exploring the various Creative Commons licenses as a solution to the difficulty in dealing with copyright. \r
+                \r
+                Finally, with a common understanding of the restrictions of various Creative Commons licenses, students learn how to add images to their web pages using the &lt;img&gt; tag.
             Project - Multi-Page Websites:
               name: Project - Multi-Page Websites
               description_student: 'This lesson covers hyperlinks, which allow web
@@ -4481,12 +4474,9 @@
                 will link together all the previous pages into one project, and create
                 navigation bars for each page before publishing the entire site to
                 the Web.  '
-              description_teacher: "After learning about how to link web pages to
-                one another, students are finally able to publish the website they
-                have been working on.  In this lesson, they link together all the
-                previous pages they have created into one project, create a new page,
-                and add navigation between the pages before publishing the entire
-                site to the Web.  \r\n\r\n"
+              description_teacher: |
+                After learning about how to link web pages to one another, students are finally able to publish the website they have been working on.  In this lesson, they link together all the previous pages they have created into one project, create a new page, and add navigation between the pages before publishing the entire site to the Web.  \r
+                \r
             RGB Colors and Classes:
               name: RGB Colors and Classes
               description_student: This lesson covers classes and custom colors. The
@@ -4508,13 +4498,15 @@
                 their personal websites, working with peers to get feedback, review
                 the rubric, and put the finishing touches on the site. To cap off
                 the unit, everyone shares their projects and how they were developed.
-              description_teacher: "Students have spent a lot of time throughout the
+              description_teacher: 'Students have spent a lot of time throughout the
                 unit working on their Personal Website. In the final couple of days
                 students finalize their websites.  They work with peers to get feedback,
                 put the finishing touches on the websites, review the rubric and reflect
                 on their process. To cap off the unit, they will share their projects
                 and also a overview of the process they took to get to that final
-                design.\r\n"
+                design.\r
+
+'
             Headings:
               name: Headings
               description_student: This lesson continues the introduction to HTML
@@ -4562,8 +4554,8 @@
               name: Measuring Student Learning
             AP Preparation and Support:
               name: AP Preparation and Support
-        csd4:
-          title: 'CSD Unit 4 - Problem Solving: The Design Process'
+        csd4-2017:
+          title: CSD Unit 4 - The Design Process
           description_audience: ''
           description_short: "  Learn how to design a program that meets the needs
             of your users."
@@ -4577,63 +4569,55 @@
           stages:
             Analysis of Design:
               name: Analysis of Design
-              description_student: To kick off a unit devoted to group problem solving
-                and devloping products for other users, students will begin by investigating
-                the design of various everyday items. By considering how each item
-                might have been designed with needs of specific users in mind, students
-                can begin to see how taking a user-centered approach to designing
-                products (both physical and digital) can make those products more
-                useful and usable.
+              description_student: The class explores a variety of different teapot
+                designs to consider how design choices or made and why. Using the
+                teapots as an example, the class will explore the relationship between
+                users, their needs, and the design of objects they use.
               description_teacher: To kick off a unit devoted to group problem solving
-                and devloping products for other users, students will begin by investigating
-                the design of various everyday items. By considering how each item
-                might have been designed with needs of specific users in mind, students
-                can begin to see how taking a user-centered approach to designing
-                products (both physical and digital) can make those products more
-                useful and usable.
+                and developing products for other users, students begin by investigating
+                the design of various teapots. Students analyze each teapot, attempting
+                to identify how specific user needs might have informed its design.
+                By considering these design choices, and attempting to match each
+                teapot with a potential user, students can begin to see how taking
+                a user-centered approach to designing products (both physical and
+                digital) can make those products more useful and usable. To conclude
+                the activity, students are asked to propose some changes to one of
+                the teapots that would make it more useful or usable.
             Understanding Your User:
               name: Understanding Your User
-              description_student: Designers need to understand their users’ needs.  This
-                lesson starts students thinking about how to design for another person
-                by role-playing a user profile and reacting to a series of products.  Students
-                will each receive a user profile describing a person. They will use
-                that user’s characteristics to choose appropriate products, critique
-                product design, and suggest improvements to design.
-              description_teacher: "Designers need to understand their users’ needs
+              description_student: Using user profiles, the class explores how different
+                users might react to a variety of products. Role playing as a different
+                person, each member of the class will get to experience designs through
+                someone else's eyes.
+              description_teacher: 'Designers need to understand their users’ needs
                 in order to create useful products.  This lesson encourages students
                 to think about how to design for another person by role-playing as
                 someone else using a user profile and reacting as that user to a series
                 of products.  Each student is assigned a user profile describing a
                 person, which they then use to choose appropriate products, critique
-                product design, and suggest improvements to design.\r\n"
+                product design, and suggest improvements to design.\r
+
+'
             Discovering Users:
               name: Discovering Users
             User-Centered Design Micro Activity:
               name: User-Centered Design Micro Activity
-              description_student: This lesson guides students through an abbreviated
-                version of the design process they will be seeing throughout this
-                unit. Students will brainstorm a list of potential users of smart
-                clothing. As a class they will then group these ideas into broad categories
-                and each group will choose one category of user. Groups will repeat
-                this process to brainstorm needs or concerns of their user, eventually
-                categorizing these needs and choosing one to focus on. Students will
-                then design a piece of smart clothing, using the specific needs and
-                concerns they brainstormed to design their decision making. At the
-                end of the class students will quickly share their decision-making
-                process and get feedback on how well their product addresses the user
-                need they selected.
+              description_student: In small groups, the class uses the design process
+                to come up with ideas for smart clothing. From brainstorming, to identifying
+                users, to finally proposing a design, this is the first of several
+                opportunities in this unit to practicing designing a solution for
+                the needs of others.
               description_teacher: This lesson guides students through an abbreviated
                 version of the design process they will be seeing throughout this
-                unit. Students will brainstorm a list of potential users of smart
-                clothing. As a class they will then group these ideas into broad categories
-                and each group will choose one category of user. Groups will repeat
-                this process to brainstorm needs or concerns of their user, eventually
-                categorizing these needs and choosing one to focus on. Students will
-                then design a piece of smart clothing, using the specific needs and
-                concerns they brainstormed to design their decision making. At the
-                end of the class students will quickly share their decision-making
-                process and get feedback on how well their product addresses the user
-                need they selected.
+                unit. Students first brainstorm a list of potential users of smart
+                clothing. As a class, they then group these ideas into broad categories
+                and each group will choose one category of user. Groups repeat this
+                process to brainstorm needs or concerns of their user, eventually
+                categorizing these needs and choosing one to focus on. Finally, students
+                design a piece of smart clothing, using the specific needs and concerns
+                they brainstormed to guide their decision making. At the end of the
+                class students quickly share their decision-making process and get
+                feedback on how well their product addresses the user need they selected.
             Designing for Social Impact:
               name: Designing for Social Impact
             Conducting User-Centered Interviews:
@@ -4646,48 +4630,38 @@
               name: Presenting Your Design
             Designing Apps for Good:
               name: Designing Apps for Good
-              description_student: To kick off the app design project that will take
-                us through the end of the unit, students will first explore existing
-                apps design for social impact that have been created by other students.
-                They will then review the Define, Prepare, Try, and Reflect steps
-                in our problem solving process as they develop an idea for an app
-                of their own with social impact. Finally, students will form project
-                teams and lay out a contract for how the team will function throughout
-                the development of their app.
-              description_teacher: To kick off the app design project that will take
-                us through the end of the unit, students will first explore existing
-                apps design for social impact that have been created by other students.
-                They will then review the Define, Prepare, Try, and Reflect steps
-                in our problem solving process as they develop an idea for an app
-                of their own with social impact. Finally, students will form project
-                teams and lay out a contract for how the team will function throughout
-                the development of their app.
+              description_student: To kick off the app design project, the class organizes
+                into teams and starts exploring app topics. Several example socially
+                impactful apps serve as inspiration for the project.
+              description_teacher: To kick off the app design project that lasts through
+                the end of the unit, students first explore a number of apps designed
+                for social impact that have been created by other students. The class
+                then reviews the Define, Prepare, Try, and Reflect steps of the Problem
+                Solving process as they develop an idea for an app of their own with
+                social impact. Finally, students will form project teams and lay out
+                a contract for how the team will function throughout the development
+                of their app.
             Market Research:
               name: Market Research
-              description_student: In this lesson students will research apps similar
-                to the one they intend on creating to better understand the needs
-                of their users. Students will work within their teams to search the
-                Internet for other apps, then evaluate the ones they find interesting.
-                By the end of the lesson, each team will have a clearer idea about
-                the type of app they want to create and further refine who their target
-                users are. Each team will maintain a list of citations for all the
-                apps they examined for use in their final presentation.
-              description_teacher: In this lesson students will research apps similar
-                to the one they intend on creating to better understand the needs
-                of their users. Students will work within their teams to search the
-                Internet for other apps, then evaluate the ones they find interesting.
-                By the end of the lesson, each team will have a clearer idea about
-                the type of app they want to create and further refine who their target
-                users are. Each team will maintain a list of citations for all the
-                apps they examined for use in their final presentation.
+              description_student: Dive into app development by exploring existing
+                apps that may serve similar users. Each group identifies a handful
+                of apps that address the same topic they are working on, using those
+                apps to help refine the app idea they will pursue.
+              description_teacher: In this lesson students research apps similar to
+                the one they intend on creating to better understand the needs of
+                their users. Students work within their teams to search the Internet
+                for other apps, then evaluate the ones they find interesting. By the
+                end of the lesson, each team will have a clearer idea about the type
+                of app they want to create and further refine who their target users
+                are. Each team will maintain a list of citations for all the apps
+                they examined for use in their final presentation.
             Paper Prototypes:
               name: Paper Prototypes
-              description_student: To better scope their own apps, teams start by
-                looking through several example apps, choosing one (or more) as a
-                basis for the type of app they will make. From there, teams will have
-                some time to discuss the basic functionality of their app before using
-                3x5 index cards to develop paper prototypes.
-              description_teacher: "Before starting to design apps, we need to help
+              description_student: Paper prototypes allow developers to quickly test
+                ideas before investing a lot of time writing code. In this lesson
+                teams explore some example apps created in App Lab, using those apps
+                to help inform the first paper prototypes of their apps.
+              description_teacher: 'Before starting to design apps, we need to help
                 students to better scope their expectations. Because students will
                 eventually be prototyping these apps in App Lab, they will be in better
                 shape if their ideas align with the kinds of apps that are easily
@@ -4696,78 +4670,75 @@
                 with App Lab. Teams then can chose one (or more) of the apps as a
                 basis for their own. From there, teams have some time to discuss the
                 basic functionality of their app before using 3x5 index cards to develop
-                paper prototypes.\r\n"
+                paper prototypes.\r
+
+'
             Prototype Testing:
               name: Prototype Testing
-              description_student: Teams will develop a plan to test with users before
-                running prototype tests with multiple other students in the class.
-                In order to test the prototype with the users, the students will have
-                to assign roles in the testing (the “narrator”, the “computer” and
-                the “observers”) as well as have some questions prepared for the user
-                to answer after the test is complete.
-              description_teacher: Teams will develop a plan to test with users before
-                running prototype tests with multiple other students in the class.
-                In order to test the prototype with the users, the students will have
-                to assign roles in the testing (the “narrator”, the “computer” and
-                the “observers”) as well as have some questions prepared for the user
-                to answer after the test is complete.
+              description_student: In this lesson teams test out their paper prototypes
+                with other members of the class. With one student role playing the
+                computer, one narrating, and the rest observing, teams will get immediate
+                feedback on their app designs which will inform the next version of
+                their app prototypes.
+              description_teacher: The primary purpose of developing paper prototypes
+                is that they allow for quick testing and iteration before any code
+                is written. This lesson is focused on giving teams a chance to test
+                their prototypes before moving to App Lab. Teams develop a plan to
+                test with users before running prototype tests with multiple other
+                students in the class (and potentially outside the class). In order
+                to test the prototype with the users, the students will have to assign
+                roles in the testing (the “narrator”, the “computer” and the “observers”)
+                as well as have some questions prepared for the user to answer after
+                the test is complete.
             Digital Design:
               name: Digital Design
-              description_student: Having collaboratively developed a paper prototype
-                for their apps, groups will now divide and conquer to begin implementing
-                an interactive digital version of their prototype. Using the drag-and-drop
-                design mode of App Lab, students will individually work through a
-                progression of skill-building levels to learn how to build digital
-                app wireframes. From there each group member will build out at least
-                one page of their app in App Lab.
+              description_student: Having developed, tested, and gathered feedback
+                on a paper prototype, teams now move to App Lab to build the next
+                iteration of their apps. Using the drag-and-drop Design Mode, each
+                team member builds out at least one page of their team's app, responding
+                to feedback that was received in the previous round of testing.
               description_teacher: Having collaboratively developed a paper prototype
-                for their apps, groups will now divide and conquer to begin implementing
-                an interactive digital version of their prototype. Using the drag-and-drop
-                design mode of App Lab, students will individually work through a
-                progression of skill-building levels to learn how to build digital
-                app wireframes. From there each group member will build out at least
-                one page of their app in App Lab.
+                for their apps, groups now divide and conquer to begin work on an
+                interactive digital version based on the paper prototype. Using the
+                drag-and-drop design mode of App Lab, students individually work through
+                a progression of skill-building levels to learn how to build digital
+                versions of a paper prototype. From there, each group member builds
+                out at least one page of their app in App Lab, to be later combined
+                into a single app.
             Event Driven Programming:
               name: Event Driven Programming
-              description_student: Students learn basic event driven programming by
-                making several small apps that respond to users clicking buttons.
-                Following that, group members share the screens they’ve developed
-                and each group member imports all of the screens into their own copy
-                of the app, which they will make interactive by connecting buttons
-                to events.
-              description_teacher: Students learn basic event driven programming by
-                making several small apps that respond to users clicking buttons.
-                Following that, group members share the screens they've developed
+              description_student: Building on the screens that the class designed
+                in the previous lesson, teams combine screens into a single app. Simple
+                code can then be added to make button clicks change to the appropriate
+                screen.
+              description_teacher: In this lesson teams combine the screens that they
+                designed in the previous lesson into a single app, which they then
+                begin to program using simple events. Students learn basic event driven
+                programming by making several small apps that respond to users clicking
+                buttons. Following that, group members share the screens they've developed
                 and each group member imports all of the screens into their own copy
                 of the app, which they will make interactive by connecting buttons
                 to events.
             Basic App Functionality:
               name: Basic App Functionality
-              description_student: At this point in the development process, each
-                student should have what is essentially a digital version of the paper
-                prototype - static screens that are linked together with buttons.
-                For many apps this is all you really need to start testing with users,
-                but this lesson will give students a chance to explore simple ways
-                to add a bit more functionality to their apps before moving into the
-                testing phase.
+              description_student: Teams add a bit more polish and functionality to
+                their apps before testing. Several examples are provided to demonstrate
+                simple code that adds cool features.
               description_teacher: At this point in the development process, each
                 student should have what is essentially a digital version of the paper
                 prototype - static screens that are linked together with buttons.
                 For many apps this is all you really need to start testing with users,
                 but this lesson will give students a chance to explore simple ways
                 to add a bit more functionality to their apps before moving into the
-                testing phase.
+                testing phase. The programming concepts introduced in this lesson
+                are **not necessary** to successfully complete the project, and can
+                be omitted at your discretion.
             Testing the App:
               name: Testing the App
-              description_student: 'By the end of the last lesson the students should
-                have a minimum viable prototype of their app. The primary purpose
-                of this lesson is to have the team actually test the app with other
-                people, preferably from the target audience the app is intended for,
-                or from different teams in the class while observers from the team
-                will record the results on the worksheets they used in the planning
-                phase. As with testing the paper prototypes, teams will start by planning
-                for the specific scenarios before running and observing tests. '
-              description_teacher: 'By the end of the last lesson the students should
+              description_student: Teams run another round of user testing, this time
+                with their interactive prototype. Feedback gathered from this round
+                of testing will inform the final iteration of the app prototypes.
+              description_teacher: 'By the end of the previous lesson each team should
                 have a minimum viable prototype of their app. The primary purpose
                 of this lesson is to have the team actually test the app with other
                 people, preferably from the target audience the app is intended for,
@@ -4777,102 +4748,93 @@
                 for the specific scenarios before running and observing tests. '
             Improving and Iterating:
               name: Improving and Iterating
-              description_student: Teams have at this point developed an app prototype
+              description_student: Using the feedback from the last round of testing,
+                teams implement changes that address the needs of their users. Each
+                team tracks and prioritizes the features they want to add and the
+                bugs they need to fix.
+              description_teacher: Teams have at this point developed an app prototype
                 that has gone through multiple iterations and rounds of user testing.
                 With the information and guidance gained from the last round of user
-                testing, each student will have the opportunity to plan for and implement
-                improvements to the team app.
-              description_teacher: "Teams have at this point developed an app prototype
-                that has gone through multiple iterations and rounds of user testing.
-                With the information and guidance gained from the last round of user
-                testing, each student will have the opportunity to plan for and implement
-                improvements to the team app.\r\n"
+                testing, each student has the opportunity to plan for and implement
+                improvements to the team app. Depending on the time you have available,
+                and student interest, you can run the cycle of testing and iteration
+                as many times as you see fit.
             App Presentation:
               name: App Presentation
-              description_student: At this point teams have researched a topic of
+              description_student: Each team prepares a presentation to "pitch" the
+                app they've developed. This is the time to share struggles, triumphs,
+                and plans for the future.
+              description_teacher: At this point teams have researched a topic of
                 personal and social importance, developed and tested both a paper
                 prototype and a digital prototype, and iterated on the initial app
                 to incorporate new features and bug fixes. Now is the time for them
                 to review what they have done and pull together a coherent presentation
-                to demonstrate their process of creation.
-              description_teacher: "At this point teams have researched a topic of
-                personal and social importance, developed and tested both a paper
-                prototype and a digital prototype, and iterated on the initial app
-                to incorporate new features and bug fixes. Now is the time for them
-                to review what they have done and pull together a coherent presentation
-                to demonstrate their process of creation.\r\n"
+                to demonstrate their process of creation. Using the provided presentation
+                template, teams prepare to present about their process of app development,
+                including the problem they set out to solve, the ways in which they've
+                incorporated feedback from testing, and their plans for the future.
             User Interface and Prototype Testing:
               name: User Interface and Prototype Testing
-              description_student: Following the mini design project, students look
-                towards the next phase of design, prototyping a product that attempts
-                to address user needs. In teams students will examine a paper prototype
-                for an chat app. Through this examination students will get a chance
-                to see how a simple paper prototype can be used to quickly test ideas
-                and assumptions before we ever get to the computer. In "using" the
-                provided prototype students will begin to identify ways to improve
-                the next iteration.
+              description_student: See how a paper prototype can be used to test and
+                get feedback on software before writing any code. To help out a developer
+                with their idea, the class tests and provides an app prototype made
+                of paper.
               description_teacher: Following the mini design project, students look
-                towards the next phase of design, prototyping a product that attempts
-                to address user needs. In teams students will examine a paper prototype
-                for an chat app. Through this examination students will get a chance
-                to see how a simple paper prototype can be used to quickly test ideas
-                and assumptions before we ever get to the computer. In "using" the
-                provided prototype students will begin to identify ways to improve
-                the next iteration.
+                towards the next phase of design - prototyping a product that attempts
+                to address user needs. In teams, students examine a paper prototype
+                for a chat app called "Txt Ur Grndkdz". Through using this paper prototype,
+                students get a chance to see how a simple paper prototype can be used
+                to quickly test ideas and assumptions before we ever get to the computer.
+                After "using" the provided prototype students begin to identify ways
+                to improve the next iteration.
             Feedback and Prototypes:
               name: Feedback and Prototypes
-              description_student: In this lesson students will use feedback from
-                users of the paper-prototyped app from the previous lesson in order
-                to develop improvements to the user interface of that paper prototype.
-                The lesson begins with a reflection on the fact that designers need
-                to translate human needs with technology into changes to the user
-                interface or experience. Students are then given a collection of feedback
-                and requests from users of the app from the previous lesson. In groups
-                students categorize the feedback and identify ways the needs expressed
-                in the feedback could be met by changes to the interface of the app.
-                Then in groups students will implement some of these changes to meet
-                one of the needs they identified.
-              description_teacher: In this lesson students will use feedback from
-                users of the paper-prototyped app from the previous lesson in order
-                to develop improvements to the user interface of that paper prototype.
-                The lesson begins with a reflection on the fact that designers need
-                to translate human needs with technology into changes to the user
-                interface or experience. Students are then given a collection of feedback
-                and requests from users of the app from the previous lesson. In groups
-                students categorize the feedback and identify ways the needs expressed
-                in the feedback could be met by changes to the interface of the app.
-                Then in groups students will implement some of these changes to meet
-                one of the needs they identified.
+              description_student: Users have been testing an app, and they have lots
+                of feedback for the developer. The class needs to sort through all
+                of this feedback, identify the common themes and needs, and start
+                revising the prototype to make it better meet the users' needs.
+              description_teacher: In this lesson students use feedback from "users"
+                of the paper-prototyped app from the previous lesson in order to develop
+                improvements to the user interface of that paper prototype. The lesson
+                begins with a reflection on the fact that designers need to translate
+                human needs with technology into changes to the user interface or
+                experience. Students are then given a collection of feedback and requests
+                from users of the app from the previous lesson. In groups students
+                categorize the feedback and identify ways the needs expressed in the
+                feedback could be met by changes to the interface of the app. Then
+                in groups students will implement some of these changes to meet one
+                of the needs they identified.
             Identifying User Needs:
               name: Identifying User Needs
-              description_student: Up to this point we have focused on designing for
-                users who are, to some degree, distanced from us. Whether through
+              description_student: Up to this point the users that the class has considered
+                have all been remote, and the only information from users has come
+                through text or role playing. Now the class will rely on each other
+                as potential users, and pairs will get to interview each other to
+                identify needs that could be addressed by developing an app.
+              description_teacher: 'Up to this point students have focused on designing
+                for users who are, to some degree, distanced from them. Whether through
                 brainstorming, profiles, or text feedback, the connection to an end
-                user has never been direct. In this lesson students pair up to become
-                users for each other, allowing everyone to directly interview their
-                end user and ask questions to better inform their design.
-              description_teacher: Up to this point we have focused on designing for
-                users who are, to some degree, distanced from us. Whether through
-                brainstorming, profiles, or text feedback, the connection to an end
-                user has never been direct. In this lesson students pair up to become
-                users for each other, allowing everyone to directly interview their
-                end user and ask questions to better inform their design.
+                user has never been direct. This is distance is designed to help students
+                get outside their own head when thinking about users, but in order
+                to get information more directly from an actual user, students need
+                to rely on their classmates. In this lesson students pair up to become
+                users (and designers) for each other, allowing everyone to directly
+                interview their end user and ask questions to better inform their
+                design. Each student pair interviews each other, attempting to identify
+                a specific need that could be addressed by an app. '
             Project - Paper Prototype:
               name: Project - Paper Prototype
-              description_student: Based on the peer interview from the previous lesson,
-                each student will come up with an idea for an app that will solve
-                a user's problem. Students will create their own paper-prototype of
-                the app by creating "screens" on individual notecards. A project guide
-                directs students through the process including building the app and
-                testing it with their user to see if their assumptions about the user
-                interfaces they created are accurate.
+              description_student: Using the interview information from the previous
+                lesson, the class comes up with app ideas to address the needs of
+                their users. To express those ideas, and test out their effectiveness,
+                each student creates and tests paper prototypes of their own.
               description_teacher: Based on the peer interview from the previous lesson,
-                each student will come up with an idea for an app that will solve
-                a user's problem. Students will create their own paper-prototype of
-                the app by creating "screens" on individual notecards. A project guide
-                directs students through the process including building the app and
-                testing it with their user to see if their assumptions about the user
-                interfaces they created are accurate.
+                each student comes up with an idea for an app that will address their
+                user's problem. Students then get to create their own paper prototype
+                of their app ideas by drawing "screens" on individual notecards. A
+                project guide directs students through the process including building
+                the app and testing it with their user to see if their assumptions
+                about the user interfaces they created are accurate.
             Linking Screens:
               name: Linking Screens
               description_student: Building on the screens that the class designed
@@ -5507,7 +5469,7 @@
           description: 'COMING SOON: soon this page will host a set of resources for
             teachers preparing for the AP exam'
           stages: {}
-        csppostap:
+        csppostap-2017:
           title: CSP Post-AP - Databases and Using Data in Your Apps
           description_audience: ''
           description_short: Learn to collect and use data in App Lab apps.
@@ -5778,7 +5740,7 @@
               name: Условия
             'Real Life Algorithms: Dice Race':
               name: 'Алгоритми от реалния живот: игра на зарове'
-        csd6:
+        csd6-2017:
           title: CSD Unit 6 - Physical Computing
           description_audience: ''
           description_short: Learn to program with physical devices.
@@ -5804,16 +5766,16 @@
                 in this lesson as they develop their own physical computing devices.
             Input Unplugged:
               name: Input Unplugged
-              description_student: Explore some of the different ways that an app
-                can take input from a user, and learn more about the event-driven
-                programming model used in App Lab.
+              description_student: Experience two different ways that an app can take
+                input from a user, while learning more about the event-driven programming
+                model used in App Lab.
               description_teacher: In preparation for delving deeper into programming
                 with App Lab, students will explore how a handful of different programs
                 written in both Game Lab and App Lab handle taking input from the
                 user. After comparing and contrasting the approaches they saw in the
                 example apps, students group up to act out the two different models
-                for input (conditionals in an infinite and asynchronous events) to
-                gain a better understanding of how they work.
+                for input (conditionals in an infinite loop and asynchronous events)
+                to gain a better understanding of how they work.
             Event Types:
               name: Event Types
               description_student: Review the basics of programming in App Lab and
@@ -5827,62 +5789,76 @@
                 have not seen before.
             Getters and Setters:
               name: Getters and Setters
-              description_student: To expand the kinds of interactions that students
-                can use in App Lab we introduce the concept of "getters" and "setters",
-                commands which can get and set (or change) the content and properties
-                of various design elements.
-              description_teacher: To expand the kinds of interactions that students
-                can use in App Lab we introduce the concept of "getters" and "setters",
-                commands which can get and set (or change) the content and properties
-                of various design elements.
+              description_student: By reading and changing the content on the screen
+                of an app, the class starts to build apps that only need a single
+                screen. Even with just one screen, these techniques allow for lots
+                of user interaction and functionality.
+              description_teacher: In Unit 4 students learned a very simple approach
+                to app development in App Lab that required a separate screen for
+                most interactions. To expand the kinds of apps that students can make,
+                and to encourage them to think in new ways about how users interact
+                with apps, we introduce the concept of "getters" and "setters". These
+                are commands which can get and set (or change) the content and properties
+                of various design elements. In this lesson students build up simple
+                apps that only require a single screen, the content of which is changed
+                using getters and setters.
             The Circuit Playground:
               name: The Circuit Playground
-              description_student: Students are introduced to the Circuit Playground,
-                a microcomputer that will be the platform used throughout the rest
-                of this unit.
+              description_student: Get to know the Circuit Playground, the circuit
+                board that will be used throughout the rest of this unit. Using App
+                Lab, develop programs that use the Circuit Playground for output.
               description_teacher: In this lesson students get their first opportunity
-                to write programs that use the Circuit Playground for output. After
-                first inspecting the board visually and hypothesizing possibly functionalities,
-                students move online where they will learn to write applications that
-                blink an LED and make noise with a buzzer.
+                to write programs that use the Circuit Playground. After first inspecting
+                the board visually and hypothesizing possibly functionalities, students
+                move online where they will learn to write applications that control
+                an LED. By combining App Lab screens with the Circuit Playgrounds,
+                students can gradually start to integrate elements of the board as
+                an ouput device while relying on App Lab for user input.
             Lists:
               name: Списъци
-              description_student: Students learn to use lists to store a series of
-                related values in a single variable.
-              description_teacher: Students learn to use lists to store a series of
-                related values in a single variable. From there, students will explore
-                ways to extract either a specific or random value from a list using
-                its index.
+              description_student: Learn how lists can be used to store multiple values
+                in a single variable name.
+              description_teacher: A list, also commonly known as an array, is a type
+                of variable that can store many values at once. In this lesson, students
+                learn to create lists which store a series of related values in a
+                single variable. After creating lists of their own, students will
+                learn about ways to extract either a specific or random value from
+                a list using its index.
             Lights:
               name: Lights
-              description_student: 'Now that students have learned how lists can be
-                used to deal with groups of related values, we''ll return to the board
-                and look at the color LEDs, which are accessed through the list `colorLeds`. '
-              description_teacher: Now that students have learned how lists can be
-                used to deal with groups of related values, we'll return to the board
-                and look at the color LEDs, which are accessed through the list `colorLeds`.
+              description_student: Using the concept of lists from the previous lesson,
+                the class writes programs that control the ten color LEDs on the Circuit
+                Playground.
+              description_teacher: The Circuit Playground includes 10 color LEDs in
+                a ring around the outside edge. These LEDs are accessible in code
+                as a list called `colorLeds`. Building on the understanding of lists
+                from the previous lesson, students write programs that control the
+                color LEDs by accessing them from a list.
             For Loops:
               name: За циклите
-              description_student: Students are introduced to the for loop in this
-                lesson as a way to repeat some code a certain numbers of times. They
-                spend time practicing in an unplugged context with simple robot commands
-                and then take their knowledge into App Lab.
-              description_teacher: Students are introduced to the for loop in this
-                lesson as a way to repeat some code a certain numbers of times. They
-                spend time practicing in an unplugged context with simple robot commands
-                and then take their knowledge into App Lab.
+              description_student: The class learns about repeating instructions using
+                a _for loop_, first by controlling a "robot" through a grid, and then
+                in App Lab.
+              description_teacher: Students are introduced to the _for loop_ in this
+                lesson as a way to repeat some code a certain numbers of times. Students
+                start with an unplugged activity where they use for loops to navigate
+                a robot across a grid. Once complete, students then take their knowledge
+                into App Lab where they write programs that rely on iteration using
+                a _for loop_.
             Lists and For Loops:
               name: Lists and For Loops
-              description_student: 'In this lesson students combine what they have
-                learned about lists and for loops. Students use for loops to go through
-                each element in a list one at a time without having to write code
-                for each element. Towards the end of the lesson students will apply
-                this with the colorLed list on the board. '
-              description_teacher: 'In this lesson students combine what they have
-                learned about lists and for loops. Students use for loops to go through
-                each element in a list one at a time without having to write code
-                for each element. Towards the end of the lesson students will apply
-                this with the colorLed list on the board. '
+              description_student: Combining _lists_ and _for loops_ allows you to
+                write code that impacts every element of a list, regardless of how
+                long it is. The class uses this structure to write programs that process
+                all of the elements in lists, include the list of color LEDs.
+              description_teacher: 'Using a _for loop_ to iterate over all of the
+                elements in an array is a really useful construct in most programming
+                languages. In this lesson, students combine what they have learned
+                about lists and for loops in order to start learning this pattern.
+                Students use for loops to go through each element in a list one at
+                a time without having to write code for each element. Towards the
+                end of the lesson students will apply this with the `colorLed` list
+                on the board. '
             Timed Loops:
               name: Timed Loops
               description_student: In this lesson we build on students understanding
@@ -5893,7 +5869,7 @@
                 that repeat infinitely, while still allowing other code to run alongside
                 it.
               description_teacher: In this lesson we build on students understanding
-                of `for loops` to learn about a more sophisticated structure called
+                of _for loops_ to learn about a more sophisticated structure called
                 a _timed loop_. Unlike _for loops_, you can control how quickly a
                 _timed loop_ repeats, and other code (such as event handlers) can
                 be run between iterations of the loop. This allows us to create interesting
@@ -5909,38 +5885,42 @@
                 output information.
             Physical Input:
               name: Physical Input
-              description_student: Using the hardware buttons and switch, students
-                learn to use onBoardEvent(), analogously to onEvent(), in order to
-                take input from their Circuit Playgrounds.
-              description_teacher: Using the hardware buttons and switch, students
+              description_student: Using the hardware buttons and switch, the class
+                develops programs that use the Circuit Playground as an input.
+              description_teacher: This lesson transitions students from consider
+                the Circuit Playground as strictly an output device towards using
+                it as a tool for both input and output. Starting with the hardware
+                buttons and switch,sing the hardware buttons and switch, students
                 learn to use `onBoardEvent()`, analogously to `onEvent()`, in order
                 to take input from their Circuit Playgrounds.
             Analog Input:
               name: Analog Input
-              description_student: Students explore the three analog sensors on the
-                Circuit Playground which measure sound, light, and temperature.
-              description_teacher: Students explore the three analog sensors on the
-                Circuit Playground which measure sound, light, and temperature.
+              description_student: Explore the analog inputs on the Circuit Playground,
+                writing programs that respond to the environment through sensors.
+              description_teacher: In this lesson, students explore how the three
+                analog sensors (sound, light, and temperature) can be used to write
+                programs that respond to changes in the environment. The use of these
+                sensors marks a transition in terms of how users interact with a program.
+                By using sensors as an input, the user of an app doesn't have to directly
+                interact with it at all, or may interact without actually realizing
+                they are doing so.
             Sensor Applications:
               name: Sensor Applications
-              description_student: Following up on the sensor investigations from
-                the previous day, students will work to develop three simple applications
-                - one for each of the analog sensors.
-              description_teacher: Following up on the sensor investigations from
-                the previous day, students will work to develop three simple applications
-                - one for each of the analog sensors.
+              description_student: Work through three small apps to better understand
+                the uses of the sensors from the previous lesson.
+              description_teacher: To follow up on the sensors that students learned
+                about in the previous lesson, we walk through a three apps, each of
+                which relies on a different sensor. These three apps can serve as
+                jumping off points for students in the final project that follows.
             'Project: Prototype an Innovation':
               name: 'Project: Prototype an Innovation'
-              description_student: In this final project for the course, student team
-                to develop and test a prototype for an innovative computing device
+              description_student: Develop innovative computing devices of your own
+                design, using everything you've learned throughout this course.
+              description_teacher: 'In this final project for the course, students
+                team to develop and test a prototype for an innovative computing device
                 based on the Circuit Playground. Using the inputs and outputs available
                 on the board, groups will create programs that allow for interesting
-                and unique user interactions.
-              description_teacher: In this final project for the course, student team
-                to develop and test a prototype for an innovative computing device
-                based on the Circuit Playground. Using the inputs and outputs available
-                on the board, groups will create programs that allow for interesting
-                and unique user interactions.
+                and unique user interactions. '
             Designing Screens with Code:
               name: Designing Screens with Code
               description_student: By reading and changing the content on the screen
@@ -6396,7 +6376,7 @@
               name: Using the Game Design Process
             'Project: Design a Game':
               name: 'Project: Design a Game'
-        csd5:
+        csd5-2017:
           title: CSD Unit 5 - Data and Society
           description_audience: ''
           description_short: Learn how people use computers to solve data problems.
@@ -6407,23 +6387,19 @@
             you’ll learn how collections of data are used to solve problems, and how
             computers help to automate the steps of this process. The chapter concludes
             by considering how the data problem solving process can be applied to
-            an area of the your choosing.
+            an area of your choosing.
           stages:
             Representation Matters:
               name: Representation Matters
-              description_student: In the first lesson of the data unit, students
-                will get an overview of what data is and how it is used to solve problems.  Students
-                will start off with a brief discussion to come to a common understanding
-                of data.  They then split into groups and use a data set to make a
-                series of meal recommendations for people with various criteria.  Each
-                group has the choices of meal represented in a different way (pictures,
-                recipes, menu, nutrition) that gives an advantage for one of the recommendations.  Afterwards,
+              description_student: This first lesson provides an overview of what
+                data is and how it is used to solve problems.  Groups use a data set
+                to make a series of meal recommendations for people with various criteria.   Afterwards,
                 groups compare their responses and discuss how the different representations
                 of the meal data affected how the students were able to solve the
                 different problems.
               description_teacher: In the first lesson of the data unit, students
-                will get an overview of what data is and how it is used to solve problems.  Students
-                will start off with a brief discussion to come to a common understanding
+                get an overview of what data is and how it is used to solve problems.  Students
+                start off with a brief discussion to come to a common understanding
                 of data.  They then split into groups and use a data set to make a
                 series of meal recommendations for people with various criteria.  Each
                 group has the choices of meal represented in a different way (pictures,
@@ -6433,20 +6409,13 @@
                 different problems.
             Patterns and Representation:
               name: Patterns and Representation
-              description_student: In this lesson students create their own system
-                for representing information. They begin by brainstorming all the
-                different systems they already use to represent yes-no responses.
-                They then work in small groups to create a system that can represent
-                any letter in the alphabet using only a single stack of cards. The
-                cards used have one of 6 different possible drawings (6 animals, 6
-                colors, etc.) and so to represent the entire alphabet students will
-                need to use patterns of multiple cards to represent each letter. Students
-                will create messages with their systems and exchange with other groups
-                to ensure the system worked as intended. In the wrap-up discussion
-                the class will review any pros and cons of the different systems.
-                They will discuss commonalities between working systems and recognize
-                that there are many possible solutions to this problem and what's
-                important is that everyone use the same arbitrary system to communicate.
+              description_student: This lesson looks closer at what is needed to create
+                a system of representation.  Groups create systems that can represent
+                any letter in the alphabet using only a single stack of cards, then
+                create messages with their systems and exchange with other groups
+                to ensure the system worked as intended.   The class discusses commonalities
+                between working systems while recognizing that there are many possible
+                working solutions.
               description_teacher: In this lesson students create their own system
                 for representing information. They begin by brainstorming all the
                 different systems they already use to represent yes-no responses.
@@ -6455,23 +6424,21 @@
                 cards used have one of 6 different possible drawings (6 animals, 6
                 colors, etc.) and so to represent the entire alphabet students will
                 need to use patterns of multiple cards to represent each letter. Students
-                will create messages with their systems and exchange with other groups
+                create messages with their systems and exchange with other groups
                 to ensure the system worked as intended. In the wrap-up discussion
-                the class will review any pros and cons of the different systems.
-                They will discuss commonalities between working systems and recognize
-                that there are many possible solutions to this problem and what's
-                important is that everyone use the same arbitrary system to communicate.
+                the class  reviews any pros and cons of the different systems. They
+                discuss commonalities between working systems and recognize that there
+                are many possible solutions to this problem and what's important is
+                that everyone use the same arbitrary system to communicate.
             ASCII and Binary Representation:
               name: ASCII and Binary Representation
-              description_student: In this lesson students learn to use their first
-                binary system for encoding information, the ASCII system for representing
-                letters and other characters. At the beginning of the lesson the teacher
-                introduces the fact that computers must represent information using
-                either "on" or "off". Then students are introduced to the ASCII system
-                for representing text using binary symbols. Students practice using
-                this system before encoding their own message using ASCII. At the
-                end of the lesson a debrief conversation helps synthesize the key
-                learning objectives of the activity.
+              description_student: This lesson introduces a formal binary system for
+                encoding information, the ASCII system for representing letters and
+                other characters. At the beginning of the lesson the teacher introduces
+                the fact that computers must represent information using either "on"
+                or "off". The class is then introduced to the ASCII system for representing
+                text using binary symbols and practices using this system before encoding
+                their own messages using ASCII.
               description_teacher: In this lesson students learn to use their first
                 binary system for encoding information, the ASCII system for representing
                 letters and other characters. At the beginning of the lesson the teacher
@@ -6483,18 +6450,13 @@
                 learning objectives of the activity.
             Representing Images:
               name: Representing Images
-              description_student: In this lesson students learn how computers represent
-                images. To begin the lesson they consider the challenge of turning
-                all the complexity of vision into a binary pattern. Through a series
-                of images showing how this transformation is made students are introduced
-                to the concept of splitting images into squares or "pixels" which
-                can then be turned on or off individually to make the entire image.
-                Students then do a short set of challenges using the Pixelation Widget
-                in order to draw black and white images. Puzzles are designed to call
-                out some of the challenges of representing images in this way. In
-                the wrap up students make connections between the system for representing
-                images and the system for representing text they learned in the previous
-                lesson.
+              description_student: This lesson continues the study of binary representation
+                systems, this time with images. The class is introduced to the concept
+                of splitting images into squares or "pixels" which can then be turned
+                on or off individually to make the entire image. After doing a short
+                set of challenges using the Pixelation Widget, the class makes connections
+                between the system for representing images and the system for representing
+                text they learned in the previous lesson.
               description_teacher: In this lesson students learn how computers represent
                 images. To begin the lesson they consider the challenge of turning
                 all the complexity of vision into a binary pattern. Through a series
@@ -6513,14 +6475,13 @@
               name: Representing Numbers Part 2
             Combining Representations:
               name: Combining Representations
-              description_student: In this lesson, students use all three types of
-                binary representation systems (ASCII characters, binary number, and
-                images) to decode information in a record.  After seeing a series
-                of bits and being asked to decode them, students are introduced to
-                the idea that in order to understand binary information, they must
-                understand both the system that is being used and the meaning of the
-                information encoded.  They then decode a record representing a pet
-                based on a given structure.
+              description_student: This lesson combines all three types of binary
+                representation systems (ASCII characters, binary number, and images)
+                to allow for the encode of more complex types information in a record.  After
+                seeing a series of bits and being asked to decode them, the class
+                is introduced to the idea that  understanding binary information requires
+                understanding both the system that is being used and the meaning of
+                the information encoded.
               description_teacher: In this lesson, students use all three types of
                 binary representation systems (ASCII characters, binary number, and
                 images) to decode information in a record.  After seeing a series
@@ -6531,17 +6492,14 @@
                 based on a given structure.
             Project - Create a Representation:
               name: Project - Create a Representation
-              description_student: In this lesson students design a structure to represent
-                their perfect day using the binary representation systems they've
-                learned in this chapter. Students will first write a short description
-                of their perfect day and then review with a partner to identify the
-                key pieces of information they think a computer could capture. As
-                a class students will decide how a punch card of bytes of information
-                will be interpreted to represent those pieces of information. Students
-                will then use the ASCII, binary number, and image formats they have
-                learned to represent their perfect days. Students then trade punch
-                cards and try to decipher what the other student's perfect day is
-                like. The lesson ends with a reflection.
+              description_student: The class designs structure to represent their
+                perfect day using the binary representation systems they've learned
+                in this chapter. After deciding which pieces of information the record
+                should capture, the class will decide how a punch card of bytes of
+                information will be interpreted to represent those pieces of information.
+                Afterwards, everyone will use the ASCII, binary number, and image
+                formats they have learned to represent their perfect days try to decipher
+                what a partner's perfect day is like.
               description_teacher: In this lesson students design a structure to represent
                 their perfect day using the binary representation systems they've
                 learned in this chapter. Students will first write a short description
@@ -6555,21 +6513,30 @@
                 like. The lesson ends with a reflection.
             Problem Solving and Data:
               name: Problem Solving and Data
-              description_student: In this lesson, students use the problem solving
-                process from earlier in the course to solve a data problem.
-              description_teacher: In this lesson, students use the problem solving
-                process from earlier in the course to solve a data problem.
+              description_student: This lesson covers how the problem solving process
+                can be tailored to deal with data problems, in particular.  The class
+                is tasked with deciding what a city most needs to spend resources
+                on.  They must find and use data from the Internet to support their
+                decision.
+              description_teacher: 'In this lesson, students use the problem solving
+                process from earlier in the course to solve a data problem.  After
+                reviewing the process, the class is presented with a decision: whether
+                a city should build a library, pet shelter, or fire department.  Students
+                work in teams to collect information on the Internet to help them
+                decide what should be built, then use this information build an argument
+                that will convince the city council of their choice.  They then map
+                what they have done to the problem solving process that they have
+                been using throughout the course, comparing the general problem solving
+                process to its specific application to data problems.'
             Making Decisions with Data:
               name: Making Decisions with Data
-              description_student: In this lesson students get practice making decisions
-                with data based on some problems designed to be familiar to middle
-                school students. Students work in groups discussing how they would
-                use the data presented to make a decision before the class discusses
-                their final choices. Not all questions have right answers and in some
-                cases students can and should decide that they should collect more
-                data. The lesson concludes with a discussion of how different people
-                could draw different conclusions from the same data, or how collecting
-                different data might have affected the decisions they made.
+              description_student: This lesson gives the class a chance to practice
+                the data problem solving process introduced in the last lesson.  Not
+                all questions have right answers and in some cases the class can and
+                should decide that they should collect more data. The lesson concludes
+                with a discussion of how different people could draw different conclusions
+                from the same data, or how collecting different data might have affected
+                the decisions they made.
               description_teacher: In this lesson students get practice making decisions
                 with data based on some problems designed to be familiar to middle
                 school students. Students work in groups discussing how they would
@@ -6581,110 +6548,103 @@
                 different data might have affected the decisions they made.
             Interpreting Data:
               name: Interpreting Data
-              description_student: In this lesson, students go further into the interpretation
-                of data, including cleaning and visualizing raw data sets.  Students
-                first look at the how presenting data in different ways can help people
-                to understand it better.  They then visualize their own raw data set,
-                in the context of a pizza topping survey, deciding what to do with
-                data that does not easily fit into the visualization scheme that they
-                have chosen.  Last, students look at what parts of this process can
-                be automated, and what need a human to make decisions.
-              description_teacher: In this lesson, students go further into the interpretation
-                of data, including cleaning and visualizing raw data sets.  Students
-                first look at the how presenting data in different ways can help people
-                to understand it better.  They then visualize their own raw data set,
-                in the context of a pizza topping survey, deciding what to do with
-                data that does not easily fit into the visualization scheme that they
-                have chosen.  Last, students look at what parts of this process can
-                be automated, and what need a human to make decisions.
+              description_student: Students begin the lesson by looking at a cake
+                preference survey that allows respondents to specify both a cake and
+                an icing flavor.  They discuss how knowing the relationship between
+                cake and icing preference helps them better decide which combination
+                to recommend.  They are then introduced to cross tabulation, which
+                allows them to graph relationships to different preferences.  They
+                use this technique to find relationships in a preference survey, then
+                brainstorm the different types of problems that this process could
+                help solve.
+              description_teacher: Students begin the lesson by looking at a cake
+                preference survey that allows respondents to specify both a cake and
+                an icing flavor.  They discuss how knowing the relationship between
+                cake and icing preference helps them better decide which combination
+                to recommend.  They are then introduced to cross tabulation, which
+                allows them to graph relationships to different preferences.  They
+                use this technique to find relationships in a preference survey, then
+                brainstorm the different types of problems that this process could
+                help solve.
             Automating Data Decisions:
               name: Automating Data Decisions
               description_student: In this lesson students look at a simple example
-                of how a computer could be used to complete essentially every step
-                of the data problem solving process. To begin students are given the
-                clean data they collected about their ice cream preferences. They
-                use a spreadsheet to visualize this data using simple charts and discuss
-                in groups the decision they would make with this data. Students then
-                create rules, or an algorithm, that a computer could use to make this
-                decision automatically. Groups share their rules and what choices
+                of how a computer could be used to complete the decision making step
+                of the data problem solving process. Students are given the task of
+                creating an algorithm that could suggest a vacation spot.  Students
+                then create rules, or an algorithm, that a computer could use to make
+                this decision automatically. Students share their rules and what choices
                 their rules would make with the class data. They then use their rules
-                on data from another class to reinforce the fact that the rules they
-                create should be useful for any data set. The lesson concludes with
+                on data from their classmates to test whether their rules would make
+                the same decision that  a person would. The lesson concludes with
                 a discussion about the benefits and drawbacks of using computers to
                 automate the data problem solving process.
               description_teacher: In this lesson students look at a simple example
-                of how a computer could be used to complete essentially every step
-                of the data problem solving process. To begin students are given the
-                clean data they collected about their ice cream preferences. They
-                use a spreadsheet to visualize this data using simple charts and discuss
-                in groups the decision they would make with this data. Students then
-                create rules, or an algorithm, that a computer could use to make this
-                decision automatically. Groups share their rules and what choices
+                of how a computer could be used to complete the decision making step
+                of the data problem solving process. Students are given the task of
+                creating an algorithm that could suggest a vacation spot.  Students
+                then create rules, or an algorithm, that a computer could use to make
+                this decision automatically. Students share their rules and what choices
                 their rules would make with the class data. They then use their rules
-                on data from another class to reinforce the fact that the rules they
-                create should be useful for any data set. The lesson concludes with
+                on data from their classmates to test whether their rules would make
+                the same decision that  a person would. The lesson concludes with
                 a discussion about the benefits and drawbacks of using computers to
                 automate the data problem solving process.
             Problem Solving with Big Data:
               name: Problem Solving with Big Data
-              description_student: In this lesson, students look at how data is collected
-                and used by a organizations to solve problems in the real world. The
-                lesson begins with a quick review of the data problem solving process
-                they have explored in this unit. Then students are presented three
-                scenarios that could be solved using data and they brainstorm the
-                types of data they would want to solve them and how they could collect
-                the data. Each problem is designed to reflect a real-world service
-                that exists. After brainstorming students will watch a video about
-                a real-world service and will record notes about what data is collected
-                by the real-world service and how it is used. At the end of the lesson
-                students record whether data was provided actively by a user, was
-                recorded passively, or is collected by sensors.
+              description_student: This lesson covers how data is collected and used
+                by a organizations to solve problems in the real world. The class
+                looks at three scenarios that could be solved using data and brainstorms
+                the types of data they would want to solve them and how they could
+                collect the data.  Each scenario also includes a video about a real-world
+                service that has solved a similar problem with data.
               description_teacher: In this lesson, students look at how data is collected
-                and used by a organizations to solve problems in the real world. The
+                and used by organizations to solve problems in the real world. The
                 lesson begins with a quick review of the data problem solving process
-                they have explored in this unit. Then students are presented three
-                scenarios that could be solved using data and they brainstorm the
-                types of data they would want to solve them and how they could collect
-                the data. Each problem is designed to reflect a real-world service
-                that exists. After brainstorming students will watch a video about
-                a real-world service and will record notes about what data is collected
-                by the real-world service and how it is used. At the end of the lesson
-                students record whether data was provided actively by a user, was
-                recorded passively, or is collected by sensors.
+                they  explored in the last lesson. Then students are presented three
+                scenarios that could be solved using data and brainstorm the types
+                of data they would want to solve them and how they could collect the
+                data. Each problem is designed to reflect a real-world service that
+                exists. After brainstorming, students watch a video about a real-world
+                service and record notes about what data is collected by the real-world
+                service and how it is used. At the end of the lesson, students record
+                whether data was provided actively by a user, was recorded passively,
+                or is collected by sensors.
             Project - Solve a Data Problem:
               name: Project - Solve a Data Problem
-              description_student: To conclude this unit students will design a way
-                to use data to make a recommendation or prediction to help solve a
-                problem. Students will follow a project guide to complete this multi-day
-                activity. In the first several steps students brainstorm problems,
-                perform simple research, and define a problem of their choosing. They
-                will then decide what kind of data they would want to collect, how
-                it could be collected, and how it could be used. Students will perform
-                a peer review and make any necessary updates to their project before
-                preparing a presentation to their classmates.
-              description_teacher: To conclude this unit students will design a way
-                to use data to make a recommendation or prediction to help solve a
-                problem. Students will follow a project guide to complete this multi-day
-                activity. In the first several steps students brainstorm problems,
-                perform simple research, and define a problem of their choosing. They
-                will then decide what kind of data they would want to collect, how
-                it could be collected, and how it could be used. Students will perform
-                a peer review and make any necessary updates to their project before
-                preparing a presentation to their classmates.
+              description_student: To conclude this unit the class designs ways to
+                use data to make a recommendations or predictions to help solve a
+                problem.  In the first several steps the class brainstorms problems,
+                performs simple research, and defines a problem of their choosing.
+                They then decide what kind of data they want to collect, how it could
+                be collected, and how it could be used, before exchanging feedback
+                and giving a final presentation.
+              description_teacher: To conclude this unit, students design a recommendation
+                engine based on data that they collect and analyze from their classmates.
+                After looking at an example of a recommendation app, students follow
+                a project guide to complete this multi-day activity. In the first
+                several steps, students choose what choice they want to help the user
+                to make, what data they need to give the recommendation, create a
+                survey, and collect information about their classmates' choices. They
+                then interpret the data and use what they have learned to create the
+                recommendation algorithm.  Last, they use their algorithms to make
+                recommendations to a few classmates. Students perform a peer review
+                and make any necessary updates to their projects before preparing
+                a presentation to the class.
             Representing Numbers:
               name: Representing Numbers
-              description_student: In this lesson, students learn about the binary
-                number system.  With a set of cards that represent the place values
-                in a binary (base-2) number system by a collection of dots, students
-                turn bits "on" or "off" by turning cards face up and face down, then
-                observe the numbers that result from these different patterns.  Eventually,
-                student extend the pattern to a generic 4-bit system.
+              description_student: This lesson introduces the binary number system.  With
+                a set of cards that represent the place values in a binary (base-2)
+                number system, the class turns bits "on" or "off" by turning cards
+                face up and face down, then observes the numbers that result from
+                these different patterns.  Eventually, the pattern is extended to
+                a generic 4-bit system.
               description_teacher: In this lesson, students learn about the binary
                 number system.  With a set of cards that represent the place values
                 in a binary (base-2) number system by a collection of dots, students
                 turn bits "on" or "off" by turning cards face up and face down, then
                 observe the numbers that result from these different patterns.  Eventually,
-                student extend the pattern to a generic 4-bit system.
+                students extend the pattern to a generic 4-bit system.
             8-bit Numbers:
               name: 8-bit Numbers
               description_student: Students review the concept of binary numbers,
@@ -6724,13 +6684,14 @@
                 can help people make better decisions, the class looks at what parts
                 of this process can be automated, and what need a human.
               description_teacher: In this lesson, students go further into the collection
-                and interpretation of data, including cleaning and visualizing raw
-                data sets.  Students first look at the how presenting data in different
-                ways can help people to understand it better.  They then visualize
-                their own raw data set, in the context of a pizza topping survey,
-                deciding what to do with data that does not easily fit into the visualization
-                scheme that they have chosen.  Last, students look at what parts of
-                this process can be automated, and what need a human to make decisions.
+                and interpretation of data, including cleaning and visualizing data.  Students
+                first look at the how presenting data in different ways can help people
+                to understand it better, and they then create visualizations of their
+                own data. Using a the results of a preferred pizza topping survey,
+                students must decide what to do with data that does not easily fit
+                into the visualization scheme that they have chosen.  Finally, students
+                look at which parts of this process can be automated by a computer
+                and which need a human to make decisions.
             Keeping Data Secret:
               name: Keeping Data Secret
               description_student: Students have a discussion on the different levels
@@ -9101,6 +9062,14 @@
               name: CSP post survey 2018 staging
             CSD post survey 2018 staging:
               name: CSD post survey 2018 staging
+            CSD pre survey 2018 staging:
+              name: CSD pre survey 2018 staging
+            CSP pre survey 2018 staging:
+              name: CSP pre survey 2018 staging
+            CSP mid survey 2018 stagin:
+              name: CSP mid survey 2018 stagin
+            CSP mid survey 2018 staging:
+              name: CSP mid survey 2018 staging
           title: All the surveys
           description_audience: ''
           description_short: Place to stage and test Code.org surveys
@@ -9147,7 +9116,7 @@
           description_audience: ''
           description_short: ''
           description: ''
-        csp-explore:
+        csp-explore-2017:
           stages:
             new stage:
               name: new stage
@@ -9167,14 +9136,11 @@
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and
             complete the AP Explore Performance Tasks.
-          description: "These lessons are here to help you understand, prepare for,
-            and do the AP Explore Performance Task.  Each \"lesson\" contains links
-            to helpful documents that your teacher can help walk you through. NOTE:
-            the second item in the first lesson is not related to the Explore PT directly,
-            but covers general tech setup and tools you need to do various elements
-            of both the Explore and Create tasks.\r\n\r\nThis unit was last updated
-            November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
-        csp-create:
+          description: |-
+            These lessons are here to help you understand, prepare for, and do the AP Explore Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the second item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.\r
+            \r
+            This unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
+        csp-create-2017:
           stages:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
               name: Tech Setup - Your AP Digital Portfolio and Other Tools
@@ -9190,13 +9156,10 @@
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and
             complete the AP Create Performance Tasks.
-          description: "These lessons are here to help you understand, prepare for,
-            and do the AP Create Performance Task.  Each \"lesson\" contains links
-            to helpful documents that your teacher can help walk you through. NOTE:
-            the first item in the first lesson is not related to the Create PT directly,
-            but covers general tech setup and tools you need to do various elements
-            of both the Explore and Create tasks.\r\n\r\nThis unit was last updated
-            December, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
+          description: |-
+            These lessons are here to help you understand, prepare for, and do the AP Create Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the first item in the first lesson is not related to the Create PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.\r
+            \r
+            This unit was last updated December, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
         csp3-reovery:
           stages:
             Under the sea recovery:
@@ -10325,6 +10288,74 @@
               name: Conditionals in Bee
             Until Loops in Maze:
               name: Until Loops in Maze
+            Programming in Maze:
+              name: Programming in Maze
+            Debugging in Maze:
+              name: Debugging in Maze
+            Programming in Collector:
+              name: Programming in Collector
+            Programming in Artist:
+              name: Programming in Artist
+            'Loops: Getting Loopy':
+              name: 'Loops: Getting Loopy'
+            Loops with Rey and BB-8:
+              name: Loops with Rey and BB-8
+            Copyright and Creativity:
+              name: Copyright and Creativity
+            'Concept Practice with Minecraft ':
+              name: 'Concept Practice with Minecraft '
+            Nested Loops in Bee:
+              name: Nested Loops in Bee
+            Nested Loops in Frozen:
+              name: Nested Loops in Frozen
+            Conditionals with Cards:
+              name: Условия с карти
+            Conditionals & Loops in Harvester:
+              name: Conditionals & Loops in Harvester
+            'Functions: Songwriting':
+              name: 'Functions: Songwriting'
+            Functions in Minecraft:
+              name: Functions in Minecraft
+            Functions in Harvester:
+              name: Functions in Harvester
+            Functions in Artist:
+              name: Functions in Artist
+            Screen Out the Mean:
+              name: Screen Out the Mean
+            Determine the Concept:
+              name: Determine the Concept
+            Build a Flappy Game:
+              name: Build a Flappy Game
+            The Power of Words:
+              name: The Power of Words
+            Envelope Variables:
+              name: Плик с променливи
+            Variables as Constant in Artist:
+              name: Variables as Constant in Artist
+            Variables that Change in Bee:
+              name: Variables that Change in Bee
+            Variables that Change in Artist:
+              name: Variables that Change in Artist
+            For Loop Fun:
+              name: Повторения за забавление
+            Learning Sprites with Sprite Lab:
+              name: Learning Sprites with Sprite Lab
+            Alien Dance Party with Sprite Lab:
+              name: Alien Dance Party with Sprite Lab
+            Pet Giraffe with Sprite Lab:
+              name: Pet Giraffe with Sprite Lab
+            Binary Bracelets:
+              name: Двоични гривни
+            'Unplugged: Binary':
+              name: 'Ънплъгд: двоичен код'
+            Artist Binary:
+              name: 'Художник: Бинарен код'
+            Internet:
+              name: Интернет
+            Crowdsourcing:
+              name: Crowdsourcing
+            Relay Programming:
+              name: Щафетно програмиране
         courseb-2018:
           title: Course B
           description: Learn the basics of computer science and internet safety. At
@@ -11342,6 +11373,8 @@
               name: Unit 1 Chapter 2 Assessment
               description_student: ''
               description_teacher: ''
+            Sending Text:
+              name: Sending Text
         csd1-2018:
           title: CSD Unit 1 - Problem Solving
           description: " \r\nUnit 1 is a highly interactive and collaborative introduction
@@ -12152,6 +12185,8 @@
               name: Rapid Research - Format Showdown
             Lossy vs Lossless Compression:
               name: Lossy vs Lossless Compression
+            Unit 2 Assessment:
+              name: Unit 2 Assessment
         csp3-2018:
           title: CSP блок 3 - програмиране
           description: Тази част въвежда фундаменталните концепции за компютърно програмиране,
@@ -12210,6 +12245,8 @@
               name: Please complete the CSP Mid-course survey!
               description_student: ''
               description_teacher: ''
+            Creating Functions with Parameters:
+              name: Създаване на функции с параметри
         csp-explore-2018:
           title: Explore - AP Performance Task Prep
           description: "These lessons are here to help you understand, prepare for,
@@ -12320,6 +12357,8 @@
               name: Finding Trends with Visualizations
             Check Your Assumptions:
               name: Check Your Assumptions
+            Unit 4 Assessment:
+              name: Unit 4 Assessment
         csp5-2018:
           title: CSP Unit 5 - Building Apps
           description: This unit continues the introduction of foundational concepts
@@ -12508,6 +12547,8 @@
               name: Fish Tank - Creating Sprites
             Alien Dance Party - Input:
               name: Alien Dance Party - Input
+            Virtual Pet - Interactions:
+              name: Virtual Pet - Interactions
           title: Introduction to Sprite Lab (PILOT)
           description_audience: ''
           description_short: ''
@@ -12766,6 +12807,14 @@
               name: Novice Reflection Overview
             Monday:
               name: Monday
+            Day 1:
+              name: Day 1
+            Day 2:
+              name: Day 2
+            Day 3:
+              name: Day 3
+            Day 4:
+              name: Day 4
           title: CS Discoveries Novice Reflections 2018-2019
           description_audience: CS Discoveries Facilitators in Training 2018-2019
           description_short: 'Novice reflection materials for CS Discoveries facilitators
@@ -12787,6 +12836,16 @@
               name: Thursday
             Wrap Up:
               name: Wrap Up
+            Apprentice Reflection Overview:
+              name: Apprentice Reflection Overview
+            Day 1:
+              name: Day 1
+            Day 2:
+              name: Day 2
+            Day 3:
+              name: Day 3
+            Day 4:
+              name: Day 4
           title: CS Discoveries Apprentice Reflections 2018-2019
           description_audience: CS Discoveries Facilitators in Training 2018-2019
           description_short: 'Apprentice reflection materials for CS Discoveries facilitators
@@ -12808,6 +12867,16 @@
               name: Thursday
             Wrap Up:
               name: Wrap Up
+            Monday:
+              name: Monday
+            Day 1:
+              name: Day 1
+            Day 2:
+              name: Day 2
+            Day 3:
+              name: Day 3
+            Day 4:
+              name: Day 4
           title: CS Principles Novice Reflections 2018-2019
           description_audience: CS Principles Facilitators in Training 2018-2019
           description_short: 'Novice reflection materials for CS Principles facilitators
@@ -12829,6 +12898,16 @@
               name: Thursday
             Wrap Up:
               name: Wrap Up
+            Apprentice Reflection Overview:
+              name: Apprentice Reflection Overview
+            Day 1:
+              name: Day 1
+            Day 2:
+              name: Day 2
+            Day 3:
+              name: Day 3
+            Day 4:
+              name: Day 4
           title: CS Principles Novice Reflections 2018-2019
           description_audience: CS Principles Facilitators in Training 2018-2019
           description_short: 'Novice reflection materials for CS Principles facilitators
@@ -12838,3 +12917,83 @@
             will find reflection prompts for each day of your in-person 5-day summer
             workshop. This questions will be the foundation of work we do at the Facilitator
             Training Weekend.
+        pre-express-2018:
+          title: Pre-reader Express
+          description: Learn the basics of computer science and internet safety. At
+            the end of the course, create your very own game or story you can share.
+          description_short: 'An introduction to computer science for pre-readers:
+            combines the best of our kindergarten and first grade courses.'
+          description_audience: 'Ages: 4-8'
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Debugging: Unspotted Bugs'
+              description_student: ''
+              description_teacher: ''
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: 'Persistence & Frustration: Stevie and the Marbles'
+              description_student: ''
+              description_teacher: ''
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Реални алгоритми: Засадете семената'
+              description_student: ''
+              description_teacher: ''
+            Learn to Drag and Drop:
+              name: Learn to Drag and Drop
+              description_student: ''
+              description_teacher: ''
+            'Online Safety: Your Digital Footprint':
+              name: 'Online Safety: Your Digital Footprint'
+              description_student: ''
+              description_teacher: ''
+            'Programming: My Robotic Friends':
+              name: 'Programming: My Robotic Friends'
+              description_student: ''
+              description_teacher: ''
+            Programming in Maze:
+              name: Programming in Maze
+              description_student: ''
+              description_teacher: ''
+            'Programming: Star Wars':
+              name: 'Programming: Star Wars'
+              description_student: ''
+              description_teacher: ''
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+              description_student: ''
+              description_teacher: ''
+            Loops in Collector:
+              name: Loops in Collector
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+              description_student: ''
+              description_teacher: ''
+            Events in Play Lab:
+              name: Events in Play Lab
+              description_student: ''
+              description_teacher: ''
+            Spelling Bee:
+              name: Правопис
+              description_student: ''
+              description_teacher: ''
+            Move It, Move It:
+              name: Преместете го, преместете го
+            Sequencing with Scrat:
+              name: Sequencing with Scrat
+            Your Digital Footprint:
+              name: Вашите дигитални отпечатъци
+            Programming in Ice Age:
+              name: Programming in Ice Age
+            Copyright and Creativity:
+              name: Copyright and Creativity
+            Programming with Rey and BB-8:
+              name: Programming with Rey and BB-8
+            Loops in Ice Age:
+              name: Loops in Ice Age
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: 'Persistence & Frustration: Stevie and the Big Project'

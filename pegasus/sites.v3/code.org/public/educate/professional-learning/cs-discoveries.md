@@ -63,13 +63,12 @@ Hawaii<br>
 Idaho<br>
 Illinois<br>
 Iowa<br>
-Kentucky<br>
+Maine<br>
 
 [/col-33]
 
 [col-33]
 
-Maine<br>
 Maryland<br>
 Massachusetts<br>
 Mississippi<br>
@@ -78,12 +77,12 @@ New Hampshire<br>
 New Jersey<br>
 Southeastern New York<br>
 North Carolina<br>
+North Dakota<br>
 
 [/col-33]
 
 [col-33]
 
-North Dakota<br>
 Oklahoma<br>
 Pennsylvania<br>
 South Dakota<br>

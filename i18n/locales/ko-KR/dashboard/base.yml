@@ -128,7 +128,8 @@ ko:
     field_is_required: "이(가) 필요합니다."
     accept_terms: "회원가입에 동의해야 합니다."
     error: "An error occurred."
-    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: "예"
     email_preference_no: "아니요"
     email_preference_required: "You must specify an email preference."
@@ -467,6 +468,8 @@ ko:
   gender:
     male: '남'
     female: '여'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: '응답 안 함'
   user_type:
     student: 'student'

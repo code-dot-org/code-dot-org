@@ -128,7 +128,8 @@ th:
     field_is_required: "จำเป็น"
     accept_terms: "คุณต้อง ยอมรับ เพื่อสร้างบัญชี"
     error: "An error occurred."
-    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: "ใช่"
     email_preference_no: "ไม่ใช่"
     email_preference_required: "You must specify an email preference."
@@ -467,6 +468,8 @@ th:
   gender:
     male: 'ชาย'
     female: 'หญิง'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: 'ไม่ต้องการตอบ'
   user_type:
     student: 'นักเรียน'
@@ -701,7 +704,7 @@ th:
     ok: "ตกลง"
     startover_title: "คุณจะเริ่มต้นใหม่จริงๆหรือ ?"
     startover_body: "This will reset the puzzle to its start state and reset all the data you've added or changed."
-    startover_ok: "เริ่มใหม่"
+    startover_ok: "เริ่มเล่นใหม่"
     startover_cancel: "ยกเลิก"
   time:
     hour: '1 hour'
@@ -719,7 +722,7 @@ th:
     tos: "Terms of Service"
     privacy: "นโยบายความเป็นส่วนตัว"
     privacy_notice: "Privacy Notice"
-    accept_label: 'I agree to the updated <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>'
+    accept_label: 'I agree to the <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.'
     accept: "Accept"
     print: "พิมพ์"
     reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'

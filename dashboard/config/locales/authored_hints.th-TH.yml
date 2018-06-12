@@ -283,8 +283,8 @@
         2-3_Maze_1_a: To use a `move forward` block, drag it from the toolbar area
           out into the workspace and connect it to the `when run` block.
       2-3 Maze 16_authored_hint:
-        2-3_Maze_16_a: If the pattern is hard to see, try coding it all out first
-          and see what things repeat over and over before you put the loops in.
+        2-3_Maze_16_a: ถ้ามองไม่เห็นรูปแบบที่ชัดเจน ก็ให้ลองเขียนโค้ดออกมาดูก่อน และดูว่ามีอะไรที่มีการทำซ้ำแล้วซ้ำอีก
+          ก่อนที่คุณจะรวมมันเอาเข้าไปไว้ในลูป
         2-3_Maze_16_b: "To put lots of blocks inside a `repeat` loop, just drag a
           loop out into the workspace, then drag all of the blocks from the starting
           program inside of it.  \n\nConnect it all back to the `when run` block and
@@ -292,15 +292,13 @@
       2-3 Maze 6_authored_hint:
         2-3_Maze_6_a: There are two ways to solve this puzzle!
       2-3 Maze Loops 17_authored_hint:
-        2-3_Maze_Loops_17_a: If the pattern is hard to see, try coding it all out
-          first and see what things repeat over and over before you put the loops
-          in.
+        2-3_Maze_Loops_17_a: ถ้ามองไม่เห็นรูปแบบที่ชัดเจน ก็ให้ลองเขียนโค้ดออกมาดูก่อน
+          และดูว่ามีอะไรที่มีการทำซ้ำแล้วซ้ำอีก ก่อนที่คุณจะรวมมันเอาเข้าไปไว้ในลูป
         2-3_Maze_Loops_17_b: Did the starting code get deleted?  Click `start over`
           to get it back!
       2-3 Maze Loops 18_authored_hint:
-        2-3_Maze_Loops_18_a: If the pattern is hard to see, try coding it all out
-          first and see what things repeat over and over before you put the loops
-          in.
+        2-3_Maze_Loops_18_a: ถ้ามองไม่เห็นรูปแบบที่ชัดเจน ก็ให้ลองเขียนโค้ดออกมาดูก่อน
+          และดูว่ามีอะไรที่มีการทำซ้ำแล้วซ้ำอีก ก่อนที่คุณจะรวมมันเอาเข้าไปไว้ในลูป
       2-3 Maze Loops 19_authored_hint:
         2-3_Maze_Loops_19_a: If you are stuck, try writing out the code without loops
           first and looking for patterns.
@@ -7381,6 +7379,69 @@
           </next>
           </block>
           </xml>
+      courseB_collector_loops_challenge2_2018_authored_hint:
+        courseB_collector_loops_challenge2_a: If something goes wrong, don't be afraid
+          to start over. Don't give up!
+        courseB_collector_loops_challenge2_b: |-
+          If you repeat this pattern, Laurel won't hit the wall at the bottom of the cave!
+
+          <xml><block type="maze_moveEast">
+          <next>
+          <block type="collector_collect">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block></xml>
+        courseB_collector_loops_challenge2_c: Try using a `repeat` block to collect
+          the final pile of treasure!
+        courseB_collector_loops_challenge2_d: |-
+          Try this solution:
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="3-10">4</title>
+          <statement name="DO">
+          <block type="maze_moveEast">
+          <next>
+          <block type="collector_collect">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="3-10">6</title>
+          <statement name="DO">
+          <block type="collector_collect"/>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_collector_loops_challenge2a_authored_hint:
         courseB_collector_loops_challenge2a_a: If something goes wrong, try debugging
           it. Don't give up!
@@ -9292,16 +9353,15 @@
         courseC_maze_loops5_a: The best solution uses two `move forward` commands
           and one loop.
       courseC_maze_loops6_authored_hint:
-        courseC_maze_loops6_a: If the pattern is hard to see, try coding it all out
-          first and see what repeats over and over before you put the loops in.
+        courseC_maze_loops6_a: ถ้ามองไม่เห็นรูปแบบที่ชัดเจน ก็ให้ลองเขียนโค้ดออกมาดูก่อน
+          และดูว่ามีอะไรที่มีการทำซ้ำแล้วซ้ำอีก ก่อนที่คุณจะรวมมันเอาเข้าไปไว้ในลูป
         courseC_maze_loops6_b: "To put lots of blocks inside a `repeat` loop, just
           drag a loop out into the workspace, then drag all of the blocks from the
           starting program inside of it.  \n\nConnect it all back to the `when run`
           block and you're good to go!"
       courseC_maze_loops7_authored_hint:
-        courseC_maze_loops7_a: If the pattern is hard to see, try coding it all out
-          first and see what things repeat over and over before you put the loops
-          in.
+        courseC_maze_loops7_a: ถ้ามองไม่เห็นรูปแบบที่ชัดเจน ก็ให้ลองเขียนโค้ดออกมาดูก่อน
+          และดูว่ามีอะไรที่มีการทำซ้ำแล้วซ้ำอีก ก่อนที่คุณจะรวมมันเอาเข้าไปไว้ในลูป
       courseC_maze_loops8_authored_hint:
         courseC_puppy_loops8courseC_maze_loops8_a: Try thinking about this problem
           in small parts. Take your time. You don't need to solve it on the first
@@ -11886,9 +11946,8 @@
           Try using this path through the maze.
 
           ![](https://images.code.org/6a8b4b97a8eef813d8a827b0b7b2d36b-image-1480446509692.05.22.png)
-        courseD_maze_nestedLoops4_b: If the loop pattern is hard to see, try coding
-          it all out first and see what things repeat over and over before you put
-          the loops in.
+        courseD_maze_nestedLoops4_b: ถ้ามองไม่เห็นรูปแบบที่ชัดเจน ก็ให้ลองเขียนโค้ดออกมาดูก่อน
+          และดูว่ามีอะไรที่มีการทำซ้ำแล้วซ้ำอีก ก่อนที่คุณจะเอาลูปมาใช้งาน
         courseD_maze_nestedLoops4_c: Try using one `repeat` loop inside of another
           to cut down on the amount of code you need.
       courseD_maze_nestedLoops4_2018_authored_hint:
@@ -11896,9 +11955,8 @@
           Try using this path through the maze.
 
           ![](https://images.code.org/565dbbcaf5862da0f60e54195820e814-image-1505961491245.36.09.png)
-        courseD_maze_nestedLoops4_b: If the loop pattern is hard to see, try coding
-          it all out first and see what code repeats over and over before you put
-          the loops in.
+        courseD_maze_nestedLoops4_b: ถ้ามองไม่เห็นรูปแบบที่ชัดเจน ก็ให้ลองเขียนโค้ดออกมาดูก่อน
+          และดูว่ามีอะไรที่มีการทำซ้ำแล้วซ้ำอีก ก่อนที่คุณจะเอาลูปมาใช้งาน
         courseD_maze_nestedLoops4_c: Try using one `repeat` loop inside of another
           to cut down on the amount of code you need.
       courseD_maze_nestedLoops5_authored_hint:
@@ -17220,6 +17278,9 @@
           Look at this path...
 
           ![](https://images.code.org/e1d29901495eea9504c194b09efaa88e-image-1503437474226.29.32.png)
+      courseF_playlab_brokenText_authored_hint:
+        courseF_playlab_variables6c_a: Under the “Input” section, use the `ask` block
+          to get input from users.
       courseF_playlab_variables1a_authored_hint:
         courseF_playlab_variables1a_a: Put the word "Goal!" inside the green block
           that is connected to the purple `set shout to` block.
@@ -17853,16 +17914,15 @@
       grade2_PuppyLoops_5_authored_hint:
         hint1: The best solution uses two `move forward` commands and one loop.
       grade2_PuppyLoops_6_authored_hint:
-        2-3_Maze_16_a: If the pattern is hard to see, try coding it all out first
-          and see what things repeat over and over before you put the loops in.
+        2-3_Maze_16_a: ถ้ามองไม่เห็นรูปแบบที่ชัดเจน ก็ให้ลองเขียนโค้ดออกมาดูก่อน และดูว่ามีอะไรที่มีการทำซ้ำแล้วซ้ำอีก
+          ก่อนที่คุณจะรวมมันเอาเข้าไปไว้ในลูป
         2-3_Maze_16_b: "To put lots of blocks inside a `repeat` loop, just drag a
           loop out into the workspace, then drag all of the blocks from the starting
           program inside of it.  \n\nConnect it all back to the `when run` block and
           you're good to go!"
       grade2_PuppyLoops_7_authored_hint:
-        2-3_Maze_Loops_17_a: If the pattern is hard to see, try coding it all out
-          first and see what things repeat over and over before you put the loops
-          in.
+        2-3_Maze_Loops_17_a: ถ้ามองไม่เห็นรูปแบบที่ชัดเจน ก็ให้ลองเขียนโค้ดออกมาดูก่อน
+          และดูว่ามีอะไรที่มีการทำซ้ำแล้วซ้ำอีก ก่อนที่คุณจะรวมมันเอาเข้าไปไว้ในลูป
         2-3_Maze_Loops_17_b: Did the starting code get deleted?  Click `start over`
           to get it back!
       grade2_PuppyLoops_8_authored_hint:
@@ -17912,16 +17972,15 @@
       grade2_puppy_loops5_authored_hint:
         hint1: The best solution uses two `move forward` commands and one loop.
       grade2_puppy_loops6_authored_hint:
-        2-3_Maze_16_a: If the pattern is hard to see, try coding it all out first
-          and see what things repeat over and over before you put the loops in.
+        2-3_Maze_16_a: ถ้ามองไม่เห็นรูปแบบที่ชัดเจน ก็ให้ลองเขียนโค้ดออกมาดูก่อน และดูว่ามีอะไรที่มีการทำซ้ำแล้วซ้ำอีก
+          ก่อนที่คุณจะรวมมันเอาเข้าไปไว้ในลูป
         2-3_Maze_16_b: "To put lots of blocks inside a `repeat` loop, just drag a
           loop out into the workspace, then drag all of the blocks from the starting
           program inside of it.  \n\nConnect it all back to the `when run` block and
           you're good to go!"
       grade2_puppy_loops7_authored_hint:
-        2-3_Maze_Loops_17_a: If the pattern is hard to see, try coding it all out
-          first and see what things repeat over and over before you put the loops
-          in.
+        2-3_Maze_Loops_17_a: ถ้ามองไม่เห็นรูปแบบที่ชัดเจน ก็ให้ลองเขียนโค้ดออกมาดูก่อน
+          และดูว่ามีอะไรที่มีการทำซ้ำแล้วซ้ำอีก ก่อนที่คุณจะรวมมันเอาเข้าไปไว้ในลูป
       grade3_ConditionalsElse_4_authored_hint:
         remember_quantum: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll
           want to use a conditional block (`if` or `if/else`) to solve the challenge."
@@ -18133,9 +18192,8 @@
           Try using this path through the maze.
 
           ![](https://images.code.org/6a8b4b97a8eef813d8a827b0b7b2d36b-image-1480446509692.05.22.png)
-        grade3_maze_loops2_b: If the pattern is hard to see, try coding it all out
-          first and see what things repeat over and over before you put the loops
-          in.
+        grade3_maze_loops2_b: ถ้ามองไม่เห็นรูปแบบที่ชัดเจน ก็ให้ลองเขียนโค้ดออกมาดูก่อน
+          และดูว่ามีอะไรที่มีการทำซ้ำแล้วซ้ำอีก ก่อนที่คุณจะรวมมันเอาเข้าไปไว้ในลูป
         grade3_maze_loops2_c: Try using one `repeat` loop inside of another to cut
           down on the amount of code you need.
       grade3_maze_loops2a_authored_hint:

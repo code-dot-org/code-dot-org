@@ -168,6 +168,7 @@
     error: Tharla earráid.
     email_preference_question: An bhfuil cead againn ríomhphost a sheoladh chugat
       maidir lenár gcúrsaí, deiseanna foghlamtha áitiúla, nó nuacht eile faoin ríomheolaíocht?
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: Tá
     email_preference_no: Níl
     email_preference_required: You must specify an email preference.
@@ -639,6 +640,8 @@
   gender:
     male: Fireannach
     female: Baineannach
+    non_binary: Non-binary
+    not_listed: Preferred term not listed
     none: B'fhearr liom gan freagra a thabhairt
   user_type:
     student: Dalta

@@ -4,6 +4,10 @@ import sectionAssessments, {
   setAssessmentsStructure,
   startLoadingAssessments,
   finishLoadingAssessments,
+  setAssessmentId,
+  getCurrentScriptAssessmentList,
+  getMultipleChoiceStructureForCurrentAssessment,
+  getStudentMCResponsesForCurrentAssessment,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
 
@@ -50,6 +54,15 @@ describe('sectionAssessmentsRedux', () => {
       const nextState = sectionAssessments(initialState, action);
       const actualAssessmentData = nextState.assessmentsStructureByScript[scriptId];
       assert.deepEqual(actualAssessmentData, assessmentData);
+      assert.deepEqual(nextState.assessmentId, 139);
+    });
+  });
+
+  describe('setAssessmentId', () => {
+    it('sets the id of the current assessment in view', () => {
+      const action = setAssessmentId(456);
+      const nextState = sectionAssessments(initialState, action);
+      assert.deepEqual(nextState.assessmentId, 456);
     });
   });
 
@@ -66,6 +79,123 @@ describe('sectionAssessmentsRedux', () => {
       const action = finishLoadingAssessments();
       const nextState = sectionAssessments(initialState, action);
       assert.isFalse(nextState.isLoadingAssessments);
+    });
+  });
+
+  describe('getCurrentScriptAssessmentList', () => {
+    it('gets a list of assessments in current script', () => {
+      const rootState = {
+        scriptSelection: {
+          scriptId: 123
+        },
+        sectionAssessments: {
+          ...initialState,
+          assessmentsStructureByScript: {
+            123: {
+              7: {id: 7, name: 'Assessment 7'},
+              8: {id: 8, name: 'Assessment 8'},
+            },
+            456: {
+              4: {id: 4, name: 'Assessment 4'},
+              5: {id: 5, name: 'Assessment 5'},
+            },
+          },
+        },
+      };
+      const result = getCurrentScriptAssessmentList(rootState);
+      assert.deepEqual(result.length, 2);
+      assert.deepEqual(result[0], {id: 7, name: 'Assessment 7'});
+      assert.deepEqual(result[1], {id: 8, name: 'Assessment 8'});
+    });
+  });
+
+  describe('Selector functions', () => {
+    let rootState;
+    beforeEach(() => {
+      rootState = {
+        sectionAssessments: initialState,
+        scriptSelection: {
+          scriptId: 3
+        }
+      };
+    });
+
+    afterEach(()=>{
+      rootState = {};
+    });
+
+    describe('getMultipleChoiceStructureForCurrentAssessment', () => {
+      it('returns an empty array when no assessments in redux', () => {
+        const result = getMultipleChoiceStructureForCurrentAssessment(rootState);
+        assert.deepEqual(result, []);
+      });
+
+      it('returns an array of objects of questionStructurePropType', () => {
+        const stateWithAssessment = {
+          ...rootState,
+          sectionAssessments: {
+            ...rootState.sectionAssessments,
+            assessmentId: 123,
+            assessmentsStructureByScript: {
+              3: {
+                123: {
+                  id: 123,
+                  name: 'Assessment 1',
+                  questions: [
+                    {
+                      answers: [
+                        {correct: false, text: 'answer 1'},
+                        {correct: true, text: 'answer 2'},
+                      ],
+                      question_text: 'What is a variable?',
+                      type: 'Multi',
+                      level_id: 456,
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        };
+        const result = getMultipleChoiceStructureForCurrentAssessment(stateWithAssessment);
+        assert.deepEqual(result, [{correctAnswer: 'B', id: 456, question: 'What is a variable?'}]);
+      });
+    });
+
+    describe('getStudentMCResponsesForCurrentAssessment', () => {
+      it('returns an empty array when no assessments in redux', () => {
+        const result = getStudentMCResponsesForCurrentAssessment(rootState);
+        assert.deepEqual(result, []);
+      });
+
+      it('returns an array of objects of studentAnswerDataPropType', () => {
+        const stateWithAssessment = {
+          ...rootState,
+          sectionAssessments: {
+            ...rootState.sectionAssessments,
+            assessmentId: 123,
+            assessmentsByScript: {
+              3: {
+                1: {
+                  student_name: 'Saira',
+                  responses_by_assessment: {
+                    123: {
+                      level_results: [
+                        {
+                          student_result: 'D',
+                          status: 'incorrect',
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        };
+        const result = getStudentMCResponsesForCurrentAssessment(stateWithAssessment);
+        assert.deepEqual(result, [{id: '1', name: 'Saira', studentAnswers: [{answers: 'D', isCorrect: false}]}]);
+      });
     });
   });
 });

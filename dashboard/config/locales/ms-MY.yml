@@ -163,6 +163,7 @@
     error: An error occurred.
     email_preference_question: Can we email you about updates to our courses, local
       learning opportunities, or other computer science news?
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: Ya
     email_preference_no: Tidak
     email_preference_required: You must specify an email preference.
@@ -623,6 +624,8 @@
   gender:
     male: Lelaki
     female: Perempuan
+    non_binary: Non-binary
+    not_listed: Preferred term not listed
     none: Memilih untuk tidak menjawab
   user_type:
     student: pelajar

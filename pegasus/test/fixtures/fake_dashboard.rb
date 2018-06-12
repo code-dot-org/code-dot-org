@@ -102,17 +102,17 @@ module FakeDashboard
     },
     SCRIPT_CSP1 = {
       id: 31,
-      name: 'csp1',
+      name: 'csp1-2017',
       hidden: 0,
     },
     SCRIPT_CSP2 = {
       id: 32,
-      name: 'csp2',
+      name: 'csp2-2017',
       hidden: 0,
     },
     SCRIPT_CSP3 = {
       id: 34,
-      name: 'csp3',
+      name: 'csp3-2017',
       hidden: 0,
     },
     # put the hidden scripts at the end and give them higher ids, to make
@@ -305,9 +305,8 @@ module FakeDashboard
     # Reuse the same connection in Sequel to share access to the temporary tables.
     connection = ActiveRecord::Base.connection.instance_variable_get(:@connection)
     connection.query_options[:as] = :hash
-    Sequel.extension :meta_def
-    @@fake_db = Sequel.mysql2
-    @@fake_db.meta_def(:connect) {|_| connection}
+    @@fake_db = Sequel.mysql2(test: false)
+    @@fake_db.pool.available_connections.replace([connection])
 
     FAKE_DB.each do |key, value|
       value.each do |row|

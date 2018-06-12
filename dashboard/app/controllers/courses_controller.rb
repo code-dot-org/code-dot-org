@@ -14,7 +14,7 @@ class CoursesController < ApplicationController
         @header_banner_image_filename = !@is_teacher ? "courses-hero-student" : "courses-hero-teacher"
       end
       format.json do
-        courses = Course.valid_courses(user: current_user, include_unstable: !!params['allVersions'])
+        courses = Course.valid_courses(user: current_user)
         render json: courses
       end
     end
@@ -28,13 +28,13 @@ class CoursesController < ApplicationController
     # For now, Hard-code the redirection logic because there are only two course
     # families to worry about. In the future we will want to make this redirect
     # happen based on the data in the DB so it can be configured via levelbuilder.
-    redirect_query_string = params[:section_id] ? "?section_id=#{params[:section_id]}" : ''
+    redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
     case params[:course_name]
     when 'csd'
-      redirect_to "/courses/csd-2017#{redirect_query_string}"
+      redirect_to "/courses/csd-2018#{redirect_query_string}"
       return
     when 'csp'
-      redirect_to "/courses/csp-2017#{redirect_query_string}"
+      redirect_to "/courses/csp-2018#{redirect_query_string}"
       return
     end
 
