@@ -3,7 +3,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   before_action :find_follower, only: :leave
   load_and_authorize_resource except: [:join, :leave, :membership, :valid_scripts, :create, :update]
 
-  skip_before_action :verify_authenticity_token, only: :update_sharing_disabled
+  skip_before_action :verify_authenticity_token, only: [:update_sharing_disabled, :update]
 
   rescue_from ActiveRecord::RecordNotFound do |e|
     if e.model == "Section" && %w(join leave).include?(request.filtered_parameters['action'])
