@@ -173,7 +173,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   end
 
   # Update script_id if user provided valid script_id
-  # Otherwise, set script_id to nil
+  # Set script_id to nil if invalid or no script_id provided
   def set_script_id(script_id)
     return script_id if Script.valid_script_id?(current_user, script_id)
     nil
