@@ -47,6 +47,8 @@ module CaptureQueries
 
       # Script/course-cache related queries don't count.
       next if backtrace.any? {|line| line =~ /(script|course)\.rb.*get_from_cache/}
+      # Level-cache queries don't count.
+      next if backtrace.any? {|line| line =~ /script\.rb.*cache_find_level/}
       # Ignore cached script id lookup
       next if backtrace.any? {|line| line =~ /stage_extras_script_ids/}
       # Ignore random updates to experiment cache.
