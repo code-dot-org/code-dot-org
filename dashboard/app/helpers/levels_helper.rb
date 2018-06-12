@@ -432,13 +432,6 @@ module LevelsHelper
     fb_options
   end
 
-  # simple helper to set the given key and value on the given hash unless the
-  # value is nil, used to set localized versions of level options without
-  # calling the localization methods twice
-  def set_unless_nil(hash, key, value)
-    hash[key] = value unless value.nil?
-  end
-
   # Options hash for Blockly
   def blockly_options
     l = @level
@@ -451,12 +444,11 @@ module LevelsHelper
     # Locale-depdendent option
     # For historical reasons, `localized_instructions` and
     # `localized_authored_hints` should happen independent of `should_localize?`
-    set_unless_nil(level_options, 'instructions', l.localized_instructions)
-    set_unless_nil(level_options, 'authoredHints', l.localized_authored_hints)
+    level_options['instructions'] = l.localized_instructions unless l.localized_instructions.nil?
+    level_options['authoredHints'] = l.localized_authored_hints unless l.localized_authored_hints.nil?
     if l.should_localize?
-      set_unless_nil(level_options, 'markdownInstructions', l.localized_markdown_instructions)
-      set_unless_nil(level_options, 'failureMessageOverride', l.localized_failure_message_override)
-      set_unless_nil(level_options, 'toolbox', l.localized_toolbox_blocks)
+      level_options['markdownInstructions'] = l.localized_markdown_instructions unless l.localized_markdown_instructions.nil?
+      level_options['failureMessageOverride'] = l.localized_failure_message_override unless l.localized_failure_message_override.nil?
     end
 
     # Script-dependent option
@@ -773,9 +765,11 @@ module LevelsHelper
   def firebase_auth_token
     return nil unless CDO.firebase_secret
 
+    base_channel = params[:channel_id] || get_channel_for(@level, @user)
     payload = {
       uid: user_or_session_id,
-      is_dashboard_user: !!current_user
+      is_dashboard_user: !!current_user,
+      channel: "#{base_channel}#{CDO.firebase_channel_id_suffix}"
     }
     options = {}
     # Provides additional debugging information to the browser when

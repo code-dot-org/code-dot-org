@@ -752,7 +752,7 @@ describe('teacherSectionsRedux', () => {
       store.dispatch(editSectionProperties({grade: 'K'}));
 
       // Set up matching server response
-      server.respondWith('PATCH', `/sections/${sectionId}`,
+      server.respondWith('PATCH', `/v2/sections/${sectionId}`,
         successResponse({grade: 'K'}));
 
       store.dispatch(finishEditingSection());
@@ -827,7 +827,7 @@ describe('teacherSectionsRedux', () => {
     it('sets and clears saveInProgress', () => {
       const sectionId = 12;
       server.autoRespond = true;
-      server.respondWith('PATCH', `/sections/${sectionId}`,
+      server.respondWith('PATCH', `/v2/sections/${sectionId}`,
         successResponse(sectionId));
 
       expect(isSaveInProgress(getState())).to.be.false;
@@ -842,7 +842,7 @@ describe('teacherSectionsRedux', () => {
     it('updates an edited section in the section map on success', () => {
       const sectionId = 12;
       server.autoRespond = true;
-      server.respondWith('PATCH', `/sections/${sectionId}`,
+      server.respondWith('PATCH', `/v2/sections/${sectionId}`,
         successResponse(sectionId, {login_type: 'word'}));
 
       expect(state().sections[sectionId].loginType).to.equal('picture');
