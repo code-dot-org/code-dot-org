@@ -101,9 +101,9 @@
     "top_level_procedure_autopopulate": "false",
     "start_blocks": "var balloon = createSprite(200, 200);\r\nballoon.setAnimation(\"balloon\");\r\nballoon.scale = 0.1;\r\n\r\nfunction draw() {\r\n  // Draw Background\r\n  background(\"white\");\r\n  \r\n  // Update Values\r\n  balloon.scale = balloon.scale + 0.001;\r\n\r\n  // Draw Animations\r\n  drawSprites();\r\n}",
     "start_animations": "{\r\n    \"orderedKeys\": [\r\n        \"balloon\",\r\n        \"pop\"\r\n    ],\r\n    \"propsByKey\": {\r\n        \"balloon\": {\r\n            \"name\": \"balloon\",\r\n            \"sourceUrl\": \"https://curriculum.code.org/images/sprites/balloon.png\",\r\n            \"sourceSize\": {\r\n                \"x\": 444,\r\n                \"y\": 598\r\n            },\r\n            \"frameSize\": {\r\n                \"x\": 444,\r\n                \"y\": 598\r\n            },\r\n            \"frameCount\": 1,\r\n            \"frameDelay\": 2,\r\n            \"looping\": true\r\n        },\r\n        \"pop\": {\r\n            \"name\": \"pop\",\r\n            \"sourceUrl\": \"https://curriculum.code.org/images/sprites/pop.png\",\r\n            \"sourceSize\": {\r\n                \"x\": 600,\r\n                \"y\": 465\r\n            },\r\n            \"frameSize\": {\r\n                \"x\": 600,\r\n                \"y\": 465\r\n            },\r\n            \"frameCount\": 1,\r\n            \"frameDelay\": 2,\r\n            \"looping\": true\r\n        }\r\n    }\r\n}",
-    "contained_level_names": null,
     "show_type_hints": "false",
-    "thumbnail_url": "https://images.code.org/8908998345f820fffd98b87770b7972d-image-1528751407890.52.13 PM.png"
+    "thumbnail_url": "https://images.code.org/8908998345f820fffd98b87770b7972d-image-1528751407890.52.13 PM.png",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
