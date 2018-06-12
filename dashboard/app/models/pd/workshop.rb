@@ -220,7 +220,7 @@ class Pd::Workshop < ActiveRecord::Base
     includes(:sessions).
       flat_map(&:sessions).
       compact.
-      min {|s| (Date.today - s.start.to_date).to_i.abs}&.
+      min_by {|s| (Date.today - s.start.to_date).to_i.abs}&.
       workshop
   end
 

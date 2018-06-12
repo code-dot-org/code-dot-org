@@ -5,6 +5,7 @@ import sectionAssessments, {
   startLoadingAssessments,
   finishLoadingAssessments,
   setAssessmentId,
+  getCurrentScriptAssessmentList,
   getMultipleChoiceStructureForCurrentAssessment,
   getStudentMCResponsesForCurrentAssessment,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
@@ -78,6 +79,33 @@ describe('sectionAssessmentsRedux', () => {
       const action = finishLoadingAssessments();
       const nextState = sectionAssessments(initialState, action);
       assert.isFalse(nextState.isLoadingAssessments);
+    });
+  });
+
+  describe('getCurrentScriptAssessmentList', () => {
+    it('gets a list of assessments in current script', () => {
+      const rootState = {
+        scriptSelection: {
+          scriptId: 123
+        },
+        sectionAssessments: {
+          ...initialState,
+          assessmentsStructureByScript: {
+            123: {
+              7: {id: 7, name: 'Assessment 7'},
+              8: {id: 8, name: 'Assessment 8'},
+            },
+            456: {
+              4: {id: 4, name: 'Assessment 4'},
+              5: {id: 5, name: 'Assessment 5'},
+            },
+          },
+        },
+      };
+      const result = getCurrentScriptAssessmentList(rootState);
+      assert.deepEqual(result.length, 2);
+      assert.deepEqual(result[0], {id: 7, name: 'Assessment 7'});
+      assert.deepEqual(result[1], {id: 8, name: 'Assessment 8'});
     });
   });
 
