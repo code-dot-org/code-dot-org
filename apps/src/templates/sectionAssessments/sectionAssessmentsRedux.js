@@ -48,9 +48,11 @@ export const asyncLoadAssessments = (sectionId, scriptId) => {
 
 export default function sectionAssessments(state=initialState, action) {
   if (action.type === SET_SECTION) {
-    // Setting the section is the first action to be called when switching
-    // sections, which requires us to reset our state. This might need to change
-    // once switching sections is in react/redux.
+    /**
+     * Setting the section is the first action to be called when switching
+     * sections, which requires us to reset our state. This might need to change
+     * once switching sections is in react/redux.
+    */
     return {
       ...initialState
     };
@@ -142,10 +144,13 @@ export const getMultipleChoiceStructureForCurrentAssessment = (state) => {
   });
 };
 
-// Returns an array of objects, each of type studentAnswerDataPropType
-// indicating the student responses to multiple choice questions for the
-// currently selected assessment.
-// TODO(caleybrock): needs to be tested.
+/**
+ * Returns an array of objects, each of type studentAnswerDataPropType
+ * indicating the student responses to multiple choice questions for the
+ * currently selected assessment.
+ * TODO(caleybrock): needs to be tested.
+ */
+
 export const getStudentMCResponsesForCurrentAssessment = (state) => {
   const studentResponses = getAssessmentResponsesForCurrentScript(state);
   if (!studentResponses) {
@@ -162,8 +167,10 @@ export const getStudentMCResponsesForCurrentAssessment = (state) => {
       return;
     }
 
-    // Transform that data into what we need for this particular table, in this case
-    // is the structure studentAnswerDataPropType
+    /**
+     * Transform that data into what we need for this particular table, in this case
+     * is the structure studentAnswerDataPropType
+     */
     return {
       id: studentId,
       name: studentObject.student_name,
@@ -181,16 +188,20 @@ export const getStudentMCResponsesForCurrentAssessment = (state) => {
 
 // Helpers
 
-// Takes in an array of objects {answerText: '', correct: true/false} and
-// returns the corresponding letter to the option with the correct answer.
-// Ex - [{correct: false}, {correct: true}] --> returns 'B'
+/**
+ * Takes in an array of objects {answerText: '', correct: true/false} and
+ * returns the corresponding letter to the option with the correct answer.
+ * Ex - [{correct: false}, {correct: true}] --> returns 'B'
+ */
 const getCorrectAnswer = (answerArr) => {
   if (!answerArr) {
     return '';
   }
   const correctIndex = answerArr.findIndex(answer => answer.correct);
-  // TODO(caleybrock): Add letter options to response from the server so they are
-  // consistent with the structure, but for now look up letter in this array.
+  /**
+   *  TODO(caleybrock): Add letter options to response from the server so they are
+   * consistent with the structure, but for now look up letter in this array.
+   */
   const letterArr = ['A','B', 'C', 'D', 'E', 'F', 'G', 'H'];
   return letterArr[correctIndex];
 };
