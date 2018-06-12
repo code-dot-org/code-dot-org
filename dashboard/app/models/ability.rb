@@ -70,6 +70,7 @@ class Ability
       can :manage, Pd::Enrollment, user_id: user.id
       can :workshops_user_enrolled_in, Pd::Workshop
       can :index, Section, user_id: user.id
+      can :show_feedback_for_level, TeacherFeedback, student_id: user.id
 
       if user.teacher?
         can :manage, Section, user_id: user.id

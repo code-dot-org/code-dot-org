@@ -8,6 +8,21 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
     render json: @feedback
   end
 
+  def show_feedback_for_level
+    query = <<-EOS
+      SELECT b.*
+      FROM (
+        SELECT teacher_id, max(created_at) as created_at
+        FROM teacher_feedbacks GROUP BY teacher_id) a
+      INNER JOIN teacher_feedbacks b ON a.teacher_id = b.teacher_id AND a.created_at = b.created_at
+      WHERE b.student_id = #{params[:student_id]} and b.level_id = #{params[:level_id]}
+    EOS
+
+    @level_feedbacks = TeacherFeedback.find_by_sql query
+
+    render json: {feedbacks: @level_feedbacks}
+  end
+
   # POST /teacher_feedbacks
   # POST /teacher_feedbacks.json
   def create
