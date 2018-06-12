@@ -629,7 +629,7 @@ class Script < ActiveRecord::Base
   # @param user [User]
   # @return [Boolean] Whether the user has progress on another version of this script.
   def has_other_version_progress?(user)
-    return nil unless user
+    return nil unless user && family_name
     user_script_ids = user.user_scripts.pluck(:script_id)
 
     Script.
