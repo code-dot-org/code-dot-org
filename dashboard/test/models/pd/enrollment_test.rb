@@ -97,10 +97,16 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     admin_workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_ADMIN
     admin_enrollment = create :pd_enrollment, workshop: admin_workshop
 
-    base_url = "https://#{CDO.pegasus_hostname}"
-    assert_equal "#{base_url}/pd-workshop-survey/#{normal_enrollment.code}", normal_enrollment.exit_survey_url
-    assert_equal "#{base_url}/pd-workshop-survey/counselor-admin/#{counselor_enrollment.code}", counselor_enrollment.exit_survey_url
-    assert_equal "#{base_url}/pd-workshop-survey/counselor-admin/#{admin_enrollment.code}", admin_enrollment.exit_survey_url
+    local_summer_workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
+    local_summer_enrollment = create :pd_enrollment, workshop: local_summer_workshop
+
+    code_org_url = ->(path) {CDO.code_org_url(path, CDO.default_scheme)}
+    assert_equal code_org_url["/pd-workshop-survey/#{normal_enrollment.code}"], normal_enrollment.exit_survey_url
+    assert_equal code_org_url["/pd-workshop-survey/counselor-admin/#{counselor_enrollment.code}"], counselor_enrollment.exit_survey_url
+    assert_equal code_org_url["/pd-workshop-survey/counselor-admin/#{admin_enrollment.code}"], admin_enrollment.exit_survey_url
+
+    studio_url = ->(path) {CDO.studio_url(path, CDO.default_scheme)}
+    assert_equal studio_url["/pd/workshop_survey/post/#{local_summer_enrollment.code}"], local_summer_enrollment.exit_survey_url
   end
 
   test 'should_send_exit_survey' do
@@ -269,6 +275,18 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_equal with_surveys, Pd::Enrollment.filter_for_survey_completion(enrollments)
     assert_equal with_surveys, Pd::Enrollment.filter_for_survey_completion(enrollments, true)
     assert_equal without_surveys, Pd::Enrollment.filter_for_survey_completion(enrollments, false)
+  end
+
+  test 'local summer survey filter' do
+    workshop = create :pd_workshop, :local_summer_workshop, num_sessions: 5
+    teacher = create :teacher
+    enrollment = create :pd_enrollment, :from_user, user: teacher, workshop: workshop
+
+    assert_equal [enrollment], Pd::Enrollment.filter_for_survey_completion([enrollment], false)
+
+    # complete survey
+    create :pd_workshop_daily_survey, pd_workshop: workshop, user: enrollment.user
+    assert_equal [], Pd::Enrollment.filter_for_survey_completion([enrollment], false)
   end
 
   test 'enrolling in class automatically enrolls in online learning' do

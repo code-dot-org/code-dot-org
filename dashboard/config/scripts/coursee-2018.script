@@ -1,9 +1,12 @@
+hidden false
 hideable_stages true
 stage_extras_available true
 has_lesson_plan true
 project_widget_visible true
 project_widget_types ["playlab", "artist"]
 script_announcements [{"notice"=>"New: Choose Which Lessons to Show or Hide for Your Section", "details"=>"Click \"Learn More\" to read the help article on showing and hiding lessons.", "link"=>"https://support.code.org/hc/en-us/articles/115001479372-Hiding-units-and-lessons-in-Code-org-s-CS-Principles-and-CS-Discoveries-courses", "type"=>"bullhorn"}]
+family_name 'coursee'
+version_year '2018'
 
 stage 'Programming: My Robotic Friends', flex_category: 'csf_e_1'
 level 'courseB_unplugged_MRF_2018'
@@ -213,16 +216,16 @@ bonus 'courseE_artist_concept_challenge1_2018'
 bonus 'courseE_artist_concept_challenge2_2018'
 
 stage 'Learning Sprites with Sprite Lab', flex_category: 'csf_e_2'
-level 'Fish Tank 1'
-level 'Fish Tank 2'
-level 'Fish Tank 3'
-level 'Fish Tank 4'
-level 'Fish Tank 5'
-level 'Fish Tank 6'
-level 'Fish Tank 7'
+level 'Fish Tank 1-validated'
+level 'Fish Tank 2-validated'
+level 'Fish Tank 3-validated'
+level 'Fish Tank 4-validated'
+level 'Fish Tank 5-validated'
+level 'Fish Tank 6-validated'
+level 'Fish Tank 7-validated'
 
 stage 'Alien Dance Party with Sprite Lab', flex_category: 'csf_e_2'
-level 'Dance Party 1'
+level 'Dance Party 1-validated'
 level 'Dance Party 2'
 level 'Dance Party 3'
 level 'Dance Party 4'

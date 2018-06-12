@@ -7,11 +7,15 @@ import initializeCodeMirror, {
 import jsonic from 'jsonic';
 import { parseElement } from '@cdo/apps/xml';
 import { installCustomBlocks } from '@cdo/apps/gamelab/blocks';
+import { valueTypeTabShapeMap } from '@cdo/apps/gamelab/GameLab';
 
 let nameField;
 $(document).ready(() => {
   nameField = document.getElementById('block_name');
-  Blockly.inject(document.getElementById('blockly-container'), {});
+  Blockly.inject(document.getElementById('blockly-container'), {
+    assetUrl,
+    valueTypeTabShapeMap: valueTypeTabShapeMap(Blockly),
+  });
 
   initializeCodeMirrorForJson('block_config', { onChange });
   initializeCodeMirror('block_helper_code', 'javascript');
@@ -33,7 +37,7 @@ function onChange(editor) {
 
   const blocksInstalled = installCustomBlocks(
     Blockly,
-    { assetUrl },
+    {},
     [{
       name: nameField.value,
       category: 'Custom',

@@ -92,7 +92,7 @@ export default function (app, levels, options) {
           blockInstallOptions,
           customBlocksConfig,
           options.level,
-          level.hideCustomBlocks,
+          level.hideCustomBlocks && !options.level.edit_blocks,
         );
       }
     }

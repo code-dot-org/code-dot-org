@@ -1,0 +1,17 @@
+{
+  "category": "Behaviors",
+  "config": {
+    "func": "removeBehaviorSimple",
+    "blockText": "{SPRITE} stops {BEHAVIOR}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "BEHAVIOR",
+        "type": "Behavior"
+      }
+    ]
+  }
+}

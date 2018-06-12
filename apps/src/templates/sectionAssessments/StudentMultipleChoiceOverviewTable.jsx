@@ -5,6 +5,41 @@ import i18n from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import color from "@cdo/apps/util/color";
+
+const TABLE_WIDTH = tableLayoutStyles.table.width;
+const TABLE_COLUMN_WIDTHS = {
+  name: TABLE_WIDTH / 3,
+  numMultipleChoiceCorrect: TABLE_WIDTH / 8,
+  numMultipleChoice: TABLE_WIDTH / 8,
+  percentCorrect: TABLE_WIDTH / 8,
+  submissionTimeStamp: TABLE_WIDTH / 5
+};
+
+const styles = {
+  main: {
+    border: 'none',
+    display: 'flex',
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  icon: {
+    color: color.purple,
+    fontSize: 16,
+  },
+  text: {
+    marginRight: 5,
+  },
+  headerLabels: {
+    color: color.charcoal,
+    fontFamily: '"Gotham 5r", sans-serif',
+  },
+  studentNameColumn: {
+    color: color.teal,
+    fontFamily: '"Gotham 5r", sans-serif',
+  }
+};
 
 export const COLUMNS = {
   NAME: 0,
@@ -60,9 +95,13 @@ class StudentAssessmentOverviewTable extends Component {
 
     if (submissionStatus === 'Completed') {
       return (
-        <div>
-          {submissionTimeStamp}
-          <FontAwesome id="checkmark" icon="check-circle"/>
+        <div style={styles.main}>
+          <div style={styles.text}>
+            {submissionTimeStamp}
+          </div>
+          <div style={styles.icon}>
+            <FontAwesome id="checkmark" icon="check-circle"/>
+          </div>
         </div>
       );
     } else {
@@ -75,19 +114,34 @@ class StudentAssessmentOverviewTable extends Component {
       {
         property: 'name',
         header: {
-          label: i18n.studentName(),
-          props: {style: tableLayoutStyles.headerCell},
+          label: i18n.studentNameHeader(),
+          props: {
+            style: {
+              ...tableLayoutStyles.headerCell,
+              ...{width: TABLE_COLUMN_WIDTHS.name},
+            }
+          },
           transforms: [sortable],
         },
         cell: {
-          props: {style: tableLayoutStyles.cell},
+          props: {
+            style: {
+              ...tableLayoutStyles.cell,
+              ...styles.studentNameColumn,
+            },
+          }
         }
       },
       {
         property: 'numMultipleChoiceCorrect',
         header: {
           label: i18n.numMultipleChoiceCorrect(),
-          props: {style: tableLayoutStyles.headerCell},
+          props: {
+            style: {
+              ...tableLayoutStyles.headerCell,
+              ...{width: TABLE_COLUMN_WIDTHS.numMultipleChoiceCorrect},
+            }
+          },
         },
         cell: {
           props: {style: tableLayoutStyles.cell},
@@ -97,7 +151,12 @@ class StudentAssessmentOverviewTable extends Component {
         property: 'numMultipleChoice',
         header: {
           label: i18n.numMultipleChoice(),
-          props: {style: tableLayoutStyles.headerCell},
+          props: {
+            style: {
+              ...tableLayoutStyles.headerCell,
+              ...{width: TABLE_COLUMN_WIDTHS.numMultipleChoice},
+            }
+          },
         },
         cell: {
           props: {style: tableLayoutStyles.cell},
@@ -107,7 +166,12 @@ class StudentAssessmentOverviewTable extends Component {
         property: 'percentCorrect',
         header: {
           label: i18n.percentCorrect(),
-          props: {style: tableLayoutStyles.headerCell},
+          props: {
+            style: {
+              ...tableLayoutStyles.headerCell,
+              ...{width: TABLE_COLUMN_WIDTHS.percentCorrect},
+            }
+          },
         },
         cell: {
           props: {style: tableLayoutStyles.cell},
@@ -117,7 +181,12 @@ class StudentAssessmentOverviewTable extends Component {
         property: 'submissionTimeStamp',
         header: {
           label: i18n.submissionTimestamp(),
-          props: {style: tableLayoutStyles.headerCell},
+          props: {
+            style: {
+              ...tableLayoutStyles.headerCell,
+              ...{width: TABLE_COLUMN_WIDTHS.timeStamp},
+            }
+          },
         },
         cell: {
           format: this.submissionTimestampColumnFormatter,

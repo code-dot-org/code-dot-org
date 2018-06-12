@@ -19,13 +19,15 @@ def sequel_connect(writer, reader, validation_frequency: nil)
         encoding: 'utf8mb4',
         default_group: 'cdo',
         reconnect: true,
-        connect_timeout: 2
+        connect_timeout: 2,
+        test: false # Disable connection test for backwards compatibility.
     else
       Sequel.connect writer,
         encoding: 'utf8mb4',
         default_group: 'cdo',
         reconnect: true,
-        connect_timeout: 2
+        connect_timeout: 2,
+        test: false # Disable connection test for backwards compatibility.
     end
 
   db.extension :server_block
@@ -44,7 +46,17 @@ def sequel_connect(writer, reader, validation_frequency: nil)
   db
 end
 
+# Enable symbol splitting of qualified identifiers for backwards compatibility.
+Sequel.split_symbols = true
+# Enable deprecated Dataset#and method for backwards compatibility.
+Sequel::Database.extension :sequel_4_dataset_methods
+# Enable string literals in dataset filtering methods for backwards compatibility.
+Sequel::Database.extension :auto_literal_strings
+
 PEGASUS_DB = sequel_connect CDO.pegasus_db_writer, CDO.pegasus_db_reader
 POSTE_DB = PEGASUS_DB
+# Use Pegasus as the default database for Sequel Models.
+Sequel::Model.db = PEGASUS_DB
+
 DASHBOARD_DB = sequel_connect CDO.dashboard_db_writer, CDO.dashboard_db_reader
 DASHBOARD_REPORTING_DB_READER = sequel_connect CDO.dashboard_reporting_db_reader, CDO.dashboard_reporting_db_reader

@@ -41,7 +41,7 @@ module Pd
 
     before_validation :set_day_from_form_id, if: -> {day.nil?}
     def set_day_from_form_id
-      self.day = VALID_DAYS.find {|d| self.class.get_form_id_for_day(d)}
+      self.day = self.class.get_day_for_form_id(form_id)
     end
 
     validates_uniqueness_of :user_id, scope: [:pd_workshop_id, :day, :form_id],
@@ -57,22 +57,29 @@ module Pd
 
     validates_inclusion_of :day, in: VALID_DAYS
 
-    # Skip other environments. Only keep this environment.
-    def skip_submission?(processed_answers)
-      environment = processed_answers['environment']
-      raise "Missing required environment field" unless environment
-
-      environment != Rails.env
-    end
-
     def self.get_form_id_for_day(day)
       get_form_id 'local', "day_#{day}"
+    end
+
+    def self.get_day_for_form_id(form_id)
+      VALID_DAYS.find {|d|  get_form_id_for_day(d) == form_id}
     end
 
     def self.all_form_ids
       VALID_DAYS.map do |day|
         get_form_id_for_day day
       end
+    end
+
+    # @override
+    def self.get_key_attributes(form_id, processed_answers)
+      # Inspect the same fields as the uniqueness validation: user, workshop, day
+      # Some responses don't have a day. In that case derive it from the form id
+      {
+        user_id: processed_answers['userId'],
+        pd_workshop_id: processed_answers['workshopId'],
+        day: processed_answers['day'] || get_day_for_form_id(form_id)
+      }
     end
   end
 end

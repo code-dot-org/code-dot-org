@@ -6,7 +6,6 @@
   "user_id": 63,
   "properties": {
     "skin": "artist",
-    "contained_level_names": null,
     "embed": "false",
     "instructions_important": "false",
     "is_k1": "false",
@@ -32,11 +31,15 @@
     "free_play": "false",
     "impressive": "false",
     "discard_background": "false",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "start_direction": "180",
+    "x": "50",
+    "y": "50",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-05-31 19:31:39 +0000\",\"changed\":[\"notes\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-05-31 19:31:39 +0000\",\"changed\":[\"notes\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-02 00:19:11 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-02 00:19:30 +0000\",\"changed\":[\"contained_level_names\",\"start_direction\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

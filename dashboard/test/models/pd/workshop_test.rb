@@ -60,7 +60,25 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     workshops = Pd::Workshop.enrolled_in_by teacher
     assert_equal 1, workshops.length
-    assert_equal workshops.first, @workshop
+    assert_equal @workshop, workshops.first
+  end
+
+  test 'enrolled_in_by scope variations' do
+    teacher = create :teacher
+    enrollment = create :pd_enrollment, workshop: @workshop, full_name: teacher.name, email: 'nomatch@ex.net'
+    assert_empty Pd::Workshop.enrolled_in_by(teacher)
+
+    # Email match only
+    enrollment.update!(email: teacher.email)
+    assert_equal [@workshop], Pd::Workshop.enrolled_in_by(teacher)
+
+    # UserId only
+    enrollment.update!(email: 'nomatch@ex.net', user: teacher)
+    assert_equal [@workshop], Pd::Workshop.enrolled_in_by(teacher)
+
+    # Both email and user id. Should still find workshop exactly once
+    enrollment.update!(email: teacher.email, user: teacher)
+    assert_equal [@workshop], Pd::Workshop.enrolled_in_by(teacher)
   end
 
   test 'exclude_summer scope' do
@@ -1002,6 +1020,14 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     create :pd_workshop, num_sessions: 1, sessions_from: Date.today + 2.weeks
     create :pd_workshop, num_sessions: 1, sessions_from: Date.today - 2.weeks
+
+    assert_equal target, Pd::Workshop.nearest
+  end
+
+  test 'nearest is independent of creation order' do
+    create :pd_workshop, num_sessions: 1, sessions_from: Date.today - 2.weeks
+    target = create :pd_workshop, num_sessions: 1, sessions_from: Date.today + 1.week
+    create :pd_workshop, num_sessions: 1, sessions_from: Date.today + 2.weeks
 
     assert_equal target, Pd::Workshop.nearest
   end
