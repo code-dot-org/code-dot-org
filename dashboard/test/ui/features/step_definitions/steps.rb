@@ -647,6 +647,10 @@ Then /^element "([^"]*)" is (not )?visible$/ do |selector, negation|
   expect(element_visible?(selector)).to eq(negation.nil?)
 end
 
+Then /^element "([^"]*)" exists/ do |selector|
+  expect(element_exists?(selector)).to eq(true)
+end
+
 Then /^element "([^"]*)" does not exist/ do |selector|
   expect(element_exists?(selector)).to eq(false)
 end
