@@ -2,7 +2,7 @@ import React, {Component, PropTypes} from 'react';
 import { setScriptId, validScriptPropType } from '@cdo/apps/redux/scriptSelectionRedux';
 import {
   asyncLoadAssessments,
-  getAssessmentList,
+  getCurrentScriptAssessmentList,
   setAssessmentId,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {connect} from 'react-redux';
@@ -78,7 +78,7 @@ export default connect(state => ({
   sectionId: state.sectionData.section.id,
   isLoadingAssessments: state.sectionAssessments.isLoadingAssessments,
   validScripts: state.scriptSelection.validScripts,
-  assessmentList: getAssessmentList(state),
+  assessmentList: getCurrentScriptAssessmentList(state),
   scriptId: state.scriptSelection.scriptId,
   assessmentId: state.sectionAssessments.assessmentId,
 }), dispatch => ({
