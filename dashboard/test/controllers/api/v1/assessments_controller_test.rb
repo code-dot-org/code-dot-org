@@ -36,6 +36,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
     sign_in @teacher
     get :index, params: {section_id: @section.id, script_id: 2}
     assert_response :success
+    assert_equal '{}', @response.body
   end
 
   # section_responses tests - gets student responses to assessment
@@ -54,5 +55,6 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
     sign_in @teacher
     get :section_responses, params: {section_id: @section.id, script_id: 2}
     assert_response :success
+    assert_equal '{}', @response.body
   end
 end
