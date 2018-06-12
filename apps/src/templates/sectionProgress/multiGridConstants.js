@@ -88,3 +88,7 @@ export const progressStyles = {
     borderColor: color.border_gray,
   }
 };
+
+export function tooltipIdForLessonNumber(i) {
+  return `tooltipForLesson${i}`;
+}
