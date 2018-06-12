@@ -52,7 +52,7 @@ export default function sectionAssessments(state=initialState, action) {
      * Setting the section is the first action to be called when switching
      * sections, which requires us to reset our state. This might need to change
      * once switching sections is in react/redux.
-    */
+     */
     return {
       ...initialState
     };
