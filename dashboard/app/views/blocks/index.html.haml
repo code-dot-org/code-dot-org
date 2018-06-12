@@ -2,5 +2,5 @@
 = link_to 'Create a New Block', new_block_path
 %h2= 'Edit an existing block'
 %ul
-  - Block.all.each do |b|
+  - Block.order(:name).all.each do |b|
     %li= link_to b.name, edit_block_path(id: b.name)
