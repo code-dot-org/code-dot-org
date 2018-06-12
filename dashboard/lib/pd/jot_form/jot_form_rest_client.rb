@@ -42,7 +42,8 @@ module Pd
       # See https://api.jotform.com/docs/#form-id-submissions
       def get_submissions(form_id, last_known_submission_id: nil, min_date: nil)
         params = {
-          orderby: 'id asc'
+          orderby: 'id asc',
+          limit: 100
         }
 
         filter = {}
