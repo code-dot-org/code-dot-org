@@ -649,7 +649,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal(Script.artist_script.id, section.script_id)
   end
 
-  test "upate: setting a script results in UserScripts for students" do
+  test "update: setting a script results in UserScripts for students" do
     sign_in @teacher
     section = create(:section, user: @teacher, script_id: Script.flappy_script.id)
     student = create(:follower, section: section).student_user
