@@ -1,3 +1,5 @@
 function removeAllBehaviors(sprite) {
-  sprite.behaviors = [];
+  if (sprite) {
+    sprite.behaviors = [];
+  }
 }
