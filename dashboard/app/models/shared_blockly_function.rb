@@ -80,6 +80,7 @@ class SharedBlocklyFunction < ApplicationRecord
     LevelLoader.for_each_file('config/shared_functions/**/*.xml') do |xml_path|
       function_names << load_function(xml_path)
     end
+    SharedBlocklyFunction.where.not(name: function_names).destroy_all
   end
 
   def self.load_function(xml_path)
