@@ -524,6 +524,8 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test "update: can update section you own" do
+    Course.stubs(:valid_course_id?).returns(true)
+
     sign_in @teacher
     section_with_script = create(
       :section,
@@ -595,7 +597,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     other_teacher = create(:teacher)
     sign_in other_teacher
     post :update, params: {
-      id: @regular_section.id,
+      id: @section.id,
       course_id: @course.id,
     }
     assert_response :forbidden
@@ -603,10 +605,10 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
   test "update: cannot update section if not logged in " do
     post :update, params: {
-      id: @regular_section.id,
+      id: @section.id,
       course_id: @course.id,
     }
-    assert_response :redirect
+    assert_response :forbidden
   end
 
   test "update: can set course and script" do
@@ -614,13 +616,13 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     section = create(:section, user: @teacher, script_id: Script.flappy_script.id)
     post :update, as: :json, params: {
       id: section.id,
-      course_id: @course.id,
-      script_id: @script_in_course.id
+      course_id: @csp_course.id,
+      script_id: @csp_script.id
     }
     assert_response :success
     section.reload
-    assert_equal(@course.id, section.course_id)
-    assert_equal(@script_in_course.id, section.script_id)
+    assert_equal(@csp_course.id, section.course_id)
+    assert_equal(@csp_script.id, section.script_id)
   end
 
   test "update: non-matching course/script rejected" do
@@ -667,11 +669,11 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     section = create(:section, user: @teacher, script_id: Script.flappy_script.id)
     post :update, as: :json, params: {
       id: section.id,
-      script: {id: @script_in_course.id}
+      script: {id: @script.id}
     }
     assert_response :success
     section.reload
-    assert_equal(@script_in_course.id, section.script_id)
+    assert_equal(@script.id, section.script_id)
   end
 
   test 'logged out cannot delete a section' do
