@@ -89,8 +89,7 @@ module Pd
 
         JotForm::Translation.new(form_id).get_submissions(
           last_known_submission_id: get_last_known_submission_id(form_id),
-          min_date: get_min_date(form_id),
-          full_text_search: Rails.env
+          min_date: get_min_date(form_id)
         ).map do |submission|
           answers = submission[:answers]
 
