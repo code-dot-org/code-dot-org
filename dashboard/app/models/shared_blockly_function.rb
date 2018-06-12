@@ -30,11 +30,6 @@ class SharedBlocklyFunction < ApplicationRecord
   validates_presence_of :name
   validates_uniqueness_of :name
 
-  before_save do
-    self.block_type = 'behavior'
-    self.level_type = 'GameLabJr'
-  end
-
   def file_xml
     Nokogiri::XML::Builder.new do |xml|
       xml.block(
