@@ -157,6 +157,8 @@ We will update this section as emails are sent for this event.
 
 <a href="http://go.pardot.com/webmail/153401/414335722/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9", target=_"blank">Email 3 - 1-week to TeacherCon: Complete your pre-survey!</a>
 
+* If you were unable to complete your pre-survey because of an enrollment issue, you should be able to do so now. Log in to your Code.org account and [click here to complete your pre-survey](https://studio.code.org/pd/workshop_survey/day/0).
+
 <a id="prework"></a>
 ## **Pre-work**
 <details>
