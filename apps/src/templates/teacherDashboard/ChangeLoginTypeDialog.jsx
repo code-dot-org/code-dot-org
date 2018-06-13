@@ -144,7 +144,10 @@ export default connect((state, props) => ({
 })(ChangeLoginTypeDialog);
 
 const LimitedChangeView = ({description, children, onCancel, disabled}) => (
-  <div style={{marginLeft: 20, marginRight: 20}}>
+  <div
+    id="uitest-login-change-view"
+    style={{marginLeft: 20, marginRight: 20}}
+  >
     <Heading1>
       {i18n.changeLoginTypeQuestion()}
     </Heading1>
@@ -190,6 +193,7 @@ const UsePictureLoginButton = ({changeLoginType, disabled}) => (
 UsePictureLoginButton.propTypes = buttonPropTypes;
 const UseWordLoginButton = ({changeLoginType, style, disabled}) => (
   <Button
+    id="uitest-word-login-btn"
     onClick={() => changeLoginType(SectionLoginType.word)}
     size={Button.ButtonSize.large}
     text={i18n.loginTypeWordButton()}

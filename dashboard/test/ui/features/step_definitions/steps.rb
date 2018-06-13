@@ -647,6 +647,10 @@ Then /^element "([^"]*)" is (not )?visible$/ do |selector, negation|
   expect(element_visible?(selector)).to eq(negation.nil?)
 end
 
+Then /^element "([^"]*)" exists/ do |selector|
+  expect(element_exists?(selector)).to eq(true)
+end
+
 Then /^element "([^"]*)" does not exist/ do |selector|
   expect(element_exists?(selector)).to eq(false)
 end
@@ -1397,6 +1401,14 @@ Then /^the section table should have (\d+) rows?$/ do |expected_row_count|
     return document.querySelectorAll('.uitest-owned-sections tbody tr').length;
   SCRIPT
   expect(row_count.to_i).to eq(expected_row_count.to_i)
+end
+
+Then /^the section table row at index (\d+) has grade "([^"]+)"$/ do |row_index, expected_grade|
+  field_cell = @browser.execute_script(
+    "return $('.uitest-owned-sections tbody tr:eq(#{row_index}) td:eq(2)');"
+  )
+  actual_grade = field_cell.first.text
+  expect(actual_grade).to eq(expected_grade)
 end
 
 Then /^the section table row at index (\d+) has (primary|secondary) assignment path "([^"]+)"$/ do |row_index, assignment_type, expected_path|
