@@ -11,6 +11,8 @@ DEPENDENCIES
     path: cdo-awscli
   cdo-cloudwatch-extra-metrics
     path: cdo-cloudwatch-extra-metrics
+  cdo-cloudwatch-logger
+    path: cdo-cloudwatch-logger
   cdo-freegeoip
     path: cdo-freegeoip
   cdo-github-access
@@ -75,6 +77,7 @@ GRAPH
     build-essential (>= 0.0.0)
     cdo-analytics (>= 0.0.0)
     cdo-cloudwatch-extra-metrics (>= 0.0.0)
+    cdo-cloudwatch-logger (>= 0.0.0)
     cdo-i18n (>= 0.0.0)
     cdo-java-7 (>= 0.0.0)
     cdo-mysql (>= 0.0.0)
@@ -96,6 +99,9 @@ GRAPH
   cdo-awscli (0.1.5)
   cdo-cloudwatch-extra-metrics (0.1.6)
     ark (>= 0.0.0)
+  cdo-cloudwatch-logger (0.1.0)
+    ark (>= 0.0.0)
+    poise-service (>= 0.0.0)
   cdo-freegeoip (0.1.2)
     ark (>= 0.0.0)
     poise-service (>= 0.0.0)
