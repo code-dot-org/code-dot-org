@@ -68,14 +68,11 @@
     "display_name": "Challenge: Extend Your Scene",
     "parent_level_id": 8774,
     "name_suffix": "_2018",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
-    "thumbnail_url": "https://images.code.org/fc0a835151012b86a43c4d7444162b82-image-1528746152787.49.03 PM.png"
+    "thumbnail_url": "https://images.code.org/fc0a835151012b86a43c4d7444162b82-image-1528746152787.49.03 PM.png",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
