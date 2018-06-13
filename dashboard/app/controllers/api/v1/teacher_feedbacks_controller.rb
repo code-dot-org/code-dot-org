@@ -3,11 +3,15 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
   #TODO: (epeach) - Figure out workaround to delete the skip
   skip_before_action :verify_authenticity_token
 
+  # Use student_id, level_id, and teacher_id to lookup the feedback for a student on a particular level and provide the
+  # most recent feedback left by that teacher
   def show_feedback_from_teacher
     @feedback = TeacherFeedback.where(student_id: params[:student_id], level_id: params[:level_id], teacher_id: params[:teacher_id]).last
     render json: @feedback
   end
 
+  # Use student_id and level_id to lookup the most recent feedback from each teacher who has provided feedback to that
+  # student on that level
   def show_feedback_for_level
     query = <<-EOS
       SELECT b.*
@@ -24,7 +28,6 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
   end
 
   # POST /teacher_feedbacks
-  # POST /teacher_feedbacks.json
   def create
     @teacher_feedback.teacher_id = current_user.id
     if @teacher_feedback.save
