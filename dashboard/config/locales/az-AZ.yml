@@ -1,4 +1,5 @@
-"az":
+---
+az:
   errors:
     messages:
       not_saved: 'Aşağıdakı səhfləri düzəldin:'
@@ -94,6 +95,7 @@
     facebook: Facebook
     windowslive: Microsoft Hesabı
     clever: Clever Account
+    powerschool: Powerschool Account
     forgot_password: Parolunuzu unutmusunuz?
     need_confirmation: Təsdiq göstərişlərini almamisiniz?
     need_unlock: Kilidaçma göstərişlərini almamisiniz?

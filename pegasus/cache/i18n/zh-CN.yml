@@ -1,4 +1,5 @@
-"zh-CN":
+---
+zh-CN:
   hour_of_code: 编程一小时
   hello: 世界你好
   'yes': 是
@@ -393,7 +394,7 @@
   homepage_header_donors: Code.org 感谢各位支持者
   homepage_donors_seall: 查看全部
   homepage_donors_donate: 捐赠
-  homepage_below_hero_announcement_text: 我们关心您的隐私, 并正在对我们的隐私政策进行了一些更新, 自5月25日生效。
+  homepage_below_hero_announcement_text: 我们尊重您的隐私，为此我们对隐私政策进行了一些更新，并将从 5 月 25 日起生效。
   homepage_below_hero_announcement_link_text: 了解详情
   contact_form_topic_student: 我是学生
   contact_form_topic_parent: 我是家长
@@ -579,7 +580,7 @@
   volunteer_engineer_submission_field_email: 电子邮件地址
   volunteer_engineer_submission_field_email_desc: 您的电子邮件地址决不公开，但我们会把教师们的请求转发给你。
   volunteer_engineer_submission_field_email_placeholder: 电子邮件地址
-  volunteer_engineer_submission_field_email_preference: 我们可以通过电子邮件向您发送有关我们课程、志愿者机会以及其他计算机科学新闻吗？
+  volunteer_engineer_submission_field_email_preference: 我们能否向您发送有关课程更新、本地机会或其他计算机科学新闻的电子邮件？
   volunteer_engineer_submission_field_email_preference_privacy: "(请参阅我们的隐私政策)"
   volunteer_engineer_submission_field_email_preference_yes: 是
   volunteer_engineer_submission_field_email_preference_no: 不
@@ -991,9 +992,25 @@
   coursee_name: 课程 E
   coursef-draft_name: 课程 F
   coursef_name: 课程 F
+  coursea-2017_name: Course A (2017)
+  courseb-2017_name: Course B (2017)
+  coursec-2017_name: Course C (2017)
+  coursed-2017_name: Course D (2017)
+  coursee-2017_name: Course E (2017)
+  coursef-2017_name: Course F (2017)
+  coursea-2018_name: Course A (2018)
+  courseb-2018_name: Course B (2018)
+  coursec-2018_name: Course C (2018)
+  coursed-2018_name: 新的课程D脚本
+  coursee-2018_name: Course E (2018)
+  coursef-2018_name: Course F (2018)
   accelerated_name: 加速课程
   express_name: 快速课程
   pre-express_name: 适用于还不能阅读的学生的快捷课程
+  express-2017_name: Express Course (2017)
+  pre-express-2017_name: Pre-reader Express Course (2017)
+  express-2018_name: 快速课程
+  pre-express-2018_name: Pre-reader Express Course (2018)
   cspunit1_name: "（旧）单元 1︰ 数字信息"
   cspunit2_name: "（旧）单元 2︰ 互联网"
   cspunit3_name: "（旧版）第3单元︰ 编程"
@@ -1072,6 +1089,8 @@
   math_category_name: 数学
   hoc_category_name: 编程一小时
   csf_category_name: 计算机科学基本原理
+  csf_2017_category_name: CS Fundamentals (2017)
+  csf_2018_category_name: CS Fundamentals (2018)
   csf_international_category_name: 计算机基础国际版
   csf2_draft_category_name: 开发中：课程A - F
   csd_category_name: 'Under Development: CS Discoveries'

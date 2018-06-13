@@ -1,4 +1,5 @@
-"es-MX":
+---
+es-MX:
   data:
     authored_hints:
       2-3 Artist 1 new_authored_hint:
@@ -27,8 +28,8 @@
       2-3 Artist 6_authored_hint:
         2-3_Artist_6_a: 'Para realizar esos pequeños ángulos, tendrás que ir *más
           allá* cada vez así como lo hiciste con el cuadrado.   '
-        2-3_Artist_6_b: Dado que ya estoy de lado derecho, es más fácil ir hacia adelante,
-          luego gira a la derecha para crear el triángulo.
+        2-3_Artist_6_b: Como ya estoy mirando hacia la derecha, es más fácil empezar
+          por avanzar, y luego hacer vueltas a la izquierda para crear el triángulo.
         2-3_Artist_6_c: Cada lado del triángulo tienen el mismo tamaño como los lados
           del cuadrado...¡100 pixeles!
       2-3 Artist 7_authored_hint:
@@ -9112,15 +9113,15 @@
           código línea por línea. ¿Puedes averiguar lo que tienes que hacer a continuación?
         courseC_maze_programming5_b: El pájaro tendrá que hacer un giro para completar
           este rompecabezas. ¿Puedes descubrir en qué dirección?
-        courseC_maze_programming5_c: La solución tendrá dos bloques 'adelante', un
-          turno y dos bloques más 'adelante'.
+        courseC_maze_programming5_c: La solución tendrá dos bloques `move forward`,
+          un turno y dos bloques más `move forward`.
       courseC_maze_programming5_2018_authored_hint:
         courseC_maze_programming5_a: Intente usar el botón "Paso" para ejecutar su
           código línea por línea. ¿Puedes averiguar lo que tienes que hacer a continuación?
         courseC_maze_programming5_b: El pájaro tendrá que hacer un giro para completar
           este rompecabezas. ¿Puedes descubrir en qué dirección?
-        courseC_maze_programming5_c: La solución tendrá dos bloques 'adelante', un
-          turno y dos bloques más 'adelante'.
+        courseC_maze_programming5_c: La solución tendrá dos bloques `move forward`,
+          un turno y dos bloques más `move forward`.
       courseC_maze_programming6_authored_hint:
         courseC_maze_programming6_a: "¡Hay dos formas de resolver este rompecabezas!"
         courseC_maze_programming6_b: Siga su dedo del pájaro al cerdo, ¿qué pasos
@@ -17753,8 +17754,8 @@
       grade4_review_artist2_authored_hint:
         2-3_Artist_6_a: 'Para realizar esos pequeños ángulos, tendrás que ir *más
           allá* cada vez así como lo hiciste con el cuadrado.   '
-        2-3_Artist_6_b: Dado que ya estoy de lado derecho, es más fácil ir hacia adelante,
-          luego gira a la derecha para crear el triángulo.
+        2-3_Artist_6_b: Como ya estoy mirando hacia la derecha, es más fácil empezar
+          por avanzar, y luego hacer vueltas a la izquierda para crear el triángulo.
         2-3_Artist_6_c: Cada lado del triángulo tienen el mismo tamaño como los lados
           del cuadrado...¡100 pixeles!
       grade4_review_bee1_authored_hint:

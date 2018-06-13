@@ -1,10 +1,12 @@
-"ka":
+---
+ka:
   data:
     script:
       category:
         csd_category_name: CS Discoveries ('17-'18)
         csd_2018_category_name: CS Discoveries ('18-'19)
         csf_category_name: CS საფუძვლები
+        csf_2018_category_name: CS Fundamentals (2018)
         csf_international_category_name: კომპიუტერული მეცნიერების საერთაშორისო საფუძვლები
         csf2_draft_category_name: 'დამუშავების ქვეშ: კურსები A - F'
         csp_category_name: "'15-'16 CS საფუძვლები"
@@ -2328,10 +2330,13 @@
               name: Post-Course Survey
         csp3-2017:
           title: CSP Unit 3 - Intro to Programming
-          description: |-
-            This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.\r
-            \r
-            This unit was last updated October 30th, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
+          description: "This unit introduces the foundational concepts of computer
+            programming, which unlocks the ability to make rich, interactive apps.
+            This course uses JavaScript as the programming language, and App Lab as
+            the programming environment to build apps, but the concepts learned in
+            these lessons span all programming languages and tools.\r\n\r\nThis unit
+            was last updated October 30th, 2017. Read more about curriculum updates
+            at forum.code.org/c/csp/updates."
           description_short: პროგრამირება
           description_audience: ''
           stages:
@@ -2377,10 +2382,12 @@
               name: Post-Course Survey
         csp4-2017:
           title: CSP Unit 4 - Big Data and Privacy
-          description: |-
-            The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.\r
-            \r
-            This unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
+          description: "The data-rich world we live in introduces many complex questions
+            related to public policy, law, ethics and societal impact. The goals of
+            this unit are to develop a well-rounded and balanced view about data in
+            the world, including the positive and negative effects of it, and to understand
+            the basics of how and why modern encryption works.\r\n\r\nThis unit was
+            last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
           description_short: Explore the data-rich world we live, and how data impacts
             public policy, personal privacy, security, the law, and ethics.
           description_audience: ''
@@ -3940,9 +3947,13 @@
           title: CSD Unit 1 - Problem Solving
           description_short: "  შეისწავლეთ თუ როგორ მუშაობენ ადამიანები კომპიუტერთან
             პრობლემების გადასაჭრელად."
-          description: |2
-             \r
-            Unit 1 is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r
+          description: " \r\nUnit 1 is a highly interactive and collaborative introduction
+            to the field of computer science, as framed within the broader pursuit
+            of solving problems. You’ll practice using a problem solving process to
+            address a series of puzzles, challenges, and real world scenarios. Next,
+            you’ll learn how computers input, output, store, and process information
+            to help humans solve problems.  The unit concludes with a project in which
+            you design an application that helps solve a problem of your choosing.\r\n"
           description_audience: ''
           stages:
             Intro to Problem Solving:
@@ -4331,12 +4342,22 @@
                 could be shared intentionally or unintentionally.  Finally, the class
                 comes up with a set of guidelines to follow when putting information
                 online.
-              description_teacher: |-
-                As students have recently spent some time thinking about the actual content that will go into their personal website, this lesson takes a step back from the unit-long project (publication of a personal website) to help students articulate what personal information they choose to share digitally and with whom.  It also reinforces the notion that much of the information that they choose to share digitally falls largely out of their control the moment it is released.  \r
-                \r
-                Students begin by individually identifying appropriate audiences with whom they would be comfortable sharing given pieces of personal information.  They then look at several social media pages to determine what sorts of information people are sharing about themselves or one another.  Last, students reflect on what guidelines they think are appropriate for posting information online.\r
-                \r
-                The ultimate point of this lesson is not to scare students, but rather to experientially bring students to realizing precisely what level of control they don’t have in releasing information into the web.
+              description_teacher: "As students have recently spent some time thinking
+                about the actual content that will go into their personal website,
+                this lesson takes a step back from the unit-long project (publication
+                of a personal website) to help students articulate what personal information
+                they choose to share digitally and with whom.  It also reinforces
+                the notion that much of the information that they choose to share
+                digitally falls largely out of their control the moment it is released.
+                \ \r\n\r\nStudents begin by individually identifying appropriate audiences
+                with whom they would be comfortable sharing given pieces of personal
+                information.  They then look at several social media pages to determine
+                what sorts of information people are sharing about themselves or one
+                another.  Last, students reflect on what guidelines they think are
+                appropriate for posting information online.\r\n\r\nThe ultimate point
+                of this lesson is not to scare students, but rather to experientially
+                bring students to realizing precisely what level of control they don’t
+                have in releasing information into the web."
             Publishing a Website:
               name: Publishing a Website
             Sources and Search Engines:
@@ -4472,10 +4493,14 @@
                 გამოყენებას. Creative Commons ლიცენზირების შესწავლის შემდეგ, კლასი
                 ისწავლის ვებ გვერდზებზე სურათების დამატებას და ამავე დროს საავტორო
                 უფლებების სწორად მითითებას.
-              description_teacher: |-
-                Starting with an discussion of their personal opinions on how others should be allowed to use their work, the class explores the purpose and role of copyright for both creators and users of creative content.  They then move on to an activity exploring the various Creative Commons licenses as a solution to the difficulty in dealing with copyright. \r
-                \r
-                Finally, with a common understanding of the restrictions of various Creative Commons licenses, students learn how to add images to their web pages using the &lt;img&gt; tag.
+              description_teacher: "Starting with an discussion of their personal
+                opinions on how others should be allowed to use their work, the class
+                explores the purpose and role of copyright for both creators and users
+                of creative content.  They then move on to an activity exploring the
+                various Creative Commons licenses as a solution to the difficulty
+                in dealing with copyright. \r\n\r\nFinally, with a common understanding
+                of the restrictions of various Creative Commons licenses, students
+                learn how to add images to their web pages using the &lt;img&gt; tag."
             Project - Multi-Page Websites:
               name: პროექტი - მრავალგვერდიანი ვებსაიტები
               description_student: 'ეს დონე მოიცავს ჰიპერბმულებს, რომლებიც აძლევენ
@@ -4483,9 +4508,12 @@
                 ვებსაიტის შესაქმნელად. მთლიანი საიტის ვებში გამოქვეყნებამდე, კლასი
                 ააწყობს ერთ პროექტს ყველა წინა გვერდის ერთმანეთთან დაკავშირებით და
                 შექმნის სანავიგაციო პანელს ყოველი გვერდისთვის.  '
-              description_teacher: |
-                After learning about how to link web pages to one another, students are finally able to publish the website they have been working on.  In this lesson, they link together all the previous pages they have created into one project, create a new page, and add navigation between the pages before publishing the entire site to the Web.  \r
-                \r
+              description_teacher: "After learning about how to link web pages to
+                one another, students are finally able to publish the website they
+                have been working on.  In this lesson, they link together all the
+                previous pages they have created into one project, create a new page,
+                and add navigation between the pages before publishing the entire
+                site to the Web.  \r\n\r\n"
             RGB Colors and Classes:
               name: RGB ფერები და კლასები
               description_student: This lesson covers classes and custom colors. The
@@ -4507,15 +4535,13 @@
                 their personal websites, working with peers to get feedback, review
                 the rubric, and put the finishing touches on the site. To cap off
                 the unit, everyone shares their projects and how they were developed.
-              description_teacher: 'Students have spent a lot of time throughout the
+              description_teacher: "Students have spent a lot of time throughout the
                 unit working on their Personal Website. In the final couple of days
                 students finalize their websites.  They work with peers to get feedback,
                 put the finishing touches on the websites, review the rubric and reflect
                 on their process. To cap off the unit, they will share their projects
                 and also a overview of the process they took to get to that final
-                design.\r
-
-'
+                design.\r\n"
             Headings:
               name: სათაურები
               description_student: This lesson continues the introduction to HTML
@@ -4598,15 +4624,13 @@
                 users might react to a variety of products. Role playing as a different
                 person, each member of the class will get to experience designs through
                 someone else's eyes.
-              description_teacher: 'Designers need to understand their users’ needs
+              description_teacher: "Designers need to understand their users’ needs
                 in order to create useful products.  This lesson encourages students
                 to think about how to design for another person by role-playing as
                 someone else using a user profile and reacting as that user to a series
                 of products.  Each student is assigned a user profile describing a
                 person, which they then use to choose appropriate products, critique
-                product design, and suggest improvements to design.\r
-
-'
+                product design, and suggest improvements to design.\r\n"
             Discovering Users:
               name: Discovering Users
             User-Centered Design Micro Activity:
@@ -4670,7 +4694,7 @@
                 ideas before investing a lot of time writing code. In this lesson
                 teams explore some example apps created in App Lab, using those apps
                 to help inform the first paper prototypes of their apps.
-              description_teacher: 'Before starting to design apps, we need to help
+              description_teacher: "Before starting to design apps, we need to help
                 students to better scope their expectations. Because students will
                 eventually be prototyping these apps in App Lab, they will be in better
                 shape if their ideas align with the kinds of apps that are easily
@@ -4679,9 +4703,7 @@
                 with App Lab. Teams then can chose one (or more) of the apps as a
                 basis for their own. From there, teams have some time to discuss the
                 basic functionality of their app before using 3x5 index cards to develop
-                paper prototypes.\r
-
-'
+                paper prototypes.\r\n"
             Prototype Testing:
               name: პროტოტიპების ტესტირება
               description_student: In this lesson teams test out their paper prototypes
@@ -7169,6 +7191,7 @@
                 კოდის წერის უნარები, რათა შექმნან ანიმირებული თამაში. დროა გავხდეთ
                 კრეატიულები და შევქმნათ ამბავი სათამაშო ლაბორატორიაში!
           title: კურსი A
+          assignment_family_title: კურსი A
           description_audience: 'ასაკი: 4-7'
           description_short: შესავალი კომპიუტერულ მეცნიერებაში მათთვის, ვინც ჯერ კითხვა
             არ იცის.
@@ -7206,6 +7229,7 @@
             Programming with Rey and BB-8:
               name: პროგრამირება რეისთან და BB-8-სთან ერთად
           title: კურსი B
+          assignment_family_title: კურსი B
           description_audience: 'ასაკი: 5-8'
           description_short: შესავალი კომპიუტერულ მეცნიერებაში დამწყებ მკითხველთათვის.
             (A კურსის მსგავსი, მაგრამ უფრო მრავალფეროვანი უფრო მოსწავლეებისთვის.)
@@ -7247,6 +7271,7 @@
             Loops with Rey and BB-8:
               name: ციკლები რეისთან და BB-8-სთან ერთად
           title: კურსი C
+          assignment_family_title: კურსი C
           description_audience: 'ასაკი: 6-10'
           description_short: Learn the basics of computer science and create your
             own art, stories, and games.
@@ -7431,6 +7456,7 @@
                 და სახეცვლილებაში, რათა შეასწორონ თავსატეხები ალგორითმების, ციკლების
                 და ჩადგმული ციკლების საშუალებით.
           title: კურსი D
+          assignment_family_title: კურსი D
           description_audience: 'ასაკი: 7-11'
           description_short: Learn the basics of computer science and create your
             own art, stories, and games.
@@ -7671,6 +7697,7 @@
             Functions in Harvester:
               name: Functions in Harvester
           title: კურსი E
+          assignment_family_title: კურსი E
           description_audience: 'ასაკი: 8-12'
           description_short: Learn the basics of computer science and create your
             own art, stories, and games.
@@ -7911,6 +7938,7 @@
             Nested Loops with Frozen:
               name: Nested Loops with Frozen
           title: კურსი F
+          assignment_family_title: კურსი F
           description_audience: 'ასაკი: 9-13'
           description_short: Learn the basics of computer science and create your
             own art, stories, and games.
@@ -8309,6 +8337,7 @@
             Until Loops in Maze:
               name: Until Loops in Maze
           title: დაჩქარებული კურსი
+          assignment_family_title: დაჩქარებული კურსი
           description_audience: 'ასაკი: 9-18'
           description_short: 'შესავალი კომპიუტერულ მეცნიერებაში: აერთიანებს დაწყებითი
             სკოლის პროგრამის საუკეთესო ელემენტებს უფროსი მოსწავლეებისთვის.'
@@ -8346,6 +8375,7 @@
             Spelling Bee:
               name: შეჯიბრი დამარცვლაში
           title: ''
+          assignment_family_title: Pre-reader Express
           description_audience: 'ასაკი: 4-8'
           description_short: ''
           description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების
@@ -9147,10 +9177,13 @@
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and
             complete the AP Explore Performance Tasks.
-          description: |-
-            These lessons are here to help you understand, prepare for, and do the AP Explore Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the second item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.\r
-            \r
-            This unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
+          description: "These lessons are here to help you understand, prepare for,
+            and do the AP Explore Performance Task.  Each \"lesson\" contains links
+            to helpful documents that your teacher can help walk you through. NOTE:
+            the second item in the first lesson is not related to the Explore PT directly,
+            but covers general tech setup and tools you need to do various elements
+            of both the Explore and Create tasks.\r\n\r\nThis unit was last updated
+            November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
         csp-create-2017:
           stages:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
@@ -9167,10 +9200,13 @@
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and
             complete the AP Create Performance Tasks.
-          description: |-
-            These lessons are here to help you understand, prepare for, and do the AP Create Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the first item in the first lesson is not related to the Create PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.\r
-            \r
-            This unit was last updated December, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
+          description: "These lessons are here to help you understand, prepare for,
+            and do the AP Create Performance Task.  Each \"lesson\" contains links
+            to helpful documents that your teacher can help walk you through. NOTE:
+            the first item in the first lesson is not related to the Create PT directly,
+            but covers general tech setup and tools you need to do various elements
+            of both the Explore and Create tasks.\r\n\r\nThis unit was last updated
+            December, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
         csp3-reovery:
           stages:
             Under the sea recovery:
@@ -10044,6 +10080,7 @@
                 design.\r\n"
         coursea-2018:
           title: კურსი A
+          assignment_family_title: კურსი A
           description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების
             საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის
             გაზიარებას შეძლებთ.
@@ -10052,13 +10089,13 @@
           description_audience: 'ასაკი: 4-7'
           stages:
             'Debugging: Unspotted Bugs':
-              name: 'Debugging: Unspotted Bugs'
+              name: შეუჩმნეველი ბაგები
               description_student: ''
               description_teacher: 'This lesson will guide students through the steps
                 of debugging.  Students will learn the mantra: "What happened?  What
                 was supposed to happen? What does that tell you?"'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence & Frustration: Stevie and the Marbles'
+              name: სტივი და დიდი პროექტი
               description_student: ''
               description_teacher: "When students run into a barrier while answering
                 a question or working on a project, it’s so easy for them to get frustrated
@@ -10084,7 +10121,7 @@
                 შემდეგ მოსწავლეები გადავლენ კომპიუტერის საშუალებით ონლაინ თავსატეხების
                 ამოხსნაზე.
             'Programming: Happy Maps':
-              name: 'პროგრამირება: ბედნიერი რუკები'
+              name: ბედნიერი რუკები
               description_student: ''
               description_teacher: ხიდი, რომელიც აკავშირებს ალგორითმებს და პროგრამირებას
                 შეიძლება იყო მოკლე, თუ მოსწავლეებს ესმით განსხვავება მიმდევრობის დაგეგმარებასა
@@ -10130,7 +10167,7 @@
                 loops are creating patterns. At the end of this stage, students will
                 be given the opportunity to create their own images using loops.
             'Events: The Big Event':
-              name: 'მოვლენები: დიდი მოვლენა'
+              name: დიდი მოვლენა
               description_student: ''
               description_teacher: Events are a great way to add variety to a pre-written
                 algorithm. Sometimes you want your program to be able to respond to
@@ -10152,9 +10189,10 @@
             Sequencing in Maze:
               name: Sequencing in Maze
             'Persistence & Frustration: Stevie and the Big Project':
-              name: 'Persistence & Frustration: Stevie and the Big Project'
+              name: სტივი და დიდი პროექტი
         express-2018:
           title: დაჩქარებული კურსი
+          assignment_family_title: დაჩქარებული კურსი
           description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების
             საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის
             გაზიარებას შეძლებთ.
@@ -10163,7 +10201,7 @@
           description_audience: 'ასაკი: 9-18'
           stages:
             'Algorithms: Graph Paper Programming':
-              name: 'Algorithms: Graph Paper Programming'
+              name: გრაფიკული პროგრამირება
               description_student: ''
               description_teacher: ''
             Introduction:
@@ -10207,7 +10245,7 @@
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: 'მოვლენები: დიდი მოვლენა'
+              name: დიდი მოვლენა
               description_student: ''
               description_teacher: ''
             Events in Star Wars:
@@ -10315,7 +10353,7 @@
             Programming in Artist:
               name: პროგრამირება მსახიობში
             'Loops: Getting Loopy':
-              name: 'Loops: Getting Loopy'
+              name: ჩაციკლვა
             Loops with Rey and BB-8:
               name: ციკლები რეისთან და BB-8-სთან ერთად
             Copyright and Creativity:
@@ -10331,7 +10369,7 @@
             Conditionals & Loops in Harvester:
               name: პირობითი წინადადებები და ციკლები ფერმერში
             'Functions: Songwriting':
-              name: 'ფუნქციები: სიმღერების დაწერა'
+              name: სიმღერის დაწერა პარამეტრების გამოყენებით
             Functions in Minecraft:
               name: Functions in Minecraft
             Functions in Harvester:
@@ -10365,7 +10403,7 @@
             Binary Bracelets:
               name: ორობითი სამაჯურები
             'Unplugged: Binary':
-              name: 'გაკვეთილი კომპიუტერის გარეშე: ორობითი სისტემა'
+              name: ორობითი სურათები
             Artist Binary:
               name: 'მხატვარი: ორობითი'
             Internet:
@@ -10376,6 +10414,7 @@
               name: ესტაფეტური პროგრამირება
         courseb-2018:
           title: კურსი B
+          assignment_family_title: კურსი B
           description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების
             საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის
             გაზიარებას შეძლებთ.
@@ -10428,7 +10467,7 @@
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: 'მოვლენები: დიდი მოვლენა'
+              name: დიდი მოვლენა
               description_student: ''
               description_teacher: ''
             Events in Play Lab:
@@ -10447,12 +10486,13 @@
               name: Copyright and Creativity
         coursed-2018:
           title: New Course D Script
+          assignment_family_title: კურსი D
           description: ''
           description_short: ''
           description_audience: ''
           stages:
             'Algorithms: Graph Paper Programming':
-              name: 'Algorithms: Graph Paper Programming'
+              name: გრაფიკული პროგრამირება
               description_student: ''
               description_teacher: ''
             Introduction:
@@ -10476,7 +10516,7 @@
               description_student: ''
               description_teacher: ''
             Nested Loops in Bee:
-              name: ჩადგმული ციკლები ფუტკარში
+              name: ჩადგმული ციკლები ლაბირინთში
               description_student: ''
               description_teacher: ''
             Nested Loops in Artist:
@@ -10512,7 +10552,7 @@
               description_student: ''
               description_teacher: ''
             'Unplugged: Binary':
-              name: 'გაკვეთილი კომპიუტერის გარეშე: ორობითი სისტემა'
+              name: ორობითი სურათები
               description_student: ''
               description_teacher: ''
             Artist Binary:
@@ -10642,6 +10682,7 @@
             questions that appeared in Units 1-5 in the course.  '
         coursec-2018:
           title: კურსი C
+          assignment_family_title: კურსი C
           description: შექმენით პროგრამები ციკლებით, მოვლენებით და პირობითი წინადადებებით.
             გადათარგმნეთ თქვენი ინიციალები ორობითში, გამოიკვლიეთ სხვადასხვა პრობლემის
             გადაჭრის ტექნიკა და ისწავლეთ თუ როგორ უნდა უპასუხოთ კიბერძალადობას. კურსის
@@ -10675,7 +10716,7 @@
               description_student: ''
               description_teacher: ''
             'Loops: Getting Loopy':
-              name: 'Loops: Getting Loopy'
+              name: ჩაციკლვა
               description_student: ''
               description_teacher: ''
             Loops with Rey and BB-8:
@@ -10691,7 +10732,7 @@
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: 'მოვლენები: დიდი მოვლენა'
+              name: დიდი მოვლენა
               description_student: ''
               description_teacher: ''
             Build a Flappy Game:
@@ -10823,6 +10864,7 @@
               name: 'Project: Prototype an Innovation'
         coursee-2018:
           title: კურსი E
+          assignment_family_title: კურსი E
           description: Start coding with algorithms, loops, conditionals, and events
             and then you’ll move on functions. In the second part of this course,
             design and create a capstone project you can share with your friends and
@@ -10832,7 +10874,7 @@
           description_audience: 'ასაკი: 8-12'
           stages:
             'Programming: My Robotic Friends':
-              name: 'პროგრამირება: ჩემი რობოტისებრი მეგობრები'
+              name: ჩემი რობოტი-მეგობრები
               description_student: ''
               description_teacher: ''
             Sequence in Maze:
@@ -10860,7 +10902,7 @@
               description_student: ''
               description_teacher: ''
             Nested Loops:
-              name: ჩასმული ციკლები
+              name: ჩადგმული ციკლები ლაბირინთში
               description_student: ''
               description_teacher: ''
             Nested Loops with Frozen:
@@ -10919,7 +10961,7 @@
                 ომების პერსონაჟებთან ერთად, მოსწავლეებს შეასწავლიან მოვლენების მთავარ
                 პრინციპებს, ხოლო შემდეგ მათ მიეცემათ საშუალება შექმნან საკუთარი თამაში.
             'Functions: Songwriting':
-              name: 'ფუნქციები: სიმღერების დაწერა'
+              name: სიმღერის დაწერა პარამეტრების გამოყენებით
               description_student: როკ ვარსკვლავებსაც კი სჭირდებათ პროგრამირების უნარები.
                 ეს დონე შეგასწავლით ყველაფერს ფუნქციების შესახებ სიმღერების ტექსტების
                 გამოყენებით.
@@ -11051,6 +11093,7 @@
               name: Copyright and Creativity
         coursef-2018:
           title: კურსი F
+          assignment_family_title: კურსი F
           description: Learn to use different kinds of loops, events, functions, and
             conditionals. Investigate different problem-solving techniques and discuss
             societal impacts of computing and the internet. In the second part of
@@ -11061,7 +11104,7 @@
           description_audience: 'ასაკი: 9-13'
           stages:
             'Programming: My Robotic Friends':
-              name: 'პროგრამირება: ჩემი რობოტისებრი მეგობრები'
+              name: ჩემი რობოტი-მეგობრები
               description_student: ''
               description_teacher: ''
             Sequence in Maze:
@@ -11089,7 +11132,7 @@
               description_student: ''
               description_teacher: ''
             Nested Loops in Bee/Zombie:
-              name: ჩადგმული ციკლები ფუტკარში/ზომბიში
+              name: ჩადგმული ციკლები ლაბირინთში
               description_student: ''
               description_teacher: ''
             Nested Loops with Frozen:
@@ -12948,6 +12991,7 @@
             Training Weekend.
         pre-express-2018:
           title: Pre-reader Express
+          assignment_family_title: Pre-reader Express
           description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების
             საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის
             გაზიარებას შეძლებთ.
@@ -12956,11 +13000,11 @@
           description_audience: 'ასაკი: 4-8'
           stages:
             'Debugging: Unspotted Bugs':
-              name: 'Debugging: Unspotted Bugs'
+              name: შეუჩმნეველი ბაგები
               description_student: ''
               description_teacher: ''
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence & Frustration: Stevie and the Marbles'
+              name: სტივი და დიდი პროექტი
               description_student: ''
               description_teacher: ''
             'Real-life Algorithms: Plant a Seed':
@@ -13000,7 +13044,7 @@
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: 'მოვლენები: დიდი მოვლენა'
+              name: დიდი მოვლენა
               description_student: ''
               description_teacher: ''
             Events in Play Lab:
@@ -13027,3 +13071,15 @@
               name: Loops in Ice Age
             'Persistence & Frustration: Stevie and the Big Project':
               name: 'Persistence & Frustration: Stevie and the Big Project'
+        spritelab-validated:
+          stages:
+            Fish Tank - Creating Sprites:
+              name: Fish Tank - Creating Sprites
+            Alien Dance Party - Input:
+              name: Alien Dance Party - Input
+            Virtual Pet - Interactions:
+              name: Virtual Pet - Interactions
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''

@@ -1,4 +1,5 @@
-"zu":
+---
+zu:
   data:
     block_categories:
       Actions: Izenzo
@@ -45,5 +46,6 @@
       Foo: Foo
       Name: Name
       NEW BLOCKS: NEW BLOCKS
+      'Functions ': 'Functions '
       Game/Score: Game/Score
       Function: Function

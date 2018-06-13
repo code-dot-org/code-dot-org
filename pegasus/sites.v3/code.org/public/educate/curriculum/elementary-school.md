@@ -66,7 +66,7 @@ Courses
 
 <img src="/images/fit-970/CSFimages/Course_Map.png" style="max-width: 100%"/>
 
-For students new to computer science, each course begins with a grade-appropriate entry point and structured ramp-up of concepts. The progression of Courses A-F builds upon each other to ensure continuing students stay interested and learn new things. This allows you to use the same course at any grade level for all students, regardless of their experience. If you’re looking for a more comprehensive course, the Express Course combines the best of Courses A-F into a single condensed course (with a simpler option for pre-readers). You can download version 2 of the [curriculum guide for Courses A-F here](https://code.org/curriculum/docs/csf/CSF_TeacherGuide_CoursesA-F_v2a_small.pdf).
+For students new to computer science, each course begins with a grade-appropriate entry point and structured ramp-up of concepts. The progression of Courses A-F builds upon each other to ensure continuing students stay interested and learn new things. This allows you to use the same course at any grade level for all students, regardless of their experience. If you’re looking for a more comprehensive course, the Express Course combines the best of Courses A-F into a single condensed course (with a simpler option for pre-readers). You can download the 2018 version of the [curriculum guide for Courses A-F here](https://code.org/curriculum/docs/csf/CSF_Curriculum_Guide_2018_smaller.pdf).
 
 If you've been teaching Courses 1-4 and want to know how to transition to teaching Courses A-F, check out our [Transition Guide](https://docs.google.com/document/d/1dFgrHiW-ERpNGey7yrNcoxU0LEfH9kFbdeLJn2QyJTA/edit?usp=sharing).
 

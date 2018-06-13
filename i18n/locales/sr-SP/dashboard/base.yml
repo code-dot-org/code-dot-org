@@ -85,6 +85,7 @@ sr:
     facebook: 'Facebook'
     windowslive: 'Мајкрософт налог'
     clever: 'Clever Account'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Заборавили сте лозинку?'
     need_confirmation: "Нисте примили инструкције за потврду?"
     need_unlock: "Нисте примили инструкције за откључавање?"

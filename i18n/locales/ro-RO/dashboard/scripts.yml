@@ -5,6 +5,7 @@ ro:
         csd_category_name: CS Discoveries ('17-'18)
         csd_2018_category_name: CS Discoveries ('18-'19)
         csf_category_name: Fundamentele CS
+        csf_2018_category_name: CS Fundamentals (2018)
         csf_international_category_name: Fundamentele internaționale ale Informaticii
         csf2_draft_category_name: 'În curs de dezvoltare: Cursuri A - F'
         csp_category_name: "Principii de CS 15-16"
@@ -5483,6 +5484,7 @@ ro:
               description_student: '[șir gol]'
               description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!
           title: Curs A
+          assignment_family_title: Curs A
           description_audience: 'Ages: 4-7'
           description_short: An introduction to computer science for pre-readers.
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
@@ -5517,6 +5519,7 @@ ro:
             Programming with Rey and BB-8:
               name: Programming with Rey and BB-8
           title: Curs B
+          assignment_family_title: Curs B
           description_audience: 'Ages: 5-8'
           description_short: An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
@@ -5555,6 +5558,7 @@ ro:
             Loops with Rey and BB-8:
               name: Loops with Rey and BB-8
           title: Curs C
+          assignment_family_title: Curs C
           description_audience: 'Ages: 6-10'
           description_short: Learn the basics of computer science and create your own art, stories, and games.
           description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
@@ -5634,6 +5638,7 @@ ro:
               description_student: Have you ever run into problems while coding? In this lesson, you will learn about the secrets of debugging. Debugging is the process of finding and fixing problems in your code.
               description_teacher: In this online activity, students will practice debugging in the "collector" environment. Students will get to practice reading and editing code to fix puzzles with simple algorithms, loops and nested loops.
           title: Curs D
+          assignment_family_title: Curs D
           description_audience: 'Ages: 7-11'
           description_short: Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more.
           description: Learn new coding concepts including algorithms, nested loops, while loops, conditionals, and events. Get an introduction to digital citizenship before   creating your very own game or story that you can share.
@@ -5763,6 +5768,7 @@ ro:
             Functions in Harvester:
               name: Functions in Harvester
           title: Curs E
+          assignment_family_title: Curs E
           description_audience: 'Ages: 8-12'
           description_short: Quickly cover concepts in Course C & D and then go further with functions.
           description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
@@ -5871,6 +5877,7 @@ ro:
             Nested Loops with Frozen:
               name: Nested Loops with Frozen
           title: Curs F
+          assignment_family_title: Curs F
           description_audience: 'Ages: 9-13'
           description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
           description: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
@@ -6201,6 +6208,7 @@ ro:
             Until Loops in Maze:
               name: Until Loops in Maze
           title: Express Course
+          assignment_family_title: Express Course
           description_audience: 'Ages: 9-18'
           description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
@@ -6235,6 +6243,7 @@ ro:
             Spelling Bee:
               name: Test de Ortografie
           title: Pre-reader Express
+          assignment_family_title: Pre-reader Express
           description_audience: 'Ages: 4-8'
           description_short: 'An introduction to computer science for pre-readers: combines the best of our kindergarten and first grade courses.'
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
@@ -7506,21 +7515,22 @@ ro:
               description_student: In the last few days of the unit, the class finalizes their personal websites, working with peers to get feedback, review the rubric, and put the finishing touches on the site. To cap off the unit, everyone shares their projects and how they were developed.
               description_teacher: "Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\\r\n"
         coursea-2018:
-          title: Curs A
+          title: Course A (2018)
+          assignment_family_title: Curs A
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
           description_short: An introduction to computer science for pre-readers.
           description_audience: 'Ages: 4-7'
           stages:
             'Debugging: Unspotted Bugs':
-              name: 'Debugging: Unspotted Bugs'
+              name: Bug-uri neidentificate
               description_student: '[șir gol]'
               description_teacher: 'This lesson will guide students through the steps of debugging.  Students will learn the mantra: "What happened?  What was supposed to happen? What does that tell you?"'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence & Frustration: Stevie and the Marbles'
+              name: Stevie şi marele proiect
               description_student: '[șir gol]'
               description_teacher: "When students run into a barrier while answering a question or working on a project, it’s so easy for them to get frustrated and give up.  This lesson will introduce students to the idea that frustration can be an important part of learning. Here, frustration is presented as a step in the creative process, rather than a sign of failure.\\r\n\\r\nThis lession can be done over one or two class sessions.  If you have more time, feel free to draw out the building and revising phase of the Marble Run activity."
             'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmi din viaţa reală: Plantează o sămânţă'
+              name: Plant a Seed
               description_student: '[șir gol]'
               description_teacher: "In this lesson, students will relate the concept of algorithms back to everyday, real-life activities by planting an actual seed. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.\\r\n"
             Learn to Drag and Drop:
@@ -7528,11 +7538,11 @@ ro:
               description_student: '[șir gol]'
               description_teacher: This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.
             'Programming: Happy Maps':
-              name: 'Programming: Happy Maps'
+              name: Hărţi Fericite
               description_student: '[șir gol]'
               description_teacher: The bridge from algorithms to programming can be a short one if students understand the difference between planning out a sequence and encoding that sequence into the appropriate language.  This activity will help students gain experience reading and writing in shorthand code.
             Programming in Maze:
-              name: Programming in Maze
+              name: Programming with Angry Birds
               description_student: '[șir gol]'
               description_teacher: In this series of online puzzles, students will build on the understanding of algorithms, debugging, and general computer literacy. Featuring characters from the game Angry Birds, students will develop sequential algorithms to get the bird to the pig without crashing into walls or TNT. Debugging puzzles have also been mixed into this stage for added practice with problem solving and critical thinking.
             Going Places Safely:
@@ -7540,43 +7550,44 @@ ro:
               description_student: '[șir gol]'
               description_teacher: In collaboration with [r common-sense-media], this lesson helps students learn that many websites ask for information that is private and discusses how to responsibly handle such requests. Students also find out that they can go to exciting places online, but they need to follow certain rules to remain safe.
             'Loops: Happy Loops':
-              name: 'Loops: Happy Loops'
+              name: Happy Loops
               description_student: '[șir gol]'
               description_teacher: Loops are a very helpful and powerful tool in programming. To understand how helpful loops can be, students will need to be driven to want an easier way to solve mundane problems.
             Loops in Collector:
-              name: Loops in Collector
+              name: Loops with Laurel
               description_student: '[șir gol]'
               description_teacher: Building on the concept of repeating instructions from "Happy Loops," this stage will have students using loops to collect treasure more efficiently on Code.org.
             Loops in Artist:
-              name: Loops in Artist
+              name: Ocean Scene with Loops
               description_student: '[șir gol]'
               description_teacher: Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous plugged lesson, loops were used to traverse a maze and collect treasure. Here, loops are creating patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.
             'Events: The Big Event':
-              name: 'Events: The Big Event'
+              name: Marele eveniment
               description_student: '[șir gol]'
               description_teacher: Events are a great way to add variety to a pre-written algorithm. Sometimes you want your program to be able to respond to the user exactly when the user wants it to. That is what events are for.
             Events in Play Lab:
-              name: Events in Play Lab
+              name: On the Move with Events
               description_student: '[șir gol]'
               description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!
             Programming in Bee:
               name: Programming in Bee
             Programming in Harvester:
-              name: Programming in Harvester
+              name: Programming with Harvester
             Loops in Harvester:
-              name: Loops in Harvester
+              name: Loops with Harvester
             Sequencing in Maze:
-              name: Sequencing in Maze
+              name: Sequencing with Angry Birds
             'Persistence & Frustration: Stevie and the Big Project':
-              name: 'Persistence & Frustration: Stevie and the Big Project'
+              name: Stevie şi marele proiect
         express-2018:
-          title: Express Course
+          title: Express Course (2018)
+          assignment_family_title: Express Course
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
           description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
           description_audience: 'Ages: 9-18'
           stages:
             'Algorithms: Graph Paper Programming':
-              name: 'Algorithms: Graph Paper Programming'
+              name: Programare pe Hârtie Milimetrică
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Introduction:
@@ -7596,7 +7607,7 @@ ro:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Loops in Artist:
-              name: Loops in Artist
+              name: Sticker Art with Loops
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Nested Loops:
@@ -7620,7 +7631,7 @@ ro:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             'Events: The Big Event':
-              name: 'Events: The Big Event'
+              name: Marele eveniment
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Events in Star Wars:
@@ -7640,7 +7651,7 @@ ro:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             While Loops in Farmer:
-              name: While Loops in Farmer
+              name: While Loops with the Farmer
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Conditional Loops in Maze:
@@ -7672,11 +7683,11 @@ ro:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             For Loops in Bee:
-              name: For Loops in Bee
+              name: For Loops with Bee
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             For Loops in Artist:
-              name: For Loops in Artist
+              name: For Loops with Artist
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             'Functions: Songwriting with Parameters':
@@ -7716,25 +7727,25 @@ ro:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Conditionals in Bee:
-              name: Conditionals in Bee
+              name: If/Else with Bee
             Until Loops in Maze:
               name: Until Loops in Maze
             Programming in Maze:
-              name: Programming in Maze
+              name: Programming with Angry Birds
             Debugging in Maze:
-              name: Debugging in Maze
+              name: Debugging with Angry Birds
             Programming in Collector:
-              name: Programming in Collector
+              name: Collecting Treasure with Laurel
             Programming in Artist:
-              name: Programming in Artist
+              name: Creating Art with Code
             'Loops: Getting Loopy':
-              name: 'Loops: Getting Loopy'
+              name: Transformând în Buclă
             Loops with Rey and BB-8:
               name: Loops with Rey and BB-8
             Copyright and Creativity:
               name: Copyright and Creativity
             'Concept Practice with Minecraft ':
-              name: 'Concept Practice with Minecraft '
+              name: Looking Ahead with Minecraft
             Nested Loops in Bee:
               name: Nested Loops in Bee
             Nested Loops in Frozen:
@@ -7742,9 +7753,9 @@ ro:
             Conditionals with Cards:
               name: Condiționale cu Carduri
             Conditionals & Loops in Harvester:
-              name: Conditionals & Loops in Harvester
+              name: Harvesting with Conditionals
             'Functions: Songwriting':
-              name: 'Functions: Songwriting'
+              name: Compoziții muzicale cu parametri
             Functions in Minecraft:
               name: Functions in Minecraft
             Functions in Harvester:
@@ -7762,33 +7773,34 @@ ro:
             Envelope Variables:
               name: Variabile de tip plic
             Variables as Constant in Artist:
-              name: Variables as Constant in Artist
+              name: Variables with Artist
             Variables that Change in Bee:
-              name: Variables that Change in Bee
+              name: Changing Variables with Bee
             Variables that Change in Artist:
-              name: Variables that Change in Artist
+              name: Changing Variables with Artist
             For Loop Fun:
               name: Pentru distracția cu bucle
             Learning Sprites with Sprite Lab:
-              name: Learning Sprites with Sprite Lab
+              name: Learning Sprite Lab
             Alien Dance Party with Sprite Lab:
-              name: Alien Dance Party with Sprite Lab
+              name: Alien Dance Party
             Pet Giraffe with Sprite Lab:
-              name: Pet Giraffe with Sprite Lab
+              name: Pet Giraffe
             Binary Bracelets:
               name: Brăţări Binare
             'Unplugged: Binary':
-              name: 'Fără calculator: Binar'
+              name: Imagini binare
             Artist Binary:
               name: Binar cu artist
             Internet:
-              name: Internet
+              name: Internetul
             Crowdsourcing:
               name: Obţinând Informaţii/Critici
             Relay Programming:
               name: Programare de releu
         courseb-2018:
-          title: Curs B
+          title: Course B (2018)
+          assignment_family_title: Curs B
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
           description_short: An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)
           description_audience: 'Ages: 5-8'
@@ -7814,7 +7826,7 @@ ro:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             'Programming: My Robotic Friends':
-              name: 'Programming: My Robotic Friends'
+              name: My Robotic Friends Jr.
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Programming in Maze:
@@ -7826,43 +7838,44 @@ ro:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             'Loops: My Loopy Robotic Friends':
-              name: 'Loops: My Loopy Robotic Friends'
+              name: My Loopy Robotic Friends Jr.
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Loops in Collector:
-              name: Loops in Collector
+              name: Loops with Laurel
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Loops in Artist:
-              name: Loops in Artist
+              name: Drawing Castles with Loops
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             'Events: The Big Event':
-              name: 'Events: The Big Event'
+              name: Marele eveniment
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Events in Play Lab:
-              name: Events in Play Lab
+              name: A Royal Battle with Events
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Programming in Ice Age:
-              name: Programming in Ice Age
+              name: Programming with Scrat
             Loops in Ice Age:
-              name: Loops in Ice Age
+              name: Loops with Scrat
             Sequencing with Scrat:
               name: Sequencing with Scrat
             Move It, Move It:
               name: Mutaţi-l, mutați-l
             Copyright and Creativity:
-              name: Copyright and Creativity
+              name: It's Great to Create and Play Fair
         coursed-2018:
-          title: New Course D Script
+          title: Course D (2018)
+          assignment_family_title: Curs D
           description: '[șir gol]'
           description_short: '[șir gol]'
           description_audience: '[șir gol]'
           stages:
             'Algorithms: Graph Paper Programming':
-              name: 'Algorithms: Graph Paper Programming'
+              name: Programare pe Hârtie Milimetrică
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Introduction:
@@ -7874,7 +7887,7 @@ ro:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Debugging in Collector:
-              name: Debugging in Collector
+              name: Debugging with Laurel
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Events in Bounce:
@@ -7882,15 +7895,15 @@ ro:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Loops in Artist:
-              name: Loops in Artist
+              name: Drawing Shapes with Loops
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Nested Loops in Bee:
-              name: Nested Loops in Bee
+              name: Nested Loops in Maze
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Nested Loops in Artist:
-              name: Nested Loops in Artist
+              name: Fancy Shapes using Nested Loops
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             While Loops in Farmer:
@@ -7902,7 +7915,7 @@ ro:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Conditionals in Bee:
-              name: Conditionals in Bee
+              name: If/Else with Bee
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Conditionals & Loops in Maze:
@@ -7918,11 +7931,11 @@ ro:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Build a Play Lab Game:
-              name: Build a Play Lab Game
+              name: Ninjas vs. Pirates Game
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             'Unplugged: Binary':
-              name: 'Fără calculator: Binar'
+              name: Imagini binare
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Artist Binary:
@@ -7932,13 +7945,13 @@ ro:
             Loops in Ice Age:
               name: Loops in Ice Age
             Nested Loops in Frozen:
-              name: Nested Loops in Frozen
+              name: Snowflakes with Anna and Elsa
             Until Loops in Maze:
               name: Until Loops in Maze
             Conditionals in Maze:
               name: Conditionals in Maze
             Conditionals & Loops in Harvester:
-              name: Conditionals & Loops in Harvester
+              name: Harvesting with Conditionals
             Graph Paper Programming:
               name: Programare pe Hârtie Milimetrică
             Relay Programming:
@@ -8046,7 +8059,8 @@ ro:
           description_short: CS Principles AP Exam Prep
           description: 'This page contains copies of all the multiple choice assessment questions that appeared in Units 1-5 in the course.  Students may want to practice for the multiple choice exam by re-taking these little tests.  '
         coursec-2018:
-          title: Curs C
+          title: Course C (2018)
+          assignment_family_title: Curs C
           description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
           description_short: Learn the basics of computer science and create your own art, stories, and games.
           description_audience: 'Ages: 6-10'
@@ -8056,27 +8070,27 @@ ro:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Programming in Maze:
-              name: Programming in Maze
+              name: Programming with Angry Birds
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Debugging in Maze:
-              name: Debugging in Maze
+              name: Debugging with Angry Birds
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             'Real-life Algorithms: Paper Planes':
-              name: 'Algoritmi din viaţa reală: Avioane de Hârtie'
+              name: Paper Planes
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Programming in Collector:
-              name: Programming in Collector
+              name: Collecting Treasure with Laurel
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Programming in Artist:
-              name: Programming in Artist
+              name: Creating Art with Code
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             'Loops: Getting Loopy':
-              name: 'Loops: Getting Loopy'
+              name: Transformând în Buclă
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Loops with Rey and BB-8:
@@ -8084,15 +8098,15 @@ ro:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Loops in Artist:
-              name: Loops in Artist
+              name: Sticker Art with Loops
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Loops in Harvester:
-              name: Loops in Harvester
+              name: Harvesting Crops with Loops
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             'Events: The Big Event':
-              name: 'Events: The Big Event'
+              name: Marele eveniment
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Build a Flappy Game:
@@ -8100,7 +8114,7 @@ ro:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Events in Play Lab:
-              name: Events in Play Lab
+              name: Chase Game with Events
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Screen Out the Mean:
@@ -8112,7 +8126,7 @@ ro:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Looking Ahead:
-              name: Looking Ahead
+              name: Looking Ahead with Minecraft
         csd6-2018:
           title: CSD Unit 6 - Physical Computing
           description: Unit 6 explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the Circuit Playground as the basis for an innovation of your own design.
@@ -8216,17 +8230,18 @@ ro:
             'Project: Prototype an Innovation':
               name: 'Project: Prototype an Innovation'
         coursee-2018:
-          title: Curs E
+          title: Course E (2018)
+          assignment_family_title: Curs E
           description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
           description_short: Quickly cover concepts in Course C & D and then go further with functions.
           description_audience: 'Ages: 8-12'
           stages:
             'Programming: My Robotic Friends':
-              name: 'Programming: My Robotic Friends'
+              name: Amicii mei roboți
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Sequence in Maze:
-              name: Sequence in Maze
+              name: Coding with Comments
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Building a Foundation:
@@ -8238,19 +8253,19 @@ ro:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Programming in Artist:
-              name: Programming in Artist
+              name: Creating Art with Code
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             'Loops: My Loopy Robotic Friends':
-              name: 'Loops: My Loopy Robotic Friends'
+              name: My Loopy Robotic Friends
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Loops in Artist:
-              name: Loops in Artist
+              name: Drawing Shapes with Loops
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Nested Loops:
-              name: Repetiții imbricate
+              name: Nested Loops in Maze
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Nested Loops with Frozen:
@@ -8266,7 +8281,7 @@ ro:
               description_student: This fast-paced introduction will give you the chance to practice most of the skills that you will need to solve the puzzles in this course.
               description_teacher: In this progression, students will begin with an introduction (or review depending on the experience of your class) of Code.org's online workspace. Students will learn the basic functionality of the interface including the `Run`, `Reset`, and `Step` buttons. Dragging, deleting, and connecting Blockly blocks is also introduced in the beginning video. In the puzzles, students will practice their sequencing and debugging skills in Maze and Artist.
             Conditionals:
-              name: Condiţionale
+              name: Conditionals with the Farmer
               description_student: You will get to tell the computer what to do under certain conditions in this fun and challenging series.
               description_teacher: This lesson introduces students to `while` loops and `if / else` statements. _While loops_ are loops that continue to repeat commands as long as a condition is true. While loops are used when the programmer doesn't know the exact number of times the commands need to be repeated, but the programmer does know what condition needs to be true in order for the loop to continue looping. `If / Else` statements offer flexibility in programming by running entire sections of code only if something is true, otherwise it runs something else.
             Private and Personal Information:
@@ -8281,19 +8296,19 @@ ro:
               description_student: Feel the force as you build your own Star Wars game in this lesson.
               description_teacher: In this lesson, students will practice using events to build a game that they can share online. Featuring R2-D2 and other Star Wars characters, students will be guided through events, then given space to create their own game.
             'Functions: Songwriting':
-              name: 'Functions: Songwriting'
+              name: Compoziții muzicale cu parametri
               description_student: Even rockstars need programming skills. This lesson will teach you about functions using lyrics from songs.
               description_teacher: One of the most magnificent structures in the computer science world is the function. Functions (sometimes called procedures) are mini programs that you can use over and over inside of your bigger program. This lesson will help students intuitively understand why combining chunks of code into functions can be such a helpful practice.
             Functions in Artist:
-              name: Functions in Artist
+              name: Functions with Artist
               description_student: Make complex drawings more easily with functions!
               description_teacher: Students will be introduced to using functions on Code.org. Magnificent images will be created and modified with functions in Artist. For more complicated patterns, students will learn about nesting functions by calling one function from inside another.
             Functions in Bee:
-              name: Functions in Bee
+              name: Functions with Bee
               description_student: Don't write too much code to gather all of the nectar and honey. Use functions instead!
               description_teacher: In the second round of practice with online functions, students will navigate complex paths, collect plenty of nectar, and make lots of honey.
             Functions in Harvester:
-              name: Functions in Harvester
+              name: Functions with Harvester
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Determine the Concept:
@@ -8321,7 +8336,7 @@ ro:
               description_student: Get ready to show off! It's time to present your finished project to your peers.
               description_teacher: Over the course of four lessons, students will be building up to programming a project of their own design using either Play Lab or Artist as their programming environment. Finally, students will be able to present their finished work to their peers or share with their loved ones with a special link. The lesson guide for all four stages of the process can be found in the first stage of this project process [here](https://curriculum.code.org/csf/coursee/12/).
             Internet:
-              name: Internet
+              name: Internetul
               description_student: Ever wondered how information travels across the internet? It's not magic! This lesson will teach you the basics of how the internet works.
               description_teacher: Even though many people use the internet daily, not very many know how it works. In this lesson, students will pretend to flow through the internet, all the while learning about connections, URLs, IP Addresses, and the DNS.
             Crowdsourcing:
@@ -8335,25 +8350,26 @@ ro:
             Functions in Minecraft:
               name: Functions in Minecraft
             Learning Sprites with Sprite Lab:
-              name: Learning Sprites with Sprite Lab
+              name: Learning Sprite Lab
             Alien Dance Party with Sprite Lab:
-              name: Alien Dance Party with Sprite Lab
+              name: Alien Dance Party
             Pet Giraffe with Sprite Lab:
-              name: Pet Giraffe with Sprite Lab
+              name: Pet Giraffe
             Copyright and Creativity:
-              name: Copyright and Creativity
+              name: Digital Sharing
         coursef-2018:
-          title: Curs F
+          title: Course F (2018)
+          assignment_family_title: Curs F
           description: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
           description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
           description_audience: 'Ages: 9-13'
           stages:
             'Programming: My Robotic Friends':
-              name: 'Programming: My Robotic Friends'
+              name: Amicii mei roboți
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Sequence in Maze:
-              name: Sequence in Maze
+              name: Coding with Comments
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Building a Foundation:
@@ -8365,19 +8381,19 @@ ro:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Programming in Artist:
-              name: Programming in Artist
+              name: Creating Art with Code
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             'Loops: My Loopy Robotic Friends':
-              name: 'Loops: My Loopy Robotic Friends'
+              name: My Loopy Robotic Friends
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Loops in Artist:
-              name: Loops in Artist
+              name: Drawing Shapes with Loops
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Nested Loops in Bee/Zombie:
-              name: Nested Loops in Bee/Zombie
+              name: Nested Loops in Maze
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Nested Loops with Frozen:
@@ -8421,11 +8437,11 @@ ro:
               description_student: You're going to have loads of fun learning about `for` loops!
               description_teacher: 'We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops that have extra structures built right in. These new structures will allow students to create code that is more powerful and dynamic. '
             For Loops in Bee:
-              name: For Loops in Bee
+              name: For Loops with Bee
               description_student: Buzz buzz. In these puzzles you will be guiding a bee to nectar and honey using `for` loops!
               description_teacher: Featuring Bee, this lesson focuses on for loops and using an incrementing variable to solve more complicated puzzles. Students will begin by reviewing loops from previous lessons, then walked through using for loops to more effectively solve complicated problems.
             For Loops in Artist:
-              name: For Loops in Artist
+              name: For Loops with Artist
               description_student: Get ready to make your next masterpiece. Here you will be using `for` loops to make some jaw-dropping pictures.
               description_teacher: In this lesson, students continue to practice for loops, this time with Artist. Students will complete puzzles combining the ideas of variables, loops, and for loops to create complex designs. At the end, they will have a chance to create their own art in a freeplay level.
             Songwriting with Parameters:
@@ -8467,23 +8483,23 @@ ro:
             Conditionals with Cards:
               name: Condiționale cu Carduri
             Conditionals:
-              name: Condiţionale
+              name: Conditionals with the Farmer
             Variables as Constant in Artist:
-              name: Variables as Constant in Artist
+              name: Variables with Artist
             Variables that Change in Bee:
-              name: Variables that Change in Bee
+              name: Changing Variables with Bee
             Variables that Change in Artist:
-              name: Variables that Change in Artist
+              name: Changing Variables with Artist
             Learning Sprites with Sprite Lab:
-              name: Learning Sprites with Sprite Lab
+              name: Learning Sprite Lab
             Alien Dance Party with Sprite Lab:
-              name: Alien Dance Party with Sprite Lab
+              name: Alien Dance Party
             Pet Giraffe with Sprite Lab:
-              name: Pet Giraffe with Sprite Lab
+              name: Pet Giraffe
             Functions in Minecraft:
-              name: Functions in Minecraft
+              name: Functions with Minecraft
             Conditionals in Farmer:
-              name: Conditionals in Farmer
+              name: Conditionals with the Farmer
         csp1-2018:
           title: CSP Unit 1 - The Internet
           description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. The unit then explores the structure and design of the internet and the implications of those design decisions.
@@ -9418,17 +9434,18 @@ ro:
           description_short: 'Apprentice reflection materials for CS Principles facilitators in training '
           description: This is the set of apprentice reflections for Code.org CS Principles facilitators in training during their 5-day summer workshop. Here you will find reflection prompts for each day of your in-person 5-day summer workshop. This questions will be the foundation of work we do at the Facilitator Training Weekend.
         pre-express-2018:
-          title: Pre-reader Express
+          title: Pre-reader Express (2018)
+          assignment_family_title: Pre-reader Express
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
           description_short: 'An introduction to computer science for pre-readers: combines the best of our kindergarten and first grade courses.'
           description_audience: 'Ages: 4-8'
           stages:
             'Debugging: Unspotted Bugs':
-              name: 'Debugging: Unspotted Bugs'
+              name: Bug-uri neidentificate
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence & Frustration: Stevie and the Marbles'
+              name: Stevie şi marele proiect
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             'Real-life Algorithms: Plant a Seed':
@@ -9444,7 +9461,7 @@ ro:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             'Programming: My Robotic Friends':
-              name: 'Programming: My Robotic Friends'
+              name: My Robotic Friends Jr.
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Programming in Maze:
@@ -9456,23 +9473,23 @@ ro:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             'Loops: My Loopy Robotic Friends':
-              name: 'Loops: My Loopy Robotic Friends'
+              name: My Loopy Robotic Friends Jr.
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Loops in Collector:
-              name: Loops in Collector
+              name: Loops with Laurel
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Loops in Artist:
-              name: Loops in Artist
+              name: Drawing Castles with Loops
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             'Events: The Big Event':
-              name: 'Events: The Big Event'
+              name: Marele eveniment
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Events in Play Lab:
-              name: Events in Play Lab
+              name: A Royal Battle with Events
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Spelling Bee:
@@ -9495,3 +9512,15 @@ ro:
               name: Loops in Ice Age
             'Persistence & Frustration: Stevie and the Big Project':
               name: 'Persistence & Frustration: Stevie and the Big Project'
+        spritelab-validated:
+          stages:
+            Fish Tank - Creating Sprites:
+              name: Fish Tank - Creating Sprites
+            Alien Dance Party - Input:
+              name: Alien Dance Party - Input
+            Virtual Pet - Interactions:
+              name: Virtual Pet - Interactions
+          title: '[șir gol]'
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'

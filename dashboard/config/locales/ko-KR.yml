@@ -1,4 +1,5 @@
-"ko":
+---
+ko:
   errors:
     messages:
       not_saved: '다음 오류를 수정해주세요:'
@@ -88,6 +89,7 @@
     facebook: Facebook
     windowslive: 마이크로소프트 계정
     clever: Clever Account
+    powerschool: Powerschool Account
     forgot_password: 비밀번호를 잊으셨나요?
     need_confirmation: 확인 메일을 받지 못 했나요?
     need_unlock: 잠김 해제 메일을 받지 못 했나요?

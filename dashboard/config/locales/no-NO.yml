@@ -1,3 +1,4 @@
+---
 'no':
   errors:
     messages:
@@ -96,6 +97,7 @@
     facebook: Facebook
     windowslive: Microsoft-konto
     clever: Smartkonto
+    powerschool: Powerschool Account
     forgot_password: Har du glemt passordet ditt?
     need_confirmation: Mottok du ikke instruksjoner om hvordan du bekrefter?
     need_unlock: Mottok du ingen instruksjoner om hvordan du låser opp?

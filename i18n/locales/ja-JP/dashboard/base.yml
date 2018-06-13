@@ -85,6 +85,7 @@ ja:
     facebook: 'Facebook'
     windowslive: 'Microsoft アカウント'
     clever: 'Clever Account'
+    powerschool: 'Powerschool Account'
     forgot_password: 'パスワードをお忘れですか？'
     need_confirmation: "確認Eメールが届かない"
     need_unlock: "ロック解除用のEメールが届いていない"
@@ -115,9 +116,9 @@ ja:
     invalid_password: "パスワードを%d文字以上で入力"
     mismatch_password: "入力した 2 つのパスワードが一致しません"
     agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
-    under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
-    agree_us_website: "I agree to using a website based in the United States."
-    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
+    under_13_consent: "13歳未満の場合、Code.orgのサービスを利用することについて、親または保護者の許可を得ていることを確認します。"
+    agree_us_website: "米国に拠点を置くウェブサイトを使用することに同意します。"
+    my_data_to_us: "当サイトの利用に関する私の情報は、米国に送信され、米国にて保管または処理される場合があります。"
     student_terms: "Code.org <a href='http://code.org/tos'> サービス利用規約</a> に拘束されることに同意します。13 才未満の場合、私は親または法定後見人による Code.org サービス使用の許可を得て、フォームを提出することを確認します <br/> <br/>。メール アドレスは、私たちが学生に連絡することができる形式では保存されません。パスワード回復のため以外では、学生がCode.org からメールを受け取ることはありません。詳しくは、 <a href='http://code.org/privacy'> プライバシー ポリシー</a> を参照してください。"
     teacher_terms: "Code.org 利用規約に拘束されることに同意します。プライバシーの詳細については、 <a href='http://code.org/privacy'> プライバシー ポリシー</a> を参照してください。"
     additional_information: "サインアップを続けるために、私たちはさらにいくつかの情報が必要です。"
@@ -128,7 +129,7 @@ ja:
     field_is_required: "が必要です"
     accept_terms: "アカウントを作成することに、同意が必要です。"
     error: "An error occurred."
-    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_question: "当社のコースについての最新情報、各地域における機会、コンピュータサイエンスに関するニュースなどを電子メールを介して送付してもよろしいですか？"
     email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: "はい"
     email_preference_no: "いいえ"
