@@ -1,7 +1,7 @@
 import React from 'react';
 import {mount} from 'enzyme';
 import {expect} from '../../../util/configuredChai';
-import MultipleChoiceOverviewTable from '@cdo/apps/templates/sectionAssessments/MultipleChoiceOverviewTable';
+import MultipleChoiceAssessmentOverviewTable from '@cdo/apps/templates/sectionAssessments/MultipleChoiceAssessmentOverviewTable';
 import commonMsg from '@cdo/locale';
 
 const multipleChoiceData = [
@@ -57,10 +57,10 @@ const multipleChoiceData = [
   },
 ];
 
-describe('MultipleChoiceOverviewTable', () => {
+describe('MultipleChoiceAssessmentOverviewTable', () => {
   it('renders the correct number of cells', () => {
     const wrapper = mount(
-      <MultipleChoiceOverviewTable
+      <MultipleChoiceAssessmentOverviewTable
         questionAnswerData={multipleChoiceData}
       />
     );
