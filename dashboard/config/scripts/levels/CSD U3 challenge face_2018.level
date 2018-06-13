@@ -68,11 +68,11 @@
     "encrypted_examples": "23nGJ6bRP3DWuY2/eVzLcYv/nekcsilICE8c90kvIwYR1agjBlNN9TjvA26S\nt1G/7BnD94VfEm8qgGYgMPRm4Q==\n",
     "parent_level_id": 9202,
     "name_suffix": "_2018",
-    "contained_level_names": null,
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
-    "thumbnail_url": "https://images.code.org/dc2fe4a471457d7b81e282b53d45b025-image-1528743215634.28.17 PM.png"
+    "thumbnail_url": "https://images.code.org/dc2fe4a471457d7b81e282b53d45b025-image-1528743215634.28.17 PM.png",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
