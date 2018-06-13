@@ -1,5 +1,5 @@
 import React from 'react';
-import MultipleChoiceOverviewTable from './MultipleChoiceOverviewTable';
+import MultipleChoiceAssessmentsOverviewTable from './MultipleChoiceAssessmentsOverviewTable';
 import i18n from '@cdo/locale';
 
 const multipleChoiceData = [
@@ -53,13 +53,13 @@ const multipleChoiceData = [
 
 export default storybook => {
   return storybook
-    .storiesOf('SectionAssessments/MultipleChoiceOverviewTable', module)
+    .storiesOf('SectionAssessments/MultipleChoiceAssessmentsOverviewTable', module)
     .addStoryTable([
       {
         name: 'Assessment multiple choice with 7 answers',
         description: 'Ability to see assessment overview for a section',
         story: () => (
-            <MultipleChoiceOverviewTable
+            <MultipleChoiceAssessmentsOverviewTable
               questionAnswerData={multipleChoiceData}
             />
         )
@@ -68,7 +68,7 @@ export default storybook => {
         name: 'Assessment multiple choice with 3 answers',
         description: 'Ability to see assessment overview for a section',
         story: () => (
-            <MultipleChoiceOverviewTable
+            <MultipleChoiceAssessmentsOverviewTable
               questionAnswerData={multipleChoiceData.map(question => {
                 return {
                   ...question,
