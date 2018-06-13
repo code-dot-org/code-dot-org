@@ -2,7 +2,7 @@
  * Teacher Landing Page
  */
 
-import React, {PropTypes} from 'react';
+import React, {PropTypes, Component} from 'react';
 import ProfessionalLearningCourseProgress from './professionalLearningCourseProgress';
 import {UnconnectedTwoColumnActionBlock as TwoColumnActionBlock} from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
 import {EnrolledWorkshops} from './enrolledWorkshops';
@@ -30,22 +30,12 @@ const styles = {
   },
 };
 
-const LandingPage = React.createClass({
-  propTypes: {
+export class LandingPage extends Component {
+  static propTypes = {
     lastWorkshopSurveyUrl: PropTypes.string,
     lastWorkshopSurveyCourse: PropTypes.string,
     professionalLearningCourseData: PropTypes.array
-  },
-
-  renderHeaderImage() {
-    return (
-      <div style={styles.headerImage}>
-        <div style={styles.headerText}>
-          {i18n.plLandingHeading()}
-        </div>
-      </div>
-    );
-  },
+  };
 
   render() {
     const CSF = this.props.lastWorkshopSurveyCourse === 'CS Fundamentals';
@@ -58,7 +48,11 @@ const LandingPage = React.createClass({
 
     return (
       <div>
-        {this.renderHeaderImage()}
+        <div style={styles.headerImage}>
+          <div style={styles.headerText}>
+            {i18n.plLandingHeading()}
+          </div>
+        </div>
         <br/>
         {this.props.lastWorkshopSurveyUrl && (
           <TwoColumnActionBlock
@@ -87,6 +81,4 @@ const LandingPage = React.createClass({
       </div>
     );
   }
-});
-
-export default LandingPage;
+}
