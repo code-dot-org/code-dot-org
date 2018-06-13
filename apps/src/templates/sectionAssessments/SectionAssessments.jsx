@@ -9,7 +9,7 @@ import {connect} from 'react-redux';
 import {h3Style} from "../../lib/ui/Headings";
 import i18n from '@cdo/locale';
 import ScriptSelector from '@cdo/apps/templates/sectionProgress/ScriptSelector';
-import MultipleChoiceByStudentSection from './MultipleChoiceByStudentSection';
+import MultipleChoiceByStudentContainer from './MultipleChoiceByStudentContainer';
 import AssessmentSelector from './AssessmentSelector';
 
 const styles = {
@@ -65,7 +65,7 @@ class SectionAssessments extends Component {
           />
         </div>
         <div>
-          <MultipleChoiceByStudentSection />
+          <MultipleChoiceByStudentContainer />
         </div>
       </div>
     );

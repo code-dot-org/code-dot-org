@@ -1,16 +1,16 @@
 import React, {Component, PropTypes} from 'react';
-import StudentAssessmentOverviewTable from './StudentAssessmentOverviewTable';
-import { studentAnswerDataPropType, questionStructurePropType } from './assessmentDataShapes';
+import SingleStudentAssessmentsMCTable from './SingleStudentAssessmentsMCTable';
+import { studentWithResponsesPropType, multipleChoiceQuestionPropType } from './assessmentDataShapes';
 import {
   getMultipleChoiceStructureForCurrentAssessment,
   getStudentMCResponsesForCurrentAssessment,
 } from './sectionAssessmentsRedux';
 import { connect } from 'react-redux';
 
-class MultipleChoiceByStudentSection extends Component {
+class MultipleChoiceByStudentContainer extends Component {
   static propTypes = {
-    multipleChoiceStructure: PropTypes.arrayOf(questionStructurePropType),
-    studentAnswerData: PropTypes.arrayOf(studentAnswerDataPropType),
+    multipleChoiceStructure: PropTypes.arrayOf(multipleChoiceQuestionPropType),
+    studentAnswerData: PropTypes.arrayOf(studentWithResponsesPropType),
   };
 
   render() {
@@ -22,7 +22,7 @@ class MultipleChoiceByStudentSection extends Component {
           <div key={index}>
             {/* TODO(caleybrock): update to use heading from spec */}
             <h3>{`Here is how ${studentResponse.name} responded`}</h3>
-            <StudentAssessmentOverviewTable
+            <SingleStudentAssessmentsMCTable
               questionAnswerData={multipleChoiceStructure}
               studentAnswerData={studentResponse}
             />
@@ -33,9 +33,9 @@ class MultipleChoiceByStudentSection extends Component {
   }
 }
 
-export const UnconnectedMultipleChoiceByStudentSection = MultipleChoiceByStudentSection;
+export const UnconnectedMultipleChoiceByStudentContainer = MultipleChoiceByStudentContainer;
 
 export default connect(state => ({
   multipleChoiceStructure: getMultipleChoiceStructureForCurrentAssessment(state),
   studentAnswerData: getStudentMCResponsesForCurrentAssessment(state),
-}))(MultipleChoiceByStudentSection);
+}))(MultipleChoiceByStudentContainer);
