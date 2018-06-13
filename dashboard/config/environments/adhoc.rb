@@ -42,6 +42,9 @@ Dashboard::Application.configure do
   config.pretty_apps = false
 
   config.lograge.enabled = true
+  config.lograge.formatter = Lograge::Formatters::Cee.new
+  require 'syslog/logger'
+  config.logger = Syslog::Logger.new 'dashboard', Syslog::LOG_LOCAL0
 
   # Show mail previews (rails/mailers).
   # See http://edgeguides.rubyonrails.org/action_mailer_basics.html#previewing-emails
