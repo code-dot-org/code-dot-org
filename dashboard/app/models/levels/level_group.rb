@@ -213,7 +213,7 @@ ruby
   #           {result: "I like making games, and I also like the lifestyle."},
   #           {}]}]}]
   #
-
+  # TODO(caleybrock): remove once assessments tab is converted to react
   def self.get_survey_results(script, section)
     level_group_script_levels = script.script_levels.includes(:levels).where('levels.type' => 'LevelGroup')
 
@@ -267,7 +267,7 @@ ruby
   #           {result: "I like making games, and I also like the lifestyle."},
   #           {}]}]}]
   #
-
+  # TODO(caleybrock): add tests.
   def self.get_summarized_survey_results(script, section)
     level_group_script_levels = script.script_levels.includes(:levels).where('levels.type' => 'LevelGroup')
 
