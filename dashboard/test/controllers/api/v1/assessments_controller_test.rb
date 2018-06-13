@@ -7,7 +7,18 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
     @teacher = create(:teacher)
     @teacher.permission = UserPermission::AUTHORIZED_TEACHER
     @section = create(:section, user: @teacher, login_type: 'word')
+
+    # Single student in section.
     @student = create(:follower, section: @section).student_user
+
+    # Set of students in section.
+    @students = []
+    5.times do |i|
+      student = create(:student, name: "student_#{i}")
+      @students << student
+      create(:follower, section: @section, student_user: student)
+    end
+    @student_1, @student_2, @student_3, @student_4, @student_5 = @students
 
     @teacher_other = create(:teacher)
     @teacher_other.permission = UserPermission::AUTHORIZED_TEACHER
@@ -137,5 +148,53 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
       }
     }
     assert_equal expected_response, JSON.parse(@response.body)
+  end
+
+  test "gets no anonymous survey data via assessment responses call" do
+    # Sign in as teacher and create a new script.
+    sign_in @teacher
+    script = create :script
+
+    # Set up an anonymous assessment in that script.
+    sub_level1 = create :text_match, name: 'level_free_response', type: 'TextMatch'
+    sub_level2 = create :multi, name: 'level_multi_unsubmitted', type: 'Multi'
+    sub_level3 = create :multi, name: 'level_multi_correct', type: 'Multi'
+    sub_level4 = create :multi, name: 'level_multi_incorrect', type: 'Multi'
+    create :multi, name: 'level_multi_unattempted', type: 'Multi'
+
+    level1 = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
+    level1.properties['title'] =  'Long assessment 1'
+    level1.properties['anonymous'] = 'true'
+    level1.properties['pages'] = [{levels: ['level_free_response', 'level_multi_unsubmitted']}, {levels: ['level_multi_correct', 'level_multi_incorrect']}, {levels: ['level_multi_unattempted']}]
+    level1.save!
+    create :script_level, script: script, levels: [level1], assessment: true
+
+    # student_1 through student_5 did the survey, just submitting a free response.
+    @students.each_with_index do |student, student_index|
+      create(
+        :activity,
+        user: student,
+        level: level1,
+        level_source: create(
+          :level_source,
+          level: level1,
+          data: %Q({"#{sub_level1.id}":{"result":"Free response from student #{student_index + 3}"},"#{sub_level2.id}":{"result":"-1"},"#{sub_level3.id}":{"result":"-1"},"#{sub_level4.id}":{"result":"-1"}})
+        )
+      )
+    end
+
+    updated_at = Time.now
+
+    @students.each do |student|
+      create :user_level, user: student, best_result: 100, script: script, level: level1, submitted: true, updated_at: updated_at
+    end
+
+    # We get an empty result with the assessment responses API because the assessment is anonymous.
+    get :section_responses, params: {
+      section_id: @section.id,
+      script_id: script.id
+    }
+    assert_response :success
+    assert_equal '{}', @response.body
   end
 end
