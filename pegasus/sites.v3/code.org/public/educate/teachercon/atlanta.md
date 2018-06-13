@@ -145,6 +145,16 @@ We expect you to attend for the full conference. Make plans to be with us from R
 </p>
 </details>
 
+<details>
+<summary>**Will I have any free time? Are there fun things to do in Atlanta?**</summary>
+ <p>
+ <br>
+Of course! Sessions end each day at 4:30pm, which leaves plenty of time in the evenings to explore the area and spend time with the folks you meet throughout the day. In addition, we ask that you join our Sunday and Wednesday evening events, as these are important opportunities to connect with your fellow educators and build community. Otherwise, your evenings are free!
+
+Looking for fun activities to do with fellow TeacherCon attendees? Check out the <a href="https://docs.google.com/spreadsheets/d/1XSq2QWggZlTWzPVH73HjuMShZiwWxdCc4tcbgh8XXlo/edit#gid=0", target=_"blank">Atlanta Fun Sheet</a> for ideas. Feel free to sign up for an excursion or add your own!
+</p>
+</details>
+
 <a id="previous"></a>
 ## **Previous Email Updates**
 We will update this section as emails are sent for this event.
