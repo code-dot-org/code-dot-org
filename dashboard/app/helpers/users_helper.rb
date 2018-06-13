@@ -121,11 +121,20 @@ module UsersHelper
     unless exclude_level_progress
       uls = user.user_levels_by_level(script)
       paired_user_level_ids = PairedUserLevel.pairs(uls.values.map(&:id))
-      script_levels = script.script_levels.includes(:stage, :levels)
+      script_level_ids = script.script_level_ids
+      level_ids_by_script_level_id = script.script_levels.
+        joins('INNER JOIN levels_script_levels on script_levels.id = levels_script_levels.script_level_id').
+        pluck('levels_script_levels.script_level_id', 'levels_script_levels.level_id').
+        inject({}) do |memo, next_row|
+          memo[next_row[0]] ||= []
+          memo[next_row[0]] << next_row[1]
+          memo
+        end
       user_data[:completed] = user.completed?(script)
       user_data[:levels] = {}
-      script_levels.each do |sl|
-        sl.level_ids.each do |level_id|
+      script_level_ids.each do |script_level_id|
+        sl = ScriptLevel.cache_find(script_level_id)
+        level_ids_by_script_level_id[script_level_id].each do |level_id|
           # if we have a contained level, use that to represent progress
           contained_level_id = Level.cache_find(level_id).contained_levels.try(:first).try(:id)
           ul = uls.try(:[], contained_level_id || level_id)
