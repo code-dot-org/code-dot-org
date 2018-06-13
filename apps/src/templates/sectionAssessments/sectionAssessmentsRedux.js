@@ -116,15 +116,25 @@ export default function sectionAssessments(state=initialState, action) {
 // Selector functions
 
 // Returns an array of objects, each indicating an assessment name and it's id
-// for the assessments in the current script.
+// for the assessments and surveys in the current script.
 export const getCurrentScriptAssessmentList = (state) => {
   const assessmentStructure = state.sectionAssessments.assessmentsStructureByScript[state.scriptSelection.scriptId] || {};
-  return Object.values(assessmentStructure).map(assessment => {
+  const assessments = Object.values(assessmentStructure).map(assessment => {
     return {
       id: assessment.id,
       name: assessment.name,
     };
   });
+
+  const surveysStructure = state.sectionAssessments.surveysByScript[state.scriptSelection.scriptId] || {};
+  const surveys = Object.keys(surveysStructure).map(surveyId => {
+    return {
+      id: parseInt(surveyId),
+      name: surveysStructure[surveyId].stage_name,
+    };
+  });
+
+  return assessments.concat(surveys);
 };
 
 // Get the student responses for assessments in the current script and current assessment
