@@ -1234,4 +1234,11 @@ class Script < ActiveRecord::Base
 
     info
   end
+
+  # Get all script levels that are level groups, and return a list of those that are
+  # not anonymous assessments.
+  def get_assessment_script_levels
+    level_group_script_levels = script_levels.includes(:levels).where('levels.type' => 'LevelGroup')
+    level_group_script_levels.select {|script_level| script_level.long_assessment? && !script_level.anonymous?}
+  end
 end
