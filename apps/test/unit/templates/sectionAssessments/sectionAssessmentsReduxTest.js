@@ -130,7 +130,7 @@ describe('sectionAssessmentsRedux', () => {
           }
         };
         const result = getMultipleChoiceStructureForCurrentAssessment(stateWithAssessment);
-        assert.deepEqual(result, [{correctAnswer: 'B', id: 456, question: 'What is a variable?'}]);
+        assert.deepEqual(result, [{correctAnswer: '', id: 456, question: 'What is a variable?'}]);
       });
     });
 
@@ -166,7 +166,7 @@ describe('sectionAssessmentsRedux', () => {
           }
         };
         const result = getStudentMCResponsesForCurrentAssessment(stateWithAssessment);
-        assert.deepEqual(result, [{id: '1', name: 'Saira', studentAnswers: [{answers: 'D', isCorrect: false}]}]);
+        assert.deepEqual(result, [{id: '1', name: 'Saira', studentResponses: [{responses: 'D', isCorrect: false}]}]);
       });
     });
   });
