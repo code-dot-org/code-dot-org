@@ -57,16 +57,21 @@ const answerDataPropType = PropTypes.shape({
   isCorrectAnswer: PropTypes.bool,
 });
 
-const questionDataPropType = PropTypes.shape({
+const multipleChoiceDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   question: PropTypes.string.isRequired,
   answers: PropTypes.arrayOf(answerDataPropType),
   notAnswered: PropTypes.number.isRequired,
 });
 
-class MultipleChoiceOverviewTable extends Component {
+/**
+ *  A single table that shows students' responses to each multiple choice question.
+ * The table displays the percent of students that select an answer choice and
+ * percent of students that did not answer the question.
+ */
+class MultipleChoiceAssessmentsOverviewTable extends Component {
   static propTypes= {
-    questionAnswerData: PropTypes.arrayOf(questionDataPropType),
+    questionAnswerData: PropTypes.arrayOf(multipleChoiceDataPropType),
   };
 
   state = {
@@ -200,5 +205,4 @@ class MultipleChoiceOverviewTable extends Component {
   }
 }
 
-export default MultipleChoiceOverviewTable;
-
+export default MultipleChoiceAssessmentsOverviewTable;
