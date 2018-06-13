@@ -20,15 +20,25 @@
         = f.label :parent_email
         = f.email_field :parent_email, autocomplete: 'off', maxlength: 255
     - else
-      .field
-        = f.label :email
-        %em= t('user.email_hint')
-        %br/
-        %span#displayed-user-email= f.object.email.present? ? f.object.email : '***encrypted***'
-        - if current_user.can_edit_email?
-          (
-          %a#edit-email-link{href: '#'}= "Update"
-          )
+      -# Branch logic for migrated users until all users have been migrated
+      - if current_user.provider == 'migrated'
+        .field
+          = f.label :email
+          %em= t('user.email_hint')
+          %br/
+          %span#displayed-user-email= f.object.email.present? ? f.object.email : '***encrypted***'
+          - if current_user.can_edit_email? || current_user.teacher?
+            (
+            %a#edit-email-link{href: '#'}= "Update"
+            )
+      - else
+        .field
+          = f.label :email
+          %span#displayed-user-email= f.object.email.present? ? f.object.email : '***encrypted***'
+          - if current_user.can_edit_email? && !current_user.oauth?
+            (
+            %a#edit-email-link{href: '#'}= "Update"
+            )
   - if resource.username.present?
     .field
       = f.label :username
