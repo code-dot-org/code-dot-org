@@ -58,7 +58,7 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
   #   12: {   <--- a student id
   #     student_name: "caley",
   #     responses: {
-  #      4593: <---- a script id referring to an assessment
+  #      4593: <---- a level_group id referring to an assessment
   #        {level_results: [{status: "correct", answer: "A"}], multi_correct: 5, multi_count: 10.......}
   #     ...other assessments
   #   }
