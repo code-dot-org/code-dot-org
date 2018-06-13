@@ -80,7 +80,7 @@ class AssignToSection extends Component {
     const queryParams = queryString.stringify({courseId, scriptId});
 
     return (
-      <div style={styles.main}>
+      <div id="uitest-assign-course-btn" style={styles.main}>
         <DropdownButton
           text={(courseId && scriptId) ? i18n.assignUnit() : i18n.assignCourse()}
           color={Button.ButtonColor.orange}
