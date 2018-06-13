@@ -21,16 +21,11 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
     # Only authorized teachers have access to locked question and answer data.
     render status: :forbidden unless current_user.authorized_teacher?
 
-    level_group_script_levels = @script.script_levels.includes(:levels).where('levels.type' => 'LevelGroup')
+    assessment_script_levels = @script.get_assessment_script_levels
 
     assessments = {}
 
-    level_group_script_levels.map do |script_level|
-      next unless script_level.long_assessment?
-
-      # Don't allow somebody to peek inside an anonymous survey using this API.
-      next if script_level.anonymous?
-
+    assessment_script_levels.map do |script_level|
       # The actual level group that corresponds to the script_level
       level_group = script_level.levels[0]
 
@@ -75,7 +70,7 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
   def section_responses
     responses_by_student = {}
 
-    level_group_script_levels = @script.script_levels.includes(:levels).where('levels.type' => 'LevelGroup')
+    assessment_script_levels = @script.get_assessment_script_levels
 
     @section.students.each do |student|
       # Initialize student hash
@@ -84,12 +79,7 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
       }
       responses_by_level_group = {}
 
-      level_group_script_levels.each do |script_level|
-        next unless script_level.long_assessment?
-
-        # Don't allow somebody to peek inside an anonymous survey using this API.
-        next if script_level.anonymous?
-
+      assessment_script_levels.each do |script_level|
         # Get the UserLevel for the last attempt.  This approach does not check
         # for the script and so it'll find the student's attempt at this level for
         # any script in which they have encountered that level.
