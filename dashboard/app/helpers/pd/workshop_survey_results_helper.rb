@@ -189,6 +189,8 @@ module Pd::WorkshopSurveyResultsHelper
     questions.each do |session, response_sections|
       surveys_for_session = surveys[session]
 
+      next unless surveys_for_session
+
       session_summary = {
         response_count: surveys[session][:response_count]
       }
@@ -200,9 +202,10 @@ module Pd::WorkshopSurveyResultsHelper
             if response_section == :facilitator
               # For facilitator specific free responses, we want a hash of facilitator IDs
               # to an array of all of their specific responses
-              facilitator_responses = Hash.new []
+              facilitator_responses = Hash.new
               surveys_for_session[:facilitator]&.each do |survey|
-                facilitator_responses[survey['facilitatorId'].to_i] = facilitator_responses[survey['facilitatorId']].append survey[q_key]
+                next unless survey[q_key].presence
+                facilitator_responses[survey['facilitatorId'].to_i] = (facilitator_responses[survey['facilitatorId'].to_i] || []).append survey[q_key]
               end
 
               if current_user&.facilitator?
@@ -275,6 +278,10 @@ module Pd::WorkshopSurveyResultsHelper
         general: Pd::WorkshopDailySurvey.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['day_4'], day: 4).map(&:form_data_hash),
         facilitator: Pd::WorkshopFacilitatorDailySurvey.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['facilitator'], day: 4).map {|x| x.form_data_hash(show_hidden_questions: true)}
       },
+      'Day 5' => {
+        general: Pd::WorkshopDailySurvey.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['day_5'], day: 5).map(&:form_data_hash),
+        facilitator: Pd::WorkshopFacilitatorDailySurvey.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['facilitator'], day: 5).map {|x| x.form_data_hash(show_hidden_questions: true)}
+      },
     }
 
     responses.each do |k, v|
@@ -304,6 +311,10 @@ module Pd::WorkshopSurveyResultsHelper
       'Day 4' => {
         general: get_summary_for_form(CDO.jotform_forms['local']['day_4'], workshop),
         facilitator: get_summary_for_form(CDO.jotform_forms['local']['facilitator'], workshop)
+      },
+      'Day 5' => {
+        general: get_summary_for_form(CDO.jotform_forms['local']['day_5'], workshop),
+        facilitator: get_summary_for_form(CDO.jotform_forms['local']['facilitator'], workshop)
       }
     }
   end
@@ -312,7 +323,7 @@ module Pd::WorkshopSurveyResultsHelper
 
   def get_summary_for_form(form_id, workshop)
     survey = Pd::SurveyQuestion.find_by(form_id: form_id)
-    summary = survey.summarize
+    summary = survey&.summarize || {}
 
     summary.each do |_, question|
       if question[:text].match? '{.*}'

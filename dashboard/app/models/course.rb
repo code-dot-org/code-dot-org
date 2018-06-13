@@ -35,6 +35,8 @@ class Course < ApplicationRecord
   serialized_attrs %w(
     teacher_resources
     has_verified_resources
+    family_name
+    version_year
   )
 
   def to_param
@@ -182,10 +184,12 @@ class Course < ApplicationRecord
     # ScriptConstants gives us untranslated versions of our course name, and the
     # category it's in. Set translated strings here
     info[:name] = localized_title
-    info[:assignment_family_name] = assignment_family_name
+    info[:assignment_family_name] = family_name || name
     info[:assignment_family_title] = localized_assignment_family_title
-    info[:version_year] = version_year
+    info[:version_year] = version_year || ScriptConstants::DEFAULT_VERSION_YEAR
     info[:version_title] = localized_version_title
+    # For now, all course versions visible in the UI are stable.
+    info[:is_stable] = true
     info[:category] = I18n.t('courses_category')
     info[:script_ids] = user ?
       scripts_for_user(user).map(&:id) :
@@ -198,30 +202,15 @@ class Course < ApplicationRecord
   # contains localized strings so we can only cache on a per locale basis.
   #
   # @param [User] user Whose experiments to check for possible script substitutions.
-  # @param [Boolean] include_unstable Whether to show all course versions, rather
-  #   than just the stable ones. Default: false.
-  def self.valid_courses(user: nil, include_unstable: false)
+  def self.valid_courses(user: nil)
     # Do not cache if the user might have a course experiment enabled which puts them
     # on an alternate script.
     if user && has_any_course_experiments?(user)
-      return Course.valid_courses_without_cache(user: user, include_unstable: include_unstable)
+      return Course.valid_courses_without_cache(user: user)
     end
-    cache_key_suffix = include_unstable ? 'all' : 'stable'
-    Rails.cache.fetch("valid_courses_#{cache_key_suffix}/#{I18n.locale}") do
-      Course.valid_courses_without_cache(include_unstable: include_unstable)
+    Rails.cache.fetch("valid_courses/#{I18n.locale}") do
+      Course.valid_courses_without_cache
     end
-  end
-
-  def assignment_family_name
-    m = ScriptConstants::VERSIONED_COURSE_NAME_REGEX.match(name)
-    m ? m[1] : name
-  end
-
-  # return the 4-digit year from the suffix of the course name if one exists,
-  # otherwise return the DEFAULT_VERSION_YEAR.
-  def version_year
-    m = ScriptConstants::VERSIONED_COURSE_NAME_REGEX.match(name)
-    m ? m[2] : ScriptConstants::DEFAULT_VERSION_YEAR
   end
 
   # @param user [User]
@@ -233,28 +222,24 @@ class Course < ApplicationRecord
 
   # Get the set of valid courses for the dropdown in our sections table, using
   # any alternate scripts based on any experiments the user belongs to.
-  def self.valid_courses_without_cache(user: nil, include_unstable: false)
+  def self.valid_courses_without_cache(user: nil)
     course_infos = Course.
       where(name: ScriptConstants::CATEGORIES[:full_course]).
       map {|course| course.assignable_info(user)}
 
-    # For now, infer whether the course is stable from its version year.
-    # * Currently, only 2017 versions are stable.
+    # Only return stable course versions.
+    # * Currently, all course versions are stable.
     # * In the future, stability will be set as a property by the levelbuilder.
     #
     # Group courses by family when showing multiple versions of each course.
-    include_unstable ?
-      course_infos.sort_by {|info| [info[:assignment_family_name], info[:version_year]]} :
-      course_infos.
-        select {|info| info[:version_year] == ScriptConstants::DEFAULT_VERSION_YEAR}.
-        sort_by {|info| info[:assignment_family_name]}
+    course_infos.sort_by {|info| [info[:assignment_family_name], info[:version_year]]}
   end
 
   # Returns whether the course id is valid, even if it is not "stable" yet.
   # @param course_id [String] id of the course we're checking the validity of
   # @return [Boolean] Whether this is a valid course ID
   def self.valid_course_id?(course_id)
-    valid_courses(include_unstable: true).any? {|course| course[:id] == course_id.to_i}
+    valid_courses.any? {|course| course[:id] == course_id.to_i}
   end
 
   def summarize(user = nil)
@@ -277,10 +262,11 @@ class Course < ApplicationRecord
   end
 
   # Returns an array of objects showing the name and version year for all courses
-  # sharing the assignment_family_name of this course, including this one.
+  # sharing the family_name of this course, including this one.
   def summarize_versions
+    return [] unless family_name
     Course.
-      where('name regexp ?', "^#{assignment_family_name}(-[0-9]{4})?$").
+      where("properties -> '$.family_name' = ?", family_name).
       map {|c| {name: c.name, version_year: c.version_year, version_title: c.localized_version_title}}.
       sort_by {|info| info[:version_year]}.
       reverse
@@ -353,13 +339,13 @@ class Course < ApplicationRecord
   # @param user [User]
   # @return [Boolean] Whether the user has progress on another version of this course.
   def has_other_version_progress?(user)
-    return nil unless user
+    return nil unless user && family_name
     user_script_ids = user.user_scripts.pluck(:script_id)
 
     Course.
       joins(:default_course_scripts).
       # select only courses in the same course family.
-      where('name regexp ?', "^#{assignment_family_name}(-[0-9]{4})?$").
+      where("properties -> '$.family_name' = ?", family_name).
       # exclude the current course.
       where.not(id: id).
       # select only courses with scripts which the user has progress in.

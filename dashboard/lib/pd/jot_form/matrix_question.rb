@@ -34,7 +34,7 @@ module Pd
 
       def self.from_jotform_question(jotform_question)
         super.tap do |matrix_question|
-          matrix_question.options = jotform_question['mcolumns'].split('|')
+          matrix_question.options = jotform_question['mcolumns'].split('|').map(&:strip)
           matrix_question.sub_questions = jotform_question['mrows'].split('|')
         end
       end

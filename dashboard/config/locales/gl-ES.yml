@@ -1,4 +1,5 @@
-"gl":
+---
+gl:
   errors:
     messages:
       not_saved: 'Por favor, corrixe os seguintes erros:'
@@ -96,6 +97,7 @@
     facebook: Facebook
     windowslive: Conta da Microsoft
     clever: Conta intelixente
+    powerschool: Powerschool Account
     forgot_password: Esqueceu o seu contrasinal?
     need_confirmation: Non recebeu as instrucións de confirmación?
     need_unlock: Non recibiches as instrucións de desbloqueo?
@@ -167,6 +169,7 @@
     error: Ocorreu un erro.
     email_preference_question: Can we email you about updates to our courses, local
       learning opportunities, or other computer science news?
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: Si
     email_preference_no: Non
     email_preference_required: You must specify an email preference.
@@ -627,6 +630,8 @@
   gender:
     male: Masculino
     female: Feminino
+    non_binary: Non-binary
+    not_listed: Preferred term not listed
     none: Prefiro non responder
   user_type:
     student: Estudante

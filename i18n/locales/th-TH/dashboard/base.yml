@@ -85,6 +85,7 @@ th:
     facebook: 'เฟซบุค'
     windowslive: 'บัญชี Microsoft'
     clever: 'Clever Account'
+    powerschool: 'Powerschool Account'
     forgot_password: 'ลืมรหัสผ่าน?'
     need_confirmation: "ไม่ได้รับการยืนยันคำแนะนำ?"
     need_unlock: "ไม่ได้รับคำแนะนำในการปลดล็อค?"
@@ -128,7 +129,8 @@ th:
     field_is_required: "จำเป็น"
     accept_terms: "คุณต้อง ยอมรับ เพื่อสร้างบัญชี"
     error: "An error occurred."
-    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: "ใช่"
     email_preference_no: "ไม่ใช่"
     email_preference_required: "You must specify an email preference."
@@ -271,7 +273,7 @@ th:
       course_catalog: "Course Catalog"
       project_gallery: "Projects"
       sections: "Sections"
-      help_support: "Help and support"
+      help_support: "การช่วยเหลือและสนับสนุน"
       report_bug: "Report bug"
       teacher_community: "Teacher community"
       professional_learning: "Professional Learning"
@@ -299,7 +301,7 @@ th:
       about_faqs: "FAQs"
       learn: "Learn"
       stats: "สถิติ"
-      help_us: "Help Us"
+      help_us: "ช่วยเรา"
       teach: "Teach"
       about: "About"
     user:
@@ -467,6 +469,8 @@ th:
   gender:
     male: 'ชาย'
     female: 'หญิง'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: 'ไม่ต้องการตอบ'
   user_type:
     student: 'นักเรียน'
@@ -496,7 +500,7 @@ th:
     how_it_works: 'มันทำงานได้อย่างไร'
     try_hour_of_code: 'Try an Hour of Code!'
   reference_area:
-    title: 'ต้องการความช่วยเหลือเหรอ?'
+    title: 'ต้องการความช่วยเหลือ?'
     subtitle: 'ดูวิดีโอและคำใบ้พวกนี้'
     teacher: 'ดูทางเลือก'
     teacher_no_solution: 'Stop seeing solution'
@@ -509,7 +513,7 @@ th:
     notes_coming_soon: 'เร็ว ๆ นี้จะมีบันทึกย่อสำหรับวิดีโอนี้'
     autoplay_option: 'วิดีโอเริ่มเล่นอัตโนมัติ'
     download: 'ดาวน์โหลดวิดีโอ'
-    show_notes: 'Show Notes'
+    show_notes: 'แสดงเป็นข้อความ'
     show_video: 'Show Video'
   compatibility:
     upgrade:
@@ -643,14 +647,14 @@ th:
     support: "Get Help"
     support_url: "//support.code.org"
     help_resources: "Help and Resources"
-    help_support: "Help and support"
+    help_support: "การช่วยเหลือและสนับสนุน"
     documentation: "Documentation"
     tutorials: "Tutorials"
   multi:
     wrong_title: "Incorrect answer"
-    wrong_body: "The answer you've entered is not correct.  Please try again!"
+    wrong_body: "คำตอบที่คุณเลือก ไม่ถูกต้อง โปรดลองใหม่อีกครั้ง!"
     correct_title: "Correct"
-    correct_body: "That is the correct answer."
+    correct_body: "เป็นคำตอบที่ถูกต้อง"
     toofew_title: "Too few answers."
     toofew_body: "Please select two answers before submitting."
   multi-submittable:
@@ -682,7 +686,7 @@ th:
     wrong_title: "Incorrect solution"
     wrong_body: "The solution you've entered is not correct.  Please try again!"
     correct_title: "Correct"
-    correct_body: "That is the correct answer."
+    correct_body: "เป็นคำตอบที่ถูกต้อง"
   contract_match:
     wrong_title: "Incorrect answer"
     badname: "Your contract has the wrong name."
@@ -696,12 +700,12 @@ th:
     open_response_title: "Thanks"
     open_response_body: "Thanks for your response!"
     correct_title: "Correct"
-    correct_body: "That is the correct answer."
+    correct_body: "เป็นคำตอบที่ถูกต้อง"
   dialog:
     ok: "ตกลง"
     startover_title: "คุณจะเริ่มต้นใหม่จริงๆหรือ ?"
     startover_body: "This will reset the puzzle to its start state and reset all the data you've added or changed."
-    startover_ok: "เริ่มใหม่"
+    startover_ok: "เริ่มเล่นใหม่"
     startover_cancel: "ยกเลิก"
   time:
     hour: '1 hour'
@@ -719,7 +723,7 @@ th:
     tos: "Terms of Service"
     privacy: "นโยบายความเป็นส่วนตัว"
     privacy_notice: "Privacy Notice"
-    accept_label: 'I agree to the updated <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>'
+    accept_label: 'I agree to the <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.'
     accept: "Accept"
     print: "พิมพ์"
     reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'
@@ -768,8 +772,8 @@ th:
     projects: "Projects"
     create: "Create Project"
     create_a_project: 'Create a new project:'
-    new: "Create New"
-    rename: "Rename"
+    new: "สร้างใหม่"
+    rename: "ตั้งชื่อใหม่"
     save: "บันทึก"
     delete: "ลบ"
     import: "Import"
@@ -778,7 +782,7 @@ th:
     share_link_import_error_header: "Something went wrong."
     share_link_import_error_body: "There was a problem importing that share link. Please try again."
     exit: "Return to Course"
-    my_projects: "My Projects"
+    my_projects: "โปรเจคของฉัน"
     project_gallery: "Projects"
     publish: "Publish"
     unpublish: "Unpublish"
@@ -806,8 +810,8 @@ th:
     cancel: 'ยกเลิก'
     delete_confirm_title: Are you sure you want to delete this project?
     delete_confirm_text: "Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project."
-    view_all: 'View My Projects'
-    remix: 'Remix'
+    view_all: 'ดูโปรเจคของฉัน'
+    remix: 'รีมิกซ์'
     click_to_remix: "Click \"Remix\" to spin-off your own version!"
     edit_project: 'Edit Project'
     sharing_disabled: "Sorry, this project is not available for sharing. If this is your project or the project of one of your students, please <a href='https://studio.code.org/users/sign_in'>sign in</a> to your account to view the project."

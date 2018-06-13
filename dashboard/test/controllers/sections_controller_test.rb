@@ -20,6 +20,10 @@ class SectionsControllerTest < ActionController::TestCase
   end
 
   setup do
+    # Expect any scripts/courses to be valid unless specified by test
+    Course.stubs(:valid_course_id?).returns(true)
+    Script.stubs(:valid_script_id?).returns(true)
+
     # place in setup instead of setup_all otherwise course ends up being serialized
     # to a file if levelbuilder_mode is true
     @course = create(:course)
@@ -160,15 +164,70 @@ class SectionsControllerTest < ActionController::TestCase
 
   test "update: can update section you own" do
     sign_in @teacher
-    section_with_script = create(:section, user: @teacher, script_id: Script.flappy_script.id)
+    section_with_script = create(
+      :section,
+      user: @teacher,
+      script_id: Script.flappy_script.id,
+      login_type: Section::LOGIN_TYPE_WORD,
+      grade: "1",
+      stage_extras: true,
+      pairing_allowed: false,
+      hidden: true
+    )
+
     post :update, params: {
       id: section_with_script.id,
-      course_id: @course.id
+      course_id: @course.id,
+      name: "My Section",
+      login_type: Section::LOGIN_TYPE_PICTURE,
+      grade: "K",
+      stage_extras: false,
+      pairing_allowed: true,
+      hidden: false
     }
     assert_response :success
-    section_with_script.reload
+
+    # Cannot use section_with_script.reload because login_type has changed
+    section_with_script = Section.find(section_with_script.id)
+
     assert_equal(@course.id, section_with_script.course_id)
-    assert_nil section_with_script.script_id
+    assert_nil(section_with_script.script_id)
+    assert_equal("My Section", section_with_script.name)
+    assert_equal(Section::LOGIN_TYPE_PICTURE, section_with_script.login_type)
+    assert_equal("K", section_with_script.grade)
+    assert_equal(false, section_with_script.stage_extras)
+    assert_equal(true, section_with_script.pairing_allowed)
+    assert_equal(false, section_with_script.hidden)
+  end
+
+  test "update: course_id is not updated if invalid" do
+    Course.stubs(:valid_course_id?).returns(false)
+
+    sign_in @teacher
+    section = create(:section, user: @teacher, course_id: nil)
+
+    post :update, params: {
+      id: section.id,
+      course_id: 1,
+    }
+    section.reload
+    assert_response :success
+    assert_nil section.course_id
+  end
+
+  test "update: script_id is not updated if invalid" do
+    Script.stubs(:valid_script_id?).returns(false)
+
+    sign_in @teacher
+    section = create(:section, user: @teacher, script_id: nil)
+
+    post :update, params: {
+      id: section.id,
+      script_id: 1,
+    }
+    section.reload
+    assert_response :success
+    assert_nil section.script_id
   end
 
   test "update: cannot update section you dont own" do
@@ -240,5 +299,17 @@ class SectionsControllerTest < ActionController::TestCase
     }
 
     assert_not_nil UserScript.find_by(script: Script.artist_script, user: student)
+  end
+
+  test "update: can set script from nested script param" do
+    sign_in @teacher
+    section = create(:section, user: @teacher, script_id: Script.flappy_script.id)
+    post :update, as: :json, params: {
+      id: section.id,
+      script: {id: @script_in_course.id}
+    }
+    assert_response :success
+    section.reload
+    assert_equal(@script_in_course.id, section.script_id)
   end
 end

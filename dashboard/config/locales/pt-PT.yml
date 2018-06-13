@@ -1,4 +1,5 @@
-"pt":
+---
+pt:
   errors:
     messages:
       not_saved: 'Por favor, corrige os seguintes erros:'
@@ -97,6 +98,7 @@
     facebook: Facebook
     windowslive: Outlook
     clever: Clever Account
+    powerschool: Powerschool Account
     forgot_password: Esqueceste-te da palavra-passe?
     need_confirmation: Não recebeste as instruções de confirmação?
     need_unlock: Não recebeste as instruções de desbloqueio?
@@ -170,6 +172,7 @@
     error: An error occurred.
     email_preference_question: Can we email you about updates to our courses, local
       learning opportunities, or other computer science news?
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: Sim
     email_preference_no: Não
     email_preference_required: You must specify an email preference.
@@ -635,6 +638,8 @@
   gender:
     male: Masculino
     female: Feminino
+    non_binary: Non-binary
+    not_listed: Preferred term not listed
     none: Prefiro não responder
   user_type:
     student: Aluno

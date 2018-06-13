@@ -1,4 +1,5 @@
-"vi":
+---
+vi:
   errors:
     messages:
       not_saved: 'Hãy sửa các lỗi sau đây:'
@@ -95,6 +96,7 @@
     facebook: Facebook
     windowslive: Tài khoản Microsoft
     clever: Tài khoản Clever
+    powerschool: Powerschool Account
     forgot_password: Quên mật khẩu?
     need_confirmation: Không nhận được hướng dẫn xác nhận?
     need_unlock: Chưa nhận hướng dẫn mở khóa?
@@ -171,7 +173,7 @@
     email_preference_question: Chúng tôi có thể gửi email cho bạn thông tin cập nhật
       về các khóa học của chúng tôi, các cơ hội ở địa phương hay tin tức về khoa học
       máy tính khác không?
-    email_preference_privacy: (Xem chính sách bảo mật của chúng tôi)
+    email_preference_privacy: "(Xem chính sách bảo mật của chúng tôi)"
     email_preference_yes: Đồng ý
     email_preference_no: Không
     email_preference_required: You must specify an email preference.
@@ -644,6 +646,8 @@
   gender:
     male: Nam
     female: Nữ
+    non_binary: Non-binary
+    not_listed: Preferred term not listed
     none: Tùy chọn không muốn trả lời
   user_type:
     student: học sinh

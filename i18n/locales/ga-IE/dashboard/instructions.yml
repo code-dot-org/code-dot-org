@@ -3275,6 +3275,7 @@ ga:
       courseB_collector_loops_challenge1_instruction: 'An uair seo tá teorainn ar an líon blocanna atá agat. Bailigh na seoda go léir! '
       courseB_collector_loops_challenge1_2018_instruction: 'An uair seo tá teorainn ar an líon blocanna atá agat. Bailigh na seoda go léir! '
       courseB_collector_loops_challenge2_instruction: Bailímis na seoda go léir! Cabhraigh liom dul trí gach ró ansin filleadh ar thús an chéad ró eile. An bhfeiceann tú patrún?
+      courseB_collector_loops_challenge2_2018_instruction: Bailímis na seoda go léir! Cabhraigh liom dul trí gach ró ansin filleadh ar thús an chéad ró eile. An bhfeiceann tú patrún?
       courseB_collector_loops_challenge2a_instruction: Cabhraigh le Laurel ar a laghad **5** sheoid a bhailiú chun an dúshlán seo a chríochnú.
       courseB_collector_loops_challenge2a_2018_instruction: Cabhraigh le Laurel ar a laghad **5** sheoid a bhailiú chun an dúshlán seo a chríochnú.
       courseB_collector_loops_challenge`_instruction: 'This time you can only use one of each arrow block. Get all of the treasure! '
@@ -4530,6 +4531,7 @@ ga:
       courseF_maze_ramp6_instruction: '"Tóg go bog é agus cabhraigh liom an mhuc dhána a aimsiú. Nó b''fhéidir go dtiocfaidh fearg orm!"'
       courseF_maze_ramp6_2018_instruction: 'Tóg go bog é agus cabhraigh liom an mhuc dhána a aimsiú. Nó b''fhéidir go dtiocfaidh fearg orm!'
       courseF_maze_ramp7_instruction: Úsáid ar fhoghlaim tú go dtí seo chun cabhrú leis an éan an mhuc a bhaint amach!
+      courseF_playlab_brokenText_instruction: In the rest of this stage, we're going to build a game that you control!
       courseF_playlab_embed_vars_instruction: Answer Pegleg the Pirate's questions. What happens if you enter the codename "password"? What about some other code name?
       courseF_playlab_variables0_instruction: Seo é Cos Mhaide an Foghlaí. Tá sé uafásach deacair é a thuiscint na laethanta seo!
       courseF_playlab_variables1_instruction: Seo é Cos Mhaide an Foghlaí. Tá sé uafásach deacair é a thuiscint na laethanta seo!

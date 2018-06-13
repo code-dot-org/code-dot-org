@@ -1,4 +1,5 @@
-"he":
+---
+he:
   errors:
     messages:
       not_saved: 'נא תקן את השגיאות הבאות:'
@@ -92,6 +93,7 @@
     facebook: פייסבוק
     windowslive: חשבון מיקרוסופט
     clever: Clever Account
+    powerschool: Powerschool Account
     forgot_password: שכחת את הסיסמא שלך?
     need_confirmation: לא קיבלת את  ההוראות האישור?
     need_unlock: לא קיבלת את ההוראות הפתיחה?
@@ -159,6 +161,7 @@
     error: An error occurred.
     email_preference_question: Can we email you about updates to our courses, local
       learning opportunities, or other computer science news?
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: כן
     email_preference_no: לא
     email_preference_required: You must specify an email preference.
@@ -618,6 +621,8 @@
   gender:
     male: גבר
     female: אישה
+    non_binary: Non-binary
+    not_listed: Preferred term not listed
     none: מעדיף לא לענות
   user_type:
     student: תלמיד

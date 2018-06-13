@@ -1,4 +1,5 @@
-"zh-TW":
+---
+zh-TW:
   data:
     instructions:
       2-3 Artist 1 new_instruction: 嗨，我是一個藝術家。您可以寫程式來讓我畫出任何東西。現在請您用一些程式積木，讓我沿著圖中的灰色線條畫畫。（每一條線的長度都是
@@ -7575,6 +7576,9 @@
       courseB_collector_loops_challenge2_instruction: |-
         Let's get the treasure! Help
         me across each row then come back to start the next row. Can you find a pattern?
+      courseB_collector_loops_challenge2_2018_instruction: Let's get the treasure!
+        Help me across each row then come back to start the next row. Can you find
+        a pattern?
       courseB_collector_loops_challenge2a_instruction: |-
         Help Laurel get at least
         **5** pieces of treasure to finish this puzzle.
@@ -10403,6 +10407,8 @@
       courseF_maze_ramp6_instruction: "「保持冷靜，幫我找到那隻壞豬豬。否則我真的會變成憤怒鳥！」"
       courseF_maze_ramp6_2018_instruction: "「保持冷靜，幫我找到那隻壞豬豬。否則我真的會變成憤怒鳥！」"
       courseF_maze_ramp7_instruction: "**挑戰：** 讓鳥抓到這隻豬！"
+      courseF_playlab_brokenText_instruction: In the rest of this stage, we're going
+        to build a game that you control!
       courseF_playlab_embed_vars_instruction: |-
         Answer Pegleg the Pirate's questions.
         What happens if you enter the codename "password"? What about some other

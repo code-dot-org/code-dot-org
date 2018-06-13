@@ -24,6 +24,8 @@ class DslTest < ActiveSupport::TestCase
     script_announcements: nil,
     new_name: nil,
     family_name: nil,
+    version_year: nil,
+    is_stable: nil,
   }
 
   test 'test Script DSL' do
@@ -583,10 +585,12 @@ DSL
     assert_equal expected, output
   end
 
-  test 'Script DSL with new_name and family_name' do
+  test 'Script DSL with new_name, family_name, version_year and is_stable' do
     input_dsl = <<DSL
 new_name 'new name'
 family_name 'family name'
+version_year '3035'
+is_stable true
 stage 'Stage1'
 level 'Level 1'
 level 'Level 2'
@@ -595,6 +599,8 @@ DSL
       {
         new_name: "new name",
         family_name: "family name",
+        version_year: "3035",
+        is_stable: true,
         stages: [
           {
             stage: "Stage1",
@@ -609,5 +615,26 @@ DSL
 
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     assert_equal expected, output
+  end
+
+  test 'serialize new_name, family_name, version_year and is_stable' do
+    puts 'test_serialize_new_name_and_family_name'
+    script = create :script,
+      {
+        new_name: 'new name',
+        family_name: 'family name',
+        version_year: '2001',
+        is_stable: true
+      }
+    script_text = ScriptDSL.serialize_to_string(script)
+    expected = <<-SCRIPT
+hidden false
+new_name 'new name'
+family_name 'family name'
+version_year '2001'
+is_stable true
+
+SCRIPT
+    assert_equal expected, script_text
   end
 end

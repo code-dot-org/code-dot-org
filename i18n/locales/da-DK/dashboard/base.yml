@@ -85,6 +85,7 @@ da:
     facebook: 'Facebook'
     windowslive: 'Microsoft-konto'
     clever: 'Clever Account'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Glemt din adgangskode?'
     need_confirmation: "Har du ikke modtaget bekræftelsesinstruktioner?"
     need_unlock: "Ikke modtaget lås op instruktioner?"
@@ -115,9 +116,9 @@ da:
     invalid_password: "Adgangskoden skal være på mindst 6 tegn"
     mismatch_password: "De to adgangskoder du har indtastet stemmer ikke overens"
     agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
-    under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
-    agree_us_website: "I agree to using a website based in the United States."
-    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
+    under_13_consent: "Hvis jeg er under 13 år, bekræfter jeg, at jeg har mine forældres eller værges tilladelse til at benytte tjenesterne fra Code.org."
+    agree_us_website: "Jeg accepterer at bruge en hjemmeside baseret i USA."
+    my_data_to_us: "Data fra min brug af dette websted kan sendes til og gemmes eller behandles i USA."
     student_terms: "Email addresses are not stored in a form that allows us to contact students. Students will never recieve emails from Code.org except for password recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more information."
     teacher_terms: "I agree to be bound by the Code.org terms of service. For more information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>."
     additional_information: "Vi har brug for nogle ekstra oplysninger til at fortsætte med at logge dig."
@@ -128,7 +129,8 @@ da:
     field_is_required: "krævet"
     accept_terms: "Du skal acceptere at oprette en konto"
     error: "Der opstod en fejl."
-    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_question: "Kan vi e-maile dig om opdateringer til vores kurser, lokale muligheder eller andre nyheder om computervidenskab?"
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: "Ja"
     email_preference_no: "Nej"
     email_preference_required: "You must specify an email preference."
@@ -467,6 +469,8 @@ da:
   gender:
     male: 'Mand'
     female: 'Kvinde'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: 'Foretrækker ikke at svare'
   user_type:
     student: 'studerende'
@@ -719,7 +723,7 @@ da:
     tos: "Termer"
     privacy: "Privatlivspolitik"
     privacy_notice: "Privacy Notice"
-    accept_label: 'I agree to the updated <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>'
+    accept_label: 'I agree to the <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.'
     accept: "Accept"
     print: "Udskriv"
     reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'

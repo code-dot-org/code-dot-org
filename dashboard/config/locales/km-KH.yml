@@ -1,4 +1,5 @@
-"km":
+---
+km:
   errors:
     messages:
       not_saved: សូមកែរនូវកំហុសដែលមានបន្តបន្ទាប់
@@ -94,6 +95,7 @@
     facebook: Facebook
     windowslive: គណនី Microsoft
     clever: គណនេយ្យមានលក្ខណៈពេញលេញ
+    powerschool: Powerschool Account
     forgot_password: បាន​ភ្លេច​ពាក្យ​សម្ងាត់​របស់​អ្នក?
     need_confirmation: មិន​បាន​ទទួល​ការ​ណែនាំ​អំពី​វិធី​បញ្ជាក់​ទេ?
     need_unlock: មិន​បាន​ទទួល​ការណែនាំ​អំពី​វិធី​ដោះសោ​ទេ?
@@ -162,6 +164,7 @@
     error: មានកំហុសមួយ
     email_preference_question: Can we email you about updates to our courses, local
       learning opportunities, or other computer science news?
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: យល់ព្រម
     email_preference_no: ទេ
     email_preference_required: You must specify an email preference.
@@ -614,6 +617,8 @@
   gender:
     male: ប្រុស
     female: ស្រី
+    non_binary: Non-binary
+    not_listed: Preferred term not listed
     none: សម្រេច​ចិត្ត​មិន​ឆ្លើយ
   user_type:
     student: សិស្ស

@@ -9,6 +9,7 @@ namespace :install do
       'post-commit',
       'post-checkout',
       'post-merge',
+      'pre-push'
     ]
     git_path = ".git/hooks"
 

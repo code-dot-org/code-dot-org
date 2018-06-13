@@ -1,4 +1,5 @@
-"fil":
+---
+fil:
   devise:
     confirmations:
       confirmed: Ang iyong email address ay matagumpay na nakumpirma.

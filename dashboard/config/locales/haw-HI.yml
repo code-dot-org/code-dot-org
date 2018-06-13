@@ -1,4 +1,5 @@
-"haw":
+---
+haw:
   errors:
     messages:
       not_saved: 'E hoʻopololei i kēia mau hemahema:'
@@ -94,6 +95,7 @@
     facebook: Facebook
     windowslive: Microsoft Account
     clever: Clever Account
+    powerschool: Powerschool Account
     forgot_password: Forgot your password?
     need_confirmation: Didn't receive confirmation instructions?
     need_unlock: Didn't receive unlock instructions?
@@ -165,6 +167,7 @@
     error: An error occurred.
     email_preference_question: Can we email you about updates to our courses, local
       learning opportunities, or other computer science news?
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: 'Yes'
     email_preference_no: 'No'
     email_preference_required: You must specify an email preference.
@@ -624,6 +627,8 @@
   gender:
     male: Male
     female: Female
+    non_binary: Non-binary
+    not_listed: Preferred term not listed
     none: Prefer not to answer
   user_type:
     student: Student

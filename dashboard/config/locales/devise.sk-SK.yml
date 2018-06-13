@@ -1,4 +1,5 @@
-"sk":
+---
+sk:
   devise:
     confirmations:
       confirmed: Vaša e-mailová adresa bola úspešne potvrdená.

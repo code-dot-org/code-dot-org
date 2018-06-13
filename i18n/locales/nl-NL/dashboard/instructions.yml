@@ -50,11 +50,11 @@ nl:
       2-3 Artist Functions 12 a_instruction: "Functies zijn echt geweldig om complexe dingen meerdere keren te tekenen. Kun je de functie \"tekenen een bloem\" gebruiken om de rest van de bloembak te vullen? (Tip: Tussen de bloemen zit een afstand van 100 pixels) "
       2-3 Artist Functions 12_instruction: "Functies zijn echt geweldig om complexe dingen meerdere keren te tekenen. Kun je de functie \"tekenen een bloem\" gebruiken om de rest van de bloembak te vullen? (Tip: Tussen de bloemen zit een afstand van 100 pixels) "
       2-3 Artist Functions 13_instruction: "We hebben je voorzien van vier functies.\nGebruik ze on elke manier die je wilt in één of meer lussen om tekeningen te maken die je met je vrienden kunt delen. Druk op uitvoeren om een voorbeeld te zien."
-      2-3 Artist Functions 2 a_instruction: 'Use the small green `draw a square` block to call this new function and create the glasses. '
+      2-3 Artist Functions 2 a_instruction: 'Gebruik het kleine, groene blok "teken een vierkant" om deze functie te gebruiken en maak de bril.'
       2-3 Artist Functions 2_instruction: "Met functies kan je nieuwe blokken definiëren! We hebben de blokken om een vierkant te tekenen in een functie met de naam \"teken een vierkant\". Kan je de \"teken een vierkant\" functie gebruiken om de brillenglazen te tekenen? De vierkanten staan 75 pixels uit elkaar."
-      2-3 Artist Functions 3 a_instruction: "Edit the \"draw a square\" function to draw glasses with frames that are 115px on each side. \n\nThe squares are now 45 pixels apart."
+      2-3 Artist Functions 3 a_instruction: "Verander de functie \"teken een vierkant\" zodat je een bril kunt tekenen met glazen van 115 pixels aan elke kant. De vierkanten staan 45 pixels uit elkaar."
       2-3 Artist Functions 3_instruction: "Bewerk de functie om een vierkant te teken met als lengte van een zijde 115 en een grotere bril te tekenen. De vierkantjes staan nu 45 pixels uit elkaar."
-      2-3 Artist Functions 4 a_instruction: Now, put the function inside of a loop and add an extra turn to draw these three squares.
+      2-3 Artist Functions 4 a_instruction: Plaats nu de functie in de lus en voeg een extra draai toe om deze drie vierkanten te tekenen.
       2-3 Artist Functions 4_instruction: Gebruik het "herhaal" block om deze 3 vierkanten te tekenen.
       2-3 Artist Functions 7_instruction: 'Gebruik de "teken een huis" functie om twee huizen met verschillende parameters te tekenen. (Tip: het eerste huis is 100 pixels).'
       2-3 Artist Functions 9_instruction: 'Hier is een sneeuwvlok-functie. Probeer er een winterlandschap mee te maken. Dit is een speel-niveau, dus er is geen puzzel om op te lossen. Veel plezier!'
@@ -3308,6 +3308,7 @@ nl:
       courseB_collector_loops_challenge1_instruction: 'Je krijgt deze keer een beperkt aantal blokken. Verzamel alle schatten! '
       courseB_collector_loops_challenge1_2018_instruction: 'Je krijgt deze keer een beperkt aantal blokken. Verzamel alle schatten! '
       courseB_collector_loops_challenge2_instruction: "Laten we de schatten verzamelen! Help me door iedere rij en kom iedere keer terug om aan de volgende rij te beginnen.\nKan jij een patroon vinden?"
+      courseB_collector_loops_challenge2_2018_instruction: "Laten we de schatten verzamelen! Help me door iedere rij en kom iedere keer terug om aan de volgende rij te beginnen.\nKan jij een patroon vinden?"
       courseB_collector_loops_challenge2a_instruction: Help Laurel get at least **5** pieces of treasure to finish this puzzle.
       courseB_collector_loops_challenge2a_2018_instruction: Help Laurel get at least **5** pieces of treasure to finish this puzzle.
       courseB_collector_loops_challenge`_instruction: 'Je kan deze keer slechts één van ieder pijltjesblok gebruiken. Verzamel alle schatten! '
@@ -4563,6 +4564,7 @@ nl:
       courseF_maze_ramp6_instruction: '"Keep calm and help me find the bad pig. Otherwise I might get angry!"'
       courseF_maze_ramp6_2018_instruction: '"Keep calm and help me find the bad pig. Otherwise I might get angry!"'
       courseF_maze_ramp7_instruction: Use what you've learned to get the bird to the pig!
+      courseF_playlab_brokenText_instruction: In the rest of this stage, we're going to build a game that you control!
       courseF_playlab_embed_vars_instruction: Answer Pegleg the Pirate's questions. What happens if you enter the codename "password"? What about some other code name?
       courseF_playlab_variables0_instruction: This is Pirate Pegleg.  He's awfully hard to understand these days!
       courseF_playlab_variables1_instruction: This is Pirate Pegleg.  He's awfully hard to understand these days!

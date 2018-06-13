@@ -74,12 +74,12 @@
   congratulations_on_completing_course2: "ขอแสดงความยินดีในการจบหลักสูตรที่ 2"
   congratulations_on_completing_course3: "ขอแสดงความยินดีในการจบหลักสูตรที่ 3"
   congratulations_on_completing_course4: "ขอแสดงความยินดีในการจบหลักสูตรที่ 4"
-  congratulations_on_completing_coursea: "Congratulations on completing Course A"
-  congratulations_on_completing_courseb: "Congratulations on completing Course B"
-  congratulations_on_completing_coursec: "Congratulations on completing Course C"
-  congratulations_on_completing_coursed: "Congratulations on completing Course D"
-  congratulations_on_completing_coursee: "Congratulations on completing Course E"
-  congratulations_on_completing_coursef: "Congratulations on completing Course F"
+  congratulations_on_completing_coursea: "ขอแสดงความยินดีที่คุณทำหลักสูตร A สำเร็จแล้ว"
+  congratulations_on_completing_courseb: "ขอแสดงความยินดีที่คุณทำหลักสูตร B สำเร็จแล้ว"
+  congratulations_on_completing_coursec: "ขอแสดงความยินดีที่คุณทำหลักสูตร C สำเร็จแล้ว"
+  congratulations_on_completing_coursed: "ขอแสดงความยินดีที่คุณทำหลักสูตร D สำเร็จแล้ว"
+  congratulations_on_completing_coursee: "ขอแสดงความยินดีที่คุณทำหลักสูตร E สำเร็จแล้ว"
+  congratulations_on_completing_coursef: "ขอแสดงความยินดีที่คุณทำหลักสูตร F สำเร็จแล้ว"
   congratulations_on_completing_accelerated: "ขอแสดงความยินดีในการสำเร็จหลักสูตรเร่งรัด"
   congrats_next_tutorials_title: "ลองการแนะนำการสอยอื่นต่อ"
   congrats_next_tutorials_desc: "ลองแบบสั้นกว่านี้ 1 ชั่วโมงสำหรับการทบทวน หรือลอง<a href=\"%{current_path}/next\">บททบทวนที่ใกล้เคียง</a>"
@@ -432,7 +432,7 @@
   starwars_javascript_title: "จาวาสคริปต์"
   starwars_javascript_description: "ใช้การลากวางบล็อคและจาวาสคริปต์"
   starwars_javascript_specs: "ภาษาอังกฤษเท่านั้น | เบราว์เซอร์ที่ทันสมัย | อายุมากกว่า 11 ปี"
-  starwars_blocks_title: "บล็อก"
+  starwars_blocks_title: "กล่องเครื่องมือ"
   starwars_blocks_description: "ใช้การลากวางบล็อค"
   starwars_blocks_specs: "หลายภาษา | เบราว์เซอร์ที่ทันสมัย สมาร์ทโฟน แท็บเล็ต | อายุ 6-106 ปี"
   starwars_platform_text: "เบราว์เซอร์ที่ทันสมัย สมาร์ทโฟน แท็บเล็ต"
@@ -555,6 +555,7 @@
   volunteer_engineer_submission_field_email_desc: "Your email address will never be shared, but we'll send you requests from teachers."
   volunteer_engineer_submission_field_email_placeholder: "ที่อยู่อีเมล"
   volunteer_engineer_submission_field_email_preference: "Can we email you about updates to our courses, volunteer opportunities, or other computer science news?"
+  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy policy)"
   volunteer_engineer_submission_field_email_preference_yes: 'ใช่'
   volunteer_engineer_submission_field_email_preference_no: 'ไม่ใช่'
   volunteer_engineer_submission_final_paragraph: "You will be listed on a map for local teachers to contact you for the Hour of Code or other volunteer opportunities. Your email and exact address will NEVER be shared by us. But the other information (including approximate location) will be publicly viewable by local teachers."
@@ -947,9 +948,25 @@
   coursee_name: "คอร์ส E"
   coursef-draft_name: คอร์ส F
   coursef_name: "คอร์ส F"
+  coursea-2017_name: Course A (2017)
+  courseb-2017_name: Course B (2017)
+  coursec-2017_name: Course C (2017)
+  coursed-2017_name: Course D (2017)
+  coursee-2017_name: Course E (2017)
+  coursef-2017_name: Course F (2017)
+  coursea-2018_name: Course A (2018)
+  courseb-2018_name: Course B (2018)
+  coursec-2018_name: Course C (2018)
+  coursed-2018_name: Course D (2018)
+  coursee-2018_name: Course E (2018)
+  coursef-2018_name: Course F (2018)
   accelerated_name: "Accelerated Course"
   express_name: "Express Course"
   pre-express_name: Pre-reader Express Course
+  express-2017_name: Express Course (2017)
+  pre-express-2017_name: Pre-reader Express Course (2017)
+  express-2018_name: Express Course (2018)
+  pre-express-2018_name: Pre-reader Express Course (2018)
   cspunit1_name: "(old) Unit 1: Digital Information"
   cspunit2_name: "(old) Unit 2: The Internet"
   cspunit3_name: "(old) Unit 3: Programming"
@@ -962,12 +979,26 @@
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Unit 5: Data and Society'
   csd6_name: 'Unit 6: Physical Computing'
+  csd1-2017_name: 'Unit 1: Problem Solving'
+  csd2-2017_name: 'Unit 2: Web Development'
+  csd3-2017_name: 'Unit 3: Animation and Games'
+  csd4-2017_name: 'Unit 4: The Design Process'
+  csd5-2017_name: 'Unit 5: Data and Society'
+  csd6-2017_name: 'Unit 6: Physical Computing'
   csd1-2018_name: 'Unit 1: Problem Solving'
   csd2-2018_name: 'Unit 2: Web Development'
   csd3-2018_name: 'Unit 3: Animation and Games'
   csd4-2018_name: 'Unit 4: The Design Process'
   csd5-2018_name: 'Unit 5: Data and Society'
   csd6-2018_name: 'Unit 6: Physical Computing'
+  csp1-2017_name: 'Unit 1: The Internet'
+  csp2-2017_name: 'Unit 2: Digital Information'
+  csp3-2017_name: 'Unit 3: Algorithms and Programming'
+  csp4-2017_name: 'Unit 4: Big Data and Privacy'
+  csp5-2017_name: 'Unit 5: Building Apps'
+  csp-explore-2017_name: 'AP: Explore PT Prep'
+  csp-create-2017_name: 'AP: Create PT Prep'
+  csppostap-2017_name: 'Post AP: Databases in Apps'
   csp1-2018_name: 'Unit 1: The Internet'
   csp2-2018_name: 'Unit 2: Digital Information'
   csp3-2018_name: 'Unit 3: Algorithms and Programming'
@@ -1010,6 +1041,8 @@
   math_category_name: "คำนวณ"
   hoc_category_name: "ช่วงเวลาของ Code"
   csf_category_name: "CS Fundamentals"
+  csf_2017_category_name: "CS Fundamentals (2017)"
+  csf_2018_category_name: "CS Fundamentals (2018)"
   csf_international_category_name: "CS Fundamentals International"
   csf2_draft_category_name: 'Under Development: Courses A - F'
   csd_category_name: "CS Discoveries ('17-'18)"
@@ -1466,7 +1499,7 @@
   header_learn: "Learn"
   header_teach: "Teach"
   header_stats: "สถิติ"
-  header_help_us: "Help Us"
+  header_help_us: "ช่วยเรา"
   header_about: "About"
   header_teacher_community: "Teacher community"
   header_help_support: 'Help and support '

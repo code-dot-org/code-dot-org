@@ -1,4 +1,5 @@
-"ja":
+---
+ja:
   errors:
     messages:
       not_saved: 次の間違い（エラー）を正しく直してください。
@@ -87,6 +88,7 @@
     facebook: Facebook
     windowslive: Microsoft アカウント
     clever: Clever Account
+    powerschool: Powerschool Account
     forgot_password: パスワードをお忘れですか？
     need_confirmation: 確認Eメールが届かない
     need_unlock: ロック解除用のEメールが届いていない
@@ -141,7 +143,7 @@
     accept_terms: アカウントを作成することに、同意が必要です。
     error: An error occurred.
     email_preference_question: 当社のコースについての最新情報、各地域における機会、コンピュータサイエンスに関するニュースなどを電子メールを介して送付してもよろしいですか？
-    email_preference_privacy: （Code.orgのプライバシーポリシーをご覧ください）
+    email_preference_privacy: "（Code.orgのプライバシーポリシーをご覧ください）"
     email_preference_yes: はい
     email_preference_no: いいえ
     email_preference_required: You must specify an email preference.
@@ -521,6 +523,8 @@
   gender:
     male: 男性
     female: 女性
+    non_binary: Non-binary
+    not_listed: Preferred term not listed
     none: 答えたくない
   user_type:
     student: 生徒

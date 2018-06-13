@@ -3272,6 +3272,7 @@ es-MX:
       courseB_collector_loops_challenge1_instruction: 'Esta vez tienes bloques limitados. ¡Obtén todo el tesoro! '
       courseB_collector_loops_challenge1_2018_instruction: 'Esta vez tienes bloques limitados. ¡Obtén todo el tesoro! '
       courseB_collector_loops_challenge2_instruction: '¡Consigamos el tesoro! Ayúdame a cruzar cada fila y luego regresa para comenzar la siguiente fila. ¿Puedes encontrar un patrón?'
+      courseB_collector_loops_challenge2_2018_instruction: '¡Consigamos el tesoro! Ayúdame a cruzar cada fila y luego regresa para comenzar la siguiente fila. ¿Puedes encontrar un patrón?'
       courseB_collector_loops_challenge2a_instruction: Ayuda a Laurel a obtener ** 5 ** piezas del tesoro para completar este rompecabezas.
       courseB_collector_loops_challenge2a_2018_instruction: Ayuda a Laurel a obtener ** 5 ** piezas del tesoro para completar este rompecabezas.
       courseB_collector_loops_challenge`_instruction: 'Esta vez solo puedes usar uno de cada bloque de flecha. ¡Obtén todo el tesoro! '
@@ -3992,8 +3993,8 @@ es-MX:
       courseD_maze_nestedLoops6_2018_instruction: '¡Llévame al girasol!'
       courseD_maze_ramp1_instruction: Para este rompecabezas, encaja todos los bloques haz clic en "Ejecutar" y ¡ve que sucede!
       courseD_maze_ramp1_2018_instruction: Para este rompecabezas, encaja todos los bloques haz clic en "Ejecutar" y ¡ve que sucede!
-      courseD_maze_ramp2_instruction: Arrastra un bloque 'mover hacia adelante' extra desde la caja de herramientas, luego adjunta todos los bloques al 'cuando ejecute' para finalizar tu código.
-      courseD_maze_ramp2_2018_instruction: Arrastra un bloque 'mover hacia adelante' extra desde la caja de herramientas, luego adjunta todos los bloques al 'cuando ejecute' para finalizar tu código.
+      courseD_maze_ramp2_instruction: Arrastra un bloque `mover hacia adelante` extra desde la caja de herramientas, luego adjunta todos los bloques al `cuando ejecute` para finalizar tu código.
+      courseD_maze_ramp2_2018_instruction: Arrastra un bloque `mover hacia adelante` extra desde la caja de herramientas, luego adjunta todos los bloques al `cuando ejecute` para finalizar tu código.
       courseD_maze_ramp3_instruction: Hay un bloque extra que va a causar que el pájaro choque. Elimínalo arrastrandolo de vuellta a la caja de herramientas.
       courseD_maze_ramp3_2018_instruction: Hay un bloque extra que va a causar que el pájaro choque. Elimínalo arrastrandolo de vuellta a la caja de herramientas.
       courseD_maze_ramp4_instruction: '¡Evita el TNT o volarán las plumas!'
@@ -4063,8 +4064,8 @@ es-MX:
       courseD_playLab_embedded_instruction: "Mueve a Pegleg el Pirata con las teclas de flechas. ¡Llega hasta el dragón para anotar puntos, pero evita al ninja! Pararse bajo la línea del pulpo hará que el ninja deje de perseguirte, ¡pero cuidado! Mientras más te quedes ahí, más puntos perderás!"
       courseD_scrat_ramp1_instruction: Para este rompecabezas, encaja todos los bloques haz clic en "Ejecutar" y ¡ve que sucede!
       courseD_scrat_ramp1_2018_instruction: Para este rompecabezas, encaja todos los bloques haz clic en "Ejecutar" y ¡ve que sucede!
-      courseD_scrat_ramp2_instruction: Arrastra un bloque 'mover hacia adelante' extra desde la caja de herramientas, luego adjunta todos los bloques al 'cuando ejecute' para finalizar tu código.
-      courseD_scrat_ramp2_2018_instruction: Arrastra un bloque 'mover hacia adelante' extra desde la caja de herramientas, luego adjunta todos los bloques al 'cuando ejecute' para finalizar tu código.
+      courseD_scrat_ramp2_instruction: Arrastra un bloque `mover hacia adelante` extra desde la caja de herramientas, luego adjunta todos los bloques al `cuando ejecute` para finalizar tu código.
+      courseD_scrat_ramp2_2018_instruction: Arrastra un bloque `mover hacia adelante` extra desde la caja de herramientas, luego adjunta todos los bloques al `cuando ejecute` para finalizar tu código.
       courseD_scrat_ramp3_instruction: Hay un bloque extra que va a hacer que Scrat se estrelle. Elimínalo arrastrandolo de vuelta a la caja de herramientas.
       courseD_scrat_ramp3_2018_instruction: Hay un bloque extra que va a hacer que Scrat se estrelle. Elimínalo arrastrandolo de vuelta a la caja de herramientas.
       courseD_scrat_ramp4_instruction: '¡Evita el hielo trizado para mantener seguro a Scrat!'
@@ -4263,7 +4264,7 @@ es-MX:
       courseE_maze_ramp13_instruction: '¡Momento para un último rompecabezas para unirlo todo!'
       courseE_maze_ramp1_2018_instruction: For this puzzle, drag all of the blocks together and click "Run" to watch it go!
       courseE_maze_ramp2_instruction: Arrastra un bloque 'mover hacia adelante' extra desde la caja de herramientas, luego adjunta todos los bloques al 'cuando ejecute' para finalizar el código.
-      courseE_maze_ramp2_2018_instruction: Arrastra un bloque 'mover hacia adelante' extra desde la caja de herramientas, luego adjunta todos los bloques al 'cuando ejecute' para finalizar tu código.
+      courseE_maze_ramp2_2018_instruction: Arrastra un bloque `mover hacia adelante` extra desde la caja de herramientas, luego adjunta todos los bloques al `cuando ejecute` para finalizar tu código.
       courseE_maze_ramp3_instruction: Hay un bloque extra que causará que el pájaro se estrelle. Elimínalo arrastrándolo de vuelta a la caja d eherramientas.
       courseE_maze_ramp3_2018_instruction: Hay un bloque extra que va a causar que el pájaro choque. Elimínalo arrastrandolo de vuellta a la caja de herramientas.
       courseE_maze_ramp4_instruction: '¡Evita el TNT o volarán las plumas!'
@@ -4521,6 +4522,7 @@ es-MX:
       courseF_maze_ramp6_instruction: '"Mantén la calma y ayúdame a encontrar al cerdo malo. ¡De lo contrario me puedo enojar!"'
       courseF_maze_ramp6_2018_instruction: '"Keep calm and help me find the bad pig. Otherwise I might get angry!"'
       courseF_maze_ramp7_instruction: '¡Usa lo que has aprendido para llevar al pájaro hasta el cerdo!'
+      courseF_playlab_brokenText_instruction: En el resto de esta etapa, ¡vams a construir un juego que tú controles!
       courseF_playlab_embed_vars_instruction: Respnde Las preguntas de Pegleg el Pirata. ¿Qué sucede si ingresas la "contraseña" códigonombre? ¿Qué pasa con otros nombres de código?
       courseF_playlab_variables0_instruction: Este es el Pirara Pegleg. ¡Es muy díficil entenderle en estos días!
       courseF_playlab_variables1_instruction: Este es el Pirara Pegleg. ¡Es muy díficil entenderle en estos días!

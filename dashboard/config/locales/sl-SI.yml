@@ -1,4 +1,5 @@
-"sl":
+---
+sl:
   errors:
     messages:
       not_saved: 'Prosim popravite sledeče napake:'
@@ -92,6 +93,7 @@
     facebook: Facebook
     windowslive: Microsoft račun
     clever: Pameten račun
+    powerschool: Powerschool Account
     forgot_password: Si pozabil/a svoje geslo?
     need_confirmation: Nisi prejel/a navodil za potrditev?
     need_unlock: Nisi prejel/a navodil za odklepanje?
@@ -160,6 +162,7 @@
     error: An error occurred.
     email_preference_question: Can we email you about updates to our courses, local
       learning opportunities, or other computer science news?
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: Da
     email_preference_no: Ne
     email_preference_required: You must specify an email preference.
@@ -619,6 +622,8 @@
   gender:
     male: Moški
     female: Ženska
+    non_binary: Non-binary
+    not_listed: Preferred term not listed
     none: Raje ne bi odgovoril
   user_type:
     student: Učenec
