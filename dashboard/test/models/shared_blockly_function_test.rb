@@ -9,7 +9,7 @@ class SharedBlocklyFunctionTest < ActiveSupport::TestCase
     function = create :shared_blockly_function
     xml_before = function.file_xml
     function.delete
-    SharedBlocklyFunction.load_function function.xml_path
+    SharedBlocklyFunction.load_functions
 
     seeded_function = SharedBlocklyFunction.find_by(name: function.name)
 

@@ -25,8 +25,8 @@ class SharedBlocklyFunction < ApplicationRecord
     behavior: 1,
   }
 
-  after_save :write_file
-  after_destroy :delete_file
+  before_save :write_file
+  before_destroy :delete_file
   validates_presence_of :name
   validates_uniqueness_of :name
 
@@ -76,11 +76,11 @@ class SharedBlocklyFunction < ApplicationRecord
   end
 
   def self.load_functions
-    function_names = []
+    removed_functions = SharedBlocklyFunction.all.pluck(:name)
     LevelLoader.for_each_file('config/shared_functions/**/*.xml') do |xml_path|
-      function_names << load_function(xml_path)
+      removed_functions -= [load_function(xml_path)]
     end
-    SharedBlocklyFunction.where.not(name: function_names).destroy_all
+    SharedBlocklyFunction.where(name: removed_functions).destroy_all
   end
 
   def self.load_function(xml_path)
@@ -101,5 +101,6 @@ class SharedBlocklyFunction < ApplicationRecord
     function.description = description
     function.stack = stack
     function.save!
+    function.name
   end
 end
