@@ -243,6 +243,10 @@ class CDOImpl < OpenStruct
     site_url('advocacy.code.org', path, scheme)
   end
 
+  def curriculum_url(locale, path = '')
+    "https://curriculum.code.org/#{locale}/#{path}"
+  end
+
   def default_scheme
     rack_env?(:development) || ENV['CI'] ? 'http:' : 'https:'
   end
