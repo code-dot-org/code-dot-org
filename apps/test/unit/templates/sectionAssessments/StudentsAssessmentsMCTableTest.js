@@ -1,13 +1,13 @@
 import React from 'react';
 import {mount} from 'enzyme';
 import {assert, expect} from '../../../util/configuredChai';
-import StudentMultipleChoiceOverviewTable from '@cdo/apps/templates/sectionAssessments/StudentMultipleChoiceOverviewTable';
+import StudentsAssessmentsMCTable from '@cdo/apps/templates/sectionAssessments/StudentsAssessmentsMCTable';
 import {studentOverviewData} from '@cdo/apps/templates/sectionAssessments/assessmentsTestHelpers';
 
 describe('StudentMultipleChoiceOverviewTable', () => {
   it('renders a table', () => {
     const wrapper = mount(
-      <StudentMultipleChoiceOverviewTable
+      <StudentsAssessmentsMCTable
         studentOverviewData={studentOverviewData}
       />
     );
@@ -17,7 +17,7 @@ describe('StudentMultipleChoiceOverviewTable', () => {
 
   it('renders the correct number of rows and headers', () => {
     const wrapper = mount(
-      <StudentMultipleChoiceOverviewTable
+      <StudentsAssessmentsMCTable
         studentOverviewData={studentOverviewData}
       />
     );
@@ -31,7 +31,7 @@ describe('StudentMultipleChoiceOverviewTable', () => {
 
   it('renders with an icon if specified', () => {
     const wrapper = mount(
-      <StudentMultipleChoiceOverviewTable
+      <StudentsAssessmentsMCTable
         studentOverviewData={studentOverviewData}
         icon="check-circle"
       />
@@ -43,7 +43,7 @@ describe('StudentMultipleChoiceOverviewTable', () => {
 
   it('renders a checkmark when an assessment is submitted', () => {
     const wrapper = mount(
-      <StudentMultipleChoiceOverviewTable
+      <StudentsAssessmentsMCTable
         studentOverviewData={studentOverviewData}
       />
     );
