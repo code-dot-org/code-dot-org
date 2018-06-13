@@ -180,7 +180,7 @@
   "codeIntroduced": "Code Introduced",
   "codeMode": "Code",
   "codeTooltip": "See generated JavaScript code.",
-  "commentPrefix": "Comment:",
+  "commentPrefix": "comment:",
   "commentTooltip": "Leave a message for yourself, or anyone else reading your code.",
   "completed": "Completed",
   "completedLevels": "Completed Levels",

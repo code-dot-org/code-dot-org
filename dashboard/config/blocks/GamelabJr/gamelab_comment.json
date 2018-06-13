@@ -1,7 +1,7 @@
 {
   "category": "Comments",
   "config": {
-    "blockText": "// {COMMENT}",
+    "blockText": "comment: {COMMENT}",
     "func": "comment",
     "color": [
       0,

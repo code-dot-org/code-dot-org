@@ -1,4 +1,5 @@
-"bg-BG":
+---
+bg-BG:
   hour_of_code: Час на Кодирането
   hello: Здравей, свят
   'yes': Да
@@ -726,8 +727,8 @@
   volunteer_engineer_submission_field_email_placeholder: Имейл адрес
   volunteer_engineer_submission_field_email_preference: Can we email you about updates
     to our courses, volunteer opportunities, or other computer science news?
-  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
-    policy)"
+  volunteer_engineer_submission_field_email_preference_privacy: "(Вижте нашата политика
+    за поверителност)"
   volunteer_engineer_submission_field_email_preference_yes: Да
   volunteer_engineer_submission_field_email_preference_no: Не
   volunteer_engineer_submission_final_paragraph: Вие ще бъдете отбелязан на картата
@@ -1247,9 +1248,25 @@
   coursee_name: Course E
   coursef-draft_name: Course F
   coursef_name: Course F
+  coursea-2017_name: Course A (2017)
+  courseb-2017_name: Course B (2017)
+  coursec-2017_name: Course C (2017)
+  coursed-2017_name: Course D (2017)
+  coursee-2017_name: Course E (2017)
+  coursef-2017_name: Course F (2017)
+  coursea-2018_name: Course A (2018)
+  courseb-2018_name: Course B (2018)
+  coursec-2018_name: Course C (2018)
+  coursed-2018_name: Course D (2018)
+  coursee-2018_name: Course E (2018)
+  coursef-2018_name: Course F (2018)
   accelerated_name: Ускорен курс
   express_name: Express Course
   pre-express_name: Pre-reader Express Course
+  express-2017_name: Express Course (2017)
+  pre-express-2017_name: Pre-reader Express Course (2017)
+  express-2018_name: Express Course (2018)
+  pre-express-2018_name: Pre-reader Express Course (2018)
   cspunit1_name: "(стар) Урок 1: Цифрова информация"
   cspunit2_name: "(стар) Раздел 2: Интернет"
   cspunit3_name: "(стар) Раздел 3: програмиране"
@@ -1328,6 +1345,8 @@
   math_category_name: Математика
   hoc_category_name: Час на Кодирането
   csf_category_name: CS основи
+  csf_2017_category_name: CS Fundamentals (2017)
+  csf_2018_category_name: CS Fundamentals (2018)
   csf_international_category_name: CS Fundamentals International
   csf2_draft_category_name: 'Under Development: Courses A - F'
   csd_category_name: 'Under Development: CS Discoveries'

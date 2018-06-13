@@ -22,9 +22,9 @@ Code.org International Summit
 
 **Join us for Code.org's first-ever International Summit!**
 
-Did you know that over half of Code.org's users are from outside of the U.S.? We collaborate with more than 85 international partners to promote computer science education around the world. Our content is used in more than 180 countries and more than 60 languages, but we still have a long way to go to ensure that every student in every school around the world has the opportunity to learn computer science. 
+Did you know that over half of Code.org's users are from outside of the U.S.? We collaborate with more than 85 international partners to promote computer science education around the world. Our content is used in more than 180 countries and more than 60 languages, but we still have a long way to go to ensure that every student in every school around the world has the opportunity to learn computer science.
 
-Join us for three days of engaging sessions led by Code.org staff, unique networking opportunities, and actionable resources.  
+Join us for three days of engaging sessions led by Code.org staff, presentations from Code.org international partners, unique networking opportunities, and actionable resources.  
 
 [/col-50]
 
@@ -35,6 +35,13 @@ Join us for three days of engaging sessions led by Code.org staff, unique networ
 ## **Who should attend the International Summit?**
 
 The International Summit will be most useful to organizations based outside of the U.S. that are working to expand computer science education, such as staff from ministries of education, non-profit organizations, and social impact teams of for-profit corporations. Please note that none of the sessions will provide professional learning content to teachers of K-12 computer science. 
+
+## **Registration Details**
+
+* The registration deadline is **July 13, 2018**.
+* Code.org will cover the cost of your registration fee when you register prior to July 13, 2018. Late registrations will be considered on a case-by-case basis.
+* Please note that we will not be able to accommodate you at the summit if you do not fill out the registration form. 
+
 
 <a href="https://goo.gl/forms/fijvhkkdULf8oZRX2" target="_blank"><button type="button">Register today!</button></a>
 
@@ -76,10 +83,14 @@ All conference sessions will take place at:
 <details>
 <summary>**Should I reserve my own hotel?**</summary>
   <p>
+  <br>
+  There are two options for reserving accommodations.
   <ul>
     <li>Code.org and the Sheraton Dallas Hotel are pleased to offer a discounted rate of USD $187 (excluding taxes and fees) per night for rooms at the Sheraton Dallas Hotel. If you would like to take advantage of the discounted rate, Code.org will make the reservation on your behalf, and you can pay the hotel by credit card at the end of your stay.</li>
-    <li> If you prefer to find accommodations at a different hotel, you will be responsible for making your own arrangements. You can indicate your accommodation preferences on the <a href="https://goo.gl/forms/fijvhkkdULf8oZRX2" target=_"blank">registration form</a>.</li>
+    <li> If you prefer to find accommodations at a different hotel, you will be responsible for making your own arrangements.</li> 
   </ul>
+  <p>
+  You can indicate your accommodation preferences on the <a href="https://goo.gl/forms/fijvhkkdULf8oZRX2" target=_"blank">registration form</a>.
 
 </p>
 </details>
@@ -110,14 +121,14 @@ Alternatively, a taxi or rideshare will get you from the airport to the hotel in
   <br>
 Code.org is happy to cover the costs of the following: 
 
-* Registration fee for all participants 
+* Registration fee for all participants registered prior to July 13
 * Catered breakfast and lunch from September 10-12
 * Seated dinner on September 10
 
 </p>
 </details>
 
-## **What to Bring**
+## **What to Pack**
 <details>
   <summary>**What kind of clothing should I pack?**</summary>
   <p>
@@ -141,6 +152,7 @@ Please note that Code.org will not have extra devices on hand for participants t
 <details>
   <summary>**What is the schedule for the week?**</summary>
   <p>
+  <br>
   We are still working on finalizing the summit agenda. We'll post it here as soon as it is available. 
 
 </p>
@@ -173,8 +185,9 @@ We expect you to attend for the full duration of the International Summit. Make 
 <a id="who"></a>
 ## **Code.org Staff at the International Summit**
 
-More information coming soon!
-
+<p>
+<br>
+<%= view :about_headshots, people:DB[:cdo_team].where(kind_s:'intlsummitstaff') %></p>
 
 
 ## **Contact Us**

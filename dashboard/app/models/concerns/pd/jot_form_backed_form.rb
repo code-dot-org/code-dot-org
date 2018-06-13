@@ -89,8 +89,7 @@ module Pd
 
         JotForm::Translation.new(form_id).get_submissions(
           last_known_submission_id: get_last_known_submission_id(form_id),
-          min_date: get_min_date(form_id),
-          full_text_search: Rails.env
+          min_date: get_min_date(form_id)
         ).map do |submission|
           answers = submission[:answers]
 
@@ -104,11 +103,12 @@ module Pd
 
               # Note, form_data_hash processes the answers and will raise an error if they don't match the questions.
               # Include hidden questions for full validation and so skip_submission? can inspect them.
-              if skip_submission?(model.form_data_hash(show_hidden_questions: true))
+              if skip_submission?(form_id, model.form_data_hash(show_hidden_questions: true))
                 CDO.log.info "Skipping #{submission[:submission_id]}"
                 next
               end
               model.save!
+              CDO.log.info "Saved submission #{submission[:submission_id]} for form #{form_id}"
             end
           end
         rescue => e
@@ -120,9 +120,10 @@ module Pd
       # By default skip other environments. This assumes that environment is a property in the processed answers.
       # TODO(Andrew): Filter in the API query if possible, once we hear back from JotForm API support.
       # See https://www.jotform.com/answers/1483561-API-Filter-form-id-submissions-endpoint-with-question-and-answer#4
+      # @param form_id [Integer]
       # @param processed_answers [Hash]
       # @return [Boolean] true if this submission should be skipped
-      def skip_submission?(processed_answers)
+      def skip_submission?(form_id, processed_answers)
         environment = processed_answers['environment']
         raise "Missing required environment field" unless environment
 
@@ -131,13 +132,17 @@ module Pd
 
         # Is it a duplicate? These will be prevented in the future, but for now log and skip
         # TODO(Andrew): prevent duplicates and remove this code.
-        key_attributes = attribute_mapping.transform_values {|k| processed_answers[k]}
+        key_attributes = get_key_attributes(form_id, processed_answers)
         if exists?(key_attributes)
           CDO.log.warn "Submission already exists for #{key_attributes}, skipping"
           return true
         end
 
         false
+      end
+
+      def get_key_attributes(form_id, processed_answers)
+        attribute_mapping.transform_values {|k| processed_answers[k]}
       end
 
       # Get a form id from the configuration

@@ -72,7 +72,7 @@ Dashboard::Application.routes.draw do
   end
   # Section API routes (JSON only)
   concern :section_api_routes do
-    resources :sections, only: [:index, :show, :create, :destroy] do
+    resources :sections, only: [:index, :show, :create, :update, :destroy] do
       resources :students, only: [:index, :update], controller: 'sections_students' do
         collection do
           post 'bulk_add'
