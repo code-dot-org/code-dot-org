@@ -1,4 +1,5 @@
-"km":
+---
+km:
   errors:
     messages:
       not_saved: សូមកែរនូវកំហុសដែលមានបន្តបន្ទាប់
@@ -94,6 +95,7 @@
     facebook: Facebook
     windowslive: គណនី Microsoft
     clever: គណនេយ្យមានលក្ខណៈពេញលេញ
+    powerschool: Powerschool Account
     forgot_password: បាន​ភ្លេច​ពាក្យ​សម្ងាត់​របស់​អ្នក?
     need_confirmation: មិន​បាន​ទទួល​ការ​ណែនាំ​អំពី​វិធី​បញ្ជាក់​ទេ?
     need_unlock: មិន​បាន​ទទួល​ការណែនាំ​អំពី​វិធី​ដោះសោ​ទេ?

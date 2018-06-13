@@ -1150,6 +1150,21 @@ endvariants
     assert_equal [script], scripts
   end
 
+  test "get_assessment_script_levels returns an empty list if no level groups" do
+    script = create(:script, name: 'test-no-levels')
+    level_group_script_level = script.get_assessment_script_levels
+    assert_equal level_group_script_level, []
+  end
+
+  test "get_assessment_script_levels returns a list of script levels" do
+    script = create(:script, name: 'test-level-group')
+    level_group = create(:level_group, name: 'assessment 1')
+    script_level = create(:script_level, levels: [level_group], assessment: true, script: script)
+
+    assessment_script_levels = script.get_assessment_script_levels
+    assert_equal assessment_script_levels[0], script_level
+  end
+
   private
 
   def has_hidden_script?(scripts)

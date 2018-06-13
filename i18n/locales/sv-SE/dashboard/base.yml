@@ -85,6 +85,7 @@ sv:
     facebook: 'Facebook'
     windowslive: 'Microsoft Account'
     clever: 'Clever Account'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Glömt ditt lösenord?'
     need_confirmation: "Har du inte fått bekräftelseinstruktioner?"
     need_unlock: "Har du inte fått instruktioner för att låsa upp?"
@@ -115,9 +116,9 @@ sv:
     invalid_password: "Lösenordet måste vara minst 6 tecken långt"
     mismatch_password: "De två lösenord du skrev matchar inte varandra"
     agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
-    under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
-    agree_us_website: "I agree to using a website based in the United States."
-    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
+    under_13_consent: "Om jag är under 13 år bekräftar jag härmed att jag har min förälders eller målsmans tillåtelse att använda tjänsterna på Code.org."
+    agree_us_website: "Jag samtycker till att använda en webbplats baserad i USA."
+    my_data_to_us: "När jag använder denna webbplats kan information om detta skickas till och lagras eller bearbetas i USA."
     student_terms: "Jag har läst och godkänner Code.org <a href='http://code.org/tos'>användarvillkor</a>. Om jag är under 13 år gammal, så bekräftar jag, genom att skicka in det här formuläret, att jag har min vårdnadshavares godkännande för att använda mig utav siten code.org. <br/><br/> Mejladresser sparas inte på ett sådant sätt att vi kan kontakta elever. Elever kommer aldrig att få mejl utav oss, om det inte gäller lösenordsåterställande. Se vår <a href='http://code.org/privacy'>sekretesspolicy</a> för mer information."
     teacher_terms: "Jag godkänner Code.orgs användarvillkor. För mer information, se vår <a href='http://code.org/privacy'>sekretesspolicy</a>."
     additional_information: "Vi behöver  ytterligare information att fortsätta registrera dig."
@@ -128,7 +129,7 @@ sv:
     field_is_required: "krävs"
     accept_terms: "Du måste godkänna för att skapa ett konto"
     error: "An error occurred."
-    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_question: "Får vi skicka e-post till dig med nyheter om våra kurser, lokala erbjudanden eller andra nyheter i ämnet datavetenskap?"
     email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: "Ja"
     email_preference_no: "Nej"

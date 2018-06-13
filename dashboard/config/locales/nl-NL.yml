@@ -1,4 +1,5 @@
-"nl":
+---
+nl:
   errors:
     messages:
       not_saved: 'Corrigeer de volgende fouten:'
@@ -96,6 +97,7 @@
     facebook: Facebook
     windowslive: Microsoft Account
     clever: Slimme Account
+    powerschool: Powerschool Account
     forgot_password: Wachtwoord vergeten?
     need_confirmation: Geen bevestigingsinstructies ontvangen?
     need_unlock: Nog geen unlock instructies ontvangen?
@@ -167,7 +169,7 @@
     error: Er is een fout opgetreden.
     email_preference_question: Mogen wij u e-mailen met updates over onze cursussen,
       lokale aanbiedingen of ander nieuws op het gebied van informatica?
-    email_preference_privacy: "(Zie ons privacybeleid)"
+    email_preference_privacy: "(Zie ons privacy beleid)"
     email_preference_yes: Ja
     email_preference_no: Nee
     email_preference_required: You must specify an email preference.

@@ -1,4 +1,5 @@
-"sq":
+---
+sq:
   devise:
     confirmations:
       confirmed: Email-i juaj u konfirmua me sukses.

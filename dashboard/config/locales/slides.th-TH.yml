@@ -1,4 +1,5 @@
-"th":
+---
+th:
   slides:
     maze_intro:
       1:
@@ -18,7 +19,7 @@
         text: โปรแกรมถูกติดตั้งเพื่อให้คอมพิวเตอร์ของคุณเป็นสื่อกลางในการสอน.
       6:
         image: notes/hoc1_6.jpg
-        text: เป้าหมายของโปรแกรมแรกของคุณคือการทำให้  Angry Bird  ชน  หมูเขียว.
+        text: เป้าหมายของโปรแกรมแรกของคุณคือการพาเจ้านกขี้โมโห ผ่านเขาวงกต ไปชนเจ้าหมูเขียวตัวนั้น
       7:
         image: notes/hoc1_7.jpg
         text: ช่องทางซ้ายคือฐานให้โปรแกรมของคุณรัน  เป็นฐานหลักของทุกชิ้นส่วน.
@@ -86,48 +87,45 @@
     flappy_intro:
       1:
         image: notes/flappy01.jpg
-        text: Hi, I'm Katie! One of the most exciting things about computer science
-          is that a computer program can be interactive.
+        text: สวัสดีค่ะ! ฉันชื่อแคทธี หนึ่งในสิ่งที่น่าตื่นเต้นที่สุดเกี่ยวกับวิทยาการคอมพิวเตอร์คือการที่โปรแกรมคอมพิวเตอร์สามารถโต้ตอบกับคุณได้
       2:
         image: notes/flappy02.jpg
-        text: Any time somebody clicks or taps or types on a computer or phone, that
-          generates an EVENT, and there's some code that decides what to do when an
-          EVENT occurs.
+        text: เมื่อใดก็ตามที่มีคนคลิกหรือแตะหรือพิมพ์ลงบนคอมพิวเตอร์หรือมือถือที่สร้างเหตุการณ์ขึ้นมา
+          และมีรหัสบางอย่างที่ตัดสินใจว่าจะทำอย่างไรเมื่อเกิดเหตุการณ์ขึ้น
       3:
         image: notes/flappy03.jpg
-        text: 'For example, you could have an EVENT-HANDLER that says "when the mouse
-          is clicked, play a sound" '
+        text: 'ตัวอย่างเช่นคุณอาจมีตัวจัดการเหตุการณ์ที่สื่อสารว่า "เมื่อมีการคลิกเมาส์
+          ให้เล่นเสียง " '
       4:
         image: notes/flappy04.jpg
-        text: Have you ever heard of the game FlappyBird? By using Event handlers,
-          we're going to learn to program our own custom version of FlappyBird!
+        text: คุณเคยได้ยินเกมชื่อ FlappyBird ไหม? โดยใช้ตัวจัดการเหตุการณ์ เรากำลังจะเรียนรู้ที่จะโปรแกรม
+          FlappyBird รุ่นที่เราจะกำหนดในแบบของเราเอง!
       5:
         image: notes/flappy05.jpg
-        text: The code you'll write involves dragging and dropping blocks that represent
-          commands for the computer. Under the hood, each of these blocks is represented
-          by real code.
+        text: รหัสที่คุณจะเขียนเกี่ยวข้องกับการลากและปล่อยบล็อกที่เป็นตัวแทนของคำสั่งสำหรับคอมพิวเตอร์
+          สำหรับสิ่งที่เกิดขึ้นกับคอมพิวเตอร์นั้น แต่ละบล็อกเหล่านี้ที่เราเห็นนี้
+          เป็นตัวแทนขอวโค้ดที่เป็นตัวอักษรจริงๆ.
       6:
         image: notes/flappy06.jpg
-        text: 'If you take a look at the workspace, there are some green blocks that
-          are filled in for you - these are "event handlers" '
+        text: 'ถ้าคุณลองดูที่พื้นที่ทำงาน, มีบล็อกสีเขียวบางบล็อกที่มีการกรอกข้อมูลไว้แล้วสำหรับคุณ-สิ่งเหล่านี้เป็น  "ตัวจัดการเหตุการณ์
+          " '
       7:
         image: notes/flappy07.jpg
-        text: If you want the bird to FLAP when you CLICK the mouse, you can do that
-          by attaching the "FLAP" block to the appropriate event handler, and now
-          in your game whenever you click the mouse, the bird will flap.
+        text: ถ้าคุณต้องการให้นกกระพือปีกเมื่อคุณคลิกเมาส์ คุณสามารถทำได้โดยการต่อบล็อก
+          "กระพือปีก..." เข้าไปกับตัวจัดการเหตุการณ์ที่เหมาะสม และตอนนี้ในเกมของคุณเ
+          มื่อใดก็ตามที่คุณคลิกเมาส์นกก็จะกระพือปีก
       8:
         image: notes/flappy08.jpg
-        text: In each puzzle of this activity we'll introduce new types of events
-          as green blocks on the workspace, and you can decide the appropriate blocks
-          to add in response to those events.
+        text: ในแต่ละปริศนาของกิจกรรมนี้ เราจะแนะนำเหตุการณ์ประเภทใหม่เป็นบล็อกสีเขียวบนพื้นที่ทำงานและคุณสามารถเลือกบล็อกที่เหมาะสม
+          เพื่อเพิ่มการตอบสนองต่อเหตุการณ์เหล่านั้น
       9:
         image: notes/flappy09.jpg
-        text: When you see a drop down arrow like this, that means you can change
-          the settings - like what sound to play when flappy hits the ground.
+        text: เมื่อคุณเห็นลูกศรหล่นลงมาแบบนี้ นั่นหมายความว่าคุณสามารถเปลี่ยนการตั้งค่าต่างๆ-เหมือนเสียงในการเล่นเมื่อ
+          Flappy กระแทกพื้นดิน.
       10:
         image: notes/flappy10.jpg
-        text: In the final puzzle you'll be able to create your own game and share
-          it with your friends. Have fun!
+        text: ในปริศนาสุดท้าย คุณสามารถสร้างเกมที่เป็นแบบของคุณเองและแบ่งปันกับเพื่อนของคุณ
+          ขอให้สนุก!
     loop_times:
       1:
         image: notes/hoc2_1.jpg
@@ -158,19 +156,20 @@
     loop_until:
       1:
         image: notes/hoc3_1.jpg
-        text: Hi, I'm Chris. Before joining the Miami Heat, I went to Georgia Tech
-          to study Computer Science. Let's try our new block, the "repeat until" block.
+        text: สวัสดีฉันชื่อคริส ก่อนเข้าร่วมทีมบาสเกตบอล Miami Heat ฉันไปที่มหาวิทยาลัย
+          Georgia Tech เพื่อศึกษาวิชาวิทยาการคอมพิวเตอร์ ลองทำบล็อกใหม่ของเราที่เรียกว่าบล็อก
+          "ทำซ้ำจนกว่า (repeat until)"
       2:
         image: notes/hoc3_2.jpg
-        text: What if we didn't know how far the bird had to move to get to the pig?
+        text: จะเกิดอะไรขึ้นถ้าเราไม่ทราบว่าเจ้านกต้องเดินทางไปไกลแค่ไหนกว่าจะไปถึงเจ้าหมูนั่น?
       3:
         image: notes/hoc3_3.jpg
-        text: If we put a "move forward" block inside the "repeat until" block, the
-          bird will move forward UNTIL it reaches the pig (or crashes into a wall).
+        text: ถ้าเราวางบล็อก "เดินไปข้างหน้า" ไว้ภายในบล็อก  "ทำซ้ำจนกว่า" เจ้านกก็จะเคลื่อนไปข้างหน้าจนกว่าจะไปถึงเจ้าหมู
+          (หรือไม่ก็ชนเข้ากับผนัง)
       4:
         image: notes/hoc3_4.jpg
-        text: 'And this is important: just like before, we can put multiple blocks
-          inside the "repeat until" block, and they will all be repeated.'
+        text: 'และนี่ก็เป็นสิ่งสำคัญ: เช่นเดียวกับก่อนหน้านี้ที่เราสามารถใส่บล็อกหลายๆ
+          บล็อกภายในบล็อก "ทำซ้ำจนกว่า" และทั้งหมดก็จะถูกทำซ้ำๆกัน'
     if:
       1:
         image: notes/hoc4_1.jpg
@@ -206,23 +205,23 @@
     if_else:
       1:
         image: notes/hoc5_1.jpg
-        text: Hi, my name is Saloni. I use computer science to help solve problems
-          in health and medicine. Let's learn about the "if else" block. It looks
-          like the "if" block, but it has an extra part at the end that says "else".
+        text: สวัสดี, ชื่อของฉันคือสาโลนิ ฉันใช้วิทยาการคอมพิวเตอร์เพื่อช่วยแก้ปัญหาในด้านสุขภาพและการแพทย์.
+          ลองเรียนรู้เกี่ยวกับบล็อก "ถ้า นอกจากนั้น (if else)" มันดูเหมือนบล็อก "ถ้า(if)"
+          แต่มีส่วนเพิ่มเติมที่ส่วนท้ายที่เป็น "นอกจากนั้น "
       2:
         image: notes/hoc5_2.jpg
-        text: If I put a "move forward" block in the spot where it says "do" and a
-          "turn left" block where it says "else" that means that the zombie will choose
-          between 2 options. IF there is a path ahead, the zombie will move forward,
-          and OTHERWISE (there isn't a path ahead), the zombie will turn left.
+        text: ถ้าฉันใส่บล็อก "เดินไปข้างหน้า " ในจุดที่มันเขียนว่า"ทำ" และบล็อก "เลี้ยวซ้าย
+          " ในจุดที่มันเป็น "นอกจากนั้น" นั่นหมายความว่าผีดิบจะเลือกระหว่าง 2 ตัวเลือก.
+          ถ้ามีเส้นทางอยู่ข้างหน้า, ผีดิบจะเดินไปข้างหน้า, และสำหรับอีกทางเลีอกหนึ่งผีดิบก็จะ(ไม่มีเส้นทางอยู่ข้างหน้า)
+          เลี้ยวซ้าย.
       3:
         image: notes/hoc5_3.jpg
-        text: Just like the "if" block, we can put "if else" blocks inside a "repeat"
-          blocks so that the zombie keeps moving and the "if else" block will keep
-          checking if there's somewhere to turn.
+        text: เช่นเดียวกับบล็อก " ถ้า(if) ", เราสามารถใส่ บล็อก "ถ้า นอกจากนั้น(if
+          else) " ภายในบล็อก " ทำซ้ำ " บล็อกเพื่อให้ผีดิบก้าวต่อไปข้างหน้าและบล็อก
+          "ถ้า นอกจากนั้น(if else) " เพื่อตรวจสอบว่ามีที่หนึ่งที่จะเลี้ยวไปได้
       4:
         image: notes/hoc5_4.jpg
-        text: Now, get those zombies where they belong!
+        text: ตอนนี้ ก็พาเจ้าผีดิบไปอยู่ที่ที่มันควรจะอยู่!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
@@ -268,15 +267,16 @@
     loop_while:
       1:
         image: notes/stage9_5.jpg
-        text: Hi, I'm Makinde! Let's learn about the "while block."
+        text: "Hi, I'm Makinde! Let's learn about the \"while block.\"\nสวัสดี ผมชื่อมาคินเด!
+          มาเรียนรู้เกี่ยวกับ \"บล็อก ขณะที่\" กัน "
       2:
         image: notes/stage9_6.jpg
-        text: The "while block" will do whatever you put inside it AS LONG AS the
-          statement on the top is TRUE.
+        text: '"บล็อก ขณะที่" จะทำอะไรก็ได้ที่คุณใส่ไว้ข้างใน ตราบเท่าที่ ข้อความที่อยู่ด้านบนของบล็อกยังคง
+          เป็นจริง(TRUE)'
       3:
         image: notes/stage9_7.jpg
-        text: For example, if the farmer is standing on a pile, she will continue
-          to remove 1 shovelful WHILE there is still a pile beneath her.
+        text: ยกตัวอย่าง ถ้าชาวไร่ยืนอยู่บนกองดิน เธอก็จะดำเนินการตักดินออกไปจำนวน
+          1 พลั่ว ขณะที่ยังมีกองดินที่เธอเหยียบเหลืออยู่
     loop_for:
       1:
         image: notes/stage11_1.jpg
@@ -355,7 +355,7 @@
     20_wrapup:
       1:
         image: notes/bird.png
-        text: Show notes coming soon!
+        text: การแสดงข้อความ จะมีให้ในไม่ช้านี้!
     frozen_intro:
       1:
         image: notes/frozen1_1.jpg
@@ -367,10 +367,9 @@
           wonderland that you can then share with your friends.
       3:
         image: notes/frozen1_3.jpg
-        text: In the next hour, you're going to learn the basics of how to code. Traditional
-          programming is usually in text, but we'll use Blockly, which uses visual
-          blocks that you can drag and drop to write programs. This is how even university
-          students learn the basics. Under the hood, you're still creating code.
+        text: ในชั่วโมงถัดไปคุณจะได้เรียนรู้พื้นฐานของวิธีการเขียนโค้ด การเขียนโปรแกรมแบบดั้งเดิมมักเป็นข้อความ
+          แต่เราจะใช้ ต่อบล็อก(Blockly) ซึ่งใช้บล็อกภาพที่คุณสามารถลากและวางเพื่อเขียนโปรแกรมได้
+          นี่เป็นวิธีที่แม้กระทั่งนักศึกษามหาวิทยาลัยใช้เรียนรู้พื้นฐาน เนื่อแท้แล้วคุณก็ยังคงสร้างโค้ดอยู่ดี
       4:
         image: notes/frozen1_4.jpg
         text: A program is a set of instructions that tells a computer what to do.
@@ -570,9 +569,9 @@
     C1_bee_loops:
       1:
         image: notes/C1_bee_loops_1.png
-        text: A loop is a repetition of activity. So going into a hive to inspect,
-          I look at a frame and then I put it back, so I repeat that same activity
-          multiple times. It's looping around, doing the same activity multiple times.
+        text: ลูปคือการทำกิจกรรมซ้ำๆ ดังนั้นการเข้าไปในรังเพื่อตรวจสอบ นั้นฉันมองไปที่กรอบๆ
+          หนึ่งแล้วฉันวางมันกลับไว้ที่เดิม ดังนั้นฉันทำกิจกรรมที่เหมือนกันซ้ำหลายๆ
+          ครั้ง คือการทำกิจกรรมเดียวกันหลาย ๆ ครั้งทำวนไปวนมาหลายๆรอบ
       2:
         image: notes/C1_bee_loops_2.png
         text: In this level, we want the bee to collect three nectars from the flower.
@@ -727,22 +726,20 @@
         text: สำหรับปริศนานี้ คุณต้องนำทางเจ้านกไปหาเจ้าหมู ให้ดูที่ปริศนาและดูว่าทิศทางใดที่จำเป็นต้องใช้
       2:
         image: notes/C1_maze_intro_sequencing_2.png
-        text: คุณต้องลากบล็อกจากกล่องเครื่องมือไปยังพื้นที่ทำงาน ให้แน่ใจว่ามันอยู่ใต้บล็อก(@quotes)เมื่อเรียกใช้งาน(@quotes)และเมื่อคุณมั่นใจว่า
-          คุณมีทางออกที่ถูกต้องแล้ว คุณสามารถคลิก(@quotes)เริ่ม(@quotes)และดูเจ้านกขยับไปหาเจ้าหมูนั่น
+        text: คุณต้องลากบล็อกจากกล่องเครื่องมือไปยังพื้นที่ทำงาน ให้แน่ใจว่ามันต่อติดอยู่ใต้บล็อก"เมื่อเรียกใช้งาน"
+          และเมื่อคุณมั่นใจว่า คุณมีทางออกที่ถูกต้องแล้ว คุณสามารถคลิก" เริ่ม" และดูเจ้านกขยับไปหาเจ้าหมูนั่น
     C1_maze_loops:
       1:
         image: notes/C1_maze_loops_1.png
-        text: One that computers are really good at is repeating commands. As a person,
-          you'd get really bored if you had to do the same thing lots and lots of
-          times in a row. But a computer can do the same thing millions or even billions
-          of times and not get bored and be able to carry that out really well.
+        text: สิ่งหนึ่งที่คอมพิวเตอร์ทำได้ดีจริงๆคือการทำซ้ำคำสั่งต่างๆ ในฐานะที่เป็นคน
+          คุณจะรู้สึกเบื่อถ้าคุณต้องทำสิ่งเดียวกันหลายครั้งติดต่อกันนานๆ แต่คอมพิวเตอร์สามารถทำสิ่งเดียวกันได้นับล้านหรือแม้แต่พันล้านครั้ง
+          และไม่รู้สึกเบื่อแต่อย่างใด อีกทั้งยังสามารถดำเนินการไปได้อย่างดีเยิ่ยมอีกด้วย
       2:
         image: notes/C1_maze_loops_2.png
-        text: For example, if I wanted to wish everyone on Facebook a happy birthday
-          by sending them an email, it might take me more than century to actually
-          write out all those emails to everyone. But with just a few lines of code,
-          I can have a system send an email to everyone on Facebook wishing them a
-          happy birthday.
+        text: ตัวอย่างเช่นถ้าฉันต้องการที่จะอวยพรวันเกิดให้ทุกคนบน Facebook วันเกิดความสุขโดยการส่งอีเมล
+          มันอาจจะใช้เวลามากกว่าศตวรรษสำรับข้าพเจ้าที่จะเขียนอีเมลทั้งหมดเหล่านั้นให้ทุกคน
+          แต่ดด้วยเพียงใช้โค้ดไม่กี่บรรทัด ฉันสามารถให้ระบบส่งอีเมลไปยังทุกคนบน Facebook
+          อวยพรขอให้พวกเขามีความสุขในวันเกิด
       3:
         image: notes/C1_maze_loops_3.png
         text: To get the bird to the pig in this level... rather than drag three North
@@ -905,64 +902,51 @@
     C1_zuck_repeat_loop:
       1:
         image: notes/C1_zuck_repeat_loop_1.png
-        text: One that computers are really good at is repeating commands. As a person,
-          you'd get really bored if you had to do the same thing lots and lots of
-          times in a row. But a computer can do the same thing millions or even billions
-          of times and not get bored and be able to carry that out really well.
+        text: สิ่งหนึ่งที่คอมพิวเตอร์ทำได้ดีจริงๆคือการทำซ้ำคำสั่งต่างๆ ในฐานะที่เป็นคน
+          คุณจะรู้สึกเบื่อถ้าคุณต้องทำสิ่งเดียวกันหลายครั้งติดต่อกันนานๆ แต่คอมพิวเตอร์สามารถทำสิ่งเดียวกันได้นับล้านหรือแม้แต่พันล้านครั้ง
+          และไม่รู้สึกเบื่อแต่อย่างใด อีกทั้งยังสามารถดำเนินการไปได้อย่างดีเยิ่ยมอีกด้วย
       2:
         image: notes/C1_zuck_repeat_loop_2.png
-        text: For example, if I wanted to wish everyone on Facebook a happy birthday
-          by sending them an email, it might take me more than century to actually
-          write out all those emails to everyone. But with just a few lines of code,
-          I can have a system send an email to everyone on Facebook wishing them a
-          happy birthday.
+        text: ตัวอย่างเช่นถ้าฉันต้องการที่จะอวยพรวันเกิดให้ทุกคนบน Facebook วันเกิดความสุขโดยการส่งอีเมล
+          มันอาจจะใช้เวลามากกว่าศตวรรษสำรับข้าพเจ้าที่จะเขียนอีเมลทั้งหมดเหล่านั้นให้ทุกคน
+          แต่ดด้วยเพียงใช้โค้ดไม่กี่บรรทัด ฉันสามารถให้ระบบส่งอีเมลไปยังทุกคนบน Facebook
+          อวยพรขอให้พวกเขามีความสุขในวันเกิด
       3:
         image: notes/C1_zuck_repeat_loop_3.png
-        text: In this example, your goal is going to be to move the bird to get the
-          pig. Now, we're going to be able to use the repeat block in order to be
-          able to do this very easily. You can either do this by giving the computer
-          a move forward command five times in order to advance the bird one step
-          each time to the pig or you can just tell the computer to move forward once,
-          and then tell it to repeat that five times and it'll do the same thing.
+        text: ในตัวอย่างนี้เป้าหมายของคุณคือการพาเจ้านกไปจัดการเจ้าหมู ตอนนี้, เรากำลังจะสามารถที่จะใช้บล็อกทำซ้ำเพื่อที่จะสามารถที่จะทำเช่นนี้ได้อย่างง่ายดายมาก.
+          คุณสามารถทำเช่นนี้โดยการให้คำสั่งคอมพิวเตอร์ ให้เคลื่อนไหวไปข้างหน้าห้าครั้งเพื่อที่จะให้เจ้านกก้าวไปทีละก้าวในแต่ละครั้งเพื่อหมูหรือคุณสามารถหรือเพียงบอกคอมพิวเตอร์ให้เคลื่อนไหวไปข้างหน้าครั้งเดียวและจากนั้นบอกให้ทำซ้ำห้าครั้งและมันจะทำแบบเดียวกัน
       4:
         image: notes/C1_zuck_repeat_loop_4.png
-        text: In order to do this, you drag your move forward command and then you
-          put it inside the repeat block. And you can click on it and tell it how
-          many times you  to repeat the block to tell it how many steps you want it
-          to take forward.
+        text: เพื่อที่จะทำเช่นนี้คุณลากคำสั่งให้เคลื่อนที่ไปข้างหน้าของคุณและจากนั้นคุณวางไว้ภายในบล็อกทำซ้ำ
+          และคุณสามารถคลิกที่มันและบอกว่าคุณจะทำซ้ำบล็อกนี้กี่ครั้ง เพื่อบอกขั้นตอนมากที่คุณต้องการที่จะเคลื่อนไหวไปข้างหน้า.
       5:
         image: notes/C1_zuck_repeat_loop_5.png
-        text: One more thing is you can put as many commands as you want inside the
-          repeat block. So in this example, you're telling it to move forward and
-          turn left, which it'll do five times. Have fun!
+        text: สิ่งหนึ่งที่คุณสามารถทำได้คือใส่คำสั่งมากเท่าที่คุณต้องการภายในบล็อกทำซ้ำ.
+          ดังนั้นในตัวอย่างต่อนี้ คุณกำลังบอกว่าจะเคลื่อนไหวไปข้างหน้าและเลี้ยวซ้าย,
+          ซึ่งมันจะทำห้าครั้ง. ขอให้สนุกนะ!
     C2_artist_intro:
       1:
         image: notes/C2_artist_intro_1.png
-        text: You wouldn't even qualify for the race if you don't have people who
-          are proficient in computer science because of how much data the cars collect
-          and the necessity to be able to have people that can write programs to figure
-          out how you continue to figure out how to build performance.
+        text: คุณจะไม่มีโอกาสแม้แต่การผ่านคุณสมบัติสำหรับการแข่งรถถ้าคุณไม่ได้มีคนที่มีความเชี่ยวชาญในวิทยาการคอมพิวเตอร์
+          เพราะจำนวนข้อมูลที่ต้องรวบรวมจากรถแข่งและความจำเป็นที่จะต้องมีคนที่สามารถเขียนโปรแกรมได้เพื่อหาทางให้คุณสามารถหาวิธีการสร้างประสิทธิผลต่อไปได้
       2:
         image: notes/C2_artist_intro_2.png
-        text: In these puzzles, you'll be an artist that uses a pencil to draw different
-          shapes. Wherever your artist goes, it will draw a line behind you.
+        text: ในปริศนาเหล่านี้คุณจะเป็นศิลปินที่ใช้ดินสอเพื่อวาดรูปร่างที่แตกต่างกัน
+          ในทุกที่ที่ศิลปินของคุณไป เขาก็จะวาดเส้นตามหลังเขาไป
       3:
         image: notes/C2_artist_intro_3.png
-        text: To move around the canvas, you'll use the move forward block. Here the
-          move forward block says move forward by 100 pixels. When we hit run, what
-          happens? The artist moves forward a certain amount and that amount is 100
-          pixels. Pixels are basically very tiny squares on your computer screen.
+        text: เมื่อต้องการย้ายไปรอบๆผ้าใบเขียนภาพ คุณจะใช้บล็อกย้ายไปข้างหน้า ในที่นี่บล็อกย้ายไปข้างหน้าบอกให้ย้ายไปข้างหน้าเป็นระยะทาง
+          100 พิกเซล เมื่อเรากด เริ่ม จะเกิดอะไรขึ้น? ศิลปินจะเดินไปข้างหน้าเป็รระยะทางหนึ่งและในที่นี้เท่ากับ
+          100 พิกเซล พิกเซลเป็นสี่เหลี่ยมขนาดเล็กมากบนหน้าจอคอมพิวเตอร์ของคุณ
       4:
         image: notes/C2_artist_intro_4.png
-        text: The other block we have in this puzzle says turn right by 90 degrees.
-          And when we drag that out that makes our artist turn a certain amount. So
-          you can play around with how far you want the artist to turn. This is a
-          90 degree turn.
+        text: บล็อกอื่นๆที่เรามีในปริศนานี้บอกให้ หันขวาไป 90 องศา. และเมื่อเราลากบล็อกนั้นออกมาที่ทำให้ศิลปินของเราหันหน้าไปประมาณหนึ่ง
+          ดังนั้นคุณสามารถเล่นกับปริมาณการหัน ที่คุณต้องการให้ศิลปินหันได้ ส่วนอันนี้เป็นการหัน
+          90 องศา
       5:
         image: notes/C2_artist_intro_5.png
-        text: And this is a 120 degree turn. And remember, you can change these values
-          by clicking the arrows next to the numbers for pixels and degrees. Enjoy
-          drawing with your artist!
+        text: และนี่คือการหัน 120 องศา. และจำไว้ว่าคุณสามารถเปลี่ยนค่าเหล่านี้ได้โดยการคลิกลูกศรที่อยู่ถัดจากตัวเลขสำหรับจำนวนพิกเซลและองศา
+          ขอให้สนุกกับการวาดภาพกับศิลปินของคุณ!
     C2_bee_conditionals:
       1:
         image: notes/C2_bee_conditionals_1.png
@@ -1037,16 +1021,13 @@
     C2_artist_debugging:
       1:
         image: notes/C2_artist_debugging_1.png
-        text: Here we already have some blocks out in our work space. But there is
-          something wrong.
+        text: ตอนนี้เรามีบางบล็อกอยู่ในพื้นที่ทำงานของเราเรียบร้อยแล้ว แต่มีบางสิ่งผิดปกติ
       2:
         image: notes/C2_artist_debugging_2.png
-        text: Let's debug this code by slowing down the speed and watching it as it
-          goes through each block step by step.
+        text: ลองตรวจดีบั๊กโค้ดนี้โดยนี้ดู โดยการชะลอความเร็วลงและเฝ้าดูมันทำงานไปผ่านบล็อกแต่ละบล็อกทีละขั้นตอน
       3:
         image: notes/C2_artist_debugging_3.png
-        text: Oh, there's the problem! The cat's whiskers are 75 pixels long, not
-          25.
+        text: โอ้มีปัญหาแล้ว! หนวดของแมวมีความยาว 75 พิกเซล, ไม่ใช่ 25 พิกเซล
     C2_bee_debugging:
       1:
         image: notes/C2_bee_debugging_1.png
@@ -1140,21 +1121,18 @@
     C2_artist_loops:
       1:
         image: notes/C2_artist_loops_1.png
-        text: Here we are going to use the repeat block to help us save steps when
-          we are programming our artist. We already have some blocks out on our stage
-          but they are just there to get us started.
+        text: ตอนนี้เราจะใช้บล็อกทำซ้ำเพื่อช่วยให้เราประหยัดขั้นตอนเมื่อเราจะเขียนโปรแกรมศิลปินของเรา
+          เรามีบล็อกบางบล็อกวางไว้ให้ในด่านนี้ของเราบ้างแล้ว แต่ก็เป็นเพียงเพื่อให้เราเริ่มต้น
       2:
         image: notes/C2_artist_loops_2.png
-        text: To loop those blocks four times to draw the whole square, we just drag
-          out the repeat block and put the moveforward and turn right blocks inside
-          the repeat block. When we hit run, the artist will repeat those steps four
-          times to complete the square.
+        text: ให้วนลูปบล็อกเหล่านั้นสี่ครั้งเพื่อที่จะวาดสี่เหลี่ยมจตุรัสทั้งรูป เราเพียงแค่ลากออกบล็อกทำซ้ำออกมาใช้และใส่
+          บล็อกย้ายไปข้างหน้า...และบล็อกหันขวาภายในบล็อกทำซ้ำ. เมื่อเรากดเริ่มศิลปินจะทำขั้นตอนเหล่านั้นซ้ำสี่ครั้งเพื่อทำสี่เหลี่ยมจตุรัสให้เสร็จสมบูรณ์
     C2_bee_loops:
       1:
         image: notes/C2_bee_loops_1.png
-        text: A loop is a repetition of activity. Going into a hive to inspect, I
-          look at a frame, and then I put it back. I repeat that same activity multiple
-          times. It's looping around, doing the same activity multiple times.
+        text: ลูปคือการทำกิจกรรมซ้ำๆ ดังนั้นการเข้าไปในรังเพื่อตรวจสอบ นั้นฉันมองไปที่กรอบๆ
+          หนึ่งแล้วฉันวางมันกลับไว้ที่เดิม ดังนั้นฉันทำกิจกรรมที่เหมือนกันซ้ำหลายๆ
+          ครั้ง คือการทำกิจกรรมเดียวกันหลาย ๆ ครั้งทำวนไปวนมาหลายๆรอบ
       2:
         image: notes/C2_bee_loops_2.png
         text: This is the repeat block. Whatever you put inside the repeat block will
@@ -1165,30 +1143,25 @@
     C2_maze_intro:
       1:
         image: notes/C2_maze_intro_1.png
-        text: Usually programming is all in text but we'll use Blockly which uses
-          visual blocks that you drag and drop to write programs. Under the hood,
-          you're still creating code. To start off, we're going to build code for
-          a program that will help this Angry Bird move through a maze to get to the
-          evil pigs that stole its eggs.
+        text: การเขียนโปรแกรมนั้นมักเป็นข้อความทั้งหมด แต่เราจะใช้ ต่อบล็อก(Blockly)
+          ซึ่งใช้บล็อกภาพที่คุณสามารถลากและวางในการเขียนโปรแกรม เนื่อแท้แล้วคุณก็ยังคงสร้างโค้ดอยู่ดี
+          ในการเริ่มต้นนั้นเราจะสร้างโค้ดสำหรับโปรแกรมที่จะช่วยให้เจ้านกขี้โมโห (Angry
+          Bird) เคลื่อนที่ผ่านเขาวงกตเพื่อไปยังเจ้าหมูวายร้ายที่ขโมยไข่ของเจ้านกไป
       2:
         image: notes/C2_maze_intro_2.png
-        text: Blockly is split into three main parts. On the left is the bird's maze,
-          where your program will run. The instructions for each level are written
-          below the maze. This middle area is the toolbox and each of these blocks
-          is a command that the bird can understand. The white space on the right
-          is called the workspace and this is where we'll build our program.
+        text: ต่อบล็อก(Blockly) แบ่งออกเป็นสามส่วนหลัก ด้านซ้ายเป็นเขาวงกตของนกซึ่งเป็นพื้นที่ที่โปรแกรมของคุณจะทำงาน
+          คำแนะนำสำหรับแต่ละระดับจะถูกเขียนไว้ด้านขวาของเขาวงกต พื้นที่ตรงกลางนี้เป็นกล่องเครื่องมือและแต่ละบล็อกนี้เป็นคำสั่งที่นกสามารถเข้าใจได้
+          พื้นที่สีขาวด้านขวาเรียกว่า พื้นที่ทำงานและนี่คือที่ที่เราจะสร้างโปรแกรมของเรา
       3:
         image: notes/C2_maze_intro_3.png
-        text: If I drag the move block to our work space and press "Run", what happens?
-          The bird moves forward one box on the grid. And what if I want the bird
-          to do something after it moves forward one box? I can add another block
-          to our program.
+        text: ถ้าฉันลากบล็อคย้ายไปยังพื้นที่ทำงานของเราและกด " เริ่ม " จะเกิดอะไรขึ้น?
+          เจ้านกจะเคลื่อนไปข้างหน้าหนึ่งช่องบนตาราง และถ้าหากว่าฉันต้องการให้เจ้านกทำอะไรหลังจากที่มันเคลื่อนไปข้างหน้าหนึ่งช่อง
+          จะทำได้หรือไม่? ฉันก็แค่เพียงเพิ่มบล็อกอื่นเข้าไปในโปรแกรมของเราได้
       4:
         image: notes/C2_maze_intro_4.png
-        text: I'm going to choose the "turn right" block and I'll drag it under my
-          move block until the yellow arrow appears. Then I'll drop it and the two
-          blocks will snap together. When I press "Run" again,  the bird will perform
-          the commands that are stacked from top to bottom on our work space.
+        text: ฉันจะเลือกบล็อก "หันขวา" และฉันจะลากมันไปไว้ใต้บล็อกเพื่อการเคลื่อนที่ของฉันจนกว่าจะปรากฏลูกศรสีเหลือง
+          ฉันจะปล่อยบล็อกนั้นลงไป และแล้วบล็อกสองจะมาประชิดกัน เมื่อกด " เริ่ม " อีก
+          ทีหนึ่ง เจ้านกจะดำเนินการตามคำสั่งในพื้นที่ทำงานของเราที่ซ้อนกันจากบนลงล่าง
       5:
         image: notes/C2_maze_intro_5.png
         text: If you ever want to delete a block, just remove it from the stack and
@@ -1226,15 +1199,13 @@
     C2_playlab_createstory:
       1:
         image: notes/C2_playlab_createastory_1.png
-        text: So far you've been making an animation or a story that does the exact
-          same thing every time you run it. Now you can make an interactive game that
-          you can actually play.
+        text: เท่าที่ผ่านมา คุณได้สร้างภาพเคลื่อนไหวหรือเรื่องราวที่ทำสิ่งเดียวกันทุกครั้งที่คุณเรียกใช้มัน
+          ตอนนี้คุณสามารถสร้างเกมแบบโต้ตอบที่คุณสามารถเล่นจริงได้
       2:
         image: notes/C2_playlab_createastory_2.png
-        text: There are some new blocks to try out. There's the "when arrow" block
-          and the "move actor" block. You can put these blocks together to move the
-          actors around with the arrow keys. And there are some blocks that do stuff
-          when actors collide or are clicked. Check them out and have fun!
+        text: มีบล็อกใหม่บางอย่างที่จะให้ลอง มี บล็อก "เมื่อลูกศร " และบล็อก "ย้ายนักแสดง
+          " คุณสามารถใสช้บล็อกเหล่านี้ร่วมกันเพื่อย้ายนักแสดงไปรอบๆด้วยแป้นลูกศร และมีบล็อกบางอย่างที่ทำบางสิ่งเมื่อนักแสดงชนหรือคลิก.
+          ไปลองดูเลยและขอให้สนุก!
     C2_relay_programming:
       1:
         image: notes/C2_relay_programming_1.png
@@ -1264,38 +1235,33 @@
     C2_zuck_repeat_loop:
       1:
         image: notes/C2_zuck_repeat_loop_1.png
-        text: One thing that computers are really good at is repeating commands. As
-          a person, you'd get really bored if you had to do the same thing lots of
-          times in a row. But a computer can do the same thing millions or even billions
-          of times, and not get bored and be able to carry that out really well.
+        text: สิ่งหนึ่งที่คอมพิวเตอร์ทำได้ดีจริงๆคือการทำซ้ำคำสั่งต่างๆ ในฐานะที่เป็นคน
+          คุณจะรู้สึกเบื่อถ้าคุณต้องทำสิ่งเดียวกันหลายครั้งติดต่อกันนานๆ แต่คอมพิวเตอร์สามารถทำสิ่งเดียวกันได้นับล้านหรือแม้แต่พันล้านครั้ง
+          และไม่รู้สึกเบื่อแต่อย่างใด อีกทั้งยังสามารถดำเนินการไปได้อย่างดีเยิ่ยมอีกด้วย
       2:
         image: notes/C2_zuck_repeat_loop_2.png
-        text: So for example if I wanted to wish everyone on Facebook a happy birthday
-          by sending them an email, it might take me more than a century to actually
-          write out all of those emails to everyone. But with just a few lines of
-          code, I can have a system send an email to everyone on Facebook wishing
-          them a happy birthday. So that's what loops are, and why they're valuable,
-          and something that computers can do very well.
+        text: ยกตัวอย่างเช่นถ้าฉันต้องการอวยพรวันเกิดให้ทุกคนใน Facebook โดยการส่งอีเมล
+          เราอาจใช้เวลามากกว่าหนึ่งศตวรรษในการเขียนอีเมลทั้งหมดเหล่านั้นให้กับทุกคน
+          แต่การใช้โค้ดเพียงไม่กี่บรรทัด ฉันสามารถสั่งให้ระบบส่งอีเมลไปยังทุกคนใน
+          Facebook เพื่ออวยพรวันเกิดให้ทุกคนมีความสุข นั่นก็คือการใช้ลูปเข้ามาช่วยและทำไมลูปจึงเป็นสิ่งที่มีค่า
+          และเป็นสิ่งที่คอมพิวเตอร์สามารถทำได้เป็นอย่างดี
       3:
         image: notes/C2_zuck_repeat_loop_3.png
-        text: In this example your goal is going to be to move the bird to get the
-          pig.  Now we're gonna be able to use the "repeat" block in order to be able
-          to do this very easily. You can either do this by giving the computer a
-          "move forward" command five times in order to advance the bird one step
-          each time to the pig.
+        text: ในตัวอย่างของด่านนี้ เป้าหมายของคุณคือการพาเจ้านกไปหาเจ้าหมู ตอนนี้เราสามารถใช้บล็อก
+          "ทำซ้ำ" เพื่อให้สามารถทำสิ่งนี้ได้อย่างง่ายดาย คุณสามารถทำเช่นนี้ได้โดยการป้อนคำสั่งให้คอมพิวเตอร์
+          "เดินไปข้างหน้า" ห้าครั้งเพื่อที่จะพาเจ้านกให้ก้าวไปข้างหน้าทีละก้าวมุ่งตรงไปยังเจ้าหมู
       4:
         image: notes/C2_zuck_repeat_loop_4.png
-        text: Or you can just tell the computer to "move forward" once, and then tell
-          it to "repeat" that 5 times, and it will do the same thing. So in order
-          to do this you drag your "move forward" command, and then you put it inside
-          the "repeat" block.And you can click on it and tell it how many times you
-          want to repeat the block to tell it how many steps you want it to take forward.
+        text: หรือคุณเพียงแค่บอกคอมพิวเตอร์ว่า "ก้าวไปข้างหน้า" หนึ่งครั้ง แล้วบอกให้คอมพิวเตอร์ให้
+          "ทำซ้ำ" 5 ครั้งและคอมพิวเตอร์ก็จะทำตามที่คุณบอก ดังนั้นเพื่อที่จะให้คอมพิวเตอร์ทำเช่นนี้
+          คุณก็จะลากคำสั่ง "ก้าวไปข้างหน้า" ของคุณและจากนั้นคุณก็นำมันไปใส่ไว้ในบล็อก
+          "ทำซ้ำ" และคุณสามารถคลิกที่บล็อกและบอกมันว่าคุณต้องการทำซ้ำบล็อกนั้นก็ครั้ง
+          เพื่อที่จะบอกมันว่าคุณต้องการให้เดินต่อไปข้างหน้ากี่ก้าว
       5:
         image: notes/C2_zuck_repeat_loop_5.png
-        text: Now one more thing is you can put as many commands as you want inside
-          the "repeat" block. So in this example you're telling it to move forward
-          and turn left, which it will do five times. All right good job and have
-          fun!
+        text: มีอีกอย่างหนึ่ง คือคุณสามารถใส่คำสั่งได้มากเท่าที่คุณต้องการไว้ภายในบล็อก
+          "ทำซ้ำ" เช่นในตัวอย่างนี้คุณจะบอกให้เจ้านกมันก้าวไปข้างหน้าและเลี้ยวซ้ายด้วย
+          ซึ่งเจ้านกมันจะทำสองอย่างนี้ห้าครั้ง โอเคนะขอให้สนุกให้เต็มที่!
     C3_artist_functions:
       1:
         image: notes/C3_artist_functions_1.png
@@ -1312,43 +1278,36 @@
     C3_artist_intro:
       1:
         image: notes/C3_artist_intro_1.png
-        text: You wouldn't even qualify for the race if you don't have people who
-          are proficient in computer science because of how much data the cars collect
-          and the necessity to be able to have people that can write programs to figure
-          out how you continue to figure out how to build performance.
+        text: คุณจะไม่มีโอกาสแม้แต่การผ่านคุณสมบัติสำหรับการแข่งรถถ้าคุณไม่ได้มีคนที่มีความเชี่ยวชาญในวิทยาการคอมพิวเตอร์
+          เพราะจำนวนข้อมูลที่ต้องรวบรวมจากรถแข่งและความจำเป็นที่จะต้องมีคนที่สามารถเขียนโปรแกรมได้เพื่อหาทางให้คุณสามารถหาวิธีการสร้างประสิทธิผลต่อไปได้
       2:
         image: notes/C3_artist_intro_2.png
-        text: In these puzzles, you'll be an artist that uses a pencil to draw different
-          shapes. Wherever your artist goes, it will draw a line behind you.
+        text: ในปริศนาเหล่านี้คุณจะเป็นศิลปินที่ใช้ดินสอเพื่อวาดรูปร่างที่แตกต่างกัน
+          ในทุกที่ที่ศิลปินของคุณไป เขาก็จะวาดเส้นตามหลังเขาไป
       3:
         image: notes/C3_artist_intro_3.png
-        text: To move around the canvas, you'll use the move forward block. Here the
-          move forward block says move forward by 100 pixels. When we hit run, what
-          happens? The artist moves forward a certain amount and that amount is 100
-          pixels. Pixels are basically very tiny squares on your computer screen.
+        text: เมื่อต้องการย้ายไปรอบๆผ้าใบเขียนภาพ คุณจะใช้บล็อกย้ายไปข้างหน้า ในที่นี่บล็อกย้ายไปข้างหน้าบอกให้ย้ายไปข้างหน้าเป็นระยะทาง
+          100 พิกเซล เมื่อเรากด เริ่ม จะเกิดอะไรขึ้น? ศิลปินจะเดินไปข้างหน้าเป็รระยะทางหนึ่งและในที่นี้เท่ากับ
+          100 พิกเซล พิกเซลเป็นสี่เหลี่ยมขนาดเล็กมากบนหน้าจอคอมพิวเตอร์ของคุณ
       4:
         image: notes/C3_artist_intro_4.png
-        text: The other block we have in this puzzle says turn right by 90 degrees.
-          And when we drag that out that makes our artist turn a certain amount. So
-          you can play around with how far you want the artist to turn. This is a
-          90 degree turn.
+        text: บล็อกอื่นๆที่เรามีในปริศนานี้บอกให้ หันขวาไป 90 องศา. และเมื่อเราลากบล็อกนั้นออกมาที่ทำให้ศิลปินของเราหันหน้าไปประมาณหนึ่ง
+          ดังนั้นคุณสามารถเล่นกับปริมาณการหัน ที่คุณต้องการให้ศิลปินหันได้ ส่วนอันนี้เป็นการหัน
+          90 องศา
       5:
         image: notes/C3_artist_intro_5.png
-        text: And this is a 120 degree turn. And remember, you can change these values
-          by clicking the arrows next to the numbers for pixels and degrees. Enjoy
-          drawing with your artist!
+        text: และนี่คือการหัน 120 องศา. และจำไว้ว่าคุณสามารถเปลี่ยนค่าเหล่านี้ได้โดยการคลิกลูกศรที่อยู่ถัดจากตัวเลขสำหรับจำนวนพิกเซลและองศา
+          ขอให้สนุกกับการวาดภาพกับศิลปินของคุณ!
     C3_artist_nested_loops:
       1:
         image: notes/C3_artist_nested_loops_1.png
-        text: When you put a loop inside of another loop, we call that a nested loop.
-          For example, here we're given the code already to draw one triangle with
-          sides of length 100 pixels using the repeat times block set to three, once
-          for each side of a triangle.
+        text: เมื่อคุณใส่ลูปหนึ่งภายใน อีกลูปหนึ่ง เราเรียกว่าลูปที่ซ้อนกันหรือลูปซ้อนลูป
+          ตัวอย่างเช่นตินนี้เรามีโค้ดในการวาดสามเหลี่ยมรูปหนึ่งที่มีด้านทั้สามยาวด้านละ
+          100 พิกเซลโดยใช้การทำซ้ำชุดของบล็อกเป็นจำนวนสามครั้ง โดยแต่ละครั้งเป็นการวาดด้านแต่ละด้านของรูปสามเหลี่ยม
       2:
         image: notes/C3_artist_nested_loops_2.png
-        text: But we want to draw six triangles. In order to do that, we're going
-          to take that loop and place it inside of another repeat times block. Pretty
-          cool!
+        text: แต่เราต้องการวาดรูปหกเหลี่ยม เพื่อที่จะทำเช่นนั้นเราจะเอาลูปนั้นมา แล้ววางไว้ภายในบล็อกเพื่อการทำซ้ำอีกครั้งหนึ่ง
+          เจ๋งไหมละ!
     C3_bee_conditionals:
       1:
         image: notes/C3_bee_conditionals_1.png
@@ -1410,10 +1369,9 @@
     C3_bee_nested_loops:
       1:
         image: notes/C3_bee_nested_loops_1.png
-        text: Now we're going to use nested loops with the bee. We're given some starter
-          code which tells the bee to move forward and get nectar three times and
-          then turn right. Let's take that whole piece of code and nest it inside
-          another repeat block and set to repeat three times. Done!
+        text: ตอนนี้เราจะใช้ลูปซ้อนลูป (nested loops) กับผึ้ง เราได้รับโค้ดเริ่มต้นบางส่วนซึ่งบอกผึ้งให้บินไปข้าหน้าต่อไปและรับน้ำหวานจาเกสรสามครั้งแล้วหันขวา
+          ลองใช้ส่วนของโค้ดนั้นทั้งหมดและฝังไว้ภายในบล็อกทำซ้ำชุดหนึ่งและตั้งค่าให้ทำซ้ำสามครั้ง
+          เอาเลย!
     C3_bounce:
       1:
         image: notes/C3_bounce_1.png
@@ -1659,13 +1617,13 @@
     C3_playlab_create_game:
       1:
         image: notes/playlab_1.png
-        text: So far you've been making an animation or a story that does the exact
-          same thing every time you run it. Now you can make an interactive game that
-          you can actually play.
+        text: เท่าที่ผ่านมา คุณได้สร้างภาพเคลื่อนไหวหรือเรื่องราวที่ทำสิ่งเดียวกันทุกครั้งที่คุณเรียกใช้มัน
+          ตอนนี้คุณสามารถสร้างเกมแบบโต้ตอบที่คุณสามารถเล่นจริงได้
       2:
         image: notes/playlab_2.png
-        text: There's the "when arrow" block and the "move actor" block. You can put
-          these blocks together to move the actors around with the arrow keys.
+        text: มีบล็อกใหม่บางอย่างที่จะให้ลอง มี บล็อก "เมื่อลูกศร " และบล็อก "ย้ายนักแสดง
+          " คุณสามารถใสช้บล็อกเหล่านี้ร่วมกันเพื่อย้ายนักแสดงไปรอบๆด้วยแป้นลูกศร และมีบล็อกบางอย่างที่ทำบางสิ่งเมื่อนักแสดงชนหรือคลิก.
+          ไปลองดูเลยและขอให้สนุก!
     C3_songwriting_with_parameters:
       1:
         image: notes/C3_songwriting_with_parameters_1.png
@@ -1689,13 +1647,13 @@
     C4_bee_conditional:
       1:
         image: notes/C4_bee_conditional_1.png
-        text: This is the conditional block. It says if you're at the flower or the
-          honeycomb, then do something. This is useful when we don't know how much
-          honey or nectar to get as we see here with this question mark.
+        text: เรื่องนี้เกี่ยวกับบล็อกเงื่อนไข คือว่าถ้าคุณอยู่ที่ดอกไม้หรือรังผึ้งแล้วให้ทำอะไร
+          ประโยชน์เก็คือมื่อเราไม่ทราบว่ามีน้ำผึ้งหรือน้ำหวานมากเท่าใดที่จะทำการเก็บ
+          ซึ่งแสดงให้เห็นเป็นครื่องหมายคำถามนี้
       2:
         image: notes/C4_bee_conditional_2.png
-        text: In this example, we're going to say, if it's a flower, get all the nectar
-          and then use another one to say, if it's a honeycomb, make honey. Ta-dah!
+        text: สำหรับตัวอย่างนี้เ ถือว่าเป็นดอก ดังนั้นให้เราเก็บน้ำหวานจากเกสรทั้งหมด
+          แล้วใช้อีกหนึ่งอันเพื่อบอกว่าถ้าเป็นรังผึ้งก็ให้ทำน้ำผึ้ง นี่ไง เข้าใจไหม!
     C4_conditionals:
       1:
         image: notes/C4_conditionals_1.png
@@ -1870,30 +1828,25 @@
     C4_intro:
       1:
         image: notes/C4_intro_1.png
-        text: Usually programming is all in text but we'll use Blockly which uses
-          visual blocks that you drag and drop to write programs. Under the hood,
-          you're still creating code. To start off, we're going to build code for
-          a program that will help this Angry Bird move through a maze to get to the
-          evil pigs that stole its eggs.
+        text: การเขียนโปรแกรมนั้นมักเป็นข้อความทั้งหมด แต่เราจะใช้ ต่อบล็อก(Blockly)
+          ซึ่งใช้บล็อกภาพที่คุณสามารถลากและวางในการเขียนโปรแกรม เนื่อแท้แล้วคุณก็ยังคงสร้างโค้ดอยู่ดี
+          ในการเริ่มต้นนั้นเราจะสร้างโค้ดสำหรับโปรแกรมที่จะช่วยให้เจ้านกขี้โมโห (Angry
+          Bird) เคลื่อนที่ผ่านเขาวงกตเพื่อไปยังเจ้าหมูวายร้ายที่ขโมยไข่ของเจ้านกไป
       2:
         image: notes/C4_intro_2.png
-        text: Blockly is split into three main parts. On the left is the bird's maze,
-          where your program will run. The instructions for each level are written
-          below the maze. This middle area is the toolbox and each of these blocks
-          is a command that the bird can understand. The white space on the right
-          is called the workspace and this is where we'll build our program.
+        text: ต่อบล็อก(Blockly) แบ่งออกเป็นสามส่วนหลัก ด้านซ้ายเป็นเขาวงกตของนกซึ่งเป็นพื้นที่ที่โปรแกรมของคุณจะทำงาน
+          คำแนะนำสำหรับแต่ละระดับจะถูกเขียนไว้ด้านขวาของเขาวงกต พื้นที่ตรงกลางนี้เป็นกล่องเครื่องมือและแต่ละบล็อกนี้เป็นคำสั่งที่นกสามารถเข้าใจได้
+          พื้นที่สีขาวด้านขวาเรียกว่า พื้นที่ทำงานและนี่คือที่ที่เราจะสร้างโปรแกรมของเรา
       3:
         image: notes/C4_intro_3.png
-        text: If I drag the move block to our work space and press "run", what happens?
-          The bird moves forward one box on the grid. And what if I want the bird
-          to do something after it moves forward one box? I can add another block
-          to our program.
+        text: ถ้าฉันลากบล็อคย้ายไปยังพื้นที่ทำงานของเราและกด " เริ่ม " จะเกิดอะไรขึ้น?
+          เจ้านกจะเคลื่อนไปข้างหน้าหนึ่งช่องบนตาราง และถ้าหากว่าฉันต้องการให้เจ้านกทำอะไรหลังจากที่มันเคลื่อนไปข้างหน้าหนึ่งช่อง
+          จะทำได้หรือไม่? ฉันก็แค่เพียงเพิ่มบล็อกอื่นเข้าไปในโปรแกรมของเราได้
       4:
         image: notes/C4_intro_4.png
-        text: I'm going to choose the "turn right" block and I'll drag it under my
-          move block until the yellow arrow appears. Then I'll drop it and the two
-          blocks will snap together. When I press "run" again,  the bird will perform
-          the commands that are stacked from top to bottom on our work space.
+        text: ฉันจะเลือกบล็อก "หันขวา" และฉันจะลากมันไปไว้ใต้บล็อกเพื่อการเคลื่อนที่ของฉันจนกว่าจะปรากฏลูกศรสีเหลือง
+          ฉันจะปล่อยบล็อกนั้นลงไป และแล้วบล็อกสองจะมาประชิดกัน เมื่อกด " เริ่ม " อีก
+          ทีหนึ่ง เจ้านกจะดำเนินการตามคำสั่งในพื้นที่ทำงานของเราที่ซ้อนกันจากบนลงล่าง
       5:
         image: notes/C4_intro_5.png
         text: If you ever want to delete a block, just remove it from the stack and
@@ -2484,12 +2437,10 @@
           far away.
       3:
         image: notes/starwars_intro_3.JPG
-        text: In the next hour, we're going to build our own Star Wars game. We'll
-          teach you the basic concepts of programming. Usually programming is all
-          text but we're going to use blocks here so that we can drag and drop to
-          write the programs. Under the hood, you're still creating code. After you
-          try the basics with blocks, we'll switch you to JavaScript, one of the most
-          popular programming languages on the web.
+        text: ในชั่วโมงถัดไปคุณจะได้สร้างเกม Star Wars ในแบบของคุณเอง ราจะสอนคณในเรื่องแนวคิดเบื้องต้นเกี่ยวกับการเขียนโปรแกรม
+          โดยที่การเขียนโปรแกรมแบบดั้งเดิมมักเป็นข้อความ แต่ที่นี่เราจะใช้บล็อกซึ่งคุณสามารถลากและวางเพื่อเขียนโปรแกรมได้
+          เนื่อแท้แล้วคุณก็ยังคงสร้างโค้ดอยู่ดี หลังจากที่คุณได้ลองพื้นฐานเบื้องต้นของบล็อกแล้ว
+          เราจะเปลี่ยนการต่อบล็อกเป็น JavaScript ซึ่งเป็นหนึ่งในภาษาการเขียนโปรแกรมที่ได้รับความนิยมมากที่สุดบนเว็บ
       4:
         image: notes/starwars_intro_4.JPG
         text: To start off, we're going to work with Rey to program BB-8 to walk to
@@ -2695,8 +2646,7 @@
           our workspace.
       9:
         image: notes/starwars_blocks_intro_9.JPG
-        text: If you ever want to delete a block, just remove it from the stack and
-          drag it back into the toolbox.
+        text: เมื่อใดที่คุณต้องการจะลบบล็อกทิ้งไป ให้ลากบล็อกนั้นจากพื้นที่ทำงานกลับมาที่กล่องเครื่องมือทางซ้าย
       10:
         image: notes/starwars_blocks_intro_10.JPG
         text: After you hit run, you can always hit the reset button to get BB-8 back

@@ -1,4 +1,5 @@
-"uk":
+---
+uk:
   errors:
     messages:
       not_saved: 'Виправ ці помилки:'
@@ -93,6 +94,7 @@
     facebook: Facebook
     windowslive: обліковий запис Microsoft
     clever: Clever Account
+    powerschool: Powerschool Account
     forgot_password: Забули свій пароль?
     need_confirmation: Не отримали вказівок підтвердження?
     need_unlock: Не отримали вказівок розблокування?

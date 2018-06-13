@@ -1,3 +1,4 @@
+---
 'no':
   data:
     course:
@@ -35,8 +36,7 @@
             introductory computer science course that empowers students to create
             authentic artifacts and engage with computer science as a medium for creativity,
             communication, problem solving, and fun.
-          description_short: An introductory computer science course that empowers
-            students to create authentic artifacts.
+          description_short: 2018-2019-versjonen av kurset Informatikkoppdagelser.
         allthethingscourse:
           title: allthethingscourse
           description_short: Dette er et kurs for allthethings

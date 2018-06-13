@@ -31,6 +31,7 @@ class Census::StateCsOffering < ApplicationRecord
     IA
     ID
     IN
+    KY
     MA
     MI
     MS
@@ -82,6 +83,8 @@ class Census::StateCsOffering < ApplicationRecord
     when 'IN'
       # Don't raise an error if school does not exist because the logic that invokes this method skips these.
       School.find_by(id: row_hash['NCES'])&.state_school_id
+    when 'KY'
+      row_hash['State School ID']
     when 'MA'
       School.construct_state_school_id('MA', row_hash['District Code'][0..3], row_hash['School Code'])
     when 'MS'
@@ -230,6 +233,12 @@ class Census::StateCsOffering < ApplicationRecord
     4586
   ).freeze
 
+  KY_COURSE_CODES = %w(
+    110711
+    110701
+    Other
+  ).freeze
+
   MA_COURSE_CODES = %w(
     10011
     10012
@@ -360,6 +369,8 @@ class Census::StateCsOffering < ApplicationRecord
     when 'IN'
       # A column per CS course with a value of 'Y' if the course is offered.
       IN_COURSE_CODES.select {|course| row_hash[course] == 'Y'}
+    when 'KY'
+      KY_COURSE_CODES.select {|course| course == row_hash['Course']}
     when 'MA'
       # Don't consider a course as offered at a school if there is no enrollment ("*") or it is not a positive number
       MA_COURSE_CODES.select do |course|
