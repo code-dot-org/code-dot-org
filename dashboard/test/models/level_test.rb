@@ -103,6 +103,20 @@ class LevelTest < ActiveSupport::TestCase
     assert_not custom_levels.include?(@level)
   end
 
+  test "summarize returns object with expected fields" do
+    summary = @level.summarize
+    assert_equal(summary[:level_id], @level.id)
+    assert_equal(summary[:type], 'Maze')
+    assert_equal(summary[:name], '__bob4')
+    assert_nil(summary[:display_name])
+  end
+
+  test "get_question_text returns question text for free response level" do
+    free_response_level = create :level, name: 'A question', markdown_instructions: 'Answer this question.',
+      type: 'FreeResponse'
+    assert_equal free_response_level.get_question_text, 'Answer this question.'
+  end
+
   test "create turtle level of correct subclass" do
     level = Level.create(@turtle_data)
     assert_equal "Artist", level.type

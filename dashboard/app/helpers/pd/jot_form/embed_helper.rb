@@ -14,7 +14,7 @@ module Pd
       def format_url_params(hash)
         hash.map do |key, value|
           [
-            key.to_s.camelize(:lower),
+            key.to_s,
             sanitize_value(value)
           ]
         end.to_h.to_param

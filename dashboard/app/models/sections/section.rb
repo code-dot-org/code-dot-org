@@ -64,8 +64,6 @@ class Section < ActiveRecord::Base
   has_many :section_hidden_stages
   has_many :section_hidden_scripts
 
-  SYSTEM_DELETED_NAME = 'system_deleted'.freeze
-
   # This list is duplicated as SECTION_LOGIN_TYPE in shared_constants.rb and should be kept in sync.
   LOGIN_TYPES = [
     LOGIN_TYPE_EMAIL = 'email'.freeze,
@@ -209,11 +207,6 @@ class Section < ActiveRecord::Base
     end
   end
 
-  # Clears all personal data from the section object.
-  def clean_data
-    update(name: SYSTEM_DELETED_NAME)
-  end
-
   # Figures out the default script for this section. If the section is assigned to
   # a course rather than a script, it returns the first script in that course.
   # @return [Script, nil]
@@ -303,8 +296,8 @@ class Section < ActiveRecord::Base
   # once such a thing exists
   def has_sufficient_discount_code_progress?
     return false if students.length < 10
-    csd2 = Script.get_from_cache('csd2')
-    csd3 = Script.get_from_cache('csd3')
+    csd2 = Script.get_from_cache('csd2-2017')
+    csd3 = Script.get_from_cache('csd3-2017')
     raise 'Missing scripts' unless csd2 && csd3
 
     csd2_programming_level_ids = csd2.levels.select {|level| level.is_a?(Weblab)}.map(&:id)

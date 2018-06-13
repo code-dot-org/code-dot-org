@@ -523,7 +523,7 @@ var projects = module.exports = {
         this.sourceHandler.setInitialLevelSource(currentSources.source);
         this.showMinimalProjectHeader();
       }
-    } else if (appOptions.isLegacyShare && this.getStandaloneApp()) {
+    } else if (appOptions.legacyShareStyle && this.getStandaloneApp()) {
       this.setName('Untitled Project');
       this.showMinimalProjectHeader();
     }

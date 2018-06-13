@@ -164,7 +164,7 @@ describe('Game Lab Jr Helper Library', () => {
     addBehavior(sprite, () => eventLog.push('behavior 2 ran'));
     whenUpArrow(() => eventLog.push('key event ran'));
     whenMouseClicked(() => eventLog.push('touch event ran'));
-    whenTouching(sprite, otherSprite, () => eventLog.push('collision event ran'));
+    whenTouching(() => sprite, () => otherSprite, () => eventLog.push('collision event ran'));
 
     draw();
 
@@ -180,5 +180,17 @@ describe('Game Lab Jr Helper Library', () => {
     overlapStub.restore();
     keyWentDownStub.restore();
     mouseWentDownStub.restore();
+  });
+
+  it('does not run behaviors if shouldUpdate returns false', () => {
+    const shouldUpdateStub = stub(window, 'shouldUpdate').returns(false);
+    const sprite = makeNewSprite(null, 200, 200);
+    const eventLog = [];
+    addBehavior(sprite, () => eventLog.push('behavior 1 ran'));
+
+    draw();
+    expect(eventLog).to.be.empty;
+
+    shouldUpdateStub.restore();
   });
 });

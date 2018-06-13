@@ -54,7 +54,7 @@
       cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','run_server_generate_curriculum_pdfs')
       cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','collate_pdfs')
       cronjob at:'30 16,17 * * *', do:deploy_dir('bin', 'cron', 'update_dotd')
-      cronjob at:'0 * * * *', do:deploy_dir('tools', 'scripts', 'brokenLinkChecker', 'brokenLinkChecker.js'), notify:'dev+crontab@code.org'
+      cronjob at:'0 * * * *', do:deploy_dir('bin', 'cron', 'start_broken_link_checker'), notify:'dev+crontab@code.org'
       cronjob at:'0 19 * * 1-5', do:deploy_dir('bin', 'cron', 'commit_content')
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'update_dts')
     end
@@ -85,6 +85,7 @@
       cronjob at:'30 14 * * *', do:dashboard_dir('bin','scheduled_pd_workshop_emails')
       cronjob at:'* 14 * * 1', do:dashboard_dir('bin','scheduled_pd_application_emails')
       cronjob at:'10 */12 * * *', do:dashboard_dir('bin','refresh_pd_workshop_material_orders')
+      cronjob at:'*/5 * * * *', do:dashboard_dir('bin', 'sync_jotforms')
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'index_users_in_solr')
       cronjob at:'25 7 * * *', do:deploy_dir('bin', 'cron', 'update_hoc_map')
       cronjob at:'19 4 * * *', do:deploy_dir('bin', 'cron', 'update_census_map')

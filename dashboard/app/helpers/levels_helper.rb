@@ -322,7 +322,7 @@ module LevelsHelper
 
   def set_hint_prompt_options(level_options)
     if @script && @script.hint_prompt_enabled?
-      level_options[:hintPromptAttemptsThreshold] = @script_level.hint_prompt_attempts_threshold
+      level_options[:hintPromptAttemptsThreshold] = @level.hint_prompt_attempts_threshold
     end
   end
 
@@ -382,7 +382,7 @@ module LevelsHelper
       sublevelCallback: @sublevel_callback,
     }
 
-    if (@game && @game.owns_footer_for_share?) || @is_legacy_share
+    if (@game && @game.owns_footer_for_share?) || @legacy_share_style
       app_options[:copyrightStrings] = build_copyright_strings
     end
 
@@ -420,6 +420,18 @@ module LevelsHelper
     app_options
   end
 
+  def firebase_options
+    fb_options = {}
+
+    if @level.game.use_firebase?
+      fb_options[:firebaseName] = CDO.firebase_name
+      fb_options[:firebaseAuthToken] = firebase_auth_token
+      fb_options[:firebaseChannelIdSuffix] = CDO.firebase_channel_id_suffix
+    end
+
+    fb_options
+  end
+
   # Options hash for Blockly
   def blockly_options
     l = @level
@@ -430,12 +442,12 @@ module LevelsHelper
     app_options[:level] = level_options
 
     # Locale-depdendent option
-    # For historical reasons, localized_instructions should happen independent
-    # of `should_localize?`
+    # For historical reasons, `localized_instructions` and
+    # `localized_authored_hints` should happen independent of `should_localize?`
     level_options['instructions'] = l.localized_instructions unless l.localized_instructions.nil?
+    level_options['authoredHints'] = l.localized_authored_hints unless l.localized_authored_hints.nil?
     if l.should_localize?
       level_options['markdownInstructions'] = l.localized_markdown_instructions unless l.localized_markdown_instructions.nil?
-      level_options['authoredHints'] = l.localized_authored_hints unless l.localized_authored_hints.nil?
       level_options['failureMessageOverride'] = l.localized_failure_message_override unless l.localized_failure_message_override.nil?
     end
 
@@ -547,14 +559,10 @@ module LevelsHelper
 
     # User/session-dependent options
     app_options[:disableSocialShare] = true if (current_user && current_user.under_13?) || app_options[:embed]
-    app_options[:isLegacyShare] = true if @is_legacy_share
+    app_options[:legacyShareStyle] = true if @legacy_share_style
     app_options[:isMobile] = true if browser.mobile?
     app_options[:labUserId] = lab_user_id if @game == Game.applab || @game == Game.gamelab
-    if @level.game.use_firebase?
-      app_options[:firebaseName] = CDO.firebase_name
-      app_options[:firebaseAuthToken] = firebase_auth_token
-      app_options[:firebaseChannelIdSuffix] = CDO.firebase_channel_id_suffix
-    end
+    app_options.merge!(firebase_options)
     app_options[:canResetAbuse] = true if current_user && current_user.permission?(UserPermission::PROJECT_VALIDATOR)
     app_options[:isSignedIn] = !current_user.nil?
     app_options[:isTooYoung] = !current_user.nil? && current_user.under_13? && current_user.terms_version.nil?
@@ -586,7 +594,7 @@ module LevelsHelper
     end
     app_options[:send_to_phone_url] = send_to_phone_url if app_options[:sendToPhone]
 
-    if (@game && @game.owns_footer_for_share?) || @is_legacy_share
+    if (@game && @game.owns_footer_for_share?) || @legacy_share_style
       app_options[:copyrightStrings] = build_copyright_strings
     end
 
@@ -757,9 +765,11 @@ module LevelsHelper
   def firebase_auth_token
     return nil unless CDO.firebase_secret
 
+    base_channel = params[:channel_id] || get_channel_for(@level, @user)
     payload = {
       uid: user_or_session_id,
-      is_dashboard_user: !!current_user
+      is_dashboard_user: !!current_user,
+      channel: "#{base_channel}#{CDO.firebase_channel_id_suffix}"
     }
     options = {}
     # Provides additional debugging information to the browser when

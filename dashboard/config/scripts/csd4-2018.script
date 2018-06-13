@@ -3,10 +3,12 @@ login_required true
 hideable_stages true
 exclude_csf_column_in_legend true
 student_detail_progress_view true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csd/unit4/"], ["teacherForum", "https://forum.code.org/c/csd4"], ["vocabulary", "https://curriculum.code.org/csd/unit4/vocab/"], ["standardMappings", "https://curriculum.code.org/csd/unit4/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd/unit4/code/"]]
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-18/unit4/"], ["teacherForum", "https://forum.code.org/c/csd4"], ["vocabulary", "https://curriculum.code.org/csd-18/unit4/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-18/unit4/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd-18/unit4/code/"]]
 has_verified_resources true
 has_lesson_plan true
-script_announcements [{"notice"=>"Know a teacher interested in teaching computer science?", "details"=>"Applications for the 2018 middle and high school Professional Learning program are now open!  No computer science experience is necessary.", "link"=>"https://code.org/educate/professional-learning-2018", "type"=>"bullhorn"}]
+family_name 'csd4'
+version_year '2018'
+is_stable true
 
 stage 'Analysis of Design', flex_category: 'csd4_1'
 named_level 'CSD U4L01 autoSFLP_2018'

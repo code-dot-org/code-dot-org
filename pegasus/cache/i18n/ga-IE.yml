@@ -1,4 +1,5 @@
-"ga-IE":
+---
+ga-IE:
   hour_of_code: An Uair Chódála
   hello: Dia dhuit a dhomhain
   'yes': Tá
@@ -495,6 +496,9 @@
   homepage_header_donors: Tá Code.org fíorbhuíoch dá thacadóirí
   homepage_donors_seall: Féach uile
   homepage_donors_donate: Bronn
+  homepage_below_hero_announcement_text: We care about your privacy and are making
+    some updates to our privacy policy, effective May 25.
+  homepage_below_hero_announcement_link_text: Tuilleadh eolais
   contact_form_topic_student: Is dalta mé
   contact_form_topic_parent: Is tuismitheoir mé
   contact_form_topic_teacher: Is múinteoir mé
@@ -744,6 +748,12 @@
   volunteer_engineer_submission_field_email_desc: Ní fhoilseoimid do sheoladh ríomhphoist
     riamh, ach seolfaimid iarratais ó mhúinteoirí chugat.
   volunteer_engineer_submission_field_email_placeholder: Seoladh ríomhphoist
+  volunteer_engineer_submission_field_email_preference: Can we email you about updates
+    to our courses, volunteer opportunities, or other computer science news?
+  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
+    policy)"
+  volunteer_engineer_submission_field_email_preference_yes: Tá
+  volunteer_engineer_submission_field_email_preference_no: Níl
   volunteer_engineer_submission_final_paragraph: Cuirfimid ar léarscáil thú atá dírithe
     ar mhúinteoirí atá ag lorg saorálaithe don Uair Chódála nó d'obair dheonach eile.
     Ní fhoilseoimid do sheoladh ríomhphoist ná do sheoladh baile RIAMH. Ach beidh
@@ -1282,9 +1292,25 @@
   coursee_name: Cúrsa E
   coursef-draft_name: Cúrsa F
   coursef_name: Cúrsa F
+  coursea-2017_name: Course A (2017)
+  courseb-2017_name: Course B (2017)
+  coursec-2017_name: Course C (2017)
+  coursed-2017_name: Course D (2017)
+  coursee-2017_name: Course E (2017)
+  coursef-2017_name: Course F (2017)
+  coursea-2018_name: Course A (2018)
+  courseb-2018_name: Course B (2018)
+  coursec-2018_name: Course C (2018)
+  coursed-2018_name: Course D (2018)
+  coursee-2018_name: Course E (2018)
+  coursef-2018_name: Course F (2018)
   accelerated_name: Cúrsa Luathaithe
   express_name: Luaschúrsa
   pre-express_name: Luaschúrsa do Réamhléitheoirí
+  express-2017_name: Express Course (2017)
+  pre-express-2017_name: Pre-reader Express Course (2017)
+  express-2018_name: Express Course (2018)
+  pre-express-2018_name: Pre-reader Express Course (2018)
   cspunit1_name: 'Aonad 1: Faisnéis dhigiteach'
   cspunit2_name: 'Aonad 2: An tIdirlíon'
   cspunit3_name: 'Aonad 3: Ríomhchlárú'
@@ -1297,12 +1323,26 @@
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Aonad 5: Sonraí agus Sochaí'
   csd6_name: 'Aonad 6: Ríomhaireacht Fisiceach'
+  csd1-2017_name: 'Unit 1: Problem Solving'
+  csd2-2017_name: 'Unit 2: Web Development'
+  csd3-2017_name: 'Unit 3: Animation and Games'
+  csd4-2017_name: 'Unit 4: The Design Process'
+  csd5-2017_name: 'Aonad 5: Sonraí agus Sochaí'
+  csd6-2017_name: 'Aonad 6: Ríomhaireacht Fisiceach'
   csd1-2018_name: 'Unit 1: Problem Solving'
   csd2-2018_name: 'Unit 2: Web Development'
   csd3-2018_name: 'Unit 3: Animation and Games'
   csd4-2018_name: 'Unit 4: The Design Process'
   csd5-2018_name: 'Aonad 5: Sonraí agus Sochaí'
   csd6-2018_name: 'Aonad 6: Ríomhaireacht Fisiceach'
+  csp1-2017_name: 'Aonad 1: An tIdirlíon'
+  csp2-2017_name: 'Aonad 2: Faisnéis dhigiteach'
+  csp3-2017_name: 'Unit 3: Algorithms and Programming'
+  csp4-2017_name: 'Unit 4: Big Data and Privacy'
+  csp5-2017_name: 'Unit 5: Building Apps'
+  csp-explore-2017_name: 'AP: Ullmhú don Tasc Taiscéalaíoch'
+  csp-create-2017_name: 'AP: Ullmhú don Tasc Cruthaitheach'
+  csppostap-2017_name: 'Iar-AP: Bunachair Sonraí in Aipeanna'
   csp1-2018_name: 'Aonad 1: An tIdirlíon'
   csp2-2018_name: 'Aonad 2: Faisnéis dhigiteach'
   csp3-2018_name: 'Unit 3: Algorithms and Programming'
@@ -1321,6 +1361,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: Tascanna Gníomhaíochta AP
   csppostap_name: 'Iar-AP: Bunachair Sonraí in Aipeanna'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: An Scrúdú Iomlán - 50 ceist
   csp-explore_name: 'AP: Ullmhú don Tasc Taiscéalaíoch'
   csp-create_name: 'AP: Ullmhú don Tasc Cruthaitheach'
@@ -1348,6 +1389,8 @@
   math_category_name: Matamaitic
   hoc_category_name: An Uair Chódála
   csf_category_name: Buntús na Ríomheolaíochta
+  csf_2017_category_name: CS Fundamentals (2017)
+  csf_2018_category_name: CS Fundamentals (2018)
   csf_international_category_name: 'Buntús na Ríomheolaíochta: Idirnáisiúnta'
   csf2_draft_category_name: 'Á bhforbairt: Cúrsaí A-F'
   csd_category_name: Fionnachtana sa Ríomheolaíocht
@@ -2220,13 +2263,3 @@
     Account”:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: Fáilte go dtí an tSaotharlann Aipeanna
-  homepage_below_hero_announcement_text: We care about your privacy and are making
-    some updates to our privacy policy, effective May 25.
-  homepage_below_hero_announcement_link_text: Learn more
-  volunteer_engineer_submission_field_email_preference: Can we email you about updates
-    to our courses, volunteer opportunities, or other computer science news?
-  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
-    policy)"
-  volunteer_engineer_submission_field_email_preference_yes: 'Yes'
-  volunteer_engineer_submission_field_email_preference_no: 'No'
-  csp-post-survey_name: Student Post-Course Survey

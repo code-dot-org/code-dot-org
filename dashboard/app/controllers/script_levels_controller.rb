@@ -1,10 +1,12 @@
 require 'cdo/script_config'
 require 'dynamic_config/dcdo'
 require 'dynamic_config/gatekeeper'
+require 'cdo/script_constants'
 
 class ScriptLevelsController < ApplicationController
   check_authorization
   include LevelsHelper
+  include ScriptConstants
 
   # Default s-maxage to use for script level pages which are configured as
   # publicly cacheable.  Used if the DCDO.public_proxy_max_age is not defined.
@@ -67,10 +69,22 @@ class ScriptLevelsController < ApplicationController
   def show
     @current_user = current_user && User.includes(:teachers).where(id: current_user.id).first
     authorize! :read, ScriptLevel
-    @script = Script.get_from_cache(params[:script_id])
+    @script = Script.get_from_cache(params[:script_id], version_year: DEFAULT_VERSION_YEAR)
 
+    # Redirect to the same script level within @script.redirect_to.
+    # There are too many variations of the script level path to use
+    # a path helper, so use a regex to compute the new path.
     if @script.redirect_to?
-      redirect_to build_script_level_path(Script.get_from_cache(@script.redirect_to).starting_level)
+      new_script = Script.get_from_cache(@script.redirect_to)
+      new_path = request.fullpath.sub(%r{^/s/#{params[:script_id]}/}, "/s/#{new_script.name}/")
+
+      # avoid a redirect loop if the string substitution failed
+      if new_path == request.fullpath
+        redirect_to build_script_level_path(new_script.starting_level)
+        return
+      end
+
+      redirect_to new_path
       return
     end
 

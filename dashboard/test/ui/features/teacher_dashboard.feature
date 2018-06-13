@@ -12,12 +12,6 @@ Feature: Using the teacher dashboard
     Then I click selector "div.title:contains('Student Accounts and Progress')"
     Then I wait until I am on "http://studio.code.org/home"
 
-  Scenario: Loading the teacher dashboard in the EU
-    Given I am on "http://code.org/"
-    And I am a teacher
-    And I am on "http://code.org/teacher-dashboard?no_home_redirect=1&force_in_eu=1"
-    Then I wait to see ".ui-test-gdpr-dialog"
-
   Scenario: Loading student progress
     Given I create a teacher-associated student named "Sally"
     And I give user "Teacher_Sally" hidden script access
@@ -32,7 +26,7 @@ Feature: Using the teacher dashboard
     And I click selector "a:contains('New Section')" once I see it
     And I click selector "a:contains('Sally')" once I see it
     And I wait until element "#course-dropdown" is visible
-    And I select the "allthethings *" option in dropdown "course-dropdown"
+    And I select the "All the Things! *" option in dropdown "course-dropdown"
     And I wait until I see selector "a[href*='/s/allthethings/stage/2/puzzle/1']"
     Then selector "a[href*='/s/allthethings/stage/2/puzzle/1']" has class "perfect"
     But selector "a[href*='/s/allthethings/stage/2/puzzle/2']" doesn't have class "perfect"
@@ -43,7 +37,7 @@ Feature: Using the teacher dashboard
 
     When I click selector "#learn-tabs a:contains('Text Responses')" once I see it
     And I wait until element "#uitest-course-dropdown" is visible
-    And I select the "allthethings *" option in dropdown "uitest-course-dropdown"
+    And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
     And I wait until element "#uitest-responses-tab td:nth(0)" is visible
     And element "#uitest-responses-tab td:nth(0)" contains text "Sally"
     And element "#uitest-responses-tab td:nth(4)" contains text "hello world"
@@ -55,7 +49,7 @@ Feature: Using the teacher dashboard
 
     When I click selector "#learn-tabs a:contains('Assessments/Surveys')" once I see it
     And I wait until element "#uitest-course-dropdown" is visible
-    And I select the "allthethings *" option in dropdown "uitest-course-dropdown"
+    And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
     And I wait until element "#uitest-assessments-tab td:nth(0)" is visible
     And element "#uitest-assessments-tab td:nth(0)" contains text "Sally"
     And element "#uitest-assessments-tab td:nth(1)" contains text "Lesson 33: Single page assessment"

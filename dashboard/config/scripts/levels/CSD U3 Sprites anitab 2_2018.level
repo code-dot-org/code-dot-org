@@ -28,7 +28,6 @@
       "comment_GameLab": null,
       "comment_Sprites": null
     },
-    "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Upload your own image\r\n\r\nYou can also use the Animation tab to upload or draw your own image.\r\n\r\n# Do This\r\nYou are going to make a flying kite. You can search the web for an image or create a new animation from scratch by drawing your own kite.\r\n\r\n* Download your kite image. Images with transparent backgrounds work best.\r\n* Open the animations tab.\r\n* Click <img src=\"https://images.code.org/346f6657dba57b0c3bd5deb534f76b69-image-1466194432449.13.05 PM.png\" style=\"width:50px\"> and then <img src=\"https://images.code.org/60c0371b45b29f10a3c8530db9154428-image-1466194434329.13.16 PM.png\" style=\"width:50px\"> to upload an image.\r\n* Select the file from your computer.\r\n* Rename your image so it is easy to remember. To rename it click the text below the image.\r\n* Back in code mode, use `sprite.setAnimation()` to make your `kite` sprite show your new animation.\r\n\r\nDon't worry if your kite image is too big! You'll learn how to fix that in the next level.",

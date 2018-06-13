@@ -6,6 +6,7 @@ import {generateAuthoredHints} from './authoredHintUtils';
 import {addReadyListener} from './dom';
 import * as blocksCommon from './blocksCommon';
 import * as commonReducers from './redux/commonReducers';
+import codegen from './lib/tools/jsinterpreter/codegen';
 
 window.__TestInterface = {
   loadBlocks: (...args) => studioApp().loadBlocks(...args),
@@ -82,8 +83,8 @@ export default function (app, levels, options) {
           ({ config: blockConfig, category: 'Custom' }));
       const sharedBlocksConfig = level.sharedBlocks || [];
       const customBlocksConfig = [
-        ...levelCustomBlocksConfig,
         ...sharedBlocksConfig,
+        ...levelCustomBlocksConfig,
       ];
       if (options.blocksModule.installCustomBlocks && customBlocksConfig.length > 0) {
         options.blocksModule.installCustomBlocks(
@@ -91,10 +92,12 @@ export default function (app, levels, options) {
           blockInstallOptions,
           customBlocksConfig,
           options.level,
-          level.hideCustomBlocks,
+          level.hideCustomBlocks && !options.level.edit_blocks,
         );
       }
     }
+
+    Blockly.JavaScript.INFINITE_LOOP_TRAP = codegen.loopTrap();
   }
 
   function onReady() {

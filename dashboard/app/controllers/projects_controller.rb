@@ -2,9 +2,10 @@ require 'active_support/core_ext/hash/indifferent_access'
 require 'cdo/firehose'
 
 class ProjectsController < ApplicationController
-  before_action :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy, :public, :index]
+  before_action :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy, :public, :index, :export_config]
   before_action :authorize_load_project!, only: [:load, :create_new, :edit, :remix]
-  before_action :set_level, only: [:load, :create_new, :show, :edit, :readonly, :remix]
+  before_action :set_level, only: [:load, :create_new, :show, :edit, :readonly, :remix, :export_config]
+  protect_from_forgery except: :export_config
   include LevelsHelper
 
   TEMPLATES = %w(projects).freeze
@@ -300,7 +301,7 @@ class ProjectsController < ApplicationController
     # for sharing pages, the app will display the footer inside the playspace instead
     no_footer = sharing
     # if the game doesn't own the sharing footer, treat it as a legacy share
-    @is_legacy_share = sharing && !@game.owns_footer_for_share?
+    @legacy_share_style = sharing && !@game.owns_footer_for_share?
     view_options(
       readonly_workspace: sharing || readonly,
       full_width: true,
@@ -309,7 +310,6 @@ class ProjectsController < ApplicationController
       no_footer: no_footer,
       code_studio_logo: sharing && !iframe_embed,
       no_header: sharing,
-      is_legacy_share: @is_legacy_share,
       small_footer: !no_footer && (@game.uses_small_footer? || @level.enable_scrolling?),
       has_i18n: @game.has_i18n?,
       game_display_name: data_t("game.name", @game.name)
@@ -374,6 +374,15 @@ class ProjectsController < ApplicationController
     SourceBucket.new.remix_source src_channel_id, new_channel_id, animation_list
     FileBucket.new.copy_files src_channel_id, new_channel_id
     redirect_to action: 'edit', channel_id: new_channel_id
+  end
+
+  def export_config
+    return if redirect_under_13_without_tos_teacher(@level)
+    if params[:script_call]
+      render js: "#{params[:script_call]}(#{firebase_options.to_json});"
+    else
+      render json: firebase_options
+    end
   end
 
   def set_level

@@ -1,0 +1,19 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-06-06T22:48:39.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "markdown_instructions": "**Make a prediction:** This is Geraldine, your new pet giraffe. What do you think will happen if you press run and then click on her?",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</FreeResponse>
