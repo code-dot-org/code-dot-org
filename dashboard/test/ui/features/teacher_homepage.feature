@@ -63,6 +63,19 @@ Feature: Using the teacher homepage sections feature
     And I wait until element ".header_popup_body .uitest-ProgressBubble:first" is visible
     And the href of selector ".header_popup_body .uitest-ProgressBubble:first" contains the section id
 
+  Scenario: Assigning a course to a section from the course page
+    When I see the section set up box
+    And I create a new section with course "Course A", version "2017 (Recommended)"
+    And the section table row at index 0 has primary assignment path "/s/coursea"
+
+    Given I am on "http://studio.code.org/courses/csp-2018"
+    And I click selector "#uitest-assign-course-btn div:eq(1)" once I see it
+    And I click selector "#uitest-assign-course-btn a:contains('New Section')" once I see it
+    And I click selector "#uitest-confirm-assignment-btn" once I see it
+
+    Given I am on "http://studio.code.org/home"
+    And the section table row at index 0 has primary assignment path "/courses/csp-2018"
+
   Scenario: Assign a CSF course with multiple versions
     When I see the section set up box
     And I create a new section with course "Course A", version "2017 (Recommended)"
