@@ -535,7 +535,11 @@ class Script < ActiveRecord::Base
       Script::CSD2_NAME,
       Script::CSD3_NAME,
       Script::CSD4_NAME,
-      Script::CSD6_NAME
+      Script::CSD6_NAME,
+      Script::CSD2_2018_NAME,
+      Script::CSD3_2018_NAME,
+      Script::CSD4_2018_NAME,
+      Script::CSD6_2018_NAME,
     ].include?(name)
   end
 
@@ -543,7 +547,10 @@ class Script < ActiveRecord::Base
     [
       Script::CSP17_UNIT3_NAME,
       Script::CSP17_UNIT5_NAME,
-      Script::CSP17_POSTAP_NAME
+      Script::CSP17_POSTAP_NAME,
+      Script::CSP3_2018_NAME,
+      Script::CSP5_2018_NAME,
+      Script::CSP_POSTAP_2018_NAME,
     ].include?(name)
   end
 
@@ -629,7 +636,7 @@ class Script < ActiveRecord::Base
   # @param user [User]
   # @return [Boolean] Whether the user has progress on another version of this script.
   def has_other_version_progress?(user)
-    return nil unless user
+    return nil unless user && family_name
     user_script_ids = user.user_scripts.pluck(:script_id)
 
     Script.
