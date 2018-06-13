@@ -1,4 +1,5 @@
-"bs":
+---
+bs:
   errors:
     messages:
       not_saved: 'Ispravi ove greške:'
@@ -94,6 +95,7 @@
     facebook: Facebook
     windowslive: Microsoft Račun
     clever: Pametni račun
+    powerschool: Powerschool Account
     forgot_password: Zaboravio/la si šifru?
     need_confirmation: Nisi primio/la upute za potvrdu?
     need_unlock: Nisi primio/la upute za otključavanje?

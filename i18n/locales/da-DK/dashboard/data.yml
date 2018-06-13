@@ -530,6 +530,8 @@ da:
         CSF_ifelse_allskins: Using If/Else Blocks
         CSF_ifelseifelse_allskins: Using If/ElseIf/Else Blocks
         CSF_loops_AB: Sløjfer
+        csd_gamelab_booleans: Boolean Expressions
+        csd_gamelab_conditional_statements: Conditional Statements
     callout:
       text:
         drag_blocks: Træk i en "flyt fremad" blok og fastgør den under den anden blok

@@ -1,4 +1,5 @@
-"th":
+---
+th:
   errors:
     messages:
       not_saved: 'โปรดแก้ไขข้อผิดพลาดต่อไปนี้:'
@@ -91,6 +92,7 @@
     facebook: เฟซบุค
     windowslive: บัญชี Microsoft
     clever: Clever Account
+    powerschool: Powerschool Account
     forgot_password: ลืมรหัสผ่าน?
     need_confirmation: ไม่ได้รับการยืนยันคำแนะนำ?
     need_unlock: ไม่ได้รับคำแนะนำในการปลดล็อค?
@@ -308,7 +310,7 @@
       course_catalog: Course Catalog
       project_gallery: Project Gallery
       sections: Sections
-      help_support: Help and support
+      help_support: การช่วยเหลือและสนับสนุน
       report_bug: Report bug
       teacher_community: Teacher community
       professional_learning: Professional Learning
@@ -336,7 +338,7 @@
       about_faqs: FAQs
       learn: Learn
       stats: สถิติ
-      help_us: Help Us
+      help_us: ช่วยเรา
       teach: Teach
       about: About
     user:
@@ -654,7 +656,7 @@
     how_it_works: มันทำงานได้อย่างไร
     try_hour_of_code: Try an Hour of Code!
   reference_area:
-    title: ต้องการความช่วยเหลือเหรอ?
+    title: ต้องการความช่วยเหลือ?
     subtitle: ดูวิดีโอและคำใบ้พวกนี้
     teacher: ดูทางเลือก
     teacher_no_solution: Stop seeing solution
@@ -667,7 +669,7 @@
     notes_coming_soon: เร็ว ๆ นี้จะมีบันทึกย่อสำหรับวิดีโอนี้
     autoplay_option: วิดีโอเริ่มเล่นอัตโนมัติ
     download: ดาวน์โหลดวิดีโอ
-    show_notes: Show Notes
+    show_notes: แสดงเป็นข้อความ
     show_video: Show Video
   compatibility:
     upgrade:
@@ -841,14 +843,14 @@
     support: Get Help
     support_url: "//support.code.org"
     help_resources: Help and Resources
-    help_support: Help and Support
+    help_support: การช่วยเหลือและสนับสนุน
     documentation: Documentation
     tutorials: Tutorials
   multi:
     wrong_title: Incorrect answer
-    wrong_body: The answer you've entered is not correct.  Please try again!
+    wrong_body: คำตอบที่คุณเลือก ไม่ถูกต้อง โปรดลองใหม่อีกครั้ง!
     correct_title: Correct
-    correct_body: That is the correct answer.
+    correct_body: เป็นคำตอบที่ถูกต้อง
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   multi-submittable:
@@ -887,7 +889,7 @@
     wrong_title: Incorrect solution
     wrong_body: The solution you've entered is not correct.  Please try again!
     correct_title: Correct
-    correct_body: That is the correct answer.
+    correct_body: เป็นคำตอบที่ถูกต้อง
   contract_match:
     wrong_title: Incorrect answer
     badname: Your contract has the wrong name.
@@ -903,7 +905,7 @@
     open_response_title: Thanks
     open_response_body: Thanks for your response!
     correct_title: Correct
-    correct_body: That is the correct answer.
+    correct_body: เป็นคำตอบที่ถูกต้อง
   dialog:
     ok: ตกลง
     startover_title: คุณจะเริ่มต้นใหม่จริงๆหรือ ?
@@ -992,8 +994,8 @@
     projects: Projects
     create: Create Project
     create_a_project: 'Create a new project:'
-    new: Create New
-    rename: Rename
+    new: สร้างใหม่
+    rename: ตั้งชื่อใหม่
     save: บันทึก
     delete: ลบ
     import: Import
@@ -1005,7 +1007,7 @@
     share_link_import_error_body: There was a problem importing that share link. Please
       try again.
     exit: Return to Course
-    my_projects: My Projects
+    my_projects: โปรเจคของฉัน
     project_gallery: Project Gallery
     publish: Publish
     unpublish: Unpublish
@@ -1042,8 +1044,8 @@
     delete_confirm_text: Deleting your project will permanently remove it from your
       My Projects list. Anyone you have shared the link to will no longer be able
       to view your project.
-    view_all: View My Projects
-    remix: Remix
+    view_all: ดูโปรเจคของฉัน
+    remix: รีมิกซ์
     click_to_remix: Click 'Remix' to spin-off your own version!
     edit_project: Edit Project
     sharing_disabled: Sorry, this project is not available for sharing. If this is

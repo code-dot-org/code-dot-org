@@ -85,6 +85,7 @@ eu:
     facebook: 'Facebook'
     windowslive: 'Microsoft kontua'
     clever: 'Clever Account'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Pasahitza ahaztu duzu?'
     need_confirmation: "Ez dituzu konfirmazio argibideak jaso?"
     need_unlock: "Ez dituzu liberatzeko argibideak jaso?"

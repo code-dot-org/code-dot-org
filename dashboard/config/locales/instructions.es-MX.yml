@@ -1,4 +1,5 @@
-"es-MX":
+---
+es-MX:
   data:
     instructions:
       2-3 Artist 1 new_instruction: Hola, soy un artista. Puedes escribir código para
@@ -10167,12 +10168,12 @@
         haz clic en "Ejecutar" y ¡ve que sucede!
       courseD_maze_ramp1_2018_instruction: Para este rompecabezas, encaja todos los
         bloques haz clic en "Ejecutar" y ¡ve que sucede!
-      courseD_maze_ramp2_instruction: Arrastra un bloque 'mover hacia adelante' extra
-        desde la caja de herramientas, luego adjunta todos los bloques al 'cuando
-        ejecute' para finalizar tu código.
-      courseD_maze_ramp2_2018_instruction: Arrastra un bloque 'mover hacia adelante'
-        extra desde la caja de herramientas, luego adjunta todos los bloques al 'cuando
-        ejecute' para finalizar tu código.
+      courseD_maze_ramp2_instruction: Arrastra un bloque `mover hacia adelante` extra
+        desde la caja de herramientas, luego adjunta todos los bloques al `cuando
+        ejecute` para finalizar tu código.
+      courseD_maze_ramp2_2018_instruction: Arrastra un bloque `mover hacia adelante`
+        extra desde la caja de herramientas, luego adjunta todos los bloques al `cuando
+        ejecute` para finalizar tu código.
       courseD_maze_ramp3_instruction: Hay un bloque extra que va a causar que el pájaro
         choque. Elimínalo arrastrandolo de vuellta a la caja de herramientas.
       courseD_maze_ramp3_2018_instruction: Hay un bloque extra que va a causar que
@@ -10304,12 +10305,12 @@
         haz clic en "Ejecutar" y ¡ve que sucede!
       courseD_scrat_ramp1_2018_instruction: Para este rompecabezas, encaja todos los
         bloques haz clic en "Ejecutar" y ¡ve que sucede!
-      courseD_scrat_ramp2_instruction: Arrastra un bloque 'mover hacia adelante' extra
-        desde la caja de herramientas, luego adjunta todos los bloques al 'cuando
-        ejecute' para finalizar tu código.
-      courseD_scrat_ramp2_2018_instruction: Arrastra un bloque 'mover hacia adelante'
-        extra desde la caja de herramientas, luego adjunta todos los bloques al 'cuando
-        ejecute' para finalizar tu código.
+      courseD_scrat_ramp2_instruction: Arrastra un bloque `mover hacia adelante` extra
+        desde la caja de herramientas, luego adjunta todos los bloques al `cuando
+        ejecute` para finalizar tu código.
+      courseD_scrat_ramp2_2018_instruction: Arrastra un bloque `mover hacia adelante`
+        extra desde la caja de herramientas, luego adjunta todos los bloques al `cuando
+        ejecute` para finalizar tu código.
       courseD_scrat_ramp3_instruction: Hay un bloque extra que va a hacer que Scrat
         se estrelle. Elimínalo arrastrandolo de vuelta a la caja de herramientas.
       courseD_scrat_ramp3_2018_instruction: Hay un bloque extra que va a hacer que
@@ -10713,9 +10714,9 @@
       courseE_maze_ramp2_instruction: Arrastra un bloque 'mover hacia adelante' extra
         desde la caja de herramientas, luego adjunta todos los bloques al 'cuando
         ejecute' para finalizar el código.
-      courseE_maze_ramp2_2018_instruction: Arrastra un bloque 'mover hacia adelante'
-        extra desde la caja de herramientas, luego adjunta todos los bloques al 'cuando
-        ejecute' para finalizar tu código.
+      courseE_maze_ramp2_2018_instruction: Arrastra un bloque `mover hacia adelante`
+        extra desde la caja de herramientas, luego adjunta todos los bloques al `cuando
+        ejecute` para finalizar tu código.
       courseE_maze_ramp3_instruction: Hay un bloque extra que causará que el pájaro
         se estrelle. Elimínalo arrastrándolo de vuelta a la caja d eherramientas.
       courseE_maze_ramp3_2018_instruction: Hay un bloque extra que va a causar que

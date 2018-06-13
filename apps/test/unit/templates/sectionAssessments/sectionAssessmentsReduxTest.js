@@ -5,6 +5,7 @@ import sectionAssessments, {
   startLoadingAssessments,
   finishLoadingAssessments,
   setAssessmentId,
+  getCurrentScriptAssessmentList,
   getMultipleChoiceStructureForCurrentAssessment,
   getStudentMCResponsesForCurrentAssessment,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
@@ -81,6 +82,33 @@ describe('sectionAssessmentsRedux', () => {
     });
   });
 
+  describe('getCurrentScriptAssessmentList', () => {
+    it('gets a list of assessments in current script', () => {
+      const rootState = {
+        scriptSelection: {
+          scriptId: 123
+        },
+        sectionAssessments: {
+          ...initialState,
+          assessmentsStructureByScript: {
+            123: {
+              7: {id: 7, name: 'Assessment 7'},
+              8: {id: 8, name: 'Assessment 8'},
+            },
+            456: {
+              4: {id: 4, name: 'Assessment 4'},
+              5: {id: 5, name: 'Assessment 5'},
+            },
+          },
+        },
+      };
+      const result = getCurrentScriptAssessmentList(rootState);
+      assert.deepEqual(result.length, 2);
+      assert.deepEqual(result[0], {id: 7, name: 'Assessment 7'});
+      assert.deepEqual(result[1], {id: 8, name: 'Assessment 8'});
+    });
+  });
+
   describe('Selector functions', () => {
     let rootState;
     beforeEach(() => {
@@ -130,7 +158,7 @@ describe('sectionAssessmentsRedux', () => {
           }
         };
         const result = getMultipleChoiceStructureForCurrentAssessment(stateWithAssessment);
-        assert.deepEqual(result, [{correctAnswer: 'B', id: 456, question: 'What is a variable?'}]);
+        assert.deepEqual(result, [{correctAnswer: '', id: 456, question: 'What is a variable?'}]);
       });
     });
 
@@ -166,7 +194,7 @@ describe('sectionAssessmentsRedux', () => {
           }
         };
         const result = getStudentMCResponsesForCurrentAssessment(stateWithAssessment);
-        assert.deepEqual(result, [{id: '1', name: 'Saira', studentAnswers: [{answers: 'D', isCorrect: false}]}]);
+        assert.deepEqual(result, [{id: '1', name: 'Saira', studentResponses: [{responses: 'D', isCorrect: false}]}]);
       });
     });
   });

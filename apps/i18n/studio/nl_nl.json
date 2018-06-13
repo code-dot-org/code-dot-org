@@ -316,7 +316,7 @@
   "moveDistanceTooltip": "Beweeg een figuur de aangegeven afstand in de aangegeven richting.",
   "moveSprite": "ga",
   "moveSpriteN": "verplaats speler {spriteIndex}",
-  "moveDroid": "move droid",
+  "moveDroid": "verplaats droid",
   "moveDroidN": "verplaats droid {spriteIndex}",
   "to": "aan",
   "toXY": "naar x,y",

@@ -85,6 +85,7 @@ bg:
     facebook: 'Facebook'
     windowslive: 'Microsoft профил'
     clever: 'Умен профил'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Забравили сте паролата си?'
     need_confirmation: "Не сте получили инструкции за потвърждение ?"
     need_unlock: "Не сте получили инструкции за отключване?"
@@ -129,7 +130,7 @@ bg:
     accept_terms: "Вие трябва да потвърдите, за да си създадете профил"
     error: "Възникна грешка."
     email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
-    email_preference_privacy: "(See our privacy policy)"
+    email_preference_privacy: "(Вижте нашата политика за поверителност)"
     email_preference_yes: "Да"
     email_preference_no: "Не"
     email_preference_required: "You must specify an email preference."

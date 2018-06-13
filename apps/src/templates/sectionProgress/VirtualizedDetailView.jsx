@@ -16,9 +16,11 @@ import color from "../../util/color";
 import {
   progressStyles,
   ROW_HEIGHT,
+  LAST_ROW_MARGIN_HEIGHT,
   MAX_TABLE_SIZE,
   PROGRESS_BUBBLE_WIDTH,
   DIAMOND_BUBBLE_WIDTH,
+  tooltipIdForLessonNumber,
 } from './multiGridConstants';
 import i18n from '@cdo/locale';
 import SectionProgressNameCell from './SectionProgressNameCell';
@@ -79,6 +81,7 @@ class VirtualizedDetailView extends Component {
     setLessonOfInterest: PropTypes.func.isRequired,
     columnWidths: PropTypes.arrayOf(PropTypes.number).isRequired,
     getLevels: PropTypes.func,
+    onScroll: PropTypes.func,
   };
 
   state = {
@@ -134,6 +137,8 @@ class VirtualizedDetailView extends Component {
             <div
               onClick={() => this.onClickLevel(columnIndex)}
               style={styles.numberHeader}
+              data-tip
+              data-for={tooltipIdForLessonNumber(columnIndex)}
             >
               {columnIndex}
             </div>
@@ -210,13 +215,13 @@ class VirtualizedDetailView extends Component {
   };
 
   render() {
-    const {section, scriptData, lessonOfInterest} = this.props;
+    const {section, scriptData, lessonOfInterest, onScroll} = this.props;
     // Add 2 to account for the 2 header rows
     const rowCount = section.students.length + 2;
     // Add 1 to account for the student name column
     const columnCount = scriptData.stages.length + 1;
     // Calculate height based on the number of rows
-    const tableHeightFromRowCount = ROW_HEIGHT * rowCount;
+    const tableHeightFromRowCount = ROW_HEIGHT * rowCount + LAST_ROW_MARGIN_HEIGHT;
     // Use a 'maxHeight' of 680 for when there are many rows
     const tableHeight = Math.min(tableHeightFromRowCount, MAX_TABLE_SIZE);
 
@@ -227,7 +232,6 @@ class VirtualizedDetailView extends Component {
         columnWidth={this.getColumnWidth}
         columnCount={columnCount}
         enableFixedColumnScroll
-        enableFixedRowScroll
         rowHeight={ROW_HEIGHT}
         height={tableHeight}
         scrollToColumn={lessonOfInterest}
@@ -239,6 +243,7 @@ class VirtualizedDetailView extends Component {
         styleTopRightGrid={progressStyles.topRight}
         width={styleConstants['content-width']}
         ref="detailView"
+        onScroll={onScroll}
       />
     );
   }

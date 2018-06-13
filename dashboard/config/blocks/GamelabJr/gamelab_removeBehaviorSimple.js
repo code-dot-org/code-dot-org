@@ -1,3 +1,5 @@
 function removeBehaviorSimple(sprite, behavior) {
-  removeBehavior(sprite, behavior, behavior.name);
+  if (sprite && behavior) {
+    removeBehavior(sprite, behavior, behavior.name);
+  }
 }

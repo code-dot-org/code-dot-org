@@ -33,6 +33,7 @@ describe('VirtualizedSummaryView', () => {
         stages: [
           {
             id: 456,
+            position: 1,
             levels: [
               {id: 789}
             ],

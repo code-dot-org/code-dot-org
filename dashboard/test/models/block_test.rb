@@ -57,4 +57,18 @@ class BlockTest < ActiveSupport::TestCase
     assert_nil Block.find_by(name: old_block.name)
     assert_not_nil Block.find_by(name: new_block.name)
   end
+
+  test 'Renaming a block deletes the old files' do
+    block = create :block, helper_code: '// Comment comment comment'
+    old_json_path = block.json_path
+    old_js_path = block.js_path
+    assert File.exist? old_json_path
+    assert File.exist? old_js_path
+
+    block.name = block.name + '_the_great'
+    block.save
+
+    refute File.exist? old_json_path
+    refute File.exist? old_js_path
+  end
 end

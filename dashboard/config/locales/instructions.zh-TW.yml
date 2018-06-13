@@ -1,4 +1,5 @@
-"zh-TW":
+---
+zh-TW:
   data:
     instructions:
       2-3 Artist 1 new_instruction: 嗨，我是一個藝術家。您可以寫程式來讓我畫出任何東西。現在請您用一些程式積木，讓我沿著圖中的灰色線條畫畫。（每一條線的長度都是

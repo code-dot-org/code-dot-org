@@ -85,6 +85,7 @@ gl:
     facebook: 'Facebook'
     windowslive: 'Conta da Microsoft'
     clever: 'Conta intelixente'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Esqueceu o seu contrasinal?'
     need_confirmation: "Non recebeu as instrucións de confirmación?"
     need_unlock: "Non recibiches as instrucións de desbloqueo?"

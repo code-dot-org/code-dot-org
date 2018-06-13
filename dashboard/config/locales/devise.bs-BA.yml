@@ -1,4 +1,5 @@
-"bs":
+---
+bs:
   devise:
     confirmations:
       confirmed: Tvoja e-mail adresa je potvrđena.

@@ -1,4 +1,5 @@
-"ru":
+---
+ru:
   errors:
     messages:
       not_saved: 'Исправьте следующие ошибки:'
@@ -94,6 +95,7 @@
     facebook: Facebook
     windowslive: Учетная запись Майкрософт
     clever: Аккаунт Clever
+    powerschool: Powerschool Account
     forgot_password: Забыли пароль?
     need_confirmation: Не получили инструкции по подтверждению?
     need_unlock: Не получили инструкции для разблокированию?
@@ -159,7 +161,7 @@
       конфиденциальности</a>.
     additional_information: Чтобы продолжить регистрацию, нам нужна дополнительная
       информация.
-    user_type_button: Update Account Type
+    user_type_button: Обновление типа учетной записи
     user_type_label: Тип Учётной Записи
     user_type_teacher: Учитель
     user_type_student: Ученик
@@ -444,7 +446,7 @@
     confirm_secret_words: Подтвердите свою личность, введя свои секретные слова
     enter_parent_email: Введите адрес электронной почты своих родителей или опекунов
       (для восстановления пароля)
-    update: Update Account
+    update: Обновить учетную запись
   user_level:
     completed: Завершено
     tried: Пытался

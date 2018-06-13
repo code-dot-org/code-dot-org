@@ -1,4 +1,5 @@
-"pt":
+---
+pt:
   devise:
     confirmations:
       confirmed: O teu endereço de e-mail foi confirmado com sucesso.

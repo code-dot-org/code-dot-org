@@ -1,10 +1,12 @@
-"fil":
+---
+fil:
   data:
     script:
       category:
         csd_category_name: CS Discoveries ('17-'18)
         csd_2018_category_name: CS Discoveries ('18-'19)
         csf_category_name: CS Fundamentals
+        csf_2018_category_name: CS Fundamentals (2018)
         csf_international_category_name: Internasyonal na CS Fundamentals
         csf2_draft_category_name: 'Kasalukuyang Ginagawa: Mga Kursong A - F'
         csp_category_name: "'15-'16 na mga Prinsipyo ng CS"
@@ -2344,10 +2346,15 @@
               name: Post-Course Survey
         csp3-2017:
           title: CSP Unit 3 - Intro to Programming
-          description: |-
-            Ang yunit na ito ay nagpapakilala sa mga pundasyonal na mga konsepto sa pag-program sa kompyuter, kung saan nagbigay diin ito sa abilidad na makagawa ng mayaman, at inter-aktib na mga apps. Ang kursong ito ay gumagamit ng JavaScript bilang wika ng pang-program, at App Lab bilang kapaligiran sa pag-program para makabuo ng mga apps, ngunit ang mga konsepto na matutunan sa mga araling ito ay lumakip sa lahat ng mga wika ng pang-program at mga kagamitan.\r
-            \r
-            Ang yunit na ito ay huling binago noong ika-30 ng Oktubre, 2017. Magbasa pa tungkol sa mga pagbabago sa kurikulum sa forum.code.org/c/csp/updates.
+          description: "Ang yunit na ito ay nagpapakilala sa mga pundasyonal na mga
+            konsepto sa pag-program sa kompyuter, kung saan nagbigay diin ito sa abilidad
+            na makagawa ng mayaman, at inter-aktib na mga apps. Ang kursong ito ay
+            gumagamit ng JavaScript bilang wika ng pang-program, at App Lab bilang
+            kapaligiran sa pag-program para makabuo ng mga apps, ngunit ang mga konsepto
+            na matutunan sa mga araling ito ay lumakip sa lahat ng mga wika ng pang-program
+            at mga kagamitan.\r\n\r\nAng yunit na ito ay huling binago noong ika-30
+            ng Oktubre, 2017. Magbasa pa tungkol sa mga pagbabago sa kurikulum sa
+            forum.code.org/c/csp/updates."
           description_short: Learn the basics of programming in JavaScript through
             a top-down design approach using classic turtle drawing.
           description_audience: ''
@@ -2395,10 +2402,12 @@
               name: Post-Course Survey
         csp4-2017:
           title: CSP Unit 4 - Big Data and Privacy
-          description: |-
-            The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.\r
-            \r
-            This unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
+          description: "The data-rich world we live in introduces many complex questions
+            related to public policy, law, ethics and societal impact. The goals of
+            this unit are to develop a well-rounded and balanced view about data in
+            the world, including the positive and negative effects of it, and to understand
+            the basics of how and why modern encryption works.\r\n\r\nThis unit was
+            last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
           description_short: Explore the data-rich world we live, and how data impacts
             public policy, personal privacy, security, the law, and ethics.
           description_audience: ''
@@ -4051,9 +4060,13 @@
           title: CSD Unit 1 - Problem Solving
           description_short: "  Alamin kung paano ang mga tao gumagamit ng mga kompyuter
             para lutasan ang mga problema."
-          description: |2
-             \r
-            Unit 1 is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r
+          description: " \r\nUnit 1 is a highly interactive and collaborative introduction
+            to the field of computer science, as framed within the broader pursuit
+            of solving problems. You’ll practice using a problem solving process to
+            address a series of puzzles, challenges, and real world scenarios. Next,
+            you’ll learn how computers input, output, store, and process information
+            to help humans solve problems.  The unit concludes with a project in which
+            you design an application that helps solve a problem of your choosing.\r\n"
           description_audience: ''
           stages:
             Intro to Problem Solving:
@@ -4485,12 +4498,25 @@
                 sinasadya o hindi sinasadya. Sa wakas, ang klase ay gagawa ng isang
                 listahan ng mga tagubilin na dapat sundin habang naglalagay ng impormasyon
                 online.
-              description_teacher: |-
-                Dahil ang mga estudyante ay bago lang naglaan ng oras para mag-isip tungkol sa aktwal na nilalaman na mapupunta sa kanilang personal na website, ang araling ito ay bumabalik sa isang buong yunit na proyekto (paglathala ng personal na website) para matulungan ang mga estudyante na susihin kung ano ang personal na impormasyon ang pipiliin nilang ibahagi sa digital na mundo at kung kanino. Ito rin ay nagpapalakas sa pag-aakala na karamihan sa mga impormasyon na pinili nilang ibahagi sa digital na mundo ay wala ka nang magagawa sa panahong napalabas mo na ito. \r
-                \r
-                Ang mga estudyante ay magsisimula sa pamamagitan ng pagtukoy ng mga angkop na mga tagapakinig na kung saan sila ay kumportableng magbahagi ng binagay na mga piraso ng personal na impormasyon. Sila ay titingin sa iilang social media na mga pahina para matukoy kung anong klase ng mga impormasyon ang ibinabahagi ng mga tao tungkol sa sarili nila o sa iba. Sa huli, ang mga estudyante ay mag-iisip ng mga tagubilin na naisip nilang angkop para sa pag-post ng mga impormasyon online.\r
-                \r
-                Ang pinakapunto ng araling ito ay hindi para takutin ang mga estudyante, kung hindi para aktwal na mararanasan ng mga estudyante ang eksaktong pag-uunawa kung ano ang antas ng kontrol na wala sila tungkol sa pagpalabas ng mga impormasyon sa web.
+              description_teacher: "Dahil ang mga estudyante ay bago lang naglaan
+                ng oras para mag-isip tungkol sa aktwal na nilalaman na mapupunta
+                sa kanilang personal na website, ang araling ito ay bumabalik sa isang
+                buong yunit na proyekto (paglathala ng personal na website) para matulungan
+                ang mga estudyante na susihin kung ano ang personal na impormasyon
+                ang pipiliin nilang ibahagi sa digital na mundo at kung kanino. Ito
+                rin ay nagpapalakas sa pag-aakala na karamihan sa mga impormasyon
+                na pinili nilang ibahagi sa digital na mundo ay wala ka nang magagawa
+                sa panahong napalabas mo na ito. \r\n\r\nAng mga estudyante ay magsisimula
+                sa pamamagitan ng pagtukoy ng mga angkop na mga tagapakinig na kung
+                saan sila ay kumportableng magbahagi ng binagay na mga piraso ng personal
+                na impormasyon. Sila ay titingin sa iilang social media na mga pahina
+                para matukoy kung anong klase ng mga impormasyon ang ibinabahagi ng
+                mga tao tungkol sa sarili nila o sa iba. Sa huli, ang mga estudyante
+                ay mag-iisip ng mga tagubilin na naisip nilang angkop para sa pag-post
+                ng mga impormasyon online.\r\n\r\nAng pinakapunto ng araling ito ay
+                hindi para takutin ang mga estudyante, kung hindi para aktwal na mararanasan
+                ng mga estudyante ang eksaktong pag-uunawa kung ano ang antas ng kontrol
+                na wala sila tungkol sa pagpalabas ng mga impormasyon sa web."
             Publishing a Website:
               name: Paglathala ng Website
             Sources and Search Engines:
@@ -4525,9 +4551,16 @@
                 rule-sets at pagkatapos ay tutuklas sa mga katangian na nakakaapekto
                 sa mga teksto na mga elemento ng HTML. Sa wakas, ang lahat ay gagamit
                 ng mga istilo ng teksto sa kanilang mga personal na website.
-              description_teacher: |
-                Ang araling ito ay nagpapakilala sa CSS bilang pamamaran para malagyan ng istilo ang mga elemento na nasa pahina. Ang mga estudyante ay matututo tungkol sa pangunahing sintaks para sa CSS na rule-sets at pagkatapos ay tutuklas sa mga katangian na nakakaapekto sa mga teksto na mga elemento ng HTML. Sila ay magtatrabaho sa isang HTML na page tungkol sa mga Guiness World Record holders, magdagdag ng kanilang sariling istilo sa binigay na pahina. Sa huling antas, ang mga estudyante ay gagamit sa mga natutunan nila tungkol sa mga istilo para sa mga teksto na elemento sa kanilang personal na web na pahina.\r
-                \r
+              description_teacher: "Ang araling ito ay nagpapakilala sa CSS bilang
+                pamamaran para malagyan ng istilo ang mga elemento na nasa pahina.
+                Ang mga estudyante ay matututo tungkol sa pangunahing sintaks para
+                sa CSS na rule-sets at pagkatapos ay tutuklas sa mga katangian na
+                nakakaapekto sa mga teksto na mga elemento ng HTML. Sila ay magtatrabaho
+                sa isang HTML na page tungkol sa mga Guiness World Record holders,
+                magdagdag ng kanilang sariling istilo sa binigay na pahina. Sa huling
+                antas, ang mga estudyante ay gagamit sa mga natutunan nila tungkol
+                sa mga istilo para sa mga teksto na elemento sa kanilang personal
+                na web na pahina.\r\n\r\n"
             Styling Elements with CSS:
               name: Pag-istilo sa mga Elemento gamit ang CSS
               description_student: Ang araling ito ay nagpapatuloy sa pagpapakilala
@@ -4648,10 +4681,16 @@
                 ang klase ay matututo kung paano magdagdag ng mga larawan sa kanilang
                 mga pahina sa web, at kung paano magbigay ng wastong pagpalagay kapag
                 ginawa ito.
-              description_teacher: |-
-                Magsisimula sa isang diskusyon tungkol sa kanilang personal na mga opinyon kung paano papayagan ang iba na gagamit sa kanilang nagawa, ang klase ay tutuklas sa layunin at papel ng copyright para sa mga kapwang naglikha at mga gumagamit ng malikhaing mga nilalaman. Pagkatapos ay lilipat sila sa isang gawain na nagtutuklas sa iba't ibang lisensya ng Creative Commons bilang isang solusyon sa kahirapan sa pagpangasiwa ng copyright. \r
-                \r
-                Sa huli, sa isang karaniwang pag-uunawa sa mga pagbabawal sa iba't ibang mga lisensya ng Creative Commons, ang mga estudyante ay matuto kung paano magdagdag ng mga larawan sa kanilang mga pahina sa web gamit ang &lt;img&gt; na tag.
+              description_teacher: "Magsisimula sa isang diskusyon tungkol sa kanilang
+                personal na mga opinyon kung paano papayagan ang iba na gagamit sa
+                kanilang nagawa, ang klase ay tutuklas sa layunin at papel ng copyright
+                para sa mga kapwang naglikha at mga gumagamit ng malikhaing mga nilalaman.
+                Pagkatapos ay lilipat sila sa isang gawain na nagtutuklas sa iba't
+                ibang lisensya ng Creative Commons bilang isang solusyon sa kahirapan
+                sa pagpangasiwa ng copyright. \r\n\r\nSa huli, sa isang karaniwang
+                pag-uunawa sa mga pagbabawal sa iba't ibang mga lisensya ng Creative
+                Commons, ang mga estudyante ay matuto kung paano magdagdag ng mga
+                larawan sa kanilang mga pahina sa web gamit ang &lt;img&gt; na tag."
             Project - Multi-Page Websites:
               name: Proyekto - Maraming-Pahina na mga Website
               description_student: 'Ang araling ito ay sumasaklaw sa mga hyperlinks,
@@ -4660,9 +4699,12 @@
                 sa lahat ng naunang mga pahina sa isang proyekto, at maglikha ng mga
                 navigation bar para sa bawat pahina bago ilathala ang buong site sa
                 Web.  '
-              description_teacher: |
-                Matapos mapag-aralan ang tungkol sa kung paano mag-ugnay ng mga pahina ng web sa bawat isa, ang mga estudyante ay sa waka maglathala sa kanilang website na ginagawa. Sa araling ito, sila ay mag-uugnay sa lahat ng naunang mga pahina na nalikha nila sa isang proyekto, maglikha ng bagong pahina, at magdagdag ng nabigasyon sa pagitan ng mga pahina bago ilathala ang buong site sa Web. \r
-                \r
+              description_teacher: "Matapos mapag-aralan ang tungkol sa kung paano
+                mag-ugnay ng mga pahina ng web sa bawat isa, ang mga estudyante ay
+                sa waka maglathala sa kanilang website na ginagawa. Sa araling ito,
+                sila ay mag-uugnay sa lahat ng naunang mga pahina na nalikha nila
+                sa isang proyekto, maglikha ng bagong pahina, at magdagdag ng nabigasyon
+                sa pagitan ng mga pahina bago ilathala ang buong site sa Web. \r\n\r\n"
             RGB Colors and Classes:
               name: RGB na mga Kulay at mga Klase
               description_student: Ang araling ito ay sumasaklaw sa mga class at mga
@@ -4692,7 +4734,7 @@
                 rubric, at paglagay nang panghuling mga detalye sa site. Para tapusin
                 ang yunit, ang lahat ay magbabahagi sa kanilang mga proyekto at kung
                 paano nila ito nagawa.
-              description_teacher: 'Ang mga estudyante ay gumugol ng maraming oras
+              description_teacher: "Ang mga estudyante ay gumugol ng maraming oras
                 sa buong yunit sa pagtatrabaho ng kanilang Personal na Website. Sa
                 huling ilang mga araw, ang mga estudyante ay magtatapos sa kanilang
                 mga website. Sila ay magtatrabaho kasama ang kanilang mga kasamahan
@@ -4700,9 +4742,7 @@
                 mga website, pagrerepasu sa rubrik at mag-isip tungkol sa kanilang
                 proseso. Para tapusin ang yunit, sila ay magbabahagi ng kanilang mga
                 proyekto at pati na rin ang isang pangkalahatang ideya sa proseso
-                na ginawa nila para makuha ang pangwakas na disenyo.\r
-
-'
+                na ginawa nila para makuha ang pangwakas na disenyo.\r\n"
             Headings:
               name: Mga Heading
               description_student: Ang araling ito ay nagpapatuloy sa introduksyon
@@ -4798,7 +4838,7 @@
                 sa sari-saring mga produkto. Ang pagganap bilang iba-ibang tao, ang
                 bawat miyembro ng klase ay makakakuha ng karanasan sa mga disenyo
                 sa pamamagitan ng mata ng ibang tao.
-              description_teacher: 'Ang mga taga-disenyo ay kailangang makakaintindi
+              description_teacher: "Ang mga taga-disenyo ay kailangang makakaintindi
                 sa pangangailangan ng kanilang mga gumagamit para makalikha ng mga
                 kapaki-pakinabang na mga produkto. Ang araling ito ay naghihikayat
                 sa mga estudyante na mag-isip kung paano magdisenyo para sa ibang
@@ -4807,9 +4847,7 @@
                 mga produkto. Bawat estudyante ay may nakatalagang profile ng gumagamit
                 na naglalarawan sa tao, kung saan sila din ay pipili ng mga ankop
                 na produkto, magbigay ng kritiko sa disenyo ng mga produkto, at magmunkahi
-                ng mga pagpapahusay sa disenyo.\r
-
-'
+                ng mga pagpapahusay sa disenyo.\r\n"
             Discovering Users:
               name: Pagtutuklas ng mga Gumagamit
             User-Centered Design Micro Activity:
@@ -4887,7 +4925,7 @@
                 koponan ay tutuklas sa iilang mga halimbawang mga app na nalikha sa
                 App Lab, gamit ang mga apps na iyon para makatulong sa paggawa ng
                 unang papel na mga prototype ng kanilang mga app.
-              description_teacher: 'Bago magsimulang magdisenyo ng mga app, kailangan
+              description_teacher: "Bago magsimulang magdisenyo ng mga app, kailangan
                 nating tulungan ang mga estudyante na mas mabuti nilang malagyan ng
                 lawak ang kanilang mga inaasahan. Dahil ang mga estudyante ay di-magtatagal
                 mag-prototype sa mga app na ito sa App Lab, sila ay nasa mahusay na
@@ -4899,9 +4937,7 @@
                 mga apps bilang basehan para sa sarili nilang app. Mula dito, ang
                 koponan ay magkakaroon ng oras para pag-usapan ang mga pangunahing
                 functionality ng kanilang app bago gumagamit ng 3x5 na mga index card
-                para gawin ang papel na mga prototype.\r
-
-'
+                para gawin ang papel na mga prototype.\r\n"
             Prototype Testing:
               name: Prototype na Pagsusuri
               description_student: Sa araling ito, ang mga koponan ay susubukan ang
@@ -7545,6 +7581,7 @@
                 na natutunan nila para lumikha ng isang laro na naka-animate. Oras
                 na para maging malikhain at gumawa ng istorya sa Play Lab!
           title: Kursong A
+          assignment_family_title: Kursong A
           description_audience: 'Mga Edad: 4-7'
           description_short: Isang panimula sa computer science para sa mga hindi
             pa marunong magbasa.
@@ -7582,6 +7619,7 @@
             Programming with Rey and BB-8:
               name: Pag-Program kasama sina Rey at BB-8
           title: Kursong B
+          assignment_family_title: Kursong B
           description_audience: 'Mga Edad: 5-8'
           description_short: Isang panimula sa computer science para sa mga hindi
             marunong magbasa. (Katulad ng Kursong A, ngunit may mas maraming pagkakaiba
@@ -7624,6 +7662,7 @@
             Loops with Rey and BB-8:
               name: Mga Loops kasama sina Rey at BB-8
           title: Kursong C
+          assignment_family_title: Kursong C
           description_audience: 'Mga Edad: 6-10'
           description_short: Alamin ang mga pangunahing alituntunin ng computer science
             at lumikha ng iyong sariling sining, mga kuwento, at mga laro.
@@ -7842,6 +7881,7 @@
                 para maayos ang mga palaisipan gamit ang mga simpleng algoritmo, mga
                 loop at naka-nest na mga loop.
           title: Kursong D
+          assignment_family_title: Kursong D
           description_audience: 'Mga Edad: 7-11'
           description_short: Mabilis na dinaanan ang mga konsepto mula sa Kursong
             C, pagkatapos ay pupunta pa tayo sa mga algoritmo, mga naka-nest na mga
@@ -8110,6 +8150,7 @@
             Functions in Harvester:
               name: Functions in Harvester
           title: Kursong E
+          assignment_family_title: Kursong E
           description_audience: 'Mga Edad: 8-12'
           description_short: Madaling dumaan sa mga konsepto sa Kursong C & D at pagkatapos
             ay pumunta pa sa mga function.
@@ -8393,6 +8434,7 @@
             Nested Loops with Frozen:
               name: Naka-Nest na mga Loop sa Frozen
           title: Kursong F
+          assignment_family_title: Kursong F
           description_audience: 'Mga Edad: 9-13'
           description_short: Alamin ang lahat ng mga konsepto sa mga Pangunahing Kaalaman
             sa Computer Science at maglikha ng iyong sariling sining, kuwento o laro.
@@ -8814,6 +8856,7 @@
             Until Loops in Maze:
               name: Until Loops in Maze
           title: Mabilis na Kurso
+          assignment_family_title: Mabilis na Kurso
           description_audience: 'Mga Edad: 9-18'
           description_short: 'Isang introduksyon sa computer science: pinagsama ang
             pinakamahusay na kurikulum sa mababang paaralan para sa nakakatandang
@@ -8852,6 +8895,7 @@
             Spelling Bee:
               name: Spelling Bee
           title: Hindi Marunong Magbasa Express
+          assignment_family_title: Hindi Marunong Magbasa Express
           description_audience: 'Mga Edad: 4-8'
           description_short: 'Isang introduksyon sa computer science para sa mga hindi
             marunong magbasa: pinagsama ang pinakamahusay sa aming kindergarten at
@@ -9677,10 +9721,15 @@
           description_short: Mga aralin at mapagkukunan ng kaalaman para makayulong
             sa mga estudyante na maghanda at para makumpleto ang AP Pagtuklas sa Performance
             na mga Gawain.
-          description: |-
-            Ang mga araling ito ay nandito para makatulong sa iyo na maunawaa, makahanda, at makagawa ng AP Explore Performance Task. Bawat "aralin" ay naglalaman ng mga link sa nakakatulong na mga dokumento para ang iyong guro ay makatulong sa iyo. TANDAAN: ang pangalawang aytem sa unang aralin ay walang direktang kinalaman sa Explore PT, ngunit sumasaklaw sa pangkaraniwan na tech setup at mga kagamitan na kailangan mong gawin para sa mga sari-saring mga elemento sa parehong Explore at Create na mga gawain.\r
-            \r
-            Ang yunit na ito ay huling binago noong Nobyembre, 2017. Magbasa pa tungkol sa mga nabago sa kurikulum sa forum.code.org/c/csp/updates.
+          description: "Ang mga araling ito ay nandito para makatulong sa iyo na maunawaa,
+            makahanda, at makagawa ng AP Explore Performance Task. Bawat \"aralin\"
+            ay naglalaman ng mga link sa nakakatulong na mga dokumento para ang iyong
+            guro ay makatulong sa iyo. TANDAAN: ang pangalawang aytem sa unang aralin
+            ay walang direktang kinalaman sa Explore PT, ngunit sumasaklaw sa pangkaraniwan
+            na tech setup at mga kagamitan na kailangan mong gawin para sa mga sari-saring
+            mga elemento sa parehong Explore at Create na mga gawain.\r\n\r\nAng yunit
+            na ito ay huling binago noong Nobyembre, 2017. Magbasa pa tungkol sa mga
+            nabago sa kurikulum sa forum.code.org/c/csp/updates."
         csp-create-2017:
           stages:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
@@ -9698,10 +9747,15 @@
           description_short: Mga aralin at mapagkukunan ng kaalaman para makatulong
             sa mga estudyante na maghanda at makumpleto ang AP na Paglikha ng mga
             Performance Task.
-          description: |-
-            Ang mga araling ito ay nandito para makatulong sa iyo na maunawaa, makahanda, at makagawa ng AP Create Performance Task. Bawat "aralin" ay naglalaman ng mga link sa nakakatulong na mga dokumento para ang iyong guro ay makatulong sa iyo. TANDAAN: ang pangalawang aytem sa unang aralin ay walang direktang kinalaman sa Create PT, ngunit sumasaklaw sa pangkaraniwan na tech setup at mga kagamitan na kailangan mong gawin para sa mga sari-saring mga elemento sa parehong Explore at Create na mga gawain.\r
-            \r
-            Ang yunit na ito ay huling binago noong Disyembre, 2017. Magbasa pa tungkol sa mga nabago sa kurikulum sa forum.code.org/c/csp/updates.
+          description: "Ang mga araling ito ay nandito para makatulong sa iyo na maunawaa,
+            makahanda, at makagawa ng AP Create Performance Task. Bawat \"aralin\"
+            ay naglalaman ng mga link sa nakakatulong na mga dokumento para ang iyong
+            guro ay makatulong sa iyo. TANDAAN: ang pangalawang aytem sa unang aralin
+            ay walang direktang kinalaman sa Create PT, ngunit sumasaklaw sa pangkaraniwan
+            na tech setup at mga kagamitan na kailangan mong gawin para sa mga sari-saring
+            mga elemento sa parehong Explore at Create na mga gawain.\r\n\r\nAng yunit
+            na ito ay huling binago noong Disyembre, 2017. Magbasa pa tungkol sa mga
+            nabago sa kurikulum sa forum.code.org/c/csp/updates."
         csp3-reovery:
           stages:
             Under the sea recovery:
@@ -10711,6 +10765,7 @@
                 na ginawa nila para makuha ang pangwakas na disenyo.\r\n"
         coursea-2018:
           title: Kursong A
+          assignment_family_title: Kursong A
           description: Alamin ang mga pangunahing alituntunin sa computer science
             at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling
             laro o istorya na maaari mong ibahagi.
@@ -10719,14 +10774,14 @@
           description_audience: 'Mga Edad: 4-7'
           stages:
             'Debugging: Unspotted Bugs':
-              name: 'Pag-dedebug: Hindi nakitang mga Bug'
+              name: Hindi Namalayang mga Bugs
               description_student: ''
               description_teacher: 'Ang araling ito ay gagabay sa mga estudyante sa
                 mga hakbang sa pag-debug. Ang mga estudya ay matututo nang isang kasabihan
                 na: "Anong nangyari? Ano ang dapat mangyari? Ano ang ibig sabihin
                 nito?"'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Pagtitiyaga & Mga Kabiguan: Si Stevie at ang mga Holen'
+              name: Stevie at ang Big Project
               description_student: ''
               description_teacher: "Kapag ang mga estudyante ay nakakatagpo ng mga
                 balikid habang nagsasagot ng mga katanungan o nagtatrabaho sa isang
@@ -10835,9 +10890,10 @@
             Sequencing in Maze:
               name: Sequencing in Maze
             'Persistence & Frustration: Stevie and the Big Project':
-              name: 'Persistence & Frustration: Stevie and the Big Project'
+              name: Stevie at ang Big Project
         express-2018:
           title: Mabilis na Kurso
+          assignment_family_title: Mabilis na Kurso
           description: Alamin ang mga pangunahing alituntunin sa computer science
             at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling
             laro o istorya na maaari mong ibahagi.
@@ -10999,13 +11055,13 @@
             Programming in Artist:
               name: Pag-program sa Artist
             'Loops: Getting Loopy':
-              name: 'Mga Loops: Pagiging Loopy'
+              name: Pagiging Loopy
             Loops with Rey and BB-8:
               name: Mga Loops kasama sina Rey at BB-8
             Copyright and Creativity:
               name: Copyright and Creativity
             'Concept Practice with Minecraft ':
-              name: 'Concept Practice with Minecraft '
+              name: Masdan ang Hinaharap
             Nested Loops in Bee:
               name: Mga Naka-Nest na mga Loop sa Bee
             Nested Loops in Frozen:
@@ -11015,7 +11071,7 @@
             Conditionals & Loops in Harvester:
               name: Mga Kondisyonal & Mga Loop sa Harvester
             'Functions: Songwriting':
-              name: 'Mga Function: Pagsusulat ng Awit'
+              name: Pagsusulat ng Awit
             Functions in Minecraft:
               name: Functions in Minecraft
             Functions in Harvester:
@@ -11049,7 +11105,7 @@
             Binary Bracelets:
               name: Binary na mga Pulseras
             'Unplugged: Binary':
-              name: 'Unplugged: Binary'
+              name: Binary na mga Larawan
             Artist Binary:
               name: Artist na Binary
             Internet:
@@ -11060,6 +11116,7 @@
               name: Relay Programming
         courseb-2018:
           title: Kursong B
+          assignment_family_title: Kursong B
           description: Alamin ang mga pangunahing alituntunin sa computer science
             at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling
             laro o istorya na maaari mong ibahagi.
@@ -11132,6 +11189,7 @@
               name: Copyright and Creativity
         coursed-2018:
           title: Bagong Kursong D na Iskript
+          assignment_family_title: Kursong D
           description: ''
           description_short: ''
           description_audience: ''
@@ -11161,7 +11219,7 @@
               description_student: ''
               description_teacher: ''
             Nested Loops in Bee:
-              name: Mga Naka-Nest na mga Loop sa Bee
+              name: Naka-nest na mga Loops sa Maze
               description_student: ''
               description_teacher: ''
             Nested Loops in Artist:
@@ -11197,7 +11255,7 @@
               description_student: ''
               description_teacher: ''
             'Unplugged: Binary':
-              name: 'Unplugged: Binary'
+              name: Binary na mga Larawan
               description_student: ''
               description_teacher: ''
             Artist Binary:
@@ -11327,6 +11385,7 @@
             questions that appeared in Units 1-5 in the course.  '
         coursec-2018:
           title: Kursong C
+          assignment_family_title: Kursong C
           description: Lumikha ng mga programa gamit ang pagsunod-sunod, mga loops,
             at mga pangyayari. Isalin ang iyong mga inisyal sa binary, siyasatin ang
             iba't ibang mga pamamaraan sa paglutas ng problema, at matuto kung paano
@@ -11361,7 +11420,7 @@
               description_student: ''
               description_teacher: ''
             'Loops: Getting Loopy':
-              name: 'Mga Loops: Pagiging Loopy'
+              name: Pagiging Loopy
               description_student: ''
               description_teacher: ''
             Loops with Rey and BB-8:
@@ -11511,6 +11570,7 @@
               name: 'Proyekto: Mag-Prototype ng isang Pagbabago'
         coursee-2018:
           title: Kursong E
+          assignment_family_title: Kursong E
           description: Magsimulang mag-code gamit ang mga algoritmo, mga loop, mga
             kondisyonal, at mga pangyayari at pagkatapos ay pupunta ka sa mga function.
             Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng capstone
@@ -11520,7 +11580,7 @@
           description_audience: 'Mga Edad: 8-12'
           stages:
             'Programming: My Robotic Friends':
-              name: 'Pag-Program: Ang Aking mga Robotik na mga Kaibigan'
+              name: Ang Robot Kong Mga Kaibigan
               description_student: ''
               description_teacher: ''
             Sequence in Maze:
@@ -11548,7 +11608,7 @@
               description_student: ''
               description_teacher: ''
             Nested Loops:
-              name: Mga Loops na naka-nest
+              name: Naka-nest na mga Loops sa Maze
               description_student: ''
               description_teacher: ''
             Nested Loops with Frozen:
@@ -11613,7 +11673,7 @@
                 Wars, ang mga estudyante ay gagabayan sa mga pangyayari, pagkatapos
                 ay bibigyan ng lugar para makalikha ng kanilang sariling laro.
             'Functions: Songwriting':
-              name: 'Mga Function: Pagsusulat ng Awit'
+              name: Pagsusulat ng Awit
               description_student: Kahit ang mga rockstar ay nangangailangan ng mga
                 kakayahan sa pag-program. Ang araling ito ay nagtuturo sa iyo tungkol
                 sa mga kakayahan gamit ang mga titik mula sa mga awitin.
@@ -11769,6 +11829,7 @@
               name: Copyright and Creativity
         coursef-2018:
           title: Kursong F
+          assignment_family_title: Kursong F
           description: Matutong gumami sa iba't ibang uri ng mga loop, mga event,
             mga function, at mga kondisyonal. Siyasatin ang iba't ibang mga pamamaraan
             sa paglutas ng mga problema at talakayain ang mga epekto ng computing
@@ -11780,7 +11841,7 @@
           description_audience: 'Mga Edad: 9-13'
           stages:
             'Programming: My Robotic Friends':
-              name: 'Pag-Program: Ang Aking mga Robotik na mga Kaibigan'
+              name: Ang Robot Kong Mga Kaibigan
               description_student: ''
               description_teacher: ''
             Sequence in Maze:
@@ -11808,7 +11869,7 @@
               description_student: ''
               description_teacher: ''
             Nested Loops in Bee/Zombie:
-              name: Naka-Nest na mga Loops sa Bee/Zombie
+              name: Naka-nest na mga Loops sa Maze
               description_student: ''
               description_teacher: ''
             Nested Loops with Frozen:
@@ -13898,6 +13959,7 @@
             Training Weekend.
         pre-express-2018:
           title: Hindi Marunong Magbasa Express
+          assignment_family_title: Hindi Marunong Magbasa Express
           description: Alamin ang mga pangunahing alituntunin sa computer science
             at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling
             laro o istorya na maaari mong ibahagi.
@@ -13907,11 +13969,11 @@
           description_audience: 'Mga Edad: 4-8'
           stages:
             'Debugging: Unspotted Bugs':
-              name: 'Pag-dedebug: Hindi nakitang mga Bug'
+              name: Hindi Namalayang mga Bugs
               description_student: ''
               description_teacher: ''
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Pagtitiyaga & Mga Kabiguan: Si Stevie at ang mga Holen'
+              name: Stevie at ang Big Project
               description_student: ''
               description_teacher: ''
             'Real-life Algorithms: Plant a Seed':
@@ -13978,3 +14040,15 @@
               name: Loops in Ice Age
             'Persistence & Frustration: Stevie and the Big Project':
               name: 'Persistence & Frustration: Stevie and the Big Project'
+        spritelab-validated:
+          stages:
+            Fish Tank - Creating Sprites:
+              name: Fish Tank - Creating Sprites
+            Alien Dance Party - Input:
+              name: Alien Dance Party - Input
+            Virtual Pet - Interactions:
+              name: Virtual Pet - Interactions
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''

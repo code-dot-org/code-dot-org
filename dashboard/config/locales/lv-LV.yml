@@ -1,4 +1,5 @@
-"lv":
+---
+lv:
   errors:
     messages:
       not_saved: 'Lūdzu, izlabojiet šādas kļūdas:'
@@ -94,6 +95,7 @@
     facebook: Facebook
     windowslive: Microsoft konts
     clever: Clever Account
+    powerschool: Powerschool Account
     forgot_password: Aizmirsi savu paroli?
     need_confirmation: Nesaņēmi apstiprinājuma instrukcijas?
     need_unlock: Nesaņēmi atslēgšanas norādijumus?

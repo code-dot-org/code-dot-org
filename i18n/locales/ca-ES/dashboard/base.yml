@@ -85,6 +85,7 @@ ca:
     facebook: 'Facebook'
     windowslive: 'Compte de Microsoft'
     clever: 'Clever Account'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Has oblidat la constrasenya?'
     need_confirmation: "No has rebut les instruccions de confirmació?"
     need_unlock: "No has rebut les instruccions de desbloqueig?"

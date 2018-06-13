@@ -1,3 +1,9 @@
 function locationOf(sprite) {
-  return {"x":sprite.x,"y":sprite.y};
+  if (!sprite) {
+    return undefined;
+  }
+  return {
+    x:sprite.x,
+    y:sprite.y,
+  };
 }
