@@ -3,12 +3,9 @@
  */
 
 import React, {PropTypes} from 'react';
-import {Button} from 'react-bootstrap';
 import ProfessionalLearningCourseProgress from './professionalLearningCourseProgress';
-import {TwoPartBanner} from './twoPartBanner';
 import {UnconnectedTwoColumnActionBlock as TwoColumnActionBlock} from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
 import {EnrolledWorkshops} from './enrolledWorkshops';
-import _ from 'lodash';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import i18n from "@cdo/locale";
 
@@ -31,7 +28,7 @@ const styles = {
     fontSize: '40px',
     color: 'white'
   },
-}
+};
 
 const LandingPage = React.createClass({
   propTypes: {
@@ -44,97 +41,49 @@ const LandingPage = React.createClass({
     return (
       <div style={styles.headerImage}>
         <div style={styles.headerText}>
-          My Professional Learning
+          {i18n.plLandingHeading()}
         </div>
       </div>
     );
-  },
-
-  renderWorkshopSurveyInterior() {
-    if (this.props.lastWorkshopSurveyCourse === 'CS Fundamentals') {
-      return (
-        <div>
-          <h3>
-            Submit feedback and order free course kit
-          </h3>
-          <p>
-            Thank you for taking a CS Fundamentals workshop! Please complete this survey about your experience and you
-            will be able to order supplies for your classroom.
-          </p>
-          <Button bsStyle="primary" onClick={() => {window.open(this.props.lastWorkshopSurveyUrl, '_blank');}}>
-            Start survey
-          </Button>
-        </div>
-      );
-    } else {
-      return (
-        <div>
-          <h3>
-            Submit your feedback!
-          </h3>
-          <p>
-            Thank you for completing a {this.props.lastWorkshopSurveyCourse} workshop!
-            Please complete this survey about your experience to help us improve future
-            workshops.
-          </p>
-          <Button bsStyle="primary" onClick={() => {window.open(this.props.lastWorkshopSurveyUrl, '_blank');}}>
-            Start survey
-          </Button>
-        </div>
-      );
-    }
   },
 
   render() {
     const CSF = this.props.lastWorkshopSurveyCourse === 'CS Fundamentals';
-    const subheading = CSF ? "Submit feedback and order free course kit" : "Submit your feedback";
-    const description = CSF ? "Thank you for taking a CS Fundamentals workshop! Please complete this survey about your experience and you will be able to order supplies for your classroom." :
-    `Thank you for completing a ${this.props.lastWorkshopSurveyCourse} workshop! Please complete this survey about your experience to help us improve future
-    workshops.`;
-
-    const lastWorkshopSurveyBanner = (
-      <div>
-        <TwoColumnActionBlock
-          isRtl={false}
-          responsiveSize='lg'
-          imageUrl={pegasus('/shared/images/fill-540x289/misc/beyond-local-map.png')}
-          subHeading={subheading}
-          description={description}
-          buttons={[
-            {
-              url: pegasus('/learn/local'),
-              text: "Start survey"
-            }
-          ]}
-        />
-        <TwoPartBanner
-          textElement={this.renderWorkshopSurveyInterior()}
-          imageUrl="url('https://code.org/images/email/BJC4NYC.jpg')"
-          imagePosition="imageLeft"
-        />
-      </div>
-    );
-
-    const upcomingWorkshops = (
-      <EnrolledWorkshops
-        key="upcomingWorkshops"
-      />
-    );
-
-    const plcData = !_.isEmpty(this.props.professionalLearningCourseData) && (
-      <ProfessionalLearningCourseProgress
-        professionalLearningCourseData={this.props.professionalLearningCourseData}
-        key="plcData"
-      />
-    );
+    const subheading = CSF ?
+      i18n.plLandingSubheadingCSF() :
+      i18n.plLandingSubheading();
+    const description = CSF ?
+      i18n.plLandingDescriptionCSF() :
+      i18n.plLandingDescription();
 
     return (
       <div>
         {this.renderHeaderImage()}
         <br/>
-        {lastWorkshopSurveyBanner}
-        {upcomingWorkshops}
-        {plcData}
+        {this.props.lastWorkshopSurveyUrl && (
+          <TwoColumnActionBlock
+            isRtl={false}
+            responsiveSize="lg"
+            imageUrl={pegasus('/shared/images/fill-540x289/misc/teacher.png')}
+            subHeading={subheading}
+            description={description}
+            buttons={[
+              {
+                url: "/",
+                text: "Start survey"
+              }
+            ]}
+          />
+        )}
+        <EnrolledWorkshops
+          key="upcomingWorkshops"
+        />
+        {this.props.professionalLearningCourseData && (
+          <ProfessionalLearningCourseProgress
+            professionalLearningCourseData={this.props.professionalLearningCourseData}
+            key="plcData"
+          />
+        )}
       </div>
     );
   }
