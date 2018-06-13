@@ -3999,7 +3999,6 @@ en:
          * Write down all of the attribution information that you need.
          * Upload all of the images into your project.  Visit <a href="/s/csd2/stage/7/puzzle/5" target="_new">Lesson 7 Level 5</a> if you've forgotten how.
       CSD U3 - Booleans Video_markdown_instruction: "# Boolean Expressions Video"
-      CSD U3 - Booleans Video_2018_markdown_instruction: "# Boolean Expressions Video"
       CSD U3 - Simple Counter Predict_markdown_instruction: "# The Counter Pattern\n\nThis pattern is one of the most important ones in all of programming. \n\n![](https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56 PM.png)\n    \nIt is used to increase the value of a variable by 1. You might call it the **counter pattern** since it can be used to make a variable that counts up. You'll use this pattern a lot, especially with the draw loop. Let's see what that looks like.\n\n# Do This\n\nThis program creates a variable `counter` and then uses the **counter pattern** to make it count up. When you run the program what do you think you'll see on the screen?\n\n* **Read the program** and make a prediction of what the output will be.\n* **Run the program** to check your prediction.\n* **Discuss with a neighbor**. Can you explain what you observed?\n\n"
       CSD U3 - Simple Counter Predict_2018_markdown_instruction: "# The Counter Pattern\n\nThis pattern is one of the most important ones in all of programming. \n\n![](https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56 PM.png)\n    \nIt is used to increase the value of a variable by 1. You might call it the **counter pattern** since it can be used to make a variable that counts up. You'll use this pattern a lot, especially with the draw loop. Let's see what that looks like.\n\n# Do This\n\nThis program creates a variable `counter` and then uses the **counter pattern** to make it count up. When you run the program what do you think you'll see on the screen?\n\n* **Read the program** and make a prediction of what the output will be.\n* **Run the program** to check your prediction.\n* **Discuss with a neighbor**. Can you explain what you observed?\n\n"
       CSD U3 - Sprites - Sprite v Rect_markdown_instruction: |-
@@ -6145,7 +6144,7 @@ en:
         * Hint: You'll need to change two parameters. Which ones set your cloud's width and height?
 
         _Challenge: The sun is not in the exact same place as in the picture.  Can you change the sun's coordinates so that the picture matches completely?_
-      CSD U3 Random Debug Cloud_2018_markdown_instruction: |
+      CSD U3 Random Debug Cloud_2018_markdown_instruction: |+
         <img src="https://images.code.org/45d1d513f5ed63592e98ea3e4a08840c-image-1520403109680.11.28 PM.png" style="float:right;height:150px">
 
         # Debug - Using 4 Parameters
@@ -6157,7 +6156,6 @@ en:
         * Debug this program to make the cloud wider than it is tall, like in the image.
         * Hint: You'll need to change two parameters. Which ones set your cloud's width and height?
 
-        _Challenge: The sun is not in the exact same place as in the picture.  Can you change the sun's coordinates so that the picture matches completely?_
       CSD U3 Random Debug Grass_markdown_instruction: |-
         <img src="https://images.code.org/83269268e1c4f8af8551253ff4573b43-image-1490825158453.03.45 PM.png" style="float:right;height:150px">
 
@@ -19297,6 +19295,7 @@ en:
         - What happens if you use two different angles in your stair step pattern?
         - What happens if you make your diamond pattern longer or shorter?
         - What does it look like to draw two snowflakes on top of one another?
+      Dance Party 1-validated_markdown_instruction: "**Make a prediction:** Here’s a sprite called `alien1`! What do you think will happen when you click on her?"
       Dance Party 1_markdown_instruction: "**Make a prediction:** Here’s a sprite called `alien1`! What do you think will happen when you click on her?"
       Dance Party 2_markdown_instruction: The alien was proud of her dancing skills on Mars, but now she can only move up and down. Can you change the behavior inside the `begins` block to make her start spinning around?
       Dance Party 3_markdown_instruction: Create a new sprite called `alien2`, and make it do a different dance move when it's clicked.
@@ -19308,6 +19307,7 @@ en:
         Now create your own alien disco! Looking for inspiration? Try these ideas:
         * Create two bell sprites, and make the aliens do a different dance move for each
         * Make the aliens do a new dance move when they touch
+      Dance Party Predict_markdown_instruction: "**Make a prediction:** Here’s a sprite called `alien1`! What do you think will happen when you click on her?"
       Data Visualizations 101_markdown_instruction: |+
         ## Data Visualization 101: How to design charts and graphs
 
@@ -19551,13 +19551,22 @@ en:
 
          * **Note**: We'll revisit this game in the next lesson where you can improve it.  This is **just version 1**
 
+      Fish Tank 1-validated_markdown_instruction: "**Make a prediction**: What do you think will happen when you run this code?"
       Fish Tank 1_markdown_instruction: "**Make a prediction**: What do you think will happen when you run this code?"
+      Fish Tank 2-validated_markdown_instruction: We're going to make a fish tank. Change Dusty the tumbleweed to a fish.
       Fish Tank 2_markdown_instruction: We're going to make a fish tank. Change the Dusty the tumbleweed to a fish.
+      Fish Tank 3-validated_markdown_instruction: All this spinning is going to make our fish dizzy! Change the fish's behavior to make it swim around the tank.
       Fish Tank 3_markdown_instruction: All this spinning is going to make our fish dizzy! Change the fish's behavior to make it swim around the tank.
+      Fish Tank 4-validated_markdown_instruction: Our fish tank needs some water! Use the `set background color` block to make the background blue.
       Fish Tank 4_markdown_instruction: Our fish tank needs some water! Use the `set background color` block to make the background blue.
+      Fish Tank 5-validated_markdown_instruction: Our fish is getting a little lonely. Create a new sprite inside the fish tank.
       Fish Tank 5_markdown_instruction: Our fish is getting a little lonely. Create a new sprite inside the fish tank.
+      Fish Tank 6-validated_markdown_instruction: What do you want your fish’s friend to do? Add a behavior and watch them go!
       Fish Tank 6_markdown_instruction: What do you want your fish’s friend to do? Add a behavior and watch them go!
+      Fish Tank 7-validated_markdown_instruction: There are a lot of new blocks in the toolbox. Play with them to make your fish tank special.
       Fish Tank 7_markdown_instruction: There are a lot of new blocks in the toolbox. Play with them to make your fish tank special.
+      Fish Tank Predict_markdown_instruction: "**Make a prediction**: What do you think will happen when you run this code?"
+      Fish Tank Template_markdown_instruction: Project Template
       Food Fight!_markdown_instruction: |-
         We've added one last function for you.
         <hr/>
@@ -21142,7 +21151,7 @@ en:
 
         What problems arose in your efforts to create a working protocol? How did you think about the problem(s) in order to solve it?
       U1L8 Free Response Reflection_2018_markdown_instruction: |
-        <strong>Complete the Sending Numbers Rubric (on the second page of the <a href= "https://docs.google.com/document/d/1cSlWYnxOciDQut0OAUcsddmM56bveHely71LUb_CHkM/edit" target="_blank">Sending Number activity guide</a>) and then respond to the following prompt.</strong>
+        <strong>Complete the Sending Numbers Rubric (on the second page of the Sending Numbers activity guide</a>) and then respond to the following prompt.</strong>
 
         What problems arose in your efforts to create a working protocol? How did you think about the problem(s) in order to solve it?
       U1L8 Free Response2_markdown_instruction: How did collaboration play a role in the creation of your protocol?
@@ -26933,6 +26942,7 @@ en:
       Video. Introduction to Conditionals - Part 2.3_markdown_instruction: "### Points to pay attention to:\n\n* **START at 2:20**  \n    This is the second half of the video you watched earlier. \n\n* An If-else-if statement let's you check more than one condition at a time.\n* The **order of conditions matters**. Since conditions are checked sequentially from top to bottom, the code that gets executed will be the *first* statement to evaluate to true.\n\n"
       Video. Introduction to Conditionals - Part 2_markdown_instruction: "### Points to pay attention to:\n\n* **NOTE:** Stop play at 1:37.  \n    It's all you need for the exercises that follow.  You'll watch the remainder of the video after that.\n\n* An IF statement can have an else clause, but an ELSE clause cannot exist on its own.\n* With an else clause you are *guaranteeing* that one of two portions of code will run.\n\n"
       Vigenere_markdown_instruction: "# Encrypt and decrypt a message with the Vigenère cipher\n\nThis is an interactive version of the Vigenère cipher that animates the encryption and decryption as it’s happening, given a piece of text to encrypt or decrypt and the key.\n\n# Do this\n### Encrypt a message\nClick Step several times, and trace what’s happening. Pay attention to:\n\n- How the ciphertext is being produced\n- What happens when you get to the last character of the key\n- After you’ve stepped through a few characters click Play to watch the rest animate\n- Hit Restart and play the animation again. You can use the speed slider to speed it up or slow it down  \n\n![](https://images.code.org/06858f88ac12997bba73f4f76638a068-image-1443574425185.gif)\n\n### Decrypt a message\nEncrypt a message as above, then:  \n\n- Highlight and copy the ciphertext\n- Paste it into the plaintext area. Note: Don’t change the key\n- Change the Encrypt/Decrypt toggle to Decrypt\n- Hit Step a few times, and then Play\n\nYou should see the original text emerge.  \n![](https://images.code.org/dc89d6c19c17adb23b6b5ff9a62c4583-image-1443574425182.gif)\n\n\nHow hard would it be to crack a message encrypted with this cipher? Does the length of the key make a difference?\n"
+      Virtual Pet 1-validated_markdown_instruction: This is Geraldine, your new pet giraffe. What do you think will happen if you press run and then click on her?
       Virtual Pet 1_markdown_instruction: This is Geraldine, your new pet giraffe. What do you think will happen if you press run and then click on her?
       Virtual Pet 2_markdown_instruction: There's a mud puddle over in the corner. Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
       Virtual Pet 3_markdown_instruction: |-
@@ -26945,6 +26955,7 @@ en:
       Virtual Pet 5_markdown_instruction: All of this play takes energy!  Add actions to each event so that when the giraffe collides with each sprite, it gets a little smaller (shrinks by 5).
       Virtual Pet 6_markdown_instruction: A balanced diet is important! We have to feed the giraffe to get its strength back. Add an apple that returns the giraffe back to regular size when they touch.
       Virtual Pet Freeplay_markdown_instruction: 'Freeplay: Can you add more special items for your virtual pet? Can you give her some friends? What more can you make your giraffe do? '
+      Virtual Pet Predict_markdown_instruction: "**Make a prediction:** This is Geraldine, your new pet giraffe. What do you think will happen if you press run and then click on her?"
       Visual Accessibility_markdown_instruction: |-
         # Visual Accessibility: Color Contrast
 

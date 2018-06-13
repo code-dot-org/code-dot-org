@@ -530,6 +530,8 @@ ko:
         CSF_ifelse_allskins: Using If/Else Blocks
         CSF_ifelseifelse_allskins: Using If/ElseIf/Else Blocks
         CSF_loops_AB: 반복
+        csd_gamelab_booleans: Boolean Expressions
+        csd_gamelab_conditional_statements: Conditional Statements
     callout:
       text:
         drag_blocks: '"움직이기" 블럭을 끌어다가 다른 블럭의 아래에 탁 붙여보세요.'

@@ -1,4 +1,5 @@
-"kk":
+---
+kk:
   devise:
     confirmations:
       confirmed: Cіздің элетронды пошатаңыздың адресі сәтті расталды.

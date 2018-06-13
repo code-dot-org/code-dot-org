@@ -1,4 +1,5 @@
-"ro-RO":
+---
+ro-RO:
   hour_of_code: Hour of Code
   hello: Salutare lume
   'yes': Da
@@ -1284,9 +1285,25 @@
   coursee_name: Curs E
   coursef-draft_name: Curs F
   coursef_name: Curs F
+  coursea-2017_name: Course A (2017)
+  courseb-2017_name: Course B (2017)
+  coursec-2017_name: Course C (2017)
+  coursed-2017_name: Course D (2017)
+  coursee-2017_name: Course E (2017)
+  coursef-2017_name: Course F (2017)
+  coursea-2018_name: Course A (2018)
+  courseb-2018_name: Course B (2018)
+  coursec-2018_name: Course C (2018)
+  coursed-2018_name: Course D (2018)
+  coursee-2018_name: Course E (2018)
+  coursef-2018_name: Course F (2018)
   accelerated_name: Curs intensiv
   express_name: Express Course
   pre-express_name: Curs expres pentru preșcolari
+  express-2017_name: Express Course (2017)
+  pre-express-2017_name: Pre-reader Express Course (2017)
+  express-2018_name: Express Course (2018)
+  pre-express-2018_name: Pre-reader Express Course (2018)
   cspunit1_name: "(vechi) Unitatea 1: Informaţii digitale"
   cspunit2_name: "(vechi) Unitatea 2: Internet"
   cspunit3_name: "(vechi) Unitate 3: programare"
@@ -1365,6 +1382,8 @@
   math_category_name: Matematică
   hoc_category_name: Oră de Programare
   csf_category_name: Fundamentele CS
+  csf_2017_category_name: CS Fundamentals (2017)
+  csf_2018_category_name: CS Fundamentals (2018)
   csf_international_category_name: Fundamentele internaționale ale Informaticii
   csf2_draft_category_name: 'În curs de dezvoltare: Cursuri A - F'
   csd_category_name: 'Under Development: CS Discoveries'

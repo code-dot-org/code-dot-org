@@ -1,10 +1,12 @@
-"hi":
+---
+hi:
   data:
     script:
       category:
         csd_category_name: CS Discoveries ('17-'18)
         csd_2018_category_name: CS Discoveries ('18-'19)
         csf_category_name: CS Fundamentals
+        csf_2018_category_name: CS Fundamentals (2018)
         csf_international_category_name: CS Fundamentals International
         csf2_draft_category_name: 'Under Development: Courses A - F'
         csp_category_name: "'15-'16 CS Principles"
@@ -2311,10 +2313,13 @@
               name: Post-Course Survey
         csp3-2017:
           title: CSP Unit 3 - Intro to Programming
-          description: |-
-            This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.\r
-            \r
-            This unit was last updated October 30th, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
+          description: "This unit introduces the foundational concepts of computer
+            programming, which unlocks the ability to make rich, interactive apps.
+            This course uses JavaScript as the programming language, and App Lab as
+            the programming environment to build apps, but the concepts learned in
+            these lessons span all programming languages and tools.\r\n\r\nThis unit
+            was last updated October 30th, 2017. Read more about curriculum updates
+            at forum.code.org/c/csp/updates."
           description_short: Learn the basics of programming in JavaScript through
             a top-down design approach using classic turtle drawing.
           description_audience: ''
@@ -2361,10 +2366,12 @@
               name: Post-Course Survey
         csp4-2017:
           title: CSP Unit 4 - Big Data and Privacy
-          description: |-
-            The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.\r
-            \r
-            This unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
+          description: "The data-rich world we live in introduces many complex questions
+            related to public policy, law, ethics and societal impact. The goals of
+            this unit are to develop a well-rounded and balanced view about data in
+            the world, including the positive and negative effects of it, and to understand
+            the basics of how and why modern encryption works.\r\n\r\nThis unit was
+            last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
           description_short: Explore the data-rich world we live, and how data impacts
             public policy, personal privacy, security, the law, and ethics.
           description_audience: ''
@@ -3924,9 +3931,13 @@
         csd1-2017:
           title: CSD Unit 1 - Problem Solving
           description_short: "  Learn how humans work with computers to solve problems."
-          description: |2
-             \r
-            Unit 1 is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r
+          description: " \r\nUnit 1 is a highly interactive and collaborative introduction
+            to the field of computer science, as framed within the broader pursuit
+            of solving problems. You’ll practice using a problem solving process to
+            address a series of puzzles, challenges, and real world scenarios. Next,
+            you’ll learn how computers input, output, store, and process information
+            to help humans solve problems.  The unit concludes with a project in which
+            you design an application that helps solve a problem of your choosing.\r\n"
           description_audience: ''
           stages:
             Intro to Problem Solving:
@@ -4312,12 +4323,22 @@
                 could be shared intentionally or unintentionally.  Finally, the class
                 comes up with a set of guidelines to follow when putting information
                 online.
-              description_teacher: |-
-                As students have recently spent some time thinking about the actual content that will go into their personal website, this lesson takes a step back from the unit-long project (publication of a personal website) to help students articulate what personal information they choose to share digitally and with whom.  It also reinforces the notion that much of the information that they choose to share digitally falls largely out of their control the moment it is released.  \r
-                \r
-                Students begin by individually identifying appropriate audiences with whom they would be comfortable sharing given pieces of personal information.  They then look at several social media pages to determine what sorts of information people are sharing about themselves or one another.  Last, students reflect on what guidelines they think are appropriate for posting information online.\r
-                \r
-                The ultimate point of this lesson is not to scare students, but rather to experientially bring students to realizing precisely what level of control they don’t have in releasing information into the web.
+              description_teacher: "As students have recently spent some time thinking
+                about the actual content that will go into their personal website,
+                this lesson takes a step back from the unit-long project (publication
+                of a personal website) to help students articulate what personal information
+                they choose to share digitally and with whom.  It also reinforces
+                the notion that much of the information that they choose to share
+                digitally falls largely out of their control the moment it is released.
+                \ \r\n\r\nStudents begin by individually identifying appropriate audiences
+                with whom they would be comfortable sharing given pieces of personal
+                information.  They then look at several social media pages to determine
+                what sorts of information people are sharing about themselves or one
+                another.  Last, students reflect on what guidelines they think are
+                appropriate for posting information online.\r\n\r\nThe ultimate point
+                of this lesson is not to scare students, but rather to experientially
+                bring students to realizing precisely what level of control they don’t
+                have in releasing information into the web."
             Publishing a Website:
               name: Publishing a Website
             Sources and Search Engines:
@@ -4347,9 +4368,13 @@
                 on the page. The class learns the basic syntax for CSS rule-sets and
                 then explores properties that impact HTML text elements.  Finally,
                 everyone applies text styles to their personal websites.
-              description_teacher: |
-                This lesson introduces CSS as a way to style elements on the page. Students learn the basic syntax for CSS rule-sets and then explore properties that impact HTML text elements. They work on a HTML page about Guinness World Record holders, adding their own style to the provided page. In the last level, students apply what they have learned about styles for text elements to their personal web page.\r
-                \r
+              description_teacher: "This lesson introduces CSS as a way to style elements
+                on the page. Students learn the basic syntax for CSS rule-sets and
+                then explore properties that impact HTML text elements. They work
+                on a HTML page about Guinness World Record holders, adding their own
+                style to the provided page. In the last level, students apply what
+                they have learned about styles for text elements to their personal
+                web page.\r\n\r\n"
             Styling Elements with CSS:
               name: Styling Elements with CSS
               description_student: This lesson continues the introduction to CSS style
@@ -4448,10 +4473,14 @@
                 of the creator of that media. After first studying Creative Commons
                 licensing, the class learns how to add images to web pages, and how
                 to give proper attribution when doing so.
-              description_teacher: |-
-                Starting with an discussion of their personal opinions on how others should be allowed to use their work, the class explores the purpose and role of copyright for both creators and users of creative content.  They then move on to an activity exploring the various Creative Commons licenses as a solution to the difficulty in dealing with copyright. \r
-                \r
-                Finally, with a common understanding of the restrictions of various Creative Commons licenses, students learn how to add images to their web pages using the &lt;img&gt; tag.
+              description_teacher: "Starting with an discussion of their personal
+                opinions on how others should be allowed to use their work, the class
+                explores the purpose and role of copyright for both creators and users
+                of creative content.  They then move on to an activity exploring the
+                various Creative Commons licenses as a solution to the difficulty
+                in dealing with copyright. \r\n\r\nFinally, with a common understanding
+                of the restrictions of various Creative Commons licenses, students
+                learn how to add images to their web pages using the &lt;img&gt; tag."
             Project - Multi-Page Websites:
               name: Project - Multi-Page Websites
               description_student: 'This lesson covers hyperlinks, which allow web
@@ -4459,9 +4488,12 @@
                 will link together all the previous pages into one project, and create
                 navigation bars for each page before publishing the entire site to
                 the Web.  '
-              description_teacher: |
-                After learning about how to link web pages to one another, students are finally able to publish the website they have been working on.  In this lesson, they link together all the previous pages they have created into one project, create a new page, and add navigation between the pages before publishing the entire site to the Web.  \r
-                \r
+              description_teacher: "After learning about how to link web pages to
+                one another, students are finally able to publish the website they
+                have been working on.  In this lesson, they link together all the
+                previous pages they have created into one project, create a new page,
+                and add navigation between the pages before publishing the entire
+                site to the Web.  \r\n\r\n"
             RGB Colors and Classes:
               name: RGB Colors and Classes
               description_student: This lesson covers classes and custom colors. The
@@ -4483,15 +4515,13 @@
                 their personal websites, working with peers to get feedback, review
                 the rubric, and put the finishing touches on the site. To cap off
                 the unit, everyone shares their projects and how they were developed.
-              description_teacher: 'Students have spent a lot of time throughout the
+              description_teacher: "Students have spent a lot of time throughout the
                 unit working on their Personal Website. In the final couple of days
                 students finalize their websites.  They work with peers to get feedback,
                 put the finishing touches on the websites, review the rubric and reflect
                 on their process. To cap off the unit, they will share their projects
                 and also a overview of the process they took to get to that final
-                design.\r
-
-'
+                design.\r\n"
             Headings:
               name: Headings
               description_student: This lesson continues the introduction to HTML
@@ -4574,15 +4604,13 @@
                 users might react to a variety of products. Role playing as a different
                 person, each member of the class will get to experience designs through
                 someone else's eyes.
-              description_teacher: 'Designers need to understand their users’ needs
+              description_teacher: "Designers need to understand their users’ needs
                 in order to create useful products.  This lesson encourages students
                 to think about how to design for another person by role-playing as
                 someone else using a user profile and reacting as that user to a series
                 of products.  Each student is assigned a user profile describing a
                 person, which they then use to choose appropriate products, critique
-                product design, and suggest improvements to design.\r
-
-'
+                product design, and suggest improvements to design.\r\n"
             Discovering Users:
               name: Discovering Users
             User-Centered Design Micro Activity:
@@ -4646,7 +4674,7 @@
                 ideas before investing a lot of time writing code. In this lesson
                 teams explore some example apps created in App Lab, using those apps
                 to help inform the first paper prototypes of their apps.
-              description_teacher: 'Before starting to design apps, we need to help
+              description_teacher: "Before starting to design apps, we need to help
                 students to better scope their expectations. Because students will
                 eventually be prototyping these apps in App Lab, they will be in better
                 shape if their ideas align with the kinds of apps that are easily
@@ -4655,9 +4683,7 @@
                 with App Lab. Teams then can chose one (or more) of the apps as a
                 basis for their own. From there, teams have some time to discuss the
                 basic functionality of their app before using 3x5 index cards to develop
-                paper prototypes.\r
-
-'
+                paper prototypes.\r\n"
             Prototype Testing:
               name: Prototype Testing
               description_student: In this lesson teams test out their paper prototypes
@@ -7137,6 +7163,7 @@
                 of the coding skills they've learned to create an animated game. It's
                 time to get creative and make a story in the Play Lab!
           title: 'CS Fundamentals: Course A'
+          assignment_family_title: Course A
           description_audience: ''
           description_short: An introduction to computer science for early readers.
           description: Course A offers computer science curriculum for beginning readers
@@ -7177,6 +7204,7 @@
             Programming with Rey and BB-8:
               name: Programming with Rey and BB-8
           title: 'CS Fundamentals: Course B'
+          assignment_family_title: Course B
           description_audience: ''
           description_short: An introduction to computer science for early readers.
           description: "Course B was developed with first graders in mind. Tailored
@@ -7223,6 +7251,7 @@
             Loops with Rey and BB-8:
               name: Loops with Rey and BB-8
           title: 'CS Fundamentals: Course C'
+          assignment_family_title: Course C
           description_audience: ''
           description_short: Learn the basics of computer science and create your
             own art, stories, and games.
@@ -7413,6 +7442,7 @@
                 reading and editing code to fix puzzles with simple algorithms, loops
                 and nested loops.
           title: 'CS Fundamentals: Course D'
+          assignment_family_title: Course D
           description_audience: ''
           description_short: Learn the basics of computer science and create your
             own art, stories, and games.
@@ -7651,6 +7681,7 @@
             Functions in Harvester:
               name: Functions in Harvester
           title: 'CS Fundamentals: Course E'
+          assignment_family_title: Course E
           description_audience: ''
           description_short: Learn the basics of computer science and create your
             own art, stories, and games.
@@ -7889,6 +7920,7 @@
             Nested Loops with Frozen:
               name: Nested Loops with Frozen
           title: 'CS Fundamentals: Course F'
+          assignment_family_title: Course F
           description_audience: ''
           description_short: Learn the basics of computer science and create your
             own art, stories, and games.
@@ -8287,6 +8319,7 @@
             Until Loops in Maze:
               name: Until Loops in Maze
           title: ''
+          assignment_family_title: Express Course
           description_audience: ''
           description_short: ''
           description: ''
@@ -8321,6 +8354,7 @@
             Spelling Bee:
               name: Spelling Bee
           title: ''
+          assignment_family_title: Pre-reader Express
           description_audience: ''
           description_short: ''
           description: ''
@@ -9115,10 +9149,13 @@
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and
             complete the AP Explore Performance Tasks.
-          description: |-
-            These lessons are here to help you understand, prepare for, and do the AP Explore Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the second item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.\r
-            \r
-            This unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
+          description: "These lessons are here to help you understand, prepare for,
+            and do the AP Explore Performance Task.  Each \"lesson\" contains links
+            to helpful documents that your teacher can help walk you through. NOTE:
+            the second item in the first lesson is not related to the Explore PT directly,
+            but covers general tech setup and tools you need to do various elements
+            of both the Explore and Create tasks.\r\n\r\nThis unit was last updated
+            November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
         csp-create-2017:
           stages:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
@@ -9135,10 +9172,13 @@
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and
             complete the AP Create Performance Tasks.
-          description: |-
-            These lessons are here to help you understand, prepare for, and do the AP Create Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the first item in the first lesson is not related to the Create PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.\r
-            \r
-            This unit was last updated December, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
+          description: "These lessons are here to help you understand, prepare for,
+            and do the AP Create Performance Task.  Each \"lesson\" contains links
+            to helpful documents that your teacher can help walk you through. NOTE:
+            the first item in the first lesson is not related to the Create PT directly,
+            but covers general tech setup and tools you need to do various elements
+            of both the Explore and Create tasks.\r\n\r\nThis unit was last updated
+            December, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
         csp3-reovery:
           stages:
             Under the sea recovery:
@@ -10011,6 +10051,7 @@
                 design.\r\n"
         coursea-2018:
           title: Course A
+          assignment_family_title: Course A
           description: Learn the basics of computer science and internet safety. At
             the end of the course, create your very own game or story you can share.
           description_short: An introduction to computer science for pre-readers.
@@ -10119,6 +10160,7 @@
               name: 'Persistence & Frustration: Stevie and the Big Project'
         express-2018:
           title: Express Course
+          assignment_family_title: Express Course
           description: Learn the basics of computer science and internet safety. At
             the end of the course, create your very own game or story you can share.
           description_short: 'An introduction to computer science: combines the best
@@ -10332,13 +10374,14 @@
             Artist Binary:
               name: Artist Binary
             Internet:
-              name: Internet
+              name: इंटरनेट
             Crowdsourcing:
               name: Crowdsourcing
             Relay Programming:
               name: Relay Programming
         courseb-2018:
           title: Course B
+          assignment_family_title: Course B
           description: Learn the basics of computer science and internet safety. At
             the end of the course, create your very own game or story you can share.
           description_short: An introduction to computer science for pre-readers.
@@ -10409,6 +10452,7 @@
               name: Copyright and Creativity
         coursed-2018:
           title: New Course D Script
+          assignment_family_title: Course D
           description: ''
           description_short: ''
           description_audience: ''
@@ -10604,6 +10648,7 @@
             questions that appeared in Units 1-5 in the course.  '
         coursec-2018:
           title: Course C
+          assignment_family_title: Course C
           description: Create programs with sequencing, loops, and events. Translate
             your initials into binary, investigate different problem-solving techniques,
             and learn how to respond to cyberbullying. At the end of the course, create
@@ -10785,6 +10830,7 @@
               name: 'Project: Prototype an Innovation'
         coursee-2018:
           title: Course E
+          assignment_family_title: Course E
           description: Start coding with algorithms, loops, conditionals, and events
             and then you’ll move on functions. In the second part of this course,
             design and create a capstone project you can share with your friends and
@@ -10978,7 +11024,7 @@
                 for all four stages of the process can be found in the first stage
                 of this project process [here](https://curriculum.code.org/csf/coursee/12/).
             Internet:
-              name: Internet
+              name: इंटरनेट
               description_student: Ever wondered how information travels across the
                 internet? It's not magic! This lesson will teach you the basics of
                 how the internet works.
@@ -11011,6 +11057,7 @@
               name: Copyright and Creativity
         coursef-2018:
           title: Course F
+          assignment_family_title: Course F
           description: Learn to use different kinds of loops, events, functions, and
             conditionals. Investigate different problem-solving techniques and discuss
             societal impacts of computing and the internet. In the second part of
@@ -12903,6 +12950,7 @@
             Training Weekend.
         pre-express-2018:
           title: Pre-reader Express
+          assignment_family_title: Pre-reader Express
           description: Learn the basics of computer science and internet safety. At
             the end of the course, create your very own game or story you can share.
           description_short: 'An introduction to computer science for pre-readers:
@@ -12981,3 +13029,15 @@
               name: Loops in Ice Age
             'Persistence & Frustration: Stevie and the Big Project':
               name: 'Persistence & Frustration: Stevie and the Big Project'
+        spritelab-validated:
+          stages:
+            Fish Tank - Creating Sprites:
+              name: Fish Tank - Creating Sprites
+            Alien Dance Party - Input:
+              name: Alien Dance Party - Input
+            Virtual Pet - Interactions:
+              name: Virtual Pet - Interactions
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''

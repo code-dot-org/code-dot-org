@@ -375,7 +375,7 @@
   homepage_header_donors: "Code.org dankt zijn aanhangers"
   homepage_donors_seall: "Alles weergeven"
   homepage_donors_donate: "Doneren"
-  homepage_below_hero_announcement_text: "We care about your privacy and are making some updates to our privacy policy, effective May 25."
+  homepage_below_hero_announcement_text: "We nemen uw privacy serieus en met ingang van 25 mei zullen delen van ons privacybeleid geüpdatet worden."
   homepage_below_hero_announcement_link_text: "Leer meer"
   contact_form_topic_student: "Ik ben een leerling"
   contact_form_topic_parent: "Ik ben een ouder"
@@ -547,8 +547,8 @@
   volunteer_engineer_submission_field_email: "Email-adres"
   volunteer_engineer_submission_field_email_desc: "Je emailadres wordt nooit gedeeld, maar we zullen je aanvragen van leerkrachten doorsturen."
   volunteer_engineer_submission_field_email_placeholder: "Email-adres"
-  volunteer_engineer_submission_field_email_preference: "Can we email you about updates to our courses, volunteer opportunities, or other computer science news?"
-  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy policy)"
+  volunteer_engineer_submission_field_email_preference: "Mogen wij u e-mailen met updates over onze cursussen, lokale aanbiedingen of ander nieuws op het gebied van informatica?"
+  volunteer_engineer_submission_field_email_preference_privacy: "(Zie ons privacy beleid)"
   volunteer_engineer_submission_field_email_preference_yes: 'Ja'
   volunteer_engineer_submission_field_email_preference_no: 'Nee'
   volunteer_engineer_submission_final_paragraph: "Je wordt vermeld op een kaart voor docenten in de buurt, zodat die contact met jou kunnen opnemen voor Uur Code of ander vrijwilligerswerk. Je e-mailadres en woonadres worden niet door ons gedeeld. Maar andere informatie (waaronder een indicatie van je locatie) is zichtbaar voor docenten in de buurt."
@@ -941,9 +941,25 @@
   coursee_name: "Course E"
   coursef-draft_name: Course F
   coursef_name: "Course F"
+  coursea-2017_name: Course A (2017)
+  courseb-2017_name: Course B (2017)
+  coursec-2017_name: Course C (2017)
+  coursed-2017_name: Course D (2017)
+  coursee-2017_name: Course E (2017)
+  coursef-2017_name: Course F (2017)
+  coursea-2018_name: Course A (2018)
+  courseb-2018_name: Course B (2018)
+  coursec-2018_name: Course C (2018)
+  coursed-2018_name: Course D (2018)
+  coursee-2018_name: Course E (2018)
+  coursef-2018_name: Course F (2018)
   accelerated_name: "versnelde cursus"
   express_name: "Express Course"
   pre-express_name: Pre-reader Express Course
+  express-2017_name: Express Course (2017)
+  pre-express-2017_name: Pre-reader Express Course (2017)
+  express-2018_name: Express Course (2018)
+  pre-express-2018_name: Pre-reader Express Course (2018)
   cspunit1_name: "(old) Unit 1: Digital Information"
   cspunit2_name: "(old) Unit 2: The Internet"
   cspunit3_name: "(old) Unit 3: Programming"
@@ -1018,6 +1034,8 @@
   math_category_name: "Wiskunde"
   hoc_category_name: "Uur Code"
   csf_category_name: "CS Fundamentals"
+  csf_2017_category_name: "CS Fundamentals (2017)"
+  csf_2018_category_name: "CS Fundamentals (2018)"
   csf_international_category_name: "CS Fundamentals International"
   csf2_draft_category_name: 'Under Development: Courses A - F'
   csd_category_name: "CS Discoveries ('17-'18)"

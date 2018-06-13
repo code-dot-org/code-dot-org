@@ -1,4 +1,5 @@
-"tr":
+---
+tr:
   errors:
     messages:
       not_saved: 'Lütfen aşağıdaki hataları düzeltiniz:'
@@ -97,6 +98,7 @@
     facebook: Facebook
     windowslive: Microsoft Hesabı
     clever: Akıllı Hesap
+    powerschool: Powerschool Account
     forgot_password: Şifrenizi mi unuttunuz?
     need_confirmation: Onay talimatlarını almadınız mı?
     need_unlock: Kilit açma talimatlarını almadınız mı?
