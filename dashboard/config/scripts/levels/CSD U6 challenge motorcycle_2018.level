@@ -60,13 +60,10 @@
     "display_name": "Challenge: Motorcycle",
     "parent_level_id": 10461,
     "name_suffix": "_2018",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
-    "thumbnail_url": "https://images.code.org/098e59ca1634c5cf628581ce08b7826a-image-1528756968734.18.53 PM.png"
+    "thumbnail_url": "https://images.code.org/098e59ca1634c5cf628581ce08b7826a-image-1528756968734.18.53 PM.png",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

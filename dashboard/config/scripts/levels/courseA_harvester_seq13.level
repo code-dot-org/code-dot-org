@@ -37,8 +37,8 @@
     "instructions": "Play with these blocks to help the harvester pick corn.",
     "markdown_instructions": "Help the harvester pick corn!",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use this block to pick corn once the harvester gets to it.\\n\\n<xml>\\n  <block type=\\\"harvester_corn\\\"/>\\n</xml>\",\"hint_id\":\"courseA_bee_seq1_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7d85b6cb118959702bbb6e3407a5280a/courseA_harvester_seq13.mp3\"}]",
-    "contained_level_names": null,
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

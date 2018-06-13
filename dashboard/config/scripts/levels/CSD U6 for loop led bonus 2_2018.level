@@ -118,12 +118,9 @@
     "display_name": "Challenge: Color Patterns",
     "parent_level_id": 10622,
     "name_suffix": "_2018",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "show_type_hints": "false",
-    "thumbnail_url": "https://images.code.org/a94d27c57adba446911e984cae12e657-image-1528757646787.39.57 PM.png"
+    "thumbnail_url": "https://images.code.org/a94d27c57adba446911e984cae12e657-image-1528757646787.39.57 PM.png",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

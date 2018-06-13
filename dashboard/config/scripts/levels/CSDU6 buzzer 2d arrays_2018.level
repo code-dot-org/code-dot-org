@@ -59,12 +59,9 @@
     "display_name": "2D Arrays",
     "parent_level_id": 10591,
     "name_suffix": "_2018",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "show_type_hints": "false",
-    "thumbnail_url": "https://images.code.org/d2e14ff1881e23fdf1ee022795d20848-image-1528757481352.png"
+    "thumbnail_url": "https://images.code.org/d2e14ff1881e23fdf1ee022795d20848-image-1528757481352.png",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

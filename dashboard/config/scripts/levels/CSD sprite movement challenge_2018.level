@@ -85,11 +85,8 @@
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "thumbnail_url": "https://images.code.org/b44db1ef31dae64d1833e98c98bf05a8-image-1528844475290.00.30 PM.png"
+    "thumbnail_url": "https://images.code.org/b44db1ef31dae64d1833e98c98bf05a8-image-1528844475290.00.30 PM.png",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -60,12 +60,9 @@
     "display_name": "Stopping the Music",
     "parent_level_id": 10592,
     "name_suffix": "_2018",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "show_type_hints": "false",
-    "thumbnail_url": "https://images.code.org/535e1d1998dd01db539be7922a14af85-image-1528757528519.27.28 PM.png"
+    "thumbnail_url": "https://images.code.org/535e1d1998dd01db539be7922a14af85-image-1528757528519.27.28 PM.png",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
