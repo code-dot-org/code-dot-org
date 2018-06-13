@@ -141,7 +141,7 @@ const APP_OPTIONS_OVERRIDES = {
   readonlyWorkspace: true,
 };
 
-export function getAppOptionsFile(expoMode) {
+export function getAppOptionsFile(expoMode, channelId) {
   function getAppOptionsAtPath(whitelist, sourceOptions) {
     if (!whitelist || !sourceOptions) {
       return null;
@@ -165,6 +165,8 @@ export function getAppOptionsFile(expoMode) {
     const { hasDataAPIs } = shareWarningInfo;
     options.exportUsesDataAPIs = hasDataAPIs && hasDataAPIs();
   }
+  // Override the channel if it is supplied to this function as channelId:
+  options.channel = channelId || options.channel;
   return `window.APP_OPTIONS = ${JSON.stringify(options)};`;
 }
 
@@ -240,21 +242,47 @@ function extractCSSFromHTML(el) {
 const fontAwesomeWOFFRelativeSourcePath = '/fonts/fontawesome-webfont.woff2';
 const fontAwesomeWOFFPath = 'applab/fontawesome-webfont.woff2';
 
-function getExportConfigPath() {
+function getExportCreateChannelPath() {
   const baseHref = project.getShareUrl();
-  return `${baseHref}/export_config?script_call=setExportConfig`;
+  return `${baseHref}/export_create_channel`;
+}
+
+/**
+ * Retrieves the export config object.
+ * @param {boolean} expoMode
+ * @returns {{channelId: string, path: string}} channelId only when overriding
+ */
+async function getExportConfig(expoMode) {
+  const exportConfigUrlSuffix = 'export_config?script_call=setExportConfig';
+  if (!expoMode) {
+    const baseHref = project.getShareUrl();
+    return { path: `${baseHref}/${exportConfigUrlSuffix}` };
+  }
+  const createChannelUrl = getExportCreateChannelPath();
+  const response = await fetch(createChannelUrl, { credentials: 'include' });
+  if (!response.ok) {
+    throw Error(`fetch failed with status ${response.status}`);
+  }
+  const json = await response.json();
+  const { channel_id: channelId } = json;
+
+  const baseHref = `${location.origin}${project.appToProjectUrl()}`;
+  return {
+    channelId: channelId,
+    path: `${baseHref}/${channelId}/${exportConfigUrlSuffix}`,
+  };
 }
 
 export default {
-  exportAppToZip(appName, code, levelHtml, expoMode) {
+  async exportAppToZip(appName, code, levelHtml, expoMode) {
     const { css, outerHTML } = transformLevelHtml(levelHtml);
 
-    const exportConfigPath = getExportConfigPath();
+    const exportConfig = await getExportConfig(expoMode);
     const jQueryBaseName = 'jquery-1.12.1.min';
     var html;
     if (expoMode) {
       html = exportExpoIndexEjs({
-        exportConfigPath,
+        exportConfigPath: exportConfig.path,
         htmlBody: outerHTML,
         applabApiPath: "applab-api.j",
         jQueryPath: jQueryBaseName + ".j",
@@ -267,7 +295,7 @@ export default {
       });
     } else {
       html = exportProjectEjs({
-        exportConfigPath,
+        exportConfigPath: exportConfig.path,
         htmlBody: outerHTML,
         fontPath: fontAwesomeWOFFPath,
       });
@@ -367,8 +395,9 @@ export default {
         (assetToDownload) => download(assetToDownload.url, assetToDownload.dataType || 'text')
       ))).then(
         ([applabApi], [commonLocale], [applabLocale], [applabCSS], [commonCSS], [fontAwesomeWOFF], ...rest) => {
+          const appOptionsContents = getAppOptionsFile(expoMode, exportConfig.channelId);
           zip.file(appName + "/" + (expoMode ? "assets/applab-api.j" : rootApplabPrefix + "applab-api.js"),
-                   [getAppOptionsFile(expoMode), commonLocale, applabLocale, applabApi].join('\n'));
+                   [appOptionsContents, commonLocale, applabLocale, applabApi].join('\n'));
           zip.file(mainProjectFilesPrefix + fontAwesomeWOFFPath, fontAwesomeWOFF);
           if (expoMode) {
             const [data] = rest[0];
@@ -482,16 +511,16 @@ export default {
   },
 
   async publishToExpo(appName, code, levelHtml) {
-    const appOptionsJs = getAppOptionsFile(true);
     const { css, outerHTML } = transformLevelHtml(levelHtml);
     const fontAwesomeCSS = exportFontAwesomeCssEjs({fontPath: fontAwesomeWOFFPath});
-    const exportConfigPath = getExportConfigPath();
+    const exportConfig = await getExportConfig(true);
+    const appOptionsJs = getAppOptionsFile(true, exportConfig.channelId);
     const { origin } = window.location;
     const applabApiPath = getEnvironmentPrefix() === 'cdo-development' ?
         `${origin}/blockly/js/applab-api.js` :
         `${origin}/blockly/js/applab-api.min.js`;
     const html = exportExpoIndexEjs({
-      exportConfigPath,
+      exportConfigPath: exportConfig.path,
       htmlBody: outerHTML,
       commonLocalePath: `${origin}/blockly/js/en_us/common_locale.js`,
       applabLocalePath: `${origin}/blockly/js/en_us/applab_locale.js`,
