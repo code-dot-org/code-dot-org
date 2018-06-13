@@ -8850,7 +8850,7 @@ en:
               name: Unit 2 Assessment
         csp3-2018:
           title: CSP Unit 3 - Intro to Programming
-          description: "This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.\r\n\r\nThis unit was last updated October 30th, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
+          description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           description_short: Learn the basics of programming in JavaScript through a top-down design approach using classic turtle drawing.
           description_audience: ''
           stages:
@@ -8906,7 +8906,7 @@ en:
               name: Creating Functions with Parameters
         csp-explore-2018:
           title: Explore - AP Performance Task Prep
-          description: "These lessons are here to help you understand, prepare for, and do the AP Explore Performance Task.  Each \"lesson\" contains links to helpful documents that your teacher can help walk you through. NOTE: the second item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.\r\n\r\nThis unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
+          description: 'These lessons are here to help you understand, prepare for, and do the AP Explore Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the second item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.'
           description_short: Lessons and resources to help students prepare for and complete the AP Explore Performance Tasks.
           description_audience: ''
           stages:
@@ -8924,7 +8924,7 @@ en:
               description_teacher: ''
         csp-create-2018:
           title: Create - AP Performance Task Prep
-          description: "These lessons are here to help you understand, prepare for, and do the AP Create Performance Task.  Each \"lesson\" contains links to helpful documents that your teacher can help walk you through. NOTE: the first item in the first lesson is not related to the Create PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.\r\n\r\nThis unit was last updated December, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
+          description: 'These lessons are here to help you understand, prepare for, and do the AP Create Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the first item in the first lesson is not related to the Create PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.'
           description_short: Lessons and resources to help students prepare for and complete the AP Create Performance Tasks.
           description_audience: ''
           stages:
@@ -8942,7 +8942,7 @@ en:
               description_teacher: ''
         csp4-2018:
           title: CSP Unit 4 - Big Data and Privacy
-          description: "The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.\r\n\r\nThis unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
+          description: The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.
           description_short: Explore the data-rich world we live, and how data impacts public policy, personal privacy, security, the law, and ethics.
           description_audience: ''
           stages:
@@ -9525,6 +9525,14 @@ en:
               name: Alien Dance Party - Input
             Virtual Pet - Interactions:
               name: Virtual Pet - Interactions
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        2018hoc-ab:
+          stages:
+            Labyrinth:
+              name: Labyrinth
           title: ''
           description_audience: ''
           description_short: ''
