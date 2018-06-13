@@ -8,6 +8,9 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
     @teacher.permission = UserPermission::AUTHORIZED_TEACHER
     @section = create(:section, user: @teacher, login_type: 'word')
     @student = create(:follower, section: @section).student_user
+
+    @teacher_other = create(:teacher)
+    @teacher_other.permission = UserPermission::AUTHORIZED_TEACHER
   end
 
   # index tests - gets assessment questions and answers
@@ -45,20 +48,31 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
+  test "don't show assessment responses to teacher who doesn't own that section" do
+    script = create :script
+    sign_in @teacher_other
+
+    get :section_responses, params: {
+      section_id: @section.id,
+      script_id: script.id
+    }
+    assert_response :forbidden
+  end
+
   test 'students cannot get assessment responses from students' do
     sign_in @student
     get :section_responses
     assert_response :forbidden
   end
 
-  test 'verified teacher can get assessment responses from students' do
+  test 'gets no assessment responses from students when no assessment' do
     sign_in @teacher
     get :section_responses, params: {section_id: @section.id, script_id: 2}
     assert_response :success
     assert_equal '{}', @response.body
   end
 
-  test "should get assessments responses for section with script with level_group assessment" do
+  test "verified teacher should get assessments responses" do
     # Sign in and create a new script.
     sign_in @teacher
     script = create :script
