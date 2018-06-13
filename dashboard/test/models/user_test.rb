@@ -902,6 +902,24 @@ class UserTest < ActiveSupport::TestCase
     user.reset_secrets
   end
 
+  test "generate_secret_picture sets a new secret picture on user" do
+    user = create :user
+    old_secret_picture = user.secret_picture
+
+    user.generate_secret_picture
+
+    refute_equal old_secret_picture, user.secret_picture
+  end
+
+  test "generate_secret_words sets new secret words on user" do
+    user = create :user
+    old_secret_words = user.secret_words
+
+    user.generate_secret_words
+
+    refute_equal old_secret_words, user.secret_words
+  end
+
   test "no send reset password for blank email" do
     error_user = User.send_reset_password_instructions(email: '')
     assert error_user.errors[:email]

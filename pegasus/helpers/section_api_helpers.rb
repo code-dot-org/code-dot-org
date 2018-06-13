@@ -333,7 +333,7 @@ class DashboardSection
     # don't crash when loading environment before database has been created
     return {} unless (Dashboard.db[:scripts].count rescue nil)
 
-    where_clause = with_hidden ? "" : "hidden = 0"
+    where_clause = with_hidden ? {} : {hidden: 0}
 
     # cache result if we have to actually run the query
     scripts =
@@ -397,15 +397,6 @@ class DashboardSection
       map {|course| assignable_info(course)}
     @@course_cache[course_cache_key] = courses unless rack_env?(:levelbuilder)
     courses
-  end
-
-  # This only applies to courses because scripts are currently assumed to be in
-  # their own assignment family, e.g. "coursea-2018" would be in assignment family
-  # "coursea-2018" not "coursea". This will change once we start recognizing
-  # multiple versions of scripts.
-  def self.course_assignment_family(course)
-    m = ScriptConstants::VERSIONED_COURSE_NAME_REGEX.match(course[:name])
-    m ? m[1] : course[:name]
   end
 
   # Gets a list of valid scripts in which progress tracking has been disabled via

@@ -1,0 +1,25 @@
+{
+  "category": "World",
+  "config": {
+    "color": [
+      240,
+      0.45,
+      0.65
+    ],
+    "func": "showTitleScreen",
+    "blockText": "show title screen {BREAK} title {TITLE} text {SUBTITLE}",
+    "args": [
+      {
+        "name": "BREAK",
+        "empty": true
+      },
+      {
+        "name": "TITLE"
+      },
+      {
+        "name": "SUBTITLE"
+      }
+    ],
+    "inline": false
+  }
+}

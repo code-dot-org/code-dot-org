@@ -53,15 +53,6 @@ module Pd
     validates_inclusion_of :year, in: VALID_YEARS
     validates_inclusion_of :course, in: VALID_COURSES
 
-    # Skip other environments. Only keep this environment.
-    # @override
-    def skip_submission?(processed_answers)
-      environment = processed_answers['environment']
-      raise "Missing required environment field" unless environment
-
-      environment != Rails.env
-    end
-
     def self.form_id
       get_form_id 'post_course', CURRENT_YEAR
     end

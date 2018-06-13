@@ -106,7 +106,7 @@ class CourseTest < ActiveSupport::TestCase
   end
 
   test "summarize" do
-    course = create :course, name: 'my-course'
+    course = create :course, name: 'my-course', family_name: 'my-family', version_year: '1999'
 
     test_locale = :"te-ST"
     I18n.locale = test_locale
@@ -160,7 +160,7 @@ class CourseTest < ActiveSupport::TestCase
 
     assert_equal 1, summary[:versions].length
     assert_equal 'my-course', summary[:versions].first[:name]
-    assert_equal '2017', summary[:versions].first[:version_year]
+    assert_equal '1999', summary[:versions].first[:version_year]
 
     # make sure we dont have stage info
     assert_nil summary[:scripts][0][:stages]
@@ -264,13 +264,13 @@ class CourseTest < ActiveSupport::TestCase
 
   class OtherVersionProgressTests < ActiveSupport::TestCase
     setup do
-      @csp_2017 = create(:course, name: 'csp-2017')
+      @csp_2017 = create(:course, name: 'csp-2017', family_name: 'csp')
       @csp1_2017 = create(:script, name: 'csp1-2017')
       @csp2_2017 = create(:script, name: 'csp2-2017')
       create :course_script, course: @csp_2017, script: @csp1_2017, position: 1
       create :course_script, course: @csp_2017, script: @csp2_2017, position: 1
 
-      @csp_2018 = create(:course, name: 'csp-2018')
+      @csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp')
       @csp1_2018 = create(:script, name: 'csp1-2018')
       @csp2_2018 = create(:script, name: 'csp2-2018')
       create :course_script, course: @csp_2018, script: @csp1_2018, position: 1
@@ -284,9 +284,6 @@ class CourseTest < ActiveSupport::TestCase
     end
 
     test 'validate test data' do
-      assert_equal 'csp', @csp_2017.assignment_family_name
-      assert_equal 'csp', @csp_2018.assignment_family_name
-
       assert_equal 2, @csp_2017.default_scripts.count
       assert_equal 2, @csp_2018.default_scripts.count
       assert_equal 1, @csd.default_scripts.count
@@ -403,7 +400,7 @@ class CourseTest < ActiveSupport::TestCase
     )
     create(:course_script, position: 3, course: csp, script: csp3)
 
-    courses = Course.valid_courses(include_unstable: true)
+    courses = Course.valid_courses
 
     # one entry for each 2017 and 2018 course in ScriptConstants
     assert_equal 4, courses.length
@@ -429,7 +426,7 @@ class CourseTest < ActiveSupport::TestCase
 
     # teacher without experiment has default script_ids
     teacher = create(:teacher)
-    courses = Course.valid_courses(user: teacher, include_unstable: true)
+    courses = Course.valid_courses(user: teacher)
     assert_equal csp.id, courses[2][:id]
     csp_assign_info = courses[2]
     assert_equal [csp1.id, csp2.id, csp3.id], csp_assign_info[:script_ids]
@@ -437,7 +434,7 @@ class CourseTest < ActiveSupport::TestCase
     # teacher with experiment has alternate script_ids
     teacher_with_experiment = create(:teacher)
     experiment = create(:single_user_experiment, name: 'csp2-alt-experiment', min_user_id: teacher_with_experiment.id)
-    courses = Course.valid_courses(user: teacher_with_experiment, include_unstable: true)
+    courses = Course.valid_courses(user: teacher_with_experiment)
     assert_equal csp.id, courses[2][:id]
     csp_assign_info = courses[2]
     assert_equal [csp1.id, csp2_alt.id, csp3.id], csp_assign_info[:script_ids]

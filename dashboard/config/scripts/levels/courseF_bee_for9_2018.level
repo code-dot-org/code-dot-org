@@ -42,11 +42,14 @@
     "shape_shift": "false",
     "top_level_procedure_autopopulate": "false",
     "name_suffix": "_2018",
+    "show_type_hints": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-08-25 15:40:59 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-01-18 00:47:47 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-05-07 20:53:17 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-08-25 15:40:59 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-01-18 00:47:47 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-05-07 20:53:17 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-05 00:35:18 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>
@@ -55,13 +58,13 @@
           <block type="maze_move">
             <title name="DIR">moveForward</title>
           </block>
+          <block type="maze_nectar"/>
           <block type="maze_turn">
             <title name="DIR">turnRight</title>
           </block>
           <block type="maze_turn">
             <title name="DIR">turnLeft</title>
           </block>
-          <block type="maze_nectar"/>
         </category>
         <category name="Math">
           <block type="math_number">
@@ -102,12 +105,16 @@
           </block>
           <block type="controls_repeat_ext" inline="true"/>
         </category>
-        <category name="Variables" custom="VARIABLE">
+        <category name="Variables ">
           <block type="variables_get">
             <title name="VAR">counter</title>
           </block>
         </category>
-        <category name="Functions" custom="PROCEDURE"/>
+        <category name="Comments">
+          <block type="comment">
+            <title name="TEXT"/>
+          </block>
+        </category>
       </xml>
     </toolbox_blocks>
     <solution_blocks>

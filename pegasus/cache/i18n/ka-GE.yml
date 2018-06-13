@@ -1,4 +1,5 @@
-"ka-GE":
+---
+ka-GE:
   hour_of_code: კოდის ერთი საათი
   hello: ჰეი, სამყარო
   'yes': დიახ
@@ -711,6 +712,8 @@
   volunteer_engineer_submission_field_email_placeholder: ელ.ფოსტის მისამართი
   volunteer_engineer_submission_field_email_preference: Can we email you about updates
     to our courses, volunteer opportunities, or other computer science news?
+  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
+    policy)"
   volunteer_engineer_submission_field_email_preference_yes: დიახ
   volunteer_engineer_submission_field_email_preference_no: არა
   volunteer_engineer_submission_final_paragraph: თქვენ იქნებით აღნიშნული რუკაზე, რათა
@@ -1233,9 +1236,25 @@
   coursee_name: კურსი E
   coursef-draft_name: კურსი F
   coursef_name: კურსი F
+  coursea-2017_name: Course A (2017)
+  courseb-2017_name: Course B (2017)
+  coursec-2017_name: Course C (2017)
+  coursed-2017_name: Course D (2017)
+  coursee-2017_name: Course E (2017)
+  coursef-2017_name: Course F (2017)
+  coursea-2018_name: Course A (2018)
+  courseb-2018_name: Course B (2018)
+  coursec-2018_name: Course C (2018)
+  coursed-2018_name: Course D (2018)
+  coursee-2018_name: Course E (2018)
+  coursef-2018_name: Course F (2018)
   accelerated_name: დაჩქარებული კურსი
   express_name: დაჩქარებული კურსი
   pre-express_name: კითხვამდელთა ექსპრეს კურსი
+  express-2017_name: Express Course (2017)
+  pre-express-2017_name: Pre-reader Express Course (2017)
+  express-2018_name: დაჩქარებული კურსი
+  pre-express-2018_name: Pre-reader Express Course (2018)
   cspunit1_name: "(ძველი) სექცია 1: ციფრული ინფორმაცია"
   cspunit2_name: "(ძველი) სექცია 2: ინტერნეტი"
   cspunit3_name: "(ძველი) ნაწილი 3: პროგრამირება"
@@ -1248,12 +1267,26 @@
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'თავი 5: მონაცემები და საზოგადოება'
   csd6_name: 'თავი 6: ფიზიკური კომპიუტერული გამოთვლები'
+  csd1-2017_name: 'Unit 1: Problem Solving'
+  csd2-2017_name: 'Unit 2: Web Development'
+  csd3-2017_name: 'Unit 3: Animation and Games'
+  csd4-2017_name: 'Unit 4: The Design Process'
+  csd5-2017_name: 'თავი 5: მონაცემები და საზოგადოება'
+  csd6-2017_name: 'თავი 6: ფიზიკური კომპიუტერული გამოთვლები'
   csd1-2018_name: 'Unit 1: Problem Solving'
   csd2-2018_name: 'Unit 2: Web Development'
   csd3-2018_name: 'Unit 3: Animation and Games'
   csd4-2018_name: 'Unit 4: The Design Process'
   csd5-2018_name: 'თავი 5: მონაცემები და საზოგადოება'
   csd6-2018_name: 'თავი 6: ფიზიკური კომპიუტერული გამოთვლები'
+  csp1-2017_name: 'სექცია 1: ინტერნეტი'
+  csp2-2017_name: 'სექცია 2: ციფრული ინფორმაცია'
+  csp3-2017_name: 'Unit 3: Algorithms and Programming'
+  csp4-2017_name: 'Unit 4: Big Data and Privacy'
+  csp5-2017_name: 'Unit 5: Building Apps'
+  csp-explore-2017_name: 'AP: Explore PT Prep'
+  csp-create-2017_name: 'AP: Create PT Prep'
+  csppostap-2017_name: 'Post AP: Databases in Apps'
   csp1-2018_name: 'სექცია 1: ინტერნეტი'
   csp2-2018_name: 'სექცია 2: ციფრული ინფორმაცია'
   csp3-2018_name: 'Unit 3: Algorithms and Programming'
@@ -1300,6 +1333,8 @@
   math_category_name: მათემატიკა
   hoc_category_name: კოდის ერთი საათი
   csf_category_name: CS საფუძვლები
+  csf_2017_category_name: CS Fundamentals (2017)
+  csf_2018_category_name: CS Fundamentals (2018)
   csf_international_category_name: კომპიუტერული მეცნიერების საერთაშორისო საფუძვლები
   csf2_draft_category_name: 'დამუშავების ქვეშ: კურსები A - F'
   csd_category_name: 'Under Development: CS Discoveries'
@@ -2113,5 +2148,3 @@
     ვარიანტი:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
-    policy)"

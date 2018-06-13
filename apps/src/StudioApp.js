@@ -1271,7 +1271,9 @@ StudioApp.prototype.resizePinnedBelowVisualizationArea = function () {
 
 function applyTransformScaleToChildren(element, scale) {
   for (var i = 0; i < element.children.length; i++) {
-    applyTransformScale(element.children[i], scale);
+    if (!$(element.children[i]).hasClass('ignore-transform')) {
+      applyTransformScale(element.children[i], scale);
+    }
   }
 }
 function applyTransformScale(element, scale) {
@@ -2705,7 +2707,7 @@ function rectFromElementBoundingBox(element) {
 
 /**
  * Displays a small alert box inside the workspace
- * @param {string} type - Alert type (error or warning)
+ * @param {string} type - Alert type (error, warning, or notification)
  * @param {React.Component} alertContents
  */
 StudioApp.prototype.displayWorkspaceAlert = function (type, alertContents) {
@@ -2725,15 +2727,27 @@ StudioApp.prototype.displayWorkspaceAlert = function (type, alertContents) {
 };
 
 /**
- * Displays a small aert box inside the playspace
- * @param {string} type - Alert type (error or warning)
+ * Displays a small alert box inside the playspace
+ * @param {string} type - Alert type (error, warning, or notification)
  * @param {React.Component} alertContents
  */
 StudioApp.prototype.displayPlayspaceAlert = function (type, alertContents) {
   StudioApp.prototype.displayAlert("#visualization", {
     type: type,
-    sideMargin: 20
+    sideMargin: 20,
   }, alertContents);
+};
+
+/**
+ * Displays a small notification box inside the playspace that goes away after 5 seconds
+ * @param {React.Component} notificationContents
+ */
+StudioApp.prototype.displayPlayspaceNotification = function (notificationContents) {
+  StudioApp.prototype.displayAlert("#visualization", {
+    type: 'notification',
+    closeDelayMillis: 5000,
+    childPadding: '8px 14px',
+  }, notificationContents);
 };
 
 /**
@@ -2751,12 +2765,13 @@ StudioApp.prototype.displayAlert = function (selector, props, alertContents, pos
   var parent = $(selector);
   var container = parent.children('.react-alert');
   if (container.length === 0) {
-    container = $("<div class='react-alert'/>").css({
+    container = $("<div class='react-alert ignore-transform'/>").css({
       position: position,
       left: 0,
       right: 0,
       top: 0,
-      zIndex: 1000
+      zIndex: 1000,
+      transform: 'scale(1.0)',
     });
     parent.append(container);
   }
@@ -2766,7 +2781,13 @@ StudioApp.prototype.displayAlert = function (selector, props, alertContents, pos
     ReactDOM.unmountComponentAtNode(renderElement);
   };
   ReactDOM.render(
-    <Alert onClose={handleAlertClose} type={props.type} sideMargin={props.sideMargin}>
+    <Alert
+      onClose={handleAlertClose}
+      type={props.type}
+      sideMargin={props.sideMargin}
+      closeDelayMillis={props.closeDelayMillis}
+      childPadding={props.childPadding}
+    >
       {alertContents}
     </Alert>, renderElement);
 
