@@ -170,6 +170,7 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
   # At least five students in the section must have submitted answers.  The answers for each contained
   # sublevel are shuffled randomly.
   # GET '/dashboardapi/assessments/section_surveys'
+  # TODO(caleybrock): add tests
   def section_surveys
     render json: LevelGroup.get_summarized_survey_results(@script, @section)
   end
