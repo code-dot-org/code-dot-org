@@ -173,7 +173,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
 
     assert_response :success
 
-    # All these are translation missing because we don't actually generate i18n files in tests.
+    # Stage translation missing because we don't actually generate i18n files in tests.
     expected_response = {
       @student_1.id.to_s => {
         "student_name" => @student_1.name,
