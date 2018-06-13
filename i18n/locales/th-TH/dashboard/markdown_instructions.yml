@@ -5,7 +5,7 @@ th:
       2-3 Artist 1 new_markdown_instruction: "สวัสดี ฉันคือศิลปิน คุณสามารถเขียนโค้ดเพื่อให้ฉันวาดสิ่งต่าง ๆ ให้ โดยใช้บล็อกให้น้อยที่สุดเพื่อสั่งให้ฉันวาดเส้นบนเส้นสีเทาในรูป (แต่ละเส้นยาว 100 พิกเซล)\\r\\r\n"
       2-3 Artist 11_markdown_instruction: 'Give the stop sign a border by making an octagon with 100 pixels sides. '
       2-3 Artist 12_markdown_instruction: "Create a circle to finish the eyeball! \n\nIf the artist turns 1 degree with each loop, how many times do you need to repeat the code to draw a circle? "
-      2-3 Artist 2 new_markdown_instruction: This house has a half-finished wall. Each side is 100, but the half-finished wall is only 50. Complete the wall.
+      2-3 Artist 2 new_markdown_instruction: บ้านหลังนี้มีผนังเสร็จที่เสร็จไปแล้วครึ่งหนึ่ง แต่ละด้านมีขนาด 100 พิกเซล แต่ผนังที่เสร็จไปแล้วครึ่งหนึ่งเพียง 50 พิกเซล ให้คุณทำผนังให้เสร็จสมบูรณ์
       2-3 Artist 3.4_markdown_instruction: "บล็อกกระโดดจะเคลื่อนย้ายศิลปินโดยไม่มีการวาดรูป\nวาดเส้นประโดยใช้บล็อก \"กระโดดไปข้างหน้า\" และ \"ไปข้างหน้า\"\nแต่ละเส้นมีความยาว 50 พิกเซล"
       2-3 Artist 3new_markdown_instruction: "The red hat is 100 pixels tall. Finish drawing a black hat that is 70 pixels shorter. \n\n*(Note: The width of each hat is 50 pixels.)*"
       2-3 Artist 4_markdown_instruction: ช่วยวาดบ้านให้แมวตัวนี้ให้หน่อย
@@ -20,27 +20,27 @@ th:
       2-3 Artist Debugging 10_markdown_instruction: "แผ่นทิศบนตัวควบคุมเกมของฉันแคบเกินไป \\r \\r คุณสามารถทำมันกว้าง 10 พิกเซลได้หรือไม่? \\r \\r ลองรันโปรแกรมก่อนเพื่อดูว่ามีอะไรผิดพลาดได้"
       2-3 Artist Debugging 11_markdown_instruction: |-
         จับคู่รูปร่างตามประเภท
-      2-3 Artist Debugging 2_markdown_instruction: "This code for the cat's whiskers is wrong. \n\nFix this code to draw whiskers that are all the same length."
-      2-3 Artist Debugging 3_markdown_instruction: "My boat has a hole! \n\nWhat do you need to fix to make the ends meet?"
-      2-3 Artist Debugging 5_markdown_instruction: "The code that we have for the leg and foot is wrong. \n\nCan you fix it?"
+      2-3 Artist Debugging 2_markdown_instruction: "โค้ดนี้สำหรับหนวดแมวไม่ถูกต้อง\n\nแก้ไขโค้ดนี้เพื่อวาดหนวดที่มีความยาวเท่ากันทั้งหมด"
+      2-3 Artist Debugging 3_markdown_instruction: "เรือของฉันมีรู!\n\nคุณต้องแก้ไขอะไรบ้างเพื่อให้ท้องเรือประกบกัน"
+      2-3 Artist Debugging 5_markdown_instruction: "โค้ดที่เราใส่ไว้ สำหรับขาและเท้าไม่ถูกต้อง\n\nคุณสามารถแก้ไขได้หรือไม่"
       2-3 Artist Debugging 6_markdown_instruction: |-
-        Looks like I'm sitting on a chair that’s missing a leg!
+        ดูเหมือนว่าฉันนั่งอยู่บนเก้าอี้ที่มีขาขาดหายไปข้างหนึ่ง!
         
-        Edit the code to draw the last leg.
+        แก้ไขโค้ดเพื่อวาดขาสุดท้ายที่หายไป
       2-3 Artist Debugging 7_markdown_instruction: |-
-        Looks like the C in code is drawn backwards!
+        ดูเหมือนว่าตัวอักษร C ในโค้ดจะถูกวาดกลับหลัง!
         
-        Can you make it look like a C again?
+        คุณสามารถทำให้มันดูเหมือนเป็น C อีกครั้งได้ไหม?
       2-3 Artist Debugging 8_markdown_instruction: |-
-        My teacher says that I should finish what I start!
+        ครูของฉันบอกว่าฉันควรจะทำสิ่งที่ฉันเริ่มต้น ให้เสร็จสิ้นไป!
         
-        Help me finish my pinwheel. Can you figure out what's wrong?
+        ช่วยฉันวาดวงล้อนี้ของฉันให้เสร็จ คุณบอกได้ไหมว่ามีอะไรผิด?
       2-3 Artist Debugging 9_markdown_instruction: |-
-        Something is off!
+        มีบางอย่างไม่ค่อยถูกต้องนัก
         
-        The code for this stem is wrong. Can you figure out how to get the artist to trace the stem the right way?
+        โค้ดสำหรับก้านดอกไม้นี้ไม่ถูกต้อง คุณสามารถบอกวิธีที่ศิลปินจะสามารถติดตามร่องรอยได้อย่างถูกต้อง?
       2-3 Artist Debugging Assessment 1_markdown_instruction: "**Assessment:** \nWhy does this square end up being 75 pixels too small on each side?  \n\nWhere does the code go wrong?"
-      2-3 Artist Free Play_markdown_instruction: Free-play! Draw anything you'd like.
+      2-3 Artist Free Play_markdown_instruction: เล่นตามใจคุณ! วาดอะไรก็ได้ที่คุณชอบ
       2-3 Artist Functions 1 a_markdown_instruction: "\"Me zombie artist. Me love drawing!\" \n\nHelp the zombie draw square glasses.  \n\nThe bridge between the glasses is 25 pixels shorter than the width of the squares, which is 100 pixels.\n\n"
       2-3 Artist Functions 1_markdown_instruction: "\"Me zombie artist. Me love drawing!\" \n\nHelp the zombie draw square glasses.  \n\nThe bridge between the glasses is 25 pixels shorter than the width of the squares, which is 100 pixels.\n\n"
       2-3 Artist Functions 10_markdown_instruction: "**Freeplay:** Here are two functions, one to draw a big gear and one to draw a small gear.  \n\nUse them to draw the inside of a machine!"
@@ -61,51 +61,50 @@ th:
       2-3 Artist Loops 1_markdown_instruction: Can you make a hexagon with sides that are 100 pixels long to finish the cell? Remember, that means that you will only need to turn 60 degrees!
       2-3 Artist Loops 2_markdown_instruction: Now use a repeat block to make the cell a shell.
       2-3 Artist Loops New 1_markdown_instruction: |
-        Let's draw this robot's head! Can you make a square with sides that are 100 pixels?
-        
+        ลองวาดหัวหุ่นยนต์ตัวนี้ คุณสามารถทำรูปสี่เหลี่ยมจตุรัสให้มีด้านที่ยาว 100 พิกเซล ได้ไหม?
         <br/>
-      2-3 Artist Loops New 10_markdown_instruction: Now let's connect a bunch of V's together in a loop.
-      2-3 Artist Loops New 11_markdown_instruction: "Time to make something snazzy! \n\nRebuild the code from the last puzzle, but this time, add a left turn of 30 degrees inside the loop. Now, repeat it 24 times instead of 8."
+      2-3 Artist Loops New 10_markdown_instruction: ตอนนี้เรามาเชื่อมต่อกลุ่มของ V เข้าด้วยกันด้วยลูป
+      2-3 Artist Loops New 11_markdown_instruction: "ถึงเวลาที่จะมาทำบางอย่างที่เก๋ไก๋กัน \n\nสร้างโค้ดจากปริศนาล่าสุดอีกครั้ง แต่ตอนนี้เพิ่มหันไปทางซ้าย 30 องศาภายในลูป ตอนนี้ทำซ้ำ 24 ครั้งแทนที่จะเป็น 8 ครั้ง"
       2-3 Artist Loops New 12_markdown_instruction: 'Draw a diamond with sides of 100 pixels.'
-      2-3 Artist Loops New 13_markdown_instruction: "We are going to start you with some code (in grey) to make one diamond. \n\nLoop the grey code to create a fun pattern!"
-      2-3 Artist Loops New 14_markdown_instruction: "Play around with the code for the diamond and see what other patterns you can make. \n\nTry changing how many degrees you turn and how many times you loop."
+      2-3 Artist Loops New 13_markdown_instruction: "เราจะเริ่มต้นด้วยโค้ดบางอย่าง (เป็นสีเทา) เพื่อทำเพชรเม็ดหนึ่ง. \n\nลูปโค้ดสีเทาเพื่อสร้างรูปแบบที่สนุกสนาน!"
+      2-3 Artist Loops New 14_markdown_instruction: "เล่นกับโค้ดที่ใช้สำหรับวาดเพชรและดูว่ามีรูปแบบอื่นๆที่คุณสามารถทำได้ไหม ลองเปลี่ยนองศาที่คุณหันไปและจำนวนครั้งที่คุณวนลูป"
       2-3 Artist Loops New 15_markdown_instruction: |+
         Now, draw anything you like!
         <br/><br/>
       2-3 Artist Loops New 2_markdown_instruction: |-
-        Here is the same puzzle that we just solved, but this time, we can only use one `move forward` block and one `turn` block this time.
+        นี่คือปริศนาเดียวกันที่เราเพิ่งแก้ไขไป แต่ครั้งนี้เราสามารถใช้บล็อก`ย้ายไปข้างหน้า` หนึ่งบล็อกและบล็อก` หันไป ` หนึ่งบล็อกเท่านั้น
         
-        Can you use a `repeat` to solve this puzzle?
-      2-3 Artist Loops New 9_markdown_instruction: Draw a simple V (where both sides are 50 pixels) to complete the arrow.
+        คุณสามารถใช้ ` ทำซ้ำ ` เพื่อแก้ปริศนานี้ได้ไหม?
+      2-3 Artist Loops New 9_markdown_instruction: วาดตัว V อย่างง่ายๆ (ที่ทั้งสองด้านมี 50 พิกเซล) เพื่อทำลูกศรให้เสร็จ
       2-3 Artist Nested Loops 1_markdown_instruction: |+
         You've used loops to draw shapes before, but now we're going to put loops inside of other loops!
         
         Put a `repeat` block around this whole stack of code to draw the pattern.
         
         <br/>
-      2-3 Artist Nested Loops 10_markdown_instruction: Loop this code 12 times to complete the pattern.
-      2-3 Artist Nested Loops 11_markdown_instruction: Loop this code 4 times to complete the pattern, turn 90 degrees after each circle.
+      2-3 Artist Nested Loops 10_markdown_instruction: "Loop this code 12 times to complete the pattern.\n\nลูปโค้ดนี้ 12 ครั้งที่จะวาดรูปแบบให้เสร็จ"
+      2-3 Artist Nested Loops 11_markdown_instruction: ลูปโค้ดนี้ 4 ครั้งเพื่อให้รูปแบบเสร็จสมบูรณ์ให้หัน 90 องศาหลังจากวาดแต่ละวงกลม
       2-3 Artist Nested Loops 12_markdown_instruction: Loop this code 12 times to complete the curls.
-      2-3 Artist Nested Loops 2_markdown_instruction: "Now loop the triangle 6 times. \n\nAfter each triangle, you'll need to turn 60 degrees before drawing the next."
+      2-3 Artist Nested Loops 2_markdown_instruction: "ตอนนี้ลูปรูปสามเหลี่ยมนี้ 6 ครั้ง\n\nหลังจากวาดสามเหลี่ยมแต่ละรูป คุณจะต้องหันไป 60 องศาก่อนวาดสามเหลี่ยมรูปต่อไป"
       2-3 Artist Nested Loops 3_markdown_instruction: "You'll need to loop your triangle 12 times to draw this pattern. \n\nDivide the number of degrees in a circle (360) by the number of shapes you're drawing (12) to figure out how far to turn after each shape."
-      2-3 Artist Nested Loops 4_markdown_instruction: "Loop this diamond 12 times to draw a flower!\n\nNote: We'll use the same angle to loop 12 diamonds as we did for 12 triangles.  \nHow much do you need to turn after each shape?"
-      2-3 Artist Nested Loops 5_markdown_instruction: "Fill in this building's windows using a nested loop. \n\nThe windows are 20 pixels long and 20 pixels apart."
-      2-3 Artist Nested Loops 6_markdown_instruction: "This dinosaur has 8 spikes running up its tail.\n\nEach spike is 30 pixels long. \n\nLoop the triangle 8 times, but make sure to jump forward after each one!"
-      2-3 Artist Nested Loops 7_markdown_instruction: "Loop this triangle 10 times to draw the sun. \n\nYou'll need to move and turn after each triangle. \n\nYou can figure out how much to turn by dividing the number of degrees in a circle by the number of triangles that make it up."
-      2-3 Artist Nested Loops 8_markdown_instruction: "Now let's add some grass to our picture. \n\nEach tuft of grass is 50 pixels apart."
+      2-3 Artist Nested Loops 4_markdown_instruction: "ลูปเพชรนี้ 12 ครั้งเพื่อที่จะวาดดอกไม้!\n\nหมายเหตุ: เราจะใช้มุมเท่ากันในการลูปเพชร 12  เม็ดแบบเดียวกับที่เราทำกับสามเหลี่ยม 12 รูป\nคุณต้องหันหน้าไปเท่าไรหลังจากวาดเพชรเสร็จแต่ละเม็ด"
+      2-3 Artist Nested Loops 5_markdown_instruction: "วาดหน้าต่างของอาคารโดยใช้ลูปที่ซ้อนกัน\n\nหน้าต่างมีความยาวด้านละ 20 พิกเซล และอยู่ห่างกัน 20 พิกเซล"
+      2-3 Artist Nested Loops 6_markdown_instruction: "ไดโนเสาร์นี้มีหนามแหลม 8 หนามอยู่ตามหางของมัน\nแต่ละหนามมีความยาว 30 พิกเซล \nลูปสามเหลี่ยม 8 ครั้งแต่ให้แน่ใจว่าจะกระโดดข้ามไปข้างหน้าหลังจากวาดหนามเสร็จแต่ละอัน!"
+      2-3 Artist Nested Loops 7_markdown_instruction: "ห่วงสามเหลี่ยมนี้10 ครั้งเพื่อวาดดวงอาทิตย์\n\nคุณจะต้องย้ายและหันหน้าไปหลังจากวาดสามเหลี่ยมแต่ละรูปเสร็จ\n\nคุณสามารถคิดออกได้โดยดูว่าต้องหันหน้าไปเท่าใดโดยการหารจำนวนองศาในวงกลมด้วยจำนวนสามเหลี่ยมที่ต้องวาด"
+      2-3 Artist Nested Loops 8_markdown_instruction: "ตอนนี้ขอเพิ่มหญ้าบางส่วนไปยังภาพของเรา \n\nแต่ละกอของหญ้าห่างกัน ๕๐ พิกเซล"
       2-3 Artist Nested Loops 9_markdown_instruction: "We'll finish this picture by adding our flower. \n\nLoop the diamond 12 times to draw the flower."
       2-3 Artist Nested Loops Free Play_markdown_instruction: Free play, draw something cool with nested loops.
       2-3 Bee Conditionals 11_markdown_instruction: "I wonder what's out there!\n\nHelp me fly around the yard and collect nectar only from the flowers that have some. "
       2-3 Bee Conditionals 13_markdown_instruction: |-
-        There's a lot happening here!
+        มีอะไรเกิดขึ้นมากมายที่นี่!
         
-        Use what you've learned to collect all of the nectar and then make the honey.
+        ใช้สิ่งที่คุณได้เรียนรู้มา เพื่อเก็บน้ำหวานจากเกสรทั้งหมดและทำน้ำผึ้งให้หมด
       2-3 Bee Conditionals 14_markdown_instruction: "Let's put everything together!\n\nUse what you've learned to help me collect nectar only from flowers that have it, using as few blocks as possible.  \n\nDon't forget to make honey at the end."
       2-3 Bee Conditionals 15_markdown_instruction: "This stair step pattern should look familiar.  \n\nCan you collect nectar only from the flowers that have some, using as few blocks as possible?"
       2-3 Bee Conditionals 2_markdown_instruction: "I'm a hungry bee! \n\n\nHelp me collect all of the nectar from the flowers using the fewest number of blocks."
-      2-3 Bee Conditionals 3_markdown_instruction: "Look at all of that nectar!\n\nHelp me collect the nectar and make the honey using as few blocks as you can.  "
+      2-3 Bee Conditionals 3_markdown_instruction: "มองไปที่น้ำหวานจากเกสรเหล่านี้!\n\nช่วยฉันเก็บน้ำหวานจากเกสรและทำน้ำผึ้ง โดยใช้บล็อกเพียงสองสามบล็อก เท่าที่คุณสามารถทำได้  "
       2-3 Bee Conditionals 5_markdown_instruction: "These magic purple flowers change!\n\nEach time you try the puzzle, purple flowers can have either 1 nectar or none at all...but you won't know the number until you run the code! \n\nBe careful not to collect nectar from a purple flower if it doesn't have any. \nYou must first check if the nectar is equal to 1 using the `if nectar` block."
-      2-3 Bee Conditionals Assessment 1_markdown_instruction: "**Assessment:** Collect all of the nectar.  \nBe careful not to try to collect nectar from a purple flower if it doesn't have any."
+      2-3 Bee Conditionals Assessment 1_markdown_instruction: "**การประเมินผล:** เก็บน้ำหวานจากเกสรทั้งหมด ให้ระวังที่จะไม่เก็บน้ำหวานจากเกสรดอกไม้สีม่วง ถ้าดอกไม้เหล่านั้นไม่มีน้ำหวานเลย"
       2-3 Bee Debugging 1_markdown_instruction: |-
         These blocks are really bugging me!
         
@@ -125,13 +124,10 @@ th:
         
         Fix the error(s) to collect all of the nectar.
       2-3 Bee Debugging 9_markdown_instruction: |-
-        "Bee" patient with this one!
-        
-        You will need to fix a couple of things in this program to collect all of the nectar and make all of the honey.
+        คุณจะต้องแก้สองสามอย่างในโปรแกรมนี้ เพื่อให้สามารถเก็บน้ำหวานจากเกสรทั้งหมดและทำน้ำผึ้งให้หมด
       2-3 Bee Debugging Assessment 1_markdown_instruction: |-
-        **Assessment:**  Now it's time to show what you know!
-        
-        Fix the error(s) to collect all of the nectar and make all of the honey.
+        **การประเมินผล:** ตอนนี้ถึงเวลาแล้ว ที่จะแสดงให้เห็นว่าคุณได้เรียนรู้อะไรบ้าง
+        แก้ที่ผิด เพื่อเก็บน้ำหวานจากเกสรทั้งหมด และทำน้ำผึ้งให้หมด
       2-3 Bee Functions 1_markdown_instruction: "Functions are blocks of code that perform a task.  \n\nUse the `get 2 nectar` function to collect the nectar from each flower."
       2-3 Bee Functions 10_markdown_instruction: "Purple flowers change between either 1 or 0 nectar each time you run the puzzle.   \n\nCreate a function that collects nectar only from purple flowers that have nectar."
       2-3 Bee Functions 2_markdown_instruction: "Functions are blocks of code that perform a task.  \n\nUse the `get 5` function to get 5 nectars at a time."
@@ -141,16 +137,15 @@ th:
       2-3 Bee Loops 1_markdown_instruction: |-
         Each flower contains one unit of nectar. Collect
         nectar from each of the flowers.
-      2-3 Bee Loops 13_markdown_instruction: "**Assessment:** Collect all of the nectar using the fewest blocks possible."
+      2-3 Bee Loops 13_markdown_instruction: "**การประเมินผล:** เก็บน้ำหวานจากเกสรทั้งหมด โดยใช้บล็อกจำนวนน้อยที่สุด เท่าที่จะเป็นไปได้"
       2-3 Bee Loops 3A_markdown_instruction: Use a `repeat` loop to collect all of the nectar.
       2-3 Bee Loops 3B_markdown_instruction: ตอนนี้ใช้บล็อก`ทำซ้ำ` เพื่อเก็บน้ำหวานจากเกสรทั้งหมดและทำน้ำผี้งให้หมดด้วย
       2-3 Bee Loops 4_markdown_instruction: |-
-        Such a busy bee!
-        
-        Help Bee collect all of the nectar and make all of the honey with the fewest blocks possible.
+        เป็นผึ้งที่ขยันจริงๆ!
+        ช่วยผึ้งเก็บรวบรวมน้ำหวานจากเกสรทั้งหมด และทำน้ำผึ้งทั้งหมด โดยใช้บล็อกจำนวนที่น้อยที่สุดเท่าที่จะเป็นไปได้
       2-3 Bee Loops 4A_markdown_instruction: "กี่ครั้งแล้วที่ลูปช่วยคุณแก้ปริศนา ลูปเป็นเพื่อนของคุณ ใช้ลูปสักสองสามลูปแก้ปริศนานี้ด้วยบล็อกที่น้อยที่สุดเท่าที่จะเป็นไปได้"
       2-3 Bee Loops 5_markdown_instruction: "The shape of this path is different from the others. \n\nCan you collect all of the nectar using as few blocks as possible?"
-      2-3 Bee Loops 7_markdown_instruction: "What a beautiful field of flowers!   \n\nHelp the bee visit each one.\n\nCan you find a way to do it with fewer than 7 blocks?"
+      2-3 Bee Loops 7_markdown_instruction: "โอ้ ทุ่งดอกไม้ที่ช่างสวยงาม! ช่วยผี้งให้เข้าไปเก็บน้ำหวานจากเกสรดอกไม้แต่ละดอก โดยที่คุณสามารถใช้บล็อกให้น้อยกว่า 7 บล็อกได้ไหม"
       2-3 Bee Loops 8_markdown_instruction: "These purple flowers have different amount of nectar each time you run the puzzle. \n\nUse the `while nectar` loop to collect all of the nectar. \n\nThis loop will run as long as the condition is true, in this case `nectar > 0`."
       2-3 Bee Loops Assessment 1_markdown_instruction: "**Assessment:** Use a `while` loop to collect all of the nectar from these flowers."
       2-3 Maze 1_markdown_instruction: "Can you help me catch the naughty pig? \n\nStack a couple of `move forward` blocks below the `when run` block and press \"Run\". "
@@ -162,24 +157,24 @@ th:
         Suddenly, a magical block appears!  With the `repeat` block, you can loop code over and over.
         
         Can you get to the pig by creating a loop that uses only one `move forward` block inside of a `repeat`?
-      2-3 Maze 13_markdown_instruction: Get me to the pig! You can only use one `move forward` block this time
+      2-3 Maze 13_markdown_instruction: พาฉันไปจัดการเจ้าหมูนั่น! คราวนี้คุณสามารถใช้บล็อกเดินไปข้างหน้าได้เพียงครั้งเดียวเท่านั้น
       2-3 Maze 15_markdown_instruction: In this puzzle, two `repeat` loops will help you get to the pig with the fewest number of blocks!
-      2-3 Maze Loops 18_markdown_instruction: "Get me to the sunflower using the fewest blocks possible!  \n\nTry using one `repeat` loop inside of another to cut down on the amount of code you need."
-      2-3 Maze Loops 19_markdown_instruction: "Let's take this to another level! \n\nUse loops to get me to the sunflower with the fewest loops possible."
-      2-3 Maze Loops Assessment 1_markdown_instruction: "**Assessment:**  Get me to the sunflower using only 5 blocks! "
+      2-3 Maze Loops 18_markdown_instruction: "พาฉันไปหาดอกทานตะวัน โดยใช้บล็อกจำนวนน้อยที่สุดเท่าที่จะเป็นไปได้ \nลองใช้ ลูป`ทำซ้ำ` ภายในอีกลูปหนึ่ง เพื่อลดจำนวนโค้ดที่คุณต้องใช้"
+      2-3 Maze Loops 19_markdown_instruction: "ตอนนี้ผ่านด่านนี้ขึ้นไปอีกระดับหนึ่ง!\n ให้ใช้ลูปเพื่อพาฉันไปหาดอกทานตะวัน โดยใช้ลูปให้น้อยที่สุดเท่าที่จะเป็นไปได้"
+      2-3 Maze Loops Assessment 1_markdown_instruction: "**การประเมินผล:**  พาฉันไปหาดอกทานตะวัน ให้ใช้บล็อกเพียง 5 บล็อกเท่านั้น "
       4-5 Artist 1_markdown_instruction: "Help me finish drawing my box. (Each line is 300 pixels long) \n\n"
       4-5 Artist 10_markdown_instruction: Press "Run" to try the code. Then, repeat it enough times to complete the drawing. The colors will be different every time.
       4-5 Artist 11_markdown_instruction: "Complete the green lines.  \n\nThe lines are 300 pixels long and 15 pixels apart."
       4-5 Artist 2_markdown_instruction: ลูปโค้ดนี้โดยการใช้บล็อก `ทำซ้ำ(repeat)` เพื่อวาดสี่เหลี่ยมจตุรัสให้เสร็จสมบูรณ์
-      4-5 Artist 3.5_markdown_instruction: "Try to figure out what happens if you run this code (or just press \"Run\" and try it). \n\nNext, repeat the code enough times to complete the drawing!"
+      4-5 Artist 3.5_markdown_instruction: "พยายามหาว่าจะเกิดอะไรขึ้นถ้าคุณเรียกใช้งานโค้ดนี้ (หรือเพียงแค่กด \"เริ่ม \" และลองดูการใช้งาน) ถัดไปให้ทำซ้ำโค้ดด้วยจำนวนครั้งให้เพียงพอในการเสร็จสิ้นการวาดภาพ!"
       4-5 Artist 3_markdown_instruction: "This rectangular flower bed has a perimeter of 600.  \nThe long side has a length of 200. \n\nDraw the rectangle using as few blocks as possible."
-      4-5 Artist 4_markdown_instruction: "How many degrees are in a circle?  \n\nLoop the blocks to create a circle of colors."
+      4-5 Artist 4_markdown_instruction: "มีกี่องศาในวงกลม?  \nลูปบล็อกเพื่อสร้างวงกลมสีต่างๆ"
       4-5 Artist 5_markdown_instruction: What can we replace "???" with to make sure that the zombie completes this drawing using the loop provided?
       4-5 Artist 6_markdown_instruction: This equilateral triangle has angles of 60, 60, and 60 degrees. Each side is 200 pixels. Complete the drawing.
       4-5 Artist 7_markdown_instruction: "This right triangle has angles of 30, 60, and 90 degrees.  The slanted side's length (length of the hypotenuse) is 200 pixels. \n\nComplete the drawing."
       4-5 Artist 8_markdown_instruction: "The halfway line on a soccer field is *perpendicular* to the sidelines.   \nThis rectangle has a perimeter of 800 pixels total, and it is 240 pixels long. How tall is it?   \n\nDraw the bounds and the halfway line."
       4-5 Artist 9_markdown_instruction: "Draw the right half of this image so that the design is symmetrical. \nThe triangles are equilateral and have sides that are 50 pixels long."
-      4-5 Artist Assessment 1_markdown_instruction: "**Assessment:** Use a loop to draw the equilateral triangle. Each side is 300 pixels."
+      4-5 Artist Assessment 1_markdown_instruction: "**การประเมินผล:** ใช้ลูปเพื่อวาดสามเหลี่ยมด้านเท่า แต่ละด้านยาว 300 พิกเซล"
       4-5 Artist Free Draw 1_markdown_instruction: Free Draw!  Draw whatever you are inspired to create.
       4-5 Artist Patterns 1_markdown_instruction: |-
         Draw this square using a loop.
@@ -200,26 +195,26 @@ th:
       4-5 Artist Patterns 9_markdown_instruction: "Now repeat this code 3 times and draw the whole row. \n\nEach hexagon is 80 pixels wide from the furthest points left to right."
       4-5 Artist Patterns Free Play_markdown_instruction: Free play - try your hand at making a pattern of your own!
       4-5 Bee Conditionals 1_markdown_instruction: "This cloud is blocking my view! \n\nCheck to see if there's a flower under the cloud, and only get nectar if there's a flower.   \nBe careful, it can change!"
-      4-5 Bee Conditionals 2_markdown_instruction: "More clouds! \n\nCheck underneath every cloud to see if it is hiding a flower before you get nectar.  \n\nRemember: Not all clouds hide the same thing!"
+      4-5 Bee Conditionals 2_markdown_instruction: "มีเมฆมาเพิ่มอีกแล้ว! \n\nเช็คดูใต้เมฆทุกๆ ก้อน ว่ามันซ่อนดอกไม้ไว้หรือเปล่า ก่อนที่คุณจะทำการเก็บน้ำหวานจากเกสร  \n\nจำไว้ว่าเมฆทุกๆก้อน ไม่ได้ซ่อนของอย่างเดียวกัน"
       4-5 Bee Conditionals 4_markdown_instruction: "Sometimes this cloud covers a flower, and sometimes it covers a honeycomb! \n\nUse the `if/else` block to collect nectar only if it is a flower.  \nElse, make honey (because it is a honeycomb)."
       4-5 Bee Conditionals 5_markdown_instruction: |-
-        There will be either a flower or a honeycomb under each of those clouds!
+        มีดอกไม้ หรือไม่ก็รวงผึ้งภายใต้เมฆแต่ละก้อน
         
-        Use the `if/else` block to collect nectar if there is a flower.
-        Otherwise, make honey (because there is a honeycomb).
+        เก็บน้าหวานจากเกสรถ้ามีดอกไม้
+        ไม่เช่นนั้น ทำน้ำหวาน(เพราะมีรวงผึ้ง)
       4-5 Bee Conditionals 6_markdown_instruction: "I am not sure how much nectar this flower has, but I know it has either 1, 2, or 3 nectar. \n\nCombine the conditional blocks (`if` and/or `if/else`) to only get as much nectar as the flower has. \n\nRemember, the amount of nectar can change each time you run the puzzle!"
       4-5 Bee Conditionals 7_markdown_instruction: "These flowers can have 3, 2, or 1 nectar. \n\nComplete the `check purple flower` function and use it to collect all of the nectar at the flowers."
       4-5 Bee Conditionals 8_markdown_instruction: "Write the function for `check flower make honey`. \n\nYour function should check if the purple flower has 3, 2, or 1 nectar and get all of the nectar. \nThen, move forward and make honey."
-      4-5 Bee Conditionals Assessment 1_markdown_instruction: "**Assessment:** This cloud is either hiding a flower with one nectar or a honeycomb that needs one honey.  \n\nComplete the `get nectar or make honey` function, then call it to collect the nectar or honey. \n"
+      4-5 Bee Conditionals Assessment 1_markdown_instruction: "**การประเมินผล:** เมฆก้อนนี้จะซ่อนน้ำหวานจากเกสรดอกไม้หนึ่งหน่วยหรือไม่ก็ซ่อนรวงผึ้งที่เก็บน้ำผึ้งได้หนึ่งหน่วย\nทำฟังชั่น `เก็บน้ำหวานจากเกสรหรือทำน้ำผึ้ง` แล้วเรียกฟั่งชั่นดังกล่าวเพื่อเก็บน้ำหวานจากเกสรหรือทำน้ำผึ้ง\n"
       4-5 Bee Debugging 1_markdown_instruction: "These blocks are really bugging me. \n\nCan you fix them?"
       4-5 Bee Debugging 6_markdown_instruction: "The purple flower has a different amount of nectar each time you run the puzzle. \n\nFix the blocks to get all of the nectar from the flower each time."
-      4-5 Bee Debugging Assessment 1_markdown_instruction: "**Assessment:** Fix the code."
+      4-5 Bee Debugging Assessment 1_markdown_instruction: "**การประเมินผล:** แก้โค้ด"
       4-5 Bee Nested Loops 2_markdown_instruction: "Collect all of the nectar from each flower. \n\nUse a nested loop. "
       4-5 Bee Nested Loops 4_markdown_instruction: "Collect all of the nectar from each flower\nand make honey at each honeycomb. Use a nested loop."
-      4-5 Bee Nested Loops Assessment 1_markdown_instruction: "**Assessment:** Collect all of the nectar and make all of the honey using loops."
+      4-5 Bee Nested Loops Assessment 1_markdown_instruction: "**การประเมินผล:** เก็บน้ำหวานจากเกสรทั้งหมด และทำน้ำหวานให้หมด โดยการใช้ลูป"
       4-5 Maze 7_markdown_instruction: "Get the zombie to the sunflower quickly!  \n\nCan you solve the puzzle in fewer than 11 blocks?"
       4-5 Maze 9_markdown_instruction: "Now we have a new block called `repeat until`.  \nThis will let us keep looping commands until the zombie gets the sunflower.  \n\nUse the new `repeat until` block to solve this puzzle in as few commands as possible."
-      4-5 Maze Assessment 1_markdown_instruction: "**Assessment:** Get to the sunflower using as few blocks as possible."
+      4-5 Maze Assessment 1_markdown_instruction: "**การประเมินผล:** ไปให้ถึงดอกทานตะวัน โดยใช้บล็อกเพียงสองสามบล็อก ถ้าเป็นไปได้"
       4-5 Maze Conditionals 1_markdown_instruction: Use the `repeat until` block to get the zombie to the sunflower.
       4-5 Maze Conditionals 10_markdown_instruction: "Can you add just 3 blocks to help the zombie solve a more complex maze? \n\nIf you do it right, he can walk any curvy path no matter the length!"
       4-5 Maze Conditionals 2_markdown_instruction: Use the `repeat until` block to get the zombie to the sunflower.
@@ -250,7 +245,7 @@ th:
       4-5 Nested Loops 7_markdown_instruction: "Loop this design 10 times. \n\nHow much do you have to turn each time you loop?"
       4-5 Nested Loops 8_markdown_instruction: "Loop this shape 6 times. \n\nHow much do you have to turn each time you loop? "
       4-5 Nested Loops 9_markdown_instruction: Draw the teeth in the alligator's mouth!
-      4-5 Nested Loops Assessment 1_markdown_instruction: "**Assessment:** Use a nested loop to complete the design."
+      4-5 Nested Loops Assessment 1_markdown_instruction: "**การประเมินผล:** ใช้ลูปซ้อนลูปในการออกแบบให้เสร็จสมบูรณ์"
       4-5 While Loops 1_markdown_instruction: Move me to the hole and fill it with two shovelfuls of dirt, using the `fill` block.
       4-5 While Loops 2_markdown_instruction: Move me to the pile of dirt and remove it with 5 shovel scoops, using the `remove 1` block.
       4-5 While Loops 3_markdown_instruction: "Use as few blocks as possible to complete this puzzle!  \n\nMove me to the pile and remove all the dirt, then move to the hole and fill it completely."
@@ -3975,7 +3970,6 @@ th:
         * Write down all of the attribution information that you need.
         * Upload all of the images into your project.  Visit <a href="/s/csd2/stage/7/puzzle/5" target="_new">Lesson 7 Level 5</a> if you've forgotten how.
       CSD U3 - Booleans Video_markdown_instruction: "# Boolean Expressions Video"
-      CSD U3 - Booleans Video_2018_markdown_instruction: "# Boolean Expressions Video"
       CSD U3 - Simple Counter Predict_markdown_instruction: "# The Counter Pattern\n\nThis pattern is one of the most important ones in all of programming. \n\n![](https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56 PM.png)\n    \nIt is used to increase the value of a variable by 1. You might call it the **counter pattern** since it can be used to make a variable that counts up. You'll use this pattern a lot, especially with the draw loop. Let's see what that looks like.\n\n# Do This\n\nThis program creates a variable `counter` and then uses the **counter pattern** to make it count up. When you run the program what do you think you'll see on the screen?\n\n* **Read the program** and make a prediction of what the output will be.\n* **Run the program** to check your prediction.\n* **Discuss with a neighbor**. Can you explain what you observed?\n\n"
       CSD U3 - Simple Counter Predict_2018_markdown_instruction: "# The Counter Pattern\n\nThis pattern is one of the most important ones in all of programming. \n\n![](https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56 PM.png)\n    \nIt is used to increase the value of a variable by 1. You might call it the **counter pattern** since it can be used to make a variable that counts up. You'll use this pattern a lot, especially with the draw loop. Let's see what that looks like.\n\n# Do This\n\nThis program creates a variable `counter` and then uses the **counter pattern** to make it count up. When you run the program what do you think you'll see on the screen?\n\n* **Read the program** and make a prediction of what the output will be.\n* **Run the program** to check your prediction.\n* **Discuss with a neighbor**. Can you explain what you observed?\n\n"
       CSD U3 - Sprites - Sprite v Rect_markdown_instruction: |-
@@ -6097,7 +6091,7 @@ th:
         * Hint: You'll need to change two parameters. Which ones set your cloud's width and height?
         
         _Challenge: The sun is not in the exact same place as in the picture.  Can you change the sun's coordinates so that the picture matches completely?_
-      CSD U3 Random Debug Cloud_2018_markdown_instruction: |
+      CSD U3 Random Debug Cloud_2018_markdown_instruction: |+
         <img src="https://images.code.org/45d1d513f5ed63592e98ea3e4a08840c-image-1520403109680.11.28 PM.png" style="float:right;height:150px">
         
         # Debug - Using 4 Parameters
@@ -6108,8 +6102,6 @@ th:
         
         * Debug this program to make the cloud wider than it is tall, like in the image.
         * Hint: You'll need to change two parameters. Which ones set your cloud's width and height?
-        
-        _Challenge: The sun is not in the exact same place as in the picture.  Can you change the sun's coordinates so that the picture matches completely?_
       CSD U3 Random Debug Grass_markdown_instruction: |-
         <img src="https://images.code.org/83269268e1c4f8af8551253ff4573b43-image-1490825158453.03.45 PM.png" style="float:right;height:150px">
         
@@ -18896,14 +18888,10 @@ th:
       Course 4 Artist Binary 1a_markdown_instruction: "Here's a function that takes a binary string of 1's and 0's and instructs the artist to follow them from left to right, top to bottom.  The artist will fill-in the squares when it sees a 1 and ignore the square when it sees a 0. \n\nRun this code to see how the artist uses binary to draw this pattern."
       Course 4 Artist Binary Free Play 2b_markdown_instruction: "<img src=\"https://images.code.org/0a30f23ff6138828d053267719d34fa8-image-1444435986654.00.22.png\" width=\"250px\"/>\n\n**Free-Play Inspiration:** You've now learned everything you need to know to make a pattern like this! \n\nIf this picture inspires you, try to make something similar. Otherwise, create something all your own. \n<br/>"
       Course 4 Artist Binary pre1_markdown_instruction: |-
-        Binary is a way of representing information using only two options. In this case, <b>off</b> and <b>on</b>.
-        <br/>
-        Here, we're going to use the number <b>0</b> as code for "off" and the number <b>1</b> as code for "on".
-        <hr/>
-        We've provided you with a grid of "pixels" that you can walk through and make designs by turning on only certain squares.
-        
-        <b>Use the blocks below to have the artist draw "01010101" in binary in the first row.</b>
-      Course 4 Artist Binary ryan_markdown_instruction: "Binary is a way of representing information using only two options.  Here, we're going to use the options \"off\" (represented by the number 0) and \"on\" (represented by the number 1).   \n\nWe've provided you with a grid of \"pixels\" that you can walk through and make designs by turning on only certain squares.  Can you have the artist draw \"01010101\" in binary in the first row?"
+        ไบนารีเป็นวิธีการแสดงข้อมูลโดยใช้เพียงสองตัวเลือก ที่นี่, เรากำลังจะใช้ตัวเลือก <b>ปิด<b> และ <b>เปิด<b> <br/>
+        ตอนนี้เรากำลังจะใช้หมายเลข<b>0</b>เป็นโค้ดสำหรับ "ปิด" และหมายเลข<b>1</b>เป็นโค้ดสำหรับ "เปิด"<hr/>
+        เราจะให้คุณมีตารางของ "พิกเซล " ที่คุณสามารถใช้และทำการออกแบบโดยการเปิดเฉพาะสี่เหลี่ยมบางอัน คุณให้มีศิลปินวาด "01010101" ในไบนารีในแถวแรกได้ไหม?<b>
+      Course 4 Artist Binary ryan_markdown_instruction: "ไบนารีเป็นวิธีการแสดงข้อมูลโดยใช้เพียงสองตัวเลือก  ที่นี่, เรากำลังจะใช้ตัวเลือก  \"ปิด \" (แสดงด้วยหมายเลข 0) และ  \"เปิด\" (แสดงด้วยหมายเลข 1).  \n\nเราจะให้คุณมีตารางของ  \"พิกเซล \" ที่คุณสามารถใช้และทำการออกแบบโดยการเปิดเฉพาะสี่เหลี่ยมบางอัน  คุณให้มีศิลปินวาด  \"01010101\" ในไบนารีในแถวแรกได้ไหม?"
       Course 4 Artist For Loops 1_markdown_instruction: "Use a repeat block to draw this triangle that is 50 pixels wide.\n\n"
       Course 4 Artist For Loops 10_markdown_instruction: Free Play Time! Have fun drawing whatever you like with the blocks you have learned how to use.
       Course 4 Artist For Loops 11_markdown_instruction: "Remember back in a previous stage when we used a variable to control the number of sides in a shape? We are going to do the same thing with the `counter` variable now.  \n\nThis pattern starts with a triangle and adds one side at a time until it draws a decagon (10 sides). Each side should be 100 pixels long. \n\nHow will you use the `counter` variable from the `for` loop to recreate this drawing?"
@@ -19162,6 +19150,7 @@ th:
         - What happens if you use two different angles in your stair step pattern?
         - What happens if you make your diamond pattern longer or shorter?
         - What does it look like to draw two snowflakes on top of one another?
+      Dance Party 1-validated_markdown_instruction: "**Make a prediction:** Here’s a sprite called `alien1`! What do you think will happen when you click on her?"
       Dance Party 1_markdown_instruction: "**Make a prediction:** Here’s a sprite called `alien1`! What do you think will happen when you click on her?"
       Dance Party 2_markdown_instruction: The alien was proud of her dancing skills on Mars, but now she can only move up and down. Can you change the behavior inside the `begins` block to make her start spinning around?
       Dance Party 3_markdown_instruction: Create a new sprite called `alien2`, and make it do a different dance move when it's clicked.
@@ -19173,6 +19162,7 @@ th:
         Now create your own alien disco! Looking for inspiration? Try these ideas:
         * Create two bell sprites, and make the aliens do a different dance move for each
         * Make the aliens do a new dance move when they touch
+      Dance Party Predict_markdown_instruction: "**Make a prediction:** Here’s a sprite called `alien1`! What do you think will happen when you click on her?"
       Data Visualizations 101_markdown_instruction: |+
         ## Data Visualization 101: How to design charts and graphs
         
@@ -19401,13 +19391,22 @@ th:
         **Finalize your "Chaser Game v.1"** and click Finish.
         
         * **Note**: We'll revisit this game in the next lesson where you can improve it.  This is **just version 1**
+      Fish Tank 1-validated_markdown_instruction: "**Make a prediction**: What do you think will happen when you run this code?"
       Fish Tank 1_markdown_instruction: "**Make a prediction**: What do you think will happen when you run this code?"
+      Fish Tank 2-validated_markdown_instruction: We're going to make a fish tank. Change Dusty the tumbleweed to a fish.
       Fish Tank 2_markdown_instruction: We're going to make a fish tank. Change the Dusty the tumbleweed to a fish.
+      Fish Tank 3-validated_markdown_instruction: All this spinning is going to make our fish dizzy! Change the fish's behavior to make it swim around the tank.
       Fish Tank 3_markdown_instruction: All this spinning is going to make our fish dizzy! Change the fish's behavior to make it swim around the tank.
+      Fish Tank 4-validated_markdown_instruction: Our fish tank needs some water! Use the `set background color` block to make the background blue.
       Fish Tank 4_markdown_instruction: Our fish tank needs some water! Use the `set background color` block to make the background blue.
+      Fish Tank 5-validated_markdown_instruction: Our fish is getting a little lonely. Create a new sprite inside the fish tank.
       Fish Tank 5_markdown_instruction: Our fish is getting a little lonely. Create a new sprite inside the fish tank.
+      Fish Tank 6-validated_markdown_instruction: What do you want your fish’s friend to do? Add a behavior and watch them go!
       Fish Tank 6_markdown_instruction: What do you want your fish’s friend to do? Add a behavior and watch them go!
+      Fish Tank 7-validated_markdown_instruction: There are a lot of new blocks in the toolbox. Play with them to make your fish tank special.
       Fish Tank 7_markdown_instruction: There are a lot of new blocks in the toolbox. Play with them to make your fish tank special.
+      Fish Tank Predict_markdown_instruction: "**Make a prediction**: What do you think will happen when you run this code?"
+      Fish Tank Template_markdown_instruction: Project Template
       Food Fight!_markdown_instruction: |-
         We've added one last function for you.
         <hr/>
@@ -19615,9 +19614,9 @@ th:
       K-1 Bee Loops 5_markdown_instruction: Use `repeat` loops to get the nectar and honey!
       K-1 Bee Loops 6_markdown_instruction: Use a `repeat` loop to get the nectar, get honey, and to move!
       K-1 Maze Loops 10_markdown_instruction: "Get me to the pig!   \nUsing the `repeat` loop will make it much easier."
-      K-1 Maze Loops 11_markdown_instruction: "Get me to the pig!  \nThe `repeat` loop will make this easier."
-      K-1 Maze Loops 12_markdown_instruction: "Get me to the pig!  \nThe `repeat` loop will make this easier."
-      K-1 Maze Loops 2_markdown_instruction: Use the `repeat` block to get me to the pig!
+      K-1 Maze Loops 11_markdown_instruction: "พาฉันไปจัดการเจ้าหมูตัวนั้น!\nลูป `ทำซ้ำ` จะทำให้มันง่ายขึ้นมาก"
+      K-1 Maze Loops 12_markdown_instruction: "พาฉันไปจัดการเจ้าหมูตัวนั้น!\nลูป `ทำซ้ำ` จะทำให้มันง่ายขึ้นมาก"
+      K-1 Maze Loops 2_markdown_instruction: ให้ใช้บล็อก `ทำซ้ำ` เพื่อพาฉันไปจัดการเจ้าหมูนั่น
       K-1 Maze Loops 3_markdown_instruction: "Get me to the pig!  \nBe sure to use `repeat` loops."
       K-1 Maze Loops 5_markdown_instruction: "Get me to the pig!  \nBe sure to use `repeat` loops."
       K-1 Maze Loops 6_markdown_instruction: "Get me to the pig!  \nBe sure to use `repeat` loops."
@@ -19778,7 +19777,7 @@ th:
       Middle School Hackathon Pt 2_markdown_instruction: "# MS Hackathon: Sprites and Interactivity\n\nYou now can **create sprites, add images, manipulate their properties, and perform simple variable arithmetic to update their values (e.g. `sprite.scale = sprite.scale + 1;`)**. You've also been introduced to conditional statements and know how to use them to get some interactive behavior with the mouse and keyboard.\n\n# Do This\n\n* Using only the tools provided to you **make something awesome!**\n* The likely target project here might be a **simple game** or **interactive visualization**.\n* You don't yet know about **groups, loops, collisions**, or more magical properties like **velocity or rotationSpeed**\n\n**These commands are not in the block palette but feel free to use**\n\n* `mySprite.mouseActive = true;` will make your sprite track mouse events\n* `mySprite.mouseIsOver` and `mySprite.mouseIsPressed` are booleans you can now use to sense mouse-to-sprite interactions.\n\n**To add sprites to images follow the pattern below**\n\n```\nvar spriteImage, sprite;\n\n//You'll need to create a preload function to load the image.\nfunction preload(){\\t\\t\\t\n    spriteImage = loadImage(\"imageURL\");\n}\n\n//Create your sprite and add the image\nfunction setup(){\n    sprite = createSprite(200,200,10,10);\n    sprite.addImage(\"someName\", spriteImage);\n}\n\n//Draw your sprites.\nfunction draw(){\n\\tbackground(255,255,255);\n\\tdrawSprites();\n}\n```"
       Mike Pair Programming_markdown_instruction: Here are markdown instructions
       Mike Test Bee Conditionals 1_markdown_instruction: "This cloud is blocking my view! \n\nCheck to see if there's a flower under the cloud, and only get nectar if there's a flower.   \nBe careful, it can change!"
-      Mike Test Bee Conditionals 2_markdown_instruction: "**Assessment:** Collect all of the nectar.  \nBe careful not to try to collect nectar from a purple flower if it doesn't have any."
+      Mike Test Bee Conditionals 2_markdown_instruction: "**การประเมินผล:** เก็บน้ำหวานจากเกสรทั้งหมด ให้ระวังที่จะไม่เก็บน้ำหวานจากเกสรดอกไม้สีม่วง ถ้าดอกไม้เหล่านั้นไม่มีน้ำหวานเลย"
       MikeTest1_markdown_instruction: Markdown
       Modular Arithmetic_markdown_instruction: |-
         # Modular Arithmetic
@@ -20929,7 +20928,7 @@ th:
         
         What problems arose in your efforts to create a working protocol? How did you think about the problem(s) in order to solve it?
       U1L8 Free Response Reflection_2018_markdown_instruction: |
-        <strong>Complete the Sending Numbers Rubric (on the second page of the <a href= "https://docs.google.com/document/d/1cSlWYnxOciDQut0OAUcsddmM56bveHely71LUb_CHkM/edit" target="_blank">Sending Number activity guide</a>) and then respond to the following prompt.</strong>
+        <strong>Complete the Sending Numbers Rubric (on the second page of the Sending Numbers activity guide</a>) and then respond to the following prompt.</strong>
         
         What problems arose in your efforts to create a working protocol? How did you think about the problem(s) in order to solve it?
       U1L8 Free Response2_markdown_instruction: How did collaboration play a role in the creation of your protocol?
@@ -26509,6 +26508,7 @@ th:
       Video. Introduction to Conditionals - Part 2.3_markdown_instruction: "### Points to pay attention to:\n\n* **START at 2:20**  \n    This is the second half of the video you watched earlier. \n\n* An If-else-if statement let's you check more than one condition at a time.\n* The **order of conditions matters**. Since conditions are checked sequentially from top to bottom, the code that gets executed will be the *first* statement to evaluate to true.\n\n"
       Video. Introduction to Conditionals - Part 2_markdown_instruction: "### Points to pay attention to:\n\n* **NOTE:** Stop play at 1:37.  \n    It's all you need for the exercises that follow.  You'll watch the remainder of the video after that.\n\n* An IF statement can have an else clause, but an ELSE clause cannot exist on its own.\n* With an else clause you are *guaranteeing* that one of two portions of code will run.\n\n"
       Vigenere_markdown_instruction: "# Encrypt and decrypt a message with the Vigenère cipher\n\nThis is an interactive version of the Vigenère cipher that animates the encryption and decryption as it’s happening, given a piece of text to encrypt or decrypt and the key.\n\n# Do this\n### Encrypt a message\nClick Step several times, and trace what’s happening. Pay attention to:\n\n- How the ciphertext is being produced\n- What happens when you get to the last character of the key\n- After you’ve stepped through a few characters click Play to watch the rest animate\n- Hit Restart and play the animation again. You can use the speed slider to speed it up or slow it down  \n\n![](https://images.code.org/06858f88ac12997bba73f4f76638a068-image-1443574425185.gif)\n\n### Decrypt a message\nEncrypt a message as above, then:  \n\n- Highlight and copy the ciphertext\n- Paste it into the plaintext area. Note: Don’t change the key\n- Change the Encrypt/Decrypt toggle to Decrypt\n- Hit Step a few times, and then Play\n\nYou should see the original text emerge.  \n![](https://images.code.org/dc89d6c19c17adb23b6b5ff9a62c4583-image-1443574425182.gif)\n\n\nHow hard would it be to crack a message encrypted with this cipher? Does the length of the key make a difference?\n"
+      Virtual Pet 1-validated_markdown_instruction: This is Geraldine, your new pet giraffe. What do you think will happen if you press run and then click on her?
       Virtual Pet 1_markdown_instruction: This is Geraldine, your new pet giraffe. What do you think will happen if you press run and then click on her?
       Virtual Pet 2_markdown_instruction: There's a mud puddle over in the corner. Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
       Virtual Pet 3_markdown_instruction: |-
@@ -26521,6 +26521,7 @@ th:
       Virtual Pet 5_markdown_instruction: All of this play takes energy!  Add actions to each event so that when the giraffe collides with each sprite, it gets a little smaller (shrinks by 5).
       Virtual Pet 6_markdown_instruction: A balanced diet is important! We have to feed the giraffe to get its strength back. Add an apple that returns the giraffe back to regular size when they touch.
       Virtual Pet Freeplay_markdown_instruction: 'Freeplay: Can you add more special items for your virtual pet? Can you give her some friends? What more can you make your giraffe do? '
+      Virtual Pet Predict_markdown_instruction: "**Make a prediction:** This is Geraldine, your new pet giraffe. What do you think will happen if you press run and then click on her?"
       Visual Accessibility_markdown_instruction: |-
         # Visual Accessibility: Color Contrast
         
@@ -26904,7 +26905,7 @@ th:
         Help the collector by debugging this code. Get all of the treasure!
       course2_collector_prog_challenge1_markdown_instruction: Look carefully! Can you collect all **10** pieces of treasure?
       course2_collector_prog_challenge2_markdown_instruction: There are **20** pieces of treasure in this cave. Collect at least half to finish the challenge!
-      course2_harvester_loops_challenge1_markdown_instruction: Collect all of the corn.
+      course2_harvester_loops_challenge1_markdown_instruction: เก็บรวบรวม ข้าวโพด
       course2_harvester_loops_challenge2_markdown_instruction: Collect all of the lettuce. Avoid the trees and fields!
       course2_maze_programming_challenge1_markdown_instruction: '*"The pig is hiding! Can you help me find a way around?"*'
       course2_maze_programming_challenge2_markdown_instruction: Sometimes there is more than one way to solve the same problem. Sometimes it's faster to go backwards than it is to go forwards!
@@ -27198,21 +27199,19 @@ th:
       courseA_harvester_seq9_markdown_instruction: Add two blocks to finish this puzzle!
       courseA_maze_ramp2_2018_markdown_instruction: Attach both <xml><block type="maze_moveEast"/></xml> blocks to <xml><block type="when_run"/></xml> to finish your code, then click ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).
       courseA_maze_ramp2a_2018_markdown_instruction: Attach both <xml><block type="maze_moveEast"/></xml> blocks to <xml><block type="when_run"/></xml> to finish your code, then click ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).
-      courseA_maze_ramp3_2018_markdown_instruction: "*\"This pig is ruffling my feathers.\"*\n\nThere is one extra block that is going to cause the bird to crash.  \nThrow it away by removing it from the other blocks and dragging it back to the toolbox."
+      courseA_maze_ramp3_2018_markdown_instruction: "*\" หมูตัวนี้กวนประสาทฉันจริงๆ \"* \nมีบล็อกเกินมาบล็อกหนึ่ง ที่จะทำให้เจ้านกวิ่งไปชนสิ่งกีดขวาง ลากมันไปทิ้งเสีย โดยปลดมันออกมาจากบล็อกอื่นๆ และลากมันกลับไปที่กล่องเครื่องมือ"
       courseA_maze_ramp3a_2018_markdown_instruction: Grab a <xml><block type="maze_moveNorth"/></xml> from the toolbox and add it to the bottom of the other blocks to finish this code, then click ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).
-      courseA_maze_ramp4_2018_markdown_instruction: "*\"Trace the path and lead me to the silly pig.\"* \n\nAvoid TNT or feathers will fly!"
+      courseA_maze_ramp4_2018_markdown_instruction: "แกะรอยเส้นทางให้ดีนะ และพาฉันไปจัดการเจ้าหมูซื่อบื้อนั่น"
       courseA_maze_ramp4a_2018_markdown_instruction: Can you figure out which block you need to add to the bottom of the other blocks to finish this code?
       courseA_maze_ramp5_2018_markdown_instruction: |-
-        *"Follow this path to get me to the pig!"*
-        
-        Avoid the TNT.
+        *"ให้ไปตามทางouh เพื่อพาฉันไปจัดการเจ้าหมูนั่น" อยู่ห่างๆระเบิดไว้
       courseA_maze_ramp5a_2018_markdown_instruction: Try this one all by yourself!
       courseA_maze_seq1_markdown_instruction: '*"Play with these blocks and try to get me to the bad pig!"*'
       courseA_maze_seq10_markdown_instruction: |-
         **Challenge:** Go around the TNT to get the bird to the pig!
         
         ![expandable](https://images.code.org/a656e421bc90e530a7e1ce636e507752-image-1497996976195.gif)
-      courseA_maze_seq10_2018_markdown_instruction: "**Challenge:** Avoid the TNT to get the bird to the pig!"
+      courseA_maze_seq10_2018_markdown_instruction: "**การท้าทาย:** อยู่ห่างๆระเบิดไว้ ในระหว่างที่พาฉันไปจัดการเจ้าหมูนั่น"
       courseA_maze_seq11_markdown_instruction: |-
         Time for a shorter puzzle!  Move one way, then another to get the bird to the pig.
         
@@ -27417,7 +27416,7 @@ th:
       courseB_iceage_loops7_markdown_instruction: 'Scrat really wants that acorn! '
       courseB_iceage_loops8_markdown_instruction: 'Can you fix this code? '
       courseB_iceage_loops9_markdown_instruction: The acorn is so far away! Can you use loops to help Scrat get there?
-      courseB_maze_seq3_markdown_instruction: '*"Fix the code to get me to the pig!"*'
+      courseB_maze_seq3_markdown_instruction: '*"ซ่อมโค้ดเสียที เพื่อพาฉันไปจัดการเจ้าหมูนั่น"*'
       courseB_maze_seq3_2018_markdown_instruction: '*"Fix the code to get me to the acorn!"*'
       courseB_maze_seq9_markdown_instruction: "**Challenge:** Move around the TNT to get the bird to the pig."
       courseB_maze_seq9_2018_markdown_instruction: "**Challenge:** Move around the broken ice to get Scrat to the acorn."
@@ -27683,35 +27682,35 @@ th:
       courseC_collector_prog8_2018_markdown_instruction: '*"Keep up the good work! Help me collect all of the treasure."*'
       courseC_collector_prog9_markdown_instruction: '*"Let''s get all of the treasure!"*'
       courseC_collector_prog9_2018_markdown_instruction: '*"Let''s get all of the treasure!"*'
-      courseC_collector_progA_markdown_instruction: Help Laurel collect all of the treasure.
+      courseC_collector_progA_markdown_instruction: ช่วยลอเรลเก็บสมบัติให้หมด
       courseC_collector_progB_markdown_instruction: "You're almost done!  \n\nCollect as many coins as you can to finish the stage!"
       courseC_collector_prog_challenge2_markdown_instruction: There are 20 pieces of treasure in this cave. Collect at least **10** to finish the challenge!
       courseC_collector_prog_challenge2_2018_markdown_instruction: There are 20 pieces of treasure in this cave. Collect at least **10** to finish the challenge!
-      courseC_flappy_events1_markdown_instruction: "Attach the `flap a normal amount` block to the `when click` event, then press \"Run\".   \n\n---\n\nClick or tap on the play space to move Flappy to the target."
-      courseC_flappy_events10_markdown_instruction: "Create your own Flappy game! \n\nYou can change the visuals and the rules...even the gravity! \nWhen you're done, click \"Finish\" to share with friends on their phones."
-      courseC_flappy_events10_2018_markdown_instruction: "Create your own Flappy game! \n\nYou can change the visuals and the rules...even the gravity! \nWhen you're done, click \"Finish\" to share with friends on their phones."
-      courseC_flappy_events1_2018_markdown_instruction: "Attach the `flap a normal amount` block to the `when click` event, then press \"Run\".   \n\n---\n\nClick or tap on the play space to move Flappy to the target."
+      courseC_flappy_events1_markdown_instruction: "ต่อบล็อก`กระพือปีกถี่เป็นปกติ ` ไปยังเหตุการณ์` เมื่อคลิก ` แล้วกด \" เริ่ม  \""
+      courseC_flappy_events10_markdown_instruction: "สร้างเกม Flappy ในแบบของคุณเอง คุณสามารถเปลี่ยนภาพทั้งหมด รวมทั้งกฎทั้งหมด แม้แต่แรงโน้มถ่วง เมื่อเสร็จแล้วให้คลิก \"เสร็จ\" เพื่อให้เพื่อนๆลองเล่นเกมบนมือถือของพวกเขา"
+      courseC_flappy_events10_2018_markdown_instruction: "สร้างเกม Flappy ในแบบของคุณเอง คุณสามารถเปลี่ยนภาพทั้งหมด รวมทั้งกฎทั้งหมด แม้แต่แรงโน้มถ่วง เมื่อเสร็จแล้วให้คลิก \"เสร็จ\" เพื่อให้เพื่อนๆลองเล่นเกมบนมือถือของพวกเขา"
+      courseC_flappy_events1_2018_markdown_instruction: "ต่อบล็อก`กระพือปีกถี่เป็นปกติ ` ไปยังเหตุการณ์` เมื่อคลิก ` แล้วกด \" เริ่ม  \""
       courseC_flappy_events2_markdown_instruction: "The `when run` event allows you to run code as soon as your game starts.  \n\nTry adding a block that sets the level speed when the \"Run\" button is pressed. \n\n---\n\nPlay the game and flap to the target to continue."
       courseC_flappy_events2_2018_markdown_instruction: "The `when run` event allows you to run code as soon as your game starts.  \n\nTry adding a block that sets the level speed when the \"Run\" button is pressed. \n\n---\n\nPlay the game and flap to the target to continue."
-      courseC_flappy_events3_markdown_instruction: "Now we've added the ground. \n\nAttach the `end game` block to the `when hit the ground` event. \n\n---\n\nPlay the game and crash the bird into the ground to continue."
-      courseC_flappy_events3_2018_markdown_instruction: "Now we've added the ground. \n\nAttach the `end game` block to the `when hit the ground` event. \n\n---\n\nPlay the game and crash the bird into the ground to continue."
-      courseC_flappy_events4_markdown_instruction: "Flappy will fly right through obstacles unless you write code to make him crash. \n\nAttach a block to the `when hit an obstacle` event so that the game ends when Flappy crashes into the first set of pipes."
-      courseC_flappy_events4_2018_markdown_instruction: "Flappy will fly right through obstacles unless you write code to make him crash. \n\nAttach a block to the `when hit an obstacle` event so that the game ends when Flappy crashes into the first set of pipes."
+      courseC_flappy_events3_markdown_instruction: "ตอนนี้เรามีพื่้นดินแล้ว ต่อบล็อก`จบเกม`เข้ากับเหตุการณ์ `เมื่อตกถึงพื้น`"
+      courseC_flappy_events3_2018_markdown_instruction: "ตอนนี้เรามีพื่้นดินแล้ว ต่อบล็อก`จบเกม`เข้ากับเหตุการณ์ `เมื่อตกถึงพื้น`"
+      courseC_flappy_events4_markdown_instruction: "Flappy จะบินผ่านอุปสรรคอย่างสบายๆ เว้นแต่คุณเขียนรหัสที่จะทำให้เขามีต้องมีปัญหาเมื่อชนสิ่งกีดขวาง\n\nต่อบล็อกเข้ากับเหตุการณ์ ` เมื่อชนสิ่งกีดขวาง` เพื่อให้เกมสิ้นสุดเมื่อ Flappy ชนเข้ากับท่อชุดแรก"
+      courseC_flappy_events4_2018_markdown_instruction: "Flappy จะบินผ่านอุปสรรคอย่างสบายๆ เว้นแต่คุณเขียนรหัสที่จะทำให้เขามีต้องมีปัญหาเมื่อชนสิ่งกีดขวาง\n\nต่อบล็อกเข้ากับเหตุการณ์ ` เมื่อชนสิ่งกีดขวาง` เพื่อให้เกมสิ้นสุดเมื่อ Flappy ชนเข้ากับท่อชุดแรก"
       courseC_flappy_events5_markdown_instruction: "We've added a scoreboard to count points when Flappy passes obstacles.  \n\nAdd a block to the `when pass an obstacle` event that scores a point, then press \"Run\" to fly Flappy through the first set of pipes."
       courseC_flappy_events5_2018_markdown_instruction: "We've added a scoreboard to count points when Flappy passes obstacles.  \n\nAdd a block to the `when pass an obstacle` event that scores a point, then press \"Run\" to fly Flappy through the first set of pipes."
-      courseC_flappy_events6_markdown_instruction: "Click the down arrow inside of the `flap a normal amount` block to pick a different flapping power.  \n\nSee if you can still score a point after making Flappy flap either a smaller or larger amount each time you click."
-      courseC_flappy_events6_2018_markdown_instruction: "Click the down arrow inside of the `flap a normal amount` block to pick a different flapping power.  \n\nSee if you can still score a point after making Flappy flap either a smaller or larger amount each time you click."
-      courseC_flappy_events7_markdown_instruction: Next, try changing the scene by attaching a block to the `when run` event.
-      courseC_flappy_events7_2018_markdown_instruction: Next, try changing the scene by attaching a block to the `when run` event.
-      courseC_flappy_events8_markdown_instruction: "You can set the background under any event, not just when the game starts. \n\nTry setting a **random** scene when other events happen...for example, when passing an obstacle."
-      courseC_flappy_events8_2018_markdown_instruction: "You can set the background under any event, not just when the game starts. \n\nTry setting a **random** scene when other events happen...for example, when passing an obstacle."
-      courseC_flappy_events9_markdown_instruction: To mix things up, instead of ending the game when Flappy hits an obstacle, try setting the score back to 0.
-      courseC_flappy_events9_2018_markdown_instruction: To mix things up, instead of ending the game when Flappy hits an obstacle, try setting the score back to 0.
+      courseC_flappy_events6_markdown_instruction: "คลิกลูกศรลงภายในบล็อก `กระพือปีกปกติ`เพื่อเลึอกระดับกำลังในการกระพือปีกที่ต่างกัน\nมาดูว่าคุณยังสามารถทำคะแนนได้อยู่ หลังจากที่ทำให้ Flappy กระพือปีกมากขึ้นหรือน่อยลงทุกครั้งที่คุณคลิก"
+      courseC_flappy_events6_2018_markdown_instruction: "คลิกลูกศรลงภายในบล็อก `กระพือปีกปกติ`เพื่อเลึอกระดับกำลังในการกระพือปีกที่ต่างกัน\nมาดูว่าคุณยังสามารถทำคะแนนได้อยู่ หลังจากที่ทำให้ Flappy กระพือปีกมากขึ้นหรือน่อยลงทุกครั้งที่คุณคลิก"
+      courseC_flappy_events7_markdown_instruction: จากนั้นให้ลองเปลี่ยนฉากโดยการต่อบล็อกเข้ากับเหตุการณ์ `เมื่อเรียกใช้งาน`
+      courseC_flappy_events7_2018_markdown_instruction: จากนั้นให้ลองเปลี่ยนฉากโดยการต่อบล็อกเข้ากับเหตุการณ์ `เมื่อเรียกใช้งาน`
+      courseC_flappy_events8_markdown_instruction: "คุณสามารถตั้งค่าพื้นหลังในกิจกรรมใดๆไม่ใช่เพียงแค่เมื่อเริ่มเกมเท่านั้น\n\n\nลองตั้งค่าฉากแบบ ** สุ่ม ** เมื่อเหตุการณ์อื่นๆเกิดขึ้น... ตัวอย่างเช่นเมื่อผ่านอุปสรรค"
+      courseC_flappy_events8_2018_markdown_instruction: "คุณสามารถตั้งค่าพื้นหลังในกิจกรรมใดๆไม่ใช่เพียงแค่เมื่อเริ่มเกมเท่านั้น\n\n\nลองตั้งค่าฉากแบบ ** สุ่ม ** เมื่อเหตุการณ์อื่นๆเกิดขึ้น... ตัวอย่างเช่นเมื่อผ่านอุปสรรค"
+      courseC_flappy_events9_markdown_instruction: เมื่อต้องการความหลากหลาย แทนที่จะจบเกมเมื่อ Flappy ชนสิ่งกีดขวาง ให้ลองตั้งค่าคะแนนกลับเป็น 0
+      courseC_flappy_events9_2018_markdown_instruction: เมื่อต้องการความหลากหลาย แทนที่จะจบเกมเมื่อ Flappy ชนสิ่งกีดขวาง ให้ลองตั้งค่าคะแนนกลับเป็น 0
       courseC_harvester_loops1_markdown_instruction: "Loops can be used to repeat more than moves.  \n\nUse loops to collect all four of the pumpkins."
-      courseC_harvester_loops10_markdown_instruction: Collect all of the corn and all of the pumpkins.
-      courseC_harvester_loops10_2018_markdown_instruction: Collect all of the corn and all of the pumpkins.
-      courseC_harvester_loops11_markdown_instruction: Collect all of the corn and all of the pumpkins.
-      courseC_harvester_loops11_2018_markdown_instruction: Collect all of the corn and all of the pumpkins.
+      courseC_harvester_loops10_markdown_instruction: 'การท้าทาย: เก็บรวบรวม ข้าวโพดทั้งหมด แล้วคว้าฟักทองทั้งหมด'
+      courseC_harvester_loops10_2018_markdown_instruction: 'การท้าทาย: เก็บรวบรวม ข้าวโพดทั้งหมด แล้วคว้าฟักทองทั้งหมด'
+      courseC_harvester_loops11_markdown_instruction: 'การท้าทาย: เก็บรวบรวม ข้าวโพดทั้งหมด แล้วคว้าฟักทองทั้งหมด'
+      courseC_harvester_loops11_2018_markdown_instruction: 'การท้าทาย: เก็บรวบรวม ข้าวโพดทั้งหมด แล้วคว้าฟักทองทั้งหมด'
       courseC_harvester_loops1_2018_markdown_instruction: "Loops can be used to repeat more than moves.  \n\nUse loops to collect all four of the pumpkins."
       courseC_harvester_loops2_markdown_instruction: Can you combine two different loops to move toward the pumpkins, then collect them all?
       courseC_harvester_loops2_2018_markdown_instruction: Can you combine two different loops to move toward the pumpkins, then collect them all?
@@ -27725,12 +27724,12 @@ th:
         Now there is corn growing, too!
         
         Collect all of the corn and all of the pumpkins.
-      courseC_harvester_loops5_markdown_instruction: Collect all of the corn and all of the pumpkins.
-      courseC_harvester_loops5_2018_markdown_instruction: Collect all of the corn and all of the pumpkins.
-      courseC_harvester_loops6_markdown_instruction: Collect all of the corn and all of the pumpkins.
-      courseC_harvester_loops6_2018_markdown_instruction: Collect all of the corn and all of the pumpkins.
-      courseC_harvester_loops7_markdown_instruction: Collect all of the corn and all of the pumpkins.
-      courseC_harvester_loops7_2018_markdown_instruction: Collect all of the corn and all of the pumpkins.
+      courseC_harvester_loops5_markdown_instruction: 'การท้าทาย: เก็บรวบรวม ข้าวโพดทั้งหมด แล้วคว้าฟักทองทั้งหมด'
+      courseC_harvester_loops5_2018_markdown_instruction: 'การท้าทาย: เก็บรวบรวม ข้าวโพดทั้งหมด แล้วคว้าฟักทองทั้งหมด'
+      courseC_harvester_loops6_markdown_instruction: 'การท้าทาย: เก็บรวบรวม ข้าวโพดทั้งหมด แล้วคว้าฟักทองทั้งหมด'
+      courseC_harvester_loops6_2018_markdown_instruction: 'การท้าทาย: เก็บรวบรวม ข้าวโพดทั้งหมด แล้วคว้าฟักทองทั้งหมด'
+      courseC_harvester_loops7_markdown_instruction: 'การท้าทาย: เก็บรวบรวม ข้าวโพดทั้งหมด แล้วคว้าฟักทองทั้งหมด'
+      courseC_harvester_loops7_2018_markdown_instruction: 'การท้าทาย: เก็บรวบรวม ข้าวโพดทั้งหมด แล้วคว้าฟักทองทั้งหมด'
       courseC_harvester_loops8_markdown_instruction: |-
         **Challenge:** Collect all of the corn and all of the pumpkins.
         
@@ -27739,12 +27738,12 @@ th:
         **Challenge:** Collect all of the corn and all of the pumpkins.
         
         You can complete this challenge any way you want, but it will either take a lot of work or a lot of thinking!
-      courseC_harvester_loops9_markdown_instruction: Collect all of the corn and all of the pumpkins.
-      courseC_harvester_loops9_2018_markdown_instruction: Collect all of the corn and all of the pumpkins.
-      courseC_harvester_loops_challenge1_markdown_instruction: Collect all of the corn.
+      courseC_harvester_loops9_markdown_instruction: 'การท้าทาย: เก็บรวบรวม ข้าวโพดทั้งหมด แล้วคว้าฟักทองทั้งหมด'
+      courseC_harvester_loops9_2018_markdown_instruction: 'การท้าทาย: เก็บรวบรวม ข้าวโพดทั้งหมด แล้วคว้าฟักทองทั้งหมด'
+      courseC_harvester_loops_challenge1_markdown_instruction: เก็บรวบรวม ข้าวโพด
       courseC_harvester_loops_challenge2_markdown_instruction: Collect all of the lettuce. Avoid the trees and fields!
       courseC_harvester_loops_challenge2_2018_markdown_instruction: Collect all of the lettuce. Avoid the trees and fields!
-      courseC_harvester_loops_forVid_markdown_instruction: Collect all of the corn and all of the pumpkins.
+      courseC_harvester_loops_forVid_markdown_instruction: 'การท้าทาย: เก็บรวบรวม ข้าวโพดทั้งหมด แล้วคว้าฟักทองทั้งหมด'
       courseC_maze_debugging1_markdown_instruction: "This code isn't quite right!  \n\nFix the code to help Scrat get to the acorn."
       courseC_maze_debugging1_2018_markdown_instruction: "This code isn't quite right!  \n\nFix the code to help Scrat get to the acorn."
       courseC_maze_debugging3_markdown_instruction: "Something is not quite right. \n\nRemove blocks to get Scrat to the acorn!"
@@ -27760,7 +27759,7 @@ th:
         *"Get me to the pig!"*
         
         Solve this puzzle by creating a loop!
-      courseC_maze_loops4_markdown_instruction: In this puzzle, two `repeat` loops will help you get the bird to the pig with the fewest number of blocks!
+      courseC_maze_loops4_markdown_instruction: สำหรับปริศนาด่านนี้ ลูป `ทำซ้ำ` สองลูปจะช่วยคุณพาเจ้านกไปหาเจ้าหมูได้ โดยใช้บล็อกจำนวนน้อยที่สุด!
       courseC_maze_loops5_markdown_instruction: '*"Get me to the pig as quickly as possible!"*'
       courseC_maze_loops6_markdown_instruction: |-
         *"This pig is ruffling my feathers!"*
@@ -27776,26 +27775,22 @@ th:
       courseC_maze_programming1_2018_markdown_instruction: For this puzzle, drag all of the blocks together and click "Run" to watch it go!
       courseC_maze_programming2_markdown_instruction: Drag an extra <xml><block type="maze_moveForward"/></xml> block out of the toolbox to finish your code.
       courseC_maze_programming2_2018_markdown_instruction: Drag an extra <xml><block type="maze_moveForward"/></xml> block out of the toolbox to finish your code.
-      courseC_maze_programming3_markdown_instruction: "*\"This pig is ruffling my feathers.\"*\n\nThere is one extra block that is going to cause the bird to crash.  \nThrow it away by unhooking it from the grey blocks and dragging it back to the toolbox."
-      courseC_maze_programming3_2018_markdown_instruction: "*\"This pig is ruffling my feathers.\"*\n\nThere is one extra block that is going to cause the bird to crash.  \nThrow it away by unhooking it from the grey blocks and dragging it back to the toolbox."
-      courseC_maze_programming4_markdown_instruction: "*\"Trace the path and lead me to the silly pig.\"* \n\nAvoid TNT or feathers will fly!"
-      courseC_maze_programming4_2018_markdown_instruction: "*\"Trace the path and lead me to the silly pig.\"* \n\nAvoid TNT or feathers will fly!"
+      courseC_maze_programming3_markdown_instruction: "*\" หมูตัวนี้กวนประสาทฉันจริงๆ \"* \nมีบล็อกเกินมาบล็อกหนึ่ง ที่จะทำให้เจ้านกวิ่งไปชนสิ่งกีดขวาง ลากมันไปทิ้งเสีย โดยปลดมันออกมาจากบล็อกสีเทาอื่นๆ และลากมันกลับไปที่กล่องเครื่องมือ"
+      courseC_maze_programming3_2018_markdown_instruction: "*\" หมูตัวนี้กวนประสาทฉันจริงๆ \"* \nมีบล็อกเกินมาบล็อกหนึ่ง ที่จะทำให้เจ้านกวิ่งไปชนสิ่งกีดขวาง ลากมันไปทิ้งเสีย โดยปลดมันออกมาจากบล็อกสีเทาอื่นๆ และลากมันกลับไปที่กล่องเครื่องมือ"
+      courseC_maze_programming4_markdown_instruction: "แกะรอยเส้นทางให้ดีนะ และพาฉันไปจัดการเจ้าหมูซื่อบื้อนั่น"
+      courseC_maze_programming4_2018_markdown_instruction: "แกะรอยเส้นทางให้ดีนะ และพาฉันไปจัดการเจ้าหมูซื่อบื้อนั่น"
       courseC_maze_programming5_markdown_instruction: |-
-        *"Follow this path to get me to the pig!"*
-        
-        Avoid the TNT.
+        *"ให้ไปตามทางouh เพื่อพาฉันไปจัดการเจ้าหมูนั่น" อยู่ห่างๆระเบิดไว้
       courseC_maze_programming5_2018_markdown_instruction: |-
-        *"Follow this path to get me to the pig!"*
-        
-        Avoid the TNT.
+        *"ให้ไปตามทางouh เพื่อพาฉันไปจัดการเจ้าหมูนั่น" อยู่ห่างๆระเบิดไว้
       courseC_maze_programming6_markdown_instruction: |-
-        *"Keep calm and help me find the bad pig. Otherwise I might get angry!"*
+        *"ใจเย็นๆไว้ ช่วยพาฉันไปจัดการเจ้าหมูตัวแสบนั่น ไม่อย่างนั้นฉันอาจอารมณ์เสียได้!"*
         
-        Get the bird to the pig and avoid the TNT.
+        พาเจ้านกไปหาเจ้าหมูนั่น และหลีกเลี่ยงระเบิดด้วย
       courseC_maze_programming6_2018_markdown_instruction: |-
-        *"Keep calm and help me find the bad pig. Otherwise I might get angry!"*
+        *"ใจเย็นๆไว้ ช่วยพาฉันไปจัดการเจ้าหมูตัวแสบนั่น ไม่อย่างนั้นฉันอาจอารมณ์เสียได้!"*
         
-        Get the bird to the pig and avoid the TNT.
+        พาเจ้านกไปหาเจ้าหมูนั่น และหลีกเลี่ยงระเบิดด้วย
       courseC_maze_programming7_markdown_instruction: |-
         *"It's time to get angry!"*
         
@@ -27804,10 +27799,10 @@ th:
         *"It's time to get angry!"*
         
         **Challenge:** This code has a lot of bugs. You'll need to remove some blocks and add others.
-      courseC_maze_programming8_markdown_instruction: '*"Keep calm and help me find the bad pig."*'
-      courseC_maze_programming8_2018_markdown_instruction: '*"Keep calm and help me find the bad pig."*'
-      courseC_maze_programming8_predict1_markdown_instruction: '*"Keep calm and help me find the bad pig."*'
-      courseC_maze_programming8_predict1_2018_markdown_instruction: '*"Keep calm and help me find the bad pig."*'
+      courseC_maze_programming8_markdown_instruction: '"ใจเย็นๆไว้ ช่วยฉันหาเจ้าหมูตัวแสบนั่น"*'
+      courseC_maze_programming8_2018_markdown_instruction: '"ใจเย็นๆไว้ ช่วยฉันหาเจ้าหมูตัวแสบนั่น"*'
+      courseC_maze_programming8_predict1_markdown_instruction: '"ใจเย็นๆไว้ ช่วยฉันหาเจ้าหมูตัวแสบนั่น"*'
+      courseC_maze_programming8_predict1_2018_markdown_instruction: '"ใจเย็นๆไว้ ช่วยฉันหาเจ้าหมูตัวแสบนั่น"*'
       courseC_maze_programming9_markdown_instruction: '*"Now, help me sneak up on the pig any way you want to!"*'
       courseC_maze_programming9_2018_markdown_instruction: '*"Now, help me sneak up on the pig any way you want to!"*'
       courseC_maze_programming_challenge1_markdown_instruction: 'The bird needs your help! The pig is hiding, and the goal is to find it. '
@@ -27999,20 +27994,20 @@ th:
         Create this image using only the blocks provided.
         
         - To draw a diamond, you will need to alternate between turning 60 degrees and 120 degrees.
-      courseD_artist_nestedLoops1a_markdown_instruction: "Now loop the triangle 6 times. \n\nAfter each triangle, you'll need to turn 60 degrees before drawing the next. "
-      courseD_artist_nestedLoops1a_2018_markdown_instruction: "Now loop the triangle 6 times. \n\nAfter each triangle, you'll need to turn 60 degrees before drawing the next. "
+      courseD_artist_nestedLoops1a_markdown_instruction: "ตอนนี้ลูปรูปสามเหลี่ยมนี้ 6 ครั้ง\n\nหลังจากวาดสามเหลี่ยมแต่ละรูป คุณจะต้องหันไป 60 องศาก่อนวาดสามเหลี่ยมรูปต่อไป "
+      courseD_artist_nestedLoops1a_2018_markdown_instruction: "ตอนนี้ลูปรูปสามเหลี่ยมนี้ 6 ครั้ง\n\nหลังจากวาดสามเหลี่ยมแต่ละรูป คุณจะต้องหันไป 60 องศาก่อนวาดสามเหลี่ยมรูปต่อไป "
       courseD_artist_nestedLoops2_markdown_instruction: |-
-        This time, complete the puzzle with the fewest number of blocks possible.
+        มาถึงตอนนี้ ทำให้ปริศนาเสร็จสมบูรณ์ โดยใช้บล็อกจำนวนน้อยที่สุด เท่าที่จะเป็นไปได้
         
-        After each triangle, you'll need to turn 60 degrees before drawing the next.
-        See how much easier this is with **nested loops**?
+        หลังจากวาดสามเหลี่ยมแต่ละรูปคุณจะต้องหมุน 60 องศาก่อนวาดรูปถัดไป
+        ดูว่ามันง่ายขึ้นแค่ไหนด้วยการใช้ ** ลูปซ้อนลูป **?
       courseD_artist_nestedLoops2_2018_markdown_instruction: |-
-        This time, complete the puzzle with the fewest number of blocks possible.
+        มาถึงตอนนี้ ทำให้ปริศนาเสร็จสมบูรณ์ โดยใช้บล็อกจำนวนน้อยที่สุด เท่าที่จะเป็นไปได้
         
-        After each triangle, you'll need to turn 60 degrees before drawing the next.
-        See how much easier this is with **nested loops**?
-      courseD_artist_nestedLoops4_markdown_instruction: "Great!  Do the same thing with these circles. \n\n- Each circle is made by moving 1 pixel before turning 1 degree, 360 times.\n- Each circle begins just 50 pixels from where the last one ended"
-      courseD_artist_nestedLoops4_2018_markdown_instruction: "Great!  Do the same thing with these circles. \n\n- Each circle is made by moving 1 pixel before turning 1 degree, 360 times.\n- Each circle begins just 50 pixels from where the last one ended"
+        หลังจากวาดสามเหลี่ยมแต่ละรูปคุณจะต้องหมุน 60 องศาก่อนวาดรูปถัดไป
+        ดูว่ามันง่ายขึ้นแค่ไหนด้วยการใช้ ** ลูปซ้อนลูป **?
+      courseD_artist_nestedLoops4_markdown_instruction: "ยอดไปเลย! ทำแบบเดียวกันกับวงกลมเหล่านี้\n\n- แต่ละวงทำโดยการย้าย 1 พิกเซลก่อนหมุน 1 องศา 360 ครั้ง\n- วงแต่ละวงเริ่มต้นห่างเพียง 50 พิกเซลจากจุดที่วงอันสุดท้ายวาดเสร็จลง"
+      courseD_artist_nestedLoops4_2018_markdown_instruction: "ยอดไปเลย! ทำแบบเดียวกันกับวงกลมเหล่านี้\n\n- แต่ละวงทำโดยการย้าย 1 พิกเซลก่อนหมุน 1 องศา 360 ครั้ง\n- วงแต่ละวงเริ่มต้นห่างเพียง 50 พิกเซลจากจุดที่วงอันสุดท้ายวาดเสร็จลง"
       courseD_artist_nestedLoops5_markdown_instruction: |-
         What happens if you also turn 90 degrees between circles?
         
@@ -28022,17 +28017,17 @@ th:
         
         (To get this image, you still need to jump 50 pixels between circles)
       courseD_artist_nestedLoops7_markdown_instruction: |-
-        Use what you've learned to make this drawing.
+        ใช้สิ่งที่คุณได้เรียนรู้มาในการวาดภาพนี้ 
         
-        - The squares each have **100 pixel sides** and **90 degree angles**
-        - You will need to turn **60 degrees between each square**. Why? Because there are 6 squares, and 360 degrees (a full turn around) divided by 6 is 60 degrees.
-        - Make sure you jump **50 pixels to get to the next square**
+        - สี่เหลี่ยมจตุรัสแต่ละอันมี **ด้าน 100 พิกเซล** และ **มุม 90 องศา**
+        - คุณต้องหัน **60 องศาระหว่างสี่เหลี่ยมจตุรัสแต่ละรูป** ทำไมหรือ? เนื่องจากมีสี่เหลี่ยมจตุรัส 6 รูปและมุมรวม 360 องศา (หันเต็มรอบ) หารด้วย 6 เป็น 60 องศา
+        - ตรวจสอบให้แน่ใจว่าคุณกระโดด ** 50 พิกเซลเพื่อไปยังสี่เหลี่ยมถัดไป **
       courseD_artist_nestedLoops7_2018_markdown_instruction: |-
-        Use what you've learned to make this drawing.
+        ใช้สิ่งที่คุณได้เรียนรู้มาในการวาดภาพนี้ 
         
-        - The squares each have **100 pixel sides** and **90 degree angles**
-        - You will need to turn **60 degrees between each square**. Why? Because there are 6 squares, and 360 degrees (a full turn around) divided by 6 is 60 degrees.
-        - Make sure you jump **50 pixels to get to the next square**
+        - สี่เหลี่ยมจตุรัสแต่ละอันมี **ด้าน 100 พิกเซล** และ **มุม 90 องศา**
+        - คุณต้องหัน **60 องศาระหว่างสี่เหลี่ยมจตุรัสแต่ละรูป** ทำไมหรือ? เนื่องจากมีสี่เหลี่ยมจตุรัส 6 รูปและมุมรวม 360 องศา (หันเต็มรอบ) หารด้วย 6 เป็น 60 องศา
+        - ตรวจสอบให้แน่ใจว่าคุณกระโดด ** 50 พิกเซลเพื่อไปยังสี่เหลี่ยมถัดไป **
       courseD_artist_nestedLoops8_markdown_instruction: |-
         Using what you have learned in the last couple of puzzles, build this image from the beginning.
         
@@ -28042,36 +28037,34 @@ th:
         
         - Each hexagon has **50 pixel sides** and **60 degree turns**
       courseD_artist_nestedLoops9_markdown_instruction: |-
-        **Challenge:** Can you figure out how to make a picture like this?
+        การท้าทาย: คุณคิดออกไหมว่าจะสร้างภาพแบบนี้ได้อย่างไร?
         
-        - Both shapes have **50 pixel sides**
-        - Between each pair of shapes, you will need to jump forward the length of a side, and turn 45 degrees.
+        - รูปทรงทั้งสองข้างมีด้านยาว ** 50 พิกเซล **
+        - ระหว่างแต่ละคู่ของรูปทรงนั้น คุณจะต้องกระโดดไปข้างหน้าด้วยความยาวของด้าน และหัน 45 องศา
       courseD_artist_nestedLoops9_2018_markdown_instruction: |-
-        **Challenge:** Can you figure out how to make a picture like this?
+        การท้าทาย: คุณคิดออกไหมว่าจะสร้างภาพแบบนี้ได้อย่างไร?
         
-        - Both shapes have **50 pixel sides**
-        - Between each pair of shapes, you will need to jump forward the length of a side, and turn 45 degrees.
+        - รูปทรงทั้งสองข้างมีด้านยาว ** 50 พิกเซล **
+        - ระหว่างแต่ละคู่ของรูปทรงนั้น คุณจะต้องกระโดดไปข้างหน้าด้วยความยาวของด้าน และหัน 45 องศา
       courseD_artist_nestedLoops9_predict1_markdown_instruction: |-
-        **Challenge:** Can you figure out how to make a picture like this?
+        การท้าทาย: คุณคิดออกไหมว่าจะสร้างภาพแบบนี้ได้อย่างไร?
         
-        - Both shapes have 50 pixel sides
+        - รูปทรงทั้งสองข้างมีด้านยาว ** 50 พิกเซล **
       courseD_artist_nestedLoops9_predict1_2018_markdown_instruction: |-
-        **Challenge:** Can you figure out how to make a picture like this?
+        การท้าทาย: คุณคิดออกไหมว่าจะสร้างภาพแบบนี้ได้อย่างไร?
         
-        - Both shapes have 50 pixel sides
+        - รูปทรงทั้งสองข้างมีด้านยาว ** 50 พิกเซล **
       courseD_artist_nestedLoopsFP_markdown_instruction: |-
-        Now it's your turn.  Take the skills you have learned and make something that you love!
+        ตอนนี้ก็ถึงตาของเธอบ้างแล้ว นำเอาทักษะที่คุณได้เรียนรู้ เอามาทำสิ่งที่คุณรัก!
         
-        Need an idea?  Try to make one of these:
-        
+        ต้องการไอเดียไหม ลองเข้าไปดูตามลิงค์เหล่านี้
         ![expandable](https://images.code.org/7ac814e356b3548f57bfab8a9eb31dff-image-1497993113904.png)
         ![expandable](https://images.code.org/bd29d35c9a8abf9d27591b90b0f3ec0f-image-1497993121072.png)
         ![expandable](https://images.code.org/2970f34785e51ae98be7aff6fe0827ce-image-1497993126938.png)
       courseD_artist_nestedLoopsFP_2018_markdown_instruction: |-
-        Now it's your turn.  Take the skills you have learned and make something that you love!
+        ตอนนี้ก็ถึงตาของเธอบ้างแล้ว นำเอาทักษะที่คุณได้เรียนรู้ เอามาทำสิ่งที่คุณรัก!
         
-        Need an idea?  Try to make one of these:
-        
+        ต้องการไอเดียไหม ลองเข้าไปดูตามลิงค์เหล่านี้
         ![expandable](https://images.code.org/7ac814e356b3548f57bfab8a9eb31dff-image-1497993113904.png)
         ![expandable](https://images.code.org/bd29d35c9a8abf9d27591b90b0f3ec0f-image-1497993121072.png)
         ![expandable](https://images.code.org/2970f34785e51ae98be7aff6fe0827ce-image-1497993126938.png)
@@ -28151,13 +28144,13 @@ th:
       courseD_artist_project5_2018_markdown_instruction: '![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Get creative with shapes and angles to see what kind of new snowflakes we can draw!"_'
       courseD_artist_project_embedded_markdown_instruction: Here's what you will soon be making!
       courseD_artist_ramp11_markdown_instruction: |-
-        Great!  Now let's make a square using Artist!  The blocks are a little different, but the idea is the same.
+        ยอดเยี่ยม  ตอนนี้ให้ทำสีเหลี่ยมจตุรัสโดยใช้ศิลปินเป็นผู้วาด! บล็อกแตกต่างกันเล็กน้อย แต่แนวคิดก็แบบเดียวกัน
         ___
-        Each side of the square has a length of 200 pixels, and you will need to turn 90 degrees to make each angle.
+        ด้านของสี่เหลี่ยมแต่ละด้านมีความยาว 200 พิกเซลและคุณจะต้องหัน 90 องศาเพื่อสร้างมุมแต่ละมุม
       courseD_artist_ramp12_markdown_instruction: |-
-        Use what you've learned to draw this triangle inside of a square.
+        ใช้สิ่งที่คุณเรียนรุู้มา เพื่อวาดรูปสามเหลี่ยมในรูปสี่เหลี่ยมจตุรัสรูปนี้
         ___
-        ##### The sides are each 200 pixels long. You will need to turn 90 degrees to make the square and 120 degrees to make the triangle.
+        ##### ความยาวด้าน 200 พิกเซล คุณจะต้องหัน 90 องศาเพื่อสร้างสี่เหลี่ยมจัตุรัสและ 120 องศาเพื่อสร้างรูปสามเหลี่ยม
       courseD_bee_conditionals1_markdown_instruction: |-
         *"This cloud is blocking my view!"*
         
@@ -28178,41 +28171,37 @@ th:
         *"This cloud is blocking my view!"*
         
         Check to see if there's a flower under the cloud. If there's a flower, get nectar.
-      courseD_bee_conditionals2_markdown_instruction: "More clouds! \n\nCheck underneath every cloud to see if it is hiding a flower before you get nectar. If there is a flower underneath the cloud, the bee will need to get nectar *once*.  \n\nRemember: Not all clouds hide the same thing!"
-      courseD_bee_conditionals2_2018_markdown_instruction: "More clouds! \n\nCheck underneath every cloud to see if it is hiding a flower before you get nectar. If there is a flower underneath the cloud, the bee will need to get nectar *once*.  \n\nRemember: Not all clouds hide the same thing!"
-      courseD_bee_conditionals2_test_markdown_instruction: "More clouds! \n\nCheck underneath every cloud to see if it is hiding a flower before you get nectar. If there is a flower underneath the cloud, the bee will need to get nectar *once*.  \n\nRemember: Not all clouds hide the same thing!"
-      courseD_bee_conditionals3_markdown_instruction: You can only collect nectar from flowers, but you can check any space to see if there is a flower. If there is a flower under any of these clouds, the bee will need to collect nectar *once*.
-      courseD_bee_conditionals3_2018_markdown_instruction: You can only collect nectar from flowers, but you can check any space to see if there is a flower. If there is a flower under any of these clouds, the bee will need to collect nectar *once*.
+      courseD_bee_conditionals2_markdown_instruction: "มีเมฆมาเพิ่มอีกแล้ว! \n\nเช็คดูใต้เมฆทุกๆ ก้อน ว่ามันซ่อนดอกไม้ไว้หรือเปล่า ก่อนที่คุณจะทำการเก็บน้ำหวานจากเกสร  ถ้าหากว่ามีดอกไม้อยู่ใต้เมฆ ผึ้งจะต้องเก็บน้ำหวานจากเกสร *เพียงครั้งเดียว*\n\nจำไว้ว่าเมฆทุกๆก้อน ไม่ได้ซ่อนของอย่างเดียวกัน"
+      courseD_bee_conditionals2_2018_markdown_instruction: "มีเมฆมาเพิ่มอีกแล้ว! \n\nเช็คดูใต้เมฆทุกๆ ก้อน ว่ามันซ่อนดอกไม้ไว้หรือเปล่า ก่อนที่คุณจะทำการเก็บน้ำหวานจากเกสร  ถ้าหากว่ามีดอกไม้อยู่ใต้เมฆ ผึ้งจะต้องเก็บน้ำหวานจากเกสร *เพียงครั้งเดียว*\n\nจำไว้ว่าเมฆทุกๆก้อน ไม่ได้ซ่อนของอย่างเดียวกัน"
+      courseD_bee_conditionals2_test_markdown_instruction: "มีเมฆมาเพิ่มอีกแล้ว! \n\nเช็คดูใต้เมฆทุกๆ ก้อน ว่ามันซ่อนดอกไม้ไว้หรือเปล่า ก่อนที่คุณจะทำการเก็บน้ำหวานจากเกสร  ถ้าหากว่ามีดอกไม้อยู่ใต้เมฆ ผึ้งจะต้องเก็บน้ำหวานจากเกสร *เพียงครั้งเดียว*\n\nจำไว้ว่าเมฆทุกๆก้อน ไม่ได้ซ่อนของอย่างเดียวกัน"
+      courseD_bee_conditionals3_markdown_instruction: คุณสามารถเก็บน้ำหวานจากเกสร ได้จากดอกไม้เท่านั้น แต่คุณสามารถเช็คดูก่อนได้ว่าตรงนั้นมีดอกไม้หรือไม่ ถ้ามีดอกไม้อยู่ใต้เมฆเหล่านี้ ผึ้งจะต้องเก็บน้ำหวานจากเกสรได้ *ครั้งเดียว*
+      courseD_bee_conditionals3_2018_markdown_instruction: คุณสามารถเก็บน้ำหวานจากเกสร ได้จากดอกไม้เท่านั้น แต่คุณสามารถเช็คดูก่อนได้ว่าตรงนั้นมีดอกไม้หรือไม่ ถ้ามีดอกไม้อยู่ใต้เมฆเหล่านี้ ผึ้งจะต้องเก็บน้ำหวานจากเกสรได้ *ครั้งเดียว*
       courseD_bee_conditionals4_markdown_instruction: |-
-        In this puzzle, we know that every flower has exactly one nectar, but the flowers aren't spaced evenly.
-        
-        Get all of the nectar using as few blocks as possible.
+        สำหรับปริศนาอันนี้ เรารู้ว่าดอกไม้ทุกๆ ดอกมีนำหวานจากเกสร หน่วย แต่ดอกไม้ไม่ได้มีระยะห่างเท่าๆกัน เก็บน้ำหวานจากเกสรโดยใช้บล็อกสองสามบล็อกถ้าเป็นไปได้
       courseD_bee_conditionals4_2018_markdown_instruction: |-
-        In this puzzle, we know that every flower has exactly one nectar, but the flowers aren't spaced evenly.
-        
-        Get all of the nectar using as few blocks as possible.
+        สำหรับปริศนาอันนี้ เรารู้ว่าดอกไม้ทุกๆ ดอกมีนำหวานจากเกสร หน่วย แต่ดอกไม้ไม่ได้มีระยะห่างเท่าๆกัน เก็บน้ำหวานจากเกสรโดยใช้บล็อกสองสามบล็อกถ้าเป็นไปได้
       courseD_bee_conditionals6_markdown_instruction: |-
-        *"Now I just want to make honey."*
+        *"ตอนนี้ฉันแค่ต้องการทำน้ำผึ้ง"*
         
-        Some of these clouds might have honeycombs under them.  Be sure to check if a honeycomb is hiding behind each cloud! If there is a honeycomb, the bee will only need to make honey *once*.
+        เมฆเหล่านี้บางก้อนอาจจะมีรวงผึ้งซ่อนอยู่ ให้แน่ใจว่าคุณเช็คว่ามีรวงผึ้งซ่อนอยู่ใต้เมฆแต่ละก้อนหรือเปล่า! ถ้าหากมีรวงผึ้ง ผึ้งจะต้องการทำน้ำผึ้งเพียง *ครั้งเดียว*
       courseD_bee_conditionals6_2018_markdown_instruction: |-
-        *"Now I just want to make honey."*
+        *"ตอนนี้ฉันแค่ต้องการทำน้ำผึ้ง"*
         
-        Some of these clouds might have honeycombs under them.  Be sure to check if a honeycomb is hiding behind each cloud! If there is a honeycomb, the bee will only need to make honey *once*.
-      courseD_bee_conditionals7_markdown_instruction: "Sometimes a cloud covers a flower, sometimes it covers a honeycomb! \n\nUse the `if/else` block to collect nectar at flowers and make honey at honeycomb. Remember: if there is a flower, the bee only needs to get nectar *once*. If there is a honeycomb, the bee only needs to make honey *once*."
-      courseD_bee_conditionals7_2018_markdown_instruction: "Sometimes a cloud covers a flower, sometimes it covers a honeycomb! \n\nUse the `if/else` block to collect nectar at flowers and make honey at honeycomb. Remember: if there is a flower, the bee only needs to get nectar *once*. If there is a honeycomb, the bee only needs to make honey *once*."
+        เมฆเหล่านี้บางก้อนอาจจะมีรวงผึ้งซ่อนอยู่ ให้แน่ใจว่าคุณเช็คว่ามีรวงผึ้งซ่อนอยู่ใต้เมฆแต่ละก้อนหรือเปล่า! ถ้าหากมีรวงผึ้ง ผึ้งจะต้องการทำน้ำผึ้งเพียง *ครั้งเดียว*
+      courseD_bee_conditionals7_markdown_instruction: "บางครั้งเมฆปกคลุมดอกไม้บางครั้งก็ปกคลุมรังผึ้ง!\n\nใช้ปุ่ม `ถ้า / นอกจากนั้น (if / else)` เพื่อรวบรวมน้ำหวานจากเกสรที่ดอกไม้และทำน้ำผึ้งที่รังผึ้ง โปรดจำไว้ว่า: ถ้ามีดอกไม้ ผึ้งเพียงต้องการที่จะเก็บน้ำหวานจากเกสร *ครั้งเดียว* ถ้ามีรังผึ้ง ผึ้งจะต้องทำน้ำผึ้ง *ครั้งเดียว* เท่านั้น"
+      courseD_bee_conditionals7_2018_markdown_instruction: "บางครั้งเมฆปกคลุมดอกไม้บางครั้งก็ปกคลุมรังผึ้ง!\n\nใช้ปุ่ม `ถ้า / นอกจากนั้น (if / else)` เพื่อรวบรวมน้ำหวานจากเกสรที่ดอกไม้และทำน้ำผึ้งที่รังผึ้ง โปรดจำไว้ว่า: ถ้ามีดอกไม้ ผึ้งเพียงต้องการที่จะเก็บน้ำหวานจากเกสร *ครั้งเดียว* ถ้ามีรังผึ้ง ผึ้งจะต้องทำน้ำผึ้ง *ครั้งเดียว* เท่านั้น"
       courseD_bee_conditionals7_predict2_markdown_instruction: "Sometimes a cloud covers a flower, sometimes it covers a honeycomb! \n\nUse the `if/else` block to collect nectar at flowers and make honey at honeycomb. Remember: there will only ever **bee** *one* honeycomb or *one* flower behind each cloud."
       courseD_bee_conditionals7_predict2_2018_markdown_instruction: "Sometimes a cloud covers a flower, sometimes it covers a honeycomb! \n\nUse the `if/else` block to collect nectar at flowers and make honey at honeycomb. Remember: there will only ever **bee** *one* honeycomb or *one* flower behind each cloud."
       courseD_bee_conditionals8_markdown_instruction: |-
-        **Challenge:** There will be either a flower or a honeycomb under each of those clouds!
+        **การท้าทาย** มีดอกไม้ หรือไม่ก็รวงผึ้งภายใต้เมฆแต่ละก้อน
         
-        Collect nectar once if there is a flower.
-        Otherwise, make honey once (because there is a honeycomb).
+        เก็บน้าหวานจากเกสรถ้ามีดอกไม้
+        ไม่เช่นนั้น ทำน้ำหวาน(เพราะมีรวงผึ้ง)
       courseD_bee_conditionals8_2018_markdown_instruction: |-
-        **Challenge:** There will be either a flower or a honeycomb under each of those clouds!
+        **การท้าทาย** มีดอกไม้ หรือไม่ก็รวงผึ้งภายใต้เมฆแต่ละก้อน
         
-        Collect nectar once if there is a flower.
-        Otherwise, make honey once (because there is a honeycomb).
+        เก็บน้าหวานจากเกสรถ้ามีดอกไม้
+        ไม่เช่นนั้น ทำน้ำหวาน(เพราะมีรวงผึ้ง)
       courseD_bee_conditionals9_markdown_instruction: Collect all of the nectar or make all the honey. You can only collect nectar from flowers and make honey from honeycombs. Check any space to see if there is a flower or honeycomb. There will only ever be one flower or one honeycomb behind each cloud.
       courseD_bee_conditionals9_2018_markdown_instruction: Collect all of the nectar or make all the honey. You can only collect nectar from flowers and make honey from honeycombs. Check any space to see if there is a flower or honeycomb. There will only ever be one flower or one honeycomb behind each cloud.
       courseD_bee_conditionals_challenge1_markdown_instruction: Collect all of the nectar and make all of the honey. You can only collect nectar from flowers and make honey from honeycombs. Check every space to see if there is a flower or honeycomb.
@@ -28237,9 +28226,9 @@ th:
         
         Fix the error(s) to make all of the honey.
       courseD_bee_debugging5_markdown_instruction: |-
-        **Challenge:** *"This puzzle is making me loopy!"*
+        **การท้าทาย** *"ปริศนานี้ทำให้ฉันต้องลูปไปลูปมา"*
         
-        All of the commands that you need are already here...now use your debugging skills to figure out how to solve this puzzle.
+        คำสั่งทั้งหมดที่จำเป็นนั้นมีอยู่แล้ว... ตอนนี้ใช้ทักษะในการดีบั๊กของคุณเพื่อหาวิธีแก้ไขปริศนานี้
       courseD_bee_debugging6_markdown_instruction: "**Challenge:**  Fix the errors to collect all of the nectar and make all of the honey."
       courseD_bee_debugging7_markdown_instruction: |-
         *"Such a sticky situation!"*
@@ -28276,10 +28265,10 @@ th:
         *"This is going to **BEE** great!"*
         
         Help the bee collect all of the nectar.
-      courseD_bee_nestedLoops2_markdown_instruction: This time, help the bee collect all of the nectar using as few blocks as possible.
-      courseD_bee_nestedLoops2_2018_markdown_instruction: This time, help the bee collect all of the nectar using as few blocks as possible.
-      courseD_bee_nestedLoops2_predict1_markdown_instruction: This time, help the bee collect all of the nectar using as few blocks as possible.
-      courseD_bee_nestedLoops2_predict1_2018_markdown_instruction: This time, help the bee collect all of the nectar using as few blocks as possible.
+      courseD_bee_nestedLoops2_markdown_instruction: ตอนนี้ ให้ช่วยผึ้งเก็บน้ำหวานจากเกสรทั้งหมด โดยใช้บล็อกเพียงสองสามบล็อก ถ้าเป็นไปได้
+      courseD_bee_nestedLoops2_2018_markdown_instruction: ตอนนี้ ให้ช่วยผึ้งเก็บน้ำหวานจากเกสรทั้งหมด โดยใช้บล็อกเพียงสองสามบล็อก ถ้าเป็นไปได้
+      courseD_bee_nestedLoops2_predict1_markdown_instruction: ตอนนี้ ให้ช่วยผึ้งเก็บน้ำหวานจากเกสรทั้งหมด โดยใช้บล็อกเพียงสองสามบล็อก ถ้าเป็นไปได้
+      courseD_bee_nestedLoops2_predict1_2018_markdown_instruction: ตอนนี้ ให้ช่วยผึ้งเก็บน้ำหวานจากเกสรทั้งหมด โดยใช้บล็อกเพียงสองสามบล็อก ถ้าเป็นไปได้
       courseD_bee_nestedLoops3_markdown_instruction: "*\"Can you BEE-lieve all of these flowers?\"*\n\nCollect all of the nectar from each flower. "
       courseD_bee_nestedLoops5_markdown_instruction: "Collect all of the nectar from each flower\nand make honey at each honeycomb. Use a nested loop."
       courseD_bee_nestedLoops6_markdown_instruction: Make all of the nectar.
@@ -28291,15 +28280,15 @@ th:
       courseD_bee_nestedLoops7_2018_markdown_instruction: "**Challenge:** Figure out how to get all of the nectar using only the blocks available."
       courseD_bee_nestedLoops8_markdown_instruction: "Collect all of the nectar from each flower\nand make honey at each honeycomb. Use a nested loop."
       courseD_bee_nestedLoops8_2018_markdown_instruction: "Collect all of the nectar from each flower\nand make honey at each honeycomb. Use a nested loop."
-      courseD_bee_nestedLoops9_markdown_instruction: Make all of the honey.
-      courseD_bee_nestedLoops9_2018_markdown_instruction: Make all of the honey.
-      courseD_bee_nestedLoops9_predict2_markdown_instruction: Make all of the honey.
-      courseD_bee_nestedLoops9_predict2_2018_markdown_instruction: Make all of the honey.
+      courseD_bee_nestedLoops9_markdown_instruction: ทำหน้าหวานให้หมด
+      courseD_bee_nestedLoops9_2018_markdown_instruction: ทำหน้าหวานให้หมด
+      courseD_bee_nestedLoops9_predict2_markdown_instruction: ทำหน้าหวานให้หมด
+      courseD_bee_nestedLoops9_predict2_2018_markdown_instruction: ทำหน้าหวานให้หมด
       courseD_bee_nested_loops_challenge1_markdown_instruction: Let's hunt for treasure - using loops! Help the collector reach at least two piles of treasure using only the blocks in your toolbox.
       courseD_bee_nested_loops_challenge2_markdown_instruction: Let's hunt for treasure - using loops! Help the collector reach at least two piles of treasure using only the blocks in your toolbox.
-      courseD_bounce_events1_markdown_instruction: Get to the flag! Attach a block to the "when left arrow" block and press "Run" to move the player to the flag.
-      courseD_bounce_events10s_markdown_instruction: "There is now a hoop at the top.  \n\nAttach the `score point` block to the `when ball in goal` event and the `score opponent point` block to the `when ball misses hand` event to make a game. \n\n---\n\nSee how many points you can score before your opponent scores twice."
-      courseD_bounce_events10s_2018_markdown_instruction: "There is now a hoop at the top.  \n\nAttach the `score point` block to the `when ball in goal` event and the `score opponent point` block to the `when ball misses hand` event to make a game. \n\n---\n\nSee how many points you can score before your opponent scores twice."
+      courseD_bounce_events1_markdown_instruction: ไปให้ถึงธง! ต่อบล็อกเข้ากับบล็อก " เมื่อกดลูกศรซ้าย " และกด " เริ่ม " เพื่อพาผู้เล่นไปให้ถึงธง
+      courseD_bounce_events10s_markdown_instruction: "ขณะนี้มีห่วงอยู่ที่ด้านบนแล้ว ให้ต่อบล็อก \" ได้คะแนน \" เข้ากับเหตุการณ์ \" ลูกบอลอยู่ในประตู \" และบล็อก \" เสียคะแนน \"  เข้ากับเหตุการณ์ \" เมื่อลูกบอลพลาดมือไป \" เพื่อเป็นการสร้างเกม"
+      courseD_bounce_events10s_2018_markdown_instruction: "ขณะนี้มีห่วงอยู่ที่ด้านบนแล้ว ให้ต่อบล็อก \" ได้คะแนน \" เข้ากับเหตุการณ์ \" ลูกบอลอยู่ในประตู \" และบล็อก \" เสียคะแนน \"  เข้ากับเหตุการณ์ \" เมื่อลูกบอลพลาดมือไป \" เพื่อเป็นการสร้างเกม"
       courseD_bounce_events11s_markdown_instruction: |-
         Now, you are in control of the ball!  Attach the `throw new ball` block in all of the places where the game needs a new ball.
         
@@ -28316,16 +28305,16 @@ th:
       courseD_bounce_events1s_2018_markdown_instruction: "Get the ball to the hoop!   \nAttach a block to the `when left arrow` event and press \"Run\" to move the player to the net."
       courseD_bounce_events2s_markdown_instruction: Now, attach a block to the `when right event` so that the hand can get to both baskets.
       courseD_bounce_events2s_2018_markdown_instruction: Now, attach a block to the `when right event` so that the hand can get to both baskets.
-      courseD_bounce_events5s_markdown_instruction: We're going to send a basketball flying down towards the hand.  Attach a block to the `when ball hits hand` event to ensure the ball reaches the basket.
-      courseD_bounce_events5s_2018_markdown_instruction: We're going to send a basketball flying down towards the hand.  Attach a block to the `when ball hits hand` event to ensure the ball reaches the basket.
+      courseD_bounce_events5s_markdown_instruction: เราจะส่งลูกบอลลอยลงไปที่มือ ต่อบล็อกเข้ากับเหตุการณ์" เมื่อลูกบอลชนมือ " เพื่อให้แน่ใจว่าลูกบอลไปถึงตะกร้า
+      courseD_bounce_events5s_2018_markdown_instruction: เราจะส่งลูกบอลลอยลงไปที่มือ ต่อบล็อกเข้ากับเหตุการณ์" เมื่อลูกบอลชนมือ " เพื่อให้แน่ใจว่าลูกบอลไปถึงตะกร้า
       courseD_bounce_events6s_markdown_instruction: "Now the basket is at the top.  \n\nAttach code to make the ball bounce when it hits the wall so you can solve this puzzle."
       courseD_bounce_events6s_2018_markdown_instruction: "Now the basket is at the top.  \n\nAttach code to make the ball bounce when it hits the wall so you can solve this puzzle."
       courseD_bounce_events7s_markdown_instruction: "Attach sound blocks to make the net swish when you hit the basket and have the whistle blow when the ball misses your hand.  \n\n---\n\nBounce the ball until it hits the finish target."
       courseD_bounce_events7s_2018_markdown_instruction: "Attach sound blocks to make the net swish when you hit the basket and have the whistle blow when the ball misses your hand.  \n\n---\n\nBounce the ball until it hits the finish target."
       courseD_collector_debugging1_markdown_instruction: |-
-        *"Oh no! I see a problem."*
+        * "โอ้ไม่ ฉันเห็นปัญหาแล้ว" *
         
-        Fix the error(s) to collect all of the treasure.
+        แก้ที่ผิดเพื่อเก็บรวบรวมสมบัติให้หมด
       courseD_collector_debugging10_predict1_markdown_instruction: |-
         *"It's treasure island!"*
         
@@ -28335,86 +28324,86 @@ th:
         
         Help Laurel fix the code to get all the treasure.
       courseD_collector_debugging1_2018_markdown_instruction: |-
-        *"Oh no! I see a problem."*
+        * "โอ้ไม่ ฉันเห็นปัญหาแล้ว" *
         
-        Fix the error(s) to collect all of the treasure.
+        แก้ที่ผิดเพื่อเก็บรวบรวมสมบัติให้หมด
       courseD_collector_debugging1a_markdown_instruction: |-
-        *"Oh no! I see a problem."*
+        * "โอ้ไม่ ฉันเห็นปัญหาแล้ว" *
         
-        Fix the error(s) to collect all of the treasure.
+        แก้ที่ผิดเพื่อเก็บรวบรวมสมบัติให้หมด
       courseD_collector_debugging1a_2018_markdown_instruction: |-
-        *"Oh no! I see a problem."*
+        * "โอ้ไม่ ฉันเห็นปัญหาแล้ว" *
         
-        Fix the error(s) to collect all of the treasure.
+        แก้ที่ผิดเพื่อเก็บรวบรวมสมบัติให้หมด
       courseD_collector_debugging2_markdown_instruction: |-
-        *"You can do this!"*
+        *"เธอทำอย่างนี้ได้!"*
         
-        Fix the error(s) to collect all of the treasure.
+        แก้ที่ผิดเพื่อเก็บรวบรวมสมบัติให้หมด
       courseD_collector_debugging2_2018_markdown_instruction: |-
-        *"You can do this!"*
+        *"เธอทำอย่างนี้ได้!"*
         
-        Fix the error(s) to collect all of the treasure.
+        แก้ที่ผิดเพื่อเก็บรวบรวมสมบัติให้หมด
       courseD_collector_debugging2a_markdown_instruction: |-
-        *"You can do this!"*
+        *"เธอทำอย่างนี้ได้!"*
         
-        Fix the error(s) to collect all of the treasure.
+        แก้ที่ผิดเพื่อเก็บรวบรวมสมบัติให้หมด
       courseD_collector_debugging2a_2018_markdown_instruction: |-
-        *"You can do this!"*
+        *"เธอทำอย่างนี้ได้!"*
         
-        Fix the error(s) to collect all of the treasure.
+        แก้ที่ผิดเพื่อเก็บรวบรวมสมบัติให้หมด
       courseD_collector_debugging3_markdown_instruction: |-
-        *"Be persistent and you will figure this out."*
+        * " อดทนไว้แล้วคุณจะคิดออกเอง " *
         
-        Fix the error(s) to collect all of the treasure.
+        แก้ที่ผิดเพื่อเก็บรวบรวมสมบัติให้หมด
       courseD_collector_debugging3_2018_markdown_instruction: |-
-        *"Be persistent and you will figure this out."*
+        * " อดทนไว้แล้วคุณจะคิดออกเอง " *
         
-        Fix the error(s) to collect all of the treasure.
+        แก้ที่ผิดเพื่อเก็บรวบรวมสมบัติให้หมด
       courseD_collector_debugging3a_markdown_instruction: |-
-        *"Be persistent and you will figure this out."*
+        * " อดทนไว้แล้วคุณจะคิดออกเอง " *
         
-        Fix the error(s) to collect all of the treasure.
+        แก้ที่ผิดเพื่อเก็บรวบรวมสมบัติให้หมด
       courseD_collector_debugging3a_2018_markdown_instruction: |-
-        *"Be persistent and you will figure this out."*
+        * " อดทนไว้แล้วคุณจะคิดออกเอง " *
         
-        Fix the error(s) to collect all of the treasure.
+        แก้ที่ผิดเพื่อเก็บรวบรวมสมบัติให้หมด
       courseD_collector_debugging4_markdown_instruction: |-
-        *"Don't get frustrated. You can do it!"*
+        *"อย่าหงุดหงิดไป เธอทำอย่างนี้ได้!"*
         
-        Fix the error(s) to collect all of the treasure.
+        แก้ที่ผิดเพื่อเก็บรวบรวมสมบัติให้หมด
       courseD_collector_debugging4_2018_markdown_instruction: |-
-        *"Don't get frustrated. You can do it!"*
+        *"อย่าหงุดหงิดไป เธอทำอย่างนี้ได้!"*
         
-        Fix the error(s) to collect all of the treasure.
+        แก้ที่ผิดเพื่อเก็บรวบรวมสมบัติให้หมด
       courseD_collector_debugging4a_markdown_instruction: |-
-        *"Don't get frustrated. You can do it!"*
+        *"อย่าหงุดหงิดไป เธอทำอย่างนี้ได้!"*
         
-        Fix the error(s) to collect all of the treasure.
+        แก้ที่ผิดเพื่อเก็บรวบรวมสมบัติให้หมด
       courseD_collector_debugging4a_2018_markdown_instruction: |-
-        *"Don't get frustrated. You can do it!"*
+        *"อย่าหงุดหงิดไป เธอทำอย่างนี้ได้!"*
         
-        Fix the error(s) to collect all of the treasure.
+        แก้ที่ผิดเพื่อเก็บรวบรวมสมบัติให้หมด
       courseD_collector_debugging5_markdown_instruction: |-
-        *"This puzzle is making me loopy!"*
+        *"ปริศนานี้ทำให้ฉันต้องลูปไปลูปมา"*
         
-        All of the commands that you need are already here...now use your debugging skills to figure out how to solve this puzzle.
+        คำสั่งทั้งหมดที่จำเป็นนั้นมีอยู่แล้ว... ตอนนี้ใช้ทักษะในการดีบั๊กของคุณเพื่อหาวิธีแก้ไขปริศนานี้
       courseD_collector_debugging5_2018_markdown_instruction: |-
-        *"This puzzle is making me loopy!"*
+        *"ปริศนานี้ทำให้ฉันต้องลูปไปลูปมา"*
         
-        All of the commands that you need are already here...now use your debugging skills to figure out how to solve this puzzle.
+        คำสั่งทั้งหมดที่จำเป็นนั้นมีอยู่แล้ว... ตอนนี้ใช้ทักษะในการดีบั๊กของคุณเพื่อหาวิธีแก้ไขปริศนานี้
       courseD_collector_debugging5a_markdown_instruction: |-
-        *"This puzzle is making me loopy!"*
+        *"ปริศนานี้ทำให้ฉันต้องลูปไปลูปมา"*
         
-        All of the commands that you need are already here...now use your debugging skills to figure out how to solve this puzzle.
+        คำสั่งทั้งหมดที่จำเป็นนั้นมีอยู่แล้ว... ตอนนี้ใช้ทักษะในการดีบั๊กของคุณเพื่อหาวิธีแก้ไขปริศนานี้
       courseD_collector_debugging5a_2018_markdown_instruction: |-
-        *"This puzzle is making me loopy!"*
+        *"ปริศนานี้ทำให้ฉันต้องลูปไปลูปมา"*
         
-        All of the commands that you need are already here...now use your debugging skills to figure out how to solve this puzzle.
-      courseD_collector_debugging6_markdown_instruction: "**Challenge:**  All of the blocks that you need are already here...Now use your debugging skills to fix the errors and collect all of the treasure."
-      courseD_collector_debugging6_2018_markdown_instruction: "**Challenge:**  All of the blocks that you need are already here...Now use your debugging skills to fix the errors and collect all of the treasure."
+        คำสั่งทั้งหมดที่จำเป็นนั้นมีอยู่แล้ว... ตอนนี้ใช้ทักษะในการดีบั๊กของคุณเพื่อหาวิธีแก้ไขปริศนานี้
+      courseD_collector_debugging6_markdown_instruction: "**การท้าทาย: ** บล็อกทั้งหมดที่คุณต้องใช้มีอยู่พร้อมแล้ว.....ใช้ทักษะการดีบั๊กของคุณเพื่อแก้ไขที่ผิดและเก็บรวบรวมสมบัติมาให้หมด"
+      courseD_collector_debugging6_2018_markdown_instruction: "**การท้าทาย: ** บล็อกทั้งหมดที่คุณต้องใช้มีอยู่พร้อมแล้ว.....ใช้ทักษะการดีบั๊กของคุณเพื่อแก้ไขที่ผิดและเก็บรวบรวมสมบัติมาให้หมด"
       courseD_collector_debugging6a_markdown_instruction: 'Challenge: Use the code in the work area to get at least **6** pieces of treasure!'
       courseD_collector_debugging6a_2018_markdown_instruction: 'Challenge: Use the code in the work area to get at least **6** pieces of treasure!'
-      courseD_collector_debugging7_markdown_instruction: "**Challenge**: All of the commands that you need are already here...now use your debugging skills to figure out how to solve this puzzle."
+      courseD_collector_debugging7_markdown_instruction: "**การท้าทาย** คำสั่งทั้งหมดที่จำเป็นนั้นมีอยู่แล้ว... ตอนนี้ใช้ทักษะในการดีบั๊กของคุณเพื่อหาวิธีแก้ไขปริศนานี้"
       courseD_collector_debugging8_markdown_instruction: |-
         *"So much treasure!"*
         
@@ -28456,7 +28445,7 @@ th:
         ___
         
         Take the same path as before, but this time, use a repeat loop to collect treasure when you get to it.
-      courseD_collector_ramp9_markdown_instruction: Now there's more treasure.  Can you help Laurel collect it all?
+      courseD_collector_ramp9_markdown_instruction: ตอนนี้มีสมบัติเพิ่มเข้ามาอีก คุณช่วยลอเรลเก็บสมบัติทั้งหมดหน่อยได้ไหม?
       courseD_collector_until_challenge1_markdown_instruction: Watch how the bees gets the nectar. Can you use the same kind of pattern to help the bee make all of honey?
       courseD_debugging_1_markdown_instruction: |-
         *"These blocks are really bugging me!"*
@@ -28475,9 +28464,9 @@ th:
         
         Fix the error(s) to make all of the honey.
       courseD_debugging_5_markdown_instruction: |-
-        **Challenge:** *"This puzzle is making me loopy!"*
+        **การท้าทาย** *"ปริศนานี้ทำให้ฉันต้องลูปไปลูปมา"*
         
-        All of the commands that you need are already here...now use your debugging skills to figure out how to solve this puzzle.
+        คำสั่งทั้งหมดที่จำเป็นนั้นมีอยู่แล้ว... ตอนนี้ใช้ทักษะในการดีบั๊กของคุณเพื่อหาวิธีแก้ไขปริศนานี้
       courseD_debugging_6_markdown_instruction: "**Challenge:**  Fix the errors to collect all of the nectar and make all of the honey."
       courseD_farmer_condLoops1_markdown_instruction: |-
         *"Corn you help me harvest today?"*
@@ -28490,13 +28479,11 @@ th:
       courseD_farmer_condLoops2_markdown_instruction: "*\"Lettuce collect both crops from this row!\"*\n\nThis garden is all mixed up, it has both **corn and lettuce**!  \n\nHelp the harvester pick the items that are ready for harvesting.  Each plant will have either **one** corn or **one** lettuce."
       courseD_farmer_condLoops2_2018_markdown_instruction: "*\"Lettuce collect both crops from this row!\"*\n\nThis garden is all mixed up, it has both **corn and lettuce**!  \n\nHelp the harvester pick the items that are ready for harvesting.  Each plant will have either **one** corn or **one** lettuce."
       courseD_farmer_condLoops3_markdown_instruction: |-
-        *"Corn, lettuce, AND pumpkins! Help me harvest them all."*
-        
-        Each plant will have either one piece of corn, one head of lettuce, or one pumpkin.
+        *"ข้าวโพด ผักกาดหอม และ ฟักทองช่วยฉันเก็บเกี่ยวทั้งหมด"* 
+        พืชแต่ละต้นจะมีได้ทั้งข้าวโพดหนึ่งฝัก ผักสลัดหนึ่งหัว หรือฟักทองหนึ่งลูก
       courseD_farmer_condLoops3_2018_markdown_instruction: |-
-        *"Corn, lettuce, AND pumpkins! Help me harvest them all."*
-        
-        Each plant will have either one piece of corn, one head of lettuce, or one pumpkin.
+        *"ข้าวโพด ผักกาดหอม และ ฟักทองช่วยฉันเก็บเกี่ยวทั้งหมด"* 
+        พืชแต่ละต้นจะมีได้ทั้งข้าวโพดหนึ่งฝัก ผักสลัดหนึ่งหัว หรือฟักทองหนึ่งลูก
       courseD_farmer_condLoops4_markdown_instruction: "*\"Gosh! Now the lettuce is growing in clusters!\"*  \n\nThe harvester wants to pick everything from her lettuce garden. Each plant will now have more than one head of lettuce on it, so the farmer will need to keep picking while there is still lettuce growing.  \n\n##### (Remember: This garden only has lettuce!)"
       courseD_farmer_condLoops4_2018_markdown_instruction: "*\"Gosh! Now the lettuce is growing in clusters!\"*  \n\nThe harvester wants to pick everything from her lettuce garden. Each plant will now have more than one head of lettuce on it, so the harvester will need to keep picking while there is still lettuce growing.  \n\n##### (Remember: This garden only has lettuce!)"
       courseD_farmer_condLoops4a_markdown_instruction: "*\"Gosh! Now the crops are growing in clusters!\"*  \n\nHelp the farmer pick all of the lettuce in each cluster before moving on to the next bunch. Keep it up until you get to the pumpkin!"
@@ -28509,13 +28496,13 @@ th:
         
         This field has clusters of corn and lettuce growing together -- with one pumpkin at the end.  Can you harvest everything?
       courseD_farmer_condLoops6_markdown_instruction: |-
-        *"Let's take this one step further!"*
+        *"ขอขยับขึ้นไปอีกขั้นหนึ่ง! "*
         
-        Can you figure out how to pick the pumpkin?  Make sure to collect all of the corn along the way!
+        คุณสามารถหาวิธีในการเก็บฟักทอง?  ให้แน่ใจว่าคุณรวบรวมข้าวโพดทั้งหมดไปตลอดทางด้วย!
       courseD_farmer_condLoops6_2018_markdown_instruction: |-
-        *"Let's take this one step further!"*
+        *"ขอขยับขึ้นไปอีกขั้นหนึ่ง! "*
         
-        Can you figure out how to pick the pumpkin?  Make sure to collect all of the corn along the way!
+        คุณสามารถหาวิธีในการเก็บฟักทอง?  ให้แน่ใจว่าคุณรวบรวมข้าวโพดทั้งหมดไปตลอดทางด้วย!
       courseD_farmer_condLoops7_markdown_instruction: "**Challenge:** Collect all of the corn and lettuce, then pick the pumpkin."
       courseD_farmer_condLoops7_2018_markdown_instruction: "**Challenge:** Collect all of the corn and lettuce, then pick the pumpkin."
       courseD_farmer_condLoops8_markdown_instruction: Collect all of the corn and lettuce, then pick the pumpkin.
@@ -28531,9 +28518,9 @@ th:
       courseD_farmer_condLoops_challenge2_clone_markdown_instruction: It's a vegetable maze. Turn right at pumpkins, turn left at the lettuce. Collect everything to complete the level.
       courseD_farmer_conditionals1_markdown_instruction: "*\"Hi, I'm a farmer. I need your help to flatten the field on my farm so it's ready for planting!\"*  \n\nMove to the pile of dirt and use the `remove` block to remove it."
       courseD_farmer_conditionals3_markdown_instruction: |-
-        *"Move to the pile of dirt and tell me how many shovelfuls to remove."*
+        "พาฉันไปที่กองดินและบอกฉันว่าต้องใช้ดินที่ตักด้วยพลั่วจำนวนกี่ครั้ง ถึงจะปรับหน้าดินให้เรียบได้" *
         
-        Use as few blocks as possible to solve this puzzle.
+        ให้ใช้บล็อกสองสามบล็อกถ้าเป็นไปไปได้เพื่อแก้ปริศนานี้
       courseD_farmer_conditionals4_markdown_instruction: |-
         *"I don't know how much dirt is in this pile!"*
         
@@ -28545,13 +28532,13 @@ th:
       courseD_farmer_while1_markdown_instruction: "*\"Hi, I'm a farmer. I need your help to flatten the field on my farm so it's ready for planting!\"*  \n\nMove to the pile of dirt and use the `remove` block to remove it."
       courseD_farmer_while1_2018_markdown_instruction: "*\"Hi, I'm a farmer. I need your help to flatten the field on my farm so it's ready for planting!\"*  \n\nMove to the pile of dirt and use the `remove` block to remove it."
       courseD_farmer_while3_markdown_instruction: |-
-        *"Move to the pile of dirt and tell me how many shovelfuls to remove."*
+        "พาฉันไปที่กองดินและบอกฉันว่าต้องใช้ดินที่ตักด้วยพลั่วจำนวนกี่ครั้ง ถึงจะปรับหน้าดินให้เรียบได้" *
         
-        Use as few blocks as possible to solve this puzzle.
+        ให้ใช้บล็อกสองสามบล็อกถ้าเป็นไปไปได้เพื่อแก้ปริศนานี้
       courseD_farmer_while3_2018_markdown_instruction: |-
-        *"Move to the pile of dirt and tell me how many shovelfuls to remove."*
+        "พาฉันไปที่กองดินและบอกฉันว่าต้องใช้ดินที่ตักด้วยพลั่วจำนวนกี่ครั้ง ถึงจะปรับหน้าดินให้เรียบได้" *
         
-        Use as few blocks as possible to solve this puzzle.
+        ให้ใช้บล็อกสองสามบล็อกถ้าเป็นไปไปได้เพื่อแก้ปริศนานี้
       courseD_farmer_while4_markdown_instruction: |-
         *"I don't know how much dirt is in this pile!"*
         
@@ -28595,13 +28582,9 @@ th:
       courseD_iceage_loops9_markdown_instruction: The acorn is so far away! Can you use loops to help Scrat get there?
       courseD_maze_loops_challenge1_markdown_instruction: Let's hunt for treasure - using loops! Help the collector reach at least two piles of treasure using only the blocks in your toolbox.
       courseD_maze_nestedLoops3_markdown_instruction: |-
-        *"Zombie hungry!"*
-        
-        Get the zombie to the sunflower using the fewest number of blocks possible.
+        ให้พาเจ้าซอมบี้ไปหาดอกทานตะวัน โดยใช้บล็อกจำนวนสองสามบล็อกให้น้อยที่สุด เท่าที่จะเป็นไปได้
       courseD_maze_nestedLoops3_2018_markdown_instruction: |-
-        *"Zombie hungry!"*
-        
-        Get the zombie to the sunflower using the fewest number of blocks possible.
+        ให้พาเจ้าซอมบี้ไปหาดอกทานตะวัน โดยใช้บล็อกจำนวนสองสามบล็อกให้น้อยที่สุด เท่าที่จะเป็นไปได้
       courseD_maze_nestedLoops4_markdown_instruction: 'Get the zombie to the sunflower using the fewest blocks possible!  '
       courseD_maze_nestedLoops4_2018_markdown_instruction: 'Get the zombie to the sunflower using the fewest blocks possible!  '
       courseD_maze_nestedLoops6_markdown_instruction: |-
@@ -28612,43 +28595,37 @@ th:
         *"Must eat sunflower!"*
         
         Get the zombie to the sunflower using only the blocks available.
-      courseD_maze_ramp1_markdown_instruction: For this puzzle, snap all of the blocks together and click "Run" to watch it go!
-      courseD_maze_ramp1_2018_markdown_instruction: For this puzzle, snap all of the blocks together and click "Run" to watch it go!
-      courseD_maze_ramp2_markdown_instruction: Drag an extra `move forward` block out of the toolbox, then attach all blocks to `when run` to finish your code.
-      courseD_maze_ramp2_2018_markdown_instruction: Drag an extra `move forward` block out of the toolbox, then attach all blocks to `when run` to finish your code.
-      courseD_maze_ramp3_markdown_instruction: "*\"This pig is ruffling my feathers.\"*\n\nThere is one extra block that is going to cause the bird to crash.  \nThrow it away by removing it from the other blocks and dragging it back to the toolbox."
-      courseD_maze_ramp3_2018_markdown_instruction: "*\"This pig is ruffling my feathers.\"*\n\nThere is one extra block that is going to cause the bird to crash.  \nThrow it away by removing it from the other blocks and dragging it back to the toolbox."
-      courseD_maze_ramp4_markdown_instruction: "*\"Trace the path and lead me to the silly pig.\"* \n\nAvoid TNT or feathers will fly!"
-      courseD_maze_ramp4_2018_markdown_instruction: "*\"Trace the path and lead me to the silly pig.\"* \n\nAvoid TNT or feathers will fly!"
+      courseD_maze_ramp1_markdown_instruction: สำหรับปริศนาข้อนี้ ต่อบล็อกทั้งหมดเข้าด้วยกัน แล้วคลิก " เริ่ม " เพื่อดูมันเริ่มทำงาน!
+      courseD_maze_ramp1_2018_markdown_instruction: สำหรับปริศนาข้อนี้ ต่อบล็อกทั้งหมดเข้าด้วยกัน แล้วคลิก " เริ่ม " เพื่อดูมันเริ่มทำงาน!
+      courseD_maze_ramp2_markdown_instruction: ลากบล็อก ` เดินไปข้างหน้า ` อีกอันหนึ่งจากกล่องเครื่องมือมาเพิ่ม แล้วต่อบล็อกทั้งหมดเข้ากับ ` เมื่อเรียกใช้งาน ` ก็ถือว่าเป็นอันสิ้นสุดการโค้ดของคุณ
+      courseD_maze_ramp2_2018_markdown_instruction: ลากบล็อก ` เดินไปข้างหน้า ` อีกอันหนึ่งจากกล่องเครื่องมือมาเพิ่ม แล้วต่อบล็อกทั้งหมดเข้ากับ ` เมื่อเรียกใช้งาน ` ก็ถือว่าเป็นอันสิ้นสุดการโค้ดของคุณ
+      courseD_maze_ramp3_markdown_instruction: "*\" หมูตัวนี้กวนประสาทฉันจริงๆ \"* \nมีบล็อกเกินมาบล็อกหนึ่ง ที่จะทำให้เจ้านกวิ่งไปชนสิ่งกีดขวาง ลากมันไปทิ้งเสีย โดยปลดมันออกมาจากบล็อกอื่นๆ และลากมันกลับไปที่กล่องเครื่องมือ"
+      courseD_maze_ramp3_2018_markdown_instruction: "*\" หมูตัวนี้กวนประสาทฉันจริงๆ \"* \nมีบล็อกเกินมาบล็อกหนึ่ง ที่จะทำให้เจ้านกวิ่งไปชนสิ่งกีดขวาง ลากมันไปทิ้งเสีย โดยปลดมันออกมาจากบล็อกอื่นๆ และลากมันกลับไปที่กล่องเครื่องมือ"
+      courseD_maze_ramp4_markdown_instruction: "แกะรอยเส้นทางให้ดีนะ และพาฉันไปจัดการเจ้าหมูซื่อบื้อนั่น"
+      courseD_maze_ramp4_2018_markdown_instruction: "แกะรอยเส้นทางให้ดีนะ และพาฉันไปจัดการเจ้าหมูซื่อบื้อนั่น"
       courseD_maze_ramp5_markdown_instruction: |-
-        *"Follow this path to get me to the pig!"*
-        
-        Avoid the TNT.
+        *"ให้ไปตามทางouh เพื่อพาฉันไปจัดการเจ้าหมูนั่น" อยู่ห่างๆระเบิดไว้
       courseD_maze_ramp5_2018_markdown_instruction: |-
-        *"Follow this path to get me to the pig!"*
-        
-        Avoid the TNT.
+        *"ให้ไปตามทางouh เพื่อพาฉันไปจัดการเจ้าหมูนั่น" อยู่ห่างๆระเบิดไว้
       courseD_maze_ramp5a_markdown_instruction: Pay attention to the sequence and see if you can figure out how to get to that pig!
       courseD_maze_ramp5a_2018_markdown_instruction: Pay attention to the sequence and see if you can figure out how to get to that pig!
       courseD_maze_ramp5b_markdown_instruction: "**Challenge:** Navigate this maze to help the bird find the pig!"
       courseD_maze_ramp5b_2018_markdown_instruction: "**Challenge:** Navigate this maze to help the bird find the pig!"
       courseD_maze_ramp5c_markdown_instruction: Help the bird get to the pig.
       courseD_maze_ramp5c_2018_markdown_instruction: Help the bird get to the pig.
-      courseD_maze_ramp5d_markdown_instruction: Get the bird to the pig.
-      courseD_maze_ramp5d_2018_markdown_instruction: Get the bird to the pig.
+      courseD_maze_ramp5d_markdown_instruction: ให้พาเจ้านกไปจัดการกับเจ้าหมูนั่น
+      courseD_maze_ramp5d_2018_markdown_instruction: ให้พาเจ้านกไปจัดการกับเจ้าหมูนั่น
       courseD_maze_ramp6_markdown_instruction: |-
-        *"Keep calm and help me find the bad pig. Otherwise I might get angry!"*
-        
-        When you have several of the same block in a row, try using a `repeat` loop, instead.  This will do the same thing with less code!
+        "ใจเย็นๆไว้ ช่วยฉันหาเจ้าหมูตัวแสบนั่น ไม่อย่างนั้นฉันอาจอารมณ์เสียได้!"*
+        เมื่อคุณมีบล็อคแบบเดียวกันเป็นแถว ลองใช้ลูป `ทำซ้ำ` แทน เพื่อทำอย่างเดียวกันโดยใช้โค้ดน้อยกว่า!
       courseD_maze_ramp6a_markdown_instruction: |-
-        *"Keep calm and help me find the bad pig. Otherwise I might get angry!"*
-        
-        When you have several of the same blocks in a row, try using a `repeat` loop, instead.  This will do the same thing with less code!
+        "ใจเย็นๆไว้ ช่วยฉันหาเจ้าหมูตัวแสบนั่น ไม่อย่างนั้นฉันอาจอารมณ์เสียได้!"*
+        เมื่อคุณมีบล็อคแบบเดียวกันเป็นแถว ลองใช้ลูป `ทำซ้ำ` แทน เพื่อทำอย่างเดียวกันโดยใช้โค้ดน้อยกว่า!
       courseD_maze_ramp7_markdown_instruction: "*\"It's time to get angry!\"*  \n\n\nUse what you've learned to get the bird to the pig!"
-      courseD_maze_until10_markdown_instruction: Help the zombie get to the sunflower.
-      courseD_maze_until10_2018_markdown_instruction: Help the zombie get to the sunflower.
-      courseD_maze_until10_predict2_markdown_instruction: Help the zombie get to the sunflower.
-      courseD_maze_until10_predict2_2018_markdown_instruction: Help the zombie get to the sunflower.
+      courseD_maze_until10_markdown_instruction: ให้ช่วยพาเจ้าซอมบี้ไปหาดอกทานตะวัน
+      courseD_maze_until10_2018_markdown_instruction: ให้ช่วยพาเจ้าซอมบี้ไปหาดอกทานตะวัน
+      courseD_maze_until10_predict2_markdown_instruction: ให้ช่วยพาเจ้าซอมบี้ไปหาดอกทานตะวัน
+      courseD_maze_until10_predict2_2018_markdown_instruction: ให้ช่วยพาเจ้าซอมบี้ไปหาดอกทานตะวัน
       courseD_maze_until2_markdown_instruction: Now, use the `repeat until` loop to do the same thing without specifying how many times to move forward and turn.
       courseD_maze_until4_markdown_instruction: |-
         *"Dear person. Me zombie. Me hungry. Must... get... to sunflower..."*
@@ -28658,16 +28635,16 @@ th:
         *"Dear person. Me zombie. Me hungry. Must... get... to sunflower..."*
         
         Can you get the zombie to the sunflower using only the blocks that are available?
-      courseD_maze_until5_markdown_instruction: Use the `if` block to help the zombie decide when to turn, then get the zombie to the sunflower.
-      courseD_maze_until5_2018_markdown_instruction: Use the `if` block to help the zombie decide when to turn, then get the zombie to the sunflower.
-      courseD_maze_until6_markdown_instruction: Help the zombie get to the sunflower.
-      courseD_maze_until6_2018_markdown_instruction: Help the zombie get to the sunflower.
-      courseD_maze_until7_markdown_instruction: Help the zombie get to the sunflower.
-      courseD_maze_until7_2018_markdown_instruction: Help the zombie get to the sunflower.
-      courseD_maze_until8_markdown_instruction: Help the zombie get to the sunflower.
-      courseD_maze_until8_2018_markdown_instruction: Help the zombie get to the sunflower.
-      courseD_maze_until9_markdown_instruction: "**Challenge:** Avoid the chompers and help the zombie get to the sunflower."
-      courseD_maze_until9_2018_markdown_instruction: "**Challenge:** Avoid the chompers and help the zombie get to the sunflower."
+      courseD_maze_until5_markdown_instruction: ใช้ บล็อก ` ถ้า(if) ` เพื่อช่วยให้ผีดิบตัดสินใจเมื่อใดที่จะหัน จากนั้นก็ให้พาเจ้าซอมบี้ไปหาดอกทานตะวัน
+      courseD_maze_until5_2018_markdown_instruction: ใช้ บล็อก ` ถ้า(if) ` เพื่อช่วยให้ผีดิบตัดสินใจเมื่อใดที่จะหัน จากนั้นก็ให้พาเจ้าซอมบี้ไปหาดอกทานตะวัน
+      courseD_maze_until6_markdown_instruction: ให้ช่วยพาเจ้าซอมบี้ไปหาดอกทานตะวัน
+      courseD_maze_until6_2018_markdown_instruction: ให้ช่วยพาเจ้าซอมบี้ไปหาดอกทานตะวัน
+      courseD_maze_until7_markdown_instruction: ให้ช่วยพาเจ้าซอมบี้ไปหาดอกทานตะวัน
+      courseD_maze_until7_2018_markdown_instruction: ให้ช่วยพาเจ้าซอมบี้ไปหาดอกทานตะวัน
+      courseD_maze_until8_markdown_instruction: ให้ช่วยพาเจ้าซอมบี้ไปหาดอกทานตะวัน
+      courseD_maze_until8_2018_markdown_instruction: ให้ช่วยพาเจ้าซอมบี้ไปหาดอกทานตะวัน
+      courseD_maze_until9_markdown_instruction: "** การท้าทาย ** หลีกเลี่ยงเจ้าจอมเขมือบแลช่วยพาเจ้าซอมบี้ไปหาดอกทานตะวัน"
+      courseD_maze_until9_2018_markdown_instruction: "** การท้าทาย ** หลีกเลี่ยงเจ้าจอมเขมือบแลช่วยพาเจ้าซอมบี้ไปหาดอกทานตะวัน"
       courseD_maze_until_challenge_markdown_instruction: |-
         No hints, just challenge. Get the zombie to the sunflower.
         Markdown instructions
@@ -28700,46 +28677,46 @@ th:
       courseD_playLab_cond1_2018_markdown_instruction: "To start our game, Pirate Pegleg (actor 1) needs to be able to get around in all directions.   Connect the blocks to the correct events to get Pegleg moving.  \n\n---\nHelp Pegleg gather the flags to solve this puzzle."
       courseD_playLab_cond2_markdown_instruction: "Time to add points!  \n\nEdit the code to give Pegleg (actor 1) a point when he makes it to the dragon (actor 2). "
       courseD_playLab_cond2_2018_markdown_instruction: "Time to add points!  \n\nEdit the code to give Pegleg (actor 1) a point when he makes it to the dragon (actor 2). "
-      courseD_playLab_cond3_markdown_instruction: 'Use a `repeat forever` loop to make the dragon (actor 2) change between random emotions every second.  '
-      courseD_playLab_cond3_2018_markdown_instruction: 'Use a `repeat forever` loop to make the dragon (actor 2) change between random emotions every second.  '
-      courseD_playLab_cond3a_markdown_instruction: "It's time to use what we've learned about conditionals to make this game amazing. \n\nAdd code so that when Pegleg gets to the dragon, he gets two points *if* the dragon is happy. Otherwise, he should get only one point added to his score."
-      courseD_playLab_cond3a_2018_markdown_instruction: "It's time to use what we've learned about conditionals to make this game amazing. \n\nAdd code so that when Pegleg gets to the dragon, he gets two points *if* the dragon is happy. Otherwise, he should get only one point added to his score."
+      courseD_playLab_cond3_markdown_instruction: 'ใช้ลูป `ซ้ำตลอดกาล"`เพื่อให้เจ้ามังกร (นักแสดง 2) เปลี่ยนแปลงอารมณ์แบบสุ่มทุกวินาที    '
+      courseD_playLab_cond3_2018_markdown_instruction: 'ใช้ลูป `ซ้ำตลอดกาล"`เพื่อให้เจ้ามังกร (นักแสดง 2) เปลี่ยนแปลงอารมณ์แบบสุ่มทุกวินาที    '
+      courseD_playLab_cond3a_markdown_instruction: "เพิ่มโค้ด เมื่อเจ้าโจรสลัดขาไม้ไปถึงเจ้ามังกร, เขาได้รับ 2 คะแนน *ถ้า* มังกรมีความสุข และได้เคะแนนเพิ่มพียง 1 คะแนนในกรณีอื่น"
+      courseD_playLab_cond3a_2018_markdown_instruction: "เพิ่มโค้ด เมื่อเจ้าโจรสลัดขาไม้ไปถึงเจ้ามังกร, เขาได้รับ 2 คะแนน *ถ้า* มังกรมีความสุข และได้เคะแนนเพิ่มพียง 1 คะแนนในกรณีอื่น"
       courseD_playLab_cond3b_markdown_instruction: Use a `repeat forever` loop to make the dragon (actor 2) move up and down forever! Add a `wait for 1 second` block in between the `move up` and `move down` blocks for the dragon.
       courseD_playLab_cond4_markdown_instruction: |-
-        This is about to get interesting!
+        เรื่องกำลังน่าสนใจมากขึ้น!
         
-        Add some code so that the ninja (actor 3) starts chasing Pegleg as soon as the game begins.  End the game as a loss if the ninja catches him.
+        เพิ่มโค้ดบางอย่างเพื่อที่ว่า นินจา (ตัวละครที่ 3) เริ่มไล่เจ้าโจรสลัดขาไม้ ทันทีที่เกมเริ่มต้น  จบเกมเป็นการพ่ายแพ้ถ้านินจาจับโจรสลัดได้
       courseD_playLab_cond4_2018_markdown_instruction: |-
-        This is about to get interesting!
+        เรื่องกำลังน่าสนใจมากขึ้น!
         
-        Add some code so that the ninja (actor 3) starts chasing Pegleg as soon as the game begins.  End the game as a loss if the ninja catches him.
+        เพิ่มโค้ดบางอย่างเพื่อที่ว่า นินจา (ตัวละครที่ 3) เริ่มไล่เจ้าโจรสลัดขาไม้ ทันทีที่เกมเริ่มต้น  จบเกมเป็นการพ่ายแพ้ถ้านินจาจับโจรสลัดได้
       courseD_playLab_cond5_markdown_instruction: |-
-        Now we need a way to win.
+        ตอนนี้เราต้องมีวิธีที่จะชนะ
         
-        Add a `repeat forever` loop that continuously checks **if** the score is greater than 5, then ends the game as a **win** when it is.
+        เพิ่มลูป `ทำซ้ำไปตลอดกาลของ` ทีทำการตรวจสอบอย่างต่อเนื่อง ** ถ้า ** คะแนนมากกว่า 5 แล้วจบเกมเป็น ** ชนะ ** เมื่อมันเป็นไปตามเงื่อนไขนั้น
       courseD_playLab_cond5_2018_markdown_instruction: |-
-        Now we need a way to win.
+        ตอนนี้เราต้องมีวิธีที่จะชนะ
         
-        Add a `repeat forever` loop that continuously checks **if** the score is greater than 5, then ends the game as a **win** when it is.
-      courseD_playLab_cond6_markdown_instruction: "Wow, this game is hard to win!\n\nLet's customize this game to make it more fun.  This challenge has two parts:\n___\n\n1)  Slow down the ninja (actor 3) before you set him to chase the pirate (actor 1).  \n\n2)  Use a `repeat forever` loop to check to see if the pirate is in the \"safe zone\" beneath the line of octopuses (greater than 225 pixels down).  If he is, set the ninja to **flee** the pirate.  Otherwise, set the ninja to **chase** the pirate.  "
-      courseD_playLab_cond6_2018_markdown_instruction: "Wow, this game is hard to win!\n\nLet's customize this game to make it more fun.  This challenge has two parts:\n___\n\n1)  Slow down the ninja (actor 3) before you set him to chase the pirate (actor 1).  \n\n2)  Use a `repeat forever` loop to check to see if the pirate is in the \"safe zone\" beneath the line of octopuses (greater than 225 pixels down).  If he is, set the ninja to **flee** the pirate.  Otherwise, set the ninja to **chase** the pirate.  "
-      courseD_playLab_cond6a_markdown_instruction: "We don't want the pirate to stay in the \"safe zone\" too long!  \n\nAdd code to the `if` statement below so that if the pirate (actor 1) is in the safe zone, the program will wait one second, then deduct a point as long as he stays beneath the octopus line."
-      courseD_playLab_cond6a_2018_markdown_instruction: "We don't want the pirate to stay in the \"safe zone\" too long!  \n\nAdd code to the `if` statement below so that if the pirate (actor 1) is in the safe zone, the program will wait one second, then deduct a point as long as he stays beneath the octopus line."
+        เพิ่มลูป `ทำซ้ำไปตลอดกาลของ` ทีทำการตรวจสอบอย่างต่อเนื่อง ** ถ้า ** คะแนนมากกว่า 5 แล้วจบเกมเป็น ** ชนะ ** เมื่อมันเป็นไปตามเงื่อนไขนั้น
+      courseD_playLab_cond6_markdown_instruction: "ว้าว, เกมนี้เป็นเรื่องยากที่จะเอาชนะ!\n\nลองปรับแต่งเกมนี้เพื่อให้สนุกมากขึ้น  ความท้าทายนี้มีสองส่วน:\n___\n\n1) ทำให้ตัวนินจา (ตัวละครที่ 3) ช้าลงก่อนที่คุณจะให้เขาไล่โจรสลัด (ตัวละครที่ 1).  \n\n2) ใช้ลูป` ทำซ้ำไปตลอดกาล`เพื่อตรวจสอบดูว่าโจรสลัดอยู่ใน  \"โซนปลอดภัย \" ใต้เส้นของเจ้าปลาหมึก (มากกว่า 225 พิกเซลลงไป).  ถ้าเป็นเช่นนั้น, ตั้งนินจาให้ **หลบหนี ** เจ้าโจรสลัด.  มิฉะนั้นตั้งนินจาให้ ** ไล่ล่า ** โจรสลัด  "
+      courseD_playLab_cond6_2018_markdown_instruction: "ว้าว, เกมนี้เป็นเรื่องยากที่จะเอาชนะ!\n\nลองปรับแต่งเกมนี้เพื่อให้สนุกมากขึ้น  ความท้าทายนี้มีสองส่วน:\n___\n\n1) ทำให้ตัวนินจา (ตัวละครที่ 3) ช้าลงก่อนที่คุณจะให้เขาไล่โจรสลัด (ตัวละครที่ 1).  \n\n2) ใช้ลูป` ทำซ้ำไปตลอดกาล`เพื่อตรวจสอบดูว่าโจรสลัดอยู่ใน  \"โซนปลอดภัย \" ใต้เส้นของเจ้าปลาหมึก (มากกว่า 225 พิกเซลลงไป).  ถ้าเป็นเช่นนั้น, ตั้งนินจาให้ **หลบหนี ** เจ้าโจรสลัด.  มิฉะนั้นตั้งนินจาให้ ** ไล่ล่า ** โจรสลัด  "
+      courseD_playLab_cond6a_markdown_instruction: "เราไม่ต้องการให้เจ้าโจรสลัดอยู่ใน  \"โซนที่ปลอดภัย \" นานเกินไป!  \n\nเพิ่มรหัสไปยังคำสั่ง ' ถ้า(if) ' ด้านล่างเพื่อให้เจ้าโจรสลัด (ตัวละครที่ 1) ถ้าเขาอยู่ในโซนที่ปลอดภัย, โปรแกรมจะรอหนึ่งวินาที, แล้วหักคะแนน ตราบใดที่เขาอยู่ต่ำกว่าเขตปลาหมึกยักษ์."
+      courseD_playLab_cond6a_2018_markdown_instruction: "เราไม่ต้องการให้เจ้าโจรสลัดอยู่ใน  \"โซนที่ปลอดภัย \" นานเกินไป!  \n\nเพิ่มรหัสไปยังคำสั่ง ' ถ้า(if) ' ด้านล่างเพื่อให้เจ้าโจรสลัด (ตัวละครที่ 1) ถ้าเขาอยู่ในโซนที่ปลอดภัย, โปรแกรมจะรอหนึ่งวินาที, แล้วหักคะแนน ตราบใดที่เขาอยู่ต่ำกว่าเขตปลาหมึกยักษ์."
       courseD_playLab_cond6cloneForTest_markdown_instruction: Can we make this work?
       courseD_playLab_condFP_2018_markdown_instruction: |-
-        Now, build your own game to show off to your friends!
+        ตอนนี้มาสร้างเกมของคุณเองเพื่ออวดเพื่อนๆ ของคุณ!
         
         ---
         
-        You could:
-        - Have the pirate and ninja work together to get points from the octopus
-        - Have both octopuses follow the pirate, doing double damage to the ninja when they collide
-        - Have each character disappear when touched by the ninja
-        - Invent your own game!
-      courseD_scrat_ramp1_markdown_instruction: For this puzzle, snap all of the blocks together and click "Run" to watch it go!
-      courseD_scrat_ramp1_2018_markdown_instruction: For this puzzle, snap all of the blocks together and click "Run" to watch it go!
-      courseD_scrat_ramp2_markdown_instruction: Drag an extra `move forward` block out of the toolbox, then attach all blocks to `when run` to finish your code.
-      courseD_scrat_ramp2_2018_markdown_instruction: Drag an extra `move forward` block out of the toolbox, then attach all blocks to `when run` to finish your code.
+        คุณสามารถ:
+        -ให้โจรสลัดและนินจาทำงานร่วมกันที่จะเอาคะแนนจากฉ
+        -มีทั้งปลาหมึกยักษ์ตามโจรสลัด ทำความเสียหายเป็นสองเท่าให้กับนินจาเมื่อพวกเขาชนกัน
+        -มีแต่ละอักษรหายไปเมื่อสัมผัสโดยนินจา
+        -ประดิษฐ์เกมของคุณเอง!
+      courseD_scrat_ramp1_markdown_instruction: สำหรับปริศนาข้อนี้ ต่อบล็อกทั้งหมดเข้าด้วยกัน แล้วคลิก " เริ่ม " เพื่อดูมันเริ่มทำงาน!
+      courseD_scrat_ramp1_2018_markdown_instruction: สำหรับปริศนาข้อนี้ ต่อบล็อกทั้งหมดเข้าด้วยกัน แล้วคลิก " เริ่ม " เพื่อดูมันเริ่มทำงาน!
+      courseD_scrat_ramp2_markdown_instruction: ลากบล็อก ` เดินไปข้างหน้า ` อีกอันหนึ่งจากกล่องเครื่องมือมาเพิ่ม แล้วต่อบล็อกทั้งหมดเข้ากับ ` เมื่อเรียกใช้งาน ` ก็ถือว่าเป็นอันสิ้นสุดการโค้ดของคุณ
+      courseD_scrat_ramp2_2018_markdown_instruction: ลากบล็อก ` เดินไปข้างหน้า ` อีกอันหนึ่งจากกล่องเครื่องมือมาเพิ่ม แล้วต่อบล็อกทั้งหมดเข้ากับ ` เมื่อเรียกใช้งาน ` ก็ถือว่าเป็นอันสิ้นสุดการโค้ดของคุณ
       courseD_scrat_ramp3_markdown_instruction: "There is one extra block that is going to cause Scrat to crash.  \nThrow it away by disconnecting it from the other blocks and dragging it back to the toolbox."
       courseD_scrat_ramp3_2018_markdown_instruction: "There is one extra block that is going to cause Scrat to crash.  \nThrow it away by disconnecting it from the other blocks and dragging it back to the toolbox."
       courseD_scrat_ramp4_markdown_instruction: Avoid the cracked ice to keep Scrat safe!
@@ -28872,29 +28849,29 @@ th:
         
         *(You will need to spin it 6 times, turning 60 degrees each time, to get this pattern.)*
       courseE_artist_ramp11_markdown_instruction: |-
-        Great!  Now let's make a square using Artist!  The blocks are a little different, but the idea is the same.
+        ยอดเยี่ยม  ตอนนี้ให้ทำสีเหลี่ยมจตุรัสโดยใช้ศิลปินเป็นผู้วาด! บล็อกแตกต่างกันเล็กน้อย แต่แนวคิดก็แบบเดียวกัน
         <hr/>
-        Each side of the square has a length of 200 pixels, and you will need to turn 90 degrees to make each angle.
+        ด้านของสี่เหลี่ยมแตละด้านมีความยาว 200 พิกเซลและคุณจะต้องหัน 90 องศาเพื่อสร้างมุมแต่ละมุม
       courseE_artist_ramp12_markdown_instruction: |-
-        Use what you've learned to draw this triangle inside of a square.
+        ใช้สิ่งที่คุณเรียนรุู้มา เพื่อวาดรูปสามเหลี่ยมในรูปสี่เหลี่ยมจตุรัสรูปนี้
         <hr/>
-        The sides are each 200 pixels long. You will need to turn 90 degrees to make the square and 120 degrees to make the triangle.
+        ความยาวด้าน 200 พิกเซล คุณจะต้องหัน 90 องศาเพื่อสร้างสี่เหลี่ยมจัตุรัสและ 120 องศาเพื่อสร้างรูปสามเหลี่ยม
       courseE_artist_ramp8_markdown_instruction: |-
-        Great!  Now let's use that `repeat` loop to make a square using Artist!  The blocks for artist are a little different than other puzzles, but the idea is the same.
+        ยอดเยี่ยม  ตอนนี้ให้ใช้ลูป ` ทำซ้ำ`ทำสีเหลี่ยมจตุรัสโดยใช้ศิลปินเป็นผู้วาด! บล็อกสำหรับศิลปินแตกต่างกันเล็กน้อยจากปริศนาอื่นๆ แต่แนวคิดก็แบบเดียวกัน
         ___
-        ##### Each side of the square has a length of 200 pixels, and you will need to turn 90 degrees to make each angle.
+        ##### ด้านของสี่เหลี่ยมมีความยาวด้านละ 200 พิกเซลและคุณจะต้องหัน 90 องศาเพื่อสร้างมุมแต่ละมุม
       courseE_artist_ramp8_2_markdown_instruction: |-
-        Great!  Now let's use that `repeat` loop to make a square using Artist!  The blocks for artist are a little different than other puzzles, but the idea is the same.
+        ยอดเยี่ยม  ตอนนี้ให้ใช้ลูป ` ทำซ้ำ`ทำสีเหลี่ยมจตุรัสโดยใช้ศิลปินเป็นผู้วาด! บล็อกสำหรับศิลปินแตกต่างกันเล็กน้อยจากปริศนาอื่นๆ แต่แนวคิดก็แบบเดียวกัน
         ___
-        ##### Each side of the square has a length of 200 pixels, and you will need to turn 90 degrees to make each angle.
+        ##### ด้านของสี่เหลี่ยมมีความยาวด้านละ 200 พิกเซลและคุณจะต้องหัน 90 องศาเพื่อสร้างมุมแต่ละมุม
       courseE_artist_ramp8_2018_markdown_instruction: |-
-        Great!  Now let's use that `repeat` loop to make a square using Artist!  The blocks for artist are a little different than other puzzles, but the idea is the same.
+        ยอดเยี่ยม  ตอนนี้ให้ใช้ลูป ` ทำซ้ำ`ทำสีเหลี่ยมจตุรัสโดยใช้ศิลปินเป็นผู้วาด! บล็อกสำหรับศิลปินแตกต่างกันเล็กน้อยจากปริศนาอื่นๆ แต่แนวคิดก็แบบเดียวกัน
         ___
-        ##### Each side of the square has a length of 200 pixels, and you will need to turn 90 degrees to make each angle.
+        ##### ด้านของสี่เหลี่ยมมีความยาวด้านละ 200 พิกเซลและคุณจะต้องหัน 90 องศาเพื่อสร้างมุมแต่ละมุม
       courseE_artist_ramp8_2_2018_markdown_instruction: |-
-        Great!  Now let's use that `repeat` loop to make a square using Artist!  The blocks for artist are a little different than other puzzles, but the idea is the same.
+        ยอดเยี่ยม  ตอนนี้ให้ใช้ลูป ` ทำซ้ำ`ทำสีเหลี่ยมจตุรัสโดยใช้ศิลปินเป็นผู้วาด! บล็อกสำหรับศิลปินแตกต่างกันเล็กน้อยจากปริศนาอื่นๆ แต่แนวคิดก็แบบเดียวกัน
         ___
-        ##### Each side of the square has a length of 200 pixels, and you will need to turn 90 degrees to make each angle.
+        ##### ด้านของสี่เหลี่ยมมีความยาวด้านละ 200 พิกเซลและคุณจะต้องหัน 90 องศาเพื่อสร้างมุมแต่ละมุม
       courseE_artist_ramp9_markdown_instruction: |-
         Use what you've learned to draw this triangle.
         ___
@@ -28915,8 +28892,8 @@ th:
       courseE_bee_concept1_2018_markdown_instruction: "*\"Can you BEE-lieve all of these flowers?\"*\n\nCollect all of the nectar from each flower. "
       courseE_bee_concept2_markdown_instruction: "Help the bee make all of the honey.  \n\nYou can only make honey at a honeycomb, but you can check any space to see if there is a honeycomb."
       courseE_bee_concept2_2018_markdown_instruction: "Help the bee make all of the honey.  \n\nYou can only make honey at a honeycomb, but you can check any space to see if there is a honeycomb."
-      courseE_bee_concept5_markdown_instruction: "Can you help the bee collect the nectar from the flowers? \n\nYou can only collect nectar from flowers, but you can check any space to see if there is a flower."
-      courseE_bee_concept5_2018_markdown_instruction: "Can you help the bee collect the nectar from the flowers? \n\nYou can only collect nectar from flowers, but you can check any space to see if there is a flower."
+      courseE_bee_concept5_markdown_instruction: "คุณช่วยผึ้งเก็บน้ำหวานจากเกสรดอกไม้ได้ไหม?\n\nคุณสามารถเก็บน้ำหวานจากเกสร ได้จากดอกไม้เท่านั้น แต่คุณสามารถเช็คดูก่อนได้ว่าตรงนั้นมีดอกไม้หรือไม่"
+      courseE_bee_concept5_2018_markdown_instruction: "คุณช่วยผึ้งเก็บน้ำหวานจากเกสรดอกไม้ได้ไหม?\n\nคุณสามารถเก็บน้ำหวานจากเกสร ได้จากดอกไม้เท่านั้น แต่คุณสามารถเช็คดูก่อนได้ว่าตรงนั้นมีดอกไม้หรือไม่"
       courseE_bee_functions10_markdown_instruction: "*\"Show me the HONEY!\"*\n\nSolve this puzzle by creating a function that causes the bee to: \n- turn toward the branch in the path\n- move forward\n- make all of the honey\n- return to the main path \n- turn back to the original direction"
       courseE_bee_functions10_2018_markdown_instruction: "*\"Show me the HONEY!\"*\n\nSolve this puzzle by creating a function that causes the bee to: \n- turn toward the branch in the path\n- move forward\n- make all of the honey\n- return to the main path \n- turn back to the original direction"
       courseE_bee_functions2_markdown_instruction: "Functions are blocks of code that perform a task.  \n\nUse the `get 2 nectar` function to collect the nectar from each flower."
@@ -28933,8 +28910,8 @@ th:
         Look very carefully at this puzzle to see if you can use what you learned to solve it.
       courseE_bee_functions_challenge1_markdown_instruction: You are on your own for this challenge.  This could "bee" harder than it looks!
       courseE_bee_functions_challenge1_2018_markdown_instruction: You are on your own for this challenge.  This could "bee" harder than it looks!
-      courseE_bee_ramp14_markdown_instruction: "The same technique works with nectar and honey!  \n\nLook at all of these clouds. Some of them will turn into honey, and others into nectar.   \nHelp the bee follow the path and solve this puzzle.\n\n\n\n"
-      courseE_bee_ramp14_2018_markdown_instruction: "The same technique works with nectar and honey!  \n\nLook at all of these clouds. Some of them will turn into honey, and others into nectar.   \nHelp the bee follow the path and solve this puzzle.\n\n\n\n"
+      courseE_bee_ramp14_markdown_instruction: "เทคนิคแบบเดียวกัน ใช้ได้กับน้ำหวานจากเกสรและน้ำผึ้ง!\n\nมองดูที่เมฆเหล่านี้ บางก้อนจะกลายเป็นน้ำผึ้ง บางก้อนก็จะกลายเป็นน้ำหวานจากเกสร\nช่วยผึ้งให้ไปตามเส้นทางและแก้ปริศนานี้ให้ได้\n\n\n\n"
+      courseE_bee_ramp14_2018_markdown_instruction: "เทคนิคแบบเดียวกัน ใช้ได้กับน้ำหวานจากเกสรและน้ำผึ้ง!\n\nมองดูที่เมฆเหล่านี้ บางก้อนจะกลายเป็นน้ำผึ้ง บางก้อนก็จะกลายเป็นน้ำหวานจากเกสร\nช่วยผึ้งให้ไปตามเส้นทางและแก้ปริศนานี้ให้ได้\n\n\n\n"
       courseE_bee_ramp17_markdown_instruction: 'For the final puzzle in this stage, use what you have learned to collect all of the nectar and make all of the honey.  '
       courseE_collector_ramp10_markdown_instruction: 'Take the same path as before, but this time collect all of the treasure as you find it.  '
       courseE_collector_ramp8_markdown_instruction: |
@@ -29076,28 +29053,22 @@ th:
         
         Use nested loops to get the bird to the pig.
       courseE_maze_ramp1_2018_markdown_instruction: For this puzzle, drag all of the blocks together and click "Run" to watch it go!
-      courseE_maze_ramp2_markdown_instruction: Drag an extra `move forward` block out of the toolbox, then attach all blocks to `when run` to finish your code.
-      courseE_maze_ramp2_2018_markdown_instruction: Drag an extra `move forward` block out of the toolbox, then attach all blocks to `when run` to finish your code.
+      courseE_maze_ramp2_markdown_instruction: ลากบล็อก ` เดินไปข้างหน้า ` อีกอันหนึ่งจากกล่องเครื่องมือมาเพิ่ม แล้วต่อบล็อกทั้งหมดเข้ากับ ` เมื่อเรียกใช้งาน ` ก็ถือว่าเป็นอันสิ้นสุดการโค้ดของคุณ
+      courseE_maze_ramp2_2018_markdown_instruction: ลากบล็อก ` เดินไปข้างหน้า ` อีกอันหนึ่งจากกล่องเครื่องมือมาเพิ่ม แล้วต่อบล็อกทั้งหมดเข้ากับ ` เมื่อเรียกใช้งาน ` ก็ถือว่าเป็นอันสิ้นสุดการโค้ดของคุณ
       courseE_maze_ramp3_markdown_instruction: "*\"This pig is ruffling my feathers.\"*\n\nThere is one extra block that is going to cause the bird to crash.  \nThrow it away by dragging it back to the toolbox."
       courseE_maze_ramp3_2018_markdown_instruction: "*\"This pig is ruffling my feathers.\"*\n\nThere is one extra block that is going to cause the bird to crash.  \nThrow it away by dragging it back to the toolbox."
-      courseE_maze_ramp4_markdown_instruction: "*\"Trace the path and lead me to the silly pig.\"* \n\nAvoid TNT or feathers will fly!"
-      courseE_maze_ramp4_2018_markdown_instruction: "*\"Trace the path and lead me to the silly pig.\"* \n\nAvoid TNT or feathers will fly!"
+      courseE_maze_ramp4_markdown_instruction: "แกะรอยเส้นทางให้ดีนะ และพาฉันไปจัดการเจ้าหมูซื่อบื้อนั่น"
+      courseE_maze_ramp4_2018_markdown_instruction: "แกะรอยเส้นทางให้ดีนะ และพาฉันไปจัดการเจ้าหมูซื่อบื้อนั่น"
       courseE_maze_ramp5_markdown_instruction: |-
-        *"Follow this path to get me to the pig!"*
-        
-        Avoid the TNT.
+        *"ให้ไปตามทางouh เพื่อพาฉันไปจัดการเจ้าหมูนั่น" อยู่ห่างๆระเบิดไว้
       courseE_maze_ramp5_2018_markdown_instruction: |-
-        *"Follow this path to get me to the pig!"*
-        
-        Avoid the TNT.
+        *"ให้ไปตามทางouh เพื่อพาฉันไปจัดการเจ้าหมูนั่น" อยู่ห่างๆระเบิดไว้
       courseE_maze_ramp6_markdown_instruction: |-
-        *"Keep calm and help me find the bad pig. Otherwise I might get angry!"*
-        
-        When you have several blocks in a row, try moving them inside of a `repeat` loop.  This will do the same thing with less code!
+        "ใจเย็นๆไว้ ช่วยฉันหาเจ้าหมูตัวแสบนั่น ไม่อย่างนั้นฉันอาจอารมณ์เสียได้!"*
+        เมื่อคุณมีบล็อคเป็นแถว ลองย้ายบล็อกเหล่านี้เข้าไปไว้ในลูป `ทำซ้ำ`  เพื่อทำอย่างเดียวกันโดยใช้โค้ดน้อยกว่า!
       courseE_maze_ramp6_2018_markdown_instruction: |-
-        *"Keep calm and help me find the bad pig. Otherwise I might get angry!"*
-        
-        When you have several blocks in a row, try moving them inside of a `repeat` loop.  This will do the same thing with less code!
+        "ใจเย็นๆไว้ ช่วยฉันหาเจ้าหมูตัวแสบนั่น ไม่อย่างนั้นฉันอาจอารมณ์เสียได้!"*
+        เมื่อคุณมีบล็อคเป็นแถว ลองย้ายบล็อกเหล่านี้เข้าไปไว้ในลูป `ทำซ้ำ`  เพื่อทำอย่างเดียวกันโดยใช้โค้ดน้อยกว่า!
       courseE_maze_ramp7_markdown_instruction: |-
         *"It's time to get angry!"*
         
@@ -29107,9 +29078,7 @@ th:
         
         **Challenge:** Use what you've learned to get the bird to the pig!
       courseE_multi_maze_ramp5_markdown_instruction: |-
-        *"Follow this path to get me to the pig!"*
-        
-        Avoid the TNT.
+        *"ให้ไปตามทางouh เพื่อพาฉันไปจัดการเจ้าหมูนั่น" อยู่ห่างๆระเบิดไว้
       courseE_playLab_challenge1_markdown_instruction: "*The **squirrels** are terrified to see that a **dinosaur** has come to town! Can the brave **knight** keep them all from panicking?*\n\nRules:\n1. *Touching the squirrels scores you points.*\n2. *Touching the dinosaur takes many points away.*\n\nHere is a different kind of game that has already been started for you! Play it to see how it works. \n\n\nSomething should happen when you get enough points or when you run out of points. Add some code to the `win game` and `lose game` functions to make the game work the way it should. \nClick the hints for ideas!"
       courseE_playLab_challenge1_2018_markdown_instruction: "*The **squirrels** are terrified to see that a **dinosaur** has come to town! Can the brave **knight** keep them all from panicking?*\n\nRules:\n1. *Touching the squirrels scores you points.*\n2. *Touching the dinosaur takes many points away.*\n\nHere is a different kind of game that has already been started for you! Play it to see how it works. \n\n\nSomething should happen when you get enough points or when you run out of points. Add some code to the `win game` and `lose game` functions to make the game work the way it should. \nClick the hints for ideas!"
       courseE_playLab_scaffold1_markdown_instruction: |-
@@ -29295,13 +29264,13 @@ th:
         
         *(You will need to spin it 6 times at 60 degrees to get this pattern.)*
       courseF_artist_ramp8_markdown_instruction: |-
-        Great!  Now let's make a square using Artist!  The blocks for artist are a little different than other puzzles, but the idea is the same.
+        ยอดเยี่ยม  ตอนนี้ทำสีเหลี่ยมจตุรัสโดยใช้ศิลปินเป็นผู้วาด! บล็อกสำหรับศิลปินแตกต่างกันเล็กน้อยจากปริศนาอื่นๆ แต่แนวคิดก็แบบเดียวกัน
         ___
-        Each side of the square has a length of 200 pixels, and you will need to turn 90 degrees to make each angle.
+        ด้านของสี่เหลี่ยมมีความยาวด้านละ 200 พิกเซลและคุณจะต้องหัน 90 องศาเพื่อสร้างมุมแต่ละมุม
       courseF_artist_ramp8_2018_markdown_instruction: |-
-        Great!  Now let's make a square using Artist!  The blocks for artist are a little different than other puzzles, but the idea is the same.
+        ยอดเยี่ยม  ตอนนี้ทำสีเหลี่ยมจตุรัสโดยใช้ศิลปินเป็นผู้วาด! บล็อกสำหรับศิลปินแตกต่างกันเล็กน้อยจากปริศนาอื่นๆ แต่แนวคิดก็แบบเดียวกัน
         ___
-        Each side of the square has a length of 200 pixels, and you will need to turn 90 degrees to make each angle.
+        ด้านของสี่เหลี่ยมมีความยาวด้านละ 200 พิกเซลและคุณจะต้องหัน 90 องศาเพื่อสร้างมุมแต่ละมุม
       courseF_artist_ramp9_markdown_instruction: |-
         Use what you've learned to draw this triangle.
         ___
@@ -29423,18 +29392,14 @@ th:
         *"This cloud is blocking my view!"*
         
         Check to see if there's a flower under the cloud. If there's a flower, get nectar.
-      courseF_bee_conditionals2_markdown_instruction: "*\"It's too cloudy to see any flowers!\"*\n\nCheck underneath every cloud to see if it is hiding a flower before you get nectar. If there is a flower underneath the cloud, the bee will need to get nectar **once**.  \n\nRemember: Not all clouds hide the same thing!"
-      courseF_bee_conditionals2_2018_markdown_instruction: "*\"It's too cloudy to see any flowers!\"*\n\nCheck underneath every cloud to see if it is hiding a flower before you get nectar. If there is a flower underneath the cloud, the bee will need to get nectar **once**.  \n\nRemember: Not all clouds hide the same thing!"
-      courseF_bee_conditionals3_markdown_instruction: You can only collect nectar from flowers, but you can check any space to see if there is a flower. If there is a flower under any of these clouds, the bee will need to collect nectar **once**.
-      courseF_bee_conditionals3_2018_markdown_instruction: You can only collect nectar from flowers, but you can check any space to see if there is a flower. If there is a flower under any of these clouds, the bee will need to collect nectar **once**.
+      courseF_bee_conditionals2_markdown_instruction: "*\" มีเมฆมากเกินไป มองไม่เห็นดอกไม้เลย! \"* \n\nเช็คดูใต้เมฆทุกๆ ก้อน ว่ามันซ่อนดอกไม้ไว้หรือเปล่า ก่อนที่คุณจะทำการเก็บน้ำหวานจากเกสร  ถ้าหากว่ามีดอกไม้อยู่ใต้เมฆ ผึ้งจะต้องเก็บน้ำหวานจากเกสร *เพียงครั้งเดียว*\n\nจำไว้ว่าเมฆทุกๆก้อน ไม่ได้ซ่อนของอย่างเดียวกัน"
+      courseF_bee_conditionals2_2018_markdown_instruction: "*\" มีเมฆมากเกินไป มองไม่เห็นดอกไม้เลย! \"* \n\nเช็คดูใต้เมฆทุกๆ ก้อน ว่ามันซ่อนดอกไม้ไว้หรือเปล่า ก่อนที่คุณจะทำการเก็บน้ำหวานจากเกสร  ถ้าหากว่ามีดอกไม้อยู่ใต้เมฆ ผึ้งจะต้องเก็บน้ำหวานจากเกสร *เพียงครั้งเดียว*\n\nจำไว้ว่าเมฆทุกๆก้อน ไม่ได้ซ่อนของอย่างเดียวกัน"
+      courseF_bee_conditionals3_markdown_instruction: คุณสามารถเก็บน้ำหวานจากเกสร ได้จากดอกไม้เท่านั้น แต่คุณสามารถเช็คดูก่อนได้ว่าตรงนั้นมีดอกไม้หรือไม่ ถ้ามีดอกไม้อยู่ใต้เมฆเหล่านี้ ผึ้งจะต้องเก็บน้ำหวานจากเกสรได้ **ครั้งเดียว**
+      courseF_bee_conditionals3_2018_markdown_instruction: คุณสามารถเก็บน้ำหวานจากเกสร ได้จากดอกไม้เท่านั้น แต่คุณสามารถเช็คดูก่อนได้ว่าตรงนั้นมีดอกไม้หรือไม่ ถ้ามีดอกไม้อยู่ใต้เมฆเหล่านี้ ผึ้งจะต้องเก็บน้ำหวานจากเกสรได้ **ครั้งเดียว**
       courseF_bee_conditionals4_markdown_instruction: |-
-        In this puzzle, we know that every flower has exactly one nectar, but the flowers aren't spaced evenly.
-        
-        Get all of the nectar using as few blocks as possible.
+        สำหรับปริศนาอันนี้ เรารู้ว่าดอกไม้ทุกๆ ดอกมีนำหวานจากเกสร หน่วย แต่ดอกไม้ไม่ได้มีระยะห่างเท่าๆกัน เก็บน้ำหวานจากเกสรโดยใช้บล็อกสองสามบล็อกถ้าเป็นไปได้
       courseF_bee_conditionals4_2018_markdown_instruction: |-
-        In this puzzle, we know that every flower has exactly one nectar, but the flowers aren't spaced evenly.
-        
-        Get all of the nectar using as few blocks as possible.
+        สำหรับปริศนาอันนี้ เรารู้ว่าดอกไม้ทุกๆ ดอกมีนำหวานจากเกสร หน่วย แต่ดอกไม้ไม่ได้มีระยะห่างเท่าๆกัน เก็บน้ำหวานจากเกสรโดยใช้บล็อกสองสามบล็อกถ้าเป็นไปได้
       courseF_bee_conditionals7_predict2_markdown_instruction: |-
         Sometimes a cloud covers a flower, sometimes it covers a honeycomb!
         
@@ -29444,13 +29409,15 @@ th:
         
         Use the `if/else` block to collect nectar at flowers and make honey at honeycomb.
       courseF_bee_conditionals8_markdown_instruction: |-
-        **Challenge:** There will be either a flower or a honeycomb under each of those clouds!
+        **การท้าทาย** มีดอกไม้ หรือไม่ก็รวงผึ้งภายใต้เมฆแต่ละก้อน
         
-        Collect nectar once if there is a flower. Otherwise, make honey once (because there is a honeycomb).
+        เก็บน้าหวานจากเกสรถ้ามีดอกไม้
+        ไม่เช่นนั้น ทำน้ำหวาน(เพราะมีรวงผึ้ง)
       courseF_bee_conditionals8_2018_markdown_instruction: |-
-        **Challenge:** There will be either a flower or a honeycomb under each of those clouds!
+        **การท้าทาย** มีดอกไม้ หรือไม่ก็รวงผึ้งภายใต้เมฆแต่ละก้อน
         
-        Collect nectar once if there is a flower. Otherwise, make honey once (because there is a honeycomb).
+        เก็บน้าหวานจากเกสรถ้ามีดอกไม้
+        ไม่เช่นนั้น ทำน้ำหวาน(เพราะมีรวงผึ้ง)
       courseF_bee_for10_markdown_instruction: "**Challenge:** Take what you've learned about `for` loops and try to solve this problem. \n\nRemember: You may have to run through solutions multiple times before you figure out all of the steps."
       courseF_bee_for10_2018_markdown_instruction: "**Challenge:** Take what you've learned about `for` loops and try to solve this problem. \n\nRemember: You may have to run through solutions multiple times before you figure out all of the steps."
       courseF_bee_for11_markdown_instruction: "If your loop is counting down, the increment is **subtracted** from your counter variable each time through. \n\nWhat should your increment be to collect 15, then 12, then 9, 6, 3 nectar?"
@@ -29588,24 +29555,18 @@ th:
         Drag a <xml><block type="controls_repeat"><title name="TIMES">7</title></block></xml> block out of the toolbox and attach it to the <xml><block type="when_run"/></xml> event.
         
         Place the <xml><block type="maze_moveForward"/></xml> block inside the loop to finish your code.
-      courseF_maze_ramp4_markdown_instruction: "*\"Trace the path and lead me to the silly pig.\"* \n\nAvoid TNT or feathers will fly!"
-      courseF_maze_ramp4_2018_markdown_instruction: "*\"Trace the path and lead me to the silly pig.\"* \n\nAvoid TNT or feathers will fly!"
+      courseF_maze_ramp4_markdown_instruction: "แกะรอยเส้นทางให้ดีนะ และพาฉันไปจัดการเจ้าหมูซื่อบื้อนั่น"
+      courseF_maze_ramp4_2018_markdown_instruction: "แกะรอยเส้นทางให้ดีนะ และพาฉันไปจัดการเจ้าหมูซื่อบื้อนั่น"
       courseF_maze_ramp5_markdown_instruction: |-
-        *"Follow this path to get me to the pig!"*
-        
-        Avoid the TNT.
+        *"ให้ไปตามทางouh เพื่อพาฉันไปจัดการเจ้าหมูนั่น" อยู่ห่างๆระเบิดไว้
       courseF_maze_ramp5_2018_markdown_instruction: |-
-        *"Follow this path to get me to the pig!"*
-        
-        Avoid the TNT.
+        *"ให้ไปตามทางouh เพื่อพาฉันไปจัดการเจ้าหมูนั่น" อยู่ห่างๆระเบิดไว้
       courseF_maze_ramp6_markdown_instruction: |-
-        *"Keep calm and help me find the bad pig. Otherwise I might get angry!"*
-        
-        When you have several blocks in a row, try moving them inside of a <xml><block type="controls_repeat"><title name="TIMES">???</title></block></xml> loop.  This will do the same thing with less code!
+        "ใจเย็นๆไว้ ช่วยฉันหาเจ้าหมูตัวแสบนั่น ไม่อย่างนั้นฉันอาจอารมณ์เสียได้!"*
+        เมื่อคุณมีบล็อคเป็นแถว ลองย้ายบล็อกเหล่านี้เข้าไปไว้ในลูป <xml><block type="controls_repeat"><title name="TIMES">???</title></block></xml> เพื่อทำอย่างเดียวกันโดยใช้โค้ดน้อยกว่า!
       courseF_maze_ramp6_2018_markdown_instruction: |-
-        *"Keep calm and help me find the bad pig. Otherwise I might get angry!"*
-        
-        When you have several blocks in a row, try moving them inside of a <xml><block type="controls_repeat"><title name="TIMES">???</title></block></xml> loop.  This will do the same thing with less code!
+        "ใจเย็นๆไว้ ช่วยฉันหาเจ้าหมูตัวแสบนั่น ไม่อย่างนั้นฉันอาจอารมณ์เสียได้!"*
+        เมื่อคุณมีบล็อคเป็นแถว ลองย้ายบล็อกเหล่านี้เข้าไปไว้ในลูป <xml><block type="controls_repeat"><title name="TIMES">???</title></block></xml> เพื่อทำอย่างเดียวกันโดยใช้โค้ดน้อยกว่า!
       courseF_maze_ramp7_markdown_instruction: |-
         *"It's time to get angry!"*
         
@@ -30456,7 +30417,7 @@ th:
       grade1_playlab_eventsFP_markdown_instruction: "Use your imagination. What can you do to make this game more fun?\n<br/>\n\n<h5>\n<details>\n<summary><b>Need some ideas?</b></summary>\n\\t<br/>\n\\t<h5>\n\\t\\t<ul>\n        \\t<li><strong>Conversation</strong> - Add blocks so that the characters say \"Hello!\" when they run into each other. </li>\n            <li><strong>Where's the Dragon?</strong> - Have the dragon dissapear when the up arrow key is pressed.</li>\n            <li><strong>Super Dragon</strong> - Make the dragon move at a faster speed and then try to catch him with the knight. </li>\n        </ul>\n\\t</h5>\n</details>\n</h5>"
       grade2_CaringForNewPet_0_markdown_instruction: For this puzzle, drag all of the blocks together and click "Run" to watch it go!
       grade2_CaringForNewPet_1_markdown_instruction: Drag an extra `move forward` block out of the toolbox to finish your code.
-      grade2_CaringForNewPet_11_markdown_instruction: '*"Keep calm and help me find the bad pig."*'
+      grade2_CaringForNewPet_11_markdown_instruction: '"ใจเย็นๆไว้ ช่วยฉันหาเจ้าหมูตัวแสบนั่น"*'
       grade2_CaringForNewPet_2_markdown_instruction: "*\"This pig is ruffling my feathers.\"*\n\nThere is one extra block that is going to cause the bird to crash.  \nThrow it away by dragging it back to the toolbox."
       grade2_CaringForNewPet_2courseC_maze_programming3_markdown_instruction: "*\"This pig is ruffling my feathers.\"*\n\nThere is one extra block that is going to cause the bird to crash.  \nThrow it away by dragging it back to the toolbox."
       grade2_CaringForNewPet_3_markdown_instruction: '*"Trace the path and lead me to the silly pig. Avoid TNT or feathers will fly!"*'
@@ -30503,8 +30464,8 @@ th:
         Draw this diamond with 200 pixel sides.
       grade2_MakeDogTag_6_markdown_instruction: "**Challenge:** This tag is a special one!  Can you figure out how to draw the outline?  \n(The long side is 150 pixels and each of the short sides are 75 pixels.)"
       grade2_MakeDogTag_7_markdown_instruction: "One more tag.  This is a triangle for Pi.  \n(Each side is 150 pixels)"
-      grade2_MakeDogTag_8_markdown_instruction: Now let's connect a bunch of V's together in a loop.
-      grade2_MakeDogTag_9_markdown_instruction: "Time to make something snazzy! \n\nRebuild the code from the last puzzle, but this time, add a left turn of 30 degrees inside the loop. Now, repeat it 24 times instead of 8."
+      grade2_MakeDogTag_8_markdown_instruction: ตอนนี้เรามาเชื่อมต่อกลุ่มของ V เข้าด้วยกันด้วยลูป
+      grade2_MakeDogTag_9_markdown_instruction: "ถึงเวลาที่จะมาทำบางอย่างที่เก๋ไก๋กัน \n\nสร้างโค้ดจากปริศนาล่าสุดอีกครั้ง แต่ตอนนี้เพิ่มหันไปทางซ้าย 30 องศาภายในลูป ตอนนี้ทำซ้ำ 24 ครั้งแทนที่จะเป็น 8 ครั้ง"
       grade2_MakeDogTag_BFP_markdown_instruction: |-
         *"Hi, I'm an artist. You can write code to make me draw almost anything."*
         
@@ -30517,20 +30478,20 @@ th:
         Here are some ideas you could try if you get stuck:
         ![](https://images.code.org/e36330061c21807fac24d804e301e572-image-1475814869558.26.01.png)
       grade2_PuppyLoops_10_markdown_instruction: |-
-        My teacher says that I should finish what I start!
+        ครูของฉันบอกว่าฉันควรจะทำสิ่งที่ฉันเริ่มต้น ให้เสร็จสิ้นไป!
         
-        Help me finish my pinwheel. Can you figure out what's wrong?
+        ช่วยฉันวาดวงล้อนี้ของฉันให้เสร็จ คุณบอกได้ไหมว่ามีอะไรผิด?
       grade2_PuppyLoops_2_markdown_instruction: |-
         Suddenly, a magical block appears!  With the `repeat` block, you can loop code over and over.
         
         Can you get to the pig by creating a loop that uses only one `move forward` block inside of a `repeat`?
       grade2_PuppyLoops_3_markdown_instruction: Get me to the pig! Solve this puzzle by creating a loop!
       grade2_PuppyLoops_4_markdown_instruction: In this puzzle, two `repeat` loops will help you get to the pig with the fewest number of blocks!
-      grade2_PuppyLoops_8_markdown_instruction: "This code for the cat's whiskers is wrong. \n\nFix this code to draw whiskers that are all the same length."
+      grade2_PuppyLoops_8_markdown_instruction: "โค้ดนี้สำหรับหนวดแมวไม่ถูกต้อง\n\nแก้ไขโค้ดนี้เพื่อวาดหนวดที่มีความยาวเท่ากันทั้งหมด"
       grade2_PuppyLoops_9_markdown_instruction: |-
-        Looks like the C in code is drawn backwards!
+        ดูเหมือนว่าตัวอักษร C ในโค้ดจะถูกวาดกลับหลัง!
         
-        Can you make it look like a C again?
+        คุณสามารถทำให้มันดูเหมือนเป็น C อีกครั้งได้ไหม?
       grade2_collector_10_markdown_instruction: "You're almost done!  \n\nCollect as many pieces of treasure as you can to finish the stage!"
       grade2_collector_10_2018_markdown_instruction: "You're almost done!  \n\nCollect as many pieces of treasure as you can to finish the stage!"
       grade2_collector_2_markdown_instruction: Move Laurel to the gold, then use `collect` to pick it up.
@@ -30551,8 +30512,8 @@ th:
       grade2_collector_8_markdown_instruction: '*"Keep up the good work! Help me collect all of the coins."*'
       grade2_collector_9_markdown_instruction: '*"Let''s get all of the coins!"*'
       grade2_collector_9a_markdown_instruction: "**Challenge:** Grab all of the coins."
-      grade2_collector_A_markdown_instruction: Help Laurel collect all of the treasure.
-      grade2_collector_A_2018_markdown_instruction: Help Laurel collect all of the treasure.
+      grade2_collector_A_markdown_instruction: ช่วยลอเรลเก็บสมบัติให้หมด
+      grade2_collector_A_2018_markdown_instruction: ช่วยลอเรลเก็บสมบัติให้หมด
       grade2_collector_pre1_markdown_instruction: "*\"Hi, I'm Laurel. Today I'm searching for treasure at the dog park!\"*  \n\nPlay around with the blocks to see if you can help Laurel collect some gold."
       grade2_link_RunMarco_partner_markdown_instruction: <a href="https://www.allcancode.com/runmarco"></a><img src="https://images.code.org/c754e82a395ab69e5c1e3b2dfe8bf9ff-image-1486603338831.22.10.png" width="400px"/></a>
       grade2_maze_debuggingFP_markdown_instruction: '*"Now, help me sneak up on the pig any way you want to!"*'
@@ -30585,32 +30546,32 @@ th:
         
         Use what you learned in other puzzles!
       grade3_ConditionalsElse_1_markdown_instruction: "This cloud is blocking my view! \n\nCheck to see if there's a flower under the cloud, and only get nectar if there's a flower.   \nBe careful, it can change!"
-      grade3_ConditionalsElse_2_markdown_instruction: "More clouds! \n\nCheck underneath every cloud to see if it is hiding a flower before you get nectar.  \n\nRemember: Not all clouds hide the same thing!"
+      grade3_ConditionalsElse_2_markdown_instruction: "มีเมฆมาเพิ่มอีกแล้ว! \n\nเช็คดูใต้เมฆทุกๆ ก้อน ว่ามันซ่อนดอกไม้ไว้หรือเปล่า ก่อนที่คุณจะทำการเก็บน้ำหวานจากเกสร  \n\nจำไว้ว่าเมฆทุกๆก้อน ไม่ได้ซ่อนของอย่างเดียวกัน"
       grade3_ConditionalsElse_4_markdown_instruction: "Sometimes this cloud covers a flower, and sometimes it covers a honeycomb! \n\nUse the `if/else` block to collect nectar only if it is a flower.  \nElse, make honey (because it is a honeycomb)."
       grade3_ConditionalsElse_5_markdown_instruction: |-
-        There will be either a flower or a honeycomb under each of those clouds!
+        มีดอกไม้ หรือไม่ก็รวงผึ้งภายใต้เมฆแต่ละก้อน
         
-        Use the `if/else` block to collect nectar if there is a flower.
-        Otherwise, make honey (because there is a honeycomb).
+        เก็บน้าหวานจากเกสรถ้ามีดอกไม้
+        ไม่เช่นนั้น ทำน้ำหวาน(เพราะมีรวงผึ้ง)
       grade3_ConditionalsElse_6_markdown_instruction: "I am not sure how much nectar this flower has, but I know it has either 1, 2, or 3 nectar. \n\nCombine the conditional blocks (`if` and/or `if/else`) to only get as much nectar as the flower has. \n\nRemember, the amount of nectar can change each time you run the puzzle!"
       grade3_ConditionalsElse_7_markdown_instruction: "These flowers can have 3, 2, or 1 nectar. \n\nComplete the `check purple flower` function and use it to collect all of the nectar at the flowers."
       grade3_ConditionalsElse_8_markdown_instruction: "Write the function for `check flower make honey`. \n\nYour function should check if the purple flower has 3, 2, or 1 nectar and get all of the nectar. \nThen, move forward and make honey."
-      grade3_ConditionalsElse_9_markdown_instruction: "**Assessment:** This cloud is either hiding a flower with one nectar or a honeycomb that needs one honey.  \n\nComplete the `get nectar or make honey` function, then call it to collect the nectar or honey. \n"
+      grade3_ConditionalsElse_9_markdown_instruction: "**การประเมินผล:** เมฆก้อนนี้จะซ่อนน้ำหวานจากเกสรดอกไม้หนึ่งหน่วยหรือไม่ก็ซ่อนรวงผึ้งที่เก็บน้ำผึ้งได้หนึ่งหน่วย\nทำฟังชั่น `เก็บน้ำหวานจากเกสรหรือทำน้ำผึ้ง` แล้วเรียกฟั่งชั่นดังกล่าวเพื่อเก็บน้ำหวานจากเกสรหรือทำน้ำผึ้ง\n"
       grade3_ConditionalsElse_TeacherIDo_markdown_instruction: |-
-        There will be either a flower or a honeycomb under each of those clouds!
+        มีดอกไม้ หรือไม่ก็รวงผึ้งภายใต้เมฆแต่ละก้อน
         
-        Use the `if/else` block to collect nectar if there is a flower.
-        Otherwise, make honey (because there is a honeycomb).
+        เก็บน้าหวานจากเกสรถ้ามีดอกไม้
+        ไม่เช่นนั้น ทำน้ำหวาน(เพราะมีรวงผึ้ง)
       grade3_Conditionals_1_markdown_instruction: "I'm a hungry bee! \n\n\nHelp me collect all of the nectar from the flowers using the fewest number of blocks."
       grade3_Conditionals_10_markdown_instruction: |-
-        There's a lot happening here!
+        มีอะไรเกิดขึ้นมากมายที่นี่!
         
-        Use what you've learned to collect all of the nectar and then make the honey.
+        ใช้สิ่งที่คุณได้เรียนรู้มา เพื่อเก็บน้ำหวานจากเกสรทั้งหมดและทำน้ำผึ้งให้หมด
       grade3_Conditionals_11 BAD_markdown_instruction: "**Assessment:** Use a `while` loop to collect all of the nectar from these flowers."
       grade3_Conditionals_11_markdown_instruction: "Let's put everything together!\n\nUse what you've learned to help me collect nectar only from flowers that have it, using as few blocks as possible.  \n\nDon't forget to make honey at the end."
       grade3_Conditionals_12_markdown_instruction: "This stair step pattern should look familiar.  \n\nCan you collect nectar only from the flowers that have some, using as few blocks as possible?"
-      grade3_Conditionals_13_markdown_instruction: "**Assessment:** Collect all of the nectar.  \nBe careful not to try to collect nectar from a purple flower if it doesn't have any."
-      grade3_Conditionals_2_markdown_instruction: "Look at all of that nectar!\n\nHelp me collect the nectar and make the honey using as few blocks as you can.  "
+      grade3_Conditionals_13_markdown_instruction: "**การประเมินผล:** เก็บน้ำหวานจากเกสรทั้งหมด ให้ระวังที่จะไม่เก็บน้ำหวานจากเกสรดอกไม้สีม่วง ถ้าดอกไม้เหล่านั้นไม่มีน้ำหวานเลย"
+      grade3_Conditionals_2_markdown_instruction: "มองไปที่น้ำหวานจากเกสรเหล่านี้!\n\nช่วยฉันเก็บน้ำหวานจากเกสรและทำน้ำผึ้ง โดยใช้บล็อกเพียงสองสามบล็อก เท่าที่คุณสามารถทำได้  "
       grade3_Conditionals_3_markdown_instruction: "These magic purple flowers change!\n\nEach time you try the puzzle, purple flowers can have either 1 nectar or none at all...but you won't know the number until you run the code! \n\nBe careful not to collect nectar from a purple flower if it doesn't have any. \nYou must first check if the nectar is equal to 1 using the `if nectar` block."
       grade3_Conditionals_8_markdown_instruction: "I wonder what's out there!\n\nHelp me fly around the yard and collect nectar only from the flowers that have some. "
       grade3_Debugging_1_markdown_instruction: |-
@@ -30618,9 +30579,9 @@ th:
         
         Fix the error(s) to collect all of the nectar.
       grade3_Debugging_10_markdown_instruction: |-
-        **Challenge:** *"This puzzle is making me loopy!"*
+        **การท้าทาย** *"ปริศนานี้ทำให้ฉันต้องลูปไปลูปมา"*
         
-        All of the commands that you need are already here...now use your debugging skills to figure out how to solve this puzzle.
+        คำสั่งทั้งหมดที่จำเป็นนั้นมีอยู่แล้ว... ตอนนี้ใช้ทักษะในการดีบั๊กของคุณเพื่อหาวิธีแก้ไขปริศนานี้
       grade3_Debugging_11_markdown_instruction: "**Challenge:**  Fix the errors to collect all of the nectar and make all of the honey."
       grade3_Debugging_2_markdown_instruction: |-
         *"These blocks are really bugging me!"*
@@ -30644,13 +30605,10 @@ th:
         
         Fix the error(s) to make all of the honey.
       grade3_Debugging_9_markdown_instruction: |-
-        "Bee" patient with this one!
-        
-        You will need to fix a couple of things in this program to collect all of the nectar and make all of the honey.
+        คุณจะต้องแก้สองสามอย่างในโปรแกรมนี้ เพื่อให้สามารถเก็บน้ำหวานจากเกสรทั้งหมดและทำน้ำผึ้งให้หมด
       grade3_Loops_10_markdown_instruction: |-
-        Such a busy bee!
-        
-        Help Bee collect all of the nectar and make all of the honey with the fewest blocks possible.
+        เป็นผึ้งที่ขยันจริงๆ!
+        ช่วยผึ้งเก็บรวบรวมน้ำหวานจากเกสรทั้งหมด และทำน้ำผึ้งทั้งหมด โดยใช้บล็อกจำนวนที่น้อยที่สุดเท่าที่จะเป็นไปได้
       grade3_Loops_11_markdown_instruction: "The shape of this path is different from the others. \n\nCan you collect all of the nectar using as few blocks as possible?"
       grade3_Loops_3_markdown_instruction: Use a `repeat` loop to collect all of the nectar.
       grade3_Loops_4_markdown_instruction: ตอนนี้ใช้บล็อก`ทำซ้ำ` เพื่อเก็บน้ำหวานจากเกสรทั้งหมดและทำน้ำผี้งให้หมดด้วย
@@ -30683,17 +30641,15 @@ th:
         
         This field has clusters of corn, lettuce, and pumpkins all growing together.  Can you collect them all?
       grade3_RunningFarm_6_markdown_instruction: |-
-        *"Let's take this one step further!"*
+        *"ขอขยับขึ้นไปอีกขั้นหนึ่ง! "*
         
-        Can you figure out how to pick the pumpkin?  Make sure to collect all of the corn along the way!
+        คุณสามารถหาวิธีในการเก็บฟักทอง?  ให้แน่ใจว่าคุณรวบรวมข้าวโพดทั้งหมดไปตลอดทางด้วย!
       grade3_RunningFarm_7_markdown_instruction: "**Challenge:** Collect all of the corn and lettuce, then pick the pumpkin."
       grade3_RunningFarm_8_markdown_instruction: Harvesting one type of crop at a time takes too long. Can you help me harvest both wheat and potatoes in one run? I wonder if you can stack another While There is... loop on top of another one?
       grade3_RunningFarm_9_markdown_instruction: Can you help me one last time? I want to collect as many crops as I can before the weeds take over this field. How many do you think we can get?
       grade3_bee_conditionals_new1a_markdown_instruction: You can only collect nectar from flowers, but you can check any space to see if there is a flower.
       grade3_bee_conditionals_new2a_markdown_instruction: |-
-        In this puzzle, we know that every flower has exactly one nectar, but the flowers aren't spaced evenly.
-        
-        Get all of the nectar using as few blocks as possible.
+        สำหรับปริศนาอันนี้ เรารู้ว่าดอกไม้ทุกๆ ดอกมีนำหวานจากเกสร หน่วย แต่ดอกไม้ไม่ได้มีระยะห่างเท่าๆกัน เก็บน้ำหวานจากเกสรโดยใช้บล็อกสองสามบล็อกถ้าเป็นไปได้
       grade3_bee_conditionals_new3b_markdown_instruction: |-
         Conditionals can be helpful, even when you know exactly what is in each spot!
         
@@ -30702,7 +30658,7 @@ th:
         *"This cloud is blocking my view!"*
         
         Check to see if there's a flower under the cloud. If there's a flower, get nectar.
-      grade3_bee_conditionals_quantum2_markdown_instruction: "More clouds! \n\nCheck underneath every cloud to see if it is hiding a flower before you get nectar.  \n\nRemember: Not all clouds hide the same thing!"
+      grade3_bee_conditionals_quantum2_markdown_instruction: "มีเมฆมาเพิ่มอีกแล้ว! \n\nเช็คดูใต้เมฆทุกๆ ก้อน ว่ามันซ่อนดอกไม้ไว้หรือเปล่า ก่อนที่คุณจะทำการเก็บน้ำหวานจากเกสร  \n\nจำไว้ว่าเมฆทุกๆก้อน ไม่ได้ซ่อนของอย่างเดียวกัน"
       grade3_bee_conditionals_quantum3_markdown_instruction: |-
         *"Now I just want to make honey."*
         
@@ -30713,16 +30669,14 @@ th:
         
         Use the `if/else` block to collect nectar if there is a flower.
         Otherwise, make honey (because there is a honeycomb).
-      grade3_maze_Loop1_markdown_instruction: "**Assessment:**  Get me to the sunflower using only 5 blocks! "
+      grade3_maze_Loop1_markdown_instruction: "**การประเมินผล:**  พาฉันไปหาดอกทานตะวัน ให้ใช้บล็อกเพียง 5 บล็อกเท่านั้น "
       grade3_maze_loops1_markdown_instruction: |-
         *"Must...eat...sunflower!"*
         
         Get the zombie to the sunflower.
       grade3_maze_loops2_markdown_instruction: 'Get the zombie to the sunflower using the fewest blocks possible!  '
       grade3_maze_loops2a_markdown_instruction: |-
-        *"Zombie hungry!"*
-        
-        Get the zombie to the sunflower using the fewest number of blocks possible.
+        ให้พาเจ้าซอมบี้ไปหาดอกทานตะวัน โดยใช้บล็อกจำนวนสองสามบล็อกให้น้อยที่สุด เท่าที่จะเป็นไปได้
       grade3_maze_loops3_markdown_instruction: |-
         *"Must eat sunflower!"*
         
@@ -30731,10 +30685,10 @@ th:
         Suddenly, a magical block appears!  With the `repeat` block, you can loop code over and over.
         
         Can you get to the pig by creating a loop that uses only one `move forward` block inside of a `repeat`?
-      grade3_maze_nestedLoops3_markdown_instruction: Get me to the pig! You can only use one `move forward` block this time
+      grade3_maze_nestedLoops3_markdown_instruction: พาฉันไปจัดการเจ้าหมูนั่น! คราวนี้คุณสามารถใช้บล็อกเดินไปข้างหน้าได้เพียงครั้งเดียวเท่านั้น
       grade3_maze_nestedLoops4_markdown_instruction: In this puzzle, two `repeat` loops will help you get to the pig with the fewest number of blocks!
       grade4_arist_functions_star0_markdown_instruction: Have you drawn something like this star before? Practice making it one more time by adding a `turn` and a `repeat` block.
-      grade4_arist_nested_loop_circles1_markdown_instruction: "**Assessment:** Use a nested loop to complete the design."
+      grade4_arist_nested_loop_circles1_markdown_instruction: "**การประเมินผล:** ใช้ลูปซ้อนลูปในการออกแบบให้เสร็จสมบูรณ์"
       grade4_arist_nested_loop_flags1_markdown_instruction: Loop the given code to create a windmill.
       grade4_arist_nested_loop_polygons1_markdown_instruction: "Loop this design 10 times. \n\nHow much do you have to turn each time you loop?"
       grade4_arist_nested_loop_polygons2_markdown_instruction: "Loop this shape 6 times. \n\nHow much do you have to turn each time you loop? "
@@ -30800,7 +30754,7 @@ th:
       grade4_artist_functions_windows2_markdown_instruction: "Let's take the code for the window and add it to function `draw a window`. Now, we can call the function any time we need to draw a window without having to write the code again. \n\n<img src=\"https://images.code.org/57c016bcafe697e6ddb196e0f13c9ef9-image-1468602046641.gif\" width=\"450px\"/>\n<br/> \n\nTry solving this puzzle by creating `draw a window` and calling it five times. Watch out for the door!\n\n- The top windows are 50 pixels away from each other.  \n- The bottom windows are 100 pixels below the top set."
       grade4_artist_nestedLoops_challenge_markdown_instruction: "<img src=\"https://images.code.org/c876143212d195192013582f57c6df04-image-1445625392518.36.18.png\" width=\"150px;\" style=\"mix-blend-mode: multiply;\" />\n\n**Play time:**  Here is the code for an interesting shape.   \n\nWhat happens when you repeat it multiple times, turning between each iteration?   \n\nNotice that the turns in this shape add up to *420 degrees*, which means that when your artist is done drawing, it will be facing a different direction than when you started.  That new direction is exactly *60 degrees* to the *right* of where you began.\n\n<hr/>\n\n<h4>\n<details>\n<summary><b>Repeat 4</b></summary>\n<br/>\nIf you want to come full circle in just 4 repetitions, you need the artist to turn a total of **360 degrees/4 = 90 degrees** each time.  You can do that by adding an extra `turn right by 30 degrees` block to the outer loop (since **60+30 = 90**.)  \n<br/>\n<img src=\"https://images.code.org/9da67a628ed72e87520a02a0d917e2af-image-1440132370113.44.12.png\" width=\"500px;\" style=\"mix-blend-mode: multiply;\" />\n<br/><br/>\n</details>\n</h4>\n\n<h4>\n<details>\n<summary><b>Repeat 6</b></summary>\n<br/>\nWhen you repeat the shape as-is 6 times, you get a total rotation of **6x60 degrees** which is a full **360 degree** cycle.  \n<img src=\"https://images.code.org/b79f96b87097ce3afe8a6a5608d04e36-image-1440132287456.44.27.png\"  width=\"500px;\"  style=\"mix-blend-mode: multiply;\" />\n</details>\n</h4>\n\n<h4>\n<details>\n<summary><b>Repeat 12</b></summary>\n<br/>\nIf you want to repeat the image 12 times, you need the artist to turn a total of **360 degrees/12 = 30 degrees** each iteration.  That means you will need to adjust the artist back a bit with `turn left by 30 degrees` before you repeat the shape again.   <br/><br/>\n<img src=\"https://images.code.org/ad254952522674496918561096817c66-image-1440132424792.44.01.png\" width=\"500px;\" style=\"mix-blend-mode: multiply;\" />\n</details>\n</h4>\n\nNow it's your turn!  Can you recreate each image by repeating the starting shape?  "
       grade4_artist_nestedLoops_challenge2_markdown_instruction: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\" width=\"200px\"/>\n\nNow for a challenge!  \n\nHere is a design that uses only blocks that you have already been shown.  Can you figure out how to recreate it?  Feel free to use trial and error. You are not expected to get it perfect the first time.\n\nThe repeated shape is almost identical to the one from the last puzzle, except that the length used in the first loop is a little smaller. "
-      grade4_artist_nested_loop_circles1_markdown_instruction: "**Assessment:** Use a nested loop to complete the design."
+      grade4_artist_nested_loop_circles1_markdown_instruction: "**การประเมินผล:** ใช้ลูปซ้อนลูปในการออกแบบให้เสร็จสมบูรณ์"
       grade4_artist_nested_loop_flags1_markdown_instruction: Loop the given code to create a windmill.
       grade4_artist_nested_loop_polygons1_markdown_instruction: "Loop this design 10 times. \n\nHow much do you have to turn each time you loop?"
       grade4_artist_nested_loop_polygons2_markdown_instruction: "Hi, I'm the Artist! Let's create some drawings together! For starters, try repeating this shape 6 times. \n\nHow much do you have to turn each time you loop? "
@@ -30823,16 +30777,16 @@ th:
       grade4_artist_parameters_triangles3_markdown_instruction: "Can you complete this drawing? \n\nThe sides of each triangle are 25 pixels larger than the last.  \nThe first triangle has 25 pixel sides."
       grade4_artist_parameters_triangles4_markdown_instruction: "The code for this triangle function is broken. \n\nCan you edit the function to fix it, and then make triangles of length 25, 50, and 75?"
       grade4_artist_parameters_trianglesx_markdown_instruction: "Can you complete this drawing? \n\nThe sides of each triangle are 25 pixels larger than the last.  \nThe first triangle has 25 pixel sides."
-      grade4_bee_conditionals_nested_loops_markdown_instruction: "**Assessment:** Collect all of the nectar.  \nBe careful not to try to collect nectar from a purple flower if it doesn't have any."
-      grade4_bee_conditionals_new1_markdown_instruction: "**Assessment:** Collect all of the nectar.  \nBe careful not to try to collect nectar from a purple flower if it doesn't have any."
+      grade4_bee_conditionals_nested_loops_markdown_instruction: "**การประเมินผล:** เก็บน้ำหวานจากเกสรทั้งหมด ให้ระวังที่จะไม่เก็บน้ำหวานจากเกสรดอกไม้สีม่วง ถ้าดอกไม้เหล่านั้นไม่มีน้ำหวานเลย"
+      grade4_bee_conditionals_new1_markdown_instruction: "**การประเมินผล:** เก็บน้ำหวานจากเกสรทั้งหมด ให้ระวังที่จะไม่เก็บน้ำหวานจากเกสรดอกไม้สีม่วง ถ้าดอกไม้เหล่านั้นไม่มีน้ำหวานเลย"
       grade4_bee_conditionals_quantum1_markdown_instruction: "This cloud is blocking my view! \n\nCheck to see if there's a flower under the cloud, and only get nectar if there's a flower.   \nBe careful, it can change!"
-      grade4_bee_conditionals_quantum2_markdown_instruction: "More clouds! \n\nCheck underneath every cloud to see if it is hiding a flower before you get nectar.  \n\nRemember: Not all clouds hide the same thing!"
+      grade4_bee_conditionals_quantum2_markdown_instruction: "มีเมฆมาเพิ่มอีกแล้ว! \n\nเช็คดูใต้เมฆทุกๆ ก้อน ว่ามันซ่อนดอกไม้ไว้หรือเปล่า ก่อนที่คุณจะทำการเก็บน้ำหวานจากเกสร  \n\nจำไว้ว่าเมฆทุกๆก้อน ไม่ได้ซ่อนของอย่างเดียวกัน"
       grade4_bee_conditionals_quantum4_markdown_instruction: "Sometimes this cloud covers a flower, and sometimes it covers a honeycomb! \n\nUse the `if/else` block to collect nectar only if it is a flower.  \nElse, make honey (because it is a honeycomb)."
       grade4_bee_conditionals_quantum5_markdown_instruction: |-
-        There will be either a flower or a honeycomb under each of those clouds!
+        มีดอกไม้ หรือไม่ก็รวงผึ้งภายใต้เมฆแต่ละก้อน
         
-        Use the `if/else` block to collect nectar if there is a flower.
-        Otherwise, make honey (because there is a honeycomb).
+        เก็บน้าหวานจากเกสรถ้ามีดอกไม้
+        ไม่เช่นนั้น ทำน้ำหวาน(เพราะมีรวงผึ้ง)
       grade4_bee_functions2_markdown_instruction: "Functions are blocks of code that perform a task.  \n\nUse the `get 2 nectar` function to collect the nectar from each flower."
       grade4_bee_functions3_markdown_instruction: Build the `get 5` function to use in this puzzle.
       grade4_bee_functions4_markdown_instruction: "The `move and get nectar` function turns the bee, collects nectar, and then returns the bee to where it started.  \n\nUse the `move and get nectar` function to collect all of the nectar."
@@ -30865,12 +30819,11 @@ th:
       grade4_playlab_test2_markdown_instruction: "Here's a function called `jump` that causes your main character to jump up 100 pixels. \n\nRun the program and use the jump function to collect all of the flags by moving the dog with the arrow keys."
       grade4_review_artist1_markdown_instruction: "Hi, I'm an artist. You can write code to make me draw almost anything. Use a few blocks to make me draw over the grey lines in the picture. (Each line is 100 pixels long)\n\n<br>  \n"
       grade4_review_artist2_markdown_instruction: "This house needs a roof! Draw the triangle.  \n\nHint: all three sides are the same length.\n\n<img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\" width=\"300\"/>"
-      grade4_review_artist3_markdown_instruction: "บล็อกกระโดดจะเคลื่อนย้ายศิลปินโดยไม่มีการวาดรูป\nวาดเส้นประโดยใช้บล็อก \"กระโดดไปข้างหน้า\" และ \"ไปข้างหน้า\"\nแต่ละเส้นมีความยาว 50 พิกเซล"
+      grade4_review_artist3_markdown_instruction: "บล็อกกระโดดจะเคลื่อนย้ายศิลปินโดยไม่มีการวาดรูป\nวาดเส้นประโดยใช้บล็อก `กระโดดไปข้างหน้า` และ `ย้ายไปข้างหน้า`\nแต่ละเส้นมีความยาว 50 พิกเซล"
       grade4_review_bee1_markdown_instruction: ตอนนี้ใช้บล็อก`ทำซ้ำ` เพื่อเก็บน้ำหวานจากเกสรทั้งหมดและทำน้ำผี้งให้หมดด้วย
       grade4_review_bee3_markdown_instruction: |-
-        Such a busy bee!
-        
-        Help Bee collect all of the nectar and make all of the honey with the fewest blocks possible.
+        เป็นผึ้งที่ขยันจริงๆ!
+        ช่วยผึ้งเก็บรวบรวมน้ำหวานจากเกสรทั้งหมด และทำน้ำผึ้งทั้งหมด โดยใช้บล็อกจำนวนที่น้อยที่สุดเท่าที่จะเป็นไปได้
       grade4_scaffolded_project1_markdown_instruction: |-
         It is amazing how much you have learned! Let's put them together to make a game, step by step.
         To start, let's set up your game's space and actor. We've put these blocks in your tool box. Choose a background and map, and pick an actor to be your game's hero.
@@ -31263,13 +31216,12 @@ th:
         * What are teachers doing throughout the session?
         * What is the key takeaway from the session?
       level 'grade3_Loops_10_markdown_instruction: |-
-        Such a busy bee!
-        
-        Help Bee collect all of the nectar and make all of the honey with the fewest blocks possible.
+        เป็นผึ้งที่ขยันจริงๆ!
+        ช่วยผึ้งเก็บรวบรวมน้ำหวานจากเกสรทั้งหมด และทำน้ำผึ้งทั้งหมด โดยใช้บล็อกจำนวนที่น้อยที่สุดเท่าที่จะเป็นไปได้
       level 'grade3_Loops_11_markdown_instruction: "The shape of this path is different from the others. \n\nCan you collect all of the nectar using as few blocks as possible?"
       level 'grade3_Loops_3_markdown_instruction: Use a `repeat` loop to collect all of the nectar.
       level 'grade3_Loops_4_markdown_instruction: ตอนนี้ใช้บล็อก`ทำซ้ำ` เพื่อเก็บน้ำหวานจากเกสรทั้งหมดและทำน้ำผี้งให้หมดด้วย
-      level 'grade3_Loops_5_markdown_instruction: "What a beautiful field of flowers!   \n\nHelp the bee visit each one.\n\nCan you find a way to do it with fewer than 7 blocks?"
+      level 'grade3_Loops_5_markdown_instruction: "โอ้ ทุ่งดอกไม้ที่ช่างสวยงาม! ช่วยผี้งให้เข้าไปเก็บน้ำหวานจากเกสรดอกไม้แต่ละดอก โดยที่คุณสามารถใช้บล็อกให้น้อยกว่า 7 บล็อกได้ไหม"
       level 'grade3_Loops_6_markdown_instruction: "กี่ครั้งแล้วที่ลูปช่วยคุณแก้ปริศนา ลูปเป็นเพื่อนของคุณ ใช้ลูปสักสองสามลูปแก้ปริศนานี้ด้วยบล็อกที่น้อยที่สุดเท่าที่จะเป็นไปได้"
       level 'grade3_Loops_7_markdown_instruction: |-
         ดอกไม้แต่ละดอกมีน้ำหวานจากเกสรเพียงหนึ่งเดียว ให้เก็บน้ำหวานจากเกสร

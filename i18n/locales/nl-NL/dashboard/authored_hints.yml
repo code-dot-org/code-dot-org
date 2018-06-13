@@ -230,13 +230,13 @@ nl:
         4-5_Bee_Nested_Loops_Rows_a: Denk bij deze puzzel aan een lange rechthoek waar de bij eerst vooruit moet bewegen en dan een paar keer linksom moet draaien om het hele pad af te gaan.
       4-5 Maze 10_authored_hint:
         4-5_Maze_10_a: |-
-          If you can't see how to use loops to solve the puzzle right away, try solving it the long way first, then looking for a pattern.
+          Als je niet gelijk ziet hoe je met lussen de puzzel kunt oplossen, probeer dan eerst de puzzel blok voor blok op te lossen en kijk daarna of je een patroon ziet.
           
-          What should you put a `repeat` around to make the code shorter?
+          Wat moet je een 'herhaal totdat' blok omheen zetten om de code korter te maken?
       4-5 Maze 4_authored_hint:
-        4-5_Maze_4_a: If you are having a hard time figuring out where to put the repeat, try coding everything out and looking for a pattern.
+        4-5_Maze_4_a: Als je het lastig vindt om te bepalen waar je de lus moet plaatsen, probeer dan eerst alles blok voor blok te programmeren en ga daarna op zoek naar een patroon.
       4-5 Maze 5_authored_hint:
-        4-5_Maze_5_a: Try using a `repeat` loop anytime you need to `move forward` more than two steps.
+        4-5_Maze_5_a: Gebruik een 'herhaal keer' blok als je meer dan twee 'beweeg vooruit' blokken moet gebruiken.
         4-5_Maze_5_b: Je kan meer dan één `herhaal` lus gebruiken in een puzzel.
       4-5 Maze 6_authored_hint:
         4-5_Maze_6_a: "Probeer een pad uit te tekenen met je vinger.\nIs dit het kortste pad dat je kan vinden?"
@@ -272,7 +272,7 @@ nl:
       Artist Inspiration_authored_hint:
         brush_width: We zetten de penseelbreedte op 1 en de kleur op blauw vooraleer iets anders te doen.
         double_loop: Probeer een `herhaal` lust binnen in een andere `herhaal` lus te plaatsen.
-        specifics: "The `for loop` runs from three to seventeen for each of the six \"petals\" before moving on to create the next, drawing shapes with only an odd number of sides.\n        \nThe `set alpha` block uses division to fade the color as the counter gets higher."
+        specifics: "Het 'herhaal counter' blok loopt van drie tot zeventien voor elk \"bloemblaadjes\" en gaat daarna de volgende maken tot er in totaal 6 zijn. De vorm heeft een oneven aantal zijden.\n\nDe 'zet doorzichtigheid' blok gebruikt delen door om de kleur te vervagen als de teller hoger wordt."
         after: Vergeet niet om 20 pixels voorwaarts te bewegen en 60 graden te draaien na het tekenen van ieder "bloemblad".
         solution: |-
           **Oplossing**
@@ -282,8 +282,8 @@ nl:
       Bergeron Robot Maze1_authored_hint:
         2-3_Maze_1_a: Om het "beweeg vooruit" blok te gebruiken, sleep je het vanuit het blokken gebied naar de werkplaats en plak je het direct onder het blok "als gestart".
       Course 4 Artist 11_authored_hint:
-        Course_4_Artist_11_a: 'The half-hexagon has a **length of 30** and turns right by **60 degrees**.  '
-        Course_4_Artist_11_b: 'The 2/3 triangle has a **length of 80** and turns right by **120 degrees**. '
+        Course_4_Artist_11_a: 'De halve zeshoek heeft een ** lengte van 30 ** en draait rechts met ** 60 graden **.'
+        Course_4_Artist_11_b: 'De driehoek heeft een ** lengte van 80 ** en draait naar rechts met ** 120 graden **.'
       Course 4 Artist 12_authored_hint:
         Course_4_Artist_12_a: 'Elke herhaalde vorm is de combinatie van een **halve zeshoek**, gevolgd door **2/3 van een driehoek**. '
         Course_4_Artist_12_b: 'Het patroon is bijna hetzelfde als in de laatste puzzel. De halve achthoek is enkel een beetje groter.'
@@ -3482,7 +3482,7 @@ nl:
       Inspirational Artwork_authored_hint:
         brush_width: We zetten de penseelbreedte op 1 en de kleur op blauw vooraleer iets anders te doen.
         double_loop: Probeer een `herhaal` lust binnen in een andere `herhaal` lus te plaatsen.
-        specifics: "The `for loop` runs from three to seventeen for each of the six \"petals\" before moving on to create the next, drawing shapes with only an odd number of sides.\n        \nThe `set alpha` block uses division to fade the color as the counter gets higher."
+        specifics: "Het 'herhaal counter' blok loopt van drie tot zeventien voor elk \"bloemblaadjes\" en gaat daarna de volgende maken tot er in totaal 6 zijn. De vorm heeft een oneven aantal zijden.\n\nDe 'zet doorzichtigheid' blok gebruikt delen door om de kleur te vervagen als de teller hoger wordt."
         after: Vergeet niet om 20 pixels voorwaarts te bewegen en 60 graden te draaien na het tekenen van ieder "bloemblad".
         solution: |-
           **Oplossing**
@@ -3625,7 +3625,7 @@ nl:
       NEW Course 4 Artist Params inspire_authored_hint:
         brush_width: We zetten de penseelbreedte op 1 en de kleur op blauw vooraleer iets anders te doen.
         double_loop: Probeer een `herhaal` lust binnen in een andere `herhaal` lus te plaatsen.
-        specifics: "The `for loop` runs from three to seventeen for each of the six \"petals\" before moving on to create the next, drawing shapes with only an odd number of sides.\n        \nThe `set alpha` block uses division to fade the color as the counter gets higher."
+        specifics: "Het 'herhaal counter' blok loopt van drie tot zeventien voor elk \"bloemblaadjes\" en gaat daarna de volgende maken tot er in totaal 6 zijn. De vorm heeft een oneven aantal zijden.\n\nDe 'zet doorzichtigheid' blok gebruikt delen door om de kleur te vervagen als de teller hoger wordt."
         after: Vergeet niet om 20 pixels voorwaarts te bewegen en 60 graden te draaien na het tekenen van ieder "bloemblad".
         solution: |-
           **Oplossing**
@@ -4280,8 +4280,8 @@ nl:
         courseB_maze_seq_challenge1_a: Het kan zijn dat het kortste pad niet werkt deze keer.
         courseB_maze_seq_challenge1_b: Probeer om te beginnen naar het westen te bewegen.
       course3_artist_concept_challenge1_authored_hint:
-        courseE_artist_concept_challenge1_a: 'The half-hexagon has a **length of 30** and turns right by **60 degrees**.  '
-        courseE_artist_concept_challenge1_b: 'The 2/3 triangle has a **length of 80** and turns right by **120 degrees**. '
+        courseE_artist_concept_challenge1_a: 'De halve zeshoek heeft een ** lengte van 30 ** en draait rechts met ** 60 graden **.'
+        courseE_artist_concept_challenge1_b: 'De driehoek heeft een ** lengte van 80 ** en draait naar rechts met ** 120 graden **.'
       course3_artist_functions_challenge1_authored_hint:
         courseE_artist_functions_challenge1_a: If you call the function one more time, you can create the same design in the final corner. You can also `jump to` other positions or change the whole thing around however you want!
       course3_artist_functions_challenge2_authored_hint:
@@ -10119,15 +10119,15 @@ nl:
         courseE_artist_concept4_b: Try creating one square. Then make a line of squares.  What comes next?
         courseE_artist_concept4_c: After drawing a line of squares, you can either turn around and draw another line of squares going left, or you can jump back to the left side of the figure to draw another line of squares going right. Which do you prefer?
       courseE_artist_concept_challenge1_authored_hint:
-        courseE_artist_concept_challenge1_a: 'The half-hexagon has a **length of 30** and turns right by **60 degrees**.  '
-        courseE_artist_concept_challenge1_b: 'The 2/3 triangle has a **length of 80** and turns right by **120 degrees**. '
+        courseE_artist_concept_challenge1_a: 'De halve zeshoek heeft een ** lengte van 30 ** en draait rechts met ** 60 graden **.'
+        courseE_artist_concept_challenge1_b: 'De driehoek heeft een ** lengte van 80 ** en draait naar rechts met ** 120 graden **.'
         courseE_artist_concept_challenge1_c: |-
           This is the design you want to repeat to make the full shape:
           
           ![](https://images.code.org/d6b2afd39119da33d085dcce6077ada8-image-1501705780826.28.43 PM.png)
       courseE_artist_concept_challenge1_2018_authored_hint:
-        courseE_artist_concept_challenge1_a: 'The half-hexagon has a **length of 30** and turns right by **60 degrees**.  '
-        courseE_artist_concept_challenge1_b: 'The 2/3 triangle has a **length of 80** and turns right by **120 degrees**. '
+        courseE_artist_concept_challenge1_a: 'De halve zeshoek heeft een ** lengte van 30 ** en draait rechts met ** 60 graden **.'
+        courseE_artist_concept_challenge1_b: 'De driehoek heeft een ** lengte van 80 ** en draait naar rechts met ** 120 graden **.'
         courseE_artist_concept_challenge1_c: |-
           This is the design you want to repeat to make the full shape:
           
@@ -14821,8 +14821,8 @@ nl:
         grade4_artist_functions_windows2_a: Try creating your function first then adding in windows one at a time.
         grade4_artist_functions_windows2_b: You shouldn't need to add any extra repeat loops.  Just jump the artist 100 pixels forward for each top window, and 150 pixels down to get the bottom windows.
       grade4_artist_nestedLoops_challenge2_authored_hint:
-        Course_4_Artist_11_a: 'The half-hexagon has a **length of 30** and turns right by **60 degrees**.  '
-        Course_4_Artist_11_b: 'The 2/3 triangle has a **length of 80** and turns right by **120 degrees**. '
+        Course_4_Artist_11_a: 'De halve zeshoek heeft een ** lengte van 30 ** en draait rechts met ** 60 graden **.'
+        Course_4_Artist_11_b: 'De driehoek heeft een ** lengte van 80 ** en draait naar rechts met ** 120 graden **.'
       grade4_artist_nested_loop_polygons1_authored_hint:
         4-5_Nested_Loops_7_a: |-
           Dit design maakt 10 keer een volledige loop in 360 graden.
@@ -14973,7 +14973,7 @@ nl:
       grade5_artist_functionparameters10_authored_hint:
         brush_width: We zetten de penseelbreedte op 1 en de kleur op blauw vooraleer iets anders te doen.
         double_loop: Probeer een `herhaal` lust binnen in een andere `herhaal` lus te plaatsen.
-        specifics: "The `for loop` runs from three to seventeen for each of the six \"petals\" before moving on to create the next, drawing shapes with only an odd number of sides.\n        \nThe `set alpha` block uses division to fade the color as the counter gets higher."
+        specifics: "Het 'herhaal counter' blok loopt van drie tot zeventien voor elk \"bloemblaadjes\" en gaat daarna de volgende maken tot er in totaal 6 zijn. De vorm heeft een oneven aantal zijden.\n\nDe 'zet doorzichtigheid' blok gebruikt delen door om de kleur te vervagen als de teller hoger wordt."
         after: Vergeet niet om 20 pixels voorwaarts te bewegen en 60 graden te draaien na het tekenen van ieder "bloemblad".
         solution: |-
           **Solution**

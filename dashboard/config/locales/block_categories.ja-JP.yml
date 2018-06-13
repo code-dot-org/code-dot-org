@@ -1,4 +1,5 @@
-"ja":
+---
+ja:
   data:
     block_categories:
       Actions: うごき
@@ -45,5 +46,6 @@
       Foo: Foo
       Name: 名前
       NEW BLOCKS: NEW BLOCKS
+      'Functions ': 'Functions '
       Game/Score: Game/Score
       Function: 関数（かんすう）

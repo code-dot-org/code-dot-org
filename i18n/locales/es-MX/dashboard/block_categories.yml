@@ -5,45 +5,46 @@ es-MX:
       Loops: Bucles
       Functions: Funciones
       Color: Color
-      Brushes: Brushes
+      Brushes: Pinceles
       Math: Matemáticas
       Logic: Lógica
       Variables: Variables
-      Number: Number
-      String: String
-      Image: Image
-      Boolean: Boolean
+      Number: Número
+      String: Hilo
+      Image: Imagen
+      Boolean: Booleano
       Conditionals: Condicionales
       Events: Eventos
-      Games/Score: Games/Score
-      Comments: Comments
-      Category: Category
-      Prebuilt: Prebuilt
+      Games/Score: Juegos/Puntaje
+      Comments: Comentarios
+      Category: Categoría
+      Prebuilt: Previamente Construído
       Text: Texto
-      Picker: Picker
-      Comment: Comment
+      Picker: Rocolector/a
+      Comment: Comentario
       'Variables ': 'Variables '
-      everythingelse: everythingelse
-      numbers: numbers
-      Numbers: Numbers
+      everythingelse: detodolodemás
+      numbers: números
+      Numbers: Números
       Input: Input
-      Default: Default
+      Default: Incumplimiento
       Sprites: Sprites
-      Behaviors: Behaviors
-      World: World
+      Behaviors: Comportamientos
+      World: Mundo
       Sprite: Sprite
-      Brush: Brush
-      Make Sprite: Make Sprite
-      Movement: Movement
+      Brush: Pincel
+      Make Sprite: Hacer un Sprite
+      Movement: Movimiento
       Start: Inicio
-      Groups: Groups
+      Groups: Grupos
       Booleans: Valores booleanos
-      Functional: Functional
-      Predefined: Predefined
+      Functional: Funcional
+      Predefined: Predefinido
       test: prueba
-      test2: test2
+      test2: prueba2
       Foo: Foo
       Name: Nombre
-      NEW BLOCKS: NEW BLOCKS
-      Game/Score: Game/Score
+      NEW BLOCKS: BLOQUES NUEVOS
+      'Functions ': 'Functions '
+      Game/Score: Juego/Puntaje
       Function: Función

@@ -372,7 +372,7 @@
   homepage_header_donors: "Code.org takkar støttespelarane sine"
   homepage_donors_seall: "Sjå alt"
   homepage_donors_donate: "Gi bidrag"
-  homepage_below_hero_announcement_text: "We care about your privacy and are making some updates to our privacy policy, effective May 25."
+  homepage_below_hero_announcement_text: "Vi ønsker å verne om ditt privatliv og oppdaterer våre vilkår for personvern. Disse trer i kraft fra 25. mai."
   homepage_below_hero_announcement_link_text: "Lær meir"
   contact_form_topic_student: "Eg er ein elev"
   contact_form_topic_parent: "Eg er ein forelder"
@@ -544,7 +544,7 @@
   volunteer_engineer_submission_field_email: "E-postadresse"
   volunteer_engineer_submission_field_email_desc: "Di epostadresse vil ikkje bli delt, men me vil senda deg førespurnader frå lærarar."
   volunteer_engineer_submission_field_email_placeholder: "E-postadresse"
-  volunteer_engineer_submission_field_email_preference: "Can we email you about updates to our courses, volunteer opportunities, or other computer science news?"
+  volunteer_engineer_submission_field_email_preference: "Kan vi sende deg nyheter om kursene våre, lokale jobbmuligheter eller andre IT-relaterte nyheter?"
   volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy policy)"
   volunteer_engineer_submission_field_email_preference_yes: 'Ja'
   volunteer_engineer_submission_field_email_preference_no: 'Nei'
@@ -938,9 +938,25 @@
   coursee_name: "Kurs E"
   coursef-draft_name: Kurs F
   coursef_name: "Kurs F"
+  coursea-2017_name: Course A (2017)
+  courseb-2017_name: Course B (2017)
+  coursec-2017_name: Course C (2017)
+  coursed-2017_name: Course D (2017)
+  coursee-2017_name: Course E (2017)
+  coursef-2017_name: Course F (2017)
+  coursea-2018_name: Course A (2018)
+  courseb-2018_name: Course B (2018)
+  coursec-2018_name: Course C (2018)
+  coursed-2018_name: Course D (2018)
+  coursee-2018_name: Course E (2018)
+  coursef-2018_name: Course F (2018)
   accelerated_name: "Framskunda kurs"
   express_name: "Express Course"
   pre-express_name: Programmeringskurs før ein kan lese
+  express-2017_name: Express Course (2017)
+  pre-express-2017_name: Pre-reader Express Course (2017)
+  express-2018_name: Express Course (2018)
+  pre-express-2018_name: Pre-reader Express Course (2018)
   cspunit1_name: "(gammel) Eining 1: Digital informasjon"
   cspunit2_name: "(gammel) Eining 2: Internett"
   cspunit3_name: "(gammel) Eining 3: Programmering"
@@ -1015,6 +1031,8 @@
   math_category_name: "Matematikk"
   hoc_category_name: "Kodetimen"
   csf_category_name: "Grunnleggande informatikk"
+  csf_2017_category_name: "CS Fundamentals (2017)"
+  csf_2018_category_name: "CS Fundamentals (2018)"
   csf_international_category_name: "Grunnleggande informatikk internasjonalt"
   csf2_draft_category_name: 'Under utvikling: Kurs A - F'
   csd_category_name: "CS Discoveries ('17-'18)"

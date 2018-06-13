@@ -1,4 +1,5 @@
-"he":
+---
+he:
   devise:
     confirmations:
       confirmed: כתובת הדוא"ל שלך אושרה בהצלחה.

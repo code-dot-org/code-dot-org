@@ -1,4 +1,5 @@
-"eu":
+---
+eu:
   data:
     block_categories:
       Actions: Ekintzak
@@ -45,5 +46,6 @@
       Foo: Foo
       Name: Izena
       NEW BLOCKS: NEW BLOCKS
+      'Functions ': 'Functions '
       Game/Score: Game/Score
       Function: Funtzioa

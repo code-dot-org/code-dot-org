@@ -1,4 +1,5 @@
-"sr":
+---
+sr:
   devise:
     confirmations:
       confirmed: Ваша имејл адреса је успешно потврђена.

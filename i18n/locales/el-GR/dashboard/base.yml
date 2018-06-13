@@ -85,6 +85,7 @@ el:
     facebook: 'Facebook'
     windowslive: 'Λογαριασμός Microsoft'
     clever: 'Clever Account'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Ξέχασες τον κωδικό σου;'
     need_confirmation: "Δεν έλαβες τις οδηγίες επιβεβαίωσης;"
     need_unlock: "Δεν έλαβες τις οδηγίες ξεκλειδώματος;"

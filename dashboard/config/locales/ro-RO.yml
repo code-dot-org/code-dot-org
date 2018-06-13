@@ -1,4 +1,5 @@
-"ro":
+---
+ro:
   errors:
     messages:
       not_saved: 'Te rog să corectezi următoarele greșeli:'
@@ -96,6 +97,7 @@
     facebook: Facebook
     windowslive: Cont Microsoft
     clever: Clever Account
+    powerschool: Powerschool Account
     forgot_password: Ai uitat parola?
     need_confirmation: Nu ai primit instrucţiuni de confirmare?
     need_unlock: Nu ai primit instrucţiuni de deblocare?
