@@ -765,9 +765,11 @@ module LevelsHelper
   def firebase_auth_token
     return nil unless CDO.firebase_secret
 
+    base_channel = params[:channel_id] || get_channel_for(@level, @user)
     payload = {
       uid: user_or_session_id,
-      is_dashboard_user: !!current_user
+      is_dashboard_user: !!current_user,
+      channel: "#{base_channel}#{CDO.firebase_channel_id_suffix}"
     }
     options = {}
     # Provides additional debugging information to the browser when
