@@ -281,4 +281,18 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     assert_equal 1, JSON.parse(@response.body)['feedbacks'].count
     assert_equal comment1, JSON.parse(@response.body)['feedbacks'][0]['comment']
   end
+
+  test 'returns elegantly when no feedback' do
+    teacher = create :teacher
+    student = create :student
+    section = create :section, user: teacher
+    section.add_student(student)
+    level1 = create :level
+
+    sign_in student
+
+    get "#{API}/show_feedback_for_level?student_id=#{student.id}&level_id=#{level1.id}"
+
+    assert_equal 0, JSON.parse(@response.body)['feedbacks'].count
+  end
 end
