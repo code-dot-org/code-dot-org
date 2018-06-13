@@ -80,6 +80,22 @@ Feature: Using the teacher dashboard
     And I go to the newly opened tab
     And I wait until element ".project_name.header_text:contains('thumb wars')" is visible
 
+  Scenario: Changing login type for a section
+    Given I create a teacher-associated student named "Sally"
+    And I sign in as "Teacher_Sally"
+    And I click selector "a:contains('New Section')" once I see it
+    And I click selector "#learn-tabs a:contains('Manage Students')" once I see it
+
+    # Change login type from email to word
+    And I wait to see "#uitest-login-type"
+    And I click selector "#uitest-login-type div:contains('Change to picture or word login')"
+    And I click selector "#uitest-word-login-btn" once I see it
+
+    # Assert login type is word by viewing secret words
+    And I wait to see ".uitest-show-secrets-btn"
+    And I click selector ".uitest-show-secrets-btn:eq(0)"
+    Then element ".uitest-secret-words" exists
+
   @eyes
   Scenario: Eyes tests for section projects with thumbnails
     When I open my eyes to test "section projects with thumbnails"
