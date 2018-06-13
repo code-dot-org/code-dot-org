@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import StudentAssessmentsMCTable from './StudentAssessmentsMCTable';
+import StudentsAssessmentsMCTable from './StudentsAssessmentsMCTable';
 
 class StudentsMCSummaryContainer extends Component {
 
@@ -7,7 +7,7 @@ class StudentsMCSummaryContainer extends Component {
     return (
       <div>
         <h1>Students MC Summary Container </h1>
-        <StudentAssessmentsMCTable
+        <StudentsAssessmentsMCTable
           studentOverviewData={[]}
         />
       </div>
