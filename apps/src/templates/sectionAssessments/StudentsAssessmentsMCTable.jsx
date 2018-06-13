@@ -49,14 +49,13 @@ export const COLUMNS = {
   SUBMISSION_TIMESTAMP: 4,
 };
 
-const studentOverviewDataPropType = PropTypes.shape({
-  id: PropTypes.number.isRequired,
+export const studentOverviewDataPropType = PropTypes.shape({
+  id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   numMultipleChoiceCorrect: PropTypes.number.isRequired,
   numMultipleChoice: PropTypes.number.isRequired,
-  percentCorrect: PropTypes.string.isRequired,
-  submissionTimeStamp: PropTypes.string,
-  submissionStatus: PropTypes.string,
+  submissionTimeStamp: PropTypes.string.isRequired,
+  submissionStatus: PropTypes.bool.isRequired,
 });
 
 /**
@@ -101,7 +100,7 @@ class StudentsAssessmentsMCTable extends Component {
   submissionTimestampColumnFormatter = (submissionTimeStamp, {rowData}) => {
     const submissionStatus = rowData.submissionStatus;
 
-    if (submissionStatus === 'Completed') {
+    if (submissionStatus === true) {
       return (
         <div style={styles.main}>
           <div style={styles.text}>
@@ -163,21 +162,6 @@ class StudentsAssessmentsMCTable extends Component {
             style: {
               ...tableLayoutStyles.headerCell,
               ...{width: TABLE_COLUMN_WIDTHS.numMultipleChoice},
-            }
-          },
-        },
-        cell: {
-          props: {style: tableLayoutStyles.cell},
-        }
-      },
-      {
-        property: 'percentCorrect',
-        header: {
-          label: i18n.percentCorrect(),
-          props: {
-            style: {
-              ...tableLayoutStyles.headerCell,
-              ...{width: TABLE_COLUMN_WIDTHS.percentCorrect},
             }
           },
         },

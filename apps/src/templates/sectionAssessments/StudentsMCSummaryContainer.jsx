@@ -1,18 +1,29 @@
-import React, {Component} from 'react';
-import StudentsAssessmentsMCTable from './StudentsAssessmentsMCTable';
+import React, {Component, PropTypes} from 'react';
+import StudentsAssessmentsMCTable, {studentOverviewDataPropType} from './StudentsAssessmentsMCTable';
+import {
+  getStudentsMCSummaryForCurrentAssessment,
+} from './sectionAssessmentsRedux';
+import {connect} from 'react-redux';
 
 class StudentsMCSummaryContainer extends Component {
+  static propTypes = {
+    studentOverviewData: PropTypes.arrayOf(studentOverviewDataPropType),
+  };
 
   render() {
     return (
       <div>
         <h1>Students MC Summary Container </h1>
         <StudentsAssessmentsMCTable
-          studentOverviewData={[]}
+          studentOverviewData={this.props.studentOverviewData}
         />
       </div>
     );
   }
 }
 
-export default StudentsMCSummaryContainer;
+export const UnconnectedStudentsMCSummaryContainer = StudentsMCSummaryContainer;
+
+export default connect(state => ({
+  studentOverviewData: getStudentsMCSummaryForCurrentAssessment(state),
+}))(StudentsMCSummaryContainer);
