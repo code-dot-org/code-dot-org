@@ -8,9 +8,6 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
     @teacher.permission = UserPermission::AUTHORIZED_TEACHER
     @section = create(:section, user: @teacher, login_type: 'word')
 
-    # Single student in section.
-    @student = create(:follower, section: @section).student_user
-
     # Set of students in section.
     @students = []
     5.times do |i|
@@ -31,7 +28,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
   end
 
   test 'students cannot get assessment questions and answers' do
-    sign_in @student
+    sign_in @student_1
     get :index
     assert_response :forbidden
   end
@@ -71,7 +68,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
   end
 
   test 'students cannot get assessment responses from students' do
-    sign_in @student
+    sign_in @student_1
     get :section_responses
     assert_response :forbidden
   end
@@ -107,12 +104,12 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
       level: level1,
       data: %Q({"#{sub_level1.id}":{"result":"This is a free response"},"#{sub_level2.id}":{"result":"0"},"#{sub_level3.id}":{"result":"1"},"#{sub_level4.id}":{"result":"-1"}})
     )
-    create :activity, user: @student, level: level1,
+    create :activity, user: @student_1, level: level1,
       level_source: level_source
 
     updated_at = Time.now
 
-    create :user_level, user: @student, best_result: 100, script: script, level: level1, submitted: true, updated_at: updated_at, level_source: level_source
+    create :user_level, user: @student_1, best_result: 100, script: script, level: level1, submitted: true, updated_at: updated_at, level_source: level_source
 
     # Call the controller method.
     get :section_responses, params: {
@@ -124,14 +121,14 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
 
     # All these are translation missing because we don't actually generate i18n files in tests.
     expected_response = {
-      @student.id.to_s => {
-        "student_name" => @student.name,
+      @student_1.id.to_s => {
+        "student_name" => @student_1.name,
         "responses_by_assessment" => {
           level1.id.to_s => {
             "stage" => "translation missing: en-US.data.script.name.#{script.name}.title",
             "puzzle" => 1,
             "question" => "Long assessment 1",
-            "url" => "http://test.host/s/#{script.name}/stage/1/puzzle/1?section_id=#{@section.id}&user_id=#{@student.id}",
+            "url" => "http://test.host/s/#{script.name}/stage/1/puzzle/1?section_id=#{@section.id}&user_id=#{@student_1.id}",
             "multi_correct" => 1,
             "multi_count" => 4,
             "submitted" => true,
