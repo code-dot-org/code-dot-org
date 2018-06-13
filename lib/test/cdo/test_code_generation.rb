@@ -75,5 +75,17 @@ class CodeGenerationTest < Minitest::Test
       code = CodeGeneration.random_unique_code model: FakeModel, code_attribute: 'custom_code_attribute'
       assert_equal 'CCCC', code
     end
+
+    it 'checks deleted codes if model responds to :with_deleted' do
+      class FakeModelWithDeleted
+      end
+
+      FakeModel.stubs(:with_deleted).returns(FakeModelWithDeleted)
+      FakeModel.with_deleted.expects(:exists?).with(has_key(:custom_code_attribute)).returns(true, true, false).times(3)
+      CodeGeneration.expects(:random_consonant_string).returns('AAAA', 'BBBB', 'CCCC').times(3)
+
+      code = CodeGeneration.random_unique_code model: FakeModel, code_attribute: 'custom_code_attribute'
+      assert_equal 'CCCC', code
+    end
   end
 end

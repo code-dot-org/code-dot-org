@@ -49,7 +49,6 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
         script_id: script_to_assign ? script_to_assign.id : params[:script_id],
         course_id: params[:course_id] && Course.valid_course_id?(params[:course_id]) ?
           params[:course_id].to_i : nil,
-        code: CodeGeneration.random_unique_code(length: 6),
         stage_extras: params[:stage_extras] || false,
         pairing_allowed: params[:pairing_allowed].nil? ? true : params[:pairing_allowed]
       }
