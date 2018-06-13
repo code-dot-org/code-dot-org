@@ -1,4 +1,5 @@
-"hu":
+---
+hu:
   devise:
     confirmations:
       confirmed: Az e-mail cím megerősítése sikeresen megtörtént.

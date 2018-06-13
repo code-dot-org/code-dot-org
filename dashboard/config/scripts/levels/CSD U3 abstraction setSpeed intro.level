@@ -30,7 +30,6 @@
       "getDirection": null,
       "comment_Sprites": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# getSpeed() and getDirection()\r\n\r\nWhen you move around the world, you probably don't normally think about your velocityX and velocityY.  You probably just think about how fast you are going in the direction you are heading.  You can figure out a sprite's speed and direction with math, but it's faster to teach the computer to do those calculations for you.  `getSpeed()` and `getDirection()` are methods that use the information in `velocityX` and `velocityY` to find your speed and direction.\r\n\r\n# Do this\r\n\r\n* For each of the three sprites in this animation: Look at its `velocityX` and `velocityY` and guess what its speed and direction are.  \r\n* Then run the code and see the answers in the debug console.\r\n",

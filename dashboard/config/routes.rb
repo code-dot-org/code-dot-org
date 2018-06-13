@@ -72,7 +72,7 @@ Dashboard::Application.routes.draw do
   end
   # Section API routes (JSON only)
   concern :section_api_routes do
-    resources :sections, only: [:index, :show, :create, :destroy] do
+    resources :sections, only: [:index, :show, :create, :update, :destroy] do
       resources :students, only: [:index, :update], controller: 'sections_students' do
         collection do
           post 'bulk_add'
@@ -91,6 +91,15 @@ Dashboard::Application.routes.draw do
       collection do
         get 'membership'
         get 'valid_scripts'
+      end
+    end
+  end
+
+  # Used in react assessments tab
+  concern :assessments_routes do
+    resources :assessments, only: [:index] do
+      collection do
+        get 'section_responses'
       end
     end
   end
@@ -177,6 +186,7 @@ Dashboard::Application.routes.draw do
         get "/#{key}/:channel_id/view", to: 'projects#show', key: key.to_s, as: "#{key}_project_view", readonly: true
         get "/#{key}/:channel_id/embed", to: 'projects#show', key: key.to_s, as: "#{key}_project_iframe_embed", iframe_embed: true
         get "/#{key}/:channel_id/remix", to: 'projects#remix', key: key.to_s, as: "#{key}_project_remix"
+        get "/#{key}/:channel_id/export_config", to: 'projects#export_config', key: key.to_s, as: "#{key}_project_export_config"
       end
       get '/angular', to: 'projects#angular'
     end
@@ -192,6 +202,10 @@ Dashboard::Application.routes.draw do
   # /lang/xx shortcut for all routes
   get '/lang/:locale', to: 'home#set_locale', user_return_to: '/'
   get '*i18npath/lang/:locale', to: 'home#set_locale'
+
+  resources :blocks, constraints: {id: /[^\/]+/}
+
+  resources :shared_blockly_functions, path: '/functions'
 
   resources :levels do
     get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'
@@ -470,8 +484,13 @@ Dashboard::Application.routes.draw do
     post 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#send_email'
 
     get 'workshop_survey/day/:day', to: 'workshop_daily_survey#new_general'
+    get 'workshop_survey/post/:enrollment_code', to: 'workshop_daily_survey#new_post', as: 'new_workshop_survey'
     get 'workshop_survey/facilitators/:session_id(/:facilitator_index)', to: 'workshop_daily_survey#new_facilitator'
     get 'workshop_survey/thanks', to: 'workshop_daily_survey#thanks'
+
+    get 'post_course_survey/thanks', to: 'post_course_survey#thanks'
+    post 'post_course_survey/submit', to: 'post_course_survey#submit'
+    get 'post_course_survey/:course_initials', to: 'post_course_survey#new'
 
     namespace :application do
       get 'facilitator', to: 'facilitator_application#new'
@@ -502,7 +521,6 @@ Dashboard::Application.routes.draw do
     get 'workshop_materials', action: 'admin_index', controller: 'workshop_material_orders'
 
     get 'pre_workshop_survey/:enrollment_code', action: 'new', controller: 'pre_workshop_survey', as: 'new_pre_workshop_survey'
-    get 'workshop_survey/:enrollment_code', action: 'new', controller: 'workshop_survey', as: 'new_workshop_survey'
     get 'teachercon_survey/:enrollment_code', action: 'new', controller: 'teachercon_survey', as: 'new_teachercon_survey'
 
     get 'generate_csf_certificate/:enrollment_code', controller: 'csf_certificate', action: 'generate_certificate'
@@ -531,11 +549,13 @@ Dashboard::Application.routes.draw do
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
   get '/dashboardapi/section_text_responses/:section_id', to: 'api#section_text_responses'
+  # Used in angular assessments tab
   get '/dashboardapi/section_assessments/:section_id', to: 'api#section_assessments'
   get '/dashboardapi/section_surveys/:section_id', to: 'api#section_surveys'
   get '/dashboardapi/student_progress/:section_id/:student_id', to: 'api#student_progress'
   scope 'dashboardapi', module: 'api/v1' do
     concerns :section_api_routes
+    concerns :assessments_routes
   end
 
   # Wildcard routes for API controller: select all public instance methods in the controller,
@@ -578,8 +598,6 @@ Dashboard::Application.routes.draw do
 
       post 'users/:user_id/post_ui_tip_dismissed', to: 'users#post_ui_tip_dismissed'
 
-      post 'users/accept_data_transfer_agreement', to: 'users#accept_data_transfer_agreement'
-
       post 'users/:user_id/postpone_census_banner', to: 'users#postpone_census_banner'
       post 'users/:user_id/dismiss_census_banner', to: 'users#dismiss_census_banner'
 
@@ -602,6 +620,7 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  post '/dashboardapi/v1/users/accept_data_transfer_agreement', to: 'api/v1/users#accept_data_transfer_agreement'
   get '/dashboardapi/v1/school-districts/:state', to: 'api/v1/school_districts#index', defaults: {format: 'json'}
   get '/dashboardapi/v1/schools/:school_district_id/:school_type', to: 'api/v1/schools#index', defaults: {format: 'json'}
   get '/dashboardapi/v1/schools/:id', to: 'api/v1/schools#show', defaults: {format: 'json'}

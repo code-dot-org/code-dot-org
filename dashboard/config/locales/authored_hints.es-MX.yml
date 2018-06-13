@@ -1,4 +1,5 @@
-"es-MX":
+---
+es-MX:
   data:
     authored_hints:
       2-3 Artist 1 new_authored_hint:
@@ -27,8 +28,8 @@
       2-3 Artist 6_authored_hint:
         2-3_Artist_6_a: 'Para realizar esos pequeños ángulos, tendrás que ir *más
           allá* cada vez así como lo hiciste con el cuadrado.   '
-        2-3_Artist_6_b: Dado que ya estoy de lado derecho, es más fácil ir hacia adelante,
-          luego gira a la derecha para crear el triángulo.
+        2-3_Artist_6_b: Como ya estoy mirando hacia la derecha, es más fácil empezar
+          por avanzar, y luego hacer vueltas a la izquierda para crear el triángulo.
         2-3_Artist_6_c: Cada lado del triángulo tienen el mismo tamaño como los lados
           del cuadrado...¡100 pixeles!
       2-3 Artist 7_authored_hint:
@@ -427,8 +428,8 @@
       Course 4 Artist 11_authored_hint:
         Course_4_Artist_11_a: 'El semi-hexágono tiene una ** longitud de 30 ** y gira
           a la derecha por ** 60 grados **.  '
-        Course_4_Artist_11_b: 'El triángulo 2/3 tiene una ** longitud de 80 ** y gira
-          a la derecha por ** 120 grados **. '
+        Course_4_Artist_11_b: 'El triángulo 2/3 tiene una **longitud de 80** y gira
+          a la derecha por **120 grados**. '
       Course 4 Artist 12_authored_hint:
         Course_4_Artist_12_a: 'Cada forma repetida es la combinación de ** la mitad
           de un hexágono **, seguida de ** 2/3 de un triángulo **. '
@@ -4248,8 +4249,8 @@
       course1_artist_loops_challenge2_authored_hint:
         harvey_tictactoe: Puedes usar bloques `saltar` para moverte a otros espacios.
       course1_artist_loops_challenge3_authored_hint:
-        courseA_artist_loops_challenge2_a: 'Bloques como este: <xml>  <block type="simple_move_up_left"/></xml>
-          ¡ permitirá que tu artista se mueva de forma inclinada!'
+        courseA_artist_loops_challenge2_a: 'Bloques como este: <xml> <block type="simple_move_up_left"/></xml>
+          ¡permitirá que tu artista se mueva de forma inclinada!'
         courseA_artist_loops_challenge2_b: Cuando termines una casa de pájaros, ¡salta
           a la siguiente!
         courseA_artist_loops_challenge2_c: Necesitará MUCHOS bloques dentro del ciclo
@@ -4636,8 +4637,8 @@
       course3_artist_concept_challenge1_authored_hint:
         courseE_artist_concept_challenge1_a: 'El semi-hexágono tiene una ** longitud
           de 30 ** y gira a la derecha por ** 60 grados **.  '
-        courseE_artist_concept_challenge1_b: 'El triángulo 2/3 tiene una ** longitud
-          de 80 ** y gira a la derecha por ** 120 grados **. '
+        courseE_artist_concept_challenge1_b: 'El triángulo 2/3 tiene una **longitud
+          de 80** y gira a la derecha por **120 grados**. '
       course3_artist_functions_challenge1_authored_hint:
         courseE_artist_functions_challenge1_a: Si llama a la función una vez más,
           puede crear el mismo diseño en la esquina final. ¡También puedes "saltar
@@ -5537,13 +5538,13 @@
       courseA_artist_loops12_authored_hint: {}
       courseA_artist_loops12_2018_authored_hint: {}
       courseA_artist_loops2_authored_hint:
-        courseA_artist_loops2_a: ¿No sabes cómo dibujar una línea? Comience unir  bloques
-          a la <xml> <tipo de bloque = "when_run" /> </ xml>   para ver qué pasa.
+        courseA_artist_loops2_a: ¿No sabes cómo dibujar una línea? Comience unir bloques
+          a la <xml><block type="when_run"/></xml> para ver qué pasa.
         courseA_artist_loops2_b: Usa este bloque <xml><block type="simple_move_right"/></xml>
           para resolver este rompecabezas.
       courseA_artist_loops2_2018_authored_hint:
-        courseA_artist_loops2_a: ¿No sabes cómo dibujar una línea? Comience unir  bloques
-          a la <xml> <tipo de bloque = "when_run" /> </ xml>   para ver qué pasa.
+        courseA_artist_loops2_a: ¿No sabes cómo dibujar una línea? Comience unir bloques
+          a la <xml><block type="when_run"/></xml> para ver qué pasa.
         courseA_artist_loops2_b: Usa este bloque <xml><block type="simple_move_right"/></xml>
           para resolver este rompecabezas.
       courseA_artist_loops3_authored_hint:
@@ -7044,6 +7045,68 @@
           </block>
           </xml>
       courseB_collector_loops_challenge2_authored_hint:
+        courseB_collector_loops_challenge2_a: Si algo sale mal, no tengas miedo de
+          comenzar de nuevo. No te rindas!
+        courseB_collector_loops_challenge2_b: |-
+          Si repites este patrón, ¡Laurel no golpeará la pared en el fondo de la cueva!
+          <xml><block type="maze_moveEast">
+          <next>
+          <block type="collector_collect">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block></xml>
+        courseB_collector_loops_challenge2_c: Intenta usar un bloque de repetición
+          para recolectar la pila final de tesoros!
+        courseB_collector_loops_challenge2_d: |-
+          Pruebe esta solución:
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="3-10">4</title>
+          <statement name="DO">
+          <block type="maze_moveEast">
+          <next>
+          <block type="collector_collect">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="3-10">6</title>
+          <statement name="DO">
+          <block type="collector_collect"/>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_collector_loops_challenge2_2018_authored_hint:
         courseB_collector_loops_challenge2_a: Si algo sale mal, no tengas miedo de
           comenzar de nuevo. No te rindas!
         courseB_collector_loops_challenge2_b: |-
@@ -9050,15 +9113,15 @@
           código línea por línea. ¿Puedes averiguar lo que tienes que hacer a continuación?
         courseC_maze_programming5_b: El pájaro tendrá que hacer un giro para completar
           este rompecabezas. ¿Puedes descubrir en qué dirección?
-        courseC_maze_programming5_c: La solución tendrá dos bloques 'adelante', un
-          turno y dos bloques más 'adelante'.
+        courseC_maze_programming5_c: La solución tendrá dos bloques `move forward`,
+          un turno y dos bloques más `move forward`.
       courseC_maze_programming5_2018_authored_hint:
         courseC_maze_programming5_a: Intente usar el botón "Paso" para ejecutar su
           código línea por línea. ¿Puedes averiguar lo que tienes que hacer a continuación?
         courseC_maze_programming5_b: El pájaro tendrá que hacer un giro para completar
           este rompecabezas. ¿Puedes descubrir en qué dirección?
-        courseC_maze_programming5_c: La solución tendrá dos bloques 'adelante', un
-          turno y dos bloques más 'adelante'.
+        courseC_maze_programming5_c: La solución tendrá dos bloques `move forward`,
+          un turno y dos bloques más `move forward`.
       courseC_maze_programming6_authored_hint:
         courseC_maze_programming6_a: "¡Hay dos formas de resolver este rompecabezas!"
         courseC_maze_programming6_b: Siga su dedo del pájaro al cerdo, ¿qué pasos
@@ -11847,16 +11910,16 @@
       courseE_artist_concept_challenge1_authored_hint:
         courseE_artist_concept_challenge1_a: 'El semi-hexágono tiene una ** longitud
           de 30 ** y gira a la derecha por ** 60 grados **.  '
-        courseE_artist_concept_challenge1_b: 'El triángulo 2/3 tiene una ** longitud
-          de 80 ** y gira a la derecha por ** 120 grados **. '
+        courseE_artist_concept_challenge1_b: 'El triángulo 2/3 tiene una **longitud
+          de 80** y gira a la derecha por **120 grados**. '
         courseE_artist_concept_challenge1_c: Este es el diseño que desea repetir para
           obtener la forma completa:! [] (Https://images.code.org/d6b2afd39119da33d085dcce6077ada8-image-1501705780826.28.43
           PM.png)
       courseE_artist_concept_challenge1_2018_authored_hint:
         courseE_artist_concept_challenge1_a: 'El semi-hexágono tiene una ** longitud
           de 30 ** y gira a la derecha por ** 60 grados **.  '
-        courseE_artist_concept_challenge1_b: 'El triángulo 2/3 tiene una ** longitud
-          de 80 ** y gira a la derecha por ** 120 grados **. '
+        courseE_artist_concept_challenge1_b: 'El triángulo 2/3 tiene una **longitud
+          de 80** y gira a la derecha por **120 grados**. '
         courseE_artist_concept_challenge1_c: Este es el diseño que desea repetir para
           obtener la forma completa:! [] (Https://images.code.org/d6b2afd39119da33d085dcce6077ada8-image-1501705780826.28.43
           PM.png)
@@ -16529,6 +16592,9 @@
           Mira este camino...
 
           ! [] (https://images.code.org/e1d29901495eea9504c194b09efaa88e-image-1503437474226.29.32.png)
+      courseF_playlab_brokenText_authored_hint:
+        courseF_playlab_variables6c_a: Debajo de la sección "Entrada", usa el bloque
+          `preguntar` para obtener la entrada de los usuarios.
       courseF_playlab_variables1a_authored_hint:
         courseF_playlab_variables1a_a: Tienes que sustituir las palabras "¿Qué debo
           gritar?" en el bloque verde con "¡Gol!"
@@ -17571,8 +17637,8 @@
       grade4_artist_nestedLoops_challenge2_authored_hint:
         Course_4_Artist_11_a: 'El semi-hexágono tiene una ** longitud de 30 ** y gira
           a la derecha por ** 60 grados **.  '
-        Course_4_Artist_11_b: 'El triángulo 2/3 tiene una ** longitud de 80 ** y gira
-          a la derecha por ** 120 grados **. '
+        Course_4_Artist_11_b: 'El triángulo 2/3 tiene una **longitud de 80** y gira
+          a la derecha por **120 grados**. '
       grade4_artist_nested_loop_polygons1_authored_hint:
         4-5_Nested_Loops_7_a: Este diseño se repetirá 10 veces terminando en 360 grados.
           ** 360/10 =? **
@@ -17688,8 +17754,8 @@
       grade4_review_artist2_authored_hint:
         2-3_Artist_6_a: 'Para realizar esos pequeños ángulos, tendrás que ir *más
           allá* cada vez así como lo hiciste con el cuadrado.   '
-        2-3_Artist_6_b: Dado que ya estoy de lado derecho, es más fácil ir hacia adelante,
-          luego gira a la derecha para crear el triángulo.
+        2-3_Artist_6_b: Como ya estoy mirando hacia la derecha, es más fácil empezar
+          por avanzar, y luego hacer vueltas a la izquierda para crear el triángulo.
         2-3_Artist_6_c: Cada lado del triángulo tienen el mismo tamaño como los lados
           del cuadrado...¡100 pixeles!
       grade4_review_bee1_authored_hint:

@@ -16,7 +16,7 @@
   anybody_can_learn: "Oricine poate învăța."
   learn_now: "Învaţă Acum"
   petition_message: "Fiecare elev din fiecare şcoală ar trebui să aibă posibilitatea de a învăța informatică"
-  petition_sign_message: 'Dacă ești de acord, semnează-ți numele. Alătură-te altora #.'
+  petition_sign_message: 'Dacă ești de acord, semnează-te cu numele. Alătură-te # celorlalți.'
   petition_sign_message_support: 'Dacă ne sprijini, completează-ți numele. Alătură-te # celorlalți.'
   petition_join_others: 'Alătură-te altor #'
   name: "Nume"
@@ -372,6 +372,8 @@
   homepage_header_donors: "Code.org mulţumește suporterilor săi"
   homepage_donors_seall: "Vizualizați toate"
   homepage_donors_donate: "Donează"
+  homepage_below_hero_announcement_text: "Pentru noi este importantă confidențialitatea dumneavoastră și facem unele actualizări la politica noastră de confidențialitate, care vor intra în vigoare începând cu 25 mai."
+  homepage_below_hero_announcement_link_text: "Află mai mult"
   contact_form_topic_student: "Sunt student"
   contact_form_topic_parent: "Sunt părinte"
   contact_form_topic_teacher: "Sunt profesor/educator"
@@ -542,6 +544,10 @@
   volunteer_engineer_submission_field_email: "Adresă de email"
   volunteer_engineer_submission_field_email_desc: "Adresa ta de e-mail nu va fi niciodata distribuita, dar iti vom trimite solicitari din partea profesorilor."
   volunteer_engineer_submission_field_email_placeholder: "Adresă de email"
+  volunteer_engineer_submission_field_email_preference: "Sunteți de acord să vă trimitem prin e-mail actualizări cu privire la cursurile noastre, oportunitățile locale sau alte știri din domeniul informaticii?"
+  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy policy)"
+  volunteer_engineer_submission_field_email_preference_yes: 'Da'
+  volunteer_engineer_submission_field_email_preference_no: 'Nu'
   volunteer_engineer_submission_final_paragraph: "Vei aparea pe o hartă pentru ca profesorii locali sa te contacteze pentru Ora de Cod sau alte oportunitati de voluntariat. Adresa ta de e-mail si adresa exactă nu vor fi distribuite, dar alte informatii (inclusiv locatia aproximativa) vor fi vizibile pentru profesorii locali."
   volunteer_engineer_submission_checkbox_contact: 'Sunt de acord sa fiu contactat de profesori pentru oportunitati de voluntariat (Nota: adresa ta de e-mail nu va fi distribuita)'
   volunteer_engineer_submission_checkbox_age_18_plus: "Confirm că am cel puţin 18 ani."
@@ -932,9 +938,25 @@
   coursee_name: "Curs E"
   coursef-draft_name: Curs F
   coursef_name: "Curs F"
+  coursea-2017_name: Course A (2017)
+  courseb-2017_name: Course B (2017)
+  coursec-2017_name: Course C (2017)
+  coursed-2017_name: Course D (2017)
+  coursee-2017_name: Course E (2017)
+  coursef-2017_name: Course F (2017)
+  coursea-2018_name: Course A (2018)
+  courseb-2018_name: Course B (2018)
+  coursec-2018_name: Course C (2018)
+  coursed-2018_name: Course D (2018)
+  coursee-2018_name: Course E (2018)
+  coursef-2018_name: Course F (2018)
   accelerated_name: "Curs intensiv"
   express_name: "Express Course"
   pre-express_name: Curs expres pentru preșcolari
+  express-2017_name: Express Course (2017)
+  pre-express-2017_name: Pre-reader Express Course (2017)
+  express-2018_name: Express Course (2018)
+  pre-express-2018_name: Pre-reader Express Course (2018)
   cspunit1_name: "(vechi) Unitatea 1: Informaţii digitale"
   cspunit2_name: "(vechi) Unitatea 2: Internet"
   cspunit3_name: "(vechi) Unitate 3: programare"
@@ -947,12 +969,26 @@
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Unitatea 5: Datele și societatea'
   csd6_name: 'Unitatea 6: Calcul fizic'
+  csd1-2017_name: 'Unit 1: Problem Solving'
+  csd2-2017_name: 'Unit 2: Web Development'
+  csd3-2017_name: 'Unit 3: Animation and Games'
+  csd4-2017_name: 'Unit 4: The Design Process'
+  csd5-2017_name: 'Unitatea 5: Datele și societatea'
+  csd6-2017_name: 'Unitatea 6: Calcul fizic'
   csd1-2018_name: 'Unit 1: Problem Solving'
   csd2-2018_name: 'Unit 2: Web Development'
   csd3-2018_name: 'Unit 3: Animation and Games'
   csd4-2018_name: 'Unit 4: The Design Process'
   csd5-2018_name: 'Unitatea 5: Datele și societatea'
   csd6-2018_name: 'Unitatea 6: Calcul fizic'
+  csp1-2017_name: 'Unitatea 1: Internet'
+  csp2-2017_name: 'Unitatea 2: Informaţii digitale'
+  csp3-2017_name: 'Unit 3: Algorithms and Programming'
+  csp4-2017_name: 'Unit 4: Big Data and Privacy'
+  csp5-2017_name: 'Unit 5: Building Apps'
+  csp-explore-2017_name: 'AP: Explore PT Prep'
+  csp-create-2017_name: 'AP: Create PT Prep'
+  csppostap-2017_name: 'Post-AP: Baze de date în aplicaţii'
   csp1-2018_name: 'Unitatea 1: Internet'
   csp2-2018_name: 'Unitatea 2: Informaţii digitale'
   csp3-2018_name: 'Unit 3: Algorithms and Programming'
@@ -971,6 +1007,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: Sarcini de performanţă AP
   csppostap_name: 'Post-AP: Baze de date în aplicaţii'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: "Testul complet - 50 întrebări"
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'
@@ -994,6 +1031,8 @@
   math_category_name: "Matematică"
   hoc_category_name: "Oră de Programare"
   csf_category_name: "Fundamentele CS"
+  csf_2017_category_name: "CS Fundamentals (2017)"
+  csf_2018_category_name: "CS Fundamentals (2018)"
   csf_international_category_name: "Fundamentele internaționale ale Informaticii"
   csf2_draft_category_name: 'În curs de dezvoltare: Cursuri A - F'
   csd_category_name: "CS Discoveries ('17-'18)"

@@ -72,7 +72,6 @@
       "comment_Drawing": null,
       "console.log": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# mouseDidMove\r\n\r\nWe can also use Boolean expressions to check whether or not the mouse has moved. The `mouseDidMove` block will return `false` if the mouse is still, but `true` if the mouse has been moving.\r\n\r\n# Do This\r\nRight now, this program just displays a salt shaker sprite. You'll need to use `mouseDidMove` so that you can \"shake\" the salt by moving the mouse back and forth.\r\n\r\n* Add a conditional that checks if `mouseDidMove`.\r\n* If the conditional is true, rotate the salt sprite randomly to the left or right.\r\n\r\n_Challenge: Can you keep track of how many times the `mouseDidMove` shakes the salt, and then rotate it right side up after 100 shakes?_",

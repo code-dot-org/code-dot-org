@@ -128,6 +128,7 @@ zh-CN:
       CSD U3 Direction Arrows_2018_callout: { }
       CSD U3 Draw Loop Plugged update your scene_callout: { }
       CSD U3 Draw Loop Plugged update your scene_2018_callout: { }
+      CSD U3 Draw Loop Plugged wiggle sprite y_2018_callout: { }
       CSD U3 Drawing Squares to Corners_callout: { }
       CSD U3 Drawing Squares to Corners_2018_callout: { }
       CSD U3 Else_callout: { }
@@ -1194,6 +1195,8 @@ zh-CN:
         courseD_playLab_condFP_1: 我们将模块分类提供给你，来写更多的代码！点击这里来看看每样东西都在哪里。
       courseD_playLab_condFP_a_callout:
         courseD_playLab_condFP_1: 我们将模块分类提供给你，来写更多的代码！点击这里来看看每样东西都在哪里。
+      courseD_playLab_condForVideo_callout:
+        courseD_playLab_condFP_1: 我们将模块分类提供给你，来写更多的代码！点击这里来看看每样东西都在哪里。
       courseD_scrat_predict1_callout: { }
       courseD_scrat_predict1_2018_callout: { }
       courseD_scrat_ramp1_callout:
@@ -1576,6 +1579,8 @@ zh-CN:
         New Play Lab Project_callout1: 点击分类来看工具箱里的模块！将模块拖拽到工作区，来将它们加到你的程序里。
         New Play Lab Project_callout2: 点击“运行”来保存并运行程序
         sign_in_to_save_project: 想要稍后再访问你的项目吗？登录后就能将项目保存到你的账户中！
+      courseF_playlab_brokenText_callout:
+        courseF_playlab_variables5c_1: 你会发现你的变量模块在这里。
       courseF_playlab_embed_vars_callout: { }
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: 工具箱已经进行了分类，这样能够更容易找到你需要的模块。

@@ -605,8 +605,7 @@ tr:
       Farmer for Authored Hint testing_authored_hint:
         first_hint: |-
           İlk ipucu bu. Bu * bazı * ** basit ** 'biçimlendirme' içerir
-        second_hint: |-
-          Bu da ikinci ipucu. Bir resmi var.  ! [] (https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)
+        second_hint: Bu da ikinci ipucu. Bir resmi var.  ! [] (https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)
         last_hint: Üçüncü ve son ipucu bu. Özel bir şey yok.
       Farmer for TTS testing_authored_hint:
         first_hint: |-
@@ -3230,6 +3229,67 @@ tr:
           </block>
           </xml>
       courseB_collector_loops_challenge2_authored_hint:
+        courseB_collector_loops_challenge2_a: Eğer işler ters giderse, yeniden başlamaktan korkma! Sakın pes etme!
+        courseB_collector_loops_challenge2_b: |-
+          Bu tekrar eden kodu kullanırsan, Laurel mağaranın içindeki duvara çarpmayacak! 
+          
+          <xml><block type="maze_moveEast">
+          <next>
+          <block type="collector_collect">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block></xml>
+        courseB_collector_loops_challenge2_c: Son hazine yığınını toplamak için bir döngü kullanmayı unutma!
+        courseB_collector_loops_challenge2_d: |-
+          Bu çözümü deneyin:
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="3-10">4</title>
+          <statement name="DO">
+          <block type="maze_moveEast">
+          <next>
+          <block type="collector_collect">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="3-10">6</title>
+          <statement name="DO">
+          <block type="collector_collect"/>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_collector_loops_challenge2_2018_authored_hint:
         courseB_collector_loops_challenge2_a: Eğer işler ters giderse, yeniden başlamaktan korkma! Sakın pes etme!
         courseB_collector_loops_challenge2_b: |-
           Bu tekrar eden kodu kullanırsan, Laurel mağaranın içindeki duvara çarpmayacak! 
@@ -6363,8 +6423,8 @@ tr:
         courseD_farmer_condLoops5_a: 'İşte yeni bir döngü: ''bir balkabağına kadar tekrarla''. Bunu, bu bulmacada nasıl kullanabileceğini görüyor musun?'
         courseD_farmer_condLoops5_b: Her noktada birden fazla mısır veya marul bitkisi olabilir. Onların tamamını toplamak için bir adet 'süresince' döngüsü kullan!
       courseD_farmer_condLoops6_authored_hint:
-        courseD_farmer_condLoops6_a: Use a `while path ahead` loop to move the farmer down each piece of the spiral.
-        courseD_farmer_condLoops6_b: You only need to check for corn during most of the harvest.  Just pick one pumpkin at the very end of your program.
+        courseD_farmer_condLoops6_a: Use a `while there is corn` loop to make sure you get all of the corn along the way. This block won't do anything if there's no corn to pick.
+        courseD_farmer_condLoops6_b: Make sure to check `if` there's a path ahead before you take your next step!
       courseD_farmer_condLoops6_2018_authored_hint:
         courseD_farmer_condLoops6_a: Use a `while path ahead` loop to move the farmer down each piece of the spiral.
         courseD_farmer_condLoops6_b: You only need to check for corn during most of the harvest.  Just pick one pumpkin at the very end of your program.
@@ -10525,6 +10585,8 @@ tr:
           Bu yola bak... 
           
           ![](https://images.code.org/e1d29901495eea9504c194b09efaa88e-image-1503437474226.29.32.png)
+      courseF_playlab_brokenText_authored_hint:
+        courseF_playlab_variables6c_a: '"Girdi" bölümü altında, kullanıcılardan girdi almak için`sor` bloğunu kullanın.'
       courseF_playlab_variables1a_authored_hint:
         courseF_playlab_variables1a_a: You will want to replace the words “What should I shout?” in the green block with “Goal!”
       courseF_playlab_variables1a_2018_authored_hint:

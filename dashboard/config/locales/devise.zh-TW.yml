@@ -1,4 +1,5 @@
-"zh-TW":
+---
+zh-TW:
   devise:
     confirmations:
       confirmed: 您的電子信箱已通過驗證。

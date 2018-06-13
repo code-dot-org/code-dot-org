@@ -22,6 +22,13 @@ class ScriptOverview extends React.Component {
     onOverviewPage: PropTypes.bool.isRequired,
     excludeCsfColumnInLegend: PropTypes.bool.isRequired,
     teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
+    showCourseUnitVersionWarning: PropTypes.bool,
+    showScriptVersionWarning: PropTypes.bool,
+    versions: PropTypes.arrayOf(PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      version_year: PropTypes.string.isRequired,
+      version_title: PropTypes.string.isRequired,
+    })).isRequired,
 
     // redux provided
     perLevelProgress: PropTypes.object.isRequired,
@@ -58,6 +65,9 @@ class ScriptOverview extends React.Component {
       currentCourseId,
       scriptHasLockableStages,
       scriptAllowsHiddenStages,
+      showCourseUnitVersionWarning,
+      showScriptVersionWarning,
+      versions,
     } = this.props;
 
     let scriptProgress = NOT_STARTED;
@@ -71,7 +81,11 @@ class ScriptOverview extends React.Component {
       <div>
         {onOverviewPage && (
           <div>
-            <ScriptOverviewHeader/>
+            <ScriptOverviewHeader
+              showCourseUnitVersionWarning={showCourseUnitVersionWarning}
+              showScriptVersionWarning={showScriptVersionWarning}
+              versions={versions}
+            />
             <ScriptOverviewTopRow
               sectionsInfo={sectionsInfo}
               professionalLearningCourse={professionalLearningCourse}

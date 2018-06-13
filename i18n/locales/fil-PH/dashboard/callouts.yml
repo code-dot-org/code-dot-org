@@ -128,6 +128,7 @@ fil:
       CSD U3 Direction Arrows_2018_callout: { }
       CSD U3 Draw Loop Plugged update your scene_callout: { }
       CSD U3 Draw Loop Plugged update your scene_2018_callout: { }
+      CSD U3 Draw Loop Plugged wiggle sprite y_2018_callout: { }
       CSD U3 Drawing Squares to Corners_callout: { }
       CSD U3 Drawing Squares to Corners_2018_callout: { }
       CSD U3 Else_callout: { }
@@ -1194,6 +1195,8 @@ fil:
         courseD_playLab_condFP_1: aming inayos ang mga bloke ayon sa mga kategorya para mabigyan ka nang mas maraming code para mapaglaruan! Mag-click dito para makita kung saan napunta ang lahat.
       courseD_playLab_condFP_a_callout:
         courseD_playLab_condFP_1: aming inayos ang mga bloke ayon sa mga kategorya para mabigyan ka nang mas maraming code para mapaglaruan! Mag-click dito para makita kung saan napunta ang lahat.
+      courseD_playLab_condForVideo_callout:
+        courseD_playLab_condFP_1: aming inayos ang mga bloke ayon sa mga kategorya para mabigyan ka nang mas maraming code para mapaglaruan! Mag-click dito para makita kung saan napunta ang lahat.
       courseD_scrat_predict1_callout: { }
       courseD_scrat_predict1_2018_callout: { }
       courseD_scrat_ramp1_callout:
@@ -1576,6 +1579,8 @@ fil:
         New Play Lab Project_callout1: I-click ang mga kategorya para makita ang mga bloke sa loob ng iyong toolbox! Kaladkarin ang mga bloke sa iyong workspace, at idagdag ang mga ito sa iyong programa
         New Play Lab Project_callout2: Pindutin ang "Run" para mai-save at mapatakbo ang iyong programa
         sign_in_to_save_project: Gusto mong ma-access ang iyong proyekto mamaya? Mag-signin para mai-save ang proyektong ito sa iyong account!
+      courseF_playlab_brokenText_callout:
+        courseF_playlab_variables5c_1: You will find your variable block in here.
       courseF_playlab_embed_vars_callout: { }
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: The toolbox has been organized into categories to make it easier to find the blocks you need.

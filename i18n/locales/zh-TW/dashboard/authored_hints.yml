@@ -596,10 +596,7 @@ zh-TW:
           這是第一個提示。
           
           它有*某種* **基本的** `標記`
-        second_hint: |-
-          這是第二個提示，我們用圖來說明。
-          
-          ![](https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)
+        second_hint: "這是第二個提示，我們用圖來說明。\n\n![](https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)"
         last_hint: 這是第三個提示，也是最後的提示了。它沒有什麼特別的東西。
       Farmer for TTS testing_authored_hint:
         first_hint: |-
@@ -3237,6 +3234,49 @@ zh-TW:
           </block>
           </xml>
       courseB_collector_loops_challenge2_authored_hint:
+        courseB_collector_loops_challenge2_a: 如果出錯了，可以試試修改每個迴圈裡的數值。
+        courseB_collector_loops_challenge2_b: |-
+          如果你錯過了寶藏，你需要移動回西邊一格。
+        courseB_collector_loops_challenge2_c: 別忘了使用迴圈來收集最後一堆寶藏！
+        courseB_collector_loops_challenge2_d: |-
+          Try this solution:
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="3-10">4</title>
+          <statement name="DO">
+          <block type="maze_moveEast">
+          <next>
+          <block type="collector_collect">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="3-10">6</title>
+          <statement name="DO">
+          <block type="collector_collect"/>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_collector_loops_challenge2_2018_authored_hint:
         courseB_collector_loops_challenge2_a: 如果出錯了，可以試試修改每個迴圈裡的數值。
         courseB_collector_loops_challenge2_b: |-
           如果你錯過了寶藏，你需要移動回西邊一格。
@@ -6436,8 +6476,8 @@ zh-TW:
         courseD_farmer_condLoops5_a: 'There is a new loop: `repeat until at pumpkin`. Can you see how to use it in this puzzle?'
         courseD_farmer_condLoops5_b: There could be more than one corn or lettuce plant in each spot. Use a `while` loop to gather all of them!
       courseD_farmer_condLoops6_authored_hint:
-        courseD_farmer_condLoops6_a: Use a `while path ahead` loop to move the farmer down each piece of the spiral.
-        courseD_farmer_condLoops6_b: You only need to check for corn during most of the harvest.  Just pick one pumpkin at the very end of your program.
+        courseD_farmer_condLoops6_a: Use a `while there is corn` loop to make sure you get all of the corn along the way. This block won't do anything if there's no corn to pick.
+        courseD_farmer_condLoops6_b: Make sure to check `if` there's a path ahead before you take your next step!
       courseD_farmer_condLoops6_2018_authored_hint:
         courseD_farmer_condLoops6_a: Use a `while path ahead` loop to move the farmer down each piece of the spiral.
         courseD_farmer_condLoops6_b: You only need to check for corn during most of the harvest.  Just pick one pumpkin at the very end of your program.
@@ -10168,6 +10208,8 @@ zh-TW:
           Look at this path...
           
           ![](https://images.code.org/e1d29901495eea9504c194b09efaa88e-image-1503437474226.29.32.png)
+      courseF_playlab_brokenText_authored_hint:
+        courseF_playlab_variables6c_a: Under the “Input” section, use the `ask` block to get input from users.
       courseF_playlab_variables1a_authored_hint:
         courseF_playlab_variables1a_a: You will want to replace the words “What should I shout?” in the green block with “Goal!”
       courseF_playlab_variables1a_2018_authored_hint:

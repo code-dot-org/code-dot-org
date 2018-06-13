@@ -12,12 +12,11 @@
       %div.choice-container
         %div.choice-label.purple.tall=I18n.t :learn_online
         %img.character-img{src: "/images/congrats-beyond-other.jpg"}
-  -if request.site != 'uk.code.org'
-    %a.white-link{:href=>'/learn/local'}
-      %div.choice
-        %div.choice-container
-          %div.choice-label.purple=I18n.t :learn_classes
-          %img.character-img{src: "/images/map_local_classes.png"}
+  %a.white-link{:href=>'/learn/local'}
+    %div.choice
+      %div.choice-container
+        %div.choice-label.purple=I18n.t :learn_classes
+        %img.character-img{src: "/images/map_local_classes.png"}
   - if script == 'mc' || script == 'minecraft'
     %a.white-link{:href=>'https://education.minecraft.net/hour-of-code'}
       %div.choice

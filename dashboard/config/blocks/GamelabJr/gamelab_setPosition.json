@@ -1,0 +1,60 @@
+{
+  "category": "Sprites",
+  "config": {
+    "color": [
+      184,
+      1,
+      0.74
+    ],
+    "func": "setPosition",
+    "blockText": "move {THIS} to the {POSITION} position",
+    "args": [
+      {
+        "name": "POSITION",
+        "options": [
+          [
+            "top left",
+            "{x: 50, y: 50}"
+          ],
+          [
+            "top center",
+            "{x: 200, y: 50}"
+          ],
+          [
+            "top right",
+            "{x: 350, y: 50}"
+          ],
+          [
+            "center left",
+            "{x: 50, y: 200}"
+          ],
+          [
+            "center",
+            "{x: 200, y: 200}"
+          ],
+          [
+            "center right",
+            "{x: 350, y: 200}"
+          ],
+          [
+            "bottom left",
+            "{x: 50, y: 350}"
+          ],
+          [
+            "bottom center",
+            "{x: 200, y: 350}"
+          ],
+          [
+            "bottom right",
+            "{x: 350, y: 350}"
+          ],
+          [
+            "random",
+            "\"random\""
+          ]
+        ]
+      }
+    ],
+    "methodCall": true
+  }
+}

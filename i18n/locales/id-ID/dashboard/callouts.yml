@@ -128,6 +128,7 @@ id:
       CSD U3 Direction Arrows_2018_callout: { }
       CSD U3 Draw Loop Plugged update your scene_callout: { }
       CSD U3 Draw Loop Plugged update your scene_2018_callout: { }
+      CSD U3 Draw Loop Plugged wiggle sprite y_2018_callout: { }
       CSD U3 Drawing Squares to Corners_callout: { }
       CSD U3 Drawing Squares to Corners_2018_callout: { }
       CSD U3 Else_callout: { }
@@ -1194,6 +1195,8 @@ id:
         courseD_playLab_condFP_1: kami sudah mengatur blok-blok kedalam kategori untuk memberikan kamu lebih banyak kode untuk dimainkan! Kilk disini untuk melihat kemana semua pergi.
       courseD_playLab_condFP_a_callout:
         courseD_playLab_condFP_1: kami sudah mengatur blok-blok kedalam kategori untuk memberikan kamu lebih banyak kode untuk dimainkan! Kilk disini untuk melihat kemana semua pergi.
+      courseD_playLab_condForVideo_callout:
+        courseD_playLab_condFP_1: kami sudah mengatur blok-blok kedalam kategori untuk memberikan kamu lebih banyak kode untuk dimainkan! Kilk disini untuk melihat kemana semua pergi.
       courseD_scrat_predict1_callout: { }
       courseD_scrat_predict1_2018_callout: { }
       courseD_scrat_ramp1_callout:
@@ -1576,6 +1579,8 @@ id:
         New Play Lab Project_callout1: Klik kategori untuk melihat blok di kotak peralatan Anda! Pindahkan blok ke ruang kerja untuk menambahkannya ke program Anda
         New Play Lab Project_callout2: Tekan "Run" untuk menyimpan dan menjalankan program Anda
         sign_in_to_save_project: Anda Ingin mengakses proyek nanti? Masuk untuk menyimpan proyek ini ke akun anda!
+      courseF_playlab_brokenText_callout:
+        courseF_playlab_variables5c_1: Anda akan menemukan blok variabel anda di sini.
       courseF_playlab_embed_vars_callout: { }
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: Toolbox telah disusun kedalam kategori-kategori untuk mempermudah menemukan blok-blok yang kamu butuhkan.

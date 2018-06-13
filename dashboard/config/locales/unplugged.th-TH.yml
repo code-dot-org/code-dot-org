@@ -1,4 +1,5 @@
-"th":
+---
+th:
   data:
     unplugged:
       Unplug1:
@@ -129,7 +130,7 @@
           must complete a task (reach a certain height or bear a certain weight),
           and students discuss the idea of being persistent when things get complicated.
       GettingLoopy:
-        title: Getting Loopy
+        title: มาวนลูปกัน
         desc: This lesson introduces the programming concept of loops (repeated instructions)
           through a dance activity. Students will learn simple choreography, then
           be instructed to repeat it.
@@ -318,7 +319,7 @@
           making paper airplanes. This lesson also focuses on the bigger picture of
           computer science and how algorithms play an essential part.
       courseC_unplugged_gettingLoopy:
-        title: Getting Loopy
+        title: มาวนลูปกัน
         desc: This lesson introduces the programming concept of loops (repeated instructions)
           through a dance activity. Students will learn simple choreography, then
           be instructed to repeat it.
@@ -528,7 +529,7 @@
           making paper airplanes. This lesson also focuses on the bigger picture of
           computer science and how algorithms play an essential part.
       GettingLoopy_2018:
-        title: Getting Loopy
+        title: มาวนลูปกัน
         desc: This lesson introduces the programming concept of loops (repeated instructions)
           through a dance activity. Students will learn simple choreography, then
           be instructed to repeat it.
@@ -540,3 +541,21 @@
       MoveItMoveIt_2018:
         title: Move It, Move It
         desc: ''
+      courseB_unplugged_CnC_2018:
+        title: It's Great to Create and Play Fair
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright
+          and Creativity, this lesson exists to help students understand the creative
+          process of sharing and inspiration.  Along with that comes the promotion
+          of creative expression and the need to be fair with creative work.
+      courseE_unplugged_CnC_2018:
+        title: Digital Sharing
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright
+          and Creativity, this lesson exists to help students understand the challenges
+          and beneﬁts of respecting ownership and copyright, particularly in digital
+          environments. Students should be encouraged to respect artists’ rights as
+          an important part of being an ethical digital citizen.
+      RelayProgramming_2018:
+        title: โปรแกรมการถ่ายทอดข้อมูล
+        desc: This activity will begin with a short lesson on debugging and persistence,
+          then will quickly move to a race against the clock as students break into
+          teams and work together to write a program one instruction at a time.

@@ -38,7 +38,6 @@
       "multiplyOperator": null,
       "divideOperator": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Variables in Expressions\r\n\r\nYou just saw that **the result of an expression can be stored in a variable**. Get ready though, because we're about to get even more interesting.\r\n\r\n**Variables can be used in expressions**. All of these expressions are valid (assuming the variables have been created):\r\n\r\n`age + 1`\r\n`height / 2`\r\n`(time * speed) + 100`\r\n\r\nIn each case **the variable's value is used when its label appears**.\r\n\r\n# Do This\r\n\r\nThis program generates a random multiple of 10 (10, 20, 30, 40 etc) and stores it in the variable `size`\r\n\r\n* **Run the progam** to see how it works\r\n* **The variable `size` appears in two expressions on lines 7 and 8.**\r\n* **Change the values in these expressions** to see how they affect the way your program works",

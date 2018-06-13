@@ -1,4 +1,5 @@
-"th":
+---
+th:
   errors:
     messages:
       not_saved: 'โปรดแก้ไขข้อผิดพลาดต่อไปนี้:'
@@ -91,6 +92,7 @@
     facebook: เฟซบุค
     windowslive: บัญชี Microsoft
     clever: Clever Account
+    powerschool: Powerschool Account
     forgot_password: ลืมรหัสผ่าน?
     need_confirmation: ไม่ได้รับการยืนยันคำแนะนำ?
     need_unlock: ไม่ได้รับคำแนะนำในการปลดล็อค?
@@ -133,6 +135,13 @@
     valid_password: รหัสผ่านถูกต้อง
     invalid_password: รหัสผ่านต้องมีอย่างน้อย 6 ตัวอักษร
     mismatch_password: รหัสผ่านที่คุณป้อนไม่ตรงกัน
+    agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
+      and <a href='http://code.org/privacy'>Privacy Policy</a>.
+    under_13_consent: If I am under 13 years of age, I confirm that I have my parent
+      or legal guardian's permission to use the Code.org services.
+    agree_us_website: I agree to using a website based in the United States.
+    my_data_to_us: Data from my use of this site may be sent to and stored or processed
+      in the United States.
     student_terms: ข้าพเจ้ายอมรับผูกพันตาม<a href='http://code.org/tos'>เงื่อนไขการให้บริการ</a>ของ
       Code.org ถ้าหากข้าพเจ้าอายุต่ำกว่า 13 ปี ข้าพเจ้ายืนยัน โดยส่งแบบฟอร์มนี้ว่า
       มีคุณพ่อคุณแม่หรือผู้ปกครองตามกฎหมายอนุญาตให้ใช้บริการ Code.org. <br/> <br/>
@@ -141,12 +150,19 @@
     teacher_terms: ข้าพเจ้ายอมรับผูกพันตามเงื่อนไขการให้บริการของ Code.org สำหรับข้อมูลเพิ่มเติมเกี่ยวกับความเป็นส่วนตัว
       ดูได้จาก<a href='http://code.org/privacy'>นโยบายความเป็นส่วนตัว</a>ของเรา
     additional_information: เราต้องการข้อมูลบางอย่างเพิ่มเติมเพื่อดำเนินการสมัครต่อ
+    user_type_button: Update Account Type
     user_type_label: ประเภทบัญชี
     user_type_teacher: ครู
     user_type_student: นักเรียน
     field_is_required: จำเป็น
     accept_terms: คุณต้อง ยอมรับ เพื่อสร้างบัญชี
     error: An error occurred.
+    email_preference_question: Can we email you about updates to our courses, local
+      learning opportunities, or other computer science news?
+    email_preference_privacy: "(See our privacy policy)"
+    email_preference_yes: ใช่
+    email_preference_no: ไม่ใช่
+    email_preference_required: You must specify an email preference.
   school_info:
     title: School Information (optional)
     school_country: School Country
@@ -294,7 +310,7 @@
       course_catalog: Course Catalog
       project_gallery: Project Gallery
       sections: Sections
-      help_support: Help and support
+      help_support: การช่วยเหลือและสนับสนุน
       report_bug: Report bug
       teacher_community: Teacher community
       professional_learning: Professional Learning
@@ -322,7 +338,7 @@
       about_faqs: FAQs
       learn: Learn
       stats: สถิติ
-      help_us: Help Us
+      help_us: ช่วยเรา
       teach: Teach
       about: About
     user:
@@ -589,6 +605,8 @@
       in your section.
     already_enrolled_in_new_section: You cannot move these students because this teacher
       already has them in another section.
+    third_party_login: You cannot move students to a section that is synced with a
+      third party tool.
   share:
     title: เรียนกับ Code Studio
     description: Anyone can learn computer science. Make games, apps and art with
@@ -597,6 +615,8 @@
   gender:
     male: ชาย
     female: หญิง
+    non_binary: Non-binary
+    not_listed: Preferred term not listed
     none: ไม่ต้องการตอบ
   user_type:
     student: นักเรียน
@@ -636,7 +656,7 @@
     how_it_works: มันทำงานได้อย่างไร
     try_hour_of_code: Try an Hour of Code!
   reference_area:
-    title: ต้องการความช่วยเหลือเหรอ?
+    title: ต้องการความช่วยเหลือ?
     subtitle: ดูวิดีโอและคำใบ้พวกนี้
     teacher: ดูทางเลือก
     teacher_no_solution: Stop seeing solution
@@ -649,7 +669,7 @@
     notes_coming_soon: เร็ว ๆ นี้จะมีบันทึกย่อสำหรับวิดีโอนี้
     autoplay_option: วิดีโอเริ่มเล่นอัตโนมัติ
     download: ดาวน์โหลดวิดีโอ
-    show_notes: Show Notes
+    show_notes: แสดงเป็นข้อความ
     show_video: Show Video
   compatibility:
     upgrade:
@@ -823,14 +843,14 @@
     support: Get Help
     support_url: "//support.code.org"
     help_resources: Help and Resources
-    help_support: Help and Support
+    help_support: การช่วยเหลือและสนับสนุน
     documentation: Documentation
     tutorials: Tutorials
   multi:
     wrong_title: Incorrect answer
-    wrong_body: The answer you've entered is not correct.  Please try again!
+    wrong_body: คำตอบที่คุณเลือก ไม่ถูกต้อง โปรดลองใหม่อีกครั้ง!
     correct_title: Correct
-    correct_body: That is the correct answer.
+    correct_body: เป็นคำตอบที่ถูกต้อง
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   multi-submittable:
@@ -869,7 +889,7 @@
     wrong_title: Incorrect solution
     wrong_body: The solution you've entered is not correct.  Please try again!
     correct_title: Correct
-    correct_body: That is the correct answer.
+    correct_body: เป็นคำตอบที่ถูกต้อง
   contract_match:
     wrong_title: Incorrect answer
     badname: Your contract has the wrong name.
@@ -885,13 +905,13 @@
     open_response_title: Thanks
     open_response_body: Thanks for your response!
     correct_title: Correct
-    correct_body: That is the correct answer.
+    correct_body: เป็นคำตอบที่ถูกต้อง
   dialog:
     ok: ตกลง
     startover_title: คุณจะเริ่มต้นใหม่จริงๆหรือ ?
     startover_body: This will reset the puzzle to its start state and reset all the
       data you've added or changed.
-    startover_ok: เริ่มใหม่
+    startover_ok: เริ่มเล่นใหม่
     startover_cancel: ยกเลิก
   time:
     hour: 1 hour
@@ -974,8 +994,8 @@
     projects: Projects
     create: Create Project
     create_a_project: 'Create a new project:'
-    new: Create New
-    rename: Rename
+    new: สร้างใหม่
+    rename: ตั้งชื่อใหม่
     save: บันทึก
     delete: ลบ
     import: Import
@@ -987,7 +1007,7 @@
     share_link_import_error_body: There was a problem importing that share link. Please
       try again.
     exit: Return to Course
-    my_projects: My Projects
+    my_projects: โปรเจคของฉัน
     project_gallery: Project Gallery
     publish: Publish
     unpublish: Unpublish
@@ -1024,8 +1044,8 @@
     delete_confirm_text: Deleting your project will permanently remove it from your
       My Projects list. Anyone you have shared the link to will no longer be able
       to view your project.
-    view_all: View My Projects
-    remix: Remix
+    view_all: ดูโปรเจคของฉัน
+    remix: รีมิกซ์
     click_to_remix: Click 'Remix' to spin-off your own version!
     edit_project: Edit Project
     sharing_disabled: Sorry, this project is not available for sharing. If this is
@@ -1112,6 +1132,7 @@
     csd5_2: 'Chapter 2: Solving Data Problems'
     csd6_1: 'Chapter 1: Hardware Output'
     csd6_2: 'Chapter 2: Hardware Input'
+    csd_survey: Post-Course Survey
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -1125,6 +1146,11 @@
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Unit 2: Digital Information'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: Reflection Prompts
   external_links:
     disclaimer: Disclaimer
@@ -1267,3 +1293,16 @@
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
   courses_category: Full Courses
+  cookie_banner:
+    message: By continuing to browse our site or clicking "I agree," you agree to
+      the storing of cookies on your computer or device.
+    more_information: See Code.org's Privacy Policy.
+    accept: ฉันเห็นด้วย
+  gdpr_dialog:
+    heading: Do you agree to using a web site based in the United States?
+    message: Data from your use of this site may be sent to and stored or processed
+      in the United States.
+    link_intro: For details see our
+    privacy_policy: privacy policy
+    logout: Logout
+    true: ใช่

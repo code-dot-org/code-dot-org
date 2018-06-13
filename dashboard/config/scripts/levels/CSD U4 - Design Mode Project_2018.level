@@ -142,7 +142,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Mocking Up Your App\r\n\r\nUsing your paper prototype, create a digital version of your screen using the Design Mode elements you've learned about.\r\n\r\n# Do This\r\n\r\n* Rename the screen to match your _namespace_.\r\n* Use the built-in elements to lay out your app screen, giving each a proper ID\r\n\t* For example, if your namespace is \"home_\" you might create IDs like:\r\n    \t* \"home_title\"\r\n        * \"home_login_button\"\r\n        * \"home_logo\"\r\n* For any components of your app that can't be recreated with the built in elements you can either:\r\n\t* Redesign to utilize built in elements\r\n    * Find an image to use in place of your element\r\n    * Draw the element using your preferred image editor\r\n* Share your design regularly with your teammates to ensure consistent style",
+    "markdown_instructions": "# Mocking Up Your App\r\n\r\nUsing your paper prototype, create a digital version of your screen using the Design Mode elements you've learned about.\r\n\r\n# Do This\r\n\r\n* Rename the screen to match your _namespace_.\r\n* Use the built-in elements to lay out your app screen, giving each a proper ID\r\n\t* For example, if your namespace is \"home_\" you might create IDs like:\r\n    \t* \"home_title\"\r\n        * \"home_login_button\"\r\n        * \"home_logo\"\r\n* For any components of your app that can't be recreated with the built in elements you can either:\r\n\t* Redesign to utilize built in elements\r\n    * Find an image to use in place of your element\r\n    * Draw the element using your preferred image editor\r\n* Make sure that you and your teammates are regularly looking at each other's designs to ensure consistent style",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -183,11 +183,15 @@
     "encrypted_examples": "DeLCervPM7DmhckVXBUdfbGFro7v2kNefucvhVB/vkTpzX1yWXcQJ1wd1ahV\nUYVE\n",
     "parent_level_id": 5673,
     "name_suffix": "_2018",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-09-18 18:35:15 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-09-27 22:24:03 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-09-18 18:35:15 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-09-27 22:24:03 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-05-31 19:23:43 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>
