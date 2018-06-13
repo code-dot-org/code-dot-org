@@ -118,12 +118,9 @@
     "display_name": "Challenge: Music",
     "parent_level_id": 10623,
     "name_suffix": "_2018",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "show_type_hints": "false",
-    "thumbnail_url": "https://images.code.org/266e812c02f59c3847af32a78110e53e-image-1528757669244.40.39 PM.png"
+    "thumbnail_url": "https://images.code.org/266e812c02f59c3847af32a78110e53e-image-1528757669244.40.39 PM.png",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -49,11 +49,8 @@
     "auto_run_setup": "DRAW_LOOP",
     "show_type_hints": "true",
     "project_template_level_name": "Fish Tank Template",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "instructions": "Use some new blocks from the toolbox to make your fish tank special!"
+    "instructions": "Use some new blocks from the toolbox to make your fish tank special!",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
