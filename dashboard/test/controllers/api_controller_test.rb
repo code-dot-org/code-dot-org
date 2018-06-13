@@ -1271,7 +1271,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get paginated section level progress" do
-    assert_queries 142 do
+    assert_queries 123 do
       get :section_level_progress, params: {section_id: @section.id, page: 1, per: 2}
     end
     assert_response :success
@@ -1279,7 +1279,7 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal 2, data['students'].keys.length
     assert_equal 3, data['pagination']['total_pages']
 
-    assert_queries 139 do
+    assert_queries 120 do
       get :section_level_progress, params: {section_id: @section.id, page: 2, per: 2}
     end
     assert_response :success
@@ -1287,7 +1287,7 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal 2, data['students'].keys.length
 
     # third page has only one student (of 5 total)
-    assert_queries 137 do
+    assert_queries 118 do
       get :section_level_progress, params: {section_id: @section.id, page: 3, per: 2}
     end
     assert_response :success
@@ -1309,7 +1309,7 @@ class ApiControllerTest < ActionController::TestCase
   test "should get section level progress with specific script" do
     script = Script.find_by_name('algebra')
 
-    assert_queries 172 do
+    assert_queries 153 do
       get :section_level_progress, params: {
         section_id: @section.id,
         script_id: script.id
@@ -1321,7 +1321,7 @@ class ApiControllerTest < ActionController::TestCase
   test "should get paginated section level progress with specific script" do
     script = Script.find_by_name('algebra')
 
-    assert_queries 166 do
+    assert_queries 147 do
       get :section_level_progress, params: {section_id: @section.id, script_id: script.id, page: 1, per: 2}
     end
     assert_response :success
@@ -1329,7 +1329,7 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal 2, data['students'].keys.length
     assert_equal 3, data['pagination']['total_pages']
 
-    assert_queries 163 do
+    assert_queries 144 do
       get :section_level_progress, params: {section_id: @section.id, script_id: script.id, page: 2, per: 2}
     end
     assert_response :success
@@ -1337,7 +1337,7 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal 2, data['students'].keys.length
 
     # third page has only one student (of 5 total)
-    assert_queries 161 do
+    assert_queries 142 do
       get :section_level_progress, params: {section_id: @section.id, script_id: script.id, page: 3, per: 2}
     end
     assert_response :success
