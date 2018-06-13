@@ -63,8 +63,12 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
     sub_level5 = create :multi, name: 'level_multi_unattempted', type: 'Multi'
 
     level1 = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
-    level1.properties['title'] =  'Long assessment 1'
-    level1.properties['pages'] = [{levels: ['level_free_response', 'level_multi_unsubmitted']}, {levels: ['level_multi_correct', 'level_multi_incorrect']}, {levels: ['level_multi_unattempted']}]
+    level1.properties['title'] = 'Long assessment 1'
+    level1.properties['pages'] = [
+      {levels: ['level_free_response', 'level_multi_unsubmitted']},
+      {levels: ['level_multi_correct', 'level_multi_incorrect']},
+      {levels: ['level_multi_unattempted']}
+    ]
     level1.save!
     create :script_level, script: script, levels: [level1], assessment: true
 
@@ -76,13 +80,23 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
 
     assert_response :success
 
-    expected_answers = [{"text" => "answer1", "correct" => true}, {"text" => "answer2", "correct" => false}, {"text" => "answer3", "correct" => false}, {"text" => "answer4", "correct" => false}]
+    expected_answers = [
+      {"text" => "answer1", "correct" => true},
+      {"text" => "answer2", "correct" => false},
+      {"text" => "answer3", "correct" => false},
+      {"text" => "answer4", "correct" => false}
+    ]
     expected_questions = [
-      {"level_id" => sub_level1.id, "type" => "TextMatch", "name" => sub_level1.name, "display_name" => nil, "title" => "title", "question_text" => nil},
-      {"level_id" => sub_level2.id, "type" => "Multi", "name" => sub_level2.name, "display_name" => nil, "answers" => expected_answers, "question_text" => sub_level2.get_question_text,},
-      {"level_id" => sub_level3.id, "type" => "Multi", "name" => sub_level3.name, "display_name" => nil, "answers" => expected_answers, "question_text" => sub_level3.get_question_text,},
-      {"level_id" => sub_level4.id, "type" => "Multi", "name" => sub_level4.name, "display_name" => nil, "answers" => expected_answers, "question_text" => sub_level4.get_question_text,},
-      {"level_id" => sub_level5.id, "type" => "Multi", "name" => sub_level5.name, "display_name" => nil, "answers" => expected_answers, "question_text" => sub_level5.get_question_text,},
+      {"level_id" => sub_level1.id, "type" => "TextMatch", "name" => sub_level1.name,
+        "display_name" => nil, "title" => "title", "question_text" => nil},
+      {"level_id" => sub_level2.id, "type" => "Multi", "name" => sub_level2.name,
+        "display_name" => nil, "answers" => expected_answers, "question_text" => sub_level2.get_question_text,},
+      {"level_id" => sub_level3.id, "type" => "Multi", "name" => sub_level3.name,
+        "display_name" => nil, "answers" => expected_answers, "question_text" => sub_level3.get_question_text,},
+      {"level_id" => sub_level4.id, "type" => "Multi", "name" => sub_level4.name,
+        "display_name" => nil, "answers" => expected_answers, "question_text" => sub_level4.get_question_text,},
+      {"level_id" => sub_level5.id, "type" => "Multi", "name" => sub_level5.name,
+        "display_name" => nil, "answers" => expected_answers, "question_text" => sub_level5.get_question_text,},
     ]
     level_response = JSON.parse(@response.body)[level1.id.to_s]
     assert_equal level1.name, level_response["name"]
@@ -202,7 +216,11 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
     level1 = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
     level1.properties['title'] =  'Long assessment 1'
     level1.properties['anonymous'] = 'true'
-    level1.properties['pages'] = [{levels: ['level_free_response', 'level_multi_unsubmitted']}, {levels: ['level_multi_correct', 'level_multi_incorrect']}, {levels: ['level_multi_unattempted']}]
+    level1.properties['pages'] = [
+      {levels: ['level_free_response', 'level_multi_unsubmitted']},
+      {levels: ['level_multi_correct', 'level_multi_incorrect']},
+      {levels: ['level_multi_unattempted']}
+    ]
     level1.save!
     create :script_level, script: script, levels: [level1], assessment: true
 
