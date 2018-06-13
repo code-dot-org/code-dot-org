@@ -188,6 +188,43 @@ export const getStudentMCResponsesForCurrentAssessment = (state) => {
   return studentResponsesArray;
 };
 
+// Get data for students assessments multiple choice table
+export const getStudentsMCSummaryForCurrentAssessment = (state) => {
+  const summaryOfStudentsMCData = getAssessmentResponsesForCurrentScript(state);
+  console.log(summaryOfStudentsMCData);
+  if (!summaryOfStudentsMCData) {
+    return [];
+  }
+
+  const studentsSummaryArray = Object.keys(summaryOfStudentsMCData).map(studentId => {
+    console.log('studentsSummaryArray', studentsSummaryArray);
+    const studentsObject = summaryOfStudentsMCData[studentId];
+    console.log('studentsObject', studentsObject);
+    const currentAssessmentId = state.sectionAssessments.assessmentId;
+    console.log('currentAssessmentId', currentAssessmentId);
+    const studentsAssessment = studentsObject.responses_by_assessment[currentAssessmentId];
+    console.log('studentsAssessment', studentsAssessment);
+
+
+    // If the student has not submitted this assessment, don't display results.
+    if (!studentsAssessment) {
+      return [];
+    }
+    // Transform that data into what we need for this particular table, in this case
+    // it is the structure studentOverviewDataPropType
+    return {
+      id: studentId,
+      name: studentsObject.student_name,
+      numMultipleChoiceCorrect: studentsAssessment.multi_correct,
+      numMultipleChoice: studentsAssessment.multi_count,
+      submissionStatus: studentsAssessment.submitted,
+      submissionTimeStamp: studentsAssessment.timestamp,
+    };
+  }).filter(studentOverviewData => studentOverviewData);
+
+  return studentsSummaryArray;
+};
+
 // Helpers
 
 /**
