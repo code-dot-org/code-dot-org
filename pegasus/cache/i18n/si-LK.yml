@@ -1,4 +1,5 @@
-"si-LK":
+---
+si-LK:
   hour_of_code: පැයේ කේතය
   hello: හේලෝ ලෝකය
   'yes': ඔව්
@@ -1265,9 +1266,25 @@
   coursee_name: Course E
   coursef-draft_name: Course F
   coursef_name: Course F
+  coursea-2017_name: Course A (2017)
+  courseb-2017_name: Course B (2017)
+  coursec-2017_name: Course C (2017)
+  coursed-2017_name: Course D (2017)
+  coursee-2017_name: Course E (2017)
+  coursef-2017_name: Course F (2017)
+  coursea-2018_name: Course A (2018)
+  courseb-2018_name: Course B (2018)
+  coursec-2018_name: Course C (2018)
+  coursed-2018_name: Course D (2018)
+  coursee-2018_name: Course E (2018)
+  coursef-2018_name: Course F (2018)
   accelerated_name: කඩිනම් පාඨමාලා
   express_name: Express Course
   pre-express_name: Pre-reader Express Course
+  express-2017_name: Express Course (2017)
+  pre-express-2017_name: Pre-reader Express Course (2017)
+  express-2018_name: Express Course (2018)
+  pre-express-2018_name: Pre-reader Express Course (2018)
   cspunit1_name: 'ඒකක 1: ඩිජිටල් තොරතුරු'
   cspunit2_name: 'පාඩම් අංක 2: අන්තර්ජාලය'
   cspunit3_name: "(පැරණි) 3 වන ඒකකය: ක්‍රමලේඛනය"
@@ -1346,6 +1363,8 @@
   math_category_name: ගණිත
   hoc_category_name: පැයේ කේතය
   csf_category_name: පරිගණක විද්‍යාවේ මූලිකාංග
+  csf_2017_category_name: CS Fundamentals (2017)
+  csf_2018_category_name: CS Fundamentals (2018)
   csf_international_category_name: CS Fundamentals International
   csf2_draft_category_name: 'Under Development: Courses A - F'
   csd_category_name: 'Under Development: CS Discoveries'

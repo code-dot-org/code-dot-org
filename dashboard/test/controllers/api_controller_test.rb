@@ -1271,57 +1271,75 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get paginated section level progress" do
-    get :section_level_progress, params: {section_id: @section.id, page: 1, per: 2}
+    assert_queries 142 do
+      get :section_level_progress, params: {section_id: @section.id, page: 1, per: 2}
+    end
     assert_response :success
     data = JSON.parse(@response.body)
     assert_equal 2, data['students'].keys.length
     assert_equal 3, data['pagination']['total_pages']
 
-    get :section_level_progress, params: {section_id: @section.id, page: 2, per: 2}
+    assert_queries 139 do
+      get :section_level_progress, params: {section_id: @section.id, page: 2, per: 2}
+    end
     assert_response :success
     data = JSON.parse(@response.body)
     assert_equal 2, data['students'].keys.length
 
     # third page has only one student (of 5 total)
-    get :section_level_progress, params: {section_id: @section.id, page: 3, per: 2}
+    assert_queries 137 do
+      get :section_level_progress, params: {section_id: @section.id, page: 3, per: 2}
+    end
     assert_response :success
     data = JSON.parse(@response.body)
     assert_equal 1, data['students'].keys.length
 
     # if we request 1 per page, page 6 should still work (because page 5 gave
     # us a full page of data), but page 7 should fail
-    get :section_level_progress, params: {section_id: @section.id, page: 6, per: 1}
+    assert_queries 3 do
+      get :section_level_progress, params: {section_id: @section.id, page: 6, per: 1}
+    end
     assert_response :success
-    get :section_level_progress, params: {section_id: @section.id, page: 7, per: 1}
+    assert_queries 2 do
+      get :section_level_progress, params: {section_id: @section.id, page: 7, per: 1}
+    end
     assert_response 416
   end
 
   test "should get section level progress with specific script" do
     script = Script.find_by_name('algebra')
 
-    get :section_level_progress, params: {
-      section_id: @section.id,
-      script_id: script.id
-    }
+    assert_queries 172 do
+      get :section_level_progress, params: {
+        section_id: @section.id,
+        script_id: script.id
+      }
+    end
     assert_response :success
   end
 
   test "should get paginated section level progress with specific script" do
     script = Script.find_by_name('algebra')
 
-    get :section_level_progress, params: {section_id: @section.id, script_id: script.id, page: 1, per: 2}
+    assert_queries 166 do
+      get :section_level_progress, params: {section_id: @section.id, script_id: script.id, page: 1, per: 2}
+    end
     assert_response :success
     data = JSON.parse(@response.body)
     assert_equal 2, data['students'].keys.length
     assert_equal 3, data['pagination']['total_pages']
 
-    get :section_level_progress, params: {section_id: @section.id, script_id: script.id, page: 2, per: 2}
+    assert_queries 163 do
+      get :section_level_progress, params: {section_id: @section.id, script_id: script.id, page: 2, per: 2}
+    end
     assert_response :success
     data = JSON.parse(@response.body)
     assert_equal 2, data['students'].keys.length
 
     # third page has only one student (of 5 total)
-    get :section_level_progress, params: {section_id: @section.id, script_id: script.id, page: 3, per: 2}
+    assert_queries 161 do
+      get :section_level_progress, params: {section_id: @section.id, script_id: script.id, page: 3, per: 2}
+    end
     assert_response :success
     data = JSON.parse(@response.body)
     assert_equal 1, data['students'].keys.length

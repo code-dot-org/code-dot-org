@@ -108,6 +108,7 @@ module Pd
                 next
               end
               model.save!
+              CDO.log.info "Saved submission #{submission[:submission_id]} for form #{form_id}"
             end
           end
         rescue => e
