@@ -191,20 +191,14 @@ export const getStudentMCResponsesForCurrentAssessment = (state) => {
 // Get data for students assessments multiple choice table
 export const getStudentsMCSummaryForCurrentAssessment = (state) => {
   const summaryOfStudentsMCData = getAssessmentResponsesForCurrentScript(state);
-  console.log(summaryOfStudentsMCData);
   if (!summaryOfStudentsMCData) {
     return [];
   }
 
   const studentsSummaryArray = Object.keys(summaryOfStudentsMCData).map(studentId => {
-    console.log('studentsSummaryArray', studentsSummaryArray);
     const studentsObject = summaryOfStudentsMCData[studentId];
-    console.log('studentsObject', studentsObject);
     const currentAssessmentId = state.sectionAssessments.assessmentId;
-    console.log('currentAssessmentId', currentAssessmentId);
     const studentsAssessment = studentsObject.responses_by_assessment[currentAssessmentId];
-    console.log('studentsAssessment', studentsAssessment);
-
 
     // If the student has not submitted this assessment, don't display results.
     if (!studentsAssessment) {
