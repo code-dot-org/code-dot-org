@@ -228,6 +228,7 @@ describe('The Exporter,', function () {
     });
 
     it("should reject the promise with an error", function (done) {
+      server.respondImmediately = true;
       let zipPromise = Exporter.exportAppToZip(
         'my-app',
         'console.log("hello");',
@@ -238,7 +239,6 @@ describe('The Exporter,', function () {
           </div>
         </div>`
       );
-      server.respond();
       zipPromise.then(function () {
         assert.fail('Expected zipPromise not to resolve');
         done();
@@ -249,6 +249,7 @@ describe('The Exporter,', function () {
     });
 
     it("should reject the promise with an error in expoMode", function (done) {
+      server.respondImmediately = true;
       let zipPromise = Exporter.exportAppToZip(
         'my-app',
         'console.log("hello");',
@@ -260,7 +261,6 @@ describe('The Exporter,', function () {
         </div>`,
         true
       );
-      server.respond();
       zipPromise.then(function () {
         assert.fail('Expected zipPromise not to resolve');
         done();
