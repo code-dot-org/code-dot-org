@@ -36,8 +36,10 @@ class Block < ApplicationRecord
   end
 
   def delete_block_files(old_level_type=level_type, old_name=name)
-    File.delete json_path if File.exist? json_path(old_level_type, old_name)
-    File.delete js_path if File.exist? js_path(old_level_type, old_name)
+    old_json_path = json_path(old_level_type, old_name)
+    old_js_path = js_path(old_level_type, old_name)
+    File.delete old_json_path if File.exist? old_json_path
+    File.delete old_js_path if File.exist? old_js_path
   end
 
   def file_json
