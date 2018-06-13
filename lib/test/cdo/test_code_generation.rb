@@ -77,7 +77,10 @@ class CodeGenerationTest < Minitest::Test
     end
 
     it 'checks deleted codes if model responds to :with_deleted' do
-      FakeModel.stubs(:with_deleted).returns(FakeModel)
+      class FakeModelWithDeleted
+      end
+
+      FakeModel.stubs(:with_deleted).returns(FakeModelWithDeleted)
       FakeModel.with_deleted.expects(:exists?).with(has_key(:custom_code_attribute)).returns(true, true, false).times(3)
       CodeGeneration.expects(:random_consonant_string).returns('AAAA', 'BBBB', 'CCCC').times(3)
 
