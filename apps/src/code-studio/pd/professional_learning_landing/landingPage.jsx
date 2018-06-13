@@ -3,7 +3,7 @@
  */
 
 import React, {PropTypes, Component} from 'react';
-import ProfessionalLearningCourseProgress from './professionalLearningCourseProgress';
+import ProfessionalLearningCourseProgress from './ProfessionalLearningCourseProgress';
 import {UnconnectedTwoColumnActionBlock as TwoColumnActionBlock} from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
 import {EnrolledWorkshops} from './enrolledWorkshops';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
@@ -30,7 +30,7 @@ const styles = {
   },
 };
 
-export class LandingPage extends Component {
+export default class LandingPage extends Component {
   static propTypes = {
     lastWorkshopSurveyUrl: PropTypes.string,
     lastWorkshopSurveyCourse: PropTypes.string,

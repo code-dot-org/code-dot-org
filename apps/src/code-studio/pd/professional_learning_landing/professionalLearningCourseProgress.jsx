@@ -2,31 +2,14 @@
  *  Progress for professional learning courses as rendered on the landing page
  */
 
-import React, {PropTypes} from 'react';
+import React, {PropTypes, Component} from 'react';
 import PlcEnrollment from './plcElements/plcEnrollment';
 
 
-const ProfessionalLearningCourseProgress = React.createClass({
-  propTypes: {
+export default class ProfessionalLearningCourseProgress extends Component {
+  static propTypes = {
     professionalLearningCourseData: PropTypes.array
-  },
-
-  renderProfessionalLearningEnrollments() {
-    return (
-      <div>
-        {
-          this.props.professionalLearningCourseData.map((plcData, i) => {
-            return (
-              <PlcEnrollment
-                key={i}
-                plcData={plcData}
-              />
-            );
-          })
-        }
-      </div>
-    );
-  },
+  };
 
   render() {
     if (this.props.professionalLearningCourseData && this.props.professionalLearningCourseData.length > 0) {
@@ -35,13 +18,22 @@ const ProfessionalLearningCourseProgress = React.createClass({
           <h2>
             Online Professional Learning Courses
           </h2>
-          {this.renderProfessionalLearningEnrollments()}
+          <div>
+            {
+              this.props.professionalLearningCourseData.map((plcData, i) => {
+                return (
+                  <PlcEnrollment
+                    key={i}
+                    plcData={plcData}
+                  />
+                );
+              })
+            }
+          </div>
         </div>
       );
     } else {
       return null;
     }
   }
-});
-
-export default ProfessionalLearningCourseProgress;
+}
