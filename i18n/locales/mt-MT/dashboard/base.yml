@@ -85,6 +85,7 @@ mt:
     facebook: 'Facebook'
     windowslive: 'Account tal-Microsoft'
     clever: 'Clever Account'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Insejt il-Password?'
     need_confirmation: "Ma rcevejtx istruzzjonijiet tal-konferma?"
     need_unlock: "Ma rcevejtx istruxzzjonijiet biex tanlokkja?"

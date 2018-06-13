@@ -1,4 +1,5 @@
-"hi":
+---
+hi:
   data:
     block_categories:
       Actions: क्रियाएँ
@@ -45,5 +46,6 @@
       Foo: Foo
       Name: नाम
       NEW BLOCKS: NEW BLOCKS
+      'Functions ': 'Functions '
       Game/Score: Game/Score
       Function: समारोह

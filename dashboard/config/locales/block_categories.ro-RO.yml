@@ -1,4 +1,5 @@
-"ro":
+---
+ro:
   data:
     block_categories:
       Actions: Acţiuni
@@ -45,5 +46,6 @@
       Foo: Foo
       Name: Nume
       NEW BLOCKS: NEW BLOCKS
+      'Functions ': 'Functions '
       Game/Score: Game/Score
       Function: Funcţie

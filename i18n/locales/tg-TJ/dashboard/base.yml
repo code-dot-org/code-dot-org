@@ -85,6 +85,7 @@ tg:
     facebook: 'Фейсбук'
     windowslive: 'Microsoft Account'
     clever: 'Clever Account'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Forgot your password?'
     need_confirmation: "Didn't receive confirmation instructions?"
     need_unlock: "Didn't receive unlock instructions?"

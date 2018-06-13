@@ -1,4 +1,5 @@
-"ka":
+---
+ka:
   devise:
     confirmations:
       confirmed: თქვენი ელ.ფოსტა წარმატებით დადასტურდა.

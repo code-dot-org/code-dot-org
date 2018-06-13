@@ -1,4 +1,5 @@
-"ko":
+---
+ko:
   devise:
     confirmations:
       confirmed: 이메일 확인이 완료되었습니다.

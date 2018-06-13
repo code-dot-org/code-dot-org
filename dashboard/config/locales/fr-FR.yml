@@ -1,4 +1,5 @@
-"fr":
+---
+fr:
   errors:
     messages:
       not_saved: 'Veuillez corriger les erreurs suivantes:'
@@ -97,6 +98,7 @@
     facebook: Facebook
     windowslive: Compte Microsoft
     clever: Compte Clever
+    powerschool: Powerschool Account
     forgot_password: Mot de passe oublié?
     need_confirmation: Pas reçu les instructions de confirmation ?
     need_unlock: Pas reçu les instructions de déverrouillage?
@@ -146,12 +148,11 @@
     mismatch_password: Les deux mots de passe ne sont pas identiques.
     agree_tos_privacy: Je sui d'accord avec les <a href='http://code.org/tos'> modalités
       de service</a> et la <a href='http://code.org/privacy'> politique de confidentialité</a>.
-    under_13_consent: Si j'ai moins de 13 ans, je confirme que j'ai l'autorisation
-      de l'un de mes parents ou de mon représentant légal pour utiliser les services
-      de Code.org.
-    agree_us_website: Je suis d'accord pour utiliser un site internet situé aux Etats-Unis.
-    my_data_to_us: Mes données de connexion sur ce site peuvent être envoyées et stockées
-      ou traitées aux Etats-Unis.
+    under_13_consent: Si j’ai moins de 13 ans, je confirme que j’ai l’autorisation
+      de mes parents ou de mon tuteur légal pour utiliser les services de Code.org.
+    agree_us_website: J’accepte d’utiliser un site Web basé aux États-Unis.
+    my_data_to_us: Des informations sur mon utilisation de ce site peuvent être envoyées
+      et enregistrées ou traitées aux États-Unis.
     student_terms: J'accepte d'être lié aux <a href='http://code.org/tos'>conditions
       d'utilisation</a> de Code.org. Si je suis âgé de moins de 13 ans, je confirme
       en soumettant ce formulaire que j'ai la permission de mes parents ou de mon
@@ -172,9 +173,9 @@
     field_is_required: est obligatoire
     accept_terms: Vous devez accepter les conditions d'utilisation pour créer un compte
     error: Une erreur est apparue.
-    email_preference_question: Pouvons-nous vous envoyer des mises à jour concernant
-      nos cours, les possibilités de formation locales ou les nouveautés en sciences
-      informatique ?
+    email_preference_question: Pouvons-nous vous envoyer des e-mails d’information
+      sur nos formations, des opportunités près de chez vous ou d’autres brèves dans
+      le domaine informatique\_?
     email_preference_privacy: "(Consultez notre politique de confidentialité)"
     email_preference_yes: Oui
     email_preference_no: Non

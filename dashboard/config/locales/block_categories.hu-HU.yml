@@ -1,4 +1,5 @@
-"hu":
+---
+hu:
   data:
     block_categories:
       Actions: Műveletek
@@ -45,5 +46,6 @@
       Foo: Foo
       Name: Név
       NEW BLOCKS: NEW BLOCKS
+      'Functions ': 'Functions '
       Game/Score: Game/Score
       Function: Függvény

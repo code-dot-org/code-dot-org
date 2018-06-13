@@ -1,4 +1,5 @@
-"zh-CN":
+---
+zh-CN:
   data:
     instructions:
       2-3 Artist 1 new_instruction: 您好，我是一个艺术家。你写的代码可以让我画任何的东西。 用几个程序模块来让我画一些灰色线条吧。

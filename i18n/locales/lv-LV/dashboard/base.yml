@@ -85,6 +85,7 @@ lv:
     facebook: 'Facebook'
     windowslive: 'Microsoft konts'
     clever: 'Clever Account'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Aizmirsi savu paroli?'
     need_confirmation: "Nesaņēmi apstiprinājuma instrukcijas?"
     need_unlock: "Nesaņēmi atslēgšanas norādijumus?"
