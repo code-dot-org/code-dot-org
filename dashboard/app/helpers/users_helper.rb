@@ -147,7 +147,7 @@ module UsersHelper
               result: ul.try(:best_result) || 0,
               submitted: submitted ? true : nil,
               readonly_answers: readonly_answers ? true : nil,
-              paired: (paired_user_level_ids.include? ul.try(:id)) ? true : nil
+              paired: paired_user_level_ids.include?(ul&.id)
             }.compact
 
             # Just in case this level has multiple pages, in which case we add an additional
