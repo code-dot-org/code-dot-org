@@ -50,6 +50,46 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
     assert_equal '{}', @response.body
   end
 
+  test "verified teacher should get assessments structure" do
+    # Sign in and create a new script.
+    sign_in @teacher
+    script = create :script
+
+    # Set up an assessment for that script.
+    sub_level1 = create :text_match, name: 'level_free_response', type: 'TextMatch'
+    sub_level2 = create :multi, name: 'level_multi_unsubmitted', type: 'Multi'
+    sub_level3 = create :multi, name: 'level_multi_correct', type: 'Multi'
+    sub_level4 = create :multi, name: 'level_multi_incorrect', type: 'Multi'
+    sub_level5 = create :multi, name: 'level_multi_unattempted', type: 'Multi'
+
+    level1 = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
+    level1.properties['title'] =  'Long assessment 1'
+    level1.properties['pages'] = [{levels: ['level_free_response', 'level_multi_unsubmitted']}, {levels: ['level_multi_correct', 'level_multi_incorrect']}, {levels: ['level_multi_unattempted']}]
+    level1.save!
+    create :script_level, script: script, levels: [level1], assessment: true
+
+    # Call the controller method.
+    get :index, params: {
+      section_id: @section.id,
+      script_id: script.id
+    }
+
+    assert_response :success
+
+    expected_answers = [{"text" => "answer1", "correct" => true}, {"text" => "answer2", "correct" => false}, {"text" => "answer3", "correct" => false}, {"text" => "answer4", "correct" => false}]
+    expected_questions = [
+      {"level_id" => sub_level1.id, "type" => "TextMatch", "name" => sub_level1.name, "display_name" => nil, "title" => "title", "question_text" => nil},
+      {"level_id" => sub_level2.id, "type" => "Multi", "name" => sub_level2.name, "display_name" => nil, "answers" => expected_answers, "question_text" => sub_level2.get_question_text,},
+      {"level_id" => sub_level3.id, "type" => "Multi", "name" => sub_level3.name, "display_name" => nil, "answers" => expected_answers, "question_text" => sub_level3.get_question_text,},
+      {"level_id" => sub_level4.id, "type" => "Multi", "name" => sub_level4.name, "display_name" => nil, "answers" => expected_answers, "question_text" => sub_level4.get_question_text,},
+      {"level_id" => sub_level5.id, "type" => "Multi", "name" => sub_level5.name, "display_name" => nil, "answers" => expected_answers, "question_text" => sub_level5.get_question_text,},
+    ]
+    level_response = JSON.parse(@response.body)[level1.id.to_s]
+    assert_equal level1.name, level_response["name"]
+    assert_equal level1.id, level_response["id"]
+    assert_equal expected_questions, level_response["questions"]
+  end
+
   # section_responses tests - gets student responses to assessment
   test 'logged out cannot get assessment responses from students' do
     get :section_responses

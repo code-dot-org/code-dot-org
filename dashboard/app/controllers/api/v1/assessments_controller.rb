@@ -7,7 +7,7 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
   # Question data includes the question text, all possible answers, and the correct answers.
   # Example output:
   # {
-  #   2345: {   #a level id associated with an assessment
+  #   2345: {   #a level_group id associated with an assessment
   #     id: 2345,
   #     name: "Assessment for Chapter 1",
   #     questions: {123: {type: "Multi", question_text: "A question", answers: [{text: "answer1", correct: true}] }}
@@ -16,7 +16,6 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
   # }
   #
   # GET '/dashboardapi/assessments'
-  # TODO(caleybrock): currently only used in internal experiment, must add controller tests.
   def index
     # Only authorized teachers have access to locked question and answer data.
     render status: :forbidden unless current_user.authorized_teacher?
@@ -66,7 +65,6 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
   # }
   #
   # GET '/dashboardapi/assessments/section_responses'
-  # TODO(caleybrock): currently only used in internal experiment, must add controller tests.
   def section_responses
     responses_by_student = {}
 
