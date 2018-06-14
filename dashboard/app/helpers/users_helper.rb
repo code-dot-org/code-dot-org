@@ -107,23 +107,35 @@ module UsersHelper
     end
 
     unless exclude_level_progress
-      uls = user.user_levels_by_level(script)
-      paired_user_level_ids = PairedUserLevel.pairs(uls.values.map(&:id))
-      script_levels = script.script_levels
+      user_levels_by_level = user.user_levels_by_level(script)
       user_data[:completed] = user.completed?(script)
-      user_data[:levels] = merge_user_progress_by_level(user, script_levels, uls, paired_user_level_ids)
+      user_data[:levels] = merge_user_progress_by_level(
+        script: script,
+        user: user,
+        user_levels_by_level: user_levels_by_level
+      )
     end
 
     user_data
   end
 
-  private def merge_user_progress_by_level(user, script_levels, uls, paired_user_level_ids)
+  # Merges and summarizes a user's level progress for a particular script.
+  # @param [Script] script
+  # @param [User] user
+  # @param [Hash<Integer, UserLevel>] user_levels_by_level - a map from level id
+  #   to UserLevel instance for the provided user, passed in instead of derived
+  #   from the first two arguments so we can retrieve this in advance for many
+  #   users in some use cases.
+  # @return [Hash<Integer, Hash>] a map from level_id to a progress summary
+  #   for the level.
+  private def merge_user_progress_by_level(script:, user:, user_levels_by_level:)
+    paired_user_levels = PairedUserLevel.pairs(user_levels_by_level.values.map(&:id))
     levels = {}
-    script_levels.each do |sl|
+    script.script_levels.each do |sl|
       sl.level_ids.each do |level_id|
         # if we have a contained level, use that to represent progress
         contained_level_id = Level.cache_find(level_id).contained_levels.try(:first).try(:id)
-        ul = uls.try(:[], contained_level_id || level_id)
+        ul = user_levels_by_level.try(:[], contained_level_id || level_id)
         completion_status = activity_css_class(ul)
         # a UL is submitted if the state is submitted UNLESS it is a peer reviewable level that has been reviewed
         submitted = !!ul.try(:submitted) &&
@@ -142,7 +154,7 @@ module UsersHelper
             result: ul.try(:best_result) || 0,
             submitted: submitted ? true : nil,
             readonly_answers: readonly_answers ? true : nil,
-            paired: (paired_user_level_ids.include? ul.try(:id)) ? true : nil
+            paired: (paired_user_levels.include? ul.try(:id)) ? true : nil
           }.compact
 
           # Just in case this level has multiple pages, in which case we add an additional
