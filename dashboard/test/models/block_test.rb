@@ -3,6 +3,7 @@ require 'test_helper'
 class BlockTest < ActiveSupport::TestCase
   teardown do
     FileUtils.rm_rf "config/blocks/fakeLevelType"
+    FileUtils.rm_rf "config/blocks/otherFakeLevelType"
   end
 
   test 'Block writes to and loads back from file' do
@@ -70,5 +71,22 @@ class BlockTest < ActiveSupport::TestCase
 
     refute File.exist? old_file_path
     refute File.exist? old_js_path
+  end
+
+  test 'file_path works for unmodified and modified blocks' do
+    block = create :block
+    name = block.name
+    original_path = Rails.root.join("config/blocks/fakeLevelType/#{name}.json")
+    assert_equal original_path, block.file_path_was
+    assert_equal original_path, block.file_path
+
+    new_name = name + '_the_great'
+    block.name = new_name
+    assert_equal original_path, block.file_path_was
+    assert_equal Rails.root.join("config/blocks/fakeLevelType/#{new_name}.json"), block.file_path
+
+    block.level_type = 'otherFakeLevelType'
+    assert_equal original_path, block.file_path_was
+    assert_equal Rails.root.join("config/blocks/otherFakeLevelType/#{new_name}.json"), block.file_path
   end
 end
