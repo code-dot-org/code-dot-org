@@ -1185,6 +1185,10 @@ class UserTest < ActiveSupport::TestCase
     assert @student.can_edit_email?
   end
 
+  test 'can_edit_email? is true for teachers' do
+    assert @teacher.can_edit_email?
+  end
+
   test 'can change own user type as a student with a password' do
     student = create :student
     refute_empty student.encrypted_password
