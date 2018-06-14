@@ -12,7 +12,7 @@ class ApiControllerPerfTest < ActionDispatch::IntegrationTest
     sign_in section.teacher
 
     script = Script.find_by_name('algebra')
-    assert_queries 61 do
+    assert_queries 36 do
       get '/dashboardapi/section_level_progress', params: {
         section_id: section.id,
         script_id: script.id
