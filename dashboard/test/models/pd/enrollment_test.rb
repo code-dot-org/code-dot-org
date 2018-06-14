@@ -277,6 +277,18 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_equal without_surveys, Pd::Enrollment.filter_for_survey_completion(enrollments, false)
   end
 
+  test 'local summer survey filter' do
+    workshop = create :pd_workshop, :local_summer_workshop, num_sessions: 5
+    teacher = create :teacher
+    enrollment = create :pd_enrollment, :from_user, user: teacher, workshop: workshop
+
+    assert_equal [enrollment], Pd::Enrollment.filter_for_survey_completion([enrollment], false)
+
+    # complete survey
+    create :pd_workshop_daily_survey, pd_workshop: workshop, user: enrollment.user
+    assert_equal [], Pd::Enrollment.filter_for_survey_completion([enrollment], false)
+  end
+
   test 'enrolling in class automatically enrolls in online learning' do
     Pd::Workshop::WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING.each do |course, plc_course_name|
       workshop = create :pd_workshop, course: course, subject: Pd::Workshop::SUBJECTS[course].first

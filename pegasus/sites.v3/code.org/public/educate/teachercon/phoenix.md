@@ -167,30 +167,6 @@ More information coming soon!
 More information coming soon!
 </details>
 
-<a id="who"></a>
-## **Who's Who at TeacherCon?**
-<details>
-<summary>**Code.org Staff**</summary>
- <p>
- <br>
-More information coming soon!
-</details>
-
-<details>
-<summary>**Session Lead Facilitators**</summary>
- <p>
- <br>
-More information coming soon!
-</details>
-
-<details>
-<summary>**Regional Partners**</summary>
- <p>
- <br>
-More information coming soon!
-</p>
-</details>
-
 ## **Contact Us**
 Check out our <a href="https://docs.google.com/document/d/1kyf-LMuqZx3Jne-q-Ce8MOaWJQm67VekO_kYKr9EFPQ/edit#", target=_"blank">FAQ's!</a>
 

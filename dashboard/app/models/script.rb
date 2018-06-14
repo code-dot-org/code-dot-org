@@ -535,7 +535,11 @@ class Script < ActiveRecord::Base
       Script::CSD2_NAME,
       Script::CSD3_NAME,
       Script::CSD4_NAME,
-      Script::CSD6_NAME
+      Script::CSD6_NAME,
+      Script::CSD2_2018_NAME,
+      Script::CSD3_2018_NAME,
+      Script::CSD4_2018_NAME,
+      Script::CSD6_2018_NAME,
     ].include?(name)
   end
 
@@ -543,7 +547,10 @@ class Script < ActiveRecord::Base
     [
       Script::CSP17_UNIT3_NAME,
       Script::CSP17_UNIT5_NAME,
-      Script::CSP17_POSTAP_NAME
+      Script::CSP17_POSTAP_NAME,
+      Script::CSP3_2018_NAME,
+      Script::CSP5_2018_NAME,
+      Script::CSP_POSTAP_2018_NAME,
     ].include?(name)
   end
 
@@ -624,6 +631,22 @@ class Script < ActiveRecord::Base
     return false if %w(allthethings allthehiddenthings allthettsthings).include?(name)
 
     script_levels.any? {|script_level| script_level.levels.any?(&:age_13_required?)}
+  end
+
+  # @param user [User]
+  # @return [Boolean] Whether the user has progress on another version of this script.
+  def has_other_version_progress?(user)
+    return nil unless user && family_name
+    user_script_ids = user.user_scripts.pluck(:script_id)
+
+    Script.
+      # select only scripts in the same script family.
+      where(family_name: family_name).
+      # exclude the current script.
+      where.not(id: id).
+      # select only scripts which the user has progress in.
+      where(id: user_script_ids).
+      count > 0
   end
 
   # Create or update any scripts, script levels and stages specified in the
@@ -1016,6 +1039,8 @@ class Script < ActiveRecord::Base
       }
     end
 
+    has_other_course_progress = course.try(:has_other_version_progress?, user)
+    has_other_script_progress = has_other_version_progress?(user)
     summary = {
       id: id,
       name: name,
@@ -1041,7 +1066,9 @@ class Script < ActiveRecord::Base
       has_lesson_plan: has_lesson_plan?,
       script_announcements: script_announcements,
       age_13_required: logged_out_age_13_required?,
-      show_version_warning: course.try(:has_other_version_progress?, user),
+      show_course_unit_version_warning: has_other_course_progress,
+      show_script_version_warning: !has_other_course_progress && has_other_script_progress,
+      versions: summarize_versions,
     }
 
     summary[:stages] = stages.map(&:summarize) if include_stages
@@ -1099,6 +1126,18 @@ class Script < ActiveRecord::Base
       end
     end
     data
+  end
+
+  # Returns an array of objects showing the name and version year for all scripts
+  # sharing the family_name of this course, including this one.
+  def summarize_versions
+    return [] unless family_name
+    return [] unless courses.empty?
+    Script.
+      where(family_name: family_name).
+      map {|s| {name: s.name, version_year: s.version_year, version_title: s.version_year}}.
+      sort_by {|info| info[:version_year]}.
+      reverse
   end
 
   def self.clear_cache
@@ -1194,5 +1233,12 @@ class Script < ActiveRecord::Base
     info[:category] = I18n.t("data.script.category.#{info[:category]}_category_name", default: info[:category])
 
     info
+  end
+
+  # Get all script levels that are level groups, and return a list of those that are
+  # not anonymous assessments.
+  def get_assessment_script_levels
+    level_group_script_levels = script_levels.includes(:levels).where('levels.type' => 'LevelGroup')
+    level_group_script_levels.select {|script_level| script_level.long_assessment? && !script_level.anonymous?}
   end
 end

@@ -113,27 +113,6 @@ function behaviorsEqual(behavior1, behavior2) {
   return extraArgsEqual;
 }
 
-function patrol(sprite, direction) {
-  if (direction === undefined) {
-    direction = "vertical";
-  }
-
-  if (direction === "vertical") {
-    if (sprite.velocityY === 0) {sprite.velocityY = sprite.speed;}
-    sprite.bounceOff(edges);
-  } else if (direction === "horizontal") {
-    if (sprite.velocityX === 0) {sprite.velocityX = sprite.speed;}
-    sprite.bounceOff(edges);
-  }
-  sprite.patrolling = true;
-}
-
-function gravity(sprite) {
-  if (sprite.velocityY < 10) {
-    sprite.velocityY += 0.5;
-  }
-}
-
 //Events
 
 function whenUpArrow(event) {
@@ -371,12 +350,12 @@ function draw() {
       }
       if (a.overlap(b)) {
         if (!collisionEvent.touching || collisionEvent.keepFiring) {
-          collisionEvent.event();
+          collisionEvent.event(a, b);
         }
         collisionEvent.touching = true;
       } else {
         if (collisionEvent.touching && collisionEvent.eventEnd) {
-          collisionEvent.eventEnd();
+          collisionEvent.eventEnd(a, b);
         }
         collisionEvent.touching = false;
       }

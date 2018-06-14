@@ -7,7 +7,7 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
   # Question data includes the question text, all possible answers, and the correct answers.
   # Example output:
   # {
-  #   2345: {   #a level id associated with an assessment
+  #   2345: {   #a level_group id associated with an assessment
   #     id: 2345,
   #     name: "Assessment for Chapter 1",
   #     questions: {123: {type: "Multi", question_text: "A question", answers: [{text: "answer1", correct: true}] }}
@@ -16,21 +16,15 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
   # }
   #
   # GET '/dashboardapi/assessments'
-  # TODO(caleybrock): currently only used in internal experiment, must add controller tests.
   def index
     # Only authorized teachers have access to locked question and answer data.
     render status: :forbidden unless current_user.authorized_teacher?
 
-    level_group_script_levels = @script.script_levels.includes(:levels).where('levels.type' => 'LevelGroup')
+    assessment_script_levels = @script.get_assessment_script_levels
 
     assessments = {}
 
-    level_group_script_levels.map do |script_level|
-      next unless script_level.long_assessment?
-
-      # Don't allow somebody to peek inside an anonymous survey using this API.
-      next if script_level.anonymous?
-
+    assessment_script_levels.map do |script_level|
       # The actual level group that corresponds to the script_level
       level_group = script_level.levels[0]
 
@@ -63,7 +57,7 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
   #   12: {   <--- a student id
   #     student_name: "caley",
   #     responses: {
-  #      4593: <---- a script id referring to an assessment
+  #      4593: <---- a level_group id referring to an assessment
   #        {level_results: [{status: "correct", answer: "A"}], multi_correct: 5, multi_count: 10.......}
   #     ...other assessments
   #   }
@@ -71,11 +65,10 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
   # }
   #
   # GET '/dashboardapi/assessments/section_responses'
-  # TODO(caleybrock): currently only used in internal experiment, must add controller tests.
   def section_responses
     responses_by_student = {}
 
-    level_group_script_levels = @script.script_levels.includes(:levels).where('levels.type' => 'LevelGroup')
+    assessment_script_levels = @script.get_assessment_script_levels
 
     @section.students.each do |student|
       # Initialize student hash
@@ -84,12 +77,7 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
       }
       responses_by_level_group = {}
 
-      level_group_script_levels.each do |script_level|
-        next unless script_level.long_assessment?
-
-        # Don't allow somebody to peek inside an anonymous survey using this API.
-        next if script_level.anonymous?
-
+      assessment_script_levels.each do |script_level|
         # Get the UserLevel for the last attempt.  This approach does not check
         # for the script and so it'll find the student's attempt at this level for
         # any script in which they have encountered that level.
@@ -176,5 +164,13 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
     end
 
     render json: responses_by_student
+  end
+
+  # Return results for surveys, which are long-assessment LevelGroup levels with the anonymous property.
+  # At least five students in the section must have submitted answers.  The answers for each contained
+  # sublevel are shuffled randomly.
+  # GET '/dashboardapi/assessments/section_surveys'
+  def section_surveys
+    render json: LevelGroup.get_summarized_survey_results(@script, @section)
   end
 end
