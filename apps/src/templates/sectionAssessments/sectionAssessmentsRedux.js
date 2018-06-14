@@ -211,7 +211,7 @@ export const getStudentsMCSummaryForCurrentAssessment = (state) => {
       name: studentsObject.student_name,
       numMultipleChoiceCorrect: studentsAssessment.multi_correct,
       numMultipleChoice: studentsAssessment.multi_count,
-      submissionStatus: studentsAssessment.submitted,
+      isSubmitted: studentsAssessment.submitted,
       submissionTimeStamp: studentsAssessment.timestamp,
     };
   }).filter(studentOverviewData => studentOverviewData);

@@ -54,7 +54,8 @@ export const studentOverviewDataPropType = PropTypes.shape({
   numMultipleChoiceCorrect: PropTypes.number.isRequired,
   numMultipleChoice: PropTypes.number.isRequired,
   submissionTimeStamp: PropTypes.string.isRequired,
-  submissionStatus: PropTypes.bool.isRequired,
+  isSubmitted: PropTypes.bool.isRequired,
+  submissionStatus: PropTypes.string,
 });
 
 /**
@@ -97,9 +98,10 @@ class StudentsAssessmentsMCTable extends Component {
   };
 
   submissionTimestampColumnFormatter = (submissionTimeStamp, {rowData}) => {
-    const submissionStatus = rowData.submissionStatus;
+    const isSubmitted = rowData.submissionStatus;
+    const submissionStatus = 'In progress';
 
-    if (submissionStatus === true) {
+    if (isSubmitted) {
       return (
         <div style={styles.main}>
           <div style={styles.text}>
