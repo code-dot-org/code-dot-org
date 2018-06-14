@@ -252,8 +252,6 @@ class ApiController < ApplicationController
     section = load_section
     script = load_script(section)
 
-    data = {}
-
     # Clients are seeing requests time out for large sections as we attempt to
     # send back all of this data. Allow them to instead request paginated data
     page = [params[:page].to_i, 1].max
@@ -268,9 +266,7 @@ class ApiController < ApplicationController
     end
 
     # Get the level progress for each student
-    paged_students.each do |student|
-      data[student.id] = user_progress_for_levels(script, student)
-    end
+    data = script_progress_for_users(script, paged_students)
     render json: {
       students: data,
       pagination: {
@@ -279,6 +275,29 @@ class ApiController < ApplicationController
         per: per,
       }
     }
+  end
+
+  # Get level progress for a set of users within this script.
+  # @param [Script] script
+  # @param [Enumerable<User>] users
+  # @return [Hash]
+  # Example return value (where 1 and 2 are userIds and 135 and 136 are levelIds):
+  #   {
+  #     "1": {
+  #       "135": {"status": "perfect", "result": 100}
+  #       "136": {"status": "perfect", "result": 100}
+  #     },
+  #     "2": {
+  #       "135": {"status": "perfect", "result": 100}
+  #       "136": {"status": "perfect", "result": 100}
+  #     }
+  #   }
+  private def script_progress_for_users(script, users)
+    users.inject({}) do |progress_by_user, user|
+      user_data = merge_script_progress({}, user, script)
+      progress_by_user[user.id] = user_data[:levels]
+      progress_by_user
+    end
   end
 
   def student_progress

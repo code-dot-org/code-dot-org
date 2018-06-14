@@ -62,18 +62,6 @@ module UsersHelper
     user_data.compact
   end
 
-  # Get a users level progress within a certain script.
-  # Example return value (where 135 and 136 are levelIds):
-  #   {
-  #     "135": {"status": "perfect", "result": 100}
-  #.    "136": {"status": "perfect", "result": 100}
-  #   }
-  def user_progress_for_levels(script, user = current_user)
-    user_data = {}
-    merge_script_progress(user_data, user, script)
-    user_data[:levels]
-  end
-
   def level_with_best_progress(ids, level_progress)
     return ids[0] if ids.length == 1
 
@@ -106,7 +94,7 @@ module UsersHelper
   end
 
   # Merge the progress for the specified script and user into the user_data result hash.
-  private def merge_script_progress(user_data, user, script, exclude_level_progress = false)
+  def merge_script_progress(user_data, user, script, exclude_level_progress = false)
     return user_data unless user
 
     if script.professional_learning_course?
