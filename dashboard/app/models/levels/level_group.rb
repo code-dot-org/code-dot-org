@@ -267,15 +267,14 @@ ruby
   #           {result: "I like making games, and I also like the lifestyle."},
   #           {}]}]}]
   def self.get_summarized_survey_results(script, section)
-    level_group_script_levels = script.script_levels.includes(:levels).where('levels.type' => 'LevelGroup')
+    level_group_script_levels = script.script_levels.select do |sl|
+      sl.levels.first.is_a?(LevelGroup) && sl.long_assessment? && sl.anonymous?
+    end
 
     surveys_by_level_group = {}
 
     # Go through each anonymous long-assessment LevelGroup.
     level_group_script_levels.each do |script_level|
-      next unless script_level.long_assessment?
-      next unless script_level.anonymous?
-
       level_group = script_level.levels[0]
       levelgroup_results = get_levelgroup_survey_results(script_level, section)
 
