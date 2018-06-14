@@ -202,7 +202,7 @@ export const getStudentsMCSummaryForCurrentAssessment = (state) => {
 
     // If the student has not submitted this assessment, don't display results.
     if (!studentsAssessment) {
-      return [];
+      return {};
     }
     // Transform that data into what we need for this particular table, in this case
     // it is the structure studentOverviewDataPropType
