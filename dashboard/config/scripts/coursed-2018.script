@@ -1,4 +1,6 @@
 hidden false
+has_lesson_plan true
+curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-18/coursed/{LESSON}'
 family_name 'coursed'
 version_year '2018'
 
