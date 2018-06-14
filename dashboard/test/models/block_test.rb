@@ -11,7 +11,7 @@ class BlockTest < ActiveSupport::TestCase
     block.delete
     base_path = "config/blocks/#{block.level_type}/#{block.name}"
 
-    Block.load_block "#{base_path}.json"
+    Block.load_record "#{base_path}.json"
 
     seeded_block = Block.find_by(name: block.name)
     assert_equal json_before, seeded_block.block_options
@@ -27,7 +27,7 @@ class BlockTest < ActiveSupport::TestCase
     block.delete
     base_path = "config/blocks/#{block.level_type}/#{block.name}"
 
-    Block.load_block "#{base_path}.json"
+    Block.load_record "#{base_path}.json"
 
     seeded_block = Block.find_by(name: block.name)
     assert_equal json_before, seeded_block.block_options
@@ -47,12 +47,12 @@ class BlockTest < ActiveSupport::TestCase
     assert_empty Dir.glob("config/blocks/fakeLevelType/*")
   end
 
-  test 'load_blocks destroys old blocks' do
+  test 'load_records destroys old blocks' do
     old_block = create :block
     new_block = create :block
-    File.delete old_block.json_path
+    File.delete old_block.file_path
 
-    Block.load_blocks
+    Block.load_records('config/blocks/fakeLevelType/*.json')
 
     assert_nil Block.find_by(name: old_block.name)
     assert_not_nil Block.find_by(name: new_block.name)
@@ -60,15 +60,15 @@ class BlockTest < ActiveSupport::TestCase
 
   test 'Renaming a block deletes the old files' do
     block = create :block, helper_code: '// Comment comment comment'
-    old_json_path = block.json_path
+    old_file_path = block.file_path
     old_js_path = block.js_path
-    assert File.exist? old_json_path
+    assert File.exist? old_file_path
     assert File.exist? old_js_path
 
     block.name = block.name + '_the_great'
     block.save
 
-    refute File.exist? old_json_path
+    refute File.exist? old_file_path
     refute File.exist? old_js_path
   end
 end
