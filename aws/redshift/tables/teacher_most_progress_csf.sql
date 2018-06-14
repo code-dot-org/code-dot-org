@@ -1,5 +1,5 @@
-drop table if exists analysis.teacher_most_progress_pivot_csf;
-CREATE table analysis.teacher_most_progress_pivot_csf AS
+drop table if exists analysis.teacher_most_progress_csf;
+CREATE table analysis.teacher_most_progress_csf AS
 SELECT user_id,
        script_name,
        school_year,
@@ -51,5 +51,5 @@ FROM (
    WHERE student_rank = 1;
 
 
-GRANT ALL PRIVILEGES ON analysis.teacher_most_progress_pivot_csf TO GROUP admin;
-GRANT SELECT ON analysis.teacher_most_progress_pivot_csf TO GROUP reader, GROUP reader_pii;
+GRANT ALL PRIVILEGES ON analysis.teacher_most_progress_csf TO GROUP admin;
+GRANT SELECT ON analysis.teacher_most_progress_csf TO GROUP reader, GROUP reader_pii;
