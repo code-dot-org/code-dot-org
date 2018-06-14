@@ -155,7 +155,7 @@ namespace :seed do
   end
 
   task blocks: :environment do
-    Block.load_blocks
+    Block.load_records
   end
 
   # Generate the database entry from the custom levels json file
