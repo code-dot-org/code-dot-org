@@ -39,11 +39,11 @@
     "authored_hints": "[{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"You need to add the `move left` block to the `when left arrow` event to make this game work:\\n\\n <xml> <block type=\\\"bounce_whenLeft\\\" deletable=\\\"false\\\" x=\\\"20\\\" y=\\\"20\\\">\\n    <next>\\n      <block type=\\\"bounce_moveLeft\\\"/>\\n    </next>\\n  </block>\\n   \\n   </xml>\",\"hint_id\":\"courseD_bounce_events1s_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/678346cdb89c6440eec5cdaa5ba29826/courseD_bounce_events1s.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Don't forget to press \\\"Run\\\" and get the hand to the basket in order to solve this puzzle.\",\"hint_id\":\"courseD_bounce_events1s_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4d24872eceeb9651a46d20078f9764c1/courseD_bounce_events1s.mp3\"}]",
     "parent_level_id": 9661,
     "name_suffix": "_2018",
-    "contained_level_names": null,
     "embed": "false",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
-    "free_play": "false"
+    "free_play": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
