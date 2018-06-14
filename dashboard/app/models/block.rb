@@ -15,10 +15,6 @@
 class Block < ApplicationRecord
   include MultiFileSeeded
 
-  before_save :write_file
-  before_destroy :delete_file
-  validates_uniqueness_of :name
-
   def block_options
     {
       name: name,
