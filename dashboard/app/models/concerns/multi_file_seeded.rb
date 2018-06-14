@@ -25,6 +25,12 @@
 module MultiFileSeeded
   extend ActiveSupport::Concern
 
+  included do
+    before_save :write_file
+    before_destroy :delete_file
+    validates_uniqueness_of :name
+  end
+
   def directory(old=false)
     directories = ['config', self.class::CONFIG_DIRECTORY]
     directories += self.class::SUBDIRECTORY_ATTRIBUTES.map do |attr|
