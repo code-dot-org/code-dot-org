@@ -6,6 +6,7 @@
     "browserName": "chrome",
     "version": "latest",
     "platform": "Windows 7",
+    "extendedDebugging": true,
     "screenResolution": "1280x1024"
   },
   {
