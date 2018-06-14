@@ -252,4 +252,34 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
     assert_response :success
     assert_equal '{}', @response.body
   end
+
+  # section_surveys tests - gets the survey questions and anonymous responses
+  test 'logged out cannot get survey responses from students' do
+    get :section_surveys
+    assert_response :forbidden
+  end
+
+  test "don't show survey responses to teacher who doesn't own that section" do
+    script = create :script
+    sign_in @teacher_other
+
+    get :section_surveys, params: {
+      section_id: @section.id,
+      script_id: script.id
+    }
+    assert_response :forbidden
+  end
+
+  test 'students cannot get survey responses from students' do
+    sign_in @student_1
+    get :section_surveys
+    assert_response :forbidden
+  end
+
+  test 'gets no survey responses from students when no survey' do
+    sign_in @teacher
+    get :section_surveys, params: {section_id: @section.id, script_id: 2}
+    assert_response :success
+    assert_equal '{}', @response.body
+  end
 end
