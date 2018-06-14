@@ -1,0 +1,40 @@
+#!/usr/bin/env ruby
+
+# This script reshapes survey data collected via Jotform into a form more accessible for analysis.
+# To do: 
+#   currently stores value of submission (e.g., 7 for "strongly agree")
+#   doesn't process data for facilitator-specific questions
+#   doesn't process other places where we're collecting jotform data (e.g., PostCourseSurvey for teachers)
+#   create tables to store this information permanently
+
+require_relative '../../dashboard/config/environment'
+require 'cdo/only_one'
+
+# @param question_key [String] the hash key
+# @param question [Hash] the questions asked as part of a survey, with the 
+#   text of the question as well as some additional metadata.
+# @returns [String] the text of the question that was asked
+def get_question_text(question_key, questions)
+	return questions[question_key][:text]
+end
+
+def main
+	processed_answers = []
+	Pd::WorkshopDailySurvey.find_each do |submission| 
+		answers = submission.form_data_hash
+		questions = submission.questions.summarize
+		answers.each do |question_key, answer_value| 
+			question_text = get_question_text(question_key, questions)
+
+			processed_answers << {
+				user_id: submission.user_id,
+				question_id: question_key,
+				question_text: question_text,
+				answer_value:  answer_value
+			}
+		end
+	end
+	puts processed_answers
+end
+
+main if only_one_running?(__FILE__)
