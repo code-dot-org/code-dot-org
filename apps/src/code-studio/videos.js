@@ -2,6 +2,9 @@
 
 import $ from 'jquery';
 import trackEvent from '../util/trackEvent';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import FallbackPlayerCaptionDialogLink from '../templates/FallbackPlayerCaptionDialog';
 var videojs = require('video.js');
 var testImageAccess = require('./url_test');
 var clientState = require('./clientState');
@@ -320,6 +323,8 @@ function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
   });
 
   videoPlayer.on('ended', onVideoEnded);
+
+  showFallbackPlayerCaptionLink();
 }
 
 function hasNotesTab() {
@@ -352,4 +357,14 @@ function upgradeInsecureOptions(options) {
   if (options.download) {
     options.download = options.download.replace(/^http:\/\//, '//');
   }
+}
+
+// Show a link to accompany the fallback video player, which, when clicked,
+// pops a modal dialog explaining that the youtube-nocookie.com video player
+// is available if captions are desired.
+function showFallbackPlayerCaptionLink() {
+  ReactDOM.render(
+    <FallbackPlayerCaptionDialogLink/>,
+    document.getElementById('fallback-player-caption-dialog-link')
+  );
 }
