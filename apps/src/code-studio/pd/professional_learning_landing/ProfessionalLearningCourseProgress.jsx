@@ -19,16 +19,9 @@ export default class ProfessionalLearningCourseProgress extends Component {
             Online Professional Learning Courses
           </h2>
           <div>
-            {
-              this.props.professionalLearningCourseData.map((plcData, i) => {
-                return (
-                  <PlcEnrollment
-                    key={i}
-                    plcData={plcData}
-                  />
-                );
-              })
-            }
+            {this.props.professionalLearningCourseData.map((plcData, i) => (
+              <PlcEnrollment key={i} plcData={plcData}/>
+            ))}
           </div>
         </div>
       );
