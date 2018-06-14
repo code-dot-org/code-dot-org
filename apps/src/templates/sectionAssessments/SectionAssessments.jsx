@@ -65,12 +65,8 @@ class SectionAssessments extends Component {
             onChange={this.props.setAssessmentId}
           />
         </div>
-        <div>
           <MultipleChoiceByStudentContainer />
-        </div>
-        <div>
           <StudentsMCSummaryContainer />
-        </div>
       </div>
     );
   }
