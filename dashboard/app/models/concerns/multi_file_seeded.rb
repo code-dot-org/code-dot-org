@@ -2,18 +2,25 @@
 # This concern assumes that each record has a unique 'name', which is used as
 # the filename.
 # Models that use this concern must provide the following
-#  Class constants:
-#    CONFIG_DIRECTORY
-#    SUBDIRECTORY_ATTRIBUTES
-#    EXTENSION
-#  Class methods:
-#    properties_from_file(path, file_content)
-#  Instance methods:
-#    file_content
+#   Class constants:
+#     CONFIG_DIRECTORY - Directory in dashboard/config under which to write files.
+#       E.g. 'blocks' puts everything under dashboard/config/blocks/...
+#     SUBDIRECTORY_ATTRIBUTES - List of attributes to read to construct the
+#       subdirectory for a record's file. E.g. [:level_type] means that blocks
+#       with a level_type of 'GameLabJr' will be saved under
+#       dashboard/config/blocks/GameLabJr/..., while [:level_type, :category]
+#       would put a block with category 'Sprites' under
+#       dashboard/config/blocks/GameLabJr/Sprites/...
+#     EXTENSION - File extension used for record files
+#   Class methods:
+#     properties_from_file(path, file_content) - Returns a hash of properties
+#       that will be assigned to the record
+#   Instance methods:
+#     file_content - Retruns a string that will be written to the record file
 # Models that use this concern may provide the following additional instance
 # methods to support more than one file per record
-#  write_additional_files
-#  delete_additional_files
+#   write_additional_files
+#   delete_additional_files
 
 module MultiFileSeeded
   extend ActiveSupport::Concern
@@ -23,7 +30,7 @@ module MultiFileSeeded
     directories += self.class::SUBDIRECTORY_ATTRIBUTES.map do |attr|
       old && attribute_was(attr) || attributes[attr.to_s]
     end
-    Rails.root.join(File.join(directories))
+    Rails.root.join(*directories)
   end
 
   def file_path(old=false)
