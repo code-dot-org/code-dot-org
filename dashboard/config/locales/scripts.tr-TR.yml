@@ -1,10 +1,12 @@
-"tr":
+---
+tr:
   data:
     script:
       category:
         csd_category_name: CS Discoveries ('17-'18)
         csd_2018_category_name: CS Discoveries ('18-'19)
         csf_category_name: Bilgisayar bilimleri temeller
+        csf_2018_category_name: CS Fundamentals (2018)
         csf_international_category_name: CS (Computer Science-Bilgisayar Bilimleri)
           Uluslararası Temelleri
         csf2_draft_category_name: 'Geliştiriliyor: Kurslar A - F'
@@ -2307,10 +2309,13 @@
               name: Post-Course Survey
         csp3-2017:
           title: CSP Unit 3 - Intro to Programming
-          description: |-
-            Bu ünite, zengin içerikli etkileşimli uygulamalar yapma yeteneğini ortaya çıkaran bilgisayar programlamasının temel kavramlarını öğretir. Bu kurs programlama dili olarak JavaScript ve uygulama yapmak için programlama ortamı olarak Uygulama Laboratuvarını kullanır ancak bu derslerde öğrenilen kavramlar tüm programlama dilleri ve araçları için geçerlidir.\r
-            \r
-            Bu ünite en son 30 Ekim 2017 tarihinde güncellenmiştir. Ders planı güncellemeleriyle ilgili daha fazla bilgi için: forum.code.org/c/csp/updates.
+          description: "Bu ünite, zengin içerikli etkileşimli uygulamalar yapma yeteneğini
+            ortaya çıkaran bilgisayar programlamasının temel kavramlarını öğretir.
+            Bu kurs programlama dili olarak JavaScript ve uygulama yapmak için programlama
+            ortamı olarak Uygulama Laboratuvarını kullanır ancak bu derslerde öğrenilen
+            kavramlar tüm programlama dilleri ve araçları için geçerlidir.\r\n\r\nBu
+            ünite en son 30 Ekim 2017 tarihinde güncellenmiştir. Ders planı güncellemeleriyle
+            ilgili daha fazla bilgi için: forum.code.org/c/csp/updates."
           description_short: Programlama
           description_audience: ''
           stages:
@@ -2356,10 +2361,12 @@
               name: Post-Course Survey
         csp4-2017:
           title: CSP Unit 4 - Big Data and Privacy
-          description: |-
-            The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.\r
-            \r
-            This unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
+          description: "The data-rich world we live in introduces many complex questions
+            related to public policy, law, ethics and societal impact. The goals of
+            this unit are to develop a well-rounded and balanced view about data in
+            the world, including the positive and negative effects of it, and to understand
+            the basics of how and why modern encryption works.\r\n\r\nThis unit was
+            last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
           description_short: Explore the data-rich world we live, and how data impacts
             public policy, personal privacy, security, the law, and ethics.
           description_audience: ''
@@ -3930,9 +3937,13 @@
           title: CSD Unit 1 - Problem Solving
           description_short: "  İnsanların problemleri çözmek için bilgisayarlarla
             nasıl çalıştıklarını öğrenin."
-          description: |2
-             \r
-            Unit 1 is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r
+          description: " \r\nUnit 1 is a highly interactive and collaborative introduction
+            to the field of computer science, as framed within the broader pursuit
+            of solving problems. You’ll practice using a problem solving process to
+            address a series of puzzles, challenges, and real world scenarios. Next,
+            you’ll learn how computers input, output, store, and process information
+            to help humans solve problems.  The unit concludes with a project in which
+            you design an application that helps solve a problem of your choosing.\r\n"
           description_audience: ''
           stages:
             Intro to Problem Solving:
@@ -4316,12 +4327,23 @@
                 ne tür bilgilerin bilerek veya bilmeyerek paylaşıldığına bakar. Sonunda,
                 sınıf, çevrim içi bilgi paylaşırken, uyulması gereken bir dizi yönerge
                 ortaya koyar.
-              description_teacher: |-
-                Öğrenciler son zamanlarda kişisel web sitelerine girecekleri gerçek içeriği düşünmek için biraz zaman harcadıklarından dolayı bu ders, öğrencilere dijital olarak paylaşmayı seçtikleri kişisel bilgileri ve kiminle paylaşacaklarını belirtmelerinde yardımcı olmak için birim uzunluktaki projeden (kişisel web sitesinin yayınlanması) bir adım geri atar. Ayrıca, dijital olarak paylaşmayı seçtikleri bilgilerin çoğunun, yayınlandığı andan itibaren büyük ölçüde kontrollerinden çıkması düşüncesini güçlendirir. \r
-                \r
-                Öğrenciler, verilen kişisel bilgi metinlerini paylaşarak, kendilerinin rahat olacakları uygun kitleleri bireysel olarak tanımlama ile başlarlar. Sonrasında, insanların kendileri veya birbirleri hakkında ne tür bilgiler paylaştıklarını belirlemek için çeşitli sosyal medya sayfalarını gözden geçirirler. Son olarak, öğrenciler, çevrimiçi bilgi gönderimi için hangi yönergelere uygun oldukları üzerinde derinlemesine düşünürler.\r
-                \r
-                Bu dersin temel noktası, öğrencileri korkutmaktan daha ziyade, onlara web’de bilgi yayınlama konusunda sahip olmadıkları kontrol düzeyinin tam olarak farkına varmalarını deneysel metodlarla ortaya çıkarmaktır.
+              description_teacher: "Öğrenciler son zamanlarda kişisel web sitelerine
+                girecekleri gerçek içeriği düşünmek için biraz zaman harcadıklarından
+                dolayı bu ders, öğrencilere dijital olarak paylaşmayı seçtikleri kişisel
+                bilgileri ve kiminle paylaşacaklarını belirtmelerinde yardımcı olmak
+                için birim uzunluktaki projeden (kişisel web sitesinin yayınlanması)
+                bir adım geri atar. Ayrıca, dijital olarak paylaşmayı seçtikleri bilgilerin
+                çoğunun, yayınlandığı andan itibaren büyük ölçüde kontrollerinden
+                çıkması düşüncesini güçlendirir. \r\n\r\nÖğrenciler, verilen kişisel
+                bilgi metinlerini paylaşarak, kendilerinin rahat olacakları uygun
+                kitleleri bireysel olarak tanımlama ile başlarlar. Sonrasında, insanların
+                kendileri veya birbirleri hakkında ne tür bilgiler paylaştıklarını
+                belirlemek için çeşitli sosyal medya sayfalarını gözden geçirirler.
+                Son olarak, öğrenciler, çevrimiçi bilgi gönderimi için hangi yönergelere
+                uygun oldukları üzerinde derinlemesine düşünürler.\r\n\r\nBu dersin
+                temel noktası, öğrencileri korkutmaktan daha ziyade, onlara web’de
+                bilgi yayınlama konusunda sahip olmadıkları kontrol düzeyinin tam
+                olarak farkına varmalarını deneysel metodlarla ortaya çıkarmaktır."
             Publishing a Website:
               name: Bir Websitesini Yayınlama
             Sources and Search Engines:
@@ -4462,19 +4484,26 @@
                 müzik gibi medyaların bir web sitesi içinde nasıl kullanılacağı anlatılmaktadır.
                 İlk olarak Creative Commons incelendikten sonra, sınıf, web sayfalarına
                 görüntü eklemeyi ve bunu yaparken uygun atfı nasıl yapacağını öğrenir.
-              description_teacher: |-
-                Sınıf, başkalarının çalışmalarını  kullanmalarına nasıl izin verileceğine dair kişisel görüşleri üzerine bir tartışma ile başlayarak hem yaratıcılar  hem de yaratıcı içeriğin kullanıcıları için telif hakkının amacını ve rolünü araştırır. Daha sonra, çeşitli Yaratıcı Toplum lisanslarını, telif hakkı ile uğraşmanın zorluğuna  bir çözüm olarak keşfeden bir etkinliğe geçiyorlar. \r
-                \r
-                En sonunda, öğrenciler çeşitli Yaratıcı Toplum lisanslarının kısıtlamaları konusunda ortak bir anlayışla, &lt;img&gt; etiketini kullanarak kendi internet sitelerine nasıl resim ekleyeceklerini öğrenirler.
+              description_teacher: "Sınıf, başkalarının çalışmalarını  kullanmalarına
+                nasıl izin verileceğine dair kişisel görüşleri üzerine bir tartışma
+                ile başlayarak hem yaratıcılar  hem de yaratıcı içeriğin kullanıcıları
+                için telif hakkının amacını ve rolünü araştırır. Daha sonra, çeşitli
+                Yaratıcı Toplum lisanslarını, telif hakkı ile uğraşmanın zorluğuna
+                \ bir çözüm olarak keşfeden bir etkinliğe geçiyorlar. \r\n\r\nEn sonunda,
+                öğrenciler çeşitli Yaratıcı Toplum lisanslarının kısıtlamaları konusunda
+                ortak bir anlayışla, &lt;img&gt; etiketini kullanarak kendi internet
+                sitelerine nasıl resim ekleyeceklerini öğrenirler."
             Project - Multi-Page Websites:
               name: Proje - çok sayfalı web siteleri
               description_student: 'Bu ders, web geliştiricilerin sayfaları bir web
                 sitesinde bir araya getirmesine yarayan bağlantıları içerir. Sınıf,
                 önceki tüm sayfaların hepsini bir projeye bağlar, ve tüm siteyi Web''e
                 yayınlamadan önce her sayfa için gezinti çubukları oluşturur.  '
-              description_teacher: |
-                Web sayfalarını birbirine nasıl bağlanacağını öğrendikten sonra, öğrenciler üzerinde çalıştıkları web sitelerini artık paylaşabilirler. Bu derste, tüm siteyi Web'de yayınlamadan önce daha önce oluşturdukları tüm sayfaları bir projeye bağlarlar, yeni sayfa oluştururlar ve  sayfalar arasında gezinme eklerler.\r
-                \r
+              description_teacher: "Web sayfalarını birbirine nasıl bağlanacağını
+                öğrendikten sonra, öğrenciler üzerinde çalıştıkları web sitelerini
+                artık paylaşabilirler. Bu derste, tüm siteyi Web'de yayınlamadan önce
+                daha önce oluşturdukları tüm sayfaları bir projeye bağlarlar, yeni
+                sayfa oluştururlar ve  sayfalar arasında gezinme eklerler.\r\n\r\n"
             RGB Colors and Classes:
               name: RGB Renkleri ve Sınıfları
               description_student: Bu ders sınıfları ve özel renkleri anlatır. İlk
@@ -4499,15 +4528,13 @@
                 gözden geçirilmesi ve sitede son rötuşlar yapılmasını sağlar. Birimi
                 kapatmak için herkes projelerini ve projelerinin nasıl geliştirildiğini
                 paylaşır.
-              description_teacher: 'Öğrenciler, Kişisel Web Sitesi''nde çalışan ünite
+              description_teacher: "Öğrenciler, Kişisel Web Sitesi'nde çalışan ünite
                 boyunca çok zaman harcadılar. Son birkaç gün içinde öğrenciler web
                 sitelerini tamamlarlar. Geri bildirim almak, web sitelerine son rötuşlar
                 yapmak, öyküyü gözden geçirmek ve süreçlerini yansıtmak için akranları
                 ile beraber çalışırlar. Birimi kapatmak için, projelerini paylaşacak
                 ve ayrıca bu son tasarıma geçmek için aldıkları sürece genel bir bakış
-                katacaklardır.\r
-
-'
+                katacaklardır.\r\n"
             Headings:
               name: Başlıklar
               description_student: Bu derste HTML etiketleri tanıtmaya devam ediyor,
@@ -4592,16 +4619,14 @@
                 kullanıcıların çeşitli ürünlere nasıl tepki gösterebileceklerini araştırıyor.
                 Rol farklı bir kişi olarak oynuyor, sınıfın her üyesi başkasının gözüyle
                 tasarımlar tecrübe edinecek.
-              description_teacher: 'Kullanışlı ürünler meydana getirmek için tasarımcıların,
+              description_teacher: "Kullanışlı ürünler meydana getirmek için tasarımcıların,
                 kullanıcılarının ihtiyaçlarını anlamaları gerekir. Bu ders öğrencileri,
                 Bu ders öğrencileri, bir kullanıcı profili kullanıp başka biriymiş
                 gibi rol yaparak ve bir dizi ürüne o kullanıcı gibi tepki vererek
                 başka bir insan için nasıl tasarlayacakları hakkında düşünmek için
                 cesaretlendirir. Her öğrenci bir kişiyi tanımlayan, daha sonra uygun
                 ürünleri seçmeyi, ürün tasarımını eleştirmeyi ve tasarım için geliştirmeler
-                önermeyi kullanacakları, bir kullanıcı profiline atanır.\r
-
-'
+                önermeyi kullanacakları, bir kullanıcı profiline atanır.\r\n"
             Discovering Users:
               name: Kullanıcıları keşfetmek
             User-Centered Design Micro Activity:
@@ -4672,10 +4697,10 @@
                 uygulama laboratuvarında bir kaç örnek uygulama yapmayı keşfeder,
                 bu uygulamalar, kendi uygulamalarının ilk kağıt prototipleri hakkında
                 bilgi vermeye yardımcı olurlar.
-              description_teacher: 'Uygulamaları tasarlamaya başlamadan önce öğrencilerin
+              description_teacher: "Uygulamaları tasarlamaya başlamadan önce öğrencilerin
                 beklentilerini daha iyi araştırmalarına yardımcı olmamız gerekir.
                 Çünkü öğrenciler eninde sonunda bu uygulamaları Uygulama Labaratuarında
-                ön model haline getirecekleri için eğer fikirleri Uygulama Laboratuarı''nda
+                ön model haline getirecekleri için eğer fikirleri Uygulama Laboratuarı'nda
                 kolayca ön model haline getirilebilen uygulama türleriyle uyumluysa
                 daha iyi bir halde olacaklar. Takımlar bu araştırmaya uygulama laboratuarı
                 ile oluşturulabilecek uygulamaları göstermek için tasarlanmış birkaç
@@ -4683,9 +4708,7 @@
                 uygulamayı kendisine bir temel olarak seçebilir. Buradan itibaren,
                 takımların kağıt ön modellerini geliştirmek için 3x5 dizin kartlarını
                 kullanmadan önce uygulamanın temel işlevselliğini tartışmak için zamanı
-                var.\r
-
-'
+                var.\r\n"
             Prototype Testing:
               name: Prototip testi
               description_student: Bu derste takımlar sınıflarındaki diğer üyelerle
@@ -7156,6 +7179,7 @@
                 tamamını uygulayabilecekler. Şimdi, Play Lab' da bir hikaye oluşturmanın
                 ve yaratıcı olmanın zamanı!
           title: Kurs A
+          assignment_family_title: Kurs A
           description_audience: 'Yaş: 4-7'
           description_short: Okumaya yeni başlayanlar için bilgisayar bilimine giriş.
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren.
@@ -7192,6 +7216,7 @@
             Programming with Rey and BB-8:
               name: Rey ve BB-8 ile programlama
           title: Kurs B
+          assignment_family_title: Kurs B
           description_audience: 'Yaş: 5-8'
           description_short: Okumaya yeni başlayanlar için bilgisayar bilimine giriş.
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren.
@@ -7232,6 +7257,7 @@
             Loops with Rey and BB-8:
               name: Rey ve BB-8 ile döngüler
           title: Kurs C
+          assignment_family_title: Kurs C
           description_audience: 'Yaş: 6-10'
           description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı,
             hikayelerinizi ve sanatınızı oluşturun.
@@ -7416,6 +7442,7 @@
                 döngüler ve iç içe döngüler ile bulmacaları çözmek için kod okuma
                 ve düzenleme alıştırması yapacaklar.
           title: Kurs D
+          assignment_family_title: Kurs D
           description_audience: 'Yaş: 7-11'
           description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı,
             hikayelerinizi ve sanatınızı oluşturun.
@@ -7647,6 +7674,7 @@
             Functions in Harvester:
               name: Functions in Harvester
           title: Kurs E
+          assignment_family_title: Kurs E
           description_audience: 8-12 yaş grubu
           description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı,
             hikayelerinizi ve sanatınızı oluşturun.
@@ -7884,6 +7912,7 @@
             Nested Loops with Frozen:
               name: Nested Loops with Frozen
           title: Kurs F
+          assignment_family_title: Kurs F
           description_audience: 'Yaş: 9-13'
           description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı,
             hikayelerinizi ve sanatınızı oluşturun.
@@ -8280,6 +8309,7 @@
             Until Loops in Maze:
               name: Until Loops in Maze
           title: Hızlı Kurs
+          assignment_family_title: Hızlı Kurs
           description_audience: 'Yaş: 9-18'
           description_short: 'Bilgisayar bilimlerine giriş: ilköğretim müfredatımızın
             en iyilerini daha eski öğrenciler için birleştirir.'
@@ -8317,6 +8347,7 @@
             Spelling Bee:
               name: Heceleme Yarışması
           title: ''
+          assignment_family_title: Pre-reader Express
           description_audience: ''
           description_short: 'Ön okurlar için bilgisayar bilimlerine giriş: anaokulu
             ve birinci sınıf derslerimizin en iyisini birleştirir.'
@@ -9124,10 +9155,15 @@
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and
             complete the AP Explore Performance Tasks.
-          description: |-
-            Bu dersler,AP Araştırma Performans Görevini anlamanıza, bunun için hazırlanmanıza ve yapmanıza yardımcı olmak için buradadır.Her "ders", öğretmeninizin sizin gözden geçirmenize  yardımcı olabileceği yardımcı belgelerle olan bağlantıları içerir.NOT: Birinci derste yer alan ikinci öğe Araştırma PT ile doğrudan alakalı değildir, fakat genel teknoloji kurulumunu ve yapmanız gereken  Araştırma ve Oluşturma görevlerinin çeşitli unsurlarının araçlarını kapsar.\r
-            \r
-            Bu ünite en son  Kasım 2017'de güncellendi. Müfredat güncellemeleri hakkında daha fazla bilgiyi forum.code.org/c/csp/updates adresinden alabilirsiniz.
+          description: "Bu dersler,AP Araştırma Performans Görevini anlamanıza, bunun
+            için hazırlanmanıza ve yapmanıza yardımcı olmak için buradadır.Her \"ders\",
+            öğretmeninizin sizin gözden geçirmenize  yardımcı olabileceği yardımcı
+            belgelerle olan bağlantıları içerir.NOT: Birinci derste yer alan ikinci
+            öğe Araştırma PT ile doğrudan alakalı değildir, fakat genel teknoloji
+            kurulumunu ve yapmanız gereken  Araştırma ve Oluşturma görevlerinin çeşitli
+            unsurlarının araçlarını kapsar.\r\n\r\nBu ünite en son  Kasım 2017'de
+            güncellendi. Müfredat güncellemeleri hakkında daha fazla bilgiyi forum.code.org/c/csp/updates
+            adresinden alabilirsiniz."
         csp-create-2017:
           stages:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
@@ -9149,7 +9185,7 @@
             size her yönüyle yardım edebileceği yardımcı belgelerle bağlantılar içerir.
             \nNOT: birinci dersteki ilk öge, doğrudan PT Oluşturma ile ilgili değildir,
             ancak hem Keşfet hem de Oluştur görevlerinin çeşitli ögelerini yapmanız
-            için gerekli olan genel teknik kurulumu ve araçları kapsar.\\r\n\\r\nBu
+            için gerekli olan genel teknik kurulumu ve araçları kapsar.\r\n\r\nBu
             birim son olarak Aralık, 2017 ‘de güncellendi. Müfredat güncellemeleri
             hakkında forum.code.org/c/csp/updates adresinden devamını okuyunuz."
         csp3-reovery:
@@ -10048,6 +10084,7 @@
                 katacaklardır.\r\n"
         coursea-2018:
           title: Kurs A
+          assignment_family_title: Kurs A
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren.
             Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye
             oluştur.
@@ -10055,13 +10092,13 @@
           description_audience: 'Yaş: 4-7'
           stages:
             'Debugging: Unspotted Bugs':
-              name: 'Hata Ayıklama: Farkedilmeyen Hatalar'
+              name: Bulunamamış hatalar
               description_student: ''
               description_teacher: 'Bu ders hata ayıklama (debugging) adımları için
                 öğrencilere rehberlik edecek. Öğrenciler mantrayı öğrenecekler: "Ne
                 oldu? Ne olması bekleniyordu? Sana ne anlatıyor?"'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence & Frustration: Stevie and the Marbles'
+              name: Stevie ve büyük proje
               description_student: ''
               description_teacher: "Öğrenciler bir soruyu cevaplarken veya bir projede
                 çalışırken bir engelle karşılaştıkları zaman, kolayca hayal kırıklığına
@@ -10089,7 +10126,7 @@
                 bir tartışma ile başlar, daha sonra bir bilgisayar kullanarak çevrim
                 içi bulmacaları tamamlayarak ilerleyecekler.
             'Programming: Happy Maps':
-              name: 'Programlama: Mutlu Haritalar'
+              name: Mutlu Haritalar
               description_student: ''
               description_teacher: Öğrenciler bir dizinin planlanması ve bu diziyi
                 uygun dile kodlaması arasındaki farkı anlarlarsa algoritmalardan programlamaya
@@ -10135,7 +10172,7 @@
                 öğrencilere döngüler kullanarak kendi görüntülerini oluşturma imkanı
                 verilecek.
             'Events: The Big Event':
-              name: 'Olaylar: Büyük Olay'
+              name: Büyük Olay
               description_student: ''
               description_teacher: Olaylar, önceden yazılan bir algoritmaya değişiklik
                 eklemek için harika bir yoldur. Bazen, programınızın tam olarak kullanıcı
@@ -10158,9 +10195,10 @@
             Sequencing in Maze:
               name: Sequencing in Maze
             'Persistence & Frustration: Stevie and the Big Project':
-              name: 'Persistence & Frustration: Stevie and the Big Project'
+              name: Stevie ve büyük proje
         express-2018:
           title: Hızlı Kurs
+          assignment_family_title: Hızlı Kurs
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren.
             Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye
             oluştur.
@@ -10169,7 +10207,7 @@
           description_audience: 'Yaş: 9-18'
           stages:
             'Algorithms: Graph Paper Programming':
-              name: 'Algoritma: Grafik Kağıdı ile Programlama'
+              name: Grafikli Kağıdıyla Programlama
               description_student: ''
               description_teacher: ''
             Introduction:
@@ -10213,7 +10251,7 @@
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: 'Olaylar: Büyük Olay'
+              name: Büyük Olay
               description_student: ''
               description_teacher: ''
             Events in Star Wars:
@@ -10321,13 +10359,13 @@
             Programming in Artist:
               name: Sanatçı Programlama
             'Loops: Getting Loopy':
-              name: 'Döngüler: Loopy Başlarken'
+              name: Döngüselleşme
             Loops with Rey and BB-8:
               name: Rey ve BB-8 ile döngüler
             Copyright and Creativity:
               name: Copyright and Creativity
             'Concept Practice with Minecraft ':
-              name: 'Concept Practice with Minecraft '
+              name: Geleceğe bakış
             Nested Loops in Bee:
               name: Arı -içiçe döngüler
             Nested Loops in Frozen:
@@ -10337,7 +10375,7 @@
             Conditionals & Loops in Harvester:
               name: Conditionals & Loops in Harvester
             'Functions: Songwriting':
-              name: 'Fonksiyonlar: şarkı yazma'
+              name: Şarkı Yazarlığı
             Functions in Minecraft:
               name: Functions in Minecraft
             Functions in Harvester:
@@ -10371,7 +10409,7 @@
             Binary Bracelets:
               name: İkilik Bileklikler
             'Unplugged: Binary':
-              name: 'Bağımsız: İkili Taban (Binary)'
+              name: İkili Sistemle Resimler
             Artist Binary:
               name: Sanaçtı İkili Taban
             Internet:
@@ -10382,6 +10420,7 @@
               name: Röle Programlama
         courseb-2018:
           title: Kurs B
+          assignment_family_title: Kurs B
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren.
             Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye
             oluştur.
@@ -10433,7 +10472,7 @@
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: 'Olaylar: Büyük Olay'
+              name: Büyük Olay
               description_student: ''
               description_teacher: ''
             Events in Play Lab:
@@ -10452,12 +10491,13 @@
               name: Copyright and Creativity
         coursed-2018:
           title: Yeni Kurs D Senaryosu
+          assignment_family_title: Kurs D
           description: ''
           description_short: ''
           description_audience: ''
           stages:
             'Algorithms: Graph Paper Programming':
-              name: 'Algoritma: Grafik Kağıdı ile Programlama'
+              name: Grafikli Kağıdıyla Programlama
               description_student: ''
               description_teacher: ''
             Introduction:
@@ -10481,7 +10521,7 @@
               description_student: ''
               description_teacher: ''
             Nested Loops in Bee:
-              name: Arı -içiçe döngüler
+              name: Labirentte İçiçe Döngüler
               description_student: ''
               description_teacher: ''
             Nested Loops in Artist:
@@ -10517,7 +10557,7 @@
               description_student: ''
               description_teacher: ''
             'Unplugged: Binary':
-              name: 'Bağımsız: İkili Taban (Binary)'
+              name: İkili Sistemle Resimler
               description_student: ''
               description_teacher: ''
             Artist Binary:
@@ -10647,6 +10687,7 @@
             questions that appeared in Units 1-5 in the course.  '
         coursec-2018:
           title: Kurs C
+          assignment_family_title: Kurs C
           description: Döngüler, olaylar ve koşullar içeren programlar oluştur. İsminin
             baş harflerini binary kodlarına dönüştür, farklı problem çözme tekniklerini
             araştır ve siber zorbalığa nasıl yanıt vereceğini öğren. Kursun sonunda,
@@ -10680,7 +10721,7 @@
               description_student: ''
               description_teacher: ''
             'Loops: Getting Loopy':
-              name: 'Döngüler: Loopy Başlarken'
+              name: Döngüselleşme
               description_student: ''
               description_teacher: ''
             Loops with Rey and BB-8:
@@ -10696,7 +10737,7 @@
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: 'Olaylar: Büyük Olay'
+              name: Büyük Olay
               description_student: ''
               description_teacher: ''
             Build a Flappy Game:
@@ -10823,6 +10864,7 @@
               name: 'Proje: Bir yenilik prototiple'
         coursee-2018:
           title: Kurs E
+          assignment_family_title: Kurs E
           description: Algoritmalar, döngüler, koşullar ve olaylarla kodlamaya başlayın
             ve daha sonra fonksiyonlara geçin. Bu kursun ikinci kısmında, arkadaşlarınız
             ve ailenizle paylaşabileceğiniz bir bitirme projesi tasarlayın ve oluşturun.
@@ -10831,7 +10873,7 @@
           description_audience: 8-12 yaş grubu
           stages:
             'Programming: My Robotic Friends':
-              name: 'Programlama: Robot dostlarım'
+              name: Robot dostlarım
               description_student: ''
               description_teacher: ''
             Sequence in Maze:
@@ -10859,7 +10901,7 @@
               description_student: ''
               description_teacher: ''
             Nested Loops:
-              name: İç İçe Döngüler
+              name: Labirentte İçiçe Döngüler
               description_student: ''
               description_teacher: ''
             Nested Loops with Frozen:
@@ -10915,7 +10957,7 @@
                 Wars karakterleri eşliğinde öğrenciler olaylar süresince yönlendirilecek
                 ve sonra kendi oyunlarını oluşturmaları için süre verilecek.
             'Functions: Songwriting':
-              name: 'Fonksiyonlar: şarkı yazma'
+              name: Şarkı Yazarlığı
               description_student: Müzik yıldızı için bile programlama yeteneği gerektirir.
                 Bu ders şarkı sözleri kullanarak fonksiyonları öğretecektir.
               description_teacher: Bilgisayar bilimi dünyasındaki en harika yapılardan
@@ -11046,6 +11088,7 @@
               name: Copyright and Creativity
         coursef-2018:
           title: Kurs F
+          assignment_family_title: Kurs F
           description: Farklı döngüler, olaylar, fonksiyonlar ve koşulları kullanma
             hakkında bilgi edinin. Farklı problem çözme tekniklerini incelemek ve
             bilgisayarın ve internetin toplumsal etkilerini tartışmak. Bu dersin ikinci
@@ -11056,7 +11099,7 @@
           description_audience: 'Yaş: 9-13'
           stages:
             'Programming: My Robotic Friends':
-              name: 'Programlama: Robot dostlarım'
+              name: Robot dostlarım
               description_student: ''
               description_teacher: ''
             Sequence in Maze:
@@ -11084,7 +11127,7 @@
               description_student: ''
               description_teacher: ''
             Nested Loops in Bee/Zombie:
-              name: Nested Loops in Bee/Zombie
+              name: Labirentte İçiçe Döngüler
               description_student: ''
               description_teacher: ''
             Nested Loops with Frozen:
@@ -12950,6 +12993,7 @@
             Training Weekend.
         pre-express-2018:
           title: Pre-reader Express
+          assignment_family_title: Pre-reader Express
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren.
             Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye
             oluştur.
@@ -12958,11 +13002,11 @@
           description_audience: 'Ages: 4-8'
           stages:
             'Debugging: Unspotted Bugs':
-              name: 'Hata Ayıklama: Farkedilmeyen Hatalar'
+              name: Bulunamamış hatalar
               description_student: ''
               description_teacher: ''
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence & Frustration: Stevie and the Marbles'
+              name: Stevie ve büyük proje
               description_student: ''
               description_teacher: ''
             'Real-life Algorithms: Plant a Seed':
@@ -13002,7 +13046,7 @@
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: 'Olaylar: Büyük Olay'
+              name: Büyük Olay
               description_student: ''
               description_teacher: ''
             Events in Play Lab:
@@ -13029,3 +13073,15 @@
               name: Loops in Ice Age
             'Persistence & Frustration: Stevie and the Big Project':
               name: 'Persistence & Frustration: Stevie and the Big Project'
+        spritelab-validated:
+          stages:
+            Fish Tank - Creating Sprites:
+              name: Fish Tank - Creating Sprites
+            Alien Dance Party - Input:
+              name: Alien Dance Party - Input
+            Virtual Pet - Interactions:
+              name: Virtual Pet - Interactions
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''

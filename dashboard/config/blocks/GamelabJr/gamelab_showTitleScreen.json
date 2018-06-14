@@ -14,12 +14,10 @@
         "empty": true
       },
       {
-        "name": "TITLE",
-        "type": "String"
+        "name": "TITLE"
       },
       {
-        "name": "SUBTITLE",
-        "type": "String"
+        "name": "SUBTITLE"
       }
     ],
     "inline": false

@@ -163,7 +163,7 @@ namespace :seed do
   end
 
   task blocks: :environment do
-    Block.load_blocks
+    Block.load_records
   end
 
   task shared_blockly_functions: :environment do

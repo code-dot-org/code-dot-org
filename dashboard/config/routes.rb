@@ -65,14 +65,14 @@ Dashboard::Application.routes.draw do
   get 'curriculum/*path', to: 'curriculum_proxy#get_curriculum'
 
   # User-facing section routes
-  resources :sections, only: [:show, :update] do
+  resources :sections, only: [:show] do
     member do
       post 'log_in'
     end
   end
   # Section API routes (JSON only)
   concern :section_api_routes do
-    resources :sections, only: [:index, :show, :create, :destroy] do
+    resources :sections, only: [:index, :show, :create, :update, :destroy] do
       resources :students, only: [:index, :update], controller: 'sections_students' do
         collection do
           post 'bulk_add'
@@ -100,6 +100,7 @@ Dashboard::Application.routes.draw do
     resources :assessments, only: [:index] do
       collection do
         get 'section_responses'
+        get 'section_surveys'
       end
     end
   end
@@ -186,6 +187,7 @@ Dashboard::Application.routes.draw do
         get "/#{key}/:channel_id/view", to: 'projects#show', key: key.to_s, as: "#{key}_project_view", readonly: true
         get "/#{key}/:channel_id/embed", to: 'projects#show', key: key.to_s, as: "#{key}_project_iframe_embed", iframe_embed: true
         get "/#{key}/:channel_id/remix", to: 'projects#remix', key: key.to_s, as: "#{key}_project_remix"
+        get "/#{key}/:channel_id/export_create_channel", to: 'projects#export_create_channel', key: key.to_s, as: "#{key}_project_export_create_channel"
         get "/#{key}/:channel_id/export_config", to: 'projects#export_config', key: key.to_s, as: "#{key}_project_export_config"
       end
       get '/angular', to: 'projects#angular'

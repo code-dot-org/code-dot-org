@@ -1,4 +1,5 @@
-"mi":
+---
+mi:
   data:
     block_categories:
       Actions: Ngā Hohenga
@@ -45,5 +46,6 @@
       Foo: Foo
       Name: Ingoa
       NEW BLOCKS: NEW BLOCKS
+      'Functions ': 'Functions '
       Game/Score: Game/Score
       Function: Taumahi

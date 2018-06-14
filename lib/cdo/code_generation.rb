@@ -20,7 +20,11 @@ module CodeGeneration
 
       if model
         model_class = Object.const_get model.to_s
-        next if model_class.send :exists?, code_attribute.to_sym => code
+        if model_class.respond_to? :with_deleted
+          next if model_class.with_deleted.send :exists?, code_attribute.to_sym => code
+        else
+          next if model_class.send :exists?, code_attribute.to_sym => code
+        end
       end
       next if reject_if && reject_if.call(code)
 

@@ -1,4 +1,5 @@
-"hi":
+---
+hi:
   devise:
     confirmations:
       confirmed: आपका ईमेल पता सफलतापूर्वक पुष्टि हो गयी है।
