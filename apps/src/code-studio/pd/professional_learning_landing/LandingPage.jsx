@@ -39,7 +39,7 @@ export default class LandingPage extends Component {
 
   render() {
     const CSF = this.props.lastWorkshopSurveyCourse === 'CS Fundamentals';
-    const subheading = CSF ?
+    const subHeading = CSF ?
       i18n.plLandingSubheadingCSF() :
       i18n.plLandingSubheading();
     const description = CSF ?
@@ -48,37 +48,49 @@ export default class LandingPage extends Component {
 
     return (
       <div>
-        <div style={styles.headerImage}>
-          <div style={styles.headerText}>
-            {i18n.plLandingHeading()}
-          </div>
-        </div>
+        <HeaderImage/>
         <br/>
         {this.props.lastWorkshopSurveyUrl && (
-          <TwoColumnActionBlock
-            isRtl={false}
-            responsiveSize="lg"
-            imageUrl={pegasus('/shared/images/fill-540x289/misc/teacher.png')}
-            subHeading={subheading}
+          <LastWorkshopSurveyBanner
+            subHeading={subHeading}
             description={description}
-            buttons={[
-              {
-                url: "/",
-                text: "Start survey"
-              }
-            ]}
           />
-        )}
-        <EnrolledWorkshops
-          key="upcomingWorkshops"
-        />
+       )}
+        <EnrolledWorkshops/>
         {this.props.professionalLearningCourseData && (
           <ProfessionalLearningCourseProgress
             professionalLearningCourseData={this.props.professionalLearningCourseData}
-            key="plcData"
           />
         )}
       </div>
     );
   }
 }
+
+const HeaderImage = () => (
+  <div style={styles.headerImage}>
+    <div style={styles.headerText}>
+      {i18n.plLandingHeading()}
+    </div>
+  </div>
+);
+
+const LastWorkshopSurveyBanner = ({subHeading, description}) => (
+  <TwoColumnActionBlock
+    isRtl={false}
+    responsiveSize="lg"
+    imageUrl={pegasus('/shared/images/fill-540x289/misc/teacher.png')}
+    subHeading={subHeading}
+    description={description}
+    buttons={[
+      {
+        url: "/",
+        text: i18n.plLandingStartSurvey()
+      }
+    ]}
+  />
+);
+LastWorkshopSurveyBanner.propTypes = {
+  subHeading: PropTypes.string,
+  description: PropTypes.string
+};
