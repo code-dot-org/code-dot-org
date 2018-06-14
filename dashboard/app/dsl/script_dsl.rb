@@ -21,6 +21,7 @@ class ScriptDSL < BaseDSL
     @project_widget_visible = false
     @has_verified_resources = false
     @has_lesson_plan = false
+    @curriculum_path = nil
     @project_widget_types = []
     @wrapup_video = nil
     @script_announcements = nil
@@ -50,6 +51,7 @@ class ScriptDSL < BaseDSL
   string :new_name
   string :family_name
   string :version_year
+  string :curriculum_path
 
   def teacher_resources(resources)
     @teacher_resources = resources
@@ -93,6 +95,7 @@ class ScriptDSL < BaseDSL
       stage_extras_available: @stage_extras_available,
       has_verified_resources: @has_verified_resources,
       has_lesson_plan: @has_lesson_plan,
+      curriculum_path: @curriculum_path,
       project_widget_visible: @project_widget_visible,
       project_widget_types: @project_widget_types,
       script_announcements: @script_announcements,
@@ -249,6 +252,7 @@ class ScriptDSL < BaseDSL
     s << 'stage_extras_available true' if script.stage_extras_available
     s << 'has_verified_resources true' if script.has_verified_resources
     s << 'has_lesson_plan true' if script.has_lesson_plan
+    s << "curriculum_path '#{script.curriculum_path}'" if script.curriculum_path
     s << 'project_widget_visible true' if script.project_widget_visible
     s << "project_widget_types #{script.project_widget_types}" if script.project_widget_types
     s << "script_announcements #{script.script_announcements}" if script.script_announcements
