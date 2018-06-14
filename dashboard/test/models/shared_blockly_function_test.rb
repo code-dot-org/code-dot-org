@@ -7,13 +7,13 @@ class SharedBlocklyFunctionTest < ActiveSupport::TestCase
 
   test 'Function writes to and loads back from file' do
     function = create :shared_blockly_function
-    xml_before = function.file_xml
+    xml_before = function.file_content
     function.delete
-    SharedBlocklyFunction.load_functions
+    SharedBlocklyFunction.load_records
 
     seeded_function = SharedBlocklyFunction.find_by(name: function.name)
 
-    assert_equal xml_before, seeded_function.file_xml
+    assert_equal xml_before, seeded_function.file_content
 
     seeded_function.destroy
   end
