@@ -7,7 +7,18 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
     @teacher = create(:teacher)
     @teacher.permission = UserPermission::AUTHORIZED_TEACHER
     @section = create(:section, user: @teacher, login_type: 'word')
-    @student = create(:follower, section: @section).student_user
+
+    # Set of students in section.
+    @students = []
+    5.times do |i|
+      student = create(:student, name: "student_#{i}")
+      @students << student
+      create(:follower, section: @section, student_user: student)
+    end
+    @student_1, @student_2, @student_3, @student_4, @student_5 = @students
+
+    @teacher_other = create(:teacher)
+    @teacher_other.permission = UserPermission::AUTHORIZED_TEACHER
   end
 
   # index tests - gets assessment questions and answers
@@ -17,7 +28,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
   end
 
   test 'students cannot get assessment questions and answers' do
-    sign_in @student
+    sign_in @student_1
     get :index
     assert_response :forbidden
   end
@@ -39,21 +50,205 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
     assert_equal '{}', @response.body
   end
 
+  test "verified teacher should get assessments structure" do
+    # Sign in and create a new script.
+    sign_in @teacher
+    script = create :script
+
+    # Set up an assessment for that script.
+    sub_level1 = create :text_match, name: 'level_free_response', type: 'TextMatch'
+    sub_level2 = create :multi, name: 'level_multi_unsubmitted', type: 'Multi'
+    sub_level3 = create :multi, name: 'level_multi_correct', type: 'Multi'
+    sub_level4 = create :multi, name: 'level_multi_incorrect', type: 'Multi'
+    sub_level5 = create :multi, name: 'level_multi_unattempted', type: 'Multi'
+
+    level1 = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
+    level1.properties['title'] = 'Long assessment 1'
+    level1.properties['pages'] = [
+      {levels: ['level_free_response', 'level_multi_unsubmitted']},
+      {levels: ['level_multi_correct', 'level_multi_incorrect']},
+      {levels: ['level_multi_unattempted']}
+    ]
+    level1.save!
+    create :script_level, script: script, levels: [level1], assessment: true
+
+    # Call the controller method.
+    get :index, params: {
+      section_id: @section.id,
+      script_id: script.id
+    }
+
+    assert_response :success
+
+    expected_answers = [
+      {"text" => "answer1", "correct" => true},
+      {"text" => "answer2", "correct" => false},
+      {"text" => "answer3", "correct" => false},
+      {"text" => "answer4", "correct" => false}
+    ]
+    expected_questions = [
+      {"level_id" => sub_level1.id, "type" => "TextMatch", "name" => sub_level1.name,
+        "display_name" => nil, "title" => "title", "question_text" => nil},
+      {"level_id" => sub_level2.id, "type" => "Multi", "name" => sub_level2.name,
+        "display_name" => nil, "answers" => expected_answers, "question_text" => sub_level2.get_question_text,},
+      {"level_id" => sub_level3.id, "type" => "Multi", "name" => sub_level3.name,
+        "display_name" => nil, "answers" => expected_answers, "question_text" => sub_level3.get_question_text,},
+      {"level_id" => sub_level4.id, "type" => "Multi", "name" => sub_level4.name,
+        "display_name" => nil, "answers" => expected_answers, "question_text" => sub_level4.get_question_text,},
+      {"level_id" => sub_level5.id, "type" => "Multi", "name" => sub_level5.name,
+        "display_name" => nil, "answers" => expected_answers, "question_text" => sub_level5.get_question_text,},
+    ]
+    level_response = JSON.parse(@response.body)[level1.id.to_s]
+    assert_equal level1.name, level_response["name"]
+    assert_equal level1.id, level_response["id"]
+    assert_equal expected_questions, level_response["questions"]
+  end
+
   # section_responses tests - gets student responses to assessment
   test 'logged out cannot get assessment responses from students' do
     get :section_responses
     assert_response :forbidden
   end
 
+  test "don't show assessment responses to teacher who doesn't own that section" do
+    script = create :script
+    sign_in @teacher_other
+
+    get :section_responses, params: {
+      section_id: @section.id,
+      script_id: script.id
+    }
+    assert_response :forbidden
+  end
+
   test 'students cannot get assessment responses from students' do
-    sign_in @student
+    sign_in @student_1
     get :section_responses
     assert_response :forbidden
   end
 
-  test 'verified teacher can get assessment responses from students' do
+  test 'gets no assessment responses from students when no assessment' do
     sign_in @teacher
     get :section_responses, params: {section_id: @section.id, script_id: 2}
+    assert_response :success
+    assert_equal '{}', @response.body
+  end
+
+  test "verified teacher should get assessments responses" do
+    # Sign in and create a new script.
+    sign_in @teacher
+    script = create :script
+
+    # Set up an assessment for that script.
+    sub_level1 = create :text_match, name: 'level_free_response', type: 'TextMatch'
+    sub_level2 = create :multi, name: 'level_multi_unsubmitted', type: 'Multi'
+    sub_level3 = create :multi, name: 'level_multi_correct', type: 'Multi'
+    sub_level4 = create :multi, name: 'level_multi_incorrect', type: 'Multi'
+    create :multi, name: 'level_multi_unattempted', type: 'Multi'
+
+    level1 = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
+    level1.properties['title'] =  'Long assessment 1'
+    level1.properties['pages'] = [{levels: ['level_free_response', 'level_multi_unsubmitted']}, {levels: ['level_multi_correct', 'level_multi_incorrect']}, {levels: ['level_multi_unattempted']}]
+    level1.save!
+    create :script_level, script: script, levels: [level1], assessment: true
+
+    # Student has completed an assessment.
+    level_source = create(
+      :level_source,
+      level: level1,
+      data: %Q({"#{sub_level1.id}":{"result":"This is a free response"},"#{sub_level2.id}":{"result":"0"},"#{sub_level3.id}":{"result":"1"},"#{sub_level4.id}":{"result":"-1"}})
+    )
+    create :activity, user: @student_1, level: level1,
+      level_source: level_source
+
+    updated_at = Time.now
+
+    create :user_level, user: @student_1, best_result: 100, script: script, level: level1, submitted: true, updated_at: updated_at, level_source: level_source
+
+    # Call the controller method.
+    get :section_responses, params: {
+      section_id: @section.id,
+      script_id: script.id
+    }
+
+    assert_response :success
+
+    # Stage translation missing because we don't actually generate i18n files in tests.
+    expected_response = {
+      @student_1.id.to_s => {
+        "student_name" => @student_1.name,
+        "responses_by_assessment" => {
+          level1.id.to_s => {
+            "stage" => "translation missing: en-US.data.script.name.#{script.name}.title",
+            "puzzle" => 1,
+            "question" => "Long assessment 1",
+            "url" => "http://test.host/s/#{script.name}/stage/1/puzzle/1?section_id=#{@section.id}&user_id=#{@student_1.id}",
+            "multi_correct" => 1,
+            "multi_count" => 4,
+            "submitted" => true,
+            "timestamp" => updated_at.utc.to_s,
+            "level_results" => [
+              {"student_result" => "This is a free response", "status" => "free_response"},
+              {"student_result" => "A", "status" => "correct"},
+              {"student_result" => "B", "status" => "incorrect"},
+              {"student_result" => "", "status" => "unsubmitted"},
+              {"status" => "unsubmitted"}
+            ]
+          }
+        }
+      }
+    }
+    assert_equal expected_response, JSON.parse(@response.body)
+  end
+
+  test "gets no anonymous survey data via assessment responses call" do
+    # Sign in as teacher and create a new script.
+    sign_in @teacher
+    script = create :script
+
+    # Set up an anonymous assessment in that script.
+    sub_level1 = create :text_match, name: 'level_free_response', type: 'TextMatch'
+    sub_level2 = create :multi, name: 'level_multi_unsubmitted', type: 'Multi'
+    sub_level3 = create :multi, name: 'level_multi_correct', type: 'Multi'
+    sub_level4 = create :multi, name: 'level_multi_incorrect', type: 'Multi'
+    create :multi, name: 'level_multi_unattempted', type: 'Multi'
+
+    level1 = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
+    level1.properties['title'] =  'Long assessment 1'
+    level1.properties['anonymous'] = 'true'
+    level1.properties['pages'] = [
+      {levels: ['level_free_response', 'level_multi_unsubmitted']},
+      {levels: ['level_multi_correct', 'level_multi_incorrect']},
+      {levels: ['level_multi_unattempted']}
+    ]
+    level1.save!
+    create :script_level, script: script, levels: [level1], assessment: true
+
+    # student_1 through student_5 did the survey, just submitting a free response.
+    @students.each_with_index do |student, student_index|
+      create(
+        :activity,
+        user: student,
+        level: level1,
+        level_source: create(
+          :level_source,
+          level: level1,
+          data: %Q({"#{sub_level1.id}":{"result":"Free response from student #{student_index + 3}"},"#{sub_level2.id}":{"result":"-1"},"#{sub_level3.id}":{"result":"-1"},"#{sub_level4.id}":{"result":"-1"}})
+        )
+      )
+    end
+
+    updated_at = Time.now
+
+    @students.each do |student|
+      create :user_level, user: student, best_result: 100, script: script, level: level1, submitted: true, updated_at: updated_at
+    end
+
+    # We get an empty result with the assessment responses API because the assessment is anonymous.
+    get :section_responses, params: {
+      section_id: @section.id,
+      script_id: script.id
+    }
     assert_response :success
     assert_equal '{}', @response.body
   end

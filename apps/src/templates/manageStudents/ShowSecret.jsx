@@ -72,17 +72,12 @@ class ShowSecret extends Component {
     return (
       <div>
         {!this.state.isShowing &&
-          <Button
-            className="uitest-show-secrets-btn"
-            onClick={this.show}
-            color={Button.ButtonColor.white}
-            text={i18n.showSecret()}
-          />
+          <Button onClick={this.show} color={Button.ButtonColor.white} text={i18n.showSecret()} />
         }
         {this.state.isShowing &&
           <div>
             {this.props.loginType === SectionLoginType.word &&
-              <p className="uitest-secret-words">{this.props.secretWord}</p>
+              <p>{this.props.secretWord}</p>
             }
             {this.props.loginType === SectionLoginType.picture &&
               <img src={'/images/' + this.props.secretPicture} style={styles.image} />
