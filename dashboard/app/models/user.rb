@@ -902,6 +902,34 @@ class User < ActiveRecord::Base
       index_by(&:level_id)
   end
 
+  # Retrieve all user levels for the designated set of users in the given
+  # script, with a single query.
+  # @param [Enumerable<User>] users
+  # @param [Script] script
+  # @return [Hash] UserLevels by user id by level id
+  # Example return value (where 1,2 are user ids and 101, 102 are level ids):
+  # {
+  #   1: {
+  #     101: <UserLevel ...>,
+  #     102: <UserLevel ...>
+  #   },
+  #   2: {
+  #     101: <UserLevel ...>,
+  #     102: <UserLevel ...>
+  #   }
+  # }
+  def self.user_levels_by_user_by_level(users, script)
+    UserLevel.where(
+      script_id: script.id,
+      user_id: users.map(&:id)
+    ).
+      group_by(&:user_id).
+      inject({}) do |memo, (user_id, user_levels)|
+        memo[user_id] = user_levels.index_by(&:level_id)
+        memo
+      end
+  end
+
   def user_progress_by_stage(stage)
     levels = stage.script_levels.map(&:level_ids).flatten
     user_levels.where(script: stage.script, level: levels).pluck(:level_id, :best_result).to_h
