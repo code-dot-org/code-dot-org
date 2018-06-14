@@ -172,6 +172,15 @@ FactoryGirl.define do
           )
         end
       end
+
+      factory :google_oauth2_teacher do
+        encrypted_password nil
+        provider 'google_oauth2'
+        sequence(:uid) {|n| n}
+        oauth_token 'fake-oauth-token'
+        oauth_token_expiration 'fake-oauth-token-expiration'
+        oauth_refresh_token 'fake-oauth-refresh-token'
+      end
     end
 
     factory :student do
@@ -300,6 +309,20 @@ FactoryGirl.define do
           primary_authentication_option: ao,
           provider: User::PROVIDER_MIGRATED
         )
+      end
+    end
+
+    trait :with_multi_auth do
+      after(:create) do |user|
+        user.primary_authentication_option = create(:authentication_option,
+          user: user,
+          email: user.email,
+          hashed_email: user.hashed_email,
+          credential_type: 'google_oauth',
+          authentication_id: 'abcd123'
+        )
+        user.provider = 'migrated'
+        user.save!
       end
     end
 
