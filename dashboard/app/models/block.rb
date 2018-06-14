@@ -13,9 +13,7 @@
 #
 
 class Block < ApplicationRecord
-  after_save :write_block_files
-  after_destroy :delete_block_files
-  validates_uniqueness_of :name
+  include MultiFileSeeded
 
   def block_options
     {
@@ -26,23 +24,11 @@ class Block < ApplicationRecord
     }
   end
 
-  def write_block_files
-    delete_block_files(level_type_was, name_was) if name_changed? || level_type_changed?
-    FileUtils.mkdir_p "config/blocks/#{level_type}"
-    File.write json_path, file_json
+  CONFIG_DIRECTORY = 'blocks'
+  SUBDIRECTORY_ATTRIBUTES = [:level_type]
+  EXTENSION = 'json'
 
-    return unless helper_code.try(:present?)
-    File.write js_path, helper_code
-  end
-
-  def delete_block_files(old_level_type=level_type, old_name=name)
-    old_json_path = json_path(old_level_type, old_name)
-    old_js_path = js_path(old_level_type, old_name)
-    File.delete old_json_path if File.exist? old_json_path
-    File.delete old_js_path if File.exist? old_js_path
-  end
-
-  def file_json
+  def file_content
     JSON.pretty_generate(
       {
         category: category,
@@ -51,41 +37,32 @@ class Block < ApplicationRecord
     )
   end
 
-  def js_path(type=level_type, block_name=name)
-    Rails.root.join "config/blocks/#{type}/#{block_name}.js"
+  def self.properties_from_file(path, content)
+    block_config = JSON.parse(content)
+    js_path = Pathname.new(path).sub_ext('.js')
+    helper_code = File.exist?(js_path) ? File.read(js_path) : nil
+    {
+      name: File.basename(path, ".#{EXTENSION}"),
+      level_type: File.basename(File.dirname(path)),
+      category: block_config['category'],
+      config: block_config['config'].to_json,
+      helper_code: helper_code,
+    }
   end
 
-  def json_path(type=level_type, block_name=name)
-    Rails.root.join "config/blocks/#{type}/#{block_name}.json"
+  def write_additional_files
+    File.write js_path, helper_code if helper_code.try(:present?)
   end
 
-  def self.load_blocks
-    block_names = []
-    LevelLoader.for_each_file('config/blocks/**/*.json') do |json_path|
-      block_names << load_block(json_path)
-    end
-    Block.where.not(name: block_names).destroy_all
+  def delete_additional_files
+    File.delete js_path_was if File.exist? js_path_was
   end
 
-  def self.load_block(json_path)
-    block_config = JSON.parse(File.read(json_path))
+  def js_path(old=false)
+    Pathname.new(file_path(old)).sub_ext('.js')
+  end
 
-    block_name = File.basename(json_path, '.json')
-    level_type = File.basename(File.dirname(json_path))
-
-    helper_code = nil
-    js_path = Rails.root.join("config/blocks/#{level_type}/#{block_name}.js")
-    if File.exist? js_path
-      helper_code = File.read js_path
-    end
-    block = Block.find_or_initialize_by(
-      name: block_name,
-      level_type: level_type,
-    )
-    block.category = block_config['category']
-    block.config = block_config['config'].to_json
-    block.helper_code = helper_code
-    block.save!
-    block.name
+  def js_path_was
+    js_path(true)
   end
 end
