@@ -163,11 +163,13 @@ We will update this section as emails are sent for this event.
 
 <a href="http://go.pardot.com/webmail/153401/405632502/532ffc3eb36dd204cd978e5d0b5b8547187369e86e085555049f6891eb2c6536", target=_"blank">Email 2 - Prepare for TeacherCon: Complete your pre-work (CS Discoveries)</a>
 
-<a href="http://go.pardot.com/webmail/153401/405632502/532ffc3eb36dd204cd978e5d0b5b8547187369e86e085555049f6891eb2c6536", target=_"blank">Email 2 - Prepare for TeacherCon: Complete your pre-work (CS Principles)</a>
+<a href="http://go.pardot.com/webmail/153401/405632500/3024a7fb5c519b94fef5a06b687d4da3ceeae76d69d8469a025f22ea053d024e", target=_"blank">Email 2 - Prepare for TeacherCon: Complete your pre-work (CS Principles)</a>
 
 <a href="http://go.pardot.com/webmail/153401/414335722/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9", target=_"blank">Email 3 - 1-week to TeacherCon: Complete your pre-survey!</a>
 
 * If you were unable to complete your pre-survey because of an enrollment issue, you should be able to do so now. Log in to your Code.org account and [click here to complete your pre-survey](https://studio.code.org/pd/workshop_survey/day/0).
+
+<a href="http://go.pardot.com/webmail/153401/415944488/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9", target=_"blank">Email 4: We'll see you at TeacherCon!</a>
 
 <a id="prework"></a>
 ## **Pre-work**
