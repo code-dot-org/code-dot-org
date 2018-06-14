@@ -6,8 +6,8 @@ import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import MultipleChoiceAnswerCell from './MultipleChoiceAnswerCell';
 import {
-  studentAnswerDataPropType,
-  questionStructurePropType,
+  studentWithResponsesPropType,
+  multipleChoiceQuestionPropType,
 } from './assessmentDataShapes';
 
 export const COLUMNS = {
@@ -38,10 +38,10 @@ const styles = {
 // multiple choice assessment. Each row is a single question,
 // the students response to that question, and whether the student got
 // the correct answer.
-class StudentAssessmentOverviewTable extends Component {
+class SingleStudentAssessmentsMCTable extends Component {
   static propTypes= {
-    questionAnswerData: PropTypes.arrayOf(questionStructurePropType),
-    studentAnswerData: studentAnswerDataPropType
+    questionAnswerData: PropTypes.arrayOf(multipleChoiceQuestionPropType),
+    studentAnswerData: studentWithResponsesPropType
   };
 
   state = {
@@ -80,7 +80,7 @@ class StudentAssessmentOverviewTable extends Component {
     );
   };
 
-  correctAnswerColumnFormatter = (answers, {rowData, columnIndex}) => {
+  correctAnswerColumnFormatter = (responses, {rowData, columnIndex}) => {
     return (
       <MultipleChoiceAnswerCell
         id={rowData.id}
@@ -89,12 +89,12 @@ class StudentAssessmentOverviewTable extends Component {
     );
   };
 
-  studentAnswerColumnFormatter = (studentAnswers, {rowData, rowIndex}) => {
-    const answerData = this.props.studentAnswerData.studentAnswers[rowIndex];
+  studentAnswerColumnFormatter = (studentResponses, {rowData, rowIndex}) => {
+    const answerData = this.props.studentAnswerData.studentResponses[rowIndex];
     return (
       <MultipleChoiceAnswerCell
         id={rowData.id}
-        displayAnswer={answerData.answers}
+        displayAnswer={answerData.responses}
         isCorrectAnswer={answerData.isCorrect}
       />
     );
@@ -189,4 +189,4 @@ class StudentAssessmentOverviewTable extends Component {
   }
 }
 
-export default StudentAssessmentOverviewTable;
+export default SingleStudentAssessmentsMCTable;

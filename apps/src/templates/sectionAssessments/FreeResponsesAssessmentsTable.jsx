@@ -36,7 +36,7 @@ const freeResponsesDataPropType = PropTypes.shape({
   response: PropTypes.string.isRequired,
 });
 
-class FreeResponsesAssessments extends Component {
+class FreeResponsesAssessmentsTable extends Component {
   static propTypes= {
     freeResponses: PropTypes.arrayOf(freeResponsesDataPropType),
   };
@@ -131,4 +131,4 @@ class FreeResponsesAssessments extends Component {
   }
 }
 
-export default FreeResponsesAssessments;
+export default FreeResponsesAssessmentsTable;

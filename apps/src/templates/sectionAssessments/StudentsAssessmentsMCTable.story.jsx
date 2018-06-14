@@ -1,10 +1,10 @@
 import React from 'react';
-import StudentMultipleChoiceOverviewTable from './StudentMultipleChoiceOverviewTable';
+import StudentsAssessmentsMCTable from './StudentsAssessmentsMCTable';
 import {studentOverviewData} from './assessmentsTestHelpers';
 
 export default storybook => {
   return storybook
-    .storiesOf('SectionAssessments/StudentMultipleChoiceOverviewTable', module)
+    .storiesOf('SectionAssessments/StudentsAssessmentsMCTable', module)
     .addStoryTable([
       {
         name: 'Student overview',
@@ -12,7 +12,7 @@ export default storybook => {
             The table shows how many questions each student answered correctly and a
             time stamp for when an assessment is submitted.`,
         story: () => (
-          <StudentMultipleChoiceOverviewTable
+          <StudentsAssessmentsMCTable
             studentOverviewData={studentOverviewData}
           />
         )

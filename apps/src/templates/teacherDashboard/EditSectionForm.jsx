@@ -191,6 +191,7 @@ const GradeField = ({value, onChange, validGrades, disabled}) => {
         {i18n.grade()}
       </FieldName>
       <Dropdown
+        id="uitest-grade-dropdown"
         value={value}
         onChange={event => onChange(event.target.value)}
         disabled={disabled}
