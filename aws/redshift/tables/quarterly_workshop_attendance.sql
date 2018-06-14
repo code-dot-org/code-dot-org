@@ -2,6 +2,8 @@ drop table if exists analysis.quarterly_workshop_attendance;
 CREATE TABLE analysis.quarterly_workshop_attendance AS
   SELECT u.studio_person_id,
          pdw.course,
+         sy.school_year,
+         -- MAX(pdw.regional_partner_id) as regional_partner_id,
          MAX(CASE WHEN pdw.subject IN ('Units 1 and 2: The Internet and Digital Information','Units 2 and 3: Web Development and Animations') THEN 1 ELSE 0 END) q1,
          MAX(CASE WHEN pdw.subject IN ('Units 2 and 3: Processing data, Algorithms, and Programming','Units 3 and 4: Building Games and User Centered Design') THEN 1 ELSE 0 END) q2,
          MAX(CASE WHEN pdw.subject IN ('Units 4 and 5: Big Data, Privacy, and Building Apps','Units 4 and 5: App Prototyping and Data & Society') THEN 1 ELSE 0 END) q3,
@@ -15,6 +17,7 @@ CREATE TABLE analysis.quarterly_workshop_attendance AS
       ON pda.pd_enrollment_id = pde.id
     JOIN dashboard_production_pii.users u 
       ON u.id = pde.user_id
+    JOIN analysis.school_years sy on pds.start between sy.started_at and sy.ended_at
   WHERE pdw.course IN ('CS Principles','CS Discoveries')
   AND   pds.start >= '2017-08-01'
   AND   pdw.deleted_at IS NULL
@@ -29,7 +32,9 @@ CREATE TABLE analysis.quarterly_workshop_attendance AS
   'Units 3 and 4: Building Games and User Centered Design',
   'Units 4 and 5: App Prototyping and Data & Society',
   'Unit 6: Physical Computing')
-  GROUP BY 1,2;
+  GROUP BY 1,2, 3;
 
 GRANT ALL PRIVILEGES ON analysis.quarterly_workshop_attendance TO GROUP admin;
 GRANT SELECT ON analysis.quarterly_workshop_attendance TO GROUP reader, GROUP reader_pii;
+
+
