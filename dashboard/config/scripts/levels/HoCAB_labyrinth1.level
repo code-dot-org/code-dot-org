@@ -37,9 +37,9 @@
     "x": "150",
     "y": "150",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/ab18761ca8340ae8f5e67fa4c722292c=levelbuilder/38075.png",
-    "contained_level_names": null,
     "instructions": "Use the arrow blocks to solve this maze!",
-    "markdown_instructions": "Use the blocks to solve this maze!\r\n\r\n<xml><block type=\"simple_move_down\"/></xml><xml><block type=\"simple_move_up\"/></xml><xml><block type=\"simple_move_right\"/></xml><xml><block type=\"simple_move_left\"/></xml>   \r\n\r\n---"
+    "markdown_instructions": "Use the blocks to solve this maze!\r\n\r\n<xml><block type=\"simple_move_down\"/></xml><xml><block type=\"simple_move_up\"/></xml><xml><block type=\"simple_move_right\"/></xml><xml><block type=\"simple_move_left\"/></xml>   \r\n\r\n---",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
