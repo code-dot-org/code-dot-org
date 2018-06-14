@@ -54,7 +54,6 @@ export default class ConfirmAssignment extends Component {
             color={Button.ButtonColor.gray}
           />
           <Button
-            id="uitest-confirm-assignment-btn"
             text={i18n.assign()}
             style={{marginLeft: 5}}
             onClick={onConfirm}
