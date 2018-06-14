@@ -83,7 +83,6 @@ North Carolina<br>
 North Dakota<br>
 Oklahoma<br>
 South Dakota<br>
-Texas<br>
 Vermont<br>
 Virginia<br>
 Wisconsin<br>
