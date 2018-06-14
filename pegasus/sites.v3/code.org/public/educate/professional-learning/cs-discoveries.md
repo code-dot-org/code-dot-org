@@ -62,28 +62,27 @@ Idaho<br>
 Illinois<br>
 Iowa<br>
 Maine<br>
-Maryland<br>
 
 [/col-33]
 
 [col-33]
 
+Maryland<br>
 Massachusetts<br>
 Mississippi<br>
 Montana<br>
 New Hampshire<br>
 Southeastern New York<br>
 North Carolina<br>
-North Dakota<br>
-Oklahoma<br>
+
 
 [/col-33]
 
 [col-33]
 
+North Dakota<br>
 Central Pennsylvania<br>
 South Dakota<br>
-Texas<br>
 Vermont<br>
 Virginia<br>
 Wisconsin<br>
