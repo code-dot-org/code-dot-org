@@ -45,8 +45,7 @@ export const COLUMNS = {
   NAME: 0,
   NUM_MULTIPLE_CHOICE_CORRECT: 1,
   NUM_MULTIPLE_CHOICE: 2,
-  PERCENT_CORRECT: 3,
-  SUBMISSION_TIMESTAMP: 4,
+  SUBMISSION_TIMESTAMP: 3,
 };
 
 export const studentOverviewDataPropType = PropTypes.shape({
