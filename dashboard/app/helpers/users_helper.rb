@@ -121,11 +121,23 @@ module UsersHelper
     unless exclude_level_progress
       uls = user.user_levels_by_level(script)
       paired_user_level_ids = PairedUserLevel.pairs(uls.values.map(&:id))
-      script_levels = script.script_levels
+      script_level_ids = script.script_level_ids
+      level_ids_by_script_level_id = script.script_levels.
+        joins('INNER JOIN levels_script_levels on script_levels.id = levels_script_levels.script_level_id').
+        pluck('levels_script_levels.script_level_id', 'levels_script_levels.level_id').
+        inject({}) do |memo, next_row|
+          memo[next_row[0]] ||= []
+          memo[next_row[0]] << next_row[1]
+          memo
+        end
+      script_levels = script_level_ids.map {|id| ScriptLevel.cache_find(id)}
+      stage_ids = script_levels.map(&:stage_id).uniq
+      stages_by_id = Stage.where(id: stage_ids).index_by(&:id)
       user_data[:completed] = user.completed?(script)
       user_data[:levels] = {}
       script_levels.each do |sl|
-        sl.level_ids.each do |level_id|
+        stage = stages_by_id[sl.stage_id]
+        level_ids_by_script_level_id[sl.id].each do |level_id|
           # if we have a contained level, use that to represent progress
           contained_level_id = Level.cache_find(level_id).contained_levels.try(:first).try(:id)
           ul = uls.try(:[], contained_level_id || level_id)
@@ -134,7 +146,7 @@ module UsersHelper
           submitted = !!ul.try(:submitted) &&
               !(ul.level.try(:peer_reviewable?) && [ActivityConstants::REVIEW_REJECTED_RESULT, ActivityConstants::REVIEW_ACCEPTED_RESULT].include?(ul.best_result))
           readonly_answers = !!ul.try(:readonly_answers)
-          locked = ul.try(:locked?, sl.stage) || sl.stage.lockable? && !ul
+          locked = ul.try(:locked?, stage) || stage.lockable? && !ul
 
           # for now, we don't allow authorized teachers to be "locked"
           if locked && !user.authorized_teacher?
