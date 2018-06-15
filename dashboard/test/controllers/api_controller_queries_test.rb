@@ -18,7 +18,7 @@ class ApiControllerQueriesTest < ActionDispatch::IntegrationTest
 
     sign_in_as section.teacher
 
-    assert_queries 57 do
+    assert_queries 9 do
       get '/dashboardapi/section_level_progress', params: {
         section_id: section.id,
         script_id: script.id
