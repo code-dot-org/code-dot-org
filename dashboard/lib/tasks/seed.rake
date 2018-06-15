@@ -93,7 +93,15 @@ namespace :seed do
     end
   end
 
-  SCRIPTS_DEPENDENCIES = [:environment, :games, :custom_levels, :dsls, :blocks].freeze
+  SCRIPTS_DEPENDENCIES = [
+    :environment,
+    :games,
+    :custom_levels,
+    :dsls,
+    :blocks,
+    :shared_blockly_functions,
+  ].freeze
+
   task scripts: SCRIPTS_DEPENDENCIES do
     update_scripts(incremental: false)
   end
@@ -155,7 +163,11 @@ namespace :seed do
   end
 
   task blocks: :environment do
-    Block.load_blocks
+    Block.load_records
+  end
+
+  task shared_blockly_functions: :environment do
+    SharedBlocklyFunction.load_records
   end
 
   # Generate the database entry from the custom levels json file

@@ -477,6 +477,18 @@ FactoryGirl.define do
     helper_code {"function block#{index}() {}"}
   end
 
+  factory :shared_blockly_function do
+    transient do
+      sequence(:index)
+    end
+    name {"doing_something#{index}"}
+    level_type 'fakeLevelType'
+    block_type 'function'
+    description 'This does >>something<< interesting!'
+    arguments '{"this sprite": "Sprite"}'
+    stack '<block type="implementationBlock"></block>'
+  end
+
   factory :level_source do
     level
     data '<xml/>'

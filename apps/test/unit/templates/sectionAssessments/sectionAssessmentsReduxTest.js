@@ -1,6 +1,7 @@
 import {assert} from '../../../util/configuredChai';
 import sectionAssessments, {
   setAssessments,
+  setSurveys,
   setAssessmentsStructure,
   startLoadingAssessments,
   finishLoadingAssessments,
@@ -37,6 +38,17 @@ describe('sectionAssessmentsRedux', () => {
       const nextState = sectionAssessments(initialState, action);
       const actualAssessmentData = nextState.assessmentsByScript[scriptId];
       assert.deepEqual(actualAssessmentData, assessmentData);
+    });
+  });
+
+  describe('setSurveys', () => {
+    it('associates the assessment data to the correct script', () => {
+      const scriptId = 2;
+      const surveyData = [{stage_name: "a name", levelgroup_results: []}];
+      const action = setSurveys(scriptId, surveyData);
+      const nextState = sectionAssessments(initialState, action);
+      const actualSurveyData = nextState.surveysByScript[scriptId];
+      assert.deepEqual(actualSurveyData, surveyData);
     });
   });
 
@@ -100,12 +112,18 @@ describe('sectionAssessmentsRedux', () => {
               5: {id: 5, name: 'Assessment 5'},
             },
           },
+          surveysByScript: {
+            123: {
+              9: {stage_name: 'Survey 9'},
+            },
+          },
         },
       };
       const result = getCurrentScriptAssessmentList(rootState);
-      assert.deepEqual(result.length, 2);
+      assert.deepEqual(result.length, 3);
       assert.deepEqual(result[0], {id: 7, name: 'Assessment 7'});
       assert.deepEqual(result[1], {id: 8, name: 'Assessment 8'});
+      assert.deepEqual(result[2], {id: 9, name: 'Survey 9'});
     });
   });
 
@@ -158,7 +176,7 @@ describe('sectionAssessmentsRedux', () => {
           }
         };
         const result = getMultipleChoiceStructureForCurrentAssessment(stateWithAssessment);
-        assert.deepEqual(result, [{correctAnswer: '', id: 456, question: 'What is a variable?'}]);
+        assert.deepEqual(result, [{correctAnswer: 'B', id: 456, question: 'What is a variable?'}]);
       });
     });
 
