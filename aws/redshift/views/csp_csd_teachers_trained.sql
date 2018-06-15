@@ -1,4 +1,4 @@
-DROP VIEW IF EXISTS csp_csd_teachers_trained CASCADE;
+DROP VIEW IF EXISTS analysis.csp_csd_teachers_trained CASCADE;
 
 -- to figure out
 -- 19 teachers who are listed in 2016 and 2017 PD cohort?
@@ -112,6 +112,3 @@ from trained_2017 t
   left join dashboard_production_pii.regional_partners rp on rp.name = t.regional_partner
 
 with no schema binding;
-
-
-
