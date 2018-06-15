@@ -49,7 +49,7 @@ export const COLUMNS = {
 };
 
 export const studentOverviewDataPropType = PropTypes.shape({
-  id: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   numMultipleChoiceCorrect: PropTypes.number.isRequired,
   numMultipleChoice: PropTypes.number.isRequired,

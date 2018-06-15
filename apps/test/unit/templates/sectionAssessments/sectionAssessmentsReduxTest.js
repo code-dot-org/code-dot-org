@@ -232,7 +232,7 @@ describe('sectionAssessmentsRedux', () => {
         assert.deepEqual(result,
           [
             {
-              id: "2",
+              id: 2,
               name: "Ilulia",
               numMultipleChoice: 10,
               numMultipleChoiceCorrect: 4,
