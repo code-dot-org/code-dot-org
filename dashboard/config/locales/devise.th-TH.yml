@@ -1,4 +1,5 @@
-"th":
+---
+th:
   devise:
     confirmations:
       confirmed: อีเมล์ของคุณได้รับการยืนยันเรียบร้อยแล้ว.

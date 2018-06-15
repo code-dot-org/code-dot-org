@@ -1,4 +1,5 @@
-"sr":
+---
+sr:
   data:
     block_categories:
       Actions: Акције
@@ -45,5 +46,6 @@
       Foo: Foo
       Name: Име
       NEW BLOCKS: NEW BLOCKS
+      'Functions ': 'Functions '
       Game/Score: Game/Score
       Function: Функција

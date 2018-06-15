@@ -85,6 +85,7 @@ fil:
     facebook: 'Facebook'
     windowslive: 'Account sa Microsoft'
     clever: 'Clever na Account'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Hindi matandaan ang password?'
     need_confirmation: "Hindi nakatanggap ng kumpirmasyon?"
     need_unlock: "Hindi nakatanggap kung paano mag unlock?"

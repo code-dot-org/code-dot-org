@@ -85,6 +85,7 @@ ta:
     facebook: 'Facebook'
     windowslive: 'Microsoft Account'
     clever: 'Clever Account'
+    powerschool: 'Powerschool Account'
     forgot_password: 'உங்கள் கடவுச்சொல் மறந்துவிட்டதா?'
     need_confirmation: "Didn't receive confirmation instructions?"
     need_unlock: "Didn't receive unlock instructions?"

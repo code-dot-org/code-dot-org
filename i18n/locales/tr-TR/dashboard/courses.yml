@@ -15,7 +15,7 @@ tr:
           version_title: "'17-'18"
           description_student: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
           description_teacher: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
-          description_short: An introductory computer science course that empowers students to create authentic artifacts.
+          description_short: BB Keşifleri doğrultusunda 2018-2019 sürümü.
         allthethingscourse:
           title: tümherşeykursu
           description_short: Bu tümherşey için bir kurs
@@ -26,8 +26,8 @@ tr:
           title: Bilgisayar Bilimi Keşifler ('18-'19)
           version_title: "' 18 - 19'"
           description_short: BB Keşifleri doğrultusunda 2018-2019 sürümü.
-          description_student: ''
-          description_teacher: ''
+          description_student: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
+          description_teacher: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
         csp-2018:
           assignment_family_title: Bilgisayar Bilimleri Prensipleri
           title: Bilgisayar Bilimi İlkeleri ('18-'19)

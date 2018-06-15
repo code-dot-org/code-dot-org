@@ -1,4 +1,5 @@
-"az":
+---
+az:
   devise:
     confirmations:
       confirmed: E-poçt ünvanınız müvəffəqiyyətlə təsdiq olundu.

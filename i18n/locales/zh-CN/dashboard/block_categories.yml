@@ -5,45 +5,46 @@ zh-CN:
       Loops: 循环
       Functions: 函数
       Color: 颜色
-      Brushes: Brushes
+      Brushes: 刷子
       Math: 数学
       Logic: 逻辑
       Variables: 变量
-      Number: Number
-      String: String
-      Image: Image
-      Boolean: Boolean
+      Number: 数字
+      String: 字符串
+      Image: 图像
+      Boolean: 布尔值
       Conditionals: 条件语句
       Events: 事件
-      Games/Score: Games/Score
-      Comments: Comments
-      Category: Category
-      Prebuilt: Prebuilt
+      Games/Score: 游戏/得分
+      Comments: 评论
+      Category: 类别
+      Prebuilt: 预构建
       Text: 文本
-      Picker: Picker
-      Comment: Comment
-      'Variables ': 'Variables '
-      everythingelse: everythingelse
-      numbers: numbers
-      Numbers: Numbers
+      Picker: 选取器
+      Comment: 注释
+      'Variables ': '变量 '
+      everythingelse: 其它东西
+      numbers: 数字
+      Numbers: 数字
       Input: 输入
-      Default: Default
+      Default: 默认
       Sprites: 精灵
-      Behaviors: Behaviors
-      World: World
-      Sprite: Sprite
-      Brush: Brush
-      Make Sprite: Make Sprite
-      Movement: Movement
+      Behaviors: 行为
+      World: 世界
+      Sprite: 精灵
+      Brush: 刷子
+      Make Sprite: 制作精灵
+      Movement: 移动
       Start: 开始
-      Groups: Groups
+      Groups: 小组
       Booleans: 布尔值
-      Functional: Functional
-      Predefined: Predefined
+      Functional: 函数
+      Predefined: 预定义的
       test: 测试
-      test2: test2
+      test2: 测试2
       Foo: Foo
       Name: 姓名
-      NEW BLOCKS: NEW BLOCKS
-      Game/Score: Game/Score
+      NEW BLOCKS: 新模块
+      'Functions ': 'Functions '
+      Game/Score: 游戏/得分
       Function: 函数

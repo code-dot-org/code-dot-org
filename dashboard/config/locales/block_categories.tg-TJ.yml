@@ -1,4 +1,5 @@
-"tg":
+---
+tg:
   data:
     block_categories:
       Actions: Actions
@@ -45,5 +46,6 @@
       Foo: Foo
       Name: Ном
       NEW BLOCKS: NEW BLOCKS
+      'Functions ': 'Functions '
       Game/Score: Game/Score
       Function: Function

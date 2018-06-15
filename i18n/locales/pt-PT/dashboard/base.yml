@@ -85,6 +85,7 @@ pt:
     facebook: 'Facebook'
     windowslive: 'Outlook'
     clever: 'Clever Account'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Esqueceste-te da palavra-passe?'
     need_confirmation: "Não recebeste as instruções de confirmação?"
     need_unlock: "Não recebeste as instruções de desbloqueio?"

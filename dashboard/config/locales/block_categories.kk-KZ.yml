@@ -1,4 +1,5 @@
-"kk":
+---
+kk:
   data:
     block_categories:
       Actions: Іс-әрекеттер
@@ -45,5 +46,6 @@
       Foo: Foo
       Name: Атыңыз
       NEW BLOCKS: NEW BLOCKS
+      'Functions ': 'Functions '
       Game/Score: Game/Score
       Function: Функция

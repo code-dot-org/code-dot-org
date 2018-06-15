@@ -5,6 +5,7 @@ zh-CN:
         csd_category_name: CS Discoveries ('17-'18)
         csd_2018_category_name: 计算机科学发现 (' 18-' 19)
         csf_category_name: 计算机科学基本原理
+        csf_2018_category_name: CS Fundamentals (2018)
         csf_international_category_name: 计算机基础国际版
         csf2_draft_category_name: '开发中：课程A - F'
         csp_category_name: "15-16 计算机原理"
@@ -2170,7 +2171,7 @@ zh-CN:
             Discover a Data Story:
               name: 发现一个数据故事
             Encode a Complex Thing:
-              name: Encode a Complex Thing
+              name: 对复杂的事物进行编码
             Encoding B&W Images:
               name: 编码一张黑白图片
             Encoding Color Images:
@@ -2242,7 +2243,7 @@ zh-CN:
             Creating Functions with Parameters:
               name: 创建带参数的函数
             CSP End-of-Semester Mid-course survey:
-              name: CSP End-of-Semester Mid-course survey
+              name: 计算机科学原理期末中期课程调查
             CSP Mid-course survey:
               name: 计算机科学原理中级课程调查
             Please complete the CSP Mid-course survey!:
@@ -2256,7 +2257,7 @@ zh-CN:
           description_audience: ''
           stages:
             Alice and Bob and Asymmetric Keys:
-              name: Alice and Bob and Asymmetric Keys
+              name: 爱丽丝和鲍勃与非对称密钥
             Cracking the Code:
               name: 解析代码
             Encryption with Keys and Passwords:
@@ -2342,35 +2343,35 @@ zh-CN:
             While Loops:
               name: 当循环
             Edited lessons ABOVE this line:
-              name: Edited lessons ABOVE this line
+              name: 在这行上面编辑课程
             Buttons and Events:
               name: 按钮和事件
             Make Your Own Multi-Screen App:
-              name: Make Your Own Multi-Screen App
+              name: 制作您自己的多屏幕应用程序
             Unit 5 Assessment 1:
               name: 第5单元评估1
             Unit 5 Assessment 2:
               name: 第5单元评估2
             "'If' Statements Unplugged":
-              name: "'If' Statements Unplugged"
+              name: "线下 \"如果\" 语句"
             '"If" Statements Unplugged':
               name: '线下 "如果" 语句'
             Getting started with If Statements:
-              name: Getting started with If Statements
+              name: 如果 语句入门
             Unit 3 Chapter 1 Assessment 3:
-              name: Unit 3 Chapter 1 Assessment 3
+              name: 第3单元 第1章 评估3
             If statements:
-              name: If statements
+              name: 如果 语句
             Unit 3 Assessment 3:
-              name: Unit 3 Assessment 3
+              name: 第3单元评估3
             Unit 3 Assessment 4:
-              name: Unit 3 Assessment 4
+              name: 第3单元评估4
             If-else-if and Conditional Logic:
-              name: If-else-if and Conditional Logic
+              name: 如果-否则-如果，和条件逻辑
             'Building an App: Color Sleuth':
               name: '构建一个应用程序: 色彩侦探'
             Possibly use later:
-              name: Possibly use later
+              name: 可能以后使用
             Unit 5 Assessment 3:
               name: 第5单元评估3
             Unit 5 Assessment 4:
@@ -2388,7 +2389,7 @@ zh-CN:
             'Building an App: Canvas Painter':
               name: '构建应用程序: 油画画家'
             Unit 5 Assessment 5 - Practice AP questions:
-              name: Unit 5 Assessment 5 - Practice AP questions
+              name: 第5单元评估 5 - 练习 AP 问题
             Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
               name: 第5单元评估 5 - AP 伪代码练习题
             CSP Student Post Survey Staging:
@@ -2398,11 +2399,11 @@ zh-CN:
             CSP Student Post-Course Survey:
               name: 计算机科学原理学生课程后调查
             Multi-Screen Apps:
-              name: Multi-Screen Apps
+              name: 多屏幕应用程序
             '"if" Statements Unplugged':
-              name: '"if" Statements Unplugged'
+              name: '线下 "如果" 语句'
             Boolean Expressions and "if" Statements:
-              name: Boolean Expressions and "if" Statements
+              name: 布尔表达式和 "如果" 语句
             Post-Course Survey:
               name: 课后问卷
         csp6:
@@ -3282,7 +3283,7 @@ zh-CN:
             Test stage with bubbles:
               name: 气泡测试阶段
         csd3-2017:
-          title: CSD Unit 3 - Animations and Games
+          title: CSD单元 3 - 动画和游戏
           description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
           description_short: " 在游戏实验室中学习编写动画，交互和比赛等的程序。"
           description_audience: ''
@@ -3351,8 +3352,8 @@ zh-CN:
               description_teacher: 学生探索如何使用形状进行交流的挑战, 并使用一个工具介绍如何在游戏实验室中解决这个问题。热身活动在没有共享参照点的情况下, 快速地展示了沟通立场的挑战。在主要活动中, 学生探索一个游戏实验室工具, 允许学生在游戏实验室400 的400 网格上交互地放置形状。然后, 他们轮流指示合作伙伴如何使用此工具绘制一个隐藏图像, 在游戏实验室编程时, 学生将遇到许多挑战. 学生可以选择创建自己的图像在汇报讨论之前进行交流。
             Shapes and Randomness:
               name: 形状和随机性
-              description_student: This lesson extends the drawing skills to include width and height and introduces the concept of random number generation. The class learns to draw with versions of ellipse() and rect() that include width and height parameters and to use the background() block to fill the screen with color. At the end of the progression the class is introduced to the randomNumber() block and uses the new blocks to draw a randomized rainbow snake.
-              description_teacher: In this lesson students continue to develop their drawing skills. At the beginning of the lesson a teacher-led discussion connects expanded block functionality (e.g. different sized shapes) with the need for more block inputs, or "parameters". Students learn to draw with versions of `ellipse()` and `rect()` that include width and height parameters. They also learn to use the `background()` block. At the end of the progression students are introduced to the `randomNumber()` block. Combining all of these skills students will draw a randomized rainbow snake at the end of the lesson.
+              description_student: 本课扩展了绘图技巧, 包括宽度和高度, 并介绍了随机数生成的概念。该类将学习使用包含宽度和高度参数的 椭圆() 和 矩形() 版本来绘制, 并使用 背景() 模块来用颜色填充屏幕。在结尾时，班级将会学习 随机数() 块并且使用新的模块画一条随机彩虹蛇。
+              description_teacher: 在这一课中, 学生们继续发展他们的绘画技巧。在本课开始时, 教师主导的讨论将扩展的模块功能 (如不同大小的形状) 与需要更多的模块输入或 "参数" 连接起来。学生学习如何绘制包含宽度和高度参数的 "椭圆 ()" 和 "矩形 ()" 的版本。他们还学习使用 "背景 ()" 块。在结尾时，学生被介绍到 ' 随机数() ' 块。在课程结束时，结合所有这些技能的学生将画一个随机彩虹蛇。
             Variables:
               name: 变量
               description_student: 本课将介绍变量作为在程序中标记数字或保存随机生成的值的方法。课程开始时，对变量的用途和使用新块的实践进行了非常基本的描述。然后，该班级使用变量来保存一个随机数, 使程序可以多次使用相同的随机数。
@@ -3403,13 +3404,13 @@ zh-CN:
               description_student: 班级使用前两个课程的项目指南计划和构建原始游戏。大家单独或成对一起工作, 班级计划, 开发, 并对游戏提供反馈。结合了相互反馈后，会共享已完成的游戏。
               description_teacher: 学生将计划和创建自己的游戏，使用头两节课中的项目指南来指导他们的项目。单独或成对地工作, 学生将首先决定他们想要建立的游戏类型, 从一组示例游戏找到灵感。然后, 他们将完成一个空白的项目指南, 他们将描述游戏的行为和范围的变量, 精灵，和需要建立的函数。在代码工作室中, 一系列级别将提示他们使用可用于实现此计划的序列。完成后，学生将分享他们项目，并进行相互评审。在课程结束时, 学生们将与同学们分享他们完成的游戏。此项目将扩展到多个班级，可以轻松地在合适的场地支持3到5个班一起进行。
             Parameters and Randomization:
-              name: Parameters and Randomization
+              name: 参数和随机化
             Shapes and Randomization:
               name: 形状和随机化
             CS Discoveries End of Semester Survey:
               name: 计算机科学发现期末调查
             CSD Post-Course Survey:
-              name: CSD Post-Course Survey
+              name: 计算机科学发现课后问卷
         grade2:
           title: Grade 2
           description: Planning Script for CSF 2.0
@@ -3560,7 +3561,7 @@ zh-CN:
             Processing with Bits:
               name: 比特位处理
             Human vs. Computer Processing:
-              name: Human vs. Computer Processing
+              name: 人与计算机处理
             Processing with Apps:
               name: 使用应用程序进行处理
             'Project: Apps and Problem Solving':
@@ -3590,7 +3591,7 @@ zh-CN:
             CS Discoveries Pre-survey:
               name: 计算机科学发现预调查
             CS Discoveries Rapid Survey:
-              name: CS Discoveries Rapid Survey
+              name: 计算机科学发现快速调查
         csp-online-test:
           title: test space for csp online support
           description_short: This is a sample course for testing csp online pd
@@ -3810,7 +3811,7 @@ zh-CN:
             Headers:
               name: 标头
               description_student: 本课将继续介绍 HTML 标记, 这一次使用标题。 该课程练习使用标题标记来创建页面和节标题, 并了解在默认情况下如何显示不同的标题元素。 接下来, 该课程计划如何在将在整个单元中构建的个人 网页上组织其内容, 并开始该项目的第一页。
-              description_teacher: In this lesson, students continue to use HTML to structure text on web pages, this time with headers.  Students learn how the different header elements are displayed by default and practice using them to create page and section titles.  Students then start to decide how they will organize their content on their own personal web pages.  In the last level, students begin the project that they will continue to work on throughout the unit.
+              description_teacher: 在本课中, 学生们继续使用HTML在网页上构建文本，这次使用标题。学生学习如何在默认情况下显示不同的标题元素, 并练习使用它们来创建页面和段落标题。 然后, 学生开始决定他们将如何在自己的个人网页上组织内容。 在最后一级, 学生将继续在整个单元工作的项目。
             Lists:
               name: 列表
               description_student: 本课介绍了有序和无序列表以及相关 &lt; ul &gt;、&lt; ol &gt; 和 &lt; li &gt; HTML 标签。 该课堂使用标记进行练习, 然后返回到个人网页项目, 以添加一个包含新标记的新 HTML 页面。
@@ -3836,7 +3837,7 @@ zh-CN:
               description_student: 本课将继续介绍 HTML 标记, 这一次使用标题。 该课程练习使用标题标记来创建页面和节标题, 并了解在默认情况下如何显示不同的标题元素。 接下来, 该课程计划如何在将在整个单元中构建的个人 网页上组织其内容, 并开始该项目的第一页。
               description_teacher: 在本课中, 学生们继续使用 HTML 在网页上构建文本，这次使用标题。学生学习如何在默认情况下显示不同的标题元素, 并练习使用它们来创建页面和段落标题。 然后, 学生开始决定他们将如何在自己的个人网页上组织内容。 在最后一级, 学生开始他们将继续在整个单位工作的项目。
             CSD Post-Course Survey:
-              name: CSD Post-Course Survey
+              name: 计算机科学发现课后问卷
         csp2-support:
           title: Unit 2 Online Professional Learning Course
           description_audience: ''
@@ -3866,7 +3867,7 @@ zh-CN:
             AP Preparation and Support:
               name: AP 准备和支持
         csd4-2017:
-          title: CSD Unit 4 - The Design Process
+          title: 计算机科学发现单元4 - 设计过程
           description_audience: ''
           description_short: "  Learn how to design a program that meets the needs of your users."
           description: 4单元介绍了计算的更广泛的社会影响。通过一系列的设计挑战, 您将了解如何在开发解决问题的方法时更好地理解他人的需求。该单元的后半部分由一个迭代团队项目组成, 在这个项目中，团队有机会确定他们所关心的需求、在纸上和应用程序实验室中的原型解决方案, 并与真正的用户测试解决方案以获得反馈并进一步推动迭代.
@@ -3892,7 +3893,7 @@ zh-CN:
             Analyzing Interviews:
               name: 分析访谈
             Redesigning a Space:
-              name: Redesigning a Space
+              name: 重新设计空间
             Presenting Your Design:
               name: 介绍您的设计
             Designing Apps for Good:
@@ -3918,11 +3919,11 @@ zh-CN:
             Event Driven Programming:
               name: 事件驱动编程
               description_student: 在上一节课该班设计的屏幕上构建, 小组将屏幕组合成一个单一的应用程序. 然后可以添加简单的代码, 单击按钮转换到适当的屏幕。
-              description_teacher: In this lesson teams combine the screens that they designed in the previous lesson into a single app, which they then begin to program using simple events. Students learn basic event driven programming by making several small apps that respond to users clicking buttons. Following that, group members share the screens they've developed and each group member imports all of the screens into their own copy of the app, which they will make interactive by connecting buttons to events.
+              description_teacher: 在本课中, 小组将上一节课中设计的屏幕组合成一个单一的应用程序, 然后开始使用简单事件进行编程。学生通过制作几个小应用程序学习基本的事件驱动编程来回应用户点击按钮。接下来, 小组成员共享他们开发的屏幕, 每个组成员将所有的屏幕导入到他们自己的应用程序副本中, 并通过将按钮连接到事件中进行互动。
             Basic App Functionality:
               name: 基本应用程序功能
-              description_student: Teams add a bit more polish and functionality to their apps before testing. Several examples are provided to demonstrate simple code that adds cool features.
-              description_teacher: At this point in the development process, each student should have what is essentially a digital version of the paper prototype - static screens that are linked together with buttons. For many apps this is all you really need to start testing with users, but this lesson will give students a chance to explore simple ways to add a bit more functionality to their apps before moving into the testing phase. The programming concepts introduced in this lesson are **not necessary** to successfully complete the project, and can be omitted at your discretion.
+              description_student: 在测试之前, 小组在他们的应用程序中添加了更多的润色和功能。提供了几个例子来演示添加了很酷功能的简单代码。
+              description_teacher: 在开发过程的这一点上, 每个学生都应该有一个本质上的纸面原型数字版本 - 静态屏幕，和按钮连接在一起。对于许多应用程序来说, 这才是您真正开始测试用户所需要的，但这一课程将给学生们一个机会可以探索简单的方法，在进入测试阶段之前，在他们的应用程序中添加更多的功能。 本课中介绍的编程概念是 ** 没有必要的 ** 可以成功完成项目, 并可以随意省略。
             Testing the App:
               name: 测试应用程序
               description_student: 小组运行另一轮用户测试, 这一次是与他们的交互式原型。从这一轮测试中收集的反馈将运用到应用程序原型的最后迭代。
@@ -3968,7 +3969,7 @@ zh-CN:
               description_student: 每个团队准备一个演讲来 "推销" 他们开发的应用程序。这是分享奋斗、胜利和计划未来的时候了。
               description_teacher: 在这一点上, 小组已经研究了一个个人和社会重要性的主题, 开发和测试了一个纸面原型和一个数字原型, 并对最初的应用程序进行迭代, 合并新功能和 bug 修复。现在是他们回顾他们所做的事情的时候了, 并把一个连贯的演示汇集在一起, 来展示他们的创造过程。使用提供的演示模板, 团队准备介绍他们的应用程序开发过程, 包括他们所解决的问题、他们从测试中获得反馈的方法, 以及他们对未来的计划。
             CSD Post-Course Survey:
-              name: CSD Post-Course Survey
+              name: 计算机科学发现课后问卷
         minecraft:
           title: 我的世界 编码时间设计师
           description_audience: ''
@@ -4511,7 +4512,7 @@ zh-CN:
           description: 'COMING SOON: soon this page will host a set of resources for teachers preparing for the AP exam'
           stages: { }
         csppostap-2017:
-          title: CSP Post-AP - Databases and Using Data in Your Apps
+          title: 计算机科学原理课后AP - 数据库以及在你的应用里使用数据
           description_audience: ''
           description_short: 学习在应用程序实验室应用程序中收集和使用数据。
           description: App Lab has a number of tools that allow you to collect and use data in your apps. The following material provides an overview of how these tools work, a sampling of example projects that can be built using these tools, and a space in which to build and submit a final project.
@@ -4774,182 +4775,182 @@ zh-CN:
           stages:
             Computing Innovations:
               name: 计算创新
-              description_student: Explore a wide variety of new and innovative computing platforms while expanding your understanding of what a computer can be.
-              description_teacher: To kick off the final unit of this course, students will do some research into interesting innovations in computing. This lesson will expose students to wider variety of computing form factors (what a computer looks like) and fields that are impacted by computing. Later in this unit students will look back on the devices they encountered in this lesson as they develop their own physical computing devices.
+              description_student: 在扩展你对计算机的认知的同时，探索各种新的，有创新的计算平台。
+              description_teacher: 为了开始这门课程的最后一个单元, 学生们将对计算中有趣的创新做一些研究。本课将向学生展示各种计算形式的因素 (计算机的外观是什么样的) 和受计算影响的领域。在本单元的后面课程中, 学生在开发自己的物理计算设备时, 他们会回顾在本课中学习到的设备。
             Input Unplugged:
               name: 线下输入
-              description_student: Experience two different ways that an app can take input from a user, while learning more about the event-driven programming model used in App Lab.
-              description_teacher: In preparation for delving deeper into programming with App Lab, students will explore how a handful of different programs written in both Game Lab and App Lab handle taking input from the user. After comparing and contrasting the approaches they saw in the example apps, students group up to act out the two different models for input (conditionals in an infinite loop and asynchronous events) to gain a better understanding of how they work.
+              description_student: 体验应用程序从用户接受输入的两种不同的方法。 同时了解更多在应用程序实验室里使用到的事件驱动的编程模型。
+              description_teacher: 为了进一步钻研应用程序实验室的编程, 学生们将探索如何在游戏实验室和应用程序实验室中编写一小部分不同的程序, 以从用户那里输入信息。在比较和对比他们在示例应用程序中看到的方法之后, 学生分组来实践输入 (无限和异步事件中的条件) 的两个不同的模型, 以便更好地了解它们的工作方式。
             Event Types:
               name: 事件类型
-              description_student: Review the basics of programming in App Lab and explore some new event types that can be used in your programs.
-              description_teacher: In this lesson students review the material they learned about creating apps in App Lab from Unit 4 in order to prepare for a return to App Lab in this unit. This review should be modified to best meet the needs of your students and their experience and familiarity with programming in App Lab. In addition to the review the students will also experiment with a variety of new event types that they likely have not seen before.
+              description_student: 查看在应用程序实验室里的基础编程知识。并探索一些你可以在你程序里使用的新的事件种类。
+              description_teacher: 在本课中, 学生们将回顾从单元4中学习到的在应用程序实验室里创建应用程序的材料, 以便为回到本单元中的应用程序实验室做准备。这次回顾课程应被修改以便能最大化满足学生的需要，以及他们对应用实验室的经验和熟悉程度。除了复习外, 学生还将尝试他们之前可能没有看到过的各种新的事件类型, 。
             Getters and Setters:
               name: 取值器和设置器
-              description_student: By reading and changing the content on the screen of an app, the class starts to build apps that only need a single screen. Even with just one screen, these techniques allow for lots of user interaction and functionality.
-              description_teacher: In Unit 4 students learned a very simple approach to app development in App Lab that required a separate screen for most interactions. To expand the kinds of apps that students can make, and to encourage them to think in new ways about how users interact with apps, we introduce the concept of "getters" and "setters". These are commands which can get and set (or change) the content and properties of various design elements. In this lesson students build up simple apps that only require a single screen, the content of which is changed using getters and setters.
+              description_student: 通过阅读和更改应用程序屏幕上的内容, 该类开始构建只需要单个屏幕的应用程序。即使只有一个屏幕, 这些技术也允许大量的用户交互和功能。
+              description_teacher: 在第4单元中, 学生在 app 实验室中学习了一个非常简单的应用程序开发的方法, 它需要一个独立的屏幕来进行大多数互动。为了扩展学生可以制作使用的应用程序类型, 并鼓励他们以新的方式思考用户是如何与应用程序互动的, 我们引入了 "getter（取值器）" 和 "setter（设置器）" 的概念。这些命令可以获取和设置 (或更改) 各种设计元素的内容和属性。在本课中, 学生只需要用一个屏幕来建立简单的应用程序, 其中的内容已被改为使用 getter（取值器） 和 setter（设置器)。
             The Circuit Playground:
               name: 电路游乐场
-              description_student: Get to know the Circuit Playground, the circuit board that will be used throughout the rest of this unit. Using App Lab, develop programs that use the Circuit Playground for output.
-              description_teacher: In this lesson students get their first opportunity to write programs that use the Circuit Playground. After first inspecting the board visually and hypothesizing possibly functionalities, students move online where they will learn to write applications that control an LED. By combining App Lab screens with the Circuit Playgrounds, students can gradually start to integrate elements of the board as an ouput device while relying on App Lab for user input.
+              description_student: 我们要来了解将贯穿剩余单元的赛道操场这个电路主板。我们要使用应用实验室来，开发使用电路主板输出的程序。
+              description_teacher: 在这一课程中，学生们第一次有机会使用电路游戏板来编写程序。 在初次虚拟查看主板和假想的可能功能后，学生们将在线编写应用程序，它可以使用蜂鸣器制造噪音并让LED 灯闪烁。 通过结合应用实验室的屏幕和电路游戏板， 学生们可以逐步开始将主板的元素集成为输出设备，同时又依靠APP 实验室来进行用户输入。
             Lists:
               name: 列表
-              description_student: Learn how lists can be used to store multiple values in a single variable name.
-              description_teacher: A list, also commonly known as an array, is a type of variable that can store many values at once. In this lesson, students learn to create lists which store a series of related values in a single variable. After creating lists of their own, students will learn about ways to extract either a specific or random value from a list using its index.
+              description_student: 学习如果使用列表来存储单一变量名称的多个数值。
+              description_teacher: 一个列表，通常也称为数组，是一种可以存储多个数值的变量。在本课程中，学生会学到创建可以存储单一变量相关的一系列数值的列表。 在创建好他们自己的列表后，学生们将学到使用索引从列表里来导出一个特定的或随机的数值的方法。
             Lights:
               name: 灯
-              description_student: Using the concept of lists from the previous lesson, the class writes programs that control the ten color LEDs on the Circuit Playground.
-              description_teacher: The Circuit Playground includes 10 color LEDs in a ring around the outside edge. These LEDs are accessible in code as a list called `colorLeds`. Building on the understanding of lists from the previous lesson, students write programs that control the color LEDs by accessing them from a list.
+              description_student: 运用从上节课程中学习到的列表的概念，本课程将书写可以在电路游戏板中控制10 个有颜色LED小灯的程序。
+              description_teacher: 电路游戏板包含沿着外边组成圈的10 个有颜色的LED灯。这些LED 灯在编码里以称为`colorLeds`的列表可被使用。基于上节课里对列表的理解，学生们将从列表里取得编写可以控制LED 灯颜色的程序。
             For Loops:
               name: 计数循环
-              description_student: The class learns about repeating instructions using a _for loop_, first by controlling a "robot" through a grid, and then in App Lab.
-              description_teacher: Students are introduced to the _for loop_ in this lesson as a way to repeat some code a certain numbers of times. Students start with an unplugged activity where they use for loops to navigate a robot across a grid. Once complete, students then take their knowledge into App Lab where they write programs that rely on iteration using a _for loop_.
+              description_student: 学生们在应用实验室里，先从控制一个机器人通过一个网格，来学习使用计数循环。
+              description_teacher: 学生们在本课程中将被介绍计数循环的使用。 它是一种能够重复一些代码特定次数的方法。学生们从离线的活动开始，那里他们可以使用计数循环来指引机器人在网格里运行。 一旦完成后，学生们将把他们所学到的知识带到应用实验室中，在那里，他们可以依赖计数循环来编写程序。
             Lists and For Loops:
               name: 列表和计数循环
-              description_student: Combining _lists_ and _for loops_ allows you to write code that impacts every element of a list, regardless of how long it is. The class uses this structure to write programs that process all of the elements in lists, include the list of color LEDs.
-              description_teacher: 'Using a _for loop_ to iterate over all of the elements in an array is a really useful construct in most programming languages. In this lesson, students combine what they have learned about lists and for loops in order to start learning this pattern. Students use for loops to go through each element in a list one at a time without having to write code for each element. Towards the end of the lesson students will apply this with the `colorLed` list on the board. '
+              description_student: 将列表和计数循环混合起来，可以让你编写无论多长，都能操作列表中每个元素的程序。课堂使用此结构来编写程序， 它可以处理在列表中的所有元素，包括彩色LED灯的列表。
+              description_teacher: '使用计数循环来枚举数组中的所有元素是大多数编程语言中非常有用的结构。在本课中, 学生将他们所学到的关于列表和计数循环的知识结合起来, 开始学习这个模式。学生使用计数循环来涵盖列表中的每个元素, 这样他们就不必为每个元素编写代码。在课程结束的时候, 学生将会把这些代码应用到主板上的 `colorLed`（彩色LED灯）列表。 '
             Timed Loops:
               name: 定时的循环
-              description_student: In this lesson we build on students understanding of for loops to learn about a more sophisticated structure called a timed loop. Unlike for loops, you can control how quickly a timed loop repeats, and other code (such as event handlers) can be run between iterations of the loop. This allows us to create interesting animations that repeat infinitely, while still allowing other code to run alongside it.
-              description_teacher: In this lesson we build on students understanding of _for loops_ to learn about a more sophisticated structure called a _timed loop_. Unlike _for loops_, you can control how quickly a _timed loop_ repeats, and other code (such as event handlers) can be run between iterations of the loop. This allows us to create interesting animations that repeat infinitely, while still allowing other code to run alongside it.
+              description_student: 在本课程中，我们在学生们已经对计数循环理解的基础上来学习一个更复杂的结构叫做定时循环。 和计数循环不同的是，你可以控制你要定时循环重复的速度，以及其他一些可以在循环迭代中运行的代码（比如：事件处理器）。 这使得我们可以创建有趣的动画，让它可以无限次循环，同时又仍可以让其他代码和它一起运行。
+              description_teacher: 在本课程中，我们基于学生们已经了解的计数循环_ 知识来学习一个更加复杂的结构叫做：_计时循环_. 和 _计数循环_不同的是，你可以控制_计时循环_ 重复的速度，以及其他一些可以在循环中运行的代码（如：事件处理器）。这将使得我们可以创建有趣的动画，它可以无限重复，同时又允许其他代码同时运行。
             'Project: Board Output':
               name: '项目：主板输出'
-              description_student: Students take what they've learned through chapter one, and develop an app of their own design that uses the board to output information.
-              description_teacher: Students take what they've learned through chapter one, and develop an app of their own design that uses the board to output information.
+              description_student: 学生们通过他们在第一章中学习到的知识，运用开发他们自己设计的应用程序，它可以使用主板输出信息。
+              description_teacher: 学生们通过他们在第一章中学习到的知识，运用开发他们自己设计的应用程序，它可以使用主板输出信息。
             Physical Input:
               name: 物理输入
-              description_student: Using the hardware buttons and switch, the class develops programs that use the Circuit Playground as an input.
-              description_teacher: This lesson transitions students from consider the Circuit Playground as strictly an output device towards using it as a tool for both input and output. Starting with the hardware buttons and switch,sing the hardware buttons and switch, students learn to use `onBoardEvent()`, analogously to `onEvent()`, in order to take input from their Circuit Playgrounds.
+              description_student: 使用硬件按钮和开关，班级开发使用电路游戏板作为输入的程序。
+              description_teacher: 本课程将让学生转变他们的认知，电路游戏板不是仅仅只是输出设备，它还可以同时被用为输入和输出的工具。 从按钮和开关开始，到硬件开关和按钮的熟悉，学生们将学会运用`onBoardEvent()`（当主板上发生事件时）类似于`onEvent()`（当事件发生时），来从他们的电路游戏板得到输入。
             Analog Input:
               name: 模拟输入
-              description_student: Explore the analog inputs on the Circuit Playground, writing programs that respond to the environment through sensors.
-              description_teacher: In this lesson, students explore how the three analog sensors (sound, light, and temperature) can be used to write programs that respond to changes in the environment. The use of these sensors marks a transition in terms of how users interact with a program. By using sensors as an input, the user of an app doesn't have to directly interact with it at all, or may interact without actually realizing they are doing so.
+              description_student: 探索电路游戏板上的模拟输入, 编写通过感应器响应环境的程序。
+              description_teacher: 在此课程中，学生们将探索如何使用三个模拟的传感器（声音，光和温度）来编写相应环境变化的程序。 使用传感器标示着用户如何和程序互动的过渡。使用传感器作为输入，应用程序的用户不需要直接和它互动，或者可以很自然的互动。
             Sensor Applications:
               name: 传感器应用
-              description_student: Work through three small apps to better understand the uses of the sensors from the previous lesson.
-              description_teacher: To follow up on the sensors that students learned about in the previous lesson, we walk through a three apps, each of which relies on a different sensor. These three apps can serve as jumping off points for students in the final project that follows.
+              description_student: 通过学习三个小的应用程序来更好地理解如何使用上节课程中的传感器。
+              description_teacher: 为了追踪学生在上一课中所学到的传感器, 我们浏览了三个应用程序, 每个应用程序都依赖于不同的传感器。 这三个应用程序可以作为后续项目中学生的跳跃点。
             'Project: Prototype an Innovation':
               name: '项目：创新原型'
-              description_student: Develop innovative computing devices of your own design, using everything you've learned throughout this course.
-              description_teacher: 'In this final project for the course, students team to develop and test a prototype for an innovative computing device based on the Circuit Playground. Using the inputs and outputs available on the board, groups will create programs that allow for interesting and unique user interactions. '
+              description_student: 开发您自己设计的创新计算设备, 使用您在本课程中学到的所有知识。
+              description_teacher: '在这个课程的最后一个项目中, 学生组队来开发并测试一个基于电路游戏板的创新计算设备的原型。通过使用主板上提供的输入和输出, 学生组将创建允许有趣和独特的用户交互的程序。 '
             Designing Screens with Code:
               name: 使用代码设计屏幕
-              description_student: By reading and changing the content on the screen of an app, the class starts to build apps that only need a single screen. Even with just one screen, these techniques allow for lots of user interaction and functionality.
-              description_teacher: In Unit 4 students learned a very simple approach to app development in App Lab that required a separate screen for most interactions. To expand the kinds of apps that students can make, and to encourage them to think in new ways about how users interact with apps, we introduce the `setProperty()` block. This command can be used to set the content and properties of various UI elements, allowing students to write programs that update information on a single screen, instead of manually creating duplicate screens. In this lesson students build up simple apps that only require a single screen, the content of which is changed using `setProperty()`.
+              description_student: 通过阅读和更改应用程序屏幕上的内容, 该类开始构建只需要单个屏幕的应用程序。即使只有一个屏幕, 这些技术也允许大量的用户交互和功能。
+              description_teacher: 在单元4中，学生们学习了一个非常简单的方法在应用实验室中进行应用开发，它需要一个独立的屏幕来进行大多数互动。为了扩展这类学生们能制作的应用，并且鼓励它们能够用新的方法思考用户与交互，我们引入了`setProperty()`（设置属性）模块。这个命令能够用来设置各种界面元素的内容和属性，允许学生们写程序来在当前屏幕上更新信息，而不是手工创建重复的屏幕。在这堂课中，学生们会创建只需要一个屏幕的简单应用，它的内容会被`setProperty()`（设置属性）改变。
             Board Events:
               name: 主板事件
-              description_student: Using the hardware buttons and switch, the class develops programs that use the Circuit Playground as an input.
-              description_teacher: This lesson transitions students from consider the Circuit Playground as strictly an output device towards using it as a tool for both input and output. Starting with the hardware buttons and switch,sing the hardware buttons and switch, students learn to use `onBoardEvent()`, analogously to `onEvent()`, in order to take input from their Circuit Playgrounds.
+              description_student: 使用硬件按钮和开关，班级开发使用电路游戏板作为输入的程序。
+              description_teacher: 本课程将让学生转变他们的认知，电路游戏板不是仅仅只是输出设备，它还可以同时被用为输入和输出的工具。 从按钮和开关开始，到硬件开关和按钮的熟悉，学生们将学会运用`onBoardEvent()`（当主板上发生事件时）类似于`onEvent()`（当事件发生时），来从他们的电路游戏板得到输入。
             Getting Properties:
               name: 取值器属性
-              description_student: This lesson introduces students to the getProperty block, which allows them to access the properties of different elements with code.  Students first practice using the block to determine what the user has input in various user interface elements. Students later use getProperty and setProperty together with the counter patters to make elements move across the screen.  A new screen element, the slider, and a new event trigger, onChange, are also introduced.
-              description_teacher: This lesson introduces students to the `getProperty` block, which allows them to access the properties of different elements with code.  Students first practice using the block to determine what the user has input in various user interface elements. Students later use `getProperty` and `setProperty` together with the counter patters to make elements move across the screen.  A new screen element, the slider, and a new event trigger, `onChange`, are also introduced.
+              description_student: 这堂课向学生们介绍了getProperty（获取属性）模块，它能让学生们用代码存取不同元素的属性。学生们会首先练习用模块来检测是否用户在不同的界面元素中进行了输入。然后同时使用 getProperty（获取属性）和setProperty（设置属性）模块的counter来让元素在屏幕上移动。同时，也会引入一个新元素-滑动条，以及一个新的事件-“onChange”（当改变时）。
+              description_teacher: 这堂课向学生们介绍了`getProperty`（获取属性）模块，它能让学生们用代码存取不同元素的属性。学生们会首先练习用模块来检测是否用户在不同的界面元素中进行了输入。然后同时使用`getProperty`（获取属性）和`setProperty()`（设置属性）模块的counter来让元素在屏幕上移动。同时，也会引入一个新元素-滑动条，以及一个新的事件`onChange`（当改变时）。
             The Program Design Process:
               name: 程序设计过程
-              description_student: This lesson introduces students to the process they will use to design programs of their own throughout this unit. This process is centered around a project guide which asks students to sketch out their screens, identify elements of the Circuit Playground to be used, define variables, and describe events before they begin programming. This process is similar to the Game Design Process that we used in Unit 3. In this lesson students begin by playing a tug o' war style game where the code is hidden. They discuss what they think the board components, events, and variables would need to be to make the program. They are then given a completed project guide which shows one way to implement the project. Students are then walked through this process through a series of levels. At the end of the lesson students have an opportunity to make improvements to the program to make it their own.
-              description_teacher: This lesson introduces students to the process they will use to design programs of their own throughout this unit. This process is centered around a project guide which asks students to sketch out their screens, identify elements of the Circuit Playground to be used, define variables, and describe events before they begin programming. This process is similar to the Game Design Process that we used in Unit 3. In this lesson students begin by playing a tug o' war style game where the code is hidden. They discuss what they think the board components, events, and variables would need to be to make the program. They are then given a completed project guide which shows one way to implement the project. Students are then walked through this process through a series of levels. At the end of the lesson students have an opportunity to make improvements to the program to make it their own.
+              description_student: 这堂课向学生们介绍了设计他们自己的程序的流程。这个流程围绕着一个项目指南，让他们在开始前，先描绘出屏幕的构架，找到电路游戏板需要使用的元素。定义变量，描述事件。这个流程和我们在单元3中的游戏设计流程很像。在这节课中，学生们从玩一个拔河游戏开始，它的代码是隐藏起来的。他们会讨论主板组件是什么，需要使用的事件和变量是什么。然后会给他们完整的项目指南来实现这个项目。学生们然后会通过一系列的关卡来过一下这个流程。在课程结束时，他们有机会改进这个程序，做出自己的版本。
+              description_teacher: 这堂课向学生们介绍了设计他们自己的程序的流程。这个流程围绕着一个项目指南，让他们在开始前，先描绘出屏幕的构架，找到电路游戏板需要使用的元素。定义变量，描述事件。这个流程和我们在单元3中的游戏设计流程很像。在这节课中，学生们从玩一个拔河游戏开始，它的代码是隐藏起来的。他们会讨论主板组件是什么，需要使用的事件和变量是什么。然后会给他们完整的项目指南来实现这个项目。学生们然后会通过一系列的关卡来过一下这个流程。在课程结束时，他们有机会改进这个程序，做出自己的版本。
             'Project: Make a Game':
               name: '项目: 建立游戏'
-              description_student: Students take what they've learned through chapter one, and develop an app of their own design that uses the board to output information.
-              description_teacher: Students take what they've learned through chapter one, and develop an app of their own design that uses the board to output information.
+              description_student: 学生们通过他们在第一章中学习到的知识，运用开发他们自己设计的应用程序，它可以使用主板输出信息。
+              description_teacher: 学生们通过他们在第一章中学习到的知识，运用开发他们自己设计的应用程序，它可以使用主板输出信息。
             Arrays:
               name: 数组
-              description_student: Learn how lists can be used to store multiple values in a single variable name.
-              description_teacher: An array is an ordered collection of items, usually of the same type. In this lesson, students learn ways to access either a specific or random value from a list using its index.  They then learn how to access the colorLEDs array that controls the behavior of the color LEDs on the Circuit Playground.  Students will control the color and intensity of each LED, then use what they have learned to program light patterns to create a light show on their Circuit Playground.
+              description_student: 学习如果使用列表来存储单一变量名称的多个数值。
+              description_teacher: 数组是一个有序的项目的集合，通常是相同类型的项目。在这节课中，学生们学习如何从列表中，用索引来存储某一个或者随机的值。ta'men他们然后会学习到如何存取colorLEDs来控制电路游戏板上的彩色LED等。学生们需要控制每个LED灯的颜色和强度，然后用学到的程序来画一个光线图案，从而在电路游戏板上展示一场灯光秀。
             Making Music:
               name: 制作音乐
-              description_student: In this lesson students will use the buzzer to its full extent by producing sounds, notes, and songs with the buzzer. Students start with a short review of the buzzer's frequency and duration parameters, then move on to the concept of notes.  Notes allow students to constrain themselves to frequencies that are used in Western music and provide a layer of abstraction that helps them to understand which frequencies might sound good together.  Onces students are able to play notes on the buzzer, they use arrays to hold and play sequences of notes, forming simple songs.
-              description_teacher: In this lesson students will use the buzzer to its full extent by producing sounds, notes, and songs with the buzzer. Students start with a short review of the buzzer's frequency and duration parameters, then move on to the concept of notes.  Notes allow students to constrain themselves to frequencies that are used in Western music and provide a layer of abstraction that helps them to understand which frequencies might sound good together.  Onces students are able to play notes on the buzzer, they use arrays to hold and play sequences of notes, forming simple songs.
+              description_student: 这节课中，学生们会使用蜂鸣器来达到它的全部能力，包括制造声音，音符和歌曲。学生们从回顾蜂鸣器的频率和持续时间参数开始，然后是音符的概念。音符允许学生们将频率限制在西洋音乐需要的范围内，并提供了一个抽象层来帮助他们理解什么声音听起来更好。一旦学生们能在蜂鸣器上播放音符了，他们就能用数组来播放一组音符，形成简单的歌曲。
+              description_teacher: 这节课中，学生们会使用蜂鸣器来达到它的全部能力，包括制造声音，音符和歌曲。学生们从回顾蜂鸣器的频率和持续时间参数开始，然后是音符的概念。音符允许学生们将频率限制在西洋音乐需要的范围内，并提供了一个抽象层来帮助他们理解什么声音听起来更好。一旦学生们能在蜂鸣器上播放音符了，他们就能用数组来播放一组音符，形成简单的歌曲。
             Arrays and For Loops:
               name: 数组和计数循环
-              description_student: Combining _lists_ and _for loops_ allows you to write code that impacts every element of a list, regardless of how long it is. The class uses this structure to write programs that process all of the elements in lists, include the list of color LEDs.
-              description_teacher: Using a _for loop_ to iterate over all of the elements in an array is a really useful construct in most programming languages. In this lesson, students learn the basics of how a _for loop_ can be used to repeat code, and then combine it with what they've already learned about arrays to write programs that process all elements in an array. Students use for loops to go through each element in a list one at a time without having to write code for each element. Towards the end of the lesson students will apply this with the `colorLed` list on the board to create an app that changes all of the LEDs each time a button is clicked.
+              description_student: 将列表和计数循环混合起来，可以让你编写无论多长，都能操作列表中每个元素的程序。课堂使用此结构来编写程序， 它可以处理在列表中的所有元素，包括彩色LED灯的列表。
+              description_teacher: 使用_计数循环_来枚举数组中的所有元素，这在大部分编程语言中都非常有用。在这一课中，学生们会学习如何用_计数循环_来重复代码的基础，然后将它与已学习的数组结合起来，编程处理数组中的所有元素。学生们使用计数循环来遍历列表中的每个元素，而不必为每个元素写一遍代码。到了课程结束时，学生们会将这个应用到主板的`colorLed`（彩色LED灯）数组上，来创建应用，能够在每次按钮被点击时改变所有LED灯的颜色。
             Accelerometer:
               name: 加速传感器
-              description_student: In this lesson, students will explore the accelerometer and its capabilities. They’ll become familiar with its events and properties, as well as create multiple programs utilizing the accelerometer similar to those they’ve likely come across in real world applications.
-              description_teacher: In this lesson, students will explore the accelerometer and its capabilities. They’ll become familiar with its events and properties, as well as create multiple programs utilizing the accelerometer similar to those they’ve likely come across in real world applications.
+              description_student: 这节课中，学生们需要探索加速度计和它的能力。会熟悉它的事件和属性，也会创造多个程序来使用jia'su'du加速度计来模拟真实世界的应用。
+              description_teacher: 这节课中，学生们需要探索加速度计和它的能力。会熟悉它的事件和属性，也会创造多个程序来使用jia'su'du加速度计来模拟真实世界的应用。
             Functions with Parameters:
               name: 有参数的函数
-              description_student: The lesson starts with a quick review of parameters, in the context of App Lab blocks that they students have seen recently.  Students then look at examples of parameters within user-created functions in App Lab and create and call functions with parameters for themselves, using them to control multiple elements on a screen.  Afterwards, students use for loops to iterate over an array, passing each element into a function.  Last, students use what they have learned to create a star catching game.
-              description_teacher: The lesson starts with a quick review of parameters, in the context of App Lab blocks that they students have seen recently.  Students then look at examples of parameters within user-created functions in App Lab and create and call functions with parameters for themselves, using them to control multiple elements on a screen.  Afterwards, students use for loops to iterate over an array, passing each element into a function.  Last, students use what they have learned to create a star catching game.
+              description_student: 这堂课在最近用到的应用实验室模块的环境中，从快速回顾参数开始。学生们然后会看看用户创建函数的例子，并创建和调用自己的有参数的函数，用它们来控制屏幕上的多个元素。然后，学生们用循环来枚举一个数组，将每个元素传递到函数中。最后，学生们用学过的内容来创建一个捉星星的游戏。
+              description_teacher: 这堂课在最近用到的应用实验室模块的环境中，从快速回顾参数开始。学生们然后会看看用户创建函数的例子，并创建和调用自己的有参数的函数，用它们来控制屏幕上的多个元素。然后，学生们用循环来枚举一个数组，将每个元素传递到函数中。最后，学生们用学过的内容来创建一个捉星星的游戏。
             Circuits and Physical Prototypes:
               name: 电路和物理原型
-              description_student: Wire simple circuits to create a physical prototype using cheap and easily found materials.
-              description_teacher: In preparation for this chapter's final project, students will learn how to develop a prototype of a physical object that includes a Circuit Playground. Using a modelled project planning guide, students will learn how to wire a couple of simple circuits and to build prototypes that can communicate the intended design of a product, using cheap and easily found materials such as cardboard and duct tape.
+              description_student: 用便宜和容易找到的材料来创造一个简单电路的物理原型。
+              description_teacher: 在准备本章的最终项目时，学生们会学习到如何用电路游戏板开发一个物理对象的原型。用一个模型化的项目规划指南，学生们会使用便宜并容易找到的材料，如纸板、胶带，组合一些简单的电路来做出达到设计意图的产品。
             Innovations in Computing:
               name: 计算中的创新
             Arrays and Color LEDs:
               name: 数组和彩色LED灯
             Innovations in Computing_:
               name: 计算中的创新
-              description_student: Explore a wide variety of new and innovative computing platforms while expanding your understanding of what a computer can be.
-              description_teacher: To kick off the final unit of this course, students will do some research into interesting innovations in computing. This lesson will expose students to wider variety of computing form factors (what a computer looks like) and fields that are impacted by computing. Later in this unit students will look back on the devices they encountered in this lesson as they develop their own physical computing devices.
+              description_student: 在扩展你对计算机的认知的同时，探索各种新的，有创新的计算平台。
+              description_teacher: 为了开始这门课程的最后一个单元, 学生们将对计算中有趣的创新做一些研究。本课将向学生展示各种计算形式的因素 (计算机的外观是什么样的) 和受计算影响的领域。在本单元的后面课程中, 学生在开发自己的物理计算设备时, 他们会回顾在本课中学习到的设备。
             Designing Screens with Code_:
               name: 使用代码设计屏幕
-              description_student: By reading and changing the content on the screen of an app, the class starts to build apps that only need a single screen. Even with just one screen, these techniques allow for lots of user interaction and functionality.
-              description_teacher: In Unit 4 students learned a very simple approach to app development in App Lab that required a separate screen for most interactions. To expand the kinds of apps that students can make, and to encourage them to think in new ways about how users interact with apps, we introduce the `setProperty()` block. This command can be used to set the content and properties of various UI elements, allowing students to write programs that update information on a single screen, instead of manually creating duplicate screens. In this lesson students build up simple apps that only require a single screen, the content of which is changed using `setProperty()`.
+              description_student: 通过阅读和更改应用程序屏幕上的内容, 该类开始构建只需要单个屏幕的应用程序。即使只有一个屏幕, 这些技术也允许大量的用户交互和功能。
+              description_teacher: 在单元4中，学生们学习了一个非常简单的方法在应用实验室中进行应用开发，它需要一个独立的屏幕来进行大多数互动。为了扩展这类学生们能制作的应用，并且鼓励它们能够用新的方法思考用户与交互，我们引入了`setProperty()`（设置属性）模块。这个命令能够用来设置各种界面元素的内容和属性，允许学生们写程序来在当前屏幕上更新信息，而不是手工创建重复的屏幕。在这堂课中，学生们会创建只需要一个屏幕的简单应用，它的内容会被`setProperty()`（设置属性）改变。
             The Circuit Playground_:
               name: 电路游乐场
-              description_student: Get to know the Circuit Playground, the circuit board that will be used throughout the rest of this unit. Using App Lab, develop programs that use the Circuit Playground for output.
-              description_teacher: In this lesson students get their first opportunity to write programs that use the Circuit Playground. After first inspecting the board visually and hypothesizing possibly functionalities, students move online where they will learn to write applications that control an LED. By combining App Lab screens with the Circuit Playgrounds, students can gradually start to integrate elements of the board as an ouput device while relying on App Lab for user input.
+              description_student: 我们要来了解将贯穿剩余单元的赛道操场这个电路主板。我们要使用应用实验室来，开发使用电路主板输出的程序。
+              description_teacher: 在这一课程中，学生们第一次有机会使用电路游戏板来编写程序。 在初次虚拟查看主板和假想的可能功能后，学生们将在线编写应用程序，它可以使用蜂鸣器制造噪音并让LED 灯闪烁。 通过结合应用实验室的屏幕和电路游戏板， 学生们可以逐步开始将主板的元素集成为输出设备，同时又依靠APP 实验室来进行用户输入。
             Input Unplugged_:
               name: 线下输入
-              description_student: Experience two different ways that an app can take input from a user, while learning more about the event-driven programming model used in App Lab.
-              description_teacher: In preparation for delving deeper into programming with App Lab, students will explore how a handful of different programs written in both Game Lab and App Lab handle taking input from the user. After comparing and contrasting the approaches they saw in the example apps, students group up to act out the two different models for input (conditionals in an infinite loop and asynchronous events) to gain a better understanding of how they work.
+              description_student: 体验应用程序从用户接受输入的两种不同的方法。 同时了解更多在应用程序实验室里使用到的事件驱动的编程模型。
+              description_teacher: 为了进一步钻研应用程序实验室的编程, 学生们将探索如何在游戏实验室和应用程序实验室中编写一小部分不同的程序, 以从用户那里输入信息。在比较和对比他们在示例应用程序中看到的方法之后, 学生分组来实践输入 (无限和异步事件中的条件) 的两个不同的模型, 以便更好地了解它们的工作方式。
             Board Events_:
               name: 主板事件
-              description_student: Using the hardware buttons and switch, the class develops programs that use the Circuit Playground as an input.
-              description_teacher: This lesson transitions students from consider the Circuit Playground as strictly an output device towards using it as a tool for both input and output. Starting with the hardware buttons and switch,sing the hardware buttons and switch, students learn to use `onBoardEvent()`, analogously to `onEvent()`, in order to take input from their Circuit Playgrounds.
+              description_student: 使用硬件按钮和开关，班级开发使用电路游戏板作为输入的程序。
+              description_teacher: 本课程将让学生转变他们的认知，电路游戏板不是仅仅只是输出设备，它还可以同时被用为输入和输出的工具。 从按钮和开关开始，到硬件开关和按钮的熟悉，学生们将学会运用`onBoardEvent()`（当主板上发生事件时）类似于`onEvent()`（当事件发生时），来从他们的电路游戏板得到输入。
             Getting Properties_:
               name: 取值器属性
-              description_student: This lesson introduces students to the getProperty block, which allows them to access the properties of different elements with code.  Students first practice using the block to determine what the user has input in various user interface elements. Students later use getProperty and setProperty together with the counter pattern to make elements move across the screen.  A new screen element, the slider, and a new event trigger, onChange, are also introduced.
-              description_teacher: This lesson introduces students to the `getProperty` block, which allows them to access the properties of different elements with code.  Students first practice using the block to determine what the user has input in various user interface elements. Students later use `getProperty` and `setProperty` together with the counter pattern to make elements move across the screen.  A new screen element, the slider, and a new event trigger, `onChange`, are also introduced.
+              description_student: 这堂课向学生们介绍了getProperty（获取属性）模块，它能让学生们用代码存取不同元素的属性。学生们会首先练习用模块来检测是否用户在不同的界面元素中进行了输入。然后同时使用 getProperty（获取属性）和setProperty（设置属性）模块的counter来让元素在屏幕上移动。同时，也会引入一个新元素-滑动条，以及一个新的事件-“onChange”（当改变时）。
+              description_teacher: 这堂课向学生们介绍了`getProperty`（获取属性）模块，它能让学生们用代码存取不同元素的属性。学生们会首先练习用模块来检测是否用户在不同的界面元素中进行了输入。然后同时使用`getProperty`（获取属性）和`setProperty()`（设置属性）模块的counter来让元素在屏幕上移动。同时，也会引入一个新元素-滑动条，以及一个新的事件`onChange`（当改变时）。
             Analog Input_:
               name: 模拟输入
-              description_student: Explore the analog inputs on the Circuit Playground, writing programs that respond to the environment through sensors.
-              description_teacher: In this lesson, students explore how the three analog sensors (sound, light, and temperature) can be used to write programs that respond to changes in the environment. The use of these sensors marks a transition in terms of how users interact with a program. By using sensors as an input, the user of an app doesn't have to directly interact with it at all, or may interact without actually realizing they are doing so.
+              description_student: 探索电路游戏板上的模拟输入, 编写通过感应器响应环境的程序。
+              description_teacher: 在此课程中，学生们将探索如何使用三个模拟的传感器（声音，光和温度）来编写相应环境变化的程序。 使用传感器标示着用户如何和程序互动的过渡。使用传感器作为输入，应用程序的用户不需要直接和它互动，或者可以很自然的互动。
             The Program Design Process_:
               name: 程序设计过程
-              description_student: This lesson introduces students to the process they will use to design programs of their own throughout this unit. This process is centered around a project guide which asks students to sketch out their screens, identify elements of the Circuit Playground to be used, define variables, and describe events before they begin programming. This process is similar to the Game Design Process that we used in Unit 3. In this lesson students begin by playing a tug o' war style game where the code is hidden. They discuss what they think the board components, events, and variables would need to be to make the program. They are then given a completed project guide which shows one way to implement the project. Students are then walked through this process through a series of levels. At the end of the lesson students have an opportunity to make improvements to the program to make it their own.
-              description_teacher: This lesson introduces students to the process they will use to design programs of their own throughout this unit. This process is centered around a project guide which asks students to sketch out their screens, identify elements of the Circuit Playground to be used, define variables, and describe events before they begin programming. This process is similar to the Game Design Process that we used in Unit 3. In this lesson students begin by playing a tug o' war style game where the code is hidden. They discuss what they think the board components, events, and variables would need to be to make the program. They are then given a completed project guide which shows one way to implement the project. Students are then walked through this process through a series of levels. At the end of the lesson students have an opportunity to make improvements to the program to make it their own.
+              description_student: 这堂课向学生们介绍了设计他们自己的程序的流程。这个流程围绕着一个项目指南，让他们在开始前，先描绘出屏幕的构架，找到电路游戏板需要使用的元素。定义变量，描述事件。这个流程和我们在单元3中的游戏设计流程很像。在这节课中，学生们从玩一个拔河游戏开始，它的代码是隐藏起来的。他们会讨论主板组件是什么，需要使用的事件和变量是什么。然后会给他们完整的项目指南来实现这个项目。学生们然后会通过一系列的关卡来过一下这个流程。在课程结束时，他们有机会改进这个程序，做出自己的版本。
+              description_teacher: 这堂课向学生们介绍了设计他们自己的程序的流程。这个流程围绕着一个项目指南，让他们在开始前，先描绘出屏幕的构架，找到电路游戏板需要使用的元素。定义变量，描述事件。这个流程和我们在单元3中的游戏设计流程很像。在这节课中，学生们从玩一个拔河游戏开始，它的代码是隐藏起来的。他们会讨论主板组件是什么，需要使用的事件和变量是什么。然后会给他们完整的项目指南来实现这个项目。学生们然后会通过一系列的关卡来过一下这个流程。在课程结束时，他们有机会改进这个程序，做出自己的版本。
             Arrays and Color LEDs_:
               name: 数组和彩色LED灯
             'Project: Make a Game_':
               name: '项目: 建立游戏'
             Making Music_:
               name: 制作音乐
-              description_student: In this lesson students will use the buzzer to its full extent by producing sounds, notes, and songs with the buzzer. Students start with a short review of the buzzer's frequency and duration parameters, then move on to the concept of notes.  Notes allow students to constrain themselves to frequencies that are used in Western music and provide a layer of abstraction that helps them to understand which frequencies might sound good together.  Onces students are able to play notes on the buzzer, they use arrays to hold and play sequences of notes, forming simple songs.
-              description_teacher: In this lesson students will use the buzzer to its full extent by producing sounds, notes, and songs with the buzzer. Students start with a short review of the buzzer's frequency and duration parameters, then move on to the concept of notes.  Notes allow students to constrain themselves to frequencies that are used in Western music and provide a layer of abstraction that helps them to understand which frequencies might sound good together.  Onces students are able to play notes on the buzzer, they use arrays to hold and play sequences of notes, forming simple songs.
+              description_student: 这节课中，学生们会使用蜂鸣器来达到它的全部能力，包括制造声音，音符和歌曲。学生们从回顾蜂鸣器的频率和持续时间参数开始，然后是音符的概念。音符允许学生们将频率限制在西洋音乐需要的范围内，并提供了一个抽象层来帮助他们理解什么声音听起来更好。一旦学生们能在蜂鸣器上播放音符了，他们就能用数组来播放一组音符，形成简单的歌曲。
+              description_teacher: 这节课中，学生们会使用蜂鸣器来达到它的全部能力，包括制造声音，音符和歌曲。学生们从回顾蜂鸣器的频率和持续时间参数开始，然后是音符的概念。音符允许学生们将频率限制在西洋音乐需要的范围内，并提供了一个抽象层来帮助他们理解什么声音听起来更好。一旦学生们能在蜂鸣器上播放音符了，他们就能用数组来播放一组音符，形成简单的歌曲。
             Arrays and For Loops_:
               name: 数组和计数循环
-              description_student: Combining _lists_ and _for loops_ allows you to write code that impacts every element of a list, regardless of how long it is. The class uses this structure to write programs that process all of the elements in lists, include the list of color LEDs.
-              description_teacher: Using a _for loop_ to iterate over all of the elements in an array is a really useful construct in most programming languages. In this lesson, students learn the basics of how a _for loop_ can be used to repeat code, and then combine it with what they've already learned about arrays to write programs that process all elements in an array. Students use for loops to go through each element in a list one at a time without having to write code for each element. Towards the end of the lesson students will apply this with the `colorLed` list on the board to create an app that changes all of the LEDs each time a button is clicked.
+              description_student: 将列表和计数循环混合起来，可以让你编写无论多长，都能操作列表中每个元素的程序。课堂使用此结构来编写程序， 它可以处理在列表中的所有元素，包括彩色LED灯的列表。
+              description_teacher: 使用_计数循环_来枚举数组中的所有元素，这在大部分编程语言中都非常有用。在这一课中，学生们会学习如何用_计数循环_来重复代码的基础，然后将它与已学习的数组结合起来，编程处理数组中的所有元素。学生们使用计数循环来遍历列表中的每个元素，而不必为每个元素写一遍代码。到了课程结束时，学生们会将这个应用到主板的`colorLed`（彩色LED灯）数组上，来创建应用，能够在每次按钮被点击时改变所有LED灯的颜色。
             Accelerometer_:
               name: 加速传感器
-              description_student: In this lesson, students will explore the accelerometer and its capabilities. They’ll become familiar with its events and properties, as well as create multiple programs utilizing the accelerometer similar to those they’ve likely come across in real world applications.
-              description_teacher: In this lesson, students will explore the accelerometer and its capabilities. They’ll become familiar with its events and properties, as well as create multiple programs utilizing the accelerometer similar to those they’ve likely come across in real world applications.
+              description_student: 这节课中，学生们需要探索加速度计和它的能力。会熟悉它的事件和属性，也会创造多个程序来使用jia'su'du加速度计来模拟真实世界的应用。
+              description_teacher: 这节课中，学生们需要探索加速度计和它的能力。会熟悉它的事件和属性，也会创造多个程序来使用jia'su'du加速度计来模拟真实世界的应用。
             Functions with Parameters_:
               name: 有参数的函数
-              description_student: The lesson starts with a quick review of parameters, in the context of App Lab blocks that they students have seen recently.  Students then look at examples of parameters within user-created functions in App Lab and create and call functions with parameters for themselves, using them to control multiple elements on a screen.  Afterwards, students use for loops to iterate over an array, passing each element into a function.  Last, students use what they have learned to create a star catching game.
-              description_teacher: The lesson starts with a quick review of parameters, in the context of App Lab blocks that they students have seen recently.  Students then look at examples of parameters within user-created functions in App Lab and create and call functions with parameters for themselves, using them to control multiple elements on a screen.  Afterwards, students use for loops to iterate over an array, passing each element into a function.  Last, students use what they have learned to create a star catching game.
+              description_student: 这堂课在最近用到的应用实验室模块的环境中，从快速回顾参数开始。学生们然后会看看用户创建函数的例子，并创建和调用自己的有参数的函数，用它们来控制屏幕上的多个元素。然后，学生们用循环来枚举一个数组，将每个元素传递到函数中。最后，学生们用学过的内容来创建一个捉星星的游戏。
+              description_teacher: 这堂课在最近用到的应用实验室模块的环境中，从快速回顾参数开始。学生们然后会看看用户创建函数的例子，并创建和调用自己的有参数的函数，用它们来控制屏幕上的多个元素。然后，学生们用循环来枚举一个数组，将每个元素传递到函数中。最后，学生们用学过的内容来创建一个捉星星的游戏。
             Circuits and Physical Prototypes_:
               name: 电路和物理原型
-              description_student: Wire simple circuits to create a physical prototype using cheap and easily found materials.
-              description_teacher: In preparation for this chapter's final project, students will learn how to develop a prototype of a physical object that includes a Circuit Playground. Using a modelled project planning guide, students will learn how to wire a couple of simple circuits and to build prototypes that can communicate the intended design of a product, using cheap and easily found materials such as cardboard and duct tape.
+              description_student: 用便宜和容易找到的材料来创造一个简单电路的物理原型。
+              description_teacher: 在准备本章的最终项目时，学生们会学习到如何用电路游戏板开发一个物理对象的原型。用一个模型化的项目规划指南，学生们会使用便宜并容易找到的材料，如纸板、胶带，组合一些简单的电路来做出达到设计意图的产品。
             'Project: Prototype an Innovation_':
               name: '项目：创新原型'
-              description_student: Develop innovative computing devices of your own design, using everything you've learned throughout this course.
-              description_teacher: 'In this final project for the course, students team to develop and test a prototype for an innovative computing device based on the Circuit Playground. Using the inputs and outputs available on the board, groups will create programs that allow for interesting and unique user interactions. '
+              description_student: 开发您自己设计的创新计算设备, 使用您在本课程中学到的所有知识。
+              description_teacher: '在这个课程的最后一个项目中, 学生组队来开发并测试一个基于电路游戏板的创新计算设备的原型。通过使用主板上提供的输入和输出, 学生组将创建允许有趣和独特的用户交互的程序。 '
             'Project: Make a Game__':
               name: '项目: 建立游戏'
-              description_student: Students take what they've learned through chapter one, and develop an app of their own design that uses the board to output information.
-              description_teacher: Students take what they've learned through chapter one, and develop an app of their own design that uses the board to output information.
+              description_student: 学生们通过他们在第一章中学习到的知识，运用开发他们自己设计的应用程序，它可以使用主板输出信息。
+              description_teacher: 学生们通过他们在第一章中学习到的知识，运用开发他们自己设计的应用程序，它可以使用主板输出信息。
             Arrays and Color LEDs__:
               name: 数组和彩色LED灯
-              description_student: Learn how lists can be used to store multiple values in a single variable name.
-              description_teacher: An array is an ordered collection of items, usually of the same type. In this lesson, students learn ways to access either a specific or random value from a list using its index.  They then learn how to access the colorLEDs array that controls the behavior of the color LEDs on the Circuit Playground.  Students will control the color and intensity of each LED, then use what they have learned to program light patterns to create a light show on their Circuit Playground.
+              description_student: 学习如果使用列表来存储单一变量名称的多个数值。
+              description_teacher: 数组是一个有序的项目的集合，通常是相同类型的项目。在这节课中，学生们学习如何从列表中，用索引来存储某一个或者随机的值。ta'men他们然后会学习到如何存取colorLEDs来控制电路游戏板上的彩色LED等。学生们需要控制每个LED灯的颜色和强度，然后用学到的程序来画一个光线图案，从而在电路游戏板上展示一场灯光秀。
             CSD Post-Course Survey:
-              name: CSD Post-Course Survey
+              name: 计算机科学发现课后问卷
         csd3-draft:
           title: 'CSD单元 3 - 编程： 动画和游戏'
           description_audience: ''
@@ -5070,8 +5071,8 @@ zh-CN:
               description_teacher: 在本课程中， 学生们学习二进制体系。通过一系列的点，利用一组牌来代表变数值在二进制数字体系里的位置。学生们通过翻牌的正/反面来“打开”或"关闭“比特（二进制信息单位），然后观察这些不同模式里得出的数字。最后，学生们把这模式扩展为一个常用的4-比特体系。
             8-bit Numbers:
               name: 8-比特数字
-              description_student: Students review the concept of binary numbers, and discuss that they need to know the bit-length of each number in order to decode a series of bits.  They then made a flippy-do, a paper manipulative that will help them to encode and decode 8-bit numbers (0-255).  After practicing with the flippy-do, students discuss how they could extend that standardization to the other types of data.
-              description_teacher: Students review the concept of binary numbers, and discuss that they need to know the bit-length of each number in order to decode a series of bits.  They then made a flippy-do, a paper manipulative that will help them to encode and decode 8-bit numbers (0-255).  After practicing with the flippy-do, students discuss how they could extend that standardization to the other types of data.
+              description_student: 学生们回顾二进制数字的概念，讨论他们必需知道每个数字的比特-长度以便解码一系列的比特（二进制信息单位）。然后，他们要制作一个flippy-do，一种可以帮助学生们编码和解码8-比特数字（0-255）的操作纸牌。在进行操作纸牌练习后，学生们要讨论他们要如何把这标准扩展到其他类型的数据上。
+              description_teacher: 学生们回顾二进制数字的概念，讨论他们必需知道每个数字的比特-长度以便解码一系列的比特（二进制信息单位）。然后，他们要制作一个flippy-do，一种可以帮助学生们编码和解码8-比特数字（0-255）的操作纸牌。在进行操作纸牌练习后，学生们要讨论他们要如何把这标准扩展到其他类型的数据上。
             Encryption:
               name: 加密
               description_student: 学生们将讨论他们各自想要的不同级别的数据安全性。一旦全班对隐私权的重要性有了一定的共识后，他们将通过对相互伙伴间的信息进行加密和解密来学习加密信息的过程。最后学生们要讨论实体和数字安全的重要性。
@@ -5085,7 +5086,7 @@ zh-CN:
               description_student: 学生们将讨论他们各自想要的不同级别的数据安全性。一旦全班对隐私权的重要性有了一定的共识后，他们将通过对相互伙伴间的信息进行加密和解密来学习加密信息的过程。最后学生们要讨论实体和数字安全的重要性。
               description_teacher: 学生们将讨论他们各自想要的不同级别的数据安全性。一旦全班对隐私权的重要性有了一定的共识后，他们将通过对相互伙伴间的信息进行加密和解密来学习加密信息的过程。最后学生们要讨论实体和数字安全的重要性。
             CSD Post-Course Survey:
-              name: CSD Post-Course Survey
+              name: 计算机科学发现课后问卷
         csd3-old:
           title: CSD单元3（已弃用）
           description_audience: ''
@@ -5475,6 +5476,7 @@ zh-CN:
               description_student: ''
               description_teacher: 在这个在线活动中，学生们有机会学习在剧本实验室中如何使用事件，并应用他们学过的所有编程技能来创建一个动画游戏。是时候在剧本实验室里表达创意，编个故事了！
           title: 课程 A
+          assignment_family_title: 课程 A
           description_audience: '年龄：4-7'
           description_short: 为学前学生准备的计算机科学介绍
           description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
@@ -5509,6 +5511,7 @@ zh-CN:
             Programming with Rey and BB-8:
               name: 与雷伊，BB-8一起编程
           title: 课程 B
+          assignment_family_title: 课程 B
           description_audience: '年龄： 5-8'
           description_short: 为学前学生准备的计算机科学介绍。（类似于课程A，但是对年长的学生有更多变化。)
           description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
@@ -5547,6 +5550,7 @@ zh-CN:
             Loops with Rey and BB-8:
               name: 与雷伊和BB-8一起循环
           title: 课程 C
+          assignment_family_title: 课程 C
           description_audience: '年龄：6-10'
           description_short: 学习计算机科学的基础知识, 创造你自己的艺术, 故事和游戏。
           description: 用循环、事件和条件来创建程序。将你的名字翻译成二进制，调查不同的解决问题的技术，并学习如何回应网上欺凌。在课程的最后，创建你自己的，能够共享的游戏或故事。
@@ -5624,6 +5628,7 @@ zh-CN:
               description_student: 你曾经在编码时遇到困难吗？这堂课中，你会学习调试的秘密。调试是找到并修复你的代码问题的过程。
               description_teacher: 在这堂在线活动中，学生们会在这个“收集器”环境中练习调试。学生们能练习阅读并编辑代码来修复关卡中的简单算法、循环和嵌套循环。
           title: 课程 D
+          assignment_family_title: 课程 D
           description_audience: '年龄：7-11'
           description_short: 快速浏览课程C中的概念，然后进一步学习算法、嵌套循环、条件等等。
           description: 学习新的代码概念，包括算法、嵌套循环、当循环、条件和事件。在创建你的能够共享的游戏和故事前，了解数字公民的介绍。
@@ -5753,6 +5758,7 @@ zh-CN:
             Functions in Harvester:
               name: 收割者中的函数
           title: 课程 E
+          assignment_family_title: 课程 E
           description_audience: '年龄：8-12'
           description_short: 在课程C&D中快速覆盖概念，然后继续使用函数。
           description: 开始用算法，循环，条件和事件来编程，然后你会学习函数。在本课程的第二部分，设计并创建一个好项目，并共享给你的亲友们。
@@ -5861,6 +5867,7 @@ zh-CN:
             Nested Loops with Frozen:
               name: 冰雪奇缘和嵌套循环
           title: 课程 F
+          assignment_family_title: 课程 F
           description_audience: '年龄：9-13'
           description_short: 学习计算机科学基础中的所有概念，并创建你自己的艺术、故事或游戏。
           description: 学习用不同种类的循环、事件、函数和条件。研究不同的解决问题的计数，并讨论计算和互联网对社会的影响。在课程的第二部分中，设计并创建一个实际项目，并共享给你的亲友。
@@ -6191,6 +6198,7 @@ zh-CN:
             Until Loops in Maze:
               name: 迷宫里的直到循环
           title: 快速课程
+          assignment_family_title: 快速课程
           description_audience: '年龄：9-18'
           description_short: '计算机科学导论：组合了我们为高年级学生准备的最佳的小学课程。'
           description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
@@ -6225,6 +6233,7 @@ zh-CN:
             Spelling Bee:
               name: 拼字比赛
           title: 学龄前读者的快速课程
+          assignment_family_title: 学龄前读者的快速课程
           description_audience: '年龄： 4-8'
           description_short: '学龄前读者的计算机科学介绍：结合了我们最好的幼儿园和一年级的课程。'
           description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
@@ -6937,13 +6946,13 @@ zh-CN:
             CSD post survey 2018 staging:
               name: 计算机科学发现2018 后期调查阶段
             CSD pre survey 2018 staging:
-              name: CSD pre survey 2018 staging
+              name: 计算机科学发现预调查阶段2018
             CSP pre survey 2018 staging:
-              name: CSP pre survey 2018 staging
+              name: 计算机科学原理预调查阶段2018
             CSP mid survey 2018 stagin:
-              name: CSP mid survey 2018 stagin
+              name: 计算机科学原理2018 期中调查阶段
             CSP mid survey 2018 staging:
-              name: CSP mid survey 2018 staging
+              name: 计算机科学原理期中调查阶段2018
           title: 所有调查
           description_audience: ''
           description_short: 极端和测试code.org调查的地方
@@ -7001,7 +7010,7 @@ zh-CN:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
               name: 技术设置 - 您的 AP 数字组合和其他工具
             'Setup: Digital Portfolio and Other Tools':
-              name: 'Setup: Digital Portfolio and Other Tools'
+              name: '设置：数字文件和其它工具'
             Post-Course Survey:
               name: 课后问卷
           title: 探索 - AP表演任务准备
@@ -7308,7 +7317,7 @@ zh-CN:
               name: 项目 - 设计一个游戏
             CS Discoveries End of Semester Survey:
               name: 计算机科学发现期末调查
-          title: CSD Unit 3 - Animations and Games
+          title: CSD单元 3 - 动画和游戏
           description_audience: ''
           description_short: " 在游戏实验室中学习编写动画，交互和比赛等的程序。"
           description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
@@ -7331,7 +7340,7 @@ zh-CN:
           description_short: ''
           description: ''
         csd3-2018:
-          title: CSD Unit 3 - Animations and Games
+          title: CSD单元 3 - 动画和游戏
           description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
           description_short: " 在游戏实验室中学习编写动画，交互和比赛等的程序。"
           description_audience: ''
@@ -7496,21 +7505,22 @@ zh-CN:
               description_student: 在该单元的最后几天, 该课堂完成了他们的个人网站, 与同行们一起工作反馈, 评论专栏, 并在网站上进行收尾。为了完成这个单位, 每个人都分享他们的项目以及他们是如何开发的。
               description_teacher: "学生们花了大量的时间在整个单位的个人网站上工作。在最后的几天里, 学生们最终完成了他们的网站。 他们与同事们一起工作以获得反馈, 在网站上完成润色, 回顾专栏并反思自己的过程。为了结束该单位, 他们将分享他们的项目, 并概述他们为实现最终设计所采取的过程。\\r\n"
         coursea-2018:
-          title: 课程 A
+          title: Course A (2018)
+          assignment_family_title: 课程 A
           description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
           description_short: 为学前学生准备的计算机科学介绍
           description_audience: '年龄：4-7'
           stages:
             'Debugging: Unspotted Bugs':
-              name: '调试: 没有错误'
+              name: 没有斑点的Bug
               description_student: ''
               description_teacher: '这一个会引导学生完成调试的步骤。学生会学习到这个咒语：“发生什么了？应该发生什么？这告诉了你什么？”'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: '坚持与挫折 就像史蒂夫和天使。'
+              name: 杰拉德和大项目
               description_student: ''
               description_teacher: "当学生在回答问题或者做一个项目遇到困难时，很容易感到沮丧并放弃。这堂课会告诉学生一个思想，沮丧是学习中很重要的部分。在这里，沮丧是创造性过程中的一步，而不只是失败的信号。\\r\n\\r\n这堂课可以在一次或两次课堂阶段完成。如果你有更多时间，尽管创建或修订这个滚珠活动阶段。"
             'Real-life Algorithms: Plant a Seed':
-              name: '真实算法： 播种一颗种子'
+              name: Plant a Seed
               description_student: ''
               description_teacher: "在这堂课中，学生们将会将算法的概念带到每一天，与种植真实种子的现实活动联系起来。目标是开始构建将现实世界的状况转换为在线场景，以及反过来转换的能力。\\r\n"
             Learn to Drag and Drop:
@@ -7518,7 +7528,7 @@ zh-CN:
               description_student: ''
               description_teacher: 这一课会给学生们一个想法，让他们在到计算机实验室的时候有些什么期望。从简单讨论来给他们讲一些计算机实验室的举止，然后会让他们进一步用计算机来完成在线的难题。
             'Programming: Happy Maps':
-              name: '编程: 快乐地图'
+              name: 快乐地图
               description_student: ''
               description_teacher: 如果学生理解了计划一个序列和将序列编码成合适的语言的不同，从算法到编程的过渡可能会很简短。这个活动会帮助学生获得读写简短代码的体验。
             Programming in Maze:
@@ -7542,7 +7552,7 @@ zh-CN:
               description_student: ''
               description_teacher: 回到循环中，学生们学着通过循环简单的序列指令来画图像。在前一个离线课程中，循环被用来遍历迷宫并收集宝藏。在这里，循环会用做创建图案。在这个阶段的最后，学生们有机会用循环创建他们自己的图像。
             'Events: The Big Event':
-              name: '事件: 大事件'
+              name: 大事件
               description_student: ''
               description_teacher: 事件是一种很好的方法，来为预先写好的算法增加变化。有时候，你希望你的程序能够精确的响应用户的想法。这就是事件的用途。
             Events in Play Lab:
@@ -7558,15 +7568,16 @@ zh-CN:
             Sequencing in Maze:
               name: 迷宫中的序列
             'Persistence & Frustration: Stevie and the Big Project':
-              name: '坚持与挫折 就像史蒂夫和大项目。'
+              name: 坚持与挫折 就像史蒂夫和大项目。
         express-2018:
           title: 快速课程
+          assignment_family_title: 快速课程
           description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
           description_short: '计算机科学导论：组合了我们为高年级学生准备的最佳的小学课程。'
           description_audience: '年龄：9-18'
           stages:
             'Algorithms: Graph Paper Programming':
-              name: '算法: 图纸编程'
+              name: 图纸上编程
               description_student: ''
               description_teacher: ''
             Introduction:
@@ -7610,7 +7621,7 @@ zh-CN:
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: '事件: 大事件'
+              name: 大事件
               description_student: ''
               description_teacher: ''
             Events in Star Wars:
@@ -7718,13 +7729,13 @@ zh-CN:
             Programming in Artist:
               name: 艺术家里的编程
             'Loops: Getting Loopy':
-              name: '循环: 变得糊涂'
+              name: 越来越糊涂
             Loops with Rey and BB-8:
               name: 与雷伊和BB-8一起循环
             Copyright and Creativity:
               name: 版权和创造力
             'Concept Practice with Minecraft ':
-              name: '用《我的世界》练习概念 '
+              name: 用《我的世界》练习概念 
             Nested Loops in Bee:
               name: 蜜蜂里的嵌套循环
             Nested Loops in Frozen:
@@ -7734,7 +7745,7 @@ zh-CN:
             Conditionals & Loops in Harvester:
               name: 收割者里的条件和循环
             'Functions: Songwriting':
-              name: '功能: 作曲'
+              name: 写歌
             Functions in Minecraft:
               name: '《我的世界》中的函数'
             Functions in Harvester:
@@ -7768,7 +7779,7 @@ zh-CN:
             Binary Bracelets:
               name: 二进制的手镯
             'Unplugged: Binary':
-              name: '离线：二进制'
+              name: 二进制图像
             Artist Binary:
               name: 小艺术家：二进制
             Internet:
@@ -7778,7 +7789,8 @@ zh-CN:
             Relay Programming:
               name: 编程接力
         courseb-2018:
-          title: 课程 B
+          title: Course B (2018)
+          assignment_family_title: 课程 B
           description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
           description_short: 为学前学生准备的计算机科学介绍。（类似于课程A，但是对年长的学生有更多变化。)
           description_audience: '年龄： 5-8'
@@ -7828,7 +7840,7 @@ zh-CN:
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: '事件: 大事件'
+              name: 大事件
               description_student: ''
               description_teacher: ''
             Events in Play Lab:
@@ -7847,12 +7859,13 @@ zh-CN:
               name: 版权和创造力
         coursed-2018:
           title: 新的课程D脚本
+          assignment_family_title: 课程 D
           description: ''
           description_short: ''
           description_audience: ''
           stages:
             'Algorithms: Graph Paper Programming':
-              name: '算法: 图纸编程'
+              name: 图纸上编程
               description_student: ''
               description_teacher: ''
             Introduction:
@@ -7876,7 +7889,7 @@ zh-CN:
               description_student: ''
               description_teacher: ''
             Nested Loops in Bee:
-              name: 蜜蜂里的嵌套循环
+              name: 迷宫里的嵌套循环
               description_student: ''
               description_teacher: ''
             Nested Loops in Artist:
@@ -7912,7 +7925,7 @@ zh-CN:
               description_student: ''
               description_teacher: ''
             'Unplugged: Binary':
-              name: '离线：二进制'
+              name: 二进制图像
               description_student: ''
               description_teacher: ''
             Artist Binary:
@@ -8036,7 +8049,8 @@ zh-CN:
           description_short: 计算机科学原理AP测试准备
           description: '这一页包含了所有出现在课程单元1-5中的多个选择的评估问题的副本。  学生们可能会想通过重新做这些小测试来练习多选测验。  '
         coursec-2018:
-          title: 课程 C
+          title: Course C (2018)
+          assignment_family_title: 课程 C
           description: 用循环、事件和条件来创建程序。将你的名字翻译成二进制，调查不同的解决问题的技术，并学习如何回应网上欺凌。在课程的最后，创建你自己的，能够共享的游戏或故事。
           description_short: 学习计算机科学的基础知识, 创造你自己的艺术, 故事和游戏。
           description_audience: '年龄：6-10'
@@ -8054,7 +8068,7 @@ zh-CN:
               description_student: ''
               description_teacher: ''
             'Real-life Algorithms: Paper Planes':
-              name: '生活中的算法: 纸飞机'
+              name: Paper Planes
               description_student: ''
               description_teacher: ''
             Programming in Collector:
@@ -8066,7 +8080,7 @@ zh-CN:
               description_student: ''
               description_teacher: ''
             'Loops: Getting Loopy':
-              name: '循环: 变得糊涂'
+              name: 越来越糊涂
               description_student: ''
               description_teacher: ''
             Loops with Rey and BB-8:
@@ -8082,7 +8096,7 @@ zh-CN:
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: '事件: 大事件'
+              name: 大事件
               description_student: ''
               description_teacher: ''
             Build a Flappy Game:
@@ -8206,13 +8220,14 @@ zh-CN:
             'Project: Prototype an Innovation':
               name: '项目：创新原型'
         coursee-2018:
-          title: 课程 E
+          title: Course E (2018)
+          assignment_family_title: 课程 E
           description: 开始用算法，循环，条件和事件来编程，然后你会学习函数。在本课程的第二部分，设计并创建一个好项目，并共享给你的亲友们。
           description_short: 在课程C&D中快速覆盖概念，然后继续使用函数。
           description_audience: '年龄：8-12'
           stages:
             'Programming: My Robotic Friends':
-              name: '编程: 我的机器人朋友'
+              name: 我的机器人朋友
               description_student: ''
               description_teacher: ''
             Sequence in Maze:
@@ -8240,7 +8255,7 @@ zh-CN:
               description_student: ''
               description_teacher: ''
             Nested Loops:
-              name: 循环嵌套
+              name: 迷宫里的嵌套循环
               description_student: ''
               description_teacher: ''
             Nested Loops with Frozen:
@@ -8256,7 +8271,7 @@ zh-CN:
               description_student: 这个快节奏的介绍能让你有机会练习大多数技能，你需要在这个课程中用它们来解决难题。
               description_teacher: 在这个过程中，学生们会从一个Code.org的在线工作区的介绍（或者回顾）开始。学生们会学习到界面的基本功能，比如`运行`，`重置`和`步进`按钮。拖拽、删除和连接模块也会在开始的视频中。在这些关卡中，学生们会在迷宫和艺术中练习序列和调试技巧。
             Conditionals:
-              name: 条件语句
+              name: Conditionals with the Farmer
               description_student: 在这一有趣并有挑战的系列中，你能够明白计算机在某些条件下会做什么。
               description_teacher: 这堂课向学生们介绍了`当`循环和`如果/否则`语句。_当循环_ 是只要条件为真就不停的重复命令。当循环被程序员们用来在不知道命令需要被重复多少次，但是直到什么时候需要被重复的时候使用。`如果/否则`语句经常被灵活的用在整个代码中，它能够帮助在某个条件成立是运行一些代码，不成立时运行另一些代码。
             Private and Personal Information:
@@ -8271,7 +8286,7 @@ zh-CN:
               description_student: 在这堂课程，创建自己的星球大战游戏来体会原力吧。
               description_teacher: 在这堂课中，学生们会练习使用事件来创建一个能在线共享的游戏。学生们会被引导学习事件，用R2-D2和其它星球大战的角色，来创造他们自己的游戏。
             'Functions: Songwriting':
-              name: '功能: 作曲'
+              name: 写歌
               description_student: 甚至摇滚巨星也需要编程技能。这堂课会通过歌词来教你函数。
               description_teacher: 函数是计算机科学世界中最宏伟的结构之一。 函数 (有时称为过程) 是迷你程序，你能在更大的程序里反复使用函数。本课将帮助学生直观地理解为什么用函数来合并功能是非常有用的。
             Functions in Artist:
@@ -8331,15 +8346,16 @@ zh-CN:
             Pet Giraffe with Sprite Lab:
               name: 精灵实验室中的宠物长颈鹿
             Copyright and Creativity:
-              name: 版权和创造力
+              name: 数字共享
         coursef-2018:
-          title: 课程 F
+          title: Course F (2018)
+          assignment_family_title: 课程 F
           description: 学习用不同种类的循环、事件、函数和条件。研究不同的解决问题的计数，并讨论计算和互联网对社会的影响。在课程的第二部分中，设计并创建一个实际项目，并共享给你的亲友。
           description_short: 学习计算机科学基础中的所有概念，并创建你自己的艺术、故事或游戏。
           description_audience: '年龄：9-13'
           stages:
             'Programming: My Robotic Friends':
-              name: '编程: 我的机器人朋友'
+              name: 我的机器人朋友
               description_student: ''
               description_teacher: ''
             Sequence in Maze:
@@ -8367,7 +8383,7 @@ zh-CN:
               description_student: ''
               description_teacher: ''
             Nested Loops in Bee/Zombie:
-              name: 蜜蜂/僵尸里的嵌套循环
+              name: 迷宫里的嵌套循环
               description_student: ''
               description_teacher: ''
             Nested Loops with Frozen:
@@ -8457,7 +8473,7 @@ zh-CN:
             Conditionals with Cards:
               name: 用 扑克牌 的 条件子句
             Conditionals:
-              name: 条件语句
+              name: Conditionals with the Farmer
             Variables as Constant in Artist:
               name: 艺术家里的变量作为常数
             Variables that Change in Bee:
@@ -8473,7 +8489,7 @@ zh-CN:
             Functions in Minecraft:
               name: '《我的世界》中的函数'
             Conditionals in Farmer:
-              name: 农夫的条件
+              name: Conditionals with the Farmer
         csp1-2018:
           title: CSP Unit 1 - The Internet
           description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. The unit then explores the structure and design of the internet and the implications of those design decisions.
@@ -8600,7 +8616,7 @@ zh-CN:
               description_student: 为了完成对计算机的问题解决过程和输入/输出/存储/处理模型的研究, 该课程提出了用于解决现实世界问题的应用程序。该项目需要多天来完成, 并在海报演示文稿突出显示每个应用程序的功能。该项目设计为结对完成，虽然也可以单独完成。
               description_teacher: 为了完成对计算机的问题解决过程和输入/输出/存储/处理模型的研究, 学生将提出一个用于解决现实世界问题的应用程序。该项目将需要好几天来完成, 并会让学生创建一个海报突出显示他们的应用程序的功能，并将呈现同学。项目指南为学生提供循序渐进的指导，并帮助他们组织想法。该项目设计为结对完成, 虽然也可以单独完成。
         csd4-2018:
-          title: CSD Unit 4 - The Design Process
+          title: 计算机科学发现单元4 - 设计过程
           description: 4单元介绍了计算的更广泛的社会影响。通过一系列的设计挑战, 您将了解如何在开发解决问题的方法时更好地理解他人的需求。该单元的后半部分由一个迭代团队项目组成, 在这个项目中，团队有机会确定他们所关心的需求、在纸上和应用程序实验室中的原型解决方案, 并与真正的用户测试解决方案以获得反馈并进一步推动迭代.
           description_short: "  Learn how to design a program that meets the needs of your users."
           description_audience: ''
@@ -9409,16 +9425,17 @@ zh-CN:
           description: 这是为 Code.org 计算机科学原理引导员准备的学徒反思，这回用在他们5天的夏季研讨会上。在这里能找到每天面对面讨论的反思的提示。这些问题是工作中很基础的问题，我们会在引导员训练周末来进行。
         pre-express-2018:
           title: 学龄前读者的快速课程
+          assignment_family_title: 学龄前读者的快速课程
           description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
           description_short: '学龄前读者的计算机科学介绍：结合了我们最好的幼儿园和一年级的课程。'
           description_audience: '年龄： 4-8'
           stages:
             'Debugging: Unspotted Bugs':
-              name: '调试: 没有错误'
+              name: 没有斑点的Bug
               description_student: ''
               description_teacher: ''
             'Persistence & Frustration: Stevie and the Marbles':
-              name: '坚持与挫折 就像史蒂夫和天使。'
+              name: 杰拉德和大项目
               description_student: ''
               description_teacher: ''
             'Real-life Algorithms: Plant a Seed':
@@ -9458,7 +9475,7 @@ zh-CN:
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: '事件: 大事件'
+              name: 大事件
               description_student: ''
               description_teacher: ''
             Events in Play Lab:
@@ -9485,3 +9502,15 @@ zh-CN:
               name: 冰河时代里的循环
             'Persistence & Frustration: Stevie and the Big Project':
               name: '坚持与挫折 就像史蒂夫和大项目。'
+        spritelab-validated:
+          stages:
+            Fish Tank - Creating Sprites:
+              name: 鱼缸 - 创建精灵
+            Alien Dance Party - Input:
+              name: 外星人舞蹈派对 - 输入
+            Virtual Pet - Interactions:
+              name: 虚拟宠物 - 交互
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''

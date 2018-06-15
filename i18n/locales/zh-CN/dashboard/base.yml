@@ -85,6 +85,7 @@ zh-CN:
     facebook: 'Facebook'
     windowslive: '微软账户'
     clever: 'Clever 账号'
+    powerschool: 'Powerschool Account'
     forgot_password: '忘记密码？'
     need_confirmation: "没有收到确认的说明吗？"
     need_unlock: "未收到解锁指令吗？"
@@ -115,9 +116,9 @@ zh-CN:
     invalid_password: "密码必须至少为 6 个字符"
     mismatch_password: "您输入的两个密码不匹配"
     agree_tos_privacy: "我同意 <a href='http://code.org/tos'>服务条款</a> 和 <a href='http://code.org/privacy'>隐私策略</a>。"
-    under_13_consent: "如果我在13岁以下, 我确认我的父母或法定监护人同意我使用 Code.org 的服务。"
-    agree_us_website: "我同意使用一个美国的网站。"
-    my_data_to_us: "我使用本网站的数据可能会发送到美国并存储或处理。"
+    under_13_consent: "如果我未满 13 岁，我确认在使用 Code.org 服务时已征得父母或法定监护人的同意。"
+    agree_us_website: "我同意使用美国的网站。"
+    my_data_to_us: "我使用本网站产生的数据可能会被传输至美国并在美国存储或处理。"
     student_terms: "电子邮箱不会用来与学生进行联系。除了密码恢复的邮件，学生永远不会收到从Code.org寄来的任何邮件。更多信息请查看<a href='http://code.org/privacy'>隐私政策</a>。"
     teacher_terms: "我同意 Code.org 的服务条款。有关隐私的详细信息，请参阅我们的 <a href='http://code.org/privacy'> 隐私政策</a>。"
     additional_information: "我们需要一些额外的信息来继续为你注册."
@@ -128,7 +129,7 @@ zh-CN:
     field_is_required: "必填"
     accept_terms: "您必须同意创建一个帐户"
     error: "发生错误。"
-    email_preference_question: "我们可以通过电子邮件向您发送有关我们课程、本地的学习机会以及其他计算机科学新闻吗？"
+    email_preference_question: "我们能否向您发送有关课程更新、本地机会或其他计算机科学新闻的电子邮件？"
     email_preference_privacy: "(请参阅我们的隐私政策)"
     email_preference_yes: "是"
     email_preference_no: "不"

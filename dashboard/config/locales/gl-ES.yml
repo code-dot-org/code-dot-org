@@ -1,4 +1,5 @@
-"gl":
+---
+gl:
   errors:
     messages:
       not_saved: 'Por favor, corrixe os seguintes erros:'
@@ -96,6 +97,7 @@
     facebook: Facebook
     windowslive: Conta da Microsoft
     clever: Conta intelixente
+    powerschool: Powerschool Account
     forgot_password: Esqueceu o seu contrasinal?
     need_confirmation: Non recebeu as instrucións de confirmación?
     need_unlock: Non recibiches as instrucións de desbloqueo?

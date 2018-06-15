@@ -5,6 +5,7 @@ ka:
         csd_category_name: CS Discoveries ('17-'18)
         csd_2018_category_name: CS Discoveries ('18-'19)
         csf_category_name: CS საფუძვლები
+        csf_2018_category_name: CS Fundamentals (2018)
         csf_international_category_name: კომპიუტერული მეცნიერების საერთაშორისო საფუძვლები
         csf2_draft_category_name: 'დამუშავების ქვეშ: კურსები A - F'
         csp_category_name: "'15-'16 CS საფუძვლები"
@@ -5483,6 +5484,7 @@ ka:
               description_student: ''
               description_teacher: ამ ონლაინ აქტივობაში, მოსწავლეებს ექნებათ საშუალება შეისწავლონ სათამაშო ლაბორატორიაში მოვლენების გამოყენება და გამოიყენონ კოდის წერის უნარები, რათა შექმნან ანიმირებული თამაში. დროა გავხდეთ კრეატიულები და შევქმნათ ამბავი სათამაშო ლაბორატორიაში!
           title: კურსი A
+          assignment_family_title: კურსი A
           description_audience: 'ასაკი: 4-7'
           description_short: შესავალი კომპიუტერულ მეცნიერებაში მათთვის, ვინც ჯერ კითხვა არ იცის.
           description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის გაზიარებას შეძლებთ.
@@ -5517,6 +5519,7 @@ ka:
             Programming with Rey and BB-8:
               name: პროგრამირება რეისთან და BB-8-სთან ერთად
           title: კურსი B
+          assignment_family_title: კურსი B
           description_audience: 'ასაკი: 5-8'
           description_short: შესავალი კომპიუტერულ მეცნიერებაში დამწყებ მკითხველთათვის. (A კურსის მსგავსი, მაგრამ უფრო მრავალფეროვანი უფრო მოსწავლეებისთვის.)
           description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის გაზიარებას შეძლებთ.
@@ -5555,6 +5558,7 @@ ka:
             Loops with Rey and BB-8:
               name: ციკლები რეისთან და BB-8-სთან ერთად
           title: კურსი C
+          assignment_family_title: კურსი C
           description_audience: 'ასაკი: 6-10'
           description_short: Learn the basics of computer science and create your own art, stories, and games.
           description: შექმენით პროგრამები ციკლებით, მოვლენებით და პირობითი წინადადებებით. გადათარგმნეთ თქვენი ინიციალები ორობითში, გამოიკვლიეთ სხვადასხვა პრობლემის გადაჭრის ტექნიკა და ისწავლეთ თუ როგორ უნდა უპასუხოთ კიბერძალადობას. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ამბავი, რომლის გაზიარებასაც შეძლებთ.
@@ -5634,6 +5638,7 @@ ka:
               description_student: Have you ever run into problems while coding? In this lesson, you will learn about the secrets of debugging. Debugging is the process of finding and fixing problems in your code.
               description_teacher: ამ ონლაინ აქტივობაში, მოსწავლეები "შემგროვებლის" გარემოში ივარჯიშებენ დებაგირებაში. მოსწავლეები ივარჯიშებენ კოდის კითხვასა და სახეცვლილებაში, რათა შეასწორონ თავსატეხები ალგორითმების, ციკლების და ჩადგმული ციკლების საშუალებით.
           title: კურსი D
+          assignment_family_title: კურსი D
           description_audience: 'ასაკი: 7-11'
           description_short: Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more.
           description: Learn new coding concepts including algorithms, nested loops, while loops, conditionals, and events. Get an introduction to digital citizenship before   creating your very own game or story that you can share.
@@ -5763,6 +5768,7 @@ ka:
             Functions in Harvester:
               name: Functions in Harvester
           title: კურსი E
+          assignment_family_title: კურსი E
           description_audience: 'ასაკი: 8-12'
           description_short: Quickly cover concepts in Course C & D and then go further with functions.
           description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
@@ -5871,6 +5877,7 @@ ka:
             Nested Loops with Frozen:
               name: Nested Loops with Frozen
           title: კურსი F
+          assignment_family_title: კურსი F
           description_audience: 'ასაკი: 9-13'
           description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
           description: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
@@ -6201,6 +6208,7 @@ ka:
             Until Loops in Maze:
               name: Until Loops in Maze
           title: დაჩქარებული კურსი
+          assignment_family_title: დაჩქარებული კურსი
           description_audience: 'ასაკი: 9-18'
           description_short: 'შესავალი კომპიუტერულ მეცნიერებაში: აერთიანებს დაწყებითი სკოლის პროგრამის საუკეთესო ელემენტებს უფროსი მოსწავლეებისთვის.'
           description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის გაზიარებას შეძლებთ.
@@ -6235,6 +6243,7 @@ ka:
             Spelling Bee:
               name: შეჯიბრი დამარცვლაში
           title: Pre-reader Express
+          assignment_family_title: Pre-reader Express
           description_audience: 'ასაკი: 4-8'
           description_short: 'An introduction to computer science for pre-readers: combines the best of our kindergarten and first grade courses.'
           description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის გაზიარებას შეძლებთ.
@@ -7506,21 +7515,22 @@ ka:
               description_student: In the last few days of the unit, the class finalizes their personal websites, working with peers to get feedback, review the rubric, and put the finishing touches on the site. To cap off the unit, everyone shares their projects and how they were developed.
               description_teacher: "Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\\r\n"
         coursea-2018:
-          title: კურსი A
+          title: Course A (2018)
+          assignment_family_title: კურსი A
           description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის გაზიარებას შეძლებთ.
           description_short: შესავალი კომპიუტერულ მეცნიერებაში მათთვის, ვინც ჯერ კითხვა არ იცის.
           description_audience: 'ასაკი: 4-7'
           stages:
             'Debugging: Unspotted Bugs':
-              name: 'Debugging: Unspotted Bugs'
+              name: შეუჩმნეველი ბაგები
               description_student: ''
               description_teacher: 'This lesson will guide students through the steps of debugging.  Students will learn the mantra: "What happened?  What was supposed to happen? What does that tell you?"'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence & Frustration: Stevie and the Marbles'
+              name: სტივი და დიდი პროექტი
               description_student: ''
               description_teacher: "When students run into a barrier while answering a question or working on a project, it’s so easy for them to get frustrated and give up.  This lesson will introduce students to the idea that frustration can be an important part of learning. Here, frustration is presented as a step in the creative process, rather than a sign of failure.\\r\n\\r\nThis lession can be done over one or two class sessions.  If you have more time, feel free to draw out the building and revising phase of the Marble Run activity."
             'Real-life Algorithms: Plant a Seed':
-              name: 'ცხოვრებისეული ალგორითმები: დათესე მცენარე'
+              name: Plant a Seed
               description_student: ''
               description_teacher: "In this lesson, students will relate the concept of algorithms back to everyday, real-life activities by planting an actual seed. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.\\r\n"
             Learn to Drag and Drop:
@@ -7528,7 +7538,7 @@ ka:
               description_student: ''
               description_teacher: ეს გაკვეთილი შეუქმნის მოსწავლეებს წარმოდგენას თუ რას უნდა ელოდონ, როდესაც გაემგზავრებიან კომპიუტერულ ლაბორატორიაში. ის იწყება მოკლე განხილვით და კომპიუტერულ ლაბორატორიაში ქცევის წესებით, შემდეგ მოსწავლეები გადავლენ კომპიუტერის საშუალებით ონლაინ თავსატეხების ამოხსნაზე.
             'Programming: Happy Maps':
-              name: 'პროგრამირება: ბედნიერი რუკები'
+              name: ბედნიერი რუკები
               description_student: ''
               description_teacher: ხიდი, რომელიც აკავშირებს ალგორითმებს და პროგრამირებას შეიძლება იყო მოკლე, თუ მოსწავლეებს ესმით განსხვავება მიმდევრობის დაგეგმარებასა და ამ მიმდევრობის პროგრამირების ენაზე კოდირების შორის. ეს აქტივობა დაეხმარება მოსწავლეებს მიიღონ გამოცდილება ფსევდოკოდის წაკითხვასა და დაწერაში.
             Programming in Maze:
@@ -7552,7 +7562,7 @@ ka:
               description_student: ''
               description_teacher: Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous plugged lesson, loops were used to traverse a maze and collect treasure. Here, loops are creating patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.
             'Events: The Big Event':
-              name: 'მოვლენები: დიდი მოვლენა'
+              name: დიდი მოვლენა
               description_student: ''
               description_teacher: Events are a great way to add variety to a pre-written algorithm. Sometimes you want your program to be able to respond to the user exactly when the user wants it to. That is what events are for.
             Events in Play Lab:
@@ -7562,21 +7572,22 @@ ka:
             Programming in Bee:
               name: Programming in Bee
             Programming in Harvester:
-              name: Programming in Harvester
+              name: Programming with Harvester
             Loops in Harvester:
-              name: Loops in Harvester
+              name: Loops with Harvester
             Sequencing in Maze:
-              name: Sequencing in Maze
+              name: Sequencing with Angry Birds
             'Persistence & Frustration: Stevie and the Big Project':
-              name: 'Persistence & Frustration: Stevie and the Big Project'
+              name: სტივი და დიდი პროექტი
         express-2018:
           title: დაჩქარებული კურსი
+          assignment_family_title: დაჩქარებული კურსი
           description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის გაზიარებას შეძლებთ.
           description_short: 'შესავალი კომპიუტერულ მეცნიერებაში: აერთიანებს დაწყებითი სკოლის პროგრამის საუკეთესო ელემენტებს უფროსი მოსწავლეებისთვის.'
           description_audience: 'ასაკი: 9-18'
           stages:
             'Algorithms: Graph Paper Programming':
-              name: 'Algorithms: Graph Paper Programming'
+              name: გრაფიკული პროგრამირება
               description_student: ''
               description_teacher: ''
             Introduction:
@@ -7620,7 +7631,7 @@ ka:
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: 'მოვლენები: დიდი მოვლენა'
+              name: დიდი მოვლენა
               description_student: ''
               description_teacher: ''
             Events in Star Wars:
@@ -7728,13 +7739,13 @@ ka:
             Programming in Artist:
               name: პროგრამირება მსახიობში
             'Loops: Getting Loopy':
-              name: 'Loops: Getting Loopy'
+              name: ჩაციკლვა
             Loops with Rey and BB-8:
               name: ციკლები რეისთან და BB-8-სთან ერთად
             Copyright and Creativity:
               name: Copyright and Creativity
             'Concept Practice with Minecraft ':
-              name: 'Concept Practice with Minecraft '
+              name: Looking Ahead with Minecraft
             Nested Loops in Bee:
               name: ჩადგმული ციკლები ფუტკარში
             Nested Loops in Frozen:
@@ -7744,7 +7755,7 @@ ka:
             Conditionals & Loops in Harvester:
               name: პირობითი წინადადებები და ციკლები ფერმერში
             'Functions: Songwriting':
-              name: 'ფუნქციები: სიმღერების დაწერა'
+              name: სიმღერის დაწერა პარამეტრების გამოყენებით
             Functions in Minecraft:
               name: Functions in Minecraft
             Functions in Harvester:
@@ -7762,23 +7773,23 @@ ka:
             Envelope Variables:
               name: ცვლადები კონვერტებში
             Variables as Constant in Artist:
-              name: Variables as Constant in Artist
+              name: Variables with Artist
             Variables that Change in Bee:
-              name: Variables that Change in Bee
+              name: Changing Variables with Bee
             Variables that Change in Artist:
-              name: Variables that Change in Artist
+              name: Changing Variables with Artist
             For Loop Fun:
               name: ხალისი "მიზნისთვის" ციკლით
             Learning Sprites with Sprite Lab:
-              name: Learning Sprites with Sprite Lab
+              name: Learning Sprite Lab
             Alien Dance Party with Sprite Lab:
-              name: Alien Dance Party with Sprite Lab
+              name: Alien Dance Party
             Pet Giraffe with Sprite Lab:
-              name: Pet Giraffe with Sprite Lab
+              name: Pet Giraffe
             Binary Bracelets:
               name: ორობითი სამაჯურები
             'Unplugged: Binary':
-              name: 'გაკვეთილი კომპიუტერის გარეშე: ორობითი სისტემა'
+              name: ორობითი სურათები
             Artist Binary:
               name: 'მხატვარი: ორობითი'
             Internet:
@@ -7788,7 +7799,8 @@ ka:
             Relay Programming:
               name: ესტაფეტური პროგრამირება
         courseb-2018:
-          title: კურსი B
+          title: Course B (2018)
+          assignment_family_title: კურსი B
           description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის გაზიარებას შეძლებთ.
           description_short: შესავალი კომპიუტერულ მეცნიერებაში დამწყებ მკითხველთათვის. (A კურსის მსგავსი, მაგრამ უფრო მრავალფეროვანი უფრო მოსწავლეებისთვის.)
           description_audience: 'ასაკი: 5-8'
@@ -7838,7 +7850,7 @@ ka:
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: 'მოვლენები: დიდი მოვლენა'
+              name: დიდი მოვლენა
               description_student: ''
               description_teacher: ''
             Events in Play Lab:
@@ -7846,23 +7858,24 @@ ka:
               description_student: ''
               description_teacher: ''
             Programming in Ice Age:
-              name: Programming in Ice Age
+              name: Programming with Scrat
             Loops in Ice Age:
-              name: Loops in Ice Age
+              name: Loops with Scrat
             Sequencing with Scrat:
               name: Sequencing with Scrat
             Move It, Move It:
               name: ვისწავლოთ გადაადგილება
             Copyright and Creativity:
-              name: Copyright and Creativity
+              name: It's Great to Create and Play Fair
         coursed-2018:
-          title: New Course D Script
+          title: Course D (2018)
+          assignment_family_title: კურსი D
           description: ''
           description_short: ''
           description_audience: ''
           stages:
             'Algorithms: Graph Paper Programming':
-              name: 'Algorithms: Graph Paper Programming'
+              name: გრაფიკული პროგრამირება
               description_student: ''
               description_teacher: ''
             Introduction:
@@ -7886,7 +7899,7 @@ ka:
               description_student: ''
               description_teacher: ''
             Nested Loops in Bee:
-              name: ჩადგმული ციკლები ფუტკარში
+              name: ჩადგმული ციკლები ლაბირინთში
               description_student: ''
               description_teacher: ''
             Nested Loops in Artist:
@@ -7922,7 +7935,7 @@ ka:
               description_student: ''
               description_teacher: ''
             'Unplugged: Binary':
-              name: 'გაკვეთილი კომპიუტერის გარეშე: ორობითი სისტემა'
+              name: ორობითი სურათები
               description_student: ''
               description_teacher: ''
             Artist Binary:
@@ -7932,7 +7945,7 @@ ka:
             Loops in Ice Age:
               name: Loops in Ice Age
             Nested Loops in Frozen:
-              name: Nested Loops in Frozen
+              name: Snowflakes with Anna and Elsa
             Until Loops in Maze:
               name: Until Loops in Maze
             Conditionals in Maze:
@@ -8046,7 +8059,8 @@ ka:
           description_short: CS Principles AP Exam Prep
           description: 'This page contains copies of all the multiple choice assessment questions that appeared in Units 1-5 in the course.  Students may want to practice for the multiple choice exam by re-taking these little tests.  '
         coursec-2018:
-          title: კურსი C
+          title: Course C (2018)
+          assignment_family_title: კურსი C
           description: შექმენით პროგრამები ციკლებით, მოვლენებით და პირობითი წინადადებებით. გადათარგმნეთ თქვენი ინიციალები ორობითში, გამოიკვლიეთ სხვადასხვა პრობლემის გადაჭრის ტექნიკა და ისწავლეთ თუ როგორ უნდა უპასუხოთ კიბერძალადობას. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ამბავი, რომლის გაზიარებასაც შეძლებთ.
           description_short: Learn the basics of computer science and create your own art, stories, and games.
           description_audience: 'ასაკი: 6-10'
@@ -8064,7 +8078,7 @@ ka:
               description_student: ''
               description_teacher: ''
             'Real-life Algorithms: Paper Planes':
-              name: 'ცხოვრებისეული ალგორითმები: ქაღალდის თვითმფრინავები'
+              name: Paper Planes
               description_student: ''
               description_teacher: ''
             Programming in Collector:
@@ -8076,7 +8090,7 @@ ka:
               description_student: ''
               description_teacher: ''
             'Loops: Getting Loopy':
-              name: 'Loops: Getting Loopy'
+              name: ჩაციკლვა
               description_student: ''
               description_teacher: ''
             Loops with Rey and BB-8:
@@ -8088,11 +8102,11 @@ ka:
               description_student: ''
               description_teacher: ''
             Loops in Harvester:
-              name: Loops in Harvester
+              name: Harvesting Crops with Loops
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: 'მოვლენები: დიდი მოვლენა'
+              name: დიდი მოვლენა
               description_student: ''
               description_teacher: ''
             Build a Flappy Game:
@@ -8112,7 +8126,7 @@ ka:
               description_student: ''
               description_teacher: ''
             Looking Ahead:
-              name: Looking Ahead
+              name: Looking Ahead with Minecraft
         csd6-2018:
           title: CSD Unit 6 - Physical Computing
           description: Unit 6 explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the Circuit Playground as the basis for an innovation of your own design.
@@ -8216,17 +8230,18 @@ ka:
             'Project: Prototype an Innovation':
               name: 'Project: Prototype an Innovation'
         coursee-2018:
-          title: კურსი E
+          title: Course E (2018)
+          assignment_family_title: კურსი E
           description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
           description_short: Quickly cover concepts in Course C & D and then go further with functions.
           description_audience: 'ასაკი: 8-12'
           stages:
             'Programming: My Robotic Friends':
-              name: 'პროგრამირება: ჩემი რობოტისებრი მეგობრები'
+              name: ჩემი რობოტი-მეგობრები
               description_student: ''
               description_teacher: ''
             Sequence in Maze:
-              name: Sequence in Maze
+              name: Coding with Comments
               description_student: ''
               description_teacher: ''
             Building a Foundation:
@@ -8250,7 +8265,7 @@ ka:
               description_student: ''
               description_teacher: ''
             Nested Loops:
-              name: ჩასმული ციკლები
+              name: ჩადგმული ციკლები ლაბირინთში
               description_student: ''
               description_teacher: ''
             Nested Loops with Frozen:
@@ -8266,7 +8281,7 @@ ka:
               description_student: This fast-paced introduction will give you the chance to practice most of the skills that you will need to solve the puzzles in this course.
               description_teacher: In this progression, students will begin with an introduction (or review depending on the experience of your class) of Code.org's online workspace. Students will learn the basic functionality of the interface including the `Run`, `Reset`, and `Step` buttons. Dragging, deleting, and connecting Blockly blocks is also introduced in the beginning video. In the puzzles, students will practice their sequencing and debugging skills in Maze and Artist.
             Conditionals:
-              name: პირობითი ბრძანებები
+              name: Conditionals with the Farmer
               description_student: You will get to tell the computer what to do under certain conditions in this fun and challenging series.
               description_teacher: This lesson introduces students to `while` loops and `if / else` statements. _While loops_ are loops that continue to repeat commands as long as a condition is true. While loops are used when the programmer doesn't know the exact number of times the commands need to be repeated, but the programmer does know what condition needs to be true in order for the loop to continue looping. `If / Else` statements offer flexibility in programming by running entire sections of code only if something is true, otherwise it runs something else.
             Private and Personal Information:
@@ -8281,7 +8296,7 @@ ka:
               description_student: შეიგრძენით ძალა, როდესაც შექმნით თქვენს საკუთარ ვარსკვლავური ომების თამაშს ამ გაკვეთილში.
               description_teacher: ამ გაკვეთილში მოსწავლეები ივარჯიშებენ მოვლენების გამოყენებაზე. მოვლენების საშუალებით ისინი შეძლებენ ისეთი თამაშის აწყობას, რომელსაც შემდგომში გაუზიარებენ სხვებს ონლაინში. R2-D2 და სხვა ვარსკვლავური ომების პერსონაჟებთან ერთად, მოსწავლეებს შეასწავლიან მოვლენების მთავარ პრინციპებს, ხოლო შემდეგ მათ მიეცემათ საშუალება შექმნან საკუთარი თამაში.
             'Functions: Songwriting':
-              name: 'ფუნქციები: სიმღერების დაწერა'
+              name: სიმღერის დაწერა პარამეტრების გამოყენებით
               description_student: როკ ვარსკვლავებსაც კი სჭირდებათ პროგრამირების უნარები. ეს დონე შეგასწავლით ყველაფერს ფუნქციების შესახებ სიმღერების ტექსტების გამოყენებით.
               description_teacher: One of the most magnificent structures in the computer science world is the function. Functions (sometimes called procedures) are mini programs that you can use over and over inside of your bigger program. This lesson will help students intuitively understand why combining chunks of code into functions can be such a helpful practice.
             Functions in Artist:
@@ -8293,7 +8308,7 @@ ka:
               description_student: Don't write too much code to gather all of the nectar and honey. Use functions instead!
               description_teacher: In the second round of practice with online functions, students will navigate complex paths, collect plenty of nectar, and make lots of honey.
             Functions in Harvester:
-              name: Functions in Harvester
+              name: Functions with Harvester
               description_student: ''
               description_teacher: ''
             Determine the Concept:
@@ -8335,25 +8350,26 @@ ka:
             Functions in Minecraft:
               name: Functions in Minecraft
             Learning Sprites with Sprite Lab:
-              name: Learning Sprites with Sprite Lab
+              name: Learning Sprite Lab
             Alien Dance Party with Sprite Lab:
-              name: Alien Dance Party with Sprite Lab
+              name: Alien Dance Party
             Pet Giraffe with Sprite Lab:
-              name: Pet Giraffe with Sprite Lab
+              name: Pet Giraffe
             Copyright and Creativity:
-              name: Copyright and Creativity
+              name: Digital Sharing
         coursef-2018:
-          title: კურსი F
+          title: Course F (2018)
+          assignment_family_title: კურსი F
           description: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
           description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
           description_audience: 'ასაკი: 9-13'
           stages:
             'Programming: My Robotic Friends':
-              name: 'პროგრამირება: ჩემი რობოტისებრი მეგობრები'
+              name: ჩემი რობოტი-მეგობრები
               description_student: ''
               description_teacher: ''
             Sequence in Maze:
-              name: Sequence in Maze
+              name: Coding with Comments
               description_student: ''
               description_teacher: ''
             Building a Foundation:
@@ -8377,7 +8393,7 @@ ka:
               description_student: ''
               description_teacher: ''
             Nested Loops in Bee/Zombie:
-              name: ჩადგმული ციკლები ფუტკარში/ზომბიში
+              name: ჩადგმული ციკლები ლაბირინთში
               description_student: ''
               description_teacher: ''
             Nested Loops with Frozen:
@@ -8467,23 +8483,23 @@ ka:
             Conditionals with Cards:
               name: პირობები ბარათებით
             Conditionals:
-              name: პირობითი ბრძანებები
+              name: Conditionals with the Farmer
             Variables as Constant in Artist:
-              name: Variables as Constant in Artist
+              name: Variables with Artist
             Variables that Change in Bee:
-              name: Variables that Change in Bee
+              name: Changing Variables with Bee
             Variables that Change in Artist:
-              name: Variables that Change in Artist
+              name: Changing Variables with Artist
             Learning Sprites with Sprite Lab:
-              name: Learning Sprites with Sprite Lab
+              name: Learning Sprite Lab
             Alien Dance Party with Sprite Lab:
-              name: Alien Dance Party with Sprite Lab
+              name: Alien Dance Party
             Pet Giraffe with Sprite Lab:
-              name: Pet Giraffe with Sprite Lab
+              name: Pet Giraffe
             Functions in Minecraft:
-              name: Functions in Minecraft
+              name: Functions with Minecraft
             Conditionals in Farmer:
-              name: პირობითი წინადადებები ფერმერში
+              name: Conditionals with the Farmer
         csp1-2018:
           title: CSP Unit 1 - The Internet
           description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. The unit then explores the structure and design of the internet and the implications of those design decisions.
@@ -9418,17 +9434,18 @@ ka:
           description_short: 'Apprentice reflection materials for CS Principles facilitators in training '
           description: This is the set of apprentice reflections for Code.org CS Principles facilitators in training during their 5-day summer workshop. Here you will find reflection prompts for each day of your in-person 5-day summer workshop. This questions will be the foundation of work we do at the Facilitator Training Weekend.
         pre-express-2018:
-          title: Pre-reader Express
+          title: Pre-reader Express (2018)
+          assignment_family_title: Pre-reader Express
           description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის გაზიარებას შეძლებთ.
           description_short: 'An introduction to computer science for pre-readers: combines the best of our kindergarten and first grade courses.'
           description_audience: 'ასაკი: 4-8'
           stages:
             'Debugging: Unspotted Bugs':
-              name: 'Debugging: Unspotted Bugs'
+              name: შეუჩმნეველი ბაგები
               description_student: ''
               description_teacher: ''
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence & Frustration: Stevie and the Marbles'
+              name: სტივი და დიდი პროექტი
               description_student: ''
               description_teacher: ''
             'Real-life Algorithms: Plant a Seed':
@@ -9468,7 +9485,7 @@ ka:
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: 'მოვლენები: დიდი მოვლენა'
+              name: დიდი მოვლენა
               description_student: ''
               description_teacher: ''
             Events in Play Lab:
@@ -9495,3 +9512,15 @@ ka:
               name: Loops in Ice Age
             'Persistence & Frustration: Stevie and the Big Project':
               name: 'Persistence & Frustration: Stevie and the Big Project'
+        spritelab-validated:
+          stages:
+            Fish Tank - Creating Sprites:
+              name: Fish Tank - Creating Sprites
+            Alien Dance Party - Input:
+              name: Alien Dance Party - Input
+            Virtual Pet - Interactions:
+              name: Virtual Pet - Interactions
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''

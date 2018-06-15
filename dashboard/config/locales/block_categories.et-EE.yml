@@ -1,4 +1,5 @@
-"et":
+---
+et:
   data:
     block_categories:
       Actions: Tegevused
@@ -45,5 +46,6 @@
       Foo: Foo
       Name: Nimi
       NEW BLOCKS: NEW BLOCKS
+      'Functions ': 'Functions '
       Game/Score: Game/Score
       Function: Funktsioon

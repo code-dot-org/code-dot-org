@@ -1,4 +1,5 @@
-"pt":
+---
+pt:
   data:
     block_categories:
       Actions: Ações
@@ -45,5 +46,6 @@
       Foo: Foo
       Name: Nome
       NEW BLOCKS: NEW BLOCKS
+      'Functions ': 'Functions '
       Game/Score: Game/Score
       Function: Função

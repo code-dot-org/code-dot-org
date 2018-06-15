@@ -1,4 +1,5 @@
-"es-MX":
+---
+es-MX:
   errors:
     messages:
       not_saved: 'Corrige los siguientes errores:'
@@ -96,6 +97,7 @@
     facebook: Facebook
     windowslive: Cuenta de Microsoft
     clever: Cuenta inteligente
+    powerschool: Powerschool Account
     forgot_password: "¿Olvidaste tu contraseña?"
     need_confirmation: "¿No recibiste las instrucciones de confirmación?"
     need_unlock: "¿No recibiste las instrucciones de desbloqueo?"
@@ -168,7 +170,7 @@
     error: Ocurrió un error.
     email_preference_question: "¿Podemos enviarle por correo electrónico actualizaciones
       de nuestros cursos, oportunidades en su zona u otras noticias sobre informática?"
-    email_preference_privacy: "(Vea nuestra política de privacidad)"
+    email_preference_privacy: "(Vea nuestra politica de privacidad)"
     email_preference_yes: Sí
     email_preference_no: 'No'
     email_preference_required: You must specify an email preference.

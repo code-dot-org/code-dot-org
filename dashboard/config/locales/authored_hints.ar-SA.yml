@@ -1,4 +1,5 @@
-"ar":
+---
+ar:
   data:
     authored_hints:
       2-3 Artist 1 new_authored_hint:
@@ -87,29 +88,29 @@
         2-3_Artist_Functions_12_a: جرب تشغيل الكود اولاً لترى ماتحتاج إضافته.
       2-3 Artist Functions 2 a_authored_hint:
         2-3_Artist_Functions_2_a: |-
-          Your program should:
-          - Use function
-          - Move forward 100 + 75 pixels
-          - Use function
+          يجب على برنامجك أن:
+          استخدام الدالة
+          التحرك إلى الامام 100 + 75 بيكسل
+          استخدام الدالة
       2-3 Artist Functions 2_authored_hint:
         2-3_Artist_Functions_2_a: |-
-          Your program should:
-          - Use function
-          - Move forward 100 + 75 pixels
-          - Use function
+          يجب على برنامجك أن:
+          استخدام الدالة
+          التحرك إلى الامام 100 + 75 بيكسل
+          استخدام الدالة
       2-3 Artist Functions 3 a_authored_hint:
-        2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
+        2-3_Artist_Functions_3_a: "* * 115 + 45 = 160 * *"
       2-3 Artist Functions 3_authored_hint:
-        2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
+        2-3_Artist_Functions_3_a: "* * 115 + 45 = 160 * *"
       2-3 Artist Functions 4 a_authored_hint:
-        2-3_Artist_Functions_4_a: The artist needs to turn 120 degrees between each
-          square to complete this design.
+        2-3_Artist_Functions_4_a: الفنان يحتاج إلى الدوران 120 درجة بين كل مربع لإكمال
+          التصميم.
       2-3 Artist Functions 4_authored_hint:
-        2-3_Artist_Functions_4_a: The artist needs to turn 120 degrees between each
-          square to complete this design.
+        2-3_Artist_Functions_4_a: الفنان يحتاج إلى الدوران 120 درجة بين كل مربع لإكمال
+          التصميم.
       2-3 Artist Loops New 11_authored_hint:
         2-3_Artist_Loops_New_11_a: |-
-          Remember that the code from the last puzzle was:
+          تذكر أن الكود من المتاهة السابقة هو:
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -123,20 +124,23 @@
           </value>
           <next>
           <block type="draw_turn_by_constant_dropdown">
-          <title name="DIR">turnRight</title>
+          <title name="DIR">تورنرايت</title>
           <title name="VALUE" config="45,60,90,120,180">45</title>
           <next>
           <block type="draw_move_by_constant">
-          <title name="DIR">moveForward</title>
+          موفيفوروارد
+          <title name="DIR"></title>
           <title name="VALUE">50</title>
-          <next>
+          <next></title>
+          90
           <block type="draw_turn_by_constant_dropdown">
-          <title name="DIR">turnLeft</title>
-          <title name="VALUE" config="45,60,90,120,180">90</title>
+          <title name="DIR">تورنليفت</title>
+          <title name="VALUE" config="45,60,90,120,180">
           <next>
           <block type="draw_move_by_constant">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE">50</title>
+          <title name="DIR">موفيفوروارد</title>
+          <title name="VALUE"></title>
+          50
           </block>
           </next>
           </block>
@@ -151,8 +155,8 @@
           </next>
           </block>
           </xml>
-        2-3_Artist_Loops_New_11_b: Your new turn should go at the **end** of the code
-          inside the loop.
+        2-3_Artist_Loops_New_11_b: الدوران القادم يجب ان يكون في نهاية **end** الكود
+          داخل التكرار.
       2-3 Artist Loops New 12_authored_hint:
         2-3_Artist Loops_New_12_a: قبل البدء الألماس, الفنان يحتاج للالتفاف بستين
           درجة للوصول الطريق الصحيح.
@@ -161,12 +165,12 @@
         2-3_Artist Loops_New_12_c: الفنان سوف يحتاج للالتفاف ستون درجة لليمين لصنع
           زاوية اعرض.
       2-3 Artist Loops New 13_authored_hint:
-        2-3_Artist_Loops_New_13_a: "At the end of each diamond, the artist is already
-          facing the right direction to start the next one.  \n\nBecause of this,
-          we don't need to add an extra `turn left by` block before we start again."
-        2-3_Artist_Loops_New_13_b: "To make each diamond, the artist needs to:   \n-
-          move\n- turn right 120 degrees\n- move\n- turn right 60 degrees  \n\nThen
-          do it all again!"
+        2-3_Artist_Loops_New_13_a: |-
+          في نهاية كل ألماسة الفنان سيكون بالاتجاه الصحيح لبدء الرسم التالي.
+          بسبب ذلك لانحتاج إلى إضافة كتلة "turn left" قبل البدء مجدداً.
+        2-3_Artist_Loops_New_13_b: "لرسم كل ألماسة الفنان يحتاج:\nتقدم \nالالتفاف
+          إلى اليمين 120 درجة \nتقدم\nالالتفاف الى اليمين 60 درجة\n\nثم تكرار العملية
+          مرة أخرى مجدداً!"
       2-3 Artist Loops New 9_authored_hint:
         2-3_Artist_Loops_New_9_a: الفنان يحتاج للالتفاف 45 درجة لليمين قبل ان يبدا
           برسم.
@@ -191,26 +195,34 @@
 
           اذا المكعبات 20 بيكسل طول و20 بيكسل بين الاثنان, كم تحتاج للقفز ؟
       2-3 Artist Nested Loops 7_authored_hint:
-        2-3_Artist_Nested_Loops_7_a: "How far should you turn in each loop?  \n\nWhat
-          is 360/10?"
+        2-3_Artist_Nested_Loops_7_a: |-
+          إلى أي مدى ينبغي لك الإلتفاف في كل دورة؟؟
+
+          ماهو ناتج 360/10 ؟
       2-3 Artist Nested Loops 9_authored_hint:
         2-3_Artist_Nested_Loops_9_a: |-
-          Need help finding the correct angle?
+          هل تحتاج مساعدة للحصول على الزاوية الصحيحة؟
 
           **360 / 12 = 30**
       2-3 Bee Conditionals 14_authored_hint:
-        2-3_Bee_Conditionals_14_a: Having a hard time figuring out how to get the
-          blocks down?  Try treating the red flower exactly the same as a purple flower!
-        2-3_Bee_Conditionals_14_b: If the red flower were purple, could you figure
-          out how to use an extra `repeat` loop to cut down on code?
-        2-3_Bee_Conditionals_14_c: "Try breaking this up into two separate chunks:
-          \ \n\n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1)
-          Gather nectar 3 times\n  - Move forward 5 times\n  - Check to see if nectar,
-          if so: get it\n  - Turn left\n  \n2) Make honey \n  - Move forward one time\n
-          \ - Make two honey"
+        2-3_Bee_Conditionals_14_a: هل تواجه صعوبة في معرفة كيفية الحصول على اللبنات
+          في الأسفل؟ حاول معاملة الزهرة الحمراء بنفس طريقة الزهرة البنفسجية!
+        2-3_Bee_Conditionals_14_b: لو كانت الوردة الحمراء وردة بنفسجية, هل يمكنك معرفة
+          كيف تستخدم " إعادة repeat"  لوب إضافي لتقتطع البرنامج؟
+        2-3_Bee_Conditionals_14_c: |-
+          حاول تقسيم الأوامر إلى مجموعتين:
+
+          1) جمع النكتار 3 مرات
+          التقدم للأمام 5 مرات
+          التحقق إذا كان نكتار , الحصول عليه
+          الالتفاف لليسار
+
+          2) اصنع عسل
+          التقدم للامام مرة واحدة
+          اصنع اثنان عسل
       2-3 Bee Conditionals 15_authored_hint:
-        2-3_Bee_Conditionals_15_a: 'Remember: Purple flowers only have either 0 or
-          1 nectar and they can change each time you run the program.'
+        2-3_Bee_Conditionals_15_a: 'تذكر : الزهر البنفسجي يحتوي على 0 او 1 نكتار ويمكنه
+          ان يتغير كل مره يتم فيها تشغيل البرنامج.'
       2-3 Bee Conditionals 3_authored_hint:
         2-3_Bee_Conditionals_3_a: The code will be shortest if you use a loop each
           time you move forward, another loop to gather nectar, and another one to
@@ -9869,10 +9881,10 @@
           blocks, create a `draw hexagon` function and call that multiple times.
       courseD_artist_functions2_authored_hint:
         courseD_artist_functions2_a: |-
-          Your program should:
-          - Use function
-          - Move forward 100 + 75 pixels
-          - Use function
+          يجب على برنامجك أن:
+          استخدام الدالة
+          التحرك إلى الامام 100 + 75 بيكسل
+          استخدام الدالة
       courseD_artist_functions3_authored_hint:
         courseD_artist_functions3_a: |-
           To solve this puzzle, you just need to add a  loop that repeats the starter code 8 times.
@@ -12520,10 +12532,10 @@
           your function under the `when run` block. Otherwise, the code in your function
           will not run.
         courseD_artist_functions2_a: |-
-          Your program should:
-          - Use function
-          - Move forward 100 + 75 pixels
-          - Use function
+          يجب على برنامجك أن:
+          استخدام الدالة
+          التحرك إلى الامام 100 + 75 بيكسل
+          استخدام الدالة
       courseE_artist_functions2_2018_authored_hint:
         courseD_artist_functions2_b: The function you write should not contain your
           whole program, just the part that draws a square with 100 pixel sides.
@@ -12531,10 +12543,10 @@
           Use the green `draw a square` block to "call" your function under the `when run` block. Otherwise, the code in your function will not run.
           <xml><block type="procedures_callnoreturn" limit="2"><mutation name="draw a square"/></block></xml>
         courseD_artist_functions2_a: |-
-          Your program should:
-          - Use function
-          - Move forward 100 + 75 pixels
-          - Use function
+          يجب على برنامجك أن:
+          استخدام الدالة
+          التحرك إلى الامام 100 + 75 بيكسل
+          استخدام الدالة
       courseE_artist_functions3_authored_hint:
         courseD_artist_functions3_a: |-
           To solve this puzzle, you just need to add a  loop that repeats the starter code 8 times.
@@ -17896,8 +17908,8 @@
           Remember that the code from the last puzzle was:
 
           ![](https://images.code.org/e5c7492f509dd41efe2888c7e7895c28-image-1461177002636.29.02.png)
-        2-3_Artist_Loops_New_11_b: Your new turn should go at the **end** of the code
-          inside the loop.
+        2-3_Artist_Loops_New_11_b: الدوران القادم يجب ان يكون في نهاية **end** الكود
+          داخل التكرار.
       grade2_MakeDogTag_BFP_authored_hint: {}
       grade2_PuppyLoops_10_authored_hint:
         2-3_Artist_Debugging_8_a: |-
@@ -17994,18 +18006,18 @@
           where the bee needs to move forward, then turn left several times to complete
           the path.
       grade3_Conditionals_11_authored_hint:
-        2-3_Bee_Conditionals_14_a: Having a hard time figuring out how to get the
-          blocks down?  Try treating the red flower exactly the same as a purple flower!
-        2-3_Bee_Conditionals_14_b: If the red flower were purple, could you figure
-          out how to use an extra `repeat` loop to cut down on code?
+        2-3_Bee_Conditionals_14_a: هل تواجه صعوبة في معرفة كيفية الحصول على اللبنات
+          في الأسفل؟ حاول معاملة الزهرة الحمراء بنفس طريقة الزهرة البنفسجية!
+        2-3_Bee_Conditionals_14_b: لو كانت الوردة الحمراء وردة بنفسجية, هل يمكنك معرفة
+          كيف تستخدم " إعادة repeat"  لوب إضافي لتقتطع البرنامج؟
         2-3_Bee_Conditionals_14_c: "Try breaking this up into two separate chunks:
           \ \n\n![](https://images.code.org/670ac0889a8f523865ff4099b4c54844-image-1463445460440.36.42.png)\n\n1)
           Gather nectar 3 times\n  - Move forward 5 times\n  - Check to see if nectar,
           if so: get it\n  - Turn left\n  \n2) Make honey \n  - Move forward one time\n
           \ - Make two honey"
       grade3_Conditionals_12_authored_hint:
-        2-3_Bee_Conditionals_15_a: 'Remember: Purple flowers only have either 0 or
-          1 nectar and they can change each time you run the program.'
+        2-3_Bee_Conditionals_15_a: 'تذكر : الزهر البنفسجي يحتوي على 0 او 1 نكتار ويمكنه
+          ان يتغير كل مره يتم فيها تشغيل البرنامج.'
       grade3_Conditionals_2_authored_hint:
         2-3_Bee_Conditionals_3_a: The code will be shortest if you use a loop each
           time you move forward, another loop to gather nectar, and another one to
@@ -18258,10 +18270,10 @@
         2-3_Artist_Functions_1_b: يمكنك رسم خطوط متقاطعة لصنع نظاراتك.
       grade4_artist_functions2_authored_hint:
         2-3_Artist_Functions_2_a: |-
-          Your program should:
-          - Use function
-          - Move forward 100 + 75 pixels
-          - Use function
+          يجب على برنامجك أن:
+          استخدام الدالة
+          التحرك إلى الامام 100 + 75 بيكسل
+          استخدام الدالة
       grade4_artist_functions2a_authored_hint:
         grade4_artist_functions2a_a: To get around using multiple `move forward` blocks,
           create a `draw triangle` function and call that multiple times.

@@ -1,4 +1,5 @@
-"vi":
+---
+vi:
   data:
     block_categories:
       Actions: Các hành động
@@ -45,5 +46,6 @@
       Foo: Foo
       Name: Tên
       NEW BLOCKS: NEW BLOCKS
+      'Functions ': 'Functions '
       Game/Score: Game/Score
       Function: Hàm

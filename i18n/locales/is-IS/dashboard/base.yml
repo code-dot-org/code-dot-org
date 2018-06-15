@@ -85,6 +85,7 @@ is:
     facebook: 'Facebook'
     windowslive: 'Microsoft reikning'
     clever: 'Clever aðgangur'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Gleymt lykilorð?'
     need_confirmation: "Fékkstu ekki sendar leiðbeiningar um staðfestingu?"
     need_unlock: "Fékkstu ekki leiðbeiningar um opnun?"

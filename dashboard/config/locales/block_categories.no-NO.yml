@@ -1,3 +1,4 @@
+---
 'no':
   data:
     block_categories:
@@ -45,5 +46,6 @@
       Foo: Foo
       Name: Navn
       NEW BLOCKS: NEW BLOCKS
+      'Functions ': 'Functions '
       Game/Score: Game/Score
       Function: Funksjon

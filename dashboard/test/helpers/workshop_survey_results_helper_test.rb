@@ -408,7 +408,8 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
         'Day 1' => daily_expected_results,
         'Day 2' => daily_expected_results,
         'Day 3' => daily_expected_results,
-        'Day 4' => daily_expected_results
+        'Day 4' => daily_expected_results,
+        'Day 5' => daily_expected_results
       }, generate_workshops_survey_summary(@workshop, @expected_questions)
     )
   end

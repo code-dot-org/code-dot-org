@@ -518,11 +518,11 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'summarize includes show_course_unit_version_warning' do
-    csp_2017 = create(:course, name: 'csp-2017')
+    csp_2017 = create(:course, name: 'csp-2017', family_name: 'csp')
     csp1_2017 = create(:script, name: 'csp1-2017')
     create(:course_script, course: csp_2017, script: csp1_2017, position: 1)
 
-    csp_2018 = create(:course, name: 'csp-2018')
+    csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp')
     csp1_2018 = create(:script, name: 'csp1-2018')
     create(:course_script, course: csp_2018, script: csp1_2018, position: 1)
 
@@ -559,11 +559,11 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'summarize only shows one version warning' do
-    csp_2017 = create(:course, name: 'csp-2017')
+    csp_2017 = create(:course, name: 'csp-2017', family_name: 'csp')
     csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp1')
     create(:course_script, course: csp_2017, script: csp1_2017, position: 1)
 
-    csp_2018 = create(:course, name: 'csp-2018')
+    csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp')
     csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp1')
     create(:course_script, course: csp_2018, script: csp1_2018, position: 1)
 
@@ -1148,6 +1148,21 @@ endvariants
 
     scripts = Script.valid_scripts(user)
     assert_equal [script], scripts
+  end
+
+  test "get_assessment_script_levels returns an empty list if no level groups" do
+    script = create(:script, name: 'test-no-levels')
+    level_group_script_level = script.get_assessment_script_levels
+    assert_equal level_group_script_level, []
+  end
+
+  test "get_assessment_script_levels returns a list of script levels" do
+    script = create(:script, name: 'test-level-group')
+    level_group = create(:level_group, name: 'assessment 1')
+    script_level = create(:script_level, levels: [level_group], assessment: true, script: script)
+
+    assessment_script_levels = script.get_assessment_script_levels
+    assert_equal assessment_script_levels[0], script_level
   end
 
   private

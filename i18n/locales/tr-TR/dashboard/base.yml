@@ -85,6 +85,7 @@ tr:
     facebook: 'Facebook'
     windowslive: 'Microsoft Hesabı'
     clever: 'Akıllı Hesap'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Şifrenizi mi unuttunuz?'
     need_confirmation: "Onay talimatlarını almadınız mı?"
     need_unlock: "Kilit açma talimatlarını almadınız mı?"
@@ -115,9 +116,9 @@ tr:
     invalid_password: "Parola en az 6 karakter olmalıdır"
     mismatch_password: "Girdiğiniz iki parola aynı değil"
     agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
-    under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
-    agree_us_website: "I agree to using a website based in the United States."
-    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
+    under_13_consent: "Eğer 13 yaşından küçüksem, Code.org hizmetlerini kullanmam için ebeveynlerimin veya yasal vasimin izni olduğunu onaylıyorum."
+    agree_us_website: "Amerika Birleşik Devletleri merkezli bir web sitesi kullanmayı kabul ediyorum."
+    my_data_to_us: "Bu siteyi kullanımıma ilişkin veriler Amerika Birleşik Devletleri’ne gönderilebilir ve Amerika Birleşik Devletleri’nde depolanabilir veya işlenebilir."
     student_terms: "Code.org <a href='http://code.org/tos'> hizmet şartlarına</a> bağlı olmayı kabul edersiniz. Eğer ben 13 yaşını altında isem, ebeveyn veya yasal velimin Code.org Hizmetlerini kullanma izni verdiğini bu formu göndererek onaylıyorum. <br/> <br/> E-posta adresleri öğrencilerle bağlantı kurmamız için herhangi bir formda depolanmaz. Öğrenciler şifre kurtarma dışında Code.org'dan herhangi bir e-posta almaz. Daha fazla bilgi için <a href='http://code.org/privacy'> Gizlilik Politikamıza</a> bakınız."
     teacher_terms: "Code.org sitesinin Hizmet ve Gizlilik politikalarını kabul ediyorum. Daha fazla bilgi için, <a href='http://code.org/privacy'> Hizmet ve Gizlilik politikamıza göz atın</a>."
     additional_information: "Giriş işleminize devam edebilmek için ek bilgilere ihtiyaç duymaktayız."
@@ -128,7 +129,7 @@ tr:
     field_is_required: "gerekli"
     accept_terms: "Hesap oluşturmak için kabul etmelisiniz"
     error: "Bir hata oluştu."
-    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_question: "Size kurslarımızdaki yenilikler, yerel fırsatlar veya diğer bilgisayar bilimi haberleriyle ilgili e-posta gönderebilir miyiz?"
     email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: "Evet"
     email_preference_no: "Hayır"

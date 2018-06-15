@@ -1,4 +1,5 @@
-"zh-CN":
+---
+zh-CN:
   data:
     markdown_instructions:
       "'pre-assessment survey q25A'_markdown_instruction": '如果是，在当前的计算机科学课程前，你还学过什么计算机科学课程？
@@ -2929,7 +2930,6 @@
         关卡5</a>。\r\n* 确保你有权利使用这些图片。\r\n* 写下所有你需要的属性信息。\r\n* 将所有图片上传到你的项目中。如果忘了怎么做，就浏览\n<a
         href=\"/s/csd2/stage/7/puzzle/5\" target=\"_new\">课程 7 关卡 5</a>。\r\n\r\n"
       CSD U3 - Booleans Video_markdown_instruction: "# Boolean Expressions Video"
-      CSD U3 - Booleans Video_2018_markdown_instruction: "# Boolean Expressions Video"
       CSD U3 - Simple Counter Predict_markdown_instruction: "# The Counter Pattern\r\n\r\nThis
         pattern is one of the most important ones in all of programming. \r\n\r\n![](https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56
         PM.png)\r\n    \r\nIt is used to increase the value of a variable by 1. You
@@ -4702,7 +4702,7 @@
         这样做\r\n\r\n* 调试程序让云像图片里一样，宽度大于高度。\r\n* 提示：你需要改动两个参数。哪些设置了云的宽度和高度？\r\n\r\n_挑战：太阳和图片中的位置不完全一样。你能改变太阳的坐标，让它和图片里的完全一致吗？_"
       CSD U3 Random Debug Cloud_2018_markdown_instruction: "<img src=\"https://images.code.org/45d1d513f5ed63592e98ea3e4a08840c-image-1520403109680.11.28\nPM.png\"
         style=\"float:right;height:150px\">\r\n\r\n# 调试 - 用4个参数\r\n\r\n现在，草地好了。让我们在天上加一朵云。不幸的是，现在看起来有点滑稽。\r\n\r\n#
-        这样做\r\n\r\n* 调试程序让云像图片里一样，宽度大于高度。\r\n* 提示：你需要改动两个参数。哪些设置了云的宽度和高度？\r\n\r\n_挑战：太阳和图片中的位置不完全一样。你能改变太阳的坐标，让它和图片里的完全一致吗？_\n"
+        这样做\r\n\r\n* 调试程序让云像图片里一样，宽度大于高度。\r\n* 提示：你需要改动两个参数。哪些设置了云的宽度和高度？\r\n\r\n_挑战：太阳和图片中的位置不完全一样。你能改变太阳的坐标，让它和图片里的完全一致吗？_\n\n"
       CSD U3 Random Debug Grass_markdown_instruction: "<img src=\"https://images.code.org/83269268e1c4f8af8551253ff4573b43-image-1490825158453.03.45\nPM.png\"
         style=\"float:right;height:150px\">\r\n\r\n# 调试 - 用4个参数\r\n\r\n这个程序用了`rect()`
         （矩形）and `ellipse()`（椭圆）的4个参数版本来画一个简单的场景。\r\n\r\n# 这样做\r\n\r\n* 调试程序并改正错误，让草地延伸到整个底部。\r\n*
@@ -19243,19 +19243,24 @@
         that you can find by clicking on the buttons and trying out whatever you like.\r\n-
         Remember: you can't break it :)\r\n\r\nSee how long it takes you to crack
         the cipher! Is this a good method of encrypting secret data?\r\n\r\n<img src=\"http://code.org/api/hour/finish_encryption.png\">"
-      Crack Random Substitution_2018_markdown_instruction: "# Break a random substitution
-        cipher!\r\n\r\nThis version of the tool gives you more information about the
-        encrypted text and more options for how to try out different substitutions.\r\n\r\n###
-        Different ways to analyze text\r\n- Play with some of the sorting options
-        available in the Random substitution cipher tab to get different views on
-        the letter frequencies in the input text as well as standard English text.\r\n![](https://images.code.org/82efbca1807206c9a07de520fdb22027-image-1443572614493.23.28.png)\r\n\r\n###
-        Different ways to substitute\r\n- To substitute a letter you can drag a blue
-        letter of the alphabet directly underneath the orange letter you want changed
-        in the original ciphertext.\r\n![](https://images.code.org/da9a7af7568d8c1698872ab91b4d79d7-image-1443572471212.gif)\r\n\r\n###
-        Play.  Always play.\r\n- There are other ways to analyze and substitute characters
-        that you can find by clicking on the buttons and trying out whatever you like.\r\n-
-        Remember: you can't break it :)\r\n\r\nSee how long it takes you to crack
-        the cipher! Is this a good method of encrypting secret data?\r\n\r\n<img src=\"http://code.org/api/hour/finish_encryption.png\">"
+      Crack Random Substitution_2018_markdown_instruction: |-
+        # 破解随机交换加密！
+
+        这个工具提供了关于加密文本的更多信息，并能尝试不同的替换选择。
+
+        ### 分析文本的不同方法
+        - 试试随机替换加密标签里的一些选项来看看输入文本和标准英语文本间不同的字母频率。
+        ![](https://images.code.org/82efbca1807206c9a07de520fdb22027-image-1443572614493.23.28.png)
+
+        ### 替换的不同方法
+        - 要替换字母，需要将字母表中蓝色的字母拖放到在原始加密的橙色字母下。
+        ![](https://images.code.org/da9a7af7568d8c1698872ab91b4d79d7-image-1443572471212.gif)
+
+        ### 尝试，不停的尝试。
+        - 还有别的方法来分析并替换字符，可以点击按钮，随机尝试。
+        - 记住：不能破坏它。:)
+
+        看看花多长时间能破解它！这是不是一个好的加密数据的方法？
       Crack a Caesar Cipher_markdown_instruction: |
         # Crack a Caesar cipher!
 
@@ -19306,6 +19311,9 @@
       D_Frozen_nested9_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         \ _\"现在，我们应该做什么？让我们浏览并创造自己的冬季仙境！\"_\r\n\r\n试着摆弄你自己创建的。画自己喜欢的！\r\n- 如果你在楼梯图案那里转两个不同的角度会发生什么？\r\n-
         如果你的钻石图案长一点或短一点会发生什么？\r\n- 如果在一个雪花上画另一个雪花看起来会是什么样子？\r\n"
+      Dance Party 1-validated_markdown_instruction: "**Make a prediction:** Here’s
+        a sprite called `alien1`! What do you think will happen when you click on
+        her?"
       Dance Party 1_markdown_instruction: "**Make a prediction:** Here’s a sprite
         called `alien1`! What do you think will happen when you click on her?"
       Dance Party 2_markdown_instruction: The alien was proud of her dancing skills
@@ -19326,6 +19334,8 @@
         Now create your own alien disco! Looking for inspiration? Try these ideas:
         * Create two bell sprites, and make the aliens do a different dance move for each
         * Make the aliens do a new dance move when they touch
+      Dance Party Predict_markdown_instruction: "**Make a prediction:** Here’s a sprite
+        called `alien1`! What do you think will happen when you click on her?"
       Data Visualizations 101_markdown_instruction: |
         ## Data Visualization 101: How to design charts and graphs
 
@@ -20000,13 +20010,23 @@
         **Finalize your "Chaser Game v.1"** and click Finish.
 
         * **Note**: We'll revisit this game in the next lesson where you can improve it.  This is **just version 1**
+      Fish Tank 1-validated_markdown_instruction: "**做出预测**：你觉得当运行代码时，会发生什么？"
       Fish Tank 1_markdown_instruction: "**做出预测**：你觉得当运行代码时，会发生什么？"
+      Fish Tank 2-validated_markdown_instruction: We're going to make a fish tank.
+        Change Dusty the tumbleweed to a fish.
       Fish Tank 2_markdown_instruction: 我们要做一个鱼缸。将达斯提草变成一条鱼。
+      Fish Tank 3-validated_markdown_instruction: 这些旋转会让鱼变得头晕！改变鱼的行为，让它沿着水箱游动。
       Fish Tank 3_markdown_instruction: 这些旋转会让鱼变得头晕！改变鱼的行为，让它沿着水箱游动。
+      Fish Tank 4-validated_markdown_instruction: 鱼缸需要一些水！用`设置背景颜色`模块来让背景为绿色。
       Fish Tank 4_markdown_instruction: 鱼缸需要一些水！用`设置背景颜色`模块来让背景为绿色。
+      Fish Tank 5-validated_markdown_instruction: 鱼有些孤单。在鱼缸内创造一个新的精灵。
       Fish Tank 5_markdown_instruction: 鱼有些孤单。在鱼缸内创造一个新的精灵。
+      Fish Tank 6-validated_markdown_instruction: 想让鱼的朋友做什么？增加一个行为，然后看看他们做了什么！
       Fish Tank 6_markdown_instruction: 想让鱼的朋友做什么？增加一个行为，然后看看他们做了什么！
+      Fish Tank 7-validated_markdown_instruction: 工具箱里有许多新的模块。用它们来让你的鱼缸变得特别。
       Fish Tank 7_markdown_instruction: 工具箱里有许多新的模块。用它们来让你的鱼缸变得特别。
+      Fish Tank Predict_markdown_instruction: "**做出预测**：你觉得当运行代码时，会发生什么？"
+      Fish Tank Template_markdown_instruction: Project Template
       Food Fight!_markdown_instruction: "我们已为你添加了上一关的函数。\r\n<hr/>\r\n\r\n<h4>\r\n用“如果”模块来编写你的游戏，当play_score(玩家分数)
         大于某个值时，调用level_up(升级) 函数。<br/><br/>\r\n</h4>\r\n<i>例如：“play_score” > 6</i>\r\n\r\n\r\n<hr/>\r\n<i>玩游戏，并且达到第3级来到达下一关。
         </i>"
@@ -35787,6 +35807,9 @@
         \ \r\n![](https://images.code.org/dc89d6c19c17adb23b6b5ff9a62c4583-image-1443574425182.gif)\r\n\r\n\r\nHow
         hard would it be to crack a message encrypted with this cipher? Does the length
         of the key make a difference?\r\n"
+      Virtual Pet 1-validated_markdown_instruction: This is Geraldine, your new pet
+        giraffe. What do you think will happen if you press run and then click on
+        her?
       Virtual Pet 1_markdown_instruction: This is Geraldine, your new pet giraffe.
         What do you think will happen if you press run and then click on her?
       Virtual Pet 2_markdown_instruction: There's a mud puddle over in the corner.
@@ -35810,6 +35833,9 @@
       Virtual Pet Freeplay_markdown_instruction: 'Freeplay: Can you add more special
         items for your virtual pet? Can you give her some friends? What more can you
         make your giraffe do? '
+      Virtual Pet Predict_markdown_instruction: "**Make a prediction:** This is Geraldine,
+        your new pet giraffe. What do you think will happen if you press run and then
+        click on her?"
       Visual Accessibility_markdown_instruction: "# Visual Accessibility: Color Contrast\r\n\r\nPeople
         need to be able to see and read the content on your web page for it to be
         useful. Not everyone will see your website the same way you do. Some people

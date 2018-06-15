@@ -85,6 +85,7 @@ et:
     facebook: 'Facebook'
     windowslive: 'Microsofti konto'
     clever: 'Tark konto'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Unustasid oma salasõna?'
     need_confirmation: "Ei saanud kinnituse juhiseid?"
     need_unlock: "Ei saanud lahtilukustamise juhiseid?"

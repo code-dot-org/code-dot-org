@@ -85,6 +85,7 @@ ro:
     facebook: 'Facebook'
     windowslive: 'Cont Microsoft'
     clever: 'Clever Account'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Ai uitat parola?'
     need_confirmation: "Nu ai primit instrucţiuni de confirmare?"
     need_unlock: "Nu ai primit instrucţiuni de deblocare?"
@@ -115,9 +116,9 @@ ro:
     invalid_password: "Parola trebuie să conţină cel puțin 6 caractere"
     mismatch_password: "Cele două parole introduse nu se potrivesc"
     agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
-    under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
-    agree_us_website: "I agree to using a website based in the United States."
-    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
+    under_13_consent: "Dacă am vârsta sub 13 ani, confirm că am permisiunea părintelui sau tutorelui meu legal de a utiliza serviciile Code.org."
+    agree_us_website: "Sunt de acord să folosesc un site web din Statele Unite."
+    my_data_to_us: "Datele obținute în urma utilizării de către mine a acestui site pot fi trimise și stocate sau prelucrate în Statele Unite."
     student_terms: "Sunt de acord să respect Code.org <a href='http://code.org/tos'> termenii de serviciu</a>. Dacă am sub vârsta de 13 ani, confirm prin trimiterea acestui formular că am părinte sau tutore legal și permisiunea de a utiliza serviciile Code.org. <br/> <br/> Adresele de e-mail nu sunt stocate într-o formă care permite să contactăm studenţii. Elevii nu vor primi niciodată e-mailuri de la Code.org cu excepţia de recuperare a parolei. A se vedea termenii noștrii<a href='http://code.org/privacy'> de confidentialitate</a> pentru mai multe informaţii."
     teacher_terms: "Sunt de acord să respect termenii Code.org de serviciu. Pentru mai multe informaţii despre confidenţialitate, consultaţi <a href='http://code.org/privacy'> politica noastră de confidenţialitate</a>."
     additional_information: "Mai avem nevoie de câteva informaţii adiționale pentru a te putea înscrie."
@@ -128,7 +129,7 @@ ro:
     field_is_required: "este necesar"
     accept_terms: "Trebuie să fii de acord pentru a crea un cont"
     error: "S-a produs o eroare."
-    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_question: "Sunteți de acord să vă trimitem prin e-mail actualizări cu privire la cursurile noastre, oportunitățile locale sau alte știri din domeniul informaticii?"
     email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: "Da"
     email_preference_no: "Nu"

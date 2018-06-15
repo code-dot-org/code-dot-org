@@ -1,4 +1,5 @@
-"bg":
+---
+bg:
   devise:
     confirmations:
       confirmed: Вашият имейл адрес е успешно потвърден.

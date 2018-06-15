@@ -1,4 +1,5 @@
-"da":
+---
+da:
   errors:
     messages:
       not_saved: 'Ret venligst følgende fejl:'
@@ -94,6 +95,7 @@
     facebook: Facebook
     windowslive: Microsoft-konto
     clever: Clever Account
+    powerschool: Powerschool Account
     forgot_password: Glemt din adgangskode?
     need_confirmation: Har du ikke modtaget bekræftelsesinstruktioner?
     need_unlock: Ikke modtaget lås op instruktioner?

@@ -1,4 +1,5 @@
-"sv":
+---
+sv:
   data:
     block_categories:
       Actions: Handlingar
@@ -45,5 +46,6 @@
       Foo: Foo
       Name: Namn
       NEW BLOCKS: NEW BLOCKS
+      'Functions ': 'Functions '
       Game/Score: Game/Score
       Function: Funktion

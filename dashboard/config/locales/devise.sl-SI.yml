@@ -1,4 +1,5 @@
-"sl":
+---
+sl:
   devise:
     confirmations:
       confirmed: Vaš e-poštni naslov je bil uspešno potrjen.

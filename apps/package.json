@@ -99,6 +99,7 @@
     "eslint-plugin-babel": "^4.1.2",
     "eslint-plugin-mocha": "^4.9.0",
     "eslint-plugin-react": "^5.2.2",
+    "fake-fetch": "^2.0.0",
     "fast-memoize": "2.0.2",
     "firebase": "^2.4.2",
     "firebase-bolt": "^0.8.0",

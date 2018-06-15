@@ -1,4 +1,5 @@
-"ku":
+---
+ku:
   data:
     game:
       name:
@@ -759,6 +760,8 @@
         CSF_ifelse_allskins: Using If/Else Blocks
         CSF_ifelseifelse_allskins: Using If/ElseIf/Else Blocks
         CSF_loops_AB: گرێکان
+        csd_gamelab_booleans: Boolean Expressions
+        csd_gamelab_conditional_statements: Conditional Statements
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

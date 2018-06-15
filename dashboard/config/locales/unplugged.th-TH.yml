@@ -1,4 +1,5 @@
-"th":
+---
+th:
   data:
     unplugged:
       Unplug1:
@@ -129,7 +130,7 @@
           must complete a task (reach a certain height or bear a certain weight),
           and students discuss the idea of being persistent when things get complicated.
       GettingLoopy:
-        title: Getting Loopy
+        title: มาวนลูปกัน
         desc: This lesson introduces the programming concept of loops (repeated instructions)
           through a dance activity. Students will learn simple choreography, then
           be instructed to repeat it.
@@ -318,7 +319,7 @@
           making paper airplanes. This lesson also focuses on the bigger picture of
           computer science and how algorithms play an essential part.
       courseC_unplugged_gettingLoopy:
-        title: Getting Loopy
+        title: มาวนลูปกัน
         desc: This lesson introduces the programming concept of loops (repeated instructions)
           through a dance activity. Students will learn simple choreography, then
           be instructed to repeat it.
@@ -528,7 +529,7 @@
           making paper airplanes. This lesson also focuses on the bigger picture of
           computer science and how algorithms play an essential part.
       GettingLoopy_2018:
-        title: Getting Loopy
+        title: มาวนลูปกัน
         desc: This lesson introduces the programming concept of loops (repeated instructions)
           through a dance activity. Students will learn simple choreography, then
           be instructed to repeat it.

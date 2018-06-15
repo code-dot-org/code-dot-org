@@ -1,4 +1,5 @@
-"hi":
+---
+hi:
   errors:
     messages:
       not_saved: 'कृपया निम्न गलतिया सुधारें:'
@@ -93,6 +94,7 @@
     facebook: फेसबुक
     windowslive: Microsoft खाता
     clever: Clever Account
+    powerschool: Powerschool Account
     forgot_password: अपना पासवर्ड भूल गए?
     need_confirmation: पुष्टिकरण निर्देश प्राप्त नहीं हुआ?
     need_unlock: खोलने के अनुदेश नही मिले?

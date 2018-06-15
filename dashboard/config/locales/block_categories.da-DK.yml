@@ -1,4 +1,5 @@
-"da":
+---
+da:
   data:
     block_categories:
       Actions: Handlinger
@@ -45,5 +46,6 @@
       Foo: Foo
       Name: Navn
       NEW BLOCKS: NEW BLOCKS
+      'Functions ': 'Functions '
       Game/Score: Game/Score
       Function: Funktion

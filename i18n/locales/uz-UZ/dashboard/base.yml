@@ -85,6 +85,7 @@ uz:
     facebook: 'Facebook'
     windowslive: 'Microsoft akkaunti'
     clever: 'Clever Account'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Parolni unutdingizmi?'
     need_confirmation: "Tasdiqlash haqidagi ko'rsatmalarni olmadingizmi?"
     need_unlock: "Didn't receive unlock instructions?"

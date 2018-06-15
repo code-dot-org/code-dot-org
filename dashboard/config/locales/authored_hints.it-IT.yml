@@ -1,4 +1,5 @@
-"it":
+---
+it:
   data:
     authored_hints:
       2-3 Artist 1 new_authored_hint:
@@ -1281,21 +1282,21 @@
         mc_3_c: Non aver paura di sbagliare! Esegui il codice per vedere cosa succede,
           anche se non hai ancora risolto l'esercizio.
       Pattern Bee 1_authored_hint:
-        conditional_pointer: |-
-          Start by thinking about this part: what's different each step of the way? What kind of block can you use to make a *decision* about whether you're at a flower or honeycomb?
-
-          ![](https://images.code.org/a4883ea91c2f879ca1bb281d7944ed87-image-1471477752512.48.07 PM.png)
-        turn_at_honeycomb_pointer: Other than making honey, do you see anything different
-          that you have to do at each honeycomb?
+        conditional_pointer: "Comincia a riflettere da questo: cosa è diverso a ogni
+          passo del percorso? \nChe Blocco puoi usare per prendere una *decisione*
+          se sei su un Fiore o un Favo?\n\n! [] (https://images.code.org/a4883ea91c2f879ca1bb281d7944ed87-image-1471477752512.48.07
+          PM.png)"
+        turn_at_honeycomb_pointer: A parte produrre Miele, c'e' qualcosa di diverso
+          da fare su un Favo?
       Planning Farmer_authored_hint:
-        conditional_pointer: |-
-          Start by thinking about this part: what's different each step of the way? What kind of block can you use to make a *decision* about whether you're at a flower or honeycomb?
-
-          ![](https://images.code.org/a4883ea91c2f879ca1bb281d7944ed87-image-1471477752512.48.07 PM.png)
-        turn_at_honeycomb_pointer: Other than making honey, do you see anything different
-          that you have to do at each honeycomb?
+        conditional_pointer: "Comincia a riflettere da questo: cosa è diverso a ogni
+          passo del percorso? \nChe Blocco puoi usare per prendere una *decisione*
+          se sei su un Fiore o un Favo?\n\n! [] (https://images.code.org/a4883ea91c2f879ca1bb281d7944ed87-image-1471477752512.48.07
+          PM.png)"
+        turn_at_honeycomb_pointer: A parte produrre Miele, c'e' qualcosa di diverso
+          da fare su un Favo?
       Quantum Bee - Ryan_authored_hint:
-        test_hint: This is a test hint.
+        test_hint: Questo é un suggerimento per il test.
       Test embedded K1 Blockly in instructions_authored_hint: {}
       Underground Avoiding Lava_authored_hint:
         mc_11_a: Tutto il codice per controllare se c'è la lava e coprirla è già pronto.
@@ -1350,13 +1351,13 @@
         mc_9_c: Usa il blocco `metti una torcia` per posizionare una torcia nel punto
           in cui ti trovi.
       Valentine_artist2_01_authored_hint:
-        Valentine_artist2_01_a: Each side of the grass is 30 pixels long. Try using
-          a stair step pattern.
+        Valentine_artist2_01_a: Ogni lato dell' Erba e' lungo 30 pixels. Prova a utilizzare
+          uno schema Gradino.
         Valentine_artist2_01_b: Vedi qualche schema che si ripete? Prova ad usare
           due blocchi "vai avanti" e due diversi blocchi "gira a" all'interno di un
           ciclo.
         Valentine_artist2_01_c: |-
-          Try this loop
+          Prova questo Ciclo
           <xml><block type="controls_repeat">
           <title name="TIMES">8</title>
           <statement name="DO">
@@ -1373,7 +1374,8 @@
           <title name="VALUE">30</title>
           <next>
           <block type="draw_turn_by_constant">
-          <title name="DIR">turnLeft</title>
+          gira a sinistra
+          <title name="DIR"></title>
           <title name="VALUE">90</title>
           </block>
           </next>
@@ -1385,89 +1387,107 @@
           </statement>
           </block></xml>
       Valentine_artist_01_authored_hint:
-        Valentine_artist_01_a: Which direction does the artist need to face to move?
-          Which direction does the artist need to face to place a new llama sticker?
-        Valentine_artist_01_b: The artist needs to place 10 llama stickers and turn
-          90 degrees at each turn.
+        Valentine_artist_01_a: "In quale direzione deve trovarsi l'artista per muoversi?
+          \nIn quale direzione deve trovarsi l'artista per appiccicare un nuovo adesivo
+          del lama?"
+        Valentine_artist_01_b: L'artista deve appiccicare 10 adesivi del lama e ruotare
+          di 90 gradi ad ogni turno.
       Valentine_playlab_01_authored_hint:
         Valentine_playlab_01_a: |-
-          Snap the `actor 1 throw red hearts down` block into the `when actor 1 clicked` event.
+          Attacca il blocco `agente 1 getta cuori rossi` sull' evento `quando agente 1 ha cliccato `.
 
-          Don't forget to change `left` to `down`!
-        Valentine_playlab_01_b: Use the `move actor 1 left` block by clicking it into
-          place beneath the `when left arrow clicked` event.
+          Non scordarti di cambiare `sinistra` con `giu'`!
+        Valentine_playlab_01_b: Usa il blocco `muovi agente 1 a sinistra` cliccandolo
+          al suo posto sotto the `quando la freccetta a sinistra e' cliccata`.
       aE1_authored_hint: {}
       aE2_authored_hint:
-        aE2_a: Notice that since the napkins are 20 pixels long, you'll need to jump
-          20 pixels before you start your next loop.
+        aE2_a: Nota che siccome i tovaglioli sono lunghi 20 pixels, e' necessario
+          saltare 20 pixels prima di iniziare il tuo possimo ciclo.
       aE3_authored_hint:
-        aE3_a: After you run your **nested loop** from the last stage, you need to
-          jump back to the start of the line.
-        aE3_b: "Don't forget to move the artist down before you start a new row of
-          shapes! \n\nTo move the artist down and get him facing the right way again,
-          make sure to:\n- Turn 90 degrees (to face down)\n- Jump 20 pixels (to get
-          to new row)\n- Turn back 90 degrees (to face right again)"
-        aE3_c: When you're all done, your **nested loops** should be three repeats
-          deep.
+        aE3_a: Dopo aver eseguito il **ciclo nidificato** dalla fase precedente, è
+          necessario tornare all'inizio della linea.
+        aE3_b: |-
+          Non dimenticare di spostare l'artista prima di iniziare una nuova fila di forme!
+
+          Per spostare l'artista verso il basso e ruotarlo nella direzione giusta:
+          - Ruota di 90 gradi (per girare verso il basso)
+          - Salta 20 pixel (per arrivare ad una nuova riga)
+          - Rigira di 90 gradi (per girare di nuovo verso destra)
+        aE3_c: Quando hai finito, i tuoi **cicli nidificati** dovrebbero essere profondi
+          tre ripetizioni.
         aE3_d: Se temi di esserti perso, puoi sempre cliccare "Ripristina" per riportarti
           alla situazione iniziale!
       aE3alternate_authored_hint:
-        aE3alternate_a: After you run your **nested loop** from the last stage, you
-          need to jump back to the start of the line.
-        aE3alternate_b: "Don't forget to move the artist down before you start a new
-          row of shapes! \n\nTo move the artist down and get him facing the right
-          way again, make sure to:\n- Turn 90 degrees (to face down)\n- Jump 20 pixels
-          (to get to new row)\n- Turn back 90 degrees (to face right again)"
-        aE3alternate_c: When you're all done, your **nested loops** should be three
-          repeats deep.
+        aE3alternate_a: Dopo aver eseguito il **ciclo nidificato** dalla fase precedente,
+          è necessario tornare all'inizio della linea.
+        aE3alternate_b: |-
+          Non dimenticare di spostare l'artista prima di iniziare una nuova fila di forme!
+
+          Per spostare l'artista verso il basso e ruotarlo nella direzione giusta:
+          - Ruota di 90 gradi (per girare verso il basso)
+          - Salta 20 pixel (per arrivare ad una nuova riga)
+          - Rigira di 90 gradi (per girare di nuovo verso destra)
+        aE3alternate_c: Quando hai finito, i tuoi **cicli nidificati** dovrebbero
+          essere profondi tre ripetizioni.
         aE3alternate_d: Se temi di esserti perso, puoi sempre cliccare "Ripristina"
           per riportarti alla situazione iniziale!
       aE3alternateB_authored_hint:
-        aE4alternateB_a: After you run your **nested loop** from the last stage, you
-          need to jump back to the start of the line.
-        aE4alternateB_b: "Don't forget to move the artist down before you start a
-          new row of shapes! \n\nTo move the artist down and get him facing the right
-          way again, make sure to:\n- Turn 90 degrees (to face down)\n- Jump 20 pixels
-          (to get to new row)\n- Turn back 90 degrees (to face right again)"
-        aE4alternateB_c: When you're all done, your **nested loops** should be three
-          repeats deep.
+        aE4alternateB_a: Dopo aver eseguito il **ciclo nidificato** dalla fase precedente,
+          è necessario tornare all'inizio della linea.
+        aE4alternateB_b: |-
+          Non dimenticare di spostare l'artista prima di iniziare una nuova fila di forme!
+
+          Per spostare l'artista verso il basso e ruotarlo nella direzione giusta:
+          - Ruota di 90 gradi (per girare verso il basso)
+          - Salta 20 pixel (per arrivare ad una nuova riga)
+          - Rigira di 90 gradi (per girare di nuovo verso destra)
+        aE4alternateB_c: Quando hai finito, i tuoi **cicli nidificati** dovrebbero
+          essere profondi tre ripetizioni.
         aE4alternateB_d: Se temi di esserti perso, puoi sempre cliccare "Ripristina"
           per riportarti alla situazione iniziale!
       aE4_authored_hint:
-        aE4_a: After you run your **nested loop** from the last stage, you need to
-          jump back to the start of the line.
-        aE4_b: "Don't forget to move the artist down before you start a new row of
-          shapes! \n\nTo move the artist down and get him facing the right way again,
-          make sure to:\n- Turn 90 degrees (to face down)\n- Jump 20 pixels (to get
-          to new row)\n- Turn back 90 degrees (to face right again)"
-        aE4_c: When you're all done, your **nested loops** should be three repeats
-          deep.
+        aE4_a: Dopo aver eseguito il **ciclo nidificato** dalla fase precedente, è
+          necessario tornare all'inizio della linea.
+        aE4_b: |-
+          Non dimenticare di spostare l'artista prima di iniziare una nuova fila di forme!
+
+          Per spostare l'artista verso il basso e ruotarlo nella direzione giusta:
+          - Ruota di 90 gradi (per girare verso il basso)
+          - Salta 20 pixel (per arrivare ad una nuova riga)
+          - Rigira di 90 gradi (per girare di nuovo verso destra)
+        aE4_c: Quando hai finito, i tuoi **cicli nidificati** dovrebbero essere profondi
+          tre ripetizioni.
         aE4_d: Se temi di esserti perso, puoi sempre cliccare "Ripristina" per riportarti
           alla situazione iniziale!
       aE5_authored_hint: {}
       aE6_authored_hint:
         aE6_a: |-
-          If there are 180 degrees in a semicircle and each loop the artist makes turns 3 degrees, how many times would you need to loop to draw half of a full circle?
+          Se ci sono 180 gradi in un semicerchio e ad ogni ciclo l'artista gira 3 gradi, quante volte dovresti eseguire il ciclo per disegnare la metà di un cerchio completo?
 
-          **180 ÷ 3 = ?**
+          **180 ÷ 3 =?**
       aE7_authored_hint:
-        aE7_a: Draw the bottom half of a circle and then the top half of a circle
-          to make one segment.
-        aE7_b: You will need 4 segments to complete this puzzle.
+        aE7_a: Disegna la metà inferiore di un cerchio e poi la metà superiore di
+          un cerchio per creare un segmento.
+        aE7_b: Avrai bisogno di 4 segmenti per completare questo puzzle.
       aE8_authored_hint:
-        aE8_a: "To make a square from your line, you will need to: \n-  draw the line
-          \n-  use the curvy corner\n\nRepeat these steps 4 times."
+        aE8_a: |-
+          Per creare un quadrato dalla tua linea, dovrai:
+          - disegnare la linea
+          - usare l'angolo curvato
+
+          Ripeti questi passaggi 4 volte.
       allHallows2017_authored_hint:
-        allHallows2017_a: Careful!  GT might follow behind you on his bike and erase
-          your line!
+        allHallows2017_a: Attento! GT potrebbe seguirti sulla tua bici e cancellare
+          la tua linea!
         allHallows2017_g: 'Sarah dice: "Hai freddo? Vieni e siediti nell''angolo...
           È di 90 gradi!"'
-        allHallows2017_c: 'Jordyn says: "You crayon''t stop now! Keep going!"'
-        allHallows2017_d: 'Josh says: "You will need to draw on your coding skills
-          to complete this puzzle!"'
-        allHallows2017_e: 'Dani says: "I''m not good at puns. Try using a repeat block!"'
-        allHallows2017_b: 'Baker says: "The Chicago crayon only works on the *green
-          line*."'
+        allHallows2017_c: 'Jordyn dice: "Non ti fermare ora! Vai! Vai!"'
+        allHallows2017_d: 'Josh dice: "Dovrai attingere alle tue capacità di programmatore
+          per completare questo puzzle!"'
+        allHallows2017_e: 'Dani dice: "Non sono bravo nei giochi di parole. Prova
+          a usare un blocco di ripetizione!"'
+        allHallows2017_b: 'Baker dice: "il pastello Chicago funziona solo sula *linea
+          verde*."'
         allHallows2017_f: 'Amy dice: "Puoi farcela! Basta pensare fuori dagli schemi"'
       artistDebugVideo1_authored_hint:
         courseA_artist_loops7_a: Non riesci a capire dove posizionare il ciclo? Allora
@@ -1484,48 +1504,48 @@
         artistLoopsK3_a: Prova a utilizzare quello che hai imparato sui blocchi di
           ripetizione per completare questo esercizio!
       artistLoopsK4_authored_hint:
-        artistLoopsK4_a: Stuck? Try running the code to see which block is incorrect.
+        artistLoopsK4_a: Bloccato? Provare a eseguire il codice per vedere quale blocco
+          non è corretto.
       artistLoopsK5_authored_hint:
-        artistLoopsK5_a: All 4 of the starting blocks should go inside of your repeat
-          block to solve this puzzle.
+        artistLoopsK5_a: Tutti e 4 i blocchi di partenza dovrebbero stare nel tuo
+          blocco ripetere per risolvere questo puzzle.
       artistLoopsK6_authored_hint:
-        artistLoopsK6_a: Try running the code to see where there is a bug.
+        artistLoopsK6_a: Prova a eseguire il codice per vedere dove c'è un bug.
       artistLoopsK7_authored_hint:
-        artistLoopsK7_a: All of the blocks you need for this puzzle are already in
-          your workspace!
+        artistLoopsK7_a: Tutti i blocchi necessari per questo puzzle sono già nel
+          tuo spazio di lavoro!
       artistLoopsK8_authored_hint:
-        artistLoopsK8_a: Try running the code to see where there is a bug.
+        artistLoopsK8_a: Prova a eseguire il codice per vedere dove c'è un bug.
       artistLoopsK9_authored_hint:
-        artistLoopsK9_a: This challenge uses FOUR loops, one right after another!
+        artistLoopsK9_a: Questa sfida utilizza QUATTRO cicli, uno dopo l'altro!
       artistLoopsKA_authored_hint:
-        artistLoopsKA_a: Use the jump block to move forward without drawing a line.
+        artistLoopsKA_a: Usa il blocco salto per avanzare senza tracciare una linea.
       artistLoopsKB_authored_hint:
-        artistLoopsKB_a: There should be 3 blocks inside of your loop to solve this
-          puzzle.
+        artistLoopsKB_a: Ci dovrebbero essere 3 blocchi all'interno del tuo ciclo
+          per risolvere questo puzzle.
       artistLoopsKFP_authored_hint: {}
       comment_intro_maze_2018_authored_hint:
-        courseC_maze_programming4_a: Comments are also helpful when other people try
-          to read your code.
-        courseC_maze_programming4_b: Add a comment when you change directions- what
-          would have happened if you turned the other way?
+        courseC_maze_programming4_a: I commenti sono anche utili quando altre persone
+          tentano di leggere il tuo codice.
+        courseC_maze_programming4_b: Aggiungi un commento quando cambi direzione-
+          cosa sarebbe successo se ti fossi voltato dall'altra parte?
       conditionals_forvideo_harvester_authored_hint: {}
       course1_artist_loops_challenge1_authored_hint:
         courseA_artist_loops_challenge1_a: |
-          You can use loops like this to create the walls and the roof. Try repeating different blocks.
-
-
+          Puoi usare cicli come questo per creare i muri e il tetto. Prova a ripetere blocchi diversi.
 
           ![](https://images.code.org/1581a2f599b501103064fc9864aa964d-image-1491863694560.png)
 
-          Design your own or click the ![](https://images.code.org/53090194cea5dbf35ce9e35205156f5d-image-1491864793265.png) for some ideas!
+          Disegna il tuo o clicca ![](https://images.code.org/53090194cea5dbf35ce9e35205156f5d-image-1491864793265.png) per alcuni suggerimenti!
         courseA_artist_loops_challenge1_b: "![](https://images.code.org/34f3bae38f77f07eaf455188c0b008e5-image-1491864823946.png)"
         courseA_artist_loops_challenge1_c: "![](https://images.code.org/24b208839971803f3f6cd6ae41da56df-image-1491864839734.png)"
         courseA_artist_loops_challenge1_d: "![](https://images.code.org/d3ccefffa0cc77bdd4a597cdb49fc85e-image-1491864847347.png)"
       course1_artist_loops_challenge2_authored_hint:
         harvey_tictactoe: You can use `jump` blocks to move to other spaces.
       course1_artist_loops_challenge3_authored_hint:
-        courseA_artist_loops_challenge2_a: 'Blocks like this: <xml>  <block type="simple_move_up_left"/></xml>
-          will let your artist move at a slant!'
+        courseA_artist_loops_challenge2_a: 'Blocchi come questo: <xml> <block type
+          = "simple_move_up_left"/> </xml> permetteranno al tuo artista di muoversi
+          in diagonale!'
         courseA_artist_loops_challenge2_b: When you finish one bird house, `jump`
           to the next!
         courseA_artist_loops_challenge2_c: You will need a LOT of blocks inside the
@@ -1538,12 +1558,13 @@
         courseB_artist_loops_challenge1_c: 'You will need to `move` or `jump` over
           some of the same lines twice. '
       course1_collector_loops_challenge1_authored_hint:
-        courseA_collector_loops_challenge1_a: Try changing the numbers in each loop
-          if something goes wrong.
+        courseA_collector_loops_challenge1_a: Prova a cambiare i numeri nei cicli
+          se qualcosa va storto.
         courseA_collector_loops_challenge1_b: You don't need to use a loop if you
           are only doing something one time.
-        courseA_collector_loops_challenge1_c: There are 6 gems on the right side of
-          the cave, but you only need to move and collect 5 times. Do you know why?
+        courseA_collector_loops_challenge1_c: Ci sono 6 gemme sul lato destro della
+          grotta, ma è necessario spostarle e raccoglierle solo 5 volte. Lo sai il
+          perché?
       course1_collector_loops_challenge2_authored_hint:
         courseA_collector_loops_challenge2_b: 'You only need to use one ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34
           PM.png) block to solve this.
@@ -1555,21 +1576,21 @@
           ![](https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png)
       course1_collector_loops_challenge3_authored_hint:
         courseB_collector_loops_challenge1_b: |
-          Start by looping the commands `move south` and `get treasure`.
+          Inizia ripetendo i comandi `vai a sud` e `prendi il tesoro`.
           <xml>
           <block type="maze_moveSouth"/><next>
           <block type="collector_collect"/></next>
           </xml>
         courseB_collector_loops_challenge1_a: |
-          The north pattern is a little different than the south pattern.
+          Il modello a nord è leggermente diverso da quello a sud.
           <xml>
           <block type="collector_collect"/><next>
           <block type="maze_moveNorth"/></next>next>
           </xml>
-        courseB_collector_loops_challenge1_c: "Move East twice between each path.\n<xml>\n
+        courseB_collector_loops_challenge1_c: "Vai a Est due volte tra ogni percorso.\n<xml>\n
           \ <block type=\"maze_moveEast\"/><next>\n  <block type=\"maze_moveEast\"/></next>next>\n
-          \ </xml>\nYou can do this with only 14 blocks. Click for one more hint to
-          see a solution. \n"
+          \ </xml>\nPuoi risuscirci in appena 14 blocchi. \nClicca un altro suggerimento
+          per avere una soluzione.\n"
         courseB_collector_loops_challenge1_d: |-
           Try this!
           <xml>
@@ -1692,18 +1713,18 @@
           </block>
           </xml>
       course1_maze_debugging_challenge1_authored_hint:
-        courseA_maze_seq_challenge1_a: Some paths will lead to TNT, if you move too
-          far.
+        courseA_maze_seq_challenge1_a: Alcuni percorsi portano al TNT, se vai troppo
+          lontano.
       course1_maze_debugging_challenge2_authored_hint:
         courseB_maze_seq_challenge2_a: You do not need to add or remove blocks to
           solve this puzzle.
-        courseB_maze_seq_challenge2_b: Rearrange the blocks and take the middle path.
+        courseB_maze_seq_challenge2_b: Riorganizza i blocchi e prendi la via di mezzo.
       course1_maze_seq_challenge1_authored_hint:
         courseA_maze_seq_challenge2_a: Try counting the spaces with your finger. Remember
           not to count the space where you start!
       course1_maze_seq_challenge2_authored_hint:
         courseB_maze_seq_challenge1_a: The shortest path might not work this time.
-        courseB_maze_seq_challenge1_b: Try moving west to start.
+        courseB_maze_seq_challenge1_b: Prova an andare a ovest per iniziare.
       course1_playlab_events_challenge1_authored_hint:
         courseA_playlab_events_challenge1_a: "Make Waddles the Penguin show when you
           click Robin!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title
@@ -1725,10 +1746,10 @@
           name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n
           \     </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge1_e: "Finally, make Wendel the Wizard show
-          when you click on Spiff!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
+        courseA_playlab_events_challenge1_e: "Infine, fai apparire il Mago Wendel
+          quando clicchi su Spiff!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
-          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n
+          \       <title name=\"VALUE\">\"visibili\"</title>\n        <title name=\"SPRITE\">7</title>\n
           \     </block>\n    </next>\n  </block></xml>"
       course1_playlab_events_challenge2_authored_hint:
         courseA_playlab_events_challenge2_a: "You can make a bird sing.\n<xml> \n
@@ -1766,26 +1787,27 @@
           </next>
           </block></xml>
       course2_artist_nestedLoops_challenge1_authored_hint:
-        courseD_artist_nestedLoops_challenge1_a: Start by making a nested loop to
-          create four octagons. Turn 45 degrees to make the octagon. Jump, then turn
-          90 degrees after each one.
-        courseD_artist_nestedLoops_challenge1_b: Add code to draw a triangle inside
-          of your nested loop. Use 120 degree turns for your triangle.
+        courseD_artist_nestedLoops_challenge1_a: "Inizia creando un ciclo annidato
+          per creare quattro ottagoni. \nRuota di 45 gradi per creare l'ottagono.
+          \nSalta, e ruota di 90 gradi dopo ognuno di essi."
+        courseD_artist_nestedLoops_challenge1_b: Aggiungi il codice all'interno del
+          tuo ciclo annidato per disegnare un triangolo. Usa 120 gradi per il tuo
+          triangolo.
         courseD_artist_nestedLoops_challenge1_c: |-
-          Use a nested loop:
-          - Repeat 8 times
-          - draw an octagon
-          - draw a triangle
-          - jump forward 50 pixels
-          - turn right by 90 degrees
+          Usa un ciclo annidato:
+          - Ripeti 8 volte
+          - Disegna un ottagono
+          - Disegna un triangolo
+          - salta in avanti di 50 pixel
+          - gira a destra di 90 gradi
       course2_artist_nestedLoops_challenge2_authored_hint:
         courseD_artist_nestedLoops_challenge2_a: To draw a regular octagon, the artist
           needs to turn 45 degrees 8 times.
         courseD_artist_nestedLoops_challenge2_b: To draw a square, the artist needs
           to turn 90 degrees 4 times.
       course2_artist_prog_challenge1_authored_hint:
-        courseC_artist_prog_challenge1_a: 'The rectangle is 200 pixels wide and 100
-          pixels tall. '
+        courseC_artist_prog_challenge1_a: 'Il rettangolo è largo 200 pixel e alto
+          100. '
       course2_artist_prog_challenge2_authored_hint:
         courseC_artist_prog_challenge2_a: "You can put commands inside `repeat` block
           to loop them over and over. Try it!\n<xml>\n  \n          <block type=\"controls_repeat\">\n
@@ -1799,9 +1821,9 @@
           \             </statement></block></xml>"
       course2_bee_conditionals_challenge1_authored_hint:
         courseD_bee_conditionals_challenge1_a: |-
-          Can you find a path that reaches every flower and honeycomb without hitting any trees? The best path is a spiral.
+          Riesci a trovare un sentiero che raggiunga tutti i fiori e il favo senza colpire nessun albero? Il percorso migliore è una spirale.
 
-          **You can solve this without ever turning left.**
+          ** Puoi riuscirci senza mai girare a sinistra. **
         courseD_bee_conditionals_challenge1_b: In this puzzle, each space could have
           a flower, a honey comb, or nothing.  That means you can repeat your `if/else`
           conditional at each square.
@@ -1893,7 +1915,7 @@
           not to count the space where you start!
       course2_maze_seq_challenge2_authored_hint:
         courseB_maze_seq_challenge1_a: The shortest path might not work this time.
-        courseB_maze_seq_challenge1_b: Try moving west to start.
+        courseB_maze_seq_challenge1_b: Prova an andare a ovest per iniziare.
       course3_artist_concept_challenge1_authored_hint:
         courseE_artist_concept_challenge1_a: Nel primo ciclo, per disegnare il mezzo
           esagono, l'artista percorre tratti di <b>30 pixel</b> invece di 40 e gira
@@ -3432,11 +3454,14 @@
       courseA_maze_ramp2a_2018_authored_hint:
         '1': Snap both `East` blocks to the bottom of the `when run` block.
       courseA_maze_ramp3_2018_authored_hint:
-        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo
-          delete a block from the middle of your code, drag all of the blocks underneath
-          it away to the right and let them sit in the workspace for a while.  \n\nClick
-          on the block you want to delete, and drag it back to the toolbox.\n\nFinally,
-          put your other blocks back in place where they belong.\n"
+        courseC_maze_programming3_a: |-
+          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+
+          Per eliminare un blocco dal bel mezzo del programma, trascina da una parte tutti i blocchi sotto di lui.
+
+          Trascina nella cassetta degli attrezzi il blocco che vuoi cancellare.
+
+          Infine, rimetti al loro posto gli altri blocchi.
       courseA_maze_ramp3a_2018_authored_hint:
         '1': |
           Your code should look like this:
@@ -3457,11 +3482,12 @@
           </block>
           </xml>
       courseA_maze_ramp4_2018_authored_hint:
-        courseC_maze_programming4_a: You can turn right or left from the bird's point
-          of view. If you are facing right, turning right will make you point downwards.
-        courseC_maze_programming4_b: To follow the path, move forward and turn one
-          way, then move again and turn the opposite way. Move forward one more time
-          to reach the pig.
+        courseC_maze_programming4_a: Puoi girare a destra o a sinistra dal punto di
+          vista dell'uccellino. Se l'uccellino è rivolto verso destra, girare a destra
+          significa dirigersi verso il basso.
+        courseC_maze_programming4_b: Per seguire il percorso, vai avanti e gira da
+          una parte, poi spostati di nuovo e gira nella direzione opposta. Per raggiungere
+          il maiale, vai ancora una volta avanti.
       courseA_maze_ramp4a_2018_authored_hint:
         '1': |-
           Your code should look like this:
@@ -3485,7 +3511,8 @@
         courseC_maze_programming5_a: Prova ad usare il pulsante "Fai un passo" per
           eseguire il codice un'istruzione alla volta. Riesci ad capire cosa devi
           fare dopo?
-        courseC_maze_programming5_b: Remember that turns are from the bird's perspective.
+        courseC_maze_programming5_b: Ricorda che le curve devi indicarle dal punto
+          di vista dell'uccellino.
         courseC_maze_programming5_c: Non aver paura di sbagliare! Prova ad aggiungere
           blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi
           di aver ancora risolto l'esercizio.
@@ -3968,10 +3995,10 @@
           name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n
           \     </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge1_e: "Finally, make Wendel the Wizard show
-          when you click on Spiff!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
+        courseA_playlab_events_challenge1_e: "Infine, fai apparire il Mago Wendel
+          quando clicchi su Spiff!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
-          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n
+          \       <title name=\"VALUE\">\"visibili\"</title>\n        <title name=\"SPRITE\">7</title>\n
           \     </block>\n    </next>\n  </block></xml>"
       courseA_toMakeLoopsVideo_Collector_authored_hint: {}
       courseB_Scrat_ramp1_2018_authored_hint:
@@ -7478,18 +7505,19 @@
       courseD_artist_projectTemplate_2018_authored_hint: {}
       courseD_artist_project_embedded_authored_hint: {}
       courseD_artist_ramp11_authored_hint:
-        courseD_artist_ramp11a: To draw a side, use the `move forward by 100 pixels`
-          block, and change the 100 to a 200.
+        courseD_artist_ramp11a: Per disegnare un lato, usa il blocco 'vai avanti di
+          100 pixel' e cambia il 100 in 200.
         courseD_artist_ramp11b: |-
-          To draw 4 sides, put the `move forward by 100 pixels` block inside of a repeat loop and make sure the loop is set to draw 4 times.
+          Per disegnare 4 lati, inserisci un blocco 'vai avanti di 200 pixel' all'interno di un ciclo di ripetizione e assicurarsi che il ciclo sia impostato per ripetersi 4 volte.
 
-          Don't forget to turn afterward!
-        courseD_artist_ramp11_c: Remember to put the `turn` block inside of your loop!
+          Non dimenticarti di girare!
+        courseD_artist_ramp11_c: Ricorda di inserire il blocco `gira a ...` all'interno
+          del ciclo `ripeti ... volte`!
       courseD_artist_ramp12_authored_hint:
-        courseD_artist_ramp12_a: You can either draw the square first, then the triangle,
-          or do it the other way around!
-        courseD_artist_ramp12_b: Try splitting the problem into 2 parts, and using
-          2 separate `repeat` loops.
+        courseD_artist_ramp12_a: Puoi disegnare prima il quadrato e poi il triangolo,
+          oppure farlo al contrario!
+        courseD_artist_ramp12_b: Prova a suddividere il problema in 2 parti e usare
+          2 cicli.
         courseD_artist_ramp12_c: Puoi usare il menu a tendina del blocco `gira a ...`
           per vedere gli angoli tra cui scegliere!
       courseD_bee_conditionals1_authored_hint:
@@ -7504,44 +7532,42 @@
         courseD_bee_conditionals1_a: You will need to use an `if` block to check to
           see if there is a flower beneath the cloud before you try to get nectar.
       courseD_bee_conditionals2_authored_hint:
-        courseD_bee_conditionals2_hintVid1: Need help getting started?  Watch the
-          video!
-        courseD_bee_conditionals2_a: Sometimes a flower will be there, sometimes it
-          won't.  If you want your code to run in both cases, make sure to use an
-          `if` statement.
-        courseD_bee_conditionals2_b: You can use a `repeat` loop or a `while path
-          ahead` to move through this maze.
-        courseD_bee_conditionals2_c: You don't have to check for honeycombs, there
-          will only be flowers or blank spaces under the clouds.
-        courseD_bee_conditionals2_hintVid2: Watch this video for help solving this
-          puzzle.
+        courseD_bee_conditionals2_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
+          il video-suggerimento!
+        courseD_bee_conditionals2_a: Qualche volta c'è un fiore, altre volte no. Se
+          vuoi che il tuo programma funzioni in entrambi i casi, assicurati di usare
+          un blocco `se`.
+        courseD_bee_conditionals2_b: Puoi usare un ciclo `ripeti ... volte` o un ciclo
+          `mentre c'è strada in avanti` per muoverti attraverso questo labirinto.
+        courseD_bee_conditionals2_c: 'Non hai bisogno di controllare se ci sono favi:
+          per ora, ci possono essere solo fiori o caselle vuote sotto le nuvole.'
+        courseD_bee_conditionals2_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals2_2018_authored_hint:
-        courseD_bee_conditionals2_hintVid1: Need help getting started?  Watch the
-          video!
-        courseD_bee_conditionals2_a: Sometimes a flower will be there, sometimes it
-          won't.  If you want your code to run in both cases, make sure to use an
-          `if` statement.
-        courseD_bee_conditionals2_b: You can use a `repeat` loop or a `while path
-          ahead` to move through this maze.
-        courseD_bee_conditionals2_c: You don't have to check for honeycombs, there
-          will only be flowers or blank spaces under the clouds.
-        courseD_bee_conditionals2_hintVid2: Watch this video for help solving this
-          puzzle.
+        courseD_bee_conditionals2_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
+          il video-suggerimento!
+        courseD_bee_conditionals2_a: Qualche volta c'è un fiore, altre volte no. Se
+          vuoi che il tuo programma funzioni in entrambi i casi, assicurati di usare
+          un blocco `se`.
+        courseD_bee_conditionals2_b: Puoi usare un ciclo `ripeti ... volte` o un ciclo
+          `mentre c'è strada in avanti` per muoverti attraverso questo labirinto.
+        courseD_bee_conditionals2_c: 'Non hai bisogno di controllare se ci sono favi:
+          per ora, ci possono essere solo fiori o caselle vuote sotto le nuvole.'
+        courseD_bee_conditionals2_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals2_test_authored_hint:
         courseD_bee_conditionals2_aa: Need help getting started?  Here is a little
           hint video.
-        courseD_bee_conditionals2_a: Sometimes a flower will be there, sometimes it
-          won't.  If you want your code to run in both cases, make sure to use an
-          `if` statement.
-        courseD_bee_conditionals2_b: You can use a `repeat` loop or a `while path
-          ahead` to move through this maze.
-        courseD_bee_conditionals2_c: You don't have to check for honeycombs, there
-          will only be flowers or blank spaces under the clouds.
+        courseD_bee_conditionals2_a: Qualche volta c'è un fiore, altre volte no. Se
+          vuoi che il tuo programma funzioni in entrambi i casi, assicurati di usare
+          un blocco `se`.
+        courseD_bee_conditionals2_b: Puoi usare un ciclo `ripeti ... volte` o un ciclo
+          `mentre c'è strada in avanti` per muoverti attraverso questo labirinto.
+        courseD_bee_conditionals2_c: 'Non hai bisogno di controllare se ci sono favi:
+          per ora, ci possono essere solo fiori o caselle vuote sotto le nuvole.'
         courseD_bee_conditionals2_d: Need help finishing things up?  Watch this hint
           video.
       courseD_bee_conditionals3_authored_hint:
-        courseD_bee_conditionals3_hintVid1: Need help getting started?  Watch the
-          video!
+        courseD_bee_conditionals3_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
+          il video-suggerimento!
         courseD_bee_conditionals3_a: Be sure to use an `if` statement to check each
           space to see if it has either a flower or nothing.
         courseD_bee_conditionals3_b: You can use a loop to keep the bee moving forward.
@@ -7549,11 +7575,10 @@
         courseD_bee_conditionals3_c: Non aver paura di sbagliare! Prova ad aggiungere
           blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi
           di aver ancora risolto l'esercizio.
-        courseD_bee_conditionals3_hintVid2: Watch this video for help solving this
-          puzzle.
+        courseD_bee_conditionals3_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals3_2018_authored_hint:
-        courseD_bee_conditionals3_hintVid1: Need help getting started?  Watch the
-          video!
+        courseD_bee_conditionals3_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
+          il video-suggerimento!
         courseD_bee_conditionals3_a: Be sure to use an `if` statement to check each
           space to see if it has either a flower or nothing.
         courseD_bee_conditionals3_b: You can use a `repeat` loop or a `while` loop
@@ -7561,11 +7586,10 @@
         courseD_bee_conditionals3_c: Non aver paura di sbagliare! Prova ad aggiungere
           blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi
           di aver ancora risolto l'esercizio.
-        courseD_bee_conditionals3_hintVid2: Watch this video for help solving this
-          puzzle.
+        courseD_bee_conditionals3_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals4_authored_hint:
-        courseD_bee_conditionals4_hintVid1: Need help getting started?  Watch the
-          video!
+        courseD_bee_conditionals4_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
+          il video-suggerimento!
         courseD_bee_conditionals4_a: You can still treat every space as if there is
           a cloud over it, even though you can see the whole path.
         courseD_bee_conditionals4_b: 'Use an `if` statement inside your loop to check
@@ -7573,11 +7597,10 @@
         courseD_bee_conditionals4_c: Using the block `while there is a path ahead`,
           you should `move forward` and check for a flower. `if there is a flower`
           what should the bee do?
-        courseD_bee_conditionals4_hintVid2: Watch this video for help solving this
-          puzzle.
+        courseD_bee_conditionals4_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals4_2018_authored_hint:
-        courseD_bee_conditionals4_hintVid1: Need help getting started?  Watch the
-          video!
+        courseD_bee_conditionals4_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
+          il video-suggerimento!
         courseD_bee_conditionals4_a: You can still treat every space as if there is
           a cloud over it, even though you can see the whole path.
         courseD_bee_conditionals4_b: 'Use an `if` statement inside your loop to check
@@ -7585,11 +7608,10 @@
         courseD_bee_conditionals4_c: Using <xml><block type="maze_untilBlocked"/></xml>
           block, you should move forward and check for a flower. If there is a flower,
           what should the bee do?
-        courseD_bee_conditionals4_hintVid2: Watch this video for help solving this
-          puzzle.
+        courseD_bee_conditionals4_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals5_authored_hint:
-        courseD_bee_conditionals5_hintVid1: Need help getting started?  Watch the
-          video!
+        courseD_bee_conditionals5_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
+          il video-suggerimento!
         courseD_bee_conditionals5_a: Think of every side of the rectangular path as
           a path by itself. Set up a nested loop with a `repeat` block on the outside
           and a `while there is a path ahead` on the inside. How many paths does the
@@ -7603,11 +7625,10 @@
         courseD_bee_conditionals5_b: Inside the `while there is a path ahead` block,
           you will need to move forward and check for a flower. How do you check if
           there is a flower? What do you do if there is a flower?
-        courseD_bee_conditionals5_hintVid2: Watch this video for help solving this
-          puzzle.
+        courseD_bee_conditionals5_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals5_2018_authored_hint:
-        courseD_bee_conditionals5_hintVid1: Need help getting started?  Watch the
-          video!
+        courseD_bee_conditionals5_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
+          il video-suggerimento!
         courseD_bee_conditionals5_a: Think of every side of the rectangular path as
           a path by itself. Set up a nested loop with a `repeat` block on the outside
           and a `while there is a path ahead` loop on the inside. How many paths does
@@ -7622,52 +7643,47 @@
         courseD_bee_conditionals5_b: Inside the `while there is a path ahead` block
           you will need to move forward and check for a flower. How do you check if
           there is a flower? What do you do if there is a flower?
-        courseD_bee_conditionals5_hintVid2: Watch this video for help solving this
-          puzzle.
+        courseD_bee_conditionals5_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals6_authored_hint:
-        courseD_bee_conditionals6_hintVid1: Need help getting started?  Watch the
-          video!
+        courseD_bee_conditionals6_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
+          il video-suggerimento!
         courseD_bee_conditionals6_a: Make sure to use an `if` statement to check for
           honeycomb beneath each cloud.
         courseD_bee_conditionals6_b: In this case, you do not need to check for nectar
           under the clouds.
         courseD_bee_conditionals6_c: Is there a loop you can use to make your code
           simpler?
-        courseD_bee_conditionals6_hintVid2: Watch this video for help solving this
-          puzzle.
+        courseD_bee_conditionals6_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals6_2018_authored_hint:
-        courseD_bee_conditionals6_hintVid1: Need help getting started?  Watch the
-          video!
+        courseD_bee_conditionals6_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
+          il video-suggerimento!
         courseD_bee_conditionals6_a: Make sure to use an `if` statement to check for
           honeycomb beneath each cloud.
         courseD_bee_conditionals6_b: In this case, you do not need to check for flowers
           under the clouds.
         courseD_bee_conditionals6_c: Is there a loop you can use to make your code
           simpler?
-        courseD_bee_conditionals6_hintVid2: Watch this video for help solving this
-          puzzle.
+        courseD_bee_conditionals6_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals7_authored_hint:
-        courseD_bee_conditionals7_hintVid1: Need help getting started?  Watch the
-          video!
+        courseD_bee_conditionals7_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
+          il video-suggerimento!
         courseD_bee_conditionals7_a: "**Remember:** This puzzle changes each time
           it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve
           the challenge."
         courseD_bee_conditionals7_b: If there is not a flower under the cloud, there
           must be a honeycomb, so you don't need to think about the case of an empty
           space.
-        courseD_bee_conditionals7_hintVid2: Watch this video for help solving this
-          puzzle.
+        courseD_bee_conditionals7_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals7_2018_authored_hint:
-        courseD_bee_conditionals7_hintVid1: Need help getting started?  Watch the
-          video!
+        courseD_bee_conditionals7_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
+          il video-suggerimento!
         courseD_bee_conditionals7_a: "**Remember:** This puzzle changes each time
           it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve
           the challenge."
         courseD_bee_conditionals7_b: If there is not a flower under the cloud, there
           must be a honeycomb, so you don't need to think about the case of an empty
           space.
-        courseD_bee_conditionals7_hintVid2: Watch this video for help solving this
-          puzzle.
+        courseD_bee_conditionals7_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals7_predict2_authored_hint:
         courseD_bee_conditionals7_a: "**Remember:** This puzzle changes each time
           it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve
@@ -7677,8 +7693,8 @@
           it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve
           the challenge."
       courseD_bee_conditionals8_authored_hint:
-        courseD_bee_conditionals8_hintVid1: Need help getting started?  Watch the
-          video!
+        courseD_bee_conditionals8_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
+          il video-suggerimento!
         courseD_bee_conditionals8_a: "<b>Attenzione:</b> Ogni volta che esegui il
           programma cio che è nascosto può cambiare: per risolvere l'esercizio, devi
           quindi usare il <i>blocco condizionale</i> `se/altrimenti`."
@@ -7691,11 +7707,10 @@
         courseD_bee_conditionals8_d: Even though there is a cloud right in front of
           you, you don't have to visit it first. Try starting with the one in the
           bottom right of the square.
-        courseD_bee_conditionals8_hintVid2: Watch this video for help solving this
-          puzzle.
+        courseD_bee_conditionals8_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals8_2018_authored_hint:
-        courseD_bee_conditionals8_hintVid1: Need help getting started?  Watch the
-          video!
+        courseD_bee_conditionals8_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
+          il video-suggerimento!
         courseD_bee_conditionals8_a: "<b>Attenzione:</b> Ogni volta che esegui il
           programma cio che è nascosto può cambiare: per risolvere l'esercizio, devi
           quindi usare il <i>blocco condizionale</i> `se/altrimenti`."
@@ -7709,8 +7724,7 @@
           Even though there is a cloud right in front of you, you don't have to visit it first. Try starting with the cloud in the bottom right of the square.
 
           ![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)
-        courseD_bee_conditionals8_hintVid2: Watch this video for help solving this
-          puzzle.
+        courseD_bee_conditionals8_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals9_authored_hint: {}
       courseD_bee_conditionals9_2018_authored_hint: {}
       courseD_bee_conditionals_challenge1_authored_hint:
@@ -8641,29 +8655,29 @@
           all four gems without using any more blocks than it takes to get two?
       courseD_collector_ramp10_authored_hint:
         courseD_artist_ramp10_a: |-
-          Instead of using four `move forward` blocks for each side, try putting one `move forward` block inside of a `repeat` loop, like this:
+          Invece di usare quattro blocchi `vai avanti` per ogni lato, prova a mettere un unico blocco `vai avanti` all'interno di un ciclo `ripeti ... volte`, come qui:
           <xml><block type="controls_repeat">
           <title name="TIMES">4</title>
           <statement name="DO">
           <block type="maze_moveForward"/>
           </statement>
           </block></xml>
-        courseD_artist_ramp10_b: Don't forget to collect one piece of treasure, then
-          turn after each set of steps!
-        courseD_artist_ramp10_c: If you want to simplify your code more, you can actually
-          put one `repeat` loop inside of another! This is called a **nested loop**.
+        courseD_artist_ramp10_b: Dopo aver raccolto il diamante, non dimenticarti
+          di girare per iniziare un nuovo lato della quadrato!
+        courseD_artist_ramp10_c: Se vuoi semplificare il tuo programma, puoi mettere
+          un ciclo all'interno di un altro! Si chiama **ciclo annidato**.
       courseD_collector_ramp8_authored_hint:
-        courseD_collector_ramp8_a: When you get to a square with treasure, use `collect`
-          to pick it up. For this puzzle, you'll need to collect treasure more than
-          once!
+        courseD_collector_ramp8_a: Quando arrivi su una casella con un diamante, per
+          prenderlo devi usare il blocco 'raccogli'. In questo esercizio, è necessario
+          raccogliere più di un diamante alla volta!
         courseD_collector_ramp8_b: Se vuoi semplificare il tuo programma, puoi mettere
           un ciclo `ripeti ... volte` all'interno di un altro! Si chiama **ciclo annidato**.
       courseD_collector_ramp9_authored_hint:
-        courseD_collector_ramp9_a: Start by moving Laurel to the first treasure, then
-          collecting it. Can you repeat this sequence to get the second pile?
-        courseD_collector_ramp9_b: If you want to simplify your code more, you can
-          actually put one `repeat` loop inside of another! This is called a **nested
-          loop**.
+        courseD_collector_ramp9_a: Inizia a far muovere Laurel verso il primo gruppo
+          di diamanti, quindi raccoglili. Puoi ripetere questa sequenza per prendere
+          il secondo gruppo?
+        courseD_collector_ramp9_b: Se vuoi semplificare il tuo programma, puoi mettere
+          un ciclo `ripeti ... volte` all'interno di un altro! Si chiama **ciclo annidato**.
       courseD_collector_until_challenge1_authored_hint: {}
       courseD_debugging_1_authored_hint:
         courseD_debugging_1_a: |-
@@ -8858,149 +8872,147 @@
       courseD_farmer_condLoops_challenge2_clone_authored_hint: {}
       courseD_farmer_conditionals10_authored_hint: {}
       courseD_farmer_conditionals4_authored_hint:
-        courseD_farmer_conditionals4_a: Instead of using a `repeat` loop, use a `while`
-          loop to keep digging until the pile is gone.
+        courseD_farmer_conditionals4_a: Invece di usare un ciclo `ripeti ... volte`,
+          usa un ciclo `mentre` per far spalare fino a quando il mucchio è terminato.
       courseD_farmer_conditionals5_authored_hint:
-        courseD_farmer_conditionals5a: Try nesting a `while` loop inside of a `repeat`
-          loop.
+        courseD_farmer_conditionals5a: Prova ad inserire un ciclo `mentre` all'interno
+          di un ciclo `ripeti ... volte`.
       courseD_farmer_conditionals6_authored_hint:
-        courseD_farmer_conditionals6_a: Make sure you're using the `while` loop to
-          figure out how many times to fill each hole.
-        courseD_farmer_conditionals6_b: Notice that the farmer needs to move forward
-          and down several times in a stair-step pattern.
+        courseD_farmer_conditionals6_a: Assicurati di usare il ciclo `mentre` per
+          riempire ogni buca indipendentemente dal numero di palate che servono.
+        courseD_farmer_conditionals6_b: Nota che la contadina deve andare avanti e
+          girare diverse volte in questo schema a scalinata.
       courseD_farmer_conditionals7_authored_hint:
-        courseD_farmer_conditionals8_a: The `while path ahead` block lets you keep
-          going, even if you don't know how many squares are in a path.
+        courseD_farmer_conditionals8_a: Il blocco `mentre c'è strada in avanti` ti
+          permette di andare avanti, anche se non sai quante caselle devi percorrere.
       courseD_farmer_conditionals8_authored_hint:
-        courseD_farmer_conditionals8_a: You are going to need to use more than one
-          `while` loop.
-        courseD_farmer_conditionals8_b: Every hole is at the end of a path, so use
-          `while path ahead` before using `while there is a hole`.
-        courseD_farmer_conditionals8_c: Notice that you need to repeat the `while
-          path ahead`, `while there is a hole` code six times.
+        courseD_farmer_conditionals8_a: Avrai bisogno di usare più di un ciclo `mentre`.
+        courseD_farmer_conditionals8_b: Ogni buca è alla fine di un tratto di percorso,
+          quindi usa il blocco `mentre c'è strada in avanti` prima di usare il ciclo
+          'mentre c'è una buca'.
+        courseD_farmer_conditionals8_c: Nota che devi ripetere sei volte la sequenza
+          `mentre c'è strada in avanti` + `quando c'è una buca`.
       courseD_farmer_conditionals9_authored_hint: {}
       courseD_farmer_until_challenge2_authored_hint: {}
       courseD_farmer_until_challenge2_2018_authored_hint: {}
       courseD_farmer_while1_authored_hint:
-        courseD_farmer_while1_a: You will need to move forward four times to get to
-          the pile. Can you use a `repeat` loop for this?
-        courseD_farmer_while1_b: Use the `remove 1` block when you are standing on
-          the pile of dirt to remove it.
+        courseD_farmer_while1_a: Dovrai andare avanti quattro volte per raggiungere
+          il mucchio. Riesci ad usare un ciclo `ripeti ... volte`per fare ciò?
+        courseD_farmer_while1_b: Quando sarai in piedi sul mucchio di terra, usa il
+          blocco `rimuovi 1` per rimuoverlo.
       courseD_farmer_while10_authored_hint: {}
       courseD_farmer_while10_2018_authored_hint: {}
       courseD_farmer_while10_predict2_authored_hint: {}
       courseD_farmer_while10_predict2_2018_authored_hint: {}
       courseD_farmer_while1_2018_authored_hint:
-        courseD_farmer_while1_a: You will need to move forward four times to get to
-          the pile. Can you use a `repeat` loop for this?
-        courseD_farmer_while1_b: Use the `remove 1` block when you are standing on
-          the pile of dirt to remove it.
+        courseD_farmer_while1_a: Dovrai andare avanti quattro volte per raggiungere
+          il mucchio. Riesci ad usare un ciclo `ripeti ... volte`per fare ciò?
+        courseD_farmer_while1_b: Quando sarai in piedi sul mucchio di terra, usa il
+          blocco `rimuovi 1` per rimuoverlo.
       courseD_farmer_while2_authored_hint:
-        courseD_farmer_while2_a: You will only need to move once to get to the hole.
-        courseD_farmer_while2_b: You will need the `fill 1` block six times. Can you
-          use a loop to make this simpler?
+        courseD_farmer_while2_a: Dovrai fare un solo movimento per arrivare alla buca.
+        courseD_farmer_while2_b: Sarà necessario il blocco `riempi 1` per sei volte.
+          Riesci ad usare un ciclo per rendere tutto più semplice?
       courseD_farmer_while2_2018_authored_hint:
-        courseD_farmer_while2_a: You will only need to move once to get to the hole.
-        courseD_farmer_while2_b: You will need the `fill 1` block six times. Can you
-          use a loop to make this simpler?
+        courseD_farmer_while2_a: Dovrai fare un solo movimento per arrivare alla buca.
+        courseD_farmer_while2_b: Sarà necessario il blocco `riempi 1` per sei volte.
+          Riesci ad usare un ciclo per rendere tutto più semplice?
       courseD_farmer_while3_authored_hint:
-        courseD_farmer_while3_a: A loop can help you simplify your code here.
-        courseD_farmer_while3_b: You shouldn't need any `turn` blocks to get to the
-          pile.
+        courseD_farmer_while3_a: Un ciclo può aiutarti a semplificare il programma.
+        courseD_farmer_while3_b: Non dovrebbe servire alcun blocco `gira a ...` per
+          arrivare fino al mucchio.
       courseD_farmer_while3_2018_authored_hint:
-        courseD_farmer_while3_a: A loop can help you simplify your code here.
-        courseD_farmer_while3_b: You shouldn't need any `turn` blocks to get to the
-          pile.
+        courseD_farmer_while3_a: Un ciclo può aiutarti a semplificare il programma.
+        courseD_farmer_while3_b: Non dovrebbe servire alcun blocco `gira a ...` per
+          arrivare fino al mucchio.
       courseD_farmer_while4_authored_hint:
-        courseD_farmer_conditionals4_a: Instead of using a `repeat` loop, use a `while`
-          loop to keep digging until the pile is gone.
-        courseD_farmer_conditionals4_b: This looks very similar to an earlier puzzle,
-          the only difference is which loop you need.
+        courseD_farmer_conditionals4_a: Invece di usare un ciclo `ripeti ... volte`,
+          usa un ciclo `mentre` per far spalare fino a quando il mucchio è terminato.
+        courseD_farmer_conditionals4_b: Sembra molto simile ad un esercizio precedente,
+          l'unica differenza è nel ciclo da usare.
       courseD_farmer_while4_2018_authored_hint:
-        courseD_farmer_conditionals4_a: Instead of using a `repeat` loop, use a `while`
-          loop to keep digging until the pile is gone.
-        courseD_farmer_conditionals4_b: This looks very similar to an earlier puzzle,
-          the only difference is which loop you need.
+        courseD_farmer_conditionals4_a: Invece di usare un ciclo `ripeti ... volte`,
+          usa un ciclo `mentre` per far spalare fino a quando il mucchio è terminato.
+        courseD_farmer_conditionals4_b: Sembra molto simile ad un esercizio precedente,
+          l'unica differenza è nel ciclo da usare.
       courseD_farmer_while4_predict1_authored_hint: {}
       courseD_farmer_while4_predict1_2018_authored_hint: {}
       courseD_farmer_while5_authored_hint:
-        courseD_farmer_conditionals5a_a: Try nesting a `while` loop inside of a `repeat`
-          loop.
-        courseD_farmer_conditionals5a_b: The farmer needs to move forward a total
-          of five times to get to the end of the row. What else does the farmer need
-          to do?
-        courseD_farmer_conditionals5a_c: Move forward 5 times. Each time you move
-          forward, remove the pile of dirt by using the `while there is a pile` block.
+        courseD_farmer_conditionals5a_a: Prova ad inserire un ciclo `mentre` all'interno
+          di un ciclo `ripeti ... volte`.
+        courseD_farmer_conditionals5a_b: La contadina deve andare avanti 5 volte per
+          arrivare alla fine della riga. Cos'altro deve fare la contadina?
+        courseD_farmer_conditionals5a_c: Vai avanti cinque volte. Ogni volta che vai
+          avanti, rimuovi i mucchi di terra usando il blocco `mentre c'è un mucchio`.
       courseD_farmer_while5_2018_authored_hint:
-        courseD_farmer_conditionals5a_a: Try nesting a `while` loop inside of a `repeat`
-          loop.
-        courseD_farmer_conditionals5a_b: The farmer needs to move forward a total
-          of five times to get to the end of the row. What else does the farmer need
-          to do?
-        courseD_farmer_conditionals5a_c: Move forward 5 times. Each time you move
-          forward, remove the pile of dirt by using the `while there is a pile` block.
+        courseD_farmer_conditionals5a_a: Prova ad inserire un ciclo `mentre` all'interno
+          di un ciclo `ripeti ... volte`.
+        courseD_farmer_conditionals5a_b: La contadina deve andare avanti 5 volte per
+          arrivare alla fine della riga. Cos'altro deve fare la contadina?
+        courseD_farmer_conditionals5a_c: Vai avanti cinque volte. Ogni volta che vai
+          avanti, rimuovi i mucchi di terra usando il blocco `mentre c'è un mucchio`.
       courseD_farmer_while6_authored_hint:
-        courseD_farmer_conditionals6_a: Make sure you're using the `while` loop to
-          figure out how many times to fill each hole.
-        courseD_farmer_conditionals6_b: Notice that the farmer needs to move forward
-          and down several times in a stair-step pattern.
+        courseD_farmer_conditionals6_a: Assicurati di usare il ciclo `mentre` per
+          riempire ogni buca indipendentemente dal numero di palate che servono.
+        courseD_farmer_conditionals6_b: Nota che la contadina deve andare avanti e
+          girare diverse volte in questo schema a scalinata.
         courseD_farmer_conditionals6_c: |-
-          The stair step pattern uses the following blocks
-          - move forward
-          - fill hole
-          - turn right
-          - move forward
-          - fill hole
-          - turn left
+          Lo schema a scalinata è realizzato da questi blocchi:
+          - vai avanti
+          - riempi la buca
+          - gira a destra
+          - vai avanti
+          - riempi la buca
+          - gira a sinistra
 
-          How many times do you need to use this stair step pattern?
+          Quante volte devi usare questo schema a scalinata?
 
-          Make sure you are using the `while there is a hole` to fill the hole.
+          Assicurarti di usare il blocco `mentre c'è una buca` per riempire le buche.
       courseD_farmer_while6_2018_authored_hint:
-        courseD_farmer_conditionals6_a: Make sure you're using the `while` loop to
-          figure out how many times to fill each hole.
-        courseD_farmer_conditionals6_b: Notice that the farmer needs to move forward
-          and down several times in a stair-step pattern.
+        courseD_farmer_conditionals6_a: Assicurati di usare il ciclo `mentre` per
+          riempire ogni buca indipendentemente dal numero di palate che servono.
+        courseD_farmer_conditionals6_b: Nota che la contadina deve andare avanti e
+          girare diverse volte in questo schema a scalinata.
         courseD_farmer_conditionals6_c: |-
-          The stair step pattern uses the following blocks
-          - move forward
-          - fill hole
-          - turn right
-          - move forward
-          - fill hole
-          - turn left
+          Lo schema a scalinata è realizzato da questi blocchi:
+          - vai avanti
+          - riempi la buca
+          - gira a destra
+          - vai avanti
+          - riempi la buca
+          - gira a sinistra
 
-          How many times do you need to use this stair step pattern?
+          Quante volte devi usare questo schema a scalinata?
 
-          Make sure you are using the `while there is a hole` to fill the hole.
+          Assicurarti di usare il blocco `mentre c'è una buca` per riempire le buche.
       courseD_farmer_while7_authored_hint:
-        courseD_farmer_conditionals8_a: The `while path ahead` block lets you keep
-          going, even if you don't know how many squares are in a path.
-        courseD_farmer_conditionals8_b: Putting a `while path ahead` loop inside of
-          a repeat loop can help you in this puzzle.
-        courseD_farmer_conditionals8_c: What do you need to do at the end of each
-          path?
+        courseD_farmer_conditionals8_a: Il blocco `mentre c'è strada in avanti` ti
+          permette di andare avanti, anche se non sai quante caselle devi percorrere.
+        courseD_farmer_conditionals8_b: In questo esercizio, può essere utile mettere
+          un ciclo `mentre c'è strada in avanti` all'interno di un ciclo `ripeti ...
+          volte`.
+        courseD_farmer_conditionals8_c: Che cosa dovresti fare alla fine di ogni tratto?
       courseD_farmer_while7_2018_authored_hint:
-        courseD_farmer_conditionals8_a: The `while path ahead` block lets you keep
-          going, even if you don't know how many squares are in a path.
-        courseD_farmer_conditionals8_b: Putting a `while path ahead` loop inside of
-          a repeat loop can help you in this puzzle.
-        courseD_farmer_conditionals8_c: What do you need to do at the end of each
-          path?
+        courseD_farmer_conditionals8_a: Il blocco `mentre c'è strada in avanti` ti
+          permette di andare avanti, anche se non sai quante caselle devi percorrere.
+        courseD_farmer_conditionals8_b: In questo esercizio, può essere utile mettere
+          un ciclo `mentre c'è strada in avanti` all'interno di un ciclo `ripeti ...
+          volte`.
+        courseD_farmer_conditionals8_c: Che cosa dovresti fare alla fine di ogni tratto?
       courseD_farmer_while8_authored_hint:
-        courseD_farmer_conditionals8_a: You are going to need to use more than one
-          `while` loop.
-        courseD_farmer_conditionals8_b: Every hole is at the end of a path, so use
-          `while path ahead` before using `while there is a hole`.
-        courseD_farmer_conditionals8_c: Notice that you need to repeat the `while
-          path ahead`, `while there is a hole` code six times.
+        courseD_farmer_conditionals8_a: Avrai bisogno di usare più di un ciclo `mentre`.
+        courseD_farmer_conditionals8_b: Ogni buca è alla fine di un tratto di percorso,
+          quindi usa il blocco `mentre c'è strada in avanti` prima di usare il ciclo
+          'mentre c'è una buca'.
+        courseD_farmer_conditionals8_c: Nota che devi ripetere sei volte la sequenza
+          `mentre c'è strada in avanti` + `quando c'è una buca`.
       courseD_farmer_while8_2018_authored_hint:
-        courseD_farmer_conditionals8_a: You are going to need to use more than one
-          `while` loop.
-        courseD_farmer_conditionals8_b: Every hole is at the end of a path, so use
-          `while path ahead` before using `while there is a hole`.
-        courseD_farmer_conditionals8_c: Notice that you need to repeat the `while
-          path ahead`, `while there is a hole` code six times.
+        courseD_farmer_conditionals8_a: Avrai bisogno di usare più di un ciclo `mentre`.
+        courseD_farmer_conditionals8_b: Ogni buca è alla fine di un tratto di percorso,
+          quindi usa il blocco `mentre c'è strada in avanti` prima di usare il ciclo
+          'mentre c'è una buca'.
+        courseD_farmer_conditionals8_c: Nota che devi ripetere sei volte la sequenza
+          `mentre c'è strada in avanti` + `quando c'è una buca`.
       courseD_farmer_while9_authored_hint: {}
       courseD_farmer_while9_2018_authored_hint: {}
       courseD_farmer_while_challenge1_authored_hint:
@@ -9180,58 +9192,69 @@
         courseD_maze_nestedLoops6_c: It will take two sets of nested `repeat` loops
           to solve this puzzle.
       courseD_maze_ramp1_authored_hint:
-        courseC_maze_programming1_a: If the bird isn't getting to the pig, make sure
-          all three of the blocks have been fully clicked together, then click "Run"
-          again.
+        courseC_maze_programming1_a: Se l'uccellino non riesce a prendere il maialino,
+          controlla che tutti e tre i blocchi siano collegati insieme, quindi clicca
+          nuovamente su "Esegui".
         courseC_maze_programming1_b: Non aver paura di sbagliare! Prova ad aggiungere
           blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi
           di aver ancora risolto l'esercizio.
       courseD_maze_ramp1_2018_authored_hint:
-        courseC_maze_programming1_a: If the bird isn't getting to the pig, make sure
-          all three of the blocks have been fully clicked together, then click "Run"
-          again.
+        courseC_maze_programming1_a: Se l'uccellino non riesce a prendere il maialino,
+          controlla che tutti e tre i blocchi siano collegati insieme, quindi clicca
+          nuovamente su "Esegui".
         courseC_maze_programming1_b: Non aver paura di sbagliare! Prova ad aggiungere
           blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi
           di aver ancora risolto l'esercizio.
       courseD_maze_ramp2_authored_hint:
-        courseC_maze_programming2_a: To use a `move forward` block, drag it from the
-          toolbox out into the workspace and connect it to the `when run` block.
-        courseC_maze_programming2_b: Make sure all 3 blocks are clicked together and
-          attached to the `when run` block.
+        courseC_maze_programming2_a: Per usare un blocco `vai avanti`, trascinalo
+          dalla cassetta degli attrezzi nell'area di lavoro e collegalo al blocco
+          `quando si clicca su "Esegui"`.
+        courseC_maze_programming2_b: Controlla che tutti e 3 i blocchi siano collegati
+          insieme e fissati al blocco `quando si clicca su "Esegui"`.
       courseD_maze_ramp2_2018_authored_hint:
-        courseC_maze_programming2_a: To use a `move forward` block, drag it from the
-          toolbox out into the workspace and connect it to the `when run` block.
-        courseC_maze_programming2_b: Make sure all 3 blocks are clicked together and
-          attached to the `when run` block.
+        courseC_maze_programming2_a: Per usare un blocco `vai avanti`, trascinalo
+          dalla cassetta degli attrezzi nell'area di lavoro e collegalo al blocco
+          `quando si clicca su "Esegui"`.
+        courseC_maze_programming2_b: Controlla che tutti e 3 i blocchi siano collegati
+          insieme e fissati al blocco `quando si clicca su "Esegui"`.
       courseD_maze_ramp3_authored_hint:
-        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo
-          delete a block from the middle of your code, drag all of the blocks underneath
-          it away to the right and let them sit in the workspace for a while.  \n\nClick
-          on the block you want to delete, and drag it back to the toolbox.\n\nFinally,
-          put your other blocks back in place where they belong.\n"
+        courseC_maze_programming3_a: |-
+          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+
+          Per eliminare un blocco dal bel mezzo del programma, trascina da una parte tutti i blocchi sotto di lui.
+
+          Trascina nella cassetta degli attrezzi il blocco che vuoi cancellare.
+
+          Infine, rimetti al loro posto gli altri blocchi.
       courseD_maze_ramp3_2018_authored_hint:
-        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo
-          delete a block from the middle of your code, drag all of the blocks underneath
-          it away to the right and let them sit in the workspace for a while.  \n\nClick
-          on the block you want to delete, and drag it back to the toolbox.\n\nFinally,
-          put your other blocks back in place where they belong.\n"
+        courseC_maze_programming3_a: |-
+          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+
+          Per eliminare un blocco dal bel mezzo del programma, trascina da una parte tutti i blocchi sotto di lui.
+
+          Trascina nella cassetta degli attrezzi il blocco che vuoi cancellare.
+
+          Infine, rimetti al loro posto gli altri blocchi.
       courseD_maze_ramp4_authored_hint:
-        courseC_maze_programming4_a: You can turn right or left from the bird's point
-          of view. If you are facing right, turning right will make you point downwards.
-        courseC_maze_programming4_b: To follow the path, move forward and turn one
-          way, then move again and turn the opposite way. Move forward one more time
-          to reach the pig.
+        courseC_maze_programming4_a: Puoi girare a destra o a sinistra dal punto di
+          vista dell'uccellino. Se l'uccellino è rivolto verso destra, girare a destra
+          significa dirigersi verso il basso.
+        courseC_maze_programming4_b: Per seguire il percorso, vai avanti e gira da
+          una parte, poi spostati di nuovo e gira nella direzione opposta. Per raggiungere
+          il maiale, vai ancora una volta avanti.
       courseD_maze_ramp4_2018_authored_hint:
-        courseC_maze_programming4_a: You can turn right or left from the bird's point
-          of view. If you are facing right, turning right will make you point downwards.
-        courseC_maze_programming4_b: To follow the path, move forward and turn one
-          way, then move again and turn the opposite way. Move forward one more time
-          to reach the pig.
+        courseC_maze_programming4_a: Puoi girare a destra o a sinistra dal punto di
+          vista dell'uccellino. Se l'uccellino è rivolto verso destra, girare a destra
+          significa dirigersi verso il basso.
+        courseC_maze_programming4_b: Per seguire il percorso, vai avanti e gira da
+          una parte, poi spostati di nuovo e gira nella direzione opposta. Per raggiungere
+          il maiale, vai ancora una volta avanti.
       courseD_maze_ramp5_authored_hint:
         courseC_maze_programming5_a: Prova ad usare il pulsante "Fai un passo" per
           eseguire il codice un'istruzione alla volta. Riesci ad capire cosa devi
           fare dopo?
-        courseC_maze_programming5_b: Remember that turns are from the bird's perspective.
+        courseC_maze_programming5_b: Ricorda che le curve devi indicarle dal punto
+          di vista dell'uccellino.
         courseC_maze_programming5_c: Non aver paura di sbagliare! Prova ad aggiungere
           blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi
           di aver ancora risolto l'esercizio.
@@ -9239,7 +9262,8 @@
         courseC_maze_programming5_a: Prova ad usare il pulsante "Fai un passo" per
           eseguire il codice un'istruzione alla volta. Riesci ad capire cosa devi
           fare dopo?
-        courseC_maze_programming5_b: Remember that turns are from the bird's perspective.
+        courseC_maze_programming5_b: Ricorda che le curve devi indicarle dal punto
+          di vista dell'uccellino.
         courseC_maze_programming5_c: Non aver paura di sbagliare! Prova ad aggiungere
           blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi
           di aver ancora risolto l'esercizio.
@@ -9247,7 +9271,8 @@
         courseC_maze_programming5_a: Prova ad usare il pulsante "Fai un passo" per
           eseguire il codice un'istruzione alla volta. Riesci ad capire cosa devi
           fare dopo?
-        courseC_maze_programming5_b: Remember that turns are from the bird's perspective.
+        courseC_maze_programming5_b: Ricorda che le curve devi indicarle dal punto
+          di vista dell'uccellino.
         courseC_maze_programming5_c: Non aver paura di sbagliare! Prova ad aggiungere
           blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi
           di aver ancora risolto l'esercizio.
@@ -9255,7 +9280,8 @@
         courseC_maze_programming5_a: Prova ad usare il pulsante "Fai un passo" per
           eseguire il codice un'istruzione alla volta. Riesci ad capire cosa devi
           fare dopo?
-        courseC_maze_programming5_b: Remember that turns are from the bird's perspective.
+        courseC_maze_programming5_b: Ricorda che le curve devi indicarle dal punto
+          di vista dell'uccellino.
         courseC_maze_programming5_c: Non aver paura di sbagliare! Prova ad aggiungere
           blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi
           di aver ancora risolto l'esercizio.
@@ -9263,7 +9289,8 @@
         courseC_maze_programming5_a: Prova ad usare il pulsante "Fai un passo" per
           eseguire il codice un'istruzione alla volta. Riesci ad capire cosa devi
           fare dopo?
-        courseC_maze_programming5_b: Remember that turns are from the bird's perspective.
+        courseC_maze_programming5_b: Ricorda che le curve devi indicarle dal punto
+          di vista dell'uccellino.
         courseC_maze_programming5_c: Non aver paura di sbagliare! Prova ad aggiungere
           blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi
           di aver ancora risolto l'esercizio.
@@ -9271,7 +9298,8 @@
         courseC_maze_programming5_a: Prova ad usare il pulsante "Fai un passo" per
           eseguire il codice un'istruzione alla volta. Riesci ad capire cosa devi
           fare dopo?
-        courseC_maze_programming5_b: Remember that turns are from the bird's perspective.
+        courseC_maze_programming5_b: Ricorda che le curve devi indicarle dal punto
+          di vista dell'uccellino.
         courseC_maze_programming5_c: Non aver paura di sbagliare! Prova ad aggiungere
           blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi
           di aver ancora risolto l'esercizio.
@@ -9281,20 +9309,21 @@
       courseD_maze_ramp5d_2018_authored_hint: {}
       courseD_maze_ramp6_authored_hint:
         courseC_maze_programming6_a: Ci sono due modi per risolvere questo esercizio!
-        courseC_maze_programming6_b: The bird starts facing a wall, so remember to
-          turn before you move.
-        courseC_maze_programming6_c: Remember you can write one piece of the code
-          at a time, then run it to figure out where you need to go from there.
+        courseC_maze_programming6_b: All'inizio l'uccellino è rivolto verso un muro,
+          quindi ricordati di girare prima di muoverti.
+        courseC_maze_programming6_c: Ricorda che puoi scrivere un pezzo di codice
+          alla volta e poi eseguirlo per capire come devi procedere dal punto in cui
+          sei arrivato.
       courseD_maze_ramp6a_authored_hint:
         courseC_maze_programming6a_a: Use a `repeat` loop to get this bird moving!
       courseD_maze_ramp7_authored_hint:
         courseD_maze_ramp7_b: Non dimenticare di usare il pulsante "Fai un passo"
           che esegue un blocco per volta permettendoti di notare più facilmente gli
           errori.
-        courseD_maze_ramp7_a: Use repeat blocks to run either a single block or a
-          chunk of code over and over.
-        courseD_maze_ramp7_c: If you want to simplify your code more, you can actually
-          put one `repeat` loop inside of another! This is called a **nested loop**.
+        courseD_maze_ramp7_a: Usa i blocchi di ripetizione per eseguire ripetutamente
+          un blocco o una sequenza di blocchi.
+        courseD_maze_ramp7_c: Se vuoi semplificare il tuo programma, puoi mettere
+          un ciclo `ripeti ... volte` all'interno di un altro! Si chiama **ciclo annidato**.
       courseD_maze_until1_authored_hint:
         courseD_maze_until1_a: Are there any sequences you can loop to make your code
           shorter?
@@ -9528,29 +9557,37 @@
           blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi
           di aver ancora risolto l'esercizio.
       courseD_scrat_ramp2_authored_hint:
-        courseC_maze_programming2_a: To use a `move forward` block, drag it from the
-          toolbox out into the workspace and connect it to the `when run` block.
+        courseC_maze_programming2_a: Per usare un blocco `vai avanti`, trascinalo
+          dalla cassetta degli attrezzi nell'area di lavoro e collegalo al blocco
+          `quando si clicca su "Esegui"`.
         courseC_maze_programming2_b: Make sure all three `move forward` blocks are
           attached to the `when run` block.
       courseD_scrat_ramp2_2018_authored_hint:
-        courseC_maze_programming2_a: To use a `move forward` block, drag it from the
-          toolbox out into the workspace and connect it to the `when run` block.
+        courseC_maze_programming2_a: Per usare un blocco `vai avanti`, trascinalo
+          dalla cassetta degli attrezzi nell'area di lavoro e collegalo al blocco
+          `quando si clicca su "Esegui"`.
         courseC_maze_programming2_b: Make sure all three `move forward` blocks are
           attached to the `when run` block.
       courseD_scrat_ramp3_authored_hint:
-        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo
-          delete a block from the middle of your code, drag all of the blocks underneath
-          it away to the right and let them sit in the workspace for a while.  \n\nClick
-          on the block you want to delete, and drag it back to the toolbox.\n\nFinally,
-          put your other blocks back in place where they belong.\n"
+        courseC_maze_programming3_a: |-
+          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+
+          Per eliminare un blocco dal bel mezzo del programma, trascina da una parte tutti i blocchi sotto di lui.
+
+          Trascina nella cassetta degli attrezzi il blocco che vuoi cancellare.
+
+          Infine, rimetti al loro posto gli altri blocchi.
         courseC_maze_programming3_b: Remember that turns to the right and left are
           from Scrat's perspective.
       courseD_scrat_ramp3_2018_authored_hint:
-        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo
-          delete a block from the middle of your code, drag all of the blocks underneath
-          it away to the right and let them sit in the workspace for a while.  \n\nClick
-          on the block you want to delete, and drag it back to the toolbox.\n\nFinally,
-          put your other blocks back in place where they belong.\n"
+        courseC_maze_programming3_a: |-
+          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+
+          Per eliminare un blocco dal bel mezzo del programma, trascina da una parte tutti i blocchi sotto di lui.
+
+          Trascina nella cassetta degli attrezzi il blocco che vuoi cancellare.
+
+          Infine, rimetti al loro posto gli altri blocchi.
         courseC_maze_programming3_b: Remember that turns to the right and left are
           from Scrat's perspective.
       courseD_scrat_ramp4_authored_hint:
@@ -9607,8 +9644,8 @@
         courseD_maze_ramp7_b: Non dimenticare di usare il pulsante "Fai un passo"
           che esegue un blocco per volta permettendoti di notare più facilmente gli
           errori.
-        courseD_maze_ramp7_a: Use repeat blocks to run either a single block or a
-          chunk of code over and over.
+        courseD_maze_ramp7_a: Usa i blocchi di ripetizione per eseguire ripetutamente
+          un blocco o una sequenza di blocchi.
         courseD_maze_ramp7_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi
           ed eseguire il codice per vedere cosa accade, anche se non pensi di aver
           ancora risolto l'esercizio.
@@ -9616,8 +9653,8 @@
         courseD_maze_ramp7_b: Non dimenticare di usare il pulsante "Fai un passo"
           che esegue un blocco per volta permettendoti di notare più facilmente gli
           errori.
-        courseD_maze_ramp7_a: Use repeat blocks to run either a single block or a
-          chunk of code over and over.
+        courseD_maze_ramp7_a: Usa i blocchi di ripetizione per eseguire ripetutamente
+          un blocco o una sequenza di blocchi.
         courseD_maze_ramp7_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi
           ed eseguire il codice per vedere cosa accade, anche se non pensi di aver
           ancora risolto l'esercizio.
@@ -9965,18 +10002,18 @@
 
           ![](https://images.code.org/752d82f3afdca0a7d7c01d6fa2abb583-image-1499889821499.2_solution2.gif)
       courseE_artist_ramp11_authored_hint:
-        courseD_artist_ramp11a: To draw a side, use the `move forward by 100 pixels`
-          block, and change the 100 to a 200.
+        courseD_artist_ramp11a: Per disegnare un lato, usa il blocco 'vai avanti di
+          100 pixel' e cambia il 100 in 200.
         courseD_artist_ramp11b: |-
           To draw 4 sides, put the `move forward by 100 pixels` block inside of a repeat loop and make sure the loop is set to draw 4 times.
 
           Don't forget to turn afterward!
       courseE_artist_ramp12_authored_hint:
-        courseD_artist_ramp12_a: You can either draw the square first, then the triangle,
-          or do it the other way around!
+        courseD_artist_ramp12_a: Puoi disegnare prima il quadrato e poi il triangolo,
+          oppure farlo al contrario!
       courseE_artist_ramp8_authored_hint:
-        courseE_artist_ramp8_a: To draw a side, use the `move forward by 100 pixels`
-          block, and change the 100 to a 200.
+        courseE_artist_ramp8_a: Per disegnare un lato, usa il blocco 'vai avanti di
+          100 pixel' e cambia il 100 in 200.
         courseE_artist_ramp8_b: |-
           To draw 4 sides, put the `move forward by 100 pixels` block inside of a repeat loop and make sure the loop is set to draw 4 times.
 
@@ -9984,8 +10021,8 @@
         courseE_artist_ramp8_c: Your loop should have two blocks inside of it, the
           `move forward` and the `turn right by 90 degrees`.
       courseE_artist_ramp8_2_authored_hint:
-        courseE_artist_ramp8_a: To draw a side, use the `move forward by 100 pixels`
-          block, and change the 100 to a 200.
+        courseE_artist_ramp8_a: Per disegnare un lato, usa il blocco 'vai avanti di
+          100 pixel' e cambia il 100 in 200.
         courseE_artist_ramp8_b: |-
           To draw 4 sides, put the `move forward by 100 pixels` block inside of a repeat loop and make sure the loop is set to draw 4 times.
 
@@ -9993,8 +10030,8 @@
         courseE_artist_ramp8_c: 'Your loop should have two blocks inside of it: `move
           forward` and `turn right by 90 degrees`.'
       courseE_artist_ramp8_2018_authored_hint:
-        courseE_artist_ramp8_a: To draw a side, use the `move forward by 100 pixels`
-          block, and change the 100 to a 200.
+        courseE_artist_ramp8_a: Per disegnare un lato, usa il blocco 'vai avanti di
+          100 pixel' e cambia il 100 in 200.
         courseE_artist_ramp8_b: |-
           To draw 4 sides, put the `move forward by 100 pixels` block inside of a repeat loop and make sure the loop is set to draw 4 times.
 
@@ -10002,8 +10039,8 @@
         courseE_artist_ramp8_c: 'Your loop should have two blocks inside of it: `move
           forward` and `turn right by 90 degrees`.'
       courseE_artist_ramp8_2_2018_authored_hint:
-        courseE_artist_ramp8_a: To draw a side, use the `move forward by 100 pixels`
-          block, and change the 100 to a 200.
+        courseE_artist_ramp8_a: Per disegnare un lato, usa il blocco 'vai avanti di
+          100 pixel' e cambia il 100 in 200.
         courseE_artist_ramp8_b: |-
           To draw 4 sides, put the `move forward by 100 pixels` block inside of a repeat loop and make sure the loop is set to draw 4 times.
 
@@ -10318,7 +10355,7 @@
           for flowers and honeycombs.
       courseE_collector_ramp10_authored_hint:
         courseD_artist_ramp10_a: |-
-          Instead of using four `move forward` blocks for each side, try putting one `move forward` block inside of a `repeat` loop, like this:
+          Invece di usare quattro blocchi `vai avanti` per ogni lato, prova a mettere un unico blocco `vai avanti` all'interno di un ciclo `ripeti ... volte`, come qui:
           <xml><block type="controls_repeat">
           <title name="TIMES">4</title>
           <statement name="DO">
@@ -10352,15 +10389,17 @@
         courseE_farmer_concept2_c: Your main program can call this function with the
           green `do something` block.
       courseE_farmer_concept3_authored_hint:
-        grade3_robotFarmer_ConditionalsIntro_8_a: The `while path ahead` block lets
-          you keep going, even if you don't know how many squares are in a path.
+        grade3_robotFarmer_ConditionalsIntro_8_a: Il blocco `mentre c'è strada in
+          avanti` ti permette di andare avanti, anche se non sai quante caselle devi
+          percorrere.
         grade3_robotFarmer_ConditionalsIntro_8_b: What should you do once you've reached
           the end of a path?
         grade3_robotFarmer_ConditionalsIntro_8_c: Use a `repeat` loop to run your
           code multiple times for each straight path.
       courseE_farmer_concept3_2018_authored_hint:
-        grade3_robotFarmer_ConditionalsIntro_8_a: The `while path ahead` block lets
-          you keep going, even if you don't know how many squares are in a path.
+        grade3_robotFarmer_ConditionalsIntro_8_a: Il blocco `mentre c'è strada in
+          avanti` ti permette di andare avanti, anche se non sai quante caselle devi
+          percorrere.
         grade3_robotFarmer_ConditionalsIntro_8_b: What should you do once you've reached
           the end of a path?
         grade3_robotFarmer_ConditionalsIntro_8_c: Use a `repeat` loop to run your
@@ -10683,64 +10722,74 @@
       courseE_maze_predict1_authored_hint: {}
       courseE_maze_predict1_2018_authored_hint: {}
       courseE_maze_ramp1_authored_hint:
-        courseC_maze_programming1_0: If the bird isn't getting to the pig, make sure
-          all three of the blocks have been fully clicked together, then click "Run"
-          again.
+        courseC_maze_programming1_0: Se l'uccellino non riesce a prendere il maialino,
+          controlla che tutti e tre i blocchi siano collegati insieme, quindi clicca
+          nuovamente su "Esegui".
         courseC_maze_programming1_b: You don't need any extra blocks from the toolbox
           for this puzzle!
       courseE_maze_ramp13_authored_hint:
         courseD_maze_ramp11_b: Non dimenticare di usare il pulsante "Fai un passo"
           che esegue un blocco per volta permettendoti di notare più facilmente gli
           errori.
-        courseD_maze_ramp11_a: Use repeat blocks to run either a single block or a
-          chunk of code over and over.
+        courseD_maze_ramp11_a: Usa i blocchi di ripetizione per eseguire ripetutamente
+          un blocco o una sequenza di blocchi.
       courseE_maze_ramp1_2018_authored_hint:
-        courseC_maze_programming1_0: If the bird isn't getting to the pig, make sure
-          all three of the blocks have been fully clicked together, then click "Run"
-          again.
+        courseC_maze_programming1_0: Se l'uccellino non riesce a prendere il maialino,
+          controlla che tutti e tre i blocchi siano collegati insieme, quindi clicca
+          nuovamente su "Esegui".
         courseC_maze_programming1_b: You don't need any extra blocks from the toolbox
           for this puzzle!
       courseE_maze_ramp2_authored_hint:
-        courseC_maze_programming2_a: To use a `move forward` block, drag it from the
-          toolbox out into the workspace and connect it to the `when run` block.
+        courseC_maze_programming2_a: Per usare un blocco `vai avanti`, trascinalo
+          dalla cassetta degli attrezzi nell'area di lavoro e collegalo al blocco
+          `quando si clicca su "Esegui"`.
         courseC_maze_programming2_b: Make sure all three `move forward` blocks are
           attached to the `when run` block.
       courseE_maze_ramp2_2018_authored_hint:
-        courseC_maze_programming2_a: To use a `move forward` block, drag it from the
-          toolbox out into the workspace and connect it to the `when run` block.
+        courseC_maze_programming2_a: Per usare un blocco `vai avanti`, trascinalo
+          dalla cassetta degli attrezzi nell'area di lavoro e collegalo al blocco
+          `quando si clicca su "Esegui"`.
         courseC_maze_programming2_b: Make sure all three `move forward` blocks are
           attached to the `when run` block.
       courseE_maze_ramp3_authored_hint:
-        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo
-          delete a block from the middle of your code, drag all of the blocks underneath
-          it away to the right and let them sit in the workspace for a while.  \n\nClick
-          on the block you want to delete, and drag it back to the toolbox.\n\nFinally,
-          put your other blocks back in place where they belong.\n"
+        courseC_maze_programming3_a: |-
+          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+
+          Per eliminare un blocco dal bel mezzo del programma, trascina da una parte tutti i blocchi sotto di lui.
+
+          Trascina nella cassetta degli attrezzi il blocco che vuoi cancellare.
+
+          Infine, rimetti al loro posto gli altri blocchi.
         courseC_maze_programming3_b: Remember that turns to the right and left are
           from the bird's perspective.
       courseE_maze_ramp3_2018_authored_hint:
-        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo
-          delete a block from the middle of your code, drag all of the blocks underneath
-          it away to the right and let them sit in the workspace for a while.  \n\nClick
-          on the block you want to delete, and drag it back to the toolbox.\n\nFinally,
-          put your other blocks back in place where they belong.\n"
+        courseC_maze_programming3_a: |-
+          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+
+          Per eliminare un blocco dal bel mezzo del programma, trascina da una parte tutti i blocchi sotto di lui.
+
+          Trascina nella cassetta degli attrezzi il blocco che vuoi cancellare.
+
+          Infine, rimetti al loro posto gli altri blocchi.
         courseC_maze_programming3_b: Remember that turns to the right and left are
           from the bird's perspective.
       courseE_maze_ramp4_authored_hint:
-        courseC_maze_programming4_a: You can turn right or left from the bird's point
-          of view. If you are facing right, turning right will make you point downwards.
-        courseC_maze_programming4_b: To follow the path, move forward and turn one
-          way, then move again and turn the opposite way. Move forward one more time
-          to reach the pig.
+        courseC_maze_programming4_a: Puoi girare a destra o a sinistra dal punto di
+          vista dell'uccellino. Se l'uccellino è rivolto verso destra, girare a destra
+          significa dirigersi verso il basso.
+        courseC_maze_programming4_b: Per seguire il percorso, vai avanti e gira da
+          una parte, poi spostati di nuovo e gira nella direzione opposta. Per raggiungere
+          il maiale, vai ancora una volta avanti.
         courseC_maze_programming4_c: Non aver paura di sbagliare! Prova ad aggiungere
           blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi
           di aver ancora risolto l'esercizio.
       courseE_maze_ramp4_2018_authored_hint:
-        courseC_maze_programming4_a: You can turn right or left from the bird's point
-          of view. If you are facing right, turning right will make you point downwards.
-        courseC_maze_programming4_b: To follow the path, move forward and turn one
-          way, then move again and turn the opposite way. Move forward one more time
-          to reach the pig.
+        courseC_maze_programming4_a: Puoi girare a destra o a sinistra dal punto di
+          vista dell'uccellino. Se l'uccellino è rivolto verso destra, girare a destra
+          significa dirigersi verso il basso.
+        courseC_maze_programming4_b: Per seguire il percorso, vai avanti e gira da
+          una parte, poi spostati di nuovo e gira nella direzione opposta. Per raggiungere
+          il maiale, vai ancora una volta avanti.
         courseC_maze_programming4_c: Non aver paura di sbagliare! Prova ad aggiungere
           blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi
           di aver ancora risolto l'esercizio.
@@ -10776,8 +10825,8 @@
         courseD_maze_ramp7_b: Non dimenticare di usare il pulsante "Fai un passo"
           che esegue un blocco per volta permettendoti di notare più facilmente gli
           errori.
-        courseD_maze_ramp7_a: Use repeat blocks to run either a single block or a
-          chunk of code over and over.
+        courseD_maze_ramp7_a: Usa i blocchi di ripetizione per eseguire ripetutamente
+          un blocco o una sequenza di blocchi.
         courseD_maze_ramp7_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi
           ed eseguire il codice per vedere cosa accade, anche se non pensi di aver
           ancora risolto l'esercizio.
@@ -10785,8 +10834,8 @@
         courseD_maze_ramp7_b: Non dimenticare di usare il pulsante "Fai un passo"
           che esegue un blocco per volta permettendoti di notare più facilmente gli
           errori.
-        courseD_maze_ramp7_a: Use repeat blocks to run either a single block or a
-          chunk of code over and over.
+        courseD_maze_ramp7_a: Usa i blocchi di ripetizione per eseguire ripetutamente
+          un blocco o una sequenza di blocchi.
         courseD_maze_ramp7_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi
           ed eseguire il codice per vedere cosa accade, anche se non pensi di aver
           ancora risolto l'esercizio.
@@ -12342,15 +12391,15 @@
       courseF_bee_conditionals1_predict1_authored_hint: {}
       courseF_bee_conditionals1_predict1_2018_authored_hint: {}
       courseF_bee_conditionals2_authored_hint:
-        courseF_bee_conditionals2_a: Sometimes a flower will be there, sometimes it
-          won't.  If you want your code to run in both cases, make sure to use an
-          `if` statement.
+        courseF_bee_conditionals2_a: Qualche volta c'è un fiore, altre volte no. Se
+          vuoi che il tuo programma funzioni in entrambi i casi, assicurati di usare
+          un blocco `se`.
         courseF_bee_conditionals2_b: Try writing the sequence to get you to all of
           the spaces, then add the `if` statement.
       courseF_bee_conditionals2_2018_authored_hint:
-        courseF_bee_conditionals2_a: Sometimes a flower will be there, sometimes it
-          won't.  If you want your code to run in both cases, make sure to use an
-          `if` statement.
+        courseF_bee_conditionals2_a: Qualche volta c'è un fiore, altre volte no. Se
+          vuoi che il tuo programma funzioni in entrambi i casi, assicurati di usare
+          un blocco `se`.
         courseF_bee_conditionals2_b: Try writing the sequence to get you to all of
           the spaces, then add the `if` statement.
       courseF_bee_conditionals3_authored_hint:
@@ -13813,8 +13862,8 @@
         courseF_maze_ramp13_b: Non dimenticare di usare il pulsante "Fai un passo"
           che esegue un blocco per volta permettendoti di notare più facilmente gli
           errori.
-        courseF_maze_ramp13_a: Use repeat blocks to run either a single block or a
-          chunk of code over and over.
+        courseF_maze_ramp13_a: Usa i blocchi di ripetizione per eseguire ripetutamente
+          un blocco o una sequenza di blocchi.
         courseF_maze_ramp13_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi
           ed eseguire il codice per vedere cosa accade, anche se non pensi di aver
           ancora risolto l'esercizio.
@@ -13824,8 +13873,8 @@
         courseF_maze_ramp7_b: Non dimenticare di usare il pulsante "Fai un passo"
           che esegue un blocco per volta permettendoti di notare più facilmente gli
           errori.
-        courseF_maze_ramp7_a: Use repeat blocks to run either a single block or a
-          chunk of code over and over.
+        courseF_maze_ramp7_a: Usa i blocchi di ripetizione per eseguire ripetutamente
+          un blocco o una sequenza di blocchi.
       courseF_maze_ramp1_2018_authored_hint:
         courseF_maze_ramp1_a: If the bird isn't getting to the pig, make sure all
           of the blocks have been fully snapped together, then click "Run" again.
@@ -13843,8 +13892,9 @@
         courseF_maze_ramp2_b: Make sure the <xml><block type="maze_moveForward"/></xml>
           block is inside of the loop, so that it is repeated.
       courseF_maze_ramp4_authored_hint:
-        courseF_maze_ramp4_a: You can turn right or left from the bird's point of
-          view. If you are facing right, turning right will make you point downwards.
+        courseF_maze_ramp4_a: Puoi girare a destra o a sinistra dal punto di vista
+          dell'uccellino. Se l'uccellino è rivolto verso destra, girare a destra significa
+          dirigersi verso il basso.
         courseF_maze_ramp4_b: To follow the path, move forward and turn one way, then
           move three times before turning the opposite way. Move forward one more
           time to reach the pig.
@@ -13852,8 +13902,9 @@
           ed eseguire il codice per vedere cosa accade, anche se non pensi di aver
           ancora risolto l'esercizio.
       courseF_maze_ramp4_2018_authored_hint:
-        courseF_maze_ramp4_a: You can turn right or left from the bird's point of
-          view. If you are facing right, turning right will make you point downwards.
+        courseF_maze_ramp4_a: Puoi girare a destra o a sinistra dal punto di vista
+          dell'uccellino. Se l'uccellino è rivolto verso destra, girare a destra significa
+          dirigersi verso il basso.
         courseF_maze_ramp4_b: To follow the path, move forward and turn one way, then
           move three times before turning the opposite way. Move forward one more
           time to reach the pig.
@@ -13889,8 +13940,8 @@
         courseF_maze_ramp7_b: Non dimenticare di usare il pulsante "Fai un passo"
           che esegue un blocco per volta permettendoti di notare più facilmente gli
           errori.
-        courseF_maze_ramp7_a: Use repeat blocks to run either a single block or a
-          chunk of code over and over.
+        courseF_maze_ramp7_a: Usa i blocchi di ripetizione per eseguire ripetutamente
+          un blocco o una sequenza di blocchi.
         courseF_maze_ramp7_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi
           ed eseguire il codice per vedere cosa accade, anche se non pensi di aver
           ancora risolto l'esercizio.
@@ -14337,19 +14388,25 @@
         courseC_maze_programming1_b: Don't be afraid to make a mistake! Try something,
           and if it doesn't work, try something else!
       coursef_maze_ramp3_authored_hint:
-        courseF_maze_ramp3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo
-          delete a block from the middle of your code, drag all of the blocks underneath
-          it away to the right and let them sit in the workspace for a while.  \n\nClick
-          on the block you want to delete, and drag it back to the toolbox.\n\nFinally,
-          put your other blocks back in place where they belong.\n"
+        courseF_maze_ramp3_a: |-
+          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+
+          Per eliminare un blocco dal bel mezzo del programma, trascina da una parte tutti i blocchi sotto di lui.
+
+          Trascina nella cassetta degli attrezzi il blocco che vuoi cancellare.
+
+          Infine, rimetti al loro posto gli altri blocchi.
         courseF_maze_ramp3_b: Use the step button to go through the program line-by-line.
           Where does something go wrong?
       coursef_maze_ramp3_2018_authored_hint:
-        courseF_maze_ramp3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo
-          delete a block from the middle of your code, drag all of the blocks underneath
-          it away to the right and let them sit in the workspace for a while.  \n\nClick
-          on the block you want to delete, and drag it back to the toolbox.\n\nFinally,
-          put your other blocks back in place where they belong.\n"
+        courseF_maze_ramp3_a: |-
+          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+
+          Per eliminare un blocco dal bel mezzo del programma, trascina da una parte tutti i blocchi sotto di lui.
+
+          Trascina nella cassetta degli attrezzi il blocco che vuoi cancellare.
+
+          Infine, rimetti al loro posto gli altri blocchi.
         courseF_maze_ramp3_b: Use the step button to go through the program line-by-line.
           Where does something go wrong?
       drawings!_authored_hint:
@@ -14400,7 +14457,7 @@
           essere ripetuto questo ciclo?
       grade1_artist_loops5_authored_hint: {}
       grade1_artist_loops6_authored_hint:
-        grade1_artist_loops6_a: This challenge uses FOUR loops, one right after another!
+        grade1_artist_loops6_a: Questa sfida utilizza QUATTRO cicli, uno dopo l'altro!
         grade1_artist_loops6_b: |-
           Notice that every loop makes a stair pattern that travels in a different direction.
 
@@ -14410,7 +14467,7 @@
           \ - Su\n\n- Ciclo 4\n  - Sinistra\n  - Giù"
       grade1_artist_loops7_authored_hint: {}
       grade1_artist_loops7a_authored_hint:
-        artistLoopsK9_a: This challenge uses FOUR loops, one right after another!
+        artistLoopsK9_a: Questa sfida utilizza QUATTRO cicli, uno dopo l'altro!
         artistLoopsK9_b: |-
           Notice that every loop makes a stair pattern that travels in a different direction.
 
@@ -14463,26 +14520,32 @@
         grade1_maze_sequenceC_a: Se hai problemi, prova prima a scrivere i passaggi
           su un foglio di carta.
       grade2_CaringForNewPet_0_authored_hint:
-        grade2_CaringForNewPet_0: If the bird isn't getting to the pig, make sure
-          all three of the blocks have been fully clicked together, then click "Run"
-          again.
+        grade2_CaringForNewPet_0: Se l'uccellino non riesce a prendere il maialino,
+          controlla che tutti e tre i blocchi siano collegati insieme, quindi clicca
+          nuovamente su "Esegui".
       grade2_CaringForNewPet_1_authored_hint:
-        2-3_Maze_1_a: To use a `move forward` block, drag it from the toolbox out
-          into the workspace and connect it to the `when run` block.
+        2-3_Maze_1_a: Per usare un blocco `vai avanti`, trascinalo dalla cassetta
+          degli attrezzi nell'area di lavoro e collegalo al blocco `quando si clicca
+          su "Esegui"`.
       grade2_CaringForNewPet_11_authored_hint: {}
       grade2_CaringForNewPet_2courseC_maze_programming3_authored_hint:
-        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo
-          delete a block from the middle of your code, drag all of the blocks underneath
-          it away to the right and let them sit in the workspace for a while.  \n\nClick
-          on the block you want to delete, and drag it back to the toolbox.\n\nFinally,
-          put your other blocks back in place where they belong.\n"
+        courseC_maze_programming3_a: |-
+          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+
+          Per eliminare un blocco dal bel mezzo del programma, trascina da una parte tutti i blocchi sotto di lui.
+
+          Trascina nella cassetta degli attrezzi il blocco che vuoi cancellare.
+
+          Infine, rimetti al loro posto gli altri blocchi.
       grade2_CaringForNewPet_3_authored_hint:
-        hint1: You can turn right or left from the bird's point of view. If you are
-          facing right, turning right will make you point downwards.
+        hint1: Puoi girare a destra o a sinistra dal punto di vista dell'uccellino.
+          Se l'uccellino è rivolto verso destra, girare a destra significa dirigersi
+          verso il basso.
         hint2: This path is a zig-zag. You need to move forward 3 times and turn 2
           times.
-        hint3: To follow the path, move forward and turn one way, then move again
-          and turn the opposite way. Move forward one more time to reach the pig.
+        hint3: Per seguire il percorso, vai avanti e gira da una parte, poi spostati
+          di nuovo e gira nella direzione opposta. Per raggiungere il maiale, vai
+          ancora una volta avanti.
       grade2_CaringForNewPet_3D_authored_hint: {}
       grade2_CaringForNewPet_4_authored_hint:
         2-3_Maze_6_a: Ci sono due modi per risolvere questo esercizio!
@@ -14818,9 +14881,9 @@
           check to see if there is a flower beneath the cloud before you try to get
           nectar.
       grade3_bee_conditionals_quantum2_authored_hint:
-        grade3_bee_conditionals_quantum2_a: Sometimes a flower will be there, sometimes
-          it won't.  If you want your code to run in both cases, make sure to use
-          an `if` statement.
+        grade3_bee_conditionals_quantum2_a: Qualche volta c'è un fiore, altre volte
+          no. Se vuoi che il tuo programma funzioni in entrambi i casi, assicurati
+          di usare un blocco `se`.
       grade3_bee_conditionals_quantum3_authored_hint:
         grade3_bee_conditionals_quantum3: Make sure to use an `if` statement to check
           for honeycomb beneath each cloud.
@@ -14865,23 +14928,25 @@
       grade3_robotFarmer_ConditionalsIntro_10a_authored_hint: {}
       grade3_robotFarmer_ConditionalsIntro_11a_authored_hint: {}
       grade3_robotFarmer_ConditionalsIntro_5_authored_hint:
-        grade3_robotFarmer_ConditionalsIntro_5a: Try nesting a `while` loop inside
-          of a `repeat` loop.
+        grade3_robotFarmer_ConditionalsIntro_5a: Prova ad inserire un ciclo `mentre`
+          all'interno di un ciclo `ripeti ... volte`.
       grade3_robotFarmer_ConditionalsIntro_7_authored_hint:
-        grade3_robotFarmer_ConditionalsIntro_7_a: Make sure you're using the `while`
-          loop to figure out how many times to fill each hole.
-        grade3_robotFarmer_ConditionalsIntro_7_b: Notice that the farmer needs to
-          move forward and down several times in a stair-step pattern.
+        grade3_robotFarmer_ConditionalsIntro_7_a: Assicurati di usare il ciclo `mentre`
+          per riempire ogni buca indipendentemente dal numero di palate che servono.
+        grade3_robotFarmer_ConditionalsIntro_7_b: Nota che la contadina deve andare
+          avanti e girare diverse volte in questo schema a scalinata.
       grade3_robotFarmer_ConditionalsIntro_8_authored_hint:
-        grade3_robotFarmer_ConditionalsIntro_8_a: The `while path ahead` block lets
-          you keep going, even if you don't know how many squares are in a path.
+        grade3_robotFarmer_ConditionalsIntro_8_a: Il blocco `mentre c'è strada in
+          avanti` ti permette di andare avanti, anche se non sai quante caselle devi
+          percorrere.
       grade3_robotFarmer_ConditionalsIntro_9_authored_hint:
-        grade3_robotFarmer_ConditionalsIntro_9_a: You are going to need to use more
-          than one `while` loop.
-        grade3_robotFarmer_ConditionalsIntro_9_b: Every hole is at the end of a path,
-          so use `while path ahead` before using `while there is a hole`.
-        grade3_robotFarmer_ConditionalsIntro_9_c: Notice that you need to repeat the
-          `while path ahead`, `while there is a hole` code six times.
+        grade3_robotFarmer_ConditionalsIntro_9_a: Avrai bisogno di usare più di un
+          ciclo `mentre`.
+        grade3_robotFarmer_ConditionalsIntro_9_b: Ogni buca è alla fine di un tratto
+          di percorso, quindi usa il blocco `mentre c'è strada in avanti` prima di
+          usare il ciclo 'mentre c'è una buca'.
+        grade3_robotFarmer_ConditionalsIntro_9_c: Nota che devi ripetere sei volte
+          la sequenza `mentre c'è strada in avanti` + `quando c'è una buca`.
       grade4_arist_nested_loop_polygons1_authored_hint:
         4-5_Nested_Loops_7_a: |-
           La figura deve essere ripetuta 10 volte nei 360 gradi di un giro.<br>
@@ -15443,7 +15508,7 @@
         gradek_artist_loops8_a: 'You don''t have to delete everything!  Some of the
           code is good. Use it to build the rest of the stairs. '
       gradek_artist_loops9_authored_hint:
-        artistLoopsKA_a: Use the jump block to move forward without drawing a line.
+        artistLoopsKA_a: Usa il blocco salto per avanzare senza tracciare una linea.
       gradek_artist_loopsA_authored_hint:
         artistLoopsKB_a: There should be 2 blocks inside of your loop to solve this
           puzzle.

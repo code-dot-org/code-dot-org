@@ -1,4 +1,5 @@
-"ne":
+---
+ne:
   data:
     block_categories:
       Actions: Actions
@@ -45,5 +46,6 @@
       Foo: Foo
       Name: नाम
       NEW BLOCKS: NEW BLOCKS
+      'Functions ': 'Functions '
       Game/Score: Game/Score
       Function: Function

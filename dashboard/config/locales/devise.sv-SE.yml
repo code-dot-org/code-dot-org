@@ -1,4 +1,5 @@
-"sv":
+---
+sv:
   devise:
     confirmations:
       confirmed: Din e-postadress har bekräftats.

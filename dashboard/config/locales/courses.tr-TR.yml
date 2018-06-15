@@ -1,4 +1,5 @@
-"tr":
+---
+tr:
   data:
     course:
       name:
@@ -33,8 +34,7 @@
             introductory computer science course that empowers students to create
             authentic artifacts and engage with computer science as a medium for creativity,
             communication, problem solving, and fun.
-          description_short: An introductory computer science course that empowers
-            students to create authentic artifacts.
+          description_short: BB Keşifleri doğrultusunda 2018-2019 sürümü.
         allthethingscourse:
           title: tümherşeykursu
           description_short: Bu tümherşey için bir kurs

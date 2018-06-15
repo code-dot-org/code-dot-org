@@ -85,6 +85,7 @@ cs:
     facebook: 'Facebook'
     windowslive: 'Microsoft účet'
     clever: 'Clever Account'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Zapomněl jsi heslo?'
     need_confirmation: "Nedostal jsi instrukce pro potvrzení?"
     need_unlock: "Nezískal si instrukce pro odemčení?"

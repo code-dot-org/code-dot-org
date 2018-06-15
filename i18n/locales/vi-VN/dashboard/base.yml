@@ -85,6 +85,7 @@ vi:
     facebook: 'Facebook'
     windowslive: 'Tài khoản Microsoft'
     clever: 'Tài khoản Clever'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Quên mật khẩu?'
     need_confirmation: "Không nhận được hướng dẫn xác nhận?"
     need_unlock: "Chưa nhận hướng dẫn mở khóa?"
@@ -115,9 +116,9 @@ vi:
     invalid_password: "Mật khẩu phải có ít nhất 6 ký tự"
     mismatch_password: "Hai mật khẩu bạn nhập không khớp"
     agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
-    under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
-    agree_us_website: "I agree to using a website based in the United States."
-    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
+    under_13_consent: "Nếu dưới 13 tuổi, tôi xác nhận rằng tôi đã được cha mẹ hoặc người giám hộ hợp pháp cho phép sử dụng các dịch vụ trên Code.org."
+    agree_us_website: "Tôi đồng ý với việc sử dụng trang web đặt tại Hoa Kỳ."
+    my_data_to_us: "Dữ liệu từ việc tôi sử dụng trang web này có thể được gửi đến và lưu trữ hoặc xử lý tại Hoa Kỳ."
     student_terms: "Tôi đồng ý tuân theo <a href='http://code.org/tos'>các điều khoản dịch vụ</a> của Code.org. Nếu tôi dưới 13 tuổi, tôi xác nhận bằng cách nộp bản đơn này với sự đồng ý cho phép sử dụng dịch vụ của Code.org của phụ huynh hoặc người giám hộ.<br/><br/>Chúng tôi sẽ không lưu giữ các địa chỉ email dưới bất kì hình thức nào để nhằm vào việc liên lạc các học viên. Các học viên sẽ không bao giờ nhận được email từ Code.org trừ việc khôi phục lại mật khẩu. Hãy xem <a href='http://code.org/privacy'>quyền riêng tư</a> để biết thêm các chi tiết."
     teacher_terms: "Tôi đồng ý tuân theo các điều khoản dịch vụ của Code.org. Mọi chi tiết về quyền riêng tư, xin vui lòng xem <a href='http://code.org/privacy'>quyền riêng tư</a>."
     additional_information: "Chúng tôi cần một số thông tin bổ sung để tiếp tục đăng ký cho bạn."
@@ -128,7 +129,7 @@ vi:
     field_is_required: "là bắt buộc"
     accept_terms: "Bạn phải đồng ý để tạo một tài khoản"
     error: "Có lỗi xảy ra."
-    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_question: "Chúng tôi có thể gửi email cho bạn thông tin cập nhật về các khóa học của chúng tôi, các cơ hội ở địa phương hay tin tức về khoa học máy tính khác không?"
     email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: "Đồng ý"
     email_preference_no: "Không"

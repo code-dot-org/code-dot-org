@@ -371,7 +371,7 @@
   homepage_header_donors: "Code.org destekleyenlere teşekkürler"
   homepage_donors_seall: "Tümünü göster"
   homepage_donors_donate: "Bağış Yap"
-  homepage_below_hero_announcement_text: "We care about your privacy and are making some updates to our privacy policy, effective May 25."
+  homepage_below_hero_announcement_text: "Gizliliğinize önem veriyoruz ve gizlilik politikamızda 25 Mayıs’ta yürürlüğe girecek bazı güncellemeler yapıyoruz."
   homepage_below_hero_announcement_link_text: "Daha fazlasını öğren"
   contact_form_topic_student: "Ben öğrenciyim"
   contact_form_topic_parent: "Bir ebeveynim"
@@ -543,7 +543,7 @@
   volunteer_engineer_submission_field_email: "E-posta adresi"
   volunteer_engineer_submission_field_email_desc: "E-posta adresiniz asla paylaşılmaz, ancak öğretmenlerden size istekler göndereceğiz."
   volunteer_engineer_submission_field_email_placeholder: "E-posta adresi"
-  volunteer_engineer_submission_field_email_preference: "Can we email you about updates to our courses, volunteer opportunities, or other computer science news?"
+  volunteer_engineer_submission_field_email_preference: "Size kurslarımızdaki yenilikler, yerel fırsatlar veya diğer bilgisayar bilimi haberleriyle ilgili e-posta gönderebilir miyiz?"
   volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy policy)"
   volunteer_engineer_submission_field_email_preference_yes: 'Evet'
   volunteer_engineer_submission_field_email_preference_no: 'Hayır'
@@ -937,9 +937,25 @@
   coursee_name: "Kurs E"
   coursef-draft_name: Kurs F
   coursef_name: "Kurs F"
+  coursea-2017_name: Course A (2017)
+  courseb-2017_name: Course B (2017)
+  coursec-2017_name: Course C (2017)
+  coursed-2017_name: Course D (2017)
+  coursee-2017_name: Course E (2017)
+  coursef-2017_name: Course F (2017)
+  coursea-2018_name: Course A (2018)
+  courseb-2018_name: Course B (2018)
+  coursec-2018_name: Course C (2018)
+  coursed-2018_name: Yeni Kurs D Senaryosu
+  coursee-2018_name: Course E (2018)
+  coursef-2018_name: Course F (2018)
   accelerated_name: "Hızlandırılmış Kurs"
   express_name: "Hızlı Kurs"
   pre-express_name: Okuma Bilmeyenler için Hızlı Kurs
+  express-2017_name: Express Course (2017)
+  pre-express-2017_name: Pre-reader Express Course (2017)
+  express-2018_name: Hızlı Kurs
+  pre-express-2018_name: Pre-reader Express Course (2018)
   cspunit1_name: "Ünite 1: Sayısal bilgi"
   cspunit2_name: "Ünite 2: Internet"
   cspunit3_name: "Bilgisayar Bilimleri İlkeleri Ünite 3"
@@ -1014,6 +1030,8 @@
   math_category_name: "Matematik"
   hoc_category_name: "Saat Kodu"
   csf_category_name: "Bilgisayar bilimleri temeller"
+  csf_2017_category_name: "CS Fundamentals (2017)"
+  csf_2018_category_name: "CS Fundamentals (2018)"
   csf_international_category_name: "CS (Computer Science-Bilgisayar Bilimleri) Uluslararası Temelleri"
   csf2_draft_category_name: 'Geliştiriliyor: Kurslar A - F'
   csd_category_name: "CS Discoveries ('17-'18)"

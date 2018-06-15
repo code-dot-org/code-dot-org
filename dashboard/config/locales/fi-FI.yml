@@ -1,4 +1,5 @@
-"fi":
+---
+fi:
   errors:
     messages:
       not_saved: 'Ole hyvä ja korjaa seuraavat virheet:'
@@ -95,6 +96,7 @@
     facebook: Facebook
     windowslive: Microsoft-tili
     clever: Clever Account
+    powerschool: Powerschool Account
     forgot_password: Unohditko salasanasi?
     need_confirmation: Etkö saanut vahvistusviestiä?
     need_unlock: Etkö saanut avausohjeita?

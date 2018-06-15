@@ -1,4 +1,5 @@
-"it":
+---
+it:
   devise:
     confirmations:
       confirmed: Il tuo indirizzo di posta elettronica è stato confermato correttamente.
