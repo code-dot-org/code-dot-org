@@ -94,8 +94,14 @@ class Stage < ActiveRecord::Base
     end
   end
 
+  def localized_lesson_plan
+    if script.curriculum_path?
+      script.curriculum_path.gsub('{LESSON}', relative_position.to_s).gsub('{LOCALE}', '')
+    end
+  end
+
   def lesson_plan_html_url
-    "#{lesson_plan_base_url}/Teacher"
+    localized_lesson_plan || "#{lesson_plan_base_url}/Teacher"
   end
 
   def lesson_plan_pdf_url
