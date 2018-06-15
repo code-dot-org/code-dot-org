@@ -4,7 +4,7 @@ import $ from 'jquery';
 import trackEvent from '../util/trackEvent';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import FallbackPlayerCaptionDialogLink from '../templates/FallbackPlayerCaptionDialog';
+import FallbackPlayerCaptionDialogLink from '../templates/FallbackPlayerCaptionDialogLink';
 var videojs = require('video.js');
 var testImageAccess = require('./url_test');
 var clientState = require('./clientState');

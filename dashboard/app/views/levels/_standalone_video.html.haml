@@ -17,14 +17,19 @@
     .notes-content{style: "display: none"}
       #notes= render template: 'notes/index'
 
-  %p= link_to t('video.download'), video.download
+  %br/
+
+  .video-link= link_to t('video.download'), video.download
 
   - if @slides
-    %p
+    .slides-link
+      |
       %a.show-notes{href: ''}= t('video.show_notes')
       %a.show-video{href: '', style: "display: none"}= t('video.show_video')
 
   #fallback-player-caption-dialog-link
+
+  %br/
   %br/
 
   .buttons
