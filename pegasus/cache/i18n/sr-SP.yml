@@ -1,5 +1,4 @@
----
-sr-SP:
+"sr-SP":
   hour_of_code: Час кода
   hello: Здраво свете
   'yes': Да
@@ -716,8 +715,10 @@ sr-SP:
   volunteer_engineer_submission_field_company_placeholder: Company (or University)
   volunteer_engineer_submission_field_experience_level: Ниво искуства
   volunteer_engineer_submission_field_location: Место
-  volunteer_engineer_submission_field_location_desc: If you enter your exact address
-    we won't share it, just show you as a pin on map.
+  volunteer_engineer_submission_field_location_desc: Your location will be used to
+    allow teachers to search for nearby volunteers and will be shown as a pin on the
+    map. If you are concerned about privacy, please use your work/school address or
+    your city only.
   volunteer_engineer_submission_field_location_placeholder: ZIP code, city and state/country,
     or street address
   volunteer_engineer_submission_field_location_flexibility: I can help during the
