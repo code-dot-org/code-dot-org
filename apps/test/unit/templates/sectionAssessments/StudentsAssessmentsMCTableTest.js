@@ -4,7 +4,7 @@ import {assert, expect} from '../../../util/configuredChai';
 import StudentsAssessmentsMCTable from '@cdo/apps/templates/sectionAssessments/StudentsAssessmentsMCTable';
 import {studentOverviewData} from '@cdo/apps/templates/sectionAssessments/assessmentsTestHelpers';
 
-describe('StudentMultipleChoiceOverviewTable', () => {
+describe('StudentsAssessmentsMCTable', () => {
   it('renders a table', () => {
     const wrapper = mount(
       <StudentsAssessmentsMCTable
