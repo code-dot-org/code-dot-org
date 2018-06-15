@@ -23,7 +23,7 @@
       .field
         = f.label :email
         %span#displayed-user-email= f.object.email.present? ? f.object.email : '***encrypted***'
-        - if current_user.can_edit_email? && !current_user.oauth?
+        - if current_user.can_edit_email? && (!current_user.oauth? || current_user.migrated?)
           (
           %a#edit-email-link{href: '#'}= "Update"
           )
@@ -170,4 +170,3 @@
     }.to_json
   }
 %script{src: minifiable_asset_path('js/devise/registrations/edit.js'), data: script_data}
-
