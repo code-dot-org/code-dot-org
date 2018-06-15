@@ -133,3 +133,5 @@ GRANT ALL PRIVILEGES
 GRANT SELECT
   ON analysis.csf_workshops
   TO GROUP reader, GROUP reader_pii;
+  
+select * from csf_workshops where regional_partner_id = 64 and school_year = '2018-19';
