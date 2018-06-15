@@ -50,11 +50,8 @@
     "parent_level_id": 14104,
     "markdown_instructions": "These aliens are running wild!  \r\n\r\nUse the <xml><block type=\"gamelab_removeAllBehaviors\" inline=\"true\">\r\n      <value name=\"SPRITE\"/>\r\n    </block></xml> block to make each alien stop moving when it is clicked.  \r\n    \r\n---\r\n",
     "show_type_hints": "true",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "instructions": "Use the `stops everything` block to make each alien stop moving when it is clicked."
+    "instructions": "Use the `stops everything` block to make each alien stop moving when it is clicked.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
