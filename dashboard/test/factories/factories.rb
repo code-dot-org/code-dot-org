@@ -219,7 +219,7 @@ FactoryGirl.define do
           user: user,
           email: user.email,
           hashed_email: user.hashed_email,
-          credential_type: 'google_oauth',
+          credential_type: 'google_oauth2',
           authentication_id: 'abcd123'
         )
       end
@@ -245,6 +245,17 @@ FactoryGirl.define do
           hashed_email: user.hashed_email,
           credential_type: 'email',
           authentication_id: user.hashed_email
+        )
+      end
+    end
+
+    trait :multi_auth_migrated do
+      after(:create) do |user|
+        user.update_attributes(
+          provider: 'migrated',
+          uid: '',
+          email: '',
+          hashed_email: ''
         )
       end
     end
