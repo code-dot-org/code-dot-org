@@ -62,18 +62,6 @@ module UsersHelper
     user_data.compact
   end
 
-  # Get a users level progress within a certain script.
-  # Example return value (where 135 and 136 are levelIds):
-  #   {
-  #     "135": {"status": "perfect", "result": 100}
-  #.    "136": {"status": "perfect", "result": 100}
-  #   }
-  def user_progress_for_levels(script, user = current_user)
-    user_data = {}
-    merge_script_progress(user_data, user, script)
-    user_data[:levels]
-  end
-
   def level_with_best_progress(ids, level_progress)
     return ids[0] if ids.length == 1
 
@@ -119,56 +107,73 @@ module UsersHelper
     end
 
     unless exclude_level_progress
-      uls = user.user_levels_by_level(script)
-      paired_user_level_ids = PairedUserLevel.pairs(uls.values.map(&:id))
-      script_levels = script.script_levels
+      user_levels_by_level = user.user_levels_by_level(script)
       user_data[:completed] = user.completed?(script)
-      user_data[:levels] = {}
-      script_levels.each do |sl|
-        sl.level_ids.each do |level_id|
-          # if we have a contained level, use that to represent progress
-          contained_level_id = Level.cache_find(level_id).contained_levels.try(:first).try(:id)
-          ul = uls.try(:[], contained_level_id || level_id)
-          completion_status = activity_css_class(ul)
-          # a UL is submitted if the state is submitted UNLESS it is a peer reviewable level that has been reviewed
-          submitted = !!ul.try(:submitted) &&
-              !(ul.level.try(:peer_reviewable?) && [ActivityConstants::REVIEW_REJECTED_RESULT, ActivityConstants::REVIEW_ACCEPTED_RESULT].include?(ul.best_result))
-          readonly_answers = !!ul.try(:readonly_answers)
-          locked = ul.try(:locked?, sl.stage) || sl.stage.lockable? && !ul
+      user_data[:levels] = merge_user_progress_by_level(
+        script: script,
+        user: user,
+        user_levels_by_level: user_levels_by_level
+      )
+    end
 
-          # for now, we don't allow authorized teachers to be "locked"
-          if locked && !user.authorized_teacher?
-            user_data[:levels][level_id] = {
-              status: LEVEL_STATUS.locked
-            }
-          elsif completion_status != LEVEL_STATUS.not_tried
-            user_data[:levels][level_id] = {
-              status: completion_status,
-              result: ul.try(:best_result) || 0,
-              submitted: submitted ? true : nil,
-              readonly_answers: readonly_answers ? true : nil,
-              paired: (paired_user_level_ids.include? ul.try(:id)) ? true : nil
-            }.compact
+    user_data
+  end
 
-            # Just in case this level has multiple pages, in which case we add an additional
-            # array of booleans indicating which pages have been completed.
-            pages_completed = get_pages_completed(user, sl)
-            if pages_completed
-              user_data[:levels][level_id][:pages_completed] = pages_completed
-              pages_completed.each_with_index do |result, index|
-                user_data[:levels]["#{level_id}_#{index}"] = {
-                  result: result,
-                  submitted: submitted ? true : nil,
-                  readonly_answers: readonly_answers ? true : nil
-                }.compact
-              end
+  # Merges and summarizes a user's level progress for a particular script.
+  # @param [Script] script
+  # @param [User] user
+  # @param [Hash<Integer, UserLevel>] user_levels_by_level - a map from level id
+  #   to UserLevel instance for the provided user, passed in instead of derived
+  #   from the first two arguments so we can retrieve this in advance for many
+  #   users in some use cases.
+  # @return [Hash<Integer, Hash>] a map from level_id to a progress summary
+  #   for the level.
+  private def merge_user_progress_by_level(script:, user:, user_levels_by_level:)
+    paired_user_levels = PairedUserLevel.pairs(user_levels_by_level.values.map(&:id))
+    levels = {}
+    script.script_levels.each do |sl|
+      sl.level_ids.each do |level_id|
+        # if we have a contained level, use that to represent progress
+        contained_level_id = Level.cache_find(level_id).contained_levels.try(:first).try(:id)
+        ul = user_levels_by_level.try(:[], contained_level_id || level_id)
+        completion_status = activity_css_class(ul)
+        # a UL is submitted if the state is submitted UNLESS it is a peer reviewable level that has been reviewed
+        submitted = !!ul.try(:submitted) &&
+          !(ul.level.try(:peer_reviewable?) && [ActivityConstants::REVIEW_REJECTED_RESULT, ActivityConstants::REVIEW_ACCEPTED_RESULT].include?(ul.best_result))
+        readonly_answers = !!ul.try(:readonly_answers)
+        locked = ul.try(:locked?, sl.stage) || sl.stage.lockable? && !ul
+
+        # for now, we don't allow authorized teachers to be "locked"
+        if locked && !user.authorized_teacher?
+          levels[level_id] = {
+            status: LEVEL_STATUS.locked
+          }
+        elsif completion_status != LEVEL_STATUS.not_tried
+          levels[level_id] = {
+            status: completion_status,
+            result: ul.try(:best_result) || 0,
+            submitted: submitted ? true : nil,
+            readonly_answers: readonly_answers ? true : nil,
+            paired: (paired_user_levels.include? ul.try(:id)) ? true : nil
+          }.compact
+
+          # Just in case this level has multiple pages, in which case we add an additional
+          # array of booleans indicating which pages have been completed.
+          pages_completed = get_pages_completed(user, sl)
+          if pages_completed
+            levels[level_id][:pages_completed] = pages_completed
+            pages_completed.each_with_index do |result, index|
+              levels["#{level_id}_#{index}"] = {
+                result: result,
+                submitted: submitted ? true : nil,
+                readonly_answers: readonly_answers ? true : nil
+              }.compact
             end
           end
         end
       end
     end
-
-    user_data
+    levels
   end
 
   # Given a user and a script-level, returns a nil if there is only one page, or an array of
