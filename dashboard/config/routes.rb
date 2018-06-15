@@ -100,6 +100,7 @@ Dashboard::Application.routes.draw do
     resources :assessments, only: [:index] do
       collection do
         get 'section_responses'
+        get 'section_surveys'
       end
     end
   end
