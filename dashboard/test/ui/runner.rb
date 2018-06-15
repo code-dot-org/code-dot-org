@@ -352,17 +352,14 @@ def eyes?
 end
 
 def configure_for_eyes
-  # Generate a batch ID, unique to this test run.
-  # Each Eyes instance will use the same one so that tests from this
-  # run get grouped together. This gets used in eyes_steps.rb.
-  # See "Aggregating tests from different processes"
-  # http://support.applitools.com/customer/en/portal/articles/2516398-aggregating-tests-from-different-processes-machines
-  ENV['BATCH_ID'] = "#{GIT_BRANCH}_#{SecureRandom.uuid}".gsub(/[^\w-]+/, '_')
+  ENV['APPLITOOLS_API_KEY'] = CDO.applitools_eyes_api_key
+  # The Eyes/Applitools gem uniquely identifies a test run by the git commit hash.
+  ENV['APPLITOOLS_BATCH_ID'] = COMMIT_HASH
 end
 
 def applitools_batch_url
   return nil unless eyes?
-  "https://eyes.applitools.com/app/batches/?startInfoBatchId=#{ENV['BATCH_ID']}&hideBatchList=true"
+  "https://eyes.applitools.com/app/batches/?startInfoBatchId=#{ENV['APPLITOOLS_BATCH_ID']}&hideBatchList=true"
 end
 
 def report_tests_starting
