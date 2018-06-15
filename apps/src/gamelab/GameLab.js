@@ -290,11 +290,12 @@ GameLab.prototype.init = function (config) {
       this.studioApp_.displayAlert('#belowVisualization', {type: 'warning', sideMargin: 0},
         <div>
           <p>
-            <strong>Welcome to the Sprite Lab pre-release ALPHA!</strong>
+            <strong>Welcome to the Sprite Lab pre-release Beta!</strong>
           </p>
           <p>
-            This is a brand new Code.org project we are still working on. Blocks
-            will change and <em>your projects may stop working at any time</em>.
+            This is a new Code.org project we are still working on. You may
+            notice blocks change or stop working. If a block turns gray, try
+            deleting it and replacing it.
           </p>
         </div>, ''
       );

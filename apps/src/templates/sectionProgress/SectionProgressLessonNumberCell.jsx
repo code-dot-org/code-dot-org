@@ -8,11 +8,12 @@ class SectionProgressLessonNumberCell extends Component {
   static propTypes = {
     lessonNumber: PropTypes.number.isRequired,
     jumpToLessonDetails: PropTypes.func.isRequired,
-    lessonOfInterest: PropTypes.number.isRequired
+    lessonOfInterest: PropTypes.number.isRequired,
+    tooltipId: PropTypes.string.isRequired,
   };
 
   render() {
-    const {lessonNumber, jumpToLessonDetails, lessonOfInterest} = this.props;
+    const {lessonNumber, jumpToLessonDetails, lessonOfInterest, tooltipId} = this.props;
 
     let cellStyle = progressStyles.lessonNumberHeading;
     if (lessonNumber === lessonOfInterest) {
@@ -26,6 +27,8 @@ class SectionProgressLessonNumberCell extends Component {
       <div
         style={cellStyle}
         onClick={() => jumpToLessonDetails(lessonNumber)}
+        data-tip
+        data-for={tooltipId}
       >
         {lessonNumber}
       </div>

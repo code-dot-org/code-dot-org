@@ -72,7 +72,6 @@ const styles = {
   },
   contents: {
     whiteSpace: 'nowrap',
-    fontSize: 16,
     lineHeight: '16px',
   },
   diamondContents: {
@@ -99,6 +98,7 @@ class ProgressBubble extends React.Component {
     // set to window.location; see defaultProps.
     currentLocation: PropTypes.object.isRequired,
     stageTrophyEnabled: PropTypes.bool,
+    pairingIconEnabled: PropTypes.bool,
     hideToolTips: PropTypes.bool,
   };
 
@@ -107,7 +107,7 @@ class ProgressBubble extends React.Component {
   };
 
   render() {
-    const { level, smallBubble, selectedSectionId, selectedStudentId, currentLocation, stageTrophyEnabled } = this.props;
+    const { level, smallBubble, selectedSectionId, selectedStudentId, currentLocation, stageTrophyEnabled, pairingIconEnabled } = this.props;
 
     const number = level.levelNumber;
     const url = level.url;
@@ -115,6 +115,7 @@ class ProgressBubble extends React.Component {
     const levelIcon = getIconForLevel(level);
 
     const disabled = this.props.disabled || levelIcon === 'lock';
+    const hideNumber = levelIcon === 'lock' || level.paired;
 
     const style = {
       ...styles.main,
@@ -187,12 +188,14 @@ class ProgressBubble extends React.Component {
         >
           <div
             style={{
+              fontSize: level.paired ? 14 : 16,
               ...styles.contents,
               ...(level.isConceptLevel && styles.diamondContents)
             }}
           >
             {levelIcon === 'lock' && <FontAwesome icon="lock"/>}
-            {levelIcon !== 'lock' && (
+            {pairingIconEnabled && level.paired && <FontAwesome icon="users"/>}
+            {!hideNumber && (
               <span>
                 {/*Text will not show up for smallBubble, but it's presence
                   causes bubble to be properly aligned vertically

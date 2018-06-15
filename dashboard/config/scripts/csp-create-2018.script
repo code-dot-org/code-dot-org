@@ -2,7 +2,7 @@ hidden false
 login_required true
 hideable_stages true
 student_detail_progress_view true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csp/csp-create/"], ["teacherForum", "https://forum.code.org/c/csp/ap-prep"], ["standardMappings", "https://curriculum.code.org/csp/csp-create/standards/"]]
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-18/csp-create/"], ["teacherForum", "https://forum.code.org/c/csp/ap-prep"], ["standardMappings", "https://curriculum.code.org/csp-18/csp-create/standards/"]]
 has_verified_resources true
 has_lesson_plan true
 family_name 'csp-create'

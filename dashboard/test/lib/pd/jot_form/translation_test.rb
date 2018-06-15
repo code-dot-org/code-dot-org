@@ -117,7 +117,7 @@ module Pd
 
         JotFormRestClient.any_instance.
           expects(:get_submissions).
-          with(@form_id, last_known_submission_id: last_known_submission_id, min_date: nil, full_text_search: nil).
+          with(@form_id, last_known_submission_id: last_known_submission_id, min_date: nil).
           returns(get_submissions_result)
 
         result = Translation.new(@form_id).get_submissions(last_known_submission_id: last_known_submission_id)

@@ -29,6 +29,7 @@ export default class StudentProgressDetailCell extends Component {
             hideToolTips={true}
             selectedSectionId={this.props.sectionId}
             selectedStudentId={this.props.studentId}
+            pairingIconEnabled={true}
           />
         </div>
       </div>

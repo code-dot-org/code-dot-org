@@ -51,7 +51,6 @@ class ScriptLevel < ActiveRecord::Base
     progression
     target
     challenge
-    hint_prompt_attempts_threshold
   )
 
   def script
@@ -354,6 +353,7 @@ class ScriptLevel < ActiveRecord::Base
       map: JSON.parse(level.try(:maze) || '[]'),
       serialized_maze: level.try(:serialized_maze) && JSON.parse(level.try(:serialized_maze)),
       skin: level.try(:skin),
+      thumbnail_url: level.try(:thumbnail_url),
       solution_image_url: level.try(:solution_image_url),
       level: level.summarize_as_bonus.camelize_keys,
     }.camelize_keys

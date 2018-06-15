@@ -1,5 +1,7 @@
 import {assert} from '../../util/configuredChai';
 import sinon from 'sinon';
+import fakeFetch from 'fake-fetch';
+
 var testUtils = require('../../util/testUtils');
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 import { setAppOptions } from '@cdo/apps/code-studio/initApp/loadApp';
@@ -103,6 +105,10 @@ describe('The Exporter,', function () {
     server.respondWith('/blockly/media/foo.png', 'blockly foo.png content');
     server.respondWith('/blockly/media/bar.jpg', 'blockly bar.jpg content');
     server.respondWith('/blockly/media/third.jpg', 'blockly third.jpg content');
+
+    // Needed to simulate fetch() response to '/projects/applab/fake_id/export_create_channel'
+    fakeFetch.install();
+    fakeFetch.respondWith(JSON.stringify({channel_id: 'new_fake_id'}));
 
     setAppOptions({
       "levelGameName":"Applab",
@@ -211,6 +217,7 @@ describe('The Exporter,', function () {
 
   afterEach(function () {
     server.restore();
+    fakeFetch.restore();
     assetPrefix.init({});
     window.userNameCookieKey = stashedCookieKey;
   });
@@ -221,6 +228,7 @@ describe('The Exporter,', function () {
     });
 
     it("should reject the promise with an error", function (done) {
+      server.respondImmediately = true;
       let zipPromise = Exporter.exportAppToZip(
         'my-app',
         'console.log("hello");',
@@ -231,7 +239,6 @@ describe('The Exporter,', function () {
           </div>
         </div>`
       );
-      server.respond();
       zipPromise.then(function () {
         assert.fail('Expected zipPromise not to resolve');
         done();
@@ -242,6 +249,7 @@ describe('The Exporter,', function () {
     });
 
     it("should reject the promise with an error in expoMode", function (done) {
+      server.respondImmediately = true;
       let zipPromise = Exporter.exportAppToZip(
         'my-app',
         'console.log("hello");',
@@ -253,7 +261,6 @@ describe('The Exporter,', function () {
         </div>`,
         true
       );
-      server.respond();
       zipPromise.then(function () {
         assert.fail('Expected zipPromise not to resolve');
         done();
@@ -499,7 +506,7 @@ describe('The Exporter,', function () {
         assert.property(zipFiles, 'my-app/assets/applab-api.j');
         assert.equal(
           zipFiles['my-app/assets/applab-api.j'],
-          `${getAppOptionsFile(true)}\n${COMMON_LOCALE_JS_CONTENT}\n${APPLAB_LOCALE_JS_CONTENT}\n${APPLAB_API_JS_CONTENT}`
+          `${getAppOptionsFile(true, "new_fake_id")}\n${COMMON_LOCALE_JS_CONTENT}\n${APPLAB_LOCALE_JS_CONTENT}\n${APPLAB_API_JS_CONTENT}`
         );
       });
 
