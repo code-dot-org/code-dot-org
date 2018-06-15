@@ -40,8 +40,13 @@ started as
   join users u on u.id = cc.user_id
 ),
 pd_enrollments_with_year as
-  ( select pd_workshop_id, first_name, last_name, email, user_id, school_year
+  ( select pd_workshop_id, u.studio_person_id, school_year,
+         FIRST_VALUE(pde.first_name) OVER (PARTITION BY u.studio_person_id  ORDER BY (CASE WHEN  pde.first_name IS NULL THEN 1 ELSE 2 END), pde.pd_workshop_id DESC ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING ) as first_name,
+         FIRST_VALUE(pde.last_name) OVER (PARTITION BY u.studio_person_id ORDER BY (CASE WHEN  pde.last_name IS NULL THEN 1 ELSE 2 END), pde.pd_workshop_id DESC ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING ) as last_name,
+         FIRST_VALUE(pde.email) OVER (PARTITION BY u.studio_person_id ORDER BY (CASE WHEN  pde.email IS NULL THEN 1 ELSE 2 END), pde.pd_workshop_id DESC ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING ) as email
       from dashboard_production_pii.pd_enrollments pde
+      join dashboard_production.users u
+      on u.id = pde.user_id
       join dashboard_production_pii.pd_workshops pw
       on pde.pd_workshop_id = pw.id
       join analysis.school_years sy 
@@ -49,13 +54,11 @@ pd_enrollments_with_year as
       and pw.deleted_at is null and pde.deleted_at is null
   )
   SELECT distinct 
-         u.id as user_id,
          d.studio_person_id,
-         FIRST_VALUE(pde.first_name) OVER (PARTITION BY d.studio_person_id  ORDER BY (CASE WHEN  pde.first_name IS NULL THEN 2 ELSE 1 END), pde.pd_workshop_id ASC ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING ) as first_name,
-         FIRST_VALUE(pde.last_name) OVER (PARTITION BY d.studio_person_id ORDER BY (CASE WHEN  pde.last_name IS NULL THEN 2 ELSE 1 END), pde.pd_workshop_id ASC ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING ) as last_name,
-         FIRST_VALUE(pde.email) OVER (PARTITION BY d.studio_person_id ORDER BY (CASE WHEN  pde.email IS NULL THEN 2 ELSE 1 END), pde.pd_workshop_id ASC ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING ) as email,
+         pde.first_name,
+         pde.last_name,
+         pde.email,
          d.course,
-         d.location,
          d.school_year as school_year_trained,
          s.school_year as school_year_taught,
          rp.name as regional_partner_name,
@@ -106,15 +109,15 @@ pd_enrollments_with_year as
   LEFT JOIN dashboard_production_pii.regional_partners rp  
        ON d.regional_partner_id = rp.id 
   LEFT JOIN pd_enrollments_with_year pde 
-        ON pde.user_id = u.id
+        ON pde.studio_person_id = d.studio_person_id
         AND pde.school_year = d.school_year 
 -- analysis tables
  LEFT JOIN started s
-       ON s.studio_person_id = u.studio_person_id
+       ON s.studio_person_id = d.studio_person_id
       AND s.course = d.course
       AND s.school_year >= d.school_year
   LEFT JOIN completed c
-         ON c.studio_person_id = u.studio_person_id
+         ON c.studio_person_id = d.studio_person_id
         AND c.course = d.course   
         AND c.school_year  = s.school_year  
   LEFT JOIN analysis.teacher_most_progress_csp_csd tmp 
@@ -125,6 +128,5 @@ pd_enrollments_with_year as
          AND sa.school_year = s.school_year
 ;
 
-GRANT ALL PRIVILEGES ON analysis.regional_partner_stats_csp_csd_test TO GROUP admin;
-GRANT SELECT ON analysis.regional_partner_stats_csp_csd_ TO GROUP reader_pii;
-
+GRANT ALL PRIVILEGES ON analysis.regional_partner_stats_csp_csd TO GROUP admin;
+GRANT SELECT ON analysis.regional_partner_stats_csp_csd TO GROUP reader_pii;
