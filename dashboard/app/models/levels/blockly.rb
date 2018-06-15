@@ -75,6 +75,7 @@ class Blockly < Level
     disable_if_else_editing
     show_type_hints
     thumbnail_url
+    include_shared_functions
   )
 
   before_save :update_ideal_level_source
@@ -268,7 +269,7 @@ class Blockly < Level
           default_toolbox_blocks
         level_prop['codeFunctions'] = try(:project_template_level).try(:code_functions) || code_functions
         level_prop['sharedBlocks'] = shared_blocks
-        level_prop['sharedFunctions'] = shared_functions
+        level_prop['sharedFunctions'] = include_shared_functions && shared_functions
       end
 
       if is_a? Applab
