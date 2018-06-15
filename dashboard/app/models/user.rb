@@ -1673,15 +1673,11 @@ class User < ActiveRecord::Base
     provider == PROVIDER_MIGRATED
   end
 
-  def sponsored?
-    provider == PROVIDER_SPONSORED
-  end
-
   # We restrict certain users from editing their email address, because we
   # require a current password confirmation to edit email and some users don't
   # have passwords
   def can_edit_email?
-    return !sponsored? if migrated?
+    return !authentication_options.empty? if migrated?
     encrypted_password.present? || oauth?
   end
 
