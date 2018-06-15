@@ -1,4 +1,5 @@
-"fa":
+---
+fa:
   errors:
     messages:
       not_saved: 'لطفا خطاهای زیر را درست کنید:'
@@ -93,6 +94,7 @@
     facebook: فیس‌بوک
     windowslive: حساب مایکروسافت
     clever: Clever Account
+    powerschool: Powerschool Account
     forgot_password: کلمه عبور خود را فراموش کرده اید؟
     need_confirmation: دستورالعمل فعال‌سازی حساب کاربری را دریافت نکرده‌اید؟
     need_unlock: دستورالعمل فعال‌سازی را دریافت نکرده‌اید؟

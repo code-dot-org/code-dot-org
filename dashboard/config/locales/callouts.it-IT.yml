@@ -1,4 +1,5 @@
-"it":
+---
+it:
   data:
     callouts:
       2-3 Artist 1 new_callout: {}
@@ -1371,11 +1372,11 @@
       courseD_bee_conditionals2_callout:
         4_5_Bee_Conditionals_2_1: Ricorda di controllare OGNI nuvola per vedere se
           ha un FIORE. Invece non devi proprio cercare favi.
-        4_5_Bee_Conditionals_2_2: Need help?  Click here for a VIDEO hint!
+        4_5_Bee_Conditionals_2_2: Hai bisogno di aiuto? Clicca qui per un VIDEO-suggerimento!
       courseD_bee_conditionals2_2018_callout:
         4_5_Bee_Conditionals_2_1: Ricorda di controllare OGNI nuvola per vedere se
           ha un FIORE. Invece non devi proprio cercare favi.
-        4_5_Bee_Conditionals_2_2: Need help?  Click here for a VIDEO hint!
+        4_5_Bee_Conditionals_2_2: Hai bisogno di aiuto? Clicca qui per un VIDEO-suggerimento!
       courseD_bee_conditionals2_test_callout:
         4_5_Bee_Conditionals_2_1: Ricorda di controllare OGNI nuvola per vedere se
           ha un FIORE. Invece non devi proprio cercare favi.

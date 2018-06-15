@@ -85,6 +85,7 @@ it:
     facebook: 'Facebook'
     windowslive: 'Account Microsoft'
     clever: 'Account Clever'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Hai dimenticato la tua password?'
     need_confirmation: "Non hai ricevuto le istruzioni di conferma?"
     need_unlock: "Non hai ricevuto le istruzioni di sblocco?"
@@ -115,9 +116,9 @@ it:
     invalid_password: "La password deve essere lunga almeno 6 caratteri"
     mismatch_password: "Le due password che hai inserito non corrispondono"
     agree_tos_privacy: "Accetto i <a href='http://code.org/tos'>Termini di Servizio</a> e l'<a href='http://code.org/privacy'>Informativa sulla Privacy</a>."
-    under_13_consent: "Se ho meno di 13 anni, confermo che i miei genitori o di chi ne fa le veci mi hanno dato il permesso di utilizzare i servizi di Code.org."
-    agree_us_website: "Accetto di utilizzare un sito web con sede negli Stati Uniti."
-    my_data_to_us: "I dati del mio utilizzo di questo sito possono essere inviati e memorizzati o elaborati negli Stati Uniti."
+    under_13_consent: "Se ho meno di 13 anni, confermo di avere l’autorizzazione dei miei genitori o del mio tutore legale all’utilizzo dei servizi di Code.org."
+    agree_us_website: "Accetto di utilizzare un sito Web con sede negli Stati Uniti."
+    my_data_to_us: "I dati relativi al mio utilizzo di questo sito Web possono essere inviati e archiviati o elaborati negli Stati Uniti."
     student_terms: "Accetto di essere legato ai <a href='http://code.org/tos'> Termini di Servizio </a> di Code.org. Se ho meno di 13 anni, confermo, sottoscrivendo a questo modulo che ho il permesso da parte di un genitore o di un tutore legale di usare i servizi di Code.org. <br/><br/>Gli indirizzi email non sono salvati in un modo che ci permetta di contattare gli studenti. Gli studenti non riceveranno mai email da Code.org se non per il recupero della password. Per più informazioni, leggere la nostra <a href='http://code.org/privacy'>Informativa sulla Privacy</a>."
     teacher_terms: "Accetto di essere vincolato ai <a href='http://code.org/tos'>Termini di Servizio</a> di Code.org. Per ulteriori informazioni sulla privacy, leggi la nostra <a href='http://code.org/privacy'>Informativa sulla Privacy</a>."
     additional_information: "Abbiamo bisogno di alcune informazioni aggiuntive per continuare la tua iscrizione."
@@ -128,7 +129,7 @@ it:
     field_is_required: "è un dato obbligatorio"
     accept_terms: "Devi accettare le condizioni per creare un account"
     error: "Si è verificato un errore."
-    email_preference_question: "Possiamo inviarti email sulle novità dei nostri corsi o su altre notizie legate all'informatica?"
+    email_preference_question: "Consenti l’invio di aggiornamenti sui nostri corsi, opportunità a livello locale o altre notizie informatiche?"
     email_preference_privacy: "(Vedi la nostra informativa sulla privacy)"
     email_preference_yes: "Sì"
     email_preference_no: "No"

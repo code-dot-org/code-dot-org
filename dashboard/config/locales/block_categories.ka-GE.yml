@@ -1,4 +1,5 @@
-"ka":
+---
+ka:
   data:
     block_categories:
       Actions: მოქმედებები
@@ -45,5 +46,6 @@
       Foo: Foo
       Name: სახელი
       NEW BLOCKS: NEW BLOCKS
+      'Functions ': 'Functions '
       Game/Score: Game/Score
       Function: ფუნქცია

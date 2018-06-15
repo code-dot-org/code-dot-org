@@ -1,4 +1,5 @@
-"lt":
+---
+lt:
   devise:
     confirmations:
       confirmed: Jūsų el. pašto adresas buvo sėkmingai patvirtintas.

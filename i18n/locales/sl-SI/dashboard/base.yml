@@ -85,6 +85,7 @@ sl:
     facebook: 'Facebook'
     windowslive: 'Microsoft račun'
     clever: 'Pameten račun'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Si pozabil/a svoje geslo?'
     need_confirmation: "Nisi prejel/a navodil za potrditev?"
     need_unlock: "Nisi prejel/a navodil za odklepanje?"

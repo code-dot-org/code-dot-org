@@ -1,8 +1,8 @@
 "ky-KG":
   hour_of_code: "Hour of Code"
   hello: "Hello world"
-  'yes': 'Yes'
-  'no': 'No'
+  'yes': 'Ооба'
+  'no': 'Жок'
   select_language: "Тил тандаңыз"
   upgrade_ie_message: "Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser."
   upgrade_ie_message_csedweek: "CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser."
@@ -46,7 +46,7 @@
   csedweek_map_signup: "Иш-чараңарды каттагыла"
   csedweek_map_search_placeholder: "Код сааты иш-чараларын издөө"
   csedweek_map_search_search: "Издөө"
-  csedweek_map_search_reset: "Reset"
+  csedweek_map_search_reset: "Кайрадан"
   csedweek_map_legend_title: "Баяндамасы"
   csedweek_map_legend_event: "Код сааты иш-чарасы"
   csedweek_map_legend_cs_tech_jam: "Атайын иш-чара"
@@ -557,8 +557,8 @@
   volunteer_engineer_submission_field_email_placeholder: "Email address"
   volunteer_engineer_submission_field_email_preference: "Can we email you about updates to our courses, volunteer opportunities, or other computer science news?"
   volunteer_engineer_submission_field_email_preference_privacy: "(Купуялуулук саясатыбызды карагыла)"
-  volunteer_engineer_submission_field_email_preference_yes: 'Yes'
-  volunteer_engineer_submission_field_email_preference_no: 'No'
+  volunteer_engineer_submission_field_email_preference_yes: 'Ооба'
+  volunteer_engineer_submission_field_email_preference_no: 'Жок'
   volunteer_engineer_submission_final_paragraph: "You will be listed on a map for local teachers to contact you for the Hour of Code or other volunteer opportunities. Your email and exact address will NEVER be shared by us. But the other information (including approximate location) will be publicly viewable by local teachers."
   volunteer_engineer_submission_checkbox_contact: 'I agree that teachers can contact me for volunteer opportunities (Note: your email address won''t be shared)'
   volunteer_engineer_submission_checkbox_age_18_plus: "I certify that I am at least 18 years old."
@@ -642,8 +642,8 @@
   dashboard_landing_loading: "Loading..."
   dashboard_action_cancel: "Жок кыл"
   dashboard_action_delete: "Delete"
-  dashboard_action_delete_yes: 'Yes'
-  dashboard_action_delete_no: 'No'
+  dashboard_action_delete_yes: 'Ооба'
+  dashboard_action_delete_no: 'Жок'
   dashboard_action_confirm: "Delete?"
   dashboard_action_done: "Done"
   dashboard_action_print_certificates: "Print certificates"
@@ -949,9 +949,25 @@
   coursee_name: "Course E"
   coursef-draft_name: Course F
   coursef_name: "Course F"
+  coursea-2017_name: Course A (2017)
+  courseb-2017_name: Course B (2017)
+  coursec-2017_name: Course C (2017)
+  coursed-2017_name: Course D (2017)
+  coursee-2017_name: Course E (2017)
+  coursef-2017_name: Course F (2017)
+  coursea-2018_name: Course A (2018)
+  courseb-2018_name: Course B (2018)
+  coursec-2018_name: Course C (2018)
+  coursed-2018_name: Course D (2018)
+  coursee-2018_name: Course E (2018)
+  coursef-2018_name: Course F (2018)
   accelerated_name: "Accelerated Course"
   express_name: "Express Course"
   pre-express_name: Pre-reader Express Course
+  express-2017_name: Express Course (2017)
+  pre-express-2017_name: Pre-reader Express Course (2017)
+  express-2018_name: Express Course (2018)
+  pre-express-2018_name: Pre-reader Express Course (2018)
   cspunit1_name: "(old) Unit 1: Digital Information"
   cspunit2_name: "(old) Unit 2: The Internet"
   cspunit3_name: "(old) Unit 3: Programming"
@@ -1026,6 +1042,8 @@
   math_category_name: "Математика"
   hoc_category_name: "Hour of Code"
   csf_category_name: "CS Fundamentals"
+  csf_2017_category_name: "CS Fundamentals (2017)"
+  csf_2018_category_name: "CS Fundamentals (2018)"
   csf_international_category_name: "CS Fundamentals International"
   csf2_draft_category_name: 'Under Development: Courses A - F'
   csd_category_name: "CS Discoveries ('17-'18)"

@@ -1,4 +1,5 @@
-"id":
+---
+id:
   data:
     block_categories:
       Actions: Aksi
@@ -45,5 +46,6 @@
       Foo: Foo
       Name: Nama
       NEW BLOCKS: NEW BLOCKS
+      'Functions ': 'Functions '
       Game/Score: Game/Score
       Function: Fungsi

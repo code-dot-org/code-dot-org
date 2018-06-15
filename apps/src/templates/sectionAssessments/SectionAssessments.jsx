@@ -2,14 +2,14 @@ import React, {Component, PropTypes} from 'react';
 import { setScriptId, validScriptPropType } from '@cdo/apps/redux/scriptSelectionRedux';
 import {
   asyncLoadAssessments,
-  getAssessmentList,
+  getCurrentScriptAssessmentList,
   setAssessmentId,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {connect} from 'react-redux';
 import {h3Style} from "../../lib/ui/Headings";
 import i18n from '@cdo/locale';
 import ScriptSelector from '@cdo/apps/templates/sectionProgress/ScriptSelector';
-import MultipleChoiceByStudentSection from './MultipleChoiceByStudentSection';
+import MultipleChoiceByStudentContainer from './MultipleChoiceByStudentContainer';
 import AssessmentSelector from './AssessmentSelector';
 
 const styles = {
@@ -65,7 +65,7 @@ class SectionAssessments extends Component {
           />
         </div>
         <div>
-          <MultipleChoiceByStudentSection />
+          <MultipleChoiceByStudentContainer />
         </div>
       </div>
     );
@@ -78,7 +78,7 @@ export default connect(state => ({
   sectionId: state.sectionData.section.id,
   isLoadingAssessments: state.sectionAssessments.isLoadingAssessments,
   validScripts: state.scriptSelection.validScripts,
-  assessmentList: getAssessmentList(state),
+  assessmentList: getCurrentScriptAssessmentList(state),
   scriptId: state.scriptSelection.scriptId,
   assessmentId: state.sectionAssessments.assessmentId,
 }), dispatch => ({

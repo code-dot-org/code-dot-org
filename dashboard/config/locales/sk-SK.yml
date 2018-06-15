@@ -1,4 +1,5 @@
-"sk":
+---
+sk:
   errors:
     messages:
       not_saved: 'Opravte prosím nasledujúce chyby:'
@@ -94,6 +95,7 @@
     facebook: Facebook
     windowslive: Microsoft účet
     clever: Clever Account
+    powerschool: Powerschool Account
     forgot_password: Zabudli ste heslo?
     need_confirmation: Neprišli ti pokyny na potvrdenie?
     need_unlock: Neprišli ti pokyny na odomknutie?

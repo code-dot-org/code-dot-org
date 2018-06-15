@@ -1,4 +1,5 @@
-"mk":
+---
+mk:
   devise:
     confirmations:
       confirmed: Your email address was successfully confirmed.

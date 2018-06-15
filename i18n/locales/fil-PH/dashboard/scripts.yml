@@ -5,6 +5,7 @@ fil:
         csd_category_name: CS Discoveries ('17-'18)
         csd_2018_category_name: CS Discoveries ('18-'19)
         csf_category_name: CS Fundamentals
+        csf_2018_category_name: CS Fundamentals (2018)
         csf_international_category_name: Internasyonal na CS Fundamentals
         csf2_draft_category_name: 'Kasalukuyang Ginagawa: Mga Kursong A - F'
         csp_category_name: "'15-'16 na mga Prinsipyo ng CS"
@@ -5483,6 +5484,7 @@ fil:
               description_student: ''
               description_teacher: Sa online na gawaing ito, ang mga estudyante ay magkakaroon ng pagkakataong matuto kung paano gumamit ng mga pangyayari sa Play Lab at para gumamit sa lahat ng mga kakayahan sa pag-code na natutunan nila para lumikha ng isang laro na naka-animate. Oras na para maging malikhain at gumawa ng istorya sa Play Lab!
           title: Kursong A
+          assignment_family_title: Kursong A
           description_audience: 'Mga Edad: 4-7'
           description_short: Isang panimula sa computer science para sa mga hindi pa marunong magbasa.
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
@@ -5517,6 +5519,7 @@ fil:
             Programming with Rey and BB-8:
               name: Pag-Program kasama sina Rey at BB-8
           title: Kursong B
+          assignment_family_title: Kursong B
           description_audience: 'Mga Edad: 5-8'
           description_short: Isang panimula sa computer science para sa mga hindi marunong magbasa. (Katulad ng Kursong A, ngunit may mas maraming pagkakaiba para sa mga nakakatandang mga estudyante.)
           description: Alamin ang mga pangunahing alituntunin para sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
@@ -5555,6 +5558,7 @@ fil:
             Loops with Rey and BB-8:
               name: Mga Loops kasama sina Rey at BB-8
           title: Kursong C
+          assignment_family_title: Kursong C
           description_audience: 'Mga Edad: 6-10'
           description_short: Alamin ang mga pangunahing alituntunin ng computer science at lumikha ng iyong sariling sining, mga kuwento, at mga laro.
           description: Lumikha ng mga programa gamit ang pagsunod-sunod, mga loops, at mga pangyayari. Isalin ang iyong mga inisyal sa binary, siyasatin ang iba't ibang mga pamamaraan sa paglutas ng problema, at matuto kung paano tutugon sa cyberbullying. Sa dulo ng kurso, lilikha ng sarili mong laro o istorya na maaari mong ibahagi!
@@ -5634,6 +5638,7 @@ fil:
               description_student: Nakakatagpo ka na ba ng mga problema habang nag-code? Sa araling ito, matutunan mo ang tungkol sa mga sekreto sa pag-debug. Ang pag-debug ay isang proseso ng paghahanap at pag-aayos ng mga problema sa iyong code.
               description_teacher: Sa online na gawaing ito, ang mga estudyante ay magsasanay sa pag-debug sa isang "kolektor" na kapaligiran. Ang mga estudyante ay makakapagsanay din sa pagbasa at pagbago ng mga code para maayos ang mga palaisipan gamit ang mga simpleng algoritmo, mga loop at naka-nest na mga loop.
           title: Kursong D
+          assignment_family_title: Kursong D
           description_audience: 'Mga Edad: 7-11'
           description_short: Mabilis na dinaanan ang mga konsepto mula sa Kursong C, pagkatapos ay pupunta pa tayo sa mga algoritmo, mga naka-nest na mga loop, mga kondisyonal, at iba pa.
           description: Matuto ng mga bagong konsepto sa pag-code kabilang na ang mga algoritmo, mga naka-nest na mga loop, mga kondisyonal, at mga pangyayari. Kumuha ng isang introduksyon sa pagkakamamamayang digital bago maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
@@ -5763,6 +5768,7 @@ fil:
             Functions in Harvester:
               name: Functions in Harvester
           title: Kursong E
+          assignment_family_title: Kursong E
           description_audience: 'Mga Edad: 8-12'
           description_short: Madaling dumaan sa mga konsepto sa Kursong C & D at pagkatapos ay pumunta pa sa mga function.
           description: Magsimulang mag-code gamit ang mga algoritmo, mga loop, mga kondisyonal, at mga pangyayari at pagkatapos ay pupunta ka sa mga function. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng capstone na proyekto na maaari mong ibahagi sa iyong mga kaibigan at pamilya.
@@ -5871,6 +5877,7 @@ fil:
             Nested Loops with Frozen:
               name: Naka-Nest na mga Loop sa Frozen
           title: Kursong F
+          assignment_family_title: Kursong F
           description_audience: 'Mga Edad: 9-13'
           description_short: Alamin ang lahat ng mga konsepto sa mga Pangunahing Kaalaman sa Computer Science at maglikha ng iyong sariling sining, kuwento o laro.
           description: Matutong gumami sa iba't ibang uri ng mga loop, mga event, mga function, at mga kondisyonal. Siyasatin ang iba't ibang mga pamamaraan sa paglutas ng mga problema at talakayain ang mga epekto ng computing at internet sa lipunan. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng isang capstone na proyekto na maaari mong ibahagi sa mga kaibigan at pamilya.
@@ -6201,6 +6208,7 @@ fil:
             Until Loops in Maze:
               name: Until Loops in Maze
           title: Mabilis na Kurso
+          assignment_family_title: Mabilis na Kurso
           description_audience: 'Mga Edad: 9-18'
           description_short: 'Isang introduksyon sa computer science: pinagsama ang pinakamahusay na kurikulum sa mababang paaralan para sa nakakatandang mga estudyante.'
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
@@ -6235,6 +6243,7 @@ fil:
             Spelling Bee:
               name: Spelling Bee
           title: Hindi Marunong Magbasa Express
+          assignment_family_title: Hindi Marunong Magbasa Express
           description_audience: 'Mga Edad: 4-8'
           description_short: 'Isang introduksyon sa computer science para sa mga hindi marunong magbasa: pinagsama ang pinakamahusay sa aming kindergarten at unang baitang na mga kurso.'
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
@@ -7506,21 +7515,22 @@ fil:
               description_student: Sa huling iilang mga araw sa yunit, ang klase ay magtatapos sa kanilang mga personal na website, nagtatrabaho kasama ang kanilang mga kasamahan para makakuha ng feedback, pagrepasu sa rubric, at paglagay nang panghuling mga detalye sa site. Para tapusin ang yunit, ang lahat ay magbabahagi sa kanilang mga proyekto at kung paano nila ito nagawa.
               description_teacher: "Ang mga estudyante ay gumugol ng maraming oras sa buong yunit sa pagtatrabaho ng kanilang Personal na Website. Sa huling ilang mga araw, ang mga estudyante ay magtatapos sa kanilang mga website. Sila ay magtatrabaho kasama ang kanilang mga kasamahan para makakuha ng feedback, maglalagay ng mga panghuling detalye sa mga website, pagrerepasu sa rubrik at mag-isip tungkol sa kanilang proseso. Para tapusin ang yunit, sila ay magbabahagi ng kanilang mga proyekto at pati na rin ang isang pangkalahatang ideya sa proseso na ginawa nila para makuha ang pangwakas na disenyo.\\r\n"
         coursea-2018:
-          title: Kursong A
+          title: Course A (2018)
+          assignment_family_title: Kursong A
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
           description_short: Isang panimula sa computer science para sa mga hindi pa marunong magbasa.
           description_audience: 'Mga Edad: 4-7'
           stages:
             'Debugging: Unspotted Bugs':
-              name: 'Pag-dedebug: Hindi nakitang mga Bug'
+              name: Hindi Namalayang mga Bugs
               description_student: ''
               description_teacher: 'Ang araling ito ay gagabay sa mga estudyante sa mga hakbang sa pag-debug. Ang mga estudya ay matututo nang isang kasabihan na: "Anong nangyari? Ano ang dapat mangyari? Ano ang ibig sabihin nito?"'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Pagtitiyaga & Mga Kabiguan: Si Stevie at ang mga Holen'
+              name: Stevie at ang Big Project
               description_student: ''
               description_teacher: "Kapag ang mga estudyante ay nakakatagpo ng mga balikid habang nagsasagot ng mga katanungan o nagtatrabaho sa isang proyekto, napakadali lang silang mainis at titigil. Ang araling ito ay magpapakilala sa mga estudyante sa ideya na ang pagkainip ay maaaring maging isang importanteng bahagi ng pag-aaral. Dito, ang pagkainis ay pinapakita bilang isang hakbang sa malikhaing proseso, sa halip na isang palatandaan ng pagkabigo.\\r\n\\r\nAng araling ito ay maaaring gawin sa higit sa isa o dalawang sesyon ng klase. Kung may marami pang oras, huwag mag-atubiling ipalabas ang pagbuo at pagbago na yugto ng gawain na Marble Run."
             'Real-life Algorithms: Plant a Seed':
-              name: 'Mga Totoong-buhay na Algoritmo: Pagtatanim ng Buto'
+              name: Plant a Seed
               description_student: ''
               description_teacher: "Sa araling ito, ang mga estudyante ay mag-uugnay sa konsepto ng mga algoritmo pabalik sa araw-araw, tunay na buhay na mga gawain sa pamamagitan ng pagtatanim ng aktwal na mga buto. Ang layunin dito ay para magsimulang bumuo ng mga kakayahan para isalin ang tunay na buhay na mga sitwasyon sa isang online na mga sitwasyon at ang kabaliktaran nito.\\r\n"
             Learn to Drag and Drop:
@@ -7528,7 +7538,7 @@ fil:
               description_student: ''
               description_teacher: Ang araling ito ay magbibigay sa mga estudyante ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online na mga palaisipan.
             'Programming: Happy Maps':
-              name: 'Pag-Program: Masayang mga Mapa'
+              name: Happy Maps
               description_student: ''
               description_teacher: Ang tulay mula sa mga algoritmo papunta sa pag-program ay maaaring napakaikli kung ang mga estudyante ay nakakaintindi sa kaibahan ng pagplano ng pagkakasunod-sunod at pag-encode ng pagkakasunod na iyon sa angkop na linggwahe. Ang gawaing ito ay makakatulong sa mga estudyante na magkaroon ng karanasan sa pagbasa at pagsulat ng madaliang code.
             Programming in Maze:
@@ -7540,43 +7550,44 @@ fil:
               description_student: ''
               description_teacher: Sa pakikipagtulungan sa [r common-sense-media], ang araling ito ay nakakatulong sa mga estudyante na matututo na maraming mga website ang nagtatanong ng mga impormasyon na mga pribado at nagtatalakay kung paano responsableng harapin ang mga ganong kahilingan. Makikita din ng mga estudyante na sila ay maaaring makakapunta sa nakakatuwang mga lugar online, ngunit kailangan nilang sumunod sa iilang mga tutunin para manatiling ligtas.
             'Loops: Happy Loops':
-              name: 'Loops: Happy Loops'
+              name: Happy Loops
               description_student: ''
               description_teacher: Ang mga loop ay lubhang nakakatulong at makapangyarihan na kagamitan sa pag-program. Para maunawaan kung paano nakakatulong ang mga loops, ang mga estudyante ay kailangang hikayatin na gustohin ang madaliang paraan para lutasin ang mga di-gaanong mahalagang mga problema.
             Loops in Collector:
-              name: Loops in Collector
+              name: Loops with Laurel
               description_student: ''
               description_teacher: Ang pagbubuo sa konsepto ng paulit-ulit na mga instruksyon mula sa "Masayang mga Loop", ang yugtong ito ay mag-uudyok sa mga estudyante na gumamit ng mga loop para mas mabisang makakolekta ng mga kayamanan sa Code.org.
             Loops in Artist:
-              name: Loops in Artist
+              name: Ocean Scene with Loops
               description_student: ''
               description_teacher: Pagbabalik sa mga loop, ang mga estudyante ay matututong gumuhit ng mga larawan sa pamamagitan ng pag-loop ng mga simpleng pagkakasunod-sunod ng mga instruksyon. Sa huling plugged na aralin, ang mga loop ay ginamit para makatawid sa maze at makakolekta ng mga kayamanan. Dito, ang mga loops ay lilikha ng mga pattern. Sa dulo ng yugtong ito, ang mga estudyante ay bibigyan ng pagkakataong makalikha ng kanilang sariling mga larawan gamit ang mga loop.
             'Events: The Big Event':
-              name: 'Events: The Big Event'
+              name: The Big Event
               description_student: ''
               description_teacher: Ang mga pangyayari ay magandang paraan para magdagdag ng kaibahan sa isang naisulat na na algoritmo. Minsan gusto mo na ang iyong programa ay maaaring tumugon sa mga gumagamit nang eksakto kapag nais ito ng gumagamit. Para sa mga ito ang mga kaganapan.
             Events in Play Lab:
-              name: Events in Play Lab
+              name: On the Move with Events
               description_student: ''
               description_teacher: Sa online na gawaing ito, ang mga estudyante ay magkakaroon ng pagkakataong matuto kung paano gumamit ng mga pangyayari sa Play Lab at para gumamit sa lahat ng mga kakayahan sa pag-code na natutunan nila para lumikha ng isang laro na naka-animate. Oras na para maging malikhain at gumawa ng istorya sa Play Lab!
             Programming in Bee:
               name: Programming in Bee
             Programming in Harvester:
-              name: Programming in Harvester
+              name: Programming with Harvester
             Loops in Harvester:
               name: Mga Loops sa Harvester
             Sequencing in Maze:
-              name: Sequencing in Maze
+              name: Sequencing with Angry Birds
             'Persistence & Frustration: Stevie and the Big Project':
-              name: 'Persistence & Frustration: Stevie and the Big Project'
+              name: Stevie at ang Big Project
         express-2018:
           title: Mabilis na Kurso
+          assignment_family_title: Mabilis na Kurso
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
           description_short: 'Isang introduksyon sa computer science: pinagsama ang pinakamahusay na kurikulum sa mababang paaralan para sa nakakatandang mga estudyante.'
           description_audience: 'Mga Edad: 9-18'
           stages:
             'Algorithms: Graph Paper Programming':
-              name: 'Mga Algoritmo: Graph na Papel na Pag-program'
+              name: Graph Paper Programming
               description_student: ''
               description_teacher: ''
             Introduction:
@@ -7596,7 +7607,7 @@ fil:
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: Loops in Artist
+              name: Sticker Art with Loops
               description_student: ''
               description_teacher: ''
             Nested Loops:
@@ -7620,7 +7631,7 @@ fil:
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: 'Events: The Big Event'
+              name: The Big Event
               description_student: ''
               description_teacher: ''
             Events in Star Wars:
@@ -7728,13 +7739,13 @@ fil:
             Programming in Artist:
               name: Pag-program sa Artist
             'Loops: Getting Loopy':
-              name: 'Mga Loops: Pagiging Loopy'
+              name: Pagiging Loopy
             Loops with Rey and BB-8:
               name: Mga Loops kasama sina Rey at BB-8
             Copyright and Creativity:
               name: Copyright and Creativity
             'Concept Practice with Minecraft ':
-              name: 'Concept Practice with Minecraft '
+              name: Masdan ang Hinaharap
             Nested Loops in Bee:
               name: Mga Naka-Nest na mga Loop sa Bee
             Nested Loops in Frozen:
@@ -7744,7 +7755,7 @@ fil:
             Conditionals & Loops in Harvester:
               name: Mga Kondisyonal & Mga Loop sa Harvester
             'Functions: Songwriting':
-              name: 'Mga Function: Pagsusulat ng Awit'
+              name: Pagsusulat ng Awit
             Functions in Minecraft:
               name: Functions in Minecraft
             Functions in Harvester:
@@ -7762,33 +7773,34 @@ fil:
             Envelope Variables:
               name: Balot ng mga Variables
             Variables as Constant in Artist:
-              name: Variables as Constant in Artist
+              name: Variables with Artist
             Variables that Change in Bee:
-              name: Variables that Change in Bee
+              name: Changing Variables with Bee
             Variables that Change in Artist:
-              name: Variables that Change in Artist
+              name: Changing Variables with Artist
             For Loop Fun:
               name: Saya sa For Loop
             Learning Sprites with Sprite Lab:
-              name: Learning Sprites with Sprite Lab
+              name: Learning Sprite Lab
             Alien Dance Party with Sprite Lab:
-              name: Alien Dance Party with Sprite Lab
+              name: Alien Dance Party
             Pet Giraffe with Sprite Lab:
-              name: Pet Giraffe with Sprite Lab
+              name: Pet Giraffe
             Binary Bracelets:
               name: Binary na mga Pulseras
             'Unplugged: Binary':
-              name: 'Unplugged: Binary'
+              name: Binary na mga Larawan
             Artist Binary:
               name: Artist na Binary
             Internet:
-              name: Internet
+              name: The Internet
             Crowdsourcing:
               name: Pag-crowdsourcing
             Relay Programming:
               name: Relay Programming
         courseb-2018:
-          title: Kursong B
+          title: Course B (2018)
+          assignment_family_title: Kursong B
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
           description_short: Isang panimula sa computer science para sa mga hindi marunong magbasa. (Katulad ng Kursong A, ngunit may mas maraming pagkakaiba para sa mga nakakatandang mga estudyante.)
           description_audience: 'Mga Edad: 5-8'
@@ -7830,39 +7842,40 @@ fil:
               description_student: ''
               description_teacher: ''
             Loops in Collector:
-              name: Loops in Collector
+              name: Loops with Laurel
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: Loops in Artist
+              name: Drawing Castles with Loops
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: 'Events: The Big Event'
+              name: The Big Event
               description_student: ''
               description_teacher: ''
             Events in Play Lab:
-              name: Events in Play Lab
+              name: A Royal Battle with Events
               description_student: ''
               description_teacher: ''
             Programming in Ice Age:
-              name: Programming in Ice Age
+              name: Programming with Scrat
             Loops in Ice Age:
-              name: Loops in Ice Age
+              name: Loops with Scrat
             Sequencing with Scrat:
               name: Sequencing with Scrat
             Move It, Move It:
               name: Galawin ito, Galawin ito
             Copyright and Creativity:
-              name: Copyright and Creativity
+              name: It's Great to Create and Play Fair
         coursed-2018:
           title: Bagong Kursong D na Iskript
+          assignment_family_title: Kursong D
           description: ''
           description_short: ''
           description_audience: ''
           stages:
             'Algorithms: Graph Paper Programming':
-              name: 'Mga Algoritmo: Graph na Papel na Pag-program'
+              name: Graph Paper Programming
               description_student: ''
               description_teacher: ''
             Introduction:
@@ -7882,11 +7895,11 @@ fil:
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: Loops in Artist
+              name: Drawing Shapes with Loops
               description_student: ''
               description_teacher: ''
             Nested Loops in Bee:
-              name: Mga Naka-Nest na mga Loop sa Bee
+              name: Naka-nest na mga Loops sa Maze
               description_student: ''
               description_teacher: ''
             Nested Loops in Artist:
@@ -7922,7 +7935,7 @@ fil:
               description_student: ''
               description_teacher: ''
             'Unplugged: Binary':
-              name: 'Unplugged: Binary'
+              name: Binary na mga Larawan
               description_student: ''
               description_teacher: ''
             Artist Binary:
@@ -8046,7 +8059,8 @@ fil:
           description_short: CS Principles AP Exam Prep
           description: 'This page contains copies of all the multiple choice assessment questions that appeared in Units 1-5 in the course.  Students may want to practice for the multiple choice exam by re-taking these little tests.  '
         coursec-2018:
-          title: Kursong C
+          title: Course C (2018)
+          assignment_family_title: Kursong C
           description: Lumikha ng mga programa gamit ang pagsunod-sunod, mga loops, at mga pangyayari. Isalin ang iyong mga inisyal sa binary, siyasatin ang iba't ibang mga pamamaraan sa paglutas ng problema, at matuto kung paano tutugon sa cyberbullying. Sa dulo ng kurso, lilikha ng sarili mong laro o istorya na maaari mong ibahagi!
           description_short: Alamin ang mga pangunahing alituntunin ng computer science at lumikha ng iyong sariling sining, mga kuwento, at mga laro.
           description_audience: 'Mga Edad: 6-10'
@@ -8064,7 +8078,7 @@ fil:
               description_student: ''
               description_teacher: ''
             'Real-life Algorithms: Paper Planes':
-              name: 'Mga Totoong-buhay na Algoritmo: Papel na Eroplano'
+              name: Paper Planes
               description_student: ''
               description_teacher: ''
             Programming in Collector:
@@ -8076,7 +8090,7 @@ fil:
               description_student: ''
               description_teacher: ''
             'Loops: Getting Loopy':
-              name: 'Mga Loops: Pagiging Loopy'
+              name: Pagiging Loopy
               description_student: ''
               description_teacher: ''
             Loops with Rey and BB-8:
@@ -8084,7 +8098,7 @@ fil:
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: Loops in Artist
+              name: Sticker Art with Loops
               description_student: ''
               description_teacher: ''
             Loops in Harvester:
@@ -8092,7 +8106,7 @@ fil:
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: 'Events: The Big Event'
+              name: The Big Event
               description_student: ''
               description_teacher: ''
             Build a Flappy Game:
@@ -8100,7 +8114,7 @@ fil:
               description_student: ''
               description_teacher: ''
             Events in Play Lab:
-              name: Events in Play Lab
+              name: Chase Game with Events
               description_student: ''
               description_teacher: ''
             Screen Out the Mean:
@@ -8216,13 +8230,14 @@ fil:
             'Project: Prototype an Innovation':
               name: 'Proyekto: Mag-Prototype ng isang Pagbabago'
         coursee-2018:
-          title: Kursong E
+          title: Course E (2018)
+          assignment_family_title: Kursong E
           description: Magsimulang mag-code gamit ang mga algoritmo, mga loop, mga kondisyonal, at mga pangyayari at pagkatapos ay pupunta ka sa mga function. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng capstone na proyekto na maaari mong ibahagi sa iyong mga kaibigan at pamilya.
           description_short: Madaling dumaan sa mga konsepto sa Kursong C & D at pagkatapos ay pumunta pa sa mga function.
           description_audience: 'Mga Edad: 8-12'
           stages:
             'Programming: My Robotic Friends':
-              name: 'Pag-Program: Ang Aking mga Robotik na mga Kaibigan'
+              name: Ang Robot Kong Mga Kaibigan
               description_student: ''
               description_teacher: ''
             Sequence in Maze:
@@ -8246,11 +8261,11 @@ fil:
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: Loops in Artist
+              name: Drawing Shapes with Loops
               description_student: ''
               description_teacher: ''
             Nested Loops:
-              name: Mga Loops na naka-nest
+              name: Naka-nest na mga Loops sa Maze
               description_student: ''
               description_teacher: ''
             Nested Loops with Frozen:
@@ -8266,7 +8281,7 @@ fil:
               description_student: Ang mabilisang introduksyon na ito ay magbibigay sa iyo ng pagkakataon na makapagsanay sa karamihan sa mga kakayahan na kakailanganin mo para maglutas sa mga palaisipan sa kursong ito.
               description_teacher: Sa pag-unlad na ito, ang mga estudyante ay magsisimula sa isang introduksyon (o magbalik-aral depende sa karanasan ng iyong klase) sa online na workspace ng Code.org. Ang mga estudyante ay matututo sa mga pangunahing gawain ng interface kalakip na ang `Run`, `Reset`, at `Step` na mga buttons. Pag-drag, pagbura, at pag-ugnay ng mga Blockly na mga bloke ay ipinapakilala din sa simula ng video. Sa mga palaisipan, ang mga estudyante ay magsasanay sa kanilang pagsunod-sunod at pag-debg na mga kakayahan sa Maze at Artist.
             Conditionals:
-              name: Mga conditional
+              name: Conditionals with the Farmer
               description_student: Ikaw ay maaaring makapagsabi sa kompyuter kung ano ang gagawin sa loob ng iilang mga kondisyon sa loob ng masaya at mahirap na mga seryeng ito.
               description_teacher: Ang araling ito ay nagpapakilala sa mga estudyante sa `while` na mga loop at `if/else` na mga pahayag. Ang mga _while loop_ ay mga loop na patuloy na nag-uulit sa mga utos hanggang sa ang kondisyon ay true. Ang mga while loop ay ginagamit kapag ang nag-program ay hindi alam ang eksaktong bilang ng beses na kailangang ulitin ang kautusan, ngunit alam ng nag-program kung anong kondisyon ang kailangang maging true para magpagtuloy ang pag-loop. Ang `If / Else` na mga pahayag ay nagbibigay ng pleksibilidad sa pag-program sa pamamagitan ng pagpapatakbo lang sa buong bahagi ng code kapag ang isang bagay ay true, kung hindi magpapatakbo ito ng iba.
             Private and Personal Information:
@@ -8281,7 +8296,7 @@ fil:
               description_student: Damdamin ang puwersa habang nagbubuo ka ng iyong sariling Star Wars na laro sa araling ito.
               description_teacher: Sa araling ito, ang mga estudyante ay magsasanay sa paggamit ng mga pangyayari para makabuo ng laro na maaari nilang ibahagi online. Nagpapakita kay R2-D2 at ibang mga karakter sa Star Wars, ang mga estudyante ay gagabayan sa mga pangyayari, pagkatapos ay bibigyan ng lugar para makalikha ng kanilang sariling laro.
             'Functions: Songwriting':
-              name: 'Mga Function: Pagsusulat ng Awit'
+              name: Pagsusulat ng Awit
               description_student: Kahit ang mga rockstar ay nangangailangan ng mga kakayahan sa pag-program. Ang araling ito ay nagtuturo sa iyo tungkol sa mga kakayahan gamit ang mga titik mula sa mga awitin.
               description_teacher: Isa sa mga pinakadakilang istraktura sa mundo ng computer science ay ang function. Ang mga function (minsang tinatawag na mga pamamaraan) ay maliliit na mga programa na maaari mong gamitin nang paulit-ulit sa loob ng iyong mas malaking programa. Ang araling ito ay makakatulong sa mga estudyante na likas na makakaunawa kung bakit ang pagsama-sama sa mga piraso ng code sa isang function ay maaaring lubhang nakakatulong na pag-uugali.
             Functions in Artist:
@@ -8293,7 +8308,7 @@ fil:
               description_student: Huwag magsulat nang masyadong maraming code para matipon ang lahat ng mga nektar at pulot. Sa halip ay gumamit ng mga function!
               description_teacher: Sa pangalawang ikot ng pagsasanay sa mga online na mga function, ang mga estudyante ay maglalayag sa mga masalimuot na mga landas, magkokolekta ng maraming mga nektar, at maggagawa ng napakaraming mga pulot.
             Functions in Harvester:
-              name: Functions in Harvester
+              name: Functions with Harvester
               description_student: ''
               description_teacher: ''
             Determine the Concept:
@@ -8321,7 +8336,7 @@ fil:
               description_student: Maghandang magpakitang gilas! Oras na para ipakita ang iyong natapos na proyekto sa iyong mga kasamahan.
               description_teacher: Sa loob ng apat na mga aralin, ang mga estudyante ay magtatayo ng pag-program na proyekto gamit ang sarili nilang disenyo sa alinman sa Play Lab o Artist bilang pang-program na kapaligiran nila. Sa wakas, ang mga estudyante ay makakapakita na sa kanilang natapos na gawa sa kanilang mga kasamahan o magbahagi sa kanilang mga mahal sa buhay gamit ang isang espesyal na link. Ang gabay ng aralin para sa lahat ng apat na mga yugto ng proseso ay maaaring makita sa unang yugto ng proseso ng proyektong ito sa [here](https://curriculum.code.org/csf/coursee/12/).
             Internet:
-              name: Internet
+              name: The Internet
               description_student: Nagtataka ka na ba kung paano ang mga impormasyon naglalakbay sa kabuoan ng Internet? Ito ay hindi mahika! Ang araling ito ay magtuturo sa iyo sa mga pangunahing kaalaman kung paano ang Internet gumagana.
               description_teacher: Kahit na maraming mga tao ang gumamit ng Internet araw-araw, hindi masyadong marami ang may alam kung paano ito gumagana. Sa araling ito, ang mga estudyante ay magkukunwaring dumaloy sa Internet, habang natututo tungkol sa mga koneksyon, mga URL, mga IP Address, at ang DNS.
             Crowdsourcing:
@@ -8335,21 +8350,22 @@ fil:
             Functions in Minecraft:
               name: Functions in Minecraft
             Learning Sprites with Sprite Lab:
-              name: Learning Sprites with Sprite Lab
+              name: Learning Sprite Lab
             Alien Dance Party with Sprite Lab:
-              name: Alien Dance Party with Sprite Lab
+              name: Alien Dance Party
             Pet Giraffe with Sprite Lab:
-              name: Pet Giraffe with Sprite Lab
+              name: Pet Giraffe
             Copyright and Creativity:
-              name: Copyright and Creativity
+              name: Digital Sharing
         coursef-2018:
-          title: Kursong F
+          title: Course F (2018)
+          assignment_family_title: Kursong F
           description: Matutong gumami sa iba't ibang uri ng mga loop, mga event, mga function, at mga kondisyonal. Siyasatin ang iba't ibang mga pamamaraan sa paglutas ng mga problema at talakayain ang mga epekto ng computing at internet sa lipunan. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng isang capstone na proyekto na maaari mong ibahagi sa mga kaibigan at pamilya.
           description_short: Alamin ang lahat ng mga konsepto sa mga Pangunahing Kaalaman sa Computer Science at maglikha ng iyong sariling sining, kuwento o laro.
           description_audience: 'Mga Edad: 9-13'
           stages:
             'Programming: My Robotic Friends':
-              name: 'Pag-Program: Ang Aking mga Robotik na mga Kaibigan'
+              name: Ang Robot Kong Mga Kaibigan
               description_student: ''
               description_teacher: ''
             Sequence in Maze:
@@ -8373,11 +8389,11 @@ fil:
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: Loops in Artist
+              name: Drawing Shapes with Loops
               description_student: ''
               description_teacher: ''
             Nested Loops in Bee/Zombie:
-              name: Naka-Nest na mga Loops sa Bee/Zombie
+              name: Naka-nest na mga Loops sa Maze
               description_student: ''
               description_teacher: ''
             Nested Loops with Frozen:
@@ -8467,23 +8483,23 @@ fil:
             Conditionals with Cards:
               name: Mga Conditional gamit ang mga Card
             Conditionals:
-              name: Mga conditional
+              name: Conditionals with the Farmer
             Variables as Constant in Artist:
-              name: Variables as Constant in Artist
+              name: Variables with Artist
             Variables that Change in Bee:
-              name: Variables that Change in Bee
+              name: Changing Variables with Bee
             Variables that Change in Artist:
-              name: Variables that Change in Artist
+              name: Changing Variables with Artist
             Learning Sprites with Sprite Lab:
-              name: Learning Sprites with Sprite Lab
+              name: Learning Sprite Lab
             Alien Dance Party with Sprite Lab:
-              name: Alien Dance Party with Sprite Lab
+              name: Alien Dance Party
             Pet Giraffe with Sprite Lab:
-              name: Pet Giraffe with Sprite Lab
+              name: Pet Giraffe
             Functions in Minecraft:
-              name: Functions in Minecraft
+              name: Functions with Minecraft
             Conditionals in Farmer:
-              name: Mga Kondisyonal sa Farmer
+              name: Conditionals with the Farmer
         csp1-2018:
           title: CSP Unit 1 - The Internet
           description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. The unit then explores the structure and design of the internet and the implications of those design decisions.
@@ -9419,16 +9435,17 @@ fil:
           description: This is the set of apprentice reflections for Code.org CS Principles facilitators in training during their 5-day summer workshop. Here you will find reflection prompts for each day of your in-person 5-day summer workshop. This questions will be the foundation of work we do at the Facilitator Training Weekend.
         pre-express-2018:
           title: Hindi Marunong Magbasa Express
+          assignment_family_title: Hindi Marunong Magbasa Express
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
           description_short: 'Isang introduksyon sa computer science para sa mga hindi marunong magbasa: pinagsama ang pinakamahusay sa aming kindergarten at unang baitang na mga kurso.'
           description_audience: 'Mga Edad: 4-8'
           stages:
             'Debugging: Unspotted Bugs':
-              name: 'Pag-dedebug: Hindi nakitang mga Bug'
+              name: Hindi Namalayang mga Bugs
               description_student: ''
               description_teacher: ''
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Pagtitiyaga & Mga Kabiguan: Si Stevie at ang mga Holen'
+              name: Stevie at ang Big Project
               description_student: ''
               description_teacher: ''
             'Real-life Algorithms: Plant a Seed':
@@ -9460,19 +9477,19 @@ fil:
               description_student: ''
               description_teacher: ''
             Loops in Collector:
-              name: Loops in Collector
+              name: Loops with Laurel
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: Loops in Artist
+              name: Drawing Castles with Loops
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: 'Events: The Big Event'
+              name: The Big Event
               description_student: ''
               description_teacher: ''
             Events in Play Lab:
-              name: Events in Play Lab
+              name: A Royal Battle with Events
               description_student: ''
               description_teacher: ''
             Spelling Bee:
@@ -9495,3 +9512,15 @@ fil:
               name: Loops in Ice Age
             'Persistence & Frustration: Stevie and the Big Project':
               name: 'Persistence & Frustration: Stevie and the Big Project'
+        spritelab-validated:
+          stages:
+            Fish Tank - Creating Sprites:
+              name: Fish Tank - Creating Sprites
+            Alien Dance Party - Input:
+              name: Alien Dance Party - Input
+            Virtual Pet - Interactions:
+              name: Virtual Pet - Interactions
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''

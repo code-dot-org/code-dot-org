@@ -85,6 +85,7 @@ hy:
     facebook: 'Facebook'
     windowslive: 'Microsoft Հաշվի'
     clever: 'Clever Account'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Մոռացել եք Ձեր գաղտնաբառը?'
     need_confirmation: "Չէի ստանալ հաստատում հրահանգներ."
     need_unlock: "Չէի ստանում են բացելու հրահանգներ."

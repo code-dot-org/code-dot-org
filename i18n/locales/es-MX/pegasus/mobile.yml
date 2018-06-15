@@ -262,10 +262,10 @@
   studiobar_shop_body: "Rompe los estereotipos. Usa nuestro logotipo con orgullo."
   homepage_stats_students: "de estudiantes de EE. UU. tienen cuentas en Code.org"
   homepage_stats_female: "de nuestras estudiantes son mujeres"
-  homepage_stats_teachers: "profesores usan Code.org"
+  homepage_stats_teachers: "profesores utilizan Code.org"
   homepage_stats_hourofcodde: "de los estudiantes a nivel mundial ha probado la Hora de Código"
-  homepage_stats_policy: "estados cambiaron la política para apoyar a las ciencias de la computación"
-  homepage_stats_title: "Nosotros hacemos la diferencia"
+  homepage_stats_policy: "estados cambiaron políticas para apoyar a las ciencias de la computación"
+  homepage_stats_title: "Estamos haciendo una diferencia"
   homepage_hero_text_malala: "“Desafíe a chicas en cada país a aprender una \"Hora de código\"” Malala, ganadora del Premio Nobel de la paz"
   homepage_hero_text_susan: |-
     "Si puedes cambiar la tecnología, puedes cambiar el mundo". Susan, CEO de YouTube
@@ -291,13 +291,13 @@
   homepage_hero_text_teacher1: "“Programar genera chispas de creatividad, inspiración e innovación — todas las cuales son esenciales en cualquier carrera.\" Floresa, profesor"
   homepage_hero_text_teacher2: |-
     “Este programa tiene al 100% de mis estudiantes comprometidos, involucrados y participando". Adam, profesor
-  homepage_hero_text_stat_loc: "# líneas de código escritas por estudiantes"
+  homepage_hero_text_stat_loc: "8.5 millones de niñas están inscritas para aprender en Code.org"
   homepage_hero_text_stat_students: "#student_count cuentas del estudiante en Code Studio"
   homepage_hero_text_stat_served: 'La Hora del Codigo: #Served servidos'
   homepage_hero_hoc_is_coming: "Ya viene la Hora del código"
-  homepage_hero_hoc_is_here: "Ya viene la Hora del código"
+  homepage_hero_hoc_is_here: "La Hora del Código está aquí"
   homepage_slot_text_hoc: "La hora de Código"
-  homepage_slot_text_frozen: "Frozen con Anna y Elsa"
+  homepage_slot_text_frozen: "Congelados con Anna y Elsa"
   homepage_slot_text_teacher: "Panel del docente"
   homepage_slot_text_studio: "Todos nuestros tutoriales"
   homepage_slot_text_course4: "Curso 4"
@@ -333,10 +333,10 @@
   homepage_banner_40k_teachers: "We've prepared 40,000 new computer science teachers."
   homepage_banner_40k_teachers_link: "Aprende más"
   homepage_slot_text_title_hoc: "Hora del Código"
-  homepage_slot_text_blurb_hoc: "Todos podemos aprender. Comience hoy mismo"
+  homepage_slot_text_blurb_hoc: "Cualquiera puede aprender. Comience hoy mismo"
   homepage_slot_text_link_hoc: "Prueba la Hora del Código"
-  homepage_slot_text_link_about_hoc: "Sobre la Hora del Código"
-  homepage_slot_text_link_host: "Organice una Hora de Código"
+  homepage_slot_text_link_about_hoc: "Acerca de la Hora del Código"
+  homepage_slot_text_link_host: "Sea anfitrión de una hora de código"
   homepage_slot_text_link_hocserved: "# servido"
   homepage_solot_text_link_volunteer: "Hazte voluntario para la Hora del Código"
   homepage_slot_text_title_students: "Estudiantes"
@@ -346,11 +346,11 @@
   homepage_slot_text_link_local: "Encuentra una clase local"
   homepage_slot_text_link_othercourses: "Otros cursos en línea"
   homepage_slot_text_title_educators: "Educadores"
-  homepage_slot_text_blurb_educators: "Enseña a tus estudiantes"
+  homepage_slot_text_blurb_educators: "Enseña a tus alumnos"
   homepage_slot_text_link_elementary: "Escuela primaria"
   homepage_slot_text_link_middle: "Secundaria"
   homepage_slot_text_link_high: "Preparatoria"
-  homepage_slot_text_link_k5: "Cursos para el jardín de infantes"
+  homepage_slot_text_link_k5: "Cursos de Kinder a 5to básico"
   homepage_slot_text_link_fullcurriculum: "Ver nuestro currículum completo"
   homepage_slot_text_link_pd: "Desarrollo profesional"
   homepage_slot_text_title_advocates: "Defensores"
@@ -360,11 +360,11 @@
   homepage_slot_text_link_donate: "Haga una donación"
   homepage_slot_text_link_shop: "Camisetas, sombreros y más"
   homepage_slot_text_link_administrators: "Lleva las ciencias de la computación a tu escuela"
-  homepage_header_codestudio: "Creaciones de los estudiante de Code Studio"
+  homepage_header_codestudio: "Creaciones de alumnos de Code.org"
   homepage_header_donors: "Code.org agradece a sus colaboradores"
   homepage_donors_seall: "Ver todo"
   homepage_donors_donate: "Dona"
-  homepage_below_hero_announcement_text: "Nos preocupamos por su privacidad y estamos haciendo algunas actualizaciones de nuestras políticas de privacidad, las que se harán efectivas a partir del 25 de mayo."
+  homepage_below_hero_announcement_text: "Nos importa su privacidad y estamos realizando algunas actualizaciones de nuestra política de privacidad, efectiva el 25 de mayo."
   homepage_below_hero_announcement_link_text: "Aprende más"
   contact_form_topic_student: "Soy un estudiante"
   contact_form_topic_parent: "Soy un padre"
@@ -536,8 +536,8 @@
   volunteer_engineer_submission_field_email: "Dirección de correo electrónico"
   volunteer_engineer_submission_field_email_desc: "Su dirección de correo electrónico nunca será compartida, pero le enviaremos solicitudes enviadas por docentes."
   volunteer_engineer_submission_field_email_placeholder: "Dirección de correo electrónico"
-  volunteer_engineer_submission_field_email_preference: "Can we email you about updates to our courses, volunteer opportunities, or other computer science news?"
-  volunteer_engineer_submission_field_email_preference_privacy: "(Vea nuestra política de privacidad)"
+  volunteer_engineer_submission_field_email_preference: "¿Podemos enviarle por correo electrónico actualizaciones de nuestros cursos, oportunidades en su zona u otras noticias sobre informática?"
+  volunteer_engineer_submission_field_email_preference_privacy: "(Vea nuestra politica de privacidad)"
   volunteer_engineer_submission_field_email_preference_yes: 'Sí'
   volunteer_engineer_submission_field_email_preference_no: 'No'
   volunteer_engineer_submission_final_paragraph: "Se mostrará su ubicación en el mapa local de docentes para que puedan contactarlo para oportunidades de voluntariado en la Hora del Código. Su dirección exacta y correo electrónico NUNCA serán compartidos. Pero la información adicional (incluyendo su ubicación aproximada) será visible públicamente por docentes locales."
@@ -930,9 +930,25 @@
   coursee_name: "Curso E"
   coursef-draft_name: Curso F
   coursef_name: "Curso F"
+  coursea-2017_name: Course A (2017)
+  courseb-2017_name: Course B (2017)
+  coursec-2017_name: Course C (2017)
+  coursed-2017_name: Course D (2017)
+  coursee-2017_name: Course E (2017)
+  coursef-2017_name: Course F (2017)
+  coursea-2018_name: Course A (2018)
+  courseb-2018_name: Course B (2018)
+  coursec-2018_name: Course C (2018)
+  coursed-2018_name: Course D (2018)
+  coursee-2018_name: Course E (2018)
+  coursef-2018_name: Course F (2018)
   accelerated_name: "Curso acelerado"
   express_name: "Express Course"
   pre-express_name: Pre-reader Express Course
+  express-2017_name: Express Course (2017)
+  pre-express-2017_name: Pre-reader Express Course (2017)
+  express-2018_name: Express Course (2018)
+  pre-express-2018_name: Pre-reader Express Course (2018)
   cspunit1_name: "Tema 1: Información digital"
   cspunit2_name: "Tema 2: El Internet"
   cspunit3_name: "Unidad 3: programación"
@@ -1007,6 +1023,8 @@
   math_category_name: "Matemáticas"
   hoc_category_name: "Hora del código"
   csf_category_name: "Fundamentos de CS"
+  csf_2017_category_name: "CS Fundamentals (2017)"
+  csf_2018_category_name: "CS Fundamentals (2018)"
   csf_international_category_name: "CS Fundamentals International"
   csf2_draft_category_name: 'En desarrollo: Cursos A - F'
   csd_category_name: "CS Discoveries ('17-'18)"

@@ -1,4 +1,5 @@
-"es-MX":
+---
+es-MX:
   devise:
     confirmations:
       confirmed: Tu dirección de correo electrónico se ha confirmado correctamente.

@@ -1,4 +1,5 @@
-"zh-TW":
+---
+zh-TW:
   data:
     game:
       name:
@@ -546,6 +547,8 @@
         CSF_ifelse_allskins: Using If/Else Blocks
         CSF_ifelseifelse_allskins: Using If/ElseIf/Else Blocks
         CSF_loops_AB: 迴圈
+        csd_gamelab_booleans: Boolean Expressions
+        csd_gamelab_conditional_statements: Conditional Statements
     callout:
       text:
         drag_blocks: 拖曳一個「移動」積木並將它放到其他積木下方

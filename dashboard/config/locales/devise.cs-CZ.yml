@@ -1,4 +1,5 @@
-"cs":
+---
+cs:
   devise:
     confirmations:
       confirmed: Tvoje e-mailová adresa byla úspěšně potvrzena.

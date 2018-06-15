@@ -132,12 +132,7 @@ class Documents < Sinatra::Base
     uri = request.path_info.chomp('/')
     redirect uri unless uri.empty? || request.path_info == uri
 
-    locale = request.locale
-    locale = 'it-IT' if request.site == 'italia.code.org'
-    locale = 'es-ES' if request.site == 'ar.code.org'
-    locale = 'ro-RO' if request.site == 'ro.code.org'
-    locale = 'pt-BR' if request.site == 'br.code.org'
-    I18n.locale = locale
+    I18n.locale = request.locale
 
     @config = settings.configs[request.site]
     @header = {}

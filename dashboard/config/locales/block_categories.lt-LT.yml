@@ -1,4 +1,5 @@
-"lt":
+---
+lt:
   data:
     block_categories:
       Actions: Komandos
@@ -45,5 +46,6 @@
       Foo: Foo
       Name: Vardas
       NEW BLOCKS: NEW BLOCKS
+      'Functions ': 'Functions '
       Game/Score: Game/Score
       Function: Komanda

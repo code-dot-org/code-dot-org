@@ -1,10 +1,12 @@
-"es-MX":
+---
+es-MX:
   data:
     script:
       category:
         csd_category_name: CS Discoveries ('17-'18)
         csd_2018_category_name: CS Discoveries ('18-'19)
         csf_category_name: Fundamentos de CS
+        csf_2018_category_name: CS Fundamentals (2018)
         csf_international_category_name: CS Fundamentals International
         csf2_draft_category_name: 'En desarrollo: Cursos A - F'
         csp_category_name: "'15-'16 Principios de CS"
@@ -2327,10 +2329,14 @@
               name: Post-Course Survey
         csp3-2017:
           title: CSP Unit 3 - Intro to Programming
-          description: |-
-            Esta unidad presenta los conceptos fundamentales de la programación informática, que desbloquea la capacidad de crear aplicaciones ricas e interactivas. Este curso utiliza JavaScript como lenguaje de programación y App Lab como el entorno de programación para crear aplicaciones, pero los conceptos aprendidos en estas lecciones abarcan todos los lenguajes y herramientas de programación.\r
-            \r
-            Esta unidad se actualizó por última vez el 30 de octubre de 2017. Obtenga más información sobre las actualizaciones de los planes de estudios en forum.code.org/c/csp/updates.
+          description: "Esta unidad presenta los conceptos fundamentales de la programación
+            informática, que desbloquea la capacidad de crear aplicaciones ricas e
+            interactivas. Este curso utiliza JavaScript como lenguaje de programación
+            y App Lab como el entorno de programación para crear aplicaciones, pero
+            los conceptos aprendidos en estas lecciones abarcan todos los lenguajes
+            y herramientas de programación.\r\n\r\nEsta unidad se actualizó por última
+            vez el 30 de octubre de 2017. Obtenga más información sobre las actualizaciones
+            de los planes de estudios en forum.code.org/c/csp/updates."
           description_short: Programación
           description_audience: ''
           stages:
@@ -2376,10 +2382,12 @@
               name: Post-Course Survey
         csp4-2017:
           title: CSP Unit 4 - Big Data and Privacy
-          description: |-
-            The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.\r
-            \r
-            This unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
+          description: "The data-rich world we live in introduces many complex questions
+            related to public policy, law, ethics and societal impact. The goals of
+            this unit are to develop a well-rounded and balanced view about data in
+            the world, including the positive and negative effects of it, and to understand
+            the basics of how and why modern encryption works.\r\n\r\nThis unit was
+            last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
           description_short: Explore the data-rich world we live, and how data impacts
             public policy, personal privacy, security, the law, and ethics.
           description_audience: ''
@@ -3952,9 +3960,13 @@
           title: CSD Unit 1 - Problem Solving
           description_short: "  Aprenda cómo los humanos trabajan con computadoras
             para resolver problemas."
-          description: |2
-             \r
-            Unit 1 is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r
+          description: " \r\nUnit 1 is a highly interactive and collaborative introduction
+            to the field of computer science, as framed within the broader pursuit
+            of solving problems. You’ll practice using a problem solving process to
+            address a series of puzzles, challenges, and real world scenarios. Next,
+            you’ll learn how computers input, output, store, and process information
+            to help humans solve problems.  The unit concludes with a project in which
+            you design an application that helps solve a problem of your choosing.\r\n"
           description_audience: ''
           stages:
             Intro to Problem Solving:
@@ -4346,12 +4358,22 @@
                 could be shared intentionally or unintentionally.  Finally, the class
                 comes up with a set of guidelines to follow when putting information
                 online.
-              description_teacher: |-
-                As students have recently spent some time thinking about the actual content that will go into their personal website, this lesson takes a step back from the unit-long project (publication of a personal website) to help students articulate what personal information they choose to share digitally and with whom.  It also reinforces the notion that much of the information that they choose to share digitally falls largely out of their control the moment it is released.  \r
-                \r
-                Students begin by individually identifying appropriate audiences with whom they would be comfortable sharing given pieces of personal information.  They then look at several social media pages to determine what sorts of information people are sharing about themselves or one another.  Last, students reflect on what guidelines they think are appropriate for posting information online.\r
-                \r
-                The ultimate point of this lesson is not to scare students, but rather to experientially bring students to realizing precisely what level of control they don’t have in releasing information into the web.
+              description_teacher: "As students have recently spent some time thinking
+                about the actual content that will go into their personal website,
+                this lesson takes a step back from the unit-long project (publication
+                of a personal website) to help students articulate what personal information
+                they choose to share digitally and with whom.  It also reinforces
+                the notion that much of the information that they choose to share
+                digitally falls largely out of their control the moment it is released.
+                \ \r\n\r\nStudents begin by individually identifying appropriate audiences
+                with whom they would be comfortable sharing given pieces of personal
+                information.  They then look at several social media pages to determine
+                what sorts of information people are sharing about themselves or one
+                another.  Last, students reflect on what guidelines they think are
+                appropriate for posting information online.\r\n\r\nThe ultimate point
+                of this lesson is not to scare students, but rather to experientially
+                bring students to realizing precisely what level of control they don’t
+                have in releasing information into the web."
             Publishing a Website:
               name: Publishing a Website
             Sources and Search Engines:
@@ -4381,9 +4403,13 @@
                 on the page. The class learns the basic syntax for CSS rule-sets and
                 then explores properties that impact HTML text elements.  Finally,
                 everyone applies text styles to their personal websites.
-              description_teacher: |
-                This lesson introduces CSS as a way to style elements on the page. Students learn the basic syntax for CSS rule-sets and then explore properties that impact HTML text elements. They work on a HTML page about Guinness World Record holders, adding their own style to the provided page. In the last level, students apply what they have learned about styles for text elements to their personal web page.\r
-                \r
+              description_teacher: "This lesson introduces CSS as a way to style elements
+                on the page. Students learn the basic syntax for CSS rule-sets and
+                then explore properties that impact HTML text elements. They work
+                on a HTML page about Guinness World Record holders, adding their own
+                style to the provided page. In the last level, students apply what
+                they have learned about styles for text elements to their personal
+                web page.\r\n\r\n"
             Styling Elements with CSS:
               name: Styling Elements with CSS
               description_student: This lesson continues the introduction to CSS style
@@ -4482,10 +4508,14 @@
                 of the creator of that media. After first studying Creative Commons
                 licensing, the class learns how to add images to web pages, and how
                 to give proper attribution when doing so.
-              description_teacher: |-
-                Starting with an discussion of their personal opinions on how others should be allowed to use their work, the class explores the purpose and role of copyright for both creators and users of creative content.  They then move on to an activity exploring the various Creative Commons licenses as a solution to the difficulty in dealing with copyright. \r
-                \r
-                Finally, with a common understanding of the restrictions of various Creative Commons licenses, students learn how to add images to their web pages using the &lt;img&gt; tag.
+              description_teacher: "Starting with an discussion of their personal
+                opinions on how others should be allowed to use their work, the class
+                explores the purpose and role of copyright for both creators and users
+                of creative content.  They then move on to an activity exploring the
+                various Creative Commons licenses as a solution to the difficulty
+                in dealing with copyright. \r\n\r\nFinally, with a common understanding
+                of the restrictions of various Creative Commons licenses, students
+                learn how to add images to their web pages using the &lt;img&gt; tag."
             Project - Multi-Page Websites:
               name: Project - Multi-Page Websites
               description_student: 'This lesson covers hyperlinks, which allow web
@@ -4493,9 +4523,12 @@
                 will link together all the previous pages into one project, and create
                 navigation bars for each page before publishing the entire site to
                 the Web.  '
-              description_teacher: |
-                After learning about how to link web pages to one another, students are finally able to publish the website they have been working on.  In this lesson, they link together all the previous pages they have created into one project, create a new page, and add navigation between the pages before publishing the entire site to the Web.  \r
-                \r
+              description_teacher: "After learning about how to link web pages to
+                one another, students are finally able to publish the website they
+                have been working on.  In this lesson, they link together all the
+                previous pages they have created into one project, create a new page,
+                and add navigation between the pages before publishing the entire
+                site to the Web.  \r\n\r\n"
             RGB Colors and Classes:
               name: RGB Colors and Classes
               description_student: This lesson covers classes and custom colors. The
@@ -4517,15 +4550,13 @@
                 their personal websites, working with peers to get feedback, review
                 the rubric, and put the finishing touches on the site. To cap off
                 the unit, everyone shares their projects and how they were developed.
-              description_teacher: 'Students have spent a lot of time throughout the
+              description_teacher: "Students have spent a lot of time throughout the
                 unit working on their Personal Website. In the final couple of days
                 students finalize their websites.  They work with peers to get feedback,
                 put the finishing touches on the websites, review the rubric and reflect
                 on their process. To cap off the unit, they will share their projects
                 and also a overview of the process they took to get to that final
-                design.\r
-
-'
+                design.\r\n"
             Headings:
               name: Headings
               description_student: This lesson continues the introduction to HTML
@@ -4608,15 +4639,13 @@
                 users might react to a variety of products. Role playing as a different
                 person, each member of the class will get to experience designs through
                 someone else's eyes.
-              description_teacher: 'Designers need to understand their users’ needs
+              description_teacher: "Designers need to understand their users’ needs
                 in order to create useful products.  This lesson encourages students
                 to think about how to design for another person by role-playing as
                 someone else using a user profile and reacting as that user to a series
                 of products.  Each student is assigned a user profile describing a
                 person, which they then use to choose appropriate products, critique
-                product design, and suggest improvements to design.\r
-
-'
+                product design, and suggest improvements to design.\r\n"
             Discovering Users:
               name: Discovering Users
             User-Centered Design Micro Activity:
@@ -4683,7 +4712,7 @@
                 ideas before investing a lot of time writing code. In this lesson
                 teams explore some example apps created in App Lab, using those apps
                 to help inform the first paper prototypes of their apps.
-              description_teacher: 'Before starting to design apps, we need to help
+              description_teacher: "Before starting to design apps, we need to help
                 students to better scope their expectations. Because students will
                 eventually be prototyping these apps in App Lab, they will be in better
                 shape if their ideas align with the kinds of apps that are easily
@@ -4692,9 +4721,7 @@
                 with App Lab. Teams then can chose one (or more) of the apps as a
                 basis for their own. From there, teams have some time to discuss the
                 basic functionality of their app before using 3x5 index cards to develop
-                paper prototypes.\r
-
-'
+                paper prototypes.\r\n"
             Prototype Testing:
               name: Prototype Testing
               description_student: In this lesson teams test out their paper prototypes
@@ -7182,6 +7209,7 @@
                 las habilidades de código que han aprendidod para crear un juego animado.
                 ¡Es tiempo de ponerse creativo y hacer una historia en Play Lab!
           title: Curso A
+          assignment_family_title: Curso A
           description_audience: Edades de 4 a 7 años
           description_short: Una introducción a las ciencias de la computación para
             pre lectores.
@@ -7218,6 +7246,7 @@
             Programming with Rey and BB-8:
               name: Programación con Rey y BB-8
           title: Curso B
+          assignment_family_title: Curso B
           description_audience: Edades de 5 a 8 años
           description_short: Una introducción a las ciencias de la computación para
             pre lectores. (Similar al curso A pero con más variedad para estudiantes
@@ -7259,6 +7288,7 @@
             Loops with Rey and BB-8:
               name: Ciclos con Rey y BB-8
           title: Curso C
+          assignment_family_title: Curso C
           description_audience: Edades de 6 a 10 años
           description_short: Aprende los conceptos básicos de las ciencias de la computación
             y crea tu propio arte, historias y juegos.
@@ -7437,6 +7467,7 @@
                 leer y editar código para resolver acertijos con algoritmos sencillos,
                 ciclos y ciclos anidados.
           title: Curso D
+          assignment_family_title: Curso D
           description_audience: Edades de 7 a 11 años
           description_short: Rápidamente repasa conceptos del Curso C, luego puedes
             ir más allá con algoritmos, ciclos anidados, condicionales y más.
@@ -7660,6 +7691,7 @@
             Functions in Harvester:
               name: Funciones en Harvester
           title: Curso E
+          assignment_family_title: Curso E
           description_audience: Edades de 8 a 12 años
           description_short: Cubrir rápidamente los conceptos en el curso de C y D
             y luego ir más allá con funciones.
@@ -7880,6 +7912,7 @@
             Nested Loops with Frozen:
               name: Ciclos anidados con Frozen
           title: Curso F
+          assignment_family_title: Curso F
           description_audience: 9 a 13 años
           description_short: Aprende todos los conceptos de Fundamentos de ciencias
             de la computación y crea tu propio arte, historia o juego.
@@ -8276,6 +8309,7 @@
             Until Loops in Maze:
               name: Until Loops in Maze
           title: ''
+          assignment_family_title: Express Course
           description_audience: ''
           description_short: ''
           description: Aprende los basicos de las ciencias de la compuación y el internet.
@@ -8311,6 +8345,7 @@
             Spelling Bee:
               name: Concurso de ortografía
           title: ''
+          assignment_family_title: Pre-reader Express
           description_audience: ''
           description_short: ''
           description: Aprende los basicos de las ciencias de la compuación y el internet.
@@ -9106,10 +9141,13 @@
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and
             complete the AP Explore Performance Tasks.
-          description: |-
-            These lessons are here to help you understand, prepare for, and do the AP Explore Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the second item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.\r
-            \r
-            This unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
+          description: "These lessons are here to help you understand, prepare for,
+            and do the AP Explore Performance Task.  Each \"lesson\" contains links
+            to helpful documents that your teacher can help walk you through. NOTE:
+            the second item in the first lesson is not related to the Explore PT directly,
+            but covers general tech setup and tools you need to do various elements
+            of both the Explore and Create tasks.\r\n\r\nThis unit was last updated
+            November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
         csp-create-2017:
           stages:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
@@ -9126,10 +9164,13 @@
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and
             complete the AP Create Performance Tasks.
-          description: |-
-            These lessons are here to help you understand, prepare for, and do the AP Create Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the first item in the first lesson is not related to the Create PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.\r
-            \r
-            This unit was last updated December, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
+          description: "These lessons are here to help you understand, prepare for,
+            and do the AP Create Performance Task.  Each \"lesson\" contains links
+            to helpful documents that your teacher can help walk you through. NOTE:
+            the first item in the first lesson is not related to the Create PT directly,
+            but covers general tech setup and tools you need to do various elements
+            of both the Explore and Create tasks.\r\n\r\nThis unit was last updated
+            December, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
         csp3-reovery:
           stages:
             Under the sea recovery:
@@ -10015,6 +10056,7 @@
                 design.\r\n"
         coursea-2018:
           title: Curso A
+          assignment_family_title: Curso A
           description: Aprende los basicos de las ciencias de la compuación y el internet.
             Al final del curso, crea tu propio juego o historia para compartir.
           description_short: Una introducción a las ciencias de la computación para
@@ -10022,13 +10064,13 @@
           description_audience: Edades de 4 a 7 años
           stages:
             'Debugging: Unspotted Bugs':
-              name: 'Depuración: Errores desapercibidos'
+              name: Errores desapercibidos
               description_student: ''
               description_teacher: 'Esta lección guiará a los estudiantes a través
                 de los pasos de depuración. Los estudiantes aprenderán el mantra:
                 "¿Que ocurrió? ¿Qué se suponia que pasara? ¿Eso que te dice?"'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistencia y frustración: Stevie y las canicas'
+              name: Stevie y el gran proyecto
               description_student: ''
               description_teacher: "Cuando los estudiantes se encuentran con una barrera
                 al responder a una pregunta o trabajando en un proyecto, es tan fácil
@@ -10054,7 +10096,7 @@
                 de computación, luego proceden a el uso de un ordenador para completar
                 el acertijo en línea.
             'Programming: Happy Maps':
-              name: 'Programación: Mapas felices'
+              name: Mapas felices
               description_student: ''
               description_teacher: El puente de algoritmos a programación puede ser
                 corto si los estudiantes entienden la diferencia entre planificación
@@ -10102,7 +10144,7 @@
                 Al final de esta etapa, los estudiantes tendrán la oportunidad de
                 crear sus propias imagenes usando ciclos.
             'Events: The Big Event':
-              name: 'Events: The Big Event'
+              name: El gran evento
               description_student: ''
               description_teacher: Los eventos son una excelente manera de agregar
                 variedad a un algoritmo preescrito. A veces deseas que el programa
@@ -10124,9 +10166,10 @@
             Sequencing in Maze:
               name: Secuencias en Maze
             'Persistence & Frustration: Stevie and the Big Project':
-              name: 'Persistence & Frustration: Stevie and the Big Project'
+              name: Stevie y el gran proyecto
         express-2018:
           title: Express Course
+          assignment_family_title: Express Course
           description: Aprende los basicos de las ciencias de la compuación y el internet.
             Al final del curso, crea tu propio juego o historia para compartir.
           description_short: 'An introduction to computer science: combines the best
@@ -10134,7 +10177,7 @@
           description_audience: 'Ages: 9-18'
           stages:
             'Algorithms: Graph Paper Programming':
-              name: 'Algoritmos: programación papel milimetrado'
+              name: Programación de hoja cuadriculada
               description_student: ''
               description_teacher: ''
             Introduction:
@@ -10178,7 +10221,7 @@
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: 'Events: The Big Event'
+              name: El gran evento
               description_student: ''
               description_teacher: ''
             Events in Star Wars:
@@ -10286,13 +10329,13 @@
             Programming in Artist:
               name: Programación en Artist
             'Loops: Getting Loopy':
-              name: 'Ciclos: Haciendo ciclos'
+              name: Girar y girar
             Loops with Rey and BB-8:
               name: Ciclos con Rey y BB-8
             Copyright and Creativity:
               name: Copyright and Creativity
             'Concept Practice with Minecraft ':
-              name: 'Concept Practice with Minecraft '
+              name: Observando hacia el futuro
             Nested Loops in Bee:
               name: Ciclos anidados en Bee
             Nested Loops in Frozen:
@@ -10302,7 +10345,7 @@
             Conditionals & Loops in Harvester:
               name: Condicionales y ciclos en Harvester
             'Functions: Songwriting':
-              name: 'Funciones: composición'
+              name: Composicion musical con parámetros
             Functions in Minecraft:
               name: Functions in Minecraft
             Functions in Harvester:
@@ -10336,7 +10379,7 @@
             Binary Bracelets:
               name: Pulseras binarias
             'Unplugged: Binary':
-              name: 'Desconectado: binario'
+              name: Imágenes binarias
             Artist Binary:
               name: Artista binario
             Internet:
@@ -10347,6 +10390,7 @@
               name: Programación bajo presión
         courseb-2018:
           title: Curso B
+          assignment_family_title: Curso B
           description: Aprende los basicos de las ciencias de la compuación y el internet.
             Al final del curso, crea tu propio juego o historia para compartir.
           description_short: Una introducción a las ciencias de la computación para
@@ -10399,7 +10443,7 @@
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: 'Events: The Big Event'
+              name: El gran evento
               description_student: ''
               description_teacher: ''
             Events in Play Lab:
@@ -10418,12 +10462,13 @@
               name: Copyright and Creativity
         coursed-2018:
           title: New Course D Script
+          assignment_family_title: Curso D
           description: ''
           description_short: ''
           description_audience: ''
           stages:
             'Algorithms: Graph Paper Programming':
-              name: 'Algoritmos: programación papel milimetrado'
+              name: Programación de hoja cuadriculada
               description_student: ''
               description_teacher: ''
             Introduction:
@@ -10447,7 +10492,7 @@
               description_student: ''
               description_teacher: ''
             Nested Loops in Bee:
-              name: Ciclos anidados en Bee
+              name: Ciclos anidados en Maze
               description_student: ''
               description_teacher: ''
             Nested Loops in Artist:
@@ -10483,7 +10528,7 @@
               description_student: ''
               description_teacher: ''
             'Unplugged: Binary':
-              name: 'Desconectado: binario'
+              name: Imágenes binarias
               description_student: ''
               description_teacher: ''
             Artist Binary:
@@ -10613,6 +10658,7 @@
             questions that appeared in Units 1-5 in the course.  '
         coursec-2018:
           title: Curso C
+          assignment_family_title: Curso C
           description: Crea programas con secuencias, ciclos y eventos. Traduce tus
             iniciales a binario, investiga distintas tecnicas de resolución de problemas
             y aprende como responder a las amenazas en linea. ¡Al final del curso,
@@ -10646,7 +10692,7 @@
               description_student: ''
               description_teacher: ''
             'Loops: Getting Loopy':
-              name: 'Ciclos: Haciendo ciclos'
+              name: Girar y girar
               description_student: ''
               description_teacher: ''
             Loops with Rey and BB-8:
@@ -10662,7 +10708,7 @@
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: 'Events: The Big Event'
+              name: El gran evento
               description_student: ''
               description_teacher: ''
             Build a Flappy Game:
@@ -10794,6 +10840,7 @@
               name: 'Project: Prototype an Innovation'
         coursee-2018:
           title: Curso E
+          assignment_family_title: Curso E
           description: Empieza a programar con algoritmos, ciclos, condicionales,
             y eventos y luego te moverás en funciones. En la segunda parte de este
             curso, diseñarás y crearás un proyecto final que puedes compartir con
@@ -10803,7 +10850,7 @@
           description_audience: Edades de 8 a 12 años
           stages:
             'Programming: My Robotic Friends':
-              name: 'Programación: Mis amigos robóticos'
+              name: Mis amigos robóticos
               description_student: ''
               description_teacher: ''
             Sequence in Maze:
@@ -10831,7 +10878,7 @@
               description_student: ''
               description_teacher: ''
             Nested Loops:
-              name: Bucles anidados
+              name: Ciclos anidados en Maze
               description_student: ''
               description_teacher: ''
             Nested Loops with Frozen:
@@ -10889,7 +10936,7 @@
                 R2-D2 y otros personajes de Star Wars, los estudiantes serán guiados
                 a través de eventos, luego podrán crear su propio juego.
             'Functions: Songwriting':
-              name: 'Funciones: composición'
+              name: Composicion musical con parámetros
               description_student: Incluso los rockstars necesita conocimientos de
                 programación. Esta lección le enseñará acerca de las funciones utilizando
                 Letras de canciones.
@@ -11011,6 +11058,7 @@
               name: Copyright and Creativity
         coursef-2018:
           title: Curso F
+          assignment_family_title: Curso F
           description: Aprende a usar diferentes tipos de ciclos, eventos, funciones
             y condicionales. Investiga distintas técnicas de solución de problemas
             y discute impactos sociales de la computación y el internet. En esta segunda
@@ -11021,7 +11069,7 @@
           description_audience: 9 a 13 años
           stages:
             'Programming: My Robotic Friends':
-              name: 'Programación: Mis amigos robóticos'
+              name: Mis amigos robóticos
               description_student: ''
               description_teacher: ''
             Sequence in Maze:
@@ -11049,7 +11097,7 @@
               description_student: ''
               description_teacher: ''
             Nested Loops in Bee/Zombie:
-              name: Nested Loops in Bee/Zombie
+              name: Ciclos anidados en Maze
               description_student: ''
               description_teacher: ''
             Nested Loops with Frozen:
@@ -12901,6 +12949,7 @@
             Training Weekend.
         pre-express-2018:
           title: Pre-reader Express
+          assignment_family_title: Pre-reader Express
           description: Aprende los basicos de las ciencias de la compuación y el internet.
             Al final del curso, crea tu propio juego o historia para compartir.
           description_short: 'An introduction to computer science for pre-readers:
@@ -12908,11 +12957,11 @@
           description_audience: 'Ages: 4-8'
           stages:
             'Debugging: Unspotted Bugs':
-              name: 'Depuración: Errores desapercibidos'
+              name: Errores desapercibidos
               description_student: ''
               description_teacher: ''
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistencia y frustración: Stevie y las canicas'
+              name: Stevie y el gran proyecto
               description_student: ''
               description_teacher: ''
             'Real-life Algorithms: Plant a Seed':
@@ -12952,7 +13001,7 @@
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: 'Events: The Big Event'
+              name: El gran evento
               description_student: ''
               description_teacher: ''
             Events in Play Lab:
@@ -12979,3 +13028,15 @@
               name: Ciclos en Ice Age
             'Persistence & Frustration: Stevie and the Big Project':
               name: 'Persistence & Frustration: Stevie and the Big Project'
+        spritelab-validated:
+          stages:
+            Fish Tank - Creating Sprites:
+              name: Fish Tank - Creating Sprites
+            Alien Dance Party - Input:
+              name: Alien Dance Party - Input
+            Virtual Pet - Interactions:
+              name: Virtual Pet - Interactions
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''

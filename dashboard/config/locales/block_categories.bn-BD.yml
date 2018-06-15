@@ -1,4 +1,5 @@
-"bn":
+---
+bn:
   data:
     block_categories:
       Actions: ক্রিয়া
@@ -45,5 +46,6 @@
       Foo: Foo
       Name: নাম
       NEW BLOCKS: NEW BLOCKS
+      'Functions ': 'Functions '
       Game/Score: Game/Score
       Function: ফাংশন

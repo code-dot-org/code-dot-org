@@ -1,4 +1,5 @@
-"lv":
+---
+lv:
   devise:
     confirmations:
       confirmed: Tava e-pasta adrese ir apstiprināta.

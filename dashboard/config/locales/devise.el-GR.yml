@@ -1,4 +1,5 @@
-"el":
+---
+el:
   devise:
     confirmations:
       confirmed: H ηλεκτρονική σου διεύθυνση επιβεβαιώθηκε με επιτυχία.

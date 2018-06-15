@@ -1,4 +1,5 @@
-"zh-TW":
+---
+zh-TW:
   data:
     block_categories:
       Actions: 動作
@@ -45,5 +46,6 @@
       Foo: Foo
       Name: 你的名字
       NEW BLOCKS: NEW BLOCKS
+      'Functions ': 'Functions '
       Game/Score: Game/Score
       Function: 函式

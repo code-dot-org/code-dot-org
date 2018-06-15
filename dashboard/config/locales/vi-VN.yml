@@ -1,4 +1,5 @@
-"vi":
+---
+vi:
   errors:
     messages:
       not_saved: 'Hãy sửa các lỗi sau đây:'
@@ -95,6 +96,7 @@
     facebook: Facebook
     windowslive: Tài khoản Microsoft
     clever: Tài khoản Clever
+    powerschool: Powerschool Account
     forgot_password: Quên mật khẩu?
     need_confirmation: Không nhận được hướng dẫn xác nhận?
     need_unlock: Chưa nhận hướng dẫn mở khóa?

@@ -35,6 +35,16 @@ module ScriptConstants
       EXPRESS_NAME = 'express'.freeze,
       PRE_READER_EXPRESS_NAME = 'pre-express'.freeze,
     ],
+    csf_2018: [
+      COURSEA_2018_NAME = 'coursea-2018'.freeze,
+      COURSEB_2018_NAME = 'courseb-2018'.freeze,
+      COURSEC_2018_NAME = 'coursec-2018'.freeze,
+      COURSED_2018_NAME = 'coursed-2018'.freeze,
+      COURSEE_2018_NAME = 'coursee-2018'.freeze,
+      COURSEF_2018_NAME = 'coursef-2018'.freeze,
+      EXPRESS_2018_NAME = 'express-2018'.freeze,
+      PRE_READER_EXPRESS_2018_NAME = 'pre-express-2018'.freeze,
+    ],
     hoc: [
       # Note that now multiple scripts can be an 'hour of code' script.
       # If adding a script here,
@@ -147,12 +157,6 @@ module ScriptConstants
       TTS_NAME = 'allthettsthings'.freeze
     ],
   }.freeze
-
-  # If the course name (e.g. "foo-2018") has a version suffix, then the first
-  # capture group is the assignment family name ("foo") and the second capture
-  # group is the version year ("2018"). Does not match course name without
-  # version suffix.
-  VERSIONED_COURSE_NAME_REGEX = /^(.*)-(\d{4})$/
 
   DEFAULT_VERSION_YEAR = '2017'
 

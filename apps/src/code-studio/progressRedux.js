@@ -79,6 +79,8 @@ export default function reducer(state = initialState, action) {
       scriptId: action.scriptId,
       scriptName: action.scriptName,
       scriptTitle: action.scriptTitle,
+      scriptDescription: action.scriptDescription,
+      betaTitle: action.betaTitle,
       courseId: action.courseId,
       currentStageId,
       hasFullProgress: action.isFullProgress
@@ -283,7 +285,7 @@ export function processedStages(stages, isPlc) {
 // Action creators
 export const initProgress = ({currentLevelId, professionalLearningCourse,
     saveAnswersBeforeNavigation, stages, peerReviewStage, scriptId, scriptName,
-    scriptTitle, courseId, isFullProgress}) => ({
+    scriptTitle, scriptDescription, betaTitle, courseId, isFullProgress}) => ({
   type: INIT_PROGRESS,
   currentLevelId,
   professionalLearningCourse,
@@ -293,6 +295,8 @@ export const initProgress = ({currentLevelId, professionalLearningCourse,
   scriptId,
   scriptName,
   scriptTitle,
+  scriptDescription,
+  betaTitle,
   courseId,
   isFullProgress,
 });
@@ -400,7 +404,7 @@ const isCurrentLevel = (currentLevelId, level) => {
  * about and (b) determines current status based on the current state of
  * state.levelProgress
  */
-const levelWithStatus = ({levelProgress, currentLevelId}, level) => {
+const levelWithStatus = ({levelProgress, levelPairing = {}, currentLevelId}, level) => {
   if (level.kind !== LevelKind.unplugged) {
     if (!level.title || typeof(level.title) !== 'number') {
       throw new Error('Expect all non-unplugged levels to have a numerical title');
@@ -410,15 +414,16 @@ const levelWithStatus = ({levelProgress, currentLevelId}, level) => {
     ...processedLevel(level),
     status: statusForLevel(level, levelProgress),
     isCurrentLevel: isCurrentLevel(currentLevelId, level),
+    paired: levelPairing[level.activeId],
   };
 };
 
 /**
  * Get level data for all lessons/stages
  */
-export const levelsByLesson = ({stages, levelProgress, currentLevelId}) => (
+export const levelsByLesson = ({stages, levelProgress, levelPairing, currentLevelId}) => (
   stages.map(stage => (
-    stage.levels.map(level => levelWithStatus({levelProgress, currentLevelId}, level))
+    stage.levels.map(level => levelWithStatus({levelProgress, levelPairing, currentLevelId}, level))
   ))
 );
 

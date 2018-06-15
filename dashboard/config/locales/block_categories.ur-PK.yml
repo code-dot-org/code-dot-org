@@ -1,4 +1,5 @@
-"ur":
+---
+ur:
   data:
     block_categories:
       Actions: ایکشنز
@@ -45,5 +46,6 @@
       Foo: Foo
       Name: نام
       NEW BLOCKS: NEW BLOCKS
+      'Functions ': 'Functions '
       Game/Score: Game/Score
       Function: فنکشن

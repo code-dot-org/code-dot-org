@@ -972,7 +972,7 @@ th:
         courseA_playLab_events6_1: This let's you choose a "random" sound, which means that you don't know what you are going to get until you hear it!
       courseA_toMakeLoopsVideo_Collector_callout: { }
       courseB_Scrat_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน
       courseB_Scrat_ramp2_2018_callout: { }
       courseB_Scrat_ramp3a_2018_callout: { }
       courseB_Scrat_ramp4a_2018_callout: { }
@@ -1056,9 +1056,9 @@ th:
       courseC_maze_loops2_predict1_callout: { }
       courseC_maze_loops_challenge2_callout: { }
       courseC_maze_programming1_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน
       courseC_maze_programming1_2018_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน
       courseC_maze_programming2_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseC_maze_programming2_2018_callout:
@@ -1157,9 +1157,9 @@ th:
       courseD_harvester_nested_loops_challenge1-broken_callout: { }
       courseD_maze_loops_challenge1_callout: { }
       courseD_maze_ramp1_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน
       courseD_maze_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน
       courseD_maze_ramp2_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseD_maze_ramp2_2018_callout:
@@ -1200,9 +1200,9 @@ th:
       courseD_scrat_predict1_callout: { }
       courseD_scrat_predict1_2018_callout: { }
       courseD_scrat_ramp1_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน
       courseD_scrat_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน
       courseD_scrat_ramp2_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseD_scrat_ramp2_2018_callout:
@@ -1342,10 +1342,10 @@ th:
       courseE_maze_predict1_callout: { }
       courseE_maze_predict1_2018_callout: { }
       courseE_maze_ramp1_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน
       courseE_maze_ramp13_callout: { }
       courseE_maze_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน
       courseE_maze_ramp2_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseE_maze_ramp2_2018_callout:
@@ -1553,12 +1553,12 @@ th:
       courseF_bee_variables_8_2018_callout: { }
       courseF_maze_predict1_callout: { }
       courseF_maze_ramp1_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน
       courseF_maze_ramp13_callout: { }
       courseF_maze_ramp15_callout:
         courseF_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
       courseF_maze_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน
       courseF_maze_ramp2_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseF_maze_ramp2_2018_callout:
@@ -1656,7 +1656,7 @@ th:
       grade1_maze_sequence6_callout:
         grade1_maze_sequence6_1: These grey blocks are made of stone!  That means that they can't be trashed.
       grade2_CaringForNewPet_0_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน
       grade2_CaringForNewPet_1_callout:
         grade2_CaringForNewPet_1_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       grade2_CaringForNewPet_2_callout:

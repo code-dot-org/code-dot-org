@@ -85,6 +85,7 @@ hu:
     facebook: 'Facebook'
     windowslive: 'Microsoft fiók'
     clever: 'Clever Account'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Elfelejtette jelszavát?'
     need_confirmation: "Nem kapta meg a megerősítő instrukciókat?"
     need_unlock: "Nem kaptál a zárolás megszüntetéséhez útmutatót?"

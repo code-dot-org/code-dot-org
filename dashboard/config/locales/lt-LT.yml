@@ -1,4 +1,5 @@
-"lt":
+---
+lt:
   errors:
     messages:
       not_saved: 'Ištaisyk šias klaidas:'
@@ -94,6 +95,7 @@
     facebook: Facebook
     windowslive: Microsoft paskyra
     clever: Clever Account
+    powerschool: Powerschool Account
     forgot_password: Užmiršai savo slaptažodį?
     need_confirmation: Negavai patvirtinimo instrukcijų?
     need_unlock: Negavai atrakinimo instrukcijų?

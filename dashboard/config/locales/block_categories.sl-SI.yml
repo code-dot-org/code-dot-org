@@ -1,4 +1,5 @@
-"sl":
+---
+sl:
   data:
     block_categories:
       Actions: Dejanja
@@ -45,5 +46,6 @@
       Foo: Foo
       Name: Ime
       NEW BLOCKS: NEW BLOCKS
+      'Functions ': 'Functions '
       Game/Score: Game/Score
       Function: Funkcija

@@ -3965,7 +3965,6 @@ it:
         * Write down all of the attribution information that you need.
         * Upload all of the images into your project.  Visit <a href="/s/csd2/stage/7/puzzle/5" target="_new">Lesson 7 Level 5</a> if you've forgotten how.
       CSD U3 - Booleans Video_markdown_instruction: "# Boolean Expressions Video"
-      CSD U3 - Booleans Video_2018_markdown_instruction: "# Boolean Expressions Video"
       CSD U3 - Simple Counter Predict_markdown_instruction: "# The Counter Pattern\n\nThis pattern is one of the most important ones in all of programming. \n\n![](https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56 PM.png)\n    \nIt is used to increase the value of a variable by 1. You might call it the **counter pattern** since it can be used to make a variable that counts up. You'll use this pattern a lot, especially with the draw loop. Let's see what that looks like.\n\n# Do This\n\nThis program creates a variable `counter` and then uses the **counter pattern** to make it count up. When you run the program what do you think you'll see on the screen?\n\n* **Read the program** and make a prediction of what the output will be.\n* **Run the program** to check your prediction.\n* **Discuss with a neighbor**. Can you explain what you observed?\n\n"
       CSD U3 - Simple Counter Predict_2018_markdown_instruction: "# The Counter Pattern\n\nThis pattern is one of the most important ones in all of programming. \n\n![](https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56 PM.png)\n    \nIt is used to increase the value of a variable by 1. You might call it the **counter pattern** since it can be used to make a variable that counts up. You'll use this pattern a lot, especially with the draw loop. Let's see what that looks like.\n\n# Do This\n\nThis program creates a variable `counter` and then uses the **counter pattern** to make it count up. When you run the program what do you think you'll see on the screen?\n\n* **Read the program** and make a prediction of what the output will be.\n* **Run the program** to check your prediction.\n* **Discuss with a neighbor**. Can you explain what you observed?\n\n"
       CSD U3 - Sprites - Sprite v Rect_markdown_instruction: |-
@@ -6087,7 +6086,7 @@ it:
         * Hint: You'll need to change two parameters. Which ones set your cloud's width and height?
         
         _Challenge: The sun is not in the exact same place as in the picture.  Can you change the sun's coordinates so that the picture matches completely?_
-      CSD U3 Random Debug Cloud_2018_markdown_instruction: |
+      CSD U3 Random Debug Cloud_2018_markdown_instruction: |+
         <img src="https://images.code.org/45d1d513f5ed63592e98ea3e4a08840c-image-1520403109680.11.28 PM.png" style="float:right;height:150px">
         
         # Debug - Using 4 Parameters
@@ -6098,8 +6097,6 @@ it:
         
         * Debug this program to make the cloud wider than it is tall, like in the image.
         * Hint: You'll need to change two parameters. Which ones set your cloud's width and height?
-        
-        _Challenge: The sun is not in the exact same place as in the picture.  Can you change the sun's coordinates so that the picture matches completely?_
       CSD U3 Random Debug Grass_markdown_instruction: |-
         <img src="https://images.code.org/83269268e1c4f8af8551253ff4573b43-image-1490825158453.03.45 PM.png" style="float:right;height:150px">
         
@@ -19151,6 +19148,7 @@ it:
         - What happens if you use two different angles in your stair step pattern?
         - What happens if you make your diamond pattern longer or shorter?
         - What does it look like to draw two snowflakes on top of one another?
+      Dance Party 1-validated_markdown_instruction: "**Make a prediction:** Here’s a sprite called `alien1`! What do you think will happen when you click on her?"
       Dance Party 1_markdown_instruction: "**Make a prediction:** Here’s a sprite called `alien1`! What do you think will happen when you click on her?"
       Dance Party 2_markdown_instruction: The alien was proud of her dancing skills on Mars, but now she can only move up and down. Can you change the behavior inside the `begins` block to make her start spinning around?
       Dance Party 3_markdown_instruction: Create a new sprite called `alien2`, and make it do a different dance move when it's clicked.
@@ -19162,6 +19160,7 @@ it:
         Now create your own alien disco! Looking for inspiration? Try these ideas:
         * Create two bell sprites, and make the aliens do a different dance move for each
         * Make the aliens do a new dance move when they touch
+      Dance Party Predict_markdown_instruction: "**Make a prediction:** Here’s a sprite called `alien1`! What do you think will happen when you click on her?"
       Data Visualizations 101_markdown_instruction: |+
         ## Data Visualization 101: How to design charts and graphs
         
@@ -19390,13 +19389,22 @@ it:
         **Finalize your "Chaser Game v.1"** and click Finish.
         
         * **Note**: We'll revisit this game in the next lesson where you can improve it.  This is **just version 1**
+      Fish Tank 1-validated_markdown_instruction: "**Make a prediction**: What do you think will happen when you run this code?"
       Fish Tank 1_markdown_instruction: "**Make a prediction**: What do you think will happen when you run this code?"
+      Fish Tank 2-validated_markdown_instruction: We're going to make a fish tank. Change Dusty the tumbleweed to a fish.
       Fish Tank 2_markdown_instruction: We're going to make a fish tank. Change the Dusty the tumbleweed to a fish.
+      Fish Tank 3-validated_markdown_instruction: All this spinning is going to make our fish dizzy! Change the fish's behavior to make it swim around the tank.
       Fish Tank 3_markdown_instruction: All this spinning is going to make our fish dizzy! Change the fish's behavior to make it swim around the tank.
+      Fish Tank 4-validated_markdown_instruction: Our fish tank needs some water! Use the `set background color` block to make the background blue.
       Fish Tank 4_markdown_instruction: Our fish tank needs some water! Use the `set background color` block to make the background blue.
+      Fish Tank 5-validated_markdown_instruction: Our fish is getting a little lonely. Create a new sprite inside the fish tank.
       Fish Tank 5_markdown_instruction: Our fish is getting a little lonely. Create a new sprite inside the fish tank.
+      Fish Tank 6-validated_markdown_instruction: What do you want your fish’s friend to do? Add a behavior and watch them go!
       Fish Tank 6_markdown_instruction: What do you want your fish’s friend to do? Add a behavior and watch them go!
+      Fish Tank 7-validated_markdown_instruction: There are a lot of new blocks in the toolbox. Play with them to make your fish tank special.
       Fish Tank 7_markdown_instruction: There are a lot of new blocks in the toolbox. Play with them to make your fish tank special.
+      Fish Tank Predict_markdown_instruction: "**Make a prediction**: What do you think will happen when you run this code?"
+      Fish Tank Template_markdown_instruction: Project Template
       Food Fight!_markdown_instruction: |-
         Abbiamo aggiunto al gioco ancora un'altra funzione che puoi usare.<br>
         <br>
@@ -20921,7 +20929,7 @@ it:
         
         What problems arose in your efforts to create a working protocol? How did you think about the problem(s) in order to solve it?
       U1L8 Free Response Reflection_2018_markdown_instruction: |
-        <strong>Complete the Sending Numbers Rubric (on the second page of the <a href= "https://docs.google.com/document/d/1cSlWYnxOciDQut0OAUcsddmM56bveHely71LUb_CHkM/edit" target="_blank">Sending Number activity guide</a>) and then respond to the following prompt.</strong>
+        <strong>Complete the Sending Numbers Rubric (on the second page of the Sending Numbers activity guide</a>) and then respond to the following prompt.</strong>
         
         What problems arose in your efforts to create a working protocol? How did you think about the problem(s) in order to solve it?
       U1L8 Free Response2_markdown_instruction: How did collaboration play a role in the creation of your protocol?
@@ -26501,6 +26509,7 @@ it:
       Video. Introduction to Conditionals - Part 2.3_markdown_instruction: "### Points to pay attention to:\n\n* **START at 2:20**  \n    This is the second half of the video you watched earlier. \n\n* An If-else-if statement let's you check more than one condition at a time.\n* The **order of conditions matters**. Since conditions are checked sequentially from top to bottom, the code that gets executed will be the *first* statement to evaluate to true.\n\n"
       Video. Introduction to Conditionals - Part 2_markdown_instruction: "### Points to pay attention to:\n\n* **NOTE:** Stop play at 1:37.  \n    It's all you need for the exercises that follow.  You'll watch the remainder of the video after that.\n\n* An IF statement can have an else clause, but an ELSE clause cannot exist on its own.\n* With an else clause you are *guaranteeing* that one of two portions of code will run.\n\n"
       Vigenere_markdown_instruction: "# Encrypt and decrypt a message with the Vigenère cipher\n\nThis is an interactive version of the Vigenère cipher that animates the encryption and decryption as it’s happening, given a piece of text to encrypt or decrypt and the key.\n\n# Do this\n### Encrypt a message\nClick Step several times, and trace what’s happening. Pay attention to:\n\n- How the ciphertext is being produced\n- What happens when you get to the last character of the key\n- After you’ve stepped through a few characters click Play to watch the rest animate\n- Hit Restart and play the animation again. You can use the speed slider to speed it up or slow it down  \n\n![](https://images.code.org/06858f88ac12997bba73f4f76638a068-image-1443574425185.gif)\n\n### Decrypt a message\nEncrypt a message as above, then:  \n\n- Highlight and copy the ciphertext\n- Paste it into the plaintext area. Note: Don’t change the key\n- Change the Encrypt/Decrypt toggle to Decrypt\n- Hit Step a few times, and then Play\n\nYou should see the original text emerge.  \n![](https://images.code.org/dc89d6c19c17adb23b6b5ff9a62c4583-image-1443574425182.gif)\n\n\nHow hard would it be to crack a message encrypted with this cipher? Does the length of the key make a difference?\n"
+      Virtual Pet 1-validated_markdown_instruction: This is Geraldine, your new pet giraffe. What do you think will happen if you press run and then click on her?
       Virtual Pet 1_markdown_instruction: This is Geraldine, your new pet giraffe. What do you think will happen if you press run and then click on her?
       Virtual Pet 2_markdown_instruction: There's a mud puddle over in the corner. Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
       Virtual Pet 3_markdown_instruction: |-
@@ -26513,6 +26522,7 @@ it:
       Virtual Pet 5_markdown_instruction: All of this play takes energy!  Add actions to each event so that when the giraffe collides with each sprite, it gets a little smaller (shrinks by 5).
       Virtual Pet 6_markdown_instruction: A balanced diet is important! We have to feed the giraffe to get its strength back. Add an apple that returns the giraffe back to regular size when they touch.
       Virtual Pet Freeplay_markdown_instruction: 'Freeplay: Can you add more special items for your virtual pet? Can you give her some friends? What more can you make your giraffe do? '
+      Virtual Pet Predict_markdown_instruction: "**Make a prediction:** This is Geraldine, your new pet giraffe. What do you think will happen if you press run and then click on her?"
       Visual Accessibility_markdown_instruction: |-
         # Visual Accessibility: Color Contrast
         
@@ -27199,7 +27209,7 @@ it:
       courseA_harvester_seq9_markdown_instruction: Add two blocks to finish this puzzle!
       courseA_maze_ramp2_2018_markdown_instruction: Attach both <xml><block type="maze_moveEast"/></xml> blocks to <xml><block type="when_run"/></xml> to finish your code, then click ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).
       courseA_maze_ramp2a_2018_markdown_instruction: Attach both <xml><block type="maze_moveEast"/></xml> blocks to <xml><block type="when_run"/></xml> to finish your code, then click ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).
-      courseA_maze_ramp3_2018_markdown_instruction: "*\"This pig is ruffling my feathers.\"*\n\nThere is one extra block that is going to cause the bird to crash.  \nThrow it away by removing it from the other blocks and dragging it back to the toolbox."
+      courseA_maze_ramp3_2018_markdown_instruction: "*\"Questo maialino mi fa arricciare le penne.\"*\n\nC'è un blocco di troppo che fa andare a sbattere l'uccellino.\nButtalo via sganciandolo dagli altri grigi e trascinandolo nella cassetta degli attrezzi."
       courseA_maze_ramp3a_2018_markdown_instruction: Grab a <xml><block type="maze_moveNorth"/></xml> from the toolbox and add it to the bottom of the other blocks to finish this code, then click ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).
       courseA_maze_ramp4_2018_markdown_instruction: "*\"Fammi fare il percorso per arrivare a quello sciocco maiale.\"*\n\nEvita la dinamite (TNT) o ci lascio le penne!"
       courseA_maze_ramp4a_2018_markdown_instruction: Can you figure out which block you need to add to the bottom of the other blocks to finish this code?
@@ -28008,8 +28018,8 @@ it:
         Create this image using only the blocks provided.
         
         - To draw a diamond, you will need to alternate between turning 60 degrees and 120 degrees.
-      courseD_artist_nestedLoops1a_markdown_instruction: "Now loop the triangle 6 times. \n\nAfter each triangle, you'll need to turn 60 degrees before drawing the next. "
-      courseD_artist_nestedLoops1a_2018_markdown_instruction: "Now loop the triangle 6 times. \n\nAfter each triangle, you'll need to turn 60 degrees before drawing the next. "
+      courseD_artist_nestedLoops1a_markdown_instruction: "Ora disegna il triangolo 6 volte.\n\nDopo ogni triangolo, devi girarti di 60 gradi prima di disegnare il successivo."
+      courseD_artist_nestedLoops1a_2018_markdown_instruction: "Ora disegna il triangolo 6 volte.\n\nDopo ogni triangolo, devi girarti di 60 gradi prima di disegnare il successivo."
       courseD_artist_nestedLoops2_markdown_instruction: |-
         This time, complete the puzzle with the fewest number of blocks possible.
         
@@ -28160,13 +28170,13 @@ it:
       courseD_artist_project5_2018_markdown_instruction: '![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Get creative with shapes and angles to see what kind of new snowflakes we can draw!"_'
       courseD_artist_project_embedded_markdown_instruction: Here's what you will soon be making!
       courseD_artist_ramp11_markdown_instruction: |-
-        Great!  Now let's make a square using Artist!  The blocks are a little different, but the idea is the same.
+        Grande! Ora facciamo un quadrato usando l'Artista! I blocchi sono leggermente diversi, ma l'idea è la stessa.
         ___
-        Each side of the square has a length of 200 pixels, and you will need to turn 90 degrees to make each angle.
+        Ogni lato del quadrato ha una lunghezza di 200 pixel e sarà necessario ruotare di 90 gradi ad ogni angolo.
       courseD_artist_ramp12_markdown_instruction: |-
-        Use what you've learned to draw this triangle inside of a square.
+        Usa ciò che hai imparato per disegnare questo triangolo all'interno di un quadrato.
         ___
-        ##### The sides are each 200 pixels long. You will need to turn 90 degrees to make the square and 120 degrees to make the triangle.
+        ##### Ogni lato è lungo 200 pixel. Devi girare di 90 gradi per disegnare un quadrato e di 120 gradi per disegnare un triangolo.
       courseD_bee_conditionals1_markdown_instruction: |-
         *"This cloud is blocking my view!"*
         
@@ -28187,9 +28197,9 @@ it:
         *"This cloud is blocking my view!"*
         
         Check to see if there's a flower under the cloud. If there's a flower, get nectar.
-      courseD_bee_conditionals2_markdown_instruction: "More clouds! \n\nCheck underneath every cloud to see if it is hiding a flower before you get nectar. If there is a flower underneath the cloud, the bee will need to get nectar *once*.  \n\nRemember: Not all clouds hide the same thing!"
-      courseD_bee_conditionals2_2018_markdown_instruction: "More clouds! \n\nCheck underneath every cloud to see if it is hiding a flower before you get nectar. If there is a flower underneath the cloud, the bee will need to get nectar *once*.  \n\nRemember: Not all clouds hide the same thing!"
-      courseD_bee_conditionals2_test_markdown_instruction: "More clouds! \n\nCheck underneath every cloud to see if it is hiding a flower before you get nectar. If there is a flower underneath the cloud, the bee will need to get nectar *once*.  \n\nRemember: Not all clouds hide the same thing!"
+      courseD_bee_conditionals2_markdown_instruction: "Ancora più nuvole!\n\nPrima di prendere il nettare, controlla sotto ogni nuvola se sta nascondendo un fiore. Se sotto la nuvola c'è un fiore, l'ape deve prendere *una* dose di nettare.\n\nRicorda: le nuvole non nascondono sempre la stessa cosa!"
+      courseD_bee_conditionals2_2018_markdown_instruction: "Ancora più nuvole!\n\nPrima di prendere il nettare, controlla sotto ogni nuvola se sta nascondendo un fiore. Se sotto la nuvola c'è un fiore, l'ape deve prendere *una* dose di nettare.\n\nRicorda: le nuvole non nascondono sempre la stessa cosa!"
+      courseD_bee_conditionals2_test_markdown_instruction: "Ancora più nuvole!\n\nPrima di prendere il nettare, controlla sotto ogni nuvola se sta nascondendo un fiore. Se sotto la nuvola c'è un fiore, l'ape deve prendere *una* dose di nettare.\n\nRicorda: le nuvole non nascondono sempre la stessa cosa!"
       courseD_bee_conditionals3_markdown_instruction: You can only collect nectar from flowers, but you can check any space to see if there is a flower. If there is a flower under any of these clouds, the bee will need to collect nectar *once*.
       courseD_bee_conditionals3_2018_markdown_instruction: You can only collect nectar from flowers, but you can check any space to see if there is a flower. If there is a flower under any of these clouds, the bee will need to collect nectar *once*.
       courseD_bee_conditionals4_markdown_instruction: |-
@@ -28459,13 +28469,14 @@ it:
       courseD_collector_nested_loops_challenge2_markdown_instruction: "*\"Let's hunt for treasure - using loops!\"* \n\nHelp the collector reach at least two piles of treasure using only the blocks in your toolbox. It is possible to collect all 4."
       courseD_collector_nested_loops_challenge2_2018_markdown_instruction: "*\"Let's hunt for treasure - using loops!\"* \n\nHelp the collector reach at least two piles of treasure using only the blocks in your toolbox. It is possible to collect all 4."
       courseD_collector_nested_loops_challenge2a_markdown_instruction: "*\"Let's hunt for treasure - using loops!\"* \n\nHelp Laurel collect at least two piles of treasure using only the blocks in your toolbox. It is possible to collect all 4."
-      courseD_collector_ramp10_markdown_instruction: Walk Laurel around this square collecting the treasure as you find it.
+      courseD_collector_ramp10_markdown_instruction: Fai camminare Laurel intorno a questo quadrato per raccogliere i diamanti che trova.
       courseD_collector_ramp8_markdown_instruction: |
-        This puzzle is a lot like the last one, but now it stars Laurel the Adventurer!
+        Questo esercizio è molto simile al precedente, ma ora la protagonista è Laurel l'avventuriera!
+        
         ___
         
-        Take the same path as before, but this time, use a repeat loop to collect treasure when you get to it.
-      courseD_collector_ramp9_markdown_instruction: Now there's more treasure.  Can you help Laurel collect it all?
+        Segui lo stesso percorso di prima, ma ora usa il ciclo `ripeti ... volte` per raccogliere i diamanti man mano che ci passi sopra.
+      courseD_collector_ramp9_markdown_instruction: Ora ci sono diamanti in più di una casella. Riesci ad aiutare Laurel a raccoglierli tutti?
       courseD_collector_until_challenge1_markdown_instruction: Watch how the bees gets the nectar. Can you use the same kind of pattern to help the bee make all of honey?
       courseD_debugging_1_markdown_instruction: |-
         *"These blocks are really bugging me!"*
@@ -28538,49 +28549,49 @@ it:
       courseD_farmer_condLoops_challenge2_markdown_instruction: "*\"It's a very varied vegetable maze!\"* \n\nTurn right at pumpkins, turn left at lettuce. Collect everything to complete the level."
       courseD_farmer_condLoops_challenge2_2018_markdown_instruction: "*\"It's a very varied vegetable maze!\"* \n\nTurn right at pumpkins, turn left at lettuce. Collect everything to complete the level."
       courseD_farmer_condLoops_challenge2_clone_markdown_instruction: It's a vegetable maze. Turn right at pumpkins, turn left at the lettuce. Collect everything to complete the level.
-      courseD_farmer_conditionals1_markdown_instruction: "*\"Hi, I'm a farmer. I need your help to flatten the field on my farm so it's ready for planting!\"*  \n\nMove to the pile of dirt and use the `remove` block to remove it."
+      courseD_farmer_conditionals1_markdown_instruction: "*\"Ciao, sono una contadina. Ho bisogno del tuo aiuto per livellare il terreno nella mia fattoria, in modo che sia pronto per la semina.\"*\n\nSpostami verso i mucchi di terra e usa il blocco `rimuovi 1` per rimuoverli."
       courseD_farmer_conditionals3_markdown_instruction: |-
-        *"Move to the pile of dirt and tell me how many shovelfuls to remove."*
+        *"Portami fino al mucchio di terra e fammi dare tutte le palate che servono per rimuoverlo."*
         
-        Use as few blocks as possible to solve this puzzle.
+        Usa il minor numero possibile di blocchi per risolvere questo esercizio.
       courseD_farmer_conditionals4_markdown_instruction: |-
-        *"I don't know how much dirt is in this pile!"*
+        *"Non so quanta terra c'è in questo mucchio!"*
         
-        Help the farmer remove this entire pile using a `while` loop.
-      courseD_farmer_conditionals6_markdown_instruction: "Look at all of those holes!  Each one needs a different amount of dirt.   \n\nYou can use the `while` loop to easily fill them all!"
-      courseD_farmer_conditionals8_markdown_instruction: "**Challenge:** Fill all of these holes using as few blocks as possible. "
+        Aiuta la contadina a rimuovere tutto questo mucchio usando un ciclo `mentre`.
+      courseD_farmer_conditionals6_markdown_instruction: "Guarda tutte queste buche!  Ognuna ha bisogno di una diversa quantità di terra.\n\nÈ possibile usare il ciclo `mentre` per riempirle tutte facilmente!"
+      courseD_farmer_conditionals8_markdown_instruction: "**Sfida:** Riempi tutte queste buche usando il minor numero possibile di blocchi."
       courseD_farmer_until_challenge2_markdown_instruction: Use `If/Else` blocks to follow the curvy path. At each corner, use the `remove 1` block in a loop to clear the piles.
       courseD_farmer_until_challenge2_2018_markdown_instruction: Use `If/Else` blocks to follow the curvy path. At each corner, use the `remove 1` block in a loop to clear the piles.
-      courseD_farmer_while1_markdown_instruction: "*\"Hi, I'm a farmer. I need your help to flatten the field on my farm so it's ready for planting!\"*  \n\nMove to the pile of dirt and use the `remove` block to remove it."
-      courseD_farmer_while1_2018_markdown_instruction: "*\"Hi, I'm a farmer. I need your help to flatten the field on my farm so it's ready for planting!\"*  \n\nMove to the pile of dirt and use the `remove` block to remove it."
+      courseD_farmer_while1_markdown_instruction: "*\"Ciao, sono una contadina. Ho bisogno del tuo aiuto per livellare il terreno nella mia fattoria, in modo che sia pronto per la semina.\"*\n\nSpostami verso i mucchi di terra e usa il blocco `rimuovi 1` per rimuoverli."
+      courseD_farmer_while1_2018_markdown_instruction: "*\"Ciao, sono una contadina. Ho bisogno del tuo aiuto per livellare il terreno nella mia fattoria, in modo che sia pronto per la semina.\"*\n\nSpostami verso i mucchi di terra e usa il blocco `rimuovi 1` per rimuoverli."
       courseD_farmer_while3_markdown_instruction: |-
-        *"Move to the pile of dirt and tell me how many shovelfuls to remove."*
+        *"Portami fino al mucchio di terra e fammi dare tutte le palate che servono per rimuoverlo."*
         
-        Use as few blocks as possible to solve this puzzle.
+        Usa il minor numero possibile di blocchi per risolvere questo esercizio.
       courseD_farmer_while3_2018_markdown_instruction: |-
-        *"Move to the pile of dirt and tell me how many shovelfuls to remove."*
+        *"Portami fino al mucchio di terra e fammi dare tutte le palate che servono per rimuoverlo."*
         
-        Use as few blocks as possible to solve this puzzle.
+        Usa il minor numero possibile di blocchi per risolvere questo esercizio.
       courseD_farmer_while4_markdown_instruction: |-
-        *"I don't know how much dirt is in this pile!"*
+        *"Non so quanta terra c'è in questo mucchio!"*
         
-        Help the farmer remove this entire pile using a `while` loop.
+        Aiuta la contadina a rimuovere tutto questo mucchio usando un ciclo `mentre`.
       courseD_farmer_while4_2018_markdown_instruction: |-
-        *"I don't know how much dirt is in this pile!"*
+        *"Non so quanta terra c'è in questo mucchio!"*
         
-        Help the farmer remove this entire pile using a `while` loop.
+        Aiuta la contadina a rimuovere tutto questo mucchio usando un ciclo `mentre`.
       courseD_farmer_while4_predict1_markdown_instruction: |-
-        *"I don't know how much dirt is in this pile!"*
+        *"Non so quanta terra c'è in questo mucchio!"*
         
-        Help the farmer remove this entire pile using a `while` loop.
+        Aiuta la contadina a rimuovere tutto questo mucchio usando un ciclo `mentre`.
       courseD_farmer_while4_predict1_2018_markdown_instruction: |-
-        *"I don't know how much dirt is in this pile!"*
+        *"Non so quanta terra c'è in questo mucchio!"*
         
-        Help the farmer remove this entire pile using a `while` loop.
-      courseD_farmer_while6_markdown_instruction: "Look at all of those holes!  Each one needs a different amount of dirt.   \n\nYou can use the `while` loop to easily fill them all!"
-      courseD_farmer_while6_2018_markdown_instruction: "Look at all of those holes!  Each one needs a different amount of dirt.   \n\nYou can use the `while` loop to easily fill them all!"
-      courseD_farmer_while8_markdown_instruction: "**Challenge:** Fill all of these holes using as few blocks as possible. "
-      courseD_farmer_while8_2018_markdown_instruction: "**Challenge:** Fill all of these holes using as few blocks as possible. "
+        Aiuta la contadina a rimuovere tutto questo mucchio usando un ciclo `mentre`.
+      courseD_farmer_while6_markdown_instruction: "Guarda tutte queste buche!  Ognuna ha bisogno di una diversa quantità di terra.\n\nÈ possibile usare il ciclo `mentre` per riempirle tutte facilmente!"
+      courseD_farmer_while6_2018_markdown_instruction: "Guarda tutte queste buche!  Ognuna ha bisogno di una diversa quantità di terra.\n\nÈ possibile usare il ciclo `mentre` per riempirle tutte facilmente!"
+      courseD_farmer_while8_markdown_instruction: "**Sfida:** Riempi tutte queste buche usando il minor numero possibile di blocchi."
+      courseD_farmer_while8_2018_markdown_instruction: "**Sfida:** Riempi tutte queste buche usando il minor numero possibile di blocchi."
       courseD_farmer_while_challenge1_markdown_instruction: Fill all of the holes and remove all of the piles.
       courseD_farmer_while_challenge1_2018_markdown_instruction: Fill all of the holes and remove all of the piles.
       courseD_farmer_while_challenge2_markdown_instruction: Fill all of the holes and remove all of the piles.
@@ -28621,12 +28632,12 @@ it:
         *"Must eat sunflower!"*
         
         Get the zombie to the sunflower using only the blocks available.
-      courseD_maze_ramp1_markdown_instruction: For this puzzle, snap all of the blocks together and click "Run" to watch it go!
-      courseD_maze_ramp1_2018_markdown_instruction: For this puzzle, snap all of the blocks together and click "Run" to watch it go!
+      courseD_maze_ramp1_markdown_instruction: Per risolvere questo esercizio, collega tutti i blocchi e clicca su "Esegui" per vederlo in funzione!
+      courseD_maze_ramp1_2018_markdown_instruction: Per risolvere questo esercizio, collega tutti i blocchi e clicca su "Esegui" per vederlo in funzione!
       courseD_maze_ramp2_markdown_instruction: Trascina ancora un blocco `vai avanti` fuori dalla cassetta degli attrezzi, quindi attacca tutti i blocchi al blocco arancione `quando si clicca su "Esegui"`per completare il programma.
       courseD_maze_ramp2_2018_markdown_instruction: Trascina ancora un blocco `vai avanti` fuori dalla cassetta degli attrezzi, quindi attacca tutti i blocchi al blocco arancione `quando si clicca su "Esegui"`per completare il programma.
-      courseD_maze_ramp3_markdown_instruction: "*\"This pig is ruffling my feathers.\"*\n\nThere is one extra block that is going to cause the bird to crash.  \nThrow it away by removing it from the other blocks and dragging it back to the toolbox."
-      courseD_maze_ramp3_2018_markdown_instruction: "*\"This pig is ruffling my feathers.\"*\n\nThere is one extra block that is going to cause the bird to crash.  \nThrow it away by removing it from the other blocks and dragging it back to the toolbox."
+      courseD_maze_ramp3_markdown_instruction: "*\"Questo maialino mi fa arricciare le penne.\"*\n\nC'è un blocco di troppo che fa andare a sbattere l'uccellino.\nButtalo via sganciandolo dagli altri grigi e trascinandolo nella cassetta degli attrezzi."
+      courseD_maze_ramp3_2018_markdown_instruction: "*\"Questo maialino mi fa arricciare le penne.\"*\n\nC'è un blocco di troppo che fa andare a sbattere l'uccellino.\nButtalo via sganciandolo dagli altri grigi e trascinandolo nella cassetta degli attrezzi."
       courseD_maze_ramp4_markdown_instruction: "*\"Fammi fare il percorso per arrivare a quello sciocco maiale.\"*\n\nEvita la dinamite (TNT) o ci lascio le penne!"
       courseD_maze_ramp4_2018_markdown_instruction: "*\"Fammi fare il percorso per arrivare a quello sciocco maiale.\"*\n\nEvita la dinamite (TNT) o ci lascio le penne!"
       courseD_maze_ramp5_markdown_instruction: |-
@@ -28646,14 +28657,14 @@ it:
       courseD_maze_ramp5d_markdown_instruction: Get the bird to the pig.
       courseD_maze_ramp5d_2018_markdown_instruction: Get the bird to the pig.
       courseD_maze_ramp6_markdown_instruction: |-
-        *"Keep calm and help me find the bad pig. Otherwise I might get angry!"*
+        *"Mantieni la calma e aiutami a trovare quel cattivone di un maiale. Altrimenti potrei arrabbiarmi!"*
         
-        When you have several of the same block in a row, try using a `repeat` loop, instead.  This will do the same thing with less code!
+        Quando hai parecchi blocchi uguali di seguito, prova a sostituirli usando un blocco `ripeti ... volte`. Così potrai fare la stessa cosa usando meno blocchi!
       courseD_maze_ramp6a_markdown_instruction: |-
         *"Keep calm and help me find the bad pig. Otherwise I might get angry!"*
         
         When you have several of the same blocks in a row, try using a `repeat` loop, instead.  This will do the same thing with less code!
-      courseD_maze_ramp7_markdown_instruction: "*\"It's time to get angry!\"*  \n\n\nUse what you've learned to get the bird to the pig!"
+      courseD_maze_ramp7_markdown_instruction: "*\"È il momento di arrabbiarsi!\"*\n\n\nUsa ciò che hai imparato per far arrivare l'uccellino fino al maialino!"
       courseD_maze_until10_markdown_instruction: Help the zombie get to the sunflower.
       courseD_maze_until10_2018_markdown_instruction: Help the zombie get to the sunflower.
       courseD_maze_until10_predict2_markdown_instruction: Help the zombie get to the sunflower.
@@ -28745,8 +28756,8 @@ it:
         - Have both octopuses follow the pirate, doing double damage to the ninja when they collide
         - Have each character disappear when touched by the ninja
         - Invent your own game!
-      courseD_scrat_ramp1_markdown_instruction: For this puzzle, snap all of the blocks together and click "Run" to watch it go!
-      courseD_scrat_ramp1_2018_markdown_instruction: For this puzzle, snap all of the blocks together and click "Run" to watch it go!
+      courseD_scrat_ramp1_markdown_instruction: Per risolvere questo esercizio, collega tutti i blocchi e clicca su "Esegui" per vederlo in funzione!
+      courseD_scrat_ramp1_2018_markdown_instruction: Per risolvere questo esercizio, collega tutti i blocchi e clicca su "Esegui" per vederlo in funzione!
       courseD_scrat_ramp2_markdown_instruction: Trascina ancora un blocco `vai avanti` fuori dalla cassetta degli attrezzi, quindi attacca tutti i blocchi al blocco arancione `quando si clicca su "Esegui"`per completare il programma.
       courseD_scrat_ramp2_2018_markdown_instruction: Trascina ancora un blocco `vai avanti` fuori dalla cassetta degli attrezzi, quindi attacca tutti i blocchi al blocco arancione `quando si clicca su "Esegui"`per completare il programma.
       courseD_scrat_ramp3_markdown_instruction: "There is one extra block that is going to cause Scrat to crash.  \nThrow it away by disconnecting it from the other blocks and dragging it back to the toolbox."

@@ -1,4 +1,5 @@
-"hr":
+---
+hr:
   errors:
     messages:
       not_saved: 'Molimo ispravite sljedeće pogreške:'
@@ -94,6 +95,7 @@
     facebook: Facebook
     windowslive: Microsoft račun
     clever: Clever Account
+    powerschool: Powerschool Account
     forgot_password: Zaboravio si lozinku?
     need_confirmation: Nisi primio upute za potvrdu?
     need_unlock: Nisi primio upute za otključavanje?

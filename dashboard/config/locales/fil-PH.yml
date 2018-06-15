@@ -1,4 +1,5 @@
-"fil":
+---
+fil:
   errors:
     messages:
       not_saved: 'Pakiwasto ang mga sumusunod na error:'
@@ -97,6 +98,7 @@
     facebook: Facebook
     windowslive: Account sa Microsoft
     clever: Clever na Account
+    powerschool: Powerschool Account
     forgot_password: Hindi matandaan ang password?
     need_confirmation: Hindi nakatanggap ng kumpirmasyon?
     need_unlock: Hindi nakatanggap kung paano mag unlock?

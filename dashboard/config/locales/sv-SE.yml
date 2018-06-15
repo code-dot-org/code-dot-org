@@ -1,4 +1,5 @@
-"sv":
+---
+sv:
   errors:
     messages:
       not_saved: 'Rätta följande fel:'
@@ -96,6 +97,7 @@
     facebook: Facebook
     windowslive: Microsoft Account
     clever: Clever Account
+    powerschool: Powerschool Account
     forgot_password: Glömt ditt lösenord?
     need_confirmation: Har du inte fått bekräftelseinstruktioner?
     need_unlock: Har du inte fått instruktioner för att låsa upp?

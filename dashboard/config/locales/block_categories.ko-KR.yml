@@ -1,4 +1,5 @@
-"ko":
+---
+ko:
   data:
     block_categories:
       Actions: 동작
@@ -45,5 +46,6 @@
       Foo: Foo
       Name: 이름
       NEW BLOCKS: NEW BLOCKS
+      'Functions ': 'Functions '
       Game/Score: Game/Score
       Function: 함수

@@ -988,4 +988,12 @@ FactoryGirl.define do
     association :pd_application, factory: :pd_facilitator1819_application
     form_data {build(:pd_fit_weekend1819_registration_hash, status).to_json}
   end
+
+  factory :pd_workshop_daily_survey, class: 'Pd::WorkshopDailySurvey' do
+    form_id 12345
+    sequence(:submission_id)
+    association :pd_workshop
+    association :user
+    day 5
+  end
 end

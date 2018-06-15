@@ -399,15 +399,6 @@ class DashboardSection
     courses
   end
 
-  # This only applies to courses because scripts are currently assumed to be in
-  # their own assignment family, e.g. "coursea-2018" would be in assignment family
-  # "coursea-2018" not "coursea". This will change once we start recognizing
-  # multiple versions of scripts.
-  def self.course_assignment_family(course)
-    m = ScriptConstants::VERSIONED_COURSE_NAME_REGEX.match(course[:name])
-    m ? m[1] : course[:name]
-  end
-
   # Gets a list of valid scripts in which progress tracking has been disabled via
   # the gatekeeper key postMilestone.
   def self.progress_disabled_scripts(user_id = nil)

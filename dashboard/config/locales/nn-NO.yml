@@ -1,4 +1,5 @@
-"nn":
+---
+nn:
   errors:
     messages:
       not_saved: 'Ver snill og endre fylgjande feil:'
@@ -95,6 +96,7 @@
     facebook: Facebook
     windowslive: Microsoft-konto
     clever: Smartkonto
+    powerschool: Powerschool Account
     forgot_password: Har du gløymt passordet ditt?
     need_confirmation: Har du ikkje motteke instruksjonar om korleis du stadfester?
     need_unlock: Har du ikkje motteke instruksjonar om korleis du låser opp?
@@ -139,11 +141,11 @@
     mismatch_password: Dei to passorda du skreiv inn er ikkje like
     agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
       and <a href='http://code.org/privacy'>Privacy Policy</a>.
-    under_13_consent: If I am under 13 years of age, I confirm that I have my parent
-      or legal guardian's permission to use the Code.org services.
-    agree_us_website: I agree to using a website based in the United States.
-    my_data_to_us: Data from my use of this site may be sent to and stored or processed
-      in the United States.
+    under_13_consent: Jeg er under 13 år og bekrefter jeg at har tillatelse fra mine
+      foreldre eller verge til å bruke tjenestene til Code.org.
+    agree_us_website: Jeg aksepterer å bruke et nettsted som er basert i USA.
+    my_data_to_us: Mine data fra bruken av dette nettstedet kan sendes til, lagres
+      eller behandles i USA.
     student_terms: Eg aksepterer <a href='http://code.org/tos'>vilkåra</a> til Code.org.
       Om eg er under 13 år, bekreftar eg ved å sende inn dette skjemaet at eg har
       løyve frå mine foreldre eller verge til å bruke tenestene til Code.org.<br/><br/>Epostadresser
@@ -161,8 +163,8 @@
     field_is_required: er påkreva
     accept_terms: Du må gå med på å opprette ein konto
     error: Ein feil har oppstått.
-    email_preference_question: Can we email you about updates to our courses, local
-      learning opportunities, or other computer science news?
+    email_preference_question: Kan vi sende deg nyheter om kursene våre, lokale jobbmuligheter
+      eller andre IT-relaterte nyheter?
     email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: Ja
     email_preference_no: Nei

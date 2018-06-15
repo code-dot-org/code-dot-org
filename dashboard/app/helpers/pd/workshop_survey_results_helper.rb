@@ -278,6 +278,10 @@ module Pd::WorkshopSurveyResultsHelper
         general: Pd::WorkshopDailySurvey.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['day_4'], day: 4).map(&:form_data_hash),
         facilitator: Pd::WorkshopFacilitatorDailySurvey.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['facilitator'], day: 4).map {|x| x.form_data_hash(show_hidden_questions: true)}
       },
+      'Day 5' => {
+        general: Pd::WorkshopDailySurvey.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['day_5'], day: 5).map(&:form_data_hash),
+        facilitator: Pd::WorkshopFacilitatorDailySurvey.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['facilitator'], day: 5).map {|x| x.form_data_hash(show_hidden_questions: true)}
+      },
     }
 
     responses.each do |k, v|

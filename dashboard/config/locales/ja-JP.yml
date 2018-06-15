@@ -1,4 +1,5 @@
-"ja":
+---
+ja:
   errors:
     messages:
       not_saved: 次の間違い（エラー）を正しく直してください。
@@ -87,6 +88,7 @@
     facebook: Facebook
     windowslive: Microsoft アカウント
     clever: Clever Account
+    powerschool: Powerschool Account
     forgot_password: パスワードをお忘れですか？
     need_confirmation: 確認Eメールが届かない
     need_unlock: ロック解除用のEメールが届いていない

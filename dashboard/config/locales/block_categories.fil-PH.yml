@@ -1,4 +1,5 @@
-"fil":
+---
+fil:
   data:
     block_categories:
       Actions: Mga aksyon
@@ -45,5 +46,6 @@
       Foo: Foo
       Name: Pangalan
       NEW BLOCKS: NEW BLOCKS
+      'Functions ': 'Functions '
       Game/Score: Game/Score
       Function: Function
