@@ -148,6 +148,7 @@ class User < ActiveRecord::Base
 
   PROVIDER_MANUAL = 'manual'.freeze # "old" user created by a teacher -- logs in w/ username + password
   PROVIDER_SPONSORED = 'sponsored'.freeze # "new" user created by a teacher -- logs in w/ name + secret picture/word
+  PROVIDER_MIGRATED = 'migrated'.freeze
 
   OAUTH_PROVIDERS = %w(
     clever
@@ -284,12 +285,12 @@ class User < ActiveRecord::Base
   end
 
   def email
-    return read_attribute(:email) unless provider == 'migrated'
+    return read_attribute(:email) unless migrated?
     primary_authentication_option.try(:email)
   end
 
   def hashed_email
-    return read_attribute(:hashed_email) unless provider == 'migrated'
+    return read_attribute(:hashed_email) unless migrated?
     primary_authentication_option.try(:hashed_email)
   end
 
@@ -1668,10 +1669,19 @@ class User < ActiveRecord::Base
     AsyncProgressHandler.progress_queue
   end
 
+  def migrated?
+    provider == PROVIDER_MIGRATED
+  end
+
+  def sponsored?
+    provider == PROVIDER_SPONSORED
+  end
+
   # We restrict certain users from editing their email address, because we
   # require a current password confirmation to edit email and some users don't
   # have passwords
   def can_edit_email?
+    return !sponsored? if migrated?
     encrypted_password.present? || oauth?
   end
 
