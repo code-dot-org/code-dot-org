@@ -52,11 +52,8 @@
     "parent_level_id": 14160,
     "markdown_instructions": "There's a mud puddle over in the corner.  \r\n\r\nCreate an **event** so that when Geraldine touches the puddle, her color changes to brown.  \r\n\r\n---",
     "show_type_hints": "true",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "instructions": "Create an **event** so that when Geraldine touches the puddle, her color changes to brown."
+    "instructions": "Create an **event** so that when Geraldine touches the puddle, her color changes to brown.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
