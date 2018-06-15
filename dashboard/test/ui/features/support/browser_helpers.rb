@@ -14,8 +14,7 @@ module BrowserHelpers
   def element_has_i18n_text(selector, language, loc_key)
     require_rails_env
     loc_key.gsub!('\"', '"')
-    # grab text from the browser, replacing non-breaking spaces with regular ones
-    text = @browser.execute_script("return $(\"#{selector}\").text().replace(/\u00a0/g, ' ');")
+    text = @browser.execute_script("return $(\"#{selector}\").text();")
     text.should eq I18n.t loc_key, locale: language
   end
 
