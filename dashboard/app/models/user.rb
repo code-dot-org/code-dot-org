@@ -1677,8 +1677,13 @@ class User < ActiveRecord::Base
   # require a current password confirmation to edit email and some users don't
   # have passwords
   def can_edit_email?
-    return !authentication_options.empty? if migrated?
-    encrypted_password.present? || oauth?
+    if migrated?
+      # Only word/picture account users do not have authentication options
+      # and therefore cannot edit their email addresses
+      !authentication_options.empty?
+    else
+      encrypted_password.present? || oauth?
+    end
   end
 
   # We restrict certain users from editing their password; in particular, those
