@@ -7,7 +7,7 @@ export const studentOverviewData = [
     name: 'Caley',
     numMultipleChoiceCorrect: 7,
     numMultipleChoice: 10,
-    submissionStatus: true,
+    isSubmitted: true,
     submissionTimeStamp: '2/16/18 - 7:41 AM',
   },
   {
@@ -15,7 +15,7 @@ export const studentOverviewData = [
     name: 'Maddie',
     numMultipleChoiceCorrect: 3,
     numMultipleChoice: 10,
-    submissionStatus: false,
+    isSubmitted: false,
     submissionTimeStamp: '',
   },
   {
@@ -23,7 +23,7 @@ export const studentOverviewData = [
     name: 'Erin',
     numMultipleChoiceCorrect: 8,
     numMultipleChoice: 10,
-    submissionStatus: true,
+    isSubmitted: true,
     submissionTimeStamp: '5/29/18 - 7:41 AM',
   },
   {
@@ -31,7 +31,7 @@ export const studentOverviewData = [
     name: 'Dave',
     numMultipleChoiceCorrect: 10,
     numMultipleChoice: 10,
-    submissionStatus: true,
+    isSubmitted: true,
     submissionTimeStamp: '5/29/18 - 8:00 AM',
   },
   {
@@ -39,7 +39,7 @@ export const studentOverviewData = [
     name: 'Brad',
     numMultipleChoiceCorrect: 0,
     numMultipleChoice: 10,
-    submissionStatus: false,
+    isSubmitted: false,
     submissionTimeStamp: '',
   },
   {
@@ -47,7 +47,7 @@ export const studentOverviewData = [
     name: 'Mike',
     numMultipleChoiceCorrect: 0,
     numMultipleChoice: 10,
-    submissionStatus: true,
+    isSubmitted: true,
     submissionTimeStamp: '5/29/18 - 8:05 AM',
   },
 ];
