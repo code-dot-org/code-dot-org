@@ -907,7 +907,7 @@ class User < ActiveRecord::Base
   # @param [Enumerable<User>] users
   # @param [Script] script
   # @return [Hash] UserLevels by user id by level id
-  # Example return value (where 1,2 are user ids and 101, 102 are level ids):
+  # Example return value (where 1,2,3 are user ids and 101, 102 are level ids):
   # {
   #   1: {
   #     101: <UserLevel ...>,
@@ -916,15 +916,17 @@ class User < ActiveRecord::Base
   #   2: {
   #     101: <UserLevel ...>,
   #     102: <UserLevel ...>
-  #   }
+  #   },
+  #   3: {}
   # }
   def self.user_levels_by_user_by_level(users, script)
+    initial_hash = Hash[users.map {|user| [user.id, {}]}]
     UserLevel.where(
       script_id: script.id,
       user_id: users.map(&:id)
     ).
       group_by(&:user_id).
-      inject({}) do |memo, (user_id, user_levels)|
+      inject(initial_hash) do |memo, (user_id, user_levels)|
         memo[user_id] = user_levels.index_by(&:level_id)
         memo
       end
