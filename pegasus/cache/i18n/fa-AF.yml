@@ -1,5 +1,4 @@
----
-fa-AF:
+"fa-AF":
   hour_of_code: ساعتی با کد
   hello: سلام دنیا
   'yes': 'Yes'
@@ -718,12 +717,12 @@ fa-AF:
   volunteer_engineer_submission_field_company_placeholder: شرکت (یا دانشگاه)
   volunteer_engineer_submission_field_experience_level: سطح تجربه
   volunteer_engineer_submission_field_location: مکان
-  volunteer_engineer_submission_field_location_desc: به مکان شما اجازه می دهد تا برای
-    جستجو برای نزدیک ترین داوطلب ، معلمان مورد استفاده قرار گیرد و به عنوان یک سنجاق
-    و یا پین در نقشه نشان داده می شود. اگر شما نگران هستید در مورد حفظ حریم خصوصی،
-    لطفا آدرس کار/مدرسه یا شهر خود را تنها فقط وارد کنید.
-  volunteer_engineer_submission_field_location_placeholder: کد پستی شهر و ایالت در
-    کشور یا آدرس خیابان
+  volunteer_engineer_submission_field_location_desc: Your location will be used to
+    allow teachers to search for nearby volunteers and will be shown as a pin on the
+    map. If you are concerned about privacy, please use your work/school address or
+    your city only.
+  volunteer_engineer_submission_field_location_placeholder: ZIP code, city and state/country,
+    or street address
   volunteer_engineer_submission_field_location_flexibility: I can help during the
     Hour of Code by... (select all that apply)
   volunteer_engineer_submission_checkbox_after_hoc: I’m interested in volunteering
