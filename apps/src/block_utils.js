@@ -381,6 +381,35 @@ exports.cleanBlocks = function (blocksDom) {
 };
 
 /**
+ * Adds any functions from functionsXml to blocksXml. If a function with the
+ * same name is already present there, it won't be added again.
+ */
+exports.appendNewFunctions = function (blocksXml, functionsXml) {
+  const startBlocksDom = xml.parseElement(blocksXml);
+  const sharedFunctionsDom = xml.parseElement(functionsXml);
+  const functions = [...sharedFunctionsDom.getRootNode().firstElementChild.children];
+  for (let func of functions) {
+    const name = func.ownerDocument.evaluate(
+      'title[@name="NAME"]/text()', func, null, XPathResult.STRING_TYPE,
+    ).stringValue;
+    const type = func.ownerDocument.evaluate(
+      '@type', func, null, XPathResult.STRING_TYPE,
+    ).stringValue;
+    const alreadyPresent = startBlocksDom.ownerDocument.evaluate(
+      `//block[@type="${type}"]/title[@name="NAME"][text()="${name}"]`,
+      startBlocksDom, null, XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE,
+    ).snapshotLength > 0;
+    if (!alreadyPresent) {
+      console.log(`Adding ${type} ${name}`);
+      startBlocksDom.getRootNode().firstElementChild.appendChild(func);
+    } else {
+      console.log(`Not adding ${type} ${name}`);
+    }
+  }
+  return xml.serialize(startBlocksDom);
+};
+
+/**
  * Definition of an input type. Must have either addInputRow or addInput
  * defined, but not both.
  *
