@@ -19,6 +19,7 @@ class DslTest < ActiveSupport::TestCase
     stage_extras_available: false,
     has_verified_resources: false,
     has_lesson_plan: false,
+    curriculum_path: nil,
     project_widget_visible: false,
     project_widget_types: [],
     script_announcements: nil,
