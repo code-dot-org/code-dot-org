@@ -243,8 +243,12 @@ class CDOImpl < OpenStruct
     site_url('advocacy.code.org', path, scheme)
   end
 
+  CURRICULUM_LANGUAGES = Set['/es-mx', '/it-it', '/th-th']
+
   def curriculum_url(locale, path = '')
-    "https://curriculum.code.org/#{locale}/#{path}"
+    locale = '/' + locale.downcase.to_s
+    locale = nil unless CURRICULUM_LANGUAGES.include? locale
+    "https://curriculum.code.org#{locale}/#{path}"
   end
 
   def default_scheme
