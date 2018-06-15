@@ -7,11 +7,18 @@ class ApiControllerQueriesTest < ActionDispatch::IntegrationTest
 
   test "section_level_progress" do
     section = create(:section)
-    50.times {|_| section.students << create(:student)}
+    students = (1..50).map {create :student}
+    students.each {|s| section.students << s}
+    script = Script.find_by_name('algebra')
+    script.script_levels.each do |script_level|
+      students.each do |student|
+        create :user_level, user: student, level: script_level.level, script: script
+      end
+    end
+
     sign_in_as section.teacher
 
-    script = Script.find_by_name('algebra')
-    assert_queries 9 do
+    assert_queries 57 do
       get '/dashboardapi/section_level_progress', params: {
         section_id: section.id,
         script_id: script.id
