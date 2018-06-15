@@ -159,7 +159,7 @@ describe('sectionAssessmentsRedux', () => {
           }
         };
         const result = getMultipleChoiceStructureForCurrentAssessment(stateWithAssessment);
-        assert.deepEqual(result, [{correctAnswer: '', id: 456, question: 'What is a variable?'}]);
+        assert.deepEqual(result, [{correctAnswer: 'B', id: 456, question: 'What is a variable?'}]);
       });
     });
 
