@@ -1024,6 +1024,14 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal target, Pd::Workshop.nearest
   end
 
+  test 'nearest is independent of creation order' do
+    create :pd_workshop, num_sessions: 1, sessions_from: Date.today - 2.weeks
+    target = create :pd_workshop, num_sessions: 1, sessions_from: Date.today + 1.week
+    create :pd_workshop, num_sessions: 1, sessions_from: Date.today + 2.weeks
+
+    assert_equal target, Pd::Workshop.nearest
+  end
+
   test 'nearest with no matches returns nil' do
     assert_nil Pd::Workshop.none.nearest
   end

@@ -6,12 +6,14 @@ import {SET_SECTION} from '@cdo/apps/redux/sectionDataRedux';
 const initialState = {
   assessmentsByScript: {},
   assessmentsStructureByScript: {},
+  surveysByScript: {},
   isLoadingAssessments: false,
   assessmentId: 0,
 };
 
 const SET_ASSESSMENTS = 'sectionAssessments/SET_ASSESSMENTS';
 const SET_ASSESSMENTS_STRUCTURE = 'sectionAssessments/SET_ASSESSMENTS_STRUCTURE';
+const SET_SURVEYS = 'sectionAssessments/SET_SURVEYS';
 const START_LOADING_ASSESSMENTS = 'sectionAssessments/START_LOADING_ASSESSMENTS';
 const FINISH_LOADING_ASSESSMENTS = 'sectionAssessments/FINISH_LOADING_ASSESSMENTS';
 const SET_ASSESSMENT_ID = 'sectionAssessments/SET_ASSESSMENT_ID';
@@ -23,6 +25,7 @@ export const setAssessmentsStructure = (scriptId, assessments) =>
 export const startLoadingAssessments = () => ({ type: START_LOADING_ASSESSMENTS });
 export const finishLoadingAssessments = () => ({ type: FINISH_LOADING_ASSESSMENTS });
 export const setAssessmentId = (assessmentId) => ({ type: SET_ASSESSMENT_ID, assessmentId: assessmentId });
+export const setSurveys = (scriptId, surveys) => ({ type: SET_SURVEYS, scriptId, surveys });
 
 export const asyncLoadAssessments = (sectionId, scriptId) => {
   return async (dispatch, getState) => {
@@ -37,10 +40,12 @@ export const asyncLoadAssessments = (sectionId, scriptId) => {
 
     const loadResponses = loadAssessmentsFromServer(sectionId, scriptId);
     const loadStructure = loadAssessmentsStructureFromServer(scriptId);
-    const [responses, structure] = await Promise.all([loadResponses, loadStructure]);
+    const loadSurveys = loadSurveysFromServer(sectionId, scriptId);
+    const [responses, structure, surveys] = await Promise.all([loadResponses, loadStructure, loadSurveys]);
 
     dispatch(setAssessments(scriptId, responses));
     dispatch(setAssessmentsStructure(scriptId, structure));
+    dispatch(setSurveys(scriptId, surveys));
 
     dispatch(finishLoadingAssessments(responses, structure));
   };
@@ -48,9 +53,11 @@ export const asyncLoadAssessments = (sectionId, scriptId) => {
 
 export default function sectionAssessments(state=initialState, action) {
   if (action.type === SET_SECTION) {
-    // Setting the section is the first action to be called when switching
-    // sections, which requires us to reset our state. This might need to change
-    // once switching sections is in react/redux.
+    /**
+     * Setting the section is the first action to be called when switching
+     * sections, which requires us to reset our state. This might need to change
+     * once switching sections is in react/redux.
+     */
     return {
       ...initialState
     };
@@ -67,6 +74,15 @@ export default function sectionAssessments(state=initialState, action) {
       assessmentsByScript: {
         ...state.assessmentsByScript,
         [action.scriptId]: action.assessments
+      }
+    };
+  }
+  if (action.type === SET_SURVEYS) {
+    return {
+      ...state,
+      surveysByScript: {
+        ...state.surveysByScript,
+        [action.scriptId]: action.surveys
       }
     };
   }
@@ -99,14 +115,26 @@ export default function sectionAssessments(state=initialState, action) {
 
 // Selector functions
 
-export const getAssessmentList = (state) => {
+// Returns an array of objects, each indicating an assessment name and it's id
+// for the assessments and surveys in the current script.
+export const getCurrentScriptAssessmentList = (state) => {
   const assessmentStructure = state.sectionAssessments.assessmentsStructureByScript[state.scriptSelection.scriptId] || {};
-  return Object.values(assessmentStructure).map(assessment => {
+  const assessments = Object.values(assessmentStructure).map(assessment => {
     return {
       id: assessment.id,
       name: assessment.name,
     };
   });
+
+  const surveysStructure = state.sectionAssessments.surveysByScript[state.scriptSelection.scriptId] || {};
+  const surveys = Object.keys(surveysStructure).map(surveyId => {
+    return {
+      id: parseInt(surveyId),
+      name: surveysStructure[surveyId].stage_name,
+    };
+  });
+
+  return assessments.concat(surveys);
 };
 
 // Get the student responses for assessments in the current script and current assessment
@@ -142,10 +170,13 @@ export const getMultipleChoiceStructureForCurrentAssessment = (state) => {
   });
 };
 
-// Returns an array of objects, each of type studentAnswerDataPropType
-// indicating the student answers to multiple choice questions for the
-// currently selected assessment.
-// TODO(caleybrock): needs to be tested.
+/**
+ * Returns an array of objects, each of type studentAnswerDataPropType
+ * indicating the student responses to multiple choice questions for the
+ * currently selected assessment.
+ * TODO(caleybrock): needs to be tested.
+ */
+
 export const getStudentMCResponsesForCurrentAssessment = (state) => {
   const studentResponses = getAssessmentResponsesForCurrentScript(state);
   if (!studentResponses) {
@@ -162,14 +193,16 @@ export const getStudentMCResponsesForCurrentAssessment = (state) => {
       return;
     }
 
-    // Transform that data into what we need for this particular table, in this case
-    // is the structure studentAnswerDataPropType
+    /**
+     * Transform that data into what we need for this particular table, in this case
+     * is the structure studentAnswerDataPropType
+     */
     return {
       id: studentId,
       name: studentObject.student_name,
-      studentAnswers: studentAssessment.level_results.map(answer => {
+      studentResponses: studentAssessment.level_results.map(answer => {
         return {
-          answers: answer.student_result || '',
+          responses: answer.student_result || '',
           isCorrect: answer.status === 'correct',
         };
       })
@@ -181,16 +214,20 @@ export const getStudentMCResponsesForCurrentAssessment = (state) => {
 
 // Helpers
 
-// Takes in an array of objects {answerText: '', correct: true/false} and
-// returns the corresponding letter to the option with the correct answer.
-// Ex - [{correct: false}, {correct: true}] --> returns 'B'
+/**
+ * Takes in an array of objects {answerText: '', correct: true/false} and
+ * returns the corresponding letter to the option with the correct answer.
+ * Ex - [{correct: false}, {correct: true}] --> returns 'B'
+ */
 const getCorrectAnswer = (answerArr) => {
   if (!answerArr) {
     return '';
   }
   const correctIndex = answerArr.findIndex(answer => answer.correct);
-  // TODO(caleybrock): Add letter options to response from the server so they are
-  // consistent with the structure, but for now look up letter in this array.
+  /**
+   *  TODO(caleybrock): Add letter options to response from the server so they are
+   * consistent with the structure, but for now look up letter in this array.
+   */
   const letterArr = ['A','B', 'C', 'D', 'E', 'F', 'G', 'H'];
   return letterArr[correctIndex];
 };
@@ -203,7 +240,6 @@ const loadAssessmentsFromServer = (sectionId, scriptId) => {
   if (scriptId) {
     payload.script_id = scriptId;
   }
-  // TODO(caleybrock): also fetch /dashboardapi/section_surveys
   return $.ajax({
     url: `/dashboardapi/assessments/section_responses`,
     method: 'GET',
@@ -217,6 +253,17 @@ const loadAssessmentsStructureFromServer = (scriptId) => {
   const payload = {script_id: scriptId};
   return $.ajax({
     url: `/dashboardapi/assessments`,
+    method: 'GET',
+    contentType: 'application/json;charset=UTF-8',
+    data: payload,
+  });
+};
+
+// Loads survey questions and responses
+const loadSurveysFromServer = (sectionId, scriptId) => {
+  const payload = {script_id: scriptId, section_id: sectionId};
+  return $.ajax({
+    url: `/dashboardapi/assessments/section_surveys`,
     method: 'GET',
     contentType: 'application/json;charset=UTF-8',
     data: payload,

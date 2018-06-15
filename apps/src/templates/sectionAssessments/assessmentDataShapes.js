@@ -15,23 +15,26 @@ export const questionDataPropType = PropTypes.shape({
 
 // Shapes for single student multiple choice tables
 
-// Represents an individual students response to a single
-// multiple choice question.
+/**
+ * Represents an individual student's response to a single
+ * multiple choice question.
+ * responses: returns strings such as 'A', or 'A, C'
+ */
 export const studentResponsePropType = PropTypes.shape({
   isCorrect: PropTypes.bool,
-  answers: PropTypes.string,
+  responses: PropTypes.string,
 });
 
-// Represents a single student and a set of there answers for
+// Represents a single student and a set of the student's answers for
 // a single assessment's multiple choice questions
-export const studentAnswerDataPropType = PropTypes.shape({
+export const studentWithResponsesPropType = PropTypes.shape({
   id:  PropTypes.string,
   name: PropTypes.string,
-  studentAnswers: PropTypes.arrayOf(studentResponsePropType).isRequired,
+  studentResponses: PropTypes.arrayOf(studentResponsePropType).isRequired,
 });
 
 // Represents a single multiple choice question structure
-export const questionStructurePropType = PropTypes.shape({
+export const multipleChoiceQuestionPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   question: PropTypes.string.isRequired,
   correctAnswer: PropTypes.string.isRequired,

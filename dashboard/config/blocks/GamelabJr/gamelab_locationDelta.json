@@ -1,0 +1,38 @@
+{
+  "category": "",
+  "config": {
+    "func": "locationDelta",
+    "blockText": "{DISTANCE} pixels {DIR} of {LOCATION}",
+    "returnType": "Location",
+    "args": [
+      {
+        "name": "DISTANCE"
+      },
+      {
+        "name": "DIR",
+        "options": [
+          [
+            "north",
+            "'north'"
+          ],
+          [
+            "south",
+            "'south'"
+          ],
+          [
+            "east",
+            "'east'"
+          ],
+          [
+            "west",
+            "'west'"
+          ]
+        ]
+      },
+      {
+        "name": "LOCATION",
+        "type": "Location"
+      }
+    ]
+  }
+}
