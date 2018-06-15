@@ -382,7 +382,7 @@ exports.cleanBlocks = function (blocksDom) {
 
 /**
  * Adds any functions from functionsXml to blocksXml. If a function with the
- * same name is already present there, it won't be added again.
+ * same name is already present in blocksXml, it won't be added again.
  */
 exports.appendNewFunctions = function (blocksXml, functionsXml) {
   const startBlocksDom = xml.parseElement(blocksXml);
