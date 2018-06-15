@@ -122,6 +122,16 @@ module UsersHelper
       uls = user.user_levels_by_level(script)
       paired_user_level_ids = PairedUserLevel.pairs(uls.values.map(&:id))
       script_levels = script.script_levels
+
+      # Stages are available in the Script cache already.
+      # Pre-generate a ScriptLevel -> Stage lookup for use inside the loop below.
+      # See Script scope :with_associated_models for how stages get cached.
+      stages_by_id = script.stages.index_by(&:id)
+      stages_by_script_level_id = script_levels.inject({}) do |memo, script_level|
+        memo[script_level.id] = stages_by_id[script_level.stage_id]
+        memo
+      end
+
       user_data[:completed] = user.completed?(script)
       user_data[:levels] = {}
       script_levels.each do |sl|
@@ -134,7 +144,8 @@ module UsersHelper
           submitted = !!ul.try(:submitted) &&
               !(ul.level.try(:peer_reviewable?) && [ActivityConstants::REVIEW_REJECTED_RESULT, ActivityConstants::REVIEW_ACCEPTED_RESULT].include?(ul.best_result))
           readonly_answers = !!ul.try(:readonly_answers)
-          locked = ul.try(:locked?, sl.stage) || sl.stage.lockable? && !ul
+          stage = stages_by_script_level_id[sl.id]
+          locked = ul.try(:locked?, stage) || stage.lockable? && !ul
 
           # for now, we don't allow authorized teachers to be "locked"
           if locked && !user.authorized_teacher?
