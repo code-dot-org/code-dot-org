@@ -53,11 +53,8 @@
     "markdown_instructions": "All of this play takes energy!  \r\n\r\nAdd actions to each event so the giraffe gets a little smaller (shrinks by 5) each time it collides with another sprite.  \r\n\r\n---",
     "show_type_hints": "true",
     "project_template_level_name": "Virtual Pet 2",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "instructions": "Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5."
+    "instructions": "Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

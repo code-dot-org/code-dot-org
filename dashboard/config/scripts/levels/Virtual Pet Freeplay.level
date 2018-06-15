@@ -53,11 +53,8 @@
     "markdown_instructions": "Freeplay: What more can you make your giraffe do? \r\n\r\n- Can you add more special items for your virtual pet?  \r\n- Can you give her some friends?  ",
     "show_type_hints": "true",
     "project_template_level_name": "Virtual Pet 2",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "instructions": "Freeplay: What more can you make your giraffe do? "
+    "instructions": "Freeplay: What more can you make your giraffe do? ",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

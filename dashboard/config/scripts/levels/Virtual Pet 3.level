@@ -53,11 +53,8 @@
     "markdown_instructions": "We can’t have a dirty giraffe wandering around!  \r\n\r\n1)  Add a new soap sprite to the screen.  \r\n2)  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?\r\n\r\n---\r\n\r\nTo reset the color, use this block:\r\n<xml><block type=\"gamelab_removeTint\" inline=\"true\">\r\n      <value name=\"THIS\">\r\n        <block type=\"sprite_variables_get\">\r\n          <title name=\"VAR\">mySprite</title>\r\n        </block>\r\n      </value>\r\n    </block></xml>\r\n",
     "show_type_hints": "true",
     "project_template_level_name": "Virtual Pet 2",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "instructions": "Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?"
+    "instructions": "Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -53,11 +53,8 @@
     "markdown_instructions": "We don't want to wait for the giraffe to clean itself every time.  \r\n\r\nAdd a behavior to your soap to make it draggable, then drag it over to clean the giraffe!\r\n\r\n---",
     "show_type_hints": "true",
     "project_template_level_name": "Virtual Pet 2",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "instructions": "Add a behavior to your soap to make it draggable, then drag it over to clean the giraffe!"
+    "instructions": "Add a behavior to your soap to make it draggable, then drag it over to clean the giraffe!",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

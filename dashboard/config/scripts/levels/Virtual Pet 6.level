@@ -53,11 +53,8 @@
     "markdown_instructions": "A balanced diet is important! We have to feed the giraffe to get its strength back.  \r\n\r\nAdd an apple to the scene and have it return the giraffe back to regular size when the two sprites touch.  \r\n\r\n---",
     "show_type_hints": "true",
     "project_template_level_name": "Virtual Pet 2",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "instructions": "Add an apple that returns the giraffe back to regular size when they touch."
+    "instructions": "Add an apple that returns the giraffe back to regular size when they touch.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
