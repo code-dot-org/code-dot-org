@@ -141,7 +141,7 @@ export const getMultipleChoiceStructureForCurrentAssessment = (state) => {
     return {
       id: question.level_id,
       question: question.question_text,
-      correctAnswer: getCorrectAnswer(question.responses),
+      correctAnswer: getCorrectAnswer(question.answers),
     };
   });
 };
@@ -169,10 +169,8 @@ export const getStudentMCResponsesForCurrentAssessment = (state) => {
       return;
     }
 
-    /**
-     * Transform that data into what we need for this particular table, in this case
-     * is the structure studentAnswerDataPropType
-     */
+    // Transform that data into what we need for this particular table, in this case
+    // is the structure studentAnswerDataPropType
     return {
       id: studentId,
       name: studentObject.student_name,
@@ -188,7 +186,14 @@ export const getStudentMCResponsesForCurrentAssessment = (state) => {
   return studentResponsesArray;
 };
 
-// Get data for students assessments multiple choice table
+/** Get data for students assessments multiple choice table
+ * Returns an object, each of type studentOverviewDataPropType with
+ * the value of the key being an object that contains the number
+ * of multiple choice answered correctly by a student, total number
+ * of multiple choice options, check for if the student submitted the
+ * assessment and a timestamp that indicates when a student submitted
+ * the assessment.
+ */
 export const getStudentsMCSummaryForCurrentAssessment = (state) => {
   const summaryOfStudentsMCData = getAssessmentResponsesForCurrentScript(state);
   if (!summaryOfStudentsMCData) {

@@ -23,7 +23,7 @@ describe('StudentsAssessmentsMCTable', () => {
     );
 
     const tableHeaders = wrapper.find('th');
-    expect(tableHeaders).to.have.length(5);
+    expect(tableHeaders).to.have.length(4);
 
     const tableRows = wrapper.find('tr');
     expect(tableRows).to.have.length(7);
@@ -49,6 +49,6 @@ describe('StudentsAssessmentsMCTable', () => {
     );
 
     const checkMarkIcons = wrapper.find('#checkmark');
-    assert.equal(checkMarkIcons.length, 4);
+    assert.equal(checkMarkIcons.length, 0);
   });
 });
