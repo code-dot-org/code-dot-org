@@ -167,7 +167,7 @@ namespace :seed do
   end
 
   task shared_blockly_functions: :environment do
-    SharedBlocklyFunction.load_functions
+    SharedBlocklyFunction.load_records
   end
 
   # Generate the database entry from the custom levels json file
