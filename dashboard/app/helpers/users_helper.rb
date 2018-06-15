@@ -122,14 +122,15 @@ module UsersHelper
   # Merges and summarizes a user's level progress for a particular script.
   # @param [Script] script
   # @param [User] user
-  # @param [Hash<Integer, UserLevel>] user_levels_by_level - a map from level id
-  #   to UserLevel instance for the provided user, passed in instead of derived
-  #   from the first two arguments so we can retrieve this in advance for many
-  #   users in some use cases.
-  # @return [Hash<Integer, Hash>] a map from level_id to a progress summary
-  #   for the level.
-  private def merge_user_progress_by_level(script:, user:, user_levels_by_level:)
-    paired_user_levels = PairedUserLevel.pairs(user_levels_by_level.values.map(&:id))
+  # @param [Hash<Integer, UserLevel>] user_levels_by_level
+  #   A map from level id to UserLevel instance for the provided user, passed
+  #   in instead of derived from the first two arguments so we can retrieve
+  #   this in advance for many users in some use cases.
+  # @param [Enumerable<Integer>] paired_user_levels
+  #   A collection of UserLevel ids where the user was pairing.
+  # @return [Hash<Integer, Hash>]
+  #   a map from level_id to a progress summary for the level.
+  private def merge_user_progress_by_level(script:, user:, user_levels_by_level:, paired_user_levels:)
     levels = {}
     script.script_levels.each do |sl|
       sl.level_ids.each do |level_id|

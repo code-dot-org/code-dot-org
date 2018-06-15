@@ -293,11 +293,13 @@ class ApiController < ApplicationController
   #   }
   private def script_progress_for_users(users, script)
     user_levels = User.user_levels_by_user_by_level(users, script)
+    paired_user_levels_by_user = PairedUserLevel.pairs_by_user(users)
     users.inject({}) do |progress_by_user, user|
       progress_by_user[user.id] = merge_user_progress_by_level(
         script: script,
         user: user,
         user_levels_by_level: user_levels[user.id],
+        paired_user_levels: paired_user_levels_by_user[user.id]
       )
       progress_by_user
     end
