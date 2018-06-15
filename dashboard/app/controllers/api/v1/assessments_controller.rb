@@ -2,7 +2,7 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
   include LevelsHelper
 
   before_filter :load_from_cache
-  load_and_authorize_resource :section
+  load_and_authorize_resource :section, only: [:section_responses, :section_surveys]
   load_and_authorize_resource :script
 
   def load_from_cache
