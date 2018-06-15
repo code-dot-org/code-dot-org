@@ -99,7 +99,6 @@ class StudentsAssessmentsMCTable extends Component {
 
   submissionTimestampColumnFormatter = (submissionTimeStamp, {rowData}) => {
     const isSubmitted = rowData.submissionStatus;
-    const submissionStatus = 'In progress';
 
     if (isSubmitted) {
       return (
@@ -113,7 +112,7 @@ class StudentsAssessmentsMCTable extends Component {
         </div>
       );
     } else {
-      return submissionStatus;
+      return i18n.inProgress();
     }
   };
 

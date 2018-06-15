@@ -15,7 +15,7 @@ export const studentOverviewData = [
     name: 'Maddie',
     numMultipleChoiceCorrect: 3,
     numMultipleChoice: 10,
-    submissionStatus: 'In Progress',
+    submissionStatus: false,
     submissionTimeStamp: '',
   },
   {
@@ -39,7 +39,7 @@ export const studentOverviewData = [
     name: 'Brad',
     numMultipleChoiceCorrect: 0,
     numMultipleChoice: 10,
-    submissionStatus: 'Not Started',
+    submissionStatus: false,
     submissionTimeStamp: '',
   },
   {
