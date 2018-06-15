@@ -67,14 +67,11 @@
     "display_name": "Challenge: Draw an Image",
     "parent_level_id": 8753,
     "name_suffix": "_2018",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
-    "thumbnail_url": "https://images.code.org/ed26831040f3fe0d3792402a2ae18431-image-1528743133929.40.05 PM.png"
+    "thumbnail_url": "https://images.code.org/ed26831040f3fe0d3792402a2ae18431-image-1528743133929.40.05 PM.png",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

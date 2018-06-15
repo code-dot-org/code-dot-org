@@ -84,7 +84,7 @@ Each of these activities can either be used alone or with other computer science
 <br/>
 
 
-<a href="https://drive.google.com/file/d/1uAIUFhrp0Av8GrH6KRZR-z0Yxowz3PyO/view" target="_new">2018 Course A-F Curriculum Book</a> 
+<a href="https://code.org/curriculum/docs/csf/CSF_Curriculum_Guide_2018_smaller.pdf" target="_new">2018 Course A-F Curriculum Book</a> 
 
 <a href="https://code.org/curriculum/docs/csf/CSF_TeacherGuide_CoursesA-F_v2a_small.pdf" target="_new">2017 Course A-F Curriculum Book (v2)</a>  
 
