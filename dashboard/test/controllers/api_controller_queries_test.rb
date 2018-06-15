@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ApiControllerPerfTest < ActionDispatch::IntegrationTest
+class ApiControllerQueriesTest < ActionDispatch::IntegrationTest
   def setup
     setup_script_cache
   end
