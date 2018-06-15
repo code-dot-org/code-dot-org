@@ -266,9 +266,8 @@ class ApiController < ApplicationController
     end
 
     # Get the level progress for each student
-    data = script_progress_for_users(script, paged_students)
     render json: {
-      students: data,
+      students: script_progress_for_users(paged_students, script),
       pagination: {
         total_pages: paged_students.total_pages,
         page: page,
@@ -278,8 +277,8 @@ class ApiController < ApplicationController
   end
 
   # Get level progress for a set of users within this script.
-  # @param [Script] script
   # @param [Enumerable<User>] users
+  # @param [Script] script
   # @return [Hash]
   # Example return value (where 1 and 2 are userIds and 135 and 136 are levelIds):
   #   {
@@ -292,7 +291,7 @@ class ApiController < ApplicationController
   #       "136": {"status": "perfect", "result": 100}
   #     }
   #   }
-  private def script_progress_for_users(script, users)
+  private def script_progress_for_users(users, script)
     user_levels = User.user_levels_by_user_by_level(users, script)
     users.inject({}) do |progress_by_user, user|
       progress_by_user[user.id] = merge_user_progress_by_level(
