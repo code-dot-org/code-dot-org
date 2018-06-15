@@ -31,7 +31,10 @@ export default class FallbackPlayerCaptionDialogLink extends React.Component {
           isDialogOpen={this.state.open}
           handleClose={this.close}
         />
+        |
+        &nbsp;
         <a
+          className="ui-test-fallback-player-caption-dialog-link"
           onClick={this.open}
           style={styles.link}
         >
@@ -56,7 +59,9 @@ class FallbackPlayerCaptionDialog extends Component {
         style={styles.dialog}
         handleClose={this.props.handleClose}
       >
-        <h2>{i18n.fallbackVideoClosedCaptioningDialogHeading()}</h2>
+        <h2 className="ui-test-fallback-player-caption-dialog">
+          {i18n.fallbackVideoClosedCaptioningDialogHeading()}
+        </h2>
         <div>
           {i18n.fallbackVideoClosedCaptioningDialogBody()}
         </div>
@@ -70,6 +75,7 @@ class FallbackPlayerCaptionDialog extends Component {
         </div>
         <DialogFooter>
           <Button
+            className="ui-test-fallback-player-caption-dialog-close"
             text={i18n.fallbackVideoClosedCaptioningDialogClose()}
             onClick={this.props.handleClose}
             color={Button.ButtonColor.orange}
