@@ -26,6 +26,7 @@ export const styles = {
     fontSize: 24,
     lineHeight: '27px',
     color: color.purple,
+    whiteSpace: 'normal'
   },
   buttons: {
     marginTop: 10,
