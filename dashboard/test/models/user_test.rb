@@ -1185,6 +1185,23 @@ class UserTest < ActiveSupport::TestCase
     assert @student.can_edit_email?
   end
 
+  test 'can_edit_email? is false for user without password' do
+    user = create :student
+    user.update_attribute(:encrypted_password, '')
+    refute user.can_edit_email?
+  end
+
+  # TODO: write factory for migrated user to make this test and the next one pass
+  test 'can_edit_email? is false for migrated user with no authentication options' do
+    user = create :student, provider: User::PROVIDER_MIGRATED, authentication_options: []
+    refute user.can_edit_email?
+  end
+
+  test 'can_edit_email? is true for migrated user with at least one authentication option' do
+    user = create :student, :with_google_authentication_option, provider: User::PROVIDER_MIGRATED
+    assert user.can_edit_email?
+  end
+
   test 'can change own user type as a student with a password' do
     student = create :student
     refute_empty student.encrypted_password
@@ -1284,12 +1301,6 @@ class UserTest < ActiveSupport::TestCase
       student_without_password.reload
       assert student_without_password.teacher_managed_account?
     end
-  end
-
-  test 'can_edit_email? is false for user without password' do
-    user = create :student
-    user.update_attribute(:encrypted_password, '')
-    refute user.can_edit_email?
   end
 
   test 'update_with_password does not require current password for users without passwords' do
