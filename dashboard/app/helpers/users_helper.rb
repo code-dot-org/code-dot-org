@@ -94,7 +94,7 @@ module UsersHelper
   end
 
   # Merge the progress for the specified script and user into the user_data result hash.
-  def merge_script_progress(user_data, user, script, exclude_level_progress = false)
+  private def merge_script_progress(user_data, user, script, exclude_level_progress = false)
     return user_data unless user
 
     if script.professional_learning_course?
