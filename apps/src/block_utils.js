@@ -387,7 +387,7 @@ exports.cleanBlocks = function (blocksDom) {
 exports.appendNewFunctions = function (blocksXml, functionsXml) {
   const startBlocksDom = xml.parseElement(blocksXml);
   const sharedFunctionsDom = xml.parseElement(functionsXml);
-  const functions = [...sharedFunctionsDom.getRootNode().firstElementChild.children];
+  const functions = [...sharedFunctionsDom.ownerDocument.firstElementChild.children];
   for (let func of functions) {
     const name = func.ownerDocument.evaluate(
       'title[@name="NAME"]/text()', func, null, XPathResult.STRING_TYPE,
@@ -401,7 +401,7 @@ exports.appendNewFunctions = function (blocksXml, functionsXml) {
     ).snapshotLength > 0;
     if (!alreadyPresent) {
       console.log(`Adding ${type} ${name}`);
-      startBlocksDom.getRootNode().firstElementChild.appendChild(func);
+      startBlocksDom.ownerDocument.firstElementChild.appendChild(func);
     } else {
       console.log(`Not adding ${type} ${name}`);
     }
