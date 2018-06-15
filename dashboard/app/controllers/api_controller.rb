@@ -297,7 +297,7 @@ class ApiController < ApplicationController
       progress_by_user[user.id] = merge_user_progress_by_level(
         script: script,
         user: user,
-        user_levels_by_level: user_levels[user.id] || {},
+        user_levels_by_level: user_levels[user.id],
       )
       progress_by_user
     end
