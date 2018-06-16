@@ -108,11 +108,13 @@ module UsersHelper
 
     unless exclude_level_progress
       user_levels_by_level = user.user_levels_by_level(script)
+      paired_user_levels = PairedUserLevel.pairs(user_levels_by_level.values.map(&:id))
       user_data[:completed] = user.completed?(script)
       user_data[:levels] = merge_user_progress_by_level(
         script: script,
         user: user,
-        user_levels_by_level: user_levels_by_level
+        user_levels_by_level: user_levels_by_level,
+        paired_user_levels: paired_user_levels
       )
     end
 
