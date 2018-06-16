@@ -454,7 +454,9 @@ module LevelsHelper
     set_unless_nil(level_options, 'instructions', l.localized_instructions)
     set_unless_nil(level_options, 'authoredHints', l.localized_authored_hints)
     if l.should_localize?
-      set_unless_nil(level_options, 'markdownInstructions', l.localized_markdown_instructions)
+      unless @script && (@script.csf_international? || @script.twenty_hour?)
+        set_unless_nil(level_options, 'markdownInstructions', l.localized_markdown_instructions)
+      end
       set_unless_nil(level_options, 'failureMessageOverride', l.localized_failure_message_override)
       set_unless_nil(level_options, 'toolbox', l.localized_toolbox_blocks)
     end
