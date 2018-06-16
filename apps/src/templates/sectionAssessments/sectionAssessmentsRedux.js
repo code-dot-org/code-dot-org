@@ -1,8 +1,20 @@
 import {SET_SECTION} from '@cdo/apps/redux/sectionDataRedux';
 
- // Initial state of sectionAssessmentsRedux
- // TODO(caleybrock): define a shape for sectionAssessment data that gets stored in redux.
- // assessmentId is the id of the assessment currently in view
+ /**
+ * Initial state of sectionAssessmentsRedux
+ * The redux state matches the structure of our API calls and our views don't
+ * use this structure directly. Selectors filter and transform data to what they need.
+ *
+ * assessmentsByScript - object - keys are scriptIds, values are objects of
+ *  student ids to student response data for each assessment
+ * assessmentsStructureByScript - object - keys are scriptIds, values are objects of
+ *   assessmentIds to question and answer information for each assessment
+ * surveysByScript - object - keys are scriptIds, values are objects of
+ *   assessmentIds to survey questions and anonymous responses
+ * isLoadingAssessments - boolean - indicates that requests have been sent to the server
+ * but the client has not yet received a response
+ * assessmentId - int - the level_group id of the assessment currently in view
+ */
 const initialState = {
   assessmentsByScript: {},
   assessmentsStructureByScript: {},
@@ -11,6 +23,7 @@ const initialState = {
   assessmentId: 0,
 };
 
+// Action type constants
 const SET_ASSESSMENTS = 'sectionAssessments/SET_ASSESSMENTS';
 const SET_ASSESSMENTS_STRUCTURE = 'sectionAssessments/SET_ASSESSMENTS_STRUCTURE';
 const SET_SURVEYS = 'sectionAssessments/SET_SURVEYS';
@@ -149,8 +162,11 @@ export const getCurrentAssessmentStructure = (state) => {
   return currentScriptData[state.sectionAssessments.assessmentId];
 };
 
-// Gets the multiple choice structure for a current assessment.
-// TODO(caleybrock): needs to be tested.
+/**
+ * Returns an array of objects, each of type questionStructurePropType
+ * indicating the question and correct answers for each multiple choice
+ * question in the currently selected assessment.
+ */
 export const getMultipleChoiceStructureForCurrentAssessment = (state) => {
   const assessmentsStructure = getCurrentAssessmentStructure(state);
   if (!assessmentsStructure) {
@@ -174,9 +190,7 @@ export const getMultipleChoiceStructureForCurrentAssessment = (state) => {
  * Returns an array of objects, each of type studentAnswerDataPropType
  * indicating the student responses to multiple choice questions for the
  * currently selected assessment.
- * TODO(caleybrock): needs to be tested.
  */
-
 export const getStudentMCResponsesForCurrentAssessment = (state) => {
   const studentResponses = getAssessmentResponsesForCurrentScript(state);
   if (!studentResponses) {
@@ -217,6 +231,10 @@ export const getStudentMCResponsesForCurrentAssessment = (state) => {
 /**
  * Takes in an array of objects {answerText: '', correct: true/false} and
  * returns the corresponding letter to the option with the correct answer.
+ *
+ * TODO(caleybrock): Add letter options to response from the server so they are
+ * consistent with the structure, but for now look up letter in this array.
+ *
  * Ex - [{correct: false}, {correct: true}] --> returns 'B'
  */
 const getCorrectAnswer = (answerArr) => {
@@ -224,17 +242,13 @@ const getCorrectAnswer = (answerArr) => {
     return '';
   }
   const correctIndex = answerArr.findIndex(answer => answer.correct);
-  /**
-   *  TODO(caleybrock): Add letter options to response from the server so they are
-   * consistent with the structure, but for now look up letter in this array.
-   */
   const letterArr = ['A','B', 'C', 'D', 'E', 'F', 'G', 'H'];
   return letterArr[correctIndex];
 };
 
 // Requests to the server for assessment data
 
-// Loads the assessment responses
+// Loads the assessment responses.
 const loadAssessmentsFromServer = (sectionId, scriptId) => {
   let payload = {section_id: sectionId};
   if (scriptId) {
@@ -248,7 +262,7 @@ const loadAssessmentsFromServer = (sectionId, scriptId) => {
   });
 };
 
-// Loads the assessment question structure
+// Loads the assessment question structure.
 const loadAssessmentsStructureFromServer = (scriptId) => {
   const payload = {script_id: scriptId};
   return $.ajax({
@@ -259,7 +273,7 @@ const loadAssessmentsStructureFromServer = (scriptId) => {
   });
 };
 
-// Loads survey questions and responses
+// Loads survey questions and anonymous responses.
 const loadSurveysFromServer = (sectionId, scriptId) => {
   const payload = {script_id: scriptId, section_id: sectionId};
   return $.ajax({
