@@ -400,10 +400,7 @@ exports.appendNewFunctions = function (blocksXml, functionsXml) {
       startBlocksDom, null, XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE,
     ).snapshotLength > 0;
     if (!alreadyPresent) {
-      console.log(`Adding ${type} ${name}`);
       startBlocksDom.ownerDocument.firstElementChild.appendChild(func);
-    } else {
-      console.log(`Not adding ${type} ${name}`);
     }
   }
   return xml.serialize(startBlocksDom);
