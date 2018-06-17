@@ -26,6 +26,18 @@ class AuthenticationOption < ApplicationRecord
   belongs_to :user
 
   # These are duplicated from the user model, until we're ready to cut over and remove them from there
+  OAUTH_PROVIDERS = %w(
+    clever
+    facebook
+    google_oauth2
+    lti_lti_prod_kids.qwikcamps.com
+    the_school_project
+    twitter
+    windowslive
+    powerschool
+  ).freeze
+
+  # These are duplicated from the user model, until we're ready to cut over and remove them from there
   before_save :normalize_email, :hash_email, :fix_by_user_type
 
   def fix_by_user_type
@@ -45,5 +57,9 @@ class AuthenticationOption < ApplicationRecord
     return unless email.present?
     self.hashed_email = AuthenticationOption.hash_email(email)
     self.authentication_id = hashed_email if credential_type == 'email'
+  end
+
+  def oauth?
+    OAUTH_PROVIDERS.include? credential_type
   end
 end
