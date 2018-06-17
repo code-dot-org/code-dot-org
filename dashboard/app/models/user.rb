@@ -831,6 +831,26 @@ class User < ActiveRecord::Base
     end
   end
 
+  def update_primary_authentication_option(email)
+    # If an oauth option exists with same email, set it to the user's primary authentication option
+    existing_oauth_option = authentication_options.find {|ao| ao.email == email}
+    if existing_oauth_option
+      self.primary_authentication_option = existing_oauth_option
+      return save
+    end
+
+    # If an email option already exists, destroy it
+    existing_email_option = authentication_options.find {|ao| ao.credential_type == 'email'}
+    existing_email_option&.destroy
+
+    self.primary_authentication_option = AuthenticationOption.new(
+      email: email,
+      credential_type: 'email',
+      user: self
+    )
+    return save
+  end
+
   # True if the account is teacher-managed and has any sections that use word logins.
   # Will not be true if the user has a password or is only in picture sections
   def secret_word_account?
