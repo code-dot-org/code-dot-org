@@ -1324,6 +1324,49 @@ class UserTest < ActiveSupport::TestCase
     assert_equal name, student.name
   end
 
+  test 'update_primary_authentication_option adds new email option if no matches exist' do
+    teacher = create :teacher, :with_google_authentication_option
+    teacher.update(primary_authentication_option: teacher.authentication_options.first)
+
+    assert_equal 1, teacher.authentication_options.count
+    refute_nil teacher.primary_authentication_option
+
+    successful_save = teacher.update_primary_authentication_option('example@email.com')
+    teacher.reload
+    assert successful_save
+    assert_equal 2, teacher.authentication_options.count
+    assert_equal 'example@email.com', teacher.primary_authentication_option.email
+  end
+
+  test 'update_primary_authentication_option updates email option if one already exists' do
+    teacher = create :teacher, :with_email_authentication_option
+    teacher.update(primary_authentication_option: teacher.authentication_options.first)
+
+    assert_equal 1, teacher.authentication_options.count
+    refute_nil teacher.primary_authentication_option
+
+    successful_save = teacher.update_primary_authentication_option('second@email.com')
+    teacher.reload
+    assert successful_save
+    assert_equal 1, teacher.authentication_options.count
+    assert_equal 'second@email.com', teacher.primary_authentication_option.email
+  end
+
+  test 'update_primary_authentication_option updates oauth option if a match exists' do
+    teacher = create :teacher, :with_google_authentication_option
+    teacher.update(primary_authentication_option: teacher.authentication_options.first)
+    existing_oauth_email = teacher.primary_authentication_option.email
+
+    assert_equal 1, teacher.authentication_options.count
+    refute_nil teacher.primary_authentication_option
+
+    successful_save = teacher.update_primary_authentication_option(existing_oauth_email)
+    teacher.reload
+    assert successful_save
+    assert_equal 1, teacher.authentication_options.count
+    assert_equal existing_oauth_email, teacher.primary_authentication_option.email
+  end
+
   test 'track_proficiency adds proficiency if necessary and no hint used' do
     level_concept_difficulty = create :level_concept_difficulty
     # Defaults with repeat_loops_{d1,d2,d3,d4,d5}_count = {0,2,0,3,0}.

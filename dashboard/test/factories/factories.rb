@@ -139,6 +139,28 @@ FactoryGirl.define do
           enrolled true
           attended false
         end
+        trait :with_google_authentication_option do
+          after(:create) do |user|
+            create(:authentication_option,
+              user: user,
+              email: user.email,
+              hashed_email: user.hashed_email,
+              credential_type: 'google_oauth',
+              authentication_id: 'abcd123'
+            )
+          end
+        end
+        trait :with_email_authentication_option do
+          after(:create) do |user|
+            create(:authentication_option,
+              user: user,
+              email: user.email,
+              hashed_email: user.hashed_email,
+              credential_type: 'email',
+              authentication_id: user.hashed_email
+            )
+          end
+        end
         after(:create) do |teacher, evaluator|
           raise 'workshop required' unless evaluator.workshop
           create :pd_enrollment, :from_user, user: teacher, workshop: evaluator.workshop if evaluator.enrolled
