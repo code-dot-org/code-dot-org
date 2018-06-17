@@ -49,6 +49,6 @@ describe('StudentsAssessmentsMCTable', () => {
     );
 
     const checkMarkIcons = wrapper.find('#checkmark');
-    assert.equal(checkMarkIcons.length, 0);
+    assert.equal(checkMarkIcons.length, 4);
   });
 });
