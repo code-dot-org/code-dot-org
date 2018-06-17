@@ -55,7 +55,7 @@ export const studentOverviewData = [
 // Data for single student assessments table
 // type: studentWithResponsesPropType
 export const studentData = {
-  id: '012896',
+  id: 1,
   name: 'Caley',
   studentResponses: [
     {isCorrect: false, responses: ''},
