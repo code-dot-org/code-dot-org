@@ -209,6 +209,7 @@ class RegistrationsController < Devise::RegistrationsController
   # ie if password or email was changed
   # extend this as needed
   def needs_password?(user, params)
+    # TODO: return false for migrated oauth users, write tests
     email_is_changing = params[:user][:email].present? &&
       user.email != params[:user][:email]
     hashed_email_is_changing = params[:user][:hashed_email].present? &&
