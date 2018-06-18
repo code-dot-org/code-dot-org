@@ -837,7 +837,9 @@ class User < ActiveRecord::Base
     existing_email_option&.destroy
 
     # If an auth option exists with same email, set it to the user's primary authentication option
-    existing_auth_option = authentication_options.find {|ao| ao.email == email}
+    existing_auth_option = authentication_options.find do |ao|
+      ao.email == email || ao.hashed_email == User.hash_email(email)
+    end
     if existing_auth_option
       self.primary_authentication_option = existing_auth_option
       return save
