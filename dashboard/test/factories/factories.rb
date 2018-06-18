@@ -150,6 +150,58 @@ FactoryGirl.define do
           end
         end
       end
+      trait :with_google_authentication_option do
+        after(:create) do |user|
+          create(:authentication_option,
+            user: user,
+            email: user.email,
+            hashed_email: user.hashed_email,
+            credential_type: 'google_oauth',
+            authentication_id: 'abcd123'
+          )
+        end
+      end
+      trait :with_migrated_google_authentication_option do
+        after(:create) do |user|
+          ao = create(:authentication_option,
+            user: user,
+            email: user.email,
+            hashed_email: user.hashed_email,
+            credential_type: 'google_oauth',
+            authentication_id: 'abcd123'
+          )
+          user.update!(
+            primary_authentication_option: ao,
+            provider: User::PROVIDER_MIGRATED
+          )
+        end
+      end
+      trait :with_email_authentication_option do
+        after(:create) do |user|
+          create(:authentication_option,
+            user: user,
+            email: user.email,
+            hashed_email: user.hashed_email,
+            credential_type: 'email',
+            authentication_id: user.hashed_email
+          )
+        end
+      end
+      trait :with_migrated_email_authentication_option do
+        after(:create) do |user|
+          ao = create(:authentication_option,
+            user: user,
+            email: user.email,
+            hashed_email: user.hashed_email,
+            credential_type: 'email',
+            authentication_id: user.hashed_email
+          )
+          user.update!(
+            primary_authentication_option: ao,
+            provider: User::PROVIDER_MIGRATED
+          )
+        end
+      end
     end
 
     factory :student do
@@ -289,6 +341,14 @@ FactoryGirl.define do
     authentication_id {''}
 
     factory :email_authentication_option do
+      sequence(:email) {|n| "testuser#{n}@example.com.xx"}
+      after(:create) do |auth|
+        auth.authentication_id = auth.hashed_email
+      end
+    end
+
+    factory :google_authentication_option do
+      credential_type 'google_oauth2'
       sequence(:email) {|n| "testuser#{n}@example.com.xx"}
       after(:create) do |auth|
         auth.authentication_id = auth.hashed_email

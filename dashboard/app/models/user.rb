@@ -148,6 +148,7 @@ class User < ActiveRecord::Base
 
   PROVIDER_MANUAL = 'manual'.freeze # "old" user created by a teacher -- logs in w/ username + password
   PROVIDER_SPONSORED = 'sponsored'.freeze # "new" user created by a teacher -- logs in w/ name + secret picture/word
+  PROVIDER_MIGRATED = 'migrated'.freeze
 
   OAUTH_PROVIDERS = %w(
     clever
@@ -284,12 +285,12 @@ class User < ActiveRecord::Base
   end
 
   def email
-    return read_attribute(:email) unless provider == 'migrated'
+    return read_attribute(:email) unless migrated?
     primary_authentication_option.try(:email)
   end
 
   def hashed_email
-    return read_attribute(:hashed_email) unless provider == 'migrated'
+    return read_attribute(:hashed_email) unless migrated?
     primary_authentication_option.try(:hashed_email)
   end
 
@@ -828,6 +829,26 @@ class User < ActiveRecord::Base
     else
       super
     end
+  end
+
+  def update_primary_authentication_option(email)
+    # If an auth option exists with same email, set it to the user's primary authentication option
+    existing_auth_option = authentication_options.find {|ao| ao.email == email}
+    if existing_auth_option
+      self.primary_authentication_option = existing_auth_option
+      return save
+    end
+
+    # If an email option with a different email address already exists, destroy it
+    existing_email_option = authentication_options.find {|ao| ao.credential_type == 'email'}
+    existing_email_option&.destroy
+
+    self.primary_authentication_option = AuthenticationOption.new(
+      email: email,
+      credential_type: 'email',
+      user: self
+    )
+    return save
   end
 
   # True if the account is teacher-managed and has any sections that use word logins.
@@ -1698,11 +1719,21 @@ class User < ActiveRecord::Base
     AsyncProgressHandler.progress_queue
   end
 
+  def migrated?
+    provider == PROVIDER_MIGRATED
+  end
+
   # We restrict certain users from editing their email address, because we
   # require a current password confirmation to edit email and some users don't
   # have passwords
   def can_edit_email?
-    encrypted_password.present? || oauth?
+    if migrated?
+      # Only word/picture account users do not have authentication options
+      # and therefore cannot edit their email addresses
+      !authentication_options.empty?
+    else
+      encrypted_password.present? || oauth?
+    end
   end
 
   # We restrict certain users from editing their password; in particular, those
