@@ -123,7 +123,7 @@ describe('ChangeEmailModal', () => {
           expect(wrapper.text()).to.include(serverError);
         });
 
-        it('checks that password is present', () => {
+        it('checks that password is present if user has a password', () => {
           wrapper.setState({
             values: {
               newEmail: 'new@example.com',
@@ -133,6 +133,24 @@ describe('ChangeEmailModal', () => {
           });
 
           expect(wrapper.text()).to.include(i18n.changeEmailModal_currentPassword_isRequired());
+        });
+
+        it('does not check that password is present if user does not have a password', () => {
+          wrapper = mount(
+            <ChangeEmailModal
+              {...DEFAULT_PROPS}
+              hasPassword={false}
+            />
+          );
+          wrapper.setState({
+            values: {
+              newEmail: 'new@example.com',
+              currentPassword: '',
+              emailOptIn: 'yes',
+            }
+          });
+
+          expect(wrapper.text()).not.to.include(i18n.changeEmailModal_currentPassword_isRequired());
         });
 
         it('reports password server errors', () => {
