@@ -4,6 +4,8 @@ import QRCode from 'qrcode.react';
 import * as color from "../../util/color";
 import {CIPHER, ALPHABET} from '../../constants';
 
+const INSTRUCTIONS_LINK = 'https://codeorg.zendesk.com/knowledge/articles/360004789872';
+
 const style = {
   nav: {
     ul: {
@@ -24,10 +26,16 @@ const style = {
     },
     selectedLi: {color:color.purple},
   },
+  ol: {
+    marginLeft: 15,
+  },
   p: {
     fontSize: 'inherit',
     lineHeight: 'inherit',
     color: 'inherit',
+  },
+  bold: {
+    fontFamily: "'Gotham 7r', sans-serif",
   },
   root: {
     marginTop: 20,
@@ -44,20 +52,38 @@ const style = {
     margin: 0,
   },
   expoButton: {
+    flex: 1,
+    fontSize: 15,
     marginLeft: 0,
     marginRight: 20,
-    width: 300,
+  },
+  expoButtonLast: {
+    marginRight: 0,
   },
   expoContainer: {
     display: 'flex',
+    flexDirection: 'column',
+  },
+  expoExportButtonRow: {
+    justifyContent: 'space-evenly',
+    marginBottom: 15,
   },
   expoExportColumn: {
+    flex: 1,
+  },
+  expoExportQRCodeRow: {
+    marginBottom: 20,
+  },
+  expoExportRow: {
     display: 'flex',
-    flexDirection: 'column',
+    flexGrow: 1,
   },
   expoInput: {
     cursor: 'copy',
     width: 'unset',
+  },
+  qrCode: {
+    marginRight: 20,
   },
 };
 
@@ -81,6 +107,7 @@ class AdvancedShareOptions extends React.Component {
     this.state = {
       selectedOption: props.onClickExportExpo ? 'exportExpo' :
           (props.onClickExport ? 'export' : 'embed'),
+      exportedExpoZip: false,
       exporting: false,
       exportingExpo: null,
       exportError: null,
@@ -103,7 +130,10 @@ class AdvancedShareOptions extends React.Component {
   };
 
   downloadExpoExport = async () => {
-    this.setState({exportingExpo: 'zip'});
+    this.setState({
+      exportedExpoZip: true,
+      exportingExpo: 'zip'
+    });
     try {
       await this.props.onClickExportExpo({ mode: 'zip'});
       this.setState({
@@ -208,7 +238,7 @@ class AdvancedShareOptions extends React.Component {
   };
 
   renderExportExpoTab() {
-    const { expoUri } = this.state;
+    const { expoUri, exportedExpoZip } = this.state;
     const exportSpinner = this.state.exportingExpo === 'zip' ?
           <i className="fa fa-spinner fa-spin"></i> :
           null;
@@ -226,26 +256,35 @@ class AdvancedShareOptions extends React.Component {
       <div>
         <p style={style.p}>
           Try running your project in the Expo app on iOS or Android.
-          You can also export for submission to the Apple App Store or the
-          Google Play Store (both require following our step-by-step guide).
+          You can also export the app and follow our
+          <a href={INSTRUCTIONS_LINK} style={style.bold}> step-by-step guide </a>
+          to submit your app to the Google Play Store.
         </p>
         <div style={style.expoContainer}>
-          <div style={style.expoExportColumn}>
+          <div style={[style.expoExportRow, style.expoExportButtonRow]}>
             <button onClick={this.publishExpoExport} style={style.expoButton}>
               {publishSpinner}
-              Try in Expo App
+              Test in Expo App
             </button>
-            <button onClick={this.downloadExpoExport} style={style.expoButton}>
+            <button onClick={this.downloadExpoExport} style={[style.expoButton, style.expoButtonLast]}>
               {exportSpinner}
-              Export for Store Submission
+              Export to Create Native Android App
             </button>
           </div>
-          <div style={style.expoExportColumn}>
-            {!!expoUri &&
-              <div style={style.expoExportColumn}>
-                <p style={style.p}>
-                  Copy this URL or use this QR code to access your project from the Expo app.
-                </p>
+          {!!expoUri && <div style={[style.expoExportRow, style.expoExportQRCodeRow]}>
+            <QRCode style={style.qrCode} value={expoUri} />
+            <div style={style.expoExportColumn}>
+              <div style={style.expoContainer}>
+                <div>
+                  <p style={[style.p, style.bold]}>
+                    Expo App Instructions:
+                  </p>
+                  <ol style={[style.p, style.ol]}>
+                    <li>Install the Expo app on your phone.</li>
+                    <li>Scan the QR code from within the Expo app on Android or from your camera app on iOS (click on the notification that pops up on iOS).</li>
+                    <li>If #2 doesn't work, send the URL below to your phone and click the link.</li>
+                  </ol>
+                </div>
                 <input
                   type="text"
                   onClick={this.onInputSelect}
@@ -253,9 +292,19 @@ class AdvancedShareOptions extends React.Component {
                   value={expoUri}
                   style={style.expoInput}
                 />
-                <QRCode value={expoUri} />
               </div>
-            }
+            </div>
+          </div>}
+          {!expoUri && exportedExpoZip && <div style={style.expoExportRow}>
+            <div style={style.expoContainer}>
+              <p style={style.p}>
+                Once your app finishes downloading,
+                <a href={INSTRUCTIONS_LINK} style={style.bold}> follow these instructions </a>
+                to create a native Android app and submit it to the Google Play Store.
+              </p>
+            </div>
+          </div>}
+          <div style={style.expoExportRow}>
             {alert}
           </div>
         </div>
@@ -283,7 +332,7 @@ class AdvancedShareOptions extends React.Component {
               ]}
               onClick={() => this.setState({selectedOption: 'exportExpo'})}
             >
-              Run on iOS/Android
+              Run natively (Beta)
             </li>
           );
         }
@@ -295,7 +344,7 @@ class AdvancedShareOptions extends React.Component {
             ]}
             onClick={() => this.setState({selectedOption: 'export'})}
           >
-            Export for Web
+            Export for web
           </li>
         );
       }

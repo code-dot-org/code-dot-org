@@ -7,8 +7,7 @@ export const studentOverviewData = [
     name: 'Caley',
     numMultipleChoiceCorrect: 7,
     numMultipleChoice: 10,
-    percentCorrect: '70%',
-    submissionStatus: 'Completed',
+    isSubmitted: true,
     submissionTimeStamp: '2/16/18 - 7:41 AM',
   },
   {
@@ -16,8 +15,7 @@ export const studentOverviewData = [
     name: 'Maddie',
     numMultipleChoiceCorrect: 3,
     numMultipleChoice: 10,
-    percentCorrect: '',
-    submissionStatus: 'In Progress',
+    isSubmitted: false,
     submissionTimeStamp: '',
   },
   {
@@ -25,8 +23,7 @@ export const studentOverviewData = [
     name: 'Erin',
     numMultipleChoiceCorrect: 8,
     numMultipleChoice: 10,
-    percentCorrect: '80%',
-    submissionStatus: 'Completed',
+    isSubmitted: true,
     submissionTimeStamp: '5/29/18 - 7:41 AM',
   },
   {
@@ -34,8 +31,7 @@ export const studentOverviewData = [
     name: 'Dave',
     numMultipleChoiceCorrect: 10,
     numMultipleChoice: 10,
-    percentCorrect: '100%',
-    submissionStatus: 'Completed',
+    isSubmitted: true,
     submissionTimeStamp: '5/29/18 - 8:00 AM',
   },
   {
@@ -43,8 +39,7 @@ export const studentOverviewData = [
     name: 'Brad',
     numMultipleChoiceCorrect: 0,
     numMultipleChoice: 10,
-    percentCorrect: '',
-    submissionStatus: 'Not Started',
+    isSubmitted: false,
     submissionTimeStamp: '',
   },
   {
@@ -52,8 +47,7 @@ export const studentOverviewData = [
     name: 'Mike',
     numMultipleChoiceCorrect: 0,
     numMultipleChoice: 10,
-    percentCorrect: '0%',
-    submissionStatus: 'Completed',
+    isSubmitted: true,
     submissionTimeStamp: '5/29/18 - 8:05 AM',
   },
 ];
@@ -61,7 +55,7 @@ export const studentOverviewData = [
 // Data for single student assessments table
 // type: studentWithResponsesPropType
 export const studentData = {
-  id: '012896',
+  id: 1,
   name: 'Caley',
   studentResponses: [
     {isCorrect: false, responses: ''},
