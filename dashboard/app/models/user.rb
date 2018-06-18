@@ -832,16 +832,16 @@ class User < ActiveRecord::Base
   end
 
   def update_primary_authentication_option(email)
+    # If an email option with a different email address already exists, destroy it
+    existing_email_option = authentication_options.find {|ao| ao.credential_type == 'email'}
+    existing_email_option&.destroy
+
     # If an auth option exists with same email, set it to the user's primary authentication option
     existing_auth_option = authentication_options.find {|ao| ao.email == email}
     if existing_auth_option
       self.primary_authentication_option = existing_auth_option
       return save
     end
-
-    # If an email option with a different email address already exists, destroy it
-    existing_email_option = authentication_options.find {|ao| ao.credential_type == 'email'}
-    existing_email_option&.destroy
 
     self.primary_authentication_option = AuthenticationOption.new(
       email: email,
