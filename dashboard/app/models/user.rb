@@ -772,7 +772,11 @@ class User < ActiveRecord::Base
   end
 
   def oauth?
-    OAUTH_PROVIDERS.include? provider
+    if provider == 'migrated'
+      authentication_options.any? {|auth| OAUTH_PROVIDERS.include? auth.credential_type}
+    else
+      OAUTH_PROVIDERS.include? provider
+    end
   end
 
   def self.new_with_session(params, session)
