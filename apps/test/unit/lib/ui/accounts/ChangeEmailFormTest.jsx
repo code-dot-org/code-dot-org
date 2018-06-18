@@ -40,6 +40,56 @@ describe('ChangeEmailForm', () => {
     });
   });
 
+  describe('the password field', () => {
+    describe('when hasPassword is true', () => {
+      it('is rendered for teachers', () => {
+        const wrapper = mount(
+          <ChangeEmailForm
+            {...DEFAULT_PROPS}
+            userType="teacher"
+            hasPassword={true}
+          />
+        );
+        expect(wrapper.find(PASSWORD_SELECTOR)).to.exist;
+      });
+
+      it('is rendered for students', () => {
+        const wrapper = mount(
+          <ChangeEmailForm
+            {...DEFAULT_PROPS}
+            userType="student"
+            hasPassword={true}
+          />
+        );
+        expect(wrapper.find(PASSWORD_SELECTOR)).to.exist;
+      });
+    });
+
+    describe('when hasPassword is false', () => {
+      it('is not rendered for teachers', () => {
+        const wrapper = mount(
+          <ChangeEmailForm
+            {...DEFAULT_PROPS}
+            userType="teacher"
+            hasPassword={false}
+          />
+        );
+        expect(wrapper.find(PASSWORD_SELECTOR)).not.to.exist;
+      });
+
+      it('is not rendered for students', () => {
+        const wrapper = mount(
+          <ChangeEmailForm
+            {...DEFAULT_PROPS}
+            userType="student"
+            hasPassword={false}
+          />
+        );
+        expect(wrapper.find(PASSWORD_SELECTOR)).not.to.exist;
+      });
+    });
+  });
+
   describe('calls onChange', () => {
     let onChange, wrapper;
 
