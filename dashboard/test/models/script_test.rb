@@ -1003,6 +1003,8 @@ class ScriptTest < ActiveSupport::TestCase
       curriculum_path '//example.com/{LOCALE}/foo/{LESSON}'
       stage 'Stage1'
       level '#{l.name}'
+      stage 'Stage2'
+      level '#{l.name}'
     SCRIPT
     script_data, _ = ScriptDSL.parse(dsl, 'a filename')
     script = Script.add_script(
@@ -1012,7 +1014,17 @@ class ScriptTest < ActiveSupport::TestCase
       },
       script_data[:stages],
     )
-    assert_equal CDO.curriculum_url('en-us', 'foo/1'), script.stages.first.localized_lesson_plan
+    assert_equal CDO.curriculum_url('en-us', 'foo/1'), script.stages.first.lesson_plan_html_url
+    with_locale(:'it-IT') do
+      assert_equal CDO.curriculum_url('it-IT', 'foo/2'), script.stages.last.lesson_plan_html_url
+    end
+
+    script.curriculum_path = '//example.com/foo/{LESSON}'
+    assert_equal '//example.com/foo/1', script.stages.first.lesson_plan_html_url
+    assert_equal '//example.com/foo/2', script.stages.last.lesson_plan_html_url
+
+    script.curriculum_path = nil
+    assert_equal '//test.code.org/curriculum/curriculumTestScript/1/Teacher', script.stages.first.lesson_plan_html_url
   end
 
   test 'clone script with suffix' do
