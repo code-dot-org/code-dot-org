@@ -10,6 +10,7 @@ import sectionAssessments, {
   getMultipleChoiceStructureForCurrentAssessment,
   getStudentMCResponsesForCurrentAssessment,
   getStudentsMCSummaryForCurrentAssessment,
+  getSurveyFreeResponseQuestions,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
 
@@ -214,6 +215,39 @@ describe('sectionAssessmentsRedux', () => {
         };
         const result = getStudentMCResponsesForCurrentAssessment(stateWithAssessment);
         assert.deepEqual(result, [{id: 1, name: 'Saira', studentResponses: [{responses: 'D', isCorrect: false}]}]);
+      });
+    });
+
+    describe('getSurveyFreeResponseQuestions', () => {
+      it('returns an empty array when no surveys in redux', () => {
+        const result = getSurveyFreeResponseQuestions(rootState);
+        assert.deepEqual(result, []);
+      });
+
+      it('returns an array of objects representing free response questions', () => {
+        const stateWithSurvey = {
+          ...rootState,
+          sectionAssessments: {
+            ...rootState.sectionAssessments,
+            assessmentId: 123,
+            surveysByScript: {
+              3: {
+                123: {
+                  stage_name: 'name',
+                  levelgroup_results: [
+                    {type: 'free_response', question: 'question1', results: [{result: 'Im not sure'},]},
+                    {type: 'free_response', question: 'question2', results: [{result: 'Im very sure'},]},
+                  ],
+                }
+              }
+            }
+          }
+        };
+        const result = getSurveyFreeResponseQuestions(stateWithSurvey);
+        assert.deepEqual(result, [
+          {questionText: 'question1', answers: [{index: 0, response: 'Im not sure'}]},
+          {questionText: 'question2', answers: [{index: 0, response: 'Im very sure'}]}
+        ]);
       });
     });
 
