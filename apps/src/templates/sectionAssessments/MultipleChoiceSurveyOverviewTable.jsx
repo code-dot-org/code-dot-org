@@ -43,10 +43,10 @@ const answerColumnsFormatter = (percentAnswered, {rowData, columnIndex, rowIndex
   }
 
   return (
-      <MultipleChoiceAnswerCell
-        id={rowData.id}
-        percentValue={percentValue}
-      />
+    <MultipleChoiceAnswerCell
+      id={rowData.id}
+      percentValue={percentValue}
+    />
   );
 };
 
