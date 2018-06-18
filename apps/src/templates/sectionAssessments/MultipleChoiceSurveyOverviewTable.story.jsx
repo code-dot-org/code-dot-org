@@ -59,23 +59,23 @@ export default storybook => {
         name: 'Assessment multiple choice with 7 answers',
         description: 'Ability to see assessment overview for a section',
         story: () => (
-            <MultipleChoiceSurveyOverviewTable
-              multipleChoiceSurveyData={multipleChoiceSurveyData}
-            />
+          <MultipleChoiceSurveyOverviewTable
+            multipleChoiceSurveyData={multipleChoiceSurveyData}
+          />
         )
       },
       {
         name: 'Assessment multiple choice with 3 answers',
         description: 'Ability to see assessment overview for a section',
         story: () => (
-            <MultipleChoiceSurveyOverviewTable
-              multipleChoiceSurveyData={multipleChoiceSurveyData.map(question => {
-                return {
-                  ...question,
-                  answers: question.answers.slice(0,2),
-                };
-              })}
-            />
+          <MultipleChoiceSurveyOverviewTable
+            multipleChoiceSurveyData={multipleChoiceSurveyData.map(question => {
+              return {
+                ...question,
+                answers: question.answers.slice(0,2),
+              };
+            })}
+          />
         )
       },
     ]);
