@@ -1198,8 +1198,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'can_edit_email? is true for migrated user with at least one authentication option' do
-    teacher = create :teacher, :with_email_authentication_option
-    teacher.update(provider: User::PROVIDER_MIGRATED)
+    teacher = create :teacher, :with_migrated_email_authentication_option
     assert teacher.can_edit_email?
   end
 
