@@ -996,6 +996,25 @@ class ScriptTest < ActiveSupport::TestCase
     refute script.project_widget_visible
   end
 
+  test 'can set custom curriculum path' do
+    l = create :level
+    dsl = <<-SCRIPT
+      has_lesson_plan true
+      curriculum_path '//example.com/{LOCALE}/foo/{LESSON}'
+      stage 'Stage1'
+      level '#{l.name}'
+    SCRIPT
+    script_data, _ = ScriptDSL.parse(dsl, 'a filename')
+    script = Script.add_script(
+      {
+        name: 'curriculumTestScript',
+        properties: Script.build_property_hash(script_data),
+      },
+      script_data[:stages],
+    )
+    assert_equal CDO.curriculum_url('en-us', 'foo/1'), script.stages.first.localized_lesson_plan
+  end
+
   test 'clone script with suffix' do
     scripts, _ = Script.setup([@script_file])
     script = scripts[0]
