@@ -53,7 +53,7 @@ const multipleChoiceSurveyData = [
 
 export default storybook => {
   return storybook
-    .storiesOf('SectionAssessments/ultipleChoiceSurveyOverviewTable', module)
+    .storiesOf('SectionAssessments/MultipleChoiceSurveyOverviewTable', module)
     .addStoryTable([
       {
         name: 'Assessment multiple choice with 7 answers',
