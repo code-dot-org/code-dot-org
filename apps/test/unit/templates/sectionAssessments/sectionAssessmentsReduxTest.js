@@ -1,6 +1,6 @@
 import {assert} from '../../../util/configuredChai';
 import sectionAssessments, {
-  setAssessments,
+  setAssessmentResponses,
   setSurveys,
   setAssessmentsStructure,
   startLoadingAssessments,
@@ -30,11 +30,11 @@ describe('sectionAssessmentsRedux', () => {
     });
   });
 
-  describe('setAssessments', () => {
+  describe('setAssessmentResponses', () => {
     it('associates the assessment data to the correct script', () => {
       const scriptId = 2;
       const assessmentData = [{question: "a question", puzzle: 1}];
-      const action = setAssessments(scriptId, assessmentData);
+      const action = setAssessmentResponses(scriptId, assessmentData);
       const nextState = sectionAssessments(initialState, action);
       const actualAssessmentData = nextState.assessmentResponsesByScript[scriptId];
       assert.deepEqual(actualAssessmentData, assessmentData);
