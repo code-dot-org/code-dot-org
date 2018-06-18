@@ -10,6 +10,7 @@ import {h3Style} from "../../lib/ui/Headings";
 import i18n from '@cdo/locale';
 import ScriptSelector from '@cdo/apps/templates/sectionProgress/ScriptSelector';
 import MultipleChoiceByStudentContainer from './MultipleChoiceByStudentContainer';
+import StudentsMCSummaryContainer from './StudentsMCSummaryContainer';
 import AssessmentSelector from './AssessmentSelector';
 
 const styles = {
@@ -64,9 +65,8 @@ class SectionAssessments extends Component {
             onChange={this.props.setAssessmentId}
           />
         </div>
-        <div>
           <MultipleChoiceByStudentContainer />
-        </div>
+          <StudentsMCSummaryContainer />
       </div>
     );
   }

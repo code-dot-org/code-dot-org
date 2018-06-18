@@ -32,8 +32,9 @@
       "supportsTablet": true,
       "bundleIdentifier": "org.code.studio.applab.<%- projectId.replace(/([^a-zA-Z0-9\-]+)/gi, '-') %>",
       "buildNumber": "1"
-    }, "android": {
-      "package": "org.code.studio.applab.<%- projectId %>",
+    },
+    "android": {
+      "package": "org.code.studio.applab._<%- projectId.replace(/([^a-zA-Z0-9\_]+)/gi, '_') %>",
       "versionCode": 1
     }
   }
