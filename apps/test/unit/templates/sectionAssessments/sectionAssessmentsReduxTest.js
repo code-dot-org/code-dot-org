@@ -9,6 +9,7 @@ import sectionAssessments, {
   getCurrentScriptAssessmentList,
   getMultipleChoiceStructureForCurrentAssessment,
   getStudentMCResponsesForCurrentAssessment,
+  getStudentsMCSummaryForCurrentAssessment,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
 
@@ -212,7 +213,52 @@ describe('sectionAssessmentsRedux', () => {
           }
         };
         const result = getStudentMCResponsesForCurrentAssessment(stateWithAssessment);
-        assert.deepEqual(result, [{id: '1', name: 'Saira', studentResponses: [{responses: 'D', isCorrect: false}]}]);
+        assert.deepEqual(result, [{id: 1, name: 'Saira', studentResponses: [{responses: 'D', isCorrect: false}]}]);
+      });
+    });
+
+    describe('getStudentsMCSummaryForCurrentAssessment', () => {
+      it('returns an empty object when no assessments in redux', () => {
+        const result = getStudentsMCSummaryForCurrentAssessment(rootState);
+        assert.deepEqual(result, []);
+      });
+
+      it('returns an array of objects of studentOverviewDataPropType', () => {
+        const stateWithAssessment = {
+          ...rootState,
+          sectionAssessments: {
+            ...rootState.sectionAssessments,
+            assessmentId: 123,
+            assessmentsByScript: {
+              3: {
+                2: {
+                  student_name: 'Ilulia',
+                  responses_by_assessment: {
+                    123: {
+                      multi_correct: 4,
+                      multi_count: 10,
+                      submitted: true,
+                      timestamp: "2018-06-12 04:53:36 UTC",
+                    }
+                  }
+                }
+              }
+            }
+          }
+        };
+        const result = getStudentsMCSummaryForCurrentAssessment(stateWithAssessment);
+        assert.deepEqual(result,
+          [
+            {
+              id: 2,
+              name: "Ilulia",
+              numMultipleChoice: 10,
+              numMultipleChoiceCorrect: 4,
+              isSubmitted: true,
+              submissionTimeStamp: "2018-06-12 04:53:36 UTC"
+            }
+          ]
+        );
       });
     });
   });
