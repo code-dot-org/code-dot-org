@@ -192,13 +192,13 @@ class MultipleChoiceSurveyOverviewTable extends Component {
     })(this.props.multipleChoiceSurveyData);
 
     return (
-        <Table.Provider
-          columns={columns}
-          style={tableLayoutStyles.table}
-        >
-          <Table.Header />
-          <Table.Body rows={sortedRows} rowKey="id" />
-        </Table.Provider>
+      <Table.Provider
+        columns={columns}
+        style={tableLayoutStyles.table}
+      >
+        <Table.Header />
+        <Table.Body rows={sortedRows} rowKey="id" />
+      </Table.Provider>
     );
   }
 }
