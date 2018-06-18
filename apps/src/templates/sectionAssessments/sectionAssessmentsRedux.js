@@ -5,7 +5,7 @@ import {SET_SECTION} from '@cdo/apps/redux/sectionDataRedux';
  * The redux state matches the structure of our API calls and our views don't
  * use this structure directly. Selectors filter and transform data to what they need.
  *
- * assessmentsByScript - object - keys are scriptIds, values are objects of
+ * assessmentResponsesByScript - object - keys are scriptIds, values are objects of
  *  student ids to student response data for each assessment
  * assessmentsStructureByScript - object - keys are scriptIds, values are objects of
  *   assessmentIds to question and answer information for each assessment
@@ -16,7 +16,7 @@ import {SET_SECTION} from '@cdo/apps/redux/sectionDataRedux';
  * assessmentId - int - the level_group id of the assessment currently in view
  */
 const initialState = {
-  assessmentsByScript: {},
+  assessmentResponsesByScript: {},
   assessmentsStructureByScript: {},
   surveysByScript: {},
   isLoading: false,
@@ -45,7 +45,7 @@ export const asyncLoadAssessments = (sectionId, scriptId) => {
     const state = getState().sectionAssessments;
 
     // Don't load data if it's already stored in redux.
-    if (state.assessmentsByScript[scriptId]) {
+    if (state.assessmentResponsesByScript[scriptId]) {
       return;
     }
 
@@ -84,8 +84,8 @@ export default function sectionAssessments(state=initialState, action) {
   if (action.type === SET_ASSESSMENTS) {
     return {
       ...state,
-      assessmentsByScript: {
-        ...state.assessmentsByScript,
+      assessmentResponsesByScript: {
+        ...state.assessmentResponsesByScript,
         [action.scriptId]: action.assessments
       }
     };
@@ -152,7 +152,7 @@ export const getCurrentScriptAssessmentList = (state) => {
 
 // Get the student responses for assessments in the current script and current assessment
 export const getAssessmentResponsesForCurrentScript = (state) => {
-  return state.sectionAssessments.assessmentsByScript[state.scriptSelection.scriptId] || {};
+  return state.sectionAssessments.assessmentResponsesByScript[state.scriptSelection.scriptId] || {};
 };
 
 // Get the question structure for assessments in the current script and current assessment

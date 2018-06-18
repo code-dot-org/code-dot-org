@@ -18,8 +18,8 @@ describe('sectionAssessmentsRedux', () => {
   describe('setSection', () => {
     it('resets all other state to initialState', () => {
       const currentState = {
-        isLoadingAssessments: true,
-        assessmentsByScript: {
+        isLoading: true,
+        assessmentResponsesByScript: {
           1: [{question: "a question", puzzle: 2}],
         }
       };
@@ -36,7 +36,7 @@ describe('sectionAssessmentsRedux', () => {
       const assessmentData = [{question: "a question", puzzle: 1}];
       const action = setAssessments(scriptId, assessmentData);
       const nextState = sectionAssessments(initialState, action);
-      const actualAssessmentData = nextState.assessmentsByScript[scriptId];
+      const actualAssessmentData = nextState.assessmentResponsesByScript[scriptId];
       assert.deepEqual(actualAssessmentData, assessmentData);
     });
   });
@@ -79,18 +79,18 @@ describe('sectionAssessmentsRedux', () => {
   });
 
   describe('startLoadingAssessments', () => {
-    it('sets isLoadingAssessments to true', () => {
+    it('sets isLoading to true', () => {
       const action = startLoadingAssessments();
       const nextState = sectionAssessments(initialState, action);
-      assert.isTrue(nextState.isLoadingAssessments);
+      assert.isTrue(nextState.isLoading);
     });
   });
 
   describe('finishLoadingAssessments', () => {
-    it('sets isLoadingAssessments to false', () => {
+    it('sets isLoading to false', () => {
       const action = finishLoadingAssessments();
       const nextState = sectionAssessments(initialState, action);
-      assert.isFalse(nextState.isLoadingAssessments);
+      assert.isFalse(nextState.isLoading);
     });
   });
 
@@ -192,7 +192,7 @@ describe('sectionAssessmentsRedux', () => {
           sectionAssessments: {
             ...rootState.sectionAssessments,
             assessmentId: 123,
-            assessmentsByScript: {
+            assessmentResponsesByScript: {
               3: {
                 1: {
                   student_name: 'Saira',
