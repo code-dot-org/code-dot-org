@@ -40,7 +40,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
 
     sign_in non_verified_teacher
     get :index
-    assert_response :not_found
+    assert_response :forbidden
   end
 
   test 'verified teacher can get assessment questions and answers' do
