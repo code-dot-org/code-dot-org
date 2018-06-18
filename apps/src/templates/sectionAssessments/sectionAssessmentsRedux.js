@@ -24,7 +24,7 @@ const initialState = {
 };
 
 // Action type constants
-const SET_ASSESSMENTS = 'sectionAssessments/SET_ASSESSMENTS';
+const SET_ASSESSMENT_RESPONSES = 'sectionAssessments/SET_ASSESSMENT_RESPONSES';
 const SET_ASSESSMENTS_STRUCTURE = 'sectionAssessments/SET_ASSESSMENTS_STRUCTURE';
 const SET_SURVEYS = 'sectionAssessments/SET_SURVEYS';
 const START_LOADING_ASSESSMENTS = 'sectionAssessments/START_LOADING_ASSESSMENTS';
@@ -32,7 +32,8 @@ const FINISH_LOADING_ASSESSMENTS = 'sectionAssessments/FINISH_LOADING_ASSESSMENT
 const SET_ASSESSMENT_ID = 'sectionAssessments/SET_ASSESSMENT_ID';
 
 // Action creators
-export const setAssessments = (scriptId, assessments) => ({ type: SET_ASSESSMENTS, scriptId, assessments});
+export const setAssessmentResponses = (scriptId, assessments) =>
+  ({ type: SET_ASSESSMENT_RESPONSES, scriptId, assessments});
 export const setAssessmentsStructure = (scriptId, assessments) =>
   ({ type: SET_ASSESSMENTS_STRUCTURE, scriptId, assessments});
 export const startLoadingAssessments = () => ({ type: START_LOADING_ASSESSMENTS });
@@ -56,7 +57,7 @@ export const asyncLoadAssessments = (sectionId, scriptId) => {
     const loadSurveys = loadSurveysFromServer(sectionId, scriptId);
     const [responses, structure, surveys] = await Promise.all([loadResponses, loadStructure, loadSurveys]);
 
-    dispatch(setAssessments(scriptId, responses));
+    dispatch(setAssessmentResponses(scriptId, responses));
     dispatch(setAssessmentsStructure(scriptId, structure));
     dispatch(setSurveys(scriptId, surveys));
 
@@ -81,7 +82,7 @@ export default function sectionAssessments(state=initialState, action) {
       assessmentId: action.assessmentId,
     };
   }
-  if (action.type === SET_ASSESSMENTS) {
+  if (action.type === SET_ASSESSMENT_RESPONSES) {
     return {
       ...state,
       assessmentResponsesByScript: {
