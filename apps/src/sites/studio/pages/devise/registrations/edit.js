@@ -6,7 +6,7 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 // Values loaded from scriptData are always initial values, not the latest
 // (possibly unsaved) user-edited values on the form.
 const scriptData = getScriptData('edit');
-const {userAge, userType, hasPassword} = scriptData;
+const {userAge, userType} = scriptData;
 
 $(document).ready(() => {
   new ChangeEmailController({
@@ -15,7 +15,6 @@ $(document).ready(() => {
     displayedUserEmail: $('#displayed-user-email'),
     userAge,
     userType,
-    hasPassword,
     emailChangedCallback: onEmailChanged,
   });
 
