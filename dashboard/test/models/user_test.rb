@@ -2674,10 +2674,10 @@ class UserTest < ActiveSupport::TestCase
     refute student.stage_extras_enabled?(other_script)
 
     assert teacher.stage_extras_enabled?(script)
-    refute teacher.stage_extras_enabled?(other_script)
+    assert teacher.stage_extras_enabled?(other_script)
 
     refute (create :student).stage_extras_enabled?(script)
-    refute (create :teacher).stage_extras_enabled?(script)
+    assert (create :teacher).stage_extras_enabled?(script)
   end
 
   class HiddenIds < ActiveSupport::TestCase
