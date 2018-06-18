@@ -28,13 +28,12 @@ export default class ChangeEmailController {
    * @param {string} userType
    * @param {function(newEmail:string, newHashedEmail:string, emailOptIn:string)} emailChangedCallback
    */
-  constructor({form, link, displayedUserEmail, userAge, userType, hasPassword,
+  constructor({form, link, displayedUserEmail, userAge, userType,
     emailChangedCallback}) {
     this.form = form;
     this.displayedUserEmail = displayedUserEmail;
     this.userAge = userAge;
     this.userType = userType;
-    this.hasPassword = hasPassword;
     this.emailChangedCallback = emailChangedCallback;
     link.click(this.showChangeEmailModal);
   }
@@ -57,7 +56,6 @@ export default class ChangeEmailController {
         handleSubmit={handleSubmit}
         handleCancel={this.hideChangeEmailModal}
         userType={this.userType}
-        hasPassword={this.hasPassword}
         currentHashedEmail={userHashedEmail}
       />,
       this.mountPoint
