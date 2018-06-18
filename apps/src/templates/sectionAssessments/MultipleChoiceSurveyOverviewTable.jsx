@@ -63,7 +63,7 @@ const multipleChoiceSurveyDataPropType = PropTypes.shape({
 });
 
 /**
- *  A single table that shows students' responses to each multiple choice question.
+ * A single table that shows students' responses to each multiple choice question for a survey.
  * The table displays the percent of students that select an answer choice and
  * percent of students that did not answer the question.
  */
