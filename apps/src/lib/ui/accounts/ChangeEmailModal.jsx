@@ -22,7 +22,7 @@ export default class ChangeEmailModal extends React.Component {
      */
     handleCancel: PropTypes.func.isRequired,
     userType: PropTypes.oneOf(['student', 'teacher']).isRequired,
-    hasPassword: PropTypes.bool.isRequired,
+    isPasswordRequired: PropTypes.bool.isRequired,
     currentHashedEmail: PropTypes.string,
   };
 
@@ -96,7 +96,7 @@ export default class ChangeEmailModal extends React.Component {
 
   getCurrentPasswordValidationError = () => {
     const {currentPassword} = this.state.values;
-    if (this.props.hasPassword && currentPassword.length === 0) {
+    if (this.props.isPasswordRequired && currentPassword.length === 0) {
       return i18n.changeEmailModal_currentPassword_isRequired();
     }
     return null;
@@ -126,7 +126,7 @@ export default class ChangeEmailModal extends React.Component {
   };
 
   render = () => {
-    const {userType, hasPassword} = this.props;
+    const {userType, isPasswordRequired} = this.props;
     const {saveState, values} = this.state;
     const validationErrors = this.getValidationErrors();
     const isFormValid = this.isFormValid(validationErrors);
@@ -145,7 +145,7 @@ export default class ChangeEmailModal extends React.Component {
             validationErrors={validationErrors}
             disabled={STATE_SAVING === saveState}
             userType={userType}
-            hasPassword={hasPassword}
+            isPasswordRequired={isPasswordRequired}
             onChange={this.onFormChange}
             onSubmit={this.save}
           />

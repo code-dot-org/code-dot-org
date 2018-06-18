@@ -16,7 +16,7 @@ export default class ChangeEmailForm extends React.Component {
       emailOptIn: PropTypes.string,
     }).isRequired,
     userType: PropTypes.oneOf(['teacher', 'student']).isRequired,
-    hasPassword: PropTypes.bool.isRequired,
+    isPasswordRequired: PropTypes.bool.isRequired,
     disabled: PropTypes.bool,
     onChange: PropTypes.func.isRequired,
     onSubmit: PropTypes.func.isRequired,
@@ -69,7 +69,7 @@ export default class ChangeEmailForm extends React.Component {
   }
 
   render() {
-    const {values, validationErrors, disabled, userType, hasPassword} = this.props;
+    const {values, validationErrors, disabled, userType, isPasswordRequired} = this.props;
     return (
       <div>
         <Field
@@ -90,7 +90,7 @@ export default class ChangeEmailForm extends React.Component {
             ref={el => this.newEmailInput = el}
           />
         </Field>
-        {hasPassword &&
+        {isPasswordRequired &&
           <Field
             label={i18n.changeEmailModal_currentPassword_label()}
             error={validationErrors.currentPassword}
