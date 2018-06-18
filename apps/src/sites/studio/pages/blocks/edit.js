@@ -23,6 +23,7 @@ $(document).ready(() => {
   Blockly.inject(document.getElementById('blockly-container'), {
     assetUrl,
     valueTypeTabShapeMap: valueTypeTabShapeMap(Blockly),
+    typeHints: true,
   });
 
   initializeCodeMirrorForJson('block_config', { onChange });
