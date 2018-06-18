@@ -269,7 +269,7 @@ class Blockly < Level
           default_toolbox_blocks
         level_prop['codeFunctions'] = try(:project_template_level).try(:code_functions) || code_functions
         level_prop['sharedBlocks'] = shared_blocks
-        level_prop['sharedFunctions'] = include_shared_functions && shared_functions
+        level_prop['sharedFunctions'] = shared_functions if include_shared_functions
       end
 
       if is_a? Applab
