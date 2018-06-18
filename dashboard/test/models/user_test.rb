@@ -1336,12 +1336,6 @@ class UserTest < ActiveSupport::TestCase
     refute successful_save
   end
 
-  test 'update_primary_authentication_option is false if hashed_email is present for teacher' do
-    teacher = create :teacher
-    successful_save = teacher.update_primary_authentication_option(user: {email: 'some@email.com', hashed_email: 'abcdef'})
-    refute successful_save
-  end
-
   test 'update_primary_authentication_option adds new email option for teacher if no matches exist' do
     teacher = create :teacher, :with_migrated_google_authentication_option
 
@@ -1387,6 +1381,18 @@ class UserTest < ActiveSupport::TestCase
     assert successful_save
     assert_equal 1, teacher.authentication_options.count
     assert_equal existing_email, teacher.primary_authentication_option.email
+  end
+
+  test 'update_primary_authentication_option recalculates hashed_email if both email and hashed_email are supplied for teacher' do
+    teacher = create :teacher, :with_migrated_email_authentication_option
+
+    assert_equal 1, teacher.authentication_options.count
+    refute_nil teacher.primary_authentication_option
+
+    successful_save = teacher.update_primary_authentication_option(user: {email: 'first@email.com', hashed_email: User.hash_email('second@email.com')})
+    assert successful_save
+    assert_equal 1, teacher.authentication_options.count
+    assert_equal User.hash_email('first@email.com'), teacher.primary_authentication_option.hashed_email
   end
 
   test 'update_primary_authentication_option adds new email option for student if no matches exist' do
