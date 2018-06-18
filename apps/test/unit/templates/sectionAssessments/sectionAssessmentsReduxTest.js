@@ -202,7 +202,7 @@ describe('sectionAssessmentsRedux', () => {
     describe('getStudentsMCSummaryForCurrentAssessment', () => {
       it('returns an empty object when no assessments in redux', () => {
         const result = getStudentsMCSummaryForCurrentAssessment(rootState);
-        assert.deepEqual(result, {});
+        assert.deepEqual(result, []);
       });
 
       it('returns an array of objects of studentOverviewDataPropType', () => {
@@ -230,14 +230,16 @@ describe('sectionAssessmentsRedux', () => {
         };
         const result = getStudentsMCSummaryForCurrentAssessment(stateWithAssessment);
         assert.deepEqual(result,
-          {
-            id: 2,
-            name: "Ilulia",
-            numMultipleChoice: 10,
-            numMultipleChoiceCorrect: 4,
-            isSubmitted: true,
-            submissionTimeStamp: "2018-06-12 04:53:36 UTC"
-          }
+          [
+            {
+              id: 2,
+              name: "Ilulia",
+              numMultipleChoice: 10,
+              numMultipleChoiceCorrect: 4,
+              isSubmitted: true,
+              submissionTimeStamp: "2018-06-12 04:53:36 UTC"
+            }
+          ]
         );
       });
     });
