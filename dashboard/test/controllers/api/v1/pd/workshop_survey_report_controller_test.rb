@@ -182,6 +182,34 @@ class Api::V1::Pd::WorkshopSurveyReportControllerTest < ::ActionController::Test
     params: -> {{workshop_id: @workshop.id}}
   )
 
+  test 'facilitators can see results for local summer workshops' do
+    workshop = create :pd_workshop, :local_summer_workshop, facilitators: [@facilitator]
+    sign_in @facilitator
+
+    get :local_workshop_daily_survey_report, params: {workshop_id: workshop.id}
+    assert_response :success
+  end
+
+  test 'facilitators can see results for teachercons' do
+    workshop = create :pd_workshop, :teachercon, facilitators: [@facilitator]
+    sign_in @facilitator
+
+    get :local_workshop_daily_survey_report, params: {workshop_id: workshop.id}
+    assert_response :success
+  end
+
+  test 'facilitators cannot see results for other types of workshops' do
+    workshop = create :pd_workshop, facilitators: [@facilitator]
+    sign_in @facilitator
+
+    get :local_workshop_daily_survey_report, params: {workshop_id: workshop.id}
+    assert_response :bad_request
+    assert_equal(
+      {'error' => 'Only call this route for 5 day summer workshops, local or TeacherCon'},
+      JSON.parse(@response.body)
+    )
+  end
+
   private
 
   def build_sample_data
