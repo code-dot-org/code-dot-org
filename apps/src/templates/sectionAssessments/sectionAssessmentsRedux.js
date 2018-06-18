@@ -11,15 +11,15 @@ import {SET_SECTION} from '@cdo/apps/redux/sectionDataRedux';
  *   assessmentIds to question and answer information for each assessment
  * surveysByScript - object - keys are scriptIds, values are objects of
  *   assessmentIds to survey questions and anonymous responses
- * isLoadingAssessments - boolean - indicates that requests have been sent to the server
- * but the client has not yet received a response
+ * isLoading - boolean - indicates that requests for assessments and surveys have been
+ * sent to the server but the client has not yet received a response
  * assessmentId - int - the level_group id of the assessment currently in view
  */
 const initialState = {
   assessmentsByScript: {},
   assessmentsStructureByScript: {},
   surveysByScript: {},
-  isLoadingAssessments: false,
+  isLoading: false,
   assessmentId: 0,
 };
 
@@ -113,13 +113,13 @@ export default function sectionAssessments(state=initialState, action) {
   if (action.type === START_LOADING_ASSESSMENTS) {
     return {
       ...state,
-      isLoadingAssessments: true
+      isLoading: true
     };
   }
   if (action.type === FINISH_LOADING_ASSESSMENTS) {
     return {
       ...state,
-      isLoadingAssessments: false
+      isLoading: false
     };
   }
 
