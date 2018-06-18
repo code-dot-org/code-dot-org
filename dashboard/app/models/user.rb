@@ -836,7 +836,7 @@ class User < ActiveRecord::Base
     hashed_email = user[:hashed_email]
 
     return false if email.nil? && hashed_email.nil?
-    return false if teacher? && (email.nil? || hashed_email.present?)
+    return false if teacher? && email.nil?
 
     # If an email option with a different email address already exists, destroy it
     existing_email_option = authentication_options.find {|ao| ao.credential_type == 'email'}
