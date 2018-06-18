@@ -831,25 +831,25 @@ class User < ActiveRecord::Base
     end
   end
 
-  def update_primary_authentication_option(email)
+  def update_primary_authentication_option(email: nil, hashed_email: nil)
+    return false if email.nil? && hashed_email.nil?
+    return false if teacher? && (email.nil? || hashed_email.present?)
+
     # If an email option with a different email address already exists, destroy it
     existing_email_option = authentication_options.find {|ao| ao.credential_type == 'email'}
     existing_email_option&.destroy
 
     # If an auth option exists with same email, set it to the user's primary authentication option
-    existing_auth_option = authentication_options.find do |ao|
-      ao.email == email || ao.hashed_email == User.hash_email(email)
-    end
+    existing_auth_option = authentication_options.find {|ao| ao.email == email || ao.hashed_email == hashed_email}
     if existing_auth_option
       self.primary_authentication_option = existing_auth_option
       return save
     end
 
-    self.primary_authentication_option = AuthenticationOption.new(
-      email: email,
-      credential_type: 'email',
-      user: self
-    )
+    params = {credential_type: 'email', user: self}
+    params[:email] = email unless email.nil?
+    params[:hashed_email] = hashed_email if email.nil?
+    self.primary_authentication_option = AuthenticationOption.new(params)
     return save
   end
 
