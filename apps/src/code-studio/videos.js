@@ -87,6 +87,9 @@ videos.showVideoDialog = function (options, forceShowVideo) {
     return;
   }
 
+  // Let's record the fact that we're opening a dialog box for the video.
+  options.inDialog = true;
+
   upgradeInsecureOptions(options);
   var widthRatio = 0.8;
   var heightRatio = 0.8;
@@ -160,6 +163,7 @@ videos.showVideoDialog = function (options, forceShowVideo) {
 
   var download = $('<a/>').append($('<img src="/shared/images/download_button.png"/>'))
       .addClass('download-video')
+      .css('float', 'left')
       .attr('href', options.download)
       .click(function () {
           // track download in Google Analytics
@@ -169,6 +173,14 @@ videos.showVideoDialog = function (options, forceShowVideo) {
       );
   var nav = $div.find('.ui-tabs-nav');
   nav.append(download);
+
+  var fallbackPlayerLinkDiv = $('<div id="fallback-player-caption-dialog-link"/>')
+      .css({
+        'padding-right': '40px',
+        'padding-top': '9px',
+        'text-align': 'right'
+      });
+  nav.append(fallbackPlayerLinkDiv);
 
   // Resize modal to fit constraining dimension.
   var height = $(window).height() * widthRatio,
@@ -324,7 +336,7 @@ function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
 
   videoPlayer.on('ended', onVideoEnded);
 
-  showFallbackPlayerCaptionLink();
+  showFallbackPlayerCaptionLink(videoInfo.inDialog);
 }
 
 function hasNotesTab() {
@@ -359,12 +371,15 @@ function upgradeInsecureOptions(options) {
   }
 }
 
-// Show a link to accompany the fallback video player, which, when clicked,
-// pops a modal dialog explaining that the youtube-nocookie.com video player
-// is available if captions are desired.
-function showFallbackPlayerCaptionLink() {
+/**
+ * Show a link to accompany the fallback video player, which, when clicked,
+ * pops a modal dialog explaining that the youtube-nocookie.com video player
+ * is available if captions are desired.
+ * @param inDialog {boolean} Whether this is part of the header of a dialog.
+ */
+function showFallbackPlayerCaptionLink(inDialog) {
   ReactDOM.render(
-    <FallbackPlayerCaptionDialogLink/>,
+    <FallbackPlayerCaptionDialogLink inDialog={inDialog}/>,
     document.getElementById('fallback-player-caption-dialog-link')
   );
 }

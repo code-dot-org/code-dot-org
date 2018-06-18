@@ -12,7 +12,8 @@ const styles = {
   dialog: {
     paddingLeft: 20,
     paddingRight: 20,
-    paddingBottom: 20
+    paddingBottom: 20,
+    textAlign: 'left'
   },
   dialogLink: {
     marginTop: 20
@@ -20,6 +21,10 @@ const styles = {
 };
 
 export default class FallbackPlayerCaptionDialogLink extends React.Component {
+  static propTypes = {
+    inDialog: PropTypes.bool
+  };
+
   state = {open: false};
   open = () => this.setState({open: true});
   close = () => this.setState({open: false});
@@ -31,8 +36,12 @@ export default class FallbackPlayerCaptionDialogLink extends React.Component {
           isDialogOpen={this.state.open}
           handleClose={this.close}
         />
-        |
-        &nbsp;
+        {!this.props.inDialog && (
+          <span>
+            |
+            &nbsp;
+          </span>
+        )}
         <a
           className="ui-test-fallback-player-caption-dialog-link"
           onClick={this.open}
