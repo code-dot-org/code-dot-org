@@ -1,8 +1,8 @@
 import {assert} from '../../../util/configuredChai';
 import sectionAssessments, {
-  setAssessments,
+  setAssessmentResponses,
   setSurveys,
-  setAssessmentsStructure,
+  setAssessmentQuestions,
   startLoadingAssessments,
   finishLoadingAssessments,
   setAssessmentId,
@@ -19,8 +19,8 @@ describe('sectionAssessmentsRedux', () => {
   describe('setSection', () => {
     it('resets all other state to initialState', () => {
       const currentState = {
-        isLoadingAssessments: true,
-        assessmentsByScript: {
+        isLoading: true,
+        assessmentResponsesByScript: {
           1: [{question: "a question", puzzle: 2}],
         }
       };
@@ -31,13 +31,13 @@ describe('sectionAssessmentsRedux', () => {
     });
   });
 
-  describe('setAssessments', () => {
+  describe('setAssessmentResponses', () => {
     it('associates the assessment data to the correct script', () => {
       const scriptId = 2;
       const assessmentData = [{question: "a question", puzzle: 1}];
-      const action = setAssessments(scriptId, assessmentData);
+      const action = setAssessmentResponses(scriptId, assessmentData);
       const nextState = sectionAssessments(initialState, action);
-      const actualAssessmentData = nextState.assessmentsByScript[scriptId];
+      const actualAssessmentData = nextState.assessmentResponsesByScript[scriptId];
       assert.deepEqual(actualAssessmentData, assessmentData);
     });
   });
@@ -53,7 +53,7 @@ describe('sectionAssessmentsRedux', () => {
     });
   });
 
-  describe('setAssessmentsStructure', () => {
+  describe('setAssessmentQuestions', () => {
     it('associates the assessment structure data to the correct script', () => {
       const scriptId = 2;
       const assessmentData = {
@@ -63,9 +63,9 @@ describe('sectionAssessmentsRedux', () => {
           questions: {123: {type: "Multi", question_text: "A question", answers: [{text: "answer 1", correct: true}] }}
         }
       };
-      const action = setAssessmentsStructure(scriptId, assessmentData);
+      const action = setAssessmentQuestions(scriptId, assessmentData);
       const nextState = sectionAssessments(initialState, action);
-      const actualAssessmentData = nextState.assessmentsStructureByScript[scriptId];
+      const actualAssessmentData = nextState.assessmentQuestionsByScript[scriptId];
       assert.deepEqual(actualAssessmentData, assessmentData);
       assert.deepEqual(nextState.assessmentId, 139);
     });
@@ -80,18 +80,18 @@ describe('sectionAssessmentsRedux', () => {
   });
 
   describe('startLoadingAssessments', () => {
-    it('sets isLoadingAssessments to true', () => {
+    it('sets isLoading to true', () => {
       const action = startLoadingAssessments();
       const nextState = sectionAssessments(initialState, action);
-      assert.isTrue(nextState.isLoadingAssessments);
+      assert.isTrue(nextState.isLoading);
     });
   });
 
   describe('finishLoadingAssessments', () => {
-    it('sets isLoadingAssessments to false', () => {
+    it('sets isLoading to false', () => {
       const action = finishLoadingAssessments();
       const nextState = sectionAssessments(initialState, action);
-      assert.isFalse(nextState.isLoadingAssessments);
+      assert.isFalse(nextState.isLoading);
     });
   });
 
@@ -103,7 +103,7 @@ describe('sectionAssessmentsRedux', () => {
         },
         sectionAssessments: {
           ...initialState,
-          assessmentsStructureByScript: {
+          assessmentQuestionsByScript: {
             123: {
               7: {id: 7, name: 'Assessment 7'},
               8: {id: 8, name: 'Assessment 8'},
@@ -155,7 +155,7 @@ describe('sectionAssessmentsRedux', () => {
           sectionAssessments: {
             ...rootState.sectionAssessments,
             assessmentId: 123,
-            assessmentsStructureByScript: {
+            assessmentQuestionsByScript: {
               3: {
                 123: {
                   id: 123,
@@ -193,7 +193,7 @@ describe('sectionAssessmentsRedux', () => {
           sectionAssessments: {
             ...rootState.sectionAssessments,
             assessmentId: 123,
-            assessmentsByScript: {
+            assessmentResponsesByScript: {
               3: {
                 1: {
                   student_name: 'Saira',
@@ -229,7 +229,7 @@ describe('sectionAssessmentsRedux', () => {
           sectionAssessments: {
             ...rootState.sectionAssessments,
             assessmentId: 123,
-            assessmentsByScript: {
+            assessmentResponsesByScript: {
               3: {
                 2: {
                   student_name: 'Ilulia',
