@@ -13,6 +13,7 @@ describe('ChangeEmailForm', () => {
     values: {},
     validationErrors: {},
     userType: 'student',
+    hasPassword: true,
     onChange: () => {},
     onSubmit: () => {}
   };

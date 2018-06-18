@@ -18,6 +18,7 @@ describe('ChangeEmailModal', () => {
     handleSubmit: () => {},
     handleCancel: () => {},
     userType: 'student',
+    hasPassword: true,
   };
 
   // Helpers for selecting particular elements/components
