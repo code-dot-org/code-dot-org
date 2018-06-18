@@ -721,6 +721,8 @@ class User < ActiveRecord::Base
       user.uid = auth.uid
       user.name = name_from_omniauth auth.info.name
       user.user_type = params['user_type'] || auth.info.user_type
+      user.user_type = 'teacher' if user.user_type == 'staff' # Powerschool sends through 'staff' instead of 'teacher'
+
       # Store emails, except when using Clever
       user.email = auth.info.email unless user.user_type == 'student' && OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(auth.provider)
 
