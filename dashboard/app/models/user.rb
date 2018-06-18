@@ -1733,7 +1733,11 @@ class User < ActiveRecord::Base
   end
 
   def sponsored?
-    provider == PROVIDER_SPONSORED
+    if migrated?
+      authentication_options.empty?
+    else
+      provider == PROVIDER_SPONSORED
+    end
   end
 
   # We restrict certain users from editing their email address, because we
