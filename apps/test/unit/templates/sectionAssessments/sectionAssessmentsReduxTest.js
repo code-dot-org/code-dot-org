@@ -229,7 +229,7 @@ describe('sectionAssessmentsRedux', () => {
           sectionAssessments: {
             ...rootState.sectionAssessments,
             assessmentId: 123,
-            assessmentsByScript: {
+            assessmentResponsesByScript: {
               3: {
                 2: {
                   student_name: 'Ilulia',
