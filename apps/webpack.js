@@ -129,7 +129,7 @@ if (envConstants.COVERAGE) {
   );
 }
 
-var devtool = process.env.CHEAP ?
+var devtool = process.env.DEV ?
     'cheap-inline-source-map' :
     'inline-source-map';
 
