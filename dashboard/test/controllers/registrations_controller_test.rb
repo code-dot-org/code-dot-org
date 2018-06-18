@@ -339,8 +339,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "set_email: returns 422 for migrated user with password if user cannot edit password" do
-    teacher = create(:teacher, :with_google_authentication_option)
-    teacher.update!(primary_authentication_option: teacher.authentication_options.first, provider: User::PROVIDER_MIGRATED)
+    teacher = create(:teacher, :with_migrated_email_authentication_option)
     sign_in teacher
 
     User.any_instance.stubs(:can_edit_password?).returns(false)
@@ -350,8 +349,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "set_email: returns 422 for migrated user with email if user cannot edit email" do
-    teacher = create(:teacher, :with_google_authentication_option)
-    teacher.update!(primary_authentication_option: teacher.authentication_options.first, provider: User::PROVIDER_MIGRATED)
+    teacher = create(:teacher, :with_migrated_email_authentication_option)
     sign_in teacher
 
     User.any_instance.stubs(:can_edit_email?).returns(false)
@@ -361,8 +359,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "set_email: returns 422 for migrated user with hashed email if user cannot edit email" do
-    teacher = create(:teacher, :with_google_authentication_option)
-    teacher.update!(primary_authentication_option: teacher.authentication_options.first, provider: User::PROVIDER_MIGRATED)
+    teacher = create(:teacher, :with_migrated_email_authentication_option)
     sign_in teacher
 
     User.any_instance.stubs(:can_edit_email?).returns(false)
@@ -372,8 +369,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "set_email: returns 422 for migrated user if password is incorrect" do
-    teacher = create(:teacher, :with_email_authentication_option, password: 'mypassword')
-    teacher.update!(primary_authentication_option: teacher.authentication_options.first, provider: User::PROVIDER_MIGRATED)
+    teacher = create(:teacher, :with_migrated_email_authentication_option, password: 'mypassword')
     sign_in teacher
 
     patch :set_email, params: {user: {email: 'example@email.com', current_password: 'notmypassword'}}
@@ -381,8 +377,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "set_email: updates email for migrated user if password is correct" do
-    teacher = create(:teacher, :with_email_authentication_option, password: 'mypassword')
-    teacher.update!(primary_authentication_option: teacher.authentication_options.first, provider: User::PROVIDER_MIGRATED)
+    teacher = create(:teacher, :with_migrated_email_authentication_option, password: 'mypassword')
     sign_in teacher
 
     patch :set_email, params: {user: {email: 'new@email.com', current_password: 'mypassword'}}
@@ -391,9 +386,8 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_equal 'new@email.com', teacher.email
   end
 
-  test "set_email: updates email for migrated user without if password is not required" do
-    teacher = create(:teacher, :with_email_authentication_option)
-    teacher.update!(primary_authentication_option: teacher.authentication_options.first, provider: User::PROVIDER_MIGRATED, encrypted_password: '')
+  test "set_email: updates email for migrated user without password if password is not required" do
+    teacher = create(:teacher, :with_migrated_email_authentication_option, encrypted_password: '')
     sign_in teacher
 
     patch :set_email, params: {user: {email: 'new@email.com'}}
