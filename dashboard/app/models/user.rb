@@ -1764,9 +1764,9 @@ class User < ActiveRecord::Base
 
   def stage_extras_enabled?(script)
     return false unless script.stage_extras_available?
+    return true if teacher?
 
-    sections_to_check = teacher? ? sections : sections_as_student
-    sections_to_check.any? do |section|
+    sections_as_student.any? do |section|
       section.script_id == script.id && section.stage_extras
     end
   end
