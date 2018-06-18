@@ -7,7 +7,7 @@ import {SET_SECTION} from '@cdo/apps/redux/sectionDataRedux';
  *
  * assessmentResponsesByScript - object - keys are scriptIds, values are objects of
  *  student ids to student response data for each assessment
- * assessmentsStructureByScript - object - keys are scriptIds, values are objects of
+ * assessmentQuestionsByScript - object - keys are scriptIds, values are objects of
  *   assessmentIds to question and answer information for each assessment
  * surveysByScript - object - keys are scriptIds, values are objects of
  *   assessmentIds to survey questions and anonymous responses
@@ -17,7 +17,7 @@ import {SET_SECTION} from '@cdo/apps/redux/sectionDataRedux';
  */
 const initialState = {
   assessmentResponsesByScript: {},
-  assessmentsStructureByScript: {},
+  assessmentQuestionsByScript: {},
   surveysByScript: {},
   isLoading: false,
   assessmentId: 0,
@@ -25,7 +25,7 @@ const initialState = {
 
 // Action type constants
 const SET_ASSESSMENT_RESPONSES = 'sectionAssessments/SET_ASSESSMENT_RESPONSES';
-const SET_ASSESSMENTS_STRUCTURE = 'sectionAssessments/SET_ASSESSMENTS_STRUCTURE';
+const SET_ASSESSMENTS_QUESTIONS = 'sectionAssessments/SET_ASSESSMENTS_QUESTIONS';
 const SET_SURVEYS = 'sectionAssessments/SET_SURVEYS';
 const START_LOADING_ASSESSMENTS = 'sectionAssessments/START_LOADING_ASSESSMENTS';
 const FINISH_LOADING_ASSESSMENTS = 'sectionAssessments/FINISH_LOADING_ASSESSMENTS';
@@ -34,8 +34,8 @@ const SET_ASSESSMENT_ID = 'sectionAssessments/SET_ASSESSMENT_ID';
 // Action creators
 export const setAssessmentResponses = (scriptId, assessments) =>
   ({ type: SET_ASSESSMENT_RESPONSES, scriptId, assessments});
-export const setAssessmentsStructure = (scriptId, assessments) =>
-  ({ type: SET_ASSESSMENTS_STRUCTURE, scriptId, assessments});
+export const setAssessmentQuestions = (scriptId, assessments) =>
+  ({ type: SET_ASSESSMENTS_QUESTIONS, scriptId, assessments});
 export const startLoadingAssessments = () => ({ type: START_LOADING_ASSESSMENTS });
 export const finishLoadingAssessments = () => ({ type: FINISH_LOADING_ASSESSMENTS });
 export const setAssessmentId = (assessmentId) => ({ type: SET_ASSESSMENT_ID, assessmentId: assessmentId });
@@ -52,16 +52,16 @@ export const asyncLoadAssessments = (sectionId, scriptId) => {
 
     dispatch(startLoadingAssessments());
 
-    const loadResponses = loadAssessmentsFromServer(sectionId, scriptId);
-    const loadStructure = loadAssessmentsStructureFromServer(scriptId);
+    const loadResponses = loadAssessmentResponsesFromServer(sectionId, scriptId);
+    const loadQuestions = loadAssessmentQuestionsFromServer(scriptId);
     const loadSurveys = loadSurveysFromServer(sectionId, scriptId);
-    const [responses, structure, surveys] = await Promise.all([loadResponses, loadStructure, loadSurveys]);
+    const [responses, questions, surveys] = await Promise.all([loadResponses, loadQuestions, loadSurveys]);
 
     dispatch(setAssessmentResponses(scriptId, responses));
-    dispatch(setAssessmentsStructure(scriptId, structure));
+    dispatch(setAssessmentQuestions(scriptId, questions));
     dispatch(setSurveys(scriptId, surveys));
 
-    dispatch(finishLoadingAssessments(responses, structure));
+    dispatch(finishLoadingAssessments());
   };
 };
 
@@ -100,11 +100,11 @@ export default function sectionAssessments(state=initialState, action) {
       }
     };
   }
-  if (action.type === SET_ASSESSMENTS_STRUCTURE) {
+  if (action.type === SET_ASSESSMENTS_QUESTIONS) {
     return {
       ...state,
-      assessmentsStructureByScript: {
-        ...state.assessmentsStructureByScript,
+      assessmentQuestionsByScript: {
+        ...state.assessmentQuestionsByScript,
         [action.scriptId]: action.assessments
       },
       // Default the assessmentId to the first assessment in the structure
@@ -132,7 +132,7 @@ export default function sectionAssessments(state=initialState, action) {
 // Returns an array of objects, each indicating an assessment name and it's id
 // for the assessments and surveys in the current script.
 export const getCurrentScriptAssessmentList = (state) => {
-  const assessmentStructure = state.sectionAssessments.assessmentsStructureByScript[state.scriptSelection.scriptId] || {};
+  const assessmentStructure = state.sectionAssessments.assessmentQuestionsByScript[state.scriptSelection.scriptId] || {};
   const assessments = Object.values(assessmentStructure).map(assessment => {
     return {
       id: assessment.id,
@@ -157,8 +157,8 @@ export const getAssessmentResponsesForCurrentScript = (state) => {
 };
 
 // Get the question structure for assessments in the current script and current assessment
-export const getCurrentAssessmentStructure = (state) => {
-  const currentScriptData = state.sectionAssessments.assessmentsStructureByScript[state.scriptSelection.scriptId]
+export const getCurrentAssessmentQuestions = (state) => {
+  const currentScriptData = state.sectionAssessments.assessmentQuestionsByScript[state.scriptSelection.scriptId]
     || {};
   return currentScriptData[state.sectionAssessments.assessmentId];
 };
@@ -169,7 +169,7 @@ export const getCurrentAssessmentStructure = (state) => {
  * question in the currently selected assessment.
  */
 export const getMultipleChoiceStructureForCurrentAssessment = (state) => {
-  const assessmentsStructure = getCurrentAssessmentStructure(state);
+  const assessmentsStructure = getCurrentAssessmentQuestions(state);
   if (!assessmentsStructure) {
     return [];
   }
@@ -250,7 +250,7 @@ const getCorrectAnswer = (answerArr) => {
 // Requests to the server for assessment data
 
 // Loads the assessment responses.
-const loadAssessmentsFromServer = (sectionId, scriptId) => {
+const loadAssessmentResponsesFromServer = (sectionId, scriptId) => {
   let payload = {section_id: sectionId};
   if (scriptId) {
     payload.script_id = scriptId;
@@ -264,7 +264,7 @@ const loadAssessmentsFromServer = (sectionId, scriptId) => {
 };
 
 // Loads the assessment question structure.
-const loadAssessmentsStructureFromServer = (scriptId) => {
+const loadAssessmentQuestionsFromServer = (scriptId) => {
   const payload = {script_id: scriptId};
   return $.ajax({
     url: `/dashboardapi/assessments`,
