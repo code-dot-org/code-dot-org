@@ -184,6 +184,7 @@ export const getStudentMCResponsesForCurrentAssessment = (state) => {
   }
 
   const studentResponsesArray = Object.keys(studentResponses).map(studentId => {
+    studentId = parseInt(studentId);
     const studentObject = studentResponses[studentId];
     const currentAssessmentId = state.sectionAssessments.assessmentId;
     const studentAssessment = studentObject.responses_by_assessment[currentAssessmentId];
@@ -193,10 +194,8 @@ export const getStudentMCResponsesForCurrentAssessment = (state) => {
       return;
     }
 
-    /**
-     * Transform that data into what we need for this particular table, in this case
-     * is the structure studentAnswerDataPropType
-     */
+    // Transform that data into what we need for this particular table, in this case
+    // is the structure studentAnswerDataPropType
     return {
       id: studentId,
       name: studentObject.student_name,
@@ -210,6 +209,45 @@ export const getStudentMCResponsesForCurrentAssessment = (state) => {
   }).filter(studentData => studentData);
 
   return studentResponsesArray;
+};
+
+/** Get data for students assessments multiple choice table
+ * Returns an object, each of type studentOverviewDataPropType with
+ * the value of the key being an object that contains the number
+ * of multiple choice answered correctly by a student, total number
+ * of multiple choice options, check for if the student submitted the
+ * assessment and a timestamp that indicates when a student submitted
+ * the assessment.
+ */
+export const getStudentsMCSummaryForCurrentAssessment = (state) => {
+  const summaryOfStudentsMCData = getAssessmentResponsesForCurrentScript(state);
+  if (!summaryOfStudentsMCData) {
+    return [];
+  }
+
+  const studentsSummaryArray = Object.keys(summaryOfStudentsMCData).map(studentId => {
+    studentId = parseInt(studentId);
+    const studentsObject = summaryOfStudentsMCData[studentId];
+    const currentAssessmentId = state.sectionAssessments.assessmentId;
+    const studentsAssessment = studentsObject.responses_by_assessment[currentAssessmentId];
+
+    // If the student has not submitted this assessment, don't display results.
+    if (!studentsAssessment) {
+      return;
+    }
+    // Transform that data into what we need for this particular table, in this case
+    // it is the structure studentOverviewDataPropType
+    return {
+      id: studentId,
+      name: studentsObject.student_name,
+      numMultipleChoiceCorrect: studentsAssessment.multi_correct,
+      numMultipleChoice: studentsAssessment.multi_count,
+      isSubmitted: studentsAssessment.submitted,
+      submissionTimeStamp: studentsAssessment.timestamp,
+    };
+  }).filter(studentOverviewData => studentOverviewData);
+
+  return studentsSummaryArray;
 };
 
 // Helpers
