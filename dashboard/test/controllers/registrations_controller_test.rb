@@ -376,7 +376,7 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_response :unprocessable_entity
   end
 
-  test "set_email: updates email for migrated user if password is correct" do
+  test "set_email: updates email for migrated teacher if password is correct" do
     teacher = create(:teacher, :with_migrated_email_authentication_option, password: 'mypassword')
     sign_in teacher
 
@@ -386,7 +386,17 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_equal 'new@email.com', teacher.email
   end
 
-  test "set_email: updates email for migrated user without password if password is not required" do
+  test "set_email: updates email for migrated student if password is correct" do
+    student = create(:student, :with_migrated_email_authentication_option, password: 'mypassword')
+    sign_in student
+
+    patch :set_email, params: {user: {email: 'new@email.com', current_password: 'mypassword'}}
+    student.reload
+    assert_response :success
+    assert_equal User.hash_email('new@email.com'), student.hashed_email
+  end
+
+  test "set_email: updates email for migrated teacher without password if password is not required" do
     teacher = create(:teacher, :with_migrated_email_authentication_option, encrypted_password: '')
     sign_in teacher
 
@@ -394,6 +404,16 @@ class RegistrationsControllerTest < ActionController::TestCase
     teacher.reload
     assert_response :success
     assert_equal 'new@email.com', teacher.email
+  end
+
+  test "set_email: updates email for migrated student without password if password is not required" do
+    student = create(:student, :with_migrated_email_authentication_option, encrypted_password: '')
+    sign_in student
+
+    patch :set_email, params: {user: {email: 'new@email.com'}}
+    student.reload
+    assert_response :success
+    assert_equal User.hash_email('new@email.com'), student.hashed_email
   end
 
   test "set_email: returns 422 for non-migrated user with password if user cannot edit password" do
