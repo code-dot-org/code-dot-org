@@ -410,10 +410,22 @@ class RegistrationsControllerTest < ActionController::TestCase
     student = create(:student, :with_migrated_email_authentication_option, encrypted_password: '')
     sign_in student
 
-    patch :set_email, params: {user: {email: 'new@email.com'}}
+    hashed_new_email = User.hash_email('new@email.com')
+    patch :set_email, params: {user: {hashed_email: hashed_new_email}}
     student.reload
     assert_response :success
-    assert_equal User.hash_email('new@email.com'), student.hashed_email
+    assert_equal hashed_new_email, student.hashed_email
+  end
+
+  test "set_email: updates email for migrated student with plaintext email param if provided" do
+    student = create(:student, :with_migrated_email_authentication_option, encrypted_password: '')
+    sign_in student
+
+    hashed_other_email = User.hash_email('second@email.com')
+    patch :set_email, params: {user: {email: 'first@email.com', hashed_email: hashed_other_email}}
+    student.reload
+    assert_response :success
+    assert_equal User.hash_email('first@email.com'), student.hashed_email
   end
 
   test "set_email: returns 422 for non-migrated user with password if user cannot edit password" do
