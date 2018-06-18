@@ -330,8 +330,6 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_select '#user_name', 1
   end
 
-  # TODO: same tests as below for migrated users
-
   test "set_email: returns bad_request if user param is nil" do
     student = create(:student)
     sign_in student
@@ -340,11 +338,75 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_response :bad_request
   end
 
+  test "set_email: returns 422 for migrated user with password if user cannot edit password" do
+    teacher = create(:teacher, :with_google_authentication_option)
+    teacher.update!(primary_authentication_option: teacher.authentication_options.first, provider: User::PROVIDER_MIGRATED)
+    sign_in teacher
+
+    User.any_instance.stubs(:can_edit_password?).returns(false)
+
+    patch :set_email, params: {user: {password: 'newpassword'}}
+    assert_response :unprocessable_entity
+  end
+
+  test "set_email: returns 422 for migrated user with email if user cannot edit email" do
+    teacher = create(:teacher, :with_google_authentication_option)
+    teacher.update!(primary_authentication_option: teacher.authentication_options.first, provider: User::PROVIDER_MIGRATED)
+    sign_in teacher
+
+    User.any_instance.stubs(:can_edit_email?).returns(false)
+
+    patch :set_email, params: {user: {email: 'new@email.com'}}
+    assert_response :unprocessable_entity
+  end
+
+  test "set_email: returns 422 for migrated user with hashed email if user cannot edit email" do
+    teacher = create(:teacher, :with_google_authentication_option)
+    teacher.update!(primary_authentication_option: teacher.authentication_options.first, provider: User::PROVIDER_MIGRATED)
+    sign_in teacher
+
+    User.any_instance.stubs(:can_edit_email?).returns(false)
+
+    patch :set_email, params: {user: {hashed_email: 'some-hash'}}
+    assert_response :unprocessable_entity
+  end
+
+  test "set_email: returns 422 for migrated user if password is incorrect" do
+    teacher = create(:teacher, :with_email_authentication_option, password: 'mypassword')
+    teacher.update!(primary_authentication_option: teacher.authentication_options.first, provider: User::PROVIDER_MIGRATED)
+    sign_in teacher
+
+    patch :set_email, params: {user: {email: 'example@email.com', current_password: 'notmypassword'}}
+    assert_response :unprocessable_entity
+  end
+
+  test "set_email: updates email for migrated user if password is correct" do
+    teacher = create(:teacher, :with_email_authentication_option, password: 'mypassword')
+    teacher.update!(primary_authentication_option: teacher.authentication_options.first, provider: User::PROVIDER_MIGRATED)
+    sign_in teacher
+
+    patch :set_email, params: {user: {email: 'new@email.com', current_password: 'mypassword'}}
+    teacher.reload
+    assert_response :success
+    assert_equal 'new@email.com', teacher.email
+  end
+
+  test "set_email: updates email for migrated user without if password is not required" do
+    teacher = create(:teacher, :with_email_authentication_option)
+    teacher.update!(primary_authentication_option: teacher.authentication_options.first, provider: User::PROVIDER_MIGRATED, encrypted_password: '')
+    sign_in teacher
+
+    patch :set_email, params: {user: {email: 'new@email.com'}}
+    teacher.reload
+    assert_response :success
+    assert_equal 'new@email.com', teacher.email
+  end
+
   test "set_email: returns 422 for non-migrated user with password if user cannot edit password" do
     teacher = create(:teacher, :with_email_authentication_option)
     sign_in teacher
 
-    teacher.stubs(:can_edit_password?).returns(false)
+    User.any_instance.stubs(:can_edit_password?).returns(false)
 
     patch :set_email, params: {user: {password: 'newpassword'}}
     assert_response :unprocessable_entity
@@ -354,7 +416,7 @@ class RegistrationsControllerTest < ActionController::TestCase
     teacher = create(:teacher, :with_email_authentication_option)
     sign_in teacher
 
-    teacher.stubs(:can_edit_email?).returns(false)
+    User.any_instance.stubs(:can_edit_email?).returns(false)
 
     patch :set_email, params: {user: {email: 'new@email.com'}}
     assert_response :unprocessable_entity
@@ -364,7 +426,7 @@ class RegistrationsControllerTest < ActionController::TestCase
     teacher = create(:teacher, :with_email_authentication_option)
     sign_in teacher
 
-    teacher.stubs(:can_edit_email?).returns(false)
+    User.any_instance.stubs(:can_edit_email?).returns(false)
 
     patch :set_email, params: {user: {hashed_email: 'some-hash'}}
     assert_response :unprocessable_entity
