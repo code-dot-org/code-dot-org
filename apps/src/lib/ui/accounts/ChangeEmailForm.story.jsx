@@ -14,7 +14,7 @@ const DEFAULT_PROPS = {
     emailOptIn: undefined,
   },
   userType: 'student',
-  hasPassword: true,
+  isPasswordRequired: true,
   disabled: false,
   onChange: action('onChange'),
   onSubmit: action('onSubmit')
@@ -46,7 +46,7 @@ export default storybook => storybook
             currentPassword: 'imsorich',
           }}
           userType="student"
-          hasPassword={false}
+          isPasswordRequired={false}
         />
       )
     },
@@ -106,7 +106,7 @@ export default storybook => storybook
             emailOptIn: 'yes',
           }}
           userType="teacher"
-          hasPassword={false}
+          isPasswordRequired={false}
         />
       )
     },

@@ -18,7 +18,7 @@ describe('ChangeEmailModal', () => {
     handleSubmit: () => {},
     handleCancel: () => {},
     userType: 'student',
-    hasPassword: true,
+    isPasswordRequired: true,
   };
 
   // Helpers for selecting particular elements/components
@@ -139,7 +139,7 @@ describe('ChangeEmailModal', () => {
           wrapper = mount(
             <ChangeEmailModal
               {...DEFAULT_PROPS}
-              hasPassword={false}
+              isPasswordRequired={false}
             />
           );
           wrapper.setState({

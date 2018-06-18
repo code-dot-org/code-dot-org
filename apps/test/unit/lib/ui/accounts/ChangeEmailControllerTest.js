@@ -39,7 +39,7 @@ describe('ChangeEmailController', () => {
       displayedUserEmail,
       userAge,
       userType,
-      hasPassword: true,
+      isPasswordRequired: true,
       emailChangedCallback
     });
   }

@@ -13,7 +13,7 @@ describe('ChangeEmailForm', () => {
     values: {},
     validationErrors: {},
     userType: 'student',
-    hasPassword: true,
+    isPasswordRequired: true,
     onChange: () => {},
     onSubmit: () => {}
   };
@@ -41,13 +41,13 @@ describe('ChangeEmailForm', () => {
   });
 
   describe('the password field', () => {
-    describe('when hasPassword is true', () => {
+    describe('when password is required', () => {
       it('is rendered for teachers', () => {
         const wrapper = mount(
           <ChangeEmailForm
             {...DEFAULT_PROPS}
             userType="teacher"
-            hasPassword={true}
+            isPasswordRequired={true}
           />
         );
         expect(wrapper.find(PASSWORD_SELECTOR)).to.exist;
@@ -58,20 +58,20 @@ describe('ChangeEmailForm', () => {
           <ChangeEmailForm
             {...DEFAULT_PROPS}
             userType="student"
-            hasPassword={true}
+            isPasswordRequired={true}
           />
         );
         expect(wrapper.find(PASSWORD_SELECTOR)).to.exist;
       });
     });
 
-    describe('when hasPassword is false', () => {
+    describe('when password is not required', () => {
       it('is not rendered for teachers', () => {
         const wrapper = mount(
           <ChangeEmailForm
             {...DEFAULT_PROPS}
             userType="teacher"
-            hasPassword={false}
+            isPasswordRequired={false}
           />
         );
         expect(wrapper.find(PASSWORD_SELECTOR)).not.to.exist;
@@ -82,7 +82,7 @@ describe('ChangeEmailForm', () => {
           <ChangeEmailForm
             {...DEFAULT_PROPS}
             userType="student"
-            hasPassword={false}
+            isPasswordRequired={false}
           />
         );
         expect(wrapper.find(PASSWORD_SELECTOR)).not.to.exist;

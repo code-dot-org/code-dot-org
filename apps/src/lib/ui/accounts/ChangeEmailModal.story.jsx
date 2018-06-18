@@ -8,7 +8,7 @@ export default storybook => storybook
     <ChangeEmailModal
       handleSubmit={action('handleSubmit callback')}
       handleCancel={action('handleCancel callback')}
-      hasPassword={true}
+      isPasswordRequired={true}
       userType="student"
     />
   ))
@@ -16,7 +16,7 @@ export default storybook => storybook
     <ChangeEmailModal
       handleSubmit={action('handleSubmit callback')}
       handleCancel={action('handleCancel callback')}
-      hasPassword={true}
+      isPasswordRequired={true}
       userType="teacher"
     />
   ));
