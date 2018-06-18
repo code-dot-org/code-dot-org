@@ -124,8 +124,11 @@ class RegistrationsController < Devise::RegistrationsController
         if forbidden_change?(current_user, params)
           false
         elsif needs_password?(current_user, params)
-          return false unless current_user.valid_password?(params[:user][:current_password])
-          current_user.update_primary_authentication_option(params[:user][:email])
+          if current_user.valid_password?(params[:user][:current_password])
+            current_user.update_primary_authentication_option(params[:user][:email])
+          else
+            false
+          end
         else
           current_user.update_primary_authentication_option(params[:user][:email])
         end
@@ -220,7 +223,6 @@ class RegistrationsController < Devise::RegistrationsController
   # ie if password or email was changed
   # extend this as needed
   def needs_password?(user, params)
-    # TODO: verify migrated user logic
     return false if user.migrated? && user.encrypted_password.blank?
 
     email_is_changing = params[:user][:email].present? &&
