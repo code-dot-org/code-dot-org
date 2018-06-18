@@ -2897,4 +2897,35 @@ class UserTest < ActiveSupport::TestCase
     user.update(permission: UserPermission::HIDDEN_SCRIPT_ACCESS)
     assert user.hidden_script_access?
   end
+
+  test 'user_levels_by_user_by_level' do
+    users = (1..3).map {create :user}
+    script = Script.twenty_hour_script
+    script_levels = script.script_levels.first(2)
+    script_levels.each do |script_level|
+      users.first(2).each do |user|
+        create :user_level, user: user, level: script_level.level, script: script
+      end
+    end
+
+    result = nil
+    assert_queries(1) do
+      result = User.user_levels_by_user_by_level(users, script)
+    end
+
+    assert_equal(
+      {
+        users[0].id => {
+          script_levels[0].level_id => UserLevel.find_by(user: users[0], level: script_levels[0].level),
+          script_levels[1].level_id => UserLevel.find_by(user: users[0], level: script_levels[1].level)
+        },
+        users[1].id => {
+          script_levels[0].level_id => UserLevel.find_by(user: users[1], level: script_levels[0].level),
+          script_levels[1].level_id => UserLevel.find_by(user: users[1], level: script_levels[1].level)
+        },
+        users[2].id => {}
+      },
+      result
+    )
+  end
 end
