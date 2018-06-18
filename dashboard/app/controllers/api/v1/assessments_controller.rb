@@ -1,7 +1,13 @@
 class Api::V1::AssessmentsController < Api::V1::JsonApiController
   include LevelsHelper
-  load_and_authorize_resource :section
+
+  before_filter :load_from_cache
+  load_and_authorize_resource :section, only: [:section_responses, :section_surveys]
   load_and_authorize_resource :script
+
+  def load_from_cache
+    @script = Script.get_from_cache(params[:script_id])
+  end
 
   # For each assessment in a script, return an object of script_level IDs to question data.
   # Question data includes the question text, all possible answers, and the correct answers.
