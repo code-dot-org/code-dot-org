@@ -281,9 +281,10 @@ describe('The Exporter,', function () {
         `<div>
           <div class="screen" tabindex="1" id="screen1">
             <input id="nameInput"/>
-            <img src="/v3/assets/some-channel-id/foo.png"/>
+            <img id="firstImage" src="/v3/assets/some-channel-id/foo.png"/>
             <button id="iconButton" data-canonical-image-url="icon://fa-hand-peace-o">
             <button id="clickMeButton" style="background-color: red;">Click Me!</button>
+            <img id="secondImage" src="/v3/assets/some-channel-id/foo.png"/>
           </div>
         </div>`
       );
@@ -413,7 +414,8 @@ describe('The Exporter,', function () {
       it("should rewrite urls in html to point to the correct asset files", function () {
         var el = document.createElement('html');
         el.innerHTML = zipFiles['my-app/index.html'];
-        assert.equal(el.querySelector("img").getAttribute('src'), 'assets/foo.png');
+        assert.equal(el.querySelector("#firstImage").getAttribute('src'), 'assets/foo.png');
+        assert.equal(el.querySelector("#secondImage").getAttribute('src'), 'assets/foo.png');
       });
 
       it("should rewrite urls in the code to point to the correct asset files", function () {
@@ -434,9 +436,10 @@ describe('The Exporter,', function () {
         `<div>
           <div class="screen" tabindex="1" id="screen1">
             <input id="nameInput"/>
-            <img src="/v3/assets/some-channel-id/foo.png"/>
+            <img id="firstImage" src="/v3/assets/some-channel-id/foo.png"/>
             <button id="iconButton" data-canonical-image-url="icon://fa-hand-peace-o">
             <button id="clickMeButton" style="background-color: red;">Click Me!</button>
+            <img id="secondImage" src="/v3/assets/some-channel-id/foo.png"/>
           </div>
         </div>`,
         true
@@ -583,7 +586,8 @@ describe('The Exporter,', function () {
       it("should rewrite urls in html to point to the correct asset files", function () {
         var el = document.createElement('html');
         el.innerHTML = zipFiles['my-app/assets/index.html'];
-        assert.equal(el.querySelector("img").getAttribute('src'), 'foo.png');
+        assert.equal(el.querySelector("#firstImage").getAttribute('src'), 'foo.png');
+        assert.equal(el.querySelector("#secondImage").getAttribute('src'), 'foo.png');
       });
 
       it("should rewrite urls in the code to point to the correct asset files", function () {
