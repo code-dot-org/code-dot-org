@@ -120,13 +120,27 @@ class RegistrationsController < Devise::RegistrationsController
     return head(:bad_request) if params[:user].nil?
 
     successfully_updated =
-      if forbidden_change?(current_user, params)
-        false
-      elsif needs_password?(current_user, params)
-        current_user.update_with_password(set_email_params)
+      if current_user.migrated?
+        if forbidden_change?(current_user, params)
+          false
+        elsif needs_password?(current_user, params)
+          if current_user.valid_password?(params[:user][:current_password])
+            current_user.update_primary_authentication_option(params[:user][:email])
+          else
+            false
+          end
+        else
+          current_user.update_primary_authentication_option(params[:user][:email])
+        end
       else
-        params[:user].delete(:current_password)
-        current_user.update_without_password(set_email_params)
+        if forbidden_change?(current_user, params)
+          false
+        elsif needs_password?(current_user, params)
+          current_user.update_with_password(set_email_params)
+        else
+          params[:user].delete(:current_password)
+          current_user.update_without_password(set_email_params)
+        end
       end
 
     if successfully_updated
@@ -209,6 +223,8 @@ class RegistrationsController < Devise::RegistrationsController
   # ie if password or email was changed
   # extend this as needed
   def needs_password?(user, params)
+    return false if user.migrated? && user.encrypted_password.blank?
+
     email_is_changing = params[:user][:email].present? &&
       user.email != params[:user][:email]
     hashed_email_is_changing = params[:user][:hashed_email].present? &&
