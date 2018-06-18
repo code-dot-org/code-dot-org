@@ -1191,15 +1191,16 @@ class UserTest < ActiveSupport::TestCase
     refute user.can_edit_email?
   end
 
-  # TODO: write factory for migrated user to make this test and the next one pass
   test 'can_edit_email? is false for migrated user with no authentication options' do
-    user = create :student, provider: User::PROVIDER_MIGRATED, authentication_options: []
-    refute user.can_edit_email?
+    teacher = create :teacher, email: 'example@email.com'
+    teacher.update(provider: User::PROVIDER_MIGRATED)
+    refute teacher.can_edit_email?
   end
 
   test 'can_edit_email? is true for migrated user with at least one authentication option' do
-    user = create :student, :with_google_authentication_option, provider: User::PROVIDER_MIGRATED
-    assert user.can_edit_email?
+    teacher = create :teacher, :with_email_authentication_option
+    teacher.update(provider: User::PROVIDER_MIGRATED)
+    assert teacher.can_edit_email?
   end
 
   test 'can change own user type as a student with a password' do
