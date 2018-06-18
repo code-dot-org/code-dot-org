@@ -1325,8 +1325,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'update_primary_authentication_option adds new email option if no matches exist' do
-    teacher = create :teacher, :with_google_authentication_option
-    teacher.update(primary_authentication_option: teacher.authentication_options.first)
+    teacher = create :teacher, :with_migrated_google_authentication_option
 
     assert_equal 1, teacher.authentication_options.count
     refute_nil teacher.primary_authentication_option
@@ -1338,9 +1337,8 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 'example@email.com', teacher.primary_authentication_option.email
   end
 
-  test 'update_primary_authentication_option updates email option if one already exists' do
-    teacher = create :teacher, :with_email_authentication_option
-    teacher.update(primary_authentication_option: teacher.authentication_options.first)
+  test 'update_primary_authentication_option replaces email option if one already exists' do
+    teacher = create :teacher, :with_migrated_email_authentication_option
 
     assert_equal 1, teacher.authentication_options.count
     refute_nil teacher.primary_authentication_option
@@ -1353,18 +1351,24 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'update_primary_authentication_option updates oauth option if a match exists' do
-    teacher = create :teacher, :with_google_authentication_option
-    teacher.update(primary_authentication_option: teacher.authentication_options.first)
-    existing_oauth_email = teacher.primary_authentication_option.email
+    teacher = create :teacher, :with_migrated_google_authentication_option
+    existing_email = teacher.primary_authentication_option.email
 
     assert_equal 1, teacher.authentication_options.count
     refute_nil teacher.primary_authentication_option
 
-    successful_save = teacher.update_primary_authentication_option(existing_oauth_email)
+    # Update primary to a different email
+    teacher.update_primary_authentication_option('example@email.com')
+    teacher.reload
+    assert_equal 2, teacher.authentication_options.count
+    assert_equal 'example@email.com', teacher.primary_authentication_option.email
+
+    # Change back to original oauth email
+    successful_save = teacher.update_primary_authentication_option(existing_email)
     teacher.reload
     assert successful_save
-    assert_equal 1, teacher.authentication_options.count
-    assert_equal existing_oauth_email, teacher.primary_authentication_option.email
+    assert_equal 2, teacher.authentication_options.count
+    assert_equal existing_email, teacher.primary_authentication_option.email
   end
 
   test 'track_proficiency adds proficiency if necessary and no hint used' do

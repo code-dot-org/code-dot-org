@@ -161,6 +161,21 @@ FactoryGirl.define do
           )
         end
       end
+      trait :with_migrated_google_authentication_option do
+        after(:create) do |user|
+          ao = create(:authentication_option,
+            user: user,
+            email: user.email,
+            hashed_email: user.hashed_email,
+            credential_type: 'google_oauth',
+            authentication_id: 'abcd123'
+          )
+          user.update!(
+            primary_authentication_option: ao,
+            provider: User::PROVIDER_MIGRATED
+          )
+        end
+      end
       trait :with_email_authentication_option do
         after(:create) do |user|
           create(:authentication_option,
