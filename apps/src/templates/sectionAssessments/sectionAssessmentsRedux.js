@@ -226,6 +226,30 @@ export const getStudentMCResponsesForCurrentAssessment = (state) => {
   return studentResponsesArray;
 };
 
+/**
+ * Returns an array of objects, each of type freeResponseQuestionsPropType
+ * indicating the question and responses to free response questions for the
+ * currently selected survey.
+ */
+export const getSurveyFreeResponseQuestions = (state) => {
+  const surveysStructure = state.sectionAssessments.surveysByScript[state.scriptSelection.scriptId] || {};
+  const currentSurvey = surveysStructure[state.sectionAssessments.assessmentId];
+  if (!currentSurvey) {
+    return [];
+  }
+
+  const questionData = currentSurvey.levelgroup_results;
+
+  return questionData.filter(question => question.type === 'free_response').map(question => {
+    return {
+      questionText: question.question,
+      answers: question.results.map((response, index) => {
+        return {index: index, response: response.result};
+      }),
+    };
+  });
+};
+
 /** Get data for students assessments multiple choice table
  * Returns an object, each of type studentOverviewDataPropType with
  * the value of the key being an object that contains the number
