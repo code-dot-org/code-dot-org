@@ -38,6 +38,7 @@
     "disable_if_else_editing": "false",
     "callout_json": "[]",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/33d07f77e86234c30568d8fe7c78cf64=levelbuilder/27202.png",
+    "hint_prompt_attempts_threshold": 5,
     "contained_level_names": null
   },
   "published": true,

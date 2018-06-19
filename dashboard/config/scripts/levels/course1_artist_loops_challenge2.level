@@ -39,6 +39,7 @@
     "disable_if_else_editing": "false",
     "markdown_instructions": "Let's play a game! Draw as many X's as you can! Can you get 3 in a row?",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/7bac282a123b42b9c0d0fafc7359963f=levelbuilder/32332.png",
+    "hint_prompt_attempts_threshold": 6,
     "contained_level_names": null
   },
   "published": true,

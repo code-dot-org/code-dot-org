@@ -44,12 +44,9 @@
     "pause_animations_by_default": "false",
     "hide_custom_blocks": "true",
     "parent_level_id": 14365,
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "display_name": "Course F Sprite Lab Project",
-    "project_template_level_name": "CourseF_Project_Template_SpriteLab"
+    "project_template_level_name": "CourseF_Project_Template_SpriteLab",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

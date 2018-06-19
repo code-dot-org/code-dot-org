@@ -38,6 +38,7 @@
     "disable_procedure_autopopulate": "false",
     "nectar_goal": "0",
     "honey_goal": "0",
+    "hint_prompt_attempts_threshold": 23,
     "contained_level_names": null
   },
   "published": true,
