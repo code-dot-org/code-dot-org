@@ -16,30 +16,32 @@ const freeResponsesByStudentResponsesPropType = PropTypes.shape({
   response: PropTypes.string,
 });
 
-class FreeResponsesByAssessmentsContainer extends Component {
+class FreeResponsesAssessmentsContainer extends Component {
   static propTypes= {
     freeResponsesByStudentResponses: PropTypes.arrayOf(freeResponsesByStudentResponsesPropType),
-    freeResponsesByQuestions: PropTypes.arrayOf(freeResponseQuestionsPropType),
+    freeResponseQuestions: PropTypes.arrayOf(PropTypes.string),
   };
 
   render() {
-    const {freeResponsesByStudentResponses} = this.props;
-
+    const {freeResponsesByStudentResponses, freeResponseQuestions} = this.props;
+    console.log('output', freeResponseQuestions);
     return (
       <div>
         <h2>Free responses for Assessments</h2>
-          <FreeResponsesAssessmentsTable
-            freeResponses={freeResponsesByStudentResponses}
-          />
+        {freeResponseQuestions.map((questionText, index) => (
+          <div key={index}>
+            <h3>{questionText}</h3>
+          </div>
+        ))}
       </div>
     );
   }
 }
 
-export const UnconnectedFreeResponsesByAssessmentsContainer = FreeResponsesByAssessmentsContainer;
+export const UnconnectedFreeResponsesAssessmentsContainer = FreeResponsesAssessmentsContainer;
 
 export default connect(state => ({
   freeResponsesByStudentResponses: getStudentFreeResponsesAssessmentsAnswers(state),
-  freeResponsesByQuestions: getFreeResponsesAssessmentsQuestions(state),
-}))(FreeResponsesByAssessmentsContainer);
+  freeResponseQuestions: getFreeResponsesAssessmentsQuestions(state),
+}))(FreeResponsesAssessmentsContainer);
 

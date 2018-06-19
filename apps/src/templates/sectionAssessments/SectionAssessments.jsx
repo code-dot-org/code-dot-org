@@ -11,7 +11,7 @@ import i18n from '@cdo/locale';
 import ScriptSelector from '@cdo/apps/templates/sectionProgress/ScriptSelector';
 import MultipleChoiceByStudentContainer from './MultipleChoiceByStudentContainer';
 import StudentsMCSummaryContainer from './StudentsMCSummaryContainer';
-import FreeResponsesByAssessmentsContainer from './FreeResponsesByAssessmentsContainer';
+import FreeResponsesAssessmentsContainer from './FreeResponsesAssessmentsContainer';
 import FreeResponseBySurveyQuestionContainer from './FreeResponseBySurveyQuestionContainer';
 import AssessmentSelector from './AssessmentSelector';
 
@@ -70,7 +70,7 @@ class SectionAssessments extends Component {
           {/* Assessments */}
           <StudentsMCSummaryContainer />
           <MultipleChoiceByStudentContainer />
-          <FreeResponsesByAssessmentsContainer />
+          <FreeResponsesAssessmentsContainer />
           {/* Surveys */}
           <FreeResponseBySurveyQuestionContainer />
       </div>
