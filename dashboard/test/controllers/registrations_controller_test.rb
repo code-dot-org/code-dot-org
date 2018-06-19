@@ -21,6 +21,28 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "update: teacher without a password can add a password" do
+    teacher = create :teacher, :with_migrated_google_authentication_option, encrypted_password: nil
+    teacher.update_attribute(:password, nil)
+    sign_in teacher
+
+    put :update, params: {user: {password: 'mypassword', password_confirmation: 'mypassword'}}
+    teacher.reload
+    assert_response :redirect
+    assert teacher.valid_password?('mypassword')
+  end
+
+  test "update: student without a password can add a password" do
+    student = create :student, :with_migrated_google_authentication_option, encrypted_password: nil
+    student.update_attribute(:password, nil)
+    sign_in student
+
+    put :update, params: {user: {password: 'mypassword', password_confirmation: 'mypassword'}}
+    student.reload
+    assert_response :redirect
+    assert student.valid_password?('mypassword')
+  end
+
   test "teachers go to specified return to url after signing up" do
     session[:user_return_to] = user_return_to = '//test.code.org/the-return-to-url'
 
