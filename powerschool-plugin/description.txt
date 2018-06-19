@@ -1,0 +1,8 @@
+Plugin management is done through Powersource, at https://support.powerschool.com/exchange/myFiles.action - the plugin.xml file in this directory should be uploaded as the file, and the data below filled in for the other details.
+
+We have test servers at code1.powerschool.com and code2.powerschool.org that we can manually load the plugin into for testing. The plugin configuration page there is at https://code1.powerschool.com/admin/pluginconsole/plugInConsole.action
+
+Title: Code.org Integration
+Screenshot: Code.org logo
+Description: Code.org® is a nonprofit dedicated to expanding access to computer science in schools and increasing participation by women and underrepresented minorities. We provide the leading curriculum for K-12 computer science in the largest school districts in the United States. This integration provides the ability for students and teachers to sign into Code.org through their PowerSchool login.
+
