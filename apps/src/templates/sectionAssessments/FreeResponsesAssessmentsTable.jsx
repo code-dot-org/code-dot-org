@@ -29,11 +29,10 @@ export const COLUMNS = {
   RESPONSE: 1,
 };
 
-const freeResponsesDataPropType = PropTypes.shape({
-  id:  PropTypes.number.isRequired,
-  studentId: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  response: PropTypes.string.isRequired,
+export const freeResponsesDataPropType = PropTypes.shape({
+  id:  PropTypes.number,
+  name: PropTypes.string,
+  response: PropTypes.string,
 });
 
 class FreeResponsesAssessmentsTable extends Component {
