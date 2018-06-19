@@ -3,6 +3,7 @@ import { setScriptId, validScriptPropType } from '@cdo/apps/redux/scriptSelectio
 import {
   asyncLoadAssessments,
   getCurrentScriptAssessmentList,
+  getMultipleChoiceSurveyResults,
   setAssessmentId,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {connect} from 'react-redux';
@@ -12,6 +13,7 @@ import ScriptSelector from '@cdo/apps/templates/sectionProgress/ScriptSelector';
 import MultipleChoiceByStudentContainer from './MultipleChoiceByStudentContainer';
 import StudentsMCSummaryContainer from './StudentsMCSummaryContainer';
 import FreeResponseBySurveyQuestionContainer from './FreeResponseBySurveyQuestionContainer';
+import MultipleChoiceSurveyOverviewTable from './MultipleChoiceSurveyOverviewTable';
 import AssessmentSelector from './AssessmentSelector';
 
 const styles = {
@@ -31,7 +33,8 @@ class SectionAssessments extends Component {
     assessmentId: PropTypes.number,
     setScriptId: PropTypes.func.isRequired,
     setAssessmentId: PropTypes.func.isRequired,
-    asyncLoadAssessments: PropTypes.func.isRequired
+    asyncLoadAssessments: PropTypes.func.isRequired,
+    multipleChoiceSurveyResults: PropTypes.array,
   };
 
   onChangeScript = scriptId => {
@@ -42,7 +45,7 @@ class SectionAssessments extends Component {
   };
 
   render() {
-    const {validScripts, scriptId, assessmentList, assessmentId} = this.props;
+    const {validScripts, scriptId, assessmentList, assessmentId, multipleChoiceSurveyResults} = this.props;
 
     return (
       <div>
@@ -70,6 +73,11 @@ class SectionAssessments extends Component {
           <StudentsMCSummaryContainer />
           <MultipleChoiceByStudentContainer />
           {/* Surveys */}
+          {multipleChoiceSurveyResults.length > 0 &&
+            <MultipleChoiceSurveyOverviewTable
+              multipleChoiceSurveyData={multipleChoiceSurveyResults}
+            />
+          }
           <FreeResponseBySurveyQuestionContainer />
       </div>
     );
@@ -85,6 +93,7 @@ export default connect(state => ({
   assessmentList: getCurrentScriptAssessmentList(state),
   scriptId: state.scriptSelection.scriptId,
   assessmentId: state.sectionAssessments.assessmentId,
+  multipleChoiceSurveyResults: getMultipleChoiceSurveyResults(state),
 }), dispatch => ({
   setScriptId(scriptId) {
     dispatch(setScriptId(scriptId));
