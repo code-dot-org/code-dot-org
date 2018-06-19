@@ -24,7 +24,31 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     assert_convert_sponsored_student create :student_in_word_section
   end
 
-  # TODO: Student with a parent-managed account
+  test 'convert sponsored username+password student' do
+    # also known as the "manual" provider - we don't create these anymore,
+    # but we have some old ones in our system.
+    user = create :student,
+      provider: User::PROVIDER_MANUAL,
+      email: '',
+      hashed_email: nil
+    assert_empty user.email
+    assert_nil user.hashed_email
+    refute_empty user.username
+    refute_empty user.encrypted_password
+
+    # TODO: What's the desired outcome here?
+  end
+
+  test 'convert parent-managed student' do
+    user = create :parent_managed_student
+    assert_empty user.email
+    assert_nil user.hashed_email
+    refute_empty user.username
+    refute_empty user.parent_email
+    refute_empty user.encrypted_password
+
+    # TODO: What's the desired outcome here?
+  end
 
   test 'convert email+password student' do
     user = create :student
@@ -39,8 +63,6 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     assert_convert_email_user user
     refute_empty user.primary_authentication_option.email
   end
-
-  # TODO: Old "manual" username and password student (no email or hashed email)
 
   #
   # Trusted email from Oauth:
