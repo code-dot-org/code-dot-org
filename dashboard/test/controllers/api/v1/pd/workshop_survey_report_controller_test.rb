@@ -186,6 +186,7 @@ class Api::V1::Pd::WorkshopSurveyReportControllerTest < ::ActionController::Test
     workshop = create :pd_workshop, :local_summer_workshop, facilitators: [@facilitator]
     sign_in @facilitator
 
+    @controller.expects(:generate_workshop_daily_session_summary)
     get :local_workshop_daily_survey_report, params: {workshop_id: workshop.id}
     assert_response :success
   end
@@ -194,6 +195,7 @@ class Api::V1::Pd::WorkshopSurveyReportControllerTest < ::ActionController::Test
     workshop = create :pd_workshop, :teachercon, facilitators: [@facilitator]
     sign_in @facilitator
 
+    @controller.expects(:generate_workshop_daily_session_summary)
     get :local_workshop_daily_survey_report, params: {workshop_id: workshop.id}
     assert_response :success
   end
