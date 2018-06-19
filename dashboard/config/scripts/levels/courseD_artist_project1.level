@@ -37,6 +37,7 @@
     "project_template_level_name": "courseD_artist_projectTemplate",
     "markdown_instructions": "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _“Hi, I’m Elsa of Arendelle, help me draw a shape.”_\r\n\r\nDraw a small shape, between **20 and 50** pixels wide.  It can be any shape that you like.  \r\n<hr/>\r\n\r\nYou can try making a polygon, like one of these:  \r\n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\r\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\r\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)  \r\n\r\n  \r\n  \r\nOr even an abstract shape, like one of these:  \r\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\r\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\r\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)\r\n",
     "disable_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 7,
     "contained_level_names": null
   },
   "published": true,

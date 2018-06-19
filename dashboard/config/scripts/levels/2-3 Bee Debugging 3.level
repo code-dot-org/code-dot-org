@@ -34,6 +34,7 @@
     "fast_get_nectar_animation": "false",
     "raw_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,1,1,1,1,0,0],[0,0,1,1,2,1,0,0],[0,0,1,1,\"+1\",1,0,0],[0,0,1,\"+1\",1,1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "markdown_instructions": "Ooh, this one stings!\r\n\r\nFix the error(s) to collect all of the nectar.",
+    "hint_prompt_attempts_threshold": 4,
     "contained_level_names": null
   },
   "published": true,
