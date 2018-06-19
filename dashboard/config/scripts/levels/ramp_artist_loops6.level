@@ -37,6 +37,7 @@
     "instructions": "Edit your loop to draw this staircase.",
     "markdown_instructions": "This staircase is much bigger, but it takes the same amount of code as the last puzzle!\r\n\r\nFix this loop to complete the puzzle.",
     "ideal": "7",
+    "hint_prompt_attempts_threshold": 4,
     "contained_level_names": null
   },
   "published": true,

@@ -47,6 +47,7 @@
     "markdown_instructions": "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _\"Keep going!\"_\r\n\r\nUse what you have learned to pick up all of the scrap metal!",
     "disable_procedure_autopopulate": "false",
     "remove_items_when_actor_collides": "false",
+    "hint_prompt_attempts_threshold": 10,
     "contained_level_names": null
   },
   "published": true,

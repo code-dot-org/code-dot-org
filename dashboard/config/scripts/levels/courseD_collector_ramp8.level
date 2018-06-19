@@ -38,6 +38,7 @@
     "shape_shift": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"When you get to a square with treasure, use `collect` to pick it up. For this puzzle, you'll need to collect treasure more than once!\",\"hint_id\":\"courseD_collector_ramp8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/fee6213041ed6199aa8331df40b4ed58/courseD_collector_ramp8.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you want to simplify your code more, you can actually put one `repeat` loop inside of another! This is called a **nested loop**.\",\"hint_id\":\"courseD_collector_ramp8_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/6c428f9c713bab3d126b741b1119665e/courseD_collector_ramp8.mp3\"}]",
     "disable_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 12,
     "contained_level_names": null
   },
   "published": true,
