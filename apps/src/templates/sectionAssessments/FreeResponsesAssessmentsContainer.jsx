@@ -1,7 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import FreeResponsesAssessmentsTable from './FreeResponsesAssessmentsTable';
 import {
-  getFreeResponsesAssessmentsQuestions,
+  getAssessmentsFreeResponseResults,
 } from './sectionAssessmentsRedux';
 import { connect } from 'react-redux';
 
@@ -32,6 +32,6 @@ class FreeResponsesAssessmentsContainer extends Component {
 export const UnconnectedFreeResponsesAssessmentsContainer = FreeResponsesAssessmentsContainer;
 
 export default connect(state => ({
-  freeResponseQuestions: getFreeResponsesAssessmentsQuestions(state),
+  freeResponseQuestions: getAssessmentsFreeResponseResults(state),
 }))(FreeResponsesAssessmentsContainer);
 
