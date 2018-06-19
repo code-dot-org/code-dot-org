@@ -49,6 +49,7 @@
     "tts_instructions_override": "Now, write a program to make Waddles the Penguin move around using the up, down, left, and right keys to hit all of the targets!",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Each green `when arrow` block should have one action below it.\",\"hint_id\":\"courseC_PlayLab_events6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e40aa6a7538233b0b477e8aa0c83579d/courseC_PlayLab_events6.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Use the drop down menu on the `move actor 1` block to change which direction Waddles moves.\",\"hint_id\":\"courseC_PlayLab_events6_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5a44c8b08f03853525ea21cb264bf59d/courseC_PlayLab_events6.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"When you're done, you should be able to move Waddles around using the arrow keys on your computer!\",\"hint_id\":\"courseC_PlayLab_events6_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/99b292be554d354841f56550e62d3b8c/courseC_PlayLab_events6.mp3\"}]",
     "disable_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 2,
     "contained_level_names": null
   },
   "published": true,

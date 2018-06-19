@@ -41,6 +41,7 @@
     "disable_if_else_editing": "false",
     "callout_json": "[]",
     "min_collected": "0",
+    "hint_prompt_attempts_threshold": 10,
     "contained_level_names": null
   },
   "published": true,

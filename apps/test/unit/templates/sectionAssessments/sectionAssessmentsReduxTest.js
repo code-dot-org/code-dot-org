@@ -12,6 +12,7 @@ import sectionAssessments, {
   getStudentsMCSummaryForCurrentAssessment,
   getSurveyFreeResponseQuestions,
   getAssessmentsFreeResponseResults,
+  getMultipleChoiceSurveyResults,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
 
@@ -299,6 +300,59 @@ describe('sectionAssessmentsRedux', () => {
         assert.deepEqual(result, [
           {questionText: 'question1', answers: [{index: 0, response: 'Im not sure'}]},
           {questionText: 'question2', answers: [{index: 0, response: 'Im very sure'}]}
+        ]);
+      });
+    });
+
+    describe('getMultipleChoiceSurveyResults', () => {
+      it('returns an empty array when no surveys in redux', () => {
+        const result = getMultipleChoiceSurveyResults(rootState);
+        assert.deepEqual(result, []);
+      });
+
+      it('returns an array of objects representing free response questions', () => {
+        const stateWithSurvey = {
+          ...rootState,
+          sectionAssessments: {
+            ...rootState.sectionAssessments,
+            assessmentId: 123,
+            surveysByScript: {
+              3: {
+                123: {
+                  stage_name: 'name',
+                  levelgroup_results: [
+                    {
+                      type: 'multi',
+                      question: 'question1',
+                      answer_texts: [{text: 'agree'}, {text: 'disagree'}],
+                      results: [{answer_index: 0}]
+                    },
+                    {
+                      type: 'multi',
+                      question: 'question2',
+                      answer_texts: [{text: 'agree'}, {text: 'disagree'}],
+                      results: [{answer_index: 1}]
+                    },
+                  ],
+                }
+              }
+            }
+          }
+        };
+        const result = getMultipleChoiceSurveyResults(stateWithSurvey);
+        assert.deepEqual(result, [
+          {
+            id: 0,
+            question: 'question1',
+            answers: [{multipleChoiceOption: 'A', percentAnswered: 100}, {multipleChoiceOption: 'B', percentAnswered: 0}],
+            notAnswered: 0,
+          },
+          {
+            id: 1,
+            question: 'question2',
+            answers: [{multipleChoiceOption: 'A', percentAnswered: 0}, {multipleChoiceOption: 'B', percentAnswered: 100}],
+            notAnswered: 0,
+          },
         ]);
       });
     });
