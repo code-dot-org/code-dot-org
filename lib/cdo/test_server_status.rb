@@ -10,17 +10,18 @@ module TestServerStatus
     Metrics.write_metric('dtt_start', sha, Metrics::MANUAL)
   end
 
-  # Marks the most recent DTT green, updating Slack#infra-test and Slack#developers topics
-  # appropriately. Inserts a 'dtt_green' row into the metrics table.
+  # Marks the most recent DTT green, updating Slack #infra-test and
+  # #deploy-status topics appropriately.
   def self.mark_green(sha, source = Metrics::MANUAL)
     DevelopersTopic.set_dtt 'yes'
     InfraTestTopic.set_green_commit sha
     Metrics.write_metric('dtt_green', sha, source)
   end
 
-  # Marks the most recent DTT red, updating Slack#developers topic to allow a new
-  # test run, but leaving the Slack#infra-test topic with the hash of the previous
-  # green run. Inserts a 'dtt_red' row into the metrics table.
+  # Marks the most recent DTT red, updating the Slack #deploy-status topic to
+  # allow a new test run, and sends a message to #infra-test reporting the red
+  # outcome but leaves the topic alone so it continues to represent the most
+  # recent green run.
   def self.mark_red(sha, source = Metrics::MANUAL)
     DevelopersTopic.set_dtt 'yes'
     InfraTestTopic.set_red_commit sha
