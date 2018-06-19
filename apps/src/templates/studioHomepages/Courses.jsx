@@ -43,6 +43,7 @@ class Courses extends Component {
       {linesCount: this.props.linesCount, studentsCount: this.props.studentsCount}
     );
     const headingDescription = isSignedOut ? i18n.coursesHeadingDescription() : null;
+    const showSpecialTeacherAnnouncement = false;
 
     return (
       <div style={styles.content}>
@@ -68,7 +69,9 @@ class Courses extends Component {
         {/* English, teacher.  (Also can be shown when signed out.) */}
         {(isEnglish && isTeacher) && (
           <div>
-            <SpecialAnnouncementActionBlock/>
+            {showSpecialTeacherAnnouncement && (
+              <SpecialAnnouncementActionBlock/>
+            )}
             <CoursesTeacherEnglish
               isSignedOut={isSignedOut}
               showInitialTips={showInitialTips}
