@@ -238,43 +238,11 @@ export const getFreeResponsesAssessmentsQuestions = (state) => {
   // Transform that data into what we need for this particular table, in this case
   // questionStructurePropType structure.
   return questionData.filter(question => question.type === 'FreeResponse').map(question => {
-    return question.question_text;
-  });
-};
-
-// TODO(nkiruka) Add comments - Free Responses Assessments Table
-export const getStudentFreeResponsesAssessmentsAnswers = (state) => {
-  const studentResponses = getAssessmentResponsesForCurrentScript(state);
-  if (!studentResponses) {
-    return [];
-  }
-
-  const studentResponsesArray = Object.keys(studentResponses).map(studentId => {
-    studentId = parseInt(studentId);
-    const studentObject = studentResponses[studentId];
-    const currentAssessmentId = state.sectionAssessments.assessmentId;
-    const studentAssessment = studentObject.responses_by_assessment[currentAssessmentId];
-
-    // If the student has not submitted this assessment, don't display results.
-    if (!studentAssessment) {
-      return;
-    }
-
-    // Transform that data into what we need for this particular table, in this case
-    // is the structure studentAnswerDataPropType
     return {
-      id: studentId,
-      name: studentObject.student_name,
-      studentResponses: studentAssessment.level_results.map(answer => {
-        return {
-          responses: answer.student_result || '',
-        };
-      })
+      questionText: question.question_text,
+      responses: [],
     };
-  }).filter(freeResponsesByStudentResponses => freeResponsesByStudentResponses);
-
-  return studentResponsesArray;
-
+  });
 };
 
 /**
