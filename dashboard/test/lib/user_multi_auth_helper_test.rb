@@ -4,16 +4,16 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   test 'does nothing if user is already migrated' do
     user = create :teacher, :with_multi_auth
     assert user.migrated?
-    refute_empty user.email
 
+    user.expects(:save).never
     migrate user
 
     assert user.migrated?
-    refute_empty user.email
   end
 
   #
   # Non-Oauth accounts:
+  # Picture and word password students have no authentication_options.
   #
 
   test 'convert sponsored picture password student' do
