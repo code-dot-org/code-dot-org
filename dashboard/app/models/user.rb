@@ -148,6 +148,7 @@ class User < ActiveRecord::Base
 
   PROVIDER_MANUAL = 'manual'.freeze # "old" user created by a teacher -- logs in w/ username + password
   PROVIDER_SPONSORED = 'sponsored'.freeze # "new" user created by a teacher -- logs in w/ name + secret picture/word
+  PROVIDER_MIGRATED = 'migrated'.freeze
 
   OAUTH_PROVIDERS = %w(
     clever
@@ -284,12 +285,12 @@ class User < ActiveRecord::Base
   end
 
   def email
-    return read_attribute(:email) unless provider == 'migrated'
+    return read_attribute(:email) unless migrated?
     primary_authentication_option.try(:email)
   end
 
   def hashed_email
-    return read_attribute(:hashed_email) unless provider == 'migrated'
+    return read_attribute(:hashed_email) unless migrated?
     primary_authentication_option.try(:hashed_email)
   end
 
@@ -721,6 +722,8 @@ class User < ActiveRecord::Base
       user.uid = auth.uid
       user.name = name_from_omniauth auth.info.name
       user.user_type = params['user_type'] || auth.info.user_type
+      user.user_type = 'teacher' if user.user_type == 'staff' # Powerschool sends through 'staff' instead of 'teacher'
+
       # Store emails, except when using Clever
       user.email = auth.info.email unless user.user_type == 'student' && OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(auth.provider)
 
@@ -828,6 +831,31 @@ class User < ActiveRecord::Base
     else
       super
     end
+  end
+
+  def update_primary_authentication_option(user: {email: nil, hashed_email: nil})
+    email = user[:email]
+    hashed_email = user[:hashed_email]
+
+    return false if email.nil? && hashed_email.nil?
+    return false if teacher? && email.nil?
+
+    # If an email option with a different email address already exists, destroy it
+    existing_email_option = authentication_options.find {|ao| ao.credential_type == 'email'}
+    existing_email_option&.destroy
+
+    # If an auth option exists with same email, set it to the user's primary authentication option
+    existing_auth_option = authentication_options.find {|ao| ao.email == email || ao.hashed_email == hashed_email}
+    if existing_auth_option
+      self.primary_authentication_option = existing_auth_option
+      return save
+    end
+
+    params = {credential_type: 'email', user: self}
+    params[:email] = email unless email.nil?
+    params[:hashed_email] = hashed_email if email.nil?
+    self.primary_authentication_option = AuthenticationOption.new(params)
+    return save
   end
 
   # True if the account is teacher-managed and has any sections that use word logins.
@@ -1698,11 +1726,21 @@ class User < ActiveRecord::Base
     AsyncProgressHandler.progress_queue
   end
 
+  def migrated?
+    provider == PROVIDER_MIGRATED
+  end
+
   # We restrict certain users from editing their email address, because we
   # require a current password confirmation to edit email and some users don't
   # have passwords
   def can_edit_email?
-    encrypted_password.present? || oauth?
+    if migrated?
+      # Only word/picture account users do not have authentication options
+      # and therefore cannot edit their email addresses
+      !authentication_options.empty?
+    else
+      encrypted_password.present? || oauth?
+    end
   end
 
   # We restrict certain users from editing their password; in particular, those
@@ -1764,9 +1802,9 @@ class User < ActiveRecord::Base
 
   def stage_extras_enabled?(script)
     return false unless script.stage_extras_available?
+    return true if teacher?
 
-    sections_to_check = teacher? ? sections : sections_as_student
-    sections_to_check.any? do |section|
+    sections_as_student.any? do |section|
       section.script_id == script.id && section.stage_extras
     end
   end
