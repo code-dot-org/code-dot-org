@@ -1,17 +1,8 @@
 import { PropTypes } from 'react';
-
-export const answerDataPropType = PropTypes.shape({
-  multipleChoiceOption: PropTypes.string,
-  percentAnswered: PropTypes.number,
-  isCorrectAnswer: PropTypes.bool,
-});
-
-export const questionDataPropType = PropTypes.shape({
-  id: PropTypes.number.isRequired,
-  question: PropTypes.string.isRequired,
-  answers: PropTypes.arrayOf(answerDataPropType),
-  notAnswered: PropTypes.number.isRequired,
-});
+/**
+ * If custom PropType shapes are required in more than one file,
+ * we define them here.
+ */
 
 // Shapes for single student multiple choice tables
 
@@ -39,5 +30,3 @@ export const multipleChoiceQuestionPropType = PropTypes.shape({
   question: PropTypes.string.isRequired,
   correctAnswer: PropTypes.string.isRequired,
 });
-
-
