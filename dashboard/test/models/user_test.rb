@@ -1171,6 +1171,17 @@ class UserTest < ActiveSupport::TestCase
     )
   end
 
+  test 'sponsored? is true for user with sponsored provider' do
+    student = create :student, provider: User::PROVIDER_SPONSORED
+    assert student.sponsored?
+  end
+
+  test 'sponsored? is true for migrated user with no authentication options' do
+    student = create :student, email: 'example@email.com'
+    student.update(provider: User::PROVIDER_MIGRATED)
+    assert student.sponsored?
+  end
+
   test 'can_edit_password? is true for user with password' do
     assert @student.can_edit_password?
   end

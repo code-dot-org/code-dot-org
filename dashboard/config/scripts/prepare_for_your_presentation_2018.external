@@ -1,6 +1,5 @@
 name 'Prepare for your presentation_2018'
-title 'title'
-description 'description here'
+title 'Prepare for yur presentation'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 # Project Presentations

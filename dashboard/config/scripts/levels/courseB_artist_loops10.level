@@ -37,6 +37,7 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "tts_markdown_instructions_override": "Use what you have learned to draw a picture of what you think the artist saw when he got home.",
+    "hint_prompt_attempts_threshold": 5,
     "contained_level_names": null
   },
   "published": true,

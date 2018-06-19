@@ -36,6 +36,7 @@
     "markdown_instructions": "For the final puzzle in this stage, use what you have learned to collect all of the nectar and make all of the honey.  ",
     "shape_shift": "false",
     "disable_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 17,
     "contained_level_names": null
   },
   "published": true,

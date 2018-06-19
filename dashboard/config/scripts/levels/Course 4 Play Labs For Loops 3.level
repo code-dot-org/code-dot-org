@@ -39,6 +39,7 @@
     "first_sprite_index": "19",
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
+    "hint_prompt_attempts_threshold": 3,
     "contained_level_names": null
   },
   "published": true,
