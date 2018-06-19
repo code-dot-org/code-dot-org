@@ -263,16 +263,31 @@ export const getMultipleChoiceSurveyResults = (state) => {
   const questionData = currentSurvey.levelgroup_results;
 
   return questionData.filter(question => question.type === 'multi').map((question, index) => {
+    const totalAnswered = question.results.length;
+    const answerTotals = [];
+    for (let i = 0; i< question.answer_texts.length; i++) {
+      answerTotals[i] = 0;
+    }
+    let notAnswered = 0;
+    for (let i = 0; i<totalAnswered; i++) {
+      const answerIndex = question.results[i].answer_index;
+      if (answerIndex >= 0) {
+        answerTotals[answerIndex]++;
+      } else {
+        notAnswered++;
+      }
+    }
+
     return {
       id: index,
       question: question.question,
       answers: question.answer_texts.map((answer, index) => {
         return {
           multipleChoiceOption: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'][index],
-          percentAnswered: 10,
+          percentAnswered: Math.floor((answerTotals[index]/totalAnswered) * 100),
         };
       }),
-      notAnswered: 0,
+      notAnswered: Math.floor((notAnswered/totalAnswered) * 100),
     };
   });
 };
