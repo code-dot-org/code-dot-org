@@ -14,7 +14,7 @@ class StudentsMCSummaryContainer extends Component {
     return (
       <div>
         {/* TODO(NO): Temporary placeholder for the header of the table */}
-        <h1>Students MC Summary Container </h1>
+        <h2>Students MC Summary Container </h2>
         <StudentsAssessmentsMCTable
           studentOverviewData={this.props.studentOverviewData}
         />
