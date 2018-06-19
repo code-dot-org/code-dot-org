@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://plugin.powerschool.pearson.com"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation='http://plugin.powerschool.pearson.com plugin.xsd'
+        name="Code.org"
+        version="1.0"
+        description="Code.org/Powerschool single sign on">
+
+  <openid host="studio.code.org" port="443">
+    <links>
+      <link title="Login to Code.org" display-text="Code.org" path="/users/auth/powerschool">
+        <ui_contexts>
+          <ui_context id="teacher.header" />
+          <ui_context id="student.header" />
+        </ui_contexts>
+      </link>
+    </links>
+  </openid>
+
+  <oauth/>
+
+  <publisher name="Code.org">
+    <contact email="support@code.org" />
+  </publisher>
+
+</plugin>
