@@ -203,7 +203,6 @@ export const getStudentMCResponsesForCurrentAssessment = (state) => {
     const studentObject = studentResponses[studentId];
     const currentAssessmentId = state.sectionAssessments.assessmentId;
     const studentAssessment = studentObject.responses_by_assessment[currentAssessmentId];
-    console.log('result', studentAssessment);
 
     // If the student has not submitted this assessment, don't display results.
     if (!studentAssessment) {
@@ -238,10 +237,8 @@ export const getFreeResponsesAssessmentsQuestions = (state) => {
 
   // Transform that data into what we need for this particular table, in this case
   // questionStructurePropType structure.
-  return questionData.filter(question => question.type === 'free_response').map(question => {
-    return {
-      questionText: question.question,
-    };
+  return questionData.filter(question => question.type === 'FreeResponse').map(question => {
+    return question.question_text;
   });
 };
 
@@ -255,9 +252,7 @@ export const getStudentFreeResponsesAssessmentsAnswers = (state) => {
   const studentResponsesArray = Object.keys(studentResponses).map(studentId => {
     studentId = parseInt(studentId);
     const studentObject = studentResponses[studentId];
-    console.log('stdObj',studentObject);
     const currentAssessmentId = state.sectionAssessments.assessmentId;
-    console.log('currAssess',currentAssessmentId);
     const studentAssessment = studentObject.responses_by_assessment[currentAssessmentId];
 
     // If the student has not submitted this assessment, don't display results.
@@ -273,7 +268,6 @@ export const getStudentFreeResponsesAssessmentsAnswers = (state) => {
       studentResponses: studentAssessment.level_results.map(answer => {
         return {
           responses: answer.student_result || '',
-          status: 'free_response',
         };
       })
     };
