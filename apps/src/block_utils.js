@@ -387,7 +387,7 @@ exports.cleanBlocks = function (blocksDom) {
 exports.appendNewFunctions = function (blocksXml, functionsXml) {
   const startBlocksDom = xml.parseElement(blocksXml);
   const sharedFunctionsDom = xml.parseElement(functionsXml);
-  const functions = [...sharedFunctionsDom.ownerDocument.firstElementChild.children];
+  const functions = [...sharedFunctionsDom.ownerDocument.firstChild.childNodes];
   for (let func of functions) {
     const name = func.ownerDocument.evaluate(
       'title[@name="NAME"]/text()', func, null, XPathResult.STRING_TYPE,
@@ -400,7 +400,7 @@ exports.appendNewFunctions = function (blocksXml, functionsXml) {
       startBlocksDom, null, XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE,
     ).snapshotLength > 0;
     if (!alreadyPresent) {
-      startBlocksDom.ownerDocument.firstElementChild.appendChild(func);
+      startBlocksDom.ownerDocument.firstChild.appendChild(func);
     }
   }
   return xml.serialize(startBlocksDom);
