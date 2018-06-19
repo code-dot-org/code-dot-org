@@ -69,6 +69,7 @@ import {showHideWorkspaceCallouts} from '../code-studio/callouts';
 
 import {TestResults, ResultType} from '../constants';
 import i18n from '../code-studio/i18n';
+import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 
 /**
  * Create a namespace for the application.
@@ -541,6 +542,8 @@ Applab.init = function (config) {
 
   Applab.handleVersionHistory = studioApp().getVersionHistoryHandler(config);
 
+  var teacherViewStudentWork = getStore().getState().viewAs === ViewType.Teacher && config.readonlyWorkspace;
+
   var onMount = function () {
     studioApp().init(config);
 
@@ -571,7 +574,7 @@ Applab.init = function (config) {
     designMode.loadDefaultScreen();
 
     getStore().dispatch(actions.changeInterfaceMode(
-      Applab.startInDesignMode() ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
+      (!teacherViewStudentWork && Applab.startInDesignMode()) ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
 
     designMode.configureDragAndDrop();
 
@@ -618,7 +621,7 @@ Applab.init = function (config) {
   config.level.levelBlocks = config.dropletConfig.blocks;
 
   getStore().dispatch(actions.changeInterfaceMode(
-    Applab.startInDesignMode() ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
+    (!teacherViewStudentWork && Applab.startInDesignMode()) ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
 
   Applab.reactInitialProps_ = {
     onMount: onMount
