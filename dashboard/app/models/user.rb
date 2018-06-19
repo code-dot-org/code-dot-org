@@ -1749,7 +1749,7 @@ class User < ActiveRecord::Base
     if migrated?
       # Only word/picture account users do not have authentication options
       # and therefore cannot edit their email addresses
-      !authentication_options.empty?
+      !sponsored?
     else
       encrypted_password.present? || oauth?
     end
@@ -1760,7 +1760,7 @@ class User < ActiveRecord::Base
   # picture, or some other unusual method
   def can_edit_password?
     if migrated?
-      !authentication_options.empty?
+      !sponsored?
     else
       encrypted_password.present?
     end
