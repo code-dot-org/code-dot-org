@@ -21,6 +21,8 @@
         %a#commit-hash{href: "https://github.com/code-dot-org/code-dot-org/commit/#{commit_hash}", data: {hash: commit_hash}}= commit_hash[0..7]
         |
         %span#start-time= start_time.iso8601
+        |
+        %a#help-link Help
       %div#total-progress
         %div.progress-text
         %div.progress-bar
@@ -43,12 +45,26 @@
               %tr{data:{browser: browser, feature: feature}}
                 %td= browser
                 %td
-                  %a(href="https://github.com/code-dot-org/code-dot-org/blob/#{git_branch}/dashboard/test/ui/#{feature}" target='_blank')= feature.sub(/features\//, '')
+                  %a{href: "https://github.com/code-dot-org/code-dot-org/blob/#{git_branch}/dashboard/test/ui/#{feature}" target='_blank'}= feature.sub(/features\//, '')
                 %td.status
                 %td.log-link
                 %td.rerun-command
                   - rerun_command = "bundle exec ./runner.rb --html #{type == 'Eyes' ? '--eyes' : ''} -c #{browser} -f #{feature}"
                   %button.copy-button{'data-clipboard-text': rerun_command}= "Copy Rerun Cmd"
+      %div#help-text
+        %p
+          This test status page shows the test status for a particular test run.
+          At the top of the page you can see the branch, commit, and test run
+          start time.
+        %p
+          To re-run a test, click the "Copy Rerun Cmd" button on the right side
+          of the table to copy it do your clipboard, then navigate to the UI
+          test directory on the test machine in your terminal and paste and run
+          the command.
+        %p
+          You can ssh to the test machine through the gateway machine.
+          The UI test directory on the test machine is `~/test/dashboard/test/ui`.
+
     %input#test-type{type: 'hidden', value: type}
     %input#api-origin{type: 'hidden', value: api_origin}
     %input#s3-bucket{type: 'hidden', value: s3_bucket}
