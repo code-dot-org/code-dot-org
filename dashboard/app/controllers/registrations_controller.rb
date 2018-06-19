@@ -223,7 +223,7 @@ class RegistrationsController < Devise::RegistrationsController
   # ie if password or email was changed
   # extend this as needed
   def needs_password?(user, params)
-    return false if user.migrated? && user.encrypted_password.blank?
+    return false if user.migrated? && user.encrypted_password.blank? && params[:user][:password].blank?
 
     email_is_changing = params[:user][:email].present? &&
       user.email != params[:user][:email]

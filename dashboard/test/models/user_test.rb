@@ -1192,6 +1192,23 @@ class UserTest < ActiveSupport::TestCase
     refute user.can_edit_password?
   end
 
+  test 'can_edit_password? is true for migrated student without a password' do
+    student = create :student, :with_migrated_email_authentication_option, encrypted_password: ''
+    assert student.can_edit_password?
+  end
+
+  test 'can_edit_password? is true for migrated teacher without a password' do
+    teacher = create :teacher, :with_migrated_email_authentication_option, encrypted_password: ''
+    assert teacher.can_edit_password?
+  end
+
+  test 'can_edit_password? is false for migrated user with no authentication options' do
+    user = create :user
+    user.update(provider: 'migrated')
+    assert user.authentication_options.empty?
+    refute user.can_edit_password?
+  end
+
   test 'can_edit_email? is true for user with password' do
     assert @student.can_edit_email?
   end
