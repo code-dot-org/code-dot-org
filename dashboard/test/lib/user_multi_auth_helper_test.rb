@@ -6,12 +6,31 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     refute_empty user.email
     assert_equal 'migrated', user.provider
 
-    user.migrate_to_multi_auth
-    user.reload
+    migrate user
 
     refute_empty user.email
     assert_equal 'migrated', user.provider
   end
+
+  # Non-Oauth accounts:
+  # Picture password student
+  # Word password student
+  # Student with a parent-managed account
+  # Email + password user
+  # Old "manual" username and password student (no email or hashed email)
+
+  test 'convert sponsored picture password student' do
+    assert_convert_sponsored_student create :student_in_picture_section
+  end
+
+  test 'convert sponsored word password student' do
+    assert_convert_sponsored_student create :student_in_word_section
+  end
+
+  # Trusted email from Oauth:
+  # Google Oauth user that also has a password
+  # Microsoft Oauth
+  # Facebook Oauth
 
   test 'converts google_oauth2 teacher' do
     user = create(:google_oauth2_teacher)
@@ -31,8 +50,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     refute_nil initial_oauth_token_expiration
     refute_nil initial_oauth_refresh_token
 
-    user.migrate_to_multi_auth
-    user.reload
+    migrate user
 
     assert_equal 'migrated', user.provider
     assert_equal 1, user.authentication_options.count
@@ -53,21 +71,29 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     assert_equal initial_oauth_refresh_token, data['oauth_refresh_token']
   end
 
-  # Non-Oauth accounts:
-  # Picture password student
-  # Word password student
-  # Student with a parent-managed account
-  # Email + password user
-  # Old "manual" username and password student (no email or hashed email)
-  #
-  # Trusted email from Oauth:
-  # Google Oauth user that also has a password
-  # Microsoft Oauth
-  # Facebook Oauth
-  #
   # Untrusted email from Oauth:
   # Clever Oauth user
   # Clever Oauth user that also has a password (due to takeover)
   # Powerschool Oauth
   # Powerschool Oauth user that also has a password (due to takeover)
+
+  private
+
+  def assert_convert_sponsored_student(user)
+    refute user.migrated?
+    assert user.sponsored?
+
+    migrate user
+
+    assert user.migrated?
+    assert user.sponsored?
+    assert_empty user.authentication_options
+    assert_nil user.primary_authentication_option
+  end
+
+  def migrate(user)
+    result = user.migrate_to_multi_auth
+    user.reload
+    assert result, 'Expected migration to multi-auth to succeed, but it failed'
+  end
 end
