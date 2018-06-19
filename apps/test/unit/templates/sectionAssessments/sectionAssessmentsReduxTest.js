@@ -11,6 +11,7 @@ import sectionAssessments, {
   getStudentMCResponsesForCurrentAssessment,
   getStudentsMCSummaryForCurrentAssessment,
   getSurveyFreeResponseQuestions,
+  getAssessmentsFreeResponseResults,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
 
@@ -215,6 +216,57 @@ describe('sectionAssessmentsRedux', () => {
         };
         const result = getStudentMCResponsesForCurrentAssessment(stateWithAssessment);
         assert.deepEqual(result, [{id: 1, name: 'Saira', studentResponses: [{responses: 'D', isCorrect: false}]}]);
+      });
+    });
+
+    describe('getAssessmentsFreeResponseResults', () => {
+      it('returns an empty array when no assessments in redux', () => {
+        const result = getAssessmentsFreeResponseResults(rootState);
+        assert.deepEqual(result, []);
+      });
+
+      it('returns an array of objects representing free response questions', () => {
+        const stateWithAssessment = {
+          ...rootState,
+          sectionAssessments: {
+            ...rootState.sectionAssessments,
+            assessmentId: 123,
+            assessmentQuestionsByScript: {
+              3: {
+                123: {
+                  questions: [
+                    {
+                      type: 'FreeResponse',
+                      question_text: 'Can you say hello?'
+                    }
+                  ]
+                }
+              }
+            },
+            assessmentResponsesByScript: {
+              3: {
+                1: {
+                  student_name: 'Saira',
+                  responses_by_assessment: {
+                    123: {
+                      level_results: [
+                        {
+                          student_result: 'Hello world',
+                          status: 'free_response',
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        };
+        const result = getAssessmentsFreeResponseResults(stateWithAssessment);
+        assert.deepEqual(result, [{
+          questionText: "Can you say hello?",
+          responses: [{id: 1, name: "Saira", response: "Hello world"}]
+        }]);
       });
     });
 
