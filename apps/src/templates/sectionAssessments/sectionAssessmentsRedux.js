@@ -227,7 +227,7 @@ export const getStudentMCResponsesForCurrentAssessment = (state) => {
 };
 
 // TODO(nkiruka) Add comments Free Responses by Assessments Table
-export const getFreeResponsesAssessmentsQuestions = (state) => {
+export const getAssessmentsFreeResponseResults = (state) => {
   const assessmentsStructure = getCurrentAssessmentQuestions(state);
   if (!assessmentsStructure) {
     return [];
