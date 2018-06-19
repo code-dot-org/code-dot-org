@@ -297,7 +297,7 @@ export const getSurveyFreeResponseQuestions = (state) => {
 
   const questionData = currentSurvey.levelgroup_results;
 
-  return questionData.filter(question => question.type === 'free_response').map(question => {
+  return questionData.filter(question => question.type === 'FreeResponse').map(question => {
     return {
       questionText: question.question,
       answers: question.results.map((response, index) => {
