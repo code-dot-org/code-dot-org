@@ -53,6 +53,7 @@
     "background": "rainbow",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"You don’t need any more blocks from the toolbox here.\",\"hint_id\":\"courseF_playlab_variables4b_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/449397baf89368871edb2a07f58d27e8/courseF_playlab_variables4b.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Put the two `age` variables and one `name` variable where they make the most sense in the conversation.\",\"hint_id\":\"courseF_playlab_variables4b_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/397364b987146504a74eebfcd9c457ab/courseF_playlab_variables4b.mp3\"}]",
     "remove_items_when_actor_collides": "false",
+    "hint_prompt_attempts_threshold": 5,
     "contained_level_names": null
   },
   "published": true,

@@ -39,6 +39,7 @@
     "shareable": "false",
     "markdown_instructions": "Now we've added the ground. \r\n\r\nAttach the `end game` block to the `when hit the ground` event. \r\n\r\n---\r\n\r\nPlay the game and crash the bird into the ground to continue.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If something isn't working correctly, make sure your blocks are connected to the correct events in the workspace.\",\"hint_id\":\"courseC_flappy_events3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/92b05661c83483b98bdb3d2779251a18/courseC_flappy_events3.mp3\"}]",
+    "hint_prompt_attempts_threshold": 4,
     "contained_level_names": null
   },
   "published": true,

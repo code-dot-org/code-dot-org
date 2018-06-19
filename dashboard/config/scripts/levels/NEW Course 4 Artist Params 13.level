@@ -33,6 +33,7 @@
     "examples_required": "false",
     "never_autoplay_video": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"You will need to divide the *perimeter* by the number of sides in order to keep the shapes the same size overall. \",\r\n  \"hint_id\": \"NEW_Course_4_Artist_Params_13_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "hint_prompt_attempts_threshold": 10,
     "contained_level_names": null
   },
   "published": true,
