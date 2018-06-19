@@ -503,10 +503,7 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def teachercon?
-    [
-      SUBJECT_CSP_TEACHER_CON,
-      SUBJECT_CSD_TEACHER_CON,
-    ].include?(subject)
+    subject == SUBJECT_TEACHER_CON
   end
 
   def fit_weekend?
