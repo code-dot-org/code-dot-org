@@ -11,6 +11,7 @@ import i18n from '@cdo/locale';
 import ScriptSelector from '@cdo/apps/templates/sectionProgress/ScriptSelector';
 import MultipleChoiceByStudentContainer from './MultipleChoiceByStudentContainer';
 import StudentsMCSummaryContainer from './StudentsMCSummaryContainer';
+import FreeResponseBySurveyQuestionContainer from './FreeResponseBySurveyQuestionContainer';
 import AssessmentSelector from './AssessmentSelector';
 
 const styles = {
@@ -23,7 +24,7 @@ class SectionAssessments extends Component {
   static propTypes = {
     // provided by redux
     sectionId: PropTypes.number.isRequired,
-    isLoadingAssessments: PropTypes.bool.isRequired,
+    isLoading: PropTypes.bool.isRequired,
     validScripts: PropTypes.arrayOf(validScriptPropType).isRequired,
     assessmentList: PropTypes.array.isRequired,
     scriptId: PropTypes.number,
@@ -65,8 +66,11 @@ class SectionAssessments extends Component {
             onChange={this.props.setAssessmentId}
           />
         </div>
-          <MultipleChoiceByStudentContainer />
+          {/* Assessments */}
           <StudentsMCSummaryContainer />
+          <MultipleChoiceByStudentContainer />
+          {/* Surveys */}
+          <FreeResponseBySurveyQuestionContainer />
       </div>
     );
   }
@@ -76,7 +80,7 @@ export const UnconnectedSectionAssessments = SectionAssessments;
 
 export default connect(state => ({
   sectionId: state.sectionData.section.id,
-  isLoadingAssessments: state.sectionAssessments.isLoadingAssessments,
+  isLoading: state.sectionAssessments.isLoading,
   validScripts: state.scriptSelection.validScripts,
   assessmentList: getCurrentScriptAssessmentList(state),
   scriptId: state.scriptSelection.scriptId,
