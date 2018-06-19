@@ -203,6 +203,7 @@ export const getStudentMCResponsesForCurrentAssessment = (state) => {
     const studentObject = studentResponses[studentId];
     const currentAssessmentId = state.sectionAssessments.assessmentId;
     const studentAssessment = studentObject.responses_by_assessment[currentAssessmentId];
+    console.log('result', studentAssessment);
 
     // If the student has not submitted this assessment, don't display results.
     if (!studentAssessment) {
@@ -224,6 +225,62 @@ export const getStudentMCResponsesForCurrentAssessment = (state) => {
   }).filter(studentData => studentData);
 
   return studentResponsesArray;
+};
+
+// TODO(nkiruka) Add comments Free Responses by Assessments Table
+export const getFreeResponsesAssessmentsQuestions = (state) => {
+  const assessmentsStructure = getCurrentAssessmentQuestions(state);
+  if (!assessmentsStructure) {
+    return [];
+  }
+
+  const questionData = assessmentsStructure.questions;
+
+  // Transform that data into what we need for this particular table, in this case
+  // questionStructurePropType structure.
+  return questionData.filter(question => question.type === 'free_response').map(question => {
+    return {
+      questionText: question.question,
+    };
+  });
+};
+
+// TODO(nkiruka) Add comments - Free Responses Assessments Table
+export const getStudentFreeResponsesAssessmentsAnswers = (state) => {
+  const studentResponses = getAssessmentResponsesForCurrentScript(state);
+  if (!studentResponses) {
+    return [];
+  }
+
+  const studentResponsesArray = Object.keys(studentResponses).map(studentId => {
+    studentId = parseInt(studentId);
+    const studentObject = studentResponses[studentId];
+    console.log('stdObj',studentObject);
+    const currentAssessmentId = state.sectionAssessments.assessmentId;
+    console.log('currAssess',currentAssessmentId);
+    const studentAssessment = studentObject.responses_by_assessment[currentAssessmentId];
+
+    // If the student has not submitted this assessment, don't display results.
+    if (!studentAssessment) {
+      return;
+    }
+
+    // Transform that data into what we need for this particular table, in this case
+    // is the structure studentAnswerDataPropType
+    return {
+      id: studentId,
+      name: studentObject.student_name,
+      studentResponses: studentAssessment.level_results.map(answer => {
+        return {
+          responses: answer.student_result || '',
+          status: 'free_response',
+        };
+      })
+    };
+  }).filter(freeResponsesByStudentResponses => freeResponsesByStudentResponses);
+
+  return studentResponsesArray;
+
 };
 
 /**
