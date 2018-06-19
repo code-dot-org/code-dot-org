@@ -37,6 +37,7 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You can use the `collect` command more often to collect the extra treasure.\",\"hint_id\":\"courseC_collector_prog_challenge1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ee9d19f65e35bb065dafe602bb3e346f/courseC_collector_prog_challenge1.mp3\"}]",
     "disable_procedure_autopopulate": "false",
     "shape_shift": "false",
+    "hint_prompt_attempts_threshold": 13,
     "contained_level_names": null
   },
   "published": true,

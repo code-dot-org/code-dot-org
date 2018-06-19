@@ -51,6 +51,7 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use `score point` to add a point, and `remove point` to subtract one.\",\"hint_id\":\"courseE_playLab_scaffold4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8bb2c0a65d4564eab4270aabffcddeb1/courseE_playLab_scaffold4.mp3\"}]",
     "disable_procedure_autopopulate": "false",
     "remove_items_when_actor_collides": "false",
+    "hint_prompt_attempts_threshold": 2,
     "contained_level_names": null
   },
   "published": true,

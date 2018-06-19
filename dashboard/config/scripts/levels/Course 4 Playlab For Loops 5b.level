@@ -43,6 +43,7 @@
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"The characters are about 175 pixels away from the center.\",\r\n  \"hint_id\": \"Course_4_Playlab_For_Loops_5b_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Remember, a character's next step will be longer than their last, since the counter keeps getting larger.\",\r\n  \"hint_id\": \"Course_4_Playlab_For_Loops_5b_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "failure_message_override": "Remember, both characters need to stop in the same place.",
     "timeout_failure_tick": "120",
+    "hint_prompt_attempts_threshold": 8,
     "contained_level_names": null
   },
   "published": true,
