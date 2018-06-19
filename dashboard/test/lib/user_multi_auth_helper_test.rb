@@ -28,82 +28,16 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
 
   test 'convert email+password student' do
     user = create :student
-
-    original_email = user.email
-    original_hashed_email = user.hashed_email
-
-    refute user.migrated?
-    assert_nil user.provider
     assert_empty user.email
-    refute_empty user.hashed_email
-    refute_empty user.password
-
-    migrate user
-
-    assert user.migrated?
-    assert_equal original_email, user.email
-    assert_equal original_hashed_email, user.hashed_email
-    refute_empty user.password
-
-    # Check for student email authentication option:
-    # {
-    #   email: '',
-    #   hashed_email: 'cb3263338bcaf95f7b3a2baaf52dc288',
-    #   credential_type: 'email',
-    #   authentication_id: 'cb3263338bcaf95f7b3a2baaf52dc288',
-    #   data: nil
-    # }
-
-    primary = user.primary_authentication_option
-    refute_nil primary
-    assert_equal original_email, primary.email
-    assert_equal original_hashed_email, primary.hashed_email
-    assert_equal 'email', primary.credential_type
-    assert_equal original_hashed_email, primary.authentication_id
-    assert_nil primary.data
-
-    assert_equal 1, user.authentication_options.count
-    assert_equal primary, user.authentication_options.first
+    assert_convert_email_user user
+    assert_empty user.primary_authentication_option.email
   end
 
   test 'convert email+password teacher' do
     user = create :teacher
-
-    original_email = user.email
-    original_hashed_email = user.hashed_email
-
-    refute user.migrated?
-    assert_nil user.provider
     refute_empty user.email
-    refute_empty user.hashed_email
-    refute_empty user.password
-
-    migrate user
-
-    assert user.migrated?
-    assert_equal original_email, user.email
-    assert_equal original_hashed_email, user.hashed_email
-    refute_empty user.password
-
-    # Check for teacher email authentication option:
-    # {
-    #   email: 'teacher@example.org',
-    #   hashed_email: 'cb3263338bcaf95f7b3a2baaf52dc288',
-    #   credential_type: 'email',
-    #   authentication_id: 'cb3263338bcaf95f7b3a2baaf52dc288',
-    #   data: nil
-    # }
-
-    primary = user.primary_authentication_option
-    refute_nil primary
-    assert_equal original_email, primary.email
-    assert_equal original_hashed_email, primary.hashed_email
-    assert_equal 'email', primary.credential_type
-    assert_equal original_hashed_email, primary.authentication_id
-    assert_nil primary.data
-
-    assert_equal 1, user.authentication_options.count
-    assert_equal primary, user.authentication_options.first
+    assert_convert_email_user user
+    refute_empty user.primary_authentication_option.email
   end
 
   # TODO: Old "manual" username and password student (no email or hashed email)
@@ -176,6 +110,43 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     assert user.sponsored?
     assert_empty user.authentication_options
     assert_nil user.primary_authentication_option
+  end
+
+  def assert_convert_email_user(user)
+    original_email = user.email
+    original_hashed_email = user.hashed_email
+
+    refute user.migrated?
+    assert_nil user.provider
+    refute_empty user.hashed_email
+    refute_empty user.password
+
+    migrate user
+
+    assert user.migrated?
+    assert_equal original_email, user.email
+    assert_equal original_hashed_email, user.hashed_email
+    refute_empty user.password
+
+    # Check for email authentication option:
+    # {
+    #   email: 'teacher@example.org', // or '' for students
+    #   hashed_email: 'cb3263338bcaf95f7b3a2baaf52dc288',
+    #   credential_type: 'email',
+    #   authentication_id: 'cb3263338bcaf95f7b3a2baaf52dc288',
+    #   data: nil
+    # }
+
+    primary = user.primary_authentication_option
+    refute_nil primary
+    assert_equal original_email, primary.email
+    assert_equal original_hashed_email, primary.hashed_email
+    assert_equal 'email', primary.credential_type
+    assert_equal original_hashed_email, primary.authentication_id
+    assert_nil primary.data
+
+    assert_equal 1, user.authentication_options.count
+    assert_equal primary, user.authentication_options.first
   end
 
   def migrate(user)
