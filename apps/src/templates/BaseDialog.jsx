@@ -81,7 +81,7 @@ var BaseDialog = React.createClass({
     }
     if (this.props.fullHeight) {
       bodyStyle = {
-        height: '75%'
+        height: '80%'
       };
     }
 
@@ -98,7 +98,7 @@ var BaseDialog = React.createClass({
         height: this.props.fixedHeight,
         maxHeight: !this.props.fixedHeight && '80vh',
         overflowX: 'hidden',
-        overflowY: this.props.fixedHeight ? 'hidden' : 'auto',
+        overflowY: (this.props.fixedHeight || this.props.fullHeight) ? 'hidden' : 'auto',
         borderRadius: 4,
       };
       bodyStyle = Object.assign({}, bodyStyle, {
