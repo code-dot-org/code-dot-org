@@ -1,4 +1,5 @@
 import {WorkshopManagement} from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_management';
+import {WorkshopTypes} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import ConfirmationDialog from '@cdo/apps/code-studio/pd/workshop_dashboard/components/confirmation_dialog';
 import {Button} from 'react-bootstrap';
 import React from 'react';
@@ -56,6 +57,48 @@ describe("WorkshopManagement", () => {
     mockRouter.expects("push").withExactArgs("viewUrl");
     viewWorkshopButton.simulate('click', mockClickEvent);
   };
+
+  describe("with showSurveyUrl", () => {
+    const getSurveyUrlForProps = props => shallow(
+      <WorkshopManagement
+        {...defaultProps}
+        showSurveyUrl={true}
+        {...props}
+      />, {context}
+    ).instance().surveyUrl;
+
+    it("uses daily results for local summer in 2018", () => {
+      const surveyUrl = getSurveyUrlForProps({date: "2018-07-01", subject: WorkshopTypes.local_summer});
+      expect(surveyUrl).to.eql("/local_summer_workshop_daily_survey_results/123");
+    });
+
+    it("uses daily results for teachercon in 2018", () => {
+      const surveyUrl = getSurveyUrlForProps({date: "2018-07-01", subject: WorkshopTypes.teachercon});
+      expect(surveyUrl).to.eql("/local_summer_workshop_daily_survey_results/123");
+    });
+
+    it("uses local summer results for local summer in 2017", () => {
+      const surveyUrl = getSurveyUrlForProps({date: "2017-07-01", subject: WorkshopTypes.local_summer});
+      expect(surveyUrl).to.eql("/local_summer_workshop_survey_results/123");
+    });
+
+    it("uses organizer results for organizers", () => {
+      const organizerPermission = new Permission([Organizer]);
+      const surveyUrl = getSurveyUrlForProps({permission: organizerPermission});
+      expect(surveyUrl).to.eql("/organizer_survey_results/123");
+    });
+
+    it("uses organizer results for program managers", () => {
+      const programManagerPermission = new Permission([ProgramManager]);
+      const surveyUrl = getSurveyUrlForProps({permission: programManagerPermission});
+      expect(surveyUrl).to.eql("/organizer_survey_results/123");
+    });
+
+    it("uses survey_results by default", () => {
+      const surveyUrl = getSurveyUrlForProps();
+      expect(surveyUrl).to.eql("/survey_results/123");
+    });
+  });
 
   describe("For not-started workshops", () => {
     let deleteStub;
