@@ -24,7 +24,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     assert_convert_sponsored_student create :student_in_word_section
   end
 
-  # Student with a parent-managed account
+  # TODO: Student with a parent-managed account
 
   test 'convert email+password student' do
     user = create :student
@@ -106,7 +106,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     assert_equal primary, user.authentication_options.first
   end
 
-  # Old "manual" username and password student (no email or hashed email)
+  # TODO: Old "manual" username and password student (no email or hashed email)
 
   #
   # Trusted email from Oauth:
@@ -151,18 +151,18 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     assert_equal initial_oauth_refresh_token, data['oauth_refresh_token']
   end
 
-  # Google Oauth user that also has a password
-  # Microsoft Oauth
-  # Facebook Oauth
+  # TODO: Google Oauth user that also has a password
+  # TODO: Microsoft Oauth
+  # TODO: Facebook Oauth
 
   #
   # Untrusted email from Oauth:
   #
 
-  # Clever Oauth user
-  # Clever Oauth user that also has a password (due to takeover)
-  # Powerschool Oauth
-  # Powerschool Oauth user that also has a password (due to takeover)
+  # TODO: Clever Oauth user
+  # TODO: Clever Oauth user that also has a password (due to takeover)
+  # TODO: Powerschool Oauth
+  # TODO: Powerschool Oauth user that also has a password (due to takeover)
 
   private
 
