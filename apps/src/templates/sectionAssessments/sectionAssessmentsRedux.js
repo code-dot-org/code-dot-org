@@ -250,6 +250,33 @@ export const getSurveyFreeResponseQuestions = (state) => {
   });
 };
 
+/**
+ * TODO
+ */
+export const getMultipleChoiceSurveyResults = (state) => {
+  const surveysStructure = state.sectionAssessments.surveysByScript[state.scriptSelection.scriptId] || {};
+  const currentSurvey = surveysStructure[state.sectionAssessments.assessmentId];
+  if (!currentSurvey) {
+    return [];
+  }
+
+  const questionData = currentSurvey.levelgroup_results;
+
+  return questionData.filter(question => question.type === 'multi').map((question, index) => {
+    return {
+      id: index,
+      question: question.question,
+      answers: question.answer_texts.map((answer, index) => {
+        return {
+          multipleChoiceOption: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'][index],
+          percentAnswered: 10,
+        };
+      }),
+      notAnswered: 0,
+    };
+  });
+};
+
 /** Get data for students assessments multiple choice table
  * Returns an object, each of type studentOverviewDataPropType with
  * the value of the key being an object that contains the number
