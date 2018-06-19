@@ -1181,17 +1181,13 @@ class UserTest < ActiveSupport::TestCase
     refute user.can_edit_password?
   end
 
-  # TODO: (before merging) update to use :with_migrated_email_auth factory once pr is merged
   test 'can_edit_password? is true for migrated student without a password' do
-    student = create :student, encrypted_password: ''
-    student.update(authentication_options: [create(:authentication_option)], provider: 'migrated')
+    student = create :student, :with_migrated_email_authentication_option, encrypted_password: ''
     assert student.can_edit_password?
   end
 
-  # TODO: (before merging) update to use :with_migrated_email_auth factory once pr is merged
   test 'can_edit_password? is true for migrated teacher without a password' do
-    teacher = create :teacher, encrypted_password: ''
-    teacher.update(authentication_options: [create(:authentication_option)], provider: 'migrated')
+    teacher = create :teacher, :with_migrated_email_authentication_option, encrypted_password: ''
     assert teacher.can_edit_password?
   end
 
