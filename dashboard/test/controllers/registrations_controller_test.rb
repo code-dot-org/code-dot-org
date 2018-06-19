@@ -77,6 +77,17 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert teacher.valid_password?('mypassword')
   end
 
+  test "update: does not update user with a new password without current_password param" do
+    user = create :user, email: 'example@email.com', password: 'mypassword'
+    sign_in user
+
+    put :update, params: {user: {password: 'newpassword', password_confirmation: 'newpassword'}}
+    user.reload
+    assert_response :success
+    assert_template :edit
+    assert user.valid_password?('mypassword')
+  end
+
   test "update: updates user password if password is correct" do
     teacher = create(:teacher, :with_migrated_email_authentication_option, password: 'mypassword')
     sign_in teacher
