@@ -13,6 +13,7 @@
     "ball_direction": "4.0369465598628835",
     "instructions": "Now the finish target is on the top. You need to attach blocks to both of the \"when ball hits\" blocks to solve this puzzle.",
     "maze": "[[1,1,33,1,1,1,1,1],[1,0,0,0,0,0,0,1],[1,0,0,0,0,0,0,1],[1,0,0,0,0,0,0,1],[1,0,0,0,0,0,4,1],[1,0,0,0,0,0,0,1],[1,0,0,0,0,0,0,1],[1,0,0,16,0,0,0,1]]",
+    "hint_prompt_attempts_threshold": 3,
     "contained_level_names": null
   },
   "published": true,

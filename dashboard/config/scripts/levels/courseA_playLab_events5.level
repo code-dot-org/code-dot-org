@@ -54,6 +54,7 @@
     "tts_markdown_instructions_override": "Add events to have Jorge move up and down when the up arrow and down arrow buttons are pressed.",
     "disable_procedure_autopopulate": "false",
     "background": "space",
+    "hint_prompt_attempts_threshold": 2,
     "contained_level_names": null
   },
   "published": true,

@@ -250,6 +250,59 @@ export const getSurveyFreeResponseQuestions = (state) => {
   });
 };
 
+/**
+ * Returns an array of objects, each of type multipleChoiceSurveyDataPropType
+ * indicating a multiple choice question and the percent of responses received
+ * for each answer.
+ */
+export const getMultipleChoiceSurveyResults = (state) => {
+  const surveysStructure = state.sectionAssessments.surveysByScript[state.scriptSelection.scriptId] || {};
+  const currentSurvey = surveysStructure[state.sectionAssessments.assessmentId];
+  if (!currentSurvey) {
+    return [];
+  }
+
+  const questionData = currentSurvey.levelgroup_results;
+
+  // Filter to multiple choice questions.
+  return questionData.filter(question => question.type === 'multi').map((question, index) => {
+    // Calculate the total responses for each answer.
+
+    const totalAnswered = question.results.length;
+    // Each value of answerTotals represents the number of responses received for
+    // the answer in that index.
+    const answerTotals = [];
+    // Initialize each answer to 0 responses.
+    for (let i = 0; i< question.answer_texts.length; i++) {
+      answerTotals[i] = 0;
+    }
+    let notAnswered = 0;
+
+    // For each response, add 1 to the correct value in answerTotals.
+    for (let i = 0; i<totalAnswered; i++) {
+      const answerIndex = question.results[i].answer_index;
+      if (answerIndex >= 0) {
+        answerTotals[answerIndex]++;
+      } else {
+        notAnswered++;
+      }
+    }
+
+    // TODO(caleybrock): Make a better way to get letter options, here and below.
+    return {
+      id: index,
+      question: question.question,
+      answers: question.answer_texts.map((answer, index) => {
+        return {
+          multipleChoiceOption: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'][index],
+          percentAnswered: Math.floor((answerTotals[index]/totalAnswered) * 100),
+        };
+      }),
+      notAnswered: Math.floor((notAnswered/totalAnswered) * 100),
+    };
+  });
+};
+
 /** Get data for students assessments multiple choice table
  * Returns an object, each of type studentOverviewDataPropType with
  * the value of the key being an object that contains the number

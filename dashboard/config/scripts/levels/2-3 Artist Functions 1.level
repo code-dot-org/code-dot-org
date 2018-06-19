@@ -35,6 +35,7 @@
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"The squares each have 100 pixel sides, that means that you will have to move forward 175 pixels before drawing your second square.\",\r\n  \"hint_id\": \"2-3_Artist_Functions_1_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"It is okay to draw overlapping lines to make your glasses.\",\r\n  \"hint_id\": \"2-3_Artist_Functions_1_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "discard_background": "false",
     "instructions_important": "true",
+    "hint_prompt_attempts_threshold": 25,
     "contained_level_names": null
   },
   "published": true,

@@ -99,7 +99,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
         "display_name" => nil, "answers" => expected_answers, "question_text" => sub_level5.get_question_text,},
     ]
     level_response = JSON.parse(@response.body)[level1.id.to_s]
-    assert_equal level1.name, level_response["name"]
+    assert_equal "translation missing: en-US.data.script.name.#{script.name}.title", level_response["name"]
     assert_equal level1.id, level_response["id"]
     assert_equal expected_questions, level_response["questions"]
   end
