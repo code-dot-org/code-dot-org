@@ -1747,8 +1747,7 @@ class User < ActiveRecord::Base
   # users that don't have a password because they authenticate via oauth, secret
   # picture, or some other unusual method
   def can_edit_password?
-    # TODO: (before merging) use migrated? method once pr is merged
-    if provider == 'migrated'
+    if migrated?
       !authentication_options.empty?
     else
       encrypted_password.present?
