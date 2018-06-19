@@ -194,16 +194,16 @@ export const questionThree = [
 
 // Data for free responses survey table.
 export const surveyOne = [
-  {response: 'Sea lettuce gumbo grape kale kombu cauliflower salsify kohlrabi okra sea lettuce broccoli celery lotus root carrot winter purslane turnip greens garlic.',},
-  {response: 'Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.',},
-  {response: 'Pea horseradish azuki bean lettuce avocado asparagus okra. Kohlrabi radish okra azuki bean corn fava bean mustard tigernut jícama green bean celtuce collard greens avocado quandong fennel gumbo black-eyed pea.',},
-  {response: 'Celery quandong swiss chard chicory earthnut pea potato. Salsify taro catsear garlic gram celery bitterleaf wattle seed collard greens nori.',},
-  {response: 'Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale.',},
+  {index: 0, response: 'Sea lettuce gumbo grape kale kombu cauliflower salsify kohlrabi okra sea lettuce broccoli celery lotus root carrot winter purslane turnip greens garlic.',},
+  {index: 1, response: 'Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.',},
+  {index: 2, response: 'Pea horseradish azuki bean lettuce avocado asparagus okra. Kohlrabi radish okra azuki bean corn fava bean mustard tigernut jícama green bean celtuce collard greens avocado quandong fennel gumbo black-eyed pea.',},
+  {index: 3, response: 'Celery quandong swiss chard chicory earthnut pea potato. Salsify taro catsear garlic gram celery bitterleaf wattle seed collard greens nori.',},
+  {index: 4, response: 'Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale.',},
 ];
 
 // Data for free reponses for survey table
 export const surveyTwo = [
-  {response: 'In every walk with nature, one receives far more than one seeks',},
-  {response: 'In every walk with nature, one receives far more than one seeks',},
-  {response: 'In every walk with nature, one receives far more than one seeks',},
+  {index: 0, response: 'In every walk with nature, one receives far more than one seeks',},
+  {index: 1, response: 'In every walk with nature, one receives far more than one seeks',},
+  {index: 2, response: 'In every walk with nature, one receives far more than one seeks',},
 ];
