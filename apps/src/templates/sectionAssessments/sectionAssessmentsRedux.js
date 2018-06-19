@@ -226,7 +226,10 @@ export const getStudentMCResponsesForCurrentAssessment = (state) => {
   return studentResponsesArray;
 };
 
-// TODO(nkiruka) Add comments Free Responses by Assessments Table
+/**
+ * Returns an array of objects, each representing a free response question
+ * and all the students' responses to that question.
+ */
 export const getAssessmentsFreeResponseResults = (state) => {
   const assessmentsStructure = getCurrentAssessmentQuestions(state);
   if (!assessmentsStructure) {

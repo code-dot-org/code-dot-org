@@ -1,13 +1,19 @@
 import React, {Component, PropTypes} from 'react';
 import FreeResponsesAssessmentsTable from './FreeResponsesAssessmentsTable';
+import {freeResponsesDataPropType} from './assessmentDataShapes';
 import {
   getAssessmentsFreeResponseResults,
 } from './sectionAssessmentsRedux';
 import { connect } from 'react-redux';
 
+export const freeResponseSummaryPropType = PropTypes.shape({
+  questionText:  PropTypes.string,
+  responses: PropTypes.arrayOf(freeResponsesDataPropType),
+});
+
 class FreeResponsesAssessmentsContainer extends Component {
   static propTypes= {
-    freeResponseQuestions: PropTypes.array,
+    freeResponseQuestions: PropTypes.arrayOf(freeResponseSummaryPropType),
   };
 
   render() {
