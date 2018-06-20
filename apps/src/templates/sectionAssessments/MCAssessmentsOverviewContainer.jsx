@@ -2,11 +2,11 @@ import React, {Component, PropTypes} from 'react';
 import MultipleChoiceAssessmentsOverviewTable from './MultipleChoiceAssessmentsOverviewTable';
 import {getMultipleChoiceSectionSummary} from './sectionAssessmentsRedux';
 import { connect } from 'react-redux';
+import { multipleChoiceDataPropType } from './assessmentDataShapes';
 
 class MCAssessmentsOverviewContainer extends Component {
-  // todo write real prop types
   static propTypes= {
-    questionAnswerData: PropTypes.array,
+    questionAnswerData: PropTypes.arrayOf(multipleChoiceDataPropType),
   };
 
   render() {
