@@ -1,6 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import {Table, sort} from 'reactabular';
 import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
+import {freeResponsesDataPropType} from './assessmentDataShapes';
 import i18n from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
@@ -28,13 +29,6 @@ export const COLUMNS = {
   NAME: 0,
   RESPONSE: 1,
 };
-
-const freeResponsesDataPropType = PropTypes.shape({
-  id:  PropTypes.number.isRequired,
-  studentId: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  response: PropTypes.string.isRequired,
-});
 
 class FreeResponsesAssessmentsTable extends Component {
   static propTypes= {
