@@ -2,7 +2,7 @@ module UserMultiAuthHelper
   def migrate_to_multi_auth
     return true if migrated?
 
-    unless sponsored?
+    unless sponsored? || provider == User::PROVIDER_MANUAL
       self.primary_authentication_option =
         if provider == 'google_oauth2'
           AuthenticationOption.new(
