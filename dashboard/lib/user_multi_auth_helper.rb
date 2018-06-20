@@ -11,6 +11,7 @@ module UserMultiAuthHelper
           AuthenticationOption.new(
             user: self,
             email: email,
+            hashed_email: hashed_email,
             credential_type: provider,
             authentication_id: uid,
             data: {
