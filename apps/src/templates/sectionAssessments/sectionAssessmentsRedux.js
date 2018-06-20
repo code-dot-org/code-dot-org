@@ -343,13 +343,14 @@ export const getStudentsMCSummaryForCurrentAssessment = (state) => {
   return studentsSummaryArray;
 };
 
-// todo write comments
+// Returns an array of objects corresponding to each question and the
+// number of student who answered each answer.
 export const getMultipleChoiceSectionSummary = (state) => {
+  // Set up an empty structure based on the multiple choice assessment questions.
   const assessmentsStructure = getCurrentAssessmentQuestions(state);
   if (!assessmentsStructure) {
     return [];
   }
-
   const questionData = assessmentsStructure.questions;
   const multiQuestions = questionData.filter(question => question.type === 'Multi');
 
@@ -362,10 +363,39 @@ export const getMultipleChoiceSectionSummary = (state) => {
           multipleChoiceOption: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'][index],
           percentAnswered: 0,
           isCorrect: answer.correct,
+          numAnswered: 0,
         };
       }),
+      totalAnswered: 0,
       notAnswered: 0,
     };
+  });
+
+  // Calculate the number of student who answered each option and fill
+  // in the results objects.
+  const studentResponses = getAssessmentResponsesForCurrentScript(state);
+  if (!studentResponses) {
+    return [];
+  }
+  Object.keys(studentResponses).forEach(studentId => {
+    studentId = parseInt(studentId, 10);
+    const studentObject = studentResponses[studentId];
+    const currentAssessmentId = state.sectionAssessments.assessmentId;
+    const studentAssessment = studentObject.responses_by_assessment[currentAssessmentId] || {};
+
+    const studentResults = studentAssessment.level_results || [];
+    const multiResults = studentResults.filter(result => result.status !== 'free_response');
+    multiResults.forEach((response, questionIndex) => {
+      if (response.student_result === '') {
+        results[questionIndex].notAnswered++;
+      } else {
+        results[questionIndex].totalAnswered++;
+        const answerIndices = getIndexFromAnswer(response.student_result);
+        answerIndices.forEach(answer => {
+          results[questionIndex].answers[answer].numAnswered++;
+        });
+      }
+    });
   });
 
   return results;
@@ -389,6 +419,24 @@ const getCorrectAnswer = (answerArr) => {
   const correctIndex = answerArr.findIndex(answer => answer.correct);
   const letterArr = ['A','B', 'C', 'D', 'E', 'F', 'G', 'H'];
   return letterArr[correctIndex];
+};
+
+/**
+ * Takes in string of answers 'A, C' and
+ * returns the corresponding array of indexes matching those answers.
+ *
+ * TODO(caleybrock): This feels messy. I'd like to handle this consistently
+ * everywhere so first we should make this consistent on the server. If
+ * we end up keeping this function, we'll need tests.
+ *
+ * Ex - 'A, C' --> returns [0, 2]
+ */
+const getIndexFromAnswer = (answerString) => {
+  answerString = answerString.replace(' ', '');
+  const answerArray = answerString.split(',');
+
+  const letterArr = ['A','B', 'C', 'D', 'E', 'F', 'G', 'H'];
+  return answerArray.map(letter => letterArr.indexOf(letter));
 };
 
 // Requests to the server for assessment data
