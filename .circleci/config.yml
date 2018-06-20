@@ -179,6 +179,10 @@ jobs:
             - "dashboard/db/ui_test_data.sql"
 
       - run:
+          name: set Applitools Batch ID for GitHub integration
+          command: export APPLITOOLS_BATCH_ID=`echo $CIRCLE_SHA1`
+
+      - run:
           name: run ui tests
           command: |
             bundle exec rake circle:run_ui_tests --trace

@@ -55,7 +55,6 @@ def main(options)
   $failed_features = 0
 
   start_time = Time.now
-  ENV['BATCH_NAME'] = "#{GIT_BRANCH} | #{start_time}"
 
   open_log_files
   configure_for_eyes if eyes?
@@ -353,8 +352,6 @@ end
 
 def configure_for_eyes
   ENV['APPLITOOLS_API_KEY'] = CDO.applitools_eyes_api_key
-  # The Eyes/Applitools gem uniquely identifies a test run by the git commit hash.
-  ENV['APPLITOOLS_BATCH_ID'] = COMMIT_HASH
 end
 
 def applitools_batch_url
