@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import {Heading3} from '../Headings';
@@ -7,27 +7,38 @@ import Button from "@cdo/apps/templates/Button";
 
 const styles = {
   container: {
-    paddingTop: 20
+    paddingTop: 20,
   },
   header: {
     fontSize: 22,
     // TODO: (before merging) get correct color
-    color: color.purple
+    color: color.purple,
   },
   input: {
     marginBottom: 4,
   },
+  buttonContainer: {
+    display: 'flex',
+    alignItems: 'center',
+  },
+  statusText: {
+    paddingLeft: 10,
+    fontStyle: 'italic',
+  },
+};
+
+const DEFAULT_STATE = {
+  password: '',
+  passwordConfirmation: '',
+  submissionState: ''
 };
 
 export default class AddPasswordForm extends React.Component {
-  state = {
-    password: '',
-    passwordConfirmation: ''
+  static propTypes = {
+    handleSubmit: PropTypes.func.isRequired
   };
 
-  onKeyDown = () => {
-    // TODO: submit if enter key
-  };
+  state = DEFAULT_STATE;
 
   onPasswordChange = (event) => {
     this.setState({
@@ -57,6 +68,28 @@ export default class AddPasswordForm extends React.Component {
     }
   };
 
+  handleSubmit = () => {
+    const {password, passwordConfirmation} = this.state;
+    this.setState({
+      submissionState: 'Saving...'
+    });
+    this.props.handleSubmit(password, passwordConfirmation)
+      .then(this.onSuccess, this.onFailure);
+  };
+
+  onSuccess = () => {
+    this.setState({
+      ...DEFAULT_STATE,
+      submissionState: 'Success!'
+    });
+  };
+
+  onFailure = (error) => {
+    this.setState({
+      submissionState: 'Failure!'
+    });
+  };
+
   render() {
     return (
       <div style={styles.container}>
@@ -73,7 +106,6 @@ export default class AddPasswordForm extends React.Component {
             maxLength="255"
             size="255"
             style={styles.input}
-            ref={el => this.passwordInput = el}
           />
         </Field>
         <Field
@@ -89,16 +121,21 @@ export default class AddPasswordForm extends React.Component {
             maxLength="255"
             size="255"
             style={styles.input}
-            ref={el => this.passwordConfirmationInput = el}
           />
         </Field>
-        {/* TODO: style button to look like other account page buttons */}
-        <Button
-          onClick={() => {console.log('submitting...');}}
-          text={i18n.createPassword()}
-          disabled={!this.isFormValid()}
-          tabIndex="1"
-        />
+        <div style={styles.buttonContainer}>
+          {/* TODO: style button to look like other account page buttons */}
+          <Button
+            id="create-password-btn"
+            onClick={this.handleSubmit}
+            text={i18n.createPassword()}
+            disabled={!this.isFormValid()}
+            tabIndex="1"
+          />
+          <div style={styles.statusText}>
+            {this.state.submissionState}
+          </div>
+        </div>
       </div>
     );
   }

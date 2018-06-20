@@ -25,7 +25,10 @@ $(document).ready(() => {
     userType,
   );
 
-  new AddPasswordController(document.getElementById('add-password-form'));
+  new AddPasswordController(
+    $('#add-password-form'),
+    document.getElementById('add-password-fields'),
+  );
 
   initializeCreatePersonalAccountControls();
 });
