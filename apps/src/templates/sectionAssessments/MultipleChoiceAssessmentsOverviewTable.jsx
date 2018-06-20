@@ -32,21 +32,20 @@ const styles = {
 const NOT_ANSWERED = 'notAnswered';
 
 const answerColumnsFormatter = (percentAnswered, {rowData, columnIndex, rowIndex, property}) => {
-  const cell = rowData.answers[columnIndex - 1];
-
   let percentValue = 0;
+  const answerResults = rowData.answers[columnIndex - 1] || {};
 
   if (property === NOT_ANSWERED) {
-     percentValue = rowData.notAnswered;
+     percentValue = Math.round((rowData.notAnswered / rowData.totalAnswered) * 100);
   } else {
-     percentValue = (cell && cell.percentAnswered);
+     percentValue = Math.round((answerResults.numAnswered / rowData.totalAnswered) * 100);
   }
 
   return (
       <MultipleChoiceAnswerCell
         id={rowData.id}
         percentValue={percentValue}
-        isCorrectAnswer={cell && cell.isCorrectAnswer}
+        isCorrectAnswer={!!answerResults.isCorrect}
       />
   );
 };
@@ -164,9 +163,11 @@ class MultipleChoiceAssessmentsOverviewTable extends Component {
   );
 
   getColumns = (sortable) => {
-    const maxOptionsQuestion = [...this.props.questionAnswerData].sort((question1, question2) => (
+    let maxOptionsQuestion = [...this.props.questionAnswerData].sort((question1, question2) => (
       question1.answers.length - question2.answers.length
     )).pop();
+
+    //maxOptionsQuestion = maxOptionsQuestion || {answers: []};
 
     const columnLabelNames = maxOptionsQuestion.answers.map((answer) => {
       return this.getAnswerColumn(answer.multipleChoiceOption);
