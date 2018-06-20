@@ -35,6 +35,11 @@ const SurveyQuestionType = {
   FREE_RESPONSE: 'free_response',
 };
 
+const MultiAnswerStatus = {
+  CORRECT: 'correct',
+  INCORRECT: 'incorrect'
+};
+
 // Action type constants
 const SET_ASSESSMENT_RESPONSES = 'sectionAssessments/SET_ASSESSMENT_RESPONSES';
 const SET_ASSESSMENTS_QUESTIONS = 'sectionAssessments/SET_ASSESSMENTS_QUESTIONS';
@@ -230,7 +235,7 @@ export const getStudentMCResponsesForCurrentAssessment = (state) => {
         .map(answer => {
           return {
             responses: answer.student_result || '',
-            isCorrect: answer.status === 'correct',
+            isCorrect: answer.status === MultiAnswerStatus.CORRECT,
           };
         })
     };
