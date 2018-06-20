@@ -40,6 +40,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "min_workspace_height": "600",
+    "hint_prompt_attempts_threshold": 2,
     "contained_level_names": null
   },
   "published": true,

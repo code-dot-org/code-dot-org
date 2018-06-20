@@ -160,6 +160,11 @@ class Blockly < Level
     0
   end
 
+  CATEGORY_CUSTOM_NAMES = {
+    Behavior: 'Behaviors',
+    PROCEDURE: 'Functions',
+    VARIABLE: 'Variables',
+  }
   def self.convert_toolbox_to_category(xml_string)
     xml = Nokogiri::XML(xml_string, &:noblanks)
     return xml_string if xml.nil? || xml.xpath('/xml/block[@type="category"]').empty?
@@ -171,6 +176,13 @@ class Blockly < Level
         category_node = Nokogiri::XML("<category name='#{category_name}'>").child
         category_node['custom'] = 'PROCEDURE' if category_name == 'Functions'
         category_node['custom'] = 'VARIABLE' if category_name == 'Variables'
+        xml.child << category_node
+        block.remove
+      elsif block.attr('type') == 'custom_category'
+        custom_type = block.xpath('title').text
+        category_name = CATEGORY_CUSTOM_NAMES[custom_type.to_sym]
+        category_node = Nokogiri::XML("<category name='#{category_name}'>").child
+        category_node['custom'] = custom_type
         xml.child << category_node
         block.remove
       else
@@ -187,11 +199,21 @@ class Blockly < Level
     return xml_string if xml.nil?
     xml.xpath('/xml/category').map(&:remove).each do |category|
       category_name = category.xpath('@name')
-      category_xml = <<-XML.strip_heredoc.chomp
-        <block type="category">
-          <title name="CATEGORY">#{category_name}</title>
-        </block>
-      XML
+      custom_category = category.xpath('@custom')
+      category_xml =
+        if custom_category.present?
+          <<-XML.strip_heredoc.chomp
+            <block type="custom_category">
+              <title name="CUSTOM">#{custom_category}</title>
+            </block>
+          XML
+        else
+          <<-XML.strip_heredoc.chomp
+            <block type="category">
+              <title name="CATEGORY">#{category_name}</title>
+            </block>
+          XML
+        end
       block = Nokogiri::XML(category_xml, &:noblanks).child
       xml << block
       xml << category.children
@@ -377,6 +399,18 @@ class Blockly < Level
         I18n.t("data.level.instructions").try(:[], "#{name}_#{level_num}".to_sym)
       end.compact.first
       return val unless val.nil?
+    end
+  end
+
+  def localized_toolbox_blocks
+    if should_localize? && toolbox_blocks
+      block_xml = Nokogiri::XML(toolbox_blocks, &:noblanks)
+      block_xml.xpath('//../category').each do |category|
+        name = category.attr('name')
+        localized_name = I18n.t("data.block_categories.#{name}", default: nil)
+        category.set_attribute('name', localized_name) if localized_name
+      end
+      return block_xml.serialize(save_with: XML_OPTIONS).strip
     end
   end
 

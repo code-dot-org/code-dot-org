@@ -9,7 +9,8 @@
         "type": "Sprite"
       },
       {
-        "name": "N"
+        "name": "N",
+        "type": "Number"
       },
       {
         "name": "DIRECTION",

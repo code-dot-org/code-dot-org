@@ -36,6 +36,7 @@
     "markdown_instructions": "Solve this puzzle using only the blocks available.\r\n\r\nThis level will help give you practice with the `repeat until` block.  Collect all of the corn and lettuce until you get to the pumpkin. (Don't forget to collect the pumpkin, too!)",
     "shape_shift": "false",
     "disable_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 21,
     "contained_level_names": null
   },
   "published": true,

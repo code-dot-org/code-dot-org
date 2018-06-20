@@ -34,6 +34,7 @@
     "never_autoplay_video": "false",
     "instructions_important": "true",
     "discard_background": "false",
+    "hint_prompt_attempts_threshold": 6,
     "contained_level_names": null
   },
   "published": true,

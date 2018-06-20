@@ -47,6 +47,7 @@
     "level_verification_timeout": "0",
     "use_player": "false",
     "markdown_instructions": "Wood is a very important resource. Many things are made from it. Walk to the tree and use the `destroy` block command to chop it down.",
+    "hint_prompt_attempts_threshold": 2,
     "contained_level_names": null
   },
   "published": true,

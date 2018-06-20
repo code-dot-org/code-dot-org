@@ -106,8 +106,10 @@ module Api::V1::Pd
 
     # GET /api/v1/pd/workshops/:id/local_workshop_daily_survey_report
     def local_workshop_daily_survey_report
-      unless @workshop.local_summer? # Do we have to filter workshops that don't have daily results?
-        raise 'Only call this route for local workshop daily survey reports'
+      unless @workshop.local_summer? || @workshop.teachercon?
+        return render status: :bad_request, json: {
+          error: 'Only call this route for 5 day summer workshops, local or TeacherCon'
+        }
       end
 
       survey_report = generate_workshop_daily_session_summary(@workshop)
