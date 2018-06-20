@@ -319,20 +319,6 @@ FactoryGirl.define do
       end
     end
 
-    trait :with_multi_auth do
-      after(:create) do |user|
-        user.primary_authentication_option = create(:authentication_option,
-          user: user,
-          email: user.email,
-          hashed_email: user.hashed_email,
-          credential_type: 'google_oauth',
-          authentication_id: 'abcd123'
-        )
-        user.provider = 'migrated'
-        user.save!
-      end
-    end
-
     trait :with_puzzles do
       transient do
         num_puzzles 1
