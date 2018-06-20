@@ -83,6 +83,9 @@
     This adds a call block to the end of the toolbox for each function defined
     in the workspace (including hidden start blocks).
   = boolean_check_box f, :top_level_procedure_autopopulate
+.field
+  = f.label :include_shared_functions, 'Make shared functions and behaviors available'
+  = boolean_check_box f, :include_shared_functions
 
 - if @level.uses_droplet?
   .field
