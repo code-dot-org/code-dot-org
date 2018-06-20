@@ -32,21 +32,20 @@ const styles = {
 const NOT_ANSWERED = 'notAnswered';
 
 const answerColumnsFormatter = (percentAnswered, {rowData, columnIndex, rowIndex, property}) => {
-  const cell = rowData.answers[columnIndex - 1];
-
   let percentValue = 0;
+  const answerResults = rowData.answers[columnIndex - 1] || {};
 
   if (property === NOT_ANSWERED) {
-     percentValue = rowData.notAnswered;
+     percentValue = Math.round((rowData.notAnswered / rowData.totalAnswered) * 100);
   } else {
-     percentValue = (cell && cell.percentAnswered);
+     percentValue = Math.round((answerResults.numAnswered / rowData.totalAnswered) * 100);
   }
 
   return (
       <MultipleChoiceAnswerCell
         id={rowData.id}
         percentValue={percentValue}
-        isCorrectAnswer={cell && cell.isCorrectAnswer}
+        isCorrectAnswer={!!answerResults.isCorrect}
       />
   );
 };
