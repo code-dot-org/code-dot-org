@@ -32,6 +32,7 @@
     "markdown_instructions": "Create a sun by nesting the starter code in another loop.\r\n\r\nTo get this cool design with a hollow center, you'll need to jump forward by the length of the triangle before turning.",
     "examples_required": "false",
     "never_autoplay_video": "false",
+    "hint_prompt_attempts_threshold": 8,
     "contained_level_names": null
   },
   "published": true,

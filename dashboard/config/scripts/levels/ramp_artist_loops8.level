@@ -39,6 +39,7 @@
     "ideal": "5",
     "top_level_procedure_autopopulate": "false",
     "permitted_errors": "0",
+    "hint_prompt_attempts_threshold": 4,
     "contained_level_names": null
   },
   "published": true,
