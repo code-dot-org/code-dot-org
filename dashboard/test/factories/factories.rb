@@ -189,6 +189,14 @@ FactoryGirl.define do
         oauth_token 'fake-oauth-token'
         oauth_token_expiration 'fake-oauth-token-expiration'
       end
+
+      factory :facebook_teacher do
+        encrypted_password nil
+        provider 'facebook'
+        sequence(:uid) {|n| n}
+        oauth_token 'fake-oauth-token'
+        oauth_token_expiration 'fake-oauth-token-expiration'
+      end
     end
 
     factory :student do
@@ -260,6 +268,14 @@ FactoryGirl.define do
       factory :windowslive_student do
         encrypted_password nil
         provider 'windowslive'
+        sequence(:uid) {|n| n}
+        oauth_token 'fake-oauth-token'
+        oauth_token_expiration 'fake-oauth-token-expiration'
+      end
+
+      factory :facebook_student do
+        encrypted_password nil
+        provider 'facebook'
         sequence(:uid) {|n| n}
         oauth_token 'fake-oauth-token'
         oauth_token_expiration 'fake-oauth-token-expiration'
