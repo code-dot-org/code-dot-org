@@ -239,12 +239,12 @@ export const getAssessmentsFreeResponseResults = (state) => {
   // Initialize an object for each question, with the questionText and
   // an empty array of responses.
   const questionData = assessmentsStructure.questions;
-  const questionsAndResults = questionData.filter(question => question.type === 'FreeResponse').map(question => {
-    return {
+  const questionsAndResults = questionData
+    .filter(question => question.type === 'FreeResponse')
+    .map(question => ({
       questionText: question.question_text,
       responses: [],
-    };
-  });
+    }));
 
   const studentResponses = getAssessmentResponsesForCurrentScript(state);
 
