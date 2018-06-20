@@ -96,34 +96,20 @@ export default class AddPasswordForm extends React.Component {
   render() {
     return (
       <div style={styles.container}>
-        <Heading3 style={styles.header}>{i18n.addPassword()}</Heading3>
-        <Field
+        <Heading3 style={styles.header}>
+          {i18n.addPassword()}
+        </Heading3>
+        <PasswordField
           label={i18n.password()}
-        >
-          <input
-            type="password"
-            value={this.state.password}
-            tabIndex="1"
-            onChange={this.onPasswordChange}
-            maxLength="255"
-            size="255"
-            style={styles.input}
-          />
-        </Field>
-        <Field
+          value={this.state.password}
+          onChange={this.onPasswordChange}
+        />
+        <PasswordField
           label={i18n.passwordConfirmation()}
           error={this.getValidationError()}
-        >
-          <input
-            type="password"
-            value={this.state.passwordConfirmation}
-            tabIndex="1"
-            onChange={this.onPasswordConfirmationChange}
-            maxLength="255"
-            size="255"
-            style={styles.input}
-          />
-        </Field>
+          value={this.state.passwordConfirmation}
+          onChange={this.onPasswordConfirmationChange}
+        />
         <div style={styles.buttonContainer}>
           {/* TODO: style button to look like other account page buttons */}
           <Button
@@ -139,6 +125,35 @@ export default class AddPasswordForm extends React.Component {
           </div>
         </div>
       </div>
+    );
+  }
+}
+
+export class PasswordField extends React.Component {
+  static propTypes = {
+    label: PropTypes.string.isRequired,
+    error: PropTypes.string,
+    value: PropTypes.string.isRequired,
+    onChange: PropTypes.func.isRequired,
+  };
+
+  render() {
+    const {label, value, onChange, error} = this.props;
+    return (
+      <Field
+        label={label}
+        error={error}
+      >
+        <input
+          type="password"
+          value={value}
+          tabIndex="1"
+          onChange={onChange}
+          maxLength="255"
+          size="255"
+          style={styles.input}
+        />
+      </Field>
     );
   }
 }
