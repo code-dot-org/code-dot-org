@@ -23,6 +23,23 @@ const initialState = {
   assessmentId: 0,
 };
 
+// Question types for assessments.
+const QuestionType = {
+  MULTI: 'Multi',
+  FREE_RESPONSE: 'FreeResponse',
+};
+
+// Question types for surveys.
+const SurveyQuestionType = {
+  MULTI: 'multi',
+  FREE_RESPONSE: 'free_response',
+};
+
+const MultiAnswerStatus = {
+  CORRECT: 'correct',
+  INCORRECT: 'incorrect'
+};
+
 // Action type constants
 const SET_ASSESSMENT_RESPONSES = 'sectionAssessments/SET_ASSESSMENT_RESPONSES';
 const SET_ASSESSMENTS_QUESTIONS = 'sectionAssessments/SET_ASSESSMENTS_QUESTIONS';
@@ -178,7 +195,7 @@ export const getMultipleChoiceStructureForCurrentAssessment = (state) => {
 
   // Transform that data into what we need for this particular table, in this case
   // questionStructurePropType structure.
-  return questionData.filter(question => question.type === 'Multi').map(question => {
+  return questionData.filter(question => question.type === QuestionType.MULTI).map(question => {
     return {
       id: question.level_id,
       question: question.question_text,
@@ -214,11 +231,11 @@ export const getStudentMCResponsesForCurrentAssessment = (state) => {
     return {
       id: studentId,
       name: studentObject.student_name,
-      studentResponses: studentAssessment.level_results.filter(answer => answer.status !== "free_response")
+      studentResponses: studentAssessment.level_results.filter(answer => answer.type === QuestionType.MULTI)
         .map(answer => {
           return {
             responses: answer.student_result || '',
-            isCorrect: answer.status === 'correct',
+            isCorrect: answer.status === MultiAnswerStatus.CORRECT,
           };
         })
     };
@@ -241,7 +258,7 @@ export const getAssessmentsFreeResponseResults = (state) => {
   // an empty array of responses.
   const questionData = assessmentsStructure.questions;
   const questionsAndResults = questionData
-    .filter(question => question.type === 'FreeResponse')
+    .filter(question => question.type === QuestionType.FREE_RESPONSE)
     .map(question => ({
       questionText: question.question_text,
       responses: [],
@@ -257,7 +274,7 @@ export const getAssessmentsFreeResponseResults = (state) => {
     let studentAssessment = studentObject.responses_by_assessment[currentAssessmentId] || {};
 
     const responsesArray = studentAssessment.level_results || [];
-    responsesArray.filter(result => result.status === 'free_response').forEach((response, index) => {
+    responsesArray.filter(result => result.type === QuestionType.FREE_RESPONSE).forEach((response, index) => {
       questionsAndResults[index].responses.push({
         id: studentId,
         name: studentObject.student_name,
@@ -282,7 +299,7 @@ export const getSurveyFreeResponseQuestions = (state) => {
 
   const questionData = currentSurvey.levelgroup_results;
 
-  return questionData.filter(question => question.type === 'free_response').map(question => {
+  return questionData.filter(question => question.type === SurveyQuestionType.FREE_RESPONSE).map(question => {
     return {
       questionText: question.question,
       answers: question.results.map((response, index) => {
@@ -307,7 +324,7 @@ export const getMultipleChoiceSurveyResults = (state) => {
   const questionData = currentSurvey.levelgroup_results;
 
   // Filter to multiple choice questions.
-  return questionData.filter(question => question.type === 'multi').map((question, index) => {
+  return questionData.filter(question => question.type === SurveyQuestionType.MULTI).map((question, index) => {
     // Calculate the total responses for each answer.
 
     const totalAnswered = question.results.length;
