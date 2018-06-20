@@ -2,7 +2,7 @@ require 'test_helper'
 
 class UserMultiAuthHelperTest < ActiveSupport::TestCase
   test 'does nothing if user is already migrated' do
-    user = create :teacher, :with_multi_auth
+    user = create :teacher, :with_migrated_email_authentication_option
     assert user.migrated?
 
     user.expects(:save).never
