@@ -39,6 +39,7 @@
     "default_flap": "NORMAL",
     "shareable": "false",
     "project_template_level_name": "courseC_flappy_events_template",
+    "hint_prompt_attempts_threshold": 10,
     "contained_level_names": null
   },
   "published": true,

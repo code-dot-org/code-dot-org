@@ -253,8 +253,8 @@ stage 'The Design Process', flex_category: 'end_of_course_project'
 named_level 'Begin planning your project_2018'
 
 stage 'Build Your Project', flex_category: 'end_of_course_project'
-named_level 'Course E: Play Lab Project_2018'
 named_level 'Course E: Artist Project_2018'
+named_level 'CourseE_Project_SpriteLab'
 
 stage 'Present Your Project', flex_category: 'end_of_course_project'
 named_level 'Prepare for your presentation_2018'

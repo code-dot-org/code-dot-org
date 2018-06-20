@@ -36,6 +36,7 @@
     "markdown_instructions": "Help the farmer walk the path to find all of the lettuce\r\n\r\nIn this puzzle, lettuce is growing at the end of every path.  If there is a path in front of her, the farmer can keep moving forward.  Otherwise, she needs to pick all of the lettuce, then turn to stay on the path. ",
     "shape_shift": "false",
     "disable_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 18,
     "contained_level_names": null
   },
   "published": true,
