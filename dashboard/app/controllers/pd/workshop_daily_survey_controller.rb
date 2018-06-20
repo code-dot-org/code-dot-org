@@ -16,7 +16,10 @@ module Pd
     # for the relevant session id.
     # The pre-workshop survey, which has no session id, will redirect to thanks.
     def new_general
-      workshop = Workshop.where(subject: [SUBJECT_TEACHER_CON, SUBJECT_SUMMER_WORKSHOP]).enrolled_in_by(current_user).nearest
+      workshop = Workshop.
+        where(subject: [SUBJECT_TEACHER_CON, SUBJECT_SUMMER_WORKSHOP]).
+        nearest_attended_or_enrolled_in_by(current_user)
+
       return render :not_enrolled unless workshop
 
       day = params[:day].to_i
