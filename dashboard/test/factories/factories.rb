@@ -249,6 +249,14 @@ FactoryGirl.define do
         oauth_refresh_token 'fake-oauth-refresh-token'
       end
 
+      factory :windowslive_student do
+        encrypted_password nil
+        provider 'windowslive'
+        sequence(:uid) {|n| n}
+        oauth_token 'fake-oauth-token'
+        oauth_token_expiration 'fake-oauth-token-expiration'
+      end
+
       factory :old_student do
         birthday Time.zone.today - 30.years
       end

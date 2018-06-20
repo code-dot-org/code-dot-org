@@ -210,8 +210,38 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
       }
   end
 
-  # TODO: Google Oauth user that also has a password
-  # TODO: Microsoft Oauth
+  test 'convert Windows Live OAuth student' do
+    user = create(:windowslive_student)
+    initial_hashed_email = user.hashed_email
+    initial_authentication_id = user.uid
+    initial_oauth_token = user.oauth_token
+    initial_oauth_token_expiration = user.oauth_token_expiration
+
+    assert_user user,
+      provider: 'windowslive',
+      email: :empty,
+      hashed_email: :not_empty,
+      uid: :not_nil,
+      oauth_token: :not_nil,
+      oauth_token_expiration: :not_nil
+
+    migrate user
+
+    assert_user user,
+      email: :empty,
+      hashed_email: initial_hashed_email,
+      primary_authentication_option: {
+        credential_type: 'windowslive',
+        authentication_id: initial_authentication_id,
+        email: :empty,
+        hashed_email: initial_hashed_email,
+        data: {
+          oauth_token: initial_oauth_token,
+          oauth_token_expiration: initial_oauth_token_expiration
+        }
+      }
+  end
+
   # TODO: Facebook Oauth
 
   #
