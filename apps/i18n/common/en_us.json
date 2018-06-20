@@ -517,7 +517,7 @@
   "extraTopBlocksWhenRun": "You have unattached blocks. Did you mean to attach these to the \"when run\" block?",
   "fallbackVideoClosedCaptioningLink": "Closed Captioning and Translations",
   "fallbackVideoClosedCaptioningDialogHeading": "Closed captioning and translations available on YouTube",
-  "fallbackVideoClosedCaptioningDialogBody": "Please ask your IT department to allow access to \"https://www.youtube-nocookie.com/*\" in order to get closed captioning and translations.  Note that this version of YouTube will not collect any data from you other than what is required to play the video.",
+  "fallbackVideoClosedCaptioningDialogBody": "Please ask your IT department to allow access to https://www.youtube-nocookie.com/*, *.googlevideo.com/*, and *.ytimg.com/* in order to get closed captioning and translations.  Note that this version of YouTube will not collect any data from you other than what is required to play the video.",
   "fallbackVideoClosedCaptioningDialogBodyLink": "See IT requirements",
   "fallbackVideoClosedCaptioningDialogClose": "Close",
   "featureAgain": "Feature again",

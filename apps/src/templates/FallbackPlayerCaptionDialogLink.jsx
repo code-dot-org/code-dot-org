@@ -13,10 +13,14 @@ const styles = {
     paddingLeft: 20,
     paddingRight: 20,
     paddingBottom: 20,
-    textAlign: 'left'
+    textAlign: 'left',
+    fontFamily: '"Gotham 4r", sans-serif'
+  },
+  dialogLinkContainer: {
+    marginTop: 20
   },
   dialogLink: {
-    marginTop: 20
+    color: '#005580'
   }
 };
 
@@ -74,8 +78,9 @@ class FallbackPlayerCaptionDialog extends Component {
         <div>
           {i18n.fallbackVideoClosedCaptioningDialogBody()}
         </div>
-        <div style={styles.dialogLink}>
+        <div style={styles.dialogLinkContainer}>
           <a
+            style={styles.dialogLink}
             href={pegasus('/educate/it')}
             target="_blank"
           >
