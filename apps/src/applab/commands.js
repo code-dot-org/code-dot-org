@@ -1,3 +1,5 @@
+/* globals appOptions */
+
 import ChartApi from './ChartApi';
 import EventSandboxer from './EventSandboxer';
 import sanitizeHtml from './sanitizeHtml';
@@ -1356,7 +1358,8 @@ applabCommands.startWebRequest = function (opts) {
   }
   var url = XHR_PROXY_PATH + '?u=' + encodeURIComponent(opts.url) +
       '&c=' + encodeURIComponent(Applab.channelId);
-  req.open('GET', url, true);
+  const { isExported } = appOptions || {};
+  req.open('GET', isExported ? opts.url : url, true);
   req.send();
 };
 
