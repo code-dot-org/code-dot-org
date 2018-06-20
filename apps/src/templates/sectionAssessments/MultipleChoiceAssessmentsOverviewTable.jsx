@@ -155,8 +155,6 @@ class MultipleChoiceAssessmentsOverviewTable extends Component {
       question1.answers.length - question2.answers.length
     )).pop();
 
-    //maxOptionsQuestion = maxOptionsQuestion || {answers: []};
-
     const columnLabelNames = maxOptionsQuestion.answers.map((answer) => {
       return this.getAnswerColumn(answer.multipleChoiceOption);
     });
@@ -183,13 +181,13 @@ class MultipleChoiceAssessmentsOverviewTable extends Component {
     })(this.props.questionAnswerData);
 
     return (
-        <Table.Provider
-          columns={columns}
-          style={tableLayoutStyles.table}
-        >
-          <Table.Header />
-          <Table.Body rows={sortedRows} rowKey="id" />
-        </Table.Provider>
+      <Table.Provider
+        columns={columns}
+        style={tableLayoutStyles.table}
+      >
+        <Table.Header />
+        <Table.Body rows={sortedRows} rowKey="id" />
+      </Table.Provider>
     );
   }
 }
