@@ -205,6 +205,10 @@ describe('sectionAssessmentsRedux', () => {
                         {
                           student_result: 'D',
                           status: 'incorrect',
+                        },
+                        {
+                          student_result: 'Hi',
+                          status: 'free_response',
                         }
                       ]
                     }

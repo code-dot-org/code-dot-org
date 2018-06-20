@@ -214,12 +214,13 @@ export const getStudentMCResponsesForCurrentAssessment = (state) => {
     return {
       id: studentId,
       name: studentObject.student_name,
-      studentResponses: studentAssessment.level_results.map(answer => {
-        return {
-          responses: answer.student_result || '',
-          isCorrect: answer.status === 'correct',
-        };
-      })
+      studentResponses: studentAssessment.level_results.filter(answer => answer.status !== "free_response")
+        .map(answer => {
+          return {
+            responses: answer.student_result || '',
+            isCorrect: answer.status === 'correct',
+          };
+        })
     };
   }).filter(studentData => studentData);
 
@@ -346,10 +347,11 @@ export const getStudentsMCSummaryForCurrentAssessment = (state) => {
 
 /**
  * Takes in an array of objects {answerText: '', correct: true/false} and
- * returns the corresponding letter to the option with the correct answer.
+ * returns the corresponding letters to the options with the correct answers.
  *
  * TODO(caleybrock): Add letter options to response from the server so they are
  * consistent with the structure, but for now look up letter in this array.
+ * If this code is left client side, it needs tests.
  *
  * Ex - [{correct: false}, {correct: true}] --> returns 'B'
  */
@@ -357,9 +359,15 @@ const getCorrectAnswer = (answerArr) => {
   if (!answerArr) {
     return '';
   }
-  const correctIndex = answerArr.findIndex(answer => answer.correct);
+
   const letterArr = ['A','B', 'C', 'D', 'E', 'F', 'G', 'H'];
-  return letterArr[correctIndex];
+  const correctLetters = [];
+  for (let i = 0; i < answerArr.length; i++) {
+    if (answerArr[i].correct) {
+      correctLetters.push(letterArr[i]);
+    }
+  }
+  return correctLetters.join(', ');
 };
 
 // Requests to the server for assessment data
