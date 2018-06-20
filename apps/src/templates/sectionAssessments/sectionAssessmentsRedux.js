@@ -387,14 +387,16 @@ export const getStudentsMCSummaryForCurrentAssessment = (state) => {
 // Returns an array of objects corresponding to each question and the
 // number of students who answered each answer.
 export const getMultipleChoiceSectionSummary = (state) => {
-  // Set up an empty structure based on the multiple choice assessment questions.
+  // Set up an initial structure based on the multiple choice assessment questions.
+  // Initialize numAnswered for each answer to 0, and totalAnswered for each
+  // question to 0.
   const assessmentsStructure = getCurrentAssessmentQuestions(state);
   if (!assessmentsStructure) {
     return [];
   }
   const questionData = assessmentsStructure.questions;
   const multiQuestions = questionData.filter(question => question.type === 'Multi');
-
+  // TODO(caleybrock): Follow up to calculate multipleChoiceOption consistently.
   const results = multiQuestions.map(question => {
     return {
       id: question.level_id,
@@ -411,8 +413,8 @@ export const getMultipleChoiceSectionSummary = (state) => {
     };
   });
 
-  // Calculate the number of student who answered each option and fill
-  // in the results objects.
+  // Calculate the number of students who answered each option and fill
+  // in the initialized results structure above.
   const studentResponses = getAssessmentResponsesForCurrentScript(state);
   if (!studentResponses) {
     return [];
@@ -426,12 +428,13 @@ export const getMultipleChoiceSectionSummary = (state) => {
     const studentResults = studentAssessment.level_results || [];
     const multiResults = studentResults.filter(result => result.status !== 'free_response');
     multiResults.forEach((response, questionIndex) => {
+      // student_result is either '' and not answered or a series of letters
+      // that the student selected.
       if (response.student_result === '') {
         results[questionIndex].notAnswered++;
       } else {
         results[questionIndex].totalAnswered++;
-        const answerIndices = getIndexFromAnswer(response.student_result);
-        answerIndices.forEach(answer => {
+        getIndexFromAnswer(response.student_result).forEach(answer => {
           results[questionIndex].answers[answer].numAnswered++;
         });
       }
