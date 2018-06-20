@@ -23,20 +23,15 @@ export default class AddPasswordController {
       };
 
       const onFailure = (_, xhr) => {
-        // const validationErrors = xhr.responseJSON;
-        // let error;
-        // if (validationErrors) {
-        //   error = {
-        //     serverErrors: {
-        //       newEmail: validationErrors.email && validationErrors.email[0],
-        //       currentPassword: validationErrors.current_password && validationErrors.current_password[0],
-        //     }
-        //   };
-        // } else {
-        //   error = new Error('Unexpected failure: ' + xhr.status);
-        // }
+        const validationErrors = xhr.responseJSON;
+        let error;
+        if (validationErrors && validationErrors.password) {
+          error = validationErrors.password[0];
+        } else {
+          error = 'Unexpected failure: ' + xhr.status;
+        }
         detachHandlers();
-        reject(xhr.responseJSON);
+        reject(error);
       };
 
       // Subscribe to jquery-ujs events before we submit, and unsubscribe after
