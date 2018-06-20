@@ -206,10 +206,12 @@ describe('sectionAssessmentsRedux', () => {
                         {
                           student_result: 'D',
                           status: 'incorrect',
+                          type: 'Multi'
                         },
                         {
                           student_result: 'Hi',
-                          status: 'free_response',
+                          status: '',
+                          type: 'FreeResponse',
                         }
                       ]
                     }
@@ -257,7 +259,8 @@ describe('sectionAssessmentsRedux', () => {
                       level_results: [
                         {
                           student_result: 'Hello world',
-                          status: 'free_response',
+                          status: '',
+                          type: 'FreeResponse',
                         }
                       ]
                     }
