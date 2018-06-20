@@ -6,6 +6,7 @@ import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import MultipleChoiceAnswerCell from './MultipleChoiceAnswerCell';
 import styleConstants from "@cdo/apps/styleConstants";
+import { multipleChoiceDataPropType } from './assessmentDataShapes';
 
 export const COLUMNS = {
   QUESTION: 0,
@@ -49,19 +50,6 @@ const answerColumnsFormatter = (percentAnswered, {rowData, columnIndex, rowIndex
       />
   );
 };
-
-const answerDataPropType = PropTypes.shape({
-  multipleChoiceOption: PropTypes.string,
-  percentAnswered: PropTypes.number,
-  isCorrectAnswer: PropTypes.bool,
-});
-
-const multipleChoiceDataPropType = PropTypes.shape({
-  id: PropTypes.number.isRequired,
-  question: PropTypes.string.isRequired,
-  answers: PropTypes.arrayOf(answerDataPropType),
-  notAnswered: PropTypes.number.isRequired,
-});
 
 /**
  *  A single table that shows students' responses to each multiple choice question.
