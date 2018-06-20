@@ -1,13 +1,13 @@
 module UserMultiAuthHelper
   def migrate_to_multi_auth
     raise "Migration not implemented for provider #{provider}" unless
-      (%w(google_oauth2 manual migrated sponsored) << nil).include? provider
+      (%w(google_oauth2 manual migrated sponsored windowslive) << nil).include? provider
 
     return true if migrated?
 
     unless sponsored?
       self.primary_authentication_option =
-        if provider == 'google_oauth2'
+        if %w(google_oauth2 windowslive).include? provider
           AuthenticationOption.new(
             user: self,
             email: email,
