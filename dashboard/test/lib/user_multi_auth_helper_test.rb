@@ -26,13 +26,13 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   end
 
   def assert_convert_sponsored_student(user)
-    assert_attributes user,
+    assert_user user,
       provider: User::PROVIDER_SPONSORED,
       sponsored?: true
 
     migrate user
 
-    assert_attributes user,
+    assert_user user,
       sponsored?: true,
       primary_authentication_option: nil,
       authentication_options: :empty
@@ -42,7 +42,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     # A student with provider "manual" has a username and password, but no email
     # or hashed email on file. This is a legacy account type.
     user = create :manual_username_password_student
-    assert_attributes user,
+    assert_user user,
       provider: User::PROVIDER_MANUAL,
       sponsored?: false,
       email: '',
@@ -55,7 +55,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     # A migrated manual student has no authentication option rows because they
     # sign in with username+password or word/picture, and all of these values
     # are stored on the user row.
-    assert_attributes user,
+    assert_user user,
       sponsored?: false,
       email: '',
       hashed_email: '',
@@ -70,7 +70,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     # Its provider is nil but it has a parent_email on file.
     # In practice it's identical to the "manual" type above.
     user = create :parent_managed_student
-    assert_attributes user,
+    assert_user user,
       provider: nil,
       sponsored?: false,
       email: '',
@@ -84,7 +84,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     # A migrated parent-managed student has no authentication option rows
     # because they sign in with username+password or word/picture, and all of
     # these values are stored on the user row.
-    assert_attributes user,
+    assert_user user,
       sponsored?: false,
       email: '',
       hashed_email: '',
@@ -115,25 +115,24 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     original_email = user.email
     original_hashed_email = user.hashed_email
 
-    assert_attributes user,
+    assert_user user,
       provider: nil,
       hashed_email: :not_empty,
       encrypted_password: :not_empty
 
     migrate user
 
-    assert_attributes user,
+    assert_user user,
       email: original_email,
       hashed_email: original_hashed_email,
       encrypted_password: :not_empty,
-      primary_authentication_option: user.authentication_options.first
-
-    assert_authentication_option user,
-      credential_type: 'email',
-      authentication_id: original_hashed_email,
-      email: original_email,
-      hashed_email: original_hashed_email,
-      data: nil
+      primary_authentication_option: {
+        credential_type: 'email',
+        authentication_id: original_hashed_email,
+        email: original_email,
+        hashed_email: original_hashed_email,
+        data: nil
+      }
   end
 
   #
@@ -149,34 +148,31 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     initial_oauth_token_expiration = user.oauth_token_expiration
     initial_oauth_refresh_token = user.oauth_refresh_token
 
-    assert_equal 'google_oauth2', user.provider
-    assert_equal 0, user.authentication_options.count
-    refute_empty initial_email
-    refute_empty initial_hashed_email
-    refute_nil initial_authentication_id
-    refute_nil initial_oauth_token
-    refute_nil initial_oauth_token_expiration
-    refute_nil initial_oauth_refresh_token
+    assert_user user,
+      provider: 'google_oauth2',
+      email: :not_empty,
+      hashed_email: :not_empty,
+      uid: :not_nil,
+      oauth_token: :not_nil,
+      oauth_token_expiration: :not_nil,
+      oauth_refresh_token: :not_nil
 
     migrate user
 
-    assert_equal 'migrated', user.provider
-    assert_equal 1, user.authentication_options.count
-    assert_equal initial_email, user.email
-    refute_nil user.primary_authentication_option
-
-    # Verify authentication option attributes
-    option = user.primary_authentication_option
-    assert_equal initial_email, option.email
-    assert_equal initial_hashed_email, option.hashed_email
-    assert_equal initial_authentication_id, option.authentication_id
-    assert_equal 'google_oauth2', option.credential_type
-
-    # Verify authentication option data atribute
-    data = JSON.parse(option.data)
-    assert_equal initial_oauth_token, data['oauth_token']
-    assert_equal initial_oauth_token_expiration, data['oauth_token_expiration']
-    assert_equal initial_oauth_refresh_token, data['oauth_refresh_token']
+    assert_user user,
+      email: initial_email,
+      hashed_email: initial_hashed_email,
+      primary_authentication_option: {
+        credential_type: 'google_oauth2',
+        authentication_id: initial_authentication_id,
+        email: initial_email,
+        hashed_email: initial_hashed_email,
+        data: {
+          oauth_token: initial_oauth_token,
+          oauth_token_expiration: initial_oauth_token_expiration,
+          oauth_refresh_token: initial_oauth_refresh_token
+        }
+      }
   end
 
   # TODO: Google Oauth user that also has a password
@@ -193,6 +189,43 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   # TODO: Powerschool Oauth user that also has a password (due to takeover)
 
   private
+
+  #
+  # Assert a set of attributes about a user.
+  # See assert_attributes for details.
+  # Has special handling for :primary_authentication_option
+  #
+  def assert_user(user, expected_values)
+    refute_nil user
+    expected_primary_option = expected_values.delete(:primary_authentication_option)
+
+    assert_attributes user, expected_values
+
+    if expected_primary_option.nil?
+      assert_nil user.primary_authentication_option
+    elsif expected_primary_option
+      assert_authentication_option user.primary_authentication_option, expected_primary_option
+    end
+  end
+
+  #
+  # Assert a set of attributes about an authentication option.
+  # See assert_attributes for details.
+  # Has special handling for :data
+  #
+  def assert_authentication_option(actual_option, expected_values)
+    refute_nil actual_option
+    expected_data = expected_values.delete(:data)
+
+    assert_attributes actual_option, expected_values
+
+    if expected_data.nil?
+      assert_nil actual_option.data
+    elsif expected_data
+      actual_data = JSON.parse(actual_option.data).symbolize_keys
+      assert_attributes actual_data, expected_data
+    end
+  end
 
   #
   # Given an object and a hash mapping method or attribute names to expected
@@ -230,11 +263,6 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
         assert_equal expected_value, actual_value, failure_message
       end
     end
-  end
-
-  def assert_authentication_option(user, expected_option)
-    refute_nil user.primary_authentication_option
-    assert_attributes user.primary_authentication_option, expected_option
   end
 
   def migrate(user)
