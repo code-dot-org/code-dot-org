@@ -199,7 +199,7 @@ export const getStudentMCResponsesForCurrentAssessment = (state) => {
   }
 
   const studentResponsesArray = Object.keys(studentResponses).map(studentId => {
-    studentId = parseInt(studentId);
+    studentId = (parseInt(studentId, 10));
     const studentObject = studentResponses[studentId];
     const currentAssessmentId = state.sectionAssessments.assessmentId;
     const studentAssessment = studentObject.responses_by_assessment[currentAssessmentId];
@@ -250,7 +250,7 @@ export const getAssessmentsFreeResponseResults = (state) => {
 
   // For each student, look up their responses to the currently selected assessment.
   Object.keys(studentResponses).forEach(studentId => {
-    studentId = parseInt(studentId);
+    studentId = (parseInt(studentId, 10));
     const studentObject = studentResponses[studentId];
     const currentAssessmentId = state.sectionAssessments.assessmentId;
     let studentAssessment = studentObject.responses_by_assessment[currentAssessmentId] || {};
@@ -359,7 +359,7 @@ export const getStudentsMCSummaryForCurrentAssessment = (state) => {
   }
 
   const studentsSummaryArray = Object.keys(summaryOfStudentsMCData).map(studentId => {
-    studentId = parseInt(studentId);
+    studentId = (parseInt(studentId, 10));
     const studentsObject = summaryOfStudentsMCData[studentId];
     const currentAssessmentId = state.sectionAssessments.assessmentId;
     const studentsAssessment = studentsObject.responses_by_assessment[currentAssessmentId];
