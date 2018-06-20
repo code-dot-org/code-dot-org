@@ -32,9 +32,9 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     user = create :student,
       provider: User::PROVIDER_MANUAL,
       email: '',
-      hashed_email: ''
+      hashed_email: nil
     assert_empty user.email
-    assert_empty user.hashed_email
+    assert_nil user.hashed_email
     refute_empty user.username
     refute_empty user.encrypted_password
 
@@ -54,14 +54,31 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   end
 
   test 'convert parent-managed student' do
+    # A parent-managed student signs in with a username and password.
+    # Its provider is nil but it has a parent_email on file.
+    # In practice it's identical to the "manual" type above.
     user = create :parent_managed_student
+    assert_nil user.provider
     assert_empty user.email
     assert_nil user.hashed_email
     refute_empty user.username
     refute_empty user.parent_email
     refute_empty user.encrypted_password
 
-    # TODO: What's the desired outcome here?
+    migrate user
+
+    # A migrated parent-managed student has no authentication option rows
+    # because they sign in with username+password or word/picture, and all of
+    # these values are stored on the user row.
+    assert user.migrated?
+    assert_empty user.email
+    assert_empty user.hashed_email
+    refute_empty user.username
+    refute_empty user.parent_email
+    refute_empty user.encrypted_password
+
+    assert_empty user.authentication_options
+    assert_nil user.primary_authentication_option
   end
 
   test 'convert email+password student' do

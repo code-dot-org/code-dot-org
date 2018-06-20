@@ -2,7 +2,7 @@ module UserMultiAuthHelper
   def migrate_to_multi_auth
     return true if migrated?
 
-    unless sponsored? || provider == User::PROVIDER_MANUAL
+    unless sponsored?
       self.primary_authentication_option =
         if provider == 'google_oauth2'
           AuthenticationOption.new(
@@ -16,11 +16,11 @@ module UserMultiAuthHelper
               oauth_refresh_token: oauth_refresh_token
             }.to_json
           )
-        else
+        elsif hashed_email.present?
           AuthenticationOption.new(
             user: self,
             email: email,
-            hashed_email: hashed_email,
+            hashed_email: hashed_email || '',
             credential_type: 'email',
           )
         end
