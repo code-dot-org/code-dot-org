@@ -4,6 +4,7 @@ import {getMultipleChoiceSectionSummary} from './sectionAssessmentsRedux';
 import { connect } from 'react-redux';
 
 class MCAssessmentsOverviewContainer extends Component {
+  // todo write real prop types
   static propTypes= {
     questionAnswerData: PropTypes.array,
   };

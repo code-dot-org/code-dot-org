@@ -345,7 +345,24 @@ export const getStudentsMCSummaryForCurrentAssessment = (state) => {
 
 // todo write comments
 export const getMultipleChoiceSectionSummary = (state) => {
-  return [];
+  const assessmentsStructure = getCurrentAssessmentQuestions(state);
+  if (!assessmentsStructure) {
+    return [];
+  }
+
+  const questionData = assessmentsStructure.questions;
+  const multiQuestions = questionData.filter(question => question.type === 'Multi');
+
+  const results = multiQuestions.map(question => {
+    return {
+      id: question.level_id,
+      question: question.question_text,
+      answers: [],
+      notAnswered: 0,
+    };
+  });
+
+  return results;
 };
 
 // Helpers
