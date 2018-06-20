@@ -37,6 +37,7 @@
     "project_template_level_name": "courseD_artist_project2Template",
     "markdown_instructions": "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)  _\"Now, what should we do? Let’s explore and create our own winter wonderland!\"_\r\n\r\nTry playing around with what you've created. Draw whatever you like!\r\n- What happens if you use two different angles in your stair step pattern?\r\n- What happens if you make your diamond pattern longer or shorter?\r\n- What does it look like to draw two snowflakes on top of one another?\r\n",
     "disable_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 4,
     "contained_level_names": null
   },
   "published": true,

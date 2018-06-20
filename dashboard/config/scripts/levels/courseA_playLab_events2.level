@@ -51,6 +51,7 @@
     "disable_if_else_editing": "false",
     "disable_procedure_autopopulate": "false",
     "background": "city",
+    "hint_prompt_attempts_threshold": 3,
     "contained_level_names": null
   },
   "published": true,

@@ -17,6 +17,7 @@
     "fail_on_ball_exit": true,
     "instructions": "Attach blocks to each of the \"when\" blocks. Bounce the ball until it hits the finish target.",
     "maze": "[[1,1,1,1,1,1,1,1],[1,0,0,0,0,32,0,1],[1,0,0,0,0,0,0,1],[1,0,0,0,0,0,0,1],[1,0,0,0,0,0,4,1],[1,0,0,0,0,0,0,1],[1,0,0,0,0,0,0,1],[1,0,16,0,0,0,0,1]]",
+    "hint_prompt_attempts_threshold": 4,
     "contained_level_names": null
   },
   "published": true,

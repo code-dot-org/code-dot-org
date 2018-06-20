@@ -47,7 +47,7 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
       assessments[level_group.id] = {
         id: level_group.id,
         questions: questions,
-        name: level_group.name,
+        name: script_level.stage.localized_title,
       }
     end
 

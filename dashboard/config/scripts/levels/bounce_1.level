@@ -15,6 +15,7 @@
     ],
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[8,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "instructions": "Attach a block to the \"when left arrow\" block and press \"Run\". Move the paddle using the left arrow to reach the finish target.",
+    "hint_prompt_attempts_threshold": 2,
     "contained_level_names": null
   },
   "published": true,

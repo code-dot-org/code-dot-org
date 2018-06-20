@@ -156,23 +156,8 @@ FactoryGirl.define do
             user: user,
             email: user.email,
             hashed_email: user.hashed_email,
-            credential_type: 'google_oauth',
+            credential_type: 'google_oauth2',
             authentication_id: 'abcd123'
-          )
-        end
-      end
-      trait :with_migrated_google_authentication_option do
-        after(:create) do |user|
-          ao = create(:authentication_option,
-            user: user,
-            email: user.email,
-            hashed_email: user.hashed_email,
-            credential_type: 'google_oauth',
-            authentication_id: 'abcd123'
-          )
-          user.update!(
-            primary_authentication_option: ao,
-            provider: User::PROVIDER_MIGRATED
           )
         end
       end
@@ -184,21 +169,6 @@ FactoryGirl.define do
             hashed_email: user.hashed_email,
             credential_type: 'email',
             authentication_id: user.hashed_email
-          )
-        end
-      end
-      trait :with_migrated_email_authentication_option do
-        after(:create) do |user|
-          ao = create(:authentication_option,
-            user: user,
-            email: user.email,
-            hashed_email: user.hashed_email,
-            credential_type: 'email',
-            authentication_id: user.hashed_email
-          )
-          user.update!(
-            primary_authentication_option: ao,
-            provider: User::PROVIDER_MIGRATED
           )
         end
       end
@@ -271,7 +241,7 @@ FactoryGirl.define do
           user: user,
           email: user.email,
           hashed_email: user.hashed_email,
-          credential_type: 'google_oauth',
+          credential_type: 'google_oauth2',
           authentication_id: 'abcd123'
         )
       end
@@ -283,7 +253,7 @@ FactoryGirl.define do
           user: user,
           email: user.email,
           hashed_email: user.hashed_email,
-          credential_type: 'google_oauth',
+          credential_type: 'google_oauth2',
           authentication_id: 'abcd123'
         )
         user.update!(
