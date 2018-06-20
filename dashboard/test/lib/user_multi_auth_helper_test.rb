@@ -139,6 +139,41 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   # Trusted email from Oauth:
   #
 
+  test 'convert Google OAuth student' do
+    user = create(:google_oauth2_student)
+    initial_hashed_email = user.hashed_email
+    initial_authentication_id = user.uid
+    initial_oauth_token = user.oauth_token
+    initial_oauth_token_expiration = user.oauth_token_expiration
+    initial_oauth_refresh_token = user.oauth_refresh_token
+
+    assert_user user,
+      provider: 'google_oauth2',
+      email: :empty,
+      hashed_email: :not_empty,
+      uid: :not_nil,
+      oauth_token: :not_nil,
+      oauth_token_expiration: :not_nil,
+      oauth_refresh_token: :not_nil
+
+    migrate user
+
+    assert_user user,
+      email: :empty,
+      hashed_email: initial_hashed_email,
+      primary_authentication_option: {
+        credential_type: 'google_oauth2',
+        authentication_id: initial_authentication_id,
+        email: :empty,
+        hashed_email: initial_hashed_email,
+        data: {
+          oauth_token: initial_oauth_token,
+          oauth_token_expiration: initial_oauth_token_expiration,
+          oauth_refresh_token: initial_oauth_refresh_token
+        }
+      }
+  end
+
   test 'convert Google OAuth teacher' do
     user = create(:google_oauth2_teacher)
     initial_email = user.email

@@ -244,6 +244,9 @@ FactoryGirl.define do
         encrypted_password nil
         provider 'google_oauth2'
         sequence(:uid) {|n| n}
+        oauth_token 'fake-oauth-token'
+        oauth_token_expiration 'fake-oauth-token-expiration'
+        oauth_refresh_token 'fake-oauth-refresh-token'
       end
 
       factory :old_student do
