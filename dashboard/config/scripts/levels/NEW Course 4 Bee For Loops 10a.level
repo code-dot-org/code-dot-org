@@ -34,6 +34,7 @@
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Can you find a pattern between the number of steps you need to take and the number of nectars to gather?\",\r\n  \"hint_id\": \"NEW_Course_4_Bee_For_Loops_10a_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n  {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"You'll need to have 2 repeats, one will use a math block.\",\r\n  \"hint_id\": \"NEW_Course_4_Bee_For_Loops_10a_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "never_autoplay_video": "false",
     "fast_get_nectar_animation": "false",
+    "hint_prompt_attempts_threshold": 9,
     "contained_level_names": null
   },
   "published": true,

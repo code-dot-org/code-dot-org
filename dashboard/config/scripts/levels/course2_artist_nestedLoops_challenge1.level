@@ -37,6 +37,7 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/c43080f9084a72755a17e3574b4fa818=levelbuilder/27201.png",
+    "hint_prompt_attempts_threshold": 14,
     "contained_level_names": null
   },
   "published": true,

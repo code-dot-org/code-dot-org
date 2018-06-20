@@ -1,7 +1,13 @@
 class Api::V1::AssessmentsController < Api::V1::JsonApiController
   include LevelsHelper
-  load_and_authorize_resource :section
+
+  before_action :load_from_cache
+  load_and_authorize_resource :section, only: [:section_responses, :section_surveys]
   load_and_authorize_resource :script
+
+  def load_from_cache
+    @script = Script.get_from_cache(params[:script_id])
+  end
 
   # For each assessment in a script, return an object of script_level IDs to question data.
   # Question data includes the question text, all possible answers, and the correct answers.
@@ -41,7 +47,7 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
       assessments[level_group.id] = {
         id: level_group.id,
         questions: questions,
-        name: level_group.name,
+        name: script_level.stage.localized_title,
       }
     end
 
@@ -164,5 +170,13 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
     end
 
     render json: responses_by_student
+  end
+
+  # Return results for surveys, which are long-assessment LevelGroup levels with the anonymous property.
+  # At least five students in the section must have submitted answers.  The answers for each contained
+  # sublevel are shuffled randomly.
+  # GET '/dashboardapi/assessments/section_surveys'
+  def section_surveys
+    render json: LevelGroup.get_summarized_survey_results(@script, @section)
   end
 end

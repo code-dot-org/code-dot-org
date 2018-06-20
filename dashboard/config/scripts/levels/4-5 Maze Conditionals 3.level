@@ -29,6 +29,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "instructions": "Use the `if` block to help me decide when to turn. \r\n",
+    "hint_prompt_attempts_threshold": 4,
     "contained_level_names": null
   },
   "published": true,

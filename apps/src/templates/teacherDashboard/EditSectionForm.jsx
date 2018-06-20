@@ -17,6 +17,9 @@ import {
 const style = {
   root: {
     width: styleConstants['content-width'],
+    height: '80vh',
+    left: 20,
+    right: 20
   },
   dropdown: {
     padding: '0.3em',
@@ -30,10 +33,11 @@ const style = {
     padding: '0.5em',
   },
   scroll: {
-    maxHeight: '58vh',
-    overflowX: 'hidden',
-    overflowY: 'auto',
-  },
+    position: 'absolute',
+    top: 80,
+    overflowY: 'scroll',
+    height: 'calc(80vh - 200px)',
+  }
 };
 
 /**
@@ -191,7 +195,6 @@ const GradeField = ({value, onChange, validGrades, disabled}) => {
         {i18n.grade()}
       </FieldName>
       <Dropdown
-        id="uitest-grade-dropdown"
         value={value}
         onChange={event => onChange(event.target.value)}
         disabled={disabled}

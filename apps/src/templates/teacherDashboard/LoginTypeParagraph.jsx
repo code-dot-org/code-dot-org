@@ -41,7 +41,7 @@ class LoginTypeParagraph extends Component {
     }
 
     return (
-      <div id="uitest-login-type">
+      <div>
         <Paragraph loginType={section.loginType}/>
         <Button
           onClick={this.openDialog}
