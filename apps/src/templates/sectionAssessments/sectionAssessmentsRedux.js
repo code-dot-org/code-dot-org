@@ -350,6 +350,7 @@ export const getStudentsMCSummaryForCurrentAssessment = (state) => {
  *
  * TODO(caleybrock): Add letter options to response from the server so they are
  * consistent with the structure, but for now look up letter in this array.
+ * If this code is left client side, it needs tests.
  *
  * Ex - [{correct: false}, {correct: true}] --> returns 'B'
  */
