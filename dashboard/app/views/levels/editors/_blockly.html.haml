@@ -221,6 +221,7 @@
       uses_droplet: @level.uses_droplet?,
       input_output_table: @level.respond_to?(:input_output_table),
       original_palette: JSON.parse(@level.class.try(:palette) || "{}"),
+      shared_blocks: @level.shared_blocks,
     }.to_json
   }
 %script{src: minifiable_asset_path('js/levels/editors/_blockly.js'),
