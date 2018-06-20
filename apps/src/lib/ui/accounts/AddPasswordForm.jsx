@@ -65,8 +65,8 @@ export default class AddPasswordForm extends React.Component {
     return this.passwordFieldsHaveContent() && (password === passwordConfirmation);
   };
 
-  getValidationError = () => {
-    if (this.passwordFieldsHaveContent() && !this.isFormValid()) {
+  mismatchedPasswordsError = () => {
+    if (!this.isFormValid()) {
       return i18n.passwordsMustMatch();
     }
   };
@@ -106,7 +106,7 @@ export default class AddPasswordForm extends React.Component {
         />
         <PasswordField
           label={i18n.passwordConfirmation()}
-          error={this.getValidationError()}
+          error={this.mismatchedPasswordsError()}
           value={this.state.passwordConfirmation}
           onChange={this.onPasswordConfirmationChange}
         />
