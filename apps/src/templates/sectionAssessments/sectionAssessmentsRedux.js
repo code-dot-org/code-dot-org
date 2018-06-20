@@ -199,7 +199,7 @@ export const getStudentMCResponsesForCurrentAssessment = (state) => {
   }
 
   const studentResponsesArray = Object.keys(studentResponses).map(studentId => {
-    studentId = parseInt(studentId);
+    studentId = (parseInt(studentId, 10));
     const studentObject = studentResponses[studentId];
     const currentAssessmentId = state.sectionAssessments.assessmentId;
     const studentAssessment = studentObject.responses_by_assessment[currentAssessmentId];
@@ -225,6 +225,47 @@ export const getStudentMCResponsesForCurrentAssessment = (state) => {
   }).filter(studentData => studentData);
 
   return studentResponsesArray;
+};
+
+/**
+ * Returns an array of objects, each representing a free response question
+ * and all the students' responses to that question.
+ */
+export const getAssessmentsFreeResponseResults = (state) => {
+  const assessmentsStructure = getCurrentAssessmentQuestions(state);
+  if (!assessmentsStructure) {
+    return [];
+  }
+
+  // Initialize an object for each question, with the questionText and
+  // an empty array of responses.
+  const questionData = assessmentsStructure.questions;
+  const questionsAndResults = questionData
+    .filter(question => question.type === 'FreeResponse')
+    .map(question => ({
+      questionText: question.question_text,
+      responses: [],
+    }));
+
+  const studentResponses = getAssessmentResponsesForCurrentScript(state);
+
+  // For each student, look up their responses to the currently selected assessment.
+  Object.keys(studentResponses).forEach(studentId => {
+    studentId = (parseInt(studentId, 10));
+    const studentObject = studentResponses[studentId];
+    const currentAssessmentId = state.sectionAssessments.assessmentId;
+    let studentAssessment = studentObject.responses_by_assessment[currentAssessmentId] || {};
+
+    const responsesArray = studentAssessment.level_results || [];
+    responsesArray.filter(result => result.status === 'free_response').forEach((response, index) => {
+      questionsAndResults[index].responses.push({
+        id: studentId,
+        name: studentObject.student_name,
+        response: response.student_result,
+      });
+    });
+  });
+  return questionsAndResults;
 };
 
 /**
@@ -319,7 +360,7 @@ export const getStudentsMCSummaryForCurrentAssessment = (state) => {
   }
 
   const studentsSummaryArray = Object.keys(summaryOfStudentsMCData).map(studentId => {
-    studentId = parseInt(studentId);
+    studentId = (parseInt(studentId, 10));
     const studentsObject = summaryOfStudentsMCData[studentId];
     const currentAssessmentId = state.sectionAssessments.assessmentId;
     const studentsAssessment = studentsObject.responses_by_assessment[currentAssessmentId];
