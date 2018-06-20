@@ -126,16 +126,10 @@ module.exports.initializeCodeMirrorForJson = function (
         document.createElement('div'),
         textAreaEl.nextSibling
       ));
-    const fixupJson = () => {
+    const showErrors = (fn) => (arg) => {
       try {
-        if (jsonEditor.getValue().trim()) {
-          let blocks = jsonic(jsonEditor.getValue().trim());
-          if (onBlur) {
-            blocks = onBlur(blocks);
-          }
-          jsonEditor.setValue(JSON.stringify(blocks, null, 2));
-        } else {
-          jsonEditor.setValue('');
+        if (fn) {
+          fn(arg);
         }
         jsonValidationDiv.text('JSON appears valid.');
         jsonValidationDiv.css('color', VALID_COLOR);
@@ -144,9 +138,23 @@ module.exports.initializeCodeMirrorForJson = function (
         jsonValidationDiv.css('color', INVALID_COLOR);
       }
     };
+    const fixupJson = showErrors(() => {
+      if (jsonEditor.getValue().trim()) {
+        let blocks = jsonic(jsonEditor.getValue().trim());
+        if (onBlur) {
+          blocks = onBlur(blocks);
+        }
+        if (onChange) {
+          onChange(jsonEditor);
+        }
+        jsonEditor.setValue(JSON.stringify(blocks, null, 2));
+      } else {
+        jsonEditor.setValue('');
+      }
+    });
 
     const jsonEditor =
-      initializeCodeMirror(textAreaId, 'application/json', onChange);
+      initializeCodeMirror(textAreaId, 'application/json', showErrors(onChange));
     jsonEditor.on('blur', fixupJson);
     fixupJson();
     return jsonEditor;

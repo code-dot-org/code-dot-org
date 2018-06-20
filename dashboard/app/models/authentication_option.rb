@@ -26,10 +26,15 @@ class AuthenticationOption < ApplicationRecord
   belongs_to :user
 
   # These are duplicated from the user model, until we're ready to cut over and remove them from there
-  before_save :normalize_email, :hash_email, :fix_by_user_type
+  before_save :normalize_email, :hash_email, :remove_student_cleartext_email,
+    :fill_authentication_id
 
-  def fix_by_user_type
+  def remove_student_cleartext_email
     self.email = '' if user.student?
+  end
+
+  def fill_authentication_id
+    self.authentication_id = hashed_email if credential_type == 'email'
   end
 
   def normalize_email
@@ -44,6 +49,5 @@ class AuthenticationOption < ApplicationRecord
   def hash_email
     return unless email.present?
     self.hashed_email = AuthenticationOption.hash_email(email)
-    self.authentication_id = hashed_email if credential_type == 'email'
   end
 end

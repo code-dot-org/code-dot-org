@@ -121,8 +121,10 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
             when TextMatch, FreeResponse
               student_result = level_response["result"]
               level_result[:student_result] = student_result
-              level_result[:status] = "free_response"
+              level_result[:status] = ""
+              level_result[:type] = "FreeResponse"
             when Multi
+              level_result[:type] = "Multi"
               answer_indexes = Multi.find_by_id(level.id).correct_answer_indexes
               student_result = level_response["result"].split(",").sort.join(",")
 
