@@ -25,6 +25,12 @@
   = f.hidden_field :description
   = f.hidden_field :arguments
   = f.hidden_field :stack
+  %details
+    %summary Other options
+    = f.label 'Function type'
+    = f.select :block_type, SharedBlocklyFunction.block_types.keys
+    = f.label 'Level type'
+    = f.select :level_type, [GamelabJr.name]
   %div
     = f.submit class: 'btn', id: 'shared_function_submit'
 

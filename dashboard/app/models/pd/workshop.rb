@@ -217,11 +217,28 @@ class Pd::Workshop < ActiveRecord::Base
   # Find the workshop that is closest in time to today
   # @return [Pd::Workshop, nil]
   def self.nearest
-    includes(:sessions).
-      flat_map(&:sessions).
-      compact.
-      min_by {|s| (Date.today - s.start.to_date).to_i.abs}&.
-      workshop
+    joins(:sessions).
+      select("pd_workshops.id, ABS(DATEDIFF(pd_sessions.start, '#{Date.today}')) AS day_diff").
+      order("day_diff ASC").
+      first
+  end
+
+  # Find the workshop with the closest session to today attended by the given teacher
+  # @param [User] teacher
+  # @return [Pd::Workshop, nil]
+  def self.with_nearest_attendance_by(teacher)
+    joins(sessions: :attendances).where(pd_attendances: {teacher_id: teacher.id}).
+      select("pd_workshops.id, ABS(DATEDIFF(pd_sessions.start, '#{Date.today}')) AS day_diff").
+      order("day_diff").
+      first
+  end
+
+  # Find the workshop with the closest session to today attended by the given teacher,
+  # or enrolled in (but not attended by) that same teacher
+  # @param [User] teacher
+  # @return [Pd::Workshop, nil]
+  def self.nearest_attended_or_enrolled_in_by(teacher)
+    current_scope.with_nearest_attendance_by(teacher) || current_scope.enrolled_in_by(teacher).nearest
   end
 
   def course_name
@@ -503,10 +520,7 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def teachercon?
-    [
-      SUBJECT_CSP_TEACHER_CON,
-      SUBJECT_CSD_TEACHER_CON,
-    ].include?(subject)
+    subject == SUBJECT_TEACHER_CON
   end
 
   def fit_weekend?

@@ -32,8 +32,9 @@
     "never_autoplay_video": "false",
     "fast_get_nectar_animation": "false",
     "step_speed": "1",
-    "contained_level_names": null,
-    "instructions_important": "true"
+    "instructions_important": "true",
+    "hint_prompt_attempts_threshold": 3,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

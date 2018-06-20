@@ -40,6 +40,7 @@
     "video_key": "C2_artist_loops",
     "images": "[\r\n  {\"filename\": \"https://images.code.org/ebab39c2931b439520becd8980cf4e1c-image-1490379820506.png\", \"position\": [0, 0]}\r\n]\r\n\r\n",
     "disable_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 10,
     "contained_level_names": null
   },
   "published": true,

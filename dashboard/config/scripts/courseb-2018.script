@@ -2,9 +2,10 @@ hidden false
 hideable_stages true
 stage_extras_available true
 has_lesson_plan true
+curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-18/courseb/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab_k1", "artist_k1"]
-script_announcements [{"notice"=>"New: Choose Which Lessons to Show or Hide for Your Section", "details"=>"Click \"Learn More\" to read the help article on showing and hiding lessons.", "link"=>"https://support.code.org/hc/en-us/articles/115001479372-Hiding-units-and-lessons-in-Code-org-s-CS-Principles-and-CS-Discoveries-courses", "type"=>"bullhorn"}]
+script_announcements [{"notice"=>"Our 2018 CS Fundamentals Curriculum Guide is Live", "details"=>"Click \"Learn More\" to download the PDF, including unplugged lesson plans for Courses A-F.", "link"=>"https://code.org/curriculum/docs/csf/CSF_Curriculum_Guide_2018_smaller.pdf", "type"=>"bullhorn"}]
 family_name 'courseb'
 version_year '2018'
 
@@ -16,6 +17,7 @@ level 'courseAB_video_NewIntro_2018'
 level 'courseB_Scrat_ramp1_2018'
 level 'courseB_Scrat_ramp2_2018'
 level 'courseB_Scrat_ramp3a_2018'
+level 'courseB_Scrat_ramp3b_2018'
 level 'courseB_Scrat_ramp4a_2018'
 level 'courseB_Scrat_ramp5a_2018'
 

@@ -21,7 +21,7 @@ import {TestResults, KeyCodes} from './constants';
 
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
-var UNCOUNTED_BLOCK_TYPES = ["draw_colour", "alpha"];
+var UNCOUNTED_BLOCK_TYPES = ["draw_colour", "alpha", "comment"];
 
 /**
  * Bag of utility functions related to building and displaying feedback

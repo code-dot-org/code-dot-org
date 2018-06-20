@@ -2,9 +2,10 @@ hidden false
 hideable_stages true
 stage_extras_available true
 has_lesson_plan true
+curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-18/coursef/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab", "artist"]
-script_announcements [{"notice"=>"New: Choose Which Lessons to Show or Hide for Your Section", "details"=>"Click \"Learn More\" to read the help article on showing and hiding lessons.", "link"=>"https://support.code.org/hc/en-us/articles/115001479372-Hiding-units-and-lessons-in-Code-org-s-CS-Principles-and-CS-Discoveries-courses", "type"=>"bullhorn"}]
+script_announcements [{"notice"=>"Our 2018 CS Fundamentals Curriculum Guide is Live", "details"=>"Click \"Learn More\" to download the PDF, including unplugged lesson plans for Courses A-F.", "link"=>"https://code.org/curriculum/docs/csf/CSF_Curriculum_Guide_2018_smaller.pdf", "type"=>"bullhorn"}]
 family_name 'coursef'
 version_year '2018'
 
@@ -249,11 +250,11 @@ named_level 'Begin planning your project_2018'
 
 stage 'Build Your Project', flex_category: 'end_of_course_project'
 named_level 'Course F: Artist Project_2018'
-named_level 'Course F: Play Lab Project_2018'
+named_level 'CourseF_Project_SpriteLab'
 
 stage 'Revise Your Project', flex_category: 'end_of_course_project'
 named_level 'Course F: Artist Project - Revise_2018'
-named_level 'Course F: Play Lab Project - Revise_2018'
+named_level 'CourseF_Project_Revise_SpriteLab'
 
 stage 'Present Your Project', flex_category: 'end_of_course_project'
 named_level 'Prepare for your presentation_2018'

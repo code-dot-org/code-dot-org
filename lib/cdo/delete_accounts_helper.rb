@@ -16,6 +16,10 @@ class DeleteAccountsHelper
     raise 'No SOLR server configured' unless solr || CDO.solr_server
     @solr = solr || Solr::Server.new(host: CDO.solr_server)
     @pegasus_db = PEGASUS_DB
+    @pegasus_reporting_db = sequel_connect(
+      CDO.pegasus_reporting_db_writer,
+      CDO.pegasus_reporting_db_reader
+    )
   end
 
   # Deletes all project-backed progress associated with a user.
@@ -139,37 +143,28 @@ class DeleteAccountsHelper
     Follower.with_deleted.where(student_user: user).each(&:really_destroy!)
   end
 
-  def remove_contacts(email)
-    @pegasus_db[:contacts].where(email: email).delete
-  end
-
-  def remove_from_pardot_and_contact_rollups(contact_rollups_recordset)
-    # TODO: Make this an operation handled by the contact rollups task itself
-    #       instead of crossing the architectural boundary ourselves.
-    #       For now this is unsafe to run while contact rollups is itself running.
+  # Removes all information about the user pertaining to Pardot. This encompasses Pardot itself, the
+  # contact_rollups pegasus table (master and reporting), and the contact_rollups_daily pegasus table
+  # (reporting only).
+  # @param [Integer] The user ID to purge from Pardot.
+  def remove_from_pardot(user_id)
     # Though we have the DB tables in all environments, we only sync data from the production
     # environment with Pardot.
     if rack_env == :production
-      pardot_ids = contact_rollups_recordset.
+      pardot_ids = @pegasus_db[:contact_rollups].
         select(:pardot_id).
+        where(dashboard_user_id: user_id).
         map {|contact_rollup| contact_rollup[:pardot_id]}
-      failed_ids = Pardot.delete_pardot_prospects(pardot_ids)
+      failed_ids = Pardot.delete_prospects(pardot_ids)
       if failed_ids.any?
-        raise "Pardot.delete_pardot_prospects failed for Pardot IDs #{failed_ids.join(', ')}."
+        raise "Pardot.delete_prospects failed for Pardot IDs #{failed_ids.join(', ')}."
       end
     end
-    contact_rollups_recordset.delete
-  end
 
-  # Removes all information about the user pertaining to Pardot. This encompasses Pardot itself, the
-  # contact_rollups pegasus table (master and reporting)
-  # @param [Integer] The user ID to purge from Pardot.
-  def remove_from_pardot_by_user_id(user_id)
-    remove_from_pardot_and_contact_rollups @pegasus_db[:contact_rollups].where(dashboard_user_id: user_id)
-  end
-
-  def remove_from_pardot_by_email(email)
-    remove_from_pardot_and_contact_rollups @pegasus_db[:contact_rollups].where(email: email)
+    @pegasus_db[:contact_rollups].where(dashboard_user_id: user_id).delete
+    if @pegasus_reporting_db.table_exists? :contact_rollups_daily
+      @pegasus_reporting_db[:contact_rollups_daily].where(dashboard_user_id: user_id).delete
+    end
   end
 
   # Removes the SOLR record associated with the user.
@@ -228,14 +223,12 @@ class DeleteAccountsHelper
     anonymize_circuit_playground_discount_application(user)
     clean_level_source_backed_progress(user.id)
     clean_survey_responses(user.id)
-    clean_pegasus_forms_for_user(user)
     delete_project_backed_progress(user.id)
     purge_orphaned_students(user.id)
     clean_and_destroy_pd_content(user.id)
     remove_user_sections(user.id)
     remove_user_from_sections_as_student(user)
-    remove_contacts(user.email) if user.email
-    remove_from_pardot_by_user_id(user.id)
+    remove_from_pardot(user.id)
     remove_from_solr(user.id)
     purge_unshared_studio_person(user)
     anonymize_user(user)
@@ -246,52 +239,13 @@ class DeleteAccountsHelper
 
   # Given an email address, locates all accounts (including soft-deleted accounts)
   # associated with that email address and purges each of them in turn.
-  # @param [String] raw_email an email address.
-  def purge_all_accounts_with_email(raw_email)
-    email = raw_email.to_s.strip.downcase
-
+  # @param [String] email an email address.
+  def purge_all_accounts_with_email(email)
     # Note: Not yet taking into account parent_email or users with multiple
     # email addresses tied to their account - we'll have to do that later.
     (
       User.with_deleted.where(email: email) +
       User.with_deleted.where(hashed_email: User.hash_email(email))
     ).each {|u| purge_user u}
-
-    remove_from_pardot_by_email(email)
-    clean_pegasus_forms_for_email(email)
-  end
-
-  private
-
-  def clean_pegasus_forms_for_user(user)
-    clean_pegasus_forms(@pegasus_db[:forms].where(user_id: user.id))
-  end
-
-  def clean_pegasus_forms_for_email(email)
-    clean_pegasus_forms(@pegasus_db[:forms].where(email: email))
-  end
-
-  def clean_pegasus_forms(forms_recordset)
-    form_ids = forms_recordset.map {|f| f[:id]}
-    @pegasus_db[:form_geos].
-      where(form_id: form_ids).
-      update(
-        ip_address: nil,
-        city: nil,
-        state: nil,
-        postal_code: nil,
-        latitude: nil,
-        longitude: nil,
-      )
-    forms_recordset.
-      update(
-        email: '',
-        name: nil,
-        data: {}.to_json,
-        created_ip: '',
-        updated_ip: '',
-        processed_data: nil,
-        hashed_email: nil,
-      )
   end
 end

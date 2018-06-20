@@ -4,7 +4,7 @@ import {assert, expect} from '../../../util/configuredChai';
 import StudentsAssessmentsMCTable from '@cdo/apps/templates/sectionAssessments/StudentsAssessmentsMCTable';
 import {studentOverviewData} from '@cdo/apps/templates/sectionAssessments/assessmentsTestHelpers';
 
-describe('StudentMultipleChoiceOverviewTable', () => {
+describe('StudentsAssessmentsMCTable', () => {
   it('renders a table', () => {
     const wrapper = mount(
       <StudentsAssessmentsMCTable
@@ -23,7 +23,7 @@ describe('StudentMultipleChoiceOverviewTable', () => {
     );
 
     const tableHeaders = wrapper.find('th');
-    expect(tableHeaders).to.have.length(5);
+    expect(tableHeaders).to.have.length(4);
 
     const tableRows = wrapper.find('tr');
     expect(tableRows).to.have.length(7);

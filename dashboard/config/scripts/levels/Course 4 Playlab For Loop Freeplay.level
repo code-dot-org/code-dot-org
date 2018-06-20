@@ -41,6 +41,7 @@
     "block_moving_into_walls": "false",
     "callout_json": "[]",
     "authored_hints": "[]",
+    "hint_prompt_attempts_threshold": 2,
     "contained_level_names": null
   },
   "published": true,

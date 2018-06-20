@@ -100,6 +100,9 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     local_summer_workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
     local_summer_enrollment = create :pd_enrollment, workshop: local_summer_workshop
 
+    teachercon_workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_TEACHER_CON
+    teachercon_enrollment = create :pd_enrollment, workshop: teachercon_workshop
+
     code_org_url = ->(path) {CDO.code_org_url(path, CDO.default_scheme)}
     assert_equal code_org_url["/pd-workshop-survey/#{normal_enrollment.code}"], normal_enrollment.exit_survey_url
     assert_equal code_org_url["/pd-workshop-survey/counselor-admin/#{counselor_enrollment.code}"], counselor_enrollment.exit_survey_url
@@ -107,6 +110,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
     studio_url = ->(path) {CDO.studio_url(path, CDO.default_scheme)}
     assert_equal studio_url["/pd/workshop_survey/post/#{local_summer_enrollment.code}"], local_summer_enrollment.exit_survey_url
+    assert_equal studio_url["/pd/workshop_survey/post/#{teachercon_enrollment.code}"], teachercon_enrollment.exit_survey_url
   end
 
   test 'should_send_exit_survey' do

@@ -1,5 +1,7 @@
 import {assert} from '../../util/configuredChai';
 import sinon from 'sinon';
+import fakeFetch from 'fake-fetch';
+
 var testUtils = require('../../util/testUtils');
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 import { setAppOptions } from '@cdo/apps/code-studio/initApp/loadApp';
@@ -103,6 +105,10 @@ describe('The Exporter,', function () {
     server.respondWith('/blockly/media/foo.png', 'blockly foo.png content');
     server.respondWith('/blockly/media/bar.jpg', 'blockly bar.jpg content');
     server.respondWith('/blockly/media/third.jpg', 'blockly third.jpg content');
+
+    // Needed to simulate fetch() response to '/projects/applab/fake_id/export_create_channel'
+    fakeFetch.install();
+    fakeFetch.respondWith(JSON.stringify({channel_id: 'new_fake_id'}));
 
     setAppOptions({
       "levelGameName":"Applab",
@@ -211,6 +217,7 @@ describe('The Exporter,', function () {
 
   afterEach(function () {
     server.restore();
+    fakeFetch.restore();
     assetPrefix.init({});
     window.userNameCookieKey = stashedCookieKey;
   });
@@ -221,6 +228,7 @@ describe('The Exporter,', function () {
     });
 
     it("should reject the promise with an error", function (done) {
+      server.respondImmediately = true;
       let zipPromise = Exporter.exportAppToZip(
         'my-app',
         'console.log("hello");',
@@ -231,7 +239,6 @@ describe('The Exporter,', function () {
           </div>
         </div>`
       );
-      server.respond();
       zipPromise.then(function () {
         assert.fail('Expected zipPromise not to resolve');
         done();
@@ -242,6 +249,7 @@ describe('The Exporter,', function () {
     });
 
     it("should reject the promise with an error in expoMode", function (done) {
+      server.respondImmediately = true;
       let zipPromise = Exporter.exportAppToZip(
         'my-app',
         'console.log("hello");',
@@ -253,7 +261,6 @@ describe('The Exporter,', function () {
         </div>`,
         true
       );
-      server.respond();
       zipPromise.then(function () {
         assert.fail('Expected zipPromise not to resolve');
         done();
@@ -274,9 +281,10 @@ describe('The Exporter,', function () {
         `<div>
           <div class="screen" tabindex="1" id="screen1">
             <input id="nameInput"/>
-            <img src="/v3/assets/some-channel-id/foo.png"/>
+            <img id="firstImage" src="/v3/assets/some-channel-id/foo.png"/>
             <button id="iconButton" data-canonical-image-url="icon://fa-hand-peace-o">
             <button id="clickMeButton" style="background-color: red;">Click Me!</button>
+            <img id="secondImage" src="/v3/assets/some-channel-id/foo.png"/>
           </div>
         </div>`
       );
@@ -406,7 +414,8 @@ describe('The Exporter,', function () {
       it("should rewrite urls in html to point to the correct asset files", function () {
         var el = document.createElement('html');
         el.innerHTML = zipFiles['my-app/index.html'];
-        assert.equal(el.querySelector("img").getAttribute('src'), 'assets/foo.png');
+        assert.equal(el.querySelector("#firstImage").getAttribute('src'), 'assets/foo.png');
+        assert.equal(el.querySelector("#secondImage").getAttribute('src'), 'assets/foo.png');
       });
 
       it("should rewrite urls in the code to point to the correct asset files", function () {
@@ -427,9 +436,10 @@ describe('The Exporter,', function () {
         `<div>
           <div class="screen" tabindex="1" id="screen1">
             <input id="nameInput"/>
-            <img src="/v3/assets/some-channel-id/foo.png"/>
+            <img id="firstImage" src="/v3/assets/some-channel-id/foo.png"/>
             <button id="iconButton" data-canonical-image-url="icon://fa-hand-peace-o">
             <button id="clickMeButton" style="background-color: red;">Click Me!</button>
+            <img id="secondImage" src="/v3/assets/some-channel-id/foo.png"/>
           </div>
         </div>`,
         true
@@ -499,7 +509,7 @@ describe('The Exporter,', function () {
         assert.property(zipFiles, 'my-app/assets/applab-api.j');
         assert.equal(
           zipFiles['my-app/assets/applab-api.j'],
-          `${getAppOptionsFile(true)}\n${COMMON_LOCALE_JS_CONTENT}\n${APPLAB_LOCALE_JS_CONTENT}\n${APPLAB_API_JS_CONTENT}`
+          `${getAppOptionsFile(true, "new_fake_id")}\n${COMMON_LOCALE_JS_CONTENT}\n${APPLAB_LOCALE_JS_CONTENT}\n${APPLAB_API_JS_CONTENT}`
         );
       });
 
@@ -576,7 +586,8 @@ describe('The Exporter,', function () {
       it("should rewrite urls in html to point to the correct asset files", function () {
         var el = document.createElement('html');
         el.innerHTML = zipFiles['my-app/assets/index.html'];
-        assert.equal(el.querySelector("img").getAttribute('src'), 'foo.png');
+        assert.equal(el.querySelector("#firstImage").getAttribute('src'), 'foo.png');
+        assert.equal(el.querySelector("#secondImage").getAttribute('src'), 'foo.png');
       });
 
       it("should rewrite urls in the code to point to the correct asset files", function () {

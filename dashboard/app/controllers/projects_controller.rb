@@ -4,7 +4,7 @@ require 'cdo/firehose'
 class ProjectsController < ApplicationController
   before_action :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy, :public, :index, :export_config]
   before_action :authorize_load_project!, only: [:load, :create_new, :edit, :remix]
-  before_action :set_level, only: [:load, :create_new, :show, :edit, :readonly, :remix, :export_config]
+  before_action :set_level, only: [:load, :create_new, :show, :edit, :readonly, :remix, :export_config, :export_create_channel]
   protect_from_forgery except: :export_config
   include LevelsHelper
 
@@ -374,6 +374,28 @@ class ProjectsController < ApplicationController
     SourceBucket.new.remix_source src_channel_id, new_channel_id, animation_list
     FileBucket.new.copy_files src_channel_id, new_channel_id
     redirect_to action: 'edit', channel_id: new_channel_id
+  end
+
+  def export_create_channel
+    return if redirect_under_13_without_tos_teacher(@level)
+    src_channel_id = params[:channel_id]
+    begin
+      _, remix_parent_id = storage_decrypt_channel_id(src_channel_id)
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      return head :bad_request
+    end
+    storage_app = StorageApps.new(storage_id('user'))
+    src_data = storage_app.get(src_channel_id)
+    data = initial_data
+    data['name'] = "Exported: #{src_data['name']}"
+    new_channel_id = ChannelToken.create_channel(
+      request.ip,
+      storage_app,
+      data: data,
+      type: params[:key],
+      remix_parent_id: remix_parent_id,
+    )
+    render json: {channel_id: new_channel_id}
   end
 
   def export_config
