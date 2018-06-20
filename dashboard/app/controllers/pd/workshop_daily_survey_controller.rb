@@ -12,7 +12,7 @@ module Pd
     # GET '/pd/workshop_survey/day/:day'
     # Where day 0 is the pre-workshop survey, and days 1-5 are the 1st through 5th sessions (index 0-4)
     #
-    # The JotForm survey, on submit, will redirect to the new_faciliator route (see below)
+    # The JotForm survey, on submit, will redirect to the new_facilitator route (see below)
     # for the relevant session id.
     # The pre-workshop survey, which has no session id, will redirect to thanks.
     def new_general
