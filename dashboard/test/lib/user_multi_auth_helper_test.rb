@@ -25,18 +25,32 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   end
 
   test 'convert sponsored username+password student' do
-    # also known as the "manual" provider - we don't create these anymore,
-    # but we have some old ones in our system.
+    # A student with a username and password, but no email or hashed email
+    # on file.  Some of these are very old accounts in our system; others
+    # are created when a young word or picture student goes through the
+    # "create a personal login" flow.
     user = create :student,
       provider: User::PROVIDER_MANUAL,
       email: '',
-      hashed_email: nil
+      hashed_email: ''
     assert_empty user.email
-    assert_nil user.hashed_email
+    assert_empty user.hashed_email
     refute_empty user.username
     refute_empty user.encrypted_password
 
-    # TODO: What's the desired outcome here?
+    migrate user
+
+    # A migrated username student has no authentication option rows because they
+    # sign in with username+password or word/picture, and all of these values
+    # are stored on the user row.
+    assert user.migrated?
+    assert_empty user.email
+    assert_empty user.hashed_email
+    refute_empty user.username
+    refute_empty user.encrypted_password
+
+    assert_empty user.authentication_options
+    assert_nil user.primary_authentication_option
   end
 
   test 'convert parent-managed student' do
@@ -141,14 +155,14 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     refute user.migrated?
     assert_nil user.provider
     refute_empty user.hashed_email
-    refute_empty user.password
+    refute_empty user.encrypted_password
 
     migrate user
 
     assert user.migrated?
     assert_equal original_email, user.email
     assert_equal original_hashed_email, user.hashed_email
-    refute_empty user.password
+    refute_empty user.encrypted_password
 
     # Check for email authentication option:
     # {
