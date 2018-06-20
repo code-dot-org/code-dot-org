@@ -136,6 +136,30 @@ function installCategory(blockly) {
   blockly.JavaScript.category = function () {
     return '\n';
   };
+
+  blockly.Blocks.custom_category = {
+    // Repeat n times (internal number).
+    init: function () {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      var customDropdown = new blockly.FieldDropdown([
+        ['Variables', 'VARIABLE'],
+        ['Functions', 'PROCEDURE'],
+        ['Behaviors', 'Behavior'],
+      ]);
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Auto-populated Category')
+        .appendTitle(customDropdown, 'CUSTOM');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.custom_category = function () {
+    return '\n';
+  };
 }
 
 function installWhenRun(blockly, skin, isK1) {
