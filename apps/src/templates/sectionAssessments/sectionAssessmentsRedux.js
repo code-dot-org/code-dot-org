@@ -199,6 +199,7 @@ export const getMultipleChoiceStructureForCurrentAssessment = (state) => {
     return {
       id: question.level_id,
       question: question.question_text,
+      questionNumber: question.question_index + 1,
       correctAnswer: getCorrectAnswer(question.answers),
     };
   });

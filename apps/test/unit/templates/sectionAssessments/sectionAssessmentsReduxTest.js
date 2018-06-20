@@ -172,6 +172,7 @@ describe('sectionAssessmentsRedux', () => {
                       question_text: 'What is a variable?',
                       type: 'Multi',
                       level_id: 456,
+                      question_index: 0,
                     }
                   ]
                 }
@@ -180,7 +181,7 @@ describe('sectionAssessmentsRedux', () => {
           }
         };
         const result = getMultipleChoiceStructureForCurrentAssessment(stateWithAssessment);
-        assert.deepEqual(result, [{correctAnswer: 'B', id: 456, question: 'What is a variable?'}]);
+        assert.deepEqual(result, [{correctAnswer: 'B', id: 456, questionNumber: 1, question: 'What is a variable?'}]);
       });
     });
 
