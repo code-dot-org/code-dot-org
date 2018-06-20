@@ -1083,19 +1083,18 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     # 2 workshops on the same day for each course
     csd_workshops = create_list :pd_workshop, 2, num_sessions: 2, sessions_from: Date.today - 1.day, course: COURSE_CSD
     csp_workshops = create_list :pd_workshop, 2, num_sessions: 2, sessions_from: Date.today - 1.day, course: COURSE_CSP
-    all_workshops = csd_workshops + csp_workshops
 
-    # Enrolled in all
-    all_workshops.each do |workshop|
-      create :pd_enrollment, :from_user, user: teacher, workshop: workshop
-    end
+    # Enroll in the first of each
+    create :pd_enrollment, :from_user, user: teacher, workshop: csd_workshops[0]
+    create :pd_enrollment, :from_user, user: teacher, workshop: csp_workshops[0]
 
     assert_nil Pd::Workshop.where(course: COURSE_CSP).nearest_attended_or_enrolled_in_by(other_teacher)
 
-    # No attendances, expect first enrolled workshop
+    # No attendances, expect enrolled workshop
     assert_equal csp_workshops[0], Pd::Workshop.where(course: COURSE_CSP).nearest_attended_or_enrolled_in_by(teacher)
 
-    # Now attend the second workshop and expect the attended one
+    # Now enroll in and attend the second csp workshop, expect the attended one
+    create :pd_enrollment, :from_user, user: teacher, workshop: csp_workshops[1]
     create :pd_attendance, teacher: teacher, session: csp_workshops[1].sessions.first
     assert_equal csp_workshops[1], Pd::Workshop.where(course: COURSE_CSP).nearest_attended_or_enrolled_in_by(teacher)
 
