@@ -160,6 +160,11 @@ class Blockly < Level
     0
   end
 
+  CATEGORY_CUSTOM_NAMES = {
+    Behavior: 'Behaviors',
+    PROCEDURE: 'Functions',
+    VARIABLE: 'Variables',
+  }
   def self.convert_toolbox_to_category(xml_string)
     xml = Nokogiri::XML(xml_string, &:noblanks)
     return xml_string if xml.nil? || xml.xpath('/xml/block[@type="category"]').empty?
@@ -171,6 +176,13 @@ class Blockly < Level
         category_node = Nokogiri::XML("<category name='#{category_name}'>").child
         category_node['custom'] = 'PROCEDURE' if category_name == 'Functions'
         category_node['custom'] = 'VARIABLE' if category_name == 'Variables'
+        xml.child << category_node
+        block.remove
+      elsif block.attr('type') == 'custom_category'
+        custom_type = block.xpath('title').text
+        category_name = CATEGORY_CUSTOM_NAMES[custom_type.to_sym]
+        category_node = Nokogiri::XML("<category name='#{category_name}'>").child
+        category_node['custom'] = custom_type
         xml.child << category_node
         block.remove
       else
@@ -187,11 +199,21 @@ class Blockly < Level
     return xml_string if xml.nil?
     xml.xpath('/xml/category').map(&:remove).each do |category|
       category_name = category.xpath('@name')
-      category_xml = <<-XML.strip_heredoc.chomp
-        <block type="category">
-          <title name="CATEGORY">#{category_name}</title>
-        </block>
-      XML
+      custom_category = category.xpath('@custom')
+      category_xml =
+        if custom_category.present?
+          <<-XML.strip_heredoc.chomp
+            <block type="custom_category">
+              <title name="CUSTOM">#{custom_category}</title>
+            </block>
+          XML
+        else
+          <<-XML.strip_heredoc.chomp
+            <block type="category">
+              <title name="CATEGORY">#{category_name}</title>
+            </block>
+          XML
+        end
       block = Nokogiri::XML(category_xml, &:noblanks).child
       xml << block
       xml << category.children
