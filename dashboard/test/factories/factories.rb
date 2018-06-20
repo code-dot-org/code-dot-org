@@ -1055,8 +1055,8 @@ FactoryGirl.define do
   end
 
   factory :teacher_feedback do
-    association :student, factory: :user
-    association :section
+    association :student
+    association :teacher
     association :level
   end
 end
