@@ -4,6 +4,14 @@ import { PropTypes } from 'react';
  * we define them here.
  */
 
+// Represents a single student's free response to a free response
+// assessment question.
+export const freeResponsesDataPropType = PropTypes.shape({
+  id:  PropTypes.number,
+  name: PropTypes.string,
+  response: PropTypes.string,
+});
+
 // Shapes for single student multiple choice tables
 
 /**
