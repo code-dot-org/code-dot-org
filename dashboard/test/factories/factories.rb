@@ -208,6 +208,7 @@ FactoryGirl.define do
           sequence(:parent_email) {|n| "testparent#{n}@example.com.xx"}
           email nil
           hashed_email nil
+          provider nil
         end
       end
 
