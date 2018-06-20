@@ -5,13 +5,14 @@ import AddPasswordForm from './AddPasswordForm';
 export default class AddPasswordController {
   constructor(form, mountPoint) {
     this.form = form;
-    this.renderAddPasswordForm(mountPoint);
+    this.mountPoint = mountPoint;
+    this.renderAddPasswordForm();
   }
 
-  renderAddPasswordForm = (mountPoint) => {
+  renderAddPasswordForm = () => {
     ReactDOM.render(
       <AddPasswordForm handleSubmit={this.submitAddPassword}/>,
-      mountPoint
+      this.mountPoint
     );
   };
 
@@ -26,9 +27,9 @@ export default class AddPasswordController {
         const validationErrors = xhr.responseJSON;
         let error;
         if (validationErrors && validationErrors.password) {
-          error = validationErrors.password[0];
+          error = new Error(validationErrors.password[0]);
         } else {
-          error = 'Unexpected failure: ' + xhr.status;
+          error = new Error('Unexpected failure: ' + xhr.status);
         }
         detachHandlers();
         reject(error);

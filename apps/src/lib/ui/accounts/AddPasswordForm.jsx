@@ -66,7 +66,7 @@ export default class AddPasswordForm extends React.Component {
   };
 
   mismatchedPasswordsError = () => {
-    if (!this.isFormValid()) {
+    if (this.passwordFieldsHaveContent() && !this.isFormValid()) {
       return i18n.passwordsMustMatch();
     }
   };
@@ -88,6 +88,8 @@ export default class AddPasswordForm extends React.Component {
   };
 
   onFailure = (error) => {
+    // TODO: i18n this error
+    error = error.message || 'Sorry, an error occurred.';
     this.setState({
       submissionState: error
     });
