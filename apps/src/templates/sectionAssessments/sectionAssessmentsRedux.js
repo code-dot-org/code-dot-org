@@ -262,6 +262,7 @@ export const getAssessmentsFreeResponseResults = (state) => {
     .filter(question => question.type === QuestionType.FREE_RESPONSE)
     .map(question => ({
       questionText: question.question_text,
+      questionNumber: question.question_index + 1,
       responses: [],
     }));
 

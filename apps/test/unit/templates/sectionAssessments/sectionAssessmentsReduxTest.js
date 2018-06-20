@@ -245,7 +245,8 @@ describe('sectionAssessmentsRedux', () => {
                   questions: [
                     {
                       type: 'FreeResponse',
-                      question_text: 'Can you say hello?'
+                      question_text: 'Can you say hello?',
+                      question_index: 0,
                     }
                   ]
                 }
@@ -274,6 +275,7 @@ describe('sectionAssessmentsRedux', () => {
         const result = getAssessmentsFreeResponseResults(stateWithAssessment);
         assert.deepEqual(result, [{
           questionText: "Can you say hello?",
+          questionNumber: 1,
           responses: [{id: 1, name: "Saira", response: "Hello world"}]
         }]);
       });
