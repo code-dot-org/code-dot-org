@@ -6,7 +6,8 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     assert user.migrated?
 
     user.expects(:save).never
-    migrate user
+    assert user.migrate_to_multi_auth
+    user.reload
 
     assert user.migrated?
   end
@@ -43,7 +44,6 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     # A migrated username student has no authentication option rows because they
     # sign in with username+password or word/picture, and all of these values
     # are stored on the user row.
-    assert user.migrated?
     assert_empty user.email
     assert_empty user.hashed_email
     refute_empty user.username
@@ -70,7 +70,6 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     # A migrated parent-managed student has no authentication option rows
     # because they sign in with username+password or word/picture, and all of
     # these values are stored on the user row.
-    assert user.migrated?
     assert_empty user.email
     assert_empty user.hashed_email
     refute_empty user.username
@@ -154,12 +153,10 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   private
 
   def assert_convert_sponsored_student(user)
-    refute user.migrated?
     assert user.sponsored?
 
     migrate user
 
-    assert user.migrated?
     assert user.sponsored?
     assert_empty user.authentication_options
     assert_nil user.primary_authentication_option
@@ -169,14 +166,12 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     original_email = user.email
     original_hashed_email = user.hashed_email
 
-    refute user.migrated?
     assert_nil user.provider
     refute_empty user.hashed_email
     refute_empty user.encrypted_password
 
     migrate user
 
-    assert user.migrated?
     assert_equal original_email, user.email
     assert_equal original_hashed_email, user.hashed_email
     refute_empty user.encrypted_password
@@ -203,8 +198,10 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   end
 
   def migrate(user)
+    refute user.migrated?
     result = user.migrate_to_multi_auth
     user.reload
     assert result, 'Expected migration to multi-auth to succeed, but it failed'
+    assert user.migrated?
   end
 end
