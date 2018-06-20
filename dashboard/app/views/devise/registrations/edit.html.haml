@@ -35,7 +35,7 @@
       = f.label :username
       = f.object.username
   - if f.object.migrated?
-    - if f.object.can_edit_password?
+    - if f.object.can_edit_password? && f.object.encrypted_password.present?
       %div
         = f.label :password, maxlength: 255
         %em= t('user.new_password_hint')
@@ -90,6 +90,9 @@
   %div#submit-update= f.submit t('user.update'), class: 'btn btn-primary'
 
 = link_to t('crud.back'), :back
+
+- if current_user.can_edit_password? && current_user.encrypted_password.blank?
+  %div#add-password-form
 
 - if current_user.can_create_personal_login?
   %hr
