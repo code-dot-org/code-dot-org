@@ -10,6 +10,7 @@ import {connect} from 'react-redux';
 import {h3Style} from "../../lib/ui/Headings";
 import i18n from '@cdo/locale';
 import ScriptSelector from '@cdo/apps/templates/sectionProgress/ScriptSelector';
+import MCAssessmentsOverviewContainer from './MCAssessmentsOverviewContainer';
 import MultipleChoiceByStudentContainer from './MultipleChoiceByStudentContainer';
 import StudentsMCSummaryContainer from './StudentsMCSummaryContainer';
 import FreeResponseBySurveyQuestionContainer from './FreeResponseBySurveyQuestionContainer';
@@ -70,6 +71,7 @@ class SectionAssessments extends Component {
           />
         </div>
           {/* Assessments */}
+          <MCAssessmentsOverviewContainer />
           <StudentsMCSummaryContainer />
           <MultipleChoiceByStudentContainer />
           {/* Surveys */}
