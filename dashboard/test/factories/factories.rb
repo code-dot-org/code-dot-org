@@ -212,6 +212,12 @@ FactoryGirl.define do
         end
       end
 
+      factory :manual_username_password_student do
+        email nil
+        hashed_email nil
+        provider User::PROVIDER_MANUAL
+      end
+
       factory :student_in_word_section do
         encrypted_password nil
         provider 'sponsored'
