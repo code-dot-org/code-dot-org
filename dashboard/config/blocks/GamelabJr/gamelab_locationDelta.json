@@ -1,5 +1,5 @@
 {
-  "category": "",
+  "category": "Location",
   "config": {
     "func": "locationDelta",
     "blockText": "{DISTANCE} pixels {DIR} of {LOCATION}",
