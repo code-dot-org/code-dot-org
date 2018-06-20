@@ -343,6 +343,11 @@ export const getStudentsMCSummaryForCurrentAssessment = (state) => {
   return studentsSummaryArray;
 };
 
+// todo write comments
+export const getMultipleChoiceSectionSummary = (state) => {
+  return [];
+};
+
 // Helpers
 
 /**

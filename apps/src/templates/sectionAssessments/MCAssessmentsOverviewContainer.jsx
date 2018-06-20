@@ -1,5 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import MultipleChoiceAssessmentsOverviewTable from './MultipleChoiceAssessmentsOverviewTable';
+import {getMultipleChoiceSectionSummary} from './sectionAssessmentsRedux';
+import { connect } from 'react-redux';
 
 class MCAssessmentsOverviewContainer extends Component {
   static propTypes= {
@@ -7,13 +9,14 @@ class MCAssessmentsOverviewContainer extends Component {
   };
 
   render() {
+    const {questionAnswerData} = this.props;
     return (
       <div>
-        {this.props.questionAnswerData.length > 0 &&
+        {questionAnswerData.length > 0 &&
           <div>
             <h2>Multiple choice overview table</h2>
             <MultipleChoiceAssessmentsOverviewTable
-              questionAnswerData={[]}
+              questionAnswerData={questionAnswerData}
             />
           </div>
         }
@@ -22,4 +25,8 @@ class MCAssessmentsOverviewContainer extends Component {
   }
 }
 
-export default MCAssessmentsOverviewContainer;
+export const UnconnectedMCAssessmentsOverviewContainer = MCAssessmentsOverviewContainer;
+
+export default connect(state => ({
+  questionAnswerData: getMultipleChoiceSectionSummary(state),
+}))(MCAssessmentsOverviewContainer);

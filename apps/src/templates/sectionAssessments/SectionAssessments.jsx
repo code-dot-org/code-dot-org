@@ -71,7 +71,7 @@ class SectionAssessments extends Component {
           />
         </div>
           {/* Assessments */}
-          <MCAssessmentsOverviewContainer questionAnswerData={[]} />
+          <MCAssessmentsOverviewContainer />
           <StudentsMCSummaryContainer />
           <MultipleChoiceByStudentContainer />
           {/* Surveys */}
