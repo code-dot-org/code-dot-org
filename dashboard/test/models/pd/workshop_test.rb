@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class Pd::WorkshopTest < ActiveSupport::TestCase
+  include Pd::WorkshopConstants
+
   freeze_time
 
   self.use_transactional_test_case = true
@@ -1057,6 +1059,50 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     found = Pd::Workshop.where(subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP).enrolled_in_by(user).nearest
     assert_equal target, found
+  end
+
+  test 'with_nearest_attendance_by' do
+    teacher = create :teacher
+
+    # 2 workshops on the same day
+    workshops = create_list :pd_workshop, 2, num_sessions: 2, sessions_from: Date.today - 1.day
+
+    # Attend first session from one
+    create :pd_attendance, session: workshops[0].sessions[0], teacher: teacher
+    assert_equal workshops[0], Pd::Workshop.with_nearest_attendance_by(teacher)
+
+    # Attend second session (today, now nearest) from the other
+    create :pd_attendance, session: workshops[1].sessions[1], teacher: teacher
+    assert_equal workshops[1], Pd::Workshop.with_nearest_attendance_by(teacher)
+  end
+
+  test 'nearest_attended_or_enrolled_in_by' do
+    teacher = create :teacher
+    other_teacher = create :teacher
+
+    # 2 workshops on the same day for each course
+    csd_workshops = create_list :pd_workshop, 2, num_sessions: 2, sessions_from: Date.today - 1.day, course: COURSE_CSD
+    csp_workshops = create_list :pd_workshop, 2, num_sessions: 2, sessions_from: Date.today - 1.day, course: COURSE_CSP
+    all_workshops = csd_workshops + csp_workshops
+
+    # Enrolled in all
+    all_workshops.each do |workshop|
+      create :pd_enrollment, :from_user, user: teacher, workshop: workshop
+    end
+
+    assert_nil Pd::Workshop.where(course: COURSE_CSP).nearest_attended_or_enrolled_in_by(other_teacher)
+
+    # No attendances, expect first enrolled workshop
+    assert_equal csp_workshops[0], Pd::Workshop.where(course: COURSE_CSP).nearest_attended_or_enrolled_in_by(teacher)
+
+    # Now attend the second workshop and expect the attended one
+    create :pd_attendance, teacher: teacher, session: csp_workshops[1].sessions.first
+    assert_equal csp_workshops[1], Pd::Workshop.where(course: COURSE_CSP).nearest_attended_or_enrolled_in_by(teacher)
+
+    # Switch workshops half way through. (Yes this actually happened in the wild)
+    # No problem. Return the one associated with the most recent attendance
+    create :pd_attendance, teacher: teacher, session: csp_workshops[0].sessions.last
+    assert_equal csp_workshops[0], Pd::Workshop.where(course: COURSE_CSP).nearest_attended_or_enrolled_in_by(teacher)
   end
 
   private
