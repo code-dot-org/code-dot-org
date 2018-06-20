@@ -37,6 +37,7 @@
     "instructions": "Solve this puzzle by drawing a square.",
     "markdown_instructions": "Solve this puzzle by drawing a square with 200 pixel sides.",
     "ideal": "5",
+    "hint_prompt_attempts_threshold": 4,
     "contained_level_names": null
   },
   "published": true,
