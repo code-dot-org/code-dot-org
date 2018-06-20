@@ -45,6 +45,7 @@ end
 
 def ensure_eyes_available
   return if @eyes
+  ENV['APPLITOOLS_BATCH_ID'] = GitUtils.git_revision
   @eyes = Applitools::Selenium::Eyes.new
   @eyes.api_key = CDO.applitools_eyes_api_key
   # Force eyes to use a consistent host OS identifier for now

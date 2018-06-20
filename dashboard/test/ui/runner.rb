@@ -57,7 +57,6 @@ def main(options)
   start_time = Time.now
 
   open_log_files
-  configure_for_eyes if eyes?
   report_tests_starting
   generate_status_page(start_time) if options.with_status_page
 
@@ -348,10 +347,6 @@ end
 
 def eyes?
   $options.run_eyes_tests
-end
-
-def configure_for_eyes
-  ENV['APPLITOOLS_API_KEY'] = CDO.applitools_eyes_api_key
 end
 
 def applitools_batch_url
