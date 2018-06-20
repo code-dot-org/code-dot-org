@@ -357,7 +357,13 @@ export const getMultipleChoiceSectionSummary = (state) => {
     return {
       id: question.level_id,
       question: question.question_text,
-      answers: [],
+      answers: question.answers.map((answer, index) => {
+        return {
+          multipleChoiceOption: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'][index],
+          percentAnswered: 0,
+          isCorrect: answer.correct,
+        };
+      }),
       notAnswered: 0,
     };
   });
