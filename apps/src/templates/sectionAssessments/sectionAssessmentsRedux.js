@@ -412,7 +412,7 @@ export const getMultipleChoiceSectionSummary = (state) => {
     return [];
   }
   const questionData = assessmentsStructure.questions;
-  const multiQuestions = questionData.filter(question => question.type === 'Multi');
+  const multiQuestions = questionData.filter(question => question.type === QuestionType.MULTI);
   // TODO(caleybrock): Follow up to calculate multipleChoiceOption consistently.
   const results = multiQuestions.map(question => {
     return {
@@ -443,7 +443,7 @@ export const getMultipleChoiceSectionSummary = (state) => {
     const studentAssessment = studentObject.responses_by_assessment[currentAssessmentId] || {};
 
     const studentResults = studentAssessment.level_results || [];
-    const multiResults = studentResults.filter(result => result.status !== 'free_response');
+    const multiResults = studentResults.filter(result => result.type === QuestionType.MULTI);
     multiResults.forEach((response, questionIndex) => {
       // student_result is either '' and not answered or a series of letters
       // that the student selected.

@@ -412,8 +412,8 @@ describe('sectionAssessmentsRedux', () => {
                   responses_by_assessment: {
                     123: {
                       level_results: [
-                        {student_result: 'A', status: 'correct',},
-                        {student_result: 'A', status: 'incorrect',},
+                        {student_result: 'A', status: 'correct', type: 'Multi'},
+                        {student_result: 'A', status: 'incorrect', type: 'Multi'},
                       ]
                     }
                   }
@@ -423,8 +423,8 @@ describe('sectionAssessmentsRedux', () => {
                   responses_by_assessment: {
                     123: {
                       level_results: [
-                        {student_result: 'A', status: 'correct',},
-                        {student_result: 'B', status: 'correct',},
+                        {student_result: 'A', status: 'correct', type: 'Multi'},
+                        {student_result: 'B', status: 'correct', type: 'Multi'},
                       ]
                     }
                   }
