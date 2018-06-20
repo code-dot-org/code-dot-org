@@ -1,6 +1,7 @@
 import dedent from 'dedent';
 import {
   appendBlocksByCategory,
+  appendNewFunctions,
   cleanBlocks,
   determineInputs,
   interpolateInputs,
@@ -174,6 +175,183 @@ describe('block utils', () => {
         </xml>
       `);
     });
+  });
+
+  describe('appendNewFunctions', () => {
+    it('appends functions to starter code', () => {
+      const startCode = `
+        <xml>
+          <block type="when_run"/>
+        </xml>
+      `;
+
+      const functions = `
+        <block type="behavior_definition" deletable="false" movable="false" editable="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description/>
+          </mutation>
+          <title name="NAME">acting</title>
+          <statement name="STACK"/>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description/>
+          </mutation>
+          <title name="NAME">acting2</title>
+          <statement name="STACK"/>
+        </block>
+      `;
+
+      const newCode = appendNewFunctions(startCode, functions);
+
+      expect(newCode).to.xml.equal(`
+        <xml>
+          <block type="when_run"/>
+          <block type="behavior_definition" deletable="false" movable="false" editable="false">
+            <mutation>
+              <arg name="this sprite" type="Sprite"/>
+              <description/>
+            </mutation>
+            <title name="NAME">acting</title>
+            <statement name="STACK"/>
+          </block>
+          <block type="behavior_definition" deletable="false" movable="false" editable="false">
+            <mutation>
+              <arg name="this sprite" type="Sprite"/>
+              <description/>
+            </mutation>
+            <title name="NAME">acting2</title>
+            <statement name="STACK"/>
+          </block>
+        </xml>
+      `);
+    });
+  });
+
+  it('Does not append existing functions to starter code', () => {
+      const startCode = `
+        <xml>
+          <block type="when_run"/>
+          <block type="behavior_definition" deletable="false" movable="false" editable="false">
+            <mutation>
+              <arg name="this sprite" type="Sprite"/>
+              <description/>
+            </mutation>
+            <title name="NAME">acting</title>
+            <statement name="STACK"/>
+          </block>
+          <block type="behavior_definition" deletable="false" movable="false" editable="false">
+            <mutation>
+              <arg name="this sprite" type="Sprite"/>
+              <description/>
+            </mutation>
+            <title name="NAME">acting2</title>
+            <statement name="STACK"/>
+          </block>
+        </xml>
+      `;
+
+      const functions = `
+        <block type="behavior_definition" deletable="false" movable="false" editable="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description/>
+          </mutation>
+          <title name="NAME">acting</title>
+          <statement name="STACK"/>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description/>
+          </mutation>
+          <title name="NAME">acting2</title>
+          <statement name="STACK">
+            <block type="variables_set" inline="false">
+              <title name="VAR">someVar</title>
+              <value name="VALUE">
+                <block type="math_number">
+                  <title name="NUM">200</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+      `;
+
+      const newCode = appendNewFunctions(startCode, functions);
+
+      expect(newCode).to.xml.equal(startCode);
+  });
+
+  it('Appends new functions but not existing functions to starter code', () => {
+      const startCode = `
+        <xml>
+          <block type="when_run"/>
+          <block type="behavior_definition" deletable="false" movable="false" editable="false">
+            <mutation>
+              <arg name="this sprite" type="Sprite"/>
+              <description/>
+            </mutation>
+            <title name="NAME">acting2</title>
+            <statement name="STACK"/>
+          </block>
+        </xml>
+      `;
+
+      const functions = `
+        <block type="behavior_definition" deletable="false" movable="false" editable="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description/>
+          </mutation>
+          <title name="NAME">acting</title>
+          <statement name="STACK"/>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description/>
+          </mutation>
+          <title name="NAME">acting2</title>
+          <statement name="STACK">
+            <block type="variables_set" inline="false">
+              <title name="VAR">someVar</title>
+              <value name="VALUE">
+                <block type="math_number">
+                  <title name="NUM">200</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+      `;
+
+      const newCode = appendNewFunctions(startCode, functions);
+
+      expect(newCode).to.xml.equal(`
+        <xml>
+          <block type="when_run"/>
+          <block type="behavior_definition" deletable="false" movable="false" editable="false">
+            <mutation>
+              <arg name="this sprite" type="Sprite"/>
+              <description/>
+            </mutation>
+            <title name="NAME">acting2</title>
+            <statement name="STACK"/>
+          </block>
+          <block type="behavior_definition" deletable="false" movable="false" editable="false">
+            <mutation>
+              <arg name="this sprite" type="Sprite"/>
+              <description/>
+            </mutation>
+            <title name="NAME">acting</title>
+            <statement name="STACK"/>
+          </block>
+        </xml>
+      `);
   });
 
   const TEST_SPRITES = [
