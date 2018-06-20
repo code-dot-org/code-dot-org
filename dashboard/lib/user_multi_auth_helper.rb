@@ -1,5 +1,8 @@
 module UserMultiAuthHelper
   def migrate_to_multi_auth
+    raise "Migration not implemented for provider #{provider}" unless
+      (%w(google_oauth2 manual migrated sponsored) << nil).include? provider
+
     return true if migrated?
 
     unless sponsored?
