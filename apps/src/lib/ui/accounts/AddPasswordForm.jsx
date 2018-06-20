@@ -135,6 +135,7 @@ export default class AddPasswordForm extends React.Component {
             disabled={!this.isFormValid()}
             tabIndex="1"
           />
+          {/* TODO: style error state with red text */}
           <div style={styles.statusText}>
             {this.state.submissionState}
           </div>
