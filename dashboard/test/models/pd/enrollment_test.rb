@@ -470,4 +470,24 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_equal '', enrollment.email
     assert enrollment.reload.valid?, enrollment.errors.messages
   end
+
+  test 'Enrolling user in CSD course makes them an authorized teacher' do
+    teacher = create :teacher
+    assert_empty teacher.permissions
+
+    workshop = create :pd_workshop, course: Pd::SharedWorkshopConstants::COURSE_CSD
+    create :pd_enrollment, workshop: workshop, user: teacher
+
+    assert teacher.permission? UserPermission::AUTHORIZED_TEACHER
+  end
+
+  test 'Enrolling user in CSF course does not make them authorized teacher' do
+    teacher = create :teacher
+    assert_empty teacher.permissions
+
+    workshop = create :pd_workshop, course: Pd::SharedWorkshopConstants::COURSE_CSF
+    create :pd_enrollment, workshop: workshop, user: teacher
+
+    refute teacher.permission? UserPermission::AUTHORIZED_TEACHER
+  end
 end
