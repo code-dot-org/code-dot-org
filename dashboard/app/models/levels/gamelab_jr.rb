@@ -182,6 +182,7 @@ class GamelabJr < Gamelab
     <<-XML.chomp
 <category name="Category">
   <block type="category"></block>
+  <block type="custom_category"></block>
 </category>
 #{common_blocks(type)}
     XML

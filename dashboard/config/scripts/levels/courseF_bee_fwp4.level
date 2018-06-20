@@ -39,6 +39,7 @@
     "instructions": "Add a `length` parameter to the function so that it will still work when the row is a different length.",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "hint_prompt_attempts_threshold": 8,
     "contained_level_names": null
   },
   "published": true,

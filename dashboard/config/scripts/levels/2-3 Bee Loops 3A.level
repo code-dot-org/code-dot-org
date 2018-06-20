@@ -33,6 +33,7 @@
     "never_autoplay_video": "false",
     "examples_required": "false",
     "fast_get_nectar_animation": "false",
+    "hint_prompt_attempts_threshold": 5,
     "contained_level_names": null
   },
   "published": true,

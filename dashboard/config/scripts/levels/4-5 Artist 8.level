@@ -34,6 +34,7 @@
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"The long sides are 240 pixels each.  That means that the 2 short sides must total:\\n\\n**800 - 240 - 240 = 320**\\n\\nWhat is **320/2** ? \",\r\n  \"hint_id\": \"4-5_Artist_8_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"This image can be done 2 ways!  \\n- Draw two rectangles that are **120** long and **160** tall, with an overlapping side\\n\\n- Draw one rectangle that is **240** long and **160** tall, then add a line in the middle.\",\r\n  \"hint_id\": \"4-5_Artist_8_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "never_autoplay_video": "false",
     "discard_background": "false",
+    "hint_prompt_attempts_threshold": 26,
     "contained_level_names": null
   },
   "published": true,

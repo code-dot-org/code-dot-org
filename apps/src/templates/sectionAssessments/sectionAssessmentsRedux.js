@@ -199,7 +199,7 @@ export const getStudentMCResponsesForCurrentAssessment = (state) => {
   }
 
   const studentResponsesArray = Object.keys(studentResponses).map(studentId => {
-    studentId = parseInt(studentId);
+    studentId = (parseInt(studentId, 10));
     const studentObject = studentResponses[studentId];
     const currentAssessmentId = state.sectionAssessments.assessmentId;
     const studentAssessment = studentObject.responses_by_assessment[currentAssessmentId];
@@ -214,16 +214,58 @@ export const getStudentMCResponsesForCurrentAssessment = (state) => {
     return {
       id: studentId,
       name: studentObject.student_name,
-      studentResponses: studentAssessment.level_results.map(answer => {
-        return {
-          responses: answer.student_result || '',
-          isCorrect: answer.status === 'correct',
-        };
-      })
+      studentResponses: studentAssessment.level_results.filter(answer => answer.status !== "free_response")
+        .map(answer => {
+          return {
+            responses: answer.student_result || '',
+            isCorrect: answer.status === 'correct',
+          };
+        })
     };
   }).filter(studentData => studentData);
 
   return studentResponsesArray;
+};
+
+/**
+ * Returns an array of objects, each representing a free response question
+ * and all the students' responses to that question.
+ */
+export const getAssessmentsFreeResponseResults = (state) => {
+  const assessmentsStructure = getCurrentAssessmentQuestions(state);
+  if (!assessmentsStructure) {
+    return [];
+  }
+
+  // Initialize an object for each question, with the questionText and
+  // an empty array of responses.
+  const questionData = assessmentsStructure.questions;
+  const questionsAndResults = questionData
+    .filter(question => question.type === 'FreeResponse')
+    .map(question => ({
+      questionText: question.question_text,
+      responses: [],
+    }));
+
+  const studentResponses = getAssessmentResponsesForCurrentScript(state);
+
+  // For each student, look up their responses to the currently selected assessment.
+  Object.keys(studentResponses).forEach(studentId => {
+    studentId = (parseInt(studentId, 10));
+    const studentObject = studentResponses[studentId];
+    const currentAssessmentId = state.sectionAssessments.assessmentId;
+    let studentAssessment = studentObject.responses_by_assessment[currentAssessmentId] || {};
+
+    const responsesArray = studentAssessment.level_results || [];
+    responsesArray.filter(result => result.status === 'free_response').forEach((response, index) => {
+      questionsAndResults[index].responses.push({
+        id: studentId,
+        name: studentObject.student_name,
+        response: response.student_result,
+      });
+    });
+  });
+  return questionsAndResults;
 };
 
 /**
@@ -318,7 +360,7 @@ export const getStudentsMCSummaryForCurrentAssessment = (state) => {
   }
 
   const studentsSummaryArray = Object.keys(summaryOfStudentsMCData).map(studentId => {
-    studentId = parseInt(studentId);
+    studentId = (parseInt(studentId, 10));
     const studentsObject = summaryOfStudentsMCData[studentId];
     const currentAssessmentId = state.sectionAssessments.assessmentId;
     const studentsAssessment = studentsObject.responses_by_assessment[currentAssessmentId];
@@ -346,10 +388,11 @@ export const getStudentsMCSummaryForCurrentAssessment = (state) => {
 
 /**
  * Takes in an array of objects {answerText: '', correct: true/false} and
- * returns the corresponding letter to the option with the correct answer.
+ * returns the corresponding letters to the options with the correct answers.
  *
  * TODO(caleybrock): Add letter options to response from the server so they are
  * consistent with the structure, but for now look up letter in this array.
+ * If this code is left client side, it needs tests.
  *
  * Ex - [{correct: false}, {correct: true}] --> returns 'B'
  */
@@ -357,9 +400,15 @@ const getCorrectAnswer = (answerArr) => {
   if (!answerArr) {
     return '';
   }
-  const correctIndex = answerArr.findIndex(answer => answer.correct);
+
   const letterArr = ['A','B', 'C', 'D', 'E', 'F', 'G', 'H'];
-  return letterArr[correctIndex];
+  const correctLetters = [];
+  for (let i = 0; i < answerArr.length; i++) {
+    if (answerArr[i].correct) {
+      correctLetters.push(letterArr[i]);
+    }
+  }
+  return correctLetters.join(', ');
 };
 
 // Requests to the server for assessment data

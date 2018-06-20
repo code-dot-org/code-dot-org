@@ -150,6 +150,7 @@ class User < ActiveRecord::Base
   PROVIDER_SPONSORED = 'sponsored'.freeze # "new" user created by a teacher -- logs in w/ name + secret picture/word
   PROVIDER_MIGRATED = 'migrated'.freeze
 
+  # Powerschool note: the Powerschool plugin lives at https://github.com/code-dot-org/powerschool
   OAUTH_PROVIDERS = %w(
     clever
     facebook
@@ -774,7 +775,11 @@ class User < ActiveRecord::Base
   end
 
   def oauth?
-    OAUTH_PROVIDERS.include? provider
+    if migrated?
+      authentication_options.any? {|auth| OAUTH_PROVIDERS.include? auth.credential_type}
+    else
+      OAUTH_PROVIDERS.include? provider
+    end
   end
 
   def self.new_with_session(params, session)
@@ -1730,6 +1735,14 @@ class User < ActiveRecord::Base
     provider == PROVIDER_MIGRATED
   end
 
+  def sponsored?
+    if migrated?
+      authentication_options.empty?
+    else
+      provider == PROVIDER_SPONSORED
+    end
+  end
+
   # We restrict certain users from editing their email address, because we
   # require a current password confirmation to edit email and some users don't
   # have passwords
@@ -1737,7 +1750,7 @@ class User < ActiveRecord::Base
     if migrated?
       # Only word/picture account users do not have authentication options
       # and therefore cannot edit their email addresses
-      !authentication_options.empty?
+      !sponsored?
     else
       encrypted_password.present? || oauth?
     end
@@ -1747,7 +1760,11 @@ class User < ActiveRecord::Base
   # users that don't have a password because they authenticate via oauth, secret
   # picture, or some other unusual method
   def can_edit_password?
-    encrypted_password.present?
+    if migrated?
+      !sponsored?
+    else
+      encrypted_password.present?
+    end
   end
 
   # Whether the current user has permission to change their own account type

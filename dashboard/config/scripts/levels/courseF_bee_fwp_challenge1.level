@@ -38,6 +38,7 @@
     "markdown_instructions": "Use one `for loop` in a function to collect all of the corn. The same `for loop` can count to different maximum values by using the `length` parameter.",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 6,
     "contained_level_names": null
   },
   "published": true,
