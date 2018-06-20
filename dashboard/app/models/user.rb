@@ -80,6 +80,7 @@ class User < ActiveRecord::Base
   include SerializedProperties
   include SchoolInfoDeduplicator
   include LocaleHelper
+  include UserMultiAuthHelper
   include Rails.application.routes.url_helpers
   # races: array of strings, the races that a student has selected.
   # Allowed values for race are:
@@ -287,12 +288,12 @@ class User < ActiveRecord::Base
 
   def email
     return read_attribute(:email) unless migrated?
-    primary_authentication_option.try(:email)
+    primary_authentication_option.try(:email) || ''
   end
 
   def hashed_email
     return read_attribute(:hashed_email) unless migrated?
-    primary_authentication_option.try(:hashed_email)
+    primary_authentication_option.try(:hashed_email) || ''
   end
 
   def facilitator?
@@ -1737,7 +1738,7 @@ class User < ActiveRecord::Base
 
   def sponsored?
     if migrated?
-      authentication_options.empty?
+      authentication_options.empty? && encrypted_password.blank?
     else
       provider == PROVIDER_SPONSORED
     end
