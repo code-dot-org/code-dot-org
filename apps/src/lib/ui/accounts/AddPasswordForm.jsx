@@ -104,7 +104,6 @@ export default class AddPasswordForm extends React.Component {
             type="password"
             value={this.state.password}
             tabIndex="1"
-            onKeyDown={this.onKeyDown}
             onChange={this.onPasswordChange}
             maxLength="255"
             size="255"
@@ -119,7 +118,6 @@ export default class AddPasswordForm extends React.Component {
             type="password"
             value={this.state.passwordConfirmation}
             tabIndex="1"
-            onKeyDown={this.onKeyDown}
             onChange={this.onPasswordConfirmationChange}
             maxLength="255"
             size="255"
