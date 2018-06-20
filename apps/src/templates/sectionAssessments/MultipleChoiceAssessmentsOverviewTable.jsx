@@ -151,7 +151,7 @@ class MultipleChoiceAssessmentsOverviewTable extends Component {
   );
 
   getColumns = (sortable) => {
-    let maxOptionsQuestion = [...this.props.questionAnswerData].sort((question1, question2) => (
+    const maxOptionsQuestion = [...this.props.questionAnswerData].sort((question1, question2) => (
       question1.answers.length - question2.answers.length
     )).pop();
 
