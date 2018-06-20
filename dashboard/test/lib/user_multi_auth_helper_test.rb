@@ -34,8 +34,8 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
 
     assert_attributes user,
       sponsored?: true,
-      primary_authentication_option: nil
-    assert_authentication_options user, []
+      primary_authentication_option: nil,
+      authentication_options: :empty
   end
 
   test 'convert sponsored username+password student' do
@@ -43,6 +43,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     # or hashed email on file. This is a legacy account type.
     user = create :manual_username_password_student
     assert_attributes user,
+      provider: User::PROVIDER_MANUAL,
       sponsored?: false,
       email: '',
       hashed_email: nil,
@@ -60,8 +61,8 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
       hashed_email: '',
       username: :not_empty,
       encrypted_password: :not_empty,
-      primary_authentication_option: nil
-    assert_authentication_options user, []
+      primary_authentication_option: nil,
+      authentication_options: :empty
   end
 
   test 'convert parent-managed student' do
@@ -70,6 +71,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     # In practice it's identical to the "manual" type above.
     user = create :parent_managed_student
     assert_attributes user,
+      provider: nil,
       sponsored?: false,
       email: '',
       hashed_email: nil,
@@ -89,14 +91,15 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
       username: :not_empty,
       encrypted_password: :not_empty,
       parent_email: :not_empty,
-      primary_authentication_option: nil
-    assert_authentication_options user, []
+      primary_authentication_option: nil,
+      authentication_options: :empty
   end
 
   test 'convert email+password student' do
     user = create :student
     assert_empty user.email
     assert_convert_email_user user
+    assert_empty user.email
     assert_empty user.primary_authentication_option.email
   end
 
@@ -104,7 +107,33 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     user = create :teacher
     refute_empty user.email
     assert_convert_email_user user
+    refute_empty user.email
     refute_empty user.primary_authentication_option.email
+  end
+
+  def assert_convert_email_user(user)
+    original_email = user.email
+    original_hashed_email = user.hashed_email
+
+    assert_attributes user,
+      provider: nil,
+      hashed_email: :not_empty,
+      encrypted_password: :not_empty
+
+    migrate user
+
+    assert_attributes user,
+      email: original_email,
+      hashed_email: original_hashed_email,
+      encrypted_password: :not_empty,
+      primary_authentication_option: user.authentication_options.first
+
+    assert_authentication_option user,
+      credential_type: 'email',
+      authentication_id: original_hashed_email,
+      email: original_email,
+      hashed_email: original_hashed_email,
+      data: nil
   end
 
   #
@@ -165,41 +194,6 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
 
   private
 
-  def assert_convert_email_user(user)
-    original_email = user.email
-    original_hashed_email = user.hashed_email
-
-    assert_nil user.provider
-    refute_empty user.hashed_email
-    refute_empty user.encrypted_password
-
-    migrate user
-
-    assert_equal original_email, user.email
-    assert_equal original_hashed_email, user.hashed_email
-    refute_empty user.encrypted_password
-
-    # Check for email authentication option:
-    # {
-    #   email: 'teacher@example.org', // or '' for students
-    #   hashed_email: 'cb3263338bcaf95f7b3a2baaf52dc288',
-    #   credential_type: 'email',
-    #   authentication_id: 'cb3263338bcaf95f7b3a2baaf52dc288',
-    #   data: nil
-    # }
-
-    primary = user.primary_authentication_option
-    refute_nil primary
-    assert_equal original_email, primary.email
-    assert_equal original_hashed_email, primary.hashed_email
-    assert_equal 'email', primary.credential_type
-    assert_equal original_hashed_email, primary.authentication_id
-    assert_nil primary.data
-
-    assert_equal 1, user.authentication_options.count
-    assert_equal primary, user.authentication_options.first
-  end
-
   #
   # Given an object and a hash mapping method or attribute names to expected
   # values, checks that each attribute has the expected value.
@@ -210,6 +204,8 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   # Expected values can be any literal object.  There are also some special
   # expected values that may be passed:
   #
+  # :not_nil - refutes .nil? on the attribute.
+  # :empty - asserts .empty? on the attribute.
   # :not_empty - refutes .empty? on the attribute.
   #
   def assert_attributes(obj, expected_values)
@@ -222,7 +218,11 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
         end
       failure_message = "Expected #{attribute} to be " \
         "#{expected_value.inspect} but was #{actual_value.inspect}"
-      if expected_value == :not_empty
+      if expected_value == :not_nil
+        refute_nil actual_value, failure_message
+      elsif expected_value == :empty
+        assert_empty actual_value, failure_message
+      elsif expected_value == :not_empty
         refute_empty actual_value, failure_message
       elsif expected_value.nil?
         assert_nil actual_value, failure_message
@@ -232,8 +232,9 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     end
   end
 
-  def assert_authentication_options(user, expected_options)
-    assert_equal expected_options.count, user.authentication_options.count
+  def assert_authentication_option(user, expected_option)
+    refute_nil user.primary_authentication_option
+    assert_attributes user.primary_authentication_option, expected_option
   end
 
   def migrate(user)
