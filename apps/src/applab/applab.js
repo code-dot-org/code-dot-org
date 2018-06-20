@@ -570,9 +570,6 @@ Applab.init = function (config) {
     designMode.renderDesignWorkspace();
     designMode.loadDefaultScreen();
 
-    getStore().dispatch(actions.changeInterfaceMode(
-      (!Applab.isReadOnlyView && Applab.startInDesignMode()) ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
-
     designMode.configureDragAndDrop();
 
     var designModeViz = document.getElementById('designModeViz');
