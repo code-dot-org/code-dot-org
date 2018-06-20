@@ -27,6 +27,9 @@ const styles = {
   },
 };
 
+const SAVING_STATE = i18n.saving();
+const SUCCESS_STATE = i18n.success();
+
 const DEFAULT_STATE = {
   password: '',
   passwordConfirmation: '',
@@ -71,7 +74,7 @@ export default class AddPasswordForm extends React.Component {
   handleSubmit = () => {
     const {password, passwordConfirmation} = this.state;
     this.setState({
-      submissionState: 'Saving...'
+      submissionState: SAVING_STATE
     });
     this.props.handleSubmit(password, passwordConfirmation)
       .then(this.onSuccess, this.onFailure);
@@ -80,13 +83,13 @@ export default class AddPasswordForm extends React.Component {
   onSuccess = () => {
     this.setState({
       ...DEFAULT_STATE,
-      submissionState: 'Success!'
+      submissionState: SUCCESS_STATE
     });
   };
 
   onFailure = (error) => {
     this.setState({
-      submissionState: 'Failure!'
+      submissionState: error
     });
   };
 
