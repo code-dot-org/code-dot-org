@@ -214,12 +214,13 @@ export const getStudentMCResponsesForCurrentAssessment = (state) => {
     return {
       id: studentId,
       name: studentObject.student_name,
-      studentResponses: studentAssessment.level_results.map(answer => {
-        return {
-          responses: answer.student_result || '',
-          isCorrect: answer.status === 'correct',
-        };
-      })
+      studentResponses: studentAssessment.level_results.filter(answer => answer.status !== "free_response")
+        .map(answer => {
+          return {
+            responses: answer.student_result || '',
+            isCorrect: answer.status === 'correct',
+          };
+        })
     };
   }).filter(studentData => studentData);
 
