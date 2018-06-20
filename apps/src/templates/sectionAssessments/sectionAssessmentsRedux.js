@@ -385,7 +385,7 @@ export const getStudentsMCSummaryForCurrentAssessment = (state) => {
 };
 
 // Returns an array of objects corresponding to each question and the
-// number of student who answered each answer.
+// number of students who answered each answer.
 export const getMultipleChoiceSectionSummary = (state) => {
   // Set up an empty structure based on the multiple choice assessment questions.
   const assessmentsStructure = getCurrentAssessmentQuestions(state);
@@ -402,7 +402,6 @@ export const getMultipleChoiceSectionSummary = (state) => {
       answers: question.answers.map((answer, index) => {
         return {
           multipleChoiceOption: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'][index],
-          percentAnswered: 0,
           isCorrect: answer.correct,
           numAnswered: 0,
         };
