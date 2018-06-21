@@ -8,6 +8,7 @@ module UserMultiAuthHelper
         google_oauth2
         manual
         migrated
+        powerschool
         sponsored
         windowslive
       ).include?(provider)
@@ -16,7 +17,7 @@ module UserMultiAuthHelper
 
     unless sponsored?
       self.primary_authentication_option =
-        if %w(clever facebook google_oauth2 windowslive).include? provider
+        if %w(clever facebook google_oauth2 powerschool windowslive).include? provider
           AuthenticationOption.new(
             user: self,
             email: email,
