@@ -1177,8 +1177,11 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'sponsored? is true for migrated user with no authentication options' do
-    student = create :student, email: 'example@email.com'
-    student.update(provider: User::PROVIDER_MIGRATED)
+    student = create :student_in_picture_section
+    student.migrate_to_multi_auth
+    student.reload
+
+    assert_empty student.authentication_options
     assert student.sponsored?
   end
 
@@ -1203,10 +1206,12 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'can_edit_password? is false for migrated user with no authentication options' do
-    user = create :user
-    user.update(provider: 'migrated')
-    assert user.authentication_options.empty?
-    refute user.can_edit_password?
+    student = create :student_in_picture_section
+    student.migrate_to_multi_auth
+    student.reload
+
+    assert_empty student.authentication_options
+    refute student.can_edit_password?
   end
 
   test 'can_edit_email? is true for user with password' do
@@ -1220,9 +1225,12 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'can_edit_email? is false for migrated user with no authentication options' do
-    teacher = create :teacher, email: 'example@email.com'
-    teacher.update(provider: User::PROVIDER_MIGRATED)
-    refute teacher.can_edit_email?
+    student = create :student_in_picture_section
+    student.migrate_to_multi_auth
+    student.reload
+
+    assert_empty student.authentication_options
+    refute student.can_edit_email?
   end
 
   test 'can_edit_email? is true for migrated user with at least one authentication option' do
