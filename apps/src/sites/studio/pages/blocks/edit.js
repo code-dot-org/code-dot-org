@@ -27,7 +27,17 @@ $(document).ready(() => {
   });
 
   initializeCodeMirrorForJson('block_config', { onChange });
-  initializeCodeMirror('block_helper_code', 'javascript');
+  const helperCodeEditor = initializeCodeMirror('block_helper_code', 'javascript');
+
+  document.querySelector('#block_submit').addEventListener('click', event => {
+    try {
+      const code = helperCodeEditor.getValue();
+      eval(`(function () { ${code} })`); // eslint-disable-line no-eval
+    } catch (error) {
+      alert(`Error in helper code:\n\n${error}`);
+      event.preventDefault();
+    }
+  });
 });
 
 let config;
