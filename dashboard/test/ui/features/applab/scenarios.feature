@@ -93,6 +93,7 @@ Feature: App Lab Scenarios
 
   @no_safari
   @no_mobile
+  @no_chrome
   Scenario: Upload Image Asset
     When I press "designModeButton"
     And I press the settings cog
