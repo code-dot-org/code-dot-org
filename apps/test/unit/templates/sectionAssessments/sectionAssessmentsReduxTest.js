@@ -173,6 +173,7 @@ describe('sectionAssessmentsRedux', () => {
                       question_text: 'What is a variable?',
                       type: 'Multi',
                       level_id: 456,
+                      question_index: 0,
                     }
                   ]
                 }
@@ -181,7 +182,7 @@ describe('sectionAssessmentsRedux', () => {
           }
         };
         const result = getMultipleChoiceStructureForCurrentAssessment(stateWithAssessment);
-        assert.deepEqual(result, [{correctAnswer: 'B', id: 456, question: 'What is a variable?'}]);
+        assert.deepEqual(result, [{correctAnswer: 'B', id: 456, questionNumber: 1, question: 'What is a variable?'}]);
       });
     });
 
@@ -245,7 +246,8 @@ describe('sectionAssessmentsRedux', () => {
                   questions: [
                     {
                       type: 'FreeResponse',
-                      question_text: 'Can you say hello?'
+                      question_text: 'Can you say hello?',
+                      question_index: 0,
                     }
                   ]
                 }
@@ -274,6 +276,7 @@ describe('sectionAssessmentsRedux', () => {
         const result = getAssessmentsFreeResponseResults(stateWithAssessment);
         assert.deepEqual(result, [{
           questionText: "Can you say hello?",
+          questionNumber: 1,
           responses: [{id: 1, name: "Saira", response: "Hello world"}]
         }]);
       });
