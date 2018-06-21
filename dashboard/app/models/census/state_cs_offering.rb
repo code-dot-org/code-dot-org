@@ -39,6 +39,7 @@ class Census::StateCsOffering < ApplicationRecord
     NC
     OK
     SC
+    TX
     UT
     VA
   ).freeze
@@ -107,6 +108,8 @@ class Census::StateCsOffering < ApplicationRecord
       row_hash['State School ID']
     when 'SC'
       School.construct_state_school_id('SC', row_hash['districtcode'], row_hash['schoolcode'])
+    when 'TX'
+      row_hash['State_school_id']
     when 'UT'
       # Don't raise an error if school does not exist because the logic that invokes this method skips these.
       School.find_by(id: row_hash['NCES ID'])&.state_school_id
@@ -320,6 +323,17 @@ class Census::StateCsOffering < ApplicationRecord
     2536
   ).freeze
 
+  TX_COURSE_CODES = %w(
+    3580200
+    3580300
+    13027600
+    A3580300
+    13027700
+    A3580100
+    3580140
+    I3580300
+  ).freeze
+
   # Utah did not provide codes, but did provide course titles.
   UT_COURSE_CODES = [
     'A.P.  Computer Science',
@@ -408,6 +422,8 @@ class Census::StateCsOffering < ApplicationRecord
     when 'SC'
       # One source per row
       [UNSPECIFIED_COURSE]
+    when 'TX'
+      TX_COURSE_CODES.select {|course| course == row_hash['course']}
     when 'VA'
       VA_COURSE_CODES.select {|course| course == row_hash['course']}
     else
