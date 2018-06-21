@@ -71,15 +71,6 @@ const customInputTypes = {
           block.dispose(true, true);
         }
       };
-      block.superSetTitleValue = block.setTitleValue;
-      block.setTitleValue = function (newValue, name) {
-        if (inputConfig.assignment &&
-            name === inputConfig.name &&
-            block.blockSpace.isFlyout) {
-          newValue = Blockly.Variables.generateUniqueName(newValue);
-        }
-        block.superSetTitleValue(newValue, name);
-      };
 
       currentInputRow
           .appendTitle(inputConfig.label)
@@ -340,6 +331,13 @@ export default {
         console.error(`Block config ${name} generated a block named ${blockName}`);
       }
     });
+    if (blockly.Blocks.gamelab_location_variable_set &&
+        blockly.Blocks.gamelab_location_variable_get) {
+      Blockly.Variables.registerGetter(Blockly.BlockValueType.LOCATION,
+        'gamelab_location_variable_get');
+      Blockly.Variables.registerSetter(Blockly.BlockValueType.LOCATION,
+        'gamelab_location_variable_set');
+    }
 
     if (!hideCustomBlocks) {
       level.toolbox = appendBlocksByCategory(level.toolbox, blocksByCategory);
