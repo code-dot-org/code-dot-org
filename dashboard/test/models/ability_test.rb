@@ -171,7 +171,7 @@ class AbilityTest < ActiveSupport::TestCase
     feedback = create :teacher_feedback, student: student, teacher: teacher
 
     assert Ability.new(teacher).can? :create, feedback
-    assert Ability.new(teacher).can? :show_feedback_from_teacher, feedback
+    assert Ability.new(teacher).can? :get_feedback_from_teacher, feedback
   end
 
   test 'teachers cannot manage feedback for students not in a section they own' do
@@ -185,7 +185,7 @@ class AbilityTest < ActiveSupport::TestCase
     feedback = create :teacher_feedback, student: student
 
     refute Ability.new(teacher).can? :create, feedback
-    refute Ability.new(teacher).can? :show_feedback_from_teacher, feedback
+    refute Ability.new(teacher).can? :get_feedback_from_teacher, feedback
   end
 
   test 'student can get feedback for their work on a level' do
@@ -195,7 +195,7 @@ class AbilityTest < ActiveSupport::TestCase
     section.add_student student
     feedback = create :teacher_feedback, student: student
 
-    assert Ability.new(student).can? :show_feedback_for_level, feedback
+    assert Ability.new(student).can? :get_feedbacks, feedback
   end
 
   test 'student cannot get feedback for the work of a different student on a level' do
@@ -206,7 +206,7 @@ class AbilityTest < ActiveSupport::TestCase
     section.add_student student
     feedback = create :teacher_feedback, student: student
 
-    refute Ability.new(other_student).can? :show_feedback_for_level, feedback
+    refute Ability.new(other_student).can? :get_feedbacks, feedback
   end
 
   test 'teacher cannot get all the feedback for student work on a level' do
@@ -216,6 +216,6 @@ class AbilityTest < ActiveSupport::TestCase
     section.add_student student
     feedback = create :teacher_feedback, student: student
 
-    refute Ability.new(teacher).can? :show_feedback_for_level, feedback
+    refute Ability.new(teacher).can? :get_feedbacks, feedback
   end
 end
