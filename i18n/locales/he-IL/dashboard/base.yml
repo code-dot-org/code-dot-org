@@ -152,7 +152,7 @@ he:
     other_school_not_listed: 'Other school not listed above'
     school_name: 'School Name'
     school_zip: 'School Zip Code'
-    school_address: 'School Address'
+    school_address: 'כתובת בית הספר'
     school_organization_name: 'School/Organization Name'
     school_organization_zip: 'School/Organization Zip Code'
   signin_form:
@@ -361,6 +361,7 @@ he:
     email_confirm_needed_required: 'כתובת האימייל שלך %{email} לא אושרה:'
     email_confirm_wrong_email: '(כתובת דוא״ל שגויה?)'
     email_resend_confirm: 'שלח מחדש הוראות אישור דוא"ל'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(השאר ריק אם אין ברצונך לשנות)"
     current_password_hint: '(אנחנו צריכים את הסיסמה הנוכחית שלך כדי לאשר את השינויים שלך)'
     delete: 'מחק את החשבון שלך'
