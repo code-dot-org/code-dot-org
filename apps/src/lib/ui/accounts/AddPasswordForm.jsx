@@ -1,7 +1,5 @@
 import React, {PropTypes} from 'react';
 import i18n from '@cdo/locale';
-import color from '@cdo/apps/util/color';
-import {Heading3} from '../Headings';
 import {Field} from '../SystemDialog/SystemDialog';
 import Button from "@cdo/apps/templates/Button";
 
@@ -11,8 +9,6 @@ const styles = {
   },
   header: {
     fontSize: 22,
-    // TODO: get correct header color
-    color: color.purple,
   },
   input: {
     marginBottom: 4,
@@ -97,9 +93,10 @@ export default class AddPasswordForm extends React.Component {
   render() {
     return (
       <div style={styles.container}>
-        <Heading3 style={styles.header}>
+        <hr/>
+        <h2 style={styles.header}>
           {i18n.addPassword()}
-        </Heading3>
+        </h2>
         <PasswordField
           label={i18n.password()}
           value={this.state.password}
