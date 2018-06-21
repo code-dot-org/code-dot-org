@@ -774,11 +774,15 @@ exports.createJsWrapperBlockCreator = function (
     if ((expression || simpleValue) && !name) {
       throw new Error('This block requires a name');
     }
-    if (simpleValue && args.length !== 1) {
-      throw new Error('simpleValue blocks must have exactly one argument');
+    if (blockText === undefined) {
+      throw new Error('blockText must be specified');
     }
-    if (simpleValue && !returnType) {
-      throw new Error('simpleValue blocks must specify a return type');
+    if (simpleValue && (!args || args.filter(arg => !arg.assignment).length !== 1)) {
+      throw new Error('simpleValue blocks must have exactly one non-assignment argument');
+    }
+    if (simpleValue && !returnType && !args.some(arg => arg.assignment)) {
+      throw new Error('simpleValue blocks must specify a return type or have ' +
+          'an assignment input');
     }
     if (inline === undefined) {
       inline = true;
@@ -788,6 +792,12 @@ exports.createJsWrapperBlockCreator = function (
       console.warn('blocks with multiple statement inputs cannot be inlined');
       inline = false;
     }
+    args.forEach(arg => {
+      if (arg.customInput && inputTypes[arg.customInput] === undefined) {
+        throw new Error(`${arg.customInput} is not a valid input type, ` +
+          `choose one of [${Object.keys(customInputTypes).join(', ')}]`);
+      }
+    });
     const blockName = `${blocksModuleName}_${name || func}`;
     if (eventLoopBlock && args.filter(arg => arg.statement).length === 0) {
       // If the eventloop block doesn't explicitly list its statement inputs,
@@ -870,10 +880,15 @@ exports.createJsWrapperBlockCreator = function (
       }).filter(value => value !== null);
 
       if (simpleValue) {
-        return [
-          values[0],
-          orderPrecedence === undefined ? ORDER_NONE : orderPrecedence
-        ];
+        const code = prefix + values[args.findIndex(arg => !arg.assignment)];
+        if (returnType !== undefined) {
+          return [
+            code,
+            orderPrecedence === undefined ? ORDER_NONE : orderPrecedence
+          ];
+        } else {
+          return code + ';\n';
+        }
       }
 
       if (methodCall) {

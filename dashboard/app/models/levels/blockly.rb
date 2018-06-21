@@ -163,6 +163,7 @@ class Blockly < Level
 
   CATEGORY_CUSTOM_NAMES = {
     Behavior: 'Behaviors',
+    Location: 'Locations',
     PROCEDURE: 'Functions',
     VARIABLE: 'Variables',
   }

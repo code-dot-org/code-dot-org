@@ -1031,7 +1031,12 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     target = create :pd_workshop, num_sessions: 1, sessions_from: Date.today + 1.week
     create :pd_workshop, num_sessions: 1, sessions_from: Date.today + 2.weeks
 
-    assert_equal target, Pd::Workshop.nearest
+    nearest_workshop = Pd::Workshop.nearest
+    assert_equal target, nearest_workshop
+
+    # Also make sure attributes are included
+    assert_equal target.course, nearest_workshop.course
+    assert_equal 1, nearest_workshop.sessions.count
   end
 
   test 'nearest with no matches returns nil' do
@@ -1069,7 +1074,12 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     # Attend first session from one
     create :pd_attendance, session: workshops[0].sessions[0], teacher: teacher
-    assert_equal workshops[0], Pd::Workshop.with_nearest_attendance_by(teacher)
+    nearest_workshop = Pd::Workshop.with_nearest_attendance_by(teacher)
+    assert_equal workshops[0], nearest_workshop
+
+    # Also make sure attributes are included
+    assert_equal workshops[0].course, nearest_workshop.course
+    assert_equal 2, nearest_workshop.sessions.count
 
     # Attend second session (today, now nearest) from the other
     create :pd_attendance, session: workshops[1].sessions[1], teacher: teacher
