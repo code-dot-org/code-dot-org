@@ -22,7 +22,7 @@
     - else
       .field
         = f.label :email
-        - if current_user.migrated?
+        - if current_user.migrated? && !current_user.student?
           %em= t('user.new_email_hint')
           %br/
         %span#displayed-user-email= f.object.email.present? ? f.object.email : '***encrypted***'
