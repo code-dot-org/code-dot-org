@@ -3,6 +3,7 @@ module UserMultiAuthHelper
     raise "Migration not implemented for provider #{provider}" unless
       provider.nil? ||
       %w(
+        clever
         facebook
         google_oauth2
         manual
@@ -15,11 +16,11 @@ module UserMultiAuthHelper
 
     unless sponsored?
       self.primary_authentication_option =
-        if %w(facebook google_oauth2 windowslive).include? provider
+        if %w(clever facebook google_oauth2 windowslive).include? provider
           AuthenticationOption.new(
             user: self,
             email: email,
-            hashed_email: hashed_email,
+            hashed_email: hashed_email || '',
             credential_type: provider,
             authentication_id: uid,
             data: {
