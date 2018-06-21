@@ -3,7 +3,7 @@
   "config": {
     "func": "spritesWhere",
     "blockText": "sprites where {PROPERTY} is {VALUE}",
-    "returnType": "Sprite",
+    "returnType": "None",
     "args": [
       {
         "name": "PROPERTY",
