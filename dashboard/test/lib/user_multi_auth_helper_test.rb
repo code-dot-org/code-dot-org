@@ -140,27 +140,27 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   #
 
   test 'convert Google OAuth student' do
-    assert_convert_google_user create :google_oauth2_student
+    assert_convert_google_user create(:student, :unmigrated_google_sso)
   end
 
   test 'convert Google OAuth teacher' do
-    assert_convert_google_user create :google_oauth2_teacher
+    assert_convert_google_user create(:teacher, :unmigrated_google_sso)
   end
 
   test 'convert Windows Live OAuth student' do
-    assert_convert_oauth_user create(:windowslive_student), 'windowslive'
+    assert_convert_oauth_user create(:student, :unmigrated_windowslive_sso)
   end
 
   test 'convert Windows Live OAuth teacher' do
-    assert_convert_oauth_user create(:windowslive_teacher), 'windowslive'
+    assert_convert_oauth_user create(:teacher, :unmigrated_windowslive_sso)
   end
 
   test 'convert Facebook OAuth student' do
-    assert_convert_oauth_user create(:facebook_student), 'facebook'
+    assert_convert_oauth_user create(:student, :unmigrated_facebook_sso)
   end
 
   test 'convert Facebook OAuth teacher' do
-    assert_convert_oauth_user create(:facebook_teacher), 'facebook'
+    assert_convert_oauth_user create(:teacher, :unmigrated_facebook_sso)
   end
 
   def assert_convert_google_user(user)
@@ -169,7 +169,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     initial_oauth_refresh_token = user.oauth_refresh_token
     assert_user user, oauth_refresh_token: :not_nil
 
-    assert_convert_oauth_user user, 'google_oauth2'
+    assert_convert_oauth_user user
 
     assert_user user, primary_authentication_option: {
       data: {
@@ -178,7 +178,8 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     }
   end
 
-  def assert_convert_oauth_user(user, provider)
+  def assert_convert_oauth_user(user)
+    provider = user.provider
     initial_email = user.email
     initial_hashed_email = user.hashed_email
     initial_authentication_id = user.uid
