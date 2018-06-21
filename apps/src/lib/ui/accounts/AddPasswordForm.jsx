@@ -11,7 +11,7 @@ const styles = {
   },
   header: {
     fontSize: 22,
-    // TODO: (before merging) get correct color
+    // TODO: get correct header color
     color: color.purple,
   },
   input: {
