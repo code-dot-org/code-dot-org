@@ -513,6 +513,8 @@ describe('entry tests', () => {
     'pd/professional_learning_landing/index': './src/sites/studio/pages/pd/professional_learning_landing/index.js',
     'pd/regional_partner_contact/new': './src/sites/studio/pages/pd/regional_partner_contact/new.js',
 
+    'pd/international_optin/new': './src/sites/studio/pages/pd/international_optin/new.js',
+
     'peer_reviews/dashboard': './src/sites/studio/pages/peer_reviews/dashboard.js',
 
     'code.org/public/teacher-dashboard/index': './src/sites/code.org/pages/public/teacher-dashboard/index.js',
