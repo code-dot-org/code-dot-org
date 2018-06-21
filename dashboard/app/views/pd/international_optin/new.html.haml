@@ -1,0 +1,14 @@
+- @page_title = 'International opt-in'
+
+- content_for(:head) do
+  = stylesheet_link_tag 'css/pd', media: 'all'
+%script{src: minifiable_asset_path('js/pd/international_optin/new.js'), data: @script_data}
+
+#application-header
+  %h3
+    International opt-in
+
+%p
+  This page is for international opt-in.
+
+%div#application-container
