@@ -267,7 +267,7 @@ tr:
           bazı parametre değerleri ile bir durum farklı parametre değerleri ile farklı
           durum oluşmasını isteyebiliriz. Koşullar burada devreye girer...
       CollisionDetection:
-        title: Çarpışmanın algılanması ve Pisagor teoremi
+        title: Çarpışma Tespiti ve Pisagor Teoremi
         desc: Ekrandaki nesnelerin dokunduklarını belirleme oyunların önemli bir yönüdür.
           Bu derste, Pisagor teoremi ve uzaklık formülü ile iki nokta arasındaki mesafeyi
           ölçmeye bakacağız. Daha sonra bunu iki nokta (veya oyun karakterleri) arası
@@ -278,14 +278,15 @@ tr:
         desc: Bu derste, döngüler hakkında bilgi edineceksiniz!
       courseB_unplugged_MRF:
         title: Bağlantısız Etkinlik
-        desc: Bu derste arkadaşlarınızı yargılanmayacaksınız!
+        desc: Bu derste arkadaşlarınızı 'programlayacaksınız'!
       courseB_unplugged_loopyMRF:
         title: Bağlantısız Etkinlik
         desc: Tıpkı 'Benim Robot Arkadaşlarım'da olduğu gibi, arkadaşlarınızı programlayacaksınız,
           ama bu kez döngülerle!
       courseC_Unplugged_ScreenOutTheMean:
         title: Bağlantısız Etkinlik
-        desc: Bugün birisi ortalama çevrimiçi olursa ne yapmanız gerektiğini öğreneceksiniz.
+        desc: Bugün birisi çevirimiçi size kötü söz söylerse ne yapmanız gerektiğini
+          öğreneceksiniz.
       courseD_unplugged_digitalCitizenship:
         title: Bağlantısız Etkinlik
         desc: Bugün, Dijital Vatandaş olmanın ne anlama geldiğini öğreneceksiniz.
@@ -294,7 +295,8 @@ tr:
         desc: Bugün, özel ve kişisel bilgiler arasındaki farkı öğreneceksiniz!
       courseF_unplugged_powerOfWords:
         title: Bağlantısız Etkinlik
-        desc: Bugün birisi ortalama çevrimiçi olursa ne yapmanız gerektiğini öğreneceksiniz.
+        desc: Bugün birisi çevirimiçi size kötü söz söylerse ne yapmanız gerektiğini
+          öğreneceksiniz.
       deeper learning description:
         title: ''
         desc: 'eksik çeviri: en-US.data.unplugged.desc'
@@ -514,7 +516,8 @@ tr:
         desc: Bugün, Dijital Vatandaş olmanın ne anlama geldiğini öğreneceksiniz.
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: Bağlantısız Etkinlik
-        desc: Bugün birisi ortalama çevrimiçi olursa ne yapmanız gerektiğini öğreneceksiniz.
+        desc: Bugün birisi çevirimiçi size kötü söz söylerse ne yapmanız gerektiğini
+          öğreneceksiniz.
       Conditionals_2018:
         title: Koşullar
         desc: Koşullu ifadeleri öğrenmek için öğrenciler kart oyunu oynayacak. Burada
