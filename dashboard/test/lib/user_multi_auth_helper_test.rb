@@ -190,7 +190,13 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     assert_convert_oauth_user create(:teacher, :unmigrated_clever_sso)
   end
 
-  # TODO: Powerschool Oauth
+  test 'convert Powerschool OAuth student' do
+    assert_convert_oauth_user create(:student, :unmigrated_powerschool_sso)
+  end
+
+  test 'convert Powerschool OAuth teacher' do
+    assert_convert_oauth_user create(:teacher, :unmigrated_powerschool_sso)
+  end
 
   private
 
