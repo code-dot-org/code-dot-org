@@ -390,6 +390,7 @@ describe('sectionAssessmentsRedux', () => {
                       level_id: 456,
                       type: 'Multi',
                       question_text: 'What is a variable?',
+                      question_index: 0,
                       answers: [
                         {correct: true, text: 'answer 1',},
                         {correct: false, text: 'answer 2',}
@@ -399,6 +400,7 @@ describe('sectionAssessmentsRedux', () => {
                       level_id: 789,
                       type: 'Multi',
                       question_text: 'What is a boolean?',
+                      question_index: 1,
                       answers: [
                         {correct: false, text: 'answer 1',},
                         {correct: true, text: 'answer 2',}
@@ -454,6 +456,7 @@ describe('sectionAssessmentsRedux', () => {
             "id": 456,
             "notAnswered": 0,
             "question": "What is a variable?",
+            "questionNumber": 1,
             "totalAnswered": 2,
           },
           {
@@ -472,6 +475,7 @@ describe('sectionAssessmentsRedux', () => {
             "id": 789,
             "notAnswered": 0,
             "question": "What is a boolean?",
+            "questionNumber": 2,
             "totalAnswered": 2,
           }
         ]);

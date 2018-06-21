@@ -26,6 +26,7 @@ const answerDataPropType = PropTypes.shape({
 export const multipleChoiceDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   question: PropTypes.string.isRequired,
+  questionNumber: PropTypes.number,
   answers: PropTypes.arrayOf(answerDataPropType),
   totalAnswered: PropTypes.number.isRequired,
   notAnswered: PropTypes.number.isRequired,

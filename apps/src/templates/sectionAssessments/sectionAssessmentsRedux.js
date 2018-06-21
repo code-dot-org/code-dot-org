@@ -420,6 +420,7 @@ export const getMultipleChoiceSectionSummary = (state) => {
     return {
       id: question.level_id,
       question: question.question_text,
+      questionNumber: question.question_index + 1,
       answers: question.answers.map((answer, index) => {
         return {
           multipleChoiceOption: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'][index],
