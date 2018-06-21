@@ -16,16 +16,10 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
   # Use student_id and level_id to lookup the most recent feedback from each teacher who has provided feedback to that
   # student on that level
   def show_feedback_for_level
-    query = <<-EOS
-      SELECT b.*
-      FROM (
-        SELECT teacher_id, max(created_at) as created_at
-        FROM teacher_feedbacks GROUP BY teacher_id) a
-      INNER JOIN teacher_feedbacks b ON a.teacher_id = b.teacher_id AND a.created_at = b.created_at
-      WHERE b.student_id = #{params[:student_id]} and b.level_id = #{params[:level_id]}
-    EOS
-
-    @level_feedbacks = TeacherFeedback.find_by_sql query
+    @level_feedbacks = TeacherFeedback.where(
+      student_id: params[:student_id],
+      level_id: params[:level_id]
+    ).latest_per_teacher
 
     render json: {feedbacks: @level_feedbacks}
   end

@@ -112,7 +112,6 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
   test 'student can retrieve feedback for a level - two comments, one teacher' do
     teacher_sign_in_and_comment(@teacher, @student, @level, COMMENT1)
     #Mocks delay between teacher leaving comments
-    sleep 1
     teacher_sign_in_and_comment(@teacher, @student, @level, COMMENT2)
     sign_out @teacher
 
@@ -151,7 +150,6 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     teacher_sign_in_and_comment(teacher2, @student, @level, COMMENT2)
     sign_out teacher2
     #Mocks delay between teacher leaving comments
-    sleep 1
     teacher_sign_in_and_comment(@teacher, @student, @level, COMMENT3)
     sign_out @teacher
 
@@ -159,8 +157,8 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     get "#{API}/show_feedback_for_level?student_id=#{@student.id}&level_id=#{@level.id}"
 
     assert_equal 2, JSON.parse(@response.body)['feedbacks'].count
-    assert_equal COMMENT2, JSON.parse(@response.body)['feedbacks'][0]['comment']
-    assert_equal COMMENT3, JSON.parse(@response.body)['feedbacks'][1]['comment']
+    assert_equal COMMENT2, JSON.parse(@response.body)['feedbacks'][1]['comment']
+    assert_equal COMMENT3, JSON.parse(@response.body)['feedbacks'][0]['comment']
   end
 
   test 'student can retrieve feedback for a level - one comment, two teachers' do
