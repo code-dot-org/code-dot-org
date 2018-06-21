@@ -6,7 +6,7 @@ module UserMultiAuthHelper
     return true if migrated?
 
     unless sponsored?
-      self.primary_authentication_option =
+      self.primary_contact_info =
         if provider == 'google_oauth2'
           AuthenticationOption.new(
             user: self,
