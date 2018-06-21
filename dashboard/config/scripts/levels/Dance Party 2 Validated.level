@@ -51,10 +51,7 @@
     "markdown_instructions": "The alien was proud of her dancing skills on Mars, but now she can only move side-to-side. Can you change the behavior inside the `begins` block to make her start spinning around?",
     "show_type_hints": "true",
     "validation_code": "if (World.frameCount > 50) {\r\n  var status = 0;\r\n\r\n  // Check through all sprites in case student changed the sprite name\r\n  for (var i=0; i<World.allSprites.length; i++) {\r\n    var sprite = World.allSprites[i];\r\n    // ignore edge sprites\r\n    if (!edges.contains(sprite)) {\r\n      console.log(sprite.behaviors.length);\r\n      console.log(sprite.behaviors[0]);\r\n      /*if (sprite.behaviors[i].name == \"patrolling2\") {\r\n        status = 3;\r\n      }*/\r\n    }\r\n  }\r\n  levelSuccess(status);\r\n}",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
