@@ -652,7 +652,9 @@ class User < ActiveRecord::Base
     return nil if email.blank?
 
     hashed_email = User.hash_email(email)
-    User.find_by(hashed_email: hashed_email)
+    auth_option = AuthenticationOption.find_by(hashed_email: hashed_email)
+    migrated_user = auth_option && auth_option&.user
+    migrated_user || User.find_by(hashed_email: hashed_email)
   end
 
   def self.find_channel_owner(encrypted_channel_id)
