@@ -1,4 +1,3 @@
-@no_circle
 Feature: Hour of Code, Frozen, and Minecraft:Agent tutorials in various languages
 
 Scenario: HoC tutorial in Spanish
@@ -58,7 +57,6 @@ Scenario: HoC tutorial in Portuguese
   Given I am on "http://studio.code.org/reset_session/lang/en"
   And I wait for 2 seconds
 
-@no_circle
 Scenario: Frozen tutorial in Portuguese
   Given I am on "http://studio.code.org/s/frozen/stage/1/puzzle/2/lang/pt-br"
   And I rotate to landscape
