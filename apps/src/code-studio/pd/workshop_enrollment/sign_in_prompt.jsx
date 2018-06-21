@@ -3,7 +3,7 @@
  */
 import React, {PropTypes} from 'react';
 
-export default class WorkshopEnrollment extends React.Component {
+export default class SignInPrompt extends React.Component {
   static propTypes = {
     info_icon: PropTypes.string,
     sign_in_url: PropTypes.string
