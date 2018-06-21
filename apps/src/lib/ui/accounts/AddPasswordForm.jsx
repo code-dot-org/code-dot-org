@@ -1,7 +1,6 @@
 import React, {PropTypes} from 'react';
 import i18n from '@cdo/locale';
 import {Field} from '../SystemDialog/SystemDialog';
-import Button from "@cdo/apps/templates/Button";
 
 const styles = {
   container: {
@@ -116,13 +115,15 @@ export default class AddPasswordForm extends React.Component {
           onChange={this.onPasswordConfirmationChange}
         />
         <div style={styles.buttonContainer}>
-          {/* TODO: style button to look like other account page buttons */}
-          <Button
+          {/* This button intentionally uses Bootstrap classes to match other account page buttons */}
+          <button
+            className="btn btn-primary"
             onClick={this.handleSubmit}
-            text={i18n.createPassword()}
             disabled={!this.isFormValid()}
             tabIndex="1"
-          />
+          >
+            {i18n.createPassword()}
+          </button>
           {/* TODO: style error state with red text */}
           <div
             id="uitest-add-password-status"
