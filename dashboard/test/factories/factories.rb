@@ -150,6 +150,37 @@ FactoryGirl.define do
           end
         end
       end
+      trait :with_google_authentication_option do
+        after(:create) do |user|
+          create(:authentication_option,
+            user: user,
+            email: user.email,
+            hashed_email: user.hashed_email,
+            credential_type: 'google_oauth2',
+            authentication_id: 'abcd123'
+          )
+        end
+      end
+      trait :with_email_authentication_option do
+        after(:create) do |user|
+          create(:authentication_option,
+            user: user,
+            email: user.email,
+            hashed_email: user.hashed_email,
+            credential_type: 'email',
+            authentication_id: user.hashed_email
+          )
+        end
+      end
+
+      factory :google_oauth2_teacher do
+        encrypted_password nil
+        provider 'google_oauth2'
+        sequence(:uid) {|n| n}
+        oauth_token 'fake-oauth-token'
+        oauth_token_expiration 'fake-oauth-token-expiration'
+        oauth_refresh_token 'fake-oauth-refresh-token'
+      end
     end
 
     factory :student do
@@ -177,7 +208,14 @@ FactoryGirl.define do
           sequence(:parent_email) {|n| "testparent#{n}@example.com.xx"}
           email nil
           hashed_email nil
+          provider nil
         end
+      end
+
+      factory :manual_username_password_student do
+        email nil
+        hashed_email nil
+        provider User::PROVIDER_MANUAL
       end
 
       factory :student_in_word_section do
@@ -225,6 +263,22 @@ FactoryGirl.define do
       end
     end
 
+    trait :with_migrated_google_authentication_option do
+      after(:create) do |user|
+        ao = create(:authentication_option,
+          user: user,
+          email: user.email,
+          hashed_email: user.hashed_email,
+          credential_type: 'google_oauth2',
+          authentication_id: 'abcd123'
+        )
+        user.update!(
+          primary_authentication_option: ao,
+          provider: User::PROVIDER_MIGRATED
+        )
+      end
+    end
+
     trait :with_clever_authentication_option do
       after(:create) do |user|
         create(:authentication_option,
@@ -245,6 +299,22 @@ FactoryGirl.define do
           hashed_email: user.hashed_email,
           credential_type: 'email',
           authentication_id: user.hashed_email
+        )
+      end
+    end
+
+    trait :with_migrated_email_authentication_option do
+      after(:create) do |user|
+        ao = create(:authentication_option,
+          user: user,
+          email: user.email,
+          hashed_email: user.hashed_email,
+          credential_type: 'email',
+          authentication_id: user.hashed_email
+        )
+        user.update!(
+          primary_authentication_option: ao,
+          provider: User::PROVIDER_MIGRATED
         )
       end
     end
@@ -300,6 +370,14 @@ FactoryGirl.define do
     authentication_id {''}
 
     factory :email_authentication_option do
+      sequence(:email) {|n| "testuser#{n}@example.com.xx"}
+      after(:create) do |auth|
+        auth.authentication_id = auth.hashed_email
+      end
+    end
+
+    factory :google_authentication_option do
+      credential_type 'google_oauth2'
       sequence(:email) {|n| "testuser#{n}@example.com.xx"}
       after(:create) do |auth|
         auth.authentication_id = auth.hashed_email
@@ -486,6 +564,18 @@ FactoryGirl.define do
       }.to_json
     end
     helper_code {"function block#{index}() {}"}
+  end
+
+  factory :shared_blockly_function do
+    transient do
+      sequence(:index)
+    end
+    name {"doing_something#{index}"}
+    level_type 'fakeLevelType'
+    block_type 'function'
+    description 'This does >>something<< interesting!'
+    arguments '{"this sprite": "Sprite"}'
+    stack '<block type="implementationBlock"></block>'
   end
 
   factory :level_source do

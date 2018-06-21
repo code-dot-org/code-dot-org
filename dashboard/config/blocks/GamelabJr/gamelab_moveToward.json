@@ -9,7 +9,8 @@
         "type": "Sprite"
       },
       {
-        "name": "DISTANCE"
+        "name": "DISTANCE",
+        "type": "Number"
       },
       {
         "name": "TARGET",

@@ -40,6 +40,7 @@
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/27645e0ea06e5399ba8cedbf8243a586=levelbuilder/25347.png",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 6,
     "contained_level_names": null
   },
   "published": true,

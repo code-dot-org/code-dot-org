@@ -83,6 +83,9 @@
     This adds a call block to the end of the toolbox for each function defined
     in the workspace (including hidden start blocks).
   = boolean_check_box f, :top_level_procedure_autopopulate
+.field
+  = f.label :include_shared_functions, 'Make shared functions and behaviors available'
+  = boolean_check_box f, :include_shared_functions
 
 - if @level.uses_droplet?
   .field
@@ -221,6 +224,7 @@
       uses_droplet: @level.uses_droplet?,
       input_output_table: @level.respond_to?(:input_output_table),
       original_palette: JSON.parse(@level.class.try(:palette) || "{}"),
+      shared_blocks: @level.shared_blocks,
     }.to_json
   }
 %script{src: minifiable_asset_path('js/levels/editors/_blockly.js'),

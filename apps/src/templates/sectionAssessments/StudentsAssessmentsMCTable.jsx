@@ -45,18 +45,16 @@ export const COLUMNS = {
   NAME: 0,
   NUM_MULTIPLE_CHOICE_CORRECT: 1,
   NUM_MULTIPLE_CHOICE: 2,
-  PERCENT_CORRECT: 3,
-  SUBMISSION_TIMESTAMP: 4,
+  SUBMISSION_TIMESTAMP: 3,
 };
 
-const studentOverviewDataPropType = PropTypes.shape({
+export const studentOverviewDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   numMultipleChoiceCorrect: PropTypes.number.isRequired,
   numMultipleChoice: PropTypes.number.isRequired,
-  percentCorrect: PropTypes.string.isRequired,
-  submissionTimeStamp: PropTypes.string,
-  submissionStatus: PropTypes.string,
+  submissionTimeStamp: PropTypes.string.isRequired,
+  isSubmitted: PropTypes.bool.isRequired,
 });
 
 /**
@@ -99,9 +97,9 @@ class StudentsAssessmentsMCTable extends Component {
   };
 
   submissionTimestampColumnFormatter = (submissionTimeStamp, {rowData}) => {
-    const submissionStatus = rowData.submissionStatus;
+    const isSubmitted = rowData.isSubmitted;
 
-    if (submissionStatus === 'Completed') {
+    if (isSubmitted) {
       return (
         <div style={styles.main}>
           <div style={styles.text}>
@@ -113,7 +111,7 @@ class StudentsAssessmentsMCTable extends Component {
         </div>
       );
     } else {
-      return submissionStatus;
+      return i18n.inProgress();
     }
   };
 
@@ -163,21 +161,6 @@ class StudentsAssessmentsMCTable extends Component {
             style: {
               ...tableLayoutStyles.headerCell,
               ...{width: TABLE_COLUMN_WIDTHS.numMultipleChoice},
-            }
-          },
-        },
-        cell: {
-          props: {style: tableLayoutStyles.cell},
-        }
-      },
-      {
-        property: 'percentCorrect',
-        header: {
-          label: i18n.percentCorrect(),
-          props: {
-            style: {
-              ...tableLayoutStyles.headerCell,
-              ...{width: TABLE_COLUMN_WIDTHS.percentCorrect},
             }
           },
         },

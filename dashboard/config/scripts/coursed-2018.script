@@ -1,4 +1,7 @@
 hidden false
+has_lesson_plan true
+curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-18/coursed/{LESSON}'
+script_announcements [{"notice"=>"Our 2018 CS Fundamentals Curriculum Guide is Live", "details"=>"Click \"Learn More\" to download the PDF, including unplugged lesson plans for Courses A-F.", "link"=>"https://code.org/curriculum/docs/csf/CSF_Curriculum_Guide_2018_smaller.pdf", "type"=>"bullhorn"}]
 family_name 'coursed'
 version_year '2018'
 

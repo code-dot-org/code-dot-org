@@ -51,6 +51,7 @@
     "instructions": "\"Let's have a party! Give my friends something to do when you click or tap them.\"",
     "markdown_instructions": "*\"Let's have a party! Give my friends something to do when you click or tap them.\"*\r\n\r\nWhat will the animals say? What else will happen?\r\n\r\n\r\n\r\nIn this puzzle, make sure to click for hints! The hints will give you fun things to try!\r\n\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png)",
     "disable_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 3,
     "contained_level_names": null
   },
   "published": true,
