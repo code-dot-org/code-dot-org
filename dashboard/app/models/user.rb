@@ -564,14 +564,6 @@ class User < ActiveRecord::Base
 
   before_save :log_admin_save, if: -> {admin_changed? && User.should_log?}
 
-  before_save :set_primary_authentication_option, if: -> {!primary_authentication_option && provider == 'migrated'}
-
-  def set_primary_authentication_option
-    if provider == 'migrated' && !primary_authentication_option && !authentication_options.empty?
-      self.primary_authentication_option = authentication_options.first
-    end
-  end
-
   before_validation :update_share_setting, unless: :under_13?
 
   def make_teachers_21
@@ -652,9 +644,7 @@ class User < ActiveRecord::Base
     return nil if email.blank?
 
     hashed_email = User.hash_email(email)
-    auth_option = AuthenticationOption.find_by(hashed_email: hashed_email)
-    migrated_user = auth_option && auth_option&.user
-    migrated_user || User.find_by(hashed_email: hashed_email)
+    User.find_by(hashed_email: hashed_email)
   end
 
   def self.find_channel_owner(encrypted_channel_id)
@@ -729,13 +719,46 @@ class User < ActiveRecord::Base
 
   CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin'].freeze
   def self.from_omniauth(auth, params)
-    auth_option = AuthenticationOption.where(credential_type: auth.provider, authentication_id: auth.uid).first
-    migrated = auth_option&.user
-    legacy = where(provider: auth.provider, uid: auth.uid).first
+    omniauth_user = find_or_create_by(provider: auth.provider, uid: auth.uid) do |user|
+      user.provider = auth.provider
+      user.uid = auth.uid
+      user.name = name_from_omniauth auth.info.name
+      user.user_type = params['user_type'] || auth.info.user_type
+      user.user_type = 'teacher' if user.user_type == 'staff' # Powerschool sends through 'staff' instead of 'teacher'
 
-    omniauth_user = migrated || legacy
-    omniauth_user ||= create do |user|
-      initialize_new_oauth_user(user, auth, params)
+      # Store emails, except when using Clever
+      user.email = auth.info.email unless user.user_type == 'student' && OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(auth.provider)
+
+      if OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(auth.provider) && User.find_by_email_or_hashed_email(user.email)
+        user.email = user.email + '.oauthemailalreadytaken'
+      end
+
+      if auth.provider == :the_school_project
+        user.username = auth.extra.raw_info.nickname
+        user.user_type = auth.extra.raw_info.role
+        user.locale = auth.extra.raw_info.locale
+        user.school = auth.extra.raw_info.school.name
+      end
+
+      # treat clever admin types as teachers
+      if CLEVER_ADMIN_USER_TYPES.include? user.user_type
+        user.user_type = User::TYPE_TEACHER
+      end
+
+      # clever provides us these fields
+      if user.user_type == TYPE_TEACHER
+        user.age = 21
+      else
+        # As the omniauth spec (https://github.com/omniauth/omniauth/wiki/Auth-Hash-Schema) does not
+        # describe auth.info.dob, it may arrive in a variety of formats. Consequently, we let Rails
+        # handle any necessary conversion, setting birthday from auth.info.dob. The later
+        # shenanigans ensure that we store the user's age rather than birthday.
+        user.birthday = auth.info.dob
+        user_age = user.age
+        user.birthday = nil
+        user.age = user_age
+      end
+      user.gender = normalize_gender auth.info.gender
     end
 
     if auth.credentials
@@ -750,48 +773,6 @@ class User < ActiveRecord::Base
     end
 
     omniauth_user
-  end
-
-  def self.initialize_new_oauth_user(user, auth, params)
-    user.provider = auth.provider
-    user.uid = auth.uid
-    user.name = name_from_omniauth auth.info.name
-    user.user_type = params['user_type'] || auth.info.user_type
-    user.user_type = 'teacher' if user.user_type == 'staff' # Powerschool sends through 'staff' instead of 'teacher'
-
-    # Store emails, except when using Clever
-    user.email = auth.info.email unless user.user_type == 'student' && OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(auth.provider)
-
-    if OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(auth.provider) && User.find_by_email_or_hashed_email(user.email)
-      user.email = user.email + '.oauthemailalreadytaken'
-    end
-
-    if auth.provider == :the_school_project
-      user.username = auth.extra.raw_info.nickname
-      user.user_type = auth.extra.raw_info.role
-      user.locale = auth.extra.raw_info.locale
-      user.school = auth.extra.raw_info.school.name
-    end
-
-    # treat clever admin types as teachers
-    if CLEVER_ADMIN_USER_TYPES.include? user.user_type
-      user.user_type = User::TYPE_TEACHER
-    end
-
-    # clever provides us these fields
-    if user.user_type == TYPE_TEACHER
-      user.age = 21
-    else
-      # As the omniauth spec (https://github.com/omniauth/omniauth/wiki/Auth-Hash-Schema) does not
-      # describe auth.info.dob, it may arrive in a variety of formats. Consequently, we let Rails
-      # handle any necessary conversion, setting birthday from auth.info.dob. The later
-      # shenanigans ensure that we store the user's age rather than birthday.
-      user.birthday = auth.info.dob
-      user_age = user.age
-      user.birthday = nil
-      user.age = user_age
-    end
-    user.gender = normalize_gender auth.info.gender
   end
 
   def oauth?
@@ -906,8 +887,6 @@ class User < ActiveRecord::Base
     login = conditions.delete(:login)
     if login.present?
       return nil if login.utf8mb4?
-      # TODO: multi-auth (@eric, before merge!) have to handle this path, and make sure that whatever
-      # indexing problems bit us on the users table don't affect the multi-auth table
       from("users IGNORE INDEX(index_users_on_deleted_at)").where(
         [
           'username = :value OR email = :value OR hashed_email = :hashed_value',
@@ -916,10 +895,7 @@ class User < ActiveRecord::Base
       ).first
     elsif hashed_email = conditions.delete(:hashed_email)
       return nil if hashed_email.utf8mb4?
-      legacy = where(hashed_email: hashed_email).first
-      matching_auth_opts = AuthenticationOption.where(credential_type: 'email', authentication_id: hashed_email)
-      migrated = matching_auth_opts.first && matching_auth_opts.first.user
-      return migrated || legacy
+      where(hashed_email: hashed_email).first
     else
       nil
     end
