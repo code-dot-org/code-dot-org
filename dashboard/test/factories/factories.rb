@@ -273,7 +273,7 @@ FactoryGirl.define do
           authentication_id: 'abcd123'
         )
         user.update!(
-          primary_authentication_option: ao,
+          primary_contact_info: ao,
           provider: User::PROVIDER_MIGRATED
         )
       end
@@ -313,7 +313,7 @@ FactoryGirl.define do
           authentication_id: user.hashed_email
         )
         user.update!(
-          primary_authentication_option: ao,
+          primary_contact_info: ao,
           provider: User::PROVIDER_MIGRATED
         )
       end
