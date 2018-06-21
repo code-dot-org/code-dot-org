@@ -170,7 +170,8 @@ class AbilityTest < ActiveSupport::TestCase
     section.add_student student
     feedback = create :teacher_feedback, student: student, teacher: teacher
 
-    assert Ability.new(teacher).can? :manage, feedback
+    assert Ability.new(teacher).can? :create, feedback
+    assert Ability.new(teacher).can? :show_feedback_from_teacher, feedback
   end
 
   test 'teachers cannot manage feedback for students not in a section they own' do
@@ -183,7 +184,8 @@ class AbilityTest < ActiveSupport::TestCase
     create :section, user: teacher
     feedback = create :teacher_feedback, student: student
 
-    refute Ability.new(teacher).can? :manage, feedback
+    refute Ability.new(teacher).can? :create, feedback
+    refute Ability.new(teacher).can? :show_feedback_from_teacher, feedback
   end
 
   test 'student can get feedback for their work on a level' do
