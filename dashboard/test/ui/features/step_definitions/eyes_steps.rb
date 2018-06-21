@@ -14,6 +14,10 @@ When(/^I open my eyes to test "([^"]*)"$/) do |test_name|
   next if CDO.disable_all_eyes_running
   ensure_eyes_available
 
+  batch = Applitools::BatchInfo.new('')
+  batch.id = GitUtils.git_revision
+  @eyes.batch = batch
+
   @original_browser = @browser
   config = {app_name: 'Code.org', test_name: test_name, driver: @browser}
   if @original_browser.capabilities.browser_name == 'chrome'
