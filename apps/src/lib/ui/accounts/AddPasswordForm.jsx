@@ -27,8 +27,9 @@ const styles = {
   },
 };
 
-const SAVING_STATE = i18n.saving();
-const SUCCESS_STATE = i18n.success();
+export const SAVING_STATE = i18n.saving();
+export const SUCCESS_STATE = i18n.success();
+export const PASSWORDS_MUST_MATCH = i18n.passwordsMustMatch();
 
 const DEFAULT_STATE = {
   password: '',
@@ -67,7 +68,7 @@ export default class AddPasswordForm extends React.Component {
 
   mismatchedPasswordsError = () => {
     if (this.passwordFieldsHaveContent() && !this.isFormValid()) {
-      return i18n.passwordsMustMatch();
+      return PASSWORDS_MUST_MATCH;
     }
   };
 
@@ -88,10 +89,8 @@ export default class AddPasswordForm extends React.Component {
   };
 
   onFailure = (error) => {
-    // TODO: i18n this error
-    error = error.message || 'Sorry, an error occurred.';
     this.setState({
-      submissionState: error
+      submissionState: error.message
     });
   };
 
@@ -115,14 +114,16 @@ export default class AddPasswordForm extends React.Component {
         <div style={styles.buttonContainer}>
           {/* TODO: style button to look like other account page buttons */}
           <Button
-            id="create-password-btn"
             onClick={this.handleSubmit}
             text={i18n.createPassword()}
             disabled={!this.isFormValid()}
             tabIndex="1"
           />
           {/* TODO: style error state with red text */}
-          <div style={styles.statusText}>
+          <div
+            id="uitest-add-password-status"
+            style={styles.statusText}
+          >
             {this.state.submissionState}
           </div>
         </div>
@@ -131,7 +132,7 @@ export default class AddPasswordForm extends React.Component {
   }
 }
 
-export class PasswordField extends React.Component {
+class PasswordField extends React.Component {
   static propTypes = {
     label: PropTypes.string.isRequired,
     error: PropTypes.string,
