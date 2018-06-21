@@ -5,6 +5,7 @@ import {
   getAssessmentsFreeResponseResults,
 } from './sectionAssessmentsRedux';
 import { connect } from 'react-redux';
+import i18n from "@cdo/locale";
 
 export const freeResponseSummaryPropType = PropTypes.shape({
   questionText:  PropTypes.string,
@@ -21,7 +22,7 @@ class FreeResponsesAssessmentsContainer extends Component {
 
     return (
       <div>
-        <h2>Free responses for Assessments</h2>
+        <h2>{i18n.studentFreeResponseAnswers()}</h2>
         {freeResponseQuestions.map((question, index) => (
           <div key={index}>
             <h3>{question.questionText}</h3>
