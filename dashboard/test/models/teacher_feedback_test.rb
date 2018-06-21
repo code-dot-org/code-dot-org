@@ -4,10 +4,10 @@ class TeacherFeedbackTest < ActiveSupport::TestCase
   test 'feedback per teacher - single teacher' do
     teacher = create :teacher
     create :teacher_feedback, teacher: teacher
-    feedback = create :teacher_feedback, teacher: teacher
+    latest_feedback = create :teacher_feedback, teacher: teacher
 
     retrieved = TeacherFeedback.latest_per_teacher
-    assert_equal([feedback], retrieved)
+    assert_equal([latest_feedback], retrieved)
   end
 
   test 'feedback per teacher - multiple teachers' do
@@ -44,10 +44,10 @@ class TeacherFeedbackTest < ActiveSupport::TestCase
   test 'latest feedback - two comments' do
     teacher = create :teacher
     create :teacher_feedback, teacher: teacher
-    feedback = create :teacher_feedback, teacher: teacher
+    latest_feedback = create :teacher_feedback, teacher: teacher
 
     retrieved = TeacherFeedback.latest
-    assert_equal(feedback, retrieved)
+    assert_equal(latest_feedback, retrieved)
   end
 
   test 'latest feedback - with filter' do
