@@ -4,6 +4,7 @@
   "actions": "Actions",
   "add": "Add",
   "addPassword": "Add a password",
+  "addPasswordHint": "By creating a password below, you will be able to sign in with your username or email address and password. It will also help keep your account safer because then we will prompt you for the password before any updates are made.",
   "addRemoveCleverClassrooms": "Visit https://clever.com/ and confirm your classroom is connected to Code.org.",
   "addRemoveGoogleClassrooms": "Visit https://classroom.google.com/ to add and remove classrooms.",
   "addSectionName": "Enter a name for your section that will help you remember which classroom it is for. Your students will also be able to see this name.",

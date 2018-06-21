@@ -10,6 +10,10 @@ const styles = {
   header: {
     fontSize: 22,
   },
+  hint: {
+    marginTop: 10,
+    marginBottom: 10,
+  },
   input: {
     marginBottom: 4,
   },
@@ -97,6 +101,9 @@ export default class AddPasswordForm extends React.Component {
         <h2 style={styles.header}>
           {i18n.addPassword()}
         </h2>
+        <div style={styles.hint}>
+          {i18n.addPasswordHint()}
+        </div>
         <PasswordField
           label={i18n.password()}
           value={this.state.password}
