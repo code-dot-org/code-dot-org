@@ -936,6 +936,7 @@ is:
         courseC_maze_programming3_2: Dragðu óþarfa kubba aftur í verkfærakassann til að losa þig við þá.
         stone_block_2: Gráir kubbar eru naglfastir og ekki hægt að fleygja þeim.
       courseA_maze_ramp3a_2018_callout: { }
+      courseA_maze_ramp3b_2018_callout: { }
       courseA_maze_ramp4_2018_callout:
         courseC_maze_programming4_1: Þetta sýnir fjölda kubbanna. Þá veistu hvað þú átt marga svona kubba eftir til að nota.
       courseA_maze_ramp4a_2018_callout: { }
@@ -975,6 +976,7 @@ is:
         grade2_CaringForNewPet_0_1: Þegar búið er að tengja alla kubbana er ýtt á "Keyra" til að ræsa forritið.
       courseB_Scrat_ramp2_2018_callout: { }
       courseB_Scrat_ramp3a_2018_callout: { }
+      courseB_Scrat_ramp3b_2018_callout: { }
       courseB_Scrat_ramp4a_2018_callout: { }
       courseB_Scrat_ramp5a_2018_callout: { }
       courseB_artist_loops3_callout:
