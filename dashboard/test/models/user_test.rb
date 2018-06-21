@@ -416,7 +416,9 @@ class UserTest < ActiveSupport::TestCase
     email = 'test@foo.bar'
     migrated_student = create(:student, :with_email_authentication_option, :multi_auth_migrated, email: email)
     migrated_student.primary_authentication_option.update(authentication_id: User.hash_email(email))
-    legacy_student = create(:student, email: email)
+    legacy_student = build(:student, email: email)
+    # skip duplicate email validation
+    legacy_student.save(validate: false)
 
     looked_up_user = User.find_for_authentication(hashed_email: User.hash_email(email))
 
