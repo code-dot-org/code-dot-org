@@ -745,7 +745,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'changing oauth user from student to teacher with same email is allowed' do
-    user = create :google_oauth2_student, email: 'email@new.xx'
+    user = create :student, :unmigrated_google_sso, email: 'email@new.xx'
 
     assert user.provider == 'google_oauth2'
 
@@ -759,7 +759,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'changing oauth user from student to teacher with different email is not allowed' do
-    user = create :google_oauth2_student
+    user = create :student, :unmigrated_google_sso
 
     assert user.provider == 'google_oauth2'
 
@@ -1245,7 +1245,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'can change own user type as an oauth student' do
-    student = create :google_oauth2_student
+    student = create :student, :unmigrated_google_sso
     assert student.can_change_own_user_type?
   end
 
