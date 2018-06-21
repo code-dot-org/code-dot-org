@@ -100,18 +100,8 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     assert_equal COMMENT3, JSON.parse(@response.body)['comment']
   end
 
-  test 'student can retrieve feedback for a level - one comment, one teacher' do
-    teacher_sign_in_and_comment(@teacher, @student, @level, COMMENT1)
-    sign_in @student
-    get "#{API}/show_feedback_for_level?student_id=#{@student.id}&level_id=#{@level.id}"
-
-    assert_equal 1, JSON.parse(@response.body)['feedbacks'].count
-    assert_equal COMMENT1, JSON.parse(@response.body)['feedbacks'][0]['comment']
-  end
-
   test 'student can retrieve feedback for a level - two comments, one teacher' do
     teacher_sign_in_and_comment(@teacher, @student, @level, COMMENT1)
-    #Mocks delay between teacher leaving comments
     teacher_sign_in_and_comment(@teacher, @student, @level, COMMENT2)
     sign_out @teacher
 
@@ -120,24 +110,6 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
 
     assert_equal 1, JSON.parse(@response.body)['feedbacks'].count
     assert_equal COMMENT2, JSON.parse(@response.body)['feedbacks'][0]['comment']
-  end
-
-  test 'student can retrieve feedback for a level - two comments, two teachers' do
-    teacher2 = create :teacher
-    section2 = create :section, user: teacher2
-    section2.add_student(@student)
-
-    teacher_sign_in_and_comment(@teacher, @student, @level, COMMENT1)
-    sign_out @teacher
-    teacher_sign_in_and_comment(teacher2, @student, @level, COMMENT2)
-    sign_out teacher2
-
-    sign_in @student
-    get "#{API}/show_feedback_for_level?student_id=#{@student.id}&level_id=#{@level.id}"
-
-    assert_equal 2, JSON.parse(@response.body)['feedbacks'].count
-    assert_equal COMMENT1, JSON.parse(@response.body)['feedbacks'][0]['comment']
-    assert_equal COMMENT2, JSON.parse(@response.body)['feedbacks'][1]['comment']
   end
 
   test 'student can retrieve feedback for a level - three comments, two teachers' do
@@ -149,7 +121,6 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     sign_out @teacher
     teacher_sign_in_and_comment(teacher2, @student, @level, COMMENT2)
     sign_out teacher2
-    #Mocks delay between teacher leaving comments
     teacher_sign_in_and_comment(@teacher, @student, @level, COMMENT3)
     sign_out @teacher
 
@@ -159,22 +130,6 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     assert_equal 2, JSON.parse(@response.body)['feedbacks'].count
     assert_equal COMMENT2, JSON.parse(@response.body)['feedbacks'][1]['comment']
     assert_equal COMMENT3, JSON.parse(@response.body)['feedbacks'][0]['comment']
-  end
-
-  test 'student can retrieve feedback for a level - one comment, two teachers' do
-    teacher2 = create :teacher
-    section2 = create :section, user: teacher2
-    section2.add_student(@student)
-
-    teacher_sign_in_and_comment(@teacher, @student, @level, COMMENT1)
-    sign_out @teacher
-
-    sign_in @student
-    get "#{API}/show_feedback_for_level?student_id=#{@student.id}&level_id=#{@level.id}"
-
-    assert_equal 1, JSON.parse(@response.body)['feedbacks'].count
-    assert_equal COMMENT1, JSON.parse(@response.body)['feedbacks'][0]['comment']
-    assert_equal @teacher.id, JSON.parse(@response.body)['feedbacks'][0]['teacher_id']
   end
 
   test 'student can retrieve feedback for a level - two levels, one comment per level, one teacher' do
