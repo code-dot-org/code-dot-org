@@ -260,6 +260,17 @@ FactoryGirl.define do
       provider 'windowslive'
     end
 
+    trait :unmigrated_clever_sso do
+      unmigrated_sso
+      provider 'clever'
+      after(:create) do |user|
+        if user.student?
+          user.hashed_email = nil
+          user.save!
+        end
+      end
+    end
+
     trait :with_google_authentication_option do
       after(:create) do |user|
         create(:authentication_option,
