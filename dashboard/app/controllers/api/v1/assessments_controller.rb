@@ -39,9 +39,11 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
       questions = []
 
       # For each level in the multi group (ignore pages structure information)
-      level_group.levels.each do |level|
+      level_group.levels.each_with_index do |level, index|
         # A single level corresponds to a single question
-        questions.push(level.question_summary)
+        summary = level.question_summary
+        summary[:question_index] = index
+        questions.push(summary)
       end
 
       assessments[level_group.id] = {
