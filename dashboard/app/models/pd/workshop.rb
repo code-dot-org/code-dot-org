@@ -218,7 +218,7 @@ class Pd::Workshop < ActiveRecord::Base
   # @return [Pd::Workshop, nil]
   def self.nearest
     joins(:sessions).
-      select("pd_workshops.id, ABS(DATEDIFF(pd_sessions.start, '#{Date.today}')) AS day_diff").
+      select("pd_workshops.*, ABS(DATEDIFF(pd_sessions.start, '#{Date.today}')) AS day_diff").
       order("day_diff ASC").
       first
   end
@@ -228,7 +228,7 @@ class Pd::Workshop < ActiveRecord::Base
   # @return [Pd::Workshop, nil]
   def self.with_nearest_attendance_by(teacher)
     joins(sessions: :attendances).where(pd_attendances: {teacher_id: teacher.id}).
-      select("pd_workshops.id, ABS(DATEDIFF(pd_sessions.start, '#{Date.today}')) AS day_diff").
+      select("pd_workshops.*, ABS(DATEDIFF(pd_sessions.start, '#{Date.today}')) AS day_diff").
       order("day_diff").
       first
   end
