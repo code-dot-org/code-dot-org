@@ -51,6 +51,12 @@ const answerColumnsFormatter = (percentAnswered, {rowData, columnIndex, rowIndex
   );
 };
 
+const questionFormatter = (question, {rowData, columnIndex, rowIndex, property}) => {
+  return (
+    <div>{`${rowData.questionNumber}. ${question}`}</div>
+  );
+};
+
 /**
  *  A single table that shows students' responses to each multiple choice question.
  * The table displays the percent of students that select an answer choice and
@@ -139,6 +145,7 @@ class MultipleChoiceAssessmentsOverviewTable extends Component {
         transforms: [sortable],
       },
       cell: {
+        format: questionFormatter,
         props: {
           style: {
             ...tableLayoutStyles.cell,
