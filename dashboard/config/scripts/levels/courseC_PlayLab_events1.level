@@ -43,6 +43,7 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Attach this block to the `when run` block:\\n\\n<xml>\\n  <block type=\\\"studio_saySpriteChoices\\\">\\n    <title name=\\\"SPRITE\\\">0</title>\\n    <title name=\\\"VALUE\\\">Hi there.</title>\\n  </block>\\n</xml>\",\"hint_id\":\"courseC_PlayLab_events1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9b99334a371a29edaa06c0d31efa91ed/courseC_PlayLab_events1.mp3\"}]",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/af4338d3357b7926d7966836de647c0d=development/952.png",
     "disable_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 2,
     "contained_level_names": null
   },
   "published": true,

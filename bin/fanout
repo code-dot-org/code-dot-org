@@ -1,8 +1,19 @@
 #!/usr/bin/env ruby
 require_relative '../deployment'
 
-# TODO: this should probably live in rake_utils, but for HOC 2016 we're not
-# going to do another DTP, so it's embedded here to work standalone
+#
+# Runs a command across all of our autoscale-group frontends.
+#
+# bin/fanout [command]
+#
+# We expect you to run this command from the production-daemon server.
+# Before you do, you'll need to copy the required SSH configuration into place:
+#
+# cp ~/.ssh/config_fanout ~/.ssh/config
+#
+# See also: fanout-dryrun, fanout-partial
+#
+
 def fanout(command, num_batches=1, delay_per_group=0)
   app_servers = CDO.app_servers.values
   size = app_servers.length
