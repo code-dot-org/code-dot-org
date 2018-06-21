@@ -26,4 +26,8 @@ class TeacherFeedback < ApplicationRecord
   def self.latest_per_teacher
     find(group(:teacher_id).maximum(:id).values)
   end
+
+  def self.latest
+    find(maximum(:id))
+  end
 end

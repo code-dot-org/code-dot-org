@@ -32,4 +32,34 @@ class TeacherFeedbackTest < ActiveSupport::TestCase
     assert_equal([feedbacks[0]], TeacherFeedback.where(student: students[0]).latest_per_teacher)
     assert_equal([feedbacks[1]], TeacherFeedback.where(student: students[1]).latest_per_teacher)
   end
+
+  test 'latest feedback - one comment' do
+    teacher = create :teacher
+    feedback = create :teacher_feedback, teacher: teacher
+
+    retrieved = TeacherFeedback.latest
+    assert_equal(feedback, retrieved)
+  end
+
+  test 'latest feedback - two comments' do
+    teacher = create :teacher
+    create :teacher_feedback, teacher: teacher
+    feedback = create :teacher_feedback, teacher: teacher
+
+    retrieved = TeacherFeedback.latest
+    assert_equal(feedback, retrieved)
+  end
+
+  test 'latest feedback - with filter' do
+    teacher = create :teacher
+    students = create_list :student, 2
+
+    feedbacks = students.map do |student|
+      create :teacher_feedback, teacher: teacher, student: student
+      create :teacher_feedback, teacher: teacher, student: student
+    end
+
+    assert_equal(feedbacks[0], TeacherFeedback.where(student: students[0]).latest)
+    assert_equal(feedbacks[1], TeacherFeedback.where(student: students[1]).latest)
+  end
 end
