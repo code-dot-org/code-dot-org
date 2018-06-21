@@ -5,6 +5,7 @@ import {
   getMultipleChoiceStructureForCurrentAssessment,
   getStudentMCResponsesForCurrentAssessment,
 } from './sectionAssessmentsRedux';
+import i18n from "@cdo/locale";
 import { connect } from 'react-redux';
 
 class MultipleChoiceByStudentContainer extends Component {
@@ -17,11 +18,11 @@ class MultipleChoiceByStudentContainer extends Component {
     const {multipleChoiceStructure, studentAnswerData} = this.props;
     return (
       <div>
-        <h2>Multiple choice answers by student section</h2>
         {studentAnswerData.map((studentResponse, index) => (
           <div key={index}>
             {/* TODO(caleybrock): update to use heading from spec */}
-            <h3>{`Here is how ${studentResponse.name} responded`}</h3>
+            <h2>{`${i18n.multipleChoiceQuestionsOverview()} (${studentResponse.name})`}</h2>
+            {/* <h3>{`Here is how ${studentResponse.name} responded`}</h3> */}
             <SingleStudentAssessmentsMCTable
               questionAnswerData={multipleChoiceStructure}
               studentAnswerData={studentResponse}
