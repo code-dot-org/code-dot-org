@@ -9,7 +9,7 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
       student_id: params[:student_id],
       level_id: params[:level_id],
       teacher_id: params[:teacher_id]
-    ).order('id DESC').first
+    ).latest
     render json: @feedback
   end
 
