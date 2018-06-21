@@ -1,3 +1,5 @@
+# Temporarily disabled due to iframe steps not working
+@no_chrome
 @dashboard_db_access
 @as_student
 @no_mobile
