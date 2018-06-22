@@ -474,16 +474,10 @@ export const getMultipleChoiceSectionSummary = (state) => {
  * Ex - [{correct: false}, {correct: true}] --> returns 'B'
  */
 export const getCorrectAnswer = (answerArr) => {
-  if (!answerArr) {
-    return '';
-  }
-  const correctLetters = [];
-  for (let i = 0; i < answerArr.length; i++) {
-    if (answerArr[i].correct) {
-      correctLetters.push(ANSWER_LETTERS[i]);
-    }
-  }
-  return correctLetters.join(', ');
+  const correctIndexes = answerArr
+    .map(({correct}, i) => (correct ? i : null))
+    .filter(i => i !== null);
+  return indexesToAnswerString(correctIndexes);
 };
 
 /**
