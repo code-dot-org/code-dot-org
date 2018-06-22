@@ -274,25 +274,9 @@ def run_tests(env, feature, arguments, log_prefix)
   end
 end
 
-def features_to_run
-  $features_to_run ||= ['features/minrepro.feature']
-end
-
-#
-# Produce a list of browser-feature combinations to run, with combinations will
-# be skipped due to test tags already filtered out.
-# @return [Array[Array[browser:Hash, feature:String]]]
-# Example result:
-# [
-#   [
-#     { 'browser': 'local', 'name': 'ChromeDriver', 'browserName': 'chrome', 'version': 'latest' },
-#     'features/bee.feature'
-#   ],
-#   ...
-# ]
-#
 def browser_features
-  ($browsers.product features_to_run).map do |browser, feature|
+  feature = 'features/minrepro.feature'
+  $browsers.map do |browser|
     arguments = cucumber_arguments_for_browser(browser, $options)
     scenario_count = ParallelTests::Cucumber::Scenarios.all([feature], test_options: arguments).length
     next if scenario_count.zero?
