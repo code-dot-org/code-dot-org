@@ -1,6 +1,5 @@
-import $ from 'jquery';
 import sinon from 'sinon';
-import {assert} from '../../util/configuredChai';
+import {assertVisible, assertHidden} from '../../util/assertions';
 import showProjectAdmin from '@cdo/apps/code-studio/showProjectAdmin';
 import {enforceDocumentBodyCleanup, replaceOnWindow, restoreOnWindow} from "../../util/testUtils";
 
@@ -107,11 +106,3 @@ describe('showProjectAdmin', () => {
     });
   });
 });
-
-function assertVisible(selector) {
-  assert.isTrue($(selector).is(':visible'), `Expected $('${selector}') to be visible but it was not`);
-}
-
-function assertHidden(selector) {
-  assert.isFalse($(selector).is(':visible'), `Expected $('${selector}') to be hidden but it was visible`);
-}
