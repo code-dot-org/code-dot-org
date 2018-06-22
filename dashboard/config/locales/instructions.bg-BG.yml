@@ -3840,6 +3840,33 @@ bg:
         in your stair step pattern?\r\n- What happens if you make your diamond pattern
         longer or shorter?\r\n- What does it look like to draw two snowflakes on top
         of one another?"
+      Dance Party 1-validated_instruction: 'What do you think will happen when you
+        click on the alien?  '
+      Dance Party 2_instruction: Change the behavior inside the `___ begins ___` block
+        to make the alien start spinning around.
+      Dance Party 3 - Validated_instruction: 'Create a new sprite called `alien2`,
+        then make it do a different dance move when it''s clicked.  '
+      Dance Party 3_instruction: 'Create a new sprite called `alien2`, then make it
+        do a different dance move when it''s clicked.  '
+      Dance Party 4 Validated_instruction: 'Create a third sprite called `alien3`
+        and get all of your aliens to stand in a line. '
+      Dance Party 4_instruction: 'Create a third sprite called `alien3` and get all
+        of your aliens to stand in a line. '
+      Dance Party 5 - Validated_instruction: Add code to change the color of each
+        alien when it gets clicked.
+      Dance Party 5_instruction: Add code to change the color of each alien when it
+        gets clicked.
+      Dance Party 6 - Validated_instruction: Use the `stops everything` block to make
+        each alien stop moving when it is clicked.
+      Dance Party 6_instruction: Use the `stops everything` block to make each alien
+        stop moving when it is clicked.
+      Dance Party 7 - Validated_instruction: Add a new bell sprite called `myBell`
+        that makes all the aliens start doing the same dance move when it's clicked.
+      Dance Party 7_instruction: Add a new bell sprite called `myBell` that makes
+        all the aliens start doing the same dance move when it's clicked.
+      Dance Party Freeplay_instruction: Now create your own alien disco!
+      Dance Party Predict_instruction: 'What do you think will happen when you click
+        on the alien?  '
       ECSPD Binary Odometer_instruction: |-
         This is another resource you could use
         with your students.
@@ -4108,6 +4135,16 @@ bg:
       Find the Wizard_2018_instruction: |-
         Build whatever you want. This is an example
         of a number-guessing game!
+      Fish Tank 2-validated_instruction: Change Dusty (the tumbleweed) to a fish.
+      Fish Tank 3-validated_instruction: Change the fish's behavior so that it swims
+        around the tank.
+      Fish Tank 4-validated_instruction: Use the `set background color` block to make
+        the background blue.
+      Fish Tank 5-validated_instruction: Our fish is getting a little lonely. Add
+        another sprite to the fish tank.
+      Fish Tank 6-validated_instruction: Add a behavior to the fish's new friend.
+      Fish Tank 7-validated_instruction: Use some new blocks from the toolbox to make
+        your fish tank special!
       Food Fight!_instruction: 'Добавихме функция за вас. Програмирайте вашата игра
         да отвори фyнкцията  "едно ниво по- нагоре" ако " играча има >10 точки". Ако
         преминете 4-то ниво, може да се преместите на следващия пъзел.
@@ -4192,6 +4229,7 @@ bg:
         Uh oh, I lost my map and can't remember what I planted.
         Every sprout could grow up to be corn, beans, or pumpkins. Can you write some
         code to pick all the crops, no matter what they are?
+      HoCAB_labyrinth1_instruction: Use the arrow blocks to solve this maze!
       Infinity_catch_instruction: Можете ли да накарате Елза ("актьор 2"), използвайки
         клавишите със стрелки, да достигне Анна?
       Infinity_finale_instruction: Създайте нещо, което ви харесва и  го споделете!
@@ -7673,6 +7711,7 @@ bg:
         Design Mode. (Click for full instructions.)
       U4 vigenere cipher 2_instruction: Инструкции
       U4L02 - Objects - Template1_instruction: Шаблон
+      U4L02 - Objects - Template1_2018_instruction: Шаблон
       U4L02 - Objects - createObject_instruction: "Create an object with at least\n5
         values including at least one string and one number. (Click to see full\ninstructions) "
       U4L02 - Objects - eventParameter_instruction: |-
@@ -7791,6 +7830,21 @@ bg:
         when the left and right arrows are pressed. When Kiki is clicked, she\nshould
         throw hearts towards her friends. "
       Vigenere_instruction: Test
+      Virtual Pet 1_instruction: What do you think will happen if you press "Run"
+        and then click on her?
+      Virtual Pet 2_instruction: Create an **event** so that when Geraldine touches
+        the puddle, her color changes to brown.
+      Virtual Pet 3_instruction: Add a new soap sprite to the screen.  Can you make
+        it so that when the giraffe and the soap touch, the giraffe goes back to its
+        normal color?
+      Virtual Pet 4_instruction: Add a behavior to your soap to make it draggable,
+        then drag it over to clean the giraffe!
+      Virtual Pet 5_instruction: Add actions to each event so that when the giraffe
+        collides with each sprite, it shrinks by 5.
+      Virtual Pet 6_instruction: Add an apple that returns the giraffe back to regular
+        size when they touch.
+      Virtual Pet Freeplay_instruction: 'Freeplay: What more can you make your giraffe
+        do? '
       WhileAdventure_instruction: |-
         Our adventurer wants to collect coins. Can you
         help her grab as many as she can using only one remove 1 block?
@@ -8608,6 +8662,8 @@ bg:
       courseA_maze_ramp3a_2018_instruction: |-
         Add a `North` block to the bottom of
         the other blocks to finish this code, then click "Run".
+      courseA_maze_ramp3b_2018_instruction: Add a `North` block to the bottom of the
+        other blocks to finish this code, then click "Run".
       courseA_maze_ramp4_2018_instruction: Avoid TNT or feathers will fly!
       courseA_maze_ramp4a_2018_instruction: |-
         Can you figure out which block you need
@@ -8747,6 +8803,8 @@ bg:
       courseB_Scrat_ramp3a_2018_instruction: |-
         Add a `North` block to the bottom of
         the other blocks to finish this code, then click "Run".
+      courseB_Scrat_ramp3b_2018_instruction: "Drag the extra block back to the toolbox
+        to throw it away.\n\n"
       courseB_Scrat_ramp4a_2018_instruction: |-
         Can you figure out which block you
         need to add to the bottom of the other blocks to finish this code?

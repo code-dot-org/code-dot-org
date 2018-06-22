@@ -368,13 +368,13 @@ it:
           nella direzione opposta a quella che serve per iniziare il rombo successivo.
           Di quanti gradi deve girarsi?
       4-5 Bee Conditionals 4_authored_hint:
-        remember_quantum: "<b>Attenzione:</b> Ogni volta che esegui il programma cio
+        remember_quantum: "**Attenzione:** Ogni volta che esegui il programma ciò
           che è nascosto può cambiare: per risolvere l'esercizio, devi quindi usare
-          il <i>blocco condizionale</i> `se/altrimenti`."
+          il blocco condizionale `se/altrimenti`."
       4-5 Bee Conditionals 5_authored_hint:
-        remember_quantum: "<b>Attenzione:</b> Ogni volta che esegui il programma cio
+        remember_quantum: "**Attenzione:** Ogni volta che esegui il programma ciò
           che è nascosto può cambiare: per risolvere l'esercizio, devi quindi usare
-          il <i>blocco condizionale</i> `se/altrimenti`."
+          il blocco condizionale `se/altrimenti`."
       4-5 Bee Conditionals 6_authored_hint:
         4-5 Bee Conditionals 6_a: Puoi risolvere l'esercizio usando solo i blocchi
           che trovi già nell'area di lavoro. In che ordine devi metterli?
@@ -3395,7 +3395,7 @@ it:
           Use this block to pick corn once the harvester gets to it.
 
           <xml>
-          <block type="maze_nectar"/>
+          <block type="harvester_corn"/>
           </xml>
       courseA_harvester_seq2_authored_hint:
         courseA_harvester_seq2_a: Don't forget to use <xml><block type="harvester_corn"/></xml>
@@ -3474,6 +3474,25 @@ it:
           <block type="maze_moveEast">
           <next>
           <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp3b_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest"/>
           </next>
           </block>
           </next>
@@ -4034,6 +4053,25 @@ it:
           <block type="maze_moveEast">
           <next>
           <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp3b_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast"/>
           </next>
           </block>
           </next>
@@ -7505,10 +7543,10 @@ it:
       courseD_artist_projectTemplate_2018_authored_hint: {}
       courseD_artist_project_embedded_authored_hint: {}
       courseD_artist_ramp11_authored_hint:
-        courseD_artist_ramp11a: Per disegnare un lato, usa il blocco 'vai avanti di
-          100 pixel' e cambia il 100 in 200.
+        courseD_artist_ramp11a: Per disegnare un lato, usa il blocco `vai avanti di
+          100 pixel` e cambia il 100 in 200.
         courseD_artist_ramp11b: |-
-          Per disegnare 4 lati, inserisci un blocco 'vai avanti di 200 pixel' all'interno di un ciclo di ripetizione e assicurarsi che il ciclo sia impostato per ripetersi 4 volte.
+          Per disegnare 4 lati, inserisci un blocco `vai avanti di 200 pixel` all'interno di un ciclo di ripetizione e assicurarsi che il ciclo sia impostato per ripetersi 4 volte.
 
           Non dimenticarti di girare!
         courseD_artist_ramp11_c: Ricorda di inserire il blocco `gira a ...` all'interno
@@ -7568,10 +7606,10 @@ it:
       courseD_bee_conditionals3_authored_hint:
         courseD_bee_conditionals3_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
           il video-suggerimento!
-        courseD_bee_conditionals3_a: Be sure to use an `if` statement to check each
-          space to see if it has either a flower or nothing.
-        courseD_bee_conditionals3_b: You can use a loop to keep the bee moving forward.
-          Use whichever one you like!
+        courseD_bee_conditionals3_a: Assicurati di usare un'istruzione condizionale
+          `se` per verificare in ogni casella se c'è un fiore.
+        courseD_bee_conditionals3_b: Per far andare avanti l'ape, puoi usare sia un
+          ciclo `ripeti ... volte` sia un ciclo `mentre`. Usa quello che preferisci!
         courseD_bee_conditionals3_c: Non aver paura di sbagliare! Prova ad aggiungere
           blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi
           di aver ancora risolto l'esercizio.
@@ -7579,10 +7617,10 @@ it:
       courseD_bee_conditionals3_2018_authored_hint:
         courseD_bee_conditionals3_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
           il video-suggerimento!
-        courseD_bee_conditionals3_a: Be sure to use an `if` statement to check each
-          space to see if it has either a flower or nothing.
-        courseD_bee_conditionals3_b: You can use a `repeat` loop or a `while` loop
-          to keep the bee moving forward. Use whichever one you like!
+        courseD_bee_conditionals3_a: Assicurati di usare un'istruzione condizionale
+          `se` per verificare in ogni casella se c'è un fiore.
+        courseD_bee_conditionals3_b: Per far andare avanti l'ape, puoi usare sia un
+          ciclo `ripeti ... volte` sia un ciclo `mentre`. Usa quello che preferisci!
         courseD_bee_conditionals3_c: Non aver paura di sbagliare! Prova ad aggiungere
           blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi
           di aver ancora risolto l'esercizio.
@@ -7590,138 +7628,136 @@ it:
       courseD_bee_conditionals4_authored_hint:
         courseD_bee_conditionals4_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
           il video-suggerimento!
-        courseD_bee_conditionals4_a: You can still treat every space as if there is
-          a cloud over it, even though you can see the whole path.
-        courseD_bee_conditionals4_b: 'Use an `if` statement inside your loop to check
-          each space. '
-        courseD_bee_conditionals4_c: Using the block `while there is a path ahead`,
-          you should `move forward` and check for a flower. `if there is a flower`
-          what should the bee do?
+        courseD_bee_conditionals4_a: Puoi sempre trattare ogni casella come se avesse
+          sopra una nuvola, anche se in questo caso riesci a vedere tutto il percorso.
+        courseD_bee_conditionals4_b: Usa un blocco `se` all'interno del ciclo per
+          controllare la presenza di un fiore in ogni casella.
+        courseD_bee_conditionals4_c: Grazie ad un blocco <xml><block type="maze_untilBlocked"/></xml>
+          riesci ad andare avanti e controllare se c'è un fiore. Cosa dovrebbe fare
+          l'ape se c'è un fiore?
         courseD_bee_conditionals4_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals4_2018_authored_hint:
         courseD_bee_conditionals4_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
           il video-suggerimento!
-        courseD_bee_conditionals4_a: You can still treat every space as if there is
-          a cloud over it, even though you can see the whole path.
-        courseD_bee_conditionals4_b: 'Use an `if` statement inside your loop to check
-          each space for nectar. '
-        courseD_bee_conditionals4_c: Using <xml><block type="maze_untilBlocked"/></xml>
-          block, you should move forward and check for a flower. If there is a flower,
-          what should the bee do?
+        courseD_bee_conditionals4_a: Puoi sempre trattare ogni casella come se avesse
+          sopra una nuvola, anche se in questo caso riesci a vedere tutto il percorso.
+        courseD_bee_conditionals4_b: Usa un blocco `se` all'interno del ciclo per
+          controllare la presenza di un fiore in ogni casella.
+        courseD_bee_conditionals4_c: Grazie ad un blocco <xml><block type="maze_untilBlocked"/></xml>
+          riesci ad andare avanti e controllare se c'è un fiore. Cosa dovrebbe fare
+          l'ape se c'è un fiore?
         courseD_bee_conditionals4_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals5_authored_hint:
         courseD_bee_conditionals5_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
           il video-suggerimento!
-        courseD_bee_conditionals5_a: Think of every side of the rectangular path as
-          a path by itself. Set up a nested loop with a `repeat` block on the outside
-          and a `while there is a path ahead` on the inside. How many paths does the
-          bee need to buzz down if the bee needs to buzz every side with a flower?
-        courseD_bee_conditionals5_c: There are 3 sides of the rectangle with flowers,
-          so the code needs to `repeat 3 times`. In every repeat, the bee will need
-          to continue along the path, `while there is a path ahead`. To continue down
-          the path, the bee will need to `move forward`. While on the path, the bee
-          needs to check for a flower. `if there is a flower`, the bee should `get
-          nectar`.
-        courseD_bee_conditionals5_b: Inside the `while there is a path ahead` block,
-          you will need to move forward and check for a flower. How do you check if
-          there is a flower? What do you do if there is a flower?
+        courseD_bee_conditionals5_a: Pensa ad ogni lato del percorso rettangolare
+          come ad un percorso a sé stante. Imposta un ciclo annidato con un blocco
+          `ripeti ... volte` all'esterno ed uno `mentre c'è strada in avanti` all'interno.
+          Lungo quanti lati deve volare l'ape per ronzare su ogni fiore?
+        courseD_bee_conditionals5_c: Ci sono 3 lati del rettangolo con dei fiori,
+          quindi il codice deve `"ripetersi" 3 volte`. Ad ogni ripetizione, l'ape
+          deve procedere lungo il percorso `mentre c'è strada in avanti`. Per proseguire,
+          l'ape deve `"andare" avanti`. Lungo il percorso, l'ape deve controllare
+          se c'è un fiore. `se c'è un fiore`, l'ape deve `"prendere" il nettare`.
+        courseD_bee_conditionals5_b: All'interno del blocco `mentre c'è strada in
+          avanti` devi andare avanti e controllare se c'è un fiore. Come controlli
+          se c'è un fiore? Cosa fai se c'è un fiore?
         courseD_bee_conditionals5_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals5_2018_authored_hint:
         courseD_bee_conditionals5_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
           il video-suggerimento!
-        courseD_bee_conditionals5_a: Think of every side of the rectangular path as
-          a path by itself. Set up a nested loop with a `repeat` block on the outside
-          and a `while there is a path ahead` loop on the inside. How many paths does
-          the bee need to buzz down if the bee needs to buzz down every side with
-          a flower?
-        courseD_bee_conditionals5_c: There are 3 sides of the rectangle with flowers,
-          so the code needs to `repeat 3 times`. In every repeat, the bee will need
-          to continue along the path, `while there is a path ahead`. To continue down
-          the path, the bee will need to `move forward`. While on the path, the bee
-          needs to check for a flower. `if there is a flower`, the bee should `get
-          nectar`.
-        courseD_bee_conditionals5_b: Inside the `while there is a path ahead` block
-          you will need to move forward and check for a flower. How do you check if
-          there is a flower? What do you do if there is a flower?
+        courseD_bee_conditionals5_a: Pensa ad ogni lato del percorso rettangolare
+          come ad un percorso a sé stante. Imposta un ciclo annidato con un blocco
+          `ripeti ... volte` all'esterno ed uno `mentre c'è strada in avanti` all'interno.
+          Lungo quanti lati deve volare l'ape per ronzare su ogni fiore?
+        courseD_bee_conditionals5_c: Ci sono 3 lati del rettangolo con dei fiori,
+          quindi il codice deve `"ripetersi" 3 volte`. Ad ogni ripetizione, l'ape
+          deve procedere lungo il percorso `mentre c'è strada in avanti`. Per proseguire,
+          l'ape deve `"andare" avanti`. Lungo il percorso, l'ape deve controllare
+          se c'è un fiore. `se c'è un fiore`, l'ape deve `"prendere" il nettare`.
+        courseD_bee_conditionals5_b: All'interno del blocco `mentre c'è strada in
+          avanti` devi andare avanti e controllare se c'è un fiore. Come controlli
+          se c'è un fiore? Cosa fai se c'è un fiore?
         courseD_bee_conditionals5_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals6_authored_hint:
         courseD_bee_conditionals6_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
           il video-suggerimento!
-        courseD_bee_conditionals6_a: Make sure to use an `if` statement to check for
-          honeycomb beneath each cloud.
-        courseD_bee_conditionals6_b: In this case, you do not need to check for nectar
-          under the clouds.
-        courseD_bee_conditionals6_c: Is there a loop you can use to make your code
-          simpler?
+        courseD_bee_conditionals6_a: Assicurati di usare un'istruzione condizionale
+          `se` per verificare sotto ogni nuvola se c'è un favo.
+        courseD_bee_conditionals6_b: In questo caso, non è necessario controllare
+          se ci sono fiori sotto le nuvole.
+        courseD_bee_conditionals6_c: Potresti usare un ciclo per rendere il programma
+          più semplice?
         courseD_bee_conditionals6_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals6_2018_authored_hint:
         courseD_bee_conditionals6_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
           il video-suggerimento!
-        courseD_bee_conditionals6_a: Make sure to use an `if` statement to check for
-          honeycomb beneath each cloud.
-        courseD_bee_conditionals6_b: In this case, you do not need to check for flowers
-          under the clouds.
-        courseD_bee_conditionals6_c: Is there a loop you can use to make your code
-          simpler?
+        courseD_bee_conditionals6_a: Assicurati di usare un'istruzione condizionale
+          `se` per verificare sotto ogni nuvola se c'è un favo.
+        courseD_bee_conditionals6_b: In questo caso, non è necessario controllare
+          se ci sono fiori sotto le nuvole.
+        courseD_bee_conditionals6_c: Potresti usare un ciclo per rendere il programma
+          più semplice?
         courseD_bee_conditionals6_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals7_authored_hint:
         courseD_bee_conditionals7_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
           il video-suggerimento!
-        courseD_bee_conditionals7_a: "**Remember:** This puzzle changes each time
-          it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve
-          the challenge."
-        courseD_bee_conditionals7_b: If there is not a flower under the cloud, there
-          must be a honeycomb, so you don't need to think about the case of an empty
-          space.
+        courseD_bee_conditionals7_a: "**Ricorda:** Ogni volta che esegui il programma
+          ciò che è nascosto può cambiare: per risolvere l'esercizio, devi quindi
+          usare il blocco condizionale `se/altrimenti`."
+        courseD_bee_conditionals7_b: Se sotto a una nuvola non c'è un fiore, sappi
+          che c'è sicuramente un favo, quindi non hai bisogno di considerare il caso
+          di una casella vuota.
         courseD_bee_conditionals7_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals7_2018_authored_hint:
         courseD_bee_conditionals7_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
           il video-suggerimento!
-        courseD_bee_conditionals7_a: "**Remember:** This puzzle changes each time
-          it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve
-          the challenge."
-        courseD_bee_conditionals7_b: If there is not a flower under the cloud, there
-          must be a honeycomb, so you don't need to think about the case of an empty
-          space.
+        courseD_bee_conditionals7_a: "**Ricorda:** Ogni volta che esegui il programma
+          ciò che è nascosto può cambiare: per risolvere l'esercizio, devi quindi
+          usare il blocco condizionale `se/altrimenti`."
+        courseD_bee_conditionals7_b: Se sotto a una nuvola non c'è un fiore, sappi
+          che c'è sicuramente un favo, quindi non hai bisogno di considerare il caso
+          di una casella vuota.
         courseD_bee_conditionals7_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals7_predict2_authored_hint:
-        courseD_bee_conditionals7_a: "**Remember:** This puzzle changes each time
-          it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve
-          the challenge."
+        courseD_bee_conditionals7_a: "**Ricorda:** Ogni volta che esegui il programma
+          ciò che è nascosto può cambiare: per risolvere l'esercizio, devi quindi
+          usare il blocco condizionale `se/altrimenti`."
       courseD_bee_conditionals7_predict2_2018_authored_hint:
-        courseD_bee_conditionals7_a: "**Remember:** This puzzle changes each time
-          it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve
-          the challenge."
+        courseD_bee_conditionals7_a: "**Ricorda:** Ogni volta che esegui il programma
+          ciò che è nascosto può cambiare: per risolvere l'esercizio, devi quindi
+          usare il blocco condizionale `se/altrimenti`."
       courseD_bee_conditionals8_authored_hint:
         courseD_bee_conditionals8_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
           il video-suggerimento!
-        courseD_bee_conditionals8_a: "<b>Attenzione:</b> Ogni volta che esegui il
-          programma cio che è nascosto può cambiare: per risolvere l'esercizio, devi
-          quindi usare il <i>blocco condizionale</i> `se/altrimenti`."
+        courseD_bee_conditionals8_a: "**Attenzione:** Ogni volta che esegui il programma
+          ciò che è nascosto può cambiare: per risolvere l'esercizio, devi quindi
+          usare il blocco condizionale `se/altrimenti`."
         courseD_bee_conditionals8_b: |-
-          This puzzle is tricky, because you can't check blank squares, nectar, *and* honey with just one single conditional.
+          Questo esercizio è un po' complicato, perché non puoi controllare le caselle vuote, i fiori *e* i favi con un unica istruzione condizionale.
 
-          Only check for nectar and honey at the end of your path.
-        courseD_bee_conditionals8_c: How can you make sure to travel to the end every
-          path, no matter how long?
-        courseD_bee_conditionals8_d: Even though there is a cloud right in front of
-          you, you don't have to visit it first. Try starting with the one in the
-          bottom right of the square.
+          Controlla solo se c'è un fiore o un favo alla fine di ogni tratto del percorso (dove vedi le nuvole).
+        courseD_bee_conditionals8_c: Come puoi fare in modo di andare avanti fino
+          alla fine di ogni tratto del percorso, indipendentemente dalla sua lunghezza?
+        courseD_bee_conditionals8_d: |-
+          Nonostante ci sia una nuvola proprio davanti a te (alla partenza), non dovresti analizzarla subito. Prova ad ignorarla, iniziando da quella nell'angolo in basso a destra (alla fine del primo tratto rettilineo).
+
+          ![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)
         courseD_bee_conditionals8_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals8_2018_authored_hint:
         courseD_bee_conditionals8_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
           il video-suggerimento!
-        courseD_bee_conditionals8_a: "<b>Attenzione:</b> Ogni volta che esegui il
-          programma cio che è nascosto può cambiare: per risolvere l'esercizio, devi
-          quindi usare il <i>blocco condizionale</i> `se/altrimenti`."
+        courseD_bee_conditionals8_a: "**Attenzione:** Ogni volta che esegui il programma
+          ciò che è nascosto può cambiare: per risolvere l'esercizio, devi quindi
+          usare il blocco condizionale `se/altrimenti`."
         courseD_bee_conditionals8_b: |-
-          This puzzle is tricky, because you can't check blank squares, nectar, *and* honey with just one single conditional.
+          Questo esercizio è un po' complicato, perché non puoi controllare le caselle vuote, i fiori *e* i favi con un unica istruzione condizionale.
 
-          Only check for nectar and honey at the end of your path.
-        courseD_bee_conditionals8_c: How can you make sure to travel to the end every
-          path, no matter how long the path is?
+          Controlla solo se c'è un fiore o un favo alla fine di ogni tratto del percorso (dove vedi le nuvole).
+        courseD_bee_conditionals8_c: Come puoi fare in modo di andare avanti fino
+          alla fine di ogni tratto del percorso, indipendentemente dalla sua lunghezza?
         courseD_bee_conditionals8_d: |-
-          Even though there is a cloud right in front of you, you don't have to visit it first. Try starting with the cloud in the bottom right of the square.
+          Nonostante ci sia una nuvola proprio davanti a te (alla partenza), non dovresti analizzarla subito. Prova ad ignorarla, iniziando da quella nell'angolo in basso a destra (alla fine del primo tratto rettilineo).
 
           ![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)
         courseD_bee_conditionals8_hintVid2: Guarda il video per risolvere questo esercizio.
@@ -8668,7 +8704,7 @@ it:
           un ciclo all'interno di un altro! Si chiama **ciclo annidato**.
       courseD_collector_ramp8_authored_hint:
         courseD_collector_ramp8_a: Quando arrivi su una casella con un diamante, per
-          prenderlo devi usare il blocco 'raccogli'. In questo esercizio, è necessario
+          prenderlo devi usare il blocco `raccogli`. In questo esercizio, è necessario
           raccogliere più di un diamante alla volta!
         courseD_collector_ramp8_b: Se vuoi semplificare il tuo programma, puoi mettere
           un ciclo `ripeti ... volte` all'interno di un altro! Si chiama **ciclo annidato**.
@@ -8735,99 +8771,102 @@ it:
           actions multiple times?
       courseD_external_cond_authored_hint: {}
       courseD_farmer_condLoops1_authored_hint:
-        courseD_farmer_condLoops1_a: You will need to look for corn 5 times, using
-          a repeat loop.
-        courseD_farmer_condLoops1_b: Make sure to use an `if at corn` block or you
-          might try to pick something that's not there!
+        courseD_farmer_condLoops1_a: Saranno necessari 5 controlli, usa un ciclo `ripeti
+          ... volte`.
+        courseD_farmer_condLoops1_b: Se non usi un blocco 'se c'è una pannocchia'
+          rischi di tentare di raccogliere qualcosa che non c'è!
       courseD_farmer_condLoops1_2018_authored_hint:
-        courseD_farmer_condLoops1_a: You will need to look for corn 5 times, using
-          a repeat loop.
-        courseD_farmer_condLoops1_b: Make sure to use an `if at corn` block or you
-          might try to pick something that's not there!
+        courseD_farmer_condLoops1_a: Saranno necessari 5 controlli, usa un ciclo `ripeti
+          ... volte`.
+        courseD_farmer_condLoops1_b: Se non usi un blocco 'se c'è una pannocchia'
+          rischi di tentare di raccogliere qualcosa che non c'è!
       courseD_farmer_condLoops2_authored_hint:
-        courseD_farmer_condLoops2_a: 'The best way to do this is to nest `if` statements
-          by placing one inside of the other.  '
-        courseD_farmer_condLoops2_b: For this puzzle, you should have one `if/else`
-          statement and one plain `if` statement.
+        courseD_farmer_condLoops2_a: Il modo migliore per risolvere questo esercizio,
+          è di annidare le istruzioni `se` una dentro l'altra.
+        courseD_farmer_condLoops2_b: In questo esercizio, dovresti usare un'istruzione
+          `se/altrimenti` e una semplice istruzione `se`.
         courseD_farmer_condLoops2_c: |-
-          Your `if` statement could look a lot like this:
+          L'insieme di istruzioni condizionali dovrebbe funzionare così:
 
-          - if at corn
-           - pick corn
-          - else
-           - if at lettuce
-            \t- pick lettuce
+          - se c'è una pannocchia
+           - prendi la pannocchia
+          - altrimenti
+           - se c'è la lattuga
+            \t- prendi la lattuga
 
-          If there is nothing there, you won't pick anything!
+          Quindi, se una casella è vuota, la contadina non cerca di raccogliere nulla!
       courseD_farmer_condLoops2_2018_authored_hint:
-        courseD_farmer_condLoops2_a: 'The best way to do this is to nest `if` statements
-          by placing one inside of the other.  '
-        courseD_farmer_condLoops2_b: For this puzzle, you should have one `if/else`
-          statement and one plain `if` statement.
+        courseD_farmer_condLoops2_a: Il modo migliore per risolvere questo esercizio,
+          è di annidare le istruzioni `se` una dentro l'altra.
+        courseD_farmer_condLoops2_b: In questo esercizio, dovresti usare un'istruzione
+          `se/altrimenti` e una semplice istruzione `se`.
         courseD_farmer_condLoops2_c: |-
-          Your `if` statement could look a lot like this:
+          L'insieme di istruzioni condizionali dovrebbe funzionare così:
 
-          - if at corn
-           - pick corn
-          - else
-           - if at lettuce
-            \t- pick lettuce
+          - se c'è una pannocchia
+           - prendi la pannocchia
+          - altrimenti
+           - se c'è la lattuga
+            \t- prendi la lattuga
 
-          If there is nothing there, you won't pick anything!
+          Quindi, se una casella è vuota, la contadina non cerca di raccogliere nulla!
       courseD_farmer_condLoops3_authored_hint:
         courseD_farmer_condLoops3_a: |-
-          To get all of the items, try nesting `if` statements three deep.
+          Per raccogliere tutto, prova ad annidare su tre livelli le istruzioni `se`.
 
-          This means you should put one `if` statement inside of another, then put a third `if` statement inside the second one.
-        courseD_farmer_condLoops3_b: For this puzzle, you should have two `if/else`
-          statements and one plain `if` statement.
+          Questo significa che devi mettere un'istruzione `se` all'interno un'altra e poi mettere una terza istruzione `se` all'interno della seconda.
+        courseD_farmer_condLoops3_b: In questo esercizio, dovresti usare due istruzioni
+          `se/altrimenti` e una semplice istruzione `se`.
       courseD_farmer_condLoops3_2018_authored_hint:
         courseD_farmer_condLoops3_a: |-
-          To get all of the items, try nesting `if` statements three deep.
+          Per raccogliere tutto, prova ad annidare su tre livelli le istruzioni `se`.
 
-          This means you should put one `if` statement inside of another, then put a third `if` statement inside the second one.
-        courseD_farmer_condLoops3_b: For this puzzle, you should have two `if/else`
-          statements and one plain `if` statement.
+          Questo significa che devi mettere un'istruzione `se` all'interno un'altra e poi mettere una terza istruzione `se` all'interno della seconda.
+        courseD_farmer_condLoops3_b: In questo esercizio, dovresti usare due istruzioni
+          `se/altrimenti` e una semplice istruzione `se`.
       courseD_farmer_condLoops4_authored_hint:
         grade3_RunningFarm_4courseD_farmer_condLoops4: |-
-          No one knows how many heads of lettuce will grow from each sprout.
+          Nessuno sa quanti cespi di lattuga crescono da ogni pianta.
 
-          Use a `while there is lettuce` loop to keep picking until each piece has been gathered.
-        grade3_RunningFarm_4courseD_farmer_condLoops4_b: The `while` loop will handle
-          empty spaces as well! Since there is no lettuce, it will not pick any and
-          let the code move on.
-        grade3_RunningFarm_4courseD_farmer_condLoops4_c: You can use either a `while
-          path ahead` loop or a `repeat` loop to go through all of the crops.
+          Usa il ciclo `mentre c'è la lattuga` per continuare a raccogliere mentre ci sono ancora cespi disponibili.
+        grade3_RunningFarm_4courseD_farmer_condLoops4_b: Il ciclo `mentre` gestirà
+          correttamente anche le caselle vuote! Visto che non c'è lattuga, non verrà
+          raccolta ed il codice passerà oltre.
+        grade3_RunningFarm_4courseD_farmer_condLoops4_c: Per analizzare tutte le caselle,
+          puoi usare sia un ciclo `mentre c'è strada in avanti` sia un ciclo `ripeti
+          ... volte`.
       courseD_farmer_condLoops4_2018_authored_hint:
         grade3_RunningFarm_4courseD_farmer_condLoops4: |-
-          No one knows how many heads of lettuce will grow from each sprout.
+          Nessuno sa quanti cespi di lattuga crescono da ogni pianta.
 
-          Use a `while there is lettuce` loop to keep picking until each piece has been gathered.
-        grade3_RunningFarm_4courseD_farmer_condLoops4_b: The `while` loop will handle
-          empty spaces as well! Since there is no lettuce, it will not pick any and
-          let the code move on.
-        grade3_RunningFarm_4courseD_farmer_condLoops4_c: You can use either a `while
-          path ahead` loop or a `repeat` loop to go through all of the crops.
+          Usa il ciclo `mentre c'è la lattuga` per continuare a raccogliere mentre ci sono ancora cespi disponibili.
+        grade3_RunningFarm_4courseD_farmer_condLoops4_b: Il ciclo `mentre` gestirà
+          correttamente anche le caselle vuote! Visto che non c'è lattuga, non verrà
+          raccolta ed il codice passerà oltre.
+        grade3_RunningFarm_4courseD_farmer_condLoops4_c: Per analizzare tutte le caselle,
+          puoi usare sia un ciclo `mentre c'è strada in avanti` sia un ciclo `ripeti
+          ... volte`.
       courseD_farmer_condLoops4a_authored_hint:
         grade3_RunningFarm_4courseD_farmer_condLoops4: |-
-          No one knows how many heads of lettuce will grow from each sprout.
+          Nessuno sa quanti cespi di lattuga crescono da ogni pianta.
 
-          Use a `while there is lettuce` loop to keep picking until each piece has been gathered.
+          Usa il ciclo `mentre c'è la lattuga` per continuare a raccogliere mentre ci sono ancora cespi disponibili.
       courseD_farmer_condLoops5_authored_hint:
-        courseD_farmer_condLoops5_a: 'There is a new loop: `repeat until at pumpkin`.
-          Can you see how to use it in this puzzle?'
-        courseD_farmer_condLoops5_b: There could be more than one corn or lettuce
-          plant in each spot. Use a `while` loop to gather all of them!
+        courseD_farmer_condLoops5_a: 'C''è un nuovo ciclo: `ripeti fino a che ci sono
+          delle zucche`. Riesci a intuire come usarlo in questo esercizio?'
+        courseD_farmer_condLoops5_b: Ci può essere più di una pannocchia o più di
+          una lattuga in ogni casella. Usa un ciclo `mentre` per raccoglie tutto!
       courseD_farmer_condLoops5_2018_authored_hint:
-        courseD_farmer_condLoops5_a: 'There is a new loop: `repeat until at pumpkin`.
-          Can you see how to use it in this puzzle?'
-        courseD_farmer_condLoops5_b: There could be more than one corn or lettuce
-          plant in each spot. Use a `while` loop to gather all of them!
+        courseD_farmer_condLoops5_a: 'C''è un nuovo ciclo: `ripeti fino a che ci sono
+          delle zucche`. Riesci a intuire come usarlo in questo esercizio?'
+        courseD_farmer_condLoops5_b: Ci può essere più di una pannocchia o più di
+          una lattuga in ogni casella. Usa un ciclo `mentre` per raccoglie tutto!
       courseD_farmer_condLoops6_authored_hint:
-        courseD_farmer_condLoops6_a: Use a `while path ahead` loop to move the farmer
-          down each piece of the spiral.
-        courseD_farmer_condLoops6_b: You only need to check for corn during most of
-          the harvest.  Just pick one pumpkin at the very end of your program.
+        courseD_farmer_condLoops6_a: Usa un ciclo `mentre c'è una pannocchia` per
+          essere sicuro di raccogliere tutto il mais lungo la strada. Questo blocco
+          non farà fare nulla se non c'è alcuna pannocchia da prendere.
+        courseD_farmer_condLoops6_b: Controlla `se c'è strada in avanti` prima di
+          fare il prossimo passo!
       courseD_farmer_condLoops6_2018_authored_hint:
         courseD_farmer_condLoops6_a: Use a `while path ahead` loop to move the farmer
           down each piece of the spiral.
@@ -8835,18 +8874,18 @@ it:
           the harvest.  Just pick one pumpkin at the very end of your program.
       courseD_farmer_condLoops7_authored_hint:
         courseD_farmer_condLoops7_a: |-
-          Notice that the easiest path to get to all of the crops is still a spiral.
+          Nota che il percorso più facile per raggiungere tutte le colture è ancora una spirale.
 
           ![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)
-        courseD_farmer_condLoops7_b: Try using `when path ahead` to keep the farmer
-          moving the right number of steps.
+        courseD_farmer_condLoops7_b: Prova ad usare un blocco `mentre c'è strada in
+          avanti` per far muovere la contadina lungo il percorso corretto.
       courseD_farmer_condLoops7_2018_authored_hint:
         courseD_farmer_condLoops7_a: |-
-          Notice that the easiest path to get to all of the crops is still a spiral.
+          Nota che il percorso più facile per raggiungere tutte le colture è ancora una spirale.
 
           ![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)
-        courseD_farmer_condLoops7_b: Try using `when path ahead` to keep the harvester
-          moving the right number of steps.
+        courseD_farmer_condLoops7_b: Prova ad usare un blocco `mentre c'è strada in
+          avanti` per far muovere la contadina lungo il percorso corretto.
       courseD_farmer_condLoops8_authored_hint: {}
       courseD_farmer_condLoops8_2018_authored_hint: {}
       courseD_farmer_condLoops9_authored_hint: {}
@@ -8889,7 +8928,7 @@ it:
         courseD_farmer_conditionals8_a: Avrai bisogno di usare più di un ciclo `mentre`.
         courseD_farmer_conditionals8_b: Ogni buca è alla fine di un tratto di percorso,
           quindi usa il blocco `mentre c'è strada in avanti` prima di usare il ciclo
-          'mentre c'è una buca'.
+          `mentre c'è una buca`.
         courseD_farmer_conditionals8_c: Nota che devi ripetere sei volte la sequenza
           `mentre c'è strada in avanti` + `quando c'è una buca`.
       courseD_farmer_conditionals9_authored_hint: {}
@@ -9003,14 +9042,14 @@ it:
         courseD_farmer_conditionals8_a: Avrai bisogno di usare più di un ciclo `mentre`.
         courseD_farmer_conditionals8_b: Ogni buca è alla fine di un tratto di percorso,
           quindi usa il blocco `mentre c'è strada in avanti` prima di usare il ciclo
-          'mentre c'è una buca'.
+          `mentre c'è una buca`.
         courseD_farmer_conditionals8_c: Nota che devi ripetere sei volte la sequenza
           `mentre c'è strada in avanti` + `quando c'è una buca`.
       courseD_farmer_while8_2018_authored_hint:
         courseD_farmer_conditionals8_a: Avrai bisogno di usare più di un ciclo `mentre`.
         courseD_farmer_conditionals8_b: Ogni buca è alla fine di un tratto di percorso,
           quindi usa il blocco `mentre c'è strada in avanti` prima di usare il ciclo
-          'mentre c'è una buca'.
+          `mentre c'è una buca`.
         courseD_farmer_conditionals8_c: Nota che devi ripetere sei volte la sequenza
           `mentre c'è strada in avanti` + `quando c'è una buca`.
       courseD_farmer_while9_authored_hint: {}
@@ -9325,17 +9364,17 @@ it:
         courseD_maze_ramp7_c: Se vuoi semplificare il tuo programma, puoi mettere
           un ciclo `ripeti ... volte` all'interno di un altro! Si chiama **ciclo annidato**.
       courseD_maze_until1_authored_hint:
-        courseD_maze_until1_a: Are there any sequences you can loop to make your code
-          shorter?
-        courseD_maze_until1_b: Try using a nested loop to solve this puzzle.
+        courseD_maze_until1_a: C'è qualche sequenza che si ripete da inserire in un
+          ciclo per rendere il programma più breve?
+        courseD_maze_until1_b: Prova a risolvere l'esercizio usando dei cicli annidati.
       courseD_maze_until10_authored_hint: {}
       courseD_maze_until10_2018_authored_hint: {}
       courseD_maze_until10_predict2_authored_hint: {}
       courseD_maze_until10_predict2_2018_authored_hint: {}
       courseD_maze_until1_2018_authored_hint:
-        courseD_maze_until1_a: Are there any sequences you can loop to make your code
-          shorter?
-        courseD_maze_until1_b: Try using a nested loop to solve this puzzle.
+        courseD_maze_until1_a: C'è qualche sequenza che si ripete da inserire in un
+          ciclo per rendere il programma più breve?
+        courseD_maze_until1_b: Prova a risolvere l'esercizio usando dei cicli annidati.
       courseD_maze_until2_authored_hint:
         courseD_maze_until2_a: An `until pig` loop will help you keep going until
           you succeed!
@@ -9343,104 +9382,109 @@ it:
       courseD_maze_until2_predict1_2018_authored_hint: {}
       courseD_maze_until3_authored_hint:
         courseD_maze_until3_a: |-
-          - What does your code do?
-          - What is it supposed to do?
-          - What does that tell you?
-        courseD_maze_until3_b: If you are getting stuck, try writing out the steps
-          on a piece of paper and looking for places where they repeat.
-        courseD_maze_until3_c: Is there a stair step pattern you can follow for this
-          puzzle?
-        courseD_maze_until3_d: Don't forget to use the `repeat until` block to make
-          your code shorter.
+          - Cosa fa il tuo programma?
+          - Che cosa dovrebbe fare?
+          - Che cosa ti suggerisce questo?
+        courseD_maze_until3_b: Se ti sei bloccato, prova a scrivere i passaggi su
+          un foglio di carta e cerca degli schemi che si ripetono.
+        courseD_maze_until3_c: Puoi seguire uno schema a scalinata per risolvere questo
+          esercizio?
+        courseD_maze_until3_d: Non dimenticare di usare il blocco `ripeti fino a che`
+          per rendere il tuo programma più breve.
       courseD_maze_until3_2018_authored_hint:
         courseD_maze_until3_a: |-
-          - What does your code do?
-          - What is it supposed to do?
-          - What does that tell you?
-        courseD_maze_until3_b: If you are getting stuck, try writing out the steps
-          on a piece of paper and looking for places where they repeat.
-        courseD_maze_until3_c: Is there a stair step pattern you can follow for this
-          puzzle?
-        courseD_maze_until3_d: Don't forget to use the `repeat until` block to make
-          your code shorter.
+          - Cosa fa il tuo programma?
+          - Che cosa dovrebbe fare?
+          - Che cosa ti suggerisce questo?
+        courseD_maze_until3_b: Se ti sei bloccato, prova a scrivere i passaggi su
+          un foglio di carta e cerca degli schemi che si ripetono.
+        courseD_maze_until3_c: Puoi seguire uno schema a scalinata per risolvere questo
+          esercizio?
+        courseD_maze_until3_d: Non dimenticare di usare il blocco `ripeti fino a che`
+          per rendere il tuo programma più breve.
       courseD_maze_until4_authored_hint:
         courseD_maze_until4_a: |-
-          Use the "Step" button to go through your code line by line.
+          Usa il pulsante "Fai un passo" per analizzare il tuo programma un blocco alla volta.
 
-          - Does everything work at the first step?
-          - Does everything work at the second step?
-          - Where does it go wrong?
-        courseD_maze_until4_b: Is there a stair step pattern you can follow for this
-          puzzle?
-        courseD_maze_until4_c: Don't forget to use the `repeat until` block to make
-          your code shorter.
+          - Al primo passo tutto procede bene?
+          - E al secondo?
+          - Dov'è che qualcosa comincia a non funzionare?
+        courseD_maze_until4_b: Puoi seguire uno schema a scalinata per risolvere questo
+          esercizio?
+        courseD_maze_until4_c: Non dimenticare di usare il blocco `ripeti fino a che`
+          per rendere il tuo programma più breve.
       courseD_maze_until4_2018_authored_hint:
         courseD_maze_until4_a: |-
-          Use the "Step" button to go through your code line by line.
+          Usa il pulsante "Fai un passo" per analizzare il tuo programma un blocco alla volta.
 
-          - Does everything work at the first step?
-          - Does everything work at the second step?
-          - Where does it go wrong?
-        courseD_maze_until4_b: Is there a stair step pattern you can follow for this
-          puzzle?
-        courseD_maze_until4_c: Don't forget to use the `repeat until` block to make
-          your code shorter.
+          - Al primo passo tutto procede bene?
+          - E al secondo?
+          - Dov'è che qualcosa comincia a non funzionare?
+        courseD_maze_until4_b: Puoi seguire uno schema a scalinata per risolvere questo
+          esercizio?
+        courseD_maze_until4_c: Non dimenticare di usare il blocco `ripeti fino a che`
+          per rendere il tuo programma più breve.
       courseD_maze_until5_authored_hint:
-        courseD_maze_until5_a: Don't forget to use `if path to the left` to keep the
-          zombie checking for a place to turn.
-        courseD_maze_until5_b: To use only one `move forward`, put it inside the `repeat
-          until sunflower` block.
-        courseD_maze_until5_c: After each step, the zombie should check whether there
-          is a path to the left. What should he do if he finds one?
+        courseD_maze_until5_a: Non dimenticare di usare l'istruzione condizionale
+          `se c'è strada a sinistra` per far in modo che lo zombie continui a cercare
+          il punto in cui girare.
+        courseD_maze_until5_b: Per usare un solo blocco `vai avanti`, mettilo dentro
+          a un blocco `ripeti fino a che`.
+        courseD_maze_until5_c: Dopo ogni passo, lo zombie dovrebbe controllare se
+          c'è un percorso verso sinistra. Cosa dovrebbe fare se lo trova?
       courseD_maze_until5_2018_authored_hint:
-        courseD_maze_until5_b: To use only one `move forward`, put it inside the `repeat
-          until sunflower` block.
+        courseD_maze_until5_b: Per usare un solo blocco `vai avanti`, mettilo dentro
+          a un blocco `ripeti fino a che`.
       courseD_maze_until6_authored_hint:
-        courseD_maze_until6_a: This time, try the `if path to the right` to keep the
-          zombie on track.
-        courseD_maze_until6_b: To use only one `move forward`, put it inside the `repeat
-          until sunflower` block.
-        courseD_maze_until6_c: Although there are more turns than the last puzzle,
-          your code can be almost identical because of the `repeat until` block!
+        courseD_maze_until6_a: Questa volta, per mantenere lo zombie sul percorso
+          corretto, prova ad usare il blocco `se c'è strada a destra`.
+        courseD_maze_until6_b: Per usare un solo blocco `vai avanti`, mettilo dentro
+          a un blocco `ripeti fino a che`.
+        courseD_maze_until6_c: Anche se qui ci sono più curve rispetto all'ultimo
+          esercizio, il programma può essere quasi identico, grazie al blocco `ripeti
+          fino a che`!
       courseD_maze_until6_2018_authored_hint:
-        courseD_maze_until6_b: To use only one `move forward`, put it inside the `repeat
-          until sunflower` block.
+        courseD_maze_until6_b: Per usare un solo blocco `vai avanti`, mettilo dentro
+          a un blocco `ripeti fino a che`.
       courseD_maze_until7_authored_hint:
-        courseD_maze_until7_a: You don't need your code to be any longer, just because
-          the maze is!
-        courseD_maze_until7_b: Although there are more turns than the last puzzle,
-          your code can be almost identical because of the `repeat until` block!
-        courseD_maze_until7_c: Remember to check for paths to the left, since turning
-          right will lead you astray!
+        courseD_maze_until7_a: Non c'è bisogno che il tuo programma sia più lungo
+          dell'ultima volta, solo perché il labirinto lo è!
+        courseD_maze_until7_b: Anche se qui ci sono più curve rispetto all'ultimo
+          esercizio, il programma può essere quasi identico, grazie al blocco `ripeti
+          fino a che`!
+        courseD_maze_until7_c: Ricordati di cercare strada a sinistra, perché se giri
+          a destra finirai in un percorso sbagliato!
       courseD_maze_until7_2018_authored_hint:
-        courseD_maze_until7_a: You don't need your code to be any longer than last
-          time, just because the maze is!
-        courseD_maze_until7_b: Although there are more turns here than the last puzzle,
-          your code can be almost identical because of the `repeat until` block!
+        courseD_maze_until7_a: Non c'è bisogno che il tuo programma sia più lungo
+          dell'ultima volta, solo perché il labirinto lo è!
+        courseD_maze_until7_b: Anche se qui ci sono più curve rispetto all'ultimo
+          esercizio, il programma può essere quasi identico, grazie al blocco `ripeti
+          fino a che`!
       courseD_maze_until8_authored_hint:
-        courseD_maze_until8_a: Make sure you're using an `if/else` block to keep the
-          zombie headed the right direction.
-        courseD_maze_until8_b: 'With your `if/else` block: if there is a path ahead,
-          what should you do?'
-        courseD_maze_until8_c: 'With your `if/else` block: if there is not a path
-          ahead, which way should you turn?'
+        courseD_maze_until8_a: Assicurati di usare il blocco `se/altrimenti` per far
+          mantenere allo zombi la direzione corretta.
+        courseD_maze_until8_b: 'Con il blocco `se/altrimenti`: se c''è strada in avanti,
+          cosa deve fare lo zombi?'
+        courseD_maze_until8_c: 'Con il blocco `se/altrimenti`: se non c''è strada
+          in avanti, da che parte deve girare lo zombi?'
       courseD_maze_until8_2018_authored_hint:
-        courseD_maze_until8_a: Make sure you're using an `if/else` block to keep the
-          zombie headed the right direction.
-        courseD_maze_until8_b: 'With your `if/else` block: if there is a path ahead,
-          what should you do?'
-        courseD_maze_until8_c: 'With your `if/else` block: if there is not a path
-          ahead, which way should you turn?'
+        courseD_maze_until8_a: Assicurati di usare il blocco `se/altrimenti` per far
+          mantenere allo zombi la direzione corretta.
+        courseD_maze_until8_b: 'Con il blocco `se/altrimenti`: se c''è strada in avanti,
+          cosa deve fare lo zombi?'
+        courseD_maze_until8_c: 'Con il blocco `se/altrimenti`: se non c''è strada
+          in avanti, da che parte deve girare lo zombi?'
       courseD_maze_until9_authored_hint:
-        courseD_maze_until8_a: Using `if path ahead` will keep you going forward whenever
-          possible, helping you miss the paths with chompers.
-        courseD_maze_until8_b: Which direction should you turn if there is no path
-          forward?
-        courseD_maze_until8_c: Remember to use the `repeat until` block to get you
-          to the sunflower!
+        courseD_maze_until8_a: L'istruzione condizionale `se c'è strada in avanti`
+          ti permetterà di andare avanti quando possibile, aiutandoti a tralasciare
+          i percorsi con le piante carnivore.
+        courseD_maze_until8_b: In quale direzione dovrebbe girare lo zombie se non
+          trova strada in avanti?
+        courseD_maze_until8_c: Ricordati di usare il blocco `ripeti fino a che` per
+          far arrivare lo zombie fino al girasole!
       courseD_maze_until9_2018_authored_hint:
-        courseD_maze_until8_c: Remember to use the `repeat until` block to get you
-          to the sunflower!
+        courseD_maze_until8_c: Ricordati di usare il blocco `ripeti fino a che` per
+          far arrivare lo zombie fino al girasole!
       courseD_maze_until_challenge_authored_hint: {}
       courseD_maze_until_challenge1-delete-this-copy_authored_hint: {}
       courseD_maze_until_challenge1_authored_hint: {}
@@ -10002,8 +10046,8 @@ it:
 
           ![](https://images.code.org/752d82f3afdca0a7d7c01d6fa2abb583-image-1499889821499.2_solution2.gif)
       courseE_artist_ramp11_authored_hint:
-        courseD_artist_ramp11a: Per disegnare un lato, usa il blocco 'vai avanti di
-          100 pixel' e cambia il 100 in 200.
+        courseD_artist_ramp11a: Per disegnare un lato, usa il blocco `vai avanti di
+          100 pixel` e cambia il 100 in 200.
         courseD_artist_ramp11b: |-
           To draw 4 sides, put the `move forward by 100 pixels` block inside of a repeat loop and make sure the loop is set to draw 4 times.
 
@@ -10012,8 +10056,8 @@ it:
         courseD_artist_ramp12_a: Puoi disegnare prima il quadrato e poi il triangolo,
           oppure farlo al contrario!
       courseE_artist_ramp8_authored_hint:
-        courseE_artist_ramp8_a: Per disegnare un lato, usa il blocco 'vai avanti di
-          100 pixel' e cambia il 100 in 200.
+        courseE_artist_ramp8_a: Per disegnare un lato, usa il blocco `vai avanti di
+          100 pixel` e cambia il 100 in 200.
         courseE_artist_ramp8_b: |-
           To draw 4 sides, put the `move forward by 100 pixels` block inside of a repeat loop and make sure the loop is set to draw 4 times.
 
@@ -10021,8 +10065,8 @@ it:
         courseE_artist_ramp8_c: Your loop should have two blocks inside of it, the
           `move forward` and the `turn right by 90 degrees`.
       courseE_artist_ramp8_2_authored_hint:
-        courseE_artist_ramp8_a: Per disegnare un lato, usa il blocco 'vai avanti di
-          100 pixel' e cambia il 100 in 200.
+        courseE_artist_ramp8_a: Per disegnare un lato, usa il blocco `vai avanti di
+          100 pixel` e cambia il 100 in 200.
         courseE_artist_ramp8_b: |-
           To draw 4 sides, put the `move forward by 100 pixels` block inside of a repeat loop and make sure the loop is set to draw 4 times.
 
@@ -10030,8 +10074,8 @@ it:
         courseE_artist_ramp8_c: 'Your loop should have two blocks inside of it: `move
           forward` and `turn right by 90 degrees`.'
       courseE_artist_ramp8_2018_authored_hint:
-        courseE_artist_ramp8_a: Per disegnare un lato, usa il blocco 'vai avanti di
-          100 pixel' e cambia il 100 in 200.
+        courseE_artist_ramp8_a: Per disegnare un lato, usa il blocco `vai avanti di
+          100 pixel` e cambia il 100 in 200.
         courseE_artist_ramp8_b: |-
           To draw 4 sides, put the `move forward by 100 pixels` block inside of a repeat loop and make sure the loop is set to draw 4 times.
 
@@ -10039,8 +10083,8 @@ it:
         courseE_artist_ramp8_c: 'Your loop should have two blocks inside of it: `move
           forward` and `turn right by 90 degrees`.'
       courseE_artist_ramp8_2_2018_authored_hint:
-        courseE_artist_ramp8_a: Per disegnare un lato, usa il blocco 'vai avanti di
-          100 pixel' e cambia il 100 in 200.
+        courseE_artist_ramp8_a: Per disegnare un lato, usa il blocco `vai avanti di
+          100 pixel` e cambia il 100 in 200.
         courseE_artist_ramp8_b: |-
           To draw 4 sides, put the `move forward by 100 pixels` block inside of a repeat loop and make sure the loop is set to draw 4 times.
 
@@ -12403,32 +12447,32 @@ it:
         courseF_bee_conditionals2_b: Try writing the sequence to get you to all of
           the spaces, then add the `if` statement.
       courseF_bee_conditionals3_authored_hint:
-        courseF_bee_conditionals3_a: Be sure to use an `if` statement to check each
-          space to see if it has either a flower or nothing.
+        courseF_bee_conditionals3_a: Assicurati di usare un'istruzione condizionale
+          `se` per verificare in ogni casella se c'è un fiore.
         courseF_bee_conditionals3_b: A `repeat` loop will be useful so you only have
           to use one `if` block.
         courseF_bee_conditionals3_c: Try writing code to check the first cloud. Can
           you loop this to check all of them?
       courseF_bee_conditionals3_2018_authored_hint:
-        courseF_bee_conditionals3_a: Be sure to use an `if` statement to check each
-          space to see if it has either a flower or nothing.
+        courseF_bee_conditionals3_a: Assicurati di usare un'istruzione condizionale
+          `se` per verificare in ogni casella se c'è un fiore.
         courseF_bee_conditionals3_b: A `repeat` loop will be useful so you only have
           to use one `if` block.
         courseF_bee_conditionals3_c: Try writing code to check the first cloud. Can
           you loop this to check all of them?
       courseF_bee_conditionals4_authored_hint:
-        courseD_bee_conditionals4_a: You can still treat every space as if there is
-          a cloud over it, even though you can see the whole path.
-        courseF_bee_conditionals4_b: 'Use an `if` statement inside your loop to check
-          each space for nectar. '
+        courseD_bee_conditionals4_a: Puoi sempre trattare ogni casella come se avesse
+          sopra una nuvola, anche se in questo caso riesci a vedere tutto il percorso.
+        courseF_bee_conditionals4_b: Usa un blocco `se` all'interno del ciclo per
+          controllare la presenza di un fiore in ogni casella.
         courseF_bee_conditionals4_c: Using the block `while there is a path ahead`,
           you should `move forward` and check for a flower. `if there is a flower`
           what should the bee do?
       courseF_bee_conditionals4_2018_authored_hint:
-        courseD_bee_conditionals4_a: You can still treat every space as if there is
-          a cloud over it, even though you can see the whole path.
-        courseF_bee_conditionals4_b: 'Use an `if` statement inside your loop to check
-          each space for nectar. '
+        courseD_bee_conditionals4_a: Puoi sempre trattare ogni casella come se avesse
+          sopra una nuvola, anche se in questo caso riesci a vedere tutto il percorso.
+        courseF_bee_conditionals4_b: Usa un blocco `se` all'interno del ciclo per
+          controllare la presenza di un fiore in ogni casella.
         courseF_bee_conditionals4_c: Using the block `while there is a path ahead`,
           you should `move forward` and check for a flower. `if there is a flower`
           what should the bee do?
@@ -12437,9 +12481,9 @@ it:
           a path by itself. Set up a nested loop with a `repeat` block on the outside
           and a `while there is a path ahead` on the inside. How many paths does the
           bee need to buzz down if the bee needs to buzz every side with a flower?
-        courseF_bee_conditionals5_b: Inside the `while there is a path ahead` block,
-          you will need to move forward and check for a flower. How do you check if
-          there is a flower? What do you do if there is a flower?
+        courseF_bee_conditionals5_b: All'interno del blocco `mentre c'è strada in
+          avanti` devi andare avanti e controllare se c'è un fiore. Come controlli
+          se c'è un fiore? Cosa fai se c'è un fiore?
         courseF_bee_conditionals5_c: There are 3 sides of the rectangle with flowers,
           so the code needs to `repeat 3 times`. In every repeat, the bee will need
           to continue along the path, `while there is a path ahead`. To continue down
@@ -12454,9 +12498,9 @@ it:
           a path by itself. Set up a nested loop with a `repeat` block on the outside
           and a `while there is a path ahead` on the inside. How many paths does the
           bee need to buzz down if the bee needs to buzz every side with a flower?
-        courseF_bee_conditionals5_b: Inside the `while there is a path ahead` block,
-          you will need to move forward and check for a flower. How do you check if
-          there is a flower? What do you do if there is a flower?
+        courseF_bee_conditionals5_b: All'interno del blocco `mentre c'è strada in
+          avanti` devi andare avanti e controllare se c'è un fiore. Come controlli
+          se c'è un fiore? Cosa fai se c'è un fiore?
         courseF_bee_conditionals5_c: 'There are 3 sides of the rectangle with flowers,
           so the code needs to `repeat 3 times`. In every repeat, the bee will need
           to continue along the path, `while there is a path ahead`. '
@@ -12466,23 +12510,23 @@ it:
       courseF_bee_conditionals7_predict2_authored_hint: {}
       courseF_bee_conditionals7_predict2_2018_authored_hint: {}
       courseF_bee_conditionals8_authored_hint:
-        courseF_bee_conditionals8_a: "<b>Attenzione:</b> Ogni volta che esegui il
-          programma cio che è nascosto può cambiare: per risolvere l'esercizio, devi
-          quindi usare il <i>blocco condizionale</i> `se/altrimenti`."
+        courseF_bee_conditionals8_a: "**Attenzione:** Ogni volta che esegui il programma
+          ciò che è nascosto può cambiare: per risolvere l'esercizio, devi quindi
+          usare il blocco condizionale `se/altrimenti`."
         courseF_bee_conditionals8_b: |-
-          This puzzle is tricky, because you can't check blank squares, nectar, *and* honey with just one single conditional.
+          Questo esercizio è un po' complicato, perché non puoi controllare le caselle vuote, i fiori *e* i favi con un unica istruzione condizionale.
 
-          Only check for nectar and honey at the end of your path.
+          Controlla solo se c'è un fiore o un favo alla fine di ogni tratto del percorso (dove vedi le nuvole).
         courseF_bee_conditionals8_c: What happens if you use the `while path ahead`
           block and get the first flower last?
       courseF_bee_conditionals8_2018_authored_hint:
-        courseF_bee_conditionals8_a: "<b>Attenzione:</b> Ogni volta che esegui il
-          programma cio che è nascosto può cambiare: per risolvere l'esercizio, devi
-          quindi usare il <i>blocco condizionale</i> `se/altrimenti`."
+        courseF_bee_conditionals8_a: "**Attenzione:** Ogni volta che esegui il programma
+          ciò che è nascosto può cambiare: per risolvere l'esercizio, devi quindi
+          usare il blocco condizionale `se/altrimenti`."
         courseF_bee_conditionals8_b: |-
-          This puzzle is tricky, because you can't check blank squares, nectar, *and* honey with just one single conditional.
+          Questo esercizio è un po' complicato, perché non puoi controllare le caselle vuote, i fiori *e* i favi con un unica istruzione condizionale.
 
-          Only check for nectar and honey at the end of your path.
+          Controlla solo se c'è un fiore o un favo alla fine di ogni tratto del percorso (dove vedi le nuvole).
         courseF_bee_conditionals8_c: What happens if you skip the first flower, then
           use the `while path ahead` block?
       courseF_bee_for1_authored_hint:
@@ -14682,17 +14726,17 @@ it:
           di vedere quali sono le parti che si ripetono per inserirle nel blocco `ripeti
           ... volte`.
       grade3_ConditionalsElse_4_authored_hint:
-        remember_quantum: "<b>Attenzione:</b> Ogni volta che esegui il programma cio
+        remember_quantum: "**Attenzione:** Ogni volta che esegui il programma ciò
           che è nascosto può cambiare: per risolvere l'esercizio, devi quindi usare
-          il <i>blocco condizionale</i> `se/altrimenti`."
+          il blocco condizionale `se/altrimenti`."
       grade3_ConditionalsElse_5_authored_hint:
-        remember_quantum: "<b>Attenzione:</b> Ogni volta che esegui il programma cio
+        remember_quantum: "**Attenzione:** Ogni volta che esegui il programma ciò
           che è nascosto può cambiare: per risolvere l'esercizio, devi quindi usare
-          il <i>blocco condizionale</i> `se/altrimenti`."
+          il blocco condizionale `se/altrimenti`."
       grade3_ConditionalsElse_TeacherIDo_authored_hint:
-        remember_quantum: "<b>Attenzione:</b> Ogni volta che esegui il programma cio
+        remember_quantum: "**Attenzione:** Ogni volta che esegui il programma ciò
           che è nascosto può cambiare: per risolvere l'esercizio, devi quindi usare
-          il <i>blocco condizionale</i> `se/altrimenti`."
+          il blocco condizionale `se/altrimenti`."
       grade3_Conditionals_10 BAD_authored_hint:
         4-5_Bee_Nested_Loops_Rows_a: Considera che l'ape deve percorrere un lungo
           rettangolo, girando a sinistra al termine di ogni lato.
@@ -14816,10 +14860,10 @@ it:
         2-3_Bee_Loops_3_a: Dovresti avere sei blocchi all'interno del <i>cilco</i>
           `ripeti ... volte`.
       grade3_RunningFarm_1_authored_hint:
-        grade3_RunningFarm_1_a: You will need to look for corn 5 times, using a repeat
-          loop.
-        grade3_RunningFarm_1_b: Make sure to use an `if at corn` block or you might
-          try to pick something that's not there!
+        grade3_RunningFarm_1_a: Saranno necessari 5 controlli, usa un ciclo `ripeti
+          ... volte`.
+        grade3_RunningFarm_1_b: Se non usi un blocco 'se c'è una pannocchia' rischi
+          di tentare di raccogliere qualcosa che non c'è!
       grade3_RunningFarm_10_authored_hint:
         grade3_RunningFarm_10_a: This puzzle uses almost the exact same code as the
           last level, except you only need to repeat 4 times.
@@ -14827,22 +14871,22 @@ it:
         grade3_RunningFarm_11a_a: You shouldn't need the `while path ahead` loop this
           time.
       grade3_RunningFarm_2_authored_hint:
-        grade3_RunningFarm_2_a: 'The best way to do this is to nest `if` statements
-          by placing one inside of the other.  '
-        grade3_RunningFarm_2_b: For this puzzle, you should have one `if/else` statement
-          and one plain `if` statement.
+        grade3_RunningFarm_2_a: Il modo migliore per risolvere questo esercizio, è
+          di annidare le istruzioni `se` una dentro l'altra.
+        grade3_RunningFarm_2_b: In questo esercizio, dovresti usare un'istruzione
+          `se/altrimenti` e una semplice istruzione `se`.
       grade3_RunningFarm_3_authored_hint:
         grade3_RunningFarm_3_a: |-
-          To get all of the items, try nesting `if` statements three deep.
+          Per raccogliere tutto, prova ad annidare su tre livelli le istruzioni `se`.
 
-          This means you should put one `if` statement inside of another, then put a third `if` statement inside the second one.
-        grade3_RunningFarm_3_b: For this puzzle, you should have two `if/else` statements
-          and one plain `if` statement.
+          Questo significa che devi mettere un'istruzione `se` all'interno un'altra e poi mettere una terza istruzione `se` all'interno della seconda.
+        grade3_RunningFarm_3_b: In questo esercizio, dovresti usare due istruzioni
+          `se/altrimenti` e una semplice istruzione `se`.
       grade3_RunningFarm_4_authored_hint:
         grade3_RunningFarm_4_a: |-
-          No one knows how many heads of lettuce will grow from each sprout.
+          Nessuno sa quanti cespi di lattuga crescono da ogni pianta.
 
-          Use a `while there is lettuce` loop to keep picking until each piece has been gathered.
+          Usa il ciclo `mentre c'è la lattuga` per continuare a raccogliere mentre ci sono ancora cespi disponibili.
       grade3_RunningFarm_5_authored_hint:
         grade3_RunningFarm_5_a: You will need to check for each type of crop that
           the farmer can pick.  Try using two `if/else` statements and one  `if` block.
@@ -14853,7 +14897,7 @@ it:
           harvest.  Just pick one pumpkin at the very end of your program.
       grade3_RunningFarm_7_authored_hint:
         grade3_RunningFarm_7_a: |-
-          Notice that the easiest path to get to all of the crops is still a spiral.
+          Nota che il percorso più facile per raggiungere tutte le colture è ancora una spirale.
 
           ![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)
         grade3_RunningFarm_7_b: Try using `when path ahead` to keep the farmer moving
@@ -14868,8 +14912,9 @@ it:
         grade3_bee_conditionals_new1a_a: Be sure to use an `if` statement to check
           each space to see if it has a flower or nothing.
       grade3_bee_conditionals_new2a_authored_hint:
-        grade3_bee_conditionals_new2a_a: You can still treat every space as if there
-          is a cloud over it, even though you can see the whole path.
+        grade3_bee_conditionals_new2a_a: Puoi sempre trattare ogni casella come se
+          avesse sopra una nuvola, anche se in questo caso riesci a vedere tutto il
+          percorso.
         grade3_bee_conditionals_new2a_b: 'Use an `if` statement inside your loop to
           check each space. '
       grade3_bee_conditionals_new3a_authored_hint:
@@ -14885,15 +14930,16 @@ it:
           no. Se vuoi che il tuo programma funzioni in entrambi i casi, assicurati
           di usare un blocco `se`.
       grade3_bee_conditionals_quantum3_authored_hint:
-        grade3_bee_conditionals_quantum3: Make sure to use an `if` statement to check
-          for honeycomb beneath each cloud.
+        grade3_bee_conditionals_quantum3: Assicurati di usare un'istruzione condizionale
+          `se` per verificare sotto ogni nuvola se c'è un favo.
       grade3_bee_conditionals_quantum4_authored_hint:
-        remember_quantum: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll
-          want to use a conditional block (`if/else`) to solve the challenge."
+        remember_quantum: "**Ricorda:** Ogni volta che esegui il programma ciò che
+          è nascosto può cambiare: per risolvere l'esercizio, devi quindi usare il
+          blocco condizionale `se/altrimenti`."
       grade3_bee_conditionals_quantum5_authored_hint:
-        remember_quantum: "<b>Attenzione:</b> Ogni volta che esegui il programma cio
+        remember_quantum: "**Attenzione:** Ogni volta che esegui il programma ciò
           che è nascosto può cambiare: per risolvere l'esercizio, devi quindi usare
-          il <i>blocco condizionale</i> `se/altrimenti`."
+          il blocco condizionale `se/altrimenti`."
         grade3_bee_conditionals_quantum5_a: This puzzle is tricky, because you can't
           check blank squares, nectar *and* honey with a single conditional.
       grade3_maze_loops1_authored_hint:
@@ -14944,7 +14990,7 @@ it:
           ciclo `mentre`.
         grade3_robotFarmer_ConditionalsIntro_9_b: Ogni buca è alla fine di un tratto
           di percorso, quindi usa il blocco `mentre c'è strada in avanti` prima di
-          usare il ciclo 'mentre c'è una buca'.
+          usare il ciclo `mentre c'è una buca`.
         grade3_robotFarmer_ConditionalsIntro_9_c: Nota che devi ripetere sei volte
           la sequenza `mentre c'è strada in avanti` + `quando c'è una buca`.
       grade4_arist_nested_loop_polygons1_authored_hint:
@@ -15085,13 +15131,13 @@ it:
         grade4_bee_conditionals_new3b_a: An `if/else` statement could really help
           you out here.
       grade4_bee_conditionals_quantum4_authored_hint:
-        remember_quantum: "<b>Attenzione:</b> Ogni volta che esegui il programma cio
+        remember_quantum: "**Attenzione:** Ogni volta che esegui il programma ciò
           che è nascosto può cambiare: per risolvere l'esercizio, devi quindi usare
-          il <i>blocco condizionale</i> `se/altrimenti`."
+          il blocco condizionale `se/altrimenti`."
       grade4_bee_conditionals_quantum5_authored_hint:
-        remember_quantum: "<b>Attenzione:</b> Ogni volta che esegui il programma cio
+        remember_quantum: "**Attenzione:** Ogni volta che esegui il programma ciò
           che è nascosto può cambiare: per risolvere l'esercizio, devi quindi usare
-          il <i>blocco condizionale</i> `se/altrimenti`."
+          il blocco condizionale `se/altrimenti`."
       grade4_bee_functions1_authored_hint:
         grade4_bee_functions1_a: There is more than one right answer to this puzzle.
       grade4_bee_functions10_authored_hint:

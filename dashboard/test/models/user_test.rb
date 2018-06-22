@@ -412,20 +412,6 @@ class UserTest < ActiveSupport::TestCase
     # this used to raise a mysql error, now we sanitize it into a nonsense string
   end
 
-  test "find_for_authentication finds migrated multi-auth email user first" do
-    email = 'test@foo.bar'
-    migrated_student = create(:student, :with_email_authentication_option, :multi_auth_migrated, email: email)
-    migrated_student.primary_authentication_option.update(authentication_id: User.hash_email(email))
-    legacy_student = build(:student, email: email)
-    # skip duplicate email validation
-    legacy_student.save(validate: false)
-
-    looked_up_user = User.find_for_authentication(hashed_email: User.hash_email(email))
-
-    assert_equal legacy_student.hashed_email, migrated_student.hashed_email
-    assert_equal migrated_student, looked_up_user
-  end
-
   test "creating manual provider user without username generates username" do
     user = User.create(@good_data.merge({provider: User::PROVIDER_MANUAL}))
     assert_equal 'tester', user.username

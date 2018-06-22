@@ -99,14 +99,14 @@ it:
     facebook: Facebook
     windowslive: Account Microsoft
     clever: Account Clever
-    powerschool: Powerschool Account
+    powerschool: Account Powerschool
     forgot_password: Hai dimenticato la tua password?
     need_confirmation: Non hai ricevuto le istruzioni di conferma?
     need_unlock: Non hai ricevuto le istruzioni di sblocco?
     not_linked: Purtroppo il tuo account Code.org non è collegato al tuo %{provider}.
       Dovrai accedere digitando la password qui sotto.
-    use_clever: Sorry, your Code.org account is not linked to your %{provider}. Please
-      sign in through your Clever Portal instead.
+    use_clever: Purtroppo il tuo account Code.org non è collegato al tuo %{provider}.
+      Per favore, accedi dal portale Clever.
   signup_form:
     student_count: "%{count} studenti si sono già iscritti."
     teacher_count: "%{count} insegnanti si sono già iscritti."
@@ -228,7 +228,7 @@ it:
       email: Indirizzo di posta elettronica
       submit: Invia
     reset_errors:
-      captcha_required: Please fill out the CAPTCHA to reset your password.
+      captcha_required: Completa il CAPTCHA per impostare una nuova password.
       invalid_email: Sembra tu ti sia loggato con un indirizzo email non valido. Invia
         una mail a support@code.org per ricevere il link per il recupero della password.
     change_form:
@@ -413,6 +413,7 @@ it:
       non è stato confermato:'
     email_confirm_wrong_email: "(Indirizzo di posta elettronica sbagliato?)"
     email_resend_confirm: Reinvia le istruzioni di conferma
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(lascialo vuoto se non vuoi cambiarlo)"
     current_password_hint: "(inserisci la tua password corrente per confermare i cambiamenti)"
     delete: Elimina il tuo account
@@ -595,19 +596,23 @@ it:
       10-20 secondi su Twitter, Instagram, o Facebook dicendo "Sto sostenendo l''esame
       di #PrincipiDiInformatica perché...". I migliori compariranno nel nostro video
       e gli studenti vincitori riceveranno il premio Code.org!'
-    announcement_apcsp_recruitment2: This year's AP CS Principles exam is poised to
-      break records. Student participation in the exam could dramatically shift diversity
-      in AP Computer Science, but we need your help. Encourage every CS Principles
-      student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send
-      you a gift</a>. Students can also encourage peers across the country in our
-      <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>.
-    announcement_apcsp_recruitment3: This year's AP CS Principles exam is poised to
-      break records. Student participation in the exam could dramatically shift diversity
-      in AP Computer Science, but we need your help. Encourage every CS Principles
-      student to take the AP CSP exam and you could win <a href='%{gift_url}' target='_blank'>a
-      gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this
-      video</a> so your students can hear from their peers around the country who
-      are taking the exam.
+    announcement_apcsp_recruitment2: Quest'anno si aspettano numeri da record all'esame
+      avanzato (AP) di Principi d'Informatica. La partecipazione di studenti all'esame
+      potrebbe cambiare drasticamente la diversità nei corsi di informatica avanzata,
+      ma abbiamo bisogno del tuo aiuto. Per favore, incoraggia tutti gli studenti
+      di Principi d'Informatica a sostenere l'esame. Per ringraziarti, ti <a href='%{gift_url}'
+      target='_blank'>manderemo un regalo</a>. Gli studenti possono anche incoraggiare
+      i compagni in tutto il Paese con la nostra <a href='%{challenge_url}' target='_blank'>#APCSP
+      video sfida</a>.
+    announcement_apcsp_recruitment3: Quest'anno si aspettano numeri da record all'esame
+      avanzato (AP) di Principi d'Informatica. La partecipazione di studenti all'esame
+      potrebbe cambiare drasticamente la diversità nei corsi di informatica avanzata,
+      ma abbiamo bisogno del tuo aiuto. Per favore, incoraggia tutti gli studenti
+      di Principi d'Informatica a sostenere l'esame e potresti vincere <a href='%{gift_url}'
+      target='_blank'>una carta regalo, un laptop, o un altro bel regalo</a>! Condividi
+      <a href='%{video_url}' target='_blank'>questo video</a> acciocché i tuoi studenti
+      possano sentire l'incoraggiamento di altri studenti in tutto il Paese già iscritti
+      all'esame.
     announcement_csp_deadline: Richiamo finale per gli insegnanti di scuola superiore!
       Prendi il comando dell'Informatica nella tua scuola e metti in pratica i nostri
       programmi di apprendimento professionali e di alta qualità <strong>senza assolutamente
@@ -1204,7 +1209,7 @@ it:
     csp_ap_1: 'Capitolo 1: Installazione di AP Tech'
     csp_ap_2: 'Capitolo 2: AP analizzare il Task Performance'
     csp_ap_3: 'Capitolo 3: AP creare il Task Performance'
-    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_1: 'Capitolo 1: Manipolare e visualizzare dati'
     csp_postap_2: 'Chapter 2: Apps and Databases'
     csp2_1_2018: 'Unità 2: Informazioni digitali'
     csp3_1_2018: 'Unit 3: Intro to Programming'

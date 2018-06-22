@@ -539,6 +539,21 @@ hy:
         should do - you can come back to watch this as many times as you need to get
         it right.\n<img src=\"https://images.code.org/1cdc8cfbcef2a43f84b11ebdf14aed0c-image-1444061731350.gif\"
         style=\"border: solid 1px black; width: 500px; margin: auto\">"
+      AllTheThings Applab DesignModeDefault_markdown_instruction: "<img src=\"https://images.code.org/117a2a8e098760173f16048fde721295-image-1479829058899.gif\"
+        style=\"float: right; width: 150px\">\n## You try it -- Text Password Checker\n\n**Key
+        idea**: You can use `==` to compare strings as well as numbers.  \n\n* Let's
+        use an if-statement in an event handler to compare text that a user inputs
+        in a UI element.\n\n**The setup:**\n* Note the setup in Design Mode\n* There
+        are two images: a red lock, and a green \"unlock\".\n* The green \"unlock\"
+        is *hidden* at the start.\n\n## Do this:\n\n**Add an if-statement to the event
+        handler to check the password and display the \"unlock\" only if the password
+        is correct** \n\n* You can use `==` to compare the text you get from the *password_input*
+        text box and a string you want to use as the password. The boolean expression
+        you should use should look like this:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n*
+        If the user entered the correct password then **show** the green \"unlock\"
+        and **hide** the red lock.\n\\t* We've provide the code to hide and show the
+        images. You just need to add the if-statement.\n* Otherwise do nothing.  They
+        can try again.\n\n"
       'AllTheThings: Pixelation - Lesson 14 - Make the Letter A_markdown_instruction': "<img
         align=\"right\" src=\"https://code.org/images/cspunit1/letterA.png\" width=\"150\"
         hspace=\"20\">\n            # Task 1: Make a 3x5 letter 'A'\n            Start
@@ -5859,7 +5874,7 @@ hy:
         * Inside the `if` add two statements.
         \t* One that sets the `visible` property to hide the balloon sprite.
             * One that sets the `visible` property to show the pop sprite.
-      CSD U3 - conditionals - first conditional 2_2018_markdown_instruction: |-
+      CSD U3 - conditionals - first conditional 2_2018_markdown_instruction: |
         <img src="https://images.code.org/abd459d8d1477ac2f582417f4334cdaa-image-1466107090414.gif" style="width:200px;float:right">
         # Visible
 
@@ -8178,6 +8193,10 @@ hy:
         * If necessary, use the `World.frameRate` block to slow down the animation and find the best frame rate.
 
         _Challenge: **Add 3 more bees** that follow the mouse in the same way to make a swarm of bees._
+      CSD U3 Movement Fish challenge_2018_markdown_instruction: |-
+        # More fish!
+
+        This time, try updating the the rotation of each fish as it moves to make it look even more like it is swimming.  You can also try adding extra features, such as bubbles that rise up through the water.
       CSD U3 Movement Fish_markdown_instruction: |-
         <img src="https://images.code.org/7852ab38a8222ee827edeff2767e8efd-image-1492037897236.gif" style="float: right; margin-left: 20px;">
 
@@ -15804,6 +15823,10 @@ hy:
         * Use either a `console.log()` command or a watcher to report the value of `player_y`
         * Play the game with only one button, keeping an eye on the value of `player_y`
         * Decide what value of `player_y` should be considered the bottom of the screen
+      CSD sprite movement challenge_2018_markdown_instruction: |-
+        # Improve your animation
+
+        Make your animation even better by changing more sprite properties, or by adding even more sprites!
       CSD-Arrays_markdown_instruction: "Today you’re going to learn how to use and
         create **functions**.\n\nCreating a function lets you make your own blocks!
         There are two parts to a function: \n\nMaking a newly named block that has
@@ -19627,7 +19650,7 @@ hy:
 
         * Use the `buzzer.playSong` block to make a different song.
         * When you get comfortable with the structure, add more notes to the song.
-      CSDU6 buzzer 2d arrays_2018_markdown_instruction: |-
+      CSDU6 buzzer 2d arrays_2018_markdown_instruction: |
         # Challenge: 2D Arrays
 
         Arrays can hold all sorts of data, like numbers, strings, and even other arrays. When we put an array inside another, this becomes a 2D array. The `buzzer.playSong()` block can be used to play songs that sound more precise with 2D arrays.
@@ -28332,18 +28355,36 @@ hy:
         her?"
       Dance Party 1_markdown_instruction: "**Make a prediction:** Here’s a sprite
         called `alien1`! What do you think will happen when you click on her?"
+      Dance Party 2 Validated_markdown_instruction: The alien was proud of her dancing
+        skills on Mars, but now she can only move side-to-side. Can you change the
+        behavior inside the `begins` block to make her start spinning around?
       Dance Party 2_markdown_instruction: The alien was proud of her dancing skills
         on Mars, but now she can only move up and down. Can you change the behavior
         inside the `begins` block to make her start spinning around?
+      Dance Party 3 - Validated_markdown_instruction: "Create a new sprite called
+        `alien2`.  \n\nMake it do a different dance move when it's clicked.  "
       Dance Party 3_markdown_instruction: Create a new sprite called `alien2`, and
         make it do a different dance move when it's clicked.
+      Dance Party 4 Validated_markdown_instruction: "Create a third sprite called
+        `alien3`.  \n\nCan you set all of your aliens to stand in a straight line?
+        It's an alien dance crew!"
       Dance Party 4_markdown_instruction: Create a third sprite called `alien3`, and
         make sure they're standing in a line. It's an alien dance crew!
+      Dance Party 5 - Validated_markdown_instruction: "We can change all kinds of
+        things in this program when you click on the sprites.  Let’s change their
+        color!  \n\n**Add code to change the color of each alien when it gets clicked.**\n\n---\n"
       Dance Party 5_markdown_instruction: We can change all kinds of things in this
         program when you click on the sprites.  Let’s change their color!  **Add code
         to change the color of each alien when it gets clicked.**
+      Dance Party 6 - Validated_markdown_instruction: "These aliens are running wild!
+        \ \n\nUse the <xml><block type=\"gamelab_removeAllBehaviors\" inline=\"true\">\n
+        \     <value name=\"SPRITE\"/>\n    </block></xml> block to make each alien
+        stop moving when it is clicked.  \n    \n---\n"
       Dance Party 6_markdown_instruction: These aliens are running wild! Use the `stops
         everything` block to make each alien stop moving when it is clicked.
+      Dance Party 7 - Validated_markdown_instruction: "Finally, add a new bell sprite
+        called `myBell`.  \n\nWhen you click on it, make all the aliens start doing
+        the same dance move!  \n\n---\n"
       Dance Party 7_markdown_instruction: Finally, add a new bell sprite called `myBell`.
         When you click on it, make all the aliens start doing the same dance move.
       Dance Party Freeplay_markdown_instruction: |-
@@ -29244,6 +29285,10 @@ hy:
         , **beans** ![picture of beans](https://images.code.org/5e379ff595be17722237d9685b29fd96-image-1472493220871.png)
         , or **pumpkins** ![picture of pumpkin](https://images.code.org/03cf76a978e0788ccb53f14e9d264695-image-1472493237148.png)
         . Can you write some code to pick all the crops, no matter what they are?
+      HoCAB_labyrinth1_markdown_instruction: "Use the blocks to solve this maze!\n\n<xml><block
+        type=\"simple_move_down\"/></xml><xml><block type=\"simple_move_up\"/></xml><xml><block
+        type=\"simple_move_right\"/></xml><xml><block type=\"simple_move_left\"/></xml>
+        \  \n\n---"
       'How to: Setup your Class Data Tracker_markdown_instruction': "## Setting up
         your copy of the Class Data Tracker\n\nThe second chapter of unit 2 dives
         into data collection, analysis, and visualization. Starting in lesson 7 you
@@ -44555,6 +44600,7 @@ hy:
       U4L01 Free Response_markdown_instruction: 'This is the free response question
         text.  '
       U4L02 - Objects - Template1_markdown_instruction: "# Template"
+      U4L02 - Objects - Template1_2018_markdown_instruction: "# Template"
       U4L02 - Objects - createObject_markdown_instruction: |-
         # Creating Your Own Objects
 
@@ -48135,6 +48181,8 @@ hy:
       courseA_maze_ramp3a_2018_markdown_instruction: Grab a <xml><block type="maze_moveNorth"/></xml>
         from the toolbox and add it to the bottom of the other blocks to finish this
         code, then click ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).
+      courseA_maze_ramp3b_2018_markdown_instruction: "There's an extra block at the
+        end of this code!  \n\nDrag it back to the toolbox to throw it away."
       courseA_maze_ramp4_2018_markdown_instruction: "*\"Trace the path and lead me
         to the silly pig.\"* \n\nAvoid TNT or feathers will fly!"
       courseA_maze_ramp4a_2018_markdown_instruction: Can you figure out which block
@@ -48301,6 +48349,10 @@ hy:
       courseB_Scrat_ramp3a_2018_markdown_instruction: Grab a <xml><block type="maze_moveNorth"/></xml>
         from the toolbox and add it to the bottom of the other blocks to finish this
         code, then click ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).
+      courseB_Scrat_ramp3b_2018_markdown_instruction: |-
+        There's an extra block at the end of this code!
+
+        Drag it back to the toolbox to throw it away.
       courseB_Scrat_ramp4a_2018_markdown_instruction: Can you figure out which block
         you need to add to the bottom of the other blocks to finish this code?
       courseB_Scrat_ramp5a_2018_markdown_instruction: Try this one all by yourself!

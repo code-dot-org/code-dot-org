@@ -328,17 +328,6 @@ FactoryGirl.define do
       end
     end
 
-    trait :multi_auth_migrated do
-      after(:create) do |user|
-        user.update_attributes(
-          provider: 'migrated',
-          uid: '',
-          email: '',
-          hashed_email: ''
-        )
-      end
-    end
-
     trait :with_puzzles do
       transient do
         num_puzzles 1
