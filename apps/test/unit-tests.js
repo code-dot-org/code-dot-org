@@ -28,6 +28,7 @@ describe('unit tests', function () {
   clearTimeoutsBetweenTests();
   // Uncomment and import this line to perform additional test cleanup validation.
   // In the long term, this should be permanently enabled or removed.
-  // enforceDocumentBodyCleanup({checkEveryTest: true});
+  // enforceDocumentBodyCleanup({checkEveryTest: true}, () => {
   runnable.forEach(testsContext);
+  // });
 });

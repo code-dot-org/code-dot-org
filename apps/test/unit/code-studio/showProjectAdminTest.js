@@ -5,9 +5,7 @@ import showProjectAdmin from '@cdo/apps/code-studio/showProjectAdmin';
 import {enforceDocumentBodyCleanup, replaceOnWindow, restoreOnWindow} from "../../util/testUtils";
 
 describe('showProjectAdmin', () => {
-  enforceDocumentBodyCleanup({checkEveryTest: true});
-
-  describe('' /* Wrapper describe allows testing cleanup properly */, () => {
+  enforceDocumentBodyCleanup({checkEveryTest: true}, () => {
     let rootElement, dashboard;
 
     beforeEach(() => {
