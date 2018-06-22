@@ -159,7 +159,7 @@ module Pd
         forms = CDO.jotform_forms[category]
 
         # Fail for no form_id value, even if the name key is present
-        raise KeyError, "Mising jotform form: #{category}.#{name}" unless forms[name]
+        raise KeyError, "Mising jotform form: #{category}.#{name}" unless forms[name].present?
         forms[name].to_i
       end
     end
