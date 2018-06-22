@@ -26,6 +26,10 @@ const styles = {
     margin: '1em 0',
     fontSize: '16px',
     lineHeight: '20px'
+  },
+  buttonRow: {
+    display: 'flex',
+    flexFlow: 'row',
   }
 };
 
@@ -134,6 +138,26 @@ export default class AssetManager extends React.Component {
       </span>
     </div>);
 
+    const recordButton = (<div>
+      <button
+        onClick={()=>{}}
+        className="share"
+        id="record-asset"
+        disabled={!this.props.uploadsEnabled}
+      >
+        <i className="fa fa-microphone" />
+        &nbsp;Record Audio
+      </button>
+      </div>
+    );
+
+    const buttons = (
+      <span style={styles.buttonRow}>
+        {uploadButton}
+        {recordButton}
+      </span>
+    );
+
     let assetList;
     // If `this.state.assets` is null, the asset list is still loading. If it's
     // empty, the asset list has loaded and there are no assets in the current
@@ -156,7 +180,7 @@ export default class AssetManager extends React.Component {
           <div style={styles.emptyText}>
             {emptyText}
           </div>
-          {uploadButton}
+          {buttons}
         </div>
       );
     } else {
@@ -187,7 +211,7 @@ export default class AssetManager extends React.Component {
               </tbody>
             </table>
           </div>
-          {uploadButton}
+          {buttons}
         </div>
       );
     }
