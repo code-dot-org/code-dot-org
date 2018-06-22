@@ -50,6 +50,12 @@ const answerColumnsFormatter = (percentAnswered, {rowData, columnIndex, rowIndex
   );
 };
 
+const questionFormatter = (question, {rowData, columnIndex, rowIndex, property}) => {
+  return (
+    <div>{`${rowData.questionNumber}. ${question}`}</div>
+  );
+};
+
 const answerDataPropType = PropTypes.shape({
   multipleChoiceOption: PropTypes.string,
   percentAnswered: PropTypes.number,
@@ -150,6 +156,7 @@ class MultipleChoiceSurveyOverviewTable extends Component {
         transforms: [sortable],
       },
       cell: {
+        format: questionFormatter,
         props: {
           style: {
             ...tableLayoutStyles.cell,
