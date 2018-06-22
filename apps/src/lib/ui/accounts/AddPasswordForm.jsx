@@ -19,12 +19,13 @@ const styles = {
   buttonContainer: {
     display: 'flex',
     alignItems: 'center',
+    justifyContent: 'flex-end',
   },
   button: {
     margin: 0
   },
   statusText: {
-    paddingLeft: 10,
+    paddingRight: 10,
     fontStyle: 'italic',
   },
 };
@@ -118,16 +119,6 @@ export default class AddPasswordForm extends React.Component {
           onChange={this.onPasswordConfirmationChange}
         />
         <div style={styles.buttonContainer}>
-          {/* This button intentionally uses Bootstrap classes to match other account page buttons */}
-          <button
-            className="btn btn-primary"
-            style={styles.button}
-            onClick={this.handleSubmit}
-            disabled={!this.isFormValid()}
-            tabIndex="1"
-          >
-            {i18n.createPassword()}
-          </button>
           {/* TODO: style error state with red text */}
           <div
             id="uitest-add-password-status"
@@ -135,6 +126,16 @@ export default class AddPasswordForm extends React.Component {
           >
             {this.state.submissionState}
           </div>
+          {/* This button intentionally uses Bootstrap classes to match other account page buttons */}
+          <button
+            className="btn"
+            style={styles.button}
+            onClick={this.handleSubmit}
+            disabled={!this.isFormValid()}
+            tabIndex="1"
+          >
+            {i18n.createPassword()}
+          </button>
         </div>
       </div>
     );
