@@ -51,7 +51,7 @@ def main(options)
   open_log_files
   report_tests_starting
 
-  run_results = Parallel.map(browser_feature_generator, in_processes: options.parallel_limit) do |browser, feature|
+  run_results = Parallel.map(browser_feature_generator, in_processes: $browsers.count) do |browser, feature|
     run_feature browser, feature, options
   end
 
@@ -70,7 +70,6 @@ def parse_options
     options.config = nil
     options.local = nil
     options.html = nil
-    options.maximize = nil
 
     # start supporting some basic command line filtering of which browsers we run against
     opt_parser = OptionParser.new do |opts|
@@ -84,32 +83,8 @@ def parse_options
       opts.on("-l", "--local", "Use local domains. Also use local webdriver (not Saucelabs) unless -c is specified.") do
         options.local = 'true'
       end
-      opts.on("-r", "--real_mobile_browser", "Use real mobile browser, not emulator") do
-        options.realmobile = 'true'
-      end
-      opts.on("-m", "--maximize", "Maximize local webdriver window on startup") do
-        options.maximize = true
-      end
       opts.on("--html", "Use html reporter") do
         options.html = true
-      end
-      opts.on("-a", "--auto_retry", "Retry tests that fail once") do
-        options.auto_retry = true
-      end
-      opts.on("--retry_count TimesToRetry", String, "Retry tests that fail a given # of times") do |times_to_retry|
-        options.retry_count = times_to_retry.to_i
-      end
-      opts.on("--magic_retry", "Magically retry tests based on how flaky they are") do
-        options.magic_retry = true
-      end
-      opts.on("-n", "--parallel ParallelLimit", String, "Maximum number of browsers to run in parallel (default is 1)") do |p|
-        options.parallel_limit = p.to_i
-      end
-      opts.on("--fail_fast", "Fail a feature as soon as a scenario fails") do
-        options.fail_fast = true
-      end
-      opts.on('--output-synopsis', 'Print a synopsis of failing scenarios') do
-        options.output_synopsis = true
       end
       opts.on_tail("-h", "--help", "Show this message") do
         puts opts
@@ -207,7 +182,7 @@ def browser_features
 end
 
 def report_tests_starting
-  puts "Starting #{browser_features.count} tests in #{$options.parallel_limit} threads..."
+  puts "Starting #{browser_features.count} tests in #{$browsers.count} processes..."
 end
 
 def report_tests_finished(start_time, run_results)
@@ -276,30 +251,6 @@ def first_selenium_error(filename)
   full_error ? full_error.strip.split("\n").first : 'no selenium error found'
 end
 
-# return all text after "Failing Scenarios"
-def output_synopsis(output_text, log_prefix)
-  # example output:
-  # ["    And I press \"resetButton\"                                                                                                                                    # step_definitions/steps.rb:63\n",
-  #  "    Then element \"#runButton\" is visible                                                                                                                         # step_definitions/steps.rb:124\n",
-  #  "    And element \"#resetButton\" is hidden                                                                                                                         # step_definitions/steps.rb:130\n",
-  #  "\n",
-  #  "Failing Scenarios:\n",
-  #  "cucumber features/artist.feature:11 # Scenario: Loading the first level\n",
-  #  "\n",
-  #  "3 scenarios (1 failed, 2 skipped)\n",
-  #  "41 steps (1 failed, 38 skipped, 2 passed)\n",
-  #  "0m1.548s\n"]
-
-  lines = output_text.lines
-
-  failing_scenarios = lines.rindex("Failing Scenarios:\n")
-  if failing_scenarios
-    return lines[failing_scenarios..-1].map {|line| "#{log_prefix}#{line}"}.join
-  else
-    return lines.last(3).map {|line| "#{log_prefix}#{line}"}.join
-  end
-end
-
 def html_output_filename(test_run_string, options)
   if options.html
     "#{LOCAL_LOG_DIRECTORY}/#{test_run_string}_output.html"
@@ -325,9 +276,7 @@ def run_feature(browser, feature, options)
 
   run_environment['BS_ROTATABLE'] = browser['rotatable'] ? "true" : "false"
   run_environment['TEST_LOCAL'] = options.local ? "true" : "false"
-  run_environment['MAXIMIZE_LOCAL'] = options.maximize ? "true" : "false"
   run_environment['MOBILE'] = browser['mobile'] ? "true" : "false"
-  run_environment['FAIL_FAST'] = options.fail_fast ? "true" : nil
   run_environment['TEST_RUN_NAME'] = test_run_string
 
   html_log = html_output_filename(test_run_string, options)
@@ -361,11 +310,10 @@ def run_feature(browser, feature, options)
   end
 
   unless feature_succeeded
-    ChatClient.log "#{test_run_string} first selenium error: #{first_selenium_error(html_log)}" if options.html
-    ChatClient.log output_synopsis(output_stdout, log_prefix), {wrap_with_tag: 'pre'} if options.output_synopsis
-    ChatClient.log prefix_string(output_stderr, log_prefix), {wrap_with_tag: 'pre'}
+    puts "#{test_run_string} first selenium error: #{first_selenium_error(html_log)}" if options.html
+    puts prefix_string(output_stderr, log_prefix), {wrap_with_tag: 'pre'}
     message = "#{log_prefix} tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info})"
-    ChatClient.log message, color: 'red'
+    puts message, color: 'red'
   end
   result_string =
     if scenario_count == 0
