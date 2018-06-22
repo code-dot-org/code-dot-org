@@ -12,6 +12,7 @@ module UserMultiAuthHelper
         powerschool
         sponsored
         the_school_project
+        twitter
         windowslive
       ).include?(provider)
 
