@@ -500,18 +500,18 @@ it:
         mc_2017_puzzle_12: Minecraft Hour of Code - Freeplay
         hint_videos_d_11_3_first: 'Video suggerimenti: D.11.3 Prima di tutto'
         hint_videos_d_11_3_last: 'Video suggerimenti: D.11.3 Infine'
-        hint_videos_d_11_4_first: 'Hint Videos: D.11.4 First'
-        hint_videos_d_11_4_last: 'Hint Videos: D.11.4 Last'
-        hint_videos_d_11_5_first: 'Hint Videos: D.11.5 First'
-        hint_videos_d_11_5_last: 'Hint Videos: D.11.5 Last'
-        hint_videos_d_11_6_first: 'Hint Videos: D.11.6 First'
-        hint_videos_d_11_6_last: 'Hint Videos: D.11.6 Last'
-        hint_videos_d_11_7_first: 'Hint Videos: D.11.7 First'
-        hint_videos_d_11_7_last: 'Hint Videos: D.11.7 Last'
-        hint_videos_d_11_9_first: 'Hint Videos: D.11.9 First'
-        hint_videos_d_11_9_last: 'Hint Videos: D.11.9 Last'
-        hint_videos_d_11_11_first: 'Hint Videos: D.11.11 First'
-        hint_videos_d_11_11_last: 'Hint Videos: D.11.11 Last'
+        hint_videos_d_11_4_first: 'Video suggerimenti: D.11.4 Prima di tutto'
+        hint_videos_d_11_4_last: 'Video suggerimenti: D.11.4 Infine'
+        hint_videos_d_11_5_first: 'Video suggerimenti: D.11.5 Prima di tutto'
+        hint_videos_d_11_5_last: 'Video suggerimenti: D.11.5 Infine'
+        hint_videos_d_11_6_first: 'Video suggerimenti: D.11.6 Prima di tutto'
+        hint_videos_d_11_6_last: 'Video suggerimenti: D.11.6 Infine'
+        hint_videos_d_11_7_first: 'Video suggerimenti: D.11.7 Prima di tutto'
+        hint_videos_d_11_7_last: 'Video suggerimenti: D.11.7 Infine'
+        hint_videos_d_11_9_first: 'Video suggerimenti: D.11.9 Prima di tutto'
+        hint_videos_d_11_9_last: 'Video suggerimenti: D.11.9 Infine'
+        hint_videos_d_11_11_first: 'Video suggerimenti: D.11.11 Prima di tutto'
+        hint_videos_d_11_11_last: 'Video suggerimenti: D.11.11 Infine'
         applab_intro_welcome: Sviluppo App - Per cominciare
         applab_intro_events: Sviluppo App - Rendila interattiva
         applab_intro_sounds: Sviluppo App - Immagini e suoni
@@ -530,8 +530,9 @@ it:
         CSF_ifelse_allskins: Uso dei Blocchi Se/Altrimenti
         CSF_ifelseifelse_allskins: Uso dei Blocchi Se/AltrimentiSe/Altrimenti
         CSF_loops_AB: Ripetizioni
-        csd_gamelab_booleans: Boolean Expressions
-        csd_gamelab_conditional_statements: Conditional Statements
+        csd_gamelab_booleans: Espressioni Booleane
+        csd_gamelab_conditional_statements: Istruzioni Condizionali
+        csd_gamelab_if_else: If/Else Statements
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto l'altro blocco qua sopra

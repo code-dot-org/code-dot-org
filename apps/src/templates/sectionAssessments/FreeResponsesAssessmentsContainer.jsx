@@ -24,7 +24,7 @@ class FreeResponsesAssessmentsContainer extends Component {
         <h2>Free responses for Assessments</h2>
         {freeResponseQuestions.map((question, index) => (
           <div key={index}>
-            <h3>{question.questionText}</h3>
+            <h3>{`${question.questionNumber}. ${question.questionText}`}</h3>
             <FreeResponsesAssessmentsTable
               freeResponses={question.responses}
             />

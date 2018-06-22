@@ -403,6 +403,7 @@ lt:
     email_confirm_needed_required: 'Jūsų el. pašto adresas %{email} nebuvo patvirtintas:'
     email_confirm_wrong_email: "(Klaidingas el. pašto adresas?)"
     email_resend_confirm: Persiųsti iš naujo patvirtinimo instrukciją
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(palikite tuščią, jei nenorite pakeisti)"
     current_password_hint: "(įveskite dabartinį slaptažodį, kad išsaugoti pakeitimus)"
     delete: Pašalinti savo paskyrą

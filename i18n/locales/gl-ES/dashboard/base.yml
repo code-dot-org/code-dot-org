@@ -360,6 +360,7 @@ gl:
     email_confirm_needed_required: 'O seu enderezo de e-mail %{email} non foi confirmado:'
     email_confirm_wrong_email: '(Enderezo de e-mail errado?)'
     email_resend_confirm: 'Reenviar instrucións de confirmación'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(deixe en branco se non quixese facer alteración)"
     current_password_hint: '(necesitamos o seu contrasinal actual para confirmar os seus cambios)'
     delete: 'Eliminar a súa conta'

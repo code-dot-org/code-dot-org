@@ -1,0 +1,24 @@
+{
+  "category": "Events",
+  "config": {
+    "color": [
+      140,
+      1,
+      0.74
+    ],
+    "func": "whenTouchingAny",
+    "blockText": "when {SPRITE} touches any {GROUP}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite",
+        "defer": true
+      },
+      {
+        "name": "GROUP",
+        "defer": true
+      }
+    ],
+    "eventBlock": true
+  }
+}

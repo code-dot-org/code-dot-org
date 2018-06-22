@@ -3552,7 +3552,7 @@ it:
       4:
         image: notes/applab_intro_welcome_4.png
         text: Il blocco `setProperty` cambia le caratteristiche degli elementi sul
-          tuo schermo. Come i bottoni, le etichette o l'intero schermo. Prima devi
+          tuo schermo. Come i pulsanti, le etichette o l'intero schermo. Prima devi
           definire quale elemento vuoi cambiare. Se passi sopra ad un elemento della
           tua app, puoi vedere il suo nome o ID. Quindi seleziona questo ID dal primo
           elenco a discesa.
