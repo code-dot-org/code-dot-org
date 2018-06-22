@@ -360,6 +360,7 @@ kk:
     email_confirm_needed_required: 'Сіздің %{email} электрондық поштаңыз расталмады:'
     email_confirm_wrong_email: '(Қате электрондық пошта?)'
     email_resend_confirm: 'Нұсқаулықты қайта жіберу'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(өзгеркіңіз келмесе бос қалдырыңыз)"
     current_password_hint: '(өзгертулерді еңгізу үшін ағымдағы құпия сөзіңіз қажет)'
     delete: 'Аккаунтты өшіру'

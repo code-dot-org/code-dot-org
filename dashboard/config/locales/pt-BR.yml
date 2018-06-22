@@ -414,6 +414,7 @@ pt-BR:
     email_confirm_needed_required: 'Seu endereço de e-mail %{email} não foi confirmado:'
     email_confirm_wrong_email: "(Endereço de e-mail errado?)"
     email_resend_confirm: Reenviar instruções de confirmação
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(deixe em branco se não quiser fazer alteração)"
     current_password_hint: "(precisamos de sua senha atual para confirmar suas alterações)"
     delete: Excluir sua conta

@@ -936,6 +936,7 @@ nn:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
         stone_block_2: Grå blokker er laga av stein og kan ikkje bli kasta.
       courseA_maze_ramp3a_2018_callout: { }
+      courseA_maze_ramp3b_2018_callout: { }
       courseA_maze_ramp4_2018_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
       courseA_maze_ramp4a_2018_callout: { }
@@ -975,6 +976,7 @@ nn:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
       courseB_Scrat_ramp2_2018_callout: { }
       courseB_Scrat_ramp3a_2018_callout: { }
+      courseB_Scrat_ramp3b_2018_callout: { }
       courseB_Scrat_ramp4a_2018_callout: { }
       courseB_Scrat_ramp5a_2018_callout: { }
       courseB_artist_loops3_callout:
