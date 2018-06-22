@@ -32,17 +32,9 @@ $(document).ready(() => {
 
 let config;
 function onChange(editor) {
-  if (editor.getValue() === config) {
-    return;
-  }
   config = editor.getValue();
 
-  let parsedConfig;
-  try {
-    parsedConfig = jsonic(config);
-  } catch (e) {
-    return;
-  }
+  const parsedConfig = jsonic(config);
 
   const blocksInstalled = installCustomBlocks(
     Blockly,

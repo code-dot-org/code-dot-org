@@ -31,6 +31,7 @@ require 'cdo/safe_names'
 class Pd::Enrollment < ActiveRecord::Base
   include SchoolInfoDeduplicator
   include Rails.application.routes.url_helpers
+  include Pd::SharedWorkshopConstants
 
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
@@ -61,6 +62,7 @@ class Pd::Enrollment < ActiveRecord::Base
 
   before_validation :autoupdate_user_field
   after_save :enroll_in_corresponding_online_learning, if: -> {!owner_deleted? && (user_id_changed? || email_changed?)}
+  after_save :authorize_teacher_account
 
   def self.for_user(user)
     where('email = ? OR user_id = ?', user.email, user.id)
@@ -263,6 +265,10 @@ class Pd::Enrollment < ActiveRecord::Base
 
   def check_school_info(school_info_attr)
     deduplicate_school_info(school_info_attr, self)
+  end
+
+  def authorize_teacher_account
+    user.permission = UserPermission::AUTHORIZED_TEACHER if user && [COURSE_CSD, COURSE_CSP].include?(workshop.course)
   end
 
   private_class_method def self.filter_for_regular_survey_completion(enrollments, select_completed)
