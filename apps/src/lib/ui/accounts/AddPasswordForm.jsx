@@ -25,6 +25,7 @@ const styles = {
     margin: 0
   },
   statusText: {
+    paddingLeft: 10,
     paddingRight: 10,
     fontStyle: 'italic',
   },
