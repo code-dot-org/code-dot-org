@@ -6,9 +6,9 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
   # most recent feedback left by that teacher
   def get_feedback_from_teacher
     @feedback = TeacherFeedback.where(
-      student_id: params[:student_id],
-      level_id: params[:level_id],
-      teacher_id: params[:teacher_id]
+      student_id: params.require(:student_id),
+      level_id: params.require(:level_id),
+      teacher_id: params.require(:teacher_id)
     ).latest
     render json: @feedback, serializer: Api::V1::TeacherFeedbackSerializer
   end
@@ -17,8 +17,8 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
   # student on that level
   def get_feedbacks
     @level_feedbacks = TeacherFeedback.where(
-      student_id: params[:student_id],
-      level_id: params[:level_id]
+      student_id: params.require(:student_id),
+      level_id: params.require(:level_id)
     ).latest_per_teacher
 
     render json: @level_feedbacks, each_serializer: Api::V1::TeacherFeedbackSerializer
