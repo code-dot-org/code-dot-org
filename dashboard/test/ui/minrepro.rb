@@ -68,10 +68,6 @@ end
 def parse_options
   OpenStruct.new.tap do |options|
     options.config = nil
-    options.pegasus_domain = 'test.code.org'
-    options.dashboard_domain = 'test-studio.code.org'
-    options.hourofcode_domain = 'test.hourofcode.com'
-    options.csedweek_domain = 'test.csedweek.org'
     options.local = nil
     options.html = nil
     options.maximize = nil
@@ -87,30 +83,6 @@ def parse_options
       end
       opts.on("-l", "--local", "Use local domains. Also use local webdriver (not Saucelabs) unless -c is specified.") do
         options.local = 'true'
-        options.pegasus_domain = 'localhost.code.org:3000'
-        options.dashboard_domain = 'localhost-studio.code.org:3000'
-        options.hourofcode_domain = 'localhost.hourofcode.com:3000'
-        options.csedweek_domain = 'localhost.csedweek.org:3000'
-      end
-      opts.on("-p", "--pegasus Domain", String, "Specify an override domain for code.org, e.g. localhost.code.org:3000") do |p|
-        if p == 'localhost:3000'
-          print "WARNING: Some tests may fail using '-p localhost:3000' because cookies will not be available.\n"\
-                "Try '-p localhost.code.org:3000' instead (this is the default when using '-l').\n"
-        end
-        options.pegasus_domain = p
-      end
-      opts.on("-d", "--dashboard Domain", String, "Specify an override domain for studio.code.org, e.g. localhost-studio.code.org:3000") do |d|
-        if d == 'localhost:3000'
-          print "WARNING: Some tests may fail using '-d localhost:3000' because cookies will not be available.\n"\
-                "Try '-d localhost-studio.code.org:3000' instead (this is the default when using '-l').\n"
-        end
-        options.dashboard_domain = d
-      end
-      opts.on("--hourofcode Domain", String, "Specify an override domain for hourofcode.com, e.g. localhost.hourofcode.com:3000") do |d|
-        options.hourofcode = d
-      end
-      opts.on("--csedweek Domain", String, "Specify an override domain for csedweek.org, e.g. localhost.csedweek.org:3000") do |d|
-        options.csedweek = d
       end
       opts.on("-r", "--real_mobile_browser", "Use real mobile browser, not emulator") do
         options.realmobile = 'true'
@@ -136,9 +108,6 @@ def parse_options
       opts.on("-n", "--parallel ParallelLimit", String, "Maximum number of browsers to run in parallel (default is 1)") do |p|
         options.parallel_limit = p.to_i
       end
-      opts.on("--db", String, "Run scripts requiring DB access regardless of environment (otherwise restricted to development/test).") do
-        options.force_db_access = true
-      end
       opts.on("--fail_fast", "Fail a feature as soon as a scenario fails") do
         options.fail_fast = true
       end
@@ -152,20 +121,6 @@ def parse_options
     end
 
     opt_parser.parse!(ARGV)
-
-    if options.force_db_access
-      options.pegasus_db_access = true
-      options.dashboard_db_access = true
-    elsif ENV['CI']
-      options.pegasus_db_access = true
-      options.dashboard_db_access = true
-    elsif rack_env?(:development)
-      options.pegasus_db_access = true if options.pegasus_domain =~ /(localhost|ngrok)/
-      options.dashboard_db_access = true if options.dashboard_domain =~ /(localhost|ngrok)/
-    elsif rack_env?(:test)
-      options.pegasus_db_access = true if options.pegasus_domain =~ /test/
-      options.dashboard_db_access = true if options.dashboard_domain =~ /test/
-    end
 
     if options.config
       options.local = false
@@ -254,12 +209,8 @@ def browser_features
   end.compact
 end
 
-def test_type
-  'UI'
-end
-
 def report_tests_starting
-  puts "Starting #{browser_features.count} <b>dashboard</b> #{test_type} tests in #{$options.parallel_limit} threads..."
+  puts "Starting #{browser_features.count} tests in #{$options.parallel_limit} threads..."
 end
 
 def report_tests_finished(start_time, run_results)
@@ -392,28 +343,17 @@ def run_feature(browser, feature, options)
   test_run_string = test_run_identifier(browser, feature)
   log_prefix = "[#{feature.gsub(/.*features\//, '').gsub('.feature', '')}] "
 
-  # Don't log individual tests because we hit ChatClient rate limits
-  # ChatClient.log "Testing <b>dashboard</b> UI with <b>#{test_run_string}</b>..."
   puts "#{log_prefix}Starting UI tests for #{test_run_string}"
 
   run_environment = {}
   run_environment['BROWSER_CONFIG'] = browser_name
 
   run_environment['BS_ROTATABLE'] = browser['rotatable'] ? "true" : "false"
-  run_environment['PEGASUS_TEST_DOMAIN'] = options.pegasus_domain if options.pegasus_domain
-  run_environment['DASHBOARD_TEST_DOMAIN'] = options.dashboard_domain if options.dashboard_domain
-  run_environment['HOUROFCODE_TEST_DOMAIN'] = options.hourofcode_domain if options.hourofcode_domain
-  run_environment['CSEDWEEK_TEST_DOMAIN'] = options.csedweek_domain if options.csedweek_domain
   run_environment['TEST_LOCAL'] = options.local ? "true" : "false"
   run_environment['MAXIMIZE_LOCAL'] = options.maximize ? "true" : "false"
   run_environment['MOBILE'] = browser['mobile'] ? "true" : "false"
   run_environment['FAIL_FAST'] = options.fail_fast ? "true" : nil
   run_environment['TEST_RUN_NAME'] = test_run_string
-
-  # disable some stuff to make require_rails_env run faster within cucumber.
-  # These things won't be disabled in the dashboard instance we're testing against.
-  run_environment['SKIP_I18N_INIT'] = 'true'
-  run_environment['SKIP_DASHBOARD_ENABLE_PEGASUS'] = 'true'
 
   html_log = html_output_filename(test_run_string, options)
 
@@ -445,17 +385,11 @@ def run_feature(browser, feature, options)
     scenario_info = ", #{scenario_info}" unless scenario_info.blank?
   end
 
-  if !parsed_output.nil? && scenario_count == 0 && feature_succeeded
-    # Don't log individual skips because we hit ChatClient rate limits
-    # ChatClient.log "<b>dashboard</b> UI tests skipped with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info})"
-  elsif feature_succeeded
-    # Don't log individual successes because we hit ChatClient rate limits
-    # ChatClient.log "<b>dashboard</b> UI tests passed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info})"
-  else
+  unless feature_succeeded
     ChatClient.log "#{test_run_string} first selenium error: #{first_selenium_error(html_log)}" if options.html
     ChatClient.log output_synopsis(output_stdout, log_prefix), {wrap_with_tag: 'pre'} if options.output_synopsis
     ChatClient.log prefix_string(output_stderr, log_prefix), {wrap_with_tag: 'pre'}
-    message = "#{log_prefix}<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info})"
+    message = "#{log_prefix} tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info})"
     ChatClient.log message, color: 'red'
   end
   result_string =
@@ -474,9 +408,6 @@ def run_feature(browser, feature, options)
 Check the ~excluded @tags in the cucumber command line above and in the #{feature} file:
   - Do the feature or scenario tags exclude #{browser_name}?
 EOS
-    unless options.dashboard_db_access
-      skip_warning += "  - Do you need to run this test on the test instance or against localhost (-l) for @dashboard_db_access?\n"
-    end
     print skip_warning
   end
 
