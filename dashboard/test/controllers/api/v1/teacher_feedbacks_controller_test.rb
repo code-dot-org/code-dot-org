@@ -93,8 +93,8 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     sign_in @student
     get "#{API}/get_feedbacks", params: {student_id: @student.id, level_id: @level.id}
 
-    assert_equal 1, parsed_response['feedbacks'].count
-    assert_equal COMMENT2, parsed_response['feedbacks'][0]['comment']
+    assert_equal 1, parsed_response.count
+    assert_equal COMMENT2, parsed_response[0]['comment']
   end
 
   test 'student can retrieve feedback for a level - three comments, two teachers' do
@@ -112,9 +112,9 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     sign_in @student
     get "#{API}/get_feedbacks", params: {student_id: @student.id, level_id: @level.id}
 
-    assert_equal 2, parsed_response['feedbacks'].count
-    assert_equal COMMENT2, parsed_response['feedbacks'][1]['comment']
-    assert_equal COMMENT3, parsed_response['feedbacks'][0]['comment']
+    assert_equal 2, parsed_response.count
+    assert_equal COMMENT2, parsed_response[1]['comment']
+    assert_equal COMMENT3, parsed_response[0]['comment']
   end
 
   test 'student can retrieve feedback for a level - two levels, one comment per level, one teacher' do
@@ -127,15 +127,15 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     sign_in @student
     get "#{API}/get_feedbacks", params: {student_id: @student.id, level_id: @level.id}
 
-    assert_equal 1, JSON.parse(@response.body)['feedbacks'].count
-    assert_equal COMMENT1, parsed_response['feedbacks'][0]['comment']
+    assert_equal 1, JSON.parse(@response.body).count
+    assert_equal COMMENT1, parsed_response[0]['comment']
   end
 
   test 'returns elegantly when no feedback' do
     sign_in @student
     get "#{API}/get_feedbacks", params: {student_id: @student.id, level_id: @level.id}
 
-    assert_empty parsed_response['feedbacks']
+    assert_empty parsed_response
   end
 
   private
