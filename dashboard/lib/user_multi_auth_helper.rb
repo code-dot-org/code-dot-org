@@ -2,19 +2,8 @@ module UserMultiAuthHelper
   def migrate_to_multi_auth
     raise "Migration not implemented for provider #{provider}" unless
       provider.nil? ||
-      %w(
-        clever
-        facebook
-        google_oauth2
-        lti_lti_prod_kids.qwikcamps.com
-        manual
-        migrated
-        powerschool
-        sponsored
-        the_school_project
-        twitter
-        windowslive
-      ).include?(provider)
+      %w(manual migrated sponsored).include?(provider) ||
+      AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include?(provider)
 
     return true if migrated?
 
