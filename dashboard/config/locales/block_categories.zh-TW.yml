@@ -29,9 +29,10 @@ zh-TW:
       Numbers: Numbers
       Input: 輸入
       Default: Default
+      World: World
       Sprites: 角色
       Behaviors: Behaviors
-      World: World
+      Advanced: Advanced
       Sprite: Sprite
       Brush: Brush
       Make Sprite: Make Sprite

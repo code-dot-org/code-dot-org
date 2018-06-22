@@ -406,6 +406,7 @@ ur:
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
     email_confirm_wrong_email: "(Wrong email address?)"
     email_resend_confirm: Resend confirmation instructions
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(leave blank if you don't want to change it)"
     current_password_hint: "(we need your current password to confirm your changes)"
     delete: Delete your account

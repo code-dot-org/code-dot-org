@@ -360,6 +360,7 @@ zh-TW:
     email_confirm_needed_required: '您的信箱 %{email} 尚未驗證：'
     email_confirm_wrong_email: '（錯誤的電子信箱？）'
     email_resend_confirm: '重新發送確認說明'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "（如果你不想變更它就保留空白）"
     current_password_hint: '（我們需要你現在的密碼以確認變更）'
     delete: '刪除您的帳號'
