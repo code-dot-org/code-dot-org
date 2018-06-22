@@ -5,6 +5,7 @@ import {assets as assetsApi, files as filesApi} from '@cdo/apps/clientApi';
 import AssetRow from './AssetRow';
 import AssetUploader from './AssetUploader';
 import assetListStore from '../assets/assetListStore';
+import AudioRecorder from './AudioRecorder';
 
 const errorMessages = {
   403: 'Quota exceeded. Please delete some files and try again.',
@@ -49,7 +50,8 @@ export default class AssetManager extends React.Component {
     super(props);
     this.state = {
       assets: null,
-      statusMessage: props.uploadsEnabled ? '' : errorUploadDisabled
+      statusMessage: props.uploadsEnabled ? '' : errorUploadDisabled,
+      recordingAudio: false
     };
   }
 
@@ -123,6 +125,10 @@ export default class AssetManager extends React.Component {
     });
   };
 
+  onRecordClick = () => {
+    this.setState({recordingAudio: true});
+  };
+
   render() {
     const uploadButton = (<div>
       <AssetUploader
@@ -140,7 +146,7 @@ export default class AssetManager extends React.Component {
 
     const recordButton = (<div>
       <button
-        onClick={()=>{}}
+        onClick={this.onRecordClick}
         className="share"
         id="record-asset"
         disabled={!this.props.uploadsEnabled}
@@ -152,10 +158,13 @@ export default class AssetManager extends React.Component {
     );
 
     const buttons = (
-      <span style={styles.buttonRow}>
-        {uploadButton}
-        {recordButton}
-      </span>
+      <div>
+        <AudioRecorder isVisible={this.state.recordingAudio}/>
+        <span style={styles.buttonRow}>
+          {uploadButton}
+          {recordButton}
+        </span>
+      </div>
     );
 
     let assetList;
