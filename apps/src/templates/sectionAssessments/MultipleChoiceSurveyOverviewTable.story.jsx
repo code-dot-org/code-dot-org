@@ -5,7 +5,8 @@ import i18n from '@cdo/locale';
 const multipleChoiceSurveyData = [
   {
     id: 1,
-    question: '1. I am very good at school',
+    question: 'I am very good at school',
+    questionNumber: 1,
     answers:  [{multipleChoiceOption: i18n.answerOptionA(), percentAnswered: 40},
                {multipleChoiceOption: i18n.answerOptionB(), percentAnswered: 20},
                {multipleChoiceOption: i18n.answerOptionC(), percentAnswered: 20},
@@ -15,7 +16,8 @@ const multipleChoiceSurveyData = [
   },
   {
     id: 2,
-    question: '2. I enjoy pair programming',
+    question: 'I enjoy pair programming',
+    questionNumber: 2,
     answers:  [{multipleChoiceOption: i18n.answerOptionA(), percentAnswered: 30},
                {multipleChoiceOption: i18n.answerOptionB(), percentAnswered: 10},
                {multipleChoiceOption: i18n.answerOptionC(), percentAnswered: 10},
@@ -27,7 +29,8 @@ const multipleChoiceSurveyData = [
   },
   {
     id: 3,
-    question: '3. How do you prepare for taking a test?',
+    question: 'How do you prepare for taking a test?',
+    questionNumber: 3,
     answers:  [{multipleChoiceOption: i18n.answerOptionA(), percentAnswered: 50},
                {multipleChoiceOption: i18n.answerOptionB(), percentAnswered: 15},
                {multipleChoiceOption: i18n.answerOptionC(), percentAnswered: 20},
@@ -38,7 +41,8 @@ const multipleChoiceSurveyData = [
   },
   {
     id: 4,
-    question: '4. Do you feel more or less prepared to answer questions about the topics that interest you?',
+    question: 'Do you feel more or less prepared to answer questions about the topics that interest you?',
+    questionNumber: 4,
     answers:  [{multipleChoiceOption: i18n.answerOptionA(), percentAnswered: 15},
                {multipleChoiceOption: i18n.answerOptionB(), percentAnswered: 18},
                {multipleChoiceOption: i18n.answerOptionC(), percentAnswered: 10},
