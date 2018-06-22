@@ -95,6 +95,7 @@
 
 - if current_user.migrated?
   - if current_user.can_edit_password? && current_user.encrypted_password.blank?
+    -# Mount point for React AddPasswordForm component.
     %div#add-password-fields
 
     -# Hidden form used to asynchronously submit a new password to Rails with the
