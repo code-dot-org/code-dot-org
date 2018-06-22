@@ -7,7 +7,7 @@
 #  hashed_email      :string(255)      default(""), not null
 #  credential_type   :string(255)      not null
 #  authentication_id :string(255)
-#  data              :string(255)
+#  data              :text(65535)
 #  deleted_at        :datetime
 #  user_id           :integer          not null
 #  created_at        :datetime         not null
