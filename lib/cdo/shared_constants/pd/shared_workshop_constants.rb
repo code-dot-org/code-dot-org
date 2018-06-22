@@ -62,7 +62,8 @@ module Pd
         SUBJECT_CSD_FIT = SUBJECT_FIT
       ],
       COURSE_CSF => [
-        SUBJECT_CSF_101 = 'Intro Workshop'.freeze,
+        SUBJECT_CSF_101 = 'Intro'.freeze,
+        SUBJECT_CSF_201 = 'Deep Dive'.freeze,
         SUBJECT_CSF_FIT = SUBJECT_FIT
       ]
     }.freeze
