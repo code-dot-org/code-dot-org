@@ -10,7 +10,7 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
       level_id: params[:level_id],
       teacher_id: params[:teacher_id]
     ).latest
-    render json: @feedback
+    render json: @feedback, serializer: Api::V1::TeacherFeedbackSerializer
   end
 
   # Use student_id and level_id to lookup the most recent feedback from each teacher who has provided feedback to that
@@ -21,7 +21,7 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
       level_id: params[:level_id]
     ).latest_per_teacher
 
-    render json: {feedbacks: @level_feedbacks}
+    render json: @level_feedbacks, each_serializer: Api::V1::TeacherFeedbackSerializer
   end
 
   # POST /teacher_feedbacks
