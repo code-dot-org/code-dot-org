@@ -50,12 +50,16 @@ export default class AddPasswordForm extends React.Component {
 
   onPasswordChange = (event) => {
     this.setState({
+      // Clear any existing submission state
+      submissionState: DEFAULT_STATE.submissionState,
       password: event.target.value
     });
   };
 
   onPasswordConfirmationChange = (event) => {
     this.setState({
+      // Clear any existing submission state
+      submissionState: DEFAULT_STATE.submissionState,
       passwordConfirmation: event.target.value
     });
   };
