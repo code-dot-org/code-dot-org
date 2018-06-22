@@ -51,7 +51,7 @@ def main(options)
   open_log_files
   report_tests_starting
 
-  run_results = Parallel.map(browser_feature_generator, parallel_config(options.parallel_limit)) do |browser, feature|
+  run_results = Parallel.map(browser_feature_generator, in_processes: options.parallel_limit) do |browser, feature|
     run_feature browser, feature, options
   end
 
@@ -89,9 +89,6 @@ def parse_options
       end
       opts.on("-m", "--maximize", "Maximize local webdriver window on startup") do
         options.maximize = true
-      end
-      opts.on("--circle", "Whether is CircleCI (skip failing Circle tests)") do
-        options.is_circle = true
       end
       opts.on("--html", "Use html reporter") do
         options.html = true
@@ -270,20 +267,6 @@ def browser_feature_generator
   end
 end
 
-def parallel_config(parallel_limit)
-  {
-    # Run in parallel threads on CircleCI (less memory), processes on main test machine (better CPU utilization)
-    in_threads: ENV['CI'] ? parallel_limit : nil,
-    in_processes: ENV['CI'] ? nil : parallel_limit,
-
-    # This 'finish' lambda runs on the main thread after each Parallel.map work
-    # item is completed.
-    finish: lambda do |_, _, result|
-      feature_succeeded, _, _ = result
-    end
-  }
-end
-
 # returns the first line of the first selenium error in the html output file.
 def first_selenium_error(filename)
   html = File.read(filename)
@@ -327,14 +310,6 @@ def cucumber_arguments_for_feature(options, test_run_string, _)
   arguments = ''
   arguments += " --format html --out #{html_output_filename(test_run_string, options)}" if options.html
   arguments += ' -f pretty' if options.html # include the default (-f pretty) formatter so it does both
-
-  # In CircleCI we export additional logs in junit xml format so CircleCI can
-  # provide pretty test reports with success/fail/timing data upon completion.
-  # See: https://circleci.com/docs/test-metadata/#cucumber
-  if ENV['CI']
-    arguments += " --format junit --out $CIRCLE_TEST_REPORTS/cucumber/#{test_run_string}.xml"
-  end
-
   arguments
 end
 
@@ -402,7 +377,7 @@ def run_feature(browser, feature, options)
     end
   puts prefix_string("UI tests for #{test_run_string} #{result_string} (#{RakeUtils.format_duration(test_duration)}#{scenario_info})", log_prefix)
 
-  if scenario_count == 0 && !ENV['CI']
+  if scenario_count == 0
     skip_warning = "We didn't actually run any tests, did you mean to do this?\n".yellow
     skip_warning += <<EOS
 Check the ~excluded @tags in the cucumber command line above and in the #{feature} file:
