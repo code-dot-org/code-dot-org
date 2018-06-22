@@ -2,14 +2,9 @@ When /^I repro the frame-switch bug$/ do
   @browser.navigate.to 'about:blank'
 
   @browser.execute_script %{
-    document.body.innerHTML = `
-      <iframe id="myframe" src="http://example.com"></iframe>
-    `;
+    document.body.innerHTML = '<iframe id="myframe" src="http://example.com"></iframe>';
     var myframe = document.getElementById("myframe");
-
-    myframe.onload = function() {
-      window.iframeLoadedForTesting = true;
-    };
+    myframe.onload = function() { window.iframeLoadedForTesting = true; };
   }
 
   Selenium::WebDriver::Wait.new(timeout: 30).until do
