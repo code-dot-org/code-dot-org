@@ -72,10 +72,6 @@ describe('AddPasswordForm', () => {
       submitButton.simulate('click');
     });
 
-    afterEach(() => {
-      handleSubmit.resetBehavior();
-    });
-
     it('resets the password field to its default state', async () => {
       await handleSubmit;
       const passwordField = wrapper.find('input').at(0);
@@ -108,10 +104,6 @@ describe('AddPasswordForm', () => {
       });
       const submitButton = wrapper.find('button');
       submitButton.simulate('click');
-    });
-
-    afterEach(() => {
-      handleSubmit.resetBehavior();
     });
 
     it('does not reset the password field to its default state', async () => {
