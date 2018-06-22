@@ -165,10 +165,6 @@ def parse_options
         f = `egrep -r "Given I am on .*#{script_name.delete(' ').downcase}" . | cut -f1 -d ':' | sort | uniq | tr '\n' ,`
         options.features = f.split ','
       end
-      opts.on('--with-status-page', 'Generate a test status summary page for this test run') do
-        options.with_status_page = true
-        options.html = true # Implied by wanting a status page
-      end
       opts.on('--output-synopsis', 'Print a synopsis of failing scenarios') do
         options.output_synopsis = true
       end
@@ -312,40 +308,6 @@ def report_tests_finished(start_time, run_results)
   unless failures.empty?
     ChatClient.log "Failed tests: \n #{failures.join("\n")}"
   end
-end
-
-def status_page_url
-  return nil unless $options.with_status_page
-  CDO.studio_url('/ui_test/' + status_page_filename, scheme_for_environment)
-end
-
-def status_page_filename
-  "test_status_#{test_type}.html"
-end
-
-def scheme_for_environment
-  (rack_env?(:development) && !CDO.https_development) ? 'http:' : 'https:'
-end
-
-def generate_status_page(suite_start_time)
-  test_status_template = File.read('test_status.haml')
-  haml_engine = Haml::Engine.new(test_status_template)
-  File.open(status_page_filename, 'w') do |file|
-    file.write haml_engine.render(
-      Object.new,
-      {
-        api_origin: CDO.studio_url('', scheme_for_environment),
-        s3_bucket: S3_LOGS_BUCKET,
-        s3_prefix: S3_LOGS_PREFIX,
-        type: test_type,
-        git_branch: GIT_BRANCH,
-        commit_hash: COMMIT_HASH,
-        start_time: suite_start_time,
-        browser_features: browser_features
-      }
-    )
-  end
-  ChatClient.log "A <a href=\"#{status_page_url}\">status page</a> has been generated for this #{test_type} test run."
 end
 
 def test_run_identifier(browser, feature)
