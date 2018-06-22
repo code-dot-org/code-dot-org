@@ -508,7 +508,7 @@ export class WorkshopForm extends React.Component {
       // Temporarily hiding CSF 201 subject from the workshop dashboard
       // until the pilot is over in winter 2018
       const included_subjects = Subjects[this.state.course]
-        .filter(subject => subject !== "Deep Dive Workshop");
+        .filter(subject => subject !== "Deep Dive");
       const options = included_subjects.map((subject, i) => {
         return (<option key={i} value={subject}>{subject}</option>);
       });
