@@ -2,7 +2,6 @@ import React from 'react';
 import $ from 'jquery';
 import sinon from 'sinon';
 import {format} from 'util';
-import {assert} from './configuredChai';
 const project = require('@cdo/apps/code-studio/initApp/project');
 const assets = require('@cdo/apps/code-studio/assets');
 import i18n from '@cdo/apps/code-studio/i18n';
@@ -66,20 +65,6 @@ export function generateArtistAnswer(generatedCode) {
   api.log = [];
   generatedCode(api);
   return api.log;
-}
-
-/**
- * Checks that an object has a property with the given name, independent
- * of its prototype.
- *
- * @param {*} obj - Object that should contain the property.
- * @param {string} propertyName - Name of the property the object should
- *        contain at own depth.
- */
-export function assertOwnProperty(obj, propertyName) {
-  assert(obj.hasOwnProperty(propertyName), "Expected " +
-      obj.constructor.name + " to have a property '" +
-      propertyName + "' but no such property was found.");
 }
 
 /**
