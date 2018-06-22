@@ -178,6 +178,28 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     }
   end
 
+  #
+  # Untrusted email from Oauth:
+  #
+
+  test 'convert Clever OAuth student' do
+    assert_convert_oauth_user create(:student, :unmigrated_clever_sso)
+  end
+
+  test 'convert Clever OAuth teacher' do
+    assert_convert_oauth_user create(:teacher, :unmigrated_clever_sso)
+  end
+
+  test 'convert Powerschool OAuth student' do
+    assert_convert_oauth_user create(:student, :unmigrated_powerschool_sso)
+  end
+
+  test 'convert Powerschool OAuth teacher' do
+    assert_convert_oauth_user create(:teacher, :unmigrated_powerschool_sso)
+  end
+
+  private
+
   def assert_convert_oauth_user(user)
     provider = user.provider
     initial_email = user.email
@@ -186,10 +208,19 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     initial_oauth_token = user.oauth_token
     initial_oauth_token_expiration = user.oauth_token_expiration
 
+    is_email_trusted = %w(facebook google_oauth2 windowslive).include? provider
+
+    # Assert email remains empty for students
+    expected_email = user.student? ? :empty : initial_email
+
+    # Before migration hashed_email can be nil for untrusted provide
+    # But it's not-nullable in AuthenticationOption
+    expected_hashed_email = initial_hashed_email.nil? ? '' : initial_hashed_email
+
     assert_user user,
       provider: provider,
       email: user.student? ? :empty : :not_empty,
-      hashed_email: :not_empty,
+      hashed_email: is_email_trusted ? :not_empty : initial_hashed_email,
       uid: :not_nil,
       oauth_token: :not_nil,
       oauth_token_expiration: :not_nil
@@ -197,30 +228,19 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     migrate user
 
     assert_user user,
-      email: user.student? ? :empty : initial_email,
-      hashed_email: initial_hashed_email,
+      email: expected_email,
+      hashed_email: expected_hashed_email,
       primary_authentication_option: {
         credential_type: provider,
         authentication_id: initial_authentication_id,
-        email: user.student? ? :empty : initial_email,
-        hashed_email: initial_hashed_email,
+        email: expected_email,
+        hashed_email: expected_hashed_email,
         data: {
           oauth_token: initial_oauth_token,
           oauth_token_expiration: initial_oauth_token_expiration
         }
       }
   end
-
-  #
-  # Untrusted email from Oauth:
-  #
-
-  # TODO: Clever Oauth user
-  # TODO: Clever Oauth user that also has a password (due to takeover)
-  # TODO: Powerschool Oauth
-  # TODO: Powerschool Oauth user that also has a password (due to takeover)
-
-  private
 
   #
   # Assert a set of attributes about a user.
