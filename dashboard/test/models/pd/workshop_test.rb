@@ -1031,7 +1031,12 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     target = create :pd_workshop, num_sessions: 1, sessions_from: Date.today + 1.week
     create :pd_workshop, num_sessions: 1, sessions_from: Date.today + 2.weeks
 
-    assert_equal target, Pd::Workshop.nearest
+    nearest_workshop = Pd::Workshop.nearest
+    assert_equal target, nearest_workshop
+
+    # Also make sure attributes are included
+    assert_equal target.course, nearest_workshop.course
+    assert_equal 1, nearest_workshop.sessions.count
   end
 
   test 'nearest with no matches returns nil' do
@@ -1069,7 +1074,12 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     # Attend first session from one
     create :pd_attendance, session: workshops[0].sessions[0], teacher: teacher
-    assert_equal workshops[0], Pd::Workshop.with_nearest_attendance_by(teacher)
+    nearest_workshop = Pd::Workshop.with_nearest_attendance_by(teacher)
+    assert_equal workshops[0], nearest_workshop
+
+    # Also make sure attributes are included
+    assert_equal workshops[0].course, nearest_workshop.course
+    assert_equal 2, nearest_workshop.sessions.count
 
     # Attend second session (today, now nearest) from the other
     create :pd_attendance, session: workshops[1].sessions[1], teacher: teacher
@@ -1083,19 +1093,18 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     # 2 workshops on the same day for each course
     csd_workshops = create_list :pd_workshop, 2, num_sessions: 2, sessions_from: Date.today - 1.day, course: COURSE_CSD
     csp_workshops = create_list :pd_workshop, 2, num_sessions: 2, sessions_from: Date.today - 1.day, course: COURSE_CSP
-    all_workshops = csd_workshops + csp_workshops
 
-    # Enrolled in all
-    all_workshops.each do |workshop|
-      create :pd_enrollment, :from_user, user: teacher, workshop: workshop
-    end
+    # Enroll in the first of each
+    create :pd_enrollment, :from_user, user: teacher, workshop: csd_workshops[0]
+    create :pd_enrollment, :from_user, user: teacher, workshop: csp_workshops[0]
 
     assert_nil Pd::Workshop.where(course: COURSE_CSP).nearest_attended_or_enrolled_in_by(other_teacher)
 
-    # No attendances, expect first enrolled workshop
+    # No attendances, expect enrolled workshop
     assert_equal csp_workshops[0], Pd::Workshop.where(course: COURSE_CSP).nearest_attended_or_enrolled_in_by(teacher)
 
-    # Now attend the second workshop and expect the attended one
+    # Now enroll in and attend the second csp workshop, expect the attended one
+    create :pd_enrollment, :from_user, user: teacher, workshop: csp_workshops[1]
     create :pd_attendance, teacher: teacher, session: csp_workshops[1].sessions.first
     assert_equal csp_workshops[1], Pd::Workshop.where(course: COURSE_CSP).nearest_attended_or_enrolled_in_by(teacher)
 

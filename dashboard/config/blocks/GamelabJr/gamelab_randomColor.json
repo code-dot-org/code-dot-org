@@ -1,0 +1,8 @@
+{
+  "category": "",
+  "config": {
+    "func": "randomColor",
+    "blockText": "random color",
+    "returnType": "Colour"
+  }
+}

@@ -411,6 +411,7 @@ ca:
       ha estat confirmada:'
     email_confirm_wrong_email: "(Adreça d'e-mail equivocada?)"
     email_resend_confirm: Torna a enviar les instruccions de confirmació
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(deixa-ho en blanc si no vols canviar-lo)"
     current_password_hint: "(necessitem la teva contrasenya actual per a confirmar
       els canvis)"

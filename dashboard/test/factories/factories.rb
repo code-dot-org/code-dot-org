@@ -199,7 +199,14 @@ FactoryGirl.define do
           sequence(:parent_email) {|n| "testparent#{n}@example.com.xx"}
           email nil
           hashed_email nil
+          provider nil
         end
+      end
+
+      factory :manual_username_password_student do
+        email nil
+        hashed_email nil
+        provider User::PROVIDER_MANUAL
       end
 
       factory :student_in_word_section do
@@ -224,15 +231,33 @@ FactoryGirl.define do
         end
       end
 
-      factory :google_oauth2_student do
-        encrypted_password nil
-        provider 'google_oauth2'
-        sequence(:uid) {|n| n}
-      end
-
       factory :old_student do
         birthday Time.zone.today - 30.years
       end
+    end
+
+    trait :unmigrated_sso do
+      encrypted_password nil
+      provider %w(facebook windowslive clever).sample
+      sequence(:uid) {|n| n}
+      oauth_token 'fake-oauth-token'
+      oauth_token_expiration 'fake-oauth-token-expiration'
+    end
+
+    trait :unmigrated_google_sso do
+      unmigrated_sso
+      provider 'google_oauth2'
+      oauth_refresh_token 'fake-oauth-refresh-token'
+    end
+
+    trait :unmigrated_facebook_sso do
+      unmigrated_sso
+      provider 'facebook'
+    end
+
+    trait :unmigrated_windowslive_sso do
+      unmigrated_sso
+      provider 'windowslive'
     end
 
     trait :with_google_authentication_option do
