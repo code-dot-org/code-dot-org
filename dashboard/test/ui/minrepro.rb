@@ -158,9 +158,6 @@ def parse_options
       opts.on("--db", String, "Run scripts requiring DB access regardless of environment (otherwise restricted to development/test).") do
         options.force_db_access = true
       end
-      opts.on("-V", "--verbose", "Verbose") do
-        options.verbose = true
-      end
       opts.on("--fail_fast", "Fail a feature as soon as a scenario fails") do
         options.fail_fast = true
       end
@@ -251,17 +248,17 @@ end
 
 def log_success(msg)
   $success_log.puts msg
-  puts msg if $options.verbose
+  puts msg
 end
 
 def log_error(msg)
   $error_log.puts msg
-  puts msg if $options.verbose
+  puts msg
 end
 
 def log_browser_error(msg)
   $errorbrowsers_log.puts msg
-  puts msg if $options.verbose
+  puts msg
 end
 
 def run_tests(env, feature, arguments, log_prefix)
