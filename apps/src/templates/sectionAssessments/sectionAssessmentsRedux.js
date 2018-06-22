@@ -235,7 +235,7 @@ export const getStudentMCResponsesForCurrentAssessment = (state) => {
       studentResponses: studentAssessment.level_results.filter(answer => answer.type === QuestionType.MULTI)
         .map(answer => {
           return {
-            responses: answer.student_result || '',
+            responses: indexesToAnswerString(answer.student_result),
             isCorrect: answer.status === MultiAnswerStatus.CORRECT,
           };
         })
@@ -452,11 +452,11 @@ export const getMultipleChoiceSectionSummary = (state) => {
     multiResults.forEach((response, questionIndex) => {
       // student_result is either '' and not answered or a series of letters
       // that the student selected.
-      if (response.student_result === '') {
+      if (response.student_result === []) {
         results[questionIndex].notAnswered++;
       } else {
         results[questionIndex].totalAnswered++;
-        getIndexFromAnswer(response.student_result).forEach(answer => {
+        response.student_result.forEach(answer => {
           results[questionIndex].answers[answer].numAnswered++;
         });
       }
@@ -467,6 +467,8 @@ export const getMultipleChoiceSectionSummary = (state) => {
 };
 
 // Helpers
+
+const ANSWER_LETTERS = ['A','B', 'C', 'D', 'E', 'F', 'G', 'H'];
 
 /**
  * Takes in an array of objects {answerText: '', correct: true/false} and
@@ -482,33 +484,28 @@ const getCorrectAnswer = (answerArr) => {
   if (!answerArr) {
     return '';
   }
-
-  const letterArr = ['A','B', 'C', 'D', 'E', 'F', 'G', 'H'];
   const correctLetters = [];
   for (let i = 0; i < answerArr.length; i++) {
     if (answerArr[i].correct) {
-      correctLetters.push(letterArr[i]);
+      correctLetters.push(ANSWER_LETTERS[i]);
     }
   }
   return correctLetters.join(', ');
 };
 
 /**
- * Takes in string of answers 'A, C' and
- * returns the corresponding array of indexes matching those answers.
+ * Takes in an array of integers and returns the corresponding letters
+ * representing correct answers.
  *
- * TODO(caleybrock): This feels messy. I'd like to handle this consistently
- * everywhere so first we should make this consistent on the server. If
- * we end up keeping this function, we'll need tests.
+ * TODO(caleybrock): Write some tests.
  *
- * Ex - 'A, C' --> returns [0, 2]
+ * Ex - [1] --> returns 'B', [0, 2] --> returns 'A, C'
  */
-const getIndexFromAnswer = (answerString) => {
-  answerString = answerString.replace(' ', '');
-  const answerArray = answerString.split(',');
-
-  const letterArr = ['A','B', 'C', 'D', 'E', 'F', 'G', 'H'];
-  return answerArray.map(letter => letterArr.indexOf(letter));
+const indexesToAnswerString = (answerArr) => {
+  if (!answerArr) {
+    return '';
+  }
+  return answerArr.map(index => ANSWER_LETTERS[index]).join(', ');
 };
 
 // Requests to the server for assessment data

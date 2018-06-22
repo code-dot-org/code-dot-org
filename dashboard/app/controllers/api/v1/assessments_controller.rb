@@ -132,7 +132,7 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
               level_result[:student_result] = student_result
 
               if student_result == [-1]
-                level_result[:student_result] = ""
+                level_result[:student_result] = []
                 level_result[:status] = "unsubmitted"
               # Deep comparison of arrays of indexes
               elsif student_result - answer_indexes == []
