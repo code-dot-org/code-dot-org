@@ -81,7 +81,7 @@ class AuthenticationOptionTest < ActiveSupport::TestCase
   end
 
   test 'oauth? true when credential_type is Quikcamps' do
-    option = create :authentication_option, credential_type: AuthenticationOption::QWIKCAMPS
+    option = create :authentication_option, credential_type: AuthenticationOption::QWIKLABS
     assert option.oauth?
   end
 

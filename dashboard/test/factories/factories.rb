@@ -280,6 +280,13 @@ FactoryGirl.define do
       provider 'powerschool'
     end
 
+    trait :unmigrated_qwiklabs_sso do
+      unmigrated_sso
+      provider 'lti_lti_prod_kids.qwikcamps.com'
+      oauth_token nil
+      oauth_token_expiration nil
+    end
+
     trait :with_google_authentication_option do
       after(:create) do |user|
         create(:authentication_option,
