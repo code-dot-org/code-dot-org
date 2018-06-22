@@ -40,6 +40,8 @@ const MultiAnswerStatus = {
   INCORRECT: 'incorrect'
 };
 
+const ANSWER_LETTERS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
+
 // Action type constants
 const SET_ASSESSMENT_RESPONSES = 'sectionAssessments/SET_ASSESSMENT_RESPONSES';
 const SET_ASSESSMENTS_QUESTIONS = 'sectionAssessments/SET_ASSESSMENTS_QUESTIONS';
@@ -350,14 +352,13 @@ export const getMultipleChoiceSurveyResults = (state) => {
       }
     }
 
-    // TODO(caleybrock): Make a better way to get letter options, here and below.
     return {
       id: index,
       question: question.question,
       questionNumber: question.question_index + 1,
       answers: question.answer_texts.map((answer, index) => {
         return {
-          multipleChoiceOption: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'][index],
+          multipleChoiceOption: ANSWER_LETTERS[index],
           percentAnswered: Math.floor((answerTotals[index]/totalAnswered) * 100),
         };
       }),
@@ -417,7 +418,6 @@ export const getMultipleChoiceSectionSummary = (state) => {
   }
   const questionData = assessmentsStructure.questions;
   const multiQuestions = questionData.filter(question => question.type === QuestionType.MULTI);
-  // TODO(caleybrock): Follow up to calculate multipleChoiceOption consistently.
   const results = multiQuestions.map(question => {
     return {
       id: question.level_id,
@@ -425,7 +425,7 @@ export const getMultipleChoiceSectionSummary = (state) => {
       questionNumber: question.question_index + 1,
       answers: question.answers.map((answer, index) => {
         return {
-          multipleChoiceOption: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'][index],
+          multipleChoiceOption: ANSWER_LETTERS[index],
           isCorrect: answer.correct,
           numAnswered: 0,
         };
@@ -467,8 +467,6 @@ export const getMultipleChoiceSectionSummary = (state) => {
 };
 
 // Helpers
-
-const ANSWER_LETTERS = ['A','B', 'C', 'D', 'E', 'F', 'G', 'H'];
 
 /**
  * Takes in an array of objects {answerText: '', correct: true/false} and
