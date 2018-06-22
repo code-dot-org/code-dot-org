@@ -473,24 +473,24 @@ export const getMultipleChoiceSectionSummary = (state) => {
  * returns the corresponding letters to the options with the correct answers.
  * Ex - [{correct: false}, {correct: true}] --> returns 'B'
  */
-export const getCorrectAnswer = (answerArr) => {
+export function getCorrectAnswer(answerArr) {
   const correctIndexes = answerArr
     .map(({correct}, i) => (correct ? i : null))
     .filter(i => i !== null);
   return indexesToAnswerString(correctIndexes);
-};
+}
 
 /**
  * Takes in an array of integers and returns the corresponding letters
  * representing correct answers.
  * Ex - [1] --> returns 'B', [0, 2] --> returns 'A, C'
  */
-export const indexesToAnswerString = (answerArr) => {
+export function indexesToAnswerString(answerArr) {
   if (!answerArr) {
     return '';
   }
   return answerArr.map(index => ANSWER_LETTERS[index]).join(', ');
-};
+}
 
 // Requests to the server for assessment data
 
