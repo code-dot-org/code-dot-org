@@ -1,6 +1,10 @@
 - @page_title = t('activerecord.attributes.user.edit_header')
 - no_email = current_user.no_personal_email? || params[:noEmail] == 'true'
 
+= link_to :back do
+  %i.fa.fa-chevron-left
+  %span= t('crud.back')
+
 %h2= @page_title
 
 = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
@@ -88,8 +92,6 @@
     = f.hidden_field :age, value: "21"
 
   %div#submit-update= f.submit t('user.update'), class: 'btn btn-primary'
-
-= link_to t('crud.back'), :back
 
 - if current_user.can_edit_password? && current_user.encrypted_password.blank?
   %div#add-password-fields
