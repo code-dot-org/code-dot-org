@@ -38,6 +38,7 @@
     "ideal": "9",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Don't forget to turn by 60 degrees after each triangle.  Which loop do you need to put that instruction inside?\",\"hint_id\":\"courseF_artist_ramp10_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/cb1f252c9933d6028e55386a5a63e0e3/courseF_artist_ramp10.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"If your code for a triangle is in a <xml><block type=\\\"controls_repeat\\\"><title name=\\\"TIMES\\\">6</title></block></xml> loop, this task will be a lot simpler.\",\"hint_id\":\"courseF_artist_ramp10_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3ffab05a476d07445c0f19135bdd2e38/courseF_artist_ramp10.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You will draw six triangles in total for this design:\\n\\n![](https://images.code.org/bc62bed22e90d35e420b0a116ac487ef-image-1500347536221.2_solution2.gif)\",\"hint_id\":\"courseF_artist_ramp10_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/0dd4ce79d95a2b84ab4fa7ce00e449b2/courseF_artist_ramp10.mp3\"}]",
     "disable_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 20,
     "contained_level_names": null
   },
   "published": true,

@@ -360,6 +360,7 @@ ga:
     email_confirm_needed_required: 'Níl do sheoladh ríomhphoist %{email} deimhnithe:'
     email_confirm_wrong_email: '(Seoladh ríomhphoist mícheart?)'
     email_resend_confirm: 'Seol na treoracha deimhnithe arís'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(fág bán é mura bhfuil tú ag iarraidh é a athrú)"
     current_password_hint: '(ní mór duit an focal faire atá agat faoi láthair a chur isteach leis an athrú a dheimhniú)'
     delete: 'Scrios an Cuntas'

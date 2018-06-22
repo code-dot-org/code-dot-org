@@ -418,6 +418,7 @@ fil:
     email_confirm_needed_required: 'Ang email address mong %{email} ay hindi pa nakukumpirma:'
     email_confirm_wrong_email: "(Maling email address?)"
     email_resend_confirm: Ipadalang muli ang mga instruksyon sa pag-kumpirma
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(Iwan ito na walang laman kung ayaw mong baguhin ito)"
     current_password_hint: "(kailangan namin ang iyong kasalukuyang password para
       kumpirmahin ang iyong mga binago)"

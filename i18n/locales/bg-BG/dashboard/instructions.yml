@@ -1474,6 +1474,20 @@ bg:
         - What happens if you use two different angles in your stair step pattern?
         - What happens if you make your diamond pattern longer or shorter?
         - What does it look like to draw two snowflakes on top of one another?
+      Dance Party 1-validated_instruction: 'What do you think will happen when you click on the alien?  '
+      Dance Party 2_instruction: Change the behavior inside the `___ begins ___` block to make the alien start spinning around.
+      Dance Party 3 - Validated_instruction: 'Create a new sprite called `alien2`, then make it do a different dance move when it''s clicked.  '
+      Dance Party 3_instruction: 'Create a new sprite called `alien2`, then make it do a different dance move when it''s clicked.  '
+      Dance Party 4 Validated_instruction: 'Create a third sprite called `alien3` and get all of your aliens to stand in a line. '
+      Dance Party 4_instruction: 'Create a third sprite called `alien3` and get all of your aliens to stand in a line. '
+      Dance Party 5 - Validated_instruction: Add code to change the color of each alien when it gets clicked.
+      Dance Party 5_instruction: Add code to change the color of each alien when it gets clicked.
+      Dance Party 6 - Validated_instruction: Use the `stops everything` block to make each alien stop moving when it is clicked.
+      Dance Party 6_instruction: Use the `stops everything` block to make each alien stop moving when it is clicked.
+      Dance Party 7 - Validated_instruction: Add a new bell sprite called `myBell` that makes all the aliens start doing the same dance move when it's clicked.
+      Dance Party 7_instruction: Add a new bell sprite called `myBell` that makes all the aliens start doing the same dance move when it's clicked.
+      Dance Party Freeplay_instruction: Now create your own alien disco!
+      Dance Party Predict_instruction: 'What do you think will happen when you click on the alien?  '
       ECSPD Binary Odometer_instruction: This is another resource you could use with your students.
       Eval Booleans 1_instruction: Булевите оператори (като >, <, =) ни позволяват да сравняваме различни стойности, връщайки "истина" или "лъжа". Щракнете върху "Старт", за да видите как този израз дава резултат.
       Eval Booleans 2_instruction: Can you set the values so that this expression evaluates as true?
@@ -1544,6 +1558,12 @@ bg:
       Finalize Your Chaser Game v.1_2018_instruction: Introducing the setPosition command! Replace the moveTo in the button-click event handler to use setPosition to move the button itself to a random location when it's clicked.
       Find the Wizard_instruction: Build whatever you want. This is an example of a number-guessing game!
       Find the Wizard_2018_instruction: Build whatever you want. This is an example of a number-guessing game!
+      Fish Tank 2-validated_instruction: Change Dusty (the tumbleweed) to a fish.
+      Fish Tank 3-validated_instruction: Change the fish's behavior so that it swims around the tank.
+      Fish Tank 4-validated_instruction: Use the `set background color` block to make the background blue.
+      Fish Tank 5-validated_instruction: Our fish is getting a little lonely. Add another sprite to the fish tank.
+      Fish Tank 6-validated_instruction: Add a behavior to the fish's new friend.
+      Fish Tank 7-validated_instruction: Use some new blocks from the toolbox to make your fish tank special!
       Food Fight!_instruction: "Добавихме функция за вас. Програмирайте вашата игра да отвори фyнкцията  \"едно ниво по- нагоре\" ако \" играча има >10 точки\". Ако преминете 4-то ниво, може да се преместите на следващия пъзел.\n"
       Food Fight_instruction: You can make whatever you want in play lab! This is an example of a game you can make in play lab.
       FoodFight_instruction: This is an example of a game you can make in play lab.
@@ -1572,6 +1592,7 @@ bg:
       Guess The Number_2018_instruction: Build whatever you want. This is an example of a number-guessing game!
       Harvester Test_instruction: It's harvest time! But I forgot what crop I planted at which tile. Please help me harvest all my crops, no matter how they were originally planted!
       Harvesting_instruction: Uh oh, I lost my map and can't remember what I planted. Every sprout could grow up to be corn, beans, or pumpkins. Can you write some code to pick all the crops, no matter what they are?
+      HoCAB_labyrinth1_instruction: Use the arrow blocks to solve this maze!
       Infinity_catch_instruction: Можете ли да накарате Елза ("актьор 2"), използвайки клавишите със стрелки, да достигне Анна?
       Infinity_finale_instruction: Създайте нещо, което ви харесва и  го споделете!
       Infinity_move_collide_instruction: Хиро е "актьор 1".  Преместете го към Баумах и когато те се докоснат трябва да се възпроизведе звук.
@@ -2701,10 +2722,10 @@ bg:
       U4 - Charts - Import Data 1_2018_instruction: Download the CSV file we’ve provided, and then use the data viewer to import the data from the file into the “mytable” table. (Click to see full instructions)
       U4 - Charts - Import Data 2_instruction: Call readRecords on “mytable” and print each record to the console. (Click to see full instructions)
       U4 - Charts - Import Data 2_2018_instruction: Call readRecords on “mytable” and print each record to the console. (Click to see full instructions)
-      U4 - Charts - Line Chart 1_instruction: Create a line chart showing the change in popularity of “
-      U4 - Charts - Line Chart 1_2018_instruction: Create a line chart showing the change in popularity of “
-      U4 - Charts - Line Chart 2_instruction: Add a second line to your chart to show the change in popularity of both “
-      U4 - Charts - Line Chart 2_2018_instruction: Add a second line to your chart to show the change in popularity of both “
+      U4 - Charts - Line Chart 1_instruction: 'Create a line chart showing the change in popularity of “#tbt” over time. (Click to see full instructions)'
+      U4 - Charts - Line Chart 1_2018_instruction: 'Create a line chart showing the change in popularity of “#tbt” over time. (Click to see full instructions)'
+      U4 - Charts - Line Chart 2_instruction: 'Add a second line to your chart to show the change in popularity of both “#tbt” and “#nofilter” at the same time. (Click to see full instructions)'
+      U4 - Charts - Line Chart 2_2018_instruction: 'Add a second line to your chart to show the change in popularity of both “#tbt” and “#nofilter” at the same time. (Click to see full instructions)'
       U4 - Charts - Line Chart Template_instruction: This is a template.
       U4 - Charts - Remixing Apps with Data_instruction: Run this app and see what it prints to the console. Then remix the app and run the remixed version to see what happened to the data. (Click to see full instructions)
       U4 - Charts - Remixing Apps with Data_2018_instruction: Run this app and see what it prints to the console. Then remix the app and run the remixed version to see what happened to the data. (Click to see full instructions)
@@ -2817,6 +2838,7 @@ bg:
       U4 Model Design 1_2018_instruction: Add a large red button to your screen using Design Mode. (Click for full instructions.)
       U4 vigenere cipher 2_instruction: Инструкции
       U4L02 - Objects - Template1_instruction: Шаблон
+      U4L02 - Objects - Template1_2018_instruction: Шаблон
       U4L02 - Objects - createObject_instruction: 'Create an object with at least 5 values including at least one string and one number. (Click to see full instructions) '
       U4L02 - Objects - eventParameter_instruction: Trigger both the keyboard and mouse event and examine the event objects displayed in the console. Why might an object be the best way to store this information? (Click to see full instructions)
       U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your Name\", run the app and click the button. Run it multiple times with different names! Watch the console and use the ‘View Data” button to see how the table is updated. As you play around make sure you can explain the purpose of each of the circled parts of the diagram.\n\n"
@@ -2862,6 +2884,13 @@ bg:
       Valentine_artist_01_instruction: 'Help the artist finish his llama heart. '
       Valentine_playlab_01_instruction: 'Program Kiki (Actor 1) to move left and right when the left and right arrows are pressed. When Kiki is clicked, she should throw hearts towards her friends. '
       Vigenere_instruction: Test
+      Virtual Pet 1_instruction: What do you think will happen if you press "Run" and then click on her?
+      Virtual Pet 2_instruction: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
+      Virtual Pet 3_instruction: Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?
+      Virtual Pet 4_instruction: Add a behavior to your soap to make it draggable, then drag it over to clean the giraffe!
+      Virtual Pet 5_instruction: Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.
+      Virtual Pet 6_instruction: Add an apple that returns the giraffe back to regular size when they touch.
+      Virtual Pet Freeplay_instruction: 'Freeplay: What more can you make your giraffe do? '
       WhileAdventure_instruction: Our adventurer wants to collect coins. Can you help her grab as many as she can using only one remove 1 block?
       'Widget: Black and White Pixelation_instruction': Now make your own image! We've started you off with a 10x10 canvas but you can make it whatever size you want. Happy pixeling!
       'Widget: Black and White Pixelation_2018_instruction': Now make your own image! We've started you off with a 10x10 canvas but you can make it whatever size you want. Happy pixeling!
@@ -3155,7 +3184,7 @@ bg:
       courseA_harvester_seq10_instruction: Make sure to pick all the corn!
       courseA_harvester_seq11_instruction: Try it by yourself! Pick all the corn.
       courseA_harvester_seq12_instruction: Pick all the corn.
-      courseA_harvester_seq13_instruction: Play with these blocks to help the harvester pick **one** corn.
+      courseA_harvester_seq13_instruction: Play with these blocks to help the harvester pick corn.
       courseA_harvester_seq2_instruction: Use three `move west` blocks and one `pick corn` block to solve this puzzle.
       courseA_harvester_seq3_instruction: Use three `Move North` blocks and one `Pick Corn` block.
       courseA_harvester_seq4_instruction: Add one block to help the harvester pick the corn.
@@ -3167,7 +3196,8 @@ bg:
       courseA_maze_ramp2_2018_instruction: Snap all blocks together to finish your code, then click "Run".
       courseA_maze_ramp2a_2018_instruction: Snap all blocks together to finish your code, then click "Run".
       courseA_maze_ramp3_2018_instruction: There is one extra block that is going to cause the bird to crash. Throw it away by dragging it back to the toolbox.
-      courseA_maze_ramp3a_2018_instruction: Add a `North` block to the bottom of the other blocks to finish this code, then click "Run".
+      courseA_maze_ramp3a_2018_instruction: Add a `North` block to the bottom of the other blocks to finish this code, then click "▶ Run".
+      courseA_maze_ramp3b_2018_instruction: Add a `North` block to the bottom of the other blocks to finish this code, then click "Run".
       courseA_maze_ramp4_2018_instruction: Avoid TNT or feathers will fly!
       courseA_maze_ramp4a_2018_instruction: Can you figure out which block you need to add to the bottom of the other blocks to finish this code?
       courseA_maze_ramp5_2018_instruction: Avoid the TNT.
@@ -3226,9 +3256,10 @@ bg:
       courseA_toMakeLoopsVideo_Collector_instruction: Loops let you do whatever is inside over and over again!
       courseA_video_events_instruction: Need a better playlab/events combo
       courseA_video_events_2018_instruction: Need a better playlab/events combo
-      courseB_Scrat_ramp1_2018_instruction: For this puzzle, snap the blocks together and click "Run"!
-      courseB_Scrat_ramp2_2018_instruction: Snap all blocks together to finish your code, then click "Run".
-      courseB_Scrat_ramp3a_2018_instruction: Add a `North` block to the bottom of the other blocks to finish this code, then click "Run".
+      courseB_Scrat_ramp1_2018_instruction: For this puzzle, snap the blocks together and press "▶ Run"!
+      courseB_Scrat_ramp2_2018_instruction: Snap all blocks together to finish your code, then click "▶ Run".
+      courseB_Scrat_ramp3a_2018_instruction: Add a `North` block to the bottom of the other blocks to finish this code, then click "▶ Run".
+      courseB_Scrat_ramp3b_2018_instruction: "Drag the extra block back to the toolbox to throw it away.\n\n"
       courseB_Scrat_ramp4a_2018_instruction: Can you figure out which block you need to add to the bottom of the other blocks to finish this code?
       courseB_Scrat_ramp5a_2018_instruction: Get the bird to the pig!
       courseB_artist_loops1_instruction: This is a new type of puzzle called "Artist". Play with the level and draw something fun.
@@ -4581,7 +4612,7 @@ bg:
       course_playlab_variables1_instruction: This is Pirate Pegleg.  He's awfully hard to understand these days!
       course_playlab_variables2_instruction: "Now, decode Pirate Pegleg's speech by changing the value of the variables in just two places! \n"
       course_playlab_variables3_instruction: "Now, decode Pirate Pegleg's speech by changing the value of the variables in just two places! \n"
-      coursea_maze_ramp1_2018_instruction: For this puzzle, snap the blocks together and click "Run"!
+      coursea_maze_ramp1_2018_instruction: For this puzzle, snap the blocks together and click "▶ Run"!
       coursef_explore_CYOA_Witch_instruction: You can do whatever you want in play lab! Here's an example of choose your own adventure story in play lab.
       coursef_explore_playlab2_instruction: You can do whatever you want in play lab! Here's an example of story in play lab.
       coursef_explore_playlab_cat_game_instruction: You can do whatever you want in play lab! Here's an example of game you can make.

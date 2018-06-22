@@ -409,6 +409,7 @@ nl:
     email_confirm_needed_required: 'Je e-mailadres %{email} is nog niet bevestigd:'
     email_confirm_wrong_email: "(Verkeerde e-mailadres?)"
     email_resend_confirm: Verstuur de bevestigingsinstructie nog een keer
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(laat leeg als je het niet wilt veranderen)"
     current_password_hint: "(we hebben je huidige wachtwoord nodig om je veranderingen
       te bevestigen)"

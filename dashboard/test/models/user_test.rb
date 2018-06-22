@@ -745,7 +745,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'changing oauth user from student to teacher with same email is allowed' do
-    user = create :google_oauth2_student, email: 'email@new.xx'
+    user = create :student, :unmigrated_google_sso, email: 'email@new.xx'
 
     assert user.provider == 'google_oauth2'
 
@@ -759,7 +759,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'changing oauth user from student to teacher with different email is not allowed' do
-    user = create :google_oauth2_student
+    user = create :student, :unmigrated_google_sso
 
     assert user.provider == 'google_oauth2'
 
@@ -1171,6 +1171,20 @@ class UserTest < ActiveSupport::TestCase
     )
   end
 
+  test 'sponsored? is true for user with sponsored provider' do
+    student = create :student, provider: User::PROVIDER_SPONSORED
+    assert student.sponsored?
+  end
+
+  test 'sponsored? is true for migrated user with no authentication options' do
+    student = create :student_in_picture_section
+    student.migrate_to_multi_auth
+    student.reload
+
+    assert_empty student.authentication_options
+    assert student.sponsored?
+  end
+
   test 'can_edit_password? is true for user with password' do
     assert @student.can_edit_password?
   end
@@ -1181,8 +1195,47 @@ class UserTest < ActiveSupport::TestCase
     refute user.can_edit_password?
   end
 
+  test 'can_edit_password? is true for migrated student without a password' do
+    student = create :student, :with_migrated_email_authentication_option, encrypted_password: ''
+    assert student.can_edit_password?
+  end
+
+  test 'can_edit_password? is true for migrated teacher without a password' do
+    teacher = create :teacher, :with_migrated_email_authentication_option, encrypted_password: ''
+    assert teacher.can_edit_password?
+  end
+
+  test 'can_edit_password? is false for migrated user with no authentication options' do
+    student = create :student_in_picture_section
+    student.migrate_to_multi_auth
+    student.reload
+
+    assert_empty student.authentication_options
+    refute student.can_edit_password?
+  end
+
   test 'can_edit_email? is true for user with password' do
     assert @student.can_edit_email?
+  end
+
+  test 'can_edit_email? is false for user without password' do
+    user = create :student
+    user.update_attribute(:encrypted_password, '')
+    refute user.can_edit_email?
+  end
+
+  test 'can_edit_email? is false for migrated user with no authentication options' do
+    student = create :student_in_picture_section
+    student.migrate_to_multi_auth
+    student.reload
+
+    assert_empty student.authentication_options
+    refute student.can_edit_email?
+  end
+
+  test 'can_edit_email? is true for migrated user with at least one authentication option' do
+    teacher = create :teacher, :with_migrated_email_authentication_option
+    assert teacher.can_edit_email?
   end
 
   test 'can change own user type as a student with a password' do
@@ -1192,7 +1245,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'can change own user type as an oauth student' do
-    student = create :google_oauth2_student
+    student = create :student, :unmigrated_google_sso
     assert student.can_change_own_user_type?
   end
 
@@ -1286,12 +1339,6 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
-  test 'can_edit_email? is false for user without password' do
-    user = create :student
-    user.update_attribute(:encrypted_password, '')
-    refute user.can_edit_email?
-  end
-
   test 'update_with_password does not require current password for users without passwords' do
     student = create(:student)
     student.update_attribute(:encrypted_password, '')
@@ -1311,6 +1358,139 @@ class UserTest < ActiveSupport::TestCase
     )
 
     assert_equal name, student.name
+  end
+
+  test 'update_primary_authentication_option is false if email and hashed_email are nil' do
+    user = create :user
+    successful_save = user.update_primary_authentication_option(user: {email: nil, hashed_email: nil})
+    refute successful_save
+  end
+
+  test 'update_primary_authentication_option is false if email is nil for teacher' do
+    teacher = create :teacher
+    successful_save = teacher.update_primary_authentication_option(user: {email: nil})
+    refute successful_save
+  end
+
+  test 'update_primary_authentication_option adds new email option for teacher if no matches exist' do
+    teacher = create :teacher, :with_migrated_google_authentication_option
+
+    assert_equal 1, teacher.authentication_options.count
+    refute_nil teacher.primary_authentication_option
+
+    successful_save = teacher.update_primary_authentication_option(user: {email: 'example@email.com'})
+    teacher.reload
+    assert successful_save
+    assert_equal 2, teacher.authentication_options.count
+    assert_equal 'example@email.com', teacher.primary_authentication_option.email
+  end
+
+  test 'update_primary_authentication_option replaces email option for teacher if one already exists' do
+    teacher = create :teacher, :with_migrated_email_authentication_option
+
+    assert_equal 1, teacher.authentication_options.count
+    refute_nil teacher.primary_authentication_option
+
+    successful_save = teacher.update_primary_authentication_option(user: {email: 'second@email.com'})
+    teacher.reload
+    assert successful_save
+    assert_equal 1, teacher.authentication_options.count
+    assert_equal 'second@email.com', teacher.primary_authentication_option.email
+  end
+
+  test 'update_primary_authentication_option oauth option replaces any existing email options for teacher' do
+    teacher = create :teacher, :with_migrated_google_authentication_option
+    existing_email = teacher.primary_authentication_option.email
+
+    assert_equal 1, teacher.authentication_options.count
+    refute_nil teacher.primary_authentication_option
+
+    # Update primary to a different email
+    teacher.update_primary_authentication_option(user: {email: 'example@email.com'})
+    teacher.reload
+    assert_equal 2, teacher.authentication_options.count
+    assert_equal 'example@email.com', teacher.primary_authentication_option.email
+
+    # Change back to original oauth email
+    successful_save = teacher.update_primary_authentication_option(user: {email: existing_email})
+    teacher.reload
+    assert successful_save
+    assert_equal 1, teacher.authentication_options.count
+    assert_equal existing_email, teacher.primary_authentication_option.email
+  end
+
+  test 'update_primary_authentication_option recalculates hashed_email if both email and hashed_email are supplied for teacher' do
+    teacher = create :teacher, :with_migrated_email_authentication_option
+
+    assert_equal 1, teacher.authentication_options.count
+    refute_nil teacher.primary_authentication_option
+
+    successful_save = teacher.update_primary_authentication_option(user: {email: 'first@email.com', hashed_email: User.hash_email('second@email.com')})
+    assert successful_save
+    assert_equal 1, teacher.authentication_options.count
+    assert_equal User.hash_email('first@email.com'), teacher.primary_authentication_option.hashed_email
+  end
+
+  test 'update_primary_authentication_option adds new email option for student if no matches exist' do
+    student = create :student, :with_migrated_google_authentication_option
+
+    assert_equal 1, student.authentication_options.count
+    refute_nil student.primary_authentication_option
+
+    hashed_new_email = User.hash_email('example@email.com')
+    successful_save = student.update_primary_authentication_option(user: {hashed_email: hashed_new_email})
+    student.reload
+    assert successful_save
+    assert_equal 2, student.authentication_options.count
+    assert_equal hashed_new_email, student.primary_authentication_option.hashed_email
+  end
+
+  test 'update_primary_authentication_option replaces email option for student if one already exists' do
+    student = create :student, :with_migrated_email_authentication_option
+
+    assert_equal 1, student.authentication_options.count
+    refute_nil student.primary_authentication_option
+
+    hashed_new_email = User.hash_email('second@email.com')
+    successful_save = student.update_primary_authentication_option(user: {hashed_email: hashed_new_email})
+    student.reload
+    assert successful_save
+    assert_equal 1, student.authentication_options.count
+    assert_equal hashed_new_email, student.primary_authentication_option.hashed_email
+  end
+
+  test 'update_primary_authentication_option oauth option replaces any existing email options for student' do
+    student = create :student, :with_migrated_google_authentication_option, email: 'student@email.com'
+    existing_hashed_email = student.primary_authentication_option.hashed_email
+
+    assert_equal 1, student.authentication_options.count
+    refute_nil student.primary_authentication_option
+
+    # Update primary to a different email
+    hashed_new_email = User.hash_email('example@email.com')
+    student.update_primary_authentication_option(user: {hashed_email: hashed_new_email})
+    student.reload
+    assert_equal 2, student.authentication_options.count
+    assert_equal hashed_new_email, student.primary_authentication_option.hashed_email
+
+    # Change back to original oauth email
+    successful_save = student.update_primary_authentication_option(user: {hashed_email: existing_hashed_email})
+    student.reload
+    assert successful_save
+    assert_equal 1, student.authentication_options.count
+    assert_equal existing_hashed_email, student.primary_authentication_option.hashed_email
+  end
+
+  test 'update_primary_authentication_option recalculates hashed_email if both email and hashed_email are supplied for student' do
+    student = create :student, :with_migrated_email_authentication_option
+
+    assert_equal 1, student.authentication_options.count
+    refute_nil student.primary_authentication_option
+
+    successful_save = student.update_primary_authentication_option(user: {email: 'first@email.com', hashed_email: User.hash_email('second@email.com')})
+    assert successful_save
+    assert_equal 1, student.authentication_options.count
+    assert_equal User.hash_email('first@email.com'), student.primary_authentication_option.hashed_email
   end
 
   test 'track_proficiency adds proficiency if necessary and no hint used' do
@@ -2536,10 +2716,10 @@ class UserTest < ActiveSupport::TestCase
     refute student.stage_extras_enabled?(other_script)
 
     assert teacher.stage_extras_enabled?(script)
-    refute teacher.stage_extras_enabled?(other_script)
+    assert teacher.stage_extras_enabled?(other_script)
 
     refute (create :student).stage_extras_enabled?(script)
-    refute (create :teacher).stage_extras_enabled?(script)
+    assert (create :teacher).stage_extras_enabled?(script)
   end
 
   class HiddenIds < ActiveSupport::TestCase
@@ -2896,5 +3076,36 @@ class UserTest < ActiveSupport::TestCase
     user = create :teacher
     user.update(permission: UserPermission::HIDDEN_SCRIPT_ACCESS)
     assert user.hidden_script_access?
+  end
+
+  test 'user_levels_by_user_by_level' do
+    users = (1..3).map {create :user}
+    script = Script.twenty_hour_script
+    script_levels = script.script_levels.first(2)
+    script_levels.each do |script_level|
+      users.first(2).each do |user|
+        create :user_level, user: user, level: script_level.level, script: script
+      end
+    end
+
+    result = nil
+    assert_queries(1) do
+      result = User.user_levels_by_user_by_level(users, script)
+    end
+
+    assert_equal(
+      {
+        users[0].id => {
+          script_levels[0].level_id => UserLevel.find_by(user: users[0], level: script_levels[0].level),
+          script_levels[1].level_id => UserLevel.find_by(user: users[0], level: script_levels[1].level)
+        },
+        users[1].id => {
+          script_levels[0].level_id => UserLevel.find_by(user: users[1], level: script_levels[0].level),
+          script_levels[1].level_id => UserLevel.find_by(user: users[1], level: script_levels[1].level)
+        },
+        users[2].id => {}
+      },
+      result
+    )
   end
 end

@@ -405,6 +405,7 @@ eu:
     email_confirm_needed_required: "%{email} zure emaila ez da baieztatu:"
     email_confirm_wrong_email: "(Email helbide okerra?)"
     email_resend_confirm: Baieztatzeko jarraibideak birbidali
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(ez baduzu aldatu nahi, bete gabe utzi)"
     current_password_hint: "(zure egungo pasahitza behar dugu aldaketak baieztatzeko)"
     delete: Zure kontua ezabatu

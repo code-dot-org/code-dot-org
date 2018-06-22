@@ -354,6 +354,7 @@ ms:
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
     email_confirm_wrong_email: '(Wrong email address?)'
     email_resend_confirm: 'Hantar semula arahan pengesahan'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(biarkan kosong jika anda tidak mahu mengubahnya)"
     current_password_hint: '(kami memerlukan kata laluan semasa anda untuk mengesahkan perubahan anda)'
     delete: 'Delete Account'

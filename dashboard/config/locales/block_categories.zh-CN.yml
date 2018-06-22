@@ -29,9 +29,10 @@ zh-CN:
       Numbers: 数字
       Input: 输入
       Default: 默认
+      World: 世界
       Sprites: 精灵
       Behaviors: 行为
-      World: 世界
+      Advanced: Advanced
       Sprite: 精灵
       Brush: 刷子
       Make Sprite: 制作精灵
@@ -46,6 +47,6 @@ zh-CN:
       Foo: Foo
       Name: 姓名
       NEW BLOCKS: 新模块
-      'Functions ': 'Functions '
+      'Functions ': 函数
       Game/Score: 游戏/得分
       Function: 函数

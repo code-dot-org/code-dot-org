@@ -167,7 +167,7 @@ export default class Results extends React.Component {
           {
             hasResponses && responses[facilitatorId].map((response, i) => (
               <li key={i} style={styles.facilitatorResponseList}>
-                {response}
+                {he.decode(response)}
               </li>
             ))
           }

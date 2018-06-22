@@ -3,29 +3,29 @@ ja:
   data:
     function_names:
       x: x
-      details: details
-      draw eyebrow: draw eyebrow
-      draw pupil: draw pupil
+      details: 詳細
+      draw eyebrow: まゆげを かく
+      draw pupil: ひとみを かく
       draw a circle: 円 を かく
-      draw a car: draw a car
-      draw_rect: draw_rect
-      draw square: draw square
+      draw a car: 車を かく
+      draw_rect: 四角形を かく
+      draw square: 正方形を かく
       jump to controller top left: jump to controller top left
-      jump to middle: jump to middle
-      draw a button: draw a button
+      jump to middle: ちゅうおうに とぶ
+      draw a button: ボタンを かく
       draw cord: draw cord
       draw R pad: draw R pad
-      draw left leg: draw left leg
-      draw right leg: draw right leg
-      draw body and arms: draw body and arms
-      draw a head: draw a head
+      draw left leg: 左足を かく
+      draw right leg: 右足を かく
+      draw body and arms: 体と うでを かく
+      draw a head: あたまを かく
       draw sitting stick figure: draw sitting stick figure
-      draw head: draw head
-      draw arms: draw arms
-      jump to neck: jump to neck
-      draw O: draw O
-      draw D: draw D
-      draw E: draw E
+      draw head: あたまを かく
+      draw arms: うでを かく
+      jump to neck: くびに とぶ
+      draw O: Oを かく
+      draw D: Dを かく
+      draw E: Eを かく
       draw ear stems: draw ear stems
       big gear: big gear
       small gear: small gear
@@ -46,19 +46,19 @@ ja:
       get 7: get 7
       move and get 3: move and get 3
       draw a tree: 木 を かく
-      draw triangle: draw triangle
-      draw circle: draw circle
+      draw triangle: 三角形を かく
+      draw circle: 円 を かく
       draw goal: draw goal
       graph: graph
-      draw waves: draw waves
-      draw a wave: draw a wave
-      draw a small triangle: draw a small triangle
-      draw a medium triangle: draw a medium triangle
-      draw a large triangle: draw a large triangle
-      draw a big triangle: draw a big triangle
+      draw waves: ふくすうの なみを かく
+      draw a wave: なみを かく
+      draw a small triangle: ちいさな 三角形を かく
+      draw a medium triangle: 中くらいの 三角形を かく
+      draw a large triangle: おおきな 三角形を かく
+      draw a big triangle: とてもおおきな 三角形を かく
       draw a triangle: 三角形を描画します。
       draw a house: 家 を かく
-      check purple flower: check purple flower
+      check purple flower: むらさきの 花を チェックする
       check flower make honey: check flower make honey
       get nectar or make honey: get nectar or make honey
       make 3 honey: make 3 honey
@@ -66,7 +66,7 @@ ja:
       make all honey: make all honey
       draw a star: 星形 を かく
       game has been won: game has been won
-      draw: draw
+      draw: かく
       draw bit: draw bit
       draw a polygon: draw a polygon
       draw a shape: draw a shape

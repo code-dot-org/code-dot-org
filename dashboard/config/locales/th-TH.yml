@@ -302,8 +302,8 @@ th:
         artist: วาดอะไรสักอย่างสิ
         calculate: Calculate Something
         applab: สร้างแอพ "ห้องทดลองแอพ"
-        gamelab: Make a Game Lab project
-        weblab: Make a Web Lab (beta) project
+        gamelab: สร้างโปรเจคเกมแลป
+        weblab: สร้างโปรเจคเว็บแลป (เบต้า)
       home: Home
       my_dashboard: My Dashboard
       courses: คอร์ส
@@ -397,6 +397,7 @@ th:
     email_confirm_needed_required: อีเมล์ %{email} ของคุณยังไม่ได้รับการยืนยัน：
     email_confirm_wrong_email: "(อีเมล์ไม่ถูกต้องหรือเปล่า?)"
     email_resend_confirm: ส่งคำแนะนำการยืนยันตัวอีกครั้ง
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(ปล่อยว่างไว้ถ้าคุณไม่ต้องการเปลี่ยน)"
     current_password_hint: "(we need your current password to confirm your changes)"
     delete: Delete your account
@@ -665,7 +666,7 @@ th:
     direction: Start Direction (in degrees)
   video:
     tab: วิดีโอ
-    notes: ไม่มีวิดีโอเหรอ? แสดงบันทึกย่อแทนซิ
+    notes: ไม่มีวิดีโอหรือ? อ่านบันทึกย่อแทนก็ได้นะ
     notes_coming_soon: เร็ว ๆ นี้จะมีบันทึกย่อสำหรับวิดีโอนี้
     autoplay_option: วิดีโอเริ่มเล่นอัตโนมัติ
     download: ดาวน์โหลดวิดีโอ
@@ -703,7 +704,7 @@ th:
     title: Click 'Run' to see my program in action
     bounce_og_title: Check out my Bounce Game
     flappy_og_title: Check out my Flappy Game
-    studio_og_title: Check out my Play Lab App
+    studio_og_title: มาลองแอปเพลย์แลป ของฉัน
     check_out_what_i_made: Check out what I made
     og_description: I wrote the code myself with Code.org
     phone_number_not_allowed: It looks like there is a phone number in it. Try changing
@@ -774,14 +775,14 @@ th:
     starwars:
       title: Star Wars
     infinity:
-      title: Infinity Play Lab
+      title: เรื่องราวและเกม
       body: Use Play Lab to create a story or game starring Disney Infinity characters.
     minecraft:
       title: Minecraft
       body: Explore a Minecraft world through code.
     minecraft2016:
       title: Minecraft
-      body: เขียนโปรแกรมให้กับบรรดาเหล่าสัตว์ต่างๆและตัวละครอื่นๆเพื่อสร้างเกม Minecraft
+      body: เขียนโปรแกรมให้กับบรรดาเหล่าสัตว์ต่างๆและนักแสดงอื่นๆเพื่อสร้างเกม Minecraft
         ในแบบฉบับของคุณเอง
     hero:
       title: Minecraft
@@ -830,7 +831,7 @@ th:
     caption_by_name_age: by %{name}, age %{age}
     caption_time_ago: "%{time_ago} ago"
     header: แกลเลอรี่
-    header_playlab: Play Lab
+    header_playlab: เรื่องราวและเกม
     header_artist: ศิลปิน
     report_abuse: รายงานการละเมิด
   landing:
@@ -886,8 +887,8 @@ th:
     submit-complete-body: You cannot edit your assessment after submitting it.  Are
       you sure?
   match:
-    wrong_title: Incorrect solution
-    wrong_body: The solution you've entered is not correct.  Please try again!
+    wrong_title: คำตอบไม่ถูกต้อง
+    wrong_body: โซลูชันที่คุณใส่ไม่ถูกต้อง กรุณาลองอีกครั้ง
     correct_title: Correct
     correct_body: เป็นคำตอบที่ถูกต้อง
   contract_match:
@@ -1009,8 +1010,8 @@ th:
     exit: Return to Course
     my_projects: โปรเจคของฉัน
     project_gallery: Project Gallery
-    publish: Publish
-    unpublish: Unpublish
+    publish: เผยแพร่
+    unpublish: ไม่เผยแพร่
     share: แบ่งปัน
     share_title: Share your project
     share_copy_link: 'Copy the link:'
