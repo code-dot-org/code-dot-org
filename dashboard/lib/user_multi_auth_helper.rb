@@ -17,7 +17,7 @@ module UserMultiAuthHelper
 
     unless sponsored?
       self.primary_authentication_option =
-        if %w(clever facebook google_oauth2 powerschool windowslive).include? provider
+        if AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include? provider
           AuthenticationOption.new(
             user: self,
             email: email,
@@ -35,7 +35,7 @@ module UserMultiAuthHelper
             user: self,
             email: email,
             hashed_email: hashed_email || '',
-            credential_type: 'email',
+            credential_type: AuthenticationOption::EMAIL,
           )
         end
     end
