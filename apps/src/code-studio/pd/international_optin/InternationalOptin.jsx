@@ -1,9 +1,13 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import FormController from '../form_components/FormController';
 import FormComponent from '../form_components/FormComponent';
 import {FormGroup} from 'react-bootstrap';
 
 export default class InternationalOptin extends FormController {
+  static propTypes = {
+    accountEmail: PropTypes.string.isRequired
+  };
+
   /**
    * @override
    */
@@ -29,9 +33,23 @@ export default class InternationalOptin extends FormController {
       InternationalOptinComponent
     ];
   }
+
+  /**
+   * @override
+   */
+  getPageProps() {
+    return {
+      ...super.getPageProps(),
+      accountEmail: this.props.accountEmail
+    };
+  }
 }
 
 class InternationalOptinComponent extends FormComponent {
+  static propTypes = {
+    accountEmail: PropTypes.string.isRequired
+  };
+
   render() {
     return (
       <FormGroup>
@@ -59,26 +77,28 @@ class InternationalOptinComponent extends FormComponent {
             required: true
           })
         }
+
         {
           this.buildFieldGroup({
             name: 'email',
             label: 'Email',
             type: 'text',
-            required: true
+            value: this.props.accountEmail,
+            readOnly: true
           })
         }
+
         {
           this.buildFieldGroup({
             name: 'emailAlternate',
             label: 'Alternate Email',
-            type: 'text',
-            required: true
+            type: 'text'
           })
         }
         {
           this.buildButtonsFromOptions({
             name: 'gender',
-            label: 'Gender identity',
+            label: 'Gender Identity',
             type: 'radio',
             required: true
           })
@@ -129,7 +149,7 @@ class InternationalOptinComponent extends FormComponent {
             name: 'resources',
             label: 'Which of the following CS education resources do you use?',
             type: 'check',
-            required: true,
+            required: false,
             includeOther: true
           })
         }
@@ -138,7 +158,7 @@ class InternationalOptinComponent extends FormComponent {
             name: 'robotics',
             label: 'Which of the following robotics resources do you use?',
             type: 'check',
-            required: true,
+            required: false,
             includeOther: true
           })
         }

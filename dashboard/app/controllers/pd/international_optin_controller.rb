@@ -3,9 +3,13 @@ class Pd::InternationalOptinController < ApplicationController
 
   # GET /pd/international_optins/new
   def new
+    return render '/pd/application/teacher_application/logged_out' unless current_user
+    return render '/pd/application/teacher_application/not_teacher' unless current_user.teacher?
+
     @script_data = {
       props: {
         options: Pd::InternationalOptin.options.camelize_keys,
+        accountEmail: current_user.email,
         apiEndpoint: "/api/v1/pd/international_optins"
       }.to_json
     }
