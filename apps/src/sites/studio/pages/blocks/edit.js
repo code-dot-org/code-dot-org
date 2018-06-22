@@ -15,6 +15,7 @@ import defaultSprites from '@cdo/apps/gamelab/defaultSprites.json';
 import { getStore, registerReducers } from '@cdo/apps/redux';
 
 let nameField;
+
 $(document).ready(() => {
   registerReducers({animationList: animationListModule});
   getStore().dispatch(setInitialAnimationList(defaultSprites));
@@ -26,16 +27,13 @@ $(document).ready(() => {
     typeHints: true,
   });
 
+  let submitButton = document.querySelector('#block_submit');
   initializeCodeMirrorForJson('block_config', { onChange });
-  const helperCodeEditor = initializeCodeMirror('block_helper_code', 'javascript');
-
-  document.querySelector('#block_submit').addEventListener('click', event => {
-    try {
-      const code = helperCodeEditor.getValue();
-      eval(`(function () { ${code} })`); // eslint-disable-line no-eval
-    } catch (error) {
-      alert(`Error in helper code:\n\n${error}`);
-      event.preventDefault();
+  initializeCodeMirror('block_helper_code', 'javascript', null, null, (_, errors) => {
+    if (errors.length) {
+      submitButton.setAttribute('disabled', 'disabled');
+    } else {
+      submitButton.removeAttribute('disabled');
     }
   });
 });

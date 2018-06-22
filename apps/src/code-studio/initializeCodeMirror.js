@@ -40,7 +40,7 @@ const INVALID_COLOR = '#d00';
  * @param {booblen} [attachments] - whether to enable attachment uploading in
  *        this editor.
  */
-function initializeCodeMirror(target, mode, callback, attachments) {
+function initializeCodeMirror(target, mode, callback, attachments, onUpdateLinting) {
   let updatePreview;
 
   // Code mirror parses html using xml mode
@@ -88,7 +88,9 @@ function initializeCodeMirror(target, mode, callback, attachments) {
     showTrailingSpace: true,
     lineWrapping: true,
     gutters: ["CodeMirror-lint-markers"],
-    lint: true,
+    lint: {
+      onUpdateLinting,
+    },
   });
   if (callback) {
     editor.on('change', callback);
