@@ -125,9 +125,9 @@ module Pd
       # @return [Boolean] true if this submission should be skipped
       def skip_submission?(form_id, processed_answers)
         environment = processed_answers['environment']
-        raise "Missing required environment field" unless environment
 
-        # Skip other environments. Only keep this environment.
+        # Skip other environments, and anything without an environment value.
+        # Only keep this environment.
         return true if environment != Rails.env
 
         # Is it a duplicate? These will be prevented in the future, but for now log and skip
@@ -166,7 +166,6 @@ module Pd
     # Useful for filling in placeholder response entries (submission id but no answers)
     def sync_from_jotform
       raise 'Missing submission id' unless submission_id.present?
-      self.class.sync_questions_from_jotform form_id
 
       submission = JotForm::Translation.new(form_id).get_submission(submission_id)
       update!(answers: submission[:answers].to_json)
@@ -220,7 +219,7 @@ module Pd
     end
 
     def answers=(value)
-      write_attribute :answers, value
+      write_attribute :answers, value.strip_utf8mb4
       clear_memoized_values
     end
 

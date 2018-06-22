@@ -276,6 +276,7 @@ zh-CN:
       Alien Defender_markdown_instruction: "**项目创意**：在游戏实验室创建一个防守游戏！"
       Alien Defender_2018_markdown_instruction: "**项目想法**: 在游戏实验室创建一个防守游戏！"
       AllTheThings Applab - Turtle move with button_markdown_instruction: "# Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for the allthethings script).\n # Your First Interactive App!\n<img src='https://images.code.org/3fad83213ae72073251c4d5abc1f048a-image-1444060521578.png' style='float: right; width: 250px'> A new group of commands has been added to the toolbox called **UI Controls** (User Interface Controls) which are commands that let you interact with, and respond to, the user of your app. To keep it simple, we'll start with just two commands: \n* `onEvent` which let's you run a function in response to some event occuring (such as a button click)\n* `button` which puts a button on the screen\n\n# Do This\nYou will replicate the small app, shown below, which makes the turtle move with a button click. You will do three things:\n* Add a `button`\n* Add an `onEvent` block\n* Add `moveForward` inside the the onEvent function block\n\nHere's what you should do - you can come back to watch this as many times as you need to get it right.\n<img src=\"https://images.code.org/1cdc8cfbcef2a43f84b11ebdf14aed0c-image-1444061731350.gif\" style=\"border: solid 1px black; width: 500px; margin: auto\">"
+      AllTheThings Applab DesignModeDefault_markdown_instruction: "<img src=\"https://images.code.org/117a2a8e098760173f16048fde721295-image-1479829058899.gif\" style=\"float: right; width: 150px\">\n## You try it -- Text Password Checker\n\n**Key idea**: You can use `==` to compare strings as well as numbers.  \n\n* Let's use an if-statement in an event handler to compare text that a user inputs in a UI element.\n\n**The setup:**\n* Note the setup in Design Mode\n* There are two images: a red lock, and a green \"unlock\".\n* The green \"unlock\" is *hidden* at the start.\n\n## Do this:\n\n**Add an if-statement to the event handler to check the password and display the \"unlock\" only if the password is correct** \n\n* You can use `==` to compare the text you get from the *password_input* text box and a string you want to use as the password. The boolean expression you should use should look like this:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n* If the user entered the correct password then **show** the green \"unlock\" and **hide** the red lock.\n\\t* We've provide the code to hide and show the images. You just need to add the if-statement.\n* Otherwise do nothing.  They can try again.\n\n"
       'AllTheThings: Pixelation - Lesson 14 - Make the Letter A_markdown_instruction': "<img\nalign=\"right\" src=\"https://code.org/images/cspunit1/letterA.png\" width=\"150\"\nhspace=\"20\">\\r\n#任务1： 做一个3x5的字母 \"A\"\\r\n从试着用像素化的小工具来重建3x5的字母\"A\"开始\\r\n\\r\n这幅图从*不正确*的维度开始的。你的第一个任务是将第二个字节设置成5，即：0000 0101，然后你能开始键入像素数据来创建A。\\r            "
       'AllTheThings: Pixelation - Lesson 15 - Color Shades 4x4_markdown_instruction': "# 像素: 任务 3 \\r\n<img src = \"https://code.org/images/cspunit1/ColorTask3.png\" align=right width=200 hspace=20> \\r\n* * 方向: ** 我们开始让你看麦迪在视频中创建的4x4 图像.\\r\n\\r\n您的任务是用 *每像素12位* 来填充 4x4 网格的颜色。最后的结果应该看起来像是 (但不完全一样) 显示在右边的图像。 \\r\n\\r\n有以下要求: \\r\n \\r\n\n* 第1行-用红色填充阴影。\\r\n* 第2行-填充绿色阴影。\\r\n* 第3行-填充蓝色阴影。\\r\n* 第4行-填充灰色阴影。\\r\n"
       'AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color_markdown_instruction': "#\n颜色像素: 任务 1 \n** 方向: **\n\n* 我们请您以玛蒂创建的 4x2 图像开始， 但我们已经把最后两个方块拿掉。\n* 找到丢失的两个颜色并对其进行编码来完成图像。\n"
@@ -5023,7 +5024,7 @@ zh-CN:
         Before you tackle writing this program, you'll need to figure out how to check multiple conditions at once.
         
         * **Brainstorm** with your neighbors ways you might check for more than one condition.
-        * **Share** back with the whole class so you can see other potential approaches.
+        * **Share** back with other classmates so you can see other potential approaches.
         * **Explore** the toolbox for blocks that might help (pay extra attention to the Math and Control drawers).
         * **Program** your proposed solution.
         * **Test** your program to make sure it's actually checking all of the conditions you intended.
@@ -6146,7 +6147,7 @@ zh-CN:
         添加一些随机数到移动过程里。\r
         * 添加第二个精灵，并用另一组键来控制它（一般大家会用"w", "a", "s", 和 "d"）。\r
         * 在背景中加一些形状来让场景看起来更有趣。
-      CSD U3 Keyboard Input Challenge_2018_markdown_instruction: |-
+      CSD U3 Keyboard Input Challenge_2018_markdown_instruction: |
         # 挑战\r
         _在尝试挑战前，先与你的老师商量一下。_\r
         \r
@@ -6360,7 +6361,7 @@ zh-CN:
         \r
         \r
         
-      CSD U3 L3 Freeplay_2018_markdown_instruction: |+
+      CSD U3 L3 Freeplay_2018_markdown_instruction: |
         # 自由发挥\r
         \r
         用你学过的知识来创建你喜欢的东西。当你完成后，可以点击 ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
@@ -6444,6 +6445,10 @@ zh-CN:
       CSD U3 Mouse Input Bee 1_2018_markdown_instruction: "<img src=\"https://images.code.org/d2092b4f2debc336f963d48bd6cf4973-image-1477681020928.gif\"\nstyle=\"float:right\">\\r\n\\r\n# 鼠标的X和Y\\r\n\\r\n最简单的输入方式之一，就是让一个精灵跟随用户的鼠标位置。\n**你能通过`World.mouseX`和`World.mouseY`来获得鼠标的x、y值。**这和你以前学的精灵的属性是一致的。`World`是目标对象的名字。`mouseX`和`mouseY`是属性的名字。\\r\n\\r\n#\n这样做\\r\n\\r\n让蜜蜂精灵在游戏区域跟随鼠标。\\r\n\\r\n* 蜜蜂图片已经帮你加到了动画标签页。\\r\n* 在窗口中间画出蜜蜂精灵。\\r\n*\n在画图循环里更新精灵的位置来跟随鼠标的位置。：\\r\n\\t* 将精灵的x位置设置为`World.mouseX`的值。\\r\n*\n将精灵的y位置设置为`World.mouseY`的值。\\r\n* 运行程序来看看它是否工作。\\r\n"
       CSD U3 Mouse Input Bee 2_markdown_instruction: "# 随机围绕某点\\r\n\\r\n<img\nsrc=\"https://images.code.org/d124946bb9e01a3623078c2a87beea8c-image-1477681483067.gif\"\nstyle=\"float:right\">\\r\n\\r\n现在你能让蜜蜂跟随鼠标了，让我们像右边的图一样，让蜜蜂在鼠标周围飞行。要做到这样，你需要**增加一个-50到50的随机数到`mouseX`或`mouseY`上**。\\r\n\\r\n# 这样做\\r\n你已经有了一个跟随鼠标的蜜蜂精灵了。\\r\n\\r\n* 更新x和y的位置，让它随机的靠近鼠标。\\r\n\\t* 添加一个-50到50的随机数到`World.mouseX`和`World.mouseY`。\\r\n* 如果需要的话，可以用`World.frameRate`模块来减缓动画，找到最佳帧率。\\r\n\\r\n_挑战\n再**增加3只蜜蜂**以同样的方法来跟随鼠标，从而形成蜂群。_"
       CSD U3 Mouse Input Bee 2_2018_markdown_instruction: "# 随机围绕某点\\r\n\\r\n<img\nsrc=\"https://images.code.org/d124946bb9e01a3623078c2a87beea8c-image-1477681483067.gif\"\nstyle=\"float:right\">\\r\n\\r\n现在你能让蜜蜂跟随鼠标了，让我们像右边的图一样，让蜜蜂在鼠标周围飞行。要做到这样，你需要**增加一个-50到50的随机数到`mouseX`或`mouseY`上**。\\r\n\\r\n# 这样做\\r\n你已经有了一个跟随鼠标的蜜蜂精灵了。\\r\n\\r\n* 更新x和y的位置，让它随机的靠近鼠标。\\r\n\\t* 添加一个-50到50的随机数到`World.mouseX`和`World.mouseY`。\\r\n* 如果需要的话，可以用`World.frameRate`模块来减缓动画，找到最佳帧率。\\r\n\\r\n_挑战\n再**增加3只蜜蜂**以同样的方法来跟随鼠标，从而形成蜂群。_"
+      CSD U3 Movement Fish challenge_2018_markdown_instruction: |-
+        # More fish!
+        
+        This time, try updating the the rotation of each fish as it moves to make it look even more like it is swimming.  You can also try adding extra features, such as bubbles that rise up through the water.
       CSD U3 Movement Fish_markdown_instruction: |-
         <img src="https://images.code.org/7852ab38a8222ee827edeff2767e8efd-image-1492037897236.gif"
         style="float: right; margin-left: 20px;">\r
@@ -8756,7 +8761,7 @@ zh-CN:
         \r
         \r
         
-      CSD U3 challenge face_2018_markdown_instruction: |+
+      CSD U3 challenge face_2018_markdown_instruction: |
         <img src="https://images.code.org/aa5aedbcfec082c2886d88b565e5fc09-image-1495732712591.png"
         style="float: right; max-width: 200px; border: 1px solid grey">\r
         # 挑战：脸\r
@@ -8778,7 +8783,7 @@ zh-CN:
         _在开始任何挑战前，先问问你的老师。_\r
         \r
         你能只用`rect` （矩形）和`ellipse`（椭圆）命令创建一个新形状吗？例如，用圆圈组成的三角形？
-      CSD U3 challenge new shape_2018_markdown_instruction: |-
+      CSD U3 challenge new shape_2018_markdown_instruction: |
         <img src="https://images.code.org/cc725698ade5282931002db3bf762cbc-image-1495733456927.png"
         style="float: right; max-width: 200px; border: 1px solid grey">\r
         \r
@@ -9925,11 +9930,11 @@ zh-CN:
         
         After you've written the code, test it by changing the starting value of your variables and making sure the correct background shows up.
       CSD U3 game choose background_2018_markdown_instruction: |
-        # Choose your Backgrounds
+        # 选择你的背景
         
-        Now that you have the backgrounds that you need, you'll write the code to choose the correct background.  You've seen this done in [Lesson 15 Level 11](/s/csd3/stage/15/puzzle/11).
+        有了所需的背景，可以编写代码来选择正确的背景。这已经在[第15课第11级] (/s/csd3/stage/15/puzzle/11) 中提到过。 
         
-        After you've written the code, test it by changing the starting value of your variables and making sure the correct background shows up.
+        编写完代码后, 通过更改变量的起始值并确保正确的背景出现来测试它。
       CSD U3 game create sprites_markdown_instruction: |
         # Create your Sprites
         
@@ -9967,15 +9972,15 @@ zh-CN:
         
         Be sure to test your boards by changing the starting value of your variables and making sure the board also changes when you run the code.
       CSD U3 game display boards_2018_markdown_instruction: |
-        # Display Boards
+        # 显示板
         
-        Now that your backgrounds are working, you can add your display boards.  Most games have a score board, but you might also want to display information about player level or lives remaining.  Look at [Lesson 12 Puzzle 9](/s/csd3/stage/12/puzzle/9) for an example of how to make a scoreboard.
+        背景已经选好, 可以添加显示板了。大多数游戏都有记分牌, 但如果想显示有关游戏级别或剩余生命的信息。 可以参考 [第12课 第9题] (/s/csd3/stage/12/puzzle/9) 的例子, 制作记分牌。 
         
-        For each display board:
-        * Create a function to display the information
-        * Call the function in the draw loop
+        对于每个显示板: 
+        * 创建一个函数用来显示信息 
+        * 在绘图循环中调用这个函数
         
-        Be sure to test your boards by changing the starting value of your variables and making sure the board also changes when you run the code.
+        记得要通过更改变量的起始值来测试显示板, 确保显示板在运行时会发生更改。
       CSD U3 game interactions_markdown_instruction: |-
         # Sprite Interactions
         
@@ -10087,7 +10092,7 @@ zh-CN:
         _在开始任何挑战前，先问问自己的老师。_\r
         \r
         在前面的课程中，你和伙伴创建了一些有趣的图片。看看你能否用代码来创建它们。
-      CSD U3 picture_2018_markdown_instruction: |-
+      CSD U3 picture_2018_markdown_instruction: |
         # 挑战：画图\r
         \r
         _在开始任何挑战前，先问问自己的老师。_\r
@@ -10626,7 +10631,7 @@ zh-CN:
         * Read through the properties and experiment with them
         * Add a label element next to each that describes what they do (don't forget to give it an id too!)
       CSD U4 - Design Mode Project_markdown_instruction: "# Mocking Up Your App\n\nUsing your paper prototype, create a digital version of your screen using the Design Mode elements you've learned about.\n\n# Do This\n\n* Rename the screen to match your _namespace_.\n* Use the built-in elements to lay out your app screen, giving each a proper ID\n\\t* For example, if your namespace is \"home_\" you might create IDs like:\n    \\t* \"home_title\"\n        * \"home_login_button\"\n        * \"home_logo\"\n* For any components of your app that can't be recreated with the built in elements you can either:\n\\t* Redesign to utilize built in elements\n    * Find an image to use in place of your element\n    * Draw the element using your preferred image editor\n* Share your design regularly with your teammates to ensure consistent style"
-      CSD U4 - Design Mode Project_2018_markdown_instruction: "# Mocking Up Your App\n\nUsing your paper prototype, create a digital version of your screen using the Design Mode elements you've learned about.\n\n# Do This\n\n* Rename the screen to match your _namespace_.\n* Use the built-in elements to lay out your app screen, giving each a proper ID\n\\t* For example, if your namespace is \"home_\" you might create IDs like:\n    \\t* \"home_title\"\n        * \"home_login_button\"\n        * \"home_logo\"\n* For any components of your app that can't be recreated with the built in elements you can either:\n\\t* Redesign to utilize built in elements\n    * Find an image to use in place of your element\n    * Draw the element using your preferred image editor\n* Make sure that you and your teammates are regularly looking at each other's designs to ensure consistent style"
+      CSD U4 - Design Mode Project_2018_markdown_instruction: "＃制作应用程序的样本\n\n使用纸上的原型，和所学的设计模块元素，来创建显示的一个数字版本。\n\n＃ 这样做\n\n*重命名显示以匹配_namespace_。\n*使用内置的组件来布局应用程序屏幕显示，给每个元素一个适当的ID\n\\t *例如，如果_namespace_是“home_”，则可以创建如下所示的ID：\n\\t *“home_title”\n*“home_login_button”\n*“home_logo”\n*对于无法使用内置组件重新创建的你应用程序的任何组件，可以：\n\\t *重新设计以便于利用内置组件\n     *找到一个图片来代替你需要的组件\n     *用喜欢的图像编辑器绘制这个组件\n*确保队友们经常相互查看对方的设计，以保证风格一致"
       CSD U4 - Design Mode Text_markdown_instruction: "# Adding Text\n<img src=\"https://images.code.org/86ba633e04f90f3ca47dff3dcd064847-image-1469812708683.15.36.png\" style=\"float: right; width: 75px\"/>\nThe label element lets you add any text you'd like to your app. Just drag out a label block and set its \"text\" property. \n\n# Do This\nUse a label element to create a title for this app.\n\n* Drag out a label and place it on the top of the screen\n* Change the id to \"titleLabel\"\n* Change the text to \"My App\"\n* Increase the font size\n* Choose a color you like for the title\n\n"
       CSD U5 Amazon Data Video_markdown_instruction: 观看此视频, 了解亚马逊如何解决这个问题, 。当你看的时候，考虑是什么数据被收集, 它是从哪里来的。
       CSD U5 Amazon Data Video_2018_markdown_instruction: 观看此视频, 了解亚马逊如何解决这个问题, 。当你看的时候，考虑是什么数据被收集, 它是从哪里来的。
@@ -11529,7 +11534,7 @@ zh-CN:
         * 用切换开关来改变摩托车的移动方向，向上并向下移动。\r
         * 用有颜色名称的下拉框来改变摩托车的颜色。\r
         * 当摩托车到达屏幕的最顶端或最低端时，打开蜂鸣器或LED灯。
-      CSD U6 challenge motorcycle_2018_markdown_instruction: |-
+      CSD U6 challenge motorcycle_2018_markdown_instruction: |
         # 挑战\r
         \r
         用这个程序来对取值和赋值属性进行更多的试验。你可以尝试以下办法：\r
@@ -13625,6 +13630,10 @@ zh-CN:
         就用一个按钮来玩游戏，然后观察`player_y`值得变化。\r
         *
         决定`player_y`是多少时，表明它到了屏幕底端。
+      CSD sprite movement challenge_2018_markdown_instruction: |-
+        # Improve your animation
+        
+        Make your animation even better by changing more sprite properties, or by adding even more sprites!
       CSD-Arrays_markdown_instruction: "今天，你会学习如何创建和使用**函数**。\\r\n\\r\n创建函数会让你制作自己的模块！制作函数有两部分：\\r\n\\r\n制作一个新命名的模块，它里面含有你想要运行的所有代码。\\r\n-函数的xml定义- \\r\n\\r\n单个绿色的模块，是你使用或调用创建的函数。\\r\n-函数调用的xml-\\r\n\\r\n准备熟悉函数，学习如何编辑它们，并创建自己的函数！"
       CSD-Arrays_2018_markdown_instruction: "今天，你会学习如何创建和使用**函数**。\\r\n\\r\n创建函数会让你制作自己的模块！制作函数有两部分：\\r\n\\r\n制作一个有名字的新模块，将你想要运行的代码都放在它里面。\\r\n-函数的xml定义- \\r\n\\r\n单个绿色的模块，是你使用或调用创建的函数。\\r\n-函数调用的xml-\\r\n\\r\n准备熟悉函数，学习如何编辑它们，并创建自己的函数！"
       'CSD: Boolean Expressions_markdown_instruction': "# Boolean Expressions Video"
@@ -15100,7 +15109,7 @@ zh-CN:
         * Work on your app until it works. Try to stay focused on only the single piece of functionality you've chosen
         * When done, pick a new idea and start the process over
       CSDU4 Project Import_markdown_instruction: "# Back To Your App\n\nNow that you've had some practice with importing screens, it's time to start working on your team's app.\n\n# Do This\n\nEach member of your team is going to create their own copy of the app, with all of the team members' screens imported in. This will be your copy of the app, and the copy that you will start to add code to in the next lesson.\n\n* Collect all of the sharing urls for your team's pages\n\\t* You can find the share url by going back to the last level of the previous lesson, or by finding the screen in your [projects directory](/projects)\n* Import each of the screens, one at a time\n\\t* If you run into an ID error with one of the screens, discuss the issue with the screen's creator so it can be fixed and imported\n* Delete the default \"screen1\"\n* Set the main screen as the default\n\nDon't worry about adding any code at this point; we'll get to that in the next level."
-      CSDU4 Project Import_2018_markdown_instruction: "# Back To Your App\n\nNow that you've had some practice with importing screens, it's time to start working on your team's app.\n\n# Do This\n\nEach member of your team is going to create their own copy of the app, with all of the team members' screens imported in. This will be your copy of the app, and the copy that you will start to add code to in the next lesson.  (Don't forget that you'll also need to import your own screen into this project.)\n\n* Collect all of the sharing urls for your team's pages, **including your own**\n\\t* Each team member can find the share url for their own screen by going back to the last level of the previous lesson, or by finding the screen in their [projects directory](/projects)\n* Import each of the screens, one at a time\n\\t* If you run into an ID error with one of the screens, discuss the issue with the screen's creator so it can be fixed and imported\n* Delete the default \"screen1\"\n* Set the main screen as the default\n\nDon't worry about adding any code at this point; we'll get to that in the next level."
+      CSDU4 Project Import_2018_markdown_instruction: "# 返回应用程序\n\n现在已经有了一些输入屏幕的练习，下面可以开始做团队的应用程序了。\n\n# 这样做\n\n团队里每一位成员创建自己的一份应用拷贝，输入队里所有成员的屏幕。这将成为自己的副本，并且从下一课起要开始往里添加自己的代码。（不要忘了也输入之前已有的屏幕。）\n\n* 收集队里所有的共享url链接， **包括自己的**\n\\t* 每一位成员如需找到自己的屏幕，可以回到上一课的最后一步，在[项目文件夹](/项目) 里找到\n* 每次输入一个屏幕，重复知道完成输入所有的屏幕\n\\t* 如果在输入某一个屏幕时碰到ID错误，和该屏幕的创建者讨论解决\n* 删除缺省的“屏幕1”\n* 将主屏幕设为缺省屏幕\n\n现在不要担心怎样往里添加代码；在下一步会讲到。"
       CSDU4 Quiz App Demo_markdown_instruction: |-
         # Quiz Me
         
@@ -16258,7 +16267,7 @@ zh-CN:
         \r
         * 用`buzzer.playSong`模块来制作一首不同的歌曲。\r
         * 当你对结构感到得心应手时, 给歌曲添加更多的音符。
-      CSDU6 buzzer 2d arrays_2018_markdown_instruction: |-
+      CSDU6 buzzer 2d arrays_2018_markdown_instruction: |
         # 挑战：二维数组\r
         \r
         数组可以容纳各种数据, 如数字、字符串甚至其他数组。当我们把一个数组放入另一个, 这将成为一个二位数组。`buzzer.playSong()`（蜂鸣器.播放歌曲）
@@ -20089,19 +20098,25 @@ zh-CN:
         - 如果你的钻石图案长一点或短一点会发生什么？\r
         - 如果在一个雪花上画另一个雪花看起来会是什么样子？\r
         
-      Dance Party 1-validated_markdown_instruction: "**Make a prediction:** Here’s a sprite called `alien1`! What do you think will happen when you click on her?"
-      Dance Party 1_markdown_instruction: "**Make a prediction:** Here’s a sprite called `alien1`! What do you think will happen when you click on her?"
-      Dance Party 2_markdown_instruction: The alien was proud of her dancing skills on Mars, but now she can only move up and down. Can you change the behavior inside the `begins` block to make her start spinning around?
-      Dance Party 3_markdown_instruction: Create a new sprite called `alien2`, and make it do a different dance move when it's clicked.
-      Dance Party 4_markdown_instruction: Create a third sprite called `alien3`, and make sure they're standing in a line. It's an alien dance crew!
-      Dance Party 5_markdown_instruction: We can change all kinds of things in this program when you click on the sprites.  Let’s change their color!  **Add code to change the color of each alien when it gets clicked.**
-      Dance Party 6_markdown_instruction: These aliens are running wild! Use the `stops everything` block to make each alien stop moving when it is clicked.
-      Dance Party 7_markdown_instruction: Finally, add a new bell sprite called `myBell`. When you click on it, make all the aliens start doing the same dance move.
+      Dance Party 1-validated_markdown_instruction: "**猜猜看：** 这个图形名叫`外星人一号`！当点击她时猜猜会发生什么？"
+      Dance Party 1_markdown_instruction: "**猜猜看：** 这个图形名叫`外星人一号`！当点击她时猜猜会发生什么？"
+      Dance Party 2 Validated_markdown_instruction: The alien was proud of her dancing skills on Mars, but now she can only move side-to-side. Can you change the behavior inside the `begins` block to make her start spinning around?
+      Dance Party 2_markdown_instruction: "这个外星人对自己在火星上的舞技非常自信，但现在她只能上下移动了。你能在‘开始’模块中改变行为让她可以旋转吗？"
+      Dance Party 3 - Validated_markdown_instruction: "创造一个叫`外星人2`的图形，让她在被点击时完成一个新的舞步。"
+      Dance Party 3_markdown_instruction: "创造一个叫`外星人2`的图形，让她在被点击时完成一个新的舞步。"
+      Dance Party 4 Validated_markdown_instruction: "创造一个叫`外星人3`的图形，让精灵们站成一排。现在你有一个外星人舞蹈团了！"
+      Dance Party 4_markdown_instruction: "创造一个叫`外星人3`的图形，让精灵们站成一排。现在你有一个外星人舞蹈团了！"
+      Dance Party 5 - Validated_markdown_instruction: "我们可以通过改写程序对你的的图形们做任意的改变。现在我们来换个颜色吧！**在这里添加程序，使每个外星人在被单击时改变自己的颜色**"
+      Dance Party 5_markdown_instruction: "我们可以通过改写程序对你的的图形们做任意的改变。现在我们来换个颜色吧！**在这里添加程序，使每个外星人在被单击时改变自己的颜色**"
+      Dance Party 6 - Validated_markdown_instruction: "这些外星人太调皮了！在`停止所有`模块中写入程序，让每个外星人在被单击时静止下来。"
+      Dance Party 6_markdown_instruction: "这些外星人太调皮了！在`停止所有`模块中写入程序，让每个外星人在被单击时静止下来。"
+      Dance Party 7 - Validated_markdown_instruction: "最后一步，创建一个新的钟形图形，命名为`我的钟`。当点击这个钟时，所有的外星人会跳同一支舞。"
+      Dance Party 7_markdown_instruction: "最后一步，创建一个新的钟形图形，命名为`我的钟`。当点击这个钟时，所有的外星人会跳同一支舞。"
       Dance Party Freeplay_markdown_instruction: |-
-        Now create your own alien disco! Looking for inspiration? Try these ideas:
-        * Create two bell sprites, and make the aliens do a different dance move for each
-        * Make the aliens do a new dance move when they touch
-      Dance Party Predict_markdown_instruction: "**Make a prediction:** Here’s a sprite called `alien1`! What do you think will happen when you click on her?"
+        现在你可以开始你的外星人跳迪斯科啦！想找点灵感？试试这些：
+        * 绘制两个钟，让外星人在不同钟的控制下完成不同的舞步；
+        * 当外星人相互接触时，让他们开始不同的舞蹈。
+      Dance Party Predict_markdown_instruction: "**猜猜看：** 这个图形名叫`外星人一号`！当点击她时猜猜会发生什么？"
       Data Visualizations 101_markdown_instruction: |+
         ## Data Visualization 101: How to design charts and graphs
         
@@ -20333,20 +20348,20 @@ zh-CN:
         * **Note**: We'll revisit this game in the next lesson where you can improve it.  This is **just version 1**
       Fish Tank 1-validated_markdown_instruction: "**做出预测**：你觉得当运行代码时，会发生什么？"
       Fish Tank 1_markdown_instruction: "**做出预测**：你觉得当运行代码时，会发生什么？"
-      Fish Tank 2-validated_markdown_instruction: We're going to make a fish tank. Change Dusty the tumbleweed to a fish.
+      Fish Tank 2-validated_markdown_instruction: "现在我们要做一个鱼缸。把这个灰蒙蒙的风滚草变成一条鱼。"
       Fish Tank 2_markdown_instruction: 我们要做一个鱼缸。将达斯提草变成一条鱼。
-      Fish Tank 3-validated_markdown_instruction: 这些旋转会让鱼变得头晕！改变鱼的行为，让它沿着水箱游动。
+      Fish Tank 3-validated_markdown_instruction: "这些旋转会让鱼变得头晕！改变鱼的行为，让它沿着水箱游动。"
       Fish Tank 3_markdown_instruction: 这些旋转会让鱼变得头晕！改变鱼的行为，让它沿着水箱游动。
-      Fish Tank 4-validated_markdown_instruction: 鱼缸需要一些水！用`设置背景颜色`模块来让背景为绿色。
+      Fish Tank 4-validated_markdown_instruction: "鱼缸需要一些水！用`设置背景颜色`模块来让背景为绿色。"
       Fish Tank 4_markdown_instruction: 鱼缸需要一些水！用`设置背景颜色`模块来让背景为绿色。
       Fish Tank 5-validated_markdown_instruction: 鱼有些孤单。在鱼缸内创造一个新的精灵。
       Fish Tank 5_markdown_instruction: 鱼有些孤单。在鱼缸内创造一个新的精灵。
-      Fish Tank 6-validated_markdown_instruction: 想让鱼的朋友做什么？增加一个行为，然后看看他们做了什么！
+      Fish Tank 6-validated_markdown_instruction: "想让鱼的朋友做什么？增加一个行为，然后看看他们做了什么！"
       Fish Tank 6_markdown_instruction: 想让鱼的朋友做什么？增加一个行为，然后看看他们做了什么！
-      Fish Tank 7-validated_markdown_instruction: 工具箱里有许多新的模块。用它们来让你的鱼缸变得特别。
+      Fish Tank 7-validated_markdown_instruction: "工具箱里有许多新的模块。用它们来让你的鱼缸变得特别。"
       Fish Tank 7_markdown_instruction: 工具箱里有许多新的模块。用它们来让你的鱼缸变得特别。
       Fish Tank Predict_markdown_instruction: "**做出预测**：你觉得当运行代码时，会发生什么？"
-      Fish Tank Template_markdown_instruction: Project Template
+      Fish Tank Template_markdown_instruction: 项目模版
       Food Fight!_markdown_instruction: |-
         我们已为你添加了上一关的函数。\r
         <hr/>\r
@@ -20423,6 +20438,7 @@ zh-CN:
         * Use the dragger to resize your preview area to see how your website adapts.
         * Shrink the size of the instructions area to resize how tall the web page is
       Harvesting_markdown_instruction: "哦，不，我的地图丢了，我不记得我中了什么了！每一个新芽都有可能长成**玉米** ![玉米的图片](https://images.code.org/cac3133c40781553a70066a67298b2b5-image-1472493202556.png)\n, **豆子** ![豆子的图片](https://images.code.org/5e379ff595be17722237d9685b29fd96-image-1472493220871.png)\n, 或者**南瓜** ![南瓜的图片](https://images.code.org/03cf76a978e0788ccb53f14e9d264695-image-1472493237148.png)。你能写一些代码来捡起所有的庄稼吗？不管他们是什么。"
+      HoCAB_labyrinth1_markdown_instruction: "Use the blocks to solve this maze!\n\n<xml><block type=\"simple_move_down\"/></xml><xml><block type=\"simple_move_up\"/></xml><xml><block type=\"simple_move_right\"/></xml><xml><block type=\"simple_move_left\"/></xml>   \n\n---"
       'How to: Setup your Class Data Tracker_markdown_instruction': "## Setting up your copy of the Class Data Tracker\n\nThe second chapter of unit 2 dives into data collection, analysis, and visualization. Starting in lesson 7 you will set up and use a class data tracker, which students will fill out each day until lesson 13, when they start cleaning the data they've been collecting.\n\nLesson 7 includes the following detailed guide that walks you through setting up your shared data tracker from the template provided in the curriculum. Feel free to check out this instructions and setup your tracker now! "
       'How to: Use Google Trends_markdown_instruction': "## How to Use Google Trends\n\nIn lesson 8, students will use Google Trends as a tool to visualize the relationship between historical google search data. If you're not familiar with Google Trends, check out the following How-to guide that details how to explore trends using the tool! "
       If and If-Else part 1_markdown_instruction: "### Points to pay attention to:\n\n* **NOTE:** Stop play at 1:37.  \n    It's all you need for the exercises that follow.  You'll watch the remainder of the video after that.\n\n* An IF statement can have an else clause, but an ELSE clause cannot exist on its own.\n* With an else clause you are *guaranteeing* that one of two portions of code will run.\n\n"
@@ -20505,9 +20521,9 @@ zh-CN:
         ![](https://images.code.org/d79263f7a6e129962f830ce0af2ed3cc-image-1434414362601.PNG)
       'Internet Simulator: Sending Text_markdown_instruction': "## Sending Formatted Text Activity\n\n**Directions:**  \nWork with a partner or in a small team to develop a protocol that allows you to send formatted text. \n\n**Guidelines:**  \n- Both the text and the formatting instructions must be derived from the printable ASCII character set (i.e. codes 32-126).\n- Your protocol must encode at least:\n\\t- bold, italics, and underlining\n\\t- three different font sizes (large, medium, and small)\n\\t- three different font colors (red, black, blue)\n- You will demonstrate that your protocol works by having the recipient be able to faithfully draw (or produce in some fashion) the formatted text based only on the data she received through an ASCII-text version of the Internet Simulator. A sample message can be found below.\n\n![](https://images.code.org/6fa1d53e4d36a9d0bac5b9b8fb4bc81d-image-1434427211242.PNG)\n\n**Develop Your Protocol:**  \nUse the worksheet handed out by your teacher to brainstorm ideas for your protocol. Iteratively improve your protocol by testing it out with simple sample messages.\n"
       'Internet Simulator: Sending Text_2018_markdown_instruction': |-
-        ## Sending Text
+        ## 发送文本
         
-        **Directions:** Design an encoding system to send text using the Internet Simulator. Your teacher will provide you with a number of increasingly complex challenges that you'll need to solve.
+        **操作指南：** 设计一个编码系统来用互联网模拟器发送文本。老师会提供一系列你需要解决的越来越复杂的挑战。
       Internet Speed Test_markdown_instruction: "# Check for Internet Accessibility\n\nAnother difference in how people will experience your website is in the speed of their internet connection as they try to load the content on your web page. To check this we can use the Google Chrome Developer Tools to simulate a slow internet connection.\n\n# Do This\n\n* Open this page in the Google Chrome Web Browser\n* From the _View_ menu, find _Developer_ \n\n<img src=\"https://images.code.org/c6f91de459cec7ed561b11783ea833bd-image-1475634452345.png\" style=\"width:200px\">\n\n* In the _Developer_ submenu, select _Developer Tools_ \n\n<img src=\"https://images.code.org/fb8402f57f9121c729c0880d7bf06dfa-image-1475634452345.png\" style=\"width:200px\">\n\n* The _Developer Tools_ will open as a frame at the bottom of your browser window\n\n<img src=\"https://images.code.org/95be9a273afd32305a0bc4c20b530647-image-1475634452344.png\" style=\"width:400px\">\n\n* Click the menu that says \"No throttling\" and select \"GPRS\" \n\n<img src=\"https://images.code.org/07240b96943b01a80505ba6b3900b7da-image-1475634452344.png\" style=\"width:200px\">\n\n*  Hold down _Shift_ while reloading the page (this will delete cached files so the browser has to re download them while throttled)"
       Introduction to App Lab and Turtle Programming_markdown_instruction: 'The video below is from lesson 4, and introduces App Lab and the Turtle. '
       Introduction to Conditionals - Part 2.2_markdown_instruction: "### Points to pay attention to:\n\n**Start** play at 1:37 \n**Stop** play at 2:20\n\nIt's all you need for the exercises that follow.  You'll watch the remainder of the video after that.\n\n* An IF statement can have an else clause, but an ELSE clause cannot exist on its own.\n* With an else clause you are *guaranteeing* that one of two portions of code will run.\n\n"
@@ -21106,9 +21122,9 @@ zh-CN:
       Poorva-test_markdown_instruction: "# Header 1\n## Header 2\n### Header 3\n#### Header 4\n##### Header 5\n\nThis is regular text, **bolded text** and *italicized text*. "
       Practice Create Performance Task_markdown_instruction: "# Practice Create Performance Task\n\nYou've finally made it to the end of the Building Apps Unit! We will continue some programming in the next unit, but for now we are going to use all the new concepts you have learn to create something of your own design! \n\n# Do This:\n\n* **Read the Project Overview** to understand the entire project.\n* **Follow the Project Planning Guide**.\n* **Implement your final program in this level**."
       Practice Create Performance Task_2018_markdown_instruction: |-
-        # Create Performance Task
+        # 创建表演任务
         
-        It's time to complete the Create Performance Task. Complete it here.
+        是完成表演任务的时候了。 在这里完成。
       Predict Loop I_markdown_instruction: |-
         # 预测\r
         \r
@@ -21814,10 +21830,10 @@ zh-CN:
         
         Invent and test a protocol for encoding and sending text messages. Your protocol must include the letters a-z, spaces, and common punctuation marks. You may add additional characters if you wish. See the worksheet handed out by your teacher for more detailed instructions!
       U1L11 Abstraction Reflection_2018_markdown_instruction: |-
-        An abstraction is a simplified representation of something that is more complex. Decimal numbers were a useful abstraction in the context of today's lesson. Write a short response to both questions below.
+        抽象是用简单的东西来表示比较复杂的东西。在今天的课中, 十进制数是一个有用的抽象。对下面两个问题写一个简短的回答。 
         
-        * What is the underlying complexity decimal numbers were used to represent.
-        * How were decimal numbers helpful in designing a system to represent text in bits?
+        * 什么用于表示的基本复杂性十进制数？
+        * 十进制数如何帮助设计系统以位表示文本？
       U1L11 Collaboration Reflection_markdown_instruction: |
         What problems arose in your efforts to create a working protocol? How did you think about the problem(s) in order to solve it?
         
@@ -21830,9 +21846,9 @@ zh-CN:
       U1L11 Reflection Free Response_markdown_instruction: "Respond to this prompt or to another as directed by your teacher.\n\nHow long did it take to send a formatted text message using your protocol? \n\nHow many extra bits did your encoding scheme need to communicate the text?  Calculate the percentage of bits that were used for formatting instead of sending the actual text message. \n\npercent = (formatting bits)/(total bits) * 100\n\n\n"
       U1L11 Reflection Free Response_2018_markdown_instruction: "Respond to this prompt or to another as directed by your teacher.\n\nHow long did it take to send a formatted text message using your protocol? \n\nHow many extra bits did your encoding scheme need to communicate the text?  Calculate the percentage of bits that were used for formatting instead of sending the actual text message. \n\npercent = (formatting bits)/(total bits) * 100\n\n\n"
       U1L11 Reflection Multiple Representations_2018_markdown_instruction: |-
-        "The binary pattern `01000001` represents the number 65."
+        "二进制数字`01000001`代表数字65。"
         
-        Write a brief response explaining whether you believe this statement is always true. Explain your reasoning.
+        写一个简短的答复, 解释你是否相信这句话总是真实的。解释你的推理。
       U1L12 Reflection Free Response_markdown_instruction: "Respond to this prompt or to another as directed by your teacher.\n\nThe salesperson in a cell phone store is telling me that the phone I'm considering has 8GB of memory, which means I can save 10,000 photos taken with the phone's camera! \n\nIs the salesperson telling me the truth? Why or why not?\n"
       U1L12 Reflection Free Response_2018_markdown_instruction: "Respond to this prompt or to another as directed by your teacher.\n\nThe salesperson in a cell phone store is telling me that the phone I'm considering has 8GB of memory, which means I can save 10,000 photos taken with the phone's camera! \n\nIs the salesperson telling me the truth? Why or why not?\n"
       U1L13 Assess Text Compression amount_markdown_instruction: "Here's the same compressed text that you saw on the last level, but now we also see the size of the original, uncompressed text. On the previous level you reconstructed the text by tracing back through the dictionary. Now we're going to think about if this is a \"good\" compression rate.\n\n![](https://images.code.org/ffb941527193cd04c02ff2ce392d02e6-image-1439479301236.20.23 AM.png)\n\nIn the text box below, answer the following two questions:\n\n- What is the compression rate, or the compressed text size + dictionary size compared to the original text size? (as a percentage) \n- Is this a \"good\" compression rate? Why or why not? \n\n\n"
@@ -21914,9 +21930,9 @@ zh-CN:
         
         What problems arose in your efforts to create a working protocol? How did you think about the problem(s) in order to solve it?
       U1L8 Free Response Reflection_2018_markdown_instruction: |
-        <strong>Complete the Sending Numbers Rubric (on the second page of the Sending Numbers activity guide</a>) and then respond to the following prompt.</strong>
+        <strong>完成发送号码提示 (在发送号码活动指南的第二页上</a>), 然后对以下问题作出回答。</strong>
         
-        What problems arose in your efforts to create a working protocol? How did you think about the problem(s) in order to solve it?
+        创建工作协议的努力中出现了哪些问题？为了解决这个/些问题, 你是怎么想的？
       U1L8 Free Response2_markdown_instruction: How did collaboration play a role in the creation of your protocol?
       U1L8 NetSim numbers with decimal_markdown_instruction: |-
         ## Sending Numbers Activity
@@ -22004,9 +22020,9 @@ zh-CN:
       U2L04 Free Response Wrap Up_markdown_instruction: 'How do you think the routers are physically connected? Does it matter to you? Why or why not?  '
       U2L05 - NetSim - Packets and Building TCP_markdown_instruction: "## Packets and Making a Reliable Internet\n\n**Challenge:** Develop a protocol for reliably sending a message across an unreliable network\n\n**An Unreliable Internet Simulator:** The current version of the Internet Simulator is modeled after some actual constraints of the Internet\n- Messages must be divided into packets which may contain <em><strong> at most eight (8) ASCII characters </em></strong>\n- Messages should be long enough to require at least 10 packets\n- Packets may not arrive in the order sent\n- Packets may be dropped while in transmission\n\n**Directions:** In a group or individually join a router in the Internet Simulator and practice sending messages given these new constraints. Once you are comfortable with the challenge, iteratively design a protocol that can reliably send a message to a partner. You and your partner should join <em><strong> DIFFERENT </strong></em> routers.\n\n**Protocol Requirements:**\n- All communication can only be done through the Internet Simulator\n- You must send a message that spans at least 10 packets (i.e. an 80 character ASCII message). \n- The protocol should account for the possibility that the characters might be entirely random (i.e. not necessarily English - do not count on human intuition to reconstruct the message. The message is not known beforehand.)\n- The sender and receiver must be confident the full message was successfully transmitted and reconstructed."
       U2L05 Lossy vs. Lossless FR 1_2018_markdown_instruction: |-
-        # When to use lossy compression?
+        ＃何时使用有损压缩？
         
-        In general, what are reasons that someone would choose to use lossy compression? Write a brief response below including at least one example of a situation when lossy compression would be appropriate.
+        一般来说，为何会有人会选择使用有损压缩？ 在下面写一个简短的回答，其中至少包括一个适用于损压缩情况的例子。
       U2L05 Reflection 1_markdown_instruction: 'In your own words, what were the primary obstacles you needed to overcome in today’s challenge? How do these obstacles mirror actual problems encountered on the Internet?  '
       U2L05 Reflection 1_2018_markdown_instruction: 'In your own words, what were the primary obstacles you needed to overcome in today’s challenge? How do these obstacles mirror actual problems encountered on the Internet?  '
       U2L07 Assessment5_markdown_instruction: 'When analyzing algorithms why doesn''t the amount of real time (clock time) tell us very much about the algorithm''s "efficiency"?  '
@@ -25762,7 +25778,7 @@ zh-CN:
       U4 - CreateRecord - 2_markdown_instruction: "# Data Viewer\n\n**Where did that data go?** App Lab's database is \"remote\" which means the data is stored separately from the app code on a server. A common term for this is \"cloud storage\".\n\nTo see the data you have to use the **Data Viewer**. You may have noticed a button right above the app display that looks like this. <img src=\"https://images.code.org/a816694aad344a14dd44fb14b26a5c64-image-1497459608411.50.42 PM.png\" style=\"width: 80px\">\n \n* Click **View Data** to see all of the \"tables\" in your database (We'll explain what a table is later).\n* You should see one table called **mytable**.  \n* Click **view** to see all of the data stored in that table.\n* **Notice** that an **id number was automatically generated** for every row in the table.\n![](https://images.code.org/48994996542a35a3473a14d2f99d45e2-image-1449168371760.gif)\n \n# Do This:\n<img src=\"https://images.code.org/dffe4d9d3b8541189242aa95913ecfee-image-1449168144127.gif\" style=\"width: 300px; float: right\">\n\n* In the code, **change \"Alice\" to a different name** in the call to `createRecord`.\n* **Run the app** a few times by repeatedly clicking \"Run\" and \"Reset.\"\n* **Check the Data Viewer** to make sure it worked! \n* **Note:** If you already had the Data Viewer open you will need to **refresh the page** to see the changes."
       U4 - CreateRecord - 2_2018_markdown_instruction: "# Data Viewer\n\n**Where did that data go?** App Lab's database is \"remote\" which means the data is stored separately from the app code on a server. A common term for this is \"cloud storage\".\n\nTo see the data you have to use the **Data Viewer**. You may have noticed a button right above the app display that looks like this. <img src=\"https://images.code.org/a816694aad344a14dd44fb14b26a5c64-image-1497459608411.50.42 PM.png\" style=\"width: 80px\">\n \n* Click **View Data** to see all of the \"tables\" in your database (We'll explain what a table is later).\n* You should see one table called **mytable**.  \n* Click **view** to see all of the data stored in that table.\n* **Notice** that an **id number was automatically generated** for every row in the table.\n![](https://images.code.org/48994996542a35a3473a14d2f99d45e2-image-1449168371760.gif)\n \n# Do This:\n<img src=\"https://images.code.org/dffe4d9d3b8541189242aa95913ecfee-image-1449168144127.gif\" style=\"width: 300px; float: right\">\n\n* In the code, **change \"Alice\" to a different name** in the call to `createRecord`.\n* **Run the app** a few times by repeatedly clicking \"Run\" and \"Reset.\"\n* **Check the Data Viewer** to make sure it worked! \n* **Note:** If you already had the Data Viewer open you will need to **refresh the page** to see the changes."
       U4 - CreateRecord - 3_markdown_instruction: "# Records are Objects\n\n**What's a record?**\nIn database terminology, each item that is stored in table is called a **record**.  This is why the command is called `createRecord`. In App Lab, a **record is an object**, and a data table is essentially a collection of JavaScript objects stored in the cloud.\n\n**The second parameter** of `createRecord` is the object you are storing in the database.\n\n* As you have seen you can specify the object using notation like this: `{name:\"Alice\"}`\n* But you can **also provide an object variable** and the whole object will be stored.\n* App Lab **creates a column for each property of the object.**\n\n# Do This:\n\n**Starter code is provided** that creates a simple JavaScript object representing a song.\n\n* Drag out the `createRecord` command.  \n* **Set the table name** (the first parameter) to something descriptive like \"mySongs\".\n* **Set the second parameter** to the name of the object you want to store, in this case `song`.\n* **Run the program.**\n* In the Data tab **verify that a new table was created and that the `song` object was added as a record**.\n\n![](https://images.code.org/d587a1bc977f54d132acafa63764d813-image-1449241390939.gif)"
-      U4 - CreateRecord - 3_2018_markdown_instruction: "# Records are Objects\n\n**What's a record?**\nIn database terminology, each item that is stored in table is called a **record**.  This is why the command is called `createRecord`. In App Lab, a **record is an object**, and a data table is essentially a collection of JavaScript objects stored in the cloud.\n\n**The second parameter** of `createRecord` is the object you are storing in the database.\n\n* As you have seen you can specify the object using notation like this: `{name:\"Alice\"}`\n* But you can **also provide an object variable** and the whole object will be stored.\n* App Lab **creates a column for each property of the object.**\n\n# Do This:\n\n**Starter code is provided** that creates a simple JavaScript object representing a song.\n\n* Drag out the `createRecord` command.  \n* **Set the table name** (the first parameter) to something descriptive like \"mySongs\".\n* **Set the second parameter** to the name of the object you want to store, in this case `song`.\n* **Run the program.**\n* In the Data Viewer **verify that a new table was created and that the `song` object was added as a record**.\n\n![](https://images.code.org/d587a1bc977f54d132acafa63764d813-image-1449241390939.gif)"
+      U4 - CreateRecord - 3_2018_markdown_instruction: "＃记录是对象\n\n**什么是记录？**\n在数据库术语中，存储在表中的每个项目称为**记录**。这就是为什么该模块被称为`createRecord`(创建记录）。在应用实验室中，**记录是一个对象**，而数据表本质上是存储在云中的JavaScript对象的集合。\n\n**`createRecord`的第二个参数**是您要存储在数据库中的对象。\n\n*正如你所看到的，你可以使用这样的符号来指定对象：`{name：“Alice”}`（名字：爱丽丝）\n*但是你可以**提供一个对象变量**并且整个对象将被存储。\n* 应用实验室 **为对象的每个属性创建一个列。**\n\n＃ 做这个：\n\n**原型代码已提供**，用于创建代表歌曲的简单JavaScript对象。\n\n*拖出`createRecord`模块。\n* **将表格名称**（第一个参数）设置为描述性内容，如“mySongs”。\n* **将第二个参数**设置为要存储的对象的名称，在本例中为“song”(歌曲)。\n* **运行程序。**\n*在数据浏览器中**验证是否创建了一个新表，并且将`song`对象添加为记录**。\n\n！[]（https://images.code.org/d587a1bc977f54d132acafa63764d813-image-1449241390939.gif）"
       U4 - CreateRecord - 4_markdown_instruction: "# Messing Around with Data\n\n**The third parameter** of `createRecord` is a callback function.  **What does it do?**\n\n![](https://images.code.org/9a89cca8257b7dc807a1637efe121442-image-1449245629915.png)\n\n* Data commands **must be sent across the Internet to a remote server**.\n* The database follows a **protocol** in which it **responds to every data command with a message**. This message might be a piece of data you requested, or it could be an error message.\n* You might need to use the contents of this response in your program, but because of **delays caused by sending information back and forth across the Internet** you don't know when you will receive it.\n* Therefore, you create a **callback function that will be called by the system when the response comes back** (in other words when the database \"calls back\"). The parameter of the **callback function** contains the data being sent back.\n\nFor `createRecord` the database **responds by sending back a copy of the object that was stored**. The `record` parameter of the callback function contains that object.\n\n**Analogy**: When you made an event handler using `onEvent`, you also specified a callback function.  That function got called **when the user triggered the specific event you were watching for**.  The callback function of a database command like `createRecord` gets triggered **when the database sends a message back**.  \n \n# Do This:\n\n**Starter code is provided** that adds a song object to the database.\n\n* **Run the program.**\n* **Look at the Data Viewer** to verify that the object you just stored is actually in the database (along with a few extra songs we added to start you out).\n* **Notice:** The callback function now displays the copy of the record that was returned by the database.\n\n"
       U4 - CreateRecord - 4_2018_markdown_instruction: "# Messing Around with Data\n\n**The third parameter** of `createRecord` is a callback function.  **What does it do?**\n\n![](https://images.code.org/9a89cca8257b7dc807a1637efe121442-image-1449245629915.png)\n\n* Data commands **must be sent across the Internet to a remote server**.\n* The database follows a **protocol** in which it **responds to every data command with a message**. This message might be a piece of data you requested, or it could be an error message.\n* You might need to use the contents of this response in your program, but because of **delays caused by sending information back and forth across the Internet** you don't know when you will receive it.\n* Therefore, you create a **callback function that will be called by the system when the response comes back** (in other words when the database \"calls back\"). The parameter of the **callback function** contains the data being sent back.\n\nFor `createRecord` the database **responds by sending back a copy of the object that was stored**. The `record` parameter of the callback function contains that object.\n\n**Analogy**: When you made an event handler using `onEvent`, you also specified a callback function.  That function got called **when the user triggered the specific event you were watching for**.  The callback function of a database command like `createRecord` gets triggered **when the database sends a message back**.  \n \n# Do This:\n\n**Starter code is provided** that adds a song object to the database.\n\n* **Run the program.**\n* **Look at the Data Viewer** to verify that the object you just stored is actually in the database (along with a few extra songs we added to start you out).\n* **Notice:** The callback function now displays the copy of the record that was returned by the database.\n\n"
       U4 - CreateRecord - 5_markdown_instruction: |-
@@ -27055,6 +27071,7 @@ zh-CN:
       U4-AP-Practice-Justify-the-Score_2018_markdown_instruction: "# AP练习 - 证明分数\\r\n\\r\n** 书面提示 ** --  以下是 AP 探索表演任务的一部分书面答复提示 2d： \\r\n\\r\n<div style=\"width: 80%;\nmargin: auto; background-color: #EEEEEE; padding: 10px; font-family: serif;\nfont-size: 12pt\">\\r\n\\r\n<b>计算创新</b>\\r\n<br>\\r\n<br>\\r\n2d.使用特定的详细信息，描述 \\r\n<br><br>\\r\n<li>至少有一个数据存储担忧，数据隐私担忧，或数据安全担忧与计算创新直接相关。</li>\\r\n</div>\\r\n<br>\\r\n\\r\n**学生响应示例 ** -- 下面是一个学生响应如果解决数据担心问题的片段: \\r\n\\r\n<div\nstyle=\"width: 80%; margin: auto; background-color: #d9f3f5; padding: 10px;\nfont-family: serif; font-size: 12pt; line-height: 17pt\">\\r\n\\r\n<em> \n脸部摄取应用程序有权限使用你只能手机里的许多设备包括摄像头。一个由此产生的数据隐私的担忧是公司可以在你不知情的情况下访问摄像头看你在做什么。</em>\\r\n\\r\n</div>\\r\n\\r\n<br>\\r \n\\r\n** 零分!!!** -- 根据下面列出的评分准则，学生在第6行是 **不会** 获得分数的，而且在第7 行也很可能不会被奖励分数。\\r\n\\r\n**为什么？** 这里是第6 和 7 行的评分指南。\\r\n\\r\n![](https://images.code.org/96f6c02681616656f107dac058d15de6-image-1511206516901.35.08\nAM.png)\\r\n\\r\n##证明分数\\r\n\\r\n在以下地方提供解释：\\r\n\\r\n1. 依照评分指南，为什么学生在两行里都无法被奖励。\\r\n2. 提出一个建议, 说明如何修改响应可以让学生得到这分数。"
       U4L01 Free Response_markdown_instruction: 'This is the free response question text.  '
       U4L02 - Objects - Template1_markdown_instruction: "# Template"
+      U4L02 - Objects - Template1_2018_markdown_instruction: "# Template"
       U4L02 - Objects - createObject_markdown_instruction: |-
         # Creating Your Own Objects
         
@@ -27559,18 +27576,13 @@ zh-CN:
       Video. Introduction to Conditionals - Part 2_markdown_instruction: "### Points to pay attention to:\n\n* **NOTE:** Stop play at 1:37.  \n    It's all you need for the exercises that follow.  You'll watch the remainder of the video after that.\n\n* An IF statement can have an else clause, but an ELSE clause cannot exist on its own.\n* With an else clause you are *guaranteeing* that one of two portions of code will run.\n\n"
       Vigenere_markdown_instruction: "# Encrypt and decrypt a message with the Vigenère cipher\n\nThis is an interactive version of the Vigenère cipher that animates the encryption and decryption as it’s happening, given a piece of text to encrypt or decrypt and the key.\n\n# Do this\n### Encrypt a message\nClick Step several times, and trace what’s happening. Pay attention to:\n\n- How the ciphertext is being produced\n- What happens when you get to the last character of the key\n- After you’ve stepped through a few characters click Play to watch the rest animate\n- Hit Restart and play the animation again. You can use the speed slider to speed it up or slow it down  \n\n![](https://images.code.org/06858f88ac12997bba73f4f76638a068-image-1443574425185.gif)\n\n### Decrypt a message\nEncrypt a message as above, then:  \n\n- Highlight and copy the ciphertext\n- Paste it into the plaintext area. Note: Don’t change the key\n- Change the Encrypt/Decrypt toggle to Decrypt\n- Hit Step a few times, and then Play\n\nYou should see the original text emerge.  \n![](https://images.code.org/dc89d6c19c17adb23b6b5ff9a62c4583-image-1443574425182.gif)\n\n\nHow hard would it be to crack a message encrypted with this cipher? Does the length of the key make a difference?\n"
       Virtual Pet 1-validated_markdown_instruction: This is Geraldine, your new pet giraffe. What do you think will happen if you press run and then click on her?
-      Virtual Pet 1_markdown_instruction: This is Geraldine, your new pet giraffe. What do you think will happen if you press run and then click on her?
-      Virtual Pet 2_markdown_instruction: There's a mud puddle over in the corner. Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
-      Virtual Pet 3_markdown_instruction: |-
-        We can’t have a dirty giraffe wandering around!  Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?
-        
-        To reset the color, set it to white using this block:
-        
-        ![](https://images.code.org/e98c7949116888b4229d4794f6cd2a82-image-1526512133821.06.05 PM.png)
-      Virtual Pet 4_markdown_instruction: We don't want to wait for the giraffe to clean itself every time. Add a behavior to your soap to make it draggable, then drag it over to clean the giraffe!
-      Virtual Pet 5_markdown_instruction: All of this play takes energy!  Add actions to each event so that when the giraffe collides with each sprite, it gets a little smaller (shrinks by 5).
-      Virtual Pet 6_markdown_instruction: A balanced diet is important! We have to feed the giraffe to get its strength back. Add an apple that returns the giraffe back to regular size when they touch.
-      Virtual Pet Freeplay_markdown_instruction: 'Freeplay: Can you add more special items for your virtual pet? Can you give her some friends? What more can you make your giraffe do? '
+      Virtual Pet 1_markdown_instruction: "This is Geraldine, your new pet giraffe.  \n\nWhat do you think will happen if you press \"▶ Run\" and then click on her? \n\n---"
+      Virtual Pet 2_markdown_instruction: "There's a mud puddle over in the corner.  \n\nCreate an **event** so that when Geraldine touches the puddle, her color changes to brown.  \n\n---"
+      Virtual Pet 3_markdown_instruction: "We can’t have a dirty giraffe wandering around!  \n\n1)  Add a new soap sprite to the screen.  \n2)  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?\n\n---\n\nTo reset the color, use this block:\n<xml><block type=\"gamelab_removeTint\" inline=\"true\">\n      <value name=\"THIS\">\n        <block type=\"sprite_variables_get\">\n          <title name=\"VAR\">mySprite</title>\n        </block>\n      </value>\n    </block></xml>\n"
+      Virtual Pet 4_markdown_instruction: "We don't want to wait for the giraffe to clean itself every time.  \n\nAdd a behavior to your soap to make it draggable, then drag it over to clean the giraffe!\n\n---"
+      Virtual Pet 5_markdown_instruction: "All of this play takes energy!  \n\nAdd actions to each event so the giraffe gets a little smaller (shrinks by 5) each time it collides with another sprite.  \n\n---"
+      Virtual Pet 6_markdown_instruction: "A balanced diet is important! We have to feed the giraffe to get its strength back.  \n\nAdd an apple to the scene and have it return the giraffe back to regular size when the two sprites touch.  \n\n---"
+      Virtual Pet Freeplay_markdown_instruction: "Freeplay: What more can you make your giraffe do? \n\n- Can you add more special items for your virtual pet?  \n- Can you give her some friends?  "
       Virtual Pet Predict_markdown_instruction: "**Make a prediction:** This is Geraldine, your new pet giraffe. What do you think will happen if you press run and then click on her?"
       Visual Accessibility_markdown_instruction: |-
         # Visual Accessibility: Color Contrast
@@ -28332,7 +28344,8 @@ zh-CN:
       courseA_maze_ramp2_2018_markdown_instruction: "将<xml><block type=\"maze_moveEast\"/></xml>\n模块附加到<xml><block type=\"when_run\"/></xml>上来完成代码，然后点击 ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png)。"
       courseA_maze_ramp2a_2018_markdown_instruction: "将<xml><block type=\"maze_moveEast\"/></xml>\n模块附加到<xml><block type=\"when_run\"/></xml>上来完成代码，然后点击 ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png)。"
       courseA_maze_ramp3_2018_markdown_instruction: "*\"这只猪把我的羽毛弄皱了。\"*\\r\n\\r\n这里有一个额外的模块会让小鸟坠落。\\r\n将它从其它模块上移除，并拖回工具箱来扔掉。"
-      courseA_maze_ramp3a_2018_markdown_instruction: 从工具箱里取出一个 <xml><block type="maze_moveNorth"/></xml> 并将它加到其它模块的最底下来完成代码，然后点击 ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png)。
+      courseA_maze_ramp3a_2018_markdown_instruction: "从工具箱里取出一个 <xml><block type=\"maze_moveNorth\"/></xml> 并将它加到其它模块的最底下来完成代码，然后点击 ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png)。"
+      courseA_maze_ramp3b_2018_markdown_instruction: "There's an extra block at the end of this code!  \n\nDrag it back to the toolbox to throw it away."
       courseA_maze_ramp4_2018_markdown_instruction: "*\"沿着这条路带我去找那只笨猪。\"*\\r\n\\r\n躲开 TNT 炸药，不然我的羽毛就要被炸飞了！"
       courseA_maze_ramp4a_2018_markdown_instruction: 你能想出要在这些模块下面增加什么模块来完成这段代码吗？
       courseA_maze_ramp5_2018_markdown_instruction: |-
@@ -28486,9 +28499,13 @@ zh-CN:
         \r
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png)
-      courseB_Scrat_ramp1_2018_markdown_instruction: 让斯奎特到达橡子，将<xml><block type="maze_moveEast"/></xml>模块粘到<xml><block type="when_run"/></xml>模块的下面，然后按下 ![](https://images.code.org/473d3e1e4a05104502a99048338a45df-image-1522887336604.11.32.png) ！
+      courseB_Scrat_ramp1_2018_markdown_instruction: "让斯奎特到达橡子，将<xml><block type=\"maze_moveEast\"/></xml>模块粘到<xml><block type=\"when_run\"/></xml>模块的下面，然后按下 ![](https://images.code.org/473d3e1e4a05104502a99048338a45df-image-1522887336604.11.32.png) ！"
       courseB_Scrat_ramp2_2018_markdown_instruction: "将<xml><block type=\"maze_moveEast\"/></xml>\n模块附加到<xml><block type=\"when_run\"/></xml>上来完成代码，然后点击 ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png)。"
-      courseB_Scrat_ramp3a_2018_markdown_instruction: 从工具箱里取出一个 <xml><block type="maze_moveNorth"/></xml> 并将它加到其它模块的最底下来完成代码，然后点击 ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png)。
+      courseB_Scrat_ramp3a_2018_markdown_instruction: "从工具箱里取出一个 <xml><block type=\"maze_moveNorth\"/></xml> 并将它加到其它模块的最底下来完成代码，然后点击 ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png)。"
+      courseB_Scrat_ramp3b_2018_markdown_instruction: |-
+        There's an extra block at the end of this code!
+        
+        Drag it back to the toolbox to throw it away.
       courseB_Scrat_ramp4a_2018_markdown_instruction: 你能想出要在这些模块下面增加什么模块来完成这段代码吗？
       courseB_Scrat_ramp5a_2018_markdown_instruction: 试试自己完成它！
       courseB_artist_loops10_markdown_instruction: |-
@@ -30925,7 +30942,7 @@ zh-CN:
       course_playlab_variables1_markdown_instruction: "这是海盗。他这几天非常难以理解！\\r\n\\r\n通过改变代码中的文本块来解码他的话：\\r\n- \"arrrg\"应该是\"a\"\\r\n- \"ye\"应该是\"e\"\\r\n\\r\n"
       course_playlab_variables2_markdown_instruction: "现在，通过在两个地方改变变量的值来解码海盗的话！  \\r\n-\n\"arrrg\"应该是\"a\" \\r\n- \"ye\"应该是\"e\"\\r\n\\r\n"
       course_playlab_variables3_markdown_instruction: "现在，通过在两个地方改变变量的值来解码海盗的话！  \\r\n-\n\"arrrg\"应该是\"a\" \\r\n- \"ye\"应该是\"e\"\\r\n\\r\n"
-      coursea_maze_ramp1_2018_markdown_instruction: 让小鸟到达猪那里，将<xml><block type="maze_moveEast"/></xml>模块粘到<xml><block type="when_run"/></xml>模块的下面，然后按下 ![](https://images.code.org/473d3e1e4a05104502a99048338a45df-image-1522887336604.11.32.png) ！
+      coursea_maze_ramp1_2018_markdown_instruction: "让小鸟到达猪那里，将<xml><block type=\"maze_moveEast\"/></xml>模块粘到<xml><block type=\"when_run\"/></xml>模块的下面，然后按下 ![](https://images.code.org/473d3e1e4a05104502a99048338a45df-image-1522887336604.11.32.png) ！"
       coursef_maze_ramp3_markdown_instruction: "*\"这只猪把我的羽毛弄皱了。\"*\\r\n\\r\n这里有一个额外的模块会让小鸟坠落。\\r\n将其拖回工具箱来扔掉它。"
       coursef_maze_ramp3_2018_markdown_instruction: "*\"This pig is ruffling my feathers.\"*\n\nThere is one extra block that is going to cause the bird to crash.  \nThrow it away by dragging it back to the toolbox."
       cp1dlp-q1_markdown_instruction: "<br><br>\n\n# Unit 1 - Question 1\n**NOTE:** Before you start this reflection, make sure you’ve reviewed the lessons in this unit and have a good sense of the connections between lessons. If you haven’t already reviewed the materials, do that now and come back to this reflection later.\n\nFor this reflection, you’re going to consider the prompt below and craft a written response that demonstrates your understanding of the lessons as well as how to address teacher concerns about the unit . We suggest you write your response in another text editor and copy it in here once you are ready to submit.\n\n> **Prompt:**How would you respond to a teacher who says, “I’m thinking about skipping Lesson 4? Some of my kids already know binary and I don’t want them to be bored”\n\n## Getting Credit for Completing this Reflection \n\n- Once you submit your reflection, your response to the prompt above will be shared anonymously and read by your peers, and you will read the work done by other facilitators. This give facilitators a chance to learn from each other.\n- Your submission will also be given to an expert reviewer. Expert reviewers will be looking for thoughtful and thorough answers that demonstrate that you have spent time considering the reflection questions listed above. Reviewers will have an opportunity to give feedback on your submission, and you can respond to that feedback and resubmit.\n- In order to get credit for completing this prompt, your expert review needs to say \"Yes\" responded to the prompts fully. If reviewers don’t feel comfortable making a decision about your task submission, they can elevate to an instructor for review. You will always have a chance to address feedback from your reviewers and resubmit your reflections! Reviewer feedback will show up at the bottom of this page, once it’s available."
@@ -30937,8 +30954,8 @@ zh-CN:
       csd-novice-wednesday-1_markdown_instruction: "# Wednesday Question 1\n\nThink back on your experience today.\n\n* Use a few words or sentences to describe how you felt as a participant during those sessions today (e.g., confused, engaged, anxious, etc.)\n* What factors contributed to you feeling that way? \n* Did you feel supported as a teacher today? \n\\t* If yes, why?\n\\t* If no, why? What would have improved your experience?\n"
       csd-post-survey-2017-FR_markdown_instruction: 有什么别的你想说的，关于在课程中的体验吗？
       csd-post-survey-2017-FR_2018_markdown_instruction: Please provide any other feedback you have about your experience in the course.
-      csd-post-survey-2018-topics-liked-FR_markdown_instruction: Please provide any other feedback you have about the units of this course.
-      csd-post-survey-2018-topics-want-FR_markdown_instruction: What other topics are you interested in learning about in the future?
+      csd-post-survey-2018-topics-liked-FR_markdown_instruction: 请提供你对本课程的反馈。
+      csd-post-survey-2018-topics-want-FR_markdown_instruction: 有哪些主题是你有兴趣并打算在将来学习的？
       csd-pulse-check-survey-1-free-response U1Ch2_markdown_instruction: 有什么你想让老师知道别的事情吗？
       csd-pulse-check-survey-1-free-response U1Ch2_2018_markdown_instruction: 有什么你想让老师知道别的事情吗？
       csd-pulse-check-survey-1-free-response U2Ch1_markdown_instruction: 有什么你想让老师知道别的事情吗？
@@ -31077,9 +31094,9 @@ zh-CN:
       csp-post-survey-2017-FR_2018_markdown_instruction: 有什么别的你想说的，关于在课程中的体验吗？
       csp-post-survey-2017-q36-e_markdown_instruction: '因为别的原因担心：'
       csp-post-survey-2017-q36-e_2018_markdown_instruction: '我因为别的原因担心：'
-      csp-post-survey-2018-PT-feedback-FR_markdown_instruction: Any other feedback about the AP Exam or Performance Tasks?
-      csp-post-survey-2018-topics-liked-FR_markdown_instruction: Please provide any other feedback you have about the units of this course.
-      csp-post-survey-2018-topics-want-FR_markdown_instruction: What other topics are you interested in learning about in the future?
+      csp-post-survey-2018-PT-feedback-FR_markdown_instruction: 关于 AP 考试或表现测试的任何其他反馈？
+      csp-post-survey-2018-topics-liked-FR_markdown_instruction: 请提供你对本课程的反馈。
+      csp-post-survey-2018-topics-want-FR_markdown_instruction: 有哪些主题是你有兴趣并打算在将来学习的？
       csp-pre-survey-2017-q36-e_markdown_instruction: '因为别的原因担心：'
       csp-pre-survey-2017-q36-e_2018_markdown_instruction: '因为别的原因担心：'
       csp-pre-survey-2017-q38_markdown_instruction: 如果是，在当前的计算机科学课程前，你还学过什么计算机科学课程？
@@ -31597,25 +31614,25 @@ zh-CN:
       cspu5_assess4_shortAnswerShopping_2018_markdown_instruction: "**Short Answer:** Cecelia would like to write an app to help manage a trip to the grocery store.  The app will maintain a shopping list (a list of words) of all the items to buy.  Describe how Cecelia might use a second list in the app.  What else might be tracked? Describe how the list would be used and updated in the app.\n"
       cspu5_assess4_shortAnswerShopping_exam_prep_markdown_instruction: "**简答题：** 希西利娅想写一个应用来帮助管理管理一次到杂货铺的出行。这个应用要维护一个购物的清单（一个词语列表），即所有要买的东西。描述一下，希西利娅会在应用里用上另一个列表。还有什么信息需要被跟踪？描述一下这个列表在应用里会被如何使用和更新。\\r\n"
       debrief-monday_markdown_instruction: |-
-        # Day 1: End of Day Debrief
+        # 第一天: 今日结束后的总结
         
-        * What were the key takeaways the leads had today (e.g., teachers’ gots and needs, working together as facilitators, keeping a healthy cohort rapport, etc.)?
-        * Did they decide to make any adjustments to their approach for the next day? If so, what do they plan to change and why?
+        *教育者今天有哪些收获(例如，老师的感悟和需求，作为引导员一起工作，维持了群体间的健康关系，等)？
+        *有没有对教学方法的改进计划？如果有，要对哪里进行改动，为什么要这样改？
       debrief-thursday_markdown_instruction: |-
-        # Day 4: End of Day Debrief
+        # 第四天: 今日结束后的总结
         
-        * What were the key takeaways the leads had today (e.g., teachers’ gots and needs, working together as facilitators, keeping a healthy cohort rapport, etc.)?
-        * Did they decide to make any adjustments to their approach for the next day? If so, what do they plan to change and why?
+        *教育者今天有哪些收获(例如，老师的感悟和需求，作为引导员一起工作，维持了群体间的健康关系，等)？
+        *有没有对教学方法的改进计划？如果有，要对哪里进行改动，为什么要这样改？
       debrief-tuesday_markdown_instruction: |-
-        # Day 2: End of Day Debrief
+        # 第二天: 今日结束后的总结
         
-        * What were the key takeaways the leads had today (e.g., teachers’ gots and needs, working together as facilitators, keeping a healthy cohort rapport, etc.)?
-        * Did they decide to make any adjustments to their approach for the next day? If so, what do they plan to change and why?
+        *教育者今天有哪些收获(例如，老师的感悟和需求，作为引导员一起工作，维持了群体间的健康关系，等)？
+        *有没有对教学方法的改进计划？如果有，要对哪里进行改动，为什么要这样改？
       debrief-wednesday_markdown_instruction: |-
-        # Day 3: End of Day Debrief
+        # 第三天: 今日结束后的总结
         
-        * What were the key takeaways the leads had today (e.g., teachers’ gots and needs, working together as facilitators, keeping a healthy cohort rapport, etc.)?
-        * Did they decide to make any adjustments to their approach for the next day? If so, what do they plan to change and why?
+        *教育者今天有哪些收获(例如，老师的感悟和需求，作为引导员一起工作，维持了群体间的健康关系，等)？
+        *有没有对教学方法的改进计划？如果有，要对哪里进行改动，为什么要这样改？
       discussion-thursday_markdown_instruction: |
         # Day 4: Discussion-Based
         
@@ -31624,37 +31641,37 @@ zh-CN:
         * What are facilitators doing?
         * What are teachers doing?
       engagement-monday_markdown_instruction: |+
-        # Day 1: Engagement
+        # 第一天: 参与者
         
-        Think of one participant engagement challenge the lead facilitators faced today.
+        分析一个参与者所面临的挑战
         
-        * What was the challenge?
-        * How did the lead facilitator(s) manage that challenge?
-        * How would you approach this challenge in a session you lead?
+        *这挑战是什么？
+        *引导员是怎样应对它的？
+        *换位思考，如果作为引导员，你会如何应对它？
       engagement-thursday_markdown_instruction: |+
-        # Day 4: Engagement
+        # 第四天: 参与者
         
-        Think of one participant engagement challenge the lead facilitators faced today.
+        分析一个参与者所面临的挑战
         
-        * What was the challenge?
-        * How did the lead facilitator(s) manage that challenge?
-        * How would you approach this challenge in a session you lead?
+        *这挑战是什么？
+        *引导员是怎样应对它的？
+        *换位思考，如果作为引导员，你会如何应对它？
       engagement-tuesday_markdown_instruction: |+
-        # Day 2: Engagement
+        # 第二天: 参与者
         
-        Think of one participant engagement challenge the lead facilitators faced today.
+        分析一个参与者所面临的挑战
         
-        * What was the challenge?
-        * How did the lead facilitator(s) manage that challenge?
-        * How would you approach this challenge in a session you lead?
+        *这挑战是什么？
+        *引导员是怎样应对它的？
+        *换位思考，如果作为引导员，你会如何应对它？
       engagement-wednesday_markdown_instruction: |+
-        # Day 3: Engagement
+        # 第三天: 参与者
         
-        Think of one participant engagement challenge the lead facilitators faced today.
+        分析一个参与者所面临的挑战
         
-        * What was the challenge?
-        * How did the lead facilitator(s) manage that challenge?
-        * How would you approach this challenge in a session you lead?
+        *这挑战是什么？
+        *引导员是怎样应对它的？
+        *换位思考，如果作为引导员，你会如何应对它？
       expresslink_markdown_instruction: "<a href=\"https://studio.code.org/s/express\"><img\nsrc=\"https://images.code.org/32b135ea9a16684b30f89ffe0f6606b1-image-1507039514762.05.01\nAM.png\"/><img src=\"https://images.code.org/cfea3adf1aec120e23e039ed06856f6f-image-1507039555039.05.48\nAM.png\"/></a>"
       facilitator-prez-wednesday_markdown_instruction: |-
         # Day 3: Facilitator Presentation
@@ -31665,33 +31682,33 @@ zh-CN:
         * What are teachers doing?
         * What strategies did you see facilitators use to keep teachers engaged?
       feel-monday_markdown_instruction: |
-        # Day 1: Feel
+        # 第一天: 感受
         
-        Use a few words or sentences to describe the ways participants seemed to feel throughout the day today (e.g., confused, engaged, anxious, etc.)
+        尝试用几个词或句描述参与者今天的总体感受(例如，困惑，忙碌，焦虑，等)
         
-        * What factors seemed to contribute to those feelings?
-        * What did you see the lead facilitators do to address or support the general participant experience throughout the day?
+        *哪些事情促使大家有了这样的情绪？
+        *从你的视角来看，今天，引导员做了哪些事来给与参与者经验？
       feel-thursday_markdown_instruction: |
-        # Day 4: Feel
+        # 第四天: 感受
         
-        Use a few words or sentences to describe the ways participants seemed to feel throughout the day today (e.g., confused, engaged, anxious, etc.)
+        尝试用几个词或句描述参与者今天的总体感受(例如，困惑，忙碌，焦虑，等)
         
-        * What factors seemed to contribute to those feelings?
-        * What did you see the lead facilitators do to address or support the general participant experience throughout the day?
+        *哪些事情促使大家有了这样的情绪？
+        *从你的视角来看，今天，引导员做了哪些事来给与参与者经验？
       feel-tuesday_markdown_instruction: |
-        # Day 2: Feel
+        # 第二天: 感受
         
-        Use a few words or sentences to describe the ways participants seemed to feel throughout the day today (e.g., confused, engaged, anxious, etc.)
+        尝试用几个词或句描述参与者今天的总体感受(例如，困惑，忙碌，焦虑，等)
         
-        * What factors seemed to contribute to those feelings?
-        * What did you see the lead facilitators do to address or support the general participant experience throughout the day?
+        *哪些事情促使大家有了这样的情绪？
+        *从你的视角来看，今天，引导员做了哪些事来给与参与者经验？
       feel-wednesday_markdown_instruction: |
-        # Day 3: Feel
+        # 第三天: 感受
         
-        Use a few words or sentences to describe the ways participants seemed to feel throughout the day today (e.g., confused, engaged, anxious, etc.)
+        尝试用几个词或句描述参与者今天的总体感受(例如，困惑，忙碌，焦虑，等)
         
-        * What factors seemed to contribute to those feelings?
-        * What did you see the lead facilitators do to address or support the general participant experience throughout the day?
+        *哪些事情促使大家有了这样的情绪？
+        *从你的视角来看，今天，引导员做了哪些事来给与参与者经验？
       frozen circle function in circle_markdown_instruction: 现在让我们创建20个交叠的圆圈，在每圆圈之间转18度。
       frozen circle function with parameter_markdown_instruction: 这里有一个“创建圆圈”的模块，可以画不同大小的圆圈。你可以用它来创建一个5像素的小圆圈和10像素的大圆圈吗?
       frozen circle function_markdown_instruction: 使用新的"创建一个圆"块来创建 10 个相互重叠的圆圈。画圈之间别忘了跳一下哦。

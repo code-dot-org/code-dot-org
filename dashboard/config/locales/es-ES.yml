@@ -414,6 +414,7 @@ es:
       ha sido confirmada:'
     email_confirm_wrong_email: "(¿Dirección de correo electrónico equivocada?)"
     email_resend_confirm: Reenviar las instrucciones de confirmación
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(déjalo en blanco si no quieres cambiarlo)"
     current_password_hint: "(necesitamos tu contraseña actual para confirmar los cambios)"
     delete: Eliminar tu cuenta

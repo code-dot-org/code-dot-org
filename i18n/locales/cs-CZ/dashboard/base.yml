@@ -360,6 +360,7 @@ cs:
     email_confirm_needed_required: 'Vaše e-mailová adresa %{email} nebyla potvrzena:'
     email_confirm_wrong_email: '(Špatná e-mailová adresa?)'
     email_resend_confirm: 'Znovu odeslat instrukce o potvrzení'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(zanech prázdné, pokud nechceš provést změnu)"
     current_password_hint: '(potřebujeme tvé aktuální heslo pro potvrzení změn)'
     delete: 'Vymazat účet'

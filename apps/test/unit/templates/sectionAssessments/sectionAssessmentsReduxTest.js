@@ -13,6 +13,7 @@ import sectionAssessments, {
   getSurveyFreeResponseQuestions,
   getAssessmentsFreeResponseResults,
   getMultipleChoiceSurveyResults,
+  getMultipleChoiceSectionSummary,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
 
@@ -172,6 +173,7 @@ describe('sectionAssessmentsRedux', () => {
                       question_text: 'What is a variable?',
                       type: 'Multi',
                       level_id: 456,
+                      question_index: 0,
                     }
                   ]
                 }
@@ -180,7 +182,7 @@ describe('sectionAssessmentsRedux', () => {
           }
         };
         const result = getMultipleChoiceStructureForCurrentAssessment(stateWithAssessment);
-        assert.deepEqual(result, [{correctAnswer: 'B', id: 456, question: 'What is a variable?'}]);
+        assert.deepEqual(result, [{correctAnswer: 'B', id: 456, questionNumber: 1, question: 'What is a variable?'}]);
       });
     });
 
@@ -206,10 +208,12 @@ describe('sectionAssessmentsRedux', () => {
                         {
                           student_result: 'D',
                           status: 'incorrect',
+                          type: 'Multi'
                         },
                         {
                           student_result: 'Hi',
-                          status: 'free_response',
+                          status: '',
+                          type: 'FreeResponse',
                         }
                       ]
                     }
@@ -242,7 +246,8 @@ describe('sectionAssessmentsRedux', () => {
                   questions: [
                     {
                       type: 'FreeResponse',
-                      question_text: 'Can you say hello?'
+                      question_text: 'Can you say hello?',
+                      question_index: 0,
                     }
                   ]
                 }
@@ -257,7 +262,8 @@ describe('sectionAssessmentsRedux', () => {
                       level_results: [
                         {
                           student_result: 'Hello world',
-                          status: 'free_response',
+                          status: '',
+                          type: 'FreeResponse',
                         }
                       ]
                     }
@@ -270,6 +276,7 @@ describe('sectionAssessmentsRedux', () => {
         const result = getAssessmentsFreeResponseResults(stateWithAssessment);
         assert.deepEqual(result, [{
           questionText: "Can you say hello?",
+          questionNumber: 1,
           responses: [{id: 1, name: "Saira", response: "Hello world"}]
         }]);
       });
@@ -357,6 +364,120 @@ describe('sectionAssessmentsRedux', () => {
             answers: [{multipleChoiceOption: 'A', percentAnswered: 0}, {multipleChoiceOption: 'B', percentAnswered: 100}],
             notAnswered: 0,
           },
+        ]);
+      });
+    });
+
+    describe('getMultipleChoiceSectionSummary', () => {
+      it('returns an empty array when no assessments in redux', () => {
+        const result = getMultipleChoiceSectionSummary(rootState);
+        assert.deepEqual(result, []);
+      });
+
+      it('returns an array of objects of multipleChoiceDataPropType', () => {
+        const stateWithAssessment = {
+          ...rootState,
+          sectionAssessments: {
+            ...rootState.sectionAssessments,
+            assessmentId: 123,
+            assessmentQuestionsByScript: {
+              3: {
+                123: {
+                  id: 123,
+                  name: 'name',
+                  questions: [
+                    {
+                      level_id: 456,
+                      type: 'Multi',
+                      question_text: 'What is a variable?',
+                      question_index: 0,
+                      answers: [
+                        {correct: true, text: 'answer 1',},
+                        {correct: false, text: 'answer 2',}
+                      ]
+                    },
+                    {
+                      level_id: 789,
+                      type: 'Multi',
+                      question_text: 'What is a boolean?',
+                      question_index: 1,
+                      answers: [
+                        {correct: false, text: 'answer 1',},
+                        {correct: true, text: 'answer 2',}
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            assessmentResponsesByScript: {
+              3: {
+                1: {
+                  student_name: 'Saira',
+                  responses_by_assessment: {
+                    123: {
+                      level_results: [
+                        {student_result: 'A', status: 'correct', type: 'Multi'},
+                        {student_result: 'A', status: 'incorrect', type: 'Multi'},
+                      ]
+                    }
+                  }
+                },
+                2: {
+                  student_name: 'Rebecca',
+                  responses_by_assessment: {
+                    123: {
+                      level_results: [
+                        {student_result: 'A', status: 'correct', type: 'Multi'},
+                        {student_result: 'B', status: 'correct', type: 'Multi'},
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        };
+        const result = getMultipleChoiceSectionSummary(stateWithAssessment);
+        assert.deepEqual(result, [
+          {
+           "answers": [
+              {
+                "isCorrect": true,
+                "multipleChoiceOption": "A",
+                "numAnswered": 2,
+              },
+              {
+                "isCorrect": false,
+                "multipleChoiceOption": "B",
+                "numAnswered": 0
+              }
+            ],
+            "id": 456,
+            "notAnswered": 0,
+            "question": "What is a variable?",
+            "questionNumber": 1,
+            "totalAnswered": 2,
+          },
+          {
+            "answers": [
+              {
+                "isCorrect": false,
+                "multipleChoiceOption": "A",
+                "numAnswered": 1
+              },
+              {
+                "isCorrect": true,
+                "multipleChoiceOption": "B",
+                "numAnswered": 1,
+              }
+            ],
+            "id": 789,
+            "notAnswered": 0,
+            "question": "What is a boolean?",
+            "questionNumber": 2,
+            "totalAnswered": 2,
+          }
         ]);
       });
     });

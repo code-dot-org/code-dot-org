@@ -1088,6 +1088,7 @@
           them away.
         stone_block_2: Grey blocks are made of stone and cannot be thrown away.
       courseA_maze_ramp3a_2018_callout: {}
+      courseA_maze_ramp3b_2018_callout: {}
       courseA_maze_ramp4_2018_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many
           of these blocks you have left to use.
@@ -1135,6 +1136,7 @@
           start your program.
       courseB_Scrat_ramp2_2018_callout: {}
       courseB_Scrat_ramp3a_2018_callout: {}
+      courseB_Scrat_ramp3b_2018_callout: {}
       courseB_Scrat_ramp4a_2018_callout: {}
       courseB_Scrat_ramp5a_2018_callout: {}
       courseB_artist_loops3_callout:

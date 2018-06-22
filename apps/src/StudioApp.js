@@ -2341,6 +2341,10 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
     startBlocks = blockUtils.forceInsertTopBlock(startBlocks,
         config.forceInsertTopBlock);
   }
+  if (config.level.sharedFunctions) {
+    startBlocks = blockUtils.appendNewFunctions(startBlocks,
+        config.level.sharedFunctions);
+  }
   startBlocks = this.arrangeBlockPosition(startBlocks, config.blockArrangement);
   try {
     this.loadBlocks(startBlocks);
