@@ -595,7 +595,6 @@ def cucumber_arguments_for_browser(browser, options)
 
   arguments += ' -t ~@chrome' if browser['browserName'] != 'chrome' && !options.local
   arguments += ' -t ~@chrome_before_62' if browser['browserName'] != 'chrome' || browser['version'].to_i == 0 || browser['version'].to_i >= 62
-  arguments += ' -t ~@no_chrome' if browser['browserName'] == 'chrome'
   arguments += ' -t ~@no_safari' if browser['browserName'] == 'Safari'
   arguments += ' -t ~@no_firefox' if browser['browserName'] == 'firefox'
   arguments += ' -t ~@webpurify' unless CDO.webpurify_key
