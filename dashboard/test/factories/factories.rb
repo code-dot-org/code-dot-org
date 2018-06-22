@@ -244,6 +244,16 @@ FactoryGirl.define do
       oauth_token_expiration 'fake-oauth-token-expiration'
     end
 
+    trait :unmigrated_untrusted_email_sso do
+      unmigrated_sso
+      after(:create) do |user|
+        if user.student?
+          user.hashed_email = nil
+          user.save!
+        end
+      end
+    end
+
     trait :unmigrated_google_sso do
       unmigrated_sso
       provider 'google_oauth2'
@@ -258,6 +268,16 @@ FactoryGirl.define do
     trait :unmigrated_windowslive_sso do
       unmigrated_sso
       provider 'windowslive'
+    end
+
+    trait :unmigrated_clever_sso do
+      unmigrated_untrusted_email_sso
+      provider 'clever'
+    end
+
+    trait :unmigrated_powerschool_sso do
+      unmigrated_untrusted_email_sso
+      provider 'powerschool'
     end
 
     trait :with_google_authentication_option do
