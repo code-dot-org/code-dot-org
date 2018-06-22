@@ -138,6 +138,7 @@ export const multipleChoiceDataForSingleStudent = multipleChoiceData.map((questi
   return {
     id: question.id,
     question: question.question,
+    questionNumber: index,
     correctAnswer: ['C', 'C B', 'D', 'B', 'A'][index],
   };
 });

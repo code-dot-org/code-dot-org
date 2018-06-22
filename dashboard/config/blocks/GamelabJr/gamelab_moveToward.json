@@ -1,8 +1,9 @@
 {
   "category": "Actions",
   "config": {
+    "inline": false,
     "func": "moveToward",
-    "blockText": "move {SPRITE} {DISTANCE} pixels toward {TARGET}",
+    "blockText": "move {SPRITE} distance {DISTANCE} toward {TARGET}",
     "args": [
       {
         "name": "SPRITE",

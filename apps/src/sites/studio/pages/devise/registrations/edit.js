@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import ChangeEmailController from '@cdo/apps/lib/ui/accounts/ChangeEmailController';
+import AddPasswordController from '@cdo/apps/lib/ui/accounts/AddPasswordController';
 import ChangeUserTypeController from '@cdo/apps/lib/ui/accounts/ChangeUserTypeController';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
@@ -22,6 +23,11 @@ $(document).ready(() => {
   new ChangeUserTypeController(
     $('#change-user-type-modal-form'),
     userType,
+  );
+
+  new AddPasswordController(
+    $('#add-password-form'),
+    document.getElementById('add-password-fields'),
   );
 
   initializeCreatePersonalAccountControls();
