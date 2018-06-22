@@ -870,7 +870,7 @@ class User < ActiveRecord::Base
     elsif hashed_email = conditions.delete(:hashed_email)
       return nil if hashed_email.utf8mb4?
       legacy = where(hashed_email: hashed_email).first
-      matching_auth_opts = AuthenticationOption.where(credential_type: 'email', authentication_id: hashed_email)
+      matching_auth_opts = AuthenticationOption.where(hashed_email: hashed_email)
       migrated = matching_auth_opts.first && matching_auth_opts.first.user
       return migrated || legacy
     else
