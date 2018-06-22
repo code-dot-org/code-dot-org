@@ -642,10 +642,8 @@ describe('The Exporter,', function () {
         new Function(zipFiles['my-app/code.js'])();
         if (globalPromiseName) {
           await window[globalPromiseName];
-          done();
-        } else {
-          done();
         }
+        done();
       }).catch(e => {
         done(e);
       });
