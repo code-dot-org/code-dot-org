@@ -390,29 +390,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
   end
 
-  test 'login prefers migrated user to legacy user' do
-    legacy_student = create(:google_oauth2_student)
-    migrated_student = create(:student, :with_google_authentication_option, :multi_auth_migrated)
-    migrated_student.primary_authentication_option.update(authentication_id: legacy_student.uid)
-
-    auth = OmniAuth::AuthHash.new(
-      uid: legacy_student.uid,
-      provider: 'google_oauth2',
-      credentials: {
-        token: '123456'
-      }
-    )
-
-    @request.env['omniauth.auth'] = auth
-    @request.env['omniauth.params'] = {}
-
-    assert_does_not_create(User) do
-      get :google_oauth2
-    end
-
-    assert_equal migrated_student.id, signed_in_user_id
-  end
-
   def generate_auth_user_hash(email, user_type)
     OmniAuth::AuthHash.new(
       uid: '1111',
