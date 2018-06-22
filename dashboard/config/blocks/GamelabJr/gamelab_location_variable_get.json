@@ -3,7 +3,7 @@
   "config": {
     "simpleValue": true,
     "name": "location_variable_get",
-    "blockText": "{VAR}",
+    "blockText": "location of {VAR}",
     "args": [
       {
         "name": "VAR",
