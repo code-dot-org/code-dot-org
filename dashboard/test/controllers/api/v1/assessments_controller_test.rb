@@ -189,8 +189,8 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
             "timestamp" => updated_at.utc.to_s,
             "level_results" => [
               {"student_result" => "This is a free response", "status" => "", "type" => "FreeResponse"},
-              {"type" => "Multi", "student_result" => "A", "status" => "correct",},
-              {"type" => "Multi", "student_result" => "B", "status" => "incorrect",},
+              {"type" => "Multi", "student_result" => [0], "status" => "correct",},
+              {"type" => "Multi", "student_result" => [1], "status" => "incorrect",},
               {"type" => "Multi", "student_result" => "", "status" => "unsubmitted",},
               {"status" => "unsubmitted"}
             ]
