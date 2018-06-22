@@ -5,6 +5,7 @@ import React, {PropTypes} from 'react';
 import WorkshopDetails from './workshop_details';
 import FacilitatorBio from './facilitator_bio';
 import SignInPrompt from './sign_in_prompt';
+import EnrollForm from './enroll_form';
 
 export default class WorkshopEnrollment extends React.Component {
   static propTypes = {
@@ -27,7 +28,7 @@ export default class WorkshopEnrollment extends React.Component {
         </p>
         <div className="container">
           <div className="row">
-            {/* Left Column*/}
+            {/* Left Column */}
             <div className ="span6">
               <WorkshopDetails
                 workshop={this.props.workshop}
@@ -41,7 +42,7 @@ export default class WorkshopEnrollment extends React.Component {
                 />
               ))}
             </div>
-            {/* Right Column*/}
+            {/* Right Column */}
             <div className ="span6">
               <div className="row">
                 <div className ="span6">
@@ -53,8 +54,7 @@ export default class WorkshopEnrollment extends React.Component {
                       sign_in_url={this.props.sign_in_prompt_data.sign_in_url}
                     />
                   }
-                  <h2>Enrollment Form Here</h2>
-
+                  <EnrollForm />
                 </div>
               </div>
             </div>
@@ -63,5 +63,4 @@ export default class WorkshopEnrollment extends React.Component {
       </div>
     );
   }
-
 }
