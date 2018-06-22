@@ -21,7 +21,7 @@ describe('AddPasswordForm', () => {
       password: 'mypassword',
       passwordConfirmation: 'mypassword'
     });
-    const submitButton = wrapper.find('Button');
+    const submitButton = wrapper.find('button');
     expect(submitButton).not.to.have.attr('disabled');
   });
 
@@ -30,7 +30,7 @@ describe('AddPasswordForm', () => {
       password: '',
       passwordConfirmation: ''
     });
-    expect(wrapper.find('Button')).to.have.attr('disabled');
+    expect(wrapper.find('button')).to.have.attr('disabled');
   });
 
   it('disables form submission if passwords do not match', () => {
@@ -38,7 +38,7 @@ describe('AddPasswordForm', () => {
       password: 'newpassword',
       passwordConfirmation: 'notnewpassword'
     });
-    expect(wrapper.find('Button')).to.have.attr('disabled');
+    expect(wrapper.find('button')).to.have.attr('disabled');
   });
 
   it('renders a password mismatch validation error if passwords do not match', () => {
@@ -68,7 +68,7 @@ describe('AddPasswordForm', () => {
         password: 'mypassword',
         passwordConfirmation: 'mypassword'
       });
-      const submitButton = wrapper.find('Button');
+      const submitButton = wrapper.find('button');
       submitButton.simulate('click');
     });
 
@@ -106,7 +106,7 @@ describe('AddPasswordForm', () => {
         password: 'mypassword',
         passwordConfirmation: 'mypassword'
       });
-      const submitButton = wrapper.find('Button');
+      const submitButton = wrapper.find('button');
       submitButton.simulate('click');
     });
 
