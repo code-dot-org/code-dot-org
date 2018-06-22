@@ -35,10 +35,10 @@ class DropdownProperties extends React.Component {
           handleChange={this.props.handleChange.bind(this, 'options')}
         />
         <PropertyRow
-            desc={'index'}
-            isNumber={true}
-            initialValue={parseInt(element.selectedIndex, 10)}
-            handleChange={this.props.handleChange.bind(this, 'index')}
+          desc={'index'}
+          isNumber={true}
+          initialValue={parseInt(element.selectedIndex, 10)}
+          handleChange={this.props.handleChange.bind(this, 'index')}
         />
         <PropertyRow
           desc={'width (px)'}
