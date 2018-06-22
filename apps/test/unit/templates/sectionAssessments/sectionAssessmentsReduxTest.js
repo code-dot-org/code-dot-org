@@ -299,8 +299,8 @@ describe('sectionAssessmentsRedux', () => {
                 123: {
                   stage_name: 'name',
                   levelgroup_results: [
-                    {type: 'free_response', question: 'question1', results: [{result: 'Im not sure'},]},
-                    {type: 'free_response', question: 'question2', results: [{result: 'Im very sure'},]},
+                    {type: 'free_response', question_index: 0, question: 'question1', results: [{result: 'Im not sure'},]},
+                    {type: 'free_response', question_index: 1, question: 'question2', results: [{result: 'Im very sure'},]},
                   ],
                 }
               }
@@ -309,8 +309,8 @@ describe('sectionAssessmentsRedux', () => {
         };
         const result = getSurveyFreeResponseQuestions(stateWithSurvey);
         assert.deepEqual(result, [
-          {questionText: 'question1', answers: [{index: 0, response: 'Im not sure'}]},
-          {questionText: 'question2', answers: [{index: 0, response: 'Im very sure'}]}
+          {questionText: 'question1', questionNumber: 1, answers: [{index: 0, response: 'Im not sure'}]},
+          {questionText: 'question2', questionNumber: 2, answers: [{index: 0, response: 'Im very sure'}]}
         ]);
       });
     });
@@ -334,12 +334,14 @@ describe('sectionAssessmentsRedux', () => {
                   levelgroup_results: [
                     {
                       type: 'multi',
+                      question_index: 0,
                       question: 'question1',
                       answer_texts: [{text: 'agree'}, {text: 'disagree'}],
                       results: [{answer_index: 0}]
                     },
                     {
                       type: 'multi',
+                      question_index: 1,
                       question: 'question2',
                       answer_texts: [{text: 'agree'}, {text: 'disagree'}],
                       results: [{answer_index: 1}]
@@ -354,12 +356,14 @@ describe('sectionAssessmentsRedux', () => {
         assert.deepEqual(result, [
           {
             id: 0,
+            questionNumber: 1,
             question: 'question1',
             answers: [{multipleChoiceOption: 'A', percentAnswered: 100}, {multipleChoiceOption: 'B', percentAnswered: 0}],
             notAnswered: 0,
           },
           {
             id: 1,
+            questionNumber: 2,
             question: 'question2',
             answers: [{multipleChoiceOption: 'A', percentAnswered: 0}, {multipleChoiceOption: 'B', percentAnswered: 100}],
             notAnswered: 0,
