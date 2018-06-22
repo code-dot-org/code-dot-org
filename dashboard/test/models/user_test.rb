@@ -638,6 +638,15 @@ class UserTest < ActiveSupport::TestCase
     assert_equal migrated_student, looked_up_user
   end
 
+  test "find_for_authentication finds migrated Google email user" do
+    email = 'test@foo.bar'
+    migrated_student = create(:student, :with_migrated_google_authentication_option, email: email)
+
+    looked_up_user = User.find_for_authentication(hashed_email: User.hash_email(email))
+
+    assert_equal migrated_student, looked_up_user
+  end
+
   test "creating manual provider user without username generates username" do
     user = User.create(@good_data.merge({provider: User::PROVIDER_MANUAL}))
     assert_equal 'tester', user.username
