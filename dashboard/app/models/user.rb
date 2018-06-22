@@ -847,7 +847,7 @@ class User < ActiveRecord::Base
     return false if teacher? && email.nil?
 
     # If an email option with a different email address already exists, destroy it
-    existing_email_option = authentication_options.find {|ao| ao.credential_type == 'email'}
+    existing_email_option = authentication_options.find {|ao| AuthenticationOption.EMAIL == ao.credential_type}
     existing_email_option&.destroy
 
     # If an auth option exists with same email, set it to the user's primary authentication option
@@ -857,7 +857,7 @@ class User < ActiveRecord::Base
       return save
     end
 
-    params = {credential_type: 'email', user: self}
+    params = {credential_type: AuthenticationOption.EMAIL, user: self}
     params[:email] = email unless email.nil?
     params[:hashed_email] = hashed_email if email.nil?
     self.primary_authentication_option = AuthenticationOption.new(params)
