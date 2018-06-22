@@ -3586,18 +3586,18 @@ fr:
           working in text.
       9:
         image: notes/applab_intro_welcome_9.png
-        text: Either way you'll be programming in JavaScript, the language of the
-          web. Each level has a goal, instructions and an image of what you're aiming
-          to create.
+        text: Dans tous les cas vous allez programmer en Javascript, le langage le
+          plus utilisé sur internet. Chaque niveau a un objectif, instructions et
+          une image afin de vous aider dans votre création.
       10:
         image: notes/applab_intro_welcome_10.png
-        text: If you're ever stuck, click on this picture and it will show you exactly
-          how to complete the level. But see if you can do it on your own first.
+        text: Si vous êtes bloqué, cliquez sur cette image pour voir une explication
+          complète du niveau. Essayez d'abord de le faire tout seul.
       11:
         image: notes/applab_intro_welcome_11.png
-        text: Once you've completed the goal for this level click Finish to move on.
-          That's all there is to it! Hit the orange "continue" button to go to the
-          next level and start your adventure with an App Lab!
+        text: Quand vous avez finit votre objectif pour ce niveau cliquez sur "Finir"
+          pour avancer. C'est tout ! Appuyez sur le bouton orange "continuer" pour
+          allez au niveau suivant et commencez votre aventure avec App Lab !
     applab_intro_events:
       1:
         image: notes/applab_intro_events_1.png

@@ -357,6 +357,7 @@ hr:
     email_confirm_needed_required: 'Vaša e-mail adresa %{email} nije još potvrđena:'
     email_confirm_wrong_email: '(Kriva e-mail adresa?)'
     email_resend_confirm: 'Ponovno slanje uputa za potvrđivanje'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(ostavite prazno ako ne želite promijeniti)"
     current_password_hint: '(za potvrdu promjene treba nam vaša trenutna lozinka)'
     delete: 'Izbrišite svoj račun'

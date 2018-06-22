@@ -12,12 +12,17 @@ import 'codemirror/addon/edit/matchbrackets';
 import 'codemirror/addon/edit/trailingspace';
 import 'codemirror/addon/mode/overlay';
 import 'codemirror/addon/fold/xml-fold';
+import 'codemirror/addon/lint/lint';
+import 'codemirror/addon/lint/javascript-lint';
 import 'codemirror/mode/xml/xml';
 import 'codemirror/mode/javascript/javascript';
 import './vendor/codemirror.inline-attach';
 import jsonic from 'jsonic';
+import {JSHINT} from 'jshint';
 import marked from 'marked';
 import stylelessRenderer from '@cdo/apps/util/StylelessRenderer';
+
+window.JSHINT = JSHINT;
 
 CodeMirrorSpellChecker({
   codeMirrorInstance: CodeMirror,
@@ -35,7 +40,7 @@ const INVALID_COLOR = '#d00';
  * @param {booblen} [attachments] - whether to enable attachment uploading in
  *        this editor.
  */
-function initializeCodeMirror(target, mode, callback, attachments) {
+function initializeCodeMirror(target, mode, callback, attachments, onUpdateLinting) {
   let updatePreview;
 
   // Code mirror parses html using xml mode
@@ -81,7 +86,11 @@ function initializeCodeMirror(target, mode, callback, attachments) {
     matchTags: {bothTags: true},
     autoCloseTags: true,
     showTrailingSpace: true,
-    lineWrapping: true
+    lineWrapping: true,
+    gutters: ["CodeMirror-lint-markers"],
+    lint: {
+      onUpdateLinting,
+    },
   });
   if (callback) {
     editor.on('change', callback);

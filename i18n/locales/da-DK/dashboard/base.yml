@@ -360,6 +360,7 @@ da:
     email_confirm_needed_required: 'Din e-mail %{email} er ikke blevet bekræftet:'
     email_confirm_wrong_email: '(Forkert e-mail?)'
     email_resend_confirm: 'Gensend bekræftelsesmail'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(Efterlad blank hvis du ikke ønsker at ændre det)"
     current_password_hint: '(vi har brug for din nuværende adgangskode til at bekræfte dine ændringer)'
     delete: 'Slet din konto'

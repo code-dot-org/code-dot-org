@@ -12,7 +12,7 @@ Scenario: New workshop: CSF intro
   And I press keys "Seattle, WA" for element "input#location_address"
   And I press keys "25" for element "input#capacity"
   And I select the "CS Fundamentals" option in dropdown "course"
-  And I select the "Intro Workshop" option in dropdown "subject"
+  And I select the "Intro" option in dropdown "subject"
 
   And I wait until element "label:contains('Workshop Type Options')" is visible
   And I press the first "input[name='on_map'][value='no']" element
