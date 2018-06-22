@@ -20,6 +20,9 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
   },
+  button: {
+    margin: 0
+  },
   statusText: {
     paddingLeft: 10,
     fontStyle: 'italic',
@@ -118,6 +121,7 @@ export default class AddPasswordForm extends React.Component {
           {/* This button intentionally uses Bootstrap classes to match other account page buttons */}
           <button
             className="btn btn-primary"
+            style={styles.button}
             onClick={this.handleSubmit}
             disabled={!this.isFormValid()}
             tabIndex="1"
