@@ -85,6 +85,41 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     assert_equal COMMENT3, parsed_response['comment']
   end
 
+  test 'bad request when student_id not provided - get_feedback_from_teacher' do
+    teacher_sign_in_and_comment(@teacher, @student, @level, COMMENT1)
+    get "#{API}/get_feedback_from_teacher", params: {level_id: @level.id, teacher_id: @teacher.id}
+
+    assert_response :bad_request
+  end
+
+  test 'bad request when level_id not provided - get_feedback_from_teacher' do
+    teacher_sign_in_and_comment(@teacher, @student, @level, COMMENT1)
+    get "#{API}/get_feedback_from_teacher", params: {student_id: @student.id, teacher_id: @teacher.id}
+
+    assert_response :bad_request
+  end
+
+  test 'bad request when teacher_id not provided - get_feedback_from_teacher' do
+    teacher_sign_in_and_comment(@teacher, @student, @level, COMMENT1)
+    get "#{API}/get_feedback_from_teacher", params: {student_id: @student.id, level_id: @level.id}
+
+    assert_response :bad_request
+  end
+
+  test 'bad request when student_id not provided - get_feedbacks' do
+    teacher_sign_in_and_comment(@teacher, @student, @level, COMMENT1)
+    get "#{API}/get_feedbacks", params: {level_id: @level.id}
+
+    assert_response :bad_request
+  end
+
+  test 'bad request when level_id not provided - get_feedbacks' do
+    teacher_sign_in_and_comment(@teacher, @student, @level, COMMENT1)
+    get "#{API}/get_feedbacks", params: {student_id: @student.id}
+
+    assert_response :bad_request
+  end
+
   test 'student can retrieve feedback for a level - two comments, one teacher' do
     teacher_sign_in_and_comment(@teacher, @student, @level, COMMENT1)
     teacher_sign_in_and_comment(@teacher, @student, @level, COMMENT2)
