@@ -4,6 +4,11 @@
     "func": "spritesWhere",
     "blockText": "sprites where {PROPERTY} is {VALUE}",
     "returnType": "None",
+    "color": [
+      5,
+      ".7",
+      ".7"
+    ],
     "args": [
       {
         "name": "PROPERTY",
