@@ -6,6 +6,7 @@
   = stylesheet_link_tag '/blockly/video-js/video-js', media: 'all'
   = render partial: 'layouts/analytics'
   = javascript_include_tag 'application'
+  = javascript_include_tag "js/#{js_locale}/common_locale"
   %script{src: minifiable_asset_path('js/embedVideo.js')}
 %html{:dir => locale_dir}
   :css
