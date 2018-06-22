@@ -471,14 +471,9 @@ export const getMultipleChoiceSectionSummary = (state) => {
 /**
  * Takes in an array of objects {answerText: '', correct: true/false} and
  * returns the corresponding letters to the options with the correct answers.
- *
- * TODO(caleybrock): Add letter options to response from the server so they are
- * consistent with the structure, but for now look up letter in this array.
- * If this code is left client side, it needs tests.
- *
  * Ex - [{correct: false}, {correct: true}] --> returns 'B'
  */
-const getCorrectAnswer = (answerArr) => {
+export const getCorrectAnswer = (answerArr) => {
   if (!answerArr) {
     return '';
   }
@@ -494,12 +489,9 @@ const getCorrectAnswer = (answerArr) => {
 /**
  * Takes in an array of integers and returns the corresponding letters
  * representing correct answers.
- *
- * TODO(caleybrock): Write some tests.
- *
  * Ex - [1] --> returns 'B', [0, 2] --> returns 'A, C'
  */
-const indexesToAnswerString = (answerArr) => {
+export const indexesToAnswerString = (answerArr) => {
   if (!answerArr) {
     return '';
   }

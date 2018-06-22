@@ -14,6 +14,8 @@ import sectionAssessments, {
   getAssessmentsFreeResponseResults,
   getMultipleChoiceSurveyResults,
   getMultipleChoiceSectionSummary,
+  getCorrectAnswer,
+  indexesToAnswerString,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
 
@@ -129,6 +131,22 @@ describe('sectionAssessmentsRedux', () => {
       assert.deepEqual(result[0], {id: 7, name: 'Assessment 7'});
       assert.deepEqual(result[1], {id: 8, name: 'Assessment 8'});
       assert.deepEqual(result[2], {id: 9, name: 'Survey 9'});
+    });
+  });
+
+  describe('correct answer helper methods', () => {
+    describe('getCorrectAnswer', () => {
+      it('returns a string of letters', () => {
+        const answerArray = [{text: 'answer1', correct: false}, {text: 'answer2', correct: true}];
+        assert.deepEqual(getCorrectAnswer(answerArray), 'B');
+      });
+    });
+
+    describe('indexesToAnswerString', () => {
+      it('returns a string of letters', () => {
+        assert.deepEqual(indexesToAnswerString([0, 2]), 'A, C');
+        assert.deepEqual(indexesToAnswerString([1]), 'B');
+      });
     });
   });
 
