@@ -273,7 +273,7 @@ end
 def browser_features
   feature = 'features/minrepro.feature'
   $browsers.map do |browser|
-    arguments = cucumber_arguments_for_browser(browser, $options)
+    arguments = ' -S' # strict mode, so that we fail on undefined steps
     scenario_count = ParallelTests::Cucumber::Scenarios.all([feature], test_options: arguments).length
     next if scenario_count.zero?
     [browser, feature]
@@ -398,33 +398,6 @@ def html_output_filename(test_run_string, options)
   end
 end
 
-def cucumber_arguments_for_browser(browser, options)
-  arguments = ' -S' # strict mode, so that we fail on undefined steps
-  arguments += ' -t ~@skip'
-  arguments += " -t ~@eyes"
-  arguments += " -t ~@eyes_mobile"
-  arguments += ' -t ~@local_only' unless options.local
-  arguments += ' -t ~@no_mobile' if browser['mobile']
-  arguments += ' -t ~@only_mobile' unless browser['mobile']
-  arguments += ' -t ~@no_circle' if options.is_circle
-  arguments += ' -t ~@no_ie' if browser['browserName'] == 'Internet Explorer'
-
-  # Only run in IE during a DTT. always run locally or during circle runs.
-  # Note that you may end up running in more than one browser if you use flags
-  # like [test safari], [test ie] or [test firefox] during a circle run.
-  arguments += ' -t ~@only_one_browser' if browser['browserName'] != 'Internet Explorer' && !options.local && !options.is_circle
-
-  arguments += ' -t ~@chrome' if browser['browserName'] != 'chrome' && !options.local
-  arguments += ' -t ~@chrome_before_62' if browser['browserName'] != 'chrome' || browser['version'].to_i == 0 || browser['version'].to_i >= 62
-  arguments += ' -t ~@no_chrome' if browser['browserName'] == 'chrome'
-  arguments += ' -t ~@no_safari' if browser['browserName'] == 'Safari'
-  arguments += ' -t ~@no_firefox' if browser['browserName'] == 'firefox'
-  arguments += ' -t ~@webpurify' unless CDO.webpurify_key
-  arguments += ' -t ~@pegasus_db_access' unless options.pegasus_db_access
-  arguments += ' -t ~@dashboard_db_access' unless options.dashboard_db_access
-  arguments
-end
-
 def cucumber_arguments_for_feature(options, test_run_string, _)
   arguments = ''
   arguments += " --format html --out #{html_output_filename(test_run_string, options)}" if options.html
@@ -480,7 +453,7 @@ def run_feature(browser, feature, options)
 
   html_log = html_output_filename(test_run_string, options)
 
-  arguments = cucumber_arguments_for_browser(browser, options)
+  arguments = ' -S' # strict mode, so that we fail on undefined steps
   arguments += cucumber_arguments_for_feature(options, test_run_string, 0)
   cucumber_succeeded, _, output_stdout, output_stderr, test_duration = run_tests(run_environment, feature, arguments, log_prefix)
   feature_succeeded = cucumber_succeeded
