@@ -45,9 +45,14 @@ end
 
 def ensure_eyes_available
   return if @eyes
-  puts "Applitools Batch ID - #{ENV['APPLITOOLS_BATCH_ID']}"
   @eyes = Applitools::Selenium::Eyes.new
+  @eyes.api_key = ENV['APPLITOOLS_API_KEY']
   # Force eyes to use a consistent host OS identifier for now
   # BrowserStack was reporting Windows 6.0 and 6.1, causing different baselines
   @eyes.host_os = ENV['APPLITOOLS_HOST_OS']
+
+  # Assign all Eyes test to an Applitools Batch identified by the current commit hash.
+  batch = Applitools::BatchInfo.new
+  batch.id = ENV['APPLITOOLS_BATCH_ID']
+  @eyes.batch = batch
 end
