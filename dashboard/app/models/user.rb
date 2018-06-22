@@ -777,7 +777,7 @@ class User < ActiveRecord::Base
 
   def oauth?
     if migrated?
-      authentication_options.any? {|auth| OAUTH_PROVIDERS.include? auth.credential_type}
+      authentication_options.any?(&:oauth?)
     else
       OAUTH_PROVIDERS.include? provider
     end
