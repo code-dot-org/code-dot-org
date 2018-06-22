@@ -127,7 +127,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
       hashed_email: original_hashed_email,
       encrypted_password: :not_empty,
       primary_authentication_option: {
-        credential_type: 'email',
+        credential_type: AuthenticationOption::EMAIL,
         authentication_id: original_hashed_email,
         email: original_email,
         hashed_email: original_hashed_email,
