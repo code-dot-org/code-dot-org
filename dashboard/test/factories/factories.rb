@@ -156,7 +156,7 @@ FactoryGirl.define do
             user: user,
             email: user.email,
             hashed_email: user.hashed_email,
-            credential_type: 'google_oauth2',
+            credential_type: AuthenticationOption::GOOGLE,
             authentication_id: 'abcd123'
           )
         end
@@ -167,7 +167,7 @@ FactoryGirl.define do
             user: user,
             email: user.email,
             hashed_email: user.hashed_email,
-            credential_type: 'email',
+            credential_type: AuthenticationOption::EMAIL,
             authentication_id: user.hashed_email
           )
         end
@@ -286,7 +286,7 @@ FactoryGirl.define do
           user: user,
           email: user.email,
           hashed_email: user.hashed_email,
-          credential_type: 'google_oauth2',
+          credential_type: AuthenticationOption::GOOGLE,
           authentication_id: 'abcd123'
         )
       end
@@ -298,7 +298,7 @@ FactoryGirl.define do
           user: user,
           email: user.email,
           hashed_email: user.hashed_email,
-          credential_type: 'google_oauth2',
+          credential_type: AuthenticationOption::GOOGLE,
           authentication_id: 'abcd123'
         )
         user.update!(
@@ -314,7 +314,7 @@ FactoryGirl.define do
           user: user,
           email: user.email,
           hashed_email: user.hashed_email,
-          credential_type: 'clever',
+          credential_type: AuthenticationOption::CLEVER,
           authentication_id: '456efgh'
         )
       end
@@ -326,7 +326,7 @@ FactoryGirl.define do
           user: user,
           email: user.email,
           hashed_email: user.hashed_email,
-          credential_type: 'email',
+          credential_type: AuthenticationOption::EMAIL,
           authentication_id: user.hashed_email
         )
       end
@@ -338,7 +338,7 @@ FactoryGirl.define do
           user: user,
           email: user.email,
           hashed_email: user.hashed_email,
-          credential_type: 'email',
+          credential_type: AuthenticationOption::EMAIL,
           authentication_id: user.hashed_email
         )
         user.update!(
@@ -384,7 +384,7 @@ FactoryGirl.define do
     association :user
     email {''}
     hashed_email {''}
-    credential_type {'email'}
+    credential_type {AuthenticationOption::EMAIL}
     authentication_id {''}
 
     factory :email_authentication_option do
@@ -395,7 +395,7 @@ FactoryGirl.define do
     end
 
     factory :google_authentication_option do
-      credential_type 'google_oauth2'
+      credential_type AuthenticationOption::GOOGLE
       sequence(:email) {|n| "testuser#{n}@example.com.xx"}
       after(:create) do |auth|
         auth.authentication_id = auth.hashed_email
