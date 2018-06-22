@@ -360,6 +360,7 @@ pl:
     email_confirm_needed_required: 'Twój e-mail adres %{email} nie został potwierdzony:'
     email_confirm_wrong_email: '(Zły adres e-mail?)'
     email_resend_confirm: 'Wyślij ponownie instrukcje potwierdzenia'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(zostaw puste, jeśli nie chcesz tego zmienić)"
     current_password_hint: '(potrzebujemy Twojego aktualnego hasła, aby potwierdzić Twoje zmiany)'
     delete: 'Usuń swoje konto'

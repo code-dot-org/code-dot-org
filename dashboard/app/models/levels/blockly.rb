@@ -293,6 +293,13 @@ class Blockly < Level
         level_prop['codeFunctions'] = try(:project_template_level).try(:code_functions) || code_functions
         level_prop['sharedBlocks'] = shared_blocks
         level_prop['sharedFunctions'] = shared_functions if include_shared_functions
+
+        if should_localize?
+          xml_blocks.each do |category|
+            prop_name = overrides[category.to_sym] || category.camelize(:lower)
+            level_prop[prop_name] = localize_function_blocks(level_prop[prop_name]) if level_prop.key?(prop_name)
+          end
+        end
       end
 
       if is_a? Applab
@@ -407,7 +414,7 @@ class Blockly < Level
 
   def localized_toolbox_blocks
     if should_localize? && toolbox_blocks
-      block_xml = Nokogiri::XML(toolbox_blocks, &:noblanks)
+      block_xml = Nokogiri::XML(localize_function_blocks(toolbox_blocks), &:noblanks)
       block_xml.xpath('//../category').each do |category|
         name = category.attr('name')
         localized_name = I18n.t("data.block_categories.#{name}", default: nil)
@@ -415,6 +422,23 @@ class Blockly < Level
       end
       return block_xml.serialize(save_with: XML_OPTIONS).strip
     end
+  end
+
+  def localize_function_blocks(blocks)
+    block_xml = Nokogiri::XML(blocks, &:noblanks)
+    block_xml.xpath("//block[@type=\"procedures_defnoreturn\"]").each do |function|
+      name = function.at_xpath('./title[@name="NAME"]')
+      next unless name
+      localized_name = I18n.t("data.function_names.#{name.content}", default: nil)
+      name.content = localized_name if localized_name
+    end
+    block_xml.xpath("//block[@type=\"procedures_callnoreturn\"]").each do |function|
+      mutation = function.at_xpath('./mutation')
+      next unless mutation
+      localized_name = I18n.t("data.function_names.#{mutation.attr('name')}", default: nil)
+      mutation.set_attribute('name', localized_name) if localized_name
+    end
+    return block_xml.serialize(save_with: XML_OPTIONS).strip
   end
 
   def self.base_url

@@ -2,7 +2,7 @@ es-MX:
   data:
     function_names:
       x: x
-      details: details
+      details: detalles
       draw eyebrow: draw eyebrow
       draw pupil: draw pupil
       draw a circle: dibujar un círculo
@@ -34,7 +34,7 @@ es-MX:
       draw a snowflake: dibujar un copo de nieve
       draw 3 hexagons: draw 3 hexagons
       draw 4 hexagons: draw 4 hexagons
-      draw 5 hexagons: draw 5 hexagons
+      draw 5 hexagons: dibuja 5 hexagonos
       get 2 nectar: get 2 nectar
       collect purple nectar: collect purple nectar
       get 5: get 5
