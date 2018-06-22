@@ -13,7 +13,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   end
 
   #
-  # Non-Oauth accounts:
+  # Sponsored accounts:
   # Picture and word password students have no authentication_options.
   #
 
@@ -139,45 +139,77 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   # Trusted email from Oauth:
   #
 
+  test 'convert Google OAuth student' do
+    assert_convert_google_user create(:student, :unmigrated_google_sso)
+  end
+
   test 'convert Google OAuth teacher' do
-    user = create(:google_oauth2_teacher)
+    assert_convert_google_user create(:teacher, :unmigrated_google_sso)
+  end
+
+  test 'convert Windows Live OAuth student' do
+    assert_convert_oauth_user create(:student, :unmigrated_windowslive_sso)
+  end
+
+  test 'convert Windows Live OAuth teacher' do
+    assert_convert_oauth_user create(:teacher, :unmigrated_windowslive_sso)
+  end
+
+  test 'convert Facebook OAuth student' do
+    assert_convert_oauth_user create(:student, :unmigrated_facebook_sso)
+  end
+
+  test 'convert Facebook OAuth teacher' do
+    assert_convert_oauth_user create(:teacher, :unmigrated_facebook_sso)
+  end
+
+  def assert_convert_google_user(user)
+    # Google Oauth has an additional token to move over compared to
+    # other oauth providers
+    initial_oauth_refresh_token = user.oauth_refresh_token
+    assert_user user, oauth_refresh_token: :not_nil
+
+    assert_convert_oauth_user user
+
+    assert_user user, primary_authentication_option: {
+      data: {
+        oauth_refresh_token: initial_oauth_refresh_token
+      }
+    }
+  end
+
+  def assert_convert_oauth_user(user)
+    provider = user.provider
     initial_email = user.email
     initial_hashed_email = user.hashed_email
     initial_authentication_id = user.uid
     initial_oauth_token = user.oauth_token
     initial_oauth_token_expiration = user.oauth_token_expiration
-    initial_oauth_refresh_token = user.oauth_refresh_token
 
     assert_user user,
-      provider: 'google_oauth2',
-      email: :not_empty,
+      provider: provider,
+      email: user.student? ? :empty : :not_empty,
       hashed_email: :not_empty,
       uid: :not_nil,
       oauth_token: :not_nil,
-      oauth_token_expiration: :not_nil,
-      oauth_refresh_token: :not_nil
+      oauth_token_expiration: :not_nil
 
     migrate user
 
     assert_user user,
-      email: initial_email,
+      email: user.student? ? :empty : initial_email,
       hashed_email: initial_hashed_email,
       primary_authentication_option: {
-        credential_type: 'google_oauth2',
+        credential_type: provider,
         authentication_id: initial_authentication_id,
-        email: initial_email,
+        email: user.student? ? :empty : initial_email,
         hashed_email: initial_hashed_email,
         data: {
           oauth_token: initial_oauth_token,
-          oauth_token_expiration: initial_oauth_token_expiration,
-          oauth_refresh_token: initial_oauth_refresh_token
+          oauth_token_expiration: initial_oauth_token_expiration
         }
       }
   end
-
-  # TODO: Google Oauth user that also has a password
-  # TODO: Microsoft Oauth
-  # TODO: Facebook Oauth
 
   #
   # Untrusted email from Oauth:

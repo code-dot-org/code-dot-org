@@ -664,18 +664,18 @@ describe('block utils', () => {
   });
 
   describe('custom generators', () => {
+    let createBlock, generator;
+    before(() => {
+      createBlock = createJsWrapperBlockCreator(
+        Blockly,
+        'test',
+        [],
+        Blockly.BlockValueType.SPRITE,
+        [],
+      );
+      generator = Blockly.Generator.get('JavaScript');
+    });
     describe('assignment', () => {
-      let createBlock, generator;
-      before(() => {
-        createBlock = createJsWrapperBlockCreator(
-          Blockly,
-          'test',
-          [],
-          Blockly.BlockValueType.SPRITE,
-          [],
-        );
-        generator = Blockly.Generator.get('JavaScript');
-      });
       it('generates code for a single assignment', () => {
         createBlock({
           func: 'foo',
@@ -718,6 +718,8 @@ describe('block utils', () => {
         const code = generator['test_foo'].bind(fakeBlock)();
         expect(code).to.equal('a = b = foo(a, b);\n');
       });
+    });
+    describe('deferred input', () => {
       it('generates code for a deferred input', () => {
         createBlock({
           func: 'yellAt',
@@ -753,6 +755,102 @@ describe('block utils', () => {
         `);
 
         valueToCodeStub.restore();
+      });
+    });
+    describe('simpleValue', () => {
+      it('generates code for a simple value with return value', () => {
+        createBlock({
+          simpleValue: true,
+          name: 'simpleValue',
+          blockText: '{VAL}',
+          args: [
+            { name: 'VAL' },
+          ],
+          returnType: 'String',
+        });
+        const valueToCodeStub = sinon.stub(Blockly.JavaScript, 'valueToCode')
+          .returns('"a string value"');
+
+        expect(generator['test_simpleValue']()[0]).to.equal('"a string value"');
+
+        valueToCodeStub.restore();
+      });
+      it('generates code for a simple value assignment', () => {
+        createBlock({
+          simpleValue: true,
+          name: 'simpleAssignment',
+          blockText: '{VAR} = {VAL}',
+          args: [
+            { name: 'VAL' },
+            { name: 'VAR', assignment: true }
+          ],
+        });
+        const valueToCodeStub = sinon.stub(Blockly.JavaScript, 'valueToCode')
+          .callsFake((block, name) => {
+            return {
+              VAR: 'myVariable',
+              VAL: '"some other value"',
+            }[name];
+          });
+        const code = generator['test_simpleAssignment']();
+
+        expect(code.trim()).to.equal('myVariable = "some other value";');
+
+        valueToCodeStub.restore();
+      });
+      it('generates code for a simple value double assignment', () => {
+        createBlock({
+          simpleValue: true,
+          name: 'simpleAssignment',
+          blockText: '{VAR1} = {VAR2} = {VAL}',
+          args: [
+            { name: 'VAL' },
+            { name: 'VAR1', assignment: true },
+            { name: 'VAR2', assignment: true },
+          ],
+        });
+        const valueToCodeStub = sinon.stub(Blockly.JavaScript, 'valueToCode')
+          .callsFake((block, name) => {
+            return {
+              VAR1: 'i',
+              VAR2: 'j',
+              VAL: '"yet another value"',
+            }[name];
+          });
+        const code = generator['test_simpleAssignment']();
+
+        expect(code.trim()).to.equal('i = j = "yet another value";');
+
+        valueToCodeStub.restore();
+      });
+      it('throws for a simpleValue block with too many args', () => {
+        expect(() => {
+          createBlock({
+            simpleValue: true,
+            name: 'simpleValue',
+            blockText: '{VAL1} {VAL2}',
+            args: [
+              { name: 'VAL1' },
+              { name: 'VAL2' },
+            ],
+            returnType: 'String',
+          });
+        }).to.throw(Error);
+      });
+      it('throws for a simple assignemnt block with too many args', () => {
+        expect(() => {
+          createBlock({
+            simpleValue: true,
+            name: 'simpleValue',
+            blockText: '{VAR} = {VAL1} {VAL2}',
+            args: [
+              { name: 'VAR', assignment: true },
+              { name: 'VAL1' },
+              { name: 'VAL2' },
+            ],
+            returnType: 'String',
+          });
+        }).to.throw(Error);
       });
     });
   });

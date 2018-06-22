@@ -54,11 +54,8 @@
     "project_template_level_name": "Dance Party 2",
     "show_type_hints": "true",
     "instructions": "Add code to change the color of each alien when it gets clicked.",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "validation_code": "if (World.frameCount > 50) {\r\n  var spriteTints = 0;\r\n  \r\n  // Check through all sprites in case student changed the sprite name\r\n  for (var i=0; i<World.allSprites.length; i++) {\r\n    var sprite = World.allSprites[i];\r\n    // ignore edge sprites\r\n    if (!edges.contains(sprite)) {\r\n      if (sprite.tint != undefined) {\r\n     \tspriteTints++;\r\n      }\r\n    }\r\n  }\r\n\r\n  if(spriteTints >= 3){\r\n    levelSuccess(0);\r\n  }\r\n}"
+    "validation_code": "if (World.frameCount > 50) {\r\n  var spriteTints = 0;\r\n  \r\n  // Check through all sprites in case student changed the sprite name\r\n  for (var i=0; i<World.allSprites.length; i++) {\r\n    var sprite = World.allSprites[i];\r\n    // ignore edge sprites\r\n    if (!edges.contains(sprite)) {\r\n      if (sprite.tint != undefined) {\r\n     \tspriteTints++;\r\n      }\r\n    }\r\n  }\r\n\r\n  if(spriteTints >= 3){\r\n    levelSuccess(0);\r\n  }\r\n}",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

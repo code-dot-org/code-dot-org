@@ -284,6 +284,7 @@ describe('The Exporter,', function () {
             <img id="firstImage" src="/v3/assets/some-channel-id/foo.png"/>
             <button id="iconButton" data-canonical-image-url="icon://fa-hand-peace-o">
             <button id="clickMeButton" style="background-color: red;">Click Me!</button>
+            <button id="1Button" style="background-color: blue;">1</button>
             <img id="secondImage" src="/v3/assets/some-channel-id/foo.png"/>
           </div>
         </div>`
@@ -360,16 +361,26 @@ describe('The Exporter,', function () {
 
         it("should have a #divApplab element", () => {
           assert.isNotNull(el.querySelector("#divApplab"), "no #divApplab element");
+          const innerTextLines = el.querySelector("#divApplab").innerText.trim().split('\n');
           assert.equal(
-            el.querySelector("#divApplab").innerText.trim(),
+            innerTextLines[0].trim(),
             'Click Me!',
-            "#divApplab inner text"
+            "#divApplab inner text first line"
+          );
+          assert.equal(
+            innerTextLines[1].trim(),
+            '1',
+            "#divApplab inner text second line"
           );
         });
 
         it("should have removed all style attributes from the elements", () => {
           assert.isNull(
             el.querySelector("#clickMeButton").getAttribute('style'),
+            'style attributes should be removed'
+          );
+          assert.isNull(
+            el.querySelector("#\\31 Button").getAttribute('style'),
             'style attributes should be removed'
           );
         });
@@ -389,6 +400,10 @@ describe('The Exporter,', function () {
           zipFiles['my-app/style.css'],
           '#divApplab.appModern #clickMeButton {\n' +
           '  background-color: red;\n' +
+          '}\n' +
+          '\n' +
+          '#divApplab.appModern #\\31 Button {\n' +
+          '  background-color: blue;\n' +
           '}'
         );
       });
@@ -439,6 +454,7 @@ describe('The Exporter,', function () {
             <img id="firstImage" src="/v3/assets/some-channel-id/foo.png"/>
             <button id="iconButton" data-canonical-image-url="icon://fa-hand-peace-o">
             <button id="clickMeButton" style="background-color: red;">Click Me!</button>
+            <button id="1Button" style="background-color: blue;">1</button>
             <img id="secondImage" src="/v3/assets/some-channel-id/foo.png"/>
           </div>
         </div>`,
@@ -532,16 +548,26 @@ describe('The Exporter,', function () {
 
         it("should have a #divApplab element", () => {
           assert.isNotNull(el.querySelector("#divApplab"), "no #divApplab element");
+          const innerTextLines = el.querySelector("#divApplab").innerText.trim().split('\n');
           assert.equal(
-            el.querySelector("#divApplab").innerText.trim(),
+            innerTextLines[0].trim(),
             'Click Me!',
-            "#divApplab inner text"
+            "#divApplab inner text first line"
+          );
+          assert.equal(
+            innerTextLines[1].trim(),
+            '1',
+            "#divApplab inner text second line"
           );
         });
 
         it("should have removed all style attributes from the elements", () => {
           assert.isNull(
             el.querySelector("#clickMeButton").getAttribute('style'),
+            'style attributes should be removed'
+          );
+          assert.isNull(
+            el.querySelector("#\\31 Button").getAttribute('style'),
             'style attributes should be removed'
           );
         });
@@ -561,6 +587,10 @@ describe('The Exporter,', function () {
           zipFiles['my-app/assets/style.css'],
           '#divApplab.appModern #clickMeButton {\n' +
           '  background-color: red;\n' +
+          '}\n' +
+          '\n' +
+          '#divApplab.appModern #\\31 Button {\n' +
+          '  background-color: blue;\n' +
           '}'
         );
       });
