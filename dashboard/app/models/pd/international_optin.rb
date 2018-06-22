@@ -35,7 +35,7 @@ class Pd::InternationalOptin < ApplicationRecord
         gradeLevels: ['High School', 'Middle School', 'Elementary School'],
         program: ['CS Fundamentals (Pre-K - 5th grade)', 'CS Discoveries (6 - 10th grade)', 'CS Principles (appropriate for 9th - 12th grade, and can be implemented as an AP or introductory course)'],
         optIn: ['Yes', 'No'],
-        gender: ['Female', 'Male', 'Other', 'Prefer not to answer'],
+        gender: ['Male', 'Female', 'Non-binary', 'Preferred term not listed', 'Prefer not to answer'],
         ages: ['< 6 years old', '7-8 years old', '9-10 years old', '11-12 years old', '13-14 years old', '15-16 years old', '17-18 years old', '19+ years old'],
         subjects: ['Computer Science', 'ICT', 'Math', 'Science', 'History / Social Studies', 'Language Arts', 'English as a Foreign Language', 'Music', 'Art'],
         resources: ['Bootstrap', 'CodeCademy', 'Google CS First', 'Khan Academy', 'Kodable', 'Lightbot', 'Scratch', 'Tynker'],
