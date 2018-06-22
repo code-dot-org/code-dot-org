@@ -191,7 +191,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
               {"student_result" => "This is a free response", "status" => "", "type" => "FreeResponse"},
               {"type" => "Multi", "student_result" => [0], "status" => "correct",},
               {"type" => "Multi", "student_result" => [1], "status" => "incorrect",},
-              {"type" => "Multi", "student_result" => "", "status" => "unsubmitted",},
+              {"type" => "Multi", "student_result" => [], "status" => "unsubmitted",},
               {"status" => "unsubmitted"}
             ]
           }
