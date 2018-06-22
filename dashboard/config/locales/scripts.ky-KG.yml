@@ -75,11 +75,11 @@ ky:
           description_audience: Ages 6+ (reading required)
           stages:
             'Artist: Debugging':
-              name: 'Artist: Debugging'
+              name: 'Сүрөтчү: Дебаггиң'
             'Artist: Loops':
               name: 'Сүрөтчү: циклдар'
             'Artist: Nested Loops':
-              name: 'Artist: Nested Loops'
+              name: 'Сүрөтчү: салынган циклдар'
             'Artist: Sequence':
               name: 'Сүрөтчү: Ирет'
             'Bee: Conditionals':
@@ -124,13 +124,13 @@ ky:
           description_audience: Ages 8-18
           stages:
             Artist:
-              name: Artist
+              name: Сүрөтчү
             'Artist: Functions':
-              name: 'Artist: Functions'
+              name: 'Сүрөтчү: функциялар'
             'Artist: Nested Loops':
-              name: 'Artist: Nested Loops'
+              name: 'Сүрөтчү: салынган циклдар'
             'Artist: Patterns':
-              name: 'Artist: Patterns'
+              name: 'Сүрөтчү: үлгүлөр'
             'Bee: Conditionals':
               name: 'Bee: Conditionals'
             'Bee: Debugging':
@@ -173,12 +173,12 @@ ky:
             Play Lab:
               name: Play Lab
         artist:
-          title: Artist
-          description: Draw cool pictures and designs with the Artist!
-          description_short: Draw cool pictures and designs with the Artist!
+          title: Сүрөтчү
+          description: Сүрөтчү менен сонун сүрөттөрдү тарткыла жана дизайн жараткыла!
+          description_short: Сүрөтчү менен сонун сүрөттөрдү тарткыла жана дизайн жараткыла!
           stages:
             Artist:
-              name: Artist
+              name: Сүрөтчү
         hourofcode:
           title: Классикалык лабиринт
           description: Angry Birds, Plants vs. Zombies каармандары жана "Муз доорундагы"
@@ -190,15 +190,15 @@ ky:
               name: Лабиринт
           description_audience: ''
         frozen:
-          title: Code with Anna and Elsa
-          description: Let's use code to join Anna and Elsa as they explore the magic
-            and beauty of ice. You will create snowflakes and patterns as you ice-skate
-            and make a winter wonderland that you can then share with your friends!
+          title: Анна жана Элза менен код жазгыла
+          description: Муз сыйкырын жана кооздугун изилдеген Анна менен Элзага кошулуу
+            үчүн кодду колдонобуз. Коньки тээп, карчалардан жана аяз саймаларынан
+            кереметтүү кыш өлкөсүн жаратып, досторуңар менен бөлүшкүлө!
           description_short: Let's use code to join Anna and Elsa as they explore
             the magic and beauty of ice.
           stages:
             Artist:
-              name: Artist
+              name: Сүрөтчү
         course4:
           title: Course 4
           description: Course 4 is designed for students who have taken Courses 2
@@ -212,17 +212,17 @@ ky:
           description_audience: Ages 9-18
           stages:
             Artist:
-              name: Artist
+              name: Сүрөтчү
             Artist Binary:
-              name: Artist Binary
+              name: Сүрөтчү бинардык система
             'Artist: For Loops':
-              name: 'Artist: For Loops'
+              name: 'Сүрөтчү: For циклдары'
             'Artist: Functions':
-              name: 'Artist: Functions'
+              name: 'Сүрөтчү: функциялар'
             'Artist: Functions with Parameters':
-              name: 'Artist: Functions with Parameters'
+              name: 'Сүрөтчү: параметри бар функциялар'
             'Artist: Variables':
-              name: 'Artist: Variables'
+              name: 'Сүрөтчү: Өзгөрмөлөр'
             'Bee: For Loops':
               name: 'Bee: For Loops'
             'Bee: Functions with Parameters':
@@ -264,11 +264,11 @@ ky:
           description_audience: ''
           stages:
             'Artist: Functions':
-              name: 'Artist: Functions'
+              name: 'Сүрөтчү: функциялар'
             'Artist: Loops':
               name: 'Сүрөтчү: циклдар'
             'Artist: Nested Loops':
-              name: 'Artist: Nested Loops'
+              name: 'Сүрөтчү: салынган циклдар'
             'Artist: Sequence':
               name: 'Сүрөтчү: Ирет'
             'Bee: Conditionals':
@@ -344,11 +344,11 @@ ky:
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Unplugged: Video Games and Coordinate Planes'
         infinity:
-          title: Disney Infinity Play Lab
-          description: Use Play Lab to create a story or game starring Disney Infinity
-            characters.
-          description_short: Use Play Lab to create a story or game starring Disney
-            Infinity characters.
+          title: Disney Infinity оюн лабораториясы
+          description: Play Lab колдонуп, Disney Infinity каармандары катышкан окуя
+            же оюн түзгүлө.
+          description_short: Play Lab колдонуп, Disney Infinity каармандары катышкан
+            окуя же оюн түзгүлө.
           stages:
             Infinity:
               name: Чексиздик
@@ -469,15 +469,15 @@ ky:
             Song Writing:
               name: Song Writing
             The Artist:
-              name: The Artist
+              name: Сүрөтчү
             The Artist 2:
-              name: The Artist 2
+              name: 2-Сүрөтчү
             The Artist 3:
-              name: The Artist 3
+              name: 3-Сүрөтчү
             The Artist 4:
-              name: The Artist 4
+              name: 4-Сүрөтчү
             The Artist 5:
-              name: The Artist 5
+              name: 5-Сүрөтчү
             The Farmer:
               name: The Farmer
             The Farmer 2:
@@ -503,7 +503,7 @@ ky:
             Play Lab:
               name: Play Lab
             The Artist:
-              name: The Artist
+              name: Сүрөтчү
             The Maze:
               name: The Maze
         events:
@@ -1126,7 +1126,7 @@ ky:
             AppLab:
               name: AppLab
             Artist:
-              name: Artist
+              name: Сүрөтчү
             Bee:
               name: Bee
             Bounce:
@@ -3182,7 +3182,7 @@ ky:
             More Programming with Scratch:
               name: More Programming with Scratch
             'New Artist: Functions':
-              name: 'New Artist: Functions'
+              name: 'Жаңы сүрөтчү: функциялар'
             Scaffolded Project Stage (Loops, Events, Conditionals, Functions):
               name: Scaffolded Project Stage (Loops, Events, Conditionals, Functions)
             Songwriting:
@@ -3234,11 +3234,11 @@ ky:
           description_audience: Ages 10-110
           stages:
             'Artist: For Loops':
-              name: 'Artist: For Loops'
+              name: 'Сүрөтчү: For циклдары'
             'Artist: Functions with Parameters':
-              name: 'Artist: Functions with Parameters'
+              name: 'Сүрөтчү: параметри бар функциялар'
             'Artist: Variables':
-              name: 'Artist: Variables'
+              name: 'Сүрөтчү: Өзгөрмөлөр'
             'Bee: For Loops':
               name: 'Bee: For Loops'
             'Bee: Functions with Parameters':
@@ -3400,7 +3400,7 @@ ky:
             " Bee: Conditionals":
               name: " Bee: Conditionals"
             'Artist: Nested Loops':
-              name: 'Artist: Nested Loops'
+              name: 'Сүрөтчү: салынган циклдар'
             Bee Debugging:
               name: Bee Debugging
             Bounce:
@@ -4285,7 +4285,7 @@ ky:
             Binary Images:
               name: Binary Images
             Binary Artist Puzzles:
-              name: Binary Artist Puzzles
+              name: 'Сүрөтчү: бинардык тапшырмалар'
             RGB Color:
               name: RGB Color
             Processing with Bits:
@@ -5055,7 +5055,7 @@ ky:
             Programming in Collector:
               name: Programming in Collector
             Programming in Artist:
-              name: Programming in Artist
+              name: Сүрөтчүдөгү програмдоо
             'Loops: Getting Loopy':
               name: 'Loops: Getting Loopy'
             Loops in Maze:
@@ -5100,7 +5100,7 @@ ky:
             Nested Loops in Maze:
               name: Nested Loops in Maze
             Nested Loops in Artist:
-              name: Nested Loops in Artist
+              name: Сүрөтчүдөгү салынган циклдар
             'Algorithms: Relay Programming':
               name: 'Algorithms: Relay Programming'
             Debugging in Bee:
@@ -5128,7 +5128,7 @@ ky:
             'Unplugged: Binary':
               name: 'Unplugged: Binary'
             Artist Binary:
-              name: Artist Binary
+              name: Сүрөтчү бинардык система
             Nested Loops in Bee:
               name: Nested Loops in Bee
             Nested Loops:
@@ -5136,7 +5136,7 @@ ky:
             Introduction:
               name: Introduction
             Nested Loops Project in Artist:
-              name: Nested Loops Project in Artist
+              name: Сүрөтчүдөгү салынган циклдар
             Debugging in Collector:
               name: Debugging in Collector
         coursee-draft:
@@ -5155,7 +5155,7 @@ ky:
             'Functions: Songwriting':
               name: 'Functions: Songwriting'
             Functions in Artist:
-              name: Functions in Artist
+              name: Сүрөтчүдөгү функциялар
             Functions in Bee:
               name: Functions in Bee
             Functions in Farmer:
@@ -5204,17 +5204,17 @@ ky:
             Variables in Play Lab:
               name: Variables in Play Lab
             Variables in Artist:
-              name: Variables in Artist
+              name: Сүрөтчүдөгү өзгөрмөлөр
             For Loop Fun:
               name: For Loop Fun
             For Loops in Bee:
               name: For Loops in Bee
             For Loops in Artist:
-              name: For Loops in Artist
+              name: Сүрөтчүдөгү For циклдары
             'Functions with Parameters: Songwriting with Parameters':
               name: 'Functions with Parameters: Songwriting with Parameters'
             Functions with Parameters in Artist:
-              name: Functions with Parameters in Artist
+              name: Сүрөтчүдөгү параметри бар функциялар
             Functions with Parameters in Bee:
               name: Functions with Parameters in Bee
             Explore Project Ideas:
@@ -5446,7 +5446,7 @@ ky:
             'Functions: Songwriting':
               name: 'Functions: Songwriting'
             Functions in Artist:
-              name: Functions in Artist
+              name: Сүрөтчүдөгү функциялар
             Functions in Bee:
               name: Functions in Bee
             Functions in Farmer:
@@ -7064,29 +7064,29 @@ ky:
         artist-and-bb8:
           stages:
             B8 New BB8:
-              name: B8 New BB8
+              name: B8 Жаңы BB8
             c8 to BB8:
-              name: c8 to BB8
+              name: c8 --> BB8
             B8 BB8:
               name: B8 BB8
             C9 Artist Loops:
-              name: C9 Artist Loops
+              name: C9 Сүрөтчүциклдары
             C8 to BB8:
-              name: C8 to BB8
+              name: C8 --> BB8
             D7 to Laurel:
-              name: D7 to Laurel
+              name: D7 Лаурелге
             D6 Frozen Artist:
-              name: D6 Frozen Artist
+              name: D6 Тоңгон сүрөтчү
             F7 add Conditionals:
-              name: F7 add Conditionals
+              name: F7 шарттууларды кошуу
             F5 Minecraft:
               name: F5 Minecraft
             Programming with BB-8:
-              name: Programming with BB-8
+              name: BB-8 менен програмдоо
             Loops with BB-8:
-              name: Loops with BB-8
+              name: BB-8 менен циклдар
             D13 no If/While:
-              name: D13 no If/While
+              name: D13 If/While жок
             Ice Age Play Lab:
               name: Ice Age Play Lab
             Bounce:
@@ -7094,7 +7094,7 @@ ky:
             NewBounce:
               name: NewBounce
             F PlayLab Variables:
-              name: F PlayLab Variables
+              name: F PlayLab өзгөрмөлөр
           title: ''
           description_audience: ''
           description_short: ''
@@ -7259,7 +7259,7 @@ ky:
             Programming in Collector:
               name: Programming in Collector
             Programming in Artist:
-              name: Programming in Artist
+              name: Сүрөтчүдөгү програмдоо
             'Loops: Getting Loopy':
               name: 'Loops: Getting Loopy'
             Loops in Maze:
@@ -7300,15 +7300,15 @@ ky:
               name: Introduction
               description_student: This lesson will give you practice in the skills
                 you will need for this course.
-              description_teacher: 'In this set of puzzles, students will begin with
-                an introduction (or review depending on the experience of your class)
-                of Code.org''s online workspace. There will be videos pointing out
-                the basic functionality of the workspace including the `Run`, `Reset`,
-                and `Step` buttons. Also discussed in these videos: dragging Blockly
-                blocks, deleting Blockly blocks, and connecting Blockly blocks. Next,
-                students will practice their _sequencing_ and _debugging_ skills in
-                maze. From there, students will see new types of puzzles like Collector,
-                Artist, and Harvester when they learn the very basics of _loops_.'
+              description_teacher: Бул тапшырмаларда окуучулар Code.org онлайн иштактасы
+                менен таанышып (же класстын деңгээлине жараша көз жүгүртүү болушу
+                мүмкүн) башташат. Иштактанын негизги функционалын - "Аткар", "Кайта",
+                "Кадам" сыяктуу баскычтарынын түшүндүргөн видеолор көрсөтүлөт. Ошондой
+                эле бул виделордо Blockly блокторун сүйрөө, жок кылуу жана туташтыруу
+                талкууланат. Андан кийин окуучулар лабиринтте иреттештирүү жана дебаггиң
+                жөндөмдөрүн машыктырышат. Ал жерден окучуулар жаңы Жыйноочу, Сүрөтчү
+                жана Комбайн тапшырмаларына өтүп, циклдин эң баштапкы негиздери менен
+                таанышышат.
             'Algorithms: Graph Paper Programming':
               name: 'Algorithms: Graph Paper Programming'
               description_student: In this lesson, you will program your friend to
@@ -7341,7 +7341,7 @@ ky:
                 encouraged to figure out how little changes in either loop will affect
                 their program when they click `Run`.
             Nested Loops in Artist:
-              name: Nested Loops in Artist
+              name: Сүрөтчүдөгү салынган циклдар
               description_student: More nested loops! This time, you get to make some
                 AMAZING drawing with nested loops.
               description_teacher: Students will create intricate designs using Artist
@@ -7445,23 +7445,25 @@ ky:
                 store even more complex information (such as images and colors) in
                 binary, as well.
             Artist Binary:
-              name: Artist Binary
-              description_student: Direct your own artist to create a binary image
-                using only commands to turn pixels on and off.
-              description_teacher: Binary is extremely important in the world of computers.
-                The majority of computers today store all sorts of information in
-                binary form. This lesson helps demonstrate how it is possible to take
-                something from real life and translate it into a series of ons and
-                offs. Students will build binary images in Artist by translating 0s
-                and 1s to offs and ons (or blacks and whites).
+              name: Сүрөтчүдөгү бинардык
+              description_student: |-
+                Сүрөтчүңөрдү башкаргыла. Пикселдерди күйгүзүү жана өчүрүү буйруктарын гана колдонуп
+                бинардык сүрөт тарткыла.
+              description_teacher: Бинардык система компүтерлер дүйнөсүндө өтө маанилүү.
+                Бүгүнкү компүтерлердин көпчүлүгү маалыматтын бардык түрүн бинардык
+                системада сакташат. Бул сабак кадимки жашоодон бир нерсени алып, аны
+                күйгүзүү жана өчүрүүлөрдүн сериясына айлантып койсо болорун көрсөтөт.
+                Окуучулар Сүрөтчүдө 0дү жана 1ди (же ак жана караны) күйгүзүү жана
+                өчүрүүгө айлантып, бинардык сүрөт тартышат.
             Nested Loops Project in Artist:
-              name: Nested Loops Project in Artist
-              description_student: Here you will be using nested loops to make cool
-                projects to show to your family and friends.
-              description_teacher: Now that students know how to layer their loops,
-                they can create so many beautiful things.  This lesson will take students
-                through a series of exercises to help them create their own portfolio-ready
-                images.
+              name: Тоңгондогу салынган циклдар
+              description_student: Дагы салынган циклдар! Бул жолу салынган циклдар
+                менен УКМУШТУУ сүрөттөрдү жаратасыңар.
+              description_teacher: Окуучулар Сүрөтчүнүн бүгүнкү тапшырмаларын колдонуп
+                татаал дизайн жаратышат. Салынган циклдарды жаңы максатта колдонуу
+                менен, студенттер циклдардын колдонулушун жалпысынан көбүрөөк түшүнүшөт.
+                Бул тапшырмалар окуучуларга дэңгээлдин аягында өз дизайнын жаратуусу
+                үчүн көптөгөн чыгармачылык мүмкүнчүлүктөрдү сунуштайт.
             Debugging in Collector:
               name: Debugging in Collector
               description_student: Have you ever run into problems while coding? In
@@ -7494,13 +7496,13 @@ ky:
               description_student: This fast-paced introduction will give you the
                 chance to practice most of the skills that you will need to solve
                 the puzzles in this course.
-              description_teacher: In this progression, students will begin with an
-                introduction (or review depending on the experience of your class)
-                of Code.org's online workspace. Students will learn the basic functionality
-                of the interface including the `Run`, `Reset`, and `Step` buttons.
-                Dragging, deleting, and connecting Blockly blocks is also introduced
-                in the beginning video. In the puzzles, students will practice their
-                sequencing and debugging skills in Maze and Artist.
+              description_teacher: Бул жылышта окуучулар Code.org онлайн иштактасы
+                менен таанышып (же класстын деңгээлине жараша көз жүгүртүү болушу
+                мүмкүн) башташат. Интерфейстин негизги функционалын - "Аткар", "Кайта",
+                "Кадам" сыяктуу баскычтарын үйрөнүшөт. Blockly блокторун сүйрөө, жок
+                кылуу жана туташтыруу тааныштыруу виделорунда көрсөтүлөт. Тапшырмаларда
+                окуучулар Лабиринтте жана Сүрөтчүдө иреттештирүү жана дебаггиң жөндөмдөрүн
+                машыктырышат.
             The Power of Words:
               name: The Power of Words
             Ice Age Play Lab:
@@ -7508,7 +7510,7 @@ ky:
             Envelope Variables:
               name: Envelope Variables
             Variables in Artist:
-              name: Variables in Artist
+              name: Сүрөтчүдөгү өзгөрмөлөр
             Variables in Play Lab:
               name: Variables in Play Lab
             For Loop Fun:
@@ -7516,13 +7518,13 @@ ky:
             For Loops in Bee:
               name: For Loops in Bee
             For Loops in Artist:
-              name: For Loops in Artist
+              name: Сүрөтчүдөгү For циклдары
             Songwriting with Parameters:
               name: Songwriting with Parameters
             Conditionals and Functions in Bee:
               name: Conditionals and Functions in Bee
             Functions with Parameters in Artist:
-              name: Functions with Parameters in Artist
+              name: Сүрөтчүдөгү параметри бар функциялар
             Functions with Parameters in Bee:
               name: Functions with Parameters in Bee
             Explore Project Ideas:
@@ -7618,13 +7620,12 @@ ky:
                 program. This lesson will help students intuitively understand why
                 combining chunks of code into functions can be such a helpful practice.
             Functions in Artist:
-              name: Functions in Artist
-              description_student: Make complex drawings more easily with functions!
-              description_teacher: Students will be introduced to using functions
-                on Code.org. Magnificent images will be created and modified with
-                functions in Artist. For more complicated patterns, students will
-                learn about nesting functions by calling one function from inside
-                another.
+              name: Сүрөтчүдөгү функциялар
+              description_student: Функциялар менен татаал сүрөт тартууну жеңил кыл!
+              description_teacher: Окуучулар Code.org аркылуу функциялар менен таанышышат.
+                Сүрөтчүдө функциялар менен сонун сүрөттөр тартылат жана өзгөртүлөт.
+                Татаалыраак үлгүлөрдү биринин ичинен экинчисин чакырып, салынган функциялар
+                пайдаланганды үйрөнүшөт.
             Functions in Bee:
               name: Functions in Bee
               description_student: Don't write too much code to gather all of the
@@ -7697,7 +7698,7 @@ ky:
             Debugging with Scrat:
               name: Debugging with Scrat
             Programming in Artist:
-              name: Programming in Artist
+              name: Сүрөтчүдөгү програмдоо
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
@@ -7705,7 +7706,7 @@ ky:
             Nested Loops in Bee/Zombie:
               name: Nested Loops in Bee/Zombie
             Nested Loops with Frozen:
-              name: Nested Loops with Frozen
+              name: Тоңгондогу салынган циклдар
             Nested Loops:
               name: Nested Loops
             Functions in Harvester:
@@ -7778,14 +7779,15 @@ ky:
                 to grasp, so we recommend allowing plenty of time for discussion at
                 the end of the lesson.
             Variables in Artist:
-              name: Variables in Artist
-              description_student: Don't forget to bring creativity to class! In these
-                puzzles you will be making fantastic drawings using variables.
-              description_teacher: In this lesson, students will explore the creation
-                of repetitive designs using variables in the Artist environment. Students
-                will learn how variables can be used to make code easier to write
-                and easier to read. After guided puzzles, students will end in a freeplay
-                level to show what they have learned and create their own designs.
+              name: Сүрөтчүдөгү өзгөрмөлөр
+              description_student: Класска чыгармачылык киргизгенди унутпагыла! Бул
+                тапшырмаларда өзгөрмөлөр менен фантастикалык сүрөттөрдү тартасыңар.
+              description_teacher: Бул сабакта окуучулар Сүрөтчү чөйрөсүндө өзгөрмөлөрдү
+                колдонуп кайталанма дизайн түзгөндү үйрөнүшөт. Окуучулар код жеңил
+                жазылып жана окулушу үчүн өзгөрмөлөрдү кантип колдонуу керектигин
+                көрүшөт. Жетектемелери бар тапшырмалардан кийин окуучулар эркин оюн
+                деңгээлиндеги өз чыгармасын жаратып эмне үйрөнгөнүн көрсөтүү мүмкүнчүлүгүн
+                алышат.
             Variables in Play Lab:
               name: Variables in Play Lab
               description_student: Soon you will learn about making characters interact
@@ -7812,14 +7814,13 @@ ky:
                 walked through using for loops to more effectively solve complicated
                 problems.
             For Loops in Artist:
-              name: For Loops in Artist
-              description_student: Get ready to make your next masterpiece. Here you
-                will be using `for` loops to make some jaw-dropping pictures.
-              description_teacher: In this lesson, students continue to practice for
-                loops, this time with Artist. Students will complete puzzles combining
-                the ideas of variables, loops, and for loops to create complex designs.
-                At the end, they will have a chance to create their own art in a freeplay
-                level.
+              name: Сүрөтчүдөгү For циклдары
+              description_student: Кийинки мыкты чыгармаңарды жаратканга даяр болгула.
+                Азыр `for` циклдарын колдонуп ооз ачырган сүрөттөрдү жаратабыз.
+              description_teacher: Бул сабакта окуучулар Сүрөтчү менен чогуу циклдарды
+                улантышат. Окуучулар өзгөрмөлөр, циклдар жана for циклин айкалыштырып
+                татаал дизайндарды жаратып, тапшырмаларды аткарышат. Аягында эркин
+                оюн деңгээлиндеги өз чыгармасын жаратуу мүмкүнчүлүгүн алышат.
             Songwriting with Parameters:
               name: Songwriting with Parameters
               description_student: You just might release the next big hit single!
@@ -7840,13 +7841,13 @@ ky:
                 functions using our sophisticated “modal” function editor, preparing
                 the way for them to incorporate parameters in future lessons. '
             Functions with Parameters in Artist:
-              name: Functions with Parameters in Artist
-              description_student: Get your programming fingers ready. In these puzzles
-                you will make impressive drawings in Artist using functions with parameters.
-              description_teacher: In this lesson, students continue working with
-                functions with and without parameters. Students will get the chance
-                to create their own drawings with and without parameters, before modifying
-                functions in a freeplay level.
+              name: Сүрөтчүдөгү параметри бар функциялар
+              description_student: Програмдоого даяр болгула. Бул тапшырмада параметри
+                бар функциялар менен Сүрөтчүдө таасирдүү сүрөттөрдү жаратасыңар.
+              description_teacher: Бул сабакта окуучулар параметри бар жана жок функциялар
+                менен иштөөнү улантышат. Окуучулар эркин оюн деңгээлинде функцияларды
+                өзгөртүп баштаардан мурун, параметрлүү жана параметрсиз чиймелерди
+                жаратуу мүмкүнчүлүгүн алышат.
             Functions with Parameters in Bee:
               name: Functions with Parameters in Bee
               description_student: You've had a little practice using functions with
@@ -7940,7 +7941,7 @@ ky:
             Debugging with Scrat:
               name: Debugging with Scrat
             Programming in Artist:
-              name: Programming in Artist
+              name: Сүрөтчүдөгү програмдоо
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
@@ -7948,7 +7949,7 @@ ky:
             Nested Loops in Bee/Zombie:
               name: Nested Loops in Bee/Zombie
             Nested Loops with Frozen:
-              name: Nested Loops with Frozen
+              name: Тоңгондогу салынган циклдар
           title: 'CS Fundamentals: Course F'
           assignment_family_title: Course F
           description_audience: ''
@@ -8261,9 +8262,9 @@ ky:
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: Loops in Artist
+              name: Сүрөтчүдөгү циклдар
             Nested Loops Project in Artist:
-              name: Nested Loops Project in Artist
+              name: Сүрөтчүдөгү салынган циклдар
             Internet:
               name: Internet
             Digital Citizenship:
@@ -8291,7 +8292,7 @@ ky:
             Envelope Variables:
               name: Envelope Variables
             Variables in Artist:
-              name: Variables in Artist
+              name: Сүрөтчүдөгү өзгөрмөлөр
             Variables in Play Lab:
               name: Variables in Play Lab
             For Loop Fun:
@@ -8299,13 +8300,13 @@ ky:
             For Loops in Bee:
               name: For Loops in Bee
             For Loops in Artist:
-              name: For Loops in Artist
+              name: Сүрөтчүдөгү For циклдары
             Songwriting with Parameters:
               name: Songwriting with Parameters
             Functions in Bee:
               name: Functions in Bee
             Functions with Parameters in Artist:
-              name: Functions with Parameters in Artist
+              name: Сүрөтчүдөгү параметри бар функциялар
             Functions with Parameters in Bee:
               name: Functions with Parameters in Bee
             Explore Project Ideas:
@@ -8319,7 +8320,7 @@ ky:
             Present Your Project:
               name: Present Your Project
             Nested Loops Project in Frozen:
-              name: Nested Loops Project in Frozen
+              name: Тоңгондогу салынган циклдар
             'How it Works: The Internet':
               name: 'How it Works: The Internet'
             'Common Sense Education: Digital Citizenship':
@@ -8376,7 +8377,7 @@ ky:
             Loops in Collector:
               name: Loops in Collector
             Loops in Artist:
-              name: Loops in Artist
+              name: Сүрөтчүдөгү циклдар
             'Events: The Big Event':
               name: 'Events: The Big Event'
             Events in Play Lab:
@@ -8544,15 +8545,15 @@ ky:
             Debugging with Scrat:
               name: Debugging with Scrat
             Programming in Artist:
-              name: Programming in Artist
+              name: Сүрөтчүдөгү програмдоо
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: Loops in Artist
+              name: Сүрөтчүдөгү циклдар
             Nested Loops:
               name: Nested Loops
             Nested Loops with Frozen:
-              name: Nested Loops with Frozen
+              name: Тоңгондогу салынган циклдар
             Intro to Conditionals with Farmer:
               name: Intro to Conditionals with Farmer
             'Algorithms: Dice Race':
@@ -8568,7 +8569,7 @@ ky:
             'Functions: Songwriting':
               name: 'Functions: Songwriting'
             Functions in Artist:
-              name: Functions in Artist
+              name: Сүрөтчүдөгү функциялар
             Functions in Bee:
               name: Functions in Bee
             Functions in Farmer:
@@ -8610,9 +8611,9 @@ ky:
             Nested Loops:
               name: Nested Loops
             Nested Loops in Artist:
-              name: Nested Loops in Artist
+              name: Сүрөтчүдөгү салынган циклдар
             Nested Loops Project in Artist:
-              name: Nested Loops Project in Artist
+              name: Сүрөтчүдөгү салынган циклдар
             'Algorithms: Relay Programming':
               name: 'Algorithms: Relay Programming'
             Debugging in Collector:
@@ -8634,11 +8635,11 @@ ky:
             'Unplugged: Binary':
               name: 'Unplugged: Binary'
             Artist Binary:
-              name: Artist Binary
+              name: Сүрөтчү бинардык система
             Building a Foundation:
               name: Building a Foundation
             Loops in Artist:
-              name: Loops in Artist
+              name: Сүрөтчүдөгү циклдар
             Nested Loops in Bee:
               name: Nested Loops in Bee
             Loops in Ice Age:
@@ -8672,9 +8673,9 @@ ky:
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: Loops in Artist
+              name: Сүрөтчүдөгү циклдар
             Nested Loops Project in Frozen:
-              name: Nested Loops Project in Frozen
+              name: Тоңгондогу салынган циклдар
             'How it Works: The Internet':
               name: 'How it Works: The Internet'
             'Common Sense Education: Digital Citizenship':
@@ -8702,7 +8703,7 @@ ky:
             'Variables: Envelope Variables':
               name: 'Variables: Envelope Variables'
             Variables in Artist:
-              name: Variables in Artist
+              name: Сүрөтчүдөгү өзгөрмөлөр
             Variables in Play Lab:
               name: Variables in Play Lab
             'For Loops: For Loop Fun':
@@ -8710,13 +8711,13 @@ ky:
             For Loops in Bee:
               name: For Loops in Bee
             For Loops in Artist:
-              name: For Loops in Artist
+              name: Сүрөтчүдөгү For циклдары
             'Functions: Songwriting with Parameters':
               name: 'Functions: Songwriting with Parameters'
             Functions in Bee:
               name: Functions in Bee
             Functions with Parameters in Artist:
-              name: Functions with Parameters in Artist
+              name: Сүрөтчүдөгү параметри бар функциялар
             Functions with Parameters in Bee:
               name: Functions with Parameters in Bee
             Explore Project Ideas:
@@ -8736,7 +8737,7 @@ ky:
             Nested Loops:
               name: Nested Loops
             Loops in Artist (UPDATED!):
-              name: Loops in Artist (UPDATED!)
+              name: Сүрөтчүдөгү циклдер (ЖАҢЫРТЫЛГАН!)
             Sarah test stage:
               name: Sarah test stage
           title: New Express Script
@@ -8766,7 +8767,7 @@ ky:
             Debugging with Scrat:
               name: Debugging with Scrat
             Programming in Artist:
-              name: Programming in Artist
+              name: Сүрөтчүдөгү програмдоо
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
@@ -8774,7 +8775,7 @@ ky:
             Nested Loops in Bee/Zombie:
               name: Nested Loops in Bee/Zombie
             Nested Loops with Frozen:
-              name: Nested Loops with Frozen
+              name: Тоңгондогу салынган циклдар
             'Algorithms: Dice Race':
               name: 'Algorithms: Dice Race'
             Course E Introduction:
@@ -8790,7 +8791,7 @@ ky:
             Functions in Bee:
               name: Functions in Bee
             Functions in Artist:
-              name: Functions in Artist
+              name: Сүрөтчүдөгү функциялар
             Functions in Farmer:
               name: Functions in Farmer
             Determine the Concept:
@@ -8824,7 +8825,7 @@ ky:
             Debugging with Scrat:
               name: Debugging with Scrat
             Programming in Artist:
-              name: Programming in Artist
+              name: Сүрөтчүдөгү програмдоо
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
@@ -8832,7 +8833,7 @@ ky:
             Nested Loops in Bee/Zombie:
               name: Nested Loops in Bee/Zombie
             Nested Loops with Frozen:
-              name: Nested Loops with Frozen
+              name: Тоңгондогу салынган циклдар
             'Algorithms: Tangrams':
               name: 'Algorithms: Tangrams'
             Course E Introduction:
@@ -8846,7 +8847,7 @@ ky:
             Envelope Variables:
               name: Envelope Variables
             Variables in Artist:
-              name: Variables in Artist
+              name: Сүрөтчүдөгү өзгөрмөлөр
             Variables in Play Lab:
               name: Variables in Play Lab
             For Loop Fun:
@@ -8854,13 +8855,13 @@ ky:
             For Loops in Bee:
               name: For Loops in Bee
             For Loops in Artist:
-              name: For Loops in Artist
+              name: Сүрөтчүдөгү For циклдары
             Songwriting with Parameters:
               name: Songwriting with Parameters
             Functions in Bee:
               name: Functions in Bee
             Functions with Parameters in Artist:
-              name: Functions with Parameters in Artist
+              name: Сүрөтчүдөгү параметри бар функциялар
             Functions with Parameters in Bee:
               name: Functions with Parameters in Bee
             Explore Project Ideas:
@@ -9239,7 +9240,7 @@ ky:
         halloween:
           stages:
             Halloween Artist:
-              name: Halloween Artist
+              name: Хеллоуин Cүрөтчү
           title: ''
           description_audience: ''
           description_short: ''
@@ -9275,7 +9276,7 @@ ky:
             Debugging with Scrat:
               name: Debugging with Scrat
             Programming in Artist:
-              name: Programming in Artist
+              name: Сүрөтчүдөгү програмдоо
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
@@ -9283,7 +9284,7 @@ ky:
             Nested Loops:
               name: Nested Loops
             Nested Loops with Frozen:
-              name: Nested Loops with Frozen
+              name: Тоңгондогу салынган циклдар
             'Algorithms: Dice Race':
               name: 'Algorithms: Dice Race'
             Introduction:
@@ -9297,7 +9298,7 @@ ky:
             MINECRAFT STAGE GOES HERE:
               name: MINECRAFT STAGE GOES HERE
             Functions in Artist:
-              name: Functions in Artist
+              name: Сүрөтчүдөгү функциялар
             Functions in Bee:
               name: Functions in Bee
             Functions in Farmer:
@@ -9337,7 +9338,7 @@ ky:
             Debugging with Scrat:
               name: Debugging with Scrat
             Programming in Artist:
-              name: Programming in Artist
+              name: Сүрөтчүдөгү програмдоо
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
@@ -9345,7 +9346,7 @@ ky:
             Nested Loops in Bee/Zombie:
               name: Nested Loops in Bee/Zombie
             Nested Loops with Frozen:
-              name: Nested Loops with Frozen
+              name: Тоңгондогу салынган циклдар
             'Algorithms: Tangrams':
               name: 'Algorithms: Tangrams'
             Introduction:
@@ -9359,7 +9360,7 @@ ky:
             Envelope Variables:
               name: Envelope Variables
             Variables in Artist:
-              name: Variables in Artist
+              name: Сүрөтчүдөгү өзгөрмөлөр
             Variables in Play Lab:
               name: Variables in Play Lab
             For Loop Fun:
@@ -9367,13 +9368,13 @@ ky:
             For Loops in Bee:
               name: For Loops in Bee
             For Loops in Artist:
-              name: For Loops in Artist
+              name: Сүрөтчүдөгү For циклдары
             Songwriting with Parameters:
               name: Songwriting with Parameters
             Functions in Bee:
               name: Functions in Bee
             Functions with Parameters in Artist:
-              name: Functions with Parameters in Artist
+              name: Сүрөтчүдөгү параметри бар функциялар
             Functions with Parameters in Bee:
               name: Functions with Parameters in Bee
             Explore Project Ideas:
@@ -10158,7 +10159,7 @@ ky:
                 from "Happy Loops," this stage will have students using loops to collect
                 treasure more efficiently on Code.org.
             Loops in Artist:
-              name: Loops in Artist
+              name: Океан көрүнүшү циклдар менен
               description_student: ''
               description_teacher: Returning to loops, students learn to draw images
                 by looping simple sequences of instructions. In the previous plugged
@@ -10219,7 +10220,7 @@ ky:
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: Loops in Artist
+              name: Чаптама өнөрү циклдар менен
               description_student: ''
               description_teacher: ''
             Nested Loops:
@@ -10227,7 +10228,7 @@ ky:
               description_student: ''
               description_teacher: ''
             Nested Loops Project in Frozen:
-              name: Nested Loops Project in Frozen
+              name: Тоңгондогу салынган циклдар
               description_student: ''
               description_teacher: ''
             'How it Works: The Internet':
@@ -10283,7 +10284,7 @@ ky:
               description_student: ''
               description_teacher: ''
             Variables in Artist:
-              name: Variables in Artist
+              name: Сүрөтчүдөгү өзгөрмөлөр
               description_student: ''
               description_teacher: ''
             Variables in Play Lab:
@@ -10299,7 +10300,7 @@ ky:
               description_student: ''
               description_teacher: ''
             For Loops in Artist:
-              name: For Loops in Artist
+              name: Сүрөтчү менен For циклдары
               description_student: ''
               description_teacher: ''
             'Functions: Songwriting with Parameters':
@@ -10311,7 +10312,7 @@ ky:
               description_student: ''
               description_teacher: ''
             Functions with Parameters in Artist:
-              name: Functions with Parameters in Artist
+              name: Сүрөтчүдөгү параметри бар функциялар
               description_student: ''
               description_teacher: ''
             Functions with Parameters in Bee:
@@ -10349,7 +10350,7 @@ ky:
             Programming in Collector:
               name: Programming in Collector
             Programming in Artist:
-              name: Programming in Artist
+              name: Код менен Сүрөт жаратуу
             'Loops: Getting Loopy':
               name: 'Loops: Getting Loopy'
             Loops with Rey and BB-8:
@@ -10361,7 +10362,7 @@ ky:
             Nested Loops in Bee:
               name: Nested Loops in Bee
             Nested Loops in Frozen:
-              name: Nested Loops in Frozen
+              name: Тоңгондогу салынган циклдар
             Conditionals with Cards:
               name: Conditionals with Cards
             Conditionals & Loops in Harvester:
@@ -10373,7 +10374,7 @@ ky:
             Functions in Harvester:
               name: Functions in Harvester
             Functions in Artist:
-              name: Functions in Artist
+              name: Сүрөтчүдөгү функциялар
             Screen Out the Mean:
               name: Screen Out the Mean
             Determine the Concept:
@@ -10385,11 +10386,11 @@ ky:
             Envelope Variables:
               name: Envelope Variables
             Variables as Constant in Artist:
-              name: Variables as Constant in Artist
+              name: Сүрөтчү менен өзгөрмөлөр
             Variables that Change in Bee:
               name: Variables that Change in Bee
             Variables that Change in Artist:
-              name: Variables that Change in Artist
+              name: Сүрөтчү менен өзгөрмөлөрдү өзгөртүү
             For Loop Fun:
               name: For Loop Fun
             Learning Sprites with Sprite Lab:
@@ -10403,7 +10404,7 @@ ky:
             'Unplugged: Binary':
               name: 'Unplugged: Binary'
             Artist Binary:
-              name: Artist Binary
+              name: Сүрөтчү менен бинардык сүрөттөр
             Internet:
               name: Internet
             Crowdsourcing:
@@ -10460,7 +10461,7 @@ ky:
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: Loops in Artist
+              name: Циклдар менен чеп тартуу
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
@@ -10509,7 +10510,7 @@ ky:
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: Loops in Artist
+              name: Циклдар менен формаларды тартуу
               description_student: ''
               description_teacher: ''
             Nested Loops in Bee:
@@ -10517,7 +10518,7 @@ ky:
               description_student: ''
               description_teacher: ''
             Nested Loops in Artist:
-              name: Nested Loops in Artist
+              name: Салынган циклдар менен укмуштуу формалар
               description_student: ''
               description_teacher: ''
             While Loops in Farmer:
@@ -10553,13 +10554,13 @@ ky:
               description_student: ''
               description_teacher: ''
             Artist Binary:
-              name: Artist Binary
+              name: Сүрөтчү менен бинардык сүрөттөр
               description_student: ''
               description_teacher: ''
             Loops in Ice Age:
               name: Loops in Ice Age
             Nested Loops in Frozen:
-              name: Nested Loops in Frozen
+              name: Анна жана Элза менен карчалар
             Until Loops in Maze:
               name: Until Loops in Maze
             Conditionals in Maze:
@@ -10709,7 +10710,7 @@ ky:
               description_student: ''
               description_teacher: ''
             Programming in Artist:
-              name: Programming in Artist
+              name: Код менен Сүрөт жаратуу
               description_student: ''
               description_teacher: ''
             'Loops: Getting Loopy':
@@ -10721,7 +10722,7 @@ ky:
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: Loops in Artist
+              name: Чаптама өнөрү циклдар менен
               description_student: ''
               description_teacher: ''
             Loops in Harvester:
@@ -10887,7 +10888,7 @@ ky:
               description_student: ''
               description_teacher: ''
             Programming in Artist:
-              name: Programming in Artist
+              name: Код менен Сүрөт жаратуу
               description_student: ''
               description_teacher: ''
             'Loops: My Loopy Robotic Friends':
@@ -10895,7 +10896,7 @@ ky:
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: Loops in Artist
+              name: Циклдар менен формаларды тартуу
               description_student: ''
               description_teacher: ''
             Nested Loops:
@@ -10903,7 +10904,7 @@ ky:
               description_student: ''
               description_teacher: ''
             Nested Loops with Frozen:
-              name: Nested Loops with Frozen
+              name: Тоңгондогу салынган циклдар
               description_student: ''
               description_teacher: ''
             'Algorithms: Dice Race':
@@ -10919,13 +10920,13 @@ ky:
               description_student: This fast-paced introduction will give you the
                 chance to practice most of the skills that you will need to solve
                 the puzzles in this course.
-              description_teacher: In this progression, students will begin with an
-                introduction (or review depending on the experience of your class)
-                of Code.org's online workspace. Students will learn the basic functionality
-                of the interface including the `Run`, `Reset`, and `Step` buttons.
-                Dragging, deleting, and connecting Blockly blocks is also introduced
-                in the beginning video. In the puzzles, students will practice their
-                sequencing and debugging skills in Maze and Artist.
+              description_teacher: Бул жылышта окуучулар Code.org онлайн иштактасы
+                менен таанышып (же класстын деңгээлине жараша көз жүгүртүү болушу
+                мүмкүн) башташат. Интерфейстин негизги функционалын - "Аткар", "Кайта",
+                "Кадам" сыяктуу баскычтарын үйрөнүшөт. Blockly блокторун сүйрөө, жок
+                кылуу жана туташтыруу тааныштыруу виделорунда көрсөтүлөт. Тапшырмаларда
+                окуучулар Лабиринтте жана Сүрөтчүдө иреттештирүү жана дебаггиң жөндөмдөрүн
+                машыктырышат.
             Conditionals:
               name: Conditionals
               description_student: You will get to tell the computer what to do under
@@ -10966,13 +10967,12 @@ ky:
                 program. This lesson will help students intuitively understand why
                 combining chunks of code into functions can be such a helpful practice.
             Functions in Artist:
-              name: Functions in Artist
-              description_student: Make complex drawings more easily with functions!
-              description_teacher: Students will be introduced to using functions
-                on Code.org. Magnificent images will be created and modified with
-                functions in Artist. For more complicated patterns, students will
-                learn about nesting functions by calling one function from inside
-                another.
+              name: Сүрөтчү менен функциялар
+              description_student: Функциялар менен татаал сүрөт тартууну жеңил кыл!
+              description_teacher: Окуучулар Code.org аркылуу функциялар менен таанышышат.
+                Сүрөтчүдө функциялар менен сонун сүрөттөр тартылат жана өзгөртүлөт.
+                Татаалыраак үлгүлөрдү биринин ичинен экинчисин чакырып, салынган функциялар
+                пайдаланганды үйрөнүшөт.
             Functions in Bee:
               name: Functions in Bee
               description_student: Don't write too much code to gather all of the
@@ -11115,7 +11115,7 @@ ky:
               description_student: ''
               description_teacher: ''
             Programming in Artist:
-              name: Programming in Artist
+              name: Код менен Сүрөт жаратуу
               description_student: ''
               description_teacher: ''
             'Loops: My Loopy Robotic Friends':
@@ -11123,7 +11123,7 @@ ky:
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: Loops in Artist
+              name: Циклдар менен формаларды тартуу
               description_student: ''
               description_teacher: ''
             Nested Loops in Bee/Zombie:
@@ -11131,7 +11131,7 @@ ky:
               description_student: ''
               description_teacher: ''
             Nested Loops with Frozen:
-              name: Nested Loops with Frozen
+              name: Тоңгондогу салынган циклдар
               description_student: ''
               description_teacher: ''
             'Algorithms: Tangrams':
@@ -11195,14 +11195,15 @@ ky:
                 to grasp, so we recommend allowing plenty of time for discussion at
                 the end of the lesson.
             Variables in Artist:
-              name: Variables in Artist
-              description_student: Don't forget to bring creativity to class! In these
-                puzzles you will be making fantastic drawings using variables.
-              description_teacher: In this lesson, students will explore the creation
-                of repetitive designs using variables in the Artist environment. Students
-                will learn how variables can be used to make code easier to write
-                and easier to read. After guided puzzles, students will end in a freeplay
-                level to show what they have learned and create their own designs.
+              name: Сүрөтчүдөгү өзгөрмөлөр
+              description_student: Класска чыгармачылык киргизгенди унутпагыла! Бул
+                тапшырмаларда өзгөрмөлөр менен фантастикалык сүрөттөрдү тартасыңар.
+              description_teacher: Бул сабакта окуучулар Сүрөтчү чөйрөсүндө өзгөрмөлөрдү
+                колдонуп кайталанма дизайн түзгөндү үйрөнүшөт. Окуучулар код жеңил
+                жазылып жана окулушу үчүн өзгөрмөлөрдү кантип колдонуу керектигин
+                көрүшөт. Жетектемелери бар тапшырмалардан кийин окуучулар эркин оюн
+                деңгээлиндеги өз чыгармасын жаратып эмне үйрөнгөнүн көрсөтүү мүмкүнчүлүгүн
+                алышат.
             Variables in Play Lab:
               name: Variables in Play Lab
               description_student: Soon you will learn about making characters interact
@@ -11229,14 +11230,13 @@ ky:
                 walked through using for loops to more effectively solve complicated
                 problems.
             For Loops in Artist:
-              name: For Loops in Artist
-              description_student: Get ready to make your next masterpiece. Here you
-                will be using `for` loops to make some jaw-dropping pictures.
-              description_teacher: In this lesson, students continue to practice for
-                loops, this time with Artist. Students will complete puzzles combining
-                the ideas of variables, loops, and for loops to create complex designs.
-                At the end, they will have a chance to create their own art in a freeplay
-                level.
+              name: Сүрөтчү менен For циклдары
+              description_student: Кийинки мыкты чыгармаңарды жаратканга даяр болгула.
+                Азыр `for` циклдарын колдонуп ооз ачырган сүрөттөрдү жаратабыз.
+              description_teacher: Бул сабакта окуучулар Сүрөтчү менен чогуу циклдарды
+                улантышат. Окуучулар өзгөрмөлөр, циклдар жана for циклин айкалыштырып
+                татаал дизайндарды жаратып, тапшырмаларды аткарышат. Аягында эркин
+                оюн деңгээлиндеги өз чыгармасын жаратуу мүмкүнчүлүгүн алышат.
             Songwriting with Parameters:
               name: Songwriting with Parameters
               description_student: You just might release the next big hit single!
@@ -11254,13 +11254,13 @@ ky:
               description_student: ''
               description_teacher: ''
             Functions with Parameters in Artist:
-              name: Functions with Parameters in Artist
-              description_student: Get your programming fingers ready. In these puzzles
-                you will make impressive drawings in Artist using functions with parameters.
-              description_teacher: In this lesson, students continue working with
-                functions with and without parameters. Students will get the chance
-                to create their own drawings with and without parameters, before modifying
-                functions in a freeplay level.
+              name: Сүрөтчүдөгү параметри бар функциялар
+              description_student: Програмдоого даяр болгула. Бул тапшырмада параметри
+                бар функциялар менен Сүрөтчүдө таасирдүү сүрөттөрдү жаратасыңар.
+              description_teacher: Бул сабакта окуучулар параметри бар жана жок функциялар
+                менен иштөөнү улантышат. Окуучулар эркин оюн деңгээлинде функцияларды
+                өзгөртүп баштаардан мурун, параметрлүү жана параметрсиз чиймелерди
+                жаратуу мүмкүнчүлүгүн алышат.
             Functions with Parameters in Bee:
               name: Functions with Parameters in Bee
               description_student: You've had a little practice using functions with
@@ -11338,11 +11338,11 @@ ky:
             Conditionals:
               name: Conditionals
             Variables as Constant in Artist:
-              name: Variables as Constant in Artist
+              name: Сүрөтчү менен өзгөрмөлөр
             Variables that Change in Bee:
               name: Variables that Change in Bee
             Variables that Change in Artist:
-              name: Variables that Change in Artist
+              name: Сүрөтчү менен өзгөрмөлөрдү өзгөртүү
             Learning Sprites with Sprite Lab:
               name: Learning Sprites with Sprite Lab
             Alien Dance Party with Sprite Lab:
@@ -11495,10 +11495,19 @@ ky:
                 for a birthday party, and planning a trip. The problems grow increasingly
                 complex and poorly defined to highlight how the problem solving process
                 is particularly helpful when tackling these types of problems.'
-              description_teacher: |-
-                In this lesson students apply the problem solving process to three different problems in order to better understand the value of each step. They will solve a word search, arrange seating for a birthday party, and plan a trip. The problems grow increasingly complex and poorly defined to highlight how the problem solving process is particularly helpful when tackling these types of problems. The lesson concludes with students reflecting on their experience with the problem solving process. They will justify the inclusion of each step and will brainstorm questions or strategies that can help them better define open-ended problems, as this is often the most critical step.
-
-                This lesson will likely take two class periods or more to complete. The first two problems may fit into a single class period but the third will need to be moved to a second day.
+              description_teacher: "In this lesson students apply the problem solving
+                process to three different problems in order to better understand
+                the value of each step. They will solve a word search, arrange seating
+                for a birthday party, and plan a trip. The problems grow increasingly
+                complex and poorly defined to highlight how the problem solving process
+                is particularly helpful when tackling these types of problems. The
+                lesson concludes with students reflecting on their experience with
+                the problem solving process. They will justify the inclusion of each
+                step and will brainstorm questions or strategies that can help them
+                better define open-ended problems, as this is often the most critical
+                step.\r\n\r\nThis lesson will likely take two class periods or more
+                to complete. The first two problems may fit into a single class period
+                but the third will need to be moved to a second day."
             What is a Computer?:
               name: What is a Computer?
               description_student: In this lesson the class develops a preliminary
@@ -11508,15 +11517,15 @@ ky:
                 motivations for choosing some of the most difficult categorizations.  The
                 teacher then introduces a definition of the computer and allows groups
                 to revise their posters according to the new definition.
-              description_teacher: 'In this lesson students develop a preliminary
+              description_teacher: "In this lesson students develop a preliminary
                 definition of a computer. To begin the lesson, the class will brainstorm
                 possible definitions for a computer and place the results of this
                 brainstorm on the board. Next, students will work in groups to sort
                 pictures into “is a computer” or “is not a computer” on poster paper.
                 Groups will place their posters around the room and briefly explain
-                their motivations for choosing some of their most difficult categorizations.  The
-                teacher will then introduce a definition of the computer and allow
-                students to revise their posters according to the new definition.  '
+                their motivations for choosing some of their most difficult categorizations.
+                \ The teacher will then introduce a definition of the computer and
+                allow students to revise their posters according to the new definition.\r\n"
             Input and Output:
               name: Input and Output
               description_student: In this the class students consider a number of
@@ -11608,6 +11617,23 @@ ky:
                 step instructions for students and helps them organize their thoughts.
                 The project is designed to be completed in pairs though it can be
                 completed individually.
+            Apps and Storage:
+              name: Apps and Storage
+              description_student: 'This lesson covers the input and output aspects
+                of computers in a context that is relevant and familiar to students:
+                apps. The class evaluates various web applications to analyze the
+                specific problems that they were designed to solve, the inputs that
+                they need to work, and the outputs they provide to users. The class
+                concludes with observations of these apps as well as a teacher led
+                discussion about the impact of apps on society. '
+              description_teacher: 'This lesson reviews the input, output, storage,
+                and processing aspects of a computer in a context that is relevant
+                and familiar to students: apps. In pairs, students evaluate smartphone
+                applications to analyze the specific problems that they were designed
+                to solve, the inputs that they need to work, and the processing that
+                turns those inputs into the desired output, and what information they
+                would want to store for later. The class concludes with a discussion
+                that connects the lesson to apps students are more familiar with. '
         csd4-2018:
           title: CSD Unit 4 - The Design Process
           description: Unit 4 introduces the broader social impacts of computing.
@@ -13029,7 +13055,7 @@ ky:
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: Loops in Artist
+              name: Циклдар менен чеп тартуу
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
@@ -13068,6 +13094,14 @@ ky:
               name: Alien Dance Party - Input
             Virtual Pet - Interactions:
               name: Virtual Pet - Interactions
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        2018hoc-ab:
+          stages:
+            Labyrinth:
+              name: Labyrinth
           title: ''
           description_audience: ''
           description_short: ''

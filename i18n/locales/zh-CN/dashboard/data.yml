@@ -530,8 +530,9 @@ zh-CN:
         CSF_ifelse_allskins: 使用 如果/否则 模块
         CSF_ifelseifelse_allskins: 使用 如果/否则如果/否则 模块
         CSF_loops_AB: 循环
-        csd_gamelab_booleans: Boolean Expressions
-        csd_gamelab_conditional_statements: Conditional Statements
+        csd_gamelab_booleans: 布尔表达式
+        csd_gamelab_conditional_statements: 条件表达式
+        csd_gamelab_if_else: If/Else Statements
     callout:
       text:
         drag_blocks: 拖动一个"移动"的块，并将它吸到别的模块下面

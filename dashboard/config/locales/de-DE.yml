@@ -415,6 +415,7 @@ de:
     email_confirm_needed_required: 'Deine E-Mail-Adresse %{email} ist noch nicht bestätigt:'
     email_confirm_wrong_email: "(Falsche E-Mail-Adresse?)"
     email_resend_confirm: Anmeldebestätigung erneut senden
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(freilassen, wenn du nichts verändern möchtest)"
     current_password_hint: "(wir benötigen dein aktuelles Passwort, um deine Änderungen
       zu bestätigen)"

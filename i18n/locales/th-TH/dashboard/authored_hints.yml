@@ -2,10 +2,10 @@ th:
   data:
     authored_hints:
       2-3 Artist 1 new_authored_hint:
-        2-3_Artist_1_new_a: หากคุณใช้บล็อก "ย้ายไปด้านหน้า100 พิกเซล" ฉันก็จะวาดเส้นให้โดยอัตโนมัติ
-        2-3_Artist_1_new_b: มีปัญหากับการเลี้ยวหัวมุมหรือเปล่า? ให้ใช้ปุ่ม 'เลี้ยวขวา 90 องศา'
+        2-3_Artist_1_new_a: หากคุณใช้บล็อก "ย้ายไปด้านหน้า 100 พิกเซล" ฉันก็จะวาดเส้นให้หนึ่งเส้นโดยอัตโนมัติ
+        2-3_Artist_1_new_b: มีปัญหากับการเลี้ยวที่หัวมุมหรือเปล่า? ให้ใช้ปุ่ม `หันขวาไป 90 องศา`
       2-3 Artist 11_authored_hint:
-        2-3_Artist_11_a: 'มีปัญหากับมุมหรือไม่? คุณต้องสร้างมุม 360 องศาไม่เกิน 8 ตรั้ง ดังนั้น 360/8 ได้เท่าไร? '
+        2-3_Artist_11_a: 'มีปัญหากับมุมหรือไม่? คุณต้องสร้างมุมรวมกัน 360 องศาด้วยการหัน 8 ครั้ง ดังนั้น 360/8 ได้เท่าไร? '
       2-3 Artist 12_authored_hint:
         2-3_Artist_12_a: วงกลมมี 360 องศาดังนั้นหากอาร์ตติสต้องการหันทีละ 1 องศา เขาจะต้องหันถึง 360 ครั้ง
       2-3 Artist 2 new_authored_hint:
@@ -18,7 +18,7 @@ th:
       2-3 Artist 6_authored_hint:
         2-3_Artist_6_a: 'เพื่อที่จะสร้างมุมเล็ก ๆ เหล่านี้ คุณต้องหัน *ไปให้ไกลกว่านี้* แต่ละครั้งให้มากกว่าตอนที่คุณทำกับสี่เหลี่ยมจัตุรัส   '
         2-3_Artist_6_b: เนื่องจากตอนนี้หันไปทางขวาแล้ว จะง่ายกว่าถ้าเริ่มต้นด้วยการก้าวไปข้างหน้า แล้วหันซ้ายไปเพื่อสร้างรูปสามเหลี่ยม
-        2-3_Artist_6_c: Each side of the triangle is the same length as each side of the square...100 pixels!
+        2-3_Artist_6_c: ด้านแต่ละด้านของรูปสามเหลี่ยมมีความยาวเดียวกันกับด้านแต่ละด้านของสี่เหลี่ยมจตุรัส.... 100 พิกเซล!
       2-3 Artist 7_authored_hint:
         2-3_Artist_7_a: The easiest way to solve this puzzle is to draw the first square and end with the artist pointing down before starting your second square.
       2-3 Artist 8_authored_hint:
@@ -51,42 +51,44 @@ th:
           
           คุณสามารถเปลี่ยนที่ไหนได้ในโปรแกรม?
       2-3 Artist Debugging 9_authored_hint:
-        2-3_Artist_Debugging_9_a: ศิลปินต้องหันไป ๖๐ องศาออกไปทางซ้ายก่อนที่จะเริ่มต้นวาด
-        2-3_Artist_Debugging_9_b: คุณไม่จำเป็นต้องเพิ่มอีกบล็อกหนึ่งเข้าไปเพื่อให้หันไปอย่างเต็มที่ เพียงเพิ่ม 60 องศาเข้าไปกับบล็อก `หันซ้าย` ที่มีอยู่เดิม!
+        2-3_Artist_Debugging_9_a: ศิลปินต้องหันออกไปทางซ้ายเพิ่มอีก ๖๐ องศาก่อนที่จะเริ่มต้นวาด!
+        2-3_Artist_Debugging_9_b: คุณไม่จำเป็นต้องเพิ่มบล็อกเข้าไปอีกบล็อกหนึ่งเพื่อเพิ่มองศาการหัน เพียงแค่บวกอีก 60 องศาเข้าไปกับจำนวนองศาในบล็อก `หันซ้าย` ที่มีอยู่เดิม!
       2-3 Artist Functions 1 a_authored_hint:
-        2-3_Artist_Functions_1_a: The squares each have 100 pixel sides, that means that you will have to move forward 175 pixels before drawing your second square.
-        2-3_Artist_Functions_1_b: It is okay to draw overlapping lines to make your glasses.
+        2-3_Artist_Functions_1_a: กรอบสี่เหลี่ยมแต่ละกรอบมีด้าน ๑๐๐ พิกเซล, นั่นหมายความว่าคุณจะต้องเคลื่อนที่ไปข้างหน้า 175 พิกเซลก่อนที่จะวาดกรอบแว่นอันที่สองของคุณ.
+        2-3_Artist_Functions_1_b: โอเคที่จะวาดเส้นทับซ้อนกันเพื่อทำแว่นตาของคุณ
       2-3 Artist Functions 1_authored_hint:
-        2-3_Artist_Functions_1_a: The squares each have 100 pixel sides, that means that you will have to move forward 175 pixels before drawing your second square.
-        2-3_Artist_Functions_1_b: It is okay to draw overlapping lines to make your glasses.
+        2-3_Artist_Functions_1_a: กรอบสี่เหลี่ยมแต่ละกรอบมีด้าน ๑๐๐ พิกเซล, นั่นหมายความว่าคุณจะต้องเคลื่อนที่ไปข้างหน้า 175 พิกเซลก่อนที่จะวาดกรอบแว่นอันที่สองของคุณ.
+        2-3_Artist_Functions_1_b: โอเคที่จะวาดเส้นทับซ้อนกันเพื่อทำแว่นตาของคุณ
       2-3 Artist Functions 11 a_authored_hint:
-        2-3_Artist_Functions_11_a: You will need to change not only the number and length of sides within the function, but also the angle the artist turns between each side.
+        2-3_Artist_Functions_11_a: คุณจะต้องเปลี่ยนไม่เพียงแต่จำนวนและความยาวของด้านภายในฟังก์ชัน แต่ยังรวมไปถึงมุมที่ศิลปินจะหันระหว่างการวาดแต่ละด้านอีกด้วย
       2-3 Artist Functions 11_authored_hint:
-        2-3_Artist_Functions_11_a: You will need to change not only the number and length of sides within the function, but also the angle the artist turns between each side.
+        2-3_Artist_Functions_11_a: คุณจะต้องเปลี่ยนไม่เพียงแต่จำนวนและความยาวของด้านภายในฟังก์ชัน แต่ยังรวมไปถึงมุมที่ศิลปินจะหันระหว่างการวาดแต่ละด้านอีกด้วย
       2-3 Artist Functions 12 a_authored_hint:
-        2-3_Artist_Functions_12_a: Try running the code first to see what you need to add.
+        2-3_Artist_Functions_12_a: ลองเรียกใช้โค้ดก่อนเพื่อดูว่าคุณต้องการเพิ่มอะไรไหม
       2-3 Artist Functions 12_authored_hint:
-        2-3_Artist_Functions_12_a: Try running the code first to see what you need to add.
+        2-3_Artist_Functions_12_a: ลองเรียกใช้โค้ดก่อนเพื่อดูว่าคุณต้องการเพิ่มอะไรไหม
       2-3 Artist Functions 2 a_authored_hint:
-        2-3_Artist_Functions_2_a: |-
-          Your program should:
-          - Use function
-          - Move forward 100 + 75 pixels
-          - Use function
+        2-3_Artist_Functions_2_a: |2
+          โปรแกรมของคุณควร:
+          
+           - ใช้ฟังก์ชัน
+           - ย้ายไปข้างหน้า 100+75 พิกเซล
+           - ใช้ฟังก์ชัน
       2-3 Artist Functions 2_authored_hint:
-        2-3_Artist_Functions_2_a: |-
-          Your program should:
-          - Use function
-          - Move forward 100 + 75 pixels
-          - Use function
+        2-3_Artist_Functions_2_a: |2
+          โปรแกรมของคุณควร:
+          
+           - ใช้ฟังก์ชัน
+           - ย้ายไปข้างหน้า 100+75 พิกเซล
+           - ใช้ฟังก์ชัน
       2-3 Artist Functions 3 a_authored_hint:
         2-3_Artist_Functions_3_a: "** 115 + 45 = 160 **"
       2-3 Artist Functions 3_authored_hint:
         2-3_Artist_Functions_3_a: "** 115 + 45 = 160 **"
       2-3 Artist Functions 4 a_authored_hint:
-        2-3_Artist_Functions_4_a: The artist needs to turn 120 degrees between each square to complete this design.
+        2-3_Artist_Functions_4_a: ศิลปินต้องหัน 120 องศาระหว่างการวาดรูปสี่เหลี่ยมจตุรัสแต่ละรูปเพื่อให้การออกแบบนี้เสร็จสมบูรณ์
       2-3 Artist Functions 4_authored_hint:
-        2-3_Artist_Functions_4_a: The artist needs to turn 120 degrees between each square to complete this design.
+        2-3_Artist_Functions_4_a: ศิลปินต้องหัน 120 องศาระหว่างการวาดรูปสี่เหลี่ยมจตุรัสแต่ละรูปเพื่อให้การออกแบบนี้เสร็จสมบูรณ์
       2-3 Artist Loops New 11_authored_hint:
         2-3_Artist_Loops_New_11_a: |-
           จำโค้ดจากปริศนาล่าสุดได้ไหม:
@@ -145,21 +147,21 @@ th:
         2-3_Artist_Loops_New_9_a: The artist needs to turn 45 degrees to the right before he starts drawing.
         2-3_Artist_Loops_New_9_b: รูปตัว V เป็นเพียงครึ่งหนึ่งของสี่เหลี่ยม  อะไรคือโค้ดที่จะใช้วาดครึ่งหนึ่งของสี่เหลี่ยม?
       2-3 Artist Nested Loops 1_authored_hint:
-        2-3_Artist_Nested_Loops_1_a: Remember to put all of the grey blocks inside of your loop.
+        2-3_Artist_Nested_Loops_1_a: อย่าลืมใส่บล็อกสีเทาทั้งหมดไว้ภายในลูปของคุณ.
       2-3 Artist Nested Loops 3_authored_hint:
-        2-3_Artist_Nested_Loops_3_a: "Need help with the angles?  \n**360/12 = 30**"
-        2-3_Artist_Nested_Loops_3_b: Remember to put all of the grey code and your turn block inside of a loop.
+        2-3_Artist_Nested_Loops_3_a: "ต้องการความช่วยเหลือเกี่ยวกับมุมไหม?\n\n**360/12 = 30**."
+        2-3_Artist_Nested_Loops_3_b: อย่าลืมใส่รหัสสีเทาทั้งหมดและบล็อกที่ใช้สำหรับหันของคุณไว้ภายในลูป.
       2-3 Artist Nested Loops 4_authored_hint:
-        2-3_Artist_Nested_Loops_3_a: "Need help with the angles?  \n**360/12 = 30**"
+        2-3_Artist_Nested_Loops_3_a: "ต้องการความช่วยเหลือเกี่ยวกับมุมไหม?\n\n**360/12 = 30**."
       2-3 Artist Nested Loops 5_authored_hint:
-        2-3_Artist_Nested_Loops_5_a: "ลองใช้บล็อก `กระโดดไปข้างหน้าด้วยระยะทาง ` เพื่อมาจากด้านบนของบานหน้าต่างไปยับานหน้าต่างที่คุณจะเริ่มต้นถัดไป \n\nถ้าสี่เหลี่ยมของคุณมีขนาด 20 พิกเซลและห่างกัน 20 พิกเซล ระยะทางไกลเท่าไรคุณจะต้องกระโดดข้ามไป?"
+        2-3_Artist_Nested_Loops_5_a: "ลองใช้บล็อก `กระโดดไปข้างหน้า ` เพื่อย้ายจากด้านบนของบานหน้าต่างไปยังบานหน้าต่างที่คุณจะเริ่มต้นถัดไป \n\nถ้าบานหน้าต่างของคุณมีด้านแต่ละด้านยาว 20 พิกเซลและห่างกัน 20 พิกเซล ระยะทางไกลเท่าไรที่คุณจะต้องกระโดดข้ามไป?"
       2-3 Artist Nested Loops 7_authored_hint:
-        2-3_Artist_Nested_Loops_7_a: "How far should you turn in each loop?  \n\nWhat is 360/10?"
+        2-3_Artist_Nested_Loops_7_a: "คุณควรจะหันไปมากแค่ไหน ในแต่ละลูป?\n\n360/10  เป็นเท่าใด?."
       2-3 Artist Nested Loops 9_authored_hint:
         2-3_Artist_Nested_Loops_9_a: |-
-          Need help finding the correct angle?
+          ต้องการความช่วยเหลือในการค้นหามุมที่ถูกต้องหรือไม่
           
-          **360 / 12 = 30**
+          360/12 = 30.
       2-3 Bee Conditionals 14_authored_hint:
         2-3_Bee_Conditionals_14_a: Having a hard time figuring out how to get the blocks down?  Try treating the red flower exactly the same as a purple flower!
         2-3_Bee_Conditionals_14_b: If the red flower were purple, could you figure out how to use an extra `repeat` loop to cut down on code?
@@ -171,93 +173,93 @@ th:
       2-3 Bee Conditionals 6_authored_hint:
         2-3_Bee_Conditionals_6_a: 'Remember: Purple flowers change between 0 and 1 nectar when you run your program!'
       2-3 Bee Debugging 1_authored_hint:
-        2-3_Bee_Debugging_1_a: Once you find and fix the incorrect block, do you see any patterns that could be made more simple using a `repeat` loop?
+        2-3_Bee_Debugging_1_a: เมื่อคุณค้นหาและแก้ไขบล็อกที่ไม่ถูกต้องนั้น คุณเห็นรูปแบบใดๆที่สามารถทำได้ง่ายขึ้นโดยใช้ลูป `ทำซ้ำ`ไหม?
       2-3 Bee Debugging 2_authored_hint:
-        2-3_Bee_Debugging_2_a: Once you find and fix the incorrect block, do you see any patterns that could be made more simple using a `repeat` loop?
+        2-3_Bee_Debugging_2_a: เมื่อคุณค้นหาและแก้ไขบล็อกที่ไม่ถูกต้องนั้น คุณเห็นรูปแบบใดๆที่สามารถทำได้ง่ายขึ้นโดยใช้ลูป `ทำซ้ำ`ไหม?
       2-3 Bee Debugging 4_authored_hint:
-        2-3_Bee_Debugging_4_a: Is there any place where the bee does something that doesn't make sense? What happens when you change that block?
+        2-3_Bee_Debugging_4_a: มีที่ไหนอีกไหมที่ผึ้งทำอะไรที่ไม่เข้าท่า? จะเกิดอะไรขึ้นเมื่อคุณเปลี่ยนบล็อกนั้น?
       2-3 Bee Functions 4_authored_hint:
-        2-3_Bee_Functions_4_a: You don't have to use a loop with a function. Try moving, using the function, then moving and using the function again.
+        2-3_Bee_Functions_4_a: คุณไม่จำเป็นต้องใช้ลูปกับฟังก์ชัน ลองเคลื่อนย้ายผึ้งโดยใช้ฟังก์ชันจากนั้นย้ายผึ้งและใช้ฟังก์ชันอีกครั้ง
       2-3 Bee Functions 6_authored_hint:
-        2-3_Bee_Functions_6_a: You don't have to use a loop with a function. Try moving, using the function, then moving and using the function again.
+        2-3_Bee_Functions_6_a: คุณไม่จำเป็นต้องใช้ลูปกับฟังก์ชัน ลองเคลื่อนย้ายผึ้งโดยใช้ฟังก์ชันจากนั้นย้ายผึ้งและใช้ฟังก์ชันอีกครั้ง
       2-3 Bee Functions 8_authored_hint:
-        2-3_Bee_Functions_8_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        2-3_Bee_Functions_8_a: "หากปริศนาดูเหมือนว่าจะท้าทายเกินไป ให้ลองสร้างฟังก์ชั่นทีละเล็กทีละน้อยในแต่ละครั้ง  \n\nเพิ่มบล็อกบางอย่างแล้วลองเอาออก เพิ่มใหม่แล้วลองอีกครั้ง  ในไม่ช้า คุณจะได้รับความสำเร็จ!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
       2-3 Bee Functions 9_authored_hint:
-        2-3_Bee_Functions_8_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        2-3_Bee_Functions_8_a: "หากปริศนาดูเหมือนว่าจะท้าทายเกินไป ให้ลองสร้างฟังก์ชั่นทีละเล็กทีละน้อยในแต่ละครั้ง  \n\nเพิ่มบล็อกบางอย่างแล้วลองเอาออก เพิ่มใหม่แล้วลองอีกครั้ง  ในไม่ช้า คุณจะได้รับความสำเร็จ!"
         2-3_Bee_Functions_8_b: |-
           Remember to build your code inside of the green function block.
           
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
       2-3 Bee Loops 2_authored_hint:
-        2-3_Bee_Loops_2_a: You should end up with four blocks inside your loop.
+        2-3_Bee_Loops_2_a: คุณควรจบการเขียนโค้ด ลงด้วยบล็อกสี่บล็อกอยู่ภายในลูปของคุณ
       2-3 Bee Loops 3_authored_hint:
-        2-3_Bee_Loops_3_a: You should have 6 blocks inside your loop.
+        2-3_Bee_Loops_3_a: คุณควรมีบล็อก 6 บล็อกอยู่ภายในลูปของคุณ
       2-3 Bee Loops 3B_authored_hint:
-        2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after the other.
+        2-3_Bee_Loops_3B_a: คุณจะต้องใช้ลูป`ทำซ้ำ`ที่แตกต่างกันสองลูป โดยวางลูปหนึ่งตามอีกลูปหนึ่ง
       2-3 Bee Loops 4_authored_hint:
-        2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
+        2-3_Bee_Loops_4_a: คุณควรจบด้วย บล็อก 5 บล็อกอยู่ภายในลูปของคุณ
       2-3 Bee Loops 4A_authored_hint:
-        2-3_Bee_Loops_4A_a: The first action will be a turn, rather than a move.
-        2-3_Bee_Loops_4A_b: The last piece of the program can be finished by writing code at the end of your program outside of your loop.
-        2-3_Bee_Loops_4A_c: If you can't spot the loops yet, try coding it out the long way first, then see what you can combine into a `repeat` loop at the end.
+        2-3_Bee_Loops_4A_a: ภารกิจแรกคือการหันไป ไม่ใช่การเคลื่อนไหว
+        2-3_Bee_Loops_4A_b: ชิ้นสุดท้ายของโปรแกรมสามารถเสร็จสิ้นได้โดยการเขียนโค้ดไว้ที่ตอนท้ายของโปรแกรมของคุณ ให้อยู่ภายนอกลูปของคุณ
+        2-3_Bee_Loops_4A_c: ถ้าคุณไม่สามารถหาได้ว่าลูปควรจะอยู่ที่ไหน ให้ลองเขียนโค้ดออกมาแบบเต็มรูปก่อน แล้วดูว่าคุณสามารถรวมมันเข้าไปไว้ในลูป `ทำซ้ำ`ตอนท้าย
       2-3 Bee Loops 5_authored_hint:
-        2-3_Bee_Loops_5_a: If you can't spot the blocks to put inside `repeat` right away, start by coding out each move and look for a pattern.
+        2-3_Bee_Loops_5_a: หากคุณไม่สามารถบอกได้ว่าบล็อกใดที่จะใส่ภายใน `ทำซ้ำ`ได้ทันที ให้เริ่มต้นด้วยการเขียนโค้ดออกมาทีละขั้นและมองหารูปแบบ.
       2-3 Bee Loops 6_authored_hint:
-        2-3_Bee_Loops_6_a: If you can't tell what should go into the `repeat` loop, try dragging blocks out one by one and see if you can find a pattern.
-        2-3_Bee_Loops_6_b: There should be 6 blocks inside your `repeat` loop when you're done.
+        2-3_Bee_Loops_6_a: ถ้าคุณไม่สามารถบอกได้ว่าอะไรควรไปที่ลูป `ทำซ้ำ`ให้ลองลากบล็อกออกมาทีละรายการและดูว่าคุณสามารถค้นหารูปแบบได้หรือไม่?
+        2-3_Bee_Loops_6_b: ควรมีบล็อก 6 บล็อกอยู่ภายในลูป `ทำซ้ำ`ของคุณเมื่อคุณทำเสร็จ
       2-3 Bee Loops 7_authored_hint:
-        2-3_Bee_Loops_7_a: The first action will be a turn, rather than a move.
-        2-3_Bee_Loops_7_b: 'If you can''t quite picture the loop from the beginning, try coding it out the long way, then look for a pattern.  '
+        2-3_Bee_Loops_7_a: ภารกิจแรกคือการหันไป ไม่ใช่การเคลื่อนไหว
+        2-3_Bee_Loops_7_b: 'ถ้าคุณไม่สามารถวาดภาพลูปไว้ในหัวได้ตั้งแต่แรก ลองเขียนโค้ดออกมาแบบเต็มรูปก่อน แล้วมองหารูปแบบ  '
       2-3 Maze 1_authored_hint:
         2-3_Maze_1_a: To use a `move forward` block, drag it from the toolbar area out into the workspace and connect it to the `when run` block.
       2-3 Maze 16_authored_hint:
         2-3_Maze_16_a: ถ้ามองไม่เห็นรูปแบบที่ชัดเจน ก็ให้ลองเขียนโค้ดออกมาดูก่อน และดูว่ามีอะไรที่มีการทำซ้ำแล้วซ้ำอีก ก่อนที่คุณจะรวมมันเอาเข้าไปไว้ในลูป
-        2-3_Maze_16_b: "To put lots of blocks inside a `repeat` loop, just drag a loop out into the workspace, then drag all of the blocks from the starting program inside of it.  \n\nConnect it all back to the `when run` block and you're good to go!"
+        2-3_Maze_16_b: "เมื่อต้องการใส่บล็อกจำนวนมากไว้ภายในลูป `ทำซ้ำ`ก็เพียงแค่ลากลูปออกไปไว้ในพื้นที่ทำงานแล้วลากบล็อกทั้งหมดจากโปรแกรมตอนเริ่มต้นมาไว้ภายในลูป\n\nเชื่อมต่อทั้งหมดเข้าไปกับบล็อก `เมื่อเรียกใช้งาน` ก็จะถือได้ว่าคุณพร้อมแล้ว!"
       2-3 Maze 6_authored_hint:
         2-3_Maze_6_a: There are two ways to solve this puzzle!
       2-3 Maze Loops 17_authored_hint:
         2-3_Maze_Loops_17_a: ถ้ามองไม่เห็นรูปแบบที่ชัดเจน ก็ให้ลองเขียนโค้ดออกมาดูก่อน และดูว่ามีอะไรที่มีการทำซ้ำแล้วซ้ำอีก ก่อนที่คุณจะรวมมันเอาเข้าไปไว้ในลูป
-        2-3_Maze_Loops_17_b: Did the starting code get deleted?  Click `start over` to get it back!
+        2-3_Maze_Loops_17_b: โค้ดเริ่มต้นถูกลบหรือเปล่า? คลิก`เริ่มเล่นใหม่`ก็จะได้มันกลับคืนมา!
       2-3 Maze Loops 18_authored_hint:
         2-3_Maze_Loops_18_a: ถ้ามองไม่เห็นรูปแบบที่ชัดเจน ก็ให้ลองเขียนโค้ดออกมาดูก่อน และดูว่ามีอะไรที่มีการทำซ้ำแล้วซ้ำอีก ก่อนที่คุณจะรวมมันเอาเข้าไปไว้ในลูป
       2-3 Maze Loops 19_authored_hint:
-        2-3_Maze_Loops_19_a: If you are stuck, try writing out the code without loops first and looking for patterns.
-        2-3_Maze_Loops_19_b: Putting one repeat loop inside of another can help decrease the number of blocks used.
+        2-3_Maze_Loops_19_a: หากคุณติดขัดอยู่ ให้ลองเขียนโค้ดโดยไม่ใช้ลูปก่อน และมองหารูปแบบ
+        2-3_Maze_Loops_19_b: การวางลูปทำซ้ำไว้ภายในลูปอีกลูปหนึ่ง สามารถช่วยลดจำนวนของบล็อกที่ใช้ลงได้
       2-3 Maze Loops 20_authored_hint:
-        2-3_Maze_Loops_20_a: Look for a stair-step pattern in this maze to find where a loop can be used.
+        2-3_Maze_Loops_20_a: มองหาขั้นตอนที่เป็นรูปแบบบันไดในเขาวงกตนี้ เพื่อค้นหาที่ที่สามารถนำลูปมาใช้
       2-3 Maze Loops 21_authored_hint:
-        2-3_Maze_Loops_21_a: If you are having trouble finding the stair-step pattern, try covering the blocked paths with your finger.
+        2-3_Maze_Loops_21_a: หากคุณมีปัญหาในการมองเห็นขั้นตอนรูปแบบบันได ให้ลองปิดเส้นทางด้วยนิ้วของคุณ
       4-5 Artist 1_authored_hint:
         4-5_Artist_1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       4-5 Artist 11_authored_hint:
-        4-5_Artist_11_a: Within your loop, make sure the artist jumps backwards and upwards after drawing each line.
+        4-5_Artist_11_a: ภายในลูปของคุณ ให้แน่ใจว่าศิลปินกระโดดข้ามถอยหลังและกระโดดขึ้นไป หลังจากวาดแต่ละเส้นแล้ว
       4-5 Artist 3_authored_hint:
         4-5_Artist_3_a: |-
-          If the flower bed is 600 pixels around and two of the sides are 200 pixels long, here is how to figure out what the short sides add up to:
+          หากกระถางดอกไม้ เท่ากับ 600 พิกเซลโดยรอบแล้ว และมีด้านยาวสองด้านเท่ากับ 200 พิกเซล วิธีที่จะคิดคำนวณด้านสั้นเพิ่มคือ:
           
           **600 - 200 - 200 = 200**
           
-          That means both short sides add up to 200 pixels.
+          ซึ่งหมายความว่าด้านสั้นทั้งสองรวมกันเท่ากับ 200 พิกเซล
           
-          **What is 200 / 2?**
-        4-5_Artist_3_b: If you can't see where the `repeat` loop goes right away, try coding out the whole solution and look for a pattern.
+          ** 200/2 คืออะไรเอ่ย? **
+        4-5_Artist_3_b: หากคุณมองไม่ออกว่า ลูป `ทำซ้ำ`นั้นควรจะอยู่ที่ใด ให้ลองเขียนโค้ดออกมาทั้งหมดก่อนและมองหารูปแบบ
       4-5 Artist 4_authored_hint:
-        4-5_Artist_4_a: "There are 360 degrees in a circle! \n\nThat's how many times you need to repeat this code (turning 1 degree at a time) before the circle is done!"
+        4-5_Artist_4_a: "มี 360 องศาในวงกลม! \n\nนั่นคือจำนวนครั้งที่คุณต้องการที่จะทำซ้ำโค้ดนี้ (หันไป 1 องศาในแต่ละครั้ง) จนเป็นรูปวงกลม!"
       4-5 Artist 5_authored_hint:
         4-5_Artist_5_a: |-
-          Trial and error is a great method, but you can also solve the problem by dividing the 90 degree angle into thirds.
+          ลองผิดลองถูกเป็นวิธีที่ดี แต่คุณยังสามารถแก้ปัญหาโดยการหารมุม 90 องศาด้วยสาม
           
           **90 / 3 = _____**
       4-5 Artist 7_authored_hint:
-        4-5_Artist_7_a: 'Which angle is the smallest?  At which angle is the artist standing? '
+        4-5_Artist_7_a: 'มุมใดที่เล็กที่สุด? มุมไหนคือมุมที่ศิลปินยืนอยู่? '
       4-5 Artist 8_authored_hint:
-        4-5_Artist_8_a: "The long sides are 240 pixels each.  That means that the 2 short sides must total:\n\n**800 - 240 - 240 = 320**\n\nWhat is **320/2** ? "
+        4-5_Artist_8_a: "ด้านยาวมีความยาว 240 พิกเซล ซึ่งหมายความว่า 2 ด้านสั้นรวมกันยาว:\n\n 800 - 240 - 240 = 320\n\n320/2 คืออะไร? "
         4-5_Artist_8_b: "This image can be done 2 ways!  \n- Draw two rectangles that are **120** long and **160** tall, with an overlapping side\n\n- Draw one rectangle that is **240** long and **160** tall, then add a line in the middle."
       4-5 Artist 9_authored_hint:
-        4-5_Artist_9_a: "When a triangle is an equilateral, all sides and all angles are the same.  \n"
-        4-5_Artist_9_b: You will need to draw three triangles of the same size. Don't forget to jump to your new position after each one.
+        4-5_Artist_9_a: "เมื่อรูปสามเหลี่ยมเป็นสามเหลี่ยมด้านเท่า ทุกด้านและทุกมุมจะเหมือนกัน\n"
+        4-5_Artist_9_b: คุณจะต้องวาดสามเหลี่ยมสามรูปที่มีขนาดเดียวกัน อย่าลืมกระโดดข้ามไปยังตำแหน่งใหม่ของคุณหลังจากวาดแต่ละรูปแล้ว
       4-5 Artist Assessment 1_authored_hint:
-        4-5_Artist_Assessment_1_a: You only need to draw the outside triangle to complete this puzzle.
+        4-5_Artist_Assessment_1_a: คุณจะต้องวาดเพียงรูปสามเหลี่ยมภายนอกเ พื่อให้ปริศนานี้เสร็จสมบูรณ์
       4-5 Artist Patterns 11_authored_hint:
         4-5_Artist_Patterns_11_a: If there are 360 degrees in a circle and each loop turns 3 degrees, how many times would you need to loop draw half of a full circle?
       4-5 Artist Patterns 2_authored_hint:
@@ -272,24 +274,24 @@ th:
       4-5 Bee Conditionals 5_authored_hint:
         remember_quantum: "**ข้อควรจำ:** ปริศนานี้เปลี่ยนแปลงทุกครั้งที่ถูกเรียกใช้งาน\nคุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า(if)` หรือ `ถ้า/นอกจากนั้น(if/else)`) เพื่อแก้ปัญหาที่ท้าทาย"
       4-5 Bee Conditionals 6_authored_hint:
-        4-5 Bee Conditionals 6_a: You can solve this puzzle using only the blocks on the workspace.  What order should they go in?
-        4-5 Bee Conditionals 6_b: Make sure that you are checking to see if the flower has more than **0** nectar at least **3** times to solve this puzzle.
+        4-5 Bee Conditionals 6_a: คุณสามารถแก้ปริศนานี้โดยใช้เฉพาะบล็อกที่อยู่ในพื้นที่ทำงาน มันควรถูกจัดลำดับอย่างไร?
+        4-5 Bee Conditionals 6_b: ให้แน่ใจว่าคุณกำลังตรวจสอบเพื่อดูว่าดอกไม้มีน้ำหวานมากกว่า **0** อย่างน้อย **3** ครั้ง เพื่อแก้ปริศนานี้
       4-5 Bee Debugging 1_authored_hint:
         4-5_Bee_Debugging_1_a: If you are having trouble figuring out what's not right, try running it to see where things go wrong.
       4-5 Bee Nested Loops Rows_authored_hint:
         4-5_Bee_Nested_Loops_Rows_a: Try treating this puzzle like a long rectangle where the bee needs to move forward, then turn left several times to complete the path.
       4-5 Maze 10_authored_hint:
         4-5_Maze_10_a: |-
-          If you can't see how to use loops to solve the puzzle right away, try solving it the long way first, then looking for a pattern.
+          หากคุณไม่รู้วิธีการใช้ลูปเพื่อแก้ปริศนาได้ในทันที ให้ลองแก้มันด้วยวิธีที่อาจต้องใช้เวลานานหน่อยก่อน แล้วมองหารูปแบบ
           
-          What should you put a `repeat` around to make the code shorter?
+          อะไรคือสิ่งที่คุณควรใส่ `ทำซ้ำ`ไว้รอบๆ เพื่อให้โค้ดสั้นลง?
       4-5 Maze 4_authored_hint:
-        4-5_Maze_4_a: If you are having a hard time figuring out where to put the repeat, try coding everything out and looking for a pattern.
+        4-5_Maze_4_a: หากคุณกำลังลำบากใจในการที่จะหาว่าจะวางทำซ้ำไว้ที่ไหน ให้ลองเขียนโค้ดทุกอย่างออกมาก่อนและมองหารูปแบบที่ซ้ำๆ กัน
       4-5 Maze 5_authored_hint:
-        4-5_Maze_5_a: Try using a `repeat` loop anytime you need to `move forward` more than two steps.
-        4-5_Maze_5_b: You can use more than one `repeat` loop in a puzzle.
+        4-5_Maze_5_a: ลองใช้ลูป`ทำซ้ำ`เมื่อใดก็ตามที่คุณต้องการย้ายไปข้างหน้ามากกว่าสองก้าว
+        4-5_Maze_5_b: คุณสามารถใช้ลูป`ทำซ้ำ` ได้มากกว่าหนึ่งครั้งในหนึ่งปริศนา
       4-5 Maze 6_authored_hint:
-        4-5_Maze_6_a: "Try tracing out a path with your finger.  \nIs it the shortest path you can find?"
+        4-5_Maze_6_a: "ลองแกะรอยเส้นทางด้วยนิ้วของคุณว่า\nมันเป็นเส้นทางที่สั้นที่สุดที่คุณสามารถค้นหาได้หรือไม่?"
       4-5 Maze 7_authored_hint:
         4-5_Maze_7_a: "**Want to get your code as small as it can be?** \n\nLook for patterns in your blocks. Do you see something that repeats?  Try putting a loop around it instead!"
       4-5 Nested Loops 12_authored_hint:
@@ -313,7 +315,7 @@ th:
           
           **360 / 6 = ?**
       4-5 While Loops 8_authored_hint:
-        4-5_While_Loops_8_a: Each item will need its own `while` loop.
+        4-5_While_Loops_8_a: แต่ละรายการจะต้องมีลูป ` ในขณะที่` ของมันเอง.
       AppLab Intro 3 - Change Screen Color_authored_hint: { }
       AppLab Intro 4 - Change Screen Color_authored_hint: { }
       AppLab Intro 5 - Change Screen Color_authored_hint: { }
@@ -4002,14 +4004,14 @@ th:
         allHallows2017_b: 'Baker says: "The Chicago crayon only works on the *green line*."'
         allHallows2017_f: 'Amy says: "You can do it! Just think outside the box"'
       artistDebugVideo1_authored_hint:
-        courseA_artist_loops7_a: Can't figure out where to put the loop? Try writing the code step-by-step and look for a pattern.
+        courseA_artist_loops7_a: คิดไม่ออกว่าจะวางลูปไว้ที่ไหน? ลองเขียนโค้ดทีละขั้นตอนและค้นหารูปแบบดู
       artistFunctionsVideo1_authored_hint: { }
       artistLoopsK2_authored_hint:
-        artistLoopsK2_a: If you want the loop to repeat more than 4 times, you can change the number at the top of the block.
+        artistLoopsK2_a: ถ้าคุณต้องการให้ลูปซ้ำมากกว่า 4 ครั้งคุณสามารถเปลี่ยนหมายเลขที่ด้านบนของบล็อกได้
       artistLoopsK2gradek_artist_loops3_authored_hint:
-        artistLoopsK2_a: If you want the loop to repeat more than 4 times, you can change the number at the top of the block.
+        artistLoopsK2_a: ถ้าคุณต้องการให้ลูปซ้ำมากกว่า 4 ครั้งคุณสามารถเปลี่ยนหมายเลขที่ด้านบนของบล็อกได้
       artistLoopsK3_authored_hint:
-        artistLoopsK3_a: Try using what you've learned about repeat blocks to complete this puzzle!
+        artistLoopsK3_a: ลองใช้สิ่งที่คุณได้เรียนรู้เกี่ยวกับการทำซ้ำบล็อกเพื่อทำให้ปริศนานี้เสร็จสมบูรณ์!
       artistLoopsK4_authored_hint:
         artistLoopsK4_a: Stuck? Try running the code to see which block is incorrect.
       artistLoopsK5_authored_hint:
@@ -4355,10 +4357,10 @@ th:
           * Make 3 honey
           * Move backward
       course3_bee_functions_challenge1_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: "หากปริศนาดูเหมือนว่าจะท้าทายเกินไป ให้ลองสร้างฟังก์ชั่นทีละเล็กทีละน้อยในแต่ละครั้ง  \n\nเพิ่มบล็อกบางอย่างแล้วลองเอาออก เพิ่มใหม่แล้วลองอีกครั้ง  ในไม่ช้า คุณจะได้รับความสำเร็จ!"
         courseE_bee_functions_challenge1_b: Remember to build your code inside of the green function block.
       course3_bee_functions_challenge2_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: "หากปริศนาดูเหมือนว่าจะท้าทายเกินไป ให้ลองสร้างฟังก์ชั่นทีละเล็กทีละน้อยในแต่ละครั้ง  \n\nเพิ่มบล็อกบางอย่างแล้วลองเอาออก เพิ่มใหม่แล้วลองอีกครั้ง  ในไม่ช้า คุณจะได้รับความสำเร็จ!"
         courseE_bee_functions_challenge1_b: Remember to build your code inside of the green function block.
       course3_bee_functions_challenge3_authored_hint:
         courseF_bee_functions_challenge1_a: You can use the functions in the tool box to help you. You can call a function inside of another function's definition!
@@ -5237,40 +5239,40 @@ th:
       courseA_artist_loops12_authored_hint: { }
       courseA_artist_loops12_2018_authored_hint: { }
       courseA_artist_loops2_authored_hint:
-        courseA_artist_loops2_a: Can't figure out how to draw a line?  Start attaching blocks to the <xml><block type="when_run"/></xml> block to see what happens.
+        courseA_artist_loops2_a: ไม่สามารถคิดออกว่าวิธีการวาดเส้นทำได้อย่างไร  เริ่มด้วยการต่อบล็อกเข้าไปกับบล็อก<xml><block type="" เมื่อเรียกใช้งาน"/></xml>เพื่อดูว่าเกิดอะไรขึ้น
         courseA_artist_loops2_b: Use this block <xml><block type="simple_move_right"/></xml> to solve this puzzle.
       courseA_artist_loops2_2018_authored_hint:
-        courseA_artist_loops2_a: Can't figure out how to draw a line?  Start attaching blocks to the <xml><block type="when_run"/></xml> block to see what happens.
+        courseA_artist_loops2_a: ไม่สามารถคิดออกว่าวิธีการวาดเส้นทำได้อย่างไร  เริ่มด้วยการต่อบล็อกเข้าไปกับบล็อก<xml><block type="" เมื่อเรียกใช้งาน"/></xml>เพื่อดูว่าเกิดอะไรขึ้น
         courseA_artist_loops2_b: Use this block <xml><block type="simple_move_right"/></xml> to solve this puzzle.
       courseA_artist_loops3_authored_hint:
         courseA_artist_loops3_a: Trace slowly through the program with your finger to see where it goes wrong.
         courseA_artist_loops3_b: |-
-          You will want to use a block like this to solve this puzzle.
+          คุณต้องใช้บล็อกแบบนี้เพื่อแก้ปริศนา
           
           ![](https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png)
       courseA_artist_loops3_2018_authored_hint:
         courseA_artist_loops3_a: Trace slowly through the program with your finger to see where it goes wrong.
         courseA_artist_loops3_b: |-
-          You will want to use a block like this to solve this puzzle.
+          คุณต้องใช้บล็อกแบบนี้เพื่อแก้ปริศนา
           
           ![](https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png)
       courseA_artist_loops4_authored_hint:
-        courseA_artist_loops4_a: If you want the loop to repeat more than 4 times, you can change the number at the top of the block.
+        courseA_artist_loops4_a: ถ้าคุณต้องการให้ลูปซ้ำมากกว่า 4 ครั้งคุณสามารถเปลี่ยนหมายเลขที่ด้านบนของบล็อกได้
         courseA_artist_loops4_b: |-
           Since you can only use one <xml><block type="simple_move_right"/></xml>
           block, try putting it inside of the <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> loop.
       courseA_artist_loops4_2018_authored_hint:
-        courseA_artist_loops4_a: If you want the loop to repeat more than 4 times, you can change the number at the top of the block.
+        courseA_artist_loops4_a: ถ้าคุณต้องการให้ลูปซ้ำมากกว่า 4 ครั้งคุณสามารถเปลี่ยนหมายเลขที่ด้านบนของบล็อกได้
         courseA_artist_loops4_b: |-
           Since you can only use one <xml><block type="simple_move_right"/></xml>
           block, try putting it inside of the <block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block> loop.
       courseA_artist_loops5_authored_hint:
-        courseA_artist_loops5_a: Try using what you've learned about <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> blocks to complete this puzzle!
-        courseA_artist_loops5_b: If you want the loop to repeat more than 4 times, you can change the number at the top of the block.
+        courseA_artist_loops5_a: ลองใช้สิ่งที่คุณได้เรียนรู้เกี่ยวกับบล็อก<xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> เพื่อทำให้ปริศนานี้เสร็จสมบูรณ์!
+        courseA_artist_loops5_b: ถ้าคุณต้องการให้ลูปซ้ำมากกว่า 4 ครั้งคุณสามารถเปลี่ยนหมายเลขที่ด้านบนของบล็อกได้
         courseA_artist_loops5_c: "Since you can only use one <xml><block type=\"simple_move_right\"/></xml> block, try putting it inside of the \n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\nloop."
       courseA_artist_loops5_2018_authored_hint:
-        courseA_artist_loops5_a: Try using what you've learned about <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> blocks to complete this puzzle!
-        courseA_artist_loops5_b: If you want the loop to repeat more than 4 times, you can change the number at the top of the block.
+        courseA_artist_loops5_a: ลองใช้สิ่งที่คุณได้เรียนรู้เกี่ยวกับบล็อก<xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> เพื่อทำให้ปริศนานี้เสร็จสมบูรณ์!
+        courseA_artist_loops5_b: ถ้าคุณต้องการให้ลูปซ้ำมากกว่า 4 ครั้งคุณสามารถเปลี่ยนหมายเลขที่ด้านบนของบล็อกได้
         courseA_artist_loops5_c: "Since you can only use one <xml><block type=\"simple_move_right\"/></xml> block, try putting it inside of the \n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\nloop."
       courseA_artist_loops6_authored_hint:
         courseA_artist_loops6_a: Can't figure out how to make the hill?  Try playing with the blocks a bit to see what each one draws.
@@ -5279,42 +5281,42 @@ th:
         courseA_artist_loops6_a: Can't figure out how to make the hill?  Try playing with the blocks a bit to see what each one draws.
         courseA_artist_loops6_b: You will need 2 blocks in 2 directions to solve this puzzle.
       courseA_artist_loops7_authored_hint:
-        courseA_artist_loops7_a: Can't figure out where to put the loop? Try writing the code step-by-step and look for a pattern.
-        courseA_artist_loops7_b: Write the code for one wave first, then repeat that to draw the other two.
+        courseA_artist_loops7_a: คิดไม่ออกว่าจะวางลูปไว้ที่ไหน? ลองเขียนโค้ดทีละขั้นตอนและค้นหารูปแบบดู
+        courseA_artist_loops7_b: เขียนรหัสสำหรับคลื่นหนึ่งลูกก่อน แล้วดูว่าคุณสามารถทำซ้ำเพื่อที่จะวาดอีกสองลูกได้ไหม
         courseA_artist_loops7_c: |-
-          Remember you can put more than one block in a <xml><block type="controls_repeat">
-          <title name="TIMES">???</title>
-          </block></xml> loop.
+          โปรดจำไว้ว่าคุณสามารถใส่บล็อคได้มากกว่าหนึ่งบล็อกในลูป<xml><block type=""controls_repeat"">
+          <title name=""TIMES"">???</title>
+          </block></xml>
       courseA_artist_loops7_2018_authored_hint:
-        courseA_artist_loops7_a: Can't figure out where to put the loop? Try writing the code step-by-step and look for a pattern.
-        courseA_artist_loops7_b: Write the code for one wave first, then repeat that to draw the other two.
+        courseA_artist_loops7_a: คิดไม่ออกว่าจะวางลูปไว้ที่ไหน? ลองเขียนโค้ดทีละขั้นตอนและค้นหารูปแบบดู
+        courseA_artist_loops7_b: เขียนรหัสสำหรับคลื่นหนึ่งลูกก่อน แล้วดูว่าคุณสามารถทำซ้ำเพื่อที่จะวาดอีกสองลูกได้ไหม
         courseA_artist_loops7_c: |-
-          Remember you can put more than one block in a <xml><block type="controls_repeat">
-          <title name="TIMES">???</title>
-          </block></xml> loop.
+          โปรดจำไว้ว่าคุณสามารถใส่บล็อคได้มากกว่าหนึ่งบล็อกในลูป<xml><block type=""controls_repeat"">
+          <title name=""TIMES"">???</title>
+          </block></xml>
       courseA_artist_loops7_forVideo_authored_hint:
-        courseA_artist_loops7_a: Can't figure out where to put the loop? Try writing the code step-by-step and look for a pattern.
-        courseA_artist_loops7_b: Write the code for one wave first, then repeat that to draw the other two.
+        courseA_artist_loops7_a: คิดไม่ออกว่าจะวางลูปไว้ที่ไหน? ลองเขียนโค้ดทีละขั้นตอนและค้นหารูปแบบดู
+        courseA_artist_loops7_b: เขียนรหัสสำหรับคลื่นหนึ่งลูกก่อน แล้วดูว่าคุณสามารถทำซ้ำเพื่อที่จะวาดอีกสองลูกได้ไหม
         courseA_artist_loops7_c: |-
-          Remember you can put more than one block in a <xml><block type="controls_repeat">
-          <title name="TIMES">???</title>
-          </block></xml> loop.
+          โปรดจำไว้ว่าคุณสามารถใส่บล็อคได้มากกว่าหนึ่งบล็อกในลูป<xml><block type=""controls_repeat"">
+          <title name=""TIMES"">???</title>
+          </block></xml>
       courseA_artist_loops8_authored_hint:
-        courseA_artist_loops8_a: Try running the code to see what has been written for you.
-        courseA_artist_loops8_b: How would you loop the code that has been given to you?
-        courseA_artist_loops8_c: "What does the code do?  \nWhat is it supposed to do?  \nWhat does that tell you?"
+        courseA_artist_loops8_a: ลองเรียกใช้งานโค้ดเพื่อดูสิ่งที่ถูกเขียนขึ้นมาว่าทำอะไรให้คุณ
+        courseA_artist_loops8_b: คุณจะวนลูปโค้ดที่คุณได้รับมาอย่างไร
+        courseA_artist_loops8_c: "โค้ดทำอะไรได้บ้าง\nมันควรจะทำอะไร?\nมันบอกอะไรแก่คุณ?\n\n"
       courseA_artist_loops8_2018_authored_hint:
-        courseA_artist_loops8_a: Try running the code to see what has been written for you.
-        courseA_artist_loops8_b: How would you loop the code that has been given to you?
-        courseA_artist_loops8_c: "What does the code do?  \nWhat is it supposed to do?  \nWhat does that tell you?"
+        courseA_artist_loops8_a: ลองเรียกใช้งานโค้ดเพื่อดูสิ่งที่ถูกเขียนขึ้นมาว่าทำอะไรให้คุณ
+        courseA_artist_loops8_b: คุณจะวนลูปโค้ดที่คุณได้รับมาอย่างไร
+        courseA_artist_loops8_c: "โค้ดทำอะไรได้บ้าง\nมันควรจะทำอะไร?\nมันบอกอะไรแก่คุณ?\n\n"
       courseA_artist_loops9_authored_hint:
         courseA_artist_loops9_a: Add another block to the code you are given to draw the rest of the stairs.
-        courseA_artist_loops9_b: "The block you add should go inside of the \n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml> loop."
-        courseA_artist_loops9_c: If you can't figure out where to put the loop, try writing your code step-by-step and look for patterns.
+        courseA_artist_loops9_b: "บล็อกที่คุณเพิ่มควรไปอยู่ภายในของลูป<xml><block type=\"\"controls_repeat_simplified_dropdown\"\"><title name=\"\"TIMES\"\" config=\"\"3-10\"\">5</title></block>\n</xml> "
+        courseA_artist_loops9_c: ถ้าคุณไม่สามารถหาตำแหน่งที่จะวางลูปไว้ ให้ลองเขียนโค้ดทีละขั้นตอนและมองหารูปแบบ
       courseA_artist_loops9_2018_authored_hint:
         courseA_artist_loops9_a: Add another block to the code you are given to draw the rest of the stairs.
-        courseA_artist_loops9_b: "The block you add should go inside of the \n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml> loop."
-        courseA_artist_loops9_c: If you can't figure out where to put the loop, try writing your code step-by-step and look for patterns.
+        courseA_artist_loops9_b: "บล็อกที่คุณเพิ่มควรไปอยู่ภายในของลูป<xml><block type=\"\"controls_repeat_simplified_dropdown\"\"><title name=\"\"TIMES\"\" config=\"\"3-10\"\">5</title></block>\n</xml> "
+        courseA_artist_loops9_c: ถ้าคุณไม่สามารถหาตำแหน่งที่จะวางลูปไว้ ให้ลองเขียนโค้ดทีละขั้นตอนและมองหารูปแบบ
       courseA_artist_loops_challenge1_authored_hint: { }
       courseA_artist_loops_challenge1_2018_authored_hint: { }
       courseA_artist_loops_challenge2_authored_hint:
@@ -5404,21 +5406,21 @@ th:
         courseA_collector_loops5_b: ลองแยกปัญหาออกเป็น 2 ส่วนเคลื่อนไหวด้านข้างแล้วเคลื่อนไหวด้านล่าง
         courseA_collector_loops5_c: คุณจะต้องเริ่มต้นด้วย<xml><block type=""controls_repeat_simplified_dropdown""><title name=""TIMES"" config=""3-10"">???</title></block></xml>ลูปที่พาลอเรลไปทางทิศตะวันตกและเก็บรวบรวมสมบัติ
       courseA_collector_loops6_authored_hint:
-        courseA_collector_loops6_a: ไม่สามารถคิดว่ามีอะไรผิดปกติ ลองเรียกใช้งานโค้ดครั้งหรือสองครั้งเพื่อดูว่าเกิดอะไรขึ้น
+        courseA_collector_loops6_a: ไม่สามารถหาได้ว่ามีอะไรผิดปกติ ลองเรียกใช้งานโค้ดครั้งหรือสองครั้งเพื่อดูว่าเกิดอะไรขึ้น
         courseA_collector_loops6_b: The shortest solution has 2 <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> loops, one after the other.
       courseA_collector_loops6_2018_authored_hint:
-        courseA_collector_loops6_a: ไม่สามารถคิดว่ามีอะไรผิดปกติ ลองเรียกใช้งานโค้ดครั้งหรือสองครั้งเพื่อดูว่าเกิดอะไรขึ้น
+        courseA_collector_loops6_a: ไม่สามารถหาได้ว่ามีอะไรผิดปกติ ลองเรียกใช้งานโค้ดครั้งหรือสองครั้งเพื่อดูว่าเกิดอะไรขึ้น
         courseA_collector_loops6_b: The shortest solution has 2 <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> loops, one after the other.
       courseA_collector_loops7_authored_hint:
         courseA_collector_loops7_a: ถ้าคุณไม่สามารถคิดออกว่าสิ่งที่มาถัดไปคือะไร ลองเรียกใช้งานโค้ดเพื่อดูว่าจบแล้วลอเรลได้อะไร
       courseA_collector_loops7_2018_authored_hint:
         courseA_collector_loops7_a: ถ้าคุณไม่สามารถคิดออกว่าสิ่งที่มาถัดไปคือะไร ลองเรียกใช้งานโค้ดเพื่อดูว่าจบแล้วลอเรลได้อะไร
       courseA_collector_loops8_authored_hint:
-        courseA_collector_loops8_a: If you are having trouble figuring this puzzle out, try writing the moves down on a piece of paper and looking for a pattern.
+        courseA_collector_loops8_a: หากคุณมีปัญหาในการแก้ปริศนานี้ให้ ลองเขียนสิ่งที่คุณคิดลงบนกระดาษและมองหารูปแบบดู
         courseA_collector_loops8_b: Try breaking this puzzle into 3 separate problems, and writing loops for each.
         courseA_collector_loops8_c: จำไว้ว่าคุณสามารถเขียนรหัสทีละหนึ่งชิ้นแล้วกด " เริ่ม" เพื่อดูว่าคุณจะทำอะไรต่อไป
       courseA_collector_loops8_2018_authored_hint:
-        courseA_collector_loops8_a: If you are having trouble figuring this puzzle out, try writing the moves down on a piece of paper and looking for a pattern.
+        courseA_collector_loops8_a: หากคุณมีปัญหาในการแก้ปริศนานี้ให้ ลองเขียนสิ่งที่คุณคิดลงบนกระดาษและมองหารูปแบบดู
         courseA_collector_loops8_b: Try breaking this puzzle into 3 separate problems, and writing loops for each.
         courseA_collector_loops8_c: จำไว้ว่าคุณสามารถเขียนรหัสทีละหนึ่งชิ้นแล้วกด " เริ่ม" เพื่อดูว่าคุณจะทำอะไรต่อไป
       courseA_collector_loops9_authored_hint:
@@ -5517,7 +5519,7 @@ th:
         courseA_harvester_loops5_b: Your final code will have **one** `repeat` loop, **one** `move South` block, and **one** `move East` block.
         courseA_harvester_loops5_c: Use this path to pick all the corn!
       courseA_harvester_loops5a_authored_hint:
-        courseA_harvester_loops5a_a: You will need one `repeat` loop after another.
+        courseA_harvester_loops5a_a: คุณต้องการใช้ลูป`ทำซ้ำ` อีกอันหนึ่งหลังจากใช้ไปอันหนึ่งแล้ว
         courseA_harvester_loops5a_b: One loop will repeat `move South`, and the other will repeat `move East`.
         courseA_harvester_loops5a_c: Use this path to move one way, and then the other.
       courseA_harvester_loops5b_authored_hint:
@@ -5525,7 +5527,7 @@ th:
         courseA_harvester_loops5b_b: Are your loops repeating the right number of times?
         courseA_harvester_loops5b_c: Move one way, then the other with this path.
       courseA_harvester_loops6_authored_hint:
-        courseA_harvester_loops6_a: If you get stuck, try writing the steps on paper and looking for repeating patterns.
+        courseA_harvester_loops6_a: หากคุณคิดไม่ออก ให้ลองเขียนขั้นตอนลงบนกระดาษและมองหารูปแบบที่ซ้ำๆ กัน
         courseA_harvester_loops6_b: This is the path you should take to pick all the corn.
       courseA_harvester_loops7_authored_hint:
         courseA_harvester_loops7_a: You will need two `repeat` loops after each other!
@@ -5558,7 +5560,7 @@ th:
           Use this block to pick corn once the harvester gets to it.
           
           <xml>
-          <block type="maze_nectar"/>
+          <block type="harvester_corn"/>
           </xml>
       courseA_harvester_seq2_authored_hint:
         courseA_harvester_seq2_a: Don't forget to use <xml><block type="harvester_corn"/></xml> to pick the corn!
@@ -5621,6 +5623,25 @@ th:
           <block type="maze_moveEast">
           <next>
           <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp3b_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+          
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest"/>
           </next>
           </block>
           </next>
@@ -6064,6 +6085,25 @@ th:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp3b_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+          
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp4a_2018_authored_hint:
         '1': |-
           Your code should look like this:
@@ -6102,10 +6142,10 @@ th:
       courseB_artist_loops10_authored_hint: { }
       courseB_artist_loops10_2018_authored_hint: { }
       courseB_artist_loops2_authored_hint:
-        courseB_artist_loops2_a: If you want the loop to repeat more than 4 times, you can change the number at the top of the block.
+        courseB_artist_loops2_a: ถ้าคุณต้องการให้ลูปซ้ำมากกว่า 4 ครั้งคุณสามารถเปลี่ยนหมายเลขที่ด้านบนของบล็อกได้
         courseB_artist_loops2_b: Try running the code first to see where the artist ends up.
       courseB_artist_loops2_2018_authored_hint:
-        courseB_artist_loops2_a: If you want the loop to repeat more than 4 times, you can change the number at the top of the block.
+        courseB_artist_loops2_a: ถ้าคุณต้องการให้ลูปซ้ำมากกว่า 4 ครั้งคุณสามารถเปลี่ยนหมายเลขที่ด้านบนของบล็อกได้
         courseB_artist_loops2_b: Try running the code first to see where the artist ends up.
       courseB_artist_loops3_authored_hint:
         courseB_artist_loops3_a: Remember to use a `repeat` loop for better code!
@@ -6153,11 +6193,11 @@ th:
       courseB_artist_loops9_authored_hint:
         courseB_artist_loops9_a: Remember that jump blocks can be used to move without drawing a line.
         courseB_artist_loops9_b: You will want to use the W block to solve this puzzle.
-        courseB_artist_loops9_c: Can't figure out where to put the loop? Try writing the code step-by-step and look for a pattern.
+        courseB_artist_loops9_c: คิดไม่ออกว่าจะวางลูปไว้ที่ไหน? ลองเขียนโค้ดทีละขั้นตอนและค้นหารูปแบบดู
       courseB_artist_loops9_2018_authored_hint:
         courseB_artist_loops9_a: Remember that jump blocks can be used to move without drawing a line.
         courseB_artist_loops9_b: You will want to use the W block to solve this puzzle.
-        courseB_artist_loops9_c: Can't figure out where to put the loop? Try writing the code step-by-step and look for a pattern.
+        courseB_artist_loops9_c: คิดไม่ออกว่าจะวางลูปไว้ที่ไหน? ลองเขียนโค้ดทีละขั้นตอนและค้นหารูปแบบดู
       courseB_artist_loops_challenge1_authored_hint:
         courseB_artist_loops_challenge1_a: 'Blocks like this: <xml>  <block type="simple_move_up_right"/></xml> will let your artist move at a slant!'
         courseB_artist_loops_challenge1_b: When you finish one of the dice, `jump` to the next!
@@ -6190,10 +6230,10 @@ th:
         courseB_collector_loops2_b: When you have reached a spot with treasure, use the <xml><block type="collector_collect"/></xml> block to pick it up.
       courseB_collector_loops3_authored_hint:
         courseB_collector_prog3_a: Try using a <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">5</title></block></xml> block to collect your treasure.
-        courseB_collector_prog3_b: Remember you can put more than one block inside a repeat loop.
+        courseB_collector_prog3_b: โปรดจำไว้ว่าคุณสามารถใส่บล็อกได้มากกว่าหนึ่งบล็อกในลูปที่ทำซ้ำ
       courseB_collector_loops3_2018_authored_hint:
         courseB_collector_prog3_a: Try using a <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">5</title></block></xml> block to collect your treasure.
-        courseB_collector_prog3_b: Remember you can put more than one block inside a repeat loop.
+        courseB_collector_prog3_b: โปรดจำไว้ว่าคุณสามารถใส่บล็อกได้มากกว่าหนึ่งบล็อกในลูปที่ทำซ้ำ
       courseB_collector_loops3_predict1_authored_hint:
         courseB_collector_prog3_a: Try using a `repeat` block to collect your gold.
       courseB_collector_loops4_authored_hint:
@@ -7174,11 +7214,10 @@ th:
           </xml>
         courseC_PlayLab_events2_b: Use the dropdown menu on the second `actor __ say` block to change which actor speaks.
       courseC_PlayLab_events3_authored_hint:
-        courseC_PlayLab_events3_a: You only need to move Jorge to the right by about 25 pixels to solve this puzzle.
-        courseC_PlayLab_events3_b: Is there a block in the toolbox that looks like it would move an actor?
+        courseC_PlayLab_events3_a: คุณจะต้องย้าย จอร์จไปทางขวาประมาณ 25 พิกเซล เพื่อแก้ปริศนานี้.
+        courseC_PlayLab_events3_b: มีบล็อกในกล่องเครื่องมือไหม ที่ดูเหมือนว่ามันจะย้ายนักแสดงได้?
         courseC_PlayLab_events3_c: |-
-          Attach this block to the `when run` block:
-          
+          ต่อบล็อกนี้กับบล็อก `เมื่อเรียกใช้งาน`:
           <xml>
           <block type="studio_moveDistance">
           <title name="SPRITE">0</title>
@@ -7187,11 +7226,10 @@ th:
           </block>
           </xml>
       courseC_PlayLab_events3_2018_authored_hint:
-        courseC_PlayLab_events3_a: You only need to move Jorge to the right by about 25 pixels to solve this puzzle.
-        courseC_PlayLab_events3_b: Is there a block in the toolbox that looks like it would move an actor?
+        courseC_PlayLab_events3_a: คุณจะต้องย้าย จอร์จไปทางขวาประมาณ 25 พิกเซล เพื่อแก้ปริศนานี้.
+        courseC_PlayLab_events3_b: มีบล็อกในกล่องเครื่องมือไหม ที่ดูเหมือนว่ามันจะย้ายนักแสดงได้?
         courseC_PlayLab_events3_c: |-
-          Attach this block to the `when run` block:
-          
+          ต่อบล็อกนี้กับบล็อก `เมื่อเรียกใช้งาน`:
           <xml>
           <block type="studio_moveDistance">
           <title name="SPRITE">0</title>
@@ -7200,81 +7238,73 @@ th:
           </block>
           </xml>
       courseC_PlayLab_events4_authored_hint:
-        courseC_PlayLab_events4_b: When the "Run" button is clicked, Jorge needs to move right **100** pixels to reach Olive the Cat.
+        courseC_PlayLab_events4_b: จอร์จต้องขยับไปทางขวา 100 พิกเซลเพื่อไปให้ถึงแมว
         courseC_PlayLab_events4_a: You will need to attach an `actor __ say` block to the `when actor touches` event to solve this puzzle.
       courseC_PlayLab_events4_2018_authored_hint:
-        courseC_PlayLab_events4_b: When the "Run" button is clicked, Jorge needs to move right **100** pixels to reach Olive the Cat.
+        courseC_PlayLab_events4_b: จอร์จต้องขยับไปทางขวา 100 พิกเซลเพื่อไปให้ถึงแมว
         courseC_PlayLab_events4_a: You will need to attach an `actor __ say` block to the `when actor touches` event to solve this puzzle.
       courseC_PlayLab_events5_authored_hint:
-        courseC_PlayLab_events5_a: You will need to click the dropdown menu in the `actor say` block to find the text "What's new?"
-        courseC_PlayLab_events5_b: Click on Octavia when you run your program to check that it works!
+        courseC_PlayLab_events5_a: คุณจะต้องคลิกที่เมนูดร็อปดาวน์ในบล็อก `นักแสดง... พูดว่า` เพื่อค้นหาข้อความ ที่นักแสดงบอกว่า "มีอะไรใหม่มั้ย? "
+        courseC_PlayLab_events5_b: คลิกที่อ๊อกเทเวียเมื่อคุณเรียกใช้งานโปรแกรมของคุณเพื่อตรวจสอบว่าการทำงานถูกต้องไหม!
       courseC_PlayLab_events5_2018_authored_hint:
-        courseC_PlayLab_events5_a: You will need to click the dropdown menu in the `actor say` block to find the text "What's new?"
-        courseC_PlayLab_events5_b: Click on Octavia when you run your program to check that it works!
+        courseC_PlayLab_events5_a: คุณจะต้องคลิกที่เมนูดร็อปดาวน์ในบล็อก `นักแสดง... พูดว่า` เพื่อค้นหาข้อความ ที่นักแสดงบอกว่า "มีอะไรใหม่มั้ย? "
+        courseC_PlayLab_events5_b: คลิกที่อ๊อกเทเวียเมื่อคุณเรียกใช้งานโปรแกรมของคุณเพื่อตรวจสอบว่าการทำงานถูกต้องไหม!
       courseC_PlayLab_events6_authored_hint:
         courseC_PlayLab_events6_a: Each green `when arrow` block should have one action below it.
-        courseC_PlayLab_events6_b: Use the drop down menu on the `move actor 1` block to change which direction Waddles moves.
-        courseC_PlayLab_events6_c: When you're done, you should be able to move Waddles around using the arrow keys on your computer!
+        courseC_PlayLab_events6_b: ใช้เมนูแบบดร็อปดาว์นลงบนบล็อก `ย้ายนักแสดงที่ 1` เพื่อเปลี่ยนทิศทางที่ แวดเดิลเคลื่อนที่
+        courseC_PlayLab_events6_c: เมื่อคุณเสร็จแล้ว คุณควรจะสามารถย้าย แวดเดิลไปรอบๆ โดยใช้ปุ่มลูกศรบนคอมพิวเตอร์ของคุณ
       courseC_PlayLab_events6_2018_authored_hint:
         courseC_PlayLab_events6_a: Each green `when arrow` block should have one action below it.
-        courseC_PlayLab_events6_b: Use the drop down menu on the `move actor 1` block to change which direction Waddles moves.
-        courseC_PlayLab_events6_c: When you're done, you should be able to move Waddles around using the arrow keys on your computer!
+        courseC_PlayLab_events6_b: ใช้เมนูแบบดร็อปดาว์นลงบนบล็อก `ย้ายนักแสดงที่ 1` เพื่อเปลี่ยนทิศทางที่ แวดเดิลเคลื่อนที่
+        courseC_PlayLab_events6_c: เมื่อคุณเสร็จแล้ว คุณควรจะสามารถย้าย แวดเดิลไปรอบๆ โดยใช้ปุ่มลูกศรบนคอมพิวเตอร์ของคุณ
       courseC_PlayLab_events7_authored_hint:
-        courseC_PlayLab_events7_a: 'Use both the `move actor 2 up 400 pixels` block and the `move actor 2 down 400 pixels` block inside the `repeat forever` loop to solve this puzzle. '
-        courseC_PlayLab_events7_b: The `repeat forever` loop does not need to be connected to any other event blocks; it will run on its own.
+        courseC_PlayLab_events7_a: 'ใช้บล็อกทั้งสอง `พานักแสดง 2 ให้เคลื่อนที่ ขึ้น 400 พิกเซล` และ พานักแสดง 2 ให้เคลื่อนที่ลง 400 พิกเซล ไว้ภายในลูป `ทำซ้ำไปตลอดกาล` เพื่อการแก้ปริศนานี้ '
+        courseC_PlayLab_events7_b: ลูป `ทำซ้ำไปตลอดกาล`ไม่จำเป็นต้องเชื่อมต่อกับบล็อกเหตุการณ์อื่นๆ มันจะทำงานด้วยตัวของมันเอง.
       courseC_PlayLab_events7_2018_authored_hint:
-        courseC_PlayLab_events7_a: 'Use both the `move actor 2 up 400 pixels` block and the `move actor 2 down 400 pixels` block inside the `repeat forever` loop to solve this puzzle. '
-        courseC_PlayLab_events7_b: The `repeat forever` loop does not need to be connected to any other event blocks; it will run on its own.
+        courseC_PlayLab_events7_a: 'ใช้บล็อกทั้งสอง `พานักแสดง 2 ให้เคลื่อนที่ ขึ้น 400 พิกเซล` และ พานักแสดง 2 ให้เคลื่อนที่ลง 400 พิกเซล ไว้ภายในลูป `ทำซ้ำไปตลอดกาล` เพื่อการแก้ปริศนานี้ '
+        courseC_PlayLab_events7_b: ลูป `ทำซ้ำไปตลอดกาล`ไม่จำเป็นต้องเชื่อมต่อกับบล็อกเหตุการณ์อื่นๆ มันจะทำงานด้วยตัวของมันเอง.
       courseC_PlayLab_events8_authored_hint:
         courseC_PlayLab_events8_a: You will need to connect blocks to the `when actor touches` block to make this happen correctly.
-        courseC_PlayLab_events8_b: The `actor say` and `play sound` blocks in the toolbox should help you out!
+        courseC_PlayLab_events8_b: บล็อก `นักแสดง.... พูดว่า`และ`เล่นเสียง....` ในกล่องเครื่องมือจะช่วยคุณได้!
       courseC_PlayLab_events8_2018_authored_hint:
         courseC_PlayLab_events8_a: You will need to connect blocks to the `when actor touches` block to make this happen correctly.
-        courseC_PlayLab_events8_b: The `actor say` and `play sound` blocks in the toolbox should help you out!
+        courseC_PlayLab_events8_b: บล็อก `นักแสดง.... พูดว่า`และ`เล่นเสียง....` ในกล่องเครื่องมือจะช่วยคุณได้!
       courseC_PlayLab_events9_authored_hint:
-        courseC_PlayLab_events9_a: The `score point` block will help you to solve this puzzle.
-        courseC_PlayLab_events9_b: Make sure that your new `when actor touches` block says actor **1** and actor **3**.
-        courseC_PlayLab_events9_c: You can have more than one `when actor touches` event in your workspace at the same time, so you don't have to delete the first one!
+        courseC_PlayLab_events9_a: บล็อก ' ได้คะแนน ' จะช่วยคุณแก้ปริศนานี้
+        courseC_PlayLab_events9_b: ตรวจสอบให้แน่ใจว่าบล็อกใหม่ของคุณ `นักแสดงที่.. สัมผัส ` เป็น นักแสดงที่ 1และนักแสดงที่ 3.
+        courseC_PlayLab_events9_c: คุณสามารถมีเหตุการณ์ได้มากกว่าหนึ่งเหตุการณ์ของ `เมื่อนักแสดง.. สัมผัส ` ในพื้นที่ทำงานของคุณในเวลาเดียวกัน, ดังนั้นคุณจึงไม่ต้องลบอันแรกออกไป!
       courseC_PlayLab_events9_2018_authored_hint:
-        courseC_PlayLab_events9_a: The `score point` block will help you to solve this puzzle.
-        courseC_PlayLab_events9_b: Make sure that your new `when actor touches` block says actor **1** and actor **3**.
-        courseC_PlayLab_events9_c: You can have more than one `when actor touches` event in your workspace at the same time, so you don't have to delete the first one!
+        courseC_PlayLab_events9_a: บล็อก ' ได้คะแนน ' จะช่วยคุณแก้ปริศนานี้
+        courseC_PlayLab_events9_b: ตรวจสอบให้แน่ใจว่าบล็อกใหม่ของคุณ `นักแสดงที่.. สัมผัส ` เป็น นักแสดงที่ 1และนักแสดงที่ 3.
+        courseC_PlayLab_events9_c: คุณสามารถมีเหตุการณ์ได้มากกว่าหนึ่งเหตุการณ์ของ `เมื่อนักแสดง.. สัมผัส ` ในพื้นที่ทำงานของคุณในเวลาเดียวกัน, ดังนั้นคุณจึงไม่ต้องลบอันแรกออกไป!
       courseC_PlayLab_eventsA_authored_hint:
-        courseC_PlayLab_eventsA_a: Use the `set background` block and the `set actor to a ____ speed` block to solve this puzzle.
-        courseC_PlayLab_eventsA_b: You will need to specifically drag a `when run` event block into the workspace to solve this puzzle.
+        courseC_PlayLab_eventsA_a: ใช้บล็อก ` ตั้งพื้นหลังเป็น ` และบล็อก` ตั้งค่านักแสดงเป็นความเร็ว ____` เพื่อแก้ปริศนานี้
+        courseC_PlayLab_eventsA_b: คุณจะต้องลากโดยเฉพาะบล็อกเหตุการณ์`เมื่อเรียกใช้งาน `ลงในพื้นที่ทำงานเพื่อแก้ปริศนานี้
       courseC_PlayLab_eventsA_2018_authored_hint:
-        courseC_PlayLab_eventsA_a: Use the `set background` block and the `set actor to a ____ speed` block to solve this puzzle.
-        courseC_PlayLab_eventsA_b: You will need to specifically drag a `when run` event block into the workspace to solve this puzzle.
+        courseC_PlayLab_eventsA_a: ใช้บล็อก ` ตั้งพื้นหลังเป็น ` และบล็อก` ตั้งค่านักแสดงเป็นความเร็ว ____` เพื่อแก้ปริศนานี้
+        courseC_PlayLab_eventsA_b: คุณจะต้องลากโดยเฉพาะบล็อกเหตุการณ์`เมื่อเรียกใช้งาน `ลงในพื้นที่ทำงานเพื่อแก้ปริศนานี้
       courseC_PlayLab_eventsFP_authored_hint:
         idea1: |-
-          *Need an idea?*
+          * ต้องการไอเดียหรือไม่? *
           
-          **Who's there?** Make characters appear with random images, so no one knows who's showing up next.
-          
-          ![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)
+          ** ใครน่ะ? ** ทำให้ผู้แสดงปรากฏขึ้นด้วยภาพแบบสุ่ม ดังนั้นไม่มีใครรู้ว่าผู้ที่แสดงคนต่อไปจะเป็นใคร
         idea2: |-
-          *Need an idea?*
+          * ต้องการไอเดียหรือไม่? *
           
-          **Going on an Adventure** - Change the background, then have the characters talk about where they are now.
-          
-          ![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)
+          ** ไปผจญภัยกัน **-เปลี่ยนพื้นหลังแล้วมีผู้เล่นพูดเกี่ยวกับว่าตอนนี้พวกเขาอยู่ที่ไหน
         idea3: |-
           *Need an idea?*
           
           **Pinball** - Make one character move using the arrow keys (use `when up arrow`, `when down arrow` blocks), then play random sounds when it collides with other characters on the screen.
       courseC_PlayLab_eventsFP_2018_authored_hint:
         idea1: |-
-          *Need an idea?*
+          * ต้องการไอเดียหรือไม่? *
           
-          **Who's there?** Make characters appear with random images, so no one knows who's showing up next.
-          
-          ![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)
+          ** ใครน่ะ? ** ทำให้ผู้แสดงปรากฏขึ้นด้วยภาพแบบสุ่ม ดังนั้นไม่มีใครรู้ว่าผู้ที่แสดงคนต่อไปจะเป็นใคร
         idea2: |-
-          *Need an idea?*
+          * ต้องการไอเดียหรือไม่? *
           
-          **Going on an Adventure** - Change the background, then have the characters talk about where they are now.
-          
-          ![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)
+          ** ไปผจญภัยกัน **-เปลี่ยนพื้นหลังแล้วมีผู้เล่นพูดเกี่ยวกับว่าตอนนี้พวกเขาอยู่ที่ไหน
         idea3: |-
           *Need an idea?*
           
@@ -7330,32 +7360,28 @@ th:
           </block></xml>
           ![](https://images.code.org/b1559bf476ceb59f880c43271c5e10b2-image-1494111787192.59.49 PM.png)
       courseC_artist_loop1_authored_hint:
-        courseC_artist_loop1_a: You don't need to make any changes to the loop, just put one block above it.
+        courseC_artist_loop1_a: คุณไม่จำเป็นต้องทำการเปลี่ยนแปลงใดๆกับลูป เพียงแค่ใส่เพิ่มบล็อกหนึ่งบล็อกก่อนลูป
         courseC_artist_loop1_b: |-
-          This is the block you will need to set a pattern:
+          นี่คือบล็อกที่คุณจะใช้ตั้งค่ารูปแบบ:
           
           <xml>
           <block type="draw_line_style_pattern">
           <title name="VALUE">DEFAULT</title>
           </block>
           </xml>
-          
-          Choose any pattern you like!
       courseC_artist_loop1_2018_authored_hint:
-        courseC_artist_loop1_a: You don't need to make any changes to the loop, just put one block above it.
+        courseC_artist_loop1_a: คุณไม่จำเป็นต้องทำการเปลี่ยนแปลงใดๆกับลูป เพียงแค่ใส่เพิ่มบล็อกหนึ่งบล็อกก่อนลูป
         courseC_artist_loop1_b: |-
-          This is the block you will need to set a pattern:
+          นี่คือบล็อกที่คุณจะใช้ตั้งค่ารูปแบบ:
           
           <xml>
           <block type="draw_line_style_pattern">
           <title name="VALUE">DEFAULT</title>
           </block>
           </xml>
-          
-          Choose any pattern you like!
       courseC_artist_loops1a_authored_hint:
         courseC_artist_loops1a_a: |-
-          This is the first block you will need:
+          นี่คือบล็อกที่คุณต้องใช้:
           
           <xml>
           <block type="jump_to_xy">
@@ -7364,7 +7390,7 @@ th:
           </block>
           </xml>
         courseC_artist_loops1a_b: |-
-          Use this block to draw the sticker!
+          ใช้บล็อกนี้เพื่อวาดโดยใช้สติกเกอร์
           
           <xml>
           <block type="sticker">
@@ -7373,7 +7399,7 @@ th:
           </xml>
       courseC_artist_loops1a_2018_authored_hint:
         courseC_artist_loops1a_a: |-
-          This is the first block you will need:
+          นี่คือบล็อกที่คุณต้องใช้:
           
           <xml>
           <block type="jump_to_xy">
@@ -7382,7 +7408,7 @@ th:
           </block>
           </xml>
         courseC_artist_loops1a_b: |-
-          Use this block to draw the sticker!
+          ใช้บล็อกนี้เพื่อวาดโดยใช้สติกเกอร์
           
           <xml>
           <block type="sticker">
@@ -7390,20 +7416,20 @@ th:
           </block>
           </xml>
       courseC_artist_loops2a_authored_hint:
-        courseC_artist_loops2a_a: Inside your loop, you will want to jump to 200 over 200 down, then draw the bird sticker, then turn 30 degrees.
+        courseC_artist_loops2a_a: "ภายในลูปของคุณ คุณจะต้องการกระโดด\n 200 ออกไป 200 ลงมา แล้ววาดสติกเกอร์นก แล้วหันไป 30 องศา"
         courseC_artist_loops2a_b: Click on the number at the top of the `repeat` loop to change how many times it repeats.
       courseC_artist_loops2a_2018_authored_hint:
-        courseC_artist_loops2a_a: Inside your loop, you will want to jump to 200 over 200 down, then draw the bird sticker, then turn 30 degrees.
+        courseC_artist_loops2a_a: "ภายในลูปของคุณ คุณจะต้องการกระโดด\n 200 ออกไป 200 ลงมา แล้ววาดสติกเกอร์นก แล้วหันไป 30 องศา"
         courseC_artist_loops2a_b: Click on the number at the top of the `repeat` loop to change how many times it repeats.
       courseC_artist_loops3a_authored_hint:
-        courseC_artist_loops3a_a: You will want to add just one block inside of your loop, after the bird sticker.
-        courseC_artist_loops3a_b: Use the drop down menu on the `draw sticker` block to find the bat sticker.
+        courseC_artist_loops3a_a: คุณจะต้องการที่จะเพิ่มบล็อกเพียงหนึ่งบล็อกภายในลูปของคุณ หลังจากวาดสติกเกอร์นก.
+        courseC_artist_loops3a_b: ใช้เมนูแบบดรอปดาว์นที่อยู่บนบล็อก `วาดสติ๊กเกอร์` เพื่อค้นหาสติ๊กเกอร์ค้างคาว
       courseC_artist_loops3a_2018_authored_hint:
-        courseC_artist_loops3a_a: You will want to add just one block inside of your loop, after the bird sticker.
-        courseC_artist_loops3a_b: Use the drop down menu on the `draw sticker` block to find the bat sticker.
+        courseC_artist_loops3a_a: คุณจะต้องการที่จะเพิ่มบล็อกเพียงหนึ่งบล็อกภายในลูปของคุณ หลังจากวาดสติกเกอร์นก.
+        courseC_artist_loops3a_b: ใช้เมนูแบบดรอปดาว์นที่อยู่บนบล็อก `วาดสติ๊กเกอร์` เพื่อค้นหาสติ๊กเกอร์ค้างคาว
       courseC_artist_loops4a_authored_hint:
         courseC_artist_loops4a_a: |-
-          Use this block to jump forward:
+          ใช้บล็อกนี้เพื่อกระโดดไปข้างหน้า:
           
           <xml>
           <block type="jump_by_constant">
@@ -7412,10 +7438,10 @@ th:
           </block>
           </xml>
           
-          Don't forget to change how far!
+          อย่าลืมเปลี่ยนระยะทาง
       courseC_artist_loops4a_2018_authored_hint:
         courseC_artist_loops4a_a: |-
-          Use this block to jump forward:
+          ใช้บล็อกนี้เพื่อกระโดดไปข้างหน้า:
           
           <xml>
           <block type="jump_by_constant">
@@ -7424,7 +7450,7 @@ th:
           </block>
           </xml>
           
-          Don't forget to change how far!
+          อย่าลืมเปลี่ยนระยะทาง
       courseC_artist_loops5_authored_hint:
         courseC_artist_loops5_a: |-
           Try using the `jump to` block to get your artist back toward the center:
@@ -7441,24 +7467,24 @@ th:
         courseC_artist_loops5a_a: Use the drop down menus on the `draw sticker` blocks to change their images.
       courseC_artist_loops5b_authored_hint:
         courseC_artist_loops5b_a: |-
-          Use this block to set the pattern of your lines:
+          ใช้บล็อกนี้สำหรับตั้งรูปแบบของเส้นต่างๆ:
           
           <xml>
           <block type="draw_line_style_pattern">
           <title name="VALUE">DEFAULT</title>
           </block>
           </xml>
-        courseC_artist_loops5b_b: To make a design like the one above, you will want to move backward the same amount that you move forward.
+        courseC_artist_loops5b_b: เมื่อต้องการออกแบบข้างต้น คุณจะต้องเดินถอยหลังระยะทางเดียวกับที่คุณเดินไปข้างหน้า
       courseC_artist_loops5b_2018_authored_hint:
         courseC_artist_loops5b_a: |-
-          Use this block to set the pattern of your lines:
+          ใช้บล็อกนี้สำหรับตั้งรูปแบบของเส้นต่างๆ:
           
           <xml>
           <block type="draw_line_style_pattern">
           <title name="VALUE">DEFAULT</title>
           </block>
           </xml>
-        courseC_artist_loops5b_b: To make a design like the one above, you will want to move backward the same amount that you move forward.
+        courseC_artist_loops5b_b: เมื่อต้องการออกแบบข้างต้น คุณจะต้องเดินถอยหลังระยะทางเดียวกับที่คุณเดินไปข้างหน้า
       courseC_artist_loops6_authored_hint:
         courseC_artist_loops6_a: |
           Try a triangle flower:
@@ -7467,9 +7493,9 @@ th:
           Or a little green bug:
           <img src="https://images.code.org/b9454d6f1159e19c58d9f5b5b37fd156-image-1495821067980.52.43.png" width="150px" />
       courseC_artist_loops6a_authored_hint:
-        courseC_artist_loops6a_a: To make a design like the one above, jump forward less than 75 pixels between each sticker.
+        courseC_artist_loops6a_a: เมื่อต้องการออกแบบให้เหมือนข้างต้น ให้กระโดดไปข้างหน้าให้น้อยกว่า 75 พิกเซลระหว่างสติกเกอร์แต่ละอัน
       courseC_artist_loops6a_2018_authored_hint:
-        courseC_artist_loops6a_a: To make a design like the one above, jump forward less than 75 pixels between each sticker.
+        courseC_artist_loops6a_a: เมื่อต้องการออกแบบให้เหมือนข้างต้น ให้กระโดดไปข้างหน้าให้น้อยกว่า 75 พิกเซลระหว่างสติกเกอร์แต่ละอัน
       courseC_artist_loops7a_authored_hint:
         courseC_artist_loops7a_a: |-
           A circle has 360 degrees. Multiply the degrees in your turn times the number of times you repeat. Does it equal 360?
@@ -7490,8 +7516,7 @@ th:
           
           ![](https://images.code.org/60e3354a2e7dd37b64833eac1e8694be-image-1499710228373.08.14 AM.png)
         courseC_artist_loopsPrePre1a_b: |-
-          To move forward 50 pixels, use this block:
-          
+          ย้ายไปข้างหน้า 50 พิกเซล ใช้บล็อกนี้:
           ![](https://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27 AM.png)
       courseC_artist_loopsPrePre1a_2018_authored_hint:
         courseC_artist_loopsPrePre1a_a: |-
@@ -7499,108 +7524,107 @@ th:
           
           ![](https://images.code.org/60e3354a2e7dd37b64833eac1e8694be-image-1499710228373.08.14 AM.png)
         courseC_artist_loopsPrePre1a_b: |-
-          To move forward 50 pixels, use this block:
-          
+          ย้ายไปข้างหน้า 50 พิกเซล ใช้บล็อกนี้:
           ![](https://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27 AM.png)
       courseC_artist_prog1_authored_hint: { }
       courseC_artist_prog1_2018_authored_hint: { }
       courseC_artist_prog2_authored_hint:
-        courseC_artist_prog2_a: 'หากคุณใช้บล็อก "ย้ายไปด้านหน้า100 พิกเซล" ฉันก็จะวาดเส้นให้โดยอัตโนมัติ'
+        courseC_artist_prog2_a: 'หากคุณใช้บล็อก "วาดเส้นไปด้านหน้ายาว 100 พิกเซล" ฉันก็จะวาดเส้นให้โดยอัตโนมัติ'
         courseC_artist_prog2_b: Having trouble turning the corner? Use the <xml><block type="draw_turn_by_constant_dropdown"><title name="DIR">turnRight</title><title name="VALUE" config="45,60,90,120,180">90</title></block></xml> block.
       courseC_artist_prog2_2018_authored_hint:
-        courseC_artist_prog2_a: 'หากคุณใช้บล็อก "ย้ายไปด้านหน้า100 พิกเซล" ฉันก็จะวาดเส้นให้โดยอัตโนมัติ'
+        courseC_artist_prog2_a: 'หากคุณใช้บล็อก "วาดเส้นไปด้านหน้ายาว 100 พิกเซล" ฉันก็จะวาดเส้นให้โดยอัตโนมัติ'
         courseC_artist_prog2_b: Having trouble turning the corner? Use the <xml><block type="draw_turn_by_constant_dropdown"><title name="DIR">turnRight</title><title name="VALUE" config="45,60,90,120,180">90</title></block></xml> block.
       courseC_artist_prog3_authored_hint:
         courseC_artist_prog3_a: |-
-          To create this window, just draw a square with 100 pixel sides.
-          - move forward
-          - turn
-          - move forward
-          - turn
-          - move forward
-          - turn
-          - move forward
-        courseC_artist_prog3_b: Want to make shorter code? Try using a loop in this puzzle.
+          เมื่อต้องการสร้างหน้าต่างนี้ ก็แค่เพียงวาดสี่เหลี่ยมจัตุรัสที่มี้านยาวด้านละ 100 พิกเซล
+          -ย้ายไปข้างหน้า
+          -เลี้ยว
+          -ย้ายไปข้างหน้า
+          -เลี้ยว
+          -ย้ายไปข้างหน้า
+          -เลี้ยว
+          -ย้ายไปข้างหน้า
+        courseC_artist_prog3_b: ต้องการทำให้โค้ดสั้นลงหรือไม่ ลองใช้ลูปในปริศนานี้ดู
       courseC_artist_prog3_2018_authored_hint:
         courseC_artist_prog3_a: |-
-          To create this window, just draw a square with 100 pixel sides.
-          - move forward
-          - turn
-          - move forward
-          - turn
-          - move forward
-          - turn
-          - move forward
-        courseC_artist_prog3_b: Want to make shorter code? Try using a loop in this puzzle.
+          เมื่อต้องการสร้างหน้าต่างนี้ ก็แค่เพียงวาดสี่เหลี่ยมจัตุรัสที่มี้านยาวด้านละ 100 พิกเซล
+          -ย้ายไปข้างหน้า
+          -เลี้ยว
+          -ย้ายไปข้างหน้า
+          -เลี้ยว
+          -ย้ายไปข้างหน้า
+          -เลี้ยว
+          -ย้ายไปข้างหน้า
+        courseC_artist_prog3_b: ต้องการทำให้โค้ดสั้นลงหรือไม่ ลองใช้ลูปในปริศนานี้ดู
       courseC_artist_prog4_authored_hint:
-        courseC_artist_prog4_a: To finish the rocket, just draw the triangle on top!
-        courseC_artist_prog4_b: You can use the drop down menu on the `turn` blocks to see which angle you need!
+        courseC_artist_prog4_a: เพื่อให้เสร็จสิ้นการวาดจรวด เพียงแค่คุณวาดรูปสามเหลี่ยมไว้ด้านบน!
+        courseC_artist_prog4_b: คุณสามารถใช้เมนูดรอปดาวน์บนบล็อก ' เลี้ยว' เพื่อเลือกดูมุมที่คุณต้องการใช้!
         courseC_artist_prog4_c: |-
-          To draw a triangle, you will want to:
-          - move forward
-          - turn left 120 degrees
-          - move forward
-          - turn left 120 degrees
-          - move forward
+          เมื่อต้องการวาดรูปสามเหลี่ยมคุณจะต้อง:
+          -ย้ายไปข้างหน้า
+          -เลี้ยวซ้าย ๑๒๐ องศา
+          -ย้ายไปข้างหน้า
+          -เลี้ยวซ้าย ๑๒๐ องศา
+          -ย้ายไปข้างหน้า
       courseC_artist_prog4_2018_authored_hint:
-        courseC_artist_prog4_a: To finish the rocket, just draw the triangle on top!
-        courseC_artist_prog4_b: You can use the drop down menu on the `turn` blocks to see which angle you need!
+        courseC_artist_prog4_a: เพื่อให้เสร็จสิ้นการวาดจรวด เพียงแค่คุณวาดรูปสามเหลี่ยมไว้ด้านบน!
+        courseC_artist_prog4_b: คุณสามารถใช้เมนูดรอปดาวน์บนบล็อก ' เลี้ยว' เพื่อเลือกดูมุมที่คุณต้องการใช้!
         courseC_artist_prog4_c: |-
-          To draw a triangle, you will want to:
-          - move forward
-          - turn left 120 degrees
-          - move forward
-          - turn left 120 degrees
-          - move forward
+          เมื่อต้องการวาดรูปสามเหลี่ยมคุณจะต้อง:
+          -ย้ายไปข้างหน้า
+          -เลี้ยวซ้าย ๑๒๐ องศา
+          -ย้ายไปข้างหน้า
+          -เลี้ยวซ้าย ๑๒๐ องศา
+          -ย้ายไปข้างหน้า
       courseC_artist_prog5_authored_hint:
         courseC_artist_prog5_a: Slow the slider down all the way until you can run your code line-by-line to see where things go wrong.
         courseC_artist_prog5_b: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกและเรียกใช้โค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
-        courseC_artist_prog5_c: You can use the drop down menu on the `turn` blocks to see which angle you need!
+        courseC_artist_prog5_c: คุณสามารถใช้เมนูดรอปดาวน์บนบล็อก ' เลี้ยว' เพื่อเลือกดูมุมที่คุณต้องการใช้!
         courseC_artist_prog5_d: Each turn should be 90 degrees to the right.
       courseC_artist_prog5_2018_authored_hint:
         courseC_artist_prog5_a: Slow the slider down all the way until you can run your code line-by-line to see where things go wrong.
         courseC_artist_prog5_b: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกและเรียกใช้โค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
-        courseC_artist_prog5_c: You can use the drop down menu on the `turn` blocks to see which angle you need!
+        courseC_artist_prog5_c: คุณสามารถใช้เมนูดรอปดาวน์บนบล็อก ' เลี้ยว' เพื่อเลือกดูมุมที่คุณต้องการใช้!
         courseC_artist_prog5_d: Each turn should be 90 degrees to the right.
       courseC_artist_prog6_authored_hint:
-        courseC_artist_prog6_a: The artist is already facing the correct way to draw his first line.
-        courseC_artist_prog6_b: This diamond is really just a square that's standing on its corner.
-        courseC_artist_prog6_c: Since this diamond is also a square, be sure to turn 90 degrees at the corners.
+        courseC_artist_prog6_a: ศิลปินได้หันหน้าไปทางที่ถูกต้องแล้ว เพื่อที่จะวาดเส้นแรกของเขา
+        courseC_artist_prog6_b: ทรงรูปเพชรนี้เป็นเพียงสี่เหลี่ยมจตุรัสที่ตั้งอยู่บนมุมของมันเอง
+        courseC_artist_prog6_c: เนื่องจากรูปทรงเพชรนี้ยังเป็นสี่เหลี่ยมจตุรัสอีกด้วย อย่าลืมหัน 90 องศาที่มุม
       courseC_artist_prog6_2018_authored_hint:
-        courseC_artist_prog6_a: The artist is already facing the correct way to draw his first line.
-        courseC_artist_prog6_b: This diamond is really just a square that's standing on its corner.
-        courseC_artist_prog6_c: Since this diamond is also a square, be sure to turn 90 degrees at the corners.
+        courseC_artist_prog6_a: ศิลปินได้หันหน้าไปทางที่ถูกต้องแล้ว เพื่อที่จะวาดเส้นแรกของเขา
+        courseC_artist_prog6_b: ทรงรูปเพชรนี้เป็นเพียงสี่เหลี่ยมจตุรัสที่ตั้งอยู่บนมุมของมันเอง
+        courseC_artist_prog6_c: เนื่องจากรูปทรงเพชรนี้ยังเป็นสี่เหลี่ยมจตุรัสอีกด้วย อย่าลืมหัน 90 องศาที่มุม
       courseC_artist_prog6_predict1_authored_hint: { }
       courseC_artist_prog6_predict1_2018_authored_hint: { }
       courseC_artist_prog7_authored_hint:
-        courseC_artist_prog7_a: Every angle is either 45 or 90 degrees.
-        courseC_artist_prog7_b: "Does it work at the first step?  \nHow about the second?  \nWhere does it go wrong?"
-        courseC_artist_prog7_c: You can use the dropdown menu on the turn blocks to see which angle you need!
+        courseC_artist_prog7_a: ทุกมุมไม่ 45 ก็ 90 องศา
+        courseC_artist_prog7_b: "มันทำงานขั้นตอนแรกไหม?  \nขั้นตอนที่สองทำงานไหม?  \nผิดตรงไหน?"
+        courseC_artist_prog7_c: คุณสามารถใช้เมนูดรอปดาวน์บนบล็อก ' เลี้ยว' เพื่อเลือกดูมุมที่คุณต้องการใช้!
         courseC_artist_prog7_d: |-
-          You will want to:
-          - move forward
-          - turn right 45 degrees
-          - move forward
-          - turn right 90 degrees
-          - move forward
-          - turn right 45 degrees
+          คุณต้องการ:
+          -ย้ายไปข้างหน้า
+          -เลี้ยวขวา 45 องศา
+          -ย้ายไปข้างหน้า
+          -เลี้ยวขวา 90 องศา
+          -ย้ายไปข้างหน้า
+          -เลี้ยวขวา 45 องศา
           
-          Repeat this pattern 2 times!
+          ทำซ้ำรูปแบบนี้ 2 ครั้ง!
         courseC_artist_prog7_e: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกและเรียกใช้โค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
       courseC_artist_prog7_2018_authored_hint:
-        courseC_artist_prog7_a: Every angle is either 45 or 90 degrees.
-        courseC_artist_prog7_b: "Does it work at the first step?  \nHow about the second?  \nWhere does it go wrong?"
-        courseC_artist_prog7_c: You can use the dropdown menu on the turn blocks to see which angle you need!
+        courseC_artist_prog7_a: ทุกมุมไม่ 45 ก็ 90 องศา
+        courseC_artist_prog7_b: "มันทำงานขั้นตอนแรกไหม?  \nขั้นตอนที่สองทำงานไหม?  \nผิดตรงไหน?"
+        courseC_artist_prog7_c: คุณสามารถใช้เมนูดรอปดาวน์บนบล็อก ' เลี้ยว' เพื่อเลือกดูมุมที่คุณต้องการใช้!
         courseC_artist_prog7_d: |-
-          You will want to:
-          - move forward
-          - turn right 45 degrees
-          - move forward
-          - turn right 90 degrees
-          - move forward
-          - turn right 45 degrees
+          คุณต้องการ:
+          -ย้ายไปข้างหน้า
+          -เลี้ยวขวา 45 องศา
+          -ย้ายไปข้างหน้า
+          -เลี้ยวขวา 90 องศา
+          -ย้ายไปข้างหน้า
+          -เลี้ยวขวา 45 องศา
           
-          Repeat this pattern 2 times!
+          ทำซ้ำรูปแบบนี้ 2 ครั้ง!
         courseC_artist_prog7_e: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกและเรียกใช้โค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
       courseC_artist_prog8_authored_hint: { }
       courseC_artist_prog8_2018_authored_hint: { }
@@ -7635,45 +7659,45 @@ th:
         courseC_collector_prog2_a: You can use four <xml><block type="maze_move"><title name="DIR">moveForward</title></block></xml> blocks or use the <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> block to make your program shorter.
         courseC_collector_prog2_b: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกและเรียกใช้โค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
       courseC_collector_prog3_authored_hint:
-        courseC_collector_prog3_a: The program will only run the blocks that are connected to the <xml><block type="when_run"/></xml> block.
-        courseC_collector_prog3_b: Try using the "Step" button to run your code one line at a time.  Do you see where the code goes wrong?
-        courseC_collector_prog3_c: If you are having trouble figuring this puzzle out, try writing the moves down on a piece of paper.
+        courseC_collector_prog3_a: โปรแกรมจะเรียกใช้งานบล็อกที่เชื่อมต่อกับบล็อก<xml><block type=""เมื่อเรียกใช้งาน"/"></block></xml>เท่านั้น
+        courseC_collector_prog3_b: ลองใช้ปุ่ม  "ขั้นตอน " เพื่อเรียกใช้งานโค้ดของคุณทีละหนึ่งบรรทัดในแต่ละครั้ง คุณเห็นไหมว่ารหัสไม่ถูกต้องตรงไหน?
+        courseC_collector_prog3_c: หากคุณมีปัญหาในการแก้ปริศนานี้ ลองเขียนขั้นตอนต่างๆลงบนกระดาษ
       courseC_collector_prog3_2018_authored_hint:
-        courseC_collector_prog3_a: The program will only run the blocks that are connected to the <xml><block type="when_run"/></xml> block.
-        courseC_collector_prog3_b: Try using the "Step" button to run your code one line at a time.  Do you see where the code goes wrong?
-        courseC_collector_prog3_c: If you are having trouble figuring this puzzle out, try writing the moves down on a piece of paper.
+        courseC_collector_prog3_a: โปรแกรมจะเรียกใช้งานบล็อกที่เชื่อมต่อกับบล็อก<xml><block type=""เมื่อเรียกใช้งาน"/"></block></xml>เท่านั้น
+        courseC_collector_prog3_b: ลองใช้ปุ่ม  "ขั้นตอน " เพื่อเรียกใช้งานโค้ดของคุณทีละหนึ่งบรรทัดในแต่ละครั้ง คุณเห็นไหมว่ารหัสไม่ถูกต้องตรงไหน?
+        courseC_collector_prog3_c: หากคุณมีปัญหาในการแก้ปริศนานี้ ลองเขียนขั้นตอนต่างๆลงบนกระดาษ
       courseC_collector_prog4_authored_hint:
-        courseC_collector_prog4_a: If you get stuck, try writing out the steps on a piece of paper.
+        courseC_collector_prog4_a: หากคุณเกิดติดขัดขึ้นมา ลองเขียนขั้นตอนลงบนกระดาษ
         courseC_collector_prog4_b: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกและเรียกใช้โค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
         courseC_collector_prog4_c: Try this option for a path.
       courseC_collector_prog4_2018_authored_hint:
-        courseC_collector_prog4_a: If you get stuck, try writing out the steps on a piece of paper.
+        courseC_collector_prog4_a: หากคุณเกิดติดขัดขึ้นมา ลองเขียนขั้นตอนลงบนกระดาษ
         courseC_collector_prog4_b: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกและเรียกใช้โค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
         courseC_collector_prog4_c: Try this option for a path.
       courseC_collector_prog5_authored_hint:
         courseC_collector_prog5_a: "\"Does it work at the first step?\nDoes it work at the second step? \nWhere do things go wrong?\""
-        courseC_collector_prog5_b: If you fixed one bug and the program still doesn't work, use the steps above to find more bugs.
-        courseC_collector_prog5_c: If you get stuck, try writing out the steps on a piece of paper.
-        courseC_collector_prog5_d: Follow the path to collect the treasure.
+        courseC_collector_prog5_b: ถ้าคุณแก้ไขข้อผิดพลาดหนึ่งและโปรแกรมยังคงไม่ทำงาน ให้ใช้ขั้นตอนข้างต้นเพื่อค้นหาบั๊กเพิ่มเติม
+        courseC_collector_prog5_c: หากคุณเกิดติดขัดขึ้นมา ลองเขียนขั้นตอนลงบนกระดาษ
+        courseC_collector_prog5_d: เดินตามเส้นทางไปเพื่อเก็บรวบรวมสมบัติ
       courseC_collector_prog5_2018_authored_hint:
         courseC_collector_prog5_a: "\"Does it work at the first step?\nDoes it work at the second step? \nWhere do things go wrong?\""
-        courseC_collector_prog5_b: If you fixed one bug and the program still doesn't work, use the steps above to find more bugs.
-        courseC_collector_prog5_c: If you get stuck, try writing out the steps on a piece of paper.
-        courseC_collector_prog5_d: Follow the path to collect the treasure.
+        courseC_collector_prog5_b: ถ้าคุณแก้ไขข้อผิดพลาดหนึ่งและโปรแกรมยังคงไม่ทำงาน ให้ใช้ขั้นตอนข้างต้นเพื่อค้นหาบั๊กเพิ่มเติม
+        courseC_collector_prog5_c: หากคุณเกิดติดขัดขึ้นมา ลองเขียนขั้นตอนลงบนกระดาษ
+        courseC_collector_prog5_d: เดินตามเส้นทางไปเพื่อเก็บรวบรวมสมบัติ
       courseC_collector_prog6_authored_hint:
-        courseC_collector_prog6_a: "Can you figure out what is going wrong?  \n\nTry using the \"Step\" button to find errors by running your code line by line."
+        courseC_collector_prog6_a: "เจอสิ่งที่ผิดไหม?\n\nลองใช้ปุ่ม  \"ขั้นตอน\" เพื่อค้นหาข้อผิดพลาดโดยการเรียกใช้งานโค้ดของคุณทีละบรรทัด"
         courseC_collector_prog6_b: Stuck?  Try this path to collect the treasure.
       courseC_collector_prog6_2018_authored_hint:
-        courseC_collector_prog6_a: "Can you figure out what is going wrong?  \n\nTry using the \"Step\" button to find errors by running your code line by line."
+        courseC_collector_prog6_a: "เจอสิ่งที่ผิดไหม?\n\nลองใช้ปุ่ม  \"ขั้นตอน\" เพื่อค้นหาข้อผิดพลาดโดยการเรียกใช้งานโค้ดของคุณทีละบรรทัด"
         courseC_collector_prog6_b: Stuck?  Try this path to collect the treasure.
       courseC_collector_prog7_authored_hint:
-        courseC_collector_prog7_a: 'There is already a lot of great code in the workspace.  You don''t need to delete any of it to solve this puzzle.  '
-        courseC_collector_prog7_b: Don't see the block you need to get the adventurer moving in the right direction?  Pull one from the toolbox.
-        courseC_collector_prog7_c: Having trouble seeing a route to collect all of the treasure?  Try this path!
+        courseC_collector_prog7_a: 'มีโค้ดที่ดีอยู่แล้วจำนวนมากในพื้นที่ทำงาน คุณไม่จำเป็นต้องลบอันไหนออกไป เพื่อแก้ปริศนานี้.  '
+        courseC_collector_prog7_b: ไม่เห็นบล็อกที่คุณต้องการที่จะทำให้นักผจญภัยเคลื่อนที่ไปในทิศทางที่ถูกต้องหรือเปล่า ไปดึงเอามาจากกล่องเครื่องมือก็ได้
+        courseC_collector_prog7_c: มีปัญหาในการวางเส้นทางการเก็บรวบรวมสมบัติทั้งหมดหรือไม่ ลองเส้นทางนี้ดู!
       courseC_collector_prog7_2018_authored_hint:
-        courseC_collector_prog7_a: 'There is already a lot of great code in the workspace.  You don''t need to delete any of it to solve this puzzle.  '
-        courseC_collector_prog7_b: Don't see the block you need to get the adventurer moving in the right direction?  Pull one from the toolbox.
-        courseC_collector_prog7_c: Having trouble seeing a route to collect all of the treasure?  Try this path!
+        courseC_collector_prog7_a: 'มีโค้ดที่ดีอยู่แล้วจำนวนมากในพื้นที่ทำงาน คุณไม่จำเป็นต้องลบอันไหนออกไป เพื่อแก้ปริศนานี้.  '
+        courseC_collector_prog7_b: ไม่เห็นบล็อกที่คุณต้องการที่จะทำให้นักผจญภัยเคลื่อนที่ไปในทิศทางที่ถูกต้องหรือเปล่า ไปดึงเอามาจากกล่องเครื่องมือก็ได้
+        courseC_collector_prog7_c: มีปัญหาในการวางเส้นทางการเก็บรวบรวมสมบัติทั้งหมดหรือไม่ ลองเส้นทางนี้ดู!
       courseC_collector_prog8_authored_hint: { }
       courseC_collector_prog8_2018_authored_hint: { }
       courseC_collector_prog9_authored_hint: { }
@@ -7696,10 +7720,10 @@ th:
       courseC_flappy_events1_2018_authored_hint:
         courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
       courseC_flappy_events2_authored_hint:
-        courseC_flappy_events2_a: 'บล็อกที่คุณต้องการเพิ่มเข้ามาเรียกว่า `ตั้งความเร็ว...`. '
+        courseC_flappy_events2_a: 'บล็อกที่คุณต้องการเพิ่มเข้ามาเรียกว่า `กำหนดความเร็ว...`. '
         courseC_flappy_events2_b: Connect the `set speed` block to the `when run` block to solve this puzzle.
       courseC_flappy_events2_2018_authored_hint:
-        courseC_flappy_events2_a: 'บล็อกที่คุณต้องการเพิ่มเข้ามาเรียกว่า `ตั้งความเร็ว...`. '
+        courseC_flappy_events2_a: 'บล็อกที่คุณต้องการเพิ่มเข้ามาเรียกว่า `กำหนดความเร็ว...`. '
         courseC_flappy_events2_b: Connect the `set speed` block to the `when run` block to solve this puzzle.
       courseC_flappy_events3_authored_hint:
         courseC_flappy_events3_a: ถ้ามีบางอย่างทำงานไม่ถูกต้องให้ตรวจสอบให้แน่ใจว่าบล็อกของคุณเชื่อมต่อกับเหตุการณ์อย่างถูกต้องในพื้นที่ทำงาน
@@ -7710,9 +7734,9 @@ th:
       courseC_flappy_events4_2018_authored_hint:
         courseC_flappy_events4_a: เชื่อมต่อบล็อก `จบเกม` เข้ากับ `เมื่อชนสิ่งกีดขวาง` ในการแก้ปริศนานี้
       courseC_flappy_events5_authored_hint:
-        courseC_flappy_events5_a: คุณจะต้องใช้บล็อก ` ได้แต้ม`เพื่อที่จะผ่านระดับนี้ไป
+        courseC_flappy_events5_a: คุณจะต้องใช้บล็อก ` ได้คะแนน`เพื่อที่จะผ่านระดับนี้ไปได้
       courseC_flappy_events5_2018_authored_hint:
-        courseC_flappy_events5_a: คุณจะต้องใช้บล็อก ` ได้แต้ม`เพื่อที่จะผ่านระดับนี้ไป
+        courseC_flappy_events5_a: คุณจะต้องใช้บล็อก ` ได้คะแนน`เพื่อที่จะผ่านระดับนี้ไปได้
       courseC_flappy_events6_authored_hint:
         courseC_flappy_events6_a: ลองเชื่อมต่อบล็อก `กระพือปีกถี่ ____ ` เข้ากับเหตุการณ์ ` เมื่อเรียกใช้งาน`
       courseC_flappy_events6_2018_authored_hint:
@@ -7732,63 +7756,63 @@ th:
       courseC_flappy_events_template_authored_hint: { }
       courseC_flappy_events_template_2018_authored_hint: { }
       courseC_harvester_loops1_authored_hint:
-        courseC_harvester_loops1_a: Once you have moved to a pumpkin, use <xml><block type="harvester_pumpkin"/></xml> to collect it.
+        courseC_harvester_loops1_a: เมื่อคุณได้ย้ายไปที่ปลูกฟักทองแล้ว ให้ใช้<xml><block type=""harvester_pumpkin"/"></block></xml>ในการเก็บรวบรวมฟักทอง
         courseC_harvester_loops1_b: You can use a loop with the <xml><block type="harvester_pumpkin"/></xml> block to pick more than one pumpkin from a square.
       courseC_harvester_loops10_authored_hint: { }
       courseC_harvester_loops10_2018_authored_hint: { }
       courseC_harvester_loops11_authored_hint: { }
       courseC_harvester_loops11_2018_authored_hint: { }
       courseC_harvester_loops1_2018_authored_hint:
-        courseC_harvester_loops1_a: Once you have moved to a pumpkin, use <xml><block type="harvester_pumpkin"/></xml> to collect it.
+        courseC_harvester_loops1_a: เมื่อคุณได้ย้ายไปที่ปลูกฟักทองแล้ว ให้ใช้<xml><block type=""harvester_pumpkin"/"></block></xml>ในการเก็บรวบรวมฟักทอง
         courseC_harvester_loops1_b: You can use a loop with the <xml><block type="harvester_pumpkin"/></xml> block to pick more than one pumpkin from a square.
       courseC_harvester_loops2_authored_hint:
-        courseC_harvester_loops2_a: If you get stuck, try writing the steps on paper and looking for repeating patterns.
-        courseC_harvester_loops2_b: You will need one `repeat` loop after another.
-        courseC_harvester_loops2_c: One loop will repeat the `move forward` command, and the other will repeat the `pick pumpkin` command.
+        courseC_harvester_loops2_a: หากคุณคิดไม่ออก ให้ลองเขียนขั้นตอนลงบนกระดาษและมองหารูปแบบที่ซ้ำๆ กัน
+        courseC_harvester_loops2_b: คุณต้องการใช้ลูป`ทำซ้ำ` อีกอันหนึ่งหลังจากใช้ไปอันหนึ่งแล้ว
+        courseC_harvester_loops2_c: ลูปหนึ่งจะทำซ้ำคำสั่ง `ย้ายไปข้างหน้า` และอีกลูปหนึ่งจะทำซ้ำคำสั่ง `เก็บฟักทอง`
       courseC_harvester_loops2_2018_authored_hint:
-        courseC_harvester_loops2_a: If you get stuck, try writing the steps on paper and looking for repeating patterns.
-        courseC_harvester_loops2_b: You will need one `repeat` loop after another.
-        courseC_harvester_loops2_c: One loop will repeat the `move forward` command, and the other will repeat the `pick pumpkin` command.
+        courseC_harvester_loops2_a: หากคุณคิดไม่ออก ให้ลองเขียนขั้นตอนลงบนกระดาษและมองหารูปแบบที่ซ้ำๆ กัน
+        courseC_harvester_loops2_b: คุณต้องการใช้ลูป`ทำซ้ำ` อีกอันหนึ่งหลังจากใช้ไปอันหนึ่งแล้ว
+        courseC_harvester_loops2_c: ลูปหนึ่งจะทำซ้ำคำสั่ง `ย้ายไปข้างหน้า` และอีกลูปหนึ่งจะทำซ้ำคำสั่ง `เก็บฟักทอง`
       courseC_harvester_loops3_authored_hint:
         courseC_harvester_loops3_a: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.
-        courseC_harvester_loops3_b: For the first pumpkins, you can use code very similar to the last puzzle. Which way do you need to turn afterwards?
+        courseC_harvester_loops3_b: สำหรับฟักทองลูกแรก คุณสามารถใช้โค้ดที่คล้ายกับของปริศนาสุดท้าย ซึ่งขึ้นอยู่กับว่าคุณต้องการที่จะหันไปทางไหนหลังจากนั้น
         courseC_harvester_loops3_c: If you want to simplify your code, you can actually put one loop inside of another! This is called a **nested loop**.
       courseC_harvester_loops3_2018_authored_hint:
         courseC_harvester_loops3_a: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.
-        courseC_harvester_loops3_b: For the first pumpkins, you can use code very similar to the last puzzle. Which way do you need to turn afterwards?
+        courseC_harvester_loops3_b: สำหรับฟักทองลูกแรก คุณสามารถใช้โค้ดที่คล้ายกับของปริศนาสุดท้าย ซึ่งขึ้นอยู่กับว่าคุณต้องการที่จะหันไปทางไหนหลังจากนั้น
         courseC_harvester_loops3_c: If you want to simplify your code, you can actually put one loop inside of another! This is called a **nested loop**.
       courseC_harvester_loops4_authored_hint:
-        courseC_harvester_loops4_a: Use the new `pick corn` block to collect the corn.
-        courseC_harvester_loops4_b: You can use multiple repeat loops in your code, some to pick corn and some to pick pumpkins.
+        courseC_harvester_loops4_a: ใช้บล็อกใหม่ ` เก็บข้าวโพด `เพื่อเก็บรวบรวมข้าวโพด
+        courseC_harvester_loops4_b: คุณสามารถใช้ลูปทำซ้ำหลายครั้งในโค้ดของคุณ บางอันใช้เก็บข้าวโพดและบางอันใช้เก็บฟักทอง
         courseC_harvester_loops4_c: If you want to simplify your code, you can actually put one loop inside of another! This is called a **nested loop**.
       courseC_harvester_loops4_2018_authored_hint:
-        courseC_harvester_loops4_a: Use the new `pick corn` block to collect the corn.
-        courseC_harvester_loops4_b: You can use multiple repeat loops in your code, some to pick corn and some to pick pumpkins.
+        courseC_harvester_loops4_a: ใช้บล็อกใหม่ ` เก็บข้าวโพด `เพื่อเก็บรวบรวมข้าวโพด
+        courseC_harvester_loops4_b: คุณสามารถใช้ลูปทำซ้ำหลายครั้งในโค้ดของคุณ บางอันใช้เก็บข้าวโพดและบางอันใช้เก็บฟักทอง
         courseC_harvester_loops4_c: If you want to simplify your code, you can actually put one loop inside of another! This is called a **nested loop**.
       courseC_harvester_loops5_authored_hint:
-        courseC_harvester_loops5_a: If you get stuck, try drawing the entire program and then looking for repeating patterns.
-        courseC_harvester_loops5_b: Does this stair step look familiar from other puzzles? The movements should be similar, just remember to collect crops along the way.
+        courseC_harvester_loops5_a: ถ้าคุณเกิดติดขัดขึ้นมา ให้ลองวาดโปรแกรมทั้งหมด แล้วมองหารูปแบบการทำซ้ำ
+        courseC_harvester_loops5_b: ขั้นบันไดนี้ดูคุ้นๆ จากปริศนาอื่นๆหรือไม่ การเคลื่อนไหวควรจะคล้ายกัน ขอให้จำไว้ว่าให้เก็บรวบรวมพืชผลไปตลอดเส้นทาง
       courseC_harvester_loops5_2018_authored_hint:
-        courseC_harvester_loops5_a: If you get stuck, try drawing the entire program and then looking for repeating patterns.
-        courseC_harvester_loops5_b: Does this stair step look familiar from other puzzles? The movements should be similar, just remember to collect crops along the way.
+        courseC_harvester_loops5_a: ถ้าคุณเกิดติดขัดขึ้นมา ให้ลองวาดโปรแกรมทั้งหมด แล้วมองหารูปแบบการทำซ้ำ
+        courseC_harvester_loops5_b: ขั้นบันไดนี้ดูคุ้นๆ จากปริศนาอื่นๆหรือไม่ การเคลื่อนไหวควรจะคล้ายกัน ขอให้จำไว้ว่าให้เก็บรวบรวมพืชผลไปตลอดเส้นทาง
       courseC_harvester_loops6_authored_hint:
-        courseC_harvester_loops6_a: Remember you can put multiple blocks in one repeat loop.
+        courseC_harvester_loops6_a: โปรดจำไว้ว่าคุณสามารถใส่บล็อกหลายๆ บล็อกไว้ในลูปทำซ้ำลูปเดียว
         courseC_harvester_loops6_b: Don’t forget to turn at the end of the row of corn.
       courseC_harvester_loops6_2018_authored_hint:
-        courseC_harvester_loops6_a: Remember you can put multiple blocks in one repeat loop.
+        courseC_harvester_loops6_a: โปรดจำไว้ว่าคุณสามารถใส่บล็อกหลายๆ บล็อกไว้ในลูปทำซ้ำลูปเดียว
         courseC_harvester_loops6_b: Don’t forget to turn at the end of the row of corn.
       courseC_harvester_loops7_authored_hint:
-        courseC_harvester_loops7_a: You can solve this puzzle two ways, either get the corn or the pumpkins first.
-        courseC_harvester_loops7_b: You will need multiple `repeat` loops to solve this puzzle.
+        courseC_harvester_loops7_a: คุณสามารถแก้ปริศนานี้ได้สองวิธี เก็บข้าวโพดหรือไม่ก็เก็บฟักทองก่อน
+        courseC_harvester_loops7_b: คุณจะต้องใช้ลูป `ทำซ้ำ`หลายๆ ลูป เพื่อแก้ปริศนานี้
       courseC_harvester_loops7_2018_authored_hint:
-        courseC_harvester_loops7_a: You can solve this puzzle two ways, either get the corn or the pumpkins first.
-        courseC_harvester_loops7_b: You will need multiple `repeat` loops to solve this puzzle.
+        courseC_harvester_loops7_a: คุณสามารถแก้ปริศนานี้ได้สองวิธี เก็บข้าวโพดหรือไม่ก็เก็บฟักทองก่อน
+        courseC_harvester_loops7_b: คุณจะต้องใช้ลูป `ทำซ้ำ`หลายๆ ลูป เพื่อแก้ปริศนานี้
       courseC_harvester_loops8_authored_hint:
         courseC_harvester_loops8_a: Does this stair step look familiar from the previous puzzle? The movements should be similar, just remember to collect crops along the way.
-        courseC_harvester_loops8_b: If you want to simplify your code more, you can actually put one `repeat` loop inside of another! This is called a **nested loop**.
+        courseC_harvester_loops8_b: ถ้าคุณต้องการที่จะทำให้รหัสของคุณง่ายขึ้นไปอีก คุณยังสามารถใส่ลูป`ทำซ้ำ` ภายในของอีกลูปหนึ่ง! ซึ่งเรียกว่า ** ลูปซ้อนลูป **
       courseC_harvester_loops8_2018_authored_hint:
         courseC_harvester_loops8_a: Does this stair step look familiar from the previous puzzle? The movements should be similar, just remember to collect crops along the way.
-        courseC_harvester_loops8_b: If you want to simplify your code more, you can actually put one `repeat` loop inside of another! This is called a **nested loop**.
+        courseC_harvester_loops8_b: ถ้าคุณต้องการที่จะทำให้รหัสของคุณง่ายขึ้นไปอีก คุณยังสามารถใส่ลูป`ทำซ้ำ` ภายในของอีกลูปหนึ่ง! ซึ่งเรียกว่า ** ลูปซ้อนลูป **
       courseC_harvester_loops9_authored_hint: { }
       courseC_harvester_loops9_2018_authored_hint: { }
       courseC_harvester_loops_challenge1_authored_hint:
@@ -7900,30 +7924,30 @@ th:
       courseC_harvester_loops_forVid_authored_hint: { }
       courseC_maze_debugging1_authored_hint:
         courseC_maze_debugging1_a: |-
-          - Does everything work after the first step?
-          - Does it still work after the second?
-          - Where does it go wrong?
-        courseC_maze_debugging1_b: There is 1 block you need to add to complete this puzzle.
+          ทุกอย่างทำงานหลังจากขั้นตอนแรกหรือไม่?
+          มันยังคงทำงานอยู่หลังจากที่สองหรือไม่?
+          ตรงไหนที่ผิด?
+        courseC_maze_debugging1_b: มีบล็อก1 บล็อกที่คุณต้องเพิ่มเพื่อให้ปริศนานี้เสร็จสมบูรณ์
       courseC_maze_debugging1_2018_authored_hint:
         courseC_maze_debugging1_a: |-
-          - Does everything work after the first step?
-          - Does it still work after the second?
-          - Where does it go wrong?
-        courseC_maze_debugging1_b: There is 1 block you need to add to complete this puzzle.
+          ทุกอย่างทำงานหลังจากขั้นตอนแรกหรือไม่?
+          มันยังคงทำงานอยู่หลังจากที่สองหรือไม่?
+          ตรงไหนที่ผิด?
+        courseC_maze_debugging1_b: มีบล็อก1 บล็อกที่คุณต้องเพิ่มเพื่อให้ปริศนานี้เสร็จสมบูรณ์
       courseC_maze_debugging2_authored_hint:
-        courseC_maze_debugging2_a: There is a lot of valuable code in the workspace.  Don't just delete it all and start over!
+        courseC_maze_debugging2_a: มีโค้ดที่มีคุณค่าในพื้นที่ทำงานเป็นจำนวนมาก อย่าเพียงแค่ลบออกทั้งหมดแล้วเริ่มต้นใหม่!
         courseC_maze_debugging2_b: |-
-          - Does everything work after the first step?
-          - Does it still work after the second?
-          - Where does it go wrong?
-        courseC_maze_debugging2_c: ไม่สามารถคิดว่ามีอะไรผิดปกติ ลองเรียกใช้งานโค้ดครั้งหรือสองครั้งเพื่อดูว่าเกิดอะไรขึ้น
+          ทุกอย่างทำงานหลังจากขั้นตอนแรกหรือไม่?
+          มันยังคงทำงานอยู่หลังจากที่สองหรือไม่?
+          ตรงไหนที่ผิด?
+        courseC_maze_debugging2_c: ไม่สามารถหาได้ว่ามีอะไรผิดปกติ ลองเรียกใช้งานโค้ดครั้งหรือสองครั้งเพื่อดูว่าเกิดอะไรขึ้น
       courseC_maze_debugging2_2018_authored_hint:
-        courseC_maze_debugging2_a: There is a lot of valuable code in the workspace.  Don't just delete it all and start over!
+        courseC_maze_debugging2_a: มีโค้ดที่มีคุณค่าในพื้นที่ทำงานเป็นจำนวนมาก อย่าเพียงแค่ลบออกทั้งหมดแล้วเริ่มต้นใหม่!
         courseC_maze_debugging2_b: |-
-          - Does everything work after the first step?
-          - Does it still work after the second?
-          - Where does it go wrong?
-        courseC_maze_debugging2_c: ไม่สามารถคิดว่ามีอะไรผิดปกติ ลองเรียกใช้งานโค้ดครั้งหรือสองครั้งเพื่อดูว่าเกิดอะไรขึ้น
+          ทุกอย่างทำงานหลังจากขั้นตอนแรกหรือไม่?
+          มันยังคงทำงานอยู่หลังจากที่สองหรือไม่?
+          ตรงไหนที่ผิด?
+        courseC_maze_debugging2_c: ไม่สามารถหาได้ว่ามีอะไรผิดปกติ ลองเรียกใช้งานโค้ดครั้งหรือสองครั้งเพื่อดูว่าเกิดอะไรขึ้น
       courseC_maze_debugging3_authored_hint:
         courseC_maze_debugging3_a: |-
           To delete a block from the middle of your code, drag all of the blocks to another part of the workspace.
@@ -7933,7 +7957,7 @@ th:
           Finally, put your other blocks back where they belong.
           
           ![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)
-        courseC_maze_debugging3_b: ไม่สามารถคิดว่ามีอะไรผิดปกติ ลองเรียกใช้งานโค้ดครั้งหรือสองครั้งเพื่อดูว่าเกิดอะไรขึ้น
+        courseC_maze_debugging3_b: ไม่สามารถหาได้ว่ามีอะไรผิดปกติ ลองเรียกใช้งานโค้ดครั้งหรือสองครั้งเพื่อดูว่าเกิดอะไรขึ้น
       courseC_maze_debugging3_2018_authored_hint:
         courseC_maze_debugging3_a: |-
           To delete a block from the middle of your code, drag all of the blocks to another part of the workspace.
@@ -7943,12 +7967,12 @@ th:
           Finally, put your other blocks back where they belong.
           
           ![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)
-        courseC_maze_debugging3_b: ไม่สามารถคิดว่ามีอะไรผิดปกติ ลองเรียกใช้งานโค้ดครั้งหรือสองครั้งเพื่อดูว่าเกิดอะไรขึ้น
+        courseC_maze_debugging3_b: ไม่สามารถหาได้ว่ามีอะไรผิดปกติ ลองเรียกใช้งานโค้ดครั้งหรือสองครั้งเพื่อดูว่าเกิดอะไรขึ้น
       courseC_maze_debugging4_authored_hint:
-        courseC_maze_debugging4_a: Use the "Step" button to run through the instructions one at a time.  Does that help you find the line where things go wrong?
+        courseC_maze_debugging4_a: ใช้ปุ่ม  "ขั้นตอน " เพื่อเรียกใช้งานผ่านคำสั่งทีละครั้ง คุณคิดว่าจะช่วยให้คุณค้นหาบรรทัดที่ผิดได้หรือไม่
         courseC_maze_debugging4_b: One of the turns is making Scrat go in the wrong direction. Can you figure out which one?
       courseC_maze_debugging4_2018_authored_hint:
-        courseC_maze_debugging4_a: Use the "Step" button to run through the instructions one at a time.  Does that help you find the line where things go wrong?
+        courseC_maze_debugging4_a: ใช้ปุ่ม  "ขั้นตอน " เพื่อเรียกใช้งานผ่านคำสั่งทีละครั้ง คุณคิดว่าจะช่วยให้คุณค้นหาบรรทัดที่ผิดได้หรือไม่
         courseC_maze_debugging4_b: One of the turns is making Scrat go in the wrong direction. Can you figure out which one?
       courseC_maze_debugging5_authored_hint:
         courseC_maze_debugging5_a: "There are lots of helpful blocks in the workspace already.  Don't delete them all! \n\nUse the \"Step\" button to go through and figure out where the code goes wrong."
@@ -7979,21 +8003,21 @@ th:
           - Does everything work at the first step?
           - How about the second step?
           - Where does it go wrong?
-        courseC_maze_debugging7_b: Don't forget to use the "Step" button to run the program line by line!
+        courseC_maze_debugging7_b: อย่าลืมที่จะใช้ปุ่ม "ขั้นตอน " เพื่อเรียกใช้งานโปรแกรมทีละบรรทัด!
         courseC_maze_debugging7_c: |-
-          After you find and fix the first bug, make sure to use the debugging process again to find the next one.
+          หลังจากที่คุณค้นหาและแก้ไขข้อผิดพลาดแรกแล้วให้ตรวจสอบให้แน่ใจว่าได้ใช้กระบวนการตรวจแก้จุดบกพร่องหรือดีบั๊กอีกครั้งเพื่อค้นหาข้อผิดพลาดรายการถัดไป
           
-          Repeat the debugging process until the program works!
+          ทำซ้ำกระบวนการดีบั๊กจนกว่าโปรแกรมจะทำงาน!
       courseC_maze_debugging7_2018_authored_hint:
         courseC_maze_debugging7_a: |-
           - Does everything work at the first step?
           - How about the second step?
           - Where does it go wrong?
-        courseC_maze_debugging7_b: Don't forget to use the "Step" button to run the program line by line!
+        courseC_maze_debugging7_b: อย่าลืมที่จะใช้ปุ่ม "ขั้นตอน " เพื่อเรียกใช้งานโปรแกรมทีละบรรทัด!
         courseC_maze_debugging7_c: |-
-          After you find and fix the first bug, make sure to use the debugging process again to find the next one.
+          หลังจากที่คุณค้นหาและแก้ไขข้อผิดพลาดแรกแล้วให้ตรวจสอบให้แน่ใจว่าได้ใช้กระบวนการตรวจแก้จุดบกพร่องหรือดีบั๊กอีกครั้งเพื่อค้นหาข้อผิดพลาดรายการถัดไป
           
-          Repeat the debugging process until the program works!
+          ทำซ้ำกระบวนการดีบั๊กจนกว่าโปรแกรมจะทำงาน!
       courseC_maze_debugging8_authored_hint:
         courseC_maze_debugging8_a: |-
           - What is Scrat supposed to do?
@@ -8027,11 +8051,11 @@ th:
       courseC_maze_loops10_predict2_authored_hint: { }
       courseC_maze_loops11_authored_hint: { }
       courseC_maze_loops2_authored_hint:
-        courseC_maze_loops2_a: You can solve this puzzle with just three blocks, including `when run`.
+        courseC_maze_loops2_a: คุณสามารถแก้ปริศนานี้ โดยใช้เพียงสามบล็อกที่รวมทั้งบล็อกเมื่อเรียกใช้งานไว้ด้วย
         courseC_maze_loops2_b: Try putting the `move forward` block inside of a `repeat` block to create a loop.
         courseC_maze_loops2_c: You need to repeat the `move forward` command 5 times to solve this puzzle.
       courseC_maze_loops2_predict1_authored_hint:
-        courseC_maze_loops2_a: You can solve this puzzle with just three blocks, including `when run`.
+        courseC_maze_loops2_a: คุณสามารถแก้ปริศนานี้ โดยใช้เพียงสามบล็อกที่รวมทั้งบล็อกเมื่อเรียกใช้งานไว้ด้วย
         courseC_maze_loops2_b: Try putting the `move forward` block inside of a `repeat` block to create a loop.
         courseC_maze_loops2_c: You need to repeat the `move forward` command 5 times to solve this puzzle.
       courseC_maze_loops3_authored_hint:
@@ -8039,13 +8063,13 @@ th:
         courseC_maze_loops3_b: Use a `repeat 5 times` block to create the loop.
       courseC_maze_loops4_authored_hint:
         courseC_maze_loops4_a: Not all command blocks should be repeated.
-        courseC_maze_loops4_b: Use two `repeat` blocks set to different numbers.
+        courseC_maze_loops4_b: ใช้บล็อก `ทำซ้ำ`สองชุด แต่ตั้งตัวเลขที่แตกต่างกัน
         courseC_maze_loops4_c: "`Turn right` once between the two loops."
       courseC_maze_loops5_authored_hint:
         courseC_maze_loops5_a: The best solution uses two `move forward` commands and one loop.
       courseC_maze_loops6_authored_hint:
         courseC_maze_loops6_a: ถ้ามองไม่เห็นรูปแบบที่ชัดเจน ก็ให้ลองเขียนโค้ดออกมาดูก่อน และดูว่ามีอะไรที่มีการทำซ้ำแล้วซ้ำอีก ก่อนที่คุณจะรวมมันเอาเข้าไปไว้ในลูป
-        courseC_maze_loops6_b: "To put lots of blocks inside a `repeat` loop, just drag a loop out into the workspace, then drag all of the blocks from the starting program inside of it.  \n\nConnect it all back to the `when run` block and you're good to go!"
+        courseC_maze_loops6_b: "เมื่อต้องการใส่บล็อกจำนวนมากไว้ภายในลูป `ทำซ้ำ`ก็เพียงแค่ลากลูปออกไปไว้ในพื้นที่ทำงานแล้วลากบล็อกทั้งหมดจากโปรแกรมตอนเริ่มต้นมาไว้ภายในลูป\n\nเชื่อมต่อทั้งหมดเข้าไปกับบล็อก `เมื่อเรียกใช้งาน` ก็จะถือได้ว่าคุณพร้อมแล้ว!"
       courseC_maze_loops7_authored_hint:
         courseC_maze_loops7_a: ถ้ามองไม่เห็นรูปแบบที่ชัดเจน ก็ให้ลองเขียนโค้ดออกมาดูก่อน และดูว่ามีอะไรที่มีการทำซ้ำแล้วซ้ำอีก ก่อนที่คุณจะรวมมันเอาเข้าไปไว้ในลูป
       courseC_maze_loops8_authored_hint:
@@ -8134,10 +8158,10 @@ th:
         courseC_maze_programming6_d: Feel stuck?  Look at this path!
       courseC_maze_programming7_authored_hint:
         courseC_maze_programming7_a: Don't forget to use the "Step" button to go through block by block and look for errors.
-        courseC_maze_programming7_b: If you are having trouble figuring this puzzle out, try writing the moves down on a piece of paper.
+        courseC_maze_programming7_b: หากคุณมีปัญหาในการแก้ปริศนานี้ ลองเขียนขั้นตอนต่างๆลงบนกระดาษ
       courseC_maze_programming7_2018_authored_hint:
         courseC_maze_programming7_a: Don't forget to use the "Step" button to go through block by block and look for errors.
-        courseC_maze_programming7_b: If you are having trouble figuring this puzzle out, try writing the moves down on a piece of paper.
+        courseC_maze_programming7_b: หากคุณมีปัญหาในการแก้ปริศนานี้ ลองเขียนขั้นตอนต่างๆลงบนกระดาษ
       courseC_maze_programming8_authored_hint:
         courseC_maze_programming8_a: Remember you can use the "Step" button to look through your code line-by-line if you get stuck.
         courseC_maze_programming8_b: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกและเรียกใช้โค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
@@ -8181,11 +8205,11 @@ th:
         courseC_starWars_loops1_b: Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.
         courseC_starWars_loops1_c: You will want to `move forward` five times to solve this puzzle.
       courseC_starWars_loops10_authored_hint:
-        courseC_starWars_loops10_a: Doesn't this pattern look like a giant set of stair steps? See if you can use what you learned from previous puzzles to get all of the turns.
+        courseC_starWars_loops10_a: รูปแบบนี้ดูเหมือนชุดที่ใหญ่กว่าของขั้นบันได? ดูว่าคุณสามารถใช้สิ่งที่คุณเรียนรู้จากปริศนาก่อนหน้านี้ที่เกี่ยวกับการเลี้ยวไปมาทางซ้ายทางขวามาใช้ที่นี่
         courseC_starWars_loops10_b: "If you want to use less code, you can put one `repeat` loop inside of another!   \nThis is called a **nested loop**."
         courseC_starWars_loops10_c: Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.
       courseC_starWars_loops10_2018_authored_hint:
-        courseC_starWars_loops10_a: Doesn't this pattern look like a giant set of stair steps? See if you can use what you learned from previous puzzles to get all of the turns.
+        courseC_starWars_loops10_a: รูปแบบนี้ดูเหมือนชุดที่ใหญ่กว่าของขั้นบันได? ดูว่าคุณสามารถใช้สิ่งที่คุณเรียนรู้จากปริศนาก่อนหน้านี้ที่เกี่ยวกับการเลี้ยวไปมาทางซ้ายทางขวามาใช้ที่นี่
         courseC_starWars_loops10_b: "If you want to use less code, you can put one `repeat` loop inside of another!   \nThis is called a **nested loop**."
         courseC_starWars_loops10_c: Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.
       courseC_starWars_loops10_predict2_authored_hint: { }
@@ -8203,11 +8227,11 @@ th:
       courseC_starWars_loops4_authored_hint:
         courseC_starWars_loops4_c: Clicking on the small arrow next to "left" on the turn block will let you change it to  "right".
         courseC_starWars_loops4_a: Use two `repeat` blocks.
-        courseC_starWars_loops4_b: 'Each `repeat` loop will have only one command inside of it: `move forward`.'
+        courseC_starWars_loops4_b: 'แต่ละลูป `ทำซ้ำ` จะมีเพียงหนึ่งคำสั่งอยู่ภายใน คือ` เลื่อนไปข้างหน้า `.'
       courseC_starWars_loops4_2018_authored_hint:
         courseC_starWars_loops4_c: Clicking on the small arrow next to "left" on the turn block will let you change it to  "right".
         courseC_starWars_loops4_a: Use two `repeat` blocks.
-        courseC_starWars_loops4_b: 'Each `repeat` loop will have only one command inside of it: `move forward`.'
+        courseC_starWars_loops4_b: 'แต่ละลูป `ทำซ้ำ` จะมีเพียงหนึ่งคำสั่งอยู่ภายใน คือ` เลื่อนไปข้างหน้า `.'
       courseC_starWars_loops5_authored_hint:
         courseC_starWars_loops5_b: To move down, you have to turn and then move forward.
         courseC_starWars_loops5_a: The best solution uses a turn, then a single `move forward`, another turn, then a loop.
@@ -8398,11 +8422,12 @@ th:
         courseD_artist_functions10_b: This drawing is a lot like the last one, except the function draws a different kind of line.
         courseD_artist_functions10_a: To get around using multiple `move forward` blocks, create a `draw hexagon` function and call that multiple times.
       courseD_artist_functions2_authored_hint:
-        courseD_artist_functions2_a: |-
-          Your program should:
-          - Use function
-          - Move forward 100 + 75 pixels
-          - Use function
+        courseD_artist_functions2_a: |2
+          โปรแกรมของคุณควร:
+          
+           - ใช้ฟังก์ชัน
+           - ย้ายไปข้างหน้า 100+75 พิกเซล
+           - ใช้ฟังก์ชัน
       courseD_artist_functions3_authored_hint:
         courseD_artist_functions3_a: |-
           To solve this puzzle, you just need to add a  loop that repeats the starter code 8 times.
@@ -8430,100 +8455,96 @@ th:
         courseD_artist_functions9_a: To get around the need to have multiple `move forward` blocks, create a `draw triangle` function and call that multiple times.
         courseD_artist_functions9_b: This drawing is made by creating a line of triangles and turning either 60 or 120 degrees after each time you draw the triangle line.
       courseD_artist_nestedLoops1_authored_hint:
-        courseD_artist_nestedLoops1_a: The easiest way to draw this is to move forward and use right turns.
-        courseD_artist_nestedLoops1_b: You can draw this triangle with a `repeat` loop with two blocks inside. Which blocks do you need?
-        courseD_artist_nestedLoops1_c: Try writing the steps on paper and looking for patterns that can be simplified with loops.
+        courseD_artist_nestedLoops1_a: วิธีที่ง่ายที่สุดในการวาดรูปนี้คือการวาดเส้นไปข้างหน้าและหันไปทางขวา
+        courseD_artist_nestedLoops1_b: คุณสามารถวาดรูปสามเหลี่ยมนี้ด้วยลูป `ทำซ้ำ`โดยมีบล็อกสองบล็อกอยู่ภายใน บล็อกไหนที่คุณต้องการ?
+        courseD_artist_nestedLoops1_c: ลองเขียนขั้นตอนลงบนกระดาษ และมองหารูปแบบที่สามารถทำให้ง่ายด้วยการใช้ลูป
       courseD_artist_nestedLoops10_authored_hint: { }
       courseD_artist_nestedLoops10_2018_authored_hint: { }
       courseD_artist_nestedLoops1_2018_authored_hint:
-        courseD_artist_nestedLoops1_a: The easiest way to draw this is to move forward and use right turns.
-        courseD_artist_nestedLoops1_b: You can draw this triangle with a `repeat` loop with two blocks inside. Which blocks do you need?
-        courseD_artist_nestedLoops1_c: Try writing the steps on paper and looking for patterns that can be simplified with loops.
+        courseD_artist_nestedLoops1_a: วิธีที่ง่ายที่สุดในการวาดรูปนี้คือการวาดเส้นไปข้างหน้าและหันไปทางขวา
+        courseD_artist_nestedLoops1_b: คุณสามารถวาดรูปสามเหลี่ยมนี้ด้วยลูป `ทำซ้ำ`โดยมีบล็อกสองบล็อกอยู่ภายใน บล็อกไหนที่คุณต้องการ?
+        courseD_artist_nestedLoops1_c: ลองเขียนขั้นตอนลงบนกระดาษ และมองหารูปแบบที่สามารถทำให้ง่ายด้วยการใช้ลูป
       courseD_artist_nestedLoops1a_authored_hint:
         courseD_artist_nestedLoops1a_a: |-
-          You will need to draw a total of 6 triangles. After finishing each triangle, rotate 60 degrees and move to start the next triangle.
-          
-          ![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)
-        courseD_artist_nestedLoops1a_b: If you create your triangle with a loop, the artist should be facing the same way as they started. This will make the 60 degree turns a lot easier.
+          คุณจะต้องวาดรูปสามเหลี่ยมรวม 6 รูป หลังจากเสร็จการวาดสามเหลี่ยมแต่ละรูปให้หัน 60 องศาและเริ่มต้นวาดรูปสามเหลี่ยมถัดไป
+        courseD_artist_nestedLoops1a_b: ถ้าคุณสร้างสามเหลี่ยมของคุณด้วยลูป ศิลปินควรจะหันหน้าไปทางเดียวกันกับที่พวกเขาเริ่มต้น อันนี้จะทำให้ การหันไป 60 องศาง่ายขึ้นมาก
         courseD_artist_nestedLoops1a_c: If you want colors, use the `set color` block in your code. You don't have to match the colors in the template image.
       courseD_artist_nestedLoops1a_2018_authored_hint:
         courseD_artist_nestedLoops1a_a: |-
-          You will need to draw a total of 6 triangles. After finishing each triangle, rotate 60 degrees and move to start the next triangle.
-          
-          ![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)
-        courseD_artist_nestedLoops1a_b: If you create your triangle with a loop, the artist should be facing the same way as they started. This will make the 60 degree turns a lot easier.
+          คุณจะต้องวาดรูปสามเหลี่ยมรวม 6 รูป หลังจากเสร็จการวาดสามเหลี่ยมแต่ละรูปให้หัน 60 องศาและเริ่มต้นวาดรูปสามเหลี่ยมถัดไป
+        courseD_artist_nestedLoops1a_b: ถ้าคุณสร้างสามเหลี่ยมของคุณด้วยลูป ศิลปินควรจะหันหน้าไปทางเดียวกันกับที่พวกเขาเริ่มต้น อันนี้จะทำให้ การหันไป 60 องศาง่ายขึ้นมาก
         courseD_artist_nestedLoops1a_c: If you want colors, use the `set color` block in your code. You don't have to match the colors in the template image.
       courseD_artist_nestedLoops2_authored_hint:
-        courseD_artist_nestedLoops2_a: Nest your loops by surrounding your triangle code with another `repeat` loop.
-        courseD_artist_nestedLoops2_b: Remember to put the `turn` block inside of the loop so that the artist turns after each triangle.
+        courseD_artist_nestedLoops2_a: ซ้อนลูปของคุณโดยล้อมรอบโค้ดสามเหลี่ยมของคุณด้วยลูป ` ทำซ้ำ`อีกอันหนึ่ง
+        courseD_artist_nestedLoops2_b: อย่าลืมใส่บล็อก`หัน.. ไป`ภายในลูป เพื่อให้ศิลปินหันหน้าไปหลังจากวาดรูปสามเหลี่ยมแต่ละรูป
       courseD_artist_nestedLoops2_2018_authored_hint:
-        courseD_artist_nestedLoops2_a: Nest your loops by surrounding your triangle code with another `repeat` loop.
-        courseD_artist_nestedLoops2_b: Remember to put the `turn` block inside of the loop so that the artist turns after each triangle.
+        courseD_artist_nestedLoops2_a: ซ้อนลูปของคุณโดยล้อมรอบโค้ดสามเหลี่ยมของคุณด้วยลูป ` ทำซ้ำ`อีกอันหนึ่ง
+        courseD_artist_nestedLoops2_b: อย่าลืมใส่บล็อก`หัน.. ไป`ภายในลูป เพื่อให้ศิลปินหันหน้าไปหลังจากวาดรูปสามเหลี่ยมแต่ละรูป
       courseD_artist_nestedLoops3_authored_hint:
-        courseD_artist_nestedLoops3_a: "ลองใช้บล็อก `กระโดดไปข้างหน้าด้วยระยะทาง ` เพื่อมาจากด้านบนของบานหน้าต่างไปยับานหน้าต่างที่คุณจะเริ่มต้นถัดไป \n\nถ้าสี่เหลี่ยมของคุณมีขนาด 20 พิกเซลและห่างกัน 20 พิกเซล ระยะทางไกลเท่าไรคุณจะต้องกระโดดข้ามไป?"
-        courseD_artist_nestedLoops3_b: 'Don''t forget to use a nested loop to solve this puzzle quickly. '
+        courseD_artist_nestedLoops3_a: "ลองใช้บล็อก `กระโดดไปข้างหน้า ` เพื่อย้ายจากด้านบนของบานหน้าต่างไปยังบานหน้าต่างที่คุณจะเริ่มต้นถัดไป \n\nถ้าบานหน้าต่างของคุณมีด้านแต่ละด้านยาว 20 พิกเซลและห่างกัน 20 พิกเซล ระยะทางไกลเท่าไรที่คุณจะต้องกระโดดข้ามไป?"
+        courseD_artist_nestedLoops3_b: 'อย่าลืมที่จะใช้ลูปที่ซ้อนกัน เพื่อให้แก้ปริศนานี้ได้อย่างรวดเร็ว '
         courseD_artist_nestedLoops3_c: 'เริ่มต้นโดยใช้ลูป ` ทำซ้ำ ` เพื่อสร้างสี่เหลี่ยมจตุรัสหนึ่งรูป จากนั้นทำซ้ำสี่เหลี่ยม 8 ครั้ง โดยกระโดดระหว่างทำสี่เหลี่ยม 40 พิกเซล '
       courseD_artist_nestedLoops3_2018_authored_hint:
-        courseD_artist_nestedLoops3_a: "ลองใช้บล็อก `กระโดดไปข้างหน้าด้วยระยะทาง ` เพื่อมาจากด้านบนของบานหน้าต่างไปยับานหน้าต่างที่คุณจะเริ่มต้นถัดไป \n\nถ้าสี่เหลี่ยมของคุณมีขนาด 20 พิกเซลและห่างกัน 20 พิกเซล ระยะทางไกลเท่าไรคุณจะต้องกระโดดข้ามไป?"
-        courseD_artist_nestedLoops3_b: 'Don''t forget to use a nested loop to solve this puzzle quickly. '
+        courseD_artist_nestedLoops3_a: "ลองใช้บล็อก `กระโดดไปข้างหน้า ` เพื่อย้ายจากด้านบนของบานหน้าต่างไปยังบานหน้าต่างที่คุณจะเริ่มต้นถัดไป \n\nถ้าบานหน้าต่างของคุณมีด้านแต่ละด้านยาว 20 พิกเซลและห่างกัน 20 พิกเซล ระยะทางไกลเท่าไรที่คุณจะต้องกระโดดข้ามไป?"
+        courseD_artist_nestedLoops3_b: 'อย่าลืมที่จะใช้ลูปที่ซ้อนกัน เพื่อให้แก้ปริศนานี้ได้อย่างรวดเร็ว '
         courseD_artist_nestedLoops3_c: 'เริ่มต้นโดยใช้ลูป ` ทำซ้ำ ` เพื่อสร้างสี่เหลี่ยมจตุรัสหนึ่งรูป จากนั้นทำซ้ำสี่เหลี่ยม 8 ครั้ง โดยกระโดดระหว่างทำสี่เหลี่ยม 40 พิกเซล '
       courseD_artist_nestedLoops4_authored_hint:
-        courseD_artist_nestedLoops4_d: To solve this correctly, you'll need to move **before** you turn, or else your circles will be off by the tiniest little amount!
+        courseD_artist_nestedLoops4_d: เพื่อแก้ปัญหานี้ได้อย่างถูกต้อง, คุณจะต้องเคลื่อนที่ไป** ก่อน ** ที่คุณจะหัน หรือไม่เช่นนั้นวงกลมของคุณจะถูกขยับผิดตำแหน่งออกไปเล็กน้อย!.
         courseD_artist_nestedLoops4_a: |-
-          To make a circle:
-          - Repeat 360 times
-          - Move forward 1 pixel
-          - Turn left 1 degree
-        courseD_artist_nestedLoops4_b: Don't forget to jump forward by 50 pixels between circles.
-        courseD_artist_nestedLoops4_c: Use a nested loop to draw your circles 4 times.
+          การทำวงกลม:
+          -ทำซ้ำ 360 ครั้ง
+          -วาดเส้นไปข้างหน้ายาว 1 พิกเซล
+          -เลี้ยวซ้าย 1 องศา
+        courseD_artist_nestedLoops4_b: อย่าลืมกระโดดไปข้างหน้า 50 พิกเซลระหว่างวงกลมแต่ละวง
+        courseD_artist_nestedLoops4_c: ใช้ลูปที่ซ้อนกันเพื่อวาดวงกลมของคุณ 4 ครั้ง
       courseD_artist_nestedLoops4_2018_authored_hint:
-        courseD_artist_nestedLoops4_d: To solve this correctly, you'll need to move **before** you turn, or else your circles will be off by the tiniest little amount!
+        courseD_artist_nestedLoops4_d: เพื่อแก้ปัญหานี้ได้อย่างถูกต้อง, คุณจะต้องเคลื่อนที่ไป** ก่อน ** ที่คุณจะหัน หรือไม่เช่นนั้นวงกลมของคุณจะถูกขยับผิดตำแหน่งออกไปเล็กน้อย!.
         courseD_artist_nestedLoops4_a: |-
-          To make a circle:
-          - Repeat 360 times
-          - Move forward 1 pixel
-          - Turn left 1 degree
-        courseD_artist_nestedLoops4_b: Don't forget to jump forward by 50 pixels between circles.
-        courseD_artist_nestedLoops4_c: Use a nested loop to draw your circles 4 times.
+          การทำวงกลม:
+          -ทำซ้ำ 360 ครั้ง
+          -วาดเส้นไปข้างหน้ายาว 1 พิกเซล
+          -เลี้ยวซ้าย 1 องศา
+        courseD_artist_nestedLoops4_b: อย่าลืมกระโดดไปข้างหน้า 50 พิกเซลระหว่างวงกลมแต่ละวง
+        courseD_artist_nestedLoops4_c: ใช้ลูปที่ซ้อนกันเพื่อวาดวงกลมของคุณ 4 ครั้ง
       courseD_artist_nestedLoops5_authored_hint:
-        courseD_artist_nestedLoops5_a: |-
-          To do this easily:
+        courseD_artist_nestedLoops5_a: |2
+          ทำเช่นนี้อย่างง่ายดาย:
           
-          - repeat 4 times
-          - make a circle
-          - jump forward 50 pixels
-          - turn right 90 degrees
-        courseD_artist_nestedLoops5_b: To make a circle you'll need to set a repeat loop to repeat 360 times. Inside the loop, move forward 1 pixel and turn by 1 degree.
+           - ทำซ้ำ 4 ครั้ง
+           - ทำวงกลม
+           - กระโดดไปข้างหน้า 50 พิกเซล
+           - เลี้ยวขวา 90 องศา
+        courseD_artist_nestedLoops5_b: เมื่อต้องการทำวงกลม ให้ตั้งค่าลูปทำซ้ำให้ทำซ้ำ 360 ครั้ง ภายในลูป วาดเส้นไปข้างหน้า1พิกเซลและหันไป 1 องศา.
       courseD_artist_nestedLoops5_2018_authored_hint:
-        courseD_artist_nestedLoops5_a: |-
-          To do this easily:
+        courseD_artist_nestedLoops5_a: |2
+          ทำเช่นนี้อย่างง่ายดาย:
           
-          - repeat 4 times
-          - make a circle
-          - jump forward 50 pixels
-          - turn right 90 degrees
-        courseD_artist_nestedLoops5_b: To make a circle you'll need to set a repeat loop to repeat 360 times. Inside the loop, move forward 1 pixel and turn by 1 degree.
+           - ทำซ้ำ 4 ครั้ง
+           - ทำวงกลม
+           - กระโดดไปข้างหน้า 50 พิกเซล
+           - เลี้ยวขวา 90 องศา
+        courseD_artist_nestedLoops5_b: เมื่อต้องการทำวงกลม ให้ตั้งค่าลูปทำซ้ำให้ทำซ้ำ 360 ครั้ง ภายในลูป วาดเส้นไปข้างหน้า1พิกเซลและหันไป 1 องศา.
       courseD_artist_nestedLoops6_authored_hint:
         courseD_artist_nestedLoops6_a: You'll need to repeat your outer loop 6 times now, instead of only 4.
         courseD_artist_nestedLoops6_b: 'Now that you''re breaking 360 degrees into six pieces instead of only four, you will only need to turn 60 degrees between circles. '
       courseD_artist_nestedLoops7_authored_hint:
         courseD_artist_nestedLoops7_a: You'll need to use nested loops here. First, use a loop to draw a square. What will the outer loop do if the inner loop draws a square?
-        courseD_artist_nestedLoops7_b: |-
-          Use a nested loop, where the inner loop is the code for a square.
+        courseD_artist_nestedLoops7_b: |2
+          ใช้ลูปที่ซ้อนกันซึ่งลูปภายในเป็นโค้ดสำหรับวาดสี่เหลี่ยม
           
-          - repeat 6 times
-          - make square
-          - jump forward by **50 pixels**
-          - turn **60 degrees**
+           - ทำซ้ำ 6 ครั้ง
+           - วาดสี่เหลี่ยม
+           - กระโดดไปข้างหน้า 50 พิกเซล
+           - หมุน 60 องศา
       courseD_artist_nestedLoops7_2018_authored_hint:
         courseD_artist_nestedLoops7_a: You'll need to use nested loops here. First, use a loop to draw a square. What will the outer loop do if the inner loop draws a square?
-        courseD_artist_nestedLoops7_b: |-
-          Use a nested loop, where the inner loop is the code for a square.
+        courseD_artist_nestedLoops7_b: |2
+          ใช้ลูปที่ซ้อนกันซึ่งลูปภายในเป็นโค้ดสำหรับวาดสี่เหลี่ยม
           
-          - repeat 6 times
-          - make square
-          - jump forward by **50 pixels**
-          - turn **60 degrees**
+           - ทำซ้ำ 6 ครั้ง
+           - วาดสี่เหลี่ยม
+           - กระโดดไปข้างหน้า **50 พิกเซล**
+           - หมุน **60 องศา**
       courseD_artist_nestedLoops8_authored_hint:
         courseD_artist_nestedLoops8_a: To have 8 hexagons in your drawing, you'll need to turn **45 degrees** between each of them. Why? Because 360 degrees (a full turn around) divided by 8 (the number of hexagons) is 45 degrees.
         courseD_artist_nestedLoops8_b: ถ้าเกิดการติดขัดขึ้นมา ให้เริ่มด้วยการดูปริศนาสุดท้าย และเปลี่ยนให้แตกต่างไป
@@ -8576,7 +8597,7 @@ th:
         courseD_artist_nestedLoopsFP_a: |-
           <img src="https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png" width="200px"/>
           
-          This image was made using a single nested loop that repeats a hexagon (with 50px sides) 15 times using a 48 degree turn.
+          รูปนี้ถูกสร้างขึ้นโดยใช้ลูปซ้อนกันอันเดียวที่ทำซ้ำหกเหลี่ยม (ที่มีด้าน 50px) 15 ครั้งโดยใช้การหันไป 48 องศา
         courseD_artist_nestedLoopsFP_b: |-
           <img src="https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png" width="200px"/>
           
@@ -8584,12 +8605,12 @@ th:
         courseD_artist_nestedLoopsFP_c: |-
           <img src="https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png" width="200px"/>
           
-          This image was made using a single nested loop that repeats a pentagon (with 50px sides) 15 times using a 48 degree turn.
+          รูปนี้ถูกสร้างขึ้นโดยใช้ลูปซ้อนกันอันเดียวที่ทำซ้ำรูปห้าเหลี่ยมด้านเท่า (ที่มีด้าน 50 px) 15 ครั้งโดยใช้การหันไป 48 องศา
       courseD_artist_nestedLoopsFP_2018_authored_hint:
         courseD_artist_nestedLoopsFP_a: |-
           <img src="https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png" width="200px"/>
           
-          This image was made using a single nested loop that repeats a hexagon (with 50px sides) 15 times using a 48 degree turn.
+          รูปนี้ถูกสร้างขึ้นโดยใช้ลูปซ้อนกันอันเดียวที่ทำซ้ำหกเหลี่ยม (ที่มีด้าน 50px) 15 ครั้งโดยใช้การหันไป 48 องศา
         courseD_artist_nestedLoopsFP_b: |-
           <img src="https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png" width="200px"/>
           
@@ -8597,7 +8618,7 @@ th:
         courseD_artist_nestedLoopsFP_c: |-
           <img src="https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png" width="200px"/>
           
-          This image was made using a single nested loop that repeats a pentagon (with 50px sides) 15 times using a 48 degree turn.
+          รูปนี้ถูกสร้างขึ้นโดยใช้ลูปซ้อนกันอันเดียวที่ทำซ้ำรูปห้าเหลี่ยมด้านเท่า (ที่มีด้าน 50 px) 15 ครั้งโดยใช้การหันไป 48 องศา
       courseD_artist_nestedLoopsPre1_authored_hint: { }
       courseD_artist_nestedLoops_challenge1_authored_hint:
         courseD_artist_nestedLoops_challenge1_a: Start by changing the color to blue, then create an octagon with 50 pixel sides and 45 degree left turns.
@@ -8716,7 +8737,7 @@ th:
       courseD_artist_ramp12_authored_hint:
         courseD_artist_ramp12_a: You can either draw the square first, then the triangle, or do it the other way around!
         courseD_artist_ramp12_b: Try splitting the problem into 2 parts, and using 2 loops.
-        courseD_artist_ramp12_c: You can use the drop down menu on the `turn` blocks to see which angle you need!
+        courseD_artist_ramp12_c: คุณสามารถใช้เมนูดรอปดาวน์บนบล็อก ' เลี้ยว' เพื่อเลือกดูมุมที่คุณต้องการใช้!
       courseD_bee_conditionals1_authored_hint:
         courseD_bee_conditionals1_a: You will need to use an `if` block to check to see if there is a flower beneath the cloud before you try to get nectar.
       courseD_bee_conditionals10_authored_hint: { }
@@ -8896,13 +8917,10 @@ th:
         courseD_bee_debugging4_b: "If you're having a hard time figuring out how to make the stair step pattern, try tracing it with your finger and saying the commands out loud. \n\nDon't forget to point out the direction of the turns!"
       courseD_bee_debugging5_authored_hint:
         courseD_bee_debugging5_a: |-
-          Start by looking at just the first loop.
-          
-          What does it do?
-          
-          What is it supposed to do?
-          
-          What does that tell you?
+          เริ่มด้วยการดูแค่ลูปแรก
+          โค้ดทำอะไรได้บ้าง
+          มันควรจะทำอะไร?
+          มันบอกอะไรแก่คุณ?
         courseD_bee_debugging5_b: Once you have the first loop the way you want it, what is left over in your code?
         courseD_bee_debugging5_c: |-
           Try wrapping the leftover loop around the rest of your completed code.  Does is work now?
@@ -9247,23 +9265,17 @@ th:
         courseD_collector_debugging4_b: "If you're having a hard time figuring out how to make the stair step pattern, try tracing it with your finger and saying the commands out loud. \n\nDon't forget to point out the direction of the turns!"
       courseD_collector_debugging5_authored_hint:
         courseD_collector_debugging5_a: |-
-          Start by looking at just the first loop.
-          
-          What does it do?
-          
-          What is it supposed to do?
-          
-          What does that tell you?
+          เริ่มด้วยการดูแค่ลูปแรก
+          โค้ดทำอะไรได้บ้าง
+          มันควรจะทำอะไร?
+          มันบอกอะไรแก่คุณ?
         courseD_collector_debugging5_b: Once you have the first loop the way you want it, what is left over in your code?
       courseD_collector_debugging5_2018_authored_hint:
         courseD_collector_debugging5_a: |-
-          Start by looking at just the first loop.
-          
-          What does it do?
-          
-          What is it supposed to do?
-          
-          What does that tell you?
+          เริ่มด้วยการดูแค่ลูปแรก
+          โค้ดทำอะไรได้บ้าง
+          มันควรจะทำอะไร?
+          มันบอกอะไรแก่คุณ?
         courseD_collector_debugging5_b: Once you have the first loop the way you want it, what is left over in your code?
       courseD_collector_debugging5a_authored_hint:
         courseD_collector_debugging5a_a: |-
@@ -9570,7 +9582,7 @@ th:
         courseD_artist_ramp10_c: If you want to simplify your code, you can put one loop inside of another! This is called a **nested loop**.
       courseD_collector_ramp8_authored_hint:
         courseD_collector_ramp8_a: When you get to a square with treasure, use `collect` to pick it up. For this puzzle, you'll need to collect treasure more than once!
-        courseD_collector_ramp8_b: If you want to simplify your code more, you can actually put one `repeat` loop inside of another! This is called a **nested loop**.
+        courseD_collector_ramp8_b: ถ้าคุณต้องการที่จะทำให้รหัสของคุณง่ายขึ้นไปอีก คุณยังสามารถใส่ลูป`ทำซ้ำ` ภายในของอีกลูปหนึ่ง! ซึ่งเรียกว่า ** ลูปซ้อนลูป **
       courseD_collector_ramp9_authored_hint:
         courseD_collector_ramp9_a: Start by moving Laurel to the first treasure, then collecting it. Can you repeat this sequence to get the second pile?
         courseD_collector_ramp9_b: If you want to simplify your code, you can put one repeat loop inside of another! This is called a **nested loop**.
@@ -9599,13 +9611,10 @@ th:
         courseD_debugging_4_b: "If you're having a hard time figuring out how to make the stair step pattern, try tracing it with your finger and saying the commands out loud. \n\nDon't forget to point out the direction of the turns!"
       courseD_debugging_5_authored_hint:
         courseD_debugging_5_a: |-
-          Start by looking at just the first loop.
-          
-          What does it do?
-          
-          What is it supposed to do?
-          
-          What does that tell you?
+          เริ่มด้วยการดูแค่ลูปแรก
+          โค้ดทำอะไรได้บ้าง
+          มันควรจะทำอะไร?
+          มันบอกอะไรแก่คุณ?
         courseD_debugging_5_b: Once you have the first loop the way you want it, what is left over in your code?
         courseD_debugging_5_c: |-
           Try wrapping the leftover loop around the rest of your completed code.  Does is work now?
@@ -9899,10 +9908,10 @@ th:
         courseD_maze_nestedLoops4_b: ถ้ามองไม่เห็นรูปแบบที่ชัดเจน ก็ให้ลองเขียนโค้ดออกมาดูก่อน และดูว่ามีอะไรที่มีการทำซ้ำแล้วซ้ำอีก ก่อนที่คุณจะเอาลูปมาใช้งาน
         courseD_maze_nestedLoops4_c: Try using one `repeat` loop inside of another to cut down on the amount of code you need.
       courseD_maze_nestedLoops5_authored_hint:
-        courseD_maze_nestedLoops5_a: Look for a stair-step pattern in this maze to find where a nested loop can be used.
+        courseD_maze_nestedLoops5_a: มองหาขั้นตอนที่เป็นรูปแบบบันไดในเขาวงกตนี้ เพื่อค้นหาที่ที่สามารถนำเอาลูปซ้อนลูปมาใช้
         courseD_maze_nestedLoops5_b: Can't figure out where to put the loops? Try writing the code step-by-step and look for a pattern.
       courseD_maze_nestedLoops5_2018_authored_hint:
-        courseD_maze_nestedLoops5_a: Look for a stair-step pattern in this maze to find where a nested loop can be used.
+        courseD_maze_nestedLoops5_a: มองหาขั้นตอนที่เป็นรูปแบบบันไดในเขาวงกตนี้ เพื่อค้นหาที่ที่สามารถนำเอาลูปซ้อนลูปมาใช้
         courseD_maze_nestedLoops5_b: Can't figure out where to put the loops? Try writing the code step-by-step and look for a pattern.
       courseD_maze_nestedLoops6_authored_hint:
         courseD_maze_nestedLoops6_a: If you are stuck, try writing out the code out on paper without loops first and look for patterns.
@@ -10060,16 +10069,16 @@ th:
       courseD_maze_until_challenge2_authored_hint: { }
       courseD_playLab_cond1_authored_hint:
         courseD_playLab_cond1_a: To solve this challenge, attach the `move actor 1 up` block to the `when up arrow` event, then do the same for every other direction.
-        courseD_playLab_cond1_b: ใช้เมนูแบบเลื่อนลงกับบล็อก` เมื่อลูกศร.... ` และบล็อก ` บังคับตัวละคร... ให้เคลื่อนที่... ` เพื่อเปลี่ยนทิศทางที่พวกเขาไป
+        courseD_playLab_cond1_b: ใช้เมนูแบบเลื่อนลงกับบล็อก` เมื่อลูกศร.... ` และบล็อก ` บังคับนักแสดง... ให้เคลื่อนที่... ` เพื่อเปลี่ยนทิศทางที่พวกเขาไป
         courseD_playLab_cond1_c: อย่าลืมที่จะพาเจ้าโจรสลัดขาไม้ไปที่ธงทั้งสองเมื่อคุณคลิก " เริ่ม "!
       courseD_playLab_cond1_2018_authored_hint:
         courseD_playLab_cond1_a: To solve this challenge, attach the `move actor 1 up` block to the `when up arrow` event, then do the same for every other direction.
-        courseD_playLab_cond1_b: ใช้เมนูแบบเลื่อนลงกับบล็อก` เมื่อลูกศร.... ` และบล็อก ` บังคับตัวละคร... ให้เคลื่อนที่... ` เพื่อเปลี่ยนทิศทางที่พวกเขาไป
+        courseD_playLab_cond1_b: ใช้เมนูแบบเลื่อนลงกับบล็อก` เมื่อลูกศร.... ` และบล็อก ` บังคับนักแสดง... ให้เคลื่อนที่... ` เพื่อเปลี่ยนทิศทางที่พวกเขาไป
         courseD_playLab_cond1_c: อย่าลืมที่จะพาเจ้าโจรสลัดขาไม้ไปที่ธงทั้งสองเมื่อคุณคลิก " เริ่ม "!
       courseD_playLab_cond2_authored_hint:
-        courseD_playLab_cond2_a: เพื่อที่จะประสบความสำเร็จกับปริศนานี้, ใช้ บล็อก`ทำคะแนน`ไว้ด้านล่างของเหตุการณ์ ` เมื่อตัวละครที่ 1 สัมผัสตัวละครที่ 2 `
+        courseD_playLab_cond2_a: เพื่อที่จะประสบความสำเร็จกับปริศนานี้, ใช้ บล็อก`ทำคะแนน`ไว้ด้านล่างของเหตุการณ์ ` เมื่อนักแสดง 1 สัมผัสนักแสดงที่ 2 `
       courseD_playLab_cond2_2018_authored_hint:
-        courseD_playLab_cond2_a: เพื่อที่จะประสบความสำเร็จกับปริศนานี้, ใช้ บล็อก`ทำคะแนน`ไว้ด้านล่างของเหตุการณ์ ` เมื่อตัวละครที่ 1 สัมผัสตัวละครที่ 2 `
+        courseD_playLab_cond2_a: เพื่อที่จะประสบความสำเร็จกับปริศนานี้, ใช้ บล็อก`ทำคะแนน`ไว้ด้านล่างของเหตุการณ์ ` เมื่อนักแสดง 1 สัมผัสนักแสดงที่ 2 `
       courseD_playLab_cond3_authored_hint:
         courseD_playLab_cond3_a: คุณจะต้องเพิ่มบล็อกสองบล็อกให้กับลูป `ซ้ำตลอดกาล `  อันที่หนึ่งจะเลือกอารมณ์ที่สุ่มสำหรับมังกร (นักแสดงที่ 2) และอีกอันจะรอ1 วินาทีก่อนที่จะผ่านลูปอีกครั้ง.
       courseD_playLab_cond3_2018_authored_hint:
@@ -10083,11 +10092,11 @@ th:
       courseD_playLab_cond4_authored_hint:
         courseD_playLab_cond4_a: "คุณต้องการที่จะใช้เหตุการณ์ ` เมื่อเรียกใช้งาน` ที่จะได้รับนินจาไล่ล่าเจ้าโจรสลัด.\nเพื่อให้"
         courseD_playLab_cond4_b: มีบล็อกพิเศษที่เรียกว่า ' กำหนดให้นินจาใส่หน้ากากทั้งหมดไล่ล่าผู้เล่น... ' ที่จะทำให้นินจาร้อนรนในการติดตามไล่ล่าไม่ว่าโจรสลัดจะไปไหน!
-        courseD_playLab_cond4_c: ใส่บล็อก ' จบเกมพร้อมความพ่ายแพ้ ` ภายใต้เหตุการณ์ `เมื่อตัวละครที่ 1สัมผัสที่ ตัวละครที่ 3`
+        courseD_playLab_cond4_c: ใส่บล็อก ' จบเกมพร้อมความพ่ายแพ้ ` ภายใต้เหตุการณ์ `เมื่อนักแสดงที่ 1สัมผัสที่ นักแสดงที่ 3`
       courseD_playLab_cond4_2018_authored_hint:
         courseD_playLab_cond4_a: "คุณต้องการที่จะใช้เหตุการณ์ ` เมื่อเรียกใช้งาน` ที่จะได้รับนินจาไล่ล่าเจ้าโจรสลัด.\nเพื่อให้"
         courseD_playLab_cond4_b: มีบล็อกพิเศษที่เรียกว่า ' กำหนดให้นินจาใส่หน้ากากทั้งหมดไล่ล่าผู้เล่น... ' ที่จะทำให้นินจาร้อนรนในการติดตามไล่ล่าไม่ว่าโจรสลัดจะไปไหน!
-        courseD_playLab_cond4_c: ใส่บล็อก ' จบเกมพร้อมความพ่ายแพ้ ` ภายใต้เหตุการณ์ `เมื่อตัวละครที่ 1สัมผัสที่ ตัวละครที่ 3`
+        courseD_playLab_cond4_c: ใส่บล็อก ' จบเกมพร้อมความพ่ายแพ้ ` ภายใต้เหตุการณ์ `เมื่อนักแสดงที่ 1สัมผัสที่ นักแสดงที่ 3`
       courseD_playLab_cond5_authored_hint:
         courseD_playLab_cond5_a: ใช้คำสั่ง` ถ้า(if) ` ที่เปรียบเทียบว่า ` ทำคะแนน ' นั้น ` > ` 5 หรือไม่เพื่อจบการท้าทายนี้ลง
         courseD_playLab_cond5_b: คุณสามารถมีลูป` ทำซ้ำไปตลอดกาล` มากกว่าหนึ่ง ในพื้นที่ทำงาน
@@ -10096,17 +10105,17 @@ th:
         courseD_playLab_cond5_b: คุณสามารถมีลูป` ทำซ้ำไปตลอดกาล` มากกว่าหนึ่ง ในพื้นที่ทำงาน
       courseD_playLab_cond6_authored_hint:
         courseD_playLab_cond6_a: เพิ่มเติมบล็อก ' ตั้งความเร็วสำหรับทุกๆ นินจาใส่หน้ากาก' ตอนเริ่มต้นของโปรแกรมที่จะช่วยให้นินจาช้าลง
-        courseD_playLab_cond6_b: คุณจะต้องใช้ ' ถ้า ตัวละคร 1 ตามแนวแกนตั้ง > 255' บล็อกภายใน ' ทำซ้ำไปตลอดกาล ' บล็อกเพื่อตรวจสอบเสมอว่าโจรสลัดอยู่ต่ำกว่า เจ้าปลาหมึกหรือไม่.
+        courseD_playLab_cond6_b: คุณจะต้องใช้ ' ถ้า นักแสดง 1 ตามแนวแกนตั้ง > 255' บล็อกภายใน ' ทำซ้ำไปตลอดกาล ' บล็อกเพื่อตรวจสอบเสมอว่าโจรสลัดอยู่ต่ำกว่า เจ้าปลาหมึกหรือไม่.
       courseD_playLab_cond6_2018_authored_hint:
         courseD_playLab_cond6_a: เพิ่มเติมบล็อก ' ตั้งความเร็วสำหรับทุกๆ นินจาใส่หน้ากาก' ตอนเริ่มต้นของโปรแกรมที่จะช่วยให้นินจาช้าลง
-        courseD_playLab_cond6_b: คุณจะต้องใช้ ' ถ้า ตัวละคร 1 ตามแนวแกนตั้ง > 255' บล็อกภายใน ' ทำซ้ำไปตลอดกาล ' บล็อกเพื่อตรวจสอบเสมอว่าโจรสลัดอยู่ต่ำกว่า เจ้าปลาหมึกหรือไม่.
+        courseD_playLab_cond6_b: คุณจะต้องใช้ ' ถ้า นักแสดง 1 ตามแนวแกนตั้ง > 255' บล็อกภายใน ' ทำซ้ำไปตลอดกาล ' บล็อกเพื่อตรวจสอบเสมอว่าโจรสลัดอยู่ต่ำกว่า เจ้าปลาหมึกหรือไม่.
       courseD_playLab_cond6a_authored_hint:
         courseD_playLab_cond6_c: เพิ่ม ` รอ 1 วินาที `บล็อกไปยังด้านบนของ ลูป`ทำซ้ำไปตลอดกาล ` ที่ตรวจสอบตำแหน่งของเจ้าโจรสลัด (แต่ไม่อยู่ภายในคำสั่ง ` ถ้า` ) เพื่อไม่ให้คะแนนถูกลบออกอย่างรวดเร็วเกินไป.
       courseD_playLab_cond6a_2018_authored_hint:
         courseD_playLab_cond6_c: เพิ่ม ` รอ 1 วินาที `บล็อกไปยังด้านบนของ ลูป`ทำซ้ำไปตลอดกาล ` ที่ตรวจสอบตำแหน่งของเจ้าโจรสลัด (แต่ไม่อยู่ภายในคำสั่ง ` ถ้า` ) เพื่อไม่ให้คะแนนถูกลบออกอย่างรวดเร็วเกินไป.
       courseD_playLab_cond6cloneForTest_authored_hint:
         courseD_playLab_cond6_a: เพิ่มเติมบล็อก ' ตั้งความเร็วสำหรับทุกๆ นินจาใส่หน้ากาก' ตอนเริ่มต้นของโปรแกรมที่จะช่วยให้นินจาช้าลง
-        courseD_playLab_cond6_b: คุณจะต้องใช้ ' ถ้า ตัวละคร 1 ตามแนวแกนตั้ง > 255' บล็อกภายใน ' ทำซ้ำไปตลอดกาล ' บล็อกเพื่อตรวจสอบเสมอว่าโจรสลัดอยู่ต่ำกว่า เจ้าปลาหมึกหรือไม่.
+        courseD_playLab_cond6_b: คุณจะต้องใช้ ' ถ้า นักแสดง 1 ตามแนวแกนตั้ง > 255' บล็อกภายใน ' ทำซ้ำไปตลอดกาล ' บล็อกเพื่อตรวจสอบเสมอว่าโจรสลัดอยู่ต่ำกว่า เจ้าปลาหมึกหรือไม่.
         courseD_playLab_cond6_c: เพิ่ม ` รอ 1 วินาที `บล็อกไปยังด้านบนของ ลูป`ทำซ้ำไปตลอดกาล ` ที่ตรวจสอบตำแหน่งของเจ้าโจรสลัด (แต่ไม่อยู่ภายในคำสั่ง ` ถ้า` ) เพื่อไม่ให้คะแนนถูกลบออกอย่างรวดเร็วเกินไป.
       courseD_playLab_embed_cond6a_authored_hint: { }
       courseD_playLab_embedded_authored_hint: { }
@@ -10212,8 +10221,8 @@ th:
           </block></xml>
       courseE_artist_embed_functions8_authored_hint: { }
       courseE_artist_functions1_authored_hint:
-        courseE_artist_functions1_a: The squares each have 100 pixel sides, that means that you will have to move forward 175 pixels before drawing your second square.
-        courseE_artist_functions1_b: It is okay to draw overlapping lines to make your glasses.
+        courseE_artist_functions1_a: กรอบสี่เหลี่ยมแต่ละกรอบมีด้าน ๑๐๐ พิกเซล, นั่นหมายความว่าคุณจะต้องเคลื่อนที่ไปข้างหน้า 175 พิกเซลก่อนที่จะวาดกรอบแว่นอันที่สองของคุณ.
+        courseE_artist_functions1_b: โอเคที่จะวาดเส้นทับซ้อนกันเพื่อทำแว่นตาของคุณ
         courseE_artist_functions1_c: For shorter code, try using a `repeat` loop to draw the square frames of the glasses.
       courseE_artist_functions10_authored_hint:
         courseD_artist_functions10_b: This drawing is a lot like the last one, but the `draw line` function is now drawing a different shape.
@@ -10230,29 +10239,31 @@ th:
           
           ![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)
       courseE_artist_functions1_2018_authored_hint:
-        courseE_artist_functions1_a: The squares each have 100 pixel sides, that means that you will have to move forward 175 pixels before drawing your second square.
-        courseE_artist_functions1_b: It is okay to draw overlapping lines to make your glasses.
+        courseE_artist_functions1_a: กรอบสี่เหลี่ยมแต่ละกรอบมีด้าน ๑๐๐ พิกเซล, นั่นหมายความว่าคุณจะต้องเคลื่อนที่ไปข้างหน้า 175 พิกเซลก่อนที่จะวาดกรอบแว่นอันที่สองของคุณ.
+        courseE_artist_functions1_b: โอเคที่จะวาดเส้นทับซ้อนกันเพื่อทำแว่นตาของคุณ
         courseE_artist_functions1_c: For shorter code, try using a `repeat` loop to draw the square frames of the glasses.
       courseE_artist_functions2_authored_hint:
         courseD_artist_functions2_b: The function you write should not contain your whole program, just the part that draws a square with 100 pixel sides.
         courseD_artist_functions2_c: |-
           Use the green `draw a square` block to "call" your function under the `when run` block. Otherwise, the code in your function will not run.
           <xml><block type="procedures_callnoreturn" limit="2"><mutation name="draw a square"/></block></xml>
-        courseD_artist_functions2_a: |-
-          Your program should:
-          - Use function
-          - Move forward 100 + 75 pixels
-          - Use function
+        courseD_artist_functions2_a: |2
+          โปรแกรมของคุณควร:
+          
+           - ใช้ฟังก์ชัน
+           - ย้ายไปข้างหน้า 100+75 พิกเซล
+           - ใช้ฟังก์ชัน
       courseE_artist_functions2_2018_authored_hint:
         courseD_artist_functions2_b: The function should not contain your whole program, just the part that draws a square with 100 pixel sides.
         courseD_artist_functions2_c: |-
           Make sure that you use the green `draw a square` block to "call" your function. Otherwise, the code in your function will not run.
           <xml><block type="procedures_callnoreturn" limit="2"><mutation name="draw a square"/></block></xml>
-        courseD_artist_functions2_a: |-
-          Your program should:
-          - Use function
-          - Move forward 100 + 75 pixels
-          - Use function
+        courseD_artist_functions2_a: |2
+          โปรแกรมของคุณควร:
+          
+           - ใช้ฟังก์ชัน
+           - ย้ายไปข้างหน้า 100+75 พิกเซล
+           - ใช้ฟังก์ชัน
       courseE_artist_functions3_authored_hint:
         courseD_artist_functions3_a: |-
           To solve this puzzle, you just need to add a  loop that repeats the starter code 8 times.
@@ -10404,7 +10415,7 @@ th:
       courseE_artist_predict1_2018_authored_hint: { }
       courseE_artist_ramp10_authored_hint:
         courseD_artist_ramp10_a: Don't forget to turn by 60 degrees after each triangle.  Which loop do you need to put that instruction inside?
-        courseD_artist_ramp10_b: You can use the drop down menu on the `turn` blocks to see which angle you need!
+        courseD_artist_ramp10_b: คุณสามารถใช้เมนูดรอปดาวน์บนบล็อก ' เลี้ยว' เพื่อเลือกดูมุมที่คุณต้องการใช้!
         courseD_artist_ramp10_c: |-
           The artist will draw six triangles in total:
           
@@ -10447,19 +10458,19 @@ th:
         courseE_artist_ramp8_c: 'Your loop should have two blocks inside of it: `move forward` and `turn right by 90 degrees`.'
       courseE_artist_ramp9_authored_hint:
         courseD_artist_ramp12_a: How is this similar to a square?  How is it different?
-        courseD_artist_ramp12_b: You can use the drop down menu on the `turn` blocks to see which angle you need!
+        courseD_artist_ramp12_b: คุณสามารถใช้เมนูดรอปดาวน์บนบล็อก ' เลี้ยว' เพื่อเลือกดูมุมที่คุณต้องการใช้!
         courseD_artist_ramp12_c: To draw each side, you will need to move forward 100 pixels, then turn right 120 degrees. How many sides do you need?
       courseE_artist_ramp9_2_authored_hint:
         courseD_artist_ramp12_a: How is this similar to a square?  How is it different?
-        courseD_artist_ramp12_b: You can use the drop down menu on the `turn` blocks to see which angle you need!
+        courseD_artist_ramp12_b: คุณสามารถใช้เมนูดรอปดาวน์บนบล็อก ' เลี้ยว' เพื่อเลือกดูมุมที่คุณต้องการใช้!
         courseD_artist_ramp12_c: To draw each side, you will need to move forward 100 pixels, then turn right 120 degrees. How many sides do you need?
       courseE_artist_ramp9_2018_authored_hint:
         courseD_artist_ramp12_a: How is this similar to a square?  How is it different?
-        courseD_artist_ramp12_b: You can use the drop down menu on the `turn` blocks to see which angle you need!
+        courseD_artist_ramp12_b: คุณสามารถใช้เมนูดรอปดาวน์บนบล็อก ' เลี้ยว' เพื่อเลือกดูมุมที่คุณต้องการใช้!
         courseD_artist_ramp12_c: To draw each side, you will need to move forward 100 pixels, then turn right 120 degrees. How many sides do you need?
       courseE_artist_ramp9_2_2018_authored_hint:
         courseD_artist_ramp12_a: How is this similar to a square?  How is it different?
-        courseD_artist_ramp12_b: You can use the drop down menu on the `turn` blocks to see which angle you need!
+        courseD_artist_ramp12_b: คุณสามารถใช้เมนูดรอปดาวน์บนบล็อก ' เลี้ยว' เพื่อเลือกดูมุมที่คุณต้องการใช้!
         courseD_artist_ramp12_c: To draw each side, you will need to move forward 100 pixels, then turn right 120 degrees. How many sides do you need?
       courseE_bee_concept1_authored_hint:
         courseE_bee_concept1_b: Are there any patterns that *repeat* here?
@@ -10558,23 +10569,23 @@ th:
         courseE_bee_functions5_c: The `move forward` block can be changed into a `move backward` block. Use this instead of turning all the way around at the end of the paths!
         courseE_bee_functions5_b: "Your function should make the bee: \n- turn\n- move forward\n- collect all of the nectar\n- move backward\n- turn back to the direction that the bee started from"
       courseE_bee_functions6_authored_hint:
-        courseE_bee_functions6_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        courseE_bee_functions6_a: "หากปริศนาดูเหมือนว่าจะท้าทายเกินไป ให้ลองสร้างฟังก์ชั่นทีละเล็กทีละน้อยในแต่ละครั้ง  \n\nเพิ่มบล็อกบางอย่างแล้วลองเอาออก เพิ่มใหม่แล้วลองอีกครั้ง  ในไม่ช้า คุณจะได้รับความสำเร็จ!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
         courseE_bee_functions6_b: It might help in this case to move inside of the function, but not all of your `move` blocks need to be there.
       courseE_bee_functions6_2018_authored_hint:
-        courseE_bee_functions6_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        courseE_bee_functions6_a: "หากปริศนาดูเหมือนว่าจะท้าทายเกินไป ให้ลองสร้างฟังก์ชั่นทีละเล็กทีละน้อยในแต่ละครั้ง  \n\nเพิ่มบล็อกบางอย่างแล้วลองเอาออก เพิ่มใหม่แล้วลองอีกครั้ง  ในไม่ช้า คุณจะได้รับความสำเร็จ!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
         courseE_bee_functions6_b: It might help in this case to move inside of the function, but not all of your `move` blocks need to be there.
       courseE_bee_functions6test_authored_hint:
-        courseE_bee_functions6_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        courseE_bee_functions6_a: "หากปริศนาดูเหมือนว่าจะท้าทายเกินไป ให้ลองสร้างฟังก์ชั่นทีละเล็กทีละน้อยในแต่ละครั้ง  \n\nเพิ่มบล็อกบางอย่างแล้วลองเอาออก เพิ่มใหม่แล้วลองอีกครั้ง  ในไม่ช้า คุณจะได้รับความสำเร็จ!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
         courseE_bee_functions6_b: It might help in this case to move inside of the function, but not all of your `move` blocks need to be there.
       courseE_bee_functions7_authored_hint:
-        courseE_bee_functions7_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions7_a: "หากปริศนาดูเหมือนว่าจะท้าทายเกินไป ให้ลองสร้างฟังก์ชั่นทีละเล็กทีละน้อยในแต่ละครั้ง  \n\nเพิ่มบล็อกบางอย่างแล้วลองเอาออก เพิ่มใหม่แล้วลองอีกครั้ง  ในไม่ช้า คุณจะได้รับความสำเร็จ!"
         courseE_bee_functions7_b: |-
           Remember to build your code inside of the green function block.
           
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
         courseE_bee_functions7_c: This function should turn the bee to head him down the path, collect the nectar, make the honey, then turn the bee around and bring him back.
       courseE_bee_functions7_2018_authored_hint:
-        courseE_bee_functions7_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions7_a: "หากปริศนาดูเหมือนว่าจะท้าทายเกินไป ให้ลองสร้างฟังก์ชั่นทีละเล็กทีละน้อยในแต่ละครั้ง  \n\nเพิ่มบล็อกบางอย่างแล้วลองเอาออก เพิ่มใหม่แล้วลองอีกครั้ง  ในไม่ช้า คุณจะได้รับความสำเร็จ!"
         courseE_bee_functions7_b: |-
           Remember to build your code inside of the green function block.
           
@@ -10595,16 +10606,16 @@ th:
         courseE_bee_functions9_a: You can use the exact same function for this puzzle as you did in the last puzzle.  All you need to do is create a function that collects all of the nectar when you get to each flower.
         courseE_bee_functions9_b: Even though you know how much nectar some of the flowers have, a `while` loop can make one function work for all of them.
       courseE_bee_functions_challenge1_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: "หากปริศนาดูเหมือนว่าจะท้าทายเกินไป ให้ลองสร้างฟังก์ชั่นทีละเล็กทีละน้อยในแต่ละครั้ง  \n\nเพิ่มบล็อกบางอย่างแล้วลองเอาออก เพิ่มใหม่แล้วลองอีกครั้ง  ในไม่ช้า คุณจะได้รับความสำเร็จ!"
         courseE_bee_functions_challenge1_b: Remember to build your code inside of the green function block.
       courseE_bee_functions_challenge1_2018_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: "หากปริศนาดูเหมือนว่าจะท้าทายเกินไป ให้ลองสร้างฟังก์ชั่นทีละเล็กทีละน้อยในแต่ละครั้ง  \n\nเพิ่มบล็อกบางอย่างแล้วลองเอาออก เพิ่มใหม่แล้วลองอีกครั้ง  ในไม่ช้า คุณจะได้รับความสำเร็จ!"
         courseE_bee_functions_challenge1_b: Remember to build your code inside of the green function block.
       courseE_bee_functions_challenge2_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: "หากปริศนาดูเหมือนว่าจะท้าทายเกินไป ให้ลองสร้างฟังก์ชั่นทีละเล็กทีละน้อยในแต่ละครั้ง  \n\nเพิ่มบล็อกบางอย่างแล้วลองเอาออก เพิ่มใหม่แล้วลองอีกครั้ง  ในไม่ช้า คุณจะได้รับความสำเร็จ!"
         courseE_bee_functions_challenge1_b: Remember to build your code inside of the green function block.
       courseE_bee_functions_challenge2_2018_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: "หากปริศนาดูเหมือนว่าจะท้าทายเกินไป ให้ลองสร้างฟังก์ชั่นทีละเล็กทีละน้อยในแต่ละครั้ง  \n\nเพิ่มบล็อกบางอย่างแล้วลองเอาออก เพิ่มใหม่แล้วลองอีกครั้ง  ในไม่ช้า คุณจะได้รับความสำเร็จ!"
         courseE_bee_functions_challenge1_b: Remember to build your code inside of the green function block.
       courseE_bee_ramp14_authored_hint:
         courseE_bee_ramp14_a: The bee works just like the farmer in the previous puzzle. Buzz along the path and collect nectar while there is nectar (while nectar > 0) and make all of the honey.
@@ -11958,11 +11969,11 @@ th:
         courseF_artist_ramp8_c: Your turn will also go inside of the <xml><block type="controls_repeat"><title name="TIMES">3</title></block></xml> loop.
       courseF_artist_ramp9_authored_hint:
         courseF_artist_ramp9_a: How is this similar to a square?  How is it different?
-        courseF_artist_ramp9_b: You can use the drop down menu on the turn blocks to see which angle you need!
+        courseF_artist_ramp9_b: คุณสามารถใช้เมนูดรอปดาวน์บนบล็อก ' เลี้ยว' เพื่อเลือกดูมุมที่คุณต้องการใช้!
         courseF_artist_ramp9_c: You will want to move forward 100 pixels, then turn right 120 degrees for each side. Can you use a <xml><block type="controls_repeat"><title name="TIMES">3</title></block></xml> loop to make your code shorter?
       courseF_artist_ramp9_2018_authored_hint:
         courseF_artist_ramp9_a: How is this similar to a square?  How is it different?
-        courseF_artist_ramp9_b: You can use the drop down menu on the turn blocks to see which angle you need!
+        courseF_artist_ramp9_b: คุณสามารถใช้เมนูดรอปดาวน์บนบล็อก ' เลี้ยว' เพื่อเลือกดูมุมที่คุณต้องการใช้!
         courseF_artist_ramp9_c: You will want to move forward 100 pixels, then turn right 120 degrees for each side. Can you use a <xml><block type="controls_repeat"><title name="TIMES">3</title></block></xml> loop to make your code shorter?
       courseF_artist_variables10_authored_hint:
         courseF_artist_variables10_a: Have fun with this level! See what little changes can do to your code.
@@ -13003,11 +13014,11 @@ th:
         courseF_bee_functions5a_b: Use a `while` loop to travel down all of the main paths, since they are different lengths.
         courseF_bee_functions5a_c: Within your `while` loop, make sure to move forward, then use your function to check for a path.
       courseF_bee_functions6_authored_hint:
-        courseF_bee_functions6_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\n\n\n<xml>\n  <block type=\"procedures_defnoreturn\" editable=\"false\">\n    <mutation/>\n    <title name=\"NAME\">get nectar make honey</title>\n    <statement name=\"STACK\">\n\n    </statement>\n  </block>\n</xml>"
+        courseF_bee_functions6_a: "หากปริศนาดูเหมือนว่าจะท้าทายเกินไป ให้ลองสร้างฟังก์ชั่นทีละเล็กทีละน้อยในแต่ละครั้ง  \n\nเพิ่มบล็อกบางอย่างแล้วลองเอาออก เพิ่มใหม่แล้วลองอีกครั้ง  ในไม่ช้า คุณจะได้รับความสำเร็จ!\n<xml>\n  <block type=\"procedures_defnoreturn\" editable=\"false\">\n    <mutation/>\n    <title name=\"NAME\">get nectar make honey</title>\n    <statement name=\"STACK\">\n\n    </statement>\n  </block>\n</xml>"
         courseF_bee_functions6_b: Your function should check if there is a flower or honeycomb, get nectar or make honey, then turn.
         courseF_bee_functions6_c: Since you are turning within your function, you only need one `while` loop to get you through this maze.
       courseF_bee_functions6_2018_authored_hint:
-        courseF_bee_functions6_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        courseF_bee_functions6_a: "หากปริศนาดูเหมือนว่าจะท้าทายเกินไป ให้ลองสร้างฟังก์ชั่นทีละเล็กทีละน้อยในแต่ละครั้ง  \n\nเพิ่มบล็อกบางอย่างแล้วลองเอาออก เพิ่มใหม่แล้วลองอีกครั้ง  ในไม่ช้า คุณจะได้รับความสำเร็จ!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
         courseF_bee_functions6_b: Your function should check if there is a flower or honeycomb, get nectar or make honey, then turn.
         courseF_bee_functions6_c: Since you are turning within your function, you only need one `while` loop to get you through this maze.
       courseF_bee_functions7_authored_hint:
@@ -13017,13 +13028,13 @@ th:
         courseF_bee_functions7_a: You can look back at the last puzzle to see your function.
         courseF_bee_functions7_b: Try drawing a path through this maze with your finger. Where will the bee have to make a decision?
       courseF_bee_functions8a_authored_hint:
-        courseF_bee_functions8a_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseF_bee_functions8a_a: "หากปริศนาดูเหมือนว่าจะท้าทายเกินไป ให้ลองสร้างฟังก์ชั่นทีละเล็กทีละน้อยในแต่ละครั้ง  \n\nเพิ่มบล็อกบางอย่างแล้วลองเอาออก เพิ่มใหม่แล้วลองอีกครั้ง  ในไม่ช้า คุณจะได้รับความสำเร็จ!"
         courseF_bee_functions8a_b: "Remember to build code inside of the function editor.\n\n"
       courseF_bee_functions8a_2018_authored_hint:
-        courseF_bee_functions8a_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseF_bee_functions8a_a: "หากปริศนาดูเหมือนว่าจะท้าทายเกินไป ให้ลองสร้างฟังก์ชั่นทีละเล็กทีละน้อยในแต่ละครั้ง  \n\nเพิ่มบล็อกบางอย่างแล้วลองเอาออก เพิ่มใหม่แล้วลองอีกครั้ง  ในไม่ช้า คุณจะได้รับความสำเร็จ!"
         courseF_bee_functions8a_b: "Remember to build code inside of the function editor.\n\n"
       courseF_bee_functionsPre7_authored_hint:
-        courseF_bee_functions7_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseF_bee_functions7_a: "หากปริศนาดูเหมือนว่าจะท้าทายเกินไป ให้ลองสร้างฟังก์ชั่นทีละเล็กทีละน้อยในแต่ละครั้ง  \n\nเพิ่มบล็อกบางอย่างแล้วลองเอาออก เพิ่มใหม่แล้วลองอีกครั้ง  ในไม่ช้า คุณจะได้รับความสำเร็จ!"
         courseF_bee_functions7_b: |
           Remember to build code inside of the green function block.
           
@@ -13038,7 +13049,7 @@ th:
           </xml>
         courseF_bee_functions7_c: Which way should you turn if there is a honeycomb? What about a flower? What if there is nothing?
       courseF_bee_functionsPre7_2018_authored_hint:
-        courseF_bee_functions7_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseF_bee_functions7_a: "หากปริศนาดูเหมือนว่าจะท้าทายเกินไป ให้ลองสร้างฟังก์ชั่นทีละเล็กทีละน้อยในแต่ละครั้ง  \n\nเพิ่มบล็อกบางอย่างแล้วลองเอาออก เพิ่มใหม่แล้วลองอีกครั้ง  ในไม่ช้า คุณจะได้รับความสำเร็จ!"
         courseF_bee_functions7_b: |-
           Remember to build code inside of the green function block.
           
@@ -13276,7 +13287,7 @@ th:
           </block>
           </xml>
       courseF_bee_functions_challenge2_recursion_authored_hint:
-        courseF_bee_functions8a_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseF_bee_functions8a_a: "หากปริศนาดูเหมือนว่าจะท้าทายเกินไป ให้ลองสร้างฟังก์ชั่นทีละเล็กทีละน้อยในแต่ละครั้ง  \n\nเพิ่มบล็อกบางอย่างแล้วลองเอาออก เพิ่มใหม่แล้วลองอีกครั้ง  ในไม่ช้า คุณจะได้รับความสำเร็จ!"
         courseF_bee_functions8a_b: "Remember to build code inside of the function editor.\n\n"
       courseF_bee_fwp1_authored_hint:
         courseF_bee_fwp1_a: Use `if` statements to make sure you're only getting nectar from a flower.
@@ -14479,7 +14490,7 @@ th:
       grade1_adventurer_loops9_authored_hint:
         grade1_adventurer_loops9_a: 'Does this seem too hard?  Break it up into 4 little problems to make it feel easier.  '
       grade1_artist_loops1_authored_hint:
-        grade1_artist_loops1_a: If you want the loop to repeat more than 4 times, you can change the number at the top of the block.
+        grade1_artist_loops1_a: ถ้าคุณต้องการให้ลูปซ้ำมากกว่า 4 ครั้งคุณสามารถเปลี่ยนหมายเลขที่ด้านบนของบล็อกได้
       grade1_artist_loops2_authored_hint:
         grade1_artist_loops2_a: Remember to use a `repeat` loop for better code!
       grade1_artist_loops3_authored_hint: { }
@@ -14552,20 +14563,20 @@ th:
       grade2_CaringForNewPet_7D_authored_hint:
         grade2_CaringForNewPet_7D_a: Don't forget to use the "Step" button to go through block by block and look for errors.
       grade2_MakeDogTag_1_authored_hint:
-        2-3_Artist_1_new_a: หากคุณใช้บล็อก "ย้ายไปด้านหน้า100 พิกเซล" ฉันก็จะวาดเส้นให้โดยอัตโนมัติ
-        2-3_Artist_1_new_b: มีปัญหากับการเลี้ยวหัวมุมหรือเปล่า? ให้ใช้ปุ่ม 'เลี้ยวขวา 90 องศา'
+        2-3_Artist_1_new_a: หากคุณใช้บล็อก "ย้ายไปด้านหน้า 100 พิกเซล" ฉันก็จะวาดเส้นให้หนึ่งเส้นโดยอัตโนมัติ
+        2-3_Artist_1_new_b: มีปัญหากับการเลี้ยวที่หัวมุมหรือเปล่า? ให้ใช้ปุ่ม `หันขวาไป 90 องศา`
       grade2_MakeDogTag_2_authored_hint:
         2-3_Artist_2_new_a: To create this window, just draw a square with 100 pixel sides.
       grade2_MakeDogTag_3_authored_hint:
-        2-3_Artist_4_a: To finish the rocket, just draw the triangle on top!
+        2-3_Artist_4_a: เพื่อให้เสร็จสิ้นการวาดจรวด เพียงแค่คุณวาดรูปสามเหลี่ยมไว้ด้านบน!
       grade2_MakeDogTag_4_authored_hint: { }
       grade2_MakeDogTag_5_authored_hint:
-        grade2_MakeDogTag_5a: The artist is already facing the correct way to draw his first line.
-        grade2_MakeDogTag_5b: This diamond is really just a square that's standing on its corner.
-        grade2_MakeDogTag_5c: Since this diamond is also a square, be sure to turn 90 degrees at the corners.
+        grade2_MakeDogTag_5a: ศิลปินได้หันหน้าไปทางที่ถูกต้องแล้ว เพื่อที่จะวาดเส้นแรกของเขา
+        grade2_MakeDogTag_5b: ทรงรูปเพชรนี้เป็นเพียงสี่เหลี่ยมจตุรัสที่ตั้งอยู่บนมุมของมันเอง
+        grade2_MakeDogTag_5c: เนื่องจากรูปทรงเพชรนี้ยังเป็นสี่เหลี่ยมจตุรัสอีกด้วย อย่าลืมหัน 90 องศาที่มุม
       grade2_MakeDogTag_6_authored_hint:
-        grade2_MakeDogTag_6a: Every angle is either 45 or 90 degrees.
-        grade2_MakeDogTag_6b: "Does it work at the first step?  \nHow about the second?  \nWhere does it go wrong?"
+        grade2_MakeDogTag_6a: ทุกมุมไม่ 45 ก็ 90 องศา
+        grade2_MakeDogTag_6b: "มันทำงานขั้นตอนแรกไหม?  \nขั้นตอนที่สองทำงานไหม?  \nผิดตรงไหน?"
       grade2_MakeDogTag_7_authored_hint:
         2-3_Artist_11_a: The exterior angles on this triangle are 120 degrees each.
       grade2_MakeDogTag_9_authored_hint:
@@ -14590,10 +14601,10 @@ th:
         hint1: The best solution uses two `move forward` commands and one loop.
       grade2_PuppyLoops_6_authored_hint:
         2-3_Maze_16_a: ถ้ามองไม่เห็นรูปแบบที่ชัดเจน ก็ให้ลองเขียนโค้ดออกมาดูก่อน และดูว่ามีอะไรที่มีการทำซ้ำแล้วซ้ำอีก ก่อนที่คุณจะรวมมันเอาเข้าไปไว้ในลูป
-        2-3_Maze_16_b: "To put lots of blocks inside a `repeat` loop, just drag a loop out into the workspace, then drag all of the blocks from the starting program inside of it.  \n\nConnect it all back to the `when run` block and you're good to go!"
+        2-3_Maze_16_b: "เมื่อต้องการใส่บล็อกจำนวนมากไว้ภายในลูป `ทำซ้ำ`ก็เพียงแค่ลากลูปออกไปไว้ในพื้นที่ทำงานแล้วลากบล็อกทั้งหมดจากโปรแกรมตอนเริ่มต้นมาไว้ภายในลูป\n\nเชื่อมต่อทั้งหมดเข้าไปกับบล็อก `เมื่อเรียกใช้งาน` ก็จะถือได้ว่าคุณพร้อมแล้ว!"
       grade2_PuppyLoops_7_authored_hint:
         2-3_Maze_Loops_17_a: ถ้ามองไม่เห็นรูปแบบที่ชัดเจน ก็ให้ลองเขียนโค้ดออกมาดูก่อน และดูว่ามีอะไรที่มีการทำซ้ำแล้วซ้ำอีก ก่อนที่คุณจะรวมมันเอาเข้าไปไว้ในลูป
-        2-3_Maze_Loops_17_b: Did the starting code get deleted?  Click `start over` to get it back!
+        2-3_Maze_Loops_17_b: โค้ดเริ่มต้นถูกลบหรือเปล่า? คลิก`เริ่มเล่นใหม่`ก็จะได้มันกลับคืนมา!
       grade2_PuppyLoops_8_authored_hint:
         2-3_Artist_Debugging_2_a: 'บอกใบ้: หนวดแมวแต่ละเส้นมีความยาว 75 พิกเซล'
       grade2_PuppyLoops_9_authored_hint:
@@ -14607,23 +14618,19 @@ th:
         hint_1: Connect a "move forward" block to the bottom of the program.
       grade2_playlab_project_6_authored_hint:
         idea1: |-
-          *Need an idea?*
+          * ต้องการไอเดียหรือไม่? *
           
-          **Who's there?** Make characters appear with random images, so no one knows who's showing up next.
-          
-          ![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)
+          ** ใครน่ะ? ** ทำให้ผู้แสดงปรากฏขึ้นด้วยภาพแบบสุ่ม ดังนั้นไม่มีใครรู้ว่าผู้ที่แสดงคนต่อไปจะเป็นใคร
         idea2: |-
-          *Need an idea?*
+          * ต้องการไอเดียหรือไม่? *
           
-          **Going on an Adventure** - Change the background, then have the characters talk about where they are now.
-          
-          ![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)
+          ** ไปผจญภัยกัน **-เปลี่ยนพื้นหลังแล้วมีผู้เล่นพูดเกี่ยวกับว่าตอนนี้พวกเขาอยู่ที่ไหน
         idea3: |-
           *Need an idea?*
           
           **Pinball** - Make one character move using the arrow keys (use `when up arrow`, `when down arrow` blocks), then play random sounds when it collides with other characters on the screen.
       grade2_puppy_loops2_authored_hint:
-        hint1: You can solve this puzzle with just three blocks, including `when run`.
+        hint1: คุณสามารถแก้ปริศนานี้ โดยใช้เพียงสามบล็อกที่รวมทั้งบล็อกเมื่อเรียกใช้งานไว้ด้วย
         hint2: Try putting the `move forward` block inside of a `repeat` block to create a loop.
         hint3: You need to repeat the `move forward` command 5 times to solve this puzzle.
       grade2_puppy_loops3_authored_hint:
@@ -14632,13 +14639,13 @@ th:
         hint3: Place a `move forward` block inside the `repeat block`.
       grade2_puppy_loops4_authored_hint:
         hint1: Not all command blocks should be repeated.
-        hint2: Use two `repeat` blocks set to different numbers.
+        hint2: ใช้บล็อก `ทำซ้ำ`สองชุด แต่ตั้งตัวเลขที่แตกต่างกัน
         hint3: "`Turn right` once between the two loops."
       grade2_puppy_loops5_authored_hint:
         hint1: The best solution uses two `move forward` commands and one loop.
       grade2_puppy_loops6_authored_hint:
         2-3_Maze_16_a: ถ้ามองไม่เห็นรูปแบบที่ชัดเจน ก็ให้ลองเขียนโค้ดออกมาดูก่อน และดูว่ามีอะไรที่มีการทำซ้ำแล้วซ้ำอีก ก่อนที่คุณจะรวมมันเอาเข้าไปไว้ในลูป
-        2-3_Maze_16_b: "To put lots of blocks inside a `repeat` loop, just drag a loop out into the workspace, then drag all of the blocks from the starting program inside of it.  \n\nConnect it all back to the `when run` block and you're good to go!"
+        2-3_Maze_16_b: "เมื่อต้องการใส่บล็อกจำนวนมากไว้ภายในลูป `ทำซ้ำ`ก็เพียงแค่ลากลูปออกไปไว้ในพื้นที่ทำงานแล้วลากบล็อกทั้งหมดจากโปรแกรมตอนเริ่มต้นมาไว้ภายในลูป\n\nเชื่อมต่อทั้งหมดเข้าไปกับบล็อก `เมื่อเรียกใช้งาน` ก็จะถือได้ว่าคุณพร้อมแล้ว!"
       grade2_puppy_loops7_authored_hint:
         2-3_Maze_Loops_17_a: ถ้ามองไม่เห็นรูปแบบที่ชัดเจน ก็ให้ลองเขียนโค้ดออกมาดูก่อน และดูว่ามีอะไรที่มีการทำซ้ำแล้วซ้ำอีก ก่อนที่คุณจะรวมมันเอาเข้าไปไว้ในลูป
       grade3_ConditionalsElse_4_authored_hint:
@@ -14662,16 +14669,13 @@ th:
       grade3_Conditionals_TeacherIDo_authored_hint:
         2-3_Bee_Conditionals_6_a: 'Remember: Purple flowers change between 0 and 1 nectar when you run your program!'
       grade3_Debugging_1_authored_hint:
-        2-3_Bee_Debugging_1_a: Once you find and fix the incorrect block, do you see any patterns that could be made more simple using a `repeat` loop?
+        2-3_Bee_Debugging_1_a: เมื่อคุณค้นหาและแก้ไขบล็อกที่ไม่ถูกต้องนั้น คุณเห็นรูปแบบใดๆที่สามารถทำได้ง่ายขึ้นโดยใช้ลูป `ทำซ้ำ`ไหม?
       grade3_Debugging_10_authored_hint:
         grade3_Debugging_10_a: |-
-          Start by looking at just the first loop.
-          
-          What does it do?
-          
-          What is it supposed to do?
-          
-          What does that tell you?
+          เริ่มด้วยการดูแค่ลูปแรก
+          โค้ดทำอะไรได้บ้าง
+          มันควรจะทำอะไร?
+          มันบอกอะไรแก่คุณ?
         grade3_Debugging_10_b: Once you have the first loop the way you want it, what is left over in your code?
         grade3_Debugging_10_c: |-
           Try wrapping the leftover loop around the rest of your completed code.  Does is work now?
@@ -14708,27 +14712,27 @@ th:
         grade3_Debugging_8_a: "Try using the debugging process a couple of times in a row. \n\nWhat causes the first problem?\n\nOnce that problem is fixed, what goes wrong?"
         grade3_Debugging_8_b: "If you're having a hard time figuring out how to make the stair step pattern, try tracing it with your finger and saying the commands out loud. \n\nDon't forget to point out the direction of the turns!"
       grade3_Debugging_TeacherIDo_authored_hint:
-        2-3_Bee_Debugging_4_a: Is there any place where the bee does something that doesn't make sense? What happens when you change that block?
+        2-3_Bee_Debugging_4_a: มีที่ไหนอีกไหมที่ผึ้งทำอะไรที่ไม่เข้าท่า? จะเกิดอะไรขึ้นเมื่อคุณเปลี่ยนบล็อกนั้น?
       grade3_Loops_10_authored_hint:
-        2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
+        2-3_Bee_Loops_4_a: คุณควรจบด้วย บล็อก 5 บล็อกอยู่ภายในลูปของคุณ
       grade3_Loops_11_authored_hint:
-        2-3_Bee_Loops_5_a: If you can't spot the blocks to put inside `repeat` right away, start by coding out each move and look for a pattern.
+        2-3_Bee_Loops_5_a: หากคุณไม่สามารถบอกได้ว่าบล็อกใดที่จะใส่ภายใน `ทำซ้ำ`ได้ทันที ให้เริ่มต้นด้วยการเขียนโค้ดออกมาทีละขั้นและมองหารูปแบบ.
       grade3_Loops_12_authored_hint:
-        2-3_Bee_Loops_6_a: If you can't tell what should go into the `repeat` loop, try dragging blocks out one by one and see if you can find a pattern.
-        2-3_Bee_Loops_6_b: There should be 6 blocks inside your `repeat` loop when you're done.
+        2-3_Bee_Loops_6_a: ถ้าคุณไม่สามารถบอกได้ว่าอะไรควรไปที่ลูป `ทำซ้ำ`ให้ลองลากบล็อกออกมาทีละรายการและดูว่าคุณสามารถค้นหารูปแบบได้หรือไม่?
+        2-3_Bee_Loops_6_b: ควรมีบล็อก 6 บล็อกอยู่ภายในลูป `ทำซ้ำ`ของคุณเมื่อคุณทำเสร็จ
       grade3_Loops_4_authored_hint:
-        2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after the other.
+        2-3_Bee_Loops_3B_a: คุณจะต้องใช้ลูป`ทำซ้ำ`ที่แตกต่างกันสองลูป โดยวางลูปหนึ่งตามอีกลูปหนึ่ง
       grade3_Loops_5_authored_hint:
-        2-3_Bee_Loops_7_a: The first action will be a turn, rather than a move.
-        2-3_Bee_Loops_7_b: 'If you can''t quite picture the loop from the beginning, try coding it out the long way, then look for a pattern.  '
+        2-3_Bee_Loops_7_a: ภารกิจแรกคือการหันไป ไม่ใช่การเคลื่อนไหว
+        2-3_Bee_Loops_7_b: 'ถ้าคุณไม่สามารถวาดภาพลูปไว้ในหัวได้ตั้งแต่แรก ลองเขียนโค้ดออกมาแบบเต็มรูปก่อน แล้วมองหารูปแบบ  '
       grade3_Loops_6_authored_hint:
-        2-3_Bee_Loops_4A_a: The first action will be a turn, rather than a move.
-        2-3_Bee_Loops_4A_b: The last piece of the program can be finished by writing code at the end of your program outside of your loop.
-        2-3_Bee_Loops_4A_c: If you can't spot the loops yet, try coding it out the long way first, then see what you can combine into a `repeat` loop at the end.
+        2-3_Bee_Loops_4A_a: ภารกิจแรกคือการหันไป ไม่ใช่การเคลื่อนไหว
+        2-3_Bee_Loops_4A_b: ชิ้นสุดท้ายของโปรแกรมสามารถเสร็จสิ้นได้โดยการเขียนโค้ดไว้ที่ตอนท้ายของโปรแกรมของคุณ ให้อยู่ภายนอกลูปของคุณ
+        2-3_Bee_Loops_4A_c: ถ้าคุณไม่สามารถหาได้ว่าลูปควรจะอยู่ที่ไหน ให้ลองเขียนโค้ดออกมาแบบเต็มรูปก่อน แล้วดูว่าคุณสามารถรวมมันเข้าไปไว้ในลูป `ทำซ้ำ`ตอนท้าย
       grade3_Loops_8_authored_hint:
-        2-3_Bee_Loops_2_a: You should end up with four blocks inside your loop.
+        2-3_Bee_Loops_2_a: คุณควรจบการเขียนโค้ด ลงด้วยบล็อกสี่บล็อกอยู่ภายในลูปของคุณ
       grade3_Loops_9_authored_hint:
-        2-3_Bee_Loops_3_a: You should have 6 blocks inside your loop.
+        2-3_Bee_Loops_3_a: คุณควรมีบล็อก 6 บล็อกอยู่ภายในลูปของคุณ
       grade3_RunningFarm_1_authored_hint:
         grade3_RunningFarm_1_a: คุณต้องมองหาข้าวโพด 5 ครั้ง โดยใช้ลูปทำซ้ำ
         grade3_RunningFarm_1_b: ให้แน่ใจว่าได้ใช้บล็อก `ถ้า นี่คือข้าวโพด` ไม่อย่างนั้นคุณอาจจะพยายามเก็บบางอย่างที่ไม่ได้ปลูกอยู่ตรงนั้น
@@ -14797,9 +14801,9 @@ th:
         2-3_Maze_Loops_19_b: Nesting `repeat` loops can help decrease the number of blocks used.
         2-3_Maze_Loops_19_c: It will take two sets of nested `repeat` loops to solve this puzzle.
       grade3_maze_loops4_authored_hint:
-        2-3_Maze_Loops_20_a: Look for a stair-step pattern in this maze to find where a nested loop can be used.
+        2-3_Maze_Loops_20_a: มองหาขั้นตอนที่เป็นรูปแบบบันไดในเขาวงกตนี้ เพื่อค้นหาที่ที่สามารถนำเอาลูปซ้อนลูปมาใช้
       grade3_maze_loops5_authored_hint:
-        2-3_Maze_Loops_21_a: If you are having trouble finding the stair-step pattern, try covering the blocked paths with your finger.
+        2-3_Maze_Loops_21_a: หากคุณมีปัญหาในการมองเห็นขั้นตอนรูปแบบบันได ให้ลองปิดเส้นทางด้วยนิ้วของคุณ
       grade3_robotFarmer_ConditionalsIntro_10a_authored_hint: { }
       grade3_robotFarmer_ConditionalsIntro_11a_authored_hint: { }
       grade3_robotFarmer_ConditionalsIntro_5_authored_hint:
@@ -14834,14 +14838,15 @@ th:
       grade4_arist_nested_loop_triangles6_authored_hint:
         4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
       grade4_artist_functions1_authored_hint:
-        2-3_Artist_Functions_1_a: The squares each have 100 pixel sides, that means that you will have to move forward 175 pixels before drawing your second square.
-        2-3_Artist_Functions_1_b: It is okay to draw overlapping lines to make your glasses.
+        2-3_Artist_Functions_1_a: กรอบสี่เหลี่ยมแต่ละกรอบมีด้าน ๑๐๐ พิกเซล, นั่นหมายความว่าคุณจะต้องเคลื่อนที่ไปข้างหน้า 175 พิกเซลก่อนที่จะวาดกรอบแว่นอันที่สองของคุณ.
+        2-3_Artist_Functions_1_b: โอเคที่จะวาดเส้นทับซ้อนกันเพื่อทำแว่นตาของคุณ
       grade4_artist_functions2_authored_hint:
-        2-3_Artist_Functions_2_a: |-
-          Your program should:
-          - Use function
-          - Move forward 100 + 75 pixels
-          - Use function
+        2-3_Artist_Functions_2_a: |2
+          โปรแกรมของคุณควร:
+          
+           - ใช้ฟังก์ชัน
+           - ย้ายไปข้างหน้า 100+75 พิกเซล
+           - ใช้ฟังก์ชัน
       grade4_artist_functions2a_authored_hint:
         grade4_artist_functions2a_a: To get around using multiple `move forward` blocks, create a `draw triangle` function and call that multiple times.
       grade4_artist_functions3a_authored_hint:
@@ -14939,9 +14944,9 @@ th:
         grade4_bee_functions6_a: Edit the function so that it solves the puzzle without having to change the main program.
         grade4_bee_functions6_b: "Your function should make the bee: \n- turn\n- move forward\n- collect all of the nectar\n- turn around\n- move back to the main path\n- turn back to the direction that the bee started from"
       grade4_bee_functions7_authored_hint:
-        2-3_Bee_Functions_8_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        2-3_Bee_Functions_8_a: "หากปริศนาดูเหมือนว่าจะท้าทายเกินไป ให้ลองสร้างฟังก์ชั่นทีละเล็กทีละน้อยในแต่ละครั้ง  \n\nเพิ่มบล็อกบางอย่างแล้วลองเอาออก เพิ่มใหม่แล้วลองอีกครั้ง  ในไม่ช้า คุณจะได้รับความสำเร็จ!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
       grade4_bee_functions8_authored_hint:
-        2-3_Bee_Functions_8_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        2-3_Bee_Functions_8_a: "หากปริศนาดูเหมือนว่าจะท้าทายเกินไป ให้ลองสร้างฟังก์ชั่นทีละเล็กทีละน้อยในแต่ละครั้ง  \n\nเพิ่มบล็อกบางอย่างแล้วลองเอาออก เพิ่มใหม่แล้วลองอีกครั้ง  ในไม่ช้า คุณจะได้รับความสำเร็จ!"
         2-3_Bee_Functions_8_b: |-
           Remember to build your code inside of the green function block.
           
@@ -14975,18 +14980,18 @@ th:
       grade4_bee_nestedLoops5_authored_hint:
         grade4_bee_nestedLoops5_a: You will need 4 repeat blocks!
       grade4_review_artist1_authored_hint:
-        2-3_Artist_1_new_a: หากคุณใช้บล็อก "ย้ายไปด้านหน้า100 พิกเซล" ฉันก็จะวาดเส้นให้โดยอัตโนมัติ
-        2-3_Artist_1_new_b: มีปัญหากับการเลี้ยวหัวมุมหรือเปล่า? ให้ใช้ปุ่ม 'เลี้ยวขวา 90 องศา'
+        2-3_Artist_1_new_a: หากคุณใช้บล็อก "ย้ายไปด้านหน้า 100 พิกเซล" ฉันก็จะวาดเส้นให้หนึ่งเส้นโดยอัตโนมัติ
+        2-3_Artist_1_new_b: มีปัญหากับการเลี้ยวที่หัวมุมหรือเปล่า? ให้ใช้ปุ่ม `หันขวาไป 90 องศา`
       grade4_review_artist2_authored_hint:
         2-3_Artist_6_a: 'เพื่อที่จะสร้างมุมเล็ก ๆ เหล่านี้ คุณต้องหัน *ไปให้ไกลกว่านี้* แต่ละครั้งให้มากกว่าตอนที่คุณทำกับสี่เหลี่ยมจัตุรัส   '
         2-3_Artist_6_b: เนื่องจากตอนนี้หันไปทางขวาแล้ว จะง่ายกว่าถ้าเริ่มต้นด้วยการก้าวไปข้างหน้า แล้วหันซ้ายไปเพื่อสร้างรูปสามเหลี่ยม
-        2-3_Artist_6_c: Each side of the triangle is the same length as each side of the square...100 pixels!
+        2-3_Artist_6_c: ด้านแต่ละด้านของรูปสามเหลี่ยมมีความยาวเดียวกันกับด้านแต่ละด้านของสี่เหลี่ยมจตุรัส.... 100 พิกเซล!
       grade4_review_bee1_authored_hint:
-        2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after the other.
+        2-3_Bee_Loops_3B_a: คุณจะต้องใช้ลูป`ทำซ้ำ`ที่แตกต่างกันสองลูป โดยวางลูปหนึ่งตามอีกลูปหนึ่ง
       grade4_review_bee2_authored_hint:
-        2-3_Bee_Loops_3_a: You should have 6 blocks inside your loop.
+        2-3_Bee_Loops_3_a: คุณควรมีบล็อก 6 บล็อกอยู่ภายในลูปของคุณ
       grade4_review_bee3_authored_hint:
-        2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
+        2-3_Bee_Loops_4_a: คุณควรจบด้วย บล็อก 5 บล็อกอยู่ภายในลูปของคุณ
       grade5_artist_binary10_authored_hint:
         Course_4_Artist_Binary_Free_Play_2b_a: This code uses two `for loops`. One counts up from 1 to 8, the other counts down from 8 to 1.
         Course_4_Artist_Binary_Free_Play_2b_b: Each `for loop` has three repeats.  The first draws the leftmost set of 1s, the second draws the 0s in the middle and the third draws the 1s on the right.
@@ -15170,21 +15175,21 @@ th:
       gradek_adventurer_loops9_authored_hint:
         gradek_adventurer_loops9_a: If you can't figure out where to put the loops, try writing your code step-by-step and look for patterns.
       gradek_artist_loops1_authored_hint:
-        gradek_artist_loops1_a: Can't figure out how to draw a line?  Start attaching blocks to the `when run` block to see what happens.
+        gradek_artist_loops1_a: ไม่สามารถคิดออกว่าวิธีการวาดเส้นทำได้อย่างไร  เริ่มด้วยการต่อบล็อกเข้าไปกับบล็อกเรียก`เมื่อเรียกใช้งาน`  เพื่อ ดูว่าเกิดอะไรขึ้น`
       gradek_artist_loops2_authored_hint:
         gradek_artist_loops2_a: Is something not quite right?  Use the "Step" button to see where things go wrong.
       gradek_artist_loops3_authored_hint:
-        artistLoopsK2_a: If you want the loop to repeat more than 4 times, you can change the number at the top of the block.
+        artistLoopsK2_a: ถ้าคุณต้องการให้ลูปซ้ำมากกว่า 4 ครั้งคุณสามารถเปลี่ยนหมายเลขที่ด้านบนของบล็อกได้
       gradek_artist_loops4_authored_hint:
-        artistLoopsK3_a: Try using what you've learned about repeat blocks to complete this puzzle!
+        artistLoopsK3_a: ลองใช้สิ่งที่คุณได้เรียนรู้เกี่ยวกับการทำซ้ำบล็อกเพื่อทำให้ปริศนานี้เสร็จสมบูรณ์!
       gradek_artist_loops5_authored_hint:
         gradek_artist_loops5_a: Can't figure out how to make the hill?  Try playing with the blocks a bit to see what each one draws.
       gradek_artist_loops6_authored_hint:
-        gradek_artist_loops6_a: Can't figure out where to put the loop? Try writing the code step-by-step and look for a pattern.
+        gradek_artist_loops6_a: คิดไม่ออกว่าจะวางลูปไว้ที่ไหน? ลองเขียนโค้ดทีละขั้นตอนและค้นหารูปแบบดู
       gradek_artist_loops7_authored_hint:
-        gradek_artist_loops7_a: Try running the code to see what has been written for you.
-        gradek_artist_loops7_b: How would you loop the code that has been given to you?
-        gradek_artist_loops7_c: "What does the code do?  \nWhat is it supposed to do?  \nWhat does that tell you?"
+        gradek_artist_loops7_a: ลองเรียกใช้งานโค้ดเพื่อดูสิ่งที่ถูกเขียนขึ้นมาว่าทำอะไรให้คุณ
+        gradek_artist_loops7_b: คุณจะวนลูปโค้ดที่คุณได้รับมาอย่างไร
+        gradek_artist_loops7_c: "โค้ดทำอะไรได้บ้าง\nมันควรจะทำอะไร?\nมันบอกอะไรแก่คุณ?\n\n"
       gradek_artist_loops8_authored_hint:
         gradek_artist_loops8_a: 'You don''t have to delete everything!  Some of the code is good. Use it to build the rest of the stairs. '
       gradek_artist_loops9_authored_hint:
@@ -15301,25 +15306,25 @@ th:
         iceage_warn_ice_age_b: Add both new blocks beneath the `when run` event to have them happen immediately after the program starts.
       k1stickerfreeplay_authored_hint: { }
       level 'grade3_Loops_10_authored_hint:
-        2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
+        2-3_Bee_Loops_4_a: คุณควรจบด้วย บล็อก 5 บล็อกอยู่ภายในลูปของคุณ
       level 'grade3_Loops_11_authored_hint:
-        2-3_Bee_Loops_5_a: If you can't spot the blocks to put inside `repeat` right away, start by coding out each move and look for a pattern.
+        2-3_Bee_Loops_5_a: หากคุณไม่สามารถบอกได้ว่าบล็อกใดที่จะใส่ภายใน `ทำซ้ำ`ได้ทันที ให้เริ่มต้นด้วยการเขียนโค้ดออกมาทีละขั้นและมองหารูปแบบ.
       level 'grade3_Loops_12_authored_hint:
-        2-3_Bee_Loops_6_a: If you can't tell what should go into the `repeat` loop, try dragging blocks out one by one and see if you can find a pattern.
-        2-3_Bee_Loops_6_b: There should be 6 blocks inside your `repeat` loop when you're done.
+        2-3_Bee_Loops_6_a: ถ้าคุณไม่สามารถบอกได้ว่าอะไรควรไปที่ลูป `ทำซ้ำ`ให้ลองลากบล็อกออกมาทีละรายการและดูว่าคุณสามารถค้นหารูปแบบได้หรือไม่?
+        2-3_Bee_Loops_6_b: ควรมีบล็อก 6 บล็อกอยู่ภายในลูป `ทำซ้ำ`ของคุณเมื่อคุณทำเสร็จ
       level 'grade3_Loops_4_authored_hint:
-        2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after the other.
+        2-3_Bee_Loops_3B_a: คุณจะต้องใช้ลูป`ทำซ้ำ`ที่แตกต่างกันสองลูป โดยวางลูปหนึ่งตามอีกลูปหนึ่ง
       level 'grade3_Loops_5_authored_hint:
-        2-3_Bee_Loops_7_a: The first action will be a turn, rather than a move.
-        2-3_Bee_Loops_7_b: 'If you can''t quite picture the loop from the beginning, try coding it out the long way, then look for a pattern.  '
+        2-3_Bee_Loops_7_a: ภารกิจแรกคือการหันไป ไม่ใช่การเคลื่อนไหว
+        2-3_Bee_Loops_7_b: 'ถ้าคุณไม่สามารถวาดภาพลูปไว้ในหัวได้ตั้งแต่แรก ลองเขียนโค้ดออกมาแบบเต็มรูปก่อน แล้วมองหารูปแบบ  '
       level 'grade3_Loops_6_authored_hint:
-        2-3_Bee_Loops_4A_a: The first action will be a turn, rather than a move.
-        2-3_Bee_Loops_4A_b: The last piece of the program can be finished by writing code at the end of your program outside of your loop.
-        2-3_Bee_Loops_4A_c: If you can't spot the loops yet, try coding it out the long way first, then see what you can combine into a `repeat` loop at the end.
+        2-3_Bee_Loops_4A_a: ภารกิจแรกคือการหันไป ไม่ใช่การเคลื่อนไหว
+        2-3_Bee_Loops_4A_b: ชิ้นสุดท้ายของโปรแกรมสามารถเสร็จสิ้นได้โดยการเขียนโค้ดไว้ที่ตอนท้ายของโปรแกรมของคุณ ให้อยู่ภายนอกลูปของคุณ
+        2-3_Bee_Loops_4A_c: ถ้าคุณไม่สามารถหาได้ว่าลูปควรจะอยู่ที่ไหน ให้ลองเขียนโค้ดออกมาแบบเต็มรูปก่อน แล้วดูว่าคุณสามารถรวมมันเข้าไปไว้ในลูป `ทำซ้ำ`ตอนท้าย
       level 'grade3_Loops_8_authored_hint:
-        2-3_Bee_Loops_2_a: You should end up with four blocks inside your loop.
+        2-3_Bee_Loops_2_a: คุณควรจบการเขียนโค้ด ลงด้วยบล็อกสี่บล็อกอยู่ภายในลูปของคุณ
       level 'grade3_Loops_9_authored_hint:
-        2-3_Bee_Loops_3_a: You should have 6 blocks inside your loop.
+        2-3_Bee_Loops_3_a: คุณควรมีบล็อก 6 บล็อกอยู่ภายในลูปของคุณ
       playLabDebugVideo1_authored_hint:
         courseA_playLab_events2_a: "Here is the block you should connect to the `when run` block: \n\n![](https://images.code.org/ae72d1270ad210cd00fae7e0dfb3549a-image-1478144412134.png)"
       sample3_authored_hint:

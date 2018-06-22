@@ -84,13 +84,13 @@ ja:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft アカウント'
-    clever: 'Clever Account'
-    powerschool: 'Powerschool Account'
+    clever: 'Cleverアカウント'
+    powerschool: 'Powerschoolアカウント'
     forgot_password: 'パスワードをお忘れですか？'
     need_confirmation: "確認Eメールが届かない"
     need_unlock: "ロック解除用のEメールが届いていない"
     not_linked: "申し訳ありませんが、あなたのCode.org アカウントは %{provider} にリンクしていません。以下のパスワードを入力してサインインして下さい。"
-    use_clever: "Sorry, your Code.org account is not linked to your %{provider}. Please sign in through your Clever Portal instead."
+    use_clever: "申し訳ありませんが、あなたのCode.orgアカウントは%{provider}にリンクしていません。代わりにCleverポータルからサインインしてください。"
   signup_form:
     student_count: '%{count} 人の生徒がサインアップ済みです。'
     teacher_count: '%{count} 人の教師がサインアップ済みです。'
@@ -115,25 +115,25 @@ ja:
     valid_password: "有効なパスワード ！"
     invalid_password: "パスワードを%d文字以上で入力"
     mismatch_password: "入力した 2 つのパスワードが一致しません"
-    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
+    agree_tos_privacy: "<a href='http://code.org/tos'>利用規約</a>および<a href='http://code.org/privacy'>プライバシーポリシー</a>に同意します。"
     under_13_consent: "13歳未満の場合、Code.orgのサービスを利用することについて、親または保護者の許可を得ていることを確認します。"
     agree_us_website: "米国に拠点を置くウェブサイトを使用することに同意します。"
     my_data_to_us: "当サイトの利用に関する私の情報は、米国に送信され、米国にて保管または処理される場合があります。"
     student_terms: "Code.org <a href='http://code.org/tos'> サービス利用規約</a> に拘束されることに同意します。13 才未満の場合、私は親または法定後見人による Code.org サービス使用の許可を得て、フォームを提出することを確認します <br/> <br/>。メール アドレスは、私たちが学生に連絡することができる形式では保存されません。パスワード回復のため以外では、学生がCode.org からメールを受け取ることはありません。詳しくは、 <a href='http://code.org/privacy'> プライバシー ポリシー</a> を参照してください。"
     teacher_terms: "Code.org 利用規約に拘束されることに同意します。プライバシーの詳細については、 <a href='http://code.org/privacy'> プライバシー ポリシー</a> を参照してください。"
     additional_information: "サインアップを続けるために、私たちはさらにいくつかの情報が必要です。"
-    user_type_button: "Update Account Type"
+    user_type_button: "アカウントタイプを更新"
     user_type_label: "アカウントの種類"
     user_type_teacher: "先生"
     user_type_student: "生徒"
     field_is_required: "が必要です"
     accept_terms: "アカウントを作成することに、同意が必要です。"
-    error: "An error occurred."
+    error: "エラーが発生しました。"
     email_preference_question: "当社のコースについての最新情報、各地域における機会、コンピュータサイエンスに関するニュースなどを電子メールを介して送付してもよろしいですか？"
-    email_preference_privacy: "(See our privacy policy)"
+    email_preference_privacy: "(当社のプライバシー ポリシーを参照してください)"
     email_preference_yes: "はい"
     email_preference_no: "いいえ"
-    email_preference_required: "You must specify an email preference."
+    email_preference_required: "メール設定を指定しなくてはなりません。"
   school_info:
     title: '学校名(任意)'
     school_country: '学校のある国'
@@ -182,7 +182,7 @@ ja:
       email: 'Eメールアドレス'
       submit: '送信'
     reset_errors:
-      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
+      captcha_required: 'パスワードをリセットするにはCAPTCHAを入力してください。'
       invalid_email: '無効なメール アドレスでサインアップしたようです。support@code.org にメールして、パスワードの回復リンクを受信してください。'
     change_form:
       title: 'パスワードを変更'
@@ -212,7 +212,7 @@ ja:
       remove: '本当に、このセクションから離れてよいですか？'
     remove: '(セクションを削除)'
     type:
-      picture: 'Picture Password'
+      picture: '画像パスワード'
       word: '秘密の言葉'
       email: 'Eメール'
       google_classroom: 'Google Classroom'
@@ -229,7 +229,7 @@ ja:
       section_not_found: "'%{section_code}' というセクションはありません"
       blank_code: "セクションのコードを入力してください"
       cant_join_own_section: "申し訳ありません。あなたはログインすることができません。"
-      provider_managed_section: "このセクションは、別のプロバイダーによって管理されているためご参加いただけません。%{provider} 経由で追加し、そのセクションを再同期するよう、先生に依頼してください。"
+      provider_managed_section: "このセクションは、別のプロバイダーによって管理されているためご参加いただけません。%{provider}経由で追加し、そのセクションを再同期するよう先生に依頼してください。"
     mail:
       student_disassociated:
         subject: "あなたはCode.org の通知: %{student_name} で、学生として関連付けられていません"
@@ -253,7 +253,7 @@ ja:
   devise:
     registrations:
       user:
-        user_type_change_email_mismatch: "入力したEメールアドレスはこのアカウントのメールアドレスと一致しません。"
+        user_type_change_email_mismatch: "入力したメールアドレスはこのアカウントのメールアドレスと一致しません。"
         personal_login_created_email: '個人ログインの作成が完了しました。あなたのEメールアドレスとパスワードを使用してアカウントにサインインすることができます。'
         personal_login_created_username: '個人ログインの作成が完了しました。あなたのユーザー名 (%{username}) とパスワードを使用してアカウントにサインインすることができます。'
   nav:
@@ -360,6 +360,7 @@ ja:
     email_confirm_needed_required: 'あなたのメール アドレス %{email} はまだ確認されていません。'
     email_confirm_wrong_email: 'メールアドレスをご確認ください'
     email_resend_confirm: '確認手順の再送信'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "（変更したくない場合は空白のままにしてください）"
     current_password_hint: '(変更を確認するためにあなたの現在のパスワードが必要です)'
     delete: 'アカウントを削除'
@@ -373,13 +374,13 @@ ja:
     create_personal_login_under_13_info: 'クラスが終わったあとも、Code.org アカウントを使用し続ける場合は、親または保護者に手伝ってもらい、あなたの個人ログインを作ってください。'
     create_personal_login_under_13_username: "ユーザー名 (本名を使用しないこと)"
     create_personal_login_under_13_parent_email: '親/保護者Eメールアドレス'
-    create_personal_login_info: 'クラスが終わったあとも、Code.org アカウントをつかいつづける時は、あなたの個人ログインを作ってください。'
+    create_personal_login_info: '学年が終わったあとも、Code.orgアカウントを使い続ける時は、あなたの個人ログインを作ってください。'
     create_personal_login_terms: "個人ログインを作ることによって、Code.org <a href='%{terms_of_service_url}', target='_blank'>利用規約</a>によって拘束されることに同意します。13 歳未満の場合、私の親または保護者人の同意を得て Code.org サービスを使用することを確認します。"
     create_personal_login_email_note: "注: 私たちが電子メール アドレスを使って学生に連絡することはありません。パスワード回復の場合を除き、Code.org からメールを受信することはありません。詳細は <a href='%{privacy_policy_url}', target='_blank'>プライバシーポリシー</a> を参照してください。"
     enter_new_login_info: '新しいログイン情報の入力'
-    confirm_secret_words: 'Confirm that it is you by entering your current secret words'
+    confirm_secret_words: '秘密の単語を入力してあなたであることを確認'
     enter_parent_email: "あなたの親または保護者の電子メール アドレス(パスワード回復のため) を入力してください。"
-    update: "Update Account"
+    update: "アカウントを更新"
   user_level:
     completed: '完了'
     tried: '試してみました'
@@ -461,7 +462,7 @@ ja:
     student_not_found: "学生は見つかりませんでした。"
     all_students_must_be_in_current_section: "すべての学生は、現在あなたのセクションに在籍している必要があります。"
     already_enrolled_in_new_section: "この先生は既に彼らを別セクションに持っているため、これらの学生は移動できません。"
-    third_party_login: "You cannot move students to a section that is synced with a third party tool."
+    third_party_login: "生徒をサードパーティツールと同期しているセクションへ移動できません。"
   share:
     title: "コード スタジオで学ぶ"
     description: "誰もがコンピュータサイエンスを学ぶことができます。ゲーム、アプリ、アートをコードで作ろう。"
@@ -469,7 +470,7 @@ ja:
   gender:
     male: '男性'
     female: '女性'
-    non_binary: 'Non-binary'
+    non_binary: '非バイナリ'
     not_listed: 'Preferred term not listed'
     none: '答えたくない'
   user_type:
@@ -1014,6 +1015,6 @@ ja:
     heading: 'Do you agree to using a web site based in the United States?'
     message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
     link_intro: 'For details see our'
-    privacy_policy: 'privacy policy'
-    logout: 'Logout'
+    privacy_policy: 'プライバシーポリシー'
+    logout: 'ログアウト'
     yes: 'はい'
