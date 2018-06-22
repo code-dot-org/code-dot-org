@@ -23,6 +23,13 @@ dashboard_enable_pegasus: true
 #use_my_apps: true
 
 
+# Allows you to change your locale locally.
+# If false, choosing a different locale will have no effect.
+# Note: You may need to be in an incognito window to see changes
+# due to a difference in the language cookie between production and localhost.
+#load_locales: true
+
+
 # Whether to skip the slow `rake seed:all` command during `rake build`.
 # Until you manually run `rake seed:all` or disable this flag, you won't
 # see changes to: videos, concepts, levels, scripts, trophies, prize providers,
