@@ -22,8 +22,11 @@
     - else
       .field
         = f.label :email
+        - if current_user.migrated?
+          %em= t('user.new_email_hint')
+          %br/
         %span#displayed-user-email= f.object.email.present? ? f.object.email : '***encrypted***'
-        - if current_user.can_edit_email? && !current_user.oauth?
+        - if current_user.can_edit_email? && (!current_user.oauth? || current_user.migrated?)
           (
           %a#edit-email-link{href: '#'}= "Update"
           )
@@ -31,22 +34,37 @@
     .field
       = f.label :username
       = f.object.username
-  - if f.object.can_edit_password?
-    %div
-      = f.label :password, maxlength: 255
-      %em= t('user.new_password_hint')
-      %br/
-      = f.password_field :password, autocomplete: 'off', maxlength: 255
-    %div
-      = f.label :password_confirmation
-      = f.password_field :password_confirmation, autocomplete: 'off', maxlength: 255
-  - else
-    .field
-      = f.label :password
-      - if f.object.oauth?
-        = t('user.no_password_because_oauth')
-      - else
+  - if f.object.migrated?
+    - if f.object.can_edit_password? && f.object.encrypted_password.present?
+      %div
+        = f.label :password, maxlength: 255
+        %em= t('user.new_password_hint')
+        %br/
+        = f.password_field :password, autocomplete: 'off', maxlength: 255
+      %div
+        = f.label :password_confirmation
+        = f.password_field :password_confirmation, autocomplete: 'off', maxlength: 255
+    - if f.object.sponsored?
+      .field
+        = f.label :password
         = t('user.no_password_because_sponsored')
+  - else
+    - if f.object.can_edit_password?
+      %div
+        = f.label :password, maxlength: 255
+        %em= t('user.new_password_hint')
+        %br/
+        = f.password_field :password, autocomplete: 'off', maxlength: 255
+      %div
+        = f.label :password_confirmation
+        = f.password_field :password_confirmation, autocomplete: 'off', maxlength: 255
+    - else
+      .field
+        = f.label :password
+        - if f.object.oauth?
+          = t('user.no_password_because_oauth')
+        - else
+          = t('user.no_password_because_sponsored')
   - if f.object.encrypted_password.present?
     %div
       = f.label :current_password
@@ -72,6 +90,9 @@
   %div#submit-update= f.submit t('user.update'), class: 'btn btn-primary'
 
 = link_to t('crud.back'), :back
+
+- if current_user.can_edit_password? && current_user.encrypted_password.blank?
+  %div#add-password-fields
 
 - if current_user.can_create_personal_login?
   %hr
@@ -161,13 +182,28 @@
     = f.hidden_field :email_preference_opt_in
     = f.hidden_field :current_password
 
+-# Hidden form used to asynchronously submit a new password to Rails with the
+-# appropriate authenticity tokens.  See AddPasswordForm.jsx for more details.
+-# Currently hidden behind .migrated? flag until all users have been migrated.
+- if current_user.migrated?
+  - if current_user.can_edit_password? && current_user.encrypted_password.blank?
+    = form_for(resource,
+        as: resource_name,
+        url: '/users',
+        remote: true,
+        html: { id: 'add-password-form' },
+        namespace: 'add-password',
+      ) do |f|
+      = f.hidden_field :password
+      = f.hidden_field :password_confirmation
+
 :ruby
   script_data = {
     edit: {
       userAge: current_user.age,
       userType: current_user.user_type,
-      isOauth: current_user.oauth?
+      isOauth: current_user.oauth?,
+      isPasswordRequired: current_user.encrypted_password.present?
     }.to_json
   }
 %script{src: minifiable_asset_path('js/devise/registrations/edit.js'), data: script_data}
-

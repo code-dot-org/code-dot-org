@@ -20,6 +20,7 @@ class EditSectionDialog extends Component {
       <BaseDialog
         useUpdatedStyles
         fixedWidth={1010}
+        fullHeight
         isOpen={this.props.isOpen}
         uncloseable
       >

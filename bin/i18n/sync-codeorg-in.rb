@@ -87,16 +87,16 @@ def localize_level_content
       end
 
       # Blocks
-      blocks = level_xml.xpath('//../blocks').first
+      blocks = level_xml.xpath('//blocks').first
       if blocks
         ## Categories
-        blocks.xpath('//../category').each do |category|
+        blocks.xpath('//category').each do |category|
           name = category.attr('name')
           level_block_categories[name] = name if name
         end
 
         ## Function Names
-        blocks.xpath('//../block[@type="procedures_defnoreturn"]').each do |function|
+        blocks.xpath("//block[@type=\"procedures_defnoreturn\"]").each do |function|
           name = function.at_xpath('./title[@name="NAME"]')
           level_function_names[name.content] = name.content if name
         end

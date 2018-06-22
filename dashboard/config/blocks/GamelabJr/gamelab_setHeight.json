@@ -1,0 +1,16 @@
+{
+  "category": "Actions",
+  "config": {
+    "func": "setHeight",
+    "blockText": "set {SPRITE} height to {N}%",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "N"
+      }
+    ]
+  }
+}

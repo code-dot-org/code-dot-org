@@ -996,6 +996,70 @@ class ScriptTest < ActiveSupport::TestCase
     refute script.project_widget_visible
   end
 
+  test 'can unset the script_announcements attribute' do
+    l = create :level
+    old_dsl = <<-SCRIPT
+      script_announcements [{"notice"=>"notice1", "details"=>"details1", "link"=>"link1", "type"=>"information"}]
+      stage 'Stage1'
+      level '#{l.name}'
+    SCRIPT
+    new_dsl = <<-SCRIPT
+      stage 'Stage1'
+      level '#{l.name}'
+    SCRIPT
+    script_data, _ = ScriptDSL.parse(old_dsl, 'a filename')
+    script = Script.add_script(
+      {
+        name: 'challengeTestScript',
+        properties: Script.build_property_hash(script_data)
+      },
+      script_data[:stages]
+    )
+    assert script.script_announcements
+
+    script_data, _ = ScriptDSL.parse(new_dsl, 'a filename')
+    script = Script.add_script(
+      {
+        name: 'challengeTestScript',
+        properties: Script.build_property_hash(script_data)
+      },
+      script_data[:stages]
+    )
+
+    refute script.script_announcements
+  end
+
+  test 'can set custom curriculum path' do
+    l = create :level
+    dsl = <<-SCRIPT
+      has_lesson_plan true
+      curriculum_path '//example.com/{LOCALE}/foo/{LESSON}'
+      stage 'Stage1'
+      level '#{l.name}'
+      stage 'Stage2'
+      level '#{l.name}'
+    SCRIPT
+    script_data, _ = ScriptDSL.parse(dsl, 'a filename')
+    script = Script.add_script(
+      {
+        name: 'curriculumTestScript',
+        properties: Script.build_property_hash(script_data),
+      },
+      script_data[:stages],
+    )
+    assert_equal CDO.curriculum_url('en-us', 'foo/1'), script.stages.first.lesson_plan_html_url
+    with_locale(:'it-IT') do
+      assert_equal CDO.curriculum_url('it-IT', 'foo/2'), script.stages.last.lesson_plan_html_url
+    end
+
+    script.curriculum_path = '//example.com/foo/{LESSON}'
+    assert_equal '//example.com/foo/1', script.stages.first.lesson_plan_html_url
+    assert_equal '//example.com/foo/2', script.stages.last.lesson_plan_html_url
+
+    script.curriculum_path = nil
+    assert_equal '//test.code.org/curriculum/curriculumTestScript/1/Teacher', script.stages.first.lesson_plan_html_url
+  end
+
   test 'clone script with suffix' do
     scripts, _ = Script.setup([@script_file])
     script = scripts[0]

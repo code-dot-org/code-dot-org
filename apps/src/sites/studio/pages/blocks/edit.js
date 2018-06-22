@@ -23,6 +23,7 @@ $(document).ready(() => {
   Blockly.inject(document.getElementById('blockly-container'), {
     assetUrl,
     valueTypeTabShapeMap: valueTypeTabShapeMap(Blockly),
+    typeHints: true,
   });
 
   initializeCodeMirrorForJson('block_config', { onChange });
@@ -31,17 +32,9 @@ $(document).ready(() => {
 
 let config;
 function onChange(editor) {
-  if (editor.getValue() === config) {
-    return;
-  }
   config = editor.getValue();
 
-  let parsedConfig;
-  try {
-    parsedConfig = jsonic(config);
-  } catch (e) {
-    return;
-  }
+  const parsedConfig = jsonic(config);
 
   const blocksInstalled = installCustomBlocks(
     Blockly,

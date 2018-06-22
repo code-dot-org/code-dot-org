@@ -663,8 +663,8 @@ function generateAppAssets(params) {
 function rewriteAssetUrls(appAssets, data) {
   return appAssets.reduce(function (data, assetToDownload) {
     const searchUrl = assetToDownload.searchUrl || assetToDownload.filename;
-    data = data.replace(new RegExp(`["|']${assetToDownload.url}["|']`), `"${assetToDownload.rootRelativePath}"`);
-    return data.replace(new RegExp(`["|']${searchUrl}["|']`), `"${assetToDownload.rootRelativePath}"`);
+    data = data.replace(new RegExp(`["|']${assetToDownload.url}["|']`, 'g'), `"${assetToDownload.rootRelativePath}"`);
+    return data.replace(new RegExp(`["|']${searchUrl}["|']`, 'g'), `"${assetToDownload.rootRelativePath}"`);
   }, data);
 }
 

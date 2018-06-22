@@ -28,9 +28,9 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "contained_level_names": null,
     "instructions_important": "true",
-    "maze_data": null
+    "hint_prompt_attempts_threshold": 2,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

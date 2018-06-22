@@ -1,7 +1,13 @@
 class Api::V1::AssessmentsController < Api::V1::JsonApiController
   include LevelsHelper
-  load_and_authorize_resource :section
+
+  before_action :load_from_cache
+  load_and_authorize_resource :section, only: [:section_responses, :section_surveys]
   load_and_authorize_resource :script
+
+  def load_from_cache
+    @script = Script.get_from_cache(params[:script_id])
+  end
 
   # For each assessment in a script, return an object of script_level IDs to question data.
   # Question data includes the question text, all possible answers, and the correct answers.
@@ -33,15 +39,17 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
       questions = []
 
       # For each level in the multi group (ignore pages structure information)
-      level_group.levels.each do |level|
+      level_group.levels.each_with_index do |level, index|
         # A single level corresponds to a single question
-        questions.push(level.question_summary)
+        summary = level.question_summary
+        summary[:question_index] = index
+        questions.push(summary)
       end
 
       assessments[level_group.id] = {
         id: level_group.id,
         questions: questions,
-        name: level_group.name,
+        name: script_level.stage.localized_title,
       }
     end
 
@@ -115,8 +123,10 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
             when TextMatch, FreeResponse
               student_result = level_response["result"]
               level_result[:student_result] = student_result
-              level_result[:status] = "free_response"
+              level_result[:status] = ""
+              level_result[:type] = "FreeResponse"
             when Multi
+              level_result[:type] = "Multi"
               answer_indexes = Multi.find_by_id(level.id).correct_answer_indexes
               student_result = level_response["result"].split(",").sort.join(",")
 
