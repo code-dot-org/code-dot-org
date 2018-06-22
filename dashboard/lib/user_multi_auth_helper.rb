@@ -11,6 +11,7 @@ module UserMultiAuthHelper
         migrated
         powerschool
         sponsored
+        the_school_project
         windowslive
       ).include?(provider)
 

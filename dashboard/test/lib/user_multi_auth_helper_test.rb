@@ -256,6 +256,18 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     assert_convert_lti_user create(:teacher, :unmigrated_qwiklabs_sso)
   end
 
+  # At time of writing we have 6 The School Project students and 3 teachers.
+  # These mostly look like test accounts, but presumably we want to continue
+  # supporting them.
+
+  test 'convert The School Project student' do
+    assert_convert_lti_user create(:student, :unmigrated_the_school_project_sso)
+  end
+
+  test 'convert The School Project teacher' do
+    assert_convert_lti_user create(:teacher, :unmigrated_the_school_project_sso)
+  end
+
   def assert_convert_lti_user(user)
     provider = user.provider
     initial_email = user.email
