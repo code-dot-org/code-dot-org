@@ -52,9 +52,9 @@
     "disable_procedure_autopopulate": "false",
     "remove_items_when_actor_collides": "false",
     "hint_prompt_attempts_threshold": 2,
-    "contained_level_names": null,
     "top_level_procedure_autopopulate": "false",
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
