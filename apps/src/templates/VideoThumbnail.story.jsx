@@ -14,7 +14,7 @@ export default storybook => {
             enable_fallback: true,
             key: "csp_applab_functions",
             name: "Introduction to Functions",
-            src: "https://www.youtube.com/embed/yPWQfa4CHbw/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=yPWQfa4CHbw&wmode=transparent",
+            src: "https://www.youtube-nocookie.com/embed/yPWQfa4CHbw/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=yPWQfa4CHbw&wmode=transparent",
             thumbnail: "/c/video_thumbnails/csp_applab_conditionals_2B.jpg",
           }}
         />
