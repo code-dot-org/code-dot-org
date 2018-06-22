@@ -68,10 +68,6 @@ end
 def parse_options
   OpenStruct.new.tap do |options|
     options.config = nil
-    options.browser = nil
-    options.os_version = nil
-    options.browser_version = nil
-    options.features = nil
     options.pegasus_domain = 'test.code.org'
     options.dashboard_domain = 'test-studio.code.org'
     options.hourofcode_domain = 'test.hourofcode.com'
@@ -82,27 +78,12 @@ def parse_options
 
     # start supporting some basic command line filtering of which browsers we run against
     opt_parser = OptionParser.new do |opts|
-      opts.banner = "Usage: runner.rb [options] \
-        Example: runner.rb -b chrome -o 7 -v 31 -f features/sharepage.feature \
-        Example: runner.rb -d localhost:3000 -t \
-        Example: runner.rb -l \
-        Example: runner.rb -r"
+      opts.banner = "Usage: minrepro.rb [options] \
+        Example: minrepro.rb -c ChromeLatestWin7,Chrome44Win7,Firefox45Win7"
       opts.separator ""
       opts.separator "Specific options:"
-      opts.on("-c", "--config BrowserConfigName,BrowserConfigName1", Array, "Specify the name of one or more of the configs from ") do |c|
+      opts.on("-c", "--config BrowserConfigName,BrowserConfigName1", Array, "Specify the name of one or more of the configs from browsers.json") do |c|
         options.config = c
-      end
-      opts.on("-b", "--browser BrowserName", String, "Specify a browser") do |b|
-        options.browser = b
-      end
-      opts.on("-o", "--os_version OS Version", String, "Specify an os version") do |os|
-        options.os_version = os
-      end
-      opts.on("-v", "--browser_version Browser Version", String, "Specify a browser version") do |bv|
-        options.browser_version = bv
-      end
-      opts.on("-f", "--feature Feature", Array, "Single feature or comma separated list of features to run") do |f|
-        options.features = f
       end
       opts.on("-l", "--local", "Use local domains. Also use local webdriver (not Saucelabs) unless -c is specified.") do
         options.local = 'true'
@@ -161,10 +142,6 @@ def parse_options
       opts.on("--fail_fast", "Fail a feature as soon as a scenario fails") do
         options.fail_fast = true
       end
-      opts.on('-s', '--script Scriptname', String, 'Run tests associated with this script, or have Scriptname somewhere in the URL') do |script_name|
-        f = `egrep -r "Given I am on .*#{script_name.delete(' ').downcase}" . | cut -f1 -d ':' | sort | uniq | tr '\n' ,`
-        options.features = f.split ','
-      end
       opts.on('--output-synopsis', 'Print a synopsis of failing scenarios') do
         options.output_synopsis = true
       end
@@ -175,9 +152,6 @@ def parse_options
     end
 
     opt_parser.parse!(ARGV)
-    # Standardize: Drop leading dot-slash on feature paths
-    options.features = ARGV + (options.features || []).
-      map! {|feature| feature.gsub(/^\.\//, '')}
 
     if options.force_db_access
       options.pegasus_db_access = true
@@ -417,16 +391,6 @@ def run_feature(browser, feature, options)
   browser_name = browser_name_or_unknown(browser)
   test_run_string = test_run_identifier(browser, feature)
   log_prefix = "[#{feature.gsub(/.*features\//, '').gsub('.feature', '')}] "
-
-  if options.browser && browser['browser'] && options.browser.casecmp(browser['browser']) != 0
-    return
-  end
-  if options.os_version && browser['os_version'] && options.os_version.casecmp(browser['os_version']) != 0
-    return
-  end
-  if options.browser_version && browser['browser_version'] && options.browser_version.casecmp(browser['browser_version']) != 0
-    return
-  end
 
   # Don't log individual tests because we hit ChatClient rate limits
   # ChatClient.log "Testing <b>dashboard</b> UI with <b>#{test_run_string}</b>..."
