@@ -90,6 +90,10 @@ describe('The Exporter,', function () {
       '/api/v1/sound-library/default.mp3',
       'default.mp3 content'
     );
+    server.respondWith(
+      'https://studio.code.org/fakeRequest',
+      '{}'
+    );
 
     assetPrefix.init({channel: 'some-channel-id', assetPathPrefix: '/v3/assets/'});
 
@@ -608,7 +612,7 @@ describe('The Exporter,', function () {
     });
   });
 
-  function runExportedApp(code, html, done) {
+  function runExportedApp(code, html, done, globalPromiseName) {
     server.respondImmediately = true;
     let zipPromise = Exporter.exportAppToZip('my-app', code, html);
 
@@ -620,7 +624,7 @@ describe('The Exporter,', function () {
         if (zipObject) {
           return zipObject.async("string");
         }
-      })).then(fileContents => {
+      })).then(async fileContents => {
         const zipFiles = {};
         relativePaths.forEach((path, index) => {
           zipFiles[path] = fileContents[index];
@@ -633,9 +637,15 @@ describe('The Exporter,', function () {
         window.$ = require('jquery');
 
         new Function(getAppOptionsFile())();
+        setAppOptions(Object.assign(window.APP_OPTIONS, { isExported: true }));
         require('../../../build/package/js/applab-api.js');
         new Function(zipFiles['my-app/code.js'])();
-        done();
+        if (globalPromiseName) {
+          await window[globalPromiseName];
+          done();
+        } else {
+          done();
+        }
       }).catch(e => {
         done(e);
       });
@@ -674,6 +684,22 @@ describe('The Exporter,', function () {
       );
     });
 
+    it("should allow you to use startWebRequest without the XHR proxy", (done) => {
+      runExportedApp(
+        `var webRequestPromise = new Promise(function (resolve, reject) {
+          startWebRequest("https://studio.code.org/fakeRequest", function (status, type, content) {
+            if (status === 200) {
+              resolve(status);
+            } else {
+              reject(new Error('network error'));
+            }
+          });
+        });`,
+        `<div><div class="screen" id="screen1" tabindex="1"></div></div>`,
+        done,
+        'webRequestPromise'
+      );
+    });
   });
 
 });
