@@ -198,8 +198,6 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     assert_convert_oauth_user create(:teacher, :unmigrated_powerschool_sso)
   end
 
-  private
-
   def assert_convert_oauth_user(user)
     provider = user.provider
     initial_email = user.email
@@ -241,6 +239,55 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
         }
       }
   end
+
+  #
+  # Learning Tools Interoperability (LTI) providers:
+  # These seem to store no oauth tokens at all, only a uid.
+  #
+
+  # At time of writing, we have ~400 Qwiklabs student accounts, no teachers.
+  # That doesn't mean we couldn't end up with a teacher account though.
+
+  test 'convert Qwiklabs LTI student' do
+    assert_convert_lti_user create(:student, :unmigrated_qwiklabs_sso)
+  end
+
+  test 'convert Qwiklabs LTI teacher' do
+    assert_convert_lti_user create(:teacher, :unmigrated_qwiklabs_sso)
+  end
+
+  def assert_convert_lti_user(user)
+    provider = user.provider
+    initial_email = user.email
+    initial_hashed_email = user.hashed_email
+    initial_authentication_id = user.uid
+
+    # Assert email remains empty for students
+    expected_email = user.student? ? :empty : initial_email
+
+    assert_user user,
+      provider: provider,
+      email: user.student? ? :empty : :not_empty,
+      hashed_email: :not_empty,
+      uid: :not_nil,
+      oauth_token: nil,
+      oauth_token_expiration: nil
+
+    migrate user
+
+    assert_user user,
+      email: expected_email,
+      hashed_email: initial_hashed_email,
+      primary_authentication_option: {
+        credential_type: provider,
+        authentication_id: initial_authentication_id,
+        email: expected_email,
+        hashed_email: initial_hashed_email,
+        data: nil
+      }
+  end
+
+  private
 
   #
   # Assert a set of attributes about a user.
