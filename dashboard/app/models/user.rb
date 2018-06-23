@@ -504,7 +504,7 @@ class User < ActiveRecord::Base
   validates :name, length: {within: 1..70}, allow_blank: true
   validates :name, no_utf8mb4: true
 
-  defer_age = proc {|user| %w(google_oauth2 clever powerschool).include?(user.provider) || user.provider == User::PROVIDER_SPONSORED}
+  defer_age = proc {|user| %w(google_oauth2 clever powerschool).include?(user.provider) || user.sponsored?}
 
   validates :age, presence: true, on: :create, unless: defer_age # only do this on create to avoid problems with existing users
   AGE_DROPDOWN_OPTIONS = (4..20).to_a << "21+"
@@ -812,7 +812,7 @@ class User < ActiveRecord::Base
   def email_required?
     return true if teacher?
     return false if provider == User::PROVIDER_MANUAL
-    return false if provider == User::PROVIDER_SPONSORED
+    return false if sponsored?
     return false if oauth?
     return false if parent_managed_account?
     true
