@@ -34,7 +34,7 @@ class AuthenticationOption < ApplicationRecord
     FACEBOOK = 'facebook',
     GOOGLE = 'google_oauth2',
     POWERSCHOOL = 'powerschool',
-    QWIKCAMPS = 'lti_lti_prod_kids.qwikcamps.com',
+    QWIKLABS = 'lti_lti_prod_kids.qwikcamps.com',
     THE_SCHOOL_PROJECT = 'the_school_project',
     TWITTER = 'twitter',
     WINDOWS_LIVE = 'windowslive',
