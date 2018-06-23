@@ -228,6 +228,17 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     assert_convert_sso_user create(:teacher, :unmigrated_the_school_project_sso)
   end
 
+  # Our Twitter SSO support is very old - we have a few thousand such accounts
+  # but less than 10 are still active.
+
+  test 'convert Twitter student' do
+    assert_convert_sso_user create(:student, :unmigrated_twitter_sso)
+  end
+
+  test 'convert Twitter teacher' do
+    assert_convert_sso_user create(:teacher, :unmigrated_twitter_sso)
+  end
+
   #
   # Learning Tools Interoperability (LTI) providers:
   # These seem to store no oauth tokens at all, only a uid.
