@@ -77,6 +77,7 @@ class SectionAssessments extends Component {
           <MultipleChoiceByStudentContainer />
           <FreeResponsesAssessmentsContainer />
           {/* Surveys */}
+          <h2>{i18n.multipleChoiceQuestionsOverview()}</h2>
           {multipleChoiceSurveyResults.length > 0 &&
             <MultipleChoiceSurveyOverviewTable
               multipleChoiceSurveyData={multipleChoiceSurveyResults}
