@@ -42,6 +42,14 @@ class TeacherFeedback extends Component {
     withUnreleasedFeatures: PropTypes.bool
   };
 
+  state = {
+    comment: ""
+  };
+
+  onCommentChange = (event) => {
+    this.setState({comment: event.target.value});
+  };
+
   render() {
     if (!(this.props.viewAs === ViewType.Teacher)) {
       return null;
@@ -58,7 +66,7 @@ class TeacherFeedback extends Component {
         }
         {this.props.withUnreleasedFeatures &&
           <div>
-            <textarea style={styles.textInput} type="text" placeholder={i18n.feedbackPlaceholder()}></textarea>
+            <input style={styles.textInput} onChange={this.onCommentChange} type="text" placeholder={this.state.comment}></input>
             <Button
               text={i18n.saveAndShare()}
               onClick={()=>{}}
