@@ -378,7 +378,8 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
               {"result" => "This is a free response"},
               {"result" => "Free response from student 4"}
             ],
-            "answer_texts" => nil
+            "answer_texts" => nil,
+            "question_index" => 0,
           },
           {
             "type" => "multi",
@@ -390,7 +391,8 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
               {},
               {}
             ],
-            "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]
+            "answer_texts" => ["answer1", "answer2", "answer3", "answer4"],
+            "question_index" => 1,
           },
           {
             "type" => "multi",
@@ -402,7 +404,8 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
               {},
               {"answer_index" => 1}
             ],
-            "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]
+            "answer_texts" => ["answer1", "answer2", "answer3", "answer4"],
+            "question_index" => 2,
           },
           {
             "type" => "multi",
@@ -414,7 +417,8 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
               {},
               {}
             ],
-            "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]
+            "answer_texts" => ["answer1", "answer2", "answer3", "answer4"],
+            "question_index" => 3,
           },
           {
             "type" => "multi",
@@ -426,7 +430,8 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
               {},
               {}
             ],
-            "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]
+            "answer_texts" => ["answer1", "answer2", "answer3", "answer4"],
+            "question_index" => 4,
           }
         ]
       }

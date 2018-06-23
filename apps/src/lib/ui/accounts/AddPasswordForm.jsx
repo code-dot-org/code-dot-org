@@ -1,9 +1,6 @@
 import React, {PropTypes} from 'react';
 import i18n from '@cdo/locale';
-import color from '@cdo/apps/util/color';
-import {Heading3} from '../Headings';
 import {Field} from '../SystemDialog/SystemDialog';
-import Button from "@cdo/apps/templates/Button";
 
 const styles = {
   container: {
@@ -11,8 +8,10 @@ const styles = {
   },
   header: {
     fontSize: 22,
-    // TODO: get correct header color
-    color: color.purple,
+  },
+  hint: {
+    marginTop: 10,
+    marginBottom: 10,
   },
   input: {
     marginBottom: 4,
@@ -20,9 +19,14 @@ const styles = {
   buttonContainer: {
     display: 'flex',
     alignItems: 'center',
+    justifyContent: 'flex-end',
+  },
+  button: {
+    margin: 0
   },
   statusText: {
     paddingLeft: 10,
+    paddingRight: 10,
     fontStyle: 'italic',
   },
 };
@@ -97,9 +101,13 @@ export default class AddPasswordForm extends React.Component {
   render() {
     return (
       <div style={styles.container}>
-        <Heading3 style={styles.header}>
+        <hr/>
+        <h2 style={styles.header}>
           {i18n.addPassword()}
-        </Heading3>
+        </h2>
+        <div style={styles.hint}>
+          {i18n.addPasswordHint()}
+        </div>
         <PasswordField
           label={i18n.password()}
           value={this.state.password}
@@ -112,13 +120,6 @@ export default class AddPasswordForm extends React.Component {
           onChange={this.onPasswordConfirmationChange}
         />
         <div style={styles.buttonContainer}>
-          {/* TODO: style button to look like other account page buttons */}
-          <Button
-            onClick={this.handleSubmit}
-            text={i18n.createPassword()}
-            disabled={!this.isFormValid()}
-            tabIndex="1"
-          />
           {/* TODO: style error state with red text */}
           <div
             id="uitest-add-password-status"
@@ -126,6 +127,16 @@ export default class AddPasswordForm extends React.Component {
           >
             {this.state.submissionState}
           </div>
+          {/* This button intentionally uses Bootstrap classes to match other account page buttons */}
+          <button
+            className="btn"
+            style={styles.button}
+            onClick={this.handleSubmit}
+            disabled={!this.isFormValid()}
+            tabIndex="1"
+          >
+            {i18n.createPassword()}
+          </button>
         </div>
       </div>
     );

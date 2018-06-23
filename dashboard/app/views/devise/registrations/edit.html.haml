@@ -1,6 +1,10 @@
 - @page_title = t('activerecord.attributes.user.edit_header')
 - no_email = current_user.no_personal_email? || params[:noEmail] == 'true'
 
+= link_to :back do
+  %i.fa.fa-chevron-left
+  %span= t('crud.back')
+
 %h2= @page_title
 
 = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
@@ -9,7 +13,7 @@
   = devise_error_messages!
   %div
   .field
-    = f.label :name
+    = f.label :name, class: "label-bold"
     - if f.object.secret_picture_account_only?
       = f.object.name
     - else # most users are allowed to edit username
@@ -17,12 +21,12 @@
   - if !f.object.teacher_managed_account?
     - if current_user.parent_managed_account?
       .field
-        = f.label :parent_email
+        = f.label :parent_email, class: "label-bold"
         = f.email_field :parent_email, autocomplete: 'off', maxlength: 255
     - else
       .field
-        = f.label :email
-        - if current_user.migrated?
+        = f.label :email, class: "label-bold"
+        - if current_user.migrated? && !current_user.student?
           %em= t('user.new_email_hint')
           %br/
         %span#displayed-user-email= f.object.email.present? ? f.object.email : '***encrypted***'
@@ -32,64 +36,62 @@
           )
   - if resource.username.present?
     .field
-      = f.label :username
+      = f.label :username, class: "label-bold"
       = f.object.username
   - if f.object.migrated?
     - if f.object.can_edit_password? && f.object.encrypted_password.present?
       %div
-        = f.label :password, maxlength: 255
+        = f.label :password, maxlength: 255, class: "label-bold"
         %em= t('user.new_password_hint')
         %br/
         = f.password_field :password, autocomplete: 'off', maxlength: 255
       %div
-        = f.label :password_confirmation
+        = f.label :password_confirmation, class: "label-bold"
         = f.password_field :password_confirmation, autocomplete: 'off', maxlength: 255
     - if f.object.sponsored?
       .field
-        = f.label :password
+        = f.label :password, class: "label-bold"
         = t('user.no_password_because_sponsored')
   - else
     - if f.object.can_edit_password?
       %div
-        = f.label :password, maxlength: 255
+        = f.label :password, maxlength: 255, class: "label-bold"
         %em= t('user.new_password_hint')
         %br/
         = f.password_field :password, autocomplete: 'off', maxlength: 255
       %div
-        = f.label :password_confirmation
+        = f.label :password_confirmation, class: "label-bold"
         = f.password_field :password_confirmation, autocomplete: 'off', maxlength: 255
     - else
       .field
-        = f.label :password
+        = f.label :password, class: "label-bold"
         - if f.object.oauth?
           = t('user.no_password_because_oauth')
         - else
           = t('user.no_password_because_sponsored')
   - if f.object.encrypted_password.present?
     %div
-      = f.label :current_password
+      = f.label :current_password, class: "label-bold"
       %em= t('user.current_password_hint')
       %br/
       = f.password_field :current_password, maxlength: 255
   - if !resource.teacher?
     .field
-      = f.label t('signup_form.gender')
+      = f.label t('signup_form.gender'), class: "label-bold"
       = f.select :gender, gender_options
     .field
-      = f.label t('signup_form.age')
+      = f.label t('signup_form.age'), class: "label-bold"
       = f.select :age, User::AGE_DROPDOWN_OPTIONS
   - if resource.teacher?
     .field
-      = f.label :school
+      = f.label :school, class: "label-bold"
       = f.text_field :school, class: 'input-xlarge', maxlength: 255
     .field
-      = f.label :full_address
+      = f.label :full_address, class: "label-bold"
       = f.text_area :full_address, class: 'input-xxlarge', rows: 4, maxlength: 255
     = f.hidden_field :age, value: "21"
 
   %div#submit-update= f.submit t('user.update'), class: 'btn btn-primary'
-
-= link_to t('crud.back'), :back
 
 - if current_user.can_edit_password? && current_user.encrypted_password.blank?
   %div#add-password-fields
@@ -104,28 +106,28 @@
     - if no_email
       = hidden_field_tag :noEmail, true
       .field
-        = form.label t('user.create_personal_login_under_13_username')
+        = form.label t('user.create_personal_login_under_13_username'), class: "label-bold"
         = form.text_field :username, maxlength: 255
     - else
       .field
-        = form.label :personal_email do
+        = form.label :personal_email, class: "label-bold" do
           = t('activerecord.attributes.user.personal_email', url: CDO.studio_url('users/edit/?noEmail=true')).html_safe
         = form.email_field :email, placeholder: '', autocomplete: 'off', maxlength: 255
     .field
-      = form.label :password, maxlength: 255
+      = form.label :password, maxlength: 255, class: "label-bold"
       = form.password_field :password, autocomplete: 'off', maxlength: 255
     .field
-      = form.label :password_confirmation
+      = form.label :password_confirmation, class: "label-bold"
       = form.password_field :password_confirmation, autocomplete: 'off', maxlength: 255
     - if current_user.secret_word_account?
       %h3= t('user.confirm_secret_words')
       .field
-        = form.label :secret_words
+        = form.label :secret_words, class: "label-bold"
         = form.text_field :secret_words, autocomplete: 'off', value: '', maxlength: 255
     - if no_email
       %h3= t('user.enter_parent_email')
       .field
-        = form.label t('user.create_personal_login_under_13_parent_email')
+        = form.label t('user.create_personal_login_under_13_parent_email'), class: "label-bold"
         = form.text_field :parent_email, maxlength: 255
     %p= t('user.create_personal_login_terms', terms_of_service_url: CDO.code_org_url('/tos')).html_safe
     - unless no_email
@@ -150,7 +152,7 @@
     %hr.account-page-section-break
     %h2= t('signup_form.user_type_label')
     .field
-      = f.label t('signup_form.user_type')
+      = f.label t('signup_form.user_type'), class: "label-bold"
       = f.select :user_type, user_type_options
     .farSide
       %span#change-user-type-status

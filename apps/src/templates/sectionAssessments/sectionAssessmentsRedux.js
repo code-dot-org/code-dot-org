@@ -304,6 +304,7 @@ export const getSurveyFreeResponseQuestions = (state) => {
   return questionData.filter(question => question.type === SurveyQuestionType.FREE_RESPONSE).map(question => {
     return {
       questionText: question.question,
+      questionNumber: question.question_index + 1,
       answers: question.results.map((response, index) => {
         return {index: index, response: response.result};
       }),
@@ -353,6 +354,7 @@ export const getMultipleChoiceSurveyResults = (state) => {
     return {
       id: index,
       question: question.question,
+      questionNumber: question.question_index + 1,
       answers: question.answer_texts.map((answer, index) => {
         return {
           multipleChoiceOption: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'][index],
