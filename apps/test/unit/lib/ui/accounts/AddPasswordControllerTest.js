@@ -5,7 +5,7 @@ import {expect, assert} from '../../../../util/configuredChai';
 import AddPasswordController from '@cdo/apps/lib/ui/accounts/AddPasswordController';
 
 describe('AddPasswordController', () => {
-  let controller, form;
+  let controller, form, mockMountPoint;
 
   beforeEach(() => {
     form = $(`
@@ -14,15 +14,16 @@ describe('AddPasswordController', () => {
         <input type="hidden" id="add-password_user_password_confirmation"/>
       </form>
     `);
-    document.body.innerHTML = '<div id="mockMountPoint"></div>';
-    const mountPoint = document.getElementById('mockMountPoint');
-    controller = new AddPasswordController(form, mountPoint);
+    mockMountPoint = document.createElement('div');
+    document.body.appendChild(mockMountPoint);
+    controller = new AddPasswordController(form, mockMountPoint);
 
     spy(ReactDOM, 'render');
   });
 
   afterEach(() => {
     ReactDOM.render.restore();
+    document.body.removeChild(mockMountPoint);
   });
 
   describe('renderAddPasswordForm', () => {

@@ -12,7 +12,11 @@ begin
   data = api_instance.get_students({limit: 5000}).data
   found_students = 0
   data.each do |student|
-    user = User.where(provider: 'clever', uid: student.data.id).first
+    user = AuthenticationOption.find_by(
+      credential_type: AuthenticationOption::CLEVER,
+      authentication_id: student.data.id
+    )&.user
+    user ||= User.where(provider: 'clever', uid: student.data.id).first
     next if user.nil?
     puts "Clearing data for #{user.id} (with Clever ID #{user.uid})" unless user.nil?
     user.birthday = nil
