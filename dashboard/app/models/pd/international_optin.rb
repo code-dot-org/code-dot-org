@@ -48,6 +48,31 @@ class Pd::InternationalOptin < ApplicationRecord
     )
   end
 
+  def self.labels
+    keys = %w(
+      firstName
+      preferredFirstName
+      firstName
+      firstNamePreferred
+      lastName
+      email
+      emailAlternate
+      gender
+      schoolName
+      schoolCity
+      schoolCountry
+      ages
+      subjects
+      resources
+      robotics
+      workshopOrganizer
+      workshopFacilitator
+      workshopCourse
+      optIn
+    )
+    Hash[keys.collect {|v| [v, I18n.t("pd.form_labels.#{v.underscore}")]}]
+  end
+
   def email
     sanitize_form_data_hash[:email]
   end

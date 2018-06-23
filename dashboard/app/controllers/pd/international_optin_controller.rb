@@ -10,7 +10,8 @@ class Pd::InternationalOptinController < ApplicationController
       props: {
         options: Pd::InternationalOptin.options.camelize_keys,
         accountEmail: current_user.email,
-        apiEndpoint: "/api/v1/pd/international_optins"
+        apiEndpoint: "/api/v1/pd/international_optins",
+        labels: Pd::InternationalOptin.labels
       }.to_json
     }
   end

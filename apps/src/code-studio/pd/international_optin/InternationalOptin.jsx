@@ -5,7 +5,8 @@ import {FormGroup} from 'react-bootstrap';
 
 export default class InternationalOptin extends FormController {
   static propTypes = {
-    accountEmail: PropTypes.string.isRequired
+    accountEmail: PropTypes.string.isRequired,
+    labels: PropTypes.object.isRequired
   };
 
   /**
@@ -40,7 +41,8 @@ export default class InternationalOptin extends FormController {
   getPageProps() {
     return {
       ...super.getPageProps(),
-      accountEmail: this.props.accountEmail
+      accountEmail: this.props.accountEmail,
+      labels: this.props.labels
     };
   }
 }
@@ -51,12 +53,14 @@ class InternationalOptinComponent extends FormComponent {
   };
 
   render() {
+    const labels = this.props.labels;
+
     return (
       <FormGroup>
         {
           this.buildFieldGroup({
             name: 'firstName',
-            label: 'First Name',
+            label: labels.firstName,
             type: 'text',
             required: true
           })
@@ -64,7 +68,7 @@ class InternationalOptinComponent extends FormComponent {
         {
           this.buildFieldGroup({
             name: 'firstNamePreferred',
-            label: 'Preferred First Name',
+            label: labels.firstNamePreferred,
             type: 'text',
             required: false
           })
@@ -72,7 +76,7 @@ class InternationalOptinComponent extends FormComponent {
         {
           this.buildFieldGroup({
             name: 'lastName',
-            label: 'Last Name',
+            label: labels.lastName,
             type: 'text',
             required: true
           })
@@ -81,7 +85,7 @@ class InternationalOptinComponent extends FormComponent {
         {
           this.buildFieldGroup({
             name: 'email',
-            label: 'Email',
+            label: labels.email,
             type: 'text',
             value: this.props.accountEmail,
             readOnly: true
@@ -91,14 +95,14 @@ class InternationalOptinComponent extends FormComponent {
         {
           this.buildFieldGroup({
             name: 'emailAlternate',
-            label: 'Alternate Email',
+            label: labels.emailAlternate,
             type: 'text'
           })
         }
         {
           this.buildButtonsFromOptions({
             name: 'gender',
-            label: 'Gender Identity',
+            label: labels.gender,
             type: 'radio',
             required: true
           })
@@ -106,7 +110,7 @@ class InternationalOptinComponent extends FormComponent {
         {
           this.buildFieldGroup({
             name: 'schoolName',
-            label: 'School Name',
+            label: labels.schoolName,
             type: 'text',
             required: true
           })
@@ -114,7 +118,7 @@ class InternationalOptinComponent extends FormComponent {
         {
           this.buildFieldGroup({
             name: 'schoolCity',
-            label: 'School City',
+            label: labels.schoolCity,
             type: 'text',
             required: true
           })
@@ -122,7 +126,7 @@ class InternationalOptinComponent extends FormComponent {
         {
           this.buildButtonsFromOptions({
             name: 'schoolCountry',
-            label: 'School Country',
+            label: labels.schoolCountry,
             type: 'radio',
             required: true
           })
@@ -130,7 +134,7 @@ class InternationalOptinComponent extends FormComponent {
         {
           this.buildButtonsFromOptions({
             name: 'ages',
-            label: 'Which age(s) do you teach this year?',
+            label: labels.ages,
             type: 'check',
             required: true
           })
@@ -138,7 +142,7 @@ class InternationalOptinComponent extends FormComponent {
         {
           this.buildButtonsFromOptions({
             name: 'subjects',
-            label: 'Which subject(s) do you teach this year?',
+            label: labels.subjects,
             type: 'check',
             required: true,
             includeOther: true
@@ -147,7 +151,7 @@ class InternationalOptinComponent extends FormComponent {
         {
           this.buildButtonsFromOptions({
             name: 'resources',
-            label: 'Which of the following CS education resources do you use?',
+            label: labels.resources,
             type: 'check',
             required: false,
             includeOther: true
@@ -156,7 +160,7 @@ class InternationalOptinComponent extends FormComponent {
         {
           this.buildButtonsFromOptions({
             name: 'robotics',
-            label: 'Which of the following robotics resources do you use?',
+            label: labels.robotics,
             type: 'check',
             required: false,
             includeOther: true
@@ -165,28 +169,28 @@ class InternationalOptinComponent extends FormComponent {
         {
           this.buildSelectFieldGroupFromOptions({
             name: 'workshopOrganizer',
-            label: 'Workshop Organizer',
+            label: labels.workshopOrganizer,
             required: true
           })
         }
         {
           this.buildSelectFieldGroupFromOptions({
             name: 'workshopFacilitator',
-            label: 'Workshop Facilitator',
+            label: labels.workshopFacilitator,
             required: true
           })
         }
         {
           this.buildSelectFieldGroupFromOptions({
             name: 'workshopCourse',
-            label: 'Workshop Course',
+            label: labels.workshopCourse,
             required: true
           })
         }
         {
           this.buildButtonsFromOptions({
             name: 'optIn',
-            label: 'I want to share my data with Code.org, International Partner',
+            label: labels.optIn,
             type: 'radio',
             required: true
           })
