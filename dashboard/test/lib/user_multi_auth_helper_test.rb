@@ -148,19 +148,19 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   end
 
   test 'convert Windows Live OAuth student' do
-    assert_convert_oauth_user create(:student, :unmigrated_windowslive_sso)
+    assert_convert_sso_user_with_oauth_token create(:student, :unmigrated_windowslive_sso)
   end
 
   test 'convert Windows Live OAuth teacher' do
-    assert_convert_oauth_user create(:teacher, :unmigrated_windowslive_sso)
+    assert_convert_sso_user_with_oauth_token create(:teacher, :unmigrated_windowslive_sso)
   end
 
   test 'convert Facebook OAuth student' do
-    assert_convert_oauth_user create(:student, :unmigrated_facebook_sso)
+    assert_convert_sso_user_with_oauth_token create(:student, :unmigrated_facebook_sso)
   end
 
   test 'convert Facebook OAuth teacher' do
-    assert_convert_oauth_user create(:teacher, :unmigrated_facebook_sso)
+    assert_convert_sso_user_with_oauth_token create(:teacher, :unmigrated_facebook_sso)
   end
 
   def assert_convert_google_user(user)
@@ -169,7 +169,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     initial_oauth_refresh_token = user.oauth_refresh_token
     assert_user user, oauth_refresh_token: :not_nil
 
-    assert_convert_oauth_user user
+    assert_convert_sso_user_with_oauth_token user
 
     assert_user user, primary_authentication_option: {
       data: {
@@ -183,61 +183,49 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   #
 
   test 'convert Clever OAuth student' do
-    assert_convert_oauth_user create(:student, :unmigrated_clever_sso)
+    assert_convert_sso_user_with_oauth_token create(:student, :unmigrated_clever_sso)
   end
 
   test 'convert Clever OAuth teacher' do
-    assert_convert_oauth_user create(:teacher, :unmigrated_clever_sso)
+    assert_convert_sso_user_with_oauth_token create(:teacher, :unmigrated_clever_sso)
   end
 
   test 'convert Powerschool OAuth student' do
-    assert_convert_oauth_user create(:student, :unmigrated_powerschool_sso)
+    assert_convert_sso_user_with_oauth_token create(:student, :unmigrated_powerschool_sso)
   end
 
   test 'convert Powerschool OAuth teacher' do
-    assert_convert_oauth_user create(:teacher, :unmigrated_powerschool_sso)
+    assert_convert_sso_user_with_oauth_token create(:teacher, :unmigrated_powerschool_sso)
   end
 
-  def assert_convert_oauth_user(user)
-    provider = user.provider
-    initial_email = user.email
-    initial_hashed_email = user.hashed_email
-    initial_authentication_id = user.uid
+  def assert_convert_sso_user_with_oauth_token(user)
+    # Some Oauth accounts store an oauth token and expiration time
     initial_oauth_token = user.oauth_token
     initial_oauth_token_expiration = user.oauth_token_expiration
-
-    is_email_trusted = %w(facebook google_oauth2 windowslive).include? provider
-
-    # Assert email remains empty for students
-    expected_email = user.student? ? :empty : initial_email
-
-    # Before migration hashed_email can be nil for untrusted provide
-    # But it's not-nullable in AuthenticationOption
-    expected_hashed_email = initial_hashed_email.nil? ? '' : initial_hashed_email
-
     assert_user user,
-      provider: provider,
-      email: user.student? ? :empty : :not_empty,
-      hashed_email: is_email_trusted ? :not_empty : initial_hashed_email,
-      uid: :not_nil,
       oauth_token: :not_nil,
       oauth_token_expiration: :not_nil
 
-    migrate user
+    assert_convert_sso_user user
 
-    assert_user user,
-      email: expected_email,
-      hashed_email: expected_hashed_email,
-      primary_authentication_option: {
-        credential_type: provider,
-        authentication_id: initial_authentication_id,
-        email: expected_email,
-        hashed_email: expected_hashed_email,
-        data: {
-          oauth_token: initial_oauth_token,
-          oauth_token_expiration: initial_oauth_token_expiration
-        }
+    assert_user user, primary_authentication_option: {
+      data: {
+        oauth_token: initial_oauth_token,
+        oauth_token_expiration: initial_oauth_token_expiration
       }
+    }
+  end
+
+  # At time of writing we have 6 The School Project students and 3 teachers.
+  # These mostly look like test accounts, but presumably we want to continue
+  # supporting them.
+
+  test 'convert The School Project student' do
+    assert_convert_sso_user create(:student, :unmigrated_the_school_project_sso)
+  end
+
+  test 'convert The School Project teacher' do
+    assert_convert_sso_user create(:teacher, :unmigrated_the_school_project_sso)
   end
 
   #
@@ -257,33 +245,44 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   end
 
   def assert_convert_lti_user(user)
+    assert_convert_sso_user user
+
+    assert_user user, primary_authentication_option: {
+      data: nil
+    }
+  end
+
+  def assert_convert_sso_user(user)
     provider = user.provider
     initial_email = user.email
     initial_hashed_email = user.hashed_email
     initial_authentication_id = user.uid
 
+    is_email_trusted = %w(facebook google_oauth2 windowslive).include? provider
+
     # Assert email remains empty for students
     expected_email = user.student? ? :empty : initial_email
+
+    # Before migration hashed_email can be nil for untrusted provide
+    # But it's not-nullable in AuthenticationOption
+    expected_hashed_email = initial_hashed_email.nil? ? '' : initial_hashed_email
 
     assert_user user,
       provider: provider,
       email: user.student? ? :empty : :not_empty,
-      hashed_email: :not_empty,
-      uid: :not_nil,
-      oauth_token: nil,
-      oauth_token_expiration: nil
+      hashed_email: is_email_trusted ? :not_empty : initial_hashed_email,
+      uid: :not_nil
 
     migrate user
 
     assert_user user,
       email: expected_email,
-      hashed_email: initial_hashed_email,
+      hashed_email: expected_hashed_email,
       primary_authentication_option: {
         credential_type: provider,
         authentication_id: initial_authentication_id,
         email: expected_email,
-        hashed_email: initial_hashed_email,
-        data: nil
+        hashed_email: expected_hashed_email
       }
   end
 
@@ -314,10 +313,12 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   #
   def assert_authentication_option(actual_option, expected_values)
     refute_nil actual_option
+    asserts_data = expected_values.key? :data
     expected_data = expected_values.delete(:data)
 
     assert_attributes actual_option, expected_values
 
+    return unless asserts_data
     if expected_data.nil?
       assert_nil actual_option.data
     elsif expected_data

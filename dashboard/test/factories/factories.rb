@@ -287,6 +287,13 @@ FactoryGirl.define do
       oauth_token_expiration nil
     end
 
+    trait :unmigrated_the_school_project_sso do
+      unmigrated_sso
+      provider 'the_school_project'
+      oauth_token nil
+      oauth_token_expiration nil
+    end
+
     trait :with_google_authentication_option do
       after(:create) do |user|
         create(:authentication_option,
