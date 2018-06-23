@@ -654,7 +654,15 @@ def run_feature(browser, feature, options)
   # BrowserStack was reporting Windows 6.0 and 6.1, causing different baselines
   run_environment['APPLITOOLS_HOST_OS'] = 'Windows 6x' unless browser['mobile']
   run_environment['APPLITOOLS_API_KEY'] = CDO.applitools_eyes_api_key
-  run_environment['APPLITOOLS_BATCH_ID'] = COMMIT_HASH
+
+  # When executing in a CircleCI environment use the hash of the commit that triggered
+  # the CircleCI build.  Our CircleCI build includes a step to merge the staging
+  # branch into the feature branch locally in the CircleCI environment, which means
+  # we can't use the COMMIT_HASH constant, because it's a different commit
+  # than the one at the head of the feature branch in GitHub.  The Applitools / GitHub
+  # integration requires APPLITOOLS_BATCH_ID to be set to the hash of the commit
+  # associated with the Pull Request so that it can lookup information about the source / target branch.
+  run_environment['APPLITOOLS_BATCH_ID'] = ENV['CIRCLE_SHA1'] ? ENV['CIRCLE_SHA1'] : COMMIT_HASH
 
   max_reruns = how_many_reruns?(test_run_string)
 
