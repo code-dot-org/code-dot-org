@@ -57,7 +57,7 @@ describe('AddPasswordForm', () => {
   });
 
   describe('on successful submission', () => {
-    beforeEach(() => {
+    beforeEach(async () => {
       handleSubmit = sinon.stub().resolves({});
       wrapper = mount(
         <AddPasswordForm
@@ -70,32 +70,26 @@ describe('AddPasswordForm', () => {
       });
       const submitButton = wrapper.find('button');
       submitButton.simulate('click');
-    });
-
-    afterEach(() => {
-      handleSubmit.resetBehavior();
+      await handleSubmit;
     });
 
     it('resets the password field to its default state', async () => {
-      await handleSubmit;
       const passwordField = wrapper.find('input').at(0);
       expect(passwordField).to.have.value('');
     });
 
     it('resets the password confirmation field to its default state', async () => {
-      await handleSubmit;
       const passwordConfirmationField = wrapper.find('input').at(1);
       expect(passwordConfirmationField).to.have.value('');
     });
 
     it('renders the success state', async () => {
-      await handleSubmit;
       expect(wrapper.find('#uitest-add-password-status')).to.have.text(SUCCESS_STATE);
     });
   });
 
   describe('on failed submission', () => {
-    beforeEach(() => {
+    beforeEach(async () => {
       handleSubmit = sinon.stub().rejects(new Error('Oh no!'));
       wrapper = mount(
         <AddPasswordForm
@@ -108,26 +102,20 @@ describe('AddPasswordForm', () => {
       });
       const submitButton = wrapper.find('button');
       submitButton.simulate('click');
-    });
-
-    afterEach(() => {
-      handleSubmit.resetBehavior();
-    });
-
-    it('does not reset the password field to its default state', async () => {
       await handleSubmit;
+    });
+
+    it('does not reset the password field to its default state', () => {
       const passwordField = wrapper.find('input').at(0);
       expect(passwordField).to.have.value('mypassword');
     });
 
-    it('does not reset the password confirmation field to its default state', async () => {
-      await handleSubmit;
+    it('does not reset the password confirmation field to its default state', () => {
       const passwordConfirmationField = wrapper.find('input').at(1);
       expect(passwordConfirmationField).to.have.value('mypassword');
     });
 
-    it('renders the error state', async () => {
-      await handleSubmit;
+    it('renders the error state', () => {
       expect(wrapper.find('#uitest-add-password-status')).to.have.text('Oh no!');
     });
   });

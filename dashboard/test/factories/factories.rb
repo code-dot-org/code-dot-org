@@ -240,12 +240,16 @@ FactoryGirl.define do
       encrypted_password nil
       provider %w(facebook windowslive clever).sample
       sequence(:uid) {|n| n}
+    end
+
+    trait :unmigrated_sso_with_token do
+      unmigrated_sso
       oauth_token 'fake-oauth-token'
       oauth_token_expiration 'fake-oauth-token-expiration'
     end
 
     trait :unmigrated_untrusted_email_sso do
-      unmigrated_sso
+      unmigrated_sso_with_token
       after(:create) do |user|
         if user.student?
           user.hashed_email = nil
@@ -254,30 +258,45 @@ FactoryGirl.define do
       end
     end
 
-    trait :unmigrated_google_sso do
-      unmigrated_sso
-      provider 'google_oauth2'
-      oauth_refresh_token 'fake-oauth-refresh-token'
-    end
-
-    trait :unmigrated_facebook_sso do
-      unmigrated_sso
-      provider 'facebook'
-    end
-
-    trait :unmigrated_windowslive_sso do
-      unmigrated_sso
-      provider 'windowslive'
-    end
-
     trait :unmigrated_clever_sso do
       unmigrated_untrusted_email_sso
       provider 'clever'
     end
 
+    trait :unmigrated_facebook_sso do
+      unmigrated_sso_with_token
+      provider 'facebook'
+    end
+
+    trait :unmigrated_google_sso do
+      unmigrated_sso_with_token
+      provider 'google_oauth2'
+      oauth_refresh_token 'fake-oauth-refresh-token'
+    end
+
     trait :unmigrated_powerschool_sso do
       unmigrated_untrusted_email_sso
       provider 'powerschool'
+    end
+
+    trait :unmigrated_the_school_project_sso do
+      unmigrated_sso
+      provider 'the_school_project'
+    end
+
+    trait :unmigrated_twitter_sso do
+      unmigrated_sso
+      provider 'twitter'
+    end
+
+    trait :unmigrated_qwiklabs_sso do
+      unmigrated_sso
+      provider 'lti_lti_prod_kids.qwikcamps.com'
+    end
+
+    trait :unmigrated_windowslive_sso do
+      unmigrated_sso_with_token
+      provider 'windowslive'
     end
 
     trait :with_google_authentication_option do
