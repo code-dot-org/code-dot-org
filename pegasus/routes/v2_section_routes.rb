@@ -11,23 +11,6 @@ get '/v2/sections' do
   JSON.pretty_generate(sections)
 end
 
-# Get the set of sections that the current user is enrolled in.
-# DEPRECATED: Use GET /dashboardapi/sections/membership instead
-get '/v2/sections/membership' do
-  # Notify Honeybadger to determine if this endpoint is still used anywhere
-  Honeybadger.notify(
-    error_class: "DeprecatedEndpointWarning",
-    error_message: 'Deprecated endpoint /v2/sections/membership called unexpectedly',
-  )
-
-  only_for 'code.org'
-  dont_cache
-  content_type :json
-  sections = DashboardSection.fetch_student_sections(dashboard_user_id)
-  forbidden! unless sections
-  JSON.pretty_generate(sections)
-end
-
 # DEPRECATED: User GET /dashboardapi/sections/valid_scripts instead
 get '/v2/sections/valid_scripts' do
   # Notify Honeybadger to determine if this endpoint is still used anywhere

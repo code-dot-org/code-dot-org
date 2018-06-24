@@ -88,47 +88,6 @@ class V2SectionRoutesTest < SequelTestCase
       # TODO(asher).
     end
 
-    describe 'GET /v2/sections/membership' do
-      it 'returns 403 "Forbidden" when not signed in' do
-        with_role nil
-        @pegasus.get '/v2/sections/membership'
-        assert_equal 403, @pegasus.last_response.status
-      end
-
-      it 'returns sections for student' do
-        with_role FakeDashboard::STUDENT
-        @pegasus.get '/v2/sections/membership'
-        assert_equal 200, @pegasus.last_response.status
-        assert_equal(
-          [
-            {
-              "id" => 150001,
-              "location" => "/v2/sections/150001",
-              "name" => "Fake Section A",
-              "login_type" => "email",
-              "grade" => nil,
-              "code" => nil,
-              "stage_extras" => false,
-              "pairing_allowed" => true,
-              "hidden" => false,
-            }
-          ],
-          JSON.parse(@pegasus.last_response.body)
-        )
-      end
-
-      it 'ignores deleted sections' do
-        # TODO(asher).
-      end
-
-      it 'ignores deleted follower memberships' do
-        with_role FakeDashboard::STUDENT_DELETED_FOLLOWER
-        @pegasus.get '/v2/sections/membership'
-        assert_equal 200, @pegasus.last_response.status
-        assert_equal [], JSON.parse(@pegasus.last_response.body)
-      end
-    end
-
     describe 'GET /v2/sections/:id' do
       # NOTE: These tests currently fail as the result of sqlite not supporting
       # the `.distinct(:student_user_id)` syntax used in the `students()` method
