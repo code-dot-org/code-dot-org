@@ -20,23 +20,6 @@ get '/v2/sections/:id' do |id|
   JSON.pretty_generate(section.to_owner_hash)
 end
 
-# DEPRECATED: Use DELETE /dashboardapi/sections/<id> instead
-delete '/v2/sections/:id' do |id|
-  # Notify Honeybadger to determine if this endpoint is still used anywhere
-  Honeybadger.notify(
-    error_class: "DeprecatedEndpointWarning",
-    error_message: 'Deprecated endpoint DELETE /v2/sections/:id called unexpectedly',
-  )
-
-  only_for 'code.org'
-  dont_cache
-  forbidden! unless DashboardSection.delete_if_owner(id, dashboard_user_id)
-  no_content!
-end
-post '/v2/sections/:id/delete' do |id|
-  call(env.merge('REQUEST_METHOD' => 'DELETE', 'PATH_INFO' => "/v2/sections/#{id}"))
-end
-
 # DEPRECATED: Use PATCH /sections/<id> instead
 patch '/v2/sections/:id' do |id|
   # Notify Honeybadger to determine if this endpoint is still used anywhere
