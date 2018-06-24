@@ -3108,4 +3108,36 @@ class UserTest < ActiveSupport::TestCase
       result
     )
   end
+
+  test 'find_by_credential returns nil when no matching user is found' do
+    user = create :student, :unmigrated_clever_sso
+
+    assert_nil User.find_by_credential(
+      type: AuthenticationOption::CLEVER,
+      id: 'mismatched_id_' + user.uid
+    )
+  end
+
+  test 'find_by_credential locates unmigrated SSO user' do
+    user = create :student, :unmigrated_clever_sso
+    assert_equal AuthenticationOption::CLEVER, user.provider
+
+    assert_equal user,
+      User.find_by_credential(
+        type: AuthenticationOption::CLEVER,
+        id: user.uid
+      )
+  end
+
+  test 'find_by_credential locates migrated SSO user' do
+    user = create :student, :unmigrated_clever_sso
+    user.migrate_to_multi_auth
+
+    User.expects(:find_by).never
+    assert_equal user,
+      User.find_by_credential(
+        type: AuthenticationOption::CLEVER,
+        id: user.uid
+      )
+  end
 end
