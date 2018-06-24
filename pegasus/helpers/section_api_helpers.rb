@@ -632,47 +632,6 @@ class DashboardSection
     }
   end
 
-  def self.update_if_owner(params)
-    section_id = params[:id]
-    return nil unless params[:user] && params[:user][:user_type] == 'teacher'
-    user_id = params[:user][:id]
-
-    fields = {updated_at: DateTime.now}
-    fields[:name] = params[:name] unless params[:name].nil_or_empty?
-    fields[:login_type] = params[:login_type] if valid_login_type?(params[:login_type])
-    fields[:grade] = params[:grade] if valid_grade?(params[:grade])
-    fields[:stage_extras] = params[:stage_extras]
-    fields[:pairing_allowed] = params[:pairing_allowed]
-    fields[:hidden] = params[:hidden] unless params[:hidden].nil?
-
-    if params[:course_id] && valid_course_id?(params[:course_id])
-      fields[:course_id] = params[:course_id].to_i
-      # explicitly clear script_id (unless we're also passed in a valid script id
-      # as a param
-      fields[:script_id] = nil
-    else
-      # If no valid course_id provided, make sure we clear any existing course_id
-      fields[:course_id] = nil
-    end
-
-    if params[:script] && valid_script_id?(params[:script][:id], user_id)
-      fields[:script_id] = params[:script][:id].to_i
-      DashboardUserScript.assign_script_to_section(fields[:script_id], section_id)
-      DashboardUserScript.assign_script_to_user(fields[:script_id], user_id)
-    elsif !params[:course_id] && !params[:script_id]
-      # If a null course (no choice or decide later) is chosen, then update the course and script to be nil
-      fields[:course_id] = nil
-      fields[:script_id] = nil
-    end
-
-    rows_updated = Dashboard.db[:sections].
-      where(id: section_id, user_id: user_id, deleted_at: nil).
-      update(fields)
-    return nil unless rows_updated > 0
-
-    fetch_if_allowed(section_id, user_id)
-  end
-
   def self.fields
     [
       :sections__id___id,

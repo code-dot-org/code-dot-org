@@ -20,25 +20,6 @@ get '/v2/sections/:id' do |id|
   JSON.pretty_generate(section.to_owner_hash)
 end
 
-# DEPRECATED: Use PATCH /sections/<id> instead
-patch '/v2/sections/:id' do |id|
-  # Notify Honeybadger to determine if this endpoint is still used anywhere
-  Honeybadger.notify(
-    error_class: "DeprecatedEndpointWarning",
-    error_message: 'Deprecated endpoint PATCH /v2/sections/:id called unexpectedly',
-  )
-
-  only_for 'code.org'
-  dont_cache
-  unsupported_media_type! unless payload = request.json_body
-  forbidden! unless section = DashboardSection.update_if_owner(payload.merge(id: id, user: dashboard_user))
-  content_type :json
-  JSON.pretty_generate(section.to_owner_hash)
-end
-post '/v2/sections/:id/update' do |id|
-  call(env.merge('REQUEST_METHOD' => 'PATCH', 'PATH_INFO' => "/v2/sections/#{id}"))
-end
-
 # DEPRECATED: Use GET /dashboardapi/sections/<id>/students
 get '/v2/sections/:id/students' do |id|
   # Notify Honeybadger to determine if this endpoint is still used anywhere

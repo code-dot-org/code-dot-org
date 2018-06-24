@@ -146,60 +146,6 @@ class V2SectionRoutesTest < SequelTestCase
       end
     end
 
-    describe 'POST /v2/sections/:id/update' do
-      NEW_NAME = 'Updated Section'
-
-      it 'returns 403 "Forbidden" when not signed in' do
-        with_role nil
-        @pegasus.post "/v2/sections/#{FakeDashboard::SECTION_NORMAL[:id]}/update",
-          {name: NEW_NAME}.to_json,
-          'CONTENT_TYPE' => 'application/json;charset=utf-8'
-        assert_equal 403, @pegasus.last_response.status
-      end
-
-      it 'returns 403 "Forbidden" as admin' do
-        with_role FakeDashboard::ADMIN
-        @pegasus.post "/v2/sections/#{FakeDashboard::SECTION_NORMAL[:id]}/update",
-          {name: NEW_NAME}.to_json,
-          'CONTENT_TYPE' => 'application/json;charset=utf-8'
-        assert_equal 403, @pegasus.last_response.status
-      end
-
-      # NOTE: These tests currently fail as the result of sqlite not supporting
-      # the `.distinct(:student_user_id)` syntax used in the `students()` method
-      # within `DashboardSection`.
-      # TODO(asher): Fix and reenable these tests.
-      #it 'updates' do
-      #  with_role FakeDashboard::TEACHER
-      #  Dashboard.db.transaction(rollback: :always) do
-      #    @pegasus.post "/v2/sections/#{FakeDashboard::SECTION_NORMAL[:id]}/update",
-      #       {name: NEW_NAME}.to_json,
-      #       'CONTENT_TYPE' => 'application/json;charset=utf-8'
-      #    assert_equal 200, @pegasus.last_response.status
-      #    assert_equal ({
-      #        "id"=>150001,
-      #        "location"=>"/v2/sections/150001",
-      #        "name"=>NEW_NAME,
-      #        "login_type"=>"email",
-      #        "grade"=>nil,
-      #        "code"=>nil,
-      #        "course"=>nil,
-      #        "teachers"=>[{"id"=>2, "location"=>"/v2/users/2"}],
-      #        "students"=>[{"student_user_id"=>1, "location"=>"/v2/users/", "age"=>nil, "completed_levels_count"=>0}]
-      #      }),
-      #      JSON.parse(@pegasus.last_response.body)
-      #  end
-      #end
-
-      it 'returns 403 "Forbidden" when updating deleted section' do
-        with_role FakeDashboard::TEACHER_DELETED_SECTION
-        @pegasus.post "/v2/sections/#{FakeDashboard::SECTION_DELETED[:id]}/update",
-          {name: NEW_NAME}.to_json,
-          'CONTENT_TYPE' => 'application/json;charset=utf-8'
-        assert_equal 403, @pegasus.last_response.status
-      end
-    end
-
     # Stubs the user ID for the duration of the test to match the ID of the
     # user hash given. The result should be pulled in through the mock database.
     # @param [Hash] role
