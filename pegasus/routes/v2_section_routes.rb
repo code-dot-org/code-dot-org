@@ -20,21 +20,6 @@ get '/v2/sections/:id' do |id|
   JSON.pretty_generate(section.to_owner_hash)
 end
 
-# DEPRECATED: Use GET /dashboardapi/sections/<id>/students
-get '/v2/sections/:id/students' do |id|
-  # Notify Honeybadger to determine if this endpoint is still used anywhere
-  Honeybadger.notify(
-    error_class: "DeprecatedEndpointWarning",
-    error_message: 'Deprecated endpoint /v2/sections/:id/students called unexpectedly',
-  )
-
-  only_for 'code.org'
-  dont_cache
-  forbidden! unless section = DashboardSection.fetch_if_allowed(id, dashboard_user_id)
-  content_type :json
-  JSON.pretty_generate(section.to_owner_hash[:students])
-end
-
 # DEPRECATED: Use POST /dashboardapi/sections/<id>/students/bulk_add
 post '/v2/sections/:id/students' do |id|
   only_for 'code.org'
