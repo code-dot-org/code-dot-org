@@ -84,10 +84,6 @@ class V2SectionRoutesTest < SequelTestCase
       #end
     end
 
-    describe 'POST /v2/sections' do
-      # TODO(asher).
-    end
-
     describe 'GET /v2/sections/:id' do
       # NOTE: These tests currently fail as the result of sqlite not supporting
       # the `.distinct(:student_user_id)` syntax used in the `students()` method
