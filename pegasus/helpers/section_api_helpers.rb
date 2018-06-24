@@ -471,25 +471,6 @@ class DashboardSection
     row
   end
 
-  # Soft deletes both the section with ID `id` and all associated followers
-  # relationships.
-  def self.delete_if_owner(id, user_id)
-    row = Dashboard.db[:sections].
-      where(id: id, user_id: user_id, deleted_at: nil).
-      first
-    return nil unless row
-
-    time_now = Time.now
-
-    Dashboard.db.transaction do
-      Dashboard.db[:followers].where(section_id: id, deleted_at: nil).
-        update(deleted_at: time_now)
-      Dashboard.db[:sections].where(id: id).update(deleted_at: time_now)
-    end
-
-    row
-  end
-
   def self.fetch_if_allowed(id, user_id)
     # TODO: Allow caller to specify fields that they want because the
     # joins are getting a bit out of control (eg. you don't want to

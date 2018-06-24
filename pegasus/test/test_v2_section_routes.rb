@@ -146,63 +146,6 @@ class V2SectionRoutesTest < SequelTestCase
       end
     end
 
-    describe 'POST /v2/sections/:id/delete' do
-      it 'soft-deletes a section and all followers' do
-        with_role FakeDashboard::TEACHER
-        Dashboard.db.transaction(rollback: :always) do
-          @pegasus.post "/v2/sections/#{FakeDashboard::SECTION_NORMAL[:id]}/delete"
-          assert_equal 204, @pegasus.last_response.status
-          assert Dashboard.db[:sections].
-            where(id: FakeDashboard::SECTION_NORMAL[:id]).
-            exclude(deleted_at: nil).
-            any?
-          assert_equal 1, Dashboard.db[:followers].
-            where(section_id: FakeDashboard::SECTION_NORMAL[:id]).
-            exclude(deleted_at: nil).
-            count
-        end
-      end
-
-      it 'does not update already deleted followers' do
-        with_role FakeDashboard::TEACHER_DELETED_FOLLOWER
-        Dashboard.db.transaction(rollback: :always) do
-          before_timestamp = Dashboard.db[:followers].
-            where(
-              section_id: FakeDashboard::SECTION_DELETED_FOLLOWER[:id],
-              student_user_id: FakeDashboard::STUDENT_DELETED_FOLLOWER[:id]
-            ).
-            select_map(:deleted_at)
-          @pegasus.post "/v2/sections/#{FakeDashboard::SECTION_DELETED_FOLLOWER[:id]}/delete"
-          assert_equal 204, @pegasus.last_response.status
-          after_timestamp = Dashboard.db[:followers].
-            where(
-              section_id: FakeDashboard::SECTION_DELETED_FOLLOWER[:id],
-              student_user_id: FakeDashboard::STUDENT_DELETED_FOLLOWER[:id]
-            ).
-            select_map(:deleted_at)
-          assert_equal before_timestamp, after_timestamp
-        end
-      end
-
-      it 'returns 403 "Forbidden" when not signed in' do
-        with_role nil
-        @pegasus.post "/v2/sections/#{FakeDashboard::SECTION_NORMAL[:id]}/delete"
-        assert_equal 403, @pegasus.last_response.status
-      end
-
-      it 'returns 403 "Forbidden" when deleting another teachers section' do
-        with_role FakeDashboard::TEACHER_SELF
-        @pegasus.post "/v2/sections/#{FakeDashboard::SECTION_NORMAL[:id]}/delete"
-        assert_equal 403, @pegasus.last_response.status
-      end
-
-      it 'returns 403 "Forbidden" when deleting a deleted section' do
-        with_role FakeDashboard::TEACHER_DELETED_SECTION
-        @pegasus.post "/v2/sections/#{FakeDashboard::SECTION_DELETED[:id]}/delete"
-        assert_equal 403, @pegasus.last_response.status
-      end
-    end
-
     describe 'POST /v2/sections/:id/update' do
       NEW_NAME = 'Updated Section'
 
