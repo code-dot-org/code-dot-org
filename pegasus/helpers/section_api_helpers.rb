@@ -422,6 +422,7 @@ class DashboardSection
     valid_courses.any? {|course| course[:id] == course_id.to_i}
   end
 
+  # Used only in tests now, remove when no more usages.
   def self.create(params)
     return nil unless params[:user] && params[:user][:user_type] == 'teacher'
 
