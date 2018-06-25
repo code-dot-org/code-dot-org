@@ -36,7 +36,7 @@ def main
           form_kind: '0'
         )
       rescue StandardError => error
-        CDO.log.info "Unable to Opt Out email address - #{petition[:email]} - #{error}"
+        CDO.log.info "Skipping email address - #{petition[:email]} - #{error}."
       end
     end
   CDO.log.info "Finished Opt Out of Petition Emails Under 16"
