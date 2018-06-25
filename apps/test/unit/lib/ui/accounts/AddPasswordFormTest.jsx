@@ -51,7 +51,7 @@ describe('AddPasswordForm', () => {
 
   it('renders the form submission state', () => {
     wrapper.setState({
-      submissionState: SAVING_STATE
+      submissionState: {message: SAVING_STATE}
     });
     expect(wrapper.find('#uitest-add-password-status')).to.have.text(SAVING_STATE);
   });
