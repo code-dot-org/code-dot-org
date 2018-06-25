@@ -403,8 +403,16 @@ WebLab.prototype.onInspectorChanged = function (inspectorOn) {
  * @return {String} current project path (project id plus initial version)
  */
 WebLab.prototype.setBrambleHost = function (brambleHost) {
-  brambleHost.onBrambleReady(() => {
+  // Make brambleHost available for file sync operations as soon as it's
+  // initialized far enough to start building its UI.
+  // This makes operations like "Start Over" available even in cases where
+  // the mount operation throws an uncaught exception (like the missing
+  // index.html error).
+  brambleHost.onBrambleMountable(() => {
     this.brambleHost = brambleHost;
+  });
+
+  brambleHost.onBrambleReady(() => {
     brambleHost.onProjectChanged(this.onProjectChanged.bind(this));
     brambleHost.onInspectorChanged(this.onInspectorChanged.bind(this));
     // Enable the Finish/Submit/Unsubmit button if it is present:
