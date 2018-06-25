@@ -447,10 +447,10 @@ export function clearTimeoutsBetweenTests() {
  *   suite.  This should normally be 'false' to avoid unneeded impact on the
  *   runtime of the suite, but setting it 'true' is very useful for isolating
  *   the test that's causing related failures.
- * @param {function} inScope callback function containing the tests to run
+ * @param {function} runTestCases callback function containing the tests to run
  *   with the body cleanup check in place.
  */
-export function enforceDocumentBodyCleanup({checkEveryTest = false}, inScope) {
+export function enforceDocumentBodyCleanup({checkEveryTest = false}, runTestCases) {
   let initialInnerHTML;
   const beforeFn = checkEveryTest ? beforeEach : before;
   const afterFn = checkEveryTest ? afterEach : after;
@@ -487,6 +487,6 @@ export function enforceDocumentBodyCleanup({checkEveryTest = false}, inScope) {
       document.body.removeEventListener.restore();
     });
 
-    describe('', inScope);
+    describe('', runTestCases);
   });
 }
