@@ -504,7 +504,7 @@ class User < ActiveRecord::Base
   validates :name, length: {within: 1..70}, allow_blank: true
   validates :name, no_utf8mb4: true
 
-  defer_age = proc {|user| %w(google_oauth2 clever powerschool).include?(user.provider) || user.provider == User::PROVIDER_SPONSORED}
+  defer_age = proc {|user| %w(google_oauth2 clever powerschool).include?(user.provider) || user.sponsored?}
 
   validates :age, presence: true, on: :create, unless: defer_age # only do this on create to avoid problems with existing users
   AGE_DROPDOWN_OPTIONS = (4..20).to_a << "21+"
@@ -777,7 +777,7 @@ class User < ActiveRecord::Base
 
   def oauth?
     if migrated?
-      authentication_options.any? {|auth| OAUTH_PROVIDERS.include? auth.credential_type}
+      authentication_options.any?(&:oauth?)
     else
       OAUTH_PROVIDERS.include? provider
     end
@@ -812,7 +812,7 @@ class User < ActiveRecord::Base
   def email_required?
     return true if teacher?
     return false if provider == User::PROVIDER_MANUAL
-    return false if provider == User::PROVIDER_SPONSORED
+    return false if sponsored?
     return false if oauth?
     return false if parent_managed_account?
     true
@@ -847,7 +847,7 @@ class User < ActiveRecord::Base
     return false if teacher? && email.nil?
 
     # If an email option with a different email address already exists, destroy it
-    existing_email_option = authentication_options.find {|ao| ao.credential_type == 'email'}
+    existing_email_option = authentication_options.find {|ao| AuthenticationOption::EMAIL == ao.credential_type}
     existing_email_option&.destroy
 
     # If an auth option exists with same email, set it to the user's primary authentication option
@@ -857,7 +857,7 @@ class User < ActiveRecord::Base
       return save
     end
 
-    params = {credential_type: 'email', user: self}
+    params = {credential_type: AuthenticationOption::EMAIL, user: self}
     params[:email] = email unless email.nil?
     params[:hashed_email] = hashed_email if email.nil?
     self.primary_authentication_option = AuthenticationOption.new(params)

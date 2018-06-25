@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180607153724) do
+ActiveRecord::Schema.define(version: 20180622230430) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -47,15 +47,15 @@ ActiveRecord::Schema.define(version: 20180607153724) do
   end
 
   create_table "authentication_options", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string   "email",             default: "", null: false
-    t.string   "hashed_email",      default: "", null: false
-    t.string   "credential_type",                null: false
+    t.string   "email",                           default: "", null: false
+    t.string   "hashed_email",                    default: "", null: false
+    t.string   "credential_type",                              null: false
     t.string   "authentication_id"
-    t.string   "data"
+    t.text     "data",              limit: 65535
     t.datetime "deleted_at"
-    t.integer  "user_id",                        null: false
-    t.datetime "created_at",                     null: false
-    t.datetime "updated_at",                     null: false
+    t.integer  "user_id",                                      null: false
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
     t.index ["credential_type", "authentication_id", "deleted_at"], name: "index_auth_on_cred_type_and_auth_id", unique: true, using: :btree
     t.index ["email", "deleted_at"], name: "index_authentication_options_on_email_and_deleted_at", using: :btree
     t.index ["hashed_email", "deleted_at"], name: "index_authentication_options_on_hashed_email_and_deleted_at", using: :btree

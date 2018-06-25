@@ -127,16 +127,15 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
               level_result[:type] = "FreeResponse"
             when Multi
               level_result[:type] = "Multi"
-              answer_indexes = Multi.find_by_id(level.id).correct_answer_indexes
-              student_result = level_response["result"].split(",").sort.join(",")
+              answer_indexes = Multi.find_by_id(level.id).correct_answer_indexes_array
+              student_result = level_response["result"].split(",").map(&:to_i).sort
+              level_result[:student_result] = student_result
 
-              # Convert "0,1,3" to "A, B, D" for teacher-friendly viewing
-              level_result[:student_result] = student_result.split(',').map {|k| Multi.value_to_letter(k.to_i)}.join(', ')
-
-              if student_result == "-1"
-                level_result[:student_result] = ""
+              if student_result == [-1]
+                level_result[:student_result] = []
                 level_result[:status] = "unsubmitted"
-              elsif student_result == answer_indexes
+              # Deep comparison of arrays of indexes
+              elsif student_result - answer_indexes == []
                 multi_count_correct += 1
                 level_result[:status] = "correct"
               else

@@ -23,7 +23,7 @@
       = f.label 'Helper Code'
       = f.text_area :helper_code
       %div
-        = f.submit class: 'btn'
+        = f.submit class: 'btn', id: 'block_submit'
 
     - unless @block.new_record?
       = form_for(@block,

@@ -5,7 +5,8 @@ import i18n from '@cdo/locale';
 const multipleChoiceData = [
   {
     id: 1,
-    question: '1. What is a variable?',
+    questionNumber: 1,
+    question: 'What is a variable?',
     answers:  [{multipleChoiceOption: i18n.answerOptionA(), numAnswered: 2, isCorrect: true},
                {multipleChoiceOption: i18n.answerOptionB(), numAnswered: 4, isCorrect: false},
                {multipleChoiceOption: i18n.answerOptionC(), numAnswered: 1, isCorrect: false},
@@ -16,7 +17,8 @@ const multipleChoiceData = [
   },
   {
     id: 2,
-    question: '2. What is a 4-bit number for the decimal number Ten(10)?',
+    questionNumber: 2,
+    question: 'What is a 4-bit number for the decimal number Ten(10)?',
     answers:  [{multipleChoiceOption: i18n.answerOptionA(), numAnswered: 3, isCorrect: false},
                {multipleChoiceOption: i18n.answerOptionB(), numAnswered: 1, isCorrect: true},
                {multipleChoiceOption: i18n.answerOptionC(), numAnswered: 1, isCorrect: false},
@@ -29,7 +31,8 @@ const multipleChoiceData = [
   },
   {
     id: 3,
-    question: '3. What is the minimum number of bits you will need to encode the 26 letters of the alphabet?',
+    questionNumber: 3,
+    question: 'What is the minimum number of bits you will need to encode the 26 letters of the alphabet?',
     answers:  [{multipleChoiceOption: i18n.answerOptionA(), numAnswered: 1, isCorrect: false},
                {multipleChoiceOption: i18n.answerOptionB(), numAnswered: 1, isCorrect: false},
                {multipleChoiceOption: i18n.answerOptionC(), numAnswered: 2, isCorrect: true},
@@ -41,7 +44,8 @@ const multipleChoiceData = [
   },
   {
     id: 4,
-    question: '4. What is a function?',
+    questionNumber: 4,
+    question: 'What is a function?',
     answers:  [{multipleChoiceOption: i18n.answerOptionA(), numAnswered: 1, isCorrect: false},
                {multipleChoiceOption: i18n.answerOptionB(), numAnswered: 1, isCorrect: false},
                {multipleChoiceOption: i18n.answerOptionC(), numAnswered: 1, isCorrect: false},
