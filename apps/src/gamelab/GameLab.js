@@ -252,9 +252,10 @@ GameLab.prototype.init = function (config) {
     }.bind(this)
   };
 
-  // Provide a way for us to have top pane instructions disabled by default, but
-  // able to turn them on.
-  config.noInstructionsWhenCollapsed = true;
+  // Display CSF-style instructions when using Blockly. Otherwise provide a way
+  // for us to have top pane instructions disabled by default, but able to turn
+  // them on.
+  config.noInstructionsWhenCollapsed = !this.studioApp_.isUsingBlockly();
 
   var breakpointsEnabled = !config.level.debuggerDisabled;
   config.enableShowCode = true;
