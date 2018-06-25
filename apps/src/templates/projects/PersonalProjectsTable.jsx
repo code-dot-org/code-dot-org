@@ -233,7 +233,7 @@ class PersonalProjectsTable extends React.Component {
       {
         property: 'updatedAt',
         header: {
-          label: "Last edited",
+          label: i18n.lastEdited(),
           props: {style: tableLayoutStyles.headerCell},
           transforms: [sortable],
         },
@@ -245,7 +245,7 @@ class PersonalProjectsTable extends React.Component {
       {
         property: 'isPublished',
         header: {
-          label: "Published",
+          label: i18n.published(),
           props: {style: tableLayoutStyles.headerCell},
           transforms: [sortable],
         },
