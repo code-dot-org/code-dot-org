@@ -342,7 +342,7 @@ export const loadScript = (scriptId) => {
 };
 
 export function getStudentPairing(dataByStudent) {
-  return getInfoByStudentByLevel(dataByStudent, levelData => levelData.paired);
+  return getInfoByStudentByLevel(dataByStudent, levelData => !!levelData.paired);
 }
 
 export function getStudentLevelResult(dataByStudent) {

@@ -85,6 +85,7 @@ fr:
     facebook: 'Facebook'
     windowslive: 'Compte Microsoft'
     clever: 'Compte Clever'
+    powerschool: 'Compte Powerschool'
     forgot_password: 'Mot de passe oublié?'
     need_confirmation: "Pas reçu les instructions de confirmation ?"
     need_unlock: "Pas reçu les instructions de déverrouillage?"
@@ -115,9 +116,9 @@ fr:
     invalid_password: "Le mot de passe doit comporter au moins 6 caractères."
     mismatch_password: "Les deux mots de passe ne sont pas identiques."
     agree_tos_privacy: "Je sui d'accord avec les <a href='http://code.org/tos'> modalités de service</a> et la <a href='http://code.org/privacy'> politique de confidentialité</a>."
-    under_13_consent: "Si j'ai moins de 13 ans, je confirme que j'ai l'autorisation de l'un de mes parents ou de mon représentant légal pour utiliser les services de Code.org."
-    agree_us_website: "Je suis d'accord pour utiliser un site internet situé aux Etats-Unis."
-    my_data_to_us: "Mes données de connexion sur ce site peuvent être envoyées et stockées ou traitées aux Etats-Unis."
+    under_13_consent: "Si j’ai moins de 13 ans, je confirme que j’ai l’autorisation de mes parents ou de mon tuteur légal pour utiliser les services de Code.org."
+    agree_us_website: "J’accepte d’utiliser un site Web basé aux États-Unis."
+    my_data_to_us: "Des informations sur mon utilisation de ce site peuvent être envoyées et enregistrées ou traitées aux États-Unis."
     student_terms: "J'accepte d'être lié aux <a href='http://code.org/tos'>conditions d'utilisation</a> de Code.org. Si je suis âgé de moins de 13 ans, je confirme en soumettant ce formulaire que j'ai la permission de mes parents ou de mon tuteur légal pour utiliser les services Code.org. <br/><br/>Les adresses e-mail ne sont pas stockées sous une forme qui nous permettrait de contacter les élèves. Les élèves ne recevront jamais d'e-mails venant de Code.org sauf pour la récupération du mot de passe. Voir notre <a href='http://code.org/privacy'>politique de confidentialité</a> pour plus d'informations."
     teacher_terms: "J'accepte d'être lié aux conditions d'utilisation de Code.org. Pour plus d'informations sur la vie privée, voir notre <a href='http://code.org/privacy'>politique de confidentialité</a>."
     additional_information: "Nous avons besoin de quelques informations supplémentaires pour continuer l’inscription."
@@ -128,8 +129,8 @@ fr:
     field_is_required: "est obligatoire"
     accept_terms: "Vous devez accepter les conditions d'utilisation pour créer un compte"
     error: "Une erreur est apparue."
-    email_preference_question: "Pouvons-nous vous envoyer des mises à jour concernant nos cours, les possibilités de formation locales ou les nouveautés en sciences informatique ?"
-    email_preference_privacy: "(See our privacy policy)"
+    email_preference_question: "Pouvons-nous vous envoyer des e-mails d’information sur nos formations, des opportunités près de chez vous ou d’autres brèves dans le domaine informatique\\_?"
+    email_preference_privacy: "(Voir notre politique de protection des données)"
     email_preference_yes: "Oui"
     email_preference_no: "Non"
     email_preference_required: "Vous devez préciser une adresse mail préférée."
@@ -359,6 +360,7 @@ fr:
     email_confirm_needed_required: 'Votre adresse e-mail %{email} n''a pas été confirmée :'
     email_confirm_wrong_email: '(Adresse e-mail invalide ?)'
     email_resend_confirm: 'Renvoyer les instructions de confirmation'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(laisser vide si rien n’est à changer)"
     current_password_hint: '(nous avons besoin de votre mot de passe pour confirmer les modifications)'
     delete: 'Supprimer votre compte'
@@ -460,7 +462,7 @@ fr:
     student_not_found: "Un ou plusieurs élèves n'ont pas été trouvés."
     all_students_must_be_in_current_section: "Tous les étudiants doivent être inscrits dans votre section."
     already_enrolled_in_new_section: "Vous ne pouvez pas déplacer ces élèves car ce professeur les a déjà dans une autre section."
-    third_party_login: "You cannot move students to a section that is synced with a third party tool."
+    third_party_login: "Vous ne pouvez pas déplacer les élèves dans une section qui est synchronisée avec un outil tiers."
   share:
     title: "Apprends avec Code Studio"
     description: "N'importe qui peut apprendre l’informatique. Crée des jeux, des applications et de l'art avec du code."

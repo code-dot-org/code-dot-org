@@ -1,4 +1,5 @@
-"pt-BR":
+---
+pt-BR:
   data:
     instructions:
       2-3 Artist 1 new_instruction: Oi, eu sou um artista. Você pode escrever códigos
@@ -4269,6 +4270,33 @@
         in your stair step pattern?\r\n- What happens if you make your diamond pattern
         longer or shorter?\r\n- What does it look like to draw two snowflakes on top
         of one another?"
+      Dance Party 1-validated_instruction: 'What do you think will happen when you
+        click on the alien?  '
+      Dance Party 2_instruction: Change the behavior inside the `___ begins ___` block
+        to make the alien start spinning around.
+      Dance Party 3 - Validated_instruction: 'Create a new sprite called `alien2`,
+        then make it do a different dance move when it''s clicked.  '
+      Dance Party 3_instruction: 'Create a new sprite called `alien2`, then make it
+        do a different dance move when it''s clicked.  '
+      Dance Party 4 Validated_instruction: 'Create a third sprite called `alien3`
+        and get all of your aliens to stand in a line. '
+      Dance Party 4_instruction: 'Create a third sprite called `alien3` and get all
+        of your aliens to stand in a line. '
+      Dance Party 5 - Validated_instruction: Add code to change the color of each
+        alien when it gets clicked.
+      Dance Party 5_instruction: Add code to change the color of each alien when it
+        gets clicked.
+      Dance Party 6 - Validated_instruction: Use the `stops everything` block to make
+        each alien stop moving when it is clicked.
+      Dance Party 6_instruction: Use the `stops everything` block to make each alien
+        stop moving when it is clicked.
+      Dance Party 7 - Validated_instruction: Add a new bell sprite called `myBell`
+        that makes all the aliens start doing the same dance move when it's clicked.
+      Dance Party 7_instruction: Add a new bell sprite called `myBell` that makes
+        all the aliens start doing the same dance move when it's clicked.
+      Dance Party Freeplay_instruction: Now create your own alien disco!
+      Dance Party Predict_instruction: 'What do you think will happen when you click
+        on the alien?  '
       ECSPD Binary Odometer_instruction: |-
         This is another resource you could use
         with your students.
@@ -4539,6 +4567,16 @@
       Find the Wizard_2018_instruction: |-
         Build whatever you want. This is an example
         of a number-guessing game!
+      Fish Tank 2-validated_instruction: Change Dusty (the tumbleweed) to a fish.
+      Fish Tank 3-validated_instruction: Change the fish's behavior so that it swims
+        around the tank.
+      Fish Tank 4-validated_instruction: Use the `set background color` block to make
+        the background blue.
+      Fish Tank 5-validated_instruction: Our fish is getting a little lonely. Add
+        another sprite to the fish tank.
+      Fish Tank 6-validated_instruction: Add a behavior to the fish's new friend.
+      Fish Tank 7-validated_instruction: Use some new blocks from the toolbox to make
+        your fish tank special!
       Food Fight!_instruction: "Adicionamos uma última função para\nvocê.\r\n\r\nUse
         uma instrução \"se\" para que seu jogo chame a função \"suba de nível\"\nsomente
         quando \"pontos_jogador\" for maior que um determinado número.\r\n\r\nPor\nexemplo:
@@ -4623,6 +4661,7 @@
         Uh oh, I lost my map and can't remember what I planted.
         Every sprout could grow up to be corn, beans, or pumpkins. Can you write some
         code to pick all the crops, no matter what they are?
+      HoCAB_labyrinth1_instruction: Use the arrow blocks to solve this maze!
       Infinity_catch_instruction: |-
         Você pode fazer Elsa ("personagem 2") alcançar
         Anna usando as setas do teclado?
@@ -8337,6 +8376,7 @@
         Design Mode. (Click for full instructions.)
       U4 vigenere cipher 2_instruction: Instruções
       U4L02 - Objects - Template1_instruction: Modelo
+      U4L02 - Objects - Template1_2018_instruction: Modelo
       U4L02 - Objects - createObject_instruction: "Create an object with at least\n5
         values including at least one string and one number. (Click to see full\ninstructions) "
       U4L02 - Objects - eventParameter_instruction: |-
@@ -8456,6 +8496,21 @@
         when the left and right arrows are pressed. When Kiki is clicked, she\nshould
         throw hearts towards her friends. "
       Vigenere_instruction: Test
+      Virtual Pet 1_instruction: What do you think will happen if you press "Run"
+        and then click on her?
+      Virtual Pet 2_instruction: Create an **event** so that when Geraldine touches
+        the puddle, her color changes to brown.
+      Virtual Pet 3_instruction: Add a new soap sprite to the screen.  Can you make
+        it so that when the giraffe and the soap touch, the giraffe goes back to its
+        normal color?
+      Virtual Pet 4_instruction: Add a behavior to your soap to make it draggable,
+        then drag it over to clean the giraffe!
+      Virtual Pet 5_instruction: Add actions to each event so that when the giraffe
+        collides with each sprite, it shrinks by 5.
+      Virtual Pet 6_instruction: Add an apple that returns the giraffe back to regular
+        size when they touch.
+      Virtual Pet Freeplay_instruction: 'Freeplay: What more can you make your giraffe
+        do? '
       WhileAdventure_instruction: |-
         Our adventurer wants to collect coins. Can you
         help her grab as many as she can using only one remove 1 block?
@@ -8548,9 +8603,8 @@
       artistFunctionsVideo1_instruction: |-
         Follow the instructions to make your own
         function.
-      artistLoopsK1_instruction: |-
-        This is a new type of puzzle called "Artist".
-        Play with the level and draw something fun.
+      artistLoopsK1_instruction: Este é um novo tipo de quebra-cabeça chamado "Artista".
+        Brinque com o nível e desenhe algo divertido.
       artistLoopsK2_instruction: |-
         Now, use a `repeat` loop to draw this line five
         times!
@@ -8761,9 +8815,8 @@
       course1_artist_loops_challenge2_instruction: |-
         Let's play a game! Draw as many
         X's as you can! Can you get 3 in a row?
-      course1_artist_loops_challenge3_instruction: |-
-        "Can you help me make two bird
-        houses?"
+      course1_artist_loops_challenge3_instruction: '"Você pode me ajudar a fazer duas
+        casas de pássaros?"'
       course1_artist_loops_challenge4_instruction: |-
         "It's time to toss the dice!
         Can you help me draw these?"
@@ -9024,15 +9077,12 @@
       course4_playlab_variables_challenge3_instruction: |-
         Can you figure out how this
         "Fortune Teller" app works? Click `MORE` to see your challenges.
-      courseA_artist_loops1_instruction: |-
-        This is a new type of puzzle called "Artist".
-        Play with the level and draw something fun.
-      courseA_artist_loops10_instruction: |-
-        Help me put down stones so I don't fall
-        in!
-      courseA_artist_loops10_2018_instruction: |-
-        Help me put down stones so I don't
-        fall in!
+      courseA_artist_loops1_instruction: Este é um novo tipo de quebra-cabeça chamado
+        "Artista". Brinque com o nível e desenhe algo divertido.
+      courseA_artist_loops10_instruction: Me ajude a colocar pedras para que eu não
+        caia!
+      courseA_artist_loops10_2018_instruction: Me ajude a colocar pedras para que
+        eu não caia!
       courseA_artist_loops11_instruction: |-
         Help me build steps to watch the ship
         sail away.
@@ -9045,17 +9095,17 @@
       courseA_artist_loops12_2018_instruction: |-
         The artist saw something funny in
         the distance.  Draw what you think he saw.
-      courseA_artist_loops1_2018_instruction: |-
-        This is a new type of puzzle called
-        "Artist". Play with the level and draw something fun.
+      courseA_artist_loops1_2018_instruction: Este é um novo tipo de quebra-cabeça
+        chamado "Artista". Brinque com o nível e desenhe algo divertido.
       courseA_artist_loops2_instruction: |-
         Help the artist draw this line two times
         forward.
       courseA_artist_loops2_2018_instruction: |-
         Help the artist draw this line two
         times forward.
-      courseA_artist_loops3_instruction: Draw a line forward five times.
-      courseA_artist_loops3_2018_instruction: Draw a line forward five times.
+      courseA_artist_loops3_instruction: Desenhe uma linha para frente cinco vezes.
+      courseA_artist_loops3_2018_instruction: Desenhe uma linha para frente cinco
+        vezes.
       courseA_artist_loops4_instruction: |-
         Now, use a `repeat` loop to draw this line
         five times!
@@ -9081,34 +9131,27 @@
         to the water.
       courseA_artist_loops8_instruction: We need a ladder up to the boat.
       courseA_artist_loops8_2018_instruction: We need a ladder up to the boat.
-      courseA_artist_loops9_instruction: 'Challenge: Fix the stairs.'
-      courseA_artist_loops9_2018_instruction: 'Challenge: Fix the stairs.'
-      courseA_artist_loops_challenge1_instruction: |-
-        Can you draw a house? Make it
-        look just the way you like it!
-      courseA_artist_loops_challenge1_2018_instruction: |-
-        Can you draw a house? Make
-        it look just the way you like it!
-      courseA_artist_loops_challenge2_instruction: |-
-        "Can you help me make two bird
-        houses?"
-      courseA_artist_loops_challenge2a_instruction: |-
-        *"Help me get these three tents
-        set up!"*
-      courseA_artist_loops_challenge2a_2018_instruction: |-
-        *"Help me get these three
-        tents set up!"*
+      courseA_artist_loops9_instruction: 'Desafio: Conserte as escadas.'
+      courseA_artist_loops9_2018_instruction: 'Desafio: Conserte as escadas.'
+      courseA_artist_loops_challenge1_instruction: Você pode desenhar uma casa? Faça
+        com que ela seja do jeito que você gosta!
+      courseA_artist_loops_challenge1_2018_instruction: Você pode desenhar uma casa?
+        Faça com que ela seja do jeito que você gosta!
+      courseA_artist_loops_challenge2_instruction: '"Você pode me ajudar a fazer duas
+        casas de pássaros?"'
+      courseA_artist_loops_challenge2a_instruction: '*"Me ajude a montar estas três
+        tendas!"*'
+      courseA_artist_loops_challenge2a_2018_instruction: '*"Me ajude a montar estas
+        três tendas!"*'
       courseA_artist_loops_challenge3_instruction: |-
         Let's play a game! Draw as many
         X's as you can! Can you get 3 in a row?
-      courseA_bee_seq1_instruction: |-
-        Play with these blocks to help the bee get *one*
-        nectar.
-      courseA_bee_seq10_instruction: Try it by yourself! Get all the nectar.
-      courseA_bee_seq11_instruction: Get all the nectar.
-      courseA_bee_seq12_instruction: |-
-        Play with these blocks to help the bee get
-        *one* nectar.
+      courseA_bee_seq1_instruction: Brinque com estes blocos para ajudar a abelha
+        a pegar *um* néctar.
+      courseA_bee_seq10_instruction: Tente sozinho! Pegue todo o néctar.
+      courseA_bee_seq11_instruction: Pegue todo o néctar.
+      courseA_bee_seq12_instruction: Brinque com estes blocos para ajudar a abelha
+        a pegar *um* néctar.
       courseA_bee_seq13_instruction: |-
         Use three `Move West` blocks and one `Get Nectar`
         block.
@@ -9295,6 +9338,8 @@
       courseA_maze_ramp3a_2018_instruction: |-
         Add a `North` block to the bottom of
         the other blocks to finish this code, then click "Run".
+      courseA_maze_ramp3b_2018_instruction: Add a `North` block to the bottom of the
+        other blocks to finish this code, then click "Run".
       courseA_maze_ramp4_2018_instruction: Avoid TNT or feathers will fly!
       courseA_maze_ramp4a_2018_instruction: |-
         Can you figure out which block you need
@@ -9320,7 +9365,8 @@
       courseA_maze_seq13_2018_instruction: Get the pig any way you can!
       courseA_maze_seq1_2018_instruction: Get the bird to the bad pig!
       courseA_maze_seq2_instruction: Altere o código para me levar até o porco!
-      courseA_maze_seq2_2018_instruction: Altere o código para me levar até o porco!
+      courseA_maze_seq2_2018_instruction: Corrija o código para levar o pássaro até
+        o porco.
       courseA_maze_seq3_instruction: Fix the code to get the bird to the pig!
       courseA_maze_seq3_2018_instruction: Fix the code to get the bird to the pig!
       courseA_maze_seq4_instruction: REMOVE a block to get the bird to the pig!
@@ -9440,22 +9486,22 @@
       courseB_Scrat_ramp3a_2018_instruction: |-
         Add a `North` block to the bottom of
         the other blocks to finish this code, then click "Run".
+      courseB_Scrat_ramp3b_2018_instruction: "Drag the extra block back to the toolbox
+        to throw it away.\n\n"
       courseB_Scrat_ramp4a_2018_instruction: |-
         Can you figure out which block you
         need to add to the bottom of the other blocks to finish this code?
       courseB_Scrat_ramp5a_2018_instruction: Get the bird to the pig!
-      courseB_artist_loops1_instruction: |-
-        This is a new type of puzzle called "Artist".
-        Play with the level and draw something fun.
+      courseB_artist_loops1_instruction: Este é um novo tipo de quebra-cabeça chamado
+        "Artista". Brinque com o nível e desenhe algo divertido.
       courseB_artist_loops10_instruction: |-
         Use what you have learned to draw a picture
         of what you think the artist saw when he got home.
       courseB_artist_loops10_2018_instruction: |-
         Use what you have learned to draw
         a picture of what you think the artist saw when he got home.
-      courseB_artist_loops1_2018_instruction: |-
-        This is a new type of puzzle called
-        "Artist". Play with the level and draw something fun.
+      courseB_artist_loops1_2018_instruction: Este é um novo tipo de quebra-cabeça
+        chamado "Artista". Brinque com o nível e desenhe algo divertido.
       courseB_artist_loops2_instruction: |-
         The Artist is trying to draw a line **6**
         times, but can't get it right.  Can you help?
@@ -14571,9 +14617,8 @@
       gradek_artist_loopsFP_instruction: |-
         The artist saw something funny in the distance.  Draw
         what you think he saw.
-      gradek_artist_loopsPre_instruction: |-
-        This is a new type of puzzle called "Artist".
-        Play with the level and draw something fun.
+      gradek_artist_loopsPre_instruction: Este é um novo tipo de quebra-cabeça chamado
+        "Artista". Brinque com o nível e desenhe algo divertido.
       gradek_playlab_events1_instruction: |-
         Make your robot say "Hello!" when the
         button is clicked.

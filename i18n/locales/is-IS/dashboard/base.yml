@@ -85,6 +85,7 @@ is:
     facebook: 'Facebook'
     windowslive: 'Microsoft reikning'
     clever: 'Clever aðgangur'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Gleymt lykilorð?'
     need_confirmation: "Fékkstu ekki sendar leiðbeiningar um staðfestingu?"
     need_unlock: "Fékkstu ekki leiðbeiningar um opnun?"
@@ -359,6 +360,7 @@ is:
     email_confirm_needed_required: 'Netfangið þitt %{email} hefur ekki verið staðfest:'
     email_confirm_wrong_email: '(Rangt netfang?)'
     email_resend_confirm: 'Endursenda leiðbeiningar um staðfestingu'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(hafðu autt ef þú vilt ekki breyta því)"
     current_password_hint: '(við þurfum að fá núverandi lykilorð þitt til að staðfesta breytingarnar)'
     delete: 'Eyða aðgangi þínum'

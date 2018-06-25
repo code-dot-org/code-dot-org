@@ -85,6 +85,7 @@ sq:
     facebook: 'Facebook'
     windowslive: 'Llogaria e Microsoft'
     clever: 'Clever Account'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Keni harruar fjalëkalimin?'
     need_confirmation: "Nuk i keni marr instruksionet e konfirmimit?"
     need_unlock: "Nuk keni marre instruksionet e zhbllokimit?"
@@ -359,6 +360,7 @@ sq:
     email_confirm_needed_required: 'Email-i juaj %{email} nuk është konfirmuar:'
     email_confirm_wrong_email: '(Email i gabuar?)'
     email_resend_confirm: 'Ridërgo udhëzimet e konfirmimit'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(lëre bosh nëse nuk do ta ndryshosh atë)"
     current_password_hint: '(ne kemi nevojë për fjalëkalimin tënd aktual që të konfirmojmë ndryshimet e bëra)'
     delete: 'Fshini llogarinë tuaj'

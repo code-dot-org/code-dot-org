@@ -1534,8 +1534,8 @@ it:
       Crack Random Substitution_2018_instruction: Istruzioni
       Crack a Caesar Cipher_instruction: Istruzioni
       Crack a Caesar Cipher_2018_instruction: Istruzioni
-      D_Frozen_nested3_instruction: Facciamo ruotare queste forme!
-      D_Frozen_nested4_instruction: È tempo di disegnare queste forme!
+      D_Frozen_nested3_instruction: Ora fai ruotare queste riga di figure!
+      D_Frozen_nested4_instruction: È ora di sovrapporre queste forme!
       D_Frozen_nested5_instruction: Play with the snowflakes!
       D_Frozen_nested6_instruction: Draw a stair-step pattern that uses turns between 75 and 105 degrees.
       D_Frozen_nested7_instruction: Now, turn around 180 degrees and draw the stair pattern again!
@@ -1545,6 +1545,20 @@ it:
         - What happens if you use two different angles in your stair step pattern?
         - What happens if you make your diamond pattern longer or shorter?
         - What does it look like to draw two snowflakes on top of one another?
+      Dance Party 1-validated_instruction: 'What do you think will happen when you click on the alien?  '
+      Dance Party 2_instruction: Change the behavior inside the `___ begins ___` block to make the alien start spinning around.
+      Dance Party 3 - Validated_instruction: 'Create a new sprite called `alien2`, then make it do a different dance move when it''s clicked.  '
+      Dance Party 3_instruction: 'Create a new sprite called `alien2`, then make it do a different dance move when it''s clicked.  '
+      Dance Party 4 Validated_instruction: 'Create a third sprite called `alien3` and get all of your aliens to stand in a line. '
+      Dance Party 4_instruction: 'Create a third sprite called `alien3` and get all of your aliens to stand in a line. '
+      Dance Party 5 - Validated_instruction: Add code to change the color of each alien when it gets clicked.
+      Dance Party 5_instruction: Add code to change the color of each alien when it gets clicked.
+      Dance Party 6 - Validated_instruction: Use the `stops everything` block to make each alien stop moving when it is clicked.
+      Dance Party 6_instruction: Use the `stops everything` block to make each alien stop moving when it is clicked.
+      Dance Party 7 - Validated_instruction: Add a new bell sprite called `myBell` that makes all the aliens start doing the same dance move when it's clicked.
+      Dance Party 7_instruction: Add a new bell sprite called `myBell` that makes all the aliens start doing the same dance move when it's clicked.
+      Dance Party Freeplay_instruction: Now create your own alien disco!
+      Dance Party Predict_instruction: 'What do you think will happen when you click on the alien?  '
       ECSPD Binary Odometer_instruction: This is another resource you could use with your students.
       Eval Booleans 1_instruction: Boolean operators (like >, <, =) allow us to compare different values, returning either true or false. Click "Run" to see how this expression evaluates.
       Eval Booleans 2_instruction: Can you set the values so that this expression evaluates as true?
@@ -1615,6 +1629,12 @@ it:
       Finalize Your Chaser Game v.1_2018_instruction: Introducing the setPosition command! Replace the moveTo in the button-click event handler to use setPosition to move the button itself to a random location when it's clicked.
       Find the Wizard_instruction: Crea ciò che vuoi. Questo è un esempio del gioco "Indovina che numero ho pensato!"
       Find the Wizard_2018_instruction: Costruisci quello che vuoi. Ecco un esempio del gioco "Indovina che numero ho pensato!"
+      Fish Tank 2-validated_instruction: Change Dusty (the tumbleweed) to a fish.
+      Fish Tank 3-validated_instruction: Change the fish's behavior so that it swims around the tank.
+      Fish Tank 4-validated_instruction: Use the `set background color` block to make the background blue.
+      Fish Tank 5-validated_instruction: Our fish is getting a little lonely. Add another sprite to the fish tank.
+      Fish Tank 6-validated_instruction: Add a behavior to the fish's new friend.
+      Fish Tank 7-validated_instruction: Use some new blocks from the toolbox to make your fish tank special!
       Food Fight!_instruction: "Abbiamo aggiunto al gioco ancora un'altra funzione che puoi usare.<br><br>\nProgramma il tuo gioco in modo tale da chiamare la funzione \"sali di un livello\" (<i>level_up</i>) se la variabile \"punteggio\" (<i>player_score</i>) diventa maggiore di un certo valore (per esempio: <i>player_score</i> > 6).<br><br>\nClicca su \"Esegui\" per giocare e arriva al livello 3 per passare al prossimo esercizio."
       Food Fight_instruction: "Abbiamo aggiunto al gioco ancora un'altra funzione che puoi usare.<br><br>\nProgramma il tuo gioco in modo tale da chiamare la funzione \"sali di un livello\" (<i>level_up</i>) se la variabile \"punteggio\" (<i>player_score</i>) diventa maggiore di un certo valore (per esempio: <i>player_score</i> > 6).<br><br>\nClicca su \"Esegui\" per giocare e arriva al livello 3 per passare al prossimo esercizio."
       FoodFight_instruction: This is an example of a game you can make in play lab.
@@ -1643,6 +1663,7 @@ it:
       Guess The Number_2018_instruction: Costruisci quello che vuoi. Ecco un esempio del gioco "Indovina che numero ho pensato!"
       Harvester Test_instruction: It's harvest time! But I forgot what crop I planted at which tile. Please help me harvest all my crops, no matter how they were originally planted!
       Harvesting_instruction: Uh oh, I lost my map and can't remember what I planted. Every sprout could grow up to be corn, beans, or pumpkins. Can you write some code to pick all the crops, no matter what they are?
+      HoCAB_labyrinth1_instruction: Use the arrow blocks to solve this maze!
       Infinity_catch_instruction: Riesci a fare in modo che Elsa (il "personaggio 2") raggiunga Anna usando i tasti freccia?
       Infinity_finale_instruction: Crea il tuo gioco con i personaggi di Disney Infinity e condividilo!
       Infinity_move_collide_instruction: Hiro è il "personaggio 1". Spostalo verso Baymax e riproduci un suono quando si toccano.
@@ -2011,7 +2032,7 @@ it:
       NetSim_Variant3_instruction: 'NetSim: Variant 3: Connects groups of 2-6 students with a router, and explores issues in routing and DNS'
       New Artist Project_instruction: Disegna ciò che vuoi! Il tuo codice viene salvato come progetto su cui puoi tornare a lavorare in qualunque momento.
       New Basketball Project_instruction: Crea il tuo gioco di basket. Puoi modificare tutte le regole. Quando hai finito, clicca su `Termina` per consentire agli amici di provare il tuo gioco sui loro telefoni.
-      New Bounce Project_instruction: Create your own Bounce game. You can change all the visuals and the rules. When you're done, click Finish to let friends try your game on their phones.
+      New Bounce Project_instruction: Crea la tua versione del Ping-Pong. È possibile modificare tutte le immagini e tutte le regole. Quando hai finito, clicca su Condividi per far provare agli amici il gioco sui loro smartphone.
       New Course 4 Artist Functions Level 4_instruction: Utilizzate la funzione "disegna un quadrato" per disegnare questo modello.
       New Gumball Project_instruction: Crea il tuo gioco con i personaggi di Disney Infinity e condividilo!
       New Ice Age Project_instruction: Crea il tuo gioco con i personaggi di Disney Infinity e condividilo!
@@ -2770,10 +2791,10 @@ it:
       U4 - Charts - Import Data 1_2018_instruction: Download the CSV file we’ve provided, and then use the data viewer to import the data from the file into the “mytable” table. (Click to see full instructions)
       U4 - Charts - Import Data 2_instruction: Call readRecords on “mytable” and print each record to the console. (Click to see full instructions)
       U4 - Charts - Import Data 2_2018_instruction: Call readRecords on “mytable” and print each record to the console. (Click to see full instructions)
-      U4 - Charts - Line Chart 1_instruction: Create a line chart showing the change in popularity of “
-      U4 - Charts - Line Chart 1_2018_instruction: Create a line chart showing the change in popularity of “
-      U4 - Charts - Line Chart 2_instruction: Add a second line to your chart to show the change in popularity of both “
-      U4 - Charts - Line Chart 2_2018_instruction: Add a second line to your chart to show the change in popularity of both “
+      U4 - Charts - Line Chart 1_instruction: 'Create a line chart showing the change in popularity of “#tbt” over time. (Click to see full instructions)'
+      U4 - Charts - Line Chart 1_2018_instruction: 'Create a line chart showing the change in popularity of “#tbt” over time. (Click to see full instructions)'
+      U4 - Charts - Line Chart 2_instruction: 'Add a second line to your chart to show the change in popularity of both “#tbt” and “#nofilter” at the same time. (Click to see full instructions)'
+      U4 - Charts - Line Chart 2_2018_instruction: 'Add a second line to your chart to show the change in popularity of both “#tbt” and “#nofilter” at the same time. (Click to see full instructions)'
       U4 - Charts - Line Chart Template_instruction: This is a template.
       U4 - Charts - Remixing Apps with Data_instruction: Run this app and see what it prints to the console. Then remix the app and run the remixed version to see what happened to the data. (Click to see full instructions)
       U4 - Charts - Remixing Apps with Data_2018_instruction: Run this app and see what it prints to the console. Then remix the app and run the remixed version to see what happened to the data. (Click to see full instructions)
@@ -2886,6 +2907,7 @@ it:
       U4 Model Design 1_2018_instruction: Add a large red button to your screen using Design Mode. (Click for full instructions.)
       U4 vigenere cipher 2_instruction: Istruzioni
       U4L02 - Objects - Template1_instruction: Template
+      U4L02 - Objects - Template1_2018_instruction: Template
       U4L02 - Objects - createObject_instruction: 'Create an object with at least 5 values including at least one string and one number. (Click to see full instructions) '
       U4L02 - Objects - eventParameter_instruction: Trigger both the keyboard and mouse event and examine the event objects displayed in the console. Why might an object be the best way to store this information? (Click to see full instructions)
       U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your Name\", run the app and click the button. Run it multiple times with different names! Watch the console and use the ‘View Data” button to see how the table is updated. As you play around make sure you can explain the purpose of each of the circled parts of the diagram.\n\n"
@@ -2933,6 +2955,13 @@ it:
       Valentine_artist_01_instruction: 'Help the artist finish his llama heart. '
       Valentine_playlab_01_instruction: 'Program Kiki (Actor 1) to move left and right when the left and right arrows are pressed. When Kiki is clicked, she should throw hearts towards her friends. '
       Vigenere_instruction: Test
+      Virtual Pet 1_instruction: What do you think will happen if you press "Run" and then click on her?
+      Virtual Pet 2_instruction: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
+      Virtual Pet 3_instruction: Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?
+      Virtual Pet 4_instruction: Add a behavior to your soap to make it draggable, then drag it over to clean the giraffe!
+      Virtual Pet 5_instruction: Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.
+      Virtual Pet 6_instruction: Add an apple that returns the giraffe back to regular size when they touch.
+      Virtual Pet Freeplay_instruction: 'Freeplay: What more can you make your giraffe do? '
       WhileAdventure_instruction: Our adventurer wants to collect coins. Can you help her grab as many as she can using only one remove 1 block?
       'Widget: Black and White Pixelation_instruction': Now make your own image! We've started you off with a 10x10 canvas but you can make it whatever size you want. Happy pixeling!
       'Widget: Black and White Pixelation_2018_instruction': Now make your own image! We've started you off with a 10x10 canvas but you can make it whatever size you want. Happy pixeling!
@@ -3003,7 +3032,7 @@ it:
       bounce_11_basketball_instruction: "Adesso puoi predisporre il gioco come vuoi, attaccando dei blocchi `imposta ...` al blocco iniziale `quando si clicca su \"Esegui\"`. Devi anche attaccare in diversi punti il blocco `lancia una nuova palla`.<br>\nProva anche a cambiare la velocità della palla e della mano e vedi quanti punti riesci a fare prima che il tuo avversario ne faccia due!"
       bounce_11_sports_instruction: "Adesso puoi predisporre il gioco come vuoi, attaccando dei blocchi `imposta ...` al blocco iniziale `quando si clicca su \"Esegui\"`. Devi anche attaccare in diversi punti il blocco `lancia una nuova palla`.<br>\nProva anche a cambiare la velocità della palla e della mano e vedi quanti punti riesci a fare prima che il tuo avversario ne faccia due!"
       bounce_12_instruction: Crea la tua versione del Ping-Pong. È possibile modificare tutte le immagini e tutte le regole. Quando hai finito, clicca su Condividi per far provare agli amici il gioco sui loro smartphone.
-      bounce_12_2018_instruction: Create your own Bounce game. You can change all the visuals and the rules. When you're done, click Finish to let friends try your game on their phones.
+      bounce_12_2018_instruction: Crea la tua versione del Ping-Pong. È possibile modificare tutte le immagini e tutte le regole. Quando hai finito, clicca su Condividi per far provare agli amici il gioco sui loro smartphone.
       bounce_12_basketball_instruction: Crea il tuo gioco di basket. Puoi modificare tutte le regole. Quando hai finito di giocare, clicca su "Termina" per ottenere un link da condividere con i tuoi amici o per giocare sul tuo telefono con la tua versione del gioco.
       bounce_12_sports_instruction: 'Ora comandi tu. Puoi modificare tutte le regole, combinando i diversi sport: sii creativo! Quando hai finito, clicca su `Termina` per consentire agli amici di provare il tuo gioco sui loro telefoni.'
       bounce_1_2018_instruction: Attacca un blocco al blocco verde `quando si preme la freccia verso sinistra` e premi "Esegui". Poi sposta la racchetta usando la freccia verso sinistra per raggiungere la bandierina.
@@ -3037,7 +3066,7 @@ it:
       collectorSkinVideo1_instruction: Collect all four piles to pass this level.
       collectorSkinVideo2_instruction: Collect one pile of gold to pass this level.
       comment_intro_maze_2018_instruction: Use the new `comment` block to leave yourself quick reminders.
-      conditionals_forvideo_harvester_instruction: Collect all of the corn and lettuce, then pick the pumpkin.
+      conditionals_forvideo_harvester_instruction: Raccogli tutto il mais e la lattuga, poi conquista la zucca finale.
       conditionals_forvideo_playlab_instruction: Fai più punti che puoi!
       course1_artist_loops_challenge1_instruction: |-
         You can use a loop to draw many lines in a row.
@@ -3060,8 +3089,8 @@ it:
       course2_artist_nestedLoops_challenge2_instruction: Can you figure out how to make a picture like this?
       course2_artist_prog_challenge1_instruction: Draw rooms for each of the animals. There are many different ways to solve this puzzle, so have some fun. The shortest possible solution is 6 blocks, but use as many as you like!
       course2_artist_prog_challenge2_instruction: "*Help me paint the yellow lines on this road!*"
-      course2_bee_conditionals_challenge1_instruction: Collect all of the nectar or make all the honey.
-      course2_bee_conditionals_challenge2_instruction: Collect all of the nectar or make all the honey.
+      course2_bee_conditionals_challenge1_instruction: Raccogli tutto il nettare o fai tutto il miele.
+      course2_bee_conditionals_challenge2_instruction: Raccogli tutto il nettare o fai tutto il miele.
       course2_collector_loops_challenge2_instruction: Get all of the treasure!
       course2_collector_prog_challenge1_instruction: Look carefully! Can you collect all *10* pieces of treasure?
       course2_collector_prog_challenge2_instruction: There are 20 pieces of treasure to be found. Collect at least half to finish this challenge!
@@ -3153,26 +3182,26 @@ it:
       courseA_artist_loops8_2018_instruction: We need a ladder up to the boat.
       courseA_artist_loops9_instruction: 'Sfida: ripara la scaletta.'
       courseA_artist_loops9_2018_instruction: 'Sfida: ripara la scaletta.'
-      courseA_artist_loops_challenge1_instruction: Can you draw a house? Make it look just the way you like it!
-      courseA_artist_loops_challenge1_2018_instruction: Can you draw a house? Make it look just the way you like it!
+      courseA_artist_loops_challenge1_instruction: Puoi disegnare una casa? Falla proprio come ti piace!
+      courseA_artist_loops_challenge1_2018_instruction: Puoi disegnare una casa? Falla proprio come ti piace!
       courseA_artist_loops_challenge2_instruction: '"Puoi aiutarmi a costruire due casette per gli uccelli?"'
       courseA_artist_loops_challenge2a_instruction: '*"Help me get these three tents set up!"*'
       courseA_artist_loops_challenge2a_2018_instruction: '*"Help me get these three tents set up!"*'
       courseA_artist_loops_challenge3_instruction: Let's play a game! Draw as many X's as you can! Can you get 3 in a row?
-      courseA_bee_seq1_instruction: Play with these blocks to help the bee get *one* nectar.
-      courseA_bee_seq10_instruction: Try it by yourself! Get all the nectar.
-      courseA_bee_seq11_instruction: Get all the nectar.
-      courseA_bee_seq12_instruction: Play with these blocks to help the bee get *one* nectar.
+      courseA_bee_seq1_instruction: Gioca con questi blocchi e aiuta l'ape a raccogliere *un* nettare.
+      courseA_bee_seq10_instruction: Prova tu! Raccogli tutto il nettare.
+      courseA_bee_seq11_instruction: Raccogli tutto il nettare.
+      courseA_bee_seq12_instruction: Gioca con questi blocchi e aiuta l'ape a raccogliere *un* nettare.
       courseA_bee_seq13_instruction: Use three `Move West` blocks and one `Get Nectar` block.
       courseA_bee_seq14_instruction: Use three `Move North` blocks and one `Get Nectar` block.
-      courseA_bee_seq2_instruction: Help the bee get the nectar!
-      courseA_bee_seq3_instruction: Find the bug and fix it!
-      courseA_bee_seq4_instruction: Try it yourself!
-      courseA_bee_seq5_instruction: Try it yourself!
-      courseA_bee_seq6_instruction: Now the bee needs to get nectar from two flowers!
-      courseA_bee_seq7_instruction: Add two blocks to finish this puzzle!
-      courseA_bee_seq8_instruction: Make sure to get nectar from every flower!
-      courseA_bee_seq9_instruction: Make sure to get nectar from every flower!
+      courseA_bee_seq2_instruction: Conduci l'ape verso il nettare!
+      courseA_bee_seq3_instruction: Trova l'errore e correggilo!
+      courseA_bee_seq4_instruction: Prova tu!
+      courseA_bee_seq5_instruction: Prova tu!
+      courseA_bee_seq6_instruction: Adesso l'ape deve raccogliere il nettare da due fiori!
+      courseA_bee_seq7_instruction: Aggiungi due blocchi per competare l'esercizio!
+      courseA_bee_seq8_instruction: Assicurati di raccogliere il nettare da tutti i fiori!
+      courseA_bee_seq9_instruction: Assicurati di raccogliere il nettare da tutti i fiori!
       courseA_collector_loops1_instruction: "Muovi Laurel raccogliendo più diamanti che puoi! <br>\n(Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante \"Termina\")"
       courseA_collector_loops10_instruction: Aiuta Laurel a raccogliere tutti i diamanti lungo questo percorso.
       courseA_collector_loops10_2018_instruction: Aiuta Laurel a raccogliere tutti i diamanti lungo questo percorso.
@@ -3201,11 +3230,11 @@ it:
       courseA_collector_loops_challenge2kp_instruction: Raccogli almeno *3* diamanti per completare questo esercizio.
       courseA_collector_loops_challenge2kp_2018_instruction: Raccogli almeno *3* pezzi del tesoro per completare questo esercizio.
       courseA_collector_preLoops1_instruction: "This is Laurel the Adventurer! \n\nPress \"Run\" to see her walk up to the treasure and grab it."
-      courseA_collector_preLoops2_instruction: "Great!  Now you get to add code yourself!  \n\nSnap a `get treasure` block to the bottom of the program and click \"Run\"."
+      courseA_collector_preLoops2_instruction: "Grande! Ora puoi aggiungere codice liberamente!\n\nAttacca un blocco \"raccogli diamante\" in fondo al programma e clicca su \"Esegui\"."
       courseA_collector_preLoops3_instruction: Snap two `E -->` blocks and one `get treasure` block to the bottom of the program, then click "Run".
-      courseA_collector_preLoops4_instruction: Can you figure out how to solve this puzzle?
-      courseA_collector_preLoops5_instruction: Get 1 of these 2 gems to solve this puzzle.
-      courseA_collector_preLoops6_instruction: Get both pieces of treasure to solve this puzzle.
+      courseA_collector_preLoops4_instruction: Riesci a risolvere questo esercizio?
+      courseA_collector_preLoops5_instruction: Raccogli 1 dei 2 diamanti per risolvere l'esercizio.
+      courseA_collector_preLoops6_instruction: Raccogli entrambi i diamanti per risolvere questo esercizio.
       courseA_collector_preLoops7_instruction: Raccogli tutte e tre le gemme per completare l'esercizio.
       courseA_forVideoTest_artist_instruction: Use the `repeat` loop to add waves to the water.
       courseA_harvester_forVideo_instruction: Can you pick all the corn using only **one** move block?
@@ -3226,19 +3255,20 @@ it:
       courseA_harvester_seq10_instruction: Make sure to pick all the corn!
       courseA_harvester_seq11_instruction: Try it by yourself! Pick all the corn.
       courseA_harvester_seq12_instruction: Pick all the corn.
-      courseA_harvester_seq13_instruction: Play with these blocks to help the harvester pick **one** corn.
+      courseA_harvester_seq13_instruction: Play with these blocks to help the harvester pick corn.
       courseA_harvester_seq2_instruction: Use three `move west` blocks and one `pick corn` block to solve this puzzle.
       courseA_harvester_seq3_instruction: Use three `Move North` blocks and one `Pick Corn` block.
       courseA_harvester_seq4_instruction: Add one block to help the harvester pick the corn.
-      courseA_harvester_seq5_instruction: Find the bug and fix it!
-      courseA_harvester_seq6_instruction: Try it yourself!
-      courseA_harvester_seq7_instruction: Try it yourself!
+      courseA_harvester_seq5_instruction: Trova l'errore e correggilo!
+      courseA_harvester_seq6_instruction: Prova tu!
+      courseA_harvester_seq7_instruction: Prova tu!
       courseA_harvester_seq8_instruction: Now the harvester needs to pick corn two times!
-      courseA_harvester_seq9_instruction: Add two blocks to finish this puzzle!
+      courseA_harvester_seq9_instruction: Aggiungi due blocchi per competare l'esercizio!
       courseA_maze_ramp2_2018_instruction: Snap all blocks together to finish your code, then click "Run".
       courseA_maze_ramp2a_2018_instruction: Snap all blocks together to finish your code, then click "Run".
       courseA_maze_ramp3_2018_instruction: "C'è un blocco di troppo che fa andare a sbattere l'uccellino.\nButtalo via trascinandolo nella cassetta degli attrezzi."
-      courseA_maze_ramp3a_2018_instruction: Add a `North` block to the bottom of the other blocks to finish this code, then click "Run".
+      courseA_maze_ramp3a_2018_instruction: Add a `North` block to the bottom of the other blocks to finish this code, then click "▶ Run".
+      courseA_maze_ramp3b_2018_instruction: Add a `North` block to the bottom of the other blocks to finish this code, then click "Run".
       courseA_maze_ramp4_2018_instruction: Evita la dinamite (TNT) o ci lascio le penne!
       courseA_maze_ramp4a_2018_instruction: Can you figure out which block you need to add to the bottom of the other blocks to finish this code?
       courseA_maze_ramp5_2018_instruction: Evita la dinamite (TNT).
@@ -3297,9 +3327,10 @@ it:
       courseA_toMakeLoopsVideo_Collector_instruction: Loops let you do whatever is inside over and over again!
       courseA_video_events_instruction: Need a better playlab/events combo
       courseA_video_events_2018_instruction: Need a better playlab/events combo
-      courseB_Scrat_ramp1_2018_instruction: For this puzzle, snap the blocks together and click "Run"!
-      courseB_Scrat_ramp2_2018_instruction: Snap all blocks together to finish your code, then click "Run".
-      courseB_Scrat_ramp3a_2018_instruction: Add a `North` block to the bottom of the other blocks to finish this code, then click "Run".
+      courseB_Scrat_ramp1_2018_instruction: For this puzzle, snap the blocks together and press "▶ Run"!
+      courseB_Scrat_ramp2_2018_instruction: Snap all blocks together to finish your code, then click "▶ Run".
+      courseB_Scrat_ramp3a_2018_instruction: Add a `North` block to the bottom of the other blocks to finish this code, then click "▶ Run".
+      courseB_Scrat_ramp3b_2018_instruction: "Drag the extra block back to the toolbox to throw it away.\n\n"
       courseB_Scrat_ramp4a_2018_instruction: Can you figure out which block you need to add to the bottom of the other blocks to finish this code?
       courseB_Scrat_ramp5a_2018_instruction: Get the bird to the pig!
       courseB_artist_loops1_instruction: Questo è un nuovo tipo di esercizio chiamato "Artista". Prova a disegnare qualcosa di divertente. Quando sei soddisfatto, premi "Termina" per passare all'esercizio successivo.
@@ -3720,9 +3751,9 @@ it:
       courseC_starWars_loops9_instruction: Sfrutta ciò che hai imparato per recuperare tutti i rottami metallici!
       courseC_starWars_loops9_2018_instruction: Sfrutta ciò che hai imparato per recuperare tutti i rottami metallici!
       courseD_Frozen_nested1_instruction: 'Aiuta Elsa a disegnare una piccola figura a tua scelta.'
-      courseD_Frozen_nested2_instruction: Ora parti dalla tua forma e disegnane due o tre di fila!
-      courseD_Frozen_nested3_instruction: Facciamo ruotare queste forme!
-      courseD_Frozen_nested4_instruction: È tempo di disegnare queste forme!
+      courseD_Frozen_nested2_instruction: Ora parti dalla tua figura e disegnane due o tre di fila!
+      courseD_Frozen_nested3_instruction: Ora fai ruotare queste riga di figure!
+      courseD_Frozen_nested4_instruction: È ora di sovrapporre queste forme!
       courseD_Frozen_nested5_instruction: Play with the snowflakes!
       courseD_Frozen_nested6_instruction: Draw a stair-step pattern that uses turns between 75 and 105 degrees.
       courseD_Frozen_nested7_instruction: Now, turn around 180 degrees and draw the stair pattern again!
@@ -3825,20 +3856,20 @@ it:
       courseD_artist_nestedLoops_challenge1_2018_instruction: Can you figure out how to make a picture like this?
       courseD_artist_nestedLoops_challenge2_instruction: Fix the code to make this picture!
       courseD_artist_nestedLoops_challenge2_2018_instruction: Fix the code to make this picture!
-      courseD_artist_project1_instruction: 'Aiuta Elsa a disegnare una piccola figura a tua scelta.'
+      courseD_artist_project1_instruction: 'Disegna una piccola figura, larga tra **20 e 50** pixel. Può avere la forma che preferisci.'
       courseD_artist_project1_2018_instruction: 'Aiuta Elsa a disegnare una piccola figura a tua scelta.'
       courseD_artist_project1a_instruction: Draw a stair-step pattern that uses turns between 75 and 105 degrees.
       courseD_artist_project1a_2018_instruction: Draw a stair-step pattern that uses turns between 75 and 105 degrees.
-      courseD_artist_project2_instruction: Ora parti dalla tua forma e disegnane due o tre di fila!
+      courseD_artist_project2_instruction: Ora parti dalla tua figura e disegnane due o tre di fila!
       courseD_artist_project2_2018_instruction: Ora parti dalla tua forma e disegnane due o tre di fila!
       courseD_artist_project2a_instruction: Now, turn around 180 degrees and draw the stair pattern again!
       courseD_artist_project2a_2018_instruction: Now, turn around 180 degrees and draw the stair pattern again!
-      courseD_artist_project3_instruction: Facciamo ruotare queste forme!
-      courseD_artist_project3_2018_instruction: Facciamo ruotare queste forme!
+      courseD_artist_project3_instruction: Ora fai ruotare queste riga di figure!
+      courseD_artist_project3_2018_instruction: Ora fai ruotare queste riga di figure!
       courseD_artist_project3a_instruction: Spin that shape around 5 or 6 times in a circle.
       courseD_artist_project3a_2018_instruction: Spin that shape around 5 or 6 times in a circle.
-      courseD_artist_project4_instruction: È tempo di disegnare queste forme!
-      courseD_artist_project4_2018_instruction: È tempo di disegnare queste forme!
+      courseD_artist_project4_instruction: È ora di sovrapporre queste forme!
+      courseD_artist_project4_2018_instruction: È ora di sovrapporre queste forme!
       courseD_artist_project4a_instruction: |-
         Try playing around with what you've created. Draw whatever you like!
         - What happens if you use two different angles in your stair step pattern?
@@ -3852,36 +3883,34 @@ it:
       courseD_artist_project5_instruction: Play with the snowflakes!
       courseD_artist_project5_2018_instruction: Play with the snowflakes!
       courseD_artist_project_embedded_instruction: Here's what you will soon be making!
-      courseD_artist_ramp11_instruction: Now make a square using Artist!
-      courseD_artist_ramp12_instruction: Use what you've learned to draw this triangle inside of a square.
+      courseD_artist_ramp11_instruction: Ora disegna un quadrato usando l'Artista!
+      courseD_artist_ramp12_instruction: Usa ciò che hai imparato per disegnare questo triangolo all'interno di un quadrato.
       courseD_bee_conditionals1_instruction: Check to see if there's a flower under the cloud. If there's a flower, get nectar.
       courseD_bee_conditionals10_instruction: Collect all of the nectar and make all of the honey.
       courseD_bee_conditionals10_2018_instruction: Collect all of the nectar and make all of the honey.
       courseD_bee_conditionals1_predict1_instruction: Check to see if there's a flower under the cloud. If there's a flower, get nectar.
       courseD_bee_conditionals1_predict1_2018_instruction: Check to see if there's a flower under the cloud. If there's a flower, get nectar.
-      courseD_bee_conditionals2_instruction: 'Check underneath every cloud to see if it is hiding a flower before you get nectar.  '
-      courseD_bee_conditionals2_2018_instruction: 'Check underneath every cloud to see if it is hiding a flower before you get nectar.  '
-      courseD_bee_conditionals2_test_instruction: 'Check underneath every cloud to see if it is hiding a flower before you get nectar.  '
-      courseD_bee_conditionals3_instruction: "Help the bee collect all of the nectar. \n\nYou can only collect nectar from flowers, but you can check any space to see if there is a flower."
-      courseD_bee_conditionals3_2018_instruction: "Help the bee collect all of the nectar. \n\nYou can only collect nectar from flowers, but you can check any space to see if there is a flower."
-      courseD_bee_conditionals4_instruction: Get all of the nectar using as few blocks as possible.
-      courseD_bee_conditionals4_2018_instruction: Get all of the nectar using as few blocks as possible.
-      courseD_bee_conditionals5_instruction: Collect all of the nectar using as few blocks as possible
-      courseD_bee_conditionals5_2018_instruction: Collect all of the nectar using as few blocks as possible
-      courseD_bee_conditionals6_instruction: Some of these clouds might have honeycombs under them.  Be sure to check if a honeycomb is hiding behind each cloud!
-      courseD_bee_conditionals6_2018_instruction: Some of these clouds might have honeycombs under them.  Be sure to check if a honeycomb is hiding behind each cloud!
-      courseD_bee_conditionals7_instruction: Use the `if/else` block to collect nectar at flowers and make honey at honeycomb.
-      courseD_bee_conditionals7_2018_instruction: Use the `if/else` block to collect nectar at flowers and make honey at honeycomb.
-      courseD_bee_conditionals7_predict2_instruction: Use the `if/else` block to collect nectar at flowers and make honey at honeycomb.
-      courseD_bee_conditionals7_predict2_2018_instruction: Use the `if/else` block to collect nectar at flowers and make honey at honeycomb.
+      courseD_bee_conditionals2_instruction: 'Prima di prendere il nettare, controlla sotto ogni nuvola se sta nascondendo un fiore.'
+      courseD_bee_conditionals2_2018_instruction: 'Prima di prendere il nettare, controlla sotto ogni nuvola se sta nascondendo un fiore.'
+      courseD_bee_conditionals2_test_instruction: 'Prima di prendere il nettare, controlla sotto ogni nuvola se sta nascondendo un fiore.'
+      courseD_bee_conditionals3_instruction: "Aiuta l'ape a raccogliere tutto il nettare.\n\nVisto che puoi raccogliere il nettare solo dai fiori, devi prima controllare in ogni casella se c'è un fiore."
+      courseD_bee_conditionals3_2018_instruction: "Aiuta l'ape a raccogliere tutto il nettare.\n\nVisto che puoi raccogliere il nettare solo dai fiori, devi prima controllare in ogni casella se c'è un fiore."
+      courseD_bee_conditionals4_instruction: Raccogli tutto il nettare usando il minor numero possibile di blocchi.
+      courseD_bee_conditionals4_2018_instruction: Raccogli tutto il nettare usando il minor numero possibile di blocchi.
+      courseD_bee_conditionals5_instruction: Raccogli tutto il nettare usando il minor numero possibile di blocchi
+      courseD_bee_conditionals5_2018_instruction: Raccogli tutto il nettare usando il minor numero possibile di blocchi
+      courseD_bee_conditionals6_instruction: Alcune di queste nubi potrebbero nascondere dei favi. Controlla sotto ogni nuvola se c'è un favo!
+      courseD_bee_conditionals6_2018_instruction: Alcune di queste nubi potrebbero nascondere dei favi. Controlla sotto ogni nuvola se c'è un favo!
+      courseD_bee_conditionals7_instruction: Usa il blocco `se/altrimenti` per raccogliere il nettare dai fiori e fare il miele nei favi.
+      courseD_bee_conditionals7_2018_instruction: Usa il blocco `se/altrimenti` per raccogliere il nettare dai fiori e fare il miele nei favi.
+      courseD_bee_conditionals7_predict2_instruction: Usa il blocco `se/altrimenti` per raccogliere il nettare dai fiori e fare il miele nei favi.
+      courseD_bee_conditionals7_predict2_2018_instruction: Usa il blocco `se/altrimenti` per raccogliere il nettare dai fiori e fare il miele nei favi.
       courseD_bee_conditionals8_instruction: |-
-        Collect nectar if there is a flower.
-        Otherwise, make honey (because there is a honeycomb).
+        Se c'è un fiore, raccogli il nettare. In caso contrario, fai il miele perché c'è sicuramente un favo.
       courseD_bee_conditionals8_2018_instruction: |-
-        Collect nectar if there is a flower.
-        Otherwise, make honey (because there is a honeycomb).
-      courseD_bee_conditionals9_instruction: Collect all of the nectar or make all the honey.
-      courseD_bee_conditionals9_2018_instruction: Collect all of the nectar or make all the honey.
+        Se c'è un fiore, raccogli il nettare. In caso contrario, fai il miele perché c'è sicuramente un favo.
+      courseD_bee_conditionals9_instruction: Raccogli tutto il nettare o fai tutto il miele.
+      courseD_bee_conditionals9_2018_instruction: Raccogli tutto il nettare o fai tutto il miele.
       courseD_bee_conditionals_challenge1_instruction: Raccogli tutto il nettare o fai tutto il miele.
       courseD_bee_conditionals_challenge1_2018_instruction: Raccogli tutto il nettare o fai tutto il miele.
       courseD_bee_conditionals_challenge2_instruction: Raccogli tutto il nettare o fai tutto il miele.
@@ -3929,7 +3958,7 @@ it:
       courseD_bounce_events11_instruction: Adesso puoi predisporre il gioco come vuoi attaccando dei blocchi `imposta ...` al blocco `quando si clicca su "Esegui" `. Devi poi attaccare a quest'ultimo il blocco `lancia una nuova palla`, che devi attaccare anche ad altri blocchi verdi `quando ...`. Quanti punti riesci a raggiungere prima che il tuo avversario ne faccia due?
       courseD_bounce_events11s_instruction: 'Attach the `throw new ball` block in all of the places where the game needs a new ball. '
       courseD_bounce_events11s_2018_instruction: 'Attach the `throw new ball` block in all of the places where the game needs a new ball. '
-      courseD_bounce_events12_instruction: Create your own Bounce game. You can change all the visuals and the rules. When you're done, click Finish to let friends try your game on their phones.
+      courseD_bounce_events12_instruction: Crea la tua versione del Ping-Pong. È possibile modificare tutte le immagini e tutte le regole. Quando hai finito, clicca su Condividi per far provare agli amici il gioco sui loro smartphone.
       courseD_bounce_events12s_instruction: Make this game your own. You can change all the visuals and the rules. When you're done, click "Finish" to let friends try your game on their phones.
       courseD_bounce_events12s_2018_instruction: Make this game your own. You can change all the visuals and the rules. When you're done, click "Finish" to let friends try your game on their phones.
       courseD_bounce_events1s_instruction: Attach a block to the "when left arrow" block and press "Run" to move the player to the net.
@@ -3951,7 +3980,7 @@ it:
       courseD_bounce_events7s_instruction: Attach sound blocks to make the net swish when you hit the basket and have the whistle blow when the ball misses your hand. Bounce the ball until it hits the finish target.
       courseD_bounce_events7s_2018_instruction: Attach sound blocks to make the net swish when you hit the basket and have the whistle blow when the ball misses your hand. Bounce the ball until it hits the finish target.
       courseD_collector_debugging1_instruction: Correggi gli errori per raccogliere tutti i diamanti.
-      courseD_collector_debugging1_2018_instruction: Correggi gli errori per raccogliere tutto il tesoro.
+      courseD_collector_debugging1_2018_instruction: Correggi gli errori per raccogliere tutti i diamanti.
       courseD_collector_debugging1a_instruction: Correggi gli errori per raccogliere tutti i diamanti.
       courseD_collector_debugging1a_2018_instruction: Correggi gli errori per raccogliere tutti i diamanti.
       courseD_collector_debugging2_instruction: Correggi gli errori per raccogliere tutti i diamanti.
@@ -3966,11 +3995,11 @@ it:
       courseD_collector_debugging4_2018_instruction: Correggi gli errori per raccogliere tutti i diamanti.
       courseD_collector_debugging4a_instruction: Correggi gli errori per raccogliere tutti i diamanti.
       courseD_collector_debugging4a_2018_instruction: Correggi gli errori per raccogliere tutti i diamanti.
-      courseD_collector_debugging5_instruction: 'Sfida: tutti i blocchi che ti servono sono già qui... sfrutta tutte le tue abilità di debugging per capire come risolvere questo esercizio.'
+      courseD_collector_debugging5_instruction: Tutti i blocchi che ti servono sono già qui... sfrutta tutte le tue abilità di debugging per capire come risolvere questo esercizio.
       courseD_collector_debugging5_2018_instruction: 'Sfida: tutti i blocchi che ti servono sono già qui... sfrutta tutte le tue abilità di debugging per capire come risolvere questo esercizio.'
-      courseD_collector_debugging5a_instruction: 'Sfida: tutti i blocchi che ti servono sono già qui... sfrutta tutte le tue abilità di debugging per capire come risolvere questo esercizio.'
-      courseD_collector_debugging5a_2018_instruction: 'Sfida: tutti i blocchi che ti servono sono già qui... sfrutta tutte le tue abilità di debugging per capire come risolvere questo esercizio.'
-      courseD_collector_debugging6_instruction: 'Sfida: tutti i blocchi che ti servono sono già qui... sfrutta tutte le tue abilità di debugging per capire come risolvere questo esercizio.'
+      courseD_collector_debugging5a_instruction: Tutti i blocchi che ti servono sono già qui... sfrutta tutte le tue abilità di debugging per capire come risolvere questo esercizio.
+      courseD_collector_debugging5a_2018_instruction: Tutti i blocchi che ti servono sono già qui... sfrutta tutte le tue abilità di debugging per capire come risolvere questo esercizio.
+      courseD_collector_debugging6_instruction: 'Sfida: sfrutta tutte le tue abilità di debugging per correggere gli errori e raccogliere tutti i diamanti.'
       courseD_collector_debugging6_2018_instruction: 'Sfida: tutti i blocchi che ti servono sono già qui... sfrutta tutte le tue abilità di debugging per capire come risolvere questo esercizio.'
       courseD_collector_debugging6a_instruction: 'Challenge: Use the code in the work area to get at least **6** pieces of treasure!'
       courseD_collector_debugging6a_2018_instruction: 'Challenge: Use the code in the work area to get at least **6** pieces of treasure!'
@@ -3990,68 +4019,68 @@ it:
       courseD_debugging_4_instruction: Fix the error(s) to make all of the honey.
       courseD_debugging_5_instruction: 'Challenge: All of the commands that you need are already here...now use your debugging skills to figure out how to solve this puzzle.'
       courseD_debugging_6_instruction: 'Challenge:  Fix the errors to collect all of the nectar and make all of the honey.'
-      courseD_farmer_condLoops1_instruction: Use conditionals to make sure that you pick corn only when it's there.
-      courseD_farmer_condLoops1_2018_instruction: Use conditionals to make sure that you pick corn only when it's there.
-      courseD_farmer_condLoops2_instruction: Help the harvester collect both corn and lettuce from the field.
-      courseD_farmer_condLoops2_2018_instruction: Help the harvester collect both corn and lettuce from the field.
-      courseD_farmer_condLoops3_instruction: '*"Corn, lettuce, AND pumpkins! Help me harvest them all."*'
-      courseD_farmer_condLoops3_2018_instruction: '*"Corn, lettuce, AND pumpkins! Help me harvest them all."*'
-      courseD_farmer_condLoops4_instruction: Help the harvester pick all of the lettuce in each cluster before moving on to the next bunch.
-      courseD_farmer_condLoops4_2018_instruction: Help the harvester pick all of the lettuce in each cluster before moving on to the next bunch.
+      courseD_farmer_condLoops1_instruction: Usa le istruzioni condizionali per essere certo di raccogliere le pannocchie solo quando ci sono.
+      courseD_farmer_condLoops1_2018_instruction: Usa le istruzioni condizionali per essere certo di raccogliere le pannocchie solo quando ci sono.
+      courseD_farmer_condLoops2_instruction: Aiuta la contadina a raccogliere lattuga e pannocchie da questo campo.
+      courseD_farmer_condLoops2_2018_instruction: Aiuta la contadina a raccogliere lattuga e pannocchie da questo campo.
+      courseD_farmer_condLoops3_instruction: '*"Mais, lattuga E zucche! Aiutami a raccogliere tutto."*'
+      courseD_farmer_condLoops3_2018_instruction: '*"Mais, lattuga E zucche! Aiutami a raccogliere tutto."*'
+      courseD_farmer_condLoops4_instruction: Aiuta la contadina a raccogliere tutta la lattuga presente in ogni casella, prima di passare alla successiva.
+      courseD_farmer_condLoops4_2018_instruction: Aiuta la contadina a raccogliere tutta la lattuga presente in ogni casella, prima di passare alla successiva.
       courseD_farmer_condLoops4a_instruction: Help the farmer pick all of the lettuce in each cluster before moving on to the next bunch.
-      courseD_farmer_condLoops5_instruction: Collect all of the corn and lettuce, then grab the pumpkin at the end.
-      courseD_farmer_condLoops5_2018_instruction: Collect all of the corn and lettuce, then grab the pumpkin at the end.
-      courseD_farmer_condLoops6_instruction: Can you figure out how to pick the pumpkin?  Make sure to collect all of the corn along the way!
-      courseD_farmer_condLoops6_2018_instruction: Can you figure out how to pick the pumpkin?  Make sure to collect all of the corn along the way!
-      courseD_farmer_condLoops7_instruction: 'Challenge: Collect all of the corn and lettuce, then pick the pumpkin.'
-      courseD_farmer_condLoops7_2018_instruction: 'Challenge: Collect all of the corn and lettuce, then pick the pumpkin.'
-      courseD_farmer_condLoops8_instruction: Collect all of the corn and lettuce, then pick the pumpkin.
-      courseD_farmer_condLoops8_2018_instruction: Collect all of the corn and lettuce, then pick the pumpkin.
-      courseD_farmer_condLoops9_instruction: Collect all of the corn and lettuce, then pick the pumpkin.
-      courseD_farmer_condLoops9_2018_instruction: Collect all of the corn and lettuce, then pick the pumpkin.
-      courseD_farmer_condLoops9_predict1_instruction: Collect all of the corn and lettuce, then pick the pumpkin.
-      courseD_farmer_condLoops9_predict1_2018_instruction: Collect all of the corn and lettuce, then pick the pumpkin.
+      courseD_farmer_condLoops5_instruction: Raccogli tutte le pannocchie e le lattughe, poi afferra la zucca finale.
+      courseD_farmer_condLoops5_2018_instruction: Raccogli tutte le pannocchie e le lattughe, poi afferra la zucca finale.
+      courseD_farmer_condLoops6_instruction: Riesci a scoprire come conquistare la zucca? Assicurati di raccogliere anche tutto il mais lungo la strada!
+      courseD_farmer_condLoops6_2018_instruction: Riesci a scoprire come conquistare la zucca? Assicurati di raccogliere anche tutto il mais lungo la strada!
+      courseD_farmer_condLoops7_instruction: 'Sfida: Raccogli tutto il mais e la lattuga, poi conquista la zucca finale.'
+      courseD_farmer_condLoops7_2018_instruction: 'Sfida: Raccogli tutto il mais e la lattuga, poi conquista la zucca finale.'
+      courseD_farmer_condLoops8_instruction: Raccogli tutto il mais e la lattuga, poi conquista la zucca finale.
+      courseD_farmer_condLoops8_2018_instruction: Raccogli tutto il mais e la lattuga, poi conquista la zucca finale.
+      courseD_farmer_condLoops9_instruction: Raccogli tutto il mais e la lattuga, poi conquista la zucca finale.
+      courseD_farmer_condLoops9_2018_instruction: Raccogli tutto il mais e la lattuga, poi conquista la zucca finale.
+      courseD_farmer_condLoops9_predict1_instruction: Raccogli tutto il mais e la lattuga, poi conquista la zucca finale.
+      courseD_farmer_condLoops9_predict1_2018_instruction: Raccogli tutto il mais e la lattuga, poi conquista la zucca finale.
       courseD_farmer_condLoops_challenge1_instruction: Collect everything to complete the level. Each hidden crop has only one corn or lettuce.
       courseD_farmer_condLoops_challenge1_2018_instruction: Collect everything to complete the level. Each hidden crop has only one corn or lettuce.
       courseD_farmer_condLoops_challenge2_instruction: Collect everything to complete the level.
       courseD_farmer_condLoops_challenge2_2018_instruction: Collect everything to complete the level.
       courseD_farmer_condLoops_challenge2_clone_instruction: Collect everything to complete the level.
-      courseD_farmer_conditionals1_instruction: Move to the pile of dirt and use the `remove` block to remove it.
-      courseD_farmer_conditionals10_instruction: 'Flatten all of these piles using as few blocks as possible. '
-      courseD_farmer_conditionals2_instruction: Move to the hole and fill it with six shovelfuls of dirt, using the `fill` block.
-      courseD_farmer_conditionals3_instruction: Use as few blocks as possible to solve this puzzle.
-      courseD_farmer_conditionals4_instruction: Help the farmer remove this entire pile using a `while` loop.
-      courseD_farmer_conditionals5_instruction: 'Help me remove all of this dirt. '
-      courseD_farmer_conditionals6_instruction: Use the `while` loop to easily fill all of the holes.
-      courseD_farmer_conditionals7_instruction: Fill in the hole at the end of each of these paths.
-      courseD_farmer_conditionals8_instruction: 'Challenge: Fill all of these holes using as few blocks as possible. '
-      courseD_farmer_conditionals9_instruction: 'Flatten all of these piles using as few blocks as possible. '
+      courseD_farmer_conditionals1_instruction: Vai fino al mucchio di terra e usa il blocco `rimuovi 1` per rimuoverlo.
+      courseD_farmer_conditionals10_instruction: 'Abbatti tutti questi mucchi usando il minor numero possibile di blocchi.'
+      courseD_farmer_conditionals2_instruction: Vai verso la buca e riempila con sei palate di terra, usando il blocco `riempi 1`.
+      courseD_farmer_conditionals3_instruction: Usa il minor numero possibile di blocchi per risolvere questo esercizio.
+      courseD_farmer_conditionals4_instruction: Aiuta la contadina a rimuovere tutto questo mucchio usando un ciclo `mentre`.
+      courseD_farmer_conditionals5_instruction: 'Aiutami a rimuovere tutta questa terra.'
+      courseD_farmer_conditionals6_instruction: Usa il ciclo `mentre` per riempire le buche più semplicemente.
+      courseD_farmer_conditionals7_instruction: Riempi la buca al termine di ogni tratto di questo percorso.
+      courseD_farmer_conditionals8_instruction: 'Sfida: Riempi tutte queste buche usando il minor numero possibile di blocchi.'
+      courseD_farmer_conditionals9_instruction: 'Abbatti tutti questi mucchi usando il minor numero possibile di blocchi.'
       courseD_farmer_until_challenge2_instruction: Use If/Else blocks to follow the curvy path. At each corner, use the `remove 1` command in a loop to clear the piles.
       courseD_farmer_until_challenge2_2018_instruction: Use If/Else blocks to follow the curvy path. At each corner, use the `remove 1` command in a loop to clear the piles.
-      courseD_farmer_while1_instruction: Move to the pile of dirt and use the `remove` block to remove it.
-      courseD_farmer_while10_instruction: 'Flatten all of these piles using as few blocks as possible. '
-      courseD_farmer_while10_2018_instruction: 'Flatten all of these piles using as few blocks as possible. '
-      courseD_farmer_while10_predict2_instruction: 'Flatten all of these piles using as few blocks as possible. '
-      courseD_farmer_while10_predict2_2018_instruction: 'Flatten all of these piles using as few blocks as possible. '
-      courseD_farmer_while1_2018_instruction: Move to the pile of dirt and use the `remove` block to remove it.
-      courseD_farmer_while2_instruction: Move to the hole and fill it with six shovelfuls of dirt, using the `fill` block.
-      courseD_farmer_while2_2018_instruction: Move to the hole and fill it with six shovelfuls of dirt, using the `fill` block.
-      courseD_farmer_while3_instruction: Use as few blocks as possible to solve this puzzle.
-      courseD_farmer_while3_2018_instruction: Use as few blocks as possible to solve this puzzle.
-      courseD_farmer_while4_instruction: Help the farmer remove this entire pile using a `while` loop.
-      courseD_farmer_while4_2018_instruction: Help the farmer remove this entire pile using a `while` loop.
-      courseD_farmer_while4_predict1_instruction: Help the farmer remove this entire pile using a `while` loop.
-      courseD_farmer_while4_predict1_2018_instruction: Help the farmer remove this entire pile using a `while` loop.
-      courseD_farmer_while5_instruction: 'Help me remove all of this dirt. '
-      courseD_farmer_while5_2018_instruction: 'Help me remove all of this dirt. '
-      courseD_farmer_while6_instruction: Use the `while` loop to easily fill all of the holes.
-      courseD_farmer_while6_2018_instruction: Use the `while` loop to easily fill all of the holes.
-      courseD_farmer_while7_instruction: Fill in the hole at the end of each of these paths.
-      courseD_farmer_while7_2018_instruction: Fill in the hole at the end of each of these paths.
-      courseD_farmer_while8_instruction: 'Challenge: Fill all of these holes using as few blocks as possible. '
-      courseD_farmer_while8_2018_instruction: 'Challenge: Fill all of these holes using as few blocks as possible. '
-      courseD_farmer_while9_instruction: 'Flatten all of these piles using as few blocks as possible. '
-      courseD_farmer_while9_2018_instruction: 'Flatten all of these piles using as few blocks as possible. '
+      courseD_farmer_while1_instruction: Vai fino al mucchio di terra e usa il blocco `rimuovi 1` per rimuoverlo.
+      courseD_farmer_while10_instruction: 'Abbatti tutti questi mucchi usando il minor numero possibile di blocchi.'
+      courseD_farmer_while10_2018_instruction: 'Abbatti tutti questi mucchi usando il minor numero possibile di blocchi.'
+      courseD_farmer_while10_predict2_instruction: 'Abbatti tutti questi mucchi usando il minor numero possibile di blocchi.'
+      courseD_farmer_while10_predict2_2018_instruction: 'Abbatti tutti questi mucchi usando il minor numero possibile di blocchi.'
+      courseD_farmer_while1_2018_instruction: Vai fino al mucchio di terra e usa il blocco `rimuovi 1` per rimuoverlo.
+      courseD_farmer_while2_instruction: Vai verso la buca e riempila con sei palate di terra, usando il blocco `riempi 1`.
+      courseD_farmer_while2_2018_instruction: Vai verso la buca e riempila con sei palate di terra, usando il blocco `riempi 1`.
+      courseD_farmer_while3_instruction: Usa il minor numero possibile di blocchi per risolvere questo esercizio.
+      courseD_farmer_while3_2018_instruction: Usa il minor numero possibile di blocchi per risolvere questo esercizio.
+      courseD_farmer_while4_instruction: Aiuta la contadina a rimuovere tutto questo mucchio usando un ciclo `mentre`.
+      courseD_farmer_while4_2018_instruction: Aiuta la contadina a rimuovere tutto questo mucchio usando un ciclo `mentre`.
+      courseD_farmer_while4_predict1_instruction: Aiuta la contadina a rimuovere tutto questo mucchio usando un ciclo `mentre`.
+      courseD_farmer_while4_predict1_2018_instruction: Aiuta la contadina a rimuovere tutto questo mucchio usando un ciclo `mentre`.
+      courseD_farmer_while5_instruction: 'Aiutami a rimuovere tutta questa terra.'
+      courseD_farmer_while5_2018_instruction: 'Aiutami a rimuovere tutta questa terra.'
+      courseD_farmer_while6_instruction: Usa il ciclo `mentre` per riempire le buche più semplicemente.
+      courseD_farmer_while6_2018_instruction: Usa il ciclo `mentre` per riempire le buche più semplicemente.
+      courseD_farmer_while7_instruction: Riempi la buca al termine di ogni tratto di questo percorso.
+      courseD_farmer_while7_2018_instruction: Riempi la buca al termine di ogni tratto di questo percorso.
+      courseD_farmer_while8_instruction: 'Sfida: Riempi tutte queste buche usando il minor numero possibile di blocchi.'
+      courseD_farmer_while8_2018_instruction: 'Sfida: Riempi tutte queste buche usando il minor numero possibile di blocchi.'
+      courseD_farmer_while9_instruction: 'Abbatti tutti questi mucchi usando il minor numero possibile di blocchi.'
+      courseD_farmer_while9_2018_instruction: 'Abbatti tutti questi mucchi usando il minor numero possibile di blocchi.'
       courseD_farmer_while_challenge1_instruction: Riempi tutte le buche e rimuovi tutti i mucchi.
       courseD_farmer_while_challenge1_2018_instruction: Fill all of the holes and remove all of the piles.
       courseD_farmer_while_challenge2_instruction: Fill all of the holes and remove all of the piles.
@@ -4079,8 +4108,8 @@ it:
       courseD_maze_nestedLoops5_2018_instruction: Get the zombie to the sunflower using the fewest number of blocks possible!
       courseD_maze_nestedLoops6_instruction: Usa i cicli per farmi arrivare al girasole col minor numero possibile di blocchi!
       courseD_maze_nestedLoops6_2018_instruction: Usa i cicli per farmi arrivare al girasole col minor numero possibile di blocchi!
-      courseD_maze_ramp1_instruction: For this puzzle, snap all of the blocks together and click "Run" to watch it go!
-      courseD_maze_ramp1_2018_instruction: For this puzzle, snap all of the blocks together and click "Run" to watch it go!
+      courseD_maze_ramp1_instruction: Per risolvere questo esercizio, collega tutti i blocchi e clicca su "Esegui" per vederlo in funzione!
+      courseD_maze_ramp1_2018_instruction: Per risolvere questo esercizio, collega tutti i blocchi e clicca su "Esegui" per vederlo in funzione!
       courseD_maze_ramp2_instruction: Trascina ancora un blocco `vai avanti` fuori dalla cassetta degli attrezzi, quindi attacca tutti i blocchi al blocco arancione `quando si clicca su "Esegui"`per completare il programma.
       courseD_maze_ramp2_2018_instruction: Trascina ancora un blocco `vai avanti` fuori dalla cassetta degli attrezzi, quindi attacca tutti i blocchi al blocco arancione `quando si clicca su "Esegui"`per completare il programma.
       courseD_maze_ramp3_instruction: "C'è un blocco di troppo che fa andare a sbattere l'uccellino.\nButtalo via trascinandolo nella cassetta degli attrezzi."
@@ -4095,32 +4124,32 @@ it:
       courseD_maze_ramp5b_2018_instruction: Navigate this maze to help the bird find the pig!
       courseD_maze_ramp5c_instruction: Help the bird get to the pig.
       courseD_maze_ramp5c_2018_instruction: Help the bird get to the pig.
-      courseD_maze_ramp5d_instruction: Get the bird to the pig.
-      courseD_maze_ramp5d_2018_instruction: Get the bird to the pig.
+      courseD_maze_ramp5d_instruction: Fai arrivare l'uccellino fino al maialino.
+      courseD_maze_ramp5d_2018_instruction: Fai arrivare l'uccellino fino al maialino.
       courseD_maze_ramp6_instruction: '"Mantieni la calma e aiutami a trovare quel cattivone di un maiale. Altrimenti potrei arrabbiarmi!"'
       courseD_maze_ramp6a_instruction: '"Mantieni la calma e aiutami a trovare quel cattivone di un maiale. Altrimenti potrei arrabbiarmi!"'
       courseD_maze_ramp7_instruction: Get the bird to the pig!
-      courseD_maze_until1_instruction: Get the angry bird to the pig.
-      courseD_maze_until10_instruction: Help the zombie get to the sunflower.
-      courseD_maze_until10_2018_instruction: Help the zombie get to the sunflower.
-      courseD_maze_until10_predict2_instruction: Help the zombie get to the sunflower.
-      courseD_maze_until10_predict2_2018_instruction: Help the zombie get to the sunflower.
-      courseD_maze_until1_2018_instruction: Get the angry bird to the pig.
+      courseD_maze_until1_instruction: Fai arrivare l'uccellino arrabbiato (Angry Bird) fino al maialino.
+      courseD_maze_until10_instruction: Aiuta lo zombie ad arrivare fino al girasole.
+      courseD_maze_until10_2018_instruction: Aiuta lo zombie ad arrivare fino al girasole.
+      courseD_maze_until10_predict2_instruction: Aiuta lo zombie ad arrivare fino al girasole.
+      courseD_maze_until10_predict2_2018_instruction: Aiuta lo zombie ad arrivare fino al girasole.
+      courseD_maze_until1_2018_instruction: Fai arrivare l'uccellino arrabbiato (Angry Bird) fino al maialino.
       courseD_maze_until2_instruction: Now, use the `repeat until` loop to do the same thing without specifying how many times to move forward and turn.
-      courseD_maze_until3_instruction: Get the bird to the pig.
-      courseD_maze_until3_2018_instruction: Get the bird to the pig.
-      courseD_maze_until4_instruction: Can you get the zombie to the sunflower using only the blocks that are available?
-      courseD_maze_until4_2018_instruction: Can you get the zombie to the sunflower using only the blocks that are available?
-      courseD_maze_until5_instruction: Use the `if` block to help the zombie decide when to turn, then get the zombie to the sunflower.
-      courseD_maze_until5_2018_instruction: Use the `if` block to help the zombie decide when to turn, then get the zombie to the sunflower.
-      courseD_maze_until6_instruction: Help the zombie get to the sunflower.
-      courseD_maze_until6_2018_instruction: Help the zombie get to the sunflower.
-      courseD_maze_until7_instruction: Help the zombie get to the sunflower.
-      courseD_maze_until7_2018_instruction: Help the zombie get to the sunflower.
-      courseD_maze_until8_instruction: Help the zombie get to the sunflower.
-      courseD_maze_until8_2018_instruction: Help the zombie get to the sunflower.
-      courseD_maze_until9_instruction: "**Challenge:** Avoid the chompers and help the zombie get to the sunflower."
-      courseD_maze_until9_2018_instruction: "**Challenge:** Avoid the chompers and help the zombie get to the sunflower."
+      courseD_maze_until3_instruction: Fai arrivare l'uccellino fino al maialino.
+      courseD_maze_until3_2018_instruction: Fai arrivare l'uccellino fino al maialino.
+      courseD_maze_until4_instruction: Puoi fare in modo che lo zombie arrivi fino al girasole usando solo i blocchi disponibili?
+      courseD_maze_until4_2018_instruction: Puoi fare in modo che lo zombie arrivi fino al girasole usando solo i blocchi disponibili?
+      courseD_maze_until5_instruction: Usa il blocco `se` per aiutare lo zombi a decidere quando girare, quindi fai arrivare lo zombie fino al girasole.
+      courseD_maze_until5_2018_instruction: Usa il blocco `se` per aiutare lo zombi a decidere quando girare, quindi fai arrivare lo zombie fino al girasole.
+      courseD_maze_until6_instruction: Aiuta lo zombie ad arrivare fino al girasole.
+      courseD_maze_until6_2018_instruction: Aiuta lo zombie ad arrivare fino al girasole.
+      courseD_maze_until7_instruction: Aiuta lo zombie ad arrivare fino al girasole.
+      courseD_maze_until7_2018_instruction: Aiuta lo zombie ad arrivare fino al girasole.
+      courseD_maze_until8_instruction: Aiuta lo zombie ad arrivare fino al girasole.
+      courseD_maze_until8_2018_instruction: Aiuta lo zombie ad arrivare fino al girasole.
+      courseD_maze_until9_instruction: "**Sfida:** Evita le piante carnivore e aiuta gli zombie ad arrivare fino al girasole."
+      courseD_maze_until9_2018_instruction: "**Sfida:** Evita le piante carnivore e aiuta gli zombie ad arrivare fino al girasole."
       courseD_maze_until_challenge_instruction: No hints, just challenge. Get the zombie to the sunflower.
       courseD_maze_until_challenge1-delete-this-copy_instruction: No hints, just challenge. Get the zombie to the sunflower.
       courseD_maze_until_challenge1_instruction: No hints, just challenge. Get the zombie to the sunflower.
@@ -4150,8 +4179,8 @@ it:
       courseD_playLab_condFP_a_instruction: Now, build your own game to show off to your friends!
       courseD_playLab_condForVideo_instruction: Now, build your own game to show off to your friends!
       courseD_playLab_embedded_instruction: "Move Pegleg the Pirate with the arrow keys. Get to the dragon to score points, but avoid the ninja! Standing below the line of octopuses will make the ninja stop chasing you, but beware! The longer you stay there, the more points you lose. \n\nGet 5 points to win!"
-      courseD_scrat_ramp1_instruction: For this puzzle, snap all of the blocks together and click "Run" to watch it go!
-      courseD_scrat_ramp1_2018_instruction: For this puzzle, snap all of the blocks together and click "Run" to watch it go!
+      courseD_scrat_ramp1_instruction: Per risolvere questo esercizio, collega tutti i blocchi e clicca su "Esegui" per vederlo in funzione!
+      courseD_scrat_ramp1_2018_instruction: Per risolvere questo esercizio, collega tutti i blocchi e clicca su "Esegui" per vederlo in funzione!
       courseD_scrat_ramp2_instruction: Trascina ancora un blocco `vai avanti` fuori dalla cassetta degli attrezzi, quindi attacca tutti i blocchi al blocco arancione `quando si clicca su "Esegui"`per completare il programma.
       courseD_scrat_ramp2_2018_instruction: Trascina ancora un blocco `vai avanti` fuori dalla cassetta degli attrezzi, quindi attacca tutti i blocchi al blocco arancione `quando si clicca su "Esegui"`per completare il programma.
       courseD_scrat_ramp3_instruction: There is one extra block that is going to cause Scrat to crash. Throw it away by dragging it back to the toolbox.
@@ -4205,12 +4234,12 @@ it:
       courseE_artist_functions_challenge2_instruction: Try this code to see how it works, then make the program your own!
       courseE_artist_functions_challenge2_2018_instruction: Try this code to see how it works, then make the program your own!
       courseE_artist_ramp10_instruction: Now, drag the code for the last triangle into a new loop to spin it around and make a snowflake!
-      courseE_artist_ramp11_instruction: Now make a square using Artist!
-      courseE_artist_ramp12_instruction: Use what you've learned to draw this triangle inside of a square.
-      courseE_artist_ramp8_instruction: Now make a square using Artist!
-      courseE_artist_ramp8_2_instruction: Now make a square using Artist!
-      courseE_artist_ramp8_2018_instruction: Now make a square using Artist!
-      courseE_artist_ramp8_2_2018_instruction: Now make a square using Artist!
+      courseE_artist_ramp11_instruction: Ora disegna un quadrato usando l'Artista!
+      courseE_artist_ramp12_instruction: Usa ciò che hai imparato per disegnare questo triangolo all'interno di un quadrato.
+      courseE_artist_ramp8_instruction: Ora disegna un quadrato usando l'Artista!
+      courseE_artist_ramp8_2_instruction: Ora disegna un quadrato usando l'Artista!
+      courseE_artist_ramp8_2018_instruction: Ora disegna un quadrato usando l'Artista!
+      courseE_artist_ramp8_2_2018_instruction: Ora disegna un quadrato usando l'Artista!
       courseE_artist_ramp9_instruction: Use what you've learned to draw this triangle.
       courseE_artist_ramp9_2_instruction: Use what you've learned to draw this triangle.
       courseE_artist_ramp9_2018_instruction: Use what you've learned to draw this triangle.
@@ -4219,8 +4248,8 @@ it:
       courseE_bee_concept1_2018_instruction: Raccogli tutto il nettare da ogni fiore. Usa un ciclo annidato.
       courseE_bee_concept2_instruction: 'Help the bee make all of the honey. '
       courseE_bee_concept2_2018_instruction: 'Help the bee make all of the honey. '
-      courseE_bee_concept3_instruction: Collect all of the nectar using  as few blocks as possible.
-      courseE_bee_concept3_2018_instruction: Collect all of the nectar using  as few blocks as possible.
+      courseE_bee_concept3_instruction: Raccogli tutto il nettare usando il minor numero possibile di blocchi.
+      courseE_bee_concept3_2018_instruction: Raccogli tutto il nettare usando il minor numero possibile di blocchi.
       courseE_bee_concept4_instruction: Uh oh! The bee is not sure if he should collect nectar or make honey. Can you help him out?
       courseE_bee_concept4_2018_instruction: Uh oh! The bee is not sure if he should collect nectar or make honey. Can you help him out?
       courseE_bee_concept5_instruction: Help the bee collect the nectar from the flowers?
@@ -4261,8 +4290,8 @@ it:
       courseE_farmer_concept1_2018_instruction: Can you write a program that fills these holes until the ground is even?
       courseE_farmer_concept2_instruction: Raccogli tutte le zucche.
       courseE_farmer_concept2_2018_instruction: Raccogli tutte le zucche.
-      courseE_farmer_concept3_instruction: Fill in the hole at the end of each of these paths.
-      courseE_farmer_concept3_2018_instruction: Fill in the hole at the end of each of these paths.
+      courseE_farmer_concept3_instruction: Riempi la buca al termine di ogni tratto di questo percorso.
+      courseE_farmer_concept3_2018_instruction: Riempi la buca al termine di ogni tratto di questo percorso.
       courseE_farmer_concept4_instruction: Andiamo ancora più a fondo! Abbiamo annidato il ciclo che disegna una cella della griglia all'interno di un altro ciclo, per disegnare così tutta la riga di celle. Per completare la griglia, devi far tornare l'artista indietro in modo tale da disegnare le righe successive. Quale sequenza di blocchi devi posizionare alla fine del ciclo più esterno per raggiungere questo obiettivo?
       courseE_farmer_functions1_instruction: Help the harvester get to the pumpkin and pick it.
       courseE_farmer_functions10_instruction: 'No one knows what these sprouts will become.  Use `if` statements to write the code to check and harvest each one.   '
@@ -4453,8 +4482,8 @@ it:
       courseF_artist_fwp_challenge2_2018_instruction: Use what you learned in the previous level to draw an image like this.
       courseF_artist_ramp10_instruction: Now, drag the code for the last triangle into a new loop to spin it around and make a snowflake!
       courseF_artist_ramp10_2018_instruction: Now, drag the code for the last triangle into a new loop to spin it around and make a snowflake!
-      courseF_artist_ramp8_instruction: Now make a square using Artist!
-      courseF_artist_ramp8_2018_instruction: Now make a square using Artist!
+      courseF_artist_ramp8_instruction: Ora disegna un quadrato usando l'Artista!
+      courseF_artist_ramp8_2018_instruction: Ora disegna un quadrato usando l'Artista!
       courseF_artist_ramp9_instruction: Use what you've learned to draw this triangle.
       courseF_artist_ramp9_2018_instruction: Use what you've learned to draw this triangle.
       courseF_artist_variables1_instruction: Let's draw an equilateral triangle that is exactly 50 pixels long on each side.
@@ -4504,18 +4533,16 @@ it:
       courseF_bee_conditionals2_2018_instruction: 'Check underneath each cloud to see if it is hiding a flower before you get nectar.  '
       courseF_bee_conditionals3_instruction: 'Help the bee collect all of the nectar. '
       courseF_bee_conditionals3_2018_instruction: 'Help the bee collect all of the nectar. '
-      courseF_bee_conditionals4_instruction: Get all of the nectar using as few blocks as possible.
-      courseF_bee_conditionals4_2018_instruction: Get all of the nectar using as few blocks as possible.
-      courseF_bee_conditionals5_instruction: Collect all of the nectar using as few blocks as possible
-      courseF_bee_conditionals5_2018_instruction: Collect all of the nectar using as few blocks as possible
-      courseF_bee_conditionals7_predict2_instruction: Use the `if/else` block to collect nectar at flowers and make honey at honeycomb.
-      courseF_bee_conditionals7_predict2_2018_instruction: Use the `if/else` block to collect nectar at flowers and make honey at honeycomb.
+      courseF_bee_conditionals4_instruction: Raccogli tutto il nettare usando il minor numero possibile di blocchi.
+      courseF_bee_conditionals4_2018_instruction: Raccogli tutto il nettare usando il minor numero possibile di blocchi.
+      courseF_bee_conditionals5_instruction: Raccogli tutto il nettare usando il minor numero possibile di blocchi
+      courseF_bee_conditionals5_2018_instruction: Raccogli tutto il nettare usando il minor numero possibile di blocchi
+      courseF_bee_conditionals7_predict2_instruction: Usa il blocco `se/altrimenti` per raccogliere il nettare dai fiori e fare il miele nei favi.
+      courseF_bee_conditionals7_predict2_2018_instruction: Usa il blocco `se/altrimenti` per raccogliere il nettare dai fiori e fare il miele nei favi.
       courseF_bee_conditionals8_instruction: |-
-        Collect nectar if there is a flower.
-        Otherwise, make honey (because there is a honeycomb).
+        Se c'è un fiore, raccogli il nettare. In caso contrario, fai il miele perché c'è sicuramente un favo.
       courseF_bee_conditionals8_2018_instruction: |-
-        Collect nectar if there is a flower.
-        Otherwise, make honey (because there is a honeycomb).
+        Se c'è un fiore, raccogli il nettare. In caso contrario, fai il miele perché c'è sicuramente un favo.
       courseF_bee_for1_instruction: Collect the nectar from each flower using the fewest blocks possible.
       courseF_bee_for10_instruction: "**Challenge:** Take what you've learned about `for` loops and try to solve this problem. "
       courseF_bee_for10_2018_instruction: "**Challenge:** Take what you've learned about `for` loops and try to solve this problem. "
@@ -4654,7 +4681,7 @@ it:
       course_playlab_variables1_instruction: This is Pirate Pegleg.  He's awfully hard to understand these days!
       course_playlab_variables2_instruction: "Now, decode Pirate Pegleg's speech by changing the value of the variables in just two places! \n"
       course_playlab_variables3_instruction: "Now, decode Pirate Pegleg's speech by changing the value of the variables in just two places! \n"
-      coursea_maze_ramp1_2018_instruction: For this puzzle, snap the blocks together and click "Run"!
+      coursea_maze_ramp1_2018_instruction: For this puzzle, snap the blocks together and click "▶ Run"!
       coursef_explore_CYOA_Witch_instruction: You can do whatever you want in play lab! Here's an example of choose your own adventure story in play lab.
       coursef_explore_playlab2_instruction: You can do whatever you want in play lab! Here's an example of story in play lab.
       coursef_explore_playlab_cat_game_instruction: You can do whatever you want in play lab! Here's an example of game you can make.
@@ -4930,31 +4957,31 @@ it:
       grade3_Loops_TeacherIDo_instruction: |-
         Raccogli il nettare da ogni fiore, usando il minor numero possibile di blocchi.
       grade3_RunningFarm_1_instruction: Use conditionals to make sure that you pick all of the corn, but don't disturb the stalks where nothing is growing yet.
-      grade3_RunningFarm_10_instruction: Collect all of the corn and lettuce, then pick the pumpkin.
-      grade3_RunningFarm_11a_instruction: Collect all of the corn and lettuce, then pick the pumpkin.
+      grade3_RunningFarm_10_instruction: Raccogli tutto il mais e la lattuga, poi conquista la zucca finale.
+      grade3_RunningFarm_11a_instruction: Raccogli tutto il mais e la lattuga, poi conquista la zucca finale.
       grade3_RunningFarm_2_instruction: Help the farmer collect both corn and lettuce from the field.
-      grade3_RunningFarm_3_instruction: '*"Corn, lettuce, AND pumpkins! Help me harvest them all."*'
+      grade3_RunningFarm_3_instruction: '*"Mais, lattuga E zucche! Aiutami a raccogliere tutto."*'
       grade3_RunningFarm_4_instruction: Help the farmer pick all of the lettuce in each cluster before moving on to the next bunch.
       grade3_RunningFarm_5_instruction: This field has clusters of corn, lettuce, and pumpkins all growing together.  Can you collect them all?
-      grade3_RunningFarm_6_instruction: Can you figure out how to pick the pumpkin?  Make sure to collect all of the corn along the way!
-      grade3_RunningFarm_7_instruction: "**Challenge:** Collect all of the corn and lettuce, then pick the pumpkin."
+      grade3_RunningFarm_6_instruction: Riesci a scoprire come conquistare la zucca? Assicurati di raccogliere anche tutto il mais lungo la strada!
+      grade3_RunningFarm_7_instruction: "**Sfida:** Raccogli tutto il mais e la lattuga, poi conquista la zucca finale."
       grade3_RunningFarm_8_instruction: Have wheat and potatoes planted randomly at various growth stages. Now we introduce multiple while loops (stacked) nested inside a loop. The two while loops in the solution represent different while loops (while there is potato and while there is wheat)
       grade3_RunningFarm_9_instruction: Add Weeds element. Weeds start out in random spots in the field and spread more and more rapidly as time goes on.. This puzzle is the culminating game-like puzzle. Students should have the event blocks (up, down, left, right, spacebar) available in the toolbox to use if they want. The entire field should be planted randomly with mostly wheat, potatoes, and a few weeds.
       grade3_RunningFarm_TeacherIDo_instruction: 'Teacher I Do: Show students how they can use loops and conditionals to plant and harvest 2 rows of crops.'
       grade3_RunningFarm_TeacherIDo2_instruction: 'Teacher I Do: Show students how to use loops to harvest many crops.'
       grade3_bee_Conditionals_new4_instruction: Now try checking all of these flowers with "if" blocks to see if there is any nectar available.
-      grade3_bee_conditionals_new1a_instruction: "Help the bee collect all of the nectar. \n\nYou can only collect nectar from flowers, but you can check any space to see if there is a flower."
-      grade3_bee_conditionals_new1b_instruction: Help the bee collect all of the nectar. You can only collect nectar from flowers, but you can check any space to see if there is a flower.
-      grade3_bee_conditionals_new2_instruction: Collect all of the nectar using as few blocks as possible
-      grade3_bee_conditionals_new2a_instruction: Get all of the nectar using as few blocks as possible.
+      grade3_bee_conditionals_new1a_instruction: "Aiuta l'ape a raccogliere tutto il nettare.\n\nVisto che puoi raccogliere il nettare solo dai fiori, devi prima controllare in ogni casella se c'è un fiore."
+      grade3_bee_conditionals_new1b_instruction: Aiuta l'ape a raccogliere tutto il nettare. Visto che puoi raccogliere il nettare solo dai fiori, devi prima controllare in ogni casella se c'è un fiore.
+      grade3_bee_conditionals_new2_instruction: Raccogli tutto il nettare usando il minor numero possibile di blocchi
+      grade3_bee_conditionals_new2a_instruction: Raccogli tutto il nettare usando il minor numero possibile di blocchi.
       grade3_bee_conditionals_new2b_instruction: Collect all of the nectar. You can only collect nectar from flowers, but you can check any space to see if there is a flower.
       grade3_bee_conditionals_new3a_instruction: Collect all of the nectar or make all the honey. You can only collect nectar from flowers and make honey from honeycombs. Check any space to see if there is a flower or honeycomb.
       grade3_bee_conditionals_new3b_instruction: Collect all of the nectar and make all of the honey.
       grade3_bee_conditionals_new3c_instruction: 'Help the bee collect all of the nectar and make all of the honey! Hint: Try using one loop inside of another loop.'
       grade3_bee_conditionals_quantum1_instruction: Check to see if there's a flower under the cloud. If there's a flower, get nectar.
       grade3_bee_conditionals_quantum2_instruction: "Adesso ci sono più nuvole!<br><br>\nControlla ognuna di esse e verifica se c'è un fiore. Solo in tal caso raccogli il nettare.<br><br>\nRicordati che le diverse nuvole possono nascondere oggetti diversi!"
-      grade3_bee_conditionals_quantum3_instruction: Some of these clouds might have honeycombs under them.  Be sure to check if a honeycomb is hiding behind each cloud!
-      grade3_bee_conditionals_quantum4_instruction: Use the `if/else` block to collect nectar at flowers and make honey at honeycomb.
+      grade3_bee_conditionals_quantum3_instruction: Alcune di queste nubi potrebbero nascondere dei favi. Controlla sotto ogni nuvola se c'è un favo!
+      grade3_bee_conditionals_quantum4_instruction: Usa il blocco `se/altrimenti` per raccogliere il nettare dai fiori e fare il miele nei favi.
       grade3_bee_conditionals_quantum5_instruction: |-
         Use the `if/else` block to collect nectar if there is a flower.
         Otherwise, make honey (because there is a honeycomb).
@@ -4979,23 +5006,23 @@ it:
       grade3_playLab_buildGame_8_instruction: Add the second part of the code to choose a suit, copying what you made for a Red card.
       grade3_playLab_buildGame_final_instruction: Final stage for playlab conditionals level (could hide entire function so that students just work with point scoring)
       grade3_playLab_buildGame_final2_instruction: Here's all of your code to choose a card - try adding some other fun features!
-      grade3_robotFarmer_ConditionalsIntro4_instruction: Help the farmer remove this entire pile using a `while` loop.
-      grade3_robotFarmer_ConditionalsIntro_1_instruction: "*\"Hi, I'm a farmer. I need your help to flatten the field on my farm so it's ready for planting!\"*  \n\nMove to the pile of dirt and use the `remove` block to remove it."
+      grade3_robotFarmer_ConditionalsIntro4_instruction: Aiuta la contadina a rimuovere tutto questo mucchio usando un ciclo `mentre`.
+      grade3_robotFarmer_ConditionalsIntro_1_instruction: "*\"Ciao, sono una contadina. Ho bisogno del tuo aiuto per livellare il terreno nella mia fattoria, in modo che sia pronto per la semina.\"*\n\nSpostami verso i mucchi di terra e usa il blocco `rimuovi 1` per rimuoverli."
       grade3_robotFarmer_ConditionalsIntro_10_instruction: I'm working late, so it's dark out, and I can't tell how large the piles are. Now I don't have all the options I used to have on the while block. Move me along the field, and if there is a pile, remove it
-      grade3_robotFarmer_ConditionalsIntro_10a_instruction: 'Flatten all of these piles using as few blocks as possible. '
+      grade3_robotFarmer_ConditionalsIntro_10a_instruction: 'Abbatti tutti questi mucchi usando il minor numero possibile di blocchi.'
       grade3_robotFarmer_ConditionalsIntro_11_instruction: 'È ancora buio fuori. Spostami lungo il terreno. Se c''è un mucchio, rimuovilo e se c''è una buca, riempila. Suggerimento: usa il menu a discesa delle opzioni del blocco "se".'
-      grade3_robotFarmer_ConditionalsIntro_11a_instruction: 'Flatten all of these piles using as few blocks as possible. '
+      grade3_robotFarmer_ConditionalsIntro_11a_instruction: 'Abbatti tutti questi mucchi usando il minor numero possibile di blocchi.'
       grade3_robotFarmer_ConditionalsIntro_2_instruction: Next, move to the hole and fill it with six shovelfuls of dirt, using the `fill` block.
       grade3_robotFarmer_ConditionalsIntro_3_instruction: '*"Move to the pile of dirt and tell me how many shovelfuls to remove using as few blocks as possible."*'
       grade3_robotFarmer_ConditionalsIntro_4_instruction: |-
-        *"I don't know how much dirt is in this pile!"*
+        *"Non so quanta terra c'è in questo mucchio!"*
         
-        Help the farmer remove this entire pile using a `while` loop.
-      grade3_robotFarmer_ConditionalsIntro_5_instruction: 'Help me remove all of this dirt. '
+        Aiuta la contadina a rimuovere tutto questo mucchio usando un ciclo `mentre`.
+      grade3_robotFarmer_ConditionalsIntro_5_instruction: 'Aiutami a rimuovere tutta questa terra.'
       grade3_robotFarmer_ConditionalsIntro_6_instruction: 'Rimuovi tutti i mucchi di terra, usando il minor numero possibile di blocchi. Nota: la nuova versione del blocco "mentre" permette di sapere se sto sopra un mucchio.'
-      grade3_robotFarmer_ConditionalsIntro_7_instruction: "Look at all of those holes!  Each one needs a different amount of dirt.   \n\nYou can use the `while` loop to easily fill them all!"
-      grade3_robotFarmer_ConditionalsIntro_8_instruction: Fill in the hole at the end of each of these paths.
-      grade3_robotFarmer_ConditionalsIntro_9_instruction: "**Challenge:** Fill all of these holes using as few blocks as possible. "
+      grade3_robotFarmer_ConditionalsIntro_7_instruction: "Guarda tutte queste buche!  Ognuna ha bisogno di una diversa quantità di terra.\n\nÈ possibile usare il ciclo `mentre` per riempirle tutte facilmente!"
+      grade3_robotFarmer_ConditionalsIntro_8_instruction: Riempi la buca al termine di ogni tratto di questo percorso.
+      grade3_robotFarmer_ConditionalsIntro_9_instruction: "**Sfida:** Riempi tutte queste buche usando il minor numero possibile di blocchi."
       grade3_robotFarmer_ConditionalsIntro_TeacherIDo1_instruction: 'Aiutami a riempire ognuna di queste buche con 5 palate di terra. Suggerimento: puoi mettere un blocco "ripeti" all''interno del blocco "mentre".'
       grade3_robotFarmer_ConditionalsIntro_TeacherIDo2_instruction: I'm working late, so it's dark out, and I can't tell how large the piles are. Now I don't have all the options I used to have on the while block. Move me along the field, and if there is a pile, remove it
       grade4_arist_functions_star0_instruction: Have you drawn something like this star before? Practice making it one more time by adding a turn and a repeat block.
@@ -5107,7 +5134,7 @@ it:
       grade4_bee_nestedLoops0_instruction: Usa un ciclo per raccogliere tutto il nettare.
       grade4_bee_nestedLoops1_instruction: Raccogli tutto il nettare da ogni fiore. Usa un ciclo annidato.
       grade4_bee_nestedLoops2_instruction: "**Challenge:** Figure out how to get all of the nectar using only the blocks available."
-      grade4_bee_nestedLoops2a_instruction: Collect all of the nectar using  as few blocks as possible.
+      grade4_bee_nestedLoops2a_instruction: Raccogli tutto il nettare usando il minor numero possibile di blocchi.
       grade4_bee_nestedLoops3_instruction: Usa un ciclo annidato per raccogliere tutto il nettare.
       grade4_bee_nestedLoops4_instruction: 'Raccogli tutto il nettare da ogni fiore e produci il miele in ogni favo. Usa un ciclo annidato.'
       grade4_bee_nestedLoops_assess_instruction: |-

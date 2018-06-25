@@ -85,6 +85,7 @@ bs:
     facebook: 'Facebook'
     windowslive: 'Microsoft Račun'
     clever: 'Pametni račun'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Zaboravio/la si šifru?'
     need_confirmation: "Nisi primio/la upute za potvrdu?"
     need_unlock: "Nisi primio/la upute za otključavanje?"
@@ -356,6 +357,7 @@ bs:
     email_confirm_needed_required: 'Vaša e-mail adresa %{email} nije još potvrđena:'
     email_confirm_wrong_email: '(Pogrešna e-mail adresa?)'
     email_resend_confirm: 'Ponovno slanje uputa za potvrđivanje'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(ostavi prazno ako ne želiš promijeniti)"
     current_password_hint: '(za potvrdu promjene treba nam tvoja trenutna lozinka)'
     delete: 'Ukloni svoj račun'

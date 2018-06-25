@@ -135,6 +135,7 @@ class Script < ActiveRecord::Base
     stage_extras_available
     has_verified_resources
     has_lesson_plan
+    curriculum_path
     script_announcements
     version_year
     is_stable
@@ -535,7 +536,11 @@ class Script < ActiveRecord::Base
       Script::CSD2_NAME,
       Script::CSD3_NAME,
       Script::CSD4_NAME,
-      Script::CSD6_NAME
+      Script::CSD6_NAME,
+      Script::CSD2_2018_NAME,
+      Script::CSD3_2018_NAME,
+      Script::CSD4_2018_NAME,
+      Script::CSD6_2018_NAME,
     ].include?(name)
   end
 
@@ -543,7 +548,10 @@ class Script < ActiveRecord::Base
     [
       Script::CSP17_UNIT3_NAME,
       Script::CSP17_UNIT5_NAME,
-      Script::CSP17_POSTAP_NAME
+      Script::CSP17_POSTAP_NAME,
+      Script::CSP3_2018_NAME,
+      Script::CSP5_2018_NAME,
+      Script::CSP_POSTAP_2018_NAME,
     ].include?(name)
   end
 
@@ -629,7 +637,7 @@ class Script < ActiveRecord::Base
   # @param user [User]
   # @return [Boolean] Whether the user has progress on another version of this script.
   def has_other_version_progress?(user)
-    return nil unless user
+    return nil unless user && family_name
     user_script_ids = user.user_scripts.pluck(:script_id)
 
     Script.
@@ -1057,6 +1065,7 @@ class Script < ActiveRecord::Base
       stage_extras_available: stage_extras_available,
       has_verified_resources: has_verified_resources?,
       has_lesson_plan: has_lesson_plan?,
+      curriculum_path: curriculum_path,
       script_announcements: script_announcements,
       age_13_required: logged_out_age_13_required?,
       show_course_unit_version_warning: has_other_course_progress,
@@ -1168,7 +1177,8 @@ class Script < ActiveRecord::Base
       stage_extras_available: script_data[:stage_extras_available] || false,
       has_verified_resources: !!script_data[:has_verified_resources],
       has_lesson_plan: !!script_data[:has_lesson_plan],
-      script_announcements: script_data[:script_announcements],
+      curriculum_path: script_data[:curriculum_path],
+      script_announcements: script_data[:script_announcements] || false,
       version_year: script_data[:version_year],
       is_stable: script_data[:is_stable],
     }.compact
@@ -1226,5 +1236,13 @@ class Script < ActiveRecord::Base
     info[:category] = I18n.t("data.script.category.#{info[:category]}_category_name", default: info[:category])
 
     info
+  end
+
+  # Get all script levels that are level groups, and return a list of those that are
+  # not anonymous assessments.
+  def get_assessment_script_levels
+    script_levels.select do |sl|
+      sl.levels.first.is_a?(LevelGroup) && sl.long_assessment? && !sl.anonymous?
+    end
   end
 end

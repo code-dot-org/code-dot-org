@@ -80,7 +80,7 @@ th:
         title: สร้างพื้นฐาน
         desc: Students build a structure using only provided supplies. Structures must complete a task (reach a certain height or bear a certain weight), and students discuss the idea of being persistent when things get complicated.
       GettingLoopy:
-        title: Getting Loopy
+        title: มาวนลูปกัน
         desc: This lesson introduces the programming concept of loops (repeated instructions) through a dance activity. Students will learn simple choreography, then be instructed to repeat it.
       RelayProgramming:
         title: โปรแกรมการถ่ายทอดข้อมูล
@@ -209,7 +209,7 @@ th:
         title: 'Real-life Algorithms: Paper Planes'
         desc: This lesson calls out ways we use algorithms in our daily lives, specifically making paper airplanes. This lesson also focuses on the bigger picture of computer science and how algorithms play an essential part.
       courseC_unplugged_gettingLoopy:
-        title: Getting Loopy
+        title: มาวนลูปกัน
         desc: This lesson introduces the programming concept of loops (repeated instructions) through a dance activity. Students will learn simple choreography, then be instructed to repeat it.
       courseC_unplugged_binaryBracelets:
         title: Binary Bracelets
@@ -338,7 +338,7 @@ th:
         title: 'Real-life Algorithms: Paper Planes'
         desc: This lesson calls out ways we use algorithms in our daily lives, specifically making paper airplanes. This lesson also focuses on the bigger picture of computer science and how algorithms play an essential part.
       GettingLoopy_2018:
-        title: Getting Loopy
+        title: มาวนลูปกัน
         desc: This lesson introduces the programming concept of loops (repeated instructions) through a dance activity. Students will learn simple choreography, then be instructed to repeat it.
       BinaryBracelets_2018:
         title: Binary Bracelets

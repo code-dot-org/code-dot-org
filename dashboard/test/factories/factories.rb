@@ -150,6 +150,28 @@ FactoryGirl.define do
           end
         end
       end
+      trait :with_google_authentication_option do
+        after(:create) do |user|
+          create(:authentication_option,
+            user: user,
+            email: user.email,
+            hashed_email: user.hashed_email,
+            credential_type: AuthenticationOption::GOOGLE,
+            authentication_id: 'abcd123'
+          )
+        end
+      end
+      trait :with_email_authentication_option do
+        after(:create) do |user|
+          create(:authentication_option,
+            user: user,
+            email: user.email,
+            hashed_email: user.hashed_email,
+            credential_type: AuthenticationOption::EMAIL,
+            authentication_id: user.hashed_email
+          )
+        end
+      end
     end
 
     factory :student do
@@ -177,7 +199,14 @@ FactoryGirl.define do
           sequence(:parent_email) {|n| "testparent#{n}@example.com.xx"}
           email nil
           hashed_email nil
+          provider nil
         end
+      end
+
+      factory :manual_username_password_student do
+        email nil
+        hashed_email nil
+        provider User::PROVIDER_MANUAL
       end
 
       factory :student_in_word_section do
@@ -202,15 +231,72 @@ FactoryGirl.define do
         end
       end
 
-      factory :google_oauth2_student do
-        encrypted_password nil
-        provider 'google_oauth2'
-        sequence(:uid) {|n| n}
-      end
-
       factory :old_student do
         birthday Time.zone.today - 30.years
       end
+    end
+
+    trait :unmigrated_sso do
+      encrypted_password nil
+      provider %w(facebook windowslive clever).sample
+      sequence(:uid) {|n| n}
+    end
+
+    trait :unmigrated_sso_with_token do
+      unmigrated_sso
+      oauth_token 'fake-oauth-token'
+      oauth_token_expiration 'fake-oauth-token-expiration'
+    end
+
+    trait :unmigrated_untrusted_email_sso do
+      unmigrated_sso_with_token
+      after(:create) do |user|
+        if user.student?
+          user.hashed_email = nil
+          user.save!
+        end
+      end
+    end
+
+    trait :unmigrated_clever_sso do
+      unmigrated_untrusted_email_sso
+      provider 'clever'
+    end
+
+    trait :unmigrated_facebook_sso do
+      unmigrated_sso_with_token
+      provider 'facebook'
+    end
+
+    trait :unmigrated_google_sso do
+      unmigrated_sso_with_token
+      provider 'google_oauth2'
+      oauth_refresh_token 'fake-oauth-refresh-token'
+    end
+
+    trait :unmigrated_powerschool_sso do
+      unmigrated_untrusted_email_sso
+      provider 'powerschool'
+    end
+
+    trait :unmigrated_the_school_project_sso do
+      unmigrated_sso
+      provider 'the_school_project'
+    end
+
+    trait :unmigrated_twitter_sso do
+      unmigrated_sso
+      provider 'twitter'
+    end
+
+    trait :unmigrated_qwiklabs_sso do
+      unmigrated_sso
+      provider 'lti_lti_prod_kids.qwikcamps.com'
+    end
+
+    trait :unmigrated_windowslive_sso do
+      unmigrated_sso_with_token
+      provider 'windowslive'
     end
 
     trait :with_google_authentication_option do
@@ -219,8 +305,24 @@ FactoryGirl.define do
           user: user,
           email: user.email,
           hashed_email: user.hashed_email,
-          credential_type: 'google_oauth',
+          credential_type: AuthenticationOption::GOOGLE,
           authentication_id: 'abcd123'
+        )
+      end
+    end
+
+    trait :with_migrated_google_authentication_option do
+      after(:create) do |user|
+        ao = create(:authentication_option,
+          user: user,
+          email: user.email,
+          hashed_email: user.hashed_email,
+          credential_type: AuthenticationOption::GOOGLE,
+          authentication_id: 'abcd123'
+        )
+        user.update!(
+          primary_authentication_option: ao,
+          provider: User::PROVIDER_MIGRATED
         )
       end
     end
@@ -231,7 +333,7 @@ FactoryGirl.define do
           user: user,
           email: user.email,
           hashed_email: user.hashed_email,
-          credential_type: 'clever',
+          credential_type: AuthenticationOption::CLEVER,
           authentication_id: '456efgh'
         )
       end
@@ -243,8 +345,24 @@ FactoryGirl.define do
           user: user,
           email: user.email,
           hashed_email: user.hashed_email,
-          credential_type: 'email',
+          credential_type: AuthenticationOption::EMAIL,
           authentication_id: user.hashed_email
+        )
+      end
+    end
+
+    trait :with_migrated_email_authentication_option do
+      after(:create) do |user|
+        ao = create(:authentication_option,
+          user: user,
+          email: user.email,
+          hashed_email: user.hashed_email,
+          credential_type: AuthenticationOption::EMAIL,
+          authentication_id: user.hashed_email
+        )
+        user.update!(
+          primary_authentication_option: ao,
+          provider: User::PROVIDER_MIGRATED
         )
       end
     end
@@ -285,10 +403,18 @@ FactoryGirl.define do
     association :user
     email {''}
     hashed_email {''}
-    credential_type {'email'}
+    credential_type {AuthenticationOption::EMAIL}
     authentication_id {''}
 
     factory :email_authentication_option do
+      sequence(:email) {|n| "testuser#{n}@example.com.xx"}
+      after(:create) do |auth|
+        auth.authentication_id = auth.hashed_email
+      end
+    end
+
+    factory :google_authentication_option do
+      credential_type AuthenticationOption::GOOGLE
       sequence(:email) {|n| "testuser#{n}@example.com.xx"}
       after(:create) do |auth|
         auth.authentication_id = auth.hashed_email
@@ -475,6 +601,18 @@ FactoryGirl.define do
       }.to_json
     end
     helper_code {"function block#{index}() {}"}
+  end
+
+  factory :shared_blockly_function do
+    transient do
+      sequence(:index)
+    end
+    name {"doing_something#{index}"}
+    level_type 'fakeLevelType'
+    block_type 'function'
+    description 'This does >>something<< interesting!'
+    arguments '{"this sprite": "Sprite"}'
+    stack '<block type="implementationBlock"></block>'
   end
 
   factory :level_source do
@@ -978,5 +1116,11 @@ FactoryGirl.define do
       latitude (-33.859100)
       longitude 151.200200
     end
+  end
+
+  factory :teacher_feedback do
+    association :student
+    association :teacher
+    association :level
   end
 end

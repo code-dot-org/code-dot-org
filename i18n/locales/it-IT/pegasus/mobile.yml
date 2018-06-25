@@ -380,7 +380,7 @@
   homepage_header_donors: "Code.org ringrazia i suoi sostenitori"
   homepage_donors_seall: "Mostra tutto"
   homepage_donors_donate: "Sostienici"
-  homepage_below_hero_announcement_text: "Ci preoccupiamo della tua privacy e stiamo facendo alcuni aggiornamenti alle nostre politiche sulla privacy che saranno operative dal 25 maggio."
+  homepage_below_hero_announcement_text: "Rispettiamo la tua privacy e stiamo apportando alcuni aggiornamenti alla Privacy policy che entreranno in vigore il 25 maggio."
   homepage_below_hero_announcement_link_text: "Ulteriori informazioni"
   contact_form_topic_student: "Io sono uno studente"
   contact_form_topic_parent: "Io sono un genitore"
@@ -552,7 +552,7 @@
   volunteer_engineer_submission_field_email: "Indirizzo di posta elettronica"
   volunteer_engineer_submission_field_email_desc: "Il tuo indirizzo di posta elettronica non sarà mai condiviso. Ti invieremo le richieste da parte degli insegnanti."
   volunteer_engineer_submission_field_email_placeholder: "Indirizzo di posta elettronica"
-  volunteer_engineer_submission_field_email_preference: "Possiamo inviarti email sulle novità dei nostri corsi o su altre notizie legate all'informatica?"
+  volunteer_engineer_submission_field_email_preference: "Consenti l’invio di aggiornamenti sui nostri corsi, opportunità a livello locale o altre notizie informatiche?"
   volunteer_engineer_submission_field_email_preference_privacy: "(Vedi la nostra informativa sulla privacy)"
   volunteer_engineer_submission_field_email_preference_yes: 'Sì'
   volunteer_engineer_submission_field_email_preference_no: 'No'
@@ -946,9 +946,25 @@
   coursee_name: "Corso E"
   coursef-draft_name: Corso F
   coursef_name: "Corso F"
+  coursea-2017_name: Course A (2017)
+  courseb-2017_name: Course B (2017)
+  coursec-2017_name: Course C (2017)
+  coursed-2017_name: Course D (2017)
+  coursee-2017_name: Course E (2017)
+  coursef-2017_name: Course F (2017)
+  coursea-2018_name: Course A (2018)
+  courseb-2018_name: Course B (2018)
+  coursec-2018_name: Course C (2018)
+  coursed-2018_name: Course D (2018)
+  coursee-2018_name: Course E (2018)
+  coursef-2018_name: Course F (2018)
   accelerated_name: "Corso rapido"
   express_name: "Corso Rapido"
   pre-express_name: Corso Rapido pre-scolare
+  express-2017_name: Express Course (2017)
+  pre-express-2017_name: Pre-reader Express Course (2017)
+  express-2018_name: Corso Rapido
+  pre-express-2018_name: Pre-reader Express Course (2018)
   cspunit1_name: "Princìpi dell'Informatica - Unità 1"
   cspunit2_name: "Princìpi dell'Informatica - Unità 2"
   cspunit3_name: "Princìpi dell'Informatica - Unità 3"
@@ -1023,6 +1039,8 @@
   math_category_name: "Matematica"
   hoc_category_name: "L'Ora del Codice"
   csf_category_name: "Corsi base"
+  csf_2017_category_name: "CS Fundamentals (2017)"
+  csf_2018_category_name: "CS Fundamentals (2018)"
   csf_international_category_name: "Fondamenti di Informatica (in Italiano)"
   csf2_draft_category_name: 'Corsi A - F: In fase di sviluppo'
   csd_category_name: "CS Discoveries ('17-'18)"

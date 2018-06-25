@@ -2,9 +2,10 @@ hidden false
 hideable_stages true
 stage_extras_available true
 has_lesson_plan true
+curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-1718/coursee/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab", "artist"]
-script_announcements [{"notice"=>"Relevant Common Core and NGSS standards are now listed in Courses A-F!", "details"=>"Check out the full standards alignment document ", "link"=>"https://curriculum.code.org/csf-1718/coursee/standards/", "type"=>"bullhorn"}, {"notice"=>"Sign up to pilot new Course E content!", "details"=>"We are looking for active Course E teachers to pilot new tools that we will be releasing next year. Click \"Learn more\" to find out more about how you can help.", "link"=>"https://bit.ly/csfpilot", "type"=>"information"}]
+script_announcements [{"notice"=>"An Update is Coming for CS Fundamentals!", "details"=>"We're getting ready to roll out updated curriculum for the '18-'19 school year - check out the details on our teacher blog.", "link"=>"http://teacherblog.code.org/post/174407664924/updates-to-cs-fundamentals-a-f-are-coming", "type"=>"bullhorn"}, {"notice"=>"Sign up to pilot new Course E content!", "details"=>"We are looking for active Course E teachers to pilot new tools that we will be releasing next year. Click \"Learn more\" to find out more about how you can help.", "link"=>"https://bit.ly/csfpilot", "type"=>"information"}]
 new_name 'coursee-2017'
 family_name 'coursee'
 version_year '2017'

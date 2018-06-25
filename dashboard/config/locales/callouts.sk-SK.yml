@@ -1,4 +1,5 @@
-"sk":
+---
+sk:
   data:
     callouts:
       2-3 Artist 1 new_callout: {}
@@ -19,12 +20,12 @@
           Nemusíš vôbec vyhľadávať včelie plásty.
       AppLab Intro 2 - Edit place1 2_callout:
         dragTextAreaIn: Click and drag a "Text Area" onto the screen
-        screenSelectorCallout3: Pick the screen you made
+        screenSelectorCallout3: Vyberte si Vami vytvorenú obrazovku
       AppLab Intro 2 - Edit place1_callout:
-        screenSelectorCallout2: This is the screen selector
-        changePlace1ID: Change the name of your screen here.
+        screenSelectorCallout2: Toto je výber obrazovky
+        changePlace1ID: Tu môžete zmeniť id vašej obrazovky.
       AppLab Intro 2 - Edit startScreen_callout:
-        applabIntro2_1: Click the title of your app
+        applabIntro2_1: Kliknite na názov Vašej aplikácie
         appLabIntro2_designMenu: Use these menus to change your app's title
         appLabIntro2_textColor: Scroll down to change the "text color"
       AppLab Intro 2 - Edit startScreen2_callout:
@@ -34,10 +35,10 @@
         appLabIntro2_textColor: Try out some of the different properties you can change
           below
       AppLab Intro 2 - add Button_callout:
-        designToolboxCallOut: Drag another button into your app
+        designToolboxCallOut: Presuňte tlačidlo na Vašu obrazovku.
         changeButtonID: Choose a clear "id" for your button. For example "callFriendButton"
           or "goOutsideButton"
-        screenSelectorCallout3: Go to your "startScreen"
+        screenSelectorCallout3: Prejdite na "Úvodnú obrazovku"
       AppLab Intro 2 - add more buttons 2_callout: {}
       AppLab Intro 2 - add more buttons_callout: {}
       AppLab Intro 2 - add onEvent_callout:
@@ -205,17 +206,17 @@
       CSD U3 UP_ARROW_callout: {}
       CSD U3 UP_ARROW_2018_callout: {}
       CSD U3 Variables Predict Where X_callout:
-        CSD_U3_variables: Change the number here
+        CSD_U3_variables: Zmeňte číslo tu
       CSD U3 Variables Predict Where XY Embed_callout:
-        grid: Click here to show the grid.
+        grid: Kliknite sem pre zobrazenie mriežky.
       CSD U3 Variables Predict Where XY Embed_2018_callout:
-        grid: Click here to show the grid.
+        grid: Kliknite sem pre zobrazenie mriežky.
       CSD U3 Variables Predict Where XY_callout:
-        grid: Click here to show the grid.
+        grid: Kliknite sem pre zobrazenie mriežky.
       CSD U3 Variables Predict Where XY_2018_callout:
-        grid: Click here to show the grid.
+        grid: Kliknite sem pre zobrazenie mriežky.
       CSD U3 Variables Predict Where X_2018_callout:
-        CSD_U3_variables: Change the number here
+        CSD_U3_variables: Zmeňte číslo tu
       CSD U3 Variables TEMPLATE square_callout: {}
       CSD U3 Variables make a big square_callout: {}
       CSD U3 Variables make a square_callout: {}
@@ -435,9 +436,9 @@
         CSD_U3_rect_c1: Tu je kód
         CSD_U3_rect_c2: Presuň tento blok do oblasti kódu.
       CSD U6 colorLeds intensity_callout:
-        CSDU6L10_rainbow: Add your code here
+        CSDU6L10_rainbow: Pridajte Váš kód sem
       CSD U6 colorLeds intensity_2018_callout:
-        CSDU6L10_rainbow: Add your code here
+        CSDU6L10_rainbow: Pridajte Váš kód sem
       CSD U6 colorLeds predict_callout: {}
       CSD U6 colorLeds predict_2018_callout: {}
       CSD U6 getProperty input_callout:
@@ -445,25 +446,25 @@
       CSD U6 getProperty input_2018_callout:
         CSD_U6L06P03: Add your block here.
       CSD U6 light show predict_callout:
-        CSDUDL03P09: What does this line do?
+        CSDUDL03P09: Čo robí tento riadok?
       CSD U6 light show predict_2018_callout:
-        CSDUDL03P09: What does this line do?
+        CSDUDL03P09: Čo robí tento riadok?
       CSD U6 light show_callout:
-        CSDUDL03P09: What does this line do?
+        CSDUDL03P09: Čo robí tento riadok?
       CSD U6 light show_2018_callout:
-        CSDUDL03P09: What does this line do?
+        CSDUDL03P09: Čo robí tento riadok?
       CSD U6 tugowar variables 1_callout:
-        CSD_U6_startGame: Define startGame here
+        CSD_U6_startGame: Definujte začiatokHry tu
       CSD U6 tugowar variables 1_2018_callout:
-        CSD_U6_startGame: Define startGame here
+        CSD_U6_startGame: Definujte začiatokHry tu
       CSD U6 tugowar variables 2_callout:
-        CSD_U6_movePlayer: Define movePlayer() here
+        CSD_U6_movePlayer: Definujte movePlayer() tu
       CSD U6 tugowar variables 2_2018_callout:
-        CSD_U6_movePlayer: Define movePlayer() here
+        CSD_U6_movePlayer: Definujte movePlayer() tu
       CSD U6 tugowar variables 3_callout:
-        CSD_U6_checkWin: Check if the player has won
+        CSD_U6_checkWin: Skontrolujte, či hráč vyhral
       CSD U6 tugowar variables 3_2018_callout:
-        CSD_U6_checkWin: Check if the player has won
+        CSD_U6_checkWin: Skontrolujte, či hráč vyhral
       CSDU4 - Design Mode - 3_callout: {}
       CSPU5_U3L16 - setPosition to fixed location_callout:
         firstTimeSetPosition: Drag this inside the event handler function. Then click
@@ -514,7 +515,8 @@
       Counting_callout:
         New Play Lab Project_callout1: Click the categories to see the blocks in your
           toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
+        New Play Lab Project_callout2: Kliknite na "Spusti" pre uloženie a spustenie
+          Vášho programu
         sign_in_to_save_project: Want to access your project later? Sign in to save
           this project to your account!
       Course 4 Artist 4_callout:
@@ -711,7 +713,7 @@
       MC HOC 2016 New Drop_callout: {}
       MC HOC 2016 New Spawn_callout: {}
       MC HOC 2016 New Walk_callout:
-        MC_HOC_2016_New_Walk_callout2: Hit "Run" to start moving.
+        MC_HOC_2016_New_Walk_callout2: Kliknite na "Spusti" pre začatie pohybu.
       MC_HOC_2017_01_Cole_callout:
         MC_HOC_2017_01_Cole_2: Pomocou klávesov so šípkami alebo kliknutím sem začnite
           posúvať hráča.
@@ -745,7 +747,8 @@
       Mike Playlab Project_callout:
         New Play Lab Project_callout1: Click the categories to see the blocks in your
           toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
+        New Play Lab Project_callout2: Kliknite na "Spusti" pre uloženie a spustenie
+          Vášho programu
         sign_in_to_save_project: Want to access your project later? Sign in to save
           this project to your account!
       Modular Arithmetic_callout: {}
@@ -786,7 +789,8 @@
       New Artist Project_callout:
         New Artist Project_callout1: Click the categories to see the blocks in your
           toolbox! Drag blocks to the workspace to add them to your program
-        New Artist Project_callout2: Hit "Run" to save and run your program
+        New Artist Project_callout2: Kliknite na "Spusti" pre uloženie a spustenie
+          Vášho programu
         sign_in_to_save_project: Want to access your project later? Sign in to save
           this project to your account!
       New Frozen Project_callout:
@@ -795,7 +799,8 @@
       New Play Lab Project_callout:
         New Play Lab Project_callout1: Click the categories to see the blocks in your
           toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
+        New Play Lab Project_callout2: Kliknite na "Spusti" pre uloženie a spustenie
+          Vášho programu
         sign_in_to_save_project: Want to access your project later? Sign in to save
           this project to your account!
       Ninjacat Demo B_callout:
@@ -830,14 +835,14 @@
       PDAlg Big Game Remix_callout: {}
       PDAlg Design Recipe Delete_callout: {}
       PS clone CSD U3 Variables Predict Where XY_callout:
-        grid: Click here to show the grid.
+        grid: Kliknite sem pre zobrazenie mriežky.
       PS copy - CSD U3 Variables Predict Where XY Embed_callout:
-        grid: Click here to show the grid.
+        grid: Kliknite sem pre zobrazenie mriežky.
       PS copy 2-3 Bee Conditionals 5_callout:
         Bee_Cond_5_1a: Fialové kvety môžu mať 1 alebo 0 nektárov... dozvieš sa to,
           až keď spustíš kód!
       PS copy CSD U3 Variables Predict Where XY_callout:
-        grid: Click here to show the grid.
+        grid: Kliknite sem pre zobrazenie mriežky.
       Pizza on a Plate_callout:
         4-5_Artist_Patterns_Free_Play_1: Všetky tvoje obľúbené bloky sú usporiadané
           do kategórií.  Klikni na tieto slová aby si videl, kam  všetko odišlo!
@@ -875,7 +880,8 @@
       Rock Paper Scissors_callout:
         New Play Lab Project_callout1: Click the categories to see the blocks in your
           toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
+        New Play Lab Project_callout2: Kliknite na "Spusti" pre uloženie a spustenie
+          Vášho programu
         sign_in_to_save_project: Want to access your project later? Sign in to save
           this project to your account!
       Rocket Height Course A_callout:
@@ -900,8 +906,8 @@
         goals_tab: drag goals out from here
       SG U3L2_TurtleSquare_right_callout: {}
       SGU3L2A Introducing Subgoals_callout:
-        goals_palette_show: Here is a list of subgoals
-        goals_workspace: Example of code with subgoals in it
+        goals_palette_show: Tu máte zoznam sekundárnych cieľov
+        goals_workspace: Príklad kódu obsahujúceho sekundárne ciele
       Sam the Butterfly 3_callout:
         Sam the Butterfly 3 1: Edit this function to keep Sam from going off the right
           side
@@ -909,7 +915,8 @@
       Test Play Lab Project With Walls_callout:
         New Play Lab Project_callout1: Click the categories to see the blocks in your
           toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
+        New Play Lab Project_callout2: Kliknite na "Spusti" pre uloženie a spustenie
+          Vášho programu
         sign_in_to_save_project: Want to access your project later? Sign in to save
           this project to your account!
       TestLab_callout: {}
@@ -954,11 +961,11 @@
       Underground Iron_2018_callout:
         craft_what_is_iron: Vyťaž toto železo!
       WebLab PS test - 1-12_callout:
-        version_history_button: Check out version history
+        version_history_button: Skontrolujte si históriu zmien
       WhileAdventure_callout:
         sample1_1: This will be an adventurer collecting coins, not a farmer digging.
       aE1_callout:
-        aE1_1: There will only be two of these and two turns
+        aE1_1: Budú len 2 takéto a 2 zatáčky
       aE2_callout:
         aE2_1: Still only two of these and two turns
       aE3_callout:
@@ -1088,6 +1095,7 @@
           them away.
         stone_block_2: Grey blocks are made of stone and cannot be thrown away.
       courseA_maze_ramp3a_2018_callout: {}
+      courseA_maze_ramp3b_2018_callout: {}
       courseA_maze_ramp4_2018_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many
           of these blocks you have left to use.
@@ -1095,9 +1103,9 @@
       courseA_maze_ramp5_2018_callout: {}
       courseA_maze_ramp5a_2018_callout: {}
       courseA_maze_seq1_callout:
-        courseA_maze_seq1_1: Click the lightbulb when you need a hint!
+        courseA_maze_seq1_1: Kliknite na žiarovku ak potrebujete nápovedu!
       courseA_maze_seq1_2018_callout:
-        courseA_maze_seq1_1: Click the lightbulb when you need a hint!
+        courseA_maze_seq1_1: Kliknite na žiarovku ak potrebujete nápovedu!
       courseA_maze_seq2_callout:
         courseA_maze_seqA_callout1: Use the step button to go step-by-step through
           the program. This will help you find the bug!
@@ -1105,11 +1113,11 @@
         courseA_maze_seqA_callout1: Use the step button to go step-by-step through
           the program. This will help you find the bug!
       courseA_maze_seq4_callout:
-        made_of_stone: These blocks are made of stone.  You can move them, but you
-          can't delete them!
+        made_of_stone: Tieto bloky sú z kameňa. Môžete ich presunúť, ale nemôžete
+          ich vymazať!
       courseA_maze_seq4_2018_callout:
-        made_of_stone: These blocks are made of stone.  You can move them, but you
-          can't delete them!
+        made_of_stone: Tieto bloky sú z kameňa. Môžete ich presunúť, ale nemôžete
+          ich vymazať!
       courseA_maze_seq4a_callout: {}
       courseA_playLab_events2_callout: {}
       courseA_playLab_events2_2018_callout: {}
@@ -1133,10 +1141,11 @@
           that you don't know what you are going to get until you hear it!
       courseA_toMakeLoopsVideo_Collector_callout: {}
       courseB_Scrat_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
-          start your program.
+        grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov, stlačte "Spustiť"
+          pre spustenie vášho programu.
       courseB_Scrat_ramp2_2018_callout: {}
       courseB_Scrat_ramp3a_2018_callout: {}
+      courseB_Scrat_ramp3b_2018_callout: {}
       courseB_Scrat_ramp4a_2018_callout: {}
       courseB_Scrat_ramp5a_2018_callout: {}
       courseB_artist_loops3_callout:
@@ -1158,9 +1167,9 @@
         courseB_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't
           worry, we will show you how to use them later in the stage.
       courseB_maze_seq1_callout:
-        courseB_maze_seq1: Click the lightbulb when you need a hint!
+        courseB_maze_seq1: Kliknite na žiarovku ak potrebujete nápovedu!
       courseB_maze_seq1_2018_callout:
-        courseB_maze_seq1: Click the lightbulb when you need a hint!
+        courseB_maze_seq1: Kliknite na žiarovku ak potrebujete nápovedu!
       courseB_maze_seq2_callout:
         courseB_maze_seq2_callout1: Use the step button to go step-by-step through
           the program. This will help you find the bug!
@@ -1232,20 +1241,19 @@
         courseC_harvester_loops1_callout1: The number four on the pumpkin tells you
           that there are four pumpkins available to pick.
       courseC_maze_debugging5_callout:
-        courseC_maze_debugging5_1: These blocks are locked and cannot be deleted!
+        courseC_maze_debugging5_1: Šedé bloky nemôžu byť vymazané!
       courseC_maze_debugging5_2018_callout:
-        courseC_maze_debugging5_1: These blocks are locked and cannot be deleted!
+        courseC_maze_debugging5_1: Tieto bloky sú zamknuté a nie je možné ich odstrániť!
       courseC_maze_loops2_callout:
-        courseC_maze_loops2_1: You only have one of these blocks available in this
-          puzzle.
+        courseC_maze_loops2_1: V tejto hre máte iba jeden takýto blok k dispozícií.
       courseC_maze_loops2_predict1_callout: {}
       courseC_maze_loops_challenge2_callout: {}
       courseC_maze_programming1_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
-          start your program.
+        grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov, stlačte "Spustiť"
+          pre spustenie vášho programu.
       courseC_maze_programming1_2018_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
-          start your program.
+        grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov, stlačte "Spustiť"
+          pre spustenie vášho programu.
       courseC_maze_programming2_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
           blocks to complete your puzzles.
@@ -1285,11 +1293,9 @@
       courseC_starWars_loops11_callout: {}
       courseC_starWars_loops11_2018_callout: {}
       courseC_starWars_loops2_callout:
-        courseC_starWars_loops2: You only have one of these blocks available in this
-          puzzle.
+        courseC_starWars_loops2: V tejto hre máte iba jeden takýto blok k dispozícií.
       courseC_starWars_loops2_2018_callout:
-        courseC_starWars_loops2: You only have one of these blocks available in this
-          puzzle.
+        courseC_starWars_loops2: V tejto hre máte iba jeden takýto blok k dispozícií.
       courseC_starWars_loops4_callout: {}
       courseC_starWars_loops4_2018_callout: {}
       courseC_starWars_loops5_callout: {}
@@ -1318,7 +1324,7 @@
       courseD_artist_nestedLoops_challenge2_callout: {}
       courseD_artist_nestedLoops_challenge2_2018_callout: {}
       courseD_artist_ramp11_callout:
-        courseD_artist_ramp11_1: You can change this number.
+        courseD_artist_ramp11_1: Toto číslo môžete zmeniť.
         courseD_artist_ramp11_2: Click here to type in the number of times to repeat
           your code.
       courseD_artist_ramp12_callout: {}
@@ -1373,11 +1379,11 @@
       courseD_harvester_nested_loops_challenge1-broken_callout: {}
       courseD_maze_loops_challenge1_callout: {}
       courseD_maze_ramp1_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
-          start your program.
+        grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov, stlačte "Spustiť"
+          pre spustenie vášho programu.
       courseD_maze_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
-          start your program.
+        grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov, stlačte "Spustiť"
+          pre spustenie vášho programu.
       courseD_maze_ramp2_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
           blocks to complete your puzzles.
@@ -1430,11 +1436,11 @@
       courseD_scrat_predict1_callout: {}
       courseD_scrat_predict1_2018_callout: {}
       courseD_scrat_ramp1_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
-          start your program.
+        grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov, stlačte "Spustiť"
+          pre spustenie vášho programu.
       courseD_scrat_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
-          start your program.
+        grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov, stlačte "Spustiť"
+          pre spustenie vášho programu.
       courseD_scrat_ramp2_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
           blocks to complete your puzzles.
@@ -1530,24 +1536,24 @@
       courseE_artist_predict1_2018_callout: {}
       courseE_artist_ramp10_callout: {}
       courseE_artist_ramp11_callout:
-        courseD_artist_ramp11_1: You can change this number.
+        courseD_artist_ramp11_1: Toto číslo môžete zmeniť.
         courseD_artist_ramp11_2: Click here to type in the number of times to repeat
           your code.
       courseE_artist_ramp12_callout: {}
       courseE_artist_ramp8_callout:
-        courseE_artist_ramp8_1: You can change this number.
+        courseE_artist_ramp8_1: Toto číslo môžete zmeniť.
         courseE_artist_ramp8_2: Click here to type in the number of times to repeat
           your code.
       courseE_artist_ramp8_2_callout:
-        courseE_artist_ramp8_1: You can change this number.
+        courseE_artist_ramp8_1: Toto číslo môžete zmeniť.
         courseE_artist_ramp8_2: Click here to type in the number of times to repeat
           your code.
       courseE_artist_ramp8_2018_callout:
-        courseE_artist_ramp8_1: You can change this number.
+        courseE_artist_ramp8_1: Toto číslo môžete zmeniť.
         courseE_artist_ramp8_2: Click here to type in the number of times to repeat
           your code.
       courseE_artist_ramp8_2_2018_callout:
-        courseE_artist_ramp8_1: You can change this number.
+        courseE_artist_ramp8_1: Toto číslo môžete zmeniť.
         courseE_artist_ramp8_2: Click here to type in the number of times to repeat
           your code.
       courseE_artist_ramp9_callout: {}
@@ -1619,12 +1625,12 @@
       courseE_maze_predict1_callout: {}
       courseE_maze_predict1_2018_callout: {}
       courseE_maze_ramp1_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
-          start your program.
+        grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov, stlačte "Spustiť"
+          pre spustenie vášho programu.
       courseE_maze_ramp13_callout: {}
       courseE_maze_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
-          start your program.
+        grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov, stlačte "Spustiť"
+          pre spustenie vášho programu.
       courseE_maze_ramp2_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
           blocks to complete your puzzles.
@@ -1721,11 +1727,11 @@
       courseF_artist_ramp10_callout: {}
       courseF_artist_ramp10_2018_callout: {}
       courseF_artist_ramp8_callout:
-        courseE_artist_ramp8_1: You can change this number.
+        courseE_artist_ramp8_1: Toto číslo môžete zmeniť.
         courseE_artist_ramp8_2: Click here to type in the number of times to repeat
           your code.
       courseF_artist_ramp8_2018_callout:
-        courseE_artist_ramp8_1: You can change this number.
+        courseE_artist_ramp8_1: Toto číslo môžete zmeniť.
         courseE_artist_ramp8_2: Click here to type in the number of times to repeat
           your code.
       courseF_artist_ramp9_callout: {}
@@ -1876,15 +1882,15 @@
       courseF_bee_variables_8_2018_callout: {}
       courseF_maze_predict1_callout: {}
       courseF_maze_ramp1_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
-          start your program.
+        grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov, stlačte "Spustiť"
+          pre spustenie vášho programu.
       courseF_maze_ramp13_callout: {}
       courseF_maze_ramp15_callout:
         courseF_maze_ramp7_1: This is your first challenge puzzle! These are meant
           to be hard and may take several tries.
       courseF_maze_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
-          start your program.
+        grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov, stlačte "Spustiť"
+          pre spustenie vášho programu.
       courseF_maze_ramp2_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
           blocks to complete your puzzles.
@@ -1911,7 +1917,8 @@
       courseF_playLab_func2_callout:
         New Play Lab Project_callout1: Click the categories to see the blocks in your
           toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
+        New Play Lab Project_callout2: Kliknite na "Spusti" pre uloženie a spustenie
+          Vášho programu
         sign_in_to_save_project: Want to access your project later? Sign in to save
           this project to your account!
       courseF_playlab_brokenText_callout:
@@ -2005,8 +2012,8 @@
         grade1_maze_sequence6_1: These grey blocks are made of stone!  That means
           that they can't be trashed.
       grade2_CaringForNewPet_0_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
-          start your program.
+        grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov, stlačte "Spustiť"
+          pre spustenie vášho programu.
       grade2_CaringForNewPet_1_callout:
         grade2_CaringForNewPet_1_1: This is the toolbox. It’s where you’ll find extra
           blocks to complete your puzzles.
@@ -2059,8 +2066,7 @@
       grade2_maze_intro8_callout: {}
       grade2_maze_intro9_callout: {}
       grade2_puppy_loops2_callout:
-        grade2_puppy_loops2_callout1: You only have one of these blocks available
-          in this puzzle.
+        grade2_puppy_loops2_callout1: V tejto hre máte iba jeden takýto blok k dispozícií.
       grade3_ConditionalsElse_2_callout:
         4_5_Bee_Conditionals_2_1: Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU.
           Nemusíš vôbec vyhľadávať včelie plásty.
@@ -2123,11 +2129,13 @@
       grade4_playLab_proj_example1_callout:
         New Play Lab Project_callout1: Click the categories to see the blocks in your
           toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
+        New Play Lab Project_callout2: Kliknite na "Spusti" pre uloženie a spustenie
+          Vášho programu
       grade4_playLab_proj_example2_callout:
         New Play Lab Project_callout1: Click the categories to see the blocks in your
           toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
+        New Play Lab Project_callout2: Kliknite na "Spusti" pre uloženie a spustenie
+          Vášho programu
         sign_in_to_save_project: Want to access your project later? Sign in to save
           this project to your account!
       grade4_playlab_test_callout: {}
@@ -2302,7 +2310,8 @@
       small_actors_playlab_projects_callout:
         New Play Lab Project_callout1: Click the categories to see the blocks in your
           toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
+        New Play Lab Project_callout2: Kliknite na "Spusti" pre uloženie a spustenie
+          Vášho programu
         sign_in_to_save_project: Want to access your project later? Sign in to save
           this project to your account!
       subgoal U3 L4 introducing subgoal labels_callout: {}

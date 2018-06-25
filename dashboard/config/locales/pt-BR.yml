@@ -1,4 +1,5 @@
-"pt-BR":
+---
+pt-BR:
   errors:
     messages:
       not_saved: 'Corrija os seguintes erros:'
@@ -97,6 +98,7 @@
     facebook: Facebook
     windowslive: Conta da Microsoft
     clever: Conta inteligente
+    powerschool: Powerschool Account
     forgot_password: Esqueceu sua senha?
     need_confirmation: Não recebeu as instruções de confirmação?
     need_unlock: Não recebeu as instruções de desbloqueio?
@@ -412,6 +414,7 @@
     email_confirm_needed_required: 'Seu endereço de e-mail %{email} não foi confirmado:'
     email_confirm_wrong_email: "(Endereço de e-mail errado?)"
     email_resend_confirm: Reenviar instruções de confirmação
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(deixe em branco se não quiser fazer alteração)"
     current_password_hint: "(precisamos de sua senha atual para confirmar suas alterações)"
     delete: Excluir sua conta

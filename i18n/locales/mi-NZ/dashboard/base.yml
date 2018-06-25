@@ -85,6 +85,7 @@ mi:
     facebook: 'Pukamata'
     windowslive: 'Pūkete Microsoft'
     clever: 'Clever Account'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Kua wareware i a koe tō kupuhipa?'
     need_confirmation: "Kāore koe i whiwhi ki ngā tohutohu whakaū?"
     need_unlock: "Kāore koe i whiwhi ki ngā tohutohu wetemaukati?"
@@ -359,6 +360,7 @@ mi:
     email_confirm_needed_required: 'Kāore anō tō wāhitau īmēra %{email} kia whakaūngia:'
     email_confirm_wrong_email: '(Wāhitau īmēra hē?)'
     email_resend_confirm: 'Tukuna anō ngā tohutohu whakaū'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(waiho kia wātea ki te kore koe e hiahia ki te panoni)"
     current_password_hint: '(me whiwhi mātou ki tō kupuhipa onāianei ki te whakaū i ō panonitanga)'
     delete: 'Mukua tō pūkete'

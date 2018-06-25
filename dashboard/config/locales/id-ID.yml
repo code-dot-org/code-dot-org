@@ -1,4 +1,5 @@
-"id":
+---
+id:
   errors:
     messages:
       not_saved: 'Mohon Perbaiki kesalahan berikut:'
@@ -96,6 +97,7 @@
     facebook: Facebook
     windowslive: Akun Microsoft
     clever: Akun pintar
+    powerschool: Powerschool Account
     forgot_password: Lupa kata sandi?
     need_confirmation: Tidak menerima instruksi konfirmasi?
     need_unlock: Tidak menerima instruksi untuk membuka?
@@ -410,6 +412,7 @@
     email_confirm_needed_required: 'Alamat email %{email} Anda belum dikonfirmasi:'
     email_confirm_wrong_email: "(Alamat email salah?)"
     email_resend_confirm: Kirim ulang petunjuk konfirmasi
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(Kosongkan jika Anda tidak ingin mengubahnya)"
     current_password_hint: "(kita perlu password Anda saat ini untuk mengkonfirmasi
       perubahan Anda)"

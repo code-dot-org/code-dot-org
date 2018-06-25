@@ -252,8 +252,6 @@ class ApiController < ApplicationController
     section = load_section
     script = load_script(section)
 
-    data = {}
-
     # Clients are seeing requests time out for large sections as we attempt to
     # send back all of this data. Allow them to instead request paginated data
     page = [params[:page].to_i, 1].max
@@ -268,17 +266,43 @@ class ApiController < ApplicationController
     end
 
     # Get the level progress for each student
-    paged_students.each do |student|
-      data[student.id] = user_progress_for_levels(script, student)
-    end
     render json: {
-      students: data,
+      students: script_progress_for_users(paged_students, script),
       pagination: {
         total_pages: paged_students.total_pages,
         page: page,
         per: per,
       }
     }
+  end
+
+  # Get level progress for a set of users within this script.
+  # @param [Enumerable<User>] users
+  # @param [Script] script
+  # @return [Hash]
+  # Example return value (where 1 and 2 are userIds and 135 and 136 are levelIds):
+  #   {
+  #     "1": {
+  #       "135": {"status": "perfect", "result": 100}
+  #       "136": {"status": "perfect", "result": 100}
+  #     },
+  #     "2": {
+  #       "135": {"status": "perfect", "result": 100}
+  #       "136": {"status": "perfect", "result": 100}
+  #     }
+  #   }
+  private def script_progress_for_users(users, script)
+    user_levels = User.user_levels_by_user_by_level(users, script)
+    paired_user_levels_by_user = PairedUserLevel.pairs_by_user(users)
+    users.inject({}) do |progress_by_user, user|
+      progress_by_user[user.id] = merge_user_progress_by_level(
+        script: script,
+        user: user,
+        user_levels_by_level: user_levels[user.id],
+        paired_user_levels: paired_user_levels_by_user[user.id]
+      )
+      progress_by_user
+    end
   end
 
   def student_progress
@@ -406,7 +430,7 @@ class ApiController < ApplicationController
   # Each such array contains an array of individual level results, matching the order of the LevelGroup's
   # levels.  For each level, the student's answer content is in :student_result, and its correctness
   # is in :correct.
-  # TODO(caleybrock): remove once the assessments tab is in react
+  # TODO(caleybrock): remove this and its tests once the assessments tab is in react
   def section_assessments
     section = load_section
     script = load_script(section)

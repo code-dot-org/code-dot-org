@@ -1,4 +1,5 @@
-"ky":
+---
+ky:
   data:
     game:
       name:
@@ -35,7 +36,7 @@
         StudioEC: Play Lab
         Applab: App Lab
         NetSim: Internet Simulator
-        Custom: Artist
+        Custom: Сүрөтчү
         CustomStudio: Play Lab
         Gamelab: Game Lab
     trophy:
@@ -748,7 +749,7 @@
         CSF_skinOverview_Harvester: The Harvester
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
-        CSF_bb8_loops_C-F: Loops with BB-8
+        CSF_bb8_loops_C-F: BB-8 менен циклдар
         CSF_harvester_skinOverview_K-1: The Harvester
         CSF_harvester_loops_K1: Loops in Harvester
         CSF_scrat_loops_K1: Loops in Ice Age
@@ -757,6 +758,9 @@
         CSF_ifelse_allskins: Using If/Else Blocks
         CSF_ifelseifelse_allskins: Using If/ElseIf/Else Blocks
         CSF_loops_AB: Циклдер
+        csd_gamelab_booleans: Boolean Expressions
+        csd_gamelab_conditional_statements: Conditional Statements
+        csd_gamelab_if_else: If/Else Statements
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

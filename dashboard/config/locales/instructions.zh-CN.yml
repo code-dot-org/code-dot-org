@@ -1,4 +1,5 @@
-"zh-CN":
+---
+zh-CN:
   data:
     instructions:
       2-3 Artist 1 new_instruction: 您好，我是一个艺术家。你写的代码可以让我画任何的东西。 用几个程序模块来让我画一些灰色线条吧。
@@ -2835,6 +2836,33 @@
       D_Frozen_nested8_instruction: 在一个圆圈内旋转该形状大约5或6次。
       D_Frozen_nested9_instruction: "试着改动一下你所创造的东西。画任何你喜欢的东西! \r\n- 如果你在台阶上使用两个不同的角度,
         会发生什么？\r\n- 如果你把你的钻石图案变长或变短, 会发生什么？\r\n- 如果把两片雪花叠起来是什么样的？"
+      Dance Party 1-validated_instruction: 'What do you think will happen when you
+        click on the alien?  '
+      Dance Party 2_instruction: Change the behavior inside the `___ begins ___` block
+        to make the alien start spinning around.
+      Dance Party 3 - Validated_instruction: 'Create a new sprite called `alien2`,
+        then make it do a different dance move when it''s clicked.  '
+      Dance Party 3_instruction: 'Create a new sprite called `alien2`, then make it
+        do a different dance move when it''s clicked.  '
+      Dance Party 4 Validated_instruction: 'Create a third sprite called `alien3`
+        and get all of your aliens to stand in a line. '
+      Dance Party 4_instruction: 'Create a third sprite called `alien3` and get all
+        of your aliens to stand in a line. '
+      Dance Party 5 - Validated_instruction: Add code to change the color of each
+        alien when it gets clicked.
+      Dance Party 5_instruction: Add code to change the color of each alien when it
+        gets clicked.
+      Dance Party 6 - Validated_instruction: Use the `stops everything` block to make
+        each alien stop moving when it is clicked.
+      Dance Party 6_instruction: Use the `stops everything` block to make each alien
+        stop moving when it is clicked.
+      Dance Party 7 - Validated_instruction: Add a new bell sprite called `myBell`
+        that makes all the aliens start doing the same dance move when it's clicked.
+      Dance Party 7_instruction: Add a new bell sprite called `myBell` that makes
+        all the aliens start doing the same dance move when it's clicked.
+      Dance Party Freeplay_instruction: Now create your own alien disco!
+      Dance Party Predict_instruction: 'What do you think will happen when you click
+        on the alien?  '
       ECSPD Binary Odometer_instruction: |-
         This is another resource you could use
         with your students.
@@ -3097,6 +3125,15 @@
         to move the button itself to a random location when it's clicked.
       Find the Wizard_instruction: 随便创造一个东西。这是一个猜数游戏的例子！
       Find the Wizard_2018_instruction: 创建任何想象的东西。这是一个猜数游戏的例子 ！
+      Fish Tank 2-validated_instruction: Change Dusty (the tumbleweed) to a fish.
+      Fish Tank 3-validated_instruction: Change the fish's behavior so that it swims
+        around the tank.
+      Fish Tank 4-validated_instruction: Use the `set background color` block to make
+        the background blue.
+      Fish Tank 5-validated_instruction: 鱼有些孤单。在鱼缸内创造一个新的精灵。
+      Fish Tank 6-validated_instruction: Add a behavior to the fish's new friend.
+      Fish Tank 7-validated_instruction: Use some new blocks from the toolbox to make
+        your fish tank special!
       Food Fight!_instruction: "我们已为你添加了上一关的函数。\r\n\r\n用“如果”模块来编写你的游戏，当play_score(玩家分数)
         大于某个值时，调用level_up(升级) 函数。\r\n\r\n例如：“play_score” > 6\r\n\r\n玩游戏，并且达到第3级来到达下一关。 "
       Food Fight_instruction: |-
@@ -3143,6 +3180,7 @@
         Uh oh, I lost my map and can't remember what I planted.
         Every sprout could grow up to be corn, beans, or pumpkins. Can you write some
         code to pick all the crops, no matter what they are?
+      HoCAB_labyrinth1_instruction: Use the arrow blocks to solve this maze!
       Infinity_catch_instruction: 你能用方向键让爱莎（演员2）追上安娜吗？
       Infinity_finale_instruction: 创建并分享你想的任何东西！
       Infinity_move_collide_instruction: 阿宽是演员1。让他向右走到大白那里，当他们碰到一起时播放声音。
@@ -6190,6 +6228,7 @@
         Design Mode. (Click for full instructions.)
       U4 vigenere cipher 2_instruction: 说明
       U4L02 - Objects - Template1_instruction: 模板
+      U4L02 - Objects - Template1_2018_instruction: 模板
       U4L02 - Objects - createObject_instruction: "Create an object with at least\n5
         values including at least one string and one number. (Click to see full\ninstructions) "
       U4L02 - Objects - eventParameter_instruction: |-
@@ -6295,6 +6334,21 @@
       Valentine_playlab_01_instruction: '编辑程序让Kiki（演员1）在左右箭头被按下的时候向左和向右移动。当Kiki被点击时,
         她应该把心投向她的朋友们。 '
       Vigenere_instruction: Test
+      Virtual Pet 1_instruction: What do you think will happen if you press "Run"
+        and then click on her?
+      Virtual Pet 2_instruction: Create an **event** so that when Geraldine touches
+        the puddle, her color changes to brown.
+      Virtual Pet 3_instruction: Add a new soap sprite to the screen.  Can you make
+        it so that when the giraffe and the soap touch, the giraffe goes back to its
+        normal color?
+      Virtual Pet 4_instruction: Add a behavior to your soap to make it draggable,
+        then drag it over to clean the giraffe!
+      Virtual Pet 5_instruction: Add actions to each event so that when the giraffe
+        collides with each sprite, it shrinks by 5.
+      Virtual Pet 6_instruction: Add an apple that returns the giraffe back to regular
+        size when they touch.
+      Virtual Pet Freeplay_instruction: 'Freeplay: What more can you make your giraffe
+        do? '
       WhileAdventure_instruction: |-
         Our adventurer wants to collect coins. Can you
         help her grab as many as she can using only one remove 1 block?
@@ -6694,6 +6748,8 @@
       courseA_maze_ramp2a_2018_instruction: 将所有模块接到一起来完成你的代码，然后点击"运行"。
       courseA_maze_ramp3_2018_instruction: 有一个额外的块将导致鸟坠落。将其拖回工具箱中扔掉它。
       courseA_maze_ramp3a_2018_instruction: 在其它模块下面添加一个`向北`模块来完成代码，然后点击"运行"。
+      courseA_maze_ramp3b_2018_instruction: Add a `North` block to the bottom of the
+        other blocks to finish this code, then click "Run".
       courseA_maze_ramp4_2018_instruction: 躲开TNT炸药，否则羽毛会被炸飞！
       courseA_maze_ramp4a_2018_instruction: 你能想出要在这些模块下面增加什么模块来完成这段代码吗？
       courseA_maze_ramp5_2018_instruction: 躲开TNT炸药！
@@ -6761,6 +6817,8 @@
       courseB_Scrat_ramp1_2018_instruction: 在这一关中，将所有模块拼到一起，并点击"运行"！
       courseB_Scrat_ramp2_2018_instruction: 将所有模块接到一起来完成你的代码，然后点击"运行"。
       courseB_Scrat_ramp3a_2018_instruction: 在其它模块下面添加一个`向北`模块来完成代码，然后点击"运行"。
+      courseB_Scrat_ramp3b_2018_instruction: "Drag the extra block back to the toolbox
+        to throw it away.\n\n"
       courseB_Scrat_ramp4a_2018_instruction: 你能想出要在这些模块下面增加什么模块来完成这段代码吗？
       courseB_Scrat_ramp5a_2018_instruction: 帮小鸟到达那只猪！
       courseB_artist_loops1_instruction: 这是一种叫"小艺术家" 的新类型关卡。试试各关卡并画些有趣的东西。

@@ -917,7 +917,7 @@
   "shareSettingDisableDialogNote": "Note that students will still be able to share projects created using the programming tools designed for younger students like Play Lab and Artist. These tools limit what students can create and do not allow for uploading any of their own assets. To protect students’ privacy, shared creations in the project gallery are labeled only with the first letter of a student’s name and an age range.",
   "shareWarningsAge": "Please provide your age below and click OK to continue.",
   "shareWarningsMoreInfo": "Повеќе информации",
-  "shareWarningsStoreData": "This app built on Code Studio stores data that could be viewed by anyone with this sharing link, so be careful if you are asked to provide personal information.",
+  "shareWarningsStoreData": "This app built on Code Studio stores data that could be viewed by anyone with this sharing link, so avoid providing personal information about yourself or others.",
   "sharingAgePrompt": "Please select an age.",
   "sharingBlockedByTeacher": "Sorry, you do not have permissions to share this project. If you want to be able to share your project, please ask your teacher to enable sharing of advanced projects for your section from the 'Manage students' tab in their dashboard.",
   "show": "Show",

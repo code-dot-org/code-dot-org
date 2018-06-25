@@ -25,9 +25,9 @@ uk:
           assignment_family_title: Computer Science Discoveries
           title: Computer Science Discoveries ('18-'19)
           version_title: "'18-'19"
-          description_short: The 2018-2019 version of the CS Discoveries course.
-          description_student: ''
-          description_teacher: ''
+          description_short: An introductory computer science course that empowers students to create authentic artifacts.
+          description_student: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
+          description_teacher: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
         csp-2018:
           assignment_family_title: Computer Science Principles
           title: Computer Science Principles ('18-'19)

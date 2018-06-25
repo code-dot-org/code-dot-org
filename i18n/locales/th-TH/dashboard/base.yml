@@ -85,6 +85,7 @@ th:
     facebook: 'เฟซบุค'
     windowslive: 'บัญชี Microsoft'
     clever: 'Clever Account'
+    powerschool: 'Powerschool Account'
     forgot_password: 'ลืมรหัสผ่าน?'
     need_confirmation: "ไม่ได้รับการยืนยันคำแนะนำ?"
     need_unlock: "ไม่ได้รับคำแนะนำในการปลดล็อค?"
@@ -264,15 +265,15 @@ th:
         artist: 'วาดอะไรสักอย่างสิ'
         calculate: 'Calculate something'
         applab: 'สร้างแอพ "ห้องทดลองแอพ"'
-        gamelab: 'Make a Game Lab project'
-        weblab: 'Make a Web Lab (beta) project'
+        gamelab: 'สร้างโปรเจคเกมแลป'
+        weblab: 'สร้างโปรเจคเว็บแลป (เบต้า)'
       home: "Home"
       my_dashboard: "My Dashboard"
       courses: "คอร์ส"
       course_catalog: "Course Catalog"
       project_gallery: "Projects"
       sections: "Sections"
-      help_support: "Help and support"
+      help_support: "การช่วยเหลือและสนับสนุน"
       report_bug: "Report bug"
       teacher_community: "Teacher community"
       professional_learning: "Professional Learning"
@@ -300,7 +301,7 @@ th:
       about_faqs: "FAQs"
       learn: "Learn"
       stats: "สถิติ"
-      help_us: "Help Us"
+      help_us: "ช่วยเรา"
       teach: "Teach"
       about: "About"
     user:
@@ -359,6 +360,7 @@ th:
     email_confirm_needed_required: 'อีเมล์ %{email} ของคุณยังไม่ได้รับการยืนยัน：'
     email_confirm_wrong_email: '(อีเมล์ไม่ถูกต้องหรือเปล่า?)'
     email_resend_confirm: 'ส่งคำแนะนำการยืนยันตัวอีกครั้ง'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(ปล่อยว่างไว้ถ้าคุณไม่ต้องการเปลี่ยน)"
     current_password_hint: '(we need your current password to confirm your changes)'
     delete: 'Delete Account'
@@ -499,7 +501,7 @@ th:
     how_it_works: 'มันทำงานได้อย่างไร'
     try_hour_of_code: 'Try an Hour of Code!'
   reference_area:
-    title: 'ต้องการความช่วยเหลือเหรอ?'
+    title: 'ต้องการความช่วยเหลือ?'
     subtitle: 'ดูวิดีโอและคำใบ้พวกนี้'
     teacher: 'ดูทางเลือก'
     teacher_no_solution: 'Stop seeing solution'
@@ -508,11 +510,11 @@ th:
     direction: 'Start Direction (in degrees)'
   video:
     tab: 'วิดีโอ'
-    notes: 'ไม่มีวิดีโอเหรอ? แสดงบันทึกย่อแทนซิ'
+    notes: 'ไม่มีวิดีโอหรือ? อ่านบันทึกย่อแทนก็ได้นะ'
     notes_coming_soon: 'เร็ว ๆ นี้จะมีบันทึกย่อสำหรับวิดีโอนี้'
     autoplay_option: 'วิดีโอเริ่มเล่นอัตโนมัติ'
     download: 'ดาวน์โหลดวิดีโอ'
-    show_notes: 'Show Notes'
+    show_notes: 'แสดงเป็นข้อความ'
     show_video: 'Show Video'
   compatibility:
     upgrade:
@@ -536,7 +538,7 @@ th:
     title: "Click 'Run' to see my program in action"
     bounce_og_title: "Check out my Bounce Game"
     flappy_og_title: "Check out my Flappy Game"
-    studio_og_title: "Check out my Play Lab App"
+    studio_og_title: "มาลองแอปเพลย์แลป ของฉัน"
     check_out_what_i_made: "Check out what I made"
     og_description: "I wrote the code myself with Code.org"
     phone_number_not_allowed: "It looks like there is a phone number in it. Try changing the text."
@@ -595,14 +597,14 @@ th:
     starwars:
       title: "Star Wars"
     infinity:
-      title: "Infinity Play Lab"
+      title: "เรื่องราวและเกม"
       body: "Use Play Lab to create a story or game starring Disney Infinity characters."
     minecraft:
       title: "Minecraft"
       body: "Explore a Minecraft world through code."
     minecraft2016:
       title: "Minecraft"
-      body: "เขียนโปรแกรมให้กับบรรดาเหล่าสัตว์ต่างๆและตัวละครอื่นๆเพื่อสร้างเกม Minecraft ในแบบฉบับของคุณเอง"
+      body: "เขียนโปรแกรมให้กับบรรดาเหล่าสัตว์ต่างๆและนักแสดงอื่นๆเพื่อสร้างเกม Minecraft ในแบบฉบับของคุณเอง"
     hero:
       title: "Minecraft"
       body: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
@@ -636,7 +638,7 @@ th:
     caption_by_name_age: "by %{name}, age %{age}"
     caption_time_ago: "%{time_ago} ago"
     header: "แกลเลอรี่"
-    header_playlab: "Stories and games"
+    header_playlab: "เรื่องราวและเกม"
     header_artist: "ศิลปิน"
     report_abuse: "รายงานการละเมิด"
   landing:
@@ -646,14 +648,14 @@ th:
     support: "Get Help"
     support_url: "//support.code.org"
     help_resources: "Help and Resources"
-    help_support: "Help and support"
+    help_support: "การช่วยเหลือและสนับสนุน"
     documentation: "Documentation"
     tutorials: "Tutorials"
   multi:
     wrong_title: "Incorrect answer"
-    wrong_body: "The answer you've entered is not correct.  Please try again!"
+    wrong_body: "คำตอบที่คุณเลือก ไม่ถูกต้อง โปรดลองใหม่อีกครั้ง!"
     correct_title: "Correct"
-    correct_body: "That is the correct answer."
+    correct_body: "เป็นคำตอบที่ถูกต้อง"
     toofew_title: "Too few answers."
     toofew_body: "Please select two answers before submitting."
   multi-submittable:
@@ -682,10 +684,10 @@ th:
     submit-complete-title: "Submit your assessment"
     submit-complete-body: "You cannot edit your assessment after submitting it.  Are you sure?"
   match:
-    wrong_title: "Incorrect solution"
-    wrong_body: "The solution you've entered is not correct.  Please try again!"
+    wrong_title: "คำตอบไม่ถูกต้อง"
+    wrong_body: "โซลูชันที่คุณใส่ไม่ถูกต้อง กรุณาลองอีกครั้ง"
     correct_title: "Correct"
-    correct_body: "That is the correct answer."
+    correct_body: "เป็นคำตอบที่ถูกต้อง"
   contract_match:
     wrong_title: "Incorrect answer"
     badname: "Your contract has the wrong name."
@@ -699,7 +701,7 @@ th:
     open_response_title: "Thanks"
     open_response_body: "Thanks for your response!"
     correct_title: "Correct"
-    correct_body: "That is the correct answer."
+    correct_body: "เป็นคำตอบที่ถูกต้อง"
   dialog:
     ok: "ตกลง"
     startover_title: "คุณจะเริ่มต้นใหม่จริงๆหรือ ?"
@@ -771,8 +773,8 @@ th:
     projects: "Projects"
     create: "Create Project"
     create_a_project: 'Create a new project:'
-    new: "Create New"
-    rename: "Rename"
+    new: "สร้างใหม่"
+    rename: "ตั้งชื่อใหม่"
     save: "บันทึก"
     delete: "ลบ"
     import: "Import"
@@ -781,10 +783,10 @@ th:
     share_link_import_error_header: "Something went wrong."
     share_link_import_error_body: "There was a problem importing that share link. Please try again."
     exit: "Return to Course"
-    my_projects: "My Projects"
+    my_projects: "โปรเจคของฉัน"
     project_gallery: "Projects"
-    publish: "Publish"
-    unpublish: "Unpublish"
+    publish: "เผยแพร่"
+    unpublish: "ไม่เผยแพร่"
     share: "แบ่งปัน"
     share_title: Share your project
     share_copy_link: "Copy the link:"
@@ -809,8 +811,8 @@ th:
     cancel: 'ยกเลิก'
     delete_confirm_title: Are you sure you want to delete this project?
     delete_confirm_text: "Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project."
-    view_all: 'View My Projects'
-    remix: 'Remix'
+    view_all: 'ดูโปรเจคของฉัน'
+    remix: 'รีมิกซ์'
     click_to_remix: "Click \"Remix\" to spin-off your own version!"
     edit_project: 'Edit Project'
     sharing_disabled: "Sorry, this project is not available for sharing. If this is your project or the project of one of your students, please <a href='https://studio.code.org/users/sign_in'>sign in</a> to your account to view the project."

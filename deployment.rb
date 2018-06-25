@@ -71,7 +71,7 @@ def load_configuration
     'newrelic_logging'            => rack_env == :production,
     'netsim_max_routers'          => 20,
     'netsim_shard_expiry_seconds' => 7200,
-    'partners'                    => %w(br italia ro sg tr uk za),
+    'partners'                    => %w(),
     'pdf_port_collate'            => 8081,
     'pdf_port_markdown'           => 8081,
     'pegasus_db_name'             => rack_env == :production ? 'pegasus' : "pegasus_#{rack_env}",
@@ -241,6 +241,14 @@ class CDOImpl < OpenStruct
 
   def advocacy_url(path = '', scheme = '')
     site_url('advocacy.code.org', path, scheme)
+  end
+
+  CURRICULUM_LANGUAGES = Set['/es-mx', '/it-it', '/th-th']
+
+  def curriculum_url(locale, path = '')
+    locale = '/' + locale.downcase.to_s
+    locale = nil unless CURRICULUM_LANGUAGES.include? locale
+    "https://curriculum.code.org#{locale}/#{path}"
   end
 
   def default_scheme

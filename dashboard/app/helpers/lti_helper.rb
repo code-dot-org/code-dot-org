@@ -88,7 +88,12 @@ module LtiHelper
           return
         end
 
-        user = User.where(provider: pvd_id, uid: uid).first_or_create
+        authentication_option = AuthenticationOption.find_by(
+          credential_type: pvd_id,
+          authentication_id: uid
+        )
+        user = authentication_option&.user
+        user ||= User.where(provider: pvd_id, uid: uid).first_or_create
         if user.new_record?
           user.provider  = pvd_id
           user.uid       = uid

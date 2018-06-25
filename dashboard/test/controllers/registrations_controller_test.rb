@@ -21,6 +21,127 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "update: returns bad_request if user param is nil" do
+    student = create(:student)
+    sign_in student
+
+    put :update, params: {}
+    assert_response :bad_request
+  end
+
+  test "update: returns bad_request if user_type param is present" do
+    student = create(:student)
+    sign_in student
+
+    put :update, params: {user: {user_type: 'student'}}
+    assert_response :bad_request
+  end
+
+  test "update: returns bad_request if email param is present" do
+    student = create(:student)
+    sign_in student
+
+    put :update, params: {user: {email: 'example@email.com'}}
+    assert_response :bad_request
+  end
+
+  test "update: returns bad_request if hashed_email param is present" do
+    student = create(:student)
+    sign_in student
+
+    put :update, params: {user: {hashed_email: 'abcdef'}}
+    assert_response :bad_request
+  end
+
+  test "update: does not update user password if user cannot edit password" do
+    teacher = create(:teacher, :with_migrated_email_authentication_option, password: 'mypassword')
+    sign_in teacher
+
+    User.any_instance.stubs(:can_edit_password?).returns(false)
+
+    put :update, params: {user: {current_password: 'notmypassword', password: 'newpassword', password_confirmation: 'newpassword'}}
+    teacher.reload
+    assert_response :success
+    assert_template :edit
+    assert teacher.valid_password?('mypassword')
+  end
+
+  test "update: does not update user password if password is incorrect" do
+    teacher = create(:teacher, :with_migrated_email_authentication_option, password: 'mypassword')
+    sign_in teacher
+
+    put :update, params: {user: {current_password: 'notmypassword', password: 'newpassword', password_confirmation: 'newpassword'}}
+    teacher.reload
+    assert_response :success
+    assert_template :edit
+    assert teacher.valid_password?('mypassword')
+  end
+
+  test "update: does not update user with a new password without current_password param" do
+    user = create :user, email: 'example@email.com', password: 'mypassword'
+    sign_in user
+
+    put :update, params: {user: {password: 'newpassword', password_confirmation: 'newpassword'}}
+    user.reload
+    assert_response :success
+    assert_template :edit
+    assert user.valid_password?('mypassword')
+  end
+
+  test "update: updates user password if password is correct" do
+    teacher = create(:teacher, :with_migrated_email_authentication_option, password: 'mypassword')
+    sign_in teacher
+
+    put :update, params: {user: {current_password: 'mypassword', password: 'newpassword', password_confirmation: 'newpassword'}}
+    teacher.reload
+    assert_response :redirect
+    assert teacher.valid_password?('newpassword')
+  end
+
+  test "update: teacher without a password can add a password" do
+    teacher = create :teacher, :with_migrated_google_authentication_option, encrypted_password: nil
+    teacher.update_attribute(:password, nil)
+    sign_in teacher
+
+    put :update, params: {user: {password: 'mypassword', password_confirmation: 'mypassword'}}
+    teacher.reload
+    assert_response :redirect
+    assert teacher.valid_password?('mypassword')
+  end
+
+  test "update: student without a password can add a password" do
+    student = create :student, :with_migrated_google_authentication_option, encrypted_password: nil
+    student.update_attribute(:password, nil)
+    sign_in student
+
+    put :update, params: {user: {password: 'mypassword', password_confirmation: 'mypassword'}}
+    student.reload
+    assert_response :redirect
+    assert student.valid_password?('mypassword')
+  end
+
+  test "update: updates user info if password is not required" do
+    student = create(:student)
+    sign_in student
+
+    put :update, params: {
+      user: {
+        name: 'New Name',
+        username: 'newusername',
+        gender: 'f',
+        age: 12,
+        school: 'My School',
+      }
+    }
+    student.reload
+    assert_response :redirect
+    assert_equal 'New Name', student.name
+    assert_equal 'newusername', student.username
+    assert_equal 'f', student.gender
+    assert_equal 12, student.age
+    assert_equal 'My School', student.school
+  end
+
   test "teachers go to specified return to url after signing up" do
     session[:user_return_to] = user_return_to = '//test.code.org/the-return-to-url'
 
@@ -328,5 +449,151 @@ class RegistrationsControllerTest < ActionController::TestCase
     get :edit
     assert_response :success
     assert_select '#user_name', 1
+  end
+
+  test "set_email: returns bad_request if user param is nil" do
+    student = create(:student)
+    sign_in student
+
+    patch :set_email, params: {}
+    assert_response :bad_request
+  end
+
+  test "set_email: returns 422 for migrated user with password if user cannot edit password" do
+    teacher = create(:teacher, :with_migrated_email_authentication_option)
+    sign_in teacher
+
+    User.any_instance.stubs(:can_edit_password?).returns(false)
+
+    patch :set_email, params: {user: {password: 'newpassword'}}
+    assert_response :unprocessable_entity
+  end
+
+  test "set_email: returns 422 for migrated user with email if user cannot edit email" do
+    teacher = create(:teacher, :with_migrated_email_authentication_option)
+    sign_in teacher
+
+    User.any_instance.stubs(:can_edit_email?).returns(false)
+
+    patch :set_email, params: {user: {email: 'new@email.com'}}
+    assert_response :unprocessable_entity
+  end
+
+  test "set_email: returns 422 for migrated user with hashed email if user cannot edit email" do
+    teacher = create(:teacher, :with_migrated_email_authentication_option)
+    sign_in teacher
+
+    User.any_instance.stubs(:can_edit_email?).returns(false)
+
+    patch :set_email, params: {user: {hashed_email: 'some-hash'}}
+    assert_response :unprocessable_entity
+  end
+
+  test "set_email: returns 422 for migrated user if password is incorrect" do
+    teacher = create(:teacher, :with_migrated_email_authentication_option, password: 'mypassword')
+    sign_in teacher
+
+    patch :set_email, params: {user: {email: 'example@email.com', current_password: 'notmypassword'}}
+    assert_response :unprocessable_entity
+  end
+
+  test "set_email: updates email for migrated teacher if password is correct" do
+    teacher = create(:teacher, :with_migrated_email_authentication_option, password: 'mypassword')
+    sign_in teacher
+
+    patch :set_email, params: {user: {email: 'new@email.com', current_password: 'mypassword'}}
+    teacher.reload
+    assert_response :success
+    assert_equal 'new@email.com', teacher.email
+  end
+
+  test "set_email: updates email for migrated student if password is correct" do
+    student = create(:student, :with_migrated_email_authentication_option, password: 'mypassword')
+    sign_in student
+
+    patch :set_email, params: {user: {email: 'new@email.com', current_password: 'mypassword'}}
+    student.reload
+    assert_response :success
+    assert_equal User.hash_email('new@email.com'), student.hashed_email
+  end
+
+  test "set_email: updates email for migrated teacher without password if password is not required" do
+    teacher = create(:teacher, :with_migrated_email_authentication_option, encrypted_password: '')
+    sign_in teacher
+
+    patch :set_email, params: {user: {email: 'new@email.com'}}
+    teacher.reload
+    assert_response :success
+    assert_equal 'new@email.com', teacher.email
+  end
+
+  test "set_email: updates email for migrated student without password if password is not required" do
+    student = create(:student, :with_migrated_email_authentication_option, encrypted_password: '')
+    sign_in student
+
+    hashed_new_email = User.hash_email('new@email.com')
+    patch :set_email, params: {user: {hashed_email: hashed_new_email}}
+    student.reload
+    assert_response :success
+    assert_equal hashed_new_email, student.hashed_email
+  end
+
+  test "set_email: updates email for migrated student with plaintext email param if provided" do
+    student = create(:student, :with_migrated_email_authentication_option, encrypted_password: '')
+    sign_in student
+
+    hashed_other_email = User.hash_email('second@email.com')
+    patch :set_email, params: {user: {email: 'first@email.com', hashed_email: hashed_other_email}}
+    student.reload
+    assert_response :success
+    assert_equal User.hash_email('first@email.com'), student.hashed_email
+  end
+
+  test "set_email: returns 422 for non-migrated user with password if user cannot edit password" do
+    teacher = create(:teacher, :with_email_authentication_option)
+    sign_in teacher
+
+    User.any_instance.stubs(:can_edit_password?).returns(false)
+
+    patch :set_email, params: {user: {password: 'newpassword'}}
+    assert_response :unprocessable_entity
+  end
+
+  test "set_email: returns 422 for non-migrated user with email if user cannot edit email" do
+    teacher = create(:teacher, :with_email_authentication_option)
+    sign_in teacher
+
+    User.any_instance.stubs(:can_edit_email?).returns(false)
+
+    patch :set_email, params: {user: {email: 'new@email.com'}}
+    assert_response :unprocessable_entity
+  end
+
+  test "set_email: returns 422 for non-migrated user with hashed email if user cannot edit email" do
+    teacher = create(:teacher, :with_email_authentication_option)
+    sign_in teacher
+
+    User.any_instance.stubs(:can_edit_email?).returns(false)
+
+    patch :set_email, params: {user: {hashed_email: 'some-hash'}}
+    assert_response :unprocessable_entity
+  end
+
+  test "set_email: returns 422 for non-migrated user if password is incorrect" do
+    teacher = create(:teacher, :with_email_authentication_option, password: 'mypassword')
+    sign_in teacher
+
+    patch :set_email, params: {user: {email: 'example@email.com', current_password: 'notmypassword'}}
+    assert_response :unprocessable_entity
+  end
+
+  test "set_email: updates email for non-migrated user if password is correct" do
+    teacher = create :teacher, :with_email_authentication_option, password: 'mypassword'
+    sign_in teacher
+
+    patch :set_email, params: {user: {email: 'new@email.com', current_password: 'mypassword'}}
+    teacher.reload
+    assert_response :success
+    assert_equal 'new@email.com', teacher.email
   end
 end

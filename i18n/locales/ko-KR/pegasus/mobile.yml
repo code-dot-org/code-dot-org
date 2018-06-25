@@ -365,7 +365,7 @@
   homepage_header_donors: "Code.org는 후원자 여러분에게 감사의 인사를 드립니다."
   homepage_donors_seall: "모두 보기"
   homepage_donors_donate: "기부하기"
-  homepage_below_hero_announcement_text: "We care about your privacy and are making some updates to our privacy policy, effective May 25."
+  homepage_below_hero_announcement_text: "당사는 귀하의 개인 정보를 관리하며 당사의 업데이트된 개인 정보 보호 정책은 5월 25일에 발효됩니다."
   homepage_below_hero_announcement_link_text: "더 알아보기"
   contact_form_topic_student: "학생입니다."
   contact_form_topic_parent: "부모입니다."
@@ -537,7 +537,7 @@
   volunteer_engineer_submission_field_email: "이메일"
   volunteer_engineer_submission_field_email_desc: "여러분의 이메일 주소는 절대 공유되지 않을 것입니다. 그러나 우리는 선생님들의 요청을 여러분들께 전달할 것입니다."
   volunteer_engineer_submission_field_email_placeholder: "이메일"
-  volunteer_engineer_submission_field_email_preference: "Can we email you about updates to our courses, volunteer opportunities, or other computer science news?"
+  volunteer_engineer_submission_field_email_preference: "당사의 코스, 현지 기회, 또는 다른 컴퓨터 과학 뉴스 업데이트에 관한 이메일을 귀하께 보내드려도 되겠습니까?"
   volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy policy)"
   volunteer_engineer_submission_field_email_preference_yes: '예'
   volunteer_engineer_submission_field_email_preference_no: '아니요'
@@ -931,9 +931,25 @@
   coursee_name: "과정 E"
   coursef-draft_name: 과정 F
   coursef_name: "과정 F"
+  coursea-2017_name: Course A (2017)
+  courseb-2017_name: Course B (2017)
+  coursec-2017_name: Course C (2017)
+  coursed-2017_name: Course D (2017)
+  coursee-2017_name: Course E (2017)
+  coursef-2017_name: Course F (2017)
+  coursea-2018_name: Course A (2018)
+  courseb-2018_name: Course B (2018)
+  coursec-2018_name: Course C (2018)
+  coursed-2018_name: Course D (2018)
+  coursee-2018_name: Course E (2018)
+  coursef-2018_name: Course F (2018)
   accelerated_name: "빠른 과정"
   express_name: "Express Course"
   pre-express_name: Pre-reader Express Course
+  express-2017_name: Express Course (2017)
+  pre-express-2017_name: Pre-reader Express Course (2017)
+  express-2018_name: Express Course (2018)
+  pre-express-2018_name: Pre-reader Express Course (2018)
   cspunit1_name: "CS 원리 1단원"
   cspunit2_name: "CS 원리 2단원"
   cspunit3_name: "CS Principles Unit 3"
@@ -1008,6 +1024,8 @@
   math_category_name: "계산"
   hoc_category_name: "Hour of Code"
   csf_category_name: "CS 기초"
+  csf_2017_category_name: "CS Fundamentals (2017)"
+  csf_2018_category_name: "CS Fundamentals (2018)"
   csf_international_category_name: "CS Fundamentals International"
   csf2_draft_category_name: '개발중: 코스 A - F'
   csd_category_name: "CS Discoveries ('17-'18)"

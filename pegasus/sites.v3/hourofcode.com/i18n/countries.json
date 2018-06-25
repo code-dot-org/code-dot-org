@@ -2,7 +2,6 @@
   "ac": {
     "full_name": "Africa",
     "default_language": "en",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "Dec. 3",
@@ -13,7 +12,6 @@
   "ad": {
     "full_name": "Andorra",
     "default_language": "ca",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "Dec. 3",
@@ -24,7 +22,6 @@
   "af": {
     "full_name": "Afghanistan",
     "default_language": "af",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "Dec. 3",
@@ -35,7 +32,6 @@
   "al": {
     "full_name": "Albania",
     "default_language": "sq",
-    "partner_page": "al.code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "3 dhjetor",
@@ -46,7 +42,6 @@
   "ap": {
     "full_name": "Asia Pacific",
     "default_language": "en",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "Dec. 3",
@@ -57,7 +52,6 @@
   "ar": {
     "full_name": "Argentina",
     "default_language": "la",
-    "partner_page": "ar.code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "3 de dic",
@@ -68,7 +62,6 @@
   "au": {
     "full_name": "Australia",
     "default_language": "en",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "Dec. 3",
@@ -79,7 +72,6 @@
   "az": {
     "full_name": "Azerbaijan",
     "default_language": "az",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "3 dek.",
@@ -90,7 +82,6 @@
   "bg": {
     "full_name": "Bulgaria",
     "default_language": "bg",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "3 дек.",
@@ -101,7 +92,6 @@
   "br": {
     "full_name": "Brazil",
     "default_language": "pt",
-    "partner_page": "br.code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "dezembro 3-9, 2018",
     "campaign_date_start_short": "3 de dez",
@@ -112,7 +102,6 @@
   "ca": {
     "full_name": "Canada",
     "default_language": "en",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "Dec. 3",
@@ -123,7 +112,6 @@
   "cn": {
     "full_name": "China",
     "default_language": "cn",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "12 月 3 日",
@@ -134,7 +122,6 @@
   "co": {
     "full_name": "Colombia",
     "default_language": "es",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "octubre 1-7, 2018",
     "campaign_date_start_short": "1 de oct",
@@ -145,7 +132,6 @@
   "cz": {
     "full_name": "Czech Republic",
     "default_language": "cs",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "3. prosinec",
@@ -156,7 +142,6 @@
   "de": {
     "full_name": "Germany",
     "default_language": "de",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "3. Dez.",
@@ -167,7 +152,6 @@
   "dk": {
     "full_name": "Denmark",
     "default_language": "da",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "3. dec.",
@@ -178,7 +162,6 @@
   "eg": {
     "full_name": "Egypt",
     "default_language": "ar",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "3 كانون الأول/ديسمبر",
@@ -189,7 +172,6 @@
   "es": {
     "full_name": "Spain",
     "default_language": "es",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "diciembre 3-9, 2018",
     "campaign_date_start_short": "3 de dic",
@@ -200,7 +182,6 @@
   "eu": {
     "full_name": "European Union",
     "default_language": "en",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "Dec. 3",
@@ -211,7 +192,6 @@
   "fr": {
     "full_name": "France",
     "default_language": "fr",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "3 déc",
@@ -222,7 +202,6 @@
   "gr": {
     "full_name": "Greece",
     "default_language": "el",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "3 Δεκεμβρίου",
@@ -233,7 +212,6 @@
   "hk": {
     "full_name": "Hong Kong",
     "default_language": "zh",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "12 月 3 日",
@@ -244,7 +222,6 @@
   "hr": {
     "full_name": "Croatia",
     "default_language": "hr",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "3. prosinca",
@@ -255,7 +232,6 @@
   "hu": {
     "full_name": "Hungary",
     "default_language": "hu",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "dec 3",
@@ -266,7 +242,6 @@
   "id": {
     "full_name": "Indonesia",
     "default_language": "id",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "Tanggal 3 Desember",
@@ -277,7 +252,6 @@
   "ie": {
     "full_name": "Ireland",
     "default_language": "en",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "Dec. 3",
@@ -288,7 +262,6 @@
   "in": {
     "full_name": "India",
     "default_language": "hi",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "Dec. 3",
@@ -299,7 +272,6 @@
   "ir": {
     "full_name": "Iran",
     "default_language": "fa",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "Dec. 3",
@@ -310,7 +282,6 @@
   "it": {
     "full_name": "Italy",
     "default_language": "it",
-    "partner_page": "italia.code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "3 Dic.",
@@ -321,7 +292,6 @@
   "jp": {
     "full_name": "Japan",
     "default_language": "ja",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "12月3日",
@@ -332,7 +302,6 @@
   "kr": {
     "full_name": "Korea",
     "default_language": "ko",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "12월 3일",
@@ -343,7 +312,6 @@
   "la": {
     "full_name": "Latinoamérica",
     "default_language": "la",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "octubre 1-7, 2018",
     "campaign_date_start_short": "1 de oct",
@@ -354,7 +322,6 @@
   "lk": {
     "full_name": "Sri Lanka",
     "default_language": "si",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "දෙසැම්බර් 3-9, 2018",
     "campaign_date_start_short": "දෙසැ. 3",
@@ -365,7 +332,6 @@
   "lv": {
     "full_name": "Latvia",
     "default_language": "lv",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "Dec. 3",
@@ -376,7 +342,6 @@
   "ma": {
     "full_name": "Morocco",
     "default_language": "ar",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "3 كانون الأول/ديسمبر",
@@ -387,7 +352,6 @@
   "me": {
     "full_name": "Middle East",
     "default_language": "ar",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "3 كانون الأول/ديسمبر",
@@ -398,7 +362,6 @@
   "my": {
     "full_name": "Malaysia",
     "default_language": "ms",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "3 Dis.",
@@ -409,7 +372,6 @@
   "mz": {
     "full_name": "Mozambique",
     "default_language": "po",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "3 de dez",
@@ -420,7 +382,6 @@
   "nl": {
     "full_name": "Netherlands",
     "default_language": "nl",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "3 dec.",
@@ -431,7 +392,6 @@
   "no": {
     "full_name": "Norway",
     "default_language": "no",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "Dec. 3",
@@ -442,7 +402,6 @@
   "np": {
     "full_name": "Nepal",
     "default_language": "ne",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "Dec. 3",
@@ -453,7 +412,6 @@
   "nz": {
     "full_name": "New Zealand",
     "default_language": "en",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "Dec. 3",
@@ -464,7 +422,6 @@
   "pe": {
     "full_name": "Peru",
     "default_language": "es",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "octubre 1-7, 2018",
     "campaign_date_start_short": "1 de oct",
@@ -475,7 +432,6 @@
   "pk": {
     "full_name": "Pakistan",
     "default_language": "ur",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "Dec. 3",
@@ -486,7 +442,6 @@
   "pl": {
     "full_name": "Poland",
     "default_language": "pl",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "3 grudnia",
@@ -497,7 +452,6 @@
   "ps": {
     "full_name": "Palestine",
     "default_language": "ar",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "3 كانون الأول/ديسمبر",
@@ -508,7 +462,6 @@
   "pt": {
     "full_name": "Portugal",
     "default_language": "po",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "dezembro 3-9, 2018",
     "campaign_date_start_short": "3 de dez",
@@ -519,7 +472,6 @@
   "ro": {
     "full_name": "Romania",
     "default_language": "ro",
-    "partner_page": "ro.code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "3 decembrie",
@@ -530,7 +482,6 @@
   "ru": {
     "full_name": "Russia",
     "default_language": "ru",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "3 декабря",
@@ -541,7 +492,6 @@
   "si": {
     "full_name": "Slovenia",
     "default_language": "sl",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "Dec. 3",
@@ -552,7 +502,6 @@
   "se": {
     "full_name": "Sweden",
     "default_language": "sv",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "3-9 december 2018",
     "campaign_date_start_short": "3:e December",
@@ -563,7 +512,6 @@
   "tr": {
     "full_name": "Turkey",
     "default_language": "tr",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "3 Ara.",
@@ -574,7 +522,6 @@
   "ua": {
     "full_name": "Ukraine",
     "default_language": "uk",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "3 грудня",
@@ -586,7 +533,6 @@
     "full_name": "United Kingdom",
     "default_language": "gb",
     "solr_country_code": "gb",
-    "partner_page": "uk.code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "Dec. 3",
@@ -597,7 +543,6 @@
   "us": {
     "full_name": "United States",
     "default_language": "en",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "Dec. 3",
@@ -608,7 +553,6 @@
   "vn": {
     "full_name": "Vietnam",
     "default_language": "vi",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "Dec. 3",
@@ -619,7 +563,6 @@
   "za": {
     "full_name": "South Africa",
     "default_language": "en",
-    "partner_page": "code.org",
     "campaign_date_year": "2018",
     "campaign_date_full_year": "December 3-9, 2018",
     "campaign_date_start_short": "Dec. 3",

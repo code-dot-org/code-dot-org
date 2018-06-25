@@ -623,7 +623,7 @@ th:
       InspirationalArtwork_callout:
         InspirationalArtwork_1: Try using the new `comment` block under this label to leave yourself notes inside your program!
       InspirationalArtwork_2018_callout:
-        InspirationalArtwork_1: Try using the new `comment` block under this label to leave yourself notes inside your program!
+        InspirationalArtwork_1: Try using the `comment` block under this label to leave yourself notes inside your program!
       Luigi's Pizza 1 (copy 1)_callout:
         luigi's pizza 1: Try ordering a pepperoni pizza
       Luigi's Pizza 1_callout:
@@ -858,9 +858,9 @@ th:
         aEfreeplay_1: Note that starting the artist in the middle can be awkward.  We're looking at adding actions that can move the artist to absolute positions.
       allthethings_U3 - Simple Drawing - Rectangle Width and Height_callout: { }
       artistLoopsK2_callout:
-        artistLoopsK2_1: This number tells you how many of these blocks you can use in this puzzle.
+        artistLoopsK2_1: หมายเลขนี้ บอกให้คุณทราบจำนวนบล็อกที่คุณสามารถใช้ในปริศนานี้ได้
       artistLoopsK2gradek_artist_loops3_callout:
-        artistLoopsK2_1: This number tells you how many of these blocks you can use in this puzzle.
+        artistLoopsK2_1: หมายเลขนี้ บอกให้คุณทราบจำนวนบล็อกที่คุณสามารถใช้ในปริศนานี้ได้
       comment_intro_maze_2018_callout: { }
       course2_artist_nestedLoops_challenge2_callout: { }
       course2_bee_conditionals_challenge2_callout:
@@ -893,9 +893,9 @@ th:
         courseF_bee_fwp_challenge2_callout1: This function will do a good job with corn, but what about the other vegetables?
       course4_collector_nested_loops_challenge2_callout: { }
       courseA_artist_loops4_callout:
-        courseA_artist_loops4_1: This number tells you how many of these blocks you can use in this puzzle.
+        courseA_artist_loops4_1: หมายเลขนี้ บอกให้คุณทราบจำนวนบล็อกที่คุณสามารถใช้ในปริศนานี้ได้
       courseA_artist_loops4_2018_callout:
-        courseA_artist_loops4_1: This number tells you how many of these blocks you can use in this puzzle.
+        courseA_artist_loops4_1: หมายเลขนี้ บอกให้คุณทราบจำนวนบล็อกที่คุณสามารถใช้ในปริศนานี้ได้
       courseA_artist_loops7_callout:
         courseA_artist_loops7_1: This number means that only one of this kind of block can be used in the final answer.
       courseA_artist_loops7_2018_callout:
@@ -911,9 +911,9 @@ th:
       courseA_collector_loops1_2018_callout:
         courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
       courseA_collector_loops3_callout:
-        gradek_adventurer_loops2_1: This number tells you how many of these blocks you can use in this puzzle.
+        gradek_adventurer_loops2_1: หมายเลขนี้ บอกให้คุณทราบจำนวนบล็อกที่คุณสามารถใช้ในปริศนานี้ได้
       courseA_collector_loops3_2018_callout:
-        gradek_adventurer_loops2_1: This number tells you how many of these blocks you can use in this puzzle.
+        gradek_adventurer_loops2_1: หมายเลขนี้ บอกให้คุณทราบจำนวนบล็อกที่คุณสามารถใช้ในปริศนานี้ได้
       courseA_collector_loops3_predict1_callout: { }
       courseA_collector_preLoops1_callout:
         courseA_collector_preLoops1_1: Click here to watch the code run!
@@ -936,6 +936,7 @@ th:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
         stone_block_2: Grey blocks are made of stone and cannot be thrown away.
       courseA_maze_ramp3a_2018_callout: { }
+      courseA_maze_ramp3b_2018_callout: { }
       courseA_maze_ramp4_2018_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
       courseA_maze_ramp4a_2018_callout: { }
@@ -972,9 +973,10 @@ th:
         courseA_playLab_events6_1: This let's you choose a "random" sound, which means that you don't know what you are going to get until you hear it!
       courseA_toMakeLoopsVideo_Collector_callout: { }
       courseB_Scrat_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน
       courseB_Scrat_ramp2_2018_callout: { }
       courseB_Scrat_ramp3a_2018_callout: { }
+      courseB_Scrat_ramp3b_2018_callout: { }
       courseB_Scrat_ramp4a_2018_callout: { }
       courseB_Scrat_ramp5a_2018_callout: { }
       courseB_artist_loops3_callout:
@@ -1056,9 +1058,9 @@ th:
       courseC_maze_loops2_predict1_callout: { }
       courseC_maze_loops_challenge2_callout: { }
       courseC_maze_programming1_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน
       courseC_maze_programming1_2018_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน
       courseC_maze_programming2_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseC_maze_programming2_2018_callout:
@@ -1157,9 +1159,9 @@ th:
       courseD_harvester_nested_loops_challenge1-broken_callout: { }
       courseD_maze_loops_challenge1_callout: { }
       courseD_maze_ramp1_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน
       courseD_maze_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน
       courseD_maze_ramp2_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseD_maze_ramp2_2018_callout:
@@ -1200,9 +1202,9 @@ th:
       courseD_scrat_predict1_callout: { }
       courseD_scrat_predict1_2018_callout: { }
       courseD_scrat_ramp1_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน
       courseD_scrat_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน
       courseD_scrat_ramp2_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseD_scrat_ramp2_2018_callout:
@@ -1342,10 +1344,10 @@ th:
       courseE_maze_predict1_callout: { }
       courseE_maze_predict1_2018_callout: { }
       courseE_maze_ramp1_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน
       courseE_maze_ramp13_callout: { }
       courseE_maze_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน
       courseE_maze_ramp2_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseE_maze_ramp2_2018_callout:
@@ -1553,12 +1555,12 @@ th:
       courseF_bee_variables_8_2018_callout: { }
       courseF_maze_predict1_callout: { }
       courseF_maze_ramp1_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน
       courseF_maze_ramp13_callout: { }
       courseF_maze_ramp15_callout:
         courseF_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
       courseF_maze_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน
       courseF_maze_ramp2_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseF_maze_ramp2_2018_callout:
@@ -1656,7 +1658,7 @@ th:
       grade1_maze_sequence6_callout:
         grade1_maze_sequence6_1: These grey blocks are made of stone!  That means that they can't be trashed.
       grade2_CaringForNewPet_0_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน
       grade2_CaringForNewPet_1_callout:
         grade2_CaringForNewPet_1_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       grade2_CaringForNewPet_2_callout:
@@ -1809,9 +1811,9 @@ th:
       grade5_playlab_variables_jump1_callout:
         Course_4_Play_Lab_Vars_9_1: All of your blocks are now organized behind categories! Click on a label to see the pieces inside.
       gradek_adventurer_loops2_callout:
-        gradek_adventurer_loops2_1: This number tells you how many of these blocks you can use in this puzzle.
+        gradek_adventurer_loops2_1: หมายเลขนี้ บอกให้คุณทราบจำนวนบล็อกที่คุณสามารถใช้ในปริศนานี้ได้
       gradek_artist_loops3_callout:
-        artistLoopsK2_1: This number tells you how many of these blocks you can use in this puzzle.
+        artistLoopsK2_1: หมายเลขนี้ บอกให้คุณทราบจำนวนบล็อกที่คุณสามารถใช้ในปริศนานี้ได้
       gradek_artist_loops7_callout:
         gradek_artist_loops7_1: Did you know that you can draw back over a line whenever you need to?
       gradek_playlab_events1c_callout: { }

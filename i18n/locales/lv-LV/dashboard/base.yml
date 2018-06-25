@@ -85,6 +85,7 @@ lv:
     facebook: 'Facebook'
     windowslive: 'Microsoft konts'
     clever: 'Clever Account'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Aizmirsi savu paroli?'
     need_confirmation: "Nesaņēmi apstiprinājuma instrukcijas?"
     need_unlock: "Nesaņēmi atslēgšanas norādijumus?"
@@ -359,6 +360,7 @@ lv:
     email_confirm_needed_required: 'Jūsu e-pasta adrese %{email} nav apstiprināta:'
     email_confirm_wrong_email: '(Nepareiza e-pasta adrese?)'
     email_resend_confirm: 'Atkārtoti nosūtīt apstiprinājumu instrukcijas'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(atstājiet tukšu, ja nevēlaties mainīt to)"
     current_password_hint: '(nepieciešama jūsu pašreizējā parole, lai apstiprinātu izmaiņas)'
     delete: 'Izdzēst jūsu kontu'

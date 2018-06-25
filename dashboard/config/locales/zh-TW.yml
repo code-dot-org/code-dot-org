@@ -1,4 +1,5 @@
-"zh-TW":
+---
+zh-TW:
   errors:
     messages:
       not_saved: 請修正下列錯誤：
@@ -86,6 +87,7 @@
     facebook: Facebook
     windowslive: 微軟帳戶
     clever: Clever 帳號
+    powerschool: Powerschool Account
     forgot_password: 忘了密碼？
     need_confirmation: 沒有收到確認說明嗎？
     need_unlock: 沒有收到解鎖說明嗎？
@@ -367,6 +369,7 @@
     email_confirm_needed_required: 您的信箱 %{email} 尚未驗證：
     email_confirm_wrong_email: "（錯誤的電子信箱？）"
     email_resend_confirm: 重新發送確認說明
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "（如果你不想變更它就保留空白）"
     current_password_hint: "（我們需要你現在的密碼以確認變更）"
     delete: 刪除您的帳號

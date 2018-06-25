@@ -1,4 +1,5 @@
-"zh-CN":
+---
+zh-CN:
   data:
     authored_hints:
       2-3 Artist 1 new_authored_hint:
@@ -5449,6 +5450,25 @@
           </next>
           </block>
           </xml>
+      courseA_maze_ramp3b_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_ramp4_2018_authored_hint:
         courseC_maze_programming4_a: You can turn right or left from the bird's point
           of view. If you are facing right, turning right will make you point downwards.
@@ -5962,6 +5982,25 @@
           <block type="maze_moveEast">
           <next>
           <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp3b_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast"/>
           </next>
           </block>
           </next>

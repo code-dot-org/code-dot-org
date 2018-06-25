@@ -1,4 +1,5 @@
-"km":
+---
+km:
   errors:
     messages:
       not_saved: សូមកែរនូវកំហុសដែលមានបន្តបន្ទាប់
@@ -94,6 +95,7 @@
     facebook: Facebook
     windowslive: គណនី Microsoft
     clever: គណនេយ្យមានលក្ខណៈពេញលេញ
+    powerschool: Powerschool Account
     forgot_password: បាន​ភ្លេច​ពាក្យ​សម្ងាត់​របស់​អ្នក?
     need_confirmation: មិន​បាន​ទទួល​ការ​ណែនាំ​អំពី​វិធី​បញ្ជាក់​ទេ?
     need_unlock: មិន​បាន​ទទួល​ការណែនាំ​អំពី​វិធី​ដោះសោ​ទេ?
@@ -399,6 +401,7 @@
     email_confirm_needed_required: អស័យដ្ឋានអ៊ីម៉ែល​របស់អ្នក %{email} មិនទាន់បានធ្វើការបញ្ជាក់នៅឡើយទេ៖
     email_confirm_wrong_email: "(អស័យដ្ឋានអ៊ីម៉េលខុស?)"
     email_resend_confirm: សូមផ្ញើរម្តងទៀតនូវការយល់ព្រមអំពីសេចក្តីណែនាំ
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(សូមកុំបំពេញអ្វីទាំងអស់បើសិនជាអ្នកមិនចង់កែរវា)"
     current_password_hint: "(យើងត្រូការលេខសម្ងាត់របស់អ្នកដើម្បីយល់ព្រមសម្រាប់ការផ្លាស់ប្តូររបស់អ្នក)"
     delete: លុបចោលគណនីរបស់អ្នកចោល

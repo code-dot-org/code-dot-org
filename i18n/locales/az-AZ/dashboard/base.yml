@@ -85,6 +85,7 @@ az:
     facebook: 'Facebook'
     windowslive: 'Microsoft Hesabı'
     clever: 'Clever Account'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Parolunuzu unutmusunuz?'
     need_confirmation: "Təsdiq göstərişlərini almamisiniz?"
     need_unlock: "Kilidaçma göstərişlərini almamisiniz?"
@@ -359,6 +360,7 @@ az:
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
     email_confirm_wrong_email: '(Wrong email address?)'
     email_resend_confirm: 'Təsdiqləmə təlimatlarını yenidən göndər'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(dəyişmək istəmirsinizsə, boş buraxın)"
     current_password_hint: '(dəyişikliklərinizi təsdiq etmək üçün cari parolunuz lazımdır)'
     delete: 'Delete Account'
