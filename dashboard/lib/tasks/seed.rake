@@ -30,7 +30,7 @@ namespace :seed do
     'course2',
     'course3',
     'course4',
-    'coursea',
+    'coursea-2017',
     'coursea-2018',
     'csp1-2017',
     'csp2-2017',
