@@ -414,7 +414,7 @@ class Blockly < Level
 
   def localized_toolbox_blocks
     if should_localize? && toolbox_blocks
-      block_xml = Nokogiri::XML(localize_function_blocks(toolbox_blocks), &:noblanks)
+      block_xml = Nokogiri::XML(toolbox_blocks, &:noblanks)
       block_xml.xpath('//../category').each do |category|
         name = category.attr('name')
         localized_name = I18n.t("data.block_categories.#{name}", default: nil)
