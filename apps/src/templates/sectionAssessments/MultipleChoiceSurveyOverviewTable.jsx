@@ -61,7 +61,7 @@ const answerDataPropType = PropTypes.shape({
   percentAnswered: PropTypes.number,
 });
 
-const multipleChoiceSurveyDataPropType = PropTypes.shape({
+export const multipleChoiceSurveyDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   question: PropTypes.string.isRequired,
   answers: PropTypes.arrayOf(answerDataPropType),
