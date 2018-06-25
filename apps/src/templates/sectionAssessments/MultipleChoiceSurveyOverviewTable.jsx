@@ -76,7 +76,6 @@ export const multipleChoiceSurveyDataPropType = PropTypes.shape({
 class MultipleChoiceSurveyOverviewTable extends Component {
   static propTypes= {
     multipleChoiceSurveyData: PropTypes.arrayOf(multipleChoiceSurveyDataPropType),
-    // multipleChoiceSurveyResults: getMultipleChoiceSurveyResults(state),
   };
 
   state = {
