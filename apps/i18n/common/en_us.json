@@ -695,6 +695,7 @@
   "makerViewProjectsTitle": "View your project list",
   "makeYourOwnFlappy": "Make Your Own Flappy Game",
   "manageAssets": "Manage Assets",
+  "manageLinkedAccounts": "Manage Linked Accounts",
   "manageStudents": "Manage Students",
   "manageStudentsNotificationFailure": "Something went wrong.",
   "manageStudentsNotificationCannotAdd": "You could not add {numStudents, plural, one {1 student} other {# students}} to your section. Please try again or refresh the page.",
