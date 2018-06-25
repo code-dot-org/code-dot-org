@@ -88,7 +88,8 @@ class InternationalOptinComponent extends FormComponent {
             label: labels.email,
             type: 'text',
             value: this.props.accountEmail,
-            readOnly: true
+            readOnly: true,
+            required: true
           })
         }
 
@@ -200,5 +201,9 @@ class InternationalOptinComponent extends FormComponent {
   }
 }
 
-InternationalOptinComponent.associatedFields =
-  ['firstName', 'lastName', 'title', 'email', 'optIn'];
+InternationalOptinComponent.associatedFields = [
+  'firstName', 'firstNamePreferred', 'lastName', 'email', 'emailAlternate',
+  'gender', 'schoolName', 'schoolCity', 'schoolCountry', 'ages', 'subjects',
+  'resources', 'robotics', 'workshopOrganizer', 'workshopFacilitator',
+  'workshopCourse', 'optIn'
+];
