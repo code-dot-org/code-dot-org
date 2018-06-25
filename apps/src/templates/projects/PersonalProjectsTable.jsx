@@ -1,6 +1,7 @@
 import React, {PropTypes} from 'react';
 import i18n from "@cdo/locale";
 import color from "../../util/color";
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {ImageWithStatus} from '../ImageWithStatus';
 import {Table, sort} from 'reactabular';
 import wrappedSortable from '../tables/wrapped_sortable';
@@ -58,6 +59,9 @@ export const styles = {
   cellType: {
     width: 120
   },
+  centeredCell: {
+    textAlign: 'center'
+  },
   thumbnailWrapper: {
     height: THUMBNAIL_SIZE,
     display: 'flex',
@@ -86,81 +90,59 @@ const nameFormatter = (projectName, {rowData}) => {
   return <a style={tableLayoutStyles.link} href={url} target="_blank">{projectName}</a>;
 };
 
-const unfeature = (channel) => {
-  var url = `/featured_projects/${channel}/unfeature`;
-  $.ajax({
-    url: url,
-    type:'PUT',
-    dataType:'json',
-  }).done(handleSuccess).fail(handleUnfeatureFailure);
-};
-
-const handleSuccess = () => {
-  window.location.reload(true);
-};
-
-const handleUnfeatureFailure = () => {
-  alert("Shucks. Something went wrong - this project is still featured.");
-};
-
-const handleFeatureFailure = () => {
-  alert("Shucks. Something went wrong - this project wasn't featured.");
-};
-
-const actionsFormatterFeatured = (actions, {rowData}) => {
+const actionsFormatter = (actions, {rowData}) => {
   return (
     <QuickActionsCell>
       <PopUpMenu.Item
-        onClick={() => unfeature(rowData.channel)}
+        onClick={() => console.log("rowData", rowData)}
       >
-        {i18n.stopFeaturing()}
+        Rename
       </PopUpMenu.Item>
-    </QuickActionsCell>
-  );
-};
-
-const feature = (channel, publishedAt) => {
-  var url = `/featured_projects/${channel}/feature`;
-  if (!publishedAt) {
-    alert(i18n.featureUnpublishedWarning());
-  }
-  $.ajax({
-    url: url,
-    type:'PUT',
-    dataType:'json',
-  }).done(handleSuccess).fail(handleFeatureFailure);
-};
-
-const actionsFormatterUnfeatured = (actions, {rowData}) => {
-  return (
-    <QuickActionsCell>
       <PopUpMenu.Item
-        onClick={() => feature(rowData.channel, rowData.publishedAt)}
+        onClick={() => console.log("Remix was clicked")}
       >
-        {i18n.featureAgain()}
+        Remix
+      </PopUpMenu.Item>
+      {!!rowData.isPublished && (
+        <PopUpMenu.Item
+          onClick={() => console.log("Unpublish was clicked")}
+        >
+          Unpublish
+        </PopUpMenu.Item>
+      )}
+      {!rowData.isPublished && (
+        <PopUpMenu.Item
+          onClick={() => console.log("Publish was clicked")}
+        >
+          Publish
+        </PopUpMenu.Item>
+      )}
+      <PopUpMenu.Item
+        onClick={() => console.log("Delete was clicked")}
+      >
+        Delete
       </PopUpMenu.Item>
     </QuickActionsCell>
   );
-};
-
-const dateFormatter = (time) => {
-  if (time) {
-    const date = new Date(time);
-    return date.toLocaleDateString();
-  } else {
-    return i18n.no();
-  }
 };
 
 const typeFormatter = (type) => {
   return PROJECT_TYPE_MAP[type];
 };
 
+const dateFormatter = function (time) {
+  const date = new Date(time);
+  return date.toLocaleDateString();
+};
+
+const isPublishedFormatter = (isPublished) => {
+  return isPublished ? (<FontAwesome icon="circle"/>) : '';
+};
+
 class PersonalProjectsTable extends React.Component {
   static propTypes = {
     projectList: PropTypes.arrayOf(personalProjectDataPropType).isRequired
   };
-
 
   state = {
     [COLUMNS.PROJECT_NAME]: {
@@ -243,9 +225,9 @@ class PersonalProjectsTable extends React.Component {
         }
       },
       {
-        property: 'publishedAt',
+        property: 'updatedAt',
         header: {
-          label: i18n.published(),
+          label: "Last edited",
           props: {style: tableLayoutStyles.headerCell},
           transforms: [sortable],
         },
@@ -255,29 +237,18 @@ class PersonalProjectsTable extends React.Component {
         }
       },
       {
-        property: 'featuredAt',
+        property: 'isPublished',
         header: {
-          label: i18n.featured(),
+          label: "Published",
           props: {style: tableLayoutStyles.headerCell},
           transforms: [sortable],
         },
         cell: {
-          format: dateFormatter,
-          props: {style: tableLayoutStyles.cell}
-        }
-      },
-    ];
-    const archiveColumns = [
-      {
-        property: 'unfeaturedAt',
-        header: {
-          label: i18n.unfeatured(),
-          props: {style: tableLayoutStyles.headerCell},
-          transforms: [sortable],
-        },
-        cell: {
-          format: dateFormatter,
-          props: {style: tableLayoutStyles.cell}
+          format: isPublishedFormatter,
+          props: {style: {
+            ...tableLayoutStyles.cell,
+            ...styles.centeredCell
+          }}
         }
       },
       {
@@ -292,35 +263,15 @@ class PersonalProjectsTable extends React.Component {
           },
         },
         cell: {
-          format: actionsFormatterUnfeatured,
-          props: {style: tableLayoutStyles.cell}
+          format: actionsFormatter,
+          props: {style: {
+            ...tableLayoutStyles.cell,
+            ...styles.centeredCell
+          }}
         }
       }
     ];
-    const currentColumns = [
-      {
-        property: 'actions',
-        header: {
-          label: i18n.quickActions(),
-          props: {
-            style: {
-              ...tableLayoutStyles.headerCell,
-              ...tableLayoutStyles.unsortableHeader,
-            }
-          },
-        },
-        cell: {
-          format: actionsFormatterFeatured,
-          props: {style: tableLayoutStyles.cell}
-        }
-      }
-    ];
-
-    if (tableVersion === "currentFeatured") {
-      return dataColumns.concat(currentColumns);
-    } else {
-      return dataColumns.concat(archiveColumns);
-    }
+    return dataColumns;
   };
 
   render() {

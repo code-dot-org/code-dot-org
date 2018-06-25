@@ -1,6 +1,6 @@
 import React from 'react';
 import PersonalProjectsTable from './PersonalProjectsTable';
-import {stubFakePersonalProjectData} from './generateFakePersonalProjects';
+import {stubFakePersonalProjectData} from './generateFakeProjects';
 
 export default storybook => {
   storybook
