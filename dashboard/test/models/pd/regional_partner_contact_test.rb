@@ -162,22 +162,22 @@ class Pd::RegionalPartnerContactTest < ActiveSupport::TestCase
     regional_partner.mappings.find_or_create_by!(zip_code: '45242')
 
     create :pd_regional_partner_contact, form_data: FORM_DATA.merge(MATCHED_FORM_DATA).to_json
-    mail = ActionMailer::Base.deliveries[0]
+    mail = ActionMailer::Base.deliveries.first
 
     assert_equal ['tawny@code.org'], mail.to
     assert_equal 'A school administrator wants to connect with Code.org', mail.subject
     assert_equal ['tanya_parker@code.org'], mail.from
-    assert_equal 3, ActionMailer::Base.deliveries.count
+    assert_equal 2, ActionMailer::Base.deliveries.count
   end
 
   test 'Unmatched' do
     create :pd_regional_partner_contact, form_data: FORM_DATA.merge(MATCHED_FORM_DATA).to_json
-    mail = ActionMailer::Base.deliveries[0]
+    mail = ActionMailer::Base.deliveries.first
 
     assert_equal ['tawny@code.org'], mail.to
     assert_equal 'A school administrator wants to connect with Code.org', mail.subject
     assert_equal ['tanya_parker@code.org'], mail.from
-    assert_equal 3, ActionMailer::Base.deliveries.count
+    assert_equal 2, ActionMailer::Base.deliveries.count
   end
 
   test 'Receipt email' do
