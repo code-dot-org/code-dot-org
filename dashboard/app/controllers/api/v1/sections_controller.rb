@@ -85,7 +85,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
 
     # TODO: (madelynkasula) refactor to use strong params
     fields = {}
-    fields[:course_id] = course_id if Course.valid_course_id?(course_id)
+    fields[:course_id] = set_course_id(course_id)
     fields[:script_id] = set_script_id(script_id)
     fields[:name] = params[:name] unless params[:name].nil_or_empty?
     fields[:login_type] = params[:login_type] if Section.valid_login_type?(params[:login_type])
@@ -175,6 +175,13 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   # Set script_id to nil if invalid or no script_id provided
   def set_script_id(script_id)
     return script_id if Script.valid_script_id?(current_user, script_id)
+    nil
+  end
+
+  # Update course_id if user provided valid course_id
+  # Set course_id to nil if invalid or no course_id provided
+  def set_course_id(course_id)
+    return course_id if Course.valid_course_id?(course_id)
     nil
   end
 end

@@ -2,7 +2,6 @@ import React from 'react';
 import $ from 'jquery';
 import sinon from 'sinon';
 import {format} from 'util';
-import {assert} from './configuredChai';
 const project = require('@cdo/apps/code-studio/initApp/project');
 const assets = require('@cdo/apps/code-studio/assets');
 import i18n from '@cdo/apps/code-studio/i18n';
@@ -66,20 +65,6 @@ export function generateArtistAnswer(generatedCode) {
   api.log = [];
   generatedCode(api);
   return api.log;
-}
-
-/**
- * Checks that an object has a property with the given name, independent
- * of its prototype.
- *
- * @param {*} obj - Object that should contain the property.
- * @param {string} propertyName - Name of the property the object should
- *        contain at own depth.
- */
-export function assertOwnProperty(obj, propertyName) {
-  assert(obj.hasOwnProperty(propertyName), "Expected " +
-      obj.constructor.name + " to have a property '" +
-      propertyName + "' but no such property was found.");
 }
 
 /**
@@ -462,38 +447,46 @@ export function clearTimeoutsBetweenTests() {
  *   suite.  This should normally be 'false' to avoid unneeded impact on the
  *   runtime of the suite, but setting it 'true' is very useful for isolating
  *   the test that's causing related failures.
+ * @param {function} runTestCases callback function containing the tests to run
+ *   with the body cleanup check in place.
  */
-export function enforceDocumentBodyCleanup({checkEveryTest = false}) {
+export function enforceDocumentBodyCleanup({checkEveryTest = false}, runTestCases) {
   let initialInnerHTML;
   const beforeFn = checkEveryTest ? beforeEach : before;
   const afterFn = checkEveryTest ? afterEach : after;
 
-  beforeFn(() => {
-    if (!initialInnerHTML) {
-      initialInnerHTML = document.body.innerHTML;
-    }
-    sinon.spy(document.body, 'addEventListener');
-    sinon.spy(document.body, 'removeEventListener');
-  });
+  // The additional describe calls ensure correct ordering of the
+  // before/after steps relative to other test steps.
+  describe('', () => {
+    beforeFn(() => {
+      if (!initialInnerHTML) {
+        initialInnerHTML = document.body.innerHTML;
+      }
+      sinon.spy(document.body, 'addEventListener');
+      sinon.spy(document.body, 'removeEventListener');
+    });
 
-  afterFn(() => {
-    if (initialInnerHTML !== document.body.innerHTML) {
-      throw new Error(
-        'Test modified document.body.innerHTML:' +
-        '\n\nInitial:\n' +
-        initialInnerHTML +
-        '\n\nAfter:\n' +
-        document.body.innerHTML
-      );
-    }
+    afterFn(() => {
+      if (initialInnerHTML !== document.body.innerHTML) {
+        throw new Error(
+          'Test modified document.body.innerHTML:' +
+          '\n\nInitial:\n' +
+          initialInnerHTML +
+          '\n\nAfter:\n' +
+          document.body.innerHTML
+        );
+      }
 
-    if (document.body.addEventListener.callCount !== document.body.removeEventListener.callCount) {
-      throw new Error(
-        'Added ' + document.body.addEventListener.callCount + ' event listener(s)' +
-        ' to document.body, but only removed ' + document.body.removeEventListener.callCount + ' listeners'
-      );
-    }
-    document.body.addEventListener.restore();
-    document.body.removeEventListener.restore();
+      if (document.body.addEventListener.callCount !== document.body.removeEventListener.callCount) {
+        throw new Error(
+          'Added ' + document.body.addEventListener.callCount + ' event listener(s)' +
+          ' to document.body, but only removed ' + document.body.removeEventListener.callCount + ' listeners'
+        );
+      }
+      document.body.addEventListener.restore();
+      document.body.removeEventListener.restore();
+    });
+
+    describe('', runTestCases);
   });
 }
