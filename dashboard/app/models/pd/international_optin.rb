@@ -28,24 +28,23 @@ class Pd::InternationalOptin < ApplicationRecord
   end
 
   def self.options
-    super.merge(
-      {
-        title: %w(Mr. Mrs. Ms. Dr.),
-        role: ['Teacher', 'School Administrator', 'District Administrator'],
-        gradeLevels: ['High School', 'Middle School', 'Elementary School'],
-        program: ['CS Fundamentals (Pre-K - 5th grade)', 'CS Discoveries (6 - 10th grade)', 'CS Principles (appropriate for 9th - 12th grade, and can be implemented as an AP or introductory course)'],
-        optIn: ['Yes', 'No'],
-        gender: ['Male', 'Female', 'Non-binary', 'Preferred term not listed', 'Prefer not to answer'],
-        ages: ['< 6 years old', '7-8 years old', '9-10 years old', '11-12 years old', '13-14 years old', '15-16 years old', '17-18 years old', '19+ years old'],
-        subjects: ['Computer Science', 'ICT', 'Math', 'Science', 'History / Social Studies', 'Language Arts', 'English as a Foreign Language', 'Music', 'Art'],
-        resources: ['Bootstrap', 'CodeCademy', 'Google CS First', 'Khan Academy', 'Kodable', 'Lightbot', 'Scratch', 'Tynker'],
-        robotics: ['Grok Learning', 'Kodable', 'LEGO Education', 'Microbit', 'Ozobot', 'Sphero', 'Raspberry Pi', 'Wonder Workshop'],
-        schoolCountry: %w(Canada Chile Israel Malaysia Mexico Thailand),
-        workshopOrganizer: get_international_optin_partners,
-        workshopFacilitator: get_international_optin_facilitators,
-        workshopCourse: ['CS Fundamentals (Courses A-F)', 'CS Fundamentals (Pre-Express or Express)']
-      }
-    )
+    entry_keys = {
+      gender: %w(male female non_binary not_listed none),
+      schoolCountry: %w(canada chile israel malaysia mexico thailand),
+      ages: %w(ages_under_6 ages_7_8 ages_9_10 ages_11_12 ages_13_14 ages_15_16 ages_17_18 ages_19_over),
+      subjects: %w(cs ict math science history la efl music art),
+      resources: %w(bootstrap codecademy csfirst khan kodable lightbot scratch tynker),
+      robotics: %w(grok kodable lego microbit ozobot sphero raspberry wonder),
+      workshopCourse: %w(csf_af csf_express),
+      optIn: %w(opt_in_yes opt_in_no)
+    }
+
+    entries = Hash[entry_keys.map {|k, v| [k, v.map {|s| I18n.t("pd.form_entries.#{k.to_s.underscore}.#{s.underscore}")}]}]
+
+    entries[:workshopOrganizer] = get_international_optin_partners
+    entries[:workshopFacilitator] = get_international_optin_facilitators
+
+    super.merge(entries)
   end
 
   def self.labels
