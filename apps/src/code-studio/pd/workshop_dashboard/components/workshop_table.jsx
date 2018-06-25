@@ -12,6 +12,7 @@ import WorkshopManagement from './workshop_management';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 import {workshopShape} from '../types.js';
 import {Button} from 'react-bootstrap';
+import {WorkshopTypes} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 const styles = {
   container: {
@@ -280,7 +281,7 @@ export default class WorkshopTable extends React.Component {
         date={date}
         editUrl={state === 'Not Started' ? `/workshops/${id}/edit` : null}
         onDelete={state !== 'Ended' ? this.props.onDelete : null}
-        showSurveyUrl={state === 'Ended' || subject === '5-day Summer'}
+        showSurveyUrl={state === 'Ended' || [WorkshopTypes.local_summer, WorkshopTypes.teachercon].includes(subject)}
       />
     );
   };

@@ -36,6 +36,7 @@
     "markdown_instructions": "Fantastic!  \r\n\r\nLet's add some style by changing the brush using the `set pattern` block before our loop starts.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You don't need to make any changes to the loop, just put one block above it.\",\"hint_id\":\"courseC_artist_loop1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/0f6c7d9994e0bde3a8d816bf9946c7b4/courseC_artist_loop1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"This is the block you will need to set a pattern:\\n\\n<xml>\\n<block type=\\\"draw_line_style_pattern\\\">\\n    <title name=\\\"VALUE\\\">DEFAULT</title>\\n  </block>\\n</xml>\\n\\nChoose any pattern you like!\",\"hint_id\":\"courseC_artist_loop1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9e41723fe1483b7265dd5bcf0b4a49af/courseC_artist_loop1.mp3\"}]",
     "disable_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 4,
     "contained_level_names": null
   },
   "published": true,

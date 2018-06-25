@@ -33,6 +33,7 @@
     "disable_if_else_editing": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You only need to use one ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png) block to solve this.\\n\\n\",\"hint_id\":\"courseA_collector_loops_challenge2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e5406e73f671a6c014b300ff7892ec0c/courseA_collector_loops_challenge2.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You can move back over the path a second time before moving south.\\n\\n![](https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png)\",\"hint_id\":\"courseA_collector_loops_challenge2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a5cd967016191759bc10747e74a246f7/courseA_collector_loops_challenge2.mp3\"}]",
     "ideal": "9",
+    "hint_prompt_attempts_threshold": 10,
     "contained_level_names": null
   },
   "published": true,

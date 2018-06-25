@@ -72,7 +72,6 @@ const styles = {
   },
   contents: {
     whiteSpace: 'nowrap',
-    fontSize: 16,
     lineHeight: '16px',
   },
   diamondContents: {
@@ -189,6 +188,7 @@ class ProgressBubble extends React.Component {
         >
           <div
             style={{
+              fontSize: level.paired ? 14 : 16,
               ...styles.contents,
               ...(level.isConceptLevel && styles.diamondContents)
             }}

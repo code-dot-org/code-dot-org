@@ -289,4 +289,121 @@ level 'level7_copy'"
     # clean up
     File.delete(level_group_copy.filename)
   end
+
+  test 'get_summarized_survey_results returns a hash of results' do
+    # Seed the RNG deterministically so we get the same "random" shuffling of results.
+    srand 1
+
+    # Create script with an anonymous assessment.
+    script = create :script
+    sub_level1 = create :text_match, name: 'level_free_response', type: 'TextMatch'
+    sub_level2 = create :multi, name: 'level_multi_unsubmitted', type: 'Multi'
+    sub_level3 = create :multi, name: 'level_multi_correct', type: 'Multi'
+    sub_level4 = create :multi, name: 'level_multi_incorrect', type: 'Multi'
+    create :multi, name: 'level_multi_unattempted', type: 'Multi'
+
+    level1 = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
+    level1.properties['title'] =  'Long assessment 1'
+    level1.properties['anonymous'] = 'true'
+    level1.properties['pages'] = [
+      {
+        levels: %w(
+          level_free_response
+          level_multi_unsubmitted
+          level_multi_correct
+          level_multi_incorrect
+          level_multi_unattempted
+        )
+      }
+    ]
+    level1.save!
+    script_level = create :script_level, script: script, levels: [level1], assessment: true
+
+    updated_at = Time.now
+
+    # Create a section with students
+    teacher = create(:teacher)
+    section = create(:section, user: teacher, login_type: 'word')
+
+    # Set of students in section.
+    students = []
+    5.times do |i|
+      student = create(:student, name: "student_#{i}")
+      students << student
+      create(:follower, section: section, student_user: student)
+    end
+
+    # All students did the LevelGroup, and the free response part of the survey.
+    students.each_with_index do |student, student_index|
+      create :user_level, user: student, script: script, level: level1,
+        level_source: create(:level_source, level: level1), best_result: 100,
+        submitted: true, updated_at: updated_at
+
+      create :user_level, user: student, script: script, level: sub_level1,
+        level_source: create(:level_source, level: sub_level1, data: "Free response from student #{student_index + 3}")
+      create :user_level, user: student, script: script, level: sub_level2,
+        level_source: create(:level_source, level: sub_level2, data: "-1")
+      create :user_level, user: student, script: script, level: sub_level3,
+        level_source: create(:level_source, level: sub_level3, data: "-1")
+      create :user_level, user: student, script: script, level: sub_level4,
+        level_source: create(:level_source, level: sub_level4, data: "-1")
+    end
+
+    actual_survey_results = LevelGroup.get_summarized_survey_results(script, section)
+
+    expected_results = {
+      level1.id => {
+        stage_name: script_level.stage.localized_title,
+        levelgroup_results: [
+          {
+            type: "text_match",
+            question: "test",
+            results: [
+              {result: "Free response from student 5"},
+              {result: "Free response from student 6"},
+              {result: "Free response from student 4"},
+              {result: "Free response from student 7"},
+              {result: "Free response from student 3"}
+            ],
+            answer_texts: nil,
+            question_index: 0,
+          },
+          {
+            type: "multi",
+            question: "question text",
+            results: [{}, {}, {}, {}, {}],
+            answer_texts: ["answer1", "answer2", "answer3", "answer4"],
+            question_index: 1,
+          },
+          {
+            type: "multi",
+            question: "question text",
+            results: [{}, {}, {}, {}, {}],
+            answer_texts: ["answer1", "answer2", "answer3", "answer4"],
+            question_index: 2,
+          },
+          {
+            type: "multi",
+            question: "question text",
+            results: [{}, {}, {}, {}, {}],
+            answer_texts: ["answer1", "answer2", "answer3", "answer4"],
+            question_index: 3,
+          },
+          {
+            type: "multi",
+            question: "question text",
+            results: [{}, {}, {}, {}, {}],
+            answer_texts: ["answer1", "answer2", "answer3", "answer4"],
+            question_index: 4,
+          }
+        ]
+      }
+    }
+
+    assert_equal expected_results.keys, actual_survey_results.keys
+    assert_equal expected_results[level1.id][:stage_name],
+      actual_survey_results[level1.id][:stage_name]
+    assert_equal expected_results[level1.id][:levelgroup_results],
+      actual_survey_results[level1.id][:levelgroup_results]
+  end
 end

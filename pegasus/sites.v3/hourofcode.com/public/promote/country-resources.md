@@ -88,15 +88,15 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 - Require minimal prep-time for organizers
 - Are self-guided - allowing students to work at their own pace and skill-level
 
-<a href="https://uk.code.org/learn"><img src="https://uk.code.org/images/tutorials.png"></a>
+<a href="https://code.org/learn"><img src="https://code.org/images/tutorials.png"></a>
 
 
 ## 2) Plan your hardware needs - computers are optional
 
-The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all. 
+The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
 - **Test tutorials on student computers or devices.** Make sure they work properly (with sound and video).
-- **Preview the congrats page** to see what students will see when they finish. 
+- **Preview the congrats page** to see what students will see when they finish.
 - **Provide headphones for your group**, or ask students to bring their own, if the tutorial you choose works best with sound.
 
 ## 3) Plan ahead based on your technology available

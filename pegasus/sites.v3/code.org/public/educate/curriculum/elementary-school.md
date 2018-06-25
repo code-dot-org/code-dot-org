@@ -66,7 +66,7 @@ Courses
 
 <img src="/images/fit-970/CSFimages/Course_Map.png" style="max-width: 100%"/>
 
-For students new to computer science, each course begins with a grade-appropriate entry point and structured ramp-up of concepts. The progression of Courses A-F builds upon each other to ensure continuing students stay interested and learn new things. This allows you to use the same course at any grade level for all students, regardless of their experience. If you’re looking for a more comprehensive course, the Express Course combines the best of Courses A-F into a single condensed course (with a simpler option for pre-readers). You can download version 2 of the [curriculum guide for Courses A-F here](https://code.org/curriculum/docs/csf/CSF_TeacherGuide_CoursesA-F_v2a_small.pdf).
+For students new to computer science, each course begins with a grade-appropriate entry point and structured ramp-up of concepts. The progression of Courses A-F builds upon each other to ensure continuing students stay interested and learn new things. This allows you to use the same course at any grade level for all students, regardless of their experience. If you’re looking for a more comprehensive course, the Express Course combines the best of Courses A-F into a single condensed course (with a simpler option for pre-readers). You can download the 2018 version of the [curriculum guide for Courses A-F here](https://code.org/curriculum/docs/csf/CSF_Curriculum_Guide_2018_smaller.pdf).
 
 If you've been teaching Courses 1-4 and want to know how to transition to teaching Courses A-F, check out our [Transition Guide](https://docs.google.com/document/d/1dFgrHiW-ERpNGey7yrNcoxU0LEfH9kFbdeLJn2QyJTA/edit?usp=sharing).
 
@@ -74,14 +74,14 @@ If you've been teaching Courses 1-4 and want to know how to transition to teachi
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursea'), cta_text: 'View course', lesson_plans: 'https://curriculum.code.org/csf/coursea', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course A', ages: 'Recommended for Kindergarten (Supports pre-readers)', description: 'Teaches basic programming concepts such as loops and events. Lessons also teach students to collaborate with others meaningfully, investigate different problem-solving techniques, persist in the face of difficult tasks, and learn about internet safety. At the end of this course, students create their very own custom game or story they can share.
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursea'), cta_text: 'View course', lesson_plans: curriculum_url('csf/coursea'), img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course A', ages: 'Recommended for Kindergarten (Supports pre-readers)', description: 'Teaches basic programming concepts such as loops and events. Lessons also teach students to collaborate with others meaningfully, investigate different problem-solving techniques, persist in the face of difficult tasks, and learn about internet safety. At the end of this course, students create their very own custom game or story they can share.
 '%>
 
 [/col-50]
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/courseb'), cta_text: 'View course', lesson_plans: 'https://curriculum.code.org/csf/courseb', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course B', ages: 'Recommended for 1st grade (Supports pre-readers)', description: 'Closely parallels Course A, but provides more complex unplugged activities and more variety in puzzles. Covers the basics of programming, collaboration techniques, investigation and critical thinking skills, persistence in the face of difficulty, and internet safety. At the end of this course, students create their very own custom game they can share.'%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/courseb'), cta_text: 'View course', lesson_plans: curriculum_url('csf/courseb'), img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course B', ages: 'Recommended for 1st grade (Supports pre-readers)', description: 'Closely parallels Course A, but provides more complex unplugged activities and more variety in puzzles. Covers the basics of programming, collaboration techniques, investigation and critical thinking skills, persistence in the face of difficulty, and internet safety. At the end of this course, students create their very own custom game they can share.'%>
 
 [/col-50]
 
@@ -89,13 +89,13 @@ If you've been teaching Courses 1-4 and want to know how to transition to teachi
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursec'), cta_text: 'View course', lesson_plans: 'https://curriculum.code.org/csf/coursec', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course C', ages: 'Recommended for 2nd grade', description: 'Students will create programs with loops and events. They will translate their initials into binary, investigate different problem-solving techniques, and discuss how to respond to cyberbullying. By the end of the course, students will create interactive games that they can share.'%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursec'), cta_text: 'View course', lesson_plans: curriculum_url('csf/coursec'), img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course C', ages: 'Recommended for 2nd grade', description: 'Students will create programs with loops and events. They will translate their initials into binary, investigate different problem-solving techniques, and discuss how to respond to cyberbullying. By the end of the course, students will create interactive games that they can share.'%>
 
 [/col-50]
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursed'), cta_text: 'View course', lesson_plans: 'https://curriculum.code.org/csf/coursed', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course D', ages: 'Recommended for 3rd grade', description: 'Students develop their understanding of algorithms, nested loops, while loops, conditionals, and events. Beyond coding, students learn about digital citizenship.' %>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursed'), cta_text: 'View course', lesson_plans: curriculum_url('csf/coursed'), img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course D', ages: 'Recommended for 3rd grade', description: 'Students develop their understanding of algorithms, nested loops, while loops, conditionals, and events. Beyond coding, students learn about digital citizenship.' %>
 
 [/col-50]
 
@@ -103,13 +103,13 @@ If you've been teaching Courses 1-4 and want to know how to transition to teachi
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursee'), cta_text: 'View course', lesson_plans: 'https://curriculum.code.org/csf/coursee', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course E', ages: 'Recommended for 4th grade', description: 'Students will practice coding with algorithms, loops, conditionals, and events before they are introduced to functions. In the second part of the course, students design and create a capstone project they can share.' %>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursee'), cta_text: 'View course', lesson_plans: curriculum_url('csf/coursee'), img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course E', ages: 'Recommended for 4th grade', description: 'Students will practice coding with algorithms, loops, conditionals, and events before they are introduced to functions. In the second part of the course, students design and create a capstone project they can share.' %>
 
 [/col-50]
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursef'), cta_text: 'View course', lesson_plans: 'https://curriculum.code.org/csf/coursef', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course F', ages: 'Recommended for 5th grade', description: 'Students create programs with different kinds of loops, events, functions, and conditionals. They will also investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course students design and create a capstone project they can share.' %>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursef'), cta_text: 'View course', lesson_plans: curriculum_url('csf/coursef'), img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course F', ages: 'Recommended for 5th grade', description: 'Students create programs with different kinds of loops, events, functions, and conditionals. They will also investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course students design and create a capstone project they can share.' %>
 
 [/col-50]
 

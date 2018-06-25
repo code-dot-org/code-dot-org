@@ -1,13 +1,13 @@
 import i18n from '@cdo/locale';
 
+// Data for students' assessments multiple choice table
 export const studentOverviewData = [
   {
     id: 1,
     name: 'Caley',
     numMultipleChoiceCorrect: 7,
     numMultipleChoice: 10,
-    percentCorrect: '70%',
-    submissionStatus: 'Completed',
+    isSubmitted: true,
     submissionTimeStamp: '2/16/18 - 7:41 AM',
   },
   {
@@ -15,8 +15,7 @@ export const studentOverviewData = [
     name: 'Maddie',
     numMultipleChoiceCorrect: 3,
     numMultipleChoice: 10,
-    percentCorrect: '',
-    submissionStatus: 'In Progress',
+    isSubmitted: false,
     submissionTimeStamp: '',
   },
   {
@@ -24,8 +23,7 @@ export const studentOverviewData = [
     name: 'Erin',
     numMultipleChoiceCorrect: 8,
     numMultipleChoice: 10,
-    percentCorrect: '80%',
-    submissionStatus: 'Completed',
+    isSubmitted: true,
     submissionTimeStamp: '5/29/18 - 7:41 AM',
   },
   {
@@ -33,8 +31,7 @@ export const studentOverviewData = [
     name: 'Dave',
     numMultipleChoiceCorrect: 10,
     numMultipleChoice: 10,
-    percentCorrect: '100%',
-    submissionStatus: 'Completed',
+    isSubmitted: true,
     submissionTimeStamp: '5/29/18 - 8:00 AM',
   },
   {
@@ -42,8 +39,7 @@ export const studentOverviewData = [
     name: 'Brad',
     numMultipleChoiceCorrect: 0,
     numMultipleChoice: 10,
-    percentCorrect: '',
-    submissionStatus: 'Not Started',
+    isSubmitted: false,
     submissionTimeStamp: '',
   },
   {
@@ -51,30 +47,30 @@ export const studentOverviewData = [
     name: 'Mike',
     numMultipleChoiceCorrect: 0,
     numMultipleChoice: 10,
-    percentCorrect: '0%',
-    submissionStatus: 'Completed',
+    isSubmitted: true,
     submissionTimeStamp: '5/29/18 - 8:05 AM',
   },
 ];
 
-// type: studentAnswerDataPropType
+// Data for single student assessments table
+// type: studentWithResponsesPropType
 export const studentData = {
-  id: '012896',
+  id: 1,
   name: 'Caley',
-  studentAnswers: [
-    {isCorrect: false, answers: ''},
-    {isCorrect: false, answers: 'B D'},
-    {isCorrect: false, answers: 'E'},
-    {isCorrect: false, answers: 'C'},
-    {isCorrect: true, answers: 'A'},
+  studentResponses: [
+    {isCorrect: false, responses: ''},
+    {isCorrect: false, responses: 'B D'},
+    {isCorrect: false, responses: 'E'},
+    {isCorrect: false, responses: 'C'},
+    {isCorrect: true, responses: 'A'},
   ],
 };
 
-// Data for overview table
+// Data for multiple choice overview table
 export const multipleChoiceData = [
   {
     id: 1,
-    question: '1. What is a variable?',
+    question: 'What is a variable?',
     answers:  [
       {multipleChoiceOption: i18n.answerOptionA(), percentAnswered: 40, isCorrectAnswer: true},
       {multipleChoiceOption: i18n.answerOptionB(), percentAnswered: 20, isCorrectAnswer: false},
@@ -85,7 +81,7 @@ export const multipleChoiceData = [
   },
   {
     id: 2,
-    question: '2. What is a 4-bit number for the decimal number Ten(10)?',
+    question: 'What is a 4-bit number for the decimal number Ten(10)?',
     answers:  [
       {multipleChoiceOption: i18n.answerOptionA(), percentAnswered: 30, isCorrectAnswer: false},
       {multipleChoiceOption: i18n.answerOptionB(), percentAnswered: 10, isCorrectAnswer: true},
@@ -98,7 +94,7 @@ export const multipleChoiceData = [
   },
   {
     id: 3,
-    question: '3. What is the minimum number of bits you will need to encode the 26 letters of the alphabet plus a space?',
+    question: 'What is the minimum number of bits you will need to encode the 26 letters of the alphabet plus a space?',
     answers:  [
       {multipleChoiceOption: i18n.answerOptionA(), percentAnswered: 50, isCorrectAnswer: false},
       {multipleChoiceOption: i18n.answerOptionB(), percentAnswered: 15, isCorrectAnswer: false},
@@ -110,7 +106,7 @@ export const multipleChoiceData = [
   },
   {
     id: 4,
-    question: '4. What is the best explanation for why digital data is represented in computers in binary?',
+    question: 'What is the best explanation for why digital data is represented in computers in binary?',
     answers:  [
       {multipleChoiceOption: i18n.answerOptionA(), percentAnswered: 15, isCorrectAnswer: false},
       {multipleChoiceOption: i18n.answerOptionB(), percentAnswered: 18, isCorrectAnswer: false},
@@ -124,7 +120,7 @@ export const multipleChoiceData = [
   },
   {
     id: 5,
-    question: '5. What is a function?',
+    question: 'What is a function?',
     answers:  [
       {multipleChoiceOption: i18n.answerOptionA(), percentAnswered: 15, isCorrectAnswer: false},
       {multipleChoiceOption: i18n.answerOptionB(), percentAnswered: 18, isCorrectAnswer: false},
@@ -137,15 +133,17 @@ export const multipleChoiceData = [
 ];
 
 // Data for single student table.
-// Array of questionStructurePropType from StudentAssessmentOverviewTable
+// Array of questionStructurePropType from SingleStudendAssesmentsMCTable
 export const multipleChoiceDataForSingleStudent = multipleChoiceData.map((question, index) => {
   return {
     id: question.id,
     question: question.question,
+    questionNumber: index + 1,
     correctAnswer: ['C', 'C B', 'D', 'B', 'A'][index],
   };
 });
 
+// Data for free responses assessments table.
 export const questionOne = [
   {
     id: 1,
@@ -175,6 +173,7 @@ export const questionOne = [
   },
 ];
 
+// Data for free responses assessments table.
 export const questionTwo = [
   {
     id: 1,
@@ -184,6 +183,7 @@ export const questionTwo = [
   },
 ];
 
+// Data for free responses assessments table.
 export const questionThree = [
   {
     id: 1,
@@ -193,56 +193,18 @@ export const questionThree = [
   },
 ];
 
+// Data for free responses survey table.
 export const surveyOne = [
-  {
-    id: 1,
-    studentId: '210',
-    name: 'Caley',
-    response: 'Sea lettuce gumbo grape kale kombu cauliflower salsify kohlrabi okra sea lettuce broccoli celery lotus root carrot winter purslane turnip greens garlic.',
-  },
-  {
-    id: 2,
-    studentId: '211',
-    name: 'Maddie',
-    response: 'Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.'
-  },
-  {
-    id: 3,
-    studentId: '212',
-    name: 'Erin',
-    response: 'Pea horseradish azuki bean lettuce avocado asparagus okra. Kohlrabi radish okra azuki bean corn fava bean mustard tigernut jícama green bean celtuce collard greens avocado quandong fennel gumbo black-eyed pea.',
-  },
-  {
-    id: 4,
-    studentId: '213',
-    name: 'Brendan',
-    response: 'Celery quandong swiss chard chicory earthnut pea potato. Salsify taro catsear garlic gram celery bitterleaf wattle seed collard greens nori.',
-  },
-  {
-    id: 5,
-    studentId: '214',
-    name: 'Dave',
-    response: 'Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale.',
-  },
+  {index: 0, response: 'Sea lettuce gumbo grape kale kombu cauliflower salsify kohlrabi okra sea lettuce broccoli celery lotus root carrot winter purslane turnip greens garlic.',},
+  {index: 1, response: 'Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.',},
+  {index: 2, response: 'Pea horseradish azuki bean lettuce avocado asparagus okra. Kohlrabi radish okra azuki bean corn fava bean mustard tigernut jícama green bean celtuce collard greens avocado quandong fennel gumbo black-eyed pea.',},
+  {index: 3, response: 'Celery quandong swiss chard chicory earthnut pea potato. Salsify taro catsear garlic gram celery bitterleaf wattle seed collard greens nori.',},
+  {index: 4, response: 'Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale.',},
 ];
 
+// Data for free reponses for survey table
 export const surveyTwo = [
-  {
-    id: 1,
-    studentId: '210',
-    name: 'Caley',
-    response: 'In every walk with nature, one receives far more than one seeks',
-  },
-  {
-    id: 2,
-    studentId: '211',
-    name: 'Dave',
-    response: 'In every walk with nature, one receives far more than one seeks',
-  },
-  {
-    id: 3,
-    studentId: '212',
-    name: 'Erin',
-    response: 'In every walk with nature, one receives far more than one seeks',
-  },
+  {index: 0, response: 'In every walk with nature, one receives far more than one seeks',},
+  {index: 1, response: 'In every walk with nature, one receives far more than one seeks',},
+  {index: 2, response: 'In every walk with nature, one receives far more than one seeks',},
 ];

@@ -50,7 +50,7 @@ const styles = {
   },
 };
 
-class UnconnectedTwoColumnActionBlock extends Component {
+export class UnconnectedTwoColumnActionBlock extends Component {
   static propTypes = {
     isRtl: PropTypes.bool.isRequired,
     responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
@@ -60,7 +60,8 @@ class UnconnectedTwoColumnActionBlock extends Component {
     description: PropTypes.string.isRequired,
     buttons: PropTypes.arrayOf(PropTypes.shape({
       url: PropTypes.string.isRequired,
-      text: PropTypes.string.isRequired
+      text: PropTypes.string.isRequired,
+      target: PropTypes.string,
     })),
   };
 
@@ -101,6 +102,7 @@ class UnconnectedTwoColumnActionBlock extends Component {
                     href={button.url}
                     color={Button.ButtonColor.gray}
                     text={button.text}
+                    target={button.target}
                   />
                   &nbsp;
                   &nbsp;
@@ -116,7 +118,7 @@ class UnconnectedTwoColumnActionBlock extends Component {
   }
 }
 
-const TwoColumnActionBlock = connect(state => ({
+export const TwoColumnActionBlock = connect(state => ({
   responsiveSize: state.responsive.responsiveSize,
   isRtl: state.isRtl,
 }))(UnconnectedTwoColumnActionBlock);

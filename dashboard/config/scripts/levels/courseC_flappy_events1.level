@@ -41,6 +41,7 @@
     "shareable": "false",
     "markdown_instructions": "Attach the `flap a normal amount` block to the `when click` event, then press \"Run\".   \r\n\r\n---\r\n\r\nClick or tap on the play space to move Flappy to the target.",
     "authored_hints": "[{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)\",\"hint_id\":\"courseC_flappy_events1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/68b329da9893e34099c7d8ad5cb9c940/courseC_flappy_events1.mp3\"}]",
+    "hint_prompt_attempts_threshold": 4,
     "contained_level_names": null
   },
   "published": true,

@@ -75,6 +75,7 @@ class Blockly < Level
     disable_if_else_editing
     show_type_hints
     thumbnail_url
+    include_shared_functions
   )
 
   before_save :update_ideal_level_source
@@ -160,6 +161,12 @@ class Blockly < Level
     0
   end
 
+  CATEGORY_CUSTOM_NAMES = {
+    Behavior: 'Behaviors',
+    Location: 'Locations',
+    PROCEDURE: 'Functions',
+    VARIABLE: 'Variables',
+  }
   def self.convert_toolbox_to_category(xml_string)
     xml = Nokogiri::XML(xml_string, &:noblanks)
     return xml_string if xml.nil? || xml.xpath('/xml/block[@type="category"]').empty?
@@ -171,6 +178,13 @@ class Blockly < Level
         category_node = Nokogiri::XML("<category name='#{category_name}'>").child
         category_node['custom'] = 'PROCEDURE' if category_name == 'Functions'
         category_node['custom'] = 'VARIABLE' if category_name == 'Variables'
+        xml.child << category_node
+        block.remove
+      elsif block.attr('type') == 'custom_category'
+        custom_type = block.xpath('title').text
+        category_name = CATEGORY_CUSTOM_NAMES[custom_type.to_sym]
+        category_node = Nokogiri::XML("<category name='#{category_name}'>").child
+        category_node['custom'] = custom_type
         xml.child << category_node
         block.remove
       else
@@ -187,11 +201,21 @@ class Blockly < Level
     return xml_string if xml.nil?
     xml.xpath('/xml/category').map(&:remove).each do |category|
       category_name = category.xpath('@name')
-      category_xml = <<-XML.strip_heredoc.chomp
-        <block type="category">
-          <title name="CATEGORY">#{category_name}</title>
-        </block>
-      XML
+      custom_category = category.xpath('@custom')
+      category_xml =
+        if custom_category.present?
+          <<-XML.strip_heredoc.chomp
+            <block type="custom_category">
+              <title name="CUSTOM">#{custom_category}</title>
+            </block>
+          XML
+        else
+          <<-XML.strip_heredoc.chomp
+            <block type="category">
+              <title name="CATEGORY">#{category_name}</title>
+            </block>
+          XML
+        end
       block = Nokogiri::XML(category_xml, &:noblanks).child
       xml << block
       xml << category.children
@@ -268,6 +292,14 @@ class Blockly < Level
           default_toolbox_blocks
         level_prop['codeFunctions'] = try(:project_template_level).try(:code_functions) || code_functions
         level_prop['sharedBlocks'] = shared_blocks
+        level_prop['sharedFunctions'] = shared_functions if include_shared_functions
+
+        if should_localize?
+          xml_blocks.each do |category|
+            prop_name = overrides[category.to_sym] || category.camelize(:lower)
+            level_prop[prop_name] = localize_function_blocks(level_prop[prop_name]) if level_prop.key?(prop_name)
+          end
+        end
       end
 
       if is_a? Applab
@@ -380,6 +412,35 @@ class Blockly < Level
     end
   end
 
+  def localized_toolbox_blocks
+    if should_localize? && toolbox_blocks
+      block_xml = Nokogiri::XML(localize_function_blocks(toolbox_blocks), &:noblanks)
+      block_xml.xpath('//../category').each do |category|
+        name = category.attr('name')
+        localized_name = I18n.t("data.block_categories.#{name}", default: nil)
+        category.set_attribute('name', localized_name) if localized_name
+      end
+      return block_xml.serialize(save_with: XML_OPTIONS).strip
+    end
+  end
+
+  def localize_function_blocks(blocks)
+    block_xml = Nokogiri::XML(blocks, &:noblanks)
+    block_xml.xpath("//block[@type=\"procedures_defnoreturn\"]").each do |function|
+      name = function.at_xpath('./title[@name="NAME"]')
+      next unless name
+      localized_name = I18n.t("data.function_names.#{name.content}", default: nil)
+      name.content = localized_name if localized_name
+    end
+    block_xml.xpath("//block[@type=\"procedures_callnoreturn\"]").each do |function|
+      mutation = function.at_xpath('./mutation')
+      next unless mutation
+      localized_name = I18n.t("data.function_names.#{mutation.attr('name')}", default: nil)
+      mutation.set_attribute('name', localized_name) if localized_name
+    end
+    return block_xml.serialize(save_with: XML_OPTIONS).strip
+  end
+
   def self.base_url
     "#{Blockly.asset_host_prefix}/blockly/"
   end
@@ -424,5 +485,11 @@ class Blockly < Level
     Rails.cache.fetch("blocks/#{type}", force: !Script.should_cache?) do
       Block.where(level_type: type).map(&:block_options)
     end
+  end
+
+  def shared_functions
+    Rails.cache.fetch("shared_functions/#{type}", force: !Script.should_cache?) do
+      SharedBlocklyFunction.where(level_type: type).map(&:to_xml_fragment)
+    end.join
   end
 end
