@@ -20,7 +20,7 @@ def main
   CDO.log.info "Starting to Opt Out Petition Emails Under 16"
   # This query loads about 200_000 (200K) rows into memory.
   DB[:forms].
-    # The production database has a max execution timeout
+    # The production database has a max execution timeout.
     select(Sequel.lit("/*+ MAX_EXECUTION_TIME(#{MAX_EXECUTION_TIME}) */ email")).
     where(kind: 'Petition').
     # Skip Petitions from people under 13, because they were already anonymized.
