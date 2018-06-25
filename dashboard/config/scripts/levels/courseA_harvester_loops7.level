@@ -39,9 +39,9 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You will need two `repeat` <xml><block type=\\\"controls_repeat_simplified_dropdown\\\">\\n    <title name=\\\"TIMES\\\" config=\\\"2-10\\\">5</title>\\n  </block></xml>loops after each other!\",\"hint_id\":\"courseA_harvester_loops7_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2e43f24f9f5446dafb256a559981bf63/courseA_harvester_loops7.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Use two loops to follow this path.\",\"hint_id\":\"courseA_harvester_loops7_b\",\"hint_type\":\"general\",\"hint_path\":\"[[1,2],[6,2],[6,5]]\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/466cd716b7ef84cd31475153cc28310d/courseA_harvester_loops7.mp3\"}]",
     "parent_level_id": 11960,
     "ideal": "7",
-    "contained_level_names": null,
     "show_type_hints": "false",
-    "include_shared_functions": "false"
+    "include_shared_functions": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
