@@ -148,19 +148,19 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   end
 
   test 'convert Windows Live OAuth student' do
-    assert_convert_oauth_user create(:student, :unmigrated_windowslive_sso)
+    assert_convert_sso_user_with_oauth_token create(:student, :unmigrated_windowslive_sso)
   end
 
   test 'convert Windows Live OAuth teacher' do
-    assert_convert_oauth_user create(:teacher, :unmigrated_windowslive_sso)
+    assert_convert_sso_user_with_oauth_token create(:teacher, :unmigrated_windowslive_sso)
   end
 
   test 'convert Facebook OAuth student' do
-    assert_convert_oauth_user create(:student, :unmigrated_facebook_sso)
+    assert_convert_sso_user_with_oauth_token create(:student, :unmigrated_facebook_sso)
   end
 
   test 'convert Facebook OAuth teacher' do
-    assert_convert_oauth_user create(:teacher, :unmigrated_facebook_sso)
+    assert_convert_sso_user_with_oauth_token create(:teacher, :unmigrated_facebook_sso)
   end
 
   def assert_convert_google_user(user)
@@ -169,7 +169,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     initial_oauth_refresh_token = user.oauth_refresh_token
     assert_user user, oauth_refresh_token: :not_nil
 
-    assert_convert_oauth_user user
+    assert_convert_sso_user_with_oauth_token user
 
     assert_user user, primary_authentication_option: {
       data: {
@@ -183,30 +183,91 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   #
 
   test 'convert Clever OAuth student' do
-    assert_convert_oauth_user create(:student, :unmigrated_clever_sso)
+    assert_convert_sso_user_with_oauth_token create(:student, :unmigrated_clever_sso)
   end
 
   test 'convert Clever OAuth teacher' do
-    assert_convert_oauth_user create(:teacher, :unmigrated_clever_sso)
+    assert_convert_sso_user_with_oauth_token create(:teacher, :unmigrated_clever_sso)
   end
 
   test 'convert Powerschool OAuth student' do
-    assert_convert_oauth_user create(:student, :unmigrated_powerschool_sso)
+    assert_convert_sso_user_with_oauth_token create(:student, :unmigrated_powerschool_sso)
   end
 
   test 'convert Powerschool OAuth teacher' do
-    assert_convert_oauth_user create(:teacher, :unmigrated_powerschool_sso)
+    assert_convert_sso_user_with_oauth_token create(:teacher, :unmigrated_powerschool_sso)
   end
 
-  private
+  def assert_convert_sso_user_with_oauth_token(user)
+    # Some Oauth accounts store an oauth token and expiration time
+    initial_oauth_token = user.oauth_token
+    initial_oauth_token_expiration = user.oauth_token_expiration
+    assert_user user,
+      oauth_token: :not_nil,
+      oauth_token_expiration: :not_nil
 
-  def assert_convert_oauth_user(user)
+    assert_convert_sso_user user
+
+    assert_user user, primary_authentication_option: {
+      data: {
+        oauth_token: initial_oauth_token,
+        oauth_token_expiration: initial_oauth_token_expiration
+      }
+    }
+  end
+
+  # At time of writing we have 6 The School Project students and 3 teachers.
+  # These mostly look like test accounts, but presumably we want to continue
+  # supporting them.
+
+  test 'convert The School Project student' do
+    assert_convert_sso_user create(:student, :unmigrated_the_school_project_sso)
+  end
+
+  test 'convert The School Project teacher' do
+    assert_convert_sso_user create(:teacher, :unmigrated_the_school_project_sso)
+  end
+
+  # Our Twitter SSO support is very old - we have a few thousand such accounts
+  # but less than 10 are still active.
+
+  test 'convert Twitter student' do
+    assert_convert_sso_user create(:student, :unmigrated_twitter_sso)
+  end
+
+  test 'convert Twitter teacher' do
+    assert_convert_sso_user create(:teacher, :unmigrated_twitter_sso)
+  end
+
+  #
+  # Learning Tools Interoperability (LTI) providers:
+  # These seem to store no oauth tokens at all, only a uid.
+  #
+
+  # At time of writing, we have ~400 Qwiklabs student accounts, no teachers.
+  # That doesn't mean we couldn't end up with a teacher account though.
+
+  test 'convert Qwiklabs LTI student' do
+    assert_convert_lti_user create(:student, :unmigrated_qwiklabs_sso)
+  end
+
+  test 'convert Qwiklabs LTI teacher' do
+    assert_convert_lti_user create(:teacher, :unmigrated_qwiklabs_sso)
+  end
+
+  def assert_convert_lti_user(user)
+    assert_convert_sso_user user
+
+    assert_user user, primary_authentication_option: {
+      data: nil
+    }
+  end
+
+  def assert_convert_sso_user(user)
     provider = user.provider
     initial_email = user.email
     initial_hashed_email = user.hashed_email
     initial_authentication_id = user.uid
-    initial_oauth_token = user.oauth_token
-    initial_oauth_token_expiration = user.oauth_token_expiration
 
     is_email_trusted = %w(facebook google_oauth2 windowslive).include? provider
 
@@ -221,9 +282,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
       provider: provider,
       email: user.student? ? :empty : :not_empty,
       hashed_email: is_email_trusted ? :not_empty : initial_hashed_email,
-      uid: :not_nil,
-      oauth_token: :not_nil,
-      oauth_token_expiration: :not_nil
+      uid: :not_nil
 
     migrate user
 
@@ -234,13 +293,11 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
         credential_type: provider,
         authentication_id: initial_authentication_id,
         email: expected_email,
-        hashed_email: expected_hashed_email,
-        data: {
-          oauth_token: initial_oauth_token,
-          oauth_token_expiration: initial_oauth_token_expiration
-        }
+        hashed_email: expected_hashed_email
       }
   end
+
+  private
 
   #
   # Assert a set of attributes about a user.
@@ -267,10 +324,12 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   #
   def assert_authentication_option(actual_option, expected_values)
     refute_nil actual_option
+    asserts_data = expected_values.key? :data
     expected_data = expected_values.delete(:data)
 
     assert_attributes actual_option, expected_values
 
+    return unless asserts_data
     if expected_data.nil?
       assert_nil actual_option.data
     elsif expected_data
