@@ -1,7 +1,38 @@
 require 'test_helper'
 
 class Pd::InternationalOptinTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  FORM_DATA = {
+    firstName: 'First',
+    firstNamePreferred: 'Preferred',
+    lastName: 'Last',
+    email: 'foo@bar.com',
+    emailAlternate: 'footoo@bar.com',
+    gender: 'Prefer not to answer',
+    schoolName: 'School Name',
+    schoolCity: 'School City',
+    schoolCountry: 'School Country',
+    ages: ['19+ years old'],
+    subjects: ['ICT'],
+    resources: ['Kodable'],
+    robotics: ['LEGO Education'],
+    workshopOrganizer: 'Workshop Organizer',
+    workshopFacilitator: 'Workshop Facilitator',
+    workshopCourse: 'Workshop Course',
+    optIn: 'Yes'
+  }
+
+  test 'Test international optin validation' do
+    optin = build :pd_international_optin, form_data: {}.to_json
+    refute optin.valid?
+
+    assert build(:pd_international_optin, form_data: FORM_DATA.to_json).valid?
+
+    refute build(
+      :pd_international_optin, form_data: FORM_DATA.merge(
+        {
+          ages: nil,
+        }
+      ).to_json
+    ).valid?
+  end
 end

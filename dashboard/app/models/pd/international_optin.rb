@@ -18,11 +18,24 @@ require 'international_optin_people'
 class Pd::InternationalOptin < ApplicationRecord
   include Pd::Form
 
+  belongs_to :user
+
+  validate :validate_email
+
   def self.required_fields
     [
       :first_name,
       :last_name,
       :email,
+      :gender,
+      :school_city,
+      :school_country,
+      :ages,
+      :subjects,
+      :resources,
+      :workshop_organizer,
+      :workshop_facilitator,
+      :workshop_course,
       :opt_in
     ]
   end
@@ -50,8 +63,6 @@ class Pd::InternationalOptin < ApplicationRecord
   def self.labels
     keys = %w(
       firstName
-      preferredFirstName
-      firstName
       firstNamePreferred
       lastName
       email
@@ -78,5 +89,13 @@ class Pd::InternationalOptin < ApplicationRecord
 
   def opt_in?
     sanitize_form_data_hash[:opt_in].downcase == "yes"
+  end
+
+  private
+
+  def validate_email
+    hash = sanitize_form_data_hash
+
+    add_key_error(:email) unless Cdo::EmailValidator.email_address?(hash[:email])
   end
 end
