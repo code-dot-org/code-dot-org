@@ -41,11 +41,11 @@
     "permitted_errors": "0",
     "parent_level_id": 7339,
     "name_suffix": "_2018",
-    "contained_level_names": null,
     "ideal": "6",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
-    "include_shared_functions": "false"
+    "include_shared_functions": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
