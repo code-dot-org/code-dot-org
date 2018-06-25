@@ -49,8 +49,8 @@
     "show_type_hints": "false",
     "remove_items_when_actor_collides": "false",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/c8f3479ab264a1e9578cd919ef615c19=levelbuilder/38420.png",
-    "contained_level_names": null,
-    "include_shared_functions": "false"
+    "include_shared_functions": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
