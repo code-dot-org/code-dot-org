@@ -316,6 +316,10 @@ class User < ActiveRecord::Base
     permission? UserPermission::PROJECT_VALIDATOR
   end
 
+  def levelbuilder?
+    permission? UserPermission::LEVELBUILDER
+  end
+
   # assign a course to a facilitator that is qualified to teach it
   def course_as_facilitator=(course)
     courses_as_facilitator << courses_as_facilitator.find_or_create_by(facilitator_id: id, course: course)
