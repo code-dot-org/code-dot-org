@@ -1,5 +1,6 @@
 import React, {PropTypes} from 'react';
 import {Well} from 'react-bootstrap';
+import _ from 'lodash';
 
 export default class TextResponses extends React.Component {
   static propTypes = {
@@ -9,7 +10,7 @@ export default class TextResponses extends React.Component {
       PropTypes.objectOf(PropTypes.arrayOf(PropTypes.string))
     ).isRequired,
     showAverage: PropTypes.boolean
-  }
+  };
 
   renderResponseBullets() {
     if (Array.isArray(this.props.answers)) {
@@ -79,6 +80,6 @@ export default class TextResponses extends React.Component {
         </b>
         {this.renderResponseBullets()}
       </Well>
-    )
+    );
   }
 }
