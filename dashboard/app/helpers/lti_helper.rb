@@ -88,7 +88,8 @@ module LtiHelper
           return
         end
 
-        user = User.where(provider: pvd_id, uid: uid).first_or_create
+        user = User.find_by_credential type: pvd_id, id: uid
+        user ||= User.create
         if user.new_record?
           user.provider  = pvd_id
           user.uid       = uid

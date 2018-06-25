@@ -54,7 +54,8 @@ var PROP_INFO = {
   max: { friendlyName: 'max', internalName: 'max', type: 'number', defaultValue: '100' },
   step: { friendlyName: 'step', internalName: 'step', type: 'number', defaultValue: '100' },
   value: { friendlyName: 'value', internalName: 'value', type: 'uistring', defaultValue: '"text"' },
-  fit: { friendlyName: 'fit', internalName: 'objectFit', type: 'string', defaultValue: '"fill"' }
+  fit: { friendlyName: 'fit', internalName: 'objectFit', type: 'string', defaultValue: '"fill"' },
+  index: { friendlyName: 'index', internalName: 'index', type: 'number', defaultValue: '0' },
 };
 
 // When we don't know the element type, we display all possible friendly names
@@ -125,6 +126,7 @@ PROPERTIES[ElementType.DROPDOWN] = {
   propertyNames: [
     'text',
     'options',
+    'index',
     'width',
     'height',
     'x',
