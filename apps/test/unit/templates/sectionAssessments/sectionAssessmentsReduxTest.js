@@ -14,6 +14,8 @@ import sectionAssessments, {
   getAssessmentsFreeResponseResults,
   getMultipleChoiceSurveyResults,
   getMultipleChoiceSectionSummary,
+  getCorrectAnswer,
+  indexesToAnswerString,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
 
@@ -132,6 +134,22 @@ describe('sectionAssessmentsRedux', () => {
     });
   });
 
+  describe('correct answer helper methods', () => {
+    describe('getCorrectAnswer', () => {
+      it('returns a string of letters', () => {
+        const answerArray = [{text: 'answer1', correct: false}, {text: 'answer2', correct: true}];
+        assert.deepEqual(getCorrectAnswer(answerArray), 'B');
+      });
+    });
+
+    describe('indexesToAnswerString', () => {
+      it('returns a string of letters', () => {
+        assert.deepEqual(indexesToAnswerString([0, 2]), 'A, C');
+        assert.deepEqual(indexesToAnswerString([1]), 'B');
+      });
+    });
+  });
+
   describe('Selector functions', () => {
     let rootState;
     beforeEach(() => {
@@ -206,7 +224,7 @@ describe('sectionAssessmentsRedux', () => {
                     123: {
                       level_results: [
                         {
-                          student_result: 'D',
+                          student_result: [3],
                           status: 'incorrect',
                           type: 'Multi'
                         },
@@ -421,8 +439,8 @@ describe('sectionAssessmentsRedux', () => {
                   responses_by_assessment: {
                     123: {
                       level_results: [
-                        {student_result: 'A', status: 'correct', type: 'Multi'},
-                        {student_result: 'A', status: 'incorrect', type: 'Multi'},
+                        {student_result: [0], status: 'correct', type: 'Multi'},
+                        {student_result: [0], status: 'incorrect', type: 'Multi'},
                       ]
                     }
                   }
@@ -432,8 +450,8 @@ describe('sectionAssessmentsRedux', () => {
                   responses_by_assessment: {
                     123: {
                       level_results: [
-                        {student_result: 'A', status: 'correct', type: 'Multi'},
-                        {student_result: 'B', status: 'correct', type: 'Multi'},
+                        {student_result: [0], status: 'correct', type: 'Multi'},
+                        {student_result: [1], status: 'correct', type: 'Multi'},
                       ]
                     }
                   }
