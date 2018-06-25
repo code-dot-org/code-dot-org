@@ -21,6 +21,9 @@ class ReportAbuseController < ApplicationController
 
   def report_abuse
     unless Rails.env.development?
+      subject = check_if_featured(params[:channel_id]) ?
+        'Featured Project: Abuse Reported' :
+        'Abuse Reported'
       response = HTTParty.post(
         'https://codeorg.zendesk.com/api/v2/tickets.json',
         headers: {"Content-Type" => "application/json", "Accept" => "application/json"},
@@ -30,7 +33,7 @@ class ReportAbuseController < ApplicationController
               name: (params[:name] == '' ? params[:email] : params[:name]),
               email: params[:email]
             },
-            subject: 'Abuse Reported',
+            subject: subject,
             comment: {
               body: [
                 "URL: #{params[:abuse_url]}",
@@ -92,5 +95,15 @@ class ReportAbuseController < ApplicationController
       email: (current_user.email unless current_user.nil?),
       age: (current_user.age unless current_user.nil?),
     }
+  end
+
+  private
+
+  def check_if_featured(project_id)
+    _, channel_id = storage_decrypt_channel_id(project_id)
+    return render_404 unless channel_id
+    @featured_project = FeaturedProject.find_by storage_app_id: channel_id
+    return false unless @featured_project
+    @featured_project.featured?
   end
 end
