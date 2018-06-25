@@ -61,7 +61,7 @@ const answerDataPropType = PropTypes.shape({
   percentAnswered: PropTypes.number,
 });
 
-const multipleChoiceSurveyDataPropType = PropTypes.shape({
+export const multipleChoiceSurveyDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   question: PropTypes.string.isRequired,
   answers: PropTypes.arrayOf(answerDataPropType),
@@ -76,6 +76,7 @@ const multipleChoiceSurveyDataPropType = PropTypes.shape({
 class MultipleChoiceSurveyOverviewTable extends Component {
   static propTypes= {
     multipleChoiceSurveyData: PropTypes.arrayOf(multipleChoiceSurveyDataPropType),
+    // multipleChoiceSurveyResults: getMultipleChoiceSurveyResults(state),
   };
 
   state = {
