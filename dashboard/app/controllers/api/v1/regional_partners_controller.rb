@@ -1,4 +1,6 @@
-class Api::V1::RegionalPartnersController < ApplicationController
+class Api::V1::RegionalPartnersController < Api::V1::JsonApiController
+  authorize_resource
+
   # GET /api/v1/regional_partners
   def index
     regional_partners = (current_user.facilitator? || current_user.workshop_admin?) ? RegionalPartner.all : current_user.regional_partners

@@ -23,6 +23,13 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
     )
   end
 
+  test_user_gets_response_for :index, user: nil, response: :forbidden
+  test_user_gets_response_for :index, user: :student, response: :forbidden
+  test_user_gets_response_for :index, user: :teacher, response: :success
+  test_user_gets_response_for :capacity, user: nil, response: :forbidden
+  test_user_gets_response_for :capacity, user: :student, response: :forbidden
+  test_user_gets_response_for :capacity, user: :teacher, response: :success
+
   test 'index gets regional partners for user' do
     program_manager = create :teacher
 

@@ -93,6 +93,7 @@ class Ability
         can [:new, :create, :read], Pd::Application::Facilitator1819Application, user_id: user.id
         can [:new, :create, :read], Pd::Application::Teacher1819Application, user_id: user.id
         can :manage, :maker_discount
+        can [:index, :capacity], RegionalPartner
       end
 
       if user.facilitator?
