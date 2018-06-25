@@ -5437,7 +5437,7 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
-        coursea:
+        coursea-2017:
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Debugging: Unspotted Bugs'
@@ -5492,7 +5492,7 @@ en:
           description_audience: 'Ages: 4-7'
           description_short: An introduction to computer science for pre-readers.
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
-        courseb:
+        courseb-2017:
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Debugging: Unspotted Bugs'
@@ -5527,7 +5527,7 @@ en:
           description_audience: 'Ages: 5-8'
           description_short: An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
-        coursec:
+        coursec-2017:
           stages:
             Building a Foundation:
               name: 'Persistence: Building a Foundation'
@@ -5566,7 +5566,7 @@ en:
           description_audience: 'Ages: 6-10'
           description_short: Learn the basics of computer science and create your own art, stories, and games.
           description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
-        coursed:
+        coursed-2017:
           stages:
             Introduction:
               name: Introduction to Online Puzzles
@@ -5646,7 +5646,7 @@ en:
           description_audience: 'Ages: 7-11'
           description_short: Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more.
           description: Learn new coding concepts including algorithms, nested loops, while loops, conditionals, and events. Get an introduction to digital citizenship before   creating your very own game or story that you can share.
-        coursee:
+        coursee-2017:
           stages:
             'Algorithms: Tangrams':
               name: 'Algorithms: Tangrams'
@@ -5776,7 +5776,7 @@ en:
           description_audience: 'Ages: 8-12'
           description_short: Quickly cover concepts in Course C & D and then go further with functions.
           description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
-        coursef:
+        coursef-2017:
           stages:
             'Algorithms: Tangrams':
               name: 'Algorithms: Tangrams'
@@ -6109,7 +6109,7 @@ en:
           stages:
             TTS:
               name: TTS
-        express:
+        express-2017:
           stages:
             'Programming Unplugged: My Robotic Friends':
               name: 'Programming Unplugged: My Robotic Friends'
@@ -6216,7 +6216,7 @@ en:
           description_audience: 'Ages: 9-18'
           description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
-        pre-express:
+        pre-express-2017:
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Debugging: Unspotted Bugs'
