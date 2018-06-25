@@ -9,10 +9,10 @@ export default class SingleChoiceResponses extends React.Component {
     answerType: PropTypes.string.isRequired,
     possibleAnswers: PropTypes.array.isRequired,
     otherAnswers: PropTypes.array
-  }
+  };
 
   render() {
-    let totalAnswers = Object.values(this.props.answers).reduce((sum, x) => {return sum + x}, 0);
+    let totalAnswers = Object.values(this.props.answers).reduce((sum, x) => sum + x, 0);
     return (
       <Panel>
         {this.props.question}
@@ -23,7 +23,7 @@ export default class SingleChoiceResponses extends React.Component {
               let answerIndex;
 
               if (this.props.answerType === 'selectValue') {
-                answerIndex = i + 1
+                answerIndex = i + 1;
               } else {
                 answerIndex = possibleAnswer;
               }
@@ -65,6 +65,6 @@ export default class SingleChoiceResponses extends React.Component {
           )
         }
       </Panel>
-    )
+    );
   }
 }
