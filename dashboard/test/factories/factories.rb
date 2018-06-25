@@ -1117,4 +1117,10 @@ FactoryGirl.define do
       longitude 151.200200
     end
   end
+
+  factory :teacher_feedback do
+    association :student
+    association :teacher
+    association :level
+  end
 end
