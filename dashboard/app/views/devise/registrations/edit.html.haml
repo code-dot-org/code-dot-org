@@ -112,6 +112,8 @@
         = f.hidden_field :password
         = f.hidden_field :password_confirmation
 
+  %div#manage-linked-accounts
+
 - if current_user.can_create_personal_login?
   %hr
   %h2= t('user.create_personal_login')
