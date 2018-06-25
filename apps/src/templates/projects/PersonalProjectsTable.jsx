@@ -94,33 +94,33 @@ const actionsFormatter = (actions, {rowData}) => {
   return (
     <QuickActionsCell>
       <PopUpMenu.Item
-        onClick={() => console.log("rowData", rowData)}
+        onClick={() => console.log("Rename was clicked")}
       >
-        Rename
+        {i18n.rename()}
       </PopUpMenu.Item>
       <PopUpMenu.Item
         onClick={() => console.log("Remix was clicked")}
       >
-        Remix
+        {i18n.remix()}
       </PopUpMenu.Item>
       {!!rowData.isPublished && (
         <PopUpMenu.Item
           onClick={() => console.log("Unpublish was clicked")}
         >
-          Unpublish
+          {i18n.unpublish()}
         </PopUpMenu.Item>
       )}
       {!rowData.isPublished && (
         <PopUpMenu.Item
           onClick={() => console.log("Publish was clicked")}
         >
-          Publish
+          {i18n.publish()}
         </PopUpMenu.Item>
       )}
       <PopUpMenu.Item
         onClick={() => console.log("Delete was clicked")}
       >
-        Delete
+        {i18n.delete()}
       </PopUpMenu.Item>
     </QuickActionsCell>
   );
