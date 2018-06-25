@@ -39,9 +39,9 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You will need one `repeat` <xml> <block type=\\\"controls_repeat_simplified_dropdown\\\">\\n    <title name=\\\"TIMES\\\" config=\\\"2-10\\\">6</title>\\n  </block></xml> loop after another.\",\"hint_id\":\"courseA_harvester_loops5a_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/97cd87800c4b2f8918e7927039044816/courseA_harvester_loops5a.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"One loop will repeat `move South`<xml><block type=\\\"maze_moveSouth\\\" limit=\\\"1\\\"/></xml>, and the other will repeat `move East` <xml><block type=\\\"maze_moveEast\\\" limit=\\\"1\\\"/></xml>\",\"hint_id\":\"courseA_harvester_loops5a_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e682363a6c9f8986637210dd2e604771/courseA_harvester_loops5a.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Use this path to move one way, and then the other.\",\"hint_id\":\"courseA_harvester_loops5a_c\",\"hint_type\":\"general\",\"hint_path\":\"[[1,1],[1,7],[7,7]]\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/56a6cd7db0e659b5fcdea74867b90d5a/courseA_harvester_loops5a.mp3\"}]",
     "parent_level_id": 11959,
     "ideal": "7",
-    "contained_level_names": null,
     "show_type_hints": "false",
-    "include_shared_functions": "false"
+    "include_shared_functions": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

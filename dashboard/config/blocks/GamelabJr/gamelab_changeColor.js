@@ -25,7 +25,7 @@ function hexToHSL(hex) {
   return HSL;
 }
 
-function HSLToRGB(h, s, l) {
+function HSLToHex(h, s, l) {
 	if (s == 0) {
 		return [l, l, l];
 	}
@@ -46,12 +46,10 @@ function HSLToRGB(h, s, l) {
 		rgb[i] = rgb[i] < 1 / 6 ? temp1 + (temp2 - temp1) * 6 * rgb[i] : rgb[i] < 1 / 2 ? temp2 : rgb[i] < 2 / 3 ? temp1 + (temp2 - temp1) * 6 * (2 / 3 - rgb[i]) : temp1;
 	}
 
-	return rgb;
+    var myHex = "#" + ((1 << 24) + (rgb[0] << 16) + (rgb[1] << 8) + rgb[2]).toString(16).slice(1);
+  
+	return myHex;
 }
-
-
-
-
 
 
 function changeColor(color1, changeType, amount) {
@@ -59,22 +57,22 @@ function changeColor(color1, changeType, amount) {
   if (changeType == "tint") {
     var myColor = hexToHSL(color1);
     myColor.h = (myColor.h + amount) % 360;
-    myColor = HSLToRGB(myColor.h, myColor.s, myColor.l);
-    return color(myColor).toString();
+    myColor = HSLToHex(myColor.h, myColor.s, myColor.l);
+    return myColor;
     
   }
   else if (changeType == "tone") {
     var myColor = hexToHSL(color1);
     myColor.s = (myColor.s + amount) % 100;
-    myColor = HSLToRGB(myColor.h, myColor.s, myColor.l);
-    return color(myColor).toString();
+    myColor = HSLToHex(myColor.h, myColor.s, myColor.l);
+    return myColor;
   }
   
   else if (changeType == "shade") {
    	var myColor = hexToHSL(color1);
     myColor.l = (myColor.l + amount) % 100;
-    myColor = HSLToRGB(myColor.h, myColor.s, myColor.l);
-    return color(myColor).toString();
+    myColor = HSLToHex(myColor.h, myColor.s, myColor.l);
+    return myColor;
   } 
   
   else {
