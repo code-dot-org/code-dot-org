@@ -570,9 +570,6 @@ Applab.init = function (config) {
     designMode.renderDesignWorkspace();
     designMode.loadDefaultScreen();
 
-    getStore().dispatch(actions.changeInterfaceMode(
-      Applab.startInDesignMode() ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
-
     designMode.configureDragAndDrop();
 
     var designModeViz = document.getElementById('designModeViz');
@@ -618,7 +615,7 @@ Applab.init = function (config) {
   config.level.levelBlocks = config.dropletConfig.blocks;
 
   getStore().dispatch(actions.changeInterfaceMode(
-    Applab.startInDesignMode() ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
+    (!Applab.isReadOnlyView && Applab.startInDesignMode()) ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
 
   Applab.reactInitialProps_ = {
     onMount: onMount

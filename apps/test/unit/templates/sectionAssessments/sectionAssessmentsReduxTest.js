@@ -14,6 +14,8 @@ import sectionAssessments, {
   getAssessmentsFreeResponseResults,
   getMultipleChoiceSurveyResults,
   getMultipleChoiceSectionSummary,
+  getCorrectAnswer,
+  indexesToAnswerString,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
 
@@ -132,6 +134,22 @@ describe('sectionAssessmentsRedux', () => {
     });
   });
 
+  describe('correct answer helper methods', () => {
+    describe('getCorrectAnswer', () => {
+      it('returns a string of letters', () => {
+        const answerArray = [{text: 'answer1', correct: false}, {text: 'answer2', correct: true}];
+        assert.deepEqual(getCorrectAnswer(answerArray), 'B');
+      });
+    });
+
+    describe('indexesToAnswerString', () => {
+      it('returns a string of letters', () => {
+        assert.deepEqual(indexesToAnswerString([0, 2]), 'A, C');
+        assert.deepEqual(indexesToAnswerString([1]), 'B');
+      });
+    });
+  });
+
   describe('Selector functions', () => {
     let rootState;
     beforeEach(() => {
@@ -206,7 +224,7 @@ describe('sectionAssessmentsRedux', () => {
                     123: {
                       level_results: [
                         {
-                          student_result: 'D',
+                          student_result: [3],
                           status: 'incorrect',
                           type: 'Multi'
                         },
@@ -299,8 +317,8 @@ describe('sectionAssessmentsRedux', () => {
                 123: {
                   stage_name: 'name',
                   levelgroup_results: [
-                    {type: 'free_response', question: 'question1', results: [{result: 'Im not sure'},]},
-                    {type: 'free_response', question: 'question2', results: [{result: 'Im very sure'},]},
+                    {type: 'free_response', question_index: 0, question: 'question1', results: [{result: 'Im not sure'},]},
+                    {type: 'free_response', question_index: 1, question: 'question2', results: [{result: 'Im very sure'},]},
                   ],
                 }
               }
@@ -309,8 +327,8 @@ describe('sectionAssessmentsRedux', () => {
         };
         const result = getSurveyFreeResponseQuestions(stateWithSurvey);
         assert.deepEqual(result, [
-          {questionText: 'question1', answers: [{index: 0, response: 'Im not sure'}]},
-          {questionText: 'question2', answers: [{index: 0, response: 'Im very sure'}]}
+          {questionText: 'question1', questionNumber: 1, answers: [{index: 0, response: 'Im not sure'}]},
+          {questionText: 'question2', questionNumber: 2, answers: [{index: 0, response: 'Im very sure'}]}
         ]);
       });
     });
@@ -334,12 +352,14 @@ describe('sectionAssessmentsRedux', () => {
                   levelgroup_results: [
                     {
                       type: 'multi',
+                      question_index: 0,
                       question: 'question1',
                       answer_texts: [{text: 'agree'}, {text: 'disagree'}],
                       results: [{answer_index: 0}]
                     },
                     {
                       type: 'multi',
+                      question_index: 1,
                       question: 'question2',
                       answer_texts: [{text: 'agree'}, {text: 'disagree'}],
                       results: [{answer_index: 1}]
@@ -354,12 +374,14 @@ describe('sectionAssessmentsRedux', () => {
         assert.deepEqual(result, [
           {
             id: 0,
+            questionNumber: 1,
             question: 'question1',
             answers: [{multipleChoiceOption: 'A', percentAnswered: 100}, {multipleChoiceOption: 'B', percentAnswered: 0}],
             notAnswered: 0,
           },
           {
             id: 1,
+            questionNumber: 2,
             question: 'question2',
             answers: [{multipleChoiceOption: 'A', percentAnswered: 0}, {multipleChoiceOption: 'B', percentAnswered: 100}],
             notAnswered: 0,
@@ -417,8 +439,8 @@ describe('sectionAssessmentsRedux', () => {
                   responses_by_assessment: {
                     123: {
                       level_results: [
-                        {student_result: 'A', status: 'correct', type: 'Multi'},
-                        {student_result: 'A', status: 'incorrect', type: 'Multi'},
+                        {student_result: [0], status: 'correct', type: 'Multi'},
+                        {student_result: [0], status: 'incorrect', type: 'Multi'},
                       ]
                     }
                   }
@@ -428,8 +450,8 @@ describe('sectionAssessmentsRedux', () => {
                   responses_by_assessment: {
                     123: {
                       level_results: [
-                        {student_result: 'A', status: 'correct', type: 'Multi'},
-                        {student_result: 'B', status: 'correct', type: 'Multi'},
+                        {student_result: [0], status: 'correct', type: 'Multi'},
+                        {student_result: [1], status: 'correct', type: 'Multi'},
                       ]
                     }
                   }
