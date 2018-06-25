@@ -1,115 +1,114 @@
-- if current_user && (current_user.permission?(UserPermission::LEVELBUILDER) || current_user.permission?(UserPermission::PROJECT_VALIDATOR))
+- if current_user && (current_user.levelbuilder? || current_user.project_validator?)
   = render layout: 'shared/extra_links' do
     %strong= @level.name
-    - if (current_user.permission?(UserPermission::LEVELBUILDER) || current_user.permission?(UserPermission::PROJECT_VALIDATOR))
-      %ul
-        %li= link_to level_path(@level), level_path(@level)
-        -if @level.level_concept_difficulty && !@level.level_concept_difficulty.concept_difficulties_as_string.empty?
-          %li= "LCD: #{@level.level_concept_difficulty.concept_difficulties_as_string}"
-        %li= link_to "see callouts (#{@level.available_callouts(@script_level).count})", show_callouts: '1'
-        - if @level.is_a? Gamelab
-          %li= link_to 'view animation JSON', '', onclick: 'window.viewExportableAnimationList(); return false'
-        - if can? :edit, @level
-          - if Rails.application.config.levelbuilder_mode
-            %li
-              = link_to '[E]dit', edit_level_path(@level), { accesskey: 'e', title: "Edit this level. Can use the browser-dependent accesskey shortcut for quick access." }
-              - if @level.is_a? Blockly
-                %ul
-                  %li= link_to 's[o]lution', level_edit_blocks_path(@level, :solution_blocks), { accesskey: 'o' }
-                  %li= link_to '[t]oolbox', level_edit_blocks_path(@level, :toolbox_blocks), { accesskey: 't' }
-                  %li= link_to "[s]tart (#{Blockly.count_xml_blocks(@level.start_blocks)})", level_edit_blocks_path(@level, :start_blocks), { accesskey: 's' }
-                  %li= link_to "required (#{Blockly.count_xml_blocks(@level.required_blocks)})", level_edit_blocks_path(@level, :required_blocks)
-                  %li= link_to "recommended (#{Blockly.count_xml_blocks(@level.recommended_blocks)})", level_edit_blocks_path(@level, :recommended_blocks)
-                  %li= link_to "initialization (#{Blockly.count_xml_blocks(@level.initialization_blocks)})", level_edit_blocks_path(@level, :initialization_blocks)
-                  - if @level.is_a? Artist
-                    %li= link_to 'pre-draw', level_edit_blocks_path(@level, :predraw_blocks)
-            %li= link_to 'delete', level_path(@level), method: :delete, data: { confirm: t('crud.confirm') }, style: 'color: red'
-            %li
-              = link_to 'clone', '', onclick: "$('#clone_#{@level.id}').toggle(); return false;"
-              %div{class: 'clone_level', id: "clone_#{@level.id}", style: 'display: none;'}
-                = form_tag level_clone_path(@level), method: :post, remote: true do
-                  = label_tag 'New name:'
-                  = text_field_tag :name, @level.name
-                  = hidden_field_tag :authenticity_token, form_authenticity_token
-                  = submit_tag 'Clone'
-              - content_for(:head) do
-                %script{src: minifiable_asset_path('js/levelbuilder.js')}
-              :javascript
-                window.levelbuilder.ajaxSubmit('.clone_level');
-            -if @level.is_a? LevelGroup
-              %li
-                sublevels
-                %ol
-                  - @level.properties['pages'].each do |page|
-                    - page['levels'].each do |level_name|
-                      %li= link_to level_name, level_path(Level.find_by_name(level_name))
-            - if contained_level_names = @level.properties['contained_level_names']
-              %li
-                contained levels
-                %ol
-                  - contained_level_names.each do |contained_level_name|
-                    - contained_level = Level.find_by_name(contained_level_name)
-                    %li
-                      = link_to contained_level_name, level_path(contained_level)
-                      = link_to '[E]', edit_level_path(contained_level)
-            - if project_template_level_name = @level.properties['project_template_level_name']
-              - project_template_level = Level.find_by_name(project_template_level_name)
-              %li
-                = 'template: '
-                = link_to project_template_level_name, level_path(project_template_level)
-                = link_to '[E]', edit_level_path(project_template_level)
-          - elsif @script_level
-            %li= link_to 'edit on levelbuilder', URI.join("https://levelbuilder-studio.code.org/", build_script_level_path(@script_level)).to_s
-        - else
-          %li (Cannot edit)
-      This level is in #{@level.script_levels.count} scripts:
-      %ul
-        - @level.script_levels.each do |script_level|
+    %ul
+      %li= link_to level_path(@level), level_path(@level)
+      -if @level.level_concept_difficulty && !@level.level_concept_difficulty.concept_difficulties_as_string.empty?
+        %li= "LCD: #{@level.level_concept_difficulty.concept_difficulties_as_string}"
+      %li= link_to "see callouts (#{@level.available_callouts(@script_level).count})", show_callouts: '1'
+      - if @level.is_a? Gamelab
+        %li= link_to 'view animation JSON', '', onclick: 'window.viewExportableAnimationList(); return false'
+      - if can? :edit, @level
+        - if Rails.application.config.levelbuilder_mode
           %li
-            = link_to script_level.script.name, script_level.script
-            = "(stage ID: #{script_level.stage_id})"
-            as
-            = link_to build_script_level_path(script_level), build_script_level_path(script_level)
-      .project_admin
-      - if current_user.permission?(UserPermission::PROJECT_VALIDATOR) && params[:channel_id]
-        %br/
-        Project info:
-        %ul
-          - owner_storage_id, storage_app_id = storage_decrypt_channel_id(params[:channel_id]) rescue [nil, nil]
-          - sources_link = "https://s3.console.aws.amazon.com/s3/buckets/#{CDO.sources_s3_bucket}/#{CDO.sources_s3_directory}/#{owner_storage_id}/#{storage_app_id}/"
-          %li= "project owner: #{User.find_channel_owner(params[:channel_id]).try(:username)}"
-          %li= "owner storage id: #{owner_storage_id}"
-          %li= "storage app id: #{storage_app_id}"
-          - exists = FeaturedProject.exists?(:storage_app_id => storage_app_id)
-          - if exists
-            - project = FeaturedProject.find_by storage_app_id: storage_app_id
-            - currently_featured = project.unfeatured_at == nil && project.featured_at != nil
-          %li
-            S3 link:
-            = link_to 'sources', sources_link, target: '_blank'
-          - remix_ancestry = StorageApps.remix_ancestry(params[:channel_id], depth: 5)
-          - if remix_ancestry.empty?
-            %li Not a remix.
-          - else
-            %li
-              Remix ancestry:
+            = link_to '[E]dit', edit_level_path(@level), { accesskey: 'e', title: "Edit this level. Can use the browser-dependent accesskey shortcut for quick access." }
+            - if @level.is_a? Blockly
               %ul
-                - remix_ancestry.each do |channel|
+                %li= link_to 's[o]lution', level_edit_blocks_path(@level, :solution_blocks), { accesskey: 'o' }
+                %li= link_to '[t]oolbox', level_edit_blocks_path(@level, :toolbox_blocks), { accesskey: 't' }
+                %li= link_to "[s]tart (#{Blockly.count_xml_blocks(@level.start_blocks)})", level_edit_blocks_path(@level, :start_blocks), { accesskey: 's' }
+                %li= link_to "required (#{Blockly.count_xml_blocks(@level.required_blocks)})", level_edit_blocks_path(@level, :required_blocks)
+                %li= link_to "recommended (#{Blockly.count_xml_blocks(@level.recommended_blocks)})", level_edit_blocks_path(@level, :recommended_blocks)
+                %li= link_to "initialization (#{Blockly.count_xml_blocks(@level.initialization_blocks)})", level_edit_blocks_path(@level, :initialization_blocks)
+                - if @level.is_a? Artist
+                  %li= link_to 'pre-draw', level_edit_blocks_path(@level, :predraw_blocks)
+          %li= link_to 'delete', level_path(@level), method: :delete, data: { confirm: t('crud.confirm') }, style: 'color: red'
+          %li
+            = link_to 'clone', '', onclick: "$('#clone_#{@level.id}').toggle(); return false;"
+            %div{class: 'clone_level', id: "clone_#{@level.id}", style: 'display: none;'}
+              = form_tag level_clone_path(@level), method: :post, remote: true do
+                = label_tag 'New name:'
+                = text_field_tag :name, @level.name
+                = hidden_field_tag :authenticity_token, form_authenticity_token
+                = submit_tag 'Clone'
+            - content_for(:head) do
+              %script{src: minifiable_asset_path('js/levelbuilder.js')}
+            :javascript
+              window.levelbuilder.ajaxSubmit('.clone_level');
+          -if @level.is_a? LevelGroup
+            %li
+              sublevels
+              %ol
+                - @level.properties['pages'].each do |page|
+                  - page['levels'].each do |level_name|
+                    %li= link_to level_name, level_path(Level.find_by_name(level_name))
+          - if contained_level_names = @level.properties['contained_level_names']
+            %li
+              contained levels
+              %ol
+                - contained_level_names.each do |contained_level_name|
+                  - contained_level = Level.find_by_name(contained_level_name)
                   %li
-                    %tt= link_to channel[0,7], "/projects/#{params[:key]}/#{channel}"
+                    = link_to contained_level_name, level_path(contained_level)
+                    = link_to '[E]', edit_level_path(contained_level)
+          - if project_template_level_name = @level.properties['project_template_level_name']
+            - project_template_level = Level.find_by_name(project_template_level_name)
+            %li
+              = 'template: '
+              = link_to project_template_level_name, level_path(project_template_level)
+              = link_to '[E]', edit_level_path(project_template_level)
+        - elsif @script_level
+          %li= link_to 'edit on levelbuilder', URI.join("https://levelbuilder-studio.code.org/", build_script_level_path(@script_level)).to_s
+      - else
+        %li (Cannot edit)
+    This level is in #{@level.script_levels.count} scripts:
+    %ul
+      - @level.script_levels.each do |script_level|
+        %li
+          = link_to script_level.script.name, script_level.script
+          = "(stage ID: #{script_level.stage_id})"
+          as
+          = link_to build_script_level_path(script_level), build_script_level_path(script_level)
+    .project_admin
+    - if current_user.project_validator? && params[:channel_id]
+      %br/
+      Project info:
+      %ul
+        - owner_storage_id, storage_app_id = storage_decrypt_channel_id(params[:channel_id]) rescue [nil, nil]
+        - sources_link = "https://s3.console.aws.amazon.com/s3/buckets/#{CDO.sources_s3_bucket}/#{CDO.sources_s3_directory}/#{owner_storage_id}/#{storage_app_id}/"
+        %li= "project owner: #{User.find_channel_owner(params[:channel_id]).try(:username)}"
+        %li= "owner storage id: #{owner_storage_id}"
+        %li= "storage app id: #{storage_app_id}"
+        - exists = FeaturedProject.exists?(:storage_app_id => storage_app_id)
+        - if exists
+          - project = FeaturedProject.find_by storage_app_id: storage_app_id
+          - currently_featured = project.unfeatured_at == nil && project.featured_at != nil
+        %li
+          S3 link:
+          = link_to 'sources', sources_link, target: '_blank'
+        - remix_ancestry = StorageApps.remix_ancestry(params[:channel_id], depth: 5)
+        - if remix_ancestry.empty?
+          %li Not a remix.
+        - else
+          %li
+            Remix ancestry:
+            %ul
+              - remix_ancestry.each do |channel|
+                %li
+                  %tt= link_to channel[0,7], "/projects/#{params[:key]}/#{channel}"
 
-        #feature_project{'style' => ('display: none;' unless !exists || !currently_featured)}
-          %button{id: "feature", class: "btn btn-default btn-sm"}
-            Feature in gallery
+      #feature_project{'style' => ('display: none;' unless !exists || !currently_featured)}
+        %button{id: "feature", class: "btn btn-default btn-sm"}
+          Feature in gallery
 
-        #unfeature_project{'style' => ('display: none;' unless currently_featured)}
-          %button{id: "feature", class: "btn btn-default btn-sm"}
-            Stop featuring in gallery
+      #unfeature_project{'style' => ('display: none;' unless currently_featured)}
+        %button{id: "feature", class: "btn btn-default btn-sm"}
+          Stop featuring in gallery
 
-        #unpublished_warning{'style' => ('display: none; margin-top: 20px; width: 250px;')}
-          * This project is currently unpublished. It can still be marked as featured, but it will not show in the gallery until the owner publishes it.
+      #unpublished_warning{'style' => ('display: none; margin-top: 20px; width: 250px;')}
+        * This project is currently unpublished. It can still be marked as featured, but it will not show in the gallery until the owner publishes it.
 
-    - if current_user.permission?(UserPermission::PROJECT_VALIDATOR)
+    - if current_user.project_validator?
       %br
       %div.admin-abuse{ :style => "display: none" }
         Abuse score:
