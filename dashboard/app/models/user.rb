@@ -504,7 +504,7 @@ class User < ActiveRecord::Base
   validates :name, length: {within: 1..70}, allow_blank: true
   validates :name, no_utf8mb4: true
 
-  defer_age = proc {|user| %w(google_oauth2 clever powerschool).include?(user.provider) || user.provider == User::PROVIDER_SPONSORED}
+  defer_age = proc {|user| %w(google_oauth2 clever powerschool).include?(user.provider) || user.sponsored?}
 
   validates :age, presence: true, on: :create, unless: defer_age # only do this on create to avoid problems with existing users
   AGE_DROPDOWN_OPTIONS = (4..20).to_a << "21+"
@@ -645,6 +645,19 @@ class User < ActiveRecord::Base
 
     hashed_email = User.hash_email(email)
     User.find_by(hashed_email: hashed_email)
+  end
+
+  # Locate an SSO user by SSO provider and associated user id.
+  # @param [String] type A credential type / provider type.  In the future this
+  #   should always be one of the valid credential types from AuthenticationOption
+  # @param [String] id A user id associated with the particular provider.
+  # @returns [User|nil]
+  def self.find_by_credential(type:, id:)
+    authentication_option = AuthenticationOption.find_by(
+      credential_type: type,
+      authentication_id: id
+    )
+    authentication_option&.user || User.find_by(provider: type, uid: id)
   end
 
   def self.find_channel_owner(encrypted_channel_id)
@@ -812,7 +825,7 @@ class User < ActiveRecord::Base
   def email_required?
     return true if teacher?
     return false if provider == User::PROVIDER_MANUAL
-    return false if provider == User::PROVIDER_SPONSORED
+    return false if sponsored?
     return false if oauth?
     return false if parent_managed_account?
     true

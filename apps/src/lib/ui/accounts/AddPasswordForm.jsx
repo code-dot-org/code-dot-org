@@ -1,5 +1,6 @@
 import React, {PropTypes} from 'react';
 import i18n from '@cdo/locale';
+import color from '@cdo/apps/util/color';
 import {Field} from '../SystemDialog/SystemDialog';
 
 const styles = {
@@ -29,6 +30,9 @@ const styles = {
     paddingRight: 10,
     fontStyle: 'italic',
   },
+  errorText: {
+    color: color.red,
+  },
 };
 
 export const SAVING_STATE = i18n.saving();
@@ -38,7 +42,10 @@ export const PASSWORDS_MUST_MATCH = i18n.passwordsMustMatch();
 const DEFAULT_STATE = {
   password: '',
   passwordConfirmation: '',
-  submissionState: ''
+  submissionState: {
+    message: '',
+    isError: false
+  },
 };
 
 export default class AddPasswordForm extends React.Component {
@@ -50,12 +57,16 @@ export default class AddPasswordForm extends React.Component {
 
   onPasswordChange = (event) => {
     this.setState({
+      // Clear any existing submission state
+      submissionState: DEFAULT_STATE.submissionState,
       password: event.target.value
     });
   };
 
   onPasswordConfirmationChange = (event) => {
     this.setState({
+      // Clear any existing submission state
+      submissionState: DEFAULT_STATE.submissionState,
       passwordConfirmation: event.target.value
     });
   };
@@ -79,7 +90,10 @@ export default class AddPasswordForm extends React.Component {
   handleSubmit = () => {
     const {password, passwordConfirmation} = this.state;
     this.setState({
-      submissionState: SAVING_STATE
+      ...DEFAULT_STATE.submissionState,
+      submissionState: {
+        message: SAVING_STATE
+      }
     });
     this.props.handleSubmit(password, passwordConfirmation)
       .then(this.onSuccess, this.onFailure);
@@ -88,17 +102,26 @@ export default class AddPasswordForm extends React.Component {
   onSuccess = () => {
     this.setState({
       ...DEFAULT_STATE,
-      submissionState: SUCCESS_STATE
+      submissionState: {
+        message: SUCCESS_STATE
+      }
     });
   };
 
   onFailure = (error) => {
     this.setState({
-      submissionState: error.message
+      submissionState: {
+        message: error.message,
+        isError: true
+      }
     });
   };
 
   render() {
+    const {submissionState} = this.state;
+    let statusTextStyles = styles.statusText;
+    statusTextStyles = submissionState.isError ? {...statusTextStyles, ...styles.errorText} : statusTextStyles;
+
     return (
       <div style={styles.container}>
         <hr/>
@@ -120,12 +143,11 @@ export default class AddPasswordForm extends React.Component {
           onChange={this.onPasswordConfirmationChange}
         />
         <div style={styles.buttonContainer}>
-          {/* TODO: style error state with red text */}
           <div
             id="uitest-add-password-status"
-            style={styles.statusText}
+            style={statusTextStyles}
           >
-            {this.state.submissionState}
+            {submissionState.message}
           </div>
           {/* This button intentionally uses Bootstrap classes to match other account page buttons */}
           <button

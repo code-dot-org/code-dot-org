@@ -7,7 +7,7 @@
 #  hashed_email      :string(255)      default(""), not null
 #  credential_type   :string(255)      not null
 #  authentication_id :string(255)
-#  data              :string(255)
+#  data              :text(65535)
 #  deleted_at        :datetime
 #  user_id           :integer          not null
 #  created_at        :datetime         not null
@@ -34,7 +34,7 @@ class AuthenticationOption < ApplicationRecord
     FACEBOOK = 'facebook',
     GOOGLE = 'google_oauth2',
     POWERSCHOOL = 'powerschool',
-    QWIKCAMPS = 'lti_lti_prod_kids.qwikcamps.com',
+    QWIKLABS = 'lti_lti_prod_kids.qwikcamps.com',
     THE_SCHOOL_PROJECT = 'the_school_project',
     TWITTER = 'twitter',
     WINDOWS_LIVE = 'windowslive',

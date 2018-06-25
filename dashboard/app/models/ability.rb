@@ -70,6 +70,7 @@ class Ability
       can :manage, Pd::Enrollment, user_id: user.id
       can :workshops_user_enrolled_in, Pd::Workshop
       can :index, Section, user_id: user.id
+      can :get_feedbacks, TeacherFeedback, student_id: user.id
 
       if user.teacher?
         can :manage, Section, user_id: user.id
@@ -77,6 +78,7 @@ class Ability
         can :manage, User do |u|
           user.students.include?(u)
         end
+        can [:create, :get_feedback_from_teacher], TeacherFeedback, student_sections: {user_id: user.id}
         can :manage, Follower
         can :read, Workshop
         can :manage, UserLevel do |user_level|

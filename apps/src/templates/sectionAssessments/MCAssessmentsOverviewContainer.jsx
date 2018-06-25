@@ -3,6 +3,7 @@ import MultipleChoiceAssessmentsOverviewTable from './MultipleChoiceAssessmentsO
 import {getMultipleChoiceSectionSummary} from './sectionAssessmentsRedux';
 import { connect } from 'react-redux';
 import { multipleChoiceDataPropType } from './assessmentDataShapes';
+import i18n from "@cdo/locale";
 
 class MCAssessmentsOverviewContainer extends Component {
   static propTypes= {
@@ -15,7 +16,7 @@ class MCAssessmentsOverviewContainer extends Component {
       <div>
         {questionAnswerData.length > 0 &&
           <div>
-            <h2>Multiple choice overview table</h2>
+            <h2>{i18n.multipleChoiceQuestionsOverview()}</h2>
             <MultipleChoiceAssessmentsOverviewTable
               questionAnswerData={questionAnswerData}
             />
