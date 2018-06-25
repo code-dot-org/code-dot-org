@@ -653,7 +653,6 @@ def run_feature(browser, feature, options)
   # Force Applitools eyes to use a consistent host OS identifier for now
   # BrowserStack was reporting Windows 6.0 and 6.1, causing different baselines
   run_environment['APPLITOOLS_HOST_OS'] = 'Windows 6x' unless browser['mobile']
-  run_environment['APPLITOOLS_API_KEY'] = CDO.applitools_eyes_api_key
 
   # When executing in a CircleCI environment use the hash of the commit that triggered
   # the CircleCI build.  Our CircleCI build includes a step to merge the staging

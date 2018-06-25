@@ -46,7 +46,7 @@ end
 def ensure_eyes_available
   return if @eyes
   @eyes = Applitools::Selenium::Eyes.new
-  @eyes.api_key = ENV['APPLITOOLS_API_KEY']
+  @eyes.api_key = CDO.applitools_eyes_api_key
   # Force eyes to use a consistent host OS identifier for now
   # BrowserStack was reporting Windows 6.0 and 6.1, causing different baselines
   @eyes.host_os = ENV['APPLITOOLS_HOST_OS']
