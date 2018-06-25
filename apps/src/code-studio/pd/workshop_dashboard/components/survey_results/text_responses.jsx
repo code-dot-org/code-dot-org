@@ -51,14 +51,16 @@ export default class TextResponses extends React.Component {
   }
 
   computeAverageForAnswers(answers) {
-    return (answers.reduce((sum, answer) => {
+    let numericAnswers = answers.filter(answer => !isNaN(Number(answer)));
+
+    return (numericAnswers.reduce((sum, answer) => {
       let x = parseInt(answer);
       if (x > 0) {
         return sum + x;
       } else {
         return sum;
       }
-    }, 0) / answers.length).toFixed(2);
+    }, 0) / numericAnswers.length).toFixed(2);
   }
 
   renderBullet(text, key) {
