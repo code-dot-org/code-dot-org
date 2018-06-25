@@ -72,7 +72,11 @@ class SessionsController < Devise::SessionsController
   def after_sign_out_path_for(resource_or_scope)
     user = resource_or_scope && send(:"current_#{resource_or_scope}")
     if user && user.oauth?
-      return oauth_sign_out_path(user.provider)
+      if user.provider.to_sym == :facebook
+        return oauth_sign_out_with_token_path(user.provider, user.oauth_token)
+      else
+        return oauth_sign_out_path(user.provider)
+      end
     end
 
     code_org_root_path
