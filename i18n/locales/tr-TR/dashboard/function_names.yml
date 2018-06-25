@@ -2,27 +2,27 @@ tr:
   data:
     function_names:
       x: x
-      details: details
-      draw eyebrow: draw eyebrow
-      draw pupil: draw pupil
+      details: detaylar
+      draw eyebrow: kaş çiz
+      draw pupil: gözbebeği çiz
       draw a circle: bir çember çiz
-      draw a car: draw a car
-      draw_rect: draw_rect
-      draw square: draw square
+      draw a car: araba çiz
+      draw_rect: dikdörtgen çiz
+      draw square: kare çiz
       jump to controller top left: jump to controller top left
-      jump to middle: jump to middle
-      draw a button: draw a button
+      jump to middle: ortaya atla
+      draw a button: düğme çiz
       draw cord: draw cord
       draw R pad: draw R pad
-      draw left leg: draw left leg
-      draw right leg: draw right leg
-      draw body and arms: draw body and arms
-      draw a head: draw a head
-      draw sitting stick figure: draw sitting stick figure
-      draw head: draw head
-      draw arms: draw arms
-      jump to neck: jump to neck
-      draw O: draw O
+      draw left leg: sol bacak çiz
+      draw right leg: sağ bacak çiz
+      draw body and arms: gövde ve kollar çiz
+      draw a head: kafa çiz
+      draw sitting stick figure: oturan çöp adam çiz
+      draw head: kafa çiz
+      draw arms: kollar çiz
+      jump to neck: boyna atla
+      draw O: O çiz
       draw D: draw D
       draw E: draw E
       draw ear stems: draw ear stems

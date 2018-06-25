@@ -1,15 +1,15 @@
 ky:
   data:
     instructions:
-      2-3 Artist 1 new_instruction: Hi, I'm an artist. You can write code to make me draw almost anything. Use a few blocks to make me draw over the grey lines in the picture. (Each line is 100 pixels long)
+      2-3 Artist 1 new_instruction: Салам, мен сүрөтчүмүн. Код жазып, мага каалаган нерсеңерди тарттырсаңар болот. Блокторду колдонуп, мага сүрөттөгү боз сызыктын үстүн чийдиргиле (ар бир сызык 100 пиксел).
       2-3 Artist 11_instruction: "Give the stop sign a border by making an octagon with 100 pixels sides. \n\n"
       2-3 Artist 12_instruction: |-
-        Create a circle to finish the eyeball!
+        Көздү тартып бүтүрүш үчүн тегерек чийгиле!
         
-        If the artist turns 1 degree with each loop, how many times do you need to repeat the code to draw a circle? 180? 360? 500?
+        Эгер сүрөтчү бир циклда бир градуска бурулса, тегерек тартыш үчүн кодду канча жолу кайталаш керек болот? 180? 360? 500?
       2-3 Artist 2 new_instruction: 'This house has a half-finished wall. Each side is 100, but the half-finished wall is only 50. Complete the wall. '
       2-3 Artist 2_instruction: 'This house has a half-finished wall. Each side is 100, but the half-finished wall is only 50. Complete the wall. '
-      2-3 Artist 3.4_instruction: The jump block moves the artist without drawing. Draw the dashed line using both the `jump forward` and `move forward` blocks. Each line is 50 pixels long.
+      2-3 Artist 3.4_instruction: Секирүү блогу сүрөтчүнү тарттырбай жылдырат. "Алдыга секир" жана "алдыга жыл" блокторун колдонуп үзүндү сызык тарткыла. Ар бир сызыкчанын узундугу 50 пиксел болсун.
       2-3 Artist 3_instruction: This hat is 100 pixels high. Draw a hat that is 70 pixels less.
       2-3 Artist 3new_instruction: "The red hat is 100 pixels tall. Finish drawing a black hat that is 70 pixels shorter. \n(Note: The width of each hat is 50 pixels.)"
       2-3 Artist 4_instruction: Help me complete the house for this cat.
@@ -45,13 +45,13 @@ ky:
         
         Help me finish my pinwheel. Can you figure out what's wrong?
       2-3 Artist Debugging 9_instruction: |-
-        Something is off!
+        Бирдеме туура эмес! 
         
-        The code for this stem is wrong. Can you figure out how to get the artist to trace the stem the right way?
+        Бул сабактын кодунда ката бар. Сүрөтчүгө сабакты тартуунун туура жолун таап бере аласыңбы?
       2-3 Artist Debugging Assessment 1_instruction: "Assessment: Why does this square end up being 75 pixels too small on each side?  \n\nWhere does the code go wrong?"
       2-3 Artist Free Play_instruction: Free-play! Draw anything you'd like.
-      2-3 Artist Functions 1 a_instruction: "\"Me zombie artist. Me love drawing!\"  \n\nHelp the zombie draw square glasses.  \n\nThe bridge between the glasses is 25 pixels shorter than the width of the squares, which is 100 pixels."
-      2-3 Artist Functions 1_instruction: "\"Me zombie artist. Me love drawing!\"  \n\nHelp the zombie draw square glasses.  \n\nThe bridge between the glasses is 25 pixels shorter than the width of the squares, which is 100 pixels."
+      2-3 Artist Functions 1 a_instruction: "\"Мен зомби сүрөтчүмүн. Мен сүрөт тартканды жактырам!\"\n\nЗомбиге чарчы көз айнек тартканга жардам бергиле. \n\nАйнектердин арасы 100 пикселдик чарчы айнектерден 25 пиксел кичине болсун."
+      2-3 Artist Functions 1_instruction: "\"Мен зомби сүрөтчүмүн. Мен сүрөт тартканды жактырам!\"\n\nЗомбиге чарчы көз айнек тартканга жардам бергиле. \n\nАйнектердин арасы 100 пикселдик чарчы айнектерден 25 пиксел кичине болсун."
       2-3 Artist Functions 10_instruction: 'Freeplay: Here are two functions, one to draw a big gear and one to draw a small gear. Use them to draw the inside of a machine!'
       2-3 Artist Functions 11 a_instruction: "We've renamed the `draw a square` function to `draw a hexagon`, but it's still giving us squares! Can you modify the `draw a hexagon` function to draw a hexagon with 50 pixel sides? \n\nDraw the image using the new function!"
       2-3 Artist Functions 11.5 a_instruction: "Here's that same `draw a hexagon` function. \n\nWhat happens if you loop the main program 6 times, turning 60 degrees each time you loop?"
@@ -1547,6 +1547,20 @@ ky:
         - What happens if you use two different angles in your stair step pattern?
         - What happens if you make your diamond pattern longer or shorter?
         - What does it look like to draw two snowflakes on top of one another?
+      Dance Party 1-validated_instruction: 'What do you think will happen when you click on the alien?  '
+      Dance Party 2_instruction: Change the behavior inside the `___ begins ___` block to make the alien start spinning around.
+      Dance Party 3 - Validated_instruction: 'Create a new sprite called `alien2`, then make it do a different dance move when it''s clicked.  '
+      Dance Party 3_instruction: 'Create a new sprite called `alien2`, then make it do a different dance move when it''s clicked.  '
+      Dance Party 4 Validated_instruction: 'Create a third sprite called `alien3` and get all of your aliens to stand in a line. '
+      Dance Party 4_instruction: 'Create a third sprite called `alien3` and get all of your aliens to stand in a line. '
+      Dance Party 5 - Validated_instruction: Add code to change the color of each alien when it gets clicked.
+      Dance Party 5_instruction: Add code to change the color of each alien when it gets clicked.
+      Dance Party 6 - Validated_instruction: Use the `stops everything` block to make each alien stop moving when it is clicked.
+      Dance Party 6_instruction: Use the `stops everything` block to make each alien stop moving when it is clicked.
+      Dance Party 7 - Validated_instruction: Add a new bell sprite called `myBell` that makes all the aliens start doing the same dance move when it's clicked.
+      Dance Party 7_instruction: Add a new bell sprite called `myBell` that makes all the aliens start doing the same dance move when it's clicked.
+      Dance Party Freeplay_instruction: Now create your own alien disco!
+      Dance Party Predict_instruction: 'What do you think will happen when you click on the alien?  '
       ECSPD Binary Odometer_instruction: This is another resource you could use with your students.
       Eval Booleans 1_instruction: Boolean operators (like >, <, =) allow us to compare different values, returning either true or false. Click "Run" to see how this expression evaluates.
       Eval Booleans 2_instruction: Can you set the values so that this expression evaluates as true?
@@ -1617,6 +1631,12 @@ ky:
       Finalize Your Chaser Game v.1_2018_instruction: Introducing the setPosition command! Replace the moveTo in the button-click event handler to use setPosition to move the button itself to a random location when it's clicked.
       Find the Wizard_instruction: Build whatever you want. This is an example of a number-guessing game!
       Find the Wizard_2018_instruction: Build whatever you want. This is an example of a number-guessing game!
+      Fish Tank 2-validated_instruction: Change Dusty (the tumbleweed) to a fish.
+      Fish Tank 3-validated_instruction: Change the fish's behavior so that it swims around the tank.
+      Fish Tank 4-validated_instruction: Use the `set background color` block to make the background blue.
+      Fish Tank 5-validated_instruction: Our fish is getting a little lonely. Add another sprite to the fish tank.
+      Fish Tank 6-validated_instruction: Add a behavior to the fish's new friend.
+      Fish Tank 7-validated_instruction: Use some new blocks from the toolbox to make your fish tank special!
       Food Fight!_instruction: "We've added one last function for you. \n\nUse an \"if\" statement to program your game to call the \"level_up\" function only when \"player_score\" becomes greater than a certain number.\n\nFor example: \"player_score\" > 6\n\nPlay the game, and make it to level 3 to move to the next puzzle. "
       Food Fight_instruction: You can make whatever you want in play lab! This is an example of a game you can make in play lab.
       FoodFight_instruction: This is an example of a game you can make in play lab.
@@ -1645,19 +1665,20 @@ ky:
       Guess The Number_2018_instruction: Build whatever you want. This is an example of a number-guessing game!
       Harvester Test_instruction: It's harvest time! But I forgot what crop I planted at which tile. Please help me harvest all my crops, no matter how they were originally planted!
       Harvesting_instruction: Uh oh, I lost my map and can't remember what I planted. Every sprout could grow up to be corn, beans, or pumpkins. Can you write some code to pick all the crops, no matter what they are?
-      Infinity_catch_instruction: Can you make Elsa ("actor 2") catch up with Anna by using the arrow keys?
+      HoCAB_labyrinth1_instruction: Use the arrow blocks to solve this maze!
+      Infinity_catch_instruction: Жебе баскычтарды колдонуп Аннага Элзаны ("2-каарман") кармата аласыңбы?
       Infinity_finale_instruction: Каалаган нерсеңерди түзүп, бөлүшкүлө!
-      Infinity_move_collide_instruction: Hiro is "actor 1".  Move him right to Baymax, and play a sound when they touch.
-      Infinity_move_directions_instruction: Baymax is "actor 2".  Add Move blocks and then move Baymax using the arrows.  Make him touch the two other characters.
-      Infinity_move_right_instruction: Hiro is "actor 1".  Use the Move block to move Hiro right to touch Baymax.
-      Infinity_repeat_instruction: Use a "repeat forever" block to make Anna move up and down 400 pixels.
-      Infinity_say_instruction: Make Anna say "Hi there." by using the Say block.
-      Infinity_shoot_instruction: Baymax is "actor 2".  Make Baymax throw a rocket at Hiro.
-      Infinity_shoot_directions_instruction: Hiro is "actor 3".  Make Hiro throw a projectile to each of the four characters.  Wait one second between each throw.
+      Infinity_move_collide_instruction: Хиро "1-каарман". Аны оңго Баймаксты көздөй жылдыр, алар тийишкенде үн ойнот.
+      Infinity_move_directions_instruction: Баймакс "2-каарман". Жылуу блокторун кош жана жебе баскычтары менен Баймаксты жылдыр. Аны башка эки каарманга тийгиз.
+      Infinity_move_right_instruction: Хиро "1-каарман". Жылдыруу блоктору менен Хирону оңго жүргүзүп Баймакска тийгиз.
+      Infinity_repeat_instruction: '"Дайым кайтала" блогун колдонуп Аннаны 400 пиксель өйдө-ылдый жылдыр.'
+      Infinity_say_instruction: '"Айт" блогун колдонуп Аннага "Салам" айттыргыла.'
+      Infinity_shoot_instruction: Баймакс "2-каарман". Баймак Хирого ракета атсын.
+      Infinity_shoot_directions_instruction: Хиро "3-каарман". Хиро 4 каарманга ракета атсын. Ар бир атуунун арасы 1 секунд болсун.
       Infinity_test_instruction: This is a test Infinity level.
-      Infinity_touch_faster_instruction: Touch even more snowflakes!
-      Infinity_touch_four_instruction: Move Anna up, down left, and right to touch each of the four snowflakes.
-      Infinity_touch_score_instruction: Make Anna score a point when she touches a snowflake.  Then click "Run" and steer her to touch each snowflake once.
+      Infinity_touch_faster_instruction: Дагы көбүрөөк карга тий!
+      Infinity_touch_four_instruction: Аннаны өйдө-ылдый жана оңго жылдырып төрт карга тийгиз.
+      Infinity_touch_score_instruction: Карга тийгенде Анна упай уткандай болсун. Анан "Аткарууну" басып ал ар бир карга тийгидей кылып башкар.
       Inspirational Artwork_instruction: "Free Play Inspiration: You've now learned everything you need to know to make a pattern like this! If this picture inspires you, try to make something similar. Otherwise, create something all your own.\n \nWant to know how our inspiration pattern was made? "
       InspirationalArtwork_instruction: If this picture inspires you, try to make something similar. Otherwise, create something all your own.
       InspirationalArtwork_2018_instruction: If this picture inspires you, try to make something similar. Otherwise, create something all your own.
@@ -2207,17 +2228,17 @@ ky:
       Sam the Butterfly 7_instruction: Only one last direction to worry about! Create a "safe-down?" function and update the "on-screen?" function so that it checks up, down, left, and right.
       Sam the Butterfly Complete_instruction: Only one last direction to worry about! Create a "safe-down?" function and update the "on-screen?" function so that it checks up, down, left, and right.
       SpecialFrozenLevel_instruction: Ырасмий түрдө сүрөт чебери болдуңар! Кереметтү кыш өлкөсүн тарткыла.
-      Standalone_Artist_1_instruction: Welcome to Artist! First off, let's try to make a simple square using the turn right block and move forward block. Each side should be 100 pixels long.
-      Standalone_Artist_2_instruction: Draw this diamond with 120 and 60 degree angles and 150 pixel long sides.
-      Standalone_Artist_3_instruction: Can you draw this hexagon with 100 pixel sides and 60 degree turns?
-      Standalone_Artist_4_instruction: Now you've got a new block to play with, the loop. This will repeat a set of commands. What happens if you loop these commands 6 times?
-      Standalone_Artist_5.5_instruction: 'Notice how we simplified the diamond code by turning it into a loop. You can loop that whole sequence 12 times to draw the flower. Hint: You''ll need to turn 30 degrees after your diamond loop so you don''t keep drawing over the same diamond.'
-      Standalone_Artist_5_instruction: How many times do you need to loop this diamond to draw the flower?
-      Standalone_Artist_6_instruction: 'Loop this hexagon code 6 times to create the design. How many degrees will you need to turn each time? Hint: divide the number of degrees in a circle by the number of times you are looping.'
-      Standalone_Artist_7_instruction: 'A function is another programming tool to help you avoid repeating yourself. This function draws a flower, so you can use it any time you want to draw a flower. Use this and the new jump block to draw these flowers. Hint: The flowers are 150 pixels apart'
-      Standalone_Artist_8_instruction: Here's a function called "Draw a shape" that we've programmed to draw hexagons. Run the code to see what it does and then experiment with the function to see what happens. Can you make it draw a pattern of squares, triangles, or octagons?
-      Standalone_Artist_9_instruction: Now go ahead and make whatever picture you'd like! You've even got an empty function that you can make do whatever you want!
-      Standalone_Artist_v2_instruction: Welcome to Artist! First off, let's try to make a simple square using the turn right block and move forward block. Each side should be 100 pixels long.
+      Standalone_Artist_1_instruction: Сүрөтчүгө кош келиңиз! Алгач оңго бурул жана алдыга жыл блокторун колдонуп жөнөкөй чарчы тартып көрөлү. Чарчынын тараптарынын узундугу 100 пиксел болсун.
+      Standalone_Artist_2_instruction: Бул алмаздын бурчтарын 120 жана 60 градус жана тараптарын 150 пиксел узун кылып тарткыла.
+      Standalone_Artist_3_instruction: Тараптарын 100 пиксел жана 60 градус бурч менен алты бурчтук тарта аласыңбы?
+      Standalone_Artist_4_instruction: Цикл менен ойноо үчүн жаңы блок алдыңар. Ал буйруктар топтомун кайталайт. Эгер циклиңер бул буйруктарды 6 жолу кайталаса эмне болот?
+      Standalone_Artist_5.5_instruction: 'Алмаздын коду циклга айланганда, ал канчалык жөнөкөй болгонун байкагыла. Цикл менен буйруктарды 12 жолу толук кайталап, гүл тарта аласыңар. Кеңеш: Үстүнөн кайталап тарта бербеш үчүн алмаз циклынан кийин 30 градус бурулганды унутпагыла.'
+      Standalone_Artist_5_instruction: Гүл тартыш үчүн бул алмаз циклын канча жолу кайталаш керек?
+      Standalone_Artist_6_instruction: 'Дизайн жаратыш үчүн бул алты бурчтукту 6 жолу цикл кылгыла. Ар жолу канча градуска бурулушуңар керек болот? Кеңеш: тегеректеги градустардын санын циклдардын санына бөлгүлө.'
+      Standalone_Artist_7_instruction: 'Функция - кайталабоого жардам берүүчү програмдоонун дагы бир куралы. Бул функция гүл тартат, силер аны гүл тарткыңыз келген бардык учурларда колдоно аласыңар. Муну жана секирүү блокторун колдонуп бул гүлдөрдү тарткыла. Кеңеш: гүлдөрдүн ортосу 150 пиксел'
+      Standalone_Artist_8_instruction: Бул алты бурчтук тартуу үчүн програмдалган "Форма тартуу" функциясы. Ал эмне кыларын көрүш үчүн кодду иштетип жана аны өзгөртүп ойноп көргүлө. Ага чарчы, үч бурчтук же сегиз бурчтук тарттыра аласыңарбы?
+      Standalone_Artist_9_instruction: Улантабыз, каалаган сүрөтүңөрдү тарткыла! Силерге бош функция кошо берилди, ага каалаган нерсеңерди аткарта аласыңар!
+      Standalone_Artist_v2_instruction: Сүрөтчүгө кош келиңиз! Алгач оңго бурул жана алдыга жыл блокторун колдонуп жөнөкөй чарчы тартып көрөлү. Чарчынын тараптарынын узундугу 100 пиксел болсун.
       StepIntro_instruction: Here's how to use the "Step" button.
       Test Play Lab_instruction: This is a test play lab level.
       Test embedded Blockly in instructions_instruction: |-
@@ -2775,10 +2796,10 @@ ky:
       U4 - Charts - Import Data 1_2018_instruction: Download the CSV file we’ve provided, and then use the data viewer to import the data from the file into the “mytable” table. (Click to see full instructions)
       U4 - Charts - Import Data 2_instruction: Call readRecords on “mytable” and print each record to the console. (Click to see full instructions)
       U4 - Charts - Import Data 2_2018_instruction: Call readRecords on “mytable” and print each record to the console. (Click to see full instructions)
-      U4 - Charts - Line Chart 1_instruction: Create a line chart showing the change in popularity of “
-      U4 - Charts - Line Chart 1_2018_instruction: Create a line chart showing the change in popularity of “
-      U4 - Charts - Line Chart 2_instruction: Add a second line to your chart to show the change in popularity of both “
-      U4 - Charts - Line Chart 2_2018_instruction: Add a second line to your chart to show the change in popularity of both “
+      U4 - Charts - Line Chart 1_instruction: 'Create a line chart showing the change in popularity of “#tbt” over time. (Click to see full instructions)'
+      U4 - Charts - Line Chart 1_2018_instruction: 'Create a line chart showing the change in popularity of “#tbt” over time. (Click to see full instructions)'
+      U4 - Charts - Line Chart 2_instruction: 'Add a second line to your chart to show the change in popularity of both “#tbt” and “#nofilter” at the same time. (Click to see full instructions)'
+      U4 - Charts - Line Chart 2_2018_instruction: 'Add a second line to your chart to show the change in popularity of both “#tbt” and “#nofilter” at the same time. (Click to see full instructions)'
       U4 - Charts - Line Chart Template_instruction: This is a template.
       U4 - Charts - Remixing Apps with Data_instruction: Run this app and see what it prints to the console. Then remix the app and run the remixed version to see what happened to the data. (Click to see full instructions)
       U4 - Charts - Remixing Apps with Data_2018_instruction: Run this app and see what it prints to the console. Then remix the app and run the remixed version to see what happened to the data. (Click to see full instructions)
@@ -2891,6 +2912,7 @@ ky:
       U4 Model Design 1_2018_instruction: Add a large red button to your screen using Design Mode. (Click for full instructions.)
       U4 vigenere cipher 2_instruction: Instructions
       U4L02 - Objects - Template1_instruction: Template
+      U4L02 - Objects - Template1_2018_instruction: Template
       U4L02 - Objects - createObject_instruction: 'Create an object with at least 5 values including at least one string and one number. (Click to see full instructions) '
       U4L02 - Objects - eventParameter_instruction: Trigger both the keyboard and mouse event and examine the event objects displayed in the console. Why might an object be the best way to store this information? (Click to see full instructions)
       U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your Name\", run the app and click the button. Run it multiple times with different names! Watch the console and use the ‘View Data” button to see how the table is updated. As you play around make sure you can explain the purpose of each of the circled parts of the diagram.\n\n"
@@ -2938,6 +2960,13 @@ ky:
       Valentine_artist_01_instruction: 'Help the artist finish his llama heart. '
       Valentine_playlab_01_instruction: 'Program Kiki (Actor 1) to move left and right when the left and right arrows are pressed. When Kiki is clicked, she should throw hearts towards her friends. '
       Vigenere_instruction: Test
+      Virtual Pet 1_instruction: What do you think will happen if you press "Run" and then click on her?
+      Virtual Pet 2_instruction: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
+      Virtual Pet 3_instruction: Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?
+      Virtual Pet 4_instruction: Add a behavior to your soap to make it draggable, then drag it over to clean the giraffe!
+      Virtual Pet 5_instruction: Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.
+      Virtual Pet 6_instruction: Add an apple that returns the giraffe back to regular size when they touch.
+      Virtual Pet Freeplay_instruction: 'Freeplay: What more can you make your giraffe do? '
       WhileAdventure_instruction: Our adventurer wants to collect coins. Can you help her grab as many as she can using only one remove 1 block?
       'Widget: Black and White Pixelation_instruction': Now make your own image! We've started you off with a 10x10 canvas but you can make it whatever size you want. Happy pixeling!
       'Widget: Black and White Pixelation_2018_instruction': Now make your own image! We've started you off with a 10x10 canvas but you can make it whatever size you want. Happy pixeling!
@@ -3233,7 +3262,7 @@ ky:
       courseA_harvester_seq10_instruction: Make sure to pick all the corn!
       courseA_harvester_seq11_instruction: Try it by yourself! Pick all the corn.
       courseA_harvester_seq12_instruction: Pick all the corn.
-      courseA_harvester_seq13_instruction: Play with these blocks to help the harvester pick **one** corn.
+      courseA_harvester_seq13_instruction: Play with these blocks to help the harvester pick corn.
       courseA_harvester_seq2_instruction: Use three `move west` blocks and one `pick corn` block to solve this puzzle.
       courseA_harvester_seq3_instruction: Use three `Move North` blocks and one `Pick Corn` block.
       courseA_harvester_seq4_instruction: Add one block to help the harvester pick the corn.
@@ -3245,7 +3274,8 @@ ky:
       courseA_maze_ramp2_2018_instruction: Snap all blocks together to finish your code, then click "Run".
       courseA_maze_ramp2a_2018_instruction: Snap all blocks together to finish your code, then click "Run".
       courseA_maze_ramp3_2018_instruction: There is one extra block that is going to cause the bird to crash. Throw it away by dragging it back to the toolbox.
-      courseA_maze_ramp3a_2018_instruction: Add a `North` block to the bottom of the other blocks to finish this code, then click "Run".
+      courseA_maze_ramp3a_2018_instruction: Add a `North` block to the bottom of the other blocks to finish this code, then click "▶ Run".
+      courseA_maze_ramp3b_2018_instruction: Add a `North` block to the bottom of the other blocks to finish this code, then click "Run".
       courseA_maze_ramp4_2018_instruction: Avoid TNT or feathers will fly!
       courseA_maze_ramp4a_2018_instruction: Can you figure out which block you need to add to the bottom of the other blocks to finish this code?
       courseA_maze_ramp5_2018_instruction: Avoid the TNT.
@@ -3305,8 +3335,9 @@ ky:
       courseA_video_events_instruction: Need a better playlab/events combo
       courseA_video_events_2018_instruction: Need a better playlab/events combo
       courseB_Scrat_ramp1_2018_instruction: Бул башкатырмада блокторду бириктиргиле дагы "Аткарууну" баскыла!
-      courseB_Scrat_ramp2_2018_instruction: "Кодуңарды аякташ үчүн бардык блокторду бириктиргиле, \n анан \"Аткарууну\" баскыла."
+      courseB_Scrat_ramp2_2018_instruction: Кодуңарды аякташ үчүн бардык блокторду бириктиргиле, "Аткарууну" баскыла.
       courseB_Scrat_ramp3a_2018_instruction: Бул кодду аякташ үчүн "Түндүк" блогун башка блоктун алдына койгула, анан "Аткарууну" баскыла.
+      courseB_Scrat_ramp3b_2018_instruction: "Drag the extra block back to the toolbox to throw it away.\n\n"
       courseB_Scrat_ramp4a_2018_instruction: Кодду аякташ үчүн кайсы блокту башка блоктун алдына кошушуңар керегин таба аласыңарбы?
       courseB_Scrat_ramp5a_2018_instruction: Кушту торопойго жеткиз!
       courseB_artist_loops1_instruction: This is a new type of puzzle called "Artist". Play with the level and draw something fun.
@@ -4661,7 +4692,7 @@ ky:
       course_playlab_variables1_instruction: This is Pirate Pegleg.  He's awfully hard to understand these days!
       course_playlab_variables2_instruction: "Now, decode Pirate Pegleg's speech by changing the value of the variables in just two places! \n"
       course_playlab_variables3_instruction: "Now, decode Pirate Pegleg's speech by changing the value of the variables in just two places! \n"
-      coursea_maze_ramp1_2018_instruction: For this puzzle, snap the blocks together and click "Run"!
+      coursea_maze_ramp1_2018_instruction: For this puzzle, snap the blocks together and click "▶ Run"!
       coursef_explore_CYOA_Witch_instruction: You can do whatever you want in play lab! Here's an example of choose your own adventure story in play lab.
       coursef_explore_playlab2_instruction: You can do whatever you want in play lab! Here's an example of story in play lab.
       coursef_explore_playlab_cat_game_instruction: You can do whatever you want in play lab! Here's an example of game you can make.
@@ -5155,9 +5186,9 @@ ky:
         In our game, how should we score points? Add 1 to your "points" variable each time Dog hits Cat with a piece of pie. Use the "when actor 2 touches anything" event to trigger an update to your score. You can increment your variable by setting "points = points + 1." Get your score up to 10 (going one at a time!) to pass the level.
       grade4_playlab_test2_instruction: Here's a function called `jump` that causes your main character to jump up 100 pixels. Run the program and use the jump function to collect all of the flags by moving the dog with the arrow keys.
       grade4_prompt_test_instruction: This is a test play lab level.
-      grade4_review_artist1_instruction: Hi, I'm an artist. You can write code to make me draw almost anything. Use a few blocks to make me draw over the grey lines in the picture. (Each line is 100 pixels long)
+      grade4_review_artist1_instruction: Салам, мен сүрөтчүмүн. Код жазып, мага каалаган нерсеңерди тарттырсаңар болот. Блокторду колдонуп, мага сүрөттөгү боз сызыктын үстүн чийдиргиле (ар бир сызык 100 пиксел).
       grade4_review_artist2_instruction: 'This house needs a roof! Draw the triangle.  Hint: all three sides are the same length.'
-      grade4_review_artist3_instruction: The jump block moves the artist without drawing. Draw the dashed line using both the `jump forward` and `move forward` blocks. Each line is 50 pixels long.
+      grade4_review_artist3_instruction: Секирүү блогу сүрөтчүнү тарттырбай жылдырат. "Алдыга секир" жана "алдыга жыл" блокторун колдонуп үзүндү сызык тарткыла. Ар бир сызыкчанын узундугу 50 пиксел болсун.
       grade4_review_bee1_instruction: Now use the `repeat` block to collect all of the nectar and make all of the honey.
       grade4_review_bee2_instruction: Collect nectar from each flower and make honey at each honeycomb using the fewest blocks possible.
       grade4_review_bee3_instruction: |-

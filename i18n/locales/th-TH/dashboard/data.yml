@@ -178,29 +178,29 @@ th:
         mazestep_4: Maze step description here
         mazestep_5: Maze step description here
         studio_c2_1: คุณสามารถทำให้สุนัขตัวนี้พูดว่า  " สวัสดีโลก "?
-        studio_c2_2: คุณสามารถทำให้สุนัขพูดบางสิ่งบางอย่าง แล้วมีแมวพูดบางสิ่งบางอย่าง หลังจากนั้น?
+        studio_c2_2: คุณสามารถทำให้สุนัขพูดบางอย่าง แล้วหลังจากนั้นก็ให้แมวพูดบางอย่างได้ไหม?
         studio_c2_3: คุณสามารถเขียนโปรแกรมที่จะทำให้สุนัขตัวนี้ขยับไปหาแมว ได้ไหม?
-        studio_c2_4: คุณสามารถเขียนโปรแกรมที่ทำให้สุนัขขยับไปหาแมวและมีแมวพูดว่า "สวัสดี" เมื่อสุนัขมาถึงตัวแมว?
-        studio_c2_5: คุณสามารถเขียนโปรแกรมที่จะทำให้ปลาหมึกกล่าวว่า "สวัสดี " เมื่อถูกคลิก?
-        studio_c2_6: คุณสามารถเขียนโปรแกรมเพื่อให้เจ้า Waddles ย้ายไปรอบๆโดยใช้ปุ่มขึ้น/ลง/ซ้าย/ขวา เพื่อชนเป้าหมายทั้งหมดได้หรือไม่?
-        studio_c2_7: บล็อก "ทำซ้ำไปตลอดกาล " ช่วยให้คุณสามารถเรียกใช้โค้ดอย่างต่อเนื่อง คุณสามารถต่อบล็อกเพื่อย้ายไดโนเสาร์นี้ขึ้นและลงซ้ำๆไปๆมาๆ?
-        studio_c2_8: คุณสามารถได้ Waddles พูด "โอ๊ย! " และเล่นเสียง "ที่โดนชน" ถ้าเขาวิ่งเข้าไปชนไดโนเสาร์ ใหเกิดขึ้นได้ด้วยการย้ายเขาด้วยลูกศร?
-        studio_c2_9: คุณสามารถเพิ่มบล็อกที่จะทำคะแนนเมื่อเพนกวินวิ่งชนปลาหมึก โดยย้ายเขาด้วยลูกศรจนกว่าคุณจะได้คะแนน?
-        studio_c2_10: คุณสามารถเพิ่มบล็อกเพื่อเปลี่ยนพื้นหลังและความเร็วของ Waddles และย้ายเขาด้วยลูกศรจนกว่าคุณคะแนนหรือไม่
+        studio_c2_4: คุณสามารถเขียนโปรแกรมที่ทำให้สุนัขขยับไปหาแมว และแมวพูดว่า "สวัสดี" เมื่อสุนัขมาถึงตัวแมว?
+        studio_c2_5: คุณสามารถเขียนโปรแกรมที่จะทำให้ปลาหมึกพูดว่า "สวัสดี " เมื่อถูกคลิก?
+        studio_c2_6: คุณสามารถเขียนโปรแกรมเพื่อให้เจ้าเพนกวิน-แวดเดิลย้ายไปมารอบๆ โดยใช้คีย์ ขึ้น/ลง/ซ้าย/ขวา เพื่อชนเป้าหมายทั้งหมดได้หรือไม่?
+        studio_c2_7: บล็อก "ทำซ้ำไปตลอดกาล " ช่วยให้คุณสามารถเรียกใช้โค้ดอย่างต่อเนื่อง คุณสามารถต่อบล็อกเพื่อพาเจ้าไดโนเสาร์ตัวนี้ขึ้นๆลงๆซ้ำไปซ้ำมา?
+        studio_c2_8: คุณสามารถให้เจ้านกเพนกวินแวดเดิลพูด "โอ๊ย! " และเล่นเสียง "ที่โดนชน" ถ้าเขาวิ่งเข้าไปชนไดโนเสาร์ ซึ่งทำให้เกิดขึ้นได้ด้วยการย้ายเขาด้วยลูกศร ได้หรือไม่?
+        studio_c2_9: คุณสามารถเพิ่มบล็อกที่จะทำคะแนนให้ เมื่อเจ้านกเพนกวินวิ่งชนปลาหมึกยักษ์ ย้ายเจ้านกเพนกวินด้วยลูกศรไปมาจนกว่าคุณจะทำคะแนนได้ ได้หรือไม่?
+        studio_c2_10: Can you add blocks to change the background and the speed of Waddles, and then move him with the arrows until you score?
         studio_c2_11: สร้างเรื่องราวของคุณเอง เมื่อเสร็จแล้วให้คลิกเสร็จ เพื่อให้เพื่อนลองเล่นเรื่องราวของคุณบนมือถือของพวกเขา
         studio_c3_story_1: คุณสามารถทำให้สุนัขตัวนี้พูดว่า  " สวัสดีโลก "?
-        studio_c3_story_2: คุณสามารถทำให้สุนัขพูดบางสิ่งบางอย่าง แล้วมีแมวพูดบางสิ่งบางอย่าง หลังจากนั้น?
+        studio_c3_story_2: คุณสามารถทำให้สุนัขพูดบางอย่าง แล้วหลังจากนั้นก็ให้แมวพูดบางอย่างได้ไหม?
         studio_c3_story_3: คุณสามารถเขียนโปรแกรมที่จะทำให้สุนัขตัวนี้ขยับไปหาแมว ได้ไหม?
-        studio_c3_story_4: คุณสามารถเขียนโปรแกรมที่ทำให้สุนัขขยับไปหาแมวและมีแมวพูดว่า "สวัสดี" เมื่อสุนัขมาถึงตัวแมว?
-        studio_c3_story_5: Can you add a block to make the octopus happy?
+        studio_c3_story_4: คุณสามารถเขียนโปรแกรมที่ทำให้สุนัขขยับไปหาแมว และแมวพูดว่า "สวัสดี" เมื่อสุนัขมาถึงตัวแมว?
+        studio_c3_story_5: คุณสามารถเพิ่มบล็อกที่จะทำให้ปลาหมึกมีความสุขได้หรือไม่
         studio_c3_story_6: สร้างเรื่องราวของคุณเอง เมื่อเสร็จแล้วให้คลิกเสร็จ เพื่อให้เพื่อนลองเล่นเรื่องราวของคุณบนมือถือของพวกเขา
-        studio_c3_game_1: คุณสามารถเขียนโปรแกรมที่จะทำให้ปลาหมึกกล่าวว่า "สวัสดี " เมื่อถูกคลิก?
-        studio_c3_game_2: คุณสามารถเขียนโปรแกรมเพื่อให้เจ้า Waddles ย้ายไปรอบๆโดยใช้ปุ่มขึ้น/ลง/ซ้าย/ขวา เพื่อชนเป้าหมายทั้งหมดได้หรือไม่?
-        studio_c3_game_3: บล็อก "ทำซ้ำไปตลอดกาล " ช่วยให้คุณสามารถเรียกใช้โค้ดอย่างต่อเนื่อง คุณสามารถต่อบล็อกเพื่อย้ายไดโนเสาร์นี้ขึ้นและลงซ้ำๆไปๆมาๆ?
-        studio_c3_game_4: คุณสามารถได้ Waddles พูด "โอ๊ย! " และเล่นเสียง "ที่โดนชน" ถ้าเขาวิ่งเข้าไปชนไดโนเสาร์ ใหเกิดขึ้นได้ด้วยการย้ายเขาด้วยลูกศร?
-        studio_c3_game_5: คุณสามารถเพิ่มบล็อกที่จะทำคะแนนเมื่อเพนกวินวิ่งชนปลาหมึก โดยย้ายเขาด้วยลูกศรจนกว่าคุณจะได้คะแนน?
-        studio_c3_game_6: คุณสามารถเพิ่มบล็อกเพื่อเปลี่ยนพื้นหลังและความเร็วของ Waddles และย้ายเขาด้วยลูกศรจนกว่าคุณคะแนนหรือไม่
-        studio_c3_game_7: Create your own game. When you're done, click Finish to let friends try your game on their phones.
+        studio_c3_game_1: คุณสามารถเขียนโปรแกรมที่จะทำให้ปลาหมึกพูดว่า "สวัสดี " เมื่อถูกคลิก?
+        studio_c3_game_2: คุณสามารถเขียนโปรแกรมเพื่อพาเจ้านกเพนกวินแวดเดิลไปรอบๆโดยใช้ปุ่ม ขึ้น/ลง/ซ้าย/ขวา เพื่อชนเป้าหมายทั้งหมดได้หรือไม่?
+        studio_c3_game_3: บล็อก "ทำซ้ำไปตลอดกาล " ช่วยให้คุณสามารถเรียกใช้โค้ดอย่างต่อเนื่อง คุณสามารถต่อบล็อกเพื่อพาเจ้าไดโนเสาร์ตัวนี้ขึ้นๆลงๆซ้ำไปซ้ำมา?
+        studio_c3_game_4: คุณสามารถให้เจ้านกเพนกวินแวดเดิลพูด "โอ๊ย! " และเล่นเสียง "ที่โดนชน" ถ้าเขาวิ่งเข้าไปชนไดโนเสาร์ ซึ่งทำให้เกิดขึ้นได้ด้วยการย้ายเขาด้วยลูกศร ได้หรือไม่?
+        studio_c3_game_5: คุณสามารถเพิ่มบล็อกที่จะทำคะแนนให้ เมื่อเจ้านกเพนกวินวิ่งชนปลาหมึกยักษ์ ย้ายเจ้านกเพนกวินด้วยลูกศรไปมาจนกว่าคุณจะทำคะแนนได้ ได้หรือไม่?
+        studio_c3_game_6: คุณสามารถเพิ่มบล็อกเพื่อเปลี่ยนพื้นหลังและความเร็วของเจ้านกเพนกวิน แวดเดิล และต่อมาให้ย้ายเขาด้วยลูกศรจนกว่าคุณจะได้คะแนน ได้หรือไม่
+        studio_c3_game_7: สร้างเกมของคุณเอง เมื่อเสร็จแล้วให้คลิกเสร็จ เพื่อให้เพื่อนลองเล่นเกมบนมือถือของพวกเขา
         studio_playlab_1: Waddles wants to say "hello" - can you help him?
         studio_playlab_2: Cave Boy (actor 1) and Jasmine (actor 2) would like to say "hello" to each other. Can you help them by using the "say" block twice?
         studio_playlab_3: Can you help Tennis Girl get to the flag?
@@ -210,7 +210,7 @@ th:
         studio_playlab_7: The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help the wizard move right and left repeatedly?
         studio_playlab_8: Can you add a block to score a point and a block to play a sound when the unicorn runs into the wizard, and then move him with the arrows until you score?
         studio_playlab_9: Set the background for this alien invasion and help the Spacebot get to the alien faster by changing its speed. Then move him with the arrow keys to get to the Spacebot and alert everyone else
-        studio_playlab_10: Create your own game. When you're done, click Finish to let friends try your game on their phones.
+        studio_playlab_10: สร้างเกมของคุณเอง เมื่อเสร็จแล้วให้คลิกเสร็จ เพื่อให้เพื่อนลองเล่นเกมบนมือถือของพวกเขา
         studio_iceage_hello1: Sid wants to gather everyone for a new adventure. Can you help him say "hello" by dragging the "say" block out into the work area and typing the word "hello" inside?
         studio_iceage_hello2: Manny (actor 1) found Sid (actor 2) and wants to invite him on the adventure. Help them greet each other by using the the "actor say" block twice.
         studio_iceage_move_to_flag: Scrat is looking for his acorn!  Help him go the last 200 pixels using the "move" block.
@@ -233,27 +233,27 @@ th:
         studio_gumball_warn_food_fight: Darwin just escaped a food fight! Change the background to "characters" and set Darwin’s speed to fast, then press Run and move him to Penny to warn her.
         studio_gumball_join_food_fight: Join the food fight! Use the "actor throw item right" command to have Banana Joe (actor 1) throw food at Anton (actor 2)! Set Anton’s mood to angry when he gets hit.
         studio_gumball_free_play: Create your own game or story. When you're done, click Finish to let friends try your game on their phones, tablets, or computers!
-        studio_full_sandbox: Create your own game. When you're done, click Finish to let friends try your game on their phones.
+        studio_full_sandbox: สร้างเกมของคุณเอง เมื่อเสร็จแล้วให้คลิกเสร็จ เพื่อให้เพื่อนลองเล่นเกมบนมือถือของพวกเขา
         studio_k1_1: คุณสามารถทำให้สุนัขตัวนี้พูดว่า  " สวัสดีโลก "?
-        studio_k1_2: คุณสามารถทำให้สุนัขพูดบางสิ่งบางอย่าง แล้วมีแมวพูดบางสิ่งบางอย่าง หลังจากนั้น?
+        studio_k1_2: คุณสามารถทำให้สุนัขพูดบางอย่าง แล้วหลังจากนั้นก็ให้แมวพูดบางอย่างได้ไหม?
         studio_k1_3: คุณสามารถเขียนโปรแกรมที่จะทำให้สุนัขตัวนี้ขยับไปหาแมว ได้ไหม?
         studio_k1_4: Make the dog move to the cat and the cat say "hello" when he gets there.
-        studio_k1_5: Can you add a block to make the octopus happy?
+        studio_k1_5: คุณสามารถเพิ่มบล็อกที่จะทำให้ปลาหมึกมีความสุขได้หรือไม่
         studio_k1_6: Create your own story! Move around the cat and dog, and make them say things.
-        maze_wordsearch_k_1: Move me to spell the word EAST
-        maze_wordsearch_k_2: Move me to spell the word SOUTH
-        maze_wordsearch_k_3: Move me to spell the word WEST
-        maze_wordsearch_k_4: Move me to spell the word NORTH
-        maze_wordsearch_k_6: Move me East and then South to spell the word JUMP
-        maze_wordsearch_k_9: Move me one way, then another to spell the word CODE
-        maze_wordsearch_k_13: Move me one way, then another to spell the word DEBUG
-        maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
-        maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
-        maze_wordsearch_k_20: This is a test! Move me one way, then another to spell the word STORY
+        maze_wordsearch_k_1: พาฉันบินไปสะกดคำว่าทิศตะวันออกเป็นภาษาอังกฤษ EAST
+        maze_wordsearch_k_2: พาฉันบินไปสะกดคำว่าทิศใต้เป็นภาษาอังกฤษ SOUTH
+        maze_wordsearch_k_3: พาฉันบินไปสะกดคำว่าทิศตะวันตกเป็นภาษาอังกฤษ WEST
+        maze_wordsearch_k_4: พาฉันบินไปสะกดคำว่าทิศเหนือเป็นภาษาอังกฤษ NORTH
+        maze_wordsearch_k_6: พาฉันบินไปทางทิศตะวันออกแล้วก็ทิศใต้เพื่อสะกดคำว่ากระโดดเป็นภาษาอังกฤษ JUMP
+        maze_wordsearch_k_9: พาฉันบินไปทางหนึ่งแล้วก็บินไปอีกทางหนึ่ง เพื่อสะกดคำว่าโค้ดเป็นภาษาอังกฤษ CODE
+        maze_wordsearch_k_13: พาฉันบินไปทางหนึ่ง แล้วก็บินไปอีกทางหนึ่ง เพื่อสะกดคำว่าดีบั๊กเป็นภาษาอังกฤษ DEBUG
+        maze_wordsearch_k_15: พาฉันบินไปทางหนึ่งแล้วก็บินไปอีกทางหนึ่ง เพื่อสะกดคำว่าอยู่ข้างบนเป็นภาษาอังกฤษ ABOVE
+        maze_wordsearch_k_16: พาฉันบินไปทางหนึ่งแล้วก็บินไปอีกทางหนึ่ง เพื่อสะกดคำว่า อยู่ข้างล่างเป็นภาษาอังกฤษ BELOW
+        maze_wordsearch_k_20: นี่คือการทดสอบ! พาฉันบินไปทางหนึ่งแล้วก็บินไปอีกทางหนึ่ง เพื่อสะกดคำว่าเรื่องราวเป็นภาษาอังกฤษ STORY
         applab_ec_simple: Create your app by using the blocks in the toolbox.
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColor" block.'
         turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new "penWidth" block. Have fun!'
-        studio_ec_sandbox: Create your own game. When you're done, click Finish to let friends try your game on their phones.
+        studio_ec_sandbox: สร้างเกมของคุณเอง เมื่อเสร็จแล้วให้คลิกเสร็จ เพื่อให้เพื่อนลองเล่นเกมบนมือถือของพวกเขา
     video:
       name:
         maze_intro: บทนำเขาวงกต
@@ -294,7 +294,7 @@ th:
         C1_zuck_repeat_loop: ลูปเขาวงกต
         C1_bee_loops: ผึ้ง Loops
         C1_maze_loops: ลูปเขาวงกต
-        C1_playlab_storytelling: Play Lab - Create a Story
+        C1_playlab_storytelling: เพลย์แลป - สร้างเป็นเรื่องราว
         C1_planting_seed: Planting a Seed
         C1_building_foundation: สร้างพื้นฐาน
         C1_going_places_safely: Going Places Safely
@@ -306,7 +306,7 @@ th:
         C2_bee_loops: ผึ้ง Loops
         C2_bee_debugging: ผึ้ง Debugging
         C2_bee_conditionals: ผึ้ง Conditionals
-        C2_playlab_createstory: Play Lab - Create a Story
+        C2_playlab_createstory: เพลย์แลป - สร้างเป็นเรื่องราว
         C2_graph_paper: การเขียนกระดาษกราฟ
         C2_conditionals_with_cards: เงื่อนไข 
         C2_binary_bracelets: Binary Bracelets
@@ -325,7 +325,7 @@ th:
         C3_bee_nested_loops: Nested Loops
         C3_bee_debugging: ผึ้ง Debugging
         C3_bounce: กระเด้ง
-        C3_playlab_create_game: Play Lab - Create a Game
+        C3_playlab_create_game: เพลย์แลป - สร้างเกม
         C3_computational_thinking: คิดคำนวณ
         C3_dice_race: Dice Race
         C3_internet: อินเทอร์เน็ต
@@ -336,7 +336,7 @@ th:
         C4_loops_zombie: ลูป
         C4_bee_conditional: ผึ้ง Conditionals
         C4_variables_artist: Variables - Artist
-        C4_variables_playlab: Variables - Play Lab
+        C4_variables_playlab: ตัวแปร - เพลย์แลป
         C4_for_loops: การวนรอบ
         C4_for_loops_bee: การวนรอบ
         C4_for_loops_no_bee: การวนรอบ
@@ -372,11 +372,11 @@ th:
         frozen_loops: ลูปเบื้องต้น
         frozen_functions: ฟังก์ชั่นเบื้องต้น
         playlab_intro: เพลย์แลปเบื้องต้น
-        playlab_events: Play Lab Events
+        playlab_events: เหตุการณ์เพลย์แลป
         playlab_repeat_forever: เพลย์แลป ทำซ้ำไปตลอดกาล
         tutorial_puzzle_challenge: Tutorial Puzzle Challenge
         infinity_playlab_intro: เพลย์แลป - บทเกริ่นนำ
-        infinity_playlab_events: Play Lab - Events
+        infinity_playlab_events: เหตุการณ์เพลย์แลป
         infinity_playlab_repeat_forever: เพลย์แลป-ทำซ้ำไปตลอดกาล
         csd_concept_how_computers_work: Introducing How Computers Work
         csd_concept_computer: 'How Computers Work: What Makes a Computer, a Computer?'
@@ -532,6 +532,7 @@ th:
         CSF_loops_AB: ลูป
         csd_gamelab_booleans: Boolean Expressions
         csd_gamelab_conditional_statements: Conditional Statements
+        csd_gamelab_if_else: If/Else Statements
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

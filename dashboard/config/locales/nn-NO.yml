@@ -405,6 +405,7 @@ nn:
     email_confirm_needed_required: 'E-postadressa di %{email} er ikkje blitt stadfesta:'
     email_confirm_wrong_email: "(Feil e-postadresse?)"
     email_resend_confirm: Send ny stadfesting
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(la stå tomt dersom du ikkje vil forandre det)"
     current_password_hint: "(vi treng passordet ditt for å stadfeste endringane dine)"
     delete: Slett kontoen din

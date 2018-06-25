@@ -130,7 +130,7 @@ de:
     accept_terms: "Du musst der Erstellung eines Kontos zustimmen"
     error: "Ein Fehler ist aufgetreten."
     email_preference_question: "Dürfen wir dich per E-Mail über Neuigkeiten zu unseren Kursen, lokale Möglichkeiten oder andere Neuigkeiten zur Informatik informieren?"
-    email_preference_privacy: "(See our privacy policy)"
+    email_preference_privacy: "(Siehe unsere Datenschutzerklärung)"
     email_preference_yes: "Ja"
     email_preference_no: "Nein"
     email_preference_required: "You must specify an email preference."
@@ -360,6 +360,7 @@ de:
     email_confirm_needed_required: 'Deine E-Mail-Adresse %{email} ist noch nicht bestätigt:'
     email_confirm_wrong_email: '(Falsche E-Mail-Adresse?)'
     email_resend_confirm: 'Anmeldebestätigung erneut senden'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(freilassen, wenn du nichts verändern möchtest)"
     current_password_hint: '(wir benötigen dein aktuelles Passwort, um deine Änderungen zu bestätigen)'
     delete: 'Account löschen'

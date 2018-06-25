@@ -3,64 +3,64 @@ sk:
   data:
     function_names:
       x: x
-      details: details
-      draw eyebrow: draw eyebrow
-      draw pupil: draw pupil
+      details: detaily
+      draw eyebrow: nakresliť obočie
+      draw pupil: nakresliť žiaka
       draw a circle: nakresli kružnicu
-      draw a car: draw a car
-      draw_rect: draw_rect
-      draw square: draw square
-      jump to controller top left: jump to controller top left
-      jump to middle: jump to middle
-      draw a button: draw a button
-      draw cord: draw cord
-      draw R pad: draw R pad
-      draw left leg: draw left leg
-      draw right leg: draw right leg
-      draw body and arms: draw body and arms
-      draw a head: draw a head
-      draw sitting stick figure: draw sitting stick figure
-      draw head: draw head
-      draw arms: draw arms
-      jump to neck: jump to neck
-      draw O: draw O
-      draw D: draw D
-      draw E: draw E
-      draw ear stems: draw ear stems
-      big gear: big gear
-      small gear: small gear
+      draw a car: nakresliť auto
+      draw_rect: nakresliť_obdĺžnik
+      draw square: nakresliť štvorec
+      jump to controller top left: prejsť na ovládači doľava hore
+      jump to middle: prejsť do stredu
+      draw a button: nakresliť tlačidlo
+      draw cord: nakresliť kábel
+      draw R pad: nakresliť R podložku
+      draw left leg: nakresliť ľavú nohu
+      draw right leg: nakresliť pravú nohu
+      draw body and arms: nakresliť telo a ruky
+      draw a head: nakresliť hlavu
+      draw sitting stick figure: nakresliť sediaceho panáčika
+      draw head: nakresliť hlavu
+      draw arms: nakresliť ruky
+      jump to neck: skočiť na krk
+      draw O: nakresliť O
+      draw D: nakresliť D
+      draw E: nakresliť E
+      draw ear stems: nakresliť uši
+      big gear: veľké koleso
+      small gear: malé koleso
       draw a hexagon: nakresli šesťuholník
       draw a flower: nakresli kvetinu
       draw a square: nakresli štvorec
       draw a snowflake: nakresli snehovú vločku
-      draw 3 hexagons: draw 3 hexagons
-      draw 4 hexagons: draw 4 hexagons
-      draw 5 hexagons: draw 5 hexagons
-      get 2 nectar: get 2 nectar
-      collect purple nectar: collect purple nectar
-      get 5: get 5
-      move and get nectar: move and get nectar
-      move and get 4: move and get 4
-      get 7 nectar make 7 honey: get 7 nectar make 7 honey
-      get 7 make 7: get 7 make 7
-      get 7: get 7
-      move and get 3: move and get 3
+      draw 3 hexagons: nakresliť 3 šesťuholníky
+      draw 4 hexagons: nakresliť 4 šesťuholníky
+      draw 5 hexagons: nakresliť 5 šesťuholníkov
+      get 2 nectar: získať 2 nektáre
+      collect purple nectar: pozbierať fialový nektár
+      get 5: zobrať 5
+      move and get nectar: posunúť a zobrať nektár
+      move and get 4: posunúť a dostať 4
+      get 7 nectar make 7 honey: zobrať 7 nektárov a spraviť 7 medov
+      get 7 make 7: zobrať 7 a spraviť 7
+      get 7: zobrať 7
+      move and get 3: posunúť a dostať 3
       draw a tree: nakresli strom
-      draw triangle: draw triangle
-      draw circle: draw circle
-      draw goal: draw goal
-      graph: graph
-      draw waves: draw waves
-      draw a wave: draw a wave
-      draw a small triangle: draw a small triangle
-      draw a medium triangle: draw a medium triangle
-      draw a large triangle: draw a large triangle
-      draw a big triangle: draw a big triangle
+      draw triangle: nakresliť trojuholník
+      draw circle: nakresliť kruh
+      draw goal: nakresliť cieľ
+      graph: graf
+      draw waves: jnakresliť vlny
+      draw a wave: nakresliť vlnu
+      draw a small triangle: nakresliť malý trojuholník
+      draw a medium triangle: nakresliť stredný trojuholník
+      draw a large triangle: nakresliť veľký trojuholník
+      draw a big triangle: nakresliť obrovský trojuholník
       draw a triangle: nakresli trojuholník
       draw a house: nakresli dom
-      check purple flower: check purple flower
-      check flower make honey: check flower make honey
-      get nectar or make honey: get nectar or make honey
+      check purple flower: skontrolovať fialovú kvetinu
+      check flower make honey: skontrolovať kvetinu a spraviť med
+      get nectar or make honey: zobrať nektár alebo spraviť med
       make 3 honey: make 3 honey
       get 5 nectar: get 5 nectar
       make all honey: make all honey
@@ -114,17 +114,17 @@ sk:
       draw a square 20: draw a square 20
       draw a square 40: draw a square 40
       draw a triangle with length: draw a triangle with length
-      Draw a Triangle with length: Draw a Triangle with length
-      draw a triangle wioth length: draw a triangle wioth length
-      draw a sqaure: draw a sqaure
-      triangle: triangle
-      draw a spiral shape: draw a spiral shape
-      get 3 nectar: get 3 nectar
-      get many nectar: get many nectar
+      Draw a Triangle with length: Nakresliť Trojuholník s dĺžkou
+      draw a triangle wioth length: nakresliť trojuholník s dĺžkou
+      draw a sqaure: nakresliť štvorec
+      triangle: trojuholník
+      draw a spiral shape: nakresliť tvar špirály
+      get 3 nectar: získať 3 nektáre
+      get many nectar: získať veľa nektáru
       get nectar make honey: get nectar make honey
-      draw an octagon: draw an octagon
-      draw octagons: draw octagons
-      shift down: shift down
+      draw an octagon: nakresliť osemuholník
+      draw octagons: nakresliť osemuholníky
+      shift down: posunúť nadol
       level_up: level_up
       score_points: score_points
       set score: nastaviť skóre
@@ -140,37 +140,37 @@ sk:
       patrol left right: patrol left right
       empty function: empty function
       check guess: check guess
-      Jump: Jump
+      Jump: Skočiť
       test: test
-      build bridge: build bridge
-      run right: run right
-      spin right: spin right
-      grow forever: grow forever
-      draw grass: draw grass
-      sun: sun
-      draw windows: draw windows
-      square: square
-      draw a door: draw a door
-      rectangle: rectangle
+      build bridge: postaviť most
+      run right: bežať doprava
+      spin right: otočiť doprava
+      grow forever: rásť navždy
+      draw grass: nakresliť trávu
+      sun: slnko
+      draw windows: nakresliť okná
+      square: štvorec
+      draw a door: nakresliť dvere
+      rectangle: obdĺžnik
       diamond: diamant
-      window: window
-      n-sided shape: n-sided shape
-      draw a loop: draw a loop
-      draw spiral circle: draw spiral circle
-      draw roof: draw roof
-      draw rectangle: draw rectangle
+      window: okno
+      n-sided shape: n-stranný tvar
+      draw a loop: nakresliť slučku
+      draw spiral circle: nakresliť špirálu
+      draw roof: nakresliť strechu
+      draw rectangle: nakresliť obdĺžnik
       move: presunúť
-      function 1: function 1
-      function 2: function 2
-      turn corner: turn corner
-      destroy and move: destroy and move
-      clear path: clear path
-      clear cacti: clear cacti
-      place and move: place and move
-      cover lava: cover lava
-      build short bridge: build short bridge
-      build long bridge: build long bridge
-      create trail: create trail
+      function 1: funkcia 1
+      function 2: funkcia 2
+      turn corner: otočiť sa na rohu
+      destroy and move: zničiť a posunúť sa
+      clear path: vyčistiť cestu
+      clear cacti: odstrániť kaktus
+      place and move: umiestniť a posunúť
+      cover lava: zakryť lávu
+      build short bridge: postaviť krátky most
+      build long bridge: postaviť dlhý most
+      create trail: vytvoriť stopu
       move and fill: move and fill
       fix right corner: fix right corner
       fix left corner: fix left corner
@@ -213,12 +213,12 @@ sk:
       row of nectar: row of nectar
       rowOfNectar: rowOfNectar
       move and check: move and check
-      win game: win game
-      lose game: lose game
-      keep playing: keep playing
-      Ask a question: Ask a question
-      draw pinwheel: draw pinwheel
-      draw background: draw background
+      win game: vyhrať hru
+      lose game: prehrať hru
+      keep playing: pokračovať v hre
+      Ask a question: Opýtať sa otázku
+      draw pinwheel: nakresliť veterník
+      draw background: nakresliť pozadie
       move and get nectar with counter: move and get nectar with counter
       pick row: pick row
       draw flame: draw flame
