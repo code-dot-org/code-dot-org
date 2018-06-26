@@ -12,7 +12,7 @@ export default class ManageLinkedAccounts extends React.Component {
         <h2 style={styles.header}>
           {i18n.manageLinkedAccounts()}
         </h2>
-        <table style={tableLayoutStyles.table}>
+        <table style={styles.table}>
           <thead>
             <tr>
               <th style={styles.headerCell}>{i18n.manageLinkedAccounts_loginType()}</th>
@@ -71,24 +71,28 @@ class GoogleRow extends React.Component {
   }
 }
 
-const PADDING = 20;
+const GUTTER = 20;
 const styles = {
   container: {
-    paddingTop: PADDING,
+    paddingTop: GUTTER,
   },
   header: {
     fontSize: 22,
   },
+  table: {
+    ...tableLayoutStyles.table,
+    marginTop: GUTTER,
+  },
   headerCell: {
     ...tableLayoutStyles.headerCell,
-    paddingLeft: PADDING,
-    paddingRight: PADDING,
+    paddingLeft: GUTTER,
+    paddingRight: GUTTER,
     fontWeight: 'normal',
   },
   cell: {
     ...tableLayoutStyles.cell,
-    paddingLeft: PADDING,
-    paddingRight: PADDING,
+    paddingLeft: GUTTER,
+    paddingRight: GUTTER,
   },
   emptyEmailCell: {
     color: color.light_gray,
