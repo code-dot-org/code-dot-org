@@ -66,46 +66,32 @@ class UserPermissionGranteeTest < ActiveSupport::TestCase
     refute user.levelbuilder?
   end
 
+  test 'authorized_teacher?' do
+    user = create :teacher
+    refute user.authorized_teacher?
+    user.permission = UserPermission::AUTHORIZED_TEACHER
+    assert user.authorized_teacher?
+  end
+
+  test 'census_reviewer?' do
+    user = create :teacher
+    refute user.census_reviewer?
+    user.permission = UserPermission::CENSUS_REVIEWER
+    assert user.census_reviewer?
+  end
+
+  test 'create_professional_development_workshop?' do
+    user = create :teacher
+    refute user.create_professional_development_workshop?
+    user.permission = UserPermission::CREATE_PROFESSIONAL_DEVELOPMENT_WORKSHOP
+    assert user.create_professional_development_workshop?
+  end
+
   test 'facilitator?' do
     user = create :teacher
     refute user.facilitator?
     user.permission = UserPermission::FACILITATOR
     assert user.facilitator?
-  end
-
-  test 'workshop_organizer?' do
-    user = create :teacher
-    refute user.workshop_organizer?
-    user.permission = UserPermission::WORKSHOP_ORGANIZER
-    assert user.workshop_organizer?
-  end
-
-  test 'program_manager?' do
-    user = create :teacher
-    refute user.program_manager?
-    user.permission = UserPermission::PROGRAM_MANAGER
-    assert user.program_manager?
-  end
-
-  test 'workshop_admin?' do
-    user = create :teacher
-    refute user.workshop_admin?
-    user.permission = UserPermission::WORKSHOP_ADMIN
-    assert user.workshop_admin?
-  end
-
-  test 'project_validator?' do
-    user = create :teacher
-    refute user.project_validator?
-    user.permission = UserPermission::PROJECT_VALIDATOR
-    assert user.project_validator?
-  end
-
-  test 'levelbuilder?' do
-    user = create :teacher
-    refute user.levelbuilder?
-    user.permission = UserPermission::LEVELBUILDER
-    assert user.levelbuilder?
   end
 
   test 'hidden_script_access? is false if user is not admin and does not have permission' do
@@ -122,6 +108,48 @@ class UserPermissionGranteeTest < ActiveSupport::TestCase
     user = create :teacher
     user.update(permission: UserPermission::HIDDEN_SCRIPT_ACCESS)
     assert user.hidden_script_access?
+  end
+
+  test 'levelbuilder?' do
+    user = create :teacher
+    refute user.levelbuilder?
+    user.permission = UserPermission::LEVELBUILDER
+    assert user.levelbuilder?
+  end
+
+  test 'plc_reviewer?' do
+    user = create :teacher
+    refute user.plc_reviewer?
+    user.permission = UserPermission::PLC_REVIEWER
+    assert user.plc_reviewer?
+  end
+
+  test 'program_manager?' do
+    user = create :teacher
+    refute user.program_manager?
+    user.permission = UserPermission::PROGRAM_MANAGER
+    assert user.program_manager?
+  end
+
+  test 'project_validator?' do
+    user = create :teacher
+    refute user.project_validator?
+    user.permission = UserPermission::PROJECT_VALIDATOR
+    assert user.project_validator?
+  end
+
+  test 'workshop_admin?' do
+    user = create :teacher
+    refute user.workshop_admin?
+    user.permission = UserPermission::WORKSHOP_ADMIN
+    assert user.workshop_admin?
+  end
+
+  test 'workshop_organizer?' do
+    user = create :teacher
+    refute user.workshop_organizer?
+    user.permission = UserPermission::WORKSHOP_ORGANIZER
+    assert user.workshop_organizer?
   end
 
   test 'grant admin permission logs to infrasecurity' do

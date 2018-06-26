@@ -45,30 +45,13 @@ module UserPermissionGrantee
     reload
   end
 
-  def facilitator?
-    permission? UserPermission::FACILITATOR
+  UserPermission::VALID_PERMISSIONS.each do |permission_name|
+    define_method "#{permission_name}?" do
+      permission? permission_name
+    end
   end
 
-  def workshop_organizer?
-    permission? UserPermission::WORKSHOP_ORGANIZER
-  end
-
-  def program_manager?
-    permission? UserPermission::PROGRAM_MANAGER
-  end
-
-  def workshop_admin?
-    permission? UserPermission::WORKSHOP_ADMIN
-  end
-
-  def project_validator?
-    permission? UserPermission::PROJECT_VALIDATOR
-  end
-
-  def levelbuilder?
-    permission? UserPermission::LEVELBUILDER
-  end
-
+  # Overrides generated permission helper, above.
   def hidden_script_access?
     admin? || permission?(UserPermission::HIDDEN_SCRIPT_ACCESS)
   end
