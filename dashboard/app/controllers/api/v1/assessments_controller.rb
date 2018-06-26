@@ -144,6 +144,12 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
             end
           else
             level_result[:status] = "unsubmitted"
+            case level
+            when TextMatch, FreeResponse
+              level_result[:type] = "FreeResponse"
+            when Multi
+              level_result[:type] = "Multi"
+            end
           end
 
           level_results << level_result
