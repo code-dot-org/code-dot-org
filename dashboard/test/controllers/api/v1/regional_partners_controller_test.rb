@@ -23,6 +23,11 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
     )
   end
 
+  [:index, :capacity].each do |action|
+    test_redirect_to_sign_in_for action
+    test_user_gets_response_for action, user: :user, response: :success
+  end
+
   test 'index gets regional partners for user' do
     program_manager = create :teacher
 
