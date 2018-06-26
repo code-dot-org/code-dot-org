@@ -4,12 +4,12 @@ require 'cdo/chat_client'
 # Module to mix-in to User model providing expressive interactions with
 # user permissions.
 #
-module UserPermissionHelper
+module UserPermissionConcern
   extend ActiveSupport::Concern
 
   included do
     has_many :permissions, class_name: 'UserPermission', dependent: :destroy
-    before_save :log_admin_save, if: -> {admin_changed? && UserPermissionHelper.should_log?}
+    before_save :log_admin_save, if: -> {admin_changed? && UserPermissionConcern.should_log?}
   end
 
   # @param permission [UserPermission] the permission to query.
