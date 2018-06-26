@@ -5,47 +5,47 @@ sk:
       Loops: Cykly
       Functions: Funkcie
       Color: Farba
-      Brushes: Brushes
+      Brushes: Štetky
       Math: Matematika
       Logic: Logické
       Variables: Premenné
-      Number: Number
-      String: String
-      Image: Image
-      Boolean: Boolean
+      Number: Číslo
+      String: Reťazec
+      Image: Obrázok
+      Boolean: Logická hodnota
       Conditionals: Podmienky
       Events: Udalosti
-      Games/Score: Games/Score
-      Comments: Comments
-      Category: Category
-      Prebuilt: Prebuilt
+      Games/Score: Hry/skóre
+      Comments: Komentáre
+      Category: Kategória
+      Prebuilt: Vopred vytvorené
       Text: Text
-      Picker: Picker
-      Comment: Comment
-      'Variables ': 'Variables '
-      everythingelse: everythingelse
-      numbers: numbers
-      Numbers: Numbers
+      Picker: Nástroj výberu
+      Comment: Komentár
+      'Variables ': 'Premenné '
+      everythingelse: všetko ostatné
+      numbers: čisla
+      Numbers: Čísla
       Input: Input
-      Default: Default
-      World: World
+      Default: Predvolené
+      World: Svet
       Sprites: Sprites
-      Behaviors: Behaviors
-      Advanced: Advanced
-      Sprite: Sprite
-      Brush: Brush
-      Make Sprite: Make Sprite
-      Movement: Movement
+      Behaviors: Správanie
+      Advanced: Pokročilé
+      Sprite: Objekt
+      Brush: Štetka
+      Make Sprite: Vytvoriť objekt
+      Movement: Pohyb
       Start: Spustiť
-      Groups: Groups
+      Groups: Skupiny
       Booleans: Booleans
-      Functional: Functional
-      Predefined: Predefined
+      Functional: Funkcie
+      Predefined: Preddefinované
       test: test
       test2: test2
       Foo: Foo
       Name: Meno
-      NEW BLOCKS: NEW BLOCKS
-      'Functions ': 'Functions '
-      Game/Score: Game/Score
+      NEW BLOCKS: NOVÉ BLOKY
+      'Functions ': 'Funkcie '
+      Game/Score: Hra/skóre
       Function: Funkcia
