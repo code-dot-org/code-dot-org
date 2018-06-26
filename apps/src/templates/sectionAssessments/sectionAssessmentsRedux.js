@@ -466,6 +466,12 @@ export const getMultipleChoiceSectionSummary = (state) => {
   return results;
 };
 
+/**
+ * Selector function that takes in the state and a boolean indicating
+ * if the current assessment is a survey.
+ * Returns an integer total count of the number of students who have submitted
+ * the current assessment.
+ */
 export const getTotalSubmissionForCurrentAssessment = (state, isSurvey) => {
   const currentAssessmentId = state.sectionAssessments.assessmentId;
   if (isSurvey) {
