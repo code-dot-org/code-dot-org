@@ -133,7 +133,7 @@ class AbilityTest < ActiveSupport::TestCase
     user = create :user
     user_permission = UserPermission.create(
       user_id: user.id,
-      permission: UserPermission::DISTRICT_CONTACT
+      permission: UserPermission::PROJECT_VALIDATOR
     )
     ability = Ability.new user
 
