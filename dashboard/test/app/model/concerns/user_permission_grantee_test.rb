@@ -55,6 +55,7 @@ class UserPermissionGranteeTest < ActiveSupport::TestCase
 
   test 'revoke_all_permissions drops permission cache' do
     user = create :facilitator
+    # This call populates the permission cache
     user.permission?(UserPermission::LEVELBUILDER)
 
     assert user.facilitator?
