@@ -19,6 +19,13 @@ class FeaturedProject < ApplicationRecord
     !featured_at.nil? && unfeatured_at.nil?
   end
 
+  # Determines if a project is currently featured by decrypting the provided
+  # encrypted_channel_id, using the decrypted channel id to check for a
+  # FeaturedProject with the corresponding storage_app_id.  If there is a
+  # FeaturedProject with that storage_app_id, check if it is currently featured.
+  # @param encrypted_channel_id [string]
+  # @return [Boolean] whether the project associated with the given
+  # encrypted_channel_id is currently featured
   def self.featured?(encrypted_channel_id)
     _, channel_id = storage_decrypt_channel_id encrypted_channel_id
     find_by(storage_app_id: channel_id)&.featured?
