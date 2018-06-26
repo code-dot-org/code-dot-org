@@ -80,13 +80,6 @@ class UserPermissionGranteeTest < ActiveSupport::TestCase
     assert user.census_reviewer?
   end
 
-  test 'create_professional_development_workshop?' do
-    user = create :teacher
-    refute user.create_professional_development_workshop?
-    user.permission = UserPermission::CREATE_PROFESSIONAL_DEVELOPMENT_WORKSHOP
-    assert user.create_professional_development_workshop?
-  end
-
   test 'facilitator?' do
     user = create :teacher
     refute user.facilitator?
