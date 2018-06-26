@@ -27,7 +27,6 @@ export default class TextResponses extends React.Component {
 
       return answers;
     } else {
-      return (<span>nope</span>);
       return Object.keys(this.props.answers).map((facilitator_name, i) => {
         let answers = this.props.answers[facilitator_name].map((feedback, j) => this.renderBullet(feedback, j));
         if (this.props.showAverage) {

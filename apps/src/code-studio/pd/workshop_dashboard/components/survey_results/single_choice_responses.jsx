@@ -62,7 +62,7 @@ export default class SingleChoiceResponses extends React.Component {
               <br/>
               Other:
               <ul>
-                {_.compact(this.props.otherAnswers).map((answer) => (<li>{answer}</li>))}
+                {_.compact(this.props.otherAnswers).map((answer, i) => (<li key={i}>{answer}</li>))}
               </ul>
             </div>
           )
