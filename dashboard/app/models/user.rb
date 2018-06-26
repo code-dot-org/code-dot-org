@@ -561,11 +561,21 @@ class User < ActiveRecord::Base
     end
   end
 
+  # Given a cleartext email finds the first user that has a matching email or hash.
+  # @param [String] email (cleartext)
+  # @return [User|nil]
   def self.find_by_email_or_hashed_email(email)
     return nil if email.blank?
+    find_by_hashed_email User.hash_email email
+  end
 
-    hashed_email = User.hash_email(email)
-    User.find_by(hashed_email: hashed_email)
+  # Given an email hash, finds the first user that has a matching email hash.
+  # @param [String] hashed_email
+  # @return [User|nil]
+  def self.find_by_hashed_email(hashed_email)
+    return nil if hashed_email.blank?
+    migrated_user = AuthenticationOption.find_by(hashed_email: hashed_email)&.user
+    migrated_user || User.find_by(hashed_email: hashed_email)
   end
 
   # Locate an SSO user by SSO provider and associated user id.
