@@ -41,9 +41,8 @@ class SectionAssessments extends Component {
 
   onChangeScript = scriptId => {
     const {setScriptId, asyncLoadAssessments, sectionId} = this.props;
-    asyncLoadAssessments(sectionId, scriptId).then(() => {
-      setScriptId(scriptId);
-    });
+    asyncLoadAssessments(sectionId, scriptId);
+    setScriptId(scriptId);
   };
 
   render() {
