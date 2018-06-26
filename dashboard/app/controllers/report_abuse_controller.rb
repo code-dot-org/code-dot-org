@@ -96,14 +96,4 @@ class ReportAbuseController < ApplicationController
       age: (current_user.age unless current_user.nil?),
     }
   end
-
-  private
-
-  def check_if_featured(project_id)
-    _, channel_id = storage_decrypt_channel_id(project_id)
-    return render_404 unless channel_id
-    @featured_project = FeaturedProject.find_by storage_app_id: channel_id
-    return false unless @featured_project
-    @featured_project.featured?
-  end
 end
