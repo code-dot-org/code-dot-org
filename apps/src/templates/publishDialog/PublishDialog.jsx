@@ -11,7 +11,7 @@ const styles = {
   dialog: {
     paddingLeft: 20,
     paddingRight: 20,
-    paddingBottom: 20
+    paddingBottom: 20,
   },
 };
 
@@ -55,6 +55,7 @@ class PublishDialog extends Component {
         handleClose={this.close}
         useUpdatedStyles
         style={styles.dialog}
+        className="modal-body"
       >
         <h2>
           {i18n.publishToPublicGallery()}
