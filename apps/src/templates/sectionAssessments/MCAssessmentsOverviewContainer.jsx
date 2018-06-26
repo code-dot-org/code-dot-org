@@ -8,15 +8,18 @@ import i18n from "@cdo/locale";
 class MCAssessmentsOverviewContainer extends Component {
   static propTypes= {
     questionAnswerData: PropTypes.arrayOf(multipleChoiceDataPropType),
+    totalStudentCount: PropTypes.number,
   };
 
   render() {
-    const {questionAnswerData} = this.props;
+    const {questionAnswerData, totalStudentCount} = this.props;
     return (
       <div>
         {questionAnswerData.length > 0 &&
           <div>
-            <h2>{i18n.multipleChoiceQuestionsOverview()}</h2>
+            <h2>
+              {i18n.multipleChoiceQuestionsOverview({numSubmissions: 3, numStudents: totalStudentCount})}
+            </h2>
             <MultipleChoiceAssessmentsOverviewTable
               questionAnswerData={questionAnswerData}
             />

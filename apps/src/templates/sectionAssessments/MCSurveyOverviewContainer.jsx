@@ -7,18 +7,21 @@ import i18n from "@cdo/locale";
 class MCSurveyOverviewContainer extends Component {
   static propTypes= {
     multipleChoiceSurveyData: PropTypes.arrayOf(multipleChoiceSurveyDataPropType),
+    totalStudentCount: PropTypes.number,
   };
 
   render() {
-    const {multipleChoiceSurveyData} = this.props;
+    const {multipleChoiceSurveyData, totalStudentCount} = this.props;
     return (
       <div>
-        <h2>{i18n.multipleChoiceQuestionsOverview()}</h2>
-          {multipleChoiceSurveyData.length > 0 &&
-            <MultipleChoiceSurveyOverviewTable
-              multipleChoiceSurveyData={multipleChoiceSurveyData}
-            />
-          }
+        <h2>
+          {i18n.multipleChoiceQuestionsOverview({numSubmissions: 3, numStudents: totalStudentCount})}
+        </h2>
+        {multipleChoiceSurveyData.length > 0 &&
+          <MultipleChoiceSurveyOverviewTable
+            multipleChoiceSurveyData={multipleChoiceSurveyData}
+          />
+        }
       </div>
     );
   }
