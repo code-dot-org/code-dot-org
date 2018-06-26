@@ -322,7 +322,9 @@ FactoryGirl.define do
         )
         user.update!(
           primary_authentication_option: ao,
-          provider: User::PROVIDER_MIGRATED
+          provider: User::PROVIDER_MIGRATED,
+          email: '',
+          hashed_email: nil
         )
       end
     end
