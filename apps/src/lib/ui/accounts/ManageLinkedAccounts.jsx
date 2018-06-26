@@ -2,7 +2,6 @@ import React, {PropTypes} from 'react';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import {tableLayoutStyles} from "@cdo/apps/templates/tables/tableConstants";
-import Button from "@cdo/apps/templates/Button";
 
 export default class ManageLinkedAccounts extends React.Component {
   render() {
@@ -58,13 +57,15 @@ class GoogleRow extends React.Component {
         <td style={styles.cell}>{i18n.manageLinkedAccounts_google_oauth2()}</td>
         <td style={emailStyles}>{email || i18n.manageLinkedAccounts_notConnected()}</td>
         <td style={styles.cell}>
-          <Button
-            text={buttonText}
+          <button
+            className="btn"
+            style={styles.button}
             onClick={() => {}}
-            size={Button.ButtonSize.large}
-            color={Button.ButtonColor.gray}
             disabled={cannotDisconnect}
-          />
+            tabIndex="1"
+          >
+            {buttonText}
+          </button>
         </td>
       </tr>
     );
@@ -97,5 +98,12 @@ const styles = {
   emptyEmailCell: {
     color: color.light_gray,
     fontStyle: 'italic',
+  },
+  button: {
+    width: 105,
+    fontFamily: '"Gotham 5r", sans-serif',
+    color: color.charcoal,
+    padding: 8,
+    margin: 0,
   },
 };
