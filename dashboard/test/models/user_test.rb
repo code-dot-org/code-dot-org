@@ -249,13 +249,13 @@ class UserTest < ActiveSupport::TestCase
   def assert_updating_multi_auth_users_fail_validation_on_duplicate_email(email)
     teacher = create :teacher, :with_migrated_email_authentication_option
     teacher.authentication_options.first.email = email
-    refute teacher.valid?
-    assert_equal ['Email has already been taken'], teacher.errors.full_messages
+    refute teacher.authentication_options.first.valid?
+    assert_equal ['Email has already been taken'], teacher.authentication_options.first.errors.full_messages
 
     student = create :student, :with_migrated_email_authentication_option
     student.authentication_options.first.email = email
-    refute student.valid?
-    assert_equal ['Email has already been taken'], student.errors.full_messages
+    refute student.authentication_options.first.valid?
+    assert_equal ['Email has already been taken'], student.authentication_options.first.errors.full_messages
   end
 
   test "cannot create single-auth user with duplicate of single-auth user's email" do
