@@ -36,11 +36,13 @@ module UserPermissionGrantee
     permissions.delete permission if permission
   end
 
-  # Revokes all escalated permissions associated with the user, including admin status and any
-  # granted UserPermission's.
+  # Revokes all escalated permissions associated with the user,
+  # including admin status and any granted UserPermissions.
   def revoke_all_permissions
+    @permissions = nil
     update_column(:admin, nil)
     UserPermission.where(user_id: id).each(&:destroy)
+    reload
   end
 
   def facilitator?
