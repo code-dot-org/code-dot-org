@@ -517,7 +517,7 @@ es-MX:
         applab_intro_sounds: App Lab - Imágenes y sonidos
         applab_intro_designmode: App Lab - Modo de diseño
         applab_intro_share: App Lab - Comparte tu aplicación
-        csd_applab_arrays: Introduction to Arrays
+        csd_applab_arrays: Introducción a los Arrays
         CSF_skinOverview_Harvester: El recolector
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
@@ -526,13 +526,13 @@ es-MX:
         CSF_harvester_loops_K1: Ciclos en Harvester
         CSF_scrat_loops_K1: Ciclos en Ice Age
         CSF_scrat_loops_CF: Ciclos en Ice Age
-        CSF_if_allskins: The If Block
-        CSF_ifelse_allskins: Using If/Else Blocks
-        CSF_ifelseifelse_allskins: Using If/ElseIf/Else Blocks
+        CSF_if_allskins: El Bloque If
+        CSF_ifelse_allskins: Usando Bloques "If/Else"
+        CSF_ifelseifelse_allskins: Usando Bloques "If/ElseIf/Else"
         CSF_loops_AB: Bucles
-        csd_gamelab_booleans: Boolean Expressions
-        csd_gamelab_conditional_statements: Conditional Statements
-        csd_gamelab_if_else: If/Else Statements
+        csd_gamelab_booleans: Expresiones Booleanas
+        csd_gamelab_conditional_statements: Sentencias Condicionales
+        csd_gamelab_if_else: Sentencias If/Else
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque
