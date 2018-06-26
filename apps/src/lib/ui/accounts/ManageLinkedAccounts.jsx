@@ -2,6 +2,7 @@ import React, {PropTypes} from 'react';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import {tableLayoutStyles} from "@cdo/apps/templates/tables/tableConstants";
+import BootstrapButton from './BootstrapButton';
 
 const OAUTH_PROVIDERS = {
   GOOGLE: 'google_oauth2',
@@ -82,15 +83,13 @@ class OauthConnection extends React.Component {
           {email || i18n.manageLinkedAccounts_notConnected()}
         </td>
         <td style={styles.cell}>
-          <button
-            className="btn"
+          {/* This button intentionally uses BootstrapButton to match other account page buttons */}
+          <BootstrapButton
             style={styles.button}
+            text={buttonText}
             onClick={onClick}
             disabled={cannotDisconnect}
-            tabIndex="1"
-          >
-            {buttonText}
-          </button>
+          />
         </td>
       </tr>
     );
