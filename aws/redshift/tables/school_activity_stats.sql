@@ -4,7 +4,7 @@
 -- No check on whether students actually made progress
 
 DROP TABLE IF EXISTS analysis.school_activity_stats;
-CREATE TABLE analysis.school_activity_stats_test AS
+CREATE TABLE analysis.school_activity_stats AS
   
 WITH pledged as (
   -- By school_id, has a school pledged to expand computer science?
@@ -15,15 +15,16 @@ WITH pledged as (
       join dashboard_production.school_infos si 
       on si.id = cssi.school_info_id
     where pledged = 1
-  ),
-  
-hoc_event as (
-  -- by school ID, did a school host an hour of code in 2017?
-    select distinct json_extract_path_text(data, 'nces_school_s') school_id
-    from pegasus_pii.forms
-    where kind = 'HocSignup2017'
-    and json_extract_path_text(data, 'nces_school_s') not in ('','-1')
   )
+  --,
+
+-- hoc_event as (
+--   -- by school ID, did a school host an hour of code in 2017?
+--     select distinct json_extract_path_text(data, 'nces_school_s') school_id
+--     from pegasus_pii.forms
+--     where kind = 'HocSignup2017'
+--     and json_extract_path_text(data, 'nces_school_s') not in ('','-1')
+--   )
   SELECT ss.school_id,
          rpm.regional_partner_id::varchar,
          case when rp.name = 'mindSpark Learning' then 'mindSpark Learning and Colorado Education Initiative' else rp.name end as regional_partner,
@@ -59,8 +60,8 @@ hoc_event as (
          COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (122,123,124,125,126,127) THEN f.student_user_id ELSE NULL END) students_csp_l365,      
          COUNT(DISTINCT CASE WHEN scr.name IN ('starwars','starwarsblocks','mc','minecraft','hourofcode','flappy','artist','frozen','infinity','playlab','gumball','iceage','sports','basketball','hero','applab-intro') THEN f.student_user_id ELSE NULL END) students_hoc,
          -- pledge and HOC
-         MAX(CASE WHEN pledged.school_id is not null then 1 end) pledged,
-         MAX(CASE WHEN hoc_event.school_id is not null then 1 end) as hoc_event
+         MAX(CASE WHEN pledged.school_id is not null then 1 end) pledged --,
+         -- MAX(CASE WHEN hoc_event.school_id is not null then 1 end) as hoc_event
   FROM analysis.school_stats ss
     LEFT JOIN dashboard_production.schools sc on sc.id = ss.school_id
     LEFT JOIN dashboard_production.school_infos si 
@@ -85,10 +86,12 @@ hoc_event as (
       ON ttf.user_id = u.id
     LEFT JOIN pledged
       ON pledged.school_id = ss.school_id
-    LEFT JOIN hoc_event
-      ON hoc_event.school_id = ss.school_id
+--     LEFT JOIN hoc_event
+--       ON hoc_event.school_id = ss.school_id
   GROUP BY 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17
  ;
  
 GRANT ALL PRIVILEGES ON analysis.school_activity_stats TO GROUP admin;
 GRANT SELECT ON analysis.school_activity_stats TO GROUP reader, GROUP reader_pii;
+
+
