@@ -367,6 +367,20 @@ export const getMultipleChoiceSurveyResults = (state) => {
   });
 };
 
+// This selector function gets the current assessment Id and checkcs if the ID is in the survey structure
+// Determine if to show the empty text for when there are fewer than 5 survey submissions.
+
+export const checkCurrentIsSurvey = (state) => {
+  const surveysStructure = state.sectionAssessments.surveysByScript[state.scriptSelection.scriptId] || {};
+  const currentSurvey = surveysStructure[state.sectionAssessments.assessmentId];
+  // if the assessmentId does not exist, do not display the mc survey overview table
+  if (!currentSurvey) {
+    return [];
+  } else {
+    return i18n.emptySurveyOverviewTable();
+  }
+};
+
 /** Get data for students assessments multiple choice table
  * Returns an object, each of type studentOverviewDataPropType with
  * the value of the key being an object that contains the number
