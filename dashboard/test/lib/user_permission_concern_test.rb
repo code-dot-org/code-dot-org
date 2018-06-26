@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class UserPermissionHelperTest < ActiveSupport::TestCase
+class UserPermissionConcernTest < ActiveSupport::TestCase
   test 'permission? returns true when permission exists' do
     user = create :facilitator
     assert user.permission?(UserPermission::FACILITATOR)
@@ -114,7 +114,7 @@ class UserPermissionHelperTest < ActiveSupport::TestCase
   test 'grant admin permission logs to infrasecurity' do
     teacher = create :teacher
 
-    UserPermissionHelper.stubs(:should_log?).returns(true)
+    UserPermissionConcern.stubs(:should_log?).returns(true)
     ChatClient.
       expects(:message).
       with('infra-security',
@@ -132,7 +132,7 @@ class UserPermissionHelperTest < ActiveSupport::TestCase
   test 'revoke admin permission logs to infrasecurity' do
     admin_user = create :admin
 
-    UserPermissionHelper.stubs(:should_log?).returns(true)
+    UserPermissionConcern.stubs(:should_log?).returns(true)
     ChatClient.
       expects(:message).
       with('infra-security',
@@ -148,13 +148,13 @@ class UserPermissionHelperTest < ActiveSupport::TestCase
   end
 
   test 'new admin users log admin permission' do
-    UserPermissionHelper.stubs(:should_log?).returns(true)
+    UserPermissionConcern.stubs(:should_log?).returns(true)
     ChatClient.expects(:message)
     create :admin
   end
 
   test 'new non-admin users do not log admin permission' do
-    UserPermissionHelper.stubs(:should_log?).returns(true)
+    UserPermissionConcern.stubs(:should_log?).returns(true)
     ChatClient.expects(:message).never
     create :teacher
   end
