@@ -12248,17 +12248,17 @@ fil:
                 ay mag-iisip sa kanilang karanasan sa gawain at gumawa ng koneksyon
                 sa mga tipo ng paglutas ng problema na gagawin nila sa natirang bahagi
                 ng kurso. '
-              description_teacher: 'Sa araling ito, ang mga estudyante ay magtatrabaho
+              description_teacher: Sa araling ito, ang mga estudyante ay magtatrabaho
                 sa loob ng mga grupo para makadisenyo ng aluminum foil na mga bangka
-                na susuporta sa maraming mga barya hangga''t maaari. Ang mga grupo
+                na susuporta sa maraming mga barya hangga't maaari. Ang mga grupo
                 ay mayroong dalawang pagkakataon para magawa ang kanilang mga bangka,
                 na may layunin na makakarga ng mas marami pang barya kaysa sa nagawa
                 nila sa unang pagkakataon. Ang istraktura ng gawain ay nagpapahiwatig
-                sa iba''t ibang hakbang sa proseso ng paglutas ng problema na ipapakilala
+                sa iba't ibang hakbang sa proseso ng paglutas ng problema na ipapakilala
                 ng mas detalyado sa sumusunod na mga aralin. Sa pagtatapos ng aralin,
                 ang mga estudyante ay mag-iisip sa kanilang mga karanasan sa gawain
                 at gagawa ng mga koneksyon sa mga uri ng paglutas ng problema na gagawin
-                nila sa natitirang bahagi ng kurso. '
+                nila sa natitirang bahagi ng kurso.
             The Problem Solving Process:
               name: Ang Proseso ng Pagtuklas ng Problema
               description_student: Ang araling ito ay nagpapakila sa pormal na proseso
@@ -12434,6 +12434,25 @@ fil:
                 para sa mga estudyante at tumutulong sa kanila na mag-ayos ng kanilang
                 mga naisip. Ang proyekto ay dinisenyo para kumpletohin nang may kasama
                 pero maaari rin itong gawin na mag-isa lang.
+            Apps and Storage:
+              name: Apps and Storage
+              description_student: 'Ang araling ito ay sumasaklaw sa input at output
+                na mga aspeto ng mga kompyuter sa loob ng konteksto na makabuluhan
+                at pamilyar sa mga estudyante: ang mga app. Ang klase ay magtatasa
+                sa iba''t ibang mga aplikasyon sa web para suriin ang mga tiyak na
+                mga problema na dinisenyo para lutasin nila, ang mga input na kailangan
+                nilang gawin, ang mga output na ibinigay sa mga gumagamit. Ang klase
+                ay nagtatapos sa isang mga pag-talakay sa mga app na ito, pati na
+                rin ang isang diskusyon na pinanguluhan ng isang guro tungkol sa epekto
+                ng mga app sa lipunan. '
+              description_teacher: 'This lesson reviews the input, output, storage,
+                and processing aspects of a computer in a context that is relevant
+                and familiar to students: apps. In pairs, students evaluate smartphone
+                applications to analyze the specific problems that they were designed
+                to solve, the inputs that they need to work, and the processing that
+                turns those inputs into the desired output, and what information they
+                would want to store for later. The class concludes with a discussion
+                that connects the lesson to apps students are more familiar with. '
         csd4-2018:
           title: CSD Unit 4 - The Design Process
           description: Ang Yunit 4 ay nagpapakilala sa mas pinalawak na epekto ng
@@ -14048,6 +14067,14 @@ fil:
               name: Alien Dance Party - Input
             Virtual Pet - Interactions:
               name: Virtual Pet - Interactions
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        2018hoc-ab:
+          stages:
+            Labyrinth:
+              name: Labyrinth
           title: ''
           description_audience: ''
           description_short: ''

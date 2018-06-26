@@ -623,6 +623,13 @@ Dashboard::Application.routes.draw do
       # Routes used by the peer reviews admin pages
       get 'peer_review_submissions/index', to: 'peer_review_submissions#index'
       get 'peer_review_submissions/report_csv', to: 'peer_review_submissions#report_csv'
+
+      resources :teacher_feedbacks, only: [:create] do
+        collection do
+          get 'get_feedback_from_teacher'
+          get 'get_feedbacks'
+        end
+      end
     end
   end
 

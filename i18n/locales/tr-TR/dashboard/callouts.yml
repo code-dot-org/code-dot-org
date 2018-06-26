@@ -936,6 +936,7 @@ tr:
         courseC_maze_programming3_2: "Fazla blokları atmak için blokları alet kutusuna doğru \n sürükleyebilirsin."
         stone_block_2: Gri kareler taştan yapılmış ve atılamazlar.
       courseA_maze_ramp3a_2018_callout: { }
+      courseA_maze_ramp3b_2018_callout: { }
       courseA_maze_ramp4_2018_callout:
         courseC_maze_programming4_1: Bu senin blok limitin. Elinde kullanabileceğin kaç tane blokun kaldığını söyler.
       courseA_maze_ramp4a_2018_callout: { }
@@ -975,6 +976,7 @@ tr:
         grade2_CaringForNewPet_0_1: Tüm blokları birleştirdikten sonra, ''Çalıştır'' a bas ve programını başlat.
       courseB_Scrat_ramp2_2018_callout: { }
       courseB_Scrat_ramp3a_2018_callout: { }
+      courseB_Scrat_ramp3b_2018_callout: { }
       courseB_Scrat_ramp4a_2018_callout: { }
       courseB_Scrat_ramp5a_2018_callout: { }
       courseB_artist_loops3_callout:

@@ -745,7 +745,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'changing oauth user from student to teacher with same email is allowed' do
-    user = create :google_oauth2_student, email: 'email@new.xx'
+    user = create :student, :unmigrated_google_sso, email: 'email@new.xx'
 
     assert user.provider == 'google_oauth2'
 
@@ -759,7 +759,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'changing oauth user from student to teacher with different email is not allowed' do
-    user = create :google_oauth2_student
+    user = create :student, :unmigrated_google_sso
 
     assert user.provider == 'google_oauth2'
 
@@ -1177,8 +1177,11 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'sponsored? is true for migrated user with no authentication options' do
-    student = create :student, email: 'example@email.com'
-    student.update(provider: User::PROVIDER_MIGRATED)
+    student = create :student_in_picture_section
+    student.migrate_to_multi_auth
+    student.reload
+
+    assert_empty student.authentication_options
     assert student.sponsored?
   end
 
@@ -1203,10 +1206,12 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'can_edit_password? is false for migrated user with no authentication options' do
-    user = create :user
-    user.update(provider: 'migrated')
-    assert user.authentication_options.empty?
-    refute user.can_edit_password?
+    student = create :student_in_picture_section
+    student.migrate_to_multi_auth
+    student.reload
+
+    assert_empty student.authentication_options
+    refute student.can_edit_password?
   end
 
   test 'can_edit_email? is true for user with password' do
@@ -1220,9 +1225,12 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'can_edit_email? is false for migrated user with no authentication options' do
-    teacher = create :teacher, email: 'example@email.com'
-    teacher.update(provider: User::PROVIDER_MIGRATED)
-    refute teacher.can_edit_email?
+    student = create :student_in_picture_section
+    student.migrate_to_multi_auth
+    student.reload
+
+    assert_empty student.authentication_options
+    refute student.can_edit_email?
   end
 
   test 'can_edit_email? is true for migrated user with at least one authentication option' do
@@ -1237,7 +1245,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'can change own user type as an oauth student' do
-    student = create :google_oauth2_student
+    student = create :student, :unmigrated_google_sso
     assert student.can_change_own_user_type?
   end
 
@@ -3099,5 +3107,37 @@ class UserTest < ActiveSupport::TestCase
       },
       result
     )
+  end
+
+  test 'find_by_credential returns nil when no matching user is found' do
+    user = create :student, :unmigrated_clever_sso
+
+    assert_nil User.find_by_credential(
+      type: AuthenticationOption::CLEVER,
+      id: 'mismatched_id_' + user.uid
+    )
+  end
+
+  test 'find_by_credential locates unmigrated SSO user' do
+    user = create :student, :unmigrated_clever_sso
+    assert_equal AuthenticationOption::CLEVER, user.provider
+
+    assert_equal user,
+      User.find_by_credential(
+        type: AuthenticationOption::CLEVER,
+        id: user.uid
+      )
+  end
+
+  test 'find_by_credential locates migrated SSO user' do
+    user = create :student, :unmigrated_clever_sso
+    user.migrate_to_multi_auth
+
+    User.expects(:find_by).never
+    assert_equal user,
+      User.find_by_credential(
+        type: AuthenticationOption::CLEVER,
+        id: user.uid
+      )
   end
 end

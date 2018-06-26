@@ -6,11 +6,11 @@ it:
         csd_category_name: CS Discoveries ('17-'18)
         csd_2018_category_name: CS Discoveries ('18-'19)
         csf_category_name: Corsi base
-        csf_2018_category_name: CS Fundamentals (2018)
+        csf_2018_category_name: Fondamenti di Informatica (2018)
         csf_international_category_name: Fondamenti di Informatica (in Italiano)
         csf2_draft_category_name: 'Corsi A - F: In fase di sviluppo'
         csp_category_name: Princìpi dell'Informatica (versione 2015-16)
-        csp_2018_category_name: CS Principles ('18-'19)
+        csp_2018_category_name: Principi di informatica ('18-'19)
         cspexams_category_name: Prova pratica di principi d'informatica
         csp17_category_name: "'16-'17 principi d'informatica"
         full_course_category_name: Corsi Avanzati
@@ -378,23 +378,23 @@ it:
           description_audience: ''
           stages:
             Computer Science Pedagogy:
-              name: Computer Science Pedagogy
+              name: Pedagogia dell'informatica
             Introduction to PD:
               name: Introduzione a PD
             K-5 Courses:
-              name: K-5 Courses
+              name: Corsi per scuola elementare
             Next Steps:
-              name: Next Steps
+              name: I prossimi passi
             'Programming Concept: Conditionals':
-              name: 'Programming Concept: Conditionals'
+              name: 'Concetti di programmazione: condizionali'
             'Programming Concept: Events':
-              name: 'Programming Concept: Events'
+              name: 'Concetti di programmazione: eventi'
             'Programming Concept: Functions':
-              name: 'Programming Concept: Functions'
+              name: 'Concetti di programmazione: funzioni'
             'Programming Concept: Loops':
-              name: 'Programming Concept: Loops'
+              name: 'Concetti di programmazione: iterazioni'
             Reflection:
-              name: Reflection
+              name: Riflessione
             Teacher Dashboard:
               name: Cruscotto dell'Insegnante
             Unplugged lessons:
@@ -410,7 +410,7 @@ it:
             Automatic DNS node:
               name: Automatic DNS node
             Broadcasting messages:
-              name: Broadcasting messages
+              name: Broadcasting dei messaggi
             Internet Simulator Freeplay:
               name: Internet Simulator Freeplay
             Manual DNS:
@@ -839,13 +839,13 @@ it:
           description_audience: ''
           stages:
             Computer Science Pedagogy:
-              name: Computer Science Pedagogy
+              name: Pedagogia dell'informatica
             Course Overview:
               name: Course Overview
             Evaluation Blocks:
               name: Blocchi di Valutazione
             Next Steps:
-              name: Next Steps
+              name: I prossimi passi
             Strings and Images:
               name: Stringhe e Immagini
             Teacher Dashboard:
@@ -1217,7 +1217,7 @@ it:
             Evaluation Blocks:
               name: Blocchi di Valutazione
             Next Steps:
-              name: Next Steps
+              name: I prossimi passi
             Rocket-Height:
               name: Rocket-Height
             Strings and Images:
@@ -1273,7 +1273,7 @@ it:
             'Mastering the Basics: Sequencing':
               name: 'Mastering the Basics: Sequencing'
             Next Steps:
-              name: Next Steps
+              name: I prossimi passi
             Planning:
               name: Planning
         ECSPD2:
@@ -1402,7 +1402,7 @@ it:
             Introduction to Equity:
               name: Introduction to Equity
             Next Steps:
-              name: Next Steps
+              name: I prossimi passi
         sciencePD2b-iZone:
           title: Computer Science in Science PD Phase 2b
           description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
@@ -10099,7 +10099,7 @@ it:
                 and also a overview of the process they took to get to that final
                 design.\r\n"
         coursea-2018:
-          title: Corso A
+          title: Corso A (2018)
           assignment_family_title: Corso A
           description: Impara le basi dell'informatica e della sicurezza su Internet.
             Alla fine del corso, crea il tuo gioco o la tua storia che puoi condividere.
@@ -10208,9 +10208,9 @@ it:
                 per creare un gioco animato. È il momento di essere creativi e costruire
                 una storia nel Laboratorio!
             Programming in Bee:
-              name: Programming in Bee
+              name: Programmare in Ape
             Programming in Harvester:
-              name: Programming in Harvester
+              name: Programmazione con la Contadina
             Loops in Harvester:
               name: Cicli con la Contadina
             Sequencing in Maze:
@@ -11525,10 +11525,19 @@ it:
                 for a birthday party, and planning a trip. The problems grow increasingly
                 complex and poorly defined to highlight how the problem solving process
                 is particularly helpful when tackling these types of problems.'
-              description_teacher: |-
-                In this lesson students apply the problem solving process to three different problems in order to better understand the value of each step. They will solve a word search, arrange seating for a birthday party, and plan a trip. The problems grow increasingly complex and poorly defined to highlight how the problem solving process is particularly helpful when tackling these types of problems. The lesson concludes with students reflecting on their experience with the problem solving process. They will justify the inclusion of each step and will brainstorm questions or strategies that can help them better define open-ended problems, as this is often the most critical step.
-
-                This lesson will likely take two class periods or more to complete. The first two problems may fit into a single class period but the third will need to be moved to a second day.
+              description_teacher: "In this lesson students apply the problem solving
+                process to three different problems in order to better understand
+                the value of each step. They will solve a word search, arrange seating
+                for a birthday party, and plan a trip. The problems grow increasingly
+                complex and poorly defined to highlight how the problem solving process
+                is particularly helpful when tackling these types of problems. The
+                lesson concludes with students reflecting on their experience with
+                the problem solving process. They will justify the inclusion of each
+                step and will brainstorm questions or strategies that can help them
+                better define open-ended problems, as this is often the most critical
+                step.\r\n\r\nThis lesson will likely take two class periods or more
+                to complete. The first two problems may fit into a single class period
+                but the third will need to be moved to a second day."
             What is a Computer?:
               name: What is a Computer?
               description_student: In this lesson the class develops a preliminary
@@ -11538,15 +11547,15 @@ it:
                 motivations for choosing some of the most difficult categorizations.  The
                 teacher then introduces a definition of the computer and allows groups
                 to revise their posters according to the new definition.
-              description_teacher: 'In this lesson students develop a preliminary
+              description_teacher: "In this lesson students develop a preliminary
                 definition of a computer. To begin the lesson, the class will brainstorm
                 possible definitions for a computer and place the results of this
                 brainstorm on the board. Next, students will work in groups to sort
                 pictures into “is a computer” or “is not a computer” on poster paper.
                 Groups will place their posters around the room and briefly explain
-                their motivations for choosing some of their most difficult categorizations.  The
-                teacher will then introduce a definition of the computer and allow
-                students to revise their posters according to the new definition.  '
+                their motivations for choosing some of their most difficult categorizations.
+                \ The teacher will then introduce a definition of the computer and
+                allow students to revise their posters according to the new definition.\r\n"
             Input and Output:
               name: Input and Output
               description_student: In this the class students consider a number of
@@ -11638,6 +11647,23 @@ it:
                 step instructions for students and helps them organize their thoughts.
                 The project is designed to be completed in pairs though it can be
                 completed individually.
+            Apps and Storage:
+              name: Apps and Storage
+              description_student: 'This lesson covers the input and output aspects
+                of computers in a context that is relevant and familiar to students:
+                apps. The class evaluates various web applications to analyze the
+                specific problems that they were designed to solve, the inputs that
+                they need to work, and the outputs they provide to users. The class
+                concludes with observations of these apps as well as a teacher led
+                discussion about the impact of apps on society. '
+              description_teacher: 'This lesson reviews the input, output, storage,
+                and processing aspects of a computer in a context that is relevant
+                and familiar to students: apps. In pairs, students evaluate smartphone
+                applications to analyze the specific problems that they were designed
+                to solve, the inputs that they need to work, and the processing that
+                turns those inputs into the desired output, and what information they
+                would want to store for later. The class concludes with a discussion
+                that connects the lesson to apps students are more familiar with. '
         csd4-2018:
           title: CSD Unit 4 - The Design Process
           description: Unit 4 introduces the broader social impacts of computing.
@@ -13097,6 +13123,14 @@ it:
               name: Alien Dance Party - Input
             Virtual Pet - Interactions:
               name: Virtual Pet - Interactions
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        2018hoc-ab:
+          stages:
+            Labyrinth:
+              name: Labyrinth
           title: ''
           description_audience: ''
           description_short: ''

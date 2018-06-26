@@ -12,12 +12,17 @@ import 'codemirror/addon/edit/matchbrackets';
 import 'codemirror/addon/edit/trailingspace';
 import 'codemirror/addon/mode/overlay';
 import 'codemirror/addon/fold/xml-fold';
+import 'codemirror/addon/lint/lint';
+import 'codemirror/addon/lint/javascript-lint';
 import 'codemirror/mode/xml/xml';
 import 'codemirror/mode/javascript/javascript';
 import './vendor/codemirror.inline-attach';
 import jsonic from 'jsonic';
+import {JSHINT} from 'jshint';
 import marked from 'marked';
 import stylelessRenderer from '@cdo/apps/util/StylelessRenderer';
+
+window.JSHINT = JSHINT;
 
 CodeMirrorSpellChecker({
   codeMirrorInstance: CodeMirror,
@@ -35,7 +40,7 @@ const INVALID_COLOR = '#d00';
  * @param {booblen} [attachments] - whether to enable attachment uploading in
  *        this editor.
  */
-function initializeCodeMirror(target, mode, callback, attachments) {
+function initializeCodeMirror(target, mode, callback, attachments, onUpdateLinting) {
   let updatePreview;
 
   // Code mirror parses html using xml mode
@@ -81,7 +86,11 @@ function initializeCodeMirror(target, mode, callback, attachments) {
     matchTags: {bothTags: true},
     autoCloseTags: true,
     showTrailingSpace: true,
-    lineWrapping: true
+    lineWrapping: true,
+    gutters: ["CodeMirror-lint-markers"],
+    lint: {
+      onUpdateLinting,
+    },
   });
   if (callback) {
     editor.on('change', callback);
@@ -126,16 +135,10 @@ module.exports.initializeCodeMirrorForJson = function (
         document.createElement('div'),
         textAreaEl.nextSibling
       ));
-    const fixupJson = () => {
+    const showErrors = (fn) => (arg) => {
       try {
-        if (jsonEditor.getValue().trim()) {
-          let blocks = jsonic(jsonEditor.getValue().trim());
-          if (onBlur) {
-            blocks = onBlur(blocks);
-          }
-          jsonEditor.setValue(JSON.stringify(blocks, null, 2));
-        } else {
-          jsonEditor.setValue('');
+        if (fn) {
+          fn(arg);
         }
         jsonValidationDiv.text('JSON appears valid.');
         jsonValidationDiv.css('color', VALID_COLOR);
@@ -144,9 +147,23 @@ module.exports.initializeCodeMirrorForJson = function (
         jsonValidationDiv.css('color', INVALID_COLOR);
       }
     };
+    const fixupJson = showErrors(() => {
+      if (jsonEditor.getValue().trim()) {
+        let blocks = jsonic(jsonEditor.getValue().trim());
+        if (onBlur) {
+          blocks = onBlur(blocks);
+        }
+        if (onChange) {
+          onChange(jsonEditor);
+        }
+        jsonEditor.setValue(JSON.stringify(blocks, null, 2));
+      } else {
+        jsonEditor.setValue('');
+      }
+    });
 
     const jsonEditor =
-      initializeCodeMirror(textAreaId, 'application/json', onChange);
+      initializeCodeMirror(textAreaId, 'application/json', showErrors(onChange));
     jsonEditor.on('blur', fixupJson);
     fixupJson();
     return jsonEditor;

@@ -22,6 +22,8 @@ let brambleProxy_ = null;
 let webLab_ = null;
 // the registered onProjectChanged callback function
 let onProjectChangedCallback_ = null;
+// the registered onBrambleMountable callback function
+let onBrambleMountableCallback_ = null;
 // the registered onBrambleReady callback function
 let onBrambleReadyCallback_ = null;
 // the registered onInspectorChanged callback function
@@ -384,6 +386,10 @@ function onProjectChanged(callback) {
   onProjectChangedCallback_ = callback;
 }
 
+function onBrambleMountable(callback) {
+  onBrambleMountableCallback_ = callback;
+}
+
 function onBrambleReady(callback) {
   onBrambleReadyCallback_ = callback;
 }
@@ -479,6 +485,7 @@ const brambleHost = {
   enableFullscreenPreview,
   disableFullscreenPreview,
   onProjectChanged,
+  onBrambleMountable,
   onBrambleReady,
   onInspectorChanged,
   startInitialFileSync,
@@ -505,6 +512,15 @@ function load(Bramble) {
   });
 
   // Event listeners
+  Bramble.on("readyStateChange", (_, newState) => {
+    if (Bramble.MOUNTABLE === newState) {
+      if (onBrambleMountableCallback_) {
+        onBrambleMountableCallback_();
+        onBrambleMountableCallback_ = null;
+      }
+    }
+  });
+
   Bramble.once("ready", function (bramble) {
 
     function handleInspectorChange(object) {

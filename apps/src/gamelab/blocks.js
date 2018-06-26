@@ -54,6 +54,40 @@ const customInputTypes = {
       return block.getTitleValue(arg.name);
     },
   },
+  locationVariableDropdown: {
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      block.getVars = function () {
+        return {
+          [Blockly.BlockValueType.LOCATION]: [block.getTitleValue(inputConfig.name)],
+        };
+      };
+      block.renameVar = function (oldName, newName) {
+        if (Blockly.Names.equals(oldName, block.getTitleValue(inputConfig.name))) {
+          block.setTitleValue(newName, inputConfig.name);
+        }
+      };
+      block.removeVar = function (oldName) {
+        if (Blockly.Names.equals(oldName, block.getTitleValue(inputConfig.name))) {
+          block.dispose(true, true);
+        }
+      };
+
+      currentInputRow
+          .appendTitle(inputConfig.label)
+          .appendTitle(Blockly.Msg.VARIABLES_GET_TITLE)
+          .appendTitle(new Blockly.FieldVariable(
+                Blockly.Msg.VARIABLES_SET_ITEM,
+                null,
+                null,
+                Blockly.BlockValueType.LOCATION,
+              ),
+              inputConfig.name)
+          .appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);
+    },
+    generateCode(block, arg) {
+      return Blockly.JavaScript.translateVarName(block.getTitleValue(arg.name));
+    }
+  },
   costumePicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
       currentInputRow
@@ -297,6 +331,13 @@ export default {
         console.error(`Block config ${name} generated a block named ${blockName}`);
       }
     });
+    if (blockly.Blocks.gamelab_location_variable_set &&
+        blockly.Blocks.gamelab_location_variable_get) {
+      Blockly.Variables.registerGetter(Blockly.BlockValueType.LOCATION,
+        'gamelab_location_variable_get');
+      Blockly.Variables.registerSetter(Blockly.BlockValueType.LOCATION,
+        'gamelab_location_variable_set');
+    }
 
     if (!hideCustomBlocks) {
       level.toolbox = appendBlocksByCategory(level.toolbox, blocksByCategory);

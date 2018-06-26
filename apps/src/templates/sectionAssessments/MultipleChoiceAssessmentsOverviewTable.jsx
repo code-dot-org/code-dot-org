@@ -6,6 +6,7 @@ import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import MultipleChoiceAnswerCell from './MultipleChoiceAnswerCell';
 import styleConstants from "@cdo/apps/styleConstants";
+import { multipleChoiceDataPropType } from './assessmentDataShapes';
 
 export const COLUMNS = {
   QUESTION: 0,
@@ -32,37 +33,29 @@ const styles = {
 const NOT_ANSWERED = 'notAnswered';
 
 const answerColumnsFormatter = (percentAnswered, {rowData, columnIndex, rowIndex, property}) => {
-  const cell = rowData.answers[columnIndex - 1];
-
   let percentValue = 0;
+  const answerResults = rowData.answers[columnIndex - 1] || {};
 
   if (property === NOT_ANSWERED) {
-     percentValue = rowData.notAnswered;
+     percentValue = Math.round((rowData.notAnswered / rowData.totalAnswered) * 100);
   } else {
-     percentValue = (cell && cell.percentAnswered);
+     percentValue = Math.round((answerResults.numAnswered / rowData.totalAnswered) * 100);
   }
 
   return (
       <MultipleChoiceAnswerCell
         id={rowData.id}
         percentValue={percentValue}
-        isCorrectAnswer={cell && cell.isCorrectAnswer}
+        isCorrectAnswer={!!answerResults.isCorrect}
       />
   );
 };
 
-const answerDataPropType = PropTypes.shape({
-  multipleChoiceOption: PropTypes.string,
-  percentAnswered: PropTypes.number,
-  isCorrectAnswer: PropTypes.bool,
-});
-
-const multipleChoiceDataPropType = PropTypes.shape({
-  id: PropTypes.number.isRequired,
-  question: PropTypes.string.isRequired,
-  answers: PropTypes.arrayOf(answerDataPropType),
-  notAnswered: PropTypes.number.isRequired,
-});
+const questionFormatter = (question, {rowData, columnIndex, rowIndex, property}) => {
+  return (
+    <div>{`${rowData.questionNumber}. ${question}`}</div>
+  );
+};
 
 /**
  *  A single table that shows students' responses to each multiple choice question.
@@ -152,6 +145,7 @@ class MultipleChoiceAssessmentsOverviewTable extends Component {
         transforms: [sortable],
       },
       cell: {
+        format: questionFormatter,
         props: {
           style: {
             ...tableLayoutStyles.cell,
@@ -194,13 +188,13 @@ class MultipleChoiceAssessmentsOverviewTable extends Component {
     })(this.props.questionAnswerData);
 
     return (
-        <Table.Provider
-          columns={columns}
-          style={tableLayoutStyles.table}
-        >
-          <Table.Header />
-          <Table.Body rows={sortedRows} rowKey="id" />
-        </Table.Provider>
+      <Table.Provider
+        columns={columns}
+        style={tableLayoutStyles.table}
+      >
+        <Table.Header />
+        <Table.Body rows={sortedRows} rowKey="id" />
+      </Table.Provider>
     );
   }
 }

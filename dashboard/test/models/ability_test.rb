@@ -162,4 +162,60 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:manage, Script)
     assert ability.can?(:manage, ScriptLevel)
   end
+
+  test 'teachers can manage feedback for students in a section they own' do
+    teacher = create :teacher
+    student = create :student
+    section = create :section, user: teacher
+    section.add_student student
+    feedback = create :teacher_feedback, student: student, teacher: teacher
+
+    assert Ability.new(teacher).can? :create, feedback
+    assert Ability.new(teacher).can? :get_feedback_from_teacher, feedback
+  end
+
+  test 'teachers cannot manage feedback for students not in a section they own' do
+    teacher = create :teacher
+    student = create :student
+    section_with_student = create :section
+    section_with_student.add_student student
+
+    # teacher section, not the same one that contains the student
+    create :section, user: teacher
+    feedback = create :teacher_feedback, student: student
+
+    refute Ability.new(teacher).can? :create, feedback
+    refute Ability.new(teacher).can? :get_feedback_from_teacher, feedback
+  end
+
+  test 'student can get feedback for their work on a level' do
+    teacher = create :teacher
+    student = create :student
+    section = create :section, user: teacher
+    section.add_student student
+    feedback = create :teacher_feedback, student: student
+
+    assert Ability.new(student).can? :get_feedbacks, feedback
+  end
+
+  test 'student cannot get feedback for the work of a different student on a level' do
+    teacher = create :teacher
+    student = create :student
+    other_student = create :student
+    section = create :section, user: teacher
+    section.add_student student
+    feedback = create :teacher_feedback, student: student
+
+    refute Ability.new(other_student).can? :get_feedbacks, feedback
+  end
+
+  test 'teacher cannot get all the feedback for student work on a level' do
+    teacher = create :teacher
+    student = create :student
+    section = create :section, user: teacher
+    section.add_student student
+    feedback = create :teacher_feedback, student: student
+
+    refute Ability.new(teacher).can? :get_feedbacks, feedback
+  end
 end

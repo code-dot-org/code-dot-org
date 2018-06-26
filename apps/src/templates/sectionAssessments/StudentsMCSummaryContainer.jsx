@@ -4,6 +4,7 @@ import {
   getStudentsMCSummaryForCurrentAssessment,
 } from './sectionAssessmentsRedux';
 import {connect} from 'react-redux';
+import i18n from "@cdo/locale";
 
 class StudentsMCSummaryContainer extends Component {
   static propTypes = {
@@ -13,8 +14,7 @@ class StudentsMCSummaryContainer extends Component {
   render() {
     return (
       <div>
-        {/* TODO(NO): Temporary placeholder for the header of the table */}
-        <h2>Students MC Summary Container </h2>
+        <h2>{i18n.studentOverviewTableHeader()}</h2>
         <StudentsAssessmentsMCTable
           studentOverviewData={this.props.studentOverviewData}
         />
