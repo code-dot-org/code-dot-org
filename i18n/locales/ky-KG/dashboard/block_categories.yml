@@ -3,8 +3,8 @@ ky:
     block_categories:
       Actions: Иш-аракеттер
       Loops: Циклдер
-      Functions: Functions
-      Color: Color
+      Functions: Функциялар
+      Color: Түс
       Brushes: Brushes
       Math: Математика
       Logic: Логика
@@ -13,8 +13,8 @@ ky:
       String: String
       Image: Image
       Boolean: Boolean
-      Conditionals: Conditionals
-      Events: Events
+      Conditionals: Шартуулар
+      Events: Иш-чаралар
       Games/Score: Games/Score
       Comments: Comments
       Category: Category
