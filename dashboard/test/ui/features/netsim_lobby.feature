@@ -1,5 +1,4 @@
 @no_mobile
-@no_circle
 Feature: Using the Internet Simulator Lobby
 
   The internet simulator lets students experiment with a simulated network environment, connecting
