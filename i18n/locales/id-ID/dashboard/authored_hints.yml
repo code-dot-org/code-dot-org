@@ -5072,8 +5072,8 @@ id:
         courseA_artist_loops7_a: Tidak tahu di mana harus meletakkan loop? Coba tulis kode langkah demi langkah dan cari sebuah pola.
         courseA_artist_loops7_b: Tuliskan kode untuk satu gelombang terlebih dahulu, lalu ulangi untuk menggambar dua yang lain.
         courseA_artist_loops7_c: |-
-          Remember you can put more than one block in a <xml><block type="controls_repeat">
-          <title name="TIMES">???</title>
+          Remember you can put more than one block in a <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="3-10">???</title>
           </block></xml> loop.
       courseA_artist_loops7_forVideo_authored_hint:
         courseA_artist_loops7_a: Tidak tahu di mana harus meletakkan loop? Coba tulis kode langkah demi langkah dan cari sebuah pola.
@@ -5284,24 +5284,28 @@ id:
       courseA_harvester_loops10_authored_hint: { }
       courseA_harvester_loops11_authored_hint: { }
       courseA_harvester_loops2_authored_hint:
-        courseA_harvester_loops2_a: 'Your code will have **four** `move West` blocks and **four** `pick corn` blocks. '
+        courseA_harvester_loops2_a: "Your code will have **four** `move west`\n<xml><block type=\"maze_moveWest\"/></xml>\nblocks and **four** <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml> blocks. "
       courseA_harvester_loops3_authored_hint:
         courseA_harvester_loops3_a: |-
           Use a `repeat` block like this to help you!
           <xml><block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="2-10">4</title>
           </block></xml>
-        courseA_harvester_loops3_b: Untuk mengulang kode, seret sebuah loop `repeat`, kemudian letakkan blok yang anda inginkan di dalamnya.
+        courseA_harvester_loops3_b: "Untuk mengulang kode, seret sebuah loop `repeat`, kemudian letakkan blok yang anda inginkan di dalamnya."
       courseA_harvester_loops4_authored_hint:
         courseA_harvester_loops4_a: Don't be afraid to press `Run` to see what happens!
         courseA_harvester_loops4_b: How many pieces of corn are there? How many times does your code repeat?
       courseA_harvester_loops5_authored_hint:
         courseA_harvester_loops5_a: Jika Anda terjebak, cobalah memecahkan teka - teki dalam 2 bagian, satu bagian di depan sudut dan satu bagian setelah di tikungan.
-        courseA_harvester_loops5_b: Your final code will have **one** `repeat` loop, **one** `move South` block, and **one** `move East` block.
+        courseA_harvester_loops5_b: |-
+          Your final code will have **one** `repeat`  <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">6</title>
+          </block></xml> loop, **one** `move South`   <xml><block type="maze_moveSouth" limit="1"/></xml> block, and **one** `move East`   <xml><block type="maze_moveEast" limit="1"/> </xml>block.
         courseA_harvester_loops5_c: Use this path to pick all the corn!
       courseA_harvester_loops5a_authored_hint:
-        courseA_harvester_loops5a_a: Anda akan membutuhkan satu ` ulangi ` lingkaran demi satu.
-        courseA_harvester_loops5a_b: One loop will repeat `move South`, and the other will repeat `move East`.
+        courseA_harvester_loops5a_a: |-
+          Anda akan membutuhkan satu ` ulangi ` lingkaran demi satu.
+        courseA_harvester_loops5a_b: One loop will repeat `move South`<xml><block type="maze_moveSouth" limit="1"/></xml>, and the other will repeat `move East` <xml><block type="maze_moveEast" limit="1"/></xml>
         courseA_harvester_loops5a_c: Use this path to move one way, and then the other.
       courseA_harvester_loops5b_authored_hint:
         courseA_harvester_loops5b_a: Press `Run` and see what happens!
@@ -5311,7 +5315,10 @@ id:
         courseA_harvester_loops6_a: Jika Anda terjebak, cobalah menulis langkah di atas kertas dan mencari pola berulang.
         courseA_harvester_loops6_b: This is the path you should take to pick all the corn.
       courseA_harvester_loops7_authored_hint:
-        courseA_harvester_loops7_a: You will need two `repeat` loops after each other!
+        courseA_harvester_loops7_a: |-
+          You will need two `repeat` <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">5</title>
+          </block></xml>loops after each other!
         courseA_harvester_loops7_b: Use two loops to follow this path.
       courseA_harvester_loops8_authored_hint: { }
       courseA_harvester_loops9_authored_hint:
@@ -5932,7 +5939,8 @@ id:
         courseB_artist_loops3_a: Ingatlah untuk menggunakan loop `repeat` untuk kode yang lebih baik!
         courseB_artist_loops3_b: Artis itu ingin pindah ke Selatan untuk menggambar garis ini.
       courseB_artist_loops3_2018_authored_hint:
-        courseB_artist_loops3_a: Ingatlah untuk menggunakan loop `repeat` untuk kode yang lebih baik!
+        courseB_artist_loops3_a: |-
+          Ingatlah untuk menggunakan loop `repeat` untuk kode yang lebih baik!
         courseB_artist_loops3_b: Artis itu ingin pindah ke Selatan untuk menggambar garis ini.
       courseB_artist_loops4_authored_hint:
         courseB_artist_loops4_a: Lonjakan blok memungkinkan Anda bergerak maju tanpa menggambar sebuah garis.
@@ -5945,7 +5953,8 @@ id:
       courseB_artist_loops5_authored_hint:
         courseB_artist_loops5_a: Seret loop `repeat`, lalu letakkan blok lain di dalamnya. Berapa kali anda perlu mengulanginya?
       courseB_artist_loops5_2018_authored_hint:
-        courseB_artist_loops5_a: Seret loop `repeat`, lalu letakkan blok lain di dalamnya. Berapa kali anda perlu mengulanginya?
+        courseB_artist_loops5_a: |-
+          Seret loop `repeat`, lalu letakkan blok lain di dalamnya. Berapa kali anda perlu mengulanginya?
       courseB_artist_loops6_authored_hint:
         courseB_artist_loops6_b: Cobalah menulis bergerak di atas sebuah kertas dan mencari sebuah pola.
       courseB_artist_loops6_2018_authored_hint:
@@ -6024,7 +6033,8 @@ id:
       courseB_collector_loops4_2018_authored_hint:
         courseB_collector_loops4_a: Coba gunakan tombol langkah untuk mencari tahu di mana yang salah.
         courseB_collector_loops4_b: Untuk mengubah seberapa jauh Laurel pergi, ubah berapa kali putarannya berjalan.
-        courseB_collector_loops4_c: Laurel perlu berjalan dan mengumpulkan harta setelah ia selesai dengan ` ulangi ` lingkaran!
+        courseB_collector_loops4_c: |-
+          Laurel perlu berjalan dan mengumpulkan harta setelah ia selesai dengan ` ulangi ` lingkaran!
       courseB_collector_loops5_authored_hint:
         courseB_collector_loops5_a: Gunakan lebih dari satu loop untuk menyelesaikan pekerjaan.
         courseB_collector_loops5_b: Coba jalankan kode beberapa kali untuk melihat apa yang terjadi.
@@ -6039,7 +6049,8 @@ id:
       courseB_collector_loops6_2018_authored_hint:
         courseB_collector_loops6_a: Tidak tahu di mana hal-hal yang salah? Gunakan tombol "step" untuk menjalankan program anda satu blok setiap kalinya.
         courseB_collector_loops6_b: Anda dapat mengubah jumlah kali pengulangan lingkaran berjalan dengan mengklik pada "3" dan memilih sebuah nomor yang berbeda.
-        courseB_collector_loops6_c: Anda akan ingin menggunakan 3 ` ulangi ` lopp untuk memecahkan ini teka-teki.
+        courseB_collector_loops6_c: |-
+          Anda akan ingin menggunakan 3 ` ulangi ` lopp untuk memecahkan ini teka-teki.
         courseB_collector_loops6_d: Jika Anda bingung, cobalah memecahkan teka - teki ini menjadi 3 bagian.
       courseB_collector_loops7_authored_hint:
         courseB_collector_loops7_a: Jika anda mengalami kesulitan dengan teka-teki ini, cobalah menggambar di atas kertas untuk membantu anda mengetahuinya.
@@ -6354,7 +6365,8 @@ id:
           <xml><block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="3-10">5</title>
           </block></xml>
-        courseB_iceage_loops3_b: Untuk mengulang kode, seret sebuah loop `repeat`, kemudian letakkan blok yang anda inginkan di dalamnya.
+        courseB_iceage_loops3_b: |-
+          Untuk mengulang kode, seret sebuah loop `repeat`, kemudian letakkan blok yang anda inginkan di dalamnya.
       courseB_iceage_loops4_authored_hint:
         courseB_iceage_loops4_a: Try writing down the steps Scrat would take to get to the acorn. Do you see a pattern?
         courseB_iceage_loops4_b: Don't be afraid to run your code and see what happens!
@@ -6937,7 +6949,8 @@ id:
       courseB_starWars_prog9_2018_authored_hint:
         courseB_starWars_prog9_a: Jangan takut untuk membuat kesalahan! Jalankan kode untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan teka-teki itu.
         courseB_starWars_prog9_b: Terdapat banyak cara untuk memecahkan teka-teki ini.
-        courseB_starWars_prog9_c: Bisakah sebuah loop ` ulangi` membantu di sini?
+        courseB_starWars_prog9_c: |-
+          Bisakah sebuah loop ` ulangi` membantu di sini?
       courseC_PlayLab_embed_events9_authored_hint: { }
       courseC_PlayLab_events1_authored_hint:
         courseC_PlayLab_events1_a: |-
@@ -7302,12 +7315,17 @@ id:
       courseC_artist_loopsPrePre1a_2018_authored_hint:
         courseC_artist_loopsPrePre1a_a: |-
           The first block you will need is:
-          
-          ![](https://images.code.org/60e3354a2e7dd37b64833eac1e8694be-image-1499710228373.08.14 AM.png)
+          <xml>  <block type="jump_to_xy" id="callMe">
+          <title name="XPOS">200</title>
+          <title name="YPOS">200</title>
+          </block></xml>
         courseC_artist_loopsPrePre1a_b: |-
           To move forward 50 pixels, use this block:
           
-          ![](https://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27 AM.png)
+          <xml><block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">50</title>
+          </block></xml>
       courseC_artist_prog1_authored_hint: { }
       courseC_artist_prog1_2018_authored_hint: { }
       courseC_artist_prog2_authored_hint:

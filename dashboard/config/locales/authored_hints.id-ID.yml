@@ -5842,8 +5842,8 @@ id:
         courseA_artist_loops7_b: Tuliskan kode untuk satu gelombang terlebih dahulu,
           lalu ulangi untuk menggambar dua yang lain.
         courseA_artist_loops7_c: |-
-          Remember you can put more than one block in a <xml><block type="controls_repeat">
-          <title name="TIMES">???</title>
+          Remember you can put more than one block in a <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="3-10">???</title>
           </block></xml> loop.
       courseA_artist_loops7_forVideo_authored_hint:
         courseA_artist_loops7_a: Tidak tahu di mana harus meletakkan loop? Coba tulis
@@ -6160,8 +6160,10 @@ id:
         courseA_harvester_loops5_a: Jika Anda terjebak, cobalah memecahkan teka -
           teki dalam 2 bagian, satu bagian di depan sudut dan satu bagian setelah
           di tikungan.
-        courseA_harvester_loops5_b: Your final code will have **one** `repeat` loop,
-          **one** `move South` block, and **one** `move East` block.
+        courseA_harvester_loops5_b: |-
+          Your final code will have **one** `repeat`  <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">6</title>
+          </block></xml> loop, **one** `move South`   <xml><block type="maze_moveSouth" limit="1"/></xml> block, and **one** `move East`   <xml><block type="maze_moveEast" limit="1"/> </xml>block.
         courseA_harvester_loops5_c: Use this path to pick all the corn!
       courseA_harvester_loops5a_authored_hint:
         courseA_harvester_loops5a_a: Anda akan membutuhkan satu ` ulangi ` lingkaran
@@ -6180,7 +6182,10 @@ id:
         courseA_harvester_loops6_b: This is the path you should take to pick all the
           corn.
       courseA_harvester_loops7_authored_hint:
-        courseA_harvester_loops7_a: You will need two `repeat` loops after each other!
+        courseA_harvester_loops7_a: |-
+          You will need two `repeat` <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">5</title>
+          </block></xml>loops after each other!
         courseA_harvester_loops7_b: Use two loops to follow this path.
       courseA_harvester_loops8_authored_hint: {}
       courseA_harvester_loops9_authored_hint:
@@ -8618,12 +8623,17 @@ id:
       courseC_artist_loopsPrePre1a_2018_authored_hint:
         courseC_artist_loopsPrePre1a_a: |-
           The first block you will need is:
-
-          ![](https://images.code.org/60e3354a2e7dd37b64833eac1e8694be-image-1499710228373.08.14 AM.png)
+          <xml>  <block type="jump_to_xy" id="callMe">
+          <title name="XPOS">200</title>
+          <title name="YPOS">200</title>
+          </block></xml>
         courseC_artist_loopsPrePre1a_b: |-
           To move forward 50 pixels, use this block:
 
-          ![](https://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27 AM.png)
+          <xml><block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">50</title>
+          </block></xml>
       courseC_artist_prog1_authored_hint: {}
       courseC_artist_prog1_2018_authored_hint: {}
       courseC_artist_prog2_authored_hint:
