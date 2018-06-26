@@ -21,9 +21,6 @@
 -- this table will be generated daily from code hosted on github, so need to talk to Ben about how to update that process
 
 
-
-select top 10 * from dashboard_production_pii.users;
-
 drop table if exists analysis.regional_partner_stats_csf;
 create table analysis.regional_partner_stats_csf AS
 
@@ -182,14 +179,8 @@ pd_facilitators as
   LEFT JOIN analysis.student_activity_csf sa 
          ON sa.user_id = d.user_id
          AND sa.school_year = s.school_year
-         AND sa.script_name = s.script_name
-
-             
+         AND sa.script_name = s.script_name            
 ;
 
 GRANT ALL PRIVILEGES ON analysis.regional_partner_stats_csf TO GROUP admin;
 GRANT SELECT ON analysis.regional_partner_stats_csf TO GROUP reader_pii;
-
-
-
-
