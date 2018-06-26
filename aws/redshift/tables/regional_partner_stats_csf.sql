@@ -101,7 +101,6 @@ pd_facilitators as
 )
 
   SELECT distinct 
-         -- row_number() OVER(ORDER BY d.user_id ASC)  as row_num,
          d.user_id,
          d.studio_person_id,
          FIRST_VALUE(pde.first_name) OVER (PARTITION BY d.user_id  ORDER BY (CASE WHEN  pde.first_name IS NULL THEN 1 ELSE 2 END), pde.pd_workshop_id DESC ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING ) as first_name,
@@ -126,14 +125,11 @@ pd_facilitators as
          csfa.trained_by_regional_partner,
          csfa.started_at as workshop_date, 
          csfa.workshop_id::varchar(16) || ', '::varchar(2) || extract(month from csfa.started_at)::varchar(16) || '/'::varchar(2) || extract(day from csfa.started_at)::varchar(16) || '/'::varchar(2) || extract(year from csfa.started_at)::varchar(16) as workshop_id_year,
-         -- concat(csfa.workshop_id::varchar(16), ', '::varchar(2), extract(month from csfa.started_at)::varchar(16), '/'::varchar(2), extract(day from csfa.started_at)::varchar(16), '/'::varchar(2), extract(year from csfa.started_at)::varchar(16)) as workshop_id_year,
          pwf.facilitator_names,
          -- started and completed
          case when s.user_id is not null then 1 else 0 end as started,
          case when c.user_id is not null then 1 else 0 end as completed,
          -- sections and students   
-        --  sat.total_sections as total_sections_all_courses,
-        --  sat.total_students as total_students_all_courses,
          sa.sections_of_course,
          sa.students_in_course,
          -- stage number and stage name reached by the majority of students, and number of students who reached the stage in each STARTED course
