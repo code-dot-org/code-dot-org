@@ -23,6 +23,7 @@ class UserPermission < ActiveRecord::Base
     CREATE_PROFESSIONAL_DEVELOPMENT_WORKSHOP =
       'create_professional_development_workshop'.freeze,
     # Grants access to viewing all workshops in all cohorts in their district.
+    # This permission is deprecated and should be removed.
     DISTRICT_CONTACT = 'district_contact'.freeze,
     # Grants access to managing workshops and workshop attendance.
     FACILITATOR = 'facilitator'.freeze,
