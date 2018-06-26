@@ -456,7 +456,7 @@ export const getMultipleChoiceSectionSummary = (state) => {
         results[questionIndex].notAnswered++;
       } else {
         results[questionIndex].totalAnswered++;
-        response.student_result.forEach(answer => {
+        (response.student_result || []).forEach(answer => {
           results[questionIndex].answers[answer].numAnswered++;
         });
       }
