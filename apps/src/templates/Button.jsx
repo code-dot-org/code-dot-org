@@ -134,7 +134,7 @@ class Button extends React.Component {
     onClick: PropTypes.func,
     id: PropTypes.string,
     tabIndex: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-    isPending: PropTypes.bool.isRequired,
+    isPending: PropTypes.bool,
     pendingText: PropTypes.string,
   };
 
