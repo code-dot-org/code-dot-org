@@ -8,7 +8,7 @@ export default class SingleChoiceResponses extends React.Component {
     answers: PropTypes.object.isRequired,
     answerType: PropTypes.string.isRequired,
     possibleAnswers: PropTypes.array.isRequired,
-    otherAnswers: PropTypes.array
+    otherAnswers: PropTypes.array //Free response "other" answers
   };
 
   render() {
@@ -23,6 +23,9 @@ export default class SingleChoiceResponses extends React.Component {
               let answerIndex;
 
               if (this.props.answerType === 'selectValue') {
+                // For selectValue questions, the value is not the text of the response
+                // but a numeric value in some range. The hash contains a map of the
+                // numeric values to counts, not texts to counts.
                 answerIndex = i + 1;
               } else {
                 answerIndex = possibleAnswer;
