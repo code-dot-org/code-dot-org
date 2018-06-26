@@ -9846,6 +9846,7 @@ en:
         Look carefully at the code below.  What will happen when you click "Run"?: Look carefully at the code below.  What will happen when you click "Run"?
         The artist draws a square.: The artist draws a square.
         The artist will draw a single line.: The artist will draw a single line.
+        The artist will draw a square.: The artist will draw a square.
         The artist will draw a triangle with three equal sides.: The artist will draw a triangle with three equal sides.
       courseC_multi_harvester_loops11_predict1:
         '12': '12'
