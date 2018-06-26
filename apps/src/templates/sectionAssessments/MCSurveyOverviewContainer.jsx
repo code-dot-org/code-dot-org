@@ -13,12 +13,20 @@ class MCSurveyOverviewContainer extends Component {
     const {multipleChoiceSurveyData} = this.props;
     return (
       <div>
+        <div>
+        {/* <h2>{i18n.emptySurveyOverviewTable()}</h2>
+          {multipleChoiceSurveyData.length < 5 &&
+            <MultipleChoiceSurveyOverviewTable
+            multipleChoiceSurveyData={[]}
+          />
+        } */}
         <h2>{i18n.multipleChoiceQuestionsOverview()}</h2>
           {multipleChoiceSurveyData.length > 0 &&
             <MultipleChoiceSurveyOverviewTable
               multipleChoiceSurveyData={multipleChoiceSurveyData}
             />
           }
+        </div>
       </div>
     );
   }
