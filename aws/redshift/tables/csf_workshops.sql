@@ -89,7 +89,7 @@ FROM sections_geos
   SELECT 
          pdw.course as course,
          pdw.id AS workshop_id, -- section_id in the other table (below)
-         pdw.subject as subject,
+         CASE WHEN pdw.subject in ('Intro Workshop','Intro') THEN 'Intro Workshop' ELSE pdw.subject END as subject,
          pds.start as started_at,
          CASE WHEN pdw.regional_partner_id IS NOT NULL THEN 1 ELSE 0 END AS organized_by_regional_partner,
          coalesce (pdw.regional_partner_id, rpm.regional_partner_id) AS regional_partner_id,
@@ -105,7 +105,7 @@ FROM sections_geos
     LEFT JOIN dashboard_production_pii.pd_regional_partner_mappings rpm 
       ON rpm.state = wsz.state OR rpm.zip_code = wsz.zip
   WHERE pdw.course = 'CS Fundamentals'
-  AND   pdw.subject IN ( 'Intro Workshop','Deep Dive Workshop')
+  AND   pdw.subject IN ( 'Intro Workshop','Intro','Deep Dive Workshop')
   
 UNION ALL 
 
@@ -118,7 +118,8 @@ UNION ALL
          rpm.regional_partner_id AS regional_partner_id,
          sy.school_year
     FROM dashboard_production.sections se  
-    JOIN analysis.training_school_years sy ON se.created_at BETWEEN sy.started_at AND sy.ended_at
+    JOIN analysis.training_school_years sy 
+      ON se.created_at BETWEEN sy.started_at AND sy.ended_at
     JOIN section_state_zip ssz 
       ON ssz.id = se.id
     LEFT JOIN dashboard_production_pii.pd_regional_partner_mappings rpm 
@@ -133,5 +134,3 @@ GRANT ALL PRIVILEGES
 GRANT SELECT
   ON analysis.csf_workshops
   TO GROUP reader, GROUP reader_pii;
-  
-select * from csf_workshops where regional_partner_id = 64 and school_year = '2018-19';
