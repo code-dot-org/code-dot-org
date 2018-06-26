@@ -17,6 +17,7 @@ import FreeResponseBySurveyQuestionContainer from './FreeResponseBySurveyQuestio
 import MCSurveyOverviewContainer from './MCSurveyOverviewContainer';
 import AssessmentSelector from './AssessmentSelector';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {getTotalStudentCount} from '@cdo/apps/redux/sectionDataRedux';
 
 const styles = {
   header: {
@@ -37,6 +38,7 @@ class SectionAssessments extends Component {
     setAssessmentId: PropTypes.func.isRequired,
     asyncLoadAssessments: PropTypes.func.isRequired,
     multipleChoiceSurveyResults: PropTypes.array,
+    totalStudentCount: PropTypes.number,
   };
 
   onChangeScript = scriptId => {
@@ -101,6 +103,7 @@ export default connect(state => ({
   assessmentList: getCurrentScriptAssessmentList(state),
   scriptId: state.scriptSelection.scriptId,
   assessmentId: state.sectionAssessments.assessmentId,
+  totalStudentCount: getTotalStudentCount(state),
 }), dispatch => ({
   setScriptId(scriptId) {
     dispatch(setScriptId(scriptId));
