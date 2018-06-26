@@ -356,7 +356,7 @@ class User < ActiveRecord::Base
   end
 
   def self.find_or_create_district_contact(params, invited_by_user)
-    find_or_create_teacher(params, invited_by_user, UserPermission::DISTRICT_CONTACT)
+    find_or_create_teacher(params, invited_by_user)
   end
 
   def self.find_or_create_facilitator(params, invited_by_user)
