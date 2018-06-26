@@ -20,13 +20,10 @@ class Pd::InternationalOptin < ApplicationRecord
 
   belongs_to :user
 
-  validate :validate_email
-
   def self.required_fields
     [
       :first_name,
       :last_name,
-      :email,
       :gender,
       :school_city,
       :school_country,
@@ -83,19 +80,7 @@ class Pd::InternationalOptin < ApplicationRecord
     Hash[keys.collect {|v| [v, I18n.t("pd.form_labels.#{v.underscore}")]}]
   end
 
-  def email
-    sanitize_form_data_hash[:email]
-  end
-
   def opt_in?
     sanitize_form_data_hash[:opt_in].downcase == "yes"
-  end
-
-  private
-
-  def validate_email
-    hash = sanitize_form_data_hash
-
-    add_key_error(:email) unless Cdo::EmailValidator.email_address?(hash[:email])
   end
 end
