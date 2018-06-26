@@ -123,7 +123,7 @@ pd_facilitators as
          csfa.workshop_id,
          csfa.subject,
          csfa.trained_by_regional_partner,
-         csfa.started_at as workshop_date, 
+         d.trained_at as workshop_date, 
          csfa.workshop_id::varchar(16) || ', '::varchar(2) || extract(month from csfa.started_at)::varchar(16) || '/'::varchar(2) || extract(day from csfa.started_at)::varchar(16) || '/'::varchar(2) || extract(year from csfa.started_at)::varchar(16) as workshop_id_year,
          pwf.facilitator_names,
          -- started and completed
