@@ -33,6 +33,7 @@
     "disable_examples": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Be careful to pull out the full block of \\\"code from the toolbar each time you try a new one.\",\r\n  \"hint_id\": \"4-5_Artist_Patterns_3_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"If your code becomes too confusing, you can always click \\\"Start Over\\\" and try again!\",\r\n  \"hint_id\": \"4-5_Artist_Patterns_3_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "never_autoplay_video": "false",
+    "hint_prompt_attempts_threshold": 3,
     "contained_level_names": null
   },
   "published": true,

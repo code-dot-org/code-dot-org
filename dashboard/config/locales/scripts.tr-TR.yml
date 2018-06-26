@@ -11612,6 +11612,23 @@ tr:
                 rehberi öğrencilere adım adım talimatlar verir ve öğrencilerin düşüncelerini
                 organize etmesine yardım eder. Proje, çiftler halinde yapılmak için
                 tasarlanmış olmasına rağmen bireysel olarak da yapılabilir.
+            Apps and Storage:
+              name: Apps and Storage
+              description_student: 'Bu ders, bilgisayarların girdi ve çıktı özelliklerini
+                öğrencilerle ilgili olan ve öğrencilerin bildiği bir bağlamda işler:
+                uygulamalar ile. Öğrenciler, belirli problemleri çözmek için tasarlanmış
+                olan çeşitli web uygulamalarını, onların çalışması için gereken girdileri
+                ve kullanıcılara verdikleri çıktıları değerlendirir. Ders, uygulamalar
+                üzerine gözlemler ve uygulamaların topluma etkisi hakkında öğretmen
+                tarafından yönlendirilen bir tartışma ile biter. '
+              description_teacher: 'This lesson reviews the input, output, storage,
+                and processing aspects of a computer in a context that is relevant
+                and familiar to students: apps. In pairs, students evaluate smartphone
+                applications to analyze the specific problems that they were designed
+                to solve, the inputs that they need to work, and the processing that
+                turns those inputs into the desired output, and what information they
+                would want to store for later. The class concludes with a discussion
+                that connects the lesson to apps students are more familiar with. '
         csd4-2018:
           title: CSD Unit 4 - The Design Process
           description: Ünite 4, bilgi işlemin daha geniş toplumsal etkilerini tanıtmaktadır.
@@ -13081,6 +13098,14 @@ tr:
               name: Alien Dance Party - Input
             Virtual Pet - Interactions:
               name: Virtual Pet - Interactions
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        2018hoc-ab:
+          stages:
+            Labyrinth:
+              name: Labyrinth
           title: ''
           description_audience: ''
           description_short: ''

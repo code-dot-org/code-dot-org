@@ -1775,7 +1775,7 @@ it:
         text: "Questo è Sviluppo App. Sul lato sinistro c'è la tua app. Sulla destra c'è il codice che la fa funzionare. Tu costruisci il tuo programma trascinando blocchi dalla cassetta degli attrezzi. Per iniziare hai un unico blocco chiamato `setProperty`."
       4:
         image: 'notes/applab_intro_welcome_4.png'
-        text: "Il blocco `setProperty` cambia le caratteristiche degli elementi sul tuo schermo. Come i bottoni, le etichette o l'intero schermo. Prima devi definire quale elemento vuoi cambiare. Se passi sopra ad un elemento della tua app, puoi vedere il suo nome o ID. Quindi seleziona questo ID dal primo elenco a discesa."
+        text: "Il blocco `setProperty` cambia le caratteristiche degli elementi sul tuo schermo. Come i pulsanti, le etichette o l'intero schermo. Prima devi definire quale elemento vuoi cambiare. Se passi sopra ad un elemento della tua app, puoi vedere il suo nome o ID. Quindi seleziona questo ID dal primo elenco a discesa."
       5:
         image: 'notes/applab_intro_welcome_5.png'
         text: "Gli elementi hanno molte proprietà da gestire come il colore di sfondo, quello del testo o la sua dimensione. Puoi vedere la lista completa e scegliere quale proprietà cambiare nel secondo elenco a discesa."

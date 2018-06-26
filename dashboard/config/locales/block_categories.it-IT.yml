@@ -29,9 +29,10 @@ it:
       Numbers: Numeri
       Input: Input
       Default: Impostazione predefinita
+      World: Mondo
       Sprites: Sprites
       Behaviors: Comportamenti
-      World: Mondo
+      Advanced: Advanced
       Sprite: Personaggio
       Brush: Pennello
       Make Sprite: Make Sprite
@@ -46,6 +47,6 @@ it:
       Foo: Foo
       Name: Nome
       NEW BLOCKS: NEW BLOCKS
-      'Functions ': 'Functions '
+      'Functions ': 'Funzioni '
       Game/Score: Game/Score
       Function: Funzione

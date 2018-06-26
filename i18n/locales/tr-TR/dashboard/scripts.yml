@@ -8582,7 +8582,7 @@ tr:
             Intro to Problem Solving:
               name: Problem çözme tanıtımı
               description_student: 'Sınıf, olabildiğince çok para kazandıracak alüminyum folyo tekneleri tasarlamak için gruplar halinde çalışır. Derslerin sonunda gruplar, etkinlikle ilgili deneyimlerini yansıtır ve kursun geri kalanında yapacakları problem çözme yöntemleriyle bağlantı kurar.'
-              description_teacher: 'Bu derste öğrenciler, mümkün olduğunca çok para sağlayacak alüminyum folyo tekneleri tasarlamak için gruplar halinde çalışır. Gruplar, 1. turda olduğundan daha fazla kuruş yapmaya çalışmak amacıyla teknelerinde çalışmak üzere iki tur oynamaktadırlar. Faaliyetin yapısı, öğrencilerin daha ayrıntılı olarak tanıtılacak olan problem çözme sürecinin farklı adımlarını ön plana çıkarmaktadır. Ders sonunda öğrenciler, etkinlikle ilgili deneyimlerine yansıtmakta ve kursun geri kalanında yapacakları problem çözme yöntemleriyle bağlantı kurmaktadırlar.'
+              description_teacher: Bu derste öğrenciler, mümkün olduğunca çok para sağlayacak alüminyum folyo tekneleri tasarlamak için gruplar halinde çalışır. Gruplar, 1. turda olduğundan daha fazla kuruş yapmaya çalışmak amacıyla teknelerinde çalışmak üzere iki tur oynamaktadırlar. Faaliyetin yapısı, öğrencilerin daha ayrıntılı olarak tanıtılacak olan problem çözme sürecinin farklı adımlarını ön plana çıkarmaktadır. Ders sonunda öğrenciler, etkinlikle ilgili deneyimlerine yansıtmakta ve kursun geri kalanında yapacakları problem çözme yöntemleriyle bağlantı kurmaktadırlar.
             The Problem Solving Process:
               name: Problem çözme süreci
               description_student: Bu ders sınıfın kurs boyunca kullanacağı (formal) biçimsel problem çözme sürecini, (Define - Prepare - Try - Reflect), "Tanımla- Hazırlan- Uygula- Değerlendir" tanıtır. Sınıf, bu adımları bir önceki dersteki alüminyum tekneler problemiyle, daha sonra istedikleri bir problemle, sonrasında çözümünü geliştirmek istedikleri bir problemle ilişkilendirir. Dersin sonunda sınıf, kurs boyunca kullanacakları posterleri oluşturmak için sürecin (D-P-T-R) her adımı için  genel, kullanışlı stratejilerin bir listesini biriktirir.
@@ -8590,14 +8590,11 @@ tr:
             Exploring Problem Solving:
               name: Problem çözmeyi keşfetme
               description_student: 'Bu derste sınıf, problem çözme sürecini üç farklı soruna uygular: bir kelime araması, bir doğum günü partisi için oturma düzenlemesi ve bir gezi planlama. Sorunlar giderek daha da karmaşık hale gelir ve sorun çözme sürecinin özellikle bu tür sorunlarla başa çıkarken yararlı olduğunun altını çizilir.'
-              description_teacher: |-
-                Bu derste öğrenciler, her adımın değerini daha iyi anlamak için problem çözme sürecini üç farklı soruna uygulayacaktır. Bir kelime araması çözer, bir doğum günü partisi için koltuk düzenlemesi yapar ve gezi planı yapar. Sorunlar giderek daha da karmaşık hale gelir ve sorun çözme sürecinin bu tür sorunlarla başa çıkarken özellikle yararlı olduğunun altını çizer. Ders, öğrencilerin problem çözme sürecindeki deneyimlerini yansıtmalarıyla sonuca varır. Her adımın dahil edilmesinin doğru olduğu kanısına varacaklar ve açık uçlu problemleri daha iyi tanımlamalarını sağlayacak soruları veya stratejileri beyin fırtınası ile inceleyeceklerdir. Bu nokta çoğu kez en kritik adımdır.
-                
-                Bu ders büyük olasılıkla iki ders saatinde veya daha fazlasında tamamlanacaktır. İlk iki problem tek bir derse sığabilir, ancak üçüncü faktör ikinci bir güne taşınmalıdır.
+              description_teacher: "Bu derste öğrenciler, her adımın değerini daha iyi anlamak için problem çözme sürecini üç farklı soruna uygulayacaktır. Bir kelime araması çözer, bir doğum günü partisi için koltuk düzenlemesi yapar ve gezi planı yapar. Sorunlar giderek daha da karmaşık hale gelir ve sorun çözme sürecinin bu tür sorunlarla başa çıkarken özellikle yararlı olduğunun altını çizer. Ders, öğrencilerin problem çözme sürecindeki deneyimlerini yansıtmalarıyla sonuca varır. Her adımın dahil edilmesinin doğru olduğu kanısına varacaklar ve açık uçlu problemleri daha iyi tanımlamalarını sağlayacak soruları veya stratejileri beyin fırtınası ile inceleyeceklerdir. Bu nokta çoğu kez en kritik adımdır.\n\nBu ders büyük olasılıkla iki ders saatinde veya daha fazlasında tamamlanacaktır. İlk iki problem tek bir derse sığabilir, ancak üçüncü faktör ikinci bir güne taşınmalıdır."
             What is a Computer?:
               name: Bilgisayar nedir?
               description_student: Bu derste sınıf, bir bilgisayarın tanımını geliştirir. Sonra, bilgisayarın olası tanımlarıyla ilgili beyin fırtınası yapıyor, sınıf gruplar halinde çalışma ile resimleri  "bu bir bilgisayar" veya "bu bir bilgisayar değil" şeklinde poster kağıdının üzerine sınıflandırır ve  bazı en zor gruplamaları seçmek için motive olduklarını açıklarlar. Öğretmen daha sonra bilgisayarın tanımını yapar ve öğrencilerin yeni tanıma göre kendi posterlerini gözden geçirmeleri için imkân verir.
-              description_teacher: 'Bu derste öğrenciler bir bilgisayar tanımı geliştirir. Dersin başında, bir bilgisayarın olası tanımlarıyla ilgili beyin fırtınası yapar ve beyin fırtınası sonuçlarını panoya yerleştirirler. Sonra, öğrenciler gruplar halinde çalışma ile resimleri  "bu bir bilgisayar" veya "bu bir bilgisayar değil" şeklinde poster kağıdının üzerine sınıflandıracak. Gruplar posterlerini odanın etrafına yerleştirecek ve gruplama yaparken en çok hangilerinde zorlandıklarını kısaca açıklayacaklar. Öğretmen daha sonra bilgisayarın tanımını yapacak ve öğrencilerin yeni tanıma göre kendi posterlerini gözden geçirmeleri için imkân verecek.'
+              description_teacher: "Bu derste öğrenciler bir bilgisayar tanımı geliştirir. Dersin başında, bir bilgisayarın olası tanımlarıyla ilgili beyin fırtınası yapar ve beyin fırtınası sonuçlarını panoya yerleştirirler. Sonra, öğrenciler gruplar halinde çalışma ile resimleri  \"bu bir bilgisayar\" veya \"bu bir bilgisayar değil\" şeklinde poster kağıdının üzerine sınıflandıracak. Gruplar posterlerini odanın etrafına yerleştirecek ve gruplama yaparken en çok hangilerinde zorlandıklarını kısaca açıklayacaklar. Öğretmen daha sonra bilgisayarın tanımını yapacak ve öğrencilerin yeni tanıma göre kendi posterlerini gözden geçirmeleri için imkân verecek."
             Input and Output:
               name: Girdiler ve çıktılar
               description_student: "Bu sınıfta öğrenciler,  \nIn this the class students consider a number of computing devices to determine what types of inputs and outputs they use. Groups are assigned to a computing device and based on a teacher-provided definition of input and output, list the inputs and outputs of their device.  To conclude the lesson the class examines common activities they do on a computing device and select the inputs and outputs used for that activity from the chart."
@@ -8618,6 +8615,10 @@ tr:
               name: Proje - bir uygulama önermek
               description_student: Sınıfımız; problem çözme süreci çalışmalarını ve bilgisayarın giriş/çıkış/depolama/sürecini sonuçlandırmak için, gerçek hayat problemlerini çözebilecek uygulamalar sunar. Bu projenin tamamlanması günlere yayılabilir ve, her uygulamanın önemli noktalarını vurgulayan özelliklerin posterle sunulmasıyla proje sonuçlandırılacaktır. Proje ikili bitirilebilecek şekilde tasarlanmıştır, ama bireysel de yapılabilir.
               description_teacher: Problem çözme süreci ve bir bilgisayarın girdi/çıktı/depolama/işleme modeli üzerine çalışmalarını bitirmek için öğrenciler bir gerçek hayat sorununu çözen bir uygulama sunarlar. Bu proje günlere yayılarak tamamlanacaktır ve öğrenciler uygulamalarının özelliklerini vurgulayan bir poster oluşturup sınıf arkadaşlarına sunarak proje sonuçlanacaktır. Bir proje rehberi öğrencilere adım adım talimatlar verir ve öğrencilerin düşüncelerini organize etmesine yardım eder. Proje, çiftler halinde yapılmak için tasarlanmış olmasına rağmen bireysel olarak da yapılabilir.
+            Apps and Storage:
+              name: Apps and Storage
+              description_student: 'Bu ders, bilgisayarların girdi ve çıktı özelliklerini öğrencilerle ilgili olan ve öğrencilerin bildiği bir bağlamda işler: uygulamalar ile. Öğrenciler, belirli problemleri çözmek için tasarlanmış olan çeşitli web uygulamalarını, onların çalışması için gereken girdileri ve kullanıcılara verdikleri çıktıları değerlendirir. Ders, uygulamalar üzerine gözlemler ve uygulamaların topluma etkisi hakkında öğretmen tarafından yönlendirilen bir tartışma ile biter. '
+              description_teacher: 'This lesson reviews the input, output, storage, and processing aspects of a computer in a context that is relevant and familiar to students: apps. In pairs, students evaluate smartphone applications to analyze the specific problems that they were designed to solve, the inputs that they need to work, and the processing that turns those inputs into the desired output, and what information they would want to store for later. The class concludes with a discussion that connects the lesson to apps students are more familiar with. '
         csd4-2018:
           title: CSD Unit 4 - The Design Process
           description: Ünite 4, bilgi işlemin daha geniş toplumsal etkilerini tanıtmaktadır. Bir dizi tasarım zorluğuyla, bir probleme bir çözüm geliştirirken diğerlerinin ihtiyaçlarını daha iyi anlayabileceğinizi öğreneceksiniz. Birimin ikinci yarısı, ekiplerin bakım ihtiyaçlarını belirleme, hem kağıt üzerinde hem de Uygulama Laboratuarında prototip çözümler üretme ve gerçek kullanıcılar ile geribildirim almak ve ilerlemek için çözümler test etme imkanı sağlayan bir tekrarlayıcı takım projesinden oluşur.
@@ -8930,7 +8931,7 @@ tr:
               description_teacher: ''
         csp4-2018:
           title: CSP Unit 4 - Big Data and Privacy
-          description: "The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.\\r\n\\r\nThis unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
+          description: The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.
           description_short: Explore the data-rich world we live, and how data impacts public policy, personal privacy, security, the law, and ethics.
           description_audience: ''
           stages:
@@ -9513,6 +9514,14 @@ tr:
               name: Alien Dance Party - Input
             Virtual Pet - Interactions:
               name: Virtual Pet - Interactions
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        2018hoc-ab:
+          stages:
+            Labyrinth:
+              name: Labyrinth
           title: ''
           description_audience: ''
           description_short: ''

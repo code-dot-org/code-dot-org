@@ -10,7 +10,7 @@ video_player: true
 Code.org International Summit
 
 [/solid-block-header]
-## September 10-12, 2018, in Dallas, Texas
+## 10-12 September 2018, in Dallas, Texas
 
 [col-50]
 
@@ -38,8 +38,8 @@ The International Summit will be most useful to organizations based outside of t
 
 ## **Registration Details**
 
-* The registration deadline is **July 13, 2018**.
-* Code.org will cover the cost of your registration fee when you register prior to July 13, 2018. Late registrations will be considered on a case-by-case basis.
+* The registration deadline is **13 July 2018**.
+* Code.org will cover the cost of your registration fee when you register prior to 13 July 2018. Late registrations will be considered on a case-by-case basis.
 * Please note that we will not be able to accommodate you at the summit if you do not fill out the registration form. 
 
 
@@ -121,9 +121,9 @@ Alternatively, a taxi or rideshare will get you from the airport to the hotel in
   <br>
 Code.org is happy to cover the costs of the following: 
 
-* Registration fee for all participants registered prior to July 13
-* Catered breakfast and lunch from September 10-12
-* Seated dinner on September 10
+* Registration fee for all participants registered prior to 13 July
+* Catered breakfast and lunch from 10-12 September
+* Seated dinner on 10 September
 
 </p>
 </details>
@@ -164,11 +164,11 @@ Please note that Code.org will not have extra devices on hand for participants t
   <br>
 Of course! We do ask that you join our Monday evening event, but otherwise your time outside of sessions is free time. You can explore the area and spend time with the folks you meet throughout the day during the following times:
 
-* After arrival on Sunday, September 10
-* After sessions conclude at 4:30pm on Tuesday, September 11
-* After sessions conclude at 2:00pm on Wednesday, September 12
+* After arrival on Sunday, 10 September
+* After sessions conclude at 4:30pm on Tuesday, 11 September
+* After sessions conclude at 2:00pm on Wednesday, 12 September
 
-If you plan to extend your stay in Dallas beyond the dates of the summit and need to stay at the Sheraton Dallas Hotel after September 12, please let us know. We can't guarantee that there will be space available, but we will do our best to accommodate your requests. 
+If you plan to extend your stay in Dallas beyond the dates of the summit and need to stay at the Sheraton Dallas Hotel after 12 September, please let us know. We can't guarantee that there will be space available, but we will do our best to accommodate your requests. 
 </p>
 </details>
 

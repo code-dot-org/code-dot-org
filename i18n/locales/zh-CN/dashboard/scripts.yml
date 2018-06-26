@@ -5,7 +5,7 @@ zh-CN:
         csd_category_name: CS Discoveries ('17-'18)
         csd_2018_category_name: 计算机科学发现 (' 18-' 19)
         csf_category_name: 计算机科学基本原理
-        csf_2018_category_name: CS Fundamentals (2018)
+        csf_2018_category_name: 计算机科学基础课程（2018）
         csf_international_category_name: 计算机基础国际版
         csf2_draft_category_name: '开发中：课程A - F'
         csp_category_name: "15-16 计算机原理"
@@ -3737,7 +3737,7 @@ zh-CN:
             Processing with Bits:
               name: 比特位处理
         csd2-2017:
-          title: CSD Unit 2 - Web Development
+          title: 计算机科学发现单元2 - 网页开发
           description_audience: ''
           description_short: "  了解如何在 Web 实验室中构建自己的网站。"
           description: " 在第2单元中, 您将学习如何在自己的网页上创建和共享内容。在决定要与世界共享哪些内容之后, 您将学习如何使用 HTML 和 CSS 来构造和样式化页面。您还将练习有价值的编程技能, 如调试和注释。 在该单元的末尾, 您将有一个个人的网站可以发布到互联网上。"
@@ -7443,7 +7443,7 @@ zh-CN:
               description_student: ''
               description_teacher: ''
         csd2-2018:
-          title: CSD Unit 2 - Web Development
+          title: 计算机科学发现单元2 - 网页开发
           description: " 在第2单元中, 您将学习如何在自己的网页上创建和共享内容。在决定要与世界共享哪些内容之后, 您将学习如何使用 HTML 和 CSS 来构造和样式化页面。您还将练习有价值的编程技能, 如调试和注释。 在该单元的末尾, 您将有一个个人的网站可以发布到互联网上。"
           description_short: "  了解如何在 Web 实验室中构建自己的网站。"
           description_audience: ''
@@ -7505,7 +7505,7 @@ zh-CN:
               description_student: 在该单元的最后几天, 该课堂完成了他们的个人网站, 与同行们一起工作反馈, 评论专栏, 并在网站上进行收尾。为了完成这个单位, 每个人都分享他们的项目以及他们是如何开发的。
               description_teacher: "学生们花了大量的时间在整个单位的个人网站上工作。在最后的几天里, 学生们最终完成了他们的网站。 他们与同事们一起工作以获得反馈, 在网站上完成润色, 回顾专栏并反思自己的过程。为了结束该单位, 他们将分享他们的项目, 并概述他们为实现最终设计所采取的过程。\\r\n"
         coursea-2018:
-          title: Course A (2018)
+          title: 课程 A （2018）
           assignment_family_title: 课程 A
           description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
           description_short: 为学前学生准备的计算机科学介绍
@@ -7520,7 +7520,7 @@ zh-CN:
               description_student: ''
               description_teacher: "当学生在回答问题或者做一个项目遇到困难时，很容易感到沮丧并放弃。这堂课会告诉学生一个思想，沮丧是学习中很重要的部分。在这里，沮丧是创造性过程中的一步，而不只是失败的信号。\\r\n\\r\n这堂课可以在一次或两次课堂阶段完成。如果你有更多时间，尽管创建或修订这个滚珠活动阶段。"
             'Real-life Algorithms: Plant a Seed':
-              name: Plant a Seed
+              name: 种下一颗种子
               description_student: ''
               description_teacher: "在这堂课中，学生们将会将算法的概念带到每一天，与种植真实种子的现实活动联系起来。目标是开始构建将现实世界的状况转换为在线场景，以及反过来转换的能力。\\r\n"
             Learn to Drag and Drop:
@@ -7566,9 +7566,9 @@ zh-CN:
             Loops in Harvester:
               name: 收割者中的循环
             Sequencing in Maze:
-              name: 迷宫中的序列
+              name: 愤怒的小鸟中的序列
             'Persistence & Frustration: Stevie and the Big Project':
-              name: 坚持与挫折 就像史蒂夫和大项目。
+              name: 斯蒂夫和大项目
         express-2018:
           title: 快速课程
           assignment_family_title: 快速课程
@@ -7735,7 +7735,7 @@ zh-CN:
             Copyright and Creativity:
               name: 版权和创造力
             'Concept Practice with Minecraft ':
-              name: 用《我的世界》练习概念 
+              name: 与《我的世界》往前看
             Nested Loops in Bee:
               name: 蜜蜂里的嵌套循环
             Nested Loops in Frozen:
@@ -7763,19 +7763,19 @@ zh-CN:
             Envelope Variables:
               name: 封装变量
             Variables as Constant in Artist:
-              name: 艺术家里的变量作为常数
+              name: 艺术家和变量
             Variables that Change in Bee:
-              name: 蜜蜂里的变化的变量
+              name: 蜜蜂与改变变量
             Variables that Change in Artist:
-              name: 小艺术家里的变化的变量
+              name: 小艺术家与改变变量
             For Loop Fun:
               name: 计数循环的乐趣
             Learning Sprites with Sprite Lab:
-              name: 在精灵实验室学习精灵
+              name: 学习精灵实验室
             Alien Dance Party with Sprite Lab:
-              name: 精灵实验室中的外星人舞蹈派对
+              name: 外星人舞蹈派对
             Pet Giraffe with Sprite Lab:
-              name: 精灵实验室中的宠物长颈鹿
+              name: 宠物长颈鹿
             Binary Bracelets:
               name: 二进制的手镯
             'Unplugged: Binary':
@@ -7789,7 +7789,7 @@ zh-CN:
             Relay Programming:
               name: 编程接力
         courseb-2018:
-          title: Course B (2018)
+          title: 课程 B （2018）
           assignment_family_title: 课程 B
           description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
           description_short: 为学前学生准备的计算机科学介绍。（类似于课程A，但是对年长的学生有更多变化。)
@@ -7848,15 +7848,15 @@ zh-CN:
               description_student: ''
               description_teacher: ''
             Programming in Ice Age:
-              name: 在冰河时代里编程
+              name: 与斯奎特一起编程
             Loops in Ice Age:
-              name: 冰河时代里的循环
+              name: 斯奎特和循环
             Sequencing with Scrat:
               name: 斯奎特和序列
             Move It, Move It:
               name: 移动它，移动它！
             Copyright and Creativity:
-              name: 版权和创造力
+              name: 创建并实践公平非常的伟大。
         coursed-2018:
           title: 新的课程D脚本
           assignment_family_title: 课程 D
@@ -8049,7 +8049,7 @@ zh-CN:
           description_short: 计算机科学原理AP测试准备
           description: '这一页包含了所有出现在课程单元1-5中的多个选择的评估问题的副本。  学生们可能会想通过重新做这些小测试来练习多选测验。  '
         coursec-2018:
-          title: Course C (2018)
+          title: 课程 C （2018）
           assignment_family_title: 课程 C
           description: 用循环、事件和条件来创建程序。将你的名字翻译成二进制，调查不同的解决问题的技术，并学习如何回应网上欺凌。在课程的最后，创建你自己的，能够共享的游戏或故事。
           description_short: 学习计算机科学的基础知识, 创造你自己的艺术, 故事和游戏。
@@ -8068,7 +8068,7 @@ zh-CN:
               description_student: ''
               description_teacher: ''
             'Real-life Algorithms: Paper Planes':
-              name: Paper Planes
+              name: 纸飞机
               description_student: ''
               description_teacher: ''
             Programming in Collector:
@@ -8220,7 +8220,7 @@ zh-CN:
             'Project: Prototype an Innovation':
               name: '项目：创新原型'
         coursee-2018:
-          title: Course E (2018)
+          title: 课程 E （2018）
           assignment_family_title: 课程 E
           description: 开始用算法，循环，条件和事件来编程，然后你会学习函数。在本课程的第二部分，设计并创建一个好项目，并共享给你的亲友们。
           description_short: 在课程C&D中快速覆盖概念，然后继续使用函数。
@@ -8271,7 +8271,7 @@ zh-CN:
               description_student: 这个快节奏的介绍能让你有机会练习大多数技能，你需要在这个课程中用它们来解决难题。
               description_teacher: 在这个过程中，学生们会从一个Code.org的在线工作区的介绍（或者回顾）开始。学生们会学习到界面的基本功能，比如`运行`，`重置`和`步进`按钮。拖拽、删除和连接模块也会在开始的视频中。在这些关卡中，学生们会在迷宫和艺术中练习序列和调试技巧。
             Conditionals:
-              name: Conditionals with the Farmer
+              name: 农夫和条件
               description_student: 在这一有趣并有挑战的系列中，你能够明白计算机在某些条件下会做什么。
               description_teacher: 这堂课向学生们介绍了`当`循环和`如果/否则`语句。_当循环_ 是只要条件为真就不停的重复命令。当循环被程序员们用来在不知道命令需要被重复多少次，但是直到什么时候需要被重复的时候使用。`如果/否则`语句经常被灵活的用在整个代码中，它能够帮助在某个条件成立是运行一些代码，不成立时运行另一些代码。
             Private and Personal Information:
@@ -8340,15 +8340,15 @@ zh-CN:
             Functions in Minecraft:
               name: '《我的世界》中的函数'
             Learning Sprites with Sprite Lab:
-              name: 在精灵实验室学习精灵
+              name: 学习精灵实验室
             Alien Dance Party with Sprite Lab:
-              name: 精灵实验室中的外星人舞蹈派对
+              name: 外星人舞蹈派对
             Pet Giraffe with Sprite Lab:
-              name: 精灵实验室中的宠物长颈鹿
+              name: 宠物长颈鹿
             Copyright and Creativity:
               name: 数字共享
         coursef-2018:
-          title: Course F (2018)
+          title: 课程 F （2018）
           assignment_family_title: 课程 F
           description: 学习用不同种类的循环、事件、函数和条件。研究不同的解决问题的计数，并讨论计算和互联网对社会的影响。在课程的第二部分中，设计并创建一个实际项目，并共享给你的亲友。
           description_short: 学习计算机科学基础中的所有概念，并创建你自己的艺术、故事或游戏。
@@ -8473,23 +8473,23 @@ zh-CN:
             Conditionals with Cards:
               name: 用 扑克牌 的 条件子句
             Conditionals:
-              name: Conditionals with the Farmer
+              name: 农夫和条件
             Variables as Constant in Artist:
-              name: 艺术家里的变量作为常数
+              name: 艺术家和变量
             Variables that Change in Bee:
-              name: 蜜蜂里的变化的变量
+              name: 蜜蜂与改变变量
             Variables that Change in Artist:
-              name: 小艺术家里的变化的变量
+              name: 小艺术家与改变变量
             Learning Sprites with Sprite Lab:
-              name: 在精灵实验室学习精灵
+              name: 学习精灵实验室
             Alien Dance Party with Sprite Lab:
-              name: 精灵实验室中的外星人舞蹈派对
+              name: 外星人舞蹈派对
             Pet Giraffe with Sprite Lab:
-              name: 精灵实验室中的宠物长颈鹿
+              name: 宠物长颈鹿
             Functions in Minecraft:
               name: '《我的世界》中的函数'
             Conditionals in Farmer:
-              name: Conditionals with the Farmer
+              name: 农夫和条件
         csp1-2018:
           title: CSP Unit 1 - The Internet
           description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. The unit then explores the structure and design of the internet and the implications of those design decisions.
@@ -8579,7 +8579,7 @@ zh-CN:
             Intro to Problem Solving:
               name: 解决问题入门
               description_student: '该班分组设计铝箔船，让它能承载尽量多的便士。 在课程结束时, 小组会反思他们在活动中的经验, 并与他们在余下的过程中所做的解决问题的类型建立联系。 '
-              description_teacher: '在这节课中, 学生们小组合作设计铝箔船，让它能承载尽量多的便士。小组在他们的船上有两轮的工作，目标是设法保留比第1轮更多的便士。活动的结构预示着问题解决过程中的不同步骤，在下一课中将向学生更详细地介绍。在课程结束时, 学生们会反思他们在活动中的经验, 并与他们将在课程剩下的时间里解决问题的类型联系起来。 '
+              description_teacher: 在这节课中, 学生们小组合作设计铝箔船，让它能承载尽量多的便士。小组在他们的船上有两轮的工作，目标是设法保留比第1轮更多的便士。活动的结构预示着问题解决过程中的不同步骤，在下一课中将向学生更详细地介绍。在课程结束时, 学生们会反思他们在活动中的经验, 并与他们将在课程剩下的时间里解决问题的类型联系起来。 
             The Problem Solving Process:
               name: 解决问题的过程
               description_student: 本课介绍了该班在接下来的一年中将使用的正式的问题解决流程：定义-准备-尝试-反思。该班将这些步骤与前一课中的铝箔船问题联系起来，然后是他们擅长解决的问题，然后是他们想要改进的问题。在课程结束时, 该班收集了每一步中广泛有用的策略列表，书写海报并张贴起来，接下来的一年都可以随时看到。
@@ -8587,14 +8587,11 @@ zh-CN:
             Exploring Problem Solving:
               name: 探索解决问题
               description_student: '在本课中, 班级将解决问题的过程应用于三个不同的问题上: 单词搜索、生日聚会的座位安排和旅行计划。这些问题会越来越复杂, 并且定义不清, 以强调解决问题的过程在解决这些类型的问题时特别有用。'
-              description_teacher: |-
-                在本课中, 学生将解决问题的过程应用到三个不同的问题，以便更好地理解每个步骤的价值。他们将解决单词搜索，生日聚会的座位安排, 和计划旅行的问题。这些问题会越来越复杂, 并且定义不清，以强调解决问题流程在解决问题时特别有用。这一课结束时，学生们将反思他们在解决问题流程中的经验。他们将为每一个步骤做出解释, 并将集思广益地提出问题或战略, 可以帮助他们更好地定义开放式的问题, 因为这往往是最关键的一步。 
-                
-                此课程可能需要两个课时或更长时间才能完成。前两个问题可能适用于一个单一课时, 但第三个问题将需要移到第二天。
+              description_teacher: "在本课中, 学生将解决问题的过程应用到三个不同的问题，以便更好地理解每个步骤的价值。他们将解决单词搜索，生日聚会的座位安排, 和计划旅行的问题。这些问题会越来越复杂, 并且定义不清，以强调解决问题流程在解决问题时特别有用。这一课结束时，学生们将反思他们在解决问题流程中的经验。他们将为每一个步骤做出解释, 并将集思广益地提出问题或战略, 可以帮助他们更好地定义开放式的问题, 因为这往往是最关键的一步。 \n\n此课程可能需要两个课时或更长时间才能完成。前两个问题可能适用于一个单一课时, 但第三个问题将需要移到第二天。"
             What is a Computer?:
               name: 什么是电脑？
               description_student: 在本课中，该班对计算机进行了初步定义。经过集思广益之后对计算机的可能定义，班级分组工作在海报上将图片分类为 “是计算机” 或 “不是计算机” ，并解释他们选择一些最难归类的动机。然后老师介绍计算机的定义，允许小组根据新的定义修改他们的海报。
-              description_teacher: '在本课中，学生将对计算机进行了初步定义。开始上课时，全班将集思广益对计算机做可能的定义，并把这个集思广益讨论的结果放在海报上。下一步，学生们将分组在海报上把图片分类为“是计算机” 或 “不是计算机” 。小组将他们的海报贴在课室里并简要解释他们选择一些最难归类的动机。然后老师介绍了计算机的定义，并允许学生根据新的定义修改他们的海报。  '
+              description_teacher: "在本课中，学生将对计算机进行了初步定义。开始上课时，全班将集思广益对计算机做可能的定义，并把这个集思广益讨论的结果放在海报上。下一步，学生们将分组在海报上把图片分类为“是计算机” 或 “不是计算机” 。小组将他们的海报贴在课室里并简要解释他们选择一些最难归类的动机。然后老师介绍了计算机的定义，并允许学生根据新的定义修改他们的海报。  "
             Input and Output:
               name: 输入和输出
               description_student: 在课堂上，学生考虑了一些计算设备来确定他们使用的输入和输出的类型。小组分配到一个计算设备, 并根据教师提供的输入和输出定义, 列出其设备的输入和输出。总结课程, 课堂检查在计算设备上所做的常见活动, 并从图表中选择用于该活动的输入和输出。
@@ -8615,6 +8612,10 @@ zh-CN:
               name: 项目- 提议一个应用程序
               description_student: 为了完成对计算机的问题解决过程和输入/输出/存储/处理模型的研究, 该课程提出了用于解决现实世界问题的应用程序。该项目需要多天来完成, 并在海报演示文稿突出显示每个应用程序的功能。该项目设计为结对完成，虽然也可以单独完成。
               description_teacher: 为了完成对计算机的问题解决过程和输入/输出/存储/处理模型的研究, 学生将提出一个用于解决现实世界问题的应用程序。该项目将需要好几天来完成, 并会让学生创建一个海报突出显示他们的应用程序的功能，并将呈现同学。项目指南为学生提供循序渐进的指导，并帮助他们组织想法。该项目设计为结对完成, 虽然也可以单独完成。
+            Apps and Storage:
+              name: Apps and Storage
+              description_student: '本课程涵盖了计算机在上下文中的输入和输出方面。这对学生来说是相关而又熟悉的：应用程序。课堂评估各种网络应用程序, 以分析它们设计要解决的特定问题、它们需要工作的输入以及它们为用户提供的输出。 课程总结了对这些应用程序的观察，以及老师主导的关于应用程序对社会影响的讨论。 '
+              description_teacher: 'This lesson reviews the input, output, storage, and processing aspects of a computer in a context that is relevant and familiar to students: apps. In pairs, students evaluate smartphone applications to analyze the specific problems that they were designed to solve, the inputs that they need to work, and the processing that turns those inputs into the desired output, and what information they would want to store for later. The class concludes with a discussion that connects the lesson to apps students are more familiar with. '
         csd4-2018:
           title: 计算机科学发现单元4 - 设计过程
           description: 4单元介绍了计算的更广泛的社会影响。通过一系列的设计挑战, 您将了解如何在开发解决问题的方法时更好地理解他人的需求。该单元的后半部分由一个迭代团队项目组成, 在这个项目中，团队有机会确定他们所关心的需求、在纸上和应用程序实验室中的原型解决方案, 并与真正的用户测试解决方案以获得反馈并进一步推动迭代.
@@ -8927,7 +8928,7 @@ zh-CN:
               description_teacher: ''
         csp4-2018:
           title: CSP Unit 4 - Big Data and Privacy
-          description: "The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.\\r\n\\r\nThis unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
+          description: The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.
           description_short: Explore the data-rich world we live, and how data impacts public policy, personal privacy, security, the law, and ethics.
           description_audience: ''
           stages:
@@ -9501,7 +9502,7 @@ zh-CN:
             Loops in Ice Age:
               name: 冰河时代里的循环
             'Persistence & Frustration: Stevie and the Big Project':
-              name: '坚持与挫折 就像史蒂夫和大项目。'
+              name: '坚持与挫折：史蒂夫和大项目。'
         spritelab-validated:
           stages:
             Fish Tank - Creating Sprites:
@@ -9510,6 +9511,14 @@ zh-CN:
               name: 外星人舞蹈派对 - 输入
             Virtual Pet - Interactions:
               name: 虚拟宠物 - 交互
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        2018hoc-ab:
+          stages:
+            Labyrinth:
+              name: Labyrinth
           title: ''
           description_audience: ''
           description_short: ''

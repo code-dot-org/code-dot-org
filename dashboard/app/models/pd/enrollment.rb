@@ -31,6 +31,7 @@ require 'cdo/safe_names'
 class Pd::Enrollment < ActiveRecord::Base
   include SchoolInfoDeduplicator
   include Rails.application.routes.url_helpers
+  include Pd::SharedWorkshopConstants
 
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
@@ -61,6 +62,7 @@ class Pd::Enrollment < ActiveRecord::Base
 
   before_validation :autoupdate_user_field
   after_save :enroll_in_corresponding_online_learning, if: -> {!owner_deleted? && (user_id_changed? || email_changed?)}
+  after_save :authorize_teacher_account
 
   def self.for_user(user)
     where('email = ? OR user_id = ?', user.email, user.id)
@@ -163,10 +165,8 @@ class Pd::Enrollment < ActiveRecord::Base
   def exit_survey_url
     if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
       CDO.code_org_url "/pd-workshop-survey/counselor-admin/#{code}", CDO.default_scheme
-    elsif workshop.local_summer?
+    elsif workshop.local_summer? || workshop.teachercon?
       pd_new_workshop_survey_url(code, protocol: CDO.default_scheme)
-    elsif workshop.teachercon?
-      pd_new_teachercon_survey_url(code)
     else
       CDO.code_org_url "/pd-workshop-survey/#{code}", CDO.default_scheme
     end
@@ -265,6 +265,10 @@ class Pd::Enrollment < ActiveRecord::Base
 
   def check_school_info(school_info_attr)
     deduplicate_school_info(school_info_attr, self)
+  end
+
+  def authorize_teacher_account
+    user.permission = UserPermission::AUTHORIZED_TEACHER if user && [COURSE_CSD, COURSE_CSP].include?(workshop.course)
   end
 
   private_class_method def self.filter_for_regular_survey_completion(enrollments, select_completed)

@@ -71,19 +71,16 @@ Maryland<br>
 Massachusetts<br>
 Mississippi<br>
 Montana<br>
-New Hampshire<br>
 Southeastern New York<br>
 North Carolina<br>
-
+North Dakota<br>
 
 [/col-33]
 
 [col-33]
 
-North Dakota<br>
 Central Pennsylvania<br>
 South Dakota<br>
-Vermont<br>
 Virginia<br>
 Wisconsin<br>
 Wyoming<br>

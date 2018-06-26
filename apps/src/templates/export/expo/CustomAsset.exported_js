@@ -158,7 +158,7 @@ export default class CustomAsset {
     }
     this.downloading = true;
     try {
-      const localUri = `${FS.cacheDirectory}${this.name}`;
+      const localUri = `${FS.cacheDirectory}${encodeURI(this.name)}`;
       let exists, md5;
       ({ exists, md5 } = await FS.getInfoAsync(localUri, {
         cache: true,

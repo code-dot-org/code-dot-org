@@ -8,7 +8,7 @@ th:
       draw a circle: วาดวงกลม
       draw a car: draw a car
       draw_rect: draw_rect
-      draw square: draw square
+      draw square: วาดสี่เหลี่ยมจตุรัส
       jump to controller top left: jump to controller top left
       jump to middle: jump to middle
       draw a button: draw a button
@@ -32,18 +32,18 @@ th:
       draw a flower: วาดดอกไม้
       draw a square: วาดสี่เหลี่ยมจตุรัส
       draw a snowflake: วาดรูปเกล็ดหิมะ
-      draw 3 hexagons: draw 3 hexagons
-      draw 4 hexagons: draw 4 hexagons
-      draw 5 hexagons: draw 5 hexagons
-      get 2 nectar: get 2 nectar
+      draw 3 hexagons: วาดรูปหกเหลี่ยม 3 รูป
+      draw 4 hexagons: วาดรูปหกเหลี่ยม 4 รูป
+      draw 5 hexagons: วาดรูปหกเหลี่ยม 5 รูป
+      get 2 nectar: เก็บ 2 เกสร
       collect purple nectar: collect purple nectar
-      get 5: get 5
-      move and get nectar: move and get nectar
+      get 5: เก็บ 5
+      move and get nectar: บินไปและเก็บน้ำหวาน
       move and get 4: move and get 4
-      get 7 nectar make 7 honey: get 7 nectar make 7 honey
+      get 7 nectar make 7 honey: เก็บนำหวาน 7 ครั้งทำน้ำผึ้ง 7 ครั้ง
       get 7 make 7: get 7 make 7
       get 7: get 7
-      move and get 3: move and get 3
+      move and get 3: บินไปและเก็บ 3
       draw a tree: วาดรูปต้นไม้
       draw triangle: draw triangle
       draw circle: draw circle
@@ -57,11 +57,11 @@ th:
       draw a big triangle: draw a big triangle
       draw a triangle: วาดสามเหลี่ยม
       draw a house: วาดรูปบ้าน
-      check purple flower: check purple flower
-      check flower make honey: check flower make honey
-      get nectar or make honey: get nectar or make honey
-      make 3 honey: make 3 honey
-      get 5 nectar: get 5 nectar
+      check purple flower: เช็คดอกไม้สีม่วง
+      check flower make honey: เช็คน้ำหวานทำน้ำผึ้ง
+      get nectar or make honey: เก็บน้ำหวานหรือทำน้ำผึ้ง
+      make 3 honey: ทำน้ำผึ้ง 3 ครั้ง
+      get 5 nectar: เก็บนำหวาน 5 ครั้ง
       make all honey: make all honey
       draw a star: วาดรูปดวงดาว
       game has been won: game has been won
@@ -99,19 +99,19 @@ th:
       Draw a Cube: Draw a Cube
       draw a cube: draw a cube
       draw an octagon 20: draw an octagon 20
-      Draw a square: Draw a square
+      Draw a square: วาดรูปสี่เหลี่ยมจตุรัส
       cube: cube
       do something2: do something2
       jump upper right: jump upper right
       draw a line of  squares: draw a line of  squares
-      draw a line of squares: draw a line of squares
+      draw a line of squares: วาดเส้นสีเหลี่ยมจตุรัส
       Draw Square Line: Draw Square Line
       jump upper left: jump upper left
       draw a line of octagons: draw a line of octagons
       draw a square line: draw a square line
-      Draw a Square: Draw a Square
-      draw a square 20: draw a square 20
-      draw a square 40: draw a square 40
+      Draw a Square: วาดสี่เหลี่ยมจตุรัส
+      draw a square 20: วาดสี่เหลี่ยมจตุรัส 20
+      draw a square 40: วาดสี่เหลี่ยมจตุรัส 40
       draw a triangle with length: draw a triangle with length
       Draw a Triangle with length: Draw a Triangle with length
       draw a triangle wioth length: draw a triangle wioth length
@@ -127,7 +127,7 @@ th:
       level_up: level_up
       score_points: score_points
       set score: ตั้งค่า คะแนน
-      draw a line of hexagons: draw a line of hexagons
+      draw a line of hexagons: วาดด้านหนึ่งของรูปหกเหลี่ยม
       shift down/forward: shift down/forward
       shift down/backward: shift down/backward
       get nectar: เก็บน้ำหวาน
@@ -156,7 +156,7 @@ th:
       draw spiral circle: draw spiral circle
       draw roof: draw roof
       draw rectangle: draw rectangle
-      move: การเคลื่อนย้าย
+      move: เคลื่อนไปข้าง
       function 1: function 1
       function 2: function 2
       turn corner: turn corner
@@ -216,7 +216,7 @@ th:
       Ask a question: Ask a question
       draw pinwheel: draw pinwheel
       draw background: draw background
-      move and get nectar with counter: move and get nectar with counter
+      move and get nectar with counter: บินไปและเก็บน้ำหวานด้วยตัวนับจำนวน
       pick row: pick row
       draw flame: draw flame
       draw fire: draw fire
@@ -224,7 +224,7 @@ th:
       draw line of triangles: draw line of triangles
       draw a window: draw a window
       draw a plane of squares: draw a plane of squares
-      draw hexagon: draw hexagon
+      draw hexagon: วาดรูปหกเหลี่ยม
       draw line of hexagons: draw line of hexagons
       staggered squares: staggered squares
       draw line of polygons: draw line of polygons
@@ -257,7 +257,7 @@ th:
       checker: checker
       Make gingham: Make gingham
       black outline: black outline
-      draw a square2: draw a square2
+      draw a square2: วาดสี่เหลี่ยมจตุรัส2
       filled square: filled square
       get only nectar: get only nectar
       only make honey: only make honey
@@ -286,9 +286,9 @@ th:
       Make Actor 1 Jump: Make Actor 1 Jump
       Choose Number: Choose Number
       Move Bird: Move Bird
-      turn left: หันซ้ายไป
+      turn left: หันซ้าย
       move forward: เดินไปข้างหน้า
-      turn right: หันขวาไป
+      turn right: หันขวา
       drawDot: drawDot
       draw a rectangle: draw a rectangle
       Which Course for My Students?: Which Course for My Students?
