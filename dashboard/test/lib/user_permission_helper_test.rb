@@ -1,6 +1,58 @@
 require 'test_helper'
 
-class UserPermissinoHelperTest < ActiveSupport::TestCase
+class UserPermissionHelperTest < ActiveSupport::TestCase
+  test 'permission? returns true when permission exists' do
+    user = create :facilitator
+    assert user.permission?(UserPermission::FACILITATOR)
+  end
+
+  test 'permission? returns false when permission does not exist' do
+    user = create :user
+    UserPermission.create(
+      user_id: user.id, permission: UserPermission::FACILITATOR
+    )
+
+    refute user.permission?(UserPermission::LEVELBUILDER)
+  end
+
+  test 'permission? caches all permissions' do
+    user = create :facilitator
+    user.permission?(UserPermission::LEVELBUILDER)
+
+    no_database
+
+    assert user.permission?(UserPermission::FACILITATOR)
+    refute user.permission?(UserPermission::LEVELBUILDER)
+  end
+
+  test 'delete_permission removes one permission from user' do
+    user = create :teacher
+    user.permission = UserPermission::FACILITATOR
+    user.permission = UserPermission::LEVELBUILDER
+
+    assert user.facilitator?
+    assert user.levelbuilder?
+
+    user.delete_permission UserPermission::LEVELBUILDER
+
+    assert user.facilitator?
+    refute user.levelbuilder?
+  end
+
+  test 'revoke_all_permissions revokes admin status' do
+    admin_user = create :admin
+    admin_user.revoke_all_permissions
+    assert_nil admin_user.reload.admin
+  end
+
+  test 'revoke_all_permissions revokes user permissions' do
+    teacher = create :teacher
+    teacher.permission = UserPermission::FACILITATOR
+    teacher.permission = UserPermission::LEVELBUILDER
+    teacher.revoke_all_permissions
+    assert_equal [], teacher.reload.permissions
+  end
+
   test 'facilitator?' do
     user = create :teacher
     refute user.facilitator?
