@@ -43,15 +43,15 @@ WITH pledged as (
          sc.latitude,
          sc.longitude,
          -- teacher counts
-         COUNT(DISTINCT u.id) teachers,
-         COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) THEN se.user_id ELSE NULL END) teachers_l365,
-         COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259) THEN se.user_id ELSE NULL END) teachers_csf_l365,
-         COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (223, 187, 181, 169, 221, 189) THEN se.user_id ELSE NULL END) teachers_csd_l365,          
-         COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (122,123,124,125,126,127) THEN se.user_id ELSE NULL END) teachers_csp_l365,
+         COUNT(DISTINCT u.studio_person_id) teachers,
+         COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) THEN u.studio_person_id ELSE NULL END) teachers_l365,
+         COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259) THEN u.studio_person_id ELSE NULL END) teachers_csf_l365,
+         COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (223, 187, 181, 169, 221, 189) THEN u.studio_person_id ELSE NULL END) teachers_csd_l365,          
+         COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (122,123,124,125,126,127) THEN u.studio_person_id ELSE NULL END) teachers_csp_l365,
          -- pd'd teacher counts
-         COUNT(DISTINCT CASE WHEN ttf.user_id IS NOT NULL THEN u.id ELSE NULL END) teachers_csf_pd,        
-         COUNT(DISTINCT CASE WHEN ttpd.studio_person_id IS NOT NULL AND ttpd.course = 'CS Discoveries' THEN u.id ELSE NULL END) teachers_csd_pd,
-         COUNT(DISTINCT CASE WHEN ttpd.studio_person_id IS NOT NULL AND ttpd.course = 'CS Principles' THEN u.id ELSE NULL END) teachers_csp_pd,
+         COUNT(DISTINCT CASE WHEN ttf.user_id IS NOT NULL THEN ttpd.studio_person_id ELSE NULL END) teachers_csf_pd,        
+         COUNT(DISTINCT CASE WHEN ttpd.studio_person_id IS NOT NULL AND ttpd.course = 'CS Discoveries' THEN ttpd.studio_person_id ELSE NULL END) teachers_csd_pd,
+         COUNT(DISTINCT CASE WHEN ttpd.studio_person_id IS NOT NULL AND ttpd.course = 'CS Principles' THEN ttpd.studio_person_id ELSE NULL END) teachers_csp_pd,
          --student counts
          COUNT(DISTINCT f.student_user_id) students_code,
          COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) THEN f.student_user_id ELSE NULL END) students_l365,
@@ -93,5 +93,3 @@ WITH pledged as (
  
 GRANT ALL PRIVILEGES ON analysis.school_activity_stats TO GROUP admin;
 GRANT SELECT ON analysis.school_activity_stats TO GROUP reader, GROUP reader_pii;
-
-
