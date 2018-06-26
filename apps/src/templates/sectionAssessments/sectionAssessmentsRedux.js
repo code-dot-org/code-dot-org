@@ -466,6 +466,28 @@ export const getMultipleChoiceSectionSummary = (state) => {
   return results;
 };
 
+export const getTotalSubmissionForCurrentAssessment = (state, isSurvey) => {
+  const currentAssessmentId = state.sectionAssessments.assessmentId;
+  if (isSurvey) {
+    const surveysStructure = state.sectionAssessments.surveysByScript[state.scriptSelection.scriptId] || {};
+    const currentSurvey = surveysStructure[currentAssessmentId];
+    if (!currentSurvey) {
+      return 0;
+    }
+    return currentSurvey.levelgroup_results[0].results.length;
+  } else {
+    const studentResponses = getAssessmentResponsesForCurrentScript(state);
+    let totalSubmissions = 0;
+    // for each student, responses_by_assessment has key currentAssessmentId, add 1, return total count
+    Object.values(studentResponses).forEach((student) => {
+      if (Object.keys(student.responses_by_assessment).includes(currentAssessmentId.toString())) {
+        totalSubmissions++;
+      }
+    });
+    return totalSubmissions;
+  }
+};
+
 // Helpers
 
 /**
