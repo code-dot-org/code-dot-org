@@ -5,7 +5,7 @@ CREATE table analysis.student_activity_csp_csd AS
          COUNT(DISTINCT se.id) sections,
          COUNT(DISTINCT us.user_id) students,
          COUNT(DISTINCT CASE WHEN u_students.gender = 'f' THEN us.user_id ELSE NULL END) students_female,
-         COUNT(DISTINCT CASE WHEN u_students.gender IN ('m','f') THEN us.user_id ELSE NULL END) students_gender,
+         COUNT(DISTINCT CASE WHEN u_students.gender IN ('m','f', 'n') THEN us.user_id ELSE NULL END) students_gender,
          COUNT(DISTINCT CASE WHEN u_students.urm = 1 THEN us.user_id ELSE NULL END) students_urm,
          COUNT(DISTINCT CASE WHEN u_students.races LIKE '%black%' THEN us.user_id ELSE NULL END) students_black,
          COUNT(DISTINCT CASE WHEN u_students.races LIKE '%hispanic%' THEN us.user_id ELSE NULL END) students_hispanic,
@@ -27,4 +27,3 @@ CREATE table analysis.student_activity_csp_csd AS
 
 GRANT ALL PRIVILEGES ON analysis.student_activity_csp_csd TO GROUP admin;
 GRANT SELECT ON analysis.student_activity_csp_csd TO GROUP reader, GROUP reader_pii;
-
