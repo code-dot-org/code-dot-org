@@ -1,3 +1,5 @@
+require 'cdo/chat_client'
+
 #
 # Module to mix-in to User model providing expressive interactions with
 # user permissions.
@@ -7,6 +9,7 @@ module UserPermissionHelper
 
   included do
     has_many :permissions, class_name: 'UserPermission', dependent: :destroy
+    before_save :log_admin_save, if: -> {admin_changed? && UserPermissionHelper.should_log?}
   end
 
   # @param permission [UserPermission] the permission to query.
@@ -66,5 +69,30 @@ module UserPermissionHelper
 
   def hidden_script_access?
     admin? || permission?(UserPermission::HIDDEN_SCRIPT_ACCESS)
+  end
+
+  # don't log changes to admin permission in development, test, and ad_hoc environments
+  def self.should_log?
+    return [:staging, :levelbuilder, :production].include? rack_env
+  end
+
+  private
+
+  # admin can be nil, which should be treated as false
+  def admin_changed?
+    # no change: false
+    # false <-> nil: false
+    # false|nil <-> true: true
+    !!changes['admin'].try {|from, to| !!from != !!to}
+  end
+
+  def log_admin_save
+    ChatClient.message 'infra-security',
+      "#{admin ? 'Granting' : 'Revoking'} UserPermission: "\
+      "environment: #{rack_env}, "\
+      "user ID: #{id}, "\
+      "email: #{email}, "\
+      "permission: ADMIN",
+      color: 'yellow'
   end
 end

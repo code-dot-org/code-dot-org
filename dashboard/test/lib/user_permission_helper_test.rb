@@ -110,4 +110,84 @@ class UserPermissionHelperTest < ActiveSupport::TestCase
     user.update(permission: UserPermission::HIDDEN_SCRIPT_ACCESS)
     assert user.hidden_script_access?
   end
+
+  test 'grant admin permission logs to infrasecurity' do
+    teacher = create :teacher
+
+    UserPermissionHelper.stubs(:should_log?).returns(true)
+    ChatClient.
+      expects(:message).
+      with('infra-security',
+        "Granting UserPermission: environment: #{rack_env}, "\
+        "user ID: #{teacher.id}, "\
+        "email: #{teacher.email}, "\
+        "permission: ADMIN",
+        color: 'yellow'
+      ).
+      returns(true)
+
+    teacher.update(admin: true)
+  end
+
+  test 'revoke admin permission logs to infrasecurity' do
+    admin_user = create :admin
+
+    UserPermissionHelper.stubs(:should_log?).returns(true)
+    ChatClient.
+      expects(:message).
+      with('infra-security',
+        "Revoking UserPermission: environment: #{rack_env}, "\
+        "user ID: #{admin_user.id}, "\
+        "email: #{admin_user.email}, "\
+        "permission: ADMIN",
+        color: 'yellow'
+      ).
+      returns(true)
+
+    admin_user.update(admin: nil)
+  end
+
+  test 'new admin users log admin permission' do
+    UserPermissionHelper.stubs(:should_log?).returns(true)
+    ChatClient.expects(:message)
+    create :admin
+  end
+
+  test 'new non-admin users do not log admin permission' do
+    UserPermissionHelper.stubs(:should_log?).returns(true)
+    ChatClient.expects(:message).never
+    create :teacher
+  end
+
+  test 'admin_changed? equates nil and false' do
+    # admins must be teacher
+    teacher = create :teacher
+
+    # Each row is a test consisting of 3 values in order:
+    #   from - the initial state of the admin attribute
+    #   to - the new local state to be assigned
+    #   result - the expected admin_changed? after assigning to
+    matrix = [
+      [nil, nil, false],
+      [nil, false, false],
+      [nil, true, true],
+      [false, nil, false],
+      [false, false, false],
+      [false, true, true],
+      [true, nil, true],
+      [true, false, true],
+      [true, true, false]
+    ]
+
+    matrix.each do |from, to, result|
+      teacher.update!(admin: from)
+      teacher.admin = to
+      assert_equal result, teacher.send(:admin_changed?)
+    end
+  end
+
+  test 'grant admin permission does not log in test environment' do
+    ChatClient.expects(:message).never
+    create :admin
+  end
 end

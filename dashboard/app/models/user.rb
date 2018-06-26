@@ -72,7 +72,6 @@
 require 'digest/md5'
 require 'cdo/user_helpers'
 require 'cdo/race_interstitial_helper'
-require 'cdo/chat_client'
 require 'cdo/shared_cache'
 require 'school_info_interstitial_helper'
 
@@ -305,29 +304,6 @@ class User < ActiveRecord::Base
     courses_as_facilitator.find_by(course: course).try(:destroy)
   end
 
-  # admin can be nil, which should be treated as false
-  def admin_changed?
-    # no change: false
-    # false <-> nil: false
-    # false|nil <-> true: true
-    !!changes['admin'].try {|from, to| !!from != !!to}
-  end
-
-  def log_admin_save
-    ChatClient.message 'infra-security',
-      "#{admin ? 'Granting' : 'Revoking'} UserPermission: "\
-      "environment: #{rack_env}, "\
-      "user ID: #{id}, "\
-      "email: #{email}, "\
-      "permission: ADMIN",
-      color: 'yellow'
-  end
-
-  # don't log changes to admin permission in development, test, and ad_hoc environments
-  def self.should_log?
-    return [:staging, :levelbuilder, :production].include? rack_env
-  end
-
   def district_contact?
     return false unless teacher?
     district_as_contact.present?
@@ -508,8 +484,6 @@ class User < ActiveRecord::Base
     :hash_email,
     :sanitize_race_data_set_urm,
     :fix_by_user_type
-
-  before_save :log_admin_save, if: -> {admin_changed? && User.should_log?}
 
   before_validation :update_share_setting, unless: :under_13?
 
