@@ -3,14 +3,19 @@ import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import {tableLayoutStyles} from "@cdo/apps/templates/tables/tableConstants";
 
+const OAUTH_PROVIDERS = {
+  GOOGLE: 'google_oauth2',
+  FACEBOOK: 'facebook',
+  CLEVER: 'clever',
+  MICROSOFT: 'microsoft',
+};
+
 export default class ManageLinkedAccounts extends React.Component {
   render() {
     return (
       <div style={styles.container}>
         <hr/>
-        <h2 style={styles.header}>
-          {i18n.manageLinkedAccounts()}
-        </h2>
+        <h2 style={styles.header}>{i18n.manageLinkedAccounts()}</h2>
         <table style={styles.table}>
           <thead>
             <tr>
@@ -20,17 +25,29 @@ export default class ManageLinkedAccounts extends React.Component {
             </tr>
           </thead>
           <tbody>
-            <GoogleRow
+            <OauthConnection
+              type={OAUTH_PROVIDERS.GOOGLE}
+              displayName={i18n.manageLinkedAccounts_google_oauth2()}
               email={'brad@code.org'}
+              onClick={() => {}}
             />
-            <GoogleRow
+            <OauthConnection
+              type={OAUTH_PROVIDERS.MICROSOFT}
+              displayName={i18n.manageLinkedAccounts_microsoft()}
               email={'*** encrypted ***'}
+              onClick={() => {}}
             />
-            <GoogleRow
+            <OauthConnection
+              type={OAUTH_PROVIDERS.CLEVER}
+              displayName={i18n.manageLinkedAccounts_clever()}
               email={undefined}
+              onClick={() => {}}
             />
-            <GoogleRow
+            <OauthConnection
+              type={OAUTH_PROVIDERS.FACEBOOK}
+              displayName={i18n.manageLinkedAccounts_facebook()}
               email={'brad@code.org'}
+              onClick={() => {}}
               cannotDisconnect
             />
           </tbody>
@@ -40,27 +57,35 @@ export default class ManageLinkedAccounts extends React.Component {
   }
 }
 
-class GoogleRow extends React.Component {
+class OauthConnection extends React.Component {
   static propTypes = {
+    type: PropTypes.oneOf(Object.values(OAUTH_PROVIDERS)).isRequired,
+    displayName: PropTypes.string.isRequired,
     email: PropTypes.string,
+    onClick: PropTypes.func.isRequired,
     cannotDisconnect: PropTypes.bool
   };
 
   render() {
-    const {email, cannotDisconnect} = this.props;
+    const {displayName, email, onClick, cannotDisconnect} = this.props;
     const emailStyles = !!email ? styles.cell : {...styles.cell, ...styles.emptyEmailCell};
     const buttonText = !!email ?
       i18n.manageLinkedAccounts_disconnect() :
       i18n.manageLinkedAccounts_connect();
+
     return (
       <tr>
-        <td style={styles.cell}>{i18n.manageLinkedAccounts_google_oauth2()}</td>
-        <td style={emailStyles}>{email || i18n.manageLinkedAccounts_notConnected()}</td>
+        <td style={styles.cell}>
+          {displayName}
+        </td>
+        <td style={emailStyles}>
+          {email || i18n.manageLinkedAccounts_notConnected()}
+        </td>
         <td style={styles.cell}>
           <button
             className="btn"
             style={styles.button}
-            onClick={() => {}}
+            onClick={onClick}
             disabled={cannotDisconnect}
             tabIndex="1"
           >
