@@ -16,6 +16,7 @@ import FreeResponsesAssessmentsContainer from './FreeResponsesAssessmentsContain
 import FreeResponseBySurveyQuestionContainer from './FreeResponseBySurveyQuestionContainer';
 import MCSurveyOverviewContainer from './MCSurveyOverviewContainer';
 import AssessmentSelector from './AssessmentSelector';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const styles = {
   header: {
@@ -83,6 +84,9 @@ class SectionAssessments extends Component {
             <MCSurveyOverviewContainer />
             <FreeResponseBySurveyQuestionContainer />
           </div>
+        }
+        {isLoading &&
+          <FontAwesome icon="spinner" className="fa-pulse fa-3x"/>
         }
       </div>
     );
