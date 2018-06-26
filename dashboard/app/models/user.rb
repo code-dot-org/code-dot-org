@@ -183,7 +183,6 @@ class User < ActiveRecord::Base
   validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS
 
   belongs_to :studio_person
-  has_many :permissions, class_name: 'UserPermission', dependent: :destroy
   has_many :hint_view_requests
 
   # Teachers can be in multiple cohorts
@@ -327,39 +326,6 @@ class User < ActiveRecord::Base
   # don't log changes to admin permission in development, test, and ad_hoc environments
   def self.should_log?
     return [:staging, :levelbuilder, :production].include? rack_env
-  end
-
-  def delete_permission(permission)
-    @permissions = nil
-    permission = permissions.find_by(permission: permission)
-    permissions.delete permission if permission
-  end
-
-  def permission=(permission)
-    @permissions = nil
-    permissions << permissions.find_or_create_by(user_id: id, permission: permission)
-  end
-
-  # @param permission [UserPermission] the permission to query.
-  # @return [Boolean] whether the User has permission granted.
-  # TODO(asher): Determine whether request level caching is sufficient, or
-  #   whether a memcache or otherwise should be employed.
-  def permission?(permission)
-    return false unless teacher?
-    if @permissions.nil?
-      # The user's permissions have not yet been cached, so do the DB query,
-      # caching the results.
-      @permissions = UserPermission.where(user_id: id).pluck(:permission)
-    end
-    # Return the cached results.
-    return @permissions.include? permission
-  end
-
-  # Revokes all escalated permissions associated with the user, including admin status and any
-  # granted UserPermission's.
-  def revoke_all_permissions
-    update_column(:admin, nil)
-    UserPermission.where(user_id: id).each(&:destroy)
   end
 
   def district_contact?
