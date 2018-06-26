@@ -187,6 +187,12 @@ class MultipleChoiceSurveyOverviewTable extends Component {
   };
 
   render() {
+    const {multipleChoiceSurveyData} = this.props;
+
+    if (!multipleChoiceSurveyData || !multipleChoiceSurveyData.length < 5) {
+      return <div>{i18n.emptySurveyOverviewTable()}</div>;
+    }
+
     // Define a sorting transform that can be applied to each column
     const sortable = wrappedSortable(this.getSortingColumns, this.onSort, sortableOptions);
     const columns = this.getColumns(sortable);
