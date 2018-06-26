@@ -1,6 +1,8 @@
 import React, {PropTypes} from 'react';
 import i18n from '@cdo/locale';
-import Button from "../../../templates/Button";
+import color from '@cdo/apps/util/color';
+import {tableLayoutStyles} from "@cdo/apps/templates/tables/tableConstants";
+import Button from "@cdo/apps/templates/Button";
 
 export default class ManageLinkedAccounts extends React.Component {
   render() {
@@ -10,12 +12,12 @@ export default class ManageLinkedAccounts extends React.Component {
         <h2 style={styles.header}>
           {i18n.manageLinkedAccounts()}
         </h2>
-        <table>
+        <table style={tableLayoutStyles.table}>
           <thead>
             <tr>
-              <th>{i18n.manageLinkedAccounts_loginType()}</th>
-              <th>{i18n.manageLinkedAccounts_emailAddress()}</th>
-              <th>{i18n.manageLinkedAccounts_actions()}</th>
+              <th style={styles.headerCell}>{i18n.manageLinkedAccounts_loginType()}</th>
+              <th style={styles.headerCell}>{i18n.manageLinkedAccounts_emailAddress()}</th>
+              <th style={styles.headerCell}>{i18n.manageLinkedAccounts_actions()}</th>
             </tr>
           </thead>
           <tbody>
@@ -47,14 +49,15 @@ class GoogleRow extends React.Component {
 
   render() {
     const {email, cannotDisconnect} = this.props;
+    const emailStyles = !!email ? styles.cell : {...styles.cell, ...styles.emptyEmailCell};
     const buttonText = !!email ?
       i18n.manageLinkedAccounts_disconnect() :
       i18n.manageLinkedAccounts_connect();
     return (
       <tr>
-        <td>{i18n.manageLinkedAccounts_google_oauth2()}</td>
-        <td>{email || i18n.manageLinkedAccounts_notConnected()}</td>
-        <td>
+        <td style={styles.cell}>{i18n.manageLinkedAccounts_google_oauth2()}</td>
+        <td style={emailStyles}>{email || i18n.manageLinkedAccounts_notConnected()}</td>
+        <td style={styles.cell}>
           <Button
             text={buttonText}
             onClick={() => {}}
@@ -68,11 +71,27 @@ class GoogleRow extends React.Component {
   }
 }
 
+const PADDING = 20;
 const styles = {
   container: {
-    paddingTop: 20,
+    paddingTop: PADDING,
   },
   header: {
     fontSize: 22,
+  },
+  headerCell: {
+    ...tableLayoutStyles.headerCell,
+    paddingLeft: PADDING,
+    paddingRight: PADDING,
+    fontWeight: 'normal',
+  },
+  cell: {
+    ...tableLayoutStyles.cell,
+    paddingLeft: PADDING,
+    paddingRight: PADDING,
+  },
+  emptyEmailCell: {
+    color: color.light_gray,
+    fontStyle: 'italic',
   },
 };
