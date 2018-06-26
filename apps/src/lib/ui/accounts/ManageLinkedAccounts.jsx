@@ -128,6 +128,5 @@ const styles = {
     fontFamily: '"Gotham 5r", sans-serif',
     color: color.charcoal,
     padding: 8,
-    margin: 0,
   },
 };
