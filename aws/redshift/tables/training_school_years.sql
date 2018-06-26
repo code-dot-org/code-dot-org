@@ -20,5 +20,3 @@ INSERT INTO analysis.training_school_years VALUES ('2016-17',	'2016',	'2016-06-0
 INSERT INTO analysis.training_school_years VALUES ('2017-18',	'2017',	'2017-06-01',	'2018-06-01');
 INSERT INTO analysis.training_school_years VALUES ('2018-19',	'2018',	'2018-06-01',	'2019-06-01');
 INSERT INTO analysis.training_school_years VALUES ('2019-20',	'2019',	'2019-06-01',	'2020-06-01');
-
-select * from training_school_years;
