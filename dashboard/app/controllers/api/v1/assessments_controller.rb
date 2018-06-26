@@ -118,15 +118,20 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
 
           level_result = {}
 
+          case level
+          when TextMatch, FreeResponse
+            level_result[:type] = "FreeResponse"
+          when Multi
+            level_result[:type] = "Multi"
+          end
+
           if level_response
             case level
             when TextMatch, FreeResponse
               student_result = level_response["result"]
               level_result[:student_result] = student_result
               level_result[:status] = ""
-              level_result[:type] = "FreeResponse"
             when Multi
-              level_result[:type] = "Multi"
               answer_indexes = Multi.find_by_id(level.id).correct_answer_indexes_array
               student_result = level_response["result"].split(",").map(&:to_i).sort
               level_result[:student_result] = student_result
@@ -144,12 +149,6 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
             end
           else
             level_result[:status] = "unsubmitted"
-            case level
-            when TextMatch, FreeResponse
-              level_result[:type] = "FreeResponse"
-            when Multi
-              level_result[:type] = "Multi"
-            end
           end
 
           level_results << level_result
