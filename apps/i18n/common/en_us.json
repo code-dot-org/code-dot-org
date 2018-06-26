@@ -697,6 +697,7 @@
   "manageAssets": "Manage Assets",
   "manageLinkedAccounts": "Manage Linked Accounts",
   "manageLinkedAccounts_actions": "Actions",
+  "manageLinkedAccounts_cannotDisconnectTooltip": "To make sure you can still sign in to your account, please add a password or another linked account first.",
   "manageLinkedAccounts_clever": "Clever Account",
   "manageLinkedAccounts_connect": "Connect",
   "manageLinkedAccounts_disconnect": "Disconnect",

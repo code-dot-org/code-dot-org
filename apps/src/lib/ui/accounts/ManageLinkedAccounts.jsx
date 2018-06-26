@@ -1,4 +1,6 @@
 import React, {PropTypes} from 'react';
+import ReactTooltip from 'react-tooltip';
+import _ from 'lodash';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import {tableLayoutStyles} from "@cdo/apps/templates/tables/tableConstants";
@@ -73,6 +75,7 @@ class OauthConnection extends React.Component {
     const buttonText = !!email ?
       i18n.manageLinkedAccounts_disconnect() :
       i18n.manageLinkedAccounts_connect();
+    const tooltipId = _.uniqueId();
 
     return (
       <tr>
@@ -83,13 +86,28 @@ class OauthConnection extends React.Component {
           {email || i18n.manageLinkedAccounts_notConnected()}
         </td>
         <td style={styles.cell}>
-          {/* This button intentionally uses BootstrapButton to match other account page buttons */}
-          <BootstrapButton
-            style={styles.button}
-            text={buttonText}
-            onClick={onClick}
-            disabled={cannotDisconnect}
-          />
+          <span
+            data-for={tooltipId}
+            data-tip
+          >
+            {/* This button intentionally uses BootstrapButton to match other account page buttons */}
+            <BootstrapButton
+              style={styles.button}
+              text={buttonText}
+              onClick={onClick}
+              disabled={cannotDisconnect}
+            />
+            {cannotDisconnect &&
+              <ReactTooltip
+                id={tooltipId}
+                offset={{left: -(BUTTON_WIDTH / 2)}}
+                role="tooltip"
+                effect="solid"
+              >
+                {i18n.manageLinkedAccounts_cannotDisconnectTooltip()}
+              </ReactTooltip>
+            }
+          </span>
         </td>
       </tr>
     );
@@ -97,6 +115,7 @@ class OauthConnection extends React.Component {
 }
 
 const GUTTER = 20;
+const BUTTON_WIDTH = 105;
 const styles = {
   container: {
     paddingTop: GUTTER,
@@ -124,7 +143,7 @@ const styles = {
     fontStyle: 'italic',
   },
   button: {
-    width: 105,
+    width: BUTTON_WIDTH,
     fontFamily: '"Gotham 5r", sans-serif',
     color: color.charcoal,
     padding: 8,
