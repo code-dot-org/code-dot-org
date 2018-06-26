@@ -9,7 +9,12 @@ import {connect} from 'react-redux';
 import {h3Style} from "../../lib/ui/Headings";
 import i18n from '@cdo/locale';
 import ScriptSelector from '@cdo/apps/templates/sectionProgress/ScriptSelector';
+import MCAssessmentsOverviewContainer from './MCAssessmentsOverviewContainer';
 import MultipleChoiceByStudentContainer from './MultipleChoiceByStudentContainer';
+import StudentsMCSummaryContainer from './StudentsMCSummaryContainer';
+import FreeResponsesAssessmentsContainer from './FreeResponsesAssessmentsContainer';
+import FreeResponseBySurveyQuestionContainer from './FreeResponseBySurveyQuestionContainer';
+import MCSurveyOverviewContainer from './MCSurveyOverviewContainer';
 import AssessmentSelector from './AssessmentSelector';
 
 const styles = {
@@ -22,14 +27,15 @@ class SectionAssessments extends Component {
   static propTypes = {
     // provided by redux
     sectionId: PropTypes.number.isRequired,
-    isLoadingAssessments: PropTypes.bool.isRequired,
+    isLoading: PropTypes.bool.isRequired,
     validScripts: PropTypes.arrayOf(validScriptPropType).isRequired,
     assessmentList: PropTypes.array.isRequired,
     scriptId: PropTypes.number,
     assessmentId: PropTypes.number,
     setScriptId: PropTypes.func.isRequired,
     setAssessmentId: PropTypes.func.isRequired,
-    asyncLoadAssessments: PropTypes.func.isRequired
+    asyncLoadAssessments: PropTypes.func.isRequired,
+    multipleChoiceSurveyResults: PropTypes.array,
   };
 
   onChangeScript = scriptId => {
@@ -64,9 +70,14 @@ class SectionAssessments extends Component {
             onChange={this.props.setAssessmentId}
           />
         </div>
-        <div>
+          {/* Assessments */}
+          <MCAssessmentsOverviewContainer />
+          <StudentsMCSummaryContainer />
           <MultipleChoiceByStudentContainer />
-        </div>
+          <FreeResponsesAssessmentsContainer />
+          {/* Surveys */}
+          <MCSurveyOverviewContainer />
+          <FreeResponseBySurveyQuestionContainer />
       </div>
     );
   }
@@ -76,7 +87,7 @@ export const UnconnectedSectionAssessments = SectionAssessments;
 
 export default connect(state => ({
   sectionId: state.sectionData.section.id,
-  isLoadingAssessments: state.sectionAssessments.isLoadingAssessments,
+  isLoading: state.sectionAssessments.isLoading,
   validScripts: state.scriptSelection.validScripts,
   assessmentList: getCurrentScriptAssessmentList(state),
   scriptId: state.scriptSelection.scriptId,

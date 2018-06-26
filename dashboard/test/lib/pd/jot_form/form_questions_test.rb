@@ -118,26 +118,19 @@ module Pd
             answer_type: ANSWER_SELECT_VALUE,
             max_value: 3
           },
-          'matrix' => {
-            text: 'How much do you agree or disagree with the following statements about this workshop?',
-            answer_type: ANSWER_NONE
-          },
           'matrix_0' => {
-            text: 'I learned something',
+            text: 'How much do you agree or disagree with the following statements about this workshop? I learned something',
             answer_type: ANSWER_SELECT_VALUE,
-            parent: 'matrix',
             max_value: 3
           },
           'matrix_1' => {
-            text: 'It was a good use of time',
+            text: 'How much do you agree or disagree with the following statements about this workshop? It was a good use of time',
             answer_type: ANSWER_SELECT_VALUE,
-            parent: 'matrix',
             max_value: 3
           },
           'matrix_2' => {
-            text: 'I enjoyed it',
+            text: 'How much do you agree or disagree with the following statements about this workshop? I enjoyed it',
             answer_type: ANSWER_SELECT_VALUE,
-            parent: 'matrix',
             max_value: 3
           }
         }

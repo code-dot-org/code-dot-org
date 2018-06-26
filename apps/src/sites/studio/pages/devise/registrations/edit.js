@@ -1,12 +1,13 @@
 import $ from 'jquery';
 import ChangeEmailController from '@cdo/apps/lib/ui/accounts/ChangeEmailController';
+import AddPasswordController from '@cdo/apps/lib/ui/accounts/AddPasswordController';
 import ChangeUserTypeController from '@cdo/apps/lib/ui/accounts/ChangeUserTypeController';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 // Values loaded from scriptData are always initial values, not the latest
 // (possibly unsaved) user-edited values on the form.
 const scriptData = getScriptData('edit');
-const {userAge, userType} = scriptData;
+const {userAge, userType, isPasswordRequired} = scriptData;
 
 $(document).ready(() => {
   new ChangeEmailController({
@@ -15,12 +16,18 @@ $(document).ready(() => {
     displayedUserEmail: $('#displayed-user-email'),
     userAge,
     userType,
+    isPasswordRequired,
     emailChangedCallback: onEmailChanged,
   });
 
   new ChangeUserTypeController(
     $('#change-user-type-modal-form'),
     userType,
+  );
+
+  new AddPasswordController(
+    $('#add-password-form'),
+    document.getElementById('add-password-fields'),
   );
 
   initializeCreatePersonalAccountControls();

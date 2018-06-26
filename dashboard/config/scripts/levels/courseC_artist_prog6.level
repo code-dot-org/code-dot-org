@@ -37,6 +37,7 @@
     "discard_background": "false",
     "ideal": "8",
     "instructions_important": "false",
+    "hint_prompt_attempts_threshold": 8,
     "contained_level_names": null
   },
   "published": true,
