@@ -81,6 +81,7 @@ class User < ActiveRecord::Base
   include SchoolInfoDeduplicator
   include LocaleHelper
   include UserMultiAuthHelper
+  include UserPermissionHelper
   include Rails.application.routes.url_helpers
   # races: array of strings, the races that a student has selected.
   # Allowed values for race are:
@@ -294,30 +295,6 @@ class User < ActiveRecord::Base
   def hashed_email
     return read_attribute(:hashed_email) unless migrated?
     primary_authentication_option.try(:hashed_email) || ''
-  end
-
-  def facilitator?
-    permission? UserPermission::FACILITATOR
-  end
-
-  def workshop_organizer?
-    permission? UserPermission::WORKSHOP_ORGANIZER
-  end
-
-  def program_manager?
-    permission? UserPermission::PROGRAM_MANAGER
-  end
-
-  def workshop_admin?
-    permission? UserPermission::WORKSHOP_ADMIN
-  end
-
-  def project_validator?
-    permission? UserPermission::PROJECT_VALIDATOR
-  end
-
-  def levelbuilder?
-    permission? UserPermission::LEVELBUILDER
   end
 
   # assign a course to a facilitator that is qualified to teach it
