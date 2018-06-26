@@ -36,37 +36,22 @@ module UserPermissionGrantee
     permissions.delete permission if permission
   end
 
-  # Revokes all escalated permissions associated with the user, including admin status and any
-  # granted UserPermission's.
+  # Revokes all escalated permissions associated with the user,
+  # including admin status and any granted UserPermissions.
   def revoke_all_permissions
+    @permissions = nil
     update_column(:admin, nil)
     UserPermission.where(user_id: id).each(&:destroy)
+    reload
   end
 
-  def facilitator?
-    permission? UserPermission::FACILITATOR
+  UserPermission::VALID_PERMISSIONS.each do |permission_name|
+    define_method "#{permission_name}?" do
+      permission? permission_name
+    end
   end
 
-  def workshop_organizer?
-    permission? UserPermission::WORKSHOP_ORGANIZER
-  end
-
-  def program_manager?
-    permission? UserPermission::PROGRAM_MANAGER
-  end
-
-  def workshop_admin?
-    permission? UserPermission::WORKSHOP_ADMIN
-  end
-
-  def project_validator?
-    permission? UserPermission::PROJECT_VALIDATOR
-  end
-
-  def levelbuilder?
-    permission? UserPermission::LEVELBUILDER
-  end
-
+  # Overrides generated permission helper, above.
   def hidden_script_access?
     admin? || permission?(UserPermission::HIDDEN_SCRIPT_ACCESS)
   end
