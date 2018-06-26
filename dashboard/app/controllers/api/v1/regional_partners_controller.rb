@@ -1,5 +1,5 @@
-class Api::V1::RegionalPartnersController < Api::V1::JsonApiController
-  authorize_resource
+class Api::V1::RegionalPartnersController < ApplicationController
+  before_action :authenticate_user!
 
   # GET /api/v1/regional_partners
   def index
