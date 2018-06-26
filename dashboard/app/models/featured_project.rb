@@ -18,4 +18,11 @@ class FeaturedProject < ApplicationRecord
   def featured?
     !featured_at.nil? && unfeatured_at.nil?
   end
+
+  def self.featured?(encrypted_channel_id)
+    _, channel_id = storage_decrypt_channel_id encrypted_channel_id
+    find_by(storage_app_id: channel_id)&.featured?
+  rescue
+    false
+  end
 end
