@@ -12,7 +12,7 @@ import {
 } from './projectConstants';
 import QuickActionsCell from '../tables/QuickActionsCell';
 import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
-import PopUpMenu from "@cdo/apps/lib/ui/PopUpMenu";
+import PopUpMenu, {MenuBreak} from "@cdo/apps/lib/ui/PopUpMenu";
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 
@@ -67,7 +67,10 @@ export const styles = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-  }
+  },
+  xIcon: {
+    paddingRight: 5,
+  },
 };
 
 // Cell formatters.
@@ -117,9 +120,12 @@ const actionsFormatter = (actions, {rowData}) => {
           {i18n.publish()}
         </PopUpMenu.Item>
       )}
+      <MenuBreak/>
       <PopUpMenu.Item
         onClick={() => console.log("Delete was clicked")}
+        color={color.red}
       >
+        <FontAwesome icon="times-circle" style={styles.xIcon}/>
         {i18n.delete()}
       </PopUpMenu.Item>
     </QuickActionsCell>
@@ -227,7 +233,7 @@ class PersonalProjectsTable extends React.Component {
       {
         property: 'updatedAt',
         header: {
-          label: "Last edited",
+          label: i18n.lastEdited(),
           props: {style: tableLayoutStyles.headerCell},
           transforms: [sortable],
         },
@@ -239,7 +245,7 @@ class PersonalProjectsTable extends React.Component {
       {
         property: 'isPublished',
         header: {
-          label: "Published",
+          label: i18n.published(),
           props: {style: tableLayoutStyles.headerCell},
           transforms: [sortable],
         },
