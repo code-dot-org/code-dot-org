@@ -80,7 +80,7 @@ class User < ActiveRecord::Base
   include SchoolInfoDeduplicator
   include LocaleHelper
   include UserMultiAuthHelper
-  include UserPermissionConcern
+  include UserPermissionGrantee
   include Rails.application.routes.url_helpers
   # races: array of strings, the races that a student has selected.
   # Allowed values for race are:
