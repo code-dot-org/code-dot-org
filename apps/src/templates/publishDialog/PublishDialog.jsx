@@ -1,11 +1,19 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import Radium from 'radium';
-import Dialog, { Body, styles as dialogStyles } from '../Dialog';
-import PendingButton from '../PendingButton';
-import LegacyButton, { BUTTON_TYPES } from '../LegacyButton';
+import BaseDialog from '../BaseDialog';
+import DialogFooter from '../teacherDashboard/DialogFooter';
+import Button from '../Button';
 import i18n from '@cdo/locale';
 import { hidePublishDialog, publishProject } from './publishDialogRedux';
+
+const styles = {
+  dialog: {
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingBottom: 20
+  },
+};
 
 class PublishDialog extends Component {
   static propTypes = {
@@ -42,29 +50,36 @@ class PublishDialog extends Component {
 
   render() {
     return (
-      <Dialog
-        title={i18n.publishToPublicGallery()}
+      <BaseDialog
         isOpen={this.props.isOpen}
         handleClose={this.close}
+        useUpdatedStyles
+        style={styles.dialog}
       >
-        <Body>
-          <div style={[dialogStyles.body, {marginBottom: 10}]}>
-            {i18n.publishToPublicGalleryWarning()}
-          </div>
-          <LegacyButton type="cancel" onClick={this.close} className="no-mc">
-            {i18n.dialogCancel()}
-          </LegacyButton>
-          <PendingButton
-            id="publish-dialog-publish-button"
-            isPending={this.props.isPublishPending}
-            onClick={this.confirm}
-            pendingText={i18n.publishPending()}
-            style={[BUTTON_TYPES.primary.style, {float: 'right'}]}
-            text={i18n.publish()}
+        <h2>
+          {i18n.publishToPublicGallery()}
+        </h2>
+        <div style={{marginBottom: 10}}>
+          {i18n.publishToPublicGalleryWarning()}
+        </div>
+        <DialogFooter>
+          <Button
+            text={i18n.dialogCancel()}
+            onClick={this.close}
+            color={Button.ButtonColor.gray}
             className="no-mc"
           />
-        </Body>
-      </Dialog>
+          <Button
+            text={i18n.publish()}
+            onClick={this.confirm}
+            color={Button.ButtonColor.orange}
+            className="no-mc"
+            isPending={this.props.isPublishPending}
+            pendingText={i18n.publishPending()}
+            id="publish-dialog-publish-button"
+          />
+        </DialogFooter>
+      </BaseDialog>
     );
   }
 }
