@@ -100,11 +100,13 @@ class OauthConnection extends React.Component {
             {cannotDisconnect &&
               <ReactTooltip
                 id={tooltipId}
-                offset={{left: -(BUTTON_WIDTH / 2)}}
+                offset={styles.tooltipOffset}
                 role="tooltip"
                 effect="solid"
               >
-                {i18n.manageLinkedAccounts_cannotDisconnectTooltip()}
+                <div style={styles.tooltip}>
+                  {i18n.manageLinkedAccounts_cannotDisconnectTooltip()}
+                </div>
               </ReactTooltip>
             }
           </span>
@@ -147,5 +149,11 @@ const styles = {
     fontFamily: '"Gotham 5r", sans-serif',
     color: color.charcoal,
     padding: 8,
+  },
+  tooltipOffset: {
+    left: -(BUTTON_WIDTH / 2)
+  },
+  tooltip: {
+    width: BUTTON_WIDTH * 2
   },
 };
