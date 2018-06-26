@@ -59,8 +59,6 @@ class SectionAssessments extends Component {
             scriptId={scriptId}
             onChange={this.onChangeScript}
           />
-        </div>
-        <div>
           <div style={{...h3Style, ...styles.header}}>
             {i18n.selectAssessment()}
           </div>
@@ -70,14 +68,14 @@ class SectionAssessments extends Component {
             onChange={this.props.setAssessmentId}
           />
         </div>
-          {/* Assessments */}
-          <MCAssessmentsOverviewContainer />
-          <StudentsMCSummaryContainer />
-          <MultipleChoiceByStudentContainer />
-          <FreeResponsesAssessmentsContainer />
-          {/* Surveys */}
-          <MCSurveyOverviewContainer />
-          <FreeResponseBySurveyQuestionContainer />
+        {/* Assessments */}
+        <MCAssessmentsOverviewContainer />
+        <StudentsMCSummaryContainer />
+        <MultipleChoiceByStudentContainer />
+        <FreeResponsesAssessmentsContainer />
+        {/* Surveys */}
+        <MCSurveyOverviewContainer />
+        <FreeResponseBySurveyQuestionContainer />
       </div>
     );
   }
