@@ -1778,10 +1778,10 @@ es:
         text: "El bloque de configuración de propiedades cambia la apariencia de los elementos en su pantalla. Como los botones, rótulos, o incluso la pantalla en sí. Primero usted necesita decidir cuál elemento desea cambiar. Si pasa el ratón por un elemento en su aplicación podrá ver el nombre o el ID acá. Luego va a seleccionar ese ID desde la primera bajada."
       5:
         image: 'notes/applab_intro_welcome_5.png'
-        text: "Elements have lots of properties you can change like their text color, background color or font size. You can see the full list and choose which property you want to change in the second drop down."
+        text: "Los elementos tienen un montón de propiedades que puedes cambiar como el color del texto, el color del fondo o el tamaño de la fuente. Puedes ver la lista completa y seleccionar qué propiedad deseas cambiar en el segundo menú desplegable."
       6:
         image: 'notes/applab_intro_welcome_6.png'
-        text: "The last drop down is where you'll write the value you want to use value you want to use. The block will make a suggestion for you. But you can always type in different colors or numbers yourself."
+        text: "En el último menú desplegable es donde escribirás el valor que deseas utilizar. El bloque te ofrecerá una sugerencia, pero puedes especificar diferentes colores o números por ti mismo."
       7:
         image: 'notes/applab_intro_welcome_7.png'
         text: "Una vez que lo haga hecho, el bloque leerá un bit como una oración:'Configura el color de fondo del botón 1's a verde.' Seleccione ejecutar para ver los cambios que esta construyendo en el programa. Si se resetea usted puede arrastrar más bloques para modificar otras cosas sobre su aplicación. ¡Como el texto!"
@@ -1993,13 +1993,13 @@ es:
     mc_2017_congratulations:
       1:
         image: 'notes/mc_2017_congratulations_1.png'
-        text: "Preston: Congratulations!"
+        text: "Preston: ¡Felicidades!"
       2:
         image: 'notes/mc_2017_congratulations_2.png'
-        text: "Lizzy: Congratulations!"
+        text: "Lizzy: ¡Felicidades!"
       3:
         image: 'notes/mc_2017_congratulations_3.png'
-        text: "Stampy: Congratulations, you did it!"
+        text: "Stampy: ¡Felicidades, lo has conseguido!"
       4:
         image: 'notes/mc_2017_congratulations_4.png'
         text: "Stacy: Congratulations guys, you totally rocked that! And now that you've completed the Hour of Code, you can start coding in Minecraft. You've learned about loops, functions, and what a software Agent does."
@@ -2133,7 +2133,7 @@ es:
         text: "Hi, my name is Madison Maxey. I have a company called Loomia, and we focus on making smart fabrics for smart clothing and smart soft good products. The sky's the limit when it comes to textiles."
       2:
         image: 'notes/csd_concept_memory_cpu_input_output_2.png'
-        text: "My name is Danielle Applestone, and I'm CEO of Othermachine Company. We build a desktop milling machine. A milling machine takes a rotating cutting tool and moves it through material to create a 3D object."
+        text: "Mi nombre es Danielle Applestone y soy CEO de Othermachine Company. Construimos una fresadora de sobremesa. Una fresadora usa un instrumento de corte giratorio moviéndolo a través de un material para crear un objeto 3D."
       3:
         image: 'notes/csd_concept_memory_cpu_input_output_3.png'
         text: "Under the hood, all computers do the same four basic things. They input information, store and process the information, and then, output information. Each of these things is done by a different part of the computer."
