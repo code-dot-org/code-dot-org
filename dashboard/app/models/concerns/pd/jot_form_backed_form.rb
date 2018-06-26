@@ -128,7 +128,8 @@ module Pd
 
         # Skip other environments, and anything without an environment value.
         # Only keep this environment.
-        return true if environment != Rails.env
+        #return true if environment != Rails.env
+        return true unless environment
 
         # Is it a duplicate? These will be prevented in the future, but for now log and skip
         # TODO(Andrew): prevent duplicates and remove this code.

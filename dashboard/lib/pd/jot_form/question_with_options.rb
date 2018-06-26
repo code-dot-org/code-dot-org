@@ -9,8 +9,22 @@ module Pd
         )
       end
 
+      # @override
       def answer_type
-        ANSWER_SELECT_VALUE
+        ANSWER_SINGLE_SELECT
+      end
+
+      def multi_select?
+        answer_type == ANSWER_MULTI_SELECT
+      end
+
+      def single_select?
+        answer_type == ANSWER_SINGLE_SELECT
+      end
+
+      # @override
+      def type_specific_summary
+        {options: options}
       end
     end
   end
