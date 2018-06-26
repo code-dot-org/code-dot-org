@@ -3,7 +3,12 @@
   "config": {
     "func": "spritesWhere",
     "blockText": "sprites where {PROPERTY} is {VALUE}",
-    "returnType": "Sprite",
+    "returnType": "None",
+    "color": [
+      5,
+      ".7",
+      ".7"
+    ],
     "args": [
       {
         "name": "PROPERTY",

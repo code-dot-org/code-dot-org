@@ -1,0 +1,19 @@
+{
+  "category": "Location",
+  "config": {
+    "simpleValue": true,
+    "name": "location_variable_set",
+    "blockText": "set location of {VAR} to {VAL}",
+    "args": [
+      {
+        "name": "VAR",
+        "assignment": true,
+        "customInput": "locationVariableDropdown"
+      },
+      {
+        "name": "VAL",
+        "type": "Location"
+      }
+    ]
+  }
+}

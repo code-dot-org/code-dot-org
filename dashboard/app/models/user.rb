@@ -80,6 +80,8 @@ class User < ActiveRecord::Base
   include SerializedProperties
   include SchoolInfoDeduplicator
   include LocaleHelper
+  include UserMultiAuthHelper
+  include UserPermissionHelper
   include Rails.application.routes.url_helpers
   # races: array of strings, the races that a student has selected.
   # Allowed values for race are:
@@ -287,32 +289,12 @@ class User < ActiveRecord::Base
 
   def email
     return read_attribute(:email) unless migrated?
-    primary_authentication_option.try(:email)
+    primary_authentication_option.try(:email) || ''
   end
 
   def hashed_email
     return read_attribute(:hashed_email) unless migrated?
-    primary_authentication_option.try(:hashed_email)
-  end
-
-  def facilitator?
-    permission? UserPermission::FACILITATOR
-  end
-
-  def workshop_organizer?
-    permission? UserPermission::WORKSHOP_ORGANIZER
-  end
-
-  def program_manager?
-    permission? UserPermission::PROGRAM_MANAGER
-  end
-
-  def workshop_admin?
-    permission? UserPermission::WORKSHOP_ADMIN
-  end
-
-  def project_validator?
-    permission? UserPermission::PROJECT_VALIDATOR
+    primary_authentication_option.try(:hashed_email) || ''
   end
 
   # assign a course to a facilitator that is qualified to teach it
@@ -503,7 +485,7 @@ class User < ActiveRecord::Base
   validates :name, length: {within: 1..70}, allow_blank: true
   validates :name, no_utf8mb4: true
 
-  defer_age = proc {|user| %w(google_oauth2 clever powerschool).include?(user.provider) || user.provider == User::PROVIDER_SPONSORED}
+  defer_age = proc {|user| %w(google_oauth2 clever powerschool).include?(user.provider) || user.sponsored?}
 
   validates :age, presence: true, on: :create, unless: defer_age # only do this on create to avoid problems with existing users
   AGE_DROPDOWN_OPTIONS = (4..20).to_a << "21+"
@@ -646,6 +628,19 @@ class User < ActiveRecord::Base
     User.find_by(hashed_email: hashed_email)
   end
 
+  # Locate an SSO user by SSO provider and associated user id.
+  # @param [String] type A credential type / provider type.  In the future this
+  #   should always be one of the valid credential types from AuthenticationOption
+  # @param [String] id A user id associated with the particular provider.
+  # @returns [User|nil]
+  def self.find_by_credential(type:, id:)
+    authentication_option = AuthenticationOption.find_by(
+      credential_type: type,
+      authentication_id: id
+    )
+    authentication_option&.user || User.find_by(provider: type, uid: id)
+  end
+
   def self.find_channel_owner(encrypted_channel_id)
     owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
     user_id = PEGASUS_DB[:user_storage_ids].first(id: owner_storage_id)[:user_id]
@@ -776,7 +771,7 @@ class User < ActiveRecord::Base
 
   def oauth?
     if migrated?
-      authentication_options.any? {|auth| OAUTH_PROVIDERS.include? auth.credential_type}
+      authentication_options.any?(&:oauth?)
     else
       OAUTH_PROVIDERS.include? provider
     end
@@ -811,7 +806,7 @@ class User < ActiveRecord::Base
   def email_required?
     return true if teacher?
     return false if provider == User::PROVIDER_MANUAL
-    return false if provider == User::PROVIDER_SPONSORED
+    return false if sponsored?
     return false if oauth?
     return false if parent_managed_account?
     true
@@ -846,7 +841,7 @@ class User < ActiveRecord::Base
     return false if teacher? && email.nil?
 
     # If an email option with a different email address already exists, destroy it
-    existing_email_option = authentication_options.find {|ao| ao.credential_type == 'email'}
+    existing_email_option = authentication_options.find {|ao| AuthenticationOption::EMAIL == ao.credential_type}
     existing_email_option&.destroy
 
     # If an auth option exists with same email, set it to the user's primary authentication option
@@ -856,7 +851,7 @@ class User < ActiveRecord::Base
       return save
     end
 
-    params = {credential_type: 'email', user: self}
+    params = {credential_type: AuthenticationOption::EMAIL, user: self}
     params[:email] = email unless email.nil?
     params[:hashed_email] = hashed_email if email.nil?
     self.primary_authentication_option = AuthenticationOption.new(params)
@@ -1737,7 +1732,7 @@ class User < ActiveRecord::Base
 
   def sponsored?
     if migrated?
-      authentication_options.empty?
+      authentication_options.empty? && encrypted_password.blank?
     else
       provider == PROVIDER_SPONSORED
     end
