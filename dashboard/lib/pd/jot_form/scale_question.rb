@@ -39,7 +39,10 @@ module Pd
 
       # @override
       def type_specific_summary
-        {max_value: values.last}
+        augmented_options = values.map(&:to_s)
+        augmented_options[0] = "#{augmented_options[0]} - #{options.first}"
+        augmented_options[-1] = "#{augmented_options[-1]} - #{options.last}"
+        {max_value: values.last, options: augmented_options}
       end
     end
   end

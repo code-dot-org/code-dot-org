@@ -70,7 +70,8 @@ module Pd
               text: sub_question,
               answer_type: ANSWER_SELECT_VALUE,
               parent: name,
-              max_value: options.length
+              max_value: options.length,
+              options: options
             }
           ]
         end.to_h

@@ -1,6 +1,8 @@
 import React, {PropTypes} from 'react';
 import {Tab, Tabs} from 'react-bootstrap';
 import he from 'he';
+import SingleChoiceResponses from '../../components/survey_results/single_choice_responses';
+import TextResponses from '../../components/survey_results/text_responses';
 
 const styles = {
   table: {
@@ -46,7 +48,7 @@ export default class Results extends React.Component {
                       {
                         this.computeAverageFromAnswerObject(
                           this.props.thisWorkshop[session]['general'][question_key],
-                          question_data['max_value']
+                          question_data['max_value'] || question_data['options'].length
                         )
                       }
                     </td>
@@ -189,15 +191,54 @@ export default class Results extends React.Component {
     );
   }
 
+  renderResultsForSession(session) {
+    let generalQuestions = this.props.questions[session]['general'];
+
+    if (generalQuestions) {
+      return Object.keys(generalQuestions).map((questionId, i) => {
+        let question = generalQuestions[questionId];
+
+        if (question['answer_type'] === 'selectText' || question['answer_type'] === 'selectValue') {
+          return (
+            <SingleChoiceResponses
+              question={question['text']}
+              answers={this.props.thisWorkshop[session]['general'][questionId] || []}
+              possibleAnswers={question['options']}
+              key={i}
+              answerType={question['answer_type']}
+            />
+          );
+        } else if (question['answer_type'] === 'text') {
+          return (
+            <TextResponses
+              question={question['text']}
+              answers={this.props.thisWorkshop[session]['general'][questionId]}
+              key={i}
+            />
+          );
+        } else {
+          return (
+            <p key={i}>
+              {question['text']}
+            </p>
+          );
+        }
+      });
+    } else {
+      return (<span>No questions</span>);
+    }
+  }
+
   renderAllSessionsResults() {
     return this.props.sessions.map((session, i) => (
       <Tab eventKey={i + 1} key={i} title={`${session} (${this.props.thisWorkshop[session]['response_count'] || 0})`}>
         <br/>
-        {this.renderSessionResultsTable(session)}
-        {this.renderSessionResultsFreeResponse(session)}
-        {
-          this.props.thisWorkshop[session]['facilitator'] && this.renderFacilitatorSpecificSection(session)
-        }
+        {this.renderResultsForSession(session)}
+        {/*{this.renderSessionResultsTable(session)}*/}
+        {/*{this.renderSessionResultsFreeResponse(session)}*/}
+        {/*{*/}
+          {/*this.props.thisWorkshop[session]['facilitator'] && this.renderFacilitatorSpecificSection(session)*/}
+        {/*}*/}
       </Tab>
     ));
   }

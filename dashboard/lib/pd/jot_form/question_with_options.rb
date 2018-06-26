@@ -12,6 +12,11 @@ module Pd
       def answer_type
         ANSWER_SELECT_VALUE
       end
+
+      # @override
+      def type_specific_summary
+        {options: options}
+      end
     end
   end
 end
