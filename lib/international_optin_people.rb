@@ -1,7 +1,7 @@
 INTERNATIONAL_OPTIN_FACILITATORS = [
   "First facilitator",
   "Second facilitator",
-  "Third faciliattor"
+  "Third facilitator"
 ].freeze
 
 INTERNATIONAL_OPTIN_PARTNERS = [

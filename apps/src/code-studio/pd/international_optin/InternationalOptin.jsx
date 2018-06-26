@@ -1,7 +1,15 @@
 import React, {PropTypes} from 'react';
 import FormController from '../form_components/FormController';
 import FormComponent from '../form_components/FormComponent';
-import {FormGroup} from 'react-bootstrap';
+import DatePicker from '../workshop_dashboard/components/date_picker';
+import moment from 'moment';
+import {DATE_FORMAT} from '../workshop_dashboard/workshopConstants';
+import {
+  Row,
+  Col,
+  ControlLabel,
+  FormGroup
+} from 'react-bootstrap';
 
 export default class InternationalOptin extends FormController {
   static propTypes = {
@@ -47,13 +55,23 @@ export default class InternationalOptin extends FormController {
   }
 }
 
+
 class InternationalOptinComponent extends FormComponent {
   static propTypes = {
     accountEmail: PropTypes.string.isRequired
   };
 
+  handleDateChange = (date) => {
+    // Don't allow null. If the date is cleared, default again to today.
+    date = date || moment();
+    super.handleChange({date: date.format(DATE_FORMAT)});
+  };
+
   render() {
     const labels = this.props.labels;
+    const date = (this.props.data && this.props.data.date) ?
+      moment(this.props.data.date, DATE_FORMAT) : moment();
+    // todo: add validation
 
     return (
       <FormGroup>
@@ -81,18 +99,15 @@ class InternationalOptinComponent extends FormComponent {
             required: true
           })
         }
-
         {
           this.buildFieldGroup({
             name: 'email',
             label: labels.email,
             type: 'text',
             value: this.props.accountEmail,
-            readOnly: true,
-            required: true
+            readOnly: true
           })
         }
-
         {
           this.buildFieldGroup({
             name: 'emailAlternate',
@@ -167,6 +182,30 @@ class InternationalOptinComponent extends FormComponent {
             includeOther: true
           })
         }
+        <FormGroup
+          id="date"
+          controlId="date"
+          validationState={this.getValidationState("date")}
+        >
+          <Row>
+            <Col md={6}>
+              <ControlLabel>
+                Date
+                <span style={{color: 'red'}}> *</span>
+              </ControlLabel>
+            </Col>
+          </Row>
+          <Row>
+            <Col md={6}>
+              <DatePicker
+                date={date}
+                minDate={moment()}
+                onChange={this.handleDateChange}
+                readOnly={false}
+              />
+            </Col>
+          </Row>
+        </FormGroup>
         {
           this.buildSelectFieldGroupFromOptions({
             name: 'workshopOrganizer',
@@ -202,8 +241,8 @@ class InternationalOptinComponent extends FormComponent {
 }
 
 InternationalOptinComponent.associatedFields = [
-  'firstName', 'firstNamePreferred', 'lastName', 'email', 'emailAlternate',
-  'gender', 'schoolName', 'schoolCity', 'schoolCountry', 'ages', 'subjects',
-  'resources', 'robotics', 'workshopOrganizer', 'workshopFacilitator',
-  'workshopCourse', 'optIn'
+  'firstName', 'firstNamePreferred', 'lastName', 'emailAlternate', 'gender',
+  'schoolName', 'schoolCity', 'schoolCountry', 'ages', 'subjects', 'resources',
+  'robotics', 'workshopOrganizer', 'workshopFacilitator', 'workshopCourse',
+  'optIn'
 ];

@@ -15,9 +15,4 @@ class Pd::InternationalOptinController < ApplicationController
       }.to_json
     }
   end
-
-  # Get /pd/international_optins/:contact_id/thanks
-  def thanks
-    @regional_partner = @international_optin.try(:regional_partner)
-  end
 end
