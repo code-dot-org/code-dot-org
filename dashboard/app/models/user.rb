@@ -1012,10 +1012,6 @@ class User < ActiveRecord::Base
       first
   end
 
-  def hidden_script_access?
-    admin? || permission?(UserPermission::HIDDEN_SCRIPT_ACCESS)
-  end
-
   # Is the provided script_level hidden, on account of the section(s) that this
   # user is enrolled in
   def script_level_hidden?(script_level)
