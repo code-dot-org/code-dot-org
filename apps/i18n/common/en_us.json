@@ -714,7 +714,7 @@
   "moveStudents": "Move students",
   "moveStudentsConfirm": "No, I want to move student(s) to be in the new section only.",
   "moveToSection": "Move to section",
-  "multipleChoiceQuestionsOverview": "Multiple choice questions overview",
+  "multipleChoiceQuestionsOverview": "Multiple choice questions overview ({numSubmissions} submissions / {numStudents} students)",
   "myCourses": "My Courses",
   "myProjects": "My Projects",
   "name": "Name",

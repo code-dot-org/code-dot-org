@@ -48,7 +48,7 @@ class SectionAssessments extends Component {
   };
 
   render() {
-    const {validScripts, scriptId, assessmentList, assessmentId, isLoading} = this.props;
+    const {validScripts, scriptId, assessmentList, assessmentId, isLoading, totalStudentCount} = this.props;
 
     return (
       <div>
@@ -77,12 +77,16 @@ class SectionAssessments extends Component {
         {!isLoading &&
           <div>
             {/* Assessments */}
-            <MCAssessmentsOverviewContainer />
+            <MCAssessmentsOverviewContainer
+              totalStudentCount={totalStudentCount}
+            />
             <StudentsMCSummaryContainer />
             <MultipleChoiceByStudentContainer />
             <FreeResponsesAssessmentsContainer />
             {/* Surveys */}
-            <MCSurveyOverviewContainer />
+            <MCSurveyOverviewContainer
+              totalStudentCount={totalStudentCount}
+            />
             <FreeResponseBySurveyQuestionContainer />
           </div>
         }
