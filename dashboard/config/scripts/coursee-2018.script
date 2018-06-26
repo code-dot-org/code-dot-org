@@ -120,7 +120,7 @@ level 'courseE_farmer_ramp12c_2018'
 level 'courseE_farmer_ramp12d_2018'
 level 'courseE_farmer_ramp12e_2018'
 level 'courseE_video_BeeifElse_2018'
-level 'courseE_farmer_ramp12f_2018'
+level 'courseE_farmer_ramp12f_2018', challenge: true
 level 'courseE_farmer_ramp12g_2018'
 level 'courseF_markdown_conditionals_end'
 
