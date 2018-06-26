@@ -3024,22 +3024,6 @@ class UserTest < ActiveSupport::TestCase
     assert user.within_united_states?
   end
 
-  test 'hidden_script_access? is false if user is not admin and does not have permission' do
-    user = create :student
-    refute user.hidden_script_access?
-  end
-
-  test 'hidden_script_access? is true if user is admin' do
-    user = create :admin
-    assert user.hidden_script_access?
-  end
-
-  test 'hidden_script_access? is true if user has permission' do
-    user = create :teacher
-    user.update(permission: UserPermission::HIDDEN_SCRIPT_ACCESS)
-    assert user.hidden_script_access?
-  end
-
   test 'user_levels_by_user_by_level' do
     users = (1..3).map {create :user}
     script = Script.twenty_hour_script

@@ -63,4 +63,8 @@ module UserPermissionHelper
   def levelbuilder?
     permission? UserPermission::LEVELBUILDER
   end
+
+  def hidden_script_access?
+    admin? || permission?(UserPermission::HIDDEN_SCRIPT_ACCESS)
+  end
 end
