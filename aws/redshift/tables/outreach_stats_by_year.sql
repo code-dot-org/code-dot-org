@@ -3,7 +3,8 @@ CREATE table analysis.outreach_stats_by_year AS
   SELECT 'State' region_type,
          ug.state region,
          ug.state state,
-         DATE_PART(year,us.created_at::DATE) AS year,
+         school_year,
+         -- DATE_PART(year,us.created_at::DATE) AS year,
          COUNT(DISTINCT u.id) teachers,
          COUNT(DISTINCT f.student_user_id) students,
          COUNT(DISTINCT CASE WHEN u_students.gender = 'f' THEN f.student_user_id ELSE NULL END)::FLOAT/ NULLIF(COUNT(DISTINCT CASE WHEN u_students.gender IN ('m','f') THEN f.student_user_id ELSE NULL END),0) pct_female,
@@ -27,6 +28,7 @@ CREATE table analysis.outreach_stats_by_year AS
       ON u_students.id = us.user_id
     LEFT JOIN dashboard_production.user_proficiencies up 
       ON up.user_id = u_students.id
+     JOIN analysis.school_years sy on us.created_at between sy.started_at and sy.ended_at
   WHERE country = 'United States'
   AND   u_students.current_sign_in_at IS NOT NULL
   AND   u_students.user_type = 'student'
@@ -36,8 +38,9 @@ CREATE table analysis.outreach_stats_by_year AS
   SELECT 'City' region_type,
          ug.city|| ', ' ||ug.state region,
          ug.state state,
-         DATE_PART(year,us.created_at::DATE) AS year,
-         COUNT(DISTINCT u.id) teachers,
+         -- DATE_PART(year,us.created_at::DATE) AS year,
+        school_year,         
+        COUNT(DISTINCT u.id) teachers,
          COUNT(DISTINCT f.student_user_id) students,
          COUNT(DISTINCT CASE WHEN u_students.gender = 'f' THEN f.student_user_id ELSE NULL END)::FLOAT/ NULLIF(COUNT(DISTINCT CASE WHEN u_students.gender IN ('m','f') THEN f.student_user_id ELSE NULL END),0) pct_female,
          COUNT(DISTINCT CASE WHEN u_students.urm = 1 THEN f.student_user_id ELSE NULL END)::FLOAT/ NULLIF(COUNT(DISTINCT CASE WHEN u_students.urm IN (0,1) THEN f.student_user_id ELSE NULL END),0) pct_urm,
@@ -60,12 +63,14 @@ CREATE table analysis.outreach_stats_by_year AS
       ON u_students.id = us.user_id
     LEFT JOIN dashboard_production.user_proficiencies up 
       ON up.user_id = u_students.id
+    JOIN analysis.school_years sy on us.created_at between sy.started_at and sy.ended_at
   WHERE country = 'United States'
   AND   u_students.current_sign_in_at IS NOT NULL
   AND   u_students.user_type = 'student'
   AND   ug.city IS NOT NULL
   AND   ug.state IS NOT NULL
-  GROUP BY 1,2,3,4;
+  GROUP BY 1,2,3,4
+  ;
 
 GRANT ALL PRIVILEGES ON analysis.outreach_stats_by_year TO GROUP admin;
 GRANT SELECT ON analysis.outreach_stats_by_year TO GROUP reader, GROUP reader_pii;

@@ -358,6 +358,7 @@ bg:
     email_confirm_needed_required: 'Вашият email адрес не е потвърден %{email} :'
     email_confirm_wrong_email: '(Грешен имейл адрес?)'
     email_resend_confirm: 'Повторно изпращане на инструкции'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(Оставете празно, ако не искате да го промените)"
     current_password_hint: '(нуждаем се от вашата текуща парола, за да потвърдим вашите промени)'
     delete: 'Изтриване на вашия акаунт'

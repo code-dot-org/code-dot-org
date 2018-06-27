@@ -50,12 +50,18 @@ const answerColumnsFormatter = (percentAnswered, {rowData, columnIndex, rowIndex
   );
 };
 
+const questionFormatter = (question, {rowData, columnIndex, rowIndex, property}) => {
+  return (
+    <div>{`${rowData.questionNumber}. ${question}`}</div>
+  );
+};
+
 const answerDataPropType = PropTypes.shape({
   multipleChoiceOption: PropTypes.string,
   percentAnswered: PropTypes.number,
 });
 
-const multipleChoiceSurveyDataPropType = PropTypes.shape({
+export const multipleChoiceSurveyDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   question: PropTypes.string.isRequired,
   answers: PropTypes.arrayOf(answerDataPropType),
@@ -147,9 +153,9 @@ class MultipleChoiceSurveyOverviewTable extends Component {
       header: {
         label: i18n.question(),
         props: {style: tableLayoutStyles.headerCell},
-        transforms: [sortable],
       },
       cell: {
+        format: questionFormatter,
         props: {
           style: {
             ...tableLayoutStyles.cell,
@@ -162,7 +168,7 @@ class MultipleChoiceSurveyOverviewTable extends Component {
   );
 
   getColumns = (sortable) => {
-    const maxOptionsQuestion = [...this.props.multipleChoiceSurveyData].sort((question1, question2) => (
+    let maxOptionsQuestion = [...this.props.multipleChoiceSurveyData].sort((question1, question2) => (
       question1.answers.length - question2.answers.length
     )).pop();
 

@@ -3750,13 +3750,13 @@ es-MX:
     mc_2017_congratulations:
       1:
         image: notes/mc_2017_congratulations_1.png
-        text: 'Preston: Congratulations!'
+        text: 'Preston: ¡Felicidades!'
       2:
         image: notes/mc_2017_congratulations_2.png
-        text: 'Lizzy: Congratulations!'
+        text: 'Lizzy: ¡Felicidades!'
       3:
         image: notes/mc_2017_congratulations_3.png
-        text: 'Stampy: Congratulations, you did it!'
+        text: 'Stampy: ¡Felicidades, lo has conseguido!'
       4:
         image: notes/mc_2017_congratulations_4.png
         text: 'Stacy: Congratulations guys, you totally rocked that! And now that
@@ -4053,9 +4053,10 @@ es-MX:
           The sky's the limit when it comes to textiles.
       2:
         image: notes/csd_concept_memory_cpu_input_output_2.png
-        text: My name is Danielle Applestone, and I'm CEO of Othermachine Company.
-          We build a desktop milling machine. A milling machine takes a rotating cutting
-          tool and moves it through material to create a 3D object.
+        text: Mi nombre es Danielle Applestone y soy CEO de Othermachine Company.
+          Construimos una fresadora de sobremesa. Una fresadora usa un instrumento
+          de corte giratorio moviéndolo a través de un material para crear un objeto
+          3D.
       3:
         image: notes/csd_concept_memory_cpu_input_output_3.png
         text: Under the hood, all computers do the same four basic things. They input

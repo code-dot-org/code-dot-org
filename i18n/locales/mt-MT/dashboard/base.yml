@@ -354,6 +354,7 @@ mt:
     email_confirm_needed_required: 'L-indirizz tal-email: tiegħek %{email} ma ġiex ikkonfermat:'
     email_confirm_wrong_email: '(Indirizz elettroniku ħażin?)'
     email_resend_confirm: 'Erga ibghat l''istruzzjonijiet tal-konferma'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(ħalli vojt jekk ma tixtieqx tibdel)"
     current_password_hint: '(neħtieġu il-password attwali biex nikkonfermaw it-tibdiliet tiegħek)'
     delete: 'Ħassar l''Account tiegħek'

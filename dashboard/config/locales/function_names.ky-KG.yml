@@ -6,7 +6,7 @@ ky:
       details: details
       draw eyebrow: draw eyebrow
       draw pupil: draw pupil
-      draw a circle: draw a circle
+      draw a circle: тегерек тарткыла
       draw a car: draw a car
       draw_rect: draw_rect
       draw square: draw square
@@ -29,10 +29,10 @@ ky:
       draw ear stems: draw ear stems
       big gear: big gear
       small gear: small gear
-      draw a hexagon: draw a hexagon
-      draw a flower: draw a flower
-      draw a square: draw a square
-      draw a snowflake: draw a snowflake
+      draw a hexagon: алты бурчтук тарткыла
+      draw a flower: гүл тарткыла
+      draw a square: чарчы тарткыла
+      draw a snowflake: карча тарткыла
       draw 3 hexagons: draw 3 hexagons
       draw 4 hexagons: draw 4 hexagons
       draw 5 hexagons: draw 5 hexagons
@@ -45,7 +45,7 @@ ky:
       get 7 make 7: get 7 make 7
       get 7: get 7
       move and get 3: move and get 3
-      draw a tree: draw a tree
+      draw a tree: бак тарткыла
       draw triangle: draw triangle
       draw circle: draw circle
       draw goal: draw goal
@@ -56,15 +56,15 @@ ky:
       draw a medium triangle: draw a medium triangle
       draw a large triangle: draw a large triangle
       draw a big triangle: draw a big triangle
-      draw a triangle: draw a triangle
-      draw a house: draw a house
+      draw a triangle: үч бурчтук тарткыла
+      draw a house: саат тарткыла
       check purple flower: check purple flower
       check flower make honey: check flower make honey
       get nectar or make honey: get nectar or make honey
       make 3 honey: make 3 honey
       get 5 nectar: get 5 nectar
       make all honey: make all honey
-      draw a star: draw a star
+      draw a star: жылдыз тарткыла
       game has been won: game has been won
       draw: draw
       draw bit: draw bit

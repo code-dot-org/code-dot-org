@@ -72,7 +72,6 @@
 require 'digest/md5'
 require 'cdo/user_helpers'
 require 'cdo/race_interstitial_helper'
-require 'cdo/chat_client'
 require 'cdo/shared_cache'
 require 'school_info_interstitial_helper'
 
@@ -81,6 +80,7 @@ class User < ActiveRecord::Base
   include SchoolInfoDeduplicator
   include LocaleHelper
   include UserMultiAuthHelper
+  include UserPermissionGrantee
   include Rails.application.routes.url_helpers
   # races: array of strings, the races that a student has selected.
   # Allowed values for race are:
@@ -182,7 +182,6 @@ class User < ActiveRecord::Base
   validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS
 
   belongs_to :studio_person
-  has_many :permissions, class_name: 'UserPermission', dependent: :destroy
   has_many :hint_view_requests
 
   # Teachers can be in multiple cohorts
@@ -296,26 +295,6 @@ class User < ActiveRecord::Base
     primary_authentication_option.try(:hashed_email) || ''
   end
 
-  def facilitator?
-    permission? UserPermission::FACILITATOR
-  end
-
-  def workshop_organizer?
-    permission? UserPermission::WORKSHOP_ORGANIZER
-  end
-
-  def program_manager?
-    permission? UserPermission::PROGRAM_MANAGER
-  end
-
-  def workshop_admin?
-    permission? UserPermission::WORKSHOP_ADMIN
-  end
-
-  def project_validator?
-    permission? UserPermission::PROJECT_VALIDATOR
-  end
-
   # assign a course to a facilitator that is qualified to teach it
   def course_as_facilitator=(course)
     courses_as_facilitator << courses_as_facilitator.find_or_create_by(facilitator_id: id, course: course)
@@ -323,62 +302,6 @@ class User < ActiveRecord::Base
 
   def delete_course_as_facilitator(course)
     courses_as_facilitator.find_by(course: course).try(:destroy)
-  end
-
-  # admin can be nil, which should be treated as false
-  def admin_changed?
-    # no change: false
-    # false <-> nil: false
-    # false|nil <-> true: true
-    !!changes['admin'].try {|from, to| !!from != !!to}
-  end
-
-  def log_admin_save
-    ChatClient.message 'infra-security',
-      "#{admin ? 'Granting' : 'Revoking'} UserPermission: "\
-      "environment: #{rack_env}, "\
-      "user ID: #{id}, "\
-      "email: #{email}, "\
-      "permission: ADMIN",
-      color: 'yellow'
-  end
-
-  # don't log changes to admin permission in development, test, and ad_hoc environments
-  def self.should_log?
-    return [:staging, :levelbuilder, :production].include? rack_env
-  end
-
-  def delete_permission(permission)
-    @permissions = nil
-    permission = permissions.find_by(permission: permission)
-    permissions.delete permission if permission
-  end
-
-  def permission=(permission)
-    @permissions = nil
-    permissions << permissions.find_or_create_by(user_id: id, permission: permission)
-  end
-
-  # @param permission [UserPermission] the permission to query.
-  # @return [Boolean] whether the User has permission granted.
-  # TODO(asher): Determine whether request level caching is sufficient, or
-  #   whether a memcache or otherwise should be employed.
-  def permission?(permission)
-    return false unless teacher?
-    if @permissions.nil?
-      # The user's permissions have not yet been cached, so do the DB query,
-      # caching the results.
-      @permissions = UserPermission.where(user_id: id).pluck(:permission)
-    end
-    # Return the cached results.
-    return @permissions.include? permission
-  end
-
-  # Revokes all escalated permissions associated with the user, including admin status and any
-  # granted UserPermission's.
-  def revoke_all_permissions
-    update_column(:admin, nil)
-    UserPermission.where(user_id: id).each(&:destroy)
   end
 
   def district_contact?
@@ -430,10 +353,6 @@ class User < ActiveRecord::Base
       user.save!
     end
     user
-  end
-
-  def self.find_or_create_district_contact(params, invited_by_user)
-    find_or_create_teacher(params, invited_by_user, UserPermission::DISTRICT_CONTACT)
   end
 
   def self.find_or_create_facilitator(params, invited_by_user)
@@ -504,7 +423,7 @@ class User < ActiveRecord::Base
   validates :name, length: {within: 1..70}, allow_blank: true
   validates :name, no_utf8mb4: true
 
-  defer_age = proc {|user| %w(google_oauth2 clever powerschool).include?(user.provider) || user.provider == User::PROVIDER_SPONSORED}
+  defer_age = proc {|user| %w(google_oauth2 clever powerschool).include?(user.provider) || user.sponsored?}
 
   validates :age, presence: true, on: :create, unless: defer_age # only do this on create to avoid problems with existing users
   AGE_DROPDOWN_OPTIONS = (4..20).to_a << "21+"
@@ -561,8 +480,6 @@ class User < ActiveRecord::Base
     :hash_email,
     :sanitize_race_data_set_urm,
     :fix_by_user_type
-
-  before_save :log_admin_save, if: -> {admin_changed? && User.should_log?}
 
   before_validation :update_share_setting, unless: :under_13?
 
@@ -640,11 +557,34 @@ class User < ActiveRecord::Base
     end
   end
 
+  # Given a cleartext email finds the first user that has a matching email or hash.
+  # @param [String] email (cleartext)
+  # @return [User|nil]
   def self.find_by_email_or_hashed_email(email)
     return nil if email.blank?
+    find_by_hashed_email User.hash_email email
+  end
 
-    hashed_email = User.hash_email(email)
-    User.find_by(hashed_email: hashed_email)
+  # Given an email hash, finds the first user that has a matching email hash.
+  # @param [String] hashed_email
+  # @return [User|nil]
+  def self.find_by_hashed_email(hashed_email)
+    return nil if hashed_email.blank?
+    migrated_user = AuthenticationOption.find_by(hashed_email: hashed_email)&.user
+    migrated_user || User.find_by(hashed_email: hashed_email)
+  end
+
+  # Locate an SSO user by SSO provider and associated user id.
+  # @param [String] type A credential type / provider type.  In the future this
+  #   should always be one of the valid credential types from AuthenticationOption
+  # @param [String] id A user id associated with the particular provider.
+  # @returns [User|nil]
+  def self.find_by_credential(type:, id:)
+    authentication_option = AuthenticationOption.find_by(
+      credential_type: type,
+      authentication_id: id
+    )
+    authentication_option&.user || User.find_by(provider: type, uid: id)
   end
 
   def self.find_channel_owner(encrypted_channel_id)
@@ -777,7 +717,7 @@ class User < ActiveRecord::Base
 
   def oauth?
     if migrated?
-      authentication_options.any? {|auth| OAUTH_PROVIDERS.include? auth.credential_type}
+      authentication_options.any?(&:oauth?)
     else
       OAUTH_PROVIDERS.include? provider
     end
@@ -812,7 +752,7 @@ class User < ActiveRecord::Base
   def email_required?
     return true if teacher?
     return false if provider == User::PROVIDER_MANUAL
-    return false if provider == User::PROVIDER_SPONSORED
+    return false if sponsored?
     return false if oauth?
     return false if parent_managed_account?
     true
@@ -847,7 +787,7 @@ class User < ActiveRecord::Base
     return false if teacher? && email.nil?
 
     # If an email option with a different email address already exists, destroy it
-    existing_email_option = authentication_options.find {|ao| ao.credential_type == 'email'}
+    existing_email_option = authentication_options.find {|ao| AuthenticationOption::EMAIL == ao.credential_type}
     existing_email_option&.destroy
 
     # If an auth option exists with same email, set it to the user's primary authentication option
@@ -857,7 +797,7 @@ class User < ActiveRecord::Base
       return save
     end
 
-    params = {credential_type: 'email', user: self}
+    params = {credential_type: AuthenticationOption::EMAIL, user: self}
     params[:email] = email unless email.nil?
     params[:hashed_email] = hashed_email if email.nil?
     self.primary_authentication_option = AuthenticationOption.new(params)
@@ -1050,10 +990,6 @@ class User < ActiveRecord::Base
     UserLevel.where(conditions).
       order('updated_at DESC').
       first
-  end
-
-  def hidden_script_access?
-    admin? || permission?(UserPermission::HIDDEN_SCRIPT_ACCESS)
   end
 
   # Is the provided script_level hidden, on account of the section(s) that this

@@ -142,7 +142,6 @@ class MultipleChoiceAssessmentsOverviewTable extends Component {
       header: {
         label: i18n.question(),
         props: {style: tableLayoutStyles.headerCell},
-        transforms: [sortable],
       },
       cell: {
         format: questionFormatter,

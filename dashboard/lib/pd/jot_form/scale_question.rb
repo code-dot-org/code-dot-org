@@ -39,10 +39,16 @@ module Pd
 
       # @override
       def type_specific_summary
-        augmented_options = values.map(&:to_s)
-        augmented_options[0] = "#{augmented_options[0]} - #{options.first}"
-        augmented_options[-1] = "#{augmented_options[-1]} - #{options.last}"
-        {max_value: values.last, options: augmented_options}
+        {
+          min_value: values.first,
+          max_value: values.last,
+          options: options
+        }
+      end
+
+      # @override
+      def answer_type
+        ANSWER_SCALE
       end
     end
   end

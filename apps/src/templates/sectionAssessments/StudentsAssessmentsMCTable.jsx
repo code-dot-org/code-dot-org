@@ -127,7 +127,6 @@ class StudentsAssessmentsMCTable extends Component {
               ...{width: TABLE_COLUMN_WIDTHS.name},
             }
           },
-          transforms: [sortable],
         },
         cell: {
           props: {

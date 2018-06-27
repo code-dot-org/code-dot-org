@@ -66,7 +66,10 @@ export default () => {
     });
   }
 
-  if ($('.admin-abuse').length && dashboard.project.isProjectLevel()) {
+  if (
+    $('.admin-abuse').length &&
+    (dashboard.project.isProjectLevel() || !dashboard.project.shouldHideShareAndRemix())
+  ) {
     var abuseScore = dashboard.project.getAbuseScore();
     if (abuseScore) {
       $('.admin-abuse').show();

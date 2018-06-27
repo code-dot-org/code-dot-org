@@ -423,7 +423,6 @@ zh-TW:
         CSD_U3_rect_c2: 這個是「運行」按鈕。
       CSD U3 rect_2018_callout:
         CSD_U3_rect_c1: 這兒是代碼
-        CSD_U3_rect_c2: 這個是「運行」按鈕。
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: 這兒是代碼
         CSD_U3_rect_c2: 拖曳這個積木到工作區裡。
@@ -985,6 +984,7 @@ zh-TW:
           them away.
         stone_block_2: Grey blocks are made of stone and cannot be thrown away.
       courseA_maze_ramp3a_2018_callout: {}
+      courseA_maze_ramp3b_2018_callout: {}
       courseA_maze_ramp4_2018_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many
           of these blocks you have left to use.
@@ -1030,6 +1030,7 @@ zh-TW:
           start your program.
       courseB_Scrat_ramp2_2018_callout: {}
       courseB_Scrat_ramp3a_2018_callout: {}
+      courseB_Scrat_ramp3b_2018_callout: {}
       courseB_Scrat_ramp4a_2018_callout: {}
       courseB_Scrat_ramp5a_2018_callout: {}
       courseB_artist_loops3_callout:
