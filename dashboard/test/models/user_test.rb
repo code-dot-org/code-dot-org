@@ -192,6 +192,26 @@ class UserTest < ActiveSupport::TestCase
     assert_equal ['Email has already been taken'], user.errors.full_messages
   end
 
+  #
+  # Email uniqueness validation tests
+  # These should simplify significantly once we are fully migrated to multi-auth
+  #
+
+  def create_single_auth_user_with_email(email)
+    create :student, email: email
+  end
+
+  def create_multi_auth_user_with_email(email)
+    create :student, :with_migrated_email_authentication_option, email: email
+  end
+
+  def create_multi_auth_user_with_second_email(email)
+    user = create :student, :with_migrated_email_authentication_option
+    user.authentication_options << create(:google_authentication_option, user: user, email: email)
+    user.save
+    user
+  end
+
   test "cannot create single-auth user with duplicate of single-auth user's email" do
     email = 'test@example.com'
     create_single_auth_user_with_email email
@@ -208,11 +228,6 @@ class UserTest < ActiveSupport::TestCase
     email = 'test@example.com'
     create_multi_auth_user_with_second_email email
     cannot_create_single_auth_users_with_email email
-  end
-
-  def cannot_create_single_auth_users_with_email(email)
-    assert_fails_email_uniqueness_validation FactoryGirl.build(:teacher, email: email)
-    assert_fails_email_uniqueness_validation FactoryGirl.build(:student, email: email)
   end
 
   test "cannot create multi-auth user with duplicate of single-auth user's email" do
@@ -233,13 +248,22 @@ class UserTest < ActiveSupport::TestCase
     cannot_create_multi_auth_users_with_email email
   end
 
+  def cannot_create_single_auth_users_with_email(email)
+    cannot_create_user_with_email :teacher, email: email
+    cannot_create_user_with_email :student, email: email
+  end
+
   def cannot_create_multi_auth_users_with_email(email)
-    assert_fails_email_uniqueness_validation FactoryGirl.build :teacher,
+    cannot_create_user_with_email :teacher,
       :with_migrated_email_authentication_option,
       email: email
-    assert_fails_email_uniqueness_validation FactoryGirl.build :student,
+    cannot_create_user_with_email :student,
       :with_migrated_email_authentication_option,
       email: email
+  end
+
+  def cannot_create_user_with_email(*args)
+    assert_fails_email_uniqueness_validation FactoryGirl.build(*args)
   end
 
   test "cannot update single-auth user with duplicate of single-auth user's email" do
@@ -260,16 +284,6 @@ class UserTest < ActiveSupport::TestCase
     cannot_update_single_auth_users_with_email email
   end
 
-  def cannot_update_single_auth_users_with_email(email)
-    teacher = create :teacher
-    refute teacher.update(email: email)
-    assert_fails_email_uniqueness_validation teacher
-
-    student = create :student
-    refute student.update(email: email)
-    assert_fails_email_uniqueness_validation student
-  end
-
   test "cannot update multi-auth user with duplicate of single-auth user's email" do
     email = 'test@example.com'
     create_single_auth_user_with_email email
@@ -288,34 +302,60 @@ class UserTest < ActiveSupport::TestCase
     cannot_update_multi_auth_users_with_email email
   end
 
+  def cannot_update_single_auth_users_with_email(email)
+    cannot_update_user_with_email email, :teacher
+    cannot_update_user_with_email email, :student
+  end
+
   def cannot_update_multi_auth_users_with_email(email)
-    teacher = create :teacher, :with_migrated_email_authentication_option
-    refute teacher.authentication_options.first.update(email: email)
-    assert_fails_email_uniqueness_validation teacher
-
-    student = create :student, :with_migrated_email_authentication_option
-    refute student.authentication_options.first.update(email: email)
-    assert_fails_email_uniqueness_validation student
+    cannot_update_user_with_email email, :teacher, :with_migrated_email_authentication_option
+    cannot_update_user_with_email email, :student, :with_migrated_email_authentication_option
   end
 
-  def create_single_auth_user_with_email(email)
-    create :student, email: email
+  def cannot_update_user_with_email(email, *user_args)
+    user = create(*user_args)
+    if user.migrated?
+      refute user.authentication_options.first.update(email: email)
+    else
+      refute user.update(email: email)
+    end
+    assert_fails_email_uniqueness_validation user
   end
 
-  def create_multi_auth_user_with_email(email)
-    create :student, :with_migrated_email_authentication_option, email: email
+  test "cannot give user an additional email that is a duplicate of single-auth user's email" do
+    email = 'test@example.com'
+    create_single_auth_user_with_email email
+    cannot_give_users_additional_email email
   end
 
-  def create_multi_auth_user_with_second_email(email)
-    user = create :student, :with_migrated_email_authentication_option
-    user.authentication_options << create(:google_authentication_option, user: user, email: email)
-    user.save
-    user
+  test "cannot give user an additional email that is a duplicate of multi-auth user's email" do
+    email = 'test@example.com'
+    create_multi_auth_user_with_email email
+    cannot_give_users_additional_email email
+  end
+
+  test "cannot give user an additional email that is a duplicate of multi-auth user's second email" do
+    email = 'test@example.com'
+    create_multi_auth_user_with_second_email email
+    cannot_give_users_additional_email email
+  end
+
+  def cannot_give_users_additional_email(email)
+    cannot_give_user_additional_email :teacher, email
+    cannot_give_user_additional_email :student, email
+  end
+
+  def cannot_give_user_additional_email(type, email)
+    user = create type, :with_migrated_email_authentication_option
+    user.authentication_options << FactoryGirl.build(:google_authentication_option, user: user, email: email)
+    refute user.save
+    assert_fails_email_uniqueness_validation user
   end
 
   def assert_fails_email_uniqueness_validation(user)
     refute user.valid?
-    assert_equal ['Email has already been taken'], user.errors.full_messages
+    assert_equal ['has already been taken'], user.errors[:email]
+    assert_includes user.errors.full_messages, 'Email has already been taken'
   end
 
   test "can create a user with age" do
