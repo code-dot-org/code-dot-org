@@ -298,31 +298,67 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   end
 
   test 'migrate and demigrate picture password student' do
-    user = create :student_in_picture_section
-    assert_user user,
-      provider: User::PROVIDER_SPONSORED,
-      sponsored?: true
-
-    user.migrate_to_multi_auth
-    user.demigrate_from_multi_auth
-
-    assert_user user,
-      provider: User::PROVIDER_SPONSORED,
-      sponsored?: true
+    round_trip create(:student_in_picture_section) do |user|
+      assert_user user,
+        provider: User::PROVIDER_SPONSORED,
+        sponsored?: true
+    end
   end
 
   test 'migrate and demigrate word password student' do
-    user = create :student_in_word_section
-    assert_user user,
-      provider: User::PROVIDER_SPONSORED,
-      sponsored?: true
+    round_trip create(:student_in_word_section) do |user|
+      assert_user user,
+        provider: User::PROVIDER_SPONSORED,
+        sponsored?: true
+    end
+  end
 
-    user.migrate_to_multi_auth
-    user.demigrate_from_multi_auth
+  test 'migrate and demigrate sponsored username+password student' do
+    skip
+    round_trip create(:manual_username_password_student) do |user|
+      assert_user user,
+        provider: User::PROVIDER_MANUAL,
+        sponsored?: false,
+        email: '',
+        hashed_email: nil,
+        username: :not_empty,
+        encrypted_password: :not_empty
+    end
+  end
 
-    assert_user user,
-      provider: User::PROVIDER_SPONSORED,
-      sponsored?: true
+  test 'migrate and demigrate parent-managed student' do
+    round_trip create(:parent_managed_student) do |user|
+      assert_user user,
+        provider: nil,
+        sponsored?: false,
+        email: '',
+        hashed_email: nil,
+        username: :not_empty,
+        encrypted_password: :not_empty,
+        parent_email: :not_empty
+    end
+  end
+
+  test 'migrate and demigrate email+password student' do
+    round_trip create(:student) do |user|
+      assert_user user,
+        provider: nil,
+        email: :empty,
+        hashed_email: :not_empty,
+        encrypted_password: :not_empty,
+        primary_authentication_option: nil
+    end
+  end
+
+  test 'migrate and demigrate email+password teacher' do
+    round_trip create(:teacher) do |user|
+      assert_user user,
+        provider: nil,
+        email: :not_empty,
+        hashed_email: :not_empty,
+        encrypted_password: :not_empty,
+        primary_authentication_option: nil
+    end
   end
 
   private
@@ -334,10 +370,12 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   #
   def assert_user(user, expected_values)
     refute_nil user
+    asserts_primary_authentication_option = expected_values.key? :primary_authentication_option
     expected_primary_option = expected_values.delete(:primary_authentication_option)
 
     assert_attributes user, expected_values
 
+    return unless asserts_primary_authentication_option
     if expected_primary_option.nil?
       assert_nil user.primary_authentication_option
     elsif expected_primary_option
@@ -410,5 +448,22 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     user.reload
     assert result, 'Expected migration to multi-auth to succeed, but it failed'
     assert user.migrated?
+  end
+
+  # Migrates and then de-migrates a user
+  # Requires a block containing assertions to be run before and after the
+  # migration, showing that the user is returned to its initial state.
+  def round_trip(user)
+    yield user
+
+    refute user.migrated?
+    migration_result = user.migrate_to_multi_auth
+    demigration_result = user.demigrate_from_multi_auth
+    user.reload
+    assert migration_result
+    assert demigration_result
+    refute user.migrated?
+
+    yield user
   end
 end
