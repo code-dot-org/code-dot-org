@@ -18,10 +18,6 @@
             "\"scale\""
           ],
           [
-            "rotation",
-            "\"rotation\""
-          ],
-          [
             "x position",
             "\"x\""
           ],
@@ -36,6 +32,10 @@
           [
             "movement direction",
             "\"direction\""
+          ],
+          [
+            "rotation or direction",
+            "\"rotation\""
           ],
           [
             "tint",
