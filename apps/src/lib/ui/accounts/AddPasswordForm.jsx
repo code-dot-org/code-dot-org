@@ -70,24 +70,28 @@ export default class AddPasswordForm extends React.Component {
     });
   };
 
-  passwordFieldsHaveContent = () => {
+  passwordsHaveMinimumContent = () => {
     const {password, passwordConfirmation} = this.state;
     return password.length >= MIN_PASSWORD_LENGTH && passwordConfirmation.length >= MIN_PASSWORD_LENGTH;
   };
 
-  isFormValid = () => {
+  passwordsMatch = () => {
     const {password, passwordConfirmation} = this.state;
-    return this.passwordFieldsHaveContent() && (password === passwordConfirmation);
+    return password === passwordConfirmation;
+  };
+
+  isFormValid = () => {
+    return this.passwordsHaveMinimumContent() && this.passwordsMatch();
   };
 
   minimumLengthError = (value) => {
     if (value.length > 0 &&  value.length < MIN_PASSWORD_LENGTH) {
-      return "Password too short";
+      return i18n.passwordTooShort();
     }
   };
 
   mismatchedPasswordsError = () => {
-    if (this.passwordFieldsHaveContent() && !this.isFormValid()) {
+    if (this.passwordsHaveMinimumContent() && !this.passwordsMatch()) {
       return PASSWORDS_MUST_MATCH;
     }
   };
