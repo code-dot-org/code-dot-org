@@ -60,6 +60,7 @@ export default class WorkshopEnrollment extends React.Component {
                     workshop_id={this.props.workshop.id}
                     logged_in={this.props.logged_in}
                     user_email={this.props.user_email}
+                    enrollment_email={this.props.enrollment.email}
                   />
                 </div>
               </div>
