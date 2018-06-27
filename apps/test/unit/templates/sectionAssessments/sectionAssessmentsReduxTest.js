@@ -575,7 +575,7 @@ describe('sectionAssessmentsRedux', () => {
           }
         };
 
-        const totalSubmissions = countSubmissionsForCurrentAssessment(stateWithAssessment, false);
+        const totalSubmissions = countSubmissionsForCurrentAssessment(stateWithAssessment);
         assert.deepEqual(totalSubmissions, 2);
       });
 
@@ -611,7 +611,7 @@ describe('sectionAssessmentsRedux', () => {
           }
         };
 
-        const totalSubmissions = countSubmissionsForCurrentAssessment(stateWithSurvey, true);
+        const totalSubmissions = countSubmissionsForCurrentAssessment(stateWithSurvey);
         assert.deepEqual(totalSubmissions, 1);
       });
     });
