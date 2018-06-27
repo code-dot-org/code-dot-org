@@ -76,9 +76,7 @@ class AuthenticationOption < ApplicationRecord
 
   private def email_must_be_unique
     # skip the db lookup if possible
-    return unless email_changed?
-    return unless email.present?
-    return unless errors.blank?
+    return unless email_changed? && email.present? && errors.blank?
 
     other = User.find_by_email_or_hashed_email(email)
     if other && other != user
@@ -88,9 +86,7 @@ class AuthenticationOption < ApplicationRecord
 
   private def hashed_email_must_be_unique
     # skip the db lookup if possible
-    return unless hashed_email_changed?
-    return unless hashed_email.present?
-    return unless errors.blank?
+    return unless hashed_email_changed? && hashed_email.present? && errors.blank?
 
     other = User.find_by_hashed_email(hashed_email)
     if other && other != user
