@@ -394,6 +394,22 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     round_trip_sso_with_token create(:teacher, :unmigrated_facebook_sso)
   end
 
+  test 'migrate and demigrate Clever OAuth student' do
+    round_trip_sso_with_token create(:student, :unmigrated_clever_sso)
+  end
+
+  test 'migrate and demigrate Clever OAuth teacher' do
+    round_trip_sso_with_token create(:teacher, :unmigrated_clever_sso)
+  end
+
+  test 'migrate and demigrate Powerschool OAuth student' do
+    round_trip_sso_with_token create(:student, :unmigrated_powerschool_sso)
+  end
+
+  test 'migrate and demigrate Powerschool OAuth teacher' do
+    round_trip_sso_with_token create(:teacher, :unmigrated_powerschool_sso)
+  end
+
   def round_trip_sso_with_token(for_user)
     initial_oauth_token = for_user.oauth_token
     initial_oauth_token_expiration = for_user.oauth_token_expiration
