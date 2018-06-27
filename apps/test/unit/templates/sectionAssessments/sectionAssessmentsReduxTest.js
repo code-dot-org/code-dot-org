@@ -17,6 +17,7 @@ import sectionAssessments, {
   getCorrectAnswer,
   indexesToAnswerString,
   countSubmissionsForCurrentAssessment,
+  currentAssessmentIsSurvey,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
 
@@ -388,6 +389,42 @@ describe('sectionAssessmentsRedux', () => {
             notAnswered: 0,
           },
         ]);
+      });
+    });
+
+    describe('currentAssessmentIsSurvey', () => {
+      it('returns true when the current assessment is a survey', () => {
+        const stateWithSurvey = {
+          ...rootState,
+          sectionAssessments: {
+            ...rootState.sectionAssessments,
+            assessmentId: 123,
+            surveysByScript: {
+              3: {
+                123: {}
+              }
+            }
+          }
+        };
+        const result = currentAssessmentIsSurvey(stateWithSurvey);
+        assert.deepEqual(result, true);
+      });
+
+      it('returns false when the current assessment is not a survey', () => {
+        const stateWithSurvey = {
+          ...rootState,
+          sectionAssessments: {
+            ...rootState.sectionAssessments,
+            assessmentId: 123,
+            surveysByScript: {
+              3: {
+                234: {}
+              }
+            }
+          }
+        };
+        const result = currentAssessmentIsSurvey(stateWithSurvey);
+        assert.deepEqual(result, false);
       });
     });
 
