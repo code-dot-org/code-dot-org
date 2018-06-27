@@ -67,7 +67,7 @@ Feature: Using the teacher homepage sections feature
     When I see the section set up box
     And I create a new section with course "Course A", version "2017 (Recommended)"
     Then the section table should have 1 rows
-    And the section table row at index 0 has primary assignment path "/s/coursea"
+    And the section table row at index 0 has primary assignment path "/s/coursea-2017"
 
     When I click selector ".ui-test-section-dropdown"
     And I click selector ".edit-section-details-link"

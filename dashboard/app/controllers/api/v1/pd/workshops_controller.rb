@@ -20,7 +20,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     end
 
     if params[:organizer_view]
-      @workshops = @workshops.organized_by(current_user)
+      @workshops = @workshops.organized_by(current_user).or(@workshops.where(regional_partner: current_user.regional_partners)).order(:id)
     end
 
     if (current_user.admin? || current_user.permission?(UserPermission::WORKSHOP_ADMIN)) && params[:workshop_id]

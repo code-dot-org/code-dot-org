@@ -61,7 +61,7 @@ const answerDataPropType = PropTypes.shape({
   percentAnswered: PropTypes.number,
 });
 
-const multipleChoiceSurveyDataPropType = PropTypes.shape({
+export const multipleChoiceSurveyDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   question: PropTypes.string.isRequired,
   answers: PropTypes.arrayOf(answerDataPropType),
@@ -153,7 +153,6 @@ class MultipleChoiceSurveyOverviewTable extends Component {
       header: {
         label: i18n.question(),
         props: {style: tableLayoutStyles.headerCell},
-        transforms: [sortable],
       },
       cell: {
         format: questionFormatter,
