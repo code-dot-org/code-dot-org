@@ -427,6 +427,16 @@ describe('sectionAssessmentsRedux', () => {
                         {correct: false, text: 'answer 1',},
                         {correct: true, text: 'answer 2',}
                       ]
+                    },
+                    {
+                      level_id: 910,
+                      type: 'Multi',
+                      question_text: 'What is an int?',
+                      question_index: 1,
+                      answers: [
+                        {correct: false, text: 'answer 1',},
+                        {correct: true, text: 'answer 2',}
+                      ]
                     }
                   ]
                 }
@@ -441,6 +451,7 @@ describe('sectionAssessmentsRedux', () => {
                       level_results: [
                         {student_result: [0], status: 'correct', type: 'Multi'},
                         {student_result: [0], status: 'incorrect', type: 'Multi'},
+                        {student_result: [1], status: 'correct', type: 'Multi'},
                       ]
                     }
                   }
@@ -452,6 +463,7 @@ describe('sectionAssessmentsRedux', () => {
                       level_results: [
                         {student_result: [0], status: 'correct', type: 'Multi'},
                         {student_result: [1], status: 'correct', type: 'Multi'},
+                        {student_result: [], status: 'unsubmitted', type: 'Multi'},
                       ]
                     }
                   }
@@ -497,6 +509,25 @@ describe('sectionAssessmentsRedux', () => {
             "id": 789,
             "notAnswered": 0,
             "question": "What is a boolean?",
+            "questionNumber": 2,
+            "totalAnswered": 2,
+          },
+          {
+            "answers": [
+              {
+                "isCorrect": false,
+                "multipleChoiceOption": "A",
+                "numAnswered": 0,
+              },
+              {
+                "isCorrect": true,
+                "multipleChoiceOption": "B",
+                "numAnswered": 1,
+              }
+            ],
+            "id": 910,
+            "notAnswered": 1,
+            "question": "What is an int?",
             "questionNumber": 2,
             "totalAnswered": 2,
           }
