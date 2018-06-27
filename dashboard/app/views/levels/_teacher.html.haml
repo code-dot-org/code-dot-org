@@ -118,6 +118,19 @@
                     = student.name
                     - if user_level && (user_level.navigator_user_levels.present? || user_level.driver_user_levels.present?) # I am a driver
                       %i.fa.fa-users.pair-programming-icon
+
+  -# Hidden form to send teacher feedback data
+  - if current_user.try(:teacher?) && @script_level
+    = form_for(:teacher_feedback,
+        url: '/api/v1/teacher_feedbacks',
+        remote: true,
+        html: { id: 'teacher-feedback-form' },
+      ) do |f|
+      = f.hidden_field :comment
+      = f.hidden_field :teacher_id
+      = f.hidden_field :student_id
+      = f.hidden_field :level_id
+
 - content_for(:head) do
   :javascript
     $(document).ready(function () {
