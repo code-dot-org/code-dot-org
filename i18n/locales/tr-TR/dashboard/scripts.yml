@@ -5425,7 +5425,7 @@ tr:
           description_audience: ''
           description_short: ''
           description: ''
-        coursea:
+        coursea-2017:
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Hata Ayıklama: Farkedilmeyen Hatalar'
@@ -5440,7 +5440,7 @@ tr:
               description_student: ''
               description_teacher: "Bu derste öğrenciler, gerçek bir tohum ekerek algoritma kavramını gerçek hayat aktiviteleriyle ilişkilendirecekler. Burada amaç gerçek dünyadaki durumları çevrimiçi senaryolara dönüştürmeye başlamak veya tam tersi olarak çevrimiçi senaryoları gerçek dünyadaki durumlara çevirmektir.\\r\n"
             Learn to Drag and Drop:
-              name: Sürükleyip Bırakmayı Öğrenin
+              name: Sequencing with Drag and Drop
               description_student: ''
               description_teacher: Bu ders öğrencilere bilgisayar laboratuvarında oldukları zaman beklentinin ne olduğu hakkında bir fikir verecektir. Bilgisayar laboratuvarında sergileyecekleri davranışlar hakkında kısa bir tartışma ile başlar, daha sonra bir bilgisayar kullanarak çevrim içi bulmacaları tamamlayarak ilerleyecekler.
             'Programming: Happy Maps':
@@ -5452,7 +5452,7 @@ tr:
               description_student: ''
               description_teacher: Bu çevrimiçi bulmacalar dizisinde, öğrenciler algoritmalar, hata ayıklama ve genel bilgisayar okuryazarlığı konularında bilgi edinecekler. Angry Birds oyunundan karakterler içeren öğrenciler kuşu duvarlara veya TNT'ye çarpmadan domuza sokmak için ardışık algoritmalar geliştirecekler. Problem çözme ve eleştirel düşünme ile ek uygulama için bu aşamada hata ayıklama bulmacaları da karıştırılmıştır.
             Going Places Safely:
-              name: 'Dijital Vatandaşlık: Güvenli Yerlere Gitmek'
+              name: 'Digital Citizenship: Going Places Safely'
               description_student: ''
               description_teacher: '[r common-sense-media] ile işbirliği içinde bu ders, öğrencilerin birçok web sitesinin özel bilgi talep ettiklerini öğrenmelerine yardımcı olur ve bu tür talepleri sorumlu bir şekilde nasıl ele alacağını tartışır. Öğrenciler ayrıca çevrimiçi heyecan verici mekanlara gidebileceklerini keşfettiler ancak güvenli kalabilmek için bazı kurallara uymak zorundalar.'
             'Loops: Happy Loops':
@@ -5464,7 +5464,7 @@ tr:
               description_student: ''
               description_teacher: Building on the concept of repeating instructions from "Happy Loops," this stage will have students using loops to collect treasure more efficiently on Code.org.
             Loops in Artist:
-              name: Sanatçı- Döngüler
+              name: Sanatçıların Döngüleri
               description_student: ''
               description_teacher: Döngülere geri dönen öğrenciler, basit talimat dizilerini tekrarlayarak resim çizmeyi öğrenirler. Bir önceki takılı olan derste, bir labirentten geçip hazineyi toplamak için ilmekler kullanıldı. Burada, döngüler desenler yaratıyor. Bu aşamanın sonunda öğrencilere döngüler kullanarak kendi görüntülerini oluşturma imkanı verilecek.
             'Events: The Big Event':
@@ -5480,7 +5480,7 @@ tr:
           description_audience: 'Yaş: 4-7'
           description_short: Okumaya yeni başlayanlar için bilgisayar bilimine giriş.
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
-        courseb:
+        courseb-2017:
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Hata Ayıklama: Farkedilmeyen Hatalar'
@@ -5489,9 +5489,9 @@ tr:
             'Real-life Algorithms: Plant a Seed':
               name: 'Gerçek-yaşam Algoritmaları: Bir Tohum Ek'
             Learn to Drag and Drop:
-              name: Sürükleyip Bırakmayı Öğrenin
+              name: Sequencing with Drag and Drop
             Your Digital Footprint:
-              name: 'Dijital Vatandaşlık: Dijital Ayak İzim'
+              name: 'Digital Citizenship: My Digital Footprint'
             'Programming: My Robotic Friends':
               name: 'Programlama: Robot dostlarım'
             Programming in Maze:
@@ -5501,13 +5501,13 @@ tr:
             Loops in Collector:
               name: Toplayıcıda Döngüler
             Loops in Artist:
-              name: Sanatçı- Döngüler
+              name: Sanatçıların Döngüleri
             'Events: The Big Event':
               name: 'Olaylar: Büyük Olay'
             Events in Play Lab:
               name: Play Lab' da Olaylar
             More Programming in Maze:
-              name: Labirentte Daha Fazla Programlama
+              name: More Programming in Maze
             Programming with Rey and BB-8:
               name: Rey ve BB-8 ile programlama
           title: Kurs B
@@ -5515,10 +5515,10 @@ tr:
           description_audience: 'Yaş: 5-8'
           description_short: Okumaya yeni başlayanlar için bilgisayar bilimine giriş.
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
-        coursec:
+        coursec-2017:
           stages:
             Building a Foundation:
-              name: 'Kararlılık: Bir Yapı İnşa Etmek'
+              name: 'Persistence: Building a Foundation'
             Programming in Maze:
               name: Labirentte Programlama
             Debugging in Maze:
@@ -5528,7 +5528,7 @@ tr:
             Programming in Collector:
               name: Koleksiyoncu programlama
             Programming in Artist:
-              name: Sanatçı ile Programlama
+              name: Sanatçı Programlama
             'Loops: Getting Loopy':
               name: 'Döngüler: Loopy Başlarken'
             Loops in Maze:
@@ -5544,9 +5544,9 @@ tr:
             Screen Out the Mean:
               name: 'Digital Citizenship: Screen Out the Mean'
             Binary Bracelets:
-              name: 'Programlamanın Ötesi: Binary Bilezikleri'
+              name: 'Beyond Programming: Binary Bracelets'
             Loops in Artist:
-              name: Sanatçı- Döngüler
+              name: Sanatçıların Döngüleri
             Loops with Rey and BB-8:
               name: Rey ve BB-8 ile döngüler
           title: Kurs C
@@ -5554,88 +5554,87 @@ tr:
           description_audience: 'Yaş: 6-10'
           description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
           description: Döngüler, olaylar ve koşullar içeren programlar oluştur. İsminin baş harflerini binary kodlarına dönüştür, farklı problem çözme tekniklerini araştır ve siber zorbalığa nasıl yanıt vereceğini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
-        coursed:
+        coursed-2017:
           stages:
             Introduction:
               name: Online Bulmacalara Giriş
-              description_student: Bu ders, bu kursta ihtiyacınız olan becerilere çalışmanızı sağlayacak.
-              description_teacher: 'Bu bulmaca setinde, öğrenciler Code.org''un çevrimiçi çalışma alanına giriş (veya sınıf tecrübesine göre inceleme) ile başlayacaklar. Çalışma alanının, `Çalıştır'','' Sıfırla'', ve ''Adım'' düğmeleri gibi temel işlevselliğine işaret eden videolar olacaktır. Ayrıca bu videolarda da tartışılmıştır: Blockly bloklarını sürükleme, Blockly bloklarını silme ve Blockly bloklarını bağlama. Sonra, öğrenciler labirentte _sequencing_ ve _debug_ becerilerini uygulayacaklardır. Oradan, öğrenciler _loops_''un temellerini öğrendiğinde Koleksiyoner, Sanatçı ve Biçerdöver gibi yeni bulmaca türlerini görecekler.'
+              description_student: This lesson will give you practice in the skills you will need for this course.
+              description_teacher: 'In this set of puzzles, students will begin with an introduction (or review depending on the experience of your class) of Code.org''s online workspace. There will be videos pointing out the basic functionality of the workspace including the `Run`, `Reset`, and `Step` buttons. Also discussed in these videos: dragging Blockly blocks, deleting Blockly blocks, and connecting Blockly blocks. Next, students will practice their _sequencing_ and _debugging_ skills in maze. From there, students will see new types of puzzles like Collector, Artist, and Harvester when they learn the very basics of _loops_.'
             'Algorithms: Graph Paper Programming':
-              name: 'Algoritma: Grafik Kağıdı ile Programlama'
-              description_student: Bu derste, resim çizmesi için arkadaşınızı programlayacaksınız!
-              description_teacher: Resim çizmesi için bir başkasını programlayarak, öğrenciler kodlamanın gerçekten ne ile ilgili olduğunu anlamaya başlayacaklar. Öğrenciler kağıt üzerindeki kareleri boyamak üzere birbirlerini yönlendirerek, önceden oluşturulmuş bir resmi yeniden üretmeye gayret edeceklerdir. Eğer vaktiniz olursa, ders öğrencilerin kendi oluşturacakları resimlerle tamamlanabilir.
+              name: 'Programming: Graph Paper Programming'
+              description_student: In this lesson, you will program your friend to draw pictures!
+              description_teacher: By "programming" one another to draw pictures, students will begin to understand what coding is really about. The class will begin by having students instruct each other to color squares on graph paper in an effort to reproduce an existing picture. If there’s time, the lesson can conclude with images that the students create themselves.
             Events in Bounce:
               name: Sıçrama Olayları
-              description_student: Hiç okulda bilgisayar oyunları oynamayı dilediniz mi? Bu derste kendi oyununuzu oluşturacaksınız!
-              description_teacher: Bu çevrim içi etkinlikte, öğrenciler, olayların ne olduğunu, bilgisayarın video oyunlar gibi programlarda olayları nasıl kullandığını öğrenirler. Öğrenciler, olaylara (yön düğmelerine basmak gibi) tepki veren program yapmak için bulmacalar üzerinde çalışırlar. Bulmacanın sonunda, öğrencilerin, oyunlarında farklı hızları ve sesleri kullanabilecekleri fırsatları olacak.
+              description_student: Ever wish you could play video games in school? In this lesson, you will get to make your own!
+              description_teacher: In this online activity, students will learn what events are, and how computers use them in programs like video games. Students will work through puzzles making the program react to events (like arrow buttons being pressed.) At the end of the puzzle, students will have the opportunity to customize their game with different speeds and sounds.
             Nested Loops:
               name: İç İçe Döngüler
-              description_student: Döngüler içinde döngüler içinde döngüler. Bu ne anlama geliyor? Bu ders, size, bir döngünün içine başka bir döngüyü yerleştirdiğinizde ne olduğunu öğretecek.
-              description_teacher: Bu çevrimiçi etkinlikte, öğrenciler döngü anlayışlarını yepyeni bir seviyeye çekme fırsatına sahip olacaklar. Arı ve Bitkiler vs Zombiler ile oynayarak, öğrenciler bir döngünün başka bir döngünün içinde nasıl programlanacağını öğreneceklerdir. Ayrıca, her iki döngüde de küçük değişiklikler `Çalıştır`a tıklandığında programlarını etkileyeceğini anlamaya teşvik edilecekler.
+              description_student: Loops inside loops inside loops. What does this mean? This lesson will teach you what happens when you place a loop inside another loop.
+              description_teacher: In this online activity, students will have the opportunity to push their understanding of loops to a whole new level. Playing with the Bee and Plants vs Zombies, students will learn how to program a loop to be inside of another loop. They will also be encouraged to figure out how little changes in either loop will affect their program when they click `Run`.
             Nested Loops in Artist:
-              name: Sanatçı'da İç İçe Döngüler 
-              description_student: Daha fazla iç içe döngüler! Bu kez iç içe döngüler ile bazı HARİKA çizimler yapacaksınız.
-              description_teacher: Artık öğrenciler döngülerini nasıl katlayacaklarını bildikleri için çok güzel şeyler yaratabiliyorlar. Bu ders, öğrencilere kendi portföy hazır görüntülerini oluşturmalarına yardımcı olmak için bir dizi alıştırma yapacak.
+              name: Sanatçıların İç İçe Döngüleri
+              description_student: Here you will be using nested loops to make cool drawings to show to your family and friends.
+              description_teacher: Now that students know how to layer their loops, they can create so many beautiful things.  This lesson will take students through a series of exercises to help them create their own portfolio-ready images.
             'Algorithms: Relay Programming':
-              name: 'Algoritmalar: Röle programlama'
-              description_student: Kod ile çizimler yaptığınız kursun başını hatırlayın. Bu derste, çok benzer bir şey yapmak için bir takımla birlikte çalışacaksınız!
-              description_teacher: Bu etkinlik, "Grafik Kağıdı Programlaması" ın kısa bir incelemesi ile başlayacak ve öğrencilerin ekiplere girdikleri ve bir defada bir program yazması için birlikte çalıştıklarında, zamana karşı yarışa hızla geçecektir.
+              name: 'Debugging: Relay Programming'
+              description_student: Remember at the beginning of the course when you made drawings with code? In this lesson, you will be working with a team to do something very similar!
+              description_teacher: This activity will begin with a short review of "Graph Paper Programming," then will quickly move to a race against the clock, as students break into teams and work together to write a program one instruction at a time.
             Debugging in Bee:
               name: Arı - hata ayıklama
             While Loops in Farmer:
               name: Çiftçi Döngüleri
-              description_student: 'Döngüler kodlama için oldukça kullanışlıdır. Bu ders size yeni bir döngüyü öğretecek: süresince (while) döngüleri!'
-              description_teacher: "Öğrenciler bu dersi aldıklarında 'tekrarlama' döngülerini kullanarak çoktan pratiğe sahip olmalılar, bu yüzden şimdi işleri karıştırmanın zamanı geldi. \n\n_Döngüler_ şartlar karşılanırken komutları tekrarlamaya devam eden döngülerdir. Programcılar komutların kaç kez tekrar edilmesi gerektiğini tam olarak bilmediğinde döngüler kullanılırken, döngünün tekrarlamaya devam etmesi için hangi koşulun doğru olması gerektiğini bilir. Örneğin öğrenciler Çiftçinin deliklerini doldurmak ve kirleri kazmak için çalışacaklar. Deliklerin boyutlarını veya kir dağlarının yüksekliğini bilmeyeceklerdir, ancak öğrenciler zemini düz olmadığı sürece delikleri doldurmaya ve kiri kazmaya ihtiyaç duyacaklarını bilecektir."
+              description_student: 'Loops are so useful in coding. This lesson will teach you about a new kind of loop: while loops!'
+              description_teacher: "By the time students reach this lesson, they should already have plenty of practice using `repeat` loops, so now it's time to mix things up. \n\n_While loops_ are loops that continue to repeat commands while a condition is met. While loops are used when the programmer doesn't know the exact number of times commands need to be repeated, but does know what condition needs to be true in order for the loop to continue repeating. For example, students will be working to fill holes and dig dirt in Farmer. They will not know the size of the holes or the height of the mountains of dirt, but the students will know they need to keep filling the holes and digging the dirt as long as the ground is not flat."
             Conditionals with Cards:
               name: 'If/Else: Conditionals with Cards'
-              description_student: Yalnızca kesin şartlar altında puan kazanacağınız bir oyunu oynama zaman geldi!
-              description_teacher: "Bu ders, bir programı belirli bilgilere uyarlamak için koşulların nasıl kullanılabileceğini göstermektedir. Bir program yazarken bize lazım olan her bilgiye sahip olamayız. Bazen, kodunuz çalıştığında hangi durumun geçerli olacağını bilmeseniz de, bir durumda başka bir şeyden farklı bir şeyler yapmak isteyeceksinizdir. Koşullar, koşulların verildiği yerdir. Koşullar, bir bilgisayarın, kodunuz çalıştırıldığında her zaman doğru olan bilgiye dayalı olarak bir karar vermesine izin verir."
+              description_student: It's time to play a game where you earn points only under certain conditions!
+              description_teacher: "This lesson demonstrates how conditionals can be used to tailor a program to specific information. We don’t always have all of the information we need when writing a program. Sometimes you will want to do something different in one situation than in another, even if you don't know what situation will be true when your code runs. That is where conditionals come in. Conditionals allow a computer to make a decision, based on the information that is true any time your code is run.\n\n"
             Conditionals in Bee:
               name: Koşullar-Arı
-              description_student: 'Şimdi koşulları anladığınıza göre, nektar ve balı toplaması için arıyı programlama zamanı. '
-              description_teacher: Bu noktaya kadar öğrenciler her çalıştırıldığında aynı biçimde çalışan kod yazıyor - güvenilir, ama bu çok esnek değildir. Bu derste, sınıfınız, koşullu koşullarla kodlamaya başlayacak ve programın karşılaştığı özel koşullara bağlı olarak farklı biçimde çalışan kod yazmalarına izin verecektir.
+              description_student: 'Now that you understand conditionals, it''s time to program Bee to use them when collecting honey and nectar. '
+              description_teacher: Up until this point students have been writing code that executes exactly the same way each time it is run - reliable, but not very flexible. In this lesson, your class will begin to code with conditionals, allowing them to write code that functions differently depending on the specific conditions the program encounters.
             Conditionals & Loops in Maze:
               name: Labirentte Koşullar ve Döngüler
-              description_student: Koşulları ve döngüleri birlikte kullandığınız zaman inanılmaz şeyler yapabilirsiniz!
-              description_teacher: 'Bu derste öğrenciler iki anahtar kavramı birleştiriyor olacak: döngüler ve koşullar. Bu bulmaca seti, birden çok blok kullanan bulmaca üzerinde çalışırken oluşan anlayıştaki boşlukları dolduracaktır. Bu iki fikri getirerek, öğrenciler hem etkileyici yaratıcılığı hem de eleştirel düşünmeyi gösteren daha karmaşık bir kod oluşturacak!'
+              description_student: You can do some amazing things when you use conditionals and loops together!
+              description_teacher: 'In this lesson, students will be pairing together two key concepts: loops and conditionals. This set of puzzles bridges the gaps in understanding that occur when working on puzzles that use multiple kinds of blocks. By bringing two ideas together, students will create more complex code that shows both impressive creativity and critical thinking!'
             Conditionals & Loops in Farmer:
               name: Conditionals & Loops in Harvester
-              description_student: Hangi koşulun kullanılacağı her açık net değildir. Bu ders ne yapmanız gerektiğine karar vermenize yardımcı olacak.
-              description_teacher: Öğrenciler, süresince döngüleri (while loops) '-e kadar' döngüleri (until loops) ve 'eğer/değilse' (if / else) ifadelerine çalışacaklar. Bu blokların tamamı koşullar için kullanılır. Bu üç koşul ifadesine çalıştıktan sonra, öğrenciler, daha karmaşık ve esnek kod yazmayı öğrenecekler.
+              description_student: It's not always clear when to use each conditional.  This lesson will help you get practice deciding what to do.
+              description_teacher: Students will practice `while` loops, `until` loops, and `if / else` statements. All of these blocks use conditionals. By practicing all three, students will learn to write complex and flexible code.
             Digital Citizenship:
-              name: 'Dijital Vatandaşlık: Dijital Vatandaşlık Pratiği'
-              description_student: Bazı bilgileri çevrim içi paylaşmak güvenli değildir. Bu ders, size, güvenli ve özel bilgiler arasındaki farkı öğrenmenizde yardımcı olacak.
+              name: 'Digital Citizenship: Practicing Digital Citizenship'
+              description_student: Some information is not safe to share online. This lesson will help you learn the difference between safe and private information.
               description_teacher: |-
-                Common Sense Education’un katkıları ile bu ders öğrencilere, bazı web sitelerinin talep ettiği ya da gerektirdiği kullanıcı bilgileri hakkında eleştirel düşünmeyi öğrenmelerinde yardımcı olur. 
+                In collaboration with Common Sense Education, this lesson helps students learn to think critically about the user information that some websites request or require. Students learn the difference between private information and personal information, distinguishing what is safe and unsafe to share online.
                 
-                Öğrenciler, özel bilgi ve kişisel bilgi arasındaki farkı, çevrimiçi paylaşmak için neyin güvenli ya da neyin güvensiz olduğunu ayırt etmeyi öğrenirler. 
-                Öğrenciler ayrıca, nasıl iyi dijital vatandaş olunacağına öğrenmeye bir adım olarak, çevrimdışı ve çevrimiçi topluluklara karşı sorumluluk sahibi olmanın ve saygılı olmanın ne anlama geldiğini keşfedecekler.
+                Students will also explore what it means to be responsible and respectful to their offline and online communities as a step toward learning how to be good digital citizens.
             Build a Play Lab Game:
               name: Bir Play Lab Oyunu Oluştur
-              description_student: Bu ders, kendi bilgisayar oyununu oluşturma sürecinde sana yol gösterecek.
-              description_teacher: Bu çevrimiçi etkinlikte, öğrenciler, Play Lab'da etkinliklerin nasıl kullanılacağını öğrenmek ve öğrendikleri bütün kodlama becerilerini hareketli bir oyun oluşturmak amacıyla uygulamak için fırsat bulacak. Yaratıcı olma ve Play Lab'da bir oyun yapma zamanı!
+              description_student: This lesson will guide you through making your very own video game.
+              description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a game in Play Lab!
             'Unplugged: Binary':
-              name: 'Bağımsız: İkili Taban (Binary)'
-              description_student: 'Bilgisayarların açma ve kapama gibi basit fikirleri kullanarak resimleri nasıl sakladıklarını öğrenin. '
-              description_teacher: Birçok kişi ikili dosyayı tamamen sıfırlar ve sıfırlar olarak düşünse de, öğrencilere bilginin çeşitli ikili seçeneklerle temsil edilebileceği fikri tanıtılacaktır. Bu ders, bu konsepti bir adım daha ileri götürüyor, çünkü bir bilgisayarın (görüntüler ve renkler gibi) daha karmaşık bilgileri nasıl ikili olarak depolayabileceğini de gösteriyor.
+              name: 'Beyond Programming: Binary Images'
+              description_student: 'Learn how computers store pictures using simple ideas like on and off. '
+              description_teacher: Though many people think of binary as strictly zeros and ones, students will be introduced to the idea that information can be represented in a variety of binary options. This lesson takes that concept one step further as it illustrates how a computer can store even more complex information (such as images and colors) in binary, as well.
             Artist Binary:
-              name: Sanaçtı İkili Taban
-              description_student: Pikselleri açmak ve kapatmak için yalnızca komutlar kullanarak ikili bir resim oluşturmak için kendi sanatçınızı yönlendirin.
-              description_teacher: İkili sistem, bilgisayar dünyasında son derece önemlidir. Bilgisayarların çoğu bugün her türlü bilgiyi ikili biçimde saklarlar. Bu ders, bir şeyi gerçek hayattan nasıl alabileceğinizi göstermekte ve onu bir dizi açık ve kapalı alana çevirmek için yardımcı olmaktadır. Öğrenciler 0'ları ve 1'leri kapalı ve açığa (veya siyahlar ve beyazlar) çevirerek ikili görüntüler oluşturacaklardır.
+              name: Binary in Artist
+              description_student: Direct your own artist to create a binary image using only commands to turn pixels on and off.
+              description_teacher: Binary is extremely important in the world of computers. The majority of computers today store all sorts of information in binary form. This lesson helps demonstrate how it is possible to take something from real life and translate it into a series of ons and offs. Students will build binary images in Artist by translating 0s and 1s to offs and ons (or blacks and whites).
             Nested Loops Project in Artist:
               name: Frozen'da İç İçe Döngüler
-              description_student: Daha iç içe döngüler! Bu sefer, iç içe geçmiş döngülerle biraz İLGİNÇ çizimler yapacaksınız.
-              description_teacher: Şimdi, öğrenciler döngülerini nasıl kademe kademe yapacaklarını bildiklerine göre çok güzel şeyler oluşturabilirler. Bu ders, öğrencilerin kendi hazır resim dosyalarını oluşturmaları için bir dizi alıştırma yapmalarını sağlayacak.
+              description_student: More nested loops! This time, you get to make some AMAZING drawing with nested loops.
+              description_teacher: Students will create intricate designs using Artist in today's set of puzzles. By continuing to practice nested loops with new goals, students will see more uses of loops in general. This set of puzzles also offers a lot more potential for creativity with an opportunity for students to create their own design at the end of the stage.
             Debugging in Collector:
               name: Toplayıcıda Hata Ayıklama
-              description_student: Kodlama esnasında hiç problem yaşadınız mı? Bu ders, size, hata ayıklamanın sırlarını öğretecek. Hata ayıklama, kodunuzdaki hataları bulma ve düzeltme sürecidir.
-              description_teacher: Bu çevirim içi etkinlikte, öğrenciler 'toplayıcı' ortamında hata ayıklama üzerinde çalışacaklar. Öğrenciler, basit algoritmalar, döngüler ve iç içe döngüler ile bulmacaları çözmek için kod okuma ve düzenleme alıştırması yapacaklar.
+              description_student: Have you ever run into problems while coding? In this lesson, you will learn about the secrets of debugging. Debugging is the process of finding and fixing problems in your code.
+              description_teacher: In this online activity, students will practice debugging in the "collector" environment. Students will get to practice reading and editing code to fix puzzles with simple algorithms, loops and nested loops.
           title: Kurs D
           assignment_family_title: Kurs D
-          description_audience: 'Yaş: 7-11'
+          description_audience: 'Ages: 7-11'
           description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
-          description: Algoritmalar, iç içe geçmiş döngüler, döngüler, koşullar ve olaylar da dahil olmak üzere yeni kodlama kavramlarını öğreniniz. Paylaşabileceğiniz kendi oyununuzu ya da hikayenizi oluşturmadan önce dijital vatandaşlığa ilişkin bir giriş yapınız.
-        coursee:
+          description: Learn new coding concepts including algorithms, nested loops, while loops, conditionals, and events. Get an introduction to digital citizenship before   creating your very own game or story that you can share.
+        coursee-2017:
           stages:
             'Algorithms: Tangrams':
               name: 'Algoritmalar: Tangramlar'
@@ -5682,17 +5681,17 @@ tr:
             Revise Your Project:
               name: Projenizi Gözden Geçirme
             Presentation Your Project:
-              name: Projenizin Sunumu
+              name: Presentation Your Project
             'Algorithms: Dice Race':
               name: 'Algoritmalar: Zar yarışı'
               description_student: Bilgisayarın bakış açısına göre bu derste algoritmalar üzerinden bir oyunun nasıl tanımlandığını öğrenin.
               description_teacher: Bu derste, öğrenciler Zar Yarışı oyununu oynayarak, algoritma kavramını gerçek hayat etkinlikleri ile ilişkilendirecekler. Buradaki amaç, gerçek dünyadaki durumları çevrim içi senaryolara dönüştürme veya bunun tam tersini yapma becerileri oluşturmaya başlamak.
             Conditionals:
-              name: Çiftçi'de Koşullar
+              name: Conditionals in Farmer
               description_student: Bu zorlu ve eğlenceli seride, kesin koşullar altında bilgisayara ne yapacağını söyleyeceksin.
               description_teacher: Bu ders öğrencilere `while` döngüleri ve` if / else` ifadeleri tanıtır. _ While loops_, koşullar doğru olduğu sürece komutları yinelemeye devam eden döngülerdir. Döngüler, programcı tam olarak kaç kez komutun bilmediğini bilmediğinde kullanılır; ama programcı döngülerin döngüye devam edebilmesi için hangi koşulun doğru olması gerektiğini bilir. `If / Else` ifadeleri, bütün bölümleri sadece bir şey doğruysa çalıştırarak programlamada esneklik sağlar, aksi halde bu döngüler başka bir şey çalıştırır.
             Private and Personal Information:
-              name: 'Özel ve Kişisel Bilgiler'
+              name: 'Digital Citizenship: Private and Personal Information'
               description_student: İnternet eğlenceli ve heyecanlıdır, fakat güvende kalmak da önemlidir. Bu ders size, paylaşmanın güvenli olduğu bilgi ile özel bilgi arasındaki farkı öğretecek.
               description_teacher: |-
                 Common Sense Education tarafından geliştirilen bu ders, çevrimiçi paylaşım için güvenli olmayan bilgi ile güvenli olan bilgi arasındaki fark ile ilgilidir.
@@ -5716,7 +5715,7 @@ tr:
               description_teacher: Çevrim içi fonksiyonlarla ilgili alıştırmanın ikinci kısmında, öğrenciler, karmaşık yollarda gezinecekler, bol miktarda nektar toplayacaklar ve bir sürü bal yapacaklar.
             Functions in Farmer:
               name: Çiftçi fonksiyonları
-              description_student: Çiftçiye hasadında yardımcı olduğunuz gibi fonksiyonlar da sizi işlerin çoğunda kurtarır!
+              description_student: Functions will save you lots of work as you help the farmer with her harvest!
               description_teacher: Students have practiced creating impressive designs in Artist and navigating mazes in Bee, but today they will use functions to harvest crops in Farmer. This lesson will push students to use functions in the new ways by combining them with `while` loops and `if / else` statements.
             Determine the Concept:
               name: Kavramı Belirme
@@ -5731,11 +5730,11 @@ tr:
               description_student: Göstermeye hazır ol! Bitirdiğiniz projeyi akranlarınıza sunma zaman.
               description_teacher: Dört ders boyunca, öğrenciler, programlama ortamı olarak Play Lab ya da Sanatçı' yı kullanarak kendi tasarımlarını kullandıkları bir projeyi oluşturacaklar. Sonunda, öğrenciler, bitirdikleri çalışmalarını kendi akranlarıyla ya da sevdikleriyle özel bir bağlantıyla paylaşabilecekler. Sürecin dört aşamasının tamamının ders rehberi, proje sürecinin ilk aşamasından bulunabilir. [burada](https://curriculum.code.org/csf/coursee/12/).
             Internet:
-              name: 'Programlamanın Ötesinde: İnternet'
+              name: 'Beyond Programming: The Internet'
               description_student: İnternet üzerinde bilginin nasıl seyahat ettiğini hiç merak ettiniz mi? Bu sihir değil! Bu ders, size, internetin nasıl çalıştığının temellerini öğretecek.
               description_teacher: Birçok kişi interneti her gün kullanıyor olmasına rağmen, çok fazla insan nasıl çalıştığını bilmiyor. Bu derste, öğrenciler bağlantıları, URL'ler, IP Adresleri ve DNS hakkında bilgi edinecek ve internet üzerinden akmaya devam edeceklerini iddia edeceklerdir.
             Crowdsourcing:
-              name: 'Programlamanın Ötesinde: Kitle'
+              name: 'Beyond Programming: Crowdsourcing'
               description_student: Bu ders size kitle hakkında, bir ekiple bir proje oluşturma sürecini öğretecektir.
               description_teacher: Bilgisayar bilimlerinde, bazı büyük, korkutucu problemler ile karşı karşıyayız. Büyük asal sayı bulma ya da DNA dizilimi yapma gibi zorlukların birey olarak yapılması neredeyse imkansızdır. Başkalarının gücünü eklemek bu görevleri yönetilebilir yapar. Bu ders öğrencilere, ekip çalışmasının bilgisayar bilimleri endüstrisinde nasıl faydalı olabileceğini gösterecektir.
             'Programming: My Robotic Friends':
@@ -5747,11 +5746,11 @@ tr:
             Debugging with Scrat:
               name: Debugging with Scrat
             Programming in Artist:
-              name: Sanatçı ile Programlama
+              name: Sanatçı Programlama
             'Loops: My Loopy Robotic Friends':
               name: 'Döngüler: Loopy robot dostlarım'
             Loops in Artist:
-              name: Sanatçı- Döngüler
+              name: Sanatçıların Döngüleri
             Nested Loops in Bee/Zombie:
               name: Nested Loops in Bee/Zombie
             Nested Loops with Frozen:
@@ -5765,7 +5764,7 @@ tr:
           description_audience: '8-12 yaş grubu'
           description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
           description: Algoritmalar, döngüler, koşullar ve olaylarla kodlamaya başlayın ve daha sonra fonksiyonlara geçin. Bu kursun ikinci kısmında, arkadaşlarınız ve ailenizle paylaşabileceğiniz bir bitirme projesi tasarlayın ve oluşturun.
-        coursef:
+        coursef-2017:
           stages:
             'Algorithms: Tangrams':
               name: 'Algoritmalar: Tangramlar'
@@ -5776,11 +5775,11 @@ tr:
               description_student: Bu ders, size, bu kursta öğreneceğiniz bazı şaşırtıcı şeyler hakkında kısa bilgiler verecek!
               description_teacher: 'Bu derste, kursun sonraki bölümlerinde yer alan daha karmaşık kavramlara, öğrencileri hazırlamak için diziler, döngüler ve iç içe döngüler anlatılır. Bu ''ramp up'' dersi, sınıfınızdaki uzmanlar ve yeni başlayanlar arasındaki oyun alanını dengeler. '
             The Power of Words:
-              name: 'Kelimelerin gücü'
+              name: 'Digital Citizenship: The Power of Words'
               description_student: Zorbalık hiçbir zaman iyi değildir. Bu ders, size, çevrimiçi ortamda neyi söylemenin doğru ve neyi söylemenin yanlış olduğunu öğretecektir.
               description_teacher: "Öğrenciler, en sevdikleri web sitelerinde eğlenirken, diğer çocukların onları kızdıracak, incitecek, üzecek ya da korkutacak mesajları ile karşılaşacaklarını düşünürler. Siber zorbalıkla başa çıkmanın yollarını ve çevrimiçi rahatsız edici dil karşısında nasıl cevap vereceklerini keşfederler. \n\nÖğrenciler, iletişim için kullandıkları teknolojinin tüm araçlarını tartışırlar ve yüz yüze ve çevrimiçi iletişimin benzerlik ve farklılıklarını keşfederler. Daha sonra öğrenciler, siber zorbalığa tepki verme yöntemleri hakkında beyin fırtınası yaparlar. "
             Ice Age Play Lab:
-              name: Buz Devri Oyun Laboratuvarı
+              name: Events in Ice Age
               description_student: En sevdiğiniz video oyunu dününün. Nasıl yapıldığını hiç merak ettiniz mi? Bu bulmacalarda, Ice Age' deki kendi arkadaşlarınızla kendi video oyununuzu geliştireceksiniz!
               description_teacher: Bu derste, öğrencilere Buz Devri'nden karakterler içeren bir hikaye anlatılıyor. Öğrenciler olaylar ve döngülerle karakterlerin ekranda hareket etmesini sağlamak için çalışacak ve rehberli seviyelerin ardından kendi oyunlarını veya hikayelerini oluşturma fırsatı bulacaklar.
             Envelope Variables:
@@ -5813,8 +5812,8 @@ tr:
               description_teacher: Bilgisayar bilimi dünyasındaki en görkemli yapılardan biri de fonksiyondur. Fonksiyonlar (bazen prosedürler denir), daha büyük programınızın içinde ve üzerinde kullanabileceğiniz mini programlardır. Bu ders, öğrencilerin kod bölümlerini işlevlere nasıl bağdaştırmanın neden bu kadar yararlı bir uygulama olduğunu sezgisel olarak anlamalarına, ve kod bölümleri biraz farklı olsa bile bu yapıları nasıl kullanabileceklerine yardımcı olacaktır.
             Conditionals and Functions in Bee:
               name: Koşullar ve fonksiyonlar- Arı
-              description_student: Arının tekrar yardımına ihtiyacı var! Burada, nektarı elde etmek ve bal yapmak için işlevler kullanıyor olacaksınız!
-              description_teacher: 'Bu ders, öğrencilere gelecekteki derslerde parametreleri dahil etmeleri için yol hazırlayarak gelişmiş "modal" fonksiyon düzenleyicimizi kullanarak basit fonksiyonları nasıl oluşturacaklarını öğretir. '
+              description_student: The bee needs your help again! Here you will be using functions to get nectar and make honey!
+              description_teacher: 'This lesson teaches students how to create simple functions using our sophisticated “modal” function editor, preparing the way for them to incorporate parameters in future lessons. '
             Functions with Parameters in Artist:
               name: Sanatçı Parametrelerinde Fonksiyonlar
               description_student: Programlama yapacağınız parmaklarınızı hazırlayın. Bu bulmacalarda, parametrelerle fonksiyonları kullanarak, Aktörlerde etkileyici çizimler yapacaksınız.
@@ -5840,7 +5839,7 @@ tr:
               description_student: Roma bir günde inşa edilmedi, sizin projeniz de bir günde bitmemeli. Projenizi olabilecek en iyi hale getirmek için, projenizi gözden geçirmeye ve düzenlemeye zaman ayırın.
               description_teacher: Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. Now that the projects are built, students are given the opportunity to get feedback from peers and revise their projects. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).
             Presentation Your Project:
-              name: Projenizin Sunumu
+              name: Presentation Your Project
             Present Your Project:
               name: Projeni sun
               description_student: Çalışmanızı gösterme zamanı! Burada, akranlarınıza, muhteşem projenizi sunacaksınız.
@@ -5860,7 +5859,7 @@ tr:
             Debugging with Scrat:
               name: Debugging with Scrat
             Programming in Artist:
-              name: Sanatçı ile Programlama
+              name: Sanatçı Programlama
             'Loops: My Loopy Robotic Friends':
               name: 'Döngüler: Loopy robot dostlarım'
             Loops in Artist:
@@ -6098,18 +6097,18 @@ tr:
           stages:
             TTS:
               name: TTS
-        express:
+        express-2017:
           stages:
             'Programming Unplugged: My Robotic Friends':
               name: 'Programming Unplugged: My Robotic Friends'
             Introduction:
               name: Giriş
             'Algorithms: Graph Paper Programming':
-              name: 'Algoritma: Grafik Kağıdı ile Programlama'
+              name: 'Programming: Graph Paper Programming'
             'Algorithms: Relay Programming':
-              name: 'Algoritmalar: Röle programlama'
+              name: 'Debugging: Relay Programming'
             Debugging in Collector:
-              name: Hata ayıklamaya giriş
+              name: Introduction to Debugging
             'Loops: My Loopy Robotic Friends':
               name: 'Döngüler: Loopy robot dostlarım'
             Loops in Artist:
@@ -6173,9 +6172,9 @@ tr:
             Nested Loops Project in Frozen:
               name: Frozen'da İç İçe Döngüler
             'How it Works: The Internet':
-              name: 'Programlamanın Ötesinde: İnternet'
+              name: 'Beyond Programming: The Internet'
             'Common Sense Education: Digital Citizenship':
-              name: 'Dijital Vatandaşlık: Dijital Vatandaşlık Pratiği'
+              name: 'Digital Citizenship: Practicing Digital Citizenship'
             'Common Sense Education: Screen Out the Mean':
               name: 'Digital Citizenship: Screen Out the Mean'
             Events in Star Wars:
@@ -6205,7 +6204,7 @@ tr:
           description_audience: 'Yaş: 9-18'
           description_short: 'Bilgisayar bilimlerine giriş: ilköğretim müfredatımızın en iyilerini daha eski öğrenciler için birleştirir.'
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
-        pre-express:
+        pre-express-2017:
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Hata Ayıklama: Farkedilmeyen Hatalar'
@@ -6214,9 +6213,9 @@ tr:
             'Real-life Algorithms: Plant a Seed':
               name: 'Gerçek-yaşam Algoritmaları: Bir Tohum Ek'
             Learn to Drag and Drop:
-              name: Sürükleyip Bırakmayı Öğrenin
+              name: Sequencing with Drag and Drop
             'Online Safety: Your Digital Footprint':
-              name: 'Dijital Vatandaşlık: Dijital Ayak İzim'
+              name: 'Digital Citizenship: My Digital Footprint'
             'Programming: My Robotic Friends':
               name: 'Programlama: Robot dostlarım'
             Programming in Maze:

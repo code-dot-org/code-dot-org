@@ -3,69 +3,69 @@ pt-BR:
   data:
     function_names:
       x: x
-      details: details
-      draw eyebrow: draw eyebrow
-      draw pupil: draw pupil
+      details: detalhes
+      draw eyebrow: Desenhe a sobrancelha
+      draw pupil: Desenhe a pupila
       draw a circle: desenhar um círculo
-      draw a car: draw a car
-      draw_rect: draw_rect
-      draw square: draw square
-      jump to controller top left: jump to controller top left
-      jump to middle: jump to middle
-      draw a button: draw a button
-      draw cord: draw cord
-      draw R pad: draw R pad
-      draw left leg: draw left leg
-      draw right leg: draw right leg
-      draw body and arms: draw body and arms
-      draw a head: draw a head
-      draw sitting stick figure: draw sitting stick figure
-      draw head: draw head
-      draw arms: draw arms
-      jump to neck: jump to neck
-      draw O: draw O
-      draw D: draw D
-      draw E: draw E
+      draw a car: Desenhe um carro
+      draw_rect: Desenhe um retângulo.
+      draw square: Desenhe um quadrado
+      jump to controller top left: Vá para o controle esquerdo superior
+      jump to middle: Vá para o meio
+      draw a button: Desenhe um botão
+      draw cord: Desenhe um cabo
+      draw R pad: Desenhe uma seta para a direta
+      draw left leg: Desenhe ume perna esquerda
+      draw right leg: Desenhe uma perna direita
+      draw body and arms: Desenhe um corpo com braços.
+      draw a head: Desenhe uma cabeça
+      draw sitting stick figure: Desenhe um boneco de palito sentado.
+      draw head: Desenhe uma cabeça
+      draw arms: Desenhe braços
+      jump to neck: Vá para o pescoço
+      draw O: Desenhe um O
+      draw D: Desenhe um D
+      draw E: Desenhe um E
       draw ear stems: draw ear stems
-      big gear: big gear
-      small gear: small gear
+      big gear: Engrenagem grande
+      small gear: Engrenagem pequena
       draw a hexagon: desenhe um hexágono
       draw a flower: desenhe uma flor
       draw a square: desenhar um quadrado
       draw a snowflake: desenhe um floco de neve
-      draw 3 hexagons: draw 3 hexagons
-      draw 4 hexagons: draw 4 hexagons
-      draw 5 hexagons: draw 5 hexagons
-      get 2 nectar: get 2 nectar
-      collect purple nectar: collect purple nectar
-      get 5: get 5
-      move and get nectar: move and get nectar
-      move and get 4: move and get 4
-      get 7 nectar make 7 honey: get 7 nectar make 7 honey
-      get 7 make 7: get 7 make 7
-      get 7: get 7
-      move and get 3: move and get 3
+      draw 3 hexagons: desenhe 3 hexágonos
+      draw 4 hexagons: desenhe 4 hexágonos
+      draw 5 hexagons: desenhe 5 hexágonos
+      get 2 nectar: Obtenha 2 néctares
+      collect purple nectar: Colete o néctar roxo
+      get 5: Colete 5
+      move and get nectar: Mova e colete o néctar
+      move and get 4: Mova e colete 4
+      get 7 nectar make 7 honey: Colete 7 néctares e fabrique 7 potes de mel
+      get 7 make 7: Colete 7 e faça 7
+      get 7: Colete 7
+      move and get 3: Mova e colete 3
       draw a tree: desenhe uma árvore
-      draw triangle: draw triangle
-      draw circle: draw circle
-      draw goal: draw goal
-      graph: graph
-      draw waves: draw waves
-      draw a wave: draw a wave
-      draw a small triangle: draw a small triangle
-      draw a medium triangle: draw a medium triangle
-      draw a large triangle: draw a large triangle
-      draw a big triangle: draw a big triangle
+      draw triangle: desenhe um triângulo
+      draw circle: desenhe um círculo
+      draw goal: Desenhe um gol
+      graph: Gráfico
+      draw waves: Desenhe ondas
+      draw a wave: Desenhe uma onda
+      draw a small triangle: Desenhe um triângulo pequeno
+      draw a medium triangle: Desenhe um triângulo médio
+      draw a large triangle: Desenhe um triângulo grande
+      draw a big triangle: Desenhe um triângulo grande
       draw a triangle: desenhar um triângulo
       draw a house: desenhe uma casa
-      check purple flower: check purple flower
-      check flower make honey: check flower make honey
-      get nectar or make honey: get nectar or make honey
-      make 3 honey: make 3 honey
-      get 5 nectar: get 5 nectar
-      make all honey: make all honey
+      check purple flower: Analise a flor roxa
+      check flower make honey: Analise a flor que produz mel
+      get nectar or make honey: Colete néctar ou fabrique mel
+      make 3 honey: Faça 3 potes de mel
+      get 5 nectar: Obtenha 3 néctares
+      make all honey: Produza todo mel
       draw a star: desenhe uma estrela
-      game has been won: game has been won
+      game has been won: O jogo foi vencido
       draw: draw
       draw bit: draw bit
       draw a polygon: draw a polygon
@@ -89,19 +89,19 @@ pt-BR:
       draw_image: draw_image
       witch ending: witch ending
       story: story
-      starting path: starting path
+      starting path: Início
       jump: pule
-      patrol: patrol
-      fill in bg: fill in bg
-      draw grid1: draw grid1
-      draw lines: draw lines
-      Draw a Square Line: Draw a Square Line
-      Draw a triangle: Draw a triangle
-      Draw a Cube: Draw a Cube
-      draw a cube: draw a cube
-      draw an octagon 20: draw an octagon 20
-      Draw a square: Draw a square
-      cube: cube
+      patrol: Patrulha
+      fill in bg: Preencha o fundo
+      draw grid1: Desenhe uma grade
+      draw lines: Desenhe linhas
+      Draw a Square Line: Desenhe um quadrado
+      Draw a triangle: Desenhe um triângulo
+      Draw a Cube: Desenhe um cubo
+      draw a cube: Desenhe um cubo
+      draw an octagon 20: Desenhe um octôgono 20
+      Draw a square: Desenhe um quadrado
+      cube: Cubo
       do something2: do something2
       jump upper right: jump upper right
       draw a line of  squares: draw a line of  squares

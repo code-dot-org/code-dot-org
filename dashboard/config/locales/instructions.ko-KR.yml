@@ -1413,7 +1413,7 @@ ko:
         instructions) "
       CSP U4 - Objects - createObject_instruction: "Create an object with at least\n5
         values including at least one string and one number. (Click to see full\ninstructions) "
-      CSP student contact info_instruction: Please enter your email address.
+      CSP student contact info_instruction: 이메일 주소를 입력해주세요.
       CSPU5 Add Screens to Chaser Game_instruction: |-
         Recreate the game from the "Chaser
         Game" with a Welcome Screen and Game Over Screen. (Click to see full instructions.)
@@ -3490,7 +3490,7 @@ ko:
       Course 4 Variables Assessment_instruction: |-
         한 변의 크기를 지정하기 위한 변수를 사용해 이 이미지를 만들어보세요.
         각 선의 길이는 50 픽셀입니다.
-      Course1BeePuzzle12_instruction: Get three nectars and then make two honey
+      Course1BeePuzzle12_instruction: 꽃꿀을 3개 모은 후, 2개의 꿀을 만들어보세요.
       Course1MazeAssessment1_instruction: "This is a test!\r\nMove one way, then another
         to get me to the pig"
       Course1MazeAssessment2_instruction: "This is a test!\r\nMove one way, then another
@@ -4107,7 +4107,7 @@ ko:
         꿀을 만들기 위해서, 꽃꿀을 모으세요.
         이동하기 위해서 반복 구조들을 사용하세요!
       K-1 Bee Loops Assessment 2_instruction: 반복 구조들을 사용해서 꽃꿀을 모아 꿀을 만들어 주세요!
-      K-1 Bee Puzzle 12_instruction: Get three nectars and then make two honey
+      K-1 Bee Puzzle 12_instruction: 꽃꿀을 3개 모은 후, 2개의 꿀을 만들어보세요.
       K-1 Building a Foundation Assessment_instruction: 3단계 피라미드를 만들어보세요. 한 조각 씩 그려
         완성해보세요!
       K-1 Maze 10_instruction: 'TNT를 피해 돼지에게 이동시켜주세요! '

@@ -1525,7 +1525,7 @@ ka:
       Dance Party 6_instruction: Use the `stops everything` block to make each alien stop moving when it is clicked.
       Dance Party 7 - Validated_instruction: Add a new bell sprite called `myBell` that makes all the aliens start doing the same dance move when it's clicked.
       Dance Party 7_instruction: Add a new bell sprite called `myBell` that makes all the aliens start doing the same dance move when it's clicked.
-      Dance Party Freeplay_instruction: Now create your own alien disco!
+      Dance Party Freeplay_instruction: ახლა შექმენით საკუთარი უცხოპლანეტელთა დისკო!
       Dance Party Predict_instruction: 'What do you think will happen when you click on the alien?  '
       ECSPD Binary Odometer_instruction: This is another resource you could use with your students.
       Eval Booleans 1_instruction: Boolean operators (like >, <, =) allow us to compare different values, returning either true or false. Click "Run" to see how this expression evaluates.
@@ -3292,7 +3292,7 @@ ka:
       courseA_playLab_events6_instruction: Make this more interesting by changing the background and playing a random sound when Jorge is clicked.
       courseA_playLab_events6_2018_instruction: Make this more interesting by changing the background and playing a random sound when Jorge is clicked.
       courseA_playLab_events7_instruction: Add anything you want to this game.  Can you make the dinosaur disappear when Jorge runs into him?
-      courseA_playLab_events7_2018_instruction: Add anything you want to this game.  Can you make the dinosaur disappear when Jorge runs into him?
+      courseA_playLab_events7_2018_instruction: "*Freeplay:* Add anything you want to this game."
       courseA_playlab_events_challenge1_instruction: "\"სად იმალებიან ჩემი მეგობრები?\nშეგიძლიათ დაწეროთ კოდი, რათა დამანახოთ ჩემი დანარჩენი მეგობრები?\""
       courseA_playlab_events_challenge1_2018_instruction: "\"სად იმალებიან ჩემი მეგობრები?\nშეგიძლიათ დაწეროთ კოდი, რათა დამანახოთ ჩემი დანარჩენი მეგობრები?\""
       courseA_playlab_events_challenge2_instruction: '"მოდით მოვაწყოთ წვეულება! გააკეთებინეთ ჩემს მეგობრებს რამე, როდესაც დააწკაპებთ ან თითით დააჭერთ მათ."'

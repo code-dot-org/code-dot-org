@@ -173,8 +173,8 @@ ja:
       fix right corner: fix right corner
       fix left corner: fix left corner
       make segment: make segment
-      fix long path: fix long path
-      fix short path: fix short path
+      fix long path: 長い道を直す
+      fix short path: 短い道を直す
       place 3 tracks: place 3 tracks
       clear right corner: clear right corner
       clear left corner: clear left corner

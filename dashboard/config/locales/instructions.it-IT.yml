@@ -533,7 +533,7 @@ it:
       20hr_farmer_stage9_7_instruction: 'Wow, ho trovato una buca davvero profonda!
         Non so quante palate di terra saranno necessarie per riempirla completamente.
         Riesci a scrivere un programma che la riempie fino a quando il terreno è livellato?
-        Suggerimento: usa le opzioni nel menu a discesa del blocco "mentre".'
+        Suggerimento: usa le opzioni nel menù a discesa del blocco "mentre".'
       20hr_farmer_stage9_8_instruction: Aiutami a riempire la buca alla fine del mio
         terreno, utilizzando il minor numero possibile di blocchi.
       20hr_farmer_stage9_9_instruction: Fammi rimuovere tutti questi mucchi di terra.
@@ -985,7 +985,7 @@ it:
       4-5 While Loops 4_instruction: |-
         Wow, ho trovato una buca davvero profonda! Non so quante palate di terra saranno necessarie per riempirla completamente. Riesci a scrivere un programma che la riempie fino a quando il terreno è livellato?<br>
         <br>
-        <b>Suggerimento</b>: usa le opzioni nel menu a discesa del blocco `mentre`.
+        <b>Suggerimento</b>: usa le opzioni nel menù a discesa del blocco `mentre`.
       4-5 While Loops 5_instruction: Wow, ora ci sono due buche davvero profonde!
         Riesci a scrivere un programma che le riempie entrambe fino a quando il terreno
         è livellato?
@@ -3342,14 +3342,14 @@ it:
       Course 4 Artist Binary 2_instruction: Qual è di queste stringhe binarie quella
         che devi ripetere 8 volte per disegnare questa figura?
       Course 4 Artist Binary 3_instruction: Riesci a disegnare questa figura inserendo
-        in un ciclo una stringa binaria di 3 cifre?
+        in un ciclo una sequenza binaria di 3 cifre?
       Course 4 Artist Binary 4_instruction: Ogni stringa binaria rappresenta una riga
         di questa figura. Le stringhe binarie che trovi già pronte disegnano una faccina
         triste. Riesci, sistemando diversamente i blocchi, a disegnare una faccina
         allegra invece che triste?
-      Course 4 Artist Binary 5_instruction: Quale stringa binaria di 6 cifre, ripetuta
+      Course 4 Artist Binary 5_instruction: Quale sequenza binaria di 6 cifre, ripetuta
         11 volte, ti farà disegnare questa figura?
-      Course 4 Artist Binary 6_instruction: Quale è la più piccola stringa binaria
+      Course 4 Artist Binary 6_instruction: Quale è la più piccola sequenza binaria
         che puoi inserire in un ciclo per disegnare questa figura?
       Course 4 Artist Binary 7_instruction: Completa questo disegno.
       Course 4 Artist Binary Free Play 2_instruction: 'Tempo di giocare: hai a tua
@@ -4169,19 +4169,18 @@ it:
       Crack a Caesar Cipher_2018_instruction: Istruzioni
       D_Frozen_nested3_instruction: Ora fai ruotare queste riga di figure!
       D_Frozen_nested4_instruction: È ora di sovrapporre queste forme!
-      D_Frozen_nested5_instruction: Play with the snowflakes!
+      D_Frozen_nested5_instruction: Gioca con i fiocchi di neve!
       D_Frozen_nested6_instruction: |-
         Draw a stair-step pattern that uses turns between
         75 and 105 degrees.
-      D_Frozen_nested7_instruction: |-
-        Now, turn around 180 degrees and draw the stair
-        pattern again!
-      D_Frozen_nested8_instruction: Spin that shape around 5 or 6 times in a circle.
-      D_Frozen_nested9_instruction: "Try playing around with what you've created.
-        Draw whatever you like!\r\n- What happens if you use two different angles
-        in your stair step pattern?\r\n- What happens if you make your diamond pattern
-        longer or shorter?\r\n- What does it look like to draw two snowflakes on top
-        of one another?"
+      D_Frozen_nested7_instruction: Ora, gira intorno 180 gradi e disegna lo schema
+        di una scala di nuovo!
+      D_Frozen_nested8_instruction: Fai ruotare questa figura 5 o 6 volte in un cerchio.
+      D_Frozen_nested9_instruction: |-
+        Prova a giocare con ciò che hai creato. Disegna quello che vuoi!
+        - Cosa succede se usi due differenti angoli nel tuo schema di gradini?
+        - Cosa succede se fai diventare il tuo rombo più lungo o più corto?
+        - Cosa sembra se disegni due fiocchi di neve uno sopra l'altro?
       Dance Party 1-validated_instruction: 'What do you think will happen when you
         click on the alien?  '
       Dance Party 2_instruction: Change the behavior inside the `___ begins ___` block
@@ -6166,9 +6165,8 @@ it:
         </xml>
 
         We also support Blockly XML as an inline element like so: <xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">100</title></block></xml>. The difference in input format being that this one is embedded within a paragraph, whereas the previous one is in a text block of its own. The difference in output is comparable.
-      Test embedded K1 Blockly in instructions_instruction: |-
-        Use three `move west`
-        blocks and one `pick corn` block to solve this puzzle.
+      Test embedded K1 Blockly in instructions_instruction: Usa tre blocchi `Vai verso
+        ovest` e un blocco `raccogli grano` per risolvere questo puzzle.
       Test of comment block_instruction: Drag out the subgoal label block you want.
       Testing Quantum Farmer_instruction: |-
         Wow, ho trovato una buca davvero profonda! Non so quante palate di terra saranno necessarie per riempirla completamente. Riesci a scrivere un programma che la riempie fino a quando il terreno è livellato?<br>
@@ -8521,7 +8519,7 @@ it:
         Attacca un blocco ad ogni blocco verde `quando si preme sulla freccia verso sinistra` e `quando si preme sulla freccia verso destra` e premi "Esegui".<br>
         Poi sposta la racchetta usando entrambe le frecce orizzontali per raggiungere le due bandierine.
       bounce_2_sports_instruction: |-
-        Ora ci sono due bandiere! Attacca un blocco ad ogni blocco verde `quando si preme sulla freccia verso sinistra` e `quando si preme sulla freccia verso destra` e premi "Esegui".<br>
+        Ora ci sono due bandierine! Attacca un blocco ad ogni blocco verde `quando si preme sulla freccia verso sinistra` e `quando si preme sulla freccia verso destra` e premi "Esegui".<br>
         Poi sposta il giocatore usando entrambe le frecce orizzontali per raggiungere le due bandierine.
       bounce_3_instruction: Ora fai qualcosa di simile con il blocco `quando si preme
         la freccia verso l'alto`. Poi sposta la racchetta verso la bandierina in alto.
@@ -8898,12 +8896,10 @@ it:
         proprio come ti piace!
       courseA_artist_loops_challenge2_instruction: '"Puoi aiutarmi a costruire due
         casette per gli uccelli?"'
-      courseA_artist_loops_challenge2a_instruction: |-
-        *"Help me get these three tents
-        set up!"*
-      courseA_artist_loops_challenge2a_2018_instruction: |-
-        *"Help me get these three
-        tents set up!"*
+      courseA_artist_loops_challenge2a_instruction: '*"Aiutami a montare queste tre
+        tende!"*'
+      courseA_artist_loops_challenge2a_2018_instruction: '*"Aiutami a montare queste
+        tre tende!"*'
       courseA_artist_loops_challenge3_instruction: |-
         Let's play a game! Draw as many
         X's as you can! Can you get 3 in a row?
@@ -8913,12 +8909,10 @@ it:
       courseA_bee_seq11_instruction: Raccogli tutto il nettare.
       courseA_bee_seq12_instruction: Gioca con questi blocchi e aiuta l'ape a raccogliere
         *un* nettare.
-      courseA_bee_seq13_instruction: |-
-        Use three `Move West` blocks and one `Get Nectar`
-        block.
-      courseA_bee_seq14_instruction: |-
-        Use three `Move North` blocks and one `Get
-        Nectar` block.
+      courseA_bee_seq13_instruction: Usa tre blocchi `Vai verso Ovest` e un blocco
+        `Prendi Nettare`.
+      courseA_bee_seq14_instruction: Usa tre blocchi `Vai verso Nord` e un blocco
+        `Prendi Nettare`.
       courseA_bee_seq2_instruction: Conduci l'ape verso il nettare!
       courseA_bee_seq3_instruction: Trova l'errore e correggilo!
       courseA_bee_seq4_instruction: Prova tu!
@@ -8993,9 +8987,8 @@ it:
         Grande! Ora puoi aggiungere codice liberamente!
 
         Attacca un blocco "raccogli diamante" in fondo al programma e clicca su "Esegui".
-      courseA_collector_preLoops3_instruction: |-
-        Snap two `E -->` blocks and one `get
-        treasure` block to the bottom of the program, then click "Run".
+      courseA_collector_preLoops3_instruction: Inserisci due blocchi `E -->` ed un
+        blocco `prendi il diamante` alla fine del programma, infine fai click su "Esegui".
       courseA_collector_preLoops4_instruction: Riesci a risolvere questo esercizio?
       courseA_collector_preLoops5_instruction: Raccogli 1 dei 2 diamanti per risolvere
         l'esercizio.
@@ -9006,57 +8999,46 @@ it:
       courseA_forVideoTest_artist_instruction: |-
         Use the `repeat` loop to add waves
         to the water.
-      courseA_harvester_forVideo_instruction: |-
-        Can you pick all the corn using only
-        **one** move block?
+      courseA_harvester_forVideo_instruction: Potresti raccogliere tutto il grano
+        utilizzando solo **un** blocco di movimento?
       courseA_harvester_loops1_instruction: Help the farmer pick all the corn!
       courseA_harvester_loops10_instruction: |-
         Help the harvester pick all five ears
         of corn!
-      courseA_harvester_loops11_instruction: 'Try one more on your own! '
-      courseA_harvester_loops2_instruction: Make sure to pick all the corn!
-      courseA_harvester_loops3_instruction: |-
-        Can you pick all the corn using only
-        **one** move block?
+      courseA_harvester_loops11_instruction: 'Provane un altro da solo! '
+      courseA_harvester_loops2_instruction: Assicurati di raccogliere tutto il grano!
+      courseA_harvester_loops3_instruction: Potresti raccogliere tutto il grano utilizzando
+        solo **un** blocco di movimento?
       courseA_harvester_loops4_instruction: |-
         Can you help the harvester find the
         bug in her code?
-      courseA_harvester_loops5_instruction: |-
-        Try it yourself! Can you pick the corn
-        at the end too?
-      courseA_harvester_loops5a_instruction: |-
-        Look at all this corn! Can you pick
-        it all by yourself?
+      courseA_harvester_loops5_instruction: Provalo! Potresti raccogliere anche il
+        grano alla fine?
+      courseA_harvester_loops5a_instruction: Dai un'occhiata a tutto questo grano!
+        Riusciresti a raccoglierlo tutto da solo?
       courseA_harvester_loops5b_instruction: |-
         Can you change your code to make the
         harvester pick all the corn?
-      courseA_harvester_loops6_instruction: |-
-        You will need **one** `Move South` block
-        and **one** `Move West` block.
-      courseA_harvester_loops7_instruction: 'Try it on your own! '
-      courseA_harvester_loops8_instruction: |-
-        This is the same puzzle, but now you
-        have to repeat **three** times!
-      courseA_harvester_loops9_instruction: |-
-        Can you figure out how to pick all the
-        corn?
+      courseA_harvester_loops6_instruction: Avrai bisogno solo di **un** blocco `Vai
+        verso Sud` ed **un** blocco `Vai verso Ovest`.
+      courseA_harvester_loops7_instruction: 'Provalo! '
+      courseA_harvester_loops8_instruction: Questo è lo stesso puzzle, ma ora dovrai
+        ripeterlo **tre** volte!
+      courseA_harvester_loops9_instruction: Riesci a capire come raccogliere tutto
+        il grano?
       courseA_harvester_seq1_instruction: |-
         Play with these blocks to help the harvester
         pick the piece of corn.
-      courseA_harvester_seq10_instruction: Make sure to pick all the corn!
-      courseA_harvester_seq11_instruction: Try it by yourself! Pick all the corn.
-      courseA_harvester_seq12_instruction: |-
-        Play with these blocks to help the bee
-        get *one* nectar.
+      courseA_harvester_seq10_instruction: Assicurati di raccogliere tutto il grano!
+      courseA_harvester_seq11_instruction: Prova tu stesso! Raccogli tutto il grano.
+      courseA_harvester_seq12_instruction: Raccogli tutto il grano.
       courseA_harvester_seq13_instruction: |-
         Play with these blocks to help the harvester
         pick **one** corn.
-      courseA_harvester_seq2_instruction: |-
-        Use three `move west` blocks and one `pick
-        corn` block to solve this puzzle.
-      courseA_harvester_seq3_instruction: |-
-        Use three `Move North` blocks and one
-        `Pick Corn` block.
+      courseA_harvester_seq2_instruction: Usa tre blocchi `Vai verso ovest` e un blocco
+        `raccogli grano` per risolvere questo puzzle.
+      courseA_harvester_seq3_instruction: Usa tre blocchi `Vai verso Nord` e un blocco
+        `Raccogli Grano` per risolvere questo puzzle.
       courseA_harvester_seq4_instruction: |-
         Add one block to help the harvester pick
         the corn.
@@ -9067,32 +9049,28 @@ it:
         Now the harvester needs to pick corn two
         times!
       courseA_harvester_seq9_instruction: Aggiungi due blocchi per competare l'esercizio!
-      courseA_maze_ramp2_2018_instruction: |-
-        Snap all blocks together to finish your
-        code, then click "Run".
-      courseA_maze_ramp2a_2018_instruction: |-
-        Snap all blocks together to finish your
-        code, then click "Run".
+      courseA_maze_ramp2_2018_instruction: Unisci tutti i blocchi per finire il tuo
+        codice, poi fai click su "Esegui".
+      courseA_maze_ramp2a_2018_instruction: Unisci tutti i blocchi per finire il tuo
+        codice, poi fai click su "Esegui".
       courseA_maze_ramp3_2018_instruction: |-
         C'è un blocco di troppo che fa andare a sbattere l'uccellino.
         Buttalo via trascinandolo nella cassetta degli attrezzi.
-      courseA_maze_ramp3a_2018_instruction: |-
-        Add a `North` block to the bottom of
-        the other blocks to finish this code, then click "Run".
-      courseA_maze_ramp3b_2018_instruction: Add a `North` block to the bottom of the
-        other blocks to finish this code, then click "Run".
+      courseA_maze_ramp3a_2018_instruction: Aggiungi un blocco `Nord` in fondo al
+        codice per finirlo, infine fai click su "▶ Esegui".
+      courseA_maze_ramp3b_2018_instruction: Aggiungi un blocco `Nord` in fondo al
+        codice per finirlo, infine fai click su "Esegui".
       courseA_maze_ramp4_2018_instruction: Evita la dinamite (TNT) o ci lascio le
         penne!
-      courseA_maze_ramp4a_2018_instruction: |-
-        Can you figure out which block you need
-        to add to the bottom of the other blocks to finish this code?
+      courseA_maze_ramp4a_2018_instruction: Riesci a capire quale blocco hai bisogno
+        di aggiungere alla fine di questo codice per finirlo?
       courseA_maze_ramp5_2018_instruction: Evita la dinamite (TNT).
       courseA_maze_ramp5a_2018_instruction: Get the bird to the pig!
       courseA_maze_seq1_instruction: Fai andare l'uccellino fino al maiale cattivo!
       courseA_maze_seq10_instruction: 'Sfida: aggira la dinamite (TNT) per far arrivare
         l''uccellino fino al maialino! '
-      courseA_maze_seq10_2018_instruction: "Challenge: Avoid the TNT to get the bird\nto
-        the pig! "
+      courseA_maze_seq10_2018_instruction: 'Sfida: Evita la dinamite (TNT) per far
+        arrivare l''uccellino fino al maialino! '
       courseA_maze_seq11_instruction: Muovi in una direzione, poi in un'altra, per
         far arrivare l'uccellino fino al maialino.
       courseA_maze_seq11_2018_instruction: Muovi in una direzione, poi in un'altra,
@@ -9112,14 +9090,12 @@ it:
         fino al maialino!
       courseA_maze_seq4_2018_instruction: ELIMINA un blocco per far arrivare l'uccellino
         fino al maialino!
-      courseA_maze_seq4a_instruction: |-
-        Get the bird to the pig using the fewest possible
-        blocks.
+      courseA_maze_seq4a_instruction: Fai arrivare l'uccellino dal maialino usando
+        meno blocchi possibili.
       courseA_maze_seq5_instruction: Prova questo da solo dall'inizio.
-      courseA_maze_seq5_2018_instruction: Try this one yourself from the beginning.
-      courseA_maze_seq5a_2018_instruction: |-
-        What can you add to the end of this code
-        to get the bird to the pig?
+      courseA_maze_seq5_2018_instruction: Fai un tentativo.
+      courseA_maze_seq5a_2018_instruction: Cosa puoi aggiungere alla fine di questo
+        codice per far arrivare l'uccellino al maialino?
       courseA_maze_seq6_instruction: Muovi in una direzione, poi in un'altra per far
         arrivare l'uccellino fino al maialino!
       courseA_maze_seq6_2018_instruction: Muovi in una direzione, poi in un'altra
@@ -9136,12 +9112,10 @@ it:
         aggiungendo i blocchi necessari per far arrivare l''uccellino fino al maialino!'
       courseA_maze_seq9_2018_instruction: 'Sfida: Correggi gli errori in questo esercizio,
         aggiungendo i blocchi necessari per far arrivare l''uccellino fino al maialino!'
-      courseA_maze_seq_challenge1_instruction: |-
-        Something is wrong here. Help fix
-        the code to get the bird to the pig!
-      courseA_maze_seq_challenge1_2018_instruction: |-
-        Something is wrong here. Help
-        fix the code to get the bird to the pig!
+      courseA_maze_seq_challenge1_instruction: C'è qualcosa che non va qui. Aiuta
+        a correggere il codice per far arrivare l'uccellino dal maialino!
+      courseA_maze_seq_challenge1_2018_instruction: C'è qualcosa che non va qui. Aiuta
+        a correggere il codice per far arrivare l'uccellino dal maialino!
       courseA_maze_seq_challenge2_instruction: Fammi fare il percorso per arrivare
         a quello sciocco maiale. Evita la dinamite (TNT) o ci lascio le penne!
       courseA_maze_seq_challenge2_2018_instruction: Fammi fare il percorso per arrivare
@@ -9164,9 +9138,8 @@ it:
         che si trova già nell'area di lavoro.
       courseA_playLab_events4_instruction: Ora fai muovere il cane a destra quando
         si preme la freccia a destra.
-      courseA_playLab_events4_2018_instruction: |-
-        Now, get Jorge to move right when
-        the `right` button is clicked.
+      courseA_playLab_events4_2018_instruction: Aggiungi un altro blocco evento per
+        far muovere Jorge verso destra quando il pulsante `destro` è premuto.
       courseA_playLab_events5_instruction: Aggiungi gli eventi per far muovere Jorge
         su e giù quando si premono le frecce in su e in giù.
       courseA_playLab_events5_2018_instruction: |-
@@ -9209,14 +9182,12 @@ it:
       courseB_Scrat_ramp2_2018_instruction: |-
         Snap all blocks together to finish your
         code, then click "Run".
-      courseB_Scrat_ramp3a_2018_instruction: |-
-        Add a `North` block to the bottom of
-        the other blocks to finish this code, then click "Run".
+      courseB_Scrat_ramp3a_2018_instruction: Aggiungi un blocco `Nord` in fondo al
+        codice per finirlo, infine fai click su "▶ Esegui".
       courseB_Scrat_ramp3b_2018_instruction: "Drag the extra block back to the toolbox
         to throw it away.\n\n"
-      courseB_Scrat_ramp4a_2018_instruction: |-
-        Can you figure out which block you
-        need to add to the bottom of the other blocks to finish this code?
+      courseB_Scrat_ramp4a_2018_instruction: Riesci a capire quale blocco hai bisogno
+        di aggiungere alla fine di questo codice per finirlo?
       courseB_Scrat_ramp5a_2018_instruction: Get the bird to the pig!
       courseB_artist_loops1_instruction: Questo è un nuovo tipo di esercizio chiamato
         "Artista". Prova a disegnare qualcosa di divertente. Quando sei soddisfatto,
@@ -9459,11 +9430,11 @@ it:
       courseB_playlab_events5_2018_instruction: Ora aggiungi un evento per fare in
         modo che il cavaliere si allontani dal drago quando premi la freccia destra.
       courseB_playlab_events6_instruction: |-
-        Aiuta il tuo cavaliere a raggiungere tutte le bandiere!
+        Aiuta il tuo cavaliere a raggiungere tutte le bandierine!
 
         Per far questo, devi aggiungere gli eventi che permettono di muovere il cavaliere in su, in giù, a sinistra e a destra.
       courseB_playlab_events6_2018_instruction: |-
-        Aiuta il tuo cavaliere a raggiungere tutte le bandiere!
+        Aiuta il tuo cavaliere a raggiungere tutte le bandierine!
 
         Per far questo, devi aggiungere gli eventi che permettono di muovere il cavaliere in su, in giù, a sinistra e a destra.
       courseB_playlab_events7_instruction: Rendi questo gioco divertente facendo svanire
@@ -10087,21 +10058,19 @@ it:
         o tre di fila!
       courseD_Frozen_nested3_instruction: Ora fai ruotare queste riga di figure!
       courseD_Frozen_nested4_instruction: È ora di sovrapporre queste forme!
-      courseD_Frozen_nested5_instruction: Play with the snowflakes!
+      courseD_Frozen_nested5_instruction: Gioca con i fiocchi di neve!
       courseD_Frozen_nested6_instruction: |-
         Draw a stair-step pattern that uses turns
         between 75 and 105 degrees.
-      courseD_Frozen_nested7_instruction: |-
-        Now, turn around 180 degrees and draw
-        the stair pattern again!
-      courseD_Frozen_nested8_instruction: |-
-        Spin that shape around 5 or 6 times in
-        a circle.
-      courseD_Frozen_nested9_instruction: "Try playing around with what you've created.
-        Draw whatever you like!\r\n- What happens if you use two different angles
-        in your stair step pattern?\r\n- What happens if you make your diamond pattern
-        longer or shorter?\r\n- What does it look like to draw two snowflakes on top
-        of one another?"
+      courseD_Frozen_nested7_instruction: Ora, gira intorno 180 gradi e disegna lo
+        schema di una scala di nuovo!
+      courseD_Frozen_nested8_instruction: Fai ruotare questa figura 5 o 6 volte in
+        un cerchio.
+      courseD_Frozen_nested9_instruction: |-
+        Prova a giocare con ciò che hai creato. Disegna quello che vuoi!
+        - Cosa succede se usi due differenti angoli nel tuo schema di gradini?
+        - Cosa succede se fai diventare il tuo rombo più lungo o più corto?
+        - Cosa sembra se disegni due fiocchi di neve uno sopra l'altro?
       courseD_artist_1_2018_instruction: "Draw a small square with **30** pixel long
         sides.  \r\n"
       courseD_artist_2_2018_instruction: 'Now, turn right by **60** degrees, then
@@ -10110,66 +10079,58 @@ it:
       courseD_artist_3_2018_instruction: "Nest all of the code inside of another\n`repeat`
         loop and run it a total of **6** times. "
       courseD_artist_4_2018_instruction: Add a tiny shape to the end of your line!
-      courseD_artist_5_2018_instruction: Play with the snowflakes!
+      courseD_artist_5_2018_instruction: Gioca con i fiocchi di neve!
       courseD_artist_6_2018_instruction: 'Try changing your long 150 pixel line into
         6 short lines of **25** pixels, with little turns at the end.  '
-      courseD_artist_7_2018_instruction: |-
-        Now, turn around 180 degrees and draw the
-        stair pattern again!
-      courseD_artist_8_2018_instruction: |-
-        Spin that shape around 5 or 6 times in
-        a circle.
-      courseD_artist_9_2018_instruction: "Try playing around with what you've created.
-        Draw whatever you like!\r\n- What happens if you use two different angles
-        in your stair step pattern?\r\n- What happens if you make your diamond pattern
-        longer or shorter?\r\n- What does it look like to draw two snowflakes on top
-        of one another?"
-      courseD_artist_binary1_instruction: |-
-        La codifica binaria è una modalità di rappresentazione delle informazioni usando solo due valori. In questa lezione usiamo i valori "spento" (rappresentato dal numero 0 e visualizzato in nero) e "acceso" (rappresentato dal numero 1 e visualizzato in verde scuro).<br>
-        Hai a disposizione una griglia di quadrati con cui puoi giocare e creare dei disegni semplicemente accendendo e spegnendo i vari quadrati. Ogni quadrato è quindi analogo ad un pixel dello schermo.<br>
-        Riesci a far produrre all'artista il disegno mostrato nella prima riga, la cui codifica binaria è "01010101"?
-      courseD_artist_binary1_2018_instruction: |-
-        La codifica binaria è una modalità di rappresentazione delle informazioni usando solo due valori. In questa lezione usiamo i valori "spento" (rappresentato dal numero 0 e visualizzato in nero) e "acceso" (rappresentato dal numero 1 e visualizzato in verde scuro).<br>
-        Hai a disposizione una griglia di quadrati con cui puoi giocare e creare dei disegni semplicemente accendendo e spegnendo i vari quadrati. Ogni quadrato è quindi analogo ad un pixel dello schermo.<br>
-        Riesci a far produrre all'artista il disegno mostrato nella prima riga, la cui codifica binaria è "01010101"?
-      courseD_artist_binary2_instruction: |-
-        Run this code to see how the artist uses
-        binary to draw this pattern.
-      courseD_artist_binary2_2018_instruction: |-
-        Run this code to see how the artist
-        uses binary to draw this pattern.
-      courseD_artist_binary3_instruction: |-
-        Which of the binary strings below could
-        you loop 8 times to draw this image?
-      courseD_artist_binary3_2018_instruction: |-
-        Which of the binary strings below
-        could you loop 8 times to draw this image?
+      courseD_artist_7_2018_instruction: Ora, gira intorno 180 gradi e disegna lo
+        schema di una scala di nuovo!
+      courseD_artist_8_2018_instruction: Fai ruotare questa figura 5 o 6 volte in
+        un cerchio.
+      courseD_artist_9_2018_instruction: |-
+        Prova a giocare con ciò che hai creato. Disegna quello che vuoi!
+        - Cosa succede se usi due differenti angoli nel tuo schema di gradini?
+        - Cosa succede se fai diventare il tuo rombo più lungo o più corto?
+        - Cosa sembra se disegni due fiocchi di neve uno sopra l'altro?
+      courseD_artist_binary1_instruction: Usa i blocchi qui sotto per far produrre
+        all'artista nella prima riga il disegno la cui codifica binaria è "01010101".
+      courseD_artist_binary1_2018_instruction: Usa i blocchi qui sotto per far produrre
+        all'artista nella prima riga il disegno la cui codifica binaria è "01010101".
+      courseD_artist_binary2_instruction: Clicca su "Esegui" per vedere come l'artista
+        usa le sequenze binarie per disegnare questa figura.
+      courseD_artist_binary2_2018_instruction: Clicca su "Esegui" per vedere come
+        l'artista usa le sequenze binarie per disegnare questa figura.
+      courseD_artist_binary3_instruction: Quale di queste sequenze binarie devi ripetere
+        8 volte per disegnare questa figura?
+      courseD_artist_binary3_2018_instruction: Quale di queste sequenze binarie devi
+        ripetere 8 volte per disegnare questa figura?
       courseD_artist_binary4_instruction: Riesci a disegnare questa figura inserendo
-        in un ciclo una stringa binaria di 3 cifre?
+        in un ciclo una sequenza binaria di 3 cifre?
       courseD_artist_binary4_2018_instruction: Riesci a disegnare questa figura inserendo
-        in un ciclo una stringa binaria di 3 cifre?
-      courseD_artist_binary5_instruction: "Each binary string below represents one
-        row of this picture. \r\n\r\nCan you rearrange them so it draws a smiley face
-        instead of a frown?"
-      courseD_artist_binary5_2018_instruction: "Each binary string below represents
-        one row of this picture. \r\n\r\nCan you rearrange them so it draws a smiley
-        face instead of a frown?"
-      courseD_artist_binary6_instruction: Quale stringa binaria di 6 cifre, ripetuta
+        in un ciclo una sequenza binaria di 3 cifre?
+      courseD_artist_binary5_instruction: |-
+        Ognuna delle sequenze binarie qui sotto, rappresenta una riga di questa figura.
+
+        Riesci, sistemando diversamente i blocchi, a disegnare una faccina allegra invece che triste?
+      courseD_artist_binary5_2018_instruction: |-
+        Ognuna delle sequenze binarie qui sotto, rappresenta una riga di questa figura.
+
+        Riesci, sistemando diversamente i blocchi, a disegnare una faccina allegra invece che triste?
+      courseD_artist_binary6_instruction: Quale sequenza binaria di 6 cifre, ripetuta
         11 volte, ti farà disegnare questa figura?
-      courseD_artist_binary6_2018_instruction: Quale stringa binaria di 6 cifre, ripetuta
-        11 volte, ti farà disegnare questa figura?
-      courseD_artist_binary7_instruction: Quale è la più piccola stringa binaria che
-        puoi inserire in un ciclo per disegnare questa figura?
+      courseD_artist_binary6_2018_instruction: Quale sequenza binaria di 6 cifre,
+        ripetuta 11 volte, ti farà disegnare questa figura?
+      courseD_artist_binary7_instruction: Quale è la più piccola sequenza binaria
+        che puoi inserire in un ciclo per disegnare questa figura?
       courseD_artist_binary7_2018_instruction: Quale è la più piccola stringa binaria
         che puoi inserire in un ciclo per disegnare questa figura?
-      courseD_artist_binary8_instruction: Finish the code to create this drawing.
-      courseD_artist_binary8_2018_instruction: Finish the code to create this drawing.
-      courseD_artist_binary8_predict1_instruction: |-
-        Finish the code to create this
-        drawing.
-      courseD_artist_binary8_predict1_2018_instruction: |-
-        Finish the code to create
-        this drawing.
+      courseD_artist_binary8_instruction: Completa il programma per creare questo
+        disegno.
+      courseD_artist_binary8_2018_instruction: Completa il programma per creare questo
+        disegno.
+      courseD_artist_binary8_predict1_instruction: Completa il programma per creare
+        questo disegno.
+      courseD_artist_binary8_predict1_2018_instruction: Completa il programma per
+        creare questo disegno.
       courseD_artist_binaryFP_instruction: "Here's a higher resolution canvas to draw
         on - 16 pixels by 16 pixels!\r\n\r\nSee what happens when we start to get
         creative with the bits!"
@@ -10226,80 +10187,64 @@ it:
       courseD_artist_functions9_instruction: |-
         Create this image using only the blocks
         provided.
-      courseD_artist_nestedLoops1_instruction: "Draw a triangle to kickstart this
-        stage.  \r\n(Each side is 100 pixels long and you'll need to turn 120 degrees
-        for each exterior angle.)"
-      courseD_artist_nestedLoops10_instruction: |-
-        Take the squares from before, but
-        this time only make 7 of them, and lay them out in a row.
-      courseD_artist_nestedLoops10_2018_instruction: |-
-        Take the squares from before,
-        but this time only make 7 of them, and lay them out in a row.
-      courseD_artist_nestedLoops1_2018_instruction: "Draw a triangle to kickstart
-        this stage.  \r\n(Each side is 100 pixels long and you'll need to turn 120
-        degrees for each exterior angle.)"
+      courseD_artist_nestedLoops1_instruction: |-
+        Inizia questa lezione disegnando un triangolo.
+        (Ogni lato è lungo 100 pixel e dovrai ruotare di 120 gradi ad ogni angolo: è la misura degli angoli esterni.)
+      courseD_artist_nestedLoops10_instruction: Considera i quadrati dell'esercizio
+        precedente, ma questa volta ne disegni solo 7 e li mettli in riga.
+      courseD_artist_nestedLoops10_2018_instruction: Considera i quadrati dell'esercizio
+        precedente, ma questa volta ne disegni solo 7 e li mettli in riga.
+      courseD_artist_nestedLoops1_2018_instruction: |-
+        Inizia questa lezione disegnando un triangolo.
+        (Ogni lato è lungo 100 pixel e dovrai ruotare di 120 gradi ad ogni angolo: è la misura degli angoli esterni.)
       courseD_artist_nestedLoops1a_instruction: "Now loop the triangle 6 times. \r\nAfter\neach
         triangle, you'll need to turn 60 degrees before drawing the next."
       courseD_artist_nestedLoops1a_2018_instruction: 'Now loop the triangle 6 times.
 
 '
-      courseD_artist_nestedLoops2_instruction: |-
-        This time, complete the puzzle with
-        the fewest number of blocks possible.
-      courseD_artist_nestedLoops2_2018_instruction: |-
-        This time, complete the puzzle
-        with the fewest number of blocks possible.
-      courseD_artist_nestedLoops3_instruction: "Use your new skills to quickly draw
-        the last row of windows for this building.\r\n\r\nThe windows are 20 pixel
-        squares, each 20 pixels apart."
-      courseD_artist_nestedLoops3_2018_instruction: "Use your new skills to quickly
-        draw the last row of windows for this building.\r\n\r\nThe windows are 20
-        pixel squares, each 20 pixels apart."
-      courseD_artist_nestedLoops4_instruction: |-
-        Great!  Do the same thing with these
-        circles.
-      courseD_artist_nestedLoops4_2018_instruction: |-
-        Great!  Do the same thing with
-        these circles.
-      courseD_artist_nestedLoops5_instruction: |-
-        What happens if you also turn 90
-        degrees between circles?
-      courseD_artist_nestedLoops5_2018_instruction: |-
-        What happens if you also turn
-        90 degrees between circles?
+      courseD_artist_nestedLoops2_instruction: Questa volta, completa l'esercizio
+        con il minor numero possibile di blocchi.
+      courseD_artist_nestedLoops2_2018_instruction: Questa volta, completa l'esercizio
+        con il minor numero possibile di blocchi.
+      courseD_artist_nestedLoops3_instruction: |-
+        Usa le tue nuove capacità per disegnare velocemente l'ultima fila di finestre di questo palazzo.
+
+        Le finestre sono dei quadrati con lati di 20 pixel, distanti tra loro 20 pixel.
+      courseD_artist_nestedLoops3_2018_instruction: |-
+        Usa le tue nuove capacità per disegnare velocemente l'ultima fila di finestre di questo palazzo.
+
+        Le finestre sono dei quadrati con lati di 20 pixel, distanti tra loro 20 pixel.
+      courseD_artist_nestedLoops4_instruction: Grande! Fai la stessa cosa con questi
+        cerchi.
+      courseD_artist_nestedLoops4_2018_instruction: Grande! Fai la stessa cosa con
+        questi cerchi.
+      courseD_artist_nestedLoops5_instruction: Cosa succede se giri di 90 gradi anche
+        tra un cerchio e l'altro?
+      courseD_artist_nestedLoops5_2018_instruction: Cosa succede se giri di 90 gradi
+        anche tra un cerchio e l'altro?
       courseD_artist_nestedLoops6_instruction: |-
         Edit blocks within your existing
         code to make this image.
-      courseD_artist_nestedLoops7_instruction: |-
-        Use what you've learned to make
-        this drawing.
-      courseD_artist_nestedLoops7_2018_instruction: |-
-        Use what you've learned to
-        make this drawing.
-      courseD_artist_nestedLoops8_instruction: |-
-        Using what you have learned in the
-        last couple of puzzles, build this image from the beginning.
-      courseD_artist_nestedLoops8_2018_instruction: |-
-        Using what you have learned
-        in the last couple of puzzles, build this image from the beginning.
-      courseD_artist_nestedLoops9_instruction: |-
-        **Challenge:** Can you figure out
-        how to make a picture like this?
-      courseD_artist_nestedLoops9_2018_instruction: |-
-        **Challenge:** Can you figure
-        out how to make a picture like this?
-      courseD_artist_nestedLoops9_predict1_instruction: |-
-        **Challenge:** Can you figure
-        out how to make a picture like this?
-      courseD_artist_nestedLoops9_predict1_2018_instruction: |-
-        **Challenge:** Can
-        you figure out how to make a picture like this?
-      courseD_artist_nestedLoopsFP_instruction: |-
-        Now it's your turn.  Take the skills
-        you have learned and make something that you love!
-      courseD_artist_nestedLoopsFP_2018_instruction: |-
-        Now it's your turn.  Take
-        the skills you have learned and make something that you love!
+      courseD_artist_nestedLoops7_instruction: Usa ciò che hai imparato per fare questo
+        disegno.
+      courseD_artist_nestedLoops7_2018_instruction: Usa ciò che hai imparato per fare
+        questo disegno.
+      courseD_artist_nestedLoops8_instruction: Usa ciò che hai imparato nell'ultimo
+        paio di esercizi per costruire dall'inizio quest'immagine.
+      courseD_artist_nestedLoops8_2018_instruction: Usa ciò che hai imparato nell'ultimo
+        paio di esercizi per costruire dall'inizio quest'immagine.
+      courseD_artist_nestedLoops9_instruction: "**Sfida:** Riesci a scoprire come
+        realizzare un'immagine come questa?"
+      courseD_artist_nestedLoops9_2018_instruction: "**Sfida:** Riesci a scoprire
+        come realizzare un'immagine come questa?"
+      courseD_artist_nestedLoops9_predict1_instruction: "**Sfida:** Riesci a scoprire
+        come realizzare un'immagine come questa?"
+      courseD_artist_nestedLoops9_predict1_2018_instruction: "**Sfida:** Riesci a
+        scoprire come realizzare un'immagine come questa?"
+      courseD_artist_nestedLoopsFP_instruction: Adesso è il tuo turno. Usa le tecniche
+        che hai imparato per realizzare qualcosa che ti piaccia!
+      courseD_artist_nestedLoopsFP_2018_instruction: Adesso è il tuo turno. Usa le
+        tecniche che hai imparato per realizzare qualcosa che ti piaccia!
       courseD_artist_nestedLoopsPre1_instruction: |-
         Create a triangle to kickstart
         this stage.
@@ -10329,34 +10274,30 @@ it:
         due o tre di fila!
       courseD_artist_project2_2018_instruction: Ora parti dalla tua forma e disegnane
         due o tre di fila!
-      courseD_artist_project2a_instruction: |-
-        Now, turn around 180 degrees and draw
-        the stair pattern again!
-      courseD_artist_project2a_2018_instruction: |-
-        Now, turn around 180 degrees and
-        draw the stair pattern again!
+      courseD_artist_project2a_instruction: Ora, gira intorno 180 gradi e disegna
+        lo schema di una scala di nuovo!
+      courseD_artist_project2a_2018_instruction: Ora, gira intorno 180 gradi e disegna
+        lo schema di una scala di nuovo!
       courseD_artist_project3_instruction: Ora fai ruotare queste riga di figure!
       courseD_artist_project3_2018_instruction: Ora fai ruotare queste riga di figure!
-      courseD_artist_project3a_instruction: |-
-        Spin that shape around 5 or 6 times
-        in a circle.
-      courseD_artist_project3a_2018_instruction: |-
-        Spin that shape around 5 or 6 times
-        in a circle.
+      courseD_artist_project3a_instruction: Fai ruotare questa figura 5 o 6 volte
+        in un cerchio.
+      courseD_artist_project3a_2018_instruction: Fai ruotare questa figura 5 o 6 volte
+        in un cerchio.
       courseD_artist_project4_instruction: È ora di sovrapporre queste forme!
       courseD_artist_project4_2018_instruction: È ora di sovrapporre queste forme!
-      courseD_artist_project4a_instruction: "Try playing around with what you've created.
-        Draw whatever you like!\r\n- What happens if you use two different angles
-        in your stair step pattern?\r\n- What happens if you make your diamond pattern
-        longer or shorter?\r\n- What does it look like to draw two snowflakes on top
-        of one another?"
-      courseD_artist_project4a_2018_instruction: "Try playing around with what you've
-        created. Draw whatever you like!\r\n- What happens if you use two different
-        angles in your stair step pattern?\r\n- What happens if you make your diamond
-        pattern longer or shorter?\r\n- What does it look like to draw two snowflakes
-        on top of one another?"
-      courseD_artist_project5_instruction: Play with the snowflakes!
-      courseD_artist_project5_2018_instruction: Play with the snowflakes!
+      courseD_artist_project4a_instruction: |-
+        Prova a giocare con ciò che hai creato. Disegna quello che vuoi!
+        - Cosa succede se usi due differenti angoli nel tuo schema di gradini?
+        - Cosa succede se fai diventare il tuo rombo più lungo o più corto?
+        - Cosa sembra se disegni due fiocchi di neve uno sopra l'altro?
+      courseD_artist_project4a_2018_instruction: |-
+        Prova a giocare con ciò che hai creato. Disegna quello che vuoi!
+        - Cosa succede se usi due differenti angoli nel tuo schema di gradini?
+        - Cosa succede se fai diventare il tuo rombo più lungo o più corto?
+        - Cosa sembra se disegni due fiocchi di neve uno sopra l'altro?
+      courseD_artist_project5_instruction: Gioca con i fiocchi di neve!
+      courseD_artist_project5_2018_instruction: Gioca con i fiocchi di neve!
       courseD_artist_project_embedded_instruction: |-
         Here's what you will soon be
         making!
@@ -10472,18 +10413,14 @@ it:
       courseD_bee_nestedLoops1a_2018_instruction: |-
         Help the bee collect all of the
         nectar.
-      courseD_bee_nestedLoops2_instruction: |-
-        This time, help the bee collect all
-        of the nectar using as few blocks as possible.
-      courseD_bee_nestedLoops2_2018_instruction: |-
-        This time, help the bee collect
-        all of the nectar using as few blocks as possible.
-      courseD_bee_nestedLoops2_predict1_instruction: |-
-        This time, help the bee collect
-        all of the nectar using as few blocks as possible.
-      courseD_bee_nestedLoops2_predict1_2018_instruction: |-
-        This time, help the bee
-        collect all of the nectar using as few blocks as possible.
+      courseD_bee_nestedLoops2_instruction: Questa volta, aiuta l'ape a raccogliere
+        tutto il nettare usando il minor numero di blocchi possibile.
+      courseD_bee_nestedLoops2_2018_instruction: Questa volta, aiuta l'ape a raccogliere
+        tutto il nettare usando il minor numero di blocchi possibile.
+      courseD_bee_nestedLoops2_predict1_instruction: Questa volta, aiuta l'ape a raccogliere
+        tutto il nettare usando il minor numero di blocchi possibile.
+      courseD_bee_nestedLoops2_predict1_2018_instruction: Questa volta, aiuta l'ape
+        a raccogliere tutto il nettare usando il minor numero di blocchi possibile.
       courseD_bee_nestedLoops3_instruction: Raccogli tutto il nettare da ogni fiore.
         Usa un ciclo annidato.
       courseD_bee_nestedLoops5_instruction: Raccogli tutto il nettare da ogni fiore
@@ -10491,20 +10428,18 @@ it:
       courseD_bee_nestedLoops6_instruction: Make all of the nectar.
       courseD_bee_nestedLoops6_2018_instruction: Usa i cicli per farmi arrivare al
         girasole col minor numero possibile di blocchi!
-      courseD_bee_nestedLoops7_instruction: |-
-        Challenge: Figure out how to get all
-        of the nectar using only the blocks available.
-      courseD_bee_nestedLoops7_2018_instruction: |-
-        Challenge: Figure out how to get
-        all of the nectar using only the blocks available.
+      courseD_bee_nestedLoops7_instruction: 'Sfida: Riesci a capire come raccogliere
+        tutto il nettare usando solo i blocchi disponibili.'
+      courseD_bee_nestedLoops7_2018_instruction: 'Sfida: Riesci a capire come raccogliere
+        tutto il nettare usando solo i blocchi disponibili.'
       courseD_bee_nestedLoops8_instruction: Raccogli tutto il nettare da ogni fiore
         e produci il miele in ogni favo. Usa un ciclo annidato.
       courseD_bee_nestedLoops8_2018_instruction: Raccogli tutto il nettare da ogni
         fiore e produci il miele in ogni favo. Usa un ciclo annidato.
-      courseD_bee_nestedLoops9_instruction: Make all of the honey.
-      courseD_bee_nestedLoops9_2018_instruction: Make all of the honey.
-      courseD_bee_nestedLoops9_predict2_instruction: Make all of the honey.
-      courseD_bee_nestedLoops9_predict2_2018_instruction: Make all of the honey.
+      courseD_bee_nestedLoops9_instruction: Produci tutto il miele.
+      courseD_bee_nestedLoops9_2018_instruction: Produci tutto il miele.
+      courseD_bee_nestedLoops9_predict2_instruction: Produci tutto il miele.
+      courseD_bee_nestedLoops9_predict2_2018_instruction: Produci tutto il miele.
       courseD_bee_nested_loops_challenge1_instruction: |-
         Let's hunt for treasure
         - using loops! Help the collector reach at least two piles of treasure using
@@ -10891,12 +10826,10 @@ it:
       courseD_maze_nestedLoops4_2018_instruction: |-
         Fammi arrivare al girasole usando il minor numero possibile di blocchi!<br><br>
         Prova ad usare un blocco "ripeti ... volte" (ciclo) all'interno di un altro ciclo, per diminuire il numero di blocchi che usi.
-      courseD_maze_nestedLoops5_instruction: |-
-        Get the zombie to the sunflower using
-        the fewest number of blocks possible!
-      courseD_maze_nestedLoops5_2018_instruction: |-
-        Get the zombie to the sunflower
-        using the fewest number of blocks possible!
+      courseD_maze_nestedLoops5_instruction: Fai arrivare lo zombie al girasole usando
+        il minor numero di blocchi possibile!
+      courseD_maze_nestedLoops5_2018_instruction: Fai arrivare lo zombie al girasole
+        usando il minor numero di blocchi possibile!
       courseD_maze_nestedLoops6_instruction: Usa i cicli per farmi arrivare al girasole
         col minor numero possibile di blocchi!
       courseD_maze_nestedLoops6_2018_instruction: Usa i cicli per farmi arrivare al
@@ -10906,11 +10839,11 @@ it:
       courseD_maze_ramp1_2018_instruction: Per risolvere questo esercizio, collega
         tutti i blocchi e clicca su "Esegui" per vederlo in funzione!
       courseD_maze_ramp2_instruction: Trascina ancora un blocco `vai avanti` fuori
-        dalla cassetta degli attrezzi, quindi attacca tutti i blocchi al blocco arancione
-        `quando si clicca su "Esegui"`per completare il programma.
+        dalla cassetta degli attrezzi e, per completare il programma, attacca tutti
+        i blocchi al blocco arancione `quando si clicca su "Esegui"`.
       courseD_maze_ramp2_2018_instruction: Trascina ancora un blocco `vai avanti`
-        fuori dalla cassetta degli attrezzi, quindi attacca tutti i blocchi al blocco
-        arancione `quando si clicca su "Esegui"`per completare il programma.
+        fuori dalla cassetta degli attrezzi e, per completare il programma, attacca
+        tutti i blocchi al blocco arancione `quando si clicca su "Esegui"`.
       courseD_maze_ramp3_instruction: |-
         C'è un blocco di troppo che fa andare a sbattere l'uccellino.
         Buttalo via trascinandolo nella cassetta degli attrezzi.
@@ -10922,20 +10855,16 @@ it:
         penne!
       courseD_maze_ramp5_instruction: Evita la dinamite (TNT).
       courseD_maze_ramp5_2018_instruction: Evita la dinamite (TNT).
-      courseD_maze_ramp5a_instruction: |-
-        Pay attention to the sequence and see if
-        you can figure out how to get to that pig!
-      courseD_maze_ramp5a_2018_instruction: |-
-        Pay attention to the sequence and see
-        if you can figure out how to get to that pig!
-      courseD_maze_ramp5b_instruction: |-
-        Navigate this maze to help the bird find
-        the pig!
-      courseD_maze_ramp5b_2018_instruction: |-
-        Navigate this maze to help the bird
-        find the pig!
-      courseD_maze_ramp5c_instruction: Help the bird get to the pig.
-      courseD_maze_ramp5c_2018_instruction: Help the bird get to the pig.
+      courseD_maze_ramp5a_instruction: Fai attenzione alla sequenza e vedi se riesci
+        a capire come arrivare fino al maialino!
+      courseD_maze_ramp5a_2018_instruction: Fai attenzione alla sequenza e vedi se
+        riesci a capire come arrivare fino al maialino!
+      courseD_maze_ramp5b_instruction: Aiuta l'uccellino a trovare il maialino in
+        questo labirinto!
+      courseD_maze_ramp5b_2018_instruction: Aiuta l'uccellino a trovare il maialino
+        in questo labirinto!
+      courseD_maze_ramp5c_instruction: Aiuta l'uccellino a raggiungere il maialino.
+      courseD_maze_ramp5c_2018_instruction: Aiuta l'uccellino a raggiungere il maialino.
       courseD_maze_ramp5d_instruction: Fai arrivare l'uccellino fino al maialino.
       courseD_maze_ramp5d_2018_instruction: Fai arrivare l'uccellino fino al maialino.
       courseD_maze_ramp6_instruction: '"Mantieni la calma e aiutami a trovare quel
@@ -10994,72 +10923,58 @@ it:
       courseD_pixelation_instruction: |-
         Encode an image of anything you like using
         binary. The binary language will be represented with '0' and '1' only.
-      courseD_playLab_cond1_instruction: |-
-        Get Pegleg to the dragon to solve this
-        puzzle.
-      courseD_playLab_cond1_2018_instruction: |-
-        Get Pegleg to the flags to solve this
-        puzzle.
-      courseD_playLab_cond2_instruction: "Give Pegleg a point every time he makes\nit
-        to the dragon. "
-      courseD_playLab_cond2_2018_instruction: "Give Pegleg a point every time he\nmakes
-        it to the dragon. "
-      courseD_playLab_cond3_instruction: "Make the dragon change between random emotions\nevery
-        second.  "
-      courseD_playLab_cond3_2018_instruction: "Make the dragon change between random\nemotions
-        every second.  "
-      courseD_playLab_cond3a_instruction: |-
-        Make it so when Pegleg gets to the dragon,
-        he gets 2 points if the dragon is happy and 1 otherwise.
-      courseD_playLab_cond3a_2018_instruction: |-
-        Make it so when Pegleg gets to the
-        dragon, he gets 2 points if the dragon is happy and 1 otherwise.
+      courseD_playLab_cond1_instruction: Fai arrivare il pirata fino alle bandierine
+        per risolvere questo esercizio.
+      courseD_playLab_cond1_2018_instruction: Fai arrivare il pirata fino alle bandierine
+        per risolvere questo esercizio.
+      courseD_playLab_cond2_instruction: 'Assegna un punto al pirata ogni volta che
+        riesce a raggiungere il drago. '
+      courseD_playLab_cond2_2018_instruction: 'Assegna un punto al pirata ogni volta
+        che riesce a raggiungere il drago. '
+      courseD_playLab_cond3_instruction: Fai in modo che ogni secondo il drago cambi
+        umore in modo casuale.
+      courseD_playLab_cond3_2018_instruction: Fai in modo che ogni secondo il drago
+        cambi umore in modo casuale.
+      courseD_playLab_cond3a_instruction: Quando il pirata raggiunge il drago, fagli
+        guadagnare 2 punti se il drago è felice, altrimenti solo 1.
+      courseD_playLab_cond3a_2018_instruction: Quando il pirata raggiunge il drago,
+        fagli guadagnare 2 punti se il drago è felice, altrimenti solo 1.
       courseD_playLab_cond3b_instruction: "1) Make the dragon change between random
         emotions every second.  \r\n2) Make it so when Pegleg gets to the dragon,
         he gets 2 points if the dragon is happy and 1 otherwise."
-      courseD_playLab_cond4_instruction: |-
-        Add some code so that the ninja (actor
-        3) starts chasing Pegleg as soon as the game begins.  End the game as a loss
-        if the ninja catches him.
-      courseD_playLab_cond4_2018_instruction: |-
-        Add some code so that the ninja (actor
-        3) starts chasing Pegleg as soon as the game begins.  End the game as a loss
-        if the ninja catches him.
-      courseD_playLab_cond5_instruction: |-
-        Add a `repeat forever` loop that continuously
-        checks if the score is greater than 5, then ends the game as a win when it
-        is.
-      courseD_playLab_cond5_2018_instruction: |-
-        Add a `repeat forever` loop that continuously
-        checks if the score is greater than 5, then ends the game as a win when it
-        is.
-      courseD_playLab_cond6_instruction: "1)  Slow the ninja (actor 3) down before
-        you set him to chase the pirate.  \r\n2)  If the pirate is greater than 225
-        pixels down, set the ninja to **flee** the pirate.  Otherwise, set the ninja
-        to **chase** the pirate.  "
-      courseD_playLab_cond6_2018_instruction: "1)  Slow the ninja (actor 3) down before
-        you set him to chase the pirate.  \r\n2)  If the pirate is greater than 225
-        pixels down, set the ninja to **flee** the pirate.  Otherwise, set the ninja
-        to **chase** the pirate.  "
-      courseD_playLab_cond6a_instruction: |-
-        If the pirate (actor 1) is in the safe
-        zone, wait one second, then deduct a point as long as he stays beneath the
-        octopus line.
-      courseD_playLab_cond6a_2018_instruction: |-
-        If the pirate (actor 1) is in the
-        safe zone, wait one second, then deduct a point as long as he stays beneath
-        the octopus line.
+      courseD_playLab_cond4_instruction: Aggiungi del codice affinché, appena il gioco
+        comincia, il ninja (personaggio 3) si metta a inseguire il pirata. Se il ninja
+        lo prende, il gioco termina con una sconfitta.
+      courseD_playLab_cond4_2018_instruction: Aggiungi del codice affinché, appena
+        il gioco comincia, il ninja (personaggio 3) si metta a inseguire il pirata.
+        Se il ninja lo prende, il gioco termina con una sconfitta.
+      courseD_playLab_cond5_instruction: 'Aggiungi un ciclo `ripeti per sempre` che
+        controlli in continuazione il punteggio: se è maggiore di 5, allora termina
+        il gioco con una vittoria.'
+      courseD_playLab_cond5_2018_instruction: 'Aggiungi un ciclo `ripeti per sempre`
+        che controlli in continuazione il punteggio: se è maggiore di 5, allora termina
+        il gioco con una vittoria.'
+      courseD_playLab_cond6_instruction: |-
+        1) Rallenta il ninja (personaggio 3) prima di fargli inseguire il pirata.
+        2) Se il pirata è più in basso di 225 pixel, imposta il ninja per farlo **fuggire** dal pirata. Altrimenti, imposta il ninja affinché **insegua** il pirata.
+      courseD_playLab_cond6_2018_instruction: |-
+        1) Rallenta il ninja (personaggio 3) prima di fargli inseguire il pirata.
+        2) Se il pirata è più in basso di 225 pixel, imposta il ninja per farlo **fuggire** dal pirata. Altrimenti, imposta il ninja affinché **insegua** il pirata.
+      courseD_playLab_cond6a_instruction: Se il pirata (personaggio 1) è nella "zona
+        di sicurezza", aspetta un secondo, poi togli un punto ogni secondo che il
+        pirata trascorre al di sotto della linea dei polpi.
+      courseD_playLab_cond6a_2018_instruction: Se il pirata (personaggio 1) è nella
+        "zona di sicurezza", aspetta un secondo, poi togli un punto ogni secondo che
+        il pirata trascorre al di sotto della linea dei polpi.
       courseD_playLab_cond6cloneForTest_instruction: Testing
-      courseD_playLab_condFP_instruction: |-
-        Now, build your own game to show off to
-        your friends!
-      courseD_playLab_condFP_2018_instruction: |-
-        Now, build your own game to show
-        off to your friends!
-      courseD_playLab_condFP_a_instruction: Now, build your own game to show off to
-        your friends!
-      courseD_playLab_condForVideo_instruction: Now, build your own game to show off
-        to your friends!
+      courseD_playLab_condFP_instruction: Ora costruisci il tuo gioco personale da
+        mostrare a tutti i tuoi amici!
+      courseD_playLab_condFP_2018_instruction: Ora costruisci il tuo gioco personale
+        da mostrare a tutti i tuoi amici!
+      courseD_playLab_condFP_a_instruction: Ora costruisci il tuo gioco personale
+        da mostrare a tutti i tuoi amici!
+      courseD_playLab_condForVideo_instruction: Ora costruisci il tuo gioco personale
+        da mostrare a tutti i tuoi amici!
       courseD_playLab_embedded_instruction: "Move Pegleg the Pirate with the arrow
         keys. Get to the dragon to score points, but avoid the ninja! Standing below
         the line of octopuses will make the ninja stop chasing you, but beware! The
@@ -11069,11 +10984,11 @@ it:
       courseD_scrat_ramp1_2018_instruction: Per risolvere questo esercizio, collega
         tutti i blocchi e clicca su "Esegui" per vederlo in funzione!
       courseD_scrat_ramp2_instruction: Trascina ancora un blocco `vai avanti` fuori
-        dalla cassetta degli attrezzi, quindi attacca tutti i blocchi al blocco arancione
-        `quando si clicca su "Esegui"`per completare il programma.
+        dalla cassetta degli attrezzi e, per completare il programma, attacca tutti
+        i blocchi al blocco arancione `quando si clicca su "Esegui"`.
       courseD_scrat_ramp2_2018_instruction: Trascina ancora un blocco `vai avanti`
-        fuori dalla cassetta degli attrezzi, quindi attacca tutti i blocchi al blocco
-        arancione `quando si clicca su "Esegui"`per completare il programma.
+        fuori dalla cassetta degli attrezzi e, per completare il programma, attacca
+        tutti i blocchi al blocco arancione `quando si clicca su "Esegui"`.
       courseD_scrat_ramp3_instruction: |-
         There is one extra block that is going to
         cause Scrat to crash. Throw it away by dragging it back to the toolbox.
@@ -11576,11 +11491,11 @@ it:
       courseE_maze_ramp1_2018_instruction: Per risolvere questo esercizio, collega
         tutti i blocchi e clicca su "Esegui" per vederlo in funzione!
       courseE_maze_ramp2_instruction: Trascina ancora un blocco `vai avanti` fuori
-        dalla cassetta degli attrezzi, quindi attacca tutti i blocchi al blocco arancione
-        `quando si clicca su "Esegui"`per completare il programma.
+        dalla cassetta degli attrezzi e, per completare il programma, attacca tutti
+        i blocchi al blocco arancione `quando si clicca su "Esegui"`.
       courseE_maze_ramp2_2018_instruction: Trascina ancora un blocco `vai avanti`
-        fuori dalla cassetta degli attrezzi, quindi attacca tutti i blocchi al blocco
-        arancione `quando si clicca su "Esegui"`per completare il programma.
+        fuori dalla cassetta degli attrezzi e, per completare il programma, attacca
+        tutti i blocchi al blocco arancione `quando si clicca su "Esegui"`.
       courseE_maze_ramp3_instruction: |-
         C'è un blocco di troppo che fa andare a sbattere l'uccellino.
         Buttalo via trascinandolo nella cassetta degli attrezzi.
@@ -11994,10 +11909,10 @@ it:
         it is hiding a flower before you get nectar.  "
       courseF_bee_conditionals2_2018_instruction: "Check underneath each cloud to\nsee
         if it is hiding a flower before you get nectar.  "
-      courseF_bee_conditionals3_instruction: 'Help the bee collect all of the nectar.
-
-'
-      courseF_bee_conditionals3_2018_instruction: "Help the bee collect all of the\nnectar. "
+      courseF_bee_conditionals3_instruction: 'Aiuta l''ape a raccogliere tutto il
+        nettare. '
+      courseF_bee_conditionals3_2018_instruction: 'Aiuta l''ape a raccogliere tutto
+        il nettare. '
       courseF_bee_conditionals4_instruction: Raccogli tutto il nettare usando il minor
         numero possibile di blocchi.
       courseF_bee_conditionals4_2018_instruction: Raccogli tutto il nettare usando
@@ -13637,7 +13552,7 @@ it:
         allegra invece che triste?
       grade5_artist_binary6_instruction: Quale stringa binaria di 6 cifre, ripetuta
         11 volte, ti farà disegnare questa figura?
-      grade5_artist_binary7_instruction: Quale è la più piccola stringa binaria che
+      grade5_artist_binary7_instruction: Quale è la più piccola sequenza binaria che
         puoi inserire in un ciclo per disegnare questa figura?
       grade5_artist_binary8_instruction: Completa questo disegno.
       grade5_artist_binary9_instruction: |-

@@ -714,14 +714,14 @@ sk:
         applab_hoc_onevent: App Lab Hour of Code - onEvent
         applab_hoc_designmode: AppLab Hour of Code - Design Mode
         applab_hoc_share: AppLab Hour of Code - Share
-        mc_2017_agent_intro: Minecraft Hour of Code - The Agent
-        mc_2017_repeat: Minecraft Hour of Code - Repeat Loops
-        mc_2017_functions: Minecraft Hour of Code - Functions
+        mc_2017_agent_intro: Hodina kódu Minecraft - Agent
+        mc_2017_repeat: Hodina kódu Minecraft - Zopakuj Cykly
+        mc_2017_functions: Hodina kódu Minecraft - Funkcie
         mc_2017_congratulations: Hodina kódu Minecraft - Gratulujeme
-        mc_2017_puzzle_1: Minecraft Hour of Code - The Agent
-        mc_2017_puzzle_3: Minecraft Hour of Code - Repeat Loops
-        mc_2017_puzzle_8: Minecraft Hour of Code - Functions
-        mc_2017_puzzle_12: Minecraft Hour of Code - Freeplay
+        mc_2017_puzzle_1: Hodina kódu Minecraft - Agent
+        mc_2017_puzzle_3: Hodina kódu Minecraft - Zopakuj Cykly
+        mc_2017_puzzle_8: Hodina kódu Minecraft - Funkcie
+        mc_2017_puzzle_12: Hodina kódu Minecraft - Voľná hra
         hint_videos_d_11_3_first: 'Hint Videos: D.11.3 First'
         hint_videos_d_11_3_last: 'Hint Videos: D.11.3 Last'
         hint_videos_d_11_4_first: 'Hint Videos: D.11.4 First'
