@@ -319,7 +319,7 @@ class FilesApi < Sinatra::Base
     version_to_replace = params['version']
     timestamp = params['firstSaveTimestamp']
     tab_id = params['tabId']
-    buckets.check_current_version(encrypted_channel_id, filename, version_to_replace, timestamp, tab_id, current_user_id)
+    conflict unless buckets.check_current_version(encrypted_channel_id, filename, version_to_replace, timestamp, tab_id, current_user_id)
 
     response = buckets.create_or_replace(encrypted_channel_id, filename, body, version_to_replace)
 
