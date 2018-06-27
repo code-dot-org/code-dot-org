@@ -2,6 +2,7 @@
 
 import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
+import debounce from 'lodash/debounce';
 
 /**
  * Overlay for the play space that helps render additional UI (like the
@@ -37,7 +38,7 @@ export class VisualizationOverlay extends React.Component {
     // Note: This is currently used within a ProtectedStatefulDiv, so we need
     // to hook up our own handlers that trigger updates (based on state) instead
     // of depending on props passed in - hence, these globals.
-    window.addEventListener('resize', this.recalculateTransform);
+    window.addEventListener('resize', debounce(this.recalculateTransform, 100));
     document.addEventListener('mousemove', this.onMouseMove);
   }
 
