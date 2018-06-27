@@ -128,8 +128,6 @@ UNION ALL
     LEFT JOIN dashboard_production_pii.pd_regional_partner_mappings rpm 
       ON rpm.state = ssz.state OR rpm.zip_code = ssz.zip 
 
-  
-
 ;
 
 GRANT ALL PRIVILEGES
