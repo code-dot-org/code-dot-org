@@ -82,17 +82,28 @@ class SectionAssessments extends Component {
             {/* Assessments */}
             {!currentAssessmentIsSurvey &&
               <div>
-                <MCAssessmentsOverviewContainer />
-                <StudentsMCSummaryContainer />
-                <MultipleChoiceByStudentContainer />
-                <FreeResponsesAssessmentsContainer />
+                {totalStudentSubmissions > 0 &&
+                  <div>
+                    <MCAssessmentsOverviewContainer />
+                    <StudentsMCSummaryContainer />
+                    <MultipleChoiceByStudentContainer />
+                    <FreeResponsesAssessmentsContainer />
+                  </div>
+                }
+                {totalStudentSubmissions <=0 &&
+                  <h3>{i18n.emptyAssessmentSubmissions()}</h3>
+                }
               </div>
             }
             {/* Surveys */}
             {currentAssessmentIsSurvey &&
               <div>
-                <MCSurveyOverviewContainer />
-                <FreeResponseBySurveyQuestionContainer />
+                {totalStudentSubmissions > 0 &&
+                  <div>
+                    <MCSurveyOverviewContainer />
+                    <FreeResponseBySurveyQuestionContainer />
+                  </div>
+                }
                 {totalStudentSubmissions <=0 &&
                   <h3>{i18n.emptySurveyOverviewTable()}</h3>
                 }
