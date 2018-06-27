@@ -1,4 +1,5 @@
 import {SET_SECTION} from '@cdo/apps/redux/sectionDataRedux';
+import i18n from '@cdo/locale';
 
  /**
  * Initial state of sectionAssessmentsRedux
@@ -321,12 +322,30 @@ export const getSurveyFreeResponseQuestions = (state) => {
  */
 export const getMultipleChoiceSurveyResults = (state) => {
   const surveysStructure = state.sectionAssessments.surveysByScript[state.scriptSelection.scriptId] || {};
+  console.log('survey structure', surveysStructure);
+
+  function isEmptyObject(obj){
+    return (Object.getOwnPropertyNames(obj).length === 0);
+  }
+
+  const empty = isEmptyObject(surveysStructure);
+  console.log(empty);
+
+  // if (Object.getOwnPropertyNames(surveysStructure).length === 0) {
+  //   return true;
+  // } //true)
+
+  const surveyArrayKeys = Object.keys(surveysStructure);
+  console.log('surveyarraykeys', surveyArrayKeys);
+
   const currentSurvey = surveysStructure[state.sectionAssessments.assessmentId];
+  console.log('current survey', currentSurvey);
   if (!currentSurvey) {
     return [];
   }
 
   const questionData = currentSurvey.levelgroup_results;
+  console.log('question data', questionData);
 
   // Filter to multiple choice questions.
   return questionData.filter(question => question.type === SurveyQuestionType.MULTI).map((question, index) => {
@@ -371,15 +390,18 @@ export const getMultipleChoiceSurveyResults = (state) => {
 // Determine if to show the empty text for when there are fewer than 5 survey submissions.
 
 export const checkCurrentIsSurvey = (state) => {
+
+  // check if assessment id is in survey structure.  If it isn't then don't displ
   const surveysStructure = state.sectionAssessments.surveysByScript[state.scriptSelection.scriptId] || {};
-  const currentSurvey = surveysStructure[state.sectionAssessments.assessmentId];
-  // if the assessmentId does not exist, do not display the mc survey overview table
-  if (!currentSurvey) {
-    return [];
-  } else {
-    return i18n.emptySurveyOverviewTable();
-  }
-};
+
+  // const surveyArrayKeys = Object.keys(surveysStructure);
+  // console.log(surveyArrayKeys);
+  // (parseInt(studentId, 10));
+
+
+}
+
+
 
 /** Get data for students assessments multiple choice table
  * Returns an object, each of type studentOverviewDataPropType with
