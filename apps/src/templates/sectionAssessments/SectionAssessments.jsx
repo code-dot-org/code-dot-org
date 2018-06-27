@@ -5,6 +5,7 @@ import {
   getCurrentScriptAssessmentList,
   setAssessmentId,
   currentAssessmentIsSurvey,
+  countSubmissionsForCurrentAssessment,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {connect} from 'react-redux';
 import {h3Style} from "../../lib/ui/Headings";
@@ -39,6 +40,7 @@ class SectionAssessments extends Component {
     asyncLoadAssessments: PropTypes.func.isRequired,
     multipleChoiceSurveyResults: PropTypes.array,
     currentAssessmentIsSurvey: PropTypes.bool,
+    totalStudentSubmissions: PropTypes.number,
   };
 
   onChangeScript = scriptId => {
@@ -48,7 +50,8 @@ class SectionAssessments extends Component {
   };
 
   render() {
-    const {validScripts, scriptId, assessmentList, assessmentId, isLoading, currentAssessmentIsSurvey} = this.props;
+    const {validScripts, scriptId, assessmentList, assessmentId,
+      isLoading, currentAssessmentIsSurvey, totalStudentSubmissions} = this.props;
 
     return (
       <div>
@@ -90,6 +93,9 @@ class SectionAssessments extends Component {
               <div>
                 <MCSurveyOverviewContainer />
                 <FreeResponseBySurveyQuestionContainer />
+                {totalStudentSubmissions <=0 &&
+                  <h3>{i18n.emptySurveyOverviewTable()}</h3>
+                }
               </div>
             }
           </div>
@@ -112,6 +118,7 @@ export default connect(state => ({
   scriptId: state.scriptSelection.scriptId,
   assessmentId: state.sectionAssessments.assessmentId,
   currentAssessmentIsSurvey: currentAssessmentIsSurvey(state),
+  totalStudentSubmissions: countSubmissionsForCurrentAssessment(state),
 }), dispatch => ({
   setScriptId(scriptId) {
     dispatch(setScriptId(scriptId));
