@@ -4,6 +4,7 @@ import {
   asyncLoadAssessments,
   getCurrentScriptAssessmentList,
   setAssessmentId,
+  currentAssessmentIsSurvey,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {connect} from 'react-redux';
 import {h3Style} from "../../lib/ui/Headings";
@@ -36,6 +37,7 @@ class SectionAssessments extends Component {
     setAssessmentId: PropTypes.func.isRequired,
     asyncLoadAssessments: PropTypes.func.isRequired,
     multipleChoiceSurveyResults: PropTypes.array,
+    currentAssessmentIsSurvey: PropTypes.bool,
   };
 
   onChangeScript = scriptId => {
@@ -46,7 +48,7 @@ class SectionAssessments extends Component {
   };
 
   render() {
-    const {validScripts, scriptId, assessmentList, assessmentId} = this.props;
+    const {validScripts, scriptId, assessmentList, assessmentId, currentAssessmentIsSurvey} = this.props;
 
     return (
       <div>
@@ -71,13 +73,21 @@ class SectionAssessments extends Component {
           />
         </div>
           {/* Assessments */}
-          <MCAssessmentsOverviewContainer />
-          <StudentsMCSummaryContainer />
-          <MultipleChoiceByStudentContainer />
-          <FreeResponsesAssessmentsContainer />
+          {!currentAssessmentIsSurvey &&
+            <div>
+              <MCAssessmentsOverviewContainer />
+              <StudentsMCSummaryContainer />
+              <MultipleChoiceByStudentContainer />
+              <FreeResponsesAssessmentsContainer />
+            </div>
+          }
           {/* Surveys */}
-          <MCSurveyOverviewContainer />
-          <FreeResponseBySurveyQuestionContainer />
+          {currentAssessmentIsSurvey &&
+            <div>
+              <MCSurveyOverviewContainer />
+              <FreeResponseBySurveyQuestionContainer />
+            </div>
+          }
       </div>
     );
   }
@@ -92,6 +102,7 @@ export default connect(state => ({
   assessmentList: getCurrentScriptAssessmentList(state),
   scriptId: state.scriptSelection.scriptId,
   assessmentId: state.sectionAssessments.assessmentId,
+  currentAssessmentIsSurvey: currentAssessmentIsSurvey(state),
 }), dispatch => ({
   setScriptId(scriptId) {
     dispatch(setScriptId(scriptId));
