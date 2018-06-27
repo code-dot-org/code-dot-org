@@ -17,7 +17,6 @@ var BaseDialog = React.createClass({
     fullWidth: PropTypes.bool,
     fullHeight: PropTypes.bool,
     useUpdatedStyles: PropTypes.bool,
-    useDeprecatedGlobalStyles: PropTypes.bool,
     noModalStyles: PropTypes.bool,
     children: PropTypes.node,
     fixedWidth: PropTypes.number,
@@ -114,10 +113,6 @@ var BaseDialog = React.createClass({
         cursor: 'pointer',
         fontSize: 24,
       };
-    } else if (this.props.useDeprecatedGlobalStyles) {
-      modalClassNames = "modal dash_modal in";
-      modalBodyClassNames = "modal-body dash_modal_body";
-      modalBackdropClassNames = "modal-backdrop in";
     } else if (this.props.noModalStyles) {
       modalClassNames = "";
       modalBodyClassNames = "";
