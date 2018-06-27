@@ -219,6 +219,13 @@ class User < ActiveRecord::Base
 
   has_many :authentication_options, dependent: :destroy
   belongs_to :primary_authentication_option, class_name: 'AuthenticationOption'
+  validate if: :migrated? do |user|
+    user.authentication_options.each do |ao|
+      unless ao.valid?
+        ao.errors.each {|k, v| user.errors.add k, v}
+      end
+    end
+  end
 
   belongs_to :school_info
   accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
