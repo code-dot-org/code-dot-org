@@ -456,7 +456,7 @@ export const getMultipleChoiceSectionSummary = (state) => {
       if (response.status === 'unsubmitted') {
         results[questionIndex].notAnswered++;
       } else {
-        response.student_result.forEach(answer => {
+        (response.student_result || []).forEach(answer => {
           results[questionIndex].answers[answer].numAnswered++;
         });
       }
