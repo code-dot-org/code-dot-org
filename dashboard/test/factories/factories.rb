@@ -127,9 +127,6 @@ FactoryGirl.define do
         name 'District Contact Person'
         ops_first_name 'District'
         ops_last_name 'Person'
-        after(:create) do |district_contact|
-          district_contact.permission = UserPermission::DISTRICT_CONTACT
-        end
       end
       # Creates a teacher optionally enrolled in a workshop,
       # or marked attended on either all (true) or a specified list of workshop sessions.
@@ -362,7 +359,9 @@ FactoryGirl.define do
         )
         user.update!(
           primary_authentication_option: ao,
-          provider: User::PROVIDER_MIGRATED
+          provider: User::PROVIDER_MIGRATED,
+          email: '',
+          hashed_email: nil
         )
       end
     end

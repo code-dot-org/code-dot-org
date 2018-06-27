@@ -450,13 +450,13 @@ export const getMultipleChoiceSectionSummary = (state) => {
     const studentResults = studentAssessment.level_results || [];
     const multiResults = studentResults.filter(result => result.type === QuestionType.MULTI);
     multiResults.forEach((response, questionIndex) => {
-      // student_result is either '' and not answered or a series of letters
+      // student_result is either [] and not answered or a series of letters
       // that the student selected.
-      if (response.student_result === []) {
+      results[questionIndex].totalAnswered++;
+      if (response.status === 'unsubmitted') {
         results[questionIndex].notAnswered++;
       } else {
-        results[questionIndex].totalAnswered++;
-        response.student_result.forEach(answer => {
+        (response.student_result || []).forEach(answer => {
           results[questionIndex].answers[answer].numAnswered++;
         });
       }
@@ -464,6 +464,33 @@ export const getMultipleChoiceSectionSummary = (state) => {
   });
 
   return results;
+};
+
+/**
+ * Selector function that takes in the state and a boolean indicating
+ * if the current assessment is a survey.
+ * @returns {number} total count of students who have submitted
+ * the current assessment.
+ */
+export const countSubmissionsForCurrentAssessment = (state, isSurvey) => {
+  const currentAssessmentId = state.sectionAssessments.assessmentId;
+  if (isSurvey) {
+    const surveysStructure = state.sectionAssessments.surveysByScript[state.scriptSelection.scriptId] || {};
+    const currentSurvey = surveysStructure[currentAssessmentId];
+    if (!currentSurvey) {
+      return 0;
+    }
+    return currentSurvey.levelgroup_results[0].results.length;
+  } else {
+    const studentResponses = getAssessmentResponsesForCurrentScript(state);
+    let totalSubmissions = 0;
+    Object.values(studentResponses).forEach((student) => {
+      if (Object.keys(student.responses_by_assessment).includes(currentAssessmentId.toString())) {
+        totalSubmissions++;
+      }
+    });
+    return totalSubmissions;
+  }
 };
 
 // Helpers
