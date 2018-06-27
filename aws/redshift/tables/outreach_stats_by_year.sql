@@ -3,8 +3,10 @@ CREATE table analysis.outreach_stats_by_year AS
   SELECT 'State' region_type,
          ug.state region,
          ug.state state,
-         school_year,
-         -- DATE_PART(year,us.created_at::DATE) AS year,
+         sy1.school_year school_year
+        -- old ways of getting the year:
+             -- coalesce(sy1.school_year, sy2.school_year) as school_year, 
+             -- DATE_PART(year,us.created_at::DATE) AS year,
          COUNT(DISTINCT u.id) teachers,
          COUNT(DISTINCT f.student_user_id) students,
          COUNT(DISTINCT CASE WHEN u_students.gender = 'f' THEN f.student_user_id ELSE NULL END)::FLOAT/ NULLIF(COUNT(DISTINCT CASE WHEN u_students.gender IN ('m','f') THEN f.student_user_id ELSE NULL END),0) pct_female,
@@ -28,7 +30,8 @@ CREATE table analysis.outreach_stats_by_year AS
       ON u_students.id = us.user_id
     LEFT JOIN dashboard_production.user_proficiencies up 
       ON up.user_id = u_students.id
-     JOIN analysis.school_years sy on us.created_at between sy.started_at and sy.ended_at
+    LEFT JOIN analysis.school_years sy1 on us.started_at between sy1.started_at and sy1.ended_at
+    --LEFT JOIN analysis.school_years sy2 on us.created_at  between sy2.started_at and sy2.ended_at
   WHERE country = 'United States'
   AND   u_students.current_sign_in_at IS NOT NULL
   AND   u_students.user_type = 'student'
@@ -38,8 +41,10 @@ CREATE table analysis.outreach_stats_by_year AS
   SELECT 'City' region_type,
          ug.city|| ', ' ||ug.state region,
          ug.state state,
-         -- DATE_PART(year,us.created_at::DATE) AS year,
-        school_year,         
+        sy1.school_year school_year
+        -- old ways of getting the year:
+             -- coalesce(sy1.school_year, sy2.school_year) as school_year, 
+             -- DATE_PART(year,us.created_at::DATE) AS year,       
         COUNT(DISTINCT u.id) teachers,
          COUNT(DISTINCT f.student_user_id) students,
          COUNT(DISTINCT CASE WHEN u_students.gender = 'f' THEN f.student_user_id ELSE NULL END)::FLOAT/ NULLIF(COUNT(DISTINCT CASE WHEN u_students.gender IN ('m','f') THEN f.student_user_id ELSE NULL END),0) pct_female,
@@ -63,7 +68,8 @@ CREATE table analysis.outreach_stats_by_year AS
       ON u_students.id = us.user_id
     LEFT JOIN dashboard_production.user_proficiencies up 
       ON up.user_id = u_students.id
-    JOIN analysis.school_years sy on us.created_at between sy.started_at and sy.ended_at
+    LEFT JOIN analysis.school_years sy1 on us.started_at between sy1.started_at and sy1.ended_at
+    --LEFT JOIN analysis.school_years sy2 on us.created_at  between sy2.started_at and sy2.ended_at
   WHERE country = 'United States'
   AND   u_students.current_sign_in_at IS NOT NULL
   AND   u_students.user_type = 'student'
