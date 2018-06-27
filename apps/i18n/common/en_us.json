@@ -775,6 +775,7 @@
   "parentsAndStudents": "Parents and Students",
   "password": "Password",
   "passwordConfirmation": "Password confirmation",
+  "passwordTooShort": "Password too short (minimum is 6 characters)",
   "passwordsMustMatch": "Passwords must match",
   "pause": "Break",
   "percentCorrect": "% correct",
