@@ -181,29 +181,42 @@ class BucketHelper
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     key = s3_path owner_id, channel_id, filename
 
-    # check current version id without pulling down the whole object.
-    current_version = s3.get_object_tagging(bucket: @bucket, key: key).version_id
+    # Get the list of version metadata without pulling down the whole object.
 
-    return if version_to_replace == current_version
+    # This is an Array of ObjectVersions, defined in:
+    # https://docs.aws.amazon.com/sdkforruby/api/Aws/S3/Types/ObjectVersion.html
+    versions = s3.list_object_versions(bucket: @bucket, prefix: key).versions
+
+    target_version_metadata = versions.find {|v| v.version_id == version_to_replace}
+
+    return unless target_version_metadata && !target_version_metadata.is_latest
+
+    # Something is wrong. The target version is present but is not the latest.
+    # We conclude that a different client has updated this project since the
+    # last time the current client updated it.
+    #
+    # For now, just log an error. Once we're sure this is working properly,
+    # start returning 409 Conflict and force the client to reload the page.
 
     FirehoseClient.instance.put_record(
       study: 'project-data-integrity',
       study_group: 'v3',
-      event: 'replace-non-current-main-json',
+      event: 'replace-older-main-json',
 
       project_id: encrypted_channel_id,
       user_id: user_id,
 
       data_json: {
         replacedVersionId: version_to_replace,
-        currentVersionId: current_version,
         tabId: tab_id,
         key: key,
 
         # Server timestamp indicating when the first version of main.json was saved by the browser
         # tab making this request. This is for diagnosing problems with writes from multiple browser
         # tabs.
-        firstSaveTimestamp: timestamp
+        firstSaveTimestamp: timestamp,
+
+        versions: versions,
       }.to_json
     )
   rescue Aws::S3::Errors::NoSuchKey
