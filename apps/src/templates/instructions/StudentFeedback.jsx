@@ -43,7 +43,7 @@ class StudentFeedback extends Component {
       <div>
         {this.state.feedbacks.map((feedback, i) => (
           <div style={styles.content} key={i}>
-            <div style={styles.header}>{i18n.feedbackFrom({teacher: feedback.teacher_id})}</div>
+            <div style={styles.header}>{i18n.feedbackFrom({teacher: feedback.teacher_name})}</div>
             <div>{i18n.fromWhen({when: moment(feedback.created_at).fromNow()})}<br/>{feedback.comment}</div>
           </div>
         ))}
