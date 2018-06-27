@@ -219,6 +219,12 @@ class User < ActiveRecord::Base
 
   has_many :authentication_options, dependent: :destroy
   belongs_to :primary_authentication_option, class_name: 'AuthenticationOption'
+  # This custom validator makes email collision checks on the AuthenticationOption
+  # model also show up as validation errors for the email field on the User
+  # model.
+  # There's probably some performance cost in additional queries here - once
+  # we are fully migrated to multi-auth, we may want to remove this code and
+  # check that we handle validation errors from AuthenticationOption everywhere.
   validate if: :migrated? do |user|
     user.authentication_options.each do |ao|
       unless ao.valid?
