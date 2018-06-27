@@ -2439,7 +2439,7 @@ it:
       2:
         image: notes/tutorial_puzzle_challenge_2.png
         text: |-
-          Posso cambiare il numero dei pixel o la lunghezza della linea usando questo menù a tendina.
+          Posso cambiare il numero dei pixel o la lunghezza della linea usando questo menù a discesa.
           Quanto era lunga? Non ricordo.....
           Se hai bisogno di rivedere le istruzioni, le trovi sotto il bottone "Esegui". In questo caso ho utilizzato il blocco "Vai avanti" e sceglierò 100 pixels. Posso cancellare un blocco trascinandolo nella cassetta degli attrezzi oppure nel cestino dei rifiuti. Adesso lo rimetto a posto.
       3:

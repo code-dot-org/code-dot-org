@@ -4940,18 +4940,15 @@ sk:
       MC_2017_Ryan_02_instruction: |-
         Help the player get out by using loops to get
         the Agent to the pressure plate.
-      MC_HOC_2017 Agent Test_instruction: |-
-        Click "Run" to move the player to the
-        orange square inside of the house.
-      MC_HOC_2017_01_instruction: |-
-        Click "Run" to move the player to the orange
-        square inside of the house.
+      MC_HOC_2017 Agent Test_instruction: Kliknite na "Spustiť" pre pohyb hráča po
+        oranžovom štvorci vo vnútri domu.
+      MC_HOC_2017_01_instruction: Kliknite na "Spustiť" pre pohyb hráča po oranžovom
+        štvorci vo vnútri domu.
       MC_HOC_2017_01_Cole_instruction: Na tejto ceste musíte pozbierať všetky nástroje.
         Pohybujte sa po okolí pomocou **klávesov so šípkami** a dostaňte sa počas
         cesty k truhlici, aby ste vyhrali.
-      MC_HOC_2017_01_Kiki_instruction: |-
-        Click "Run" to move the player to the orange
-        square inside of the house.
+      MC_HOC_2017_01_Kiki_instruction: Kliknite na "Spustiť" pre pohyb hráča po oranžovom
+        štvorci vo vnútri domu.
       MC_HOC_2017_01_RETRY_instruction: 'Dostaňte agenta na prítlačnú dosku. Potom
         stlačte tlačidlo Spustiť a pomocou klávesov so šípkami presuňte hráča z domu,
         aby získal truhlicu. '

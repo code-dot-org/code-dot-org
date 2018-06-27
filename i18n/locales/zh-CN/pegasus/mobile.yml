@@ -939,25 +939,25 @@
   coursee_name: "课程 E"
   coursef-draft_name: 课程 F
   coursef_name: "课程 F"
-  coursea-2017_name: Course A (2017)
-  courseb-2017_name: Course B (2017)
-  coursec-2017_name: Course C (2017)
-  coursed-2017_name: Course D (2017)
-  coursee-2017_name: Course E (2017)
-  coursef-2017_name: Course F (2017)
-  coursea-2018_name: Course A (2018)
-  courseb-2018_name: Course B (2018)
-  coursec-2018_name: Course C (2018)
+  coursea-2017_name: 课程 A （2017）
+  courseb-2017_name: 课程 B （2017）
+  coursec-2017_name: 课程 C （2017）
+  coursed-2017_name: 课程 D （2017）
+  coursee-2017_name: 课程 E （2017）
+  coursef-2017_name: 课程 F （2017）
+  coursea-2018_name: 课程 A （2018）
+  courseb-2018_name: 课程 B （2018）
+  coursec-2018_name: 课程 C （2018）
   coursed-2018_name: 新的课程D脚本
-  coursee-2018_name: Course E (2018)
-  coursef-2018_name: Course F (2018)
+  coursee-2018_name: 课程 E （2018）
+  coursef-2018_name: 课程 F （2018）
   accelerated_name: "加速课程"
   express_name: "快速课程"
   pre-express_name: 适用于还不能阅读的学生的快捷课程
-  express-2017_name: Express Course (2017)
-  pre-express-2017_name: Pre-reader Express Course (2017)
+  express-2017_name: 速学课程 （2017）
+  pre-express-2017_name: 学前儿童的速学课程（2017）
   express-2018_name: 快速课程
-  pre-express-2018_name: Pre-reader Express Course (2018)
+  pre-express-2018_name: 学前儿童的速学课程（2018）
   cspunit1_name: "（旧）单元 1︰ 数字信息"
   cspunit2_name: "（旧）单元 2︰ 互联网"
   cspunit3_name: "（旧版）第3单元︰ 编程"
@@ -1032,8 +1032,8 @@
   math_category_name: "数学"
   hoc_category_name: "编程一小时"
   csf_category_name: "计算机科学基本原理"
-  csf_2017_category_name: "CS Fundamentals (2017)"
-  csf_2018_category_name: "CS Fundamentals (2018)"
+  csf_2017_category_name: "计算机科学基础课程（2017）"
+  csf_2018_category_name: "计算机科学基础课程（2018）"
   csf_international_category_name: "计算机基础国际版"
   csf2_draft_category_name: '开发中：课程A - F'
   csd_category_name: "CS Discoveries ('17-'18)"

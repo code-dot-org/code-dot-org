@@ -26,45 +26,47 @@ es-MX:
         2-3_Artist_4_a: Para terminar la casa, lo que necesitamos hacer es ¡dibujar
           un cuadrado!
       2-3 Artist 6_authored_hint:
-        2-3_Artist_6_a: 'Para realizar esos pequeños ángulos, tendrás que ir *más
-          allá* cada vez así como lo hiciste con el cuadrado.   '
+        2-3_Artist_6_a: 'Para hacer esos pequeños ángulos, tienes que girar *más allá*
+          cada vez como lo hiciste con el cuadrado.   '
         2-3_Artist_6_b: Como ya estoy mirando hacia la derecha, es más fácil empezar
           por avanzar, y luego hacer vueltas a la izquierda para crear el triángulo.
-        2-3_Artist_6_c: Cada lado del triángulo tienen el mismo tamaño como los lados
-          del cuadrado...¡100 pixeles!
+        2-3_Artist_6_c: Cada lado del triángulo tiene la misma longitud que cada lado
+          del cuadrado... 100 pixeles!
       2-3 Artist 7_authored_hint:
-        2-3_Artist_7_a: La forma más fácil de resolver este rompecabezas es dibujar
-          el primer cuadro y finalizar con que el artista apunte hacia abajo antes
-          de comenzar con el segundo cuadro.
+        2-3_Artist_7_a: La forma más sencilla de resolver este rompecabezas es dibujar
+          el primer cuadrado y acabar con el artista apuntando hacia abajo antes de
+          comenzar el segundo cuadrado.
       2-3 Artist 8_authored_hint:
-        2-3_Artist_8_a: Si cortas la mitad de 200, ¿qué tan anchos deben ser los pixeles
-          de cada cuadro?
+        2-3_Artist_8_a: Si cortas 200 por la mitad,¿de cuántos pixeles de ancho necesita
+          ser cada cuadrado?
       2-3 Artist 9 NEW_authored_hint:
         2-3_Artist_9_a: Este diamante es realmente sólo un cuadrado de lado
       2-3 Artist 9 REPLACEMENT_authored_hint:
         step_size: Cada paso tiene 100 pixeles de ancho y 100 pixeles de alto.
       2-3 Artist 9_authored_hint:
-        2-3_Artist_9_a: Este diamante es realmente un cuadrado, gira 45 grados.
-        2-3_Artist_9_b: Antes de comenzar a dibujar el cuadro, ¡No olvides girar 45
-          grados a la izquierda al artista![](https://images.code.org/47cc2474e533667101a2d73b98da204e-image-1467744539967.gif)
+        2-3_Artist_9_a: Este diamante es realmente un cuadrado girado 45 grados.
+        2-3_Artist_9_b: No olvides girar al artista hacia la izquierda 45 grados antes
+          de comenzar a dibujar tu cuadrado
       2-3 Artist Debugging 10_authored_hint:
         2-3_Artist_Debugging_10_a: Recuerda que si deseas que el panel de control
           sea 10 pixeles *más ancho*...asegúrate de **sumarle** 10 al número que cambies.
         2-3_Artist_Debugging_10_b: |-
-          **¡Prueba y error son permitidos!**
+          **Ensayo y error está permitido!**
 
-          Empieza por cambiar un número a la vez.
+          Comienza por cambiar un número a la vez.
 
-          Si te llegas a perder, solo da click en "Comenzar de nuevo" y el código se habrá reiniciado.
+          ¿Qué números hacen qué?
+
+          Si te pierdes, haz clic en "Start over" y tu código se restablecerá.
       2-3 Artist Debugging 2_authored_hint:
-        2-3_Artist_Debugging_2_a: 'Pista: cada hebra tiene una longitud de 75 pixeles.'
+        2-3_Artist_Debugging_2_a: 'Pista: Cada bigote tiene 75 pixeles de largo.'
       2-3 Artist Debugging 3_authored_hint:
-        2-3_Artist_Debugging_3_a: Una de las vueltas es 15 grados más pequeño.
-        2-3_Artist_Debugging_3_b: Si el programa se ejecuta muy rápido, intenta aminorar
-          la velocidad con la barra para ver qué está pasando.
+        2-3_Artist_Debugging_3_a: Uno de los giros es 15 grados demasiado pequeños.
+        2-3_Artist_Debugging_3_b: Si el programa se ejecuta demasiado rápido para
+          ver lo que está ocurriendo, trate de frenar usando la barra deslizante.
       2-3 Artist Debugging 7_authored_hint:
-        2-3_Artist_Debugging_7_a: "¿Qué ocurre si mueves o lanzas al artista hacia
-          atrás, después de que dibuja la primera línea?"
+        2-3_Artist_Debugging_7_a: "¿Qué pasa si haces que el artista se mueva o salte
+          hacia atrás después de que dibuje la primera línea?"
       2-3 Artist Debugging 8_authored_hint:
         2-3_Artist_Debugging_8_a: |-
           ¿Cuántas veces se repitió mi forma?
@@ -79,30 +81,30 @@ es-MX:
           girar completamente, solo añade 60 grados 'a la izquierda' al bloque que
           ya tienes ahí!"
       2-3 Artist Functions 1 a_authored_hint:
-        2-3_Artist_Functions_1_a: Cada cuadrado tiene 100 pixeles de lado, eso significa
-          que deberás avanzar hacia adelante 175 pixeles antes de dibujar el segundo
-          cuadrado.
-        2-3_Artist_Functions_1_b: Es correcto dibujar líneas solapadas para hacer
-          tus lentes.
+        2-3_Artist_Functions_1_a: Los cuadrados tienen 100 pixeles por lado cada uno,
+          eso significa que tendrás que moverte hacia adelante 175 pixeles antes de
+          dibujar tu segundo cuadrado.
+        2-3_Artist_Functions_1_b: Está correcto dibujar líneas superpuestas para hacer
+          tus anteojos.
       2-3 Artist Functions 1_authored_hint:
-        2-3_Artist_Functions_1_a: Cada cuadrado tiene 100 pixeles de lado, eso significa
-          que deberás avanzar hacia adelante 175 pixeles antes de dibujar el segundo
-          cuadrado.
-        2-3_Artist_Functions_1_b: Es correcto dibujar líneas solapadas para hacer
-          tus lentes.
+        2-3_Artist_Functions_1_a: Los cuadrados tienen 100 pixeles por lado cada uno,
+          eso significa que tendrás que moverte hacia adelante 175 pixeles antes de
+          dibujar tu segundo cuadrado.
+        2-3_Artist_Functions_1_b: Está correcto dibujar líneas superpuestas para hacer
+          tus anteojos.
       2-3 Artist Functions 11 a_authored_hint:
-        2-3_Artist_Functions_11_a: Vas a cambiar no solo el número y longitud de los
-          lados dentro de la función, sino también el ángulo que el artista toma entre
-          cada lado.
+        2-3_Artist_Functions_11_a: Deberás cambiar no sólo el número y longitud de
+          los lados dentro de la función, sino que también en ángulo con que el artista
+          gira entre cada lado.
       2-3 Artist Functions 11_authored_hint:
-        2-3_Artist_Functions_11_a: Vas a cambiar no solo el número y longitud de los
-          lados dentro de la función, sino también el ángulo que el artista toma entre
-          cada lado.
+        2-3_Artist_Functions_11_a: Deberás cambiar no sólo el número y longitud de
+          los lados dentro de la función, sino que también en ángulo con que el artista
+          gira entre cada lado.
       2-3 Artist Functions 12 a_authored_hint:
-        2-3_Artist_Functions_12_a: Prmero intenta ejecutar el código para ver lo que
+        2-3_Artist_Functions_12_a: Intenta ejecutar el código primero para ver qué
           necesitas agregar.
       2-3 Artist Functions 12_authored_hint:
-        2-3_Artist_Functions_12_a: Prmero intenta ejecutar el código para ver lo que
+        2-3_Artist_Functions_12_a: Intenta ejecutar el código primero para ver qué
           necesitas agregar.
       2-3 Artist Functions 2 a_authored_hint:
         2-3_Artist_Functions_2_a: |-
@@ -131,13 +133,13 @@ es-MX:
           Recuerda que el código del rompecabezas pasado era:
 
           ![](https://images.code.org/15288d042780242ec5edeed5204c6ebb-image-1469640792081.png)
-        2-3_Artist_Loops_New_11_b: El nuevo giro deberá ir **al final** del código
-          dentro del bucle.
+        2-3_Artist_Loops_New_11_b: Tu nuevo giro deberá ir al **final** del código
+          dentro del loop.
       2-3 Artist Loops New 12_authored_hint:
         2-3_Artist Loops_New_12_a: Antes de empezar el diamante, el artista necesita
           girar 60 grados a la izquierda para estar en el camino correcto.
-        2-3_Artist Loops_New_12_b: Después de que el artista avance 100 pixeles, necesitará
-          girar 120 grados a la derecha para hacer la esquina aguda.
+        2-3_Artist Loops_New_12_b: Luego que el artista avance 100 pixeles, necesitará
+          girar 120 grados a la derecha para formar una esquina cerrada.
         2-3_Artist Loops_New_12_c: El artista solamente deberá girar 60 grados a la
           derecha para crear una esquina amplia.
       2-3 Artist Loops New 13_authored_hint:
@@ -146,170 +148,167 @@ es-MX:
 
           Debido a esto, no necesitamos agregar un bloque extra de 'gira a la izquierda'  antes de que comenzar de nuevo.
         2-3_Artist_Loops_New_13_b: |-
-          Para hacer cada diamente, el artista requerirá:
-          - mover
+          Para hacer cada diamante, el artista necesita:
+          - moverse
           - girar a la derecha 120 grados
-          - mover
+          - moverse
           - girar a la derecha 60 grados
 
-          Luego, ¡hazlo de nueva cuenta!
+          ¡Luego todo de nuevo!
       2-3 Artist Loops New 9_authored_hint:
         2-3_Artist_Loops_New_9_a: El artista necesita girar 45 grados a la derecha
-          antes de que comience a dibujar.
+          antes de empezar a dibujar.
         2-3_Artist_Loops_New_9_b: Esta V solo es la mitad del cuadrado. ¿Cuál sería
           el código para dibujar la mitad del cuadrado?
       2-3 Artist Nested Loops 1_authored_hint:
-        2-3_Artist_Nested_Loops_1_a: Recuerda poner todos los bloques grises dentro
-          del ciclo.
+        2-3_Artist_Nested_Loops_1_a: Recuerda colocar todos los bloques de color gris
+          dentro del loop.
       2-3 Artist Nested Loops 3_authored_hint:
         2-3_Artist_Nested_Loops_3_a: |-
-          ¿Requieres ayuda con los ángulos?
+          ¿Necesitas ayuda con los ángulos?
           **360/12 = 30**
-        2-3_Artist_Nested_Loops_3_b: Recuerda poner todo el código gris y tu bloque
-          de girar dentro de un bucle.
+        2-3_Artist_Nested_Loops_3_b: Recuerda colocar el código gris completo y tu
+          bloque de giro dentro de un loop.
       2-3 Artist Nested Loops 4_authored_hint:
         2-3_Artist_Nested_Loops_3_a: |-
-          ¿Requieres ayuda con los ángulos?
+          ¿Necesitas ayuda con los ángulos?
           **360/12 = 30**
       2-3 Artist Nested Loops 5_authored_hint:
-        2-3_Artist_Nested_Loops_5_a: Utilice el bloque 'salto adelante' para llegar
-          desde la parte superior de una plaza al lugar donde se iniciará la siguiente.
-          Si sus plazas son 20 píxeles de alto y 20 píxeles apartes, ¿Cuánto necesita
-          saltar?
+        2-3_Artist_Nested_Loops_5_a: |-
+          Intenta usar el bloque "jump forward" para ir desde la parte superior de un cuadrado hasta el lugar donde comenzarás el siguiente.
+          Si tus cuadrados tienen 20 pixeles de alto y están separados 20 pixeles, ¿cuánto necesitas saltar?
       2-3 Artist Nested Loops 7_authored_hint:
-        2-3_Artist_Nested_Loops_7_a: "¿Hasta qué punto gire en cada bucle?  ¿Qué es
-          360/10?"
+        2-3_Artist_Nested_Loops_7_a: |-
+          ¿Qué tan lejos deberías girar en cada loop?
+
+          ¿Qué significa 360/10?
       2-3 Artist Nested Loops 9_authored_hint:
         2-3_Artist_Nested_Loops_9_a: "¿Necesita ayuda para encontrar el ángulo correcto?
           ** 360 / 12 = 30 **"
       2-3 Bee Conditionals 14_authored_hint:
         2-3_Bee_Conditionals_14_a: "¿Tienes problema en resolver cómo bajar los bloques?
           ¡Intenta tratar a la flor roja de la misma manera que la flor morada!"
-        2-3_Bee_Conditionals_14_b: Si la flor roja fuera morada, ¿Podrías averiguar
-          como utilizar un ciclo extra de 'repetición' para reducir el código?
-        2-3_Bee_Conditionals_14_c: |-
-          Intenta separar lo siguiente en dos partes:
-
-          ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)
-
-          1) Tomar néctar 3 veces:
-          - Ve hacia adelante 5 veces
-          - Revisa si existe néctar, de ser así: tómalo
-          - Gira a la derecha
-
-          2) Producir miel
-          - Ve hacia adelante una vez
-          - Fabrica dos mieles
+        2-3_Bee_Conditionals_14_b: Si la flor roja fuese morada, podrías imaginar
+          cómo usar un extra "repeat" loop para acortar el código?
+        2-3_Bee_Conditionals_14_c: "Intenta separar esto en dos partes :  \n\n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1)
+          Tomar néctar 3 veces\n  - Mueve adelante 5 veces\n  - Verifica si hay néctar,
+          si hay: cógelo\n  - Gira a la izquierda\n  \n2) Fabricar miel \n  - Mueve
+          adelante una vez\n  - Fabrica dos de miel"
       2-3 Bee Conditionals 15_authored_hint:
-        2-3_Bee_Conditionals_15_a: 'Recuerda: las flores moradas solo tienen ya sea
-          0 o 1 de néctar y puede cambiar cada que ejecutes el programa.'
+        2-3_Bee_Conditionals_15_a: 'Recuerda: las flores moradas solo tienen 0 o 1
+          de néctar, y pueden cambiar cada vez que ejecutes el programa.'
       2-3 Bee Conditionals 3_authored_hint:
-        2-3_Bee_Conditionals_3_a: El código será más corto si utilizas un bucle por
-          cada vez que avanzas, que recolectas néctar y cada que fabricas miel.
+        2-3_Bee_Conditionals_3_a: El código se acortará si usas un loop cada vez que
+          avanzas, otro loop para juntar néctar, y otro para hacer miel.
       2-3 Bee Conditionals 6_authored_hint:
-        2-3_Bee_Conditionals_6_a: 'Recuerda: las flores moradas cambian entre 0 y
-          1 cuando ejecutas el programa!'
+        2-3_Bee_Conditionals_6_a: 'Recuerda: las flores de color morado cambian entre
+          0 y 1 néctar al ejecutar tu programa!'
       2-3 Bee Debugging 1_authored_hint:
-        2-3_Bee_Debugging_1_a: Una vez que encuentres y arregles el bloque incorrecto
-          ¿Ves algún patrón que pueda hacerse más simple utilizando un ciclo "repetir"?
+        2-3_Bee_Debugging_1_a: Una vez que encuentres y corrijas el bloque incorrecto,
+          ¿ves algún patrón que se pueda hacer más simple usando un "repeat" loop?
       2-3 Bee Debugging 2_authored_hint:
-        2-3_Bee_Debugging_2_a: Una vez que encuentres y arregles el bloque incorrecto
-          ¿Ves algún patrón que pueda hacerse más simple utilizando un ciclo "repetir"?
+        2-3_Bee_Debugging_2_a: Una vez que encuentres y corrijas el bloque incorrecto,
+          ¿ves algún patrón que se pueda hacer más simple usando un "repeat" loop?
       2-3 Bee Debugging 4_authored_hint:
         2-3_Bee_Debugging_4_a: "¿Hay algún lugar donde la abeja haga algo que no tiene
           sentido? ¿Qué pasa cuando cambias ese bloque?"
       2-3 Bee Functions 4_authored_hint:
-        2-3_Bee_Functions_4_a: No tiene que usar un bucle con una función. Intenta
-          moverte, usando la función, luego avanza y usa la función nuevamente.
+        2-3_Bee_Functions_4_a: No tienes que usar un loop con una función. Intenta
+          moverte usando la función, luego moverte y usar la función otra vez.
       2-3 Bee Functions 6_authored_hint:
-        2-3_Bee_Functions_6_a: No tiene que usar un bucle con una función. Intenta
-          moverte, usando la función, luego avanza y usa la función nuevamente.
+        2-3_Bee_Functions_6_a: No tienes que usar un loop con una función. Intenta
+          moverte usando la función, luego moverte y usar la función otra vez.
       2-3 Bee Functions 8_authored_hint:
         2-3_Bee_Functions_8_a: "Si el rompecabezas parece desafiante, intente construir
           su función un poco a la vez.   \n\nAgregue algunos  bloques , luego pruébelo.
           Agrega más, luego intenta de nuevo. ¡Pronto, llegarás allí! ! [] (https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
       2-3 Bee Functions 9_authored_hint:
-        2-3_Bee_Functions_8_a: Si el rompecabezas parece desafiante, intenta construir
-          tu función de poco a poco. Agregue algunos bloques, luego pruébelo. Agrega
-          más, luego intenta de nuevo. ¡Pronto, llegarás allí!
+        2-3_Bee_Functions_8_a: |-
+          Si el rompecabezas parece desafiante, intenta construir tu función de a poco.
+
+          Agrega algunos bloques, luego pruébalos. Agrega más, luego pruébalos otra vez. ¡Pronto, llegarás al lugar!
         2-3_Bee_Functions_8_b: Recuerda construir tu código dentro del bloque de función
           verde. ! [] (https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
       2-3 Bee Loops 2_authored_hint:
-        2-3_Bee_Loops_2_a: Deberías terminar con cuatro bloques dentro de tu bucle.
+        2-3_Bee_Loops_2_a: Deberías finalizar con cuatro bloques dentro de tu loop.
       2-3 Bee Loops 3_authored_hint:
-        2-3_Bee_Loops_3_a: Deberías tener 6 bloques dentro de tu bucle.
+        2-3_Bee_Loops_3_a: Deberías tener 6 bloques dentro de tu loop.
       2-3 Bee Loops 3B_authored_hint:
-        2-3_Bee_Loops_3B_a: Necesitas dos bucles 'repetir' diferentes, un después
+        2-3_Bee_Loops_3B_a: Vas a necesitar dos "repeat" loops diferentes, uno después
           del otro.
       2-3 Bee Loops 4_authored_hint:
         2-3_Bee_Loops_4_a: Deberías terminar con cinco bloques dentro de tu bucle.
       2-3 Bee Loops 4A_authored_hint:
         2-3_Bee_Loops_4A_a: La primera acción será un giro, en lugar de un movimiento.
-        2-3_Bee_Loops_4A_b: La última parte del programa puede terminarse escribiendo
-          código al final de su programa fuera del bucle.
-        2-3_Bee_Loops_4A_c: Si aún no puedes detectar los bucles, intenta codificarlo
-          primero, luego ve lo que puedes combinar en un bucle 'repetir' al final.
+        2-3_Bee_Loops_4A_b: La última parte del programa se puede terminar escribiendo
+          el código al final del programa fuera de su loop.
+        2-3_Bee_Loops_4A_c: Si aún no puedes detectar los loop, intenta codificar
+          primero, luego identifica lo que puedes combinar en un "repeat" loop.
       2-3 Bee Loops 5_authored_hint:
-        2-3_Bee_Loops_5_a: Si no puedes detectar los bloques para colocar 'repetir`
-          inmediatamente, comienza a codificar cada movimiento y busca un patrón.
+        2-3_Bee_Loops_5_a: Si no puedes detectar los bloques para colocarlos en "repeat"
+          de inmediato, comienza a codificar cada movimiento y busca un patrón.
       2-3 Bee Loops 6_authored_hint:
-        2-3_Bee_Loops_6_a: Si no puedes indicar que debería ir en el bucle 'repeat',
-          intenta arrastrar los bloques uno por uno y ve si puedes encontrar un patrón.
-        2-3_Bee_Loops_6_b: Debería haber 6 bloques dentro de su bucle `repeat` cuando
-          haya terminado.
+        2-3_Bee_Loops_6_a: Si no puedes decir qué debería ir dentro del loop "repeat",
+          intenta arrastrar los bloques uno por uno y trata de encontrar un patrón.
+        2-3_Bee_Loops_6_b: Deberían haber 6 bloques dentro del loop "repeat" una vez
+          que hayas finalizado.
       2-3 Bee Loops 7_authored_hint:
         2-3_Bee_Loops_7_a: La primera acción será un giro, en lugar de un movimiento.
-        2-3_Bee_Loops_7_b: 'Si no puedes programar el bucle desde el principio, intenta
-          programarlo a lo largo del camino, luego busca un patrón.  '
+        2-3_Bee_Loops_7_b: 'Si no puedes imaginarte el loop desde el principio, intenta
+          codificarlo y luego busca un patrón.  '
       2-3 Maze 1_authored_hint:
-        2-3_Maze_1_a: Para usar un bloque `avanzar`, arrástralo desde el área de la
-          barra de herramientas al espacio de trabajo y conéctelo al bloque`al ejecutar`.
+        2-3_Maze_1_a: Para usar un bloque "move forward", arrástralo desde el área
+          de barra de herramientas al lugar de trabajo y conéctalo al bloque "when
+          run".
       2-3 Maze 16_authored_hint:
-        2-3_Maze_16_a: Si el patrón es difícil de ver, intenta programarlo todo primero
-          y mira qué cosas se repiten una y otra vez antes de colocar los bucles.
-        2-3_Maze_16_b: Para poner muchos bloques dentro de un bucle de "repetición",
-          simplemente arrastre un bucle hacia el espacio de trabajo, luego arrastre
-          todos los bloques desde el programa de inicio dentro de él!
+        2-3_Maze_16_a: Si el patrón es difícil de ver, intenta codificar todo primero
+          e identifica qué es lo que se repite una y otra vez antes de colocar los
+          loops.
+        2-3_Maze_16_b: |-
+          Para poner muchos bloques en un "repeat" loop, solamente arrastra un loop hacia el espacio de trabajo y luego arrastra todos los bloques desde el programa de inicio dentro de él.
+
+          Conecta todo al bloque "when run" y estarás listo!
       2-3 Maze 6_authored_hint:
         2-3_Maze_6_a: "¡Hay dos formas de resolver este rompecabezas!"
       2-3 Maze Loops 17_authored_hint:
-        2-3_Maze_Loops_17_a: Si el patrón es difícil de ver, intenta programarlo todo
-          primero y mira qué cosas se repiten una y otra vez antes de colocar los
-          bucles.
-        2-3_Maze_Loops_17_b: ¿Se borró el código de inicio?  ¡Haga clic en "Comenzar
-          de nuevo" para recuperarlo!
+        2-3_Maze_Loops_17_a: Si el patrón es difícil de ver, intenta codificar todo
+          primero e identifica qué es lo que se repite una y otra vez antes de colocar
+          los loops.
+        2-3_Maze_Loops_17_b: ¿Se borró el código de inicio? ¡Has clic en "start over"
+          para volver a empezar!
       2-3 Maze Loops 18_authored_hint:
-        2-3_Maze_Loops_18_a: Si el patrón es difícil de ver, intenta programarlo todo
-          primero y mira qué cosas se repiten una y otra vez antes de colocar los
-          bucles.
+        2-3_Maze_Loops_18_a: Si el patrón es difícil de ver, intenta codificar todo
+          primero e identifica qué es lo que se repite una y otra vez antes de colocar
+          los loops.
       2-3 Maze Loops 19_authored_hint:
-        2-3_Maze_Loops_19_a: Si estas atascado, intenta escribir el código sin bucles
+        2-3_Maze_Loops_19_a: Si estás atascado, intenta escribir el código sin loops
           primero y busca patrones.
-        2-3_Maze_Loops_19_b: Poner un bucle de repetición dentro de otro puede ayudar
-          a disminuir la cantidad de bloques utilizados.
+        2-3_Maze_Loops_19_b: Colocar un loop "repeat" dentro de otro le ayudará a
+          reducir el número de bloques utilizados.
       2-3 Maze Loops 20_authored_hint:
         2-3_Maze_Loops_20_a: Busca un patrón de escalera en este laberinto para encontrar
-          dónde un bucle puede ser usado.
+          en qué lugar se puede utilizar un loop.
       2-3 Maze Loops 21_authored_hint:
         2-3_Maze_Loops_21_a: Si tienes problemas para encontrar el patrón de escalera,
           intenta cubrir los caminos bloqueados con tu dedo.
       4-5 Artist 1_authored_hint:
         4-5_Artist_1_a: "! [] (https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       4-5 Artist 11_authored_hint:
-        4-5_Artist_11_a: Dentro de tu ciclo, asegúrate que el artista salta hacia
-          atrás y hacia arriba después de dibujar cada línea.
+        4-5_Artist_11_a: Dentro de tu loop, asegúrate que el artista salte hacia atrás
+          y hacia arriba luego de dibujar cada linea.
       4-5 Artist 3_authored_hint:
         4-5_Artist_3_a: |-
           Si el lecho de flores mide 600 píxeles y dos de los lados tienen 200 píxeles de largo, aquí se explica cómo se suman los lados cortos:
           **600 - 200 - 200 = 200**
           Eso significa que ambos lados cortos suman hasta 200 píxeles.
           ** ¿Qué es 200/2? **
-        4-5_Artist_3_b: Si no puedes ver donde se repite el ciclo de inmediato, trata
-          de codificar toda la solución y busca un patrón.
+        4-5_Artist_3_b: Si no puedes ver donde está el loop "repetir", intenta codificar
+          la solución completa y busca un patrón.
       4-5 Artist 4_authored_hint:
-        4-5_Artist_4_a: "¡Hay 360 grados en un círculo! \n\n¡Esa es la cantidad de
-          veces que necesitas repetir este código (convirtiendo 1 grado por vez) antes
-          de que termine el círculo!"
+        4-5_Artist_4_a: |-
+          ¡Hay 360 grados en un circulo!
+
+          ¡Ese es el número de veces que necesitas repetir este código (girando un grado a la vez) antes de que se termine el circulo!
       4-5 Artist 5_authored_hint:
         4-5_Artist_5_a: Prueba y error es un gran método, pero también puedes resolver
           el problema dividiendo el ángulo de 90 grados en tercios. ** 90/3 = _____
@@ -318,16 +317,16 @@ es-MX:
         4-5_Artist_7_a: "¿Qué ángulo es el más pequeño? ¿En qué ángulo está parado
           el artista? "
       4-5 Artist 8_authored_hint:
-        4-5_Artist_8_a: 'Los lados largos son 240 píxeles cada uno. Eso significa
-          que los 2 lados cortos deben sumar: ** 800 - 240 - 240 = 320 ** ¿Qué es
-          ** 320/2 **? '
+        4-5_Artist_8_a: "Los lados largos son de 240 pixeles cada uno. Eso significa
+          que los lados cortos deben sumar: \n\n**800 - 240 - 240 = 320**\n\n¿Qué
+          significa **320/2** ? "
         4-5_Artist_8_b: "¡Esta imagen se puede hacer de 2 maneras!   \n- Dibuja dos
           rectángulos que son ** 120 ** de largo y ** 160 ** de alto, con un lado
           superpuesto \n\n- Dibuja un rectángulo que es ** 240 ** de largo y ** 160
           ** de alto, luego agrega una línea en el medio."
       4-5 Artist 9_authored_hint:
-        4-5_Artist_9_a: 'Cuando un triángulo es un equilátero, todos los lados y todos
-          los ángulos son iguales.
+        4-5_Artist_9_a: 'Cuando un triángulo es equilátero, todos sus lados y todos
+          sus ángulos son iguales.
 
 '
         4-5_Artist_9_b: Tendrás que dibujar tres triángulos del mismo tamaño. No olvides
@@ -336,9 +335,9 @@ es-MX:
         4-5_Artist_Assessment_1_a: Solo necesitas dibujar el triángulo exterior para
           completar este rompecabezas.
       4-5 Artist Patterns 11_authored_hint:
-        4-5_Artist_Patterns_11_a: Si hay 360 grados en un círculo y cada ciclo gira
-          3 grados, ¿cuántas veces necesitarías repetir el ciclo para trazar la mitad
-          de un círculo completo?
+        4-5_Artist_Patterns_11_a: Si hay 360 grados en un círculo y cada loop gira
+          3 grados, cuántas veces necesitas hacer un loop para dibujar la mitad de
+          un círculo?
       4-5 Artist Patterns 2_authored_hint:
         4-5_Artist_Patterns_2_a: Ten en cuenta que dado que los cuadrados tienen 20
           píxeles de largo, tendrás que saltar 20 píxeles antes de comenzar tu siguiente
@@ -367,44 +366,50 @@ es-MX:
         4-5 Bee Conditionals 6_b: Asegúrate de verificar si la flor tiene más de **
           0 ** néctar al menos ** 3 ** veces para resolver este rompecabezas.
       4-5 Bee Debugging 1_authored_hint:
-        4-5_Bee_Debugging_1_a: Si tienes problemas para descubrir lo que no está bien,
-          intenta ejecutarlo para ver dónde están mal las cosas.
+        4-5_Bee_Debugging_1_a: Si tienes problema para descubrir lo que no está correcto,
+          intenta ejecutarlo para ver donde están los errores.
       4-5 Bee Nested Loops Rows_authored_hint:
         4-5_Bee_Nested_Loops_Rows_a: Intente tratar este rompecabezas como un rectángulo
           largo donde la abeja necesita avanzar, luego gire a la izquierda varias
           veces para completar el camino.
       4-5 Maze 10_authored_hint:
-        4-5_Maze_10_a: Si no puedes ver cómo utilizar ciclos para resolver el rompecabezas
-          de inmediato, trata de resolver el camino más largo en primer lugar, a continuación,
-          mirando un patrón. ¿Qué debe tener el ciclo para hacer el código más corto?
+        4-5_Maze_10_a: |-
+          Si no puedes ver cómo usar los loops para resolver el rompecabezas, intenta resolverlo primero y luego busca un patrón.
+
+          ¿Deberías poner un "repetir" para acortar el código?
       4-5 Maze 4_authored_hint:
-        4-5_Maze_4_a: Si en estos momentos tienes dificultades para averiguar dónde
-          poner la repetición, trata de codificarlo todo y busca un patrón.
+        4-5_Maze_4_a: Si tienes dificultad para colocar la repetición, intenta codificar
+          todo y busca un patrón.
       4-5 Maze 5_authored_hint:
-        4-5_Maze_5_a: Intenta usar un ciclo de "repetición" cada vez que necesites
-          `avanzar 'más de dos pasos.
-        4-5_Maze_5_b: Puedes usar más de un ciclo de 'repeat' en un rompecabezas.
+        4-5_Maze_5_a: Intenta usar un loop "repetir" cada vez que necesites "avanzar"
+          más de dos pasos.
+        4-5_Maze_5_b: Puedes usar más de un loop "repetir" en un rompecabezas.
       4-5 Maze 6_authored_hint:
         4-5_Maze_6_a: "Intenta trazar un camino con tu dedo.   \n¿Es el camino más
           corto que puedes encontrar?"
       4-5 Maze 7_authored_hint:
-        4-5_Maze_7_a: "** ¿Quieres tu código tan pequeño como pueda ser? **  \n\nMira
-          los patrones en tus bloques. ¿Ves algo que se repite? ¡Intenta poner un
-          bucle en su lugar!"
+        4-5_Maze_7_a: |-
+          **¿Quieres que tu código sea lo más reducido posible?**
+
+          Busca patrones en tus bloques. ¿Ves algo que se repita? Intenta colocar un loop en su lugar!
       4-5 Nested Loops 12_authored_hint:
         4-5_Nested_Loops_12_a: "** 360/36 =? **"
       4-5 Nested Loops 2_authored_hint: {}
       4-5 Nested Loops 6_authored_hint:
-        4-5_Nested_Loops_6_a: No olvides hacer un giro después de su ciclo interno
-          . Estarás formando un bucle de 6 triángulos en 360 grados. ** 360/6 =? **
+        4-5_Nested_Loops_6_a: "No olvides girar luego de tu loop interno.\n\nEstarás
+          haciendo un loop de 6 triángulos de 360 grados. \n\n**360 / 6 = ?**"
       4-5 Nested Loops 7_authored_hint:
-        4-5_Nested_Loops_7_a: Este diseño se repetirá 10 veces terminando en 360 grados.
-          ** 360/10 =? **
+        4-5_Nested_Loops_7_a: |-
+          Este diseño hará un loop 10 veces sobre 360 grados.
+
+          **360 / 10 = ?**
       4-5 Nested Loops 8_authored_hint:
-        4-5_Nested_Loops_8_a: Tienes que repetir el bucle 6 veces terminando en 360
-          grados. ** 360/6 =? **
+        4-5_Nested_Loops_8_a: |-
+          Estarás haciendo 6 loops en esta figura por sobre los 360 grados.
+
+          **360 / 6 = ?**
       4-5 While Loops 8_authored_hint:
-        4-5_While_Loops_8_a: Cada elemento necesitará su propio ciclo 'while'.
+        4-5_While_Loops_8_a: Cada elemento necesitará su propio "while" loop.
       AppLab Intro 3 - Change Screen Color_authored_hint: {}
       AppLab Intro 4 - Change Screen Color_authored_hint: {}
       AppLab Intro 5 - Change Screen Color_authored_hint: {}
@@ -413,18 +418,19 @@ es-MX:
       Artist Inspiration_authored_hint:
         brush_width: Establecemos el grosor del pincel a 1, luego el color azul antes
           de hacer cualquier otra cosa.
-        double_loop: Trate de poner un ` ciclo ` dentro de un ciclo de repetición.
-        specifics: El `bucle for` se ejecuta de tres a diecisiete veces para cada
-          uno de los seis "pétalos" antes de pasar a crear el siguiente, dibujando
-          formas con solo un número impar de lados. El bloque `set alpha` usa la división
-          para atenuar el color a medida que el contador aumenta.
+        double_loop: Trate de poner un "for loop" dentro de un loop de "repetición".
+        specifics: |-
+          El "for loop" se ejecuta de tres a diecisiete para cada uno de los 6 "pétalos" antes de crear el siguiente, dibujando figuras sólo con un número impar de lados.
+
+          El bloque "set alpha" utiliza la división para ir atenuando el color a medida que el contador aumenta.
         after: Cuando hayas terminado con cada "pétalo", asegúrate de "avanzar" 20
           píxeles antes de hacer una rotación de 60 grados.
         solution: "** Solución **! [ Imagen de Bloques de Solución ] (https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-
           image -1469641375258.png)"
       Bergeron Robot Maze1_authored_hint:
-        2-3_Maze_1_a: Para usar un bloque `avanzar`, arrástralo desde el área de la
-          barra de herramientas al espacio de trabajo y conéctelo al bloque`al ejecutar`.
+        2-3_Maze_1_a: Para usar un bloque "move forward", arrástralo desde el área
+          de barra de herramientas al lugar de trabajo y conéctalo al bloque "when
+          run".
       Course 4 Artist 11_authored_hint:
         Course_4_Artist_11_a: 'El semi-hexágono tiene una ** longitud de 30 ** y gira
           a la derecha por ** 60 grados **.  '
@@ -510,11 +516,11 @@ es-MX:
 
           ¿Cuanto es 360 dividido por 10?
       Course 4 Artist Binary Free Play 2b_authored_hint:
-        Course_4_Artist_Binary_Free_Play_2b_a: Este código usa dos `ciclos for`. Uno
-          cuenta de 1 a 8, el otro cuenta de 8 a 1.
-        Course_4_Artist_Binary_Free_Play_2b_b: Cada `ciclo for` tiene tres repeticiones.
-          El primero dibuja el conjunto más a la izquierda de 1s, el segundo dibuja
-          los 0s en el medio y el tercero dibuja los 1s a la derecha.
+        Course_4_Artist_Binary_Free_Play_2b_a: Este código utiliza dos "for loops".
+          Uno cuenta de 1 a 8, el otro cuenta de 8 a 1.
+        Course_4_Artist_Binary_Free_Play_2b_b: Cada "for loop" tiene tres repeticiones.
+          La primera dibuja el conjunto de más a la izquierda de 1s, el segundo dibuja
+          el 0s en el medio, y el tercero dibuja el 1s a la derecha.
         Course_4_Artist_Binary_Free_Play_2b_c: En cada repetición necesitas `contador`
           para 1s y` 16- (contador 2x) `para 0s.
         Course_4_Artist_Binary_Free_Play_2b_d: "** Solución: ** \n\n<xml><block type=\"when_run\"
@@ -579,20 +585,20 @@ es-MX:
         Course_4_Artist_For_Loops_11a_b: 'Cada vez, deberá avanzar 10 veces la longitud
           del número actual de lados. '
       Course 4 Artist For Loops 3_authored_hint:
-        Course_4_Artist_For_Loops_3_a: Para hacer que el ciclo `for` impulse su movimiento,
-          asegúrese de estar usando` contador` como distancia.
+        Course_4_Artist_For_Loops_3_a: Para que el loop "for" conduzca su movimiento,
+          asegúrese que está usando el "contador" como distancia.
       Course 4 Artist For Loops 4_authored_hint:
         Course_4_Artist_For_Loops_4_a: |-
-          ** ¿Cuál es el número más pequeño que necesitarás?
+          **¿Cuál es el número más pequeño que necesitarás?
           ¿Cuál es el número más grande?
-          ¿Qué tan grande es el aumento en cada ocasión? **
+          ¿Qué tanto aumenta cada vez?**
 
-          Esas son las preguntas que debe realizar para completar los espacios en blanco del ciclo `for`.
+          Esas son las preguntas que se tiene que hacer para completar los espacios del loop "for".
       Course 4 Artist For Loops Challenge_authored_hint:
         Course_4_Artist_For_Loops_Challenge_a: La forma más grande tiene 19 lados.
           El más pequeño tiene solo dos.
-        Course_4_Artist_For_Loops_Challenge_b: El bucle 'para' cuenta hasta dos cada
-          vez que se ejecuta.
+        Course_4_Artist_For_Loops_Challenge_b: El loop "for" cuenta hasta por dos
+          cada vez que se ejecuta.
       Course 4 Artist For Loops Challenge_a_authored_hint:
         Course_4_Artist_For_Loops_Challenge_a: El polígono más grande tiene 19 lados.
         Course_4_Artist_For_Loops_Challenge_b: Cada polígono está incompleto, con
@@ -600,7 +606,7 @@ es-MX:
       Course 4 Artist For Loops inspire_authored_hint:
         Course_4_Artist_For_Loops_inspire_a: La base de este código es la misma que
           la solución al desafío anterior... con un par de cambios.
-        Course_4_Artist_For_Loops_inspire_b: Prueba un bucle 'for' que va de 3 a 10
+        Course_4_Artist_For_Loops_inspire_b: Intenta un loop "for" que va de 3 a 10
           con un incremento de 1.
         Course_4_Artist_For_Loops_inspire_c: Hay dos iteraciones del mismo bucle de
           repetición dentro del bucle 'for', pero la segunda repetición gira en la
@@ -665,11 +671,11 @@ es-MX:
           \             </block>\n            </next>\n          </block>\n        </statement>\n
           \     </block>\n    </next>\n  </block>\n</xml>"
       Course 4 Artist Functions Inspiration_authored_hint:
-        Course_4_Artist_Functions_Inspiration_a: Comience con el código del último
-          rompecabezas y agregue un `giro adicional a la derecha` de tres grados dentro
-          del ciclo de repetición.
-        Course_4_Artist_Functions_Inspiration_b: Intenta girar más de 90 grados fuera
-          del bucle 'repetir', pero aún dentro del bucle`for`.
+        Course_4_Artist_Functions_Inspiration_a: Comienza con el código del último
+          acertijo y agrega un extra "girar a la derecha" de tres grados dentro de
+          cada loop de repetición.
+        Course_4_Artist_Functions_Inspiration_b: Intenta girar más de 90 grados dentro
+          de cada "loop de repetición", pero permanezca dentro del "for loop".
         Course_4_Artist_Functions_Inspiration_c: |-
           **Solución:**
           <xml>
@@ -738,12 +744,12 @@ es-MX:
       Course 4 Artist Functions challenge_authored_hint:
         Course_4_Artist_Functions_challenge_a: Parte de entender cómo usar funciones
           es averiguar cuáles necesita y cuáles no.
-        Course_4_Artist_Functions_challenge_b: Use un bucle `for`, luego use su contador
-          de variables dentro de un bucle de repetición anidado.
+        Course_4_Artist_Functions_challenge_b: Utilice un "for loop", luego use su
+          variable de contador dentro de un loop de "repetición" anidado.
         Course_4_Artist_Functions_challenge_c: En cada iteración, debe dibujar un
           cuadrado y luego saltar hacia adelante.
-        Course_4_Artist_Functions_challenge_d: Tendrás que girar a la izquierda 90
-          grados fuera de tu repetición, pero aún dentro del bucle 'for'.
+        Course_4_Artist_Functions_challenge_d: Necesitarás girar a la izquierda 90
+          grados fuera de su "repetición", pero aún dentro del "for loop".
       Course 4 Artist Inspire_authored_hint:
         Course_4_Artist_Inspire_a: Después de completar un cuadrado, Intentar saltar
           la mitad de su longitud antes de girar y hacer otro.
@@ -926,11 +932,12 @@ es-MX:
           </block>
           </xml>
       Course 4 Artist Vars 13_authored_hint:
-        Course_4_Artist_Vars_13_a: Necesita dos bucles de repetición (uno dentro del
-          otro) ambos repitiendo `sides ' veces.
-        Course_4_Artist_Vars_13_b: El ciclo de repetición interno dibuja un octágono
-          (girando a la izquierda). Luego, debes avanzar y girar a la derecha solo
-          en el bucle externo.
+        Course_4_Artist_Vars_13_a: Necesita dos loops de repetición (uno dentro de
+          otro) ambos repitiendo "lados" veces.
+        Course_4_Artist_Vars_13_b: |-
+          El loop de repetición interno dibuja un octágono (girando a la izquierda).
+
+          Luego, necesita avanzar y girar a la derecha sólo en el loop externo.
         Course_4_Artist_Vars_13_c: Para ajustar la forma para que permanezca del mismo
           tamaño cuando cambia el número de lados, use el bloque matemático para dividir
           la longitud en píxeles por el número de lados.
@@ -1596,12 +1603,12 @@ es-MX:
           Eche un vistazo a esta opción de movimiento:
 
           ![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)
-        Course_4_SCFL_1_b: 'Trate de usar dos ciclos for: Uno para subir y agarrar
-          el néctar, y el otro para escalar hacia abajo y hacer miel.'
-        Course_4_SCFL_1_c: Observe que un ciclo `for` necesita varios bucles regulares
-          dentro en el que se repita el 'contador' para hacer el modelo creciente
-          de escalera. El otro ciclo for solo necesita un ciclo regular para hacer
-          una cantidad 'contador' de miel.
+        Course_4_SCFL_1_b: 'Trate de usar dos "for" loops: Una para escalar y agarrar
+          el néctar, y otra para descender y hacer miel.'
+        Course_4_SCFL_1_c: |-
+          Observe que un "for" loop necesita varios loops regulares dentro del 'contador' de repetición; las veces para hacer aumentar el patrón de escalera.
+
+          El otro "for" loop solo necesita un loop regular para hacer un 'contador' cantidad de miel.
         Course_4_SCFL_1_d: |-
           **Solución:**
 
@@ -1741,9 +1748,9 @@ es-MX:
         Course_4_SCFL_1a_b: |-
           Echa un vistazo a esta opción de movimiento:
           ![](https://images.code.org/253d710ff7d1b494fe8fd20cfc92baaf-image-1469726263579.png)
-        Course_4_SCFL_1a_c: Un bucle `for` le ayudará a ejecutar el mismo modelo,
-          pero con un número cambiante de los pasos. Tenga en cuenta que el número
-          de pasos necesarios disminuye de 7 a 5 por 1.
+        Course_4_SCFL_1a_c: Un "for loop" le ayudará a ejecutar el mismo patrón, pero
+          con un variable número de pasos. Fíjese que el número de pasos requerido
+          disminuye de 7 a 5 por 1.
         Course_4_SCFL_1a_d: |-
           **Solución:**
 
@@ -1823,7 +1830,7 @@ es-MX:
           </block>
           </xml>
       Course 4 SCFL 1b_authored_hint:
-        Course_4_SCFL_1b_a: Trate de usar un ciclo `for`.
+        Course_4_SCFL_1b_a: Intente usar "for loop".
         Course_4_SCFL_1b_b: |-
           Echa un vistazo a esta opción de movimiento:
 
@@ -1851,10 +1858,10 @@ es-MX:
           Echa un vistazo a esta opción de movimiento:
 
           ![](https://images.code.org/a69c63a039031254097f19231dd7bf95-image-1469726483169.png)
-        Course_4_SCFL_2_b: Observa que hay tres puntos durante cada iteración del
-          ciclo 'for' en el que se pone a interactuar con los objetos.
-        Course_4_SCFL_2_c: Durante cada iteración del ciclo For, el número de cada
-          objeto se relaciona con la variable contador en algún modo.
+        Course_4_SCFL_2_b: Observe que hay tres puntos durante cada iteración de este
+          loop "for" donde usted se detiene a interactuar con objetos.
+        Course_4_SCFL_2_c: Durante cada iteración del loop "for", el número para cada
+          objeto se relaciona con la variable "contador" de alguna manera.
         Course_4_SCFL_2_d: |-
           **Solución:**
 
@@ -1974,8 +1981,8 @@ es-MX:
           </block>
           </xml>
       Course 4 SCFL 3_authored_hint:
-        Course_4_SCFL_3_a: El `ancho del lápiz 'es 1. El primer cuadrado tiene 50
-          lados de píxeles, y cada cuadrado es 50 píxeles más ancho que el anterior.
+        Course_4_SCFL_3_a: El "ancho del lápiz" es 1. El primer cuadrado tiene lados
+          de 50 pixeles, y cada cuadrado es 50 pixeles más ancho que el anterior.
         Course_4_SCFL_3_b: La opacidad en el pincel siempre es `contador` / 2.
         Course_4_SCFL_3_c: Después de hacer cada cuadrado, no te olvides de saltar
           hacia atrás, girar, saltar de nuevo, ¡y luego retroceder!
@@ -2229,10 +2236,9 @@ es-MX:
         Course_4_SCFL_6_a: El cambio de color se presenta con el bloque 'definir color
           con rojo, verde, azul'. Rojo es la constante definida como 255, verde es
           siempre el valor de 'contador', y azul es siempre '255-contador'.
-        Course_4_SCFL_6_b: El código para esto es mucho más simple de lo que usted
-          puede pensar. Solo defina el color dentro del 'ciclo for', avance, luego
-          gire.
-        Course_4_SCFL_6_c: 'El ciclo For va de 5 a 250 por 2. '
+        Course_4_SCFL_6_b: El código para esto es más simple de lo que piensa. Defina
+          el color dentro del "for loop", avance y luego gire.
+        Course_4_SCFL_6_c: 'El "for loop" va desde 5 a 250 por 2. '
         Course_4_SCFL_6_d: |-
           **Solución:**
 
@@ -3577,11 +3583,11 @@ es-MX:
       Inspirational Artwork_authored_hint:
         brush_width: Establecemos el grosor del pincel a 1, luego el color azul antes
           de hacer cualquier otra cosa.
-        double_loop: Trate de poner un ` ciclo ` dentro de un ciclo de repetición.
-        specifics: El `bucle for` se ejecuta de tres a diecisiete veces para cada
-          uno de los seis "pétalos" antes de pasar a crear el siguiente, dibujando
-          formas con solo un número impar de lados. El bloque `set alpha` usa la división
-          para atenuar el color a medida que el contador aumenta.
+        double_loop: Trate de poner un "for loop" dentro de un loop de "repetición".
+        specifics: |-
+          El "for loop" se ejecuta de tres a diecisiete para cada uno de los 6 "pétalos" antes de crear el siguiente, dibujando figuras sólo con un número impar de lados.
+
+          El bloque "set alpha" utiliza la división para ir atenuando el color a medida que el contador aumenta.
         after: Cuando hayas terminado con cada "pétalo", asegúrate de "avanzar" 20
           píxeles antes de hacer una rotación de 60 grados.
         solution: "** Solución **! [ Imagen de Bloques de Solución ] (https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-
@@ -3779,11 +3785,11 @@ es-MX:
       NEW Course 4 Artist Params inspire_authored_hint:
         brush_width: Establecemos el grosor del pincel a 1, luego el color azul antes
           de hacer cualquier otra cosa.
-        double_loop: Trate de poner un ` ciclo ` dentro de un ciclo de repetición.
-        specifics: El `bucle for` se ejecuta de tres a diecisiete veces para cada
-          uno de los seis "pétalos" antes de pasar a crear el siguiente, dibujando
-          formas con solo un número impar de lados. El bloque `set alpha` usa la división
-          para atenuar el color a medida que el contador aumenta.
+        double_loop: Trate de poner un "for loop" dentro de un loop de "repetición".
+        specifics: |-
+          El "for loop" se ejecuta de tres a diecisiete para cada uno de los 6 "pétalos" antes de crear el siguiente, dibujando figuras sólo con un número impar de lados.
+
+          El bloque "set alpha" utiliza la división para ir atenuando el color a medida que el contador aumenta.
         after: Cuando hayas terminado con cada "pétalo", asegúrate de "avanzar" 20
           píxeles antes de hacer una rotación de 60 grados.
         solution: |-
@@ -4664,15 +4670,17 @@ es-MX:
           inferior, haz que repita estos comandos: * Repite 2 veces: * Avanza * Haz
           3 mieles * Mueve hacia atrás'
       course3_bee_functions_challenge1_authored_hint:
-        courseE_bee_functions_challenge1_a: Si el rompecabezas parece desafiante,
-          intenta construir tu función de poco a poco. Agregue algunos bloques, luego
-          pruébelo. Agrega más, luego intenta de nuevo. ¡Pronto, llegarás allí!
+        courseE_bee_functions_challenge1_a: |-
+          Si el rompecabezas parece desafiante, intenta construir tu función de a poco.
+
+          Agrega algunos bloques, luego pruébalos. Agrega más, luego pruébalos otra vez. ¡Pronto, llegarás al lugar!
         courseE_bee_functions_challenge1_b: Recuerde construir su código dentro del
           bloque de función verde.
       course3_bee_functions_challenge2_authored_hint:
-        courseE_bee_functions_challenge1_a: Si el rompecabezas parece desafiante,
-          intenta construir tu función de poco a poco. Agregue algunos bloques, luego
-          pruébelo. Agrega más, luego intenta de nuevo. ¡Pronto, llegarás allí!
+        courseE_bee_functions_challenge1_a: |-
+          Si el rompecabezas parece desafiante, intenta construir tu función de a poco.
+
+          Agrega algunos bloques, luego pruébalos. Agrega más, luego pruébalos otra vez. ¡Pronto, llegarás al lugar!
         courseE_bee_functions_challenge1_b: Recuerde construir su código dentro del
           bloque de función verde.
       course3_bee_functions_challenge3_authored_hint:
@@ -9057,13 +9065,14 @@ es-MX:
         courseC_maze_loops6_a: Si el patrón es difícil de ver, intenta programarlo
           todo primero y mira qué cosas se repiten una y otra vez antes de colocar
           los ciclos.
-        courseC_maze_loops6_b: Para poner muchos bloques dentro de un bucle de "repetición",
-          simplemente arrastre un bucle hacia el espacio de trabajo, luego arrastre
-          todos los bloques desde el programa de inicio dentro de él!
+        courseC_maze_loops6_b: |-
+          Para poner muchos bloques en un "repeat" loop, solamente arrastra un loop hacia el espacio de trabajo y luego arrastra todos los bloques desde el programa de inicio dentro de él.
+
+          Conecta todo al bloque "when run" y estarás listo!
       courseC_maze_loops7_authored_hint:
-        courseC_maze_loops7_a: Si el patrón es difícil de ver, intenta programarlo
-          todo primero y mira qué cosas se repiten una y otra vez antes de colocar
-          los bucles.
+        courseC_maze_loops7_a: Si el patrón es difícil de ver, intenta codificar todo
+          primero e identifica qué es lo que se repite una y otra vez antes de colocar
+          los loops.
       courseC_maze_loops8_authored_hint:
         courseC_puppy_loops8courseC_maze_loops8_a: Trate de pensar sobre este problema
           en pequeñas partes. Tómate tu tiempo. ¡No es necesario resolver en el primer
@@ -9641,20 +9650,18 @@ es-MX:
         courseD_artist_nestedLoops2_b: Recuerde poner el bloque de 'girar' dentro
           del ciclo para que el artista se giré después de cada triángulo.
       courseD_artist_nestedLoops3_authored_hint:
-        courseD_artist_nestedLoops3_a: Utilice el bloque 'salto adelante' para llegar
-          desde la parte superior de una plaza al lugar donde se iniciará la siguiente.
-          Si sus plazas son 20 píxeles de alto y 20 píxeles apartes, ¿Cuánto necesita
-          saltar?
+        courseD_artist_nestedLoops3_a: |-
+          Intenta usar el bloque "jump forward" para ir desde la parte superior de un cuadrado hasta el lugar donde comenzarás el siguiente.
+          Si tus cuadrados tienen 20 pixeles de alto y están separados 20 pixeles, ¿cuánto necesitas saltar?
         courseD_artist_nestedLoops3_b: 'No te olvides de usar un ciclo anidado para
           resolver este rompecabezas rápidamente. '
         courseD_artist_nestedLoops3_c: 'Comience usando un ciclo de `repetición` para
           hacer un cuadrado. A continuación, repita ese cuadro 8 veces, saltando 40
           píxeles en el medio. '
       courseD_artist_nestedLoops3_2018_authored_hint:
-        courseD_artist_nestedLoops3_a: Utilice el bloque 'salto adelante' para llegar
-          desde la parte superior de una plaza al lugar donde se iniciará la siguiente.
-          Si sus plazas son 20 píxeles de alto y 20 píxeles apartes, ¿Cuánto necesita
-          saltar?
+        courseD_artist_nestedLoops3_a: |-
+          Intenta usar el bloque "jump forward" para ir desde la parte superior de un cuadrado hasta el lugar donde comenzarás el siguiente.
+          Si tus cuadrados tienen 20 pixeles de alto y están separados 20 pixeles, ¿cuánto necesitas saltar?
         courseD_artist_nestedLoops3_b: 'No te olvides de usar un ciclo anidado para
           resolver este rompecabezas rápidamente. '
         courseD_artist_nestedLoops3_c: 'Comience usando un ciclo de `repetición` para
@@ -11981,11 +11988,11 @@ es-MX:
           </block></xml>
       courseE_artist_embed_functions8_authored_hint: {}
       courseE_artist_functions1_authored_hint:
-        courseE_artist_functions1_a: Cada cuadrado tiene 100 pixeles de lado, eso
-          significa que deberás avanzar hacia adelante 175 pixeles antes de dibujar
-          el segundo cuadrado.
-        courseE_artist_functions1_b: Es correcto dibujar líneas solapadas para hacer
-          tus lentes.
+        courseE_artist_functions1_a: Los cuadrados tienen 100 pixeles por lado cada
+          uno, eso significa que tendrás que moverte hacia adelante 175 pixeles antes
+          de dibujar tu segundo cuadrado.
+        courseE_artist_functions1_b: Está correcto dibujar líneas superpuestas para
+          hacer tus anteojos.
         courseE_artist_functions1_c: Para código más corto, intente usar un ciclo
           de repetición para dibujar los cuadrados de los lentes.
       courseE_artist_functions10_authored_hint:
@@ -12003,11 +12010,11 @@ es-MX:
         courseD_artist_functions10_c: "¿Ves dónde este dibujo podría usar una función
           llamada `línea de hexágonos`? ! [] (https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
       courseE_artist_functions1_2018_authored_hint:
-        courseE_artist_functions1_a: Cada cuadrado tiene 100 pixeles de lado, eso
-          significa que deberás avanzar hacia adelante 175 pixeles antes de dibujar
-          el segundo cuadrado.
-        courseE_artist_functions1_b: Es correcto dibujar líneas solapadas para hacer
-          tus lentes.
+        courseE_artist_functions1_a: Los cuadrados tienen 100 pixeles por lado cada
+          uno, eso significa que tendrás que moverte hacia adelante 175 pixeles antes
+          de dibujar tu segundo cuadrado.
+        courseE_artist_functions1_b: Está correcto dibujar líneas superpuestas para
+          hacer tus anteojos.
         courseE_artist_functions1_c: Para código más corto, intente usar un ciclo
           de repetición para dibujar los cuadrados de los lentes.
       courseE_artist_functions2_authored_hint:
@@ -12475,18 +12482,20 @@ es-MX:
         courseE_bee_functions6_b: En este caso, puede ser útil moverse dentro de la
           función, pero no todos los bloques de 'movimiento' deben estar allí.
       courseE_bee_functions7_authored_hint:
-        courseE_bee_functions7_a: Si el rompecabezas parece desafiante, intenta construir
-          tu función de poco a poco. Agregue algunos bloques, luego pruébelo. Agrega
-          más, luego intenta de nuevo. ¡Pronto, llegarás allí!
+        courseE_bee_functions7_a: |-
+          Si el rompecabezas parece desafiante, intenta construir tu función de a poco.
+
+          Agrega algunos bloques, luego pruébalos. Agrega más, luego pruébalos otra vez. ¡Pronto, llegarás al lugar!
         courseE_bee_functions7_b: Recuerda construir tu código dentro del bloque de
           función verde. ! [] (https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
         courseE_bee_functions7_c: Esta función debe hacer que la abeja lo dirija hacia
           el camino, recoger el néctar, hacer la miel, girar la abeja y traerlo de
           regreso.
       courseE_bee_functions7_2018_authored_hint:
-        courseE_bee_functions7_a: Si el rompecabezas parece desafiante, intenta construir
-          tu función de poco a poco. Agregue algunos bloques, luego pruébelo. Agrega
-          más, luego intenta de nuevo. ¡Pronto, llegarás allí!
+        courseE_bee_functions7_a: |-
+          Si el rompecabezas parece desafiante, intenta construir tu función de a poco.
+
+          Agrega algunos bloques, luego pruébalos. Agrega más, luego pruébalos otra vez. ¡Pronto, llegarás al lugar!
         courseE_bee_functions7_b: Recuerda construir tu código dentro del bloque de
           función verde. ! [] (https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
         courseE_bee_functions7_c: Esta función debe hacer que la abeja lo dirija hacia
@@ -12525,27 +12534,31 @@ es-MX:
           las flores tienen un ciclo `while` puede realizar una función de trabajo
           para todos ellos.
       courseE_bee_functions_challenge1_authored_hint:
-        courseE_bee_functions_challenge1_a: Si el rompecabezas parece desafiante,
-          intenta construir tu función de poco a poco. Agregue algunos bloques, luego
-          pruébelo. Agrega más, luego intenta de nuevo. ¡Pronto, llegarás allí!
+        courseE_bee_functions_challenge1_a: |-
+          Si el rompecabezas parece desafiante, intenta construir tu función de a poco.
+
+          Agrega algunos bloques, luego pruébalos. Agrega más, luego pruébalos otra vez. ¡Pronto, llegarás al lugar!
         courseE_bee_functions_challenge1_b: Recuerde construir su código dentro del
           bloque de función verde.
       courseE_bee_functions_challenge1_2018_authored_hint:
-        courseE_bee_functions_challenge1_a: Si el rompecabezas parece desafiante,
-          intenta construir tu función de poco a poco. Agregue algunos bloques, luego
-          pruébelo. Agrega más, luego intenta de nuevo. ¡Pronto, llegarás allí!
+        courseE_bee_functions_challenge1_a: |-
+          Si el rompecabezas parece desafiante, intenta construir tu función de a poco.
+
+          Agrega algunos bloques, luego pruébalos. Agrega más, luego pruébalos otra vez. ¡Pronto, llegarás al lugar!
         courseE_bee_functions_challenge1_b: Recuerde construir su código dentro del
           bloque de función verde.
       courseE_bee_functions_challenge2_authored_hint:
-        courseE_bee_functions_challenge1_a: Si el rompecabezas parece desafiante,
-          intenta construir tu función de poco a poco. Agregue algunos bloques, luego
-          pruébelo. Agrega más, luego intenta de nuevo. ¡Pronto, llegarás allí!
+        courseE_bee_functions_challenge1_a: |-
+          Si el rompecabezas parece desafiante, intenta construir tu función de a poco.
+
+          Agrega algunos bloques, luego pruébalos. Agrega más, luego pruébalos otra vez. ¡Pronto, llegarás al lugar!
         courseE_bee_functions_challenge1_b: Recuerde construir su código dentro del
           bloque de función verde.
       courseE_bee_functions_challenge2_2018_authored_hint:
-        courseE_bee_functions_challenge1_a: Si el rompecabezas parece desafiante,
-          intenta construir tu función de poco a poco. Agregue algunos bloques, luego
-          pruébelo. Agrega más, luego intenta de nuevo. ¡Pronto, llegarás allí!
+        courseE_bee_functions_challenge1_a: |-
+          Si el rompecabezas parece desafiante, intenta construir tu función de a poco.
+
+          Agrega algunos bloques, luego pruébalos. Agrega más, luego pruébalos otra vez. ¡Pronto, llegarás al lugar!
         courseE_bee_functions_challenge1_b: Recuerde construir su código dentro del
           bloque de función verde.
       courseE_bee_ramp14_authored_hint:
@@ -13556,11 +13569,11 @@ es-MX:
           resuelto el rompecabezas."
       courseF_artist_for4_authored_hint:
         courseF_artist_for4_a: |-
-          ** ¿Cuál es el número más pequeño que necesitarás?
+          **¿Cuál es el número más pequeño que necesitarás?
           ¿Cuál es el número más grande?
-          ¿Qué tan grande es el aumento en cada ocasión? **
+          ¿Qué tanto aumenta cada vez?**
 
-          Esas son las preguntas que debe realizar para completar los espacios en blanco del ciclo `for`.
+          Esas son las preguntas que se tiene que hacer para completar los espacios del loop "for".
         courseF_artist_for4_b: "¡El código será muy similar a lo que escribiste en
           el último acertijo, pero recuerda que debes dibujar un cuadrado esta vez!"
         courseF_artist_for4_c: "¡No tengas miedo de cometer un error! Intenta agregar
@@ -13568,11 +13581,11 @@ es-MX:
           resuelto el rompecabezas."
       courseF_artist_for4_2018_authored_hint:
         courseF_artist_for4_a: |-
-          ** ¿Cuál es el número más pequeño que necesitarás?
+          **¿Cuál es el número más pequeño que necesitarás?
           ¿Cuál es el número más grande?
-          ¿Qué tan grande es el aumento en cada ocasión? **
+          ¿Qué tanto aumenta cada vez?**
 
-          Esas son las preguntas que debe realizar para completar los espacios en blanco del ciclo `for`.
+          Esas son las preguntas que se tiene que hacer para completar los espacios del loop "for".
         courseF_artist_for4_b: "¡El código será muy similar a lo que escribiste en
           el último acertijo, pero recuerda que debes dibujar un cuadrado esta vez!"
         courseF_artist_for4_c: "¡No tengas miedo de cometer un error! Intenta agregar
@@ -13639,8 +13652,8 @@ es-MX:
         courseF_artist_for9_b: El bloque de 'set alpha' cambia la opacidad de un color.
           Cuanto menor sea el valor, más transparente es el color.
       courseF_artist_for_challenge1_authored_hint:
-        courseF_artist_for_challenge1_a: El `ancho del lápiz 'es 1. El primer cuadrado
-          tiene 50 lados de píxeles, y cada cuadrado es 50 píxeles más ancho que el
+        courseF_artist_for_challenge1_a: El "ancho del lápiz" es 1. El primer cuadrado
+          tiene lados de 50 pixeles, y cada cuadrado es 50 pixeles más ancho que el
           anterior.
         courseF_artist_for_challenge1_b: La opacidad en el pincel siempre es `contador`
           / 2.
@@ -13780,8 +13793,8 @@ es-MX:
           </block>
           </xml>
       courseF_artist_for_challenge1_2018_authored_hint:
-        courseF_artist_for_challenge1_a: El `ancho del lápiz 'es 1. El primer cuadrado
-          tiene 50 lados de píxeles, y cada cuadrado es 50 píxeles más ancho que el
+        courseF_artist_for_challenge1_a: El "ancho del lápiz" es 1. El primer cuadrado
+          tiene lados de 50 pixeles, y cada cuadrado es 50 pixeles más ancho que el
           anterior.
         courseF_artist_for_challenge1_b: La opacidad en el pincel siempre es `contador`
           / 2.
@@ -13921,7 +13934,7 @@ es-MX:
           </block>
           </xml>
       courseF_artist_for_challenge2_authored_hint:
-        courseF_artist_for_challenge2_c: 'El ciclo For va de 5 a 250 por 2. '
+        courseF_artist_for_challenge2_c: 'El "for loop" va desde 5 a 250 por 2. '
         courseF_artist_for_challenge2_a: El cambio de color se presenta con el bloque
           'definir color con rojo, verde, azul'. Rojo es la constante definida como
           255, verde es siempre el valor de 'contador', y azul es siempre '255-contador'.
@@ -14021,7 +14034,7 @@ es-MX:
 
           ! [] (https://images.code.org/4ce89e8d907f670408c3705f040e8677-image-1497728974326.49.09 PM.png)
       courseF_artist_for_challenge2_2018_authored_hint:
-        courseF_artist_for_challenge2_c: 'El ciclo For va de 5 a 250 por 2. '
+        courseF_artist_for_challenge2_c: 'El "for loop" va desde 5 a 250 por 2. '
         courseF_artist_for_challenge2_a: El cambio de color se presenta con el bloque
           'definir color con rojo, verde, azul'. Rojo es la constante definida como
           255, verde es siempre el valor de 'contador', y azul es siempre '255-contador'.
@@ -14933,12 +14946,12 @@ es-MX:
           Eche un vistazo a esta opción de movimiento:
 
           ![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)
-        courseF_bee_for_challenge2_b: 'Trate de usar dos ciclos for: Uno para subir
-          y agarrar el néctar, y el otro para escalar hacia abajo y hacer miel.'
-        courseF_bee_for_challenge2_c: Observe que un ciclo `for` necesita varios bucles
-          regulares dentro en el que se repita el 'contador' para hacer el modelo
-          creciente de escalera. El otro ciclo for solo necesita un ciclo regular
-          para hacer una cantidad 'contador' de miel.
+        courseF_bee_for_challenge2_b: 'Trate de usar dos "for" loops: Una para escalar
+          y agarrar el néctar, y otra para descender y hacer miel.'
+        courseF_bee_for_challenge2_c: |-
+          Observe que un "for" loop necesita varios loops regulares dentro del 'contador' de repetición; las veces para hacer aumentar el patrón de escalera.
+
+          El otro "for" loop solo necesita un loop regular para hacer un 'contador' cantidad de miel.
         courseF_bee_for_challenge2_d: |-
           **Solución:**
 
@@ -15077,12 +15090,12 @@ es-MX:
           Eche un vistazo a esta opción de movimiento:
 
           ![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)
-        courseF_bee_for_challenge2_b: 'Trate de usar dos ciclos for: Uno para subir
-          y agarrar el néctar, y el otro para escalar hacia abajo y hacer miel.'
-        courseF_bee_for_challenge2_c: Observe que un ciclo `for` necesita varios bucles
-          regulares dentro en el que se repita el 'contador' para hacer el modelo
-          creciente de escalera. El otro ciclo for solo necesita un ciclo regular
-          para hacer una cantidad 'contador' de miel.
+        courseF_bee_for_challenge2_b: 'Trate de usar dos "for" loops: Una para escalar
+          y agarrar el néctar, y otra para descender y hacer miel.'
+        courseF_bee_for_challenge2_c: |-
+          Observe que un "for" loop necesita varios loops regulares dentro del 'contador' de repetición; las veces para hacer aumentar el patrón de escalera.
+
+          El otro "for" loop solo necesita un loop regular para hacer un 'contador' cantidad de miel.
         courseF_bee_for_challenge2_d: |-
           **Solución:**
 
@@ -15221,12 +15234,12 @@ es-MX:
           Eche un vistazo a esta opción de movimiento:
 
           ![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)
-        courseF_bee_for_challenge2_b: 'Trate de usar dos ciclos for: Uno para subir
-          y agarrar el néctar, y el otro para escalar hacia abajo y hacer miel.'
-        courseF_bee_for_challenge2_c: Observe que un ciclo `for` necesita varios bucles
-          regulares dentro en el que se repita el 'contador' para hacer el modelo
-          creciente de escalera. El otro ciclo for solo necesita un ciclo regular
-          para hacer una cantidad 'contador' de miel.
+        courseF_bee_for_challenge2_b: 'Trate de usar dos "for" loops: Una para escalar
+          y agarrar el néctar, y otra para descender y hacer miel.'
+        courseF_bee_for_challenge2_c: |-
+          Observe que un "for" loop necesita varios loops regulares dentro del 'contador' de repetición; las veces para hacer aumentar el patrón de escalera.
+
+          El otro "for" loop solo necesita un loop regular para hacer un 'contador' cantidad de miel.
         courseF_bee_for_challenge2_d: |-
           **Solución:**
 
@@ -15457,29 +15470,33 @@ es-MX:
         courseF_bee_functions7_b: Trata de dibujar un camino a través de este laberinto
           con tu dedo. ¿Dónde tendrá que tomar la abeja una decisión?
       courseF_bee_functions8a_authored_hint:
-        courseF_bee_functions8a_a: Si el rompecabezas parece desafiante, intenta construir
-          tu función de poco a poco. Agregue algunos bloques, luego pruébelo. Agrega
-          más, luego intenta de nuevo. ¡Pronto, llegarás allí!
+        courseF_bee_functions8a_a: |-
+          Si el rompecabezas parece desafiante, intenta construir tu función de a poco.
+
+          Agrega algunos bloques, luego pruébalos. Agrega más, luego pruébalos otra vez. ¡Pronto, llegarás al lugar!
         courseF_bee_functions8a_b: "Recuerda construir código dentro del editor de
           funciones.\n\n"
       courseF_bee_functions8a_2018_authored_hint:
-        courseF_bee_functions8a_a: Si el rompecabezas parece desafiante, intenta construir
-          tu función de poco a poco. Agregue algunos bloques, luego pruébelo. Agrega
-          más, luego intenta de nuevo. ¡Pronto, llegarás allí!
+        courseF_bee_functions8a_a: |-
+          Si el rompecabezas parece desafiante, intenta construir tu función de a poco.
+
+          Agrega algunos bloques, luego pruébalos. Agrega más, luego pruébalos otra vez. ¡Pronto, llegarás al lugar!
         courseF_bee_functions8a_b: "Recuerda construir código dentro del editor de
           funciones.\n\n"
       courseF_bee_functionsPre7_authored_hint:
-        courseF_bee_functions7_a: Si el rompecabezas parece desafiante, intenta construir
-          tu función de poco a poco. Agregue algunos bloques, luego pruébelo. Agrega
-          más, luego intenta de nuevo. ¡Pronto, llegarás allí!
+        courseF_bee_functions7_a: |-
+          Si el rompecabezas parece desafiante, intenta construir tu función de a poco.
+
+          Agrega algunos bloques, luego pruébalos. Agrega más, luego pruébalos otra vez. ¡Pronto, llegarás al lugar!
         courseF_bee_functions7_b: "Recuerda construir tu código dentro del bloque
           de función verde. \n\n! [] (https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)\n"
         courseF_bee_functions7_c: "¿De qué manera deberías girar si hay un panal?
           ¿Qué tal una flor? ¿Qué pasa si no hay nada?"
       courseF_bee_functionsPre7_2018_authored_hint:
-        courseF_bee_functions7_a: Si el rompecabezas parece desafiante, intenta construir
-          tu función de poco a poco. Agregue algunos bloques, luego pruébelo. Agrega
-          más, luego intenta de nuevo. ¡Pronto, llegarás allí!
+        courseF_bee_functions7_a: |-
+          Si el rompecabezas parece desafiante, intenta construir tu función de a poco.
+
+          Agrega algunos bloques, luego pruébalos. Agrega más, luego pruébalos otra vez. ¡Pronto, llegarás al lugar!
         courseF_bee_functions7_b: "Recuerda construir tu código dentro del bloque
           de función verde. \n\n! [] (https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)"
         courseF_bee_functions7_c: "¿De qué manera deberías girar si hay un panal?
@@ -15722,9 +15739,10 @@ es-MX:
           </block>
           </xml>
       courseF_bee_functions_challenge2_recursion_authored_hint:
-        courseF_bee_functions8a_a: Si el rompecabezas parece desafiante, intenta construir
-          tu función de poco a poco. Agregue algunos bloques, luego pruébelo. Agrega
-          más, luego intenta de nuevo. ¡Pronto, llegarás allí!
+        courseF_bee_functions8a_a: |-
+          Si el rompecabezas parece desafiante, intenta construir tu función de a poco.
+
+          Agrega algunos bloques, luego pruébalos. Agrega más, luego pruébalos otra vez. ¡Pronto, llegarás al lugar!
         courseF_bee_functions8a_b: "Recuerda construir código dentro del editor de
           funciones.\n\n"
       courseF_bee_fwp1_authored_hint:
@@ -17257,8 +17275,8 @@ es-MX:
           Remember that the code from the last puzzle was:
 
           ![](https://images.code.org/e5c7492f509dd41efe2888c7e7895c28-image-1461177002636.29.02.png)
-        2-3_Artist_Loops_New_11_b: El nuevo giro deberá ir **al final** del código
-          dentro del bucle.
+        2-3_Artist_Loops_New_11_b: Tu nuevo giro deberá ir al **final** del código
+          dentro del loop.
       grade2_MakeDogTag_BFP_authored_hint: {}
       grade2_PuppyLoops_10_authored_hint:
         2-3_Artist_Debugging_8_a: |-
@@ -17274,22 +17292,24 @@ es-MX:
       grade2_PuppyLoops_5_authored_hint:
         hint1: La mejor solución utiliza los dos comandos 'avanzar' y un ciclo.
       grade2_PuppyLoops_6_authored_hint:
-        2-3_Maze_16_a: Si el patrón es difícil de ver, intenta programarlo todo primero
-          y mira qué cosas se repiten una y otra vez antes de colocar los bucles.
-        2-3_Maze_16_b: Para poner muchos bloques dentro de un bucle de "repetición",
-          simplemente arrastre un bucle hacia el espacio de trabajo, luego arrastre
-          todos los bloques desde el programa de inicio dentro de él!
+        2-3_Maze_16_a: Si el patrón es difícil de ver, intenta codificar todo primero
+          e identifica qué es lo que se repite una y otra vez antes de colocar los
+          loops.
+        2-3_Maze_16_b: |-
+          Para poner muchos bloques en un "repeat" loop, solamente arrastra un loop hacia el espacio de trabajo y luego arrastra todos los bloques desde el programa de inicio dentro de él.
+
+          Conecta todo al bloque "when run" y estarás listo!
       grade2_PuppyLoops_7_authored_hint:
-        2-3_Maze_Loops_17_a: Si el patrón es difícil de ver, intenta programarlo todo
-          primero y mira qué cosas se repiten una y otra vez antes de colocar los
-          bucles.
-        2-3_Maze_Loops_17_b: ¿Se borró el código de inicio?  ¡Haga clic en "Comenzar
-          de nuevo" para recuperarlo!
+        2-3_Maze_Loops_17_a: Si el patrón es difícil de ver, intenta codificar todo
+          primero e identifica qué es lo que se repite una y otra vez antes de colocar
+          los loops.
+        2-3_Maze_Loops_17_b: ¿Se borró el código de inicio? ¡Has clic en "start over"
+          para volver a empezar!
       grade2_PuppyLoops_8_authored_hint:
-        2-3_Artist_Debugging_2_a: 'Pista: cada hebra tiene una longitud de 75 pixeles.'
+        2-3_Artist_Debugging_2_a: 'Pista: Cada bigote tiene 75 pixeles de largo.'
       grade2_PuppyLoops_9_authored_hint:
-        2-3_Artist_Debugging_7_a: "¿Qué ocurre si mueves o lanzas al artista hacia
-          atrás, después de que dibuja la primera línea?"
+        2-3_Artist_Debugging_7_a: "¿Qué pasa si haces que el artista se mueva o salte
+          hacia atrás después de que dibuje la primera línea?"
       grade2_collector_2_authored_hint:
         hint1: You can use four `move forward` blocks or use the `repeat 4 times`
           block to make your program shorter.
@@ -17326,15 +17346,17 @@ es-MX:
       grade2_puppy_loops5_authored_hint:
         hint1: La mejor solución utiliza los dos comandos 'avanzar' y un ciclo.
       grade2_puppy_loops6_authored_hint:
-        2-3_Maze_16_a: Si el patrón es difícil de ver, intenta programarlo todo primero
-          y mira qué cosas se repiten una y otra vez antes de colocar los bucles.
-        2-3_Maze_16_b: Para poner muchos bloques dentro de un bucle de "repetición",
-          simplemente arrastre un bucle hacia el espacio de trabajo, luego arrastre
-          todos los bloques desde el programa de inicio dentro de él!
+        2-3_Maze_16_a: Si el patrón es difícil de ver, intenta codificar todo primero
+          e identifica qué es lo que se repite una y otra vez antes de colocar los
+          loops.
+        2-3_Maze_16_b: |-
+          Para poner muchos bloques en un "repeat" loop, solamente arrastra un loop hacia el espacio de trabajo y luego arrastra todos los bloques desde el programa de inicio dentro de él.
+
+          Conecta todo al bloque "when run" y estarás listo!
       grade2_puppy_loops7_authored_hint:
-        2-3_Maze_Loops_17_a: Si el patrón es difícil de ver, intenta programarlo todo
-          primero y mira qué cosas se repiten una y otra vez antes de colocar los
-          bucles.
+        2-3_Maze_Loops_17_a: Si el patrón es difícil de ver, intenta codificar todo
+          primero e identifica qué es lo que se repite una y otra vez antes de colocar
+          los loops.
       grade3_ConditionalsElse_4_authored_hint:
         remember_quantum: "** Recuerde: ** Este rompecabezas  cambia cada vez que
           se ejecuta.   \n\nUsted querrá utilizar un condicional de bloque ( ` si
@@ -17354,28 +17376,28 @@ es-MX:
       grade3_Conditionals_11_authored_hint:
         2-3_Bee_Conditionals_14_a: "¿Tienes problema en resolver cómo bajar los bloques?
           ¡Intenta tratar a la flor roja de la misma manera que la flor morada!"
-        2-3_Bee_Conditionals_14_b: Si la flor roja fuera morada, ¿Podrías averiguar
-          como utilizar un ciclo extra de 'repetición' para reducir el código?
+        2-3_Bee_Conditionals_14_b: Si la flor roja fuese morada, podrías imaginar
+          cómo usar un extra "repeat" loop para acortar el código?
         2-3_Bee_Conditionals_14_c: "Try breaking this up into two separate chunks:
           \ \n\n![](https://images.code.org/670ac0889a8f523865ff4099b4c54844-image-1463445460440.36.42.png)\n\n1)
           Gather nectar 3 times\n  - Move forward 5 times\n  - Check to see if nectar,
           if so: get it\n  - Turn left\n  \n2) Make honey \n  - Move forward one time\n
           \ - Make two honey"
       grade3_Conditionals_12_authored_hint:
-        2-3_Bee_Conditionals_15_a: 'Recuerda: las flores moradas solo tienen ya sea
-          0 o 1 de néctar y puede cambiar cada que ejecutes el programa.'
+        2-3_Bee_Conditionals_15_a: 'Recuerda: las flores moradas solo tienen 0 o 1
+          de néctar, y pueden cambiar cada vez que ejecutes el programa.'
       grade3_Conditionals_2_authored_hint:
-        2-3_Bee_Conditionals_3_a: El código será más corto si utilizas un bucle por
-          cada vez que avanzas, que recolectas néctar y cada que fabricas miel.
+        2-3_Bee_Conditionals_3_a: El código se acortará si usas un loop cada vez que
+          avanzas, otro loop para juntar néctar, y otro para hacer miel.
       grade3_Conditionals_4_authored_hint:
-        2-3_Bee_Conditionals_6_a: 'Recuerda: las flores moradas cambian entre 0 y
-          1 cuando ejecutas el programa!'
+        2-3_Bee_Conditionals_6_a: 'Recuerda: las flores de color morado cambian entre
+          0 y 1 néctar al ejecutar tu programa!'
       grade3_Conditionals_TeacherIDo_authored_hint:
-        2-3_Bee_Conditionals_6_a: 'Recuerda: las flores moradas cambian entre 0 y
-          1 cuando ejecutas el programa!'
+        2-3_Bee_Conditionals_6_a: 'Recuerda: las flores de color morado cambian entre
+          0 y 1 néctar al ejecutar tu programa!'
       grade3_Debugging_1_authored_hint:
-        2-3_Bee_Debugging_1_a: Una vez que encuentres y arregles el bloque incorrecto
-          ¿Ves algún patrón que pueda hacerse más simple utilizando un ciclo "repetir"?
+        2-3_Bee_Debugging_1_a: Una vez que encuentres y corrijas el bloque incorrecto,
+          ¿ves algún patrón que se pueda hacer más simple usando un "repeat" loop?
       grade3_Debugging_10_authored_hint:
         grade3_Debugging_10_a: Comience mirando solo el primer ciclo. ¿Qué hace? ¿Qué
           se supone que haga? ¿Qué te dice eso?
@@ -17418,30 +17440,30 @@ es-MX:
       grade3_Loops_10_authored_hint:
         2-3_Bee_Loops_4_a: Deberías terminar con cinco bloques dentro de tu bucle.
       grade3_Loops_11_authored_hint:
-        2-3_Bee_Loops_5_a: Si no puedes detectar los bloques para colocar 'repetir`
-          inmediatamente, comienza a codificar cada movimiento y busca un patrón.
+        2-3_Bee_Loops_5_a: Si no puedes detectar los bloques para colocarlos en "repeat"
+          de inmediato, comienza a codificar cada movimiento y busca un patrón.
       grade3_Loops_12_authored_hint:
-        2-3_Bee_Loops_6_a: Si no puedes indicar que debería ir en el bucle 'repeat',
-          intenta arrastrar los bloques uno por uno y ve si puedes encontrar un patrón.
-        2-3_Bee_Loops_6_b: Debería haber 6 bloques dentro de su bucle `repeat` cuando
-          haya terminado.
+        2-3_Bee_Loops_6_a: Si no puedes decir qué debería ir dentro del loop "repeat",
+          intenta arrastrar los bloques uno por uno y trata de encontrar un patrón.
+        2-3_Bee_Loops_6_b: Deberían haber 6 bloques dentro del loop "repeat" una vez
+          que hayas finalizado.
       grade3_Loops_4_authored_hint:
-        2-3_Bee_Loops_3B_a: Necesitas dos bucles 'repetir' diferentes, un después
+        2-3_Bee_Loops_3B_a: Vas a necesitar dos "repeat" loops diferentes, uno después
           del otro.
       grade3_Loops_5_authored_hint:
         2-3_Bee_Loops_7_a: La primera acción será un giro, en lugar de un movimiento.
-        2-3_Bee_Loops_7_b: 'Si no puedes programar el bucle desde el principio, intenta
-          programarlo a lo largo del camino, luego busca un patrón.  '
+        2-3_Bee_Loops_7_b: 'Si no puedes imaginarte el loop desde el principio, intenta
+          codificarlo y luego busca un patrón.  '
       grade3_Loops_6_authored_hint:
         2-3_Bee_Loops_4A_a: La primera acción será un giro, en lugar de un movimiento.
-        2-3_Bee_Loops_4A_b: La última parte del programa puede terminarse escribiendo
-          código al final de su programa fuera del bucle.
-        2-3_Bee_Loops_4A_c: Si aún no puedes detectar los bucles, intenta codificarlo
-          primero, luego ve lo que puedes combinar en un bucle 'repetir' al final.
+        2-3_Bee_Loops_4A_b: La última parte del programa se puede terminar escribiendo
+          el código al final del programa fuera de su loop.
+        2-3_Bee_Loops_4A_c: Si aún no puedes detectar los loop, intenta codificar
+          primero, luego identifica lo que puedes combinar en un "repeat" loop.
       grade3_Loops_8_authored_hint:
-        2-3_Bee_Loops_2_a: Deberías terminar con cuatro bloques dentro de tu bucle.
+        2-3_Bee_Loops_2_a: Deberías finalizar con cuatro bloques dentro de tu loop.
       grade3_Loops_9_authored_hint:
-        2-3_Bee_Loops_3_a: Deberías tener 6 bloques dentro de tu bucle.
+        2-3_Bee_Loops_3_a: Deberías tener 6 bloques dentro de tu loop.
       grade3_RunningFarm_1_authored_hint:
         grade3_RunningFarm_1_a: Usted tendrá que buscar para el maíz 5 veces, utilizando
           una repetición del ciclo.
@@ -17527,9 +17549,9 @@ es-MX:
           Try using this path through the maze.
 
           ![](https://images.code.org/6a8b4b97a8eef813d8a827b0b7b2d36b-image-1480446509692.05.22.png)
-        grade3_maze_loops2_b: Si el patrón es difícil de ver, intenta programarlo
-          todo primero y mira qué cosas se repiten una y otra vez antes de colocar
-          los bucles.
+        grade3_maze_loops2_b: Si el patrón es difícil de ver, intenta codificar todo
+          primero e identifica qué es lo que se repite una y otra vez antes de colocar
+          los loops.
         grade3_maze_loops2_c: Intenta utilizar un ciclo 'repetir' dentro de otro para
           reducir la cantidad de código que necesitas.
       grade3_maze_loops2a_authored_hint:
@@ -17571,23 +17593,27 @@ es-MX:
         grade3_robotFarmer_ConditionalsIntro_9_c: Tenga en cuenta que necesita repetir
           el `while camino por delante`,` mientras que hay un hoyo `seis veces.
       grade4_arist_nested_loop_polygons1_authored_hint:
-        4-5_Nested_Loops_7_a: Este diseño se repetirá 10 veces terminando en 360 grados.
-          ** 360/10 =? **
+        4-5_Nested_Loops_7_a: |-
+          Este diseño hará un loop 10 veces sobre 360 grados.
+
+          **360 / 10 = ?**
       grade4_arist_nested_loop_polygons2_authored_hint:
-        4-5_Nested_Loops_8_a: Tienes que repetir el bucle 6 veces terminando en 360
-          grados. ** 360/6 =? **
+        4-5_Nested_Loops_8_a: |-
+          Estarás haciendo 6 loops en esta figura por sobre los 360 grados.
+
+          **360 / 6 = ?**
       grade4_arist_nested_loop_triangles2_authored_hint: {}
       grade4_arist_nested_loop_triangles3_authored_hint:
-        4-5_Nested_Loops_6_a: No olvides hacer un giro después de su ciclo interno
-          . Estarás formando un bucle de 6 triángulos en 360 grados. ** 360/6 =? **
+        4-5_Nested_Loops_6_a: "No olvides girar luego de tu loop interno.\n\nEstarás
+          haciendo un loop de 6 triángulos de 360 grados. \n\n**360 / 6 = ?**"
       grade4_arist_nested_loop_triangles6_authored_hint:
         4-5_Nested_Loops_12_a: "** 360/36 =? **"
       grade4_artist_functions1_authored_hint:
-        2-3_Artist_Functions_1_a: Cada cuadrado tiene 100 pixeles de lado, eso significa
-          que deberás avanzar hacia adelante 175 pixeles antes de dibujar el segundo
-          cuadrado.
-        2-3_Artist_Functions_1_b: Es correcto dibujar líneas solapadas para hacer
-          tus lentes.
+        2-3_Artist_Functions_1_a: Los cuadrados tienen 100 pixeles por lado cada uno,
+          eso significa que tendrás que moverte hacia adelante 175 pixeles antes de
+          dibujar tu segundo cuadrado.
+        2-3_Artist_Functions_1_b: Está correcto dibujar líneas superpuestas para hacer
+          tus anteojos.
       grade4_artist_functions2_authored_hint:
         2-3_Artist_Functions_2_a: |-
           El programa debe:
@@ -17678,11 +17704,15 @@ es-MX:
         Course_4_Artist_11_b: 'El triángulo 2/3 tiene una **longitud de 80** y gira
           a la derecha por **120 grados**. '
       grade4_artist_nested_loop_polygons1_authored_hint:
-        4-5_Nested_Loops_7_a: Este diseño se repetirá 10 veces terminando en 360 grados.
-          ** 360/10 =? **
+        4-5_Nested_Loops_7_a: |-
+          Este diseño hará un loop 10 veces sobre 360 grados.
+
+          **360 / 10 = ?**
       grade4_artist_nested_loop_polygons2_authored_hint:
-        4-5_Nested_Loops_8_a: Tienes que repetir el bucle 6 veces terminando en 360
-          grados. ** 360/6 =? **
+        4-5_Nested_Loops_8_a: |-
+          Estarás haciendo 6 loops en esta figura por sobre los 360 grados.
+
+          **360 / 6 = ?**
       grade4_artist_nested_loop_triangles2_authored_hint: {}
       grade4_artist_nested_loop_triangles3_authored_hint:
         4-5_Nested_Loops_6_a: |-
@@ -17740,9 +17770,10 @@ es-MX:
           su función un poco a la vez.   \n\nAgregue algunos  bloques , luego pruébelo.
           Agrega más, luego intenta de nuevo. ¡Pronto, llegarás allí! ! [] (https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
       grade4_bee_functions8_authored_hint:
-        2-3_Bee_Functions_8_a: Si el rompecabezas parece desafiante, intenta construir
-          tu función de poco a poco. Agregue algunos bloques, luego pruébelo. Agrega
-          más, luego intenta de nuevo. ¡Pronto, llegarás allí!
+        2-3_Bee_Functions_8_a: |-
+          Si el rompecabezas parece desafiante, intenta construir tu función de a poco.
+
+          Agrega algunos bloques, luego pruébalos. Agrega más, luego pruébalos otra vez. ¡Pronto, llegarás al lugar!
         2-3_Bee_Functions_8_b: Recuerda construir tu código dentro del bloque de función
           verde. ! [] (https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
         2-3_Bee_Functions_8_c: Esta función debe hacer que la abeja lo dirija hacia
@@ -17790,25 +17821,25 @@ es-MX:
         2-3_Artist_1_new_b: ¿Tienes problemas para girar en la esquina? Utiliza el
           bloque "girar a la derecha 90 grados".
       grade4_review_artist2_authored_hint:
-        2-3_Artist_6_a: 'Para realizar esos pequeños ángulos, tendrás que ir *más
-          allá* cada vez así como lo hiciste con el cuadrado.   '
+        2-3_Artist_6_a: 'Para hacer esos pequeños ángulos, tienes que girar *más allá*
+          cada vez como lo hiciste con el cuadrado.   '
         2-3_Artist_6_b: Como ya estoy mirando hacia la derecha, es más fácil empezar
           por avanzar, y luego hacer vueltas a la izquierda para crear el triángulo.
-        2-3_Artist_6_c: Cada lado del triángulo tienen el mismo tamaño como los lados
-          del cuadrado...¡100 pixeles!
+        2-3_Artist_6_c: Cada lado del triángulo tiene la misma longitud que cada lado
+          del cuadrado... 100 pixeles!
       grade4_review_bee1_authored_hint:
-        2-3_Bee_Loops_3B_a: Necesitas dos bucles 'repetir' diferentes, un después
+        2-3_Bee_Loops_3B_a: Vas a necesitar dos "repeat" loops diferentes, uno después
           del otro.
       grade4_review_bee2_authored_hint:
-        2-3_Bee_Loops_3_a: Deberías tener 6 bloques dentro de tu bucle.
+        2-3_Bee_Loops_3_a: Deberías tener 6 bloques dentro de tu loop.
       grade4_review_bee3_authored_hint:
         2-3_Bee_Loops_4_a: Deberías terminar con cinco bloques dentro de tu bucle.
       grade5_artist_binary10_authored_hint:
-        Course_4_Artist_Binary_Free_Play_2b_a: Este código usa dos `ciclos for`. Uno
-          cuenta de 1 a 8, el otro cuenta de 8 a 1.
-        Course_4_Artist_Binary_Free_Play_2b_b: Cada `ciclo for` tiene tres repeticiones.
-          El primero dibuja el conjunto más a la izquierda de 1s, el segundo dibuja
-          los 0s en el medio y el tercero dibuja los 1s a la derecha.
+        Course_4_Artist_Binary_Free_Play_2b_a: Este código utiliza dos "for loops".
+          Uno cuenta de 1 a 8, el otro cuenta de 8 a 1.
+        Course_4_Artist_Binary_Free_Play_2b_b: Cada "for loop" tiene tres repeticiones.
+          La primera dibuja el conjunto de más a la izquierda de 1s, el segundo dibuja
+          el 0s en el medio, y el tercero dibuja el 1s a la derecha.
         Course_4_Artist_Binary_Free_Play_2b_c: En cada repetición necesitas `contador`
           para 1s y` 16- (contador 2x) `para 0s.
         Course_4_Artist_Binary_Free_Play_2b_d: |-
@@ -17840,11 +17871,11 @@ es-MX:
           ![](https://images.code.org/15e87fc7fe408cbf1b63e0e8e69b7ffe-image-1475908502078.31.26.png)
       grade5_artist_for_loops4_authored_hint:
         Course_4_Artist_For_Loops_4_a: |-
-          ** ¿Cuál es el número más pequeño que necesitarás?
+          **¿Cuál es el número más pequeño que necesitarás?
           ¿Cuál es el número más grande?
-          ¿Qué tan grande es el aumento en cada ocasión? **
+          ¿Qué tanto aumenta cada vez?**
 
-          Esas son las preguntas que debe realizar para completar los espacios en blanco del ciclo `for`.
+          Esas son las preguntas que se tiene que hacer para completar los espacios del loop "for".
       grade5_artist_for_loops5_authored_hint:
         grade5_artist_for_loops5_a: You don't need the traditional repeat loop when
           making this spiral!
@@ -17867,7 +17898,7 @@ es-MX:
       grade5_artist_for_loopsfreeplay11_authored_hint:
         Course_4_Artist_For_Loops_inspire_a: La base de este código es la misma que
           la solución al desafío anterior... con un par de cambios.
-        Course_4_Artist_For_Loops_inspire_b: Prueba un bucle 'for' que va de 3 a 10
+        Course_4_Artist_For_Loops_inspire_b: Intenta un loop "for" que va de 3 a 10
           con un incremento de 1.
         Course_4_Artist_For_Loops_inspire_c: Hay dos iteraciones del mismo bucle de
           repetición dentro del bucle 'for', pero la segunda repetición gira en la
@@ -17886,11 +17917,11 @@ es-MX:
       grade5_artist_functionparameters10_authored_hint:
         brush_width: Establecemos el grosor del pincel a 1, luego el color azul antes
           de hacer cualquier otra cosa.
-        double_loop: Trate de poner un ` ciclo ` dentro de un ciclo de repetición.
-        specifics: El `bucle for` se ejecuta de tres a diecisiete veces para cada
-          uno de los seis "pétalos" antes de pasar a crear el siguiente, dibujando
-          formas con solo un número impar de lados. El bloque `set alpha` usa la división
-          para atenuar el color a medida que el contador aumenta.
+        double_loop: Trate de poner un "for loop" dentro de un loop de "repetición".
+        specifics: |-
+          El "for loop" se ejecuta de tres a diecisiete para cada uno de los 6 "pétalos" antes de crear el siguiente, dibujando figuras sólo con un número impar de lados.
+
+          El bloque "set alpha" utiliza la división para ir atenuando el color a medida que el contador aumenta.
         after: Cuando hayas terminado con cada "pétalo", asegúrate de "avanzar" 20
           píxeles antes de hacer una rotación de 60 grados.
         solution: |-
@@ -17956,11 +17987,12 @@ es-MX:
           **Solution:**
           ![Blocks for solution](https://images.code.org/1865aaf1b4a8ba84a5e8a7408401092d-image-1440060930335.43.39.png)
       grade5_artist_variables_octagons13_authored_hint:
-        Course_4_Artist_Vars_13_a: Necesita dos bucles de repetición (uno dentro del
-          otro) ambos repitiendo `sides ' veces.
-        Course_4_Artist_Vars_13_b: El ciclo de repetición interno dibuja un octágono
-          (girando a la izquierda). Luego, debes avanzar y girar a la derecha solo
-          en el bucle externo.
+        Course_4_Artist_Vars_13_a: Necesita dos loops de repetición (uno dentro de
+          otro) ambos repitiendo "lados" veces.
+        Course_4_Artist_Vars_13_b: |-
+          El loop de repetición interno dibuja un octágono (girando a la izquierda).
+
+          Luego, necesita avanzar y girar a la derecha sólo en el loop externo.
         Course_4_Artist_Vars_13_c: Para ajustar la forma para que permanezca del mismo
           tamaño cuando cambia el número de lados, use el bloque matemático para dividir
           la longitud en píxeles por el número de lados.
@@ -18293,30 +18325,30 @@ es-MX:
       level 'grade3_Loops_10_authored_hint:
         2-3_Bee_Loops_4_a: Deberías terminar con cinco bloques dentro de tu bucle.
       level 'grade3_Loops_11_authored_hint:
-        2-3_Bee_Loops_5_a: Si no puedes detectar los bloques para colocar 'repetir`
-          inmediatamente, comienza a codificar cada movimiento y busca un patrón.
+        2-3_Bee_Loops_5_a: Si no puedes detectar los bloques para colocarlos en "repeat"
+          de inmediato, comienza a codificar cada movimiento y busca un patrón.
       level 'grade3_Loops_12_authored_hint:
-        2-3_Bee_Loops_6_a: Si no puedes indicar que debería ir en el bucle 'repeat',
-          intenta arrastrar los bloques uno por uno y ve si puedes encontrar un patrón.
-        2-3_Bee_Loops_6_b: Debería haber 6 bloques dentro de su bucle `repeat` cuando
-          haya terminado.
+        2-3_Bee_Loops_6_a: Si no puedes decir qué debería ir dentro del loop "repeat",
+          intenta arrastrar los bloques uno por uno y trata de encontrar un patrón.
+        2-3_Bee_Loops_6_b: Deberían haber 6 bloques dentro del loop "repeat" una vez
+          que hayas finalizado.
       level 'grade3_Loops_4_authored_hint:
-        2-3_Bee_Loops_3B_a: Necesitas dos bucles 'repetir' diferentes, un después
+        2-3_Bee_Loops_3B_a: Vas a necesitar dos "repeat" loops diferentes, uno después
           del otro.
       level 'grade3_Loops_5_authored_hint:
         2-3_Bee_Loops_7_a: La primera acción será un giro, en lugar de un movimiento.
-        2-3_Bee_Loops_7_b: 'Si no puedes programar el bucle desde el principio, intenta
-          programarlo a lo largo del camino, luego busca un patrón.  '
+        2-3_Bee_Loops_7_b: 'Si no puedes imaginarte el loop desde el principio, intenta
+          codificarlo y luego busca un patrón.  '
       level 'grade3_Loops_6_authored_hint:
         2-3_Bee_Loops_4A_a: La primera acción será un giro, en lugar de un movimiento.
-        2-3_Bee_Loops_4A_b: La última parte del programa puede terminarse escribiendo
-          código al final de su programa fuera del bucle.
-        2-3_Bee_Loops_4A_c: Si aún no puedes detectar los bucles, intenta codificarlo
-          primero, luego ve lo que puedes combinar en un bucle 'repetir' al final.
+        2-3_Bee_Loops_4A_b: La última parte del programa se puede terminar escribiendo
+          el código al final del programa fuera de su loop.
+        2-3_Bee_Loops_4A_c: Si aún no puedes detectar los loop, intenta codificar
+          primero, luego identifica lo que puedes combinar en un "repeat" loop.
       level 'grade3_Loops_8_authored_hint:
-        2-3_Bee_Loops_2_a: Deberías terminar con cuatro bloques dentro de tu bucle.
+        2-3_Bee_Loops_2_a: Deberías finalizar con cuatro bloques dentro de tu loop.
       level 'grade3_Loops_9_authored_hint:
-        2-3_Bee_Loops_3_a: Deberías tener 6 bloques dentro de tu bucle.
+        2-3_Bee_Loops_3_a: Deberías tener 6 bloques dentro de tu loop.
       playLabDebugVideo1_authored_hint:
         courseA_playLab_events2_a: Aquí está el bloque debes conectar al bloque 'al
           ejecutar':! [] (https://images.code.org/ae72d1270ad210cd00fae7e0dfb3549a-image-1478144412134.png)

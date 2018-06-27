@@ -1631,12 +1631,12 @@ is:
       Finalize Your Chaser Game v.1_2018_instruction: Introducing the setPosition command! Replace the moveTo in the button-click event handler to use setPosition to move the button itself to a random location when it's clicked.
       Find the Wizard_instruction: Búðu til hvað sem þú vilt. Þetta er dæmi um giska-á-tölu leik!
       Find the Wizard_2018_instruction: Búðu til hvað sem þú vilt. Þetta er dæmi um giska-á-tölu leik!
-      Fish Tank 2-validated_instruction: Change Dusty (the tumbleweed) to a fish.
-      Fish Tank 3-validated_instruction: Change the fish's behavior so that it swims around the tank.
-      Fish Tank 4-validated_instruction: Use the `set background color` block to make the background blue.
+      Fish Tank 2-validated_instruction: Breyttu Dusty (fokurtinni) í fisk.
+      Fish Tank 3-validated_instruction: Breyttu hegðun fisksins svo hann syndi um í búrinu.
+      Fish Tank 4-validated_instruction: Notaðu kubbinn `stilla bakgrunnslit` til að lita bakgrunninn bláan.
       Fish Tank 5-validated_instruction: Our fish is getting a little lonely. Add another sprite to the fish tank.
-      Fish Tank 6-validated_instruction: Add a behavior to the fish's new friend.
-      Fish Tank 7-validated_instruction: Use some new blocks from the toolbox to make your fish tank special!
+      Fish Tank 6-validated_instruction: Bættu hegðun við nýja vin fisksins.
+      Fish Tank 7-validated_instruction: Notaðu nýja kubba úr verkfærakassanum til að gera fiskbúrið sérstakt!
       Food Fight!_instruction: "Við höfum bætt síðasta fallinu fyrir þig.\\r\n\\r\nNotaðu \"ef\" setningu til að forrita leikinn svo hann kalli á fallið \"næsta_borð\" aðeins ef \"stig_leikmanns\" fer upp fyrir tiltekna tölu.\\r\n\\r\nTil dæmis \"stig_leikmanns\" > 6 \\r\n\\r\nSpilaðu leikinn og náðu að ljúka borði 3 til að fara í næstu þraut. "
       Food Fight_instruction: You can make whatever you want in play lab! This is an example of a game you can make in play lab.
       FoodFight_instruction: Þetta er dæmi um leik sem þú getur búið til í Leikjasmiðjunni.
@@ -1665,7 +1665,7 @@ is:
       Guess The Number_2018_instruction: Búðu til hvað sem þú vilt. Þetta er dæmi um giska-á-tölu leik!
       Harvester Test_instruction: It's harvest time! But I forgot what crop I planted at which tile. Please help me harvest all my crops, no matter how they were originally planted!
       Harvesting_instruction: Uh oh, I lost my map and can't remember what I planted. Every sprout could grow up to be corn, beans, or pumpkins. Can you write some code to pick all the crops, no matter what they are?
-      HoCAB_labyrinth1_instruction: Use the arrow blocks to solve this maze!
+      HoCAB_labyrinth1_instruction: Notaðu örvakubbana til að leysa þetta völundarhús!
       Infinity_catch_instruction: Getur þú látið Elsu ("leikmann 2") ná Önnu með því að nota örvarlyklana?
       Infinity_finale_instruction: Búðu til hvað sem þú vilt og deildu því!
       Infinity_move_collide_instruction: Hiro er "leikmaður 1". Færðu hann til hægri að Baymax og spilaðu hljóð þegar þeir snertast.
@@ -2960,7 +2960,7 @@ is:
       Valentine_artist_01_instruction: 'Hjálpaðu listamanninum að klára llama-hjartað. '
       Valentine_playlab_01_instruction: 'Forritaðu Kiki (leikmann 1) að færast til vinstri og hægri þegar ýtt er á vinstri og hægri örvarlyklana. Þegar smellt er á Kiki, ætti hún að kasta hjörtum í átt til vina sinna. '
       Vigenere_instruction: Test
-      Virtual Pet 1_instruction: What do you think will happen if you press "Run" and then click on her?
+      Virtual Pet 1_instruction: Hvað heldur þú að muni gerast ef þú ýtir á "Keyra" og smellir svo á hana?
       Virtual Pet 2_instruction: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
       Virtual Pet 3_instruction: Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?
       Virtual Pet 4_instruction: Add a behavior to your soap to make it draggable, then drag it over to clean the giraffe!
@@ -3325,7 +3325,7 @@ is:
       courseA_playLab_events6_instruction: Gerðu þetta áhugaverðara með því að breyta bakgrunninum og spila eitthvert hljóð þegar smellt er á Jorge.
       courseA_playLab_events6_2018_instruction: Make this more interesting by changing the background and playing a random sound when Jorge is clicked.
       courseA_playLab_events7_instruction: Bættu við leikinn eftir þínu höfði. Geturðu látið risaeðluna hverfa þegar Jorge rekst á hana?
-      courseA_playLab_events7_2018_instruction: Add anything you want to this game.  Can you make the dinosaur disappear when Jorge runs into him?
+      courseA_playLab_events7_2018_instruction: "*Freeplay:* Add anything you want to this game."
       courseA_playlab_events_challenge1_instruction: '"Hvar eru vinir mínir að fela sig? Getur þú skrifað kóða svo vinir mínir komi í ljós?"'
       courseA_playlab_events_challenge1_2018_instruction: '"Hvar eru vinir mínir að fela sig? Getur þú skrifað kóða svo vinir mínir komi í ljós?"'
       courseA_playlab_events_challenge2_instruction: '"Höldum partí! Láttu hvern vin gera eitthvað þegar það er smellt eða slegið á hann."'
@@ -3401,37 +3401,37 @@ is:
       courseB_iceage_loops10_instruction: Hjálpaðu Scrat að komast alla leið yfir til akarnsins!
       courseB_iceage_loops11_instruction: Hjálpaðu Skrat að komast til akarnsins!
       courseB_iceage_loops11_forVideo_instruction: Hjálpaðu Skrat að komast til akarnsins!
-      courseB_iceage_loops12_instruction: Get to the acorn any way you can!
-      courseB_iceage_loops2_instruction: Use two different move blocks to get to the acorn!
-      courseB_iceage_loops3_instruction: Can you get to the acorn with just one `W` block?
-      courseB_iceage_loops4_instruction: Add one more block to get Scrat all the way to the acorn!
-      courseB_iceage_loops5_instruction: Can you add one more loop to get to the acorn?
-      courseB_iceage_loops6_instruction: Can you add a loop to get to the acorn?
-      courseB_iceage_loops7_instruction: 'Scrat really wants that acorn! '
-      courseB_iceage_loops8_instruction: 'Can you fix this code? '
-      courseB_iceage_loops9_instruction: The acorn is so far away! Can you use loops to help Scrat get there?
+      courseB_iceage_loops12_instruction: Náðu akarninu hvernig sem þú getur!
+      courseB_iceage_loops2_instruction: Notaðu tvo mismunandi hreyfingarkubba til að ná akarninu!
+      courseB_iceage_loops3_instruction: Getur þú náð akarninu með bara einum `V` kubbi?
+      courseB_iceage_loops4_instruction: Bættu við einum kubbi til að koma Scrat til akarnsins!
+      courseB_iceage_loops5_instruction: Getur þú bætt við einni lykkju í viðbót til að ná akarninu?
+      courseB_iceage_loops6_instruction: Getur þú bætt við lykkju til að ná akarninu?
+      courseB_iceage_loops7_instruction: 'Scrat langar mikið í þetta akarn! '
+      courseB_iceage_loops8_instruction: 'Getur þú lagað þennan kóða? '
+      courseB_iceage_loops9_instruction: Akarnið er svo langt í burtu! Getur þú notað lykkjur til að hjálpa Scrat að komast þangað?
       courseB_maze_seq1_instruction: "Leiktu þér með þessa kubba til að sjá hvað þeir láta fuglinn gera!\\r\n\\r\nKomdu fuglinum til svínsins til að ljúka áfanganum."
       courseB_maze_seq10_instruction: Fix the bugs to get the bird to the pig.
-      courseB_maze_seq10_2018_instruction: Fix the bugs to get Scrat to the acorn.
+      courseB_maze_seq10_2018_instruction: Lagaðu villurnar til að koma Scrat til akarnsins.
       courseB_maze_seq11_instruction: It's all you!  Get the bird to the pig.
-      courseB_maze_seq11_2018_instruction: It's all you!  Get Scrat to the acorn.
+      courseB_maze_seq11_2018_instruction: Þetta er allt í þínum höndum! Komdu Scrat til akarnsins.
       courseB_maze_seq12_instruction: Náðu nú þessu svíni hvernig sem þú vilt!
       courseB_maze_seq12_2018_instruction: Náðu nú þessu svíni hvernig sem þú vilt!
-      courseB_maze_seq1_2018_instruction: "Play with these blocks to see what they make Scrat do! \n\nGet Scrat to the acorn to complete the level."
+      courseB_maze_seq1_2018_instruction: "Leiktu þér með þessa kubba til að sjá hvað þeir láta Scrat gera!\n\nKomdu Scrat til akarnsins til að ljúka borðinu."
       courseB_maze_seq2_instruction: '*"Villa! Lagaðu kóðann svo ég komist til svínsins."*'
-      courseB_maze_seq2_2018_instruction: A bug! Fix the code to get Scrat to the acorn!
+      courseB_maze_seq2_2018_instruction: Villa! Lagaðu kóðann svo Scrat komist að akarninu!
       courseB_maze_seq4_instruction: Add 2 blocks to get the bird to the pig.
-      courseB_maze_seq4_2018_instruction: Use **2** movement blocks to get the Scrat to the acorn.
+      courseB_maze_seq4_2018_instruction: Notaðu **2** kubba fyrir hreyfingu til að færa Scrat til akarnsins.
       courseB_maze_seq5_instruction: Now try this puzzle from the start!
-      courseB_maze_seq5_2018_instruction: This puzzle is a little tricky!
+      courseB_maze_seq5_2018_instruction: Þessi þraut er pínu snúin!
       courseB_maze_seq6_instruction: Farðu í eina átt, svo í aðra, til að koma fuglinum að svíninu!
-      courseB_maze_seq6_2018_instruction: Move one way, then another to get Scrat to the acorn!
+      courseB_maze_seq6_2018_instruction: Farðu í eina átt, svo í aðra til að Scrat fái akarnið!
       courseB_maze_seq7_instruction: Finndu hvað vantar og bættu svo við kubbum til að koma fuglinum til svínsins!
-      courseB_maze_seq7_2018_instruction: Figure out what is missing and then add blocks to get Scrat to the acorn!
+      courseB_maze_seq7_2018_instruction: Finndu út hvað vantar og bættu svo við kubbum svo Scrat nái í akarnið!
       courseB_maze_seq8_instruction: Komið að þér! Hvað þarftu að gera til að koma fuglinum til svínsins?
-      courseB_maze_seq8_2018_instruction: Your turn!  What do you need to do to get Scrat to the acorn?
+      courseB_maze_seq8_2018_instruction: Nú átt þú að gera! Hvað þarftu að gera svo Scrat nái til akarnsins?
       courseB_maze_seq9_instruction: 'Áskorun: Farðu í kringum TNT sprengiefnið til að koma fuglinum til svínsins.'
-      courseB_maze_seq9_2018_instruction: 'Challenge: Move around the broken ice to get Scrat to the acorn.'
+      courseB_maze_seq9_2018_instruction: 'Áskorun: Farðu yfir sprunginn ísinn til að koma Scrat til akarnsins.'
       courseB_maze_seq9_challenge1_instruction: "*Hvar er þetta svín nú að fela sig?*"
       courseB_maze_seqCold_instruction: 'Áskorun: Lagaðu villur í þessu borði með þvi að bæta við kubbum svo fuglinn nái svíninu!'
       courseB_maze_seqOld_instruction: 'Farðu í kringum TNT sprengiefnið til að láta fuglinn ná svíninu! '
@@ -3441,8 +3441,8 @@ is:
       courseB_maze_seq_challenge2_2018_instruction: Leiðréttu þetta borð. Þetta eru réttu kubbarnir en í rangri röð!
       courseB_playLab_events1_instruction: Reyndu að finna út hvað hver kubbur gerir.
       courseB_playLab_events1_2018_instruction: Reyndu að finna út hvað hver kubbur gerir.
-      courseB_playlab_events2_instruction: Have Daisy the Dragon say something when you click "Run".
-      courseB_playlab_events2_2018_instruction: Have Daisy the Dragon say something when you click "Run".
+      courseB_playlab_events2_instruction: Láttu drekann Daisy segja eitthvað þegar þú smellir á "Keyra".
+      courseB_playlab_events2_2018_instruction: Láttu drekann Daisy segja eitthvað þegar þú smellir á "Keyra".
       courseB_playlab_events3_instruction: Use an event to make Daisy the Dragon switch to a random mood when you click on her.
       courseB_playlab_events3_2018_instruction: Use an event to make Daisy the Dragon switch to a random mood when you click on her.
       courseB_playlab_events4_instruction: Knight time!  Add an event so that the knight moves toward the dragon when the left arrow is clicked.
@@ -4098,14 +4098,14 @@ is:
       courseD_iceage_loops1_instruction: Hjálpaðu Scrat yfir ísinn svo hann nái nú akarninu!
       courseD_iceage_loops10_instruction: Hjálpaðu Scrat að komast alla leið yfir til akarnsins!
       courseD_iceage_loops11_instruction: Hjálpaðu Skrat að komast til akarnsins!
-      courseD_iceage_loops12_instruction: Get to the acorn any way you can!
+      courseD_iceage_loops12_instruction: Náðu akarninu hvernig sem þú getur!
       courseD_iceage_loops2_instruction: Use a `turn left` block to get to the acorn!
       courseD_iceage_loops3_instruction: Can you get to the acorn with just one `move forward` block?
-      courseD_iceage_loops4_instruction: Add one more block to get Scrat all the way to the acorn!
-      courseD_iceage_loops6_instruction: Can you add a loop to get to the acorn?
-      courseD_iceage_loops7_instruction: 'Scrat really wants that acorn! '
-      courseD_iceage_loops8_instruction: 'Can you fix this code? '
-      courseD_iceage_loops9_instruction: The acorn is so far away! Can you use loops to help Scrat get there?
+      courseD_iceage_loops4_instruction: Bættu við einum kubbi til að koma Scrat til akarnsins!
+      courseD_iceage_loops6_instruction: Getur þú bætt við lykkju til að ná akarninu?
+      courseD_iceage_loops7_instruction: 'Scrat langar mikið í þetta akarn! '
+      courseD_iceage_loops8_instruction: 'Getur þú lagað þennan kóða? '
+      courseD_iceage_loops9_instruction: Akarnið er svo langt í burtu! Getur þú notað lykkjur til að hjálpa Scrat að komast þangað?
       courseD_maze_loops_challenge1_instruction: Komum í fjársjóðaleit - með lykkjum! Hjálpaðu safnaranum að ná minnst tveimur fjársjóðshrúgum en aðeins með kubbunum í verkfærakassanum.
       courseD_maze_nestedLoops3_instruction: Get the zombie to the sunflower using the fewest number of blocks possible.
       courseD_maze_nestedLoops3_2018_instruction: Get the zombie to the sunflower using the fewest number of blocks possible.
