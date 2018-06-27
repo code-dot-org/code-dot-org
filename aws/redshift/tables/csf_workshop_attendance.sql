@@ -90,11 +90,12 @@ FROM sections_geos
          pdw.course as course,
          pdw.id AS workshop_id, -- section_id in the other table (below)
          CASE WHEN subject in ('Intro Workshop', 'Intro') then 'Intro Workshop' ELSE pdw.subject END as subject,
-         pds.started_at as started_at,
+         pds.start as started_at,
          CASE WHEN pdw.regional_partner_id IS NOT NULL THEN 1 ELSE 0 END AS trained_by_regional_partner,
          coalesce (pdw.regional_partner_id, rpm.regional_partner_id) AS regional_partner_id,
          sy.school_year
-   FROM dashboard_production_pii.pd_enrollments pde
+   FROM 
+   dashboard_production_pii.pd_enrollments pde
      JOIN dashboard_production_pii.pd_attendances pda 
        ON pda.pd_enrollment_id = pde.id
      JOIN dashboard_production_pii.pd_workshops pdw 
