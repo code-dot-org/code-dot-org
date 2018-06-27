@@ -816,6 +816,9 @@ var projects = module.exports = {
           if (err.message.includes('httpStatusCode: 401')) {
             this.showSaveError_('unauthorized-save-sources-reload', saveSourcesErrorCount, err.message);
             window.location.reload();
+          } else if (err.message.includes('httpStatusCode: 409')) {
+            this.showSaveError_('conflict-save-sources-reload', saveSourcesErrorCount, err.message);
+            window.location.reload();
           } else {
             saveSourcesErrorCount++;
             this.showSaveError_('save-sources-error', saveSourcesErrorCount, err.message);
