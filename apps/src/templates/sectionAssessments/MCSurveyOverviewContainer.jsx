@@ -15,8 +15,6 @@ class MCSurveyOverviewContainer extends Component {
     totalStudentSubmissions: PropTypes.number,
   };
 
-  // In my selector, chheck if key is in survey. if yes, continue with survey or else return empty table.
-
   render() {
     const {multipleChoiceSurveyData, totalStudentCount, totalStudentSubmissions} = this.props;
     return (
@@ -41,6 +39,6 @@ export const UnconnectedMCSurveyOverviewContainer = MCSurveyOverviewContainer;
 
 export default connect(state => ({
   multipleChoiceSurveyData: getMultipleChoiceSurveyResults(state),
-  totalStudentSubmissions: countSubmissionsForCurrentAssessment(state, true),
+  totalStudentSubmissions: countSubmissionsForCurrentAssessment(state),
   totalStudentCount: getTotalStudentCount(state),
 }))(MCSurveyOverviewContainer);

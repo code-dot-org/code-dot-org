@@ -374,7 +374,7 @@ export const currentAssessmentIsSurvey = (state) => {
   const surveysStructure = state.sectionAssessments.surveysByScript[state.scriptSelection.scriptId] || {};
 
   const currentAssessmentId = state.sectionAssessments.assessmentId;
-  return Object.keys(surveysStructure).includes(currentAssessmentId);
+  return Object.keys(surveysStructure).includes(currentAssessmentId.toString());
 };
 
 /** Get data for students assessments multiple choice table
@@ -477,13 +477,13 @@ export const getMultipleChoiceSectionSummary = (state) => {
 };
 
 /**
- * Selector function that takes in the state and a boolean indicating
- * if the current assessment is a survey.
+ * Selector function that takes in the state.
  * @returns {number} total count of students who have submitted
  * the current assessment.
  */
-export const countSubmissionsForCurrentAssessment = (state, isSurvey) => {
+export const countSubmissionsForCurrentAssessment = (state) => {
   const currentAssessmentId = state.sectionAssessments.assessmentId;
+  const isSurvey = currentAssessmentIsSurvey(state);
   if (isSurvey) {
     const surveysStructure = state.sectionAssessments.surveysByScript[state.scriptSelection.scriptId] || {};
     const currentSurvey = surveysStructure[currentAssessmentId];
