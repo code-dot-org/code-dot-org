@@ -48,7 +48,7 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
         id: 1,
         name: 'sampleDailyScale',
         text: 'How was your day?',
-        options: %w(Poor Fair Good Great Excellent),
+        options: %w(Poor Excellent),
         values: (1..5).to_a,
         type: TYPE_SCALE
       )
@@ -102,8 +102,10 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
       general: {
         'sampleDailyScale' => {
           text: 'How was your day?',
-          answer_type: ANSWER_SELECT_VALUE,
-          max_value: 5
+          answer_type: ANSWER_SCALE,
+          min_value: 1,
+          max_value: 5,
+          options: %w(Poor Excellent)
         },
       },
       facilitator: {
@@ -119,18 +121,20 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
         general: {
           'sampleMatrix_0' => {
             text: 'How do you feel about these statements? I am excited for CS Principles',
-            answer_type: ANSWER_SELECT_VALUE,
-            max_value: 5
+            answer_type: ANSWER_SINGLE_SELECT,
+            options: %w(Strongly\ Agree Agree Neutral Disagree Strongly\ Disagree)
           },
           'sampleMatrix_1' => {
             text: 'How do you feel about these statements? I am prepared for CS Principles',
-            answer_type: ANSWER_SELECT_VALUE,
-            max_value: 5
+            answer_type: ANSWER_SINGLE_SELECT,
+            options: %w(Strongly\ Agree Agree Neutral Disagree Strongly\ Disagree)
           },
           'sampleScale' => {
             text: 'Do you like CS Principles?',
-            answer_type: ANSWER_SELECT_VALUE,
-            max_value: 5
+            answer_type: ANSWER_SCALE,
+            min_value: 1,
+            max_value: 5,
+            options: %w(Strongly\ Agree Strongly\ Disagree)
           },
           'sampleText' => {
             text: 'Write some thoughts here',
@@ -382,21 +386,21 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
     assert_equal(
       {
         'Pre Workshop' => {
+          response_count: 3,
           general: {
             'sampleMatrix_0' => {
-              1 => 2,
-              4 => 1
+              'Strongly Agree' => 2,
+              'Disagree' => 1
             },
             'sampleMatrix_1' => {
-              2 => 3,
+              'Agree' => 3,
             },
             'sampleScale' => {
               2 => 1,
               4 => 1
             },
             'sampleText' => ['Here are my thoughts', 'More thoughts']
-          },
-          response_count: 3
+          }
         },
         'Day 1' => daily_expected_results,
         'Day 2' => daily_expected_results,
