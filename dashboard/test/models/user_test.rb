@@ -627,6 +627,7 @@ class UserTest < ActiveSupport::TestCase
   test "find_for_authentication finds migrated multi-auth email user first" do
     email = 'test@foo.bar'
     migrated_student = create(:student, :with_email_authentication_option, :multi_auth_migrated, email: email)
+    migrated_student.primary_authentication_option = migrated_student.authentication_options.first
     migrated_student.primary_authentication_option.update(authentication_id: User.hash_email(email))
     legacy_student = build(:student, email: email)
     # skip duplicate email validation
