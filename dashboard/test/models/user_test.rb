@@ -194,32 +194,46 @@ class UserTest < ActiveSupport::TestCase
 
   test "cannot create single-auth user with duplicate of single-auth user's email" do
     email = 'test@example.com'
-    create :student, email: email
-    assert_fails_email_uniqueness_validation FactoryGirl.build(:teacher, email: email)
-    assert_fails_email_uniqueness_validation FactoryGirl.build(:student, email: email)
+    create_single_auth_user_with_email email
+    cannot_create_single_auth_users_with_email email
   end
 
   test "cannot create single-auth user with duplicate of multi-auth user's email" do
     email = 'test@example.com'
-    create :student, :with_migrated_email_authentication_option, email: email
+    create_multi_auth_user_with_email email
+    cannot_create_single_auth_users_with_email email
+  end
+
+  test "cannot create single-auth user with duplicate of multi-auth user's second email" do
+    email = 'test@example.com'
+    create_multi_auth_user_with_second_email email
+    cannot_create_single_auth_users_with_email email
+  end
+
+  def cannot_create_single_auth_users_with_email(email)
     assert_fails_email_uniqueness_validation FactoryGirl.build(:teacher, email: email)
     assert_fails_email_uniqueness_validation FactoryGirl.build(:student, email: email)
   end
 
   test "cannot create multi-auth user with duplicate of single-auth user's email" do
     email = 'test@example.com'
-    create :student, email: email
-    assert_fails_email_uniqueness_validation FactoryGirl.build :teacher,
-      :with_migrated_email_authentication_option,
-      email: email
-    assert_fails_email_uniqueness_validation FactoryGirl.build :student,
-      :with_migrated_email_authentication_option,
-      email: email
+    create_single_auth_user_with_email email
+    cannot_create_multi_auth_users_with_email email
   end
 
   test "cannot create multi-auth user with duplicate of multi-auth user's email" do
     email = 'test@example.com'
-    create :student, :with_migrated_email_authentication_option, email: email
+    create_multi_auth_user_with_email email
+    cannot_create_multi_auth_users_with_email email
+  end
+
+  test "cannot create multi-auth user with duplicate of multi-auth user's second email" do
+    email = 'test@example.com'
+    create_multi_auth_user_with_second_email email
+    cannot_create_multi_auth_users_with_email email
+  end
+
+  def cannot_create_multi_auth_users_with_email(email)
     assert_fails_email_uniqueness_validation FactoryGirl.build :teacher,
       :with_migrated_email_authentication_option,
       email: email
@@ -230,21 +244,23 @@ class UserTest < ActiveSupport::TestCase
 
   test "cannot update single-auth user with duplicate of single-auth user's email" do
     email = 'test@example.com'
-    create :student, email: email
-
-    teacher = create :teacher
-    refute teacher.update(email: email)
-    assert_fails_email_uniqueness_validation teacher
-
-    student = create :student
-    refute student.update(email: email)
-    assert_fails_email_uniqueness_validation student
+    create_single_auth_user_with_email email
+    cannot_update_single_auth_users_with_email email
   end
 
   test "cannot update single-auth user with duplicate of multi-auth user's email" do
     email = 'test@example.com'
-    create :student, :with_migrated_email_authentication_option, email: email
+    create_multi_auth_user_with_email email
+    cannot_update_single_auth_users_with_email email
+  end
 
+  test "cannot update single-auth user with duplicate of multi-auth user's second email" do
+    email = 'test@example.com'
+    create_multi_auth_user_with_second_email email
+    cannot_update_single_auth_users_with_email email
+  end
+
+  def cannot_update_single_auth_users_with_email(email)
     teacher = create :teacher
     refute teacher.update(email: email)
     assert_fails_email_uniqueness_validation teacher
@@ -256,8 +272,23 @@ class UserTest < ActiveSupport::TestCase
 
   test "cannot update multi-auth user with duplicate of single-auth user's email" do
     email = 'test@example.com'
-    create :student, email: email
+    create_single_auth_user_with_email email
+    cannot_update_multi_auth_users_with_email email
+  end
 
+  test "cannot update multi-auth user with duplicate of multi-auth user's email" do
+    email = 'test@example.com'
+    create_multi_auth_user_with_email email
+    cannot_update_multi_auth_users_with_email email
+  end
+
+  test "cannot update multi-auth user with duplicate of multi-auth user's second email" do
+    email = 'test@example.com'
+    create_multi_auth_user_with_second_email email
+    cannot_update_multi_auth_users_with_email email
+  end
+
+  def cannot_update_multi_auth_users_with_email(email)
     teacher = create :teacher, :with_migrated_email_authentication_option
     refute teacher.authentication_options.first.update(email: email)
     assert_fails_email_uniqueness_validation teacher
@@ -267,17 +298,19 @@ class UserTest < ActiveSupport::TestCase
     assert_fails_email_uniqueness_validation student
   end
 
-  test "cannot update multi-auth user with duplicate of multi-auth user's email" do
-    email = 'test@example.com'
+  def create_single_auth_user_with_email(email)
+    create :student, email: email
+  end
+
+  def create_multi_auth_user_with_email(email)
     create :student, :with_migrated_email_authentication_option, email: email
+  end
 
-    teacher = create :teacher, :with_migrated_email_authentication_option
-    refute teacher.authentication_options.first.update(email: email)
-    assert_fails_email_uniqueness_validation teacher
-
-    student = create :student, :with_migrated_email_authentication_option
-    refute student.authentication_options.first.update(email: email)
-    assert_fails_email_uniqueness_validation student
+  def create_multi_auth_user_with_second_email(email)
+    user = create :student, :with_migrated_email_authentication_option
+    user.authentication_options << create(:google_authentication_option, user: user, email: email)
+    user.save
+    user
   end
 
   def assert_fails_email_uniqueness_validation(user)
