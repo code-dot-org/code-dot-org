@@ -5,6 +5,46 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   # GET /users/auth/:provider/callback
   def all
+    auth_params = request.env['omniauth.params']
+    if auth_params['state'] == 'connect_provider' && current_user
+      connect_provider
+    else
+      login
+    end
+  end
+
+  # Call /users/auth/google_oauth2?state=connect_provider and the callback will trigger this code path
+  def connect_provider
+    # TODO: some of this won't work right for non-Google providers, because info comes in differently
+    auth_hash = request.env['omniauth.auth']
+    provider = auth_hash.provider.to_s
+    if AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include? provider
+      new_data = nil
+      if auth_hash.credentials && (auth_hash.credentials.token || auth_hash.credentials.expires_at || auth_hash.credentials.refresh_token)
+        new_data = {
+          oauth_token: auth_hash.credentials.token,
+          oauth_token_expiration: auth_hash.credentials.expires_at,
+          oauth_refresh_token: auth_hash.credentials.refresh_token
+        }.to_json
+      end
+      email = auth_hash.info.email
+      hashed_email = nil
+      hashed_email = User.hash_email(email) unless email.blank?
+      AuthenticationOption.new(
+        user: current_user,
+        email: email,
+        hashed_email: hashed_email || '',
+        credential_type: provider,
+        authentication_id: auth_hash.uid,
+        data: new_data
+      ).save
+    else
+      # TODO: error handling?
+      puts 'Error'
+    end
+  end
+
+  def login
     auth_hash = request.env['omniauth.auth']
     auth_params = request.env['omniauth.params']
 
