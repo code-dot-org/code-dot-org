@@ -298,15 +298,15 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   end
 
   test 'migrate and demigrate picture password student' do
-    round_trip create(:student_in_picture_section) do |user|
-      assert_user user,
-        provider: User::PROVIDER_SPONSORED,
-        sponsored?: true
-    end
+    round_trip_sponsored create :student_in_picture_section
   end
 
   test 'migrate and demigrate word password student' do
-    round_trip create(:student_in_word_section) do |user|
+    round_trip_sponsored create :student_in_word_section
+  end
+
+  def round_trip_sponsored(for_user)
+    round_trip for_user do |user|
       assert_user user,
         provider: User::PROVIDER_SPONSORED,
         sponsored?: true
@@ -340,21 +340,22 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   end
 
   test 'migrate and demigrate email+password student' do
-    round_trip create(:student) do |user|
-      assert_user user,
-        provider: nil,
-        email: :empty,
-        hashed_email: :not_empty,
-        encrypted_password: :not_empty,
-        primary_authentication_option: nil
+    round_trip_email create(:student) do |user|
+      assert_user user, email: :empty
     end
   end
 
   test 'migrate and demigrate email+password teacher' do
-    round_trip create(:teacher) do |user|
+    round_trip_email create(:teacher) do |user|
+      assert_user user, email: :not_empty
+    end
+  end
+
+  def round_trip_email(for_user)
+    round_trip for_user do |user|
+      yield user
       assert_user user,
         provider: nil,
-        email: :not_empty,
         hashed_email: :not_empty,
         encrypted_password: :not_empty,
         primary_authentication_option: nil
