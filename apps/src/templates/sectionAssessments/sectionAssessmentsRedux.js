@@ -469,7 +469,7 @@ export const getMultipleChoiceSectionSummary = (state) => {
 /**
  * Selector function that takes in the state and a boolean indicating
  * if the current assessment is a survey.
- * Returns an integer total count of the number of students who have submitted
+ * @returns {number} total count of students who have submitted
  * the current assessment.
  */
 export const countSubmissionsForCurrentAssessment = (state, isSurvey) => {
