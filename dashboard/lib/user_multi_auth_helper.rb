@@ -42,8 +42,11 @@ module UserMultiAuthHelper
   def demigrate_from_multi_auth
     return true unless migrated?
 
+    credential_type = primary_authentication_option&.credential_type
     self.provider =
-      if sponsored?
+      if AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include? credential_type
+        credential_type
+      elsif sponsored?
         'sponsored'
       else
         nil
