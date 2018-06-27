@@ -7,6 +7,7 @@ import {
 import { connect } from 'react-redux';
 import { multipleChoiceDataPropType } from './assessmentDataShapes';
 import i18n from "@cdo/locale";
+import {getTotalStudentCount} from '@cdo/apps/redux/sectionDataRedux';
 
 class MCAssessmentsOverviewContainer extends Component {
   static propTypes= {
@@ -42,4 +43,5 @@ export const UnconnectedMCAssessmentsOverviewContainer = MCAssessmentsOverviewCo
 export default connect(state => ({
   questionAnswerData: getMultipleChoiceSectionSummary(state),
   totalStudentSubmissions: getTotalSubmissionForCurrentAssessment(state, false),
+  totalStudentCount: getTotalStudentCount(state),
 }))(MCAssessmentsOverviewContainer);

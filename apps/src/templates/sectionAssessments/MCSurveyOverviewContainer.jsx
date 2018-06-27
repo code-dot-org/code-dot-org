@@ -6,6 +6,7 @@ import {
 } from './sectionAssessmentsRedux';
 import { connect } from 'react-redux';
 import i18n from "@cdo/locale";
+import {getTotalStudentCount} from '@cdo/apps/redux/sectionDataRedux';
 
 class MCSurveyOverviewContainer extends Component {
   static propTypes= {
@@ -39,4 +40,5 @@ export const UnconnectedMCSurveyOverviewContainer = MCSurveyOverviewContainer;
 export default connect(state => ({
   multipleChoiceSurveyData: getMultipleChoiceSurveyResults(state),
   totalStudentSubmissions: getTotalSubmissionForCurrentAssessment(state, true),
+  totalStudentCount: getTotalStudentCount(state),
 }))(MCSurveyOverviewContainer);
