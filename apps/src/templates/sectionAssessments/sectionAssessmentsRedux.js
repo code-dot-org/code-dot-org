@@ -367,9 +367,8 @@ export const getMultipleChoiceSurveyResults = (state) => {
   });
 };
 
-// This selector function gets the current assessment Id and checkcs if the ID is in the survey structure
-// Determine if to show the empty text for when there are fewer than 5 survey submissions.
-
+// Returns a boolean.  The selector function checks if the current assessment Id
+// is in the surveys structure.
 export const currentAssessmentIsSurvey = (state) => {
   const surveysStructure = state.sectionAssessments.surveysByScript[state.scriptSelection.scriptId] || {};
 
