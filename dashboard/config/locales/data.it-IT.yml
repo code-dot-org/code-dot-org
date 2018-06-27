@@ -177,7 +177,7 @@ it:
         maze_karel_1_7: 'Wow, ho trovato una buca davvero profonda! Non so quante
           palate di terra saranno necessarie per riempirla completamente. Riesci a
           scrivere un programma che la riempie fino a quando il terreno è livellato?
-          Suggerimento: usa le opzioni nel menu a discesa del blocco "mentre".'
+          Suggerimento: usa le opzioni nel menù a discesa del blocco "mentre".'
         maze_karel_1_8: Aiutami a riempire la buca alla fine del mio terreno, utilizzando
           il minor numero possibile di blocchi.
         maze_karel_1_9: Fammi rimuovere tutti questi mucchi di terra. Prova ad usare
@@ -834,11 +834,11 @@ it:
         applab_intro_designmode: Sviluppo App - Modalità Interfaccia
         applab_intro_share: Sviluppo App - Condividi la tua app
         csd_applab_arrays: Introduzione agli array
-        CSF_skinOverview_Harvester: The Harvester
+        CSF_skinOverview_Harvester: La Contadina
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
         CSF_bb8_loops_C-F: Loops with BB-8
-        CSF_harvester_skinOverview_K-1: The Harvester
+        CSF_harvester_skinOverview_K-1: La Contadina
         CSF_harvester_loops_K1: Cicli con la Contadina
         CSF_scrat_loops_K1: Loops in Ice Age
         CSF_scrat_loops_CF: Loops in Ice Age

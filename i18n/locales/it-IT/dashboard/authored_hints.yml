@@ -1148,8 +1148,8 @@ it:
         courseD_artist_nestedLoops_challenge1_c: |-
           Usa un ciclo annidato:
           - Ripeti 8 volte
-          - Disegna un ottagono
-          - Disegna un triangolo
+          - disegna un ottagono
+          - disegna un triangolo
           - salta in avanti di 50 pixel
           - gira a destra di 90 gradi
       course2_artist_nestedLoops_challenge2_authored_hint:
@@ -2403,24 +2403,28 @@ it:
       courseA_harvester_loops10_authored_hint: { }
       courseA_harvester_loops11_authored_hint: { }
       courseA_harvester_loops2_authored_hint:
-        courseA_harvester_loops2_a: 'Your code will have **four** `move West` blocks and **four** `pick corn` blocks. '
+        courseA_harvester_loops2_a: "Your code will have **four** `move west`\n<xml><block type=\"maze_moveWest\"/></xml>\nblocks and **four** <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml> blocks. "
       courseA_harvester_loops3_authored_hint:
         courseA_harvester_loops3_a: |-
           Use a `repeat` block like this to help you!
           <xml><block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="2-10">4</title>
           </block></xml>
-        courseA_harvester_loops3_b: Per ripetere una sequenza di istruzioni, trascina nell'area di lavoro un blocco `ripeti ... volte` e inserisci al suo interno i blocchi che vuoi ripetere.
+        courseA_harvester_loops3_b: "Per ripetere una sequenza di istruzioni, trascina nell'area di lavoro un blocco `ripeti ... volte` e inserisci al suo interno i blocchi che vuoi ripetere."
       courseA_harvester_loops4_authored_hint:
         courseA_harvester_loops4_a: Don't be afraid to press `Run` to see what happens!
         courseA_harvester_loops4_b: How many pieces of corn are there? How many times does your code repeat?
       courseA_harvester_loops5_authored_hint:
         courseA_harvester_loops5_a: Se ti blocchi, prova a risolvere l'esercizio in due parti, una parte prima della curva e l'altra dopo la curva.
-        courseA_harvester_loops5_b: Your final code will have **one** `repeat` loop, **one** `move South` block, and **one** `move East` block.
+        courseA_harvester_loops5_b: |-
+          Your final code will have **one** `repeat`  <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">6</title>
+          </block></xml> loop, **one** `move South`   <xml><block type="maze_moveSouth" limit="1"/></xml> block, and **one** `move East`   <xml><block type="maze_moveEast" limit="1"/> </xml>block.
         courseA_harvester_loops5_c: Use this path to pick all the corn!
       courseA_harvester_loops5a_authored_hint:
-        courseA_harvester_loops5a_a: Avrai bisogno di due cicli `ripeti ... volte`, uno dopo l'altro.
-        courseA_harvester_loops5a_b: One loop will repeat `move South`, and the other will repeat `move East`.
+        courseA_harvester_loops5a_a: |-
+          Avrai bisogno di due cicli `ripeti ... volte`, uno dopo l'altro.
+        courseA_harvester_loops5a_b: One loop will repeat `move South`<xml><block type="maze_moveSouth" limit="1"/></xml>, and the other will repeat `move East` <xml><block type="maze_moveEast" limit="1"/></xml>
         courseA_harvester_loops5a_c: Use this path to move one way, and then the other.
       courseA_harvester_loops5b_authored_hint:
         courseA_harvester_loops5b_a: Press `Run` and see what happens!
@@ -2430,7 +2434,10 @@ it:
         courseA_harvester_loops6_a: Se ti blocchi, prova a scrivere i passaggi su carta e cerca gli schemi che si ripetono.
         courseA_harvester_loops6_b: This is the path you should take to pick all the corn.
       courseA_harvester_loops7_authored_hint:
-        courseA_harvester_loops7_a: You will need two `repeat` loops after each other!
+        courseA_harvester_loops7_a: |-
+          You will need two `repeat` <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">5</title>
+          </block></xml>loops after each other!
         courseA_harvester_loops7_b: Use two loops to follow this path.
       courseA_harvester_loops8_authored_hint: { }
       courseA_harvester_loops9_authored_hint:
@@ -2573,7 +2580,7 @@ it:
           </xml>
       courseA_maze_ramp5_2018_authored_hint:
         courseC_maze_programming5_a: Prova ad usare il pulsante "Fai un passo" per eseguire il codice un'istruzione alla volta. Riesci ad capire cosa devi fare dopo?
-        courseC_maze_programming5_b: Ricorda che le curve devi indicarle dal punto di vista dell'uccellino.
+        courseC_maze_programming5_b: Ricorda che le curve devi immaginarle dal punto di vista dell'uccellino.
         courseC_maze_programming5_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseA_maze_ramp5a_2018_authored_hint:
         '1': |-
@@ -3041,7 +3048,8 @@ it:
         courseB_artist_loops3_a: Ricordati che devi usare il ciclo `ripeti` per riuscire a risolvere l'esercizio!
         courseB_artist_loops3_b: L'artista dovrà muoversi verso Sud per disegnare questa linea.
       courseB_artist_loops3_2018_authored_hint:
-        courseB_artist_loops3_a: Ricordati che devi usare il ciclo `ripeti` per riuscire a risolvere l'esercizio!
+        courseB_artist_loops3_a: |-
+          Ricordati che devi usare il ciclo `ripeti` per riuscire a risolvere l'esercizio!
         courseB_artist_loops3_b: L'artista dovrà muoversi verso Sud per disegnare questa linea.
       courseB_artist_loops4_authored_hint:
         courseB_artist_loops4_a: Il blocco `salta` ti fa andare avanti senza disegnare.
@@ -3054,7 +3062,8 @@ it:
       courseB_artist_loops5_authored_hint:
         courseB_artist_loops5_a: Trascina nell'area di lavoro un blocco `ripeti` e mettici dentro i blocchi grigi che trovi già pronti. Quante volte dovrà essere ripetuto questo ciclo?
       courseB_artist_loops5_2018_authored_hint:
-        courseB_artist_loops5_a: Trascina nell'area di lavoro un blocco `ripeti` e mettici dentro i blocchi grigi che trovi già pronti. Quante volte dovrà essere ripetuto questo ciclo?
+        courseB_artist_loops5_a: |-
+          Trascina nell'area di lavoro un blocco `ripeti` e mettici dentro i blocchi grigi che trovi già pronti. Quante volte dovrà essere ripetuto questo ciclo?
       courseB_artist_loops6_authored_hint:
         courseB_artist_loops6_b: Prova a scrivere le mosse su un pezzo di carta e cerca una sequenza che si ripete.
       courseB_artist_loops6_2018_authored_hint:
@@ -3133,7 +3142,8 @@ it:
       courseB_collector_loops4_2018_authored_hint:
         courseB_collector_loops4_a: Prova ad usare il pulsante "Fai un passo" per capire dove c'è qualcosa di sbagliato.
         courseB_collector_loops4_b: Per modificare di quante caselle deve spostarsi Laurel, cambia il numero di volte che il ciclo viene eseguito.
-        courseB_collector_loops4_c: Alla fine del ciclo `ripeti` Laurel deve muoversi verso il basso e finire di raccogliere i diamanti!
+        courseB_collector_loops4_c: |-
+          Alla fine del ciclo `ripeti` Laurel deve muoversi verso il basso e finire di raccogliere i diamanti!
       courseB_collector_loops5_authored_hint:
         courseB_collector_loops5_a: Devi usare più di un ciclo per risolvere bene l'esercizio.
         courseB_collector_loops5_b: Per vedere cosa fa questo programma, prova ad eseguirlo un paio di volte.
@@ -3148,7 +3158,8 @@ it:
       courseB_collector_loops6_2018_authored_hint:
         courseB_collector_loops6_a: Non riesci a capire in che punto il programma inizia a sbagliare? Usa il pulsante "Fai un passo" per eseguire il programma un'istruzione alla volta.
         courseB_collector_loops6_b: Puoi modificare il numero di volte che il ciclo viene ripetuto cliccando sul numero "3" e scegliendo un altro numero.
-        courseB_collector_loops6_c: Dovrai usare 3 cicli `ripeti` per risolvere l'esercizio.
+        courseB_collector_loops6_c: |-
+          Dovrai usare 3 cicli `ripeti` per risolvere l'esercizio.
         courseB_collector_loops6_d: Se sei confuso, prova a suddividere questo percorso in 3 parti.
       courseB_collector_loops7_authored_hint:
         courseB_collector_loops7_a: Se hai problemi con questo esercizio, prova a disegnarlo su un pezzo di carta per aiutarti a capirlo.
@@ -3463,7 +3474,8 @@ it:
           <xml><block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="3-10">5</title>
           </block></xml>
-        courseB_iceage_loops3_b: Per ripetere una sequenza di istruzioni, trascina nell'area di lavoro un blocco `ripeti ... volte` e inserisci al suo interno i blocchi che vuoi ripetere.
+        courseB_iceage_loops3_b: |-
+          Per ripetere una sequenza di istruzioni, trascina nell'area di lavoro un blocco `ripeti ... volte` e inserisci al suo interno i blocchi che vuoi ripetere.
       courseB_iceage_loops4_authored_hint:
         courseB_iceage_loops4_a: Try writing down the steps Scrat would take to get to the acorn. Do you see a pattern?
         courseB_iceage_loops4_b: Don't be afraid to run your code and see what happens!
@@ -4051,7 +4063,8 @@ it:
       courseB_starWars_prog9_2018_authored_hint:
         courseB_starWars_prog9_a: Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio.
         courseB_starWars_prog9_b: Ci sono molti modi per risolvere questo esercizio.
-        courseB_starWars_prog9_c: Un ciclo `ripeti` potrebbe aiutarti qui?
+        courseB_starWars_prog9_c: |-
+          Un ciclo `ripeti` potrebbe aiutarti qui?
       courseC_PlayLab_embed_events9_authored_hint: { }
       courseC_PlayLab_events1_authored_hint:
         courseC_PlayLab_events1_a: |-
@@ -4083,7 +4096,7 @@ it:
           <title name="VALUE">Hi there.</title>
           </block>
           </xml>
-        courseC_PlayLab_events2_b: Usa il menu a tendina del secondo blocco `il personaggio ... dice` per specificare quale personaggio deve parlare.
+        courseC_PlayLab_events2_b: Usa il menu a discesa del secondo blocco `il personaggio ... dice` per specificare quale personaggio deve parlare.
       courseC_PlayLab_events2_2018_authored_hint:
         courseC_PlayLab_events2_a: |-
           Collega due di questi blocchi al blocco `quando si clicca su "Esegui"`:
@@ -4094,7 +4107,7 @@ it:
           <title name="VALUE">Hi there.</title>
           </block>
           </xml>
-        courseC_PlayLab_events2_b: Usa il menu a tendina del secondo blocco `il personaggio ... dice` per specificare quale personaggio deve parlare.
+        courseC_PlayLab_events2_b: Usa il menu a discesa del secondo blocco `il personaggio ... dice` per specificare quale personaggio deve parlare.
       courseC_PlayLab_events3_authored_hint:
         courseC_PlayLab_events3_a: Devi solo spostare il cane a destra di circa 25 pixel per risolvere questo esercizio.
         courseC_PlayLab_events3_b: Nella cassetta degli attrezzi c'è un blocco che possa servire per muoverebbe un personaggio?
@@ -4128,18 +4141,18 @@ it:
         courseC_PlayLab_events4_b: Quando si clicca sul pulsante "Esegui", il cane deve spostarsi a destra di **100** pixel per raggiungere il gatto.
         courseC_PlayLab_events4_a: Per risolvere questo esercizio sarà necessario collegare un blocco `il personaggio ... dice` all'evento `quando il personaggio ... tocca ...`.
       courseC_PlayLab_events5_authored_hint:
-        courseC_PlayLab_events5_a: Sarà necessario cliccare sul secondo menu a tendina del blocco `il personaggio ... dice ...` per trovare il testo "Novità?"
+        courseC_PlayLab_events5_a: Sarà necessario cliccare sul secondo menù a discesa del blocco `il personaggio ... dice ...` per trovare il testo "Novità?"
         courseC_PlayLab_events5_b: Per controllare che funzioni correttamente, clicca sul polpo dopo aver avviato il tuo programma!
       courseC_PlayLab_events5_2018_authored_hint:
-        courseC_PlayLab_events5_a: Sarà necessario cliccare sul secondo menu a tendina del blocco `il personaggio ... dice ...` per trovare il testo "Novità?"
+        courseC_PlayLab_events5_a: Sarà necessario cliccare sul secondo menù a discesa del blocco `il personaggio ... dice ...` per trovare il testo "Novità?"
         courseC_PlayLab_events5_b: Per controllare che funzioni correttamente, clicca sul polpo dopo aver avviato il tuo programma!
       courseC_PlayLab_events6_authored_hint:
         courseC_PlayLab_events6_a: 'Ogni blocco verde `quando si preme sulla freccia verso ...`può essere associato delle specifiche azioni: i blocchi agganciati sotto di esso.'
-        courseC_PlayLab_events6_b: Usa il menu a tendina del blocco `sposta il personaggio 1 ...` per cambiare la direzione da dare al pinguino.
+        courseC_PlayLab_events6_b: Usa il menù a discesa del blocco `sposta il personaggio 1 ...` per cambiare la direzione da dare al pinguino.
         courseC_PlayLab_events6_c: Quando avrai finito, sarai in grado di muovere il pinguino in tutte le direzioni usando i tasti freccia (sulla tastiera o cliccando i tasti arancioni).
       courseC_PlayLab_events6_2018_authored_hint:
         courseC_PlayLab_events6_a: 'Ogni blocco verde `quando si preme sulla freccia verso ...`può essere associato delle specifiche azioni: i blocchi agganciati sotto di esso.'
-        courseC_PlayLab_events6_b: Usa il menu a tendina del blocco `sposta il personaggio 1 ...` per cambiare la direzione da dare al pinguino.
+        courseC_PlayLab_events6_b: Usa il menù a discesa del blocco `sposta il personaggio 1 ...` per cambiare la direzione da dare al pinguino.
         courseC_PlayLab_events6_c: Quando avrai finito, sarai in grado di muovere il pinguino in tutte le direzioni usando i tasti freccia (sulla tastiera o cliccando i tasti arancioni).
       courseC_PlayLab_events7_authored_hint:
         courseC_PlayLab_events7_a: 'Per risolvere questo esercizio, devi usare entrambi il blocchi `sposta il personaggio 2 in alto 400 pixel` e `sposta il personaggio 2 in basso 400 pixel` all''interno del ciclo `ripeti per sempre`.'
@@ -4319,10 +4332,10 @@ it:
         courseC_artist_loops2a_b: Clicca sul numero in cima al blocco`ripeti ... volte` per cambiare quante volte deve essere ripetuto il ciclo.
       courseC_artist_loops3a_authored_hint:
         courseC_artist_loops3a_a: Dovrai aggiungere solo un blocco all'interno del ciclo, dopo l'adesivo dell'uccello.
-        courseC_artist_loops3a_b: Usa il menù a tendina del blocco `disegna un adesivo` per trovare l'adesivo del pipistrello.
+        courseC_artist_loops3a_b: Usa il menù a discesa del blocco `disegna un adesivo` per trovare l'adesivo del pipistrello.
       courseC_artist_loops3a_2018_authored_hint:
         courseC_artist_loops3a_a: Dovrai aggiungere solo un blocco all'interno del ciclo, dopo l'adesivo dell'uccello.
-        courseC_artist_loops3a_b: Usa il menù a tendina del blocco `disegna un adesivo` per trovare l'adesivo del pipistrello.
+        courseC_artist_loops3a_b: Usa il menù a discesa del blocco `disegna un adesivo` per trovare l'adesivo del pipistrello.
       courseC_artist_loops4a_authored_hint:
         courseC_artist_loops4a_a: |-
           Usa questo blocco per saltare in avanti:
@@ -4358,9 +4371,9 @@ it:
           </block>
           </xml>
       courseC_artist_loops5a_authored_hint:
-        courseC_artist_loops5a_a: Usa i menù a tendina dei blocchi `disegna un adesivo` per cambiare le immagini.
+        courseC_artist_loops5a_a: Usa i menù a discesa dei blocchi `disegna un adesivo` per cambiare le immagini.
       courseC_artist_loops5a_2018_authored_hint:
-        courseC_artist_loops5a_a: Usa i menù a tendina dei blocchi `disegna un adesivo` per cambiare le immagini.
+        courseC_artist_loops5a_a: Usa i menù a discesa dei blocchi `disegna un adesivo` per cambiare le immagini.
       courseC_artist_loops5b_authored_hint:
         courseC_artist_loops5b_a: |-
           Usa questo blocco per impostare lo schema delle tue linee:
@@ -4456,7 +4469,7 @@ it:
         courseC_artist_prog3_b: Vuoi fare un programma più breve? Prova ad usare un ciclo `Ripeti ... volte`.
       courseC_artist_prog4_authored_hint:
         courseC_artist_prog4_a: Per finire il razzo, basta disegnare il triangolo in cima!
-        courseC_artist_prog4_b: Puoi usare il menu a tendina del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
+        courseC_artist_prog4_b: Puoi usare il menù a discesa del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
         courseC_artist_prog4_c: |-
           Per disegnare un triangolo dovresti fare così:
           - vai avanti
@@ -4466,7 +4479,7 @@ it:
           - vai avanti
       courseC_artist_prog4_2018_authored_hint:
         courseC_artist_prog4_a: Per finire il razzo, basta disegnare il triangolo in cima!
-        courseC_artist_prog4_b: Puoi usare il menu a tendina del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
+        courseC_artist_prog4_b: Puoi usare il menù a discesa del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
         courseC_artist_prog4_c: |-
           Per disegnare un triangolo dovresti fare così:
           - vai avanti
@@ -4477,12 +4490,12 @@ it:
       courseC_artist_prog5_authored_hint:
         courseC_artist_prog5_a: Trascina il cursore verso la tartaruga per veder eseguire il codice più lentamente e capire dove sono eventuali errori.
         courseC_artist_prog5_b: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
-        courseC_artist_prog5_c: Puoi usare il menu a tendina del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
+        courseC_artist_prog5_c: Puoi usare il menù a discesa del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
         courseC_artist_prog5_d: Ogni curva dovrebbe essere di 90 gradi a destra.
       courseC_artist_prog5_2018_authored_hint:
         courseC_artist_prog5_a: Trascina il cursore verso la tartaruga per veder eseguire il codice più lentamente e capire dove sono eventuali errori.
         courseC_artist_prog5_b: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
-        courseC_artist_prog5_c: Puoi usare il menu a tendina del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
+        courseC_artist_prog5_c: Puoi usare il menù a discesa del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
         courseC_artist_prog5_d: Ogni curva dovrebbe essere di 90 gradi a destra.
       courseC_artist_prog6_authored_hint:
         courseC_artist_prog6_a: L'artista è già rivolto verso la direzione corretta per disegnare la prima linea.
@@ -4497,7 +4510,7 @@ it:
       courseC_artist_prog7_authored_hint:
         courseC_artist_prog7_a: Gli angoli sono di 45 o 90 gradi.
         courseC_artist_prog7_b: "- Al primo passo tutto procede bene?\n- E al secondo?\n- Dov'è che qualcosa comincia a non funzionare?"
-        courseC_artist_prog7_c: Puoi usare il menu a tendina del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
+        courseC_artist_prog7_c: Puoi usare il menù a discesa del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
         courseC_artist_prog7_d: |-
           Dovresti fare così:
           - vai avanti
@@ -4512,7 +4525,7 @@ it:
       courseC_artist_prog7_2018_authored_hint:
         courseC_artist_prog7_a: Gli angoli sono di 45 o 90 gradi.
         courseC_artist_prog7_b: "- Al primo passo tutto procede bene?\n- E al secondo?\n- Dov'è che qualcosa comincia a non funzionare?"
-        courseC_artist_prog7_c: Puoi usare il menu a tendina del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
+        courseC_artist_prog7_c: Puoi usare il menù a discesa del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
         courseC_artist_prog7_d: |-
           Dovresti fare così:
           - vai avanti
@@ -5244,63 +5257,63 @@ it:
           <img src="https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png" width="200px" />
       courseD_artist_Template_2018_authored_hint: { }
       courseD_artist_binary1_authored_hint:
-        courseD_artist_binary1_a: Replace the "???" in the text block with the binary image you want, in zeroes and ones.
-        courseD_artist_binary1_b: The artist will draw a white space for every 1 and a black space for every 0.
+        courseD_artist_binary1_a: 'Sostituisci i punti interrogativi "???" nel blocco di testo con la codifica binaria dell''immagine da realizzare: uni e zeri.'
+        courseD_artist_binary1_b: L'artista disegnerà uno spazio bianco per ogni 1 e uno spazio nero per ogni 0.
         courseD_artist_binary1_c: |-
-          This is how you can input your binary code:
+          Ecco come puoi inserire la codifica binaria:
           
           ![](https://images.code.org/ec0f974e32c4323fc61cb49b48b8f1c0-image-1500334311345.2_hint.gif)
       courseD_artist_binary1_2018_authored_hint:
-        courseD_artist_binary1_a: Replace the "???" in the text block with the binary image you want, in zeroes and ones.
-        courseD_artist_binary1_b: The artist will draw a white space for every 1 and a black space for every 0.
+        courseD_artist_binary1_a: 'Sostituisci i punti interrogativi "???" nel blocco di testo con la codifica binaria dell''immagine da realizzare: uni e zeri.'
+        courseD_artist_binary1_b: L'artista disegnerà uno spazio bianco per ogni 1 e uno spazio nero per ogni 0.
         courseD_artist_binary1_c: |-
-          This is how you can input your binary code:
+          Ecco come puoi inserire la codifica binaria:
           
           ![](https://images.code.org/ec0f974e32c4323fc61cb49b48b8f1c0-image-1500334311345.2_hint.gif)
       courseD_artist_binary2_authored_hint:
-        courseD_artist_binary2_a: Just click `Run` to see this program in action!
+        courseD_artist_binary2_a: È già tutto pronto, devi solo cliccare su "Esegui" per vedere questo programma in azione!
       courseD_artist_binary2_2018_authored_hint:
-        courseD_artist_binary2_a: Just click `Run` to see this program in action!
+        courseD_artist_binary2_a: È già tutto pronto, devi solo cliccare su "Esegui" per vedere questo programma in azione!
       courseD_artist_binary3_authored_hint:
-        courseD_artist_binary3_a: One of the four binary patterns in the toolbox will solve this puzzle!
-        courseD_artist_binary3_b: Don't be afraid to make a mistake! Try writing binary and running the code to see what will happen, even if you haven't solved the puzzle yet.
+        courseD_artist_binary3_a: Una delle quattro sequenze binarie che vedi nella cassetta degli attrezzi risolve questo esercizio!
+        courseD_artist_binary3_b: Non aver paura di sbagliare! Anche se non pensi di aver trovato la soluzione corretta, prova ad inserire una sequenza ed eseguire il codice per vedere cosa accade.
       courseD_artist_binary3_2018_authored_hint:
-        courseD_artist_binary3_a: One of the four binary patterns in the toolbox will solve this puzzle!
-        courseD_artist_binary3_b: Don't be afraid to make a mistake! Try writing binary and running the code to see what will happen, even if you haven't solved the puzzle yet.
+        courseD_artist_binary3_a: Una delle quattro sequenze binarie che vedi nella cassetta degli attrezzi risolve questo esercizio!
+        courseD_artist_binary3_b: Non aver paura di sbagliare! Anche se non pensi di aver trovato la soluzione corretta, prova ad inserire una sequenza ed eseguire il codice per vedere cosa accade.
       courseD_artist_binary4_authored_hint:
-        courseD_artist_binary4_a: Look at the first three squares on the top row. Could you repeat these three to get the whole pattern?
-        courseD_artist_binary4_b: Don't be afraid to make a mistake! Try writing binary and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+        courseD_artist_binary4_a: Guarda i primi tre quadrati in alto a sinistra. Potrebbe bastare la ripetizione di questi tre per completare tutta la figura?
+        courseD_artist_binary4_b: Non aver paura di sbagliare! Anche se non pensi di aver trovato la soluzione corretta, prova ad inserire una sequenza ed eseguire il codice per vedere cosa accade.
       courseD_artist_binary4_2018_authored_hint:
-        courseD_artist_binary4_a: Look at the first three squares on the top row. Could you repeat these three to get the whole pattern?
-        courseD_artist_binary4_b: Don't be afraid to make a mistake! Try writing binary and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+        courseD_artist_binary4_a: Guarda i primi tre quadrati in alto a sinistra. Potrebbe bastare la ripetizione di questi tre per completare tutta la figura?
+        courseD_artist_binary4_b: Non aver paura di sbagliare! Anche se non pensi di aver trovato la soluzione corretta, prova ad inserire una sequenza ed eseguire il codice per vedere cosa accade.
       courseD_artist_binary5_authored_hint:
-        courseD_artist_binary5_a: Try running the code first to see what you have to work with.
-        courseD_artist_binary5_b: You only need to switch two rows to make a smile.
-        courseD_artist_binary5_c: If you are having trouble figuring this puzzle out, try writing the binary lines down on a piece of paper and looking for a pattern.
+        courseD_artist_binary5_a: Per capire che blocchi devi spostare, prova prima ad eseguire il programma.
+        courseD_artist_binary5_b: Per trasformare l'immagine in un sorriso, devi solo invertire due righe.
+        courseD_artist_binary5_c: Se hai difficoltà nella risoluzione di questo esercizio, prova a scrivere le sequenze binarie su un foglio di carta a quadretti e cerca di capire lo schema.
       courseD_artist_binary5_2018_authored_hint:
-        courseD_artist_binary5_a: Try running the code first to see what you have to work with.
-        courseD_artist_binary5_b: You only need to switch two rows to make a smile.
-        courseD_artist_binary5_c: If you are having trouble figuring this puzzle out, try writing the binary lines down on a piece of paper and looking for a pattern.
+        courseD_artist_binary5_a: Per capire che blocchi devi spostare, prova prima ad eseguire il programma.
+        courseD_artist_binary5_b: Per trasformare l'immagine in un sorriso, devi solo invertire due righe.
+        courseD_artist_binary5_c: Se hai difficoltà nella risoluzione di questo esercizio, prova a scrivere le sequenze binarie su un foglio di carta a quadretti e cerca di capire lo schema.
       courseD_artist_binary6_authored_hint:
-        courseD_artist_binary6_a: Start at the top left. How far do you have to read before the pattern starts to repeat?
-        courseD_artist_binary6_b: You can build your binary string a bit at a time, and keep testing!
+        courseD_artist_binary6_a: 'Conta partendo dall''alto a sinistra: quante caselle devi considerare per trovare la sequenza che si ripete?'
+        courseD_artist_binary6_b: Puoi anche costruire la sequenza binaria una cifra alla volta e verificarne di volta in volta l'effetto!
       courseD_artist_binary6_2018_authored_hint:
-        courseD_artist_binary6_a: Start at the top left. How far do you have to read before the pattern starts to repeat?
-        courseD_artist_binary6_b: You can build your binary string a bit at a time, and keep testing!
+        courseD_artist_binary6_a: 'Conta partendo dall''alto a sinistra: quante caselle devi considerare per trovare la sequenza che si ripete?'
+        courseD_artist_binary6_b: Puoi anche costruire la sequenza binaria una cifra alla volta e verificarne di volta in volta l'effetto!
       courseD_artist_binary7_authored_hint:
-        courseD_artist_binary7_a: Start at the top left. How far do you have to read before the pattern starts to repeat?
-        courseD_artist_binary7_b: Don't be afraid to make a mistake! Try writing binary and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+        courseD_artist_binary7_a: 'Conta partendo dall''alto a sinistra: quante caselle devi considerare per trovare la sequenza che si ripete?'
+        courseD_artist_binary7_b: Non aver paura di sbagliare! Anche se non pensi di aver trovato la soluzione corretta, prova ad inserire una sequenza ed eseguire il codice per vedere cosa accade.
       courseD_artist_binary7_2018_authored_hint:
-        courseD_artist_binary7_a: Start at the top left. How far do you have to read before the pattern starts to repeat?
-        courseD_artist_binary7_b: Don't be afraid to make a mistake! Try writing binary and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+        courseD_artist_binary7_a: 'Conta partendo dall''alto a sinistra: quante caselle devi considerare per trovare la sequenza che si ripete?'
+        courseD_artist_binary7_b: Non aver paura di sbagliare! Anche se non pensi di aver trovato la soluzione corretta, prova ad inserire una sequenza ed eseguire il codice per vedere cosa accade.
       courseD_artist_binary8_authored_hint:
-        courseD_artist_binary8_a: The spiral can be confusing sometimes. Isolate each horizontal line in your mind as you create this design.
-        courseD_artist_binary8_b: Try running the code first to see what you have to work with.
-        courseD_artist_binary8_c: Don't be afraid to make a mistake! Try writing binary and running the code to see what will happen, even if you haven't solved the puzzle yet.
+        courseD_artist_binary8_a: A volte la spirale può confondere. Per creare questo disegno ragiona di volta in volta su una sola riga orizzontale.
+        courseD_artist_binary8_b: Per capire che blocchi devi spostare, prova prima ad eseguire il programma.
+        courseD_artist_binary8_c: Non aver paura di sbagliare! Anche se non pensi di aver trovato la soluzione corretta, prova ad inserire una sequenza ed eseguire il codice per vedere cosa accade.
       courseD_artist_binary8_2018_authored_hint:
-        courseD_artist_binary8_a: The spiral can be confusing sometimes. Isolate each horizontal line in your mind as you create this design.
-        courseD_artist_binary8_b: Try running the code first to see what you have to work with.
-        courseD_artist_binary8_c: Don't be afraid to make a mistake! Try writing binary and running the code to see what will happen, even if you haven't solved the puzzle yet.
+        courseD_artist_binary8_a: A volte la spirale può confondere. Per creare questo disegno ragiona di volta in volta su una sola riga orizzontale.
+        courseD_artist_binary8_b: Per capire che blocchi devi spostare, prova prima ad eseguire il programma.
+        courseD_artist_binary8_c: Non aver paura di sbagliare! Anche se non pensi di aver trovato la soluzione corretta, prova ad inserire una sequenza ed eseguire il codice per vedere cosa accade.
       courseD_artist_binaryFP_authored_hint: { }
       courseD_artist_binaryFP8_authored_hint: { }
       courseD_artist_binaryFP_2018_authored_hint: { }
@@ -5638,7 +5651,7 @@ it:
       courseD_artist_ramp12_authored_hint:
         courseD_artist_ramp12_a: Puoi disegnare prima il quadrato e poi il triangolo, oppure farlo al contrario!
         courseD_artist_ramp12_b: Prova a suddividere il problema in 2 parti e usare 2 cicli.
-        courseD_artist_ramp12_c: Puoi usare il menu a tendina del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
+        courseD_artist_ramp12_c: Puoi usare il menù a discesa del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
       courseD_bee_conditionals1_authored_hint:
         courseD_bee_conditionals1_a: You will need to use an `if` block to check to see if there is a flower beneath the cloud before you try to get nectar.
       courseD_bee_conditionals10_authored_hint: { }
@@ -6862,27 +6875,27 @@ it:
         courseC_maze_programming4_b: Per seguire il percorso, vai avanti e gira da una parte, poi spostati di nuovo e gira nella direzione opposta. Per raggiungere il maiale, vai ancora una volta avanti.
       courseD_maze_ramp5_authored_hint:
         courseC_maze_programming5_a: Prova ad usare il pulsante "Fai un passo" per eseguire il codice un'istruzione alla volta. Riesci ad capire cosa devi fare dopo?
-        courseC_maze_programming5_b: Ricorda che le curve devi indicarle dal punto di vista dell'uccellino.
+        courseC_maze_programming5_b: Ricorda che le curve devi immaginarle dal punto di vista dell'uccellino.
         courseC_maze_programming5_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseD_maze_ramp5_2018_authored_hint:
         courseC_maze_programming5_a: Prova ad usare il pulsante "Fai un passo" per eseguire il codice un'istruzione alla volta. Riesci ad capire cosa devi fare dopo?
-        courseC_maze_programming5_b: Ricorda che le curve devi indicarle dal punto di vista dell'uccellino.
+        courseC_maze_programming5_b: Ricorda che le curve devi immaginarle dal punto di vista dell'uccellino.
         courseC_maze_programming5_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseD_maze_ramp5a_authored_hint:
         courseC_maze_programming5_a: Prova ad usare il pulsante "Fai un passo" per eseguire il codice un'istruzione alla volta. Riesci ad capire cosa devi fare dopo?
-        courseC_maze_programming5_b: Ricorda che le curve devi indicarle dal punto di vista dell'uccellino.
+        courseC_maze_programming5_b: Ricorda che le curve devi immaginarle dal punto di vista dell'uccellino.
         courseC_maze_programming5_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseD_maze_ramp5a_2018_authored_hint:
         courseC_maze_programming5_a: Prova ad usare il pulsante "Fai un passo" per eseguire il codice un'istruzione alla volta. Riesci ad capire cosa devi fare dopo?
-        courseC_maze_programming5_b: Ricorda che le curve devi indicarle dal punto di vista dell'uccellino.
+        courseC_maze_programming5_b: Ricorda che le curve devi immaginarle dal punto di vista dell'uccellino.
         courseC_maze_programming5_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseD_maze_ramp5b_authored_hint:
         courseC_maze_programming5_a: Prova ad usare il pulsante "Fai un passo" per eseguire il codice un'istruzione alla volta. Riesci ad capire cosa devi fare dopo?
-        courseC_maze_programming5_b: Ricorda che le curve devi indicarle dal punto di vista dell'uccellino.
+        courseC_maze_programming5_b: Ricorda che le curve devi immaginarle dal punto di vista dell'uccellino.
         courseC_maze_programming5_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseD_maze_ramp5b_2018_authored_hint:
         courseC_maze_programming5_a: Prova ad usare il pulsante "Fai un passo" per eseguire il codice un'istruzione alla volta. Riesci ad capire cosa devi fare dopo?
-        courseC_maze_programming5_b: Ricorda che le curve devi indicarle dal punto di vista dell'uccellino.
+        courseC_maze_programming5_b: Ricorda che le curve devi immaginarle dal punto di vista dell'uccellino.
         courseC_maze_programming5_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseD_maze_ramp5c_authored_hint: { }
       courseD_maze_ramp5c_2018_authored_hint: { }
@@ -6985,55 +6998,55 @@ it:
       courseD_maze_until_challenge1_2018_authored_hint: { }
       courseD_maze_until_challenge2_authored_hint: { }
       courseD_playLab_cond1_authored_hint:
-        courseD_playLab_cond1_a: To solve this challenge, attach the `move actor 1 up` block to the `when up arrow` event, then do the same for every other direction.
-        courseD_playLab_cond1_b: Use the drop down menus on the `when arrow` and `move actor` blocks to change which direction they go.
-        courseD_playLab_cond1_c: Remember to move Pegleg to both of the flags once you click "Run"!
+        courseD_playLab_cond1_a: Per risolvere questa sfida, collega il blocco `sposta il personaggio 1 in alto` all'evento `quando si preme sulla freccia verso l'alto`, poi fai lo stesso per tutte le altre direzioni.
+        courseD_playLab_cond1_b: Usa i menù a discesa dei blocchi `quando si preme sulla freccia ...` e `sposta il personaggio ...` per cambiare la direzione verso la quale devono muoversi.
+        courseD_playLab_cond1_c: Dopo aver cliccato su "Esegui", ricorda di muovere il pirata verso entrambe le bandierine!
       courseD_playLab_cond1_2018_authored_hint:
-        courseD_playLab_cond1_a: To solve this challenge, attach the `move actor 1 up` block to the `when up arrow` event, then do the same for every other direction.
-        courseD_playLab_cond1_b: Use the drop down menus on the `when arrow` and `move actor` blocks to change which direction they go.
-        courseD_playLab_cond1_c: Remember to move Pegleg to both of the flags once you click "Run"!
+        courseD_playLab_cond1_a: Per risolvere questa sfida, collega il blocco `sposta il personaggio 1 in alto` all'evento `quando si preme sulla freccia verso l'alto`, poi fai lo stesso per tutte le altre direzioni.
+        courseD_playLab_cond1_b: Usa i menù a discesa dei blocchi `quando si preme sulla freccia ...` e `sposta il personaggio ...` per cambiare la direzione verso la quale devono muoversi.
+        courseD_playLab_cond1_c: Dopo aver cliccato su "Esegui", ricorda di muovere il pirata verso entrambe le bandierine!
       courseD_playLab_cond2_authored_hint:
-        courseD_playLab_cond2_a: To succeed with this puzzle, use the `score point` block beneath the `when actor 1 touches actor 2` event.
+        courseD_playLab_cond2_a: Per risolvere questo esercizio, usa il blocco `aggiungi un punto` sotto al blocco dell'evento `quando il personaggio 1 tocca il personaggio 2`.
       courseD_playLab_cond2_2018_authored_hint:
-        courseD_playLab_cond2_a: To succeed with this puzzle, use the `score point` block beneath the `when actor 1 touches actor 2` event.
+        courseD_playLab_cond2_a: Per risolvere questo esercizio, usa il blocco `aggiungi un punto` sotto al blocco dell'evento `quando il personaggio 1 tocca il personaggio 2`.
       courseD_playLab_cond3_authored_hint:
-        courseD_playLab_cond3_a: You will need to add two blocks to your `repeat forever` loop.  One will choose a random emotion for the dragon (actor 2) and the other will wait 1 second before going through the loop again.
+        courseD_playLab_cond3_a: Dovrai aggiungere due blocchi al ciclo `ripeti per sempre`. Uno per scegliere un umore casuale del drago (personaggio 2) e l'altro per attendere 1 secondo prima di ricominciare il ciclo.
       courseD_playLab_cond3_2018_authored_hint:
-        courseD_playLab_cond3_a: You will need to add two blocks to your `repeat forever` loop.  One will choose a random emotion for the dragon (actor 2) and the other will wait 1 second before going through the loop again.
+        courseD_playLab_cond3_a: Dovrai aggiungere due blocchi al ciclo `ripeti per sempre`. Uno per scegliere un umore casuale del drago (personaggio 2) e l'altro per attendere 1 secondo prima di ricominciare il ciclo.
       courseD_playLab_cond3a_authored_hint:
-        courseD_playLab_cond3_c: "- `If` the dragon is happy \n   - `score point`\n   - `score point`  \n   \n   \n \n- `Else` `score point`"
+        courseD_playLab_cond3_c: "- `Se` il drago è felice\n   - `aggiungi un punto`\n   - `aggiungi un punto`\n \n- `Altrimenti` `aggiungi un punto`"
       courseD_playLab_cond3a_2018_authored_hint:
-        courseD_playLab_cond3_c: "- `If` the dragon is happy \n   - `score point`\n   - `score point`  \n   \n   \n \n- `Else` `score point`"
+        courseD_playLab_cond3_c: "- `Se` il drago è felice\n   - `aggiungi un punto`\n   - `aggiungi un punto`\n \n- `Altrimenti` `aggiungi un punto`"
       courseD_playLab_cond3b_authored_hint:
         courseD_playLab_cond3b_a: You will need to add blocks to your `repeat forever` loop to make the dragon continue to move up and down
       courseD_playLab_cond4_authored_hint:
-        courseD_playLab_cond4_a: You will want to use the `when run` event to get the ninja to chase the pirate.
-        courseD_playLab_cond4_b: There is a special block called `set every masked ninja to chase actor` that will keep the ninja hot on the pirate's trail!
-        courseD_playLab_cond4_c: Put the `end game as a loss` block underneath the `when actor 1 touches actor 3` event.
+        courseD_playLab_cond4_a: Avrai bisogno di usare l'evento `quando si clicca su "Esegui"` per fare in modo che il ninja insegua il pirata dall'inizio del gioco.
+        courseD_playLab_cond4_b: C'è un blocco speciale chiamato `imponi ad ogni ninja mascherato di inseguire il personaggio ...` che terrà il ninja sulle tracce del pirata!
+        courseD_playLab_cond4_c: Metti il blocco `fine del gioco con una sconfitta` sotto l'evento `quando il personaggio 1 tocca il personaggio 2`.
       courseD_playLab_cond4_2018_authored_hint:
-        courseD_playLab_cond4_a: You will want to use the `when run` event to get the ninja to chase the pirate.
-        courseD_playLab_cond4_b: There is a special block called `set every masked ninja to chase actor` that will keep the ninja hot on the pirate's trail!
-        courseD_playLab_cond4_c: Put the `end game as a loss` block underneath the `when actor 1 touches actor 3` event.
+        courseD_playLab_cond4_a: Avrai bisogno di usare l'evento `quando si clicca su "Esegui"` per fare in modo che il ninja insegua il pirata dall'inizio del gioco.
+        courseD_playLab_cond4_b: C'è un blocco speciale chiamato `imponi ad ogni ninja mascherato di inseguire il personaggio ...` che terrà il ninja sulle tracce del pirata!
+        courseD_playLab_cond4_c: Metti il blocco `fine del gioco con una sconfitta` sotto l'evento `quando il personaggio 1 tocca il personaggio 2`.
       courseD_playLab_cond5_authored_hint:
-        courseD_playLab_cond5_a: Use an `if` statement that compares whether `score` is `>` 5 to solve this challenge.
-        courseD_playLab_cond5_b: You can have more than one `repeat forever` loop in the workspace.
+        courseD_playLab_cond5_a: Per portare a termine questa sfida, usa un'istruzione `se` che controlli se il `punteggio > 5`.
+        courseD_playLab_cond5_b: Puoi avere più di un ciclo `ripeti per sempre` nella tua area di lavoro.
       courseD_playLab_cond5_2018_authored_hint:
-        courseD_playLab_cond5_a: Use an `if` statement that compares whether `score` is `>` 5 to solve this challenge.
-        courseD_playLab_cond5_b: You can have more than one `repeat forever` loop in the workspace.
+        courseD_playLab_cond5_a: Per portare a termine questa sfida, usa un'istruzione `se` che controlli se il `punteggio > 5`.
+        courseD_playLab_cond5_b: Puoi avere più di un ciclo `ripeti per sempre` nella tua area di lavoro.
       courseD_playLab_cond6_authored_hint:
-        courseD_playLab_cond6_a: Add the `set masked ninja speed` block to the beginning of the program to help slow the ninja down.
-        courseD_playLab_cond6_b: You will need to use an `if actor 1 y position > 255` block inside of a `repeat forever` block to always check if the pirate is below the octopuses.
+        courseD_playLab_cond6_a: Per rallentare la velocità del ninja, aggiungi all'inizio del programma il blocco `imposta la velocità di ogni ninja mascherato a ...`.
+        courseD_playLab_cond6_b: Per controllare in continuazione se il pirata è al di sotto dei polpi, devi usare un blocco `se personaggio 1 posizione y > 255` all'interno di un ciclo `ripeti per sempre`.
       courseD_playLab_cond6_2018_authored_hint:
-        courseD_playLab_cond6_a: Add the `set masked ninja speed` block to the beginning of the program to help slow the ninja down.
-        courseD_playLab_cond6_b: You will need to use an `if actor 1 y position > 255` block inside of a `repeat forever` block to always check if the pirate is below the octopuses.
+        courseD_playLab_cond6_a: Per rallentare la velocità del ninja, aggiungi all'inizio del programma il blocco `imposta la velocità di ogni ninja mascherato a ...`.
+        courseD_playLab_cond6_b: Per controllare in continuazione se il pirata è al di sotto dei polpi, devi usare un blocco `se personaggio 1 posizione y > 255` all'interno di un ciclo `ripeti per sempre`.
       courseD_playLab_cond6a_authored_hint:
-        courseD_playLab_cond6_c: Add a `wait 1 second` block to the top of the `repeat forever` loop that checks the pirate position (but not inside the `if` statement) to keep points from being removed too quickly.
+        courseD_playLab_cond6_c: Per evitare che i punti siano tolti troppo velocemente, aggiungi un blocco `aspetta per 1 secondo` in cima al ciclo `ripeti per sempre` che controlla la posizione del pirata (ma, attenzione, non all'interno dell'istruzione `if`).
       courseD_playLab_cond6a_2018_authored_hint:
-        courseD_playLab_cond6_c: Add a `wait 1 second` block to the top of the `repeat forever` loop that checks the pirate position (but not inside the `if` statement) to keep points from being removed too quickly.
+        courseD_playLab_cond6_c: Per evitare che i punti siano tolti troppo velocemente, aggiungi un blocco `aspetta per 1 secondo` in cima al ciclo `ripeti per sempre` che controlla la posizione del pirata (ma, attenzione, non all'interno dell'istruzione `if`).
       courseD_playLab_cond6cloneForTest_authored_hint:
-        courseD_playLab_cond6_a: Add the `set masked ninja speed` block to the beginning of the program to help slow the ninja down.
-        courseD_playLab_cond6_b: You will need to use an `if actor 1 y position > 255` block inside of a `repeat forever` block to always check if the pirate is below the octopuses.
-        courseD_playLab_cond6_c: Add a `wait 1 second` block to the top of the `repeat forever` loop that checks the pirate position (but not inside the `if` statement) to keep points from being removed too quickly.
+        courseD_playLab_cond6_a: Per rallentare la velocità del ninja, aggiungi all'inizio del programma il blocco `imposta la velocità di ogni ninja mascherato a ...`.
+        courseD_playLab_cond6_b: Per controllare in continuazione se il pirata è al di sotto dei polpi, devi usare un blocco `se personaggio 1 posizione y > 255` all'interno di un ciclo `ripeti per sempre`.
+        courseD_playLab_cond6_c: Per evitare che i punti siano tolti troppo velocemente, aggiungi un blocco `aspetta per 1 secondo` in cima al ciclo `ripeti per sempre` che controlla la posizione del pirata (ma, attenzione, non all'interno dell'istruzione `if`).
       courseD_playLab_embed_cond6a_authored_hint: { }
       courseD_playLab_embedded_authored_hint: { }
       courseD_scrat_predict1_authored_hint: { }
@@ -7058,11 +7071,11 @@ it:
         courseC_maze_programming3_b: Remember that turns to the right and left are from Scrat's perspective.
       courseD_scrat_ramp4_authored_hint:
         courseC_maze_programming4_a: You can turn right or left from Scrat's point of view. If you are facing right, turning right will make you point downwards.
-        courseC_maze_programming4_b: To follow the path, move forward and turn one way, then move again and turn the opposite way. Move forward one more time to reach the acorn.
+        courseC_maze_programming4_b: Per seguire il percorso, vai avanti e gira da una parte, poi spostati di nuovo e gira nella direzione opposta. Per raggiungere la ghianda, vai ancora una volta avanti.
         courseC_maze_programming4_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseD_scrat_ramp4_2018_authored_hint:
         courseC_maze_programming4_a: You can turn right or left from Scrat's point of view. If you are facing right, turning right will make you point downwards.
-        courseC_maze_programming4_b: To follow the path, move forward and turn one way, then move again and turn the opposite way. Move forward one more time to reach the acorn.
+        courseC_maze_programming4_b: Per seguire il percorso, vai avanti e gira da una parte, poi spostati di nuovo e gira nella direzione opposta. Per raggiungere la ghianda, vai ancora una volta avanti.
         courseC_maze_programming4_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseD_scrat_ramp5_authored_hint:
         courseC_maze_programming5_a: Prova ad usare il pulsante "Fai un passo" per eseguire il codice un'istruzione alla volta. Riesci ad capire cosa devi fare dopo?
@@ -7330,7 +7343,7 @@ it:
       courseE_artist_predict1_2018_authored_hint: { }
       courseE_artist_ramp10_authored_hint:
         courseD_artist_ramp10_a: Don't forget to turn by 60 degrees after each triangle.  Which loop do you need to put that instruction inside?
-        courseD_artist_ramp10_b: Puoi usare il menu a tendina del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
+        courseD_artist_ramp10_b: Puoi usare il menù a discesa del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
         courseD_artist_ramp10_c: |-
           The artist will draw six triangles in total:
           
@@ -7373,19 +7386,19 @@ it:
         courseE_artist_ramp8_c: 'Your loop should have two blocks inside of it: `move forward` and `turn right by 90 degrees`.'
       courseE_artist_ramp9_authored_hint:
         courseD_artist_ramp12_a: How is this similar to a square?  How is it different?
-        courseD_artist_ramp12_b: Puoi usare il menu a tendina del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
+        courseD_artist_ramp12_b: Puoi usare il menù a discesa del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
         courseD_artist_ramp12_c: To draw each side, you will need to move forward 100 pixels, then turn right 120 degrees. How many sides do you need?
       courseE_artist_ramp9_2_authored_hint:
         courseD_artist_ramp12_a: How is this similar to a square?  How is it different?
-        courseD_artist_ramp12_b: Puoi usare il menu a tendina del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
+        courseD_artist_ramp12_b: Puoi usare il menù a discesa del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
         courseD_artist_ramp12_c: To draw each side, you will need to move forward 100 pixels, then turn right 120 degrees. How many sides do you need?
       courseE_artist_ramp9_2018_authored_hint:
         courseD_artist_ramp12_a: How is this similar to a square?  How is it different?
-        courseD_artist_ramp12_b: Puoi usare il menu a tendina del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
+        courseD_artist_ramp12_b: Puoi usare il menù a discesa del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
         courseD_artist_ramp12_c: To draw each side, you will need to move forward 100 pixels, then turn right 120 degrees. How many sides do you need?
       courseE_artist_ramp9_2_2018_authored_hint:
         courseD_artist_ramp12_a: How is this similar to a square?  How is it different?
-        courseD_artist_ramp12_b: Puoi usare il menu a tendina del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
+        courseD_artist_ramp12_b: Puoi usare il menù a discesa del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
         courseD_artist_ramp12_c: To draw each side, you will need to move forward 100 pixels, then turn right 120 degrees. How many sides do you need?
       courseE_bee_concept1_authored_hint:
         courseE_bee_concept1_b: Are there any patterns that *repeat* here?
@@ -7790,10 +7803,10 @@ it:
         courseC_maze_programming2_b: Make sure all three `move forward` blocks are attached to the `when run` block.
       courseE_maze_ramp3_authored_hint:
         courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nPer eliminare un blocco dal bel mezzo del programma, trascina da una parte tutti i blocchi sotto di lui.\n\nTrascina nella cassetta degli attrezzi il blocco che vuoi cancellare.\n\nInfine, rimetti al loro posto gli altri blocchi."
-        courseC_maze_programming3_b: Remember that turns to the right and left are from the bird's perspective.
+        courseC_maze_programming3_b: Ricorda che le curve a destra e a sinistra devi immaginarle dal punto di vista dell'uccellino.
       courseE_maze_ramp3_2018_authored_hint:
         courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nPer eliminare un blocco dal bel mezzo del programma, trascina da una parte tutti i blocchi sotto di lui.\n\nTrascina nella cassetta degli attrezzi il blocco che vuoi cancellare.\n\nInfine, rimetti al loro posto gli altri blocchi."
-        courseC_maze_programming3_b: Remember that turns to the right and left are from the bird's perspective.
+        courseC_maze_programming3_b: Ricorda che le curve a destra e a sinistra devi immaginarle dal punto di vista dell'uccellino.
       courseE_maze_ramp4_authored_hint:
         courseC_maze_programming4_a: Puoi girare a destra o a sinistra dal punto di vista dell'uccellino. Se l'uccellino è rivolto verso destra, girare a destra significa dirigersi verso il basso.
         courseC_maze_programming4_b: Per seguire il percorso, vai avanti e gira da una parte, poi spostati di nuovo e gira nella direzione opposta. Per raggiungere il maiale, vai ancora una volta avanti.
@@ -8618,11 +8631,11 @@ it:
         courseF_artist_ramp8_c: Your turn will also go inside of the <xml><block type="controls_repeat"><title name="TIMES">3</title></block></xml> loop.
       courseF_artist_ramp9_authored_hint:
         courseF_artist_ramp9_a: How is this similar to a square?  How is it different?
-        courseF_artist_ramp9_b: Puoi usare il menu a tendina del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
+        courseF_artist_ramp9_b: Puoi usare il menù a discesa del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
         courseF_artist_ramp9_c: You will want to move forward 100 pixels, then turn right 120 degrees for each side. Can you use a <xml><block type="controls_repeat"><title name="TIMES">3</title></block></xml> loop to make your code shorter?
       courseF_artist_ramp9_2018_authored_hint:
         courseF_artist_ramp9_a: How is this similar to a square?  How is it different?
-        courseF_artist_ramp9_b: Puoi usare il menu a tendina del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
+        courseF_artist_ramp9_b: Puoi usare il menù a discesa del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
         courseF_artist_ramp9_c: You will want to move forward 100 pixels, then turn right 120 degrees for each side. Can you use a <xml><block type="controls_repeat"><title name="TIMES">3</title></block></xml> loop to make your code shorter?
       courseF_artist_variables10_authored_hint:
         courseF_artist_variables10_a: Have fun with this level! See what little changes can do to your code.

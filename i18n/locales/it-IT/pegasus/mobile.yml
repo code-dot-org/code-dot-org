@@ -646,7 +646,7 @@
   dashboard_action_print_certificates: "Stampa gli attestati"
   dashboard_assessments_view: 'Mostra risultati in:'
   dashboard_assessments_none: "La maggior parte degli insegnanti misura i progressi degli studenti utilizzando la scheda \"Avanzamento\": clicca sul link \"Avanzamento\" sotto il nome della classe nella sezione \"Gestione delle classi e degli studenti\". Se sei interessato ad effettuare ulteriori valutazioni dei tuoi studenti, puoi trovare argomenti e domande consigliate nei piani di attività di ogni lezione. Dovrai però gestire queste valutazioni al di fuori di questo cruscotto di controllo."
-  dashboard_assessments_none_part2: "Se stai insegnando informatica nella scuola secondaria utilizzando il nostro corso <i>CS Principles</i>, ci sono domande di valutazione disponibili per aiutare gli studenti a prepararsi per l'esame finale. Per utilizzare queste domande, assegna alla classe uno dei corsi disponibili nella sezione <i>CS Principles and Practice Test</i> e poi scegli il corso dal menu a tendina qui sopra per vedere le risposte degli studenti."
+  dashboard_assessments_none_part2: "Se stai insegnando informatica nella scuola secondaria utilizzando il nostro corso <i>CS Principles</i>, ci sono domande di valutazione disponibili per aiutare gli studenti a prepararsi per l'esame finale. Per utilizzare queste domande, assegna alla classe uno dei corsi disponibili nella sezione <i>CS Principles and Practice Test</i> e poi scegli il corso dal menù a discesa qui sopra per vedere le risposte degli studenti."
   dashboard_assessments_summaries: "Sintesi dei risultati"
   dashboard_assessments_answers: "Risultati in dettaglio"
   dashboard_surveys_answers: "Sondaggi"
@@ -692,7 +692,7 @@
   dashboard_sections_table_grade: "Livello"
   dashboard_sections_table_course: "Corso"
   dashboard_sections_table_pairing_allowed: "Programmazione in Coppia"
-  dashboard_sections_table_stage_extras: "Fase extra"
+  dashboard_sections_table_stage_extras: "Esercizi Supplementari"
   dashboard_sections_table_students: "Studenti"
   dashboard_sections_table_code: "Codice-Classe"
   dashboard_sections_name: "Nome della classe"
@@ -703,7 +703,7 @@
   dashboard_sections_print_secrets: "Dopo puoi stampare un insieme di schede contenenti le informazioni degli account di ognuno dei tuoi studenti."
   dashboard_sections_switch_section: 'Cambia classe:'
   dashboard_sections_close: "Chiudi"
-  dashboard_sections_move_students_desc: "Seleziona gli studenti da spostare in una nuova classe. Spostare gli studenti non eliminerà i loro progressi.<br><br>\nSe alla classe in cui vengono inseriti è assegnato un corso <b>diverso</b> da quello della classe da cui provengono, per vedere i loro progressi nella scheda \"Avanzamento\" dovrai selezionare dal menù a tendina il corso che avevano nella classe da cui provengono.<br><br>\nInoltre, se la classe in cui vengono inseriti ha un diverso <i>tipo di accesso</i> rispetto alla classe da cui provengono, gli studenti riceveranno delle nuove password."
+  dashboard_sections_move_students_desc: "Seleziona gli studenti da spostare in una nuova classe. Spostare gli studenti non eliminerà i loro progressi.<br><br>\nSe alla classe in cui vengono inseriti è assegnato un corso <b>diverso</b> da quello della classe da cui provengono, per vedere i loro progressi nella scheda \"Avanzamento\" dovrai selezionare dal menù a discesa il corso che avevano nella classe da cui provengono.<br><br>\nInoltre, se la classe in cui vengono inseriti ha un diverso <i>tipo di accesso</i> rispetto alla classe da cui provengono, gli studenti riceveranno delle nuove password."
   dashboard_sections_one_per_teacher: "Gli studenti possono trovarsi in una sola delle classi di uno stesso insegnante. I tuoi studenti verranno quindi assegnati alla nuova classe e lasceranno la precedente."
   dashboard_sections_move_to_section: 'Sposta nella classe:'
   dashboard_sections_enter_code: 'Inserisci il codice della classe:'
@@ -717,7 +717,7 @@
   dashboard_sections_assign_hoc_script_msg: "Vi preghiamo considerare che in questo corso, durante la settimana del 5-11 dicembre, i progressi non saranno salvati a causa del livello di traffico che riceveremo senza precedenti sul nostro sito per l'Ora del Codice.  Si può ancora assegnare il corso e dare tutti gli studenti il certificato di partecipazione.  (La maggior parte delle insegnanti <a href='%{certificate_url}'> li stampa in anticipo</a>.) <br/> <br/> Siamo entusiasti per il numero di insegnanti e studenti partecipanti e ci dispiace non poter essere in grado di salvare tutto.  Se la classe volesse procedere, è possibile avviare un corso dell'Ora del Codice per insegnare Fondamenti di Informatica.  Il nostro cruscotto insegnante vi permetterà di monitorare i progressi dei vostri studenti ogni altra settimana dell'anno."
   dashboard_sections_assign_activity: "Assegna un corso"
   dashboard_error_none_selected: "Non hai selezionato alcuno studente. Per favore, scegli almeno uno studente."
-  dashboard_error_other_section: "Se stai spostando degli studenti tra le tue classi, selezionane una dal primo menù a tendina. Scegli \"<b>Altro insegnante</b>\" in tale menù a tendina <b>solo</b> se devi spostare degli studenti nella classe di un <b>altro<b> insegnante."
+  dashboard_error_other_section: "Se stai spostando degli studenti tra le tue classi, selezionane una dal primo menù a discesa. Scegli \"<b>Altro insegnante</b>\" in tale menù a tendina <b>solo</b> se devi spostare degli studenti nella classe di un <b>altro<b> insegnante."
   dashboard_students_add_multiple: 'Scrivi o incolla i nomi dei tuoi studenti, uno per riga:'
   dashboard_students_new_google_classroom_section: "Per aggiungere studenti, use <a href='http://classroom.google.com' target='_blank'>Google Classroom</a>, quindi quindi clicca il pulsante in alto <b>Sincronizza studenti da Google Classroom</b>."
   dashboard_students_new_section: "Hai creato una nuova classe! Ora aggiungi gli studenti utilizzando i pulsanti <b>Aggiungi uno studente</b> e <b>Aggiungi più studenti</b> qui sopra."
@@ -946,13 +946,13 @@
   coursee_name: "Corso E"
   coursef-draft_name: Corso F
   coursef_name: "Corso F"
-  coursea-2017_name: Course A (2017)
-  courseb-2017_name: Course B (2017)
-  coursec-2017_name: Course C (2017)
-  coursed-2017_name: Course D (2017)
-  coursee-2017_name: Course E (2017)
-  coursef-2017_name: Course F (2017)
-  coursea-2018_name: Course A (2018)
+  coursea-2017_name: Corso A (2017)
+  courseb-2017_name: Corso B (2017)
+  coursec-2017_name: Corso C (2017)
+  coursed-2017_name: Corso D (2017)
+  coursee-2017_name: Corso E (2017)
+  coursef-2017_name: Corso F (2017)
+  coursea-2018_name: Corso A (2018)
   courseb-2018_name: Course B (2018)
   coursec-2018_name: Course C (2018)
   coursed-2018_name: Course D (2018)
@@ -961,10 +961,10 @@
   accelerated_name: "Corso rapido"
   express_name: "Corso Rapido"
   pre-express_name: Corso Rapido pre-scolare
-  express-2017_name: Express Course (2017)
-  pre-express-2017_name: Pre-reader Express Course (2017)
+  express-2017_name: Corso Rapido (2017)
+  pre-express-2017_name: Corso Rapido pre-scolare (2017)
   express-2018_name: Corso Rapido
-  pre-express-2018_name: Pre-reader Express Course (2018)
+  pre-express-2018_name: Corso Rapido pre-scolare (2018)
   cspunit1_name: "Princìpi dell'Informatica - Unità 1"
   cspunit2_name: "Princìpi dell'Informatica - Unità 2"
   cspunit3_name: "Princìpi dell'Informatica - Unità 3"
@@ -1039,15 +1039,15 @@
   math_category_name: "Matematica"
   hoc_category_name: "L'Ora del Codice"
   csf_category_name: "Corsi base"
-  csf_2017_category_name: "CS Fundamentals (2017)"
-  csf_2018_category_name: "CS Fundamentals (2018)"
+  csf_2017_category_name: "Fondamenti di Informatica (2017)"
+  csf_2018_category_name: "Fondamenti di Informatica (2018)"
   csf_international_category_name: "Fondamenti di Informatica (in Italiano)"
   csf2_draft_category_name: 'Corsi A - F: In fase di sviluppo'
   csd_category_name: "CS Discoveries ('17-'18)"
   csd_2018_category_name: "CS Discoveries ('18-'19)"
   csp_category_name: "Princìpi dell'Informatica (versione 2015-16)"
   csp17_category_name: "'16-'17 principi d'informatica"
-  csp_2018_category_name: "CS Principles ('18-'19)"
+  csp_2018_category_name: "Principi di informatica ('18-'19)"
   cspexams_category_name: "Prova pratica di principi d'informatica"
   research_studies_category_name: "Research Studies"
   applab_name: "Sviluppo App"

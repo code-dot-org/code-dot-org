@@ -16,6 +16,7 @@ import FreeResponsesAssessmentsContainer from './FreeResponsesAssessmentsContain
 import FreeResponseBySurveyQuestionContainer from './FreeResponseBySurveyQuestionContainer';
 import MCSurveyOverviewContainer from './MCSurveyOverviewContainer';
 import AssessmentSelector from './AssessmentSelector';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const styles = {
   header: {
@@ -40,13 +41,12 @@ class SectionAssessments extends Component {
 
   onChangeScript = scriptId => {
     const {setScriptId, asyncLoadAssessments, sectionId} = this.props;
-    asyncLoadAssessments(sectionId, scriptId).then(() => {
-      setScriptId(scriptId);
-    });
+    asyncLoadAssessments(sectionId, scriptId);
+    setScriptId(scriptId);
   };
 
   render() {
-    const {validScripts, scriptId, assessmentList, assessmentId} = this.props;
+    const {validScripts, scriptId, assessmentList, assessmentId, isLoading} = this.props;
 
     return (
       <div>
@@ -59,25 +59,34 @@ class SectionAssessments extends Component {
             scriptId={scriptId}
             onChange={this.onChangeScript}
           />
+          {!isLoading &&
+            <div>
+              <div style={{...h3Style, ...styles.header}}>
+                {i18n.selectAssessment()}
+              </div>
+              <AssessmentSelector
+                assessmentList={assessmentList}
+                assessmentId={assessmentId}
+                onChange={this.props.setAssessmentId}
+              />
+            </div>
+          }
         </div>
-        <div>
-          <div style={{...h3Style, ...styles.header}}>
-            {i18n.selectAssessment()}
+        {!isLoading &&
+          <div>
+            {/* Assessments */}
+            <MCAssessmentsOverviewContainer />
+            <StudentsMCSummaryContainer />
+            <MultipleChoiceByStudentContainer />
+            <FreeResponsesAssessmentsContainer />
+            {/* Surveys */}
+            <MCSurveyOverviewContainer />
+            <FreeResponseBySurveyQuestionContainer />
           </div>
-          <AssessmentSelector
-            assessmentList={assessmentList}
-            assessmentId={assessmentId}
-            onChange={this.props.setAssessmentId}
-          />
-        </div>
-          {/* Assessments */}
-          <MCAssessmentsOverviewContainer />
-          <StudentsMCSummaryContainer />
-          <MultipleChoiceByStudentContainer />
-          <FreeResponsesAssessmentsContainer />
-          {/* Surveys */}
-          <MCSurveyOverviewContainer />
-          <FreeResponseBySurveyQuestionContainer />
+        }
+        {isLoading &&
+          <FontAwesome icon="spinner" className="fa-pulse fa-3x"/>
+        }
       </div>
     );
   }
@@ -87,7 +96,7 @@ export const UnconnectedSectionAssessments = SectionAssessments;
 
 export default connect(state => ({
   sectionId: state.sectionData.section.id,
-  isLoading: state.sectionAssessments.isLoading,
+  isLoading: !!state.sectionAssessments.isLoading,
   validScripts: state.scriptSelection.validScripts,
   assessmentList: getCurrentScriptAssessmentList(state),
   scriptId: state.scriptSelection.scriptId,

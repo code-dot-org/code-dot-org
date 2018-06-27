@@ -2790,24 +2790,28 @@ is:
       courseA_harvester_loops10_authored_hint: { }
       courseA_harvester_loops11_authored_hint: { }
       courseA_harvester_loops2_authored_hint:
-        courseA_harvester_loops2_a: 'Kóðinn þinn ætti að hafa **fjóra** `fara í vestur` kubba og **fjóra** `tína maís` kubba. '
+        courseA_harvester_loops2_a: "Kóðinn þinn ætti að hafa **fjóra** `fara í vestur` kubba og **fjóra** `tína maís` kubba. "
       courseA_harvester_loops3_authored_hint:
         courseA_harvester_loops3_a: |-
           Svona `endurtaka` kubbur getur bjargað málunum!
           <xml><block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="2-10">4</title>
           </block></xml>
-        courseA_harvester_loops3_b: Þú getur endurtekið kóða með því að draga fram `endurtaka` lykkju og setja kóðann í hana.
+        courseA_harvester_loops3_b: "Þú getur endurtekið kóða með því að draga fram `endurtaka` lykkju og setja kóðann í hana."
       courseA_harvester_loops4_authored_hint:
         courseA_harvester_loops4_a: Ekki hika við að ýta á `Keyra` til að sjá hvað gerist!
         courseA_harvester_loops4_b: How many pieces of corn are there? How many times does your code repeat?
       courseA_harvester_loops5_authored_hint:
         courseA_harvester_loops5_a: Ef þú festist er ráð að reyna að skipta þrautinni í það sem gerist á undan horninu og það sem gerist eftir hornið.
-        courseA_harvester_loops5_b: Your final code will have **one** `repeat` loop, **one** `move South` block, and **one** `move East` block.
+        courseA_harvester_loops5_b: |-
+          Your final code will have **one** `repeat`  <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">6</title>
+          </block></xml> loop, **one** `move South`   <xml><block type="maze_moveSouth" limit="1"/></xml> block, and **one** `move East`   <xml><block type="maze_moveEast" limit="1"/> </xml>block.
         courseA_harvester_loops5_c: Use this path to pick all the corn!
       courseA_harvester_loops5a_authored_hint:
-        courseA_harvester_loops5a_a: Þú þarft að nota tvær `endurtaka` lykkjur í röð.
-        courseA_harvester_loops5a_b: One loop will repeat `move South`, and the other will repeat `move East`.
+        courseA_harvester_loops5a_a: |-
+          Þú þarft að nota tvær `endurtaka` lykkjur í röð.
+        courseA_harvester_loops5a_b: One loop will repeat `move South`<xml><block type="maze_moveSouth" limit="1"/></xml>, and the other will repeat `move East` <xml><block type="maze_moveEast" limit="1"/></xml>
         courseA_harvester_loops5a_c: Use this path to move one way, and then the other.
       courseA_harvester_loops5b_authored_hint:
         courseA_harvester_loops5b_a: Press `Run` and see what happens!
@@ -2817,7 +2821,10 @@ is:
         courseA_harvester_loops6_a: Ef þú festist, er ráð að skrifa þrepin á pappír og leita að endurteknum mynstrum.
         courseA_harvester_loops6_b: This is the path you should take to pick all the corn.
       courseA_harvester_loops7_authored_hint:
-        courseA_harvester_loops7_a: You will need two `repeat` loops after each other!
+        courseA_harvester_loops7_a: |-
+          You will need two `repeat` <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">5</title>
+          </block></xml>loops after each other!
         courseA_harvester_loops7_b: Use two loops to follow this path.
       courseA_harvester_loops8_authored_hint: { }
       courseA_harvester_loops9_authored_hint:
@@ -3438,7 +3445,10 @@ is:
         courseB_artist_loops3_a: Remember to use a `repeat` loop for better code!
         courseB_artist_loops3_b: Listamaðurinn þarf að fara í Suður til að teikna þessa línu.
       courseB_artist_loops3_2018_authored_hint:
-        courseB_artist_loops3_a: Remember to use a `repeat` loop for better code!
+        courseB_artist_loops3_a: |-
+          Remember to use a `repeat` <xml><block type="controls_repeat_simplified">
+          <title name="TIMES">???</title>
+          </block></xml> loop for better code!
         courseB_artist_loops3_b: Listamaðurinn þarf að fara í Suður til að teikna þessa línu.
       courseB_artist_loops4_authored_hint:
         courseB_artist_loops4_a: Með hoppa kubbnum getur þú farið áfram án þessa að teikna línu.
@@ -3451,7 +3461,10 @@ is:
       courseB_artist_loops5_authored_hint:
         courseB_artist_loops5_a: Drag out a `repeat` loop, then put the other blocks inside of it. How many times do you need to repeat?
       courseB_artist_loops5_2018_authored_hint:
-        courseB_artist_loops5_a: Drag out a `repeat` loop, then put the other blocks inside of it. How many times do you need to repeat?
+        courseB_artist_loops5_a: |-
+          Drag out a `repeat` <xml><block type="controls_repeat_simplified">
+          <title name="TIMES">???</title>
+          </block></xml> loop, then put the other blocks inside of it. How many times do you need to repeat?
       courseB_artist_loops6_authored_hint:
         courseB_artist_loops6_b: Prófaðu að skrifa hreyfingarnar á blað og leita svo að endurtekningum.
       courseB_artist_loops6_2018_authored_hint:
@@ -3530,7 +3543,8 @@ is:
       courseB_collector_loops4_2018_authored_hint:
         courseB_collector_loops4_a: Try using the step button to figure out where things go wrong.
         courseB_collector_loops4_b: Þú getur stjórnað því hve langt Laurel færist með því að breyta því hve oft lykkjan keyrir.
-        courseB_collector_loops4_c: Lára þarf að ganga niður og safna fjársjóðnum eftir að hún er búin með `endurtaka` lykkjuna!
+        courseB_collector_loops4_c: |-
+          Lára þarf að ganga niður og safna fjársjóðnum eftir að hún er búin með `endurtaka` lykkjuna!
       courseB_collector_loops5_authored_hint:
         courseB_collector_loops5_a: Use more than one loop to get the job done.
         courseB_collector_loops5_b: Prófaðu að keyra kóðann nokkrum sinnum til að sjá hvað gerist.
@@ -3545,7 +3559,8 @@ is:
       courseB_collector_loops6_2018_authored_hint:
         courseB_collector_loops6_a: Can't figure out where things start going wrong? Use the "Step" button to run through your program one block at a time.
         courseB_collector_loops6_b: Þú getur breytt hversu oft endurtekningarlykkjan keyrir með því að smella á "3" og velja annan fjölda endurtekninga.
-        courseB_collector_loops6_c: Þú þarft að nota þrjár mismunandi `endurtaka` lykkjur til að leysa þessa þraut.
+        courseB_collector_loops6_c: |-
+          Þú þarft að nota þrjár mismunandi `endurtaka` lykkjur til að leysa þessa þraut.
         courseB_collector_loops6_d: Ef þú áttar þig ekki á þessu, er ráð að skipta þrautinni í þrjá hluta.
       courseB_collector_loops7_authored_hint:
         courseB_collector_loops7_a: If you are having a hard time with the puzzle, try drawing it on paper to help you figure it out.
@@ -3858,7 +3873,8 @@ is:
           <xml><block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="3-10">5</title>
           </block></xml>
-        courseB_iceage_loops3_b: Þú getur endurtekið kóða með því að draga fram `endurtaka` lykkju og setja kóðann í hana.
+        courseB_iceage_loops3_b: |-
+          Þú getur endurtekið kóða með því að draga fram `endurtaka` lykkju og setja kóðann í hana.
       courseB_iceage_loops4_authored_hint:
         courseB_iceage_loops4_a: Try writing down the steps Scrat would take to get to the acorn. Do you see a pattern?
         courseB_iceage_loops4_b: Don't be afraid to run your code and see what happens!
@@ -4446,7 +4462,8 @@ is:
       courseB_starWars_prog9_2018_authored_hint:
         courseB_starWars_prog9_a: Ekki óttast að gera mistök! Keyrðu kóðann til að sjá hvað gerist þó þú hafir ekki enn leyst þrautina.
         courseB_starWars_prog9_b: Það eru margar leiðir til að leysa þessa þraut.
-        courseB_starWars_prog9_c: Ekki hræðast að gera mistök! Prófaðu að bæta við kubbum og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist þú ekki hafa klárað lausnina.
+        courseB_starWars_prog9_c: |-
+          Ekki hræðast að gera mistök! Prófaðu að bæta við kubbum og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist þú ekki hafa klárað lausnina.
       courseC_PlayLab_embed_events9_authored_hint: { }
       courseC_PlayLab_events1_authored_hint:
         courseC_PlayLab_events1_a: |-

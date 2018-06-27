@@ -12,7 +12,7 @@ es:
         csp_2018_category_name: CS Principles ('18-'19)
         cspexams_category_name: Prueba de práctica de principios de CS
         csp17_category_name: '''16-''17 Principios de CS'
-        full_course_category_name: Full Courses
+        full_course_category_name: Cursos Completos
         hoc_category_name: Hora del Código
         math_category_name: Matemáticas
         research_studies_category_name: Research Studies
@@ -754,27 +754,27 @@ es:
             Introducing Design Mode:
               name: Introducing Design Mode
             Introduction to Arrays:
-              name: Introduction to Arrays
+              name: Introducción a los Arrays
             Introduction to Conditional Logic:
-              name: Introduction to Conditional Logic
+              name: Introducción a la Lógica Condicional
             Introduction to Digital Assistants:
-              name: Introduction to Digital Assistants
+              name: Introducción a los Asistentes Digitales
             Looping and Random Numbers:
-              name: Looping and Random Numbers
+              name: Bucles y Números Aleatorios
             Loops and Simulations:
-              name: Loops and Simulations
+              name: Bucles y Simulaciones
             Multi-screen Apps:
-              name: Multi-screen Apps
+              name: Aplicaciones multi-pantalla
             Practice PT - Design a Digital Scene:
               name: Practice PT - Design a Digital Scene
             'Practice PT: Create':
               name: 'Practice PT: Create'
             Processing Arrays:
-              name: Processing Arrays
+              name: Procesando Arrays
             The Need For Programming Languages:
               name: La necesidad de lenguajes de programación
             Understanding Program Flow and Logic:
-              name: Understanding Program Flow and Logic
+              name: Comprensión del Flujo y de la Lógica de los Programas
             User Input and Strings:
               name: Entradas de usuario y cadenas
             Using Simple Commands:
@@ -802,7 +802,7 @@ es:
             Teacher Dashboard:
               name: Tablero Maestro del Profesor
             The Big Game:
-              name: The Big Game
+              name: El Gran Juego
             The Design Recipe:
               name: La receta de diseño
         ECSPD-NexTech:
@@ -970,7 +970,7 @@ es:
             Mystery Model:
               name: Modelo misterioso
             Welcome Back!:
-              name: Welcome Back!
+              name: '¡Bienvenido de nuevo!'
         Testing:
           title: Testing
           description: Testing
@@ -989,11 +989,11 @@ es:
             Algorithms Detour - How Routers Learn:
               name: Cómo aprenden los enrutadores
             Algorithms Detour - Minimum Spanning Tree:
-              name: Algorithms Detour - Minimum Spanning Tree
+              name: Desvío de Algoritmos - Árbol de Expansión Mínima
             Algorithms Detour - Shortest Path:
-              name: Algorithms Detour - Shortest Path
+              name: Desvío de Algoritmos - El Camino Más Corto
             Alice and Bob and Asymmetric Keys:
-              name: Asymmetric Keys - Cups and Beans
+              name: Llaves Asimétricas - Tazas y Alubias
             Cracking the Code:
               name: Descifrando el código
             DNS in the Real World:
@@ -1428,9 +1428,9 @@ es:
             Practice PT:
               name: Practice PT
             Welcome to the Course!:
-              name: Welcome to the Course!
+              name: '¡Bienvenido al Curso!'
             Wrap Up and Next Steps:
-              name: Wrap Up and Next Steps
+              name: Recapitulación y Próximos Pasos
         odometer:
           title: Odometer Widget
           description: Use the Odometer widget to control odometers with various number bases. Binary, Decimal and Hexadecimal are the most common number systems to see in computer science.
@@ -1503,7 +1503,7 @@ es:
             The TLO:
               name: The TLO
             Welcome Back!:
-              name: Welcome Back!
+              name: '¡Bienvenido de nuevo!'
         frequency_analysis:
           title: Frequency Analysis Widget
           description: Use the Frequency Analysis Widget to analyze letter frequencies in an input text compared to expected frequencies for standard English. Use that comparison to explore cracking Shift and Substitution Ciphers.
@@ -1796,13 +1796,13 @@ es:
             Image Scroller with Key Events:
               name: Image Scroller with Key Events
             Introduction to Arrays:
-              name: Introduction to Arrays
+              name: Introducción a los Arrays
             Loops and Simulations:
-              name: Loops and Simulations
+              name: Bucles y Simulaciones
             'Practice PT: Create':
               name: 'Practice PT: Create'
             Processing Arrays:
-              name: Processing Arrays
+              name: Procesando Arrays
             While Loops:
               name: Bucles Mientras
         CSP-Unit3-Support:
@@ -2153,7 +2153,7 @@ es:
             CSP Student Post-Course Survey:
               name: CSP Student Post-Course Survey
             Post-Course Survey:
-              name: Post-Course Survey
+              name: Encuesta de final de curso
         csp2-2017:
           title: CSP Unit 2 - Digital Information
           description: This unit further explores the ways that digital information is encoded, represented and manipulated. Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.
@@ -2203,7 +2203,7 @@ es:
             Practice PT - Encode an Experience:
               name: Practice PT - Encode an Experience
             Post-Course Survey:
-              name: Post-Course Survey
+              name: Encuesta de final de curso
         csp3-2017:
           title: CSP Unit 3 - Intro to Programming
           description: "Esta unidad presenta los conceptos fundamentales de la programación informática, que desbloquea la capacidad de crear aplicaciones ricas e interactivas. Este curso utiliza JavaScript como lenguaje de programación y App Lab como el entorno de programación para crear aplicaciones, pero los conceptos aprendidos en estas lecciones abarcan todos los lenguajes y herramientas de programación.\\r\n\\r\nEsta unidad se actualizó por última vez el 30 de octubre de 2017. Obtenga más información sobre las actualizaciones de los planes de estudios en forum.code.org/c/csp/updates."
@@ -2221,7 +2221,7 @@ es:
             Functions and Top-Down Design:
               name: Functions and Top-Down Design
             Looping and Random Numbers:
-              name: Looping and Random Numbers
+              name: Bucles y Números Aleatorios
             Practice PT - Design a Digital Scene:
               name: Practice PT - Design a Digital Scene
             The Need For Programming Languages:
@@ -2249,7 +2249,7 @@ es:
             Please complete the CSP Mid-course survey!:
               name: Please complete the CSP Mid-course survey!
             Post-Course Survey:
-              name: Post-Course Survey
+              name: Encuesta de final de curso
         csp4-2017:
           title: CSP Unit 4 - Big Data and Privacy
           description: "The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.\\r\n\\r\nThis unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
@@ -2291,9 +2291,9 @@ es:
             CSP Student Post-Course Survey:
               name: CSP Student Post-Course Survey
             Post-Course Survey:
-              name: Post-Course Survey
+              name: Encuesta de final de curso
             Student Post-Course Survey:
-              name: Student Post-Course Survey
+              name: Encuesta de fin de curso
         csp5-2017:
           title: CSP Unit 5 - Building Apps
           description: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
@@ -2321,21 +2321,21 @@ es:
             Introducing Design Mode:
               name: Introducing Design Mode
             Introduction to Arrays:
-              name: Introduction to Arrays
+              name: Introducción a los Arrays
             Introduction to Conditional Logic:
-              name: Introduction to Conditional Logic
+              name: Introducción a la Lógica Condicional
             Introduction to Digital Assistants:
-              name: Introduction to Digital Assistants
+              name: Introducción a los Asistentes Digitales
             Loops and Simulations:
-              name: Loops and Simulations
+              name: Bucles y Simulaciones
             Multi-screen Apps:
-              name: Multi-screen Apps
+              name: Aplicaciones multi-pantalla
             'Practice PT: Create':
               name: 'Practice PT: Create'
             Processing Arrays:
-              name: Processing Arrays
+              name: Procesando Arrays
             Understanding Program Flow and Logic:
-              name: Understanding Program Flow and Logic
+              name: Comprensión del Flujo y de la Lógica de los Programas
             User Input and Strings:
               name: Entradas de usuario y cadenas
             Using Variables in Apps:
@@ -2405,7 +2405,7 @@ es:
             Boolean Expressions and "if" Statements:
               name: Boolean Expressions and "if" Statements
             Post-Course Survey:
-              name: Post-Course Survey
+              name: Encuesta de final de curso
         csp6:
           title: CSP Unit 6 - AP Performance Tasks
           description: This unit covers the preparation and completion of the Create and Explore Performance Tasks.
@@ -2607,9 +2607,9 @@ es:
             Algorithms Detour - How Routers Learn:
               name: Algorithms Detour - How Routers Learn
             Algorithms Detour - Minimum Spanning Tree:
-              name: Algorithms Detour - Minimum Spanning Tree
+              name: Desvío de Algoritmos - Árbol de Expansión Mínima
             Algorithms Detour - Shortest Path:
-              name: Algorithms Detour - Shortest Path
+              name: Desvío de Algoritmos - El Camino Más Corto
             Unit 1 - Encoding Numbers in the Real World:
               name: Unit 1 - Encoding Numbers in the Real World
             Unit 1 - Sending Bits in the Real World:
@@ -4333,7 +4333,7 @@ es:
           description: ''
           stages:
             Welcome Back!:
-              name: Welcome Back!
+              name: '¡Bienvenido de nuevo!'
             The TLO:
               name: The TLO
             Prep With Your Modules:
@@ -4536,7 +4536,7 @@ es:
             Final Project:
               name: Final Project
             Post-Course Survey:
-              name: Post-Course Survey
+              name: Encuesta de final de curso
         unit6-csd-draft:
           title: ''
           description_audience: ''
@@ -5425,7 +5425,7 @@ es:
           description_audience: ''
           description_short: ''
           description: ''
-        coursea:
+        coursea-2017:
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Debugging: Unspotted Bugs'
@@ -5480,7 +5480,7 @@ es:
           description_audience: 'Ages: 4-7'
           description_short: An introduction to computer science for pre-readers.
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
-        courseb:
+        courseb-2017:
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Debugging: Unspotted Bugs'
@@ -5515,7 +5515,7 @@ es:
           description_audience: 'Ages: 5-8'
           description_short: An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
-        coursec:
+        coursec-2017:
           stages:
             Building a Foundation:
               name: 'Persistence: Building a Foundation'
@@ -5554,7 +5554,7 @@ es:
           description_audience: 'Ages: 6-10'
           description_short: Learn the basics of computer science and create your own art, stories, and games.
           description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
-        coursed:
+        coursed-2017:
           stages:
             Introduction:
               name: Introduction to Online Puzzles
@@ -5614,11 +5614,11 @@ es:
               description_student: This lesson will guide you through making your very own video game.
               description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a game in Play Lab!
             'Unplugged: Binary':
-              name: 'Desconectado: binario'
+              name: 'Beyond Programming: Binary Images'
               description_student: 'Learn how computers store pictures using simple ideas like on and off. '
               description_teacher: Though many people think of binary as strictly zeros and ones, students will be introduced to the idea that information can be represented in a variety of binary options. This lesson takes that concept one step further as it illustrates how a computer can store even more complex information (such as images and colors) in binary, as well.
             Artist Binary:
-              name: Artista binario
+              name: Binary in Artist
               description_student: Direct your own artist to create a binary image using only commands to turn pixels on and off.
               description_teacher: Binary is extremely important in the world of computers. The majority of computers today store all sorts of information in binary form. This lesson helps demonstrate how it is possible to take something from real life and translate it into a series of ons and offs. Students will build binary images in Artist by translating 0s and 1s to offs and ons (or blacks and whites).
             Nested Loops Project in Artist:
@@ -5634,7 +5634,7 @@ es:
           description_audience: 'Ages: 7-11'
           description_short: Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more.
           description: Learn new coding concepts including algorithms, nested loops, while loops, conditionals, and events. Get an introduction to digital citizenship before   creating your very own game or story that you can share.
-        coursee:
+        coursee-2017:
           stages:
             'Algorithms: Tangrams':
               name: 'Algorithms: Tangrams'
@@ -5764,7 +5764,7 @@ es:
           description_audience: 'Ages: 8-12'
           description_short: Quickly cover concepts in Course C & D and then go further with functions.
           description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
-        coursef:
+        coursef-2017:
           stages:
             'Algorithms: Tangrams':
               name: 'Algorithms: Tangrams'
@@ -5779,7 +5779,7 @@ es:
               description_student: Bullying is never okay. This lesson will teach you about what is and isn't okay to say online.
               description_teacher: "Students consider that while they are enjoying their favorite websites they may encounter messages from other kids that can make them feel angry, hurt, sad, or fearful. They explore ways to handle cyberbullying and how to respond in the face of upsetting language online.\n\nStudents discuss all the ways they use technology for communication and explore the similarities and differences between in-person and online communication. Students then brainstorm ways to respond to cyberbullying. "
             Ice Age Play Lab:
-              name: Laboratorio de juegos de la Edad de hielo
+              name: Events in Ice Age
               description_student: Think of your favorite video game. Ever wondered how it was made? In these puzzles you will develop a video game of your own with friends from Ice Age!
               description_teacher: In this lesson, students are guided through a story featuring characters from Ice Age. Students will work with events and loops to make characters move on the screen, and will get the chance to create their own game or story after the guided levels.
             Envelope Variables:
@@ -6097,7 +6097,7 @@ es:
           stages:
             TTS:
               name: TTS
-        express:
+        express-2017:
           stages:
             'Programming Unplugged: My Robotic Friends':
               name: 'Programming Unplugged: My Robotic Friends'
@@ -6204,7 +6204,7 @@ es:
           description_audience: 'Ages: 9-18'
           description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
-        pre-express:
+        pre-express-2017:
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Debugging: Unspotted Bugs'
@@ -6294,7 +6294,7 @@ es:
             Creating functions with Parameters:
               name: Creating functions with Parameters
             Looping and Random Numbers:
-              name: Looping and Random Numbers
+              name: Bucles y Números Aleatorios
             Practice PT - Design a Digital Scene:
               name: Practice PT - Design a Digital Scene
             Unit 3 Chapter 1 Assessment:
@@ -6492,7 +6492,7 @@ es:
             Nested Loops in Bee:
               name: Nested Loops in Bee
             Loops in Ice Age:
-              name: Loops in Ice Age
+              name: Bucles en la Edad del Hielo
           title: New Course D Script
           description_audience: ''
           description_short: ''
@@ -6870,7 +6870,7 @@ es:
             Creating functions with Parameters:
               name: Creating functions with Parameters
             Looping and Random Numbers:
-              name: Looping and Random Numbers
+              name: Bucles y Números Aleatorios
             Practice PT - Design a Digital Scene:
               name: Practice PT - Design a Digital Scene
             Unit 3 Chapter 1 Assessment:
@@ -7014,7 +7014,7 @@ es:
             'Setup: Digital Portfolio and Other Tools':
               name: 'Setup: Digital Portfolio and Other Tools'
             Post-Course Survey:
-              name: Post-Course Survey
+              name: Encuesta de final de curso
           title: Explore - AP Performance Task Prep
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and complete the AP Explore Performance Tasks.
@@ -7030,7 +7030,7 @@ es:
             Create PT - Complete the Task:
               name: Create PT - Complete the Task
             Post-Course Survey:
-              name: Post-Course Survey
+              name: Encuesta de final de curso
           title: Create - AP Performance Task Prep
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and complete the AP Create Performance Tasks.
@@ -7935,7 +7935,7 @@ es:
               description_student: ''
               description_teacher: ''
             Loops in Ice Age:
-              name: Loops in Ice Age
+              name: Bucles en la Edad del Hielo
             Nested Loops in Frozen:
               name: Snowflakes with Anna and Elsa
             Until Loops in Maze:
@@ -8875,7 +8875,7 @@ es:
               description_student: ''
               description_teacher: ''
             Looping and Random Numbers:
-              name: Looping and Random Numbers
+              name: Bucles y Números Aleatorios
               description_student: ''
               description_teacher: ''
             Practice PT - Design a Digital Scene:
@@ -8995,7 +8995,7 @@ es:
               description_student: ''
               description_teacher: ''
             Multi-screen Apps:
-              name: Multi-screen Apps
+              name: Aplicaciones multi-pantalla
               description_student: ''
               description_teacher: ''
             'Building an App: Multi-Screen App':
@@ -9043,11 +9043,11 @@ es:
               description_student: ''
               description_teacher: ''
             Loops and Simulations:
-              name: Loops and Simulations
+              name: Bucles y Simulaciones
               description_student: ''
               description_teacher: ''
             Introduction to Arrays:
-              name: Introduction to Arrays
+              name: Introducción a los Arrays
               description_student: ''
               description_teacher: ''
             'Building an App: Image Scroller':
@@ -9059,7 +9059,7 @@ es:
               description_student: ''
               description_teacher: ''
             Processing Arrays:
-              name: Processing Arrays
+              name: Procesando Arrays
               description_student: ''
               description_teacher: ''
             Functions with Return Values:
@@ -9502,7 +9502,7 @@ es:
             Programming with Rey and BB-8:
               name: Programming with Rey and BB-8
             Loops in Ice Age:
-              name: Loops in Ice Age
+              name: Bucles en la Edad del Hielo
             'Persistence & Frustration: Stevie and the Big Project':
               name: 'Persistence & Frustration: Stevie and the Big Project'
         spritelab-validated:

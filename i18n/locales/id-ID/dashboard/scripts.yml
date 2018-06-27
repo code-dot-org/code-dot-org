@@ -5425,14 +5425,14 @@ id:
           description_audience: ''
           description_short: ''
           description: ''
-        coursea:
+        coursea-2017:
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Debugging: Unspotted Bugs'
               description_student: ''
               description_teacher: 'This lesson will guide students through the steps of debugging.  Students will learn the mantra: "What happened?  What was supposed to happen? What does that tell you?"'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Ketekunan: Stevie dan Proyek Besar'
+              name: 'Persistence: Stevie and the Big Project'
               description_student: ''
               description_teacher: "When students run into a barrier while answering a question or working on a project, it’s so easy for them to get frustrated and give up.  This lesson will introduce students to the idea that frustration can be an important part of learning. Here, frustration is presented as a step in the creative process, rather than a sign of failure.\\r\n\\r\nThis lession can be done over one or two class sessions.  If you have more time, feel free to draw out the building and revising phase of the Marble Run activity."
             'Real-life Algorithms: Plant a Seed':
@@ -5440,11 +5440,11 @@ id:
               description_student: ''
               description_teacher: "In this lesson, students will relate the concept of algorithms back to everyday, real-life activities by planting an actual seed. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.\\r\n"
             Learn to Drag and Drop:
-              name: Urutan dengan menyeret dan penurunan
+              name: Sequencing with Drag and Drop
               description_student: ''
               description_teacher: This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.
             'Programming: Happy Maps':
-              name: 'Pemrograman: peta bahagia'
+              name: 'Programming: Happy Maps'
               description_student: ''
               description_teacher: The bridge from algorithms to programming can be a short one if students understand the difference between planning out a sequence and encoding that sequence into the appropriate language.  This activity will help students gain experience reading and writing in shorthand code.
             Programming in Maze:
@@ -5452,7 +5452,7 @@ id:
               description_student: ''
               description_teacher: In this series of online puzzles, students will build on the understanding of algorithms, debugging, and general computer literacy. Featuring characters from the game Angry Birds, students will develop sequential algorithms to get the bird to the pig without crashing into walls or TNT. Debugging puzzles have also been mixed into this stage for added practice with problem solving and critical thinking.
             Going Places Safely:
-              name: 'Digital Kewarganegaraan: Tempat-Tempat Yang Aman'
+              name: 'Digital Citizenship: Going Places Safely'
               description_student: ''
               description_teacher: In collaboration with [r common-sense-media], this lesson helps students learn that many websites ask for information that is private and discusses how to responsibly handle such requests. Students also find out that they can go to exciting places online, but they need to follow certain rules to remain safe.
             'Loops: Happy Loops':
@@ -5480,16 +5480,16 @@ id:
           description_audience: 'Ages: 4-7'
           description_short: An introduction to computer science for pre-readers.
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
-        courseb:
+        courseb-2017:
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Debugging: Unspotted Bugs'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Ketekunan: Stevie dan Proyek Besar'
+              name: 'Persistence: Stevie and the Big Project'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritma kehidupan nyata: Tanam sebuah Bibit'
             Learn to Drag and Drop:
-              name: Urutan dengan menyeret dan penurunan
+              name: Sequencing with Drag and Drop
             Your Digital Footprint:
               name: 'Digital Citizenship: My Digital Footprint'
             'Programming: My Robotic Friends':
@@ -5515,7 +5515,7 @@ id:
           description_audience: 'Ages: 5-8'
           description_short: An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
-        coursec:
+        coursec-2017:
           stages:
             Building a Foundation:
               name: 'Persistence: Building a Foundation'
@@ -5554,14 +5554,14 @@ id:
           description_audience: 'Ages: 6-10'
           description_short: Learn the basics of computer science and create your own art, stories, and games.
           description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
-        coursed:
+        coursed-2017:
           stages:
             Introduction:
               name: Pengantar teka-Teki secara Online
               description_student: This lesson will give you practice in the skills you will need for this course.
               description_teacher: 'In this set of puzzles, students will begin with an introduction (or review depending on the experience of your class) of Code.org''s online workspace. There will be videos pointing out the basic functionality of the workspace including the `Run`, `Reset`, and `Step` buttons. Also discussed in these videos: dragging Blockly blocks, deleting Blockly blocks, and connecting Blockly blocks. Next, students will practice their _sequencing_ and _debugging_ skills in maze. From there, students will see new types of puzzles like Collector, Artist, and Harvester when they learn the very basics of _loops_.'
             'Algorithms: Graph Paper Programming':
-              name: 'Pemrograman: Kertas Grafik Pemrograman'
+              name: 'Programming: Graph Paper Programming'
               description_student: In this lesson, you will program your friend to draw pictures!
               description_teacher: By "programming" one another to draw pictures, students will begin to understand what coding is really about. The class will begin by having students instruct each other to color squares on graph paper in an effort to reproduce an existing picture. If there’s time, the lesson can conclude with images that the students create themselves.
             Events in Bounce:
@@ -5589,7 +5589,7 @@ id:
             Conditionals with Cards:
               name: 'If/Else: Conditionals with Cards'
               description_student: It's time to play a game where you earn points only under certain conditions!
-              description_teacher: "Pelajaran ini menunjukkan bagaimana conditional dapat digunakan untuk menyesuaikan program untuk informasi spesifik. Kita tidak selalu memiliki semua informasi yang kita butuhkan ketika menulis program. Kadang-kadang anda akan ingin melakukan sesuatu yang berbeda dalam situasi yang satu dari pada yang lain, bahkan jika anda tidak tahu situasi apa yang akan terjadi ketika kode anda berjalan. Itu adalah di mana conditional datang. Conditional memungkinkan komputer untuk membuat keputusan berdasarkan informasi yang benar setiap saat kode dijalankan."
+              description_teacher: "This lesson demonstrates how conditionals can be used to tailor a program to specific information. We don’t always have all of the information we need when writing a program. Sometimes you will want to do something different in one situation than in another, even if you don't know what situation will be true when your code runs. That is where conditionals come in. Conditionals allow a computer to make a decision, based on the information that is true any time your code is run.\n\n"
             Conditionals in Bee:
               name: Conditionals in Bee
               description_student: 'Now that you understand conditionals, it''s time to program Bee to use them when collecting honey and nectar. '
@@ -5603,7 +5603,7 @@ id:
               description_student: It's not always clear when to use each conditional.  This lesson will help you get practice deciding what to do.
               description_teacher: Students will practice `while` loops, `until` loops, and `if / else` statements. All of these blocks use conditionals. By practicing all three, students will learn to write complex and flexible code.
             Digital Citizenship:
-              name: 'Digital Kewarganegaraan: Berlatih Digital Kewarganegaraan'
+              name: 'Digital Citizenship: Practicing Digital Citizenship'
               description_student: Some information is not safe to share online. This lesson will help you learn the difference between safe and private information.
               description_teacher: |-
                 In collaboration with Common Sense Education, this lesson helps students learn to think critically about the user information that some websites request or require. Students learn the difference between private information and personal information, distinguishing what is safe and unsafe to share online.
@@ -5614,11 +5614,11 @@ id:
               description_student: This lesson will guide you through making your very own video game.
               description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a game in Play Lab!
             'Unplugged: Binary':
-              name: 'Dicabut: Biner'
+              name: 'Beyond Programming: Binary Images'
               description_student: 'Learn how computers store pictures using simple ideas like on and off. '
               description_teacher: Though many people think of binary as strictly zeros and ones, students will be introduced to the idea that information can be represented in a variety of binary options. This lesson takes that concept one step further as it illustrates how a computer can store even more complex information (such as images and colors) in binary, as well.
             Artist Binary:
-              name: Artis Biner
+              name: Binary in Artist
               description_student: Direct your own artist to create a binary image using only commands to turn pixels on and off.
               description_teacher: Binary is extremely important in the world of computers. The majority of computers today store all sorts of information in binary form. This lesson helps demonstrate how it is possible to take something from real life and translate it into a series of ons and offs. Students will build binary images in Artist by translating 0s and 1s to offs and ons (or blacks and whites).
             Nested Loops Project in Artist:
@@ -5634,7 +5634,7 @@ id:
           description_audience: 'Ages: 7-11'
           description_short: Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more.
           description: Learn new coding concepts including algorithms, nested loops, while loops, conditionals, and events. Get an introduction to digital citizenship before   creating your very own game or story that you can share.
-        coursee:
+        coursee-2017:
           stages:
             'Algorithms: Tangrams':
               name: 'Algorithms: Tangrams'
@@ -5649,7 +5649,7 @@ id:
             Envelope Variables:
               name: Sampul Variabel
             Variables in Artist:
-              name: Artis dalam Variabel
+              name: Variables in Artist
             Variables in Play Lab:
               name: Variables in Play Lab
             For Loop Fun:
@@ -5671,7 +5671,7 @@ id:
               description_student: Berikut ini adalah beberapa game dan gambar. Bermain dengan masing-masing dari mereka untuk mendapatkan ide-ide untuk proyek-proyek anda sendiri!
               description_teacher: "The next four lessons provide an opportunity for students to put their coding skills to use in a capstone project. This project will help individuals gain experience with coding and produce an exemplar to share with peers and loved ones. Intended to be a multi-lesson or multi-week experience, students will spend time exploring brainstorming, learning about the design process, building, and presenting their final work. \n\nIn the explore stage, students will be able to view pre-built examples of projects in both Artist and Play Lab for inspiration. Next, students will learn about the design process and how to implement it in their own projects. They will then be given the space to create their own project in either Artist or Play Lab (this is likely the longest stage of the project). Finally, students will be able to present their finished work to their peers."
             The Design Process:
-              name: Proses Desain
+              name: The Design Process
               description_student: Proyek besar ini memakan waktu dan banyak perencanaan. Di sini, anda akan belajar tentang proses desain yang akan anda gunakan untuk membangun kreasi anda sendiri.
               description_teacher: Over the course of four lessons, students will be building up to programming a project of their own design using either Play Lab or Artist as their programming environment. In this portion of the project, students will learn about the design process and how to implement it in their own projects. The lesson guide for all four stages of the process can be found in the first stage of this project process [here](https://curriculum.code.org/csf/coursee/12/).
             Build Your Project:
@@ -5681,7 +5681,7 @@ id:
             Revise Your Project:
               name: Merevisi Proyek Anda
             Presentation Your Project:
-              name: Presentasi Proyek Anda
+              name: Presentation Your Project
             'Algorithms: Dice Race':
               name: 'Algorithms: Dice Race'
               description_student: Learn how to describe a game from the computer's point of view in this lesson on algorithms.
@@ -5691,7 +5691,7 @@ id:
               description_student: You will get to tell the computer what to do under certain conditions in this fun and challenging series.
               description_teacher: This lesson introduces students to `while` loops and `if / else` statements. _While loops_ are loops that continue to repeat commands as long as a condition is true. While loops are used when the programmer doesn't know the exact number of times the commands need to be repeated, but the programmer does know what condition needs to be true in order for the loop to continue looping. `If / Else` statements offer flexibility in programming by running entire sections of code only if something is true, otherwise it runs something else.
             Private and Personal Information:
-              name: 'Digital Kewarganegaraan: Pribadi dan Informasi Pribadi'
+              name: 'Digital Citizenship: Private and Personal Information'
               description_student: Internet adalah menyenangkan dan menarik, tetapi sangat penting untuk tetap aman. Pelajaran ini mengajarkan anda perbedaan antara informasi yang aman untuk berbagi dan informasi yang bersifat pribadi.
               description_teacher: |-
                 Developed by Common Sense Education, this lesson is about the difference between information that is safe to share online and information that is not.
@@ -5764,7 +5764,7 @@ id:
           description_audience: 'Ages: 8-12'
           description_short: Quickly cover concepts in Course C & D and then go further with functions.
           description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
-        coursef:
+        coursef-2017:
           stages:
             'Algorithms: Tangrams':
               name: 'Algorithms: Tangrams'
@@ -5775,11 +5775,11 @@ id:
               description_student: This lesson will give you a brief introduction to some of the amazing things you will learn in this course!
               description_teacher: 'In this lesson, students will be introduced to sequences, loops, and nested loops to prepare them for more complicated concepts in the later part of the course. This "ramp up" lesson equalizes the playing field between the experts and the beginners in your class. '
             The Power of Words:
-              name: 'Digital Kewarganegaraan: Kekuatan kata-Kata'
+              name: 'Digital Citizenship: The Power of Words'
               description_student: Bullying tidak pernah baik-baik saja. Pelajaran ini akan mengajarkan anda tentang apa yang bisa dan tidak apa-apa untuk mengatakan secara online.
               description_teacher: "Students consider that while they are enjoying their favorite websites they may encounter messages from other kids that can make them feel angry, hurt, sad, or fearful. They explore ways to handle cyberbullying and how to respond in the face of upsetting language online.\n\nStudents discuss all the ways they use technology for communication and explore the similarities and differences between in-person and online communication. Students then brainstorm ways to respond to cyberbullying. "
             Ice Age Play Lab:
-              name: Laboratorium Bermain Ice Age
+              name: Events in Ice Age
               description_student: Think of your favorite video game. Ever wondered how it was made? In these puzzles you will develop a video game of your own with friends from Ice Age!
               description_teacher: In this lesson, students are guided through a story featuring characters from Ice Age. Students will work with events and loops to make characters move on the screen, and will get the chance to create their own game or story after the guided levels.
             Envelope Variables:
@@ -5839,7 +5839,7 @@ id:
               description_student: Rome wasn't built in a day and your project shouldn't be, either. Take time to edit and revise your project to make it the best it can be.
               description_teacher: Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. Now that the projects are built, students are given the opportunity to get feedback from peers and revise their projects. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).
             Presentation Your Project:
-              name: Presentasi Proyek Anda
+              name: Presentation Your Project
             Present Your Project:
               name: Menyajikan Proyek Anda
               description_student: Waktu untuk menunjukkan pekerjaan anda! Di sini anda akan menyajikan proyek mengagumkan untuk teman-teman anda.
@@ -6097,14 +6097,14 @@ id:
           stages:
             TTS:
               name: TTS
-        express:
+        express-2017:
           stages:
             'Programming Unplugged: My Robotic Friends':
               name: 'Programming Unplugged: My Robotic Friends'
             Introduction:
               name: Pendahuluan
             'Algorithms: Graph Paper Programming':
-              name: 'Pemrograman: Kertas Grafik Pemrograman'
+              name: 'Programming: Graph Paper Programming'
             'Algorithms: Relay Programming':
               name: 'Debugging: Relay Programming'
             Debugging in Collector:
@@ -6174,7 +6174,7 @@ id:
             'How it Works: The Internet':
               name: 'Beyond Programming: The Internet'
             'Common Sense Education: Digital Citizenship':
-              name: 'Digital Kewarganegaraan: Berlatih Digital Kewarganegaraan'
+              name: 'Digital Citizenship: Practicing Digital Citizenship'
             'Common Sense Education: Screen Out the Mean':
               name: 'Digital Citizenship: Screen Out the Mean'
             Events in Star Wars:
@@ -6204,16 +6204,16 @@ id:
           description_audience: 'Ages: 9-18'
           description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
-        pre-express:
+        pre-express-2017:
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Debugging: Unspotted Bugs'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Ketekunan: Stevie dan Proyek Besar'
+              name: 'Persistence: Stevie and the Big Project'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritma kehidupan nyata: Tanam sebuah Bibit'
             Learn to Drag and Drop:
-              name: Urutan dengan menyeret dan penurunan
+              name: Sequencing with Drag and Drop
             'Online Safety: Your Digital Footprint':
               name: 'Digital Citizenship: My Digital Footprint'
             'Programming: My Robotic Friends':

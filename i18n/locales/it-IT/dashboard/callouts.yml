@@ -410,7 +410,6 @@ it:
         CSD_U3_rect_c2: Qui c'è il pulsante "Esegui".
       CSD U3 rect_2018_callout:
         CSD_U3_rect_c1: Ecco il codice
-        CSD_U3_rect_c2: Qui c'è il pulsante "Esegui".
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Ecco il codice
         CSD_U3_rect_c2: Trascina questo blocco all'interno dell'area del codice.
@@ -929,9 +928,9 @@ it:
         courseA_collector_loops1_1: Vedi qualche nuovo blocco nella cassetta degli attrezzi? Non preoccuparti, ti mostreremo come usarli più avanti in questa lezione.
       courseA_forVideoTest_artist_callout: { }
       courseA_maze_ramp2_2018_callout:
-        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+        courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi dentro tutti i blocchi necessari per risolvere l'esercizio.
       courseA_maze_ramp2a_2018_callout:
-        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+        courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi dentro tutti i blocchi necessari per risolvere l'esercizio.
       courseA_maze_ramp3_2018_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
         stone_block_2: Grey blocks are made of stone and cannot be thrown away.
@@ -1062,9 +1061,9 @@ it:
       courseC_maze_programming1_2018_callout:
         grade2_CaringForNewPet_0_1: Dopo aver attaccato tutti i blocchi tra loro, premi "Esegui" per far partire il programma.
       courseC_maze_programming2_callout:
-        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+        courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi dentro tutti i blocchi necessari per risolvere l'esercizio.
       courseC_maze_programming2_2018_callout:
-        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+        courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi dentro tutti i blocchi necessari per risolvere l'esercizio.
       courseC_maze_programming3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
         courseC_maze_programming3_3: These blocks are stone and cannot be thrown away.
@@ -1110,9 +1109,9 @@ it:
       courseD_artist_functions8_callout:
         courseD_artist_functions8_1: Your blocks to create functions have been moved under this label in the toolbox.
       courseD_artist_nestedLoops1a_callout:
-        courseD_artist_nestedLoops1a_1: Non devi usare i colori per completare questo puzzle. Se vuoi, questo blocco di colore casuale lo rende facile!
+        courseD_artist_nestedLoops1a_1: 'Non devi impostare i singoli colori per svolgere correttamente questo esercizio: se vuoi, il blocco `imposta il colore scelto a caso` ti permette di ottenere facilmente tanti colori diversi!'
       courseD_artist_nestedLoops1a_2018_callout:
-        courseD_artist_nestedLoops1a_1: Non devi usare i colori per completare questo puzzle. Se vuoi, questo blocco di colore casuale lo rende facile!
+        courseD_artist_nestedLoops1a_1: 'Non devi impostare i singoli colori per svolgere correttamente questo esercizio: se vuoi, il blocco `imposta il colore scelto a caso` ti permette di ottenere facilmente tanti colori diversi!'
       courseD_artist_nestedLoops_challenge2_callout: { }
       courseD_artist_nestedLoops_challenge2_2018_callout: { }
       courseD_artist_ramp11_callout:
@@ -1163,9 +1162,9 @@ it:
       courseD_maze_ramp1_2018_callout:
         grade2_CaringForNewPet_0_1: Dopo aver attaccato tutti i blocchi tra loro, premi "Esegui" per far partire il programma.
       courseD_maze_ramp2_callout:
-        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+        courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi dentro tutti i blocchi necessari per risolvere l'esercizio.
       courseD_maze_ramp2_2018_callout:
-        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+        courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi dentro tutti i blocchi necessari per risolvere l'esercizio.
       courseD_maze_ramp3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
         stone_block_2: Grey blocks are made of stone and cannot be thrown away.
@@ -1192,13 +1191,13 @@ it:
         courseD_maze_ramp6_1: Qualiasi codice inserisci qui sarà ripetuto quante volte gli dici di farlo, poi continua ad eseguire il resto del programma.
       courseD_maze_ramp7_callout: { }
       courseD_playLab_condFP_callout:
-        courseD_playLab_condFP_1: we have organized the blocks into categories to give you more code to play with!  Click here to see where everything went.
+        courseD_playLab_condFP_1: Abbiamo organizzato i blocchi in categorie per darti più istruzioni con cui giocare! Clicca qui per vedere dove sono finite.
       courseD_playLab_condFP_2018_callout:
-        courseD_playLab_condFP_1: we have organized the blocks into categories to give you more code to play with!  Click here to see where everything went.
+        courseD_playLab_condFP_1: Abbiamo organizzato i blocchi in categorie per darti più istruzioni con cui giocare! Clicca qui per vedere dove sono finite.
       courseD_playLab_condFP_a_callout:
-        courseD_playLab_condFP_1: we have organized the blocks into categories to give you more code to play with!  Click here to see where everything went.
+        courseD_playLab_condFP_1: Abbiamo organizzato i blocchi in categorie per darti più istruzioni con cui giocare! Clicca qui per vedere dove sono finite.
       courseD_playLab_condForVideo_callout:
-        courseD_playLab_condFP_1: we have organized the blocks into categories to give you more code to play with!  Click here to see where everything went.
+        courseD_playLab_condFP_1: Abbiamo organizzato i blocchi in categorie per darti più istruzioni con cui giocare! Clicca qui per vedere dove sono finite.
       courseD_scrat_predict1_callout: { }
       courseD_scrat_predict1_2018_callout: { }
       courseD_scrat_ramp1_callout:
@@ -1206,9 +1205,9 @@ it:
       courseD_scrat_ramp1_2018_callout:
         grade2_CaringForNewPet_0_1: Dopo aver attaccato tutti i blocchi tra loro, premi "Esegui" per far partire il programma.
       courseD_scrat_ramp2_callout:
-        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+        courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi dentro tutti i blocchi necessari per risolvere l'esercizio.
       courseD_scrat_ramp2_2018_callout:
-        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+        courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi dentro tutti i blocchi necessari per risolvere l'esercizio.
       courseD_scrat_ramp3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
       courseD_scrat_ramp3_2018_callout:
@@ -1349,9 +1348,9 @@ it:
       courseE_maze_ramp1_2018_callout:
         grade2_CaringForNewPet_0_1: Dopo aver attaccato tutti i blocchi tra loro, premi "Esegui" per far partire il programma.
       courseE_maze_ramp2_callout:
-        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+        courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi dentro tutti i blocchi necessari per risolvere l'esercizio.
       courseE_maze_ramp2_2018_callout:
-        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+        courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi dentro tutti i blocchi necessari per risolvere l'esercizio.
       courseE_maze_ramp3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
       courseE_maze_ramp3_2018_callout:
@@ -1562,9 +1561,9 @@ it:
       courseF_maze_ramp1_2018_callout:
         grade2_CaringForNewPet_0_1: Dopo aver attaccato tutti i blocchi tra loro, premi "Esegui" per far partire il programma.
       courseF_maze_ramp2_callout:
-        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+        courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi dentro tutti i blocchi necessari per risolvere l'esercizio.
       courseF_maze_ramp2_2018_callout:
-        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+        courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi dentro tutti i blocchi necessari per risolvere l'esercizio.
       courseF_maze_ramp4_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
       courseF_maze_ramp4_2018_callout:
@@ -1660,7 +1659,7 @@ it:
       grade2_CaringForNewPet_0_callout:
         grade2_CaringForNewPet_0_1: Dopo aver attaccato tutti i blocchi tra loro, premi "Esegui" per far partire il programma.
       grade2_CaringForNewPet_1_callout:
-        grade2_CaringForNewPet_1_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+        grade2_CaringForNewPet_1_1: Questa è la cassetta degli attrezzi. Ci trovi dentro tutti i blocchi necessari per risolvere l'esercizio.
       grade2_CaringForNewPet_2_callout:
         grade2_CaringForNewPet_2_1: Throw this extra block away so it doesn't cause problems.
         grade2_CaringForNewPet_2_2: You can drag extra blocks to the toolbox to throw them away.

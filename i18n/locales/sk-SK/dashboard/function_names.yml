@@ -60,29 +60,29 @@ sk:
       check purple flower: skontrolovať fialovú kvetinu
       check flower make honey: skontrolovať kvetinu a spraviť med
       get nectar or make honey: zobrať nektár alebo spraviť med
-      make 3 honey: make 3 honey
-      get 5 nectar: get 5 nectar
-      make all honey: make all honey
+      make 3 honey: vyrob 3 medy
+      get 5 nectar: získaj 5 nektárov
+      make all honey: vyrob všetok med
       draw a star: nakresli hviezdu
-      game has been won: game has been won
-      draw: draw
+      game has been won: hra bola vyhraná
+      draw: nakresli
       draw bit: draw bit
-      draw a polygon: draw a polygon
-      draw a shape: draw a shape
-      get 2 and make 2: get 2 and make 2
-      draw a pinwheel: draw a pinwheel
-      drawTree: drawTree
-      drawHouse: drawHouse
-      drawBranch: drawBranch
-      drawSky: drawSky
-      fillScreen: fillScreen
-      drawHouseLayer: drawHouseLayer
-      swap: swap
-      dropR: dropR
-      grabL: grabL
-      dropL: dropL
-      init: init
-      grabR: grabR
+      draw a polygon: nakresli mnohouholník
+      draw a shape: nakresli tvar
+      get 2 and make 2: získaj 2 a vyrob 2
+      draw a pinwheel: nakresli veterník
+      drawTree: nakresliStrom
+      drawHouse: nakresliDom
+      drawBranch: nakresliHaluz
+      drawSky: nakresliOblohu
+      fillScreen: vyplňObrazovku
+      drawHouseLayer: nakresliVrstvuDomu
+      swap: zameň
+      dropR: pustiP
+      grabL: chyťĽ
+      dropL: pustiĽ
+      init: spusti
+      grabR: chyťP
       do something: robenie niečoho
       filter_pixel: filter_pixel
       draw_image: draw_image

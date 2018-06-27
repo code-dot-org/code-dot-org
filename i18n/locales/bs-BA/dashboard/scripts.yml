@@ -5433,7 +5433,7 @@ bs:
           description_audience: ''
           description_short: ''
           description: ''
-        coursea:
+        coursea-2017:
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Debugging: Unspotted Bugs'
@@ -5488,7 +5488,7 @@ bs:
           description_audience: 'Ages: 4-7'
           description_short: An introduction to computer science for pre-readers.
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
-        courseb:
+        courseb-2017:
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Debugging: Unspotted Bugs'
@@ -5523,7 +5523,7 @@ bs:
           description_audience: 'Ages: 5-8'
           description_short: An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
-        coursec:
+        coursec-2017:
           stages:
             Building a Foundation:
               name: 'Persistence: Building a Foundation'
@@ -5562,19 +5562,19 @@ bs:
           description_audience: 'Ages: 6-10'
           description_short: Learn the basics of computer science and create your own art, stories, and games.
           description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
-        coursed:
+        coursed-2017:
           stages:
             Introduction:
               name: Introduction to Online Puzzles
-              description_student: Ova lekcija će ti dati praksu u vještinama koje će ti trebati za ovaj kurs.
+              description_student: This lesson will give you practice in the skills you will need for this course.
               description_teacher: 'In this set of puzzles, students will begin with an introduction (or review depending on the experience of your class) of Code.org''s online workspace. There will be videos pointing out the basic functionality of the workspace including the `Run`, `Reset`, and `Step` buttons. Also discussed in these videos: dragging Blockly blocks, deleting Blockly blocks, and connecting Blockly blocks. Next, students will practice their _sequencing_ and _debugging_ skills in maze. From there, students will see new types of puzzles like Collector, Artist, and Harvester when they learn the very basics of _loops_.'
             'Algorithms: Graph Paper Programming':
               name: 'Programming: Graph Paper Programming'
-              description_student: U ovoj lekciji, ti ćeš programirati svog prijatelja da crta slike!
+              description_student: In this lesson, you will program your friend to draw pictures!
               description_teacher: By "programming" one another to draw pictures, students will begin to understand what coding is really about. The class will begin by having students instruct each other to color squares on graph paper in an effort to reproduce an existing picture. If there’s time, the lesson can conclude with images that the students create themselves.
             Events in Bounce:
               name: Events in Bounce
-              description_student: Jeste li ikad željeli da možete igrati video igrice u školi? U ovoj lekciji, Vi ćete trebati napraviti vlastitu igru!
+              description_student: Ever wish you could play video games in school? In this lesson, you will get to make your own!
               description_teacher: In this online activity, students will learn what events are, and how computers use them in programs like video games. Students will work through puzzles making the program react to events (like arrow buttons being pressed.) At the end of the puzzle, students will have the opportunity to customize their game with different speeds and sounds.
             Nested Loops:
               name: Ugniježdene Petlje
@@ -5586,7 +5586,7 @@ bs:
               description_teacher: Now that students know how to layer their loops, they can create so many beautiful things.  This lesson will take students through a series of exercises to help them create their own portfolio-ready images.
             'Algorithms: Relay Programming':
               name: 'Debugging: Relay Programming'
-              description_student: Sjetite se na početku kursa kada ste pravili crteže sa kodom? U ovoj lekciji, Vi ćete raditi sa timom na nečem što je veoma slično!
+              description_student: Remember at the beginning of the course when you made drawings with code? In this lesson, you will be working with a team to do something very similar!
               description_teacher: This activity will begin with a short review of "Graph Paper Programming," then will quickly move to a race against the clock, as students break into teams and work together to write a program one instruction at a time.
             Debugging in Bee:
               name: Debugging in Bee
@@ -5622,11 +5622,11 @@ bs:
               description_student: This lesson will guide you through making your very own video game.
               description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a game in Play Lab!
             'Unplugged: Binary':
-              name: 'Izvanmrežno: Binarni'
+              name: 'Beyond Programming: Binary Images'
               description_student: 'Learn how computers store pictures using simple ideas like on and off. '
               description_teacher: Though many people think of binary as strictly zeros and ones, students will be introduced to the idea that information can be represented in a variety of binary options. This lesson takes that concept one step further as it illustrates how a computer can store even more complex information (such as images and colors) in binary, as well.
             Artist Binary:
-              name: Umjetnik Binarno
+              name: Binary in Artist
               description_student: Direct your own artist to create a binary image using only commands to turn pixels on and off.
               description_teacher: Binary is extremely important in the world of computers. The majority of computers today store all sorts of information in binary form. This lesson helps demonstrate how it is possible to take something from real life and translate it into a series of ons and offs. Students will build binary images in Artist by translating 0s and 1s to offs and ons (or blacks and whites).
             Nested Loops Project in Artist:
@@ -5642,7 +5642,7 @@ bs:
           description_audience: 'Ages: 7-11'
           description_short: Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more.
           description: Learn new coding concepts including algorithms, nested loops, while loops, conditionals, and events. Get an introduction to digital citizenship before   creating your very own game or story that you can share.
-        coursee:
+        coursee-2017:
           stages:
             'Algorithms: Tangrams':
               name: 'Algorithms: Tangrams'
@@ -5772,7 +5772,7 @@ bs:
           description_audience: 'Ages: 8-12'
           description_short: Quickly cover concepts in Course C & D and then go further with functions.
           description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
-        coursef:
+        coursef-2017:
           stages:
             'Algorithms: Tangrams':
               name: 'Algorithms: Tangrams'
@@ -5787,7 +5787,7 @@ bs:
               description_student: Bullying is never okay. This lesson will teach you about what is and isn't okay to say online.
               description_teacher: "Students consider that while they are enjoying their favorite websites they may encounter messages from other kids that can make them feel angry, hurt, sad, or fearful. They explore ways to handle cyberbullying and how to respond in the face of upsetting language online.\n\nStudents discuss all the ways they use technology for communication and explore the similarities and differences between in-person and online communication. Students then brainstorm ways to respond to cyberbullying. "
             Ice Age Play Lab:
-              name: Ledeno doba Play Lab
+              name: Events in Ice Age
               description_student: Zamisli svoju omiljenu video igru. Jesi li se ikad pitao kako je napravljena? U ovim slagalicama ti ćeš razviti vlastitu video igru sa prijateljima iz Ledenog Doba!
               description_teacher: U ovoj lekciji, učenici su vođeni kroz priču sa likove iz Ledenog Doba. Učenici će raditi sa događajima i petljama da učine da se likovi kreću po ekranu, i dobiti će šansi da naprave vlastitu igru ili priču nakon razina na kojima su vođeni.
             Envelope Variables:
@@ -6105,7 +6105,7 @@ bs:
           stages:
             TTS:
               name: TTS
-        express:
+        express-2017:
           stages:
             'Programming Unplugged: My Robotic Friends':
               name: 'Programming Unplugged: My Robotic Friends'
@@ -6212,7 +6212,7 @@ bs:
           description_audience: 'Ages: 9-18'
           description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
-        pre-express:
+        pre-express-2017:
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Debugging: Unspotted Bugs'
