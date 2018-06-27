@@ -292,29 +292,29 @@ es:
           dos puntos (o juego de caracteres).
       courseA_unplugged_loops:
         title: Loops Unplugged
-        desc: In this lesson, you will learn about loops!
+        desc: "¡En esta lección, aprenderás sobre bucles!"
       courseB_unplugged_MRF:
         title: Actividad fuera de línea
-        desc: In this lesson, you will 'program' your friends!
+        desc: ¡En esta lección, "programarás" a tus amigos!
       courseB_unplugged_loopyMRF:
         title: Actividad fuera de línea
-        desc: Just like in 'My Robotic Friends', you will be 'programming' your friends,
-          but this time with loops!
+        desc: ¡Al igual que en "Mis amigos robóticos", "programarás" a tus amigos,
+          pero esta vez con bucles!
       courseC_Unplugged_ScreenOutTheMean:
         title: Actividad fuera de línea
-        desc: Today you will learn about what to do if someone is being mean online.
+        desc: Hoy aprenderás qué hacer si alguien está siendo malo en la red.
       courseD_unplugged_digitalCitizenship:
         title: Actividad fuera de línea
-        desc: Today you will learn what it means to be a Digital Citizen.
+        desc: Hoy aprenderás lo que significa ser un Ciudadano Digital.
       courseE_unplugged_privateInformation:
-        title: Actividad fuera de línea
-        desc: Today you will learn the difference between private and personal information!
+        title: 'Educación de Sentido Común: Información Privada y Personal '
+        desc: "¡Hoy aprenderás la diferencia entre información privada y personal!"
       courseF_unplugged_powerOfWords:
         title: Actividad fuera de línea
-        desc: Today you will learn about what to do if someone is being mean online.
+        desc: Hoy aprenderás qué hacer si alguien está siendo malo en la red.
       deeper learning description:
         title: ''
-        desc: 'translation missing: en-US.data.unplugged.desc'
+        desc: 'falta la traducción: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Algoritmos de la Vida Real: Planta una Semilla'
         desc: Esta lección resalta formas en las que usamos algoritmos en nuestra
@@ -529,7 +529,7 @@ es:
           muestran cómo mantenerse a salvo mientras se navega en Internet.
       courseA_unplugged_loops_2018:
         title: Loops Unplugged
-        desc: In this lesson, you will learn about loops!
+        desc: "¡En esta lección, aprenderás sobre bucles!"
       BigEvent_2018:
         title: El Gran Evento
         desc: Se presenta a los estudiantes el concepto de "eventos" en programación,
@@ -543,10 +543,10 @@ es:
           en la reproducción de un dibujo.
       courseD_unplugged_digitalCitizenship_2018:
         title: Actividad fuera de línea
-        desc: Today you will learn what it means to be a Digital Citizen.
+        desc: Hoy aprenderás lo que significa ser un Ciudadano Digital.
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: Actividad fuera de línea
-        desc: Today you will learn about what to do if someone is being mean online.
+        desc: Hoy aprenderás qué hacer si alguien está siendo malo en la red.
       Conditionals_2018:
         title: Condicionales
         desc: Para aprender acerca de las instrucciones condicionales, los estudiantes

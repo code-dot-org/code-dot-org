@@ -38,6 +38,7 @@ module.exports = function showAssetManager(assetChosen, typeFilter, onClose, opt
       assetChosen(fileWithPath);
     } : null,
     showUnderageWarning: !!options.showUnderageWarning,
+    projectId: dashboard.project.getCurrentId()
   }), codeDiv);
 
   dialog.show();

@@ -97,7 +97,7 @@ es-MX:
     facebook: Facebook
     windowslive: Cuenta de Microsoft
     clever: Cuenta inteligente
-    powerschool: Powerschool Account
+    powerschool: Cuenta Powerschool
     forgot_password: "¿Olvidaste tu contraseña?"
     need_confirmation: "¿No recibiste las instrucciones de confirmación?"
     need_unlock: "¿No recibiste las instrucciones de desbloqueo?"
@@ -141,8 +141,8 @@ es-MX:
     valid_password: "¡Contraseña válida!"
     invalid_password: La Contraseña debe tener al menos 6 caracteres
     mismatch_password: Las dos contraseñas que introdujo no coinciden
-    agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
-      and <a href='http://code.org/privacy'>Privacy Policy</a>.
+    agree_tos_privacy: Acepto los <a href='http://code.org/tos'>Términos de Servicio</a>
+      y la <a href='http://code.org/privacy'>Política de Privacidad</a>.
     under_13_consent: Si soy menor de 13 años de edad, confirmo que tengo autorización
       de mi padres o de mi tutor legal para utilizar los servicios de Code.org.
     agree_us_website: Acepto usar un sitio web con sede en Estados Unidos.
@@ -161,7 +161,7 @@ es-MX:
       de privacidad</a>.
     additional_information: Necesitamos alguna información adicional para continuar
       con su registro.
-    user_type_button: Update Account Type
+    user_type_button: Actualizar tipo de cuenta de usuario
     user_type_label: Tipo de cuenta
     user_type_teacher: Profesor
     user_type_student: estudiante
@@ -173,7 +173,7 @@ es-MX:
     email_preference_privacy: "(Vea nuestra politica de privacidad)"
     email_preference_yes: Sí
     email_preference_no: 'No'
-    email_preference_required: You must specify an email preference.
+    email_preference_required: Debes especificar una preferencia de email.
   school_info:
     title: Información de la escuela (opcional)
     school_country: País de la escuela
@@ -414,7 +414,8 @@ es-MX:
       ha sido confirmada:'
     email_confirm_wrong_email: "(¿Dirección de correo electrónico equivocada?)"
     email_resend_confirm: Reenviar las instrucciones de confirmación
-    new_email_hint: "(make sure you can receive emails to this email address)"
+    new_email_hint: "(asegúrate de que puedes recibir mensajes a esta dirección de
+      correo electrónico)"
     new_password_hint: "(déjalo en blanco si no quieres cambiarlo)"
     current_password_hint: "(necesitamos tu contraseña actual para confirmar los cambios)"
     delete: Eliminar tu cuenta
@@ -450,7 +451,7 @@ es-MX:
     enter_new_login_info: Ingresa tu nueva información de inicio de sesión
     confirm_secret_words: Confirma que eres tú al ingresar tus palabras secretas actuales
     enter_parent_email: Ingresa el email de tu padre o tutor (para recuperar la contraseña)
-    update: Update Account
+    update: Actualizar cuenta de usuario
   user_level:
     completed: Completada
     tried: Intentaste
@@ -641,8 +642,8 @@ es-MX:
       actualmente en su sección.
     already_enrolled_in_new_section: No puedes mover estos estudiantes porque este
       profesor ya los tiene en otra sección.
-    third_party_login: You cannot move students to a section that is synced with a
-      third party tool.
+    third_party_login: No puedes mover estudiantes a un grupo que se sincroniza con
+      una herramienta de terceros.
   share:
     title: Aprender en Code Studio
     description: Cualquier persona puede aprender informática. Crear juegos, aplicaciones
@@ -651,8 +652,8 @@ es-MX:
   gender:
     male: Varón
     female: Mujer
-    non_binary: Non-binary
-    not_listed: Preferred term not listed
+    non_binary: No binario
+    not_listed: Término preferido no listado
     none: Prefiero no contestar
   user_type:
     student: estudiante
@@ -1187,7 +1188,7 @@ es-MX:
     csd5_2: 'Capítulo 2: Resolviendo problemas de datos'
     csd6_1: 'Capítulo 1: Programación con Hardware'
     csd6_2: 'Capítulo 2: Construcción de prototipos físicos'
-    csd_survey: Post-Course Survey
+    csd_survey: Encuesta de final de curso
     csp1_1: 'Capítulo 1: Representación y transmisión de información'
     csp1_2: 'Capítulo 2: Inventando el Internet'
     csp2_1: 'Capítulo 1: Codificación y compresión de información compleja'
@@ -1204,7 +1205,7 @@ es-MX:
     csp_postap_1: 'Capítulo 1: Manipulación y visualización de datos'
     csp_postap_2: 'Capítulo 2: Aplicaciones y bases de datos'
     csp2_1_2018: 'Unidad 2: Información Digital'
-    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp3_1_2018: 'Unidad 3: Introducción a la Programación'
     csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: Preguntas de reflexión
   external_links:
@@ -1349,17 +1350,17 @@ es-MX:
         activities you did in this workshop?
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
-  courses_category: Full Courses
+  courses_category: Cursos Completos
   cookie_banner:
-    message: By continuing to browse our site or clicking "I agree," you agree to
-      the storing of cookies on your computer or device.
-    more_information: See Code.org's Privacy Policy.
+    message: Si continúas navegando en nuestro sitio web o haces clic en "Acepto",
+      aceptas que se almacenes cookies en tu ordenador o dispositivo.
+    more_information: Lee la Política de Privacidad de Code.org.
     accept: De acuerdo
   gdpr_dialog:
-    heading: Do you agree to using a web site based in the United States?
-    message: Data from your use of this site may be sent to and stored or processed
-      in the United States.
-    link_intro: For details see our
-    privacy_policy: privacy policy
-    logout: Logout
+    heading: "¿Aceptas utilizar un sitio web con sede en los Estados Unidos?"
+    message: Datos de tu uso de este sitio podrán ser enviados, almacenados o procesados
+      en Estados Unidos.
+    link_intro: Para más información, mira nuestra
+    privacy_policy: política de privacidad
+    logout: Cerrar sesión
     true: Sí

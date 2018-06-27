@@ -5199,23 +5199,25 @@ zh-CN:
       courseA_harvester_loops10_authored_hint: { }
       courseA_harvester_loops11_authored_hint: { }
       courseA_harvester_loops2_authored_hint:
-        courseA_harvester_loops2_a: '代码会有**四个**`向西移动`模块和**四个**`采摘玉米`模块。 '
+        courseA_harvester_loops2_a: "代码会有**四个**`向西移动`模块和**四个**`采摘玉米`模块。 "
       courseA_harvester_loops3_authored_hint:
         courseA_harvester_loops3_a: |-
           用像这样的`重复`模块来帮助你！
           <xml><block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="2-10">4</title>
           </block></xml>
-        courseA_harvester_loops3_b: 要重复代码, 拖出一个`重复 `循环, 然后把它放在你想要的模块里面。
+        courseA_harvester_loops3_b: "要重复代码, 拖出一个`重复 `循环, 然后把它放在你想要的模块里面。"
       courseA_harvester_loops4_authored_hint:
         courseA_harvester_loops4_a: 勇敢按下`运行`按钮，看看会发生什么！
         courseA_harvester_loops4_b: 有多少块玉米？你的代码重复了多少次？
       courseA_harvester_loops5_authored_hint:
         courseA_harvester_loops5_a: 如果你被难住了，试着分两部分来解决这个问题，一部分在拐角前，另一部分在拐角后。
-        courseA_harvester_loops5_b: 最终的代码会有**一个**`重复`循环，**一个**`向南移动`模块和**一个**`向东`移动的模块。
+        courseA_harvester_loops5_b: |-
+          最终的代码会有**一个**`重复`循环，**一个**`向南移动`模块和**一个**`向东`移动的模块。
         courseA_harvester_loops5_c: 通过这条路来采摘所有的玉米。
       courseA_harvester_loops5a_authored_hint:
-        courseA_harvester_loops5a_a: 你需要一个`重复`循环连着另一个。
+        courseA_harvester_loops5a_a: |-
+          你需要一个`重复`循环连着另一个。
         courseA_harvester_loops5a_b: 一个循环要重复`向南移动`，另一个要重复`向东移动`。
         courseA_harvester_loops5a_c: 走这条路，先往一个方向走，再往另一个方向走。
       courseA_harvester_loops5b_authored_hint:
@@ -5226,7 +5228,8 @@ zh-CN:
         courseA_harvester_loops6_a: 如果你被难住了，试着在纸上写下步骤, 寻找重复的规律。
         courseA_harvester_loops6_b: 想要采摘所有玉米就得走这条路。
       courseA_harvester_loops7_authored_hint:
-        courseA_harvester_loops7_a: 你需要两个`重复`循环相连！
+        courseA_harvester_loops7_a: |-
+          你需要两个`重复`循环相连！
         courseA_harvester_loops7_b: 用两个循环来沿着这条路走。
       courseA_harvester_loops8_authored_hint: { }
       courseA_harvester_loops9_authored_hint:
@@ -5845,7 +5848,8 @@ zh-CN:
         courseB_artist_loops3_a: 记住使用一个`重复`循环来更好地编码！
         courseB_artist_loops3_b: 艺术家会想向南移动, 画出这条线。
       courseB_artist_loops3_2018_authored_hint:
-        courseB_artist_loops3_a: 记住使用一个`重复`循环来更好地编码！
+        courseB_artist_loops3_a: |-
+          记住使用一个`重复`循环来更好地编码！
         courseB_artist_loops3_b: 艺术家会想向南移动, 画出这条线。
       courseB_artist_loops4_authored_hint:
         courseB_artist_loops4_a: 跳转模块允许您在不绘制直线的情况下向前移动。
@@ -5858,7 +5862,8 @@ zh-CN:
       courseB_artist_loops5_authored_hint:
         courseB_artist_loops5_a: 拖出一个`重复`循环，然后把其他模块放在它里面。需要重复几次？
       courseB_artist_loops5_2018_authored_hint:
-        courseB_artist_loops5_a: 拖出一个`重复`循环，然后把其他模块放在它里面。需要重复几次？
+        courseB_artist_loops5_a: |-
+          拖出一个`重复`循环，然后把其他模块放在它里面。需要重复几次？
       courseB_artist_loops6_authored_hint:
         courseB_artist_loops6_b: 试着在一张纸上记下移动的路线, 并找出模式。
       courseB_artist_loops6_2018_authored_hint:
@@ -5933,7 +5938,8 @@ zh-CN:
       courseB_collector_loops4_2018_authored_hint:
         courseB_collector_loops4_a: 请试着使用步进按钮来找出问题所在。
         courseB_collector_loops4_b: 要改变劳雷尔所走的距离, 请更改循环运行的次数。
-        courseB_collector_loops4_c: 在完成了`重复`循环后，劳雷尔需要走下来, 并收集宝藏,!
+        courseB_collector_loops4_c: |-
+          在完成了`重复`循环后，劳雷尔需要走下来, 并收集宝藏,!
       courseB_collector_loops5_authored_hint:
         courseB_collector_loops5_a: 请使用一个以上的循环来完成任务。
         courseB_collector_loops5_b: 尝试运行代码几次, 看看会发生什么。
@@ -5948,7 +5954,8 @@ zh-CN:
       courseB_collector_loops6_2018_authored_hint:
         courseB_collector_loops6_a: 无法找出哪里出错？请使用"步进"按钮来逐模块运行程序。
         courseB_collector_loops6_b: 通过单击 "3" 并选择其他数字, 可以更改重复循环运行的次数。
-        courseB_collector_loops6_c: 您需使用 3次 ' 重复 ' 循环来解决这个关卡。
+        courseB_collector_loops6_c: |-
+          您需使用 3次 ' 重复 ' 循环来解决这个关卡。
         courseB_collector_loops6_d: 如果你感到迷惑, 试着把这个关卡分成3块。
       courseB_collector_loops7_authored_hint:
         courseB_collector_loops7_a: 如果此关卡太难，请试着在纸张上把它画出来，看看怎么解决。
@@ -6264,7 +6271,8 @@ zh-CN:
           <xml><block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="3-10">5</title>
           </block></xml>
-        courseB_iceage_loops3_b: 要重复代码, 拖出一个`重复 `循环, 然后把它放在你想要的模块里面。
+        courseB_iceage_loops3_b: |-
+          要重复代码, 拖出一个`重复 `循环, 然后把它放在你想要的模块里面。
       courseB_iceage_loops4_authored_hint:
         courseB_iceage_loops4_a: 写下斯奎特要到达橡子的步骤。找到规律了吗？
         courseB_iceage_loops4_b: 别害怕运行你的代码，看看会发生什么！
@@ -6840,7 +6848,8 @@ zh-CN:
       courseB_starWars_prog9_2018_authored_hint:
         courseB_starWars_prog9_a: 不要害怕犯错误! 即使你还没有解决这个关卡，运行代码, 看看会发生什么。
         courseB_starWars_prog9_b: 解决这个难题有很多方法。
-        courseB_starWars_prog9_c: 使用`重复`循环有帮助吗？
+        courseB_starWars_prog9_c: |-
+          使用`重复`循环有帮助吗？
       courseC_PlayLab_embed_events9_authored_hint: { }
       courseC_PlayLab_events1_authored_hint:
         courseC_PlayLab_events1_a: |-

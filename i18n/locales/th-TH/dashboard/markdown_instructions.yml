@@ -65,7 +65,7 @@ th:
       2-3 Artist Loops New 1_markdown_instruction: |
         ลองวาดหัวหุ่นยนต์ตัวนี้ คุณสามารถทำรูปสี่เหลี่ยมจตุรัสให้มีด้านที่ยาว 100 พิกเซล ได้ไหม?
         <br/>
-      2-3 Artist Loops New 10_markdown_instruction: ตอนนี้เรามาเชื่อมต่อกลุ่มของ V เข้าด้วยกันด้วยลูป
+      2-3 Artist Loops New 10_markdown_instruction: ตอนนี้เรามาเชื่อมต่อกลุ่มของ V เข้าด้วยกันด้วยการใช้ลูป
       2-3 Artist Loops New 11_markdown_instruction: "ถึงเวลาที่จะมาทำบางอย่างที่เก๋ไก๋กัน \n\nสร้างโค้ดจากปริศนาล่าสุดอีกครั้ง แต่ตอนนี้เพิ่มหันไปทางซ้าย 30 องศาภายในลูป และ ทำซ้ำ 24 ครั้งแทนที่จะเป็น 8 ครั้ง"
       2-3 Artist Loops New 12_markdown_instruction: 'วาดเพชรที่มีด้านยาว 100 พิกเซล '
       2-3 Artist Loops New 13_markdown_instruction: "เราจะเริ่มต้นด้วยโค้ดบางอย่าง (เป็นสีเทา) เพื่อทำเพชรเม็ดหนึ่ง. \n\nลูปโค้ดสีเทาเพื่อสร้างรูปแบบที่สนุกสนาน!"
@@ -74,9 +74,9 @@ th:
         Now, draw anything you like!
         <br/><br/>
       2-3 Artist Loops New 2_markdown_instruction: |-
-        นี่คือปริศนาเดียวกันที่เราเพิ่งแก้ไขไป แต่ครั้งนี้เราสามารถใช้บล็อก`ย้ายไปข้างหน้า` หนึ่งบล็อกและบล็อก` หันไป ` อีกหนึ่งบล็อกเท่านั้น
+        "นี่คือปริศนาเดียวกันที่เราเพิ่งแก้ไขไป แต่ครั้งนี้เราสามารถใช้บล็อก`เดินไปข้างหน้า` เพียงหนึ่งบล็อกและบล็อก` หันไป ` อีกเพียงหนึ่งบล็อกเท่านั้น
         
-        คุณสามารถใช้ ` ทำซ้ำ ` เพื่อแก้ปริศนานี้ได้ไหม?
+        คุณสามารถใช้ ` ทำซ้ำ ` เพื่อแก้ปริศนานี้ได้ไหม?"
       2-3 Artist Loops New 9_markdown_instruction: วาดตัว V อย่างง่ายๆ (โดยที่ทั้งสองด้านยาว 50 พิกเซล) เพื่อทำลูกศรให้เสร็จ
       2-3 Artist Nested Loops 1_markdown_instruction: |+
         คุณใช้ลูปเพื่อวาดรูปร่างมาก่อนแล้ว แต่ตอนนี้เรากำลังจะวางลูปไว้ภายในลูปอื่นๆ!
@@ -9884,7 +9884,7 @@ th:
         
         _Hint: You can look at [Stage 12 Bubble 8](https://levelbuilder-studio.code.org/s/CSDU3-Draft/stage/12/puzzle/8) to see a working scoreboard.  Scroll down in the code until you see the comment "draw score"_
       CSD U3 rect_markdown_instruction: "# Explore Game Lab\n\nWelcome to Game Lab, where you can create interactive animations and games!   \n\nYou've already practiced the basics of putting shapes on a grid.  In Game Lab, you'll do the same with the display area on the left.\n\n# Do This\n\n* Look at the line of code in the workspace below these instructions ( [Show me where](#triggercallout=block_trigger) ) and discuss with your partner where you think the shape will be drawn on the grid.\n* Click <img src=\"https://images.code.org/9e963203e9cafd558b760730d13537ca-image-1461783998310.06.20 PM.png\" width=100> to run the program and see what happens. ( [Show me where](#triggercallout=run_trigger) )\n* Change the numbers inside the block, then try running the program again.\n* Try to place the rectangle near the bottom right of the screen."
-      CSD U3 rect_2018_markdown_instruction: "# Explore Game Lab\n\nWelcome to Game Lab, where you can create interactive animations and games!   \n\nYou've already practiced the basics of putting shapes on a grid.  In Game Lab, you'll do the same with the display area on the left.\n\n# Do This\n\n* Look at the line of code in the workspace below these instructions ( [Show me where](#triggercallout=block_trigger) ) and discuss with your partner where you think the shape will be drawn on the grid.\n* Click <img src=\"https://images.code.org/9e963203e9cafd558b760730d13537ca-image-1461783998310.06.20 PM.png\" width=100> to run the program and see what happens. ( [Show me where](#triggercallout=run_trigger) )\n* Change the numbers inside the block, then try running the program again.\n* Try to place the rectangle near the bottom right of the screen."
+      CSD U3 rect_2018_markdown_instruction: "# Explore Game Lab\n\nWelcome to Game Lab, where you can create interactive animations and games!   \n\nYou've already practiced the basics of putting shapes on a grid.  In Game Lab, you'll do the same with the display area on the left.\n\n# Do This\n\n* Look at the line of code in the workspace below these instructions ( [Show me where](#triggercallout=block_trigger) ) and discuss with your partner where you think the shape will be drawn on the grid.\n* Click <img src=\"https://images.code.org/9e963203e9cafd558b760730d13537ca-image-1461783998310.06.20 PM.png\" width=100> to run the program and see what happens.\n* Change the numbers inside the block, then try running the program again.\n* Try to place the rectangle near the bottom right of the screen."
       CSD U3 sequence_markdown_instruction: |-
         <img src="https://images.code.org/30d68fb30db5b61187f104f46292e052-image-1493060980724.08.05 PM.png" style="float:right">
         # Order Matters
@@ -27313,6 +27313,7 @@ th:
       courseA_playLab_events4_2018_markdown_instruction: Now, add another event block to get Jorge to move right when the right arrow button is clicked.
       courseA_playLab_events5_markdown_instruction: Add events to have Jorge move up and down when the up arrow and down arrow buttons are pressed.
       courseA_playLab_events5_2018_markdown_instruction: Add events to have Jorge move up and down when the up arrow and down arrow buttons are pressed.
+      courseA_playLab_events7_2018_markdown_instruction: "*Freeplay:* Add anything you want to this game.  Can you make the dinosaur disappear when Jorge runs into him?"
       courseA_playlab_events_challenge1_markdown_instruction: |-
         Clicking Olive will make Robin appear! Can you write code to show the rest of the characters too?
         
@@ -30446,7 +30447,7 @@ th:
       grade2_CaringForNewPet_3_markdown_instruction: '*"Trace the path and lead me to the silly pig. Avoid TNT or feathers will fly!"*'
       grade2_CaringForNewPet_3D_markdown_instruction: '*"Follow this path to get me to the pig!"*'
       grade2_CaringForNewPet_4_markdown_instruction: '*"Keep calm and help me find the bad pig. Otherwise I might get angry!"*'
-      grade2_CaringForNewPet_6_markdown_instruction: "**Challenge:** Guide me to the green evilness! (Watch out for TNT)"
+      grade2_CaringForNewPet_6_markdown_instruction: "**การท้าทาย:** พาฉันใปหาเจ้าชั่วร้ายตัวเขียวนั่น! (ระวังระเบิดหน่อยนะ)"
       grade2_CaringForNewPet_7D_markdown_instruction: |-
         *"It's time to get angry!"*
         
@@ -30487,7 +30488,7 @@ th:
         วาดรูปทรงเพชรนี้ มีด้านขนาด 200 พิกเซล
       grade2_MakeDogTag_6_markdown_instruction: "**Challenge:** This tag is a special one!  Can you figure out how to draw the outline?  \n(The long side is 150 pixels and each of the short sides are 75 pixels.)"
       grade2_MakeDogTag_7_markdown_instruction: "One more tag.  This is a triangle for Pi.  \n(Each side is 150 pixels)"
-      grade2_MakeDogTag_8_markdown_instruction: ตอนนี้เรามาเชื่อมต่อกลุ่มของ V เข้าด้วยกันด้วยลูป
+      grade2_MakeDogTag_8_markdown_instruction: ตอนนี้เรามาเชื่อมต่อกลุ่มของ V เข้าด้วยกันด้วยการใช้ลูป
       grade2_MakeDogTag_9_markdown_instruction: "ถึงเวลาที่จะมาทำบางอย่างที่เก๋ไก๋กัน \n\nสร้างโค้ดจากปริศนาล่าสุดอีกครั้ง แต่ตอนนี้เพิ่มหันไปทางซ้าย 30 องศาภายในลูป และ ทำซ้ำ 24 ครั้งแทนที่จะเป็น 8 ครั้ง"
       grade2_MakeDogTag_BFP_markdown_instruction: |-
         *"สวัสดี ฉันเป็นศิลปิน คุณสามารถเขียนโค้ดที่จะทำให้ฉันวาดได้เกือบทุกสิ่ง "*
@@ -30842,7 +30843,7 @@ th:
       grade4_playlab_test2_markdown_instruction: "Here's a function called `jump` that causes your main character to jump up 100 pixels. \n\nRun the program and use the jump function to collect all of the flags by moving the dog with the arrow keys."
       grade4_review_artist1_markdown_instruction: "Hi, I'm an artist. You can write code to make me draw almost anything. Use a few blocks to make me draw over the grey lines in the picture. (Each line is 100 pixels long)\n\n<br>  \n"
       grade4_review_artist2_markdown_instruction: "This house needs a roof! Draw the triangle.  \n\nHint: all three sides are the same length.\n\n<img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\" width=\"300\"/>"
-      grade4_review_artist3_markdown_instruction: "บล็อกกระโดดจะเคลื่อนย้ายศิลปินโดยไม่มีการวาดรูป\nวาดเส้นประโดยใช้บล็อก `กระโดดไปข้างหน้า...` และบล็อก `วาดเส้นไปข้างหน้า`\nโดยแต่ละเส้นมีความยาว 50 พิกเซล"
+      grade4_review_artist3_markdown_instruction: "บล็อกกระโดดจะเคลื่อนย้ายศิลปินโดยไม่มีการวาดรูป\nวาดเส้นประโดยใช้บล็อก `กระโดดไปข้างหน้า...` และบล็อก `เดินไปข้างหน้า`\nโดยแต่ละเส้นมีความยาว 50 พิกเซล"
       grade4_review_bee1_markdown_instruction: ตอนนี้ใช้บล็อก`ทำซ้ำ` เพื่อเก็บน้ำหวานจากเกสรทั้งหมดและทำน้ำผี้งให้หมดด้วย
       grade4_review_bee3_markdown_instruction: |-
         เป็นผึ้งที่ขยันจริงๆ!

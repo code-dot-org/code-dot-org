@@ -716,7 +716,7 @@ ko:
       CSP U4 - JSON Object Intro - Bad Way_instruction: Trigger both the keyboard and mouse event and examine the event objects displayed in the console. Why might an object be the best way to store this information? (Click to see full instructions)
       CSP U4 - JSON Object Intro - Good Way_instruction: 'Create an object with at least 5 values including at least one string and one number. (Click to see full instructions) '
       CSP U4 - Objects - createObject_instruction: 'Create an object with at least 5 values including at least one string and one number. (Click to see full instructions) '
-      CSP student contact info_instruction: Please enter your email address.
+      CSP student contact info_instruction: 이메일 주소를 입력해주세요.
       CSPU5 Add Screens to Chaser Game_instruction: Recreate the game from the "Chaser Game" with a Welcome Screen and Game Over Screen. (Click to see full instructions.)
       CSPU5 Add a 2nd Screen_instruction: Make a 2 screen app with a black screen and a white screen. (Click to see detailed instructions)
       CSPU5 Add a 2nd Screen_2018_instruction: Make a 2 screen app with a black screen and a white screen. (Click to see detailed instructions)
@@ -1516,7 +1516,7 @@ ko:
       Course 4 SCV 6_instruction: 설명을 다시 보려면 여기를 클릭하세요.
       Course 4 SCVP 1_instruction: "매개 변수들을 이용해서 화가가 왼쪽/오른쪽/위쪽/아래쪽으로 x 필셀 만큼 점프 뛰는 함수를 만들어보세요.\n(음수, 양수 모두 사용 가능하도록 만들면 됩니다.)"
       Course 4 Variables Assessment_instruction: "한 변의 크기를 지정하기 위한 변수를 사용해 이 이미지를 만들어보세요.\n각 선의 길이는 50 픽셀입니다."
-      Course1BeePuzzle12_instruction: Get three nectars and then make two honey
+      Course1BeePuzzle12_instruction: 꽃꿀을 3개 모은 후, 2개의 꿀을 만들어보세요.
       Course1MazeAssessment1_instruction: |-
         This is a test!
         Move one way, then another to get me to the pig
@@ -1796,7 +1796,7 @@ ko:
       K-1 Bee Loops 9_instruction: 꽃꿀을 모두 모아 꿀을 만들어 보세요.
       K-1 Bee Loops Assessment 1_instruction: "꿀을 만들기 위해서, 꽃꿀을 모으세요.\n이동하기 위해서 반복 구조들을 사용하세요!"
       K-1 Bee Loops Assessment 2_instruction: 반복 구조들을 사용해서 꽃꿀을 모아 꿀을 만들어 주세요!
-      K-1 Bee Puzzle 12_instruction: Get three nectars and then make two honey
+      K-1 Bee Puzzle 12_instruction: 꽃꿀을 3개 모은 후, 2개의 꿀을 만들어보세요.
       K-1 Building a Foundation Assessment_instruction: 3단계 피라미드를 만들어보세요. 한 조각 씩 그려 완성해보세요!
       K-1 Maze 10_instruction: 'TNT를 피해 돼지에게 이동시켜주세요! '
       K-1 Maze 11_instruction: '길을 따라가서 돼지를 잡게 해주세요. TNT를 피해가지 않으면 깃털들이 날리게 될 거에요! 힌트: TNT는 내 아래에 있습니다.'
@@ -3348,7 +3348,7 @@ ko:
       courseA_playLab_events6_instruction: Make this more interesting by changing the background and playing a random sound when Jorge is clicked.
       courseA_playLab_events6_2018_instruction: Make this more interesting by changing the background and playing a random sound when Jorge is clicked.
       courseA_playLab_events7_instruction: Add anything you want to this game.  Can you make the dinosaur disappear when Jorge runs into him?
-      courseA_playLab_events7_2018_instruction: Add anything you want to this game.  Can you make the dinosaur disappear when Jorge runs into him?
+      courseA_playLab_events7_2018_instruction: "*Freeplay:* Add anything you want to this game."
       courseA_playlab_events_challenge1_instruction: Can you write code to show the rest of my friends? The hints will help you do this project step-by-step.
       courseA_playlab_events_challenge1_2018_instruction: Can you write code to show the rest of my friends? The hints will help you do this project step-by-step.
       courseA_playlab_events_challenge2_instruction: Give everyone something to do when you click on them.

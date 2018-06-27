@@ -7052,7 +7052,7 @@ ne:
           description_audience: ''
           description_short: ''
           description: ''
-        coursea:
+        coursea-2017:
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Debugging: Unspotted Bugs'
@@ -7061,25 +7061,23 @@ ne:
                 of debugging.  Students will learn the mantra: "What happened?  What
                 was supposed to happen? What does that tell you?"'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence & Frustration: Stevie and the Marbles'
+              name: 'Persistence: Stevie and the Big Project'
               description_student: ''
-              description_teacher: "When students run into a barrier while answering
-                a question or working on a project, it’s so easy for them to get frustrated
-                and give up.  This lesson will introduce students to the idea that
-                frustration can be an important part of learning. Here, frustration
-                is presented as a step in the creative process, rather than a sign
-                of failure.\r\n\r\nThis lession can be done over one or two class
-                sessions.  If you have more time, feel free to draw out the building
-                and revising phase of the Marble Run activity."
+              description_teacher: |-
+                When students run into a barrier while answering a question or working on a project, it’s so easy for them to get frustrated and give up.  This lesson will introduce students to the idea that frustration can be an important part of learning. Here, frustration is presented as a step in the creative process, rather than a sign of failure.\r
+                \r
+                This lession can be done over one or two class sessions.  If you have more time, feel free to draw out the building and revising phase of the Marble Run activity.
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-life Algorithms: Plant a Seed'
               description_student: ''
-              description_teacher: "In this lesson, students will relate the concept
+              description_teacher: 'In this lesson, students will relate the concept
                 of algorithms back to everyday, real-life activities by planting an
                 actual seed. The goal here is to start building the skills to translate
-                real-world situations to online scenarios and vice versa.\r\n"
+                real-world situations to online scenarios and vice versa.\r
+
+'
             Learn to Drag and Drop:
-              name: Learn to Drag and Drop
+              name: Sequencing with Drag and Drop
               description_student: ''
               description_teacher: This lesson will give students an idea of what
                 to expect when they head to the computer lab. It begins with a brief
@@ -7104,7 +7102,7 @@ ne:
                 into this stage for added practice with problem solving and critical
                 thinking.
             Going Places Safely:
-              name: Going Places Safely
+              name: 'Digital Citizenship: Going Places Safely'
               description_student: ''
               description_teacher: In collaboration with [r common-sense-media], this
                 lesson helps students learn that many websites ask for information
@@ -7145,29 +7143,24 @@ ne:
                 opportunity to learn how to use events in Play Lab and to apply all
                 of the coding skills they've learned to create an animated game. It's
                 time to get creative and make a story in the Play Lab!
-          title: 'CS Fundamentals: Course A'
+          title: Course A
           assignment_family_title: Course A
-          description_audience: ''
-          description_short: An introduction to computer science for early readers.
-          description: Course A offers computer science curriculum for beginning readers
-            around the kindergarten age range. Students will learn to program using
-            commands like loops and events. The lessons featured in this course also
-            teach students to collaborate with others meaningfully, investigate different
-            problem-solving techniques, persist in the face of difficult tasks, and
-            learn about internet safety. By the end of this course, students create
-            their very own custom game or story from Play Lab that they can share.
-        courseb:
+          description_audience: 'Ages: 4-7'
+          description_short: An introduction to computer science for pre-readers.
+          description: Learn the basics of computer science and internet safety. At
+            the end of the course, create your very own game or story you can share.
+        courseb-2017:
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Debugging: Unspotted Bugs'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence & Frustration: Stevie and the Marbles'
+              name: 'Persistence: Stevie and the Big Project'
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-life Algorithms: Plant a Seed'
             Learn to Drag and Drop:
-              name: Learn to Drag and Drop
+              name: Sequencing with Drag and Drop
             Your Digital Footprint:
-              name: Your Digital Footprint
+              name: 'Digital Citizenship: My Digital Footprint'
             'Programming: My Robotic Friends':
               name: 'Programming: My Robotic Friends'
             Programming in Maze:
@@ -7186,23 +7179,17 @@ ne:
               name: More Programming in Maze
             Programming with Rey and BB-8:
               name: Programming with Rey and BB-8
-          title: 'CS Fundamentals: Course B'
+          title: Course B
           assignment_family_title: Course B
-          description_audience: ''
-          description_short: An introduction to computer science for early readers.
-          description: "Course B was developed with first graders in mind. Tailored
-            to a novice reading level, this course also assumes limited knowledge
-            of shapes and numbers.\r\n\r\nAt the moment, Course B closely parallels
-            Course A, but provides more complex unplugged activities and more variety
-            in puzzles. Students will learn the basics of programming, collaboration
-            techniques, investigation and critical thinking skills, persistence in
-            the face of difficulty, and internet safety. At the end of this course
-            students will create their very own custom game from Play Lab that they
-            can share with a link."
-        coursec:
+          description_audience: 'Ages: 5-8'
+          description_short: An introduction to computer science for pre-readers.
+            (Similar to Course A, but with more variety for older students.)
+          description: Learn the basics of computer science and internet safety. At
+            the end of the course, create your very own game or story you can share.
+        coursec-2017:
           stages:
             Building a Foundation:
-              name: Building a Foundation
+              name: 'Persistence: Building a Foundation'
             Programming in Maze:
               name: Programming in Maze
             Debugging in Maze:
@@ -7226,31 +7213,26 @@ ne:
             Events in Play Lab:
               name: Events in Play Lab
             Screen Out the Mean:
-              name: Screen Out the Mean
+              name: 'Digital Citizenship: Screen Out the Mean'
             Binary Bracelets:
-              name: Binary Bracelets
+              name: 'Beyond Programming: Binary Bracelets'
             Loops in Artist:
               name: Loops in Artist
             Loops with Rey and BB-8:
               name: Loops with Rey and BB-8
-          title: 'CS Fundamentals: Course C'
+          title: Course C
           assignment_family_title: Course C
-          description_audience: ''
+          description_audience: 'Ages: 6-10'
           description_short: Learn the basics of computer science and create your
             own art, stories, and games.
-          description: "Course C was developed for students in and around the second
-            grade. It uses a limited understanding of shapes and elementary math concepts.\r\n\r\nStudents
-            will create programs with loops, events, and conditionals. They will translate
-            their initials into binary, investigate different problem-solving techniques,
-            and discuss how to respond to cyberbullying. By the end of the course,
-            students will create interactive games that they can share. Each concept
-            in Course C is taught from the beginning, graduating toward experiences
-            that allow for growth and creativity to provide all students a rich and
-            novel programming experience."
-        coursed:
+          description: Create programs with sequencing, loops, and events. Translate
+            your initials into binary, investigate different problem-solving techniques,
+            and learn how to respond to cyberbullying. At the end of the course, create
+            your very own game or story you can share!
+        coursed-2017:
           stages:
             Introduction:
-              name: Introduction
+              name: Introduction to Online Puzzles
               description_student: This lesson will give you practice in the skills
                 you will need for this course.
               description_teacher: 'In this set of puzzles, students will begin with
@@ -7263,7 +7245,7 @@ ne:
                 maze. From there, students will see new types of puzzles like Collector,
                 Artist, and Harvester when they learn the very basics of _loops_.'
             'Algorithms: Graph Paper Programming':
-              name: 'Algorithms: Graph Paper Programming'
+              name: 'Programming: Graph Paper Programming'
               description_student: In this lesson, you will program your friend to
                 draw pictures!
               description_teacher: By "programming" one another to draw pictures,
@@ -7295,16 +7277,14 @@ ne:
                 their program when they click `Run`.
             Nested Loops in Artist:
               name: Nested Loops in Artist
-              description_student: More nested loops! This time, you get to make some
-                AMAZING drawing with nested loops.
-              description_teacher: Students will create intricate designs using Artist
-                in today's set of puzzles. By continuing to practice nested loops
-                with new goals, students will see more uses of loops in general. This
-                set of puzzles also offers a lot more potential for creativity with
-                an opportunity for students to create their own design at the end
-                of the stage.
+              description_student: Here you will be using nested loops to make cool
+                drawings to show to your family and friends.
+              description_teacher: Now that students know how to layer their loops,
+                they can create so many beautiful things.  This lesson will take students
+                through a series of exercises to help them create their own portfolio-ready
+                images.
             'Algorithms: Relay Programming':
-              name: 'Algorithms: Relay Programming'
+              name: 'Debugging: Relay Programming'
               description_student: Remember at the beginning of the course when you
                 made drawings with code? In this lesson, you will be working with
                 a team to do something very similar!
@@ -7330,19 +7310,17 @@ ne:
                 students will know they need to keep filling the holes and digging
                 the dirt as long as the ground is not flat."
             Conditionals with Cards:
-              name: Conditionals with Cards
+              name: 'If/Else: Conditionals with Cards'
               description_student: It's time to play a game where you earn points
                 only under certain conditions!
-              description_teacher: 'This lesson demonstrates how conditionals can
+              description_teacher: "This lesson demonstrates how conditionals can
                 be used to tailor a program to specific information. We don’t always
                 have all of the information we need when writing a program. Sometimes
                 you will want to do something different in one situation than in another,
-                even if you don''t know what situation will be true when your code
+                even if you don't know what situation will be true when your code
                 runs. That is where conditionals come in. Conditionals allow a computer
                 to make a decision, based on the information that is true any time
-                your code is run.
-
-'
+                your code is run.\n\n"
             Conditionals in Bee:
               name: Conditionals in Bee
               description_student: 'Now that you understand conditionals, it''s time
@@ -7363,7 +7341,7 @@ ne:
                 will create more complex code that shows both impressive creativity
                 and critical thinking!'
             Conditionals & Loops in Farmer:
-              name: Conditionals & Loops in Farmer
+              name: Conditionals & Loops in Harvester
               description_student: It's not always clear when to use each conditional.  This
                 lesson will help you get practice deciding what to do.
               description_teacher: Students will practice `while` loops, `until` loops,
@@ -7371,7 +7349,7 @@ ne:
                 By practicing all three, students will learn to write complex and
                 flexible code.
             Digital Citizenship:
-              name: Digital Citizenship
+              name: 'Digital Citizenship: Practicing Digital Citizenship'
               description_student: Some information is not safe to share online. This
                 lesson will help you learn the difference between safe and private
                 information.
@@ -7388,7 +7366,7 @@ ne:
                 of the coding skills they've learned to create an animated game. It's
                 time to get creative and make a game in Play Lab!
             'Unplugged: Binary':
-              name: 'Unplugged: Binary'
+              name: 'Beyond Programming: Binary Images'
               description_student: 'Learn how computers store pictures using simple
                 ideas like on and off. '
               description_teacher: Though many people think of binary as strictly
@@ -7398,7 +7376,7 @@ ne:
                 store even more complex information (such as images and colors) in
                 binary, as well.
             Artist Binary:
-              name: Artist Binary
+              name: Binary in Artist
               description_student: Direct your own artist to create a binary image
                 using only commands to turn pixels on and off.
               description_teacher: Binary is extremely important in the world of computers.
@@ -7408,13 +7386,15 @@ ne:
                 offs. Students will build binary images in Artist by translating 0s
                 and 1s to offs and ons (or blacks and whites).
             Nested Loops Project in Artist:
-              name: Nested Loops Project in Artist
-              description_student: Here you will be using nested loops to make cool
-                projects to show to your family and friends.
-              description_teacher: Now that students know how to layer their loops,
-                they can create so many beautiful things.  This lesson will take students
-                through a series of exercises to help them create their own portfolio-ready
-                images.
+              name: Nested Loops in Frozen
+              description_student: More nested loops! This time, you get to make some
+                AMAZING drawing with nested loops.
+              description_teacher: Students will create intricate designs using Artist
+                in today's set of puzzles. By continuing to practice nested loops
+                with new goals, students will see more uses of loops in general. This
+                set of puzzles also offers a lot more potential for creativity with
+                an opportunity for students to create their own design at the end
+                of the stage.
             Debugging in Collector:
               name: Debugging in Collector
               description_student: Have you ever run into problems while coding? In
@@ -7424,26 +7404,21 @@ ne:
                 debugging in the "collector" environment. Students will get to practice
                 reading and editing code to fix puzzles with simple algorithms, loops
                 and nested loops.
-          title: 'CS Fundamentals: Course D'
+          title: Course D
           assignment_family_title: Course D
-          description_audience: ''
-          description_short: Learn the basics of computer science and create your
-            own art, stories, and games.
-          description: "Course D was created for students who read at roughly a third
-            grade level. Angles and mathematical concepts are introduced with helpful
-            videos and hints.\r\n\r\nThe course begins with a review of the concepts
-            found in Courses A, B, and C. This review helps introduce or refresh basic
-            ideas such as repeat loops and events. Students will develop their understanding
-            of algorithms, nested loops, while loops, conditionals, and events. Lessons
-            on digital citizenship are also included. This course is crafted to build
-            a strong foundation of basic concepts before opening up to a wide range
-            of new and exciting topics."
-        coursee:
+          description_audience: 'Ages: 7-11'
+          description_short: Quickly cover concepts from Course C, then go further
+            with algorithms, nested loops, conditionals, and more.
+          description: Learn new coding concepts including algorithms, nested loops,
+            while loops, conditionals, and events. Get an introduction to digital
+            citizenship before   creating your very own game or story that you can
+            share.
+        coursee-2017:
           stages:
             'Algorithms: Tangrams':
               name: 'Algorithms: Tangrams'
             Introduction:
-              name: Introduction
+              name: Introduction to Online Puzzles
               description_student: This fast-paced introduction will give you the
                 chance to practice most of the skills that you will need to solve
                 the puzzles in this course.
@@ -7532,7 +7507,7 @@ ne:
                 game. The goal here is to start building the skills to translate real-world
                 situations to online scenarios and vice versa.
             Conditionals:
-              name: Conditionals
+              name: Conditionals in Farmer
               description_student: You will get to tell the computer what to do under
                 certain conditions in this fun and challenging series.
               description_teacher: This lesson introduces students to `while` loops
@@ -7545,7 +7520,7 @@ ne:
                 sections of code only if something is true, otherwise it runs something
                 else.
             Private and Personal Information:
-              name: Private and Personal Information
+              name: 'Digital Citizenship: Private and Personal Information'
               description_student: The internet is fun and exciting, but it's important
                 to stay safe too. This lesson teaches you the difference between information
                 that is safe to share and information that is private.
@@ -7624,7 +7599,7 @@ ne:
                 for all four stages of the process can be found in the first stage
                 of this project process [here](https://curriculum.code.org/csf/coursee/12/).
             Internet:
-              name: Internet
+              name: 'Beyond Programming: The Internet'
               description_student: Ever wondered how information travels across the
                 internet? It's not magic! This lesson will teach you the basics of
                 how the internet works.
@@ -7633,7 +7608,7 @@ ne:
                 to flow through the internet, all the while learning about connections,
                 URLs, IP Addresses, and the DNS.
             Crowdsourcing:
-              name: Crowdsourcing
+              name: 'Beyond Programming: Crowdsourcing'
               description_student: This lesson will teach you about crowdsourcing,
                 the process of building a project with a team.
               description_teacher: In computer science, we face some big, daunting
@@ -7663,20 +7638,16 @@ ne:
               name: Nested Loops
             Functions in Harvester:
               name: Functions in Harvester
-          title: 'CS Fundamentals: Course E'
+          title: Course E
           assignment_family_title: Course E
-          description_audience: ''
-          description_short: Learn the basics of computer science and create your
-            own art, stories, and games.
-          description: Created with fourth grade students in mind, this course begins
-            with a brief review of concepts previously taught in courses C and D.
-            This introduction is intended to inspire beginners and remind the experts
-            of the wonders of computer science. Students will practice coding with
-            algorithms, loops, conditionals, and events before they are introduced
-            to functions. At the end of the course, students will have the opportunity
-            to create a capstone project that they can proudly share with peers and
-            loved ones.
-        coursef:
+          description_audience: 'Ages: 8-12'
+          description_short: Quickly cover concepts in Course C & D and then go further
+            with functions.
+          description: Start coding with algorithms, loops, conditionals, and events
+            and then you’ll move on functions. In the second part of this course,
+            design and create a capstone project you can share with your friends and
+            family.
+        coursef-2017:
           stages:
             'Algorithms: Tangrams':
               name: 'Algorithms: Tangrams'
@@ -7689,7 +7660,7 @@ ne:
                 will learn the difference between a detailed and general algorithm
                 while playing with tangrams.
             Introduction:
-              name: Introduction
+              name: Introduction to Online Puzzles
               description_student: This lesson will give you a brief introduction
                 to some of the amazing things you will learn in this course!
               description_teacher: 'In this lesson, students will be introduced to
@@ -7697,7 +7668,7 @@ ne:
                 concepts in the later part of the course. This "ramp up" lesson equalizes
                 the playing field between the experts and the beginners in your class. '
             The Power of Words:
-              name: The Power of Words
+              name: 'Digital Citizenship: The Power of Words'
               description_student: Bullying is never okay. This lesson will teach
                 you about what is and isn't okay to say online.
               description_teacher: "Students consider that while they are enjoying
@@ -7709,7 +7680,7 @@ ne:
                 in-person and online communication. Students then brainstorm ways
                 to respond to cyberbullying. "
             Ice Age Play Lab:
-              name: Ice Age Play Lab
+              name: Events in Ice Age
               description_student: Think of your favorite video game. Ever wondered
                 how it was made? In these puzzles you will develop a video game of
                 your own with friends from Ice Age!
@@ -7718,7 +7689,7 @@ ne:
                 and loops to make characters move on the screen, and will get the
                 chance to create their own game or story after the guided levels.
             Envelope Variables:
-              name: Envelope Variables
+              name: 'Variables: Envelope Variables'
               description_student: 'Envelopes and variables have something in common:
                 both can hold valuable things. Here you will learn what variables
                 are and the awesome things they can do.'
@@ -7748,7 +7719,7 @@ ne:
                 with user input to set the values of their variables, then get space
                 to create their own mini-project with variables.
             For Loop Fun:
-              name: For Loop Fun
+              name: 'For Loops: For Loop Fun'
               description_student: You're going to have loads of fun learning about
                 `for` loops!
               description_teacher: 'We know that loops allow us to do things over
@@ -7774,7 +7745,7 @@ ne:
                 At the end, they will have a chance to create their own art in a freeplay
                 level.
             Songwriting with Parameters:
-              name: Songwriting with Parameters
+              name: 'Functions: Songwriting with Parameters'
               description_student: You just might release the next big hit single!
                 In this lesson, you will be learning what parameters are and how they
                 make some fantastic songs!
@@ -7902,18 +7873,16 @@ ne:
               name: Nested Loops in Bee/Zombie
             Nested Loops with Frozen:
               name: Nested Loops with Frozen
-          title: 'CS Fundamentals: Course F'
+          title: Course F
           assignment_family_title: Course F
-          description_audience: ''
-          description_short: Learn the basics of computer science and create your
-            own art, stories, and games.
-          description: "The last course in CS Fundamentals was tailored to the needs
-            students in the fifth grade.\r\n\r\nIn these lessons, students will create
-            programs with different kinds of loops, events, functions, and conditionals.
-            They will also investigate different problem-solving techniques and discuss
-            societal impacts of computing and the internet. By the end of the curriculum,
-            students create interactive stories and games that they can share with
-            their friends and family."
+          description_audience: 'Ages: 9-13'
+          description_short: Learn all the concepts in Computer Science Fundamentals
+            and create your own art, story or game.
+          description: Learn to use different kinds of loops, events, functions, and
+            conditionals. Investigate different problem-solving techniques and discuss
+            societal impacts of computing and the internet. In the second part of
+            this course, design and create a capstone project you can share with friends
+            and family.
         csdnovice:
           stages:
             Tuesday:
@@ -8199,18 +8168,18 @@ ne:
           stages:
             TTS:
               name: TTS
-        express:
+        express-2017:
           stages:
             'Programming Unplugged: My Robotic Friends':
               name: 'Programming Unplugged: My Robotic Friends'
             Introduction:
               name: Introduction
             'Algorithms: Graph Paper Programming':
-              name: 'Algorithms: Graph Paper Programming'
+              name: 'Programming: Graph Paper Programming'
             'Algorithms: Relay Programming':
-              name: 'Algorithms: Relay Programming'
+              name: 'Debugging: Relay Programming'
             Debugging in Collector:
-              name: Debugging in Collector
+              name: Introduction to Debugging
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
@@ -8272,13 +8241,13 @@ ne:
             Present Your Project:
               name: Present Your Project
             Nested Loops Project in Frozen:
-              name: Nested Loops Project in Frozen
+              name: Nested Loops in Frozen
             'How it Works: The Internet':
-              name: 'How it Works: The Internet'
+              name: 'Beyond Programming: The Internet'
             'Common Sense Education: Digital Citizenship':
-              name: 'Common Sense Education: Digital Citizenship'
+              name: 'Digital Citizenship: Practicing Digital Citizenship'
             'Common Sense Education: Screen Out the Mean':
-              name: 'Common Sense Education: Screen Out the Mean'
+              name: 'Digital Citizenship: Screen Out the Mean'
             Events in Star Wars:
               name: Events in Star Wars
             Events with Flappy:
@@ -8286,7 +8255,7 @@ ne:
             'Conditionals: Conditionals with Cards':
               name: 'Conditionals: Conditionals with Cards'
             Conditional Loops in Maze:
-              name: Conditional Loops in Maze
+              name: Conditionals & Loops in Maze
             'Variables: Envelope Variables':
               name: 'Variables: Envelope Variables'
             'For Loops: For Loop Fun':
@@ -8301,23 +8270,25 @@ ne:
               name: Conditionals & Loops in Harvester
             Until Loops in Maze:
               name: Until Loops in Maze
-          title: ''
+          title: Express Course
           assignment_family_title: Express Course
-          description_audience: ''
-          description_short: ''
-          description: ''
-        pre-express:
+          description_audience: 'Ages: 9-18'
+          description_short: 'An introduction to computer science: combines the best
+            of our elementary school curriculum for older students.'
+          description: Learn the basics of computer science and internet safety. At
+            the end of the course, create your very own game or story you can share.
+        pre-express-2017:
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Debugging: Unspotted Bugs'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence & Frustration: Stevie and the Marbles'
+              name: 'Persistence: Stevie and the Big Project'
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-life Algorithms: Plant a Seed'
             Learn to Drag and Drop:
-              name: Learn to Drag and Drop
+              name: Sequencing with Drag and Drop
             'Online Safety: Your Digital Footprint':
-              name: 'Online Safety: Your Digital Footprint'
+              name: 'Digital Citizenship: My Digital Footprint'
             'Programming: My Robotic Friends':
               name: 'Programming: My Robotic Friends'
             Programming in Maze:
@@ -8336,11 +8307,13 @@ ne:
               name: Events in Play Lab
             Spelling Bee:
               name: Spelling Bee
-          title: ''
+          title: Pre-reader Express
           assignment_family_title: Pre-reader Express
-          description_audience: ''
-          description_short: ''
-          description: ''
+          description_audience: 'Ages: 4-8'
+          description_short: 'An introduction to computer science for pre-readers:
+            combines the best of our kindergarten and first grade courses.'
+          description: Learn the basics of computer science and internet safety. At
+            the end of the course, create your very own game or story you can share.
         subgoal-labels-opt-in:
           stages:
             Subgoal Labels Study Opt-In:

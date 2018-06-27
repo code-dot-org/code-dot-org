@@ -22,7 +22,7 @@ pt-BR:
         dragTextAreaIn: Click and drag a "Text Area" onto the screen
         screenSelectorCallout3: Pick the screen you made
       AppLab Intro 2 - Edit place1_callout:
-        screenSelectorCallout2: This is the screen selector
+        screenSelectorCallout2: Este é o seletor de tela
         changePlace1ID: Change the name of your screen here.
       AppLab Intro 2 - Edit startScreen_callout:
         applabIntro2_1: Clique no título de seu app
@@ -428,7 +428,6 @@ pt-BR:
         CSD_U3_rect_c2: Aqui está o botão "Executar".
       CSD U3 rect_2018_callout:
         CSD_U3_rect_c1: Aqui está o código
-        CSD_U3_rect_c2: Aqui está o botão "Executar".
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Aqui está o código
         CSD_U3_rect_c2: Drag this block into the code area.
@@ -1037,14 +1036,14 @@ pt-BR:
         courseA_artist_loops4_1: This number tells you how many of these blocks you
           can use in this puzzle.
       courseA_artist_loops7_callout:
-        courseA_artist_loops7_1: This number means that only one of this kind of block
-          can be used in the final answer.
+        courseA_artist_loops7_1: Este número significa que apenas um deste tipo de
+          bloco pode ser usado na resposta final.
       courseA_artist_loops7_2018_callout:
-        courseA_artist_loops7_1: This number means that only one of this kind of block
-          can be used in the final answer.
+        courseA_artist_loops7_1: Este número significa que apenas um deste tipo de
+          bloco pode ser usado na resposta final.
       courseA_artist_loops7_forVideo_callout:
-        courseA_artist_loops7_1: This number means that only one of this kind of block
-          can be used in the final answer.
+        courseA_artist_loops7_1: Este número significa que apenas um deste tipo de
+          bloco pode ser usado na resposta final.
       courseA_artist_loops8_callout:
         courseA_artist_loops8_1: Did you know that you can draw back over a line whenever
           you need to?
@@ -1111,11 +1110,11 @@ pt-BR:
         courseA_maze_seqA_callout1: Use the step button to go step-by-step through
           the program. This will help you find the bug!
       courseA_maze_seq4_callout:
-        made_of_stone: These blocks are made of stone.  You can move them, but you
-          can't delete them!
+        made_of_stone: Esses blocos são feitos de pedra.  Você pode movê-los, mas
+          você não pode excluí-los!
       courseA_maze_seq4_2018_callout:
-        made_of_stone: These blocks are made of stone.  You can move them, but you
-          can't delete them!
+        made_of_stone: Esses blocos são feitos de pedra.  Você pode movê-los, mas
+          você não pode excluí-los!
       courseA_maze_seq4a_callout: {}
       courseA_playLab_events2_callout: {}
       courseA_playLab_events2_2018_callout: {}

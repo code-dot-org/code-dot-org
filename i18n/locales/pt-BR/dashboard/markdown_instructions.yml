@@ -9917,7 +9917,7 @@ pt-BR:
         
         _Hint: You can look at [Stage 12 Bubble 8](https://levelbuilder-studio.code.org/s/CSDU3-Draft/stage/12/puzzle/8) to see a working scoreboard.  Scroll down in the code until you see the comment "draw score"_
       CSD U3 rect_markdown_instruction: "# Explore Game Lab\n\nWelcome to Game Lab, where you can create interactive animations and games!   \n\nYou've already practiced the basics of putting shapes on a grid.  In Game Lab, you'll do the same with the display area on the left.\n\n# Do This\n\n* Look at the line of code in the workspace below these instructions ( [Show me where](#triggercallout=block_trigger) ) and discuss with your partner where you think the shape will be drawn on the grid.\n* Click <img src=\"https://images.code.org/9e963203e9cafd558b760730d13537ca-image-1461783998310.06.20 PM.png\" width=100> to run the program and see what happens. ( [Show me where](#triggercallout=run_trigger) )\n* Change the numbers inside the block, then try running the program again.\n* Try to place the rectangle near the bottom right of the screen."
-      CSD U3 rect_2018_markdown_instruction: "# Explore Game Lab\n\nWelcome to Game Lab, where you can create interactive animations and games!   \n\nYou've already practiced the basics of putting shapes on a grid.  In Game Lab, you'll do the same with the display area on the left.\n\n# Do This\n\n* Look at the line of code in the workspace below these instructions ( [Show me where](#triggercallout=block_trigger) ) and discuss with your partner where you think the shape will be drawn on the grid.\n* Click <img src=\"https://images.code.org/9e963203e9cafd558b760730d13537ca-image-1461783998310.06.20 PM.png\" width=100> to run the program and see what happens. ( [Show me where](#triggercallout=run_trigger) )\n* Change the numbers inside the block, then try running the program again.\n* Try to place the rectangle near the bottom right of the screen."
+      CSD U3 rect_2018_markdown_instruction: "# Explore Game Lab\n\nWelcome to Game Lab, where you can create interactive animations and games!   \n\nYou've already practiced the basics of putting shapes on a grid.  In Game Lab, you'll do the same with the display area on the left.\n\n# Do This\n\n* Look at the line of code in the workspace below these instructions ( [Show me where](#triggercallout=block_trigger) ) and discuss with your partner where you think the shape will be drawn on the grid.\n* Click <img src=\"https://images.code.org/9e963203e9cafd558b760730d13537ca-image-1461783998310.06.20 PM.png\" width=100> to run the program and see what happens.\n* Change the numbers inside the block, then try running the program again.\n* Try to place the rectangle near the bottom right of the screen."
       CSD U3 sequence_markdown_instruction: |-
         <img src="https://images.code.org/30d68fb30db5b61187f104f46292e052-image-1493060980724.08.05 PM.png" style="float:right">
         # Order Matters
@@ -27181,7 +27181,7 @@ pt-BR:
         
         Use <xml><block type="maze_moveNorth"/></xml> **three** times to get the bee to the flower! Don't forget to get nectar at the end.
       courseA_bee_seq2_markdown_instruction: Add *one* block to help the bee get nectar from the flower.
-      courseA_bee_seq3_markdown_instruction: Can you figure out what is wrong with this code? Help the bee get to the flower!
+      courseA_bee_seq3_markdown_instruction: Você consegue descobrir o que está errado no código? Ajude a abelha a chegar até a flor!
       courseA_bee_seq4_markdown_instruction: Try it yourself!
       courseA_bee_seq5_markdown_instruction: You have to move in two directions to get to the flower! Help the bee pick the right direction.
       courseA_bee_seq6_markdown_instruction: Now the bee needs to get nectar from two flowers!
@@ -27358,6 +27358,7 @@ pt-BR:
       courseA_playLab_events4_2018_markdown_instruction: Now, add another event block to get Jorge to move right when the right arrow button is clicked.
       courseA_playLab_events5_markdown_instruction: Add events to have Jorge move up and down when the up arrow and down arrow buttons are pressed.
       courseA_playLab_events5_2018_markdown_instruction: Add events to have Jorge move up and down when the up arrow and down arrow buttons are pressed.
+      courseA_playLab_events7_2018_markdown_instruction: "*Freeplay:* Add anything you want to this game.  Can you make the dinosaur disappear when Jorge runs into him?"
       courseA_playlab_events_challenge1_markdown_instruction: |-
         Clicking Olive will make Robin appear! Can you write code to show the rest of the characters too?
         
