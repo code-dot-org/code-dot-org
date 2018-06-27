@@ -2975,6 +2975,70 @@ class UserTest < ActiveSupport::TestCase
     )
   end
 
+  test 'find_by_email_or_hashed_email returns nil when no user is found' do
+    assert_nil User.find_by_email_or_hashed_email 'nonexistent@example.org'
+  end
+
+  test 'find_by_email_or_hashed_email returns nil when input is blank' do
+    create :student_in_picture_section
+    assert_nil User.find_by_email_or_hashed_email nil
+    assert_nil User.find_by_email_or_hashed_email ''
+  end
+
+  test 'find_by_email_or_hashed_email locates a single-auth user by email' do
+    user = create :teacher
+    assert_equal user, User.find_by_email_or_hashed_email(user.email)
+  end
+
+  test 'find_by_email_or_hashed_email locates a single-auth user by hashed email' do
+    email = 'student@example.org'
+    user = create :student, email: email
+    assert_equal user, User.find_by_email_or_hashed_email(email)
+  end
+
+  test 'find_by_email_or_hashed_email locates a multi-auth user by email' do
+    user = create :teacher, :with_migrated_email_authentication_option
+    assert_equal user, User.find_by_email_or_hashed_email(user.email)
+  end
+
+  test 'find_by_email_or_hashed_email locates a multi-auth user by hashed email' do
+    email = 'student@example.org'
+    user = create :student, :with_migrated_email_authentication_option, email: email
+    assert_equal user, User.find_by_email_or_hashed_email(email)
+  end
+
+  test 'find_by_hashed_email returns nil when no user is found' do
+    assert_nil User.find_by_hashed_email 'fake_hash'
+  end
+
+  test 'find_by_hashed_email returns nil when input is blank' do
+    create :student_in_picture_section
+    assert_nil User.find_by_hashed_email nil
+    assert_nil User.find_by_hashed_email ''
+  end
+
+  test 'find_by_hashed_email locates a single-auth user by email' do
+    user = create :teacher
+    assert_equal user, User.find_by_hashed_email(user.hashed_email)
+  end
+
+  test 'find_by_hashed_email locates a single-auth user by hashed email' do
+    email = 'student@example.org'
+    user = create :student, email: email
+    assert_equal user, User.find_by_hashed_email(User.hash_email(email))
+  end
+
+  test 'find_by_hashed_email locates a multi-auth user by email' do
+    user = create :teacher, :with_migrated_email_authentication_option
+    assert_equal user, User.find_by_hashed_email(user.hashed_email)
+  end
+
+  test 'find_by_hashed_email locates a multi-auth user by hashed email' do
+    email = 'student@example.org'
+    user = create :student, :with_migrated_email_authentication_option, email: email
+    assert_equal user, User.find_by_hashed_email(User.hash_email(email))
+  end
+
   test 'find_by_credential returns nil when no matching user is found' do
     user = create :student, :unmigrated_clever_sso
 

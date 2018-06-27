@@ -450,12 +450,12 @@ export const getMultipleChoiceSectionSummary = (state) => {
     const studentResults = studentAssessment.level_results || [];
     const multiResults = studentResults.filter(result => result.type === QuestionType.MULTI);
     multiResults.forEach((response, questionIndex) => {
-      // student_result is either '' and not answered or a series of letters
+      // student_result is either [] and not answered or a series of letters
       // that the student selected.
-      if (response.student_result === []) {
+      results[questionIndex].totalAnswered++;
+      if (response.status === 'unsubmitted') {
         results[questionIndex].notAnswered++;
       } else {
-        results[questionIndex].totalAnswered++;
         (response.student_result || []).forEach(answer => {
           results[questionIndex].answers[answer].numAnswered++;
         });
