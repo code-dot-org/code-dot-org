@@ -484,7 +484,6 @@ export const getTotalSubmissionForCurrentAssessment = (state, isSurvey) => {
   } else {
     const studentResponses = getAssessmentResponsesForCurrentScript(state);
     let totalSubmissions = 0;
-    // for each student, responses_by_assessment has key currentAssessmentId, add 1, return total count
     Object.values(studentResponses).forEach((student) => {
       if (Object.keys(student.responses_by_assessment).includes(currentAssessmentId.toString())) {
         totalSubmissions++;
