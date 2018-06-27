@@ -38,9 +38,9 @@
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
-    "contained_level_names": null,
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseD_farmer_while7_2018_PathAhead\",\r\n  \"callout_text\": \"You'll need to use the `while path ahead` block in order to solve this puzzle.\",\r\n  \"element_id\": \"#runButton\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom left\",\r\n    \"at\": \"bottom left\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
-    "include_shared_functions": "false"
+    "include_shared_functions": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
