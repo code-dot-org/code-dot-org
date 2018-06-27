@@ -378,6 +378,22 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     end
   end
 
+  test 'migrate and demigrate Windows Live OAuth student' do
+    round_trip_sso_with_token create(:student, :unmigrated_windowslive_sso)
+  end
+
+  test 'migrate and demigrate Windows Live OAuth teacher' do
+    round_trip_sso_with_token create(:teacher, :unmigrated_windowslive_sso)
+  end
+
+  test 'migrate and demigrate Facebook OAuth student' do
+    round_trip_sso_with_token create(:student, :unmigrated_facebook_sso)
+  end
+
+  test 'migrate and demigrate Facebook OAuth teacher' do
+    round_trip_sso_with_token create(:teacher, :unmigrated_facebook_sso)
+  end
+
   def round_trip_sso_with_token(for_user)
     initial_oauth_token = for_user.oauth_token
     initial_oauth_token_expiration = for_user.oauth_token_expiration
