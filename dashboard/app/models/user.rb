@@ -320,12 +320,12 @@ class User < ActiveRecord::Base
 
   def email
     return read_attribute(:email) unless migrated?
-    primary_authentication_option.try(:email) || ''
+    primary_contact_info.try(:email) || ''
   end
 
   def hashed_email
     return read_attribute(:hashed_email) unless migrated?
-    primary_authentication_option.try(:hashed_email) || ''
+    primary_contact_info.try(:hashed_email) || ''
   end
 
   # assign a course to a facilitator that is qualified to teach it
@@ -831,14 +831,14 @@ class User < ActiveRecord::Base
     # If an auth option exists with same email, set it to the user's primary authentication option
     existing_auth_option = authentication_options.find {|ao| ao.email == email || ao.hashed_email == hashed_email}
     if existing_auth_option
-      self.primary_authentication_option = existing_auth_option
+      self.primary_contact_info = existing_auth_option
       return save
     end
 
     params = {credential_type: AuthenticationOption::EMAIL, user: self}
     params[:email] = email unless email.nil?
     params[:hashed_email] = hashed_email if email.nil?
-    self.primary_authentication_option = AuthenticationOption.new(params)
+    self.primary_contact_info = AuthenticationOption.new(params)
     return save
   end
 
