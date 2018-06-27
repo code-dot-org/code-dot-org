@@ -589,8 +589,8 @@ class User < ActiveRecord::Base
   # @returns [User|nil]
   def self.find_by_credential(type:, id:)
     authentication_option = AuthenticationOption.find_by(
-        credential_type: type,
-        authentication_id: id
+      credential_type: type,
+      authentication_id: id
     )
     authentication_option&.user || User.find_by(provider: type, uid: id)
   end
