@@ -173,6 +173,15 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     assert_empty parsed_response
   end
 
+  test 'serializer return teacher name' do
+    @teacher1 = create :teacher, name: 'Test Name'
+    teacher_sign_in_and_comment(@teacher1, @student, @level, COMMENT1)
+    sign_in @student
+    get "#{API}/get_feedbacks", params: {student_id: @student.id, level_id: @level.id}
+
+    assert_equal 'Test Name', parsed_response[0]['teacher_name']
+  end
+
   private
 
   def parsed_response
