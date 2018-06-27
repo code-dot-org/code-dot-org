@@ -362,6 +362,52 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     end
   end
 
+  test 'migrate and demigrate Google OAuth student' do
+    round_trip_google_user create(:student, :unmigrated_google_sso)
+  end
+
+  test 'migrate and demigrate Google OAuth teacher' do
+    round_trip_google_user create(:teacher, :unmigrated_google_sso)
+  end
+
+  def round_trip_google_user(for_user)
+    initial_oauth_refresh_token = for_user.oauth_refresh_token
+    refute_nil initial_oauth_refresh_token
+    round_trip_sso_with_token for_user do |user|
+      assert_user user, oauth_refresh_token: initial_oauth_refresh_token
+    end
+  end
+
+  def round_trip_sso_with_token(for_user)
+    initial_oauth_token = for_user.oauth_token
+    initial_oauth_token_expiration = for_user.oauth_token_expiration
+    refute_nil initial_oauth_token
+    refute_nil initial_oauth_token_expiration
+    round_trip_sso for_user do |user|
+      assert_user user,
+        oauth_token: initial_oauth_token,
+        oauth_token_expiration: initial_oauth_token_expiration
+    end
+  end
+
+  def round_trip_sso(for_user)
+    provider = for_user.provider
+    initial_email = for_user.email
+    initial_hashed_email = for_user.hashed_email
+    initial_authentication_id = for_user.uid
+
+    refute_nil provider
+    refute_nil initial_authentication_id
+
+    round_trip for_user do |user|
+      assert_user user,
+        provider: provider,
+        email: initial_email,
+        hashed_email: initial_hashed_email,
+        uid: initial_authentication_id
+    end
+  end
+
   private
 
   #
