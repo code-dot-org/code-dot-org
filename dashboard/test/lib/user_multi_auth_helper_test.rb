@@ -422,6 +422,30 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     end
   end
 
+  test 'migrate and demigrate The School Project student' do
+    round_trip_sso create(:student, :unmigrated_the_school_project_sso)
+  end
+
+  test 'migrate and demigrate The School Project teacher' do
+    round_trip_sso create(:teacher, :unmigrated_the_school_project_sso)
+  end
+
+  test 'migrate and demigrate Twitter student' do
+    round_trip_sso create(:student, :unmigrated_twitter_sso)
+  end
+
+  test 'migrate and demigrate Twitter teacher' do
+    round_trip_sso create(:teacher, :unmigrated_twitter_sso)
+  end
+
+  test 'migrate and demigrate Qwiklabs LTI student' do
+    round_trip_sso create(:student, :unmigrated_qwiklabs_sso)
+  end
+
+  test 'migrate and demigrate Qwiklabs LTI teacher' do
+    round_trip_sso create(:teacher, :unmigrated_qwiklabs_sso)
+  end
+
   def round_trip_sso(for_user)
     provider = for_user.provider
     initial_email = for_user.email
