@@ -14,8 +14,8 @@ cs:
     errors:
       messages:
         blank: je požadováno
-        blank_plural: are required
-        invalid_plural: are invalid
+        blank_plural: jsou potřeba
+        invalid_plural: jsou neplatné
     attributes:
       user:
         name: Zobrazit jméno

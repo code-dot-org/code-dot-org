@@ -1,4 +1,5 @@
-"de-DE":
+---
+de-DE:
   hour_of_code: Stunde der Code
   hello: Hallo Welt
   'yes': Ja
@@ -743,8 +744,7 @@
   volunteer_engineer_submission_field_email_preference: Dürfen wir dich per E-Mail
     über Neuigkeiten zu unseren Kursen, lokale Möglichkeiten oder andere Neuigkeiten
     zur Informatik informieren?
-  volunteer_engineer_submission_field_email_preference_privacy: "(Weitere Informationen
-    findest du in unserer Datenschutzerklärung)"
+  volunteer_engineer_submission_field_email_preference_privacy: "(Siehe unsere Datenschutzerklärung)"
   volunteer_engineer_submission_field_email_preference_yes: Ja
   volunteer_engineer_submission_field_email_preference_no: Nein
   volunteer_engineer_submission_final_paragraph: Sie werden auf einer Karte eingetragen,

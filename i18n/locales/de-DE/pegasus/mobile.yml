@@ -538,7 +538,7 @@
   volunteer_engineer_submission_field_email_desc: "Ihre E-Mail-Adresse wird niemals weitergegeben, aber wir geben Anfragen von Lehrern an Sie weiter."
   volunteer_engineer_submission_field_email_placeholder: "E-Mail-Adresse"
   volunteer_engineer_submission_field_email_preference: "Dürfen wir dich per E-Mail über Neuigkeiten zu unseren Kursen, lokale Möglichkeiten oder andere Neuigkeiten zur Informatik informieren?"
-  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy policy)"
+  volunteer_engineer_submission_field_email_preference_privacy: "(Siehe unsere Datenschutzerklärung)"
   volunteer_engineer_submission_field_email_preference_yes: 'Ja'
   volunteer_engineer_submission_field_email_preference_no: 'Nein'
   volunteer_engineer_submission_final_paragraph: "Sie werden auf einer Karte eingetragen, damit Lehrer Sie im Rahmen der Hour of Code oder für andere Freiwilligenarbeit kontaktieren können. Ihre E-Mail und ihre genaue Adresse wird von uns NICHT weitergegeben. Die anderen Informationen (einschließlich des ungefähren Standorts) sind für lokales Lehrpersonal öffentlich sichtbar."

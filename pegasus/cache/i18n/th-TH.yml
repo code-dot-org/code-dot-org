@@ -1,4 +1,5 @@
-"th-TH":
+---
+th-TH:
   hour_of_code: ช่วงเวลาของ Code
   hello: สวัสดีชาวโลก
   'yes': ใช่
@@ -565,7 +566,7 @@
   minecraft_agent_description: Minecraft is back for the Hour of Code with a brand
     new activity! Journey through Minecraft with code.
   minecraft_agent_button: เริ่มต้น
-  minecraft_designer_description: เขียนโปรแกรมให้กับบรรดาเหล่าสัตว์ต่างๆและตัวละครอื่นๆเพื่อสร้างเกม
+  minecraft_designer_description: เขียนโปรแกรมให้กับบรรดาเหล่าสัตว์ต่างๆและนักแสดงอื่นๆเพื่อสร้างเกม
     Minecraft ในแบบฉบับของคุณเอง
   minecraft_designer_button: เริ่มต้น
   minecraft_adventurer_description: ใช้โค้ดเพื่อนำอเล็กซ์หรือสตีฟไปผจญภัย
@@ -1188,7 +1189,7 @@
   projguts_name: ค้อน กรรไกร กระดาษ เป่ายิ้งฉุบ
   hourofcode_name: พื้นที่สำหรับ code.org/hoc ใหม่
   playlab_name: Play Lab
-  infinity_name: Infinity Play Lab
+  infinity_name: เรื่องราวและเกม
   artist_name: ศิลปิน
   monstercoding_name: Mystery Island Coding Quest
   allcancode_name: Run Marco!

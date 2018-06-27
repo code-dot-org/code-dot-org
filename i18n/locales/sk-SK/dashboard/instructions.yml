@@ -1854,10 +1854,10 @@ sk:
       MC HOC 2016 SCORE LEVEL_instruction: Niektoré hry ti ponúkajú možnosť zbierať skóre. Zahraj si naháňačku so železnými golemmi a použi blok 'pridaj 1 ku skóre', aby si získal bod po chytení každého golema. Získaj 5 bodov a vyhraj!
       MC HOC 2016 Village Test_instruction: Ach nie! Zombie ťa uväznili vnútri. Naprogramuj oceľového golema, aby prenasledoval a zaútočil na zombie!
       MC_2017_Ryan_02_instruction: Help the player get out by using loops to get the Agent to the pressure plate.
-      MC_HOC_2017 Agent Test_instruction: Click "Run" to move the player to the orange square inside of the house.
-      MC_HOC_2017_01_instruction: Click "Run" to move the player to the orange square inside of the house.
+      MC_HOC_2017 Agent Test_instruction: Kliknite na "Spustiť" pre pohyb hráča po oranžovom štvorci vo vnútri domu.
+      MC_HOC_2017_01_instruction: Kliknite na "Spustiť" pre pohyb hráča po oranžovom štvorci vo vnútri domu.
       MC_HOC_2017_01_Cole_instruction: Na tejto ceste musíte pozbierať všetky nástroje. Pohybujte sa po okolí pomocou **klávesov so šípkami** a dostaňte sa počas cesty k truhlici, aby ste vyhrali.
-      MC_HOC_2017_01_Kiki_instruction: Click "Run" to move the player to the orange square inside of the house.
+      MC_HOC_2017_01_Kiki_instruction: Kliknite na "Spustiť" pre pohyb hráča po oranžovom štvorci vo vnútri domu.
       MC_HOC_2017_01_RETRY_instruction: 'Dostaňte agenta na prítlačnú dosku. Potom stlačte tlačidlo Spustiť a pomocou klávesov so šípkami presuňte hráča z domu, aby získal truhlicu. '
       MC_HOC_2017_02_instruction: Dostaňte agenta na prítlačnú dosku.
       MC_HOC_2017_02_Cole_instruction: 'Posuňte agenta na prítlačnú dosku, aby sa hráč {currentPlayerName} mohol dostať k mape. '
@@ -3307,7 +3307,7 @@ sk:
       courseA_playLab_events6_instruction: Make this more interesting by changing the background and playing a random sound when Jorge is clicked.
       courseA_playLab_events6_2018_instruction: Make this more interesting by changing the background and playing a random sound when Jorge is clicked.
       courseA_playLab_events7_instruction: Add anything you want to this game.  Can you make the dinosaur disappear when Jorge runs into him?
-      courseA_playLab_events7_2018_instruction: Add anything you want to this game.  Can you make the dinosaur disappear when Jorge runs into him?
+      courseA_playLab_events7_2018_instruction: "*Freeplay:* Add anything you want to this game."
       courseA_playlab_events_challenge1_instruction: Can you write code to show the rest of my friends? The hints will help you do this project step-by-step.
       courseA_playlab_events_challenge1_2018_instruction: Can you write code to show the rest of my friends? The hints will help you do this project step-by-step.
       courseA_playlab_events_challenge2_instruction: Give everyone something to do when you click on them.
