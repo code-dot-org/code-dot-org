@@ -15,6 +15,22 @@ const styles = {
 class StudentFeedback extends Component {
   static propTypes = {
     viewAs: PropTypes.oneOf(Object.keys(ViewType)),
+    serverLevelId: PropTypes.number,
+    student: PropTypes.number
+  };
+
+  state = {
+    feedbacks: []
+  };
+
+  componentDidMount = () => {
+    $.ajax({
+      url: '/api/v1/teacher_feedbacks/get_feedbacks?student_id='+this.props.student+'&level_id='+this.props.serverLevelId,
+      method: 'GET',
+      contentType: 'application/json;charset=UTF-8',
+    }).done(data => {
+      this.setState({feedbacks: data});
+    });
   };
 
   render() {
@@ -22,16 +38,21 @@ class StudentFeedback extends Component {
       return null;
     }
 
-    // Placeholder for upcoming feedback input
     return (
-      <div style={styles.content}>
-        <div style={styles.header}>{i18n.feedbackFrom({teacher: "Temp"})}</div>
-        <div>{i18n.fromDaysAgo({number: 2})}<br/>Placeholder feedback</div>
+      <div>
+        {this.state.feedbacks.map((feedback, i) => (
+          <div style={styles.content} key={i}>
+            <div style={styles.header}>{i18n.feedbackFrom({teacher: feedback.teacher_id})}</div>
+            <div>{i18n.fromDaysAgo({number: feedback.created_at})}<br/>{feedback.comment}</div>
+          </div>
+        ))}
       </div>
     );
   }
 }
 
 export default connect(state => ({
-  viewAs: state.viewAs
+  viewAs: state.viewAs,
+  serverLevelId: state.pageConstants.serverLevelId,
+  student: state.pageConstants.userId
 }))(StudentFeedback);
