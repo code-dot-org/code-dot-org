@@ -319,7 +319,9 @@ FactoryGirl.define do
         )
         user.update!(
           primary_authentication_option: ao,
-          provider: User::PROVIDER_MIGRATED
+          provider: User::PROVIDER_MIGRATED,
+          email: '',
+          hashed_email: nil
         )
       end
     end
@@ -357,11 +359,23 @@ FactoryGirl.define do
           credential_type: AuthenticationOption::EMAIL,
           authentication_id: user.hashed_email
         )
+        user.authentication_options << ao
         user.update!(
           primary_authentication_option: ao,
           provider: User::PROVIDER_MIGRATED,
           email: '',
           hashed_email: nil
+        )
+      end
+    end
+
+    trait :multi_auth_migrated do
+      after(:create) do |user|
+        user.update_attributes(
+          provider: 'migrated',
+          uid: '',
+          email: '',
+          hashed_email: ''
         )
       end
     end
