@@ -57,11 +57,21 @@ class TeacherFeedback extends Component {
     super(props);
     const search = window.location.search;
     const studentId = search.split('&')[1].split("=")[1];
+    var response = "";
+    var date;
+      $.ajax({
+        url: '/api/v1/teacher_feedbacks/get_feedback_from_teacher?student_id='+studentId+'&level_id='+this.props.serverLevelId+'&teacher_id='+this.props.teacher,
+        method: 'GET',
+        contentType: 'application/json;charset=UTF-8',
+      }).done(data => {
+        response = data.comment;
+        date = moment(data.created_at).fromNow();
+      });
     this.state = {
       comment: "",
       studentId: studentId,
-      latestFeedback: "",
-      daysSinceFeedback: "",
+      latestFeedback: response,
+      daysSinceFeedback: date,
     };
   }
 
