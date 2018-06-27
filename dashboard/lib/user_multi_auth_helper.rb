@@ -38,4 +38,13 @@ module UserMultiAuthHelper
     self.provider = 'migrated'
     save
   end
+
+  def demigrate_from_multi_auth
+    return true unless migrated?
+
+    if sponsored?
+      self.provider = 'sponsored'
+    end
+    save
+  end
 end
