@@ -192,6 +192,218 @@ class UserTest < ActiveSupport::TestCase
     assert_equal ['Email has already been taken'], user.errors.full_messages
   end
 
+  #
+  # Email uniqueness validation tests
+  # These should simplify significantly once we are fully migrated to multi-auth
+  #
+  COLLISION_EMAIL = 'collision@example.org'
+
+  def create_single_auth_user_with_email(email)
+    create :student, email: email
+  end
+
+  def create_multi_auth_user_with_email(email)
+    create :student, :with_migrated_email_authentication_option, email: email
+  end
+
+  def create_multi_auth_user_with_second_email(email)
+    user = create :student, :with_migrated_email_authentication_option
+    user.authentication_options << create(:google_authentication_option, user: user, email: email)
+    user.save
+    user
+  end
+
+  test "cannot create single-auth user with duplicate of single-auth user's email" do
+    create_single_auth_user_with_email COLLISION_EMAIL
+    cannot_create_single_auth_users_with_email COLLISION_EMAIL
+  end
+
+  test "cannot create single-auth user with duplicate of multi-auth user's email" do
+    create_multi_auth_user_with_email COLLISION_EMAIL
+    cannot_create_single_auth_users_with_email COLLISION_EMAIL
+  end
+
+  test "cannot create single-auth user with duplicate of multi-auth user's second email" do
+    create_multi_auth_user_with_second_email COLLISION_EMAIL
+    cannot_create_single_auth_users_with_email COLLISION_EMAIL
+  end
+
+  test "cannot create multi-auth user with duplicate of single-auth user's email" do
+    create_single_auth_user_with_email COLLISION_EMAIL
+    cannot_create_multi_auth_users_with_email COLLISION_EMAIL
+  end
+
+  test "cannot create multi-auth user with duplicate of multi-auth user's email" do
+    create_multi_auth_user_with_email COLLISION_EMAIL
+    cannot_create_multi_auth_users_with_email COLLISION_EMAIL
+  end
+
+  test "cannot create multi-auth user with duplicate of multi-auth user's second email" do
+    create_multi_auth_user_with_second_email COLLISION_EMAIL
+    cannot_create_multi_auth_users_with_email COLLISION_EMAIL
+  end
+
+  def cannot_create_single_auth_users_with_email(email)
+    cannot_create_user_with_email :teacher, email: email
+    cannot_create_user_with_email :student, email: email
+  end
+
+  def cannot_create_multi_auth_users_with_email(email)
+    cannot_create_user_with_email :teacher,
+      :with_migrated_email_authentication_option,
+      email: email
+    cannot_create_user_with_email :student,
+      :with_migrated_email_authentication_option,
+      email: email
+  end
+
+  def cannot_create_user_with_email(*args)
+    assert_fails_email_uniqueness_validation FactoryGirl.build(*args)
+  end
+
+  test "cannot update single-auth user with duplicate of single-auth user's email" do
+    create_single_auth_user_with_email COLLISION_EMAIL
+    cannot_update_single_auth_users_with_email COLLISION_EMAIL
+  end
+
+  test "cannot update single-auth user with duplicate of multi-auth user's email" do
+    create_multi_auth_user_with_email COLLISION_EMAIL
+    cannot_update_single_auth_users_with_email COLLISION_EMAIL
+  end
+
+  test "cannot update single-auth user with duplicate of multi-auth user's second email" do
+    create_multi_auth_user_with_second_email COLLISION_EMAIL
+    cannot_update_single_auth_users_with_email COLLISION_EMAIL
+  end
+
+  test "cannot update multi-auth user with duplicate of single-auth user's email" do
+    create_single_auth_user_with_email COLLISION_EMAIL
+    cannot_update_multi_auth_users_with_email COLLISION_EMAIL
+  end
+
+  test "cannot update multi-auth user with duplicate of multi-auth user's email" do
+    create_multi_auth_user_with_email COLLISION_EMAIL
+    cannot_update_multi_auth_users_with_email COLLISION_EMAIL
+  end
+
+  test "cannot update multi-auth user with duplicate of multi-auth user's second email" do
+    create_multi_auth_user_with_second_email COLLISION_EMAIL
+    cannot_update_multi_auth_users_with_email COLLISION_EMAIL
+  end
+
+  def cannot_update_single_auth_users_with_email(email)
+    cannot_update_user_with_email email, :teacher
+    cannot_update_user_with_email email, :student
+  end
+
+  def cannot_update_multi_auth_users_with_email(email)
+    cannot_update_user_with_email email, :teacher, :with_migrated_email_authentication_option
+    cannot_update_user_with_email email, :student, :with_migrated_email_authentication_option
+  end
+
+  def cannot_update_user_with_email(email, *user_args)
+    user = create(*user_args)
+    if user.migrated?
+      refute user.authentication_options.first.update(email: email)
+    else
+      refute user.update(email: email)
+    end
+    assert_fails_email_uniqueness_validation user
+  end
+
+  test "cannot give user an additional email that is a duplicate of single-auth user's email" do
+    create_single_auth_user_with_email COLLISION_EMAIL
+    cannot_give_users_additional_email COLLISION_EMAIL
+  end
+
+  test "cannot give user an additional email that is a duplicate of multi-auth user's email" do
+    create_multi_auth_user_with_email COLLISION_EMAIL
+    cannot_give_users_additional_email COLLISION_EMAIL
+  end
+
+  test "cannot give user an additional email that is a duplicate of multi-auth user's second email" do
+    create_multi_auth_user_with_second_email COLLISION_EMAIL
+    cannot_give_users_additional_email COLLISION_EMAIL
+  end
+
+  def cannot_give_users_additional_email(email)
+    cannot_give_user_additional_email :teacher, email
+    cannot_give_user_additional_email :student, email
+  end
+
+  def cannot_give_user_additional_email(type, email)
+    user = create type, :with_migrated_email_authentication_option
+    user.authentication_options << FactoryGirl.build(:google_authentication_option, user: user, email: email)
+    refute user.save
+    assert_fails_email_uniqueness_validation user
+  end
+
+  def assert_fails_email_uniqueness_validation(user)
+    refute user.valid?
+    assert_equal ['has already been taken'], user.errors[:email]
+    assert_includes user.errors.full_messages, 'Email has already been taken'
+  end
+
+  test "Creating Teacher with email causes email collision check" do
+    User.expects(:find_by_email_or_hashed_email)
+    create :teacher
+  end
+
+  test "Creating Student with email causes email collision check" do
+    User.expects(:find_by_hashed_email)
+    create :student
+  end
+
+  test "Creating User without email does not cause email collision check" do
+    User.expects(:find_by_email_or_hashed_email).never
+    User.expects(:find_by_hashed_email).never
+    create :parent_managed_student
+  end
+
+  test "Saving Teacher with email change causes email collision check" do
+    user = create :teacher
+    User.expects(:find_by_email_or_hashed_email)
+    user.email = 'new-email@example.org'
+    user.valid?
+  end
+
+  test "Saving Student with hashed_email change causes email collision check" do
+    user = create :student
+    User.expects(:find_by_hashed_email)
+    user.hashed_email = User.hash_email 'new-email@example.org'
+    user.valid?
+  end
+
+  test "Saving User without changing email does not cause email collision check" do
+    user = create :student
+    User.expects(:find_by_email_or_hashed_email).never
+    User.expects(:find_by_hashed_email).never
+    user.name = 'New username'
+    user.valid?
+  end
+
+  test "Saving Teacher's AuthenticationOption with an email change causes email collision check" do
+    user = create :teacher, :with_migrated_email_authentication_option
+    User.expects(:find_by_email_or_hashed_email)
+    user.authentication_options.first.email = 'new-email@example.org'
+    user.valid?
+  end
+
+  test "Saving Student's AuthenticationOption with a hashed_email change causes email collision check" do
+    user = create :student, :with_migrated_email_authentication_option
+    User.expects(:find_by_hashed_email)
+    user.authentication_options.first.hashed_email = User.hash_email 'new-email@example.org'
+    user.valid?
+  end
+
+  test "Saving AuthenticationOption without changing email does not cause email collision check" do
+    user = create :student, :with_migrated_email_authentication_option
+    User.expects(:find_by_email_or_hashed_email).never
+    User.expects(:find_by_hashed_email).never
+    user.authentication_options.first.data = 'unrelated change'
+    user.valid?
+  end
+
   test "can create a user with age" do
     Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
       assert_creates(User) do
@@ -2973,6 +3185,70 @@ class UserTest < ActiveSupport::TestCase
       },
       result
     )
+  end
+
+  test 'find_by_email_or_hashed_email returns nil when no user is found' do
+    assert_nil User.find_by_email_or_hashed_email 'nonexistent@example.org'
+  end
+
+  test 'find_by_email_or_hashed_email returns nil when input is blank' do
+    create :student_in_picture_section
+    assert_nil User.find_by_email_or_hashed_email nil
+    assert_nil User.find_by_email_or_hashed_email ''
+  end
+
+  test 'find_by_email_or_hashed_email locates a single-auth user by email' do
+    user = create :teacher
+    assert_equal user, User.find_by_email_or_hashed_email(user.email)
+  end
+
+  test 'find_by_email_or_hashed_email locates a single-auth user by hashed email' do
+    email = 'student@example.org'
+    user = create :student, email: email
+    assert_equal user, User.find_by_email_or_hashed_email(email)
+  end
+
+  test 'find_by_email_or_hashed_email locates a multi-auth user by email' do
+    user = create :teacher, :with_migrated_email_authentication_option
+    assert_equal user, User.find_by_email_or_hashed_email(user.email)
+  end
+
+  test 'find_by_email_or_hashed_email locates a multi-auth user by hashed email' do
+    email = 'student@example.org'
+    user = create :student, :with_migrated_email_authentication_option, email: email
+    assert_equal user, User.find_by_email_or_hashed_email(email)
+  end
+
+  test 'find_by_hashed_email returns nil when no user is found' do
+    assert_nil User.find_by_hashed_email 'fake_hash'
+  end
+
+  test 'find_by_hashed_email returns nil when input is blank' do
+    create :student_in_picture_section
+    assert_nil User.find_by_hashed_email nil
+    assert_nil User.find_by_hashed_email ''
+  end
+
+  test 'find_by_hashed_email locates a single-auth user by email' do
+    user = create :teacher
+    assert_equal user, User.find_by_hashed_email(user.hashed_email)
+  end
+
+  test 'find_by_hashed_email locates a single-auth user by hashed email' do
+    email = 'student@example.org'
+    user = create :student, email: email
+    assert_equal user, User.find_by_hashed_email(User.hash_email(email))
+  end
+
+  test 'find_by_hashed_email locates a multi-auth user by email' do
+    user = create :teacher, :with_migrated_email_authentication_option
+    assert_equal user, User.find_by_hashed_email(user.hashed_email)
+  end
+
+  test 'find_by_hashed_email locates a multi-auth user by hashed email' do
+    email = 'student@example.org'
+    user = create :student, :with_migrated_email_authentication_option, email: email
+    assert_equal user, User.find_by_hashed_email(User.hash_email(email))
   end
 
   test 'find_by_credential returns nil when no matching user is found' do

@@ -219,6 +219,19 @@ class User < ActiveRecord::Base
 
   has_many :authentication_options, dependent: :destroy
   belongs_to :primary_authentication_option, class_name: 'AuthenticationOption'
+  # This custom validator makes email collision checks on the AuthenticationOption
+  # model also show up as validation errors for the email field on the User
+  # model.
+  # There's probably some performance cost in additional queries here - once
+  # we are fully migrated to multi-auth, we may want to remove this code and
+  # check that we handle validation errors from AuthenticationOption everywhere.
+  validate if: :migrated? do |user|
+    user.authentication_options.each do |ao|
+      unless ao.valid?
+        ao.errors.each {|k, v| user.errors.add k, v}
+      end
+    end
+  end
 
   belongs_to :school_info
   accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
@@ -353,10 +366,6 @@ class User < ActiveRecord::Base
       user.save!
     end
     user
-  end
-
-  def self.find_or_create_district_contact(params, invited_by_user)
-    find_or_create_teacher(params, invited_by_user, UserPermission::DISTRICT_CONTACT)
   end
 
   def self.find_or_create_facilitator(params, invited_by_user)
@@ -561,11 +570,21 @@ class User < ActiveRecord::Base
     end
   end
 
+  # Given a cleartext email finds the first user that has a matching email or hash.
+  # @param [String] email (cleartext)
+  # @return [User|nil]
   def self.find_by_email_or_hashed_email(email)
     return nil if email.blank?
+    find_by_hashed_email User.hash_email email
+  end
 
-    hashed_email = User.hash_email(email)
-    User.find_by(hashed_email: hashed_email)
+  # Given an email hash, finds the first user that has a matching email hash.
+  # @param [String] hashed_email
+  # @return [User|nil]
+  def self.find_by_hashed_email(hashed_email)
+    return nil if hashed_email.blank?
+    migrated_user = AuthenticationOption.find_by(hashed_email: hashed_email)&.user
+    migrated_user || User.find_by(hashed_email: hashed_email)
   end
 
   # Locate an SSO user by SSO provider and associated user id.

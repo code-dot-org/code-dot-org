@@ -2,6 +2,7 @@ import React, {PropTypes} from 'react';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import {Field} from '../SystemDialog/SystemDialog';
+import BootstrapButton from './BootstrapButton';
 
 const styles = {
   container: {
@@ -22,9 +23,6 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'flex-end',
   },
-  button: {
-    margin: 0
-  },
   statusText: {
     paddingLeft: 10,
     paddingRight: 10,
@@ -35,8 +33,10 @@ const styles = {
   },
 };
 
+const MIN_PASSWORD_LENGTH = 6;
 export const SAVING_STATE = i18n.saving();
 export const SUCCESS_STATE = i18n.success();
+export const PASSWORD_TOO_SHORT = i18n.passwordTooShort();
 export const PASSWORDS_MUST_MATCH = i18n.passwordsMustMatch();
 
 const DEFAULT_STATE = {
@@ -71,18 +71,28 @@ export default class AddPasswordForm extends React.Component {
     });
   };
 
-  passwordFieldsHaveContent = () => {
+  passwordsHaveMinimumContent = () => {
     const {password, passwordConfirmation} = this.state;
-    return password.length > 0 && passwordConfirmation.length > 0;
+    return password.length >= MIN_PASSWORD_LENGTH && passwordConfirmation.length >= MIN_PASSWORD_LENGTH;
+  };
+
+  passwordsMatch = () => {
+    const {password, passwordConfirmation} = this.state;
+    return password === passwordConfirmation;
   };
 
   isFormValid = () => {
-    const {password, passwordConfirmation} = this.state;
-    return this.passwordFieldsHaveContent() && (password === passwordConfirmation);
+    return this.passwordsHaveMinimumContent() && this.passwordsMatch();
+  };
+
+  minimumLengthError = (value) => {
+    if (value.length > 0 &&  value.length < MIN_PASSWORD_LENGTH) {
+      return PASSWORD_TOO_SHORT;
+    }
   };
 
   mismatchedPasswordsError = () => {
-    if (this.passwordFieldsHaveContent() && !this.isFormValid()) {
+    if (this.passwordsHaveMinimumContent() && !this.passwordsMatch()) {
       return PASSWORDS_MUST_MATCH;
     }
   };
@@ -118,7 +128,7 @@ export default class AddPasswordForm extends React.Component {
   };
 
   render() {
-    const {submissionState} = this.state;
+    const {password, passwordConfirmation, submissionState} = this.state;
     let statusTextStyles = styles.statusText;
     statusTextStyles = submissionState.isError ? {...statusTextStyles, ...styles.errorText} : statusTextStyles;
 
@@ -133,13 +143,14 @@ export default class AddPasswordForm extends React.Component {
         </div>
         <PasswordField
           label={i18n.password()}
-          value={this.state.password}
+          error={this.minimumLengthError(password)}
+          value={password}
           onChange={this.onPasswordChange}
         />
         <PasswordField
           label={i18n.passwordConfirmation()}
-          error={this.mismatchedPasswordsError()}
-          value={this.state.passwordConfirmation}
+          error={this.minimumLengthError(passwordConfirmation) || this.mismatchedPasswordsError()}
+          value={passwordConfirmation}
           onChange={this.onPasswordConfirmationChange}
         />
         <div style={styles.buttonContainer}>
@@ -149,16 +160,12 @@ export default class AddPasswordForm extends React.Component {
           >
             {submissionState.message}
           </div>
-          {/* This button intentionally uses Bootstrap classes to match other account page buttons */}
-          <button
-            className="btn"
-            style={styles.button}
+          {/* This button intentionally uses BootstrapButton to match other account page buttons */}
+          <BootstrapButton
+            text={i18n.createPassword()}
             onClick={this.handleSubmit}
             disabled={!this.isFormValid()}
-            tabIndex="1"
-          >
-            {i18n.createPassword()}
-          </button>
+          />
         </div>
       </div>
     );
