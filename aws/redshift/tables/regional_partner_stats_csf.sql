@@ -6,14 +6,6 @@
 -- right now this analysis depends primarily on the teachers_trained views, which contain one entry per person, with the corresponding 'first year trained' as the school_year
       -- this means that if teachers are trained in multiple years then only info from their first year of training will get joined
       -- to Mary, this does not seem ideal 
-      
--- CHANGED DEPENDENCIES
--- before using this code to update analysis.regional_partner_stats, certain other tables need to be updated, and their references updated here
--- analysis.csf_teachers_trained and analysis.csp_csd_teachers_trained need to be updated using the code in the file 'teahers_trained_updates.sql'
--- then, references in this file to public.csf_teachers_trained_test and public.csp_csd_teachers_trained_test should be replaced with 'analysis.csf_teachers_trained' and 'analysis.csp_csd_teachers_trained'
--- these are views and so do not need to be added to Github
--- similarly, the tables analysis.teacher_most_progress and analysis.student_activity need to be updated and then their references in this file replaced with the originals
--- these two need to be updated on Github
 
 -- NOTES ON HOW TO UPDATE 
 -- after updating at the dependencies listed above and noted with 'PUBLIC' in the code....
@@ -152,7 +144,7 @@ pd_facilitators as
          ON ss_user.school_id = si_user.school_id
 -- attendance
  -- LEFT JOIN analysis.csf_workshop_attendance csfa -- functions mostly to get the regional partner's location info and to decide whether the person was 'trained_by_partner'
-     LEFT JOIN analysis.csf_attendance csfa   
+     LEFT JOIN analysis.csf_workshop_attendance csfa   
         ON csfa.user_id = d.user_id
         AND csfa.course = d.course
         AND csfa.school_year = d.school_year
