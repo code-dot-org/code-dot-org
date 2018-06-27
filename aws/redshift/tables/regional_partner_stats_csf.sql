@@ -34,14 +34,16 @@ csf_teachers_trained_temp as
   min(school_year) as school_year,
   max(regional_partner) as regional_partner,
   max(regional_partner_id) as regional_partner_id, 
-  min(trained_at) as trained_at
+  min(trained_at) as trained_at,
+  min(workshop_date) as workshop_date
   from
   (
     SELECT  
         ctt.user_id, 
         ctt.trained_at,
         regional_partner_id::int, 
-        rp.name::varchar as regional_partner
+        rp.name::varchar as regional_partner,
+        pds.start as workshop_date
         FROM 
         analysis.csf_teachers_trained ctt
         LEFT JOIN dashboard_production_pii.pd_enrollments pde
@@ -50,11 +52,11 @@ csf_teachers_trained_temp as
            ON pda.pd_enrollment_id = pde.id
          LEFT JOIN dashboard_production_pii.pd_workshops pdw 
            ON pdw.id = pde.pd_workshop_id
+           AND course = 'CS Fundamentals'
          LEFT JOIN dashboard_production_pii.pd_sessions pds 
            ON pds.pd_workshop_id = pdw.id
         LEFT JOIN dashboard_production_pii.regional_partners rp  
            ON pdw.regional_partner_id = rp.id     
-           where course = 'CS Fundamentals'
   ) csf_train
   JOIN analysis.training_school_years sy on csf_train.trained_at between sy.started_at and sy.ended_at
   JOIN dashboard_production.users u on u.id = csf_train.user_id
@@ -123,7 +125,8 @@ pd_facilitators as
          csfa.workshop_id,
          csfa.subject,
          csfa.trained_by_regional_partner,
-         csfa.started_at as workshop_date, 
+         d.trained_at as trained_at,
+         d.workshop_date as workshop_date, 
          csfa.workshop_id::varchar(16) || ', '::varchar(2) || extract(month from csfa.started_at)::varchar(16) || '/'::varchar(2) || extract(day from csfa.started_at)::varchar(16) || '/'::varchar(2) || extract(year from csfa.started_at)::varchar(16) as workshop_id_year,
          pwf.facilitator_names,
          -- started and completed
@@ -148,7 +151,8 @@ pd_facilitators as
   LEFT JOIN analysis.school_stats ss_user
          ON ss_user.school_id = si_user.school_id
 -- attendance
-  LEFT JOIN analysis.csf_workshop_attendance csfa -- functions mostly to get the regional partner's location info and to decide whether the person was 'trained_by_partner'
+ -- LEFT JOIN analysis.csf_workshop_attendance csfa -- functions mostly to get the regional partner's location info and to decide whether the person was 'trained_by_partner'
+     LEFT JOIN analysis.csf_attendance csfa   
         ON csfa.user_id = d.user_id
         AND csfa.course = d.course
         AND csfa.school_year = d.school_year
