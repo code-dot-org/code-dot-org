@@ -494,16 +494,6 @@ class User < ActiveRecord::Base
     :sanitize_race_data_set_urm,
     :fix_by_user_type
 
-  before_save :log_admin_save, if: -> {admin_changed? && User.should_log?}
-
-  before_save :set_primary_authentication_option, if: -> {!primary_authentication_option && provider == 'migrated'}
-
-  def set_primary_authentication_option
-    if provider == 'migrated' && !primary_authentication_option && !authentication_options.empty?
-      self.primary_authentication_option = authentication_options.first
-    end
-  end
-
   before_validation :update_share_setting, unless: :under_13?
 
   def make_teachers_21
@@ -682,11 +672,7 @@ class User < ActiveRecord::Base
 
   CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin'].freeze
   def self.from_omniauth(auth, params)
-    auth_option = AuthenticationOption.where(credential_type: auth.provider, authentication_id: auth.uid).first
-    migrated = auth_option&.user
-    legacy = where(provider: auth.provider, uid: auth.uid).first
-
-    omniauth_user = migrated || legacy
+    omniauth_user = find_by_credential(type: auth.provider, id: auth.uid)
     omniauth_user ||= create do |user|
       initialize_new_oauth_user(user, auth, params)
     end
@@ -869,10 +855,7 @@ class User < ActiveRecord::Base
       ).first
     elsif hashed_email = conditions.delete(:hashed_email)
       return nil if hashed_email.utf8mb4?
-      legacy = where(hashed_email: hashed_email).first
-      matching_auth_opts = AuthenticationOption.where(hashed_email: hashed_email)
-      migrated = matching_auth_opts.first && matching_auth_opts.first.user
-      return migrated || legacy
+      return find_by_hashed_email(hashed_email)
     else
       nil
     end
