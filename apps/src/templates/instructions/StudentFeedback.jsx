@@ -2,6 +2,7 @@ import React, {PropTypes, Component} from 'react';
 import { connect } from 'react-redux';
 import i18n from '@cdo/locale';
 import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
+import moment from 'moment';
 
 const styles = {
   content: {
@@ -43,7 +44,7 @@ class StudentFeedback extends Component {
         {this.state.feedbacks.map((feedback, i) => (
           <div style={styles.content} key={i}>
             <div style={styles.header}>{i18n.feedbackFrom({teacher: feedback.teacher_id})}</div>
-            <div>{i18n.fromDaysAgo({number: feedback.created_at})}<br/>{feedback.comment}</div>
+            <div>{i18n.fromWhen({when: moment(feedback.created_at).fromNow()})}<br/>{feedback.comment}</div>
           </div>
         ))}
       </div>
