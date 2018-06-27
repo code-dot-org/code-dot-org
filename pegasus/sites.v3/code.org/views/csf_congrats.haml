@@ -4,9 +4,14 @@
 :ruby
   cert_script = ScriptConstants::COURSE1_NAME
   share_url = "https://studio.code.org"
+  course_name = I18n.t(:"#{course}_name")
 
   facebook = {:u=>share_url}
-  twitter = {:url=>share_url, :related=>'codeorg', :text=>I18n.t(:"just_did_#{course}_donor", donor_twitter: get_random_donor_twitter)}
+  twitter = {
+    :url=>share_url,
+    :related=>'codeorg',
+    :text=> I18n.t(:"just_did_course_donor", donor_twitter: get_random_donor_twitter, course: course_name)
+  }
 
   rec_code_studio = {
     "course1" => "course2",
@@ -15,12 +20,12 @@
     "accelerated" => "course4",
     "course4" => "applab",
 
-    "coursea" => "courseb",
-    "courseb" => "coursec",
-    "coursec" => "coursed",
-    "coursed" => "coursee",
-    "coursee" => "coursef",
-    "coursef" => "applab",
+    ScriptConstants::COURSEA_NAME => ScriptConstants::COURSEB_NAME,
+    ScriptConstants::COURSEB_NAME => ScriptConstants::COURSEC_NAME,
+    ScriptConstants::COURSEC_NAME => ScriptConstants::COURSED_NAME,
+    ScriptConstants::COURSED_NAME => ScriptConstants::COURSEE_NAME,
+    ScriptConstants::COURSEE_NAME => ScriptConstants::COURSEF_NAME,
+    ScriptConstants::COURSEF_NAME => "applab",
   }
 
   rec_third_party = {
@@ -31,17 +36,17 @@
 
     "accelerated" => "accelerated_next",
 
-    "coursea" => "coursea_next",
-    "courseb" => "courseb_next",
-    "coursec" => "coursec_next",
-    "coursed" => "coursed_next",
-    "coursee" => "coursee_next",
-    "coursef" => "coursef_next",
+    ScriptConstants::COURSEA_NAME => "coursea_next",
+    ScriptConstants::COURSEB_NAME => "courseb_next",
+    ScriptConstants::COURSEC_NAME => "coursec_next",
+    ScriptConstants::COURSED_NAME => "coursed_next",
+    ScriptConstants::COURSEE_NAME => "coursee_next",
+    ScriptConstants::COURSEF_NAME => "coursef_next",
   }
 
 #congrats.mobile-pad{:style=>'margin: 0 auto;'}
 
-  %h1= I18n.t(:"congratulations_on_completing_#{course}")
+  %h1= I18n.t(:congratulations_on_completing_course, course: course_name)
 
   #toprow
     #hoc-certificate-small.col-50{:style=>"padding:20px; padding-top: 0; box-sizing: border-box"}
