@@ -466,6 +466,33 @@ export const getMultipleChoiceSectionSummary = (state) => {
   return results;
 };
 
+/**
+ * Selector function that takes in the state and a boolean indicating
+ * if the current assessment is a survey.
+ * @returns {number} total count of students who have submitted
+ * the current assessment.
+ */
+export const countSubmissionsForCurrentAssessment = (state, isSurvey) => {
+  const currentAssessmentId = state.sectionAssessments.assessmentId;
+  if (isSurvey) {
+    const surveysStructure = state.sectionAssessments.surveysByScript[state.scriptSelection.scriptId] || {};
+    const currentSurvey = surveysStructure[currentAssessmentId];
+    if (!currentSurvey) {
+      return 0;
+    }
+    return currentSurvey.levelgroup_results[0].results.length;
+  } else {
+    const studentResponses = getAssessmentResponsesForCurrentScript(state);
+    let totalSubmissions = 0;
+    Object.values(studentResponses).forEach((student) => {
+      if (Object.keys(student.responses_by_assessment).includes(currentAssessmentId.toString())) {
+        totalSubmissions++;
+      }
+    });
+    return totalSubmissions;
+  }
+};
+
 // Helpers
 
 /**
