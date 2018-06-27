@@ -17,7 +17,6 @@ import FreeResponseBySurveyQuestionContainer from './FreeResponseBySurveyQuestio
 import MCSurveyOverviewContainer from './MCSurveyOverviewContainer';
 import AssessmentSelector from './AssessmentSelector';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {getTotalStudentCount} from '@cdo/apps/redux/sectionDataRedux';
 
 const styles = {
   header: {
@@ -38,7 +37,6 @@ class SectionAssessments extends Component {
     setAssessmentId: PropTypes.func.isRequired,
     asyncLoadAssessments: PropTypes.func.isRequired,
     multipleChoiceSurveyResults: PropTypes.array,
-    totalStudentCount: PropTypes.number,
   };
 
   onChangeScript = scriptId => {
@@ -48,7 +46,7 @@ class SectionAssessments extends Component {
   };
 
   render() {
-    const {validScripts, scriptId, assessmentList, assessmentId, isLoading, totalStudentCount} = this.props;
+    const {validScripts, scriptId, assessmentList, assessmentId, isLoading} = this.props;
 
     return (
       <div>
@@ -77,16 +75,12 @@ class SectionAssessments extends Component {
         {!isLoading &&
           <div>
             {/* Assessments */}
-            <MCAssessmentsOverviewContainer
-              totalStudentCount={totalStudentCount}
-            />
+            <MCAssessmentsOverviewContainer />
             <StudentsMCSummaryContainer />
             <MultipleChoiceByStudentContainer />
             <FreeResponsesAssessmentsContainer />
             {/* Surveys */}
-            <MCSurveyOverviewContainer
-              totalStudentCount={totalStudentCount}
-            />
+            <MCSurveyOverviewContainer />
             <FreeResponseBySurveyQuestionContainer />
           </div>
         }
@@ -107,7 +101,6 @@ export default connect(state => ({
   assessmentList: getCurrentScriptAssessmentList(state),
   scriptId: state.scriptSelection.scriptId,
   assessmentId: state.sectionAssessments.assessmentId,
-  totalStudentCount: getTotalStudentCount(state),
 }), dispatch => ({
   setScriptId(scriptId) {
     dispatch(setScriptId(scriptId));
