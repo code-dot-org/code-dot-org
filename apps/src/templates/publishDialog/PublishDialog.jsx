@@ -55,9 +55,8 @@ class PublishDialog extends Component {
         handleClose={this.close}
         useUpdatedStyles
         style={styles.dialog}
-        className="modal-body"
       >
-        <h2>
+        <h2 className="publish-dialog-title">
           {i18n.publishToPublicGallery()}
         </h2>
         <div style={{marginBottom: 10}}>
