@@ -19,7 +19,7 @@ export default class TextResponses extends React.Component {
       if (this.props.showAverage) {
         let average = this.computeAverageForAnswers(this.props.answers);
         answers.unshift((
-          <li>
+          <li key={Object.keys(this.props.answers).length}>
             Average: {average}
           </li>
         ));
@@ -32,7 +32,7 @@ export default class TextResponses extends React.Component {
         if (this.props.showAverage) {
           let average = this.computeAverageForAnswers(this.props.answers[facilitator_name]);
           answers.unshift((
-            <li>
+            <li key={Object.keys(this.props.answers[facilitator_name]).length}>
               Average: {average}
             </li>
           ));
