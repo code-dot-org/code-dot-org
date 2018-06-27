@@ -33,6 +33,7 @@ const styles = {
   },
 };
 
+const MIN_PASSWORD_LENGTH = 6;
 export const SAVING_STATE = i18n.saving();
 export const SUCCESS_STATE = i18n.success();
 export const PASSWORDS_MUST_MATCH = i18n.passwordsMustMatch();
@@ -71,7 +72,7 @@ export default class AddPasswordForm extends React.Component {
 
   passwordFieldsHaveContent = () => {
     const {password, passwordConfirmation} = this.state;
-    return password.length > 0 && passwordConfirmation.length > 0;
+    return password.length >= MIN_PASSWORD_LENGTH && passwordConfirmation.length >= MIN_PASSWORD_LENGTH;
   };
 
   isFormValid = () => {
