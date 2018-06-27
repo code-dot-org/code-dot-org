@@ -21,7 +21,7 @@ class ReportAbuseController < ApplicationController
 
   def report_abuse
     unless Rails.env.development?
-      subject = FeaturedProject.featured?(params[:channel_id]) ?
+      subject = FeaturedProject.featured_channel_id?(params[:channel_id]) ?
         'Featured Project: Abuse Reported' :
         'Abuse Reported'
       response = HTTParty.post(
