@@ -314,7 +314,6 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   end
 
   test 'migrate and demigrate sponsored username+password student' do
-    skip
     round_trip create(:manual_username_password_student) do |user|
       assert_user user,
         provider: User::PROVIDER_MANUAL,

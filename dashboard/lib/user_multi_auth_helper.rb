@@ -47,9 +47,11 @@ module UserMultiAuthHelper
       if AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include? credential_type
         credential_type
       elsif sponsored?
-        'sponsored'
-      else
+        User::PROVIDER_SPONSORED
+      elsif hashed_email.present? || parent_email.present?
         nil
+      else
+        User::PROVIDER_MANUAL
       end
     authentication_options.delete_all
     self.primary_authentication_option = nil
