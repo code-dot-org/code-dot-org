@@ -74,6 +74,15 @@ class AuthenticationOption < ApplicationRecord
     self.hashed_email = AuthenticationOption.hash_email(email)
   end
 
+  def data_hash
+    column_value = read_attribute(:data)
+    if column_value
+      JSON.parse(column_value).symbolize_keys
+    else
+      {}
+    end
+  end
+
   private def email_must_be_unique
     # skip the db lookup if possible
     return unless email_changed? && email.present? && errors.blank?
