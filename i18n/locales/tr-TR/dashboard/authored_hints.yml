@@ -2425,24 +2425,28 @@ tr:
       courseA_harvester_loops10_authored_hint: { }
       courseA_harvester_loops11_authored_hint: { }
       courseA_harvester_loops2_authored_hint:
-        courseA_harvester_loops2_a: 'Your code will have **four** `move West` blocks and **four** `pick corn` blocks. '
+        courseA_harvester_loops2_a: "Your code will have **four** `move west`\n<xml><block type=\"maze_moveWest\"/></xml>\nblocks and **four** <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml> blocks. "
       courseA_harvester_loops3_authored_hint:
         courseA_harvester_loops3_a: |-
           Use a `repeat` block like this to help you!
           <xml><block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="2-10">4</title>
           </block></xml>
-        courseA_harvester_loops3_b: Tekrar etmek için, bir 'tekrar' döngüsü sürükle, sonra içine istediğin bloğu koy.
+        courseA_harvester_loops3_b: "Tekrar etmek için, bir 'tekrar' döngüsü sürükle, sonra içine istediğin bloğu koy."
       courseA_harvester_loops4_authored_hint:
         courseA_harvester_loops4_a: Don't be afraid to press `Run` to see what happens!
         courseA_harvester_loops4_b: How many pieces of corn are there? How many times does your code repeat?
       courseA_harvester_loops5_authored_hint:
         courseA_harvester_loops5_a: Takıldığınızda, bulmacayı köşeden önce ve köşeden sonra olarak iki ayrı parça olarak çözmeyi deneyin.
-        courseA_harvester_loops5_b: Your final code will have **one** `repeat` loop, **one** `move South` block, and **one** `move East` block.
+        courseA_harvester_loops5_b: |-
+          Your final code will have **one** `repeat`  <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">6</title>
+          </block></xml> loop, **one** `move South`   <xml><block type="maze_moveSouth" limit="1"/></xml> block, and **one** `move East`   <xml><block type="maze_moveEast" limit="1"/> </xml>block.
         courseA_harvester_loops5_c: Use this path to pick all the corn!
       courseA_harvester_loops5a_authored_hint:
-        courseA_harvester_loops5a_a: Birbiri ardına, birer `tekrarla` döngüsüne ihtiyacınız olacak.
-        courseA_harvester_loops5a_b: One loop will repeat `move South`, and the other will repeat `move East`.
+        courseA_harvester_loops5a_a: |-
+          Birbiri ardına, birer `tekrarla` döngüsüne ihtiyacınız olacak.
+        courseA_harvester_loops5a_b: One loop will repeat `move South`<xml><block type="maze_moveSouth" limit="1"/></xml>, and the other will repeat `move East` <xml><block type="maze_moveEast" limit="1"/></xml>
         courseA_harvester_loops5a_c: Use this path to move one way, and then the other.
       courseA_harvester_loops5b_authored_hint:
         courseA_harvester_loops5b_a: Press `Run` and see what happens!
@@ -2452,7 +2456,10 @@ tr:
         courseA_harvester_loops6_a: Zorlandığınız durumlarda, adımları kağıt üzerinde yazmayı deneyin ve tekrar eden adımları bulun.
         courseA_harvester_loops6_b: This is the path you should take to pick all the corn.
       courseA_harvester_loops7_authored_hint:
-        courseA_harvester_loops7_a: You will need two `repeat` loops after each other!
+        courseA_harvester_loops7_a: |-
+          You will need two `repeat` <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">5</title>
+          </block></xml>loops after each other!
         courseA_harvester_loops7_b: Use two loops to follow this path.
       courseA_harvester_loops8_authored_hint: { }
       courseA_harvester_loops9_authored_hint:
@@ -3003,7 +3010,10 @@ tr:
         courseB_artist_loops3_a: Remember to use a `repeat` loop for better code!
         courseB_artist_loops3_b: Çizgi çizmek için sanatçıyı Güneye hareket ettirmelisin.
       courseB_artist_loops3_2018_authored_hint:
-        courseB_artist_loops3_a: Remember to use a `repeat` loop for better code!
+        courseB_artist_loops3_a: |-
+          Remember to use a `repeat` <xml><block type="controls_repeat_simplified">
+          <title name="TIMES">???</title>
+          </block></xml> loop for better code!
         courseB_artist_loops3_b: Çizgi çizmek için sanatçıyı Güneye hareket ettirmelisin.
       courseB_artist_loops4_authored_hint:
         courseB_artist_loops4_a: Atla bloğu, çizgi çizmeden ileri hareket etmenizi sağlar.
@@ -3016,7 +3026,10 @@ tr:
       courseB_artist_loops5_authored_hint:
         courseB_artist_loops5_a: Drag out a `repeat` loop, then put the other blocks inside of it. How many times do you need to repeat?
       courseB_artist_loops5_2018_authored_hint:
-        courseB_artist_loops5_a: Drag out a `repeat` loop, then put the other blocks inside of it. How many times do you need to repeat?
+        courseB_artist_loops5_a: |-
+          Drag out a `repeat` <xml><block type="controls_repeat_simplified">
+          <title name="TIMES">???</title>
+          </block></xml> loop, then put the other blocks inside of it. How many times do you need to repeat?
       courseB_artist_loops6_authored_hint:
         courseB_artist_loops6_b: Hareketleri bir kağıda yazmayı deneyin ve desene bakın.
       courseB_artist_loops6_2018_authored_hint:
@@ -3095,7 +3108,8 @@ tr:
       courseB_collector_loops4_2018_authored_hint:
         courseB_collector_loops4_a: Try using the step button to figure out where things go wrong.
         courseB_collector_loops4_b: To change how far Laurel goes, change the number of times that the loop runs.
-        courseB_collector_loops4_c: Laurel, 'tekrar' döngüsünü tamamladıktan sonra aşağıya doğru yürüyüp hazine toplamaya ihtiyacı var!
+        courseB_collector_loops4_c: |-
+          Laurel, 'tekrar' döngüsünü tamamladıktan sonra aşağıya doğru yürüyüp hazine toplamaya ihtiyacı var!
       courseB_collector_loops5_authored_hint:
         courseB_collector_loops5_a: Use more than one loop to get the job done.
         courseB_collector_loops5_b: Neler olduğunu görmek için kodu birkaç kez çalıştırmayı dene.
@@ -3110,7 +3124,8 @@ tr:
       courseB_collector_loops6_2018_authored_hint:
         courseB_collector_loops6_a: Can't figure out where things start going wrong? Use the "Step" button to run through your program one block at a time.
         courseB_collector_loops6_b: '"3"e tıklayıp sayıyı farklı seçerek tekrar döngüsünün kaç kez çalışacağını değiştirebilirsiniz.'
-        courseB_collector_loops6_c: Bu bulmacayı çözmek için üç tekrarla döngüsüne ihtiyacınız olacak. 
+        courseB_collector_loops6_c: |-
+          Bu bulmacayı çözmek için üç tekrarla döngüsüne ihtiyacınız olacak. 
         courseB_collector_loops6_d: Eğer kafanız karıştıysa, bu bulmacayı üç aşamada çözmeyi deneyin.
       courseB_collector_loops7_authored_hint:
         courseB_collector_loops7_a: If you are having a hard time with the puzzle, try drawing it on paper to help you figure it out.
@@ -3422,7 +3437,8 @@ tr:
           <xml><block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="3-10">5</title>
           </block></xml>
-        courseB_iceage_loops3_b: Tekrar etmek için, bir 'tekrar' döngüsü sürükle, sonra içine istediğin bloğu koy.
+        courseB_iceage_loops3_b: |-
+          Tekrar etmek için, bir 'tekrar' döngüsü sürükle, sonra içine istediğin bloğu koy.
       courseB_iceage_loops4_authored_hint:
         courseB_iceage_loops4_a: Try writing down the steps Scrat would take to get to the acorn. Do you see a pattern?
         courseB_iceage_loops4_b: Don't be afraid to run your code and see what happens!
@@ -3956,7 +3972,8 @@ tr:
       courseB_starWars_prog9_2018_authored_hint:
         courseB_starWars_prog9_a: Hata yapmaktan korkma! Bulmacayı çözmemiş olsan bile neler olduğunu görmek için kodu çalıştır.
         courseB_starWars_prog9_b: Bu bulmacayı çözmek için bir çok yol vardır!
-        courseB_starWars_prog9_c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
+        courseB_starWars_prog9_c: |-
+          Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
       courseC_PlayLab_embed_events9_authored_hint: { }
       courseC_PlayLab_events1_authored_hint:
         courseC_PlayLab_events1_a: |-

@@ -3,58 +3,58 @@ ky:
   data:
     game:
       name:
-        Unplug1: Introduction to Computer Science
-        Maze: The Maze
-        Multi: Multiple Choice Stuffs
-        Unplug2: Computational Thinking
-        Unplug3: Graph Paper Programming
-        Artist: The Artist
-        Unplug4: Algorithms
-        Artist2: The Artist 2
-        Unplug5: Functions
-        Farmer: The Farmer
-        Unplug6: Conditionals
-        Artist3: The Artist 3
-        Unplug7: Song Writing
-        Farmer2: The Farmer 2
-        Unplug8: Abstraction
-        Artist4: The Artist 4
-        Unplug9: Relay Programming
-        Farmer3: The Farmer 3
-        Unplug10: The Internet
-        Artist5: The Artist 5
-        Unplug11: Wrap-up
-        MazeEC: The Maze
+        Unplug1: Компүтер илимине киришүү
+        Maze: Лабиринт
+        Multi: Тандама жооп элементтери
+        Unplug2: Эсептөөчү ой жүгүртүү
+        Unplug3: Графикалык кагазды програмдоо
+        Artist: Сүрөтчү
+        Unplug4: Алгоритмдер
+        Artist2: 2-сүрөтчү
+        Unplug5: Функциялар
+        Farmer: Фермер
+        Unplug6: Шартуулар
+        Artist3: 3-сүрөтчү
+        Unplug7: Ыр жазуу
+        Farmer2: 2-фермер
+        Unplug8: Абстракция
+        Artist4: 4-сүрөтчү
+        Unplug9: Релени програмдоо
+        Farmer3: 3-фермер
+        Unplug10: Интернет
+        Artist5: 5-сүрөтчү
+        Unplug11: Жыйынтыктоо
+        MazeEC: Лабиринт
         Bounce: Bounce
         Flappy: Flappy Bird
         Jigsaw: Jigsaw
-        MazeStep: Maze Step Mode
-        Wordsearch: Wordsearch
+        MazeStep: 'Лабиринт: кадамдык абал'
+        Wordsearch: Сөз издөө
         Webapp: App Lab
-        ArtistEC: The Artist
-        TextMatch: Text Match
+        ArtistEC: Сүрөтчү
+        TextMatch: Текст келиштирүү
         StudioEC: Play Lab
         Applab: App Lab
-        NetSim: Internet Simulator
+        NetSim: Интернет симулятор
         Custom: Сүрөтчү
         CustomStudio: Play Lab
-        Gamelab: Game Lab
+        Gamelab: Оюн лабы
     trophy:
       name:
-        Bronze: Bronze
-        Silver: Silver
-        Gold: Gold
+        Bronze: Коло
+        Silver: Күмүш
+        Gold: Алтын
     concept:
       description:
-        sequence: Sequence
-        if: If block
-        if_else: If-else block
-        loop_times: Repeat times block
-        loop_until: Repeat until block
-        loop_while: While block
-        loop_for: Counter block
-        function: Functions
-        parameters: Functions with parameters
+        sequence: Ирет
+        if: If блогу
+        if_else: If-else блогу
+        loop_times: '"Жолу кайталоо" блогу'
+        loop_until: '"Чейин кайталоо" блогу'
+        loop_while: '"Болмоюнча" блогу'
+        loop_for: Эсептегич блогу
+        function: Функциялар
+        parameters: Параметри бар функциялар
     level:
       instructions:
         maze_2_2: 'Тентек торопойду кармаганга жардам бересиңби? Бир нече "алдыга
@@ -95,23 +95,22 @@ ky:
           туура кыла аласыңбы?'
         maze_2_19: Болгону 3 блок кошуп, татаалыраак лабиринттен өткөзө аласыңбы?
           Туура кылсаң, узунуна карабастан ийри жолдордун баарын өтө алам.
-        turtle_1_1: Hi, I'm an artist. You can write code to make me draw almost anything.
-          Use a few blocks to make me draw over the grey lines in the picture.
-        turtle_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
-          it in the new "set color" block.'
-        turtle_1_3: Make a square using only 3 blocks.
-        turtle_1_4: 'Draw a triangle whose sides are all in different colors, using
-          the "random color" option that picks a different color each time. Hint:
-          you''ll have to figure out how far to turn by clicking on the number in
-          the turn block.'
-        turtle_1_5: Now, for practice, draw a triangle and then a square to draw an
-          envelope.
-        turtle_1_6: 'Can you figure out how draw this triangle and square? Hint: Do
-          the triangle first, then figure out how much to turn before drawing the
-          square.'
-        turtle_1_7: Ok, let's make it a bit harder - see if you can draw these green
-          glasses. The squares are 100 pixels on each side, and they're 50 pixels
-          apart. Don't forget to draw in green!
+        turtle_1_1: Салам, мен сүрөтчүмүн. Код жазып, мага каалаган нерсеңерди тарттырсаңар
+          болот. Блокторду колдонуп, мага сүрөттөгү боз сызыктын үстүнөн чийдиргиле.
+        turtle_1_2: 'Азыр чарчы тарткыла. Эскертүү: жаны "түс берүү" блогунан алып,
+          жактырган түсүңөрдү колдонгула.'
+        turtle_1_3: 3 эле блок колдонуп чарчы тарткыла.
+        turtle_1_4: 'Ар жолу башка түстү тандоочу "кокустан түс" опциясын пайдаланып,
+          ар тарабы башка түстүү үч бурчтук тарткыла. Кеңеш: "бурул" блогундагы санды
+          басып, кантип бурулса болорун үйрөнгүлө.'
+        turtle_1_5: Эми машыгуу иртенде үч бурчтук, андан соң чарчы тартып, конверт
+          жараткыла.
+        turtle_1_6: 'Бул үч бурчтукту жана чарчыны кантип тартса болорун билесиңби?
+          Кеңеш: алгач үч бурчтук тарткыла, андан соң чарчы тартыш үчүн канча градуска
+          бурулуш керектигин билгиле.'
+        turtle_1_7: Кичине кыйындаталы - бул жашыл көз айнекти тарта аласыңбы, көрөлү.
+          Чарчынын жактары 100 пиксел жана арасы 50 пиксел. Жашыл менен тартканды
+          унутпагыла!
         turtle_1_8: Ok, try to figure out what happens if you run this code (or press
           "Run" to try it). Then, repeat it enough times to complete the drawing.
           The colors will be different every time.
@@ -361,23 +360,25 @@ ky:
         studio_playlab_1: Waddles wants to say "hello" - can you help him?
         studio_playlab_2: Cave Boy (actor 1) and Jasmine (actor 2) would like to say
           "hello" to each other. Can you help them by using the "say" block twice?
-        studio_playlab_3: Can you help Tennis Girl get to the flag?
-        studio_playlab_4: Can you help Tennis Boy (actor 1) get to Tennis Girl (actor
-          2) and play a sound when he gets there?
-        studio_playlab_5: Can you help the Spacebot say "greetings earthlings" when
-          it is clicked? Don’t forget to click it after you click Run
-        studio_playlab_6: Can you help the Witch move around using the up/down/right/left
-          arrow keys to get to all the magical fireballs?
-        studio_playlab_7: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to it to help the wizard move right and left repeatedly?
-        studio_playlab_8: Can you add a block to score a point and a block to play
-          a sound when the unicorn runs into the wizard, and then move him with the
-          arrows until you score?
-        studio_playlab_9: Set the background for this alien invasion and help the
-          Spacebot get to the alien faster by changing its speed. Then move him with
-          the arrow keys to get to the Spacebot and alert everyone else
-        studio_playlab_10: Create your own game. When you're done, click Finish to
-          let friends try your game on their phones.
+        studio_playlab_3: Теннисчи кызга желекке жеткенге жардам бере аласыңбы?
+        studio_playlab_4: Теннисчи бала (1-каарман) Теннисчи кызга (2-каарман) жеткирип
+          жана жеткенде добуш чыгара аласыңбы?
+        studio_playlab_5: Космосботту басканда "салам, жердиктер" деп айткыдай кыла
+          аласыңбы? Аткарууну баскандан кийин аны басканды унутпагыла
+        studio_playlab_6: Сыйкырчыны өйдө/ылдый/оңго/солго/ жебелери менен кыймылдатып,
+          шарлардын баарына жеткидей кыла аласыңбы?
+        studio_playlab_7: '"дайым кайтала" блогу кодду тынымсыз аткартууга жол берет.
+          Ага блокторду тиркеп, сыйкырчыны оңго-солго кайталап кыймылдагыдай кыла
+          аласыңарбы?'
+        studio_playlab_8: Жалгыз мүйүз сыйкырчыга тийгенде упай кошулуп, добуш чыккыдай
+          жана упай кошулгандан кийин, аны жебелер менен башкарылгыдай кылып блокторду
+          кошо аласыңбы?
+        studio_playlab_9: Бөтөн планеталыктардын басып кирүүсүнүн фонун орноткула.
+          Космоботтун ылдамдыгын өзгөртүп, бөтөндөргө ылдамыраак жеткидей кылгыла.
+          Андан соң жебелер менен башкарып, Космоботко бөтөндү карматкыла. Башкаларга
+          билдиргиле
+        studio_playlab_10: Өз оюнуңарды түзгүлө. Бүткөндө Аяктоону басып, оюнуңарды
+          досторуңарга телефонунан ойнотуп көргүлө.
         studio_iceage_hello1: Sid wants to gather everyone for a new adventure. Can
           you help him say "hello" by dragging the "say" block out into the work area
           and typing the word "hello" inside?
@@ -484,28 +485,28 @@ ky:
         maze_intro: Maze Intro
         artist_intro: Artist Intro
         farmer_intro: Farmer Intro
-        flappy_intro: Flappy Intro
+        flappy_intro: Flappy таанышма
         loop_times: Repeat Times Block
         loop_until: Repeat Until Block
         if: If Block
         if_else: If/else Block
         if_else_scrat: If/else Block
-        function: Functions
+        function: Функциялар
         loop_while: While Block
         loop_for: Counter Block
         parameters: Functions with Parameters
         hoc_wrapup: Hour of Code Wrapup
         Unplug1: What is CS?
-        Unplug2: Computational Thinking
-        Unplug3: Graph Paper Programming
-        Unplug4: Algorithms
-        Unplug5: Functions
-        Unplug6: Conditionals
+        Unplug2: Эсептөөчү ой жүгүртүү
+        Unplug3: Графикалык кагазды програмдоо
+        Unplug4: Алгоритмдер
+        Unplug5: Функциялар
+        Unplug6: Шартуулар
         Unplug7: Songwriting
-        Unplug8: Abstraction
+        Unplug8: Абстракция
         Unplug9: Relay programming
         Unplug10: Internet
-        Unplug11: Wrap-up
+        Unplug11: Жыйынтыктоо
         C1_happy_maps_unplugged: Happy Maps
         C1_moveitmoveit_unplugged: Move It, Move It
         C1_bigevent_unplugged: The Big Event
@@ -532,10 +533,10 @@ ky:
         C2_bee_debugging: Bee Debugging
         C2_bee_conditionals: Bee Conditionals
         C2_playlab_createstory: Play Lab - Create a Story
-        C2_graph_paper: Graph Paper Programming
-        C2_conditionals_with_cards: Conditionals
+        C2_graph_paper: Графикалык кагазды програмдоо
+        C2_conditionals_with_cards: Шартуулар
         C2_binary_bracelets: Binary Bracelets
-        C2_relay_programming: Relay Programming
+        C2_relay_programming: Релени програмдоо
         C2_paper_airplanes: Paper Airplanes
         C2_digital_footprint: Your Digital Footprint
         C2_digital_footprint_v2: Your Digital Footprint
@@ -551,7 +552,7 @@ ky:
         C3_bee_debugging: Bee Debugging
         C3_bounce: Bounce
         C3_playlab_create_game: Play Lab - Create a Game
-        C3_computational_thinking: Computational Thinking
+        C3_computational_thinking: Эсептөөчү ой жүгүртүү
         C3_dice_race: Dice Race
         C3_internet: Internet
         C3_crowdsourcing: Crowdsourcing
@@ -569,7 +570,7 @@ ky:
         C4_function_edit: Editing Functions
         C4_function_create: Creating Functions
         C4_function_parameters: Functions with Parameters
-        C4_conditionals: Conditionals
+        C4_conditionals: Шартуулар
         C4_unplugged_algorithms: Algorithms with Tangrams
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Variables in Envelopes

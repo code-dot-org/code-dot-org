@@ -287,7 +287,7 @@ th:
       Choose Number: Choose Number
       Move Bird: Move Bird
       turn left: หันซ้าย
-      move forward: เดินไปข้างหน้า
+      move forward: ไปข้างหน้า
       turn right: หันขวา
       drawDot: drawDot
       draw a rectangle: draw a rectangle

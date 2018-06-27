@@ -428,7 +428,6 @@ fi:
         CSD_U3_rect_c2: Tässä on "Suorita"-painike.
       CSD U3 rect_2018_callout:
         CSD_U3_rect_c1: Tässä on koodi
-        CSD_U3_rect_c2: Tässä on "Suorita"-painike.
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Tässä on koodi
         CSD_U3_rect_c2: Drag this block into the code area.

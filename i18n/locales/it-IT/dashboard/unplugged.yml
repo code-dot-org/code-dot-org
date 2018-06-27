@@ -122,7 +122,7 @@ it:
         title: Internet
         desc: Gli studenti inviano messaggi che rappresentano i vari metodi di trasmissione su Internet, usando solo dei fogli di carta.
       Crowdsourcing:
-        title: Intelligenza Collettiva
+        title: Crowdsourcing (Intelligenza Collettiva)
         desc: Gli studenti utilizzano l'Intelligenza Collettiva (<i>crowd-sourcing</i>), una tecnica per la risoluzione di problemi usata in informatica, per completare insieme un'attività in modo più efficiente rispetto a uno studente che ci prova da solo.
       DigitalCitizenship:
         title: Cittadinanza Digitale
@@ -227,7 +227,7 @@ it:
         title: Immagini binarie
         desc: Anche se molti pensano al sistema binario come costituito rigorosamente da zeri e uni, nelle precedenti lezioni gli studenti hanno visto che le informazioni possono essere rappresentate in una varietà di opzioni binarie.  Questa lezione sviluppa ulteriormente questo concetto illustrando come un computer possa memorizzare informazioni ancora più complesse (ad esempio immagini e colori) in formato binario.
       courseE_unplugged_diceRace:
-        title: 'Real-Life Algorithms: Dice Race'
+        title: 'Algoritmi della Vita Reale: Gara con i Dadi'
         desc: Questa lezione tratta degli algoritmi nella vita quotidiana. In questo contesto, gli studenti devono identificare e scrivere l'algoritmo per un gioco con i dadi.
       courseE_unplugged_songwritingParameters:
         title: Composizione di Canzoni - Parametri
@@ -236,7 +236,7 @@ it:
         title: Internet
         desc: Gli studenti inviano messaggi che rappresentano i vari metodi di trasmissione su Internet, usando solo dei fogli di carta.
       courseE_unplugged_crowdsourcing:
-        title: Intelligenza Collettiva
+        title: Crowdsourcing (Intelligenza Collettiva)
         desc: Gli studenti utilizzano l'Intelligenza Collettiva (<i>crowd-sourcing</i>), una tecnica per la risoluzione di problemi usata in informatica, per completare insieme un'attività in modo più efficiente rispetto a uno studente che ci prova da solo.
       courseE_unplugged_songwriting:
         title: Composizione di Canzoni - Parametri
