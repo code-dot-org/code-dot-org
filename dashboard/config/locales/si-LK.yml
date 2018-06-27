@@ -407,6 +407,7 @@ si:
       නොමැත:'
     email_confirm_wrong_email: වැරදි විද්යුත් තැපැල් ලිපිනය
     email_resend_confirm: තහවුරු උපදෙස් නැවත භාරදෙන්න
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(ඔබට එය වෙනස් කිරීම අවශ්‍ය නොවේ නම් හිස්ව තබන්න)"
     current_password_hint: "(ඔබ සිදුකළ වෙනස්කම් තහවුරු කිරීමට දැනට භාවිතා කරන මුරපදය
       ලබාදෙන්න)"

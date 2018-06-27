@@ -126,6 +126,7 @@ level 'Applab allthethings goals'
 level 'Applab AllTheThings ResourcesTab MapReference'
 level 'Applab AllTheThings ResourcesTab ReferenceLinks'
 level 'Applab AllTheThings ResourcesTab AllResources'
+level 'AllTheThings Applab DesignModeDefault'
 
 stage 'Gamelab'
 level 'Gamelab AllTheThings With No Animation Tab'

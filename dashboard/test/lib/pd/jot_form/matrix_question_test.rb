@@ -79,20 +79,14 @@ module Pd
         )
 
         expected_summary = {
-          'sampleMatrix' => {
-            text: 'How much do you agree or disagree with the following statements about this workshop?',
-            answer_type: ANSWER_NONE
-          },
           'sampleMatrix_0' => {
-            text: 'I learned something',
+            text: 'How much do you agree or disagree with the following statements about this workshop? I learned something',
             answer_type: ANSWER_SELECT_VALUE,
-            parent: 'sampleMatrix',
             max_value: 3
           },
           'sampleMatrix_1' => {
-            text: 'It was a good use of time',
+            text: 'How much do you agree or disagree with the following statements about this workshop? It was a good use of time',
             answer_type: ANSWER_SELECT_VALUE,
-            parent: 'sampleMatrix',
             max_value: 3
           }
         }

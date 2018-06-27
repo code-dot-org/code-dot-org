@@ -1,12 +1,12 @@
 function locationConstant(direction) {
   switch (direction) {
     case "north":
-      return {x: 0, y: -1};
+      return {x: 0, y: -Infinity};
     case "south":
-      return {x: 0, y: 1};
+      return {x: 0, y: Infinity};
     case "east":
-      return {x: 1, y: 0};
+      return {x: Infinity, y: 0};
     case "west":
-      return {x: -1, y: 0};
+      return {x: -Infinity, y: 0};
   }
 }

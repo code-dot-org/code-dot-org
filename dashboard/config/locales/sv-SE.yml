@@ -406,6 +406,7 @@ sv:
     email_confirm_needed_required: 'Din e-postadress %{email} har inte bekräftats:'
     email_confirm_wrong_email: "(Fel e-postadress?)"
     email_resend_confirm: Skicka instruktioner för bekräftelse igen
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(lämna tomt om du inte vill ändra det)"
     current_password_hint: "(vi behöver ditt nuvarande lösenord att bekräfta dina
       ändringar)"

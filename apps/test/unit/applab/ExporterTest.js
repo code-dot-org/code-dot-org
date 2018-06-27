@@ -90,6 +90,10 @@ describe('The Exporter,', function () {
       '/api/v1/sound-library/default.mp3',
       'default.mp3 content'
     );
+    server.respondWith(
+      'https://studio.code.org/fakeRequest',
+      '{}'
+    );
 
     assetPrefix.init({channel: 'some-channel-id', assetPathPrefix: '/v3/assets/'});
 
@@ -284,6 +288,7 @@ describe('The Exporter,', function () {
             <img id="firstImage" src="/v3/assets/some-channel-id/foo.png"/>
             <button id="iconButton" data-canonical-image-url="icon://fa-hand-peace-o">
             <button id="clickMeButton" style="background-color: red;">Click Me!</button>
+            <button id="1Button" style="background-color: blue;">1</button>
             <img id="secondImage" src="/v3/assets/some-channel-id/foo.png"/>
           </div>
         </div>`
@@ -360,16 +365,26 @@ describe('The Exporter,', function () {
 
         it("should have a #divApplab element", () => {
           assert.isNotNull(el.querySelector("#divApplab"), "no #divApplab element");
+          const innerTextLines = el.querySelector("#divApplab").innerText.trim().split('\n');
           assert.equal(
-            el.querySelector("#divApplab").innerText.trim(),
+            innerTextLines[0].trim(),
             'Click Me!',
-            "#divApplab inner text"
+            "#divApplab inner text first line"
+          );
+          assert.equal(
+            innerTextLines[1].trim(),
+            '1',
+            "#divApplab inner text second line"
           );
         });
 
         it("should have removed all style attributes from the elements", () => {
           assert.isNull(
             el.querySelector("#clickMeButton").getAttribute('style'),
+            'style attributes should be removed'
+          );
+          assert.isNull(
+            el.querySelector("#\\31 Button").getAttribute('style'),
             'style attributes should be removed'
           );
         });
@@ -389,6 +404,10 @@ describe('The Exporter,', function () {
           zipFiles['my-app/style.css'],
           '#divApplab.appModern #clickMeButton {\n' +
           '  background-color: red;\n' +
+          '}\n' +
+          '\n' +
+          '#divApplab.appModern #\\31 Button {\n' +
+          '  background-color: blue;\n' +
           '}'
         );
       });
@@ -439,6 +458,7 @@ describe('The Exporter,', function () {
             <img id="firstImage" src="/v3/assets/some-channel-id/foo.png"/>
             <button id="iconButton" data-canonical-image-url="icon://fa-hand-peace-o">
             <button id="clickMeButton" style="background-color: red;">Click Me!</button>
+            <button id="1Button" style="background-color: blue;">1</button>
             <img id="secondImage" src="/v3/assets/some-channel-id/foo.png"/>
           </div>
         </div>`,
@@ -532,16 +552,26 @@ describe('The Exporter,', function () {
 
         it("should have a #divApplab element", () => {
           assert.isNotNull(el.querySelector("#divApplab"), "no #divApplab element");
+          const innerTextLines = el.querySelector("#divApplab").innerText.trim().split('\n');
           assert.equal(
-            el.querySelector("#divApplab").innerText.trim(),
+            innerTextLines[0].trim(),
             'Click Me!',
-            "#divApplab inner text"
+            "#divApplab inner text first line"
+          );
+          assert.equal(
+            innerTextLines[1].trim(),
+            '1',
+            "#divApplab inner text second line"
           );
         });
 
         it("should have removed all style attributes from the elements", () => {
           assert.isNull(
             el.querySelector("#clickMeButton").getAttribute('style'),
+            'style attributes should be removed'
+          );
+          assert.isNull(
+            el.querySelector("#\\31 Button").getAttribute('style'),
             'style attributes should be removed'
           );
         });
@@ -561,6 +591,10 @@ describe('The Exporter,', function () {
           zipFiles['my-app/assets/style.css'],
           '#divApplab.appModern #clickMeButton {\n' +
           '  background-color: red;\n' +
+          '}\n' +
+          '\n' +
+          '#divApplab.appModern #\\31 Button {\n' +
+          '  background-color: blue;\n' +
           '}'
         );
       });
@@ -608,7 +642,7 @@ describe('The Exporter,', function () {
     });
   });
 
-  function runExportedApp(code, html, done) {
+  function runExportedApp(code, html, done, globalPromiseName) {
     server.respondImmediately = true;
     let zipPromise = Exporter.exportAppToZip('my-app', code, html);
 
@@ -620,7 +654,7 @@ describe('The Exporter,', function () {
         if (zipObject) {
           return zipObject.async("string");
         }
-      })).then(fileContents => {
+      })).then(async fileContents => {
         const zipFiles = {};
         relativePaths.forEach((path, index) => {
           zipFiles[path] = fileContents[index];
@@ -633,8 +667,12 @@ describe('The Exporter,', function () {
         window.$ = require('jquery');
 
         new Function(getAppOptionsFile())();
+        setAppOptions(Object.assign(window.APP_OPTIONS, { isExported: true }));
         require('../../../build/package/js/applab-api.js');
         new Function(zipFiles['my-app/code.js'])();
+        if (globalPromiseName) {
+          await window[globalPromiseName];
+        }
         done();
       }).catch(e => {
         done(e);
@@ -674,6 +712,22 @@ describe('The Exporter,', function () {
       );
     });
 
+    it("should allow you to use startWebRequest without the XHR proxy", (done) => {
+      runExportedApp(
+        `var webRequestPromise = new Promise(function (resolve, reject) {
+          startWebRequest("https://studio.code.org/fakeRequest", function (status, type, content) {
+            if (status === 200) {
+              resolve(status);
+            } else {
+              reject(new Error('network error'));
+            }
+          });
+        });`,
+        `<div><div class="screen" id="screen1" tabindex="1"></div></div>`,
+        done,
+        'webRequestPromise'
+      );
+    });
   });
 
 });
