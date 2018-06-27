@@ -817,7 +817,7 @@ class User < ActiveRecord::Base
     end
   end
 
-  def update_primary_authentication_option(user: {email: nil, hashed_email: nil})
+  def update_primary_contact_info(user: {email: nil, hashed_email: nil})
     email = user[:email]
     hashed_email = user[:hashed_email]
 

@@ -1598,13 +1598,13 @@ class UserTest < ActiveSupport::TestCase
 
   test 'update_primary_authentication_option is false if email and hashed_email are nil' do
     user = create :user
-    successful_save = user.update_primary_authentication_option(user: {email: nil, hashed_email: nil})
+    successful_save = user.update_primary_contact_info(user: {email: nil, hashed_email: nil})
     refute successful_save
   end
 
   test 'update_primary_authentication_option is false if email is nil for teacher' do
     teacher = create :teacher
-    successful_save = teacher.update_primary_authentication_option(user: {email: nil})
+    successful_save = teacher.update_primary_contact_info(user: {email: nil})
     refute successful_save
   end
 
@@ -1614,7 +1614,7 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 1, teacher.authentication_options.count
     refute_nil teacher.primary_authentication_option
 
-    successful_save = teacher.update_primary_authentication_option(user: {email: 'example@email.com'})
+    successful_save = teacher.update_primary_contact_info(user: {email: 'example@email.com'})
     teacher.reload
     assert successful_save
     assert_equal 2, teacher.authentication_options.count
@@ -1627,7 +1627,7 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 1, teacher.authentication_options.count
     refute_nil teacher.primary_authentication_option
 
-    successful_save = teacher.update_primary_authentication_option(user: {email: 'second@email.com'})
+    successful_save = teacher.update_primary_contact_info(user: {email: 'second@email.com'})
     teacher.reload
     assert successful_save
     assert_equal 1, teacher.authentication_options.count
@@ -1642,13 +1642,13 @@ class UserTest < ActiveSupport::TestCase
     refute_nil teacher.primary_authentication_option
 
     # Update primary to a different email
-    teacher.update_primary_authentication_option(user: {email: 'example@email.com'})
+    teacher.update_primary_contact_info(user: {email: 'example@email.com'})
     teacher.reload
     assert_equal 2, teacher.authentication_options.count
     assert_equal 'example@email.com', teacher.primary_authentication_option.email
 
     # Change back to original oauth email
-    successful_save = teacher.update_primary_authentication_option(user: {email: existing_email})
+    successful_save = teacher.update_primary_contact_info(user: {email: existing_email})
     teacher.reload
     assert successful_save
     assert_equal 1, teacher.authentication_options.count
@@ -1661,7 +1661,7 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 1, teacher.authentication_options.count
     refute_nil teacher.primary_authentication_option
 
-    successful_save = teacher.update_primary_authentication_option(user: {email: 'first@email.com', hashed_email: User.hash_email('second@email.com')})
+    successful_save = teacher.update_primary_contact_info(user: {email: 'first@email.com', hashed_email: User.hash_email('second@email.com')})
     assert successful_save
     assert_equal 1, teacher.authentication_options.count
     assert_equal User.hash_email('first@email.com'), teacher.primary_authentication_option.hashed_email
@@ -1674,7 +1674,7 @@ class UserTest < ActiveSupport::TestCase
     refute_nil student.primary_authentication_option
 
     hashed_new_email = User.hash_email('example@email.com')
-    successful_save = student.update_primary_authentication_option(user: {hashed_email: hashed_new_email})
+    successful_save = student.update_primary_contact_info(user: {hashed_email: hashed_new_email})
     student.reload
     assert successful_save
     assert_equal 2, student.authentication_options.count
@@ -1688,7 +1688,7 @@ class UserTest < ActiveSupport::TestCase
     refute_nil student.primary_authentication_option
 
     hashed_new_email = User.hash_email('second@email.com')
-    successful_save = student.update_primary_authentication_option(user: {hashed_email: hashed_new_email})
+    successful_save = student.update_primary_contact_info(user: {hashed_email: hashed_new_email})
     student.reload
     assert successful_save
     assert_equal 1, student.authentication_options.count
@@ -1704,13 +1704,13 @@ class UserTest < ActiveSupport::TestCase
 
     # Update primary to a different email
     hashed_new_email = User.hash_email('example@email.com')
-    student.update_primary_authentication_option(user: {hashed_email: hashed_new_email})
+    student.update_primary_contact_info(user: {hashed_email: hashed_new_email})
     student.reload
     assert_equal 2, student.authentication_options.count
     assert_equal hashed_new_email, student.primary_authentication_option.hashed_email
 
     # Change back to original oauth email
-    successful_save = student.update_primary_authentication_option(user: {hashed_email: existing_hashed_email})
+    successful_save = student.update_primary_contact_info(user: {hashed_email: existing_hashed_email})
     student.reload
     assert successful_save
     assert_equal 1, student.authentication_options.count
@@ -1723,7 +1723,7 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 1, student.authentication_options.count
     refute_nil student.primary_authentication_option
 
-    successful_save = student.update_primary_authentication_option(user: {email: 'first@email.com', hashed_email: User.hash_email('second@email.com')})
+    successful_save = student.update_primary_contact_info(user: {email: 'first@email.com', hashed_email: User.hash_email('second@email.com')})
     assert successful_save
     assert_equal 1, student.authentication_options.count
     assert_equal User.hash_email('first@email.com'), student.primary_authentication_option.hashed_email
