@@ -114,7 +114,8 @@ export default class AssetManager extends React.Component {
         study: 'project-data-integrity',
         study_group: 'v3',
         event: 'asset-upload-error',
-        project_id: this.props.projectId
+        project_id: this.props.projectId,
+        data_int: status
       },
     );
   };
