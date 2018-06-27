@@ -2,7 +2,7 @@ import React, {Component, PropTypes} from 'react';
 import MultipleChoiceAssessmentsOverviewTable from './MultipleChoiceAssessmentsOverviewTable';
 import {
   getMultipleChoiceSectionSummary,
-  getTotalSubmissionForCurrentAssessment,
+  countSubmissionsForCurrentAssessment,
 } from './sectionAssessmentsRedux';
 import { connect } from 'react-redux';
 import { multipleChoiceDataPropType } from './assessmentDataShapes';
@@ -42,6 +42,6 @@ export const UnconnectedMCAssessmentsOverviewContainer = MCAssessmentsOverviewCo
 
 export default connect(state => ({
   questionAnswerData: getMultipleChoiceSectionSummary(state),
-  totalStudentSubmissions: getTotalSubmissionForCurrentAssessment(state, false),
+  totalStudentSubmissions: countSubmissionsForCurrentAssessment(state, false),
   totalStudentCount: getTotalStudentCount(state),
 }))(MCAssessmentsOverviewContainer);

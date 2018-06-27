@@ -472,7 +472,7 @@ export const getMultipleChoiceSectionSummary = (state) => {
  * Returns an integer total count of the number of students who have submitted
  * the current assessment.
  */
-export const getTotalSubmissionForCurrentAssessment = (state, isSurvey) => {
+export const countSubmissionsForCurrentAssessment = (state, isSurvey) => {
   const currentAssessmentId = state.sectionAssessments.assessmentId;
   if (isSurvey) {
     const surveysStructure = state.sectionAssessments.surveysByScript[state.scriptSelection.scriptId] || {};
