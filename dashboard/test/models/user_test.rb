@@ -1921,124 +1921,6 @@ class UserTest < ActiveSupport::TestCase
     assert_nil follower.student_user.terms_version
   end
 
-  test 'permission? returns true when permission exists' do
-    user = create :facilitator
-    assert user.permission?(UserPermission::FACILITATOR)
-  end
-
-  test 'permission? returns false when permission does not exist' do
-    user = create :user
-    UserPermission.create(
-      user_id: user.id, permission: UserPermission::FACILITATOR
-    )
-
-    refute user.permission?(UserPermission::LEVELBUILDER)
-  end
-
-  test 'permission? caches all permissions' do
-    user = create :facilitator
-    user.permission?(UserPermission::LEVELBUILDER)
-
-    no_database
-
-    assert user.permission?(UserPermission::FACILITATOR)
-    refute user.permission?(UserPermission::LEVELBUILDER)
-  end
-
-  test 'revoke_all_permissions revokes admin status' do
-    admin_user = create :admin
-    admin_user.revoke_all_permissions
-    assert_nil admin_user.reload.admin
-  end
-
-  test 'revoke_all_permissions revokes user permissions' do
-    teacher = create :teacher
-    teacher.permission = UserPermission::FACILITATOR
-    teacher.permission = UserPermission::LEVELBUILDER
-    teacher.revoke_all_permissions
-    assert_equal [], teacher.reload.permissions
-  end
-
-  test 'grant admin permission logs to infrasecurity' do
-    teacher = create :teacher
-
-    User.stubs(:should_log?).returns(true)
-    ChatClient.
-      expects(:message).
-      with('infra-security',
-        "Granting UserPermission: environment: #{rack_env}, "\
-        "user ID: #{teacher.id}, "\
-        "email: #{teacher.email}, "\
-        "permission: ADMIN",
-        color: 'yellow'
-      ).
-      returns(true)
-
-    teacher.update(admin: true)
-  end
-
-  test 'revoke admin permission logs to infrasecurity' do
-    admin_user = create :admin
-
-    User.stubs(:should_log?).returns(true)
-    ChatClient.
-      expects(:message).
-      with('infra-security',
-        "Revoking UserPermission: environment: #{rack_env}, "\
-        "user ID: #{admin_user.id}, "\
-        "email: #{admin_user.email}, "\
-        "permission: ADMIN",
-        color: 'yellow'
-      ).
-      returns(true)
-
-    admin_user.update(admin: nil)
-  end
-
-  test 'new admin users log admin permission' do
-    User.stubs(:should_log?).returns(true)
-    ChatClient.expects(:message)
-    create :admin
-  end
-
-  test 'new non-admin users do not log admin permission' do
-    User.stubs(:should_log?).returns(true)
-    ChatClient.expects(:message).never
-    create :teacher
-  end
-
-  test 'admin_changed? equates nil and false' do
-    # admins must be teacher
-    teacher = create :teacher
-
-    # Each row is a test consisting of 3 values in order:
-    #   from - the initial state of the admin attribute
-    #   to - the new local state to be assigned
-    #   result - the expected admin_changed? after assigning to
-    matrix = [
-      [nil, nil, false],
-      [nil, false, false],
-      [nil, true, true],
-      [false, nil, false],
-      [false, false, false],
-      [false, true, true],
-      [true, nil, true],
-      [true, false, true],
-      [true, true, false]
-    ]
-
-    matrix.each do |from, to, result|
-      teacher.update!(admin: from)
-      teacher.admin = to
-      assert_equal result, teacher.admin_changed?
-    end
-  end
-
-  test 'grant admin permission does not log in test environment' do
-    ChatClient.expects(:message).never
-    create :admin
-  end
-
   test 'assign_course_as_facilitator assigns course to facilitator' do
     facilitator = create :facilitator
     assert_creates Pd::CourseFacilitator do
@@ -3062,22 +2944,6 @@ class UserTest < ActiveSupport::TestCase
     assert user.within_united_states?
   end
 
-  test 'hidden_script_access? is false if user is not admin and does not have permission' do
-    user = create :student
-    refute user.hidden_script_access?
-  end
-
-  test 'hidden_script_access? is true if user is admin' do
-    user = create :admin
-    assert user.hidden_script_access?
-  end
-
-  test 'hidden_script_access? is true if user has permission' do
-    user = create :teacher
-    user.update(permission: UserPermission::HIDDEN_SCRIPT_ACCESS)
-    assert user.hidden_script_access?
-  end
-
   test 'user_levels_by_user_by_level' do
     users = (1..3).map {create :user}
     script = Script.twenty_hour_script
@@ -3107,6 +2973,70 @@ class UserTest < ActiveSupport::TestCase
       },
       result
     )
+  end
+
+  test 'find_by_email_or_hashed_email returns nil when no user is found' do
+    assert_nil User.find_by_email_or_hashed_email 'nonexistent@example.org'
+  end
+
+  test 'find_by_email_or_hashed_email returns nil when input is blank' do
+    create :student_in_picture_section
+    assert_nil User.find_by_email_or_hashed_email nil
+    assert_nil User.find_by_email_or_hashed_email ''
+  end
+
+  test 'find_by_email_or_hashed_email locates a single-auth user by email' do
+    user = create :teacher
+    assert_equal user, User.find_by_email_or_hashed_email(user.email)
+  end
+
+  test 'find_by_email_or_hashed_email locates a single-auth user by hashed email' do
+    email = 'student@example.org'
+    user = create :student, email: email
+    assert_equal user, User.find_by_email_or_hashed_email(email)
+  end
+
+  test 'find_by_email_or_hashed_email locates a multi-auth user by email' do
+    user = create :teacher, :with_migrated_email_authentication_option
+    assert_equal user, User.find_by_email_or_hashed_email(user.email)
+  end
+
+  test 'find_by_email_or_hashed_email locates a multi-auth user by hashed email' do
+    email = 'student@example.org'
+    user = create :student, :with_migrated_email_authentication_option, email: email
+    assert_equal user, User.find_by_email_or_hashed_email(email)
+  end
+
+  test 'find_by_hashed_email returns nil when no user is found' do
+    assert_nil User.find_by_hashed_email 'fake_hash'
+  end
+
+  test 'find_by_hashed_email returns nil when input is blank' do
+    create :student_in_picture_section
+    assert_nil User.find_by_hashed_email nil
+    assert_nil User.find_by_hashed_email ''
+  end
+
+  test 'find_by_hashed_email locates a single-auth user by email' do
+    user = create :teacher
+    assert_equal user, User.find_by_hashed_email(user.hashed_email)
+  end
+
+  test 'find_by_hashed_email locates a single-auth user by hashed email' do
+    email = 'student@example.org'
+    user = create :student, email: email
+    assert_equal user, User.find_by_hashed_email(User.hash_email(email))
+  end
+
+  test 'find_by_hashed_email locates a multi-auth user by email' do
+    user = create :teacher, :with_migrated_email_authentication_option
+    assert_equal user, User.find_by_hashed_email(user.hashed_email)
+  end
+
+  test 'find_by_hashed_email locates a multi-auth user by hashed email' do
+    email = 'student@example.org'
+    user = create :student, :with_migrated_email_authentication_option, email: email
+    assert_equal user, User.find_by_hashed_email(User.hash_email(email))
   end
 
   test 'find_by_credential returns nil when no matching user is found' do
