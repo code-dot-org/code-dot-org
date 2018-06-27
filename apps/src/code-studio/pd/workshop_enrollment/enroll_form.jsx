@@ -10,17 +10,18 @@ export default class EnrollForm extends React.Component {
   static propTypes = {
     workshop_id: PropTypes.number.isRequired,
     logged_in: PropTypes.bool,
-    user_email: PropTypes.string,
-    enrollment_email: PropTypes.string
+    first_name: PropTypes.string,
+    email: PropTypes.string
   };
 
   constructor(props) {
     super(props);
 
-    if (this.props.user_email) {
+    if (this.props.email) {
       this.state = {
-        email: this.props.user_email,
-        confirmEmail: this.props.user_email
+        firstName: this.props.first_name,
+        email: this.props.email,
+        confirmEmail: this.props.email
       };
     }
   }
@@ -60,7 +61,7 @@ export default class EnrollForm extends React.Component {
   }
 
   readOnlyEmail() {
-    if (this.props.logged_in && this.props.user_email && this.props.enrollment_email) {
+    if (this.props.email) {
       return true;
     }
     return false;
@@ -80,6 +81,7 @@ export default class EnrollForm extends React.Component {
             type="text"
             required={true}
             onChange={this.handleChange}
+            defaultValue={this.props.first_name}
           />
           <FieldGroup
             id="lastName"
@@ -94,7 +96,7 @@ export default class EnrollForm extends React.Component {
             type="email"
             required={true}
             onChange={this.handleChange}
-            defaultValue={this.props.user_email}
+            defaultValue={this.props.email}
             readOnly={this.readOnlyEmail()}
             title={this.readOnlyEmail() ? "Email can be changed in account settings" : ""}
           />
