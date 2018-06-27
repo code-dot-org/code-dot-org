@@ -297,6 +297,34 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
       }
   end
 
+  test 'migrate and demigrate picture password student' do
+    user = create :student_in_picture_section
+    assert_user user,
+      provider: User::PROVIDER_SPONSORED,
+      sponsored?: true
+
+    user.migrate_to_multi_auth
+    user.demigrate_from_multi_auth
+
+    assert_user user,
+      provider: User::PROVIDER_SPONSORED,
+      sponsored?: true
+  end
+
+  test 'migrate and demigrate word password student' do
+    user = create :student_in_word_section
+    assert_user user,
+      provider: User::PROVIDER_SPONSORED,
+      sponsored?: true
+
+    user.migrate_to_multi_auth
+    user.demigrate_from_multi_auth
+
+    assert_user user,
+      provider: User::PROVIDER_SPONSORED,
+      sponsored?: true
+  end
+
   private
 
   #
