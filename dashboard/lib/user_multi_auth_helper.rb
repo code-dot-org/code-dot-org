@@ -57,7 +57,6 @@ module UserMultiAuthHelper
         User::PROVIDER_MANUAL
       end
     authentication_options.delete_all
-    self.primary_authentication_option = nil
     save
   end
 end
