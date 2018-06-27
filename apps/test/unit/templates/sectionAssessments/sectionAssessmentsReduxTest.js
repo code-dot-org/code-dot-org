@@ -16,7 +16,7 @@ import sectionAssessments, {
   getMultipleChoiceSectionSummary,
   getCorrectAnswer,
   indexesToAnswerString,
-  getTotalSubmissionForCurrentAssessment,
+  countSubmissionsForCurrentAssessment,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
 
@@ -505,7 +505,7 @@ describe('sectionAssessmentsRedux', () => {
       });
     });
 
-    describe('getTotalSubmissionForCurrentAssessment', () => {
+    describe('countSubmissionsForCurrentAssessment', () => {
       it('returns totals for an assessment', () => {
         const stateWithAssessment = {
           ...rootState,
@@ -544,7 +544,7 @@ describe('sectionAssessmentsRedux', () => {
           }
         };
 
-        const totalSubmissions = getTotalSubmissionForCurrentAssessment(stateWithAssessment, false);
+        const totalSubmissions = countSubmissionsForCurrentAssessment(stateWithAssessment, false);
         assert.deepEqual(totalSubmissions, 2);
       });
 
@@ -580,7 +580,7 @@ describe('sectionAssessmentsRedux', () => {
           }
         };
 
-        const totalSubmissions = getTotalSubmissionForCurrentAssessment(stateWithSurvey, true);
+        const totalSubmissions = countSubmissionsForCurrentAssessment(stateWithSurvey, true);
         assert.deepEqual(totalSubmissions, 1);
       });
     });
