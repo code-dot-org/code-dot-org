@@ -41,7 +41,6 @@ class Pd::WorkshopEnrollmentController < ApplicationController
       end
 
       sign_in_prompt_data = {
-        show_sign_in_prompt: !current_user,
         info_icon: ActionController::Base.helpers.asset_url("info_icon.png", type: :image),
         sign_in_url: CDO.studio_url("/users/sign_in?user_return_to=#{request.url}")
       }
@@ -58,7 +57,9 @@ class Pd::WorkshopEnrollmentController < ApplicationController
           session_dates: session_dates,
           enrollment: @enrollment,
           facilitators: facilitators,
-          sign_in_prompt_data: sign_in_prompt_data
+          logged_in: current_user,
+          sign_in_prompt_data: sign_in_prompt_data,
+          user_email: current_user ? current_user.email : nil
         }.to_json
       }
     end
