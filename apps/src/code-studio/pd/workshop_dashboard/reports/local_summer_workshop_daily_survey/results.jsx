@@ -3,6 +3,7 @@ import {Tab, Tabs} from 'react-bootstrap';
 import he from 'he';
 import SingleChoiceResponses from '../../components/survey_results/single_choice_responses';
 import TextResponses from '../../components/survey_results/text_responses';
+import _ from 'lodash';
 
 const styles = {
   table: {
@@ -195,8 +196,12 @@ export default class Results extends React.Component {
     let generalQuestions = this.props.questions[session]['general'];
 
     if (generalQuestions) {
-      return Object.keys(generalQuestions).map((questionId, i) => {
+      return _.compact(Object.keys(generalQuestions).map((questionId, i) => {
         let question = generalQuestions[questionId];
+        let answers = this.props.thisWorkshop[session]['general'][questionId];
+        if (_.isEmpty(answers)) {
+          return null;
+        }
 
         if (question['answer_type'] === 'selectText' || question['answer_type'] === 'selectValue') {
           return (
@@ -223,7 +228,7 @@ export default class Results extends React.Component {
             </p>
           );
         }
-      });
+      }));
     } else {
       return (<span>No questions</span>);
     }
