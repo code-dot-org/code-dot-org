@@ -42,9 +42,14 @@ module UserMultiAuthHelper
   def demigrate_from_multi_auth
     return true unless migrated?
 
-    if sponsored?
-      self.provider = 'sponsored'
-    end
+    self.provider =
+      if sponsored?
+        'sponsored'
+      else
+        nil
+      end
+    authentication_options.delete_all
+    self.primary_authentication_option = nil
     save
   end
 end
