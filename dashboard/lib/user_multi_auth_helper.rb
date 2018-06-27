@@ -39,6 +39,9 @@ module UserMultiAuthHelper
     save
   end
 
+  #
+  # Currently assumes the user was previously migrated using migrate_to_multi_auth.
+  #
   def demigrate_from_multi_auth
     return true unless migrated?
 
