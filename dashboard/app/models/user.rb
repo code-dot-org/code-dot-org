@@ -2,53 +2,53 @@
 #
 # Table name: users
 #
-#  id                               :integer          not null, primary key
-#  studio_person_id                 :integer
-#  email                            :string(255)      default(""), not null
-#  parent_email                     :string(255)
-#  encrypted_password               :string(255)      default("")
-#  reset_password_token             :string(255)
-#  reset_password_sent_at           :datetime
-#  remember_created_at              :datetime
-#  sign_in_count                    :integer          default(0)
-#  current_sign_in_at               :datetime
-#  last_sign_in_at                  :datetime
-#  current_sign_in_ip               :string(255)
-#  last_sign_in_ip                  :string(255)
-#  created_at                       :datetime
-#  updated_at                       :datetime
-#  username                         :string(255)
-#  provider                         :string(255)
-#  uid                              :string(255)
-#  admin                            :boolean
-#  gender                           :string(1)
-#  name                             :string(255)
-#  locale                           :string(10)       default("en-US"), not null
-#  birthday                         :date
-#  user_type                        :string(16)
-#  school                           :string(255)
-#  full_address                     :string(1024)
-#  school_info_id                   :integer
-#  total_lines                      :integer          default(0), not null
-#  secret_picture_id                :integer
-#  active                           :boolean          default(TRUE), not null
-#  hashed_email                     :string(255)
-#  deleted_at                       :datetime
-#  purged_at                        :datetime
-#  secret_words                     :string(255)
-#  properties                       :text(65535)
-#  invitation_token                 :string(255)
-#  invitation_created_at            :datetime
-#  invitation_sent_at               :datetime
-#  invitation_accepted_at           :datetime
-#  invitation_limit                 :integer
-#  invited_by_id                    :integer
-#  invited_by_type                  :string(255)
-#  invitations_count                :integer          default(0)
-#  terms_of_service_version         :integer
-#  urm                              :boolean
-#  races                            :string(255)
-#  primary_authentication_option_id :integer
+#  id                       :integer          not null, primary key
+#  studio_person_id         :integer
+#  email                    :string(255)      default(""), not null
+#  parent_email             :string(255)
+#  encrypted_password       :string(255)      default("")
+#  reset_password_token     :string(255)
+#  reset_password_sent_at   :datetime
+#  remember_created_at      :datetime
+#  sign_in_count            :integer          default(0)
+#  current_sign_in_at       :datetime
+#  last_sign_in_at          :datetime
+#  current_sign_in_ip       :string(255)
+#  last_sign_in_ip          :string(255)
+#  created_at               :datetime
+#  updated_at               :datetime
+#  username                 :string(255)
+#  provider                 :string(255)
+#  uid                      :string(255)
+#  admin                    :boolean
+#  gender                   :string(1)
+#  name                     :string(255)
+#  locale                   :string(10)       default("en-US"), not null
+#  birthday                 :date
+#  user_type                :string(16)
+#  school                   :string(255)
+#  full_address             :string(1024)
+#  school_info_id           :integer
+#  total_lines              :integer          default(0), not null
+#  secret_picture_id        :integer
+#  active                   :boolean          default(TRUE), not null
+#  hashed_email             :string(255)
+#  deleted_at               :datetime
+#  purged_at                :datetime
+#  secret_words             :string(255)
+#  properties               :text(65535)
+#  invitation_token         :string(255)
+#  invitation_created_at    :datetime
+#  invitation_sent_at       :datetime
+#  invitation_accepted_at   :datetime
+#  invitation_limit         :integer
+#  invited_by_id            :integer
+#  invited_by_type          :string(255)
+#  invitations_count        :integer          default(0)
+#  terms_of_service_version :integer
+#  urm                      :boolean
+#  races                    :string(255)
+#  primary_contact_info_id  :integer
 #
 # Indexes
 #
@@ -218,7 +218,7 @@ class User < ActiveRecord::Base
   has_many :districts, through: :districts_users
 
   has_many :authentication_options, dependent: :destroy
-  belongs_to :primary_authentication_option, class_name: 'AuthenticationOption'
+  belongs_to :primary_contact_info, class_name: 'AuthenticationOption'
   # This custom validator makes email collision checks on the AuthenticationOption
   # model also show up as validation errors for the email field on the User
   # model.
@@ -231,6 +231,26 @@ class User < ActiveRecord::Base
         ao.errors.each {|k, v| user.errors.add k, v}
       end
     end
+  end
+
+  #
+  # TEMPORARY: Remove these aliases
+  #
+
+  def primary_authentication_option
+    primary_contact_info
+  end
+
+  def primary_authentication_option_id
+    primary_contact_info_id
+  end
+
+  def primary_authentication_option=(value)
+    self.primary_contact_info = value
+  end
+
+  def primary_authentication_option_id=(value)
+    self.primary_contact_info_id = value
   end
 
   belongs_to :school_info
