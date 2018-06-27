@@ -192,7 +192,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
               {"type" => "Multi", "student_result" => [0], "status" => "correct",},
               {"type" => "Multi", "student_result" => [1], "status" => "incorrect",},
               {"type" => "Multi", "student_result" => [], "status" => "unsubmitted",},
-              {"status" => "unsubmitted"}
+              {"type" => "Multi", "status" => "unsubmitted"}
             ]
           }
         }
