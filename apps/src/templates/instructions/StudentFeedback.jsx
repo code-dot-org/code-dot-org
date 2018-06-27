@@ -9,7 +9,8 @@ const styles = {
     padding: 10
   },
   header: {
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    paddingRight: 5
   }
 };
 
@@ -43,8 +44,11 @@ class StudentFeedback extends Component {
       <div>
         {this.state.feedbacks.map((feedback, i) => (
           <div style={styles.content} key={i}>
-            <div style={styles.header}>{i18n.feedbackFrom({teacher: feedback.teacher_name})}</div>
-            <div>{i18n.fromWhen({when: moment(feedback.created_at).fromNow()})}<br/>{feedback.comment}</div>
+            <div>
+              <span style={styles.header}>{i18n.feedbackFrom({teacher: feedback.teacher_name})}</span>
+              {i18n.fromWhen({when: moment(feedback.created_at).fromNow()})}
+            </div>
+            <div>{feedback.comment}</div>
           </div>
         ))}
       </div>
