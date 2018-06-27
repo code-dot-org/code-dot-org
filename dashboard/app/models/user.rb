@@ -489,8 +489,8 @@ class User < ActiveRecord::Base
   end
 
   def normalize_email
-    return unless email.present?
-    self.email = email.strip.downcase
+    return unless read_attribute(:email).present?
+    self.email = read_attribute(:email).strip.downcase
   end
 
   def self.hash_email(email)
@@ -498,8 +498,8 @@ class User < ActiveRecord::Base
   end
 
   def hash_email
-    return unless email.present?
-    self.hashed_email = User.hash_email(email)
+    return unless read_attribute(:email).present?
+    self.hashed_email = User.hash_email(read_attribute(:email))
   end
 
   # @return [Boolean, nil] Whether the the list of races stored in the `races` column represents an
