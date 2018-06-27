@@ -3,7 +3,7 @@ CREATE table analysis.outreach_stats_by_year AS
   SELECT 'State' region_type,
          ug.state region,
          ug.state state,
-         sy1.school_year school_year
+         sy1.school_year school_year,
         -- old ways of getting the year:
              -- coalesce(sy1.school_year, sy2.school_year) as school_year, 
              -- DATE_PART(year,us.created_at::DATE) AS year,
@@ -41,7 +41,7 @@ CREATE table analysis.outreach_stats_by_year AS
   SELECT 'City' region_type,
          ug.city|| ', ' ||ug.state region,
          ug.state state,
-        sy1.school_year school_year
+        sy1.school_year school_year,
         -- old ways of getting the year:
              -- coalesce(sy1.school_year, sy2.school_year) as school_year, 
              -- DATE_PART(year,us.created_at::DATE) AS year,       
