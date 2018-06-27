@@ -36,6 +36,7 @@ const styles = {
 const MIN_PASSWORD_LENGTH = 6;
 export const SAVING_STATE = i18n.saving();
 export const SUCCESS_STATE = i18n.success();
+export const PASSWORD_TOO_SHORT = i18n.passwordTooShort();
 export const PASSWORDS_MUST_MATCH = i18n.passwordsMustMatch();
 
 const DEFAULT_STATE = {
@@ -86,7 +87,7 @@ export default class AddPasswordForm extends React.Component {
 
   minimumLengthError = (value) => {
     if (value.length > 0 &&  value.length < MIN_PASSWORD_LENGTH) {
-      return i18n.passwordTooShort();
+      return PASSWORD_TOO_SHORT;
     }
   };
 
