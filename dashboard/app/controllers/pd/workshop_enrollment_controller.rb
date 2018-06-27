@@ -58,8 +58,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
           enrollment: @enrollment,
           facilitators: facilitators,
           logged_in: current_user,
-          sign_in_prompt_data: sign_in_prompt_data,
-          user_email: current_user ? current_user.email : nil
+          sign_in_prompt_data: sign_in_prompt_data
         }.to_json
       }
     end

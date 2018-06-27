@@ -14,8 +14,7 @@ export default class WorkshopEnrollment extends React.Component {
     enrollment: PropTypes.object,
     facilitators: PropTypes.arrayOf(PropTypes.object),
     logged_in: PropTypes.bool,
-    sign_in_prompt_data: PropTypes.object,
-    user_email: PropTypes.string
+    sign_in_prompt_data: PropTypes.object
   };
 
   render() {
@@ -59,8 +58,8 @@ export default class WorkshopEnrollment extends React.Component {
                   <EnrollForm
                     workshop_id={this.props.workshop.id}
                     logged_in={this.props.logged_in}
-                    user_email={this.props.user_email}
-                    enrollment_email={this.props.enrollment.email}
+                    first_name={this.props.enrollment.first_name}
+                    email={this.props.enrollment.email}
                   />
                 </div>
               </div>
