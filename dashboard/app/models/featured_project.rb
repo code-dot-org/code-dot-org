@@ -26,10 +26,10 @@ class FeaturedProject < ApplicationRecord
   # @param encrypted_channel_id [string]
   # @return [Boolean] whether the project associated with the given
   # encrypted_channel_id is currently featured
-  def self.featured?(encrypted_channel_id)
+  def self.featured_channel_id?(encrypted_channel_id)
     _, channel_id = storage_decrypt_channel_id encrypted_channel_id
     find_by(storage_app_id: channel_id)&.featured?
-  rescue
+  rescue ArgumentError
     false
   end
 end
