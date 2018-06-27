@@ -175,8 +175,14 @@ class BucketHelper
     response
   end
 
+  # When updating s3://cdo-v3-sources/.../main.json, checks that the
+  # version_to_replace is the latest version. If a newer version exists,
+  # logs an event to firehose and halts with 409 Conflict.
+  #
+  # In some cases, S3 replication lag could cause the version_to_replace not to
+  # even appear in the version list. In this case, do not log or raise.
   def check_current_version(encrypted_channel_id, filename, version_to_replace, timestamp, tab_id, user_id)
-    return unless filename == 'main.json' && @bucket == CDO.sources_s3_bucket && version_to_replace
+    return true unless filename == 'main.json' && @bucket == CDO.sources_s3_bucket && version_to_replace
 
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     key = s3_path owner_id, channel_id, filename
@@ -189,19 +195,16 @@ class BucketHelper
 
     target_version_metadata = versions.find {|v| v.version_id == version_to_replace}
 
-    return unless target_version_metadata && !target_version_metadata.is_latest
+    return true unless target_version_metadata && !target_version_metadata.is_latest
 
     # Something is wrong. The target version is present but is not the latest.
     # We conclude that a different client has updated this project since the
     # last time the current client updated it.
-    #
-    # For now, just log an error. Once we're sure this is working properly,
-    # start returning 409 Conflict and force the client to reload the page.
 
     FirehoseClient.instance.put_record(
       study: 'project-data-integrity',
       study_group: 'v3',
-      event: 'replace-older-main-json',
+      event: 'reject-older-main-json',
 
       project_id: encrypted_channel_id,
       user_id: user_id,
@@ -219,12 +222,15 @@ class BucketHelper
         versions: versions,
       }.to_json
     )
+
+    return false
   rescue Aws::S3::Errors::NoSuchKey
     # Because create and update operations are both handled as PUT OBJECT,
     # we sometimes call this helper when we're creating a new object and there's
     # no existing object to check against.  In such a case we can be confident
     # that we're not replacing a non-current version so no logging needs to
     # occur - we can ignore this exception.
+    return true
   end
 
   #
