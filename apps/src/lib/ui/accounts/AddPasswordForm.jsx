@@ -2,6 +2,7 @@ import React, {PropTypes} from 'react';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import {Field} from '../SystemDialog/SystemDialog';
+import BootstrapButton from './BootstrapButton';
 
 const styles = {
   container: {
@@ -21,9 +22,6 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'flex-end',
-  },
-  button: {
-    margin: 0
   },
   statusText: {
     paddingLeft: 10,
@@ -57,12 +55,16 @@ export default class AddPasswordForm extends React.Component {
 
   onPasswordChange = (event) => {
     this.setState({
+      // Clear any existing submission state
+      submissionState: DEFAULT_STATE.submissionState,
       password: event.target.value
     });
   };
 
   onPasswordConfirmationChange = (event) => {
     this.setState({
+      // Clear any existing submission state
+      submissionState: DEFAULT_STATE.submissionState,
       passwordConfirmation: event.target.value
     });
   };
@@ -145,16 +147,12 @@ export default class AddPasswordForm extends React.Component {
           >
             {submissionState.message}
           </div>
-          {/* This button intentionally uses Bootstrap classes to match other account page buttons */}
-          <button
-            className="btn"
-            style={styles.button}
+          {/* This button intentionally uses BootstrapButton to match other account page buttons */}
+          <BootstrapButton
+            text={i18n.createPassword()}
             onClick={this.handleSubmit}
             disabled={!this.isFormValid()}
-            tabIndex="1"
-          >
-            {i18n.createPassword()}
-          </button>
+          />
         </div>
       </div>
     );

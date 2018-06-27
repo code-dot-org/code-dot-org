@@ -1,0 +1,35 @@
+{
+  "category": "World",
+  "config": {
+    "func": "changeColor",
+    "blockText": "change {COLOR} {METHOD} by {AMOUNT}",
+    "returnType": "Colour",
+    "args": [
+      {
+        "name": "COLOR",
+        "type": "Colour"
+      },
+      {
+        "name": "METHOD",
+        "options": [
+          [
+            "tint",
+            "\"tint\""
+          ],
+          [
+            "tone",
+            "\"tone\""
+          ],
+          [
+            "shade",
+            "\"shade\""
+          ]
+        ]
+      },
+      {
+        "name": "AMOUNT",
+        "type": "Number"
+      }
+    ]
+  }
+}

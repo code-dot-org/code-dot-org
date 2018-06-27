@@ -184,4 +184,20 @@ class S3PackagingTest < Minitest::Test
     downloaded = @packager.send(:download_package)
     assert @packager.send(:packages_equivalent, package, downloaded)
   end
+
+  def test_create_package_with_expected_commit_hash_passes
+    RakeUtils.expects(:git_folder_hash).returns(ORIGINAL_HASH)
+    @packager.create_package('/build', expected_commit_hash: ORIGINAL_HASH)
+  end
+
+  def test_create_package_with_unexpected_commit_hash_fails
+    RakeUtils.expects(:git_folder_hash).returns('modified-fake-hash')
+    e = assert_raises do
+      @packager.create_package('/build', expected_commit_hash: ORIGINAL_HASH)
+    end
+    assert_equal(
+      'test-package contents changed unexpectedly. Expected commit hash fake-hash, got modified-fake-hash',
+      e.message
+    )
+  end
 end
