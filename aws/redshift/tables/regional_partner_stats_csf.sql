@@ -26,16 +26,14 @@ csf_teachers_trained_temp as
   min(school_year) as school_year,
   max(regional_partner) as regional_partner,
   max(regional_partner_id) as regional_partner_id, 
-  min(trained_at) as trained_at,
-  min(workshop_date) as workshop_date
+  min(trained_at) as trained_at
   from
   (
     SELECT  
         ctt.user_id, 
         ctt.trained_at,
         regional_partner_id::int, 
-        rp.name::varchar as regional_partner,
-        pds.start as workshop_date
+        rp.name::varchar as regional_partner
         FROM 
         analysis.csf_teachers_trained ctt
         LEFT JOIN dashboard_production_pii.pd_enrollments pde
@@ -118,8 +116,8 @@ pd_facilitators as
          csfa.subject,
          csfa.trained_by_regional_partner,
          d.trained_at as trained_at,
-         d.workshop_date as workshop_date, 
-         csfa.workshop_id::varchar(16) || ', '::varchar(2) || extract(month from csfa.started_at)::varchar(16) || '/'::varchar(2) || extract(day from csfa.started_at)::varchar(16) || '/'::varchar(2) || extract(year from csfa.started_at)::varchar(16) as workshop_id_year,
+         csfa.workshop_date as workshop_date, 
+         extract(month from csfa.workshop_date)::varchar(16) || '/'::varchar(2) || extract(day from csfa.workshop_date)::varchar(16) || '/'::varchar(2) || extract(year from csfa.workshop_date)::varchar(16) || ', id:'::varchar(2) csfa.workshop_id::varchar(16)  as workshop_id_year,
          pwf.facilitator_names,
          -- started and completed
          case when s.user_id is not null then 1 else 0 end as started,
