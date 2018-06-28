@@ -70,6 +70,7 @@ module Pd
               max_value: options.length,
               text: "#{text} #{sub_question}",
               answer_type: answer_type,
+              options: options
             }
           ]
         end.to_h
