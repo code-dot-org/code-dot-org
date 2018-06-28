@@ -34,6 +34,8 @@ module UserMultiAuthHelper
             credential_type: AuthenticationOption::EMAIL,
           )
         end
+      authentication_options << primary_authentication_option unless
+        primary_authentication_option.nil?
     end
     self.provider = 'migrated'
     save
