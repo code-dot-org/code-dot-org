@@ -76,6 +76,13 @@ class ScaryChangeDetector
 
 #{changes.join("\n")}
 
+        Dropbox creates these files typically when 2 people change the same file a the same time.
+        See https://www.dropbox.com/help/syncing-uploads/conflicted-copy
+
+        Compare the file with its root (same filename minus the conflicted copy part). If they're identical,
+        it's safe to delete the copy.
+        Otherwise follow-up with the content editor mentioned in the copy and resolve the diff.
+
         If this change is intentional, you can bypass this message with the
           --no-verify
         flag.
