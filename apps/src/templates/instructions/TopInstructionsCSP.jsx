@@ -150,7 +150,7 @@ class TopInstructions extends Component {
     // adjusts max height.
     this.props.setInstructionsRenderedHeight(Math.min(maxNeededHeight, 300));
 
-    if (this.props.viewAs === ViewType.Student) {
+    if (this.props.viewAs === ViewType.Student && experiments.isEnabled(experiments.DEV_COMMENT_BOX_TAB)) {
       $.ajax({
         url: '/api/v1/teacher_feedbacks/get_feedbacks?student_id='+this.props.user+'&level_id='+this.props.serverLevelId,
         method: 'GET',
