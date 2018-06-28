@@ -297,6 +297,35 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
       }
   end
 
+  test 'clear_single_auth_fields throws on unmigrated user' do
+    user = create :student
+    assert_raises {user.clear_single_auth_fields}
+  end
+
+  test 'clear_single_auth_fields clears all single-auth fields' do
+    user = create :teacher, :unmigrated_google_sso
+    user.migrate_to_multi_auth
+
+    assert_user user,
+      uid: :not_nil,
+      oauth_token: :not_nil,
+      oauth_token_expiration: :not_nil,
+      oauth_refresh_token: :not_nil
+    refute_empty user.read_attribute(:email)
+    refute_nil user.read_attribute(:hashed_email)
+
+    assert user.clear_single_auth_fields
+    user.reload
+
+    assert_user user,
+      uid: nil,
+      oauth_token: nil,
+      oauth_token_expiration: nil,
+      oauth_refresh_token: nil
+    assert_empty user.read_attribute(:email)
+    assert_nil user.read_attribute(:hashed_email)
+  end
+
   test 'migrate and demigrate picture password student' do
     round_trip_sponsored create :student_in_picture_section
   end
