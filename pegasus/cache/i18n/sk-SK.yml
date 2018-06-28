@@ -1,4 +1,5 @@
-"sk-SK":
+---
+sk-SK:
   hour_of_code: Hodina kódovania
   hello: Ahoj svet
   'yes': Áno
@@ -550,13 +551,13 @@
   mc_gradelevel: Vek 4-104
   mc_platformtext: Moderné prehliadače, smartfóny, tablety
   mc_specs: Mnoho jazykov| Moderní prehliadače a tablety | Vek 6-106 rokov
-  minecraft_agent: 'Minecraft: Hero’s Journey'
+  minecraft_agent: 'Minecraft: Cesta Hrdinu'
   minecraft_designer: Minecraft dizajnér
   minecraft_adventurer: Minecraft objavovateľ
   minecraft_tutorials: Minecraft Hodina kódu Lekcie
   minecraft_specs: Veľa jazykov | Moderné prehliadače a tablety | Ročník 2+
-  minecraft_agent_description: Minecraft is back for the Hour of Code with a brand
-    new activity! Journey through Minecraft with code.
+  minecraft_agent_description: Minecraft je naspäť v Hodine Kódu so zbrusu novou aktivitou!
+    Prejdite sa po Minecrafte s kódom.
   minecraft_agent_button: Spustiť
   minecraft_designer_description: Naprogramuj zvieratá a iné postavy a vytvor svoju
     vlastnú verziu hry Minecraft.
@@ -567,41 +568,44 @@
   minecraft_no_internet: Nemáš internet?
   minecraft_download_adventurer: Stiahnite si offline verziu Minecraft objavovateľa.
   minecraft_subtitle: Minecraft Hodina kódu
-  minecraft_store_camps: Free Minecraft Hour of Code Camps at the Microsoft Store
-  minecraft_signup_store_camps: "<a href='%{signup_store_camp}'>Sign up</a> for the
-    free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada,
-    Puerto Rico or the US. Learn how coding is for everyone and combines creativity,
-    problem solving and loads of fun."
-  minecraft_host_event: Host a Minecraft Hour of Code Event
-  minecraft_teach_resources: Teacher resources and lesson plan.
-  minecraft_leader_guide: Download resources to help you plan and lead an event.
-  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a>
-    facilitator quick start guide and PowerPoint presentations for younger and older
-    students now."
-  minecraft_join_online_training: Ready to facilitate your own Hour of Code with Minecraft,
-    but not sure where to start? Check out our <a href='%{minecraft_webinar_url}'>on-demand
-    webinar</a>. You will learn best practices, access ready-to-go facilitator materials,
-    and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team.
-    Get a head start on thinking through what you need to bring Hour of Code to young
-    people during Computer Science Education week (December 4-10) and beyond.
-  minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code
-    at the Microsoft Store'
-  minecraft_continue_learning_description: No computer science experience required!
-    Help ensure all youth can learn the valuable skills gained through computer science
-    education. Join us at the Microsoft Store to engage in a free series of three,
-    1-hour workshops where you will experience coding in a fun and stress-free environment,
-    become familiar with key computer science concepts, and get ready to lead an Hour
-    of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}'>Sign
-    up today</a>.
-  minecraft_future: Help all youth become future ready
-  minecraft_future_description: Find out how other schools and nonprofits are bringing
-    digital skills, from digital literacy to computer science education, to their
-    communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}'>access
-    the resources</a> they found most valuable.
-  minecraft_og_designer: Minecraft is back with a new activity for the Hour of Code.
-    Program animals and other Minecraft creatures in your own version of Minecraft.
-  minecraft_og_agent: Minecraft is back for the Hour of Code, and you’re the hero!
-    Write code to journey through Minecraft biomes.
+  minecraft_store_camps: Bezplatné kempy Hodiny Kódu s Minecraftom v Microsoft Obchode
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Prihláste
+    sa </a> pre semináre Minecraft - Hodina Kódu zadarmo v Microsoft Obchodoch v Austrálií,
+    Kanade, Portoriku alebo v Spojených štátoch amerických (USA). Naučte sa, ako je
+    kódovanie pre každého a ako kombinuje kreativitu, schopnosti riešiť problémy a
+    zároveň prináša veľa zábavy."
+  minecraft_host_event: Zorganizujte akciu Hodiny Kódu s témou Minecrat
+  minecraft_teach_resources: Zdroje pre učiteľov a učebné osnovy.
+  minecraft_leader_guide: Stiahnite si zdroje pre pomoc s plánovaním a vedením eventu.
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Stiahnite
+    si</a> stručnú príručku pre organizátora a prezentáciu v Powerpointe pre mladších
+    a starších študentov."
+  minecraft_join_online_training: Ste pripravení zorganizovať vlastnú Hodinu Kódu
+    s Minecraftom, ale neviete, kde začať? Pozrite si náš <a href='%{minecraft_webinar_url}',
+    target='_blank'>webinár na požiadanie</a>. Naučite sa overené postupy, získate
+    prístup k hotovým materiálom pre organizátorov a prejdite si novou vzorovou lekciou
+    Cesta Hrdinu od Microsoft teamu. Získajte už dopredu čas na rozmyslenie a prípravu
+    pre zorganizovanie Hodiny Kódu pre mládežníkov počas Týždňa výuky informatiky
+    (4.-10. december) alebo inokedy.
+  minecraft_continue_learning: 'Informatika pre každého: Nad rámec Hodiny Kódu v Microsoft
+    Obchode'
+  minecraft_continue_learning_description: Netreba mať žiadne skúsenosti s informatikou!
+    Umožnite všetkým mladým ľudom prístup a možnosť naučiť sa hodnotné schopnosti
+    získané počas hodín informatiky. Pridajte sa k nám v Microsoft Obchode pre účasť
+    v bezpúlatnej sérií troch jednohodinových seminárov, počas ktorých zažijete kódovanie
+    bezstresovom prostredí plnom zábavy, osvojte si základné koncepty informatiky
+    a pripravte sa na vedenie Hodiny Kódu vo Vašej triede alebo komunite. Máte to
+    vo Vašich rukách! <a href='%{minecraft_continue_learning_url}', target='_blank'>Prihláste
+    sa dnes</a>.
+  minecraft_future: Pomôžte mládežníkom byť pripravený pre budúcnosť
+  minecraft_future_description: Zistite, ako ostatné školy a neziskové organizácie
+    prinášajú schopnosti digitálnej doby - od digitálnej gramotnosti až po výuku informatiky
+    - do ich komunít. Vyberte si z rôznych modelov, získajte tipy a triky a <a href='%{minecraft_future_url}',
+    target='_blank'>získajte prístup k zdrojom</a>, ktoré ostatní považujú za najhodnotnejšie.
+  minecraft_og_designer: Minecraft je späť s novou aktivitou pre Hodinu Kódu. Programujte
+    zvieratá a ostatné postavičky z Minecraftu vo Vašej vlastnej verzií Minecraftu.
+  minecraft_og_agent: Minecraft je späť v Hodine Kódu a vy sa stávate hrdinom! Napíšte
+    kód pre cestu Minecraft svetom.
   sports_page_title: Sports Hour of Code
   sports_og_title: Hour of Code Sports Tutorials
   sports_og_description: Choose between making a basketball game or mix and match
@@ -729,8 +733,8 @@
   volunteer_engineer_submission_field_email_placeholder: E-mailová adresa
   volunteer_engineer_submission_field_email_preference: Can we email you about updates
     to our courses, volunteer opportunities, or other computer science news?
-  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
-    policy)"
+  volunteer_engineer_submission_field_email_preference_privacy: "(Prezrite si naše
+    zásady ochrany súkromia)"
   volunteer_engineer_submission_field_email_preference_yes: Áno
   volunteer_engineer_submission_field_email_preference_no: Nie
   volunteer_engineer_submission_final_paragraph: Budete zalistovaní na mape pre miestnych
@@ -2066,41 +2070,41 @@
   infinity_shortcode: inf
   playlab_shortcode: hrať
   artist_shortcode: art
-  header_home: Home
-  header_my_dashboard: My Dashboard
+  header_home: Domov
+  header_my_dashboard: Môj hlavný panel
   header_courses: Kurzy
-  header_course_catalog: Course Catalog
+  header_course_catalog: Katalóg kurzov
   header_project_gallery: Projekty
-  header_sections: Sections
-  header_professional_learning: Professional Learning
-  header_educate_overview: Educator Overview
-  header_educate_elementary: Elementary School
-  header_educate_middle: Middle School
-  header_educate_high: High School
+  header_sections: Sekcie
+  header_professional_learning: Vzdelávanie pre profesionálov
+  header_educate_overview: Prehľad školiteľov
+  header_educate_elementary: Základná škola
+  header_educate_middle: 2. stupeň základnej školy
+  header_educate_high: Stredná škola
   header_educate_hoc: Hodina kódovania
-  header_educate_partner: Partner with Us
-  header_educate_beyond: Beyond Code.org
-  header_educate_inspire: Inspire a Student
-  header_educate_community: Online Community
-  header_educate_tools: Tools and Videos
-  header_about_us: About Us
-  header_about_leadership: Leadership
-  header_about_donors: Donors
-  header_about_partners: Partners
-  header_about_team: Full Team
-  header_about_news: Newsroom
-  header_about_evaluation: Evaluation
-  header_about_jobs: Jobs
-  header_about_contact: Contact Us
-  header_about_faqs: FAQs
-  header_learn: Learn
-  header_teach: Teach
+  header_educate_partner: Staňte sa naším partnerom
+  header_educate_beyond: Nad rámec Code.org
+  header_educate_inspire: Inšpirujte študenta
+  header_educate_community: Online komunita
+  header_educate_tools: Nástroje a videá
+  header_about_us: O nás
+  header_about_leadership: Vedenie
+  header_about_donors: Darcovia
+  header_about_partners: Partneri
+  header_about_team: Celý tím
+  header_about_news: Novinky
+  header_about_evaluation: Hodnotenie
+  header_about_jobs: Pracovné miesta
+  header_about_contact: Kontaktujte nás
+  header_about_faqs: Najčastejšie otázky
+  header_learn: Naučte sa
+  header_teach: Vyučujte
   header_stats: Štatistiky
-  header_help_us: Help Us
-  header_about: About
-  header_teacher_community: Teacher community
+  header_help_us: Pomôžte nám
+  header_about: O nás
+  header_teacher_community: Komunita školiteľov
   header_help_support: 'Help and support '
-  header_report_bug: Report bug
+  header_report_bug: Nahláste chybu
   header_tutorials: Návody
   header_documentation: Dokumentácia
   csp_name: CS Principles
@@ -2111,7 +2115,7 @@
   user_header_settings: Môj účet
   user_header_logout: Odhlásiť sa
   user_header_signin: Prihlásiť sa
-  view_all_sections: View All Sections
+  view_all_sections: Zobraziť všetky sekcie
   view_section: View Section
   view_named_section: View %{section_name}
   privacy_doc_explanation: Click here for our privacy document that can be shared
@@ -2164,5 +2168,5 @@
     Classroom” button on the “Manage students” tab:'
   google_sign_in_instruct: 'From there, they should choose the “Sign in with Google
     Account” option:'
-  hero_name: 'Minecraft: Hero''s Journey'
+  hero_name: 'Minecraft: Cesta Hrdinu'
   applab-intro_name: App Lab Intro

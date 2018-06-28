@@ -16,6 +16,7 @@ import sectionAssessments, {
   getMultipleChoiceSectionSummary,
   getCorrectAnswer,
   indexesToAnswerString,
+  countSubmissionsForCurrentAssessment,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
 
@@ -427,6 +428,16 @@ describe('sectionAssessmentsRedux', () => {
                         {correct: false, text: 'answer 1',},
                         {correct: true, text: 'answer 2',}
                       ]
+                    },
+                    {
+                      level_id: 910,
+                      type: 'Multi',
+                      question_text: 'What is an int?',
+                      question_index: 1,
+                      answers: [
+                        {correct: false, text: 'answer 1',},
+                        {correct: true, text: 'answer 2',}
+                      ]
                     }
                   ]
                 }
@@ -441,6 +452,7 @@ describe('sectionAssessmentsRedux', () => {
                       level_results: [
                         {student_result: [0], status: 'correct', type: 'Multi'},
                         {student_result: [0], status: 'incorrect', type: 'Multi'},
+                        {student_result: [1], status: 'correct', type: 'Multi'},
                       ]
                     }
                   }
@@ -452,6 +464,7 @@ describe('sectionAssessmentsRedux', () => {
                       level_results: [
                         {student_result: [0], status: 'correct', type: 'Multi'},
                         {student_result: [1], status: 'correct', type: 'Multi'},
+                        {student_result: [], status: 'unsubmitted', type: 'Multi'},
                       ]
                     }
                   }
@@ -499,8 +512,107 @@ describe('sectionAssessmentsRedux', () => {
             "question": "What is a boolean?",
             "questionNumber": 2,
             "totalAnswered": 2,
+          },
+          {
+            "answers": [
+              {
+                "isCorrect": false,
+                "multipleChoiceOption": "A",
+                "numAnswered": 0,
+              },
+              {
+                "isCorrect": true,
+                "multipleChoiceOption": "B",
+                "numAnswered": 1,
+              }
+            ],
+            "id": 910,
+            "notAnswered": 1,
+            "question": "What is an int?",
+            "questionNumber": 2,
+            "totalAnswered": 2,
           }
         ]);
+      });
+    });
+
+    describe('countSubmissionsForCurrentAssessment', () => {
+      it('returns totals for an assessment', () => {
+        const stateWithAssessment = {
+          ...rootState,
+          sectionAssessments: {
+            ...rootState.sectionAssessments,
+            assessmentId: 123,
+            assessmentQuestionsByScript: {
+              3: {
+                123: {
+                  id: 123,
+                  name: 'name',
+                  questions: []
+                }
+              }
+            },
+            assessmentResponsesByScript: {
+              3: {
+                1: {
+                  student_name: 'Saira',
+                  responses_by_assessment: {
+                    123: {
+                      level_results: []
+                    }
+                  }
+                },
+                2: {
+                  student_name: 'Rebecca',
+                  responses_by_assessment: {
+                    123: {
+                      level_results: []
+                    }
+                  }
+                }
+              }
+            }
+          }
+        };
+
+        const totalSubmissions = countSubmissionsForCurrentAssessment(stateWithAssessment, false);
+        assert.deepEqual(totalSubmissions, 2);
+      });
+
+      it('returns totals for a survey', () => {
+        const stateWithSurvey = {
+          ...rootState,
+          sectionAssessments: {
+            ...rootState.sectionAssessments,
+            assessmentId: 123,
+            surveysByScript: {
+              3: {
+                123: {
+                  stage_name: 'name',
+                  levelgroup_results: [
+                    {
+                      type: 'multi',
+                      question_index: 0,
+                      question: 'question1',
+                      answer_texts: [{text: 'agree'}, {text: 'disagree'}],
+                      results: [{answer_index: 0}]
+                    },
+                    {
+                      type: 'multi',
+                      question_index: 1,
+                      question: 'question2',
+                      answer_texts: [{text: 'agree'}, {text: 'disagree'}],
+                      results: [{answer_index: 1}]
+                    },
+                  ],
+                }
+              }
+            }
+          }
+        };
+
+        const totalSubmissions = countSubmissionsForCurrentAssessment(stateWithSurvey, true);
+        assert.deepEqual(totalSubmissions, 1);
       });
     });
 

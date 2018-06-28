@@ -58,7 +58,6 @@ class FreeResponsesSurveyTable extends Component {
         header: {
           label: i18n.response(),
           props: {style: tableLayoutStyles.headerCell},
-          transforms: [sortable],
         },
         cell: {
           format: this.studentResponseColumnFormatter,

@@ -72,7 +72,6 @@
 require 'digest/md5'
 require 'cdo/user_helpers'
 require 'cdo/race_interstitial_helper'
-require 'cdo/chat_client'
 require 'cdo/shared_cache'
 require 'school_info_interstitial_helper'
 
@@ -81,7 +80,7 @@ class User < ActiveRecord::Base
   include SchoolInfoDeduplicator
   include LocaleHelper
   include UserMultiAuthHelper
-  include UserPermissionHelper
+  include UserPermissionGrantee
   include Rails.application.routes.url_helpers
   # races: array of strings, the races that a student has selected.
   # Allowed values for race are:
@@ -183,7 +182,6 @@ class User < ActiveRecord::Base
   validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS
 
   belongs_to :studio_person
-  has_many :permissions, class_name: 'UserPermission', dependent: :destroy
   has_many :hint_view_requests
 
   # Teachers can be in multiple cohorts
@@ -221,6 +219,19 @@ class User < ActiveRecord::Base
 
   has_many :authentication_options, dependent: :destroy
   belongs_to :primary_authentication_option, class_name: 'AuthenticationOption'
+  # This custom validator makes email collision checks on the AuthenticationOption
+  # model also show up as validation errors for the email field on the User
+  # model.
+  # There's probably some performance cost in additional queries here - once
+  # we are fully migrated to multi-auth, we may want to remove this code and
+  # check that we handle validation errors from AuthenticationOption everywhere.
+  validate if: :migrated? do |user|
+    user.authentication_options.each do |ao|
+      unless ao.valid?
+        ao.errors.each {|k, v| user.errors.add k, v}
+      end
+    end
+  end
 
   belongs_to :school_info
   accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
@@ -306,62 +317,6 @@ class User < ActiveRecord::Base
     courses_as_facilitator.find_by(course: course).try(:destroy)
   end
 
-  # admin can be nil, which should be treated as false
-  def admin_changed?
-    # no change: false
-    # false <-> nil: false
-    # false|nil <-> true: true
-    !!changes['admin'].try {|from, to| !!from != !!to}
-  end
-
-  def log_admin_save
-    ChatClient.message 'infra-security',
-      "#{admin ? 'Granting' : 'Revoking'} UserPermission: "\
-      "environment: #{rack_env}, "\
-      "user ID: #{id}, "\
-      "email: #{email}, "\
-      "permission: ADMIN",
-      color: 'yellow'
-  end
-
-  # don't log changes to admin permission in development, test, and ad_hoc environments
-  def self.should_log?
-    return [:staging, :levelbuilder, :production].include? rack_env
-  end
-
-  def delete_permission(permission)
-    @permissions = nil
-    permission = permissions.find_by(permission: permission)
-    permissions.delete permission if permission
-  end
-
-  def permission=(permission)
-    @permissions = nil
-    permissions << permissions.find_or_create_by(user_id: id, permission: permission)
-  end
-
-  # @param permission [UserPermission] the permission to query.
-  # @return [Boolean] whether the User has permission granted.
-  # TODO(asher): Determine whether request level caching is sufficient, or
-  #   whether a memcache or otherwise should be employed.
-  def permission?(permission)
-    return false unless teacher?
-    if @permissions.nil?
-      # The user's permissions have not yet been cached, so do the DB query,
-      # caching the results.
-      @permissions = UserPermission.where(user_id: id).pluck(:permission)
-    end
-    # Return the cached results.
-    return @permissions.include? permission
-  end
-
-  # Revokes all escalated permissions associated with the user, including admin status and any
-  # granted UserPermission's.
-  def revoke_all_permissions
-    update_column(:admin, nil)
-    UserPermission.where(user_id: id).each(&:destroy)
-  end
-
   def district_contact?
     return false unless teacher?
     district_as_contact.present?
@@ -411,10 +366,6 @@ class User < ActiveRecord::Base
       user.save!
     end
     user
-  end
-
-  def self.find_or_create_district_contact(params, invited_by_user)
-    find_or_create_teacher(params, invited_by_user, UserPermission::DISTRICT_CONTACT)
   end
 
   def self.find_or_create_facilitator(params, invited_by_user)
@@ -543,8 +494,6 @@ class User < ActiveRecord::Base
     :sanitize_race_data_set_urm,
     :fix_by_user_type
 
-  before_save :log_admin_save, if: -> {admin_changed? && User.should_log?}
-
   before_validation :update_share_setting, unless: :under_13?
 
   def make_teachers_21
@@ -553,8 +502,8 @@ class User < ActiveRecord::Base
   end
 
   def normalize_email
-    return unless email.present?
-    self.email = email.strip.downcase
+    return unless read_attribute(:email).present?
+    self.email = read_attribute(:email).strip.downcase
   end
 
   def self.hash_email(email)
@@ -562,8 +511,8 @@ class User < ActiveRecord::Base
   end
 
   def hash_email
-    return unless email.present?
-    self.hashed_email = User.hash_email(email)
+    return unless read_attribute(:email).present?
+    self.hashed_email = User.hash_email(read_attribute(:email))
   end
 
   # @return [Boolean, nil] Whether the the list of races stored in the `races` column represents an
@@ -621,11 +570,21 @@ class User < ActiveRecord::Base
     end
   end
 
+  # Given a cleartext email finds the first user that has a matching email or hash.
+  # @param [String] email (cleartext)
+  # @return [User|nil]
   def self.find_by_email_or_hashed_email(email)
     return nil if email.blank?
+    find_by_hashed_email User.hash_email email
+  end
 
-    hashed_email = User.hash_email(email)
-    User.find_by(hashed_email: hashed_email)
+  # Given an email hash, finds the first user that has a matching email hash.
+  # @param [String] hashed_email
+  # @return [User|nil]
+  def self.find_by_hashed_email(hashed_email)
+    return nil if hashed_email.blank?
+    migrated_user = AuthenticationOption.find_by(hashed_email: hashed_email)&.user
+    migrated_user || User.find_by(hashed_email: hashed_email)
   end
 
   # Locate an SSO user by SSO provider and associated user id.
@@ -713,46 +672,9 @@ class User < ActiveRecord::Base
 
   CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin'].freeze
   def self.from_omniauth(auth, params)
-    omniauth_user = find_or_create_by(provider: auth.provider, uid: auth.uid) do |user|
-      user.provider = auth.provider
-      user.uid = auth.uid
-      user.name = name_from_omniauth auth.info.name
-      user.user_type = params['user_type'] || auth.info.user_type
-      user.user_type = 'teacher' if user.user_type == 'staff' # Powerschool sends through 'staff' instead of 'teacher'
-
-      # Store emails, except when using Clever
-      user.email = auth.info.email unless user.user_type == 'student' && OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(auth.provider)
-
-      if OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(auth.provider) && User.find_by_email_or_hashed_email(user.email)
-        user.email = user.email + '.oauthemailalreadytaken'
-      end
-
-      if auth.provider == :the_school_project
-        user.username = auth.extra.raw_info.nickname
-        user.user_type = auth.extra.raw_info.role
-        user.locale = auth.extra.raw_info.locale
-        user.school = auth.extra.raw_info.school.name
-      end
-
-      # treat clever admin types as teachers
-      if CLEVER_ADMIN_USER_TYPES.include? user.user_type
-        user.user_type = User::TYPE_TEACHER
-      end
-
-      # clever provides us these fields
-      if user.user_type == TYPE_TEACHER
-        user.age = 21
-      else
-        # As the omniauth spec (https://github.com/omniauth/omniauth/wiki/Auth-Hash-Schema) does not
-        # describe auth.info.dob, it may arrive in a variety of formats. Consequently, we let Rails
-        # handle any necessary conversion, setting birthday from auth.info.dob. The later
-        # shenanigans ensure that we store the user's age rather than birthday.
-        user.birthday = auth.info.dob
-        user_age = user.age
-        user.birthday = nil
-        user.age = user_age
-      end
-      user.gender = normalize_gender auth.info.gender
+    omniauth_user = find_by_credential(type: auth.provider, id: auth.uid)
+    omniauth_user ||= create do |user|
+      initialize_new_oauth_user(user, auth, params)
     end
 
     if auth.credentials
@@ -767,6 +689,48 @@ class User < ActiveRecord::Base
     end
 
     omniauth_user
+  end
+
+  def self.initialize_new_oauth_user(user, auth, params)
+    user.provider = auth.provider
+    user.uid = auth.uid
+    user.name = name_from_omniauth auth.info.name
+    user.user_type = params['user_type'] || auth.info.user_type
+    user.user_type = 'teacher' if user.user_type == 'staff' # Powerschool sends through 'staff' instead of 'teacher'
+
+    # Store emails, except when using Clever
+    user.email = auth.info.email unless user.user_type == 'student' && OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(auth.provider)
+
+    if OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(auth.provider) && User.find_by_email_or_hashed_email(user.email)
+      user.email = user.email + '.oauthemailalreadytaken'
+    end
+
+    if auth.provider == :the_school_project
+      user.username = auth.extra.raw_info.nickname
+      user.user_type = auth.extra.raw_info.role
+      user.locale = auth.extra.raw_info.locale
+      user.school = auth.extra.raw_info.school.name
+    end
+
+    # treat clever admin types as teachers
+    if CLEVER_ADMIN_USER_TYPES.include? user.user_type
+      user.user_type = User::TYPE_TEACHER
+    end
+
+    # clever provides us these fields
+    if user.user_type == TYPE_TEACHER
+      user.age = 21
+    else
+      # As the omniauth spec (https://github.com/omniauth/omniauth/wiki/Auth-Hash-Schema) does not
+      # describe auth.info.dob, it may arrive in a variety of formats. Consequently, we let Rails
+      # handle any necessary conversion, setting birthday from auth.info.dob. The later
+      # shenanigans ensure that we store the user's age rather than birthday.
+      user.birthday = auth.info.dob
+      user_age = user.age
+      user.birthday = nil
+      user.age = user_age
+    end
+    user.gender = normalize_gender auth.info.gender
   end
 
   def oauth?
@@ -881,6 +845,8 @@ class User < ActiveRecord::Base
     login = conditions.delete(:login)
     if login.present?
       return nil if login.utf8mb4?
+      # TODO: multi-auth (@eric, before merge!) have to handle this path, and make sure that whatever
+      # indexing problems bit us on the users table don't affect the multi-auth table
       from("users IGNORE INDEX(index_users_on_deleted_at)").where(
         [
           'username = :value OR email = :value OR hashed_email = :hashed_value',
@@ -889,7 +855,7 @@ class User < ActiveRecord::Base
       ).first
     elsif hashed_email = conditions.delete(:hashed_email)
       return nil if hashed_email.utf8mb4?
-      where(hashed_email: hashed_email).first
+      return find_by_hashed_email(hashed_email)
     else
       nil
     end
@@ -1044,10 +1010,6 @@ class User < ActiveRecord::Base
     UserLevel.where(conditions).
       order('updated_at DESC').
       first
-  end
-
-  def hidden_script_access?
-    admin? || permission?(UserPermission::HIDDEN_SCRIPT_ACCESS)
   end
 
   # Is the provided script_level hidden, on account of the section(s) that this
