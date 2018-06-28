@@ -372,13 +372,6 @@ class User < ActiveRecord::Base
     find_or_create_teacher(params, invited_by_user, UserPermission::FACILITATOR)
   end
 
-  # a district contact can see the teachers from their district that are part of a cohort
-  def district_teachers(cohort = nil)
-    return nil unless district_contact?
-    teachers = district.users
-    (cohort ? teachers.joins(:cohorts).where(cohorts: {id: cohort}) : teachers).to_a
-  end
-
   GENDER_OPTIONS = [
     [nil, ''],
     ['gender.male', 'm'],
@@ -1077,12 +1070,9 @@ class User < ActiveRecord::Base
 
   def authorized_teacher?
     # You are an authorized teacher if you are an admin, have the AUTHORIZED_TEACHER or the
-    # LEVELBUILDER permission, or are a teacher in a cohort.
+    # LEVELBUILDER permission.
     return true if admin?
     if permission?(UserPermission::AUTHORIZED_TEACHER) || permission?(UserPermission::LEVELBUILDER)
-      return true
-    end
-    if teacher? && cohorts.present?
       return true
     end
     false
