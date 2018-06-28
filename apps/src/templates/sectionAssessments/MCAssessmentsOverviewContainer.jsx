@@ -42,6 +42,6 @@ export const UnconnectedMCAssessmentsOverviewContainer = MCAssessmentsOverviewCo
 
 export default connect(state => ({
   questionAnswerData: getMultipleChoiceSectionSummary(state),
-  totalStudentSubmissions: countSubmissionsForCurrentAssessment(state, false),
+  totalStudentSubmissions: countSubmissionsForCurrentAssessment(state),
   totalStudentCount: getTotalStudentCount(state),
 }))(MCAssessmentsOverviewContainer);
