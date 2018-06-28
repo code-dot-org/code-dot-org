@@ -39,6 +39,6 @@ export const UnconnectedMCSurveyOverviewContainer = MCSurveyOverviewContainer;
 
 export default connect(state => ({
   multipleChoiceSurveyData: getMultipleChoiceSurveyResults(state),
-  totalStudentSubmissions: countSubmissionsForCurrentAssessment(state, true),
+  totalStudentSubmissions: countSubmissionsForCurrentAssessment(state),
   totalStudentCount: getTotalStudentCount(state),
 }))(MCSurveyOverviewContainer);

@@ -367,6 +367,16 @@ export const getMultipleChoiceSurveyResults = (state) => {
   });
 };
 
+// Returns a boolean.  The selector function checks if the current assessment Id
+// is in the surveys structure.
+export const isCurrentAssessmentSurvey = (state) => {
+  const scriptId = state.scriptSelection.scriptId;
+  const surveysStructure = state.sectionAssessments.surveysByScript[scriptId] || {};
+
+  const currentAssessmentId = state.sectionAssessments.assessmentId;
+  return Object.keys(surveysStructure).includes(currentAssessmentId.toString());
+};
+
 /** Get data for students assessments multiple choice table
  * Returns an object, each of type studentOverviewDataPropType with
  * the value of the key being an object that contains the number
@@ -467,13 +477,13 @@ export const getMultipleChoiceSectionSummary = (state) => {
 };
 
 /**
- * Selector function that takes in the state and a boolean indicating
- * if the current assessment is a survey.
+ * Selector function that takes in the state.
  * @returns {number} total count of students who have submitted
  * the current assessment.
  */
-export const countSubmissionsForCurrentAssessment = (state, isSurvey) => {
+export const countSubmissionsForCurrentAssessment = (state) => {
   const currentAssessmentId = state.sectionAssessments.assessmentId;
+  const isSurvey = isCurrentAssessmentSurvey(state);
   if (isSurvey) {
     const surveysStructure = state.sectionAssessments.surveysByScript[state.scriptSelection.scriptId] || {};
     const currentSurvey = surveysStructure[currentAssessmentId];
