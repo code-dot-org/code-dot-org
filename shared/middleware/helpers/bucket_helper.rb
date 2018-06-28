@@ -180,14 +180,12 @@ class BucketHelper
   # newer version exists, logs an event to firehose and halts with 409 Conflict.
   #
   # In some cases, S3 replication lag could cause the current_version not to
-  # even appear in the version list. In this case, do not log or raise.
+  # even appear in the version list. In this case, do not log or halt.
   def check_current_version(encrypted_channel_id, filename, current_version, timestamp, tab_id, user_id)
     return true unless filename == 'main.json' && @bucket == CDO.sources_s3_bucket && current_version
 
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     key = s3_path owner_id, channel_id, filename
-
-    # Get the list of version metadata without pulling down the whole object.
 
     # This is an Array of ObjectVersions, defined in:
     # https://docs.aws.amazon.com/sdkforruby/api/Aws/S3/Types/ObjectVersion.html
