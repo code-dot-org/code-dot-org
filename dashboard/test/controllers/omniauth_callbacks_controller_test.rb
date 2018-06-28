@@ -393,8 +393,8 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   test 'login prefers migrated user to legacy user' do
     legacy_student = create(:student, :unmigrated_google_sso)
     migrated_student = create(:student, :with_google_authentication_option, :multi_auth_migrated)
-    migrated_student.primary_authentication_option = migrated_student.authentication_options.first
-    migrated_student.primary_authentication_option.update(authentication_id: legacy_student.uid)
+    migrated_student.primary_contact_info = migrated_student.authentication_options.first
+    migrated_student.primary_contact_info.update(authentication_id: legacy_student.uid)
 
     auth = OmniAuth::AuthHash.new(
       uid: legacy_student.uid,
