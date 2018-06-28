@@ -6,13 +6,13 @@ CREATE table analysis.student_activity_csf AS
          COUNT(DISTINCT se.id) sections_of_course,
          COUNT(DISTINCT us.user_id) students_in_course,
          COUNT(DISTINCT CASE WHEN u_students.gender = 'f' THEN us.user_id ELSE NULL END) students_female,
-         COUNT(DISTINCT CASE WHEN u_students.gender IN ('m','f') THEN us.user_id ELSE NULL END) students_gender
+         COUNT(DISTINCT CASE WHEN u_students.gender IN ('m','f','n') THEN us.user_id ELSE NULL END) students_gender
   FROM dashboard_production.sections se -- no filter on section creation date, section course assignment
     JOIN dashboard_production.followers fo 
       ON fo.section_id = se.id
     JOIN dashboard_production.user_scripts us
       ON us.user_id = fo.student_user_id 
-      AND us.script_id IN (1,17,18,19,23,236, 259, 239, 237, 241, 258, 238, 240)
+      AND us.script_id IN (1,17,18,19,23,236, 259, 239, 237, 241, 258, 238, 240, 236,237,238,239,240,241,258,259,297,301,302,303,307,309,310,341)
     JOIN analysis.course_structure cs 
       ON cs.script_id = us.script_id    
     JOIN dashboard_production_pii.users u_students
