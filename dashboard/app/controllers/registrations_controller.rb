@@ -125,12 +125,12 @@ class RegistrationsController < Devise::RegistrationsController
           false
         elsif needs_password?(current_user, params)
           if current_user.valid_password?(params[:user][:current_password])
-            current_user.update_primary_authentication_option(user: set_email_params)
+            current_user.update_primary_contact_info(user: set_email_params)
           else
             false
           end
         else
-          current_user.update_primary_authentication_option(user: set_email_params)
+          current_user.update_primary_contact_info(user: set_email_params)
         end
       else
         if forbidden_change?(current_user, params)
