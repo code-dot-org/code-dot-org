@@ -1,3 +1,5 @@
+require 'cdo/firehose'
+
 class Api::V1::SchoolsController < ApplicationController
   load_resource :school, only: :show
 
@@ -17,10 +19,20 @@ class Api::V1::SchoolsController < ApplicationController
 
   # GET /dashboardapi/v1/schoolsearch/:q/:limit
   def search
-    render json: Api::V1::SchoolAutocomplete.get_matches(
+    search_results = Api::V1::SchoolAutocomplete.get_matches(
       params.require(:q),
       params[:limit],
       params[:use_new_search]
     )
+    if Gatekeeper.allows('logSchoolSearch')
+      FirehoseClient.instance.put_record(
+        study: 'school-search-log',
+        event: request.original_url,
+        project_id: request.uuid,
+        data_string: params[:q],
+        data_json: search_results.to_json
+      )
+    end
+    render json: search_results
   end
 end
