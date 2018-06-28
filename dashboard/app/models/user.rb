@@ -236,22 +236,8 @@ class User < ActiveRecord::Base
   #
   # TEMPORARY: Remove these aliases
   #
-
-  def primary_authentication_option
-    primary_contact_info
-  end
-
-  def primary_authentication_option_id
-    primary_contact_info_id
-  end
-
-  def primary_authentication_option=(value)
-    self.primary_contact_info = value
-  end
-
-  def primary_authentication_option_id=(value)
-    self.primary_contact_info_id = value
-  end
+  alias_attribute :primary_authentication_option, :primary_contact_info
+  alias_attribute :primary_authentication_option_id, :primary_contact_info_id
 
   belongs_to :school_info
   accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
