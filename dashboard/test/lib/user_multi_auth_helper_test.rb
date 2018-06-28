@@ -444,6 +444,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     refute_nil initial_oauth_token
     refute_nil initial_oauth_token_expiration
     round_trip_sso for_user do |user|
+      yield user if block_given?
       assert_user user,
         oauth_token: initial_oauth_token,
         oauth_token_expiration: initial_oauth_token_expiration
@@ -484,6 +485,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     refute_nil initial_authentication_id
 
     round_trip for_user do |user|
+      yield user if block_given?
       assert_user user,
         provider: provider,
         email: initial_email,
@@ -589,9 +591,11 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
 
     refute user.migrated?
     migration_result = user.migrate_to_multi_auth
+    clear_result = user.clear_single_auth_fields
     demigration_result = user.demigrate_from_multi_auth
     user.reload
     assert migration_result
+    assert clear_result
     assert demigration_result
     refute user.migrated?
 
