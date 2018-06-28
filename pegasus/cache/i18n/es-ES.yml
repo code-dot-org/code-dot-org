@@ -1,4 +1,5 @@
-"es-ES":
+---
+es-ES:
   hour_of_code: Hora del código
   hello: Hola mundo
   'yes': Sí
@@ -36,8 +37,8 @@
   twentyhours_text: "¿Terminaste tu primera Hora de Code? Conoce más sobre informática
     y conceptos de programación en este curso de seguimiento."
   og_title: 'Code.org: Todos pueden aprender'
-  og_title_soon: The Hour of Code is coming
-  og_title_here: The Hour of Code is here!
+  og_title_soon: La Hora del Código se acerca
+  og_title_here: "¡La Hora del Código está aquí!"
   og_description: Cada alumno de cualquier escuela merece la oportunidad de estudiar
     Ciencias Informáticas.
   og_description_celeb: "¡Prueba los nuevos tutoriales, gana un video chat de celebridades
@@ -403,8 +404,8 @@
   homepage_hero_text_stat_students: "#student_count cuentas de estudiante en Code
     Studio"
   homepage_hero_text_stat_served: "#Served Horas de Code servidas"
-  homepage_hero_hoc_is_coming: The Hour of Code is coming
-  homepage_hero_hoc_is_here: The Hour of Code is here
+  homepage_hero_hoc_is_coming: La Hora del Código se acerca
+  homepage_hero_hoc_is_here: La Hora del Código está aquí
   homepage_slot_text_hoc: La Hora de Programación
   homepage_slot_text_frozen: Congelados con Anna y Elsa
   homepage_slot_text_teacher: Tablero Maestro del Profesor
@@ -577,7 +578,8 @@
     mucha diversión."
   minecraft_host_event: Organiza un evento Minecraft Hora del Código
   minecraft_teach_resources: Recursos para el maestro y plan de lecciones.
-  minecraft_leader_guide: Download resources to help you plan and lead an event.
+  minecraft_leader_guide: Descarga recursos para ayudarte a planificar y liderar un
+    evento.
   minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Descarga</a>Guía
     de inicio rápido del facilitador y presentaciones de PowerPoint para estudiantes
     más jóvenes y mayores ahora."
@@ -588,24 +590,28 @@
     el nuevo tutorial de Viaje del héroe del equipo de Minecraft. Comienza a pensar
     en lo que necesitas para llevar Hora del Código a los jóvenes durante la semana
     de educación en informática (del 4 al 10 de diciembre) y más."
-  minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code
-    at the Microsoft Store'
-  minecraft_continue_learning_description: No computer science experience required!
-    Help ensure all youth can learn the valuable skills gained through computer science
-    education. Join us at the Microsoft Store to engage in a free series of three,
-    1-hour workshops where you will experience coding in a fun and stress-free environment,
-    become familiar with key computer science concepts, and get ready to lead an Hour
-    of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}'>Sign
-    up today</a>.
-  minecraft_future: Help all youth become future ready
-  minecraft_future_description: Find out how other schools and nonprofits are bringing
-    digital skills, from digital literacy to computer science education, to their
-    communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}'>access
-    the resources</a> they found most valuable.
-  minecraft_og_designer: Minecraft is back with a new activity for the Hour of Code.
-    Program animals and other Minecraft creatures in your own version of Minecraft.
-  minecraft_og_agent: Minecraft is back for the Hour of Code, and you’re the hero!
-    Write code to journey through Minecraft biomes.
+  minecraft_continue_learning: 'Ciencias de la Computación para todos: más allá de
+    una hora de código en Microsoft Store'
+  minecraft_continue_learning_description: "¡No se requiere experiencia en informática!
+    Ayuda a que todos los jóvenes puedan aprender valiosas habilidades de la educación
+    en informática. Únete a nosotros en la Tienda Microsoft para participar en una
+    serie libre de tres talleres de 1 hora donde experimentarás la programación en
+    un ambiente divertido y libre de estrés, te familiarizaras con conceptos clave
+    de la informática y prepararás para liderar una Hora del Código en tu aula o comunidad.
+    ¡Vámos! <a href='%{minecraft_continue_learning_url}', target='_blank'>Apúntate
+    hoy</a>."
+  minecraft_future: Ayuda a la juventud a estar preparada para el futuro
+  minecraft_future_description: Descubre cómo otras escuelas y organizaciones sin
+    ánimo de lucro están incorporando competencias digitales a sus comunidades, desde
+    alfabetización digital hasta educación en informática. Considera diferentes modelos,
+    obtén consejos y trucos, y <a href='%{minecraft_future_url}', target='_blank'>accede
+    a los recursos</a> que encontraron más valiosos.
+  minecraft_og_designer: Minecraft ha vuelto con una nueva actividad para la Hora
+    del Código. Programa animales y otras criaturas de Minecraft en tu propia versión
+    de Minecraft.
+  minecraft_og_agent: Minecraft ha vuelto con una nueva actividad para la Hora del
+    Código, ¡y tú eres el héroe! Escribe código para viajar a través de las biomas
+    de Minecraft.
   sports_page_title: Hora del Código de Los Deportes
   sports_og_title: Esfuérzate. Todo el mundo puede aprender.
   sports_og_description: Campeones y medallistas de oro te animamos a probar la hora
@@ -655,16 +661,16 @@
   video_title_obama: El presidente Obama sobre las Ciencias de la Computación
   video_title_hoc_is_here: La Hora del Código ha llegado - Todo el mundo puede aprender
   video_title_anybody_can_learn: Todo el mundo puede aprender
-  video_title_steph_curry: Hour of Code with Steph Curry
+  video_title_steph_curry: Hora del Código con Steph Curry
   video_title_draymond_green: Hora de código con Draymond Green
   video_title_russell_okung: Hora de código con Russell Okung
   video_title_real_madrid: Hora de código con el Real Madrid
   video_title_marco_belinelli: Hora de código con Marco Belinelli
   video_title_chris_bosh: Chris Bosh sobre Ciencias de la computación
-  video_title_my_name_is_aracely: My Name is Aracely
+  video_title_my_name_is_aracely: Mi nombre es Aracely
   video_1min: 1 min
   video_2min: 2 min
-  video_3min: 3 min
+  video_3min: 3 minutos
   video_5min: 5 min
   speak_another_language: "¿Hablas otro idioma?"
   help_translate: Ayúdanos a traducir.
@@ -793,9 +799,9 @@
   volunteer_engineer_submission_type_task_mentor: Estoy buscando un mentor que me
     ayude a prepararme para programar con mis alumnos
   petition_age: Edad
-  dashboard_announce_hoc_scaling_progress: Yikes! We are experiencing high Hour of
-    Code traffic. We are unable to save any progress this week, but progress from
-    before this week is still safe.
+  dashboard_announce_hoc_scaling_progress: "¡Ups! Estamos experimentando un alto tráfico
+    en la Hora del Código. No podemos guardar ningún progreso esta semana, pero el
+    progreso de antes de esta semana sigue estando seguro."
   dashboard_announce_learn_more_button: Aprende más
   dashboard_landing_title: Página de inicio del maestro
   dashboard_landing_welcome: Bienvenido al nuevo y mejorado panel para maestros.
@@ -932,7 +938,7 @@
   dashboard_responses_view: 'Ver respuestas de texto:'
   dashboard_responses_none: Sin respuestas de texto
   dashboard_sections_new_section: Nueva sección
-  dashboard_sections_new_google_section: Import section from Google Classroom
+  dashboard_sections_new_google_section: Importar sección de Google Clasroom
   dashboard_sections_jumbotron_instruction: Crea nuevas secciones y añade alumnos
     a ellas. Las secciones ayudan a organizar a los alumnos en grupos más pequeños
     para que puedas seguir su progreso y administrar sus cuentas.
@@ -992,9 +998,10 @@
     para mover sus estudiantes a la sección de un profesor diferente.
   dashboard_students_add_multiple: 'Escribe o pega los nombres de sus alumnos, uno
     por línea:'
-  dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
-    target='_blank'>Google Classroom</a> and then click the <b>Sync students from
-    Google Classroom</b> button above.
+  dashboard_students_new_google_classroom_section: Para añadir los estudiantes, usa
+    <a href='http://classroom.google.com' target='_blank'>Google Classroom</a> y luego
+    presiona el botón <b>Sincronizar estudiantes de Google Classroom</b> que se encuentra
+    en la parte superior.
   dashboard_students_new_section: "¡Has creado una nueva sección! Ahora, añade a tus
     alumnos usando los botones anteriores <b>Añadir alumno</b> y <b>Añadir varios
     alumnos</b>."
@@ -1048,17 +1055,17 @@
   dashboard_course2: 'Curso 2:'
   dashboard_course3: 'Curso 3:'
   dashboard_course4: 'Curso 4 (beta): '
-  dashboard_coursea: 'Course A: '
-  dashboard_courseb: 'Course B: '
-  dashboard_coursec: 'Course C: '
-  dashboard_coursed: 'Course D: '
-  dashboard_coursee: 'Course E: '
-  dashboard_coursef: 'Course F: '
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
+  dashboard_coursea: 'Curso A: '
+  dashboard_courseb: 'Curso B: '
+  dashboard_coursec: 'Curso C: '
+  dashboard_coursed: 'Curso D: '
+  dashboard_coursee: 'Curso E: '
+  dashboard_coursef: 'Curso F: '
+  dashboard_pre-express: 'Curso Rápido prescolar: '
+  dashboard_express: 'Curso rápido: '
   dashboard_unplugged: Si no tienes equipos, <a href='%{unplugged_url}'> prueba estas
     clases de unplugged</a> en su aula.
-  dashboard_tools: 'Tools: '
+  dashboard_tools: 'Herramientas: '
   dashboard_curriculum: Currículum
   dashboard_curriculum_overview: Resumen de currículo K-5
   dashboard_overview: Vista previa
@@ -1076,8 +1083,8 @@
   dashboard_curriculum_csins: 'Informática en Ciencia:'
   dashboard_curriculum_csp: 'Principios informáticos AP®:'
   dashboard_curriculum_ecs: 'Explorando la Informática:'
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
+  dashboard_curriculum_csd: 'Descubrimientos de las Ciencias de la Computación: '
+  dashboard_curriculum_apcsa: 'Informática avanzada en Java: '
   dashboard_grade_k: K
   dashboard_grade_other: Otros
   dashboard_login_word: Palabra
@@ -1181,11 +1188,13 @@
   carousel_heading_webpages: Aprende a hacer páginas web
   carousel_heading_robots: Aprende a programar con robots
   carousel_heading_ide: Plataformas populares entre los docentes
-  carousel_heading_desktop: Learn to code on a computer
-  carousel_heading_mobtabelem: For phones and tablets
-  carousel_heading_prereader: For pre-readers
-  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
-  carousel_heading_nointernet: Poor internet? Install these apps on your computer
+  carousel_heading_desktop: Aprende a programar en un ordenador
+  carousel_heading_mobtabelem: Para teléfono y tabletas
+  carousel_heading_prereader: Para prescolares
+  carousel_heading_beyondblocks: Más allá de los bloques - aprender un lenguaje de
+    programación
+  carousel_heading_nointernet: "¿Conexión lenta? Instala estas aplicaciones en tu
+    ordenador"
   educator_notes: Notas del educador
   teach_led_lesson_plans: El Profesor impartió lecciones de la Hora de Code
   learn_footer_all_tutorials: Consulte la <a href="https://code.org/educate/allhourofcode">lista
@@ -1196,8 +1205,8 @@
   more_resources_educators: Más recursos para profesores y educadores
   beyond_submission: "¿Deseas entregar un tutorial después de una hora? Ver los criterios
     y formulario de entrega."
-  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
-    the criteria and submission form.</a>
+  third_party_submission: ¿Deseas enviar un tutorial para ser publicado aquí? <a href="%{submission_url}">Revisa
+    los criterios y el formulario de inscripción</a>.
   participants: participantes
   teachers_notes: Notas del profesor
   teachers_notes_hoc: 'Profesores: Leer las notas importantes del educador aquí'
@@ -1274,12 +1283,12 @@
   coursee_name: Curso E
   coursef-draft_name: Curso F
   coursef_name: Curso F
-  coursea-2017_name: Course A (2017)
-  courseb-2017_name: Course B (2017)
-  coursec-2017_name: Course C (2017)
-  coursed-2017_name: Course D (2017)
-  coursee-2017_name: Course E (2017)
-  coursef-2017_name: Course F (2017)
+  coursea-2017_name: Curso A (2017)
+  courseb-2017_name: Curso B (2017)
+  coursec-2017_name: Curso C (2017)
+  coursed-2017_name: Curso D (2017)
+  coursee-2017_name: Curso E (2017)
+  coursef-2017_name: Curso F (2017)
   coursea-2018_name: Course A (2018)
   courseb-2018_name: Course B (2018)
   coursec-2018_name: Course C (2018)
@@ -1288,11 +1297,11 @@
   coursef-2018_name: Course F (2018)
   accelerated_name: Curso acelerado
   express_name: Express Course
-  pre-express_name: Pre-reader Express Course
-  express-2017_name: Express Course (2017)
-  pre-express-2017_name: Pre-reader Express Course (2017)
+  pre-express_name: Curso rápido prescolar
+  express-2017_name: Curso Rápido (2017)
+  pre-express-2017_name: Curso rápido prescolar (2017)
   express-2018_name: Express Course (2018)
-  pre-express-2018_name: Pre-reader Express Course (2018)
+  pre-express-2018_name: Curso rápido prescolar (2018)
   cspunit1_name: 'Tema 1: Información digital'
   cspunit2_name: 'Tema 2: El Internet'
   cspunit3_name: Principios de CS Unidad 3
@@ -1336,14 +1345,14 @@
   csp1_name: 'Tema 1: El Internet'
   csp2_name: 'Unidad 2: Información Digital'
   csp3_name: 'Unit 3: Algorithms and Programming'
-  csp3-a_name: 'Unit 3: Intro Programming (version A)'
-  csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
+  csp3-a_name: 'Unidad 3: Introducción a la Programación (versión A)'
+  csp3-research-mxghyt_name: 'Unidad 3: Introducción a la Programación (subobjetivos)'
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Bases de datos en Apps'
-  csp-post-survey_name: Student Post-Course Survey
+  csp-post-survey_name: Encuesta de fin de curso
   cspassessment_name: Prueba completa - 50 preguntas
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'
@@ -1444,12 +1453,12 @@
   course2_gradelevel: Edades de 6 a 18 años
   course3_gradelevel: Edades de 8 a 18 años
   course4_gradelevel: Edades de 10 a 18 años
-  coursea_gradelevel: Grade 5+
-  courseb_gradelevel: Grade 6+
-  coursec_gradelevel: Grade 7+
+  coursea_gradelevel: Edades de 4 a 7 años
+  courseb_gradelevel: Edades de 5 a 8 años
+  coursec_gradelevel: Edades de 6 a 10 años
   coursed_gradelevel: Grado 8 +
   coursee_gradelevel: Edad 8-12
-  coursef_gradelevel: Grade 10+
+  coursef_gradelevel: 9-13 años
   accelerated_gradelevel: Edades de 10 a 18 años
   codeorg_platformtext: Cualquier navegador moderno, smartphone, tableta
   codeintl_platformtext: Cualquier navegador moderno, smartphone, tableta
@@ -2169,28 +2178,26 @@
   header_tutorials: Tutoriales
   header_documentation: Documentacion
   csp_name: "'16-'17 Principios de CS"
-  csd_name: CS Discoveries
-  csd_2018_name: CS Discoveries
-  full_course_category_name: Full Courses
+  csd_name: Descubrimientos de la informática
+  csd_2018_name: Descubrimientos de la informática
+  full_course_category_name: Cursos Completos
   user_header_label: Hola %{username}
   user_header_settings: Mi cuenta
   user_header_logout: Cerrar sesión
   user_header_signin: Iniciar Sesión
   view_all_sections: Mirar todas las secciones
-  view_section: View Section
-  view_named_section: View %{section_name}
-  privacy_doc_explanation: Click here for our privacy document that can be shared
-    or printed for your students.
-  signing_in: Signing In
-  sign_in_overview: 'Your students can sign in to their Code.org accounts by following
-    these steps:'
-  sign_in_instruct_website: Go to Code.org and click on the 'Sign in' button on the
-    top right.
-  sign_in_instruct_code: 'Type in their 6 letter section code on the right side of
-    the page: %{section_code}.'
-  sign_in_instruct_name: Choose their display name.
-  sign_in_instruct_secret: Choose their secret %{secret}.
-  sign_in_instruct_button: Click the “Sign in” button.
+  view_section: Ver Sección
+  view_named_section: Ver %{section_name}
+  privacy_doc_explanation: Haz click aquí para ver nuestro documento de privacidad
+    que puede ser compartido o imprimido para tus estudiantes.
+  signing_in: Iniciando sesión
+  sign_in_overview: 'Tus estudiantes pueden iniciar sesión en sus cuentas de Code.org
+    siguiendo estos pasos:'
+  sign_in_instruct_website: Ir a %{code_org_url}.
+  sign_in_instruct_code: 'Escribe en su código de sección: %{section_code}.'
+  sign_in_instruct_name: Elige sus nombres de usuario.
+  sign_in_instruct_secret: Elige tu palabra secreta %{secret}.
+  sign_in_instruct_button: Haz clic en el botón de iniciar sesión.
   sign_in_overview_cards: Los estudiantes pueden encontrar toda esta información,
     incluyendo su secreto%{secret}, en las tarjetas de acceso a continuación.
   reset_student_password: Restablecer las contraseñas de estudiante
@@ -2223,11 +2230,11 @@
     través de su cuenta de Google, Facebook, Microsoft o Clever), puede restablecer
     su contraseña yendo a la pestaña "Administrar estudiantes" para la sección y haciendo
     clic en el botón "Restablecer contraseña" en la columna "Contraseña".
-  syncing_students: Syncing your students
+  syncing_students: Sincroniza a tus estudiantes
   syncing_students_instructions: 'Si su sección de Code.org está desactualizada con
     su lista de alumnos en Google Classroom, haga clic en el botón "Sincronizar estudiantes
     de Google Classroom" en la pestaña "Gestionar estudiantes":'
   google_sign_in_instruct: 'Desde ahí, deberán elegir la opcion "Registrarse con una
     cuenta de Google":'
   hero_name: 'Minecraft: Hero''s Journey'
-  applab-intro_name: App Lab Intro
+  applab-intro_name: Introducción al App Lab

@@ -38,11 +38,11 @@
     "markdown_instructions": "This staircase is much bigger, but it takes the same amount of code as the last puzzle!\r\n\r\nFix this loop to complete the puzzle.",
     "ideal": "7",
     "name_suffix": "_2018",
-    "contained_level_names": null,
     "slider_speed": "0.5",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
-    "include_shared_functions": "false"
+    "include_shared_functions": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
