@@ -2,7 +2,12 @@ import React from 'react';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
 import {expect} from '../../../../util/configuredChai';
-import AddPasswordForm, {SAVING_STATE, SUCCESS_STATE, PASSWORDS_MUST_MATCH} from '@cdo/apps/lib/ui/accounts/AddPasswordForm';
+import AddPasswordForm, {
+  SAVING_STATE,
+  SUCCESS_STATE,
+  PASSWORD_TOO_SHORT,
+  PASSWORDS_MUST_MATCH
+} from '@cdo/apps/lib/ui/accounts/AddPasswordForm';
 
 describe('AddPasswordForm', () => {
   let wrapper, handleSubmit;
@@ -16,7 +21,7 @@ describe('AddPasswordForm', () => {
     );
   });
 
-  it('enables form submission if passwords are present and match', () => {
+  it('enables form submission if passwords have minimum length and match', () => {
     wrapper.setState({
       password: 'mypassword',
       passwordConfirmation: 'mypassword'
@@ -33,12 +38,31 @@ describe('AddPasswordForm', () => {
     expect(wrapper.find('button')).to.have.attr('disabled');
   });
 
+  it('disables form submission if passwords are too short', () => {
+    wrapper.setState({
+      password: 'short',
+      passwordConfirmation: 'short'
+    });
+    expect(wrapper.find('button')).to.have.attr('disabled');
+  });
+
   it('disables form submission if passwords do not match', () => {
     wrapper.setState({
       password: 'newpassword',
       passwordConfirmation: 'notnewpassword'
     });
     expect(wrapper.find('button')).to.have.attr('disabled');
+  });
+
+  it('renders password length validation errors if passwords are too short', () => {
+    wrapper.setState({
+      password: 'short',
+      passwordConfirmation: 'short'
+    });
+    const fieldErrors = wrapper.find('FieldError');
+    expect(fieldErrors).to.have.length(2);
+    expect(fieldErrors.at(0)).to.have.text(PASSWORD_TOO_SHORT);
+    expect(fieldErrors.at(1)).to.have.text(PASSWORD_TOO_SHORT);
   });
 
   it('renders a password mismatch validation error if passwords do not match', () => {
@@ -51,7 +75,7 @@ describe('AddPasswordForm', () => {
 
   it('renders the form submission state', () => {
     wrapper.setState({
-      submissionState: SAVING_STATE
+      submissionState: {message: SAVING_STATE}
     });
     expect(wrapper.find('#uitest-add-password-status')).to.have.text(SAVING_STATE);
   });
