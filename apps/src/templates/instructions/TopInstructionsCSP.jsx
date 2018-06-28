@@ -370,7 +370,6 @@ class TopInstructions extends Component {
                 {this.props.viewAs === ViewType.Student &&
                   <FeedbacksList
                     feedbacks={this.state.feedbacks}
-                    viewAs={this.props.viewAs}
                     ref="commentTab"
                   />
                 }
