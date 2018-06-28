@@ -14,7 +14,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   # GET /users/auth/:provider/connect
   def connect
-    return head(:bad_request) unless current_user&.migrated? && params[:provider].present?
+    return head(:bad_request) unless current_user&.migrated? && AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include?(params[:provider])
 
     session[:connect_provider] = 2.minutes.from_now
     redirect_to omniauth_authorize_path(current_user, params[:provider])
@@ -211,8 +211,9 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   def can_connect_provider?
-    is_valid_connection = session[:connect_provider]&.future?
-    session[:connect_provider] = nil
-    return is_valid_connection
+    return false unless current_user&.migrated?
+
+    connect_flag_expiration = session.delete :connect_provider
+    connect_flag_expiration&.future?
   end
 end
