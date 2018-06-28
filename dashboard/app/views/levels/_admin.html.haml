@@ -116,3 +116,16 @@
         = link_to 'Reset', '#', { class: 'admin-abuse-reset' }
       .admin-report-abuse{ style: 'display: none;' }
         = link_to 'Report Abuse', '/report_abuse'
+
+      #block-auto-moderation
+        %br
+        %button{id: "block-auto-moderation", class: "btn btn-default btn-sm"}
+          Block automatic moderation
+
+      #moderation-explanation{style: 'margin-top: 20px; width: 250px;'}
+        Blocking automatic moderation will prevent our content moderation service from flagging this project. Block automatic moderation if the service has inaccurately flagged this project before.
+
+      #unblock-auto-moderation
+        %br
+        %button{id: "unblock-auto-moderation", class: "btn btn-default btn-sm"}
+          Unblock automatic moderation
