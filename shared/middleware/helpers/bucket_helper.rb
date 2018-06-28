@@ -222,13 +222,6 @@ class BucketHelper
     )
 
     return false
-  rescue Aws::S3::Errors::NoSuchKey
-    # Because create and update operations are both handled as PUT OBJECT,
-    # we sometimes call this helper when we're creating a new object and there's
-    # no existing object to check against.  In such a case we can be confident
-    # that we're not replacing a non-current version so no logging needs to
-    # occur - we can ignore this exception.
-    return true
   end
 
   #
