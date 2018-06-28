@@ -4,7 +4,7 @@ import {
   asyncLoadAssessments,
   getCurrentScriptAssessmentList,
   setAssessmentId,
-  currentAssessmentIsSurvey,
+  isCurrentAssessmentSurvey,
   countSubmissionsForCurrentAssessment,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {connect} from 'react-redux';
@@ -39,7 +39,7 @@ class SectionAssessments extends Component {
     setAssessmentId: PropTypes.func.isRequired,
     asyncLoadAssessments: PropTypes.func.isRequired,
     multipleChoiceSurveyResults: PropTypes.array,
-    currentAssessmentIsSurvey: PropTypes.bool,
+    isCurrentAssessmentSurvey: PropTypes.bool,
     totalStudentSubmissions: PropTypes.number,
   };
 
@@ -51,7 +51,7 @@ class SectionAssessments extends Component {
 
   render() {
     const {validScripts, scriptId, assessmentList, assessmentId,
-      isLoading, currentAssessmentIsSurvey, totalStudentSubmissions} = this.props;
+      isLoading, isCurrentAssessmentSurvey, totalStudentSubmissions} = this.props;
 
     return (
       <div>
@@ -80,7 +80,7 @@ class SectionAssessments extends Component {
         {!isLoading &&
           <div>
             {/* Assessments */}
-            {!currentAssessmentIsSurvey &&
+            {!isCurrentAssessmentSurvey &&
               <div>
                 {totalStudentSubmissions > 0 &&
                   <div>
@@ -96,7 +96,7 @@ class SectionAssessments extends Component {
               </div>
             }
             {/* Surveys */}
-            {currentAssessmentIsSurvey &&
+            {isCurrentAssessmentSurvey &&
               <div>
                 {totalStudentSubmissions > 0 &&
                   <div>
@@ -128,7 +128,7 @@ export default connect(state => ({
   assessmentList: getCurrentScriptAssessmentList(state),
   scriptId: state.scriptSelection.scriptId,
   assessmentId: state.sectionAssessments.assessmentId,
-  currentAssessmentIsSurvey: currentAssessmentIsSurvey(state),
+  isCurrentAssessmentSurvey: isCurrentAssessmentSurvey(state),
   totalStudentSubmissions: countSubmissionsForCurrentAssessment(state),
 }), dispatch => ({
   setScriptId(scriptId) {
