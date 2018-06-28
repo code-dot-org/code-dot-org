@@ -22,17 +22,16 @@ class Pd::InternationalOptinTest < ActiveSupport::TestCase
   }
 
   test 'Test international optin validation' do
-    optin = build :pd_international_optin, form_data: {}.to_json
-    refute optin.valid?
+    teacher = create :teacher
 
-    assert build(:pd_international_optin, form_data: FORM_DATA.to_json).valid?
+    refute build(:pd_international_optin, form_data: {}.to_json, user_id: teacher.id).valid?
 
     refute build(
-      :pd_international_optin, form_data: FORM_DATA.merge(
-        {
-          ages: nil,
-        }
-      ).to_json
+      :pd_international_optin, form_data: FORM_DATA.merge({ages: nil}).to_json, user_id: teacher.id
     ).valid?
+
+    assert build(:pd_international_optin, form_data: FORM_DATA.to_json, user_id: teacher.id).valid?
+
+    refute build(:pd_international_optin, form_data: FORM_DATA.to_json).valid?
   end
 end

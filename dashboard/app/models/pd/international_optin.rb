@@ -3,8 +3,8 @@
 # Table name: pd_international_optins
 #
 #  id         :integer          not null, primary key
-#  user_id    :integer
-#  form_data  :text(65535)
+#  user_id    :integer          not null
+#  form_data  :text(65535)      not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
@@ -17,8 +17,11 @@ require 'international_optin_people'
 
 class Pd::InternationalOptin < ApplicationRecord
   include Pd::Form
+  include InternationalOptinPeople
 
   belongs_to :user
+
+  validates_presence_of :user_id, :form_data
 
   def self.required_fields
     [
@@ -51,8 +54,8 @@ class Pd::InternationalOptin < ApplicationRecord
 
     entries = Hash[entry_keys.map {|k, v| [k, v.map {|s| I18n.t("pd.form_entries.#{k.to_s.underscore}.#{s.underscore}")}]}]
 
-    entries[:workshopOrganizer] = get_international_optin_partners
-    entries[:workshopFacilitator] = get_international_optin_facilitators
+    entries[:workshopOrganizer] = INTERNATIONAL_OPTIN_PARTNERS
+    entries[:workshopFacilitator] = INTERNATIONAL_OPTIN_FACILITATORS
 
     super.merge(entries)
   end
@@ -82,5 +85,9 @@ class Pd::InternationalOptin < ApplicationRecord
 
   def opt_in?
     sanitize_form_data_hash[:opt_in].downcase == "yes"
+  end
+
+  def email
+    sanitize_form_data_hash[:email]
   end
 end
