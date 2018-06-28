@@ -627,8 +627,8 @@ class UserTest < ActiveSupport::TestCase
   test "find_for_authentication finds migrated multi-auth email user first" do
     email = 'test@foo.bar'
     migrated_student = create(:student, :with_email_authentication_option, :multi_auth_migrated, email: email)
-    migrated_student.primary_authentication_option = migrated_student.authentication_options.first
-    migrated_student.primary_authentication_option.update(authentication_id: User.hash_email(email))
+    migrated_student.primary_contact_info = migrated_student.authentication_options.first
+    migrated_student.primary_contact_info.update(authentication_id: User.hash_email(email))
     legacy_student = build(:student, email: email)
     # skip duplicate email validation
     legacy_student.save(validate: false)
@@ -1596,137 +1596,166 @@ class UserTest < ActiveSupport::TestCase
     assert_equal name, student.name
   end
 
-  test 'update_primary_authentication_option is false if email and hashed_email are nil' do
+  #
+  # Temporary: Remove the primary_authentication_option aliases after migration.
+  #
+  test 'primary_authentication_option is aliased to primary_contact_info' do
+    user = create :teacher, :with_migrated_email_authentication_option
+    refute_nil user.primary_contact_info
+    assert_equal user.primary_authentication_option, user.primary_contact_info
+    new_info = AuthenticationOption.new \
+      user: user,
+      credential_type: AuthenticationOption::EMAIL,
+      email: 'new-email@example.org',
+      hashed_email: User.hash_email('new-email@exmaple.org')
+    user.primary_authentication_option = new_info
+    assert_equal new_info, user.primary_contact_info
+  end
+
+  test 'primary_authentication_option_id is aliased to primary_contact_info_id' do
+    user = create :teacher, :with_migrated_email_authentication_option
+    refute_nil user.primary_contact_info_id
+    assert_equal user.primary_authentication_option_id, user.primary_contact_info_id
+    new_info = AuthenticationOption.create \
+      user: user,
+      credential_type: AuthenticationOption::EMAIL,
+      email: 'new-email@example.org',
+      hashed_email: User.hash_email('new-email@exmaple.org')
+    user.primary_authentication_option_id = new_info.id
+    assert_equal new_info.id, user.primary_contact_info_id
+  end
+
+  test 'update_primary_contact_info is false if email and hashed_email are nil' do
     user = create :user
-    successful_save = user.update_primary_authentication_option(user: {email: nil, hashed_email: nil})
+    successful_save = user.update_primary_contact_info(user: {email: nil, hashed_email: nil})
     refute successful_save
   end
 
-  test 'update_primary_authentication_option is false if email is nil for teacher' do
+  test 'update_primary_contact_info is false if email is nil for teacher' do
     teacher = create :teacher
-    successful_save = teacher.update_primary_authentication_option(user: {email: nil})
+    successful_save = teacher.update_primary_contact_info(user: {email: nil})
     refute successful_save
   end
 
-  test 'update_primary_authentication_option adds new email option for teacher if no matches exist' do
+  test 'update_primary_contact_info adds new email option for teacher if no matches exist' do
     teacher = create :teacher, :with_migrated_google_authentication_option
 
     assert_equal 1, teacher.authentication_options.count
-    refute_nil teacher.primary_authentication_option
+    refute_nil teacher.primary_contact_info
 
-    successful_save = teacher.update_primary_authentication_option(user: {email: 'example@email.com'})
+    successful_save = teacher.update_primary_contact_info(user: {email: 'example@email.com'})
     teacher.reload
     assert successful_save
     assert_equal 2, teacher.authentication_options.count
-    assert_equal 'example@email.com', teacher.primary_authentication_option.email
+    assert_equal 'example@email.com', teacher.primary_contact_info.email
   end
 
-  test 'update_primary_authentication_option replaces email option for teacher if one already exists' do
+  test 'update_primary_contact_info replaces email option for teacher if one already exists' do
     teacher = create :teacher, :with_migrated_email_authentication_option
 
     assert_equal 1, teacher.authentication_options.count
-    refute_nil teacher.primary_authentication_option
+    refute_nil teacher.primary_contact_info
 
-    successful_save = teacher.update_primary_authentication_option(user: {email: 'second@email.com'})
+    successful_save = teacher.update_primary_contact_info(user: {email: 'second@email.com'})
     teacher.reload
     assert successful_save
     assert_equal 1, teacher.authentication_options.count
-    assert_equal 'second@email.com', teacher.primary_authentication_option.email
+    assert_equal 'second@email.com', teacher.primary_contact_info.email
   end
 
-  test 'update_primary_authentication_option oauth option replaces any existing email options for teacher' do
+  test 'update_primary_contact_info oauth option replaces any existing email options for teacher' do
     teacher = create :teacher, :with_migrated_google_authentication_option
-    existing_email = teacher.primary_authentication_option.email
+    existing_email = teacher.primary_contact_info.email
 
     assert_equal 1, teacher.authentication_options.count
-    refute_nil teacher.primary_authentication_option
+    refute_nil teacher.primary_contact_info
 
     # Update primary to a different email
-    teacher.update_primary_authentication_option(user: {email: 'example@email.com'})
+    teacher.update_primary_contact_info(user: {email: 'example@email.com'})
     teacher.reload
     assert_equal 2, teacher.authentication_options.count
-    assert_equal 'example@email.com', teacher.primary_authentication_option.email
+    assert_equal 'example@email.com', teacher.primary_contact_info.email
 
     # Change back to original oauth email
-    successful_save = teacher.update_primary_authentication_option(user: {email: existing_email})
+    successful_save = teacher.update_primary_contact_info(user: {email: existing_email})
     teacher.reload
     assert successful_save
     assert_equal 1, teacher.authentication_options.count
-    assert_equal existing_email, teacher.primary_authentication_option.email
+    assert_equal existing_email, teacher.primary_contact_info.email
   end
 
-  test 'update_primary_authentication_option recalculates hashed_email if both email and hashed_email are supplied for teacher' do
+  test 'update_primary_contact_info recalculates hashed_email if both email and hashed_email are supplied for teacher' do
     teacher = create :teacher, :with_migrated_email_authentication_option
 
     assert_equal 1, teacher.authentication_options.count
-    refute_nil teacher.primary_authentication_option
+    refute_nil teacher.primary_contact_info
 
-    successful_save = teacher.update_primary_authentication_option(user: {email: 'first@email.com', hashed_email: User.hash_email('second@email.com')})
+    successful_save = teacher.update_primary_contact_info(user: {email: 'first@email.com', hashed_email: User.hash_email('second@email.com')})
     assert successful_save
     assert_equal 1, teacher.authentication_options.count
-    assert_equal User.hash_email('first@email.com'), teacher.primary_authentication_option.hashed_email
+    assert_equal User.hash_email('first@email.com'), teacher.primary_contact_info.hashed_email
   end
 
-  test 'update_primary_authentication_option adds new email option for student if no matches exist' do
+  test 'update_primary_contact_info adds new email option for student if no matches exist' do
     student = create :student, :with_migrated_google_authentication_option
 
     assert_equal 1, student.authentication_options.count
-    refute_nil student.primary_authentication_option
+    refute_nil student.primary_contact_info
 
     hashed_new_email = User.hash_email('example@email.com')
-    successful_save = student.update_primary_authentication_option(user: {hashed_email: hashed_new_email})
+    successful_save = student.update_primary_contact_info(user: {hashed_email: hashed_new_email})
     student.reload
     assert successful_save
     assert_equal 2, student.authentication_options.count
-    assert_equal hashed_new_email, student.primary_authentication_option.hashed_email
+    assert_equal hashed_new_email, student.primary_contact_info.hashed_email
   end
 
-  test 'update_primary_authentication_option replaces email option for student if one already exists' do
+  test 'update_primary_contact_info replaces email option for student if one already exists' do
     student = create :student, :with_migrated_email_authentication_option
 
     assert_equal 1, student.authentication_options.count
-    refute_nil student.primary_authentication_option
+    refute_nil student.primary_contact_info
 
     hashed_new_email = User.hash_email('second@email.com')
-    successful_save = student.update_primary_authentication_option(user: {hashed_email: hashed_new_email})
+    successful_save = student.update_primary_contact_info(user: {hashed_email: hashed_new_email})
     student.reload
     assert successful_save
     assert_equal 1, student.authentication_options.count
-    assert_equal hashed_new_email, student.primary_authentication_option.hashed_email
+    assert_equal hashed_new_email, student.primary_contact_info.hashed_email
   end
 
-  test 'update_primary_authentication_option oauth option replaces any existing email options for student' do
+  test 'update_primary_contact_info oauth option replaces any existing email options for student' do
     student = create :student, :with_migrated_google_authentication_option, email: 'student@email.com'
-    existing_hashed_email = student.primary_authentication_option.hashed_email
+    existing_hashed_email = student.primary_contact_info.hashed_email
 
     assert_equal 1, student.authentication_options.count
-    refute_nil student.primary_authentication_option
+    refute_nil student.primary_contact_info
 
     # Update primary to a different email
     hashed_new_email = User.hash_email('example@email.com')
-    student.update_primary_authentication_option(user: {hashed_email: hashed_new_email})
+    student.update_primary_contact_info(user: {hashed_email: hashed_new_email})
     student.reload
     assert_equal 2, student.authentication_options.count
-    assert_equal hashed_new_email, student.primary_authentication_option.hashed_email
+    assert_equal hashed_new_email, student.primary_contact_info.hashed_email
 
     # Change back to original oauth email
-    successful_save = student.update_primary_authentication_option(user: {hashed_email: existing_hashed_email})
+    successful_save = student.update_primary_contact_info(user: {hashed_email: existing_hashed_email})
     student.reload
     assert successful_save
     assert_equal 1, student.authentication_options.count
-    assert_equal existing_hashed_email, student.primary_authentication_option.hashed_email
+    assert_equal existing_hashed_email, student.primary_contact_info.hashed_email
   end
 
-  test 'update_primary_authentication_option recalculates hashed_email if both email and hashed_email are supplied for student' do
+  test 'update_primary_contact_info recalculates hashed_email if both email and hashed_email are supplied for student' do
     student = create :student, :with_migrated_email_authentication_option
 
     assert_equal 1, student.authentication_options.count
-    refute_nil student.primary_authentication_option
+    refute_nil student.primary_contact_info
 
-    successful_save = student.update_primary_authentication_option(user: {email: 'first@email.com', hashed_email: User.hash_email('second@email.com')})
+    successful_save = student.update_primary_contact_info(user: {email: 'first@email.com', hashed_email: User.hash_email('second@email.com')})
     assert successful_save
     assert_equal 1, student.authentication_options.count
-    assert_equal User.hash_email('first@email.com'), student.primary_authentication_option.hashed_email
+    assert_equal User.hash_email('first@email.com'), student.primary_contact_info.hashed_email
   end
 
   test 'track_proficiency adds proficiency if necessary and no hint used' do
@@ -3123,20 +3152,20 @@ class UserTest < ActiveSupport::TestCase
 
   test 'primary email for migrated user is readable from user model' do
     user = create(:teacher, :with_email_authentication_option)
-    user.primary_authentication_option = user.authentication_options.first
+    user.primary_contact_info = user.authentication_options.first
     user.provider = 'migrated'
-    user.primary_authentication_option.update(email: 'eric@code.org')
+    user.primary_contact_info.update(email: 'eric@code.org')
     assert_equal user.email, user.authentication_options.first.email
-    assert_equal user.email, user.primary_authentication_option.email
+    assert_equal user.email, user.primary_contact_info.email
   end
 
   test 'primary email for non-migrated user is not readable from user model' do
     user = create(:teacher, :with_email_authentication_option)
-    user.primary_authentication_option = user.authentication_options.first
-    user.primary_authentication_option.update(email: 'eric@code.org')
+    user.primary_contact_info = user.authentication_options.first
+    user.primary_contact_info.update(email: 'eric@code.org')
     assert_not_equal user.email, user.authentication_options.first.email
-    assert_not_equal user.email, user.primary_authentication_option.email
-    assert_equal user.primary_authentication_option.email, user.authentication_options.first.email
+    assert_not_equal user.email, user.primary_contact_info.email
+    assert_equal user.primary_contact_info.email, user.authentication_options.first.email
   end
 
   test 'within_united_states? is false without UserGeo record' do

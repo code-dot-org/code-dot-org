@@ -2,7 +2,7 @@ const i18n = require('./locale');
 import { singleton as studioApp } from '../../StudioApp';
 import { stripQuotes } from '../../utils';
 import _ from 'lodash';
-import eventTypes from '@code-dot-org/craft/src/js/game/Event/EventType';
+import { EventType } from '@code-dot-org/craft';
 
 const ENTITY_INPUT_EXTRA_SPACING = 14;
 
@@ -290,12 +290,12 @@ export const install = (blockly, blockInstallOptions) => {
   };
 
   const statementNameToEvent = {
-    WHEN_USED: eventTypes.WhenUsed,
-    WHEN_TOUCHED: eventTypes.WhenTouched,
-    WHEN_SPAWNED: eventTypes.WhenSpawned,
-    WHEN_ATTACKED: eventTypes.WhenAttacked,
-    WHEN_NIGHT: eventTypes.WhenNight,
-    WHEN_DAY: eventTypes.WhenDay,
+    WHEN_USED: EventType.WhenUsed,
+    WHEN_TOUCHED: EventType.WhenTouched,
+    WHEN_SPAWNED: EventType.WhenSpawned,
+    WHEN_ATTACKED: EventType.WhenAttacked,
+    WHEN_NIGHT: EventType.WhenNight,
+    WHEN_DAY: EventType.WhenDay,
   };
 
   const defaultEventOrder = [
@@ -391,9 +391,9 @@ export const install = (blockly, blockInstallOptions) => {
     };
   }
 
-  makeGlobalEventBlock('whenDay', i18n.eventTypeWhenDay(), eventTypes.WhenDayGlobal);
-  makeGlobalEventBlock('whenNight', i18n.eventTypeWhenNight(), eventTypes.WhenNightGlobal);
-  makeGlobalEventBlock('whenRun', i18n.eventTypeWhenRun(), eventTypes.WhenRun);
+  makeGlobalEventBlock('whenDay', i18n.eventTypeWhenDay(), EventType.WhenDayGlobal);
+  makeGlobalEventBlock('whenNight', i18n.eventTypeWhenNight(), EventType.WhenNightGlobal);
+  makeGlobalEventBlock('whenRun', i18n.eventTypeWhenRun(), EventType.WhenRun);
 
   function dropdownEntityBlock(simpleFunctionName, blockText, dropdownArray, doSort) {
     blockly.Blocks[`craft_${simpleFunctionName}`] = {
