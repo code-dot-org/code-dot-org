@@ -81,4 +81,18 @@ export default () => {
       $('.admin-report-abuse').show();
     }
   }
+
+  $('#block-auto-moderation').click(function () {
+    alert("You clicked the block auto moderation button. It doesn't do anything yet because our moderation filter is turned off, but it will be functional soon. Thanks for your patience with this work-in-progress button!");
+    $('#block-auto-moderation').hide();
+    $('#moderation-explanation').hide();
+    $('#unblock-auto-moderation').show();
+  });
+
+  $('#unblock-auto-moderation').click(function () {
+    alert("You clicked the unblock auto moderation button. It doesn't do anything yet because our moderation filter is turned off, but it will be functional soon. Thanks for your patience with this work-in-progress button!");
+    $('#block-auto-moderation').show();
+    $('#moderation-explanation').show();
+    $('#unblock-auto-moderation').hide();
+  });
 };
