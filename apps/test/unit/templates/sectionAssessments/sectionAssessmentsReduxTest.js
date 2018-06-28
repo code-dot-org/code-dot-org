@@ -16,6 +16,7 @@ import sectionAssessments, {
   getMultipleChoiceSectionSummary,
   getCorrectAnswer,
   indexesToAnswerString,
+  countSubmissionsForCurrentAssessment,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
 
@@ -532,6 +533,86 @@ describe('sectionAssessmentsRedux', () => {
             "totalAnswered": 2,
           }
         ]);
+      });
+    });
+
+    describe('countSubmissionsForCurrentAssessment', () => {
+      it('returns totals for an assessment', () => {
+        const stateWithAssessment = {
+          ...rootState,
+          sectionAssessments: {
+            ...rootState.sectionAssessments,
+            assessmentId: 123,
+            assessmentQuestionsByScript: {
+              3: {
+                123: {
+                  id: 123,
+                  name: 'name',
+                  questions: []
+                }
+              }
+            },
+            assessmentResponsesByScript: {
+              3: {
+                1: {
+                  student_name: 'Saira',
+                  responses_by_assessment: {
+                    123: {
+                      level_results: []
+                    }
+                  }
+                },
+                2: {
+                  student_name: 'Rebecca',
+                  responses_by_assessment: {
+                    123: {
+                      level_results: []
+                    }
+                  }
+                }
+              }
+            }
+          }
+        };
+
+        const totalSubmissions = countSubmissionsForCurrentAssessment(stateWithAssessment, false);
+        assert.deepEqual(totalSubmissions, 2);
+      });
+
+      it('returns totals for a survey', () => {
+        const stateWithSurvey = {
+          ...rootState,
+          sectionAssessments: {
+            ...rootState.sectionAssessments,
+            assessmentId: 123,
+            surveysByScript: {
+              3: {
+                123: {
+                  stage_name: 'name',
+                  levelgroup_results: [
+                    {
+                      type: 'multi',
+                      question_index: 0,
+                      question: 'question1',
+                      answer_texts: [{text: 'agree'}, {text: 'disagree'}],
+                      results: [{answer_index: 0}]
+                    },
+                    {
+                      type: 'multi',
+                      question_index: 1,
+                      question: 'question2',
+                      answer_texts: [{text: 'agree'}, {text: 'disagree'}],
+                      results: [{answer_index: 1}]
+                    },
+                  ],
+                }
+              }
+            }
+          }
+        };
+
+        const totalSubmissions = countSubmissionsForCurrentAssessment(stateWithSurvey, true);
+        assert.deepEqual(totalSubmissions, 1);
       });
     });
 

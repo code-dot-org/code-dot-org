@@ -26,8 +26,11 @@ class AuthenticationOption < ApplicationRecord
   belongs_to :user
 
   # These are duplicated from the user model, until we're ready to cut over and remove them from there
-  before_save :normalize_email, :hash_email, :remove_student_cleartext_email,
-    :fill_authentication_id
+  before_validation :normalize_email, :hash_email,
+    :remove_student_cleartext_email, :fill_authentication_id
+
+  validate :email_must_be_unique
+  validate :hashed_email_must_be_unique
 
   OAUTH_CREDENTIAL_TYPES = [
     CLEVER = 'clever',
@@ -69,5 +72,34 @@ class AuthenticationOption < ApplicationRecord
   def hash_email
     return unless email.present?
     self.hashed_email = AuthenticationOption.hash_email(email)
+  end
+
+  def data_hash
+    column_value = read_attribute(:data)
+    if column_value
+      JSON.parse(column_value).symbolize_keys
+    else
+      {}
+    end
+  end
+
+  private def email_must_be_unique
+    # skip the db lookup if possible
+    return unless email_changed? && email.present? && errors.blank?
+
+    other = User.find_by_email_or_hashed_email(email)
+    if other && other != user
+      errors.add :email, I18n.t('errors.messages.taken')
+    end
+  end
+
+  private def hashed_email_must_be_unique
+    # skip the db lookup if possible
+    return unless hashed_email_changed? && hashed_email.present? && errors.blank?
+
+    other = User.find_by_hashed_email(hashed_email)
+    if other && other != user
+      errors.add :email, I18n.t('errors.messages.taken')
+    end
   end
 end

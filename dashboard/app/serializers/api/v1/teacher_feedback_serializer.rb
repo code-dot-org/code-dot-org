@@ -22,6 +22,6 @@ class Api::V1::TeacherFeedbackSerializer < ActiveModel::Serializer
   private
 
   def teacher_name
-    User.find_by_id(object.teacher_id).name
+    object.teacher.name
   end
 end

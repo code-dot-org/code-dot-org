@@ -173,7 +173,7 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     assert_empty parsed_response
   end
 
-  test 'serializer return teacher name' do
+  test 'serializer returns teacher name' do
     @teacher1 = create :teacher, name: 'Test Name'
     teacher_sign_in_and_comment(@teacher1, @student, @level, COMMENT1)
     sign_in @student

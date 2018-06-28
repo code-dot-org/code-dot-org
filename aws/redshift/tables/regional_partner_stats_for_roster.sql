@@ -1,14 +1,14 @@
 DROP TABLE if exists analysis.regional_partner_stats_for_roster;
 
-CREATE TABLE analysis.regional_partner_stats_for_roster 
+CREATE TABLE analysis.regional_partner_stats_for_roster
 AS
 WITH csf_courses
 AS
-(SELECT user_id,
+(SELECT studio_person_id,
        school_year_trained AS school_year,
        school_year_taught,
        listagg(CASE WHEN script_name LIKE 'course%' THEN UPPER(SUBSTRING(script_name,7,1)) ELSE script_name END,', ') WITHIN GROUP(ORDER BY script_name)::VARCHAR(400) AS csf_scripts
-FROM (SELECT DISTINCT user_id,
+FROM (SELECT DISTINCT studio_person_id,
              school_year_trained,
              school_year_taught,
              script_name
@@ -27,7 +27,7 @@ FROM (SELECT regional_partner_id,
              school_year_trained,
              first_name,
              last_name,
-             user_id,
+             studio_person_id,
              email,
              CASE
                WHEN course = 'CS Principles' THEN 'CSP'
@@ -52,7 +52,7 @@ UNION
        rps.school_year_trained,
        first_name,
        last_name,
-       rps.user_id,
+       rps.studio_person_id,
        MAX(email),
        MAX(CASE WHEN csf_courses.csf_scripts IS NULL THEN 'CSF' ELSE concat ('CSF ',csf_courses.csf_scripts) END) AS course,
        MAX(school_name),
@@ -70,7 +70,7 @@ FROM analysis.regional_partner_stats_csf rps
 
   LEFT JOIN csf_courses
          ON csf_courses.school_year = rps.school_year_trained
-        AND csf_courses.user_id = rps.user_id
+        AND csf_courses.studio_person_id = rps.studio_person_id
 WHERE rps.school_year_taught = rps.school_year_trained OR rps.school_year_taught is null
 AND trained_by_regional_partner = 1
 GROUP BY 1,

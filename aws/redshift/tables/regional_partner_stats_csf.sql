@@ -6,14 +6,6 @@
 -- right now this analysis depends primarily on the teachers_trained views, which contain one entry per person, with the corresponding 'first year trained' as the school_year
       -- this means that if teachers are trained in multiple years then only info from their first year of training will get joined
       -- to Mary, this does not seem ideal 
-      
--- CHANGED DEPENDENCIES
--- before using this code to update analysis.regional_partner_stats, certain other tables need to be updated, and their references updated here
--- analysis.csf_teachers_trained and analysis.csp_csd_teachers_trained need to be updated using the code in the file 'teahers_trained_updates.sql'
--- then, references in this file to public.csf_teachers_trained_test and public.csp_csd_teachers_trained_test should be replaced with 'analysis.csf_teachers_trained' and 'analysis.csp_csd_teachers_trained'
--- these are views and so do not need to be added to Github
--- similarly, the tables analysis.teacher_most_progress and analysis.student_activity need to be updated and then their references in this file replaced with the originals
--- these two need to be updated on Github
 
 -- NOTES ON HOW TO UPDATE 
 -- after updating at the dependencies listed above and noted with 'PUBLIC' in the code....
@@ -50,11 +42,11 @@ csf_teachers_trained_temp as
            ON pda.pd_enrollment_id = pde.id
          LEFT JOIN dashboard_production_pii.pd_workshops pdw 
            ON pdw.id = pde.pd_workshop_id
+           AND course = 'CS Fundamentals'
          LEFT JOIN dashboard_production_pii.pd_sessions pds 
            ON pds.pd_workshop_id = pdw.id
         LEFT JOIN dashboard_production_pii.regional_partners rp  
            ON pdw.regional_partner_id = rp.id     
-           where course = 'CS Fundamentals'
   ) csf_train
   JOIN analysis.training_school_years sy on csf_train.trained_at between sy.started_at and sy.ended_at
   JOIN dashboard_production.users u on u.id = csf_train.user_id
@@ -123,8 +115,9 @@ pd_facilitators as
          csfa.workshop_id,
          csfa.subject,
          csfa.trained_by_regional_partner,
-         d.trained_at as workshop_date, 
-         csfa.workshop_id::varchar(16) || ', '::varchar(2) || extract(month from csfa.started_at)::varchar(16) || '/'::varchar(2) || extract(day from csfa.started_at)::varchar(16) || '/'::varchar(2) || extract(year from csfa.started_at)::varchar(16) as workshop_id_year,
+         d.trained_at as trained_at,
+         csfa.workshop_date as workshop_date, 
+         extract(month from csfa.workshop_date)::varchar(16) || '/'::varchar(2) || extract(day from csfa.workshop_date)::varchar(16) || '/'::varchar(2) || extract(year from csfa.workshop_date)::varchar(16) || ', id:'::varchar(2) csfa.workshop_id::varchar(16)  as workshop_id_year,
          pwf.facilitator_names,
          -- started and completed
          case when s.user_id is not null then 1 else 0 end as started,
@@ -148,7 +141,8 @@ pd_facilitators as
   LEFT JOIN analysis.school_stats ss_user
          ON ss_user.school_id = si_user.school_id
 -- attendance
-  LEFT JOIN analysis.csf_workshop_attendance csfa -- functions mostly to get the regional partner's location info and to decide whether the person was 'trained_by_partner'
+ -- LEFT JOIN analysis.csf_workshop_attendance csfa -- functions mostly to get the regional partner's location info and to decide whether the person was 'trained_by_partner'
+     LEFT JOIN analysis.csf_workshop_attendance csfa   
         ON csfa.user_id = d.user_id
         AND csfa.course = d.course
         AND csfa.school_year = d.school_year
