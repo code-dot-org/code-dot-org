@@ -2,7 +2,7 @@ class RegistrationsController < Devise::RegistrationsController
   respond_to :json
   prepend_before_action :authenticate_scope!, only: [
     :edit, :update, :destroy, :upgrade, :set_email, :set_user_type,
-    :migrate_to_multi_auth
+    :migrate_to_multi_auth, :demigrate_from_multi_auth
   ]
   skip_before_action :verify_authenticity_token, only: [:set_age]
 
@@ -190,6 +190,16 @@ class RegistrationsController < Devise::RegistrationsController
     current_user.migrate_to_multi_auth
     redirect_to after_update_path_for(current_user),
       notice: "Multi-auth is #{was_migrated ? 'still' : 'now'} enabled on your account."
+  end
+
+  #
+  # GET /users/demigrate_from_multi_auth
+  #
+  def demigrate_from_multi_auth
+    was_migrated = current_user.migrated?
+    current_user.demigrate_from_multi_auth
+    redirect_to after_update_path_for(current_user),
+      notice: "Multi-auth is #{was_migrated ? 'now' : 'still'} disabled on your account."
   end
 
   private

@@ -145,6 +145,7 @@ Dashboard::Application.routes.draw do
     get '/users/clever_modal_dismissed', to: 'sessions#clever_modal_dismissed'
     get '/users/auth/:provider/connect', to: 'omniauth_callbacks#connect'
     get '/users/migrate_to_multi_auth', to: 'registrations#migrate_to_multi_auth'
+    get '/users/demigrate_from_multi_auth', to: 'registrations#demigrate_from_multi_auth'
   end
   devise_for :users, controllers: {
     omniauth_callbacks: 'omniauth_callbacks',
