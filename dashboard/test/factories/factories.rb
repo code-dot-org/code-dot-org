@@ -359,7 +359,6 @@ FactoryGirl.define do
           credential_type: AuthenticationOption::EMAIL,
           authentication_id: user.hashed_email
         )
-        user.authentication_options << ao
         user.update!(
           primary_contact_info: ao,
           provider: User::PROVIDER_MIGRATED,

@@ -297,6 +297,35 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
       }
   end
 
+  test 'clear_single_auth_fields throws on unmigrated user' do
+    user = create :student
+    assert_raises {user.clear_single_auth_fields}
+  end
+
+  test 'clear_single_auth_fields clears all single-auth fields' do
+    user = create :teacher, :unmigrated_google_sso
+    user.migrate_to_multi_auth
+
+    assert_user user,
+      uid: :not_nil,
+      oauth_token: :not_nil,
+      oauth_token_expiration: :not_nil,
+      oauth_refresh_token: :not_nil
+    refute_empty user.read_attribute(:email)
+    refute_nil user.read_attribute(:hashed_email)
+
+    assert user.clear_single_auth_fields
+    user.reload
+
+    assert_user user,
+      uid: nil,
+      oauth_token: nil,
+      oauth_token_expiration: nil,
+      oauth_refresh_token: nil
+    assert_empty user.read_attribute(:email)
+    assert_nil user.read_attribute(:hashed_email)
+  end
+
   test 'migrate and demigrate picture password student' do
     round_trip_sponsored create :student_in_picture_section
   end
@@ -415,6 +444,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     refute_nil initial_oauth_token
     refute_nil initial_oauth_token_expiration
     round_trip_sso for_user do |user|
+      yield user if block_given?
       assert_user user,
         oauth_token: initial_oauth_token,
         oauth_token_expiration: initial_oauth_token_expiration
@@ -455,6 +485,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     refute_nil initial_authentication_id
 
     round_trip for_user do |user|
+      yield user if block_given?
       assert_user user,
         provider: provider,
         email: initial_email,
@@ -560,9 +591,11 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
 
     refute user.migrated?
     migration_result = user.migrate_to_multi_auth
+    clear_result = user.clear_single_auth_fields
     demigration_result = user.demigrate_from_multi_auth
     user.reload
     assert migration_result
+    assert clear_result
     assert demigration_result
     refute user.migrated?
 
