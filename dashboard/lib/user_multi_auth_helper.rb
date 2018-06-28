@@ -50,23 +50,28 @@ module UserMultiAuthHelper
     save
   end
 
-  #
-  # Currently assumes the user was previously migrated using migrate_to_multi_auth.
-  #
   def demigrate_from_multi_auth
     return true unless migrated?
 
+    self.email = email
+    self.hashed_email = hashed_email.present? ? hashed_email : nil
+
     credential_type = primary_authentication_option&.credential_type
-    self.provider =
-      if AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include? credential_type
-        credential_type
-      elsif sponsored?
-        User::PROVIDER_SPONSORED
-      elsif hashed_email.present? || parent_email.present?
-        nil
-      else
-        User::PROVIDER_MANUAL
-      end
+    if AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include? credential_type
+      self.provider = credential_type
+      self.uid = primary_authentication_option.authentication_id
+      data = primary_authentication_option.data_hash
+      self.oauth_token = data[:oauth_token]
+      self.oauth_token_expiration = data[:oauth_token_expiration]
+      self.oauth_refresh_token = data[:oauth_refresh_token]
+    elsif sponsored?
+      self.provider = User::PROVIDER_SPONSORED
+    elsif hashed_email.present? || parent_email.present?
+      self.provider = nil
+    else
+      self.provider = User::PROVIDER_MANUAL
+    end
+
     authentication_options.delete_all
     save
   end
