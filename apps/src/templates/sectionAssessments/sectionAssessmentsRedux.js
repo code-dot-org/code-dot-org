@@ -370,7 +370,8 @@ export const getMultipleChoiceSurveyResults = (state) => {
 // Returns a boolean.  The selector function checks if the current assessment Id
 // is in the surveys structure.
 export const isCurrentAssessmentSurvey = (state) => {
-  const surveysStructure = state.sectionAssessments.surveysByScript[state.scriptSelection.scriptId] || {};
+  const scriptId = state.scriptSelection.scriptId;
+  const surveysStructure = state.sectionAssessments.surveysByScript[scriptId] || {};
 
   const currentAssessmentId = state.sectionAssessments.assessmentId;
   return Object.keys(surveysStructure).includes(currentAssessmentId.toString());
