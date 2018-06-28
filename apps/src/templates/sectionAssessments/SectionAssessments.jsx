@@ -90,7 +90,7 @@ class SectionAssessments extends Component {
                     <FreeResponsesAssessmentsContainer />
                   </div>
                 }
-                {totalStudentSubmissions <=0 &&
+                {totalStudentSubmissions <= 0 &&
                   <h3>{i18n.emptyAssessmentSubmissions()}</h3>
                 }
               </div>
