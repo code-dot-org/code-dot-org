@@ -20,7 +20,7 @@ class MultipleChoiceByStudentContainer extends Component {
       <div>
         {studentAnswerData.map((studentResponse, index) => (
           <div key={index}>
-            <h2>{`${i18n.multipleChoiceQuestionsOverview()} (${studentResponse.name})`}</h2>
+            <h2>{i18n.multipleChoiceStudentOverview({studentName: studentResponse.name})}</h2>
             <SingleStudentAssessmentsMCTable
               questionAnswerData={multipleChoiceStructure}
               studentAnswerData={studentResponse}

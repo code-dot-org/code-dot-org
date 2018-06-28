@@ -169,7 +169,7 @@ pl:
     email_preference_question: Czy wyrażasz zgodę na otrzymywanie od nas wiadomości
       e-mail z najnowszymi informacjami o naszych kursach, lokalnymi ofertami oraz
       innymi nowościami informatycznymi?
-    email_preference_privacy: "(Zobacz naszą Politykę prywatności)"
+    email_preference_privacy: "(Zobacz naszą politykę prywatności)"
     email_preference_yes: Tak
     email_preference_no: Nie
     email_preference_required: You must specify an email preference.

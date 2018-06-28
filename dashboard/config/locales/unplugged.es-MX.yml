@@ -307,14 +307,14 @@ es-MX:
         title: Actividad fuera de línea
         desc: Hoy aprenderas lo que significa ser un ciudadano digital.
       courseE_unplugged_privateInformation:
-        title: Actividad fuera de línea
-        desc: Today you will learn the difference between private and personal information!
+        title: 'Educación de Sentido Común: Información Privada y Personal '
+        desc: "¡Hoy aprenderás la diferencia entre información privada y personal!"
       courseF_unplugged_powerOfWords:
         title: Actividad fuera de línea
         desc: Hoy aprenderas que significa que alguién esté en linea.
       deeper learning description:
         title: ''
-        desc: 'translation missing: en-US.data.unplugged.desc'
+        desc: 'falta la traducción: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Algoritmos de la vida real: Planta una semilla'
         desc: Esta lección resalta formas en las que usamos algoritmos en nuestra
