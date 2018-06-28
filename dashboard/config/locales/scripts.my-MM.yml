@@ -7095,7 +7095,7 @@ my:
           description_audience: ''
           description_short: ''
           description: ''
-        coursea:
+        coursea-2017:
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Debugging: Unspotted Bugs'
@@ -7106,21 +7106,19 @@ my:
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Persistence: Stevie and the Big Project'
               description_student: ''
-              description_teacher: "When students run into a barrier while answering
-                a question or working on a project, it’s so easy for them to get frustrated
-                and give up.  This lesson will introduce students to the idea that
-                frustration can be an important part of learning. Here, frustration
-                is presented as a step in the creative process, rather than a sign
-                of failure.\r\n\r\nThis lession can be done over one or two class
-                sessions.  If you have more time, feel free to draw out the building
-                and revising phase of the Marble Run activity."
+              description_teacher: |-
+                When students run into a barrier while answering a question or working on a project, it’s so easy for them to get frustrated and give up.  This lesson will introduce students to the idea that frustration can be an important part of learning. Here, frustration is presented as a step in the creative process, rather than a sign of failure.\r
+                \r
+                This lession can be done over one or two class sessions.  If you have more time, feel free to draw out the building and revising phase of the Marble Run activity.
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-life Algorithms: Plant a Seed'
               description_student: ''
-              description_teacher: "In this lesson, students will relate the concept
+              description_teacher: 'In this lesson, students will relate the concept
                 of algorithms back to everyday, real-life activities by planting an
                 actual seed. The goal here is to start building the skills to translate
-                real-world situations to online scenarios and vice versa.\r\n"
+                real-world situations to online scenarios and vice versa.\r
+
+'
             Learn to Drag and Drop:
               name: Sequencing with Drag and Drop
               description_student: ''
@@ -7194,7 +7192,7 @@ my:
           description_short: An introduction to computer science for pre-readers.
           description: Learn the basics of computer science and internet safety. At
             the end of the course, create your very own game or story you can share.
-        courseb:
+        courseb-2017:
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Debugging: Unspotted Bugs'
@@ -7231,7 +7229,7 @@ my:
             (Similar to Course A, but with more variety for older students.)
           description: Learn the basics of computer science and internet safety. At
             the end of the course, create your very own game or story you can share.
-        coursec:
+        coursec-2017:
           stages:
             Building a Foundation:
               name: 'Persistence: Building a Foundation'
@@ -7270,11 +7268,11 @@ my:
           description_audience: 'Ages: 6-10'
           description_short: Learn the basics of computer science and create your
             own art, stories, and games.
-          description: Create programs with loops, events, and conditionals. Translate
+          description: Create programs with sequencing, loops, and events. Translate
             your initials into binary, investigate different problem-solving techniques,
             and learn how to respond to cyberbullying. At the end of the course, create
-            your very own game or story you can share.
-        coursed:
+            your very own game or story you can share!
+        coursed-2017:
           stages:
             Introduction:
               name: Introduction to Online Puzzles
@@ -7358,16 +7356,14 @@ my:
               name: 'If/Else: Conditionals with Cards'
               description_student: It's time to play a game where you earn points
                 only under certain conditions!
-              description_teacher: 'This lesson demonstrates how conditionals can
+              description_teacher: "This lesson demonstrates how conditionals can
                 be used to tailor a program to specific information. We don’t always
                 have all of the information we need when writing a program. Sometimes
                 you will want to do something different in one situation than in another,
-                even if you don''t know what situation will be true when your code
+                even if you don't know what situation will be true when your code
                 runs. That is where conditionals come in. Conditionals allow a computer
                 to make a decision, based on the information that is true any time
-                your code is run.
-
-'
+                your code is run.\n\n"
             Conditionals in Bee:
               name: Conditionals in Bee
               description_student: 'Now that you understand conditionals, it''s time
@@ -7460,7 +7456,7 @@ my:
             while loops, conditionals, and events. Get an introduction to digital
             citizenship before   creating your very own game or story that you can
             share.
-        coursee:
+        coursee-2017:
           stages:
             'Algorithms: Tangrams':
               name: 'Algorithms: Tangrams'
@@ -7694,7 +7690,7 @@ my:
             and then you’ll move on functions. In the second part of this course,
             design and create a capstone project you can share with your friends and
             family.
-        coursef:
+        coursef-2017:
           stages:
             'Algorithms: Tangrams':
               name: 'Algorithms: Tangrams'
@@ -8215,7 +8211,7 @@ my:
           stages:
             TTS:
               name: TTS
-        express:
+        express-2017:
           stages:
             'Programming Unplugged: My Robotic Friends':
               name: 'Programming Unplugged: My Robotic Friends'
@@ -8324,7 +8320,7 @@ my:
             of our elementary school curriculum for older students.'
           description: Learn the basics of computer science and internet safety. At
             the end of the course, create your very own game or story you can share.
-        pre-express:
+        pre-express-2017:
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Debugging: Unspotted Bugs'

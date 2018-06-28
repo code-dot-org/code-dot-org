@@ -89,8 +89,8 @@ FROM sections_geos
   SELECT pde.user_id as user_id,
          pdw.course as course,
          pdw.id AS workshop_id, -- section_id in the other table (below)
-         pdw.subject as subject,
-         pdw.started_at as started_at,
+         CASE WHEN subject in ('Intro Workshop', 'Intro') then 'Intro Workshop' ELSE pdw.subject END as subject,
+         pds.started_at as started_at,
          CASE WHEN pdw.regional_partner_id IS NOT NULL THEN 1 ELSE 0 END AS trained_by_regional_partner,
          coalesce (pdw.regional_partner_id, rpm.regional_partner_id) AS regional_partner_id,
          sy.school_year
@@ -107,7 +107,7 @@ FROM sections_geos
     LEFT JOIN dashboard_production_pii.pd_regional_partner_mappings rpm 
       ON rpm.state = wsz.state OR rpm.zip_code = wsz.zip
   WHERE pdw.course = 'CS Fundamentals'
-  AND   pdw.subject IN ( 'Intro Workshop','Deep Dive Workshop')
+  AND   pdw.subject IN ( 'Intro Workshop', 'Intro', 'Deep Dive Workshop')
   
 UNION ALL 
 

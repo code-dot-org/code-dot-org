@@ -5,6 +5,7 @@ import {assets as assetsApi, files as filesApi} from '@cdo/apps/clientApi';
 import AssetRow from './AssetRow';
 import AssetUploader from './AssetUploader';
 import assetListStore from '../assets/assetListStore';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const errorMessages = {
   403: 'Quota exceeded. Please delete some files and try again.',
@@ -38,7 +39,9 @@ export default class AssetManager extends React.Component {
     assetsChanged: PropTypes.func,
     allowedExtensions: PropTypes.string,
     uploadsEnabled: PropTypes.bool.isRequired,
-    useFilesApi: PropTypes.bool
+    useFilesApi: PropTypes.bool,
+    //For logging upload failures
+    projectId: PropTypes.string
   };
 
   constructor(props) {
@@ -106,6 +109,15 @@ export default class AssetManager extends React.Component {
   onUploadError = (status) => {
     this.setState({statusMessage: 'Error uploading file: ' +
       getErrorMessage(status)});
+    firehoseClient.putRecord(
+      {
+        study: 'project-data-integrity',
+        study_group: 'v3',
+        event: 'asset-upload-error',
+        project_id: this.props.projectId,
+        data_int: status
+      },
+    );
   };
 
   deleteAssetRow = (name) => {

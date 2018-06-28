@@ -3158,8 +3158,10 @@ tr:
       courseA_harvester_loops5_authored_hint:
         courseA_harvester_loops5_a: Takıldığınızda, bulmacayı köşeden önce ve köşeden
           sonra olarak iki ayrı parça olarak çözmeyi deneyin.
-        courseA_harvester_loops5_b: Your final code will have **one** `repeat` loop,
-          **one** `move South` block, and **one** `move East` block.
+        courseA_harvester_loops5_b: |-
+          Your final code will have **one** `repeat`  <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">6</title>
+          </block></xml> loop, **one** `move South`   <xml><block type="maze_moveSouth" limit="1"/></xml> block, and **one** `move East`   <xml><block type="maze_moveEast" limit="1"/> </xml>block.
         courseA_harvester_loops5_c: Use this path to pick all the corn!
       courseA_harvester_loops5a_authored_hint:
         courseA_harvester_loops5a_a: Birbiri ardına, birer `tekrarla` döngüsüne ihtiyacınız
@@ -3178,7 +3180,10 @@ tr:
         courseA_harvester_loops6_b: This is the path you should take to pick all the
           corn.
       courseA_harvester_loops7_authored_hint:
-        courseA_harvester_loops7_a: You will need two `repeat` loops after each other!
+        courseA_harvester_loops7_a: |-
+          You will need two `repeat` <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">5</title>
+          </block></xml>loops after each other!
         courseA_harvester_loops7_b: Use two loops to follow this path.
       courseA_harvester_loops8_authored_hint: {}
       courseA_harvester_loops9_authored_hint:
@@ -3885,7 +3890,10 @@ tr:
         courseB_artist_loops3_a: Remember to use a `repeat` loop for better code!
         courseB_artist_loops3_b: Çizgi çizmek için sanatçıyı Güneye hareket ettirmelisin.
       courseB_artist_loops3_2018_authored_hint:
-        courseB_artist_loops3_a: Remember to use a `repeat` loop for better code!
+        courseB_artist_loops3_a: |-
+          Remember to use a `repeat` <xml><block type="controls_repeat_simplified">
+          <title name="TIMES">???</title>
+          </block></xml> loop for better code!
         courseB_artist_loops3_b: Çizgi çizmek için sanatçıyı Güneye hareket ettirmelisin.
       courseB_artist_loops4_authored_hint:
         courseB_artist_loops4_a: Atla bloğu, çizgi çizmeden ileri hareket etmenizi
@@ -3903,8 +3911,10 @@ tr:
         courseB_artist_loops5_a: Drag out a `repeat` loop, then put the other blocks
           inside of it. How many times do you need to repeat?
       courseB_artist_loops5_2018_authored_hint:
-        courseB_artist_loops5_a: Drag out a `repeat` loop, then put the other blocks
-          inside of it. How many times do you need to repeat?
+        courseB_artist_loops5_a: |-
+          Drag out a `repeat` <xml><block type="controls_repeat_simplified">
+          <title name="TIMES">???</title>
+          </block></xml> loop, then put the other blocks inside of it. How many times do you need to repeat?
       courseB_artist_loops6_authored_hint:
         courseB_artist_loops6_b: Hareketleri bir kağıda yazmayı deneyin ve desene
           bakın.
@@ -4048,8 +4058,8 @@ tr:
           Use the "Step" button to run through your program one block at a time.
         courseB_collector_loops6_b: '"3"e tıklayıp sayıyı farklı seçerek tekrar döngüsünün
           kaç kez çalışacağını değiştirebilirsiniz.'
-        courseB_collector_loops6_c: Bu bulmacayı çözmek için üç tekrarla döngüsüne
-          ihtiyacınız olacak.
+        courseB_collector_loops6_c: 'Bu bulmacayı çözmek için üç tekrarla döngüsüne
+          ihtiyacınız olacak. '
         courseB_collector_loops6_d: Eğer kafanız karıştıysa, bu bulmacayı üç aşamada
           çözmeyi deneyin.
       courseB_collector_loops7_authored_hint:

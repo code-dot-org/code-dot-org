@@ -1,6 +1,6 @@
 DROP TABLE if exists analysis.regional_partner_stats_for_roster;
 
-CREATE TABLE analysis.regional_partner_stats_for_roster 
+CREATE TABLE analysis.regional_partner_stats_for_roster
 AS
 WITH csf_courses
 AS

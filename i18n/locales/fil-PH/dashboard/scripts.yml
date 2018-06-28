@@ -5433,14 +5433,14 @@ fil:
           description_audience: ''
           description_short: ''
           description: ''
-        coursea:
+        coursea-2017:
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Pag-dedebug: Hindi nakitang mga Bug'
               description_student: ''
               description_teacher: 'Ang araling ito ay gagabay sa mga estudyante sa mga hakbang sa pag-debug. Ang mga estudya ay matututo nang isang kasabihan na: "Anong nangyari? Ano ang dapat mangyari? Ano ang ibig sabihin nito?"'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Pagtitiyaga: Si Stevie at ang Malaking Proyekto'
+              name: 'Persistence: Stevie and the Big Project'
               description_student: ''
               description_teacher: "Kapag ang mga estudyante ay nakakatagpo ng mga balikid habang nagsasagot ng mga katanungan o nagtatrabaho sa isang proyekto, napakadali lang silang mainis at titigil. Ang araling ito ay magpapakilala sa mga estudyante sa ideya na ang pagkainip ay maaaring maging isang importanteng bahagi ng pag-aaral. Dito, ang pagkainis ay pinapakita bilang isang hakbang sa malikhaing proseso, sa halip na isang palatandaan ng pagkabigo.\\r\n\\r\nAng araling ito ay maaaring gawin sa higit sa isa o dalawang sesyon ng klase. Kung may marami pang oras, huwag mag-atubiling ipalabas ang pagbuo at pagbago na yugto ng gawain na Marble Run."
             'Real-life Algorithms: Plant a Seed':
@@ -5448,7 +5448,7 @@ fil:
               description_student: ''
               description_teacher: "Sa araling ito, ang mga estudyante ay mag-uugnay sa konsepto ng mga algoritmo pabalik sa araw-araw, tunay na buhay na mga gawain sa pamamagitan ng pagtatanim ng aktwal na mga buto. Ang layunin dito ay para magsimulang bumuo ng mga kakayahan para isalin ang tunay na buhay na mga sitwasyon sa isang online na mga sitwasyon at ang kabaliktaran nito.\\r\n"
             Learn to Drag and Drop:
-              name: Pagsunod-sunod gamit ang Drag at Drop
+              name: Sequencing with Drag and Drop
               description_student: ''
               description_teacher: Ang araling ito ay magbibigay sa mga estudyante ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online na mga palaisipan.
             'Programming: Happy Maps':
@@ -5460,27 +5460,27 @@ fil:
               description_student: ''
               description_teacher: Sa seryeng ito ng mga online na mga palaisipan, ang mga estudyante ay bubuo sa kanilang pag-uunawa sa mga algoritmo, pag-debug, at pangkaraniwang literasiya sa kompyuter. Nagpapakita sa mga karakter mula sa larong Angry Birds, ang mga estudyante ay bubuo ng mga sekwensyal na mga algoritmo para mapagawang makapunta ang ibon sa baboy nang hindi nababanga sa mga balakid o TNT. Ang pag-debug ng mga palaisipain ay naihalo din sa yugtong ito para sa karagdagang pagsasanay sa paglutas ng problema at kritikal na pag-iisip.
             Going Places Safely:
-              name: 'Digital na Pagkamamamayan: Ligtas na Pagpunta sa mga Lugar'
+              name: 'Digital Citizenship: Going Places Safely'
               description_student: ''
               description_teacher: Sa pakikipagtulungan sa [r common-sense-media], ang araling ito ay nakakatulong sa mga estudyante na matututo na maraming mga website ang nagtatanong ng mga impormasyon na mga pribado at nagtatalakay kung paano responsableng harapin ang mga ganong kahilingan. Makikita din ng mga estudyante na sila ay maaaring makakapunta sa nakakatuwang mga lugar online, ngunit kailangan nilang sumunod sa iilang mga tutunin para manatiling ligtas.
             'Loops: Happy Loops':
-              name: 'Mga Loops: Masayang mga Loops'
+              name: 'Loops: Happy Loops'
               description_student: ''
               description_teacher: Ang mga loop ay lubhang nakakatulong at makapangyarihan na kagamitan sa pag-program. Para maunawaan kung paano nakakatulong ang mga loops, ang mga estudyante ay kailangang hikayatin na gustohin ang madaliang paraan para lutasin ang mga di-gaanong mahalagang mga problema.
             Loops in Collector:
-              name: Mga Loops sa Collector
+              name: Loops in Collector
               description_student: ''
               description_teacher: Ang pagbubuo sa konsepto ng paulit-ulit na mga instruksyon mula sa "Masayang mga Loop", ang yugtong ito ay mag-uudyok sa mga estudyante na gumamit ng mga loop para mas mabisang makakolekta ng mga kayamanan sa Code.org.
             Loops in Artist:
-              name: Mga Loop sa Artist
+              name: Loops in Artist
               description_student: ''
               description_teacher: Pagbabalik sa mga loop, ang mga estudyante ay matututong gumuhit ng mga larawan sa pamamagitan ng pag-loop ng mga simpleng pagkakasunod-sunod ng mga instruksyon. Sa huling plugged na aralin, ang mga loop ay ginamit para makatawid sa maze at makakolekta ng mga kayamanan. Dito, ang mga loops ay lilikha ng mga pattern. Sa dulo ng yugtong ito, ang mga estudyante ay bibigyan ng pagkakataong makalikha ng kanilang sariling mga larawan gamit ang mga loop.
             'Events: The Big Event':
-              name: 'Mga Pangyayari: Ang Malaking Kaganapan'
+              name: 'Events: The Big Event'
               description_student: ''
               description_teacher: Ang mga pangyayari ay magandang paraan para magdagdag ng kaibahan sa isang naisulat na na algoritmo. Minsan gusto mo na ang iyong programa ay maaaring tumugon sa mga gumagamit nang eksakto kapag nais ito ng gumagamit. Para sa mga ito ang mga kaganapan.
             Events in Play Lab:
-              name: Mga Pangyayari sa Play Lab
+              name: Events in Play Lab
               description_student: ''
               description_teacher: Sa online na gawaing ito, ang mga estudyante ay magkakaroon ng pagkakataong matuto kung paano gumamit ng mga pangyayari sa Play Lab at para gumamit sa lahat ng mga kakayahan sa pag-code na natutunan nila para lumikha ng isang laro na naka-animate. Oras na para maging malikhain at gumawa ng istorya sa Play Lab!
           title: Kursong A
@@ -5488,18 +5488,18 @@ fil:
           description_audience: 'Mga Edad: 4-7'
           description_short: Isang panimula sa computer science para sa mga hindi pa marunong magbasa.
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
-        courseb:
+        courseb-2017:
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Pag-dedebug: Hindi nakitang mga Bug'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Pagtitiyaga: Si Stevie at ang Malaking Proyekto'
+              name: 'Persistence: Stevie and the Big Project'
             'Real-life Algorithms: Plant a Seed':
               name: 'Mga Totoong-buhay na Algoritmo: Pagtatanim ng Buto'
             Learn to Drag and Drop:
-              name: Pagsunod-sunod gamit ang Drag at Drop
+              name: Sequencing with Drag and Drop
             Your Digital Footprint:
-              name: 'Digital na Pagkamamamayan: Aking Digital na Footprint'
+              name: 'Digital Citizenship: My Digital Footprint'
             'Programming: My Robotic Friends':
               name: 'Pag-Program: Ang Aking mga Robotik na mga Kaibigan'
             Programming in Maze:
@@ -5507,26 +5507,26 @@ fil:
             'Loops: My Loopy Robotic Friends':
               name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
             Loops in Collector:
-              name: Mga Loops sa Collector
+              name: Loops in Collector
             Loops in Artist:
-              name: Mga Loops sa Artist
+              name: Loops in Artist
             'Events: The Big Event':
-              name: 'Mga Pangyayari: Ang Malaking Kaganapan'
+              name: 'Events: The Big Event'
             Events in Play Lab:
-              name: Mga Pangyayari sa Play Lab
+              name: Events in Play Lab
             More Programming in Maze:
-              name: Karagdagang Pag-Program sa Maze
+              name: More Programming in Maze
             Programming with Rey and BB-8:
               name: Pag-Program kasama sina Rey at BB-8
           title: Kursong B
           assignment_family_title: Kursong B
           description_audience: 'Mga Edad: 5-8'
           description_short: Isang panimula sa computer science para sa mga hindi marunong magbasa. (Katulad ng Kursong A, ngunit may mas maraming pagkakaiba para sa mga nakakatandang mga estudyante.)
-          description: Alamin ang mga pangunahing alituntunin para sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
-        coursec:
+          description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
+        coursec-2017:
           stages:
             Building a Foundation:
-              name: 'Pagtitiyaga: Pagbuo ng isang Pundasyon'
+              name: 'Persistence: Building a Foundation'
             Programming in Maze:
               name: Pag-Program sa Maze
             Debugging in Maze:
@@ -5544,17 +5544,17 @@ fil:
             Loops in Harvester:
               name: Mga Loops sa Harvester
             'Events: The Big Event':
-              name: 'Mga Pangyayari: Ang Malaking Kaganapan'
+              name: 'Events: The Big Event'
             Build a Flappy Game:
               name: Bumuo ng Flappy na Laro
             Events in Play Lab:
-              name: Mga Pangyayari sa Play Lab
+              name: Events in Play Lab
             Screen Out the Mean:
-              name: 'Digital na Pagkamamamayan: Screen Out the Mean'
+              name: 'Digital Citizenship: Screen Out the Mean'
             Binary Bracelets:
-              name: 'Higit pa sa Pag-Program: Binary Bracelets'
+              name: 'Beyond Programming: Binary Bracelets'
             Loops in Artist:
-              name: Mga Loops sa Artist
+              name: Loops in Artist
             Loops with Rey and BB-8:
               name: Mga Loops kasama sina Rey at BB-8
           title: Kursong C
@@ -5562,87 +5562,87 @@ fil:
           description_audience: 'Mga Edad: 6-10'
           description_short: Alamin ang mga pangunahing alituntunin ng computer science at lumikha ng iyong sariling sining, mga kuwento, at mga laro.
           description: Lumikha ng mga programa gamit ang pagsunod-sunod, mga loops, at mga pangyayari. Isalin ang iyong mga inisyal sa binary, siyasatin ang iba't ibang mga pamamaraan sa paglutas ng problema, at matuto kung paano tutugon sa cyberbullying. Sa dulo ng kurso, lilikha ng sarili mong laro o istorya na maaari mong ibahagi!
-        coursed:
+        coursed-2017:
           stages:
             Introduction:
               name: Pambungad sa mga Online na mga Palaisipan
-              description_student: Ang araling ito ay magbibigay sa iyo ng pagsasanay sa mga kakayahan na kakailanganin mo sa kursong ito.
-              description_teacher: 'Sa hanay ng mga palaisipang ito, ang mga estudyante ay magsisimula sa isang pambungad (o pagbalik-aral depende sa mga karanasan ng iyong klase) sa Code.org na online na workspace. Magkakaroon ng mga video na nagtuturo sa mga pangunahing gawain sa workspace kalakip na ang `Run`, `Reset`, at `Step` na mga buttons. Tatalakayin din sa mga video na ito ang mga: pag-drag sa mga Blockly na mga bloke, pagbura ng mga Blockly na mga bloke, at pagkonekta sa mga Blockly na mga bloke. Sa sunod, ang mga estudyante ay magsasanay sa kanilang _pag-sunod-sunod_ at _pag-debug_ na kakayahan sa isang maze. Mula doon, ang mga estudyante ay makakakita ng mga bagong tipo ng mga palaisipan gaya ng Kolektor, Artist, at Harvester kapag natutunan na nila ang pinakapangunahing kaalaman sa mga _loop_.'
+              description_student: This lesson will give you practice in the skills you will need for this course.
+              description_teacher: 'In this set of puzzles, students will begin with an introduction (or review depending on the experience of your class) of Code.org''s online workspace. There will be videos pointing out the basic functionality of the workspace including the `Run`, `Reset`, and `Step` buttons. Also discussed in these videos: dragging Blockly blocks, deleting Blockly blocks, and connecting Blockly blocks. Next, students will practice their _sequencing_ and _debugging_ skills in maze. From there, students will see new types of puzzles like Collector, Artist, and Harvester when they learn the very basics of _loops_.'
             'Algorithms: Graph Paper Programming':
-              name: 'Pag-Program: Graph na Papel na Pag-Program'
-              description_student: Sa araling ito, ikaw ay mag-program sa iyong kaibigan para gumuhit ng mga larawan!
-              description_teacher: Sa pamamagitan ng "pag-program" sa bawat isa para gumuhit ng mga larawan, ang mga estudyante ay magsimulang mag-uunawa kung ano talaga tungkol ang pag-code. Ang klase ay magsisimula sa pamamagitan ng pagbigay ng instruksyon ng mga estudyante sa bawat isa para kulayan ang mga parisukat sa graph na papel para sa pagsisikap na makopya ang umiiral na larawan. Kung may oras pa, ang aralin ay magtatapos na may mga larawan na mismong nilikha ng mga estudyante.
+              name: 'Programming: Graph Paper Programming'
+              description_student: In this lesson, you will program your friend to draw pictures!
+              description_teacher: By "programming" one another to draw pictures, students will begin to understand what coding is really about. The class will begin by having students instruct each other to color squares on graph paper in an effort to reproduce an existing picture. If there’s time, the lesson can conclude with images that the students create themselves.
             Events in Bounce:
               name: Mga Pangyayari sa Bounce
-              description_student: Nakapag-hangad ka bang makapaglaro ng mga video game sa paaralan? Sa araling ito, ikaw ay makakagawa ng sarili mo!
-              description_teacher: Sa online na gawaing ito, ang mga estudyante ay matututo kung ano ang mga pangyayari, at kung paano ang mga kompyuter gumagamit sa mga ito sa mga programa gaya ng mga video na mga laro. Ang mga estudyante ay magtatrabaho sa mga palaisipan na nagpagawa sa mga programa na tumugon sa mga pangyayari (gaya ng pagpindot sa mga arrow na mga buttons.) Sa bandang huli ng palaisipan, ang mga estudyante ay magkakaroon ng pagkakataon na i-customize ang kanilang laro gamit ang iba't ibang mga bilis at mga tunog.
+              description_student: Ever wish you could play video games in school? In this lesson, you will get to make your own!
+              description_teacher: In this online activity, students will learn what events are, and how computers use them in programs like video games. Students will work through puzzles making the program react to events (like arrow buttons being pressed.) At the end of the puzzle, students will have the opportunity to customize their game with different speeds and sounds.
             Nested Loops:
               name: Mga Loops na naka-nest
-              description_student: Mga loop sa loob ng mga loop na nasa loob ng mga loop. Ano ang ibig sabihin nito? Ang araling ito ay nagtuturo sa iyo kung ano ang mangyayari kapag naglagay ka ng isang loop sa loob ng isa pang loop.
-              description_teacher: Sa online na gawaing ito, ang mga estudyante ay magkakaroon ng pagkakataon para itulak ang kanilang pag-uunawa tungkol sa mga loops sa isa talagang mas bagong antas. Ang paglalaro sa Bee at Plants vs Zombies, ang mga estudyante ay matututo kung paano mag-program ng isang loop para mailagay sa loob ng isa pang loop. Sila ay hihikayatin din na tuklasin ang mga maliit na mga pagbabago alinman sa mga loop ang nakakaapekto sa kanilang programa kapag pinindot ang `Run`.
+              description_student: Loops inside loops inside loops. What does this mean? This lesson will teach you what happens when you place a loop inside another loop.
+              description_teacher: In this online activity, students will have the opportunity to push their understanding of loops to a whole new level. Playing with the Bee and Plants vs Zombies, students will learn how to program a loop to be inside of another loop. They will also be encouraged to figure out how little changes in either loop will affect their program when they click `Run`.
             Nested Loops in Artist:
               name: Naka--nest na mga Loops sa Artist
-              description_student: Dito ay gagamitin mo ang mga naka-nest na mga loops para makagawa ng mga magagandang mga drowing para ipakita sa iyong pamilya at mga kaibigan.
-              description_teacher: Ngayon na alam na ng mga estudyante kung paano mag-layer ng kanilang mga loop, sila ay maaaring maglikha ng napakaraming magagandang mga bagay. Ang araling ito ay magdadala sa mga estudyante sa isang serye ng mga pagsasanay para makatulong sa kanila na maglikha ng sarili nilang porfolio-ready na mga larawan.
+              description_student: Here you will be using nested loops to make cool drawings to show to your family and friends.
+              description_teacher: Now that students know how to layer their loops, they can create so many beautiful things.  This lesson will take students through a series of exercises to help them create their own portfolio-ready images.
             'Algorithms: Relay Programming':
-              name: 'Pag-Debug: Relay na Pag-Program'
-              description_student: Natandaan mo ba na sa simula ng kurso gumawa ka ng mga drowing gamit ang code? Sa araling ito, ikaw ay magtatrabaho sa isang pangkat para gumawa ng katulad na bagay!
-              description_teacher: Ang gawain ay magsisimula sa isang maiklang pagbalik-aral sa "Graph Papel na Pag-Program," pagkatapos ay mabilis na pupunta sa isang habulan laban sa oras, habang ang mga estudyante ay gagawa ng mga koponan at sabay na magtrabaho para makasulat ng programa, isang instruksyon sa bawat pagkakataon.
+              name: 'Debugging: Relay Programming'
+              description_student: Remember at the beginning of the course when you made drawings with code? In this lesson, you will be working with a team to do something very similar!
+              description_teacher: This activity will begin with a short review of "Graph Paper Programming," then will quickly move to a race against the clock, as students break into teams and work together to write a program one instruction at a time.
             Debugging in Bee:
               name: Pag-dedebug sa Bee
             While Loops in Farmer:
               name: Mga While Loops sa Farmer
-              description_student: 'Ang mga loops ay sadyang kapaki-pakinabang sa pag-code. Ang araling ito ay magtuturo sa iyo tungkol sa bagong uri ng loop: ang mga while loop!'
-              description_teacher: "Sa oras na makaabot ang iyong mga estudyante sa araling ito, sila ay dapat nakagawa na ng maraming pagsasanay gamit ang mga `repeat` na mga loop, kaya ngayon oras na para ihalo ang mga bagay-bagay. \n\nAng _while loops_ ay mga loop na patuloy na nag-ulit ng mga kautusan habang ang kondisyon ay naabot. Ang mga while loops ay ginagamit kapag hindi alam ng nag-program ang eksaktong bilang ng beses na kailangang ulitin ang mga kautusan, pero alam nila kung anong kondisyon ang kailangan maging tama para ang loop ay patuloy na uulitin. Bilang halimbawa, ang mga estudyante ay kailangang magtrabaho para punan ang mga butas at maghukay ng lupa sa Farmer. Hindi nila malalaman ang laki ng butas o ang taas ng mga bundok ng lupa, pero malalaman ng mga estudyante na kailangan nilang patuloy na punuin ang mga butas at patuloy na maghukay ng lupa hangga't hindi pa patag ang lupa."
+              description_student: 'Loops are so useful in coding. This lesson will teach you about a new kind of loop: while loops!'
+              description_teacher: "By the time students reach this lesson, they should already have plenty of practice using `repeat` loops, so now it's time to mix things up. \n\n_While loops_ are loops that continue to repeat commands while a condition is met. While loops are used when the programmer doesn't know the exact number of times commands need to be repeated, but does know what condition needs to be true in order for the loop to continue repeating. For example, students will be working to fill holes and dig dirt in Farmer. They will not know the size of the holes or the height of the mountains of dirt, but the students will know they need to keep filling the holes and digging the dirt as long as the ground is not flat."
             Conditionals with Cards:
-              name: 'If/Else: Mga Kondisyonal gamit ang mga Baraha'
-              description_student: Oras na para maglaro ng laro kung saan makakakuha ka ng puntos kapag nasa ilalim ka ng iilang mga kondisyon lang!
-              description_teacher: "Ang araling ito ay nagpapakita kung paano ang mga kondisyonal maaaring gamitin para iakma ang programa para sa mga tiyak na impormasyon. Kadalasan ay hindi pa natin makukuha ang lahat ng mga impormasyon na kakailanganin natin habang nagsusulat ng programa. Minsan, nais mong gumawa ng kakaiba sa isang sitwasyon kaysa sa iba, kahit na hindi mo alam kung ang sitwasyon ay tama kapag tatakbo ang iyong code. Iyan ay kung saan papasok ang mga kondisyonal. Ang mga kondisyonal ay nagbibigay-daan sa kompyuter para makagawa ng desisyon, ayon sa mga impormasyon na tama kahit anong oras na tumakbo ang iyong code."
+              name: 'If/Else: Conditionals with Cards'
+              description_student: It's time to play a game where you earn points only under certain conditions!
+              description_teacher: "This lesson demonstrates how conditionals can be used to tailor a program to specific information. We don’t always have all of the information we need when writing a program. Sometimes you will want to do something different in one situation than in another, even if you don't know what situation will be true when your code runs. That is where conditionals come in. Conditionals allow a computer to make a decision, based on the information that is true any time your code is run.\n\n"
             Conditionals in Bee:
               name: Mga Kondisyonal sa Bee
-              description_student: 'Ngayon na nauunawaan mo na ang mga kondisyonal, oras na para i-program ang Bee gamit ang mga ito kapag nagkokolekta ng mga pulot at nektar. '
-              description_teacher: Hanggang sa puntong ito, ang mga estudyante ay nagsusulat ng code na eksaktong nagpapatakbo ng parehong pamamaraan sa bawat beses na ito ay pinatakbo, ngunit ito ay hindi masyadong sunod-sunoran. Sa araling ito, ang iyong klase ay magsisimulang mag-code gamit ang mga kondisyonal, na nagbibigay-daan para makasulat sila ng code na kakaibang gumagana depende sa mga tiyak na mga kondisyon na natagpuan ng programa.
+              description_student: 'Now that you understand conditionals, it''s time to program Bee to use them when collecting honey and nectar. '
+              description_teacher: Up until this point students have been writing code that executes exactly the same way each time it is run - reliable, but not very flexible. In this lesson, your class will begin to code with conditionals, allowing them to write code that functions differently depending on the specific conditions the program encounters.
             Conditionals & Loops in Maze:
               name: Mga Kondisyonal & Mga Loops sa Maze
-              description_student: Maaari kang gumawa ng iilang kamang-manghang mga bagay kapag sabay mong gamitin ang mga kondisyonal at mga loop!
-              description_teacher: 'Sa araling ito, ang mga estudyante ay magpares-pares sa mga dalawang pangunahing mga konsepto: ang mga loop at mga kondisyonal. Ang hanay ng mga palaisipang ito ay nagtutulay sa mga agwat ng pag-uunawa na maaaring mangyari kapag nagtatrabaho sa mga palaisipan na gumagamit ng maraming mga tipo ng mga bloke. Sa pamamagitan ng pagsama-sama sa dalawang mga ideya, ang mga estudyante ay makakalikha ng mas kumplikadong code na nagpapakita sa parehong kahanga-hangang pagkamalikhain at kritikal na pag-iisip!'
+              description_student: You can do some amazing things when you use conditionals and loops together!
+              description_teacher: 'In this lesson, students will be pairing together two key concepts: loops and conditionals. This set of puzzles bridges the gaps in understanding that occur when working on puzzles that use multiple kinds of blocks. By bringing two ideas together, students will create more complex code that shows both impressive creativity and critical thinking!'
             Conditionals & Loops in Farmer:
               name: Mga Kondisyonal & Mga Loop sa Harvester
-              description_student: Madalas ay hindi ito palaging malinawa kung kailan gagamit sa bawat kondisyonal. Ang araling ito ay tutulong sa iyo para makapagsanay sa paggawa ng desisyon kung ano ang gagawin.
-              description_teacher: Ang mga estudyante ay magsasanay sa mga `while` na mga loops, `until` na mga loops, at `if / else` na mga pahayag. Lahat ng mga blokeng ito ay gumagamit ng mga kondisyonal. Sa pamamagitan ng pagsasanay sa lahat ng tatlong ito, ang mga estudyante ay matututong magsulat ng komplikado at nakikibagay na code.
+              description_student: It's not always clear when to use each conditional.  This lesson will help you get practice deciding what to do.
+              description_teacher: Students will practice `while` loops, `until` loops, and `if / else` statements. All of these blocks use conditionals. By practicing all three, students will learn to write complex and flexible code.
             Digital Citizenship:
-              name: 'Pagkamamamayang Digital: Pagsasanay sa Digital na Pagkamamamayan'
-              description_student: Ang ilang mga impormasyon ay hindi ligtas na ibahagi online. Ang araling ito ay makakatulong sa iyon na matuto sa kaibahan ng ligtas at pribadong impormasyon.
+              name: 'Digital Citizenship: Practicing Digital Citizenship'
+              description_student: Some information is not safe to share online. This lesson will help you learn the difference between safe and private information.
               description_teacher: |-
-                Sa pakikipagtulungan sa Common Sense Education, ang araling ito ay nakakatulong sa mga estudyante na kritikal na mag-isip tungkol sa mga impormasyon ng gumagamit na hiningi o kinakailangan ng iilang mga website. Ang mga estudyante ay matututo sa kaibahan ng pribadong impormasyon at personal na impormasyon, bilang pagkilala sa kung alin ang ligtas at hindi ligtas na ibahagi online.
+                In collaboration with Common Sense Education, this lesson helps students learn to think critically about the user information that some websites request or require. Students learn the difference between private information and personal information, distinguishing what is safe and unsafe to share online.
                 
-                Ang mga estudyante ay tutuklas din sa kung ano ang ibig sabihin ng pagiging responsable at magalang sa kanilang offline at online na mga komunidad bilang isang hakbang sa pag-aaaral kung paano maging mabuting digital na mga mamamayan.
+                Students will also explore what it means to be responsible and respectful to their offline and online communities as a step toward learning how to be good digital citizens.
             Build a Play Lab Game:
               name: Bumuo ng Play Lab na Laro
-              description_student: Ang araling ito ay gagabay sa iyo sa paggawa ng sarili mong video game.
-              description_teacher: Sa online na gawaing ito, ang mga estudyante ay magkakaroon ng pagkakataong matuto kung paano gumamit ng mga events sa Play Lab at para gamitin ang lahat ng pang-code na kakayahan na napag-aralan nila para malikha ang isang laro na naka-animate. Oras na para maging malikhain at gumawa ng laro sa Play Lab!
+              description_student: This lesson will guide you through making your very own video game.
+              description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a game in Play Lab!
             'Unplugged: Binary':
-              name: 'Higit pa sa Pag-Program: Mga Larawan na Binary'
-              description_student: 'Alamin kung paano ang mga kompyuter nag-imbak ng mga larawan gamit ang simpleng ideya gaya ng on at off. '
-              description_teacher: Kahit na maraming mga tao ang nag-iisip sa mga binary bilang mga zeros at ones lang, ang mga estudyante ay ipapakilala sa ideya na ang impormasyon ay maaaring irepresenta sa sari-saring mga opsyon na binary. Ang araling ito ay nagdadala sa konseptong ito habang ipinapakita kung paano ang kompyuter maaaring mag-imbak ng kahit na mas kumplikadong mga impormasyon (gaya ng mga larawan at mga kilay) sa binary, pa rin.
+              name: 'Beyond Programming: Binary Images'
+              description_student: 'Learn how computers store pictures using simple ideas like on and off. '
+              description_teacher: Though many people think of binary as strictly zeros and ones, students will be introduced to the idea that information can be represented in a variety of binary options. This lesson takes that concept one step further as it illustrates how a computer can store even more complex information (such as images and colors) in binary, as well.
             Artist Binary:
-              name: Binary sa Artist
-              description_student: Gabayan ang iyong sariling artista para maglikha ng binary na larawan gamit lang ang mga utos na nag-on at off sa mga pixel.
-              description_teacher: Ang binary ay lubhang napakaimportante sa mundo ng mga kompyuter. Ang karamihan sa mga kompyuter ngayon ay nag-iimbak ng lahat ng uri ng mga impormasyon sa anyong binary. Ang araling ito ay nakakatulong para ipakita kung paano ito naging posible na kumuha ng isang bagay sa tunay na buhay at isalin ito sa isang serye ng mga ons at offs. Ang mga estudyante ay bubuo ng mga larawan na binary sa Artist sa pamamagitan ng pagsalin sa mga 0s at 1s papuntang offs and ons (o mga itim at puti).
+              name: Binary in Artist
+              description_student: Direct your own artist to create a binary image using only commands to turn pixels on and off.
+              description_teacher: Binary is extremely important in the world of computers. The majority of computers today store all sorts of information in binary form. This lesson helps demonstrate how it is possible to take something from real life and translate it into a series of ons and offs. Students will build binary images in Artist by translating 0s and 1s to offs and ons (or blacks and whites).
             Nested Loops Project in Artist:
               name: Naka-nest na mga Loop sa Frozen
-              description_student: Marami pang naka-nest na mga loop! Sa pagkakataong ito, makakagawa ka ng iilang KAMANGHA-MANGHANG mga drowing gamit ang mga naka-nest na mga loops.
-              description_teacher: Ang mga estudyante ay lilikha ng mga mahirap na mga disenyo gamit ang Artist sa isang hanay ng mga palaisipan ngayon. Sa pamamagitan ng pagpapatuloy sa pagsasanay sa mga naka-nest na mga loops na may mga bagong layunin, ang mga estudyante ay makakakita pa ng mas maraming pangkalahatang kagamitan ng mga loop. Ang hanay ng mga palaisipant ito ay nagbibigay din na napakaraming potensyal para sa pagkamanlikha na may mga oportunidad na ang mga estudyante ay makakalikha ng kanilang sariling disenyo sa dulo ng yugto.
+              description_student: More nested loops! This time, you get to make some AMAZING drawing with nested loops.
+              description_teacher: Students will create intricate designs using Artist in today's set of puzzles. By continuing to practice nested loops with new goals, students will see more uses of loops in general. This set of puzzles also offers a lot more potential for creativity with an opportunity for students to create their own design at the end of the stage.
             Debugging in Collector:
               name: Pagde-debug sa Kolektor
-              description_student: Nakakatagpo ka na ba ng mga problema habang nag-code? Sa araling ito, matutunan mo ang tungkol sa mga sekreto sa pag-debug. Ang pag-debug ay isang proseso ng paghahanap at pag-aayos ng mga problema sa iyong code.
-              description_teacher: Sa online na gawaing ito, ang mga estudyante ay magsasanay sa pag-debug sa isang "kolektor" na kapaligiran. Ang mga estudyante ay makakapagsanay din sa pagbasa at pagbago ng mga code para maayos ang mga palaisipan gamit ang mga simpleng algoritmo, mga loop at naka-nest na mga loop.
+              description_student: Have you ever run into problems while coding? In this lesson, you will learn about the secrets of debugging. Debugging is the process of finding and fixing problems in your code.
+              description_teacher: In this online activity, students will practice debugging in the "collector" environment. Students will get to practice reading and editing code to fix puzzles with simple algorithms, loops and nested loops.
           title: Kursong D
           assignment_family_title: Kursong D
-          description_audience: 'Mga Edad: 7-11'
+          description_audience: 'Ages: 7-11'
           description_short: Mabilis na dinaanan ang mga konsepto mula sa Kursong C, pagkatapos ay pupunta pa tayo sa mga algoritmo, mga naka-nest na mga loop, mga kondisyonal, at iba pa.
-          description: Matuto ng mga bagong konsepto sa pag-code kabilang na ang mga algoritmo, mga naka-nest na mga loop, mga kondisyonal, at mga pangyayari. Kumuha ng isang introduksyon sa pagkakamamamayang digital bago maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
-        coursee:
+          description: Learn new coding concepts including algorithms, nested loops, while loops, conditionals, and events. Get an introduction to digital citizenship before   creating your very own game or story that you can share.
+        coursee-2017:
           stages:
             'Algorithms: Tangrams':
               name: 'Mga Algoritmo: Mga Tangrams'
@@ -5689,17 +5689,17 @@ fil:
             Revise Your Project:
               name: Baguhin ang Iyong Proyekto
             Presentation Your Project:
-              name: Pagpapakita ng Iyong Proyekto
+              name: Presentation Your Project
             'Algorithms: Dice Race':
               name: 'Mga Algoritmo: Dice Race'
               description_student: Alamin kung paano maglarawan ng laro mula sa pananaw ng kompyuter sa aralin na ito tungkol sa mga algoritmo.
               description_teacher: Sa araling ito, ang mga estudyante ay mag-uugnay sa konsepto ng mga algoritmo pabalik sa tunay na buhay na mga gawain sa pamamagitan ng paglaro ng Dice Race na laro. Ang layunin dito ay para magsimulang bumuo ng mga kakayahan sa pagsalin ng mga tunay na buhay na mga sitwasyon papunta sa online na mga senaryo at ang kabaliktaran nito.
             Conditionals:
-              name: Mga Kondisyonal sa Farmer
+              name: Conditionals in Farmer
               description_student: Ikaw ay maaaring makapagsabi sa kompyuter kung ano ang gagawin sa loob ng iilang mga kondisyon sa loob ng masaya at mahirap na mga seryeng ito.
               description_teacher: Ang araling ito ay nagpapakilala sa mga estudyante sa `while` na mga loop at `if/else` na mga pahayag. Ang mga _while loop_ ay mga loop na patuloy na nag-uulit sa mga utos hanggang sa ang kondisyon ay true. Ang mga while loop ay ginagamit kapag ang nag-program ay hindi alam ang eksaktong bilang ng beses na kailangang ulitin ang kautusan, ngunit alam ng nag-program kung anong kondisyon ang kailangang maging true para magpagtuloy ang pag-loop. Ang `If / Else` na mga pahayag ay nagbibigay ng pleksibilidad sa pag-program sa pamamagitan ng pagpapatakbo lang sa buong bahagi ng code kapag ang isang bagay ay true, kung hindi magpapatakbo ito ng iba.
             Private and Personal Information:
-              name: 'Digital na Pagkamamamayan: Pribado at Personal na Impormasyon'
+              name: 'Digital Citizenship: Private and Personal Information'
               description_student: Ang internet ay masaya at kasabik-sabik, ngunit importante din na manatiling ligtas. Ang araling ito ay nagtuturo sa iyo sa kaibahan ng impormasyon na ligtas na ibahagi at impormasyon na pribado.
               description_teacher: |-
                 Ginawa ng Common Sense Education, ang araling ito ay tungkol sa kaibahan sa pagitan ng impormasyon na ligtas na ibahagi online at sa impormasyon na hindi ligtas.
@@ -5723,8 +5723,8 @@ fil:
               description_teacher: Sa pangalawang ikot ng pagsasanay sa mga online na mga function, ang mga estudyante ay maglalayag sa mga masalimuot na mga landas, magkokolekta ng maraming mga nektar, at maggagawa ng napakaraming mga pulot.
             Functions in Farmer:
               name: Mga Functions sa Farmer
-              description_student: Ang mga functions ay makakapadali sa iyong gawain para matulungan ang magsasaka sa kanyang mga ani!
-              description_teacher: Ang mga estudyante ay nagsasanay sa paglikha ng mga kahanga-hangang mga disenyo sa Artist at naglalakbay sa mga maze sa Bee, pero ngayon ay gagamit sila ng mga function para anihin ang mga pananim sa Farmer. Ang araling ito ay mag-uudyok sa mga estudyante na gamitin ang mga function sa mga bagong pamamaraan sa pamamagitan ng pagsama-sama sa mga ito gamit ang `while` na mga loops at `if / else` na mga pahayag.
+              description_student: Functions will save you lots of work as you help the farmer with her harvest!
+              description_teacher: Students have practiced creating impressive designs in Artist and navigating mazes in Bee, but today they will use functions to harvest crops in Farmer. This lesson will push students to use functions in the new ways by combining them with `while` loops and `if / else` statements.
             Determine the Concept:
               name: Tukuyin ang Konsepto
               description_student: "Hindi kami mamimigay ng kahit na anong mga sekreto! \nAng araling ito ay maaring gumamit sa kahit anong mga kakayahan ang natutunan mo na."
@@ -5738,11 +5738,11 @@ fil:
               description_student: Maghandang magpakitang gilas! Oras na para ipakita ang iyong natapos na proyekto sa iyong mga kasamahan.
               description_teacher: Sa loob ng apat na mga aralin, ang mga estudyante ay magtatayo ng pag-program na proyekto gamit ang sarili nilang disenyo sa alinman sa Play Lab o Artist bilang pang-program na kapaligiran nila. Sa wakas, ang mga estudyante ay makakapakita na sa kanilang natapos na gawa sa kanilang mga kasamahan o magbahagi sa kanilang mga mahal sa buhay gamit ang isang espesyal na link. Ang gabay ng aralin para sa lahat ng apat na mga yugto ng proseso ay maaaring makita sa unang yugto ng proseso ng proyektong ito sa [here](https://curriculum.code.org/csf/coursee/12/).
             Internet:
-              name: 'Higit pa sa Pag-Program: Ang Internet'
+              name: 'Beyond Programming: The Internet'
               description_student: Nagtataka ka na ba kung paano ang mga impormasyon naglalakbay sa kabuoan ng Internet? Ito ay hindi mahika! Ang araling ito ay magtuturo sa iyo sa mga pangunahing kaalaman kung paano ang Internet gumagana.
               description_teacher: Kahit na maraming mga tao ang gumamit ng Internet araw-araw, hindi masyadong marami ang may alam kung paano ito gumagana. Sa araling ito, ang mga estudyante ay magkukunwaring dumaloy sa Internet, habang natututo tungkol sa mga koneksyon, mga URL, mga IP Address, at ang DNS.
             Crowdsourcing:
-              name: 'Higit pa sa Pag-Program: Crowdsourcing'
+              name: 'Beyond Programming: Crowdsourcing'
               description_student: Ang araling ito ay nagtuturo sa iyo tungkol sa crowdsourcing, ang proseso sa pagbuo ng isang proyekto sa isang pangkat.
               description_teacher: Sa computer science, makakaharap tayo ng iilang mga malalaki, nakakatakot na mga problema. Mga hamon gaya ng paghahanap sa pinakamalaking prime na numero o pagsunod-sunod sa DNA ay halos imposibleng magawa bilang isang indibidwal. Ang pagdadagdag ng kapangyarihan ng iba ay nagpapagawa sa gawaing mga ito na mapapamahalaan. Ang araling ito ay magpapakita sa mga estudyante kung paano maaring nakakatulong ang pagtutulungan sa industriya ng computer science.
             'Programming: My Robotic Friends':
@@ -5758,11 +5758,11 @@ fil:
             'Loops: My Loopy Robotic Friends':
               name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
             Loops in Artist:
-              name: Mga Loop sa Artist
+              name: Loops in Artist
             Nested Loops in Bee/Zombie:
-              name: Mga Naka-Nest na mga Loop sa Bee/Zombie
+              name: Naka-Nest na mga Loops sa Bee/Zombie
             Nested Loops with Frozen:
-              name: Naka-Nest na mga Loop sa Frozen
+              name: Naka-Nest na mga Loops sa Frozen
             Nested Loops:
               name: Mga Loops na naka-nest
             Functions in Harvester:
@@ -5772,7 +5772,7 @@ fil:
           description_audience: 'Mga Edad: 8-12'
           description_short: Madaling dumaan sa mga konsepto sa Kursong C & D at pagkatapos ay pumunta pa sa mga function.
           description: Magsimulang mag-code gamit ang mga algoritmo, mga loop, mga kondisyonal, at mga pangyayari at pagkatapos ay pupunta ka sa mga function. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng capstone na proyekto na maaari mong ibahagi sa iyong mga kaibigan at pamilya.
-        coursef:
+        coursef-2017:
           stages:
             'Algorithms: Tangrams':
               name: 'Mga Algoritmo: Mga Tangrams'
@@ -5783,11 +5783,11 @@ fil:
               description_student: Ang araling ito ay magbibigay sa iyo ng isang maikling pagpapakilala sa iilang kahanga-hangang mga bagay na matutunan mo sa kursong ito!
               description_teacher: 'Sa araling ito, ang mga estudyante ay ipapakila sa mga pagkakasunod-sunod, mga loop at mga naka-nest na mga loop para mahanda sila sa mga mas kumplikadong mga konsepto sa huling bahagi ng kurso. Ang "ramp up" na araling ito ay naghahalintulad sa paglaro ng field sa pagitan ng mga eksperto at mga baguhan sa iyong klase. '
             The Power of Words:
-              name: 'Digital na Pagkamamamayan: Ang Kapangyarihan ng mga Salita'
+              name: 'Digital Citizenship: The Power of Words'
               description_student: Ang pang-aapi ay hindi talaga mabuti. Ang araling ito ay magtuturo sa iyong tungkol sa kung ano pwede at hindi pwedeng sabihin online.
               description_teacher: "Ang mga estudyante ay magbigay pansin na habang sila ay nagsasaya sa kanilang mga paboritong mga website, maaari silang makakatagpo ng mga mensahe mula sa ibang mga bata na makakagawa sa kanilang makaramdam ng galit, sakit, lungkot, o pagkakatakot. Sila ay tutuklas sa mga pamamaraan para harapin ang pang-aapi online at kung paano sila tutugon sa harap ng hindi kaaaya-ayang mga lenggwahe online.\n\nAng mga estudyante ay tatalakay sa lahat ng mga pamamaraan na magagamit nilang ang teknolohiya para sa komunikasyon at magtuklas sa mga pagkakatulad at pagkakaiba ng harapan at online na pakikipag-usap. Ang mga estudyante ay mag-iisip ng mga pamamaraan para tumugon sa pang-aapi online. "
             Ice Age Play Lab:
-              name: Mga Pangyayari sa Ice Age
+              name: Events in Ice Age
               description_student: Isipin ang iyong paboritong video game. Naisip mo ba kung paano ito nagawa? Sa mga palaisipang ito ikaw ay gagawa ng sarili mong video game kasama ang iyong mga kaibigan mula sa Ice Age!
               description_teacher: Sa araling ito, ang mga estudyante ay gagabayan sa isang istorya na nagpapakita ng mga karakter mula sa Ice Age. Ang mga estudyante ay magtatrabaho gamit ang mga event at mga loop para mapagalaw ang mga karakter sa screen at makakakuha ng pagkakataon na makalikha ng sarili nilang laro o istorya pagkatapos ng mga ginabayang mga antas.
             Envelope Variables:
@@ -5820,8 +5820,8 @@ fil:
               description_teacher: Isa sa pinakahanga-hangang istraktura sa mundo ng computer science ay ang function. Ang mga function (minsan ay tinatawag na mga pamamaraan) ay mga maliliit na mga programa na maaari mong gamitin ng paulit-ulit sa loob ng isang mas malaking programa. Ang araling ito ay makakatulong sa mga estudyante na likas na mauunawaan kung paano ang pagsama-sama ng mga piaso ng code sa isang mga function ay ganap na nakakatulong na mga gawi, at paano nila maaaring gamitin ang mga istraktura ng ito kahit na ang mga piraso ng code ay medyo kakaiba.
             Conditionals and Functions in Bee:
               name: Mga Kondisyonal at mga Function sa Bee
-              description_student: Ang bubuyog ay nangangailangan na naman ng iyong tulong! Dito gagamitin mo ang mga functions para makakuha ng nektar at makagawa ng pulot!
-              description_teacher: 'Ang araling ito ay nagtuturo sa mga estudyante kung paano maglikha ng simpleng mga function gamit ang sopistikadong "modal" na function editor, na naghahanda sa paraan para maisama nila ang mga parameter sa paparating na mga aralin. '
+              description_student: The bee needs your help again! Here you will be using functions to get nectar and make honey!
+              description_teacher: 'This lesson teaches students how to create simple functions using our sophisticated “modal” function editor, preparing the way for them to incorporate parameters in future lessons. '
             Functions with Parameters in Artist:
               name: Mga Functions na may mga Parameter sa Artist
               description_student: Ihanda na ang iyong mga pang-program na mga daliri. Sa mga palaisipang ito, ikaw ay gagawa ng kahanga-hangang mga drowing sa Artist gamit ang mga function na may mga parameter.
@@ -5847,7 +5847,7 @@ fil:
               description_student: Ang Roma ay hindi nabuo sa isang araw at ang iyong proyekto ay dapat hindi rin. Maggugol ng oras para baguhin at ayusin ang iyong proyekto para maging pinakamahusay ito hangga't maaari.
               description_teacher: Sa loob ng limang mga aralin, ang mga estudyante ay bubuo hanggang sa mabuo nila ang proyekto na sarili nilang disenyo gamit ang alinman sa Play Lab o Artist bilang pang-program na kapaligiran. Ngayon na nabuo na ang proyekto, ang mga estudyante ay bibigyan ng oportunidad na makakuha ng feedback mula sa kanilang mga kasamahan at maayos ang kanilang mga proyekto. Ang gabay ng aralin na nagpapakita sa lahat ng limang mga yugto ng proseso ay maaaring makita sa simula ng proseso ng proyekto, [here](https://curriculum.code.org/csf/coursef/15/).
             Presentation Your Project:
-              name: Pagpapakita ng Iyong Proyekto
+              name: Presentation Your Project
             Present Your Project:
               name: Ipakita ang Iyong Proyekto
               description_student: Oras na para ipakita ang iyong gawain! Diyo ipapakita mo ang iyong kamangha-mangha na proyekto sa iyong mga kasamahan.
@@ -5871,11 +5871,11 @@ fil:
             'Loops: My Loopy Robotic Friends':
               name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
             Loops in Artist:
-              name: Mga Loops sa Artist
+              name: Loops in Artist
             Nested Loops in Bee/Zombie:
-              name: Naka-Nest na mga Loop sa Bee/Zombie
+              name: Naka-Nest na mga Loops sa Bee/Zombie
             Nested Loops with Frozen:
-              name: Naka-Nest na mga Loop sa Frozen
+              name: Naka-Nest na mga Loops sa Frozen
           title: Kursong F
           assignment_family_title: Kursong F
           description_audience: 'Mga Edad: 9-13'
@@ -6105,18 +6105,18 @@ fil:
           stages:
             TTS:
               name: TTS
-        express:
+        express-2017:
           stages:
             'Programming Unplugged: My Robotic Friends':
-              name: 'Pag-Program na Unplugged: Ang Aking Robotik na mga Kaibigan'
+              name: 'Programming Unplugged: My Robotic Friends'
             Introduction:
               name: Panimula
             'Algorithms: Graph Paper Programming':
-              name: 'Pag-Program: Graph na Papel na Pag-Program'
+              name: 'Programming: Graph Paper Programming'
             'Algorithms: Relay Programming':
-              name: 'Pag-Debug: Relay na Pag-Program'
+              name: 'Debugging: Relay Programming'
             Debugging in Collector:
-              name: Introduksyon sa Pag-Debug
+              name: Introduction to Debugging
             'Loops: My Loopy Robotic Friends':
               name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
             Loops in Artist:
@@ -6180,11 +6180,11 @@ fil:
             Nested Loops Project in Frozen:
               name: Naka-nest na mga Loop sa Frozen
             'How it Works: The Internet':
-              name: 'Higit pa sa Pag-Program: Ang Internet'
+              name: 'Beyond Programming: The Internet'
             'Common Sense Education: Digital Citizenship':
-              name: 'Pagkamamamayang Digital: Pagsasanay sa Digital na Pagkamamamayan'
+              name: 'Digital Citizenship: Practicing Digital Citizenship'
             'Common Sense Education: Screen Out the Mean':
-              name: 'Digital na Pagkamamamayan: Screen Out the Mean'
+              name: 'Digital Citizenship: Screen Out the Mean'
             Events in Star Wars:
               name: Mga Pangyayari sa Star Wars
             Events with Flappy:
@@ -6212,18 +6212,18 @@ fil:
           description_audience: 'Mga Edad: 9-18'
           description_short: 'Isang introduksyon sa computer science: pinagsama ang pinakamahusay na kurikulum sa mababang paaralan para sa nakakatandang mga estudyante.'
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
-        pre-express:
+        pre-express-2017:
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Pag-dedebug: Hindi nakitang mga Bug'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Pagtitiyaga: Si Stevie at ang Malaking Proyekto'
+              name: 'Persistence: Stevie and the Big Project'
             'Real-life Algorithms: Plant a Seed':
               name: 'Mga Totoong-buhay na Algoritmo: Pagtatanim ng Buto'
             Learn to Drag and Drop:
-              name: Pagsunod-sunod gamit ang Drag at Drop
+              name: Sequencing with Drag and Drop
             'Online Safety: Your Digital Footprint':
-              name: 'Digital na Pagkamamamayan: Aking Digital na Footprint'
+              name: 'Digital Citizenship: My Digital Footprint'
             'Programming: My Robotic Friends':
               name: 'Pag-Program: Ang Aking mga Robotik na mga Kaibigan'
             Programming in Maze:
