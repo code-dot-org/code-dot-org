@@ -14,9 +14,12 @@ const styles = {
 
 export default class FeedbacksList extends Component {
   static propTypes = {
-    feedbacks: PropTypes.array,
+    feedbacks: PropTypes.arrayOf(PropTypes.shape({
+      teacher_name: PropTypes.string.isRequired,
+      created_at: PropTypes.string.isRequired,
+      comment: PropTypes.string.isRequired
+    })).isRequired
   };
-
 
   render() {
     return (
