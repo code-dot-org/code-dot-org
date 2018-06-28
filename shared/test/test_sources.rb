@@ -263,14 +263,14 @@ class SourcesTest < FilesApiTestBase
     FirehoseClient.instance.expects(:put_record).with do |data|
       data_json_data = JSON.parse(data[:data_json])
       data[:study] == 'project-data-integrity' &&
-        data[:event] == 'replace-non-current-main-json' &&
+        data[:event] == 'reject-older-main-json' &&
         data[:project_id] == @channel &&
-        data_json_data['replacedVersionId'] == version1
+        data_json_data['currentVersionId'] == version1
     end
 
     file_data = 'version 3'
     @api.put_object_version(filename, version1, file_data, file_headers, timestamp1)
-    assert successful?
+    assert conflict?
 
     delete_all_source_versions(filename)
 
