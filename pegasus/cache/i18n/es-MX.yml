@@ -1,4 +1,5 @@
-"es-MX":
+---
+es-MX:
   hour_of_code: La Hora del Código
   hello: Hola mundo
   'yes': Sí
@@ -664,13 +665,13 @@
   video_title_obama: El presidente Obama sobre las Ciencias de la Computación
   video_title_hoc_is_here: La Hora del Código ha llegado - Todo el mundo puede aprender
   video_title_anybody_can_learn: Cualquiera puede aprender
-  video_title_steph_curry: Hour of Code with Steph Curry
+  video_title_steph_curry: Hora del Código con Steph Curry
   video_title_draymond_green: Hora de código con Draymond Green
   video_title_russell_okung: Hora de código con Russell Okung
   video_title_real_madrid: Hora de código con el Real Madrid
   video_title_marco_belinelli: Hora de código con Marco Belinelli
   video_title_chris_bosh: Chris Bosh sobre Ciencias de la computación
-  video_title_my_name_is_aracely: My Name is Aracely
+  video_title_my_name_is_aracely: Mi nombre es Aracely
   video_1min: 1 minuto
   video_2min: 2 minutos
   video_3min: 3 minutos
@@ -801,9 +802,9 @@
   volunteer_engineer_submission_type_task_mentor: Estoy buscando un mentor que me
     ayude a prepararme para programar con mis alumnos
   petition_age: Edad
-  dashboard_announce_hoc_scaling_progress: Yikes! We are experiencing high Hour of
-    Code traffic. We are unable to save any progress this week, but progress from
-    before this week is still safe.
+  dashboard_announce_hoc_scaling_progress: "¡Ups! Estamos experimentando un alto tráfico
+    en la Hora del Código. No podemos guardar ningún progreso esta semana, pero el
+    progreso de antes de esta semana sigue estando seguro."
   dashboard_announce_learn_more_button: Aprende más
   dashboard_landing_title: Página de inicio del maestro
   dashboard_landing_welcome: Bienvenido al nuevo y mejorado panel para maestros.
@@ -948,7 +949,7 @@
     a las preguntas de respuesta abierta texto eligiendo el curso asignado en el desplegable
     de arriba.
   dashboard_sections_new_section: Nueva sección
-  dashboard_sections_new_google_section: Import section from Google Classroom
+  dashboard_sections_new_google_section: Importar sección de Google Clasroom
   dashboard_sections_jumbotron_instruction: Crea nuevas secciones y añade alumnos
     a ellas. Las secciones ayudan a organizar a los alumnos en grupos más pequeños
     para que puedas seguir su progreso y administrar sus cuentas.
@@ -1065,11 +1066,11 @@
   dashboard_coursed: 'Curso D: '
   dashboard_coursee: 'Curso E: '
   dashboard_coursef: 'Curso F: '
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
+  dashboard_pre-express: 'Curso Rápido prescolar: '
+  dashboard_express: 'Curso rápido: '
   dashboard_unplugged: Si no tiene computadoras, <a href='%{unplugged_url}'> intente
     estas lecciones desenchufados</a> en su salón del clase.
-  dashboard_tools: 'Tools: '
+  dashboard_tools: 'Herramientas: '
   dashboard_curriculum: Currículum
   dashboard_curriculum_overview: Resumen de currículo K-5
   dashboard_overview: Resumen
@@ -1088,7 +1089,7 @@
   dashboard_curriculum_csp: 'Principios informáticos AP®:'
   dashboard_curriculum_ecs: 'Explorando la Informática:'
   dashboard_curriculum_csd: 'Descubrimientos de Ciencias de la Computación: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
+  dashboard_curriculum_apcsa: 'Informática avanzada en Java: '
   dashboard_grade_k: Kah
   dashboard_grade_other: Otros
   dashboard_login_word: Palabra
@@ -1191,9 +1192,10 @@
   carousel_heading_robots: Aprende a programar con robots
   carousel_heading_ide: Plataformas populares entre los docentes
   carousel_heading_desktop: Aprende a programar en una computadora
-  carousel_heading_mobtabelem: For phones and tablets
-  carousel_heading_prereader: For pre-readers
-  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_mobtabelem: Para teléfono y tabletas
+  carousel_heading_prereader: Para prescolares
+  carousel_heading_beyondblocks: Más allá de los bloques - aprender un lenguaje de
+    programación
   carousel_heading_nointernet: "¿Conexión lenta? Instala estas aplicaciones en tu
     computadora"
   educator_notes: Notas del educador
@@ -1285,12 +1287,12 @@
   coursee_name: Curso E
   coursef-draft_name: Curso F
   coursef_name: Curso F
-  coursea-2017_name: Course A (2017)
-  courseb-2017_name: Course B (2017)
-  coursec-2017_name: Course C (2017)
-  coursed-2017_name: Course D (2017)
-  coursee-2017_name: Course E (2017)
-  coursef-2017_name: Course F (2017)
+  coursea-2017_name: Curso A (2017)
+  courseb-2017_name: Curso B (2017)
+  coursec-2017_name: Curso C (2017)
+  coursed-2017_name: Curso D (2017)
+  coursee-2017_name: Curso E (2017)
+  coursef-2017_name: Curso F (2017)
   coursea-2018_name: Course A (2018)
   courseb-2018_name: Course B (2018)
   coursec-2018_name: Course C (2018)
@@ -1299,11 +1301,11 @@
   coursef-2018_name: Course F (2018)
   accelerated_name: Curso acelerado
   express_name: Express Course
-  pre-express_name: Pre-reader Express Course
-  express-2017_name: Express Course (2017)
-  pre-express-2017_name: Pre-reader Express Course (2017)
+  pre-express_name: Curso rápido prescolar
+  express-2017_name: Curso Rápido (2017)
+  pre-express-2017_name: Curso rápido prescolar (2017)
   express-2018_name: Express Course (2018)
-  pre-express-2018_name: Pre-reader Express Course (2018)
+  pre-express-2018_name: Curso rápido prescolar (2018)
   cspunit1_name: 'Tema 1: Información digital'
   cspunit2_name: 'Tema 2: El Internet'
   cspunit3_name: 'Unidad 3: programación'
@@ -1348,13 +1350,13 @@
   csp2_name: 'Unidad 2: Información Digital'
   csp3_name: 'Unit 3: Algorithms and Programming'
   csp3-a_name: 'Unidad 3: Introducción a la programación (versión A)'
-  csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
+  csp3-research-mxghyt_name: 'Unidad 3: Introducción a la Programación (subobjetivos)'
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Bases de datos en Apps'
-  csp-post-survey_name: Student Post-Course Survey
+  csp-post-survey_name: Encuesta de fin de curso
   cspassessment_name: Prueba completa - 50 preguntas
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'
@@ -2184,19 +2186,19 @@
   header_tutorials: Tutoriales
   header_documentation: Documentación
   csp_name: "'16-'17 Principios de CS"
-  csd_name: CS Discoveries
-  csd_2018_name: CS Discoveries
-  full_course_category_name: Full Courses
+  csd_name: Descubrimientos de la informática
+  csd_2018_name: Descubrimientos de la informática
+  full_course_category_name: Cursos Completos
   user_header_label: Hola %{username}
   user_header_settings: Mi cuenta
   user_header_logout: Cerrar sesión
   user_header_signin: Iniciar Sesión
   view_all_sections: Ver todas las secciones
-  view_section: View Section
-  view_named_section: View %{section_name}
+  view_section: Ver Sección
+  view_named_section: Ver %{section_name}
   privacy_doc_explanation: Haz click aquí para ver nuestro documento de privacidad,
     que puede ser impreso o compartido con tus estudiantes.
-  signing_in: Signing In
+  signing_in: Iniciando sesión
   sign_in_overview: 'Tus estudiantes pueden entrar a sus cuentas de Code.org siguiendo
     estos pasos:'
   sign_in_instruct_website: Ir a %{code_org_url}.

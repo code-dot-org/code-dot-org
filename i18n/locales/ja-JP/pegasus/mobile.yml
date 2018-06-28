@@ -542,7 +542,7 @@
   volunteer_engineer_submission_field_email_desc: "あなたのメール アドレスは公開されません、私たちが教師からのリクエストを転送します。"
   volunteer_engineer_submission_field_email_placeholder: "Eメールアドレス"
   volunteer_engineer_submission_field_email_preference: "当社のコースについての最新情報、各地域における機会、コンピュータサイエンスに関するニュースなどを電子メールを介して送付してもよろしいですか？"
-  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy policy)"
+  volunteer_engineer_submission_field_email_preference_privacy: "(当社のプライバシー ポリシーを参照してください)"
   volunteer_engineer_submission_field_email_preference_yes: 'はい'
   volunteer_engineer_submission_field_email_preference_no: 'いいえ'
   volunteer_engineer_submission_final_paragraph: "地域の教師が Hour of Code やその他のボランティアのために連絡できるよう、あなたは地図上に表示されます。あなたのメール アドレスと詳細な住所は決して公開される事はありません。しかし、その他の情報(おおよその所在地など) は地域の教師に公開されます。"

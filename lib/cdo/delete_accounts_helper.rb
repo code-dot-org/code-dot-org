@@ -99,7 +99,7 @@ class DeleteAccountsHelper
     Follower.with_deleted.where(section_id: section_ids).find_each do |follower|
       student_user = User.with_deleted.find_by_id(follower.student_user_id)
       next if student_user.purged_at
-      next unless student_user.provider == User::PROVIDER_SPONSORED
+      next unless student_user.sponsored?
       next unless Follower.where(student_user: student_user).count == 0
 
       purge_user(student_user)

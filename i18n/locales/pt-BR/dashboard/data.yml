@@ -117,7 +117,7 @@ pt-BR:
         turtle_2_7: Aqui temos um programa para desenhar uma espiral, mas os blocos estão desativados para que eles não sejam executados. Faça um novo programa usando um bloco "conte com" (na categoria Laços) e um bloco "contador" (na categoria Variáveis) para desenhar a mesma espiral.
         turtle_2_7_5: Há uma nova função "desenhe um boneco de neve" (na categoria Funções). Desenhe dois bonecos de neve, de 250 e 100 de altura.
         turtle_2_8: Esse desafio é um pouco complicado. Use a função "desenhe um boneco de neve" e o novo bloco "pule para a frente" (na categoria Ações). Desenhe 3 bonecos de neve com cores diferentes, separados por 100 pixels.
-        turtle_2_9: Use um laço "conte com" para desenhar uma família de bonecos de neve, com alturas de 110, 100, 90, 80 e 70. Os bonecos de neve devem ser separados por 60 pixels.
+        turtle_2_9: Use um laço "contar com" para desenhar uma família de bonecos de neve, com alturas de 100, 110, 90, 80 e 70. Os bonecos de neve devem estar separados por 60 pixels.
         turtle_2_10: Aqui, temos alguns códigos para que você experimente em diferentes espirais. O que acontece se você alterar a quantidade de voltas? Ou definir uma cor aleatória no laço? Desenhe o que você quiser.
         maze_karel_2_1: 'Use os blocos para me ajudar a remover todos os montes de terra e preencher todos os buracos no chão. Tente usar laços ao invés de usar muitos blocos. Dica: você pode colocar um laço dentro de outro laço.'
         maze_karel_2_2: Definimos nosso próprio bloco chamado "preencha 5", que agora está na categoria de Funções. Use-o para me ajudar a preencher esse buraco.
@@ -532,7 +532,7 @@ pt-BR:
         CSF_loops_AB: Laços
         csd_gamelab_booleans: Expressões Booleanas
         csd_gamelab_conditional_statements: Instruções Condicionais
-        csd_gamelab_if_else: If/Else Statements
+        csd_gamelab_if_else: Instrução Se/Senão
     callout:
       text:
         drag_blocks: Arraste um bloco "avance" e o encaixe embaixo do outro bloco

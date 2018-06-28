@@ -27867,6 +27867,7 @@ is:
       courseA_playLab_events4_2018_markdown_instruction: Now, add another event block to get Jorge to move right when the right arrow button is clicked.
       courseA_playLab_events5_markdown_instruction: Add events to have Jorge move up and down when the up arrow and down arrow buttons are pressed.
       courseA_playLab_events5_2018_markdown_instruction: Add events to have Jorge move up and down when the up arrow and down arrow buttons are pressed.
+      courseA_playLab_events7_2018_markdown_instruction: "*Freeplay:* Add anything you want to this game.  Can you make the dinosaur disappear when Jorge runs into him?"
       courseA_playlab_events_challenge1_markdown_instruction: |-
         Hvar eru vinir mínir að fela sig? Í þessum leik á smellur á mig að sýna köttinn Olive vin minn! Ef smellt er á Olive á Robin að birtast! Getur þú skrifað kóða til að sýna hina vini mína líka?\r
         \r
@@ -27990,15 +27991,15 @@ is:
       courseB_iceage_loops10_markdown_instruction: Hjálpaðu Scrat að komast alla leið yfir til akarnsins!
       courseB_iceage_loops11_markdown_instruction: Hjálpaðu Skrat að komast til akarnsins!
       courseB_iceage_loops11_forVideo_markdown_instruction: Hjálpaðu Skrat að komast til akarnsins!
-      courseB_iceage_loops12_markdown_instruction: Get to the acorn any way you can!
+      courseB_iceage_loops12_markdown_instruction: Náðu akarninu hvernig sem þú getur!
       courseB_iceage_loops2_markdown_instruction: Use both <xml><block type="maze_moveWest"/></xml> and <xml><block type="maze_moveSouth"/></xml> blocks to get to the acorn!
       courseB_iceage_loops3_markdown_instruction: Can you get to the acorn with just one <xml><block type="maze_moveWest"/></xml> block? Try using a loop!
-      courseB_iceage_loops4_markdown_instruction: Add one more block to get Scrat all the way to the acorn!
-      courseB_iceage_loops5_markdown_instruction: Can you add one more loop to get to the acorn?
-      courseB_iceage_loops6_markdown_instruction: Can you add a loop to get to the acorn?
-      courseB_iceage_loops7_markdown_instruction: 'Scrat really wants that acorn! '
-      courseB_iceage_loops8_markdown_instruction: 'Can you fix this code? '
-      courseB_iceage_loops9_markdown_instruction: The acorn is so far away! Can you use loops to help Scrat get there?
+      courseB_iceage_loops4_markdown_instruction: Bættu við einum kubbi til að koma Scrat til akarnsins!
+      courseB_iceage_loops5_markdown_instruction: Getur þú bætt við einni lykkju í viðbót til að ná akarninu?
+      courseB_iceage_loops6_markdown_instruction: Getur þú bætt við lykkju til að ná akarninu?
+      courseB_iceage_loops7_markdown_instruction: 'Scrat langar mikið í þetta akarn! '
+      courseB_iceage_loops8_markdown_instruction: 'Getur þú lagað þennan kóða? '
+      courseB_iceage_loops9_markdown_instruction: Akarnið er svo langt í burtu! Getur þú notað lykkjur til að hjálpa Scrat að komast þangað?
       courseB_maze_seq3_markdown_instruction: '*"Lagaðu kóðann svo ég komist til svínsins."*'
       courseB_maze_seq3_2018_markdown_instruction: '*"Fix the code to get me to the acorn!"*'
       courseB_maze_seq9_markdown_instruction: "**Áskorun:** Farðu í kringum TNT sprengiefnið til að koma fuglinum til svínsins."
@@ -29159,17 +29160,17 @@ is:
       courseD_iceage_loops1_markdown_instruction: Help Scrat across the slippery ice to get to the acorn!
       courseD_iceage_loops10_markdown_instruction: Hjálpaðu Scrat að komast alla leið yfir til akarnsins!
       courseD_iceage_loops11_markdown_instruction: Hjálpaðu Skrat að komast til akarnsins!
-      courseD_iceage_loops12_markdown_instruction: Get to the acorn any way you can!
+      courseD_iceage_loops12_markdown_instruction: Náðu akarninu hvernig sem þú getur!
       courseD_iceage_loops2_markdown_instruction: |-
         Use a <xml><block type="maze_turn">
         <title name="DIR">turnLeft</title>
         </block></xml> block to get to the acorn!
       courseD_iceage_loops3_markdown_instruction: Can you get to the acorn with just one <xml><block type="maze_moveForward"/></xml> block? Try using a loop!
-      courseD_iceage_loops4_markdown_instruction: Add one more block to get Scrat all the way to the acorn!
-      courseD_iceage_loops6_markdown_instruction: Can you add a loop to get to the acorn?
-      courseD_iceage_loops7_markdown_instruction: 'Scrat really wants that acorn! '
-      courseD_iceage_loops8_markdown_instruction: 'Can you fix this code? '
-      courseD_iceage_loops9_markdown_instruction: The acorn is so far away! Can you use loops to help Scrat get there?
+      courseD_iceage_loops4_markdown_instruction: Bættu við einum kubbi til að koma Scrat til akarnsins!
+      courseD_iceage_loops6_markdown_instruction: Getur þú bætt við lykkju til að ná akarninu?
+      courseD_iceage_loops7_markdown_instruction: 'Scrat langar mikið í þetta akarn! '
+      courseD_iceage_loops8_markdown_instruction: 'Getur þú lagað þennan kóða? '
+      courseD_iceage_loops9_markdown_instruction: Akarnið er svo langt í burtu! Getur þú notað lykkjur til að hjálpa Scrat að komast þangað?
       courseD_maze_loops_challenge1_markdown_instruction: Komum í fjársjóðaleit - með lykkjum! Hjálpaðu safnaranum að ná minnst tveimur fjársjóðshrúgum en aðeins með kubbunum í verkfærakassanum.
       courseD_maze_nestedLoops3_markdown_instruction: |-
         *"Zombie hungry!"*

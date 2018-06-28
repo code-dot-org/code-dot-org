@@ -13,7 +13,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     @student = create :student
     @young_student = create :young_student
     @teacher = create :teacher
-    @admin = create :admin
+    @project_validator = create :project_validator
     @section = create :section, user_id: @teacher.id
     Follower.create!(section_id: @section.id, student_user_id: @student.id, user: @teacher)
 
@@ -822,6 +822,16 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test 'loads applab if you are a teacher viewing your student and they have a channel id' do
     sign_in @teacher
 
+    fake_last_attempt = 'STUDENT_LAST_ATTEMPT_SOURCE'
+    User.any_instance.
+      expects(:user_level_for).
+      returns(
+        create(:user_level,
+          user: @student,
+          level_source: create(:level_source, data: fake_last_attempt)
+        )
+      )
+
     user_storage_id = storage_id_for_user_id(@student.id)
 
     level = create :applab
@@ -839,10 +849,88 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_select '#codeApp'
     assert_select '#notStarted', 0
+    assert_includes response.body, fake_last_attempt
+  end
+
+  test 'loads applab if you are a project validator viewing a student and they have a channel id' do
+    sign_in @project_validator
+
+    fake_last_attempt = 'STUDENT_LAST_ATTEMPT_SOURCE'
+    User.any_instance.
+      expects(:user_level_for).
+      returns(
+        create(:user_level,
+          user: @student,
+          level_source: create(:level_source, data: fake_last_attempt)
+        )
+      )
+
+    user_storage_id = storage_id_for_user_id(@student.id)
+
+    level = create :applab
+    script_level = create :script_level, levels: [level]
+
+    create :channel_token, level: level, storage_id: user_storage_id
+
+    get :show, params: {
+      script_id: script_level.script,
+      stage_position: script_level.stage,
+      id: script_level.position,
+      user_id: @student.id,
+      section_id: @section.id
+    }
+
+    assert_select '#codeApp'
+    assert_select '#notStarted', 0
+    assert_includes response.body, fake_last_attempt
+  end
+
+  test 'does not load applab if you are viewing a student but do not have permission' do
+    sign_in @teacher
+
+    other_student = create :student
+    user_storage_id = storage_id_for_user_id(other_student.id)
+
+    fake_last_attempt = 'STUDENT_LAST_ATTEMPT_SOURCE'
+    User.any_instance.
+      expects(:user_level_for).
+      returns(
+        create(:user_level,
+          user: other_student,
+          level_source: create(:level_source, data: fake_last_attempt)
+        )
+      )
+
+    level = create :applab
+    script_level = create :script_level, levels: [level]
+
+    create :channel_token, level: level, storage_id: user_storage_id
+
+    get :show, params: {
+      script_id: script_level.script,
+      stage_position: script_level.stage,
+      id: script_level.position,
+      user_id: other_student.id,
+      section_id: @section.id
+    }
+
+    assert_select '#codeApp'
+    assert_select '#notStarted', 0
+    refute_includes response.body, fake_last_attempt
   end
 
   test 'does not load applab if you are a teacher viewing your student and they do not have a channel id' do
     sign_in @teacher
+
+    fake_last_attempt = 'STUDENT_LAST_ATTEMPT_SOURCE'
+    User.any_instance.
+      expects(:user_level_for).
+      returns(
+        create(:user_level,
+          user: @student,
+          level_source: create(:level_source, data: fake_last_attempt)
+        )
+      )
 
     level = create :applab
     script_level = create :script_level, levels: [level]
@@ -857,6 +945,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_select '#notStarted'
     assert_select '#codeApp', 0
+    refute_includes response.body, fake_last_attempt
   end
 
   test 'shows expanded teacher panel when student is chosen' do

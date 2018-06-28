@@ -1,0 +1,19 @@
+{
+  "category": "Logic",
+  "config": {
+    "func": "isTouchingLeftEdge",
+    "blockText": "{SPRITE} is touching left edge",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      }
+    ],
+    "returnType": "Boolean",
+    "color": [
+      197,
+      0.88,
+      0.78
+    ]
+  }
+}

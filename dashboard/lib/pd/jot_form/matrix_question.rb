@@ -62,20 +62,16 @@ module Pd
       end
 
       def summarize
-        heading_hash = {name => {text: text, answer_type: ANSWER_NONE}}
-        sub_questions_hash = sub_questions.each_with_index.map do |sub_question, i|
+        sub_questions.each_with_index.map do |sub_question, i|
           [
             generate_sub_question_key(i),
             {
-              text: sub_question,
+              text: "#{text} #{sub_question}",
               answer_type: ANSWER_SELECT_VALUE,
-              parent: name,
               max_value: options.length
             }
           ]
         end.to_h
-
-        heading_hash.merge(sub_questions_hash)
       end
 
       def process_answer(answer)

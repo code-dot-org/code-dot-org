@@ -7,7 +7,7 @@ import {connect} from 'react-redux';
 import processMarkdown from 'marked';
 import renderer from "../../util/StylelessRenderer";
 import TeacherOnlyMarkdown from './TeacherOnlyMarkdown';
-import StudentFeedback from "./StudentFeedback";
+import FeedbacksList from "./FeedbacksList";
 import TeacherFeedback from "./TeacherFeedback";
 import InlineAudio from './InlineAudio';
 import ContainedLevel from '../ContainedLevel';
@@ -127,12 +127,15 @@ class TopInstructions extends Component {
     mapReference: PropTypes.string,
     referenceLinks: PropTypes.array,
     viewAs: PropTypes.oneOf(Object.keys(ViewType)),
-    readOnlyWorkspace: PropTypes.bool
+    readOnlyWorkspace: PropTypes.bool,
+    serverLevelId:PropTypes.number,
+    user: PropTypes.number
   };
 
   state = {
     tabSelected: this.props.viewAs === ViewType.Teacher && this.props.readOnlyWorkspace &&
       experiments.isEnabled(experiments.DEV_COMMENT_BOX_TAB) ? TabType.COMMENTS : TabType.INSTRUCTIONS,
+    feedbacks: []
   };
 
   /**
@@ -146,6 +149,16 @@ class TopInstructions extends Component {
     // Initially set to 300. This might be adjusted when InstructionsWithWorkspace
     // adjusts max height.
     this.props.setInstructionsRenderedHeight(Math.min(maxNeededHeight, 300));
+
+    if (this.props.viewAs === ViewType.Student) {
+      $.ajax({
+        url: '/api/v1/teacher_feedbacks/get_feedbacks?student_id='+this.props.user+'&level_id='+this.props.serverLevelId,
+        method: 'GET',
+        contentType: 'application/json;charset=UTF-8',
+      }).done(data => {
+        this.setState({feedbacks: data});
+      });
+    }
   }
 
   componentWillUnmount() {
@@ -266,7 +279,8 @@ class TopInstructions extends Component {
     const displayFeedbackDevTeacher = experiments.isEnabled(experiments.DEV_COMMENT_BOX_TAB) &&
       this.props.viewAs === ViewType.Teacher && this.props.readOnlyWorkspace;
 
-    const displayFeedbackDevStudent = experiments.isEnabled(experiments.DEV_COMMENT_BOX_TAB) && this.props.viewAs === ViewType.Student;
+    const displayFeedbackDevStudent = experiments.isEnabled(experiments.DEV_COMMENT_BOX_TAB) &&
+      this.props.viewAs === ViewType.Student && this.state.feedbacks.length > 0;
 
     const displayFeedback = displayFeedbackDevTeacher || displayFeedbackStable || displayFeedbackDevStudent;
     return (
@@ -354,7 +368,9 @@ class TopInstructions extends Component {
                   />
                 }
                 {this.props.viewAs === ViewType.Student &&
-                  <StudentFeedback
+                  <FeedbacksList
+                    feedbacks={this.state.feedbacks}
+                    viewAs={this.props.viewAs}
                     ref="commentTab"
                   />
                 }
@@ -390,7 +406,9 @@ export default connect(state => ({
   mapReference: state.instructions.mapReference,
   referenceLinks: state.instructions.referenceLinks,
   viewAs: state.viewAs,
-  readOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace
+  readOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
+  serverLevelId: state.pageConstants.serverLevelId,
+  user: state.pageConstants.userId
 }), dispatch => ({
     toggleInstructionsCollapsed() {
       dispatch(toggleInstructionsCollapsed());

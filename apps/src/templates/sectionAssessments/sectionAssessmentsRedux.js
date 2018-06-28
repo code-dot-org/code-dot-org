@@ -40,6 +40,8 @@ const MultiAnswerStatus = {
   INCORRECT: 'incorrect'
 };
 
+const ANSWER_LETTERS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
+
 // Action type constants
 const SET_ASSESSMENT_RESPONSES = 'sectionAssessments/SET_ASSESSMENT_RESPONSES';
 const SET_ASSESSMENTS_QUESTIONS = 'sectionAssessments/SET_ASSESSMENTS_QUESTIONS';
@@ -235,7 +237,7 @@ export const getStudentMCResponsesForCurrentAssessment = (state) => {
       studentResponses: studentAssessment.level_results.filter(answer => answer.type === QuestionType.MULTI)
         .map(answer => {
           return {
-            responses: answer.student_result || '',
+            responses: indexesToAnswerString(answer.student_result),
             isCorrect: answer.status === MultiAnswerStatus.CORRECT,
           };
         })
@@ -350,14 +352,13 @@ export const getMultipleChoiceSurveyResults = (state) => {
       }
     }
 
-    // TODO(caleybrock): Make a better way to get letter options, here and below.
     return {
       id: index,
       question: question.question,
       questionNumber: question.question_index + 1,
       answers: question.answer_texts.map((answer, index) => {
         return {
-          multipleChoiceOption: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'][index],
+          multipleChoiceOption: ANSWER_LETTERS[index],
           percentAnswered: Math.floor((answerTotals[index]/totalAnswered) * 100),
         };
       }),
@@ -417,7 +418,6 @@ export const getMultipleChoiceSectionSummary = (state) => {
   }
   const questionData = assessmentsStructure.questions;
   const multiQuestions = questionData.filter(question => question.type === QuestionType.MULTI);
-  // TODO(caleybrock): Follow up to calculate multipleChoiceOption consistently.
   const results = multiQuestions.map(question => {
     return {
       id: question.level_id,
@@ -425,7 +425,7 @@ export const getMultipleChoiceSectionSummary = (state) => {
       questionNumber: question.question_index + 1,
       answers: question.answers.map((answer, index) => {
         return {
-          multipleChoiceOption: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'][index],
+          multipleChoiceOption: ANSWER_LETTERS[index],
           isCorrect: answer.correct,
           numAnswered: 0,
         };
@@ -450,13 +450,13 @@ export const getMultipleChoiceSectionSummary = (state) => {
     const studentResults = studentAssessment.level_results || [];
     const multiResults = studentResults.filter(result => result.type === QuestionType.MULTI);
     multiResults.forEach((response, questionIndex) => {
-      // student_result is either '' and not answered or a series of letters
+      // student_result is either [] and not answered or a series of letters
       // that the student selected.
-      if (response.student_result === '') {
+      results[questionIndex].totalAnswered++;
+      if (response.status === 'unsubmitted') {
         results[questionIndex].notAnswered++;
       } else {
-        results[questionIndex].totalAnswered++;
-        getIndexFromAnswer(response.student_result).forEach(answer => {
+        (response.student_result || []).forEach(answer => {
           results[questionIndex].answers[answer].numAnswered++;
         });
       }
@@ -466,50 +466,58 @@ export const getMultipleChoiceSectionSummary = (state) => {
   return results;
 };
 
+/**
+ * Selector function that takes in the state and a boolean indicating
+ * if the current assessment is a survey.
+ * @returns {number} total count of students who have submitted
+ * the current assessment.
+ */
+export const countSubmissionsForCurrentAssessment = (state, isSurvey) => {
+  const currentAssessmentId = state.sectionAssessments.assessmentId;
+  if (isSurvey) {
+    const surveysStructure = state.sectionAssessments.surveysByScript[state.scriptSelection.scriptId] || {};
+    const currentSurvey = surveysStructure[currentAssessmentId];
+    if (!currentSurvey) {
+      return 0;
+    }
+    return currentSurvey.levelgroup_results[0].results.length;
+  } else {
+    const studentResponses = getAssessmentResponsesForCurrentScript(state);
+    let totalSubmissions = 0;
+    Object.values(studentResponses).forEach((student) => {
+      if (Object.keys(student.responses_by_assessment).includes(currentAssessmentId.toString())) {
+        totalSubmissions++;
+      }
+    });
+    return totalSubmissions;
+  }
+};
+
 // Helpers
 
 /**
  * Takes in an array of objects {answerText: '', correct: true/false} and
  * returns the corresponding letters to the options with the correct answers.
- *
- * TODO(caleybrock): Add letter options to response from the server so they are
- * consistent with the structure, but for now look up letter in this array.
- * If this code is left client side, it needs tests.
- *
  * Ex - [{correct: false}, {correct: true}] --> returns 'B'
  */
-const getCorrectAnswer = (answerArr) => {
+export function getCorrectAnswer(answerArr) {
+  const correctIndexes = answerArr
+    .map(({correct}, i) => (correct ? i : null))
+    .filter(i => i !== null);
+  return indexesToAnswerString(correctIndexes);
+}
+
+/**
+ * Takes in an array of integers and returns the corresponding letters
+ * representing correct answers.
+ * Ex - [1] --> returns 'B', [0, 2] --> returns 'A, C'
+ */
+export function indexesToAnswerString(answerArr) {
   if (!answerArr) {
     return '';
   }
-
-  const letterArr = ['A','B', 'C', 'D', 'E', 'F', 'G', 'H'];
-  const correctLetters = [];
-  for (let i = 0; i < answerArr.length; i++) {
-    if (answerArr[i].correct) {
-      correctLetters.push(letterArr[i]);
-    }
-  }
-  return correctLetters.join(', ');
-};
-
-/**
- * Takes in string of answers 'A, C' and
- * returns the corresponding array of indexes matching those answers.
- *
- * TODO(caleybrock): This feels messy. I'd like to handle this consistently
- * everywhere so first we should make this consistent on the server. If
- * we end up keeping this function, we'll need tests.
- *
- * Ex - 'A, C' --> returns [0, 2]
- */
-const getIndexFromAnswer = (answerString) => {
-  answerString = answerString.replace(' ', '');
-  const answerArray = answerString.split(',');
-
-  const letterArr = ['A','B', 'C', 'D', 'E', 'F', 'G', 'H'];
-  return answerArray.map(letter => letterArr.indexOf(letter));
-};
+  return answerArr.map(index => ANSWER_LETTERS[index]).join(', ');
+}
 
 // Requests to the server for assessment data
 

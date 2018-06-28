@@ -52,41 +52,32 @@ The priority deadline for 2018 has passed, but we still have openings for our CS
 
 [col-33]
 
-Alabama<br>
-California<br>
-Florida<br>
+California (San Diego, East Bay regions)<br>
 Idaho<br>
 Illinois<br>
 Indiana<br>
 Iowa<br>
 Kansas<br>
-Maine<br>
 
 [/col-33]
 
 [col-33]
 
+Maine<br>
 Maryland<br>
 Massachusetts<br>
-Mississippi<br>
 Missouri<br>
 Montana<br>
-New Hampshire<br>
 New Jersey<br>
-Southeastern New York<br>
-North Carolina<br>
 
 [/col-33]
 
 [col-33]
 
-North Dakota<br>
+New York (southeastern regions)<br>
+North Carolina<br>
 Oklahoma<br>
-South Dakota<br>
-Vermont<br>
-Virginia<br>
 Wisconsin<br>
-Wyoming<br>
 
 [/col-33]
 
