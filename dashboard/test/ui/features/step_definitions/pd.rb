@@ -157,6 +157,12 @@ Given(/^I am a teacher named "([^"]*)" going to TeacherCon and am on the Teacher
     And I sign in as "#{name}"
     And I am on "http://studio.code.org/pd/teachercon_registration/#{application.application_guid}"
   }
+
+  # In some screen resolutions, the cookie banner blocks the form's Next button. Dismiss preemptively
+  steps %Q{
+    And I press "accept-cookies"
+    Then I wait until element "#accept-cookies" is not visible
+  }
 end
 
 And(/^I make the teacher named "([^"]*)" a facilitator for course "([^"]*)"$/) do |name, course|
