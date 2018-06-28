@@ -1296,7 +1296,7 @@ function fetchSource(channelData, callback, version, useSourcesApi) {
     if (version) {
       url += '?version=' + version;
     }
-    sources.fetch(url, function (err, data) {
+    sources.fetch(url, function (err, data, jqXHR) {
       if (err) {
         console.warn('unable to fetch project source file', err);
         data = {
@@ -1305,6 +1305,7 @@ function fetchSource(channelData, callback, version, useSourcesApi) {
           animations: ''
         };
       }
+      currentSourceVersionId = jqXHR.getResponseHeader('S3-Version-Id');
       unpackSources(data);
       callback();
     });
