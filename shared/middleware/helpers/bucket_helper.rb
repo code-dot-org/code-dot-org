@@ -176,13 +176,13 @@ class BucketHelper
   end
 
   # When updating s3://cdo-v3-sources/.../main.json, checks that the
-  # version_to_replace is the latest version. If a newer version exists,
-  # logs an event to firehose and halts with 409 Conflict.
+  # current_version from the client is the latest version on the server. If a
+  # newer version exists, logs an event to firehose and halts with 409 Conflict.
   #
-  # In some cases, S3 replication lag could cause the version_to_replace not to
+  # In some cases, S3 replication lag could cause the current_version not to
   # even appear in the version list. In this case, do not log or raise.
-  def check_current_version(encrypted_channel_id, filename, version_to_replace, timestamp, tab_id, user_id)
-    return true unless filename == 'main.json' && @bucket == CDO.sources_s3_bucket && version_to_replace
+  def check_current_version(encrypted_channel_id, filename, current_version, timestamp, tab_id, user_id)
+    return true unless filename == 'main.json' && @bucket == CDO.sources_s3_bucket && current_version
 
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     key = s3_path owner_id, channel_id, filename
@@ -193,7 +193,7 @@ class BucketHelper
     # https://docs.aws.amazon.com/sdkforruby/api/Aws/S3/Types/ObjectVersion.html
     versions = s3.list_object_versions(bucket: @bucket, prefix: key).versions
 
-    target_version_metadata = versions.find {|v| v.version_id == version_to_replace}
+    target_version_metadata = versions.find {|v| v.version_id == current_version}
 
     return true unless target_version_metadata && !target_version_metadata.is_latest
 
@@ -210,7 +210,7 @@ class BucketHelper
       user_id: user_id,
 
       data_json: {
-        replacedVersionId: version_to_replace,
+        currentVersionId: current_version,
         tabId: tab_id,
         key: key,
 

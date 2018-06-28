@@ -316,10 +316,15 @@ class FilesApi < Sinatra::Base
 
     # Replacing a non-current version of main.json could lead to perceived data loss.
     # Log to firehose so that we can better troubleshoot issues in this case.
-    version_to_replace = params['version']
+
+    # TODO(dave): stop checking for 'version' once all clients have started using
+    # 'replace' and 'currentVersion'.
+    current_version = params['version'] || params['currentVersion']
+    version_to_replace = params['version'] || (params['replace'] == 'true' && params['currentVersion'])
+
     timestamp = params['firstSaveTimestamp']
     tab_id = params['tabId']
-    conflict unless buckets.check_current_version(encrypted_channel_id, filename, version_to_replace, timestamp, tab_id, current_user_id)
+    conflict unless buckets.check_current_version(encrypted_channel_id, filename, current_version, timestamp, tab_id, current_user_id)
 
     response = buckets.create_or_replace(encrypted_channel_id, filename, body, version_to_replace)
 
