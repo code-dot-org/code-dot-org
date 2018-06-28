@@ -76,7 +76,7 @@ class ScaryChangeDetector
 
 #{changes.join("\n")}
 
-        Dropbox creates these files typically when 2 people change the same file a the same time.
+        Dropbox creates these files typically when 2 people change the same file at the same time.
         See https://www.dropbox.com/help/syncing-uploads/conflicted-copy
 
         Compare the file with its root (same filename minus the conflicted copy part). If they're identical,
