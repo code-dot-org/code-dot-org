@@ -8,7 +8,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     @request.env["devise.mapping"] = Devise.mappings[:user]
   end
 
-  test "authorizing with known facebook account signs in" do
+  test "login: authorizing with known facebook account signs in" do
     user = create(:user, provider: 'facebook', uid: '1111')
 
     @request.env['omniauth.auth'] = OmniAuth::AuthHash.new(provider: 'facebook', uid: '1111')
@@ -19,7 +19,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal user.id, signed_in_user_id
   end
 
-  test "authorizing with unknown facebook account needs additional information" do
+  test "login: authorizing with unknown facebook account needs additional information" do
     auth = OmniAuth::AuthHash.new(
       uid: '1111',
       provider: 'facebook',
@@ -46,7 +46,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_nil attributes['age']
   end
 
-  test "authorizing with unknown clever teacher account" do
+  test "login: authorizing with unknown clever teacher account" do
     auth = OmniAuth::AuthHash.new(
       uid: '1111',
       provider: 'clever',
@@ -74,7 +74,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_nil user.gender
   end
 
-  test "authorizing with unknown clever district admin account creates teacher" do
+  test "login: authorizing with unknown clever district admin account creates teacher" do
     auth = OmniAuth::AuthHash.new(
       uid: '1111',
       provider: 'clever',
@@ -102,7 +102,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_nil user.gender
   end
 
-  test "authorizing with unknown clever school admin account creates teacher" do
+  test "login: authorizing with unknown clever school admin account creates teacher" do
     auth = OmniAuth::AuthHash.new(
       uid: '1111',
       provider: 'clever',
@@ -130,7 +130,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_nil user.gender
   end
 
-  test "authorizing with unknown clever teacher account needs additional information" do
+  test "login: authorizing with unknown clever teacher account needs additional information" do
     auth = OmniAuth::AuthHash.new(
       uid: '1111',
       provider: 'clever',
@@ -156,7 +156,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_nil attributes['email']
   end
 
-  test "authorizing with unknown clever student account creates student" do
+  test "login: authorizing with unknown clever student account creates student" do
     auth = OmniAuth::AuthHash.new(
       uid: '111133',
       provider: 'clever',
@@ -188,7 +188,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   # before_save action hide_email_and_full_address_for_students, we include this
   # test here as there was concern authentication through clever could be a
   # workflow where we persist student email addresses.
-  test "authorizing with unknown clever student account does not save email" do
+  test "login: authorizing with unknown clever student account does not save email" do
     auth = OmniAuth::AuthHash.new(
       uid: '111133',
       provider: 'clever',
@@ -212,7 +212,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal '', user.email
   end
 
-  test "authorizing with unknown powerschool student account does not save email" do
+  test "login: authorizing with unknown powerschool student account does not save email" do
     auth = OmniAuth::AuthHash.new(
       uid: '12345',
       provider: 'powerschool',
@@ -243,7 +243,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal '', user.email
   end
 
-  test "authorizing with known clever student account does not alter email or hashed email" do
+  test "login: authorizing with known clever student account does not alter email or hashed email" do
     clever_student = create(:student, provider: 'clever', uid: '111133')
     student_hashed_email = clever_student.hashed_email
 
@@ -271,7 +271,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal student_hashed_email, user.hashed_email
   end
 
-  test "adding google classroom permissions redirects to the homepage with a param to open the roster dialog" do
+  test "login: adding google classroom permissions redirects to the homepage with a param to open the roster dialog" do
     user = create(:user, provider: 'google_oauth2', uid: '1111')
 
     @request.env['omniauth.auth'] = OmniAuth::AuthHash.new(provider: user.provider, uid: user.uid)
@@ -285,7 +285,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_redirected_to 'http://test.host/home?open=rosterDialog'
   end
 
-  test "omniauth callback sets token on user when passed with credentials" do
+  test "login: omniauth callback sets token on user when passed with credentials" do
     auth = OmniAuth::AuthHash.new(
       uid: '1111',
       provider: 'facebook',
@@ -314,7 +314,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   # oauth uniqueness checks so they are included here. These have not been working
   # in the past for subtle reasons.
 
-  test "omniauth student is checked for email uniqueness against student" do
+  test "login: omniauth student is checked for email uniqueness against student" do
     email = 'duplicate@email.com'
     create(:user, email: email)
 
@@ -328,7 +328,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
   end
 
-  test "omniauth teacher is checked for email uniqueness against student" do
+  test "login: omniauth teacher is checked for email uniqueness against student" do
     email = 'duplicate@email.com'
     create(:user, email: email)
 
@@ -341,7 +341,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
   end
 
-  test "omniauth student is checked for email uniqueness against teacher" do
+  test "login: omniauth student is checked for email uniqueness against teacher" do
     email = 'duplicate@email.com'
     create(:teacher, email: email)
 
@@ -354,7 +354,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
   end
 
-  test "omniauth teacher is checked for email uniqueness against teacher" do
+  test "login: omniauth teacher is checked for email uniqueness against teacher" do
     email = 'duplicate@email.com'
     create(:teacher, email: email)
 
@@ -367,7 +367,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
   end
 
-  test 'oauth takeover transfers sections to taken over account' do
+  test 'login: oauth takeover transfers sections to taken over account' do
     User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.each do |provider|
       teacher = create :teacher
       section = create :section, user: teacher, login_type: 'clever'
@@ -390,7 +390,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
   end
 
-  test 'login prefers migrated user to legacy user' do
+  test 'login: prefers migrated user to legacy user' do
     legacy_student = create(:student, :unmigrated_google_sso)
     migrated_student = create(:student, :with_google_authentication_option, :multi_auth_migrated)
     migrated_student.primary_authentication_option = migrated_student.authentication_options.first
@@ -428,6 +428,100 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     )
   end
 
+  def setup_should_connect_provider(user, timestamp = Time.now)
+    sign_in user
+    session[:connect_provider] = timestamp
+  end
+
+  test 'connect_provider: returns bad_request if user not migrated' do
+    user = create :user, :unmigrated_facebook_sso
+    Timecop.freeze do
+      setup_should_connect_provider(user)
+      get :google_oauth2
+      assert_response :bad_request
+    end
+  end
+
+  test 'connect_provider: returns bad_request if session[:connect_provider] is expired' do
+    user = create :user, :multi_auth_migrated
+    Timecop.freeze do
+      setup_should_connect_provider(user, 3.minutes.ago)
+      get :google_oauth2
+      assert_response :bad_request
+    end
+  end
+
+  test 'connect_provider: creates new google auth option for signed in user' do
+    user = create :user, :multi_auth_migrated, uid: 'some-uid'
+    auth = OmniAuth::AuthHash.new(
+      uid: user.uid,
+      provider: 'google_oauth2',
+      credentials: {
+        token: '123456',
+        expires_at: 'some-future-time',
+        refresh_token: '654321'
+      },
+      info: {
+        email: 'new@email.com'
+      }
+    )
+
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+
+    Timecop.freeze do
+      setup_should_connect_provider(user, 2.days.from_now)
+      assert_creates(AuthenticationOption) do
+        get :google_oauth2
+      end
+
+      user.reload
+      assert_response :success
+      assert_equal 1, user.authentication_options.count
+      new_auth_option = user.authentication_options.last
+      assert_equal user, new_auth_option.user
+      assert_equal User.hash_email('new@email.com'), new_auth_option.hashed_email
+      assert_equal 'google_oauth2', new_auth_option.credential_type
+      assert_equal user.uid, new_auth_option.authentication_id
+      expected_auth_data = {
+        oauth_token: auth.credentials.token,
+        oauth_token_expiration: auth.credentials.expires_at,
+        oauth_refresh_token: auth.credentials.refresh_token
+      }
+      assert_equal expected_auth_data.to_json, new_auth_option.data
+    end
+  end
+
+  test 'connect_provider: returns unprocessable_entity if AuthenticationOption cannot save' do
+    AuthenticationOption.any_instance.expects(:save).returns(false)
+
+    user = create :user, :multi_auth_migrated, uid: 'some-uid'
+    auth = OmniAuth::AuthHash.new(
+      uid: user.uid,
+      provider: 'google_oauth2',
+      credentials: {
+        token: '123456',
+        expires_at: 'some-future-time',
+        refresh_token: '654321'
+      },
+      info: {
+        email: 'new@email.com'
+      }
+    )
+
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+
+    Timecop.freeze do
+      setup_should_connect_provider(user, 2.days.from_now)
+      assert_does_not_create(AuthenticationOption) do
+        get :google_oauth2
+      end
+
+      assert_response :unprocessable_entity
+    end
+  end
+
   test 'connect: returns bad_request if user not signed in' do
     get :connect, params: {provider: 'google_oauth2'}
     assert_response :bad_request
@@ -451,7 +545,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     user = create :user, :multi_auth_migrated
     sign_in user
 
-    Timecop.freeze(Time.now) do
+    Timecop.freeze do
       get :connect, params: {provider: 'google_oauth2'}
       assert_equal 2.minutes.from_now, session[:connect_provider]
       assert_redirected_to 'http://test.host/users/auth/google_oauth2'
@@ -462,7 +556,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     user = create :user, :multi_auth_migrated
     sign_in user
 
-    Timecop.freeze(Time.now) do
+    Timecop.freeze do
       get :connect, params: {provider: 'facebook'}
       assert_equal 2.minutes.from_now, session[:connect_provider]
       assert_redirected_to 'http://test.host/users/auth/facebook'
@@ -473,7 +567,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     user = create :user, :multi_auth_migrated
     sign_in user
 
-    Timecop.freeze(Time.now) do
+    Timecop.freeze do
       get :connect, params: {provider: 'windowslive'}
       assert_equal 2.minutes.from_now, session[:connect_provider]
       assert_redirected_to 'http://test.host/users/auth/windowslive'
@@ -484,7 +578,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     user = create :user, :multi_auth_migrated
     sign_in user
 
-    Timecop.freeze(Time.now) do
+    Timecop.freeze do
       get :connect, params: {provider: 'clever'}
       assert_equal 2.minutes.from_now, session[:connect_provider]
       assert_redirected_to 'http://test.host/users/auth/clever'
@@ -495,7 +589,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     user = create :user, :multi_auth_migrated
     sign_in user
 
-    Timecop.freeze(Time.now) do
+    Timecop.freeze do
       get :connect, params: {provider: 'powerschool'}
       assert_equal 2.minutes.from_now, session[:connect_provider]
       assert_redirected_to 'http://test.host/users/auth/powerschool'
