@@ -22,7 +22,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   # Call GET /users/auth/:provider/connect and the callback will trigger this code path
   def connect_provider
-    return head(:bad_request) unless can_connect_provider? # TODO: (madelynkasula) better error here?
+    return head(:bad_request) unless can_connect_provider?
 
     auth_hash = request.env['omniauth.auth']
     provider = auth_hash.provider.to_s
