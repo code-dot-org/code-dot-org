@@ -89,8 +89,8 @@ Scenario: Applab Flow
 
   # TODO - maybe we do a remix and/or create new as well
 
-@no_mobile
-Scenario: Save Project After Signing Out
+  @no_mobile
+  Scenario: Save Project After Signing Out
   Given I create a student named "Sally Student"
   And I am on "http://studio.code.org/projects/applab/new"
   And I get redirected to "/projects/applab/([^\/]*?)/edit" via "dashboard"
