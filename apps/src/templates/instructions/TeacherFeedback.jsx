@@ -4,7 +4,7 @@ import color from "../../util/color";
 import i18n from '@cdo/locale';
 import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 import Button from '@cdo/apps/templates/Button';
-import moment from 'moment';
+import FeedbacksList from './FeedbacksList';
 
 const styles = {
   container: {
@@ -33,12 +33,6 @@ const styles = {
   button: {
     margin: 10,
     fontWeight: 'bold'
-  },
-  feedbackHeader: {
-    fontWeight: 'bold'
-  },
-  latestFeedback: {
-    marginLeft: 10
   }
 };
 
@@ -57,23 +51,23 @@ class TeacherFeedback extends Component {
     super(props);
     const search = window.location.search;
     const studentId = search.split('&')[1].split("=")[1];
-    var response = "";
-    var date;
-      $.ajax({
-        url: '/api/v1/teacher_feedbacks/get_feedback_from_teacher?student_id='+studentId+'&level_id='+this.props.serverLevelId+'&teacher_id='+this.props.teacher,
-        method: 'GET',
-        contentType: 'application/json;charset=UTF-8',
-      }).done(data => {
-        response = data.comment;
-        date = moment(data.created_at).fromNow();
-      });
+
     this.state = {
       comment: "",
       studentId: studentId,
-      latestFeedback: response,
-      daysSinceFeedback: date,
+      latestFeedback: [],
     };
   }
+
+  componentDidMount = () => {
+    $.ajax({
+      url: '/api/v1/teacher_feedbacks/get_feedback_from_teacher?student_id='+this.state.studentId+'&level_id='+this.props.serverLevelId+'&teacher_id='+this.props.teacher,
+      method: 'GET',
+      contentType: 'application/json;charset=UTF-8',
+    }).done(data => {
+      this.setState({latestFeedback: [data]});
+    });
+  };
 
   onCommentChange = (event) => {
     this.setState({comment: event.target.value});
@@ -94,8 +88,7 @@ class TeacherFeedback extends Component {
       dataType: 'json',
       data: JSON.stringify({teacher_feedback: payload})
     }).done(data => {
-      this.setState({latestFeedback: payload.comment});
-      this.setState({daysSinceFeedback: moment(data.created_at).fromNow()});
+      this.setState({latestFeedback: [data]});
     }).fail((jqXhr, status) => {
       console.log(status + "  " + jqXhr.responseJSON);
     });
@@ -117,15 +110,10 @@ class TeacherFeedback extends Component {
         }
         {this.props.withUnreleasedFeatures &&
           <div>
-            {this.state.latestFeedback &&
-              <div style={styles.content}>
-                <div style={styles.feedbackHeader}>
-                  {i18n.from({relativeTime: this.state.daysSinceFeedback})}
-                </div>
-                <div style={styles.latestFeedback}>
-                  {this.state.latestFeedback}
-                </div>
-              </div>
+            {this.state.latestFeedback.length > 0 &&
+              <FeedbacksList
+                feedbacks={this.state.latestFeedback}
+              />
             }
             <input style={styles.textInput} onChange={this.onCommentChange} type="text" placeholder={this.state.comment}></input>
             <Button
