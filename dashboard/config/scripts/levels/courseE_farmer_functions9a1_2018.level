@@ -41,8 +41,8 @@
     "name_suffix": "_2018",
     "parent_level_id": 12979,
     "show_type_hints": "false",
-    "contained_level_names": null,
-    "include_shared_functions": "false"
+    "include_shared_functions": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
