@@ -634,7 +634,8 @@ describe('entry tests', () => {
       host: '0.0.0.0',
       watchOptions: {
         aggregateTimeout: 1000,
-        poll: 1000
+        poll: 1000,
+        ignored: /^node_modules\/[^@].*/
       },
     }
   };

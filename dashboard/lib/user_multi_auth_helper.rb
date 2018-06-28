@@ -38,4 +38,36 @@ module UserMultiAuthHelper
     self.provider = 'migrated'
     save
   end
+
+  def clear_single_auth_fields
+    raise "Single auth fields may not be cleared on an unmigrated user" unless migrated?
+    self.email = ''
+    self.hashed_email = nil
+    self.uid = nil
+    self.oauth_token = nil
+    self.oauth_token_expiration = nil
+    self.oauth_refresh_token = nil
+    save
+  end
+
+  #
+  # Currently assumes the user was previously migrated using migrate_to_multi_auth.
+  #
+  def demigrate_from_multi_auth
+    return true unless migrated?
+
+    credential_type = primary_authentication_option&.credential_type
+    self.provider =
+      if AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include? credential_type
+        credential_type
+      elsif sponsored?
+        User::PROVIDER_SPONSORED
+      elsif hashed_email.present? || parent_email.present?
+        nil
+      else
+        User::PROVIDER_MANUAL
+      end
+    authentication_options.delete_all
+    save
+  end
 end
