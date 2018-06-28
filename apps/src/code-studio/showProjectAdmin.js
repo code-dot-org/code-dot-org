@@ -82,17 +82,17 @@ export default () => {
     }
   }
 
-  $('#block-auto-moderation').click(function () {
-    alert("You clicked the block auto moderation button. It doesn't do anything yet because our moderation filter is turned off, but it will be functional soon. Thanks for your patience with this work-in-progress button!");
-    $('#block-auto-moderation').hide();
+  $('#disable-auto-moderation').click(function () {
+    alert("You clicked the disable automated image moderation button. It doesn't do anything yet because our moderation filter is turned off, but it will be functional soon. Thanks for your patience with this work-in-progress button!");
+    $('#disable-auto-moderation').hide();
     $('#moderation-explanation').hide();
-    $('#unblock-auto-moderation').show();
+    $('#enable-auto-moderation').show();
   });
 
-  $('#unblock-auto-moderation').click(function () {
-    alert("You clicked the unblock auto moderation button. It doesn't do anything yet because our moderation filter is turned off, but it will be functional soon. Thanks for your patience with this work-in-progress button!");
-    $('#block-auto-moderation').show();
+  $('#enable-auto-moderation').click(function () {
+    alert("You clicked the enable automated image moderation button. It doesn't do anything yet because our moderation filter is turned off, but it will be functional soon. Thanks for your patience with this work-in-progress button!");
+    $('#disable-auto-moderation').show();
     $('#moderation-explanation').show();
-    $('#unblock-auto-moderation').hide();
+    $('#enable-auto-moderation').hide();
   });
 };
