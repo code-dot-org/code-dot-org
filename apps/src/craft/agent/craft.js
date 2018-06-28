@@ -8,10 +8,12 @@ import { tryGetLocalStorage, trySetLocalStorage } from '../../utils';
 import { singleton as studioApp } from '../../StudioApp';
 import craftMsg from './locale';
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-import GameController from '@code-dot-org/craft/src/js/game/GameController';
-import FacingDirection from '@code-dot-org/craft/src/js/game/LevelMVC/FacingDirection';
-import EventType from '@code-dot-org/craft/src/js/game/Event/EventType';
-import { convertActionPlaneEntitiesToConfig } from '@code-dot-org/craft/src/js/game/LevelMVC/Utils';
+import {
+  GameController,
+  FacingDirection,
+  EventType,
+  utils as CraftUtils,
+} from '@code-dot-org/craft';
 import dom from '../../dom';
 import MusicController from '../../MusicController';
 import { Provider } from 'react-redux';
@@ -470,7 +472,7 @@ export default class Craft {
   }
 
   static initializeAppLevel(levelConfig) {
-    convertActionPlaneEntitiesToConfig(levelConfig);
+    CraftUtils.convertActionPlaneEntitiesToConfig(levelConfig);
 
     const fluffPlane = [];
     // TODO(bjordan): remove configuration requirement in visualization
