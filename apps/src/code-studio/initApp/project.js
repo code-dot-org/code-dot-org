@@ -69,6 +69,7 @@ var PathPart = {
  */
 var current;
 var currentSourceVersionId;
+let replaceCurrentSourceVersion = false;
 // String representing server timestamp at which the first project version was
 // saved from this browser tab, to uniquely identify the browser tab for
 // logging purposes.
@@ -786,7 +787,7 @@ var projects = module.exports = {
 
     if (forceNewVersion) {
       lastNewSourceVersionTime = Date.now();
-      currentSourceVersionId = null;
+      replaceCurrentSourceVersion = false;
     }
 
     var channelId = current.id;
@@ -806,7 +807,8 @@ var projects = module.exports = {
     if (this.useSourcesApi()) {
       let params = '';
       if (currentSourceVersionId) {
-        params = `?version=${currentSourceVersionId}` +
+        params = `?currentVersion=${currentSourceVersionId}` +
+          `&replace=${!!replaceCurrentSourceVersion}` +
           `&firstSaveTimestamp=${encodeURIComponent(firstSaveTimestamp)}` +
           `&tabId=${utils.getTabId()}`;
       }
@@ -830,6 +832,7 @@ var projects = module.exports = {
           firstSaveTimestamp = response.timestamp;
         }
         currentSourceVersionId = response.versionId;
+        replaceCurrentSourceVersion = true;
         current.migratedToS3 = true;
 
         this.updateChannels_(callback);
