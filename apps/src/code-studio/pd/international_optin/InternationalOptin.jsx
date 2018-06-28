@@ -10,6 +10,7 @@ import {
   ControlLabel,
   FormGroup
 } from 'react-bootstrap';
+import i18n from '@cdo/locale';
 
 export default class InternationalOptin extends FormController {
   static propTypes = {
@@ -29,7 +30,7 @@ export default class InternationalOptin extends FormController {
    */
   serializeFormData() {
     const formData = super.serializeFormData();
-    //Object.assign(formData['form_data'], this.getDistrictData());
+    formData.form_data.email = this.props.accountEmail;
 
     return formData;
   }
@@ -217,14 +218,16 @@ class InternationalOptinComponent extends FormComponent {
           this.buildSelectFieldGroupFromOptions({
             name: 'workshopFacilitator',
             label: labels.workshopFacilitator,
-            required: true
+            required: true,
+            placeholder: i18n.selectAnOption()
           })
         }
         {
           this.buildSelectFieldGroupFromOptions({
             name: 'workshopCourse',
             label: labels.workshopCourse,
-            required: true
+            required: true,
+            placeholder: i18n.selectAnOption()
           })
         }
         {
@@ -232,7 +235,8 @@ class InternationalOptinComponent extends FormComponent {
             name: 'optIn',
             label: labels.optIn,
             type: 'radio',
-            required: true
+            required: true,
+            placeholder: i18n.selectAnOption()
           })
         }
       </FormGroup>
@@ -241,7 +245,7 @@ class InternationalOptinComponent extends FormComponent {
 }
 
 InternationalOptinComponent.associatedFields = [
-  'firstName', 'firstNamePreferred', 'lastName', 'emailAlternate', 'gender',
+  'firstName', 'firstNamePreferred', 'lastName', 'email', 'emailAlternate', 'gender',
   'schoolName', 'schoolCity', 'schoolCountry', 'ages', 'subjects', 'resources',
   'robotics', 'workshopOrganizer', 'workshopFacilitator', 'workshopCourse',
   'optIn'

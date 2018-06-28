@@ -48,6 +48,7 @@ class Ability
       Pd::Application::ApplicationBase,
       Pd::Application::Facilitator1819Application,
       Pd::Application::Teacher1819Application,
+      Pd::InternationalOptin,
       :maker_discount
     ]
 
@@ -92,6 +93,7 @@ class Ability
         can [:new, :create, :read], Pd::WorkshopMaterialOrder, user_id: user.id
         can [:new, :create, :read], Pd::Application::Facilitator1819Application, user_id: user.id
         can [:new, :create, :read], Pd::Application::Teacher1819Application, user_id: user.id
+        can :create, Pd::InternationalOptin, user_id: user.id
         can :manage, :maker_discount
       end
 

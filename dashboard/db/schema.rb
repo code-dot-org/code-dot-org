@@ -673,8 +673,8 @@ ActiveRecord::Schema.define(version: 20180622230430) do
   end
 
   create_table "pd_international_optins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "user_id"
-    t.text     "form_data",  limit: 65535
+    t.integer  "user_id",                  null: false
+    t.text     "form_data",  limit: 65535, null: false
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
     t.index ["user_id"], name: "index_pd_international_optins_on_user_id", using: :btree
