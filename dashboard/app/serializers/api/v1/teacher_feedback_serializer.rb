@@ -17,5 +17,11 @@
 #
 
 class Api::V1::TeacherFeedbackSerializer < ActiveModel::Serializer
-  attributes :id, :teacher_id, :student_id, :level_id, :comment, :created_at
+  attributes :id, :teacher_name, :student_id, :level_id, :comment, :created_at
+
+  private
+
+  def teacher_name
+    object.teacher.name
+  end
 end

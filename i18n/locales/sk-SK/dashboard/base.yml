@@ -272,9 +272,9 @@ sk:
       courses: "Kurzy"
       course_catalog: "Katalóg kurzov"
       project_gallery: "Projekty"
-      sections: "Sections"
+      sections: "Sekcie"
       help_support: "Pomoc a podpora"
-      report_bug: "Report bug"
+      report_bug: "Nahláste chybu"
       teacher_community: "Komunita školiteľov"
       professional_learning: "Vzdelávanie pre profesionálov"
       documentation: "Dokumentácia"
@@ -360,7 +360,7 @@ sk:
     email_confirm_needed_required: 'Vaša e-mailová adresa %{email} nebola potvrdená:'
     email_confirm_wrong_email: '(Zlá e-mailová adresa?)'
     email_resend_confirm: 'Poslať potvrdzovacie inštrukcie znova'
-    new_email_hint: '(make sure you can receive emails to this email address)'
+    new_email_hint: '(uistite sa, že môžete prijímať emaily na túto adresu)'
     new_password_hint: "(nechajte prázdne, ak to nechcete zmeniť)"
     current_password_hint: '(potrebujeme Vaše aktuálne heslo na potvrdenie týchto zmien)'
     delete: 'Zmazať svoj účet'
@@ -377,7 +377,7 @@ sk:
     create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
     create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
     create_personal_login_email_note: "Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href='%{privacy_policy_url}', target='_blank'>privacy policy</a> for more information."
-    enter_new_login_info: 'Enter your new login information'
+    enter_new_login_info: 'Zadajte Vaše nové prihlasovacie informácie'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
     update: "Aktualizujte konto"
@@ -607,7 +607,7 @@ sk:
       body: "Naprogramuj zvieratá a iné postavy a vytvor svoju vlastnú verziu hry Minecraft."
     hero:
       title: "Minecraft"
-      body: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
+      body: "Minecraft je naspäť v Hodine Kódu so zbrusu novou aktivitou! Prejdite sa po Minecrafte s kódom."
     sports:
       title: "Sports"
       body: "Make a basketball game or mix and match across sports."
