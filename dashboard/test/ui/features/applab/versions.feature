@@ -144,3 +144,51 @@ Scenario: Project page refreshes when other client adds a newer version
   And I click selector "#runButton" to load a new page
   And I wait for the page to fully load
   Then ace editor code is equal to "// comment Y// comment X"
+
+Scenario: Project page refreshes when other client replaces current version
+  Given I am on "http://studio.code.org/projects/applab/new"
+  And I get redirected to "/projects/applab/([^\/]*?)/edit" via "dashboard"
+  And I rotate to landscape
+  And I wait for the page to fully load
+  And element ".project_updated_at" eventually contains text "Saved"
+  And I ensure droplet is in block mode
+  And I switch to text mode
+
+  # Browser tab 0 writes version Alpha
+
+  When I add code "// Alpha" to ace editor
+  And I press "runButton"
+  And element ".project_updated_at" eventually contains text "Saved"
+  And I click selector "#resetButton"
+
+  # Browser tab 1 loads version Alpha
+
+  When I open a new tab
+  And I go to the newly opened tab
+  And I am on "http://studio.code.org/projects/applab/"
+  And I get redirected to "/projects/applab/([^\/]*?)/edit" via "dashboard"
+  And I wait for the page to fully load
+  And element ".project_updated_at" eventually contains text "Saved"
+  And ace editor code is equal to "// Alpha"
+
+  # Browser tab 0 writes version Bravo.
+
+  When I switch to tab index 0
+  And ace editor code is equal to "// Alpha"
+  And I add code "// Bravo" to ace editor
+  And ace editor code is equal to "// Alpha// Bravo"
+  And I click selector "#runButton"
+  And element ".project_updated_at" eventually contains text "Saved"
+  And I reload the project page
+  # Make sure the change stuck
+  And ace editor code is equal to "// Alpha// Bravo"
+
+  # Browser tab 1 tries to write version Charlie, which fails because
+  # tab 0 has already replaced the latest version known to tab 1.
+
+  When I switch to tab index 1
+  And ace editor code is equal to "// Alpha"
+  And I add code "// Charlie" to ace editor
+  And I click selector "#runButton" to load a new page
+  And I wait for the page to fully load
+  Then ace editor code is equal to "// Alpha// Bravo"
