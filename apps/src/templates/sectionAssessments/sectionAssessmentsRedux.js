@@ -516,6 +516,10 @@ export const getExportableData = (state) => {
   }
 };
 
+/**
+ * @returns {array} of objects with keys corresponding to columns
+ * of CSV to download. Columns are stage, questionNumber, questionText, answer, numberAnswered.
+ */
 export const getExportableSurveyData = (state) => {
   const currentAssessmentId = state.sectionAssessments.assessmentId;
   const surveys = state.sectionAssessments.surveysByScript[state.scriptSelection.scriptId] || {};
@@ -552,6 +556,10 @@ export const getExportableSurveyData = (state) => {
   return responses;
 };
 
+/**
+ * @returns {array} of objects with keys corresponding to columns
+ * of CSV to download. Columns are studentName, stage, timestamp, question, response, and correct.
+ */
 export const getExportableAssessmentData = (state) => {
   let responses = [];
   const currentAssessmentId = state.sectionAssessments.assessmentId;
