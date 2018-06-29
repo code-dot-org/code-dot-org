@@ -31,6 +31,13 @@ const CSV_ASSESSMENT_HEADERS = [
   {label: i18n.correct(), key: 'correct'},
 ];
 
+const CSV_SURVEY_HEADERS = [
+  {label: i18n.stage(), key: 'stage'},
+  {label: i18n.puzzle(), key: 'puzzle'},
+  {label: i18n.question(), key: 'question'},
+  {label: i18n.response(), key: 'response'},
+];
+
 const styles = {
   header: {
     marginBottom: 0
@@ -122,6 +129,13 @@ class SectionAssessments extends Component {
               <div>
                 {totalStudentSubmissions > 0 &&
                   <div>
+                    <CSVLink
+                      filename="surveys.csv"
+                      data={exportableData}
+                      headers={CSV_SURVEY_HEADERS}
+                    >
+                      <div>{i18n.downloadAssessmentCSV()}</div>
+                    </CSVLink>
                     <MCSurveyOverviewContainer />
                     <FreeResponseBySurveyQuestionContainer />
                   </div>
