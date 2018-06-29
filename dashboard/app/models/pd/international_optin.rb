@@ -45,9 +45,9 @@ class Pd::InternationalOptin < ApplicationRecord
       gender: %w(male female non_binary not_listed none),
       schoolCountry: %w(canada chile israel malaysia mexico thailand),
       ages: %w(ages_under_6 ages_7_8 ages_9_10 ages_11_12 ages_13_14 ages_15_16 ages_17_18 ages_19_over),
-      subjects: %w(cs ict math science history la efl music art),
-      resources: %w(bootstrap codecademy csfirst khan kodable lightbot scratch tynker),
-      robotics: %w(grok kodable lego microbit ozobot sphero raspberry wonder),
+      subjects: %w(cs ict math science history la efl music art other),
+      resources: %w(bootstrap codecademy csfirst khan kodable lightbot scratch tynker other),
+      robotics: %w(grok kodable lego microbit ozobot sphero raspberry wonder other),
       workshopCourse: %w(csf_af csf_express),
       optIn: %w(opt_in_yes opt_in_no)
     }

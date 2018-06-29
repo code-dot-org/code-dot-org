@@ -31,7 +31,6 @@ export default class InternationalOptin extends FormController {
   serializeFormData() {
     const formData = super.serializeFormData();
     formData.form_data.email = this.props.accountEmail;
-
     return formData;
   }
 
@@ -73,6 +72,18 @@ class InternationalOptinComponent extends FormComponent {
     const date = (this.props.data && this.props.data.date) ?
       moment(this.props.data.date, DATE_FORMAT) : moment();
     // todo: add validation
+
+    let textFieldMapSubjects = {};
+    const lastSubjectsKey = this.props.options.subjects.slice(-1)[0];
+    textFieldMapSubjects[lastSubjectsKey] = "other";
+
+    let textFieldMapResources = {};
+    const lastResourcesKey = this.props.options.resources.slice(-1)[0];
+    textFieldMapResources[lastResourcesKey] = "other";
+
+    let textFieldMapRobotics = {};
+    const lastRoboticsKey = this.props.options.robotics.slice(-1)[0];
+    textFieldMapRobotics[lastRoboticsKey] = "other";
 
     return (
       <FormGroup>
@@ -157,32 +168,33 @@ class InternationalOptinComponent extends FormComponent {
           })
         }
         {
-          this.buildButtonsFromOptions({
+          this.buildButtonsWithAdditionalTextFieldsFromOptions({
             name: 'subjects',
             label: labels.subjects,
             type: 'check',
             required: true,
-            includeOther: true
+            textFieldMap: textFieldMapSubjects
           })
         }
         {
-          this.buildButtonsFromOptions({
+          this.buildButtonsWithAdditionalTextFieldsFromOptions({
             name: 'resources',
             label: labels.resources,
             type: 'check',
             required: false,
-            includeOther: true
+            textFieldMap: textFieldMapResources
           })
         }
         {
-          this.buildButtonsFromOptions({
+          this.buildButtonsWithAdditionalTextFieldsFromOptions({
             name: 'robotics',
             label: labels.robotics,
             type: 'check',
             required: false,
-            includeOther: true
+            textFieldMap: textFieldMapRobotics
           })
         }
+
         <FormGroup
           id="date"
           controlId="date"
@@ -211,7 +223,8 @@ class InternationalOptinComponent extends FormComponent {
           this.buildSelectFieldGroupFromOptions({
             name: 'workshopOrganizer',
             label: labels.workshopOrganizer,
-            required: true
+            required: true,
+            placeholder: i18n.selectAnOption()
           })
         }
         {
