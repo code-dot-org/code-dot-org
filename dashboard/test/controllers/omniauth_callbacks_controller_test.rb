@@ -483,7 +483,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     )
 
     @request.env['omniauth.auth'] = auth
-    @request.env['omniauth.params'] = {}
 
     Timecop.freeze do
       setup_should_connect_provider(user, 2.days.from_now)
@@ -512,7 +511,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     )
 
     @request.env['omniauth.auth'] = auth
-    @request.env['omniauth.params'] = {}
 
     Timecop.freeze do
       setup_should_connect_provider(user, 2.days.from_now)
@@ -541,7 +539,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     )
 
     @request.env['omniauth.auth'] = auth
-    @request.env['omniauth.params'] = {}
 
     Timecop.freeze do
       setup_should_connect_provider(user, 2.days.from_now)
@@ -570,7 +567,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     )
 
     @request.env['omniauth.auth'] = auth
-    @request.env['omniauth.params'] = {}
 
     Timecop.freeze do
       setup_should_connect_provider(user, 2.days.from_now)
@@ -599,7 +595,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     )
 
     @request.env['omniauth.auth'] = auth
-    @request.env['omniauth.params'] = {}
 
     Timecop.freeze do
       setup_should_connect_provider(user, 2.days.from_now)
@@ -631,7 +626,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     )
 
     @request.env['omniauth.auth'] = auth
-    @request.env['omniauth.params'] = {}
 
     Timecop.freeze do
       setup_should_connect_provider(user, 2.days.from_now)
