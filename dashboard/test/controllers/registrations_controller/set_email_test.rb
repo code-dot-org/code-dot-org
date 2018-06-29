@@ -225,6 +225,25 @@ module RegistrationsControllerTests
       refute EmailPreference.find_by_email(new_email)
     end
 
+    test "cannot set an email that is already taken" do
+      taken_email = 'taken@example.org'
+      password = 'password'
+      create :student, email: taken_email
+      teacher = create :teacher, password: password
+
+      sign_in teacher
+      patch '/users/email', params: {
+        user: {
+          email: taken_email,
+          current_password: password
+        }
+      }
+
+      assert_response :unprocessable_entity
+      assert_includes assigns(:user).errors.full_messages, 'Email has already been taken'
+      assert_equal response.body, {email: ['Email has already been taken']}.to_json
+    end
+
     private def can_edit_password_with_password(user, current_password)
       new_password = 'newpassword'
 
