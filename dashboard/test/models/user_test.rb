@@ -2109,9 +2109,8 @@ class UserTest < ActiveSupport::TestCase
     refute @teacher.authorized_teacher?
 
     # you have to be in a cohort
-    c = create :cohort
-    c.teachers << (real_teacher = create(:teacher))
-    c.save!
+    real_teacher = create(:teacher)
+    real_teacher.permission = UserPermission::AUTHORIZED_TEACHER
     assert real_teacher.teacher?
     assert real_teacher.authorized_teacher?
 
