@@ -25,11 +25,11 @@ export class VisualizationOverlay extends React.Component {
     mouseX: -1,
     /** @type {number} */
     mouseY: -1,
-    /** @type {SVGMatrix} */
-    screenSpaceToAppSpaceTransform: null
   };
 
   componentDidMount() {
+    /** @type {SVGMatrix} */
+    this.screenSpaceToAppSpaceTransform = null;
     /** @private {SVGPoint} Build a reusable position point for efficient transforms */
     this.mousePos_ = this.refs.root.createSVGPoint();
     this.recalculateTransform();
@@ -61,21 +61,20 @@ export class VisualizationOverlay extends React.Component {
       return;
     }
 
-    const screenSpaceToAppSpaceTransform = svg.createSVGMatrix()
+    this.screenSpaceToAppSpaceTransform = svg.createSVGMatrix()
         .scale(this.props.width / clientRect.width)
         .translate(-clientRect.left, -clientRect.top);
-    this.setState({ screenSpaceToAppSpaceTransform });
   };
 
   onMouseMove = (event) => {
-    if (!this.state.screenSpaceToAppSpaceTransform) {
+    if (!this.screenSpaceToAppSpaceTransform) {
       return;
     }
 
     this.mousePos_.x = event.clientX;
     this.mousePos_.y = event.clientY;
     this.mousePos_ = this.mousePos_.matrixTransform(
-        this.state.screenSpaceToAppSpaceTransform);
+        this.screenSpaceToAppSpaceTransform);
     this.setState({
       mouseX: this.mousePos_.x,
       mouseY: this.mousePos_.y
