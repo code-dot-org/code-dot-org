@@ -354,6 +354,7 @@
   "done": "Done",
   "dontForget": "Don't forget",
   "downloadCSV": "Download CSV",
+  "downloadAssessmentCSV": "Download CSV of student responses",
   "dragBlocksToMatch": "Drag the blocks to match",
   "dropletBlock_addOperator_description": "Add two numbers",
   "dropletBlock_addOperator_signatureOverride": "Add operator",

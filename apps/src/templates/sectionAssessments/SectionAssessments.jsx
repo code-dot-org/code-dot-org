@@ -19,10 +19,23 @@ import FreeResponseBySurveyQuestionContainer from './FreeResponseBySurveyQuestio
 import MCSurveyOverviewContainer from './MCSurveyOverviewContainer';
 import AssessmentSelector from './AssessmentSelector';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {CSVLink} from 'react-csv';
+
+const CSV_ASSESSMENT_HEADERS = [
+  {label: i18n.name(), key: 'studentName'},
+  {label: i18n.stage(), key: 'stage'},
+  {label: i18n.puzzle(), key: 'puzzle'},
+  {label: i18n.question(), key: 'question'},
+  {label: i18n.response(), key: 'response'},
+  {label: i18n.correct(), key: 'correct'},
+];
 
 const styles = {
   header: {
     marginBottom: 0
+  },
+  tableContent: {
+    marginTop: 10
   },
 };
 
@@ -78,12 +91,19 @@ class SectionAssessments extends Component {
           }
         </div>
         {!isLoading &&
-          <div>
+          <div style={styles.tableContent}>
             {/* Assessments */}
             {!isCurrentAssessmentSurvey &&
               <div>
                 {totalStudentSubmissions > 0 &&
                   <div>
+                    <CSVLink
+                      filename="assessments.csv"
+                      data={[]}
+                      headers={CSV_ASSESSMENT_HEADERS}
+                    >
+                      <div>{i18n.downloadAssessmentCSV()}</div>
+                    </CSVLink>
                     <MCAssessmentsOverviewContainer />
                     <StudentsMCSummaryContainer />
                     <MultipleChoiceByStudentContainer />
