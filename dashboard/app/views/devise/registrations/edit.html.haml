@@ -209,7 +209,8 @@
       userAge: current_user.age,
       userType: current_user.user_type,
       isOauth: current_user.oauth?,
-      isPasswordRequired: current_user.encrypted_password.present?
+      isPasswordRequired: current_user.encrypted_password.present?,
+      authenticationOptions: current_user.authentication_options,
     }.to_json
   }
 %script{src: minifiable_asset_path('js/devise/registrations/edit.js'), data: script_data}
