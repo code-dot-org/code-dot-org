@@ -48,13 +48,34 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-06-27 16:56:41 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"show_type_hints\",\"include_shared_functions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-06-28 18:33:37 +0000\",\"changed\":[],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-06-28 18:33:44 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-06-28 18:44:29 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-06-27 16:56:41 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"show_type_hints\",\"include_shared_functions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-06-28 18:33:37 +0000\",\"changed\":[],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-06-28 18:33:44 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-06-28 18:44:29 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-06-28 23:53:19 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-06-29 15:27:24 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
+        <block type="behavior_definition" editable="false" usercreated="true">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>Bounce off carl the crab. </description>
+          </mutation>
+          <title name="NAME">bounce off crab</title>
+          <statement name="STACK">
+            <block type="gamelab_bounceOff" inline="true">
+              <value name="THIS">
+                <block type="sprite_parameter_get">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="TARGET">
+                <block type="sprite_variables_get">
+                  <title name="VAR">carl</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
         <block type="behavior_definition" editable="false" usercreated="true">
           <mutation>
             <arg name="this sprite" type="Sprite"/>
@@ -350,7 +371,6 @@
             </block>
           </next>
         </block>
-        <block type="gamelab_whenTouching" inline="true"/>
         <block type="gamelab_whenTouching" inline="true">
           <value name="SPRITE1">
             <block type="sprite_variables_get">
@@ -422,6 +442,20 @@
                               <title name="VAR">y</title>
                             </block>
                           </value>
+                          <next>
+                            <block type="gamelab_addBehaviorSimple" inline="true">
+                              <value name="SPRITE">
+                                <block type="sprite_variables_get">
+                                  <title name="VAR">ball</title>
+                                </block>
+                              </value>
+                              <value name="BEHAVIOR">
+                                <block type="gamelab_behavior_get">
+                                  <title name="VAR">bounce off crab</title>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
                         </block>
                       </next>
                     </block>

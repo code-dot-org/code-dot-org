@@ -1,0 +1,14 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "bounceOff",
+    "blockText": "{THIS} bounces off {TARGET}",
+    "args": [
+      {
+        "name": "TARGET",
+        "type": "Sprite"
+      }
+    ],
+    "methodCall": true
+  }
+}
