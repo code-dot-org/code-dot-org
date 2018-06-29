@@ -132,7 +132,8 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
         email: original_email,
         hashed_email: original_hashed_email,
         data: nil
-      }
+      },
+      authentication_options: :not_empty
   end
 
   #
@@ -294,7 +295,8 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
         authentication_id: initial_authentication_id,
         email: expected_email,
         hashed_email: expected_hashed_email
-      }
+      },
+      authentication_options: :not_empty
   end
 
   test 'clear_single_auth_fields throws on unmigrated user' do
@@ -578,8 +580,8 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   def migrate(user)
     refute user.migrated?
     result = user.migrate_to_multi_auth
+    assert result, "Expected migration to multi-auth to succeed, but it failed with: #{user.errors.full_messages}"
     user.reload
-    assert result, 'Expected migration to multi-auth to succeed, but it failed'
     assert user.migrated?
   end
 
@@ -591,14 +593,13 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
 
     refute user.migrated?
     migration_result = user.migrate_to_multi_auth
+    assert migration_result, "Expected migration to multi-auth to succeed, but it failed with: #{user.errors.full_messages}"
     clear_result = user.clear_single_auth_fields
+    assert clear_result, "Expected clear from multi-auth to succeed, but it failed with: #{user.errors.full_messages}"
     demigration_result = user.demigrate_from_multi_auth
+    assert demigration_result, "Expected demigration from multi-auth to succeed, but it failed with: #{user.errors.full_messages}"
     user.reload
-    assert migration_result
-    assert clear_result
-    assert demigration_result
     refute user.migrated?
-
     yield user
   end
 end

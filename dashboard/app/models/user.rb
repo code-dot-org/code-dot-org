@@ -232,6 +232,17 @@ class User < ActiveRecord::Base
       end
     end
   end
+  validate if: :migrated? do
+    if primary_contact_info.nil?
+      unless authentication_options.empty?
+        errors.add(:primary_contact_info, "should be set when user has AuthenticationOptions")
+      end
+    else
+      unless authentication_options.include? primary_contact_info
+        errors.add(:primary_contact_info, "is not one of user's AuthenticationOptions")
+      end
+    end
+  end
 
   #
   # TEMPORARY: Remove these aliases
@@ -825,7 +836,8 @@ class User < ActiveRecord::Base
     params[:email] = email unless email.nil?
     params[:hashed_email] = hashed_email if email.nil?
     self.primary_contact_info = AuthenticationOption.new(params)
-    return save
+    authentication_options << primary_contact_info
+    save
   end
 
   # True if the account is teacher-managed and has any sections that use word logins.
