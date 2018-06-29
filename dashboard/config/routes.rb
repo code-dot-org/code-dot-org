@@ -143,6 +143,7 @@ Dashboard::Application.routes.draw do
     patch '/users/user_type', to: 'registrations#set_user_type'
     get '/users/clever_takeover', to: 'sessions#clever_takeover'
     get '/users/clever_modal_dismissed', to: 'sessions#clever_modal_dismissed'
+    get '/users/auth/:provider/connect', to: 'omniauth_callbacks#connect'
   end
   devise_for :users, controllers: {
     omniauth_callbacks: 'omniauth_callbacks',
