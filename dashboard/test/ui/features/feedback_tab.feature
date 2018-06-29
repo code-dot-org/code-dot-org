@@ -32,12 +32,13 @@ Scenario: With stable flag, 'Feedback' tab is not visible for students and displ
   #As teacher, all flags off, tab not visible
   And element ".uitest-feedback" is not visible
 
-Scenario: With dev flag, as student, 'Feedback' tab is visible and displays temporary text
+Scenario: With dev flag, as student, 'Feedback' tab is not visible if no feedback
   #As student, see temporary text
   And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/7?enableExperiments=devCommentBoxTab"
-  And I click selector ".uitest-feedback" once I see it
-  And I wait until ".editor-column" contains text "Feedback from Temp"
+  And element ".uitest-feedback" is not visible
   And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/7?disableExperiments=devCommentBoxTab"
+
+#TODO - epeach - With dev flag, tests for student when feedback available
 
 Scenario: With dev flag, as teacher,tab is invisible when not reviewing student work and visible when viewing student work
   #As teacher, not reviewing work, don't see feedback tab

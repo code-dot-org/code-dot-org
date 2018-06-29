@@ -81,4 +81,18 @@ export default () => {
       $('.admin-report-abuse').show();
     }
   }
+
+  $('#disable-auto-moderation').click(function () {
+    alert("You clicked the disable automated image moderation button. It doesn't do anything yet because our moderation filter is turned off, but it will be functional soon. Thanks for your patience with this work-in-progress button!");
+    $('#disable-auto-moderation').hide();
+    $('#moderation-explanation').hide();
+    $('#enable-auto-moderation').show();
+  });
+
+  $('#enable-auto-moderation').click(function () {
+    alert("You clicked the enable automated image moderation button. It doesn't do anything yet because our moderation filter is turned off, but it will be functional soon. Thanks for your patience with this work-in-progress button!");
+    $('#disable-auto-moderation').show();
+    $('#moderation-explanation').show();
+    $('#enable-auto-moderation').hide();
+  });
 };
