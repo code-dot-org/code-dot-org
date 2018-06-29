@@ -115,8 +115,15 @@ class TeacherFeedback extends Component {
                 feedbacks={this.state.latestFeedback}
               />
             }
-            <textarea style={styles.textInput} onChange={this.onCommentChange} type="text" placeholder={i18n.feedbackPlaceholder()}></textarea>
+            <textarea
+              id="ui-test-feedback-input"
+              style={styles.textInput}
+              onChange={this.onCommentChange}
+              type="text"
+              placeholder={i18n.feedbackPlaceholder()}
+            />
             <Button
+              id="ui-test-submit-feedback"
               text={i18n.saveAndShare()}
               onClick={this.onSubmitFeedback}
               color={Button.ButtonColor.blue}
