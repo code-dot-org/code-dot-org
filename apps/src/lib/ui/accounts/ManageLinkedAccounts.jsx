@@ -1,8 +1,8 @@
 import React, {PropTypes} from 'react';
 import ReactTooltip from 'react-tooltip';
-import $ from 'jquery';
 import _ from 'lodash';
 import i18n from '@cdo/locale';
+import {navigateToHref} from '@cdo/apps/utils';
 import color from '@cdo/apps/util/color';
 import {tableLayoutStyles} from "@cdo/apps/templates/tables/tableConstants";
 import BootstrapButton from './BootstrapButton';
@@ -25,29 +25,29 @@ export default class ManageLinkedAccounts extends React.Component {
     })),
   };
 
-  getEmailForProvider = (provider) => {
-    const {authenticationOptions, userType} = this.props;
-    const match = authenticationOptions.find((option) => {
+  getProviderConnection = (provider) => {
+    return this.props.authenticationOptions.find((option) => {
       return option.credential_type === provider;
     });
+  };
+
+  getEmailForProvider = (provider) => {
+    const match = this.getProviderConnection(provider);
 
     if (match) {
-      if (userType === 'student') {
+      if (this.props.userType === 'student') {
         return ENCRYPTED;
       }
       return match.email;
     }
   };
 
-  connectToGoogle = () => {
-    $.ajax({
-      url: '/users/auth/google_oauth2/connect',
-      method: 'GET'
-    }).done(result => {
-      console.log(result);
-    }).fail((jqXhr, status) => {
-      console.log(jqXhr, status);
-    });
+  toggleProviderConnection = (provider) => {
+    if (this.getProviderConnection(provider)) {
+      // TODO: (madelynkasula) disconnect from provider
+    } else {
+      navigateToHref(`/users/auth/${provider}/connect`);
+    }
   };
 
   render() {
@@ -68,7 +68,7 @@ export default class ManageLinkedAccounts extends React.Component {
               type={OAUTH_PROVIDERS.GOOGLE}
               displayName={i18n.manageLinkedAccounts_google_oauth2()}
               email={this.getEmailForProvider(OAUTH_PROVIDERS.GOOGLE)}
-              onClick={this.connectToGoogle}
+              onClick={() => this.toggleProviderConnection(OAUTH_PROVIDERS.GOOGLE)}
             />
             <OauthConnection
               type={OAUTH_PROVIDERS.MICROSOFT}
