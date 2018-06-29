@@ -6,6 +6,7 @@ import {
   setAssessmentId,
   isCurrentAssessmentSurvey,
   countSubmissionsForCurrentAssessment,
+  getExportableData,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {connect} from 'react-redux';
 import {h3Style} from "../../lib/ui/Headings";
@@ -54,6 +55,7 @@ class SectionAssessments extends Component {
     multipleChoiceSurveyResults: PropTypes.array,
     isCurrentAssessmentSurvey: PropTypes.bool,
     totalStudentSubmissions: PropTypes.number,
+    exportableData: PropTypes.array,
   };
 
   onChangeScript = scriptId => {
@@ -64,7 +66,7 @@ class SectionAssessments extends Component {
 
   render() {
     const {validScripts, scriptId, assessmentList, assessmentId,
-      isLoading, isCurrentAssessmentSurvey, totalStudentSubmissions} = this.props;
+      isLoading, isCurrentAssessmentSurvey, totalStudentSubmissions, exportableData} = this.props;
 
     return (
       <div>
@@ -99,7 +101,7 @@ class SectionAssessments extends Component {
                   <div>
                     <CSVLink
                       filename="assessments.csv"
-                      data={[]}
+                      data={exportableData}
                       headers={CSV_ASSESSMENT_HEADERS}
                     >
                       <div>{i18n.downloadAssessmentCSV()}</div>
@@ -150,6 +152,7 @@ export default connect(state => ({
   assessmentId: state.sectionAssessments.assessmentId,
   isCurrentAssessmentSurvey: isCurrentAssessmentSurvey(state),
   totalStudentSubmissions: countSubmissionsForCurrentAssessment(state),
+  exportableData: getExportableData(state),
 }), dispatch => ({
   setScriptId(scriptId) {
     dispatch(setScriptId(scriptId));

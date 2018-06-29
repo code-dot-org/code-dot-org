@@ -503,6 +503,19 @@ export const countSubmissionsForCurrentAssessment = (state) => {
   }
 };
 
+/**
+ * @returns {array} of objects with keys corresponding to columns
+ * of CSV to download.
+ */
+export const getExportableData = (state) => {
+  const isSurvey = isCurrentAssessmentSurvey(state);
+  if (isSurvey) {
+    return [];
+  } else {
+    return [];
+  }
+};
+
 // Helpers
 
 /**
