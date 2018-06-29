@@ -56,12 +56,13 @@ class TeacherFeedback extends Component {
       comment: "",
       studentId: studentId,
       latestFeedback: [],
+      submitting: false
     };
   }
 
   componentDidMount = () => {
     $.ajax({
-      url: '/api/v1/teacher_feedbacks/get_feedback_from_teacher?student_id='+this.state.studentId+'&level_id='+this.props.serverLevelId+'&teacher_id='+this.props.teacher,
+      url: `/api/v1/teacher_feedbacks/get_feedback_from_teacher?student_id=${this.state.studentId}&level_id=${this.props.serverLevelId}&teacher_id=${this.props.teacher}`,
       method: 'GET',
       contentType: 'application/json;charset=UTF-8',
     }).done(data => {
@@ -74,6 +75,7 @@ class TeacherFeedback extends Component {
   };
 
   onSubmitFeedback = () => {
+    this.setState({submitting: true});
     const payload = {
       comment: this.state.comment,
       student_id: this.state.studentId,
@@ -89,6 +91,7 @@ class TeacherFeedback extends Component {
       data: JSON.stringify({teacher_feedback: payload})
     }).done(data => {
       this.setState({latestFeedback: [data]});
+      this.setState({submitting: false});
     }).fail((jqXhr, status) => {
       console.log(status + "  " + jqXhr.responseJSON);
     });
@@ -98,6 +101,8 @@ class TeacherFeedback extends Component {
     if (!(this.props.viewAs === ViewType.Teacher)) {
       return null;
     }
+
+    const buttonDisabled = this.state.comment.length <= 0 || this.state.submitting;
 
     // Placeholder for upcoming feedback input
     return (
@@ -128,6 +133,7 @@ class TeacherFeedback extends Component {
               onClick={this.onSubmitFeedback}
               color={Button.ButtonColor.blue}
               style={styles.button}
+              disabled={buttonDisabled}
             />
           </div>
         }
