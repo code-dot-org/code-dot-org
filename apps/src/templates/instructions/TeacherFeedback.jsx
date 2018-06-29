@@ -28,7 +28,7 @@ const styles = {
   textInput: {
     margin: 10,
     display: 'block',
-    width: '100%',
+    width: '90%',
   },
   button: {
     margin: 10,
@@ -115,7 +115,7 @@ class TeacherFeedback extends Component {
                 feedbacks={this.state.latestFeedback}
               />
             }
-            <input style={styles.textInput} onChange={this.onCommentChange} type="text" placeholder={this.state.comment}></input>
+            <textarea style={styles.textInput} onChange={this.onCommentChange} type="text" placeholder={i18n.feedbackPlaceholder()}></textarea>
             <Button
               text={i18n.saveAndShare()}
               onClick={this.onSubmitFeedback}
