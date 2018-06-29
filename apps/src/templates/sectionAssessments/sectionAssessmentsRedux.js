@@ -508,63 +508,77 @@ export const countSubmissionsForCurrentAssessment = (state) => {
  * of CSV to download. Columns are defined as CSV_SURVEY_HEADERS and CSV_ASSESSMENT_HEADERS.
  */
 export const getExportableData = (state) => {
-  const currentAssessmentId = state.sectionAssessments.assessmentId;
   const isSurvey = isCurrentAssessmentSurvey(state);
   if (isSurvey) {
-    const surveys = state.sectionAssessments.surveysByScript[state.scriptSelection.scriptId] || {};
-    const currentSurvey = surveys[currentAssessmentId];
-    let responses = [];
-    for (let i = 0; i<currentSurvey.levelgroup_results.length; i++) {
-      const questionResults = currentSurvey.levelgroup_results[i];
-      const rowBase = {
-        stage: currentSurvey.stage_name,
-        questionNumber: questionResults.question_index + 1,
-        questionText: questionResults.question,
-      };
-      if (questionResults.type === SurveyQuestionType.MULTI) {
-        for (let answerIndex = 0; answerIndex<questionResults.answer_texts.length; answerIndex++) {
-          responses.push({
-            ...rowBase,
-            answer: questionResults.answer_texts[answerIndex],
-            numberAnswered: questionResults.results.filter(result => result.answer_index === answerIndex).length,
-          });
-        }
-      } else if (questionResults.type === SurveyQuestionType.FREE_RESPONSE) {
-        for (let j = 0; j<questionResults.results.length; j++) {
-          responses.push({
-            ...rowBase,
-            answer: questionResults.results[j].result,
-            numberAnswered: 1,
-          });
-        }
+    return getExportableSurveyData(state);
+  } else {
+    return getExportableAssessmentData(state);
+  }
+};
+
+export const getExportableSurveyData = (state) => {
+  const currentAssessmentId = state.sectionAssessments.assessmentId;
+  const surveys = state.sectionAssessments.surveysByScript[state.scriptSelection.scriptId] || {};
+  const currentSurvey = surveys[currentAssessmentId];
+  let responses = [];
+
+  for (let i = 0; i<currentSurvey.levelgroup_results.length; i++) {
+    const questionResults = currentSurvey.levelgroup_results[i];
+    const rowBase = {
+      stage: currentSurvey.stage_name,
+      questionNumber: questionResults.question_index + 1,
+      questionText: questionResults.question,
+    };
+
+    if (questionResults.type === SurveyQuestionType.MULTI) {
+      for (let answerIndex = 0; answerIndex<questionResults.answer_texts.length; answerIndex++) {
+        responses.push({
+          ...rowBase,
+          answer: questionResults.answer_texts[answerIndex],
+          numberAnswered: questionResults.results.filter(result => result.answer_index === answerIndex).length,
+        });
+      }
+    } else if (questionResults.type === SurveyQuestionType.FREE_RESPONSE) {
+      for (let j = 0; j<questionResults.results.length; j++) {
+        responses.push({
+          ...rowBase,
+          answer: questionResults.results[j].result,
+          numberAnswered: 1,
+        });
       }
     }
-    return responses;
-  } else {
-    let responses = [];
-    const studentResponses = getAssessmentResponsesForCurrentScript(state);
-    Object.keys(studentResponses).forEach(studentId => {
-      studentId = (parseInt(studentId, 10));
-      const studentObject = studentResponses[studentId];
-      const studentAssessment = studentObject.responses_by_assessment[currentAssessmentId];
-
-      if (studentAssessment && studentAssessment.level_results) {
-        for (let questionIndex = 0; questionIndex < studentAssessment.level_results.length; questionIndex++) {
-          const response = studentAssessment.level_results[questionIndex];
-          responses.push({
-            studentName: studentObject.student_name,
-            stage: studentAssessment.stage,
-            timestamp: studentAssessment.timestamp,
-            question: questionIndex,
-            response: response.type === QuestionType.MULTI ? indexesToAnswerString(response.student_result) :
-              response.student_result,
-            correct: response.status,
-          });
-        }
-      }
-    });
-    return responses;
   }
+
+  return responses;
+};
+
+export const getExportableAssessmentData = (state) => {
+  let responses = [];
+  const currentAssessmentId = state.sectionAssessments.assessmentId;
+  const studentResponses = getAssessmentResponsesForCurrentScript(state);
+
+  Object.keys(studentResponses).forEach(studentId => {
+    studentId = (parseInt(studentId, 10));
+    const studentObject = studentResponses[studentId];
+    const studentAssessment = studentObject.responses_by_assessment[currentAssessmentId];
+
+    if (studentAssessment && studentAssessment.level_results) {
+      for (let questionIndex = 0; questionIndex < studentAssessment.level_results.length; questionIndex++) {
+        const response = studentAssessment.level_results[questionIndex];
+        responses.push({
+          studentName: studentObject.student_name,
+          stage: studentAssessment.stage,
+          timestamp: studentAssessment.timestamp,
+          question: questionIndex + 1,
+          response: response.type === QuestionType.MULTI ? indexesToAnswerString(response.student_result) :
+            response.student_result,
+          correct: response.status,
+        });
+      }
+    }
+  });
+
+  return responses;
 };
 
 // Helpers
