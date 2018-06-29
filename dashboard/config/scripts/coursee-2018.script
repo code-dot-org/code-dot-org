@@ -249,6 +249,8 @@ stage 'Explore Project Ideas', flex_category: 'end_of_course_project'
 named_level 'courseF_video_csMatters_2018'
 named_level 'Geometric Sun_2018'
 named_level 'Robot Doodle_2018'
+named_level 'CourseE_hoops'
+named_level 'courseE_Dogger_2'
 
 stage 'The Design Process', flex_category: 'end_of_course_project'
 named_level 'Begin planning your project_2018'
