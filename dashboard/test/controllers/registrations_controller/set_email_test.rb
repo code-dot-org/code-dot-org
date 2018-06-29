@@ -225,9 +225,7 @@ module RegistrationsControllerTests
       refute EmailPreference.find_by_email(new_email)
     end
 
-    private
-
-    def can_edit_password_with_password(user, current_password)
+    private def can_edit_password_with_password(user, current_password)
       new_password = 'newpassword'
 
       sign_in user
@@ -243,7 +241,7 @@ module RegistrationsControllerTests
       user.valid_password? new_password
     end
 
-    def can_edit_email_without_password(user)
+    private def can_edit_email_without_password(user)
       new_email = 'new@example.com'
 
       sign_in user
@@ -253,7 +251,7 @@ module RegistrationsControllerTests
       user.email == new_email || user.hashed_email == User.hash_email(new_email)
     end
 
-    def can_edit_email_with_password(user, current_password)
+    private def can_edit_email_with_password(user, current_password)
       new_email = 'new@example.com'
 
       sign_in user
@@ -265,7 +263,7 @@ module RegistrationsControllerTests
       user.email == new_email || user.hashed_email == User.hash_email(new_email)
     end
 
-    def can_edit_hashed_email_without_password(user)
+    private def can_edit_hashed_email_without_password(user)
       new_hashed_email = '729980b94e1439aeed40122476b0f695'
 
       sign_in user
@@ -275,7 +273,7 @@ module RegistrationsControllerTests
       user.hashed_email == new_hashed_email
     end
 
-    def can_edit_hashed_email_with_password(user, current_password)
+    private def can_edit_hashed_email_with_password(user, current_password)
       new_hashed_email = '729980b94e1439aeed40122476b0f695'
 
       sign_in user
