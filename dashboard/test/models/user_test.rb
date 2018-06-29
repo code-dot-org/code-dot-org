@@ -1789,6 +1789,7 @@ class UserTest < ActiveSupport::TestCase
       refute user.update_primary_contact_info(*params)
     end
 
+    user.reload
     assert_equal original_primary_contact_info, user.primary_contact_info
   end
 

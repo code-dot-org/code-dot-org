@@ -820,12 +820,15 @@ class User < ActiveRecord::Base
       hashed_email: new_hashed_email
     )
 
-    # Check validity of the auth option - this checks for email uniqueness.
-    return false unless new_primary.valid?
+    # Even though it's implied, pushing the new option into the
+    # authentication_options association now allows our validations to run
+    # when we save the user and produce useful error messages when, for example,
+    # the email is already taken.
+    self.primary_contact_info = new_primary
+    authentication_options << new_primary
+    success = save
 
-    save_successful = update primary_contact_info: new_primary
-
-    if save_successful
+    if success
       # Remove any email authentication options that the user isn't using, since
       # we don't surface them in the UI.
       authentication_options.
@@ -834,7 +837,7 @@ class User < ActiveRecord::Base
         destroy_all
     end
 
-    save_successful
+    success
   end
 
   # True if the account is teacher-managed and has any sections that use word logins.
