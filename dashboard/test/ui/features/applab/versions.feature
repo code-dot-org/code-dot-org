@@ -113,7 +113,6 @@ Scenario: Project page refreshes when other client adds a newer version
   And I switch to text mode
 
   # Browser tab 0 writes version X
-
   When I add code "// comment X" to ace editor
   And I press "runButton"
   Then element ".project_updated_at" eventually contains text "Saved"
@@ -127,7 +126,6 @@ Scenario: Project page refreshes when other client adds a newer version
   Then ace editor code is equal to "// comment X"
 
   # Browser tab 1 writes version Y
-
   When I add code "// comment Y" to ace editor
   And ace editor code is equal to "// comment Y// comment X"
   And I click selector "#runButton"
@@ -139,7 +137,6 @@ Scenario: Project page refreshes when other client adds a newer version
 
   # Browser tab 0 tries to write version Z, which fails because tab 1 has
   # written a newer version (Y) than tab 0's last known version (X).
-
   When I add code "// comment Z" to ace editor
   And I click selector "#runButton" to load a new page
   And I wait for the page to fully load
@@ -155,14 +152,12 @@ Scenario: Project page refreshes when other client replaces current version
   And I switch to text mode
 
   # Browser tab 0 writes version Alpha
-
   When I add code "// Alpha" to ace editor
   And I press "runButton"
   And element ".project_updated_at" eventually contains text "Saved"
   And I click selector "#resetButton"
 
   # Browser tab 1 loads version Alpha
-
   When I open a new tab
   And I go to the newly opened tab
   And I am on "http://studio.code.org/projects/applab/"
@@ -172,7 +167,6 @@ Scenario: Project page refreshes when other client replaces current version
   And ace editor code is equal to "// Alpha"
 
   # Browser tab 0 writes version Bravo.
-
   When I switch to tab index 0
   And ace editor code is equal to "// Alpha"
   And I add code "// Bravo" to ace editor
@@ -185,7 +179,6 @@ Scenario: Project page refreshes when other client replaces current version
 
   # Browser tab 1 tries to write version Charlie, which fails because
   # tab 0 has already replaced the latest version known to tab 1.
-
   When I switch to tab index 1
   And ace editor code is equal to "// Alpha"
   And I add code "// Charlie" to ace editor
