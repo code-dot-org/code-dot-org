@@ -3,9 +3,12 @@ import ReactDOM from 'react-dom';
 import ManageLinkedAccounts from './ManageLinkedAccounts';
 
 export default class ManageLinkedAccountsController {
-  constructor(mountPoint) {
+  constructor(mountPoint, userType, authenticationOptions) {
     ReactDOM.render(
-      <ManageLinkedAccounts/>,
+      <ManageLinkedAccounts
+        userType={userType}
+        authenticationOptions={authenticationOptions}
+      />,
       mountPoint
     );
   }

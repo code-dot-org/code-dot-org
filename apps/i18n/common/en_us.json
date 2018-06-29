@@ -491,6 +491,7 @@
   "enableMakerDialogDescription": "Maker Toolkit is a feature used in the Computer Science Discoveries curriculum. See the setup page for more details:",
   "enableMakerDialogSetupPageLinkText": "Maker Toolkit Setup",
   "enablePairProgramming": "Enable Pair Programming",
+  "encrypted": "encrypted",
   "end": "end",
   "englishOnlyWarning": "Sorry! This stage is not available in your language. The puzzles in this stage use a mix of English words and characters that can’t be translated right now. You can move on to Stage {nextStage}.",
   "enterSectionCode": "Enter section code",

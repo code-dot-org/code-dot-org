@@ -10,10 +10,34 @@ const OAUTH_PROVIDERS = {
   GOOGLE: 'google_oauth2',
   FACEBOOK: 'facebook',
   CLEVER: 'clever',
-  MICROSOFT: 'microsoft',
+  MICROSOFT: 'windowslive',
 };
+const ENCRYPTED = `*** ${i18n.encrypted()} ***`;
 
 export default class ManageLinkedAccounts extends React.Component {
+  static propTypes = {
+    userType: PropTypes.string.isRequired,
+    authenticationOptions: PropTypes.arrayOf(PropTypes.shape({
+      credential_type: PropTypes.string.isRequired,
+      email: PropTypes.string,
+      hashed_email: PropTypes.string,
+    })),
+  };
+
+  getEmailForProvider = (provider) => {
+    const {authenticationOptions, userType} = this.props;
+    const match = authenticationOptions.find((option) => {
+      return option.credential_type === provider;
+    });
+
+    if (match) {
+      if (userType === 'student') {
+        return ENCRYPTED;
+      }
+      return match.email;
+    }
+  };
+
   render() {
     return (
       <div style={styles.container}>
@@ -31,25 +55,25 @@ export default class ManageLinkedAccounts extends React.Component {
             <OauthConnection
               type={OAUTH_PROVIDERS.GOOGLE}
               displayName={i18n.manageLinkedAccounts_google_oauth2()}
-              email={'brad@code.org'}
+              email={this.getEmailForProvider(OAUTH_PROVIDERS.GOOGLE)}
               onClick={() => {}}
             />
             <OauthConnection
               type={OAUTH_PROVIDERS.MICROSOFT}
               displayName={i18n.manageLinkedAccounts_microsoft()}
-              email={'*** encrypted ***'}
+              email={this.getEmailForProvider(OAUTH_PROVIDERS.MICROSOFT)}
               onClick={() => {}}
             />
             <OauthConnection
               type={OAUTH_PROVIDERS.CLEVER}
               displayName={i18n.manageLinkedAccounts_clever()}
-              email={undefined}
+              email={this.getEmailForProvider(OAUTH_PROVIDERS.CLEVER)}
               onClick={() => {}}
             />
             <OauthConnection
               type={OAUTH_PROVIDERS.FACEBOOK}
               displayName={i18n.manageLinkedAccounts_facebook()}
-              email={'brad@code.org'}
+              email={this.getEmailForProvider(OAUTH_PROVIDERS.FACEBOOK)}
               onClick={() => {}}
               cannotDisconnect
             />
