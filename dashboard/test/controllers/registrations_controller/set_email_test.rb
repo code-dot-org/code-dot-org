@@ -291,7 +291,7 @@ module RegistrationsControllerTests
     # Tests for migrated users
     #
 
-    test "set_email: returns bad_request if user param is nil" do
+    test "multi-auth: returns bad_request if user param is nil" do
       student = create(:student, :with_migrated_email_authentication_option)
       sign_in student
 
@@ -299,7 +299,7 @@ module RegistrationsControllerTests
       assert_response :bad_request
     end
 
-    test "set_email: returns 422 for migrated user with password if user cannot edit password" do
+    test "multi-auth: returns 422 for migrated user with password if user cannot edit password" do
       teacher = create(:teacher, :with_migrated_email_authentication_option)
       sign_in teacher
 
@@ -309,7 +309,7 @@ module RegistrationsControllerTests
       assert_response :unprocessable_entity
     end
 
-    test "set_email: returns 422 for migrated user with email if user cannot edit email" do
+    test "multi-auth: returns 422 for migrated user with email if user cannot edit email" do
       teacher = create(:teacher, :with_migrated_email_authentication_option)
       sign_in teacher
 
@@ -319,7 +319,7 @@ module RegistrationsControllerTests
       assert_response :unprocessable_entity
     end
 
-    test "set_email: returns 422 for migrated user with hashed email if user cannot edit email" do
+    test "multi-auth: returns 422 for migrated user with hashed email if user cannot edit email" do
       teacher = create(:teacher, :with_migrated_email_authentication_option)
       sign_in teacher
 
@@ -329,7 +329,7 @@ module RegistrationsControllerTests
       assert_response :unprocessable_entity
     end
 
-    test "set_email: returns 422 for migrated user if password is incorrect" do
+    test "multi-auth: returns 422 for migrated user if password is incorrect" do
       teacher = create(:teacher, :with_migrated_email_authentication_option, password: 'mypassword')
       sign_in teacher
 
@@ -337,7 +337,7 @@ module RegistrationsControllerTests
       assert_response :unprocessable_entity
     end
 
-    test "set_email: updates email for migrated teacher if password is correct" do
+    test "multi-auth: updates email for migrated teacher if password is correct" do
       teacher = create(:teacher, :with_migrated_email_authentication_option, password: 'mypassword')
       sign_in teacher
 
@@ -347,7 +347,7 @@ module RegistrationsControllerTests
       assert_equal 'new@email.com', teacher.email
     end
 
-    test "set_email: updates email for migrated student if password is correct" do
+    test "multi-auth: updates email for migrated student if password is correct" do
       student = create(:student, :with_migrated_email_authentication_option, password: 'mypassword')
       sign_in student
 
@@ -357,7 +357,7 @@ module RegistrationsControllerTests
       assert_equal User.hash_email('new@email.com'), student.hashed_email
     end
 
-    test "set_email: updates email for migrated teacher without password if password is not required" do
+    test "multi-auth: updates email for migrated teacher without password if password is not required" do
       teacher = create(:teacher, :with_migrated_email_authentication_option, encrypted_password: '')
       sign_in teacher
 
@@ -367,7 +367,7 @@ module RegistrationsControllerTests
       assert_equal 'new@email.com', teacher.email
     end
 
-    test "set_email: updates email for migrated student without password if password is not required" do
+    test "multi-auth: updates email for migrated student without password if password is not required" do
       student = create(:student, :with_migrated_email_authentication_option, encrypted_password: '')
       sign_in student
 
@@ -378,7 +378,7 @@ module RegistrationsControllerTests
       assert_equal hashed_new_email, student.hashed_email
     end
 
-    test "set_email: updates email for migrated student with plaintext email param if provided" do
+    test "multi-auth: updates email for migrated student with plaintext email param if provided" do
       student = create(:student, :with_migrated_email_authentication_option, encrypted_password: '')
       sign_in student
 
@@ -389,7 +389,7 @@ module RegistrationsControllerTests
       assert_equal User.hash_email('first@email.com'), student.hashed_email
     end
 
-    test "set_email: returns 422 for non-migrated user with password if user cannot edit password" do
+    test "multi-auth: returns 422 for non-migrated user with password if user cannot edit password" do
       teacher = create(:teacher, :with_email_authentication_option)
       sign_in teacher
 
@@ -399,7 +399,7 @@ module RegistrationsControllerTests
       assert_response :unprocessable_entity
     end
 
-    test "set_email: returns 422 for non-migrated user with email if user cannot edit email" do
+    test "multi-auth: returns 422 for non-migrated user with email if user cannot edit email" do
       teacher = create(:teacher, :with_email_authentication_option)
       sign_in teacher
 
@@ -409,7 +409,7 @@ module RegistrationsControllerTests
       assert_response :unprocessable_entity
     end
 
-    test "set_email: returns 422 for non-migrated user with hashed email if user cannot edit email" do
+    test "multi-auth: returns 422 for non-migrated user with hashed email if user cannot edit email" do
       teacher = create(:teacher, :with_email_authentication_option)
       sign_in teacher
 
@@ -419,7 +419,7 @@ module RegistrationsControllerTests
       assert_response :unprocessable_entity
     end
 
-    test "set_email: returns 422 for non-migrated user if password is incorrect" do
+    test "multi-auth: returns 422 for non-migrated user if password is incorrect" do
       teacher = create(:teacher, :with_email_authentication_option, password: 'mypassword')
       sign_in teacher
 
@@ -427,7 +427,7 @@ module RegistrationsControllerTests
       assert_response :unprocessable_entity
     end
 
-    test "set_email: updates email for non-migrated user if password is correct" do
+    test "multi-auth: updates email for non-migrated user if password is correct" do
       teacher = create :teacher, :with_email_authentication_option, password: 'mypassword'
       sign_in teacher
 
