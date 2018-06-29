@@ -8,7 +8,7 @@ module UserMultiAuthHelper
     return true if migrated?
 
     unless sponsored?
-      self.primary_authentication_option =
+      self.primary_contact_info =
         if AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include? provider
           new_data = nil
           if oauth_token || oauth_token_expiration || oauth_refresh_token
@@ -36,6 +36,43 @@ module UserMultiAuthHelper
         end
     end
     self.provider = 'migrated'
+    save
+  end
+
+  def clear_single_auth_fields
+    raise "Single auth fields may not be cleared on an unmigrated user" unless migrated?
+    self.email = ''
+    self.hashed_email = nil
+    self.uid = nil
+    self.oauth_token = nil
+    self.oauth_token_expiration = nil
+    self.oauth_refresh_token = nil
+    save
+  end
+
+  def demigrate_from_multi_auth
+    return true unless migrated?
+
+    self.email = email
+    self.hashed_email = hashed_email.present? ? hashed_email : nil
+
+    credential_type = primary_contact_info&.credential_type
+    if AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include? credential_type
+      self.provider = credential_type
+      self.uid = primary_contact_info.authentication_id
+      data = primary_contact_info.data_hash
+      self.oauth_token = data[:oauth_token]
+      self.oauth_token_expiration = data[:oauth_token_expiration]
+      self.oauth_refresh_token = data[:oauth_refresh_token]
+    elsif sponsored?
+      self.provider = User::PROVIDER_SPONSORED
+    elsif hashed_email.present? || parent_email.present?
+      self.provider = nil
+    else
+      self.provider = User::PROVIDER_MANUAL
+    end
+
+    authentication_options.delete_all
     save
   end
 end

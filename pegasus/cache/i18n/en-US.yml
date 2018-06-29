@@ -204,7 +204,6 @@
   just_did_accelerated: "I just finished the Accelerated Course - check it out! @codeorg"
   just_did_hoc_donor: 'I just did the #HourOfCode - check it out! (Thanks %{donor_twitter} for supporting @codeorg)'
   just_did_course_donor: "I just finished %{course} - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_accelerated_donor: "I just finished the Accelerated Course - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   twitter_teach_cs: "9 out of 10 people agree, schools should teach computer science. http://youtu.be/nKIu9yen5nc. Visit https://code.org/."
   twitter_cs_foundational: "Computer science is foundational for every student to learn. https://youtu.be/QvyTEx1wyOY."
   learn_hoc: "Learn an Hour of Code"
@@ -1100,18 +1099,18 @@
   coursed_gradelevel: "Ages 7-11"
   coursee_gradelevel: "Ages 8-12"
   coursef_gradelevel: "Ages 9-13"
-  coursea-2017_gradelevel: "Ages 4-7"
-  courseb-2017_gradelevel: "Ages 5-8"
-  coursec-2017_gradelevel: "Ages 6-10"
-  coursed-2017_gradelevel: "Ages 7-11"
-  coursee-2017_gradelevel: "Ages 8-12"
-  coursef-2017_gradelevel: "Ages 9-13"
-  coursea-2018_gradelevel: "Ages 4-7"
-  courseb-2018_gradelevel: "Ages 5-8"
-  coursec-2018_gradelevel: "Ages 6-10"
-  coursed-2018_gradelevel: "Ages 7-11"
-  coursee-2018_gradelevel: "Ages 8-12"
-  coursef-2018_gradelevel: "Ages 9-13"
+  coursea-2017_gradelevel: Ages 4-7
+  courseb-2017_gradelevel: Ages 5-8
+  coursec-2017_gradelevel: Ages 6-10
+  coursed-2017_gradelevel: Ages 7-11
+  coursee-2017_gradelevel: Ages 8-12
+  coursef-2017_gradelevel: Ages 9-13
+  coursea-2018_gradelevel: Ages 4-7
+  courseb-2018_gradelevel: Ages 5-8
+  coursec-2018_gradelevel: Ages 6-10
+  coursed-2018_gradelevel: Ages 7-11
+  coursee-2018_gradelevel: Ages 8-12
+  coursef-2018_gradelevel: Ages 9-13
   accelerated_gradelevel: "Ages 10-18"
   codeorg_platformtext: "Modern browsers, smartphones, tablets"
   codeintl_platformtext: "Modern browsers, smartphones, tablets"
@@ -1220,18 +1219,18 @@
   coursed_shortdescription_congrats: "Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more."
   coursee_shortdescription_congrats: "Quickly cover concepts in Course C & D and then go further with functions."
   coursef_shortdescription_congrats: "Learn all the concepts in Computer Science Fundamentals and create your own art, story or game."
-  coursea-2017_shortdescription_congrats: "An introduction to computer science for pre-readers."
-  courseb-2017_shortdescription_congrats: "An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)"
-  coursec-2017_shortdescription_congrats: "Learn the basics of computer science and create your own art, stories, and games."
-  coursed-2017_shortdescription_congrats: "Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more."
-  coursee-2017_shortdescription_congrats: "Quickly cover concepts in Course C & D and then go further with functions."
-  coursef-2017_shortdescription_congrats: "Learn all the concepts in Computer Science Fundamentals and create your own art, story or game."
-  coursea-2018_shortdescription_congrats: "An introduction to computer science for pre-readers."
-  courseb-2018_shortdescription_congrats: "An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)"
-  coursec-2018_shortdescription_congrats: "Learn the basics of computer science and create your own art, stories, and games."
-  coursed-2018_shortdescription_congrats: "Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more."
-  coursee-2018_shortdescription_congrats: "Quickly cover concepts in Course C & D and then go further with functions."
-  coursef-2018_shortdescription_congrats: "Learn all the concepts in Computer Science Fundamentals and create your own art, story or game."
+  coursea-2017_shortdescription_congrats: An introduction to computer science for pre-readers.
+  courseb-2017_shortdescription_congrats: An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2017_shortdescription_congrats: Learn the basics of computer science and create your own art, stories, and games.
+  coursed-2017_shortdescription_congrats: Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more.
+  coursee-2017_shortdescription_congrats: Quickly cover concepts in Course C & D and then go further with functions.
+  coursef-2017_shortdescription_congrats: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
+  coursea-2018_shortdescription_congrats: An introduction to computer science for pre-readers.
+  courseb-2018_shortdescription_congrats: An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2018_shortdescription_congrats: Learn the basics of computer science and create your own art, stories, and games.
+  coursed-2018_shortdescription_congrats: Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more.
+  coursee-2018_shortdescription_congrats: Quickly cover concepts in Course C & D and then go further with functions.
+  coursef-2018_shortdescription_congrats: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
   codeorg_longdescription: "Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages."
   codeintl_longdescription: "Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."

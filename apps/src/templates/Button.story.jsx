@@ -116,5 +116,18 @@ export default storybook => {
           />
         )
       },
+
+      {
+        name: 'pending button',
+        story: () => (
+          <Button
+            href="/foo/bar"
+            size={Button.ButtonSize.large}
+            text="Continue"
+            isPending={true}
+            pendingText="Pending..."
+          />
+        )
+      },
     ]);
 };
