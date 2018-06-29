@@ -65,14 +65,14 @@ Feature: Using the teacher homepage sections feature
 
   Scenario: Assign a CSF course with multiple versions
     When I see the section set up box
-    And I create a new section with course "Course A", version "2017 (Recommended)"
+    And I create a new section with course "Course A", version "2017"
     Then the section table should have 1 rows
     And the section table row at index 0 has primary assignment path "/s/coursea-2017"
 
     When I click selector ".ui-test-section-dropdown"
     And I click selector ".edit-section-details-link"
     And I wait until element "#assignment-version-year" is visible
-    And I select the "2018" option in dropdown "assignment-version-year"
+    And I select the "2018 (Recommended)" option in dropdown "assignment-version-year"
     And I press the first ".uitest-saveButton" element
     And I wait for the dialog to close
     Then I should see the section table
