@@ -1,6 +1,5 @@
 import React, {PropTypes, Component} from 'react';
 import i18n from '@cdo/locale';
-import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 import moment from 'moment';
 
 const styles = {
@@ -15,18 +14,14 @@ const styles = {
 
 export default class FeedbacksList extends Component {
   static propTypes = {
-    viewAs: PropTypes.oneOf(Object.keys(ViewType)),
-    serverLevelId: PropTypes.number,
-    student: PropTypes.number,
-    feedbacks: PropTypes.array,
+    feedbacks: PropTypes.arrayOf(PropTypes.shape({
+      teacher_name: PropTypes.string.isRequired,
+      created_at: PropTypes.string.isRequired,
+      comment: PropTypes.string.isRequired
+    })).isRequired
   };
 
-
   render() {
-    if (!(this.props.viewAs === ViewType.Student)) {
-      return null;
-    }
-
     return (
       <div>
         {this.props.feedbacks.map((feedback, i) => (

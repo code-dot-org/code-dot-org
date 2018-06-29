@@ -94,7 +94,7 @@ FROM sections_geos
          CASE WHEN pdw.regional_partner_id IS NOT NULL THEN 1 ELSE 0 END AS trained_by_regional_partner,
          coalesce (pdw.regional_partner_id, rpm.regional_partner_id) AS regional_partner_id,
          sy.school_year,
-         min(CASE WHEN pds.start < DATEADD(day,-3,GETDATE()) and pda.id is null then 1 else 0 END as not_attended) 
+         min(CASE WHEN pds.start < DATEADD(day,-3,GETDATE()) and pda.id is null then 1 else 0 END) as not_attended
    FROM  dashboard_production_pii.pd_workshops pdw 
    JOIN dashboard_production_pii.pd_sessions pds 
       ON pdw.id = pds.pd_workshop_id  
@@ -109,7 +109,7 @@ FROM sections_geos
       ON rpm.state = wsz.state OR rpm.zip_code = wsz.zip
   WHERE pdw.course = 'CS Fundamentals'
   AND   pdw.subject IN ( 'Intro Workshop', 'Intro', 'Deep Dive Workshop')
-  group by 1, 2, 3, 5, 6, 7
+  group by 1, 2, 3, 4,  6, 7, 8
   
 UNION ALL 
 
