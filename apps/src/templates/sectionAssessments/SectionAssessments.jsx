@@ -34,7 +34,7 @@ const CSV_ASSESSMENT_HEADERS = [
 const CSV_SURVEY_HEADERS = [
   {label: i18n.stage(), key: 'stage'},
   {label: i18n.question(), key: 'questionNumber'},
-  {label: i18n.question(), key: 'questionText'},
+  {label: i18n.questionText(), key: 'questionText'},
   {label: i18n.response(), key: 'answer'},
   {label: i18n.count(), key: 'numberAnswered'},
 ];
