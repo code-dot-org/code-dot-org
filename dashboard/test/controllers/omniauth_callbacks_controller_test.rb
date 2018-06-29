@@ -451,20 +451,20 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
   end
 
-  def assert_oauth_auth_option(user, oauth_hash)
+  def assert_auth_option(user, oauth_hash)
     assert_equal 1, user.authentication_options.count
     auth_option = user.authentication_options.last
 
-    assert_equal user, auth_option.user
-    assert_equal User.hash_email(oauth_hash.info.email), auth_option.hashed_email
-    assert_equal oauth_hash.provider, auth_option.credential_type
-    assert_equal user.uid, auth_option.authentication_id
-    expected_auth_data = {
-      oauth_token: oauth_hash.credentials.token,
-      oauth_token_expiration: oauth_hash.credentials.expires_at,
-      oauth_refresh_token: oauth_hash.credentials.refresh_token
-    }
-    assert_equal expected_auth_data.to_json, auth_option.data
+    assert_authentication_option auth_option,
+      user: user,
+      hashed_email: User.hash_email(oauth_hash.info.email),
+      credential_type: oauth_hash.provider,
+      authentication_id: user.uid,
+      data: {
+        oauth_token: oauth_hash.credentials.token,
+        oauth_token_expiration: oauth_hash.credentials.expires_at,
+        oauth_refresh_token: oauth_hash.credentials.refresh_token
+      }
   end
 
   test 'connect_provider: creates new google auth option for signed in user' do
@@ -493,7 +493,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
       user.reload
       assert_response :success
-      assert_oauth_auth_option(user, auth)
+      assert_auth_option(user, auth)
     end
   end
 
@@ -522,7 +522,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
       user.reload
       assert_response :success
-      assert_oauth_auth_option(user, auth)
+      assert_auth_option(user, auth)
     end
   end
 
@@ -551,7 +551,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
       user.reload
       assert_response :success
-      assert_oauth_auth_option(user, auth)
+      assert_auth_option(user, auth)
     end
   end
 
@@ -580,7 +580,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
       user.reload
       assert_response :success
-      assert_oauth_auth_option(user, auth)
+      assert_auth_option(user, auth)
     end
   end
 
@@ -609,7 +609,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
       user.reload
       assert_response :success
-      assert_oauth_auth_option(user, auth)
+      assert_auth_option(user, auth)
     end
   end
 
