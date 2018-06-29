@@ -174,6 +174,3 @@ pd_facilitators as
 
 GRANT ALL PRIVILEGES ON analysis.regional_partner_stats_csf TO GROUP admin;
 GRANT SELECT ON analysis.regional_partner_stats_csf TO GROUP reader_pii;
-
-
-
