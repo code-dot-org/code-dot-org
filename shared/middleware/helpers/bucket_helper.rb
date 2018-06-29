@@ -181,7 +181,7 @@ class BucketHelper
   #
   # In some cases, S3 replication lag could cause the current_version not to
   # even appear in the version list. In this case, do not log or halt.
-  def check_current_version(encrypted_channel_id, filename, current_version, timestamp, tab_id, user_id)
+  def check_current_version(encrypted_channel_id, filename, current_version, should_replace, timestamp, tab_id, user_id)
     return true unless filename == 'main.json' && @bucket == CDO.sources_s3_bucket && current_version
 
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
@@ -193,7 +193,27 @@ class BucketHelper
 
     target_version_metadata = versions.find {|v| v.version_id == current_version}
 
-    return true unless target_version_metadata && !target_version_metadata.is_latest
+    error_type =
+      if should_replace
+        # If we are replacing the target version, then we "own" it and don't have
+        # to worry about other clients replacing it. We *do* have to worry about
+        # the target version not being visible yet due to S3's read-after-write
+        # eventual consistency though, so allow the target version to either be
+        # (absent or (present and latest)).
+        return true unless target_version_metadata && !target_version_metadata.is_latest
+        'reject-replacing-older-main-json'
+      else
+        # Since we are not replacing the target version, we can conclude:
+        # (1) the client just loaded the project for the first time, meaning
+        #     the client recently successfully read this version, so we aren't
+        #     too worried about S3 inconsistency.
+        # (2) this version is owned by a different client, therefore another
+        #     client may have already replaced it.
+        # Guard against this scenario by requiring that the target version be
+        # both present and latest.
+        return true unless !target_version_metadata || !target_version_metadata.is_latest
+        'reject-comparing-older-main-json'
+      end
 
     # Something is wrong. The target version is present but is not the latest.
     # We conclude that a different client has updated this project since the
@@ -202,7 +222,7 @@ class BucketHelper
     FirehoseClient.instance.put_record(
       study: 'project-data-integrity',
       study_group: 'v3',
-      event: 'reject-older-main-json',
+      event: error_type,
 
       project_id: encrypted_channel_id,
       user_id: user_id,
