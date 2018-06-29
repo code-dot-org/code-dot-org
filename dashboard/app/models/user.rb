@@ -810,7 +810,7 @@ class User < ActiveRecord::Base
     return false if new_email.nil? && new_hashed_email.nil?
     return false if teacher? && new_email.nil?
 
-    # If an auth option already exists with this email, it beocmes the primary.
+    # If an auth option already exists with this email, it becomes the primary.
     # Otherwise make a new one.
     existing_auth_option = authentication_options.find_by hashed_email: new_hashed_email
     new_primary = existing_auth_option || AuthenticationOption.new(
