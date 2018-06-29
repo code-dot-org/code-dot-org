@@ -102,3 +102,45 @@ Scenario: Project Version Checkpoints
   # project version interval time period had passed.
   Then element "#showVersionsModal tr:contains(a minute ago):contains(Restore this Version):eq(0)" is visible
   And element "#showVersionsModal tr:contains(a minute ago):contains(Restore this Version):eq(1)" is not visible
+
+Scenario: Project page refreshes when other client adds a newer version
+  Given I am on "http://studio.code.org/projects/applab/new"
+  And I get redirected to "/projects/applab/([^\/]*?)/edit" via "dashboard"
+  And I rotate to landscape
+  And I wait for the page to fully load
+  And element ".project_updated_at" eventually contains text "Saved"
+  And I ensure droplet is in block mode
+  And I switch to text mode
+
+  # Browser tab 0 writes version X
+
+  When I add code "// comment X" to ace editor
+  And I press "runButton"
+  Then element ".project_updated_at" eventually contains text "Saved"
+
+  When I open a new tab
+  And I go to the newly opened tab
+  And I am on "http://studio.code.org/projects/applab/"
+  And I get redirected to "/projects/applab/([^\/]*?)/edit" via "dashboard"
+  And I wait for the page to fully load
+  And element ".project_updated_at" eventually contains text "Saved"
+  Then ace editor code is equal to "// comment X"
+
+  # Browser tab 1 writes version Y
+
+  When I add code "// comment Y" to ace editor
+  And ace editor code is equal to "// comment Y// comment X"
+  And I click selector "#runButton"
+  And element ".project_updated_at" eventually contains text "Saved"
+
+  When I close the current tab
+  And I switch to tab index 0
+  Then ace editor code is equal to "// comment X"
+
+  # Browser tab 0 tries to write version Z, which fails because tab 1 has
+  # written a newer version (Y) than tab 0's last known version (X).
+
+  When I add code "// comment Z" to ace editor
+  And I click selector "#runButton" to load a new page
+  And I wait for the page to fully load
+  Then ace editor code is equal to "// comment Y// comment X"
