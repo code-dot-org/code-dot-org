@@ -28,7 +28,6 @@ class MarkdownInstructions extends React.Component {
   static propTypes = {
     renderedMarkdown: PropTypes.string.isRequired,
     noInstructionsWhenCollapsed: PropTypes.bool,
-    hasInlineImages: PropTypes.bool,
     onResize: PropTypes.func,
     inTopPane: PropTypes.bool,
     isBlockly: PropTypes.bool,
@@ -126,7 +125,6 @@ class MarkdownInstructions extends React.Component {
 
 export const StatelessMarkdownInstructions = Radium(MarkdownInstructions);
 export default connect(state => ({
-  hasInlineImages: state.instructions.hasInlineImages,
   isBlockly: state.pageConstants.isBlockly,
   noInstructionsWhenCollapsed: state.instructions.noInstructionsWhenCollapsed,
 }), dispatch => ({
