@@ -516,11 +516,28 @@ export const getExportableData = (state) => {
     let responses = [];
     for (let i = 0; i<currentSurvey.levelgroup_results.length; i++) {
       const questionResults = currentSurvey.levelgroup_results[i];
-      responses.push({
+      const rowBase = {
         stage: currentSurvey.stage_name,
         question_number: questionResults.question_index + 1,
         question_text: questionResults.question,
-      });
+      };
+      if (questionResults.type === SurveyQuestionType.MULTI) {
+        for (let answerIndex = 0; answerIndex<questionResults.answer_texts.length; answerIndex++) {
+          responses.push({
+            ...rowBase,
+            answer: questionResults.answer_texts[answerIndex],
+            number_answered: questionResults.results.filter(result => result.answer_index === answerIndex).length,
+          });
+        }
+      } else if (questionResults.type === SurveyQuestionType.FREE_RESPONSE) {
+        for (let j = 0; j<questionResults.results.length; j++) {
+          responses.push({
+            ...rowBase,
+            answer: questionResults.results[j].result,
+            number_answered: 1,
+          });
+        }
+      }
     }
     return responses;
   } else {
