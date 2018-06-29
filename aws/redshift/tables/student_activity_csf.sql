@@ -49,7 +49,9 @@ where
       --ON cs.script_id = us.script_id    
     JOIN dashboard_production_pii.users u_students
       ON u_students.id = us.user_id AND u_students.user_type = 'student'
-    JOIN school_years sy on  us.started_at between sy.started_at and sy.ended_at
+    JOIN school_years sy 
+      on  us.started_at between sy.started_at and sy.ended_at
+      AND sy.school_year = cst.school_year     
   GROUP BY 1, 2, 3;
 
 GRANT ALL PRIVILEGES ON analysis.student_activity_csf TO GROUP admin;
