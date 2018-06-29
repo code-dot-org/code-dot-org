@@ -233,13 +233,13 @@ class User < ActiveRecord::Base
     end
   end
   validate if: :migrated? do
-    if primary_authentication_option.nil?
+    if primary_contact_info.nil?
       unless authentication_options.empty?
-        errors.add(:primary_authentication_option, "should be set when user has AuthenticationOptions")
+        errors.add(:primary_contact_info, "should be set when user has AuthenticationOptions")
       end
     else
-      unless authentication_options.include? primary_authentication_option
-        errors.add(:primary_authentication_option, "is not one of user's AuthenticationOptions")
+      unless authentication_options.include? primary_contact_info
+        errors.add(:primary_contact_info, "is not one of user's AuthenticationOptions")
       end
     end
   end
