@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class RegistrationsControllerTest < ActionDispatch::IntegrationTest
+class RegistrationsControllerIntegrationTest < ActionDispatch::IntegrationTest
   test "migrate_to_multi_auth fails when signed out" do
     get '/users/migrate_to_multi_auth'
     assert_redirected_to '/users/sign_in'
