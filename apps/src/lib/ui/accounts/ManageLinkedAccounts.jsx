@@ -1,5 +1,6 @@
 import React, {PropTypes} from 'react';
 import ReactTooltip from 'react-tooltip';
+import $ from 'jquery';
 import _ from 'lodash';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
@@ -38,6 +39,17 @@ export default class ManageLinkedAccounts extends React.Component {
     }
   };
 
+  connectToGoogle = () => {
+    $.ajax({
+      url: '/users/auth/google_oauth2/connect',
+      method: 'GET'
+    }).done(result => {
+      console.log(result);
+    }).fail((jqXhr, status) => {
+      console.log(jqXhr, status);
+    });
+  };
+
   render() {
     return (
       <div style={styles.container}>
@@ -56,7 +68,7 @@ export default class ManageLinkedAccounts extends React.Component {
               type={OAUTH_PROVIDERS.GOOGLE}
               displayName={i18n.manageLinkedAccounts_google_oauth2()}
               email={this.getEmailForProvider(OAUTH_PROVIDERS.GOOGLE)}
-              onClick={() => {}}
+              onClick={this.connectToGoogle}
             />
             <OauthConnection
               type={OAUTH_PROVIDERS.MICROSOFT}
