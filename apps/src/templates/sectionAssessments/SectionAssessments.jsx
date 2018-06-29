@@ -4,6 +4,8 @@ import {
   asyncLoadAssessments,
   getCurrentScriptAssessmentList,
   setAssessmentId,
+  isCurrentAssessmentSurvey,
+  countSubmissionsForCurrentAssessment,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {connect} from 'react-redux';
 import {h3Style} from "../../lib/ui/Headings";
@@ -37,6 +39,8 @@ class SectionAssessments extends Component {
     setAssessmentId: PropTypes.func.isRequired,
     asyncLoadAssessments: PropTypes.func.isRequired,
     multipleChoiceSurveyResults: PropTypes.array,
+    isCurrentAssessmentSurvey: PropTypes.bool,
+    totalStudentSubmissions: PropTypes.number,
   };
 
   onChangeScript = scriptId => {
@@ -46,7 +50,8 @@ class SectionAssessments extends Component {
   };
 
   render() {
-    const {validScripts, scriptId, assessmentList, assessmentId, isLoading} = this.props;
+    const {validScripts, scriptId, assessmentList, assessmentId,
+      isLoading, isCurrentAssessmentSurvey, totalStudentSubmissions} = this.props;
 
     return (
       <div>
@@ -75,13 +80,35 @@ class SectionAssessments extends Component {
         {!isLoading &&
           <div>
             {/* Assessments */}
-            <MCAssessmentsOverviewContainer />
-            <StudentsMCSummaryContainer />
-            <MultipleChoiceByStudentContainer />
-            <FreeResponsesAssessmentsContainer />
+            {!isCurrentAssessmentSurvey &&
+              <div>
+                {totalStudentSubmissions > 0 &&
+                  <div>
+                    <MCAssessmentsOverviewContainer />
+                    <StudentsMCSummaryContainer />
+                    <MultipleChoiceByStudentContainer />
+                    <FreeResponsesAssessmentsContainer />
+                  </div>
+                }
+                {totalStudentSubmissions <= 0 &&
+                  <h3>{i18n.emptyAssessmentSubmissions()}</h3>
+                }
+              </div>
+            }
             {/* Surveys */}
-            <MCSurveyOverviewContainer />
-            <FreeResponseBySurveyQuestionContainer />
+            {isCurrentAssessmentSurvey &&
+              <div>
+                {totalStudentSubmissions > 0 &&
+                  <div>
+                    <MCSurveyOverviewContainer />
+                    <FreeResponseBySurveyQuestionContainer />
+                  </div>
+                }
+                {totalStudentSubmissions <=0 &&
+                  <h3>{i18n.emptySurveyOverviewTable()}</h3>
+                }
+              </div>
+            }
           </div>
         }
         {isLoading &&
@@ -101,6 +128,8 @@ export default connect(state => ({
   assessmentList: getCurrentScriptAssessmentList(state),
   scriptId: state.scriptSelection.scriptId,
   assessmentId: state.sectionAssessments.assessmentId,
+  isCurrentAssessmentSurvey: isCurrentAssessmentSurvey(state),
+  totalStudentSubmissions: countSubmissionsForCurrentAssessment(state),
 }), dispatch => ({
   setScriptId(scriptId) {
     dispatch(setScriptId(scriptId));
