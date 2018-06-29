@@ -322,11 +322,12 @@ class FilesApi < Sinatra::Base
     # TODO(dave): stop checking for 'version' once all clients have started using
     # 'replace' and 'currentVersion'.
     current_version = params['version'] || params['currentVersion']
-    version_to_replace = params['version'] || (params['replace'] == 'true' && params['currentVersion'])
+    should_replace = params['replace'] == 'true'
+    version_to_replace = params['version'] || (should_replace && params['currentVersion'])
 
     timestamp = params['firstSaveTimestamp']
     tab_id = params['tabId']
-    conflict unless buckets.check_current_version(encrypted_channel_id, filename, current_version, timestamp, tab_id, current_user_id)
+    conflict unless buckets.check_current_version(encrypted_channel_id, filename, current_version, should_replace, timestamp, tab_id, current_user_id)
 
     response = buckets.create_or_replace(encrypted_channel_id, filename, body, version_to_replace)
 
