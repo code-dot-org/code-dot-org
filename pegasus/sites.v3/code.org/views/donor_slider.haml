@@ -1,23 +1,35 @@
-- supporters = DB[:cdo_donors].where(level_s:'platinum').or(level_s:'gold').order(:url_s).all
-- supporters.shuffle!
+- diamond_supporters = DB[:cdo_donors].where(level_s:'diamond').order(:url_s).all
+- platinum_supporters = DB[:cdo_donors].where(level_s:'platinum').order(:url_s).all
+- gold_supporters = DB[:cdo_donors].where(level_s:'gold').order(:url_s).all
+- diamond_supporters.shuffle!
+- platinum_supporters.shuffle!
+- gold_supporters.shuffle!
 
-#donorslider{style: "background-color:rgb(200, 193, 217); margin-top:20px; padding-top:10px; margin-bottom:0px; clear:both"}
-  .container_responsive{style: "margin-top:0px; margin-bottom:0px; padding-bottom:15px; padding-top:5px"}
+%link{rel:'stylesheet', type:'text/css', href:'/css/donors.css'}
+
+#donorslider
+  .container_responsive
     #donorheader{style: "position:relative; height:40px"}
-      %h1{style: "width:100%; font-size: 20px; margin: 0px; padding:0px; text-align:center; color: rgb(255,255,255); position: absolute; top:0px; font-family: 'Gotham 4r', sans-serif"}
+      %h1
         = I18n.t(:homepage_header_donors)
 
-      #donorlinks.desktop-feature{style: "text-align:right; position:absolute; width:100%"}
-        %a{href: "/about/donors", style: "color:white"}
+      #donorlinks.desktop-feature
+        %a{href: "/about/donors"}
           = I18n.t(:homepage_donors_seall)
         &nbsp; &nbsp; &nbsp;
-        %a{href: "/donate", style: "color:white"}
+        %a{href: "/donate"}
           = I18n.t(:homepage_donors_donate)
 
-    .donor-slider{style: "color:white; text-align:center; font-size:13px"}
-      - supporters.each_with_index do |supporter, index|
-        %a{:href=>supporter[:url_s], :target=> "_blank", :style=>"color:white; font-family: 'Gotham 4r', sans-serif;"}
-          - if index == supporters.length-1
+    .donor-slider
+      - diamond_supporters.each_with_index do |supporter, index|
+        %a{:href=>supporter[:url_s], :target=> "_blank"}
+          != "#{supporter[:name_s]}, "
+      - platinum_supporters.each_with_index do |supporter, index|
+        %a{:href=>supporter[:url_s], :target=> "_blank"}
+          != "#{supporter[:name_s]}, "
+      - gold_supporters.each_with_index do |supporter, index|
+        %a{:href=>supporter[:url_s], :target=> "_blank"}
+          - if index == gold_supporters.length-1
             = "#{supporter[:name_s]}"
           - else
             != "#{supporter[:name_s]}, "
