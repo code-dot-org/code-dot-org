@@ -1072,6 +1072,7 @@ en:
         efl: 'English as a Foreign Language'
         music: 'Music'
         art: 'Art'
+        other: "Other:"
       resources:
         bootstrap: 'Bootstrap'
         codecademy: 'CodeCademy'
@@ -1081,6 +1082,7 @@ en:
         lightbot: 'Lightbot'
         scratch: 'Scratch'
         tynker: 'Tynker'
+        other: "Other:"
       robotics:
         grok: 'Grok Learning'
         kodable: 'Kodable'
@@ -1090,6 +1092,7 @@ en:
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
         wonder: 'Wonder Workshop'
+        other: "Other:"
       workshop_course:
         csf_af: 'CS Fundamentals (Courses A-F)'
         csf_express: 'CS Fundamentals (Pre-Express or Express)'
