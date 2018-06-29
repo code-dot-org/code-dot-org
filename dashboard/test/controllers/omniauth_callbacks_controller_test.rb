@@ -451,6 +451,22 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
   end
 
+  def assert_oauth_auth_option(user, oauth_hash)
+    assert_equal 1, user.authentication_options.count
+    auth_option = user.authentication_options.last
+
+    assert_equal user, auth_option.user
+    assert_equal User.hash_email(oauth_hash.info.email), auth_option.hashed_email
+    assert_equal oauth_hash.provider, auth_option.credential_type
+    assert_equal user.uid, auth_option.authentication_id
+    expected_auth_data = {
+      oauth_token: oauth_hash.credentials.token,
+      oauth_token_expiration: oauth_hash.credentials.expires_at,
+      oauth_refresh_token: oauth_hash.credentials.refresh_token
+    }
+    assert_equal expected_auth_data.to_json, auth_option.data
+  end
+
   test 'connect_provider: creates new google auth option for signed in user' do
     user = create :user, :multi_auth_migrated, uid: 'some-uid'
     auth = OmniAuth::AuthHash.new(
@@ -477,18 +493,123 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
       user.reload
       assert_response :success
-      assert_equal 1, user.authentication_options.count
-      new_auth_option = user.authentication_options.last
-      assert_equal user, new_auth_option.user
-      assert_equal User.hash_email('new@email.com'), new_auth_option.hashed_email
-      assert_equal 'google_oauth2', new_auth_option.credential_type
-      assert_equal user.uid, new_auth_option.authentication_id
-      expected_auth_data = {
-        oauth_token: auth.credentials.token,
-        oauth_token_expiration: auth.credentials.expires_at,
-        oauth_refresh_token: auth.credentials.refresh_token
+      assert_oauth_auth_option(user, auth)
+    end
+  end
+
+  test 'connect_provider: creates new windowslive auth option for signed in user' do
+    user = create :user, :multi_auth_migrated, uid: 'some-uid'
+    auth = OmniAuth::AuthHash.new(
+      uid: user.uid,
+      provider: 'windowslive',
+      credentials: {
+        token: '123456',
+        expires_at: 'some-future-time'
+      },
+      info: {
+        email: 'new@email.com'
       }
-      assert_equal expected_auth_data.to_json, new_auth_option.data
+    )
+
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+
+    Timecop.freeze do
+      setup_should_connect_provider(user, 2.days.from_now)
+      assert_creates(AuthenticationOption) do
+        get :windowslive
+      end
+
+      user.reload
+      assert_response :success
+      assert_oauth_auth_option(user, auth)
+    end
+  end
+
+  test 'connect_provider: creates new facebook auth option for signed in user' do
+    user = create :user, :multi_auth_migrated, uid: 'some-uid'
+    auth = OmniAuth::AuthHash.new(
+      uid: user.uid,
+      provider: 'facebook',
+      credentials: {
+        token: '123456',
+        expires_at: 'some-future-time'
+      },
+      info: {
+        email: 'new@email.com'
+      }
+    )
+
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+
+    Timecop.freeze do
+      setup_should_connect_provider(user, 2.days.from_now)
+      assert_creates(AuthenticationOption) do
+        get :facebook
+      end
+
+      user.reload
+      assert_response :success
+      assert_oauth_auth_option(user, auth)
+    end
+  end
+
+  test 'connect_provider: creates new clever auth option for signed in user' do
+    user = create :user, :multi_auth_migrated, uid: 'some-uid'
+    auth = OmniAuth::AuthHash.new(
+      uid: user.uid,
+      provider: 'clever',
+      credentials: {
+        token: '123456',
+        expires_at: 'some-future-time'
+      },
+      info: {
+        email: 'new@email.com'
+      }
+    )
+
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+
+    Timecop.freeze do
+      setup_should_connect_provider(user, 2.days.from_now)
+      assert_creates(AuthenticationOption) do
+        get :clever
+      end
+
+      user.reload
+      assert_response :success
+      assert_oauth_auth_option(user, auth)
+    end
+  end
+
+  test 'connect_provider: creates new powerschool auth option for signed in user' do
+    user = create :user, :multi_auth_migrated, uid: 'some-uid'
+    auth = OmniAuth::AuthHash.new(
+      uid: user.uid,
+      provider: 'powerschool',
+      credentials: {
+        token: '123456',
+        expires_at: 'some-future-time'
+      },
+      info: {
+        email: 'new@email.com'
+      }
+    )
+
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+
+    Timecop.freeze do
+      setup_should_connect_provider(user, 2.days.from_now)
+      assert_creates(AuthenticationOption) do
+        get :powerschool
+      end
+
+      user.reload
+      assert_response :success
+      assert_oauth_auth_option(user, auth)
     end
   end
 
