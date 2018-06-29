@@ -508,9 +508,21 @@ export const countSubmissionsForCurrentAssessment = (state) => {
  * of CSV to download.
  */
 export const getExportableData = (state) => {
+  const currentAssessmentId = state.sectionAssessments.assessmentId;
   const isSurvey = isCurrentAssessmentSurvey(state);
   if (isSurvey) {
-    return [];
+    const surveys = state.sectionAssessments.surveysByScript[state.scriptSelection.scriptId] || {};
+    const currentSurvey = surveys[currentAssessmentId];
+    let responses = [];
+    for (let i = 0; i<currentSurvey.levelgroup_results.length; i++) {
+      const questionResults = currentSurvey.levelgroup_results[i];
+      responses.push({
+        stage: currentSurvey.stage_name,
+        question_number: questionResults.question_index + 1,
+        question_text: questionResults.question,
+      });
+    }
+    return responses;
   } else {
     return [];
   }
