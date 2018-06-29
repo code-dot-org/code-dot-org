@@ -34,7 +34,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
 
     assert_user user,
       sponsored?: true,
-      primary_authentication_option: nil,
+      primary_contact_info: nil,
       authentication_options: :empty
   end
 
@@ -61,7 +61,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
       hashed_email: '',
       username: :not_empty,
       encrypted_password: :not_empty,
-      primary_authentication_option: nil,
+      primary_contact_info: nil,
       authentication_options: :empty
   end
 
@@ -91,7 +91,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
       username: :not_empty,
       encrypted_password: :not_empty,
       parent_email: :not_empty,
-      primary_authentication_option: nil,
+      primary_contact_info: nil,
       authentication_options: :empty
   end
 
@@ -100,7 +100,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     assert_empty user.email
     assert_convert_email_user user
     assert_empty user.email
-    assert_empty user.primary_authentication_option.email
+    assert_empty user.primary_contact_info.email
   end
 
   test 'convert email+password teacher' do
@@ -108,7 +108,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     refute_empty user.email
     assert_convert_email_user user
     refute_empty user.email
-    refute_empty user.primary_authentication_option.email
+    refute_empty user.primary_contact_info.email
   end
 
   def assert_convert_email_user(user)
@@ -126,7 +126,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
       email: original_email,
       hashed_email: original_hashed_email,
       encrypted_password: :not_empty,
-      primary_authentication_option: {
+      primary_contact_info: {
         credential_type: AuthenticationOption::EMAIL,
         authentication_id: original_hashed_email,
         email: original_email,
@@ -171,7 +171,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
 
     assert_convert_sso_user_with_oauth_token user
 
-    assert_user user, primary_authentication_option: {
+    assert_user user, primary_contact_info: {
       data: {
         oauth_refresh_token: initial_oauth_refresh_token
       }
@@ -208,7 +208,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
 
     assert_convert_sso_user user
 
-    assert_user user, primary_authentication_option: {
+    assert_user user, primary_contact_info: {
       data: {
         oauth_token: initial_oauth_token,
         oauth_token_expiration: initial_oauth_token_expiration
@@ -258,7 +258,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   def assert_convert_lti_user(user)
     assert_convert_sso_user user
 
-    assert_user user, primary_authentication_option: {
+    assert_user user, primary_contact_info: {
       data: nil
     }
   end
@@ -289,7 +289,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     assert_user user,
       email: expected_email,
       hashed_email: expected_hashed_email,
-      primary_authentication_option: {
+      primary_contact_info: {
         credential_type: provider,
         authentication_id: initial_authentication_id,
         email: expected_email,
@@ -386,7 +386,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
         provider: nil,
         hashed_email: :not_empty,
         encrypted_password: :not_empty,
-        primary_authentication_option: nil
+        primary_contact_info: nil
     end
   end
 
@@ -499,20 +499,20 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   #
   # Assert a set of attributes about a user.
   # See assert_attributes for details.
-  # Has special handling for :primary_authentication_option
+  # Has special handling for :primary_contact_info
   #
   def assert_user(user, expected_values)
     refute_nil user
-    asserts_primary_authentication_option = expected_values.key? :primary_authentication_option
-    expected_primary_option = expected_values.delete(:primary_authentication_option)
+    asserts_primary_contact_info = expected_values.key? :primary_contact_info
+    expected_primary_option = expected_values.delete(:primary_contact_info)
 
     assert_attributes user, expected_values
 
-    return unless asserts_primary_authentication_option
+    return unless asserts_primary_contact_info
     if expected_primary_option.nil?
-      assert_nil user.primary_authentication_option
+      assert_nil user.primary_contact_info
     elsif expected_primary_option
-      assert_authentication_option user.primary_authentication_option, expected_primary_option
+      assert_authentication_option user.primary_contact_info, expected_primary_option
     end
   end
 

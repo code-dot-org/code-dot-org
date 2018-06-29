@@ -19,14 +19,14 @@ create table analysis.regional_partner_stats_csf AS
 with 
 csf_teachers_trained_temp as 
 (
-  select 
+  select distinct
   user_id,
   u.studio_person_id,
   'CS Fundamentals'::varchar as course,
-  min(school_year) as school_year,
-  max(regional_partner) as regional_partner,
-  max(regional_partner_id) as regional_partner_id, 
-  min(trained_at) as trained_at
+  school_year as school_year,
+  regional_partner as regional_partner,
+  regional_partner_id as regional_partner_id, 
+  trained_at as trained_at
   from
   (
     SELECT  
@@ -50,7 +50,6 @@ csf_teachers_trained_temp as
   ) csf_train
   JOIN analysis.training_school_years sy on csf_train.trained_at between sy.started_at and sy.ended_at
   JOIN dashboard_production.users u on u.id = csf_train.user_id
-  group by 1, 2
 ),
 completed as
 (
@@ -117,7 +116,7 @@ pd_facilitators as
          csfa.trained_by_regional_partner,
          d.trained_at as trained_at,
          csfa.workshop_date as workshop_date, 
-         extract(month from csfa.workshop_date)::varchar(16) || '/'::varchar(2) || extract(day from csfa.workshop_date)::varchar(16) || '/'::varchar(2) || extract(year from csfa.workshop_date)::varchar(16) || ', id:'::varchar(2) csfa.workshop_id::varchar(16)  as workshop_id_year,
+         extract(month from csfa.workshop_date)::varchar(16) || '/'::varchar(2) || extract(day from csfa.workshop_date)::varchar(16) || '/'::varchar(2) || extract(year from csfa.workshop_date)::varchar(16) || ', id:'::varchar(2) || csfa.workshop_id::varchar(16)  as workshop_id_year,
          pwf.facilitator_names,
          -- started and completed
          case when s.user_id is not null then 1 else 0 end as started,
@@ -142,10 +141,11 @@ pd_facilitators as
          ON ss_user.school_id = si_user.school_id
 -- attendance
  -- LEFT JOIN analysis.csf_workshop_attendance csfa -- functions mostly to get the regional partner's location info and to decide whether the person was 'trained_by_partner'
-     LEFT JOIN analysis.csf_workshop_attendance csfa   
+  JOIN analysis.csf_workshop_attendance csfa   
         ON csfa.user_id = d.user_id
         AND csfa.course = d.course
         AND csfa.school_year = d.school_year
+        AND csfa.not_attended = 0 
 --pii tables (regional partner names, person names, emails, locations)
   LEFT JOIN pd_facilitators pwf
       ON pwf.workshop_id = csfa.workshop_id
@@ -161,7 +161,7 @@ pd_facilitators as
   LEFT JOIN completed c
          ON c.user_id = d.user_id
          AND c.script_name = s.script_name
-         AND c.school_year  = s.school_year
+         AND c.school_year = s.school_year
   LEFT JOIN analysis.teacher_most_progress_csf tmp
          ON tmp.user_id = d.user_id
          and tmp.script_name = s.script_name
@@ -169,8 +169,11 @@ pd_facilitators as
   LEFT JOIN analysis.student_activity_csf sa 
          ON sa.user_id = d.user_id
          AND sa.school_year = s.school_year
-         AND sa.script_name = s.script_name            
+         AND sa.script_name = s.script_name
 ;
 
 GRANT ALL PRIVILEGES ON analysis.regional_partner_stats_csf TO GROUP admin;
 GRANT SELECT ON analysis.regional_partner_stats_csf TO GROUP reader_pii;
+
+
+

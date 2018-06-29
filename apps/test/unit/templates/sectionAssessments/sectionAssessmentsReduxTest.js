@@ -17,6 +17,7 @@ import sectionAssessments, {
   getCorrectAnswer,
   indexesToAnswerString,
   countSubmissionsForCurrentAssessment,
+  isCurrentAssessmentSurvey,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
 
@@ -391,6 +392,42 @@ describe('sectionAssessmentsRedux', () => {
       });
     });
 
+    describe('isCurrentAssessmentSurvey', () => {
+      it('returns true when the current assessment is a survey', () => {
+        const stateWithSurvey = {
+          ...rootState,
+          sectionAssessments: {
+            ...rootState.sectionAssessments,
+            assessmentId: 123,
+            surveysByScript: {
+              3: {
+                123: {}
+              }
+            }
+          }
+        };
+        const result = isCurrentAssessmentSurvey(stateWithSurvey);
+        assert.deepEqual(result, true);
+      });
+
+      it('returns false when the current assessment is not a survey', () => {
+        const stateWithSurvey = {
+          ...rootState,
+          sectionAssessments: {
+            ...rootState.sectionAssessments,
+            assessmentId: 123,
+            surveysByScript: {
+              3: {
+                234: {}
+              }
+            }
+          }
+        };
+        const result = isCurrentAssessmentSurvey(stateWithSurvey);
+        assert.deepEqual(result, false);
+      });
+    });
+
     describe('getMultipleChoiceSectionSummary', () => {
       it('returns an empty array when no assessments in redux', () => {
         const result = getMultipleChoiceSectionSummary(rootState);
@@ -575,7 +612,7 @@ describe('sectionAssessmentsRedux', () => {
           }
         };
 
-        const totalSubmissions = countSubmissionsForCurrentAssessment(stateWithAssessment, false);
+        const totalSubmissions = countSubmissionsForCurrentAssessment(stateWithAssessment);
         assert.deepEqual(totalSubmissions, 2);
       });
 
@@ -611,7 +648,7 @@ describe('sectionAssessmentsRedux', () => {
           }
         };
 
-        const totalSubmissions = countSubmissionsForCurrentAssessment(stateWithSurvey, true);
+        const totalSubmissions = countSubmissionsForCurrentAssessment(stateWithSurvey);
         assert.deepEqual(totalSubmissions, 1);
       });
     });
