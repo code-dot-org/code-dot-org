@@ -1758,6 +1758,41 @@ class UserTest < ActiveSupport::TestCase
     assert_equal User.hash_email('first@email.com'), student.primary_contact_info.hashed_email
   end
 
+  test 'update_primary_contact_info fails safely if the new email is already taken for sponsored user' do
+    taken_email = 'taken@example.org'
+    create :student, email: taken_email
+    update_primary_contact_info_fails_safely_for \
+      create(:student_in_picture_section, :multi_auth_migrated),
+      user: {email: taken_email}
+  end
+
+  test 'update_primary_contact_info fails safely if the new email is already taken for email user' do
+    taken_email = 'taken@example.org'
+    create :student, email: taken_email
+    update_primary_contact_info_fails_safely_for \
+      create(:student, :with_migrated_email_authentication_option),
+      user: {email: taken_email}
+  end
+
+  test 'update_primary_contact_info fails safely if the new email is already taken for oauth user' do
+    taken_email = 'taken@example.org'
+    create :student, email: taken_email
+    update_primary_contact_info_fails_safely_for \
+      create(:student, :with_migrated_google_authentication_option),
+      user: {email: taken_email}
+  end
+
+  def update_primary_contact_info_fails_safely_for(user, *params)
+    original_primary_contact_info = user.primary_contact_info
+
+    refute_creates_or_destroys AuthenticationOption do
+      refute user.update_primary_contact_info(*params)
+    end
+
+    user.reload
+    assert_equal original_primary_contact_info, user.primary_contact_info
+  end
+
   test 'track_proficiency adds proficiency if necessary and no hint used' do
     level_concept_difficulty = create :level_concept_difficulty
     # Defaults with repeat_loops_{d1,d2,d3,d4,d5}_count = {0,2,0,3,0}.

@@ -804,28 +804,40 @@ class User < ActiveRecord::Base
   end
 
   def update_primary_contact_info(user: {email: nil, hashed_email: nil})
-    email = user[:email]
-    hashed_email = user[:hashed_email]
+    new_email = user[:email]
+    new_hashed_email = new_email.present? ? User.hash_email(new_email) : user[:hashed_email]
 
-    return false if email.nil? && hashed_email.nil?
-    return false if teacher? && email.nil?
+    return false if new_email.nil? && new_hashed_email.nil?
+    return false if teacher? && new_email.nil?
 
-    # If an email option with a different email address already exists, destroy it
-    existing_email_option = authentication_options.find {|ao| AuthenticationOption::EMAIL == ao.credential_type}
-    existing_email_option&.destroy
+    # If an auth option already exists with this email, it becomes the primary.
+    # Otherwise make a new one.
+    existing_auth_option = authentication_options.find_by hashed_email: new_hashed_email
+    new_primary = existing_auth_option || AuthenticationOption.new(
+      user: self,
+      credential_type: AuthenticationOption::EMAIL,
+      email: new_email,
+      hashed_email: new_hashed_email
+    )
 
-    # If an auth option exists with same email, set it to the user's primary authentication option
-    existing_auth_option = authentication_options.find {|ao| ao.email == email || ao.hashed_email == hashed_email}
-    if existing_auth_option
-      self.primary_contact_info = existing_auth_option
-      return save
+    # Even though it's implied, pushing the new option into the
+    # authentication_options association now allows our validations to run
+    # when we save the user and produce useful error messages when, for example,
+    # the email is already taken.
+    self.primary_contact_info = new_primary
+    authentication_options << new_primary
+    success = save
+
+    if success
+      # Remove any email authentication options that the user isn't using, since
+      # we don't surface them in the UI.
+      authentication_options.
+        where(credential_type: AuthenticationOption::EMAIL).
+        where.not(hashed_email: new_hashed_email).
+        destroy_all
     end
 
-    params = {credential_type: AuthenticationOption::EMAIL, user: self}
-    params[:email] = email unless email.nil?
-    params[:hashed_email] = hashed_email if email.nil?
-    self.primary_contact_info = AuthenticationOption.new(params)
-    return save
+    success
   end
 
   # True if the account is teacher-managed and has any sections that use word logins.
