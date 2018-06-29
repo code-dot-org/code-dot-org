@@ -25,7 +25,7 @@ import {CSVLink} from 'react-csv';
 const CSV_ASSESSMENT_HEADERS = [
   {label: i18n.name(), key: 'studentName'},
   {label: i18n.stage(), key: 'stage'},
-  {label: i18n.puzzle(), key: 'puzzle'},
+  {label: i18n.timeStamp, key: 'timestamp'},
   {label: i18n.question(), key: 'question'},
   {label: i18n.response(), key: 'response'},
   {label: i18n.correct(), key: 'correct'},
@@ -33,10 +33,10 @@ const CSV_ASSESSMENT_HEADERS = [
 
 const CSV_SURVEY_HEADERS = [
   {label: i18n.stage(), key: 'stage'},
-  {label: i18n.question(), key: 'question_number'},
-  {label: i18n.question(), key: 'question_text'},
+  {label: i18n.question(), key: 'questionNumber'},
+  {label: i18n.question(), key: 'questionText'},
   {label: i18n.response(), key: 'answer'},
-  {label: i18n.count(), key: 'number_answered'},
+  {label: i18n.count(), key: 'numberAnswered'},
 ];
 
 const styles = {
