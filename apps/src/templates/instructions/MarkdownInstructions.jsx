@@ -22,9 +22,6 @@ const styles = {
     marginTop: 0,
     marginBottom: 0,
   },
-  inTopPaneWithImage: {
-    minHeight: 300
-  }
 };
 
 class MarkdownInstructions extends React.Component {
@@ -112,11 +109,6 @@ class MarkdownInstructions extends React.Component {
       renderedMarkdown,
     } = this.props;
 
-    // In cases where we have a full-size image (as opposed to the inline images we use in
-    // Star Wars), we want to guarantee a certain amount of height, to deal with the fact
-    // that we won't know how much height the image actually needs until it has loaded
-    const hasFullSizeImage = !this.props.hasInlineImages && /<img src/.test(renderedMarkdown);
-
     const canCollapse = !this.props.noInstructionsWhenCollapsed;
     return (
       <div
@@ -124,8 +116,7 @@ class MarkdownInstructions extends React.Component {
         style={[
           styles.standard,
           inTopPane && styles.inTopPane,
-          inTopPane && hasFullSizeImage && styles.inTopPaneWithImage,
-          inTopPane && canCollapse && styles.inTopPaneCanCollapse
+          inTopPane && canCollapse && styles.inTopPaneCanCollapse,
         ]}
         dangerouslySetInnerHTML={{ __html: renderedMarkdown }}
       />
