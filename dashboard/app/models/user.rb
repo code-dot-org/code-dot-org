@@ -836,7 +836,8 @@ class User < ActiveRecord::Base
     params[:email] = email unless email.nil?
     params[:hashed_email] = hashed_email if email.nil?
     self.primary_contact_info = AuthenticationOption.new(params)
-    return save
+    authentication_options << primary_contact_info
+    save
   end
 
   # True if the account is teacher-managed and has any sections that use word logins.
