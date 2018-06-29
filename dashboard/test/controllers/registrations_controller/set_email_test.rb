@@ -241,7 +241,7 @@ module RegistrationsControllerTests
 
       assert_response :unprocessable_entity
       assert_includes assigns(:user).errors.full_messages, 'Email has already been taken'
-      assert_equal response.body, {email: ['Email has already been taken']}.to_json
+      assert_includes response.body, 'Email has already been taken'
     end
 
     private def can_edit_password_with_password(user, current_password)
@@ -470,7 +470,7 @@ module RegistrationsControllerTests
 
       assert_response :unprocessable_entity
       assert_includes assigns(:user).errors.full_messages, 'Email has already been taken'
-      assert_equal response.body, {email: ['Email has already been taken']}.to_json
+      assert_includes response.body, 'Email has already been taken'
     end
   end
 end
