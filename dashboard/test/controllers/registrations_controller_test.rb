@@ -1,6 +1,19 @@
 # -*- coding: utf-8 -*-
 require 'test_helper'
 
+################################################################################
+#
+# DEPRECATION NOTICE
+#
+# Please locate new tests for RegistrationsController in files for individual
+# routes under
+#   test/controllers/registrations_controller/*_test.rb
+#
+# New tests should inherit from ActionDispatch::IntegrationTest instead of
+# ActionController::TestCase
+#
+################################################################################
+
 class RegistrationsControllerTest < ActionController::TestCase
   setup do
     # stub properties so we don't try to hit pegasus db
