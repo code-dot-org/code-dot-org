@@ -177,10 +177,21 @@ class BucketHelper
 
   # When updating s3://cdo-v3-sources/.../main.json, checks that the
   # current_version from the client is the latest version on the server. If a
-  # newer version exists, logs an event to firehose and halts with 409 Conflict.
+  # different client more recently wrote to this project, logs an event to
+  # firehose and halts with 409 Conflict.
   #
   # In some cases, S3 replication lag could cause the current_version not to
   # even appear in the version list. In this case, do not log or halt.
+  #
+  # Clients displaying projects must obey the following rules:
+  # (1) When loading a project, read its latest version.
+  # (2) When saving a project for the first time, create a new version, but
+  #     do not replace any previous versions.
+  # (3) When saving a project subsequent times, create a new version, and
+  #     replace the "current version" (i.e. last known version that client wrote).
+  #
+  # Therefore, a project will only ever replace a version that it created, and
+  # we can say the client "owns" a particular version if that client created it.
   def check_current_version(encrypted_channel_id, filename, current_version, should_replace, timestamp, tab_id, user_id)
     return true unless filename == 'main.json' && @bucket == CDO.sources_s3_bucket && current_version
 
@@ -210,14 +221,10 @@ class BucketHelper
         # (2) this version is owned by a different client, therefore another
         #     client may have already replaced it.
         # Guard against this scenario by requiring that the target version be
-        # both present and latest.
+        # both present and latest, without worrying about S3 inconsistency.
         return true unless !target_version_metadata || !target_version_metadata.is_latest
         'reject-comparing-older-main-json'
       end
-
-    # Something is wrong. The target version is present but is not the latest.
-    # We conclude that a different client has updated this project since the
-    # last time the current client updated it.
 
     FirehoseClient.instance.put_record(
       study: 'project-data-integrity',

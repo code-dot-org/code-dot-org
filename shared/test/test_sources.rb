@@ -263,7 +263,7 @@ class SourcesTest < FilesApiTestBase
     FirehoseClient.instance.expects(:put_record).with do |data|
       data_json_data = JSON.parse(data[:data_json])
       data[:study] == 'project-data-integrity' &&
-        data[:event] == 'reject-older-main-json' &&
+        data[:event] == 'reject-comparing-older-main-json' &&
         data[:project_id] == @channel &&
         data_json_data['currentVersionId'] == version1
     end
