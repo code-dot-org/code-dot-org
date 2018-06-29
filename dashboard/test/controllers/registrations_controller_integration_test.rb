@@ -2,7 +2,7 @@ require 'test_helper'
 
 class RegistrationsControllerIntegrationTest < ActionDispatch::IntegrationTest
   test "set_email: returns bad_request if user param is nil" do
-    student = create(:student)
+    student = create(:student, :with_migrated_email_authentication_option)
     sign_in student
 
     patch '/users/email', params: {}
