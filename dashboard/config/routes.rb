@@ -143,7 +143,7 @@ Dashboard::Application.routes.draw do
     patch '/users/user_type', to: 'registrations#set_user_type'
     get '/users/clever_takeover', to: 'sessions#clever_takeover'
     get '/users/clever_modal_dismissed', to: 'sessions#clever_modal_dismissed'
-    get '/users/auth/:provider/connect', to: 'omniauth_callbacks#connect'
+    get '/users/auth/:provider/connect', to: 'authentication_options#connect'
     get '/users/migrate_to_multi_auth', to: 'registrations#migrate_to_multi_auth'
     get '/users/demigrate_from_multi_auth', to: 'registrations#demigrate_from_multi_auth'
   end
