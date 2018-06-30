@@ -3731,6 +3731,10 @@ data-uri-to-buffer@1:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/data-uri-to-buffer/-/data-uri-to-buffer-1.2.0.tgz#77163ea9c20d8641b4707e8f18abdf9a78f34835"
 
+date-fns@^1.28.5:
+  version "1.29.0"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-1.29.0.tgz#12e609cdcb935127311d04d33334e2960a2a54e6"
+
 date-now@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/date-now/-/date-now-0.1.4.tgz#eaf439fd4d4848ad74e5cc7dbef200672b9e345b"
@@ -7462,22 +7466,9 @@ lodash._basecreate@^3.0.0:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/lodash._basecreate/-/lodash._basecreate-3.0.3.tgz#1bc661614daa7fc311b7d03bf16806a0213cf821"
 
-lodash._baseflatten@^3.0.0:
-  version "3.1.4"
-  resolved "https://registry.yarnpkg.com/lodash._baseflatten/-/lodash._baseflatten-3.1.4.tgz#0770ff80131af6e34f3b511796a7ba5214e65ff7"
-  dependencies:
-    lodash.isarguments "^3.0.0"
-    lodash.isarray "^3.0.0"
-
 lodash._basefor@^3.0.0:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/lodash._basefor/-/lodash._basefor-3.0.3.tgz#7550b4e9218ef09fad24343b612021c79b4c20c2"
-
-lodash._basefunctions@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/lodash._basefunctions/-/lodash._basefunctions-3.0.0.tgz#1bdffbadb4d2195c722968a02d56f4913413fcdb"
-  dependencies:
-    lodash.isfunction "^3.0.0"
 
 lodash._basetostring@^3.0.0:
   version "3.0.1"
@@ -7497,12 +7488,6 @@ lodash._createcompounder@^3.0.0:
   dependencies:
     lodash.deburr "^3.0.0"
     lodash.words "^3.0.0"
-
-lodash._createwrapper@^3.0.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/lodash._createwrapper/-/lodash._createwrapper-3.2.0.tgz#df453e664163217b895a454065af1c47a0ea3c4d"
-  dependencies:
-    lodash._root "^3.0.0"
 
 lodash._escapehtmlchar@~2.4.1:
   version "2.4.1"
@@ -7582,15 +7567,6 @@ lodash.assignwith@^4.0.7:
 lodash.bind@^4.1.4:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/lodash.bind/-/lodash.bind-4.2.1.tgz#7ae3017e939622ac31b7d7d7dcb1b34db1690d35"
-
-lodash.bindall@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/lodash.bindall/-/lodash.bindall-3.1.0.tgz#72c7bd1aec8b56a9bc7d6b3484fdd4f2c7dc5469"
-  dependencies:
-    lodash._baseflatten "^3.0.0"
-    lodash._createwrapper "^3.0.0"
-    lodash.functions "^3.0.0"
-    lodash.restparam "^3.0.0"
 
 lodash.camelcase@^3.0.1:
   version "3.0.1"
@@ -7672,13 +7648,6 @@ lodash.foreach@^4.3.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.foreach/-/lodash.foreach-4.5.0.tgz#1a6a35eace401280c7f06dddec35165ab27e3e53"
 
-lodash.functions@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/lodash.functions/-/lodash.functions-3.0.0.tgz#4b037381a9f9276598869340086675d48cf3baf5"
-  dependencies:
-    lodash._basefunctions "^3.0.0"
-    lodash.keysin "^3.0.0"
-
 lodash.get@^4.4.2:
   version "4.4.2"
   resolved "https://registry.yarnpkg.com/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
@@ -7702,10 +7671,6 @@ lodash.isarray@^4.0.0:
 lodash.isempty@^4.2.1:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/lodash.isempty/-/lodash.isempty-4.4.0.tgz#6f86cbedd8be4ec987be9aaf33c9684db1b31e7e"
-
-lodash.isfunction@^3.0.0:
-  version "3.0.8"
-  resolved "https://registry.yarnpkg.com/lodash.isfunction/-/lodash.isfunction-3.0.8.tgz#4db709fc81bc4a8fd7127a458a5346c5cdce2c6b"
 
 lodash.isobject@~2.4.1:
   version "2.4.1"
@@ -7736,13 +7701,6 @@ lodash.keys@~2.4.1:
     lodash._isnative "~2.4.1"
     lodash._shimkeys "~2.4.1"
     lodash.isobject "~2.4.1"
-
-lodash.keysin@^3.0.0:
-  version "3.0.8"
-  resolved "https://registry.yarnpkg.com/lodash.keysin/-/lodash.keysin-3.0.8.tgz#22c4493ebbedb1427962a54b445b2c8a767fb47f"
-  dependencies:
-    lodash.isarguments "^3.0.0"
-    lodash.isarray "^3.0.0"
 
 lodash.map@^4.4.0:
   version "4.6.0"
@@ -8304,11 +8262,7 @@ mock-firmata@0.2.0:
   dependencies:
     board-io "^3.0.5"
 
-moment@^2.10.3, moment@^2.13.0:
-  version "2.14.1"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.14.1.tgz#b35b27c47e57ed2ddc70053d6b07becdb291741c"
-
-moment@^2.14.1:
+moment@^2.19.3:
   version "2.22.2"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.2.tgz#3c257f9839fc0e93ff53149632239eb90783ff66"
 
@@ -9248,6 +9202,10 @@ podda@^1.2.2:
     babel-runtime "^6.11.6"
     immutable "^3.8.1"
 
+popper.js@^1.14.1:
+  version "1.14.3"
+  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.14.3.tgz#1438f98d046acf7b4d78cd502bf418ac64d4f095"
+
 portfinder@0.4.x:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/portfinder/-/portfinder-0.4.0.tgz#a3ffadffafe4fb98e0601a85eda27c27ce84ca1e"
@@ -9686,6 +9644,13 @@ prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.6, prop-types@^15.5.8,
     loose-envify "^1.3.1"
     object-assign "^4.1.1"
 
+prop-types@^15.6.1:
+  version "15.6.2"
+  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.2.tgz#05d5ca77b4453e985d60fc7ff8c859094a497102"
+  dependencies:
+    loose-envify "^1.3.1"
+    object-assign "^4.1.1"
+
 proxy-addr@~2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/proxy-addr/-/proxy-addr-2.0.2.tgz#6571504f47bb988ec8180253f85dd7e14952bdec"
@@ -9967,14 +9932,14 @@ react-csv@^1.0.14:
   version "1.0.14"
   resolved "https://registry.yarnpkg.com/react-csv/-/react-csv-1.0.14.tgz#7c9e444fc4c3ca1e1cf73a81129b1ec032838a71"
 
-react-datepicker@0.37.0:
-  version "0.37.0"
-  resolved "https://registry.yarnpkg.com/react-datepicker/-/react-datepicker-0.37.0.tgz#94eef12ae508d733c74fbf9e0f996609a9dd9b89"
+react-datepicker@1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/react-datepicker/-/react-datepicker-1.5.0.tgz#7eacd9609313189c84a21bb7421486054939a4b2"
   dependencies:
     classnames "^2.2.5"
-    moment "^2.13.0"
-    react-onclickoutside "^5.7.1"
-    tether "^1.3.2"
+    prop-types "^15.6.0"
+    react-onclickoutside "^6.7.1"
+    react-popper "^0.9.1"
 
 react-dnd@^2.1.4:
   version "2.1.4"
@@ -10010,6 +9975,15 @@ react-dom@^15.3.2, react-dom@~15.4.0:
     fbjs "^0.8.1"
     loose-envify "^1.1.0"
     object-assign "^4.1.0"
+
+react-dom@^15.5.4:
+  version "15.6.2"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.6.2.tgz#41cfadf693b757faf2708443a1d1fd5a02bef730"
+  dependencies:
+    fbjs "^0.8.9"
+    loose-envify "^1.1.0"
+    object-assign "^4.1.0"
+    prop-types "^15.5.10"
 
 react-element-to-jsx-string@^5.0.0:
   version "5.0.7"
@@ -10068,13 +10042,14 @@ react-icons@^2.2.7:
   dependencies:
     react-icon-base "2.1.0"
 
-react-idle-timer:
-  version "1.3.3"
-  resolved "https://registry.yarnpkg.com/react-idle-timer/-/react-idle-timer-1.3.3.tgz#51f7360533afd74e68e65369849f2cb042e9cb0e"
+react-idle-timer@1.5.2:
+  version "1.5.2"
+  resolved "https://registry.yarnpkg.com/react-idle-timer/-/react-idle-timer-1.5.2.tgz#898b2c2668bd932fdcc8a86b15037895cc91067b"
   dependencies:
-    in-publish "^2.0.0"
-    lodash.bindall "^3.1.0"
-    moment "^2.10.3"
+    date-fns "^1.28.5"
+    prop-types "^15.5.10"
+    react "^15.5.4"
+    react-dom "^15.5.4"
 
 react-input-autosize@^2.1.2:
   version "2.2.1"
@@ -10125,6 +10100,10 @@ react-onclickoutside@^5.7.1:
   dependencies:
     object-assign "^4.0.1"
 
+react-onclickoutside@^6.7.1:
+  version "6.7.1"
+  resolved "https://registry.yarnpkg.com/react-onclickoutside/-/react-onclickoutside-6.7.1.tgz#6a5b5b8b4eae6b776259712c89c8a2b36b17be93"
+
 react-overlays@^0.6.6:
   version "0.6.10"
   resolved "https://registry.yarnpkg.com/react-overlays/-/react-overlays-0.6.10.tgz#e7e52dad47f00a0fc784eb044428c3a9e874bfa3"
@@ -10137,6 +10116,13 @@ react-overlays@^0.6.6:
 react-pointable@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/react-pointable/-/react-pointable-1.1.1.tgz#4f9b1ca397dfb5f506923d3b470421b0b30d16c2"
+
+react-popper@^0.9.1:
+  version "0.9.5"
+  resolved "https://registry.yarnpkg.com/react-popper/-/react-popper-0.9.5.tgz#02a24ef3eec33af9e54e8358ab70eb0e331edd05"
+  dependencies:
+    popper.js "^1.14.1"
+    prop-types "^15.6.1"
 
 react-portal:
   version "3.0.0"
@@ -10278,7 +10264,7 @@ react@^15.3.2, react@~15.4.0:
     loose-envify "^1.1.0"
     object-assign "^4.1.0"
 
-react@^15.6.2:
+react@^15.5.4, react@^15.6.2:
   version "15.6.2"
   resolved "https://registry.yarnpkg.com/react/-/react-15.6.2.tgz#dba0434ab439cfe82f108f0f511663908179aa72"
   dependencies:
@@ -11895,7 +11881,7 @@ test262-parser@^2.0.7:
     js-yaml "^3.2.1"
     through "^2.3.4"
 
-tether@^1.1.1, tether@^1.3.2:
+tether@^1.1.1:
   version "1.3.7"
   resolved "https://registry.yarnpkg.com/tether/-/tether-1.3.7.tgz#65578104741694f9672c808eae04a9adae7b0304"
 
