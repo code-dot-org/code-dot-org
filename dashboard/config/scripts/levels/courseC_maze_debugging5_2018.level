@@ -34,11 +34,10 @@
     "disable_procedure_autopopulate": "false",
     "shape_shift": "false",
     "name_suffix": "_2018",
-    "contained_level_names": null,
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
     "include_shared_functions": "false",
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
