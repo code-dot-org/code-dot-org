@@ -318,7 +318,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     email = 'duplicate@email.com'
     create(:user, email: email)
 
-    auth = generate_auth_user_hash(email, User::TYPE_STUDENT)
+    auth = generate_auth_user_hash(email: email, user_type: User::TYPE_STUDENT)
 
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
@@ -332,7 +332,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     email = 'duplicate@email.com'
     create(:user, email: email)
 
-    auth = generate_auth_user_hash(email, User::TYPE_TEACHER)
+    auth = generate_auth_user_hash(email: email, user_type: User::TYPE_TEACHER)
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
 
@@ -345,7 +345,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     email = 'duplicate@email.com'
     create(:teacher, email: email)
 
-    auth = generate_auth_user_hash(email, User::TYPE_STUDENT)
+    auth = generate_auth_user_hash(email: email, user_type: User::TYPE_STUDENT)
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
 
@@ -358,7 +358,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     email = 'duplicate@email.com'
     create(:teacher, email: email)
 
-    auth = generate_auth_user_hash(email, User::TYPE_TEACHER)
+    auth = generate_auth_user_hash(email: email, user_type: User::TYPE_TEACHER)
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
 
@@ -414,25 +414,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal migrated_student.id, signed_in_user_id
   end
 
-  def generate_auth_user_hash(email, user_type)
-    OmniAuth::AuthHash.new(
-      uid: '1111',
-      provider: 'facebook',
-      info: {
-        name: 'someone',
-        email: email,
-        user_type: user_type,
-        dob: Date.today - 20.years,
-        gender: 'f'
-      }
-    )
-  end
-
-  def setup_should_connect_provider(user, timestamp = Time.now)
-    sign_in user
-    session[:connect_provider] = timestamp
-  end
-
   test 'connect_provider: returns bad_request if user not migrated' do
     user = create :user, :unmigrated_facebook_sso
     Timecop.freeze do
@@ -451,36 +432,9 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
   end
 
-  def assert_auth_option(user, oauth_hash)
-    assert_equal 1, user.authentication_options.count
-    auth_option = user.authentication_options.last
-
-    assert_authentication_option auth_option,
-      user: user,
-      hashed_email: User.hash_email(oauth_hash.info.email),
-      credential_type: oauth_hash.provider,
-      authentication_id: user.uid,
-      data: {
-        oauth_token: oauth_hash.credentials.token,
-        oauth_token_expiration: oauth_hash.credentials.expires_at,
-        oauth_refresh_token: oauth_hash.credentials.refresh_token
-      }
-  end
-
   test 'connect_provider: creates new google auth option for signed in user' do
     user = create :user, :multi_auth_migrated, uid: 'some-uid'
-    auth = OmniAuth::AuthHash.new(
-      uid: user.uid,
-      provider: 'google_oauth2',
-      credentials: {
-        token: '123456',
-        expires_at: 'some-future-time',
-        refresh_token: '654321'
-      },
-      info: {
-        email: 'new@email.com'
-      }
-    )
+    auth = generate_auth_user_hash(provider: 'google_oauth2', uid: user.uid, refresh_token: '54321')
 
     @request.env['omniauth.auth'] = auth
 
@@ -498,17 +452,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test 'connect_provider: creates new windowslive auth option for signed in user' do
     user = create :user, :multi_auth_migrated, uid: 'some-uid'
-    auth = OmniAuth::AuthHash.new(
-      uid: user.uid,
-      provider: 'windowslive',
-      credentials: {
-        token: '123456',
-        expires_at: 'some-future-time'
-      },
-      info: {
-        email: 'new@email.com'
-      }
-    )
+    auth = generate_auth_user_hash(provider: 'windowslive', uid: user.uid)
 
     @request.env['omniauth.auth'] = auth
 
@@ -526,17 +470,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test 'connect_provider: creates new facebook auth option for signed in user' do
     user = create :user, :multi_auth_migrated, uid: 'some-uid'
-    auth = OmniAuth::AuthHash.new(
-      uid: user.uid,
-      provider: 'facebook',
-      credentials: {
-        token: '123456',
-        expires_at: 'some-future-time'
-      },
-      info: {
-        email: 'new@email.com'
-      }
-    )
+    auth = generate_auth_user_hash(provider: 'facebook', uid: user.uid)
 
     @request.env['omniauth.auth'] = auth
 
@@ -554,17 +488,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test 'connect_provider: creates new clever auth option for signed in user' do
     user = create :user, :multi_auth_migrated, uid: 'some-uid'
-    auth = OmniAuth::AuthHash.new(
-      uid: user.uid,
-      provider: 'clever',
-      credentials: {
-        token: '123456',
-        expires_at: 'some-future-time'
-      },
-      info: {
-        email: 'new@email.com'
-      }
-    )
+    auth = generate_auth_user_hash(provider: 'clever', uid: user.uid)
 
     @request.env['omniauth.auth'] = auth
 
@@ -582,17 +506,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test 'connect_provider: creates new powerschool auth option for signed in user' do
     user = create :user, :multi_auth_migrated, uid: 'some-uid'
-    auth = OmniAuth::AuthHash.new(
-      uid: user.uid,
-      provider: 'powerschool',
-      credentials: {
-        token: '123456',
-        expires_at: 'some-future-time'
-      },
-      info: {
-        email: 'new@email.com'
-      }
-    )
+    auth = generate_auth_user_hash(provider: 'powerschool', uid: user.uid)
 
     @request.env['omniauth.auth'] = auth
 
@@ -612,18 +526,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     AuthenticationOption.any_instance.expects(:save).returns(false)
 
     user = create :user, :multi_auth_migrated, uid: 'some-uid'
-    auth = OmniAuth::AuthHash.new(
-      uid: user.uid,
-      provider: 'google_oauth2',
-      credentials: {
-        token: '123456',
-        expires_at: 'some-future-time',
-        refresh_token: '654321'
-      },
-      info: {
-        email: 'new@email.com'
-      }
-    )
+    auth = generate_auth_user_hash(provider: 'google_oauth2', uid: user.uid, refresh_token: '54321')
 
     @request.env['omniauth.auth'] = auth
 
@@ -709,5 +612,47 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       assert_equal 2.minutes.from_now, session[:connect_provider]
       assert_redirected_to 'http://test.host/users/auth/powerschool'
     end
+  end
+
+  private
+
+  def generate_auth_user_hash(args)
+    OmniAuth::AuthHash.new(
+      uid: args[:uid] || '1111',
+      provider: args[:provider] || 'facebook',
+      info: {
+        name: args[:name] || 'someone',
+        email: args[:email] || 'new@example.com',
+        user_type: args[:user_type] || 'teacher',
+        dob: args[:dob] || Date.today - 20.years,
+        gender: args[:gender] || 'f'
+      },
+      credentials: {
+        token: args[:token] || '12345',
+        expires_at: args[:expires_at] || 'some-future-time',
+        refresh_token: args[:refresh_token] || nil
+      }
+    )
+  end
+
+  def setup_should_connect_provider(user, timestamp = Time.now)
+    sign_in user
+    session[:connect_provider] = timestamp
+  end
+
+  def assert_auth_option(user, oauth_hash)
+    assert_equal 1, user.authentication_options.count
+    auth_option = user.authentication_options.last
+
+    assert_authentication_option auth_option,
+      user: user,
+      hashed_email: User.hash_email(oauth_hash.info.email),
+      credential_type: oauth_hash.provider,
+      authentication_id: user.uid,
+      data: {
+        oauth_token: oauth_hash.credentials.token,
+        oauth_token_expiration: oauth_hash.credentials.expires_at,
+        oauth_refresh_token: oauth_hash.credentials.refresh_token
+      }
   end
 end
