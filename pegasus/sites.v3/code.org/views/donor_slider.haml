@@ -23,13 +23,13 @@
     .donor-slider
       - diamond_supporters.each_with_index do |supporter, index|
         %a{:href=>supporter[:url_s], :target=> "_blank"}
-          != "#{supporter[:name_s]}, "
+          = "#{supporter[:name_s]}, "
       - platinum_supporters.each_with_index do |supporter, index|
         %a{:href=>supporter[:url_s], :target=> "_blank"}
-          != "#{supporter[:name_s]}, "
+          = "#{supporter[:name_s]}, "
       - gold_supporters.each_with_index do |supporter, index|
         %a{:href=>supporter[:url_s], :target=> "_blank"}
           - if index == gold_supporters.length-1
             = "#{supporter[:name_s]}"
           - else
-            != "#{supporter[:name_s]}, "
+            = "#{supporter[:name_s]}, "
