@@ -1038,7 +1038,7 @@ en:
       workshop_organizer: 'Workshop Organizer'
       workshop_facilitator: 'Workshop Facilitator'
       workshop_course: 'Workshop Course'
-      opt_in: 'I want to share my data with Code.org, International Partner'
+      opt_in: 'I agree that Code.org can share my contact information and aggregate data about my classes with the Code.org International Partner in my country.'
     form_entries:
       gender:
         male: 'Male'
@@ -1099,6 +1099,19 @@ en:
       opt_in:
         opt_in_yes: 'Yes'
         opt_in_no: 'No'
+    international_opt_in:
+      title: 'Workshop Attendance for non-U.S. Teachers'
+      intro: "Thank you for taking time to receive training on Code.org’s curriculum. Our mission to bring computer science education opportunities to all children in all schools around the world would not be possible without you."
+      instructions: "Please fill out the form below to indicate that 1) you attended a training workshop run by one of Code.org’s international partners, and 2) you agree to share your information with our international partner in your country so that we can help to support your journey as a computer science teacher."
+      thanks: "Thank you for submitting! We look forward to supporting you as you get to know Code.org’s curriculum and tools. Please keep sharing your questions and feedback with us by writing to us at support@code.org or by posting on the teacher forum!"
+    logged_out:
+      heading: 'Thanks for your interest in the Professional Learning Program!'
+      body: 'To get started, you first need to be logged into your Code.org account. If you’d like more information about the program before you start your application, please check out the <a href="%{url}">Professional Learning Program overview</a>.'
+    not_teacher:
+      body: 'Thanks for your interest in Code.org’s Professional Learning Program! You’re currently signed into a student account. Please either <a href="%{create_teacher}">create a teacher account</a> or <a href="%{user_settings}">go to your user settings</a> to upgrade your account from student to teacher.'
+      more: 'If you’d like more information about the program before you start your application, please check out the <a href="%{pl_overview}">Professional Learning Program overview</a>.'
+    no_teacher_email:
+      body: 'Your account doesn’t have an email address. Please <a href="%{user_registration}">visit your account settings</a> to add your email address before completing this form.'
   courses_category: 'Full Courses'
   cookie_banner:
     message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
@@ -1111,12 +1124,4 @@ en:
     privacy_policy: 'privacy policy'
     logout: 'Logout'
     yes: 'Yes'
-  logged_out:
-    heading: 'Thanks for your interest in the Professional Learning Program!'
-    body: 'To get started, you first need to be logged into your Code.org account. If you’d like more information about the program before you start your application, please check out the <a href="%{url}">Professional Learning Program overview</a>.'
-  not_teacher:
-    body: 'Thanks for your interest in Code.org’s Professional Learning Program! You’re currently signed into a student account. Please either <a href="%{create_teacher}">create a teacher account</a> or <a href="%{user_settings}">go to your user settings</a> to upgrade your account from student to teacher.'
-    more: 'If you’d like more information about the program before you start your application, please check out the <a href="%{pl_overview}">Professional Learning Program overview</a>.'
-  no_teacher_email:
-    body: 'Your account doesn’t have an email address. Please <a href="%{user_registration}">visit your account settings</a> to add your email address before completing this form.'
 

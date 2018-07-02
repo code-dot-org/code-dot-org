@@ -2,10 +2,10 @@
   = stylesheet_link_tag 'css/pd', media: 'all'
 
 %h1
-  = I18n.t('logged_out.heading')
+  = I18n.t('pd.logged_out.heading')
 
 %p
-  != I18n.t('logged_out.body', url: CDO.code_org_url('/educate/professional-learning'))
+  != I18n.t('pd.logged_out.body', url: CDO.code_org_url('/educate/professional-learning'))
 
 %div
   = link_to "/users/sign_in?user_return_to=#{request.fullpath}" do
