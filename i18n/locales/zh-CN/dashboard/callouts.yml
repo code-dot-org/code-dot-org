@@ -598,6 +598,7 @@ zh-CN:
       Eval Strings Images 5_callout:
         Eval Strings Images 5_callout1: Overlay a triangle by filling in this slot
       Eval Strings Images 7_callout: { }
+      Fish Tank 2-validated_callout: { }
       Frozen Project Test Toolbox_callout:
         snowflake_dropdown: 用下拉菜单来创建不一样的雪花！
       Frozen Project Toolbox (Old)_callout:
@@ -984,8 +985,7 @@ zh-CN:
         courseB_artist_loops3_1: 工具箱中只有一个这样的模块。你将如何使用它？
       courseB_artist_loops5_callout:
         courseB_artist_loops5_1: 这个数字意味着工具箱中不再有这个块了。
-      courseB_artist_loops5_2018_callout:
-        courseB_artist_loops5_1: 这个数字意味着工具箱中不再有这个块了。
+      courseB_artist_loops5_2018_callout: { }
       courseB_collector_loops1_callout:
         courseB_collector_loops1_1: 你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。
       courseB_collector_loops1_2018_callout:
@@ -1155,6 +1155,8 @@ zh-CN:
       courseD_collector_until_challenge1_callout: { }
       courseD_farmer_until_challenge2_callout: { }
       courseD_farmer_until_challenge2_2018_callout: { }
+      courseD_farmer_while7_2018_callout:
+        courseD_farmer_while7_2018_PathAhead: You'll need to use the `while path ahead` block in order to solve this puzzle.
       courseD_harvester_nested_loops_challenge1-broken_callout: { }
       courseD_maze_loops_challenge1_callout: { }
       courseD_maze_ramp1_callout:
