@@ -21,10 +21,10 @@
           = I18n.t(:homepage_donors_donate)
 
     .donor-slider
-      - diamond_supporters.each_with_index do |supporter, index|
+      - diamond_supporters.each_with_index do |supporter|
         %a{:href=>supporter[:url_s], :target=> "_blank"}
           = "#{supporter[:name_s]}, "
-      - platinum_supporters.each_with_index do |supporter, index|
+      - platinum_supporters.each_with_index do |supporter|
         %a{:href=>supporter[:url_s], :target=> "_blank"}
           = "#{supporter[:name_s]}, "
       - gold_supporters.each_with_index do |supporter, index|
