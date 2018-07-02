@@ -144,7 +144,7 @@ sk:
             Crowdsourcing:
               name: Crowdsourcing
             Dice Race:
-              name: Dice Race
+              name: Preteky s kockami
             Digital Citizenship:
               name: Digitálne Občianstvo
             'Farmer: While Loops':
@@ -187,10 +187,11 @@ sk:
               name: Bludisko
           description_audience: ''
         frozen:
-          title: Code with Anna and Elsa
-          description: Let's use code to join Anna and Elsa as they explore the magic
-            and beauty of ice. You will create snowflakes and patterns as you ice-skate
-            and make a winter wonderland that you can then share with your friends!
+          title: Kódujte s Annou a Elsou
+          description: Použime kódovanie pre pridanie sa sa k Anne a Else k ich skúmaniu
+            krás a čarov ľadu. Vytvoríte snehové vločky a vzory počas korčuľovania
+            a spravte zimnú krajinu zázrakov, ktorú môžete následne zdieľať s Vašimi
+            kamarítmi!
           description_short: S pomocou kódu sa pridajme k Anne a Elze, ktoré skúmajú
             kúzlo a krásu ľadu.
           stages:
@@ -286,7 +287,7 @@ sk:
             Binary:
               name: Binárny
             For Loops:
-              name: For Loops
+              name: Slučky For
             Functions and Functions with Parameters:
               name: Functions and Functions with Parameters
             Intro:
@@ -811,7 +812,7 @@ sk:
             Using Variables in Apps:
               name: Using Variables in Apps
             While Loops:
-              name: While Loops
+              name: Podmieňovacie slučky While
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1871,7 +1872,7 @@ sk:
             Processing Arrays:
               name: Processing Arrays
             While Loops:
-              name: While Loops
+              name: Podmieňovacie slučky While
         CSP-Unit3-Support:
           title: 'Computer Science Principles: Unit 3 PD'
           description: Online Exploration of CSP Unit 3
@@ -2244,7 +2245,7 @@ sk:
             CSP Student Post-Course Survey:
               name: CSP Student Post-Course Survey
             Post-Course Survey:
-              name: Post-Course Survey
+              name: Hodnotenie kurzu
         csp2-2017:
           title: CSP Unit 2 - Digital Information
           description: This unit further explores the ways that digital information
@@ -2302,7 +2303,7 @@ sk:
             Practice PT - Encode an Experience:
               name: Practice PT - Encode an Experience
             Post-Course Survey:
-              name: Post-Course Survey
+              name: Hodnotenie kurzu
         csp3-2017:
           title: CSP Unit 3 - Intro to Programming
           description: "This unit introduces the foundational concepts of computer
@@ -2355,7 +2356,7 @@ sk:
             Please complete the CSP Mid-course survey!:
               name: Please complete the CSP Mid-course survey!
             Post-Course Survey:
-              name: Post-Course Survey
+              name: Hodnotenie kurzu
         csp4-2017:
           title: CSP Unit 4 - Big Data and Privacy
           description: "The data-rich world we live in introduces many complex questions
@@ -2403,7 +2404,7 @@ sk:
             CSP Student Post-Course Survey:
               name: CSP Student Post-Course Survey
             Post-Course Survey:
-              name: Post-Course Survey
+              name: Hodnotenie kurzu
             Student Post-Course Survey:
               name: Student Post-Course Survey
         csp5-2017:
@@ -2458,7 +2459,7 @@ sk:
             Using Variables in Apps:
               name: Using Variables in Apps
             While Loops:
-              name: While Loops
+              name: Podmieňovacie slučky While
             Edited lessons ABOVE this line:
               name: Edited lessons ABOVE this line
             Buttons and Events:
@@ -2522,7 +2523,7 @@ sk:
             Boolean Expressions and "if" Statements:
               name: Boolean Expressions and "if" Statements
             Post-Course Survey:
-              name: Post-Course Survey
+              name: Hodnotenie kurzu
         csp6:
           title: CS Principles Unit 6 - Performance Tasks
           description: This unit covers the preparation and completion of the Create
@@ -2601,7 +2602,7 @@ sk:
             'Project: Build a Game':
               name: 'Project: Build a Game'
             Velocity:
-              name: Velocity
+              name: Rýchlosť
             The Game Design Process:
               name: The Game Design Process
             Using the Game Design Process:
@@ -2794,7 +2795,7 @@ sk:
             Contained Levels:
               name: Contained Levels
             Game Lab:
-              name: Game Lab
+              name: Herné laboratórium
         cspunit1-support-test:
           title: CSP Unit 1 teacher support
           description: Online Supports for CSP Unit 1
@@ -3021,7 +3022,7 @@ sk:
           description_audience: Ages 8-98
           stages:
             Artist Functions:
-              name: Artist Functions
+              name: Funkcie umelca
             Sample Stage:
               name: Sample Stage
             The same thing with named levels:
@@ -3183,7 +3184,7 @@ sk:
             Sequences & Algorithms:
               name: Sequences & Algorithms
             Unspotted Bugs:
-              name: Unspotted Bugs
+              name: Nenájdené chyby
             'Debugging: Unspotted Bugs':
               name: 'Debugging: Unspotted Bugs'
             'Events Unplugged: The Big Event':
@@ -3363,7 +3364,7 @@ sk:
             'Artist: Nested Loops':
               name: 'Umelec: Vnorené cykly'
             Bee Debugging:
-              name: Bee Debugging
+              name: Ladenie včely
             Bounce:
               name: Odraziť
             Build a Game:
@@ -3466,7 +3467,7 @@ sk:
             Variables and Animation:
               name: Variables and Animation
             Velocity:
-              name: Velocity
+              name: Rýchlosť
               description_student: After a brief review of how the counter pattern
                 is used to move sprites, the class is introduced to the properties
                 that set velocity and rotation speed directly.   As they use these
@@ -3866,19 +3867,19 @@ sk:
             Events:
               name: Udalosti
             For Loops:
-              name: For Loops
+              name: Slučky For
             Functions:
               name: Funkcie
             Functions with Parameters:
-              name: Functions with Parameters
+              name: Funkcie s parametrami
             Loops:
               name: Cykly
             Nested Loops:
-              name: Nested Loops
+              name: Vnorené slučky
             Variables:
               name: Premenné
             While Loops:
-              name: While Loops
+              name: Podmieňovacie slučky While
         algebrapdnext:
           title: Computer Science in Algebra PD Phase 2
           description: Teach Algebra through Functional Programming
@@ -5091,7 +5092,7 @@ sk:
             Nested Loops in Bee:
               name: Nested Loops in Bee
             Nested Loops:
-              name: Nested Loops
+              name: Vnorené slučky
             Introduction:
               name: Úvod
             Nested Loops Project in Artist:
@@ -5491,7 +5492,7 @@ sk:
             Final Project:
               name: Final Project
             Post-Course Survey:
-              name: Post-Course Survey
+              name: Hodnotenie kurzu
         unit6-csd-draft:
           title: ''
           description_audience: ''
@@ -5541,7 +5542,7 @@ sk:
             Timed Loops:
               name: Timed Loops
             For Loops:
-              name: For Loops
+              name: Slučky For
             Physical Input:
               name: Physical Input
             List and For Loops:
@@ -5587,7 +5588,7 @@ sk:
             Accelerometer:
               name: Accelerometer
             Functions with Parameters:
-              name: Functions with Parameters
+              name: Funkcie s parametrami
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -5829,7 +5830,7 @@ sk:
                 from the previous lesson, students write programs that control the
                 color LEDs by accessing them from a list.
             For Loops:
-              name: For Loops
+              name: Slučky For
               description_student: The class learns about repeating instructions using
                 a _for loop_, first by controlling a "robot" through a grid, and then
                 in App Lab.
@@ -6054,7 +6055,7 @@ sk:
                 properties, as well as create multiple programs utilizing the accelerometer
                 similar to those they’ve likely come across in real world applications.
             Functions with Parameters:
-              name: Functions with Parameters
+              name: Funkcie s parametrami
               description_student: The lesson starts with a quick review of parameters,
                 in the context of App Lab blocks that they students have seen recently.  Students
                 then look at examples of parameters within user-created functions
@@ -6255,7 +6256,7 @@ sk:
                 properties, as well as create multiple programs utilizing the accelerometer
                 similar to those they’ve likely come across in real world applications.
             Functions with Parameters_:
-              name: Functions with Parameters
+              name: Funkcie s parametrami
               description_student: The lesson starts with a quick review of parameters,
                 in the context of App Lab blocks that they students have seen recently.  Students
                 then look at examples of parameters within user-created functions
@@ -6355,7 +6356,7 @@ sk:
             Other Forms of Input:
               name: Other Forms of Input
             Velocity:
-              name: Velocity
+              name: Rýchlosť
             Collision Detection:
               name: Collision Detection
             Complex Sprite Movement:
@@ -6734,7 +6735,7 @@ sk:
             'Project: Interactive Card':
               name: 'Project: Interactive Card'
             Velocity:
-              name: Velocity
+              name: Rýchlosť
             Collision Detection:
               name: Collision Detection
             Complex Sprite Movement:
@@ -6881,7 +6882,7 @@ sk:
             'Project: Interactive Card':
               name: 'Project: Interactive Card'
             Velocity:
-              name: Velocity
+              name: Rýchlosť
             Collision Detection:
               name: Collision Detection
             Complex Sprite Movement:
@@ -7029,7 +7030,7 @@ sk:
             D7 to Laurel:
               name: D7 to Laurel
             D6 Frozen Artist:
-              name: D6 Frozen Artist
+              name: Umelec Frozen D6
             F7 add Conditionals:
               name: F7 add Conditionals
             F5 Minecraft:
@@ -7063,19 +7064,21 @@ sk:
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Persistence: Stevie and the Big Project'
               description_student: ''
-              description_teacher: |-
-                When students run into a barrier while answering a question or working on a project, it’s so easy for them to get frustrated and give up.  This lesson will introduce students to the idea that frustration can be an important part of learning. Here, frustration is presented as a step in the creative process, rather than a sign of failure.\r
-                \r
-                This lession can be done over one or two class sessions.  If you have more time, feel free to draw out the building and revising phase of the Marble Run activity.
+              description_teacher: "When students run into a barrier while answering
+                a question or working on a project, it’s so easy for them to get frustrated
+                and give up.  This lesson will introduce students to the idea that
+                frustration can be an important part of learning. Here, frustration
+                is presented as a step in the creative process, rather than a sign
+                of failure.\r\n\r\nThis lession can be done over one or two class
+                sessions.  If you have more time, feel free to draw out the building
+                and revising phase of the Marble Run activity."
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmus z reálneho života: Zasaď semienko'
               description_student: ''
-              description_teacher: 'In this lesson, students will relate the concept
+              description_teacher: "In this lesson, students will relate the concept
                 of algorithms back to everyday, real-life activities by planting an
                 actual seed. The goal here is to start building the skills to translate
-                real-world situations to online scenarios and vice versa.\r
-
-'
+                real-world situations to online scenarios and vice versa.\r\n"
             Learn to Drag and Drop:
               name: Sequencing with Drag and Drop
               description_student: ''
@@ -7265,7 +7268,7 @@ sk:
                 will have the opportunity to customize their game with different speeds
                 and sounds.
             Nested Loops:
-              name: Nested Loops
+              name: Vnorené slučky
               description_student: Loops inside loops inside loops. What does this
                 mean? This lesson will teach you what happens when you place a loop
                 inside another loop.
@@ -7386,7 +7389,7 @@ sk:
                 offs. Students will build binary images in Artist by translating 0s
                 and 1s to offs and ons (or blacks and whites).
             Nested Loops Project in Artist:
-              name: Nested Loops in Frozen
+              name: Vnorené slučky vo Frozen
               description_student: More nested loops! This time, you get to make some
                 AMAZING drawing with nested loops.
               description_teacher: Students will create intricate designs using Artist
@@ -7633,9 +7636,9 @@ sk:
             Nested Loops in Bee/Zombie:
               name: Nested Loops in Bee/Zombie
             Nested Loops with Frozen:
-              name: Nested Loops with Frozen
+              name: Vnorené slučky s Frozen
             Nested Loops:
-              name: Nested Loops
+              name: Vnorené slučky
             Functions in Harvester:
               name: Functions in Harvester
           title: Kurz E
@@ -7872,7 +7875,7 @@ sk:
             Nested Loops in Bee/Zombie:
               name: Nested Loops in Bee/Zombie
             Nested Loops with Frozen:
-              name: Nested Loops with Frozen
+              name: Vnorené slučky s Frozen
           title: Kurz F
           assignment_family_title: Kurz F
           description_audience: 'Ages: 9-13'
@@ -8241,7 +8244,7 @@ sk:
             Present Your Project:
               name: Present Your Project
             Nested Loops Project in Frozen:
-              name: Nested Loops in Frozen
+              name: Vnorené slučky vo Frozen
             'How it Works: The Internet':
               name: 'Beyond Programming: The Internet'
             'Common Sense Education: Digital Citizenship':
@@ -8265,7 +8268,7 @@ sk:
             Building a Foundation:
               name: Stavanie základov
             Nested Loops:
-              name: Nested Loops
+              name: Vnorené slučky
             Conditionals & Loops in Harvester:
               name: Conditionals & Loops in Harvester
             Until Loops in Maze:
@@ -8476,9 +8479,9 @@ sk:
             Loops in Artist:
               name: Loops in Artist
             Nested Loops:
-              name: Nested Loops
+              name: Vnorené slučky
             Nested Loops with Frozen:
-              name: Nested Loops with Frozen
+              name: Vnorené slučky s Frozen
             Intro to Conditionals with Farmer:
               name: Intro to Conditionals with Farmer
             'Algorithms: Dice Race':
@@ -8534,7 +8537,7 @@ sk:
             Events in Bounce:
               name: Events in Bounce
             Nested Loops:
-              name: Nested Loops
+              name: Vnorené slučky
             Nested Loops in Artist:
               name: Nested Loops in Artist
             Nested Loops Project in Artist:
@@ -8568,7 +8571,7 @@ sk:
             Nested Loops in Bee:
               name: Nested Loops in Bee
             Loops in Ice Age:
-              name: Loops in Ice Age
+              name: Slučky v Dobe Ľadovej
           title: New Course D Script
           description_audience: ''
           description_short: ''
@@ -8600,7 +8603,7 @@ sk:
             Loops in Artist:
               name: Loops in Artist
             Nested Loops Project in Frozen:
-              name: Nested Loops Project in Frozen
+              name: Projekt s vnorenými slučkami vo Frozen
             'How it Works: The Internet':
               name: 'How it Works: The Internet'
             'Common Sense Education: Digital Citizenship':
@@ -8660,7 +8663,7 @@ sk:
             Debugging with Scrat:
               name: Debugging with Scrat
             Nested Loops:
-              name: Nested Loops
+              name: Vnorené slučky
             Loops in Artist (UPDATED!):
               name: Loops in Artist (UPDATED!)
             Sarah test stage:
@@ -8700,7 +8703,7 @@ sk:
             Nested Loops in Bee/Zombie:
               name: Nested Loops in Bee/Zombie
             Nested Loops with Frozen:
-              name: Nested Loops with Frozen
+              name: Vnorené slučky s Frozen
             'Algorithms: Dice Race':
               name: 'Algorithms: Dice Race'
             Course E Introduction:
@@ -8758,7 +8761,7 @@ sk:
             Nested Loops in Bee/Zombie:
               name: Nested Loops in Bee/Zombie
             Nested Loops with Frozen:
-              name: Nested Loops with Frozen
+              name: Vnorené slučky s Frozen
             'Algorithms: Tangrams':
               name: 'Algorithms: Tangrams'
             Course E Introduction:
@@ -9102,7 +9105,7 @@ sk:
             'Setup: Digital Portfolio and Other Tools':
               name: 'Setup: Digital Portfolio and Other Tools'
             Post-Course Survey:
-              name: Post-Course Survey
+              name: Hodnotenie kurzu
           title: Explore - AP Performance Task Prep
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and
@@ -9125,7 +9128,7 @@ sk:
             Create PT - Complete the Task:
               name: Create PT - Complete the Task
             Post-Course Survey:
-              name: Post-Course Survey
+              name: Hodnotenie kurzu
           title: Create - AP Performance Task Prep
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and
@@ -9208,9 +9211,9 @@ sk:
             Loops in Artist:
               name: Loops in Artist
             Nested Loops:
-              name: Nested Loops
+              name: Vnorené slučky
             Nested Loops with Frozen:
-              name: Nested Loops with Frozen
+              name: Vnorené slučky s Frozen
             'Algorithms: Dice Race':
               name: 'Algorithms: Dice Race'
             Introduction:
@@ -9272,7 +9275,7 @@ sk:
             Nested Loops in Bee/Zombie:
               name: Nested Loops in Bee/Zombie
             Nested Loops with Frozen:
-              name: Nested Loops with Frozen
+              name: Vnorené slučky s Frozen
             'Algorithms: Tangrams':
               name: 'Algorithms: Tangrams'
             Introduction:
@@ -9334,7 +9337,7 @@ sk:
             Lights:
               name: Lights
             For Loops:
-              name: For Loops
+              name: Slučky For
             Lists and For Loops:
               name: Lists and For Loops
             Timed Loops:
@@ -9404,7 +9407,7 @@ sk:
             Project - Interactive Card:
               name: Project - Interactive Card
             Velocity:
-              name: Velocity
+              name: Rýchlosť
             Collision Detection:
               name: Collision Detection
             Complex Sprite Movement:
@@ -9645,7 +9648,7 @@ sk:
                 plan for and develop an interactive greeting card using all of the
                 programming techniques they've learned to this point.
             Velocity:
-              name: Velocity
+              name: Rýchlosť
               description_student: After a brief review of how the counter pattern
                 is used to move sprites, the class is introduced to the properties
                 that set velocity and rotation speed directly.   As they use these
@@ -10016,13 +10019,13 @@ sk:
           description_audience: 'Ages: 4-7'
           stages:
             'Debugging: Unspotted Bugs':
-              name: 'Debugging: Unspotted Bugs'
+              name: Nenájdené chyby
               description_student: ''
               description_teacher: 'This lesson will guide students through the steps
                 of debugging.  Students will learn the mantra: "What happened?  What
                 was supposed to happen? What does that tell you?"'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence & Frustration: Stevie and the Marbles'
+              name: Števko a Veľký projekt
               description_student: ''
               description_teacher: "When students run into a barrier while answering
                 a question or working on a project, it’s so easy for them to get frustrated
@@ -10115,7 +10118,7 @@ sk:
             Sequencing in Maze:
               name: Sequencing in Maze
             'Persistence & Frustration: Stevie and the Big Project':
-              name: 'Persistence & Frustration: Stevie and the Big Project'
+              name: Števko a Veľký projekt
         express-2018:
           title: Express Course
           assignment_family_title: Express Course
@@ -10150,11 +10153,11 @@ sk:
               description_student: ''
               description_teacher: ''
             Nested Loops:
-              name: Nested Loops
+              name: Vnorené slučky
               description_student: ''
               description_teacher: ''
             Nested Loops Project in Frozen:
-              name: Nested Loops Project in Frozen
+              name: Projekt s vnorenými slučkami vo Frozen
               description_student: ''
               description_teacher: ''
             'How it Works: The Internet':
@@ -10288,7 +10291,7 @@ sk:
             Nested Loops in Bee:
               name: Nested Loops in Bee
             Nested Loops in Frozen:
-              name: Nested Loops in Frozen
+              name: Vnorené slučky vo Frozen
             Conditionals with Cards:
               name: Podmienky s kartami
             Conditionals & Loops in Harvester:
@@ -10405,7 +10408,7 @@ sk:
             Sequencing with Scrat:
               name: Sequencing with Scrat
             Move It, Move It:
-              name: Move It, Move It
+              name: Posuň to, Posuň to
             Copyright and Creativity:
               name: Copyright and Creativity
         coursed-2018:
@@ -10484,9 +10487,9 @@ sk:
               description_student: ''
               description_teacher: ''
             Loops in Ice Age:
-              name: Loops in Ice Age
+              name: Slučky v Dobe Ľadovej
             Nested Loops in Frozen:
-              name: Nested Loops in Frozen
+              name: Snehové vločky s Annou a Elsou
             Until Loops in Maze:
               name: Until Loops in Maze
             Conditionals in Maze:
@@ -10781,7 +10784,7 @@ sk:
             Accelerometer:
               name: Accelerometer
             Functions with Parameters:
-              name: Functions with Parameters
+              name: Funkcie s parametrami
             Circuits and Physical Prototypes:
               name: Circuits and Physical Prototypes
             'Project: Prototype an Innovation':
@@ -10830,7 +10833,7 @@ sk:
               description_student: ''
               description_teacher: ''
             Nested Loops with Frozen:
-              name: Nested Loops with Frozen
+              name: Vnorené slučky s Frozen
               description_student: ''
               description_teacher: ''
             'Algorithms: Dice Race':
@@ -11058,7 +11061,7 @@ sk:
               description_student: ''
               description_teacher: ''
             Nested Loops with Frozen:
-              name: Nested Loops with Frozen
+              name: Vnorené slučky s Frozen
               description_student: ''
               description_teacher: ''
             'Algorithms: Tangrams':
@@ -12434,7 +12437,7 @@ sk:
               description_student: ''
               description_teacher: ''
             While Loops:
-              name: While Loops
+              name: Podmieňovacie slučky While
               description_student: ''
               description_teacher: ''
             Loops and Simulations:
@@ -12944,11 +12947,11 @@ sk:
           description_audience: 'Ages: 4-8'
           stages:
             'Debugging: Unspotted Bugs':
-              name: 'Debugging: Unspotted Bugs'
+              name: Nenájdené chyby
               description_student: ''
               description_teacher: ''
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence & Frustration: Stevie and the Marbles'
+              name: Števko a Veľký projekt
               description_student: ''
               description_teacher: ''
             'Real-life Algorithms: Plant a Seed':
@@ -13000,7 +13003,7 @@ sk:
               description_student: ''
               description_teacher: ''
             Move It, Move It:
-              name: Move It, Move It
+              name: Posuň to, Posuň to
             Sequencing with Scrat:
               name: Sequencing with Scrat
             Your Digital Footprint:
@@ -13012,7 +13015,7 @@ sk:
             Programming with Rey and BB-8:
               name: Programming with Rey and BB-8
             Loops in Ice Age:
-              name: Loops in Ice Age
+              name: Slučky v Dobe Ľadovej
             'Persistence & Frustration: Stevie and the Big Project':
               name: 'Persistence & Frustration: Stevie and the Big Project'
         spritelab-validated:

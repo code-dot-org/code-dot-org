@@ -448,7 +448,7 @@ pt-BR:
     confirm_secret_words: Confirme que é você ao digitar suas palavras secretas atuais
     enter_parent_email: Insira o E-Mail dos pais ou responsável legal (para recuperação
       de senha)
-    update: Update Account
+    update: Atualizar Conta
   user_level:
     completed: Concluído
     tried: Provado
@@ -1354,6 +1354,6 @@ pt-BR:
     message: Data from your use of this site may be sent to and stored or processed
       in the United States.
     link_intro: For details see our
-    privacy_policy: privacy policy
-    logout: Logout
+    privacy_policy: política de privacidade
+    logout: Sair
     true: Sim

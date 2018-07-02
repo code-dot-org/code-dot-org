@@ -2,39 +2,39 @@ vi:
   data:
     function_names:
       x: x
-      details: details
-      draw eyebrow: draw eyebrow
-      draw pupil: draw pupil
+      details: những thông tin chi tiết
+      draw eyebrow: vẽ lông mày
+      draw pupil: vẽ học sinh
       draw a circle: vẽ một hình tròn
-      draw a car: draw a car
-      draw_rect: draw_rect
-      draw square: draw square
-      jump to controller top left: jump to controller top left
-      jump to middle: jump to middle
-      draw a button: draw a button
-      draw cord: draw cord
-      draw R pad: draw R pad
-      draw left leg: draw left leg
-      draw right leg: draw right leg
-      draw body and arms: draw body and arms
-      draw a head: draw a head
-      draw sitting stick figure: draw sitting stick figure
-      draw head: draw head
-      draw arms: draw arms
-      jump to neck: jump to neck
-      draw O: draw O
-      draw D: draw D
-      draw E: draw E
-      draw ear stems: draw ear stems
-      big gear: big gear
-      small gear: small gear
+      draw a car: vẽ 1 cái ô tô
+      draw_rect: vẽ_hình chữ nhật
+      draw square: vẽ hình vuông
+      jump to controller top left: nhảy đến trên bộ điều khiển bên trái
+      jump to middle: nhảy vào giữa
+      draw a button: vẽ một nút
+      draw cord: vẽ dây
+      draw R pad: vẽ đường chữ R
+      draw left leg: vẽ chân trái
+      draw right leg: vẽ chân phải
+      draw body and arms: vẽ cơ thể và cánh tay
+      draw a head: vẽ 1 cái đầu
+      draw sitting stick figure: vẽ hình que ngồi
+      draw head: vẽ đầu
+      draw arms: vẽ tay
+      jump to neck: nhảy vào cổ
+      draw O: vẽ O
+      draw D: vẽ D
+      draw E: vẽ E
+      draw ear stems: vẽ thân tai
+      big gear: bánh răng lớn
+      small gear: bánh răng nhỏ
       draw a hexagon: vẽ một hình lục giác
       draw a flower: vẽ một bông hoa
       draw a square: vẽ một hình vuông
       draw a snowflake: vẽ một bông tuyết
-      draw 3 hexagons: draw 3 hexagons
-      draw 4 hexagons: draw 4 hexagons
-      draw 5 hexagons: draw 5 hexagons
+      draw 3 hexagons: vẽ 3 hình lục giác
+      draw 4 hexagons: vẽ 4 hình lục giác
+      draw 5 hexagons: vẽ 5 hình lục giác
       get 2 nectar: get 2 nectar
       collect purple nectar: collect purple nectar
       get 5: get 5
@@ -223,6 +223,7 @@ vi:
       booster: booster
       draw line of triangles: draw line of triangles
       draw a window: draw a window
+      stop_everything: stop_everything
       draw a plane of squares: draw a plane of squares
       draw hexagon: draw hexagon
       draw line of hexagons: draw line of hexagons

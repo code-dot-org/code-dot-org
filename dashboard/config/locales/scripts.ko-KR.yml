@@ -7055,19 +7055,21 @@ ko:
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Persistence: Stevie and the Big Project'
               description_student: ''
-              description_teacher: |-
-                When students run into a barrier while answering a question or working on a project, it’s so easy for them to get frustrated and give up.  This lesson will introduce students to the idea that frustration can be an important part of learning. Here, frustration is presented as a step in the creative process, rather than a sign of failure.\r
-                \r
-                This lession can be done over one or two class sessions.  If you have more time, feel free to draw out the building and revising phase of the Marble Run activity.
+              description_teacher: "When students run into a barrier while answering
+                a question or working on a project, it’s so easy for them to get frustrated
+                and give up.  This lesson will introduce students to the idea that
+                frustration can be an important part of learning. Here, frustration
+                is presented as a step in the creative process, rather than a sign
+                of failure.\r\n\r\nThis lession can be done over one or two class
+                sessions.  If you have more time, feel free to draw out the building
+                and revising phase of the Marble Run activity."
             'Real-life Algorithms: Plant a Seed':
               name: '실시간 알고리즘: 씨앗 심기'
               description_student: ''
-              description_teacher: 'In this lesson, students will relate the concept
+              description_teacher: "In this lesson, students will relate the concept
                 of algorithms back to everyday, real-life activities by planting an
                 actual seed. The goal here is to start building the skills to translate
-                real-world situations to online scenarios and vice versa.\r
-
-'
+                real-world situations to online scenarios and vice versa.\r\n"
             Learn to Drag and Drop:
               name: Sequencing with Drag and Drop
               description_student: ''

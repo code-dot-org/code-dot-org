@@ -9360,8 +9360,7 @@ si:
       courseB_collector_loops11_2018_instruction: |-
         Eureka!  Get as much treasure
         as you can!
-      courseB_collector_loops1_2018_instruction: |-
-        This is Laurel the Adventurer!  Can
+      courseB_collector_loops1_2018_instruction: This is Laurel the Adventurer!  Can
         you move her around and get treasure?
       courseB_collector_loops2_instruction: |-
         Collect all four piles to pass this
@@ -9544,14 +9543,12 @@ si:
       courseB_playlab_events4_instruction: |-
         Knight time!  Add an event so that the
         knight moves toward the dragon when the left arrow is clicked.
-      courseB_playlab_events4_2018_instruction: |-
-        Knight time!  Add an event so that
+      courseB_playlab_events4_2018_instruction: Knight time!  Add an event so that
         the knight moves toward the dragon when the left arrow is clicked.
       courseB_playlab_events5_instruction: |-
         Now add an event so that the knight runs
         away from the dragon when you press the right arrow.
-      courseB_playlab_events5_2018_instruction: |-
-        Now add an event so that the knight
+      courseB_playlab_events5_2018_instruction: Now add an event so that the knight
         runs away from the dragon when you press the right arrow.
       courseB_playlab_events6_instruction: "Help your knight get all of the flags!\r\n\r\nTo
         do this, you'll need to add events to help the knight move up, down, left,
@@ -9563,8 +9560,7 @@ si:
         Make this game fun by setting the knight
         to vanish when he runs into the dragon on his way to get the flags!  Play
         a sound when they collide to make it feel more real.
-      courseB_playlab_events7_2018_instruction: |-
-        Make this game fun by setting the
+      courseB_playlab_events7_2018_instruction: Make this game fun by setting the
         knight to vanish when he runs into the dragon on his way to get the flags!  Play
         a sound when they collide to make it feel more real.
       courseB_playlab_events8_instruction: |-
@@ -9573,9 +9569,8 @@ si:
       courseB_playlab_eventsFP_instruction: |-
         Use your imagination. What can you do
         to make this game more fun?
-      courseB_playlab_eventsFP_2018_instruction: |-
-        Use your imagination. What can
-        you do to make this game more fun?
+      courseB_playlab_eventsFP_2018_instruction: Use your imagination. What can you
+        do to make this game more fun?
       courseB_playlab_eventsToolbox_instruction: |-
         Finish by playing a sound and making
         the knight vanish when he runs into the dragon!

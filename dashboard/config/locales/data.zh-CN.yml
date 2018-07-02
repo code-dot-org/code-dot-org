@@ -256,7 +256,7 @@ zh-CN:
         maze_wordsearch_k_13: 把我向这边 然后向另一边移动来拼写单词DEBUG
         maze_wordsearch_k_15: 把我向这边 然后向另一边移动来拼写单词ABOVE
         maze_wordsearch_k_16: 把我向这边 然后向另一边移动来拼写单词BELOW
-        maze_wordsearch_k_20: 试验以下！先把我往一个方向移动，然后再往另一个方向移动，来拼写单词STORY
+        maze_wordsearch_k_20: 试验一下！先把我往一个方向移动，然后再往另一个方向移动，来拼写单词STORY
         applab_ec_simple: 使用工具箱中的积木块来创建您的应用程序吧。
         turtle_ec_1_2: 现在，画个正方形。注意：从新的《penColor》模块中选用你最喜欢的颜色。
         turtle_ec_1_10: 你成功了！现在任由你随意画你喜欢的东西。你可以尝试画个火柴人、雪花、旋螺型或其他有趣的图画。还有，可别忘了试用新的
@@ -541,7 +541,7 @@ zh-CN:
         CSF_loops_AB: 循环
         csd_gamelab_booleans: 布尔表达式
         csd_gamelab_conditional_statements: 条件表达式
-        csd_gamelab_if_else: If/Else Statements
+        csd_gamelab_if_else: 如果/否则 语句
     callout:
       text:
         drag_blocks: 拖动一个"移动"的块，并将它吸到别的模块下面
